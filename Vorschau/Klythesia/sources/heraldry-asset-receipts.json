@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "elyssar",
+      "source": "assets/emblems/generated/house-elyssar.png",
+      "sourceSha256": "12b51fd4088239e1c9779975754274e6a889e1098400ec9e39729a356ee0336f",
+      "production": "assets/emblems/production/house-elyssar.png",
+      "productionSha256": "64cf8c25b542874b05817b7fa1b1695213a10ed4ef1ed8b9ffa1d0a57ce0edc5",
+      "preview": "assets/emblems/previews/house-elyssar.webp",
+      "previewSha256": "7e108ce8828867357181a7bf1da545fcaba2086e42e265277bd3061672807f1b",
+      "framing": {
+        "size": [
+          1304,
+          1304
+        ],
+        "padding": {
+          "left": 31,
+          "top": 32
+        },
+        "circle": {
+          "centre": [
+            652,
+            652
+          ],
+          "radius": 573
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      },
+      "originalUnchanged": true,
+      "rgbUnchanged": true
+    },
+    {
+      "id": "naukyra",
+      "source": "assets/emblems/generated/house-naukyra.png",
+      "sourceSha256": "2f8ceac61229a4ea026d29264d1508eba721d8efd1ffc12fcdef06a8ddeb8966",
+      "production": "assets/emblems/production/house-naukyra.png",
+      "productionSha256": "054d37b7826b4f7106b909c4a51df888c215be8eb784c60c88a15266d97c1d97",
+      "preview": "assets/emblems/previews/house-naukyra.webp",
+      "previewSha256": "eb89be3b7eded470388f551506b82617480618f7968b070c5c82a6dafe3cbdb6",
+      "framing": {
+        "size": [
+          1294,
+          1294
+        ],
+        "padding": {
+          "left": 27,
+          "top": 17
+        },
+        "circle": {
+          "centre": [
+            647,
+            647
+          ],
+          "radius": 569
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      },
+      "originalUnchanged": true,
+      "rgbUnchanged": true
+    }
+  ]
+}

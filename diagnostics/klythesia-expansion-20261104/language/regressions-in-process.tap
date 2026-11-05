@@ -1,0 +1,88 @@
+TAP version 13
+# Subtest: current province spelling overrides only the old Nuatlapa canonical label
+ok 1 - current province spelling overrides only the old Nuatlapa canonical label
+  ---
+  duration_ms: 17.8908
+  type: 'test'
+  ...
+# Subtest: both language modules register in Sprachen and retain every supplied corpus record
+ok 2 - both language modules register in Sprachen and retain every supplied corpus record
+  ---
+  duration_ms: 325.1777
+  type: 'test'
+  ...
+# Subtest: script/name editors retain selected fonts and safely roundtrip the real keyboard and complete dictionary
+ok 3 - script/name editors retain selected fonts and safely roundtrip the real keyboard and complete dictionary
+  ---
+  duration_ms: 222.8016
+  type: 'test'
+  ...
+# Subtest: escaped pipes and backslashes roundtrip in every table field while simple legacy input remains readable
+ok 4 - escaped pipes and backslashes roundtrip in every table field while simple legacy input remains readable
+  ---
+  duration_ms: 168.4239
+  type: 'test'
+  ...
+# Subtest: the language form preserves, edits and deliberately clears quotes and attribution
+ok 5 - the language form preserves, edits and deliberately clears quotes and attribution
+  ---
+  duration_ms: 3.4389
+  type: 'test'
+  ...
+# Subtest: inline quote edits update only their page field and refresh the preview
+ok 6 - inline quote edits update only their page field and refresh the preview
+  ---
+  duration_ms: 1.127
+  type: 'test'
+  ...
+# Subtest: the source map supplies eight Phalantian seats; Alantaic remains outside the realm
+ok 7 - the source map supplies eight Phalantian seats; Alantaic remains outside the realm
+  ---
+  duration_ms: 0.5126
+  type: 'test'
+  ...
+# Subtest: two royal houses share Lysandreia and seven hereditary Perioikic houses cover the other seats
+ok 8 - two royal houses share Lysandreia and seven hereditary Perioikic houses cover the other seats
+  ---
+  duration_ms: 0.283
+  type: 'test'
+  ...
+# Subtest: seat drafts preserve hereditary identity and reject invalid imports atomically
+ok 9 - seat drafts preserve hereditary identity and reject invalid imports atomically
+  ---
+  duration_ms: 1.942
+  type: 'test'
+  ...
+# Subtest: both supplied source PNGs are retained byte for byte
+ok 10 - both supplied source PNGs are retained byte for byte
+  ---
+  duration_ms: 15.0857
+  type: 'test'
+  ...
+# Subtest: singular house and estate labels retain the existing placement identities
+ok 11 - singular house and estate labels retain the existing placement identities
+  ---
+  duration_ms: 0.3284
+  type: 'test'
+  ...
+# Subtest: all nine houses have a distinct prepared house warrior and the Toxot uses its corrected drawing
+ok 12 - all nine houses have a distinct prepared house warrior and the Toxot uses its corrected drawing
+  ---
+  duration_ms: 1.9534
+  type: 'test'
+  ...
+# Subtest: Hoplon region shields cover the eight seat regions without creating borders or new seats
+ok 13 - Hoplon region shields cover the eight seat regions without creating borders or new seats
+  ---
+  duration_ms: 1.2629
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 766.5104

@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "id": "klythesia-expansion-20261104",
+  "authority": "latest-user-instruction",
+  "status": "local",
+  "summary": "Neue gemeinsame Geschichte von Phalantia und Klythesia, Kyreons Befreiungsaufstand, sieben Stände und sieben Kriegerprototypen. Frühere Bestandsberichte bleiben historische Recherchebelege.",
+  "scope": [
+    "Vorschau/Klythesia",
+    "Religionen/religionen/zirkel-des-ewigen-waldes"
+  ],
+  "factOverrides": {
+    "southern-tirnara-amazons": {
+      "text": "Klythesia und Phalantia gehen auf das albische Südvolk der Aechanath und das Fürstentum Aechneach zurück. Nach Nord-Süd-Wanderung, Zarakhuls Knechtschaft und phalantischer Eroberung trennten sich die westlichen Städte als Amazonenreich Klythesia ab.",
+      "perspective": "user-canon",
+      "source": {
+        "path": "Vorschau/Klythesia/sources/lore-amendment-20261104.json",
+        "section": "Nutzerfestlegung vom 4. November 2026"
+      }
+    },
+    "religious-origin": {
+      "text": "Kyreon begründete den Zirkel im Zusammenhang mit dem Befreiungsaufstand nach dem Zerfall des Alerischen Kaiserreiches. Die Bezüge zu älteren Pantheons sind religiöse Neuinterpretationen und keine frühere politische Gründungszeit Klythesias.",
+      "perspective": "user-canon",
+      "source": {
+        "path": "Vorschau/Klythesia/sources/lore-amendment-20261104.json",
+        "section": "Nutzerfestlegung vom 4. November 2026"
+      }
+    },
+    "prophet-journey": {
+      "text": "Mit dem Zerfall des Alerischen Kaiserreiches erhoben sich die Unterdrückten, besonders die versklavten Frauen. Kyreon predigte ihnen eine neue Religion und erklärte sich zum fleischgewordenen Gott und Befreier. Unter seiner Führung zerbrach Phalantias Macht über die westlichen Städte.",
+      "perspective": "user-canon",
+      "source": {
+        "path": "Vorschau/Klythesia/sources/lore-amendment-20261104.json",
+        "section": "Nutzerfestlegung vom 4. November 2026"
+      }
+    },
+    "kyreon-founder": {
+      "text": "Unter Kyreons Führung zerbrach Phalantias Macht über die westlichen Städte. Seitdem ist Klythesia unabhängig und dient ihm als Gottkönig.",
+      "perspective": "user-canon",
+      "source": {
+        "path": "Vorschau/Klythesia/sources/lore-amendment-20261104.json",
+        "section": "Nutzerfestlegung vom 4. November 2026"
+      }
+    },
+    "kyreon-divine-office": {
+      "text": "Kyreon ist der gegenwärtige Gottkönig Klythesias und wird als fleischgewordener Gott, Befreier und religiöser Mittler verehrt. Die matriarchale Herrscherfamilie dient ihm; ihre oberste Matriarchin ist seine Gemahlin und Hohepriesterin.",
+      "perspective": "user-canon",
+      "source": {
+        "path": "Vorschau/Klythesia/sources/lore-amendment-20261104.json",
+        "section": "Nutzerfestlegung vom 4. November 2026"
+      }
+    },
+    "clan-matriarchs": {
+      "text": "Die Anássai bilden die matriarchale Herrscherfamilie der Hauptstadt. Die Polemístriai sind die städtischen Frauenclans; kleinere Hiéreiai-Matronenhäuser bilden den niedrigsten Adel. Sie dürfen kleinere Städte, Siedlungen und Festungen halten und eigene Clans führen.",
+      "perspective": "user-canon",
+      "source": {
+        "path": "Vorschau/Klythesia/sources/lore-amendment-20261104.json",
+        "section": "Nutzerfestlegung vom 4. November 2026"
+      }
+    },
+    "high-matriarch": {
+      "text": "Die oberste Matriarchin aus der Herrscherfamilie ist Kyreons Gemahlin und Hohepriesterin. Sie verbindet die weibliche Landesführung und das höchste Priesterinnenamt im Dienst des Gottkönigs.",
+      "perspective": "user-canon",
+      "source": {
+        "path": "Vorschau/Klythesia/sources/lore-amendment-20261104.json",
+        "section": "Nutzerfestlegung vom 4. November 2026"
+      }
+    }
+  },
+  "resolvedIssueIds": [
+    "divine-kingship-and-matriarchy",
+    "clan-matriarchs-hierarchy",
+    "country-order",
+    "warrior-design",
+    "capital",
+    "emblem-assignments"
+  ],
+  "issueOverrides": {
+    "founder-current-status": {
+      "title": "Kyreons Lebenschronologie",
+      "text": "Seine gegenwärtige Herrschaft ist festgelegt. Geburtsjahr, Alter und genaue Jahreszahlen des Aufstands wurden noch nicht bestimmt.",
+      "handling": "Keine Lebensdaten erfinden."
+    },
+    "named-people-and-houses": {
+      "title": "Clanvorschläge und persönliche Oberhäupter",
+      "text": "Sieben neue Clannamen mit Wappen und Stadtsitzen sind vorgeschlagen. Persönliche Matriarchinnen, Stammbäume und weitere kleine Häuser sind noch nicht ausgearbeitet."
+    },
+    "borders-and-colonies": {
+      "title": "Grenzen und Kolonien",
+      "text": "Die gemeinsame Vergangenheit mit Phalantia und die Abspaltung der westlichen Städte sind festgelegt. Konkrete innere Grenzen und die früher nur allgemein erwähnten Kolonien bleiben unbenannt und undatiert."
+    },
+    "neighbors": {
+      "question": "Wie verlaufen die heutigen Außengrenzen?",
+      "reason": "Die Vorgeschichte nennt Phalantias Widerstand bei Leukonia und die nördliche Wüste. Konkrete Grenzlinien und die unbenannten Kartenflächen sind damit noch nicht festgelegt."
+    },
+    "ancestor-name": {
+      "title": "Ältere Schreibvariante Klytharion",
+      "text": "Die ältere Bestandsaufnahme verzeichnete einmal Klytharion. Die aktuelle überarbeitete Matriarchatspassage verwendet Klytharios; die alte Variante bleibt als redaktioneller Herkunftsbeleg dokumentiert.",
+      "handling": "Keine zusätzliche Gottheit daraus machen."
+    }
+  },
+  "chronology": [
+    "Aechanath und Aechneach",
+    "Die lange Knechtschaft",
+    "Orins Verwirrung der Zungen",
+    "Ein zersplitterter Süden",
+    "Phalantias Eroberungen",
+    "Der widerspenstige Grenzvasall",
+    "Kyreons Befreiungsaufstand",
+    "Das Amazonenreich"
+  ],
+  "newStandNames": {
+    "freeMan": "Synoikos",
+    "enslavedMan": "Doulos",
+    "enslavedWoman": "Doule"
+  },
+  "theios": {
+    "name": "Kyreon",
+    "unique": true,
+    "position": "Gottkönig über den sieben Ständen",
+    "appearance": "Elfenohren, prächtiges Geweih, Silber-Gold-Maske, mächtiger Speer, Satyrunterleib",
+    "scope": "Persönliche Gestalt Kyreons, keine allgemeine Abstammungsanatomie"
+  },
+  "designDecisions": {
+    "capitalProposal": "Kallisteia als hervorgehobener Hauptsitz",
+    "clanNames": [
+      "Klyrath",
+      "Asterid",
+      "Theryn",
+      "Soryth",
+      "Melanthis",
+      "Naukyra",
+      "Elyssar"
+    ],
+    "newEmblems": [
+      "Hippokampos",
+      "Chimäre"
+    ]
+  },
+  "doNotInfer": [
+    "Keine genauen Jahreszahlen",
+    "Keine neuen persönlichen Amtsinhaber oder Genealogien",
+    "Keine automatische Freilassung durch eine Ehe",
+    "Keine neuen allgemeinen Straf- oder Erbgesetze",
+    "Keine zwei zusätzlichen Göttinnen zum alten 7/9-Konflikt erfinden",
+    "Keine pauschale Versklavung jedes Volkes Tirnaras behaupten"
+  ],
+  "originalSourceArchive": "Vorschau/Klythesia/sources/religion-before-20261104"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "aleria.klythesia.house-warrior-root-generation-receipts",
+  "version": 1,
+  "records": [
+    {
+      "assetStem": "house-klyrath",
+      "name": "Klyrath",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0c9-f2da-7570-9dd2-d273d866e4f5\\exec-3e5e23e3-8d36-4e20-956f-517f34055488.png",
+      "tool": "built-in image_gen",
+      "promptSource": "sources/house-warrior-art-direction.json",
+      "referenceImages": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Klythesia/assets/warriors/production/thorax.png",
+        "E:/Aleria/Vorschau/Klythesia/assets/originals/hydra.png"
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "assetStem": "house-asterid",
+      "name": "Asterid",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0c9-f2da-7570-9dd2-d273d866e4f5\\exec-d818dd5f-3248-486a-9de1-1e14c2527c64.png",
+      "tool": "built-in image_gen",
+      "promptSource": "sources/house-warrior-art-direction.json",
+      "referenceImages": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Klythesia/assets/warriors/production/thorax.png",
+        "E:/Aleria/Vorschau/Klythesia/assets/originals/phoenix.png"
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "assetStem": "house-theryn",
+      "name": "Theryn",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0c9-f2da-7570-9dd2-d273d866e4f5\\exec-13ac15dc-8df8-4b8a-96da-d4049711ba03.png",
+      "tool": "built-in image_gen",
+      "promptSource": "sources/house-warrior-art-direction.json",
+      "referenceImages": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Klythesia/assets/warriors/production/thorax.png",
+        "E:/Aleria/Vorschau/Klythesia/assets/originals/mantikor.png"
+      ],
+      "visuallyInspected": true
+    }
+  ]
+}

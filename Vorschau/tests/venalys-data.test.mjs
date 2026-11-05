@@ -104,14 +104,23 @@ test('the revised maps retain thirteen district identities, 98 mapped places and
   assert.equal(mapped.filter(point => point.kind === 'Küstensiedlung').length,4);
 });
 
-test('every Magnarier has a noble military representation and the two requested patrician figures are additional', () => {
-  const required = houses.filter(h => h.rank === 'magnarian').map(h => h.id);
-  assert.equal(warriors.length, 19);
-  assert.deepEqual(new Set(warriors.map(w => w.id)), new Set([...required, 'avenicci', 'abor']));
+test('all 17 Magnarier and all five patrician houses have a noble military representation', () => {
+  assert.equal(warriors.length, 22);
+  assert.deepEqual(new Set(warriors.map(w => w.id)), new Set(houses.map(h => h.id)));
+  assert.deepEqual(warriors.filter(w => houses.find(h => h.id === w.id).rank === 'patrician').map(w => w.id),
+    ['vinicius', 'avenicci', 'abor', 'tullius', 'arentino']);
+  const artifacts = read('Vorschau/Venalys/assets/warriors/manifest.json').entries;
+  assert.deepEqual(new Set(artifacts.map(entry => entry.id)),new Set(warriors.map(w => w.id)));
   for (const warrior of warriors) {
     assert.ok(['condottieri', 'gondoleri', 'lancieri', 'stralieri'].includes(warrior.classId));
     assert.equal(warrior.withHorse, false);
     assert.ok(warrior.equipment && warrior.reason && warrior.palette.length);
+    const artifact = artifacts.find(entry => entry.id === warrior.id);
+    for (const [field,href] of [['preview',warrior.image],['production',warrior.fullsize]]) {
+      assert.equal(href,artifact[field],`${warrior.id}: runtime ${field} matches audited asset`);
+      assert.equal(createHash('sha256').update(fs.readFileSync(new URL(href,new URL('Vorschau/Venalys/',root)))).digest('hex'),
+        artifact[`${field}Sha256`],`${warrior.id}: runtime ${field} is present and unchanged`);
+    }
     assert.ok(fs.existsSync(new URL(warrior.classHref, new URL('Vorschau/Venalys/', root))));
   }
   assert.equal(context.continent, 'Tirnara');

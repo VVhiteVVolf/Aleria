@@ -1,0 +1,632 @@
+{
+  "schema": "aleria.phalantia.house-warriors-a",
+  "version": 1,
+  "entries": [
+    {
+      "id": "house-daskyren-v2",
+      "source": "assets/warriors/generated/house-daskyren-v2.png",
+      "sourceSha256": "c11a7491986c1bcb8421e2ef454215ad6df4a4910ac08e3e0277639925ea4a64",
+      "production": "assets/warriors/production/house-daskyren-v2.png",
+      "productionSha256": "548b237b0450beeef7c7d9d86927eaaa5d3deeacb3e58e5070c34fd66b9ef404",
+      "preview": "assets/warriors/previews/house-daskyren-v2.webp",
+      "previewSha256": "90bff3e882c0ca74edf3f5fd60d6b918eb808f858d9e08b4402dbbc74f2a60ae",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          41,
+          1014,
+          1519
+        ],
+        "margins": {
+          "left": 0,
+          "top": 41,
+          "right": 10,
+          "bottom": 17
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1009367,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 563497,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          173,
+          65,
+          880,
+          1464
+        ],
+        "margins": {
+          "left": 173,
+          "top": 65,
+          "right": 144,
+          "bottom": 72
+        },
+        "minimumMarginPixels": 65,
+        "touchesCanvas": false,
+        "transparentPixels": 1047231,
+        "opaquePixels": 520224,
+        "partialAlphaPixels": 5409,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          127,
+          46,
+          662,
+          1099
+        ],
+        "margins": {
+          "left": 127,
+          "top": 46,
+          "right": 106,
+          "bottom": 53
+        },
+        "minimumMarginPixels": 46,
+        "touchesCanvas": false,
+        "transparentPixels": 581234,
+        "opaquePixels": 285365,
+        "partialAlphaPixels": 18137,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-melyrion",
+      "source": "assets/warriors/generated/house-melyrion.png",
+      "sourceSha256": "f4c9044e2499bec80925e44cd391ca72ff11e00f83eda1e8d168783560671d8b",
+      "production": "assets/warriors/production/house-melyrion.png",
+      "productionSha256": "465c380e0c18e8f613415cb17fb4168eaf9e2385a9fbeb3273a68354d3a94d3e",
+      "preview": "assets/warriors/previews/house-melyrion.webp",
+      "previewSha256": "44c919b9d464eed3d5ad101bbd7d28ce12b932574cf638eb703734164afe2493",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          2,
+          1023,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 2,
+          "right": 1,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1015085,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 557779,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          175,
+          15,
+          907,
+          1512
+        ],
+        "margins": {
+          "left": 175,
+          "top": 15,
+          "right": 117,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 15,
+        "touchesCanvas": false,
+        "transparentPixels": 1076801,
+        "opaquePixels": 488836,
+        "partialAlphaPixels": 7227,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          129,
+          9,
+          683,
+          1136
+        ],
+        "margins": {
+          "left": 129,
+          "top": 9,
+          "right": 85,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 9,
+        "touchesCanvas": false,
+        "transparentPixels": 594782,
+        "opaquePixels": 264826,
+        "partialAlphaPixels": 25128,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-oresthiden",
+      "source": "assets/warriors/generated/house-oresthiden.png",
+      "sourceSha256": "bf8cf99f5396f0640d707e8bdeb09f7e0bb7572b35e82a02c19e7d6b9fd7f8d7",
+      "production": "assets/warriors/production/house-oresthiden.png",
+      "productionSha256": "4d443a208baae599b0561afa5ee63475864328c2023c2c51c38e75c6fd737859",
+      "preview": "assets/warriors/previews/house-oresthiden.webp",
+      "previewSha256": "d0534d843d43e7b552755aaf6da502f38109267535469aacf27245c142b5cc28",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          928,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 96,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 968282,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 604582,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          119,
+          12,
+          790,
+          1526
+        ],
+        "margins": {
+          "left": 119,
+          "top": 12,
+          "right": 234,
+          "bottom": 10
+        },
+        "minimumMarginPixels": 10,
+        "touchesCanvas": false,
+        "transparentPixels": 995032,
+        "opaquePixels": 572947,
+        "partialAlphaPixels": 4885,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          87,
+          7,
+          595,
+          1147
+        ],
+        "margins": {
+          "left": 87,
+          "top": 7,
+          "right": 173,
+          "bottom": 5
+        },
+        "minimumMarginPixels": 5,
+        "touchesCanvas": false,
+        "transparentPixels": 553217,
+        "opaquePixels": 316243,
+        "partialAlphaPixels": 15276,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-pherakides",
+      "source": "assets/warriors/generated/house-pherakides.png",
+      "sourceSha256": "5fffd8a5494cadcc078593f5f60eb81316f3ad51e455ccc5c71dab586f66ddb5",
+      "production": "assets/warriors/production/house-pherakides.png",
+      "productionSha256": "072f94d402ad059c0a23b92c03a0e282179c8df6622d3d90aea8369716fe731f",
+      "preview": "assets/warriors/previews/house-pherakides.webp",
+      "previewSha256": "bbf0ed5ec8c758c65716b0c01839fae0d11454e9b1fe089174098f0e3946c25f",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1010,
+          1512
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 14,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1065092,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 507772,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          58,
+          9,
+          880,
+          1506
+        ],
+        "margins": {
+          "left": 58,
+          "top": 9,
+          "right": 144,
+          "bottom": 30
+        },
+        "minimumMarginPixels": 9,
+        "touchesCanvas": false,
+        "transparentPixels": 1108871,
+        "opaquePixels": 458941,
+        "partialAlphaPixels": 5052,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          41,
+          4,
+          662,
+          1132
+        ],
+        "margins": {
+          "left": 41,
+          "top": 4,
+          "right": 106,
+          "bottom": 20
+        },
+        "minimumMarginPixels": 4,
+        "touchesCanvas": false,
+        "transparentPixels": 616130,
+        "opaquePixels": 251109,
+        "partialAlphaPixels": 17497,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "house-therakiden",
+      "source": "assets/warriors/generated/house-therakiden.png",
+      "sourceSha256": "5762de8982ac0d562a7725a6caf9c4a7bb3ac185371c81812f860923a413a044",
+      "production": "assets/warriors/production/house-therakiden.png",
+      "productionSha256": "26eeeaef564840fe433e2e9e5ea73a0b9793317eb9f804ab6039aa2ffa505bfe",
+      "preview": "assets/warriors/previews/house-therakiden.webp",
+      "previewSha256": "912da049aa9c85a1d7fd12b26bd8760ac9905f9f7190599653c0f8f36c9064dc",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1010,
+          1522
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 14,
+          "bottom": 14
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 928501,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 644363,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          78,
+          9,
+          784,
+          1517
+        ],
+        "margins": {
+          "left": 78,
+          "top": 9,
+          "right": 240,
+          "bottom": 19
+        },
+        "minimumMarginPixels": 9,
+        "touchesCanvas": false,
+        "transparentPixels": 964127,
+        "opaquePixels": 602863,
+        "partialAlphaPixels": 5874,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          56,
+          4,
+          590,
+          1140
+        ],
+        "margins": {
+          "left": 56,
+          "top": 4,
+          "right": 178,
+          "bottom": 12
+        },
+        "minimumMarginPixels": 4,
+        "touchesCanvas": false,
+        "transparentPixels": 535693,
+        "opaquePixels": 333088,
+        "partialAlphaPixels": 15955,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    }
+  ],
+  "supersededEntries": [
+    {
+      "id": "house-daskyren",
+      "source": "assets/warriors/generated/house-daskyren.png",
+      "sourceSha256": "e050fb3521a19bbdeed18cbc8b654f0ba819727cda834c8add056c44e2fe3826",
+      "production": "assets/warriors/production/house-daskyren.png",
+      "productionSha256": "dce3926f5c9de3675c92926bb20e61ee577e79d6c364b653628f1fb833cd2ad1",
+      "preview": "assets/warriors/previews/house-daskyren.webp",
+      "previewSha256": "e88927292ee87ed7e9be51fa36319036e67401b8206677d74edf7d65d910a8b7",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1010,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 14,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 936288,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 636576,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          156,
+          4,
+          914,
+          1499
+        ],
+        "margins": {
+          "left": 156,
+          "top": 4,
+          "right": 110,
+          "bottom": 37
+        },
+        "minimumMarginPixels": 4,
+        "touchesCanvas": false,
+        "transparentPixels": 976102,
+        "opaquePixels": 591254,
+        "partialAlphaPixels": 5508,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          115,
+          1,
+          688,
+          1127
+        ],
+        "margins": {
+          "left": 115,
+          "top": 1,
+          "right": 80,
+          "bottom": 25
+        },
+        "minimumMarginPixels": 1,
+        "touchesCanvas": false,
+        "transparentPixels": 540824,
+        "opaquePixels": 324736,
+        "partialAlphaPixels": 19176,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    }
+  ]
+}

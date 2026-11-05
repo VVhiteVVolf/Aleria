@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-11-04T23:22:16.801633+00:00",
+  "url": "http://127.0.0.1:8897/Vorschau/Klythesia/",
+  "scope": "Local Klythesia lore, society, art integration, source amendments and draft UI",
+  "counts": {
+    "evidenceFacts": 51,
+    "historyStages": 8,
+    "estateIllustrations": 8,
+    "uniqueTheios": 1,
+    "socialEstatesBelowTheios": 7,
+    "classPrototypes": 7,
+    "clanProposals": 7,
+    "houseThoraxFigures": 7,
+    "nationalThoraxFigures": 1,
+    "namedMapPlaces": 7,
+    "additionalEmblems": 2,
+    "deityCatalogueEntries": 14
+  },
+  "tests": {
+    "command": "node Vorschau/Klythesia/scripts/klythesia.test.mjs",
+    "passed": 19,
+    "failed": 0,
+    "skipped": 0
+  },
+  "browser": {
+    "baselineProof": "diagnostics/klythesia-expansion-20261104/browser/browser-review.json",
+    "incrementalProof": "diagnostics/klythesia-expansion-20261104/browser/realm/browser-review.json",
+    "status": "passed",
+    "viewports": [
+      [
+        1440,
+        1000
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "baselineDialogsEach": 23,
+    "incrementalDialogsEach": 2,
+    "currentTargetsEach": 24,
+    "coverageExplanation": "The unchanged 22 baseline views plus revised realm-crest view and new national-Thorax view cover all 24 current targets. The two realm views were checked incrementally after the baseline passed.",
+    "desktopPointerDrag": true,
+    "mobileSelection": true,
+    "draftPersistenceImportExportUndoReset": true,
+    "consoleErrors": [],
+    "requestFailures": [],
+    "httpErrors": [],
+    "horizontalOverflow": false
+  },
+  "visualInspection": {
+    "status": "passed",
+    "actuallyViewed": [
+      "browser/desktop-hero.png",
+      "browser/desktop-estates.png",
+      "browser/mobile-estates.png",
+      "browser/1440-house-klyrath.png",
+      "browser/390-house-elyssar.png",
+      "browser/mobile-map-zoom.png",
+      "browser/realm/1440-artwork-realm-klythesia.png",
+      "browser/realm/390-realm-warrior-realm-klythesia.png",
+      "browser/realm/desktop-hero.png"
+    ]
+  },
+  "sourceIntegrity": {
+    "suppliedOriginalsByteIdentical": 7,
+    "historicReligionSnapshotsHashMatch": true,
+    "oldResearchReportsPreserved": true,
+    "activeSourceHashesAndPointersPass": true,
+    "deityGroupsDoctrinesAndUnrelatedRanksPreserved": true
+  },
+  "semanticReview": {
+    "status": "passed",
+    "kind": "Independent read-only audit by tirnara_language_revision",
+    "theiosAndHouseThoraxFollowup": "Passed targeted read-through"
+  },
+  "changes": {
+    "canonicalReligionSources": 2,
+    "generatedReligionPages": 1,
+    "canonicalGenealogyChanged": false,
+    "firebaseWrites": false,
+    "privateSourcesChanged": false
+  },
+  "publishing": {
+    "push": false,
+    "deploy": false,
+    "noindex": true
+  },
+  "hashes": {
+    "Vorschau/Klythesia/realm-context.mjs": "18f64027f8f246cba56e32f3a21bcb61dcf39482ee96d894b5ee5647fd513219",
+    "Vorschau/Klythesia/estate-data.mjs": "1fbf3a2b584dc504b0b42c4a904a65aa526709423fcfd5a325a7d15b795f285a",
+    "Vorschau/Klythesia/warrior-data.mjs": "48845306774a582dce589553688bbf693c204f40fb6c3c3cc98b7c58765fbae3",
+    "Vorschau/Klythesia/house-data.mjs": "82ee457bbbca0f906369010e6adf0dcd93a9cba62c274b7beceed71ce083ab8b",
+    "Vorschau/Klythesia/house-warrior-data.mjs": "d31d48d014dd2302f62c0b3f841d8e222f9628513ba8675cb60de46d725bcafb",
+    "Vorschau/Klythesia/realm-warrior-data.mjs": "52f5a02b4d990fda9a9bb01e3b9ac6e4ca2d6bed0f7beaf3da1811c71eee353d",
+    "Vorschau/Klythesia/territory-data.mjs": "c43b0065b9ab6daeec17ebe4dae5cc4fdf41862f0d4a454200365f1d5d5ae1ee",
+    "Vorschau/Klythesia/placement-state.mjs": "d18c5071ccd4637a13b3543ae073e3d4f4dee9de2c5a9c09d67bda7a254dfafb",
+    "Vorschau/Klythesia/house-placement.mjs": "68276646a68fe5f5672d275a1b1c516ff4544038fe8547ab83eda15045883caa",
+    "Vorschau/Klythesia/realm-view.mjs": "f5be8cb294fab562b243b1769de823a0b2ed00e1efc6b1f0b6c3ba82477fc78f",
+    "Vorschau/Klythesia/map-view.mjs": "e040e311fb7276c521481028b524248998c910e3dcc5a4435b83f202948f1f4d",
+    "Vorschau/Klythesia/proposal-render.mjs": "63a1c273a62782a6f8e5a46765ed710eeebc235750b886811077097beca72887",
+    "Vorschau/Klythesia/proposal-app.mjs": "4fa3bb1b3f36989490a4d276b6882cb2e55f86cbf9d6a83d33583d48044e2364",
+    "Vorschau/Klythesia/art-dialogs.mjs": "770851b14e75867d6d08f9e85a73abe123b3c0a647f1fa3c3d8eb3004763de4d",
+    "Vorschau/Klythesia/evidence-data.mjs": "559597b10d8f0910682fbf8d1d6f75f5ad7443f73824adaa9971410f308a8b7a",
+    "Vorschau/Klythesia/map-data.mjs": "140fde078ec24075ea4f43e579bf193b6477f1c5891b1ebdeff3cf07f9173525",
+    "Vorschau/Klythesia/art-data.mjs": "938208aaf20f0f2314de269e75774fa46922d526924536b57fa553ed006e9ce0",
+    "Vorschau/Klythesia/README.md": "8daa6f2b2607fcdf7cb83ddcca50e665964a83b2fb5424daaa19f0fdc4b0c34c",
+    "Vorschau/Klythesia/sources/lore-amendment-20261104.json": "d84a5a80aaf6b24a20ca37463885b6c4c0f2cdb5e1b2ab18294ba2731f8fd905"
+  }
+}

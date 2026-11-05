@@ -1,0 +1,1454 @@
+{
+  "schemaVersion": 1,
+  "title": "Klythesia – belegte Religion, Kultur und Organisation",
+  "status": "source-evidence-preparation",
+  "language": "de",
+  "scope": "Lesender Abgleich bestehender Religionsquellen für die lokale Vorbereitungsseite. Keine neue Lore, keine Änderung der Glaubensquellen.",
+  "sourcePriority": "Die JSON-Religionsquellen sind die Belege. Ihre gerenderte HTML-Seite ist dieselbe Überlieferung und keine unabhängige Bestätigung. Phalantische Aussagen bleiben Fremdsicht.",
+  "perspectives": {
+    "source-statement": "Eine bestehende Quelle beschreibt eine gesellschaftliche, organisatorische oder historische Angabe; keine zusätzliche Bestätigung behauptet.",
+    "klythesian-belief": "Glaubensaussage, Kultpraxis oder religiöse Wertung des Zirkels; nicht als neutrale Aussage über fremde Völker, Geschlechter oder Krankheit lesen.",
+    "phalantian-external-view": "Religiöse Fremdsicht aus dem Phalantischen Bund; keine neutrale klythesische Selbstauskunft."
+  },
+  "categories": [
+    {
+      "id": "religion",
+      "title": "Religion"
+    },
+    {
+      "id": "kultur",
+      "title": "Kultur"
+    },
+    {
+      "id": "organisation",
+      "title": "Organisation"
+    },
+    {
+      "id": "geschichte",
+      "title": "Geschichte"
+    },
+    {
+      "id": "konflikte",
+      "title": "Konflikte"
+    }
+  ],
+  "sources": [
+    {
+      "id": "waldzirkel-lore",
+      "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+      "sha256": "f146c569a7ec93daebb2865ec01cdf6f2645718a12ece0d266b085a1c754ed06",
+      "role": "primary-religion-lore",
+      "note": "Bestehende aus Nutzerlore übernommene Religionsbeschreibung."
+    },
+    {
+      "id": "waldzirkel-catalogue",
+      "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+      "sha256": "af70a0792f692d2e5eeeb422b3173430d487129d750986ce5c28b5038bb428a1",
+      "role": "primary-structured-catalogue",
+      "note": "Bestehender Katalog von 14 Gestalteneinträgen und zwölf religiösen Bezeichnungen."
+    },
+    {
+      "id": "waldzirkel-rendered-page",
+      "path": "Religionen/religionen/zirkel-des-ewigen-waldes/index.html",
+      "sha256": "7faa2760c54ce94b3367342746b1c8f5173388dfa7ef80cda1f24dcd213f9cfe",
+      "role": "derived-render",
+      "note": "Gerenderte Religionsseite; kein zusätzlicher unabhängiger Beleg."
+    },
+    {
+      "id": "phalantian-external-view",
+      "path": "Religionen/religionen/phalantischer-bund/eintrag.json",
+      "sha256": "c0b7090bb255161837c43416f0eafd43affdae3b25e455b6e777d73e6e9de4d9",
+      "role": "external-religious-perspective",
+      "note": "Ausschließlich als phalantische Fremdsicht verwendet."
+    }
+  ],
+  "counts": {
+    "facts": 35,
+    "catalogueEntries": 14,
+    "ancestorGods": 1,
+    "namedGoddesses": 7,
+    "patronGods": 1,
+    "enemyImageEntries": 5,
+    "religiousLabels": 12,
+    "openItems": 8
+  },
+  "facts": [
+    {
+      "id": "religion-name",
+      "category": "religion",
+      "title": "Zirkel des Ewigen Waldes",
+      "text": "Die für Klythesia dokumentierte Religion heißt Der Zirkel des Ewigen Waldes.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/title",
+        "section": "Titel"
+      }
+    },
+    {
+      "id": "southern-tirnara-amazons",
+      "category": "geschichte",
+      "title": "Amazonenreich im Süden Tirnaras",
+      "text": "Die Religionsüberlieferung verortet Klythesia im Süden Tirnaras und bezeichnet es als Amazonenreich. Sie berichtet von einer Abspaltung von verwandten Gruppen.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/0/blocks/0",
+        "section": "Einführung"
+      }
+    },
+    {
+      "id": "religious-origin",
+      "category": "geschichte",
+      "title": "Religiöse Umbruchszeit",
+      "text": "Der Zirkel entstand der Quelle zufolge zur Zeit der Hohen Drei und der Celestischen Synode als Abspaltung und Neuinterpretation älterer Glaubensvorstellungen. Jahreszahlen fehlen.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/0/blocks/0",
+        "section": "Einführung"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/1/blocks/0",
+          "section": "Hintergrund"
+        }
+      ]
+    },
+    {
+      "id": "prophet-journey",
+      "category": "geschichte",
+      "title": "Überlieferung des Propheten",
+      "text": "Ein zunächst namenloser Prophet fand bei anderen Völkern wenig Gehör und wandte sich schließlich dem Volk Klythesias zu. Dort wurde er als göttlicher Führer und Patrongott anerkannt.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/1/blocks/0",
+        "section": "Hintergrund"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/1/blocks/1",
+          "section": "Hintergrund"
+        }
+      ]
+    },
+    {
+      "id": "kyreon-founder",
+      "category": "geschichte",
+      "title": "Kyreon und die Reichsgründung",
+      "text": "Der Prophet nahm den Namen Kyreon an. Nach der Überlieferung entstanden unter seiner Führung das Amazonenreich und der Zirkel; seine Lehren bilden dessen Grundlage.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/1/blocks/2",
+        "section": "Hintergrund"
+      }
+    },
+    {
+      "id": "forest-nature",
+      "category": "kultur",
+      "title": "Wälder und Natur",
+      "text": "Kyreons Lehre und der Zirkel sind eng mit den Wäldern und der Natur verbunden. Ein konkretes staatliches Landnutzungsrecht wird daraus nicht beschrieben.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/1/blocks/2",
+        "section": "Hintergrund"
+      }
+    },
+    {
+      "id": "related-faiths",
+      "category": "religion",
+      "title": "Verwandte Glaubenssysteme",
+      "text": "Die Quelle beschreibt Ähnlichkeiten und Neuinterpretationen des Alten Pantheons, der Hohen Drei, der Celestischen Synode und der Alerischen Kirche. Ihre Wertung bestimmter Formen als rein ist eine Glaubensposition.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/0/blocks/0",
+        "section": "Einführung"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/0/blocks/1",
+          "section": "Einführung"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/1/blocks/3",
+          "section": "Hintergrund"
+        }
+      ]
+    },
+    {
+      "id": "klytharios-highest",
+      "category": "religion",
+      "title": "Höchster Ahnengott",
+      "text": "Klytharios gilt als einziger höchster Gott und Herrscher. Er wacht als Ahnengott über die Welt und führt das amazonische Volk durch Kyreon.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/2/blocks/1",
+        "section": "Doktrine"
+      }
+    },
+    {
+      "id": "klytharios-aspects",
+      "category": "religion",
+      "title": "Göttliche Aspekte",
+      "text": "Die Doktrin verbindet Klytharios mit Aspekten Zatrachs und Ordans. Der strukturierte Katalog führt zusätzlich eine Querverbindung zu Zarakhul. Diese Verknüpfungen sind keine zusätzlichen eigenständigen Mitglieder des lokalen Pantheons.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/2/blocks/2",
+        "section": "Doktrine"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+          "pointer": "/groups/0/entries/0",
+          "section": "Götterkatalog"
+        }
+      ]
+    },
+    {
+      "id": "kyreon-divine-office",
+      "category": "organisation",
+      "title": "Patrongott und Gottkönig",
+      "text": "Kyreon erscheint zugleich als geweihter Patrongott, höchster Prophet, Apostel, göttlicher Mittler und Gottkönig. Ihm werden geistliche und weltliche Autorität zugeschrieben; die heutige staatliche Ausgestaltung ist nicht erklärt.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/2/blocks/6",
+        "section": "Doktrine"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/5/blocks/0",
+          "section": "Matriarchat"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+          "pointer": "/groups/2/entries/0",
+          "section": "Götterkatalog"
+        }
+      ]
+    },
+    {
+      "id": "seven-named-goddesses",
+      "category": "religion",
+      "title": "Sieben namentlich geführte Göttinnen",
+      "text": "Übersicht und Katalog nennen Aristhea, Artemisra, Elythra, Kallistra, Klythara, Nekara und Alethea. Die abweichende Angabe von neun Nebengöttern in der Prosa bleibt ungeklärt.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/1",
+        "section": "Die Göttinnen"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/summary",
+          "section": "Übersicht"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/2/blocks/3",
+          "section": "Doktrine"
+        }
+      ]
+    },
+    {
+      "id": "temples-society",
+      "category": "organisation",
+      "title": "Tempel und Gesellschaft",
+      "text": "Die Tempel bilden eine religiöse und gesellschaftliche Struktur, die von Priesterinnen geführt wird. Die Quelle verbindet diese Frauenämter mit dem Dienst an Kyreon.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/5/blocks/0",
+        "section": "Matriarchat"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/5/blocks/5",
+          "section": "Matriarchat"
+        }
+      ]
+    },
+    {
+      "id": "clan-matriarchs",
+      "category": "organisation",
+      "title": "Matriarchin als Clanoberhaupt",
+      "text": "Matriarchinnen werden ausdrücklich als Oberhäupter der Clans bezeichnet. Namen, Zahl, Gebiete, Erbregeln und staatliche Zuständigkeiten dieser Clans sind nicht angegeben.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/5/blocks/3",
+        "section": "Matriarchat"
+      }
+    },
+    {
+      "id": "temple-hierarchy",
+      "category": "organisation",
+      "title": "Dokumentierte Tempelränge",
+      "text": "Der strukturierte Glaubenskatalog enthält zwölf Bezeichnungen von Hohe Matriarchin bis Laie. Diese religiöse Reihenfolge ist kein belegtes weltliches Stände- oder Lehnssystem.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries",
+        "section": "Hierarchie"
+      }
+    },
+    {
+      "id": "high-matriarch",
+      "category": "organisation",
+      "title": "Hohe Matriarchin",
+      "text": "Die Hohe Matriarchin gilt als symbolische Gemahlin Kyreons und höchste Autorität innerhalb des Tempels. Ihr werden geistliche Führung und Aufsicht über die religiöse Praxis zugeschrieben.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries/0",
+        "section": "Hierarchie"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/5/blocks/1",
+          "section": "Matriarchat"
+        }
+      ]
+    },
+    {
+      "id": "arch-matriarch",
+      "category": "organisation",
+      "title": "Erz-Matriarchin",
+      "text": "Die Erz-Matriarchin wird als symbolische Konkubine Kyreons beschrieben. Sie unterstützt die Hohe Matriarchin und übernimmt Tempelverwaltung und Führungsaufgaben.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries/1",
+        "section": "Hierarchie"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/5/blocks/2",
+          "section": "Matriarchat"
+        }
+      ]
+    },
+    {
+      "id": "oracles-mantis",
+      "category": "organisation",
+      "title": "Orakel und Mantis",
+      "text": "Orakel leiten Tempel und Heiligtümer und vermitteln göttliche Botschaften. Mantis führen Zeremonien durch, bewahren Lehren und bilden Priesterinnen aus.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries/2",
+        "section": "Hierarchie"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+          "pointer": "/hierarchy/entries/3",
+          "section": "Hierarchie"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/5/blocks/3",
+          "section": "Matriarchat"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/5/blocks/4",
+          "section": "Matriarchat"
+        }
+      ]
+    },
+    {
+      "id": "aristhea-women-authority",
+      "category": "kultur",
+      "title": "Weibliche Autorität",
+      "text": "Aristhea verkörpert im Kult weibliche Weisheit, Stärke und Autorität. Die Quelle bezeichnet sie als Matriarchin aller Frauen und als Vorbild für Führungs- und Entscheidungsaufgaben.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/3/blocks/3",
+        "section": "Aristhea"
+      }
+    },
+    {
+      "id": "aristhea-maritime",
+      "category": "kultur",
+      "title": "Seefahrt, Fischfang und Wetter",
+      "text": "Seeleute und Fischer wenden sich an Aristhea für sichere Fahrten; auch für Landwirtschaft und Wetter werden ihre Segnungen erbeten. Küstentempel und Altäre verwenden Muschel- und Wellenmotive, teils Krone oder Zepter.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/3/blocks/2",
+        "section": "Aristhea"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/4",
+          "section": "Aristhea"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/5",
+          "section": "Aristhea"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/6",
+          "section": "Aristhea"
+        }
+      ]
+    },
+    {
+      "id": "artemisra-hunting",
+      "category": "kultur",
+      "title": "Heilige Jagd",
+      "text": "Die Artemisra-Überlieferung verbindet Nahrungserwerb und Schutz der Gemeinschaft mit heiliger Jagd. Jagdtrophäen werden als Dankopfer am Altar verbrannt; Wald und Natur sollen mit Respekt behandelt werden.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/3/blocks/9",
+        "section": "Artemisra"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/8",
+          "section": "Artemisra"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/10",
+          "section": "Artemisra"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/11",
+          "section": "Artemisra"
+        }
+      ]
+    },
+    {
+      "id": "elythra-festivals",
+      "category": "kultur",
+      "title": "Kunst und Fruchtbarkeitsfeste",
+      "text": "Elythras Kult umfasst Fruchtbarkeit, Liebe, Kunst und Ästhetik. Beschrieben sind gemeinschaftliche Feste, Musik, Tanz, künstlerische Opfergaben und sexuelle Kultrituale.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/3/blocks/14",
+        "section": "Elythra"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/15",
+          "section": "Elythra"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/16",
+          "section": "Elythra"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/17",
+          "section": "Elythra"
+        }
+      ]
+    },
+    {
+      "id": "kallistra-craft-war",
+      "category": "kultur",
+      "title": "Krieg, Arbeit und Handwerk",
+      "text": "Kallistra schützt der Glaubensquelle zufolge Krieger, Arbeiter und Handwerker. Schaukampf, militärische Wettkämpfe und die Ehrung handwerklicher Leistung gehören zu ihrem Kult.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/3/blocks/19",
+        "section": "Kallistra"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/20",
+          "section": "Kallistra"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/21",
+          "section": "Kallistra"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/23",
+          "section": "Kallistra"
+        }
+      ]
+    },
+    {
+      "id": "kallistra-sacrifices",
+      "category": "religion",
+      "title": "Überlieferte Menschenopfer",
+      "text": "Der Kallistra-Abschnitt erwähnt Menschenopfer an ihren Altären. Zeitliche Einordnung, heutige Verbreitung und rechtlicher Status sind nicht festgelegt.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/3/blocks/22",
+        "section": "Kallistra"
+      }
+    },
+    {
+      "id": "klythara-politics",
+      "category": "kultur",
+      "title": "List, Rache und Politik",
+      "text": "Klythara steht für Rache, strategische Klugheit und politische Machtspiele. Masken und Spiegel begleiten ihre Symbolik; Anhänger suchen ihren Rat bei politischen und gesellschaftlichen Fragen.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/3/blocks/25",
+        "section": "Klythara"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/26",
+          "section": "Klythara"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/28",
+          "section": "Klythara"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/29",
+          "section": "Klythara"
+        }
+      ]
+    },
+    {
+      "id": "klythara-killings",
+      "category": "religion",
+      "title": "Ritualisierte Rachetötung",
+      "text": "Die Quelle bezeichnet bestimmte Rachetötungen als Ehrenmorde und ordnet sie Klytharas Kult zu. Daraus lässt sich ohne weitere Festlegung kein heutiges allgemeines Straf- oder Familienrecht ableiten.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/3/blocks/27",
+        "section": "Klythara"
+      }
+    },
+    {
+      "id": "nekara-crypts",
+      "category": "kultur",
+      "title": "Versiegelte Ahnengrüfte",
+      "text": "Nekaras Kult kennt versiegelte, heilige Ahnengrüfte. Ausschließlich ihre Priesterinnen dürfen diese betreten und die Bestattungsriten sowie die Pflege der Gräber und Wächter übernehmen.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/3/blocks/32",
+        "section": "Nekara"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/34",
+          "section": "Nekara"
+        }
+      ]
+    },
+    {
+      "id": "nekara-undead-guardians",
+      "category": "religion",
+      "title": "Untote Grabwächterinnen",
+      "text": "Untote Kriegerinnen oder Mumien werden als Wächterinnen der heiligen Grüfte beschrieben. Dies ist eine überlieferte Besonderheit von Nekaras Kult.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/3/blocks/33",
+        "section": "Nekara"
+      }
+    },
+    {
+      "id": "alethea-education",
+      "category": "organisation",
+      "title": "Schulen, Tempel und Magieorden",
+      "text": "Aletheas Kult unterhält Schulen und Tempel für praktische und geistige Bildung. Magische Orden lehren, erforschen und praktizieren Magie; konkrete Ordensnamen oder Zahlen fehlen.",
+      "perspective": "source-statement",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/3/blocks/38",
+        "section": "Alethea"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/39",
+          "section": "Alethea"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/40",
+          "section": "Alethea"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/41",
+          "section": "Alethea"
+        }
+      ]
+    },
+    {
+      "id": "enemy-images",
+      "category": "religion",
+      "title": "Göttliche Feindbilder",
+      "text": "Als Feindbilder führt der Katalog Tethron, Baalzor, Lyrion, Gryloth sowie Aurion und Noxus. Die Texte schildern deren Ablehnung; sie sind von den positiv verehrten Göttinnen zu unterscheiden.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/3",
+        "section": "Die Feindbilder"
+      }
+    },
+    {
+      "id": "male-oppression-image",
+      "category": "kultur",
+      "title": "Religiöses Gegenbild männlicher Herrschaft",
+      "text": "Die Feindbilder werden mit Unterdrückung, Gewalt und einer als unrein bewerteten männlichen Welt verbunden. Das ist die ausdrücklich wertende Glaubenssicht der Quelle, keine neutrale Aussage über Männer oder andere Völker.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/4/blocks/1",
+        "section": "Tethron"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/2",
+          "section": "Tethron"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/3",
+          "section": "Tethron"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/18",
+          "section": "Gryloth"
+        }
+      ]
+    },
+    {
+      "id": "lyrion-trade-suspicion",
+      "category": "kultur",
+      "title": "Religiöses Misstrauen gegen Handel",
+      "text": "Der Lyrion-Kulttext warnt vor Betrug, Ausbeutung und Manipulation im Handel. Ein pauschales staatliches Handelsverbot ist nicht dokumentiert.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/4/blocks/11",
+        "section": "Lyrion"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/12",
+          "section": "Lyrion"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/14",
+          "section": "Lyrion"
+        }
+      ]
+    },
+    {
+      "id": "gryloth-purity",
+      "category": "religion",
+      "title": "Reinheit und Krankheit",
+      "text": "Gryloth dient als religiöses Feindbild für Krankheit, Verfall und Unreinheit. Die Verbindung mit Männern ist eine kultische Wertung; der Text nennt Schutzrituale und Wachsamkeit.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/4/blocks/16",
+        "section": "Gryloth"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/17",
+          "section": "Gryloth"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/18",
+          "section": "Gryloth"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/19",
+          "section": "Gryloth"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/20",
+          "section": "Gryloth"
+        }
+      ]
+    },
+    {
+      "id": "aurion-noxus-aspects",
+      "category": "religion",
+      "title": "Aurion und Noxus als zwei Gesichter",
+      "text": "Aurion und Noxus werden ausdrücklich als zwei Gesichter einer Gottheit beschrieben: verführerische Täuschung und zerstörerisches Chaos. Die Zuschreibung psychischer Leiden an sie ist eine religiöse Deutung der Quelle.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/4/blocks/22",
+        "section": "Aurion und Noxus"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/23",
+          "section": "Aurion und Noxus"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/24",
+          "section": "Aurion und Noxus"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/25",
+          "section": "Aurion und Noxus"
+        }
+      ]
+    },
+    {
+      "id": "phalantia-heresy",
+      "category": "konflikte",
+      "title": "Phalantische Fremdsicht",
+      "text": "Der Phalantische Bund betrachtet den Zirkel als Ketzerei und als Umkehr seiner patriarchalen Glaubensordnung. Die Quelle berichtet auch, dass Klythesias Anhänger diese Beurteilung zurückweisen.",
+      "perspective": "phalantian-external-view",
+      "source": {
+        "path": "Religionen/religionen/phalantischer-bund/eintrag.json",
+        "pointer": "/sections/1/blocks/3",
+        "section": "Hintergrund"
+      }
+    },
+    {
+      "id": "phalantia-no-crusade",
+      "category": "konflikte",
+      "title": "Keine belegte offene Glaubenskriegsführung",
+      "text": "Die phalantische Quelle schildert bewussten Verzicht auf offene Kreuzzüge: Klythesias Gläubige gelten dort als irregeleitet und nicht als erklärte Glaubensfeinde. Ein aktueller Krieg oder ein konkretes Abkommen ist damit nicht belegt.",
+      "perspective": "phalantian-external-view",
+      "source": {
+        "path": "Religionen/religionen/phalantischer-bund/eintrag.json",
+        "pointer": "/sections/5/blocks/5",
+        "section": "Gegenüber dem Zirkel des Ewigen Waldes"
+      }
+    }
+  ],
+  "deities": [
+    {
+      "id": "klytharios",
+      "name": "Klytharios",
+      "group": "ahnengott",
+      "epithet": "Der Jäger / Vater / Tyrann",
+      "domains": [
+        "Ahnengott",
+        "höchste göttliche Herrschaft"
+      ],
+      "text": "Höchster Ahnengott; Kyreon gilt als sein Mittler.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/0/entries/0",
+        "section": "Götterkatalog"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/2/blocks/1",
+          "section": "Doktrine"
+        }
+      ]
+    },
+    {
+      "id": "aristhea",
+      "name": "Aristhea",
+      "group": "goettin",
+      "epithet": "Göttin der See · Mutter / Witwe / Seemaid",
+      "domains": [
+        "Meer",
+        "Autorität",
+        "Wetter"
+      ],
+      "text": "Gemahlin Klytharios und weibliches Autoritätsideal.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/1/entries/0",
+        "section": "Götterkatalog"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/1",
+          "section": "Aristhea"
+        }
+      ]
+    },
+    {
+      "id": "artemisra",
+      "name": "Artemisra",
+      "group": "goettin",
+      "epithet": "Göttin der Natur · Hirtin / Jäger",
+      "domains": [
+        "Natur",
+        "Jagd"
+      ],
+      "text": "Schwester Klytharios; heiliger Natur- und Jagdbezug.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/1/entries/1",
+        "section": "Götterkatalog"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/8",
+          "section": "Artemisra"
+        }
+      ]
+    },
+    {
+      "id": "elythra",
+      "name": "Elythra",
+      "group": "goettin",
+      "epithet": "Göttin der Liebe · Maid / Hedonist",
+      "domains": [
+        "Fruchtbarkeit",
+        "Liebe",
+        "Kunst",
+        "Ästhetik"
+      ],
+      "text": "Tochter Klytharios; gemeinschaftliche Feste und Künste.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/1/entries/2",
+        "section": "Götterkatalog"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/13",
+          "section": "Elythra"
+        }
+      ]
+    },
+    {
+      "id": "kallistra",
+      "name": "Kallistra",
+      "group": "goettin",
+      "epithet": "Göttin des Krieges · Streiter / Knecht",
+      "domains": [
+        "Krieg",
+        "Arbeit",
+        "Handwerk"
+      ],
+      "text": "Tochter Klytharios; Schutz von Kriegern, Arbeitern und Handwerkern.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/1/entries/3",
+        "section": "Götterkatalog"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/19",
+          "section": "Kallistra"
+        }
+      ]
+    },
+    {
+      "id": "klythara",
+      "name": "Klythara",
+      "group": "goettin",
+      "epithet": "Göttin der List · Rächerin / Nachtmaid",
+      "domains": [
+        "List",
+        "Rache",
+        "Strategie"
+      ],
+      "text": "Schwester Klytharios; Rache, politische Strategie und Maskensymbolik.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/1/entries/4",
+        "section": "Götterkatalog"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/25",
+          "section": "Klythara"
+        }
+      ]
+    },
+    {
+      "id": "nekara",
+      "name": "Nekara",
+      "group": "goettin",
+      "epithet": "Göttin des Todes · Hüter / Schicksalsweberin",
+      "domains": [
+        "Tod",
+        "Übergang",
+        "Totenruhe"
+      ],
+      "text": "Gemahlin Klytharios; heilige Grüfte und priesterliche Totenfürsorge.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/1/entries/5",
+        "section": "Götterkatalog"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/31",
+          "section": "Nekara"
+        }
+      ]
+    },
+    {
+      "id": "alethea",
+      "name": "Alethea",
+      "group": "goettin",
+      "epithet": "Göttin des Wissens · Mentor / Intrigant",
+      "domains": [
+        "Wissen",
+        "Magie",
+        "Astrologie"
+      ],
+      "text": "Tochter Klytharios; Bildung, Forschung und magische Orden.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/1/entries/6",
+        "section": "Götterkatalog"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/37",
+          "section": "Alethea"
+        }
+      ]
+    },
+    {
+      "id": "kyreon",
+      "name": "Kyreon",
+      "group": "patrongott",
+      "epithet": "Der Häscher",
+      "domains": [
+        "Prophetie",
+        "göttliche Vermittlung",
+        "Gottkönigtum"
+      ],
+      "text": "Als Prophet, geweihter Patrongott und Gottkönig überliefert; heutige Staatsform bleibt zu klären.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/2/entries/0",
+        "section": "Götterkatalog"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/2/blocks/6",
+          "section": "Doktrine"
+        }
+      ]
+    },
+    {
+      "id": "tethron",
+      "name": "Tethron",
+      "group": "feindbild",
+      "epithet": "Der Verschlinger",
+      "domains": [
+        "Meer",
+        "Unterwelt",
+        "Unterdrückung"
+      ],
+      "text": "Religiöses Feindbild, verbunden mit Piraterie und Unterdrückung; keine positive Kultverehrung daraus ableiten.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/3/entries/0",
+        "section": "Götterkatalog"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/1",
+          "section": "Tethron"
+        }
+      ]
+    },
+    {
+      "id": "baalzor",
+      "name": "Baalzor",
+      "group": "feindbild",
+      "epithet": "Der Schänder",
+      "domains": [
+        "Verderben",
+        "Gewalt",
+        "Unreinheit"
+      ],
+      "text": "Als Vater Tethrons und Symbol für Verderben, Missbrauch und unheilige Wesen abgelehnt.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/3/entries/1",
+        "section": "Götterkatalog"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/6",
+          "section": "Baalzor"
+        }
+      ]
+    },
+    {
+      "id": "lyrion",
+      "name": "Lyrion",
+      "group": "feindbild",
+      "epithet": "Der Trickser",
+      "domains": [
+        "Betrug",
+        "Handel"
+      ],
+      "text": "Feindbild ausbeuterischen und täuschenden Handels.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/3/entries/2",
+        "section": "Götterkatalog"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/11",
+          "section": "Lyrion"
+        }
+      ]
+    },
+    {
+      "id": "gryloth",
+      "name": "Gryloth",
+      "group": "feindbild",
+      "epithet": "Der Verseucher",
+      "domains": [
+        "Pestilenz",
+        "Unreinheit"
+      ],
+      "text": "Religiöses Feindbild von Krankheit, Verfall und Unreinheit.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/3/entries/3",
+        "section": "Götterkatalog"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/16",
+          "section": "Gryloth"
+        }
+      ]
+    },
+    {
+      "id": "aurion-noxus",
+      "name": "Aurion & Noxus",
+      "group": "feindbild",
+      "epithet": "Der Zweigesichtige",
+      "domains": [
+        "Täuschung",
+        "Wahnsinn",
+        "Chaos"
+      ],
+      "text": "Zwei Gesichter einer Gottheit und ein gemeinsamer Katalogeintrag; Zuschreibungen psychischer Leiden sind kultische Deutung.",
+      "perspective": "klythesian-belief",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/groups/3/entries/4",
+        "section": "Götterkatalog"
+      },
+      "additionalSources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/22",
+          "section": "Aurion und Noxus"
+        }
+      ]
+    }
+  ],
+  "ranks": [
+    {
+      "id": "hohe-matriarchin",
+      "title": "Hohe Matriarchin",
+      "position": 1,
+      "text": "Höchste Autorität innerhalb des Tempels; symbolische Gemahlin Kyreons und geistliche Führung.",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries/0",
+        "section": "Hierarchie"
+      }
+    },
+    {
+      "id": "erz-matriarchin",
+      "title": "Erz-Matriarchin",
+      "position": 2,
+      "text": "Symbolische Konkubine Kyreons; unterstützt die Hohe Matriarchin und führt Tempelangelegenheiten.",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries/1",
+        "section": "Hierarchie"
+      }
+    },
+    {
+      "id": "orakel",
+      "title": "Orakel",
+      "position": 3,
+      "text": "Hochrangige Priesterin; leitet Tempel und Heiligtümer und übermittelt göttliche Botschaften.",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries/2",
+        "section": "Hierarchie"
+      }
+    },
+    {
+      "id": "mantis",
+      "title": "Mantis",
+      "position": 4,
+      "text": "Religiöse Führerin; bildet Priesterinnen aus, wahrt Lehren, führt Zeremonien durch und unterstützt Orakel.",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries/3",
+        "section": "Hierarchie"
+      }
+    },
+    {
+      "id": "sybilla",
+      "title": "Sybilla",
+      "position": 5,
+      "text": "Prophetisch begabte weise Frau und geistliche Ratgeberin.",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries/4",
+        "section": "Hierarchie"
+      }
+    },
+    {
+      "id": "seherin",
+      "title": "Seherin",
+      "position": 6,
+      "text": "Empfängt und deutet Visionen und göttliche Botschaften.",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries/5",
+        "section": "Hierarchie"
+      }
+    },
+    {
+      "id": "hohe-priesterin",
+      "title": "Hohe Priesterin",
+      "position": 7,
+      "text": "Beaufsichtigt die rituellen Abläufe und religiöse Disziplin eines Tempels.",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries/6",
+        "section": "Hierarchie"
+      }
+    },
+    {
+      "id": "priesterin",
+      "title": "Priesterin",
+      "position": 8,
+      "text": "Führt tägliche Riten und Gebete durch und ist Ansprechpartnerin der Gläubigen.",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries/7",
+        "section": "Hierarchie"
+      }
+    },
+    {
+      "id": "adept",
+      "title": "Adept",
+      "position": 9,
+      "text": "Angehende Priesterin mit theoretischer und praktischer Ausbildung; die Quellenbezeichnung bleibt erhalten.",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries/8",
+        "section": "Hierarchie"
+      }
+    },
+    {
+      "id": "novize",
+      "title": "Novize",
+      "position": 10,
+      "text": "Beginnende Tempelausbildung in Glaubenslehre und Ritualen; die Quellenbezeichnung bleibt erhalten.",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries/9",
+        "section": "Hierarchie"
+      }
+    },
+    {
+      "id": "schuelerin",
+      "title": "Schülerin",
+      "position": 11,
+      "text": "Jüngstes Tempelmitglied in grundlegender geistlicher Erziehung.",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries/10",
+        "section": "Hierarchie"
+      }
+    },
+    {
+      "id": "laie",
+      "title": "Laie",
+      "position": 12,
+      "text": "Gläubiges Gemeindemitglied außerhalb der Tempelhierarchie; nimmt an Zeremonien teil und unterstützt den Tempel.",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+        "pointer": "/hierarchy/entries/11",
+        "section": "Hierarchie"
+      }
+    }
+  ],
+  "additionalRoles": [
+    {
+      "id": "clan-matriarch",
+      "title": "Matriarchin",
+      "text": "Oberhaupt eines Clans laut Prosa; genaue Beziehung zu den Tempelrängen und zur weltlichen Verwaltung ist offen.",
+      "source": {
+        "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+        "pointer": "/sections/5/blocks/3",
+        "section": "Matriarchat"
+      }
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "goddess-count",
+      "type": "source-contradiction",
+      "title": "Sieben benannte Göttinnen oder neun Nebengötter",
+      "text": "Zusammenfassung und Katalog führen sieben Göttinnen; die Doktrin nennt an zwei Stellen neun Nebengötter. Zwei weitere Namen sind nicht belegt.",
+      "sources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/summary",
+          "section": "Übersicht"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/2/blocks/3",
+          "section": "Doktrine"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/2/blocks/5",
+          "section": "Doktrine"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+          "pointer": "/groups/1/entries",
+          "section": "Die Göttinnen"
+        }
+      ],
+      "handling": "Alle sieben belegten Namen erhalten; keine fehlenden Gottheiten ergänzen und keine bestehende Quelle still korrigieren."
+    },
+    {
+      "id": "ancestor-name",
+      "type": "name-variant",
+      "title": "Klytharios und Klytharion",
+      "text": "Der Ahnengott heißt in Übersicht und Katalog Klytharios; im ersten Matriarchatsabsatz steht einmal Klytharion.",
+      "sources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+          "pointer": "/groups/0/entries/0",
+          "section": "Götterkatalog"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/5/blocks/0",
+          "section": "Matriarchat"
+        }
+      ],
+      "handling": "Als Schreib- oder Überlieferungsvariante offenführen; keinen zusätzlichen Gott und keine eigenmächtige Namenskorrektur erzeugen."
+    },
+    {
+      "id": "divine-kingship-and-matriarchy",
+      "type": "open-question",
+      "title": "Gottkönigtum und matriarchale Ordnung",
+      "text": "Die Quelle verbindet Kyreons geistliche und weltliche Autorität mit weiblicher Tempelführung und Matriarchinnen als Clanoberhäuptern. Das ist kein notwendiger Widerspruch; die heutige institutionelle Verbindung ist nicht beschrieben.",
+      "sources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/2/blocks/6",
+          "section": "Doktrine"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/5/blocks/0",
+          "section": "Matriarchat"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/5/blocks/3",
+          "section": "Matriarchat"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/5/blocks/5",
+          "section": "Matriarchat"
+        }
+      ],
+      "handling": "Heutige Regierung, Thronfolge, Amtsinhaber und Kompetenzgrenzen später festlegen; weder reine Königinnenherrschaft noch heutige männliche Dynastie ableiten."
+    },
+    {
+      "id": "clan-matriarchs-hierarchy",
+      "type": "scope-question",
+      "title": "Clanoberhaupt und Tempelrang",
+      "text": "Die Prosa nennt Matriarchinnen als Clanoberhäupter; die gesonderte Rangliste führt Hohe Matriarchin, Erz-Matriarchin und weitere Tempelämter. Die einfache Clan-Matriarchin steht nicht als eigener Rang in dieser Liste.",
+      "sources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/5/blocks/3",
+          "section": "Matriarchat"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+          "pointer": "/hierarchy/entries",
+          "section": "Hierarchie"
+        }
+      ],
+      "handling": "Clanrolle und religiöse Rangliste getrennt dokumentieren; keine weltliche Rangfolge, Clanzahl oder Zuordnung zu Grafen- und Baronsrängen erfinden."
+    },
+    {
+      "id": "founder-current-status",
+      "type": "open-chronology",
+      "title": "Kyreons zeitliche Stellung",
+      "text": "Kyreon erscheint in Gründungserzählung und kultischer Beschreibung. Geburts- und Regierungsdaten, Tod, Nachfolge und ein heutiger Amtsinhaber fehlen.",
+      "sources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/1/blocks/2",
+          "section": "Hintergrund"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/2/blocks/6",
+          "section": "Doktrine"
+        }
+      ],
+      "handling": "Kultische Gegenwartsform nicht ohne weiteren Beleg als heutige Personenakte, Sterblichkeit oder lebende Dynastie interpretieren."
+    },
+    {
+      "id": "enemy-veneration-language",
+      "type": "wording-ambiguity",
+      "title": "Tethron als Feindbild",
+      "text": "Der Tethron-Abschnitt verwendet einmal das Wort verehrt, beschreibt aber unmittelbar seine Ablehnung. Der Katalog ordnet ihn ausdrücklich den Feindbildern zu.",
+      "sources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/1",
+          "section": "Tethron"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/4/blocks/4",
+          "section": "Tethron"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/glaube.json",
+          "pointer": "/groups/3",
+          "section": "Die Feindbilder"
+        }
+      ],
+      "handling": "Als abgelehntes göttliches Feindbild darstellen; daraus keinen positiv verehrten Kult ableiten."
+    },
+    {
+      "id": "ritual-current-status",
+      "type": "open-chronology",
+      "title": "Zeitlicher und rechtlicher Stand überlieferter Tötungsrituale",
+      "text": "Die Texte erwähnen Menschenopfer und ritualisierte Rachetötungen. Heutige Häufigkeit, rechtliche Geltung und zeitliche Grenzen sind nicht erläutert.",
+      "sources": [
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/22",
+          "section": "Kallistra"
+        },
+        {
+          "path": "Religionen/religionen/zirkel-des-ewigen-waldes/eintrag.json",
+          "pointer": "/sections/3/blocks/27",
+          "section": "Klythara"
+        }
+      ],
+      "handling": "Die vorhandenen Angaben weder verschweigen noch zu einem ausgearbeiteten heutigen Straf-, Opfer- oder Familienrecht erweitern."
+    },
+    {
+      "id": "external-view",
+      "type": "perspective-boundary",
+      "title": "Phalantische Wertung ist Fremdsicht",
+      "text": "Die Beurteilung als Ketzerei und als Umkehr patriarchaler Ordnung stammt aus der phalantischen Religionsquelle. Dort wird zugleich auf offene Kreuzzüge verzichtet.",
+      "sources": [
+        {
+          "path": "Religionen/religionen/phalantischer-bund/eintrag.json",
+          "pointer": "/sections/1/blocks/3",
+          "section": "Hintergrund"
+        },
+        {
+          "path": "Religionen/religionen/phalantischer-bund/eintrag.json",
+          "pointer": "/sections/5/blocks/5",
+          "section": "Gegenüber dem Zirkel des Ewigen Waldes"
+        }
+      ],
+      "handling": "Als phalantische Position kennzeichnen; keine objektive Minderwertigkeit, heutige Kriegslage oder gemeinsame Staatsordnung daraus ableiten."
+    }
+  ],
+  "doNotInfer": [
+    "Keine zusätzlichen Gottheiten aus der Angabe neun Nebengötter ergänzen.",
+    "Querverweise auf Götter anderer Religionen sind keine weiteren lokalen Pantheonmitglieder.",
+    "Aurion und Noxus bilden in dieser Quelle einen gemeinsamen Eintrag und zwei Gesichter einer Gottheit.",
+    "Keine Clan- oder Adelshausnamen, Clanzahlen, Lehnstitel, Erbgesetze, Regierungsämter oder aktuellen Herrscher erfinden.",
+    "Die Tempelränge nicht als weltliche Kasten ausgeben.",
+    "Kyreons Gottkönigtum und die matriarchale Gesellschaft als offene institutionelle Verbindung behandeln, nicht automatisch als Widerspruch.",
+    "Keine festgelegte rechtliche Stellung aller Männer, ein allgemeines Handelsverbot oder gegenwärtigen Glaubenskrieg aus religiösen Feindbildern ableiten.",
+    "Keine kulturellen Gleichsetzungen mit später genannten irdischen Vorbildern vornehmen.",
+    "Namensabweichungen anderer Archive, insbesondere Athara und Logara, nicht ohne Beleg mit vorhandenen Gottheiten gleichsetzen oder in diesen Kult aufnehmen."
+  ]
+}

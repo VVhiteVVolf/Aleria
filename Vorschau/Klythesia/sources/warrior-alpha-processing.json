@@ -1,0 +1,11 @@
+{
+  "schema": "aleria.klythesia.warrior-alpha-processing",
+  "version": 1,
+  "authorization": "User-authorized technical alpha cleanup; preserve generator originals and all production RGB pixels.",
+  "overrides": {
+    "toxare": {"coreThreshold": 210},
+    "myrmex": {"coreThreshold": 210},
+    "thyrsia": {"outsideThreshold": 100, "coreThreshold": 180}
+  },
+  "reason": "Retain fine bowstring, casting-net cords and harp strings. Harp-string source-alpha cores include values of 195–209, so a 210 cutoff would remove segments. No holes are filled; the shared transfer function changes alpha only."
+}

@@ -1,0 +1,201 @@
+/** Runtime house proposals. Original naming and heraldic direction remain in sources/house-plan.json. */
+export const HOUSES = [
+  {
+    "id": "house-oresthiden",
+    "name": "Oresthid",
+    "rank": "König",
+    "localTitle": "Basileus",
+    "sourceSeat": "lysandreia",
+    "motif": "Orthros: ein einziger heraldischer zweiköpfiger Wachhund mit einem gemeinsamen kräftigen Hundekörper, genau zwei getrennten Hundeköpfen, vier Beinen und einem Schwanz. Beide Köpfe schauen wachsam nach links und rechts; weder Wolf noch Schlange. Elfenbeinfarbene Figur auf dunkelrotem Feld.",
+    "palette": [
+      "Elfenbein",
+      "Dunkelrot",
+      "Schwarz",
+      "Alte Bronze"
+    ],
+    "frame": "Schwarzer Ring mit bronzenem griechischem Mäander",
+    "note": "Erstes vorgeschlagenes Königshaus; eigener Palast in Lysandreia. Das zweifache Wachen ist ein Hausmotiv, kein Anspruch auf beide Kronen.",
+    "prototypeId": "prototype-07",
+    "royal": true,
+    "crest": "assets/emblems/previews/house-oresthiden.webp",
+    "fullsize": "assets/emblems/production/house-oresthiden.png",
+    "ready": true,
+    "status": "proposal"
+  },
+  {
+    "id": "house-therakiden",
+    "name": "Therakid",
+    "rank": "König",
+    "localTitle": "Basileus",
+    "sourceSeat": "lysandreia",
+    "motif": "Talos: ein einzelner bronzener männlicher Wächterriese im altgriechischen Brustpanzer, aufrecht schreitend, mit einem großen runden Schild am linken Arm und einer geschlossenen rechten Faust. Keine Waffe und keine zusätzliche Figur. Als flache bronzene Silhouette mit wenigen Binnenlinien auf tiefem nachtblauem Feld.",
+    "palette": [
+      "Bronze",
+      "Nachtblau",
+      "Kalkweiß",
+      "Schwarz"
+    ],
+    "frame": "Kalkweißer Ring mit dunkelblauen Palmetten und dünnen Bronzelinien",
+    "note": "Zweites vorgeschlagenes Königshaus; eigener Palast in Lysandreia. Talos ist hier ein vorgeschlagenes heraldisches Motiv und kein neuer Gott des Krathos-Bundes.",
+    "prototypeId": "prototype-07",
+    "royal": true,
+    "crest": "assets/emblems/previews/house-therakiden.webp",
+    "fullsize": "assets/emblems/production/house-therakiden.png",
+    "ready": true,
+    "status": "proposal"
+  },
+  {
+    "id": "house-daskyren",
+    "name": "Daskyr",
+    "rank": "Periökenhaus",
+    "localTitle": "Periöke",
+    "sourceSeat": "milinthos",
+    "motif": "Ein großer antik-griechischer Dreifußkessel mit genau drei schlanken Beinen, weitem rundem Kessel und zwei hohen seitlichen Ringgriffen. Ein einziges klar gezeichnetes elfenbeinfarbenes Kultgerät auf dunkelgrünem Feld; kein Feuer und keine Figur.",
+    "palette": [
+      "Elfenbein",
+      "Dunkelgrün",
+      "Rotocker",
+      "Bronze"
+    ],
+    "frame": "Bronzener Kreisring mit rotockerfarbenen geometrischen Winkelpaaren",
+    "note": "Sesshaftes Landadelshaus von Milinthos; das Oberhaupt besitzt einen Sitz in der Geruso.",
+    "prototypeId": "prototype-02",
+    "royal": false,
+    "crest": "assets/emblems/previews/house-daskyren.webp",
+    "fullsize": "assets/emblems/production/house-daskyren.png",
+    "ready": true,
+    "status": "proposal"
+  },
+  {
+    "id": "house-pherakides",
+    "name": "Pherakid",
+    "rank": "Periökenhaus",
+    "localTitle": "Periöke",
+    "sourceSeat": "syrakleia",
+    "motif": "Eine einzige aufrechte Labrys, eine altgriechische Doppelaxt mit zwei spiegelgleichen breiten geschwungenen Schneiden und einem geraden kurzen Schaft. Mattschwarze Axt auf warmem rotockerfarbenem Feld, keine gekreuzten Waffen und keine Hand.",
+    "palette": [
+      "Mattschwarz",
+      "Rotocker",
+      "Elfenbein",
+      "Dunkles Eisen"
+    ],
+    "frame": "Dunkler Eisenring mit sparsamer elfenbeinfarbener griechischer Wellenlinie",
+    "note": "Sesshaftes Landadelshaus von Syrakleia; das Oberhaupt besitzt einen Sitz in der Geruso.",
+    "prototypeId": "prototype-04",
+    "royal": false,
+    "crest": "assets/emblems/previews/house-pherakides.webp",
+    "fullsize": "assets/emblems/production/house-pherakides.png",
+    "ready": true,
+    "status": "proposal"
+  },
+  {
+    "id": "house-melyrion",
+    "name": "Melyrion",
+    "rank": "Periökenhaus",
+    "localTitle": "Periöke",
+    "sourceSeat": "knossira",
+    "motif": "Eine große goldockerfarbene Zikade frontal von oben, mit genau sechs Beinen und zwei langen durchscheinend GEZEICHNETEN, jedoch vollständig deckend gemalten Flügelpaaren entlang des Körpers. Klare antike griechische Vasenmalerei, auf dunklem petrolfarbenem Feld. Keine Biene und kein Schmetterling.",
+    "palette": [
+      "Goldocker",
+      "Dunkles Petrol",
+      "Kalkweiß",
+      "Schwarz"
+    ],
+    "frame": "Breiter kalkweißer Ring mit einfachen petrolfarbenen Zikadenflügel-Geometrien",
+    "note": "Sesshaftes Landadelshaus von Knossira; das Oberhaupt besitzt einen Sitz in der Geruso.",
+    "prototypeId": "prototype-03",
+    "royal": false,
+    "crest": "assets/emblems/previews/house-melyrion.webp",
+    "fullsize": "assets/emblems/production/house-melyrion.png",
+    "ready": true,
+    "status": "proposal"
+  },
+  {
+    "id": "house-nerathen",
+    "name": "Nerath",
+    "rank": "Periökenhaus",
+    "localTitle": "Periöke",
+    "sourceSeat": "lakonis",
+    "motif": "Ein einzelner heraldischer Igel im Seitenprofil nach links, elfenbeinfarbener Bauch und Gesicht, klar gezackter schwarzer Stachelrücken, vier kurze Beine und kleine runde Ohren. Auf gedämpftem senfgelbem Feld; kein Wildschwein und keine zusätzlichen Gegenstände.",
+    "palette": [
+      "Elfenbein",
+      "Schwarz",
+      "Senfgelb",
+      "Braun"
+    ],
+    "frame": "Dunkler Holzring mit hellen einfachen antiken Strichornamenten",
+    "note": "Sesshaftes Landadelshaus von Lakonis; das Oberhaupt besitzt einen Sitz in der Geruso.",
+    "prototypeId": "prototype-02",
+    "royal": false,
+    "crest": "assets/emblems/previews/house-nerathen.webp",
+    "fullsize": "assets/emblems/production/house-nerathen.png",
+    "ready": true,
+    "status": "proposal"
+  },
+  {
+    "id": "house-kallorys",
+    "name": "Kallorys",
+    "rank": "Periökenhaus",
+    "localTitle": "Periöke",
+    "sourceSeat": "pergeira",
+    "motif": "Ein einzelner kupferfarbener Skolopender als heraldischer Hundertfüßer in einem offenen C-Bogen, ein Kopf mit zwei kurzen Fühlern, ein gegliederter flacher Körper und viele ordentlich paarweise angeordnete kurze Beine. Keine Scheren, kein Stachelschwanz und keine Schlangenform. Auf tiefem pflaumenviolettem Feld.",
+    "palette": [
+      "Kupfer",
+      "Pflaumenviolett",
+      "Kalkweiß",
+      "Schwarz"
+    ],
+    "frame": "Matter Kupferring mit schmalen schwarzen griechischen Zinnenlinien",
+    "note": "Sesshaftes Landadelshaus von Pergeira; das Oberhaupt besitzt einen Sitz in der Geruso.",
+    "prototypeId": "prototype-08",
+    "royal": false,
+    "crest": "assets/emblems/previews/house-kallorys.webp",
+    "fullsize": "assets/emblems/production/house-kallorys.png",
+    "ready": true,
+    "status": "proposal"
+  },
+  {
+    "id": "house-erythaden",
+    "name": "Erythad",
+    "rank": "Periökenhaus",
+    "localTitle": "Periöke",
+    "sourceSeat": "krypteia",
+    "motif": "Eine einzelne rotockerfarbene Languste von oben mit langem gegliedertem Hinterleib, genau zwei langen bogenförmigen Fühlern und kleinen seitlichen Laufbeinen; KEINE großen Hummerscheren. Auf kalkweißem Feld zwischen zwei einfachen dunkelblauen Wellenstreifen, flach wie auf einer griechischen Vase gemalt.",
+    "palette": [
+      "Rotocker",
+      "Kalkweiß",
+      "Dunkelblau",
+      "Bronze"
+    ],
+    "frame": "Dunkelblauer Kreisring mit kalkweißer fortlaufender griechischer Wellenbordüre",
+    "note": "Sesshaftes Landadelshaus von Krypteia; das Oberhaupt besitzt einen Sitz in der Geruso.",
+    "prototypeId": "prototype-05",
+    "royal": false,
+    "crest": "assets/emblems/previews/house-erythaden.webp",
+    "fullsize": "assets/emblems/production/house-erythaden.png",
+    "ready": true,
+    "status": "proposal"
+  },
+  {
+    "id": "house-theskariden",
+    "name": "Theskarid",
+    "rank": "Periökenhaus",
+    "localTitle": "Periöke",
+    "sourceSeat": "thalassos",
+    "motif": "Eine einzelne große seitlich dargestellte Purpurschnecken-Schale (Murex), mit klarer Spiralwindung, langem Siphonfortsatz nach unten und wenigen kräftigen stumpfen Stacheln. Elfenbeinfarbene Schale auf geteiltem Feld: oberes Drittel gedämpft purpurrot, untere zwei Drittel dunkelgrau. Kein Tierkörper und keine Perle.",
+    "palette": [
+      "Elfenbein",
+      "Purpurrot",
+      "Dunkelgrau",
+      "Silber"
+    ],
+    "frame": "Matter silberner Kreisring mit dunklem schmalem griechischem Mäander",
+    "note": "Sesshaftes Landadelshaus von Thalassos; das Oberhaupt besitzt einen Sitz in der Geruso.",
+    "prototypeId": "prototype-06",
+    "royal": false,
+    "crest": "assets/emblems/previews/house-theskariden.webp",
+    "fullsize": "assets/emblems/production/house-theskariden.png",
+    "ready": true,
+    "status": "proposal"
+  }
+];

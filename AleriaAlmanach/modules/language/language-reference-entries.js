@@ -23,7 +23,7 @@ function createLinguaArgentiModuleEntry() {
         imagePosition: 'center',
         imageWidth: 46,
         pageTitle: 'I. — Sprache, Gesetz und silbernes Erbe',
-        description: 'Die <strong>Lingua Argenti</strong> — im Volksmund Argentisch — ist Sprache, Schrift und Herrschaftsinstrument des Kaiserreichs Argentum. In ihr werden Gesetzestexte, Senatsbeschlüsse, militärische Befehle, wissenschaftliche Benennungen und öffentliche Namen so formuliert, dass kein Laut dem Zweifel überlassen bleibt. Klarheit ist keine bloße Stilfrage, sondern ein politisches Ideal.<br><br>Ihre heutige Form entstand aus Kana’anith, Ogham, Stoicheia und der Gemeinen Zunge. Aus diesen älteren Systemen übernahm sie die Vorstellung, dass Zeichen Bedeutung tragen; zugleich verwandelte sie das konsonantengetragene Erbe in ein <strong>Vollalphabet aus 23 Litterae</strong>. Jedes Zeichen besitzt Lautwert, Nomen Litterae und eine Stellung in einem der drei Ordines.<br><br>Argentische Schrift ist kantig, monumental und bewusst frei von unnötigem Zierrat. Sie soll gemeißelt, gestempelt und vor Gericht zweifelsfrei gelesen werden können. Darum ist ein geschriebenes Wort im Reich nie neutral: Es kann Amt verleihen, Zugehörigkeit bestätigen, einen Eid binden oder einen Menschen durch seinen Namen öffentlich verpflichten.',
+        description: 'Die <strong>Lingua Argenti</strong> — im Volksmund Argentisch — ist Sprache, Schrift und Herrschaftsinstrument des Kaiserreichs Argentum. In ihr werden Gesetzestexte, Senatsbeschlüsse, militärische Befehle, wissenschaftliche Benennungen und öffentliche Namen so formuliert, dass kein Laut dem Zweifel überlassen bleibt. Klarheit ist keine bloße Stilfrage, sondern ein politisches Ideal.<br><br>Ihre spätere Reichsnorm schöpft aus Kana’anith, Stoicheia, der Gemeinen Zunge und älteren Ogham-Zeichentraditionen. Diese gelehrte Zusammenführung folgt auf den großen Sprachbruch Tirnaras: <strong>Orin</strong> verwirrte die Zungen der von Zarakhul versklavten Völker und zerstreute die ihnen aufgezwungene dunkle Sprache. Aus dieser Geschichte gingen eigenständige Sprachräume hervor, die sich stark von den albischen und nordischen Sprachen unterschieden.<br><br>Die Übernahme älterer Zeichen und Bedeutungen hebt diesen Sprachbruch nicht auf. Die Grammatici schufen ein <strong>Vollalphabet aus 23 Litterae</strong>; jedes Zeichen besitzt Lautwert, Nomen Litterae und eine Stellung in einem der drei Ordines.<br><br>Argentische Schrift ist kantig, monumental und bewusst frei von unnötigem Zierrat. Sie soll gemeißelt, gestempelt und vor Gericht zweifelsfrei gelesen werden können. Darum ist ein geschriebenes Wort im Reich nie neutral: Es kann Amt verleihen, Zugehörigkeit bestätigen, einen Eid binden oder einen Menschen durch seinen Namen öffentlich verpflichten.',
         stats: [
           ['Eigenname', 'Lingua Argenti · Argentisch'],
           ['Sprecher', 'Argentier · Verwaltung · Legionen · Gelehrte'],
@@ -43,7 +43,7 @@ function createLinguaArgentiModuleEntry() {
         language: {
           archiveLabel: 'Sprachkunde · Argentisches Reichsarchiv',
           nativeName: 'Lingua Argenti · die vollkommene Reichsschrift',
-          family: 'Tirnarisch-argentische Gelehrtensprache · Kana’anith, Ogham, Stoicheia und Gemeine Zunge',
+          family: 'Normierte tirnarische Reichssprache · gelehrte Schrift- und Sprachkontakte nach Orins Sprachbruch',
           speakers: 'Argentier · Grammatici · Senatoren · Legionen · Medici · Naturkundler',
           regions: 'Kaiserreich Argentum · Kolonien · Akademien · Kanzleien und Legionsarchive',
           scriptType: 'Monumentales Vollalphabet · 23 Litterae mit Laut-, Amts- und Reichsbedeutung',
@@ -58,7 +58,7 @@ function createLinguaArgentiModuleEntry() {
           sections: [
             {
               title: 'Herkunft & Reichsreform',
-              text: 'Die Lingua Argenti wurde nicht in einem einzigen Augenblick erfunden. Kana’anith lieferte die tirnarische Wurzeltradition, Ogham die Vorstellung bedeutungstragender Zeichen, Stoicheia die Verbindung von Schrift, Recht und politischer Wirkung. Die Gemeine Zunge gab schließlich den Lautkörper, aus dem die Grammatici eine reichsweit normierte Hochsprache formten.<br><br>Das Ergebnis ist bewusst administrativ: Ein Erlass aus der Hauptstadt soll in einer Grenzfestung ebenso gelesen werden wie an einer Akademie. Regionale Aussprache darf bestehen, die geschriebene Form jedoch nicht schwanken.'
+              text: 'Die Lingua Argenti wurde nicht in einem einzigen Augenblick erfunden. Ihre spätere Reichsnorm entstand nach der Zerschlagung der alten sprachlichen Einheit: Zarakhul hatte seinen unterjochten Völkern eine dunkle Zwangssprache auferlegt; <strong>Orin</strong> verwirrte ihre Zungen und zerstreute sie. Deshalb ist die spätere tirnarische Sprachwelt keine bloße Fortsetzung der albischen oder nordischen Sprachen.<br><br>Kana’anith lieferte eine tirnarische Wurzeltradition, Ogham das ältere Erbe bedeutungstragender <strong>Zeichen</strong>, Stoicheia die Verbindung von Schrift, Recht und politischer Wirkung. Mit der Gemeinen Zunge als weiterem Sprachkontakt formten die Grammatici daraus eine reichsweit normierte Hochsprache. Die gelehrte Übernahme ist von einer ungebrochenen genetischen Sprachabstammung zu unterscheiden.<br><br>Das Ergebnis ist bewusst administrativ: Ein Erlass aus der Hauptstadt soll in einer Grenzfestung ebenso gelesen werden wie an einer Akademie. Regionale Aussprache darf bestehen, die geschriebene Form jedoch nicht schwanken.'
             },
             {
               title: 'Vollalphabet & Lautordnung',
@@ -127,11 +127,11 @@ function createStoicheiaModuleEntry() {
         imagePosition: 'center',
         imageWidth: 46,
         pageTitle: 'I. — Die Elemente von Polis, Krieg und Schicksal',
-        description: '<strong>Stoicheia</strong> ist die phalantische und klythesische Sprache und Schrift der südlichen Stadtstaaten. Ihre vierundzwanzig Zeichen sind aus dem Kana’anith Süd-Tirnaras hervorgegangen, wurden jedoch zu einem Vollalphabet erweitert und mit einer neuen politischen und sakralen Bedeutungslehre versehen.<br><br>Was einst Handel und Verträge trug, wurde in den Händen der Phalantier zum Werkzeug für Kriegsrecht, Namensbindung, Prophezeiung und Staatsordnung. Ein Stoicheion besitzt Laut, Zeichenname und eine Wirkung auf Körper, Geist und Polis. Die Schrift kann darum einen Satz festhalten und zugleich ein Urteil darüber aussprechen.<br><br>Der Überlieferung nach offenbarte <strong>Athara</strong>, Göttin von Weisheit, Krieg und gerechter Ordnung, dem ersten Nomophylax die wahren Bedeutungen auf einem Schlachtfeld. Seither ritzen Grammateis Gebete auf Waffen, binden Namen an Schicksale, versiegeln Eide und deuten aus Zeichenfolgen den möglichen Ausgang eines Krieges.',
+        description: '<strong>Stoicheia</strong> ist die gemeinsame phalantische und klythesische Sprache und Schrift. Die Vorfahren beider Kulturen waren die <strong>Aechanath</strong>, ein vom Norden in den Süden Tirnaras gewandertes albisches Volk des Fürstentums <strong>Aechneach</strong>. Zarakhul versklavte sie früh, zwang sie zum Kampf und legte ihnen seine dunkle Sprache auf. <strong>Orin</strong> verwirrte die Zungen der von Zarakhul unterjochten Völker und zerstreute diese Zwangssprache. Dieser Bruch erklärt die tiefe sprachliche Entfernung von den älteren albischen und nordischen Sprachen.<br><br>Die vierundzwanzig <strong>Schriftzeichen</strong> des Stoicheia gingen später aus dem Kana’anith Süd-Tirnaras hervor. Sie wurden zum Vollalphabet erweitert und mit einer neuen politischen und sakralen Bedeutungslehre versehen. Diese Schriftlinie ist keine ungebrochene Fortsetzung der alten albischen Sprache.<br><br>Nach Zarakhuls Niederlage schufen Phalantias Begründer aus dem Stadtstaat eine männerdominierte Kriegerherrschaft. Nach Jahrhunderten und der Zeit als alerischer Grenzvasall lösten sich beim Reichszerfall die westlichen Städte unter Kyreon als Klythesia. Die gemeinsame Sprache blieb trotz der politischen und religiösen Trennung bestehen.<br><br>Was einst Handel und Verträge trug, wurde in den Händen der Phalantier zum Werkzeug für Kriegsrecht, Namensbindung, Prophezeiung und Staatsordnung. Ein Stoicheion besitzt Laut, Zeichenname und eine Wirkung auf Körper, Geist und Polis. Die Schrift kann darum einen Satz festhalten und zugleich ein Urteil darüber aussprechen.<br><br>Der Überlieferung nach offenbarte <strong>Athara</strong>, Göttin von Weisheit, Krieg und gerechter Ordnung, dem ersten Nomophylax die wahren Bedeutungen auf einem Schlachtfeld. Seither ritzen Grammateis Gebete auf Waffen, binden Namen an Schicksale, versiegeln Eide und deuten aus Zeichenfolgen den möglichen Ausgang eines Krieges.',
         stats: [
           ['Eigenname', 'Stoicheia · Elemente und Grundbestandteile'],
           ['Sprecher', 'Phalantier · Klythesier · Grammateis'],
-          ['Herkunft', 'Vollalphabetischer Nachfolger des Kana’anith'],
+          ['Herkunft', 'Sprachbruch nach Orin · Kana’anith-Erbe der Schrift'],
           ['Schriftsystem', '24 Zeichen · vier Tetrades · fünf Rhemata-Sphären'],
           ['Formenlehre', '37 Rhemata · 12 Präfixe · 12 Suffixe'],
           ['Anwendung', 'Kriegsrecht · Orakel · Namensbindung · Eid · Polis']
@@ -147,7 +147,7 @@ function createStoicheiaModuleEntry() {
         language: {
           archiveLabel: 'Sprachkunde · Phalantisch-klythesisches Polisarchiv',
           nativeName: 'ΣΤΟΙΧΕΙΑ · Stoicheia · Elemente der geordneten Welt',
-          family: 'Tirnarische Schriftfamilie · Kana’anith-Nachfolger mit Ogham-Ferneinflüssen',
+          family: 'Gemeinsame phalantisch-klythesische Sprache nach Orins Sprachbruch · Schrift aus Kana’anith',
           speakers: 'Phalantier · Klythesier · Grammateis · Nomophylakes · Strategen',
           regions: 'Südliche Stadtstaaten · Küstenpoleis · klythesische Herrschaftsräume und Kolonien',
           scriptType: 'Vollalphabet · 24 Poliszeichen in vier Bedeutungsgruppen · 37 Rhemata',
@@ -162,7 +162,15 @@ function createStoicheiaModuleEntry() {
           sections: [
             {
               title: 'Vom Kana’anith zum Stoicheia',
-              text: 'Stoicheia gilt als direkte Nachfolgeschrift des Kana’anith, das seinerseits aus der proto-albischen Ogham-Tradition hervorging. Mit dem Aufstieg der südlichen Stadtstaaten genügte eine konsonantengetragene Handels- und Vertragsschrift nicht mehr. Die Phalantier ergänzten Vokalzeichen und ordneten das Alphabet neu.<br><br>Die Formen blieben als tirnarisches Erbe erkennbar, ihre Bedeutung wurde jedoch auf Polis, Krieg und göttliche Ordnung ausgerichtet. So entstand ein Vollalphabet, das Verwaltung und Kult gleichermaßen dienen konnte.'
+              text: 'Die <strong>Schrift</strong> des Stoicheia ist eine direkte Nachfolgerin des Kana’anith und bewahrt darüber ältere Einflüsse der proto-albischen Ogham-Zeichentradition. Die gesprochene Sprache gehört dagegen zur neuen Ordnung nach <strong>Orins Zungenverwirrung</strong>. Schriftverwandtschaft und Sprachabstammung sind hier nicht gleichzusetzen.<br><br>Mit dem Aufstieg der südlichen Stadtstaaten genügte eine konsonantengetragene Handels- und Vertragsschrift nicht mehr. Die Phalantier ergänzten Vokalzeichen und ordneten das Alphabet neu.<br><br>Die Formen blieben als tirnarisches Erbe erkennbar, ihre Bedeutung wurde jedoch auf Polis, Krieg und göttliche Ordnung ausgerichtet. So entstand ein Vollalphabet, das Verwaltung und Kult gleichermaßen dienen konnte.'
+            },
+            {
+              title: 'Aechanath, Aechneach und die zerstreuten Zungen',
+              text: 'Die <strong>Aechanath</strong> wanderten als albisches Volk vom Norden in den Süden Tirnaras und siedelten im Fürstentum <strong>Aechneach</strong>. Unter Zarakhul gehörten sie zu den früh Versklavten. Sie mussten seine Kriege führen und seine dunkle Sprache sprechen.<br><br>Der Gott <strong>Orin</strong> verwirrte die Zungen der unterjochten Völker und zerstreute die gemeinsame Zwangssprache. Nach Zarakhuls Niederlage wurden die alten Völker und Sprachen nicht einfach wiederhergestellt. Zerstreute Sippen und neue Kulturen formten die spätere Sprachwelt Tirnaras. Stoicheia steht in diesem Sprachbruch und ist keine albische oder nordische Mundart.'
+            },
+            {
+              title: 'Phalantia und Klythesia: getrennte Reiche, gemeinsame Sprache',
+              text: 'Phalantias Begründer schufen nach Zarakhuls Niederlage eine männerdominierte Kriegerkultur. Vom Stadtstaat aus unterwarfen sie weitere Städte, bis Leukonias Widerstand und die Wüste im Norden die Ausdehnung begrenzten. Nach Jahrhunderten wurden sie als widerspenstiger, häufig rebellierender Grenzvasall in das Alerische Kaiserreich eingegliedert.<br><br>Als das Reich zerfiel, führte Kyreon unterdrückte Frauen und Versklavte zur Rebellion. Die westlichen Städte wurden als Klythesia von Phalantia frei. Die amazonische, matriarchale Kriegergesellschaft dient Kyreon als Gottkönig; beide Länder verwenden weiterhin Stoicheia. Die politische und religiöse Trennung bedeutet keinen zweiten vollständigen Sprachbruch.'
             },
             {
               title: 'Athara & der erste Nomophylax',

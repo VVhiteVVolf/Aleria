@@ -1,0 +1,95 @@
+{
+  "status": "passed",
+  "scope": "Final geographic caption update; prior full interaction proof is browser-review.json",
+  "captures": [
+    {
+      "label": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "regionId": "seat-milinthos",
+      "caption": "Drei Bergspitzen und ein Flussband zeigen Milinthos' Lage unter dem nördlichen Gebirgskamm über dem Flusstal.",
+      "horizontalOverflow": false,
+      "sectionOrder": [
+        {
+          "id": "anfang",
+          "top": 65
+        },
+        {
+          "id": "geschichte",
+          "top": 824
+        },
+        {
+          "id": "regierung",
+          "top": 1206
+        },
+        {
+          "id": "eheordnung",
+          "top": 2822
+        },
+        {
+          "id": "staende",
+          "top": 3863
+        },
+        {
+          "id": "gebiete",
+          "top": 5695
+        },
+        {
+          "id": "haeuser",
+          "top": 11673
+        },
+        {
+          "id": "krieger",
+          "top": 14973
+        }
+      ]
+    },
+    {
+      "label": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "regionId": "seat-milinthos",
+      "caption": "Drei Bergspitzen und ein Flussband zeigen Milinthos' Lage unter dem nördlichen Gebirgskamm über dem Flusstal.",
+      "horizontalOverflow": false,
+      "sectionOrder": [
+        {
+          "id": "anfang",
+          "top": 74
+        },
+        {
+          "id": "geschichte",
+          "top": 1219
+        },
+        {
+          "id": "regierung",
+          "top": 1885
+        },
+        {
+          "id": "eheordnung",
+          "top": 5314
+        },
+        {
+          "id": "staende",
+          "top": 7367
+        },
+        {
+          "id": "gebiete",
+          "top": 12208
+        },
+        {
+          "id": "haeuser",
+          "top": 23006
+        },
+        {
+          "id": "krieger",
+          "top": 32634
+        }
+      ]
+    }
+  ],
+  "regionCatalogSha256": "6f96737542edd743060b593c321ea882d6f88a303fed9640ff8b6e38d690172c"
+}

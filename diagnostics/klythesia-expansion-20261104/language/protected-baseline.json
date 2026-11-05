@@ -1,0 +1,143 @@
+{
+  "files": [
+    {
+      "path": "AleriaAlmanach/modules/name-list/name-list-data.js",
+      "sha256": "e38fe1821ac0660b9f866021e318c0040ce39a88792edbbf7c6174a56358196e"
+    },
+    {
+      "path": "AleriaAlmanach/modules/script-table/script-table-data.js",
+      "sha256": "097e1e5d2b10d17389c005bd4398e00a3a65dcc544d9641be5ac0e233f1cc389"
+    },
+    {
+      "path": "AleriaAlmanach/modules/language/language-script-registry.js",
+      "sha256": "1751c1140182b48f8442f90657aa2061abf3e7f7a3482de73eae62309ab9fde4"
+    },
+    {
+      "path": "AleriaAlmanach/modules/language/ishtaran/ishtaran-data.js",
+      "sha256": "1d5ee0ba62e806e839c7baafd71c82b7e891b61f35861054f6d6c09f5c4f283d"
+    },
+    {
+      "path": "AleriaAlmanach/modules/language/tlapanui/tlapanui-entry.js",
+      "sha256": "a0476d737c5a7879c72e07147651f7041a048809f5e67d96e7f28dcbcdae03c4"
+    },
+    {
+      "path": "AleriaAlmanach/modules/language/morgar/morgar-entry.js",
+      "sha256": "d6859abac1c7b757a09cde1a56224d331bd2f80bdf4df31b90531e7b5448416e"
+    },
+    {
+      "path": "AleriaAlmanach/modules/language/laerelis/laerelis-entry.js",
+      "sha256": "b4e0a7e9dd189c7e0fb52776fcf62145522c2708b98e6313560b77f9905aaa28"
+    },
+    {
+      "path": "Fonts/Stoicheia-Gesamtpaket-1.000/Daten/Stoicheia_Daten_1.0.json",
+      "sha256": "885d547fc43b739b60faba29718bfdcff87d19eb4adca5e9e6efe0bf1a33aa6a"
+    },
+    {
+      "path": "Fonts/Kanaanith-Gesamtpaket-1.000/Daten/Kanaanith_Daten.json",
+      "sha256": "9762b9e4c29df11e79b18907aef1192802553d9534a26a40f53040d47922be5f"
+    },
+    {
+      "path": "Fonts/Lingua-Argenti-Gesamtpaket-1.000/Daten/Lingua_Argenti_Daten_1.0.json",
+      "sha256": "3d2a5acfb2454f4b0bc72d93e011dd8d0ec10f5049ad2b5f463f223fd6d9b5d9"
+    },
+    {
+      "path": "Fonts/Ishtaran-Gesamtpaket-1.000/Daten/Tirghan_Sprachdaten_1.000.json",
+      "sha256": "bbcd699e1c870b76074a89a23789024e1ec718f16f3f62fd3aadf1a85a1bd40d"
+    },
+    {
+      "path": "Vorschau/Phalantia/house-data.mjs",
+      "sha256": "82e1ea12de641e6e82239180a419e9da5ecf3cf422a08eb8a68bcb698f339705"
+    },
+    {
+      "path": "Vorschau/Phalantia/territory-data.mjs",
+      "sha256": "b74100b04d79ae2a684ff4621dd4defcb05cd0391edbbfc7c88209efcf40ca50"
+    },
+    {
+      "path": "Vorschau/Phalantia/warrior-data.mjs",
+      "sha256": "cd0f3168334a0cd9b61a3b4431303d2f7881033be5fb392219782d72ca77a1b4"
+    },
+    {
+      "path": "Vorschau/Phalantia/estate-data.mjs",
+      "sha256": "65f77ff32397435c784e4be34f1e08687d5788023156dc45a8e2f08f602147d9"
+    },
+    {
+      "path": "Vorschau/Phalantia/region-shield-data.mjs",
+      "sha256": "6f96737542edd743060b593c321ea882d6f88a303fed9640ff8b6e38d690172c"
+    }
+  ],
+  "phalantia": {
+    "realm": "phalantia",
+    "continent": "Tirnara",
+    "title": "Das Zweikönigreich Phalantia",
+    "subtitle": "Zwei Paläste. Sieben Periökenhäuser. Eine gemeinsame Ordnung.",
+    "introduction": "Phalantia verbindet eine männerdominierte Kriegerkultur mit zwei erblichen Königshäusern, sesshaftem Landadel und streng geschiedenen gesellschaftlichen Ständen. Lysandreia ist die gemeinsame Hauptstadt; die übrigen großen Städte werden von Periökenhäusern beherrscht.",
+    "scope": "Die festgelegte Staats- und Gesellschaftsordnung wird hier vorbereitet. Hausnamen, neue Wappen und die ausführliche Heiratsordnung sind Vorschläge. Sitzänderungen bleiben lokale Entwürfe und verändern weder kanonische Familienakten noch den Geruso-Anspruch eines Hauses.",
+    "government": [
+      {
+        "title": "Zwei erbliche Könige",
+        "text": "Beide Könige tragen ihre Vorhaben der Geruso vor. Es gibt keinen regelmäßigen Machtwechsel. Beide Häuser bleiben gleichzeitig königlich und in der Hauptstadt ansässig."
+      },
+      {
+        "title": "Das königliche Heiratsverbot",
+        "text": "Angehörige der beiden Königshäuser dürfen einander nicht heiraten. Dieses Verbot gehört zur festgelegten Staatsordnung. Die nähere Begründung und die zusätzlichen Erb- und Heiratsregeln werden im anschließenden Entwurf des Eids der zwei Linien vorgeschlagen."
+      },
+      {
+        "title": "Die Geruso",
+        "text": "Ausschließlich die Oberhäupter der Periökenhäuser bilden die Geruso. Sie entscheidet über die vorgetragenen Vorhaben und bildet das politische Gegengewicht zu den Königshäusern. Die aufsichtlichen Aufgaben der Ephoren liegen in diesem einen Gremium."
+      },
+      {
+        "title": "Gegenseitiges Veto",
+        "text": "Jeder der beiden Könige besitzt ein Vetorecht; auch die Geruso kann ein Veto einlegen. Ein blockiertes Vorhaben wird erneut beraten. Ein Stichentscheid oder zusätzliches Parlament ist nicht vorgesehen."
+      },
+      {
+        "title": "Die Periökenherrschaften",
+        "text": "Die Periöken regieren ihre Städte und das zugehörige Land in einer Stellung vergleichbar mit Grafen oder Baronen. Ihre Titel gehen an ihre Nachkommen. Sie sind verbündete und dienende Landadlige der phalantischen Hauptstadt."
+      }
+    ],
+    "marriage": {
+      "status": "Vorschlag zur Ausgestaltung",
+      "title": "Der Eid der zwei Linien",
+      "introduction": "Die Trennung bewahrt zwei eigenständige Kronrechte und Ahnenherde. Eine Person mit Anspruch auf beide Kronen würde die gegenseitige Kontrolle aufheben. Das Verbot begründet sich in der Staatsordnung, nicht in einer behaupteten vollständigen Trennung aller Vorfahren.",
+      "rules": [
+        {
+          "title": "Eidverwandtschaft der Agoge",
+          "text": "Als zusätzliche Begründung des Verbots gelten die beiden Königshäuser in diesem Entwurf als Pflege- und Eidverwandte: Die Königssöhne erleben das jeweils andere Haus als Erziehungshaus und dessen Kinder als Eidgeschwister. Eine Ehe zwischen den Häusern würde dieses heilige Schutzverhältnis brechen. Gemeint ist eine durch Erziehung und Eid begründete Bindung, keine biologische Verwandtschaft."
+        },
+        {
+          "title": "Getrennte Häuser",
+          "text": "Angehörige der beiden Königshäuser dürfen einander nicht heiraten. Adoption oder Hauswechsel in das gegenüberliegende Königshaus und die Übertragung der anderen Krone sind ebenfalls ausgeschlossen."
+        },
+        {
+          "title": "Ehe mit den Periöken",
+          "text": "Königssöhne heiraten Töchter der Periökenhäuser. Königstöchter können Periöken heiraten; ihre Kinder gehören der Vaterlinie an und erhalten über die Mutter keinen Anspruch auf eine Krone."
+        },
+        {
+          "title": "Nachfolge innerhalb der Linie",
+          "text": "Die königliche Nachfolge verbleibt in der männlichen Linie desselben Hauses. Gegebenenfalls folgt eine männliche Nebenlinie dieses Hauses; niemals erbt das gegenüberliegende Königshaus den zweiten Thron."
+        },
+        {
+          "title": "Prüfung und Stand",
+          "text": "Königliche Ehen werden durch Geruso und Heiligtum geprüft. Ehen innerhalb der engsten Verwandtschaft sind ausgeschlossen. Eine Ehe allein verändert den Stand nicht; dafür ist ein Freibrief beziehungsweise eine ausdrückliche Rechtsentscheidung erforderlich."
+        }
+      ]
+    },
+    "culture": [
+      {
+        "title": "Die gegenseitige Agoge",
+        "text": "Ausschließlich Jungen der Königshäuser beginnen im siebten Lebensjahr die Agoge. Sie werden bis zum achtzehnten Lebensjahr vom jeweils gegenüberliegenden Königshaus erzogen, gedrillt und geschult. Danach gelten sie als Männer und kehren in ihr eigenes Haus zurück. Der dauernde Austausch schafft Bindungen und hält Angehörige beider Häuser in der Obhut des anderen."
+      },
+      {
+        "title": "Das lebenslange Orakel",
+        "text": "Eine Tochter aus einem der beiden Königshäuser wird für das Orakel ausgewählt. Sie wächst im Heiligtum auf, wird dort ausgebildet und versieht ihr Amt auf Lebenszeit. Sie bleibt ihr Leben lang jungfräulich. Das geistliche Amt ersetzt die Geruso nicht."
+      },
+      {
+        "title": "Herrschaft über die Heloten",
+        "text": "Die Heloten einer Festung oder Siedlung und ihres Umkreises sind dem eingesetzten Herrn unterstellt. Sie dürfen nichts eigenständig besitzen und keine Waffen führen. Strafen, Abgaben und ihnen zugefügter Schaden sind in begrenztem Umfang geregelt; konkrete Strafsätze oder Abgabenhöhen sind noch nicht festgelegt."
+      },
+      {
+        "title": "Kontrollierte Grenzen",
+        "text": "Fremde benötigen eine Einreisebewilligung, einen anerkannten Aufenthaltsgrund und einen Gastgeber, der für sie bürgt. Die Grenzen werden scharf kontrolliert. Die Stellung eines Gastes begründet keine Zugehörigkeit zum Landadel."
+      }
+    ]
+  }
+}

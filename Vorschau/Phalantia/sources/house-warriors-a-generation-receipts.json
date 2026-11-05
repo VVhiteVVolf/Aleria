@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "entries": [
+    {
+      "id": "house-oresthiden",
+      "tool": "image_gen.imagegen",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a74f-309d-7ce3-9ec6-bff46aee56c8\\exec-1361f5f7-ec07-4e29-84cb-8898a73d20b8.png",
+      "workspaceOriginal": "assets/warriors/generated/house-oresthiden.png",
+      "transparentBackgroundRequested": true,
+      "referenceMode": "num_last_images_to_include:5",
+      "referenceRoles": [
+        "User screenshot 2 Greek helmet chart",
+        "User screenshot 3 mandatory royal helmet",
+        "Approved house knight painting style",
+        "Oresthid house crest",
+        "Therakid house crest"
+      ],
+      "visuallyReviewed": true,
+      "houseId": "house-oresthiden",
+      "selected": true
+    },
+    {
+      "id": "house-therakiden",
+      "tool": "image_gen.imagegen",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a74f-309d-7ce3-9ec6-bff46aee56c8\\exec-96d7aa05-7356-45ed-a50e-01d6c1409b6c.png",
+      "workspaceOriginal": "assets/warriors/generated/house-therakiden.png",
+      "transparentBackgroundRequested": true,
+      "referenceMode": "num_last_images_to_include:5",
+      "referenceRoles": [
+        "User screenshot 2 Greek helmet chart",
+        "User screenshot 3 mandatory royal helmet",
+        "Approved house knight painting style",
+        "Oresthid house crest",
+        "Therakid house crest"
+      ],
+      "visuallyReviewed": true,
+      "houseId": "house-therakiden",
+      "selected": true
+    },
+    {
+      "id": "house-daskyren",
+      "tool": "image_gen.imagegen",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a74f-309d-7ce3-9ec6-bff46aee56c8\\exec-a8cebe4e-0231-489d-b216-58bb2a0f6835.png",
+      "workspaceOriginal": "assets/warriors/generated/house-daskyren.png",
+      "transparentBackgroundRequested": true,
+      "referenceMode": "referenced_image_paths",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Phalantia/assets/emblems/production/house-daskyren.png"
+      ],
+      "visuallyReviewed": true,
+      "houseId": "house-daskyren",
+      "selected": false
+    },
+    {
+      "id": "house-pherakides",
+      "tool": "image_gen.imagegen",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a74f-309d-7ce3-9ec6-bff46aee56c8\\exec-1e5d5a44-c626-4cb0-aa98-b81d187b982a.png",
+      "workspaceOriginal": "assets/warriors/generated/house-pherakides.png",
+      "transparentBackgroundRequested": true,
+      "referenceMode": "referenced_image_paths",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Phalantia/assets/emblems/production/house-pherakides.png"
+      ],
+      "visuallyReviewed": true,
+      "houseId": "house-pherakides",
+      "selected": true
+    },
+    {
+      "id": "house-melyrion",
+      "tool": "image_gen.imagegen",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a74f-309d-7ce3-9ec6-bff46aee56c8\\exec-2581c03f-1eb8-400d-8f71-a967030cd49a.png",
+      "workspaceOriginal": "assets/warriors/generated/house-melyrion.png",
+      "transparentBackgroundRequested": true,
+      "referenceMode": "referenced_image_paths",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Phalantia/assets/emblems/production/house-melyrion.png"
+      ],
+      "visuallyReviewed": true,
+      "houseId": "house-melyrion",
+      "selected": true
+    },
+    {
+      "id": "house-oresthiden-v2",
+      "houseId": "house-oresthiden",
+      "tool": "image_gen.imagegen",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a74f-309d-7ce3-9ec6-bff46aee56c8\\exec-86abc41d-09e1-4854-985d-8dd99bc5b9ed.png",
+      "workspaceOriginal": "assets/warriors/generated/house-oresthiden-v2.png",
+      "transparentBackgroundRequested": true,
+      "referenceMode": "referenced_image_paths",
+      "references": [
+        "E:/Aleria/Vorschau/Phalantia/assets/warriors/generated/house-oresthiden.png"
+      ],
+      "revisionPrompt": "Use case: background-extraction and precise-object-edit. Edit the provided existing illustration, do NOT redesign the warrior. KEEP the exact pose, face/helmet, armor, house emblem, colors, ornaments, weapon shapes and painting style. Remove ALL of the diffuse colored brown/grey/gold mist, glow, halo and painted background surrounding the warrior, as well as ALL background between limbs, weapons, shield and cloak. Those pixels must become genuinely transparent alpha0, NOT white, black, grey, paper, checkerboard pattern or replacement scenery. The final asset must be a clean cut-out silhouette of ONLY the man and his physical equipment, with fully opaque actual skin, metal, cloth, hair, shield and weapons. Preserve fine pale horsehair plumes and long helmet hair tassels as physical objects. No shadow or ground. Keep 1024x1536 portrait canvas. Also reframe the complete physical silhouette to occupy about88–90percent of the image height, leaving at least50pixels fully transparent empty space above the highest crest or spearhead and below the lowest foot or weapon tip; preserve all tips instead of cropping. Do not add lettering, objects or figures. Retain the royal Corinthian helmet with broad transverse alternating BLACK/WHITE crest, Greek meander band and two long pale horsehair tails exactly. Keep both hands and the complete large straight greatsword unchanged.",
+      "selected": false,
+      "reason": "Unnecessary background revision retained; neutral composite proved the original already clean"
+    },
+    {
+      "id": "house-therakiden-v2",
+      "houseId": "house-therakiden",
+      "tool": "image_gen.imagegen",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a74f-309d-7ce3-9ec6-bff46aee56c8\\exec-8aeb10e6-4438-4e34-9a24-1283a0e43cc6.png",
+      "workspaceOriginal": "assets/warriors/generated/house-therakiden-v2.png",
+      "transparentBackgroundRequested": true,
+      "referenceMode": "referenced_image_paths",
+      "references": [
+        "E:/Aleria/Vorschau/Phalantia/assets/warriors/generated/house-therakiden.png"
+      ],
+      "revisionPrompt": "Use case: background-extraction and precise-object-edit. Edit the provided existing illustration, do NOT redesign the warrior. KEEP the exact pose, face/helmet, armor, house emblem, colors, ornaments, weapon shapes and painting style. Remove ALL of the diffuse colored brown/grey/gold mist, glow, halo and painted background surrounding the warrior, as well as ALL background between limbs, weapons, shield and cloak. Those pixels must become genuinely transparent alpha0, NOT white, black, grey, paper, checkerboard pattern or replacement scenery. The final asset must be a clean cut-out silhouette of ONLY the man and his physical equipment, with fully opaque actual skin, metal, cloth, hair, shield and weapons. Preserve fine pale horsehair plumes and long helmet hair tassels as physical objects. No shadow or ground. Keep 1024x1536 portrait canvas. Also reframe the complete physical silhouette to occupy about88–90percent of the image height, leaving at least50pixels fully transparent empty space above the highest crest or spearhead and below the lowest foot or weapon tip; preserve all tips instead of cropping. Do not add lettering, objects or figures. Retain the royal Corinthian helmet with broad transverse alternating BLACK/WHITE crest, Greek meander band and two long pale horsehair tails exactly. Keep both hands and the complete large straight greatsword unchanged.",
+      "selected": false,
+      "reason": "Unnecessary background revision retained; neutral composite proved the original already clean"
+    },
+    {
+      "id": "house-daskyren-v2",
+      "houseId": "house-daskyren",
+      "tool": "image_gen.imagegen",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a74f-309d-7ce3-9ec6-bff46aee56c8\\exec-f8ff0248-04c2-4147-890f-3b59c24a7956.png",
+      "workspaceOriginal": "assets/warriors/generated/house-daskyren-v2.png",
+      "transparentBackgroundRequested": true,
+      "referenceMode": "referenced_image_paths",
+      "references": [
+        "E:/Aleria/Vorschau/Phalantia/assets/warriors/generated/house-daskyren.png"
+      ],
+      "revisionPrompt": "Use case: background-extraction and precise-object-edit. Edit the provided existing illustration, do NOT redesign the warrior. KEEP the exact pose, face/helmet, armor, house emblem, colors, ornaments, weapon shapes and painting style. Remove ALL of the diffuse colored brown/grey/gold mist, glow, halo and painted background surrounding the warrior, as well as ALL background between limbs, weapons, shield and cloak. Those pixels must become genuinely transparent alpha0, NOT white, black, grey, paper, checkerboard pattern or replacement scenery. The final asset must be a clean cut-out silhouette of ONLY the man and his physical equipment, with fully opaque actual skin, metal, cloth, hair, shield and weapons. Preserve fine pale horsehair plumes and long helmet hair tassels as physical objects. No shadow or ground. Keep 1024x1536 portrait canvas. Also reframe the complete physical silhouette to occupy about88–90percent of the image height, leaving at least50pixels fully transparent empty space above the highest crest or spearhead and below the lowest foot or weapon tip; preserve all tips instead of cropping. Do not add lettering, objects or figures. Especially the full long straight spear must remain present: shrink/recenter the whole warrior and spear slightly so its top spearhead has a clear empty top margin. Do not bend or shorten its straight shaft. Retain the green-and-ivory cauldron shield exactly.",
+      "selected": true,
+      "reason": "Actual spearhead top margin improved"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "reviewedAt": "2026-11-04T19:39:13.803328+00:00",
+  "scope": "Klythesia local source collection and preparation page",
+  "verification": "diagnostics/klythesia/verification.json",
+  "facts": 51,
+  "namedMapPlaces": 7,
+  "suppliedOriginals": 7,
+  "targetedTests": {
+    "command": "node Vorschau/Klythesia/scripts/klythesia.test.mjs",
+    "passed": 11,
+    "failed": 0
+  },
+  "browserStatus": "passed",
+  "independentSemanticReview": {
+    "status": "passed",
+    "review": "Source claims, religious roles, source contradictions, foreign perspective and unresolved worldly institutions retained without new lore."
+  },
+  "rootVisualReview": {
+    "status": "passed",
+    "inspected": [
+      "desktop-hero.png",
+      "mobile-hero.png",
+      "desktop-gallery.png",
+      "map-390.png",
+      "mobile-art.png",
+      "root-content-1.png",
+      "root-content-2.png",
+      "root-content-3.png",
+      "root-content-4.png"
+    ],
+    "additional": "All seven supplied originals and seven town anchors inspected in the source review."
+  },
+  "continuity": "AGENTS.md contains targeted local-task record; unrelated working changes preserved.",
+  "publishing": {
+    "push": false,
+    "deploy": false
+  },
+  "newLore": false,
+  "canonicalDataChanged": false
+}

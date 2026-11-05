@@ -1,0 +1,113 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-11-04T21:41:24.453Z",
+  "protectedFiles": [
+    {
+      "path": "AleriaAlmanach/modules/name-list/name-list-data.js",
+      "unchanged": true
+    },
+    {
+      "path": "AleriaAlmanach/modules/script-table/script-table-data.js",
+      "unchanged": true
+    },
+    {
+      "path": "AleriaAlmanach/modules/language/language-script-registry.js",
+      "unchanged": true
+    },
+    {
+      "path": "AleriaAlmanach/modules/language/ishtaran/ishtaran-data.js",
+      "unchanged": true
+    },
+    {
+      "path": "AleriaAlmanach/modules/language/tlapanui/tlapanui-entry.js",
+      "unchanged": true
+    },
+    {
+      "path": "AleriaAlmanach/modules/language/morgar/morgar-entry.js",
+      "unchanged": true
+    },
+    {
+      "path": "AleriaAlmanach/modules/language/laerelis/laerelis-entry.js",
+      "unchanged": true
+    },
+    {
+      "path": "Fonts/Stoicheia-Gesamtpaket-1.000/Daten/Stoicheia_Daten_1.0.json",
+      "unchanged": true
+    },
+    {
+      "path": "Fonts/Kanaanith-Gesamtpaket-1.000/Daten/Kanaanith_Daten.json",
+      "unchanged": true
+    },
+    {
+      "path": "Fonts/Lingua-Argenti-Gesamtpaket-1.000/Daten/Lingua_Argenti_Daten_1.0.json",
+      "unchanged": true
+    },
+    {
+      "path": "Fonts/Ishtaran-Gesamtpaket-1.000/Daten/Tirghan_Sprachdaten_1.000.json",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Phalantia/house-data.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Phalantia/territory-data.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Phalantia/warrior-data.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Phalantia/estate-data.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "Vorschau/Phalantia/region-shield-data.mjs",
+      "unchanged": true
+    }
+  ],
+  "languages": [
+    {
+      "id": "ishtaran",
+      "sections": 12,
+      "allSectionsSurviveEditor": true,
+      "corpusAndGrammarUnchanged": true
+    },
+    {
+      "id": "infernal-nharazim",
+      "sections": 9,
+      "allSectionsSurviveEditor": true,
+      "corpusAndGrammarUnchanged": true
+    },
+    {
+      "id": "kanaanith",
+      "sections": 8,
+      "allSectionsSurviveEditor": true,
+      "corpusAndGrammarUnchanged": true
+    },
+    {
+      "id": "lingua-argenti",
+      "sections": 8,
+      "allSectionsSurviveEditor": true,
+      "corpusAndGrammarUnchanged": true
+    },
+    {
+      "id": "stoicheia",
+      "sections": 10,
+      "allSectionsSurviveEditor": true,
+      "corpusAndGrammarUnchanged": true
+    }
+  ],
+  "phalantia": {
+    "historyArticles": 8,
+    "governmentMarriageEstatesAndIdentityUnchanged": true
+  },
+  "publishing": false,
+  "existingRegressions": {
+    "passed": 13,
+    "failed": 0,
+    "proof": "regressions-in-process.tap",
+    "execution": "Imported four existing node:test suites into one process; node --test child spawning is unavailable in this sandbox."
+  }
+}

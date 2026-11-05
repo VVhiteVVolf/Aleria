@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "verified": true,
+  "tool": "built-in image_gen.imagegen",
+  "activeCount": 5,
+  "retainedToolOutputs": 8,
+  "failures": [],
+  "active": [
+    {
+      "houseId": "house-oresthiden",
+      "name": "Haus Oresthid",
+      "assetStem": "house-oresthiden",
+      "production": "assets/warriors/production/house-oresthiden.png",
+      "preview": "assets/warriors/previews/house-oresthiden.webp",
+      "sourceSha256": "bf8cf99f5396f0640d707e8bdeb09f7e0bb7572b35e82a02c19e7d6b9fd7f8d7",
+      "productionSha256": "4d443a208baae599b0561afa5ee63475864328c2023c2c51c38e75c6fd737859",
+      "originalUnchanged": true,
+      "rgbUnchanged": true,
+      "gapsNotFilled": true
+    },
+    {
+      "houseId": "house-therakiden",
+      "name": "Haus Therakid",
+      "assetStem": "house-therakiden",
+      "production": "assets/warriors/production/house-therakiden.png",
+      "preview": "assets/warriors/previews/house-therakiden.webp",
+      "sourceSha256": "5762de8982ac0d562a7725a6caf9c4a7bb3ac185371c81812f860923a413a044",
+      "productionSha256": "26eeeaef564840fe433e2e9e5ea73a0b9793317eb9f804ab6039aa2ffa505bfe",
+      "originalUnchanged": true,
+      "rgbUnchanged": true,
+      "gapsNotFilled": true
+    },
+    {
+      "houseId": "house-daskyren",
+      "name": "Haus Daskyr",
+      "assetStem": "house-daskyren-v2",
+      "production": "assets/warriors/production/house-daskyren-v2.png",
+      "preview": "assets/warriors/previews/house-daskyren-v2.webp",
+      "sourceSha256": "c11a7491986c1bcb8421e2ef454215ad6df4a4910ac08e3e0277639925ea4a64",
+      "productionSha256": "548b237b0450beeef7c7d9d86927eaaa5d3deeacb3e58e5070c34fd66b9ef404",
+      "originalUnchanged": true,
+      "rgbUnchanged": true,
+      "gapsNotFilled": true
+    },
+    {
+      "houseId": "house-pherakides",
+      "name": "Haus Pherakid",
+      "assetStem": "house-pherakides",
+      "production": "assets/warriors/production/house-pherakides.png",
+      "preview": "assets/warriors/previews/house-pherakides.webp",
+      "sourceSha256": "5fffd8a5494cadcc078593f5f60eb81316f3ad51e455ccc5c71dab586f66ddb5",
+      "productionSha256": "072f94d402ad059c0a23b92c03a0e282179c8df6622d3d90aea8369716fe731f",
+      "originalUnchanged": true,
+      "rgbUnchanged": true,
+      "gapsNotFilled": true
+    },
+    {
+      "houseId": "house-melyrion",
+      "name": "Haus Melyrion",
+      "assetStem": "house-melyrion",
+      "production": "assets/warriors/production/house-melyrion.png",
+      "preview": "assets/warriors/previews/house-melyrion.webp",
+      "sourceSha256": "f4c9044e2499bec80925e44cd391ca72ff11e00f83eda1e8d168783560671d8b",
+      "productionSha256": "465c380e0c18e8f613415cb17fb4168eaf9e2385a9fbeb3273a68354d3a94d3e",
+      "originalUnchanged": true,
+      "rgbUnchanged": true,
+      "gapsNotFilled": true
+    }
+  ],
+  "copies": [
+    {
+      "id": "house-oresthiden",
+      "sha256": "bf8cf99f5396f0640d707e8bdeb09f7e0bb7572b35e82a02c19e7d6b9fd7f8d7",
+      "selected": true,
+      "toolCopyExact": true
+    },
+    {
+      "id": "house-therakiden",
+      "sha256": "5762de8982ac0d562a7725a6caf9c4a7bb3ac185371c81812f860923a413a044",
+      "selected": true,
+      "toolCopyExact": true
+    },
+    {
+      "id": "house-daskyren",
+      "sha256": "e050fb3521a19bbdeed18cbc8b654f0ba819727cda834c8add056c44e2fe3826",
+      "selected": false,
+      "toolCopyExact": true
+    },
+    {
+      "id": "house-pherakides",
+      "sha256": "5fffd8a5494cadcc078593f5f60eb81316f3ad51e455ccc5c71dab586f66ddb5",
+      "selected": true,
+      "toolCopyExact": true
+    },
+    {
+      "id": "house-melyrion",
+      "sha256": "f4c9044e2499bec80925e44cd391ca72ff11e00f83eda1e8d168783560671d8b",
+      "selected": true,
+      "toolCopyExact": true
+    },
+    {
+      "id": "house-oresthiden-v2",
+      "sha256": "ef9a7579fd93f900c3bc51f98619cdc8cfbba432e72d54b2fd675b55bee3ddc9",
+      "selected": false,
+      "toolCopyExact": true
+    },
+    {
+      "id": "house-therakiden-v2",
+      "sha256": "27e0e13894c97f7ad0f916656073f20f9c3ba3da0bb1e2a0e655422f8b5771d5",
+      "selected": false,
+      "toolCopyExact": true
+    },
+    {
+      "id": "house-daskyren-v2",
+      "sha256": "c11a7491986c1bcb8421e2ef454215ad6df4a4910ac08e3e0277639925ea4a64",
+      "selected": true,
+      "toolCopyExact": true
+    }
+  ],
+  "visualReview": {
+    "eachGeneratedImageViewed": true,
+    "neutralProductionContactViewed": true,
+    "royalHelmet": "User screenshot 3 included in initial royal calls through five conversation images.",
+    "framingCorrection": "Daskyr revision v2 restores clear space above complete spearhead.",
+    "transparencyNote": "Neutral alpha-composited contact is authoritative; tool PNG display may show hidden RGB."
+  },
+  "referenceManifest": "sources/house-warriors-a-jobs.json"
+}

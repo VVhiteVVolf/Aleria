@@ -1,0 +1,150 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-02T00:00:00.000Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Fleischsammler Argall/rhydric-argall.json",
+  "character": {
+    "name": "Rhydric Argall",
+    "title": "Burgverwalter und Hauptmann von Caer Ysgellfor",
+    "fraktion": "Haus Argall",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Llysfaen",
+    "currentLocation": "Caer Ysgellfor · Gwynthor",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Rhydric ist der deutlich jüngere Bruder Dyrwyn Argalls und ein Vetter Brinthan und Uthyr Argalls. Er verwaltet Caer Ysgellfor und führt dort als Hauptmann den Wachdienst. Die kleine Festung schützt die umliegenden Höfe und die Hauptstraße und sammelt Getreide und Vorräte für Gwynthor. Die ungelöste Mordserie überfordert ihn; er wirkt abgekämpft und schläft zu wenig. Seine Ehe mit Gwenella ist geschieden. Sie verließ ihn und brannte mit dem Barden Maelor Ffionydd nach Aberon durch. Der gemeinsame Sohn Perwyn lebt bei Rhydric und dient ihm als Knappe.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-02T00:00:00.000Z",
+    "updatedAt": "2026-11-02T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Rhydric Argall"
+        },
+        {
+          "label": "Geboren",
+          "value": "1700"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "40 Jahre"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Geschieden"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Burgverwalter und Hauptmann von Caer Ysgellfor"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "Caer Ysgellfor · Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Rhydric ist der deutlich jüngere Bruder Dyrwyn Argalls und ein Vetter Brinthan und Uthyr Argalls. Er verwaltet Caer Ysgellfor und führt dort als Hauptmann den Wachdienst. Die kleine Festung schützt die umliegenden Höfe und die Hauptstraße und sammelt Getreide und Vorräte für Gwynthor. Die ungelöste Mordserie überfordert ihn; er wirkt abgekämpft und schläft zu wenig. Seine Ehe mit Gwenella ist geschieden. Sie verließ ihn und brannte mit dem Barden Maelor Ffionydd nach Aberon durch. Der gemeinsame Sohn Perwyn lebt bei Rhydric und dient ihm als Knappe.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "Abgekämpft und übermüdet, deutliche Augenringe, etwas zerzaustes rotbraunes Haar. Gwynthorer Hauptmannsrüstung und roter Mantel. Eine Hand ruht am Knauf des eingesteckten Schwertes, die andere hält einen Apfel."
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-argall--rhydric-argall"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-argall--rhydric-argall",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1700",
+      "death": "",
+      "houseId": "house-argall",
+      "houseName": "Haus Argall",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "40 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-argall",
+          "personId": "rhydric-argall",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-02T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-02T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=rhydric-argall",
+          "fingerprint": "{\"name\":\"Rhydric Argall\",\"title\":\"Burgverwalter und Hauptmann von Caer Ysgellfor\",\"birth\":\"1700\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"/AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"40 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"iwrian-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--iwrian-argall\",\"name\":\"Iwrian Argall\"},{\"personId\":\"avelyn-spouse-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--avelyn-spouse-argall\",\"name\":\"Avelyn\"}],\"partners\":[{\"personId\":\"gwenella-spouse-rhydric-argall\",\"type\":\"marriage\",\"status\":\"divorced\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--gwenella-spouse-rhydric-argall\",\"name\":\"Gwenella\"}],\"children\":[{\"personId\":\"perwyn-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--perwyn-argall\",\"name\":\"Perwyn Argall\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "iwrian-argall",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-argall--iwrian-argall",
+            "name": "Iwrian Argall"
+          },
+          {
+            "personId": "avelyn-spouse-argall",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--avelyn-spouse-argall",
+            "name": "Avelyn"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "gwenella-spouse-rhydric-argall",
+            "type": "marriage",
+            "status": "divorced",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--gwenella-spouse-rhydric-argall",
+            "name": "Gwenella"
+          }
+        ],
+        "children": [
+          {
+            "personId": "perwyn-argall",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-argall--perwyn-argall",
+            "name": "Perwyn Argall"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-argall--rhydric-argall",
+    "race": "Mensch",
+    "age": 40
+  }
+}

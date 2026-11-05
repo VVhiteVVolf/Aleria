@@ -1,0 +1,402 @@
+{
+  "schemaVersion": 1,
+  "country": "Klythesia",
+  "compiledAt": "2026-11-04",
+  "purpose": "Belegte nicht primär religiöse Querverweise für eine lokale Vorbereitungsseite. Keine neu ausgearbeitete Landesgeschichte oder Gesellschaftsordnung.",
+  "sources": [
+    {
+      "id": "stoicheia-current",
+      "path": "AleriaAlmanach/modules/language/language-reference-entries.js",
+      "type": "Aktuelles öffentliches Spracharchiv",
+      "section": "createStoicheiaModuleEntry()"
+    },
+    {
+      "id": "stoicheia-data",
+      "path": "Fonts/Stoicheia-Gesamtpaket-1.000/Daten/Stoicheia_Daten_1.0.json",
+      "type": "Strukturierte Sprachquelle"
+    },
+    {
+      "id": "stoicheia-original",
+      "path": "Fonts/Stoicheia-Gesamtpaket-1.000/Quellen/Originalvorlage_Stoicheia.txt",
+      "type": "Ursprüngliche Sprachvorlage; HTML-Inhalt in einer Textdatei"
+    },
+    {
+      "id": "stoicheia-readme",
+      "path": "Fonts/Stoicheia-Gesamtpaket-1.000/README.txt",
+      "type": "Paketbeschreibung"
+    },
+    {
+      "id": "stoicheia-names",
+      "path": "AleriaAlmanach/modules/name-list/name-list-data.js",
+      "type": "Aktuelle Namensliste mit ausdrücklich dokumentierter Erweiterung",
+      "section": "createStoicheiaNameListData()"
+    },
+    {
+      "id": "xanathos-profile",
+      "path": "Bestiarium/tiere/pferde/xanathos/profil.json",
+      "type": "Ausführliches öffentliches Bestiariumprofil"
+    },
+    {
+      "id": "xanathos-market",
+      "path": "Markt/Rossmarkt/Rossmarkt.html",
+      "type": "Öffentliche Marktübersicht",
+      "section": "horse-row[data-name=xanathos]"
+    },
+    {
+      "id": "xanathos-context",
+      "path": "Markt/Rossmarkt/kontext_pferde.md",
+      "type": "Pferdekundliche Kontextquelle",
+      "section": "TIRNARA / XANATHOS"
+    },
+    {
+      "id": "xanathos-list-card",
+      "path": "Bestiarium/tiere/pferde/art.json",
+      "type": "Kurze Bestiarium-Listenkarte",
+      "pointer": "/atlas/groups/1/entries/3"
+    },
+    {
+      "id": "phalantia-religion-comparison",
+      "path": "Religionen/religionen/phalantischer-bund/index.html",
+      "type": "Religionsarchiv; nur zur Abgrenzung ähnlicher Sprachüberlieferungen",
+      "section": "gestalt-logara und Überlieferung / Logara – Gemahlin des Wissens"
+    }
+  ],
+  "facts": [
+    {
+      "id": "shared-language",
+      "category": "Sprache",
+      "title": "Stoicheia ist eine gemeinsame Sprache und Schrift",
+      "text": "Das Spracharchiv bezeichnet Stoicheia ausdrücklich als phalantische und klythesische Sprache und Schrift der südlichen Stadtstaaten. Als Kulturzuordnungen nennt das strukturierte Sprachpaket Phalantier und Klythesier.",
+      "kind": "Sprachüberlieferung",
+      "scope": "Gemeinsamer phalantisch-klythesischer Sprachraum",
+      "source": {
+        "path": "AleriaAlmanach/modules/language/language-reference-entries.js",
+        "section": "createStoicheiaModuleEntry() / Seite I / description und stats"
+      },
+      "relatedSources": [
+        { "path": "Fonts/Stoicheia-Gesamtpaket-1.000/Daten/Stoicheia_Daten_1.0.json", "pointer": "/kulturen" }
+      ],
+      "limits": "Keine ausschließlich klythesische Sprache daraus machen und Phalantias spätere politische Ordnung nicht auf Klythesia übertragen."
+    },
+    {
+      "id": "script-lineage",
+      "category": "Sprache",
+      "title": "Tirnarische Schrifttradition",
+      "text": "Stoicheia wird als vollalphabetischer Nachfolger des Kana’anith Süd-Tirnaras beschrieben. Das Kana’anith führt das Archiv auf die proto-albische Ogham-Tradition zurück. Die Ergänzung der Vokalzeichen und Neuordnung des Alphabets wird in dieser Quelle den Phalantiern zugeschrieben.",
+      "kind": "Sprachüberlieferung",
+      "scope": "Geschichte der gemeinsamen Schrift",
+      "source": {
+        "path": "AleriaAlmanach/modules/language/language-reference-entries.js",
+        "section": "createStoicheiaModuleEntry() / Seite II / Vom Kana’anith zum Stoicheia"
+      },
+      "limits": "Die Schriftabstammung belegt keine ausgearbeitete ethnische Abstammung, Gründungschronik oder frühere Staatsform Klythesias."
+    },
+    {
+      "id": "script-form",
+      "category": "Sprache",
+      "title": "24 Zeichen, von links nach rechts",
+      "text": "Das Vollalphabet umfasst 24 Zeichen von Alpha bis Omega und läuft horizontal von links nach rechts. Monumentale Formen werden auf Stelen, Toren und Waffen beschrieben; eine schnellere Schreibhand dient Verwaltung, Feldbefehlen und Unterricht.",
+      "kind": "Sprachüberlieferung",
+      "scope": "Gemeinsame Schriftpraxis",
+      "source": {
+        "path": "AleriaAlmanach/modules/language/language-reference-entries.js",
+        "section": "createStoicheiaModuleEntry() / Seite II / Die 24 Grundzeichen und writingDirection"
+      },
+      "relatedSources": [
+        { "path": "Fonts/Stoicheia-Gesamtpaket-1.000/Daten/Stoicheia_Daten_1.0.json", "pointer": "/alphabet" }
+      ]
+    },
+    {
+      "id": "sign-levels",
+      "category": "Sprache",
+      "title": "Körper, Geist und Polis",
+      "text": "Ein Stoicheion besitzt Laut, Zeichenname und eine dreifache Bedeutung für Körper, Geist und Polis. Die Bedeutung hängt nach dem Archiv von Nachbarzeichen, Träger und Anlass ab. Alpha steht etwa für Ursprung, Kappa für Herrschaft, Pi für Stadt und Schutzwall und Omega für den bindenden Eid.",
+      "kind": "Sprachüberlieferung",
+      "scope": "Bedeutungslehre des Spracharchivs",
+      "source": {
+        "path": "AleriaAlmanach/modules/language/language-reference-entries.js",
+        "section": "createStoicheiaModuleEntry() / Seite II / Die 24 Grundzeichen; Körper, Geist & Polis"
+      },
+      "limits": "Dies beschreibt die überlieferte Zeichendeutung; daraus folgt keine eigenständig bewiesene magische Wirkung."
+    },
+    {
+      "id": "rhemata",
+      "category": "Sprache",
+      "title": "Rhemata und Bedeutungsfelder",
+      "text": "Das Sprachpaket enthält 37 bedeutungstragende Rhemata, zwölf Präfixe und zwölf Suffixe. Die Rhemata werden den fünf Sphären Ares, Polis, Kosmos, Physis und Demos zugeordnet; sie umfassen unter anderem Kampf, Gemeinschaft, Gesetz, Schicksal, Erde, Wasser, Abstammung und Wort.",
+      "kind": "Sprachüberlieferung",
+      "scope": "Gemeinsame Wortbildung",
+      "source": {
+        "path": "AleriaAlmanach/modules/language/language-reference-entries.js",
+        "section": "createStoicheiaModuleEntry() / Seite II / Die 37 Rhemata und Formenlehre & Wortbildung"
+      },
+      "relatedSources": [
+        { "path": "Fonts/Stoicheia-Gesamtpaket-1.000/Daten/Stoicheia_Daten_1.0.json", "pointer": "/rhemata" },
+        { "path": "Fonts/Stoicheia-Gesamtpaket-1.000/Daten/Stoicheia_Daten_1.0.json", "pointer": "/praefixe" },
+        { "path": "Fonts/Stoicheia-Gesamtpaket-1.000/Daten/Stoicheia_Daten_1.0.json", "pointer": "/suffixe" }
+      ],
+      "limits": "Ares, Polis und die übrigen Sphärennamen sind an dieser Stelle sprachliche Ordnungskategorien, keine zusätzlich festgelegten Gottheiten Klythesias."
+    },
+    {
+      "id": "morphology",
+      "category": "Sprache",
+      "title": "Belegte Namens- und Wortendungen",
+      "text": "Dokumentierte Formen sind unter anderem -os für einen männlichen Träger, -ia für eine weibliche Trägerin, -ides für Sohn oder Nachkomme, -ios für die Zugehörigkeit zu einer Linie, -ion für Institution oder Handlung und -archos für einen führenden Amtsträger. Präfixbeispiele sind amphi-, anti-, dia-, hyper-, hypo- und meta-.",
+      "kind": "Sprachüberlieferung",
+      "scope": "Sprachliche Formen, keine Landesverfassung",
+      "source": {
+        "path": "Fonts/Stoicheia-Gesamtpaket-1.000/Daten/Stoicheia_Daten_1.0.json",
+        "pointer": "/suffixe",
+        "section": "Ergänzend /praefixe"
+      },
+      "limits": "Diese Formen bestimmen weder die tatsächlichen Adelsränge noch Erbfolge, Geschlechterrollen oder offizielle Amtstitel Klythesias."
+    },
+    {
+      "id": "names-corpus",
+      "category": "Namen",
+      "title": "Vorhandener gemeinsamer Namensvorrat",
+      "text": "Das Originalpaket enthält hundert männliche und hundert weibliche Namensformen. Die aktuelle Almanachliste erweitert diesen Bestand auf insgesamt 400 Namen und kennzeichnet die Erweiterung ausdrücklich als Kombination dokumentierter Rhemata, Präfixe und Endungen. Beispielsweise sind Aros, Arion, Arides, Aria, Areia und Arandra bereits im strukturierten Originalpaket enthalten.",
+      "kind": "Sprachüberlieferung",
+      "scope": "Phalantisch-klythesische Namenbeispiele",
+      "source": {
+        "path": "AleriaAlmanach/modules/name-list/name-list-data.js",
+        "section": "createStoicheiaNameListData() / introduction, groups und footer"
+      },
+      "relatedSources": [
+        { "path": "Fonts/Stoicheia-Gesamtpaket-1.000/Daten/Stoicheia_Daten_1.0.json", "pointer": "/namen_maennlich" },
+        { "path": "Fonts/Stoicheia-Gesamtpaket-1.000/Daten/Stoicheia_Daten_1.0.json", "pointer": "/namen_weiblich" },
+        { "path": "Fonts/Stoicheia-Gesamtpaket-1.000/README.txt", "section": "Umfang des Gesamtpakets" }
+      ],
+      "limits": "Diese Beispiele sind keine belegten historischen Personen, Adelshäuser oder exklusiv klythesischen Geschlechter. Auch Alkathon, Nyktheos und Polysthen im aktuellen Spracharchiv bleiben Sprachbeispiele."
+    },
+    {
+      "id": "naming-tradition",
+      "category": "Sprache",
+      "title": "Namen als Bindung an eine Bestimmung",
+      "text": "Das Spracharchiv beschreibt Namen als Aussagen über eine mögliche Bestimmung. Viele Krieger wählen darin später selbst einen Namen; die Namens- und Zeichenregeln erscheinen außerdem in Gebeten, Eiden und Warnungen auf Waffen und Feldzeichen.",
+      "kind": "Sprachüberlieferung",
+      "scope": "Gemeinsame Sprach- und Kriegstradition",
+      "source": {
+        "path": "AleriaAlmanach/modules/language/language-reference-entries.js",
+        "section": "createStoicheiaModuleEntry() / Seite II / Namen, Krieg & gebundene Zukunft"
+      },
+      "limits": "Eine allgemeine Praxis aller Klythesier, konkrete Einführungsriten, Kriegerklassen oder eine klythesische Agoge werden hierdurch nicht festgelegt."
+    },
+    {
+      "id": "athara-language-legend",
+      "category": "Überlieferung",
+      "title": "Die Athara-Legende des Spracharchivs",
+      "text": "Die sprachliche Gründungslegende nennt Athara als Göttin von Weisheit, Krieg und gerechter Ordnung. Sie soll dem ersten Nomophylax auf einem Schlachtfeld die wahren Zeichenbedeutungen offenbart haben. Nomophylakes bewahren darin Recht und Ritual; Grammateis deuten Namen, schreiben Eide und prüfen Zeichenfolgen.",
+      "kind": "Sprachüberlieferung",
+      "scope": "Ausdrücklich als Legende formulierte Sprachüberlieferung",
+      "source": {
+        "path": "AleriaAlmanach/modules/language/language-reference-entries.js",
+        "section": "createStoicheiaModuleEntry() / Seite I / description; Seite II / Athara & der erste Nomophylax"
+      },
+      "limits": "Nicht stillschweigend in die aktuelle Landesreligion einfügen oder Athara mit Logara beziehungsweise Grammateis mit Grammatici gleichsetzen."
+    },
+    {
+      "id": "lexical-examples",
+      "category": "Sprache",
+      "title": "Vorhandene Begriffe für das spätere Sprachmodul",
+      "text": "Das hundert Wörter umfassende Originallexikon führt beispielsweise Polis = Stadtstaat, Nomos = Gesetz, Bouleion = Ratshaus, Demosia = Bürgerschaft, Kriterion = Gericht, Nomophylax = Gesetzeshüter und Omegion = Eidesurkunde. Archon steht im Lexikon für Amtsherr und Strategos für Heerführer.",
+      "kind": "Sprachüberlieferung",
+      "scope": "Gemeinsames Lexikon",
+      "source": {
+        "path": "Fonts/Stoicheia-Gesamtpaket-1.000/Daten/Stoicheia_Daten_1.0.json",
+        "pointer": "/lexikon",
+        "section": "Einträge 0–10"
+      },
+      "limits": "Wörter für Institutionen sind kein Beleg, dass genau diese Ämter, Gerichte oder Verwaltungsstufen derzeit in Klythesia bestehen."
+    },
+    {
+      "id": "language-region-context",
+      "category": "Geografie",
+      "title": "Südliche Stadtstaaten und Küstenpoleis",
+      "text": "Als Sprachräume nennt das Archiv südliche Stadtstaaten, Küstenpoleis sowie klythesische Herrschaftsräume und Kolonien.",
+      "kind": "Sprachüberlieferung",
+      "scope": "Breite geografische Einordnung aus dem Spracharchiv",
+      "source": {
+        "path": "AleriaAlmanach/modules/language/language-reference-entries.js",
+        "section": "createStoicheiaModuleEntry() / Seite II / language.regions"
+      },
+      "limits": "Keine Kolonie ist hier benannt oder datiert. Daraus keine genaue Kolonialgeschichte, Grenzverläufe, Stadtverfassung oder konkreten Besitzungen ergänzen."
+    },
+    {
+      "id": "tirnara-region",
+      "category": "Geografie",
+      "title": "Klythesia im südwestlichen Tirnara-Kontext",
+      "text": "Die Rossmarktübersicht nennt Galadorn, Klythesia und Phalantia gemeinsam als Heimat des Xanathos und ordnet diese Herkunft Südwest-Tirnara zu. Das ausführliche Bestiariumprofil nennt Tirnara als Kontinent.",
+      "kind": "Weltwissen",
+      "scope": "Regionaler pferdekundlicher Herkunftshinweis",
+      "source": {
+        "path": "Markt/Rossmarkt/Rossmarkt.html",
+        "section": "horse-row[data-name=xanathos] / col-origin"
+      },
+      "relatedSources": [
+        { "path": "Bestiarium/tiere/pferde/xanathos/profil.json", "pointer": "/continent" },
+        { "path": "Bestiarium/tiere/pferde/xanathos/profil.json", "pointer": "/region" }
+      ],
+      "limits": "Gemeinsame Herkunftsräume einer Pferderasse beweisen keine konkrete gemeinsame Grenze oder politische Bindung zwischen diesen Ländern."
+    },
+    {
+      "id": "warm-dry-landstrips",
+      "category": "Land",
+      "title": "Warme, trockene Herkunftsgebiete des Xanathos",
+      "text": "Das Bestiarium beschreibt die Heimat des Xanathos als warme, trockene Landstriche Galadorns, Klythesias und Phalantias. Die Zucht wird mit Feldarbeit, Wagenzügen und Steinbrüchen verbunden.",
+      "kind": "Weltwissen",
+      "scope": "Bestimmte Herkunftslandstriche und regionale Arbeitsnutzung",
+      "source": {
+        "path": "Bestiarium/tiere/pferde/xanathos/profil.json",
+        "pointer": "/sections/1/blocks/0/text",
+        "section": "ursprung"
+      },
+      "limits": "Nicht das gesamte Land als trockenes Agrar- oder Steinbruchland beschreiben. Die Quelle enthält keine landesweite Klima-, Vegetations- oder Rohstoffkarte."
+    },
+    {
+      "id": "xanathos-workhorse",
+      "category": "Alltag und Wirtschaft",
+      "title": "Ein belegtes Arbeits- und Zugpferd",
+      "text": "Der Xanathos ist ein kräftiges, ausdauerndes Arbeitspferd mit hoher Zugleistung und geringer Geschwindigkeit und Wendigkeit. Sein Detailprofil beschreibt ihn als ruhig, geduldig, arbeitswillig und zuverlässig. In den südwestlichen Regionen Tirnaras ist er eng mit der arbeitenden Bevölkerung verbunden.",
+      "kind": "Weltwissen",
+      "scope": "Rassebeschreibung und regionaler Alltag",
+      "source": {
+        "path": "Bestiarium/tiere/pferde/xanathos/profil.json",
+        "pointer": "/summary",
+        "section": "Ergänzend sections / koerperbau und temperament"
+      },
+      "relatedSources": [
+        { "path": "Markt/Rossmarkt/Rossmarkt.html", "section": "horse-row[data-name=xanathos] / horse-desc" }
+      ],
+      "limits": "Der Xanathos ist kein exklusiv klythesisches Nationaltier und seine Zucht ist keinem belegten klythesischen Haus zugeordnet."
+    },
+    {
+      "id": "regional-transport",
+      "category": "Alltag und Wirtschaft",
+      "title": "Landwirtschaft, Wagen und Lastentransport",
+      "text": "Als Einsatz des Xanathos sind schwere Wagen, Pflügen sowie der Transport von Stein, Erz und Handelswaren belegt. Das Profil nennt Bauern, Händler und Fuhrleute als typische Nutzer und beschreibt die Rasse als Rückgrat von Landwirtschaft, Handel und Transport im Südwesten Tirnaras.",
+      "kind": "Weltwissen",
+      "scope": "Regionale Transport- und Arbeitskultur",
+      "source": {
+        "path": "Bestiarium/tiere/pferde/xanathos/profil.json",
+        "section": "summary; sections / nutzung-einsatz und haltung-pflege",
+        "pointer": "/sections/4"
+      },
+      "relatedSources": [
+        { "path": "Markt/Rossmarkt/kontext_pferde.md", "section": "XANATHOS / Haupteinsatz und Lore" }
+      ],
+      "limits": "Keine konkreten Exportmengen, Zünfte, Besitzrechte, Steuern, Minen oder Handelsrouten Klythesias sind hier festgelegt."
+    },
+    {
+      "id": "horse-cavalry-limit",
+      "category": "Militärischer Quellenkontext",
+      "title": "Begrenzte Aussage zur Reiterei",
+      "text": "Das Xanathos-Profil erwähnt gelegentliche pragmatische Kavallerienutzung dort, wo andere Pferde fehlen. Wegen geringer Geschwindigkeit und Wendigkeit ist die Rasse ausdrücklich nicht für Elitekavallerie geeignet. Der Rossmarkt beschreibt Sarkal als bevorzugte Alternative erfahrener Reiter.",
+      "kind": "Weltwissen",
+      "scope": "Allgemeine Rasseneignung",
+      "source": {
+        "path": "Bestiarium/tiere/pferde/xanathos/profil.json",
+        "section": "sections / nutzung-einsatz und staerken-schwaechen",
+        "pointer": "/sections/4"
+      },
+      "relatedSources": [
+        { "path": "Markt/Rossmarkt/Rossmarkt.html", "section": "horse-row[data-name=xanathos] / horse-desc" }
+      ],
+      "limits": "Keine klythesische Kriegerklasse, reguläre Kavallerieordnung oder verbindliche Landespräferenz für Sarkal oder Shahzad daraus ableiten."
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "athara-logara-and-scribes",
+      "title": "Athara / Logara und Grammateis / Grammatici nicht glätten",
+      "text": "Das gemeinsame Spracharchiv überliefert Athara, den ersten Nomophylax, Nomophylakes und Grammateis. Das Religionsarchiv des Phalantischen Bundes nennt dagegen Logara und Grammatici als Schreiber-Priester. Die Texte bieten verwandte Motive von Gesetz, Namen und Schrift, dokumentieren aber keine Gleichsetzung dieser Namen oder Institutionen.",
+      "sources": [
+        { "path": "AleriaAlmanach/modules/language/language-reference-entries.js", "section": "createStoicheiaModuleEntry() / Athara & der erste Nomophylax" },
+        { "path": "Religionen/religionen/phalantischer-bund/index.html", "section": "Überlieferung / Logara – Gemahlin des Wissens" }
+      ],
+      "handling": "Als verschiedene vorhandene Überlieferungen kennzeichnen. Keine neue Gleichsetzung, religiöse Reform oder historische Erklärung erfinden; nicht ungeprüft auf den Zirkel des Ewigen Waldes übertragen."
+    },
+    {
+      "id": "xanathos-card-versus-profile",
+      "title": "Abweichende Xanathos-Kurzbeschreibung",
+      "text": "Die kurze Pferde-Listenkarte nennt ein stolzes, muskulöses Reit- und Wagenpferd mit goldenen Fellfarben und eindrucksvoller Haltung. Das ausführliche Profil und der Rossmarkt schildern dagegen vor allem ein langsames, wenig prestigeträchtiges Arbeits- und Zugpferd. Eine goldene Fellfarbe wird im ausführlichen Text nicht eigens bestätigt.",
+      "sources": [
+        { "path": "Bestiarium/tiere/pferde/art.json", "pointer": "/atlas/groups/1/entries/3/description" },
+        { "path": "Bestiarium/tiere/pferde/xanathos/profil.json", "section": "summary; sections / staerken-schwaechen und haltung-pflege" },
+        { "path": "Markt/Rossmarkt/Rossmarkt.html", "section": "horse-row[data-name=xanathos] / horse-desc" }
+      ],
+      "handling": "Für den knappen Landesüberblick nur die von Detailprofil und Markt gemeinsam gestützte Arbeitsnutzung verwenden. Die abweichende Listenkarte bleibt als offene redaktionelle Quellenabweichung erhalten."
+    },
+    {
+      "id": "horse-context-spelling-and-currency",
+      "title": "Älterer Pferdekontext weicht bei Schreibweise und Preiswährung ab",
+      "text": "Der Kontexttext nennt Galadom und 500–4.000 Taler. Detailprofil und Marktübersicht nennen Galadorn; das Detailprofil setzt denselben Zahlenbereich in Kupferstücken an. Diese Abweichung ist keine Grundlage für eine klythesische Landeswährung.",
+      "sources": [
+        { "path": "Markt/Rossmarkt/kontext_pferde.md", "section": "XANATHOS / Herkunft und Kosten" },
+        { "path": "Bestiarium/tiere/pferde/xanathos/profil.json", "pointer": "/market/price" },
+        { "path": "Markt/Rossmarkt/Rossmarkt.html", "section": "horse-row[data-name=xanathos]" }
+      ],
+      "handling": "Keine Landeswährung aus diesen Pferdepreisen bestimmen; den Preis für die Landesvorbereitung auslassen."
+    }
+  ],
+  "openQuestions": [
+    {
+      "id": "country-order",
+      "title": "Staats- und Adelsordnung",
+      "text": "Aus diesen Querverweisen sind keine konkreten weltlichen Landesämter, Adelsränge, Lehensstufen, Heirats- oder Erbregeln Klythesias ableitbar. Sprachliche Begriffe wie Archon ersetzen keine Festlegung der Landesverfassung."
+    },
+    {
+      "id": "named-people-and-houses",
+      "title": "Keine neuen Häuser oder historischen Personen aus Sprachbeispielen",
+      "text": "In den gezielt geprüften öffentlichen Familienregistern und Länderquellen wurden keine ausdrücklich Klythesia zugeordneten weltlichen Familien oder Personen gefunden. Dies ist ein begrenzter Suchbefund, keine Aussage über sämtliche denkbaren Quellen. Die Sprachbeispiele werden nicht als bestehende Adelshäuser verwendet."
+    },
+    {
+      "id": "borders-and-colonies",
+      "title": "Grenzen, Nachbarn und Kolonien",
+      "text": "Die regionalen Hinweise und die allgemeine Erwähnung klythesischer Kolonien liefern keine benannten Kolonien, Daten, Grenzverläufe oder belastbaren Nachbarschaftsbeziehungen. Diese Angaben bleiben bis zur Karten- und Lorefestlegung offen."
+    },
+    {
+      "id": "warrior-design",
+      "title": "Kriegerklassen und Hausdarstellungen",
+      "text": "Die hier geprüften Quellen legen weder verbindliche Kriegerklassen noch Rüstungsstil, Geschlecht oder hausbezogene Ausrüstung Klythesias fest. Vergleichbare phalantische oder historische griechische Systeme werden nicht übertragen."
+    },
+    {
+      "id": "tradition-versus-history",
+      "title": "Überlieferung und Landesgeschichte getrennt halten",
+      "text": "Die Athara-Erzählung, die beispielhafte Namensgebung eines Strategen und der Eid vor der Polis sind religiös-sprachliche beziehungsweise illustrative Erzählungen. Sie ergeben keine datierte klythesische Landesgeschichte."
+    }
+  ],
+  "sourceNotes": [
+    "Das ursprüngliche Stoicheia-Paket enthält 200 Namen; die aktuelle 400er-Liste dokumentiert ihre Erweiterung ausdrücklich. Dies ist eine nachvollziehbare Erweiterung und kein ungeklärter Zahlenwiderspruch.",
+    "Vier Tetrades und fünf Rhemata-Sphären sind unterschiedliche Ordnungen im aktuellen Archiv; sie werden nicht als identische Zahlensysteme dargestellt. Die ältere Bezeichnung der Tetrades als Vierergruppen wird hier nicht zur künstlichen Neugruppierung der 24 Zeichen verwendet.",
+    "Der Xanathos-Eintrag im Charakterarchiv ist eine Pferderasse im Bereich roesser, keine namensgleiche menschliche Person.",
+    "Zuchtbuch, erzeugte Gegenstandsdefinitionen, Marktregister und Charakterarchiv wiederholen die Pferdeinformationen überwiegend. Solche technischen Duplikate zählen nicht als unabhängige weitere Überlieferungen.",
+    "Die regionale Herkunft einer Pferderasse belegt keine konkrete klythesische Handelsroute, Grenznachbarschaft oder Zuchtfamilie.",
+    "Das Stoicheia-Zitat über Name, Schicksal und Krieg ist im Archiv ausdrücklich phalantischer Überlieferung zugeschrieben. Auch der Xanathos-Fuhrmannsspruch wird als phalantisch bezeichnet; beide werden nicht zu exklusiv klythesischen Sprichwörtern umetikettiert.",
+    "Religion, mitgelieferte Landkarte und sieben Bilddateien werden durch andere Teile der Vorbereitung ausgewertet. Aus Dateinamen wie Hydra, Mantikor, Phönix, Satyr oder Sphinx wird in dieser Evidenzdatei kein Haus oder Ort erschaffen.",
+    "Laerelis_Vorschau_Einzeldatei.html lieferte nur einen technischen Rohtexttreffer, aber keinen sichtbaren Klythesia-Loretext. Dieser Treffer wird nicht als Weltquelle verwendet."
+  ],
+  "searchScope": {
+    "terms": ["Klythesia", "Klythesier", "klythesisch", "Klythesianer", "Kyreon"],
+    "checked": [
+      "AleriaAlmanach/modules/language",
+      "AleriaAlmanach/modules/name-list",
+      "AleriaAlmanach/modules/character-archive",
+      "AleriaAlmanach/modules/item-register und item-definitions",
+      "Bestiarium/tiere/pferde",
+      "Markt/Rossmarkt",
+      "Fonts/Stoicheia-Gesamtpaket-1.000",
+      "Kontinente",
+      "Familien Häuser und Clans",
+      "Stammbäume/assets/js/data/families.registry.js",
+      "Stammbäume/assets/data/published-families/registry.json",
+      "Rootnahe Markdown- und Textdokumente bis Tiefe 2"
+    ],
+    "excluded": [
+      "Private Arbeitsquellen und unveröffentlichte Fleischsammler-Inhalte",
+      "Sicherungs-, Release-, Temp- und Abhängigkeitsbäume",
+      "Genealogische Datensätze als Änderungsziele"
+    ],
+    "limitations": "Gezielte repo-interne Recherche. Kein Anspruch auf Vollständigkeit außerhalb dieser geprüften Quellen; keine externe historische Recherche und keine neue Lore."
+  }
+}

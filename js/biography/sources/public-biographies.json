@@ -8424,6 +8424,258 @@
       ]
     },
     {
+      "key": "person--haus-argall--rhydric-argall",
+      "name": "Rhydric Argall",
+      "characterIds": [
+        "person--haus-argall--rhydric-argall"
+      ],
+      "worldPersonIds": [
+        "person--haus-argall--rhydric-argall"
+      ],
+      "personIds": [
+        "rhydric-argall"
+      ],
+      "moduleRefs": [],
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Vollständiger Name",
+            "value": "Rhydric Argall"
+          },
+          {
+            "label": "Geboren",
+            "value": "1700"
+          },
+          {
+            "label": "Alter im Jahr 1740",
+            "value": "40 Jahre"
+          },
+          {
+            "label": "Familienstand",
+            "value": "Geschieden"
+          },
+          {
+            "label": "Tätigkeit",
+            "value": "Burgverwalter und Hauptmann von Caer Ysgellfor"
+          },
+          {
+            "label": "Wohnsitz",
+            "value": "Caer Ysgellfor · Gwynthor"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png",
+          "biographyTitle": "Biografie",
+          "biographyText": "<p>Rhydric ist der deutlich jüngere Bruder Dyrwyn Argalls und ein Vetter Brinthan und Uthyr Argalls. Er verwaltet Caer Ysgellfor und führt dort als Hauptmann den Wachdienst. Die kleine Festung schützt die umliegenden Höfe und die Hauptstraße und sammelt Getreide und Vorräte für Gwynthor. Die ungelöste Mordserie überfordert ihn; er wirkt abgekämpft und schläft zu wenig. Seine Ehe mit Gwenella ist geschieden. Sie verließ ihn und brannte mit dem Barden Maelor Ffionydd nach Aberon durch. Der gemeinsame Sohn Perwyn lebt bei Rhydric und dient ihm als Knappe.</p>",
+          "extraSections": [
+            {
+              "position": "afterIntro",
+              "mode": "text",
+              "title": "Erscheinung",
+              "text": "<p>Abgekämpft und übermüdet, deutliche Augenringe, etwas zerzaustes rotbraunes Haar. Gwynthorer Hauptmannsrüstung und roter Mantel. Eine Hand ruht am Knauf des eingesteckten Schwertes, die andere hält einen Apfel.</p>"
+            }
+          ]
+        }
+      },
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "replacedFingerprints": [
+        "846:de395028:3ca08196"
+      ]
+    },
+    {
+      "key": "person--haus-argall--perwyn-argall",
+      "name": "Perwyn Argall",
+      "characterIds": [
+        "person--haus-argall--perwyn-argall"
+      ],
+      "worldPersonIds": [
+        "person--haus-argall--perwyn-argall"
+      ],
+      "personIds": [
+        "perwyn-argall"
+      ],
+      "moduleRefs": [],
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Vollständiger Name",
+            "value": "Perwyn Argall"
+          },
+          {
+            "label": "Geboren",
+            "value": "1723"
+          },
+          {
+            "label": "Alter im Jahr 1740",
+            "value": "17 Jahre"
+          },
+          {
+            "label": "Familienstand",
+            "value": "Unverheiratet"
+          },
+          {
+            "label": "Tätigkeit",
+            "value": "Knappe seines Vaters Rhydric Argall"
+          },
+          {
+            "label": "Wohnsitz",
+            "value": "Caer Ysgellfor · Gwynthor"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png",
+          "biographyTitle": "Biografie",
+          "biographyText": "<p>Perwyn ist der gemeinsame Sohn Rhydric Argalls und Gwenellas. Die Scheidung seiner Eltern verändert seine Abstammung nicht. Er lebt bei seinem Vater in Caer Ysgellfor und dient ihm als Knappe. Er ist eitel, hält Haar und Rüstung sorgfältig in Ordnung und trägt seinen jungen Rang mit sichtlichem Stolz. Einen eigenen Ritterschlag besitzt er noch nicht.</p>",
+          "extraSections": [
+            {
+              "position": "afterIntro",
+              "mode": "text",
+              "title": "Erscheinung",
+              "text": "<p>Siebzehnjähriger schmaler Jugendlicher, sorgfältig gerichtetes kupferrotes Haar, selbstgefälliger stolzer Blick. Gut gepflegte Gwynthorer Knappenrüstung mit rotem Stoff, leichten Metallteilen und Kettenzeug; vollständig bekleidet.</p>"
+            }
+          ],
+          "knightMentors": [
+            {
+              "name": "Rhydric Argall",
+              "role": "Rittervater",
+              "detail": "Sein Vater; Perwyn dient ihm gegenwärtig als Knappe.",
+              "image": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png"
+            }
+          ]
+        }
+      },
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "replacedFingerprints": [
+        "663:86af3ea5:8219402b"
+      ]
+    },
+    {
+      "key": "person--family-tree--gwenella-spouse-rhydric-argall",
+      "name": "Gwenella",
+      "characterIds": [
+        "person--family-tree--gwenella-spouse-rhydric-argall"
+      ],
+      "worldPersonIds": [
+        "person--family-tree--gwenella-spouse-rhydric-argall"
+      ],
+      "personIds": [
+        "gwenella-spouse-rhydric-argall"
+      ],
+      "moduleRefs": [],
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Vollständiger Name",
+            "value": "Gwenella"
+          },
+          {
+            "label": "Geboren",
+            "value": "1702"
+          },
+          {
+            "label": "Alter im Jahr 1740",
+            "value": "38 Jahre"
+          },
+          {
+            "label": "Familienstand",
+            "value": "Geschieden · Affäre mit Maelor Ffionydd"
+          },
+          {
+            "label": "Tätigkeit",
+            "value": "Perwyns Mutter · geschiedene Frau Rhydric Argalls"
+          },
+          {
+            "label": "Wohnsitz",
+            "value": "Aberon"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/gwenella.png",
+          "biographyTitle": "Biografie",
+          "biographyText": "<p>Gwenella ist Perwyn Argalls Mutter und war mit Rhydric Argall verheiratet. Die Ehe ist geschieden. Sie hat eine Affäre mit dem Barden Maelor Ffionydd und ist mit ihm nach Aberon durchgebrannt. Der Affärengrund lautet: „Durchgebrannt nach Aberon“. Ihren Sohn Perwyn hat sie aus ihrer Ehe mit Rhydric. Sie gilt als Schönheit und begegnet anderen mit ausgeprägtem Hochmut. Ihre Herkunftsfamilie ist nicht überliefert.</p>",
+          "extraSections": [
+            {
+              "position": "afterIntro",
+              "mode": "text",
+              "title": "Erscheinung",
+              "text": "<p>Schöne erwachsene Frau mit langem gepflegtem kupferrotem Haar, stolzer Haltung und arrogantem, abschätzigem Blick. Gepflegte gute Reisekleidung in gedämpftem Grün und Creme, dezenter Schmuck.</p>"
+            }
+          ]
+        }
+      },
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "replacedFingerprints": [
+        "686:bc0e33d4:f3ca2e82"
+      ]
+    },
+    {
+      "key": "person--family-tree--maelor-ffionydd",
+      "name": "Maelor Ffionydd",
+      "characterIds": [
+        "person--family-tree--maelor-ffionydd"
+      ],
+      "worldPersonIds": [
+        "person--family-tree--maelor-ffionydd"
+      ],
+      "personIds": [
+        "maelor-ffionydd"
+      ],
+      "moduleRefs": [],
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Vollständiger Name",
+            "value": "Maelor Ffionydd"
+          },
+          {
+            "label": "Geboren",
+            "value": "1705"
+          },
+          {
+            "label": "Alter im Jahr 1740",
+            "value": "35 Jahre"
+          },
+          {
+            "label": "Familienstand",
+            "value": "Affäre mit Gwenella"
+          },
+          {
+            "label": "Tätigkeit",
+            "value": "Barde · Affäre mit Gwenella"
+          },
+          {
+            "label": "Wohnsitz",
+            "value": "Aberon"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/maelor-ffionydd.png",
+          "biographyTitle": "Biografie",
+          "biographyText": "<p>Maelor Ffionydd ist ein fahrender Barde und hat eine Affäre mit Gwenella. Sie verließ ihren Mann Rhydric Argall und brannte mit Maelor nach Aberon durch. Der Affärengrund lautet: „Durchgebrannt nach Aberon“. Eine Ehe zwischen ihnen ist nicht festgelegt. Maelor ist nicht Perwyns Vater. Über seine Herkunftsfamilie und eigene Kinder ist nichts festgelegt.</p>",
+          "extraSections": [
+            {
+              "position": "afterIntro",
+              "mode": "text",
+              "title": "Erscheinung",
+              "text": "<p>Schlanker erwachsener fahrender Barde, dunkles gewelltes Haar, selbstsicheres gewinnendes Lächeln. Gut geschnittener Reisemantel in gedämpftem Petrol und Weinrot; eine schlichte Laute gehört zu seinem Beruf.</p>"
+            }
+          ]
+        }
+      },
+      "source": "CharakterDatenbank/generated/characters.snapshot.json",
+      "replacedFingerprints": [
+        "642:19838879:7402f993"
+      ]
+    },
+    {
       "key": "person--haus-skald--freya-skald",
       "name": "Freya Skald",
       "characterIds": [

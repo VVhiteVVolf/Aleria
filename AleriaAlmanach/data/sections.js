@@ -1,4 +1,4 @@
-﻿const YVAIN = {
+const YVAIN = {
   name: "Yvain Seldryn",
   title: "Loremaster, Abergwint",
   avatars: {
@@ -1704,6 +1704,10 @@ const SECTIONS = [
                   text: "Die infernalen Götter und Wesen stehen den <strong>neun celestialen Göttern</strong> und den <strong>fünf elementaren Souveränen</strong> als eigene Machtordnung gegenüber. Celestiale Sprache benennt höhere Ordnung, Gesetz und Erhebung; elementare Sprachen sprechen unmittelbar zu Feuer, Wasser, Erde, Luft und ihren souveränen Kräften. Infernal richtet sich stattdessen auf Herrschaft über Willen, Schuld, Besitz, Schmerz und Unterwerfung.<br><br>Diese Gegnerschaft macht Infernal nicht zu einer bloßen Umkehrung des Celestialen. Beide sind mythische Machtsprachen, doch sie begründen Gültigkeit verschieden: Celestial durch übergeordnete Wahrheit, Infernal durch Anspruch, Gegenleistung und vollstreckbare Bindung."
                 },
                 {
+                  title: "Zarakhuls Zwangssprache und Orins Eingriff",
+                  text: "Zarakhul zwang den von ihm unterjochten Völkern Tirnaras seine dunkle, infernale Sprache auf. Sie diente der Herrschaft über versklavte Menschen, die auch für seine Kriege kämpfen mussten. Der Gott <strong>Orin</strong> verwirrte die Zungen dieser Unterjochten und zerstreute die aufgezwungene Sprache. Dieser Bruch erklärt die tiefen Unterschiede der daraus hervorgegangenen tirnarischen Sprachen gegenüber den älteren albischen und nordischen Sprachen.<br><br>Orins Eingriff beendete die gemeinsame Zwangssprache der Versklavten; er löschte weder die überweltliche infernale Sprache noch sämtliche erhaltenen Inschriften aus. Nicht jedes Volk auf oder bei Tirnara wird damit zu einem ehemaligen Untertan Zarakhuls, und heutige tirnarische Sprachen sind keine bloßen infernalen Dialekte."
+                },
+                {
                   title: "Sprache als wirkende Macht",
                   text: "Ein infernaler Satz beschreibt seine Wirkung nicht nur — er beansprucht sie. Entscheidend sind <strong>Laut, Sigill, Absicht und Preis</strong>. Fehlt einer dieser Träger, bleibt die Formel schwächer oder mehrdeutig. Stimmen alle vier überein, kann Sprache ein Tor kennzeichnen, einen Namen erreichen, eine Schuld beziffern oder ein Wesen an die Bedingungen eines Paktes binden.<br><br>Darum ist Infernal die stärkste bekannte Kontaktsprache für das Infernale. Die Sigillen Ghol, Ish, Qezhar, Wexir und Ovrun bilden genau jene Begriffe ab, die eine Anrufung benötigt: Tor, Identität, Gegenleistung, Zeugnis und Siegel."
                 },
@@ -1865,10 +1869,10 @@ const SECTIONS = [
             imagePosition: "center",
             imageWidth: 46,
             pageTitle: "I. — Die Schrift der Städte, Tempel und Karawanen",
-            description: "<strong>Kana’anith</strong> ist die konsonantengetragene Sprache und Monumentalschrift Südost-Tirnaras. Ihre zweiundzwanzig Zeichen laufen von rechts nach links und verbinden Laut, Bildbedeutung und produktiven Wortstamm. Ein Buchstabe ist daher zugleich Schriftzeichen, Erinnerungshilfe und Baustein der kana’anithischen Denkweise.<br><br>Die älteste Überlieferung führt Kana’anith auf das Ogham der Proto-Alben zurück. Als Tirnara durch die Kontinentaltrennung isoliert wurde, wandelten die Menschen des Südostens die vertikale Baum- und Kerbschrift in ein horizontales Abjad um. Die neue Schrift passte zu Stein, gebranntem Ton, Metall, Papyrus, Handelstafeln und den monumentalen Fassaden wachsender Städte.<br><br>Die Umwelt Südost-Tirnaras lebt in jedem Zeichen fort: Ochse, Haus, Kamel, Tür, Fenster, Schwert, Mauer, Rad, Hand, Wasser, Fisch, Pfeiler, Auge und Mund. Aus diesen Bildern entstand ein Wortschatz für Herrschaft und Recht, Tempel und Magie, Architektur, Karawanen, Seefahrt, Bewässerung, Handwerk und Familie.",
+            description: "<strong>Kana’anith</strong> ist die konsonantengetragene Sprache und Monumentalschrift Südost-Tirnaras. Ihre zweiundzwanzig Zeichen laufen von rechts nach links und verbinden Laut, Bildbedeutung und produktiven Wortstamm. Ein Buchstabe ist daher zugleich Schriftzeichen, Erinnerungshilfe und Baustein der kana’anithischen Denkweise.<br><br>Die gesprochene Sprache gehört zur neuen sprachlichen Ordnung nach <strong>Orins Zungenverwirrung</strong>. Zarakhul hatte den von ihm unterjochten Völkern Tirnaras seine dunkle Sprache aufgezwungen; Orin verwirrte ihre Zungen und zerstreute diese Zwangssprache. Darin liegt der tiefe Bruch zu den älteren albischen und nordischen Sprachen.<br><br>Das Ogham-Erbe betrifft dagegen die Schrifttradition: Aus der älteren Baum- und Kerbschrift wurde im Südosten ein horizontales Abjad für Stein, Ton, Metall, Papyrus und Handelstafeln. Verwandte Zeichen bedeuten keine ungebrochen fortgeführte albische Sprache.<br><br>Die Umwelt Südost-Tirnaras lebt in jedem Zeichen fort: Ochse, Haus, Kamel, Tür, Fenster, Schwert, Mauer, Rad, Hand, Wasser, Fisch, Pfeiler, Auge und Mund. Aus diesen Bildern entstand ein Wortschatz für Herrschaft und Recht, Tempel und Magie, Architektur, Karawanen, Seefahrt, Bewässerung, Handwerk und Familie.",
             stats: [
               ["Eigenname", "Kana’anith · Sprache und Schrift Südost-Tirnaras"],
-              ["Herkunft", "Tirnarischer Zweig des proto-albischen Ogham"],
+              ["Herkunft", "Sprachbruch nach Orin · Ogham-Erbe der Schrift"],
               ["Schriftsystem", "Abjad · 22 bedeutungstragende Konsonanten"],
               ["Schreibrichtung", "Von rechts nach links · horizontal"],
               ["Wortbildung", "22 Wurzeln · 14 Präfixe · 18 Suffixe · sechs Vokalmuster"],
@@ -1885,7 +1889,7 @@ const SECTIONS = [
             language: {
               archiveLabel: "Sprachkunde · Archiv Südost-Tirnaras",
               nativeName: "Kana’anith · Monumentalschrift der 22 Wurzeln",
-              family: "Tirnarischer Zweig der proto-albischen Ogham-Tradition",
+              family: "Eigenständige tirnarische Sprache nach Orins Zungenverwirrung · Schrift mit Ogham-Erbe",
               speakers: "Bewohner Südost-Tirnaras · Händler · Schreiber · Priesterschaften · Stadtverwaltungen",
               regions: "Südost-Tirnara · Flussstädte · Hafenreiche · Karawanenwege · Tempelzentren",
               scriptType: "Rechts-nach-links-Abjad · 22 Konsonanten mit Bild- und Wurzelbedeutung",
@@ -1915,7 +1919,7 @@ const SECTIONS = [
               sections: [
                 {
                   title: "Ursprung in Tirnara",
-                  text: "Kana’anith entwickelte sich aus dem <strong>Ogham der Proto-Alben</strong>, nachdem Tirnara durch die Kontinentaltrennung von den übrigen Landmassen isoliert worden war. Die Menschen des Südostens übernahmen nicht einfach die alte Baumordnung. Sie passten Schrift und Sprache an neue Materialien, Städte, Tempel, Handelswege und Flusskulturen an.<br><br>Aus vertikalen Kerblinien wurde eine horizontale Rechts-nach-links-Schrift. Die alten Naturbilder verwandelten sich in Zeichen einer urbanen und reisenden Welt: Beth wurde Haus und Besitz, Gimel Kamel und Karawane, Mem Wasser und Lebensstrom, Samekh Pfeiler und geordnete Institution."
+                  text: "Zarakhul zwang seinen versklavten Völkern Tirnaras seine dunkle, infernale Sprache auf. <strong>Orin</strong> verwirrte die Zungen der Unterjochten und zerstreute die gemeinsame Zwangssprache. Die neuen tirnarischen Sprachräume unterschieden sich dadurch grundlegend von den älteren albischen und nordischen Sprachen. Zarakhuls spätere Niederlage stellte die frühere sprachliche Einheit nicht wieder her.<br><br>Die <strong>Schrift</strong> des Kana’anith bewahrt zugleich ein Erbe des proto-albischen Ogham. Aus vertikalen Kerblinien wurde eine horizontale Rechts-nach-links-Schrift. Die alten Naturbilder verwandelten sich in Zeichen einer urbanen und reisenden Welt: Beth wurde Haus und Besitz, Gimel Kamel und Karawane, Mem Wasser und Lebensstrom, Samekh Pfeiler und geordnete Institution. Diese Zeichenüberlieferung ist von der Geschichte der gesprochenen Sprache zu unterscheiden."
                 },
                 {
                   title: "Sprachcharakter & Lautung",

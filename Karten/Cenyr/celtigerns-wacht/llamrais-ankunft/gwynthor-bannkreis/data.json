@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
-  "revision": 15,
-  "updatedAt": "2026-11-04T05:50:21.173Z",
+  "revision": 16,
+  "updatedAt": "2026-11-05T09:38:26.149Z",
   "state": {
     "pins": [
       {
@@ -5707,67 +5707,63 @@
         "id": "gwynthor-marking-074",
         "x": 0.791015625,
         "y": 0.3292063492063492,
-        "title": "Brauersiedlung",
+        "title": "Brauerhof Bragwen & Eiddfer",
         "cat": "location-brauersiedlung",
         "kind": "place",
         "img": "",
         "imgLink": "",
-        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
-        "crestLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-bragwen.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-bragwen&mode=view",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
-        "faction": "",
+        "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
+        "house": "Familien Bragwen und Eiddfer",
+        "faction": "Kooperationsbetrieb der Teyrngarch Brauerzunft",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Brauerhof Bragwen & Eiddfer"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Gemeinsam geführter Brauerhof"
+          },
+          {
+            "k": "Betreiber",
+            "v": "Familien Bragwen und Eiddfer"
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Bierherstellung und Versorgung Gwynthors"
           },
           {
-            "k": "Regierungstyp",
-            "v": ""
+            "k": "Kooperation",
+            "v": "Teyrngarch Brauerzunft"
           },
           {
-            "k": "Führung",
-            "v": ""
+            "k": "Erzeugnisse",
+            "v": "Bier und Teyrngarch-Produktion für Gwynthor"
           },
           {
-            "k": "Lehensherr",
-            "v": ""
+            "k": "Familien",
+            "v": "Zwei zusammengewachsene Familien, die Haushalt und Betrieb gemeinsam tragen"
           },
           {
-            "k": "Bevölkerung",
-            "v": ""
+            "k": "Lage",
+            "v": "Im Norden des beschriebenen Gebietes, im östlichen Bannkreis von Gwynthor"
           },
           {
-            "k": "Einwohnerzahl",
-            "v": ""
-          },
-          {
-            "k": "Bekannte Familien",
-            "v": ""
-          },
-          {
-            "k": "Gefahren",
-            "v": ""
-          },
-          {
-            "k": "Ressourcen",
-            "v": ""
+            "k": "Zustand",
+            "v": "Die Familien trauern um eine zwanzigjährige Tochter, die nicht heimkehrte und zu den Mordopfern gehört"
           }
         ],
-        "text": "",
+        "text": "Der **Brauerhof Bragwen & Eiddfer** wird von zwei Familien betrieben, die über ihren gemeinsamen Alltag und ihr Handwerk zusammengewachsen sind. **Bragwen** und **Eiddfer** tragen den Hof gemeinsam. Als **Kooperationsbetrieb der Teyrngarch Brauerzunft** versorgt er Gwynthor mit Bier und Teyrngarch-Produktion.\n\nAuch hier ist ein Todesfall zu beklagen: Eine **zwanzigjährige Tochter** kam eines Tages nicht nach Hause und gehörte zu den Opfern des Fleischsammlers. Die beiden Familien tragen diesen Verlust gemeinsam.",
         "secret": false,
-        "templateId": "siedlung"
+        "templateId": "siedlung",
+        "residentFamilyIds": [
+          "haus-bragwen",
+          "haus-eiddfer"
+        ]
       },
       {
         "id": "gwynthor-marking-075",
@@ -6536,71 +6532,50 @@
         "id": "gwynthor-marking-086",
         "x": 0.82373046875,
         "y": 0.4069396825396825,
-        "title": "Landgut",
-        "cat": "location-landgut",
+        "title": "Brynial-Kate",
+        "cat": "muosqx3lgp3t",
         "kind": "place",
         "img": "",
         "imgLink": "",
-        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
-        "crestLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-brynial.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-brynial&mode=view",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
+        "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
+        "house": "Familie Brynial",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Brynial-Kate"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Unscheinbare ländliche Familienkate"
           },
           {
             "k": "Besitzer",
-            "v": ""
+            "v": "Familie Brynial"
           },
           {
-            "k": "Bewirtschaftung",
-            "v": ""
+            "k": "Erwerb",
+            "v": "Etwas Anbau und kleine Viehhaltung"
           },
           {
-            "k": "Anbau",
-            "v": ""
-          },
-          {
-            "k": "Erzeugnisse",
-            "v": ""
-          },
-          {
-            "k": "Fläche",
-            "v": ""
-          },
-          {
-            "k": "Arbeitskräfte",
-            "v": ""
-          },
-          {
-            "k": "Versorgung / Abnehmer",
-            "v": ""
+            "k": "Lage",
+            "v": "Nördlich des Jagdhauses Helfaen im östlichen Bannkreis"
           },
           {
             "k": "Zustand",
-            "v": ""
-          },
-          {
-            "k": "Gefahren",
-            "v": ""
-          },
-          {
-            "k": "Besonderheiten",
-            "v": ""
+            "v": "Die Familie hat ihre zweiunddreißigjährige Ehefrau und Mutter durch die Mordserie verloren"
           }
         ],
-        "text": "",
+        "text": "Die **Brynial-Kate** ist ein unscheinbares Heim auf dem Land. Die kleine **Familie Brynial** bestellt etwas Boden und hält ein wenig Vieh. Der bescheidene Haushalt lebt von der täglichen Arbeit auf seinem Stück Land.\n\nDie **zweiunddreißigjährige Ehefrau und Mutter** gehörte zu den Opfern des Fleischsammlers. Ihr Tod trifft den kleinen Haushalt schwer.",
         "secret": false,
-        "templateId": "landwirtschaft"
+        "templateId": "gebaeude",
+        "residentFamilyIds": [
+          "haus-brynial"
+        ]
       },
       {
         "id": "gwynthor-marking-087",
@@ -6886,133 +6861,119 @@
         "id": "gwynthor-marking-091",
         "x": 0.744384765625,
         "y": 0.4300825396825397,
-        "title": "Rittergut",
-        "cat": "location-rittergut",
+        "title": "Caer Ysgellfor",
+        "cat": "location-festung",
         "kind": "place",
         "img": "",
         "imgLink": "",
-        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
-        "crestLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-ysgellfor.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-ysgellfor&mode=view",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
-        "faction": "",
+        "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
+        "house": "Familie Ysgellfor",
+        "faction": "Gwynthorer Vorrats- und Straßensicherung",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Caer Ysgellfor"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Kleine Festung und befestigter Vorratssammelplatz"
           },
           {
             "k": "Befehlshaber",
-            "v": ""
+            "v": "Rhydric Argall - Burgverwalter und Hauptmann"
           },
           {
             "k": "Unterstellung",
-            "v": ""
+            "v": "Örtlicher Schutz und Versorgungsdienst für Gwynthor"
           },
           {
-            "k": "Besatzung",
-            "v": ""
+            "k": "Bewohner",
+            "v": "Hauptmann Rhydric Argall und sein Sohn Perwyn; Familie Ysgellfor und die Wachbesatzung"
           },
           {
             "k": "Aufgaben",
-            "v": ""
+            "v": "Getreide und Vorräte sammeln, Weitertransport nach Gwynthor sichern, Hauptstraße und umliegende Höfe schützen"
           },
           {
-            "k": "Ausrüstung",
-            "v": ""
+            "k": "Lage",
+            "v": "An der Hauptstraße im östlichen Bannkreis von Gwynthor"
           },
           {
             "k": "Befestigung",
-            "v": ""
+            "v": "Kleine, für Wach- und Vorratsdienst ausgelegte Festung"
           },
           {
             "k": "Zustand",
-            "v": ""
-          },
-          {
-            "k": "Gerüchte",
-            "v": ""
-          },
-          {
-            "k": "Besonderheiten",
-            "v": ""
+            "v": "Der fortgesetzte Dienst und die ungelöste Mordserie überfordern den Hauptmann"
           }
         ],
-        "text": "",
+        "text": "**Caer Ysgellfor** ist eine kleine Festung an der Hauptstraße im östlichen Bannkreis. Hier werden Getreide und andere Vorräte der umliegenden Höfe gesammelt, bevor sie unmittelbar nach Gwynthor weitergehen. Die Besatzung schützt die Straße, die Transporte und die verstreuten Höfe.\n\n**Rhydric Argall** verantwortet Burgverwaltung und Wachdienst als Hauptmann. Er lebt hier mit seinem siebzehnjährigen Sohn **Perwyn Argall**, der ihm als Knappe dient. Der vierzigjährige Hauptmann ist mit dem Fleischsammler vollkommen überfordert: Vorratsbetrieb und Wachdienst laufen weiter, während die Mordserie ungelöst bleibt.\n\n**Madog Ysgellfor und seine Familie** betreuen die zivile Vorratsannahme und Lagerwirtschaft. Die Argall-Hauptfamilie hat ihren Stammsitz weiterhin in Llysfaen.",
         "secret": false,
-        "templateId": "militaer"
+        "templateId": "militaer",
+        "residentFamilyIds": [
+          "haus-ysgellfor"
+        ]
       },
       {
         "id": "gwynthor-marking-092",
         "x": 0.647705078125,
         "y": 0.4323365079365079,
-        "title": "Rosszuchtsiedlung",
+        "title": "Marchwern-Gestüt",
         "cat": "location-rosszuchtsiedlung",
         "kind": "place",
         "img": "",
         "imgLink": "",
-        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
-        "crestLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
-        "faction": "",
+        "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
+        "house": "Familie Marchwern",
+        "faction": "Unmittelbarer Dienst für Haus Wyrm",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Marchwern-Gestüt"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Rosszuchtsiedlung und Familiengestüt"
+          },
+          {
+            "k": "Betreiber",
+            "v": "Familie Marchwern"
           },
           {
             "k": "Gewerbe",
-            "v": ""
+            "v": "Zucht und Aufzucht guter Reitpferde"
           },
           {
-            "k": "Regierungstyp",
-            "v": ""
+            "k": "Zuchten",
+            "v": "Ceffyl, Rhyfel und weitere Reitpferde"
           },
           {
-            "k": "Führung",
-            "v": ""
+            "k": "Abnehmer",
+            "v": "Haus Wyrm; wichtiger Pferdeversorger für Gwynthor"
           },
           {
-            "k": "Lehensherr",
-            "v": ""
+            "k": "Dienstbindung",
+            "v": "Die Familie dient Haus Wyrm unmittelbar und stellt ihm gute Reitpferde bereit"
           },
           {
-            "k": "Bevölkerung",
-            "v": ""
-          },
-          {
-            "k": "Einwohnerzahl",
-            "v": ""
-          },
-          {
-            "k": "Bekannte Familien",
-            "v": ""
-          },
-          {
-            "k": "Gefahren",
-            "v": ""
-          },
-          {
-            "k": "Ressourcen",
-            "v": ""
+            "k": "Wohnort",
+            "v": "Gwynthor, östlicher Bannkreis"
           }
         ],
-        "text": "",
+        "text": "Das **Marchwern-Gestüt** ist für Gwynthor ein wichtiger Ort der Pferdezucht. Die **Familie Marchwern** zieht hier unter anderem **Ceffyl** und **Rhyfel** sowie weitere gute Reitpferde auf. Sie betreibt die Rosszuchtsiedlung als Familienunternehmen.\n\nDie Marchwern leben mit ihren Pferden im Bannkreis von **Gwynthor**. Sie dienen **Haus Wyrm** unmittelbar und stellen ihm verlässliche Reitpferde bereit.",
         "secret": false,
-        "templateId": "siedlung"
+        "templateId": "siedlung",
+        "residentFamilyIds": [
+          "haus-marchwern"
+        ]
       },
       {
         "id": "gwynthor-marking-093",
@@ -7823,71 +7784,58 @@
         "id": "gwynthor-marking-107",
         "x": 0.67431640625,
         "y": 0.5049015873015873,
-        "title": "Bauernhof",
+        "title": "Tirfelyn-Hof",
         "cat": "muosqiyl9n1p",
         "kind": "place",
         "img": "",
         "imgLink": "",
-        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
-        "crestLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
-        "faction": "",
+        "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
+        "house": "Familie Tirfelyn",
+        "faction": "Versorgung Gwynthors",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Tirfelyn-Hof"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Wichtiger landwirtschaftlicher Versorgungshof"
           },
           {
             "k": "Besitzer",
-            "v": ""
+            "v": "Familie Tirfelyn"
           },
           {
             "k": "Bewirtschaftung",
-            "v": ""
-          },
-          {
-            "k": "Anbau",
-            "v": ""
+            "v": "Gemischter Familienbetrieb mit Viehhaltung und Ackerbau"
           },
           {
             "k": "Erzeugnisse",
-            "v": ""
-          },
-          {
-            "k": "Fläche",
-            "v": ""
-          },
-          {
-            "k": "Arbeitskräfte",
-            "v": ""
+            "v": "Vieh, Getreide und Gemüse"
           },
           {
             "k": "Versorgung / Abnehmer",
-            "v": ""
+            "v": "Gwynthor"
           },
           {
-            "k": "Zustand",
-            "v": ""
+            "k": "Lage",
+            "v": "Unmittelbar vor Gwynthor, südwestlich von Caer Ysgellfor"
           },
           {
-            "k": "Gefahren",
-            "v": ""
-          },
-          {
-            "k": "Besonderheiten",
-            "v": ""
+            "k": "Familie",
+            "v": "Freundliche, hilfsbereite Bauernfamilie"
           }
         ],
-        "text": "",
+        "text": "Der **Tirfelyn-Hof** liegt unmittelbar vor Gwynthor und ist ein wichtiger Versorger der Stadt. Die **Familie Tirfelyn** hält Vieh, bestellt Getreidefelder und baut Gemüse an. Die verschiedenen Erzeugnisse machen den Hof zu einem verlässlichen Bestandteil der täglichen Versorgung Gwynthors.\n\nDie Tirfelyn sind eine freundliche und hilfsbereite Bauernfamilie. Ihr Hof bleibt ein arbeitender Familienbetrieb; seine Bedeutung entsteht aus den regelmäßigen Lieferungen an die nahe Stadt.",
         "secret": false,
-        "templateId": "landwirtschaft"
+        "templateId": "landwirtschaft",
+        "residentFamilyIds": [
+          "haus-tirfelyn"
+        ]
       },
       {
         "id": "gwynthor-marking-108",
@@ -8240,71 +8188,54 @@
         "id": "gwynthor-marking-115",
         "x": 0.78936767578125,
         "y": 0.4658539682539683,
-        "title": "Jagdhaus",
+        "title": "Jagdhaus Helfaen",
         "cat": "location-jagdhaus",
         "kind": "place",
         "img": "",
         "imgLink": "",
-        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
-        "crestLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-helfaen&mode=view",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
+        "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
+        "house": "Familie Helfaen",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Jagdhaus Helfaen"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Kleines Jagdhaus einer Jägerfamilie"
           },
           {
             "k": "Besitzer",
-            "v": ""
+            "v": "Familie Helfaen"
           },
           {
             "k": "Bewohner",
-            "v": ""
+            "v": "Ein kleiner ländlicher Familienhaushalt"
           },
           {
-            "k": "Jagdrevier",
-            "v": ""
+            "k": "Erwerb",
+            "v": "Vorwiegend Kleinwildjagd"
           },
           {
-            "k": "Wildbestand",
-            "v": ""
-          },
-          {
-            "k": "Ausrüstung",
-            "v": ""
-          },
-          {
-            "k": "Versorgung",
-            "v": ""
-          },
-          {
-            "k": "Zugang",
-            "v": ""
-          },
-          {
-            "k": "Zustand",
-            "v": ""
-          },
-          {
-            "k": "Gefahren",
-            "v": ""
+            "k": "Lage",
+            "v": "Östlicher Bannkreis von Gwynthor, südlich der Brynial-Kate"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Unscheinbarer Wohn- und Arbeitsort; kein großer Jagdhof"
           }
         ],
-        "text": "",
+        "text": "Im **Jagdhaus Helfaen** lebt eine sehr kleine Jägerfamilie. Die **Helfaen** verdienen ihren Lebensunterhalt überwiegend mit Kleinwild. Das Haus dient zugleich als schlichte Unterkunft und als Ausgangspunkt ihrer täglichen Arbeit im nahen Umland. Der bescheidene Familienhaushalt ist eng mit dem Alltag zwischen Feldrändern und Waldwegen verbunden.",
         "secret": false,
-        "templateId": "gebaeude"
+        "templateId": "gebaeude",
+        "residentFamilyIds": [
+          "haus-helfaen"
+        ]
       },
       {
         "id": "gwynthor-marking-116",
@@ -8446,71 +8377,54 @@
         "id": "gwynthor-marking-118",
         "x": 0.70703125,
         "y": 0.5494349206349206,
-        "title": "Landgut",
-        "cat": "location-landgut",
+        "title": "Dolweth-Kate",
+        "cat": "muosqx3lgp3t",
         "kind": "place",
         "img": "",
         "imgLink": "",
-        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
-        "crestLink": "",
+        "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-dolweth.png",
+        "crestLink": "/Stammbäume/Stammbaum.html?family=haus-dolweth&mode=view",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
+        "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
+        "house": "Familie Dolweth",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Dolweth-Kate"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Bescheidene ländliche Familienkate"
           },
           {
             "k": "Besitzer",
-            "v": ""
+            "v": "Familie Dolweth"
           },
           {
-            "k": "Bewirtschaftung",
-            "v": ""
+            "k": "Erwerb",
+            "v": "Kleine Viehhaltung und ländliche Arbeit"
           },
           {
-            "k": "Anbau",
-            "v": ""
+            "k": "Tierbestand",
+            "v": "Wenige Tiere; kein eigenständiger Viehhof"
           },
           {
-            "k": "Erzeugnisse",
-            "v": ""
-          },
-          {
-            "k": "Fläche",
-            "v": ""
-          },
-          {
-            "k": "Arbeitskräfte",
-            "v": ""
-          },
-          {
-            "k": "Versorgung / Abnehmer",
-            "v": ""
+            "k": "Lage",
+            "v": "Südlich des Tirfelyn-Hofs im östlichen Bannkreis"
           },
           {
             "k": "Zustand",
-            "v": ""
-          },
-          {
-            "k": "Gefahren",
-            "v": ""
-          },
-          {
-            "k": "Besonderheiten",
-            "v": ""
+            "v": "Die Familie trauert um ihre vor wenigen Tagen ermordete achtzehnjährige Tochter"
           }
         ],
-        "text": "",
+        "text": "Die **Dolweth-Kate** gehört einer kleinen Familie, die nur wenige Tiere hält. Der Bestand reicht nicht aus, um die Behausung als Viehhof zu bezeichnen. Dennoch leisten die **Dolweth** mit ihrer Arbeit und ihren wenigen Erzeugnissen ihren Beitrag zur Versorgung des Umlands.\n\nVor einigen Tagen wurde die **achtzehnjährige Tochter** der Familie Opfer des Fleischsammlers. Die Angehörigen trauern noch um sie.",
         "secret": false,
-        "templateId": "landwirtschaft"
+        "templateId": "gebaeude",
+        "residentFamilyIds": [
+          "haus-dolweth"
+        ]
       },
       {
         "id": "gwynthor-marking-119",

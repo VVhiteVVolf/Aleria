@@ -1,0 +1,183 @@
+{
+  "checkedAt": "2026-11-04T19:31:39.986Z",
+  "url": "http://127.0.0.1:8897/Vorschau/Klythesia/",
+  "status": "passed",
+  "runtime": "Installed Chrome, fresh headless contexts",
+  "desktop": {
+    "dialogs": [
+      {
+        "id": "realm-klythesia",
+        "title": "Geliefertes Klythesia-Zeichen",
+        "image": "assets/previews/klythesia-sign.webp",
+        "original": "assets/originals/klythesia-sign.png",
+        "loaded": true,
+        "fit": "contain",
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "id": "hydra",
+        "title": "Hydra",
+        "image": "assets/previews/hydra.webp",
+        "original": "assets/originals/hydra.png",
+        "loaded": true,
+        "fit": "contain",
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "id": "mantikor",
+        "title": "Mantikor",
+        "image": "assets/previews/mantikor.webp",
+        "original": "assets/originals/mantikor.png",
+        "loaded": true,
+        "fit": "contain",
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "id": "phoenix",
+        "title": "Phönix",
+        "image": "assets/previews/phoenix.webp",
+        "original": "assets/originals/phoenix.png",
+        "loaded": true,
+        "fit": "contain",
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "id": "satyr",
+        "title": "Satyr",
+        "image": "assets/previews/satyr.webp",
+        "original": "assets/originals/satyr.png",
+        "loaded": true,
+        "fit": "contain",
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "id": "sphinx",
+        "title": "Sphinx",
+        "image": "assets/previews/sphinx.webp",
+        "original": "assets/originals/sphinx.png",
+        "loaded": true,
+        "fit": "contain",
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      }
+    ],
+    "map": {
+      "image": "assets/maps/klythesia.webp",
+      "start": 982.484375,
+      "enlarged": 2701.828125,
+      "pan": {
+        "left": 300,
+        "top": 200,
+        "width": 1380,
+        "scrollWidth": 2702
+      },
+      "fit": true,
+      "escape": true,
+      "focusRestored": true
+    },
+    "sourceLinks": 6,
+    "allSectionsExpanded": true,
+    "overflow": false
+  },
+  "mobile": {
+    "dialogs": [
+      {
+        "id": "realm-klythesia",
+        "title": "Geliefertes Klythesia-Zeichen",
+        "image": "assets/previews/klythesia-sign.webp",
+        "original": "assets/originals/klythesia-sign.png",
+        "loaded": true,
+        "fit": "contain",
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "id": "hydra",
+        "title": "Hydra",
+        "image": "assets/previews/hydra.webp",
+        "original": "assets/originals/hydra.png",
+        "loaded": true,
+        "fit": "contain",
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "id": "mantikor",
+        "title": "Mantikor",
+        "image": "assets/previews/mantikor.webp",
+        "original": "assets/originals/mantikor.png",
+        "loaded": true,
+        "fit": "contain",
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "id": "phoenix",
+        "title": "Phönix",
+        "image": "assets/previews/phoenix.webp",
+        "original": "assets/originals/phoenix.png",
+        "loaded": true,
+        "fit": "contain",
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "id": "satyr",
+        "title": "Satyr",
+        "image": "assets/previews/satyr.webp",
+        "original": "assets/originals/satyr.png",
+        "loaded": true,
+        "fit": "contain",
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "id": "sphinx",
+        "title": "Sphinx",
+        "image": "assets/previews/sphinx.webp",
+        "original": "assets/originals/sphinx.png",
+        "loaded": true,
+        "fit": "contain",
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      }
+    ],
+    "map": {
+      "image": "assets/maps/klythesia.webp",
+      "start": 358.796875,
+      "enlarged": 986.6875,
+      "pan": {
+        "left": 300,
+        "top": 120,
+        "width": 372,
+        "scrollWidth": 987
+      },
+      "fit": true,
+      "escape": true,
+      "focusRestored": true
+    },
+    "sourceLinks": 6,
+    "allSectionsExpanded": true,
+    "overflow": false
+  },
+  "consoleErrors": [],
+  "requestFailures": [],
+  "httpErrors": []
+}

@@ -1,0 +1,687 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-04T23:48:13.218393Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Startbesitz 2026-11-05/rhiannon-draig.json",
+  "character": {
+    "id": "y7MBxDiAaesbWHBtmw5Q",
+    "name": "Rhiannon Draig",
+    "inventory": {
+      "healthColor": "#5c7f20",
+      "moneyState": {
+        "gold": 12,
+        "silver": 4,
+        "copper": 0,
+        "pfennig": 0,
+        "totalCopper": 12400
+      },
+      "showInfoTable": false,
+      "status": "Gesund",
+      "equipmentQuiz": {
+        "open": false,
+        "step": 0,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "resultText": "",
+        "updatedAt": "",
+        "status": ""
+      },
+      "level": "Haus Draig, Celtigerns Wacht",
+      "portrait": "https://i.imgur.com/oR99BIS.png",
+      "characterId": "y7MBxDiAaesbWHBtmw5Q",
+      "title": "Charakter-Inventar",
+      "companions": [
+        {
+          "role": "Reittier",
+          "attributes": [],
+          "status": "Gesund",
+          "infoRows": [],
+          "imageFit": "contain",
+          "inventoryItemId": "rhiannon-mel",
+          "name": "Mél",
+          "imageFormat": "portrait",
+          "imagePosition": "center",
+          "summary": "Rhiannons Rhyfel.",
+          "statusColor": "#5c7f20",
+          "description": "Rhiannons Rhyfel.",
+          "image": "https://i.imgur.com/VpNVrlU.jpeg",
+          "creatureId": "companion-rhiannon-mel",
+          "species": "Rhyfel-Pferd",
+          "id": "companion-mqu1vat2-0-zz2n"
+        }
+      ],
+      "portraitFit": "cover",
+      "items": [
+        {
+          "individualizedAt": "",
+          "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+          "originItemDbKey": "",
+          "type": "Zauberstab",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amethyst-zauberstab-v1.png",
+          "itemDbKey": "",
+          "attributes": [],
+          "name": "Amethyst-Zauberstab",
+          "itemStorageMode": "character",
+          "imageFit": "contain",
+          "category": "weapon",
+          "infoRows": [],
+          "combatDefinition": null,
+          "tags": "",
+          "imagePosition": "center",
+          "weight": "",
+          "equipped": false,
+          "description": "Zauberstab mit einem Amethyst an der Spitze.",
+          "id": "item-mqu1vat1-0-w8ef",
+          "icon": "",
+          "imageFormat": "square",
+          "ownerCharacterName": "Rhiannon Draig",
+          "acquiredAt": "",
+          "quantity": "1",
+          "equipmentLink": null
+        },
+        {
+          "description": "Harnisch des Hauses Draig. Konkrete Kampfwerte sind noch nicht festgelegt.",
+          "quantity": "1",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "weight": "Noch festlegen",
+          "registerCategory": "ruestungen",
+          "imagePosition": "center",
+          "equipmentLink": null,
+          "equipped": false,
+          "ownerCharacterName": "",
+          "originItemDbKey": "",
+          "imageFormat": "square",
+          "icon": "*",
+          "itemStorageMode": "character",
+          "houseArmor": {
+            "armorClassRange": "13–15",
+            "rankId": "jungritter",
+            "houseId": "haus-draig",
+            "regionId": "celtigerns-wacht",
+            "minimumLevel": 4
+          },
+          "itemDbKey": "",
+          "templateName": "Haus Draig · Jungritter-Plattenrüstung",
+          "name": "Haus Draig · Jungritter-Plattenrüstung",
+          "image": "/AleriaAlmanach/public/assets/house-armor/celtigerns-wacht/haus-draig-harnisch-v1.png",
+          "infoRows": [
+            {
+              "value": "Haus Draig",
+              "label": "Haus"
+            },
+            {
+              "label": "Region",
+              "value": "Celtigerns Wacht"
+            },
+            {
+              "label": "Rang",
+              "value": "Jungritter"
+            },
+            {
+              "value": "13–15",
+              "label": "RK-Rahmen"
+            }
+          ],
+          "category": "armor",
+          "combatDefinition": null,
+          "type": "Rüstung",
+          "imageFit": "contain",
+          "tags": "",
+          "ownerCharacterId": "",
+          "templateId": "standard:cenyr-ruestungen:haus-draig:jungritter",
+          "individualizedAt": "",
+          "acquiredAt": "",
+          "id": "item-mqu1vat1-1-exvo"
+        },
+        {
+          "quantity": "1",
+          "type": "Ausrüstung",
+          "image": "",
+          "imagePosition": "center",
+          "acquiredAt": "",
+          "name": "Reiseausrüstung",
+          "equipped": false,
+          "ownerCharacterName": "",
+          "tags": "",
+          "equipmentLink": null,
+          "id": "item-mqu1vat1-2-0fx2",
+          "ownerCharacterId": "",
+          "individualizedAt": "",
+          "itemStorageMode": "character",
+          "weight": "Noch festlegen",
+          "infoRows": [],
+          "imageFit": "contain",
+          "imageFormat": "square",
+          "category": "equipment",
+          "originItemDbKey": "",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "icon": "*",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "itemDbKey": "",
+          "combatDefinition": null
+        },
+        {
+          "equipmentLink": null,
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "id": "item-mqu1vat1-3-2lgm",
+          "imageFit": "contain",
+          "icon": "*",
+          "category": "potions",
+          "acquiredAt": "",
+          "infoRows": [],
+          "imageFormat": "square",
+          "imagePosition": "center",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "originItemDbKey": "",
+          "itemDbKey": "",
+          "name": "Heil- oder Verbrauchsgut",
+          "equipped": false,
+          "individualizedAt": "",
+          "type": "Trinktur",
+          "ownerCharacterId": "",
+          "itemStorageMode": "character",
+          "weight": "Noch festlegen",
+          "image": "",
+          "tags": "",
+          "quantity": "1",
+          "combatDefinition": null,
+          "ownerCharacterName": ""
+        },
+        {
+          "imageFit": "contain",
+          "category": "documents",
+          "infoRows": [],
+          "name": "Dokumente / Urkunden",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "imagePosition": "center",
+          "type": "Dokument",
+          "tags": "",
+          "equipmentLink": null,
+          "imageFormat": "square",
+          "acquiredAt": "",
+          "id": "item-mqu1vat1-4-ajrj",
+          "image": "",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "ownerCharacterName": "",
+          "combatDefinition": null,
+          "itemDbKey": "",
+          "quantity": "1",
+          "originItemDbKey": "",
+          "individualizedAt": "",
+          "ownerCharacterId": "",
+          "weight": "Noch festlegen",
+          "itemStorageMode": "character",
+          "equipped": false,
+          "icon": "*"
+        },
+        {
+          "imageFit": "contain",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-amulett-v1.png",
+          "name": "Amulett",
+          "category": "other",
+          "infoRows": [],
+          "itemStorageMode": "character",
+          "individualizedAt": "",
+          "type": "Amulett",
+          "weight": "",
+          "attributes": [],
+          "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+          "originItemDbKey": "",
+          "combatDefinition": null,
+          "tags": "",
+          "id": "item-mqu1vat1-5-5kao",
+          "equipmentLink": null,
+          "description": "Rhiannons persönliches Amulett.",
+          "ownerCharacterName": "Rhiannon Draig",
+          "itemDbKey": "",
+          "quantity": "1",
+          "acquiredAt": "",
+          "imagePosition": "center",
+          "icon": "",
+          "equipped": false,
+          "imageFormat": "square"
+        },
+        {
+          "equipped": false,
+          "type": "Dolch",
+          "description": "Rhiannons Dolch.",
+          "itemStorageMode": "character",
+          "name": "Dolch",
+          "itemDbKey": "",
+          "imagePosition": "center",
+          "originItemDbKey": "",
+          "id": "rhiannon-draig-dagger-item",
+          "combatDefinition": null,
+          "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+          "icon": "",
+          "ownerCharacterName": "Rhiannon Draig",
+          "equipmentLink": null,
+          "quantity": "1",
+          "attributes": [],
+          "infoRows": [],
+          "imageFormat": "square",
+          "image": "/AleriaAlmanach/public/assets/character-equipment/rhiannon-dolch-v1.png",
+          "imageFit": "contain",
+          "weight": "",
+          "category": "weapon"
+        },
+        {
+          "creatureId": "companion-rhiannon-mel",
+          "imagePosition": "center",
+          "quantity": "1",
+          "imageFormat": "portrait",
+          "templateId": "",
+          "infoRows": [],
+          "registerCategory": "pferde",
+          "ownerCharacterName": "Rhiannon Draig",
+          "imageFit": "contain",
+          "category": "companion",
+          "individualizedAt": "2026-10-11T19:46:45.510Z",
+          "image": "https://i.imgur.com/VpNVrlU.jpeg",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+          "instanceId": "rhiannon-mel",
+          "name": "Mél",
+          "originItemDbKey": "",
+          "attributes": [],
+          "description": "Rhiannons Rhyfel.",
+          "itemDbKey": "",
+          "type": "Rhyfel-Pferd",
+          "templateName": "Rhyfel-Pferd",
+          "id": "rhiannon-mel"
+        },
+        {
+          "id": "y7MBxDiAaesbWHBtmw5Q-house-signet-20261102",
+          "instanceId": "y7MBxDiAaesbWHBtmw5Q-house-signet-20261102",
+          "templateId": "house-signet:haus-draig",
+          "templateName": "Draig-Siegelring",
+          "definitionRef": {
+            "id": "house-signet:haus-draig",
+            "revision": "a274f3994f5ad5303421a36e"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "house-signet:haus-draig",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+          "ownerCharacterName": "Rhiannon Draig",
+          "acquiredAt": "2026-11-02T21:05:39.754Z",
+          "name": "Rhiannon Siegelring",
+          "type": "Siegelring",
+          "category": "other",
+          "description": "Persönlicher Siegelring mit dem überlieferten Emblem von Haus Draig. Er kennzeichnet die Zugehörigkeit zu diesem Haus und trägt dessen Siegel.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-draig%2Fhouse-signets-bdac8c16cb36282e%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Hauszugehörigkeit, Haus Draig",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Draig"
+            }
+          ],
+          "attributes": []
+        },
+        {
+          "id": "y7MBxDiAaesbWHBtmw5Q-draig-start-possessions-20261105-1",
+          "instanceId": "y7MBxDiAaesbWHBtmw5Q-draig-start-possessions-20261105-1",
+          "templateId": "standard:gemischtwarenhandler:notizbuch",
+          "templateName": "Notizbuch (klein)",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:notizbuch",
+            "revision": "49c9999873bc24a73529d569"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:notizbuch",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+          "ownerCharacterName": "Rhiannon Draig",
+          "acquiredAt": "2026-11-04T23:48:09.869Z",
+          "name": "Notizbuch (klein)",
+          "type": "Schreibmaterial",
+          "category": "other",
+          "description": "20 Seiten aus handgeschöpftem Papier, in Leder gebunden.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/notizbuch.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Papier, Leder, Notizen",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 8,
+            "maxCopper": 8
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 7
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 5
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 8
+            },
+            {
+              "label": "Alltag",
+              "value": 9
+            },
+            {
+              "label": "Reise",
+              "value": 8
+            },
+            {
+              "label": "Preiswert",
+              "value": 7
+            }
+          ]
+        },
+        {
+          "id": "y7MBxDiAaesbWHBtmw5Q-draig-start-possessions-20261105-2",
+          "instanceId": "y7MBxDiAaesbWHBtmw5Q-draig-start-possessions-20261105-2",
+          "templateId": "standard:gemischtwarenhandler:feder-tinte",
+          "templateName": "Feder & Tinte",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:feder-tinte",
+            "revision": "261195af426d183145b98220"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:feder-tinte",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+          "ownerCharacterName": "Rhiannon Draig",
+          "acquiredAt": "2026-11-04T23:48:09.869Z",
+          "name": "Feder & Tinte",
+          "type": "Schreibmaterial",
+          "category": "other",
+          "description": "Schreibfeder und Tinte aus Ruß und Galläpfeln.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/feder-tinte.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Tinte, Feder, Schreiben",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 1,
+            "maxCopper": 1
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 6
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 4
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 8
+            },
+            {
+              "label": "Alltag",
+              "value": 9
+            },
+            {
+              "label": "Reise",
+              "value": 5
+            },
+            {
+              "label": "Preiswert",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "id": "y7MBxDiAaesbWHBtmw5Q-draig-start-possessions-20261105-3",
+          "instanceId": "y7MBxDiAaesbWHBtmw5Q-draig-start-possessions-20261105-3",
+          "templateId": "standard:gemischtwarenhandler:kreide",
+          "templateName": "Kreide (weiß)",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:kreide",
+            "revision": "514b54f662a1d9159cf980f3"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:kreide",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "y7MBxDiAaesbWHBtmw5Q",
+          "ownerCharacterName": "Rhiannon Draig",
+          "acquiredAt": "2026-11-04T23:48:09.869Z",
+          "name": "Kreide (weiß)",
+          "type": "Schreibmaterial",
+          "category": "other",
+          "description": "Zum Markieren, Schreiben oder Zählen.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/kreide.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Markieren, Schreiben, Billig",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 0.05,
+            "maxCopper": 0.05
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 5
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 3
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 10
+            },
+            {
+              "label": "Alltag",
+              "value": 8
+            },
+            {
+              "label": "Reise",
+              "value": 7
+            },
+            {
+              "label": "Preiswert",
+              "value": 10
+            }
+          ]
+        }
+      ],
+      "name": "Rhiannon Draig",
+      "carryValue": "Noch festlegen",
+      "portraitPosition": "top",
+      "categories": [
+        {
+          "id": "weapon",
+          "icon": "https://i.imgur.com/YaUQREQ.png",
+          "label": "Waffen"
+        },
+        {
+          "icon": "https://i.imgur.com/5qZtUiY.png",
+          "label": "Rüstung",
+          "id": "armor"
+        },
+        {
+          "label": "Ausrüstung",
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "label": "Dokumente",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "id": "documents"
+        },
+        {
+          "label": "Sonstiges",
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "revision": 1791748002305,
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "label": "Kon",
+          "value": 7
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "value": 6,
+          "label": "Wei"
+        },
+        {
+          "label": "Cha",
+          "value": 5
+        }
+      ],
+      "role": "Lehrling von Myrddin, Prinzessin, Gwynthor",
+      "money": "12 Gold, 4 Silber, 0 Kupfer, 0 Eisenpfennig",
+      "carryLabel": "Traglast",
+      "infoRows": [],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portraitFormat": "portrait",
+      "moneyNotice": "",
+      "hitpoints": "TP / Zustand"
+    },
+    "updatedAt": "2026-11-04T23:48:13.218393Z"
+  }
+}

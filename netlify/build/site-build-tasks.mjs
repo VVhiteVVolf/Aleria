@@ -68,6 +68,11 @@ export const SITE_BUILD_TASKS = [
     id: 'house-signets', label: 'Own-house seal rings, Silberhirsch magic protection and bounded inventory amendments',
     inputs: ['firebase/functions/package.json', 'firebase/functions/package-lock.json',
       'AleriaAlmanach/modules/house-knight-rings/', 'AleriaAlmanach/assets/house-knight-rings/',
+      'AleriaAlmanach/modules/draig-starting-possessions/',
+      'CharakterDatenbank/scripts/sync-draig-starting-possessions.mjs',
+      'firebase/scripts/content/publish-draig-starting-possessions.mjs',
+      'Charakter Archiv Exporte/Startbesitz 2026-11-05/',
+      almanach('draig-starting-possessions'), almanach('draig-starting-possessions-database'),
       'AleriaAlmanach/modules/gwynthor-seven/equipment.mjs', 'AleriaAlmanach/modules/gwynthor-seven/equipment-artwork.mjs',
       'AleriaAlmanach/modules/character-equipment/', 'AleriaAlmanach/modules/combat/combat-effect-model.js',
       'AleriaAlmanach/modules/combat/combat-profile-model.js', 'AleriaAlmanach/modules/item-definitions/',
@@ -81,7 +86,8 @@ export const SITE_BUILD_TASKS = [
       ['AleriaAlmanach/scripts/build-authored-item-catalog.mjs', '--check'],
       ['CharakterDatenbank/scripts/sync-house-signets.mjs', '--check'],
       testCommand(almanach('house-signets-and-silberhirsch'), almanach('house-signets-database'),
-        almanach('equipment-damage-protection'), almanach('character-equipment-sync')),
+        almanach('equipment-damage-protection'), almanach('character-equipment-sync'),
+        almanach('draig-starting-possessions'), almanach('draig-starting-possessions-database')),
       testCommand('firebase/functions/tests/silberhirsch-protection.test.js')]
   },
   {
@@ -193,24 +199,51 @@ export const SITE_BUILD_TASKS = [
       testCommand(almanach('gwynthor-marktplatz'))]
   },
   {
+    id: 'fleischsammler-argall', label: 'Caer Ysgellfor captain, squire and divorced household',
+    inputs: ['AleriaAlmanach/modules/fleischsammler-argall/', 'AleriaAlmanach/assets/fleischsammler-argall/',
+      'AleriaAlmanach/scripts/build-fleischsammler-argall.mjs', 'AleriaAlmanach/tests/fleischsammler-argall.test.mjs',
+      'Charakter Archiv Exporte/Fleischsammler Argall/', 'CharakterDatenbank/lib/',
+      'CharakterDatenbank/scripts/import-authored-characters.mjs', 'CharakterDatenbank/generated/',
+      'CharakterDatenbank/registry.json', 'Stammbäume/assets/js/data/argall-gwynthor-household.js',
+      'Stammbäume/assets/js/data/house-argall-family.js', 'Stammbäume/tests/argall-gwynthor.test.js',
+      'Stammbäume/assets/js/modules/relationship-matrix/', 'Stammbäume/assets/css/relationship-matrix.css',
+      'Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Argall/'],
+    commands: [['AleriaAlmanach/scripts/build-fleischsammler-argall.mjs', '--check'],
+      testCommand(almanach('fleischsammler-argall'), almanach('authored-character-import'),
+        'Stammbäume/tests/argall-gwynthor.test.js', 'Stammbäume/tests/relationship-matrix.test.js')]
+  },
+  {
     id: 'quest-journal', label: 'Quest sources, prepared travel, landing bridges and atomic rewards',
     inputs: ['AleriaAlmanach/quests.html', 'AleriaAlmanach/modules/quests/', 'AleriaAlmanach/modules/landing/',
-
+      'AleriaAlmanach/modules/fleischsammler-argall/household.mjs',
       'AleriaAlmanach/modules/gwynthor-troetzli/', 'AleriaAlmanach/modules/item-definitions/',
       'AleriaAlmanach/scripts/build-quest-catalog.mjs', 'AleriaAlmanach/scripts/build-troetzli-quest.mjs',
-      'AleriaAlmanach/scripts/build-quest-preparations.mjs',
-
-
+      'AleriaAlmanach/scripts/build-fleischsammler-quest.mjs', 'AleriaAlmanach/scripts/build-quest-preparations.mjs',
+      'Stammbäume/assets/js/data/gwynthor-fleischsammler/',
+      'Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/',
       'Anzeigetafeln/', 'Karten/karten.registry.js', 'Karten/assets/js/lsb/',
       'Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/', 'Karten/assets/js/karto-app.js',
       'Stammbäume/assets/data/published-families/haus-penrudd.json', ...questCatalogInputs,
       'firebase/functions/src/quests/', 'firebase/functions/src/generated/quests/', 'firebase/functions/tests/quest-system.test.js',
       'firebase/firestore.indexes.json', 'firebase/functions/package.json', 'firebase/functions/package-lock.json',
-      ...['quest-system', 'quest-board-availability', 'landing-quest-journal', 'landing-presentation', 'landing-folio-view', 'troetzli-quest', 'group-landing-model', 'group-landing-inventory', 'group-landing-integration'].map(almanach)],
+      ...['quest-system', 'quest-board-availability', 'landing-quest-journal', 'landing-presentation', 'landing-folio-view', 'troetzli-quest', 'fleischsammler-quest', 'group-landing-model', 'group-landing-inventory', 'group-landing-integration'].map(almanach)],
     commands: [['netlify/build/prepare-runtime-checks.mjs', '--scope=firebase'],
       ['AleriaAlmanach/scripts/build-quest-preparations.mjs', '--check'], ['AleriaAlmanach/scripts/build-quest-catalog.mjs', '--check'],
-      testCommand(...['quest-system', 'quest-board-availability', 'landing-quest-journal', 'landing-presentation', 'landing-folio-view', 'troetzli-quest', 'group-landing-model', 'group-landing-inventory', 'group-landing-integration'].map(almanach)),
+      testCommand(...['quest-system', 'quest-board-availability', 'landing-quest-journal', 'landing-presentation', 'landing-folio-view', 'troetzli-quest', 'fleischsammler-quest', 'group-landing-model', 'group-landing-inventory', 'group-landing-integration'].map(almanach)),
       testCommand('firebase/functions/tests/quest-system.test.js')]
+  },
+  {
+    id: 'gwynthor-fleischsammler-localities', label: 'Gwynthor rural families, source crests and seven map profiles',
+    inputs: ['Stammbäume/assets/js/data/gwynthor-fleischsammler/', 'Stammbäume/assets/js/data/families.registry.js',
+      'AleriaAlmanach/scripts/heraldic_emblem_alpha.py', 'AleriaAlmanach/scripts/prepare-fleischsammler-emblems.py',
+      'diagnostics/fleischsammler-quest-20261102/',
+      'Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/',
+      'Stammbäume/tests/gwynthor-fleischsammler.test.js', 'Karten/tests/fleischsammler-map.test.mjs',
+      'Karten/tools/build-fleischsammler-localities.mjs', 'Karten/modules/households/',
+      'Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/'],
+    commands: [['Karten/tools/build-fleischsammler-localities.mjs', '--check'],
+      ['Karten/tools/build-households.mjs', '--check'],
+      testCommand('Stammbäume/tests/gwynthor-fleischsammler.test.js', 'Karten/tests/fleischsammler-map.test.mjs')]
   },
   {
     id: 'balchder-characters', label: 'Published Balchder biographies and bounded database import',
@@ -228,7 +261,15 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'build-policy', label: 'Build selection and publication policy', always: true,
     inputs: ['netlify/build/', 'netlify/release/', 'netlify/tests/'],
-    commands: [testCommand('netlify/tests/site-build.test.mjs', 'netlify/tests/local-release.test.mjs', 'netlify/tests/canonical-source.test.mjs', 'netlify/tests/prepared-release.test.mjs', 'netlify/tests/runtime-checks.test.mjs', 'netlify/tests/adventure-release.test.mjs', 'netlify/tests/frontend-source-publication.test.mjs', 'netlify/tests/reference-art-publication.test.mjs', 'netlify/tests/house-source-publication.test.mjs', 'netlify/tests/language-package-publication.test.mjs')]
+    commands: [testCommand('netlify/tests/site-build.test.mjs', 'netlify/tests/local-release.test.mjs',
+      'netlify/tests/canonical-source.test.mjs', 'netlify/tests/runtime-checks.test.mjs',
+      'netlify/tests/prepared-release.test.mjs', 'netlify/tests/release-timings.test.mjs',
+      'netlify/tests/release-flow.test.mjs',
+      'netlify/tests/build-checkpoints.test.mjs', 'netlify/tests/site-build-fingerprints.test.mjs',
+      'netlify/tests/release-task-coverage.test.mjs', 'netlify/tests/avatar-source-publication.test.mjs',
+      'netlify/tests/adventure-release.test.mjs', 'netlify/tests/frontend-source-publication.test.mjs',
+      'netlify/tests/reference-art-publication.test.mjs', 'netlify/tests/house-source-publication.test.mjs',
+      'netlify/tests/language-package-publication.test.mjs')]
   },
   {
     id: 'regional-catalog', label: 'Generate regional equipment catalog', always: true,
@@ -404,7 +445,7 @@ export const SITE_BUILD_TASKS = [
     inputs: ['Gameplay Guide/', 'CharakterDatenbank/generated/characters.snapshot.json',
       'AleriaAlmanach/modules/patrick-biographies/', 'AleriaAlmanach/modules/character-genealogy/',
       'AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs',
-
+      'AleriaAlmanach/modules/fleischsammler-argall/household.mjs',
       'AleriaAlmanach/modules/item-register/item-register-standard.js',
       'AleriaAlmanach/modules/item-register/item-register-standard-artwork.js',
       'AleriaAlmanach/modules/weapon-standards/weapon-standard-catalog.js',

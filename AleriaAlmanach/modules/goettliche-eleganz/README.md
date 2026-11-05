@@ -5,7 +5,7 @@ Redaktionelle Quelle für das Gwynthorer Geschäft und die Familien Raves/Veltra
 - `eleganz-family-people.mjs`: verbindliche Namen, Welt-IDs, Verwandtschaften und Porträtpfade.
 - `eleganz-module.mjs`: sechs Seiten mit bestehenden Almanach-Templates; nur der Verkaufsraum ist interaktiv.
 - `eleganz-hierarchy.mjs`: drei wechselbare Reiter, sieben arbeitende Familienmitglieder und 15 einzeln benannte freie Posten.
-- `eleganz-collection.mjs` / `eleganz-catalog.mjs`: 20 Hausgarnituren und sechs Hochzeitsmodelle in vier Reitern des Güterregisters. `eleganz-wedding-collection.mjs` enthält je drei Braut- und Bräutigamsgarnituren.
+- `eleganz-collection.mjs` / `eleganz-catalog.mjs`: 51 Garnituren in vier Reitern des Güterregisters: je 15 Damen- und Herrenmodelle, 13 Brautkleider und acht Bräutigamsgarnituren. Die Erweiterung vom 4. November liegt getrennt in `eleganz-womens-additions.mjs`, `eleganz-mens-additions.mjs` und `eleganz-bridal-additions.mjs`; die ursprünglichen Produktkennungen bleiben erhalten.
 - `eleganz-characters.mjs`: reiner Importplan für die gemeinsame Charakterverzeichnis-Publikation. Bestehende Profile erhalten ausschließlich Familienquellen; Welt-IDs und andere Sammlungen bleiben erhalten.
 
 Die Familienakten liegen unter `Stammbäume/assets/js/data/eleganz-family-records.js` und `eleganz-family-links.js`. Maelwen Coeddu behält ihre bestehende Welt-ID. Die Maerllys-Hauptlinie folgt seriell hinter Gwenoras älterem Schneiderzweig. Luciano gehört einem anderen, nicht einzeln überlieferten Veltrane-Zweig an.
@@ -16,7 +16,9 @@ Die Modulkarte verwendet `previewImage` für die Außenansicht. Ein ausdrücklic
 
 ## Preise
 
-Verglichen mit dem vorhandenen Standardregister (`item-register-standard.js`): einfache Kleidung 10 Kupfertaler, Wollmütze 6 Kupfertaler, Leinenband (5 m) 1 Kupfertaler und Stoffrüstung 50 Kupfertaler. Die günstigsten vollständigen Hausgarnituren beginnen bei 18 Kupfertalern. Seide, Silberstickerei und Maßarbeit steigern den Preis; die Spitzenmodelle enthalten mehrteilige Einzelentwürfe, Weißgoldfassungen und ausgewählte Steine für 48 beziehungsweise 52 Goldtaler. Die Hochzeitsmode reicht von 220/240 Kupfertalern über 2,8/3 Goldtaler bis zu 65/68 Goldtalern für persönliche Einzelentwürfe. Das sind gestalterisch festgelegte Verkaufspreise anhand der vorhandenen Spielökonomie. Die serverseitige Angebotsauflösung prüft die tatsächlichen Kupferwerte aller 26 Angebote ohne Kaufvorgang.
+Alle Quellpreise sind ganzzahlige Kupfertaler; 100 Kupfertaler entsprechen einem Silbertaler, 1.000 einem Goldtaler. Die Erweiterung vom 4. November ergänzt zehn Brautkleider für 100–20.000 KT, fünf Bräutigamsgarnituren für 175–19.000 KT sowie je fünf normale Damen- und Herrenmodelle für 25–12.750 beziehungsweise 35–11.800 KT. Die Farbpalette ergänzt unter anderem Flachs, Ocker, Apricot, Altrosé, Flieder, Champagner, Grau, Tabak und Schwarz.
+
+Die vier bisherigen Spitzenmodelle kosten auf ausdrücklichen Nutzerwunsch jeweils höchstens 23.000 KT; alle vier wurden auf 23.000 KT gesetzt. Die ursprüngliche 26er-Fassung bleibt unter `sources/module-before-expansion-2026-11-04.json` erhalten. Alle anderen bisherigen Preise und die vorhandenen Bilder bleiben erhalten. Die Anzeige sortiert je Kategorie nach Preis und leitet Alltag, Maßarbeit und Preisbalken aus dem Warenpreis statt aus der Listenposition ab. Bestehender Besitz und alte Kaufbelege werden nicht umgeschrieben.
 
 ## Bilder
 
@@ -25,6 +27,8 @@ Alle 14 Porträts wurden nach der Nutzerkorrektur vom 16. Oktober neu erstellt: 
 Finale Bilder: `AleriaAlmanach/assets/goettliche-eleganz/` und die beiden Wappenpfade im Stammbaum-Verzeichnis. Prompts: `assets/goettliche-eleganz/image-prompts.json`. Erzeugung mit dem eingebauten Bildwerkzeug. Abgelehnte Varianten bleiben lokal erhalten und werden nicht veröffentlicht.
 
 Die Kleidungsbilder liegen unter `assets/goettliche-eleganz/kleidung/`, ihr vollständiger Promptsatz in dessen `image-prompts.json`. Nutzeranweisung vom 16. Oktober: handgemalter Rüstungs-/Inventarstil, weiße kopflose Puppentorsi, Oberteil und Hosenansatz beziehungsweise oberer Rockansatz, keine Beine, Füße oder Schuhe. Die Rüstungen dienen ausschließlich als Malstilreferenz; die beiden ersten Kleidungsbilder bestimmen das gemeinsame Präsentationsformat. Keine echten Personen oder anatomischen Hände.
+
+`eleganz-clothing-art.mjs` baut die gemeinsamen Bildaufträge für Generator und Einzelbilder. Die 25 neuen PNGs wurden mit dem eingebauten Bildwerkzeug erstellt. Exakte Aufträge, Referenzen, Originalpfade und lokale Prüfbelege stehen unter `diagnostics/eleganz-expansion-20261104/`. Diese Erweiterung bleibt zunächst lokal. Bei einer später freigegebenen Veröffentlichung die eingebauten Händlerquellen aus dem geprüften öffentlichen Commit über den bestehenden Mechanik-Sync neu erzeugen; die privaten Main-Quellen nicht als Abkürzung in den Händlergenerator aufnehmen.
 
 ## Bauen und veröffentlichen
 

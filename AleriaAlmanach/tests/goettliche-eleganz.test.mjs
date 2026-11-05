@@ -65,14 +65,14 @@ test('three generations, reciprocal marriages and existing identities survive th
   assert.equal(registered('maerllys').family.timeJumps.length,2);
   assert.deepEqual(registered('veltrane').folderPath,['Kaiserreich Argentum','Unsortiert']);
 });
-test('twenty-six distinct garments keep their real currency values and individual artwork',()=>{
+test('fifty-one distinct garments keep their real currency values and individual artwork',()=>{
   const catalog=entry.pages[4].tradeCatalog;
-  assert.equal(catalog.items.length,26);
+  assert.equal(catalog.items.length,51);
   const offers=buildModuleOffers([entry]);
-  assert.equal(offers.length,26);
-  assert.equal(new Set(offers.map(offer=>offer.id)).size,26);
+  assert.equal(offers.length,51);
+  assert.equal(new Set(offers.map(offer=>offer.id)).size,51);
   for(const category of Object.keys(ELEGANZ_COLLECTION)) {
-    assert.equal(catalog.items.filter(item=>item.category===category).length,category.endsWith('hochzeit')?3:10);
+    assert.equal(catalog.items.filter(item=>item.category===category).length,({damen:15,herren:15,'damen-hochzeit':13,'herren-hochzeit':8})[category]);
     for(const source of ELEGANZ_COLLECTION[category]) {
       const item=catalog.items.find(item=>item.id===source.id);
       const offer=offers.find(offer=>offer.title===source.name);
@@ -91,25 +91,41 @@ test('editor round trip retains garment details, categories, currency and featur
   vm.runInContext(await readFile(new URL('../modules/module-editor/module-editor-data.js',import.meta.url),'utf8'),context);
   context.catalog=structuredClone(entry.pages[4].tradeCatalog);
   const normalized=vm.runInContext('sanitizeTradeCatalogData(catalog)',context);
-  assert.equal(normalized.items.length,26);
+  assert.equal(normalized.items.length,51);
   assert.equal(normalized.items.at(-1).currencyCode,'GT');
   assert.equal(normalized.items[0].features.length,3);
   assert.equal(normalized.items[0].description,context.catalog.items[0].description);
 });
-test('wedding extension preserves the original twenty product identities and prices',async()=>{
-  const previous=JSON.parse(await readFile(new URL('../modules/goettliche-eleganz/sources/module-before-clothing.json',import.meta.url),'utf8')).module.entry;
+test('expanded collection retains original garments with only four authorized price reductions',async()=>{
+  const previous=JSON.parse(await readFile(new URL('../modules/goettliche-eleganz/sources/module-before-expansion-2026-11-04.json',import.meta.url),'utf8')).entry;
   const before=buildModuleOffers([previous]),after=buildModuleOffers([entry]);
-  assert.equal(before.length,20);
+  const reduced=new Set(['damen-goettliche-eleganz','herren-goettliche-eleganz','braut-zwei-heimaten','braeutigam-heller-bund']);
+  assert.equal(before.length,26);
   for(const old of before) {
-    const current=after.find(offer=>offer.id===old.id);
+    const id=old.sourceRefs[0].itemId;
+    const current=after.find(offer=>offer.sourceRefs[0].itemId===id);
     assert(current,old.title);
     assert.equal(current.title,old.title);
-    assert.deepEqual(current.priceRange,old.priceRange);
+    assert.equal(current.image,old.image);
+    assert.equal(current.description,old.description);
+    assert.equal(current.definitionSourceId,old.definitionSourceId);
+    assert.deepEqual(current.priceRange,reduced.has(id)?{minCopper:23000,maxCopper:23000}:old.priceRange);
     assert.equal(current.hiddenMeta.unit,old.hiddenMeta.unit);
   }
+  const originalIds=new Set(before.map(offer=>offer.sourceRefs[0].itemId));
+  const additions=Object.entries(ELEGANZ_COLLECTION).flatMap(([category,items])=>items.filter(item=>!originalIds.has(item.id)).map(item=>({...item,category})));
+  assert.equal(additions.length,25);
+  for(const item of additions) {
+    assert(Number.isInteger(item.copper),item.id);
+    if(!item.category.endsWith('hochzeit')) assert(item.copper>=20 && item.copper<=13000,item.id);
+    if(item.category==='damen-hochzeit') assert(item.copper>=100 && item.copper<=20000,item.id);
+  }
+  for(const item of Object.values(ELEGANZ_COLLECTION).flat()) assert(item.copper<=23000,item.id);
   const wedding=entry.pages[4].tradeCatalog.items.filter(item=>item.category.endsWith('hochzeit'));
-  assert.equal(wedding.length,6);
+  assert.equal(wedding.length,21);
   assert(wedding.every(item=>item.badge==='Hochzeitsmode' && item.conditions.includes('Hochzeit')));
+  assert(entry.pages[4].tradeCatalog.items.every(item=>item.priceFill>=0 && item.priceFill<=100));
+  assert.equal(entry.pages[4].tradeCatalog.items.find(item=>item.id==='flachsgold').badge,'Guter Alltag');
 });
 test('character publication preserves a pre-existing profile and every other collection',()=>{
   const id='person--haus-coeddu--maelwen-coeddu';

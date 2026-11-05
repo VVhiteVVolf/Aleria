@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "reviewedAt": "2026-11-04T23:26:08.372440+00:00",
+  "scope": "Klythesia expansion, Phalantia shared history and active Tirnara language lore; subsequent Thorax, Theios and Xiphone user corrections included.",
+  "counts": {
+    "clanProposals": 7,
+    "socialComicFigures": 8,
+    "classPrototypes": 7,
+    "houseThorax": 7,
+    "realmThorax": 1,
+    "newCrests": 2,
+    "currentDialogTargetsEachViewport": 24
+  },
+  "evidence": {
+    "country": {
+      "path": "diagnostics/klythesia-expansion-20261104/country-verification.json",
+      "sha256": "8b3322cc0be59e53c49264084fd64383df03415fb7b39079cec1c0a9d5c0a814"
+    },
+    "language": {
+      "path": "diagnostics/klythesia-expansion-20261104/language/verification.json",
+      "sha256": "34b94b3f4b5002da58255e030965d3ec889ea9412e4721dfc9c27ad70a88176d"
+    },
+    "estateAddition": {
+      "path": "diagnostics/klythesia-expansion-20261104/estates/theios-integration-review.json",
+      "sha256": "2e007cb4329a5f9c609870bab2ed710dbde86edc30e875d31ac0d73ef13fdddf"
+    },
+    "heraldry": {
+      "path": "diagnostics/klythesia-expansion-20261104/heraldry/verification.json",
+      "sha256": "0d07d97c4499a59b4decf9af91f110acd260d0434ac8711aeba5cc30f604de59"
+    },
+    "prototypes": {
+      "path": "diagnostics/klythesia-expansion-20261104/warriors/verification.json",
+      "sha256": "537cb54cdc3389e57cf41cbeb36ea3537b64a7325dbc8a8cc77428b17043414b"
+    },
+    "xiphoneRevision": {
+      "path": "diagnostics/klythesia-expansion-20261104/warriors/xiphone-revision-review.json",
+      "sha256": "2ea1456b624dfe99159e8f66e77b537e74504c2dbba5825b6a58291e8a9483e1"
+    },
+    "houses": {
+      "path": "diagnostics/klythesia-expansion-20261104/house-warriors/verification.json",
+      "sha256": "27b9ad7a1ee558ad7fabc16f8635d2442b925bd7d0f809653d1d05b19ec6c4d7"
+    },
+    "realm": {
+      "path": "diagnostics/klythesia-expansion-20261104/realm-warrior/verification.json",
+      "sha256": "3e3308a37d4a42af304ef0c9b23123748b26c2280aad70384d41dd0ff649d86f"
+    },
+    "browserBaseline": {
+      "path": "diagnostics/klythesia-expansion-20261104/browser/browser-review.json",
+      "sha256": "327f5c4997094815bfa5a9706e9daaca67ad0d6ddc4cb318249e5a58de179058"
+    },
+    "browserRealmAddition": {
+      "path": "diagnostics/klythesia-expansion-20261104/browser/realm/browser-review.json",
+      "sha256": "42d9c6335d4e60eddba68a2c7977983b3fa5e70c7e96a49fc0f6e7038c42c860"
+    }
+  },
+  "rootVisualReview": {
+    "status": "passed",
+    "viewed": [
+      "estates/contact-sheet.jpg",
+      "estates/theios-neutral-inspection.jpg",
+      "heraldry/contact-sheet.jpg",
+      "warriors/contact-sheet.jpg",
+      "house-warriors/contact-sheet.jpg",
+      "realm-warrior/realm-klythesia-review.jpg",
+      "browser/desktop-hero.png",
+      "browser/1440-estate-theios.png",
+      "browser/390-house-klyrath.png",
+      "browser/desktop-estates.png",
+      "browser/realm/1440-artwork-realm-klythesia.png",
+      "browser/realm/390-realm-warrior-realm-klythesia.png"
+    ],
+    "details": "Toxare and Thyrsia final production images and Xiphone v2 generator also viewed individually. All supplied original image bytes retained."
+  },
+  "independentSemanticReview": "Passed for common chronology, gods/ranks, seven-city coverage, free and enslaved men, female military roles and remaining 7/9 source conflict. Theios personal anatomy exception reviewed separately.",
+  "sharedArchitecture": "Feature modules reuse country workbench and scoped artifact pipelines; validated separate manifest_name default remains manifest.json.",
+  "protected": "No genealogical IDs/relations, live Firebase data, private sources or unrelated working changes modified by this task.",
+  "publishing": {
+    "push": false,
+    "deploy": false
+  },
+  "continuity": "New user canon and final art constraints documented in AGENTS.md above historical initial collection."
+}

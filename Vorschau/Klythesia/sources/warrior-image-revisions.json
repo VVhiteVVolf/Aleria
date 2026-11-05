@@ -1,0 +1,50 @@
+{
+  "schema": "aleria.klythesia.warrior-revisions",
+  "version": 1,
+  "tool": "image_gen.imagegen",
+  "revisions": [
+    {
+      "id": "toxare",
+      "version": 2,
+      "reason": "Closed Corinthian helmet",
+      "input": "C:/Users/fhg_r/.codex/generated_images/01a1a85d-1131-72b0-8efa-304b67bac202/exec-c4d27108-7396-4e19-b161-71004d46d827.png",
+      "output": "C:/Users/fhg_r/.codex/generated_images/01a1a85d-1131-72b0-8efa-304b67bac202/exec-74497eca-b66a-43a9-9d2a-c935870687fc.png",
+      "prompt": "Use case: precise-object-edit. Edit ONLY the rider's bronze helmet in this existing full-body mounted Amazon archer illustration. Replace its currently open-faced mask with a distinctly classical CORINTHIAN helmet worn down: unified bronze faceplate with TWO narrow almond eye slots, a long broad nasal covering the nose and deep cheekplates framing a narrow vertical mouth opening. Keep the current modest violet horsehair crest on top. The eyes can be partly visible through the slots, the nose and cheeks are covered. It must read as a proper closed Corinthian helmet, NOT an open Attic or Chalcidian helmet. Preserve EVERYTHING else exactly: the entire horse with all four hooves, correctly attached tail, saddle and tack, relaxed mounted pose, purple chiton and bronze armor, back quiver, upright short symmetric recurved bow with exactly ONE taut straight bowstring, bow hand and rein hand, all framing, matte painted grain, colors and transparent background. Do not alter the bow or horse. Same 1024x1536 portrait with complete figure and clear margins, no new objects, no scenery or shadow.",
+      "inputArchive": "sources/warrior-revisions/toxare-v1.png",
+      "inputSha256": "218d8aefe9f29909278e7a3d9553d9e7dad9b5c476463f52e83750eab06369fe",
+      "outputSha256": "445a4be2b303d90a63d312fa3b276d41353e21b5aca610c94b673ec9324cd99f"
+    },
+    {
+      "id": "thyrsia",
+      "version": 2,
+      "reason": "Replace straight blade with Kopis",
+      "input": "C:/Users/fhg_r/.codex/generated_images/01a1a85d-1131-72b0-8efa-304b67bac202/exec-dcf66514-ea97-414d-93a1-9724b8d12a9c.png",
+      "output": "C:/Users/fhg_r/.codex/generated_images/01a1a85d-1131-72b0-8efa-304b67bac202/exec-609df59a-3e60-44c2-be81-a9556e97cadd.png",
+      "prompt": "Use case: precise-object-edit. Edit ONLY the lowered sword blade in the woman's right hand in this existing full-body fantasy class illustration. Replace the current straight double-edged gladius-like blade with a clearly recognizable ancient Greek KOPIS: a short single-edged forward-curving blade with a concave back near the hilt, broad weighted cutting belly toward the tip and a down-curving hooked point. The wooden grip, hand, wrist, guard, blade root and overall lowered orientation remain where they are. It must read as a curved heavy Greek chopping sword, not a straight gladius and not an Islamic scimitar. Keep the entire woman, pose, face, Macedonian open helmet, bronze cuirass, lavender chiton, ivory mantle, lyre with all its straight strings, feet, colors, pigment style, canvas framing and transparency EXACTLY unchanged. Do not alter the lyre, hair or costume. Output same 1024x1536, genuine transparent background, no scene, floor, shadow or halo.",
+      "inputArchive": "sources/warrior-revisions/thyrsia-v1.png",
+      "inputSha256": "bb6063c4d4a84126b09538d01e50ca39ec79330d52c95a56a4ef3cfdd2c467d1",
+      "outputSha256": "e44958fddf74c76688d358e3353073f66155919a81fbcfc46a2b885dd373c391"
+    },
+    {
+      "id": "thyrsia",
+      "version": 3,
+      "reason": "Replace lyre with triangular harp",
+      "input": "C:/Users/fhg_r/.codex/generated_images/01a1a85d-1131-72b0-8efa-304b67bac202/exec-609df59a-3e60-44c2-be81-a9556e97cadd.png",
+      "output": "C:/Users/fhg_r/.codex/generated_images/01a1a85d-1131-72b0-8efa-304b67bac202/exec-6ade0e0b-910a-4c1f-9f55-00b5248a8f5c.png",
+      "prompt": "Use case: precise-object-edit. Change ONLY the musical instrument held in the woman's left hand in this full-body illustration. Replace the current U-shaped LYRE with a small genuine triangular HARP: one complete closed triangular frame with a straight outer pillar, an arched upper neck and a diagonal wooden soundbox, plus seven clearly separated taut straight strings spanning the frame. Use matte carved honey-gold wood and subtle Greek leaf ornament, size about the same as the current instrument. Her existing left hand grips the outer pillar naturally. It must be a recognizable triangular harp, NOT a lyre, lute, guitar, or open U shape. Preserve her corrected curving KOPIS sword exactly as currently shown. Also preserve the entire woman, armor, pose, face, Macedonian bronze helmet, blue feathers, lavender chiton, ivory mantle, feet and restrained matte pigment style. No changes outside the instrument and the minimal necessary hand grip. Same 1024x1536 portrait, complete figure, true transparent background and clear harp openings, no scene, halo or shadow.",
+      "inputArchive": "sources/warrior-revisions/thyrsia-v2.png",
+      "inputSha256": "e44958fddf74c76688d358e3353073f66155919a81fbcfc46a2b885dd373c391",
+      "outputSha256": "60b34948fba78af9741855c122bfc9baab5a4c7ed26c81c0b1c5f70a5441b47e"
+    },
+    {
+      "id": "xiphone",
+      "version": 2,
+      "reason": "User replacement: tribal berserker, tattoos, short chiton, short two-hand Rhomphaia sword hilt; no polearm, shield or lamellar cuirass.",
+      "inputArchive": "sources/warrior-revisions/xiphone-v1.png",
+      "inputSha256": "5f57e28a4749d153479e11b079c256bd805d961cda722551a3b5592b6589bb21",
+      "output": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0c9-f2da-7570-9dd2-d273d866e4f5\\exec-f725c779-c091-4831-a479-900f38d11fca.png",
+      "outputSha256": "338e56d116e8d1561103c37dde6337edaa3c5f867e375436c60a4897f7ddbac3",
+      "promptSource": "sources/xiphone-revision-art-direction.json"
+    }
+  ]
+}

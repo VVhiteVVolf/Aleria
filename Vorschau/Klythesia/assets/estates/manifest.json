@@ -1,0 +1,838 @@
+{
+  "schema": "aleria.klythesia.estates",
+  "version": 1,
+  "entries": [
+    {
+      "id": "anassa",
+      "source": "assets/estates/generated/anassa.png",
+      "sourceSha256": "d0e5cc66eb22e365c99d81005d0392a38a8ae0e7ab0fcf00ed33bc5d3035ed9a",
+      "production": "assets/estates/production/anassa.png",
+      "productionSha256": "ae7092597de407d222a0658abbfc2c453ee3bdc76844b6102f2412953da28cc7",
+      "preview": "assets/estates/previews/anassa.webp",
+      "previewSha256": "6259cfa10742bd8a382a640122dc0a660cff137e13cf01cccb1f72a3446a61e9",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          23,
+          1004,
+          1512
+        ],
+        "margins": {
+          "left": 0,
+          "top": 23,
+          "right": 20,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 664086,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 908778,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          41,
+          80,
+          927,
+          1502
+        ],
+        "margins": {
+          "left": 41,
+          "top": 80,
+          "right": 97,
+          "bottom": 34
+        },
+        "minimumMarginPixels": 34,
+        "touchesCanvas": false,
+        "transparentPixels": 688816,
+        "opaquePixels": 878969,
+        "partialAlphaPixels": 5079,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          28,
+          58,
+          698,
+          1129
+        ],
+        "margins": {
+          "left": 28,
+          "top": 58,
+          "right": 70,
+          "bottom": 23
+        },
+        "minimumMarginPixels": 23,
+        "touchesCanvas": false,
+        "transparentPixels": 378314,
+        "opaquePixels": 485682,
+        "partialAlphaPixels": 20740,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "doule",
+      "source": "assets/estates/generated/doule.png",
+      "sourceSha256": "c7e504ba67c7a311fc5c9415e1f38acb4abdb4f18b31e7ba44c096c9894c20a9",
+      "production": "assets/estates/production/doule.png",
+      "productionSha256": "652be358c4e57612dd61f6b69c86b47f6301c860aae839fe0d4c56f2d7685753",
+      "preview": "assets/estates/previews/doule.webp",
+      "previewSha256": "41424fcf183d8074ff8d8786cc789dafeb9c054355624a4123e65dd522e764d8",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          17,
+          1006,
+          1506
+        ],
+        "margins": {
+          "left": 0,
+          "top": 17,
+          "right": 18,
+          "bottom": 30
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 996258,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 576606,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          182,
+          57,
+          858,
+          1497
+        ],
+        "margins": {
+          "left": 182,
+          "top": 57,
+          "right": 166,
+          "bottom": 39
+        },
+        "minimumMarginPixels": 39,
+        "touchesCanvas": false,
+        "transparentPixels": 1014634,
+        "opaquePixels": 554862,
+        "partialAlphaPixels": 3368,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          134,
+          40,
+          646,
+          1125
+        ],
+        "margins": {
+          "left": 134,
+          "top": 40,
+          "right": 122,
+          "bottom": 27
+        },
+        "minimumMarginPixels": 27,
+        "touchesCanvas": false,
+        "transparentPixels": 564319,
+        "opaquePixels": 305977,
+        "partialAlphaPixels": 14440,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "doulos",
+      "source": "assets/estates/generated/doulos.png",
+      "sourceSha256": "5ce832b749dff57bafc157d42da795506b916229e8e9c7b9c079daf848e2912f",
+      "production": "assets/estates/production/doulos.png",
+      "productionSha256": "2c969c4a62f56d689dde944aee4db2b4fe6fd371225123b5644b27f3786a6ff7",
+      "preview": "assets/estates/previews/doulos.webp",
+      "previewSha256": "d71e94928b2b1939c3e32f075df863561db5ea8d1bce38a84b495640f5123de2",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          29,
+          1008,
+          1521
+        ],
+        "margins": {
+          "left": 0,
+          "top": 29,
+          "right": 16,
+          "bottom": 15
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 887451,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 685413,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          70,
+          32,
+          942,
+          1512
+        ],
+        "margins": {
+          "left": 70,
+          "top": 32,
+          "right": 82,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 24,
+        "touchesCanvas": false,
+        "transparentPixels": 913298,
+        "opaquePixels": 654572,
+        "partialAlphaPixels": 4994,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          50,
+          22,
+          709,
+          1136
+        ],
+        "margins": {
+          "left": 50,
+          "top": 22,
+          "right": 59,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 16,
+        "touchesCanvas": false,
+        "transparentPixels": 504660,
+        "opaquePixels": 359728,
+        "partialAlphaPixels": 20348,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "ergatide",
+      "source": "assets/estates/generated/ergatide.png",
+      "sourceSha256": "19ad40c5bd9401d5b6531156bfa219e311985205f7d52d5513621f53b1a93a98",
+      "production": "assets/estates/production/ergatide.png",
+      "productionSha256": "a66aeb348a814c125149483f75d70a7d7b83d869ee313a38a4efa467c2b96c59",
+      "preview": "assets/estates/previews/ergatide.webp",
+      "previewSha256": "6d6f8879fc0791780d00fe4402ecab4104740cf6aea452e3459f64c9e4933459",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          9,
+          1023,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 9,
+          "right": 1,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 840044,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 732820,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          55,
+          74,
+          970,
+          1502
+        ],
+        "margins": {
+          "left": 55,
+          "top": 74,
+          "right": 54,
+          "bottom": 34
+        },
+        "minimumMarginPixels": 34,
+        "touchesCanvas": false,
+        "transparentPixels": 867287,
+        "opaquePixels": 700495,
+        "partialAlphaPixels": 5082,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          39,
+          53,
+          730,
+          1128
+        ],
+        "margins": {
+          "left": 39,
+          "top": 53,
+          "right": 38,
+          "bottom": 24
+        },
+        "minimumMarginPixels": 24,
+        "touchesCanvas": false,
+        "transparentPixels": 479848,
+        "opaquePixels": 386442,
+        "partialAlphaPixels": 18446,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "hiereia",
+      "source": "assets/estates/generated/hiereia.png",
+      "sourceSha256": "ce60b83e974fb91ced183048d978e9f71779262bc0c5be7a08741a2c7785b70a",
+      "production": "assets/estates/production/hiereia.png",
+      "productionSha256": "0784cb27780044ede92c412104eb635208a2dfe1fdc9374f909b878b5547ca06",
+      "preview": "assets/estates/previews/hiereia.webp",
+      "previewSha256": "e12297fe7b903bcb7bf320c70de9a8728054a3c0fcab4c9821f024128c73cdc8",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          26,
+          1004,
+          1500
+        ],
+        "margins": {
+          "left": 0,
+          "top": 26,
+          "right": 20,
+          "bottom": 36
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 795903,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 776961,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          50,
+          80,
+          918,
+          1493
+        ],
+        "margins": {
+          "left": 50,
+          "top": 80,
+          "right": 106,
+          "bottom": 43
+        },
+        "minimumMarginPixels": 43,
+        "touchesCanvas": false,
+        "transparentPixels": 820891,
+        "opaquePixels": 746484,
+        "partialAlphaPixels": 5489,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          35,
+          58,
+          691,
+          1122
+        ],
+        "margins": {
+          "left": 35,
+          "top": 58,
+          "right": 77,
+          "bottom": 30
+        },
+        "minimumMarginPixels": 30,
+        "touchesCanvas": false,
+        "transparentPixels": 454056,
+        "opaquePixels": 412720,
+        "partialAlphaPixels": 17960,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "polemistria",
+      "source": "assets/estates/generated/polemistria.png",
+      "sourceSha256": "73997a8027bf158178a62b2c4f419ae24913accedb3b952a85a8eaa5a3aca07f",
+      "production": "assets/estates/production/polemistria.png",
+      "productionSha256": "8363ae6b1cf735a9699978e5aaf26d2ee17f349d37ebeb938184b57d7c86c660",
+      "preview": "assets/estates/previews/polemistria.webp",
+      "previewSha256": "0fac60072c98819c2c4df99a64a519da5fcb0dd5e7837efa0ef20ee2b15bdabd",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          27,
+          1024,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 27,
+          "right": 0,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 794908,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 777956,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          76,
+          74,
+          954,
+          1480
+        ],
+        "margins": {
+          "left": 76,
+          "top": 74,
+          "right": 70,
+          "bottom": 56
+        },
+        "minimumMarginPixels": 56,
+        "touchesCanvas": false,
+        "transparentPixels": 817801,
+        "opaquePixels": 751120,
+        "partialAlphaPixels": 3943,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          55,
+          53,
+          718,
+          1112
+        ],
+        "margins": {
+          "left": 55,
+          "top": 53,
+          "right": 50,
+          "bottom": 40
+        },
+        "minimumMarginPixels": 40,
+        "touchesCanvas": false,
+        "transparentPixels": 452805,
+        "opaquePixels": 415715,
+        "partialAlphaPixels": 16216,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "synoikos",
+      "source": "assets/estates/generated/synoikos.png",
+      "sourceSha256": "466c8c1513b37d1c2baa45cf12d156f1e327ad3947417b43a07b119876206b1f",
+      "production": "assets/estates/production/synoikos.png",
+      "productionSha256": "fead425781efa5715aeaf7448d64b362c9aa3accd165abaca59b2282db30e411",
+      "preview": "assets/estates/previews/synoikos.webp",
+      "previewSha256": "bbc45c369f1a1bc7770814548f98abf3c17a3c553cbc84fae38071548ca80dec",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          9,
+          1010,
+          1523
+        ],
+        "margins": {
+          "left": 0,
+          "top": 9,
+          "right": 14,
+          "bottom": 13
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 1011278,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 561586,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          227,
+          25,
+          815,
+          1520
+        ],
+        "margins": {
+          "left": 227,
+          "top": 25,
+          "right": 209,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 16,
+        "touchesCanvas": false,
+        "transparentPixels": 1029723,
+        "opaquePixels": 539546,
+        "partialAlphaPixels": 3595,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          168,
+          16,
+          614,
+          1142
+        ],
+        "margins": {
+          "left": 168,
+          "top": 16,
+          "right": 154,
+          "bottom": 10
+        },
+        "minimumMarginPixels": 10,
+        "touchesCanvas": false,
+        "transparentPixels": 573903,
+        "opaquePixels": 298614,
+        "partialAlphaPixels": 12219,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "theios",
+      "source": "assets/estates/generated/theios.png",
+      "sourceSha256": "531d93b38b6e6b14d6900c70c70f568a22c5c56e4a3a56d9b66a44d4dc37f391",
+      "production": "assets/estates/production/theios.png",
+      "productionSha256": "87c58455a187d142e5ffec10b5f3f4550e5dd7922981b8524febaf38089d63a4",
+      "preview": "assets/estates/previews/theios.webp",
+      "previewSha256": "b31bf758d6751751f88cd70dcbb7c7880ae4f30f47ea4c7f3a9000c39765909a",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          4,
+          1010,
+          1523
+        ],
+        "margins": {
+          "left": 0,
+          "top": 4,
+          "right": 14,
+          "bottom": 13
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 671923,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 900941,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          53,
+          15,
+          987,
+          1520
+        ],
+        "margins": {
+          "left": 53,
+          "top": 15,
+          "right": 37,
+          "bottom": 16
+        },
+        "minimumMarginPixels": 15,
+        "touchesCanvas": false,
+        "transparentPixels": 703078,
+        "opaquePixels": 863609,
+        "partialAlphaPixels": 6177,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          37,
+          9,
+          743,
+          1142
+        ],
+        "margins": {
+          "left": 37,
+          "top": 9,
+          "right": 25,
+          "bottom": 10
+        },
+        "minimumMarginPixels": 9,
+        "touchesCanvas": false,
+        "transparentPixels": 384919,
+        "opaquePixels": 475720,
+        "partialAlphaPixels": 24097,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    }
+  ]
+}

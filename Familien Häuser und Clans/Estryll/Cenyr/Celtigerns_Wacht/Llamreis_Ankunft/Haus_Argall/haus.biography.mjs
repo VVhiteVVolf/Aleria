@@ -48,7 +48,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Cyran und Gweneth gehören zur ältesten namentlich bekannten Generation. Brenar und Nerwen führen zu Brinthan und Uthyr; Iwrian begründet die kleinere Linie, aus der Dyrwyn hervorgeht. Brinthan ist das überlieferte Oberhaupt.",
+    "historyText": "Cyran und Gweneth gehören zur ältesten namentlich bekannten Generation. Brenar und Nerwen führen zu Brinthan und Uthyr; Iwrian und Avelyn sind die Eltern Dyrwyns und seines elf Jahre jüngeren Bruders Rhydric. Rhydric ist damit ein Vetter Brinthans und Uthyrs. Brinthan bleibt das Oberhaupt des Hauses.",
     "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
@@ -62,7 +62,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Verbindungen",
-        "text": "Die Verbindung zu Haus Draig betrifft Shylene, Owain und Iolo. Andere jüngere Angehörige sind unverheiratet; ihre weiteren Lebenslinien bleiben offen."
+        "text": "Die Verbindung zu Haus Draig betrifft Shylene, Owain und Iolo. Rhydric verwaltet Caer Ysgellfor im Bannkreis Gwynthors und führt dort als Hauptmann den Wachdienst. Sein siebzehnjähriger Sohn Perwyn dient ihm als Knappe. Rhydrics Ehe mit der rothaarigen, hochmütigen Gwenella ist geschieden; sie brannte mit dem Barden Maelor Ffionydd nach Aberon durch. Perwyn bleibt der gemeinsame Sohn Rhydrics und Gwenellas. Eine Ehe Gwenellas mit Maelor ist nicht festgelegt. Der Stammsitz der Argall bleibt Llysfaen."
       }
     ],
     "triviaTitle": "Besonderheiten",

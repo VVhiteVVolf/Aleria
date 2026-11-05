@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "schema": "aleria.phalantia.warrior-art-direction",
+  "tool": "built-in image_gen",
+  "transparentBackground": true,
+  "styleReference": "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+  "basePrompt": "Use case: stylized-concept. Asset type: full-body warrior class illustration for Aleria, Phalantia.\nReference image 1 is ONLY the approved painting STYLE reference: restrained matte hand-painted gouache, simplified clear shapes, soft thin painted outlines, fine even pigment grain, dignified readable silhouette. Do NOT copy its western knight armor, griffin, blue costume, outer haze, shadow or background.\nCreate exactly one fit muscular young adult HUMAN MAN, age 22–28, proportionate athletic physique, normal round human ears. Spartan and ancient Greek military fantasy equipment. Entire figure from highest helmet crest to both complete feet and ALL weapon tips is visible with generous empty margins in a 1024x1536 portrait canvas (2:3). A calm believable full-body three-quarter catalog stance. Fully TRANSPARENT background and transparent open gaps; no paper, background color, scenery, ground, contact shadow, glow, smoke, halo or vignette. Matte muted colors, sparse soft shading, no shiny CGI, no photo skin, no thick cartoon outlines. Functional hands, grips, straps and articulated armor. No writing, labels, watermark, firearms or female figures. Not a child, old, fat or oversized bodybuilder.",
+  "entries": [
+    {
+      "id": "prototype-01",
+      "name": "Phrouros",
+      "role": "Miliz und Wache",
+      "description": "Einfach bewaffneter Wachkrieger zum Schutz der Dörfer, Städte und Tore.",
+      "equipment": [
+        "Stoßspeer",
+        "Schlichter Rundschild",
+        "Gerades Kurzschwert",
+        "Leichter griechischer Helm"
+      ],
+      "palette": [
+        "Leinenweiß",
+        "Gebranntes Ocker",
+        "Mattes Eisen",
+        "Dunkles Leder"
+      ],
+      "direction": "A simple village and city watchman, visibly lower rank and less elaborate than a hoplite. Young clean-shaven square-jawed man, short brown hair visible under an open bronze Greek PILOS cap helmet, no crest. Padded undyed linen short tunic, small plain bronze chest reinforcement, brown leather belt and modest bronze greaves with closed brown sandals. One hand grips a straight upright ash spear with simple iron point; the other supports a modest plain round ochre-painted wooden shield. A straight short xiphos remains in a functional belt scabbard. Earthy ochre, undyed linen, dull bronze, dark leather. Reserved alert expression. No royal ornament and no Corinthian helmet.",
+      "prompt": "Use case: stylized-concept. Asset type: full-body warrior class illustration for Aleria, Phalantia.\nReference image 1 is ONLY the approved painting STYLE reference: restrained matte hand-painted gouache, simplified clear shapes, soft thin painted outlines, fine even pigment grain, dignified readable silhouette. Do NOT copy its western knight armor, griffin, blue costume, outer haze, shadow or background.\nCreate exactly one fit muscular young adult HUMAN MAN, age 22–28, proportionate athletic physique, normal round human ears. Spartan and ancient Greek military fantasy equipment. Entire figure from highest helmet crest to both complete feet and ALL weapon tips is visible with generous empty margins in a 1024x1536 portrait canvas (2:3). A calm believable full-body three-quarter catalog stance. Fully TRANSPARENT background and transparent open gaps; no paper, background color, scenery, ground, contact shadow, glow, smoke, halo or vignette. Matte muted colors, sparse soft shading, no shiny CGI, no photo skin, no thick cartoon outlines. Functional hands, grips, straps and articulated armor. No writing, labels, watermark, firearms or female figures. Not a child, old, fat or oversized bodybuilder.\n\nPrimary request: A simple village and city watchman, visibly lower rank and less elaborate than a hoplite. Young clean-shaven square-jawed man, short brown hair visible under an open bronze Greek PILOS cap helmet, no crest. Padded undyed linen short tunic, small plain bronze chest reinforcement, brown leather belt and modest bronze greaves with closed brown sandals. One hand grips a straight upright ash spear with simple iron point; the other supports a modest plain round ochre-painted wooden shield. A straight short xiphos remains in a functional belt scabbard. Earthy ochre, undyed linen, dull bronze, dark leather. Reserved alert expression. No royal ornament and no Corinthian helmet.",
+      "referencePaths": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ]
+    },
+    {
+      "id": "prototype-02",
+      "name": "Hoplit",
+      "role": "Elitekrieger der Schildformation",
+      "description": "Elitärer Speerkrieger mit Hoplon und korinthischem Helm mit Federkamm.",
+      "equipment": [
+        "Hoplon",
+        "Stoßspeer",
+        "Gerades Xiphos",
+        "Korinthischer Helm mit Federkamm"
+      ],
+      "palette": [
+        "Dunkles Rot",
+        "Bronze",
+        "Elfenbein",
+        "Schwarz"
+      ],
+      "direction": "An imposing elite Spartan HOPLITE, tall muscular man with mostly concealed face. An authentic CORINTHIAN helmet with continuous brow, long nose guard and cheek pieces, tall forward-to-back dark RED FEATHER crest, no western visor. Dull bronze anatomical Greek cuirass over restrained burgundy chiton, bronze greaves and functional leather sandals. Large deep dished round HOPLON with bronze rim and a restrained ivory Greek geometric central ornament on dark red paint. He holds a long straight DORY spear upright beside him, shaft continuous into a spearhead fully inside canvas; opposite arm naturally supports the hoplon. A straight xiphos sheathed on hip. Still disciplined stance, strong unmistakable elite silhouette. No roman lorica, no European knight armor.",
+      "prompt": "Use case: stylized-concept. Asset type: full-body warrior class illustration for Aleria, Phalantia.\nReference image 1 is ONLY the approved painting STYLE reference: restrained matte hand-painted gouache, simplified clear shapes, soft thin painted outlines, fine even pigment grain, dignified readable silhouette. Do NOT copy its western knight armor, griffin, blue costume, outer haze, shadow or background.\nCreate exactly one fit muscular young adult HUMAN MAN, age 22–28, proportionate athletic physique, normal round human ears. Spartan and ancient Greek military fantasy equipment. Entire figure from highest helmet crest to both complete feet and ALL weapon tips is visible with generous empty margins in a 1024x1536 portrait canvas (2:3). A calm believable full-body three-quarter catalog stance. Fully TRANSPARENT background and transparent open gaps; no paper, background color, scenery, ground, contact shadow, glow, smoke, halo or vignette. Matte muted colors, sparse soft shading, no shiny CGI, no photo skin, no thick cartoon outlines. Functional hands, grips, straps and articulated armor. No writing, labels, watermark, firearms or female figures. Not a child, old, fat or oversized bodybuilder.\n\nPrimary request: An imposing elite Spartan HOPLITE, tall muscular man with mostly concealed face. An authentic CORINTHIAN helmet with continuous brow, long nose guard and cheek pieces, tall forward-to-back dark RED FEATHER crest, no western visor. Dull bronze anatomical Greek cuirass over restrained burgundy chiton, bronze greaves and functional leather sandals. Large deep dished round HOPLON with bronze rim and a restrained ivory Greek geometric central ornament on dark red paint. He holds a long straight DORY spear upright beside him, shaft continuous into a spearhead fully inside canvas; opposite arm naturally supports the hoplon. A straight xiphos sheathed on hip. Still disciplined stance, strong unmistakable elite silhouette. No roman lorica, no European knight armor.",
+      "referencePaths": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ]
+    },
+    {
+      "id": "prototype-03",
+      "name": "Peltast",
+      "role": "Leichter Wurfspeerkrieger",
+      "description": "Beweglicher Plänkler mit leichtem Helm, leichter Rüstung und einem Rückenköcher für weitere Wurfspeere.",
+      "equipment": [
+        "Wurfspeer in der Hand",
+        "Weitere Wurfspeere im Rückenköcher",
+        "Leichter Helm",
+        "Leichte Rüstung"
+      ],
+      "palette": [
+        "Salbeigrün",
+        "Helles Leinen",
+        "Kupfer",
+        "Braunes Leder"
+      ],
+      "direction": "A lean muscular young Greek PELTAST skirmisher. Open-faced light CHALCIDIAN bronze helmet with distinct separate cheek pieces and no large crest, some dark curly hair visible. Light segmented linen armor and leather shoulder strips, sage-green short chiton, simple greaves, laced sandals. One hand holds a single SHORT JAVELIN upright at rest. A clearly visible narrow rigid LEATHER JAVELIN CASE strapped vertically on the BACK carries THREE additional long short throwing spears: their straight wooden shafts and distinct iron spearpoints extend visibly above the opposite shoulder. These are javelins not arrows. The other arm carries a small crescent-shaped pelte shield. Light agile stance with both feet planted. Minimal ornament. No bow, no large hoplon, no heavy plate armor.",
+      "prompt": "Use case: stylized-concept. Asset type: full-body warrior class illustration for Aleria, Phalantia.\nReference image 1 is ONLY the approved painting STYLE reference: restrained matte hand-painted gouache, simplified clear shapes, soft thin painted outlines, fine even pigment grain, dignified readable silhouette. Do NOT copy its western knight armor, griffin, blue costume, outer haze, shadow or background.\nCreate exactly one fit muscular young adult HUMAN MAN, age 22–28, proportionate athletic physique, normal round human ears. Spartan and ancient Greek military fantasy equipment. Entire figure from highest helmet crest to both complete feet and ALL weapon tips is visible with generous empty margins in a 1024x1536 portrait canvas (2:3). A calm believable full-body three-quarter catalog stance. Fully TRANSPARENT background and transparent open gaps; no paper, background color, scenery, ground, contact shadow, glow, smoke, halo or vignette. Matte muted colors, sparse soft shading, no shiny CGI, no photo skin, no thick cartoon outlines. Functional hands, grips, straps and articulated armor. No writing, labels, watermark, firearms or female figures. Not a child, old, fat or oversized bodybuilder.\n\nPrimary request: A lean muscular young Greek PELTAST skirmisher. Open-faced light CHALCIDIAN bronze helmet with distinct separate cheek pieces and no large crest, some dark curly hair visible. Light segmented linen armor and leather shoulder strips, sage-green short chiton, simple greaves, laced sandals. One hand holds a single SHORT JAVELIN upright at rest. A clearly visible narrow rigid LEATHER JAVELIN CASE strapped vertically on the BACK carries THREE additional long short throwing spears: their straight wooden shafts and distinct iron spearpoints extend visibly above the opposite shoulder. These are javelins not arrows. The other arm carries a small crescent-shaped pelte shield. Light agile stance with both feet planted. Minimal ornament. No bow, no large hoplon, no heavy plate armor.",
+      "referencePaths": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ]
+    },
+    {
+      "id": "prototype-04",
+      "name": "Promachos",
+      "role": "Beweglicher Schwertkämpfer",
+      "description": "Schneller Schwertkämpfer mit kleinerem Hoplon und beweglicher griechischer Rüstung.",
+      "equipment": [
+        "Gerades Schwert",
+        "Kleiner Hoplon",
+        "Bewegliche Rüstung"
+      ],
+      "palette": [
+        "Tiefes Petrol",
+        "Mattes Silber",
+        "Rötliches Leder",
+        "Elfenbein"
+      ],
+      "direction": "A youthful muscular Greek PROMACHOS sword specialist. A medium Greek ATTIC helmet with hinged cheek pieces framing his young clean-shaven face and a compact ivory-and-black crest, no beast helmet. Dark teal short fitted chiton, flexible overlapping bronze-gray scale torso and clearly articulated shoulder protection, greaves and closed strapped sandals. His right hand holds a clearly STRAIGHT double-edged XIPHOS sword lowered at a quiet diagonal, entire point inside frame. His left arm carries a SMALLER dished round hoplon, about half the visual area of the elite hoplite's large shield, with plain teal paint and narrow pale rim. Balanced mobile poised stance, both feet visible. This is an athletic swordsman rather than spear infantry. No curved saber and no spear.",
+      "prompt": "Use case: stylized-concept. Asset type: full-body warrior class illustration for Aleria, Phalantia.\nReference image 1 is ONLY the approved painting STYLE reference: restrained matte hand-painted gouache, simplified clear shapes, soft thin painted outlines, fine even pigment grain, dignified readable silhouette. Do NOT copy its western knight armor, griffin, blue costume, outer haze, shadow or background.\nCreate exactly one fit muscular young adult HUMAN MAN, age 22–28, proportionate athletic physique, normal round human ears. Spartan and ancient Greek military fantasy equipment. Entire figure from highest helmet crest to both complete feet and ALL weapon tips is visible with generous empty margins in a 1024x1536 portrait canvas (2:3). A calm believable full-body three-quarter catalog stance. Fully TRANSPARENT background and transparent open gaps; no paper, background color, scenery, ground, contact shadow, glow, smoke, halo or vignette. Matte muted colors, sparse soft shading, no shiny CGI, no photo skin, no thick cartoon outlines. Functional hands, grips, straps and articulated armor. No writing, labels, watermark, firearms or female figures. Not a child, old, fat or oversized bodybuilder.\n\nPrimary request: A youthful muscular Greek PROMACHOS sword specialist. A medium Greek ATTIC helmet with hinged cheek pieces framing his young clean-shaven face and a compact ivory-and-black crest, no beast helmet. Dark teal short fitted chiton, flexible overlapping bronze-gray scale torso and clearly articulated shoulder protection, greaves and closed strapped sandals. His right hand holds a clearly STRAIGHT double-edged XIPHOS sword lowered at a quiet diagonal, entire point inside frame. His left arm carries a SMALLER dished round hoplon, about half the visual area of the elite hoplite's large shield, with plain teal paint and narrow pale rim. Balanced mobile poised stance, both feet visible. This is an athletic swordsman rather than spear infantry. No curved saber and no spear.",
+      "referencePaths": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ]
+    },
+    {
+      "id": "prototype-05",
+      "name": "Toxot",
+      "role": "Schütze und Mariner",
+      "description": "Bogenschütze und Marinekrieger mit Rückenköcher, Kurzschwert und leichter seetauglicher Ausrüstung.",
+      "equipment": [
+        "Bogen",
+        "Pfeilköcher auf dem Rücken",
+        "Gerades Kurzschwert",
+        "Leichte maritime Rüstung"
+      ],
+      "palette": [
+        "Seegrün",
+        "Dunkles Blau",
+        "Salzweiß",
+        "Mattes Eisen"
+      ],
+      "direction": "A young strong lean Greek TOXOT who serves as BOTH ARCHER and MARINE. Open-faced light bronze BEOtIAN-style brimmed Greek helmet, young clean-shaven face and short black curls. Sleeveless sea-green padded linen cuirass with a little bronze scale reinforcement, dark blue short cloak fastened clear of bow arm, a practical crossbody strap, short split tunic, modest greaves, closed gripping leather deck sandals. A FULL ARROW QUIVER is prominently strapped onto the BACK with arrow fletchings visible above one shoulder. One hand loosely grips a complete functional recurved wooden bow at rest down by his side, bowstring connected only between its tips; the other hand rests near a straight short xiphos in belt scabbard. Small coiled boarding rope clipped at hip, restrained wave edging as painted textile ornament, no anchor emblem. All bow ends and both feet visible. No spear, no shield, no firearms and no instrument.",
+      "prompt": "Use case: stylized-concept. Asset type: full-body warrior class illustration for Aleria, Phalantia.\nReference image 1 is ONLY the approved painting STYLE reference: restrained matte hand-painted gouache, simplified clear shapes, soft thin painted outlines, fine even pigment grain, dignified readable silhouette. Do NOT copy its western knight armor, griffin, blue costume, outer haze, shadow or background.\nCreate exactly one fit muscular young adult HUMAN MAN, age 22–28, proportionate athletic physique, normal round human ears. Spartan and ancient Greek military fantasy equipment. Entire figure from highest helmet crest to both complete feet and ALL weapon tips is visible with generous empty margins in a 1024x1536 portrait canvas (2:3). A calm believable full-body three-quarter catalog stance. Fully TRANSPARENT background and transparent open gaps; no paper, background color, scenery, ground, contact shadow, glow, smoke, halo or vignette. Matte muted colors, sparse soft shading, no shiny CGI, no photo skin, no thick cartoon outlines. Functional hands, grips, straps and articulated armor. No writing, labels, watermark, firearms or female figures. Not a child, old, fat or oversized bodybuilder.\n\nPrimary request: A young strong lean Greek TOXOT who serves as BOTH ARCHER and MARINE. Open-faced light bronze BEOtIAN-style brimmed Greek helmet, young clean-shaven face and short black curls. Sleeveless sea-green padded linen cuirass with a little bronze scale reinforcement, dark blue short cloak fastened clear of bow arm, a practical crossbody strap, short split tunic, modest greaves, closed gripping leather deck sandals. A FULL ARROW QUIVER is prominently strapped onto the BACK with arrow fletchings visible above one shoulder. One hand loosely grips a complete functional recurved wooden bow at rest down by his side, bowstring connected only between its tips; the other hand rests near a straight short xiphos in belt scabbard. Small coiled boarding rope clipped at hip, restrained wave edging as painted textile ornament, no anchor emblem. All bow ends and both feet visible. No spear, no shield, no firearms and no instrument.",
+      "referencePaths": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ]
+    },
+    {
+      "id": "prototype-06",
+      "name": "Lanzenreiter",
+      "role": "Berittener Lanzenkrieger",
+      "description": "Griechisch gerüsteter Reiter mit Lanze und Schwert auf einem sehnigen Sarkal.",
+      "equipment": [
+        "Lanze",
+        "Gerades Schwert",
+        "Griechische Reiterrüstung",
+        "Sarkal"
+      ],
+      "palette": [
+        "Dunkles Karmin",
+        "Helle Bronze",
+        "Sandfarben",
+        "Braunes Leder"
+      ],
+      "mount": {
+        "name": "Sarkal",
+        "profile": "../../Bestiarium/tiere/pferde/sarkal/index.html",
+        "source": "Bestiarium/tiere/pferde/sarkal/profil.json",
+        "reference": "Bestiarium/assets/horse-profiles/sarkal.webp"
+      },
+      "direction": "A fully visible MOUNTED Greek fantasy LANCE CAVALRYMAN on a Sarkal horse, shown in a dignified still three-quarter standing side view. Rider is a fit muscular young adult man in Greek scale-and-bronze cuirass, burgundy riding cloak, split riding skirt over practical riding trousers and leather boots. Distinct bronze Greek THRACIAN helmet with forward-curving peak, open face, modest dark feather plume, no Roman helmet. He holds one long straight lance angled upwards nearly vertical, entire tip and butt within frame. His other hand holds correctly connected reins leading to the horse's bridle; sword sheathed at side. Horse must match reference image 2's Sarkal breed anatomy: tall, long-limbed, sinewy and athletic rather than a massive draft horse, deep chest, long neck, taut straight back, hard dry legs, short dark mane, dappled grey coloring with a dark mane and tail. Horse's four complete legs and ALL four hooves visible, tail naturally attached to hindquarters; anatomically believable horse, saddle, girth, stirrups and rider balance. The horse and lance are scaled to fit entirely inside a 1024x1536 portrait with clear margins. Do not crop the horse or lance. No horse armor hiding its anatomy. No ground or cast shadow. Reference image 2 is for the HORSE BREED ANATOMY ONLY: ignore its rider, equipment, other people, battle and scenery. Depict exactly one rider and one horse.",
+      "prompt": "Use case: stylized-concept. Asset type: full-body warrior class illustration for Aleria, Phalantia.\nReference image 1 is ONLY the approved painting STYLE reference: restrained matte hand-painted gouache, simplified clear shapes, soft thin painted outlines, fine even pigment grain, dignified readable silhouette. Do NOT copy its western knight armor, griffin, blue costume, outer haze, shadow or background.\nCreate exactly one fit muscular young adult HUMAN MAN, age 22–28, proportionate athletic physique, normal round human ears. Spartan and ancient Greek military fantasy equipment. Entire figure from highest helmet crest to both complete feet and ALL weapon tips is visible with generous empty margins in a 1024x1536 portrait canvas (2:3). A calm believable full-body three-quarter catalog stance. Fully TRANSPARENT background and transparent open gaps; no paper, background color, scenery, ground, contact shadow, glow, smoke, halo or vignette. Matte muted colors, sparse soft shading, no shiny CGI, no photo skin, no thick cartoon outlines. Functional hands, grips, straps and articulated armor. No writing, labels, watermark, firearms or female figures. Not a child, old, fat or oversized bodybuilder.\n\nPrimary request: A fully visible MOUNTED Greek fantasy LANCE CAVALRYMAN on a Sarkal horse, shown in a dignified still three-quarter standing side view. Rider is a fit muscular young adult man in Greek scale-and-bronze cuirass, burgundy riding cloak, split riding skirt over practical riding trousers and leather boots. Distinct bronze Greek THRACIAN helmet with forward-curving peak, open face, modest dark feather plume, no Roman helmet. He holds one long straight lance angled upwards nearly vertical, entire tip and butt within frame. His other hand holds correctly connected reins leading to the horse's bridle; sword sheathed at side. Horse must match reference image 2's Sarkal breed anatomy: tall, long-limbed, sinewy and athletic rather than a massive draft horse, deep chest, long neck, taut straight back, hard dry legs, short dark mane, dappled grey coloring with a dark mane and tail. Horse's four complete legs and ALL four hooves visible, tail naturally attached to hindquarters; anatomically believable horse, saddle, girth, stirrups and rider balance. The horse and lance are scaled to fit entirely inside a 1024x1536 portrait with clear margins. Do not crop the horse or lance. No horse armor hiding its anatomy. No ground or cast shadow. Reference image 2 is for the HORSE BREED ANATOMY ONLY: ignore its rider, equipment, other people, battle and scenery. Depict exactly one rider and one horse.",
+      "referencePaths": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Bestiarium/assets/horse-profiles/sarkal.webp"
+      ]
+    },
+    {
+      "id": "prototype-07",
+      "name": "Hippeus",
+      "role": "Königlicher Agoge-Elitekrieger",
+      "description": "Schwer gepanzerter königlicher Krieger mit Großschwert und spartanischem Helm mit breitem Federkamm.",
+      "equipment": [
+        "Großschwert",
+        "Schwerer griechischer Panzer",
+        "Spartanischer Helm mit breitem Federkamm"
+      ],
+      "palette": [
+        "Schwarzrot",
+        "Matte Bronze",
+        "Antiksilber",
+        "Dunkles Karmin"
+      ],
+      "direction": "A physically impressive royal SPARTAN HIPPEUS, trained in the royal Agoge, young adult muscular man about 25, completely heavy-armored in highly refined ANCIENT GREEK fantasy armor, NOT a western knight. Closed CORINTHIAN / SPARTAN helmet with long nose guard and cheek coverage, magnificent BROAD TRANSVERSE red-and-black FEATHER CREST sweeping widely from ear to ear across the helmet, all feather ends completely visible. Heavy bronze Greek muscled breastplate, substantial layered bronze and dark steel scale protection at shoulders and waist, articulated Greek-style arm protection and full bronze greaves; burgundy under-tunic and long narrow royal cloak. Both armored hands rest naturally one over another on the long grip of a massive clearly STRAIGHT TWO-HANDED GREATSWORD held point down in front, the complete blade and tip visible with space below. Royal geometric meander engraving and subtle paired vertical bars, no copied lion or griffin crest. Calm powerful solemn posture, feet apart. No spear, no shield, no horse and no crown.",
+      "prompt": "Use case: stylized-concept. Asset type: full-body warrior class illustration for Aleria, Phalantia.\nReference image 1 is ONLY the approved painting STYLE reference: restrained matte hand-painted gouache, simplified clear shapes, soft thin painted outlines, fine even pigment grain, dignified readable silhouette. Do NOT copy its western knight armor, griffin, blue costume, outer haze, shadow or background.\nCreate exactly one fit muscular young adult HUMAN MAN, age 22–28, proportionate athletic physique, normal round human ears. Spartan and ancient Greek military fantasy equipment. Entire figure from highest helmet crest to both complete feet and ALL weapon tips is visible with generous empty margins in a 1024x1536 portrait canvas (2:3). A calm believable full-body three-quarter catalog stance. Fully TRANSPARENT background and transparent open gaps; no paper, background color, scenery, ground, contact shadow, glow, smoke, halo or vignette. Matte muted colors, sparse soft shading, no shiny CGI, no photo skin, no thick cartoon outlines. Functional hands, grips, straps and articulated armor. No writing, labels, watermark, firearms or female figures. Not a child, old, fat or oversized bodybuilder.\n\nPrimary request: A physically impressive royal SPARTAN HIPPEUS, trained in the royal Agoge, young adult muscular man about 25, completely heavy-armored in highly refined ANCIENT GREEK fantasy armor, NOT a western knight. Closed CORINTHIAN / SPARTAN helmet with long nose guard and cheek coverage, magnificent BROAD TRANSVERSE red-and-black FEATHER CREST sweeping widely from ear to ear across the helmet, all feather ends completely visible. Heavy bronze Greek muscled breastplate, substantial layered bronze and dark steel scale protection at shoulders and waist, articulated Greek-style arm protection and full bronze greaves; burgundy under-tunic and long narrow royal cloak. Both armored hands rest naturally one over another on the long grip of a massive clearly STRAIGHT TWO-HANDED GREATSWORD held point down in front, the complete blade and tip visible with space below. Royal geometric meander engraving and subtle paired vertical bars, no copied lion or griffin crest. Calm powerful solemn posture, feet apart. No spear, no shield, no horse and no crown.",
+      "referencePaths": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ]
+    },
+    {
+      "id": "prototype-08",
+      "name": "Kriegssänger",
+      "role": "Fanatischer Berserker",
+      "description": "Leicht gerüsteter singender und schreiender Berserker mit roten griechischen Tätowierungen und einer Axt in jeder Hand.",
+      "equipment": [
+        "Zwei Kriegsäxte, eine je Hand",
+        "Spartanischer Helm",
+        "Rote griechische Tätowierungen",
+        "Wenig Rüstung"
+      ],
+      "palette": [
+        "Rote Tätowierungen",
+        "Dunkles Leder",
+        "Alte Bronze",
+        "Gedämpftes Karmin"
+      ],
+      "direction": "A fearsome young muscular SPARTAN WAR-CHANTER BERSERKER, about 24, athletic lean strong proportions rather than giant bodybuilding. Bare muscular chest and arms covered in clearly RED GREEK GEOMETRIC TATTOOS: meander bands, angular labyrinth paths, sunstroke-like linear markings, red ink intentionally not blood. Minimal armor: narrow bronze belt, short dark leather pteruges over a red loin tunic, bronze wrist guards and greaves, sturdy leather sandals. Distinct rugged open-faced Spartan helmet with nose guard, short jagged dark RED FEATHER crest, face visible with mouth open in a fierce CHANTING / SHOUTING expression. He holds exactly TWO functional Greek-inspired battle AXES, one firmly in EACH HAND, hands visibly separate, axes both low and outward so both heads and handles are completely visible and do not overlap the body. Powerful grounded still catalog stance, no jumping, no battle scene. No musical instrument of any kind, no horn, flute, lyre or drum, no sword, no shield, no gore and no blood. Full body and all helmet feathers within canvas.",
+      "prompt": "Use case: stylized-concept. Asset type: full-body warrior class illustration for Aleria, Phalantia.\nReference image 1 is ONLY the approved painting STYLE reference: restrained matte hand-painted gouache, simplified clear shapes, soft thin painted outlines, fine even pigment grain, dignified readable silhouette. Do NOT copy its western knight armor, griffin, blue costume, outer haze, shadow or background.\nCreate exactly one fit muscular young adult HUMAN MAN, age 22–28, proportionate athletic physique, normal round human ears. Spartan and ancient Greek military fantasy equipment. Entire figure from highest helmet crest to both complete feet and ALL weapon tips is visible with generous empty margins in a 1024x1536 portrait canvas (2:3). A calm believable full-body three-quarter catalog stance. Fully TRANSPARENT background and transparent open gaps; no paper, background color, scenery, ground, contact shadow, glow, smoke, halo or vignette. Matte muted colors, sparse soft shading, no shiny CGI, no photo skin, no thick cartoon outlines. Functional hands, grips, straps and articulated armor. No writing, labels, watermark, firearms or female figures. Not a child, old, fat or oversized bodybuilder.\n\nPrimary request: A fearsome young muscular SPARTAN WAR-CHANTER BERSERKER, about 24, athletic lean strong proportions rather than giant bodybuilding. Bare muscular chest and arms covered in clearly RED GREEK GEOMETRIC TATTOOS: meander bands, angular labyrinth paths, sunstroke-like linear markings, red ink intentionally not blood. Minimal armor: narrow bronze belt, short dark leather pteruges over a red loin tunic, bronze wrist guards and greaves, sturdy leather sandals. Distinct rugged open-faced Spartan helmet with nose guard, short jagged dark RED FEATHER crest, face visible with mouth open in a fierce CHANTING / SHOUTING expression. He holds exactly TWO functional Greek-inspired battle AXES, one firmly in EACH HAND, hands visibly separate, axes both low and outward so both heads and handles are completely visible and do not overlap the body. Powerful grounded still catalog stance, no jumping, no battle scene. No musical instrument of any kind, no horn, flute, lyre or drum, no sword, no shield, no gore and no blood. Full body and all helmet feathers within canvas.",
+      "referencePaths": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png"
+      ]
+    }
+  ]
+}

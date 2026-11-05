@@ -1,0 +1,630 @@
+{
+  "schema": "aleria.phalantia.estates",
+  "version": 1,
+  "entries": [
+    {
+      "id": "basileis",
+      "source": "assets/estates/generated/basileis.png",
+      "sourceSha256": "60c8cbd44f706db01ff0ec33a10e9c07fe6cd6130c2f02de176346703255d513",
+      "production": "assets/estates/production/basileis.png",
+      "productionSha256": "55eecb08b3d2e99e64f0a1a2a3109a4d6761f03ceb9b850e0ea0ed2480d8ec10",
+      "preview": "assets/estates/previews/basileis.webp",
+      "previewSha256": "722254cdd31e625e30b11e1918fd31af8ef1751bcbd9079eecf29e09cbed913f",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          14,
+          1023,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 14,
+          "right": 1,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 680673,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 892191,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          49,
+          16,
+          966,
+          1523
+        ],
+        "margins": {
+          "left": 49,
+          "top": 16,
+          "right": 58,
+          "bottom": 13
+        },
+        "minimumMarginPixels": 13,
+        "touchesCanvas": false,
+        "transparentPixels": 699484,
+        "opaquePixels": 869519,
+        "partialAlphaPixels": 3861,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          34,
+          10,
+          727,
+          1145
+        ],
+        "margins": {
+          "left": 34,
+          "top": 10,
+          "right": 41,
+          "bottom": 7
+        },
+        "minimumMarginPixels": 7,
+        "touchesCanvas": false,
+        "transparentPixels": 386873,
+        "opaquePixels": 482968,
+        "partialAlphaPixels": 14895,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "freie-buerger",
+      "source": "assets/estates/generated/freie-buerger.png",
+      "sourceSha256": "143d717e72d0dd7ab0c8846b1367e9338c99f940ef1c6901e0590e8e7bc29df8",
+      "production": "assets/estates/production/freie-buerger.png",
+      "productionSha256": "c13c03d1ea1f6d38a1bc9d5033a84c3ba53ac3d956c7f2ac0b33958684e0bf4d",
+      "preview": "assets/estates/previews/freie-buerger.webp",
+      "previewSha256": "5d21f6e6a184aaffd5ff279d3f479195e0ecb81f7e3f08eacf0d055ca921f6c7",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          0,
+          1023,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 0,
+          "right": 1,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 852131,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 720733,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          19,
+          16,
+          953,
+          1516
+        ],
+        "margins": {
+          "left": 19,
+          "top": 16,
+          "right": 71,
+          "bottom": 20
+        },
+        "minimumMarginPixels": 16,
+        "touchesCanvas": false,
+        "transparentPixels": 878212,
+        "opaquePixels": 689693,
+        "partialAlphaPixels": 4959,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          12,
+          10,
+          717,
+          1139
+        ],
+        "margins": {
+          "left": 12,
+          "top": 10,
+          "right": 51,
+          "bottom": 13
+        },
+        "minimumMarginPixels": 10,
+        "touchesCanvas": false,
+        "transparentPixels": 485855,
+        "opaquePixels": 380340,
+        "partialAlphaPixels": 18541,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "gaeste",
+      "source": "assets/estates/generated/gaeste.png",
+      "sourceSha256": "2402c323a643db0172213f2beda6a8f56ecfcf6ecf1c7b99208c87acae4400a6",
+      "production": "assets/estates/production/gaeste.png",
+      "productionSha256": "234648f72fed7012284412db5c7ae0d84987aa5757fec57611ed659105fcb4bc",
+      "preview": "assets/estates/previews/gaeste.webp",
+      "previewSha256": "19d9bba27ed3cf9261b6d3eb5cb2ee7a9575104b89b9d1df2ecc479268b2b6a5",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          20,
+          1021,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 20,
+          "right": 3,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 764877,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 807987,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          83,
+          24,
+          911,
+          1522
+        ],
+        "margins": {
+          "left": 83,
+          "top": 24,
+          "right": 113,
+          "bottom": 14
+        },
+        "minimumMarginPixels": 14,
+        "touchesCanvas": false,
+        "transparentPixels": 789386,
+        "opaquePixels": 779005,
+        "partialAlphaPixels": 4473,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          60,
+          16,
+          686,
+          1144
+        ],
+        "margins": {
+          "left": 60,
+          "top": 16,
+          "right": 82,
+          "bottom": 8
+        },
+        "minimumMarginPixels": 8,
+        "touchesCanvas": false,
+        "transparentPixels": 437029,
+        "opaquePixels": 431669,
+        "partialAlphaPixels": 16038,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "heloten",
+      "source": "assets/estates/generated/heloten.png",
+      "sourceSha256": "8c76d06f28323cfe75a1b771ffb3d3f99da088e1547a927a2b7c59b239ed1a11",
+      "production": "assets/estates/production/heloten.png",
+      "productionSha256": "498cb9a4ad3a3531598b977e0d63a28250de0c936b51763e003151b951417c9b",
+      "preview": "assets/estates/previews/heloten.webp",
+      "previewSha256": "ac03d90986b16483c2a43d3982b47962a663d6174d51b10bc771b3a938dc3148",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          9,
+          1008,
+          1524
+        ],
+        "margins": {
+          "left": 0,
+          "top": 9,
+          "right": 16,
+          "bottom": 12
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 960126,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 612738,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          155,
+          40,
+          886,
+          1514
+        ],
+        "margins": {
+          "left": 155,
+          "top": 40,
+          "right": 138,
+          "bottom": 22
+        },
+        "minimumMarginPixels": 22,
+        "touchesCanvas": false,
+        "transparentPixels": 978081,
+        "opaquePixels": 591420,
+        "partialAlphaPixels": 3363,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          114,
+          28,
+          667,
+          1137
+        ],
+        "margins": {
+          "left": 114,
+          "top": 28,
+          "right": 101,
+          "bottom": 15
+        },
+        "minimumMarginPixels": 15,
+        "touchesCanvas": false,
+        "transparentPixels": 543960,
+        "opaquePixels": 326846,
+        "partialAlphaPixels": 13930,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "kriegeradel",
+      "source": "assets/estates/generated/kriegeradel.png",
+      "sourceSha256": "c6c1ef8c30fcde27a8f9883535431cf870c103456c2093af8d92d2f93ab75122",
+      "production": "assets/estates/production/kriegeradel.png",
+      "productionSha256": "5197bb5f6ec71cde6f0192a629bd7c3da1259f15e8b0fe3334a84588ca91b1a1",
+      "preview": "assets/estates/previews/kriegeradel.webp",
+      "previewSha256": "bcd63c86d91ef2653e84556105396fe2498c000dd76570015bf0ce2221edb8de",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          4,
+          1006,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 4,
+          "right": 18,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 824614,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 748250,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          71,
+          22,
+          909,
+          1505
+        ],
+        "margins": {
+          "left": 71,
+          "top": 22,
+          "right": 115,
+          "bottom": 31
+        },
+        "minimumMarginPixels": 22,
+        "touchesCanvas": false,
+        "transparentPixels": 847411,
+        "opaquePixels": 720816,
+        "partialAlphaPixels": 4637,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          51,
+          14,
+          684,
+          1131
+        ],
+        "margins": {
+          "left": 51,
+          "top": 14,
+          "right": 84,
+          "bottom": 21
+        },
+        "minimumMarginPixels": 14,
+        "touchesCanvas": false,
+        "transparentPixels": 468986,
+        "opaquePixels": 398240,
+        "partialAlphaPixels": 17510,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "perioeken",
+      "source": "assets/estates/generated/perioeken.png",
+      "sourceSha256": "8a84695340be0d50d169daeb2ed1838c854e240f2afa9373e7c299f695428376",
+      "production": "assets/estates/production/perioeken.png",
+      "productionSha256": "a9a096d2f5bd7fcdc38ecf19d3126d178363593b3b211be98d5737bd214c5071",
+      "preview": "assets/estates/previews/perioeken.webp",
+      "previewSha256": "2535cd94504ffba16123cb5e6ad8ff98e2e5e0287e81fc3f474b9701e8734eef",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "sourceAlpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          0,
+          9,
+          1008,
+          1536
+        ],
+        "margins": {
+          "left": 0,
+          "top": 9,
+          "right": 16,
+          "bottom": 0
+        },
+        "minimumMarginPixels": 0,
+        "touchesCanvas": true,
+        "transparentPixels": 779494,
+        "opaquePixels": 0,
+        "partialAlphaPixels": 793370,
+        "alphaRange": [
+          0,
+          254
+        ]
+      },
+      "alpha": {
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "boundingBox": [
+          51,
+          24,
+          1002,
+          1515
+        ],
+        "margins": {
+          "left": 51,
+          "top": 24,
+          "right": 22,
+          "bottom": 21
+        },
+        "minimumMarginPixels": 21,
+        "touchesCanvas": false,
+        "transparentPixels": 802259,
+        "opaquePixels": 766094,
+        "partialAlphaPixels": 4511,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "previewAlpha": {
+        "dimensions": [
+          768,
+          1152
+        ],
+        "boundingBox": [
+          36,
+          16,
+          754,
+          1139
+        ],
+        "margins": {
+          "left": 36,
+          "top": 16,
+          "right": 14,
+          "bottom": 13
+        },
+        "minimumMarginPixels": 13,
+        "touchesCanvas": false,
+        "transparentPixels": 444237,
+        "opaquePixels": 424466,
+        "partialAlphaPixels": 16033,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    }
+  ]
+}

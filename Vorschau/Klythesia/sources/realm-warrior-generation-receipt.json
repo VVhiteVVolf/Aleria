@@ -1,0 +1,29 @@
+{
+  "schema": "aleria.klythesia.realm-warrior-generation-receipt",
+  "version": 1,
+  "records": [
+    {
+      "assetStem": "realm-klythesia",
+      "name": "Landes-Thorax Klythesias",
+      "generatedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a85d-1131-72b0-8efa-304b67bac202\\exec-a5d76c5c-e159-45a3-8629-18d094bb2bd3.png",
+      "archive": "assets/warriors/generated/realm-klythesia.png",
+      "sha256": "6304ac272d9609d3e397c21bfb6cb80ce9f5861ccc85df37103234d89ba2493f",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "tool": "image_gen.imagegen",
+      "promptSource": "sources/realm-warrior-art-direction.json",
+      "referenceImages": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Klythesia/assets/warriors/production/thorax.png",
+        "E:/Aleria/Vorschau/Klythesia/assets/originals/klythesia-sign.png"
+      ],
+      "visuallyInspected": true
+    }
+  ],
+  "protectedManifestsBefore": {
+    "manifest.json": "a8e46bc620d3b8911f12a733b9203340b6bfbd587a8bb5c3b310b79e118262c8",
+    "house-manifest.json": "263cebd023d0996b9eb5b48309b1b6c68910524a73013fc641afd481b436f7a0"
+  }
+}

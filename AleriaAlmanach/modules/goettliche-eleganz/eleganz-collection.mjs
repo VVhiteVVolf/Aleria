@@ -1,6 +1,8 @@
 // Prices are integer Kupfertaler. Display denominations are chosen by the catalog.
 import {eleganzGarment as model} from './eleganz-garment.mjs';
 import {ELEGANZ_WEDDING} from './eleganz-wedding-collection.mjs';
+import {ELEGANZ_WOMENS_ADDITIONS} from './eleganz-womens-additions.mjs';
+import {ELEGANZ_MENS_ADDITIONS} from './eleganz-mens-additions.mjs';
 export const ELEGANZ_COLLECTION = Object.freeze({
   damen: [
     model('lichtleinen','Lichtleinen',45,'Cenyrisches Leinen · Wollborte','Hemdgewand mit schmalem Überkleid',
@@ -30,9 +32,10 @@ export const ELEGANZ_COLLECTION = Object.freeze({
     model('sternendame','Dame unter Sternen',12000,'Nachtblaue Seide · Weißgoldfaden · Bergkristall','Maßgearbeitetes Zeremonialgewand',
       'Nachtblaue Seide wird von schmalen Bahnen aus echtem Weißgoldfaden durchzogen. Kleine klare Bergkristalle setzen Lichtpunkte, ohne den weichen Fall des Gewandes zu verdecken. Die hohe Rückenlinie und der weite Saum verbinden argentische Feierlichkeit mit cenyrischer Zurückhaltung.',
       'Mehrere Anproben gehören zur Fertigung. Jede Fassung wird vor dem Aufnähen geprüft; das Innengewand trägt den größten Teil des Schmuckgewichts.', ['Echter Weißgoldfaden','Gefasste Bergkristalle','Mehrere Anproben enthalten'],'Großer Empfang'),
-    model('damen-goettliche-eleganz','Göttliche Eleganz · Die Weiße',48000,'Elfenbeinseide · Seidenbrokat · Weißgold · Ausgewählte Granate','Einzelentwurf einer vollständigen Festgarnitur',
+    model('damen-goettliche-eleganz','Göttliche Eleganz · Die Weiße',23000,'Elfenbeinseide · Seidenbrokat · Weißgold · Ausgewählte Granate','Einzelentwurf einer vollständigen Festgarnitur',
       'Eleonoras kostbarster Hausentwurf führt glatte Elfenbeinseide, purpurnen Brokat und feinste Weißgoldstickerei zusammen. Die Ornamente folgen dem Schnitt, statt ihn zu überdecken. Wenige ausgesuchte Granate sitzen in eigens angefertigten, glatt unterlegten Fassungen.',
-      'Untergewand, Obergewand, Wechselärmel, schmaler Schmuckgürtel und abnehmbarer Festmantel werden gemeinsam entworfen. Der Preis gilt für diese festgelegte Ausführung mit ihren Besätzen; andere Steine oder umfangreichere Edelmetallarbeiten werden vor der Bestellung gesondert vereinbart.', ['Vollständige fünfteilige Garnitur','Eleonoras persönlicher Einzelentwurf','Eigens gefertigte Weißgoldfassungen'],'Seltene Zeremonie')
+      'Untergewand, Obergewand, Wechselärmel, schmaler Schmuckgürtel und abnehmbarer Festmantel werden gemeinsam entworfen. Der Preis gilt für diese festgelegte Ausführung mit ihren Besätzen; andere Steine oder umfangreichere Edelmetallarbeiten werden vor der Bestellung gesondert vereinbart.', ['Vollständige fünfteilige Garnitur','Eleonoras persönlicher Einzelentwurf','Eigens gefertigte Weißgoldfassungen'],'Seltene Zeremonie'),
+    ...ELEGANZ_WOMENS_ADDITIONS
   ],
   herren: [
     model('heller-faden','Heller Faden',45,'Cenyrisches Leinen · Wollborte','Hemd, schmale Hose und schlichtes Wams',
@@ -62,9 +65,10 @@ export const ELEGANZ_COLLECTION = Object.freeze({
     model('argentsalon','Argentischer Salon',14000,'Nachtblauer Seidenbrokat · Weißgold · Bergkristall','Maßgearbeitete Zeremonialgarnitur',
       'Nachtblauer Brokat und ein heller, fein bestickter Kragen erinnern an die Kaufmannspaläste Argentums. Weißgold und klare Bergkristalle setzen wenige bewusste Lichtpunkte. Der Mantel fällt breit, ohne in eine lange Schleppe auszulaufen.',
       'Eleonora stimmt die Haltung der Schultern und die Proportionen des Kragens auf den Träger ab. Mehrere Anproben und die festgelegten Fassungen sind im Preis enthalten.', ['Eigens gearbeitete Weißgoldverschlüsse','Gefasste Bergkristalle','Mehrere Anproben enthalten'],'Großer Empfang'),
-    model('herren-goettliche-eleganz','Göttliche Eleganz · Der Dunkle',52000,'Dunkler Seidensamt · Elfenbeinbrokat · Weißgold · Ausgewählte Granate','Einzelentwurf einer vollständigen Festgarnitur',
+    model('herren-goettliche-eleganz','Göttliche Eleganz · Der Dunkle',23000,'Dunkler Seidensamt · Elfenbeinbrokat · Weißgold · Ausgewählte Granate','Einzelentwurf einer vollständigen Festgarnitur',
       'Dunkler Seidensamt, heller Brokat und eine bis in die Ärmel geführte Weißgoldstickerei bilden das aufwendigste Herrenmodell des Hauses. Der argentische Aufbau bleibt klar; die großen cenyrischen Flechtmotive erscheinen erst, wenn Licht über Schulter und Mantel wandert.',
-      'Hemd, Hose, Festwams, Überrobe und abnehmbarer Mantel werden gemeinsam gefertigt. Individuell angepasste Weißgoldfassungen tragen wenige ausgesuchte Granate. Zusätzliche Steine oder andere Edelmetallmengen werden vor Auftragserteilung gesondert vereinbart.', ['Vollständige fünfteilige Garnitur','Eleonoras persönlicher Einzelentwurf','Eigene Weißgoldarbeiten aus Gwynthor'],'Seltene Zeremonie')
+      'Hemd, Hose, Festwams, Überrobe und abnehmbarer Mantel werden gemeinsam gefertigt. Individuell angepasste Weißgoldfassungen tragen wenige ausgesuchte Granate. Zusätzliche Steine oder andere Edelmetallmengen werden vor Auftragserteilung gesondert vereinbart.', ['Vollständige fünfteilige Garnitur','Eleonoras persönlicher Einzelentwurf','Eigene Weißgoldarbeiten aus Gwynthor'],'Seltene Zeremonie'),
+    ...ELEGANZ_MENS_ADDITIONS
   ],
   'damen-hochzeit':ELEGANZ_WEDDING.damen,
   'herren-hochzeit':ELEGANZ_WEDDING.herren

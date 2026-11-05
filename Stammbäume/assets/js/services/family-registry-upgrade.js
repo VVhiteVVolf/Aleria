@@ -54,11 +54,11 @@ function mergeRegisteredManagedFields(registeredValue = {}, localValue = {}, fie
   return result;
 }
 
-function mergeEntityExtensions(registeredExtensions = {}, localExtensions = {}) {
+function mergeEntityExtensions(registeredExtensions = {}, localExtensions = {}, localSourceRevision = 0, applyManagedFields = true) {
   const result = { ...registeredExtensions, ...localExtensions };
-  const managedExtensionFields = Array.isArray(registeredExtensions.registryManagedExtensionFields)
-    ? registeredExtensions.registryManagedExtensionFields
-    : [];
+  const managedExtensionFields = metadataFieldsForUpgrade(
+    { extensions: registeredExtensions }, localSourceRevision, 'registryManagedExtensionFields', applyManagedFields
+  );
 
   managedExtensionFields.forEach(fieldName => {
     if (Object.hasOwn(registeredExtensions, fieldName)) {
@@ -90,9 +90,9 @@ function mergeEntities(registeredEntities = [], localEntities = [], tombstones =
     const result = {
       ...entity,
       ...localEntity,
-      extensions: applyEntityFields
-        ? mergeEntityExtensions(entity.extensions, localEntity.extensions)
-        : { ...entity.extensions, ...localEntity.extensions }
+      // A later layout-only extension can be upgraded independently of an
+      // already adopted biography or the person's other managed fields.
+      extensions: mergeEntityExtensions(entity.extensions, localEntity.extensions, localSourceRevision, applyEntityFields)
     };
     registryManagedFields.forEach(fieldName => {
       if (fieldName !== 'id' && fieldName !== 'extensions' && Object.hasOwn(entity, fieldName)) {

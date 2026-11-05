@@ -74,12 +74,16 @@ def alpha_metrics(alpha: np.ndarray) -> dict:
 class WarriorArtifacts:
     """One realm's explicitly configured artifact outputs and QA evidence."""
 
-    def __init__(self, *, root: Path, schema: str, qa_dir: Path):
+    def __init__(self, *, root: Path, schema: str, qa_dir: Path,
+                 processing_overrides: dict | None = None, manifest_name: str = "manifest.json"):
         self.root = Path(root).resolve()
         self.schema = schema
         self.qa_dir = Path(qa_dir).resolve()
         self.assets = self.root / "assets/warriors"
-        self.manifest = self.assets / "manifest.json"
+        if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*\.json", manifest_name):
+            raise ValueError("Invalid warrior receipt manifest name")
+        self.manifest = self.assets / manifest_name
+        self.processing_overrides = processing_overrides or {}
 
     def relative(self, path: Path) -> str:
         return path.relative_to(self.root).as_posix()
@@ -143,7 +147,8 @@ class WarriorArtifacts:
         manifest = self.read_manifest()
         entries = {entry["id"]: entry for entry in manifest["entries"]}
         for asset_id in selected:
-            entries[asset_id] = self.prepare_one(asset_id, processing)
+            effective = {**processing, **self.processing_overrides.get(asset_id, {})}
+            entries[asset_id] = self.prepare_one(asset_id, effective)
         manifest["entries"] = sorted(entries.values(), key=lambda entry: entry["id"])
         save_json(self.manifest, manifest)
         print(json.dumps({"prepared": selected, "manifestEntries": len(entries)}))
@@ -242,8 +247,11 @@ class WarriorArtifacts:
 
 
 
-def main(*, root: Path, schema: str, qa_dir: Path, argv: list[str] | None = None) -> None:
-    artifacts = WarriorArtifacts(root=root, schema=schema, qa_dir=qa_dir)
+def main(*, root: Path, schema: str, qa_dir: Path, argv: list[str] | None = None,
+         processing_overrides: dict | None = None, asset_ids: list[str] | None = None,
+         manifest_name: str = "manifest.json") -> None:
+    artifacts = WarriorArtifacts(root=root, schema=schema, qa_dir=qa_dir,
+                                 processing_overrides=processing_overrides, manifest_name=manifest_name)
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
     build_parser = commands.add_parser("build", help="Prepare explicitly requested or all currently present inputs")
@@ -262,7 +270,10 @@ def main(*, root: Path, schema: str, qa_dir: Path, argv: list[str] | None = None
     if args.command == "build":
         processing = {**DEFAULT_PROCESSING, "outsideThreshold": args.outside_threshold,
                       "coreThreshold": args.core_threshold, "edgeRadius": args.edge_radius}
-        artifacts.build(args.ids, processing)
+        selected = args.ids if args.ids is not None else asset_ids
+        if asset_ids is not None and not set(selected or ()).issubset(asset_ids):
+            raise ValueError("Build requested assets outside this configured artifact collection")
+        artifacts.build(selected, processing)
     elif args.command == "audit":
         if artifacts.audit(args.expected_count)["failures"]:
             raise SystemExit(1)

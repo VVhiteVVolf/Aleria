@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "house-nerathen",
+      "assetStem": "house-nerathen",
+      "tool": "image_gen.imagegen",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a750-bc62-7192-9fe8-263c9d19456a\\exec-a8c26301-d1ac-4f64-94a0-7342b10c04cd.png",
+      "workspaceOriginal": "assets/warriors/generated/house-nerathen.png",
+      "references": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Phalantia\\assets\\emblems\\production\\house-nerathen.png"
+      ],
+      "transparentBackgroundRequested": true,
+      "visuallyReviewed": true
+    },
+    {
+      "id": "house-kallorys",
+      "assetStem": "house-kallorys",
+      "tool": "image_gen.imagegen",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a750-bc62-7192-9fe8-263c9d19456a\\exec-0e6da92d-da6a-4466-8d5c-e720f662ab01.png",
+      "workspaceOriginal": "assets/warriors/generated/house-kallorys.png",
+      "references": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Phalantia\\assets\\emblems\\production\\house-kallorys.png"
+      ],
+      "transparentBackgroundRequested": true,
+      "visuallyReviewed": true
+    },
+    {
+      "id": "house-erythaden",
+      "assetStem": "house-erythaden-v2",
+      "tool": "image_gen.imagegen",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a750-bc62-7192-9fe8-263c9d19456a\\exec-9b8a706d-1bae-4ec8-b174-d24e85e9d662.png",
+      "workspaceOriginal": "assets/warriors/generated/house-erythaden-v2.png",
+      "references": [
+        "E:/Aleria/Vorschau/Phalantia/assets/warriors/generated/house-erythaden.png"
+      ],
+      "transparentBackgroundRequested": true,
+      "visuallyReviewed": true
+    },
+    {
+      "id": "house-theskariden",
+      "assetStem": "house-theskariden-v2",
+      "tool": "image_gen.imagegen",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a750-bc62-7192-9fe8-263c9d19456a\\exec-bc931231-6644-44f4-bc31-c5afba11853c.png",
+      "workspaceOriginal": "assets/warriors/generated/house-theskariden-v2.png",
+      "references": [
+        "E:/Aleria/Vorschau/Phalantia/assets/warriors/generated/house-theskariden.png"
+      ],
+      "transparentBackgroundRequested": true,
+      "visuallyReviewed": true
+    }
+  ],
+  "previousAttempts": [
+    {
+      "id": "house-theskariden",
+      "assetStem": "house-theskariden",
+      "tool": "image_gen.imagegen",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a750-bc62-7192-9fe8-263c9d19456a\\exec-9f65d3fc-e816-4c21-a97e-ed06a53d290c.png",
+      "workspaceOriginal": "assets/warriors/generated/house-theskariden.png",
+      "references": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Phalantia\\assets\\emblems\\production\\house-theskariden.png",
+        "E:\\Aleria\\Bestiarium\\assets\\horse-profiles\\sarkal.webp"
+      ],
+      "transparentBackgroundRequested": true,
+      "visuallyReviewed": true
+    },
+    {
+      "id": "house-nerathen",
+      "assetStem": "house-nerathen-unselected-v2",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a750-bc62-7192-9fe8-263c9d19456a\\exec-149ac091-28f0-4e14-bc9a-082eef424a62.png",
+      "workspaceOriginal": "assets/warriors/generated/archive/house-nerathen-unselected-v2.png",
+      "prompt": "Use case: background-extraction. Edit target: the single existing Nerath hoplite illustration. Preserve the young muscular man, early Corinthian helmet, anatomy, face, bronze armor, mustard cloak, hedgehog shield, straight spear, sheathed sword, colors and matte gouache painting. Remove ALL brown/gold background haze and color cloud, including opaque and semitransparent fog. Every pixel outside the actual man, shield, weapon and clothing must become real transparent alpha, including gaps. No replacement background, no white or black color fill, no paper, glow, shadow or halo. Fit the entire existing composition slightly smaller within a 1024x1536 portrait so there is at least 30 pixels clear transparent margin around spear tip, feet and all silhouette. Do not crop or redesign the figure. Entire weapon, shield and both feet visible. Output a genuine transparent RGBA PNG.",
+      "references": [
+        "E:/Aleria/Vorschau/Phalantia/assets/warriors/generated/house-nerathen.png"
+      ],
+      "selected": false,
+      "reason": "The original was already correctly transparent; RGB-only viewer was misleading. Original remains selected."
+    },
+    {
+      "id": "house-kallorys",
+      "assetStem": "house-kallorys-unselected-v2",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a750-bc62-7192-9fe8-263c9d19456a\\exec-bc54b1cb-2b07-4619-93b1-d2d73111a6c4.png",
+      "workspaceOriginal": "assets/warriors/generated/archive/house-kallorys-unselected-v2.png",
+      "prompt": "Use case: background-extraction. Edit target: the existing Kallorys berserker. Preserve the full young muscular warrior, shouting face, Pilos helmet with purple copper crest, bright red meander tattoos, two separate axes correctly grasped one in each hand, copper armor, purple centipede heraldic waist cloth, proportions and matte painted style. Remove ALL brown/copper background haze and glow, even opaque parts. Outside the exact figure, axes and costume must be fully transparent alpha, including the gaps between arms and body and between legs. No black, white, colored or paper background. No external shadow, halo, cloud or vignette. Preserve a 1024x1536 portrait and fit entire silhouette with at least 25 pixels clear transparent margin at crest, axe tips and feet. No changes to the figure's design or weapons.",
+      "references": [
+        "E:/Aleria/Vorschau/Phalantia/assets/warriors/generated/house-kallorys.png"
+      ],
+      "selected": false,
+      "reason": "The original was already correctly transparent; RGB-only viewer was misleading. Original remains selected."
+    },
+    {
+      "id": "house-erythaden",
+      "assetStem": "house-erythaden",
+      "tool": "image_gen.imagegen",
+      "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a750-bc62-7192-9fe8-263c9d19456a\\exec-4885bb55-7cc7-4a47-8700-d7a83aa81067.png",
+      "workspaceOriginal": "assets/warriors/generated/house-erythaden.png",
+      "references": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Phalantia\\assets\\emblems\\production\\house-erythaden.png"
+      ],
+      "transparentBackgroundRequested": true,
+      "visuallyReviewed": true
+    }
+  ]
+}

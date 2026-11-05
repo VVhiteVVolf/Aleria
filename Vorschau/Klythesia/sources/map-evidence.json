@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "schema": "aleria.klythesia.map-evidence",
+  "status": "source-inventory",
+  "source": {
+    "file": "Klythesia.png",
+    "originalDirectory": "C:/Users/fhg_r/Downloads/Länder/Klythesia",
+    "imageSize": [
+      1226,
+      1017
+    ],
+    "sha256": "b87937519fe13da52ce26045e4b278a90b5c98234ed91304d1a964daf4522ab9"
+  },
+  "method": "Ortsnamen und Symbolmittelpunkte manuell auf der gelieferten Karte abgelesen; alle sieben Ortsausschnitte im Kontaktbogen tatsächlich geprüft. Keine politischen Grenzlinien oder Verwaltungsränge ergänzt.",
+  "settlements": [
+    {
+      "id": "draxilion",
+      "name": "Draxilion",
+      "pixelCentre": [
+        187,
+        68
+      ],
+      "observation": "Benannter befestigt dargestellter Ort an der nordwestlichen Küste, westlich des nördlichen Gebirgszugs."
+    },
+    {
+      "id": "kallisteia",
+      "name": "Kallisteia",
+      "pixelCentre": [
+        425,
+        199
+      ],
+      "observation": "Größter hervorgehobener Ort auf dieser Karte: große mehrteilige Burgdarstellung und goldfarbenes Namensschild am südlichen Fuß des nördlichen Gebirges.",
+      "capitalStatus": "Mögliche Hauptstadt; noch nicht ausdrücklich bestätigt."
+    },
+    {
+      "id": "aenoria",
+      "name": "Aenoria",
+      "pixelCentre": [
+        748,
+        426
+      ],
+      "observation": "Benannter Ort im östlichen mittleren Landesteil nahe der großen Bucht und verzweigter Wasserläufe."
+    },
+    {
+      "id": "therascia",
+      "name": "Therascia",
+      "pixelCentre": [
+        584,
+        600
+      ],
+      "observation": "Benannter Ort an der südwestlichen Küste der größeren Landmasse, nahe einer abgebildeten Brücke."
+    },
+    {
+      "id": "lykara",
+      "name": "Lykara",
+      "pixelCentre": [
+        1067,
+        457
+      ],
+      "observation": "Benannter Ort mit deutlich hervorgehobenem Turm am östlichen Küsten- und Gebirgsrand."
+    },
+    {
+      "id": "gorgothis",
+      "name": "Gorgothis",
+      "pixelCentre": [
+        1085,
+        784
+      ],
+      "observation": "Benannter befestigt dargestellter Ort an der südöstlichen Küste, westlich des östlichen Gebirges."
+    },
+    {
+      "id": "xalmira",
+      "name": "Xalmira",
+      "pixelCentre": [
+        403,
+        852
+      ],
+      "observation": "Benannter Ort auf einer bewaldeten Insel südwestlich der größeren Landmasse."
+    }
+  ],
+  "observations": [
+    {
+      "id": "coast",
+      "kind": "map-observation",
+      "text": "Eine stark bewaldete Küstenlandschaft wird im Westen, Süden und entlang der großen nordöstlichen Bucht von Wasser begrenzt."
+    },
+    {
+      "id": "mountains",
+      "kind": "map-observation",
+      "text": "Markante Gebirgszüge liegen im Norden und am östlichen Rand; eine weitere kleinere Felsgruppe liegt im Landesinneren."
+    },
+    {
+      "id": "islands",
+      "kind": "map-observation",
+      "text": "Mehrere bewaldete Inseln liegen vor der westlichen und südlichen Küste. Auf einer der südwestlichen Inseln ist Xalmira benannt."
+    },
+    {
+      "id": "waterways",
+      "kind": "map-observation",
+      "text": "Die Karte zeigt verzweigte Wasserläufe und mehrere Brückensymbole im mittleren und südlichen Landesteil."
+    },
+    {
+      "id": "eastern-land",
+      "kind": "map-observation",
+      "text": "Jenseits der großen Bucht liegt eine trocken und sandfarben dargestellte Landschaft mit unbenannten Bauwerkszeichen. Ihr Landesname und ihre politische Zugehörigkeit sind nicht angegeben."
+    }
+  ],
+  "suppliedEmblems": [
+    {
+      "file": "Klythesia (2).png",
+      "label": "Klythesia-Zeichen",
+      "observation": "Rundes mitgeliefertes Zeichen mit einer blaugrünen Schlange auf rot-hell gestreiftem Feld und metallfarbenen Ringen.",
+      "assignment": "Als Klythesia-Zeichen mitgeliefert; keine neue politische oder religiöse Symboldeutung festgelegt."
+    },
+    {
+      "file": "Hydra.png",
+      "label": "Hydra",
+      "observation": "Goldenes vielköpfiges Schlangenmotiv auf Grün mit griechischer Bordüre.",
+      "assignment": "Haus-, Clan-, Orts- oder Regionszuordnung offen."
+    },
+    {
+      "file": "Mantikor.png",
+      "label": "Mantikor",
+      "observation": "Helles geflügeltes Raubtiermotiv auf blaugrünem Feld mit griechischen Bordüren.",
+      "assignment": "Benennung der Datei beibehalten; Haus-, Clan-, Orts- oder Regionszuordnung offen."
+    },
+    {
+      "file": "Phönix.png",
+      "label": "Phönix",
+      "observation": "Blauer Vogel mit orangegoldenen Flammenfedern und heller Scheibe auf blauem Feld.",
+      "assignment": "Haus-, Clan-, Orts- oder Regionszuordnung offen."
+    },
+    {
+      "file": "Satyr.png",
+      "label": "Satyr",
+      "observation": "Dunkle bewaffnete hufige Wesenfigur mit Helm und Rundschild auf goldgelbem Feld.",
+      "assignment": "Benennung der Datei beibehalten; Haus-, Clan-, Orts- oder Regionszuordnung offen."
+    },
+    {
+      "file": "Sphinx.png",
+      "label": "Sphinx",
+      "observation": "Helle liegende Sphinxfigur mit Kopfschmuck auf grünem Feld und umlaufenden Zeichen.",
+      "assignment": "Haus-, Clan-, Orts- oder Regionszuordnung offen."
+    }
+  ],
+  "openQuestions": [
+    {
+      "id": "capital",
+      "question": "Ist Kallisteia die Hauptstadt?",
+      "reason": "Die Gestaltung legt einen Hauptsitz nahe; eine ausdrückliche Festlegung fehlt."
+    },
+    {
+      "id": "territories",
+      "question": "Welche Verwaltungsgebiete und Haus- oder Clanbesitze bestehen?",
+      "reason": "Die Karte zeichnet keine inneren politischen Grenzen ein."
+    },
+    {
+      "id": "emblem-assignments",
+      "question": "Wem gehören die fünf Motivwappen?",
+      "reason": "Mitgeliefert wurden Bilddateien, aber keine Familiennamen, Rangangaben oder Zuordnungen."
+    },
+    {
+      "id": "island-status",
+      "question": "Welche Inseln gehören politisch zu Klythesia?",
+      "reason": "Geographische Darstellung und Beschriftung allein legen keinen vollständigen Grenzverlauf fest."
+    },
+    {
+      "id": "neighbors",
+      "question": "Welche Länder grenzen an Klythesia?",
+      "reason": "Unbenannte und angeschnittene Nachbarflächen lassen sich ohne weitere Quelle nicht sicher zuordnen."
+    }
+  ],
+  "unchangedOriginalsRequired": true
+}

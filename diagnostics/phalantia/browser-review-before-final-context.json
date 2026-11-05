@@ -1,0 +1,494 @@
+{
+  "checkedAt": "2026-11-04T15:37:49.344Z",
+  "url": "http://127.0.0.1:8897/Vorschau/Phalantia/",
+  "status": "passed",
+  "runtime": "Installed Playwright with installed Chrome, fresh isolated headless contexts",
+  "desktop": {
+    "dialogs": [
+      {
+        "kind": "house",
+        "id": "house-oresthiden",
+        "title": "Oresthiden",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "house",
+        "id": "house-therakiden",
+        "title": "Therakiden",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "house",
+        "id": "house-daskyren",
+        "title": "Daskyren",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "house",
+        "id": "house-pherakides",
+        "title": "Pherakides",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "house",
+        "id": "house-melyrion",
+        "title": "Melyrion",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "house",
+        "id": "house-nerathen",
+        "title": "Nerathen",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "house",
+        "id": "house-kallorys",
+        "title": "Kallorys",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "house",
+        "id": "house-erythaden",
+        "title": "Erythaden",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "house",
+        "id": "house-theskariden",
+        "title": "Theskariden",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "estate",
+        "id": "basileis",
+        "title": "Basileis",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "estate",
+        "id": "perioeken",
+        "title": "Periöken",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "estate",
+        "id": "kriegeradel",
+        "title": "Doryaden",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "estate",
+        "id": "freie-buerger",
+        "title": "Eleutheren",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "estate",
+        "id": "heloten",
+        "title": "Heloten",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "estate",
+        "id": "gaeste",
+        "title": "Xenoi",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-01",
+        "title": "Phrouros",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-02",
+        "title": "Hoplit",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-03",
+        "title": "Peltast",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-04",
+        "title": "Promachos",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-05",
+        "title": "Toxot",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-06",
+        "title": "Lanzenreiter",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-07",
+        "title": "Hippeus",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-08",
+        "title": "Kriegssänger",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 1078,
+        "scrollWidth": 1078
+      }
+    ],
+    "placement": {
+      "selection": true,
+      "move": true,
+      "persistenceAfterReload": true,
+      "undo": true,
+      "export": true,
+      "import": true,
+      "reset": true,
+      "mapModal": true,
+      "pointerDrag": true
+    },
+    "overflow": false
+  },
+  "mobile": {
+    "dialogs": [
+      {
+        "kind": "house",
+        "id": "house-oresthiden",
+        "title": "Oresthiden",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "house",
+        "id": "house-therakiden",
+        "title": "Therakiden",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "house",
+        "id": "house-daskyren",
+        "title": "Daskyren",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "house",
+        "id": "house-pherakides",
+        "title": "Pherakides",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "house",
+        "id": "house-melyrion",
+        "title": "Melyrion",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "house",
+        "id": "house-nerathen",
+        "title": "Nerathen",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "house",
+        "id": "house-kallorys",
+        "title": "Kallorys",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "house",
+        "id": "house-erythaden",
+        "title": "Erythaden",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "house",
+        "id": "house-theskariden",
+        "title": "Theskariden",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "estate",
+        "id": "basileis",
+        "title": "Basileis",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "estate",
+        "id": "perioeken",
+        "title": "Periöken",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "estate",
+        "id": "kriegeradel",
+        "title": "Doryaden",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "estate",
+        "id": "freie-buerger",
+        "title": "Eleutheren",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "estate",
+        "id": "heloten",
+        "title": "Heloten",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "estate",
+        "id": "gaeste",
+        "title": "Xenoi",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-01",
+        "title": "Phrouros",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-02",
+        "title": "Hoplit",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-03",
+        "title": "Peltast",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-04",
+        "title": "Promachos",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-05",
+        "title": "Toxot",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-06",
+        "title": "Lanzenreiter",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-07",
+        "title": "Hippeus",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      },
+      {
+        "kind": "prototype",
+        "id": "prototype-08",
+        "title": "Kriegssänger",
+        "imageCount": 1,
+        "loaded": true,
+        "scrollTop": 0,
+        "clientWidth": 369,
+        "scrollWidth": 369
+      }
+    ],
+    "placement": {
+      "touchAlternativeSelection": true,
+      "move": true,
+      "reset": true
+    },
+    "overflow": false
+  },
+  "consoleErrors": [],
+  "requestFailures": []
+}

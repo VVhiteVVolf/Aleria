@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "reviewed": true,
+  "contactSheet": "diagnostics/phalantia/estates/contact-sheet.jpg",
+  "originalImagesIndividuallyViewed": 6,
+  "productionContactSheetViewed": true,
+  "productionKingIndividuallyViewed": true,
+  "subjectReview": {
+    "basileis": "Young athletic male king; Corinthian helmet, red royal cloak and two separate seal medallions; all extremities visible.",
+    "perioeken": "Young athletic male landed lord; Greek acropolis model and land charter; no royal crown.",
+    "kriegeradel": "Young athletic male Doryad; open Greek helmet, spear, shield and fortress-key; two hands and coherent spear axis.",
+    "freie-buerger": "Young athletic male Eleuther; scales, sealed freedom charter and modest purse; no weapons.",
+    "heloten": "Young athletic male dependent farmworker; work chiton, entrusted harvest basket and blunt planting tool; no weapons or personal-property insignia.",
+    "gaeste": "Young athletic male foreign guest; travel satchel, entry permit and host-guarantee medallion; no poverty caricature."
+  },
+  "technical": {
+    "originalsAndRgbPreserved": true,
+    "filledTransparentGaps": 0,
+    "minimumMarginPixels": 13,
+    "productionSize": [
+      1024,
+      1536
+    ],
+    "previewSize": [
+      768,
+      1152
+    ]
+  },
+  "pipelineAudit": "diagnostics/phalantia/estates/audit.json",
+  "runtimeCatalog": "Vorschau/Phalantia/estate-data.mjs",
+  "promptSet": "Vorschau/Phalantia/sources/estate-art-direction.json",
+  "tool": "built-in image_gen",
+  "status": "all-six-ready"
+}

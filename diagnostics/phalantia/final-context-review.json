@@ -1,0 +1,31 @@
+{
+  "checkedAt": "2026-11-04T15:42:07.009Z",
+  "status": "passed",
+  "scope": "Text-only addition after complete desktop/mobile interaction pass",
+  "priorBrowserReview": "browser-review.json",
+  "realmContextSha256": "a3e25b7b958660801e1d8baa1b17039bfe702ac62c171bfcbbca12c6a4edc253",
+  "captures": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "file": "final-context-desktop.png",
+      "proposalLabelPresent": true,
+      "eidKinshipPresent": true,
+      "noBiologicalKinshipClaim": true,
+      "horizontalOverflow": false
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "file": "final-context-mobile.png",
+      "proposalLabelPresent": true,
+      "eidKinshipPresent": true,
+      "noBiologicalKinshipClaim": true,
+      "horizontalOverflow": false
+    }
+  ]
+}

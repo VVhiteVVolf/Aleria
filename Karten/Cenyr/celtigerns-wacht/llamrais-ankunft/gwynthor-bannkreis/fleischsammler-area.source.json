@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "mapId": "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis",
+  "width": 8192,
+  "height": 6300,
+  "center": { "x": 6028, "y": 2784 },
+  "radius": 1024,
+  "pinIds": [
+    "gwynthor-marking-074",
+    "gwynthor-marking-086",
+    "gwynthor-marking-091",
+    "gwynthor-marking-092",
+    "gwynthor-marking-107",
+    "gwynthor-marking-115",
+    "gwynthor-marking-118"
+  ],
+  "sourceImage": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreis.jpg",
+  "sourceMarkerImage": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreisMarker.webp",
+  "source": "Nutzerauftrag und markierter Kartenausschnitt vom 2. November 2026; sieben beschriebene und markierte Standorte.",
+  "meaning": "Öffentliche Gebietsübersicht der benannten Orte im östlichen Bannkreis. Keine Darstellung eines bekannten Täterverstecks oder bestätigter Tatorte.",
+  "markerAssignments": {
+    "gwynthor-marking-074": "Brauerhof im Norden",
+    "gwynthor-marking-086": "Nördliche Behausung",
+    "gwynthor-marking-091": "Kleine Festung an der Hauptstraße",
+    "gwynthor-marking-092": "Rosszuchtsiedlung",
+    "gwynthor-marking-107": "Versorgender Bauernhof unmittelbar vor Gwynthor",
+    "gwynthor-marking-115": "Jagdhaus",
+    "gwynthor-marking-118": "Südliche Behausung"
+  }
+}

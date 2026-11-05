@@ -4,9 +4,9 @@
   "moneyUnit": "Kupfertaler",
   "method": "Interne Konsistenzprüfung einer fiktiven Wirtschaft. Vergleichsskala: 24 KT sparsamer Vierpersonenbedarf + 3 KT freie Mittel; 27 KT Hafenlohn bei sechs Diensttagen. Keine historische Preisstatistik.",
   "summary": {
-    "rows": 1313,
-    "adjusted": 144,
-    "retained": 962,
+    "rows": 1338,
+    "adjusted": 148,
+    "retained": 983,
     "notOffered": 205,
     "unavailable": 2,
     "eligibleVenues": 15,
@@ -11406,6 +11406,29 @@
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
       "itemIndex": 0,
+      "id": "flachsgold",
+      "optionIndex": 0,
+      "name": "Flachsgold",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 25,
+        "maxCopper": 25
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        25,
+        25
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 1,
       "id": "lichtleinen",
       "optionIndex": 0,
       "name": "Lichtleinen",
@@ -11431,7 +11454,7 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 1,
+      "itemIndex": 2,
       "id": "gassenbluete",
       "optionIndex": 0,
       "name": "Gassenblüte",
@@ -11457,7 +11480,7 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 2,
+      "itemIndex": 3,
       "id": "kaufmannstochter",
       "optionIndex": 0,
       "name": "Die Kaufmannstochter",
@@ -11483,7 +11506,7 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 3,
+      "itemIndex": 4,
       "id": "bannkreisabend",
       "optionIndex": 0,
       "name": "Abend im Bannkreis",
@@ -11509,7 +11532,30 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 4,
+      "itemIndex": 5,
+      "id": "nebelsaum",
+      "optionIndex": 0,
+      "name": "Nebelsaum",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 185,
+        "maxCopper": 185
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        185,
+        185
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 6,
       "id": "purpurnaht",
       "optionIndex": 0,
       "name": "Purpurnaht",
@@ -11535,7 +11581,7 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 5,
+      "itemIndex": 7,
       "id": "tirnaras-morgen",
       "optionIndex": 0,
       "name": "Tirnaras Morgen",
@@ -11561,7 +11607,30 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 6,
+      "itemIndex": 8,
+      "id": "aprikosenlicht",
+      "optionIndex": 0,
+      "name": "Aprikosenlicht",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 975,
+        "maxCopper": 975
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        975,
+        975
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 9,
       "id": "silberlaub",
       "optionIndex": 0,
       "name": "Silberlaub",
@@ -11587,7 +11656,30 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 7,
+      "itemIndex": 10,
+      "id": "fliederabend",
+      "optionIndex": 0,
+      "name": "Fliederabend",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 3650,
+        "maxCopper": 3650
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        3650,
+        3650
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 11,
       "id": "zwei-kuesten",
       "optionIndex": 0,
       "name": "Fest der zwei Küsten",
@@ -11613,7 +11705,7 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 8,
+      "itemIndex": 12,
       "id": "sternendame",
       "optionIndex": 0,
       "name": "Dame unter Sternen",
@@ -11639,24 +11731,21 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 9,
-      "id": "damen-goettliche-eleganz",
+      "itemIndex": 13,
+      "id": "schwarze-perle",
       "optionIndex": 0,
-      "name": "Göttliche Eleganz · Die Weiße",
+      "name": "Die Schwarze Perle",
       "unit": "1 Garnitur",
       "price": {
-        "minCopper": 48000,
-        "maxCopper": 48000
+        "minCopper": 12750,
+        "maxCopper": 12750
       },
       "category": "damen",
       "status": "available",
-      "before": [
-        48000,
-        48000
-      ],
+      "before": null,
       "after": [
-        48000,
-        48000
+        12750,
+        12750
       ],
       "decision": "beibehalten",
       "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
@@ -11665,7 +11754,56 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 10,
+      "itemIndex": 14,
+      "id": "damen-goettliche-eleganz",
+      "optionIndex": 0,
+      "name": "Göttliche Eleganz · Die Weiße",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 23000,
+        "maxCopper": 23000
+      },
+      "category": "damen",
+      "status": "available",
+      "before": [
+        48000,
+        48000
+      ],
+      "after": [
+        23000,
+        23000
+      ],
+      "decision": "angepasst",
+      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 15,
+      "id": "hirseleinen",
+      "optionIndex": 0,
+      "name": "Hirseleinen",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 35,
+        "maxCopper": 35
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        35,
+        35
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 16,
       "id": "heller-faden",
       "optionIndex": 0,
       "name": "Heller Faden",
@@ -11691,7 +11829,7 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 11,
+      "itemIndex": 17,
       "id": "innenstadt",
       "optionIndex": 0,
       "name": "Der Innenstadtgang",
@@ -11717,7 +11855,7 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 12,
+      "itemIndex": 18,
       "id": "kontorrock",
       "optionIndex": 0,
       "name": "Der Kontorrock",
@@ -11743,7 +11881,7 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 13,
+      "itemIndex": 19,
       "id": "nordlicht",
       "optionIndex": 0,
       "name": "Nordlicht",
@@ -11769,7 +11907,30 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 14,
+      "itemIndex": 20,
+      "id": "tabakkontor",
+      "optionIndex": 0,
+      "name": "Tabakkontor",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 285,
+        "maxCopper": 285
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        285,
+        285
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 21,
       "id": "purpurkontor",
       "optionIndex": 0,
       "name": "Purpurkontor",
@@ -11795,7 +11956,7 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 15,
+      "itemIndex": 22,
       "id": "suedwind",
       "optionIndex": 0,
       "name": "Südwind",
@@ -11821,7 +11982,30 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 16,
+      "itemIndex": 23,
+      "id": "lavendelabend",
+      "optionIndex": 0,
+      "name": "Lavendelabend",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 1160,
+        "maxCopper": 1160
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        1160,
+        1160
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 24,
       "id": "silberbund",
       "optionIndex": 0,
       "name": "Silberbund",
@@ -11847,7 +12031,7 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 17,
+      "itemIndex": 25,
       "id": "zwei-haefen",
       "optionIndex": 0,
       "name": "Herr der zwei Häfen",
@@ -11873,7 +12057,53 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 18,
+      "itemIndex": 26,
+      "id": "kupfersaum",
+      "optionIndex": 0,
+      "name": "Kupfersaum",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 4650,
+        "maxCopper": 4650
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        4650,
+        4650
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 27,
+      "id": "rauchgold",
+      "optionIndex": 0,
+      "name": "Rauchgold",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 11800,
+        "maxCopper": 11800
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        11800,
+        11800
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 28,
       "id": "argentsalon",
       "optionIndex": 0,
       "name": "Argentischer Salon",
@@ -11899,14 +12129,14 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 19,
+      "itemIndex": 29,
       "id": "herren-goettliche-eleganz",
       "optionIndex": 0,
       "name": "Göttliche Eleganz · Der Dunkle",
       "unit": "1 Garnitur",
       "price": {
-        "minCopper": 52000,
-        "maxCopper": 52000
+        "minCopper": 23000,
+        "maxCopper": 23000
       },
       "category": "herren",
       "status": "available",
@@ -11915,8 +12145,31 @@
         52000
       ],
       "after": [
-        52000,
-        52000
+        23000,
+        23000
+      ],
+      "decision": "angepasst",
+      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 30,
+      "id": "braut-leinenversprechen",
+      "optionIndex": 0,
+      "name": "Leinenversprechen",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 100,
+        "maxCopper": 100
+      },
+      "category": "damen-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        100,
+        100
       ],
       "decision": "beibehalten",
       "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
@@ -11925,7 +12178,7 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 20,
+      "itemIndex": 31,
       "id": "braut-morgenband",
       "optionIndex": 0,
       "name": "Morgenband",
@@ -11951,7 +12204,76 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 21,
+      "itemIndex": 32,
+      "id": "braut-aprikosenband",
+      "optionIndex": 0,
+      "name": "Aprikosenband",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 460,
+        "maxCopper": 460
+      },
+      "category": "damen-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        460,
+        460
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 33,
+      "id": "braut-fliedertanz",
+      "optionIndex": 0,
+      "name": "Fliedertanz",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 980,
+        "maxCopper": 980
+      },
+      "category": "damen-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        980,
+        980
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 34,
+      "id": "braut-bernsteinlicht",
+      "optionIndex": 0,
+      "name": "Bernsteinlicht",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 1850,
+        "maxCopper": 1850
+      },
+      "category": "damen-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        1850,
+        1850
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 35,
       "id": "braut-rosenseide",
       "optionIndex": 0,
       "name": "Rosenseide",
@@ -11977,24 +12299,21 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 22,
-      "id": "braut-zwei-heimaten",
+      "itemIndex": 36,
+      "id": "braut-rosenquarz",
       "optionIndex": 0,
-      "name": "Braut der zwei Heimaten",
+      "name": "Rosenquarz",
       "unit": "1 Garnitur",
       "price": {
-        "minCopper": 65000,
-        "maxCopper": 65000
+        "minCopper": 4250,
+        "maxCopper": 4250
       },
       "category": "damen-hochzeit",
       "status": "available",
-      "before": [
-        65000,
-        65000
-      ],
+      "before": null,
       "after": [
-        65000,
-        65000
+        4250,
+        4250
       ],
       "decision": "beibehalten",
       "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
@@ -12003,7 +12322,171 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 23,
+      "itemIndex": 37,
+      "id": "braut-perlenschimmer",
+      "optionIndex": 0,
+      "name": "Perlenschimmer",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 6700,
+        "maxCopper": 6700
+      },
+      "category": "damen-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        6700,
+        6700
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 38,
+      "id": "braut-champagnerlaub",
+      "optionIndex": 0,
+      "name": "Champagnerlaub",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 9400,
+        "maxCopper": 9400
+      },
+      "category": "damen-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        9400,
+        9400
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 39,
+      "id": "braut-mondsilber",
+      "optionIndex": 0,
+      "name": "Mondsilber",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 12750,
+        "maxCopper": 12750
+      },
+      "category": "damen-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        12750,
+        12750
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 40,
+      "id": "braut-safranseide",
+      "optionIndex": 0,
+      "name": "Safranseide",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 16480,
+        "maxCopper": 16480
+      },
+      "category": "damen-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        16480,
+        16480
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 41,
+      "id": "braut-elfenbeingeluebde",
+      "optionIndex": 0,
+      "name": "Elfenbeingelübde",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 20000,
+        "maxCopper": 20000
+      },
+      "category": "damen-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        20000,
+        20000
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 42,
+      "id": "braut-zwei-heimaten",
+      "optionIndex": 0,
+      "name": "Braut der zwei Heimaten",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 23000,
+        "maxCopper": 23000
+      },
+      "category": "damen-hochzeit",
+      "status": "available",
+      "before": [
+        65000,
+        65000
+      ],
+      "after": [
+        23000,
+        23000
+      ],
+      "decision": "angepasst",
+      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 43,
+      "id": "braeutigam-sandband",
+      "optionIndex": 0,
+      "name": "Sandband",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 175,
+        "maxCopper": 175
+      },
+      "category": "herren-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        175,
+        175
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 44,
       "id": "braeutigam-treuefaden",
       "optionIndex": 0,
       "name": "Treuefaden",
@@ -12029,7 +12512,53 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 24,
+      "itemIndex": 45,
+      "id": "braeutigam-fliederschwur",
+      "optionIndex": 0,
+      "name": "Fliederschwur",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 940,
+        "maxCopper": 940
+      },
+      "category": "herren-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        940,
+        940
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 46,
+      "id": "braeutigam-bernsteinstunde",
+      "optionIndex": 0,
+      "name": "Bernsteinstunde",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 2350,
+        "maxCopper": 2350
+      },
+      "category": "herren-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        2350,
+        2350
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 47,
       "id": "braeutigam-olivenschwur",
       "optionIndex": 0,
       "name": "Olivenschwur",
@@ -12055,14 +12584,60 @@
       "source": "Göttliche Eleganz",
       "moduleId": "goettliche-eleganz",
       "pageIndex": 4,
-      "itemIndex": 25,
+      "itemIndex": 48,
+      "id": "braeutigam-perlenversprechen",
+      "optionIndex": 0,
+      "name": "Perlenversprechen",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 7300,
+        "maxCopper": 7300
+      },
+      "category": "herren-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        7300,
+        7300
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 49,
+      "id": "braeutigam-ebenholzgeluebde",
+      "optionIndex": 0,
+      "name": "Ebenholzgelübde",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 19000,
+        "maxCopper": 19000
+      },
+      "category": "herren-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        19000,
+        19000
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Göttliche Eleganz",
+      "moduleId": "goettliche-eleganz",
+      "pageIndex": 4,
+      "itemIndex": 50,
       "id": "braeutigam-heller-bund",
       "optionIndex": 0,
       "name": "Der Helle Bund",
       "unit": "1 Garnitur",
       "price": {
-        "minCopper": 68000,
-        "maxCopper": 68000
+        "minCopper": 23000,
+        "maxCopper": 23000
       },
       "category": "herren-hochzeit",
       "status": "available",
@@ -12071,11 +12646,11 @@
         68000
       ],
       "after": [
-        68000,
-        68000
+        23000,
+        23000
       ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+      "decision": "angepasst",
+      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
     },
     {
       "source": "Zum Vollen Korb",

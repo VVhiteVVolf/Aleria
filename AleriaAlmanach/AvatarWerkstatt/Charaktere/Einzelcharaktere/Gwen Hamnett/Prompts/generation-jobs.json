@@ -1,0 +1,175 @@
+{
+  "schema": "aleria.avatar-production-order",
+  "version": 1,
+  "characterName": "Gwen Hamnett",
+  "date": "2026-11-03",
+  "mode": "built-in image_gen",
+  "referenceImage": "AleriaAlmanach/assets/biographies/patrick-20261103/originals/gwen-hamnett.jpeg",
+  "characterFolder": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Gwen Hamnett",
+  "handoffFolder": "AleriaAlmanach/AvatarWerkstatt/Output/Gwen Hamnett",
+  "characterDescription": "Gwen Hamnett, the EXACT mature 46-year-old woman in the reference: unchanged face proportions and almond-shaped green eyes; long voluminous auburn-red wavy hair in the identical half-up arrangement with ornate gold floral hair ornament and gold hairpins; gold and green gemstone drop earrings, matching green gemstone necklace and ring; burgundy and gold embroidered Renaissance fantasy gown, ivory ruffled neckline and long ivory undersleeves. Retain her age, hair, clothing, jewelry, original anime lineart and cel shading. She is a confident, observant, artistic, humorous, independent, spirited and loving painter.",
+  "sets": [
+    {
+      "id": "set-01",
+      "theme": "Gwen's warm, self-confident and witty social personality; both hands empty",
+      "props": "none",
+      "panels": [
+        {
+          "index": 1,
+          "emotion": "Selbstbewusst redend",
+          "gesture": "A self-assured conversational smile; one open palm explains gracefully, the other hand relaxed and open near her chest."
+        },
+        {
+          "index": 2,
+          "emotion": "Herzlich erfreut",
+          "gesture": "A bright, genuinely welcoming smile; one open hand warmly invites someone closer."
+        },
+        {
+          "index": 3,
+          "emotion": "Trocken spöttisch",
+          "gesture": "A restrained ironic half-smile and one raised eyebrow; an elegant small sideways hand flourish makes a dry witty remark."
+        },
+        {
+          "index": 4,
+          "emotion": "Aufmerksam beobachtend",
+          "gesture": "Curious, perceptive eyes and a slight head tilt; a fingertip lightly rests along her chin while the other hand rests on the opposite forearm."
+        },
+        {
+          "index": 5,
+          "emotion": "Schelmisch zuflüsternd",
+          "gesture": "A conspiratorial amused look; one empty hand cups beside her mouth as she whispers, eyes glancing sideways."
+        },
+        {
+          "index": 6,
+          "emotion": "Herzlich lachend",
+          "gesture": "Natural warm laughter with narrowed smiling eyes; one hand lightly covers her laughing mouth, shoulders relaxed."
+        },
+        {
+          "index": 7,
+          "emotion": "Liebevoll",
+          "gesture": "A tender affectionate smile; both empty hands overlap gently over her heart, gaze warm and direct."
+        },
+        {
+          "index": 8,
+          "emotion": "Kokett",
+          "gesture": "A knowing, subtly flirtatious smile; a small head tilt and fingertips lightly touching the neckline beside her necklace, mature and graceful."
+        },
+        {
+          "index": 9,
+          "emotion": "Amüsiertes Schulterzucken",
+          "gesture": "An amused 'what can one do?' expression; both open palms face upwards in a clear, relaxed shrug."
+        }
+      ],
+      "sheetFile": "gwen-hamnett-20261103-set-01.png",
+      "prompt": "Charakter-Emotionssheet Master Prompt (9er Set)\nTake the provided portrait image as the ONLY reference for the character.\nCreate a complete 3×3 expression and gesture sheet (9 panels) featuring the EXACT SAME character.\nIdentity Preservation (Highest Priority)\nThe character must remain 100% identical in every panel.\nPreserve exactly:\nFace shape and proportions\nEyes, eyebrows and nose\nHairstyle, hair volume and hairline\nFacial hair\nArmor, clothing, colors and accessories\nAge\nArt style\nLine quality\nRendering quality\nLighting\nColor palette\nDo NOT redesign, reinterpret or stylize the character differently.\nEvery panel should feel like the same portrait with altered expressions and poses, not nine separate illustrations.\n\nBackground Consistency\nUse the exact same background in every panel.\nSame environment\nSame lighting\nSame camera distance\nSame perspective\nNo simplification\nNo redesign\nThe only changes should be the character’s expression, head angle (minor), gaze and body gesture.\n\nComposition\nSquare overall format (1:1)\n3×3 grid\nNine equally sized panels\nNo white borders\nNo text\nNo captions\nNo symbols\nNo speech bubbles\nNo props unless explicitly requested\nCharacter visible from chest to upper body in every panel\nSame camera angle and framing across all panels\nMinimal variation in rotation only when it supports the expression\n\nExpression Consistency\nThis is NOT nine different drawings.\nIt must look like the same portrait whose facial muscles and body language change naturally.\nChanges should primarily affect:\nEyebrows\nEyes\nEyelids\nMouth\nJaw tension\nHead tilt\nEye direction\nAvoid changing:\nSkull proportions\nHair shape\nArmor proportions\nClothing folds unnecessarily\nHigh character consistency is critical.\n\nGesture Rules\nEvery emotion must also be expressed through:\nHands\nArms\nShoulders\nHead position\nTorso posture\nEye direction\nBody language is more important than facial expression alone.\nEvery panel should immediately communicate a usable RPG reaction.\nAvoid neutral filler poses.\nEvery tile should have a clear storytelling purpose.\nNo repeated gestures.\n\nCharacter Description\nGwen Hamnett, the EXACT mature 46-year-old woman in the reference: unchanged face proportions and almond-shaped green eyes; long voluminous auburn-red wavy hair in the identical half-up arrangement with ornate gold floral hair ornament and gold hairpins; gold and green gemstone drop earrings, matching green gemstone necklace and ring; burgundy and gold embroidered Renaissance fantasy gown, ivory ruffled neckline and long ivory undersleeves. Retain her age, hair, clothing, jewelry, original anime lineart and cel shading. She is a confident, observant, artistic, humorous, independent, spirited and loving painter.\n\nTheme\nGwen's warm, self-confident and witty social personality; both hands empty\n\nPanel List\nTop Left\nA self-assured conversational smile; one open palm explains gracefully, the other hand relaxed and open near her chest.\nTop Center\nA bright, genuinely welcoming smile; one open hand warmly invites someone closer.\nTop Right\nA restrained ironic half-smile and one raised eyebrow; an elegant small sideways hand flourish makes a dry witty remark.\nMiddle Left\nCurious, perceptive eyes and a slight head tilt; a fingertip lightly rests along her chin while the other hand rests on the opposite forearm.\nCenter\nA conspiratorial amused look; one empty hand cups beside her mouth as she whispers, eyes glancing sideways.\nMiddle Right\nNatural warm laughter with narrowed smiling eyes; one hand lightly covers her laughing mouth, shoulders relaxed.\nBottom Left\nA tender affectionate smile; both empty hands overlap gently over her heart, gaze warm and direct.\nBottom Center\nA knowing, subtly flirtatious smile; a small head tilt and fingertips lightly touching the neckline beside her necklace, mature and graceful.\nBottom Right\nAn amused 'what can one do?' expression; both open palms face upwards in a clear, relaxed shrug.\n\nQuality Goals\nSame person in all nine panels\nSame portrait identity\nHighly expressive but believable\nStrong hand acting\nNatural body language\nConsistent anatomy\nConsistent proportions\nConsistent rendering quality\nAnime style identical to the reference image\nEvery panel suitable as an RPG reaction portrait\n\n\nCurrent user constraints (highest priority):\nCreate a square 1536 x 1536 image with exactly nine equal 512 x 512 cells, edge to edge in a strict 3 by 3 grid. No gutters, no separators, no outer border, no lettering or numbers. Each cell must contain her complete head and a consistent chest-to-upper-body portrait with enough room for expressive hands, never crossing into another cell. Use the supplied image as the ONLY identity and art-style reference. Keep the SAME sunlit studio backdrop, leaded window, warm wood and lighting in every cell. Existing studio scenery is fixed background only. No new objects or people. Preserve the jewelry and elaborate burgundy/gold/ivory dress. NO painter palette in any panel, no item held in her second hand.\nBOTH HANDS MUST BE EMPTY in every cell. Remove the paintbrush and palette held in the reference. No brushes, palette, cup, book, fan, flowers, canvas, tools, magic effects or any other handheld prop. Hands are free for the nine gestures.\nMaintain the reference facial identity and mature adult appearance even for laughter, surprise and sadness. No chibi, no younger redesign, no changed hairstyle, no added headwear. The expression and hand gesture differ clearly in all nine cells.\n"
+    },
+    {
+      "id": "set-02",
+      "theme": "Gwen's independent, spirited and sensitive inner life; both hands empty",
+      "props": "none",
+      "panels": [
+        {
+          "index": 1,
+          "emotion": "Nachdenklich",
+          "gesture": "Deeply thoughtful, eyes angled aside; two fingers lightly touch her temple, the other empty hand rests near her collarbone."
+        },
+        {
+          "index": 2,
+          "emotion": "Skeptisch",
+          "gesture": "A critical assessing look with one eyebrow raised and lips pursed; arms loosely folded, hands visible."
+        },
+        {
+          "index": 3,
+          "emotion": "Plötzlich inspiriert",
+          "gesture": "A sudden delighted realization, eyes lighting up; one index finger rises in inspiration, the other hand opens with excited energy. No lightbulb or symbols."
+        },
+        {
+          "index": 4,
+          "emotion": "Entschieden widersprechend",
+          "gesture": "Firm, self-possessed disagreement; one palm raised in a clear stop gesture, the other hand set at her waist within the portrait."
+        },
+        {
+          "index": 5,
+          "emotion": "Temperamentvoll verärgert",
+          "gesture": "A spirited flash of irritation, knitted brows and an emphatic speaking mouth; one empty hand points assertively sideways, shoulders slightly forward."
+        },
+        {
+          "index": 6,
+          "emotion": "Gekränkt",
+          "gesture": "A hurt, disappointed expression softened by dignity; gaze turned slightly away, one hand draws close to her collar while the other supports her wrist."
+        },
+        {
+          "index": 7,
+          "emotion": "Überrascht",
+          "gesture": "A spontaneous, believable startled reaction; widened eyes and slightly parted lips, both empty hands lifted with spread fingers."
+        },
+        {
+          "index": 8,
+          "emotion": "Verlegen ertappt",
+          "gesture": "A sheepish, caught-out smile after losing track of time; one hand touches the back of her neck, the other opens apologetically."
+        },
+        {
+          "index": 9,
+          "emotion": "Still bedrückt",
+          "gesture": "A quietly vulnerable, sad expression, gaze lowered; one hand gently holds the opposite sleeve, shoulders lowered. Restrained emotion, no melodramatic crying."
+        }
+      ],
+      "sheetFile": "gwen-hamnett-20261103-set-02.png",
+      "prompt": "Charakter-Emotionssheet Master Prompt (9er Set)\nTake the provided portrait image as the ONLY reference for the character.\nCreate a complete 3×3 expression and gesture sheet (9 panels) featuring the EXACT SAME character.\nIdentity Preservation (Highest Priority)\nThe character must remain 100% identical in every panel.\nPreserve exactly:\nFace shape and proportions\nEyes, eyebrows and nose\nHairstyle, hair volume and hairline\nFacial hair\nArmor, clothing, colors and accessories\nAge\nArt style\nLine quality\nRendering quality\nLighting\nColor palette\nDo NOT redesign, reinterpret or stylize the character differently.\nEvery panel should feel like the same portrait with altered expressions and poses, not nine separate illustrations.\n\nBackground Consistency\nUse the exact same background in every panel.\nSame environment\nSame lighting\nSame camera distance\nSame perspective\nNo simplification\nNo redesign\nThe only changes should be the character’s expression, head angle (minor), gaze and body gesture.\n\nComposition\nSquare overall format (1:1)\n3×3 grid\nNine equally sized panels\nNo white borders\nNo text\nNo captions\nNo symbols\nNo speech bubbles\nNo props unless explicitly requested\nCharacter visible from chest to upper body in every panel\nSame camera angle and framing across all panels\nMinimal variation in rotation only when it supports the expression\n\nExpression Consistency\nThis is NOT nine different drawings.\nIt must look like the same portrait whose facial muscles and body language change naturally.\nChanges should primarily affect:\nEyebrows\nEyes\nEyelids\nMouth\nJaw tension\nHead tilt\nEye direction\nAvoid changing:\nSkull proportions\nHair shape\nArmor proportions\nClothing folds unnecessarily\nHigh character consistency is critical.\n\nGesture Rules\nEvery emotion must also be expressed through:\nHands\nArms\nShoulders\nHead position\nTorso posture\nEye direction\nBody language is more important than facial expression alone.\nEvery panel should immediately communicate a usable RPG reaction.\nAvoid neutral filler poses.\nEvery tile should have a clear storytelling purpose.\nNo repeated gestures.\n\nCharacter Description\nGwen Hamnett, the EXACT mature 46-year-old woman in the reference: unchanged face proportions and almond-shaped green eyes; long voluminous auburn-red wavy hair in the identical half-up arrangement with ornate gold floral hair ornament and gold hairpins; gold and green gemstone drop earrings, matching green gemstone necklace and ring; burgundy and gold embroidered Renaissance fantasy gown, ivory ruffled neckline and long ivory undersleeves. Retain her age, hair, clothing, jewelry, original anime lineart and cel shading. She is a confident, observant, artistic, humorous, independent, spirited and loving painter.\n\nTheme\nGwen's independent, spirited and sensitive inner life; both hands empty\n\nPanel List\nTop Left\nDeeply thoughtful, eyes angled aside; two fingers lightly touch her temple, the other empty hand rests near her collarbone.\nTop Center\nA critical assessing look with one eyebrow raised and lips pursed; arms loosely folded, hands visible.\nTop Right\nA sudden delighted realization, eyes lighting up; one index finger rises in inspiration, the other hand opens with excited energy. No lightbulb or symbols.\nMiddle Left\nFirm, self-possessed disagreement; one palm raised in a clear stop gesture, the other hand set at her waist within the portrait.\nCenter\nA spirited flash of irritation, knitted brows and an emphatic speaking mouth; one empty hand points assertively sideways, shoulders slightly forward.\nMiddle Right\nA hurt, disappointed expression softened by dignity; gaze turned slightly away, one hand draws close to her collar while the other supports her wrist.\nBottom Left\nA spontaneous, believable startled reaction; widened eyes and slightly parted lips, both empty hands lifted with spread fingers.\nBottom Center\nA sheepish, caught-out smile after losing track of time; one hand touches the back of her neck, the other opens apologetically.\nBottom Right\nA quietly vulnerable, sad expression, gaze lowered; one hand gently holds the opposite sleeve, shoulders lowered. Restrained emotion, no melodramatic crying.\n\nQuality Goals\nSame person in all nine panels\nSame portrait identity\nHighly expressive but believable\nStrong hand acting\nNatural body language\nConsistent anatomy\nConsistent proportions\nConsistent rendering quality\nAnime style identical to the reference image\nEvery panel suitable as an RPG reaction portrait\n\n\nCurrent user constraints (highest priority):\nCreate a square 1536 x 1536 image with exactly nine equal 512 x 512 cells, edge to edge in a strict 3 by 3 grid. No gutters, no separators, no outer border, no lettering or numbers. Each cell must contain her complete head and a consistent chest-to-upper-body portrait with enough room for expressive hands, never crossing into another cell. Use the supplied image as the ONLY identity and art-style reference. Keep the SAME sunlit studio backdrop, leaded window, warm wood and lighting in every cell. Existing studio scenery is fixed background only. No new objects or people. Preserve the jewelry and elaborate burgundy/gold/ivory dress. NO painter palette in any panel, no item held in her second hand.\nBOTH HANDS MUST BE EMPTY in every cell. Remove the paintbrush and palette held in the reference. No brushes, palette, cup, book, fan, flowers, canvas, tools, magic effects or any other handheld prop. Hands are free for the nine gestures.\nMaintain the reference facial identity and mature adult appearance even for laughter, surprise and sadness. No chibi, no younger redesign, no changed hairstyle, no added headwear. The expression and hand gesture differ clearly in all nine cells.\n"
+    },
+    {
+      "id": "set-03",
+      "theme": "Gwen as an expressive artist; exactly one paintbrush, absolutely no other held object",
+      "props": "one paintbrush only",
+      "panels": [
+        {
+          "index": 1,
+          "emotion": "Stolz präsentierend",
+          "gesture": "Proud of her work, confident warm smile; one hand holds the single paintbrush upright at shoulder height, her empty hand presents with an open palm."
+        },
+        {
+          "index": 2,
+          "emotion": "Präzise beobachtend",
+          "gesture": "An attentive appraising squint as she studies a subject; the single brush is held vertically beside her cheek without touching it, empty hand gently steadies the wrist."
+        },
+        {
+          "index": 3,
+          "emotion": "Begeistert inspiriert",
+          "gesture": "Joyful inspiration with lively eyes; she sweeps the single brush outward in a small expressive air gesture, empty hand open near her heart."
+        },
+        {
+          "index": 4,
+          "emotion": "Konzentriert prüfend",
+          "gesture": "Absorbed artistic concentration, slightly knitted brows; the single brush rests diagonally between relaxed fingers near her chest while her empty hand touches her chin."
+        },
+        {
+          "index": 5,
+          "emotion": "Trocken kommentierend",
+          "gesture": "A dry humorous smirk; she gives a small precise conducting gesture with the single brush, her empty palm turns upward in a witty aside."
+        },
+        {
+          "index": 6,
+          "emotion": "Kritisch missbilligend",
+          "gesture": "A discerning, mildly disapproving expression; the single brush is held horizontally low across her chest, the empty hand lifts in a measured correcting gesture."
+        },
+        {
+          "index": 7,
+          "emotion": "Temperamentvoll bestimmend",
+          "gesture": "Intense, assertive artistic conviction; she holds the single brush firmly with its tip angled upward away from her face, empty hand at her waist. It is a painting tool, never a weapon."
+        },
+        {
+          "index": 8,
+          "emotion": "Spielerisch neckend",
+          "gesture": "A mischievous lopsided grin and raised eyebrow; she holds the single brush lightly to one side of her face without contact, empty fingers splayed in a teasing conversational gesture."
+        },
+        {
+          "index": 9,
+          "emotion": "Zufrieden entspannt",
+          "gesture": "A peaceful, satisfied smile after finishing good work; the single brush is loosely lowered at chest level, her empty hand rests gently over the brush-holding wrist."
+        }
+      ],
+      "sheetFile": "gwen-hamnett-20261103-set-03.png",
+      "prompt": "Charakter-Emotionssheet Master Prompt (9er Set)\nTake the provided portrait image as the ONLY reference for the character.\nCreate a complete 3×3 expression and gesture sheet (9 panels) featuring the EXACT SAME character.\nIdentity Preservation (Highest Priority)\nThe character must remain 100% identical in every panel.\nPreserve exactly:\nFace shape and proportions\nEyes, eyebrows and nose\nHairstyle, hair volume and hairline\nFacial hair\nArmor, clothing, colors and accessories\nAge\nArt style\nLine quality\nRendering quality\nLighting\nColor palette\nDo NOT redesign, reinterpret or stylize the character differently.\nEvery panel should feel like the same portrait with altered expressions and poses, not nine separate illustrations.\n\nBackground Consistency\nUse the exact same background in every panel.\nSame environment\nSame lighting\nSame camera distance\nSame perspective\nNo simplification\nNo redesign\nThe only changes should be the character’s expression, head angle (minor), gaze and body gesture.\n\nComposition\nSquare overall format (1:1)\n3×3 grid\nNine equally sized panels\nNo white borders\nNo text\nNo captions\nNo symbols\nNo speech bubbles\nNo props unless explicitly requested\nCharacter visible from chest to upper body in every panel\nSame camera angle and framing across all panels\nMinimal variation in rotation only when it supports the expression\n\nExpression Consistency\nThis is NOT nine different drawings.\nIt must look like the same portrait whose facial muscles and body language change naturally.\nChanges should primarily affect:\nEyebrows\nEyes\nEyelids\nMouth\nJaw tension\nHead tilt\nEye direction\nAvoid changing:\nSkull proportions\nHair shape\nArmor proportions\nClothing folds unnecessarily\nHigh character consistency is critical.\n\nGesture Rules\nEvery emotion must also be expressed through:\nHands\nArms\nShoulders\nHead position\nTorso posture\nEye direction\nBody language is more important than facial expression alone.\nEvery panel should immediately communicate a usable RPG reaction.\nAvoid neutral filler poses.\nEvery tile should have a clear storytelling purpose.\nNo repeated gestures.\n\nCharacter Description\nGwen Hamnett, the EXACT mature 46-year-old woman in the reference: unchanged face proportions and almond-shaped green eyes; long voluminous auburn-red wavy hair in the identical half-up arrangement with ornate gold floral hair ornament and gold hairpins; gold and green gemstone drop earrings, matching green gemstone necklace and ring; burgundy and gold embroidered Renaissance fantasy gown, ivory ruffled neckline and long ivory undersleeves. Retain her age, hair, clothing, jewelry, original anime lineart and cel shading. She is a confident, observant, artistic, humorous, independent, spirited and loving painter.\n\nTheme\nGwen as an expressive artist; exactly one paintbrush, absolutely no other held object\n\nPanel List\nTop Left\nProud of her work, confident warm smile; one hand holds the single paintbrush upright at shoulder height, her empty hand presents with an open palm.\nTop Center\nAn attentive appraising squint as she studies a subject; the single brush is held vertically beside her cheek without touching it, empty hand gently steadies the wrist.\nTop Right\nJoyful inspiration with lively eyes; she sweeps the single brush outward in a small expressive air gesture, empty hand open near her heart.\nMiddle Left\nAbsorbed artistic concentration, slightly knitted brows; the single brush rests diagonally between relaxed fingers near her chest while her empty hand touches her chin.\nCenter\nA dry humorous smirk; she gives a small precise conducting gesture with the single brush, her empty palm turns upward in a witty aside.\nMiddle Right\nA discerning, mildly disapproving expression; the single brush is held horizontally low across her chest, the empty hand lifts in a measured correcting gesture.\nBottom Left\nIntense, assertive artistic conviction; she holds the single brush firmly with its tip angled upward away from her face, empty hand at her waist. It is a painting tool, never a weapon.\nBottom Center\nA mischievous lopsided grin and raised eyebrow; she holds the single brush lightly to one side of her face without contact, empty fingers splayed in a teasing conversational gesture.\nBottom Right\nA peaceful, satisfied smile after finishing good work; the single brush is loosely lowered at chest level, her empty hand rests gently over the brush-holding wrist.\n\nQuality Goals\nSame person in all nine panels\nSame portrait identity\nHighly expressive but believable\nStrong hand acting\nNatural body language\nConsistent anatomy\nConsistent proportions\nConsistent rendering quality\nAnime style identical to the reference image\nEvery panel suitable as an RPG reaction portrait\n\n\nCurrent user constraints (highest priority):\nCreate a square 1536 x 1536 image with exactly nine equal 512 x 512 cells, edge to edge in a strict 3 by 3 grid. No gutters, no separators, no outer border, no lettering or numbers. Each cell must contain her complete head and a consistent chest-to-upper-body portrait with enough room for expressive hands, never crossing into another cell. Use the supplied image as the ONLY identity and art-style reference. Keep the SAME sunlit studio backdrop, leaded window, warm wood and lighting in every cell. Existing studio scenery is fixed background only. No new objects or people. Preserve the jewelry and elaborate burgundy/gold/ivory dress. NO painter palette in any panel, no item held in her second hand.\nExactly ONE slim brown-handled paintbrush with the same metal ferrule and red-pigment bristles as the reference appears in each cell. The other hand is EMPTY. No palette, cup, pot, paint tube, book, fan, flowers, handheld canvas, other tools, second brush, magic effects or any additional carried object. The reference palette must be absent in all nine cells.\nMaintain the reference facial identity and mature adult appearance even for laughter, surprise and sadness. No chibi, no younger redesign, no changed hairstyle, no added headwear. The expression and hand gesture differ clearly in all nine cells.\n"
+    }
+  ]
+}

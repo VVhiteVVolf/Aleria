@@ -23,10 +23,14 @@ def digest(path: Path) -> str:
 
 
 class HeraldicArtifacts:
-    def __init__(self, *, root: Path, source_manifests: tuple[str, ...], qa_dir: Path):
+    def __init__(self, *, root: Path, source_manifests: tuple[str, ...], qa_dir: Path,
+                 manifest_name: str = "emblem-asset-receipts.json"):
         self.root = Path(root).resolve()
         self.source_manifests = source_manifests
         self.qa_dir = Path(qa_dir).resolve()
+        if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*\.json", manifest_name):
+            raise ValueError("Invalid heraldry receipt manifest name")
+        self.manifest_path = self.root / "sources" / manifest_name
 
     def relative(self, path: Path) -> str:
         return path.relative_to(self.root).as_posix()
@@ -97,7 +101,7 @@ class HeraldicArtifacts:
         selected = [job for job in available if not ids or job["id"] in ids]
         if ids and len(selected) != len(ids):
             raise ValueError("Requested generator originals are not ready")
-        manifest_path = self.root / "sources/emblem-asset-receipts.json"
+        manifest_path = self.manifest_path
         prior = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {"schemaVersion": 1, "entries": []}
         entries = {entry["id"]: entry for entry in prior["entries"]}
         prepared = []
@@ -115,8 +119,10 @@ class HeraldicArtifacts:
         return {"prepared": prepared, "manifestEntries": len(entries), "skippedUnchanged": len(selected) - len(prepared)}
 
 
-def main(*, root: Path, source_manifests: tuple[str, ...], qa_dir: Path) -> None:
+def main(*, root: Path, source_manifests: tuple[str, ...], qa_dir: Path,
+         manifest_name: str = "emblem-asset-receipts.json") -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ids", nargs="+")
     args = parser.parse_args()
-    print(json.dumps(HeraldicArtifacts(root=root, source_manifests=source_manifests, qa_dir=qa_dir).build(args.ids)))
+    print(json.dumps(HeraldicArtifacts(root=root, source_manifests=source_manifests, qa_dir=qa_dir,
+                                      manifest_name=manifest_name).build(args.ids)))

@@ -1,0 +1,721 @@
+{
+  "date": "2026-11-04",
+  "localOnly": true,
+  "productionReads": 0,
+  "productionWrites": 0,
+  "categories": {
+    "damen": {
+      "count": 15,
+      "minimumCopper": 25,
+      "maximumCopper": 23000
+    },
+    "herren": {
+      "count": 15,
+      "minimumCopper": 35,
+      "maximumCopper": 23000
+    },
+    "damen-hochzeit": {
+      "count": 13,
+      "minimumCopper": 100,
+      "maximumCopper": 23000
+    },
+    "herren-hochzeit": {
+      "count": 8,
+      "minimumCopper": 175,
+      "maximumCopper": 23000
+    }
+  },
+  "offers": 51,
+  "serverResolvedOffers": 51,
+  "builtinProjectionOffers": 51,
+  "additions": 25,
+  "reductions": [
+    {
+      "id": "damen-goettliche-eleganz",
+      "beforeCopper": 48000,
+      "nowCopper": 23000
+    },
+    {
+      "id": "herren-goettliche-eleganz",
+      "beforeCopper": 52000,
+      "nowCopper": 23000
+    },
+    {
+      "id": "braut-zwei-heimaten",
+      "beforeCopper": 65000,
+      "nowCopper": 23000
+    },
+    {
+      "id": "braeutigam-heller-bund",
+      "beforeCopper": 68000,
+      "nowCopper": 23000
+    }
+  ],
+  "items": [
+    {
+      "id": "lichtleinen",
+      "name": "Lichtleinen",
+      "category": "damen",
+      "copper": 45
+    },
+    {
+      "id": "gassenbluete",
+      "name": "Gassenblüte",
+      "category": "damen",
+      "copper": 75
+    },
+    {
+      "id": "kaufmannstochter",
+      "name": "Die Kaufmannstochter",
+      "category": "damen",
+      "copper": 130
+    },
+    {
+      "id": "bannkreisabend",
+      "name": "Abend im Bannkreis",
+      "category": "damen",
+      "copper": 130
+    },
+    {
+      "id": "purpurnaht",
+      "name": "Purpurnaht",
+      "category": "damen",
+      "copper": 260
+    },
+    {
+      "id": "tirnaras-morgen",
+      "name": "Tirnaras Morgen",
+      "category": "damen",
+      "copper": 600
+    },
+    {
+      "id": "silberlaub",
+      "name": "Silberlaub",
+      "category": "damen",
+      "copper": 1500
+    },
+    {
+      "id": "zwei-kuesten",
+      "name": "Fest der zwei Küsten",
+      "category": "damen",
+      "copper": 3800
+    },
+    {
+      "id": "sternendame",
+      "name": "Dame unter Sternen",
+      "category": "damen",
+      "copper": 12000
+    },
+    {
+      "id": "damen-goettliche-eleganz",
+      "name": "Göttliche Eleganz · Die Weiße",
+      "category": "damen",
+      "copper": 23000
+    },
+    {
+      "id": "flachsgold",
+      "name": "Flachsgold",
+      "category": "damen",
+      "copper": 25
+    },
+    {
+      "id": "nebelsaum",
+      "name": "Nebelsaum",
+      "category": "damen",
+      "copper": 185
+    },
+    {
+      "id": "aprikosenlicht",
+      "name": "Aprikosenlicht",
+      "category": "damen",
+      "copper": 975
+    },
+    {
+      "id": "fliederabend",
+      "name": "Fliederabend",
+      "category": "damen",
+      "copper": 3650
+    },
+    {
+      "id": "schwarze-perle",
+      "name": "Die Schwarze Perle",
+      "category": "damen",
+      "copper": 12750
+    },
+    {
+      "id": "heller-faden",
+      "name": "Heller Faden",
+      "category": "herren",
+      "copper": 45
+    },
+    {
+      "id": "innenstadt",
+      "name": "Der Innenstadtgang",
+      "category": "herren",
+      "copper": 80
+    },
+    {
+      "id": "kontorrock",
+      "name": "Der Kontorrock",
+      "category": "herren",
+      "copper": 140
+    },
+    {
+      "id": "nordlicht",
+      "name": "Nordlicht",
+      "category": "herren",
+      "copper": 145
+    },
+    {
+      "id": "purpurkontor",
+      "name": "Purpurkontor",
+      "category": "herren",
+      "copper": 300
+    },
+    {
+      "id": "suedwind",
+      "name": "Südwind",
+      "category": "herren",
+      "copper": 750
+    },
+    {
+      "id": "silberbund",
+      "name": "Silberbund",
+      "category": "herren",
+      "copper": 1800
+    },
+    {
+      "id": "zwei-haefen",
+      "name": "Herr der zwei Häfen",
+      "category": "herren",
+      "copper": 4500
+    },
+    {
+      "id": "argentsalon",
+      "name": "Argentischer Salon",
+      "category": "herren",
+      "copper": 14000
+    },
+    {
+      "id": "herren-goettliche-eleganz",
+      "name": "Göttliche Eleganz · Der Dunkle",
+      "category": "herren",
+      "copper": 23000
+    },
+    {
+      "id": "hirseleinen",
+      "name": "Hirseleinen",
+      "category": "herren",
+      "copper": 35
+    },
+    {
+      "id": "tabakkontor",
+      "name": "Tabakkontor",
+      "category": "herren",
+      "copper": 285
+    },
+    {
+      "id": "lavendelabend",
+      "name": "Lavendelabend",
+      "category": "herren",
+      "copper": 1160
+    },
+    {
+      "id": "kupfersaum",
+      "name": "Kupfersaum",
+      "category": "herren",
+      "copper": 4650
+    },
+    {
+      "id": "rauchgold",
+      "name": "Rauchgold",
+      "category": "herren",
+      "copper": 11800
+    },
+    {
+      "id": "braut-morgenband",
+      "name": "Morgenband",
+      "category": "damen-hochzeit",
+      "copper": 220
+    },
+    {
+      "id": "braut-rosenseide",
+      "name": "Rosenseide",
+      "category": "damen-hochzeit",
+      "copper": 2800
+    },
+    {
+      "id": "braut-zwei-heimaten",
+      "name": "Braut der zwei Heimaten",
+      "category": "damen-hochzeit",
+      "copper": 23000
+    },
+    {
+      "id": "braut-leinenversprechen",
+      "name": "Leinenversprechen",
+      "category": "damen-hochzeit",
+      "copper": 100
+    },
+    {
+      "id": "braut-aprikosenband",
+      "name": "Aprikosenband",
+      "category": "damen-hochzeit",
+      "copper": 460
+    },
+    {
+      "id": "braut-fliedertanz",
+      "name": "Fliedertanz",
+      "category": "damen-hochzeit",
+      "copper": 980
+    },
+    {
+      "id": "braut-bernsteinlicht",
+      "name": "Bernsteinlicht",
+      "category": "damen-hochzeit",
+      "copper": 1850
+    },
+    {
+      "id": "braut-rosenquarz",
+      "name": "Rosenquarz",
+      "category": "damen-hochzeit",
+      "copper": 4250
+    },
+    {
+      "id": "braut-perlenschimmer",
+      "name": "Perlenschimmer",
+      "category": "damen-hochzeit",
+      "copper": 6700
+    },
+    {
+      "id": "braut-champagnerlaub",
+      "name": "Champagnerlaub",
+      "category": "damen-hochzeit",
+      "copper": 9400
+    },
+    {
+      "id": "braut-mondsilber",
+      "name": "Mondsilber",
+      "category": "damen-hochzeit",
+      "copper": 12750
+    },
+    {
+      "id": "braut-safranseide",
+      "name": "Safranseide",
+      "category": "damen-hochzeit",
+      "copper": 16480
+    },
+    {
+      "id": "braut-elfenbeingeluebde",
+      "name": "Elfenbeingelübde",
+      "category": "damen-hochzeit",
+      "copper": 20000
+    },
+    {
+      "id": "braeutigam-treuefaden",
+      "name": "Treuefaden",
+      "category": "herren-hochzeit",
+      "copper": 240
+    },
+    {
+      "id": "braeutigam-olivenschwur",
+      "name": "Olivenschwur",
+      "category": "herren-hochzeit",
+      "copper": 3000
+    },
+    {
+      "id": "braeutigam-heller-bund",
+      "name": "Der Helle Bund",
+      "category": "herren-hochzeit",
+      "copper": 23000
+    },
+    {
+      "id": "braeutigam-sandband",
+      "name": "Sandband",
+      "category": "herren-hochzeit",
+      "copper": 175
+    },
+    {
+      "id": "braeutigam-fliederschwur",
+      "name": "Fliederschwur",
+      "category": "herren-hochzeit",
+      "copper": 940
+    },
+    {
+      "id": "braeutigam-bernsteinstunde",
+      "name": "Bernsteinstunde",
+      "category": "herren-hochzeit",
+      "copper": 2350
+    },
+    {
+      "id": "braeutigam-perlenversprechen",
+      "name": "Perlenversprechen",
+      "category": "herren-hochzeit",
+      "copper": 7300
+    },
+    {
+      "id": "braeutigam-ebenholzgeluebde",
+      "name": "Ebenholzgelübde",
+      "category": "herren-hochzeit",
+      "copper": 19000
+    }
+  ],
+  "artwork": [
+    {
+      "id": "flachsgold",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/flachsgold.png",
+      "bytes": 1881266,
+      "sha256": "24a8009250a14d5b77d51ceb777e28ce95271a2886499dd174e7f6ff97780b83",
+      "new": true
+    },
+    {
+      "id": "lichtleinen",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/lichtleinen.png",
+      "bytes": 2114368,
+      "sha256": "d924cec673c8bb9a6e771e465b6819a41e223ec03ad314b9b764126dd5934b85",
+      "new": false
+    },
+    {
+      "id": "gassenbluete",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/gassenbluete.png",
+      "bytes": 2202028,
+      "sha256": "635cb1e48e114c4c87ce0f4c4ddbbb558bc11b239166b80756c1eed3ce2e693f",
+      "new": false
+    },
+    {
+      "id": "kaufmannstochter",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/kaufmannstochter.png",
+      "bytes": 2145060,
+      "sha256": "82e64bf878efc334ee668f4a0263608f75cd844d9ca0616bd7c9007709d97ec8",
+      "new": false
+    },
+    {
+      "id": "bannkreisabend",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/bannkreisabend.png",
+      "bytes": 2365132,
+      "sha256": "6494efe627dd676e3e4b7f4e1dd170e4144000cbe5d357e4d9f7d1b3f351b2fc",
+      "new": false
+    },
+    {
+      "id": "nebelsaum",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/nebelsaum.png",
+      "bytes": 1793130,
+      "sha256": "a7c8cf13789d38dddc56a90d6ec4ca15d24b41ad90d43f97a6e6c0d935df7a47",
+      "new": true
+    },
+    {
+      "id": "purpurnaht",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/purpurnaht.png",
+      "bytes": 2401021,
+      "sha256": "3d292d48c85d7a43394bf7eec237fd13caf1d7f604fac6d03e523ad6fb7ff66f",
+      "new": false
+    },
+    {
+      "id": "tirnaras-morgen",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/tirnaras-morgen.png",
+      "bytes": 1961796,
+      "sha256": "d35ad1ab78ab720307133f9c9d08719de4b7da433798abf20f6ab89aee0a3408",
+      "new": false
+    },
+    {
+      "id": "aprikosenlicht",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/aprikosenlicht.png",
+      "bytes": 1925982,
+      "sha256": "bd984210d942d844fd87dd3a821286d3ac43672c569e86b6a088c0241b770dc3",
+      "new": true
+    },
+    {
+      "id": "silberlaub",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/silberlaub.png",
+      "bytes": 2256857,
+      "sha256": "ee33f0f506006c310b11dc3b60641fe5bf6eb510d7e1530305e48197eb63d6d8",
+      "new": false
+    },
+    {
+      "id": "fliederabend",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/fliederabend.png",
+      "bytes": 2119417,
+      "sha256": "d125dbce2a1a617e6aa0155ce8cb137a758100cf8492868f1cdca6da5c6ebe83",
+      "new": true
+    },
+    {
+      "id": "zwei-kuesten",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/zwei-kuesten.png",
+      "bytes": 2476624,
+      "sha256": "9bf25768385f307bcc82e76a0f89b844c53e27d4bb9402cea10b1033e5923174",
+      "new": false
+    },
+    {
+      "id": "sternendame",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/sternendame.png",
+      "bytes": 2059553,
+      "sha256": "ba4c7a47eb5db62428784ae57b22075e8f89b480b8f6ead8212106c4d94522d4",
+      "new": false
+    },
+    {
+      "id": "schwarze-perle",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/schwarze-perle.png",
+      "bytes": 1930472,
+      "sha256": "1eb06a5ae97a78bad0a04f56abe51d95e6813542806490f83e7920ea5295d048",
+      "new": true
+    },
+    {
+      "id": "damen-goettliche-eleganz",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/damen-goettliche-eleganz.png",
+      "bytes": 2817982,
+      "sha256": "d5ed8c4c7520b64bd68b41baf4ff3505dab6c3c8b4f77cdd3055cb95b495ab0e",
+      "new": false
+    },
+    {
+      "id": "hirseleinen",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/hirseleinen.png",
+      "bytes": 2007879,
+      "sha256": "7074a0436878a19df2416986b1c425a42746730831f6acc61e304eaf9c86e972",
+      "new": true
+    },
+    {
+      "id": "heller-faden",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/heller-faden.png",
+      "bytes": 2122937,
+      "sha256": "f90c9a93da69581123f5060be852c4067549c0b2f308cd2d5614eab6301aacec",
+      "new": false
+    },
+    {
+      "id": "innenstadt",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/innenstadt.png",
+      "bytes": 2272511,
+      "sha256": "d64457fb1e5ed139fcb3e24182c7e6c47b423e1cb82fc9ee101b5a7e9171e88d",
+      "new": false
+    },
+    {
+      "id": "kontorrock",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/kontorrock.png",
+      "bytes": 2407082,
+      "sha256": "56ff034dfc1aaf485f5bf7e86ee6878c83891454fcfbd7c362d1e48ac1f73cd7",
+      "new": false
+    },
+    {
+      "id": "nordlicht",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/nordlicht.png",
+      "bytes": 2300359,
+      "sha256": "7f620c82be3081f3a81aeec882eda68c7caf1c53ed513752a7f310d6d0d04fc5",
+      "new": false
+    },
+    {
+      "id": "tabakkontor",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/tabakkontor.png",
+      "bytes": 1951124,
+      "sha256": "57797d0dd3283bf764e9520f93b0bc3c34626e7594e8bbd43c84921231834da7",
+      "new": true
+    },
+    {
+      "id": "purpurkontor",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/purpurkontor.png",
+      "bytes": 2338257,
+      "sha256": "ec8199a4c8d10ed2fd331659ac20f0b5265bd2d40297539c9ed42d2054723090",
+      "new": false
+    },
+    {
+      "id": "suedwind",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/suedwind.png",
+      "bytes": 2213989,
+      "sha256": "10b6e7fd8e35cc6fa3dbeb15e0dc56eb22202bf5f02ab85504ad99e2ec76c0d7",
+      "new": false
+    },
+    {
+      "id": "lavendelabend",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/lavendelabend.png",
+      "bytes": 2127491,
+      "sha256": "661373948f6fed4dcae57964017a783f3fd6eee3ed14ffe0f9bba084e90aa63e",
+      "new": true
+    },
+    {
+      "id": "silberbund",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/silberbund.png",
+      "bytes": 2477361,
+      "sha256": "c53465f1857e35a1e045e03dd11b52965d36ba0bd29f3e3d66036242d20ef5bc",
+      "new": false
+    },
+    {
+      "id": "zwei-haefen",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/zwei-haefen.png",
+      "bytes": 2730635,
+      "sha256": "c99e7a94fa3df165c4d1daae881083c4cb4ee96d8936cc9313fcc2a452cf9661",
+      "new": false
+    },
+    {
+      "id": "kupfersaum",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/kupfersaum.png",
+      "bytes": 2113158,
+      "sha256": "ded71bb9bd8cc8fa8017cc0c9bfad526a554b373a373cdc2748a6cfa5ac5b473",
+      "new": true
+    },
+    {
+      "id": "rauchgold",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/rauchgold.png",
+      "bytes": 2171825,
+      "sha256": "502e6f547a1805311076beb9dbf3e7aa574dd4c427392c43ff13f087d96654e9",
+      "new": true
+    },
+    {
+      "id": "argentsalon",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/argentsalon.png",
+      "bytes": 2343615,
+      "sha256": "30f6aec4b3acb8d1c980e2f5c4a36f3e64dd92dd7bc005d60778829bb7fe2cf6",
+      "new": false
+    },
+    {
+      "id": "herren-goettliche-eleganz",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/herren-goettliche-eleganz.png",
+      "bytes": 2650799,
+      "sha256": "be2ff209217f3089fb694f3b0f271f2d235ce4998c6ba79e8b2702ab98cd2da1",
+      "new": false
+    },
+    {
+      "id": "braut-leinenversprechen",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-leinenversprechen.png",
+      "bytes": 1929387,
+      "sha256": "4c48fdc5a1e5f796b40833e6adad3e74752f1dfb752746e579b9331b8d5a2cb7",
+      "new": true
+    },
+    {
+      "id": "braut-morgenband",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-morgenband.png",
+      "bytes": 2025808,
+      "sha256": "dc440cf9a8af68068175a68d764ffd48d1c48df5c914283de4376140f96d5484",
+      "new": false
+    },
+    {
+      "id": "braut-aprikosenband",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-aprikosenband.png",
+      "bytes": 2230744,
+      "sha256": "2847f54d68619bc1486a81323c79d95ce9b98266459424b02742d8de2ed2b209",
+      "new": true
+    },
+    {
+      "id": "braut-fliedertanz",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-fliedertanz.png",
+      "bytes": 2126676,
+      "sha256": "8f90738dce3bdfaaf9136c1a2229148de99709f2a416e91c66280744835a64b6",
+      "new": true
+    },
+    {
+      "id": "braut-bernsteinlicht",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-bernsteinlicht.png",
+      "bytes": 2217012,
+      "sha256": "b71a8da42ac15fc477e6b5cc6ffa386733675bcd2d4083778531255acd9f7483",
+      "new": true
+    },
+    {
+      "id": "braut-rosenseide",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-rosenseide.png",
+      "bytes": 2494094,
+      "sha256": "e62495b076c157192a3dd83cca7c89699879ab0b49ba3fb3c0323838a8459ef5",
+      "new": false
+    },
+    {
+      "id": "braut-rosenquarz",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-rosenquarz.png",
+      "bytes": 2149252,
+      "sha256": "74cb248525112d128aeb94c587bddf760164c3ab78487a1afecae85900589fde",
+      "new": true
+    },
+    {
+      "id": "braut-perlenschimmer",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-perlenschimmer.png",
+      "bytes": 1829858,
+      "sha256": "e0845994f3c7a071e36e6840f34673598331a609b5660942d58e1067ba3836ff",
+      "new": true
+    },
+    {
+      "id": "braut-champagnerlaub",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-champagnerlaub.png",
+      "bytes": 2094783,
+      "sha256": "6528df15cde9103c2b4a4754090dc6df56b2f74e3b3baef402dcc82aa9e94371",
+      "new": true
+    },
+    {
+      "id": "braut-mondsilber",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-mondsilber.png",
+      "bytes": 2073017,
+      "sha256": "abc699bc5fd35e26e943073519e154851995babbc9038d5511e555298e1de63e",
+      "new": true
+    },
+    {
+      "id": "braut-safranseide",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-safranseide.png",
+      "bytes": 2054646,
+      "sha256": "77aefeb95c080024f67f3840579e19bdd56351c71d91f6aa66d0a29b5acc156c",
+      "new": true
+    },
+    {
+      "id": "braut-elfenbeingeluebde",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-elfenbeingeluebde.png",
+      "bytes": 2377414,
+      "sha256": "6baee46600fc121bfc9370b198d8d02ab3a8a14d130b31395a3ecf649ffda54b",
+      "new": true
+    },
+    {
+      "id": "braut-zwei-heimaten",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braut-zwei-heimaten.png",
+      "bytes": 2461516,
+      "sha256": "3fd515e92932a335601dddf7bf944ee391f557f4b3a646284aac8887fc4b29dd",
+      "new": false
+    },
+    {
+      "id": "braeutigam-sandband",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braeutigam-sandband.png",
+      "bytes": 2048640,
+      "sha256": "77bbcbe40e1c1714b443a9a184aa4f78a4571b69e32a000f113f0ee8135175c3",
+      "new": true
+    },
+    {
+      "id": "braeutigam-treuefaden",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braeutigam-treuefaden.png",
+      "bytes": 2320564,
+      "sha256": "f4b23d1c51351d4fff69a192f7f8343e68cf8d97e6d5bb3ba49039c3d90fc4fe",
+      "new": false
+    },
+    {
+      "id": "braeutigam-fliederschwur",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braeutigam-fliederschwur.png",
+      "bytes": 2094994,
+      "sha256": "fc9f4ad0a0a7efeabc33d4be9dd327832309b8a2df57d900fbd3b6ea2fa4b3b9",
+      "new": true
+    },
+    {
+      "id": "braeutigam-bernsteinstunde",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braeutigam-bernsteinstunde.png",
+      "bytes": 2369220,
+      "sha256": "0e9c10e268f4f0e266f843352e572ab2cdfa9015e78f08518a62b01f93f30514",
+      "new": true
+    },
+    {
+      "id": "braeutigam-olivenschwur",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braeutigam-olivenschwur.png",
+      "bytes": 2360767,
+      "sha256": "608d31692aa065a34fdb48565a4d319c536bb468f420c8d3174eac4713313536",
+      "new": false
+    },
+    {
+      "id": "braeutigam-perlenversprechen",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braeutigam-perlenversprechen.png",
+      "bytes": 2142842,
+      "sha256": "3c3723fa39cca66a1c54102bafa859df55f148a6c64e38a2ebd8affc3dc3b220",
+      "new": true
+    },
+    {
+      "id": "braeutigam-ebenholzgeluebde",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braeutigam-ebenholzgeluebde.png",
+      "bytes": 2172299,
+      "sha256": "850b2cfbb6d6ac3bb1520949a0179d7cf0fcb41867d5d6a03c74f0d248c55923",
+      "new": true
+    },
+    {
+      "id": "braeutigam-heller-bund",
+      "file": "AleriaAlmanach/assets/goettliche-eleganz/kleidung/braeutigam-heller-bund.png",
+      "bytes": 2523280,
+      "sha256": "c285c198fa5d5fee7e13cc7fcff65343cc84a0c6f9182ce72628bb08768a7b37",
+      "new": false
+    }
+  ]
+}

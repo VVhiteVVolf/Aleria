@@ -1,0 +1,124 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-02T00:00:00.000Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Aberon",
+  "sourcePath": "Charakter Archiv Exporte/Fleischsammler Argall/maelor-ffionydd.json",
+  "character": {
+    "name": "Maelor Ffionydd",
+    "title": "Barde · Affäre mit Gwenella",
+    "fraktion": "",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Llysfaen",
+    "currentLocation": "Aberon",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Maelor Ffionydd ist ein fahrender Barde und hat eine Affäre mit Gwenella. Sie verließ ihren Mann Rhydric Argall und brannte mit Maelor nach Aberon durch. Der Affärengrund lautet: „Durchgebrannt nach Aberon“. Eine Ehe zwischen ihnen ist nicht festgelegt. Maelor ist nicht Perwyns Vater. Über seine Herkunftsfamilie und eigene Kinder ist nichts festgelegt.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-02T00:00:00.000Z",
+    "updatedAt": "2026-11-02T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/maelor-ffionydd.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Maelor Ffionydd"
+        },
+        {
+          "label": "Geboren",
+          "value": "1705"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "35 Jahre"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Affäre mit Gwenella"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Barde · Affäre mit Gwenella"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "Aberon"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/maelor-ffionydd.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Maelor Ffionydd ist ein fahrender Barde und hat eine Affäre mit Gwenella. Sie verließ ihren Mann Rhydric Argall und brannte mit Maelor nach Aberon durch. Der Affärengrund lautet: „Durchgebrannt nach Aberon“. Eine Ehe zwischen ihnen ist nicht festgelegt. Maelor ist nicht Perwyns Vater. Über seine Herkunftsfamilie und eigene Kinder ist nichts festgelegt.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "Schlanker erwachsener fahrender Barde, dunkles gewelltes Haar, selbstsicheres gewinnendes Lächeln. Gut geschnittener Reisemantel in gedämpftem Petrol und Weinrot; eine schlichte Laute gehört zu seinem Beruf."
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--family-tree--maelor-ffionydd"
+    },
+    "genealogy": {
+      "worldPersonId": "person--family-tree--maelor-ffionydd",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1705",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "affair",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "35 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-argall",
+          "personId": "maelor-ffionydd",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-02T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-02T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=maelor-ffionydd",
+          "fingerprint": "{\"name\":\"Maelor Ffionydd\",\"title\":\"Barde · Affäre mit Gwenella\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"/AleriaAlmanach/assets/fleischsammler-argall/portraits/maelor-ffionydd.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"35 Jahre\"],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenella-spouse-rhydric-argall\",\"type\":\"affair\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--gwenella-spouse-rhydric-argall\",\"name\":\"Gwenella\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "gwenella-spouse-rhydric-argall",
+            "type": "affair",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--gwenella-spouse-rhydric-argall",
+            "name": "Gwenella"
+          }
+        ],
+        "children": []
+      }
+    },
+    "id": "person--family-tree--maelor-ffionydd",
+    "race": "Mensch",
+    "age": 35
+  }
+}

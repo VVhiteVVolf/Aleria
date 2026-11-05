@@ -1,0 +1,833 @@
+{
+  "schema": "aleria.avatar-workshop-export",
+  "schemaVersion": 1,
+  "person": "Gwen Hamnett",
+  "createdAt": "2026-11-03T20:13:26.551795+00:00",
+  "splitter": "Werkzeuge/Avatar Splitterer/AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "method": "Unchanged V3 get_crops/base_boxes with recorded V3 edge adjustments",
+  "sourceSheetsPreserved": true,
+  "rows": 3,
+  "columns": 3,
+  "gapX": 0,
+  "gapY": 0,
+  "autocrop": false,
+  "resampling": false,
+  "avatarCount": 27,
+  "outputFolder": "Output/Gwen Hamnett",
+  "sets": [
+    {
+      "set": 1,
+      "source": "Sheets/gwen-hamnett-20261103-set-01.png",
+      "sourceSha256": "64df256ea3418a782a265729b6a29cde9c4f9d40ba55e8b74de4543e2016f20f",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "rows": 3,
+      "columns": 3,
+      "gapX": 0,
+      "gapY": 0,
+      "autocrop": false,
+      "resampling": false,
+      "baseBoxes": [
+        [
+          0,
+          0,
+          418,
+          418
+        ],
+        [
+          418,
+          0,
+          836,
+          418
+        ],
+        [
+          836,
+          0,
+          1254,
+          418
+        ],
+        [
+          0,
+          418,
+          418,
+          836
+        ],
+        [
+          418,
+          418,
+          836,
+          836
+        ],
+        [
+          836,
+          418,
+          1254,
+          836
+        ],
+        [
+          0,
+          836,
+          418,
+          1254
+        ],
+        [
+          418,
+          836,
+          836,
+          1254
+        ],
+        [
+          836,
+          836,
+          1254,
+          1254
+        ]
+      ],
+      "panels": [
+        {
+          "panel": 1,
+          "file": "gwen-hamnett-20261103-set-01_Bild1.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "900645f18c44a06d4f726e061981ef60a97927ec2adc8c0b5f4b0e9b277c5626",
+          "bytes": 374276
+        },
+        {
+          "panel": 2,
+          "file": "gwen-hamnett-20261103-set-01_Bild2.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "bc97fe96b68422e28b2127864422f293a42ccd725cd02117b5b1c9f88a6d5792",
+          "bytes": 377866
+        },
+        {
+          "panel": 3,
+          "file": "gwen-hamnett-20261103-set-01_Bild3.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "d562b03b49fcd85697d784989ea474e61eb343e81898920f444029fdc5c71c42",
+          "bytes": 376698
+        },
+        {
+          "panel": 4,
+          "file": "gwen-hamnett-20261103-set-01_Bild4.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "f482199c29d565b0cf05444d62970d054fd62dc32afa13fc2754f05e01033c95",
+          "bytes": 374964
+        },
+        {
+          "panel": 5,
+          "file": "gwen-hamnett-20261103-set-01_Bild5.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "c5ba1a2241d257a027ccc4b192113e83e71c29da6bb51a2b7c3607d11317b374",
+          "bytes": 376538
+        },
+        {
+          "panel": 6,
+          "file": "gwen-hamnett-20261103-set-01_Bild6.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "deda7a6852c3e4937a2f298f7a66beca2ffdbe196c6d8d0e83666509e64ced09",
+          "bytes": 370337
+        },
+        {
+          "panel": 7,
+          "file": "gwen-hamnett-20261103-set-01_Bild7.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "30e3855a89463414bf8afd8a851d9426032fbfaa0cf31b78b4c0f06f43c7a1db",
+          "bytes": 373410
+        },
+        {
+          "panel": 8,
+          "file": "gwen-hamnett-20261103-set-01_Bild8.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "175eb40e6b529b2b19aac16e7d5670ca119fa74c0a45a75fb55337cc9b72819f",
+          "bytes": 372260
+        },
+        {
+          "panel": 9,
+          "file": "gwen-hamnett-20261103-set-01_Bild9.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "57096d42584ac9d66968cd42311b576db1b44a15a2a68b6b1ad613345d141aa5",
+          "bytes": 374212
+        }
+      ]
+    },
+    {
+      "set": 2,
+      "source": "Sheets/gwen-hamnett-20261103-set-02.png",
+      "sourceSha256": "9e9dcf93092044b889ef034299ebf47e9149a9f00c854ae89bcfc7e206d62247",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "rows": 3,
+      "columns": 3,
+      "gapX": 0,
+      "gapY": 0,
+      "autocrop": false,
+      "resampling": false,
+      "baseBoxes": [
+        [
+          0,
+          0,
+          418,
+          418
+        ],
+        [
+          418,
+          0,
+          836,
+          418
+        ],
+        [
+          836,
+          0,
+          1254,
+          418
+        ],
+        [
+          0,
+          418,
+          418,
+          836
+        ],
+        [
+          418,
+          418,
+          836,
+          836
+        ],
+        [
+          836,
+          418,
+          1254,
+          836
+        ],
+        [
+          0,
+          836,
+          418,
+          1254
+        ],
+        [
+          418,
+          836,
+          836,
+          1254
+        ],
+        [
+          836,
+          836,
+          1254,
+          1254
+        ]
+      ],
+      "panels": [
+        {
+          "panel": 1,
+          "file": "gwen-hamnett-20261103-set-02_Bild1.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "7383dc729de869680581e7fdf60ecb0f7d1ffb7ae433ee809d229aad26d280fe",
+          "bytes": 377142
+        },
+        {
+          "panel": 2,
+          "file": "gwen-hamnett-20261103-set-02_Bild2.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "c2cd2d649b37354520d4d370302bc5f6d79faeda4087006989e6fa344eacd059",
+          "bytes": 381249
+        },
+        {
+          "panel": 3,
+          "file": "gwen-hamnett-20261103-set-02_Bild3.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "c0c65f27f7f39b93d7f8fb3cbcbee9949aec6ae18599a58d302e578f79db6abe",
+          "bytes": 377767
+        },
+        {
+          "panel": 4,
+          "file": "gwen-hamnett-20261103-set-02_Bild4.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "60f2e94b1c5983ac8bb191df8b379884c63dfad14358a9cda08f050f5244f559",
+          "bytes": 376166
+        },
+        {
+          "panel": 5,
+          "file": "gwen-hamnett-20261103-set-02_Bild5.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "4823f040e51d34666d154ffee476b04f48a9ceb84e105eabc005e7ffa6dba0eb",
+          "bytes": 384826
+        },
+        {
+          "panel": 6,
+          "file": "gwen-hamnett-20261103-set-02_Bild6.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "0e5b3c59a581400732ae90826a83ff3ce0233f302c5a3a2ebf8436855654feb1",
+          "bytes": 376231
+        },
+        {
+          "panel": 7,
+          "file": "gwen-hamnett-20261103-set-02_Bild7.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "8818f6517686fd2b5e56d04b2c2bf9cd9eb961a7e130ff0640fb6e512d7cf5ff",
+          "bytes": 381371
+        },
+        {
+          "panel": 8,
+          "file": "gwen-hamnett-20261103-set-02_Bild8.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "4fed53e2e6bae5b4687c834c89ebb5be3583e14d3f926a253b6d9cdec7ce18cd",
+          "bytes": 372945
+        },
+        {
+          "panel": 9,
+          "file": "gwen-hamnett-20261103-set-02_Bild9.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "c468262e02a76ae08e65ec24f032f75b2d689c8c21efcddddc21d1fd25ab4e8a",
+          "bytes": 381243
+        }
+      ]
+    },
+    {
+      "set": 3,
+      "source": "Sheets/gwen-hamnett-20261103-set-03.png",
+      "sourceSha256": "2a5c81a04bef9db0e914914ab0019914bdc20934f815cb7af51dbd69f8678e3d",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "rows": 3,
+      "columns": 3,
+      "gapX": 0,
+      "gapY": 0,
+      "autocrop": false,
+      "resampling": false,
+      "baseBoxes": [
+        [
+          0,
+          0,
+          418,
+          418
+        ],
+        [
+          418,
+          0,
+          836,
+          418
+        ],
+        [
+          836,
+          0,
+          1254,
+          418
+        ],
+        [
+          0,
+          418,
+          418,
+          836
+        ],
+        [
+          418,
+          418,
+          836,
+          836
+        ],
+        [
+          836,
+          418,
+          1254,
+          836
+        ],
+        [
+          0,
+          836,
+          418,
+          1254
+        ],
+        [
+          418,
+          836,
+          836,
+          1254
+        ],
+        [
+          836,
+          836,
+          1254,
+          1254
+        ]
+      ],
+      "panels": [
+        {
+          "panel": 1,
+          "file": "gwen-hamnett-20261103-set-03_Bild1.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            0,
+            0,
+            418,
+            418
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "a42b1221610e47ff98c9555c584feac5145deeab866a0795fded7fd1d96761f6",
+          "bytes": 377360
+        },
+        {
+          "panel": 2,
+          "file": "gwen-hamnett-20261103-set-03_Bild2.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            418,
+            0,
+            836,
+            418
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "c8d2a56a520fb8ac12c9313310abc2822c7a726651cd036a7c2c0224267fbb53",
+          "bytes": 374984
+        },
+        {
+          "panel": 3,
+          "file": "gwen-hamnett-20261103-set-03_Bild3.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            836,
+            0,
+            1254,
+            418
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "0448164bf63bada54b2708f250478d4fa7b4b6af3b609cd9f36e16d8051ae58a",
+          "bytes": 376213
+        },
+        {
+          "panel": 4,
+          "file": "gwen-hamnett-20261103-set-03_Bild4.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            0,
+            418,
+            418,
+            836
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "3a82e4ba2e5711544453d1aaa0376e24da0dd9dc791ef54e71a214879c38c983",
+          "bytes": 378370
+        },
+        {
+          "panel": 5,
+          "file": "gwen-hamnett-20261103-set-03_Bild5.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            418,
+            418,
+            836,
+            836
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "36b57ce9572ee8c75d9d51ba791e7564dab022e8b0f506b17822a6f378ed1469",
+          "bytes": 374255
+        },
+        {
+          "panel": 6,
+          "file": "gwen-hamnett-20261103-set-03_Bild6.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            836,
+            418,
+            1254,
+            836
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "399cf779f164066f33dcef65efdfbd8a41c4654ba568bb70ea3563cc86468f48",
+          "bytes": 372191
+        },
+        {
+          "panel": 7,
+          "file": "gwen-hamnett-20261103-set-03_Bild7.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            0,
+            836,
+            418,
+            1254
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "4f964ffb69a512aeeca39995821a3172fdf42375098d4e0a8e3ed459d824ea01",
+          "bytes": 381873
+        },
+        {
+          "panel": 8,
+          "file": "gwen-hamnett-20261103-set-03_Bild8.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            418,
+            836,
+            836,
+            1254
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "e096efb4fa742a850171a9c14cbf954ac5e7411e85ec78ce276e89e1f6de77d1",
+          "bytes": 373030
+        },
+        {
+          "panel": 9,
+          "file": "gwen-hamnett-20261103-set-03_Bild9.png",
+          "size": [
+            418,
+            418
+          ],
+          "box": [
+            836,
+            836,
+            1254,
+            1254
+          ],
+          "edgeAdjustments": {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "sha256": "089c2872a7a90f66e913cb86eff76da8d165f83be937d8edf5d1fc91d664b5b2",
+          "bytes": 374475
+        }
+      ]
+    }
+  ]
+}

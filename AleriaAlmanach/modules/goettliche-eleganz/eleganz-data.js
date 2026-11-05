@@ -756,6 +756,64 @@
         "noteText": "Vom guten Alltagsgewand bis zum seltenen Einzelentwurf verbindet das Haus argentische Mode mit cenyrischem Handwerk. Die Hausmodelle werden anprobiert und angepasst; die besonderen Garnituren entstehen nach Maß.",
         "items": [
           {
+            "id": "flachsgold",
+            "category": "damen",
+            "title": "Flachsgold",
+            "subtitle": "Schlichtes Tageskleid mit seitlicher Schnürung · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Guter Alltag",
+            "image": "./assets/goettliche-eleganz/kleidung/flachsgold.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Naturfarbenes Leinen und eine schmale ockerfarbene Einfassung geben diesem einfachen Tageskleid seine warme Wirkung. Ein flacher runder Ausschnitt und gerade, am Handgelenk geraffte Ärmel nehmen die klare argentische Linie auf; der bewegliche Schnitt bleibt cenyrischer Alltag.</p><p>Eine kurze seitliche Schnürung passt das Kleid an, ohne ein eigenes Innenmieder zu benötigen. Der Rock bleibt ungefüttert und ohne Besatz; ein schmaler Leinengürtel und die einfache Saumanpassung gehören zum Preis.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Einlagiges Leinenkleid"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Schmaler Leinengürtel enthalten"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Seitliche Weitenanpassung"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Ungebleichtes Leinen · Ockerfarbenes Wollband · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Schlichter Alltag"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Damen",
+              "Ungebleichtes Leinen · Ockerfarbenes Wollband"
+            ],
+            "priceMin": "25",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 15.092391304347826,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Nach Stoff- und Größenvorrat; einfache Anpassungen nach Absprache.",
+            "attributes": []
+          },
+          {
             "id": "lichtleinen",
             "category": "damen",
             "title": "Lichtleinen",
@@ -806,7 +864,7 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 15,
+            "priceFill": 15.166304347826086,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -864,7 +922,7 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 24,
+            "priceFill": 15.277173913043478,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -922,7 +980,7 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 33,
+            "priceFill": 15.480434782608695,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -980,7 +1038,65 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 42,
+            "priceFill": 15.480434782608695,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Nach Stoff- und Größenvorrat; einfache Anpassungen nach Absprache.",
+            "attributes": []
+          },
+          {
+            "id": "nebelsaum",
+            "category": "damen",
+            "title": "Nebelsaum",
+            "subtitle": "Besuchskleid mit überlappendem Mieder und engen Ärmeln · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hauskollektion",
+            "image": "./assets/goettliche-eleganz/kleidung/nebelsaum.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Warmgraues Tuch fällt über ein helles Leinenunterkleid. Das glatt überlappende Mieder wird an der Seite geschlossen; eine schmale Borte in staubigem Mauve betont den schrägen Ausschnitt und die eng anliegenden Ärmelenden.</p><p>Der weiche Wollstoff hält an kühlen Tagen warm, ohne eine schwere Mantelschicht zu verlangen. Eine kleine verdeckte Innentasche und ein passender grauer Stoffgürtel machen die Garnitur für Stadtbesuche ebenso brauchbar wie für die Schreibstube.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Leinenunterkleid enthalten"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Verdeckte kleine Innentasche"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Seitlicher Miederverschluss"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Warmgraues Wolltuch · Leinen · Mauvefarbene Wollborte · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Stadtbesuch & Schreibstube"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Damen",
+              "Warmgraues Wolltuch · Leinen · Mauvefarbene Wollborte"
+            ],
+            "priceMin": "1,85",
+            "priceMax": "",
+            "currencyCode": "ST",
+            "currencyLabel": "Silbertaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 15.683695652173913,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -1038,7 +1154,7 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 51,
+            "priceFill": 15.960869565217392,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -1096,7 +1212,65 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 60,
+            "priceFill": 17.217391304347828,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Fertigung nach Bestellung. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "aprikosenlicht",
+            "category": "damen",
+            "title": "Aprikosenlicht",
+            "subtitle": "Seidenkleid mit sanft geraffter Brust und kurzem Schulterüberwurf · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hauskollektion",
+            "image": "./assets/goettliche-eleganz/kleidung/aprikosenlicht.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Helle Apricotseide liegt in wenigen weichen Falten über einem cremefarbenen Innengewand. Der flache, leicht geraffte Ausschnitt und die langen schmalen Ärmel lassen dem warmen Stoff seine Fläche; ein kurzer cremefarbener Überwurf liegt locker um die Schultern.</p><p>Die südliche Seide wird an Taille und Verschlüssen innen mit Leinen gestützt. Der Überwurf lässt sich abnehmen; die schmale elfenbeinfarbene Flechtborte bleibt die einzige Zier der vollständig angepassten Sommergarnitur.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Abnehmbarer kurzer Schulterüberwurf"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Gestützte Taille aus Leinen"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Schmale Seidenflechtborte"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Apricotfarbene Tirnara-Seide · Cremefarbenes Leinen · Seidenborte · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Sommerfest & Empfang"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Damen",
+              "Apricotfarbene Tirnara-Seide · Cremefarbenes Leinen · Seidenborte"
+            ],
+            "priceMin": "9,75",
+            "priceMax": "",
+            "currencyCode": "ST",
+            "currencyLabel": "Silbertaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 18.60326086956522,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -1154,7 +1328,65 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 69,
+            "priceFill": 20.543478260869566,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Fertigung nach Bestellung. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "fliederabend",
+            "category": "damen",
+            "title": "Fliederabend",
+            "subtitle": "Festkleid mit gefaltetem Schulterkragen und geschlitzten Oberärmeln · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hauskollektion",
+            "image": "./assets/goettliche-eleganz/kleidung/fliederabend.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Gedämpfter Fliedersamt wird von einem breiten, flach gefalteten Kragen aus champagnerfarbener Seide gerahmt. Kleine silbergestickte Blattlinien folgen der geschlossenen Miederfront; die schmal geschlitzten Oberärmel zeigen das helle Futter nur in Bewegung.</p><p>Eine verdeckte Hakenleiste hält die Vorderseite ruhig. Die Silberstickerei ist an Kragen und Ärmeln unterlegt; ein schmaler Samtgürtel ergänzt die nach Anprobe gefertigte Garnitur ohne zusätzliche Edelsteine.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Echte feine Silberstickerei"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Verdeckte Hakenleiste"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Gefalteter Seidenkragen"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Fliederfarbener Seidensamt · Champagnerseide · Silberfaden · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Saal & großes Fest"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Damen",
+              "Fliederfarbener Seidensamt · Champagnerseide · Silberfaden"
+            ],
+            "priceMin": "3,65",
+            "priceMax": "",
+            "currencyCode": "GT",
+            "currencyLabel": "Goldtaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 28.48913043478261,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -1212,7 +1444,7 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 78,
+            "priceFill": 29.043478260869563,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -1270,7 +1502,65 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 87,
+            "priceFill": 59.34782608695652,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Fertigung nach Bestellung. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "schwarze-perle",
+            "category": "damen",
+            "title": "Die Schwarze Perle",
+            "subtitle": "Maßgearbeitetes Abendgewand mit kurzer Mantelbahn · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Einzelanfertigung",
+            "image": "./assets/goettliche-eleganz/kleidung/schwarze-perle.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Schwarzer Seidensamt und eine schmale champagnerfarbene Brokatbahn bilden einen klaren Gegensatz. Der hohe gerundete Ausschnitt endet in einem kleinen mittigen Schlitz; einzelne kleine Süßwasserperlen zeichnen die Miederkanten und die langen eng sitzenden Ärmel nach.</p><p>Eine kompakte schwarze Mantelbahn wird mit zwei flachen Silberschließen befestigt. Mieder, Futter und Perlenbesatz werden gemeinsam angepasst, damit die Garnitur weich fällt. Mehrere Anproben und die beschriebenen Besätze gehören zum Preis.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Kleine echte Süßwasserperlen"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Abnehmbare Mantelbahn mit Silberschließen"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Mehrere Anproben enthalten"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Schwarzer Seidensamt · Champagnerbrokat · Süßwasserperlen · Silber · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Großer Empfang & Abendgesellschaft"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Damen",
+              "Schwarzer Seidensamt · Champagnerbrokat · Süßwasserperlen · Silber"
+            ],
+            "priceMin": "12,75",
+            "priceMax": "",
+            "currencyCode": "GT",
+            "currencyLabel": "Goldtaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 62.119565217391305,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -1321,18 +1611,76 @@
               "Damen",
               "Elfenbeinseide · Seidenbrokat · Weißgold · Ausgewählte Granate"
             ],
-            "priceMin": "48",
+            "priceMin": "23",
             "priceMax": "",
             "currencyCode": "GT",
             "currencyLabel": "Goldtaler",
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 96,
+            "priceFill": 100,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
             "conditions": "Fertigung nach Bestellung. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "hirseleinen",
+            "category": "herren",
+            "title": "Hirseleinen",
+            "subtitle": "Schlichtes ärmelloses Wams mit Hemd und Hose · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Guter Alltag",
+            "image": "./assets/goettliche-eleganz/kleidung/hirseleinen.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Ein ockerfarbenes, hüftlanges Wams liegt über einem naturhellen Leinenhemd. Der offene V-Ausschnitt, vier einfache Holzknöpfe und eine schmale braune Einfassung geben der alltagstauglichen Garnitur eine klare argentische Linie; die lockeren Ärmel bleiben cenyrisch bequem.</p><p>Eine kastanienbraune Leinenhose ergänzt das ungefütterte Wams. Verstärkte Seitennähte und ein kleiner Stoffeinsatz im Rücken lassen beim Arbeiten Bewegung zu. Einfache Anpassungen gehören zur Garnitur.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Ungefüttertes Wollwams"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Leinenhemd und kastanienbraune Hose"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Holzknöpfe und verstärkte Seitennähte"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Naturleinen · Ockerfarbenes Wolltuch · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Guter Alltag"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Herren",
+              "Naturleinen · Ockerfarbenes Wolltuch"
+            ],
+            "priceMin": "35",
+            "priceMax": "",
+            "currencyCode": "KT",
+            "currencyLabel": "Kupfertaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 15.129347826086956,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Nach Stoff- und Größenvorrat; einfache Anpassungen nach Absprache.",
             "attributes": []
           },
           {
@@ -1386,7 +1734,7 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 15,
+            "priceFill": 15.166304347826086,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -1444,7 +1792,7 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 24,
+            "priceFill": 15.295652173913043,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -1502,7 +1850,7 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 33,
+            "priceFill": 15.517391304347827,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -1560,7 +1908,65 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 42,
+            "priceFill": 15.535869565217391,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Nach Stoff- und Größenvorrat; einfache Anpassungen nach Absprache.",
+            "attributes": []
+          },
+          {
+            "id": "tabakkontor",
+            "category": "herren",
+            "title": "Tabakkontor",
+            "subtitle": "Langes Kontorwams mit schmalem Umschlagkragen · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hauskollektion",
+            "image": "./assets/goettliche-eleganz/kleidung/tabakkontor.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Tabakbraunes Wolltuch und ein sandfarbenes Hemd bilden eine ruhige Stadtgarnitur. Das lange Wams hat einen schmalen umgelegten Kragen und eine seitlich versetzte Reihe dunkler Hornknöpfe. Kleine cremefarbene Flechtborten an den Manschetten verbinden den südlichen Schnitt mit Gwynthorer Handwerk.</p><p>Das Wams ist mit Leinen gefüttert und besitzt eine flache innere Brieftasche. Eine dunkelbraune Hose und ein schmaler Stoffgürtel gehören dazu; die weich geformten Schultern eignen sich auch für längere Tage im Kontor.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Leinengefüttertes Kontorwams"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Innenliegende Brieftasche"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Hemd, Hose und Stoffgürtel enthalten"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Tabakbraunes Wolltuch · Leinen · Hornknöpfe · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Kontor & Stadtbesuch"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Herren",
+              "Tabakbraunes Wolltuch · Leinen · Hornknöpfe"
+            ],
+            "priceMin": "2,85",
+            "priceMax": "",
+            "currencyCode": "ST",
+            "currencyLabel": "Silbertaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 16.053260869565218,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -1618,7 +2024,7 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 51,
+            "priceFill": 16.108695652173914,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -1676,7 +2082,65 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 60,
+            "priceFill": 17.77173913043478,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Fertigung nach Bestellung. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "lavendelabend",
+            "category": "herren",
+            "title": "Lavendelabend",
+            "subtitle": "Saalwams mit flachem Kragen und geschlitzten Oberärmeln · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hauskollektion",
+            "image": "./assets/goettliche-eleganz/kleidung/lavendelabend.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Mattes lavendelfarbenes Tuch steht über einem silbergrauen Hemd. Die kurzen Schlitze der weich gerafften Oberärmel lassen helle Seide sehen; der flache runde Kragen und die glatte Knopffront halten die Silhouette ruhig. Schmale graue Flechtborten laufen an den Ärmelenden aus.</p><p>Die Garnitur wird an Schulter und Taille angepasst. Das Leineninnenfutter stützt die Seideneinsätze, ohne die Ärmel zu versteifen. Eine perlgraue Hose und ein passend bezogener Gürtel vervollständigen das Saalgewand.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Echte silbergraue Seideneinsätze"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Angepasste Schulter- und Taillenlinie"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Perlgraue Hose und passender Gürtel"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Lavendelfarbenes Wolltuch · Silbergraue Seide · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Abendgesellschaft"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Herren",
+              "Lavendelfarbenes Wolltuch · Silbergraue Seide"
+            ],
+            "priceMin": "1,16",
+            "priceMax": "",
+            "currencyCode": "GT",
+            "currencyLabel": "Goldtaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 19.28695652173913,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -1734,7 +2198,7 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 69,
+            "priceFill": 21.652173913043477,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -1792,7 +2256,123 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 78,
+            "priceFill": 31.630434782608695,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Fertigung nach Bestellung. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "kupfersaum",
+            "category": "herren",
+            "title": "Kupfersaum",
+            "subtitle": "Brokatwams mit kurzer offener Schaube · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hauskollektion",
+            "image": "./assets/goettliche-eleganz/kleidung/kupfersaum.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Warm kupferfarbener Brokat trägt ein kleinflächiges Muster aus Granatapfelblättern. Eine kurze elfenbeinfarbene Schaube rahmt das glatt geschlossene Wams; ihre schmalen umgelegten Revers und die gefalteten Schulteransätze greifen argentische Festmode auf. Cenyrische Flechtlinien sitzen zurückhaltend an Kragen und Manschetten.</p><p>Zwei flache Silberschließen halten die Schaube. Hemd und walnussbraune Hose sind auf die warmen Stoffe abgestimmt. Die Brokatbahnen werden bei der Anprobe einzeln ausgerichtet, damit das Blattmuster über der Knopfleiste zusammenpasst.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Gemusterter kupferfarbener Seidenbrokat"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Zwei angepasste Silberschließen"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Offene Schaube und abgestimmte Unterkleidung"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Kupferfarbener Seidenbrokat · Elfenbeinseide · Silber · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Festmahl & gehobener Empfang"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Herren",
+              "Kupferfarbener Seidenbrokat · Elfenbeinseide · Silber"
+            ],
+            "priceMin": "4,65",
+            "priceMax": "",
+            "currencyCode": "GT",
+            "currencyLabel": "Goldtaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 32.184782608695656,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Fertigung nach Bestellung. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "rauchgold",
+            "category": "herren",
+            "title": "Rauchgold",
+            "subtitle": "Maßgarnitur mit asymmetrischem Schulterüberwurf · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Einzelanfertigung",
+            "image": "./assets/goettliche-eleganz/kleidung/rauchgold.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Rauchgrauer Seidensamt bildet ein langes, glatt gearbeitetes Wams mit hohem geteiltem Kragen. Ein champagnerfarbener Schulterüberwurf liegt nur über einer Schulter; feine echte Goldfäden zeichnen schmale Lorbeer- und Flechtlinien entlang seiner Kante. Die helle Unterlage erscheint als ruhiger Streifen zwischen den Samtbahnen.</p><p>Eine kleine vergoldete Silberschließe befestigt den abnehmbaren Überwurf. Mehrere Anproben stimmen Kragen und Schulterfall ab. Das helle Seidenhemd und die rauchgraue Hose gehören zur festgelegten Ausführung, zusätzlicher Schmuck wird gesondert gewählt.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Echte Goldfadenstickerei"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Abnehmbarer einseitiger Schulterüberwurf"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Mehrere Anproben und vollständige Unterkleidung"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Rauchgrauer Seidensamt · Champagnerbrokat · Goldfaden · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Großer Empfang"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Herren",
+              "Rauchgrauer Seidensamt · Champagnerbrokat · Goldfaden"
+            ],
+            "priceMin": "11,8",
+            "priceMax": "",
+            "currencyCode": "GT",
+            "currencyLabel": "Goldtaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 58.608695652173914,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -1850,7 +2430,7 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 87,
+            "priceFill": 66.73913043478261,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -1901,18 +2481,76 @@
               "Herren",
               "Dunkler Seidensamt · Elfenbeinbrokat · Weißgold · Ausgewählte Granate"
             ],
-            "priceMin": "52",
+            "priceMin": "23",
             "priceMax": "",
             "currencyCode": "GT",
             "currencyLabel": "Goldtaler",
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 96,
+            "priceFill": 100,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
             "conditions": "Fertigung nach Bestellung. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "braut-leinenversprechen",
+            "category": "damen-hochzeit",
+            "title": "Leinenversprechen",
+            "subtitle": "Schlichtes Brautkleid mit seitlicher Schnürung · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hochzeitsmode",
+            "image": "./assets/goettliche-eleganz/kleidung/braut-leinenversprechen.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Ein cremefarbenes Leinenunterkleid liegt unter einem haferfarbenen Überkleid. Der flache runde Ausschnitt bleibt geschlossen und wird von einer schmalen, braun abgesetzten Flechtborte gefasst. Gerade Ärmel und eine seitliche Schnürung geben dem einfachen cenyrischen Schnitt eine ruhige Form.</p><p>Der Rock fällt ohne Schleppe und ohne schwere Besätze. Ein schmaler Stoffgürtel und die erste Anpassung gehören dazu; die innen verstärkten Nähte erlauben, das Kleid nach der Hochzeit als gutes Besuchsgewand weiterzutragen.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Leinenunterkleid und Wollüberkleid"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Seitliche Schnürung und Stoffgürtel"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Erste Anpassung enthalten"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Ungebleichtes Leinen · Haferfarbenes Wolltuch · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Hochzeit · schlichtes Leinen"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Damen",
+              "Ungebleichtes Leinen · Haferfarbenes Wolltuch"
+            ],
+            "priceMin": "1",
+            "priceMax": "",
+            "currencyCode": "ST",
+            "currencyLabel": "Silbertaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 15.369565217391305,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
             "attributes": []
           },
           {
@@ -1966,7 +2604,181 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 15,
+            "priceFill": 15.81304347826087,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "braut-aprikosenband",
+            "category": "damen-hochzeit",
+            "title": "Aprikosenband",
+            "subtitle": "Brautkleid mit rechteckigem Ausschnitt und gebundenen Ärmeln · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hochzeitsmode",
+            "image": "./assets/goettliche-eleganz/kleidung/braut-aprikosenband.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Zartes Aprikosentuch rahmt ein elfenbeinfarbenes Unterkleid. Der rechteckige Ausschnitt und das glatte, vorne geschlossene Mieder erinnern an argentische Besuchsmode; an den Ärmelansätzen erscheinen kleine gebundene Seidenbänder statt großer Schmuckstücke.</p><p>Die langen Ärmel sind am Oberarm leicht gerafft und laufen in schmale Leinenmanschetten aus. Ein passender aprikosenfarbener Gürtel fasst die Taille; das gefütterte Mieder wird bei der Anprobe passend gearbeitet.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Gebundene Ärmelansätze aus Seidenband"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Gefüttertes glattes Mieder"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Passender Stoffgürtel"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Aprikosenfarbenes feines Wolltuch · Elfenbeinleinen · Seidenband · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Hochzeit · warmes Frühlingsfest"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Damen",
+              "Aprikosenfarbenes feines Wolltuch · Elfenbeinleinen · Seidenband"
+            ],
+            "priceMin": "4,6",
+            "priceMax": "",
+            "currencyCode": "ST",
+            "currencyLabel": "Silbertaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 16.7,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "braut-fliedertanz",
+            "category": "damen-hochzeit",
+            "title": "Fliedertanz",
+            "subtitle": "Brautgarnitur mit geschlitzten Oberärmeln und weitem Unterrock · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hochzeitsmode",
+            "image": "./assets/goettliche-eleganz/kleidung/braut-fliedertanz.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Helles Flieder bestimmt dieses Kleid, unter dessen schmalen Ärmelschlitzen cremefarbene Seide hervortritt. Ein sanft gerundeter V-Ausschnitt wird von hellen gestickten Blütenranken begleitet. Das schmale cenyrische Mieder öffnet sich über dem hellen Unterrock in zwei weich fallende Bahnen.</p><p>Die Zier besteht aus Garnstickerei und kleinen stoffbezogenen Knöpfen, nicht aus Edelmetall. Der Rock bleibt ohne Schleppe und lässt beim Tanz Platz; das Leineninnenmieder trägt die Form, ohne sie steif werden zu lassen.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Seidene Einsätze an den Oberarmen"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Gestickte Blütenranken ohne Edelmetall"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Schleppenloser weiter Unterrock"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Fliederfarbenes Wolltuch · Cremefarbene Seide · Helles Stickgarn · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Hochzeit · Tanz & Sommermahl"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Damen",
+              "Fliederfarbenes Wolltuch · Cremefarbene Seide · Helles Stickgarn"
+            ],
+            "priceMin": "9,8",
+            "priceMax": "",
+            "currencyCode": "ST",
+            "currencyLabel": "Silbertaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 18.621739130434783,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "braut-bernsteinlicht",
+            "category": "damen-hochzeit",
+            "title": "Bernsteinlicht",
+            "subtitle": "Brautkleid mit überkreuztem Mieder und schmalen Hängeärmeln · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hochzeitsmode",
+            "image": "./assets/goettliche-eleganz/kleidung/braut-bernsteinlicht.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Honigockerfarbene Seide legt sich in zwei überkreuzten Bahnen über ein cremefarbenes Bruststück. Kleine messingfarbene Verschlüsse sitzen seitlich an der Taille; schmale cenyrische Flechtborten begleiten die Kanten. Die langen Hängeärmel zeigen innen helles Seidenfutter und bleiben am Handgelenk geschlossen.</p><p>Die warme Farbe entsteht aus dem Tuch und braucht keine gefassten Steine. Ein schmaler Schulterstreifen aus Cremeseide lässt sich lösen. Die unterlegten Verschlüsse und die abgestimmte Anprobe gehören zur beschriebenen Garnitur.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Echte Tirnara-Seide in Honigocker"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Abnehmbarer cremefarbener Schulterstreifen"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Unterlegte Messingverschlüsse"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Honigockerfarbene Tirnara-Seide · Cremeseide · Messingbesätze · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Hochzeit · warmer Seidenglanz"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Damen",
+              "Honigockerfarbene Tirnara-Seide · Cremeseide · Messingbesätze"
+            ],
+            "priceMin": "1,85",
+            "priceMax": "",
+            "currencyCode": "GT",
+            "currencyLabel": "Goldtaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 21.836956521739133,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -2024,7 +2836,355 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 24,
+            "priceFill": 25.347826086956523,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "braut-rosenquarz",
+            "category": "damen-hochzeit",
+            "title": "Rosenquarz",
+            "subtitle": "Brautkleid mit herzförmig gerundetem Ausschnitt und Wechselärmeln · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hochzeitsmode",
+            "image": "./assets/goettliche-eleganz/kleidung/braut-rosenquarz.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Altroséfarbene Seide liegt über perlgrauem Brokat. Der flach herzförmige Ausschnitt bleibt breit und wird von einer schmalen Silberstickerei aus Blüten und cenyrischen Flechtlinien gefasst. Kleine verdeckte Haken schließen das glatte Mieder; die Ärmel besitzen sanft geraffte Schultern und eng anliegende Unterarme.</p><p>Ein zweites schlichtes Ärmelpaar erlaubt eine ruhigere Fassung für das spätere Fest. Die Stickunterlage hält das Silbergewicht vom weichen Stoff fern. Der Name beschreibt den Farbton des Kleides; Edelsteine gehören nicht zu dieser Ausführung.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Echte Silberstickerei auf unterlegten Kanten"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Zwei austauschbare Ärmelpaare"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Perlgrauer Brokatunterrock"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Altroséfarbene Seide · Perlgrauer Seidenbrokat · Silberfaden · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Hochzeit · feine Gesellschaft"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Damen",
+              "Altroséfarbene Seide · Perlgrauer Seidenbrokat · Silberfaden"
+            ],
+            "priceMin": "4,25",
+            "priceMax": "",
+            "currencyCode": "GT",
+            "currencyLabel": "Goldtaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 30.706521739130437,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "braut-perlenschimmer",
+            "category": "damen-hochzeit",
+            "title": "Perlenschimmer",
+            "subtitle": "Brautgarnitur mit hohem Bogenkragen und kurzer Schulterpelerine · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hochzeitsmode",
+            "image": "./assets/goettliche-eleganz/kleidung/braut-perlenschimmer.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Perlgraue Seide bildet ein vorne geschlossenes Kleid mit hohem, weich gebogenem Kragen. Schmale fliederfarbene Samteinsätze laufen über die Seiten des Mieders und die eng geschnittenen Ärmel. Wenige kleine Süßwasserperlen markieren Kragenkante und Ärmelbündchen; die kurze graue Schulterpelerine bleibt unbestickt.</p><p>Die Perlen sitzen einzeln auf verstärkten Nähten. Die Pelerine wird an zwei verdeckten Haken gelöst, sodass das Kleid auch ohne Schulterlage vollständig wirkt. Mieder, Futter und Perlenbesatz werden gemeinsam nach Maß angepasst.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Kleine einzeln angenähte Süßwasserperlen"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Abnehmbare kurze Schulterpelerine"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Maßgearbeitetes Leineninnenmieder"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Perlgraue Seide · Fliederfarbener Seidensamt · Kleine Süßwasserperlen · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Hochzeit · ruhiger Perlenglanz"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Damen",
+              "Perlgraue Seide · Fliederfarbener Seidensamt · Kleine Süßwasserperlen"
+            ],
+            "priceMin": "6,7",
+            "priceMax": "",
+            "currencyCode": "GT",
+            "currencyLabel": "Goldtaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 39.76086956521739,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "braut-champagnerlaub",
+            "category": "damen-hochzeit",
+            "title": "Champagnerlaub",
+            "subtitle": "Brautkleid mit eckigem Stehkragen und offenen Überärmeln · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hochzeitsmode",
+            "image": "./assets/goettliche-eleganz/kleidung/braut-champagnerlaub.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Champagnerfarbener Brokat trägt ein zurückhaltendes Blattmuster aus echtem Goldfaden. Ein niedriger eckiger Stehkragen und eine glatte Knopffront ordnen das Mieder. Offene kurze Überärmel geben den Blick auf lange elfenbeinfarbene Seidenärmel frei; an ihren Bündchen treffen argentische Laubzweige auf cenyrische Flechtborten.</p><p>Der weite Überrock ist seitlich aufgenommen und zeigt die helle Seide darunter. Ein schmaler goldbestickter Stoffgürtel hält die Linien zusammen. Die Brokatbahnen werden bei mehreren Anproben so abgestimmt, dass Muster und Nähte ineinanderlaufen.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Seidenbrokat mit echtem Goldfaden"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Offene Überärmel auf Elfenbeinseide"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Mehrere Muster- und Sitzanproben"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Champagnerfarbener Seidenbrokat · Elfenbeinseide · Goldfaden · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Hochzeit · festlicher Brokat"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Damen",
+              "Champagnerfarbener Seidenbrokat · Elfenbeinseide · Goldfaden"
+            ],
+            "priceMin": "9,4",
+            "priceMax": "",
+            "currencyCode": "GT",
+            "currencyLabel": "Goldtaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 49.73913043478261,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "braut-mondsilber",
+            "category": "damen-hochzeit",
+            "title": "Mondsilber",
+            "subtitle": "Brautentwurf mit breitem Bootausschnitt und glatten langen Ärmeln · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hochzeitsmode",
+            "image": "./assets/goettliche-eleganz/kleidung/braut-mondsilber.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Kühle silbergraue Seide und ein breiter, hoch sitzender Bootausschnitt geben diesem Brautkleid eine klare Linie. Schmale Weißgoldfäden ziehen vom Ausschnitt über die Schultern und laufen am Mieder in längliche cenyrische Flechtformen aus. Ein einzelner klarer Bergkristall sitzt in einer kleinen Fassung am schmalen Taillengürtel.</p><p>Die langen Ärmel liegen glatt an; eine schmale abnehmbare Rückenbahn gibt dem Kleid Feierlichkeit, ohne die Vorderseite zu verdecken. Fassung und Stickerei werden weich unterlegt. Der persönliche Zuschnitt und mehrere Anproben gehören zu dieser festgelegten Ausführung.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Echte feine Weißgoldstickerei"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Ein gefasster klarer Bergkristall"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Abnehmbare schmale Rückenbahn"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Silbergraue Seide · Weißgoldfaden · Klarer Bergkristall · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Hochzeit · silberner Einzelentwurf"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Damen",
+              "Silbergraue Seide · Weißgoldfaden · Klarer Bergkristall"
+            ],
+            "priceMin": "12,75",
+            "priceMax": "",
+            "currencyCode": "GT",
+            "currencyLabel": "Goldtaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 62.119565217391305,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "braut-safranseide",
+            "category": "damen-hochzeit",
+            "title": "Safranseide",
+            "subtitle": "Brautgarnitur mit hohem Rundhalsausschnitt und kurzem Festmantel · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hochzeitsmode",
+            "image": "./assets/goettliche-eleganz/kleidung/braut-safranseide.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Safrangoldene Seide steht im Mittelpunkt dieser warmen Hochzeitsgarnitur. Elfenbeinbrokat fasst den hohen runden Ausschnitt und die schlanken Manschetten; flache Goldstickerei bildet kleine Ähren zwischen cenyrischen Flechtlinien. Die Oberärmel sind nur leicht gepufft, die Front wird ohne sichtbare Schnürung geschlossen.</p><p>Ein kurzer elfenbeinfarbener Festmantel liegt kompakt über den Schultern und wird von zwei kleinen perlenbesetzten Schließen gehalten. Untergewand, Kleid und Mantel werden gemeinsam nach Maß gefertigt; die leichte Unterkonstruktion trägt die Besätze und erhält den weichen Seidenfall.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Goldstickerei mit Ähren und Flechtlinien"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Kurzer abnehmbarer Festmantel"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Zwei Schließen mit kleinen Süßwasserperlen"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Safrangoldene Seide · Elfenbeinbrokat · Goldfaden · Kleine Süßwasserperlen · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Hochzeit · goldener Festentwurf"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Damen",
+              "Safrangoldene Seide · Elfenbeinbrokat · Goldfaden · Kleine Süßwasserperlen"
+            ],
+            "priceMin": "16,48",
+            "priceMax": "",
+            "currencyCode": "GT",
+            "currencyLabel": "Goldtaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 75.90434782608696,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "braut-elfenbeingeluebde",
+            "category": "damen-hochzeit",
+            "title": "Elfenbeingelübde",
+            "subtitle": "Persönlicher Brautentwurf mit gefaltetem Schulterkragen und Wechselärmeln · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hochzeitsmode",
+            "image": "./assets/goettliche-eleganz/kleidung/braut-elfenbeingeluebde.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Glatte Elfenbeinseide wird von schmalen champagnerfarbenen Brokatbahnen begleitet. Ein gefalteter breiter Schulterkragen liegt über einem kleinen hohen V-Ausschnitt; feine Weißgoldstickerei zeichnet Blattranken entlang der Miedernähte. Lange geschlossene Ärmel tragen wenige kleine Perlen an den flachen Manschetten.</p><p>Die Garnitur enthält ein gefüttertes Innengewand, Brautkleid, zwei Ärmelpaare, einen schmalen perlenbesetzten Gürtel und einen abnehmbaren elfenbeinfarbenen Schulterumhang. Eleonora begleitet die Anproben; sämtliche genannten Weißgoldarbeiten und Perlen gehören zu dieser festgelegten Ausführung.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Persönlicher mehrteiliger Brautentwurf"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Unterlegte Weißgoldstickerei und kleine Perlen"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Zwei Ärmelpaare und Schulterumhang"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Elfenbeinseide · Champagnerbrokat · Weißgold · Süßwasserperlen · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Hochzeit · persönlicher Einzelentwurf"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Damen",
+              "Elfenbeinseide · Champagnerbrokat · Weißgold · Süßwasserperlen"
+            ],
+            "priceMin": "20",
+            "priceMax": "",
+            "currencyCode": "GT",
+            "currencyLabel": "Goldtaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 88.91304347826087,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -2075,14 +3235,72 @@
               "Damen",
               "Elfenbeinseide · Weißgold · Süßwasserperlen · Granate"
             ],
-            "priceMin": "65",
+            "priceMin": "23",
             "priceMax": "",
             "currencyCode": "GT",
             "currencyLabel": "Goldtaler",
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 33,
+            "priceFill": 100,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "braeutigam-sandband",
+            "category": "herren-hochzeit",
+            "title": "Sandband",
+            "subtitle": "Hochzeitswams mit schmalem Stehkragen · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hochzeitsmode",
+            "image": "./assets/goettliche-eleganz/kleidung/braeutigam-sandband.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Sandfarbenes Wolltuch und ein naturhelles Leinenhemd bilden eine schlichte Hochzeitsgarnitur. Das hüftlange Wams schließt mit kleinen stoffbezogenen Knöpfen; eine elfenbeinfarbene Flechtborte zeichnet den niedrigen Stehkragen und die schmalen Manschetten nach. Dunklere taupefarbene Seiteneinsätze betonen den sauberen Sitz.</p><p>Das leichte Leinenfutter hält die Form und bleibt auch beim Tanz angenehm. Eine taupefarbene Hose und ein schmaler sandfarbener Stoffgürtel gehören dazu. Nach dem Fest lässt sich das Wams ebenso für andere Einladungen tragen.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Leinengefüttertes Hochzeitswams"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Stoffbezogene Knöpfe und helle Flechtborte"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Hemd, taupefarbene Hose und Stoffgürtel"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Sandfarbenes Wolltuch · Naturleinen · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Hochzeit · schlicht & festlich"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Herren",
+              "Sandfarbenes Wolltuch · Naturleinen"
+            ],
+            "priceMin": "1,75",
+            "priceMax": "",
+            "currencyCode": "ST",
+            "currencyLabel": "Silbertaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 15.646739130434783,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -2140,7 +3358,123 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 15,
+            "priceFill": 15.88695652173913,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "braeutigam-fliederschwur",
+            "category": "herren-hochzeit",
+            "title": "Fliederschwur",
+            "subtitle": "Hochzeitswams mit offenem Schulterkragen · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hochzeitsmode",
+            "image": "./assets/goettliche-eleganz/kleidung/braeutigam-fliederschwur.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Ein fliederfarbenes Wams mit glatter geschlossener Brust liegt unter einem kurzen offenen Schulterkragen aus elfenbeinfarbener Seide. Kleine helle Seidenknöpfe sitzen paarweise auf der Front; schmale cenyrische Flechtlinien fassen den Kragen. Die Ärmel bleiben lang und schmal, an den Schultern nur leicht gefaltet.</p><p>Der Schulterkragen lässt sich nach der Trauung abnehmen. Ein helles Hemd, eine perlgraue Hose und ein schmaler fliederfarbener Gürtel ergänzen die Garnitur. Kragenweite und Ärmellänge werden bei einer persönlichen Anprobe abgestimmt.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Abnehmbarer Seidenschulterkragen"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Paarweise gesetzte Seidenknöpfe"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Hemd, perlgraue Hose und Gürtel"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Fliederfarbenes Wolltuch · Elfenbeinseide · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Hochzeit · sanfte Farben"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Herren",
+              "Fliederfarbenes Wolltuch · Elfenbeinseide"
+            ],
+            "priceMin": "9,4",
+            "priceMax": "",
+            "currencyCode": "ST",
+            "currencyLabel": "Silbertaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 18.473913043478262,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "braeutigam-bernsteinstunde",
+            "category": "herren-hochzeit",
+            "title": "Bernsteinstunde",
+            "subtitle": "Festwams mit kurzer ärmelloser Überrobe · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hochzeitsmode",
+            "image": "./assets/goettliche-eleganz/kleidung/braeutigam-bernsteinstunde.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Bernsteinfarbener Brokat mit kleinen Ährenmotiven bildet eine kurze offene Überrobe. Darunter liegt ein cremefarbenes Seidenwams mit eckigem Kragen und schmalen stoffbezogenen Knöpfen. Warme braune Flechtborten gliedern die breiten Revers und die gefalteten Oberärmel; ihre Linien bleiben bewusst frei von schweren Metallbesätzen.</p><p>Eine fein gearbeitete Messingschließe hält die Überrobe. Das Futter wird an den Schultern verstärkt, damit der Brokat beim Tanzen ruhig liegt. Hemd, honigbraune Hose und passender Stoffgürtel gehören zur beschriebenen Garnitur.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Seidenbrokat mit eingewebten Ähren"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Angepasste Messingschließe"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Cremefarbenes Wams mit abgestimmter Unterkleidung"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Bernsteinfarbener Seidenbrokat · Cremefarbene Seide · Messing · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Hochzeit · festliches Hausmodell"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Herren",
+              "Bernsteinfarbener Seidenbrokat · Cremefarbene Seide · Messing"
+            ],
+            "priceMin": "2,35",
+            "priceMax": "",
+            "currencyCode": "GT",
+            "currencyLabel": "Goldtaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 23.684782608695652,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -2198,7 +3532,123 @@
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 24,
+            "priceFill": 26.086956521739133,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "braeutigam-perlenversprechen",
+            "category": "herren-hochzeit",
+            "title": "Perlenversprechen",
+            "subtitle": "Hochzeitsgarnitur mit kurzem silbergrauem Mantel · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hochzeitsmode",
+            "image": "./assets/goettliche-eleganz/kleidung/braeutigam-perlenversprechen.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Perlgraue Seide und ein kreidehelles Wams geben dieser Garnitur eine kühle, lichte Wirkung. Der flach gefaltete Kragen und die schmalen Ärmel tragen feine silbergestickte Myrtenzweige. Ein kurzer silbergrauer Mantel ruht auf beiden Schultern; zwei kleine Süßwasserperlen sitzen an seiner flachen Silberschließe.</p><p>Der Mantel wird zum Tanz abgenommen, während die gestickte Wamsfront vollständig bleibt. Hemd und hellgraue Hose sind in die Anprobe einbezogen. Die Perlenfassungen werden glatt unterlegt, damit Metall und Stickerei den Stoff nicht aufreiben.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Echte Silberstickerei mit Myrtenzweigen"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Silberschließe mit zwei kleinen Süßwasserperlen"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Abnehmbarer Mantel und vollständige Unterkleidung"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Perlgraue Seide · Silberfaden · Kleine Süßwasserperlen · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Hochzeit · feine Gesellschaft"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Herren",
+              "Perlgraue Seide · Silberfaden · Kleine Süßwasserperlen"
+            ],
+            "priceMin": "7,3",
+            "priceMax": "",
+            "currencyCode": "GT",
+            "currencyLabel": "Goldtaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 41.97826086956522,
+            "priceOptions": [],
+            "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
+            "conditionsTitle": "Anprobe & Fertigung",
+            "conditions": "Für die Hochzeit nach Bestellung gefertigt. Stoff, Anproben und Fertigstellung werden vor Auftragserteilung vereinbart.",
+            "attributes": []
+          },
+          {
+            "id": "braeutigam-ebenholzgeluebde",
+            "category": "herren-hochzeit",
+            "title": "Ebenholzgelübde",
+            "subtitle": "Persönliche Hochzeitsgarnitur mit geteilter Überrobe · Argentisch-Cenyrisch",
+            "status": "available",
+            "badge": "Hochzeitsmode",
+            "image": "./assets/goettliche-eleganz/kleidung/braeutigam-ebenholzgeluebde.png",
+            "imageFit": "contain",
+            "imagePosition": "center",
+            "imageFormat": "square",
+            "imageHeight": 300,
+            "descriptionTitle": "Schnitt & Erscheinung",
+            "description": "<p>Ein schwarzes Seidensamtwams mit hohem umgelegtem Kragen steht zwischen champagnerfarbenen Brokatbahnen. Die offene Überrobe fällt in zwei klaren Flächen; feine Goldfadenstickerei verbindet argentisches Lorbeerlaub mit cenyrischen Flechtlinien. Ein einzelner kleiner Rauchquarz sitzt in der vergoldeten Silberschließe des kompakten schwarzen Mantels.</p><p>Hemd, Hose, Wams, Überrobe und abnehmbarer Mantel entstehen gemeinsam nach Maß. Die breiten Brokatflächen bleiben frei, damit die aufwendigen Nähte und die schmalen Goldlinien wirken können. Mehrere Anproben und die beschriebene Rauchquarzfassung sind enthalten.</p>",
+            "featuresTitle": "Zur Garnitur",
+            "features": [
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Fünfteilige Maßgarnitur"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Echte Goldstickerei und gefasster Rauchquarz"
+              },
+              {
+                "icon": "✦",
+                "title": "",
+                "text": "Mehrere persönliche Anproben"
+              }
+            ],
+            "originTitle": "Stoff & Herkunft",
+            "origin": "Schwarzer Seidensamt · Champagnerbrokat · Goldfaden · Rauchquarz · Hauswerkstätten in Gwynthor; Importstoffe über die Veltrane-Route.",
+            "usageTitle": "Passender Anlass",
+            "usageTags": [
+              "Hochzeit · besonderer Einzelentwurf"
+            ],
+            "tags": [
+              "Kleidung",
+              "Argentisch-Cenyrisch",
+              "Herren",
+              "Schwarzer Seidensamt · Champagnerbrokat · Goldfaden · Rauchquarz"
+            ],
+            "priceMin": "19",
+            "priceMax": "",
+            "currencyCode": "GT",
+            "currencyLabel": "Goldtaler",
+            "currencyIcon": "◈",
+            "unit": "1 Garnitur",
+            "priceTitle": "Preis der beschriebenen Garnitur",
+            "priceFill": 85.21739130434783,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",
@@ -2249,14 +3699,14 @@
               "Herren",
               "Elfenbeinbrokat · Nachtblaue Seide · Weißgold · Granate"
             ],
-            "priceMin": "68",
+            "priceMin": "23",
             "priceMax": "",
             "currencyCode": "GT",
             "currencyLabel": "Goldtaler",
             "currencyIcon": "◈",
             "unit": "1 Garnitur",
             "priceTitle": "Preis der beschriebenen Garnitur",
-            "priceFill": 33,
+            "priceFill": 100,
             "priceOptions": [],
             "priceNote": "Die genannten Teile, Besätze und die übliche Anpassung gehören zum Preis. Schuhe und nicht genannter Schmuck werden gesondert bestellt.",
             "conditionsTitle": "Anprobe & Fertigung",

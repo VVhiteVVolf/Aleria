@@ -25,6 +25,8 @@ Die erste bebilderte Quest, Reisevermessung, Szenenstandorte und das Gruppenkont
 - `quest-preparations/`: getrennte öffentliche Vorbereitungen je Abenteuer;
   `quest-authored-dossiers.js` führt ihre Ausgaben zusammen.
 
+Die spoilerfreie Fleischsammler-Vorbereitung und ihre sieben benannten Orte:
+[FLEISCHSAMMLER_QUEST_2026-11-02.md](../../docs/quests/FLEISCHSAMMLER_QUEST_2026-11-02.md).
 
 Die allgemeine Landingpage-Anbindung liegt unter `../landing/landing-quest-*`.
 Servervorgänge liegen unter `firebase/functions/src/quests`. Kein UI-Bereich

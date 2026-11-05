@@ -27,3 +27,7 @@ Archiv/Quellen/kuestenchroniken-2026-10-24/*.html -text whitespace=-blank-at-eol
 AleriaAlmanach/DokumentenWerkstatt/assets/book-reader.bundle.js linguist-generated whitespace=-blank-at-eol
 # House import manifests also verify the exact original HTML bytes.
 "Familien Häuser und Clans/**/animexx-*.html" -text whitespace=-blank-at-eol
+# Exact pre-amendment religion documents are preserved as historical source bytes.
+Vorschau/Klythesia/sources/religion-before-20261104/eintrag.json -text whitespace=-blank-at-eol
+Vorschau/Klythesia/sources/religion-before-20261104/glaube.json -text whitespace=-blank-at-eol
+Vorschau/Klythesia/sources/evidence-data-before-public-20261105.mjs -text whitespace=-blank-at-eol

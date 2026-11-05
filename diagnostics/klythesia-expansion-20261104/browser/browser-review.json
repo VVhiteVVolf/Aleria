@@ -1,0 +1,923 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-11-04T23:02:41.578Z",
+  "url": "http://127.0.0.1:8897/Vorschau/Klythesia/",
+  "runtime": "Installed Chrome; fresh isolated headless contexts",
+  "desktop": {
+    "dialogs": [
+      {
+        "kind": "artwork",
+        "id": "realm-klythesia",
+        "title": "Geliefertes Klythesia-Zeichen",
+        "images": [
+          {
+            "src": "assets/previews/klythesia-sign.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "theios",
+        "title": "Theíos",
+        "images": [
+          {
+            "src": "assets/estates/previews/theios.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/theios.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "anassa",
+        "title": "Anássa",
+        "images": [
+          {
+            "src": "assets/estates/previews/anassa.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/anassa.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "polemistria",
+        "title": "Polemístria",
+        "images": [
+          {
+            "src": "assets/estates/previews/polemistria.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/polemistria.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "hiereia",
+        "title": "Hiéreia",
+        "images": [
+          {
+            "src": "assets/estates/previews/hiereia.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/hiereia.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "ergatide",
+        "title": "Ergatíde",
+        "images": [
+          {
+            "src": "assets/estates/previews/ergatide.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/ergatide.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "synoikos",
+        "title": "Synoikos",
+        "images": [
+          {
+            "src": "assets/estates/previews/synoikos.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/synoikos.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "doulos",
+        "title": "Doulos",
+        "images": [
+          {
+            "src": "assets/estates/previews/doulos.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/doulos.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "doule",
+        "title": "Doule",
+        "images": [
+          {
+            "src": "assets/estates/previews/doule.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/doule.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "prototype",
+        "id": "helot",
+        "title": "Helot",
+        "images": [
+          {
+            "src": "assets/warriors/previews/helot.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/helot.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "prototype",
+        "id": "antrophe",
+        "title": "Antrophe",
+        "images": [
+          {
+            "src": "assets/warriors/previews/antrophe.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/antrophe.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "prototype",
+        "id": "thorax",
+        "title": "Thorax",
+        "images": [
+          {
+            "src": "assets/warriors/previews/thorax.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/thorax.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "prototype",
+        "id": "toxare",
+        "title": "Toxare",
+        "images": [
+          {
+            "src": "assets/warriors/previews/toxare.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/toxare.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "prototype",
+        "id": "myrmex",
+        "title": "Myrmex",
+        "images": [
+          {
+            "src": "assets/warriors/previews/myrmex.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/myrmex.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "prototype",
+        "id": "xiphone",
+        "title": "Xiphone",
+        "images": [
+          {
+            "src": "assets/warriors/previews/xiphone.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/xiphone.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "prototype",
+        "id": "thyrsia",
+        "title": "Thyrsia",
+        "images": [
+          {
+            "src": "assets/warriors/previews/thyrsia.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/thyrsia.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "house",
+        "id": "klyrath",
+        "title": "Klyrath",
+        "images": [
+          {
+            "src": "assets/previews/hydra.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/house-klyrath.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/originals/hydra.png",
+          "assets/warriors/production/house-klyrath.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "house",
+        "id": "asterid",
+        "title": "Asterid",
+        "images": [
+          {
+            "src": "assets/previews/phoenix.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/house-asterid.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/originals/phoenix.png",
+          "assets/warriors/production/house-asterid.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "house",
+        "id": "theryn",
+        "title": "Theryn",
+        "images": [
+          {
+            "src": "assets/previews/mantikor.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/house-theryn.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/originals/mantikor.png",
+          "assets/warriors/production/house-theryn.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "house",
+        "id": "soryth",
+        "title": "Soryth",
+        "images": [
+          {
+            "src": "assets/previews/satyr.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/house-soryth.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/originals/satyr.png",
+          "assets/warriors/production/house-soryth.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "house",
+        "id": "melanthis",
+        "title": "Melanthis",
+        "images": [
+          {
+            "src": "assets/previews/sphinx.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/house-melanthis.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/originals/sphinx.png",
+          "assets/warriors/production/house-melanthis.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "house",
+        "id": "naukyra",
+        "title": "Naukyra",
+        "images": [
+          {
+            "src": "assets/emblems/previews/house-naukyra.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/house-naukyra.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/emblems/production/house-naukyra.png",
+          "assets/warriors/production/house-naukyra.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "house",
+        "id": "elyssar",
+        "title": "Elyssar",
+        "images": [
+          {
+            "src": "assets/emblems/previews/house-elyssar.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/house-elyssar.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/emblems/production/house-elyssar.png",
+          "assets/warriors/production/house-elyssar.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      }
+    ],
+    "map": {
+      "start": 982.484375,
+      "enlarged": 2357.96875,
+      "pan": {
+        "left": 200,
+        "top": 160
+      },
+      "fit": true,
+      "desktopDrag": true
+    },
+    "draft": {
+      "selectionMove": true,
+      "persist": true,
+      "export": true,
+      "import": true,
+      "foreignDraftRejected": true,
+      "undo": true,
+      "reset": true
+    },
+    "allSectionsExpanded": true,
+    "overflow": false,
+    "sourceLinks": 6
+  },
+  "mobile": {
+    "dialogs": [
+      {
+        "kind": "artwork",
+        "id": "realm-klythesia",
+        "title": "Geliefertes Klythesia-Zeichen",
+        "images": [
+          {
+            "src": "assets/previews/klythesia-sign.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "theios",
+        "title": "Theíos",
+        "images": [
+          {
+            "src": "assets/estates/previews/theios.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/theios.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "anassa",
+        "title": "Anássa",
+        "images": [
+          {
+            "src": "assets/estates/previews/anassa.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/anassa.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "polemistria",
+        "title": "Polemístria",
+        "images": [
+          {
+            "src": "assets/estates/previews/polemistria.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/polemistria.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "hiereia",
+        "title": "Hiéreia",
+        "images": [
+          {
+            "src": "assets/estates/previews/hiereia.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/hiereia.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "ergatide",
+        "title": "Ergatíde",
+        "images": [
+          {
+            "src": "assets/estates/previews/ergatide.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/ergatide.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "synoikos",
+        "title": "Synoikos",
+        "images": [
+          {
+            "src": "assets/estates/previews/synoikos.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/synoikos.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "doulos",
+        "title": "Doulos",
+        "images": [
+          {
+            "src": "assets/estates/previews/doulos.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/doulos.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "estate",
+        "id": "doule",
+        "title": "Doule",
+        "images": [
+          {
+            "src": "assets/estates/previews/doule.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/estates/production/doule.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "prototype",
+        "id": "helot",
+        "title": "Helot",
+        "images": [
+          {
+            "src": "assets/warriors/previews/helot.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/helot.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "prototype",
+        "id": "antrophe",
+        "title": "Antrophe",
+        "images": [
+          {
+            "src": "assets/warriors/previews/antrophe.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/antrophe.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "prototype",
+        "id": "thorax",
+        "title": "Thorax",
+        "images": [
+          {
+            "src": "assets/warriors/previews/thorax.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/thorax.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "prototype",
+        "id": "toxare",
+        "title": "Toxare",
+        "images": [
+          {
+            "src": "assets/warriors/previews/toxare.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/toxare.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "prototype",
+        "id": "myrmex",
+        "title": "Myrmex",
+        "images": [
+          {
+            "src": "assets/warriors/previews/myrmex.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/myrmex.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "prototype",
+        "id": "xiphone",
+        "title": "Xiphone",
+        "images": [
+          {
+            "src": "assets/warriors/previews/xiphone.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/xiphone.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "prototype",
+        "id": "thyrsia",
+        "title": "Thyrsia",
+        "images": [
+          {
+            "src": "assets/warriors/previews/thyrsia.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/thyrsia.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "house",
+        "id": "klyrath",
+        "title": "Klyrath",
+        "images": [
+          {
+            "src": "assets/previews/hydra.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/house-klyrath.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/originals/hydra.png",
+          "assets/warriors/production/house-klyrath.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "house",
+        "id": "asterid",
+        "title": "Asterid",
+        "images": [
+          {
+            "src": "assets/previews/phoenix.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/house-asterid.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/originals/phoenix.png",
+          "assets/warriors/production/house-asterid.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "house",
+        "id": "theryn",
+        "title": "Theryn",
+        "images": [
+          {
+            "src": "assets/previews/mantikor.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/house-theryn.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/originals/mantikor.png",
+          "assets/warriors/production/house-theryn.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "house",
+        "id": "soryth",
+        "title": "Soryth",
+        "images": [
+          {
+            "src": "assets/previews/satyr.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/house-soryth.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/originals/satyr.png",
+          "assets/warriors/production/house-soryth.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "house",
+        "id": "melanthis",
+        "title": "Melanthis",
+        "images": [
+          {
+            "src": "assets/previews/sphinx.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/house-melanthis.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/originals/sphinx.png",
+          "assets/warriors/production/house-melanthis.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "house",
+        "id": "naukyra",
+        "title": "Naukyra",
+        "images": [
+          {
+            "src": "assets/emblems/previews/house-naukyra.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/house-naukyra.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/emblems/production/house-naukyra.png",
+          "assets/warriors/production/house-naukyra.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "house",
+        "id": "elyssar",
+        "title": "Elyssar",
+        "images": [
+          {
+            "src": "assets/emblems/previews/house-elyssar.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/house-elyssar.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/emblems/production/house-elyssar.png",
+          "assets/warriors/production/house-elyssar.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      }
+    ],
+    "map": {
+      "start": 358.796875,
+      "enlarged": 861.109375,
+      "pan": {
+        "left": 200,
+        "top": 16
+      },
+      "fit": true,
+      "desktopDrag": false
+    },
+    "draft": {
+      "selectionMove": true,
+      "persist": true,
+      "export": true,
+      "import": true,
+      "foreignDraftRejected": true,
+      "undo": true,
+      "reset": true
+    },
+    "allSectionsExpanded": true,
+    "overflow": false,
+    "sourceLinks": 6
+  },
+  "consoleErrors": [],
+  "requestFailures": [],
+  "httpErrors": []
+}

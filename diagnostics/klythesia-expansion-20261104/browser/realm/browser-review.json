@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-11-04T23:19:10.339Z",
+  "url": "http://127.0.0.1:8897/Vorschau/Klythesia/",
+  "scope": "Incremental review of changed realm-crest dialog and new national Thorax view",
+  "runtime": "Installed Chrome; fresh isolated headless contexts",
+  "desktop": {
+    "dialogs": [
+      {
+        "kind": "artwork",
+        "id": "realm-klythesia",
+        "title": "Geliefertes Klythesia-Zeichen",
+        "images": [
+          {
+            "src": "assets/previews/klythesia-sign.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/realm-klythesia.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/originals/klythesia-sign.png",
+          "assets/warriors/production/realm-klythesia.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "realm-warrior",
+        "id": "realm-klythesia",
+        "title": "Klythesische Thorax",
+        "images": [
+          {
+            "src": "assets/warriors/previews/realm-klythesia.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/realm-klythesia.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      }
+    ],
+    "overflow": false
+  },
+  "mobile": {
+    "dialogs": [
+      {
+        "kind": "artwork",
+        "id": "realm-klythesia",
+        "title": "Geliefertes Klythesia-Zeichen",
+        "images": [
+          {
+            "src": "assets/previews/klythesia-sign.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "assets/warriors/previews/realm-klythesia.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/originals/klythesia-sign.png",
+          "assets/warriors/production/realm-klythesia.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      },
+      {
+        "kind": "realm-warrior",
+        "id": "realm-klythesia",
+        "title": "Klythesische Thorax",
+        "images": [
+          {
+            "src": "assets/warriors/previews/realm-klythesia.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ],
+        "originals": [
+          "assets/warriors/production/realm-klythesia.png"
+        ],
+        "overflow": false,
+        "scrollTop": 0
+      }
+    ],
+    "overflow": false
+  },
+  "consoleErrors": [],
+  "requestFailures": [],
+  "httpErrors": []
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "review": "All individual tool outputs and the final correctly alpha-composited production contact sheet were actually inspected.",
+  "figures": [
+    {"houseId":"house-nerathen","assetStem":"house-nerathen","name":"Nerath","class":"Hoplit","helmet":"Early Corinthian, no crest","heraldry":"Hedgehog on the large hoplon","equipmentChecked":"Continuous spear, shield construction and both feet visible","marginNote":"Complete spear tip has a tight 5px transparent margin; no crop"},
+    {"houseId":"house-kallorys","assetStem":"house-kallorys","name":"Kallorys","class":"Kriegssänger","helmet":"Open conical Pilos with narrow crest","heraldry":"Copper centipede on purple waist cloth","equipmentChecked":"Exactly two axes, one in each hand; red Greek tattoos, no instrument","marginNote":"Complete crest has an 11px transparent margin; no crop"},
+    {"houseId":"house-erythaden","assetStem":"house-erythaden-v2","name":"Erythad","class":"Toxot and Marinekrieger","helmet":"Open Boeotian-inspired brimmed Greek helmet","heraldry":"Red lobster on ivory-blue chest cloth","equipmentChecked":"Simple C-shaped bow, straight end-to-end string, arrow quiver, sheathed straight sword","revision":"Bow geometry corrected with image_gen; alpha coreThreshold210 preserves the thin real source string"},
+    {"houseId":"house-theskariden","assetStem":"house-theskariden-v2","name":"Theskarid","class":"Lanzenreiter","helmet":"Distinct forward-curling Phrygian helmet","heraldry":"Murex on purple-charcoal saddlecloth","equipmentChecked":"Four complete horse legs/hooves, hindquarter tail, saddle, stirrups, girth, connected reins, straight lance","mount":"Sarkal, anatomical reference from the existing Bestiarium","revision":"Helmet and framing corrected with image_gen"}
+  ],
+  "transparencyNote":"The raw PNG viewer may display the RGB haze hidden under alpha0. The composited contact sheet confirms a clean transparent exterior. No source-transparent gaps were filled.",
+  "tool":"image_gen.imagegen",
+  "publicationPerformed":false
+}

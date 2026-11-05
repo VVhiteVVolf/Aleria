@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "newCrests": [
+    {
+      "id": "elyssar",
+      "productionDimensions": [
+        1304,
+        1304
+      ],
+      "previewDimensions": [
+        600,
+        600
+      ],
+      "exactOpaqueCircle": true,
+      "rgbUnchanged": true,
+      "hashesMatch": true
+    },
+    {
+      "id": "naukyra",
+      "productionDimensions": [
+        1294,
+        1294
+      ],
+      "previewDimensions": [
+        600,
+        600
+      ],
+      "exactOpaqueCircle": true,
+      "rgbUnchanged": true,
+      "hashesMatch": true
+    }
+  ],
+  "suppliedOriginalsUnchanged": 7,
+  "tool": "image_gen.imagegen",
+  "visualReview": "Both generated outputs and alpha-composited contact sheet inspected: complete flat circular motifs, no text or cropped anatomy.",
+  "generatorJobs": "Vorschau/Klythesia/sources/heraldry/additional-emblem-jobs.json",
+  "receipts": "Vorschau/Klythesia/sources/heraldry-asset-receipts.json"
+}

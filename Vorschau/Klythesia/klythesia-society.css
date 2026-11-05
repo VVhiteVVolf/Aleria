@@ -1,0 +1,17 @@
+@import '../shared/country-workbench/estate-cards.css';
+@import '../shared/country-workbench/heraldry-gallery.css';
+@import '../shared/country-workbench/placement.css';
+
+.history-track{list-style:none;counter-reset:chapter;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;padding:0;margin:36px 0}
+.history-track li{counter-increment:chapter;border-top:1px solid var(--line);padding:22px 0 0 42px;position:relative}
+.history-track li::before{content:counter(chapter,decimal-leading-zero);position:absolute;left:0;top:26px;color:var(--accent);font:11px var(--sans)}
+.history-track h3{font-size:23px;margin:0 0 14px}.history-track p{font-size:16px;line-height:1.8;margin:0}
+.government-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:30px}.government-grid article{padding:22px;border:1px solid var(--line)}.government-grid h3{font-size:21px;margin-top:0}.government-grid p{font-size:15px;line-height:1.8}
+.source-caption{font:12px/1.7 var(--sans);color:var(--muted)}
+.prototype-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.prototype-card{border:1px solid var(--line);padding:24px}.prototype-card .art-button{height:360px;width:100%;background:none;border:0;padding:0}.prototype-card .art-button img{height:100%;width:100%;object-fit:contain}.prototype-card h3{font-size:26px;margin:18px 0}.prototype-card p{font-size:15px;line-height:1.8}.prototype-card dl{font:12px/1.7 var(--sans)}.prototype-card dt{color:var(--muted)}.prototype-card dd{margin:0 0 12px}
+.motif-card>.details-link{display:block;margin:18px auto 0}.klythesia-placement .seat-card{background:#f5efdf}.klythesia-placement .clan-pin{filter:drop-shadow(0 1px 2px #2228)}
+.house-class-note{font:13px/1.8 var(--sans);color:var(--muted)}
+.realm-warrior-link{margin-top:18px;background:transparent;border:1px solid var(--line);font:12px/1.5 var(--sans);color:var(--accent)}
+.status-toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:180;max-width:calc(100vw - 36px);padding:14px 20px;border:1px solid var(--line);background:var(--ink);color:var(--paper);box-shadow:0 4px 16px #0003;font:13px/1.6 var(--sans)}
+@media(max-width:900px){.prototype-grid,.government-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.history-track,.government-grid,.prototype-grid{grid-template-columns:1fr}.history-track{gap:20px}.prototype-card .art-button{height:370px}.government-grid article{padding:20px}}

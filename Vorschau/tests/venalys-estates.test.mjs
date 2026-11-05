@@ -8,6 +8,7 @@ import { context } from '../Venalys/realm-context.mjs';
 import { districts,pointsOfInterest } from '../Venalys/territory-data.mjs';
 import { renderVenalysPage } from '../Venalys/page-render.mjs';
 import { createVenalysHouseDialogs } from '../Venalys/house-dialogs.mjs';
+import { renderHouseGroups } from '../Venalys/assignment-view.mjs';
 import { shouldPublish } from '../../netlify/build/site-publish.mjs';
 
 test('Venalys keeps its five confirmed estates and the Advena outside a fixed social rank',() => {
@@ -27,6 +28,13 @@ test('all five comic cards are present once and their large views cannot assign 
   assert.equal([...html.matchAll(/id="staende"/g)].length,1);
   assert.equal([...html.matchAll(/data-art-kind="estate"/g)].length,5);
   assert(html.includes('href="#staende"'));
+  assert.equal([...html.matchAll(/class="country-warrior-card"/g)].length,22);
+  const patrons = houses.filter(house => house.rank === 'patrician');
+  const groups = renderHouseGroups(houses,null);
+  for (const house of patrons) {
+    assert(groups.includes(`data-action="show-house" data-house="${house.id}"`),house.id);
+    assert(html.includes(`src="assets/warriors/previews/${house.id}.webp"`),house.id);
+  }
   assert(!html.includes('St?nde'));
   assert(!/on(?:click|input|change)=/.test(html));
   const content = { innerHTML:'',scrollTop:20 };
@@ -41,8 +49,16 @@ test('all five comic cards are present once and their large views cannot assign 
     assert(content.innerHTML.includes(`href="${estate.fullsize}"`));
     assert(!content.innerHTML.includes('select-from-dialog'));
   }
-  dialogs.showHouse(houses[0].id);
-  assert(content.innerHTML.includes('select-from-dialog'),'existing house placement action remains available');
+  for (const house of patrons) {
+    dialogs.showHouse(house.id);
+    assert(content.innerHTML.includes(`<h2 id="art-title">Haus ${house.name}</h2>`));
+    assert(content.innerHTML.includes(`src="assets/warriors/previews/${house.id}.webp"`));
+    assert(content.innerHTML.includes(`href="assets/warriors/production/${house.id}.png"`));
+    assert(content.innerHTML.includes(`src="${house.crest}"`));
+    assert(content.innerHTML.includes(`href="${house.original}"`));
+    assert(content.innerHTML.includes(`data-action="select-from-dialog" data-house="${house.id}"`),
+      'existing house placement action remains available');
+  }
   assert.equal(placements,0);
   dialogs.destroy();
 });

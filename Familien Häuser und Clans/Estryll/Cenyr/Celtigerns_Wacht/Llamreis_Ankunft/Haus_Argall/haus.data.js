@@ -94,15 +94,15 @@ window.HAEUSER_DATA = {
   "showMotto": false,
   "sections": {
     "overview": "Die Argall sind eine kleine Bürgerfamilie aus Llysfaen. Die bekannten Generationen verzweigen sich in die Brüderlinien Brinthans und Uthyrs sowie eine kleinere Vetternlinie. Das Familienzeichen zeigt ein Erntemotiv; ein bestimmter Betrieb ist bisher nicht festgelegt.",
-    "history": "Cyran und Gweneth gehören zur ältesten namentlich bekannten Generation. Brenar und Nerwen führen zu Brinthan und Uthyr; Iwrian begründet die kleinere Linie, aus der Dyrwyn hervorgeht. Brinthan ist das überlieferte Oberhaupt.",
+    "history": "Cyran und Gweneth gehören zur ältesten namentlich bekannten Generation. Brenar und Nerwen führen zu Brinthan und Uthyr; Iwrian und Avelyn sind die Eltern Dyrwyns und seines elf Jahre jüngeren Bruders Rhydric. Rhydric ist damit ein Vetter Brinthans und Uthyrs. Brinthan bleibt das Oberhaupt des Hauses.",
     "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
-    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
+    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Rhydric Argall ist Burgverwalter und Hauptmann von Caer Ysgellfor. Die kleine Festung an der Hauptstraße schützt die umliegenden Höfe und sammelt Getreide und Vorräte für den Weitertransport nach Gwynthor. Die ungelöste Mordserie überfordert den abgekämpften Hauptmann. Sein eitler Sohn Perwyn lebt bei ihm und dient ihm als Knappe; einen eigenen Ritterschlag besitzt er noch nicht.",
     "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
     "holdings": "Eigene Besitzungen und Betriebe sind bisher nicht gesondert belegt.",
     "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
-    "conflictsAlliances": "Die Verbindung zu Haus Draig betrifft Shylene, Owain und Iolo. Andere jüngere Angehörige sind unverheiratet; ihre weiteren Lebenslinien bleiben offen.",
+    "conflictsAlliances": "Die Verbindung zu Haus Draig betrifft Shylene, Owain und Iolo. Rhydrics Ehe mit Gwenella ist geschieden. Die schöne, rothaarige und arrogante Gwenella brannte mit dem fahrenden Barden Maelor Ffionydd nach Aberon durch. Ihre Beziehung ist als Affäre erfasst, mit dem Grund: „Durchgebrannt nach Aberon“. Eine Ehe zwischen ihnen ist nicht festgelegt. Perwyn ist Rhydrics und Gwenellas gemeinsamer Sohn. Maelor ist nicht sein Vater. Die übrigen bereits erfassten jüngeren Angehörigen bleiben unverheiratet.",
     "values": "Shylene, Tochter Brinthans und Eris’, hatte eine geheime Beziehung zu Owain Draig. Ihr Sohn Iolo ist als nicht eheliches Kind in der bestehenden Familienakte erfasst. Diese persönliche Verbindung erhebt die Argall nicht in den Adel.",
-    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
+    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Rhydric und sein Sohn Perwyn wohnen in Caer Ysgellfor bei Gwynthor; der Stammsitz des Hauses bleibt Llysfaen. Gwenella und Maelor leben in Aberon. Ihre Herkunftsfamilien sind nicht überliefert. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
     "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
     "historicalFigures": "Die folgenden Persönlichkeiten gehören zur belegten Geschichte der Familie."
   },
@@ -133,13 +133,25 @@ window.HAEUSER_DATA = {
       "alt": "Brinthan Argall",
       "format": "portrait"
     },
+    "hof-offices-1": {
+      "src": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=rhydric-argall",
+      "alt": "Rhydric Argall",
+      "format": "portrait"
+    },
     "hof-offices-2": {
+      "src": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=perwyn-argall",
+      "alt": "Perwyn Argall",
+      "format": "portrait"
+    },
+    "hof-offices-4": {
       "src": "../Stammbäume/assets/images/portraits/haus-draig/owain-draig.jpg",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=owain-draig",
       "alt": "Owain Draig",
       "format": "portrait"
     },
-    "hof-offices-3": {
+    "hof-offices-5": {
       "src": "../Stammbäume/assets/images/portraits/haus-argall/iolo-argall.jpg",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=iolo-draig",
       "alt": "Iolo Argall",
@@ -180,6 +192,20 @@ window.HAEUSER_DATA = {
         "title": "Angehörige und Aufgaben",
         "entries": [
           {
+            "name": "Rhydric Argall",
+            "role": "Burgverwalter und Hauptmann von Caer Ysgellfor",
+            "detail": "Dyrwyns deutlich jüngerer Bruder und Vetter Brinthans und Uthyrs; wohnt in Caer Ysgellfor bei Gwynthor.",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=rhydric-argall",
+            "imageKey": "hof-offices-1"
+          },
+          {
+            "name": "Perwyn Argall",
+            "role": "Knappe seines Vaters Rhydric Argall",
+            "detail": "Siebzehnjähriger gemeinsamer Sohn Rhydrics und Gwenellas; eitel und sorgfältig auf sein Auftreten bedacht.",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=perwyn-argall",
+            "imageKey": "hof-offices-2"
+          },
+          {
             "name": "Iwrian Argall",
             "role": "Begründer der kleinen Vetterlinie · Einziger Überlebender seiner Generation",
             "detail": "Begründer der kleinen Vetterlinie · Einziger Überlebender seiner Generation",
@@ -191,14 +217,14 @@ window.HAEUSER_DATA = {
             "role": "Geheime Affäre Shylene Argalls",
             "detail": "Geheime Affäre Shylene Argalls",
             "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=owain-draig",
-            "imageKey": "hof-offices-2"
+            "imageKey": "hof-offices-4"
           },
           {
             "name": "Iolo Argall",
             "role": "Unehelicher Sohn Shylene Argalls und Owain Draigs",
             "detail": "Unehelicher Sohn Shylene Argalls und Owain Draigs",
             "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-argall&mode=view&person=iolo-draig",
-            "imageKey": "hof-offices-3"
+            "imageKey": "hof-offices-5"
           }
         ]
       }

@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "tool": "image_gen.imagegen",
+  "jobs": [
+    {
+      "id": "house-nerathen",
+      "name": "Nerath",
+      "prototypeId": "prototype-02",
+      "role": "Hoplit",
+      "description": "Hoplit des Hauses Nerath mit frühem korinthischem Helm, schwerem Hoplon und Igelheraldik.",
+      "reason": "Der Igel erscheint als schützendes Schildmotiv und gezackte Randzier, während Bronze und breite Beinschienen die wehrhafte Haltung des Hauses tragen.",
+      "equipment": [
+        "Stoßspeer",
+        "Großer Hoplon mit Igelmotiv",
+        "Früher korinthischer Helm",
+        "Bronzener Brustpanzer",
+        "Breite Beinschienen"
+      ],
+      "palette": [
+        "Senfgelb",
+        "Schwarz",
+        "Elfenbein",
+        "Matte Bronze"
+      ],
+      "mount": null,
+      "direction": "A powerful HOPLITE of House Nerath. Full EARLY CORINTHIAN bronze helmet with long integral noseguard, enclosing cheeks and NO feather crest, as on an archaic Greek helmet chart. Heavy matte bronze muscle breastplate and broad bronze greaves; black under-tunic and a short mustard-yellow shoulder mantle. His left forearm supports a large circular HOPLON whose mustard-yellow painted face bears ONE clear ivory-and-black HEDGEHOG in side profile matching reference 2. Hedgehog prickles inspire only a jagged black woven hem and subtle engraved border, no literal spikes on helmet. Right hand naturally holds a perfectly straight upright dory spear with its complete spearhead in view. Straight xiphos sheathed at hip. Calm frontal three-quarter guarding posture, not royal Agoge regalia.",
+      "houseId": "house-nerathen",
+      "assetStem": "house-nerathen",
+      "prompt": "Use case: stylized-concept. Asset type: full-body noble house warrior for Aleria, Phalantia.\nReference image 1 is ONLY the approved PAINTING STYLE: matte restrained hand-painted gouache, simplified large clear forms, soft thin painted edges, fine even pigment grain. Do NOT copy its western knight armor, griffin, colors, haze or background. Reference image 2 is ONLY the concrete house HERALDRY and palette; use the motif faithfully as paint or embroidery on practical equipment, not a sculpted animal-head helmet.\nExactly one fit muscular young adult HUMAN MAN age 23-29, anatomically normal round human ears. Ancient GREEK / SPARTAN fantasy equipment, not Roman or medieval European armor. Full figure in a calm believable three-quarter catalog stance, entire highest crest, all weapon tips and both complete feet visible with generous clear margins in a 1024x1536 portrait PNG (2:3). Distinctive dignified silhouette. Fully transparent background and open gaps; no scene, floor, cast shadow, smoke, glow, haze, halo or paper. Matte subdued colors and sparing soft shade, no realistic glossy metal or CGI. Functional hands, straps and grips. No text, watermark, firearms, women, children, old or fat men.\n\nPrimary request: A powerful HOPLITE of House Nerath. Full EARLY CORINTHIAN bronze helmet with long integral noseguard, enclosing cheeks and NO feather crest, as on an archaic Greek helmet chart. Heavy matte bronze muscle breastplate and broad bronze greaves; black under-tunic and a short mustard-yellow shoulder mantle. His left forearm supports a large circular HOPLON whose mustard-yellow painted face bears ONE clear ivory-and-black HEDGEHOG in side profile matching reference 2. Hedgehog prickles inspire only a jagged black woven hem and subtle engraved border, no literal spikes on helmet. Right hand naturally holds a perfectly straight upright dory spear with its complete spearhead in view. Straight xiphos sheathed at hip. Calm frontal three-quarter guarding posture, not royal Agoge regalia.",
+      "references": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Phalantia\\assets\\emblems\\production\\house-nerathen.png"
+      ],
+      "unselectedRevisions": [
+        {
+          "id": "house-nerathen",
+          "assetStem": "house-nerathen-unselected-v2",
+          "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a750-bc62-7192-9fe8-263c9d19456a\\exec-149ac091-28f0-4e14-bc9a-082eef424a62.png",
+          "workspaceOriginal": "assets/warriors/generated/archive/house-nerathen-unselected-v2.png",
+          "prompt": "Use case: background-extraction. Edit target: the single existing Nerath hoplite illustration. Preserve the young muscular man, early Corinthian helmet, anatomy, face, bronze armor, mustard cloak, hedgehog shield, straight spear, sheathed sword, colors and matte gouache painting. Remove ALL brown/gold background haze and color cloud, including opaque and semitransparent fog. Every pixel outside the actual man, shield, weapon and clothing must become real transparent alpha, including gaps. No replacement background, no white or black color fill, no paper, glow, shadow or halo. Fit the entire existing composition slightly smaller within a 1024x1536 portrait so there is at least 30 pixels clear transparent margin around spear tip, feet and all silhouette. Do not crop or redesign the figure. Entire weapon, shield and both feet visible. Output a genuine transparent RGBA PNG.",
+          "references": [
+            "E:/Aleria/Vorschau/Phalantia/assets/warriors/generated/house-nerathen.png"
+          ],
+          "selected": false,
+          "reason": "The original was already correctly transparent; RGB-only viewer was misleading. Original remains selected."
+        }
+      ]
+    },
+    {
+      "id": "house-kallorys",
+      "name": "Kallorys",
+      "prototypeId": "prototype-08",
+      "role": "Kriegssänger",
+      "description": "Fanatischer Kriegssänger mit zwei Äxten, roter Tätowierung und kupfer-purpurfarbener Skolopenderheraldik.",
+      "reason": "Die gegliederten Bordüren greifen den Skolopender auf; freie Arme und die rote Tätowierung zeigen die fanatische, leichte Kampfweise.",
+      "equipment": [
+        "Eine Kriegsaxt in jeder Hand",
+        "Piloshelm mit schmaler Helmzier",
+        "Rote griechische Tätowierungen",
+        "Leichter Brustgurt",
+        "Purpurfarbene Schurzbahnen"
+      ],
+      "palette": [
+        "Kupfer",
+        "Pflaumenviolett",
+        "Schwarz",
+        "Rote Tätowierungen"
+      ],
+      "mount": null,
+      "direction": "A muscular bare-chested KRIEGSSAENGER berserker of House Kallorys, shouting or singing with open mouth, a young strong face. Distinct bronze PILOS conical Greek helmet, open face, small narrow copper-and-dark-purple upright plume, NOT the broad royal transverse crest. Sparse copper armor on wrists and one shoulder, dark leather cross-body harness, a segmented purple-and-copper hanging waist panel bearing ONE embroidered C-shaped CENTIPEDE matching reference 2. RED angular ancient Greek meander tattoos cover visible chest and strong arms, never black tattoos. Exactly ONE functional one-handed war axe in EACH hand, two axes total, both held low and outward so both handles, fingers and blades are fully visible and separate from legs. No extra weapons, no instrument, no lute, no horn. Short dark hair, no old face. Grounded calm wide catalog stance despite fierce shouting expression.",
+      "houseId": "house-kallorys",
+      "assetStem": "house-kallorys",
+      "prompt": "Use case: stylized-concept. Asset type: full-body noble house warrior for Aleria, Phalantia.\nReference image 1 is ONLY the approved PAINTING STYLE: matte restrained hand-painted gouache, simplified large clear forms, soft thin painted edges, fine even pigment grain. Do NOT copy its western knight armor, griffin, colors, haze or background. Reference image 2 is ONLY the concrete house HERALDRY and palette; use the motif faithfully as paint or embroidery on practical equipment, not a sculpted animal-head helmet.\nExactly one fit muscular young adult HUMAN MAN age 23-29, anatomically normal round human ears. Ancient GREEK / SPARTAN fantasy equipment, not Roman or medieval European armor. Full figure in a calm believable three-quarter catalog stance, entire highest crest, all weapon tips and both complete feet visible with generous clear margins in a 1024x1536 portrait PNG (2:3). Distinctive dignified silhouette. Fully transparent background and open gaps; no scene, floor, cast shadow, smoke, glow, haze, halo or paper. Matte subdued colors and sparing soft shade, no realistic glossy metal or CGI. Functional hands, straps and grips. No text, watermark, firearms, women, children, old or fat men.\n\nPrimary request: A muscular bare-chested KRIEGSSAENGER berserker of House Kallorys, shouting or singing with open mouth, a young strong face. Distinct bronze PILOS conical Greek helmet, open face, small narrow copper-and-dark-purple upright plume, NOT the broad royal transverse crest. Sparse copper armor on wrists and one shoulder, dark leather cross-body harness, a segmented purple-and-copper hanging waist panel bearing ONE embroidered C-shaped CENTIPEDE matching reference 2. RED angular ancient Greek meander tattoos cover visible chest and strong arms, never black tattoos. Exactly ONE functional one-handed war axe in EACH hand, two axes total, both held low and outward so both handles, fingers and blades are fully visible and separate from legs. No extra weapons, no instrument, no lute, no horn. Short dark hair, no old face. Grounded calm wide catalog stance despite fierce shouting expression.",
+      "references": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Phalantia\\assets\\emblems\\production\\house-kallorys.png"
+      ],
+      "unselectedRevisions": [
+        {
+          "id": "house-kallorys",
+          "assetStem": "house-kallorys-unselected-v2",
+          "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a750-bc62-7192-9fe8-263c9d19456a\\exec-bc54b1cb-2b07-4619-93b1-d2d73111a6c4.png",
+          "workspaceOriginal": "assets/warriors/generated/archive/house-kallorys-unselected-v2.png",
+          "prompt": "Use case: background-extraction. Edit target: the existing Kallorys berserker. Preserve the full young muscular warrior, shouting face, Pilos helmet with purple copper crest, bright red meander tattoos, two separate axes correctly grasped one in each hand, copper armor, purple centipede heraldic waist cloth, proportions and matte painted style. Remove ALL brown/copper background haze and glow, even opaque parts. Outside the exact figure, axes and costume must be fully transparent alpha, including the gaps between arms and body and between legs. No black, white, colored or paper background. No external shadow, halo, cloud or vignette. Preserve a 1024x1536 portrait and fit entire silhouette with at least 25 pixels clear transparent margin at crest, axe tips and feet. No changes to the figure's design or weapons.",
+          "references": [
+            "E:/Aleria/Vorschau/Phalantia/assets/warriors/generated/house-kallorys.png"
+          ],
+          "selected": false,
+          "reason": "The original was already correctly transparent; RGB-only viewer was misleading. Original remains selected."
+        }
+      ]
+    },
+    {
+      "id": "house-erythaden",
+      "name": "Erythad",
+      "prototypeId": "prototype-05",
+      "role": "Toxot und Marinekrieger",
+      "description": "Maritimer Toxot mit boiotischem Helm, korrekt gespanntem Bogen und Langustenheraldik.",
+      "reason": "Kalkweiß, Rotocker und dunkelblaue Wellen verbinden das Hauszeichen mit dem Seekrieg; offener Helm und leichter Panzer erlauben Beweglichkeit an Deck.",
+      "equipment": [
+        "Einfacher gespannter Langbogen",
+        "Rückenköcher",
+        "Gerades Kurzschwert",
+        "Offener boiotischer Helm",
+        "Leichter Schuppenpanzer"
+      ],
+      "palette": [
+        "Rotocker",
+        "Kalkweiß",
+        "Dunkelblau",
+        "Matte Bronze"
+      ],
+      "mount": null,
+      "direction": "A maritime TOXOT archer of House Erythad, fit young muscular man. Distinct open BOEOTIAN bronze helmet with broad rolled brim, front eyebrow-shaped folds and cheek openings, no plume and no royal Corinthian mask. Light white linen torso armor partly over bronze fish-scale plates, dark blue narrow shoulder cloak, red-ochre meander borders and one clear RED SPINY LOBSTER painted on a white chest cloth, matching reference 2, no giant claws. A functional arrow quiver on his back and a STRAIGHT Greek short sword sheathed at hip. He holds ONE well-formed STRUNG SIMPLE LONGBOW vertically well clear of his left leg and torso, one hand grasping its central wrapped grip. Crucial bow geometry: continuous wooden stave forms one smooth symmetric C-shaped arc with equal upper and lower limbs around the center grip, not an S, no broken bend, no twisted or zigzag shape. ONE taut perfectly STRAIGHT bowstring joins only the two end nocks as the chord of that arc, visibly separated from the central wooden grip by open transparent space. Both wooden tips and the full straight string must be visible and understandable. Other hand rests at belt. A small rope coil is attached at belt; no scenery or ship.",
+      "houseId": "house-erythaden",
+      "assetStem": "house-erythaden-v2",
+      "prompt": "Use case: stylized-concept. Asset type: full-body noble house warrior for Aleria, Phalantia.\nReference image 1 is ONLY the approved PAINTING STYLE: matte restrained hand-painted gouache, simplified large clear forms, soft thin painted edges, fine even pigment grain. Do NOT copy its western knight armor, griffin, colors, haze or background. Reference image 2 is ONLY the concrete house HERALDRY and palette; use the motif faithfully as paint or embroidery on practical equipment, not a sculpted animal-head helmet.\nExactly one fit muscular young adult HUMAN MAN age 23-29, anatomically normal round human ears. Ancient GREEK / SPARTAN fantasy equipment, not Roman or medieval European armor. Full figure in a calm believable three-quarter catalog stance, entire highest crest, all weapon tips and both complete feet visible with generous clear margins in a 1024x1536 portrait PNG (2:3). Distinctive dignified silhouette. Fully transparent background and open gaps; no scene, floor, cast shadow, smoke, glow, haze, halo or paper. Matte subdued colors and sparing soft shade, no realistic glossy metal or CGI. Functional hands, straps and grips. No text, watermark, firearms, women, children, old or fat men.\n\nPrimary request: A maritime TOXOT archer of House Erythad, fit young muscular man. Distinct open BOEOTIAN bronze helmet with broad rolled brim, front eyebrow-shaped folds and cheek openings, no plume and no royal Corinthian mask. Light white linen torso armor partly over bronze fish-scale plates, dark blue narrow shoulder cloak, red-ochre meander borders and one clear RED SPINY LOBSTER painted on a white chest cloth, matching reference 2, no giant claws. A functional arrow quiver on his back and a STRAIGHT Greek short sword sheathed at hip. He holds ONE well-formed STRUNG SIMPLE LONGBOW vertically well clear of his left leg and torso, one hand grasping its central wrapped grip. Crucial bow geometry: continuous wooden stave forms one smooth symmetric C-shaped arc with equal upper and lower limbs around the center grip, not an S, no broken bend, no twisted or zigzag shape. ONE taut perfectly STRAIGHT bowstring joins only the two end nocks as the chord of that arc, visibly separated from the central wooden grip by open transparent space. Both wooden tips and the full straight string must be visible and understandable. Other hand rests at belt. A small rope coil is attached at belt; no scenery or ship.",
+      "references": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Phalantia\\assets\\emblems\\production\\house-erythaden.png"
+      ],
+      "revisions": [
+        {
+          "assetStem": "house-erythaden-v2",
+          "prompt": "Use case: precise-object-edit. Change ONLY the BOW in this existing Erythad archer illustration. Preserve the young man, pose, right hand, left hand position, armor, helmet, face, lobster heraldry, arrows, colors and transparent background. Replace the current double-humped wooden bow stave with ONE SIMPLE smooth C-shaped strung longbow. Viewed in this side profile it must have a single broad convex arc: the TOP and BOTTOM tips are vertically aligned on the left, the central wrapped grip in his hand is the FARTHEST RIGHT point of the whole stave, and each limb smoothly curves inward toward its end tip. No extra bulge above or below the hand, NO double hump, NO recurves, no zigzags, no S shape. Keep exactly ONE straight taut vertical bowstring joining top and bottom end nocks on the left as the chord of this C arc. Leave a wide clear transparent gap between grip and string. Entire bow visible. Preserve original overall painting and composition at 1024x1536 portrait. No added scene, shadow, glow, cloud or paper. Genuine transparent RGBA PNG outside character and bow.",
+          "references": [
+            "E:/Aleria/Vorschau/Phalantia/assets/warriors/generated/house-erythaden.png"
+          ],
+          "reason": "Replace the symmetrical reflex-deflex stave with one simple smooth C arc and a straight string."
+        }
+      ],
+      "alphaProcessing": {
+        "outsideThreshold": 160,
+        "coreThreshold": 210,
+        "edgeRadius": 2
+      },
+      "alphaReason": "The continuous bowstring has alpha224–237 in the generator original. Lowering only the opaque-core threshold preserves that real narrow feature without changing RGB or filling source-transparent pixels."
+    },
+    {
+      "id": "house-theskariden",
+      "name": "Theskarid",
+      "prototypeId": "prototype-06",
+      "role": "Lanzenreiter",
+      "description": "Edler Lanzenreiter auf einem Sarkal mit phrygischem Helm und Purpurschnecke auf der Satteldecke.",
+      "reason": "Die Purpurschnecke prägt Stickerei und Farbteilung der Satteldecke; die Figur erhält eine eigenständige, helle Reiterpanzerung.",
+      "equipment": [
+        "Lange Lanze",
+        "Gerades Reiterschwert",
+        "Phrygischer Helm",
+        "Griechischer Schuppenpanzer",
+        "Sarkal mit funktionalem Zaumzeug"
+      ],
+      "palette": [
+        "Elfenbein",
+        "Purpurrot",
+        "Dunkelgrau",
+        "Antiksilber"
+      ],
+      "mount": {
+        "name": "Sarkal",
+        "profile": "../../Bestiarium/tiere/pferde/sarkal/index.html",
+        "source": "Bestiarium/tiere/pferde/sarkal/profil.json",
+        "reference": "Bestiarium/assets/horse-profiles/sarkal.webp"
+      },
+      "direction": "Exactly ONE fully visible MOUNTED LANCE CAVALRYMAN of House Theskarid on ONE Sarkal horse. Use reference 3 ONLY for the HORSE BREED anatomy, ignore its riders, battle, equipment and background. Horse is tall and long-legged, sinewy athletic military horse, deep chest, long neck, straight taut back, dappled grey coat with short dark mane and tail, not a massive draft horse. Stand horse almost in side profile with all FOUR legs and FOUR complete hooves distinct, no extra legs, natural hindquarter-attached tail. Rider is young muscular man wearing a graceful PHRYGIAN Greek helmet with forward-curving peak and articulated cheek guards, a small pale plume, open face. Silvered Greek scale-and-muscle cuirass, ivory shoulder cloth, purple-red cloak, split riding skirt over fitted trousers and leather boots. Saddlecloth has purple-red upper field, charcoal lower field, ONE large ivory MUREX SPINY SHELL matching reference 2 on the visible side, and a narrow Greek silver meander hem. Rider right hand holds a SINGLE LONG STRAIGHT LANCE nearly vertical with all of its shaft, spear tip and butt fully inside the canvas. Left hand holds a coherent pair of reins connected visibly to a simple bridle and bit. Functional saddle, girth and stirrups with believable sitting balance; no horse armor hiding anatomy. Entire horse, rider, helmet crest and lance fit in 1024x1536 portrait with generous transparent margins and no floor or shadow.",
+      "houseId": "house-theskariden",
+      "assetStem": "house-theskariden-v2",
+      "prompt": "Use case: stylized-concept. Asset type: full-body noble house warrior for Aleria, Phalantia.\nReference image 1 is ONLY the approved PAINTING STYLE: matte restrained hand-painted gouache, simplified large clear forms, soft thin painted edges, fine even pigment grain. Do NOT copy its western knight armor, griffin, colors, haze or background. Reference image 2 is ONLY the concrete house HERALDRY and palette; use the motif faithfully as paint or embroidery on practical equipment, not a sculpted animal-head helmet.\nExactly one fit muscular young adult HUMAN MAN age 23-29, anatomically normal round human ears. Ancient GREEK / SPARTAN fantasy equipment, not Roman or medieval European armor. Full figure in a calm believable three-quarter catalog stance, entire highest crest, all weapon tips and both complete feet visible with generous clear margins in a 1024x1536 portrait PNG (2:3). Distinctive dignified silhouette. Fully transparent background and open gaps; no scene, floor, cast shadow, smoke, glow, haze, halo or paper. Matte subdued colors and sparing soft shade, no realistic glossy metal or CGI. Functional hands, straps and grips. No text, watermark, firearms, women, children, old or fat men.\n\nPrimary request: Exactly ONE fully visible MOUNTED LANCE CAVALRYMAN of House Theskarid on ONE Sarkal horse. Use reference 3 ONLY for the HORSE BREED anatomy, ignore its riders, battle, equipment and background. Horse is tall and long-legged, sinewy athletic military horse, deep chest, long neck, straight taut back, dappled grey coat with short dark mane and tail, not a massive draft horse. Stand horse almost in side profile with all FOUR legs and FOUR complete hooves distinct, no extra legs, natural hindquarter-attached tail. Rider is young muscular man wearing a graceful PHRYGIAN Greek helmet with forward-curving peak and articulated cheek guards, a small pale plume, open face. Silvered Greek scale-and-muscle cuirass, ivory shoulder cloth, purple-red cloak, split riding skirt over fitted trousers and leather boots. Saddlecloth has purple-red upper field, charcoal lower field, ONE large ivory MUREX SPINY SHELL matching reference 2 on the visible side, and a narrow Greek silver meander hem. Rider right hand holds a SINGLE LONG STRAIGHT LANCE nearly vertical with all of its shaft, spear tip and butt fully inside the canvas. Left hand holds a coherent pair of reins connected visibly to a simple bridle and bit. Functional saddle, girth and stirrups with believable sitting balance; no horse armor hiding anatomy. Entire horse, rider, helmet crest and lance fit in 1024x1536 portrait with generous transparent margins and no floor or shadow.",
+      "references": [
+        "E:\\Aleria\\AleriaAlmanach\\docs\\art\\character-style\\2026-10-24-approved-house-knight.png",
+        "E:\\Aleria\\Vorschau\\Phalantia\\assets\\emblems\\production\\house-theskariden.png",
+        "E:\\Aleria\\Bestiarium\\assets\\horse-profiles\\sarkal.webp"
+      ],
+      "revisions": [
+        {
+          "assetStem": "house-theskariden-v2",
+          "prompt": "Use case: precise-object-edit. The local image is the Theskarid mounted warrior. Change ONLY his helmet and the framing. Replace the existing ordinary round helmet with the PHRYGIAN type from an ancient Greek helmet chart: a tall pointed cap leaning and curling sharply forward above the forehead, with the point forming an unmistakable hooked forward peak, articulated cheek guards and an open young face. Keep its silver color and modest pale plume. Preserve the horse, all four legs and complete hooves, tail, saddle, stirrups, connected reins, rider's anatomy and face, full straight lance, ivory-purple armor and murex shell heraldry exactly in design. Scale the existing whole composition down enough that horse's nose, tail, lance tip and hooves have at least 35 pixels of truly transparent surrounding space. Portrait output exactly 1024x1536. The image already contains true transparency: preserve it. No new floor, shadow, haze, background or other object. Keep the same matte hand-painted style, no extra gloss.",
+          "references": [
+            "E:/Aleria/Vorschau/Phalantia/assets/warriors/generated/house-theskariden.png"
+          ],
+          "reason": "Distinct Phrygian helmet and larger transparent margins; horse/gear preserved."
+        }
+      ]
+    }
+  ]
+}

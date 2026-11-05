@@ -53,6 +53,26 @@ class WarriorArtifactsTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "positive"):
             artifacts.contact(columns=0)
 
+    def test_two_collections_in_one_realm_keep_separate_manifests_and_owned_ids(self):
+        prototypes = pipeline.WarriorArtifacts(root=self.root, schema="prototypes", qa_dir=self.root / "qa")
+        houses = pipeline.WarriorArtifacts(root=self.root, schema="houses", qa_dir=self.root / "house-qa",
+                                          manifest_name="house-manifest.json")
+        pipeline.save_json(prototypes.manifest, prototypes.read_manifest())
+        original = prototypes.manifest.read_bytes()
+        pipeline.save_json(houses.manifest, houses.read_manifest())
+        self.assertEqual(prototypes.read_manifest()["schema"], "prototypes")
+        self.assertEqual(houses.read_manifest()["schema"], "houses")
+        with self.assertRaisesRegex(ValueError, "outside"):
+            pipeline.main(root=self.root, schema="houses", qa_dir=houses.qa_dir,
+                          manifest_name="house-manifest.json", asset_ids=["house-one"],
+                          argv=["build", "--ids", "prototype-one"])
+        self.assertEqual(prototypes.manifest.read_bytes(), original)
+
+    def test_manifest_name_cannot_escape_the_asset_collection(self):
+        for name in ("../outside.json", "nested/manifest.json", "nested\\manifest.json", "UPPER.json"):
+            with self.subTest(name=name), self.assertRaisesRegex(ValueError, "manifest name"):
+                pipeline.WarriorArtifacts(root=self.root, schema="test", qa_dir=self.root / "qa", manifest_name=name)
+
 
 if __name__ == "__main__":
     unittest.main()

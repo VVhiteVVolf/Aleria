@@ -58,6 +58,7 @@ import { HOUSE_LOTHAIRE_FAMILY } from './house-lothaire-family.js';
 import { HOUSE_VALERUS_FAMILY } from './house-valerus-family.js';
 import { GWYNTHOR_SMALL_HOUSEHOLD_FAMILIES } from './gwynthor-small-households.js';
 import { GWYNTHOR_ERBSTREIT_FAMILIES } from './gwynthor-erbstreit/family-records.js';
+import { GWYNTHOR_FLEISCHSAMMLER_FAMILIES } from './gwynthor-fleischsammler/family-records.js';
 import { SEPT_CNEACAIL_FAMILY } from './sept-cneacail-family.js';
 import { LLYSFAEN_COMMONER_HOUSE_FAMILIES } from './llysfaen-commoner-house-families.js';
 import { CENYR_TERRITORY_COMMONER_FAMILIES } from './cenyr-territory-commoner-families.js';
@@ -409,6 +410,9 @@ export const FAMILY_REGISTRY = Object.freeze([
   ...GWYNTHOR_ERBSTREIT_FAMILIES.map(family => familyRecord({
     id: family.document.id, title: family.document.title, family,
     type: family.document.houseProfile.rankId === 'commoner' ? 'commoner' : 'dynasty'
+  })),
+  ...GWYNTHOR_FLEISCHSAMMLER_FAMILIES.map(family => familyRecord({
+    id: family.document.id, title: family.document.title, family, type: 'commoner'
   })),
   familyRecord({ id: 'haus-veltrane', title: 'Haus Veltrane', family: HOUSE_VELTRANE_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'haus-fontani', title: 'Haus Fontani', family: HOUSE_FONTANI_FAMILY, type: 'commoner' }),

@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-11-04T19:35:35.320Z",
+  "scope": "Local Klythesia source-backed preparation only",
+  "url": "http://127.0.0.1:8897/Vorschau/Klythesia/",
+  "facts": 51,
+  "namedMapPlaces": 7,
+  "suppliedOriginals": 7,
+  "artworkDialogs": 6,
+  "catalogueEntries": 14,
+  "religiousTitles": 12,
+  "clanRoles": 1,
+  "openQuestionsAndSourceNotes": 21,
+  "targetedTests": {
+    "command": "node Vorschau/Klythesia/scripts/klythesia.test.mjs",
+    "passed": 11,
+    "failed": 0
+  },
+  "browser": {
+    "proof": "diagnostics/klythesia/browser/browser-review.json",
+    "desktop": [
+      1440,
+      1000
+    ],
+    "mobile": [
+      390,
+      844
+    ],
+    "dialogsEach": 6,
+    "originalImagesAvailable": 7,
+    "mapZoomAndPan": true,
+    "allEvidenceSectionsExpanded": true,
+    "horizontalOverflow": false,
+    "errors": []
+  },
+  "visualInspection": {
+    "status": "passed",
+    "images": [
+      "diagnostics/klythesia/browser/desktop-hero.png",
+      "diagnostics/klythesia/browser/mobile-hero.png",
+      "diagnostics/klythesia/browser/desktop-gallery.png",
+      "diagnostics/klythesia/browser/mobile-gallery.png",
+      "diagnostics/klythesia/browser/desktop-art.png",
+      "diagnostics/klythesia/browser/mobile-art.png",
+      "diagnostics/klythesia/browser/map-390.png"
+    ]
+  },
+  "sourceIntegrity": "All seven archived PNGs byte-identical to supplied sources; SHA-256 and image dimensions checked",
+  "nonInference": {
+    "newLore": false,
+    "newHouses": false,
+    "houseAssignments": false,
+    "newWarriorClasses": false,
+    "newImages": false,
+    "capitalConfirmed": false,
+    "canonicalDataChanged": false
+  },
+  "publishing": {
+    "push": false,
+    "deploy": false,
+    "noindex": true,
+    "authoringArchivesExcluded": true
+  },
+  "hashes": {
+    "Vorschau/Klythesia/sources/religion-evidence.json": "088d1d1c1c53a9cac1f849c110184416c7175b230c3dbafe825a5392e4758b06",
+    "Vorschau/Klythesia/sources/cross-source-evidence.json": "ce070b66b01fe149486abd8f8b0b42793753c9e32c7caa51eb3b89e491ae1464",
+    "Vorschau/Klythesia/sources/map-evidence.json": "3804f8a17f213dce25c434bb1a50a2319d3d567119c07180a09bc0bec705d77a",
+    "Vorschau/Klythesia/assets.source.json": "3b91f95caa4935f21fc7adee15bb98c477d8b10bdd0e8202cf237cbeb6808cac",
+    "Vorschau/Klythesia/evidence-data.mjs": "e2b8447873af07390256ec05bcdc7d43c39f21be13d9f03164867daa0b488182",
+    "Vorschau/Klythesia/map-data.mjs": "0e93f66ceb0ef0462adce16aaccd7db1a241faa7ec5b80901067a9a5051045f0",
+    "Vorschau/Klythesia/art-data.mjs": "1c3ca1f0adb11ca462ea72129842f25e0a371bb245157e4eed4181402349f6f8",
+    "Vorschau/Klythesia/proposal-render.mjs": "4e687ade5a78416b72023cc9acfdcf18c046b2122b00a8d1540ed328cc29c8ff",
+    "Vorschau/Klythesia/evidence-view.mjs": "8339209760cd072336ba5c6232946c637a13de9a6faa88179241b298f39c4eaf",
+    "Vorschau/Klythesia/proposal-app.mjs": "d9196362b50f4a0a235ab0a51c72937bed566d3244e1337245cb0cdf9ae96626",
+    "Vorschau/Klythesia/art-dialogs.mjs": "204b9c5e93c965ba4fe188f5f31a69bf0768465082df14e2240dfabaf80c3153",
+    "Vorschau/Klythesia/proposal.css": "78cc9162cde78a92d3e30d4a2a46689022d8ff70fb61fd0d61398fcd947155f6",
+    "Vorschau/Klythesia/klythesia-evidence.css": "8cc4de38d54e8aebdc7f582924398fc5c0d9ebfa195188837e7c87d8e653b9ca",
+    "Vorschau/Klythesia/klythesia-map-art.css": "828df833ff16b389f21f2827b4c270e137516833580f85bd0aa40d2cefa2f068",
+    "Vorschau/Klythesia/index.html": "11b26c563617ff0e7ae73f909f82488e00efbc462c072d417d5676d1e277470e"
+  }
+}

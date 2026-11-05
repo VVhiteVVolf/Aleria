@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "klythesia-public-source-20261105",
+  "kind": "canonical-public-source-bytes",
+  "reason": "The canonical public Git checkout uses LF for existing runtime sources. Research records retain the hashes of the originally inspected CRLF bytes. The existing catalogue builder fingerprints the active public bytes anew.",
+  "semanticChanges": 0,
+  "historicalRecordsUnchanged": [
+    "sources/religion-evidence.json",
+    "sources/cross-source-evidence.json"
+  ],
+  "preservedOriginals": [
+    {
+      "path": "Vorschau/Klythesia/sources/religion-before-20261104/eintrag.json",
+      "sha256": "f146c569a7ec93daebb2865ec01cdf6f2645718a12ece0d266b085a1c754ed06",
+      "bytes": 41286
+    },
+    {
+      "path": "Vorschau/Klythesia/sources/religion-before-20261104/glaube.json",
+      "sha256": "af70a0792f692d2e5eeeb422b3173430d487129d750986ce5c28b5038bb428a1",
+      "bytes": 14048
+    },
+    {
+      "path": "Vorschau/Klythesia/sources/evidence-data-before-public-20261105.mjs",
+      "sha256": "559597b10d8f0910682fbf8d1d6f75f5ad7443f73824adaa9971410f308a8b7a",
+      "bytes": 77076
+    }
+  ],
+  "changes": [
+    {
+      "path": "Religionen/religionen/phalantischer-bund/eintrag.json",
+      "transformation": "crlf-to-lf",
+      "researchSha256": "c0b7090bb255161837c43416f0eafd43affdae3b25e455b6e777d73e6e9de4d9",
+      "normalizedResearchSha256": "a4ef89af52ffb04b0dae30fa0b7ac2ccccdab72d66c213ef6d63647546a42440",
+      "publicSha256": "a4ef89af52ffb04b0dae30fa0b7ac2ccccdab72d66c213ef6d63647546a42440",
+      "researchBytes": 17422,
+      "publicBytes": 17123
+    },
+    {
+      "path": "Fonts/Stoicheia-Gesamtpaket-1.000/Quellen/Originalvorlage_Stoicheia.txt",
+      "transformation": "crlf-to-lf",
+      "researchSha256": "a23915bab61d934103b7e7a14fc70f21a8570848c8b8ed433c0c6f3dee663bf9",
+      "normalizedResearchSha256": "c881eae8ecbc941a1635fb6bf9ce7717bfe59956207fb7503908d41065c5ee29",
+      "publicSha256": "c881eae8ecbc941a1635fb6bf9ce7717bfe59956207fb7503908d41065c5ee29",
+      "researchBytes": 47595,
+      "publicBytes": 46909
+    },
+    {
+      "path": "AleriaAlmanach/modules/name-list/name-list-data.js",
+      "transformation": "crlf-to-lf",
+      "researchSha256": "e38fe1821ac0660b9f866021e318c0040ce39a88792edbbf7c6174a56358196e",
+      "normalizedResearchSha256": "c0ffaea4824b3c4e6132a40862126d0245a447335a7030dceb031f39f455144c",
+      "publicSha256": "c0ffaea4824b3c4e6132a40862126d0245a447335a7030dceb031f39f455144c",
+      "researchBytes": 17260,
+      "publicBytes": 16933
+    },
+    {
+      "path": "Bestiarium/tiere/pferde/xanathos/profil.json",
+      "transformation": "crlf-to-lf",
+      "researchSha256": "e403af999628541cc91240e57c074a013cfc14867acc8c3107bce30cd824913c",
+      "normalizedResearchSha256": "bdb8d88a9e5846132097cda0f855fe35f43cbb96c5328628b5099b50b5ff8380",
+      "publicSha256": "bdb8d88a9e5846132097cda0f855fe35f43cbb96c5328628b5099b50b5ff8380",
+      "researchBytes": 5972,
+      "publicBytes": 5800
+    },
+    {
+      "path": "Markt/Rossmarkt/Rossmarkt.html",
+      "transformation": "crlf-to-lf",
+      "researchSha256": "9decb5281d686b31ad6b202b9d2ba806dcfc9f9dd89a185bed92f587dbd46475",
+      "normalizedResearchSha256": "106fd8031e32ff828f2baa5b86eac7561d067450b867471551a3601c47545671",
+      "publicSha256": "106fd8031e32ff828f2baa5b86eac7561d067450b867471551a3601c47545671",
+      "researchBytes": 207071,
+      "publicBytes": 205845
+    },
+    {
+      "path": "Bestiarium/tiere/pferde/art.json",
+      "transformation": "crlf-to-lf",
+      "researchSha256": "f9eea9ee03810eb4431fb90c1e2d91cfa3100da8ea9f1c18238e6c0b23e280f9",
+      "normalizedResearchSha256": "b2faea92279a3876c471a4dc8dbc8d8d50a5c4c0c4849283064ff05faaef70da",
+      "publicSha256": "b2faea92279a3876c471a4dc8dbc8d8d50a5c4c0c4849283064ff05faaef70da",
+      "researchBytes": 26952,
+      "publicBytes": 26369
+    }
+  ]
+}

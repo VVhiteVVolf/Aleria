@@ -2,7 +2,7 @@ import {createPlacementControls} from './placement-controls.mjs?v=20261103-place
 import {createClanMap} from './clan-map.mjs?v=20261103-placement-2';
 
 /** Shared draft controller. Country modules own data, copy and rendering. */
-export function createCountryPlacement({root,onHouse,notice},{houses,settlements,createPlacementState,createMapProposal,escapeHtml:e,houseCard,renderSeats,rankLabel,storageKey,resetMessage,exportName,caption,getSelectionFocusTarget}){
+export function createCountryPlacement({root,onHouse,notice},{houses,settlements,createPlacementState,createMapProposal,escapeHtml:e,houseCard,renderSeats,rankLabel,storageKey,resetMessage,exportName,caption,getSelectionFocusTarget,rootClanLabel='Lehnszugehörigkeit offen'}){
  const state=createPlacementState(),houseSelect=root.querySelector('[data-role="house-select"]'),seatSelect=root.querySelector('[data-role="seat-select"]');
  let selected=null;
  function save(){if(storageKey===null){notice('Deine Änderung bleibt in dieser geöffneten Ansicht. Bitte den Sitzentwurf herunterladen.');return;}try{localStorage.setItem(storageKey,state.serialize());}catch{notice('Deine Änderung bleibt in dieser geöffneten Ansicht erhalten.');}}
@@ -26,7 +26,7 @@ export function createCountryPlacement({root,onHouse,notice},{houses,settlements
   catch(error){notice(error.message||'Diese Sitzzuordnung ist nicht möglich.');return;}
   if(moved){selected=null;save();render();notice('Sitz im Entwurf aktualisiert.');}
  }
- const map=createClanMap({root:root.querySelector('[data-role="map-section"]'),dialog:root.querySelector('#map-dialog'),tooltip:root.querySelector('#clan-tooltip'),getVariant:()=>createMapProposal(state.current()),escape:e,onClan:onHouse,rankLabel,rootClanLabel:'Lehnszugehörigkeit offen',caption});
+ const map=createClanMap({root:root.querySelector('[data-role="map-section"]'),dialog:root.querySelector('#map-dialog'),tooltip:root.querySelector('#clan-tooltip'),getVariant:()=>createMapProposal(state.current()),escape:e,onClan:onHouse,rankLabel,rootClanLabel,caption});
  const controls=createPlacementControls({root,getSelected:()=>selected,onMove:move,escape:e,canMove:state.canMove});
  houseSelect.innerHTML='<option value="">Ein Wappen auswählen …</option>'+houses.map(h=>`<option value="${e(h.id)}">${h.clan?'Clan':'Haus'} ${e(h.name)}</option>`).join('');
  seatSelect.innerHTML='<option value="">Sitz offenlassen</option>'+settlements.map(s=>`<option value="${s.id}" ${s.placementDisabled?'disabled':''}>${e(s.name)}</option>`).join('');

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-04T15:48:31.081Z",
+  "status": "passed",
+  "scope": "Local Phalantia preparation page only",
+  "page": "Vorschau/Phalantia/index.html",
+  "previewUrl": "http://127.0.0.1:8897/Vorschau/Phalantia/",
+  "territory": {
+    "cities": 8,
+    "royalHouses": 2,
+    "perioikicHouses": 7,
+    "totalHouses": 9,
+    "outsidePlace": "Alantaic",
+    "bordersInvented": false
+  },
+  "art": {
+    "suppliedOriginalsBytePreserved": 2,
+    "houseCrests": 9,
+    "estateComics": 6,
+    "classPrototypes": 8,
+    "individualHouseWarriors": 0
+  },
+  "tests": {
+    "countryAndPublicationPassed": 6,
+    "sharedPlacementRegressionPassed": 10,
+    "houseCatalogCheckPassed": true
+  },
+  "browser": {
+    "method": "Installed Playwright with installed Chrome, fresh isolated headless contexts",
+    "desktopDialogs": 23,
+    "mobileDialogs": 23,
+    "exactTitlesAndImagePaths": true,
+    "containFitEveryDialog": true,
+    "horizontalOverflow": false,
+    "desktopPlacement": {
+      "selection": true,
+      "move": true,
+      "persistenceAfterReload": true,
+      "undo": true,
+      "export": true,
+      "import": true,
+      "reset": true,
+      "mapModal": true,
+      "pointerDrag": true
+    },
+    "mobilePlacement": {
+      "touchAlternativeSelection": true,
+      "move": true,
+      "reset": true
+    },
+    "consoleErrors": [],
+    "requestFailures": [],
+    "finalTextRevisionReviewed": true
+  },
+  "sourceProjection": {
+    "authoringPromptsAndReceiptsExcluded": true,
+    "activeImagesAndSuppliedDownloadsPublishable": true
+  },
+  "sharedChanges": [
+    "Vorschau/shared/country-placement.mjs: optional rootClanLabel with unchanged default",
+    "netlify/build/publication-policy.mjs: six Phalantia exclusions",
+    "netlify/build/world-content-tasks.mjs: register Phalantia country and publication checks"
+  ],
+  "noPushOrDeploy": true,
+  "noCanonicalFamilyOrFirebaseChanges": true,
+  "realmContextSha256": "a3e25b7b958660801e1d8baa1b17039bfe702ac62c171bfcbbca12c6a4edc253"
+}

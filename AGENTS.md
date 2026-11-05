@@ -1,3 +1,439 @@
+# Öffentlicher Gesamtrelease: Nutzerfreigabe vom 5. November 2026
+
+Aktueller Nutzerauftrag: alle noch lokalen öffentlichen Neuerungen sammeln,
+vollständig prüfen, ordentlich auf master pushen und deployen; anschließend
+nachweislich entbehrliche temporäre Daten bereinigen. Die bisher zurückgehaltenen
+Fleischsammler-Hofprofile, örtlichen Familien und die spoilerfreie Questakte
+sind ausdrücklich eingeschlossen. Ältere Lokal-/Publikationsstopps gelten für
+diese öffentlichen Inhalte nicht mehr. Geheime Täteridentitäten, private
+Fallakten, Motive, Verstecke und Enthüllungen bleiben ausgeschlossen, auch aus
+Quellrepository, Testdaten, Diagnosekopien, Suchindizes und Auslieferungspaket.
+Die vollständigen lokalen Originalquellen bleiben erhalten.
+
+Der bewährte isolierte öffentliche Releaseweg, kanonische Git-/Byteprüfung,
+alle aktuellen Fachprüfgruppen, gezielte Inhalts-/Bild-/Browserprüfungen und
+lesende Produktionskontrolle bleiben verbindlich. Keine vorhandenen Inventare,
+Live-Ressourcen oder historischen Spielbelege für Tests ändern und bereits
+vergebene Startgegenstände nicht erneut vergeben. Sammelbelege für diesen
+Auftrag liegen unter `diagnostics/public-release-20261105/`.
+
+# Persönlicher Startbesitz: vier Figuren vom 5. November 2026
+
+Nutzerauftrag für Rhiannon Draig, Isobel Draig, Refri Thornwick und Meredith
+Swyll ist online ausgeführt und lokal gezielt gespiegelt. Persönliche Barschaft:
+Rhiannon 12 Gold/4 Silber, Isobel 34 Gold/7 Silber, Refri genau 12 Eisenpfennig,
+Meredith 1 Silber/8 Kupfer. Je zwei bis drei gewöhnliche Kleinigkeiten liegen
+in der Inventarrubrik Sonstiges; kanonische Warenkategorien bleiben unverändert.
+Rhiannons und Isobels bereits vorhandene Draig-Siegelringe sind unverändert
+erhalten. Refri besitzt einen eigenen alten, zerkratzten, stellenweise rostigen
+Eisenring mit dem belegten Thornwick-Eulenemblem und eigener freigestellter
+Grafik. Er ist als persönliches Unikat mit globalem Besitzbeleg registriert.
+
+Die vier Inventaränderungen, unveränderlichen Itemversionen und Vergabeclaims
+sind atomar nach verschlüsselter Sicherung veröffentlicht; Kampfwerte, übriger
+Besitz, Biografien und Identitäten bleiben erhalten. Einmalige Claims verhindern
+spätere Auffüllung nach Verkauf oder Ausgabe. Alte fehlende Weltpersonenfelder
+wurden nicht ergänzt; eindeutige bestehende Laufzeit-IDs und lokale Akten sind
+abgeglichen. Kein Website- oder Backenddeploy für diese Inhaltsvergabe nötig.
+Belege, Bildprompt und Methoden: `diagnostics/draig-starting-possessions-20261105/`.
+Lokale Exportquellen: `Charakter Archiv Exporte/Startbesitz 2026-11-05/`.
+
+# Handelsfenster: verifizierte Folgeoptimierung vom 5. November 2026
+
+Nutzerauftrag: das langsame, enge Handelsfenster gründlich optimieren,
+Sortiment und Personen auf den Modulkontext ausrichten, prüfen, veröffentlichen
+und anschließend aufräumen. Der öffentliche Commit
+`887693c81224ec8fd7e17cab50c8dcbb5a0f6d05` ist auf `origin/master` und im
+Netlify-Deploy `6aebbcbe91f8a121a395a2ad` veröffentlicht.
+
+Bis 1680 Pixel breiter Dialog, eigene Scrollbereiche für Waren und Bestellung,
+paginiert höchstens 24 Waren. Indizierte Suche aktualisiert ausschließlich die
+Warenliste; Suchfokus und Warenkorb bleiben erhalten. Keine globale Besitz-
+projektion oder zusätzliche Kreaturen-Abhängigkeit im Handel, kein Hintergrundblur.
+Das Szenenmodul bestimmt das passende Warenregister; mehrdeutige Nachbarn
+werden nicht willkürlich ausgewählt. Suchbare Avatarwähler zeigen Besetzung,
+Hierarchie und bisherige Modulteilnehmer. Persönliche Ergänzungen/Ausblendungen
+gelten pro Anmeldung und Thread, ändern keine Figurenakten oder Modulbesetzung.
+Warenkorbpersonen bleiben geschützt; historische Definitionen für ausgewählte
+Personen und Gruppenkassen müssen vor Warenaktionen vollständig bereit sein.
+
+Alle 50 offiziellen Prüfgruppen liefen genau einmal. 35.724 Paketdateien,
+sechs Publisher und 17 HTTP-Ressourcen sind bestätigt; zwölf echte lokale
+Controller-Browserfälle und 64 Sucheingaben ohne Neuaufbau von Karte/Warenkorb
+bestanden. Dies sind Fixturemessungen, keine Produktionslatenzangaben.
+Alle 33 Firebase-Funktionen, Regeln und Verkaufsindex sind unverändert aktiv;
+kein Backenddeploy, keine Inventarmigration, keine Abrechnungsänderung.
+
+Release-Quellen stammen aus öffentlichen Git-Objekten und 41 geprüften Dateien.
+Rund 21,4 GB kanonische Assets wurden ausschließlich innerhalb der eigenen
+temporären Quelle verlinkt; Main-Assets blieben unabhängig. Vollständige native
+Git-/Byteprüfung und geschützte Dependency-Preparer bleiben verbindlich.
+Die eigene Quelle mit 42.593 Dateien ist entfernt, vier Junction-Einträge
+gelöst; Main-Arbeitsdateien, Originale, private Quellen, Abhängigkeiten und
+Nachweise bleiben erhalten. Unabhängige lokale Aufträge, insbesondere das
+nachfolgend dokumentierte neue Eleganz-Sortiment, bleiben unveröffentlicht.
+Abschluss: `diagnostics/trade-window-release-20261104/README.md` und
+`diagnostics/trade-window-release-20261104/final-release-review.json`.
+
+# Göttliche Eleganz: lokale Sortimentserweiterung vom 4. November 2026
+
+Nutzerauftrag: zehn neue Brautkleider für 100–20.000 Kupfer, fünf neue
+Bräutigamsgarnituren und je fünf normale Damen-/Herrenmodelle für 20–13.000
+Kupfer, mehr Farbvielfalt im bisherigen Kleidungsstil. Vier bisherige
+Spitzenmodelle auf jeweils 23.000 Kupfer gesenkt; das gesamte Sortiment bleibt
+damit unter der zusätzlich genannten 25.000-Kupfer-Grenze. 25 neue Einzelbilder
+mit weißen kopflosen Puppentorsi; bestehende Bilder und übrige Preise erhalten.
+Insgesamt 51 Angebote in vier Kategorien (15/15/13/8). Neue Entwurfsquellen
+sind getrennt gekapselt; die Anzeige verwendet Preise statt Listenpositionen
+für Einordnung und Preisbalken. Ursprüngliche 26er-Fassung separat gesichert.
+
+43 Fachtests, 51 serverseitige Angebotsauflösungen mit In-Memory-Leser,
+25 Alphaprüfungen sowie vollständige lokale Chrome-Prüfung einschließlich
+vier Desktop-/Mobilkategorien, Suche und bestehender Familienverknüpfungen
+bestanden. Methoden, Prompts und Belege:
+`diagnostics/eleganz-expansion-20261104/`. Keine produktiven Daten oder
+Inventare verändert. Dieser neue Auftrag bleibt lokal, ohne Push oder Deploy.
+Eingebaute Händlerquellen bei später freigegebenem Release weiterhin aus dem
+geprüften öffentlichen Commit erzeugen; private Main-Quellen nicht einlesen.
+
+# Verifizierter Release von Startseite und Szenenhandel vom 4. November 2026
+
+Nutzerfreigabe: **„Push and deploy und dann räum mit den temp daten auf.“**
+Der geprüfte öffentliche Commit `7ee2f8ec0e0a5a86bf276cde0c25aaf2f244c1a2`
+ist auf `origin/master` und im Netlify-Deploy `6aeba53f755527783fd48d23`
+veröffentlicht. Start-/Ladeoptimierung, Szenenhandel und Szenenübergänge sind
+enthalten. Alle 50 offiziellen Prüfgruppen wurden für den endgültigen Commit
+neu ausgeführt; 35.717 Paketdateien, sechs Publisher und 72 HTTP-Prüfungen
+bestanden. Eingebaute Händler funktionieren ohne Firestore-Moduloverride;
+deren öffentlicher Generator und alle 83 Quellen sind automatisch geprüft.
+
+Alle 33 Firebase-Funktionen einschließlich `commitSceneRegeneration`, die
+Standard-Firestore-Regeln und der neue Verkaufsablage-Index sind veröffentlicht
+und lesend verifiziert. Der frühere `BILLING_DISABLED`-Block besteht nicht mehr;
+die Abrechnung war bereits aktiviert und wurde von diesem Auftrag nicht geändert.
+Keine Secrets, Inventare oder Live-Spieldaten für Tests verändert. Echte
+Handelstransaktionen ausschließlich im lokalen Emulator geprüft.
+
+Lokale private Quellen und unabhängige Klythesia-/Phalantia-Entwürfe bleiben
+erhalten und wurden nicht veröffentlicht. Der lokale Git-Abgleich bewahrte
+bestehende Arbeitsdateien ohne Checkout oder Reset. Die temporäre öffentliche
+Kopie, die überholte Firebase-Wiederholkopie, die Snapshot-Probe und zwölf leere
+Testordner sind entfernt: 43.528 Dateien, rund 27,6 GB gemessener Speichergewinn.
+Methoden, Originalkopien, Konfigurationen und Nachweise bleiben gesichert;
+private Retention-Verzeichnisse sind vom Git-Staging ausgeschlossen. Vier
+Dependency-Junctions wurden ausschließlich an ihren eigenen Einträgen gelöst;
+die Ziele bleiben intakt. Die zwölf älteren Builds hatten null Löschkandidaten.
+Abschluss und Methoden: `diagnostics/startup-release-20261104/README.md` und
+`diagnostics/startup-release-20261104/final-release-review.json`.
+
+# Klythesia und Phalantia: Herkunft und Bildausbau, Abschluss 5. November 2026
+
+Die neue Nutzerfestlegung ersetzt die offenen Staats- und Herkunftsfragen der
+darunter dokumentierten ersten Klythesia-Bestandsaufnahme. Beide Länder gehen
+auf die Aechanath und das Fürstentum Aechneach zurück: Nord-Süd-Wanderung,
+Zarakhuls Versklavung und Zwangssprache, Orins Zungenverwirrung, Zersplitterung,
+Phalantias männerdominierte Eroberung und alerischer Grenzvasallenstatus;
+Kyreons Frauen-/Sklavenaufstand nach dem Reichszerfall befreit die Weststädte.
+Kyreon herrscht heute als Gottkönig. Seine Gemahlin ist oberste Matriarchin und
+Hohepriesterin. Die ursprünglichen Quellenberichte bleiben als früherer Stand
+archiviert; neue Quellenamendments und aktive Religionsansichten sind abgestimmt.
+Der alte Unterschied zwischen sieben Göttinnen und neun Nebengöttern bleibt offen.
+
+Acht Standesdarstellungen: Theíos (Kyreon persönlich), Anássa, Polemístria,
+Hiéreia, Ergatíde, Synoikos (freier Mann), Doulos und Doule. Theíos trägt nach
+ausdrücklicher Nutzeranweisung Elfenohren, Geweih, Silber-Gold-Maske, großen Speer
+und Satyrunterleib. Diese persönliche göttliche Gestalt ist eine ausdrückliche
+Ausnahme zur normalen menschlichen Ohrenform; daraus keine Elfenanatomie für
+Aechanath oder gewöhnliche Figuren ableiten. Eine Ehe ausgewählter Sklavenmänner
+begründet ohne weitere Festlegung keine automatische Freilassung.
+
+Sieben bearbeitbare Clanvorschläge: Klyrath/Kallisteia (Herrscherfamilie),
+Asterid/Draxilion, Theryn/Lykara, Soryth/Therascia, Melanthis/Gorgothis,
+Naukyra/Xalmira und Elyssar/Aenoria. Fünf vorhandene Motivwappen bleiben erhalten;
+Hippokampos und Chimäre ergänzen sie. Alle sieben Häuser haben auf neue
+Nutzeranweisung eigene Thorax-Darstellungen nach Wappen und Kartenlage.
+Auch das Landeszeichen besitzt eine eigene Thorax, ohne weitere Familie oder
+Wachorganisation. Namen und Sitze bleiben lokale Vorschläge, keine neuen
+kanonischen Familienakten oder genealogischen Eingriffe.
+
+Sieben Klassen: Helot (einzig männlich), Antrophe (Elite-Hautwechslerin), Thorax,
+Toxare, Myrmex, Xiphone und Thyrsia. Xiphone aktiv v2: rote Tribaltätowierungen,
+knapper Chiton, leichte Schienen, thrakischer Helm und Rhomphaia am kurzen
+Zweihandgriff; kein Stangenschaft, Schild oder Lamellenrumpf. Vorversion erhalten.
+Toxare aktiv v2 mit geschlossenem Korintherhelm; Thyrsia v3 mit Kopis und echter
+dreieckiger Harfe. Prototyp-, Haus- und Landesfiguren besitzen getrennte
+`manifest.json`, `house-manifest.json` und `realm-manifest.json` mit begrenzten
+ID-Mengen. Technische Alpha-Aufbereitung erhält RGB und Originale; die dünnen
+Sehnen/Netze/Saiten brauchen ihre dokumentierten Overrides (Toxare/Myrmex 210,
+Thyrsia außen 100/Kern 180). Keine unbeschränkten Sammelbuilds darüber ausführen.
+
+Die aktive Sprachlore von Kana’anith, Stoicheia, Lingua Argenti, Infernal und
+Tirghan folgt Orins Eingriff bei den von Zarakhul unterjochten Völkern. Schrift-
+abstammung von Ogham bleibt davon getrennt. Alphabete, Grammatik, Namenlisten,
+historische Fontpakete und Phalantias bestehende Politik bleiben erhalten.
+Herkunftsdoku: `AleriaAlmanach/modules/language/TIRNARA_LANGUAGE_HISTORY.md`.
+
+19 Länderprüfungen, 13 Sprachregressionen und vier gemeinsame Artefakttests
+bestanden. Die 23er Desktop-/Mobilbasis und gezielte Ergänzungsprüfung decken
+alle 24 aktuellen Bildziele ab; Karte, Drag, Touchwahl, Persistenz, Import/Export,
+Undo und Reset geprüft. Bildkontakte und Browseransichten tatsächlich angesehen.
+Belege und Prompts unter `diagnostics/klythesia-expansion-20261104/` und
+`Vorschau/Klythesia/sources/`. Kein Push oder Deploy für diesen neuen Auftrag.
+
+# Klythesia: lokale Quellen- und Seitenvorbereitung vom 4. November 2026
+
+Nutzerauftrag: vorhandenes Wissen über Klythesia, sein Land und seine Religion
+zusammentragen; neue Lore erst später besprechen. Die lokale Vorbereitungsseite
+unter `Vorschau/Klythesia/` enthält 51 belegte Angaben, den vorhandenen
+Glaubenskatalog und die Tempelbezeichnungen des Zirkels des Ewigen Waldes,
+Stoicheia sowie sieben benannte Kartenorte. Alle sieben gelieferten PNG-Dateien
+sind bytegleich erhalten; die fünf Motivwappen bleiben ohne Haus- oder
+Regionszuordnung. Kallisteia ist hervorgehoben, aber noch keine ausdrücklich
+festgelegte Hauptstadt. Keine weltlichen Ränge, Häuser, Grenzen, Kriegerklassen
+oder heutigen Amtsinhaber ergänzen.
+
+Glaubensüberlieferung, phalantische Fremdsicht und Kartenbeobachtungen getrennt
+halten. Die sieben genannten Göttinnen gegenüber neun erwähnten Nebengöttern
+bleiben ein Quellenwiderspruch. Kyreons Gottkönigtum und weibliche Clanführung
+sind eine offene institutionelle Frage, kein automatisch aufzulösender
+Widerspruch. Religiöse Gewaltriten begründen ohne weitere Festlegung kein
+heutiges Landesrecht. Quelleninventare liegen unter
+`Vorschau/Klythesia/sources/`. Elf Fachprüfungen, der unabhängige Semantikaudit
+und Desktop-/Mobilprüfung mit Karten- und Bildfenstern bestanden; Belege unter
+`diagnostics/klythesia/`. Keine kanonischen Quellen, Register oder Firebase-Daten
+geändert. Dieser neue Auftrag bleibt lokal, ohne Push oder Deploy.
+
+# Startseite und Ladebildschirm: lokale Optimierung vom 4. November 2026
+
+Nutzerauftrag: lange Ladezeiten der Startseite und des Ladebildschirms
+untersuchen und verbessern. Die Übersicht rendert nur ihre sichtbaren Inhalte;
+Figuren, Kreaturenabrufe, Regelarchiv, Güterregister-Abonnements und Iconkatalog
+laden bei Bedarf. Szenen-, Gruppen-, Profil- und Editor-Einstiege warten vor
+abhängigen Auswahlfeldern auf ihre Daten; Abbruchkennungen schützen Entwürfe,
+Rollen und geschlossene Ansichten. Die Genealogie startet über den kleinen
+`genealogy-bootstrap.js`; vollständige Familien und Importdialog sind keine
+Startabhängigkeiten. Identitätsfunktionen bleiben sofort verfügbar. Das
+Figurenregister wartet vor seinen Klassifikationen auf den echten Familienresolver.
+
+Der Reisebildschirm benötigt ausschließlich das gerenderte Archiv und den
+geklärten ersten Modulabgleich. Beliebige Seitenbilder und `window.load`
+blockieren den Eintritt nicht mehr. Offlinezustände bleiben ausdrücklich
+erkennbar. Musik ohne vorsorgliches Vorladen, reduzierte Bewegung, pausierte
+Hintergrundtabs und einfachere Tag-/Nachtüberlagerung sparen zusätzliche Arbeit.
+Gleiche bestätigte Modulstände und Aktivitätsabfragen teilen ihre Lesevorgänge;
+neue Revisionen, laufende Bearbeitung und frische Sicherungsabfragen bleiben geschützt.
+
+379 integrierte Fach-/Regressionstests, 51 lokale HTTP-Prüfungen, 537 lokale
+Ressourcenverweise, 13 ESM-Bündelprüfungen und 21 klassische Syntaxprüfungen
+bestanden. Die statische Vereinigung der ESM-Startabhängigkeiten verliert rund
+15,04 MB Familienquellen; zusätzlich wird der 8,24-MB-Figurensnapshot erst bei
+Bedarf geladen. Im dokumentierten VM-Rendervergleich entstehen null statt
+2.880 später versteckter Karten. Dies sind Quellen-/Rendervergleiche, keine
+gemessenen Browser-Ladezeiten. Die Browser-Sichtprüfung bleibt wegen des
+CUA-`timeoutMs`-Fehlers eingeschränkt. Temporäre Prüfbündel mit 58.177.104 Byte
+sind entfernt, die eigene Vorschau ist beendet. Keine produktiven Daten geändert,
+kein Push oder Deploy. Belege unter `diagnostics/startup-performance-20261104/`
+bleiben lokal; ihr vollständiger lokaler Abhängigkeitsgraph darf nicht pauschal
+veröffentlicht werden. Einstieg in die Prüfungen: `npm run test:startup`.
+
+# Szenenwechsel: lokale Korrektur vom 4. November 2026
+
+Nutzerauftrag: leere Szenenwechsel reparieren, Zielauswahl entsprechend dem
+Almanach gliedern und Fenster sowie Ereigniskarte stilvoller und subtiler
+gestalten. Die Ursache ist reproduziert: In langen Flex-Kommentarlisten
+schrumpfte die Karte auf zwei Pixel. Nicht schrumpfende Ereigniskarten beheben
+die Darstellung; bestehende Belege und Threadkennungen bleiben erhalten.
+
+Die Zielauswahl verwendet das bestehende Archiv-Hierarchiemodell und die
+aktuellen sichtbaren Bereiche einschließlich Wohntrakt, Flügel und Gemach.
+Szenenbilder und Bereichsicons, Vollpfadsuche, hervorgehobene Zielauswahl sowie
+kompakte Reiseart-/Figurenoptionen schaffen Übersicht. Tiefe Suchtreffer werden
+innerhalb der Liste sichtbar; Leeren stellt Ordner- und Scrollzustand wieder
+her. Die Vorschau navigiert nicht und kann die Ausgangsszene nicht verändern.
+Nicht interaktive Seiten werden über das gemeinsame Kommentarrouting gefiltert.
+
+62 Fach-/Regressionstests und echte Chrome-Prüfungen für zwei Dialoglayouts
+sowie acht lange Kommentarlisten bestanden. Desktop und Mobil wurden visuell
+geprüft. Browserdaten sind lokale Fixtures, sämtliche Netzwerkzugriffe gesperrt.
+Keine produktiven Szenen oder Firebase-Daten geändert, kein Push oder Deploy.
+Architektur: `AleriaAlmanach/modules/scene-transition/README.md`.
+Belege: `diagnostics/scene-transition-20261104/`.
+
+# Szenenhandel: lokale Implementierung vom 4. November 2026
+
+Nutzerfreigabe: „Gut, gehe es an“ nach dem abgestimmten Handelsentwurf.
+Der vorhandene Inventarbeutel bleibt der einzige Szeneneinstieg; unter
+„Handeln · Kaufen oder verkaufen“ öffnet sich ein persönlicher Warenkorb.
+Getrennte Zahler und Empfänger, direkte Geschenke, berechtigte Gruppenkassen,
+normale oder frei vereinbarte Positionspreise und paginierte Verkaufsablage
+sind implementiert. Normale Ware bleibt nachlieferbar, NPC-Geschäfte verwenden
+unbegrenzte Kaufkraft ohne Änderung persönlicher Händlergeldbörsen.
+
+Explizite Unikate verwenden dauerhaft dieselbe Definition-/Besitzbindung.
+Verkaufte Pferde behalten ihre Kreaturenakte; frühere Besitzer können den
+Händlerbestand nicht weiter bearbeiten. Neue Käufe markieren auch bisherige
+Altinventare für den kanonischen Schreibschutz, ohne Altbesitz umzuschreiben.
+Offene Buchungen behalten Vorgangskennung und Inhalt im nach Anmeldung und
+Szenenthread getrennten Sitzungsspeicher. Preise, Bestände, Besitzer, Geld und
+genau ein Beleg werden gemeinsam geprüft und gespeichert.
+
+In der Szene erscheinen nur schmale Hinweise mit zwei Miniaturbildern;
+Details sind aufklappbar. Neue Handels- und Übergabehinweise erzeugen keine
+eigene Rollenspielseite, keinen Zeitkopf und keinen erzwungenen Scrollsprung.
+Historische Belegdaten bleiben unverändert. Architektur und Bedienung:
+`AleriaAlmanach/modules/scene-trade/README.md`.
+
+504 unterschiedliche Prüfungen bestanden (99 Frontend/Fachtests, 376
+Backendtests, sechs echte lokale Transaktionsprüfungen, 23 Regelprüfungen),
+zusätzlich betroffene Abschlussregressionen, 22 HTTP-Routen, gemeinsamer
+Mechanikabgleich und begrenzte Modulbündelung. Belege:
+`diagnostics/scene-trade-design-20261104/verification.json`.
+Browserstatus bleibt `limited` wegen des bekannten CUA-`timeoutMs`-Fehlers.
+Für diesen Auftrag keine produktiven Inventare, Kreaturen oder Firebase-Daten
+geändert, kein Push oder Deploy. Für die spätere Veröffentlichung Frontend,
+Functions, Standardregeln und neuen Verkaufsindex gemeinsam veröffentlichen;
+der bestehende Functions-Blocker `BILLING_DISABLED` bleibt offen.
+
+# Almanach-Bedienung und Perllan: verifizierter Release vom 4. November 2026
+
+Die ausdrücklich zum Push und Deploy freigegebenen UI-Änderungen und die
+Perllan-Ergänzungen sind unter Commit
+`73877cd5f7914fbc096e4c99c456918b8091732e` auf `origin/master` und im aktiven
+Netlify-Deploy `6aeb6bbc18aa4f461afcfd12` veröffentlicht. Der normale Push baut
+auf dem echten Web-Publish `ec32389e89f88bd9b754da93862d933344b03066` auf.
+Alle 50 offiziellen Prüfgruppen sind gültig; der Release prüfte 35.696
+Paketdateien und sechs Netlify-Publisher. Der zusätzliche öffentliche HTTP-Test
+bestand für 13 Dateien einschließlich Perllan-Snapshot, transparentem Wappen,
+Charakterdatenbank, Register und UI-Dateien. Die HTML-Auslieferung normalisiert
+genau einen Dokumentenwerkstatt-Link; dieser nachgewiesene Unterschied wird
+im HTTP-Prüfer ausdrücklich und bytegenau berücksichtigt.
+
+Die Kommentarsuche und Schaltflächen sind kompakter. Seitennavigation und
+Redestab sind zentriert; Ansicht, Leiste und Bearbeitung stehen rechts direkt
+unter der Szene-Aktionszeile. Der Modulspeicher bevorzugt bestätigte Serverdaten
+automatisch, erhält abweichende lokale Entwürfe zur Wiederherstellung und zeigt
+Details erst nach Klick auf den kompakten pulsierenden Status. Aktive Bearbeitung
+wird vor der Übernahme eines neueren Serverstands beendet. Keine Live-Daten,
+Inventare, Abrechnung oder Firebase-Funktionen wurden dafür geändert.
+
+Die öffentliche Projektion enthält 289 Charaktere, davon 27 Perllan-Einträge;
+alle 262 bisherigen öffentlichen Akten sind unverändert. Acht bereits im alten
+Galeriekatalog enthaltene private Metadatensätze wurden aus der aktuellen
+öffentlichen JSON-/CSV-Projektion entfernt. Vollständige lokale Quellen bleiben
+erhalten; frühere Git-Historie und alte Deploys wurden nicht umgeschrieben.
+Andere lokale Aufträge sind nicht Teil dieses gezielten Releases.
+Belege: `diagnostics/ui-polish-20261104/`. Die öffentliche Release-Kopie unter
+`.release-state/ui-polish-public-20261104` bleibt als geprüfte Arbeitskopie
+erhalten. Für die Kommentare liegt weiterhin kein gerenderter Browser-Pass vor
+(CUA-`timeoutMs`-Fehler); die 536 Stammbaum-Browserprüfungen sind bestanden.
+
+# Perllan: vollständige Familienübernahme vom 4. November 2026
+
+Nutzerauftrag: den Download `C:\Users\fhg_r\Downloads\Perllan` nach vorherigem
+Bestandsabgleich vollständig einbinden. Beim ersten lokalen Abgleich lag keine
+Perllan-Akte vor. Vor der Veröffentlichung wurde jedoch der neue Web-Publish
+des Nutzers gefunden. Die bestehende kanonische Familien- und Hausseiten-ID
+`perllan` wird fortgeführt; die nur lokal entworfene ID `haus-perllan` wird
+nicht veröffentlicht. Haus-ID `house-perllan` und sämtliche ursprünglichen
+Personen-, Weltpersonen- und Beziehungskennungen bleiben erhalten. Die echte
+Online-Originalrevision 1 ist bytegleich gesichert; die angereicherte Revision 2
+enthält alle 44 Identitäten und Beziehungen unverändert.
+
+Erfasst sind 44 Stammbaumpersonen, 16 Partnerschaften, 27 Abstammungen sowie
+27 namentlich bekannte Almanach-Charaktere mit denselben sachlichen Personenbios
+im Stammbaum. 17 unbekannte Gründer-/Partnerplatzhalter bleiben ausschließlich
+im Stammbaum. Bürgerliche Familie aus Gwynthor, Cenyri, Alerische Kirche,
+Ursprung ca. 1240, Waldgrün; keine erfundenen Besitzungen, Hausämter, Berufe oder
+Lehnsherrschaft. Die gelieferte HTML-Datei ist leer. Alle 32 Originaldateien und
+29 aktiven Originalbilder sind bytegleich erhalten. Das zusätzlich abgeleitete
+transparente Wappen `perllan-emblem.png` ersetzt alle aktiven Wappenverweise;
+die ursprünglichen JPEGs bleiben erhalten. Die ergänzende Hausfigur
+zeigt Aeron nach seinem gelieferten Porträt im freigegebenen Figurenstil.
+
+Vier bildbelegte unbenannte Tierbegleiter: Onns Eichhörnchen und Rotkehlchen,
+Lilis Kaninchen und Blaumeise. Narrative Inventarkarten mit eindeutigen
+Personen-/Einzelstückverknüpfungen; keine erfundenen Kreaturenkampfwerte.
+Der gemeinsame Inventarsanitizer erhält jetzt ausdrücklich leere Attributlisten;
+fehlende oder ungültige Angaben verwenden weiterhin den bisherigen Rückfall.
+Onn bleibt weiblich, Lili behält den gelieferten Einzelnamen. Rhosyn Awenydd
+bleibt eine eigene Namensgleiche; Gwern und Draenen bleiben trotz Bildgleichheit
+verschiedene Personen. Ywens ältere Gründerverbindung bleibt ein vermuteter
+Zeitsprung ohne belegte direkte biologische Elternschaft.
+
+Hausseite, Hausbio, Galerie, Kartenwappen und veröffentlichter Familiensnapshot
+sind eingebunden. Alle 266 fremden lokalen Charakterakten bleiben erhalten.
+Die öffentliche Projektion führt 774 Kartenwappen und 889 Galeriehäuser mit
+1.268 Darstellungen; der lokale Vollkatalog bleibt getrennt davon erhalten.
+Gezielte Familien-, Hausseiten-, Charakter-, Galerie- und Kartenprüfungen sowie
+der vollständige oben dokumentierte Release sind bestanden. Keine
+Firestore-Schreibzugriffe für diese Übernahme.
+Belege und Methoden: `diagnostics/perllan-import-20261104/`,
+`diagnostics/perllan-20261104/`,
+`Stammbäume/assets/data/source-inventories/perllan-20261104/` und
+`Familien Häuser und Clans/PERLLAN-2026-11-04.md`.
+
+# Phalantia: lokale Vorbereitung vom 4. November 2026
+
+Die neue Vorbereitungsseite liegt unter `Vorschau/Phalantia/`; Ablauf und Quellen
+stehen in deren `README.md`. Acht Städte: Lysandreia als gemeinsame Hauptstadt
+mit zwei getrennten Königspalästen und sieben Periökenstädte. Alantaic gehört
+ausdrücklich nicht zu Phalantia. Die Geruso besteht ausschließlich aus den sieben
+Periöken-Oberhäuptern; kein Machtwechsel, keine Apella und kein separates Ephorat.
+Beide Könige und die Geruso besitzen ein Veto. Agoge ausschließlich für
+Königssöhne von sieben bis achtzehn Jahren im jeweils anderen Königshaus.
+Das lebenslang jungfräuliche Orakel stammt aus einem der Königshäuser.
+
+Das Heiratsverbot zwischen den Königshäusern ist festgelegt; die Begründung als
+„Eid der zwei Linien“ mit Pflege-/Eidverwandtschaft und getrennten Kronrechten
+sowie weitere Heirats- und Erbregeln bleiben ausdrücklich Vorschläge. Ebenso
+sind die neun neuen Hausnamen und Wappen Entwürfe: Oresthid und Therakid
+als Königshäuser; sieben Periökenhäuser mit je einer Nebenstadt. Die neueste
+Nutzerkorrektur verlangt Einzahl für Standes- und Hausanzeigen; stabile IDs,
+Dateinamen und Browserentwürfe bleiben erhalten. Sechs Ständecomics und acht
+männliche Kriegerprototypen sind erstellt. Zusätzlich sind nun ausdrücklich
+neun eigene Hauskrieger, ein korrigierter Toxotbogen und acht Regionsschilder
+auf Hoplon-Basis beauftragt. Die königlichen Hauskrieger verwenden den gelieferten
+spartanischen Helm; andere Häuser erhalten unterschiedliche griechische Helme.
+Originale, Prompts und Prüfbelege bleiben erhalten. Keine
+kanonischen Register oder Firebase-Daten geändert, kein Push oder Deploy für
+diesen neuen Auftrag. Prüfbelege: `diagnostics/phalantia/`.
+
+# Verifizierter Web-Release; Firebase-Funktionen noch offen
+
+Der öffentliche Gesamtstand `c2336357ae98c4e221d6cbcfe257c1b2ef267aa4` ist auf
+`origin/master` und im Netlify-Deploy `6aeaefde7c25041243911647` veröffentlicht.
+Alle 50 offiziellen Prüfgruppen sowie der Abgleich von 35.562 Paketdateien und
+sechs Netlify-Publishern bestanden. Die sechs Länder-Einstiege, 14 neue
+Ständecomics, aktive Schweinbilder und Venalys-Karten sind zusätzlich per HTTP
+und Bytevergleich geprüft. Die öffentliche Datenbank enthält 262 konsistente
+Akten ohne private Verknüpfungen. Belege: `diagnostics/release-20261104/`.
+
+Die neuen Schutzregeln der bestehenden Standard-Firestore-Datenbank sind aktiv
+(Hash `eb4520acbfc4541fc97690cbc657f01e05db30bec6954d630ef1eda5c2598ad4`).
+Der Functions-Deploy scheitert dagegen an Googles `BILLING_DISABLED`;
+`billingEnabled=false` ist lesend bestätigt. Die bisherigen 32 Functions bleiben
+unverändert; `commitSceneRegeneration` ist noch nicht verfügbar. Keine
+Abrechnung, Secrets, Inventare oder Live-Daten eigenmächtig ändern. Die Frage
+zur Aktivierung der Projektabrechnung ist beim Nutzer noch offen.
+
+Eine isolierte öffentliche Wiederholkopie liegt unter
+`.release-state/pending-firebase-20261104`: 830 gegen denselben Commit geprüfte
+Dateien, rund 21 MB, alle 357 Predeploy-Tests bestanden. Ihre einzige
+Dependency-Junction führt auf die vorhandenen Main-Functions-Abhängigkeiten.
+Für den späteren Functions-Deploy diese Kopie und die lokalen Prüfmethoden
+verwenden; private vollständige Main-Quellen nicht pauschal veröffentlichen.
+
+Die eigene temporäre öffentliche Release-Worktree wurde danach geprüft entfernt:
+42.408 Dateien mit 28.339.680.852 Byte; der gemessene freie Speicher stieg um
+28.439.265.280 Byte. Abweichende Kopien und Releasebelege sind separat erhalten;
+Originale, private Quellen, Abhängigkeiten und die geschützte C:-Archiv-Worktree
+bleiben bestehen. Die zwölf älteren Buildkopien hatten keine freigegebenen
+Löschkandidaten. Abschlussbeleg:
+`diagnostics/release-20261104/final-public-release-review.json`.
+
+Der Rechner bleibt bis zum vollständigen Abschluss an, entsprechend der
+ausdrücklichen Bedingung des Nutzers zum Herunterfahren.
+
 # Gemeinsamer öffentlicher Release nach Solestia und Venalys
 
 Nutzerfreigabe vom 4. November 2026: Nach Abschluss Solestias und der

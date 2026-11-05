@@ -1,0 +1,22 @@
+{
+  "country": "Phalantia",
+  "sourceDirectory": "C:/Users/fhg_r/Downloads/Länder/Phalantia",
+  "files": [
+    {
+      "id": "map-phalantia",
+      "kind": "map",
+      "name": "Phalantia · gelieferte Karte",
+      "source": "Phalantia.png",
+      "archive": "assets/originals/phalantia-map.png",
+      "previews": [{ "file": "assets/maps/phalantia.webp", "size": [1281, 925], "quality": 96 }]
+    },
+    {
+      "id": "realm-phalantia",
+      "kind": "realm",
+      "name": "Phalantia · gelieferte Landeszeichen",
+      "source": "Phalantia Wappen.png",
+      "archive": "assets/originals/phalantia.png",
+      "previews": [{ "file": "assets/originals/previews/phalantia.webp", "size": [600, 600] }]
+    }
+  ]
+}

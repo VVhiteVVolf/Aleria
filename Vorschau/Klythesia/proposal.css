@@ -1,0 +1,15 @@
+@import '../shared/country-workbench/workbench.css';
+@import './klythesia-evidence.css';
+@import './klythesia-map-art.css';
+@import './klythesia-society.css';
+
+.klythesia-workbench{--paper:#f3eddd;--ink:#29382f;--muted:#687267;--line:#c7c9b4;--accent:#285b4f;background:#d4dbcc}
+.klythesia-workbench main{max-width:1440px}
+.hero{background:radial-gradient(ellipse at 85% 35%,#b6d0bf80,transparent 62%);gap:40px}
+.hero-line{font-size:30px}.hero-stats{column-gap:36px;row-gap:18px}.hero-stats dd{font-size:17px}.hero-stats dt{font-size:10px}.draft-note{border-color:#b1bdab}
+.section-link,.archive-link{font:13px/1.7 var(--sans)}.faith-section,.language-section{background:#e8eddf77}.questions-section{background:#eee4ce80}.sources-section{background:#e8ebde55}
+.skip-link{position:fixed;top:-80px;left:12px;z-index:100;padding:10px 16px;background:var(--paper)}.skip-link:focus{top:12px}
+.realm-crest .art-button{width:100%;padding:0;border:0;background:none}.realm-crest img{max-width:350px}.toolbar nav{gap:16px}.toolbar a:hover{text-decoration:underline}.toolbar nav a{font-size:12px}
+@media(max-width:1100px){.toolbar{flex-wrap:wrap;gap:10px 20px}.toolbar nav{width:100%;justify-content:center;margin-left:0;flex-wrap:wrap;gap:8px 16px}.toolbar .draft-label{display:inline;margin-left:auto}}
+@media(max-width:650px){.hero{gap:24px;padding-top:35px}.hero .realm-crest{grid-row:auto}.hero .realm-crest img{max-width:210px}.hero-line{font-size:26px}.hero-stats{gap:20px}.hero-stats dd{max-width:210px}.toolbar{padding:10px 15px}.toolbar .draft-label{font-size:10px}.toolbar nav a{font-size:11px}.draft-note{font-size:12px}.section-intro{font-size:16px}}
+@media print{details:not([open])> :not(summary){display:block}details>summary{list-style:none}.source-detail{display:none}.art-button{border:0}.section-link,.map-tools{display:none}}

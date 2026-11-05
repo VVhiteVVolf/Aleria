@@ -1,0 +1,10 @@
+.phalantia-placement .map-canvas{min-width:900px}
+.phalantia-placement .crest-group{max-width:160px;flex-wrap:wrap;white-space:normal}
+.phalantia-placement .house-choice{align-items:flex-start;gap:10px}
+.phalantia-placement .house-choice>span{min-width:0;width:100%}
+.phalantia-placement .house-choice strong{font-size:19px;overflow-wrap:anywhere}
+.phalantia-placement .seat-card>header{min-height:0}
+.phalantia-placement #map-dialog .map-canvas{min-width:0}
+.phalantia-placement .placement-toolbar{background:#e6dbc4;border-color:var(--line)}
+.phalantia-placement .unassigned{background:#e9dfcd;border-color:var(--line)}
+@media print{.phalantia-placement .map-canvas{min-width:0}}

@@ -30,6 +30,7 @@ const tree = [
   'netlify/build/run-site-build.mjs', 'netlify.toml', 'shared/calendar.js',
   'AleriaAlmanach/modules/archive/archive-dashboard.js',
   'AleriaAlmanach/modules/combat/combat-profile-model.js',
+  'AleriaAlmanach/modules/fleischsammler-argall/household.mjs',
   'AleriaAlmanach/modules/gofrann-schmiede/gofrann-data.js',
   'AleriaAlmanach/modules/economy-calculator/economy-engine.mjs',
   'Markt/Taverne/data/tavern-data.js',
@@ -74,7 +75,13 @@ test('cross-feature inputs trigger their consumers, including external house bio
   assert.ok(family.includes('regional-equipment'));
   assert.ok(family.includes('family-charts'));
   assert.deepEqual(checks(select(changed('AleriaAlmanach/modules/combat/combat-profile-model.js'))), ['house-signets', 'character-health', 'character-development', 'almanach-runtime', 'gameplay-guides', 'character-reference-catalogs', 'group-community', 'item-mechanics']);
-  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['house-signets', 'balchder-characters', 'gameplay-guides', 'patrick-biographies', 'character-reference-catalogs', 'group-community', 'item-mechanics']);
+  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['house-signets', 'fleischsammler-argall', 'balchder-characters', 'gameplay-guides', 'patrick-biographies', 'character-reference-catalogs', 'group-community', 'item-mechanics']);
+});
+
+test('the captain household source triggers both its character projection and public quest consumer', () => {
+  const selected = checks(select(changed('AleriaAlmanach/modules/fleischsammler-argall/household.mjs')));
+  assert.ok(selected.includes('fleischsammler-argall'));
+  assert.ok(selected.includes('quest-journal'));
 });
 
 test('chart CSS triggers the browser audit, portraits do not trigger geometry that blocks image requests', () => {

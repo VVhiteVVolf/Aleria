@@ -59,6 +59,7 @@
       "collection": "characters",
       "documentId": "yg7RonBDX5ctbr7icLWe",
       "documentIds": [
+        "yg7RonBDX5ctbr7icLWe",
         "yg7RonBDX5ctbr7icLWe"
       ],
       "documents": [
@@ -66,6 +67,11 @@
           "documentId": "yg7RonBDX5ctbr7icLWe",
           "createdAt": "2026-07-09T11:46:29.968Z",
           "updatedAt": "2026-07-10T11:38:25.347Z"
+        },
+        {
+          "documentId": "yg7RonBDX5ctbr7icLWe",
+          "createdAt": "",
+          "updatedAt": "2026-11-04T23:48:13.218393Z"
         }
       ]
     },
@@ -81,13 +87,14 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-10-12T22:24:41.567Z",
-    "sourceUpdatedAt": "2026-07-10T11:38:25.347Z",
+    "sourceArchive": "Charakter Archiv Exporte/Startbesitz 2026-11-05/refri-thornwick.json",
+    "sourceExportedAt": "2026-11-04T23:48:13.218393Z",
+    "sourceUpdatedAt": "2026-11-04T23:48:13.218393Z",
     "sourceDocumentIds": [
+      "yg7RonBDX5ctbr7icLWe",
       "yg7RonBDX5ctbr7icLWe"
     ],
-    "contentHash": "6880cd71cc16ec6a104eaa93eba6cf1d4d09ce981d828f2828133f3ce4448214"
+    "contentHash": "b19b87ce8f567187aa8690d0cc227092fcee18b80edd6f0662ad33792d128401"
   },
   "local": {
     "notes": "",
@@ -709,6 +716,693 @@
         "portrait": "https://i.imgur.com/3Ai7ly2.png",
         "aliases": [],
         "taxonomyPath": ""
+      },
+      {
+        "id": "yg7RonBDX5ctbr7icLWe",
+        "name": "Refri Thornwick",
+        "inventory": {
+          "portrait": "https://i.imgur.com/3Ai7ly2.png",
+          "infoRows": [
+            {
+              "value": "Gesund",
+              "label": "Status",
+              "icon": "*"
+            },
+            {
+              "icon": "*",
+              "label": "TP / Zustand",
+              "value": "Noch festlegen"
+            },
+            {
+              "value": "0 Gold, 0 Silber, 0 Kupfer",
+              "icon": "*",
+              "label": "Geld"
+            },
+            {
+              "icon": "*",
+              "label": "Tragkapazität",
+              "value": "Noch festlegen"
+            },
+            {
+              "label": "Rolle",
+              "icon": "*",
+              "value": "Noch festlegen"
+            },
+            {
+              "icon": "*",
+              "label": "Fraktion",
+              "value": "Noch festlegen"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "Aufenthalt",
+              "icon": "*"
+            },
+            {
+              "value": "Noch festlegen",
+              "label": "Notiz",
+              "icon": "*"
+            }
+          ],
+          "title": "Charakter-Inventar",
+          "portraitPosition": "top",
+          "items": [
+            {
+              "type": "Waffe",
+              "ownerCharacterName": "",
+              "category": "weapon",
+              "tags": "",
+              "quantity": "1",
+              "itemDbKey": "",
+              "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "value": 3,
+                  "label": "Schutz"
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "ownerCharacterId": "",
+              "name": "Hauptwaffe",
+              "weight": "Noch festlegen",
+              "itemStorageMode": "character",
+              "imagePosition": "center",
+              "icon": "*",
+              "originItemDbKey": "",
+              "imageFormat": "square",
+              "id": "item-mrdfws8b-0-kvf8",
+              "imageFit": "contain",
+              "acquiredAt": "",
+              "image": "",
+              "individualizedAt": "",
+              "infoRows": []
+            },
+            {
+              "acquiredAt": "",
+              "imageFit": "contain",
+              "tags": "",
+              "ownerCharacterId": "",
+              "type": "Rüstung",
+              "description": "Rüstung, Kleidung oder magischer Schutz.",
+              "imagePosition": "center",
+              "image": "",
+              "infoRows": [],
+              "itemStorageMode": "character",
+              "weight": "Noch festlegen",
+              "name": "Rüstung / Schutz",
+              "icon": "*",
+              "itemDbKey": "",
+              "attributes": [
+                {
+                  "label": "Schaden",
+                  "value": 5
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "ownerCharacterName": "",
+              "imageFormat": "square",
+              "id": "item-mrdfws8b-1-mv6g",
+              "individualizedAt": "",
+              "category": "armor",
+              "originItemDbKey": "",
+              "quantity": "1"
+            },
+            {
+              "infoRows": [],
+              "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "name": "Reiseausrüstung",
+              "imageFit": "contain",
+              "type": "Ausrüstung",
+              "image": "",
+              "tags": "",
+              "id": "item-mrdfws8b-2-qg9m",
+              "ownerCharacterId": "",
+              "originItemDbKey": "",
+              "imageFormat": "square",
+              "acquiredAt": "",
+              "weight": "Noch festlegen",
+              "itemStorageMode": "character",
+              "imagePosition": "center",
+              "itemDbKey": "",
+              "icon": "*",
+              "quantity": "1",
+              "individualizedAt": "",
+              "ownerCharacterName": "",
+              "category": "equipment"
+            },
+            {
+              "imagePosition": "center",
+              "ownerCharacterId": "",
+              "icon": "*",
+              "ownerCharacterName": "",
+              "originItemDbKey": "",
+              "quantity": "1",
+              "id": "item-mrdfws8b-3-xcgu",
+              "weight": "Noch festlegen",
+              "category": "potions",
+              "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+              "acquiredAt": "",
+              "infoRows": [],
+              "type": "Trinktur",
+              "imageFit": "contain",
+              "tags": "",
+              "image": "",
+              "individualizedAt": "",
+              "name": "Heil- oder Verbrauchsgut",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "value": 2,
+                  "label": "Seltenheit"
+                },
+                {
+                  "value": 6,
+                  "label": "Zuverlaessigkeit"
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "itemDbKey": "",
+              "itemStorageMode": "character",
+              "imageFormat": "square"
+            },
+            {
+              "category": "documents",
+              "icon": "*",
+              "itemDbKey": "",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "label": "Wert",
+                  "value": 4
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Handhabung",
+                  "value": 5
+                }
+              ],
+              "quantity": "1",
+              "individualizedAt": "",
+              "id": "item-mrdfws8b-4-z28u",
+              "itemStorageMode": "character",
+              "imageFormat": "square",
+              "image": "",
+              "weight": "Noch festlegen",
+              "acquiredAt": "",
+              "ownerCharacterId": "",
+              "tags": "",
+              "originItemDbKey": "",
+              "type": "Dokument",
+              "ownerCharacterName": "",
+              "imageFit": "contain",
+              "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+              "imagePosition": "center",
+              "infoRows": [],
+              "name": "Dokumente / Urkunden"
+            },
+            {
+              "imagePosition": "center",
+              "name": "Persönlicher Gegenstand",
+              "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+              "attributes": [
+                {
+                  "value": 5,
+                  "label": "Schaden"
+                },
+                {
+                  "label": "Schutz",
+                  "value": 3
+                },
+                {
+                  "value": 4,
+                  "label": "Wert"
+                },
+                {
+                  "label": "Seltenheit",
+                  "value": 2
+                },
+                {
+                  "label": "Zuverlaessigkeit",
+                  "value": 6
+                },
+                {
+                  "value": 5,
+                  "label": "Handhabung"
+                }
+              ],
+              "ownerCharacterId": "",
+              "weight": "Noch festlegen",
+              "itemDbKey": "",
+              "originItemDbKey": "",
+              "infoRows": [],
+              "imageFit": "contain",
+              "type": "Sonstiges",
+              "id": "item-mrdfws8b-5-8p1k",
+              "tags": "",
+              "itemStorageMode": "character",
+              "quantity": "1",
+              "individualizedAt": "",
+              "ownerCharacterName": "",
+              "image": "",
+              "imageFormat": "square",
+              "category": "other",
+              "acquiredAt": "",
+              "icon": "*"
+            },
+            {
+              "id": "yg7RonBDX5ctbr7icLWe-draig-start-possessions-20261105-1",
+              "instanceId": "yg7RonBDX5ctbr7icLWe-draig-start-possessions-20261105-1",
+              "templateId": "standard:gemischtwarenhandler:feuerstein-stahl",
+              "templateName": "Feuerstein & Stahl",
+              "definitionRef": {
+                "id": "standard:gemischtwarenhandler:feuerstein-stahl",
+                "revision": "cdb8d503f7c8e15f7af760a6"
+              },
+              "offerId": "",
+              "registerCategory": "werkzeuge",
+              "itemDbKey": "",
+              "originItemDbKey": "standard:gemischtwarenhandler:feuerstein-stahl",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "yg7RonBDX5ctbr7icLWe",
+              "ownerCharacterName": "Refri Thornwick",
+              "acquiredAt": "2026-11-04T23:48:09.869Z",
+              "name": "Feuerstein & Stahl",
+              "type": "Werkzeug",
+              "category": "other",
+              "description": "Zum Entzünden von Feuer, langlebig und zuverlässig.",
+              "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/feuerstein-stahl.png",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Feuer, Werkzeug, Langlebig",
+              "equipped": false,
+              "valuation": {
+                "minCopper": 2,
+                "maxCopper": 2
+              },
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Nutzen",
+                  "value": 8
+                },
+                {
+                  "label": "Haltbarkeit",
+                  "value": 9
+                },
+                {
+                  "label": "Tragbarkeit",
+                  "value": 9
+                },
+                {
+                  "label": "Alltag",
+                  "value": 6
+                },
+                {
+                  "label": "Reise",
+                  "value": 10
+                },
+                {
+                  "label": "Preiswert",
+                  "value": 10
+                }
+              ]
+            },
+            {
+              "id": "yg7RonBDX5ctbr7icLWe-draig-start-possessions-20261105-2",
+              "instanceId": "yg7RonBDX5ctbr7icLWe-draig-start-possessions-20261105-2",
+              "templateId": "standard:gemischtwarenhandler:nadel-faden",
+              "templateName": "Nadel & Faden",
+              "definitionRef": {
+                "id": "standard:gemischtwarenhandler:nadel-faden",
+                "revision": "b04f80d412691a2b54c5f430"
+              },
+              "offerId": "",
+              "registerCategory": "werkzeuge",
+              "itemDbKey": "",
+              "originItemDbKey": "standard:gemischtwarenhandler:nadel-faden",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "yg7RonBDX5ctbr7icLWe",
+              "ownerCharacterName": "Refri Thornwick",
+              "acquiredAt": "2026-11-04T23:48:09.869Z",
+              "name": "Nadel & Faden",
+              "type": "Werkzeug",
+              "category": "other",
+              "description": "Set aus Bronze- oder Eisennadel mit Garn.",
+              "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/nadel-faden.png",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Nähen, Reparatur, Garn",
+              "equipped": false,
+              "valuation": {
+                "minCopper": 1,
+                "maxCopper": 1
+              },
+              "infoRows": [],
+              "attributes": [
+                {
+                  "label": "Nutzen",
+                  "value": 7
+                },
+                {
+                  "label": "Haltbarkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Tragbarkeit",
+                  "value": 10
+                },
+                {
+                  "label": "Alltag",
+                  "value": 8
+                },
+                {
+                  "label": "Reise",
+                  "value": 8
+                },
+                {
+                  "label": "Preiswert",
+                  "value": 10
+                }
+              ]
+            },
+            {
+              "id": "yg7RonBDX5ctbr7icLWe-draig-start-possessions-20261105-signet",
+              "instanceId": "yg7RonBDX5ctbr7icLWe-draig-start-possessions-20261105-signet",
+              "templateId": "personal-signet:refri-thornwick",
+              "templateName": "Refris alter Thornwick-Siegelring",
+              "definitionRef": {
+                "id": "personal-signet:refri-thornwick",
+                "revision": "101c0ffd9f3590a3403ac395"
+              },
+              "offerId": "",
+              "registerCategory": "sonstiges",
+              "itemDbKey": "",
+              "originItemDbKey": "personal-signet:refri-thornwick",
+              "itemStorageMode": "character",
+              "ownerCharacterId": "yg7RonBDX5ctbr7icLWe",
+              "ownerCharacterName": "Refri Thornwick",
+              "acquiredAt": "2026-11-04T23:48:09.869Z",
+              "name": "Refris alter Thornwick-Siegelring",
+              "type": "Ritterlicher Siegelring",
+              "category": "other",
+              "description": "Refris persönlicher, alter eiserner Ritterring mit dem Emblem des Hauses Thornwick: eine helle Eule mit ausgebreiteten Schwingen auf olivgrünem Grund. Das Metall ist zerkratzt, an den Kanten abgerieben und in den Vertiefungen stellenweise rostig; die farbige Einlage ist verblasst. Ein schlichter, deutlich gebrauchter Siegelring ohne Edelstein und ohne magische Wirkung.",
+              "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-thornwick%2Frefri-signet-dd23886ad9c811f7%2Foriginal.png?alt=media",
+              "quantity": "1",
+              "weight": "",
+              "tags": "Siegelring, Haus Thornwick, Persönlicher Gegenstand, Abgenutzt",
+              "equipped": true,
+              "valuation": null,
+              "infoRows": [
+                {
+                  "label": "Haus",
+                  "value": "Haus Thornwick"
+                },
+                {
+                  "label": "Zustand",
+                  "value": "Alt, zerkratzt, stellenweise rostig"
+                }
+              ],
+              "attributes": []
+            }
+          ],
+          "categories": [
+            {
+              "icon": "https://i.imgur.com/YaUQREQ.png",
+              "label": "Waffen",
+              "id": "weapon"
+            },
+            {
+              "id": "armor",
+              "label": "Rüstung",
+              "icon": "https://i.imgur.com/5qZtUiY.png"
+            },
+            {
+              "id": "equipment",
+              "icon": "https://i.imgur.com/yMj2CQf.png",
+              "label": "Ausrüstung"
+            },
+            {
+              "icon": "https://i.imgur.com/gwujEaL.png",
+              "label": "Trinkturen",
+              "id": "potions"
+            },
+            {
+              "label": "Dokumente",
+              "id": "documents",
+              "icon": "https://i.imgur.com/urdalGm.png"
+            },
+            {
+              "icon": "https://i.imgur.com/lgeevvn.png",
+              "label": "Sonstiges",
+              "id": "other"
+            }
+          ],
+          "showInfoTable": false,
+          "level": "Stufe",
+          "characterId": "yg7RonBDX5ctbr7icLWe",
+          "carryValue": "Noch festlegen",
+          "portraitFit": "cover",
+          "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+          "carryLabel": "Traglast",
+          "hitpoints": "TP / Zustand",
+          "moneyState": {
+            "totalCopper": 0.12,
+            "pfennig": 12,
+            "copper": 0,
+            "gold": 0,
+            "silver": 0
+          },
+          "portraitFormat": "portrait",
+          "moneyNotice": "",
+          "status": "Gesund",
+          "money": "0 Gold, 0 Silber, 0 Kupfer, 12 Eisenpfennig",
+          "name": "Name des Charakters",
+          "healthColor": "#5c7f20",
+          "attributes": [
+            {
+              "label": "StA",
+              "value": 8
+            },
+            {
+              "label": "Ges",
+              "value": 6
+            },
+            {
+              "label": "Kon",
+              "value": 7
+            },
+            {
+              "value": 5,
+              "label": "Int"
+            },
+            {
+              "value": 6,
+              "label": "Wei"
+            },
+            {
+              "value": 5,
+              "label": "Cha"
+            }
+          ],
+          "role": "Rolle",
+          "equipmentQuiz": {
+            "status": "",
+            "resultText": "",
+            "open": false,
+            "updatedAt": "",
+            "step": 0,
+            "answers": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          "companions": [
+            {
+              "imageFit": "cover",
+              "role": "Begleiter",
+              "infoRows": [],
+              "name": "Reittier / Gefährte",
+              "summary": "Kurzbeschreibung des Gefährten.",
+              "imageFormat": "landscape",
+              "image": "",
+              "species": "Tier oder Begleiter",
+              "statusColor": "#5c7f20",
+              "attributes": [
+                {
+                  "label": "Schnelligkeit",
+                  "value": 6
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "imagePosition": "top",
+              "status": "Gesund",
+              "id": "companion-mrdfws8c-0-vcau",
+              "description": ""
+            },
+            {
+              "species": "Tier / Person",
+              "statusColor": "#5c7f20",
+              "role": "Gefährte",
+              "description": "",
+              "name": "Treuer Begleiter",
+              "status": "Noch festlegen",
+              "imagePosition": "top",
+              "id": "companion-mrdfws8c-1-mvmb",
+              "imageFit": "cover",
+              "attributes": [
+                {
+                  "value": 6,
+                  "label": "Schnelligkeit"
+                },
+                {
+                  "label": "Ausdauer",
+                  "value": 7
+                },
+                {
+                  "value": 5,
+                  "label": "Staerke"
+                },
+                {
+                  "value": 6,
+                  "label": "Agilitaet"
+                },
+                {
+                  "label": "Sozialverhalten",
+                  "value": 4
+                },
+                {
+                  "label": "Robustheit",
+                  "value": 5
+                }
+              ],
+              "infoRows": [],
+              "summary": "Besonderheit, Nutzen oder Bindung.",
+              "imageFormat": "landscape",
+              "image": ""
+            }
+          ],
+          "revision": 1
+        },
+        "updatedAt": "2026-11-04T23:48:13.218393Z"
       }
     ]
   },
@@ -1055,6 +1749,161 @@
           "category": "other",
           "acquiredAt": "",
           "icon": "*"
+        },
+        {
+          "id": "yg7RonBDX5ctbr7icLWe-draig-start-possessions-20261105-1",
+          "instanceId": "yg7RonBDX5ctbr7icLWe-draig-start-possessions-20261105-1",
+          "templateId": "standard:gemischtwarenhandler:feuerstein-stahl",
+          "templateName": "Feuerstein & Stahl",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:feuerstein-stahl",
+            "revision": "cdb8d503f7c8e15f7af760a6"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:feuerstein-stahl",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "yg7RonBDX5ctbr7icLWe",
+          "ownerCharacterName": "Refri Thornwick",
+          "acquiredAt": "2026-11-04T23:48:09.869Z",
+          "name": "Feuerstein & Stahl",
+          "type": "Werkzeug",
+          "category": "other",
+          "description": "Zum Entzünden von Feuer, langlebig und zuverlässig.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/feuerstein-stahl.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Feuer, Werkzeug, Langlebig",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 2,
+            "maxCopper": 2
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 8
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 9
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 9
+            },
+            {
+              "label": "Alltag",
+              "value": 6
+            },
+            {
+              "label": "Reise",
+              "value": 10
+            },
+            {
+              "label": "Preiswert",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "id": "yg7RonBDX5ctbr7icLWe-draig-start-possessions-20261105-2",
+          "instanceId": "yg7RonBDX5ctbr7icLWe-draig-start-possessions-20261105-2",
+          "templateId": "standard:gemischtwarenhandler:nadel-faden",
+          "templateName": "Nadel & Faden",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:nadel-faden",
+            "revision": "b04f80d412691a2b54c5f430"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:nadel-faden",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "yg7RonBDX5ctbr7icLWe",
+          "ownerCharacterName": "Refri Thornwick",
+          "acquiredAt": "2026-11-04T23:48:09.869Z",
+          "name": "Nadel & Faden",
+          "type": "Werkzeug",
+          "category": "other",
+          "description": "Set aus Bronze- oder Eisennadel mit Garn.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/nadel-faden.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Nähen, Reparatur, Garn",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 1,
+            "maxCopper": 1
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 7
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 6
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 10
+            },
+            {
+              "label": "Alltag",
+              "value": 8
+            },
+            {
+              "label": "Reise",
+              "value": 8
+            },
+            {
+              "label": "Preiswert",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "id": "yg7RonBDX5ctbr7icLWe-draig-start-possessions-20261105-signet",
+          "instanceId": "yg7RonBDX5ctbr7icLWe-draig-start-possessions-20261105-signet",
+          "templateId": "personal-signet:refri-thornwick",
+          "templateName": "Refris alter Thornwick-Siegelring",
+          "definitionRef": {
+            "id": "personal-signet:refri-thornwick",
+            "revision": "101c0ffd9f3590a3403ac395"
+          },
+          "offerId": "",
+          "registerCategory": "sonstiges",
+          "itemDbKey": "",
+          "originItemDbKey": "personal-signet:refri-thornwick",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "yg7RonBDX5ctbr7icLWe",
+          "ownerCharacterName": "Refri Thornwick",
+          "acquiredAt": "2026-11-04T23:48:09.869Z",
+          "name": "Refris alter Thornwick-Siegelring",
+          "type": "Ritterlicher Siegelring",
+          "category": "other",
+          "description": "Refris persönlicher, alter eiserner Ritterring mit dem Emblem des Hauses Thornwick: eine helle Eule mit ausgebreiteten Schwingen auf olivgrünem Grund. Das Metall ist zerkratzt, an den Kanten abgerieben und in den Vertiefungen stellenweise rostig; die farbige Einlage ist verblasst. Ein schlichter, deutlich gebrauchter Siegelring ohne Edelstein und ohne magische Wirkung.",
+          "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-thornwick%2Frefri-signet-dd23886ad9c811f7%2Foriginal.png?alt=media",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Siegelring, Haus Thornwick, Persönlicher Gegenstand, Abgenutzt",
+          "equipped": true,
+          "valuation": null,
+          "infoRows": [
+            {
+              "label": "Haus",
+              "value": "Haus Thornwick"
+            },
+            {
+              "label": "Zustand",
+              "value": "Alt, zerkratzt, stellenweise rostig"
+            }
+          ],
+          "attributes": []
         }
       ],
       "categories": [
@@ -1098,15 +1947,16 @@
       "carryLabel": "Traglast",
       "hitpoints": "TP / Zustand",
       "moneyState": {
+        "totalCopper": 0.12,
+        "pfennig": 12,
+        "copper": 0,
         "gold": 0,
-        "silver": 0,
-        "totalCopper": 0,
-        "copper": 0
+        "silver": 0
       },
       "portraitFormat": "portrait",
       "moneyNotice": "",
       "status": "Gesund",
-      "money": "0 Gold, 0 Silber, 0 Kupfer",
+      "money": "0 Gold, 0 Silber, 0 Kupfer, 12 Eisenpfennig",
       "name": "Name des Charakters",
       "healthColor": "#5c7f20",
       "attributes": [
@@ -1238,7 +2088,8 @@
           "imageFormat": "landscape",
           "image": ""
         }
-      ]
+      ],
+      "revision": 1
     },
     "createdAt": "2026-07-09T11:46:29.968Z",
     "currentLocation": "",
@@ -1318,7 +2169,7 @@
         "img": "https://i.imgur.com/TyTaesW.png"
       }
     ],
-    "updatedAt": "2026-07-10T11:38:25.347Z",
+    "updatedAt": "2026-11-04T23:48:13.218393Z",
     "origin": "",
     "fraktion": "Haus Thornwick, Talyndor",
     "portrait": "https://i.imgur.com/3Ai7ly2.png",

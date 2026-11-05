@@ -33,34 +33,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "kaiserreich-argentum"
     ],
     "houseIds": [
-      "haus-hamnett",
-      "haus-neidr",
-      "haus-saith",
-      "haus-crefyddol",
-      "haus-canwyll",
-      "haus-ferlan",
-      "haus-argyllan",
-      "haus-delvor",
-      "haus-corant",
-      "haus-faelcaran",
-      "haus-llyncar",
-      "haus-maredwyn",
-      "haus-morfynn",
-      "haus-selaeth",
-      "haus-arven",
-      "haus-brithfaen",
-      "haus-pyrth",
-      "haus-tiwna",
-      "haus-tir-an-muirghin",
-      "haus-jernigan",
-      "haus-glyn",
-      "haus-crewe",
-      "haus-talfryn",
-      "haus-blevis",
-      "haus-brogar",
-      "haus-argall",
-      "haus-tynged",
-      "haus-tarw",
+      "perllan",
       "haus-draig",
       "haus-wyrm",
       "haus-saethwyr",
@@ -98,6 +71,14 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "craigddu",
       "haus-cochdon",
       "haus-twyllod",
+      "haus-ysgellfor",
+      "haus-helfaen",
+      "haus-marchwern",
+      "haus-tirfelyn",
+      "haus-dolweth",
+      "haus-brynial",
+      "haus-bragwen",
+      "haus-eiddfer",
       "haus-fontani",
       "haus-rhwyd",
       "haus-penrudd",
@@ -108,6 +89,15 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-torvik",
       "haus-celynfor",
       "haus-bradrhith",
+      "haus-jernigan",
+      "haus-glyn",
+      "haus-crewe",
+      "haus-talfryn",
+      "haus-blevis",
+      "haus-brogar",
+      "haus-argall",
+      "haus-tynged",
+      "haus-tarw",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
       "haus-valerus",
@@ -156,6 +146,25 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-ard-conbhron",
       "haus-ui-talamh",
       "haus-garrael",
+      "haus-hamnett",
+      "haus-neidr",
+      "haus-saith",
+      "haus-crefyddol",
+      "haus-canwyll",
+      "haus-ferlan",
+      "haus-argyllan",
+      "haus-delvor",
+      "haus-corant",
+      "haus-faelcaran",
+      "haus-llyncar",
+      "haus-maredwyn",
+      "haus-morfynn",
+      "haus-selaeth",
+      "haus-arven",
+      "haus-brithfaen",
+      "haus-pyrth",
+      "haus-tiwna",
+      "haus-tir-an-muirghin",
       "haus-swynol",
       "haus-creithiog",
       "haus-pendrag",
@@ -819,8 +828,8 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "countryId": "cenyr",
     "regionId": "",
     "children": [
-      "cenyr/silberinsel",
       "cenyr/celtigerns-wacht",
+      "cenyr/silberinsel",
       "cenyr/vortigerns-ruh",
       "cenyr/klaueninsel",
       "cenyr/weidebucht",
@@ -830,34 +839,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "cenyr/tal-der-milane"
     ],
     "houseIds": [
-      "haus-hamnett",
-      "haus-neidr",
-      "haus-saith",
-      "haus-crefyddol",
-      "haus-canwyll",
-      "haus-ferlan",
-      "haus-argyllan",
-      "haus-delvor",
-      "haus-corant",
-      "haus-faelcaran",
-      "haus-llyncar",
-      "haus-maredwyn",
-      "haus-morfynn",
-      "haus-selaeth",
-      "haus-arven",
-      "haus-brithfaen",
-      "haus-pyrth",
-      "haus-tiwna",
-      "haus-tir-an-muirghin",
-      "haus-jernigan",
-      "haus-glyn",
-      "haus-crewe",
-      "haus-talfryn",
-      "haus-blevis",
-      "haus-brogar",
-      "haus-argall",
-      "haus-tynged",
-      "haus-tarw",
+      "perllan",
       "haus-draig",
       "haus-wyrm",
       "haus-saethwyr",
@@ -895,6 +877,14 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "craigddu",
       "haus-cochdon",
       "haus-twyllod",
+      "haus-ysgellfor",
+      "haus-helfaen",
+      "haus-marchwern",
+      "haus-tirfelyn",
+      "haus-dolweth",
+      "haus-brynial",
+      "haus-bragwen",
+      "haus-eiddfer",
       "haus-fontani",
       "haus-rhwyd",
       "haus-penrudd",
@@ -905,6 +895,15 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-torvik",
       "haus-celynfor",
       "haus-bradrhith",
+      "haus-jernigan",
+      "haus-glyn",
+      "haus-crewe",
+      "haus-talfryn",
+      "haus-blevis",
+      "haus-brogar",
+      "haus-argall",
+      "haus-tynged",
+      "haus-tarw",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
       "haus-valerus",
@@ -953,6 +952,25 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-ard-conbhron",
       "haus-ui-talamh",
       "haus-garrael",
+      "haus-hamnett",
+      "haus-neidr",
+      "haus-saith",
+      "haus-crefyddol",
+      "haus-canwyll",
+      "haus-ferlan",
+      "haus-argyllan",
+      "haus-delvor",
+      "haus-corant",
+      "haus-faelcaran",
+      "haus-llyncar",
+      "haus-maredwyn",
+      "haus-morfynn",
+      "haus-selaeth",
+      "haus-arven",
+      "haus-brithfaen",
+      "haus-pyrth",
+      "haus-tiwna",
+      "haus-tir-an-muirghin",
       "haus-swynol",
       "haus-creithiog",
       "haus-pendrag",
@@ -1110,201 +1128,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     ]
   },
   {
-    "id": "cenyr/silberinsel",
-    "parentId": "cenyr",
-    "name": "Silberinsel",
-    "path": [
-      "Cenyr",
-      "Silberinsel"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/silberinsel.png",
-    "countryId": "cenyr",
-    "regionId": "silberinsel",
-    "children": [
-      "cenyr/silberinsel/silberbucht",
-      "cenyr/silberinsel/silberpfad",
-      "cenyr/silberinsel/silberkuste",
-      "cenyr/silberinsel/antike-crannath-clans"
-    ],
-    "houseIds": [
-      "haus-hamnett",
-      "haus-neidr",
-      "haus-saith",
-      "haus-crefyddol",
-      "haus-canwyll",
-      "haus-ferlan",
-      "haus-argyllan",
-      "haus-delvor",
-      "haus-corant",
-      "haus-faelcaran",
-      "haus-llyncar",
-      "haus-maredwyn",
-      "haus-morfynn",
-      "haus-selaeth",
-      "haus-arven",
-      "haus-brithfaen",
-      "haus-pyrth",
-      "haus-tiwna",
-      "haus-tir-an-muirghin"
-    ]
-  },
-  {
-    "id": "cenyr/silberinsel/silberbucht",
-    "parentId": "cenyr/silberinsel",
-    "name": "Silberbucht",
-    "path": [
-      "Cenyr",
-      "Silberinsel",
-      "Silberbucht"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Silberinsel/Silberbucht.png",
-    "countryId": "cenyr",
-    "regionId": "silberinsel",
-    "children": [
-      "cenyr/silberinsel/silberbucht/llanvane"
-    ],
-    "houseIds": [
-      "haus-neidr",
-      "haus-saith",
-      "haus-crefyddol",
-      "haus-canwyll",
-      "haus-ferlan",
-      "haus-argyllan",
-      "haus-delvor",
-      "haus-corant",
-      "haus-faelcaran",
-      "haus-llyncar",
-      "haus-maredwyn",
-      "haus-morfynn",
-      "haus-selaeth",
-      "haus-arven",
-      "haus-brithfaen"
-    ]
-  },
-  {
-    "id": "cenyr/silberinsel/silberbucht/llanvane",
-    "parentId": "cenyr/silberinsel/silberbucht",
-    "name": "Llanvane",
-    "path": [
-      "Cenyr",
-      "Silberinsel",
-      "Silberbucht",
-      "Llanvane"
-    ],
-    "image": "",
-    "countryId": "cenyr",
-    "regionId": "silberinsel",
-    "children": [],
-    "houseIds": [
-      "haus-neidr",
-      "haus-saith",
-      "haus-crefyddol",
-      "haus-canwyll",
-      "haus-ferlan",
-      "haus-argyllan",
-      "haus-delvor",
-      "haus-corant",
-      "haus-faelcaran",
-      "haus-llyncar",
-      "haus-maredwyn",
-      "haus-morfynn",
-      "haus-selaeth",
-      "haus-arven",
-      "haus-brithfaen"
-    ]
-  },
-  {
-    "id": "cenyr/silberinsel/silberpfad",
-    "parentId": "cenyr/silberinsel",
-    "name": "Silberpfad",
-    "path": [
-      "Cenyr",
-      "Silberinsel",
-      "Silberpfad"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Silberinsel/Silberpfad.png",
-    "countryId": "cenyr",
-    "regionId": "silberinsel",
-    "children": [
-      "cenyr/silberinsel/silberpfad/caer-clwyd"
-    ],
-    "houseIds": [
-      "haus-pyrth"
-    ]
-  },
-  {
-    "id": "cenyr/silberinsel/silberpfad/caer-clwyd",
-    "parentId": "cenyr/silberinsel/silberpfad",
-    "name": "Caer Clwyd",
-    "path": [
-      "Cenyr",
-      "Silberinsel",
-      "Silberpfad",
-      "Caer Clwyd"
-    ],
-    "image": "",
-    "countryId": "cenyr",
-    "regionId": "silberinsel",
-    "children": [],
-    "houseIds": [
-      "haus-pyrth"
-    ]
-  },
-  {
-    "id": "cenyr/silberinsel/silberkuste",
-    "parentId": "cenyr/silberinsel",
-    "name": "Silberküste",
-    "path": [
-      "Cenyr",
-      "Silberinsel",
-      "Silberküste"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Silberinsel/Silberk%C3%BCste.png",
-    "countryId": "cenyr",
-    "regionId": "silberinsel",
-    "children": [
-      "cenyr/silberinsel/silberkuste/eiddon"
-    ],
-    "houseIds": [
-      "haus-tiwna"
-    ]
-  },
-  {
-    "id": "cenyr/silberinsel/silberkuste/eiddon",
-    "parentId": "cenyr/silberinsel/silberkuste",
-    "name": "Eiddon",
-    "path": [
-      "Cenyr",
-      "Silberinsel",
-      "Silberküste",
-      "Eiddon"
-    ],
-    "image": "",
-    "countryId": "cenyr",
-    "regionId": "silberinsel",
-    "children": [],
-    "houseIds": [
-      "haus-tiwna"
-    ]
-  },
-  {
-    "id": "cenyr/silberinsel/antike-crannath-clans",
-    "parentId": "cenyr/silberinsel",
-    "name": "Antike Crannath Clans",
-    "path": [
-      "Cenyr",
-      "Silberinsel",
-      "Antike Crannath Clans"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/AntikeIcon.png",
-    "countryId": "cenyr",
-    "regionId": "silberinsel",
-    "children": [],
-    "houseIds": [
-      "haus-tir-an-muirghin"
-    ]
-  },
-  {
     "id": "cenyr/celtigerns-wacht",
     "parentId": "cenyr",
     "name": "Celtigerns Wacht",
@@ -1324,15 +1147,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "cenyr/celtigerns-wacht/camruisge"
     ],
     "houseIds": [
-      "haus-jernigan",
-      "haus-glyn",
-      "haus-crewe",
-      "haus-talfryn",
-      "haus-blevis",
-      "haus-brogar",
-      "haus-argall",
-      "haus-tynged",
-      "haus-tarw",
+      "perllan",
       "haus-draig",
       "haus-wyrm",
       "haus-saethwyr",
@@ -1370,6 +1185,14 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "craigddu",
       "haus-cochdon",
       "haus-twyllod",
+      "haus-ysgellfor",
+      "haus-helfaen",
+      "haus-marchwern",
+      "haus-tirfelyn",
+      "haus-dolweth",
+      "haus-brynial",
+      "haus-bragwen",
+      "haus-eiddfer",
       "haus-fontani",
       "haus-rhwyd",
       "haus-penrudd",
@@ -1380,6 +1203,15 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-torvik",
       "haus-celynfor",
       "haus-bradrhith",
+      "haus-jernigan",
+      "haus-glyn",
+      "haus-crewe",
+      "haus-talfryn",
+      "haus-blevis",
+      "haus-brogar",
+      "haus-argall",
+      "haus-tynged",
+      "haus-tarw",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
       "haus-valerus",
@@ -1443,23 +1275,15 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "countryId": "cenyr",
     "regionId": "celtigerns-wacht",
     "children": [
+      "cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
       "cenyr/celtigerns-wacht/llamreis-ankunft/llysfaen",
       "cenyr/celtigerns-wacht/llamreis-ankunft/craithglyn",
-      "cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
       "cenyr/celtigerns-wacht/llamreis-ankunft/twr-traethlan",
       "cenyr/celtigerns-wacht/llamreis-ankunft/lynthor",
       "cenyr/celtigerns-wacht/llamreis-ankunft/burgerliche"
     ],
     "houseIds": [
-      "haus-jernigan",
-      "haus-glyn",
-      "haus-crewe",
-      "haus-talfryn",
-      "haus-blevis",
-      "haus-brogar",
-      "haus-argall",
-      "haus-tynged",
-      "haus-tarw",
+      "perllan",
       "haus-draig",
       "haus-wyrm",
       "haus-saethwyr",
@@ -1497,6 +1321,14 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "craigddu",
       "haus-cochdon",
       "haus-twyllod",
+      "haus-ysgellfor",
+      "haus-helfaen",
+      "haus-marchwern",
+      "haus-tirfelyn",
+      "haus-dolweth",
+      "haus-brynial",
+      "haus-bragwen",
+      "haus-eiddfer",
       "haus-fontani",
       "haus-rhwyd",
       "haus-penrudd",
@@ -1507,9 +1339,112 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "haus-torvik",
       "haus-celynfor",
       "haus-bradrhith",
+      "haus-jernigan",
+      "haus-glyn",
+      "haus-crewe",
+      "haus-talfryn",
+      "haus-blevis",
+      "haus-brogar",
+      "haus-argall",
+      "haus-tynged",
+      "haus-tarw",
       "haus-cymrath-o-traethlan",
       "haus-sgrechiwr",
       "haus-valerus"
+    ]
+  },
+  {
+    "id": "cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
+    "parentId": "cenyr/celtigerns-wacht/llamreis-ankunft",
+    "name": "Gwynthor",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/gwynthor.png",
+    "countryId": "cenyr",
+    "regionId": "celtigerns-wacht",
+    "children": [
+      "cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/bradrhith-hof"
+    ],
+    "houseIds": [
+      "perllan",
+      "haus-draig",
+      "haus-wyrm",
+      "haus-saethwyr",
+      "haus-gafyr",
+      "haus-dubhan-gwynthor",
+      "haus-bleiddorn",
+      "haus-gwyllach",
+      "haus-tlawd",
+      "haus-rhyddid",
+      "haus-gelyn",
+      "haus-cludwyr",
+      "haus-chwedlonol",
+      "haus-balchder",
+      "haus-eneiniog",
+      "haus-gostyn",
+      "haus-awenydd",
+      "haus-awenor",
+      "haus-loer",
+      "haus-trevoryn",
+      "haus-svathamar",
+      "haus-dubhdarach",
+      "haus-raves",
+      "haus-gofrann",
+      "haus-vann",
+      "haus-draenmelyn",
+      "haus-pendrwn",
+      "haus-swyll",
+      "haus-aelmor",
+      "haus-maerllys",
+      "haus-braglas",
+      "haus-tonnarth",
+      "haus-ysgrif",
+      "haus-falchdyn",
+      "haus-coeddu",
+      "craigddu",
+      "haus-cochdon",
+      "haus-twyllod",
+      "haus-ysgellfor",
+      "haus-helfaen",
+      "haus-marchwern",
+      "haus-tirfelyn",
+      "haus-dolweth",
+      "haus-brynial",
+      "haus-bragwen",
+      "haus-eiddfer",
+      "haus-fontani",
+      "haus-rhwyd",
+      "haus-penrudd",
+      "haus-llythfor",
+      "haus-gwregysdu",
+      "sept-cneacail",
+      "haus-fearnan",
+      "haus-torvik",
+      "haus-celynfor",
+      "haus-bradrhith"
+    ]
+  },
+  {
+    "id": "cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/bradrhith-hof",
+    "parentId": "cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
+    "name": "Bradrhith Hof",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor",
+      "Bradrhith Hof"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "celtigerns-wacht",
+    "children": [],
+    "houseIds": [
+      "haus-bradrhith"
     ]
   },
   {
@@ -1553,91 +1488,6 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "houseIds": [
       "haus-tynged",
       "haus-tarw"
-    ]
-  },
-  {
-    "id": "cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
-    "parentId": "cenyr/celtigerns-wacht/llamreis-ankunft",
-    "name": "Gwynthor",
-    "path": [
-      "Cenyr",
-      "Celtigerns Wacht",
-      "Llamreis Ankunft",
-      "Gwynthor"
-    ],
-    "image": "/Stammb%C3%A4ume/assets/images/regions/gwynthor.png",
-    "countryId": "cenyr",
-    "regionId": "celtigerns-wacht",
-    "children": [
-      "cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/bradrhith-hof"
-    ],
-    "houseIds": [
-      "haus-draig",
-      "haus-wyrm",
-      "haus-saethwyr",
-      "haus-gafyr",
-      "haus-dubhan-gwynthor",
-      "haus-bleiddorn",
-      "haus-gwyllach",
-      "haus-tlawd",
-      "haus-rhyddid",
-      "haus-gelyn",
-      "haus-cludwyr",
-      "haus-chwedlonol",
-      "haus-balchder",
-      "haus-eneiniog",
-      "haus-gostyn",
-      "haus-awenydd",
-      "haus-awenor",
-      "haus-loer",
-      "haus-trevoryn",
-      "haus-svathamar",
-      "haus-dubhdarach",
-      "haus-raves",
-      "haus-gofrann",
-      "haus-vann",
-      "haus-draenmelyn",
-      "haus-pendrwn",
-      "haus-swyll",
-      "haus-aelmor",
-      "haus-maerllys",
-      "haus-braglas",
-      "haus-tonnarth",
-      "haus-ysgrif",
-      "haus-falchdyn",
-      "haus-coeddu",
-      "craigddu",
-      "haus-cochdon",
-      "haus-twyllod",
-      "haus-fontani",
-      "haus-rhwyd",
-      "haus-penrudd",
-      "haus-llythfor",
-      "haus-gwregysdu",
-      "sept-cneacail",
-      "haus-fearnan",
-      "haus-torvik",
-      "haus-celynfor",
-      "haus-bradrhith"
-    ]
-  },
-  {
-    "id": "cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/bradrhith-hof",
-    "parentId": "cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor",
-    "name": "Bradrhith Hof",
-    "path": [
-      "Cenyr",
-      "Celtigerns Wacht",
-      "Llamreis Ankunft",
-      "Gwynthor",
-      "Bradrhith Hof"
-    ],
-    "image": "",
-    "countryId": "cenyr",
-    "regionId": "celtigerns-wacht",
-    "children": [],
-    "houseIds": [
-      "haus-bradrhith"
     ]
   },
   {
@@ -2044,6 +1894,201 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
     "children": [],
     "houseIds": [
       "haus-garrael"
+    ]
+  },
+  {
+    "id": "cenyr/silberinsel",
+    "parentId": "cenyr",
+    "name": "Silberinsel",
+    "path": [
+      "Cenyr",
+      "Silberinsel"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/silberinsel.png",
+    "countryId": "cenyr",
+    "regionId": "silberinsel",
+    "children": [
+      "cenyr/silberinsel/silberbucht",
+      "cenyr/silberinsel/silberpfad",
+      "cenyr/silberinsel/silberkuste",
+      "cenyr/silberinsel/antike-crannath-clans"
+    ],
+    "houseIds": [
+      "haus-hamnett",
+      "haus-neidr",
+      "haus-saith",
+      "haus-crefyddol",
+      "haus-canwyll",
+      "haus-ferlan",
+      "haus-argyllan",
+      "haus-delvor",
+      "haus-corant",
+      "haus-faelcaran",
+      "haus-llyncar",
+      "haus-maredwyn",
+      "haus-morfynn",
+      "haus-selaeth",
+      "haus-arven",
+      "haus-brithfaen",
+      "haus-pyrth",
+      "haus-tiwna",
+      "haus-tir-an-muirghin"
+    ]
+  },
+  {
+    "id": "cenyr/silberinsel/silberbucht",
+    "parentId": "cenyr/silberinsel",
+    "name": "Silberbucht",
+    "path": [
+      "Cenyr",
+      "Silberinsel",
+      "Silberbucht"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Silberinsel/Silberbucht.png",
+    "countryId": "cenyr",
+    "regionId": "silberinsel",
+    "children": [
+      "cenyr/silberinsel/silberbucht/llanvane"
+    ],
+    "houseIds": [
+      "haus-neidr",
+      "haus-saith",
+      "haus-crefyddol",
+      "haus-canwyll",
+      "haus-ferlan",
+      "haus-argyllan",
+      "haus-delvor",
+      "haus-corant",
+      "haus-faelcaran",
+      "haus-llyncar",
+      "haus-maredwyn",
+      "haus-morfynn",
+      "haus-selaeth",
+      "haus-arven",
+      "haus-brithfaen"
+    ]
+  },
+  {
+    "id": "cenyr/silberinsel/silberbucht/llanvane",
+    "parentId": "cenyr/silberinsel/silberbucht",
+    "name": "Llanvane",
+    "path": [
+      "Cenyr",
+      "Silberinsel",
+      "Silberbucht",
+      "Llanvane"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "silberinsel",
+    "children": [],
+    "houseIds": [
+      "haus-neidr",
+      "haus-saith",
+      "haus-crefyddol",
+      "haus-canwyll",
+      "haus-ferlan",
+      "haus-argyllan",
+      "haus-delvor",
+      "haus-corant",
+      "haus-faelcaran",
+      "haus-llyncar",
+      "haus-maredwyn",
+      "haus-morfynn",
+      "haus-selaeth",
+      "haus-arven",
+      "haus-brithfaen"
+    ]
+  },
+  {
+    "id": "cenyr/silberinsel/silberpfad",
+    "parentId": "cenyr/silberinsel",
+    "name": "Silberpfad",
+    "path": [
+      "Cenyr",
+      "Silberinsel",
+      "Silberpfad"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Silberinsel/Silberpfad.png",
+    "countryId": "cenyr",
+    "regionId": "silberinsel",
+    "children": [
+      "cenyr/silberinsel/silberpfad/caer-clwyd"
+    ],
+    "houseIds": [
+      "haus-pyrth"
+    ]
+  },
+  {
+    "id": "cenyr/silberinsel/silberpfad/caer-clwyd",
+    "parentId": "cenyr/silberinsel/silberpfad",
+    "name": "Caer Clwyd",
+    "path": [
+      "Cenyr",
+      "Silberinsel",
+      "Silberpfad",
+      "Caer Clwyd"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "silberinsel",
+    "children": [],
+    "houseIds": [
+      "haus-pyrth"
+    ]
+  },
+  {
+    "id": "cenyr/silberinsel/silberkuste",
+    "parentId": "cenyr/silberinsel",
+    "name": "Silberküste",
+    "path": [
+      "Cenyr",
+      "Silberinsel",
+      "Silberküste"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/Cenyr/Silberinsel/Silberk%C3%BCste.png",
+    "countryId": "cenyr",
+    "regionId": "silberinsel",
+    "children": [
+      "cenyr/silberinsel/silberkuste/eiddon"
+    ],
+    "houseIds": [
+      "haus-tiwna"
+    ]
+  },
+  {
+    "id": "cenyr/silberinsel/silberkuste/eiddon",
+    "parentId": "cenyr/silberinsel/silberkuste",
+    "name": "Eiddon",
+    "path": [
+      "Cenyr",
+      "Silberinsel",
+      "Silberküste",
+      "Eiddon"
+    ],
+    "image": "",
+    "countryId": "cenyr",
+    "regionId": "silberinsel",
+    "children": [],
+    "houseIds": [
+      "haus-tiwna"
+    ]
+  },
+  {
+    "id": "cenyr/silberinsel/antike-crannath-clans",
+    "parentId": "cenyr/silberinsel",
+    "name": "Antike Crannath Clans",
+    "path": [
+      "Cenyr",
+      "Silberinsel",
+      "Antike Crannath Clans"
+    ],
+    "image": "/Stammb%C3%A4ume/assets/images/regions/AntikeIcon.png",
+    "countryId": "cenyr",
+    "regionId": "silberinsel",
+    "children": [],
+    "houseIds": [
+      "haus-tir-an-muirghin"
     ]
   },
   {
@@ -16104,6 +16149,18 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
 ];
 export const REGIONAL_EQUIPMENT_HOUSES = [
   {
+    "id": "perllan",
+    "name": "Familie Perllan",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Perllan/perllan-emblem.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=perllan&mode=view"
+  },
+  {
     "id": "haus-hamnett",
     "name": "Haus Hamnett",
     "image": "/Stammb%C3%A4ume/assets/images/houses/Silberinsel/haus-hamnett.png",
@@ -22151,6 +22208,102 @@ export const REGIONAL_EQUIPMENT_HOUSES = [
       "Venalys"
     ],
     "tree": "/Stammbäume/Stammbaum.html?family=haus-falto&mode=view"
+  },
+  {
+    "id": "haus-ysgellfor",
+    "name": "Familie Ysgellfor",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-ysgellfor.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-ysgellfor&mode=view"
+  },
+  {
+    "id": "haus-helfaen",
+    "name": "Familie Helfaen",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-helfaen&mode=view"
+  },
+  {
+    "id": "haus-marchwern",
+    "name": "Familie Marchwern",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view"
+  },
+  {
+    "id": "haus-tirfelyn",
+    "name": "Familie Tirfelyn",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view"
+  },
+  {
+    "id": "haus-dolweth",
+    "name": "Familie Dolweth",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-dolweth.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-dolweth&mode=view"
+  },
+  {
+    "id": "haus-brynial",
+    "name": "Familie Brynial",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-brynial.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-brynial&mode=view"
+  },
+  {
+    "id": "haus-bragwen",
+    "name": "Familie Bragwen",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-bragwen.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-bragwen&mode=view"
+  },
+  {
+    "id": "haus-eiddfer",
+    "name": "Familie Eiddfer",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/fleischsammler/haus-eiddfer.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=haus-eiddfer&mode=view"
   },
   {
     "id": "haus-veltrane",

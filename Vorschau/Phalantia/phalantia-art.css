@@ -1,0 +1,13 @@
+.phalantia-workbench .prototype-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.phalantia-art-dialog h2{overflow-wrap:anywhere}
+.phalantia-art-dialog .art-detail-layout figure{position:static}
+.phalantia-art-dialog .art-detail-layout figure img{max-height:72vh;object-fit:contain}
+.phalantia-art-dialog .prototype-art-detail figure img{height:72vh}
+.class-reference{padding:20px 0;margin:20px 0;border-block:1px solid var(--line)}
+.class-reference p{font-size:14px}
+.phalantia-art-dialog .house-figure-pair{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:center}
+.phalantia-art-dialog .house-figure-pair figure:first-child img{max-height:45vh}
+.phalantia-art-dialog .house-figure-pair figure:nth-child(2) img{height:72vh}
+.region-card .art-button img{height:235px}
+@media(max-width:1100px){.phalantia-workbench .prototype-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.phalantia-workbench .prototype-grid,.phalantia-art-dialog .house-figure-pair{grid-template-columns:1fr}}

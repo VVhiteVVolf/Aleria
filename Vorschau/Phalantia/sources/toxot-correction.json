@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "tool": "image_gen.imagegen",
+  "original": "assets/warriors/production/prototype-05.png",
+  "assetStem": "prototype-05-v2",
+  "toolOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a0c9-f2da-7570-9dd2-d273d866e4f5\\exec-ea7fced8-2a2f-4bb6-a1b4-e4ace709b449.png",
+  "prompt": "Use case: precise-object-edit. Edit target: the supplied Phalantian Toxot full-body warrior. Preserve the same young adult man, face, helmet, blue cloak, green Greek armor, quiver, rope, sword, full-body stance and matte hand-painted pigment style. Correct ONLY the malformed wooden bow and its bowstring, with minimal necessary finger adjustments at the grip. Replace the irregular S-shaped limbs with a FUNCTIONAL SIMPLE STRUNG SHORTBOW: one continuous smooth wooden stave with two balanced mirror-symmetric limbs above and below the central wrapped grip. Both limb tips must line up vertically on the LEFT of the grip; the wooden stave curves gently to the RIGHT towards the hand at its exact midpoint. ONE taut straight bowstring connects the two aligned limb tips vertically, leaving a clearly visible empty gap between string and central grip. The string must never pass through the grip, arm, clothing or leg. No double strings, floating string, broken limb, unnatural S-shape or disconnected tip. Keep the bow completely left of the body with both complete tips comfortably within the canvas and sufficient clear margins. He grips the middle handle with his left-side hand as before. No arrow nocked; the other hand remains at the belt. Portrait1024x1536 transparent PNG. All helmet ornament and feet and bow tips fully visible. Actual transparent outer background and open spaces. Remove any outer haze, halo, ground, shadow, vignette or colored background; retain matte internal shading only. No text, border, watermark, CGI or photographic gloss.",
+  "references": [
+    "E:/Aleria/Vorschau/Phalantia/assets/warriors/production/prototype-05.png"
+  ],
+  "transparentBackgroundRequested": true,
+  "visualReview": {
+    "symmetricLimbs": true,
+    "alignedTips": true,
+    "oneStraightString": true,
+    "stringClearOfGrip": true,
+    "wholeFigureAndBowVisible": true
+  }
+}

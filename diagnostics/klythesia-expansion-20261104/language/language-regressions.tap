@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: AleriaAlmanach\\tests\\language-module-editor.test.mjs
+not ok 1 - AleriaAlmanach\\tests\\language-module-editor.test.mjs
+  ---
+  duration_ms: 6.1762
+  type: 'test'
+  location: 'E:\\Aleria\\AleriaAlmanach\\tests\\language-module-editor.test.mjs:1:1'
+  failureType: 'testCodeFailure'
+  error: 'spawn EPERM'
+  code: 'EPERM'
+  stack: |-
+    ChildProcess.spawn (node:internal/child_process:420:11)
+    spawn (node:child_process:754:9)
+    TestContext.<anonymous> (node:internal/test_runner/runner:376:19)
+    FileTest.runInAsyncScope (node:async_hooks:214:14)
+    FileTest.run (node:internal/test_runner/test:1047:25)
+    FileTest.start (node:internal/test_runner/test:944:17)
+    runTestFile (node:internal/test_runner/runner:455:32)
+    node:internal/test_runner/runner:726:25
+    node:internal/per_context/primordials:578:37
+    new Promise (<anonymous>)
+  ...
+# Subtest: AleriaAlmanach\\tests\\package-language-modules.test.mjs
+not ok 2 - AleriaAlmanach\\tests\\package-language-modules.test.mjs
+  ---
+  duration_ms: 2.8448
+  type: 'test'
+  location: 'E:\\Aleria\\AleriaAlmanach\\tests\\package-language-modules.test.mjs:1:1'
+  failureType: 'testCodeFailure'
+  error: 'spawn EPERM'
+  code: 'EPERM'
+  stack: |-
+    ChildProcess.spawn (node:internal/child_process:420:11)
+    spawn (node:child_process:754:9)
+    TestContext.<anonymous> (node:internal/test_runner/runner:376:19)
+    FileTest.runInAsyncScope (node:async_hooks:214:14)
+    FileTest.run (node:internal/test_runner/test:1047:25)
+    FileTest.start (node:internal/test_runner/test:944:17)
+    runTestFile (node:internal/test_runner/runner:455:32)
+    node:internal/test_runner/runner:726:25
+    node:internal/per_context/primordials:578:37
+    new Promise (<anonymous>)
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 0
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 20.4914

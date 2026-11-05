@@ -1,0 +1,23 @@
+{
+  "schema": "aleria.reviewed-family-protection-amendment",
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "authorization": "User correction: restore the existing Argall portraits and show Gwenella's existing affair with the bard. Preserve identities, the divorced marriage and biological parentage.",
+  "families": {
+    "haus-argall": {
+      "authoredSourceRevision": 4,
+      "previousProtectedHash": "ec8791e21d5deaf6fbc4ef49b9fcd5b340dd5446275fce75cef3f4115dc81ab9",
+      "protectedHash": "775a01a2d906d17681a7596cdebbd513216a5b8c00973d936a7187c141d47771",
+      "changes": [
+        {
+          "collection": "persons",
+          "entityId": "gwenella-spouse-rhydric-argall",
+          "path": ["extensions", "chartRepeatForPartnershipIds"],
+          "previouslyPresent": false,
+          "value": ["union-gwenella-maelor-ffionydd"]
+        }
+      ],
+      "preservation": "Removing exactly this view-only extension restores the complete original protected fingerprint. All fifteen life-status cases, dates, identities, relationships and neighboring family fields remain protected by the immutable 2026-11-04 receipt."
+    }
+  }
+}

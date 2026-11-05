@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-02",
+  "status": "local-complete",
+  "published": false,
+  "quest": "gwynthor-fleischsammler",
+  "contacts": 3,
+  "mapPlaces": 7,
+  "families": 8,
+  "breweryResidentFamilies": ["haus-bragwen", "haus-eiddfer"],
+  "publicKnowledge": "Existing four-page notice only; new families appear neutrally as local information sources.",
+  "avatar": "Public symbolic sketch only",
+  "privateSourcesUsedByPublicBuild": false,
+  "checks": {
+    "questPreparationAndCatalog": "passed",
+    "questAndTroetzliTests": "8 passed",
+    "familyAndCourtTests": "14 passed",
+    "mapAndHouseholdTests": "17 passed",
+    "serverQuestTests": "13 passed",
+    "releaseTests": "7 passed",
+    "siteBuildTests": "18 passed",
+    "browser": "1440x1100 and 430x1000; all images load; no horizontal overflow; actual family biography opens",
+    "heraldry": "8 exact circles; 85-90% coverage; alpha 255 inside and 0 outside; RGB preserved; originals archived"
+  }
+}

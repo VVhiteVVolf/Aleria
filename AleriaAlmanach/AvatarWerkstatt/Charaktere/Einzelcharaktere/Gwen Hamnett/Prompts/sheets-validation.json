@@ -1,0 +1,49 @@
+{
+  "schema": "aleria.avatar-generation-receipts",
+  "date": "2026-11-03",
+  "characterName": "Gwen Hamnett",
+  "records": [
+    {
+      "setId": "set-01",
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "referenceImage": "AleriaAlmanach/assets/biographies/patrick-20261103/originals/gwen-hamnett.jpeg",
+      "promptFile": "Prompts/gwen-hamnett-20261103-set-01.txt",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a19e7a-219c-7240-9adb-89ae6e7a2b5f\\exec-cc21e24a-7374-4fa8-afd0-18418075bdef.png",
+      "sheetFile": "Sheets/gwen-hamnett-20261103-set-01.png",
+      "actualSize": [
+        1254,
+        1254
+      ],
+      "sha256": "64df256ea3418a782a265729b6a29cde9c4f9d40ba55e8b74de4543e2016f20f"
+    },
+    {
+      "setId": "set-02",
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "referenceImage": "AleriaAlmanach/assets/biographies/patrick-20261103/originals/gwen-hamnett.jpeg",
+      "promptFile": "Prompts/gwen-hamnett-20261103-set-02.txt",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a19e7a-219c-7240-9adb-89ae6e7a2b5f\\exec-4337ae27-2b73-4263-9e64-d961fff80322.png",
+      "sheetFile": "Sheets/gwen-hamnett-20261103-set-02.png",
+      "actualSize": [
+        1254,
+        1254
+      ],
+      "sha256": "9e9dcf93092044b889ef034299ebf47e9149a9f00c854ae89bcfc7e206d62247"
+    },
+    {
+      "setId": "set-03",
+      "tool": "image_gen.imagegen",
+      "mode": "built-in",
+      "referenceImage": "AleriaAlmanach/assets/biographies/patrick-20261103/originals/gwen-hamnett.jpeg",
+      "promptFile": "Prompts/gwen-hamnett-20261103-set-03.txt",
+      "originalGeneratedFile": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a19e7a-219c-7240-9adb-89ae6e7a2b5f\\exec-4d8a1113-b01d-4bda-b353-dbf2aef04f50.png",
+      "sheetFile": "Sheets/gwen-hamnett-20261103-set-03.png",
+      "actualSize": [
+        1254,
+        1254
+      ],
+      "sha256": "2a5c81a04bef9db0e914914ab0019914bdc20934f815cb7af51dbd69f8678e3d"
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-argall--perwyn-argall",
+  "slug": "perwyn-argall",
+  "identity": {
+    "name": "Perwyn Argall",
+    "aliases": [],
+    "worldPersonId": "person--haus-argall--perwyn-argall"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-argall",
+      "label": "Haus Argall"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-argall",
+        "familyTitle": "Haus Argall",
+        "personId": "perwyn-argall",
+        "worldPersonId": "person--haus-argall--perwyn-argall",
+        "houseId": "house-argall",
+        "houseName": "Haus Argall",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Llysfaen"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Perwyn Argall\",\"title\":\"Knappe seines Vaters Rhydric Argall\",\"birth\":\"1723\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"17 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"rhydric-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--rhydric-argall\",\"name\":\"Rhydric Argall\"},{\"personId\":\"gwenella-spouse-rhydric-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--gwenella-spouse-rhydric-argall\",\"name\":\"Gwenella\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-argall--perwyn-argall",
+      "documentIds": [
+        "person--haus-argall--perwyn-argall"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-argall--perwyn-argall",
+          "createdAt": "2026-11-02T00:00:00.000Z",
+          "updatedAt": "2026-11-02T00:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-argall",
+        "personId": "perwyn-argall",
+        "worldPersonId": "person--haus-argall--perwyn-argall",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Fleischsammler Argall/perwyn-argall.json",
+    "sourceExportedAt": "2026-11-02T00:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-02T00:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-argall--perwyn-argall"
+    ],
+    "contentHash": "a61c61af495bf29f6fa8658845a79e5ed5ef70a4de03b92cb0b7543bd0a00348"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "fleischsammler-argall"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Perwyn Argall",
+        "title": "Knappe seines Vaters Rhydric Argall",
+        "fraktion": "Haus Argall",
+        "role": "",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Llysfaen",
+        "currentLocation": "Caer Ysgellfor · Gwynthor",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Perwyn ist der gemeinsame Sohn Rhydric Argalls und Gwenellas. Die Scheidung seiner Eltern verändert seine Abstammung nicht. Er lebt bei seinem Vater in Caer Ysgellfor und dient ihm als Knappe. Er ist eitel, hält Haar und Rüstung sorgfältig in Ordnung und trägt seinen jungen Rang mit sichtlichem Stolz. Einen eigenen Ritterschlag besitzt er noch nicht.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-02T00:00:00.000Z",
+        "updatedAt": "2026-11-02T00:00:00.000Z",
+        "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Perwyn Argall"
+            },
+            {
+              "label": "Geboren",
+              "value": "1723"
+            },
+            {
+              "label": "Alter im Jahr 1740",
+              "value": "17 Jahre"
+            },
+            {
+              "label": "Familienstand",
+              "value": "Unverheiratet"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Knappe seines Vaters Rhydric Argall"
+            },
+            {
+              "label": "Wohnsitz",
+              "value": "Caer Ysgellfor · Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png",
+            "biographyTitle": "Biografie",
+            "biographyText": "Perwyn ist der gemeinsame Sohn Rhydric Argalls und Gwenellas. Die Scheidung seiner Eltern verändert seine Abstammung nicht. Er lebt bei seinem Vater in Caer Ysgellfor und dient ihm als Knappe. Er ist eitel, hält Haar und Rüstung sorgfältig in Ordnung und trägt seinen jungen Rang mit sichtlichem Stolz. Einen eigenen Ritterschlag besitzt er noch nicht.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Erscheinung",
+                "text": "Siebzehnjähriger schmaler Jugendlicher, sorgfältig gerichtetes kupferrotes Haar, selbstgefälliger stolzer Blick. Gut gepflegte Gwynthorer Knappenrüstung mit rotem Stoff, leichten Metallteilen und Kettenzeug; vollständig bekleidet."
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-argall--perwyn-argall"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-argall--perwyn-argall",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1723",
+          "death": "",
+          "houseId": "house-argall",
+          "houseName": "Haus Argall",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [
+            "17 Jahre"
+          ],
+          "sources": [
+            {
+              "familyId": "haus-argall",
+              "personId": "perwyn-argall",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-02T00:00:00.000Z",
+              "lastSyncedAt": "2026-11-02T00:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=perwyn-argall",
+              "fingerprint": "{\"name\":\"Perwyn Argall\",\"title\":\"Knappe seines Vaters Rhydric Argall\",\"birth\":\"1723\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"17 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"rhydric-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--rhydric-argall\",\"name\":\"Rhydric Argall\"},{\"personId\":\"gwenella-spouse-rhydric-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--gwenella-spouse-rhydric-argall\",\"name\":\"Gwenella\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "rhydric-argall",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-argall--rhydric-argall",
+                "name": "Rhydric Argall"
+              },
+              {
+                "personId": "gwenella-spouse-rhydric-argall",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--gwenella-spouse-rhydric-argall",
+                "name": "Gwenella"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "id": "person--haus-argall--perwyn-argall",
+        "race": "Mensch",
+        "age": 17
+      }
+    ]
+  },
+  "character": {
+    "name": "Perwyn Argall",
+    "title": "Knappe seines Vaters Rhydric Argall",
+    "fraktion": "Haus Argall",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Llysfaen",
+    "currentLocation": "Caer Ysgellfor · Gwynthor",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Perwyn ist der gemeinsame Sohn Rhydric Argalls und Gwenellas. Die Scheidung seiner Eltern verändert seine Abstammung nicht. Er lebt bei seinem Vater in Caer Ysgellfor und dient ihm als Knappe. Er ist eitel, hält Haar und Rüstung sorgfältig in Ordnung und trägt seinen jungen Rang mit sichtlichem Stolz. Einen eigenen Ritterschlag besitzt er noch nicht.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-02T00:00:00.000Z",
+    "updatedAt": "2026-11-02T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Perwyn Argall"
+        },
+        {
+          "label": "Geboren",
+          "value": "1723"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "17 Jahre"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Unverheiratet"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Knappe seines Vaters Rhydric Argall"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "Caer Ysgellfor · Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Perwyn ist der gemeinsame Sohn Rhydric Argalls und Gwenellas. Die Scheidung seiner Eltern verändert seine Abstammung nicht. Er lebt bei seinem Vater in Caer Ysgellfor und dient ihm als Knappe. Er ist eitel, hält Haar und Rüstung sorgfältig in Ordnung und trägt seinen jungen Rang mit sichtlichem Stolz. Einen eigenen Ritterschlag besitzt er noch nicht.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "Siebzehnjähriger schmaler Jugendlicher, sorgfältig gerichtetes kupferrotes Haar, selbstgefälliger stolzer Blick. Gut gepflegte Gwynthorer Knappenrüstung mit rotem Stoff, leichten Metallteilen und Kettenzeug; vollständig bekleidet."
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-argall--perwyn-argall"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-argall--perwyn-argall",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1723",
+      "death": "",
+      "houseId": "house-argall",
+      "houseName": "Haus Argall",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "17 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-argall",
+          "personId": "perwyn-argall",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-02T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-02T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=perwyn-argall",
+          "fingerprint": "{\"name\":\"Perwyn Argall\",\"title\":\"Knappe seines Vaters Rhydric Argall\",\"birth\":\"1723\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-argall\",\"portrait\":\"/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"17 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"rhydric-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--rhydric-argall\",\"name\":\"Rhydric Argall\"},{\"personId\":\"gwenella-spouse-rhydric-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--gwenella-spouse-rhydric-argall\",\"name\":\"Gwenella\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "rhydric-argall",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-argall--rhydric-argall",
+            "name": "Rhydric Argall"
+          },
+          {
+            "personId": "gwenella-spouse-rhydric-argall",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--gwenella-spouse-rhydric-argall",
+            "name": "Gwenella"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--haus-argall--perwyn-argall",
+    "race": "Mensch",
+    "age": 17
+  }
+}

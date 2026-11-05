@@ -15,14 +15,14 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 3,
+  "biographySourceRevision": 5,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Die Argall sind eine kleine Bürgerfamilie aus Llysfaen. Die bekannten Generationen verzweigen sich in die Brüderlinien Brinthans und Uthyrs sowie eine kleinere Vetternlinie. Das Familienzeichen zeigt ein Erntemotiv; ein bestimmter Betrieb ist bisher nicht festgelegt.",
-    "history": "Cyran und Gweneth gehören zur ältesten namentlich bekannten Generation. Brenar und Nerwen führen zu Brinthan und Uthyr; Iwrian begründet die kleinere Linie, aus der Dyrwyn hervorgeht. Brinthan ist das überlieferte Oberhaupt.",
+    "history": "Cyran und Gweneth gehören zur ältesten namentlich bekannten Generation. Brenar und Nerwen führen zu Brinthan und Uthyr; Iwrian und Avelyn sind die Eltern Dyrwyns und seines elf Jahre jüngeren Bruders Rhydric. Rhydric ist damit ein Vetter Brinthans und Uthyrs. Brinthan bleibt das Oberhaupt des Hauses.",
     "character": "Shylene, Tochter Brinthans und Eris’, hatte eine geheime Beziehung zu Owain Draig. Ihr Sohn Iolo ist als nicht eheliches Kind in der bestehenden Familienakte erfasst. Diese persönliche Verbindung erhebt die Argall nicht in den Adel.",
-    "relations": "Die Verbindung zu Haus Draig betrifft Shylene, Owain und Iolo. Andere jüngere Angehörige sind unverheiratet; ihre weiteren Lebenslinien bleiben offen."
+    "relations": "Die Verbindung zu Haus Draig betrifft Shylene, Owain und Iolo. Rhydric verwaltet Caer Ysgellfor im Bannkreis Gwynthors und führt dort als Hauptmann den Wachdienst. Sein siebzehnjähriger Sohn Perwyn dient ihm als Knappe. Rhydrics Ehe mit der rothaarigen, hochmütigen Gwenella ist geschieden; sie brannte mit dem Barden Maelor Ffionydd nach Aberon durch. Perwyn bleibt der gemeinsame Sohn Rhydrics und Gwenellas. Eine Ehe Gwenellas mit Maelor ist nicht festgelegt. Der Stammsitz der Argall bleibt Llysfaen."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -102,15 +102,15 @@ export const HOUSE_CONTENT = {
   },
   "sections": {
     "overview": "Die Argall sind eine kleine Bürgerfamilie aus Llysfaen. Die bekannten Generationen verzweigen sich in die Brüderlinien Brinthans und Uthyrs sowie eine kleinere Vetternlinie. Das Familienzeichen zeigt ein Erntemotiv; ein bestimmter Betrieb ist bisher nicht festgelegt.",
-    "history": "Cyran und Gweneth gehören zur ältesten namentlich bekannten Generation. Brenar und Nerwen führen zu Brinthan und Uthyr; Iwrian begründet die kleinere Linie, aus der Dyrwyn hervorgeht. Brinthan ist das überlieferte Oberhaupt.",
+    "history": "Cyran und Gweneth gehören zur ältesten namentlich bekannten Generation. Brenar und Nerwen führen zu Brinthan und Uthyr; Iwrian und Avelyn sind die Eltern Dyrwyns und seines elf Jahre jüngeren Bruders Rhydric. Rhydric ist damit ein Vetter Brinthans und Uthyrs. Brinthan bleibt das Oberhaupt des Hauses.",
     "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
-    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
+    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Rhydric Argall ist Burgverwalter und Hauptmann von Caer Ysgellfor. Die kleine Festung an der Hauptstraße schützt die umliegenden Höfe und sammelt Getreide und Vorräte für den Weitertransport nach Gwynthor. Die ungelöste Mordserie überfordert den abgekämpften Hauptmann. Sein eitler Sohn Perwyn lebt bei ihm und dient ihm als Knappe; einen eigenen Ritterschlag besitzt er noch nicht.",
     "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
     "holdings": "Eigene Besitzungen und Betriebe sind bisher nicht gesondert belegt.",
     "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
-    "conflictsAlliances": "Die Verbindung zu Haus Draig betrifft Shylene, Owain und Iolo. Andere jüngere Angehörige sind unverheiratet; ihre weiteren Lebenslinien bleiben offen.",
+    "conflictsAlliances": "Die Verbindung zu Haus Draig betrifft Shylene, Owain und Iolo. Rhydrics Ehe mit Gwenella ist geschieden. Die schöne, rothaarige und arrogante Gwenella brannte mit dem fahrenden Barden Maelor Ffionydd nach Aberon durch. Ihre Beziehung ist als Affäre erfasst, mit dem Grund: „Durchgebrannt nach Aberon“. Eine Ehe zwischen ihnen ist nicht festgelegt. Perwyn ist Rhydrics und Gwenellas gemeinsamer Sohn. Maelor ist nicht sein Vater. Die übrigen bereits erfassten jüngeren Angehörigen bleiben unverheiratet.",
     "values": "Shylene, Tochter Brinthans und Eris’, hatte eine geheime Beziehung zu Owain Draig. Ihr Sohn Iolo ist als nicht eheliches Kind in der bestehenden Familienakte erfasst. Diese persönliche Verbindung erhebt die Argall nicht in den Adel.",
-    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
+    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Rhydric und sein Sohn Perwyn wohnen in Caer Ysgellfor bei Gwynthor; der Stammsitz des Hauses bleibt Llysfaen. Gwenella und Maelor leben in Aberon. Ihre Herkunftsfamilien sind nicht überliefert. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
     "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
     "historicalFigures": "Die folgenden Persönlichkeiten gehören zur belegten Geschichte der Familie."
   },
@@ -141,6 +141,22 @@ export const HOUSE_CONTENT = {
   ],
   "heirs": [],
   "offices": [
+    {
+      "id": "rhydric-argall",
+      "familyId": "haus-argall",
+      "name": "Rhydric Argall",
+      "role": "Burgverwalter und Hauptmann von Caer Ysgellfor",
+      "image": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png",
+      "detail": "Dyrwyns deutlich jüngerer Bruder und Vetter Brinthans und Uthyrs; wohnt in Caer Ysgellfor bei Gwynthor."
+    },
+    {
+      "id": "perwyn-argall",
+      "familyId": "haus-argall",
+      "name": "Perwyn Argall",
+      "role": "Knappe seines Vaters Rhydric Argall",
+      "image": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/perwyn-argall.png",
+      "detail": "Siebzehnjähriger gemeinsamer Sohn Rhydrics und Gwenellas; eitel und sorgfältig auf sein Auftreten bedacht."
+    },
     {
       "id": "iwrian-argall",
       "familyId": "haus-argall",
@@ -184,12 +200,13 @@ export const HOUSE_CONTENT = {
   "currentHead": "Brinthan Argall",
   "firstHeir": "",
   "headsNote": "Belegte Aufgaben im heutigen Familienkreis; keine erfundene historische Amtsfolge.",
-  "contentVersion": "20261024-housebio-v1",
+  "contentVersion": "20261102-argall-gwynthor-v2",
   "omitMilitaryProfile": true,
   "biographyManagedExternally": false,
   "illustrationCategory": "Bürgerliche Hausdarstellung",
   "biographyPreviousDefaultFingerprints": [
-    "1722:f24a8265:697155f3"
+    "1722:f24a8265:697155f3",
+    "2905:a2f5ac84:4d32266a"
   ],
   "headsTitle": "Familienführung und Haushalt",
   "officesTitle": "Angehörige und Aufgaben"

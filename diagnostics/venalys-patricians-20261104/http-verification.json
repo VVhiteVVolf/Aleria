@@ -1,0 +1,436 @@
+{
+  "base": "http://127.0.0.1:8897/Vorschau/Venalys/",
+  "houses": 22,
+  "warriors": 22,
+  "checkedFiles": 71,
+  "allBytesMatch": true,
+  "browser": "limited: CUA navigation timeoutMs error",
+  "records": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "bytes": 821,
+      "sha256": "8c91d815835dda4f3ef9d601c116e707c63f96732ce5a7e1393f9ad807b6cb6f"
+    },
+    {
+      "file": "proposal-page.mjs",
+      "status": 200,
+      "bytes": 1355,
+      "sha256": "48307fef086d2fa7cc2c47495f443ef00c4304f7aea485adf4eb75e5030e1772"
+    },
+    {
+      "file": "house-data.mjs",
+      "status": 200,
+      "bytes": 144,
+      "sha256": "9a240e9e87525b3fcbf04bc32d547be80545c48cc4ae7d3436d6db411147872f"
+    },
+    {
+      "file": "house-catalog.json",
+      "status": 200,
+      "bytes": 31035,
+      "sha256": "e151407f4a936556ae9b92d69179f28cbeaef81b223804b774b165a3221640d3"
+    },
+    {
+      "file": "warrior-data.mjs",
+      "status": 200,
+      "bytes": 664,
+      "sha256": "9a0c488b4387874a61283e08d713fb1dd91ae1282446cf3b8a01b5c5b0715234"
+    },
+    {
+      "file": "assets/crests/vinicius.webp",
+      "status": 200,
+      "bytes": 65738,
+      "sha256": "658e75b0f8d9d188dff7bf554aa0da66b54d039d7f1088f73d3fe2d65caed8af"
+    },
+    {
+      "file": "assets/crests/avenicci.webp",
+      "status": 200,
+      "bytes": 67528,
+      "sha256": "6ff1c0a69dfdd49ee2c2135f7780eb72f910cecd8639c94017a66d6df745bfba"
+    },
+    {
+      "file": "assets/crests/abor.webp",
+      "status": 200,
+      "bytes": 86788,
+      "sha256": "40b69913b8092435630a0c0182fa9a168aa7b299a44c34aa9bd6705ccb2fb2a6"
+    },
+    {
+      "file": "assets/crests/tullius.webp",
+      "status": 200,
+      "bytes": 104124,
+      "sha256": "2c377771967d5a61597d65769aa6322f524956c459500f4b90de68180964f161"
+    },
+    {
+      "file": "assets/crests/arentino.webp",
+      "status": 200,
+      "bytes": 108832,
+      "sha256": "f5667c74877dbf6993e99a8d1e6a0a54e8970de24befaa6e19cc9f791b683a9f"
+    },
+    {
+      "file": "assets/crests/venturian.webp",
+      "status": 200,
+      "bytes": 116754,
+      "sha256": "0ae1cd080e0d59afe0d41a46f9bdb0842a0842fca67fe71ca9a5e17225141a35"
+    },
+    {
+      "file": "assets/crests/fidelinus.webp",
+      "status": 200,
+      "bytes": 100100,
+      "sha256": "be598b5cda6e332dfe06e0b4ddab69ab322ad17d2974d3b2565f08b2de65790a"
+    },
+    {
+      "file": "assets/crests/argentinus.webp",
+      "status": 200,
+      "bytes": 97864,
+      "sha256": "2b1376dba0215855b737acc71e11022e508554c77977e82eea2d3738acaa1d4a"
+    },
+    {
+      "file": "assets/crests/victorellus.webp",
+      "status": 200,
+      "bytes": 116322,
+      "sha256": "69b95c4e76131ec1a1a2310acca7942e4128b03a4af94a3b63c9d2a32db70071"
+    },
+    {
+      "file": "assets/crests/potenian.webp",
+      "status": 200,
+      "bytes": 118844,
+      "sha256": "a2819e142ae37ba66a5c85ddddf963d16733c272684a99bc072fde92b86c1ab2"
+    },
+    {
+      "file": "assets/crests/rationellus.webp",
+      "status": 200,
+      "bytes": 89358,
+      "sha256": "ce6f8dcb72e6c94bbd5bab643370ea71b327d08fe09ed56d05ae1062f7c36b98"
+    },
+    {
+      "file": "assets/crests/honoratus.webp",
+      "status": 200,
+      "bytes": 114946,
+      "sha256": "7b859d51afae43f3090847486cfa5ec10df856e94c1429b4b413faf1a02b6769"
+    },
+    {
+      "file": "assets/crests/sapienor.webp",
+      "status": 200,
+      "bytes": 115394,
+      "sha256": "056f18437c4aac8e7a2c1e0a41d2ad1063f9a6f2c2b59bdd1bf719b907dbf64f"
+    },
+    {
+      "file": "assets/crests/ordinarius.webp",
+      "status": 200,
+      "bytes": 110968,
+      "sha256": "04468d8cd1667eaa5678e8bb3f7ebd958eef7a83f644e519db7ebcf2c3cd5487"
+    },
+    {
+      "file": "assets/crests/fortenian.webp",
+      "status": 200,
+      "bytes": 114150,
+      "sha256": "77256b60826f5ac128fecc233bf4c476ebd2bf96963f814975e670e51b085ab1"
+    },
+    {
+      "file": "assets/crests/nerva.webp",
+      "status": 200,
+      "bytes": 115984,
+      "sha256": "a350639db387b2ae706e8900bc2e8fba1b060f656f6f8283a61d579d6ca4a677"
+    },
+    {
+      "file": "assets/crests/ergalla.webp",
+      "status": 200,
+      "bytes": 105102,
+      "sha256": "0bd2d422a464033f030a0fd5d2849d13a6695800b46b8dc843add8a431ae98a6"
+    },
+    {
+      "file": "assets/crests/falto.webp",
+      "status": 200,
+      "bytes": 136826,
+      "sha256": "1712f7b73e91b3f1344695fe582ce60a0ecdf5a55bd9f545029f061caf57c846"
+    },
+    {
+      "file": "assets/crests/falveri.webp",
+      "status": 200,
+      "bytes": 91346,
+      "sha256": "6e301602ce52aa8860e2e4588d7ece8ac3a505355eb9378ee89de36627c40aee"
+    },
+    {
+      "file": "assets/crests/bellaratus.webp",
+      "status": 200,
+      "bytes": 97934,
+      "sha256": "1241aa062f9a56ac056653f219f756c321c3813a77b35f8843f67400aafe223b"
+    },
+    {
+      "file": "assets/crests/legarinus.webp",
+      "status": 200,
+      "bytes": 110774,
+      "sha256": "bed54ff64e55af2d2773a1586068d9da905236266e4b5d659ff874d922d3d494"
+    },
+    {
+      "file": "assets/crests/discipian.webp",
+      "status": 200,
+      "bytes": 98816,
+      "sha256": "38fe2e67951b726d562c2c9aa2b27864e4a7fdddfea51c17826123e8c900bc72"
+    },
+    {
+      "file": "assets/warriors/previews/vinicius.webp",
+      "status": 200,
+      "bytes": 202266,
+      "sha256": "6bf362425051ef7c4b7a9286f5bef139a5f7a43cd03f017b9d6ab4cba853969e"
+    },
+    {
+      "file": "assets/warriors/production/vinicius.png",
+      "status": 200,
+      "bytes": 2184006,
+      "sha256": "58ed5b3c8641a1970a8031e77cb02e00450347608273e69d13b182dcdb0510d7"
+    },
+    {
+      "file": "assets/warriors/previews/avenicci.webp",
+      "status": 200,
+      "bytes": 196666,
+      "sha256": "82d51dd04f83c052e3950556f2c636fd919cedf92c10f5d001bd528f55601b69"
+    },
+    {
+      "file": "assets/warriors/production/avenicci.png",
+      "status": 200,
+      "bytes": 2104139,
+      "sha256": "c3d77f31d0855c1c060207320296d578942721644a6a823baba00d806869e2d7"
+    },
+    {
+      "file": "assets/warriors/previews/abor.webp",
+      "status": 200,
+      "bytes": 227222,
+      "sha256": "91d212ef13060ed97d0388c046018b992fe41c4802c1540414725abf3414d966"
+    },
+    {
+      "file": "assets/warriors/production/abor.png",
+      "status": 200,
+      "bytes": 2298597,
+      "sha256": "e8457d9b0aa3af5630e5d951e78145d42047c562562ba3d523b603fdb0a73948"
+    },
+    {
+      "file": "assets/warriors/previews/tullius.webp",
+      "status": 200,
+      "bytes": 193446,
+      "sha256": "030f8dd2bb10760ece9f33ad2656d89b10ff6d29e098c3267811b7928d1f4399"
+    },
+    {
+      "file": "assets/warriors/production/tullius.png",
+      "status": 200,
+      "bytes": 2209806,
+      "sha256": "f231321bcd6783489f0744a592ce3de277aad9de7fa43c70a3975ede9e83f0bf"
+    },
+    {
+      "file": "assets/warriors/previews/arentino.webp",
+      "status": 200,
+      "bytes": 181684,
+      "sha256": "d4beb390f51d43c61553d2f1aae44ee8ff204e63185f7ab3faf64ee9f47ab023"
+    },
+    {
+      "file": "assets/warriors/production/arentino.png",
+      "status": 200,
+      "bytes": 2054485,
+      "sha256": "5972b2968250cd67850ed802e902ad93b2882d97009afcd873fbdc86b8f8c8f0"
+    },
+    {
+      "file": "assets/warriors/previews/venturian.webp",
+      "status": 200,
+      "bytes": 177378,
+      "sha256": "89b41828c06f8747ed8a97e425af6c52b77c47ee2d2ec69033ef7e5b94bae7ec"
+    },
+    {
+      "file": "assets/warriors/production/venturian.png",
+      "status": 200,
+      "bytes": 2007607,
+      "sha256": "d94087e8b53e5117602bd88e62aac42d96b583bf4ff7a874b3ae7ecde00b7ae2"
+    },
+    {
+      "file": "assets/warriors/previews/fidelinus.webp",
+      "status": 200,
+      "bytes": 218880,
+      "sha256": "a86d68a2e43e245ed6187074010a778cbad0312a54e11c9173751b0b6193dad3"
+    },
+    {
+      "file": "assets/warriors/production/fidelinus.png",
+      "status": 200,
+      "bytes": 2250489,
+      "sha256": "7659f595f84b66f331a622ca355741ade1767d69fc5b2b5ce5f770354005a5a5"
+    },
+    {
+      "file": "assets/warriors/previews/argentinus.webp",
+      "status": 200,
+      "bytes": 235504,
+      "sha256": "09ddbd9c7c87487236db6e121fc140326a38832344066c48e8be7354a4739c04"
+    },
+    {
+      "file": "assets/warriors/production/argentinus.png",
+      "status": 200,
+      "bytes": 2362841,
+      "sha256": "b1d9efbc12d56cbfbc7deb5a569ae6f21589b94ef3fca086d5ed914c1263323a"
+    },
+    {
+      "file": "assets/warriors/previews/victorellus.webp",
+      "status": 200,
+      "bytes": 191768,
+      "sha256": "b41c9001a0f392a63b6e80458a9ddc3f2b4e5a13f6cfca9aef3695acbbba310f"
+    },
+    {
+      "file": "assets/warriors/production/victorellus.png",
+      "status": 200,
+      "bytes": 2156487,
+      "sha256": "db311eee647d66f78c0531e17fe12491f0c630776026f26aa8ddd022bf09b05b"
+    },
+    {
+      "file": "assets/warriors/previews/potenian.webp",
+      "status": 200,
+      "bytes": 204178,
+      "sha256": "43855317f93aed8c029d56acb22218d8e9140724b5a7994de80587b3d75cc4f1"
+    },
+    {
+      "file": "assets/warriors/production/potenian.png",
+      "status": 200,
+      "bytes": 2147582,
+      "sha256": "4dbe191a39f4d74f3cc72de5876f7071602f4b3ea17702acf4fc9a68c3acd19b"
+    },
+    {
+      "file": "assets/warriors/previews/rationellus.webp",
+      "status": 200,
+      "bytes": 246670,
+      "sha256": "6e8b34dfc58f3ad950b37bfac39c233aab8393a9b7a1f7c09975fee9f81e28b9"
+    },
+    {
+      "file": "assets/warriors/production/rationellus.png",
+      "status": 200,
+      "bytes": 2497261,
+      "sha256": "656a3a9f9773fdd6ae85af78e28075e0942bd262caa978373b62a6f04478cd7f"
+    },
+    {
+      "file": "assets/warriors/previews/honoratus.webp",
+      "status": 200,
+      "bytes": 220510,
+      "sha256": "95fe121beeb16a27d69b52d35a0fdbfa572883f96bdcd8119aae5814aad61f7b"
+    },
+    {
+      "file": "assets/warriors/production/honoratus.png",
+      "status": 200,
+      "bytes": 2275695,
+      "sha256": "c67632bb9d3acb87a34fcaeb89e744145b8ed138eadc86d50f311fa18d20459b"
+    },
+    {
+      "file": "assets/warriors/previews/sapienor.webp",
+      "status": 200,
+      "bytes": 189120,
+      "sha256": "5b6f6e59e461e2309d158c5869966daf786918a34ef17cc51bcce518aa6bf9c9"
+    },
+    {
+      "file": "assets/warriors/production/sapienor.png",
+      "status": 200,
+      "bytes": 2096179,
+      "sha256": "e378d2a07ddb2f3e122561ce6f78e8a1f92b714ac2a04c5a40c2f4c424455e26"
+    },
+    {
+      "file": "assets/warriors/previews/ordinarius.webp",
+      "status": 200,
+      "bytes": 262142,
+      "sha256": "71c29194f01b3e9e912cdd63e26624f2c3706384dc1ef21962db637fe9c41246"
+    },
+    {
+      "file": "assets/warriors/production/ordinarius.png",
+      "status": 200,
+      "bytes": 2535746,
+      "sha256": "d44ac9471938b1f196f69412fd342bbe6e5d9af7a7fcf762d567d87fb428dedb"
+    },
+    {
+      "file": "assets/warriors/previews/fortenian.webp",
+      "status": 200,
+      "bytes": 224316,
+      "sha256": "43545e6912968d6e107d2002ad1178fdaf2d5f1d21b54ab27814ad936a874668"
+    },
+    {
+      "file": "assets/warriors/production/fortenian.png",
+      "status": 200,
+      "bytes": 2249825,
+      "sha256": "96e1e88063beebfecaf651d783bc48bc623c94c733640a35890fe36dcd03df31"
+    },
+    {
+      "file": "assets/warriors/previews/nerva.webp",
+      "status": 200,
+      "bytes": 178186,
+      "sha256": "28c60c72900b97ddc82b15641fdba908bb408b7d42b9711889102a7264b064c6"
+    },
+    {
+      "file": "assets/warriors/production/nerva.png",
+      "status": 200,
+      "bytes": 2022423,
+      "sha256": "68b0f0ceae3a5d7c3d6d53334a8d46892e02ce8e4c96f87ec2d0783771347bed"
+    },
+    {
+      "file": "assets/warriors/previews/ergalla.webp",
+      "status": 200,
+      "bytes": 235790,
+      "sha256": "6273fcde174b140eff3bfbfcc455abed3aa577744dac4da6c702a68ec5573641"
+    },
+    {
+      "file": "assets/warriors/production/ergalla.png",
+      "status": 200,
+      "bytes": 2322376,
+      "sha256": "2e71264c995c6713eee57f1ee06df33951ab0246e7adb10cf864356bbdd16405"
+    },
+    {
+      "file": "assets/warriors/previews/falto.webp",
+      "status": 200,
+      "bytes": 196404,
+      "sha256": "abbb36186f5e88af769abd0294134c5ea9044a274464bc7328d75b4379607282"
+    },
+    {
+      "file": "assets/warriors/production/falto.png",
+      "status": 200,
+      "bytes": 2121834,
+      "sha256": "1408701af90b9e36de8dcc93a77bc8bccc5a0c2e21f1055901cc2e54bba56477"
+    },
+    {
+      "file": "assets/warriors/previews/falveri.webp",
+      "status": 200,
+      "bytes": 169750,
+      "sha256": "4bfec4d6c4070e42dfc89ad856d400614204fcf2bcc359152731852851cba775"
+    },
+    {
+      "file": "assets/warriors/production/falveri.png",
+      "status": 200,
+      "bytes": 2008263,
+      "sha256": "4ca3ee56e52cf0d4d3bd04bde920e82f5c18b439f208a4f6ef0b1b4f4648c482"
+    },
+    {
+      "file": "assets/warriors/previews/bellaratus.webp",
+      "status": 200,
+      "bytes": 169782,
+      "sha256": "049a7292ca53627d2e1888194f833fc6390950f24d44102d5917239da9139b2c"
+    },
+    {
+      "file": "assets/warriors/production/bellaratus.png",
+      "status": 200,
+      "bytes": 2012237,
+      "sha256": "92b4b47672b178cb13ab79b5aafc0f6f332726448ae9aa39546ec642b00308ee"
+    },
+    {
+      "file": "assets/warriors/previews/legarinus.webp",
+      "status": 200,
+      "bytes": 169450,
+      "sha256": "6a9858e7ad8290378a53ddeee0dacb42ef4f8735c982e94caefdf8af568cb8f9"
+    },
+    {
+      "file": "assets/warriors/production/legarinus.png",
+      "status": 200,
+      "bytes": 1949946,
+      "sha256": "e08f4d4a2898254e945d94af6ac53acbdeeea17aa093af48afe49df3a773ed1a"
+    },
+    {
+      "file": "assets/warriors/previews/discipian.webp",
+      "status": 200,
+      "bytes": 197716,
+      "sha256": "e385fe98b633b1efcabc1f0559fc859aa81c1423d6c8377b440fca4374df8bd9"
+    },
+    {
+      "file": "assets/warriors/production/discipian.png",
+      "status": 200,
+      "bytes": 2130556,
+      "sha256": "deb36c85f8b5e5720cf3e757313228d21cd1f27b9bab6ab0087a55648b244225"
+    }
+  ]
+}

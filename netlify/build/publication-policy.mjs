@@ -26,10 +26,16 @@ const SOURCE_ARCHIVE_ROOTS = [
   'Vorschau/Sylvarant/scripts/',
   'Vorschau/Solestia/sources/',
   'Vorschau/Solestia/scripts/',
+  'Vorschau/Phalantia/sources/',
+  'Vorschau/Phalantia/scripts/',
+  'Vorschau/Klythesia/sources/',
+  'Vorschau/Klythesia/scripts/',
   'Vorschau/shared/heraldic-artifacts/',
   'AleriaAlmanach/assets/gwynthor-marktplatz/',
   'AleriaAlmanach/modules/gawain-duncan/source/',
   'AleriaAlmanach/modules/group-adventures/source/',
+  'AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Gwen Hamnett/',
+  'AleriaAlmanach/AvatarWerkstatt/Output/Gwen Hamnett/',
   'AleriaAlmanach/backups/scenes/'
 ];
 
@@ -83,6 +89,12 @@ export function isAuthoringArchive(file) {
     || file === 'Vorschau/Solestia/source-import.json'
     || file === 'Vorschau/Solestia/assets/warriors/manifest.json'
     || file === 'Vorschau/Solestia/assets/estates/manifest.json'
+    || file === 'Vorschau/Phalantia/assets.source.json'
+    || file === 'Vorschau/Phalantia/source-import.json'
+    || file === 'Vorschau/Klythesia/assets.source.json'
+    || file === 'Vorschau/Klythesia/source-import.json'
+    || /^Vorschau\/(?:Phalantia|Klythesia)\/assets\/(?:warriors|emblems|estates)\/(?:house-|realm-)?manifest\.json$/.test(file)
+    || /^Vorschau\/(?:Phalantia|Klythesia)\/assets\/(?:warriors|emblems|estates)\/originals\//.test(file)
     || file === 'Vorschau/Venalys/assets/estates/manifest.json'
     || file.startsWith('Vorschau/Venalys/assets/estates/generated/')
     || file.startsWith('Vorschau/Solestia/assets/estates/generated/')

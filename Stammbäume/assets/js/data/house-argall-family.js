@@ -1,5 +1,6 @@
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { ARGALL_DRAIG_AFFAIR } from './argall-draig-affair.js';
+import { ARGALL_GWYNTHOR_PERSONS, ARGALL_GWYNTHOR_PARTNERSHIPS, ARGALL_GWYNTHOR_PARENTAGES } from './argall-gwynthor-household.js';
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
 import { LLYSFAEN_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import {
@@ -192,7 +193,8 @@ export const HOUSE_ARGALL_FAMILY = Object.freeze({
       title: 'Sohn der Argall-Vetterlinie',
       tags: ['23 Jahre'],
       notes: 'Unverheiratet und ohne Verlobung.'
-    })
+    }),
+    ...ARGALL_GWYNTHOR_PERSONS
   ]),
   partnerships: Object.freeze([
     ...BASE_FAMILY.partnerships,
@@ -202,6 +204,7 @@ export const HOUSE_ARGALL_FAMILY = Object.freeze({
     createMarriage('marriage-brinthan-eris-argall', ...BRINTHAN_IDS),
     createMarriage('marriage-uthyr-rhewena-argall', ...UTHYR_IDS),
     createMarriage('marriage-dyrwyn-ellena-argall', ...COUSIN_IDS),
+    ...ARGALL_GWYNTHOR_PARTNERSHIPS,
     createMarriage(ARGALL_DRAIG_AFFAIR.id, ...ARGALL_DRAIG_AFFAIR.participantIds, {
       type: 'affair',
       status: 'secret',
@@ -233,7 +236,8 @@ export const HOUSE_ARGALL_FAMILY = Object.freeze({
       UTHYR_IDS,
       'marriage-uthyr-rhewena-argall'
     ),
-    ...createParentages(['thalwyn-argall'], COUSIN_IDS, 'marriage-dyrwyn-ellena-argall')
+    ...createParentages(['thalwyn-argall'], COUSIN_IDS, 'marriage-dyrwyn-ellena-argall'),
+    ...ARGALL_GWYNTHOR_PARENTAGES
   ]),
   cadetBranches: Object.freeze([]),
   timeJumps: Object.freeze([
@@ -274,8 +278,9 @@ export const HOUSE_ARGALL_FAMILY = Object.freeze({
     ...BASE_FAMILY.extensions,
     blankFamily: false,
     pendingDescendantReview: false,
-    sourceRevision: 1,
+    sourceRevision: 4,
+    registryManagedEntitySourceRevision: 3,
     registryManagedViewFields: Object.freeze(['focusPersonId', 'limitGenerations']),
-    sourceNote: 'Haus Argall ist als kleines Bürgerhaus von Llysfaen angelegt. Auf unbekanntes Gründerpaar, eisernen Hausknoten und genau einen seriellen Zeitsprung folgt Cyran Argall als Großvater Brinthans und Uthyrs. Brinthan ist gegenwärtiges Oberhaupt; seine Tochter Shylene und ihr Sohn Iolo behalten die bereits in Haus Draig geführten Jahrgänge 1710 und 1735. Owain, Shylene, Iolo und ihre Affäre verwenden in beiden Akten dieselben Weltpersonen- und Verbindungs-IDs. Uthyrs Ehefrau Rhewena sowie alle weiteren erfundenen Vornamen folgen dem Rheunwaith-Namensschema des Aleria Almanachs. Maelric, Sairwen, Ellian, Avelys, Thalwyn und Iolo sind unter 28 und bleiben unverheiratet. Brenar, Nerwen und Avelyn aus der Elterngeneration sind verstorben; Iwrian lebt als einzige Ausnahme noch. Iwrians einziger Sohn Dyrwyn bildet mit einem einzigen unverheirateten Nachkommen die bewusst schmale Vetterlinie. Die zwölf vorgegebenen Porträts und das Hauswappen wurden lokal gesichert.'
+    sourceNote: 'Haus Argall ist als kleines Bürgerhaus von Llysfaen angelegt. Auf unbekanntes Gründerpaar, eisernen Hausknoten und genau einen seriellen Zeitsprung folgt Cyran Argall als Großvater Brinthans und Uthyrs. Brinthan ist gegenwärtiges Oberhaupt; seine Tochter Shylene und ihr Sohn Iolo behalten die bereits in Haus Draig geführten Jahrgänge 1710 und 1735. Owain, Shylene, Iolo und ihre Affäre verwenden in beiden Akten dieselben Weltpersonen- und Verbindungs-IDs. Uthyrs Ehefrau Rhewena sowie alle weiteren erfundenen Vornamen folgen dem Rheunwaith-Namensschema des Aleria Almanachs. Maelric, Sairwen, Ellian, Avelys, Thalwyn, Perwyn und Iolo sind unter 28 und bleiben unverheiratet. Brenar, Nerwen und Avelyn aus der Elterngeneration sind verstorben; Iwrian lebt als einzige Ausnahme noch. Iwrians Söhne Dyrwyn und der elf Jahre jüngere Rhydric bilden die Vetterlinie; Rhydric verwaltet Caer Ysgellfor in Gwynthor und hat mit seiner geschiedenen Frau Gwenella den Sohn und Knappen Perwyn. Gwenellas jetzige Verbindung zu Maelor Ffionydd ist keine weitere Ehe und begründet keine Vaterschaft des Barden. Der Stammsitz des Hauses bleibt Llysfaen. Die zwölf vorgegebenen Porträts und das Hauswappen wurden lokal gesichert.'
   })
 });

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "schema": "aleria.phalantia.warrior-generation-receipts",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "sourcePromptManifest": "sources/warrior-art-direction.json",
+  "sourcePreset": "fantasy-rpg-character",
+  "sharedPreparation": "scripts/prepare-warriors.py",
+  "originalDirectory": "assets/warriors/generated",
+  "entries": [
+    {
+      "id": "prototype-01",
+      "toolOutputPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-c4156d13-3baa-43c2-a6d3-c8297d979378.png",
+      "outputHint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-c4156d13-3baa-43c2-a6d3-c8297d979378.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "workspaceOriginal": "assets/warriors/generated/prototype-01.png",
+      "visualReview": "Accepted: full figure and equipment visible; young male Greek/Spartan class design; inspected in generated output and neutral-background contact sheet."
+    },
+    {
+      "id": "prototype-02",
+      "toolOutputPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-bf0d20d0-5f67-4013-8356-cb1e2f7df527.png",
+      "outputHint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-bf0d20d0-5f67-4013-8356-cb1e2f7df527.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "workspaceOriginal": "assets/warriors/generated/prototype-02.png",
+      "visualReview": "Accepted: full figure and equipment visible; young male Greek/Spartan class design; inspected in generated output and neutral-background contact sheet."
+    },
+    {
+      "id": "prototype-03",
+      "toolOutputPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-fc5ce992-1e64-4cb2-b797-3003b8d15bb1.png",
+      "outputHint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-fc5ce992-1e64-4cb2-b797-3003b8d15bb1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "workspaceOriginal": "assets/warriors/generated/prototype-03.png",
+      "visualReview": "Accepted: full figure and equipment visible; young male Greek/Spartan class design; inspected in generated output and neutral-background contact sheet."
+    },
+    {
+      "id": "prototype-04",
+      "toolOutputPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-fe1e71f2-a1a9-4a32-9962-d2163fbc47b5.png",
+      "outputHint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-fe1e71f2-a1a9-4a32-9962-d2163fbc47b5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "workspaceOriginal": "assets/warriors/generated/prototype-04.png",
+      "visualReview": "Accepted: full figure and equipment visible; young male Greek/Spartan class design; inspected in generated output and neutral-background contact sheet."
+    },
+    {
+      "id": "prototype-05",
+      "toolOutputPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-adbffef1-625e-41a2-b949-4113238cddba.png",
+      "outputHint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-adbffef1-625e-41a2-b949-4113238cddba.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "workspaceOriginal": "assets/warriors/generated/prototype-05.png",
+      "visualReview": "Accepted: full figure and equipment visible; young male Greek/Spartan class design; inspected in generated output and neutral-background contact sheet."
+    },
+    {
+      "id": "prototype-06",
+      "toolOutputPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-de7c6eda-f128-4610-8748-29ff62150225.png",
+      "outputHint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-de7c6eda-f128-4610-8748-29ff62150225.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "workspaceOriginal": "assets/warriors/generated/prototype-06.png",
+      "visualReview": "Accepted: full figure and equipment visible; young male Greek/Spartan class design; inspected in generated output and neutral-background contact sheet."
+    },
+    {
+      "id": "prototype-07",
+      "toolOutputPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-81b17f9d-ad24-4c42-a292-8dfa627d82f0.png",
+      "outputHint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-81b17f9d-ad24-4c42-a292-8dfa627d82f0.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "workspaceOriginal": "assets/warriors/generated/prototype-07.png",
+      "visualReview": "Accepted: full figure and equipment visible; young male Greek/Spartan class design; inspected in generated output and neutral-background contact sheet."
+    },
+    {
+      "id": "prototype-08",
+      "toolOutputPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-a4d2f4d3-ba4a-423b-941b-89c93d6b6272.png",
+      "outputHint": "Generated images are saved to C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2 as C:\\Users\\fhg_r\\.codex\\generated_images\\01a1a6fd-a49f-7e40-8c97-b102a8fdbed2\\exec-a4d2f4d3-ba4a-423b-941b-89c93d6b6272.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "workspaceOriginal": "assets/warriors/generated/prototype-08.png",
+      "visualReview": "Accepted: full figure and equipment visible; young male Greek/Spartan class design; inspected in generated output and neutral-background contact sheet."
+    }
+  ]
+}

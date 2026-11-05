@@ -1,3 +1,5 @@
+import {ELEGANZ_BRIDAL_ADDITIONS} from './eleganz-bridal-additions.mjs';
+import {ELEGANZ_MENS_WEDDING_ADDITIONS} from './eleganz-mens-additions.mjs';
 import {eleganzGarment as model} from './eleganz-garment.mjs';
 export const ELEGANZ_WEDDING = Object.freeze({
   damen:[
@@ -9,10 +11,11 @@ export const ELEGANZ_WEDDING = Object.freeze({
       'Weiche purpurne Seide liegt über einem hellen Brokatuntergewand. Am Mieder und an den schmalen Ärmelansätzen öffnen sich kleine silbergestickte Rosen; cenyrische Flechtlinien verbinden die Blüten zu einem ruhigen Saum.',
       'Die weiten Wechselärmel und der leichte elfenbeinfarbene Schulterüberwurf lassen sich nach der Trauung abnehmen. Ein schmaler Silberverschluss hält den Überwurf; Futter und Mieder tragen ihn, ohne den seidigen Fall zu beschweren.',
       ['Echte Silberstickerei','Abnehmbarer Schulterüberwurf','Zwei abgestimmte Ärmelpaare'],'Hochzeit · feine Gesellschaft'),
-    model('braut-zwei-heimaten','Braut der zwei Heimaten',65000,'Elfenbeinseide · Weißgold · Süßwasserperlen · Granate','Persönlicher Brautentwurf mit abnehmbarem Festmantel',
+    model('braut-zwei-heimaten','Braut der zwei Heimaten',23000,'Elfenbeinseide · Weißgold · Süßwasserperlen · Granate','Persönlicher Brautentwurf mit abnehmbarem Festmantel',
       'Elfenbeinfarbene Seide und eine fein bestickte purpurne Miederbahn tragen den kostbarsten Brautentwurf des Hauses. Weißgoldfäden zeichnen südliches Olivenlaub, das an Taille und Ärmeln in cenyrische Flechtmuster übergeht. Wenige kleine Perlen und tiefrote Granate ruhen in eigens gefertigten Fassungen.',
       'Untergewand, Brautkleid, Wechselärmel, schmaler Schmuckgürtel und abnehmbarer Festmantel entstehen gemeinsam nach Maß. Eleonora stimmt jedes Blatt und jede Fassung auf den Schnitt ab; mehrere Anproben und die beschriebenen Besätze gehören zur Garnitur.',
-      ['Fünfteiliger Brautentwurf nach Maß','Weißgoldfassungen mit kleinen Perlen und Granaten','Eleonoras persönliche Anproben'],'Hochzeit · besonderer Einzelentwurf')
+      ['Fünfteiliger Brautentwurf nach Maß','Weißgoldfassungen mit kleinen Perlen und Granaten','Eleonoras persönliche Anproben'],'Hochzeit · besonderer Einzelentwurf'),
+    ...ELEGANZ_BRIDAL_ADDITIONS
   ],
   herren:[
     model('braeutigam-treuefaden','Treuefaden',240,'Feines blaues Wolltuch · Leinen · Seidenborte','Hochzeitswams mit Hemd und passender Hose',
@@ -23,9 +26,10 @@ export const ELEGANZ_WEDDING = Object.freeze({
       'Burgunderroter Seidenbrokat liegt über einem elfenbeinfarbenen Wams. Goldene Olivenzweige wachsen schmal am Kragen der offenen Überrobe empor; cenyrische Flechtbänder setzen sich an ihren Ärmelenden fort. Die südliche Zier bleibt auf wenigen ruhigen Flächen konzentriert.',
       'Ein silberner Verschluss hält die Robe an der Brust. Hemd, Hose und ein schmaler Stoffgürtel gehören zur Garnitur. Die Robe ist leicht genug für das Hochzeitsmahl und lässt dem Bräutigam beim Tanz Raum.',
       ['Seidenbrokat mit echtem Goldfaden','Angepasster Silberverschluss','Abgestimmte Unterkleidung und Stoffgürtel'],'Hochzeit · feine Gesellschaft'),
-    model('braeutigam-heller-bund','Der Helle Bund',68000,'Elfenbeinbrokat · Nachtblaue Seide · Weißgold · Granate','Persönlicher Bräutigamsentwurf mit Festmantel',
+    model('braeutigam-heller-bund','Der Helle Bund',23000,'Elfenbeinbrokat · Nachtblaue Seide · Weißgold · Granate','Persönlicher Bräutigamsentwurf mit Festmantel',
       'Ein elfenbeinfarbenes Brokatwams steht im Mittelpunkt dieser feierlichen Garnitur. Nachtblaue Seide fasst Kragen und Ärmel; echte Weißgoldstickerei verbindet argentisches Laubwerk mit cenyrischen Flechtlinien. Ein einzelner gefasster Granat setzt den farbigen Mittelpunkt an der Mantelschließe.',
       'Hemd, Hose, Wams, offene Überrobe und abnehmbarer Mantel werden als gemeinsamer Einzelentwurf gefertigt. Die Weißgoldarbeiten entstehen in Gwynthor und werden unterlegt, damit kein Metall am Stoff scheuert. Eleonora begleitet die Anproben bis zum letzten Sitz des Kragens.',
-      ['Fünfteilige Hochzeitsgarnitur nach Maß','Eigene Weißgoldschließe mit Granat','Eleonoras persönliche Anproben'],'Hochzeit · besonderer Einzelentwurf')
+      ['Fünfteilige Hochzeitsgarnitur nach Maß','Eigene Weißgoldschließe mit Granat','Eleonoras persönliche Anproben'],'Hochzeit · besonderer Einzelentwurf'),
+    ...ELEGANZ_MENS_WEDDING_ADDITIONS
   ]
 });

@@ -1,0 +1,41 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+import { createRequire } from 'node:module';
+const require=createRequire(new URL('../../AleriaAlmanach/package.json',import.meta.url));
+const {parseFragment}=require('parse5');
+const fragment=fs.readFileSync(new URL('./szenenhinweis-entwurf.html',import.meta.url),'utf8');
+assert.ok(Buffer.byteLength(fragment)<1000000);
+assert.ok(fragment.includes('data:image/png;base64,'));
+const source=fragment.match(/<script>([\s\S]*?)<\/script>/)[1];
+const listeners={};let snapshot;
+const root={innerHTML:'',contains:()=>true,addEventListener:(type,callback)=>{listeners[type]=callback;}};
+const context={document:{getElementById:()=>root},window:{addEventListener(){},openai:{setWidgetState:value=>{snapshot=structuredClone(value);return Promise.resolve();}}},Intl};
+vm.runInNewContext(source,context);
+function nodes(){const result=[];function visit(node){if(node.tagName)result.push(node);(node.childNodes||[]).forEach(visit);}visit(parseFragment(root.innerHTML));return result;}
+const attrs=node=>Object.fromEntries(node.attrs.map(attr=>[attr.name,attr.value]));
+function click(action,mode){const node=nodes().find(node=>attrs(node)['data-action']===action&&(!mode||attrs(node)['data-mode']===mode));assert.ok(node);listeners.click({target:{closest:()=>({dataset:{action,mode}})}});}
+function change(field,value){assert.ok(nodes().some(node=>attrs(node)['data-field']===field));listeners.change({target:{dataset:{field},value}});}
+const notices=()=>nodes().filter(node=>attrs(node)['data-action']==='details');
+assert.equal(notices().length,1);
+assert.equal(nodes().filter(node=>attrs(node)['data-action']==='inventory').length,1);
+click('inventory');click('mode','sell');
+assert.equal(snapshot.privateContent.receipt.mode,'buy','draft does not publish');
+change('price','800');
+assert.equal(snapshot.privateContent.receipt.price,30,'price edit does not publish');
+click('complete');
+assert.equal(snapshot.privateContent.receipt.mode,'sell');
+assert.equal(snapshot.privateContent.receipt.price,800);
+assert.match(root.innerHTML,/<strong>Gawain<\/strong> verkauft sein Pferd/);
+assert.equal(notices().length,1);
+assert.ok(!nodes().some(node=>attrs(node).class==='quiet-workspace'));
+click('details');assert.equal(snapshot.privateContent.details,true);
+click('inventory');click('mode','gift');change('goods','<img src=x onerror=alert(1)>');click('complete');
+assert.ok(root.innerHTML.includes('&lt;img src=x onerror=alert(1)&gt;'));
+assert.equal(snapshot.privateContent.receipt.mode,'gift');
+const originalUi=fs.readFileSync(new URL('../../AleriaAlmanach/modules/scene-inventory/scene-inventory-ui.js',import.meta.url),'utf8');
+const originalButton=vm.runInNewContext(originalUi+'\nbuildSceneInventoryControl("scene-original")',{escapeHtml:value=>String(value)});
+assert.match(originalButton,/data-scene-inventory-action="open"/);
+assert.match(originalButton,/data-comment-thread-id="scene-original"/);
+assert.match(originalButton,/Icon_loot\.png/);
+console.log(JSON.stringify({passed:true,checks:['one existing bag entry','one compact notice','draft does not publish','negotiated sale','details on demand','gift','text escaped','original button keeps scene ID'],productionFilesChanged:false,browserVisualCheck:'limited: known CUA timeoutMs connection error'}));

@@ -6,6 +6,7 @@ import { chromium } from '../../Stammbäume/node_modules/playwright-core/index.m
 import { startChartQualityServer } from '../../Stammbäume/tools/chart-quality-server.mjs';
 import { buildGoettlicheEleganz } from '../modules/goettliche-eleganz/eleganz-module.mjs';
 import { planEleganzCharacters } from '../modules/goettliche-eleganz/eleganz-characters.mjs';
+import { FORTUNA_SECTION } from '../modules/markt-der-fortuna-gwynthor/fortuna-section.mjs';
 const root=fileURLToPath(new URL('../../',import.meta.url));
 const output=resolve(root,`.tmp/goettliche-eleganz/browser-${Date.now()}`);
 await mkdir(output,{recursive:true});
@@ -25,7 +26,7 @@ try {
   else await page.locator('[data-loading-action="continue"]').click();
   await page.waitForFunction(()=>!document.documentElement.hasAttribute('data-almanach-loading'));
   const inserted=await page.evaluate(id=>SECTIONS.filter(section=>section.entries?.some(entry=>entry.id===id)).map(section=>section.path),entry.id);
-  assert.deepEqual(inserted,[['Cenyr','Celtigerns Wacht','Llamreis Ankunft','Gwynthor']]);
+  assert.deepEqual(inserted,[FORTUNA_SECTION.path]);
   const preview=await page.evaluate(entry=>getArchiveEntryPreviewImage(entry),entry);
   assert.equal(preview,entry.pages[0].image);
   assert.equal(await page.evaluate(entry=>sanitizeModuleEntry(entry).previewImage,entry),preview);
@@ -51,10 +52,10 @@ try {
     await page.screenshot({path:resolve(output,`04-hierarchie-${i}.png`)});
   }
   await show(4);
-  assert.equal(await page.locator('#modal-overlay .trade-catalog-item').count(),26);
+  assert.equal(await page.locator('#modal-overlay .trade-catalog-item').count(),51);
   for(const category of ['damen','herren','damen-hochzeit','herren-hochzeit']) {
     await page.locator(`#modal-overlay [data-trade-filter="${category}"]`).click();
-    assert.equal(await page.locator('#modal-overlay .trade-catalog-item:visible').count(),category.endsWith('hochzeit')?3:10);
+    assert.equal(await page.locator('#modal-overlay .trade-catalog-item:visible').count(),({damen:15,herren:15,'damen-hochzeit':13,'herren-hochzeit':8})[category]);
     assert.equal(await page.locator('#modal-overlay .trade-catalog-item:visible').first().locator('.trade-catalog-description p').count(),2);
     const dimensions=await page.locator('#modal-overlay .trade-catalog-item:visible').first().evaluate(item=>({
       text:item.querySelector('.trade-catalog-description').getBoundingClientRect().height,
@@ -65,8 +66,31 @@ try {
     assert(dimensions.text<dimensions.row);
     await page.screenshot({path:resolve(output,`05-kollektion-${category}.png`)});
   }
+  await page.locator('#modal-overlay [data-trade-filter="all"]').click();
+  const search=page.locator('#modal-overlay [data-trade-search-input]');
+  for(const title of ['Flachsgold','Die Schwarze Perle','Elfenbeingelübde','Ebenholzgelübde']) {
+    await search.fill(title);
+    assert.equal(await page.locator('#modal-overlay .trade-catalog-item:visible').count(),1,title);
+  }
+  await search.fill('');
+  assert.equal(await page.locator('#modal-overlay .trade-catalog-item:visible').count(),51);
+  await page.setViewportSize({width:390,height:844});
+  for(const category of ['damen','herren','damen-hochzeit','herren-hochzeit']) {
+    await page.locator(`#modal-overlay [data-trade-filter="${category}"]`).click();
+    assert.equal(await page.locator('#modal-overlay .trade-catalog-item:visible').count(),({damen:15,herren:15,'damen-hochzeit':13,'herren-hochzeit':8})[category]);
+    await page.locator('#modal-overlay .trade-catalog-item:visible').first().scrollIntoViewIfNeeded();
+    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'mobile horizontal overflow');
+    await page.screenshot({path:resolve(output,`05-mobil-${category}.png`)});
+  }
+  await page.setViewportSize({width:1848,height:1100});
   await show(5);
   await page.screenshot({path:resolve(output,'06-verkaufsraum.png')});
+  await page.evaluate(async()=>{
+    closeModal();
+    await loadCharacters();
+    switchTab('Charaktere');
+    await window.AleriaCharacterGenealogy?.ensureFamilyMemberships?.();
+  });
   const plan=planEleganzCharacters([],{});
   const count=await page.evaluate(plan=>{
     closeModal();_characters=plan.entries.map(item=>({id:item.id,...item.data}));
@@ -85,6 +109,6 @@ try {
   await page.goto(`${server.origin}/Kontinente/Estryll/K%C3%B6nigreich%20Cenyr/Grafschaft%20Celtigerns%20Wacht/Grafschaft%20Celtigerns%20Wacht.html`);
   await page.locator('a[href*="haus=haus-raves"]').first().waitFor();
   await context.close();
-  await writeFile(resolve(output,'report.json'),JSON.stringify({passed:true,pages:6,hierarchyTabs:3,garments:26,weddingGarments:6,profiles:14,localArtworkLoaded:true,productionRequestsBlocked:true},null,2));
-  console.log(`PASS: sechs Seiten, drei Hierarchiereiter, 26 Garnituren mit sechs Hochzeitsmodellen, vierzehn Profile, Haus- und Stadtverknüpfungen. ${output}`);
+  await writeFile(resolve(output,'report.json'),JSON.stringify({passed:true,pages:6,hierarchyTabs:3,garments:51,weddingGarments:21,profiles:14,localArtworkLoaded:true,mobileCategories:4,searchQueries:4,productionRequestsBlocked:true},null,2));
+  console.log(`PASS: sechs Seiten, drei Hierarchiereiter, 51 Garnituren mit 21 Hochzeitsmodellen, vierzehn Profile, Haus- und Stadtverknüpfungen. ${output}`);
 } finally {await browser?.close();await server.close();}

@@ -1,0 +1,18 @@
+@import url('../shared/country-workbench/workbench.css');
+@import url('../shared/country-workbench/heraldry-gallery.css');
+@import url('../shared/country-workbench/estate-cards.css');
+@import url('./phalantia-context.css');
+@import url('./phalantia-map.css');
+@import url('./phalantia-art.css');
+
+.phalantia-workbench{--paper:#f3ecdb;--ink:#332d28;--muted:#746857;--accent:#8c302c;--line:#cdbd9d;background:#d8cfbb}
+.phalantia-workbench .hero{background:linear-gradient(120deg,#f6eddb,#e5d4b4);gap:35px}
+.phalantia-workbench .lead{color:var(--muted)}
+.phalantia-workbench .toolbar nav{gap:15px}
+.phalantia-workbench .house-art-card,.phalantia-workbench .prototype-grid article{background:#ebe0c9}
+.skip-link{position:fixed;left:15px;top:-80px;z-index:100;padding:12px 18px;background:var(--paper)}
+.skip-link:focus{top:12px}
+@media(max-width:1050px){.phalantia-workbench .toolbar{flex-wrap:wrap}.phalantia-workbench .toolbar nav{width:100%;justify-content:space-between;margin:0}}
+@media(max-width:650px){.phalantia-workbench .hero{grid-template-columns:1fr}}
+@media(max-width:420px){.phalantia-workbench .toolbar nav{gap:7px;font-size:10px}}
+@media print{.skip-link{display:none}}

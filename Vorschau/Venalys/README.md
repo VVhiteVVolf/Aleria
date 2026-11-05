@@ -5,6 +5,27 @@ vorhandenen Häuser und ihre 17 Magnarierbindungen werden durch die neuen
 Karten und Ständeillustrationen nicht verändert. Mehrfachzuordnungen und
 eigene Bezirksnamen bleiben lokale Entwürfe mit Import, Export und Undo.
 
+## Fehlende Patrizierfiguren vom 4. November 2026
+
+Auf Nutzerauftrag „Sonst erstelle sie.“ sind die drei tatsächlich fehlenden
+Hausfiguren Vinicius, Tullius und Arentino ergänzt. Damit besitzen alle 22
+Häuser ein Wappen und eine Kriegerdarstellung, einschließlich aller fünf
+Patrizier. Galerie und Hausfenster beziehen sie aus derselben Hausquelle.
+Vinicius und Tullius sind Condottieri, Arentino ein Lancieri mit Hellebarde;
+Helme, Rüstungen, Farben und Wappen unterscheiden die drei Entwürfe.
+Es sind unbenannte Hausvertreter ohne neue Personen oder Ämter.
+
+Das eingebaute ImageGen verwendete die tatsächlich angesehenen freigegebenen
+Hausritter-/Venalys-Stilreferenzen und die jeweiligen Originalwappen.
+Prompts und Referenzrollen: `sources/patrician-warriors-20261104-jobs.json`;
+Tooloriginale und Prüfsummen: `sources/patrician-warriors-20261104-results.json`.
+Die neuen PNG-Originale liegen unter `assets/warriors/generated/`, aktive PNGs
+unter `assets/warriors/production/` und WebP-Vorschauen unter
+`assets/warriors/previews/`. Die bestehende gemeinsame Alpha-Pipeline erhielt
+alle Originale und RGB-Werte. 102 ältere Bilddateien blieben bytegleich.
+Methode, 22er-Bildaudit und Kontaktbogen stehen unter
+`diagnostics/venalys-patricians-20261104/`. Diese Ergänzung bleibt lokal.
+
 ## Stände vom 4. November 2026
 
 Fünf eigene Comicillustrationen zeigen Patrizier, Magnarierhaus, Mercantier,

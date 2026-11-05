@@ -1,0 +1,628 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-04T23:48:13.218393Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Startbesitz 2026-11-05/meredith-swyll.json",
+  "character": {
+    "id": "7ghgdvubmimcJySSkrKH",
+    "name": "Meredith Swyll",
+    "inventory": {
+      "attributes": [
+        {
+          "label": "StA",
+          "value": 8
+        },
+        {
+          "value": 6,
+          "label": "Ges"
+        },
+        {
+          "value": 7,
+          "label": "Kon"
+        },
+        {
+          "label": "Int",
+          "value": 5
+        },
+        {
+          "label": "Wei",
+          "value": 6
+        },
+        {
+          "value": 5,
+          "label": "Cha"
+        }
+      ],
+      "items": [
+        {
+          "id": "item-mqu1vat1-0-w8ef",
+          "name": "Hauptwaffe",
+          "tags": "",
+          "imageFormat": "square",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "category": "weapon",
+          "image": "",
+          "type": "Waffe",
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "infoRows": [],
+          "description": "Beschreibe Material, Zustand und besondere Merkmale.",
+          "icon": "*"
+        },
+        {
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "infoRows": [],
+          "description": "Rüstung, Kleidung oder magischer Schutz.",
+          "weight": "Noch festlegen",
+          "image": "",
+          "imageFit": "contain",
+          "icon": "*",
+          "imageFormat": "square",
+          "name": "Rüstung / Schutz",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-1-exvo",
+          "quantity": "1",
+          "type": "Rüstung",
+          "tags": "",
+          "category": "armor"
+        },
+        {
+          "name": "Reiseausrüstung",
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "category": "equipment",
+          "quantity": "1",
+          "type": "Ausrüstung",
+          "description": "Werkzeuge, Vorrat oder nützliche Gegenstände.",
+          "tags": "",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "id": "item-mqu1vat1-2-0fx2",
+          "image": "",
+          "imageFormat": "square",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "infoRows": []
+        },
+        {
+          "category": "potions",
+          "tags": "",
+          "type": "Trinktur",
+          "quantity": "1",
+          "description": "Trank, Verband, Fokus oder anderer aufbrauchbarer Gegenstand.",
+          "name": "Heil- oder Verbrauchsgut",
+          "imagePosition": "center",
+          "weight": "Noch festlegen",
+          "icon": "*",
+          "id": "item-mqu1vat1-3-2lgm",
+          "image": "",
+          "imageFormat": "square",
+          "imageFit": "contain",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ]
+        },
+        {
+          "icon": "*",
+          "category": "documents",
+          "attributes": [
+            {
+              "value": 5,
+              "label": "Schaden"
+            },
+            {
+              "value": 3,
+              "label": "Schutz"
+            },
+            {
+              "value": 4,
+              "label": "Wert"
+            },
+            {
+              "value": 2,
+              "label": "Seltenheit"
+            },
+            {
+              "value": 6,
+              "label": "Zuverlaessigkeit"
+            },
+            {
+              "label": "Handhabung",
+              "value": 5
+            }
+          ],
+          "quantity": "1",
+          "weight": "Noch festlegen",
+          "imageFormat": "square",
+          "image": "",
+          "id": "item-mqu1vat1-4-ajrj",
+          "type": "Dokument",
+          "tags": "",
+          "imageFit": "contain",
+          "infoRows": [],
+          "imagePosition": "center",
+          "description": "Passierschein, Brief, Vertrag, Siegel oder Lizenz.",
+          "name": "Dokumente / Urkunden"
+        },
+        {
+          "imageFormat": "square",
+          "quantity": "1",
+          "icon": "*",
+          "category": "other",
+          "weight": "Noch festlegen",
+          "id": "item-mqu1vat1-5-5kao",
+          "name": "Persönlicher Gegenstand",
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Schaden",
+              "value": 5
+            },
+            {
+              "label": "Schutz",
+              "value": 3
+            },
+            {
+              "label": "Wert",
+              "value": 4
+            },
+            {
+              "label": "Seltenheit",
+              "value": 2
+            },
+            {
+              "label": "Zuverlaessigkeit",
+              "value": 6
+            },
+            {
+              "value": 5,
+              "label": "Handhabung"
+            }
+          ],
+          "imageFit": "contain",
+          "description": "Erbstück, Andenken, Siegel oder wichtiger Besitz.",
+          "image": "",
+          "imagePosition": "center",
+          "type": "Sonstiges",
+          "tags": ""
+        },
+        {
+          "id": "7ghgdvubmimcJySSkrKH-draig-start-possessions-20261105-1",
+          "instanceId": "7ghgdvubmimcJySSkrKH-draig-start-possessions-20261105-1",
+          "templateId": "standard:gemischtwarenhandler:nadel-faden",
+          "templateName": "Nadel & Faden",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:nadel-faden",
+            "revision": "b04f80d412691a2b54c5f430"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:nadel-faden",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "7ghgdvubmimcJySSkrKH",
+          "ownerCharacterName": "Meredith Swyll",
+          "acquiredAt": "2026-11-04T23:48:09.869Z",
+          "name": "Nadel & Faden",
+          "type": "Werkzeug",
+          "category": "other",
+          "description": "Set aus Bronze- oder Eisennadel mit Garn.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/nadel-faden.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Nähen, Reparatur, Garn",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 1,
+            "maxCopper": 1
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 7
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 6
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 10
+            },
+            {
+              "label": "Alltag",
+              "value": 8
+            },
+            {
+              "label": "Reise",
+              "value": 8
+            },
+            {
+              "label": "Preiswert",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "id": "7ghgdvubmimcJySSkrKH-draig-start-possessions-20261105-2",
+          "instanceId": "7ghgdvubmimcJySSkrKH-draig-start-possessions-20261105-2",
+          "templateId": "standard:gemischtwarenhandler:seife",
+          "templateName": "Seife",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:seife",
+            "revision": "cbc4c228c36b9718df30439d"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:seife",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "7ghgdvubmimcJySSkrKH",
+          "ownerCharacterName": "Meredith Swyll",
+          "acquiredAt": "2026-11-04T23:48:09.869Z",
+          "name": "Seife",
+          "type": "Hygiene",
+          "category": "other",
+          "description": "Einfache Kernseife mit leichtem Kräuterduft.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/seife.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Hygiene, Kräuter, Kernseife",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 0.5,
+            "maxCopper": 0.5
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 6
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 4
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 9
+            },
+            {
+              "label": "Alltag",
+              "value": 10
+            },
+            {
+              "label": "Reise",
+              "value": 6
+            },
+            {
+              "label": "Preiswert",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "id": "7ghgdvubmimcJySSkrKH-draig-start-possessions-20261105-3",
+          "instanceId": "7ghgdvubmimcJySSkrKH-draig-start-possessions-20261105-3",
+          "templateId": "standard:gemischtwarenhandler:holzkamm",
+          "templateName": "Holzkamm",
+          "definitionRef": {
+            "id": "standard:gemischtwarenhandler:holzkamm",
+            "revision": "21ee820a133052493f92a26f"
+          },
+          "offerId": "",
+          "registerCategory": "werkzeuge",
+          "itemDbKey": "",
+          "originItemDbKey": "standard:gemischtwarenhandler:holzkamm",
+          "itemStorageMode": "character",
+          "ownerCharacterId": "7ghgdvubmimcJySSkrKH",
+          "ownerCharacterName": "Meredith Swyll",
+          "acquiredAt": "2026-11-04T23:48:09.869Z",
+          "name": "Holzkamm",
+          "type": "Hygiene",
+          "category": "other",
+          "description": "Einfacher Kamm aus geschnitztem Holz.",
+          "image": "/AleriaAlmanach/assets/pendrwn-general-store/goods/holzkamm.png",
+          "quantity": "1",
+          "weight": "",
+          "tags": "Hygiene, Holz, Pflege",
+          "equipped": false,
+          "valuation": {
+            "minCopper": 1,
+            "maxCopper": 1
+          },
+          "infoRows": [],
+          "attributes": [
+            {
+              "label": "Nutzen",
+              "value": 4
+            },
+            {
+              "label": "Haltbarkeit",
+              "value": 5
+            },
+            {
+              "label": "Tragbarkeit",
+              "value": 10
+            },
+            {
+              "label": "Alltag",
+              "value": 9
+            },
+            {
+              "label": "Reise",
+              "value": 6
+            },
+            {
+              "label": "Preiswert",
+              "value": 10
+            }
+          ]
+        }
+      ],
+      "subtitle": "Ausrüstung, Gegenstände und Gefährten verwalten",
+      "portraitFormat": "portrait",
+      "title": "Charakter-Inventar",
+      "portraitPosition": "top",
+      "companions": [
+        {
+          "imageFormat": "landscape",
+          "imageFit": "cover",
+          "id": "companion-mqu1vat2-0-zz2n",
+          "infoRows": [],
+          "summary": "Kurzbeschreibung des Gefährten.",
+          "description": "",
+          "image": "",
+          "species": "Tier oder Begleiter",
+          "role": "Begleiter",
+          "attributes": [
+            {
+              "value": 6,
+              "label": "Schnelligkeit"
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "value": 4,
+              "label": "Sozialverhalten"
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "name": "Reittier / Gefährte",
+          "status": "Gesund",
+          "statusColor": "#5c7f20",
+          "imagePosition": "top"
+        },
+        {
+          "description": "",
+          "statusColor": "#5c7f20",
+          "imageFit": "cover",
+          "infoRows": [],
+          "summary": "Besonderheit, Nutzen oder Bindung.",
+          "imagePosition": "top",
+          "imageFormat": "landscape",
+          "image": "",
+          "species": "Tier / Person",
+          "role": "Gefährte",
+          "id": "companion-mqu1vat2-1-5e7l",
+          "attributes": [
+            {
+              "label": "Schnelligkeit",
+              "value": 6
+            },
+            {
+              "value": 7,
+              "label": "Ausdauer"
+            },
+            {
+              "label": "Staerke",
+              "value": 5
+            },
+            {
+              "label": "Agilitaet",
+              "value": 6
+            },
+            {
+              "label": "Sozialverhalten",
+              "value": 4
+            },
+            {
+              "label": "Robustheit",
+              "value": 5
+            }
+          ],
+          "name": "Treuer Begleiter",
+          "status": "Noch festlegen"
+        }
+      ],
+      "moneyNotice": "",
+      "carryValue": "Noch festlegen",
+      "status": "Gesund",
+      "hitpoints": "TP / Zustand",
+      "portraitFit": "cover",
+      "equipmentQuiz": {
+        "resultText": "",
+        "status": "",
+        "step": 0,
+        "updatedAt": "",
+        "open": false,
+        "answers": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      "carryLabel": "Traglast",
+      "moneyState": {
+        "copper": 8,
+        "gold": 0,
+        "silver": 1,
+        "pfennig": 0,
+        "totalCopper": 108
+      },
+      "portrait": "https://i.imgur.com/8lLkOwQ.png",
+      "categories": [
+        {
+          "id": "weapon",
+          "label": "Waffen",
+          "icon": "https://i.imgur.com/YaUQREQ.png"
+        },
+        {
+          "label": "Rüstung",
+          "id": "armor",
+          "icon": "https://i.imgur.com/5qZtUiY.png"
+        },
+        {
+          "id": "equipment",
+          "icon": "https://i.imgur.com/yMj2CQf.png",
+          "label": "Ausrüstung"
+        },
+        {
+          "label": "Trinkturen",
+          "id": "potions",
+          "icon": "https://i.imgur.com/gwujEaL.png"
+        },
+        {
+          "id": "documents",
+          "icon": "https://i.imgur.com/urdalGm.png",
+          "label": "Dokumente"
+        },
+        {
+          "label": "Sonstiges",
+          "id": "other",
+          "icon": "https://i.imgur.com/lgeevvn.png"
+        }
+      ],
+      "role": "Zofe, Gwynthor",
+      "infoRows": [],
+      "level": "Haus Draig, Celtigerns Wacht",
+      "healthColor": "#5c7f20",
+      "money": "0 Gold, 1 Silber, 8 Kupfer, 0 Eisenpfennig",
+      "name": "Meredith Swyll",
+      "revision": 1
+    },
+    "updatedAt": "2026-11-04T23:48:13.218393Z"
+  }
+}

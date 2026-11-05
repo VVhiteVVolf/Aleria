@@ -1,0 +1,268 @@
+TAP version 13
+# Subtest: uses the authoritative 9 / 36 / 468 calendar and exact period factors
+ok 1 - uses the authoritative 9 / 36 / 468 calendar and exact period factors
+  ---
+  duration_ms: 1.8438
+  type: 'test'
+  ...
+# Subtest: service income distinguishes training, salary, family allowance and irregular work over thirteen months
+ok 2 - service income distinguishes training, salary, family allowance and irregular work over thirteen months
+  ---
+  duration_ms: 4.0733
+  type: 'test'
+  ...
+# Subtest: watch affiliation is distinct from selection into a guard, whose knight and armsman keep different full salaries
+ok 3 - watch affiliation is distinct from selection into a guard, whose knight and armsman keep different full salaries
+  ---
+  duration_ms: 2.311
+  type: 'test'
+  ...
+# Subtest: the thirty percent military salary revision is once-only and leaves unrelated income types unchanged
+ok 4 - the thirty percent military salary revision is once-only and leaves unrelated income types unchanged
+  ---
+  duration_ms: 0.5557
+  type: 'test'
+  ...
+# Subtest: Cenyr social cycle provides six duty days without silently changing existing contracts
+ok 5 - Cenyr social cycle provides six duty days without silently changing existing contracts
+  ---
+  duration_ms: 2.5586
+  type: 'test'
+  ...
+# Subtest: family reference derives one sustaining wage, remains editable and never rewrites a business
+ok 6 - family reference derives one sustaining wage, remains editable and never rewrites a business
+  ---
+  duration_ms: 0.6894
+  type: 'test'
+  ...
+# Subtest: affordability uses disposable money and excludes lodging and banquet sales from the visit basket
+ok 7 - affordability uses disposable money and excludes lodging and banquet sales from the visit basket
+  ---
+  duration_ms: 0.5292
+  type: 'test'
+  ...
+# Subtest: zero demand or a zero reference leaves affordability open rather than inventing income or infinite savings
+ok 8 - zero demand or a zero reference leaves affordability open rather than inventing income or infinite savings
+  ---
+  duration_ms: 1.0662
+  type: 'test'
+  ...
+# Subtest: Gwynthor context survives serialization and never becomes a default for another location
+ok 9 - Gwynthor context survives serialization and never becomes a default for another location
+  ---
+  duration_ms: 1.4795
+  type: 'test'
+  ...
+# Subtest: reconciles gross sales, purchasing losses, wages, tax, debt service and private cash
+ok 10 - reconciles gross sales, purchasing losses, wages, tax, debt service and private cash
+  ---
+  duration_ms: 0.607
+  type: 'test'
+  ...
+# Subtest: principal changes liquidity and liabilities, never operating profit
+ok 11 - principal changes liquidity and liabilities, never operating profit
+  ---
+  duration_ms: 0.567
+  type: 'test'
+  ...
+# Subtest: month and year projections stop repayment at zero and reduce interest with remaining debt
+ok 12 - month and year projections stop repayment at zero and reduce interest with remaining debt
+  ---
+  duration_ms: 0.5417
+  type: 'test'
+  ...
+# Subtest: optional church levy has an explicit base and no invented credit during losses
+ok 13 - optional church levy has an explicit base and no invented credit during losses
+  ---
+  duration_ms: 0.5686
+  type: 'test'
+  ...
+# Subtest: capacities and rare monthly supply stay capped even in a strong week
+ok 14 - capacities and rare monthly supply stay capped even in a strong week
+  ---
+  duration_ms: 3.3222
+  type: 'test'
+  ...
+# Subtest: changing retail prices does not secretly scale supplier costs
+ok 15 - changing retail prices does not secretly scale supplier costs
+  ---
+  duration_ms: 0.6759
+  type: 'test'
+  ...
+# Subtest: all recorded people are covered once; animals and vacant posts receive no salary
+ok 16 - all recorded people are covered once; animals and vacant posts receive no salary
+  ---
+  duration_ms: 12.3894
+  type: 'test'
+  ...
+# Subtest: unpaid family work stays visible without enforcing a desired poverty or profit level
+ok 17 - unpaid family work stays visible without enforcing a desired poverty or profit level
+  ---
+  duration_ms: 1.3797
+  type: 'test'
+  ...
+# Subtest: all restaurant and service prices retain an actual source and monthly rooms do not overlap
+ok 18 - all restaurant and service prices retain an actual source and monthly rooms do not overlap
+  ---
+  duration_ms: 2.3053
+  type: 'test'
+  ...
+# Subtest: household accounting never turns own food or leased land into additional cash income
+ok 19 - household accounting never turns own food or leased land into additional cash income
+  ---
+  duration_ms: 0.3845
+  type: 'test'
+  ...
+# Subtest: template serialization is idempotent and rejects duplicate personnel identities
+ok 20 - template serialization is idempotent and rejects duplicate personnel identities
+  ---
+  duration_ms: 0.7271
+  type: 'test'
+  ...
+# Subtest: legacy automatic comment pages are retired while scene keys and positions remain unchanged
+ok 21 - legacy automatic comment pages are retired while scene keys and positions remain unchanged
+  ---
+  duration_ms: 32.5421
+  type: 'test'
+  ...
+# Subtest: feature upgrade appends one final page, preserves current edits and never rekeys scenes
+ok 22 - feature upgrade appends one final page, preserves current edits and never rekeys scenes
+  ---
+  duration_ms: 31.2898
+  type: 'test'
+  ...
+# Subtest: only the actual culture-tab sales locations qualify, including legacy Story-tagged shops
+ok 23 - only the actual culture-tab sales locations qualify, including legacy Story-tagged shops
+  ---
+  duration_ms: 0.2529
+  type: 'test'
+  ...
+# Subtest: every qualifying module receives exactly one final calculation without changing scene threads
+ok 24 - every qualifying module receives exactly one final calculation without changing scene threads
+  ---
+  duration_ms: 37.941
+  type: 'test'
+  ...
+# Subtest: price review is once-only, source guarded, denomination aware and preserves later author edits
+ok 25 - price review is once-only, source guarded, denomination aware and preserves later author edits
+  ---
+  duration_ms: 0.3648
+  type: 'test'
+  ...
+# Subtest: all 50 canonical livestock and horse price bands remain unchanged
+ok 26 - all 50 canonical livestock and horse price bands remain unchanged
+  ---
+  duration_ms: 4.3832
+  type: 'test'
+  ...
+# Subtest: the server rebuilds exactly the reviewed browser offers from an old stored module
+ok 27 - the server rebuilds exactly the reviewed browser offers from an old stored module
+  ---
+  duration_ms: 68.4985
+  type: 'test'
+  ...
+# Subtest: ordinary goods reflect material and portion costs rather than inconsistent copied prices
+ok 28 - ordinary goods reflect material and portion costs rather than inconsistent copied prices
+  ---
+  duration_ms: 0.4817
+  type: 'test'
+  ...
+# Subtest: new catalogue prices do not rewrite acquired prices, inventory or live character resources
+ok 29 - new catalogue prices do not rewrite acquired prices, inventory or live character resources
+  ---
+  duration_ms: 3.2533
+  type: 'test'
+  ...
+# Subtest: teachers do not become apprentices, unnamed occupied roles cost wages and animals never do
+ok 30 - teachers do not become apprentices, unnamed occupied roles cost wages and animals never do
+  ---
+  duration_ms: 0.78
+  type: 'test'
+  ...
+# Subtest: every new scenario is valid; unpriced slots and unavailable products produce no fictitious sales
+ok 31 - every new scenario is valid; unpriced slots and unavailable products produce no fictitious sales
+  ---
+  duration_ms: 19.7572
+  type: 'test'
+  ...
+# Subtest: an edited original example tolerates removed offers and additional actual staff
+ok 32 - an edited original example tolerates removed offers and additional actual staff
+  ---
+  duration_ms: 1.0528
+  type: 'test'
+  ...
+# Subtest: an end-of-stock projection sells each surviving bottle once, even over a whole year
+ok 33 - an end-of-stock projection sells each surviving bottle once, even over a whole year
+  ---
+  duration_ms: 0.8973
+  type: 'test'
+  ...
+# Subtest: revenue shares are staff costs once and do not turn into repeated fixed salary
+ok 34 - revenue shares are staff costs once and do not turn into repeated fixed salary
+  ---
+  duration_ms: 0.3583
+  type: 'test'
+  ...
+# Subtest: a guild owner is a legal account, not an extra paid or active person
+ok 35 - a guild owner is a legal account, not an extra paid or active person
+  ---
+  duration_ms: 1.0685
+  type: 'test'
+  ...
+# Subtest: shop uses the existing six page templates, one room and stable family cast
+ok 36 - shop uses the existing six page templates, one room and stable family cast
+  ---
+  duration_ms: 0.139
+  type: 'test'
+  ...
+# Subtest: department tabs retain fourteen vacancies and include the married-in Eirlys
+ok 37 - department tabs retain fourteen vacancies and include the married-in Eirlys
+  ---
+  duration_ms: 0.3216
+  type: 'test'
+  ...
+# Subtest: three generations, reciprocal marriages and existing identities survive the new branches
+ok 38 - three generations, reciprocal marriages and existing identities survive the new branches
+  ---
+  duration_ms: 11.3039
+  type: 'test'
+  ...
+# Subtest: fifty-one distinct garments keep their real currency values and individual artwork
+ok 39 - fifty-one distinct garments keep their real currency values and individual artwork
+  ---
+  duration_ms: 6.7262
+  type: 'test'
+  ...
+# Subtest: editor round trip retains garment details, categories, currency and features
+ok 40 - editor round trip retains garment details, categories, currency and features
+  ---
+  duration_ms: 9.2026
+  type: 'test'
+  ...
+# Subtest: expanded collection retains original garments with only four authorized price reductions
+ok 41 - expanded collection retains original garments with only four authorized price reductions
+  ---
+  duration_ms: 10.5422
+  type: 'test'
+  ...
+# Subtest: character publication preserves a pre-existing profile and every other collection
+ok 42 - character publication preserves a pre-existing profile and every other collection
+  ---
+  duration_ms: 4.78
+  type: 'test'
+  ...
+# Subtest: all family portraits and module artwork resolve to local files
+ok 43 - all family portraits and module artwork resolve to local files
+  ---
+  duration_ms: 4.5803
+  type: 'test'
+  ...
+1..43
+# tests 43
+# suites 0
+# pass 43
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2777.1056

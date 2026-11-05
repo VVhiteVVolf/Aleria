@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-11-04T21:49:46.903583+00:00",
+  "estates": 7,
+  "tool": "built-in image_gen",
+  "originalsHashIdentical": true,
+  "pipelineAudit": {
+    "checkedWarriors": 7,
+    "expectedCount": 7,
+    "failures": [],
+    "warnings": []
+  },
+  "visualReview": {
+    "status": "passed",
+    "subjectReview": "All seven generator outputs viewed; adult gender roles, individual props and complete silhouettes match the requested estates.",
+    "alphaComposite": "diagnostics/klythesia-expansion-20261104/estates/contact-sheet.jpg",
+    "compositeViewed": true
+  },
+  "prompts": "Vorschau/Klythesia/sources/estate-art-direction.json",
+  "receipts": "Vorschau/Klythesia/sources/estate-generation-receipts.json",
+  "rgbPreservation": "Verified by shared artifact audit; only authorized alpha processing applied."
+}

@@ -1,0 +1,364 @@
+{
+  "title": "Götterkreis & Gestalten",
+  "intro": "Die Namen, Bildnisse und Aspektzuordnungen dieser Glaubensrichtung. Verweise führen zu den entsprechenden Überlieferungen im Glaubenscodex.",
+  "groups": [
+    {
+      "id": "ahnengott",
+      "title": "Der Ewige Ahnengott",
+      "entries": [
+        {
+          "id": "klytharios",
+          "name": "Klytharios",
+          "epithet": "Der Jäger / Vater / Tyrann",
+          "relatedIds": [
+            "zatrach",
+            "ordan",
+            "zarakhul"
+          ],
+          "image": {
+            "src": "religionen/zirkel-des-ewigen-waldes/assets/klytharios.png",
+            "alt": "Klytharios – Der Jäger / Vater / Tyrann",
+            "width": 408,
+            "height": 612
+          }
+        }
+      ]
+    },
+    {
+      "id": "nebengoetter",
+      "title": "Die Göttinnen",
+      "entries": [
+        {
+          "id": "aristhea",
+          "name": "Aristhea",
+          "epithet": "Göttin der See · Mutter / Witwe / Seemaid",
+          "relatedIds": [
+            "mariel",
+            "lunara",
+            "tethyra"
+          ],
+          "image": {
+            "src": "religionen/zirkel-des-ewigen-waldes/assets/aristhea.png",
+            "alt": "Aristhea – Göttin der See · Mutter / Witwe / Seemaid",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "artemisra",
+          "name": "Artemisra",
+          "epithet": "Göttin der Natur · Hirtin / Jäger",
+          "relatedIds": [
+            "sylvana",
+            "zatrach"
+          ],
+          "image": {
+            "src": "religionen/zirkel-des-ewigen-waldes/assets/artemisra.png",
+            "alt": "Artemisra – Göttin der Natur · Hirtin / Jäger",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "elythra",
+          "name": "Elythra",
+          "epithet": "Göttin der Liebe · Maid / Hedonist",
+          "relatedIds": [
+            "lyris",
+            "sanguine"
+          ],
+          "image": {
+            "src": "religionen/zirkel-des-ewigen-waldes/assets/elythra.png",
+            "alt": "Elythra – Göttin der Liebe · Maid / Hedonist",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "kallistra",
+          "name": "Kallistra",
+          "epithet": "Göttin des Krieges · Streiter / Knecht",
+          "relatedIds": [
+            "baldran",
+            "tharim"
+          ],
+          "image": {
+            "src": "religionen/zirkel-des-ewigen-waldes/assets/kallistra.png",
+            "alt": "Kallistra – Göttin des Krieges · Streiter / Knecht",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "klythara",
+          "name": "Klythara",
+          "epithet": "Göttin der List · Rächerin / Nachtmaid",
+          "relatedIds": [
+            "nemsara",
+            "nyxara"
+          ],
+          "image": {
+            "src": "religionen/zirkel-des-ewigen-waldes/assets/klythara.png",
+            "alt": "Klythara – Göttin der List · Rächerin / Nachtmaid",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "nekara",
+          "name": "Nekara",
+          "epithet": "Göttin des Todes · Hüter / Schicksalsweberin",
+          "relatedIds": [
+            "kharon",
+            "hela"
+          ],
+          "image": {
+            "src": "religionen/zirkel-des-ewigen-waldes/assets/nekara.png",
+            "alt": "Nekara – Göttin des Todes · Hüter / Schicksalsweberin",
+            "width": 408,
+            "height": 612
+          }
+        },
+        {
+          "id": "alethea",
+          "name": "Alethea",
+          "epithet": "Göttin des Wissens · Mentor / Intrigant",
+          "relatedIds": [
+            "orin",
+            "amon"
+          ],
+          "image": {
+            "src": "religionen/zirkel-des-ewigen-waldes/assets/alethea.png",
+            "alt": "Alethea – Göttin des Wissens · Mentor / Intrigant",
+            "width": 408,
+            "height": 612
+          }
+        }
+      ]
+    },
+    {
+      "id": "patron",
+      "title": "Der geweihte Patrongott",
+      "entries": [
+        {
+          "id": "kyreon",
+          "name": "Kyreon",
+          "epithet": "Der Häscher",
+          "relatedIds": [
+            "arkeon"
+          ],
+          "image": {
+            "src": "religionen/zirkel-des-ewigen-waldes/assets/kyreon.png",
+            "alt": "Kyreon – Der Häscher",
+            "width": 408,
+            "height": 612
+          }
+        }
+      ]
+    },
+    {
+      "id": "feindbilder",
+      "title": "Die Feindbilder",
+      "entries": [
+        {
+          "id": "tethron",
+          "name": "Tethron",
+          "epithet": "Der Verschlinger",
+          "relatedIds": [
+            "thraal"
+          ],
+          "image": {
+            "src": "religionen/zirkel-des-ewigen-waldes/assets/tethron-waldzirkel.png",
+            "alt": "Tethron – Der Verschlinger",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "baalzor",
+          "name": "Baalzor",
+          "epithet": "Der Schänder",
+          "relatedIds": [
+            "bhaal"
+          ],
+          "image": {
+            "src": "religionen/zirkel-des-ewigen-waldes/assets/baalzor-waldzirkel.png",
+            "alt": "Baalzor – Der Schänder",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "lyrion",
+          "name": "Lyrion",
+          "epithet": "Der Trickser",
+          "relatedIds": [
+            "migdal"
+          ],
+          "image": {
+            "src": "religionen/zirkel-des-ewigen-waldes/assets/lyrion-waldzirkel.png",
+            "alt": "Lyrion – Der Trickser",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "gryloth",
+          "name": "Gryloth",
+          "epithet": "Der Verseucher",
+          "relatedIds": [
+            "nergaloth"
+          ],
+          "image": {
+            "src": "religionen/zirkel-des-ewigen-waldes/assets/gryloth-waldzirkel.png",
+            "alt": "Gryloth – Der Verseucher",
+            "width": 1024,
+            "height": 1536
+          }
+        },
+        {
+          "id": "aurion-noxus",
+          "name": "Aurion & Noxus",
+          "epithet": "Der Zweigesichtige",
+          "relatedIds": [
+            "azrath-morvath"
+          ],
+          "image": {
+            "src": "religionen/zirkel-des-ewigen-waldes/assets/aurion-noxus-waldzirkel.png",
+            "alt": "Aurion & Noxus – Der Zweigesichtige",
+            "width": 1024,
+            "height": 1536
+          }
+        }
+      ]
+    }
+  ],
+  "hierarchy": {
+    "title": "Hierarchie",
+    "entries": [
+      {
+        "id": "hohe-matriarchin",
+        "title": "Hohe Matriarchin",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Die Hohe Matriarchin steht an der Spitze des religiösen Hierarchiebaums des Zirkels des Ewigen Waldes. Sie ist die symbolische Gemahlin des Gottkönigs Kyreon und verkörpert die höchste Autorität und Ehre innerhalb des Tempels. Ihre Rolle umfasst sowohl die spirituelle Führung als auch die Repräsentation der Göttlichkeit auf Erden. Sie ist die direkte Verbindung zwischen Kyreon und den anderen Göttern und überwacht die gesamte religiöse Praxis und das spirituelle Wohl der Gemeinschaft."
+          }
+        ]
+      },
+      {
+        "id": "erz-matriarchin",
+        "title": "Erz-Matriarchin",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Die Erz-Matriarchin dient als Konkubine des Kyreon und spielt eine bedeutende symbolische Rolle innerhalb der Hierarchie. Obwohl ihre Funktion vorwiegend symbolisch ist, übernimmt sie wesentliche Aufgaben in der Verwaltung und Führung der Tempelangelegenheiten. Ihre Präsenz repräsentiert die Verbindung zwischen dem Göttlichen und dem Menschlichen, und sie unterstützt die Hohe Matriarchin in deren Aufgaben."
+          }
+        ]
+      },
+      {
+        "id": "orakel",
+        "title": "Orakel",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Die Orakel sind hochrangige Priesterinnen, die Tempel und Heiligtümer leiten. Sie fungieren als Vermittlerinnen zwischen den Göttern und den Gläubigen und sind verantwortlich für die Durchführung von Ritualen und die Weitergabe göttlicher Botschaften. Ihre Führung ist entscheidend für die Aufrechterhaltung der religiösen Praktiken und der spirituellen Integrität der Gemeinschaft."
+          }
+        ]
+      },
+      {
+        "id": "mantis",
+        "title": "Mantis",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Die Mantis sind die religiösen Führerinnen, die innerhalb der Tempel für die Ausbildung und Anleitung der Priesterinnen verantwortlich sind. Sie spielen eine wichtige Rolle in der spirituellen Führung und der Wahrung der religiösen Lehren. Ihre Aufgaben umfassen die Durchführung von Zeremonien, die Pflege der Rituale und die Unterstützung der Orakel."
+          }
+        ]
+      },
+      {
+        "id": "sybilla",
+        "title": "Sybilla",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Die Sybilla ist eine weise Frau, die besondere prophetische Fähigkeiten besitzt. Sie hat die Fähigkeit, zukünftige Ereignisse vorherzusagen und göttliche Wahrheiten zu offenbaren. Ihre Einsichten sind von großer Bedeutung für die Entscheidungsfindung innerhalb der Religion und für die spirituelle Orientierung der Gemeinschaft."
+          }
+        ]
+      },
+      {
+        "id": "seherin",
+        "title": "Seherin",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Die Seherin hat die Aufgabe, Visionen und göttliche Botschaften zu empfangen und zu interpretieren. Sie ist eine wichtige spirituelle Beraterin und hilft den Gläubigen, ihre Verbindung zu den Göttern zu stärken. Ihre Fähigkeit, Visionen zu deuten, ist entscheidend für die Erfüllung der religiösen Pflichten und die Ausrichtung der Rituale."
+          }
+        ]
+      },
+      {
+        "id": "hohe-priesterin",
+        "title": "Hohe Priesterin",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Die Hohe Priesterin ist eine erfahrene und respektierte Priesterin, die für die Aufsicht über die rituellen Abläufe innerhalb eines Tempels verantwortlich ist. Sie sorgt dafür, dass alle religiösen Handlungen korrekt durchgeführt werden und dass die spirituelle Disziplin eingehalten wird. Ihre Rolle ist essenziell für die Aufrechterhaltung der Ordnung und Reinheit in der Praxis."
+          }
+        ]
+      },
+      {
+        "id": "priesterin",
+        "title": "Priesterin",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Die Priesterinnen sind die Hauptakteurinnen in den täglichen religiösen Aktivitäten. Sie führen Zeremonien durch, beten für die Gläubigen und halten die Rituale ab. Sie sind die direkten Ansprechpartnerinnen für die Gläubigen und unterstützen die Hohe Priesterin und die anderen höheren Ränge bei ihren Aufgaben."
+          }
+        ]
+      },
+      {
+        "id": "adept",
+        "title": "Adept",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Die Adepten sind angehende Priesterinnen, die sich in der Ausbildung befinden und sich auf ihre zukünftige Rolle vorbereiten. Sie lernen die religiösen Praktiken, die Ritualtechniken und die spirituellen Lehren. Ihre Ausbildung umfasst sowohl theoretisches Wissen als auch praktische Erfahrung."
+          }
+        ]
+      },
+      {
+        "id": "novize",
+        "title": "Novize",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Novizen sind die ersten Schritte in der religiösen Hierarchie. Sie beginnen ihre Ausbildung in der Religion und lernen die Grundlagen der amazonischen Glaubenslehre und der Tempelrituale. Ihre Rolle ist hauptsächlich lernend, während sie sich auf ihre zukünftigen Aufgaben als Priesterinnen vorbereiten."
+          }
+        ]
+      },
+      {
+        "id": "schuelerin",
+        "title": "Schülerin",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Schülerinnen sind die jüngsten Mitglieder des Tempels, die sich auf den Weg der spirituellen Erziehung begeben. Sie lernen die grundlegenden Prinzipien und Praktiken der Religion und bereiten sich darauf vor, tiefere Einsichten und Kenntnisse zu erlangen. Ihre Aufgabe ist es, die Grundlagen der Religion zu verstehen und zu verinnerlichen."
+          }
+        ]
+      },
+      {
+        "id": "laie",
+        "title": "Laie",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Laien sind die nicht-religiösen Mitglieder der amazonischen Gesellschaft, die außerhalb der Tempelhierarchie stehen. Sie nehmen an religiösen Zeremonien teil und folgen den Lehren der Religion, ohne aktiv in die religiöse Praxis oder Leitung involviert zu sein. Sie sind die Gläubigen, die den Tempel unterstützen und von den spirituellen Führungen der höheren Ränge profitieren."
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    "Diese Überlieferung verwendet für die infernalen Gegenbilder die traditionelle Neunerzählung. Das allgemeine Infernus-Register führt zehn hohe Mächte einschließlich Adars umstrittener Sonderstellung."
+  ]
+}

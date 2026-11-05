@@ -1,0 +1,223 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-11-04T22:21:37.134780+00:00",
+  "scope": "Seven Klythesia class prototypes only; no house-warrior namespace admitted",
+  "tool": "image_gen.imagegen",
+  "count": 7,
+  "files": [
+    {
+      "id": "antrophe",
+      "production": "assets/warriors/production/antrophe.png",
+      "preview": "assets/warriors/previews/antrophe.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceSha256": "f67e2357c33453c446851d7e8f586757268c3433fd26af7bb662a7b5b96ab4d0",
+      "productionSha256": "a51277d1f39c94121b499df58380dc564643fb442e5f288769d26e7278874472",
+      "previewSha256": "f92fe3bc225df61b44e239917e95c42ff85e80d2757a8fc83dbcfd7dee74bafd",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "helot",
+      "production": "assets/warriors/production/helot.png",
+      "preview": "assets/warriors/previews/helot.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceSha256": "2e6e7009d555ba491544974b5682809d4c9198474c4191aa936d08949862b766",
+      "productionSha256": "7e7ca351a84760bba53a79a4b99c4e187c70e749bdd6668b9e12dc75c4d888db",
+      "previewSha256": "b7b60c068c7b187e9b934a3975b5371ac6f4fcc8086e0c07127fdbd544248e2f",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "myrmex",
+      "production": "assets/warriors/production/myrmex.png",
+      "preview": "assets/warriors/previews/myrmex.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceSha256": "755d4a45a80a7539a007c900a24d2fb7086fffe01d6f148a9098784a4dc66a7b",
+      "productionSha256": "8530c94fef4dd913bc27ff88d5832642e9077090b40b11b0ada07aab379316aa",
+      "previewSha256": "eb415cc6c92eee39232a2e7769101f16decdfb65c1f9afc82ee2c56117314336",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 210,
+        "edgeRadius": 2
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "thorax",
+      "production": "assets/warriors/production/thorax.png",
+      "preview": "assets/warriors/previews/thorax.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceSha256": "ce88db15bd8eb06b7ddc254950d0399a06070498559e7655195ec50bd186d669",
+      "productionSha256": "429cc09097a55b9340bbec2280dab430e1142ab8e5fb27a2addb207eb56bfd6f",
+      "previewSha256": "25e927c80dcf56c8ac29201aad4e8cb56cdf3d287cf1171cb1067d32ccc8b39d",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "thyrsia",
+      "production": "assets/warriors/production/thyrsia.png",
+      "preview": "assets/warriors/previews/thyrsia.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceSha256": "60b34948fba78af9741855c122bfc9baab5a4c7ed26c81c0b1c5f70a5441b47e",
+      "productionSha256": "b08049d18f1a13073db6ff0c1fc9ae04fcefe3c4fe502535e462ce14dc00b53d",
+      "previewSha256": "4cda5b987841b23c5c65affaeb944faa1a21930b573f1a5ea0d9005e20c3a6ba",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 100,
+        "coreThreshold": 180,
+        "edgeRadius": 2
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 100
+      }
+    },
+    {
+      "id": "toxare",
+      "production": "assets/warriors/production/toxare.png",
+      "preview": "assets/warriors/previews/toxare.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceSha256": "445a4be2b303d90a63d312fa3b276d41353e21b5aca610c94b673ec9324cd99f",
+      "productionSha256": "6c99d1a96d19c5871d94e5c2fd0d6af7d3e90bf8e683f26e61eb1182c955fcbd",
+      "previewSha256": "0174ed69cac150eadea152a90b5e1b3396e3d6a7abf36474fe6ba6e3cf1f7c22",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 210,
+        "edgeRadius": 2
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    },
+    {
+      "id": "xiphone",
+      "production": "assets/warriors/production/xiphone.png",
+      "preview": "assets/warriors/previews/xiphone.webp",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sourceSha256": "338e56d116e8d1561103c37dde6337edaa3c5f867e375436c60a4897f7ddbac3",
+      "productionSha256": "5b4c9d12175ab1252ab75a475a7d091e47e3840943e75bee275b9f8895a45adb",
+      "previewSha256": "c8211b5c9281989e5f76eb53ebac3f9674b7053e79b434245c873f9068aa2c51",
+      "processing": {
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2
+      },
+      "proof": {
+        "rgbUnchanged": true,
+        "originalUnchanged": true,
+        "sourceTransparentPixelsExposed": 0,
+        "corePixelsNotOpaque": 0,
+        "originalTransparentGapsFilled": false,
+        "lowAlphaFloor": 160
+      }
+    }
+  ],
+  "audit": {
+    "checkedWarriors": 7,
+    "expectedCount": 7,
+    "failures": [],
+    "warnings": [
+      "myrmex: tight but transparent margin (11 px)",
+      "thorax: tight but transparent margin (11 px)",
+      "thyrsia: tight but transparent margin (8 px)"
+    ]
+  },
+  "visualReview": {
+    "status": "passed",
+    "inspected": [
+      "contact-sheet.jpg",
+      "toxare-review.jpg",
+      "myrmex-review.jpg",
+      "thyrsia-review.jpg",
+      "thyrsia-harp-detail.jpg"
+    ],
+    "findings": [
+      "Full figures and all weapon ends retained; tight transparent margins are intact, not clipped.",
+      "Toxare v2: closed Corinthian helmet, four hooves, correctly rooted tail, symmetric short bow and one continuous straight string.",
+      "Myrmex: three trident tines, coherent shaft, casting-net openings retained.",
+      "Thyrsia v3: distinct triangular harp with visible separate strings and curved Kopis.",
+      "Neutral compositing confirms opaque figure cores without exterior colored haze.",
+      "Xiphone v2: short two-handed hilt, great curved Rhomphaia blade, open Thracian helmet, tribal tattoos and lighter one-shoulder chiton; initial image archived."
+    ]
+  },
+  "browserReview": "Delegated to Klythesia page owner; not claimed by this art audit.",
+  "updatedAt": "2026-11-04T22:56:48.504439+00:00",
+  "latestUserRevision": "Xiphone v2 replaces the initial heavily armored polearm design; current short-hilt great curved Rhomphaia and tribal figure inspected. Root owns its final alpha audit.",
+  "latestRevisionSource": "Vorschau/Klythesia/sources/xiphone-revision-generation-receipt.json"
+}

@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-04",
+  "tool": "image_gen.imagegen",
+  "stylePreset": "fantasy-rpg-character",
+  "jobs": [
+    {
+      "id": "house-oresthiden",
+      "houseId": "house-oresthiden",
+      "assetStem": "house-oresthiden",
+      "name": "Haus Oresthid",
+      "prototypeId": "prototype-07",
+      "role": "Hippeus",
+      "description": "Königlicher, schwer gepanzerter Agoge-Krieger mit rot-elfenbeinfarbenem Orthros-Tabard, schwarzem Schuppenunterpanzer, bronzenen Rüstungsplatten und diagonal geführtem Großschwert. Der korinthische Helm trägt den vorgegebenen breiten schwarzweißen Querkamm, Mäanderband und helle seitliche Haarfahnen.",
+      "reason": "Das zweiköpfige Wachhundmotiv erscheint auf dem Tabard und als kleine Gürtelzier. Rot, Elfenbein, Eisen und Bronze folgen dem Hauswappen; die königliche Agoge begründet die Hippeus-Ausrüstung.",
+      "equipment": [
+        "Gerades Großschwert",
+        "Korinthischer Königshelm mit breitem schwarzweißem Querkamm und hellen Haarfahnen",
+        "Schwerer Schuppenpanzer mit Bronzeplatten",
+        "Orthros-Tabard und roter Mantel"
+      ],
+      "palette": [
+        "Dunkelrot",
+        "Elfenbein",
+        "Schwarz",
+        "Alte Bronze"
+      ],
+      "mount": null,
+      "status": "proposal",
+      "prompt": "Use case: stylized-concept. Create exactly ONE full-body young adult human male Phalantian royal warrior, fit muscular age 23–28, 1024x1536 portrait, fully transparent PNG including gaps. The five references have strictly separate roles: image 1 the user's Greek helmet chart; image 2 the user's real bronze SPARTAN/CORINTHIAN ROYAL HELMET, broad TRANSVERSE black-and-white fan crest with Greek meander crest-band and long pale horsehair tassels at BOTH sides; image 3 ONLY matte handpainted gouache style, simplified clear forms, thin soft painted contours and fine even pigment grain, NEVER its western knight armor, griffin or outer haze; image 4 ONLY Orthros two-headed-hound heraldry in red/ivory; image 5 ONLY Talos bronze-guardian heraldry in blue/cream. The real royal helmet from image 2 is mandatory, preserve its closed Corinthian face shape, long nose guard and cheek pieces; transfer polished photo bronze to restrained MATTE painted bronze. Do not copy the western knight helmet. No female, child, fat or old figure. Fully clothed heavy ancient-Greek fantasy armor. Entire top crest, lateral hair tassels, both full feet and sword tip visible with generous margin. Calm dignified three-quarter stance, grounded anatomy but absolutely NO ground, cast shadow, background, paper, smoke, halo, glow or vignette. Natural human ears if visible. No text or labels, no firearms, no oversized pauldrons or spikes. Grecian not Roman or medieval-European silhouette. Functional believable hands and sword grip. House ORESTHID: two-headed ivory hound motif ONLY from reference 4. Heavy overlapping dark-iron scale cuirass with a wide bronze anatomical breastplate and Greek segmented shoulder lames, bronze forearm guards, articulated iron thigh protection over ivory-and-black pteryges, severe dark-red mantle fastened at one shoulder. One distinct large ivory TWO-HEADED DOG embroidery on the dark-red breast tabard, one common dog body, two separate heads; subtle opposed-hound ornaments on belt, no canine-shaped helmet. Royal helmet as reference 2, antique bronze and black/white transverse crest, pale tassels on both sides. The strong young man holds a large STRAIGHT TWO-HANDED GREATSWORD diagonally downward across his front with BOTH gloved hands naturally on its long hilt; broad symmetric double-edged straight blade, small simple ancient Greek crossguard, complete tip at lower left well inside frame. No shield, no spear, no extra weapon in hand. Slightly wide steady stance, right foot forward. Palette dark red, ivory, blackened iron and old bronze. Completely new house armor construction and pose, not a recolored existing prototype.",
+      "references": [
+        "conversation:user-current:screenshot-2-greek-helmets",
+        "conversation:user-current:screenshot-3-royal-helmet",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Phalantia/assets/emblems/production/house-oresthiden.png",
+        "E:/Aleria/Vorschau/Phalantia/assets/emblems/production/house-therakiden.png"
+      ],
+      "referenceMode": "num_last_images_to_include:5"
+    },
+    {
+      "id": "house-therakiden",
+      "houseId": "house-therakiden",
+      "assetStem": "house-therakiden",
+      "name": "Haus Therakid",
+      "prototypeId": "prototype-07",
+      "role": "Hippeus",
+      "description": "Königlicher Agoge-Krieger in schwerer blauer Lamellenrüstung mit bronzenem Brustpanzer, cremefarbenem Mantel und Talos-Hauszeichen. Beide Hände ruhen auf dem aufgestellten Großschwert. Der geschlossene korinthische Helm entspricht der verbindlichen Vorlage mit schwarzweißem Querkamm und seitlichen Haarfahnen.",
+      "reason": "Das Talos-Zeichen steht auf dem blauen Brusttuch; Palmetten auf Gürtel, Armschienen und Mantel greifen den Hausrahmen auf. Ein eigener Rüstungsaufbau und eine andere Schwertstellung unterscheiden ihn vom Oresthid-Krieger.",
+      "equipment": [
+        "Gerades Großschwert",
+        "Korinthischer Königshelm mit breitem schwarzweißem Querkamm und hellen Haarfahnen",
+        "Schwere blaue Lamellen und bronzener Brustpanzer",
+        "Cremefarbener Palmettenmantel"
+      ],
+      "palette": [
+        "Nachtblau",
+        "Bronze",
+        "Kalkweiß"
+      ],
+      "mount": null,
+      "status": "proposal",
+      "prompt": "Use case: stylized-concept. Create exactly ONE full-body young adult human male Phalantian royal warrior, fit muscular age 23–28, 1024x1536 portrait, fully transparent PNG including gaps. The five references have strictly separate roles: image 1 the user's Greek helmet chart; image 2 the user's real bronze SPARTAN/CORINTHIAN ROYAL HELMET, broad TRANSVERSE black-and-white fan crest with Greek meander crest-band and long pale horsehair tassels at BOTH sides; image 3 ONLY matte handpainted gouache style, simplified clear forms, thin soft painted contours and fine even pigment grain, NEVER its western knight armor, griffin or outer haze; image 4 ONLY Orthros two-headed-hound heraldry in red/ivory; image 5 ONLY Talos bronze-guardian heraldry in blue/cream. The real royal helmet from image 2 is mandatory, preserve its closed Corinthian face shape, long nose guard and cheek pieces; transfer polished photo bronze to restrained MATTE painted bronze. Do not copy the western knight helmet. No female, child, fat or old figure. Fully clothed heavy ancient-Greek fantasy armor. Entire top crest, lateral hair tassels, both full feet and sword tip visible with generous margin. Calm dignified three-quarter stance, grounded anatomy but absolutely NO ground, cast shadow, background, paper, smoke, halo, glow or vignette. Natural human ears if visible. No text or labels, no firearms, no oversized pauldrons or spikes. Grecian not Roman or medieval-European silhouette. Functional believable hands and sword grip. House THERAKID: TALOS bronze guardian motif ONLY from reference 5. Pompous very heavy royal Greek anatomical bronze cuirass over a dense midnight-blue lamellar undercoat, sculpted but MATTE armor, cream shoulder cloak behind the right shoulder, stepped Greek lamellar thigh skirt to the knees, close-fitting dark blue trousers beneath, bronze greaves and armored leather boots. The blue chest cloth bears a clearly painted small standing bronze TALOS GUARDIAN carrying a round shield, as the heraldic emblem not an extra live figure. Palmette engraving on the bronze belt and lower cuirass echoes the house border. Mandatory closed Corinthian royal helmet exactly following reference 2, broad transverse alternating BLACK/WHITE fan crest with a black-and-cream Greek meander band and long pale horsehair tassels hanging at both temples. Both gauntleted hands rest stacked on the large pommel of an impressive STRAIGHT GREATSWORD held upright in front of the warrior, blade point downward, entire blade tip visible well above bottom border. No shield in hands, no extra weapon. Calm proud young posture with offset shoulders, substantial armor yet lean athletic proportions. Palette midnight blue, bronze and cream. Distinct from the red hound warrior: different layered armor, drapery, stance and sword placement.",
+      "references": [
+        "conversation:user-current:screenshot-2-greek-helmets",
+        "conversation:user-current:screenshot-3-royal-helmet",
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Phalantia/assets/emblems/production/house-oresthiden.png",
+        "E:/Aleria/Vorschau/Phalantia/assets/emblems/production/house-therakiden.png"
+      ],
+      "referenceMode": "num_last_images_to_include:5"
+    },
+    {
+      "id": "house-daskyren",
+      "houseId": "house-daskyren",
+      "assetStem": "house-daskyren-v2",
+      "name": "Haus Daskyr",
+      "prototypeId": "prototype-02",
+      "role": "Hoplit",
+      "description": "Elitärer Speerkrieger von Milinthos mit grünem Hoplon und dem elfenbeinfarbenen Dreifußkessel des Hauses. Der späte korinthische Helm besitzt einen langen grünen Längskamm. Brustpanzer, Leinenlagen und Beinschienen bilden eine schwere griechische Schutzrüstung.",
+      "reason": "Die Kesselsymbolik wird groß auf dem Schild getragen. Grüne und elfenbeinfarbene Textilien sowie die ockerfarbene Schildbordüre folgen dem Hauswappen. Die korrigierte Fassung bewahrt ausreichend Abstand über der vollständigen Speerspitze.",
+      "equipment": [
+        "Gerader Dory-Speer",
+        "Großer Hoplon mit Dreifußkessel",
+        "Später korinthischer Helm mit grünem Längskamm",
+        "Bronzener Brustpanzer und Beinschienen",
+        "Xiphos in der Scheide"
+      ],
+      "palette": [
+        "Dunkelgrün",
+        "Elfenbein",
+        "Bronze",
+        "Rotocker"
+      ],
+      "mount": null,
+      "status": "proposal",
+      "prompt": "Use case: background-extraction and precise-object-edit. Edit the provided existing illustration, do NOT redesign the warrior. KEEP the exact pose, face/helmet, armor, house emblem, colors, ornaments, weapon shapes and painting style. Remove ALL of the diffuse colored brown/grey/gold mist, glow, halo and painted background surrounding the warrior, as well as ALL background between limbs, weapons, shield and cloak. Those pixels must become genuinely transparent alpha0, NOT white, black, grey, paper, checkerboard pattern or replacement scenery. The final asset must be a clean cut-out silhouette of ONLY the man and his physical equipment, with fully opaque actual skin, metal, cloth, hair, shield and weapons. Preserve fine pale horsehair plumes and long helmet hair tassels as physical objects. No shadow or ground. Keep 1024x1536 portrait canvas. Also reframe the complete physical silhouette to occupy about88–90percent of the image height, leaving at least50pixels fully transparent empty space above the highest crest or spearhead and below the lowest foot or weapon tip; preserve all tips instead of cropping. Do not add lettering, objects or figures. Especially the full long straight spear must remain present: shrink/recenter the whole warrior and spear slightly so its top spearhead has a clear empty top margin. Do not bend or shorten its straight shaft. Retain the green-and-ivory cauldron shield exactly.",
+      "references": [
+        "E:/Aleria/Vorschau/Phalantia/assets/warriors/generated/house-daskyren.png"
+      ],
+      "referenceMode": "referenced_image_paths",
+      "initialPrompt": "Use case: stylized-concept. Exactly ONE fit muscular young adult human male, age22–28, full body 1024x1536 portrait, in an ancient Greek/SPARTAN military fantasy culture. Input reference1 supplies ONLY restrained MATTE handpainted gouache style, simplified clear shapes, thin soft contours, fine pigment grain and believable still catalog pose; NEVER copy its western knight armor, griffin, blue colors, outer haze or shadow. Input reference2 supplies ONLY this house's emblem and colors, painted or embroidered naturally on equipment; do not turn the man or helmet into the animal/object. Normal round human ears if visible. Entire highest crest, every weapon tip, all straps and both complete feet visible with empty transparent margins. True transparent PNG background and transparent open gaps. NO ground, contact shadow, scenery, paper, halo, glow, haze, smoke or vignette. No women, children, old or fat men, no firearms, writing, captions or watermark. Matte skin and metals, no photo realism or CGI, no thick comic outlines. Functional sword/spear grips and shoulder straps, straight continuous weapon shafts, complete free silhouette. House DASKYR, Miltinthos. A disciplined HOPLITE elite spearman in a closed LATE CORINTHIAN bronze helmet with continuous nose guard and cheeks, a long front-to-back DARK GREEN crest rising along the skull; no transverse crest and no side hair tassels. Green-and-ivory layered linen armor with a thick bronze anatomical chest plate, dark green short cloak behind the shoulders, ivory pteryges over a green knee-length chiton, bronze greaves, strapped leather sandals. A full-size deep round HOPLON on his left arm is painted dark green with a large clear ivory THREE-LEGGED ritual CAULDRON and exactly two ring handles, as reference2; restrained bronze rim with ochre Greek angles. His right hand grips ONE long DORY SPEAR upright at his side; the straight wooden shaft, top spearhead and lower butt both fully visible and aligned, not passing through the body. A sheathed straight xiphos hangs at the hip. Calm firm stance, shoulder turned so the shield face is readable; practical elite Greek armor, no western knight pauldrons.",
+      "initialReferences": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Phalantia/assets/emblems/production/house-daskyren.png"
+      ]
+    },
+    {
+      "id": "house-pherakides",
+      "houseId": "house-pherakides",
+      "assetStem": "house-pherakides",
+      "name": "Haus Pherakid",
+      "prototypeId": "prototype-04",
+      "role": "Promachos",
+      "description": "Beweglicher Schwertkämpfer von Syrakleia in dunklem Platten-Lamellenpanzer über rotockerfarbener Tunika. Er trägt einen offenen illyrischen Helm mit schwarzem Längskamm, ein gerades Xiphos und einen kleineren Hoplon mit der schwarzen Labrys auf orangefarbenem Feld.",
+      "reason": "Die klare Doppelaxt prägt den Schild und den Brustverschluss. Dunkles Eisen, Rotocker und Elfenbein folgen dem Wappen; der offene Helm und der leichtere Schild ergeben eine eigenständige bewegliche Silhouette.",
+      "equipment": [
+        "Gerades Xiphos",
+        "Kleinerer Hoplon mit Labrys",
+        "Offener illyrischer Helm mit Längskamm",
+        "Dunkler Platten-Lamellenpanzer",
+        "Bronzene Arm- und Beinschienen"
+      ],
+      "palette": [
+        "Mattschwarz",
+        "Rotocker",
+        "Elfenbein",
+        "Bronze"
+      ],
+      "mount": null,
+      "status": "proposal",
+      "prompt": "Use case: stylized-concept. Exactly ONE fit muscular young adult human male, age22–28, full body 1024x1536 portrait, in an ancient Greek/SPARTAN military fantasy culture. Input reference1 supplies ONLY restrained MATTE handpainted gouache style, simplified clear shapes, thin soft contours, fine pigment grain and believable still catalog pose; NEVER copy its western knight armor, griffin, blue colors, outer haze or shadow. Input reference2 supplies ONLY this house's emblem and colors, painted or embroidered naturally on equipment; do not turn the man or helmet into the animal/object. Normal round human ears if visible. Entire highest crest, every weapon tip, all straps and both complete feet visible with empty transparent margins. True transparent PNG background and transparent open gaps. NO ground, contact shadow, scenery, paper, halo, glow, haze, smoke or vignette. No women, children, old or fat men, no firearms, writing, captions or watermark. Matte skin and metals, no photo realism or CGI, no thick comic outlines. Functional sword/spear grips and shoulder straps, straight continuous weapon shafts, complete free silhouette. House PHERAKID, Syrakleia. An agile but well-armored PROMACHOS swordsman, unmistakably young clean-shaven face and short dark curls visible beneath an open-faced ILLYRIAN bronze helmet: squared brow opening with fixed flat cheek guards, uncovered face, elongated helmet ridge with modest dark upright longitudinal plume, no nose guard, no transverse royal crest. Blackened-iron small plate-and-lamellar chest armor over rust-orange chiton, narrow ivory Greek angular decoration, black leather pteryges to just above knees, bronze arm guards and greaves. He holds a normal STRAIGHT Greek XIPHOS short sword in the right hand, blade angled down and away, complete pointed tip well inside frame and clear simple crossguard. His left forearm carries a SMALLER round HOPLON at the side, orange painted face bearing one large black LABRYS double axe as reference2, clearly symmetric two axe blades; not a weapon in his hands. The house axe emblem is repeated subtly on the chest clasp. Alert relaxed three-quarter stance with offset legs, light agile silhouette despite quality armor. NO curved saber, no lance or spear.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Phalantia/assets/emblems/production/house-pherakides.png"
+      ],
+      "referenceMode": "referenced_image_paths"
+    },
+    {
+      "id": "house-melyrion",
+      "houseId": "house-melyrion",
+      "assetStem": "house-melyrion",
+      "name": "Haus Melyrion",
+      "prototypeId": "prototype-03",
+      "role": "Peltast",
+      "description": "Leichter Wurfspeerkrieger von Knossira mit offenem chalkidischem Helm, petrolfarbener Leinenrüstung und goldener Zikade auf dem Brusttuch. Ein Rückenköcher trägt drei weitere Wurfspeere; in der Hand hält er einen einzelnen geraden Wurfspeer. Die freie Hand führt eine leichte Pelte.",
+      "reason": "Die Zikade erscheint als klar getragenes Hauszeichen. Flügeladern auf den flachen Schulterplatten und der Pelte verbinden Wappenmotiv und Ausrüstung, ohne Tierhelm oder echte Flügel zu bilden.",
+      "equipment": [
+        "Wurfspeer",
+        "Rückenköcher mit drei weiteren Wurfspeeren",
+        "Leichte Pelte",
+        "Offener chalkidischer Helm",
+        "Petrolfarbener Leinenpanzer mit kleinen goldenen Schuppenpartien"
+      ],
+      "palette": [
+        "Dunkles Petrol",
+        "Goldocker",
+        "Kalkweiß",
+        "Bronze"
+      ],
+      "mount": null,
+      "status": "proposal",
+      "prompt": "Use case: stylized-concept. Exactly ONE fit muscular young adult human male, age22–28, full body 1024x1536 portrait, in an ancient Greek/SPARTAN military fantasy culture. Input reference1 supplies ONLY restrained MATTE handpainted gouache style, simplified clear shapes, thin soft contours, fine pigment grain and believable still catalog pose; NEVER copy its western knight armor, griffin, blue colors, outer haze or shadow. Input reference2 supplies ONLY this house's emblem and colors, painted or embroidered naturally on equipment; do not turn the man or helmet into the animal/object. Normal round human ears if visible. Entire highest crest, every weapon tip, all straps and both complete feet visible with empty transparent margins. True transparent PNG background and transparent open gaps. NO ground, contact shadow, scenery, paper, halo, glow, haze, smoke or vignette. No women, children, old or fat men, no firearms, writing, captions or watermark. Matte skin and metals, no photo realism or CGI, no thick comic outlines. Functional sword/spear grips and shoulder straps, straight continuous weapon shafts, complete free silhouette. House MELYRION, Knossira. A lean athletic PELTAST javelin skirmisher wearing an OPEN-FACED CHALCIDIAN bronze helmet, distinct separated cheek pieces and small central nose guard with open ears, low narrow ochre horsehair ridge along the head, fully visible young face and dark curly hair. Light PETROL laminated-linen cuirass with small gold-bronze scale shoulder panels, pale cloth strip skirt over petrol tunic, bare muscular upper arms, simple bronze shin guards, strapped sandals. One large ochre CICADA with paired elongated pale wings is painted clearly on the petrol breast cloth in the house design from reference2; wing-like engraved lines decorate the flat shoulder panels but NO actual wings or insect helmet. On his BACK a narrow rigid leather JAVELIN CASE strapped correctly to both shoulders carries THREE additional straight wooden javelins, their three distinct spearheads visible over the shoulder, not arrows. He holds ONE shorter JAVELIN upright in his right hand at rest, shaft and steel point fully clear. The left arm supports a small crescent PELTE painted ivory with a petrol edge. Agile calm stance, asymmetric grounded pose. NO bow, no quiver of arrows, no royal plume, no heavy plate knight armor.",
+      "references": [
+        "E:/Aleria/AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+        "E:/Aleria/Vorschau/Phalantia/assets/emblems/production/house-melyrion.png"
+      ],
+      "referenceMode": "referenced_image_paths"
+    }
+  ]
+}

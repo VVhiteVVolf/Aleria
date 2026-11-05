@@ -1,0 +1,133 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-11-04T23:15:02.534741+00:00",
+  "scope": "One general country-sign Thorax; no family, new rank or guard order",
+  "manifest": "Vorschau/Klythesia/assets/warriors/realm-manifest.json",
+  "entry": {
+    "id": "realm-klythesia",
+    "source": "assets/warriors/generated/realm-klythesia.png",
+    "sourceSha256": "6304ac272d9609d3e397c21bfb6cb80ce9f5861ccc85df37103234d89ba2493f",
+    "production": "assets/warriors/production/realm-klythesia.png",
+    "productionSha256": "6e5f5e9363f439dacc19c2793a5079e3456a241a583eb6de2238b551ba34e4a9",
+    "preview": "assets/warriors/previews/realm-klythesia.webp",
+    "previewSha256": "00fe5348e6d9d48b19b717655b8456d5cf54b67d500cc2122c3ebccfe8fdf9e9",
+    "processing": {
+      "version": 1,
+      "outsideThreshold": 160,
+      "coreThreshold": 240,
+      "edgeRadius": 2
+    },
+    "sourceAlpha": {
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "boundingBox": [
+        25,
+        7,
+        1004,
+        1536
+      ],
+      "margins": {
+        "left": 25,
+        "top": 7,
+        "right": 20,
+        "bottom": 0
+      },
+      "minimumMarginPixels": 0,
+      "touchesCanvas": true,
+      "transparentPixels": 1047233,
+      "opaquePixels": 0,
+      "partialAlphaPixels": 525631,
+      "alphaRange": [
+        0,
+        254
+      ]
+    },
+    "alpha": {
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "boundingBox": [
+        146,
+        20,
+        890,
+        1440
+      ],
+      "margins": {
+        "left": 146,
+        "top": 20,
+        "right": 134,
+        "bottom": 96
+      },
+      "minimumMarginPixels": 20,
+      "touchesCanvas": false,
+      "transparentPixels": 1095239,
+      "opaquePixels": 470513,
+      "partialAlphaPixels": 7112,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    "previewAlpha": {
+      "dimensions": [
+        768,
+        1152
+      ],
+      "boundingBox": [
+        108,
+        13,
+        670,
+        1082
+      ],
+      "margins": {
+        "left": 108,
+        "top": 13,
+        "right": 98,
+        "bottom": 70
+      },
+      "minimumMarginPixels": 13,
+      "touchesCanvas": false,
+      "transparentPixels": 606782,
+      "opaquePixels": 256229,
+      "partialAlphaPixels": 21725,
+      "alphaRange": [
+        0,
+        255
+      ]
+    },
+    "proof": {
+      "rgbUnchanged": true,
+      "originalUnchanged": true,
+      "sourceTransparentPixelsExposed": 0,
+      "corePixelsNotOpaque": 0,
+      "originalTransparentGapsFilled": false,
+      "lowAlphaFloor": 160
+    }
+  },
+  "audit": {
+    "checkedWarriors": 1,
+    "expectedCount": 1,
+    "failures": [],
+    "warnings": []
+  },
+  "protectedManifestHashes": {
+    "manifest.json": "a8e46bc620d3b8911f12a733b9203340b6bfbd587a8bb5c3b310b79e118262c8",
+    "house-manifest.json": "263cebd023d0996b9eb5b48309b1b6c68910524a73013fc641afd481b436f7a0"
+  },
+  "otherManifestsUnchanged": true,
+  "visualReview": {
+    "status": "passed",
+    "evidence": "diagnostics/klythesia-expansion-20261104/realm-warrior/realm-klythesia-review.jpg",
+    "findings": [
+      "Correct blue-turquoise S-curved snake on red/ivory striped round hoplon.",
+      "Young athletic adult woman with open Attic helmet and blue/ivory crest, red short mantle and pale Greek cuirass.",
+      "Complete spear with coherent shaft and both tips, both feet and all crest edges remain inside transparent margins.",
+      "Opaque body and shield, genuine open gaps and no external color haze on neutral compositing."
+    ]
+  },
+  "tool": "image_gen.imagegen",
+  "browserReview": "Klythesia UI owner verifies the additional artwork dialog."
+}

@@ -1,0 +1,141 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-02T00:00:00.000Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Aberon",
+  "sourcePath": "Charakter Archiv Exporte/Fleischsammler Argall/gwenella-spouse-rhydric-argall.json",
+  "character": {
+    "name": "Gwenella",
+    "title": "Perwyns Mutter · geschiedene Frau Rhydric Argalls",
+    "fraktion": "",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Llysfaen",
+    "currentLocation": "Aberon",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Gwenella ist Perwyn Argalls Mutter und war mit Rhydric Argall verheiratet. Die Ehe ist geschieden. Sie hat eine Affäre mit dem Barden Maelor Ffionydd und ist mit ihm nach Aberon durchgebrannt. Der Affärengrund lautet: „Durchgebrannt nach Aberon“. Ihren Sohn Perwyn hat sie aus ihrer Ehe mit Rhydric. Sie gilt als Schönheit und begegnet anderen mit ausgeprägtem Hochmut. Ihre Herkunftsfamilie ist nicht überliefert.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-02T00:00:00.000Z",
+    "updatedAt": "2026-11-02T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/gwenella.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Gwenella"
+        },
+        {
+          "label": "Geboren",
+          "value": "1702"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "38 Jahre"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Geschieden · Affäre mit Maelor Ffionydd"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Perwyns Mutter · geschiedene Frau Rhydric Argalls"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "Aberon"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/fleischsammler-argall/portraits/gwenella.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Gwenella ist Perwyn Argalls Mutter und war mit Rhydric Argall verheiratet. Die Ehe ist geschieden. Sie hat eine Affäre mit dem Barden Maelor Ffionydd und ist mit ihm nach Aberon durchgebrannt. Der Affärengrund lautet: „Durchgebrannt nach Aberon“. Ihren Sohn Perwyn hat sie aus ihrer Ehe mit Rhydric. Sie gilt als Schönheit und begegnet anderen mit ausgeprägtem Hochmut. Ihre Herkunftsfamilie ist nicht überliefert.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "Schöne erwachsene Frau mit langem gepflegtem kupferrotem Haar, stolzer Haltung und arrogantem, abschätzigem Blick. Gepflegte gute Reisekleidung in gedämpftem Grün und Creme, dezenter Schmuck."
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--family-tree--gwenella-spouse-rhydric-argall"
+    },
+    "genealogy": {
+      "worldPersonId": "person--family-tree--gwenella-spouse-rhydric-argall",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1702",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "38 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-argall",
+          "personId": "gwenella-spouse-rhydric-argall",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-02T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-02T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-argall&mode=view&person=gwenella-spouse-rhydric-argall",
+          "fingerprint": "{\"name\":\"Gwenella\",\"title\":\"Perwyns Mutter · geschiedene Frau Rhydric Argalls\",\"birth\":\"1702\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"/AleriaAlmanach/assets/fleischsammler-argall/portraits/gwenella.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"38 Jahre\"],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"rhydric-argall\",\"type\":\"marriage\",\"status\":\"divorced\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--rhydric-argall\",\"name\":\"Rhydric Argall\"},{\"personId\":\"maelor-ffionydd\",\"type\":\"affair\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--maelor-ffionydd\",\"name\":\"Maelor Ffionydd\"}],\"children\":[{\"personId\":\"perwyn-argall\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-argall--perwyn-argall\",\"name\":\"Perwyn Argall\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "rhydric-argall",
+            "type": "marriage",
+            "status": "divorced",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-argall--rhydric-argall",
+            "name": "Rhydric Argall"
+          },
+          {
+            "personId": "maelor-ffionydd",
+            "type": "affair",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--maelor-ffionydd",
+            "name": "Maelor Ffionydd"
+          }
+        ],
+        "children": [
+          {
+            "personId": "perwyn-argall",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-argall--perwyn-argall",
+            "name": "Perwyn Argall"
+          }
+        ]
+      }
+    },
+    "id": "person--family-tree--gwenella-spouse-rhydric-argall",
+    "race": "Mensch",
+    "age": 38
+  }
+}
