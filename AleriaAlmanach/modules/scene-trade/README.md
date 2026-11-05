@@ -20,6 +20,9 @@ aufklappbaren Handelsbeleg mit zwei Miniaturbildern.
   `styles/scene-trade.css`.
 - `scene-trade-context.js`, `scene-trade-catalog.js`: vorgabebasierte
   Modul-/Händlerzuordnung und indizierte, auf 24 sichtbare Waren begrenzte Suche.
+- `scene-trade-availability.js`: Prüfung der Serverantwort und Abgleich der
+  Warenkennungen. Fehlende Bestätigungen bleiben ausdrücklich ungeklärt und
+  erhalten einen Hinweis auf den abweichenden Händlerkatalog.
 - `scene-trade-participants.js`, `scene-trade-participant-state.js`: Besetzung
   aus Modulhierarchie, Szenenbesetzung und bisherigen Beiträgen; kleine
   Identitätsreferenzen statt gespeicherter Gesprächsprotokolle.
@@ -42,9 +45,11 @@ aufklappbaren Handelsbeleg mit zwei Miniaturbildern.
 ## Verbindliche Regeln
 
 1. Pro Position sind Zahler und Empfänger getrennt. Direktlieferung an eine
-   andere Figur bildet ein Geschenk ab. Fremde Geldbeutel benötigen weiterhin
-   die bestehende Besitzberechtigung. Gruppenkassen verwenden die bestehende
-   Gruppenverwaltung, Szenenverknüpfung und Mitgliederprüfung.
+   andere Figur bildet ein Geschenk ab. Jede angemeldete Person kann mit den
+   ausgewählten Figuren kaufen, verkaufen und schenken; Rollen und
+   Besitzerzuordnungen beschränken den Szenenhandel nicht. Gruppenkassen
+   benötigen weiterhin eine bestätigte Szenenverknüpfung und die Mitgliedschaft
+   der bestellenden Figur, aber keine Verwalterzuordnung.
 2. Normale Sortimentsware bleibt nachlieferbar. Endliche Altbestände werden
    durch diesen Szenenweg weder vermindert noch migriert. Ausdrücklich
    nicht verfügbare oder archivierte Angebote bleiben gesperrt.
@@ -105,9 +110,12 @@ ausschließlich `FIRESTORE_EMULATOR_HOST=127.0.0.1:8187` und das lokale
 `demo-aleria-scene-trade`-Projekt.
 
 Backend, Regeln und Verkaufsindex wurden mit dem öffentlichen Stand
-`7ee2f8ec0e0a5a86bf276cde0c25aaf2f244c1a2` veröffentlicht. Die folgende
-Fensteroptimierung ändert keine serverseitige Buchungsregel und erfordert
-keine Inventarmigration. Die Abrechnung wird für diese Arbeiten nicht geändert.
+`7ee2f8ec0e0a5a86bf276cde0c25aaf2f244c1a2` veröffentlicht. Die Freigabe
+des Szenenhandels vom 5. November 2026 benötigt gemeinsam die neuen
+Frontenddateien und den aktualisierten Callable `commitItemTrade`.
+Firestore-Regeln, Verkaufsindex und Besitzzuordnungen werden dafür nicht
+geändert; eine Inventarmigration ist nicht erforderlich. Prüfbelege liegen
+unter `diagnostics/scene-trade-open-access-20261105/`.
 
 ## Kontext, Auswahl und Darstellung
 
@@ -120,9 +128,9 @@ Die Vorauswahl enthält gespeicherte Figuren aus Besetzung, Hierarchie und
 bisherigen Modulbeiträgen. Explizite Identitäten haben Vorrang; mehrdeutige
 Namensgleiche werden nicht automatisch vermischt. Weitere Figuren lassen sich
 gezielt suchen und ergänzen; bestehende Warenkorbpersonen bleiben geschützt.
-Ausblendungen sind persönliche Komforteinstellungen und verleihen keine
-Zahlberechtigung. Bei einer unterbrochenen Kommentaraktualisierung bleibt die
-letzte bestätigte Auswahl erhalten.
+Ausblendungen sind persönliche Komforteinstellungen und ändern keine
+Figuren- oder Gruppenakten. Bei einer unterbrochenen Kommentaraktualisierung
+bleibt die letzte bestätigte Auswahl erhalten.
 
 Der breite Dialog trennt Angebot und Bestellung in eigene Scrollbereiche.
 Warensuche aktualisiert ausschließlich die Ergebnisliste, behält Fokus und

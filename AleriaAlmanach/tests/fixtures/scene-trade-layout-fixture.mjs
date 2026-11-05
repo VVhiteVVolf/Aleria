@@ -8,7 +8,7 @@ export function createSceneTradeLayoutFixture() {
   const data = { access: { uid: 'layout-user', role: 'player' }, groups: [],
     providers: [{ id: 'module:layout-shop', title: 'Lothaires Arkaneum · Alchemistische Werkstatt und außergewöhnlich langer Händlername von Gwynthor' }],
     characters: Array.from({ length: 1000 }, (_, index) => ({ id: `person-${index}`, name: names[index] || `Weitere Person ${index}`,
-      title: 'Reisende Figur', portrait: '/IconOrdner/ReiterIcons/Platzhalter.png', ownerUid: 'layout-user',
+      title: 'Reisende Figur', portrait: '/IconOrdner/ReiterIcons/Platzhalter.png', ...(index % 2 ? { ownerUid: 'another-user' } : {}),
       inventory: { revision: 1, moneyState: { totalCopper: 1000000000000 }, items: [] } })),
     offers: Array.from({ length: 1200 }, (_, index) => ({ id: `offer:${index}`, listId: index < 72 ? 'module:layout-shop' : `merchant:${Math.floor(index / 24)}`,
       title: index % 3 ? `Reisetauglicher Kräuteransatz mit Salbei und außergewöhnlich langem Warenname ${index}` : `AußergewöhnlichlangesalchemistischesReisegefäßmitwasserfestemSchraubverschluss ${index}`,

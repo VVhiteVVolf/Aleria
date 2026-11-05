@@ -9,6 +9,7 @@ import { resolveSceneTradeParticipants, sceneTradeSelectableAccounts } from './s
 import { createSceneTradeParticipantPreferences, createSceneTradeParticipantSource } from './scene-trade-participant-state.js';
 import { findSceneTradeProduct } from './scene-trade-catalog.js';
 import { createSceneTradeAccountReadiness } from './scene-trade-account-readiness.js';
+import { reconcileSceneTradeAvailability } from './scene-trade-availability.js';
 
 // One personal, browser-local draft belongs to one exact scene thread. A closed
 // window retains an unresolved request so reopening never creates a second sale.
@@ -224,13 +225,10 @@ async function loadAvailability(session) {
   try {
     const products = await session.service.availability(merchantId);
     if (token !== session.availabilityToken || merchantId !== session.state.merchantId) return;
-    const byId = new Map(products.map(product => [product.productId, product]));
-    session.data.offers = session.data.offers.map(product => {
-      if (product.listId !== merchantId) return product;
-      const availability = byId.get(product.id);
-      return { ...product, available: availability?.available === true,
-        availabilityStatus: availability?.status || 'unavailable', ...(availability?.unique ? { definitionKind: 'unique' } : {}) };
-    });
+    const availability = reconcileSceneTradeAvailability(session.data.offers, merchantId, products);
+    session.data.offers = availability.offers;
+    if (availability.unconfirmedCount) status(session,
+      'Das angezeigte Sortiment weicht vom bestätigten Händlerkatalog ab. Für einige Waren fehlt die Verfügbarkeitsbestätigung. Bitte die Bestände neu laden.', true);
   } catch (error) {
     if (token === session.availabilityToken) {
       session.data.offers = session.data.offers.map(product => product.listId === merchantId ? { ...product, available: false, availabilityStatus: 'unknown' } : product);
@@ -302,7 +300,8 @@ async function click(event) {
     if (action === 'confirm-price') { const line = state.lines.find(line => line.id === trigger.dataset.lineId); if (line) line.priceNeedsReview = false; }
     if (action === 'self-pay') {
       const recipient = sceneTradeAccounts(data).find(account => account.key === state.recipientKey);
-      if (!recipient?.canDebit) throw Error('Für diesen Empfänger besitzt du keine Zahlberechtigung.');
+      if (!recipient) throw Error('Bitte einen verfügbaren Empfänger wählen.');
+      if (!recipient.canDebit) throw Error('Zum Bezahlen ist eine aktive Anmeldung erforderlich.');
       state.payerKey = recipient.key;
     }
     if (action === 'add-buy') {
@@ -343,11 +342,11 @@ function change(event) {
       if (state.mode === 'sold') void loadSold(active);
     }
     if (['payerKey', 'sellerKey', 'recipientKey'].includes(field)) {
-      if (!selected.some(account => account.key === target.value && (field === 'recipientKey' || account.canDebit))) throw Error('Diese Zuordnung ist nicht berechtigt.');
+      if (!selected.some(account => account.key === target.value && (field === 'recipientKey' || account.canDebit))) throw Error('Diese Figur oder Gruppenkasse ist für den Handel nicht verfügbar.');
       state[field] = target.value; if (field === 'sellerKey') state.offset = 0;
     }
     if (field === 'actorCharacterId') {
-      if (!selected.some(account => account.kind === 'character' && account.id === target.value && account.canDebit)) throw Error('Bitte eine berechtigte bestellende Figur wählen.');
+      if (!selected.some(account => account.kind === 'character' && account.id === target.value && account.canDebit)) throw Error('Bitte eine verfügbare bestellende Figur wählen.');
       state.actorCharacterId = target.value;
       data.tradeThreadId = state.threadId; data.tradeActorCharacterId = target.value;
       initializeSceneTradeDefaults(state, data, target.value, sceneTradeSelectableAccounts(sceneTradeAccounts(data), session.participants));

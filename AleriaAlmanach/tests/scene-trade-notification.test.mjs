@@ -95,7 +95,7 @@ test('quiet receipts add no time header, insertion toolbar or roleplay page', as
   const timeline = comments.map(comment => ({ comment, startSeconds: 100, endSeconds: 100, aleriaDayIndex: 1 }));
   let rendered;
   const date = { year: 1740, month: 3, day: 9 };
-  const context = vm.createContext({ console, window: {}, document: { querySelector: () => null },
+  const context = vm.createContext({ console, window: {}, document: { querySelector: () => null, addEventListener() {} },
     AleriaSceneDateDefaults: { resolve: () => date },
     sortCommentsByTimeline: values => values, getCommentPaginationThreadId: () => 'scene',
     getCommentPaginationWindow: values => ({ comments: values, startIndex: 0, currentPage: 1, pageCount: 1 }),

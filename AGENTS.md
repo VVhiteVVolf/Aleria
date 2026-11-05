@@ -1,3 +1,12 @@
+# Freier Szenenhandel: Releasefreigabe vom 5. November 2026
+
+Nutzerfreigabe: „Deploy, aber schnell!“ Rollen-, Besitzer- und Verwalter-
+beschränkungen des Szenenhandels sind in Frontend und Backend entfernt.
+Anmeldung, Guthaben, Revisionen, Unikate und atomare Buchung bleiben erhalten.
+129 Fach-/Transaktionstests und der echte Controller auf Desktop/Mobil sind
+lokal geprüft. Ausschließlich diese Handelskorrektur veröffentlichen;
+unabhängige lokale Entwürfe und produktive Inventare bleiben erhalten.
+
 # Öffentlicher Gesamtrelease: Nutzerfreigabe vom 5. November 2026
 
 Aktueller Nutzerauftrag: alle noch lokalen öffentlichen Neuerungen sammeln,

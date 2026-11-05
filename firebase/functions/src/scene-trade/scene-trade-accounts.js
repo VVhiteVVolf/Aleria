@@ -1,5 +1,4 @@
 import { HttpsError } from 'firebase-functions/v2/https';
-import { canManageCharacter } from '../generated/item-register/item-register-model.js';
 import { readQuestGroupAccount } from '../quests/quest-group-account.js';
 import { assertGroupInventoryMember } from '../groups/group-inventory-membership.js';
 import { tradeId } from './scene-trade-context.js';
@@ -9,15 +8,12 @@ export function tradeAccountKey(value) {
   if (!match) throw new HttpsError('invalid-argument', 'Eine Bestellung benötigt eindeutige Figuren- oder Gruppenkonten.');
   return { key: value, kind: match[1], id: tradeId(match[2]) };
 }
-export async function readTradeAccounts(database, transaction, input, auth, scene) {
-  const moderator = ['admin', 'moderator'].includes(auth.token?.aleriaRole);
-  const access = { authenticated: true, uid: auth.uid, canModerate: moderator };
+export async function readTradeAccounts(database, transaction, input, scene) {
   const actorId = tradeId(input.actorCharacterId);
   const actorSnapshot = await transaction.get(database.doc(`characters/${actorId}`));
-  if (!actorSnapshot.exists || !canManageCharacter(actorSnapshot.data(), access)) {
-    throw new HttpsError('permission-denied', 'Nur der Besitzer oder die Spielleitung kann für die bestellende Figur handeln.');
-  }
-  const debitKeys = new Set(input.lines.map(line => line.direction === 'sell' ? line.sellerKey : line.payerKey));
+  if (!actorSnapshot.exists) throw new HttpsError('not-found', 'Die bestellende Figur wurde nicht gefunden.');
+  // Scene trade is shared roleplay: a signed-in user may choose any existing
+  // figure. Account ownership remains metadata, not a spending permission.
   const keys = new Set(input.lines.flatMap(line => line.direction === 'sell' ? [line.sellerKey] : [line.payerKey, line.recipientKey]));
   const records = [], targets = new Map();
   for (const value of keys) {
@@ -29,16 +25,11 @@ export async function readTradeAccounts(database, transaction, input, auth, scen
       if (!linked && scene.location.moduleId !== key.id) throw new HttpsError('permission-denied', 'Diese Gruppe ist nicht mit der Szene verknüpft.');
       await assertGroupInventoryMember(database, transaction, account, 'character', { ...actorSnapshot.data(), id: actorId });
       record = account.record; reference = account.reference; exists = account.exists;
-      const manager = Array.isArray(record.managerUids) && record.managerUids.includes(auth.uid);
-      if (debitKeys.has(value) && !moderator && auth.token?.aleriaRole !== 'editor' && !manager) {
-        throw new HttpsError('permission-denied', 'Nur eine berechtigte Gruppenverwaltung kann den Gruppenbestand verwenden.');
-      }
     } else {
       reference = database.doc(`characters/${key.id}`);
       const snapshot = key.id === actorId ? actorSnapshot : await transaction.get(reference);
       if (!snapshot.exists) throw new HttpsError('not-found', 'Eine beteiligte Figur wurde nicht gefunden.');
       record = { ...snapshot.data(), id: key.id };
-      if (debitKeys.has(value) && !canManageCharacter(record, access)) throw new HttpsError('permission-denied', 'Ein fremder Geldbeutel oder Besitz darf nicht ohne Berechtigung verwendet werden.');
     }
     const expected = input.expectedRevisions?.[value], actual = key.kind === 'group' ? record.revision : record.inventory?.revision;
     if (!Number.isSafeInteger(expected) || expected !== Number(actual || 0)) throw new HttpsError('aborted', 'Ein beteiligter Bestand wurde inzwischen geändert. Bitte neu öffnen.');

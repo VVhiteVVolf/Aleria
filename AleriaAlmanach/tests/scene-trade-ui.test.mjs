@@ -79,16 +79,75 @@ test('agreed price rejects fractions of one Pfennig and aggregate overflow befor
   assert.ok(sceneTradeSummary(state, data).errors.some(message => /Gesamtbetrag/.test(message)));
 });
 
-test('foreign wallets are readable recipients but cannot be selected as payer', () => {
+test('signed-in players can choose a different owners wallet as payer and buy gifts', () => {
   const { state, data, product, makeId } = setup(); addSceneTradeBuy(state, product, makeId);
   const accounts = sceneTradeAccounts(data);
   assert.equal(accounts.some(account => account.key === 'group:foreign'), false);
-  assert.throws(() => updateSceneTradeLine(state.lines[0], 'payerKey', 'character:ylva', accounts), /nicht berechtigt/);
-  updateSceneTradeLine(state.lines[0], 'recipientKey', 'character:ylva', accounts);
-  assert.equal(sceneTradeSummary(state, data).errors.length, 0);
+  updateSceneTradeLine(state.lines[0], 'payerKey', 'character:ylva', accounts);
+  updateSceneTradeLine(state.lines[0], 'recipientKey', 'character:gawain', accounts);
+  const checkout = buildSceneTradeCheckout(state, data);
+  assert.equal(checkout.lines[0].payerKey, 'character:ylva');
+  assert.equal(checkout.lines[0].recipientKey, 'character:gawain');
+  assert.equal(sceneTradeSummary(state, data).rows.find(account => account.id === 'ylva').pays, 1000);
 });
 
-test('managed group requires the exact scene link and actor membership; unknown metadata stays unavailable', () => {
+test('all signed-in roles can order with figures having different or missing owners', () => {
+  const { data, product, makeId } = setup();
+  data.characters.push({ id: 'rianna', name: 'Rianna', inventory: { revision: 3, moneyState: { totalCopper: 100 }, items: [] } });
+  for (const role of ['player', 'editor', 'moderator', 'admin', undefined]) {
+    data.access = { uid: 'another-user', role };
+    const state = createSceneTradeState('entry::scene-exact'); state.merchantId = product.listId;
+    initializeSceneTradeDefaults(state, data, 'rianna');
+    assert.equal(state.actorCharacterId, 'rianna');
+    assert.equal(state.payerKey, 'character:rianna');
+    assert.equal(state.recipientKey, 'character:rianna');
+    addSceneTradeBuy(state, product, makeId);
+    assert.equal(buildSceneTradeCheckout(state, data).actorCharacterId, 'rianna');
+    assert.ok(sceneTradeAccounts(data).filter(account => account.kind === 'character').every(account => account.canDebit));
+  }
+});
+
+test('a signed-in player can sell another figures item while preserving its source inventory', () => {
+  const { state, data, makeId } = setup();
+  const item = { id: 'ylvas-stone', name: 'Alter Stein', quantity: 1, valuation: { minCopper: 20 } };
+  data.characters[1].inventory.items.push(item);
+  const account = sceneTradeAccounts(data).find(account => account.id === 'ylva');
+  addSceneTradeSell(state, item, account, data.offers, makeId);
+  const checkout = buildSceneTradeCheckout(state, data);
+  assert.equal(checkout.lines[0].sellerKey, 'character:ylva');
+  assert.equal(checkout.lines[0].recipientKey, 'character:ylva');
+  assert.deepEqual(data.characters[1].inventory.items, [item]);
+});
+
+test('a missing signed-in uid still blocks payment, sale and checkout regardless of role', () => {
+  const { state, data, product, makeId } = setup(); addSceneTradeBuy(state, product, makeId);
+  const item = { id: 'old', name: 'Alter Stein', quantity: 1, valuation: { minCopper: 20 } };
+  data.access = { role: 'admin' };
+  const accounts = sceneTradeAccounts(data);
+  assert.ok(accounts.every(account => !account.canDebit));
+  assert.throws(() => updateSceneTradeLine(state.lines[0], 'payerKey', 'character:ylva', accounts), /nicht verfügbar/);
+  assert.throws(() => addSceneTradeSell(state, item, accounts[0], data.offers, makeId), /Anmeldung/);
+  assert.throws(() => buildSceneTradeCheckout(state, data), /Anmeldung/);
+});
+
+test('foreign wallets still need enough money for their purchase', () => {
+  const { state, data, product, makeId } = setup(); addSceneTradeBuy(state, product, makeId);
+  const accounts = sceneTradeAccounts(data);
+  updateSceneTradeLine(state.lines[0], 'payerKey', 'character:ylva', accounts);
+  updateSceneTradeLine(state.lines[0], 'quantity', 4, accounts);
+  assert.throws(() => buildSceneTradeCheckout(state, data), /Ylva besitzt nicht genug Geld/);
+});
+
+test('group payment needs scene and actor membership but no manager or role assignment', () => {
+  const { state, data, product, makeId } = setup();
+  delete data.groups[0].managerUids;
+  state.payerKey = 'group:companions'; addSceneTradeBuy(state, product, makeId);
+  assert.equal(buildSceneTradeCheckout(state, data).lines[0].payerKey, 'group:companions');
+  data.groups[0].managerUids = ['someone-else'];
+  assert.equal(buildSceneTradeCheckout(state, data).lines[0].payerKey, 'group:companions');
+});
+
+test('group requires the exact scene link and actor membership; unknown metadata stays unavailable', () => {
   const { state, data } = setup();
   assert.ok(sceneTradeAccounts(data).some(account => account.key === 'group:companions'));
   data.groups[0].tradeContext.sceneThreads = ['entry::another-scene'];
@@ -191,7 +250,7 @@ test('unavailable browser storage prevents any checkout and definitive rejection
   assert.equal(storage.size(), 0); assert.equal(rejected.pending(), null);
 });
 
-test('view confines offers to merchant, escapes content and requires debit rights in payer pickers', () => {
+test('view confines offers to merchant, escapes content and requires an active sign-in in payer pickers', () => {
   const { state, data, product, makeId } = setup();
   data.offers.push({ ...product, id: 'other', listId: 'other-provider', title: 'Fremdes Sortiment' });
   data.offers[0].title = '<img src=x onerror=alert(1)>';

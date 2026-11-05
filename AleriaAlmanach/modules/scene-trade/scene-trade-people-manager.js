@@ -24,7 +24,7 @@ export function mountSceneTradePeopleManager(root, { getContext, canEdit, onChan
     if (query.length < 2) { container.replaceChildren(); return; }
     const matches = accounts.filter(account => account.kind === 'character' && !account.record.archived && !ids.has(account.key)
       && normalizeSceneTradeSearch(`${account.name} ${account.record.title || ''} ${sceneTradePersonAliases(account.record).join(' ')}`).includes(query));
-    container.innerHTML = matches.slice(0, 12).map(account => `<button type="button" class="scene-trade-actor-option" data-trade-person-action="add" data-person-id="${html(account.id)}">${renderSceneTradeActorAvatar(account)}<span class="scene-trade-actor-name">${html(account.name)}<small>${html(account.record.title || (account.canDebit ? 'Eigene Figur' : 'Als Empfänger ergänzen'))}</small></span><span aria-hidden="true">+</span></button>`).join('') || '<p class="scene-trade-hint">Keine weitere passende Figur gefunden.</p>';
+    container.innerHTML = matches.slice(0, 12).map(account => `<button type="button" class="scene-trade-actor-option" data-trade-person-action="add" data-person-id="${html(account.id)}">${renderSceneTradeActorAvatar(account)}<span class="scene-trade-actor-name">${html(account.name)}<small>${html(account.record.title || 'Zum Handel ergänzen')}</small></span><span aria-hidden="true">+</span></button>`).join('') || '<p class="scene-trade-hint">Keine weitere passende Figur gefunden.</p>';
     if (matches.length > 12) container.insertAdjacentHTML('beforeend', '<p class="scene-trade-hint">Mehr als zwölf Treffer – grenze den Namen weiter ein.</p>');
   }
   root.addEventListener('input', event => {

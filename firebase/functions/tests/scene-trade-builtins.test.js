@@ -52,6 +52,19 @@ test('canonical Arkaneum resolves products and its real scene without a Firestor
   assert.deepEqual([...db.data], before);
 });
 
+test('the complete Letzte Rast menu stays available for an ordinary signed-in player', async () => {
+  const db = seed(), before = structuredClone([...db.data]);
+  const merchantId = 'module:celtigerns-letzte-rast';
+  const catalog = await db.runTransaction(transaction => readTradeMerchant(db, transaction, merchantId, currentManifest(db)));
+  const result = await readMerchantAvailabilityOperation(db, { uid: 'guest-player', token: {} }, { merchantId });
+  assert.equal(catalog.products.length, 62);
+  assert.equal(result.products.length, catalog.products.length);
+  assert.deepEqual(new Set(result.products.map(product => product.productId)), new Set(catalog.products.map(product => product.id)));
+  assert.ok(result.products.every(product => product.available && product.status === 'available'));
+  assert.ok(catalog.products.some(product => product.title === 'Lauchbrühe nach Art des Hauses'));
+  assert.deepEqual([...db.data], before);
+});
+
 test('an actual canonical Arkaneum checkout uses the authoritative catalog and preserves unrelated possessions', async () => {
   const db = seed(), keepsake = { id: 'keepsake', name: 'Persönliche Notiz', quantity: '1', custom: 'keep' };
   db.data.set('characters/buyer', { id: 'buyer', name: 'Käufer', ownerUid: 'owner',

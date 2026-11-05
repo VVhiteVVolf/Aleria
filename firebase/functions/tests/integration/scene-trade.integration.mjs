@@ -13,6 +13,7 @@ const projectId = 'demo-aleria-scene-trade';
 if (process.env.FIRESTORE_EMULATOR_HOST !== '127.0.0.1:8187') throw Error('Only the isolated local Firestore emulator at 127.0.0.1:8187 is allowed.');
 const db = getFirestore(initializeApp({ projectId }, 'scene-trade-integration'));
 const owner = { uid: 'owner', token: {} }, gm = { uid: 'gm', token: { aleriaRole: 'moderator' } };
+const player = { uid: 'independent-player', token: { aleriaRole: 'player' } };
 const food = STANDARD_ITEMS.find(item => item.category === 'speisen' && item.priceRange);
 const record = (id, ownerUid = 'owner') => ({ id, name: id, ownerUid, inventory: { revision: 1, items: [], moneyState: { totalCopper: 100 } },
   combatProfile: { revision: 1, hitPoints: { current: 7 }, resources: [{ id: 'mana', current: 2, maximum: 10 }], weapons: [{ id: 'held', name: 'Persönliche Klinge', equipped: true }] } });
@@ -36,6 +37,48 @@ beforeEach(async () => {
   await batch.commit();
 });
 after(() => db.terminate());
+
+test('real player checkout buys, gifts and sells for unowned and foreign figures without ownership changes', async () => {
+  const unowned = record('gawain'); delete unowned.ownerUid;
+  await db.doc('characters/gawain').set(unowned);
+  await commitSceneTradeOperation(db, player, request({ lines: [line({ payerKey: 'character:ylva', recipientKey: 'character:gawain' })] }));
+  const bought = await state(), itemId = bought.gawain.inventory.items[0].id;
+  assert.equal(bought.gawain.inventory.moneyState.totalCopper, 100);
+  assert.equal(bought.ylva.inventory.moneyState.totalCopper, 80);
+  assert.equal(bought.gawain.inventory.items[0].quantity, '2');
+  await commitSceneTradeOperation(db, player, request({ operationId: 'open-sale', actorCharacterId: 'ylva',
+    expectedRevisions: { 'character:gawain': bought.gawain.inventory.revision },
+    lines: [{ id: 'sale', direction: 'sell', sellerKey: 'character:gawain', itemId, quantity: 2, priceMode: 'agreed', agreedTotalMinor: 300 }] }));
+  const sold = await state();
+  assert.equal(sold.gawain.inventory.moneyState.totalCopper, 103);
+  assert.equal(sold.gawain.inventory.items.length, 0);
+  assert.equal(sold.ylva.inventory.moneyState.totalCopper, 80);
+  assert.equal(sold.gawain.ownerUid, undefined);
+  assert.equal(sold.ylva.ownerUid, 'ylva-owner');
+  assert.equal(sold.receipts, 2); assert.equal(sold.comments, 2); assert.equal(sold.sold, 1);
+  assert.deepEqual(sold.gawain.combatProfile, unowned.combatProfile);
+});
+
+test('real player uses a linked group treasury and stock without manager authority', async () => {
+  const group = { id: 'crew', title: 'Gruppe', pages: [
+    { hierarchyPage: true, hierarchy: { trees: [{ label: 'Aktive', levels: [{ nodes: [{ title: 'Ritter', subtitle: 'gawain' }] }] }] } },
+    { landingPage: true, landing: { group: { members: [{ id: 'hierarchy:gawain', characterId: 'gawain' }], guests: [], sceneThreads: ['adventure::session:shop'] } } }
+  ] };
+  await db.doc('module_store_entries/crew').set({ entryJson: JSON.stringify(group) });
+  await db.doc('group_quest_accounts/crew').set({ id: 'crew', name: 'Gruppe', managerUids: ['other-manager'], revision: 1,
+    inventory: { revision: 1, items: [{ id: 'supplies', name: 'Vorräte', quantity: '2', purchase: { unitCopper: 4 } }], moneyState: { totalCopper: 50 } } });
+  const input = request({ expectedRevisions: { 'group:crew': 1, 'character:ylva': 1 }, lines: [line({ payerKey: 'group:crew' }),
+    { id: 'sale', direction: 'sell', sellerKey: 'group:crew', itemId: 'supplies', quantity: 1, priceMode: 'standard', expectedTotalMinor: 200 }] });
+  await commitSceneTradeOperation(db, player, input);
+  const treasury = await read('group_quest_accounts/crew'), after = await state();
+  assert.equal(treasury.inventory.moneyState.totalCopper, 32);
+  assert.equal(treasury.inventory.items[0].quantity, '1');
+  assert.equal(treasury.revision, 2);
+  assert.deepEqual(treasury.managerUids, ['other-manager']);
+  assert.equal(after.gawain.inventory.moneyState.totalCopper, 100);
+  assert.equal(after.ylva.inventory.items[0].quantity, '2');
+  assert.equal(after.receipts, 1); assert.equal(after.comments, 1); assert.equal(after.sold, 1);
+});
 
 test('real concurrent response-loss retries charge once and gift exact items while retaining saved profiles', async () => {
   const beforeGawain = await read('characters/gawain'), beforeYlva = await read('characters/ylva');

@@ -11,6 +11,7 @@ import { undoMechanicalCommentOperation } from '../src/mechanics/commit-undo-mec
 import { commitItemRecordOperation } from '../src/items/commit-item-record.js';
 
 const owner = { uid: 'owner', token: {} }, gm = { uid: 'gm', token: { aleriaRole: 'moderator' } };
+const player = { uid: 'independent-player', token: { aleriaRole: 'player' } };
 const food = STANDARD_ITEMS.find(item => item.category === 'speisen' && item.priceRange);
 const person = (id, ownerUid = 'owner') => ({ id, name: id, ownerUid, inventory: { revision: 1, items: [], moneyState: { totalCopper: 1000 } },
   combatProfile: { revision: 2, hitPoints: { current: 7 }, resources: [{ id: 'mana', current: 2, maximum: 10 }], weapons: [{ id: 'saved', name: 'Alte Klinge', equipped: true, personal: 'keep' }] } });
@@ -25,7 +26,7 @@ const buy = (extra = {}) => ({ id: 'one', direction: 'buy', productId: 'offer:fo
 const order = (extra = {}) => ({ action: 'checkout', operationId: 'order', entryId: 'adventure::session:shop', merchantId: 'shop', actorCharacterId: 'gawain',
   expectedRevisions: { 'character:gawain': 1, 'character:ylva': 1 }, lines: [buy()], ...extra });
 
-test('group order gifts debit only authorized payers and preserve unrelated loadout, resources, normal stock and NPC purse', async () => {
+test('group order gifts preserve unrelated loadout, resources, normal stock and NPC purse', async () => {
   const db = seed(), gawainProfile = structuredClone(db.data.get('characters/gawain').combatProfile), ylvaProfile = structuredClone(db.data.get('characters/ylva').combatProfile);
   const response = await commitSceneTradeOperation(db, owner, order());
   assert.equal(response.receipt.lines[0].recipientKey, 'character:ylva');
@@ -42,6 +43,29 @@ test('group order gifts debit only authorized payers and preserve unrelated load
   assert.equal(comment.sceneTrade.actor.id, 'gawain');
   assert.equal(comment.serverCommitted, true);
   assert.equal(comment.sceneTrade.lines.length, 1);
+});
+
+test('signed-in players buy, gift and sell for figures with missing or foreign ownership without changing ownership', async () => {
+  for (const unowned of [true, false]) {
+    const db = seed();
+    if (unowned) for (const id of ['gawain', 'ylva']) delete db.data.get(`characters/${id}`).ownerUid;
+    const ownersBefore = ['gawain', 'ylva'].map(id => db.data.get(`characters/${id}`).ownerUid);
+    const response = await commitSceneTradeOperation(db, player, order({ lines: [buy({ payerKey: 'character:ylva', recipientKey: 'character:gawain' })] }));
+    const gawain = db.data.get('characters/gawain'), ylva = db.data.get('characters/ylva');
+    assert.equal(response.receipt.actor.id, 'gawain');
+    assert.equal(gawain.inventory.moneyState.totalCopper, 1000);
+    assert.equal(ylva.inventory.moneyState.totalCopper, 980);
+    assert.equal(gawain.inventory.items[0].quantity, '2');
+    const itemId = gawain.inventory.items[0].id;
+    await commitSceneTradeOperation(db, player, order({ operationId: 'sale', actorCharacterId: 'ylva',
+      expectedRevisions: { 'character:gawain': gawain.inventory.revision },
+      lines: [{ id: 'sale', direction: 'sell', sellerKey: 'character:gawain', itemId, quantity: 2, priceMode: 'agreed', agreedTotalMinor: 300 }] }));
+    assert.equal(db.data.get('characters/gawain').inventory.moneyState.totalCopper, 1003);
+    assert.equal(db.data.get('characters/gawain').inventory.items.length, 0);
+    assert.equal(db.data.get('characters/ylva').inventory.moneyState.totalCopper, 980);
+    assert.deepEqual(['gawain', 'ylva'].map(id => db.data.get(`characters/${id}`).ownerUid), ownersBefore);
+    assert.equal([...db.data.keys()].filter(key => key.startsWith('scene_trade_transactions/independent-player-')).length, 2);
+  }
 });
 
 test('a referenced purchase protects a legacy recipient inventory without rewriting its existing possessions', async () => {
@@ -66,9 +90,9 @@ test('retry after response loss returns the same receipt and current inventories
   await assert.rejects(commitSceneTradeOperation(db, owner, order({ lines: [buy({ quantity: 3 })] })), /andere Bestellung/);
 });
 
-test('foreign debit, stale revision, ended scene, unknown merchant and combat lock reject the complete cart', async () => {
+test('missing actor, stale revision, ended scene, unknown merchant and combat lock reject the complete cart', async () => {
   const cases = [
-    [() => {}, order({ lines: [buy(), buy({ id: 'two', payerKey: 'character:ylva' })] })],
+    [() => {}, order({ actorCharacterId: 'missing' })],
     [() => {}, order({ expectedRevisions: { 'character:gawain': 0, 'character:ylva': 1 } })],
     [db => db.data.set('comment_turns/adventure::session:shop', { current: 'ended' }), order()],
     [() => {}, order({ merchantId: 'invented-shop' })],
@@ -168,28 +192,36 @@ test('competing buyers cannot clone an explicit unique item even with unlimited 
   assert.equal(db.data.get('characters/gawain').inventory.items.length + db.data.get('characters/ylva').inventory.items.length, 1);
 });
 
-test('group treasury requires protected manager authority, actor membership and a linked scene', async () => {
+test('signed-in players use group money and stock regardless of managers while membership and scene links remain required', async () => {
   const db = seed(), group = entry();
   group.id = 'crew';
   group.pages.push({ hierarchyPage: true, hierarchy: { trees: [{ label: 'Aktive', levels: [{ nodes: [{ title: 'Ritter', subtitle: 'gawain' }] }] }] } });
   group.pages.push({ landingPage: true, landing: { group: { members: [{ id: 'hierarchy:gawain', characterId: 'gawain' }], guests: [], sceneThreads: ['adventure::session:shop'] } } });
   db.data.set('module_store_entries/crew', { entryJson: JSON.stringify(group) });
-  db.data.set('group_quest_accounts/crew', { id: 'crew', name: 'Gruppe', managerUids: ['owner'], revision: 1, inventory: { revision: 1, items: [], moneyState: { totalCopper: 50 } } });
-  const input = order({ expectedRevisions: { 'group:crew': 1, 'character:ylva': 1 }, lines: [buy({ payerKey: 'group:crew' })] });
-  const response = await commitSceneTradeOperation(db, owner, input);
-  assert.equal(response.groups[0].inventory.moneyState.totalCopper, 30);
+  db.data.set('group_quest_accounts/crew', { id: 'crew', name: 'Gruppe', managerUids: ['other-manager'], revision: 1,
+    inventory: { revision: 1, items: [{ id: 'supplies', name: 'Vorräte', quantity: '2', purchase: { unitCopper: 4 } }], moneyState: { totalCopper: 50 } } });
+  const input = order({ expectedRevisions: { 'group:crew': 1, 'character:ylva': 1 }, lines: [buy({ payerKey: 'group:crew' }),
+    { id: 'sale', direction: 'sell', sellerKey: 'group:crew', itemId: 'supplies', quantity: 1, priceMode: 'standard', expectedTotalMinor: 200 }] });
+  const response = await commitSceneTradeOperation(db, player, input);
+  assert.equal(response.groups[0].inventory.moneyState.totalCopper, 32);
   assert.equal(response.groups[0].revision, 2);
+  assert.equal(response.groups[0].inventory.items[0].quantity, '1');
+  assert.deepEqual(response.groups[0].managerUids, ['other-manager']);
   assert.equal(db.data.get('characters/gawain').inventory.moneyState.totalCopper, 1000);
+  db.data.get('group_quest_accounts/crew').managerUids = [];
+  await commitSceneTradeOperation(db, player, order({ operationId: 'without-managers',
+    expectedRevisions: { 'group:crew': 2, 'character:ylva': db.data.get('characters/ylva').inventory.revision },
+    lines: [buy({ payerKey: 'group:crew', quantity: 1 })] }));
+  assert.equal(db.data.get('group_quest_accounts/crew').inventory.moneyState.totalCopper, 22);
+  assert.deepEqual(db.data.get('group_quest_accounts/crew').managerUids, []);
   for (const mutate of [
-    state => { state.data.get('group_quest_accounts/crew').managerUids = []; },
     state => { const source = JSON.parse(state.data.get('module_store_entries/crew').entryJson); source.pages[1].hierarchy.trees[0].levels[0].nodes[0].subtitle = 'ylva'; source.pages[2].landing.group.members[0] = { id: 'hierarchy:ylva', characterId: 'ylva' }; state.data.set('module_store_entries/crew', { entryJson: JSON.stringify(source) }); },
     state => { const source = JSON.parse(state.data.get('module_store_entries/crew').entryJson); source.pages[2].landing.group.sceneThreads = []; state.data.set('module_store_entries/crew', { entryJson: JSON.stringify(source) }); }
   ]) {
     const state = database(Object.fromEntries(structuredClone([...db.data])));
-    state.data.delete('scene_trade_transactions/owner-order');
     mutate(state); const before = structuredClone([...state.data]);
-    const rejected = { ...input, operationId: 'rejected', expectedRevisions: { 'group:crew': 2, 'character:ylva': state.data.get('characters/ylva').inventory.revision } };
-    await assert.rejects(commitSceneTradeOperation(state, owner, rejected));
+    const rejected = { ...input, operationId: 'rejected', expectedRevisions: { 'group:crew': 3, 'character:ylva': state.data.get('characters/ylva').inventory.revision } };
+    await assert.rejects(commitSceneTradeOperation(state, player, rejected));
     assert.deepEqual([...state.data], before);
   }
 });
@@ -197,6 +229,9 @@ test('group treasury requires protected manager authority, actor membership and 
 test('trade collections are included in backups and sold-pile reads require authentication and a real merchant', async () => {
   assert.ok(ITEM_BACKUP_COLLECTIONS.includes('scene_trade_transactions'));
   assert.ok(ITEM_BACKUP_COLLECTIONS.includes('item_merchant_sold'));
+  const unauthenticated = seed(), before = structuredClone([...unauthenticated.data]);
+  await assert.rejects(commitSceneTradeOperation(unauthenticated, null, order()), /Anmeldung/);
+  assert.deepEqual([...unauthenticated.data], before);
   await assert.rejects(readMerchantSoldOperation(seed(), null, { merchantId: 'shop' }), /Anmeldung/);
   await assert.rejects(readMerchantSoldOperation(seed(), owner, { merchantId: 'unknown' }), /nicht gefunden/);
 });

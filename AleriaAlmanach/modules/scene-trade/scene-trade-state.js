@@ -14,8 +14,7 @@ export function createSceneTradeState(threadId) {
     mode: 'buy', mobile: 'catalog', search: '', limit: 24, offset: 0, stage: 'edit', lines: [], openLine: '', status: '', error: false };
 }
 export function sceneTradeGroupAvailability(data) {
-  const access = data.access || {}, editorial = ['admin', 'moderator', 'editor'].includes(access.role);
-  return (data.groups || []).filter(record => editorial || record.managerUids?.includes(access.uid)).map(record => {
+  return (data.groups || []).map(record => {
     const context = record.tradeContext;
     const linked = context && (context.moduleId === String(data.tradeThreadId || '').split('::')[0] || context.sceneThreads?.includes(data.tradeThreadId));
     const member = context?.memberCharacterIds?.includes(data.tradeActorCharacterId);
@@ -24,27 +23,27 @@ export function sceneTradeGroupAvailability(data) {
   });
 }
 export function sceneTradeAccounts(data) {
-  const access = data.access || {}, moderator = ['admin', 'moderator'].includes(access.role);
-  const groupEditor = moderator || access.role === 'editor';
+  // Scene trading is shared by signed-in participants; record ownership is archival metadata here.
+  const signedIn = !!data.access?.uid;
   const account = (record, kind, canDebit) => ({ key: `${kind}:${record.id}`, id: record.id, kind,
     name: record.name || record.title || record.id, record, canDebit,
     revision: Number(kind === 'group' ? record.revision || 0 : record.inventory?.revision || 0),
     minor: toMinor(moneyTotal(record.inventory?.moneyState || record.inventory?.money || {})) });
   return [
-    ...(data.characters || []).map(record => account(record, 'character', !!access.uid && (moderator || record.ownerUid === access.uid))),
+    ...(data.characters || []).map(record => account(record, 'character', signedIn)),
     ...sceneTradeGroupAvailability(data).filter(group => group.eligible).map(group => group.record)
-      .map(record => account(record, 'group', !!access.uid && (groupEditor || record.managerUids?.includes(access.uid))))
+      .map(record => account(record, 'group', signedIn))
   ];
 }
 export function initializeSceneTradeDefaults(state, data, actorId = '', selectableAccounts = null) {
   data.tradeThreadId = state.threadId; data.tradeActorCharacterId = state.actorCharacterId || actorId;
-  const accounts = selectableAccounts || sceneTradeAccounts(data), managed = accounts.filter(account => account.canDebit);
-  const actor = managed.find(account => account.kind === 'character' && account.id === actorId)
-    || managed.find(account => account.kind === 'character');
-  if (!accounts.some(account => account.key === state.payerKey && account.canDebit)) state.payerKey = actor?.key || managed[0]?.key || '';
-  if (!accounts.some(account => account.key === state.recipientKey)) state.recipientKey = actor?.key || managed[0]?.key || accounts[0]?.key || '';
+  const accounts = selectableAccounts || sceneTradeAccounts(data), debitAccounts = accounts.filter(account => account.canDebit);
+  const actor = debitAccounts.find(account => account.kind === 'character' && account.id === actorId)
+    || debitAccounts.find(account => account.kind === 'character');
+  if (!accounts.some(account => account.key === state.payerKey && account.canDebit)) state.payerKey = actor?.key || debitAccounts[0]?.key || '';
+  if (!accounts.some(account => account.key === state.recipientKey)) state.recipientKey = actor?.key || debitAccounts[0]?.key || accounts[0]?.key || '';
   if (!accounts.some(account => account.key === state.sellerKey && account.canDebit)) state.sellerKey = state.payerKey;
-  if (!managed.some(account => account.kind === 'character' && account.id === state.actorCharacterId)) state.actorCharacterId = actor?.id || '';
+  if (!debitAccounts.some(account => account.kind === 'character' && account.id === state.actorCharacterId)) state.actorCharacterId = actor?.id || '';
   data.tradeActorCharacterId = state.actorCharacterId;
 }
 export function refreshSceneTradeLines(state, data) {
@@ -86,7 +85,7 @@ export function addSceneTradeBuy(state, product, makeId = () => crypto.randomUUI
     priceMode: referenceUnitMinor == null ? 'agreed' : 'standard', agreedTotalMinor: null, priceNeedsReview: false });
 }
 export function addSceneTradeSell(state, item, account, offers, makeId = () => crypto.randomUUID()) {
-  if (!account?.canDebit) throw Error('Aus diesem Inventar darfst du nichts verkaufen.');
+  if (!account?.canDebit) throw Error('Zum Verkaufen ist eine aktive Anmeldung erforderlich.');
   if (isInventoryPlaceholder(item)) throw Error('Dieser unveränderte Editor-Platzhalter ist noch kein verkäuflicher Gegenstand.');
   if (state.lines.some(line => line.direction === 'sell' && line.sellerKey === account.key && line.itemId === item.id)) throw Error('Dieser Gegenstand liegt bereits in der Bestellung.');
   if (state.lines.length >= MAX_TRADE_LINES) throw Error(`Eine Bestellung kann höchstens ${MAX_TRADE_LINES} Positionen enthalten.`);
@@ -114,7 +113,7 @@ export function updateSceneTradeLine(line, field, value, accounts) {
     if (value === 'agreed' && line.agreedTotalMinor == null) line.agreedTotalMinor = lineTotalMinor(line);
     line.priceMode = value; line.priceNeedsReview = false;
   } else if (['payerKey', 'recipientKey'].includes(field) && line.direction === 'buy') {
-    if (!accounts.some(account => account.key === value && (field !== 'payerKey' || account.canDebit))) throw Error('Diese Zuordnung ist nicht berechtigt.');
+    if (!accounts.some(account => account.key === value && (field !== 'payerKey' || account.canDebit))) throw Error('Diese Figur oder Gruppenkasse ist für den Handel nicht verfügbar.');
     line[field] = value;
   }
 }
@@ -135,7 +134,8 @@ export function sceneTradeSummary(state, data, availableAccounts = sceneTradeAcc
       const item = source?.record.inventory?.items?.find(item => item.id === line.itemId);
       if (!item || Number(item.quantity ?? 1) < line.quantity) errors.push(`„${line.title}“ ist nicht mehr in dieser Menge im Inventar.`);
     }
-    if (!source?.canDebit) errors.push('Für einen gewählten Geldbeutel oder Bestand fehlt die Berechtigung.');
+    if (!source) errors.push('Ein gewählter Geldbeutel oder Bestand ist nicht mehr verfügbar.');
+    else if (!source.canDebit) errors.push('Für den Handel ist eine aktive Anmeldung erforderlich.');
     if (!recipient) errors.push('Ein Empfänger ist nicht mehr verfügbar.');
     touched.add(sourceKey); touched.add(line.recipientKey);
     if (Number.isSafeInteger(total) && source) {
@@ -148,7 +148,7 @@ export function sceneTradeSummary(state, data, availableAccounts = sceneTradeAcc
   if (![buys, sells, ...rows.flatMap(account => [account.pays, account.receives, account.minor + account.receives - account.pays])].every(Number.isSafeInteger)) errors.push('Der Gesamtbetrag ist zu groß. Bitte die Bestellung verkleinern.');
   for (const account of rows) if (account.minor + account.receives - account.pays < 0) errors.push(`${account.name} besitzt nicht genug Geld.`);
   if (!state.lines.length) errors.push('Die Bestellung enthält noch keine Waren.');
-  if (!availableAccounts.some(account => account.kind === 'character' && account.id === state.actorCharacterId && account.canDebit)) errors.push('Bitte eine berechtigte bestellende Figur wählen.');
+  if (!availableAccounts.some(account => account.kind === 'character' && account.id === state.actorCharacterId && account.canDebit)) errors.push('Bitte eine verfügbare bestellende Figur wählen.');
   return { rows, buys, sells, errors: [...new Set(errors)] };
 }
 export function buildSceneTradeCheckout(state, data) {

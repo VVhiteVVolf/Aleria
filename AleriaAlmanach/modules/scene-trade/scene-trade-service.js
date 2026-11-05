@@ -8,6 +8,7 @@ import { upgradeEntry } from '../group-adventures/group-adventures-classic-api.m
 import { resolveGroupRoster, groupMemberRecordId } from '../landing/group-landing-roster.js';
 import { availableTradeProduct } from './scene-trade-state.js';
 import { readSceneTradeModules, resolveSceneTradeContext } from './scene-trade-context.js';
+import { readSceneTradeAvailabilityResponse } from './scene-trade-availability.js';
 
 // Multiple exact-thread drafts share the repository connection; opening another
 // scene must not replace the backend and restart all register subscriptions.
@@ -31,7 +32,7 @@ export function createSceneTradeService() {
   return {
     async load(options = {}) {
       context ||= await getFirebaseClientContext();
-      const user = await context.requireUser(), token = await user.getIdTokenResult();
+      const user = await context.requireUser();
       loadedUid = user.uid;
       await connectItemDefinitionClient();
       sharedRegisterApi ||= globalThis._fb?.itemRegister || createItemRegisterFirebase({ ...context, ...context.sdk });
@@ -54,7 +55,7 @@ export function createSceneTradeService() {
       const tradeContext = resolveSceneTradeContext({ ...options, entries: publicModules, sections: sources.sections, providers });
       return { characters: snapshot.characters, groups, offers,
         providers, context: tradeContext, proposedMerchantId: tradeContext.merchantId,
-        access: { uid: user.uid, role: token.claims.aleriaRole || 'player' } };
+        access: { uid: user.uid } };
     },
     async ensureAccountsVersions(records = []) { await connectItemDefinitionClient(); await itemDefinitionStore.ensureVersions(records); },
     async checkout(input) {
@@ -63,7 +64,10 @@ export function createSceneTradeService() {
       if (user.uid !== loadedUid) { const error = Error('Die Anmeldung hat gewechselt. Bitte mit der Anmeldung des offenen Handels erneut öffnen.'); error.code = 'scene-trade/identity-changed'; throw error; }
       await connectItemDefinitionClient(); return itemDefinitionStore.trade(input);
     },
-    async availability(merchantId) { await connectItemDefinitionClient(); const response = await itemDefinitionStore.trade({ action: 'availability', merchantId }); return response.products || []; },
+    async availability(merchantId) {
+      await connectItemDefinitionClient();
+      return readSceneTradeAvailabilityResponse(await itemDefinitionStore.trade({ action: 'availability', merchantId }));
+    },
     async sold(merchantId, cursor = null) {
       await connectItemDefinitionClient(); const response = await itemDefinitionStore.trade({ action: 'sold', merchantId, ...(cursor ? { cursor } : {}) });
       const items = response.items || []; await itemDefinitionStore.ensureVersions([{ items: items.map(record => record.item).filter(Boolean) }]);
