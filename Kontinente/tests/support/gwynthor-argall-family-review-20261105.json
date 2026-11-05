@@ -901,5 +901,251 @@
       },
       "afterSha256": "bcf8e7a13d6871e4ab03b202d42d7f2b3a8df00e7a8620d5a8133ba69472d374"
     }
+  },
+  "metadataRevisionCorrection": {
+    "familyId": "haus-argall",
+    "fields": [
+      {
+        "path": [
+          "family",
+          "persons",
+          "@rhydric-argall",
+          "extensions",
+          "registryManagedFieldRevisions",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": 4,
+        "afterPresent": true,
+        "after": 6
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@rhydric-argall",
+          "extensions",
+          "registryManagedFieldFillOnlyRevisions",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": 4,
+        "afterPresent": true,
+        "after": 6
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@perwyn-argall",
+          "extensions",
+          "registryManagedFieldRevisions",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": 4,
+        "afterPresent": true,
+        "after": 6
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@perwyn-argall",
+          "extensions",
+          "registryManagedFieldFillOnlyRevisions",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": 4,
+        "afterPresent": true,
+        "after": 6
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "extensions",
+          "registryManagedFieldRevisions",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": 4,
+        "afterPresent": true,
+        "after": 6
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "extensions",
+          "registryManagedFieldFillOnlyRevisions",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": 4,
+        "afterPresent": true,
+        "after": 6
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "extensions",
+          "registryManagedExtensionFieldRevisions",
+          "chartRepeatForPartnershipIds"
+        ],
+        "beforePresent": true,
+        "before": 4,
+        "afterPresent": true,
+        "after": 6
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@gwenella-spouse-rhydric-argall",
+          "extensions",
+          "registryManagedExtensionFieldMergeModes"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "chartRepeatForPartnershipIds": "append-unique"
+        }
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@maelor-ffionydd",
+          "extensions",
+          "registryManagedFieldRevisions",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": 4,
+        "afterPresent": true,
+        "after": 6
+      },
+      {
+        "path": [
+          "family",
+          "persons",
+          "@maelor-ffionydd",
+          "extensions",
+          "registryManagedFieldFillOnlyRevisions",
+          "portrait"
+        ],
+        "beforePresent": true,
+        "before": 4,
+        "afterPresent": true,
+        "after": 6
+      },
+      {
+        "path": [
+          "family",
+          "partnerships",
+          "@union-gwenella-maelor-ffionydd",
+          "extensions",
+          "registryManagedFieldRevisions",
+          "type"
+        ],
+        "beforePresent": true,
+        "before": 4,
+        "afterPresent": true,
+        "after": 6
+      },
+      {
+        "path": [
+          "family",
+          "partnerships",
+          "@union-gwenella-maelor-ffionydd",
+          "extensions",
+          "registryManagedFieldRevisions",
+          "status"
+        ],
+        "beforePresent": true,
+        "before": 4,
+        "afterPresent": true,
+        "after": 6
+      },
+      {
+        "path": [
+          "family",
+          "partnerships",
+          "@union-gwenella-maelor-ffionydd",
+          "extensions",
+          "registryManagedFieldRevisions",
+          "notes"
+        ],
+        "beforePresent": true,
+        "before": 4,
+        "afterPresent": true,
+        "after": 6
+      },
+      {
+        "path": [
+          "family",
+          "partnerships",
+          "@union-gwenella-maelor-ffionydd",
+          "extensions",
+          "registryManagedFieldPreviousValues"
+        ],
+        "beforePresent": false,
+        "afterPresent": true,
+        "after": {
+          "type": [
+            "union",
+            "marriage",
+            "affair"
+          ],
+          "status": [
+            "",
+            "unknown",
+            "active"
+          ],
+          "notes": [
+            "",
+            "Alter Entwurf",
+            "Durchgebrannt nach Aberon"
+          ]
+        }
+      },
+      {
+        "path": [
+          "family",
+          "extensions",
+          "sourceRevision"
+        ],
+        "beforePresent": true,
+        "before": 4,
+        "afterPresent": true,
+        "after": 6
+      }
+    ],
+    "reviewedAt": "2026-11-05",
+    "previousAuthoredRevision": 4,
+    "previousAggregatedRevision": 5,
+    "authoredSourceRevision": 6,
+    "reason": "The source-owned revision boundary6 adopts only the existing portrait/affair/view correction for saved effective revisions4and5. All raw person, relationship, birth, note and biography values are identical to the previously authorized revision4 source. Exact field metadata is restored before the unchanged historical whole-record proof.",
+    "proof": {
+      "previousSourceCommit": "83522f25bc6a80f235f60f0824489e4348c9b390",
+      "correctedSourceCommit": "06a98e1f36cb604763c84d5d55f3289e88e88e3b",
+      "sourceFile": "Stammbäume/assets/js/data/house-argall-family.js",
+      "sourceSha256": "82bfa063e81b29622a2b5fb38a62101b7a3288355775df2d66f0f0c8808840ec",
+      "householdFile": "Stammbäume/assets/js/data/argall-gwynthor-household.js",
+      "householdSha256": "36ae22b69535dfcd411c96b0cdc7b0631c72e1813048837a5ea644143537051b",
+      "previousProjectedSha256": "bcf8e7a13d6871e4ab03b202d42d7f2b3a8df00e7a8620d5a8133ba69472d374",
+      "currentProjectedSha256": "1e4687e1eb382396d703720411652a95a50e9179d2b58f052d4f8058ff3b2179",
+      "sourceReceipt": "diagnostics/public-release-20261105/argall-revision-fix/overlay.json",
+      "historicalRecordSha256": "96e53e079b9568f7b90c1d91bc1eb80727369c9d4a203e98d9b51762563d8086",
+      "metadataPaths": 15,
+      "nonMetadataDifferences": 0,
+      "entitySourceRevisionUnchanged": 3
+    }
   }
 }

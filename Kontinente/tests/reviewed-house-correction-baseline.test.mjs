@@ -90,3 +90,21 @@ test('Argall approval rejects changed old relatives, new identities, parentage, 
     assert.throws(() => protectedAlbicFamilies([record]), /approved-gwynthor-family/);
   }
 });
+
+test('Argall revision6 validates every exact metadata leaf before restoring its unchanged revision4 content proof', () => {
+  const review = argall.metadataRevisionCorrection;
+  assert.equal(review.fields.length, 15);
+  assert.equal(review.proof.nonMetadataDifferences, 0);
+  assert.equal(review.proof.previousProjectedSha256, argall.families['haus-argall'].afterSha256);
+  assert.equal(review.proof.previousSourceCommit, '83522f25bc6a80f235f60f0824489e4348c9b390');
+  assert.equal(review.authoredSourceRevision, 6);
+  assert.equal(current('haus-argall').family.extensions.registryManagedEntitySourceRevision, 3);
+  for (const field of review.fields) {
+    const record = current('haus-argall');
+    let parent = record;
+    for (const segment of field.path.slice(0, -1)) parent = segment.startsWith('@')
+      ? parent.find(row => row.id === segment.slice(1)) : parent[segment];
+    parent[field.path.at(-1)] = 'Unapproved metadata';
+    assert.throws(() => protectedAlbicFamilies([record]), /approved-metadata/, field.path.join('/'));
+  }
+});

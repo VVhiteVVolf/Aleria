@@ -31,6 +31,12 @@ export function protectedAlbicFamilies(records) {
     // pre-existing versions for the historical content proof.
     const provenance = getRegisteredSourceMetadataProvenance(record.id);
     if (provenance.fields.length) applyFamilyMetadataReview(copy, { familyId: record.id, ...provenance });
+    // The saved-record boundary changed only these exact Argall metadata leaves.
+    // Restore their reviewed revision-4 values before the unchanged complete
+    // Argall content fingerprint below; never omit person or relationship data.
+    if (record.id === gwynthorArgall.metadataRevisionCorrection.familyId) {
+      applyFamilyMetadataReview(copy, gwynthorArgall.metadataRevisionCorrection);
+    }
     projectReviewedHouseCorrections(copy);
     const ownershipReview = houseBiographyOwnership.reviews.find(review => review.familyId === record.id);
     if (ownershipReview) applyFamilyMetadataReview(copy, ownershipReview);
