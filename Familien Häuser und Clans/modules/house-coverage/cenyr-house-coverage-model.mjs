@@ -32,6 +32,8 @@ export function summarizeCenyrCoverage(records, unreviewedPublicScopedFamilies =
     missingArt: records.filter(record => record.missing.art).length,
     noLocalArt: records.filter(record => record.missing.localArt).length,
     iframeIssues: records.filter(record => record.links?.iframeSupported && !record.links.iframeCanonical).length,
+    profileLinkIssues: records.filter(record => record.links?.profileSupported && !record.links.profileCanonical).length,
+    familyProfiles: records.filter(record => record.existingPage.kind === 'family-record').length,
     biographyBackLinkIssues: records.filter(record => record.links?.biographyBackLinkSupported && !record.links.biographyBackLinkCanonical).length,
     preparedPages: records.filter(record => record.existingPage.prepared).length,
     publishedOwnNull: records.filter(record => record.existingBiography.publishedOwnState === 'explicit-null').length,
@@ -40,6 +42,6 @@ export function summarizeCenyrCoverage(records, unreviewedPublicScopedFamilies =
 }
 
 export function hasCenyrCoverageGaps(summary) {
-  return ['missingPage', 'missingBio', 'missingArt', 'noLocalArt', 'iframeIssues',
+  return ['missingPage', 'missingBio', 'missingArt', 'noLocalArt', 'iframeIssues', 'profileLinkIssues',
     'biographyBackLinkIssues', 'unreviewedPublicScopedFamilies'].some(field => Number(summary[field] || 0) > 0);
 }

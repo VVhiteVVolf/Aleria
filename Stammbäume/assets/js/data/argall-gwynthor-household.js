@@ -23,16 +23,18 @@ function householdPerson(spec, familyStatus, residence, familyRole = 'core') {
     extensions: {
       registryManagedSourceRevision: 3,
       registryManagedFields: ['portrait', 'title', 'notes', 'familyRole'],
-      // Older saved revision-3 records can still lack the unpublished portraits.
+      // Source 6 is newer than both source 4 and its aggregated biography revision 5.
+      // Saved records at any of those earlier boundaries can lack the portraits.
       // Fill those gaps without replacing an individually supplied portrait.
-      registryManagedFieldRevisions: { portrait: 4 },
-      registryManagedFieldFillOnlyRevisions: { portrait: 4 },
+      registryManagedFieldRevisions: { portrait: 6 },
+      registryManagedFieldFillOnlyRevisions: { portrait: 6 },
       registryManagedExtensionFields: ['biographyModule', ...(spec === mother ? ['chartRepeatForPartnershipIds'] : [])],
       ...(spec === mother ? {
         // The divorced pair keeps Perwyn's line; this separate view exposes
         // Gwenella's childless present affair without changing genealogy.
         chartRepeatForPartnershipIds: [ARGALL_GWYNTHOR_UNION_ID],
-        registryManagedExtensionFieldRevisions: { chartRepeatForPartnershipIds: 4 }
+        registryManagedExtensionFieldRevisions: { chartRepeatForPartnershipIds: 6 },
+        registryManagedExtensionFieldMergeModes: { chartRepeatForPartnershipIds: 'append-unique' }
       } : {}),
       biographyModule: {
         schema: 'aleria.biography-module', schemaVersion: 1,
@@ -75,7 +77,12 @@ export const ARGALL_GWYNTHOR_PARTNERSHIPS = Object.freeze([
     extensions: {
       registryManagedSourceRevision: 3,
       registryManagedFields: ['type', 'status', 'notes'],
-      registryManagedFieldRevisions: { type: 4, status: 4, notes: 4 }
+      registryManagedFieldRevisions: { type: 6, status: 6, notes: 6 },
+      registryManagedFieldPreviousValues: {
+        type: ['union', 'marriage', 'affair'],
+        status: ['', 'unknown', 'active'],
+        notes: ['', 'Alter Entwurf', 'Durchgebrannt nach Aberon']
+      }
     }
   })
 ]);

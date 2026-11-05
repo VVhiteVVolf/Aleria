@@ -62,6 +62,11 @@ function mergeEntityExtensions(registeredExtensions = {}, localExtensions = {}, 
 
   managedExtensionFields.forEach(fieldName => {
     if (Object.hasOwn(registeredExtensions, fieldName)) {
+      if (registeredExtensions.registryManagedExtensionFieldMergeModes?.[fieldName] === 'append-unique'
+        && Array.isArray(registeredExtensions[fieldName]) && Array.isArray(localExtensions[fieldName])) {
+        result[fieldName] = [...new Set([...localExtensions[fieldName], ...registeredExtensions[fieldName]])];
+        return;
+      }
       result[fieldName] = registeredExtensions[fieldName];
       return;
     }

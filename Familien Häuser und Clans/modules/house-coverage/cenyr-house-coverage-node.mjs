@@ -11,6 +11,7 @@ import { reconcileFamilyWithProjectOrigin } from '../../../Stammbäume/assets/js
 import { houseBiographyDefaultFingerprint } from '../../../Stammbäume/assets/js/modules/house-biography/house-biography-fingerprint.js';
 import { shouldPublish } from '../../../netlify/build/site-publish.mjs';
 import { getCenyrPlacement, normalizePublicAllowlist, summarizeCenyrCoverage, hasCenyrCoverageGaps } from './cenyr-house-coverage-model.mjs';
+import { createRuralFamilyCoverageProfile } from './rural-family-profile.mjs';
 
 const root = new URL('../../../', import.meta.url);
 const feature = new URL('Familien Häuser und Clans/', root), genealogy = new URL('Stammbäume/', root);
@@ -55,7 +56,7 @@ for (const image of catalog.illustrations) for (const id of image.houseIds || []
 const relative = url => path.relative(fileURLToPath(root), fileURLToPath(url)).replace(/\\/g, '/');
 const resolveImage = (src, base) => {
   if (!src || typeof src !== 'string' || /^data:|^file:/i.test(src)) return null;
-  if (/fleischsammler|\/private\//i.test(src)) return null;
+  if (/\/private\//i.test(src)) return null;
   if (/^https?:/i.test(src)) return { source: src, remote: true, exists: null };
   const url = new URL(src.startsWith('/') ? `.${src}` : src, src.startsWith('/') ? root : base);
   const local = relative(url);
@@ -78,8 +79,7 @@ function indexExistingHouseAuthoring(allowedIds) {
   const index = new Map();
   const visit = directory => {
     for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
-      if (/^(?:assets|node_modules|sources|archives|rejected|private|hidden)$/i.test(entry.name)
-        || /fleischsammler/i.test(entry.name)) continue;
+      if (/^(?:assets|node_modules|sources|archives|rejected|private|hidden)$/i.test(entry.name)) continue;
       const url = new URL(`${entry.name}${entry.isDirectory() ? '/' : ''}`, directory);
       if (entry.isDirectory()) { visit(url); continue; }
       if (entry.name !== 'haus.content.mjs') continue;
@@ -146,6 +146,16 @@ async function inspectFamilyCoverage(mergedRecord, authoringIndex) {
   if (snapshot?.family) effectiveFamily = reconcileFamilyWithProjectOrigin({ family: snapshot.family, projectOriginFamily: registered?.family }).family;
   const effectiveBio = effectiveFamily?.extensions?.houseBiographyModule;
   const crest = resolveImage(canonical.family?.document?.emblem || mergedRecord.emblem, genealogy);
+  // A declared family profile cannot conceal a broken registered house page.
+  // Its existing crest is an identity image, never an invented house warrior.
+  const familyProfile = !page && createRuralFamilyCoverageProfile(canonical, effectiveBio);
+  const familySourceExists = Boolean(familyProfile && fs.existsSync(new URL(familyProfile.sourcePath, root))
+    && shouldPublish(familyProfile.sourcePath));
+  const familyProfileUrl = familyProfile ? new URL(familyProfile.href, root) : null;
+  const familyProfileCanonical = Boolean(familyProfileUrl && familyProfileUrl.pathname === new URL('Stammbaum.html', genealogy).pathname
+    && resolveCanonicalFamilyId(familyProfileUrl.searchParams.get('family')) === id && familyProfileUrl.searchParams.get('mode') === 'view');
+  const familyProfilePresent = familySourceExists && familyProfileCanonical && fs.existsSync(new URL('Stammbaum.html', genealogy));
+  const boundProfileImage = familyProfile && crest?.exists === true && crest.publishable ? crest : null;
   const candidates = [];
   const addImage = (src, base, role, details = {}) => {
     const resolved = resolveImage(src, base);
@@ -168,7 +178,7 @@ async function inspectFamilyCoverage(mergedRecord, authoringIndex) {
   const profile = placement.houseProfile || canonical.houseProfile;
   const description = canonical.family?.document?.description || '';
   const existingBiography = {
-    present: validBiography(effectiveBio), seedPresent: validBiography(seedBio),
+    present: familyProfile ? Boolean(familyProfile.biography) : validBiography(effectiveBio), seedPresent: validBiography(seedBio),
     managed: Boolean(HOUSE_BIOGRAPHY_DEFAULTS[id] && effectiveBio
       && houseBiographyDefaultFingerprint(effectiveBio) === houseBiographyDefaultFingerprint(HOUSE_BIOGRAPHY_DEFAULTS[id].biography)),
     registeredDefaultPresent: Boolean(HOUSE_BIOGRAPHY_DEFAULTS[id]),
@@ -177,7 +187,12 @@ async function inspectFamilyCoverage(mergedRecord, authoringIndex) {
       ? snapshot.family.extensions.houseBiographyModule === null ? 'explicit-null' : 'present' : 'absent',
     source: snapshot ? 'published-snapshot-reconciled-with-current-project' : 'current-project-registry',
   };
-  const existingPage = {
+  const existingPage = familyProfile ? {
+    kind: familyProfile.kind, present: familyProfilePresent, canonicalDataId: familyProfile.id,
+    registryId: id, path: familyProfile.href, dataPath: familySourceExists ? familyProfile.sourcePath : '',
+    contentPath: familySourceExists ? familyProfile.sourcePath : '', prepared: false, dataEvaluation: 'source-owned-family-profile',
+  } : {
+    kind: 'standalone-house',
     present: Boolean(page?.status === 'active' && dataExists && pageData
       && resolveCanonicalFamilyId(pageData.meta?.id) === id && fs.existsSync(new URL(page.page || 'haus.html', feature))),
     canonicalDataId: resolveCanonicalFamilyId(pageData?.meta?.id),
@@ -193,13 +208,21 @@ async function inspectFamilyCoverage(mergedRecord, authoringIndex) {
     description: hasMilitaryNumber(description) ? '' : description,
     ...(hasMilitaryNumber(description) ? { descriptionExcluded: 'contains-military-statistics' } : {}),
     sourceRevision, existingPage, existingBiography,
-    existingAuthoring: { present: Boolean(content), contentPath: hasContent ? relative(contentUrl) : '', paths: authoringUrls.map(relative), active: Boolean(activeContentUrl && hasContent && activeContentUrl.pathname === contentUrl.pathname) },
-    links: inspectHouseLinks(id, page, pageData, effectiveBio),
+    existingAuthoring: familyProfile
+      ? { kind: 'family-record', present: familySourceExists, contentPath: familySourceExists ? familyProfile.sourcePath : '',
+          paths: familySourceExists ? [familyProfile.sourcePath] : [], active: familySourceExists }
+      : { kind: 'standalone-house', present: Boolean(content), contentPath: hasContent ? relative(contentUrl) : '', paths: authoringUrls.map(relative), active: Boolean(activeContentUrl && hasContent && activeContentUrl.pathname === contentUrl.pathname) },
+    links: familyProfile ? { profileSupported: true, profileCanonical: familyProfileCanonical,
+      biographyAction: familyProfile.biographyAction, iframeSupported: false, iframeCanonical: false,
+      biographyBackLinkSupported: false, biographyBackLinkCanonical: false }
+      : inspectHouseLinks(id, page, pageData, effectiveBio),
     boundPageScenePath: boundPageScene?.path || '', availableOriginalArt: Boolean(localArt.length || remoteArt.length),
+    boundProfileImagePath: boundProfileImage?.path || '', profileImageRole: familyProfile?.imageRole || '',
     actualOriginalScenePaths: localArt.map(candidate => candidate.path), artCandidates: uniqueCandidates,
     provenance: { projectRegistry: Boolean(registered), publishedRegistry: Boolean(publishedId), snapshotPath: snapshot ? relative(snapshotUrl) : '',
       canonicalLocationSource: placement.role === 'primary' ? 'current-project-primary-placement' : 'explicit-current-additional-residence-placement' },
-    missing: { page: !existingPage.present, bio: !existingBiography.present, art: !boundPageScene, localArt: !boundPageScene },
+    missing: { page: !existingPage.present, bio: !existingBiography.present,
+      art: familyProfile ? !boundProfileImage : !boundPageScene, localArt: familyProfile ? !boundProfileImage : !boundPageScene },
   };
 }
 

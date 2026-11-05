@@ -8,6 +8,9 @@ import { getCenyrPlacement, normalizePublicAllowlist, hasCenyrCoverageGaps } fro
 import { loadPublicCenyrCoverageInputs, auditCenyrHouseCoverage } from '../modules/house-coverage/cenyr-house-coverage-node.mjs';
 import { runCenyrCoverageCli } from '../scripts/check-cenyr-house-coverage.mjs';
 import { reconcileFamilyWithProjectOrigin } from '../../Stammbäume/assets/js/modules/family-sync/project-origin-reconciliation.js';
+import { createRuralFamilyCoverageProfile } from '../modules/house-coverage/rural-family-profile.mjs';
+import { FLEISCHSAMMLER_FAMILIES_INDEX } from '../../Stammbäume/assets/js/data/gwynthor-fleischsammler/localities.mjs';
+import { renderHouseBiographyHeader } from '../../Stammbäume/assets/js/modules/house-biography/house-biography-renderer.js';
 
 const root = new URL('../../', import.meta.url);
 const digest = value => createHash('sha256').update(value).digest('hex');
@@ -43,7 +46,7 @@ test('a reviewed public allowlist is mandatory and unreviewed identifiers are ne
   assert.ok(input.isHiddenRecord({ id: 'example-only', hidden: true }));
 });
 
-test('the real dynamic public scope has active pages, effective biographies and locally bound house art', () => {
+test('the real dynamic public scope has accessible profiles, effective biographies and locally bound profile images', () => {
   assert.equal(report.records.length, new Set(allowlistIds).size);
   const gaps = report.records.filter(record => Object.values(record.missing).some(Boolean))
     .map(record => ({ id: record.stableId, missing: record.missing }));
@@ -53,16 +56,67 @@ test('the real dynamic public scope has active pages, effective biographies and 
   for (const record of report.records) {
     assert.equal(record.existingPage.canonicalDataId, record.stableId);
     assert.ok(record.existingAuthoring.present, record.stableId);
-    assert.ok(fs.existsSync(new URL(record.boundPageScenePath, root)), record.stableId);
+    const image = record.existingPage.kind === 'family-record' ? record.boundProfileImagePath : record.boundPageScenePath;
+    assert.ok(image, record.stableId);
+    assert.ok(fs.statSync(new URL(image, root)).isFile(), record.stableId);
   }
 });
 
-test('actual house frames and supported biography return links use the matching canonical local destinations', () => {
+test('actual house frames, family-profile links and supported biography return links use canonical local destinations', () => {
   for (const record of report.records) {
+    if (record.existingPage.kind === 'family-record') {
+      const url = new URL(record.existingPage.path, root);
+      assert.equal(url.pathname, new URL('Stammbäume/Stammbaum.html', root).pathname);
+      assert.equal(url.searchParams.get('family'), record.stableId);
+      assert.equal(url.searchParams.get('mode'), 'view');
+      assert.equal(record.links.profileSupported, true);
+      assert.equal(record.links.profileCanonical, true);
+      assert.equal(record.links.iframeSupported, false, 'A native family profile does not claim an embedded iframe');
+      assert.equal(record.links.biographyAction, 'open-house-biography');
+      continue;
+    }
     assert.equal(record.links.iframeSupported, true, record.stableId);
     assert.equal(record.links.iframeCanonical, true, record.stableId);
     if (record.links.biographyBackLinkSupported) assert.equal(record.links.biographyBackLinkCanonical, true, record.stableId);
   }
+});
+
+test('the eight declared rural profiles expose their real biographies and crests without invented warrior art', () => {
+  const profiles = report.records.filter(record => record.existingPage.kind === 'family-record');
+  assert.deepEqual(profiles.map(record => record.stableId).sort(), FLEISCHSAMMLER_FAMILIES_INDEX.map(row => row.familyId).sort());
+  assert.equal(report.summary.familyProfiles, 8);
+  for (const locality of FLEISCHSAMMLER_FAMILIES_INDEX) {
+    const source = input.projectById.get(locality.familyId);
+    const profile = createRuralFamilyCoverageProfile(source, source.family.extensions.houseBiographyModule);
+    const row = profiles.find(record => record.stableId === locality.familyId);
+    assert.equal(row.existingAuthoring.contentPath, profile.sourcePath);
+    assert.ok(fs.statSync(new URL(profile.sourcePath, root)).isFile());
+    assert.equal(row.boundProfileImagePath, 'Stammbäume/' + locality.emblem);
+    assert.equal(row.profileImageRole, 'family-crest');
+    assert.equal(row.boundPageScenePath, '', 'No uncommissioned scene or warrior figure');
+    assert.equal(row.availableOriginalArt, false);
+    assert.deepEqual(row.actualOriginalScenePaths, []);
+    assert.ok(profile.biography.house.biographyText.trim());
+    const header = renderHouseBiographyHeader(source.family, profile.biography);
+    assert.ok(header.includes(source.family.document.title));
+    assert.ok(header.includes(locality.emblem));
+  }
+});
+
+test('family-profile coverage is source-bound and preserves explicit biography deletion', () => {
+  const source = input.projectById.get('haus-ysgellfor');
+  for (const mutate of [record => { record.family.document.id = 'wrong-family'; },
+    record => { record.family.document.emblem = 'assets/images/placeholders/neutral-crest.png'; },
+    record => { delete record.family.extensions.houseBiographyModule; }]) {
+    const record = structuredClone(source); mutate(record);
+    assert.equal(createRuralFamilyCoverageProfile(record, source.family.extensions.houseBiographyModule), null);
+  }
+  assert.equal(createRuralFamilyCoverageProfile(input.projectById.get('haus-twyllod'), input.projectById.get('haus-twyllod').family.extensions.houseBiographyModule), null,
+    'A missing standalone house page cannot silently become a rural profile');
+  const original = structuredClone(source.family);
+  assert.equal(createRuralFamilyCoverageProfile(source, null).biography, null, 'Deleted biography is never filled from the seed');
+  assert.deepEqual(source.family, original);
+  assert.equal(hasCenyrCoverageGaps({ profileLinkIssues: 1 }), true);
 });
 
 test('coverage inspection changes neither public family graphs nor existing biographies', () => {

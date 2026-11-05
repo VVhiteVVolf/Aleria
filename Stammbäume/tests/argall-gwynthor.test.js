@@ -89,7 +89,7 @@ test('the additive source upgrade preserves existing people, relationships and e
     for (const record of previous[collection]) assert.deepEqual(upgraded[collection].find(item => item.id === record.id), record);
   }
   for (const id of newIds) assert.equal(upgraded.persons.filter(person => person.id === id).length, 1);
-  assert.equal(upgraded.extensions.sourceRevision, 4);
+  assert.equal(upgraded.extensions.sourceRevision, 6);
   assert.deepEqual(resolveRegisteredFamilyUpgrade(family, upgraded), upgraded);
 });
 
@@ -107,9 +107,9 @@ test('the source correction updates only the new households managed relationship
   assert.ok(corrected.persons.find(p => p.id === mother.id).extensions.biographyModule.stats.some(row => row.value === 'Aberon'));
 });
 
-test('a saved revision-three family gains missing portraits and the authored affair without replacing personal work', () => {
+for (const savedRevision of [3, 4, 5]) test(`saved source revision ${savedRevision} gains missing portraits and the authored affair without replacing personal work`, () => {
   const saved = structuredClone(family);
-  saved.extensions.sourceRevision = 3;
+  saved.extensions.sourceRevision = savedRevision;
   for (const id of newIds) saved.persons.find(person => person.id === id).portrait = '';
   const customPortrait = '/eigene-bilder/perwyn.png';
   saved.persons.find(person => person.id === squire.id).portrait = customPortrait;
@@ -124,7 +124,7 @@ test('a saved revision-three family gains missing portraits and the authored aff
 
   const { family: corrected, upgraded } = reconcileFamilyWithProjectOrigin({ family: saved, projectOriginFamily: family });
   assert.equal(upgraded, true);
-  assert.equal(corrected.extensions.sourceRevision, 4);
+  assert.equal(corrected.extensions.sourceRevision, 6);
   for (const spec of Object.values(ARGALL_CAPTAIN_PEOPLE)) {
     const person = corrected.persons.find(person => person.id === spec.id);
     assert.equal(person.portrait, spec.id === squire.id ? customPortrait : spec.portrait);
@@ -148,6 +148,38 @@ test('a saved revision-three family gains missing portraits and the authored aff
   assert.deepEqual(graph.getChildren(bard.id), []);
   assert.deepEqual(reconcileFamilyWithProjectOrigin({ family: corrected, projectOriginFamily: family }), { family: corrected, upgraded: false });
   assert.deepEqual(saved, before);
+});
+
+test('source revision six is the final aggregated boundary and later personal removals are not refilled', () => {
+  const registered = FAMILY_REGISTRY.find(record => record.id === 'haus-argall').family;
+  assert.equal(family.extensions.sourceRevision, 6);
+  assert.equal(registered.extensions.sourceRevision, 6);
+  const saved = structuredClone(registered);
+  saved.persons.find(person => person.id === captain.id).portrait = '';
+  saved.persons.find(person => person.id === mother.id).extensions.chartRepeatForPartnershipIds = [];
+  const corrected = reconcileFamilyWithProjectOrigin({ family: saved, projectOriginFamily: registered });
+  assert.equal(corrected.upgraded, false);
+  assert.deepEqual(corrected.family, saved);
+});
+
+test('the bounded correction preserves authored relationship notes, supplied portraits and additional person views', () => {
+  const saved = structuredClone(family);
+  saved.extensions.sourceRevision = 5;
+  saved.persons.find(person => person.id === captain.id).portrait = '/eigene-bilder/rhydric.png';
+  const motherPerson = saved.persons.find(person => person.id === mother.id);
+  motherPerson.extensions.chartRepeatForPartnershipIds = [ARGALL_GWYNTHOR_MARRIAGE_ID];
+  const affair = saved.partnerships.find(partnership => partnership.id === ARGALL_GWYNTHOR_UNION_ID);
+  affair.type = 'union';
+  affair.notes = 'Eigene belegte Recherche zur Verbindung';
+  affair.status = 'ended';
+  const corrected = resolveRegisteredFamilyUpgrade(family, saved);
+  assert.equal(corrected.persons.find(person => person.id === captain.id).portrait, '/eigene-bilder/rhydric.png');
+  assert.deepEqual(corrected.persons.find(person => person.id === mother.id).extensions.chartRepeatForPartnershipIds,
+    [ARGALL_GWYNTHOR_MARRIAGE_ID, ARGALL_GWYNTHOR_UNION_ID]);
+  const correctedAffair = corrected.partnerships.find(partnership => partnership.id === ARGALL_GWYNTHOR_UNION_ID);
+  assert.equal(correctedAffair.type, 'affair');
+  assert.equal(correctedAffair.notes, affair.notes);
+  assert.equal(correctedAffair.status, affair.status);
 });
 
 test('the overview includes the divorced household and Gwenellas childless affair through the same person identity', () => {

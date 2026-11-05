@@ -12,12 +12,26 @@
         {
           "collection": "persons",
           "entityId": "gwenella-spouse-rhydric-argall",
-          "path": ["extensions", "chartRepeatForPartnershipIds"],
+          "path": [
+            "extensions",
+            "chartRepeatForPartnershipIds"
+          ],
           "previouslyPresent": false,
-          "value": ["union-gwenella-maelor-ffionydd"]
+          "value": [
+            "union-gwenella-maelor-ffionydd"
+          ]
         }
       ],
-      "preservation": "Removing exactly this view-only extension restores the complete original protected fingerprint. All fifteen life-status cases, dates, identities, relationships and neighboring family fields remain protected by the immutable 2026-11-04 receipt."
+      "preservation": "Removing exactly this view-only extension restores the complete original protected fingerprint. All fifteen life-status cases, dates, identities, relationships and neighboring family fields remain protected by the immutable 2026-11-04 receipt.",
+      "latestAuthoredSourceRevision": 6,
+      "revisionBoundaryCorrection": {
+        "date": "2026-11-05",
+        "previousAuthoredRevision": 4,
+        "previousAggregatedRevision": 5,
+        "sourceRevision": 6,
+        "fieldRevision": 6,
+        "reason": "Stored effective revisions4and5 must receive the bounded portrait/affair/view correction; choose max prior authored/aggregated revision plus1. Protected graph content and historical fingerprints are unchanged."
+      }
     }
   }
 }
