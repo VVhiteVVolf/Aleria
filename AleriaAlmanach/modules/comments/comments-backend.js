@@ -1,5 +1,71 @@
-let _commentFallbackNoticeShown = false;
-let _commentUseLocalFallback = false;
+// Own recovery here; reader views decide which current content to refresh.
+const _commentBackendRecovery = (() => {
+  const pending = new Map();
+  const delays = [1000, 2000, 4000, 8000, 15000];
+  let timer = null;
+  let attempt = 0;
+  let noticeShown = false;
+
+  function schedule(delay) {
+    if (timer !== null || !pending.size || navigator.onLine === false) return;
+    if (![...pending.values()].some(Boolean)) return;
+    if (delay == null && attempt >= delays.length) return;
+    timer = window.setTimeout(reconnect, delay ?? delays[attempt++]);
+  }
+
+  function reconnect() {
+    timer = null;
+    if (!pending.size || navigator.onLine === false) return;
+    if (![...pending.values()].some(Boolean)) return;
+    if (window._fb) {
+      const sources = [...pending].filter(([, retryable]) => retryable).map(([source]) => source);
+      document.dispatchEvent(new CustomEvent('aleria:comment-backend-reconnect', { detail: { sources } }));
+    }
+    schedule();
+  }
+
+  function retryWhenAvailable() {
+    if (!pending.size) return;
+    attempt = 0;
+    if (timer !== null) window.clearTimeout(timer);
+    timer = null;
+    // Multiple readiness/network events share one queued refresh.
+    schedule(0);
+  }
+
+  function failed(error, source) {
+    const code = String(error?.code || '').split('/').pop();
+    const retryable = !['permission-denied', 'unauthenticated', 'failed-precondition', 'invalid-argument', 'not-found'].includes(code);
+    pending.set(source, retryable);
+    schedule();
+    if (noticeShown) return;
+    noticeShown = true;
+    if (typeof updateFirebaseSyncStatus === 'function') {
+      updateFirebaseSyncStatus('offline', 'Kommentarverbindung unterbrochen. Vorhandene Beiträge und lokale Entwürfe bleiben erhalten.');
+    }
+    if (typeof showAppStatus === 'function') {
+      showAppStatus('Kommentare sind vorübergehend offline. Die Verbindung wird erneut versucht; lokale Beiträge bleiben in diesem Browser.', 'error', { timeout: 9000 });
+    }
+  }
+
+  document.addEventListener('aleria:comment-backend-connected', event => {
+    pending.delete(event.detail?.source || 'backend');
+    pending.delete('backend');
+    if ([...pending.values()].some(Boolean)) return;
+    if (timer !== null) window.clearTimeout(timer);
+    timer = null;
+    attempt = 0;
+    if (pending.size) return;
+    if (noticeShown && navigator.onLine !== false && typeof updateFirebaseSyncStatus === 'function'
+      && typeof _firebaseSyncState !== 'undefined' && _firebaseSyncState === 'offline') {
+      updateFirebaseSyncStatus('idle', 'Kommentarverbindung wiederhergestellt. Lokale Beiträge bleiben in diesem Browser erhalten.');
+    }
+    noticeShown = false;
+  });
+  window.addEventListener('fb-ready', retryWhenAvailable);
+  window.addEventListener('online', retryWhenAvailable);
+  return { failed };
+})();
 
 const COMMENT_FIREBASE_READY_TIMEOUT_MS = 4500;
 const COMMENT_LOCAL_STORE_KEY = 'aleria-local-comments-v1';
@@ -278,27 +344,27 @@ function getLocalCommentBackend() {
   };
 }
 
-function showCommentFallbackNotice() {
-  _commentUseLocalFallback = true;
-  if (_commentFallbackNoticeShown) return;
-  _commentFallbackNoticeShown = true;
-  if (typeof updateFirebaseSyncStatus === 'function') {
-    updateFirebaseSyncStatus('offline', 'Kommentare nutzen lokalen Browser-Speicher.');
-  }
-  if (typeof showAppStatus === 'function') {
-    showAppStatus('Firebase ist nicht erreichbar. Kommentare werden vorübergehend nur lokal in diesem Browser gespeichert.', 'error', { timeout: 9000 });
-  }
+function showCommentFallbackNotice(error, source = 'backend') {
+  _commentBackendRecovery.failed(error, source);
 }
 
 async function getCommentBackend(options = {}) {
-  if (_commentUseLocalFallback && !options.preferRemote) return getLocalCommentBackend();
   if (window._fb) return window._fb;
+  if (navigator.onLine === false) {
+    showCommentFallbackNotice(undefined, options.source || 'backend');
+    return getLocalCommentBackend();
+  }
   const timeoutMs = Number.isFinite(options.timeoutMs) ? options.timeoutMs : COMMENT_FIREBASE_READY_TIMEOUT_MS;
-  await Promise.race([
-    new Promise(resolve => window.addEventListener('fb-ready', resolve, { once: true })),
-    new Promise(resolve => setTimeout(resolve, timeoutMs))
-  ]);
+  await new Promise(resolve => {
+    const finish = () => {
+      window.removeEventListener('fb-ready', finish);
+      window.clearTimeout(timer);
+      resolve();
+    };
+    const timer = window.setTimeout(finish, timeoutMs);
+    window.addEventListener('fb-ready', finish, { once: true });
+  });
   if (window._fb) return window._fb;
-  showCommentFallbackNotice();
+  showCommentFallbackNotice(undefined, options.source || 'backend');
   return getLocalCommentBackend();
 }

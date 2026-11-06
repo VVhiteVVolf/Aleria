@@ -1,0 +1,257 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--gwynthor-markt-alrik-tannholt",
+  "slug": "alrik-tannholt",
+  "identity": {
+    "name": "Alrik Tannholt",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "gwynthor-markt-alrik-tannholt",
+      "documentIds": [
+        "gwynthor-markt-alrik-tannholt"
+      ],
+      "documents": [
+        {
+          "documentId": "gwynthor-markt-alrik-tannholt",
+          "createdAt": "2026-11-05T15:00:00.000Z",
+          "updatedAt": "2026-11-05T15:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthor Markt Haendler/alrik-tannholt.json",
+    "sourceExportedAt": "2026-11-05T15:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-05T15:00:00.000Z",
+    "sourceDocumentIds": [
+      "gwynthor-markt-alrik-tannholt"
+    ],
+    "contentHash": "10b78bcc94cc8d41e8963565b3f243be86db77976dee68eb13a8877ffa32009f"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-markt-haendler"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Alrik Tannholt",
+        "title": "Haushaltswarenhändler",
+        "fraktion": "",
+        "role": "Haushaltswarenhändler",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor > Gwynthor-Stadt",
+        "currentLocation": "Gwynthor · Marktplatz",
+        "origin": "Aldrimar",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Alrik Tannholt ist ein 61-jähriger Aldrimar. Auf dem Marktplatz von Gwynthor bietet er Haushaltswaren, Körbe und einfache Holzwaren an. Sein Stand richtet sich an Menschen, die praktische Dinge für Küche, Vorratshaltung und Haushalt suchen. Der ältere blonde Händler kennt den Gebrauch seiner Waren und erklärt ihn ohne großes Aufheben.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-05T15:00:00.000Z",
+        "updatedAt": "2026-11-05T15:00:00.000Z",
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Falrik-tannholt%2Fe0f0e92823a9a98f433edf1307a00d3dfc1149ec1ef394f41510b2061b712b0c.png?alt=media&token=c60123d0-4395-49e2-a3ab-7ffc5b83ace2",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Alrik Tannholt"
+            },
+            {
+              "label": "Alter",
+              "value": "61 Jahre"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Haushaltswarenhändler"
+            },
+            {
+              "label": "Standort des Marktstands",
+              "value": "Gwynthor · Marktplatz"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Aldrimar"
+            }
+          ],
+          "biography": {
+            "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Falrik-tannholt%2Fe0f0e92823a9a98f433edf1307a00d3dfc1149ec1ef394f41510b2061b712b0c.png?alt=media&token=c60123d0-4395-49e2-a3ab-7ffc5b83ace2",
+            "biographyTitle": "Biografie",
+            "biographyText": "Alrik Tannholt ist ein 61-jähriger Aldrimar. Auf dem Marktplatz von Gwynthor bietet er Haushaltswaren, Körbe und einfache Holzwaren an. Sein Stand richtet sich an Menschen, die praktische Dinge für Küche, Vorratshaltung und Haushalt suchen. Der ältere blonde Händler kennt den Gebrauch seiner Waren und erklärt ihn ohne großes Aufheben.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Erscheinung",
+                "text": "Ein älterer Mann mit blondem, altersbedingt ergrauendem Haar."
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": ""
+        },
+        "genealogy": {
+          "worldPersonId": "",
+          "sex": "male",
+          "status": "alive",
+          "birth": "",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "",
+          "portraitPlaceholder": "",
+          "tags": [],
+          "sources": [],
+          "relationships": {
+            "parents": [],
+            "partners": [],
+            "children": []
+          }
+        },
+        "id": "gwynthor-markt-alrik-tannholt",
+        "race": "Mensch",
+        "age": 61
+      }
+    ]
+  },
+  "character": {
+    "name": "Alrik Tannholt",
+    "title": "Haushaltswarenhändler",
+    "fraktion": "",
+    "role": "Haushaltswarenhändler",
+    "status": "active",
+    "relevance": "minor",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor > Gwynthor-Stadt",
+    "currentLocation": "Gwynthor · Marktplatz",
+    "origin": "Aldrimar",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Alrik Tannholt ist ein 61-jähriger Aldrimar. Auf dem Marktplatz von Gwynthor bietet er Haushaltswaren, Körbe und einfache Holzwaren an. Sein Stand richtet sich an Menschen, die praktische Dinge für Küche, Vorratshaltung und Haushalt suchen. Der ältere blonde Händler kennt den Gebrauch seiner Waren und erklärt ihn ohne großes Aufheben.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-05T15:00:00.000Z",
+    "updatedAt": "2026-11-05T15:00:00.000Z",
+    "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Falrik-tannholt%2Fe0f0e92823a9a98f433edf1307a00d3dfc1149ec1ef394f41510b2061b712b0c.png?alt=media&token=c60123d0-4395-49e2-a3ab-7ffc5b83ace2",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Alrik Tannholt"
+        },
+        {
+          "label": "Alter",
+          "value": "61 Jahre"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Haushaltswarenhändler"
+        },
+        {
+          "label": "Standort des Marktstands",
+          "value": "Gwynthor · Marktplatz"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Aldrimar"
+        }
+      ],
+      "biography": {
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Falrik-tannholt%2Fe0f0e92823a9a98f433edf1307a00d3dfc1149ec1ef394f41510b2061b712b0c.png?alt=media&token=c60123d0-4395-49e2-a3ab-7ffc5b83ace2",
+        "biographyTitle": "Biografie",
+        "biographyText": "Alrik Tannholt ist ein 61-jähriger Aldrimar. Auf dem Marktplatz von Gwynthor bietet er Haushaltswaren, Körbe und einfache Holzwaren an. Sein Stand richtet sich an Menschen, die praktische Dinge für Küche, Vorratshaltung und Haushalt suchen. Der ältere blonde Händler kennt den Gebrauch seiner Waren und erklärt ihn ohne großes Aufheben.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "Ein älterer Mann mit blondem, altersbedingt ergrauendem Haar."
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "male",
+      "status": "alive",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "gwynthor-markt-alrik-tannholt",
+    "race": "Mensch",
+    "age": 61
+  }
+}

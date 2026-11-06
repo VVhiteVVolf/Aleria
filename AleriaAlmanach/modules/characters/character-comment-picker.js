@@ -1,4 +1,4 @@
-﻿let _selectedCharId = null;
+let _selectedCharId = null;
 let _manualMode = false;
 let _selectedEmoteIdx = null;
 let _selectedImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
@@ -105,8 +105,9 @@ function selectCharForComment(id, options = {}) {
     }
     return;
   }
-  const characterChanged = _selectedCharId !== id;
-  _selectedCharId = id;
+  const selectedId = String(c.id || '').trim();
+  const characterChanged = _selectedCharId !== selectedId;
+  _selectedCharId = selectedId;
   _selectedEmoteIdx = null;
   const requestedImageSetId = String(options.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
   _selectedImageSetId = normalizeCharacterImageSets(c).some(set => set.id === requestedImageSetId)
@@ -122,7 +123,7 @@ function selectCharForComment(id, options = {}) {
   }
   _manualMode = false;
   document.querySelectorAll('.cf-char-option').forEach(el => {
-    el.classList.toggle('selected', el.dataset.id === id);
+    el.classList.toggle('selected', el.dataset.id === selectedId);
   });
   document.getElementById('cf-manual-fields').style.display = 'none';
   document.getElementById('cf-selected-name').textContent = c ? `Als ${c.name} kommentieren` : '';

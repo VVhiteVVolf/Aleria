@@ -1,0 +1,61 @@
+// Ordinary learned RPG passives use existing reversible development mechanics.
+import { traitSaveModifier } from './development-trait-rules.js';
+const skill = (name, bonus) => ({ name, bonus });
+const training = (name, proficiency = 'expertise') => ({ name, proficiency });
+const weaponRule = (id, phase, attackRange, effects) => ({
+  id, phase, recipient: 'actor', sourceRelation: 'self', activation: 'passive',
+  frequency: 'always', condition: 'always', actionKinds: ['weapon', 'technique'],
+  weaponAttackOnly: true, attackRange, effects
+});
+const concentrationAdvantage = [{ id: 'magiekontrolle-konzentration',
+  phase: 'on-concentration-check', recipient: 'target', sourceRelation: 'self',
+  activation: 'passive', frequency: 'always', condition: 'always', effects: { rollMode: 'advantage' } }];
+export const EXPANSION_ABILITY_DEFINITIONS = Object.freeze([
+  ['faehigkeit-nahkampftraining', 'Nahkampftraining',
+    '+1 auf Angriffswürfe mit Nahkampfwaffen, einschließlich entsprechender Techniken. Gilt nicht für Fernkampf oder Zauber.',
+    {}, 2, { triggerRules: [weaponRule('nahkampftraining', 'pre-roll', 'melee', { attackModifier: 1 })] }],
+  ['faehigkeit-fernkampftraining', 'Fernkampftraining',
+    '+1 auf Angriffswürfe mit Fernkampfwaffen, einschließlich entsprechender Techniken. Gilt nicht für Nahkampf oder Zauber.',
+    {}, 2, { triggerRules: [weaponRule('fernkampftraining', 'pre-roll', 'ranged', { attackModifier: 1 })] }],
+  ['faehigkeit-unbewaffneter-kampf', 'Unbewaffneter Kampf',
+    '+1 Angriff und +1 Schaden bei unbewaffneten Angriffen und entsprechenden Techniken. Verleiht keine zusätzlichen Angriffe oder Waffen.',
+    { weaponModifiers: [{ weaponTypes: ['unarmed'], attack: 1, damage: 1 }] }, 2],
+  ['faehigkeit-kraftangriff', 'Kraftangriff',
+    'Kräftige statt sichere Treffer: −1 Angriff und +2 Schaden mit Nahkampfwaffen, einschließlich entsprechender Techniken. Wirkt, solange die Fähigkeit aktiv ist.',
+    {}, 1, { triggerRules: [weaponRule('kraftangriff-angriff', 'pre-roll', 'melee', { attackModifier: -1 }),
+      weaponRule('kraftangriff-schaden', 'pre-damage', 'melee', { damageModifier: 2 })] }],
+  ['faehigkeit-praezisionsschuetze', 'Präzisionsschütze',
+    'Anspruchsvolle gezielte Schüsse: −1 Angriff und +2 Schaden mit Fernkampfwaffen, einschließlich entsprechender Techniken. Wirkt, solange die Fähigkeit aktiv ist.',
+    {}, 1, { triggerRules: [weaponRule('praezisionsschuetze-angriff', 'pre-roll', 'ranged', { attackModifier: -1 }),
+      weaponRule('praezisionsschuetze-schaden', 'pre-damage', 'ranged', { damageModifier: 2 })] }],
+  ['faehigkeit-ausweichen', 'Ausweichen',
+    'Geübte Abwehrbewegungen: +1 RK. Verleiht keine zusätzliche Reaktion; ein fest eingetragener Gesamt-RK-Wert behält Vorrang.',
+    { armorClass: 1 }, 3],
+  ['faehigkeit-magiekontrolle', 'Magiekontrolle',
+    '+1 Zauber-SG und Vorteil auf KON-Rettungswürfe zum Aufrechterhalten von Konzentration. Verleiht keine Zauber; mehrfacher Vorteil erzeugt keine zusätzlichen Würfel.',
+    { spellSaveDc: 1 }, 6, { triggerRules: concentrationAdvantage }],
+  ['faehigkeit-kampfzauberer', 'Kampfzauberer',
+    '+1 Zauberangriff und +1 auf KON-Rettungswürfe. Verleiht keinen Magiezugang und keine zusätzlichen Zauber oder Aktionen.',
+    { spellAttack: 1, saveAttributeModifiers: [{ attributeKey: 'constitution', bonus: 1 }] }, 3],
+  ['faehigkeit-arkane-abwehr', 'Arkane Abwehr',
+    '+1 auf Attributsrettungswürfe gegen Zauber, Gebete und Gesänge, einschließlich ihrer sekundären Rettungen. Verringert keinen Schaden und wirkt nicht gegen gewöhnliche Waffen.',
+    {}, 2, { triggerRules: traitSaveModifier('arkane-abwehr', 1, { actionKinds: ['spell', 'prayer', 'song'] }) }],
+  ['faehigkeit-widerstandstraining', 'Widerstandstraining',
+    '+1 auf alle Attributsrettungswürfe. Zustandsfolgen müssen weiterhin ausgewürfelt werden; keine Immunitäten.',
+    { savingThrow: 1 }, 3],
+  ['faehigkeit-wildniskunde', 'Wildniskunde',
+    'Expertise in Naturkunde und mindestens ausgebildet in Überleben. Vorhandene höhere Ausbildung bleibt erhalten; unbekanntes Wissen muss weiterhin erprobt werden.',
+    { skillProficiencies: [training('Naturkunde'), training('Überleben', 'trained')] }, 5],
+  ['faehigkeit-heilkunst', 'Heilkunst',
+    'Expertise in Heilkunde und +1 auf Körperbeherrschung. Behandlungen benötigen die üblichen Proben und Mittel; keine automatische Heilung.',
+    { skillProficiencies: [training('Heilkunde')], skillModifiers: [skill('Körperbeherrschung', 1)] }, 4],
+  ['faehigkeit-diplomatie', 'Diplomatie',
+    'Expertise in Überzeugen und +1 auf Motiv erkennen. Andere Figuren behalten ihren Willen; keine automatische Zustimmung.',
+    { skillProficiencies: [training('Überzeugen')], skillModifiers: [skill('Motiv erkennen', 1)] }, 4],
+  ['faehigkeit-diebeskunst', 'Diebeskunst',
+    'Expertise in Fingerfertigkeit und +1 auf Heimlichkeit. Werkzeuge, geeignete Gelegenheiten und erfolgreiche Proben bleiben nötig.',
+    { skillProficiencies: [training('Fingerfertigkeit')], skillModifiers: [skill('Heimlichkeit', 1)] }, 4],
+  ['faehigkeit-kampfreflexe', 'Kampfreflexe',
+    '+2 Initiative und +1 auf GES-Rettungswürfe. Verleiht keine zusätzlichen Aktionen oder Reaktionen.',
+    { initiative: 2, saveAttributeModifiers: [{ attributeKey: 'dexterity', bonus: 1 }] }, 3]
+]);

@@ -2,17 +2,17 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-11-04T23:48:13.218393Z",
+  "sourceExportedAt": "2026-11-05T18:00:00.000Z",
   "summary": {
-    "sourceDocuments": 534,
-    "total": 293,
+    "sourceDocuments": 553,
+    "total": 312,
     "mergedSameNameGroups": 45,
-    "familyLinked": 201,
+    "familyLinked": 217,
     "familyAmbiguous": 0,
-    "familyPending": 92,
-    "primaryFamily": 200,
+    "familyPending": 95,
+    "primaryFamily": 216,
     "primaryGroup": 31,
-    "primaryPlace": 28,
+    "primaryPlace": 31,
     "primaryUnassigned": 34,
     "duplicateWorldPeople": 0
   },
@@ -1078,6 +1078,42 @@
     {
       "recordId": "character--person--gwynthor-formlingssache--orvar",
       "name": "Orvar Schattentänzer",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--gwynthor-markt-cadwal-wernig",
+      "name": "Cadwal Wernig",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--gwynthor-markt-alrik-tannholt",
+      "name": "Alrik Tannholt",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--gwynthor-markt-mairwen-brennig",
+      "name": "Mairwen Brennig",
       "status": "pending",
       "primary": {
         "kind": "place",

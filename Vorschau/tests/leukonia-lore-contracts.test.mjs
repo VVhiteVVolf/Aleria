@@ -10,7 +10,7 @@ import { ARCHONATES } from '../Leukonia/territory-data.mjs';
 const text = value => Object.values(value).filter(item => typeof item === 'string').join(' ');
 
 test('Argentum behält seine drei Großprovinzen und die sechs ausdrücklich benannten Kasten', () => {
-  assert.deepEqual(REALM_CONTEXT.provinces.map(item => item.name), ['Leukonia', 'Sylvarant', 'Calidaria']);
+  assert.deepEqual(REALM_CONTEXT.provinces.map(item => item.name), ['Leukonia', 'Vardentia', 'Calidaria']);
   assert.deepEqual(SOCIAL_CASTES.map(item => item.name), ['Illustris', 'Patrizier', 'Magnarier', 'Mercantrier', 'Plebejer', 'Servi']);
   assert.deepEqual(ARTWORKS.filter(item => item.kind === 'caste').map(item => item.id), SOCIAL_CASTES.map(item => item.id));
   assert.match(REALM_CONTEXT.history.find(item => item.id === 'tlapatlan').text, /Tlapanui.*Sundara.*Tlapatlan/s);
@@ -35,7 +35,7 @@ test('Präfekt und Magistrat bleiben nicht erbliche Verwaltungsposten ohne erfun
   assert.match(REALM_CONTEXT.administration.appointments, /Präfekt und Magistrat sind nicht erblich.*Archon entscheidet.*Kaiser kann/s);
   assert.match(REALM_CONTEXT.administration.note, /keine weiteren Adelsränge.*Verwaltungsposten/s);
   assert.match(REALM_CONTEXT.nobility[0].note, /untersteht dem Prokonsul.*automatisch Senator/s);
-  assert.match(REALM_CONTEXT.openQuestions.join(' '), /Amtszeiten und weitere Ernennungsregeln sind offen/);
+  assert.match(REALM_CONTEXT.openQuestions.join(' '), /Amtszeiten sind offen/);
 });
 
 test('Zehn Institute verwenden Orbus qui Mariella und erhalten ihre ausdrücklich zugeordneten Leitungen', () => {

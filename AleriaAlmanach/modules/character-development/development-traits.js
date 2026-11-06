@@ -10,6 +10,9 @@ import { traitSaveDisadvantage, traitSaveModifier, traitDamageAffinities } from 
 import { HEALTH_TRAIT_DEFINITIONS } from '../character-health/health-trait-catalog.js';
 import { healthMagicSaveRules } from '../character-health/health-trait-rules.js';
 import { PSYCHOLOGICAL_TRAIT_DEFINITIONS, getPsychologicalTraitOrigin } from './development-psychological-traits.js';
+import { FAMILY_TRAIT_DEFINITIONS, getFamilyTraitOrigin } from './development-family-traits.js';
+import { GENERAL_TRAIT_DEFINITIONS, GENERAL_TRAIT_ICONS } from './development-general-traits.js';
+import { EXPANSION_TRAIT_DEFINITIONS, getExpansionTraitCategory } from './development-expansion-categories.js';
 const skill = (name, bonus) => ({ name, bonus });
 const definitions = [
   ['feuer-phobie', 'Feuer Phobie', 'Nachteil bei Rettungswürfen gegen feuerbasierte Angriffe. Die Angst erhöht nicht den erlittenen Feuerschaden.', {}, -2,
@@ -49,6 +52,7 @@ const definitions = [
 const bodyIds = new Set(BODY_TRAIT_DEFINITIONS.map(trait => trait[0]));
 const uniqueIds = new Set(UNIQUE_TRAIT_DEFINITIONS.map(trait => trait[0]));
 const aptitudeIds = new Set(APTITUDE_TRAIT_DEFINITIONS.map(trait => trait[0]));
+const generalIds = new Set(GENERAL_TRAIT_DEFINITIONS.map(trait => trait[0]));
 function transformationTags(id) {
   const origin = getTransformationTraitOrigin(`development-trait-${id}`);
   if (!origin) return '';
@@ -58,13 +62,16 @@ function transformationTags(id) {
 const traitTags = id => ['Charakterentwicklung', bodyIds.has(id) ? 'Körper' : '',
   uniqueIds.has(id) ? 'Besondere Eigenheit' : '', aptitudeIds.has(id) ? 'Begabung' : '',
   getBloodlineTraitOrigin(`development-trait-${id}`) ? 'Blutträger · Angeboren' : '', transformationTags(id),
+  getFamilyTraitOrigin(`development-trait-${id}`) ? 'Familienblut · Angeboren' : '', generalIds.has(id) ? 'Allgemeine Eigenschaft' : '',
+  getExpansionTraitCategory(`development-trait-${id}`)?.tag || '',
   getPsychologicalTraitOrigin(`development-trait-${id}`) ? 'Psychologische Prägung' : ''].filter(Boolean).join(' · ');
 export const DEVELOPMENT_TRAITS = Object.freeze([...definitions, ...BODY_TRAIT_DEFINITIONS, ...EXTRA_TRAIT_DEFINITIONS, ...INSPIRED_TRAIT_DEFINITIONS,
   ...UNIQUE_TRAIT_DEFINITIONS, ...APTITUDE_TRAIT_DEFINITIONS, ...BLOODLINE_TRAIT_DEFINITIONS,
-  ...THERIANTHROPY_TRAIT_DEFINITIONS, ...SYMBIOSIS_TRAIT_DEFINITIONS, ...PSYCHOLOGICAL_TRAIT_DEFINITIONS].map(([id, name, description, mechanics, cost, extra = {}]) => ({
+  ...THERIANTHROPY_TRAIT_DEFINITIONS, ...SYMBIOSIS_TRAIT_DEFINITIONS, ...PSYCHOLOGICAL_TRAIT_DEFINITIONS,
+  ...FAMILY_TRAIT_DEFINITIONS, ...GENERAL_TRAIT_DEFINITIONS, ...EXPANSION_TRAIT_DEFINITIONS].map(([id, name, description, mechanics, cost, extra = {}]) => ({
   id: `development-trait-${id}`, name, description, cost,
-  icon: `/AleriaAlmanach/assets/development-traits/web/${id}.webp`,
-  type: 'trait', active: true, target: 'Selbst', duration: 'Dauerhaft', appliesWhen: getBloodlineTraitOrigin(`development-trait-${id}`) ? 'Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren' : 'Solange ausgewählt und aktiv',
+  icon: extra.icon || `/AleriaAlmanach/assets/development-traits/web/${GENERAL_TRAIT_ICONS[id] || id}.webp`,
+  type: 'trait', active: true, target: 'Selbst', duration: 'Dauerhaft', appliesWhen: getFamilyTraitOrigin(`development-trait-${id}`) ? 'Angeborenes Familienerbe; nur die höchste aktive Stufe je Linie wirkt' : getBloodlineTraitOrigin(`development-trait-${id}`) ? 'Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren' : 'Solange ausgewählt und aktiv',
   tags: traitTags(id), mechanics: { ...mechanics, ...(extra.damageAffinities ? { damageAffinities: traitDamageAffinities(extra.damageAffinities) } : {}) },
   triggerRules: extra.triggerRules || []
 })).concat(HEALTH_TRAIT_DEFINITIONS.map(trait => ({

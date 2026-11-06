@@ -1,4 +1,4 @@
-﻿// Comment submit flow.
+// Comment submit flow.
 // Keeps save, fallback, and post-save reload behavior separate from form rendering.
 
 async function submitComment() {
@@ -28,6 +28,7 @@ async function submitComment() {
       errEl.style.display='block';
       return;
     }
+    _selectedCharId = String(c.id || '').trim();
     const presentation = getSelectedCommentCharacterPresentation(c);
     name = c.name; title = c.title || '';
     const actorMetadata = c.entityType === 'creature'

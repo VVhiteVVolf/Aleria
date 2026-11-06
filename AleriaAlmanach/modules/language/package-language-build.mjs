@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 export const PACKAGE_LANGUAGE_SOURCES = Object.freeze([
   { id: 'tlapanui', package: 'Tlapanui-Gesamtpaket-2.000', language: 'Nuatlapa',
     variable: 'TLAPANUI_REFERENCE_DATA', specimen: 'Tavarua_Bildschnitt_Zeichentafel_2.000.png',
-    canonicalNames: Object.freeze({ Silverant: 'Sylvarant' }) },
+    canonicalNames: Object.freeze({ Silverant: 'Vardentia', Sylvarant: 'Vardentia', Sylverant: 'Vardentia' }) },
   { id: 'ishtaran', package: 'Ishtaran-Gesamtpaket-1.000', language: 'Tirghan',
     variable: 'ISHTARAN_REFERENCE_DATA', specimen: 'AyluunMondbogen_Zeichentafel.png' }
 ]);

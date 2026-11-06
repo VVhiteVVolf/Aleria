@@ -3,6 +3,7 @@
 import { withCenyrClassTraining } from '../classes/cenyr/cenyr-class-registry.js?v=20260909-dragon-parent-v2';
 import { applyArmorBalance } from '../character-equipment/equipment-armor-rules.js';
 import { CHARACTER_CULTURAL_ORIGINS } from '../character-origins/cultural-origin-catalog.js';
+import { ORDINARY_BACKGROUND_TEMPLATES } from '../character-development/creation-background-templates.js';
 
 export const CHARACTER_CREATION_TEMPLATE_SCHEMA_VERSION = 1;
 
@@ -128,7 +129,8 @@ export const CHARACTER_BACKGROUND_TEMPLATES = Object.freeze([
     skillProficiencies: ['Auftreten', 'Überreden'],
     proficiencies: { tools: ['Musikinstrument'] },
     traits: ['Bühnenerfahrung und Publikumsgespür']
-  }
+  },
+  ...ORDINARY_BACKGROUND_TEMPLATES
 ]);
 
 export const CHARACTER_CLASS_TEMPLATES = Object.freeze([

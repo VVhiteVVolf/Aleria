@@ -154,6 +154,6 @@ export const MAP_QUESTIONS = [
   {
     "id": "neighbors",
     "question": "Wie verlaufen die heutigen Außengrenzen?",
-    "reason": "Die Vorgeschichte nennt Phalantias Widerstand bei Leukonia und die nördliche Wüste. Konkrete Grenzlinien und die unbenannten Kartenflächen sind damit noch nicht festgelegt."
+    "reason": "Die Geschichte nennt Phalantias und Shirazads Tyrannei über die lockeren Stadtstaaten Leukonias, die Befreiung dieser Städte durch Menschen aus dem älteren Vardentia und die nördliche Wüste. Konkrete heutige Grenzlinien sind damit noch nicht festgelegt."
   }
 ];

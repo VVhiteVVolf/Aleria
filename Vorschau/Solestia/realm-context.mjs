@@ -8,7 +8,7 @@ export const REALM_CONTEXT = Object.freeze({
   history: [
     { id:'tarranath', title:'Die Tarranath und Grianeach', text:'Die Tarranath, auch Felsalben genannt, waren die Fürsten Grianeachs. Ihr aufgerichteter schwarzer Stier steht für diese frühere fürstliche Identität. Aus ihrem Land entwickelte sich später Solestia.' },
     { id:'zarakhul', title:'Geschützt in einer bedrohten Welt', text:'Als Zarakhul auf Tirnara wütete, bewahrten die umliegenden Nachbarn und das Gebirge Grianeach vor dem schlimmsten Unheil. Während andere Länder bangten, florierte das Fürstentum.' },
-    { id:'imperial-trade', title:'Eine neue Identität in der Kaiserzeit', text:'Mit dem Aufblühen des Alerischen Kaiserreiches nahm auch der Handel zu. Solestia folgte dem Vorbild von Venalys und seinen Nachbarn Leukonia und Sylvarant. Kaiserlicher Einfluss und Austausch veränderten seine Kultur; noch während der Kaiserzeit entstand die eigene Identität des Herzogtums Solestia.' },
+    { id:'imperial-trade', title:'Eine neue Identität in der Kaiserzeit', text:'Mit dem Aufblühen des Alerischen Kaiserreiches nahm auch der Handel zu. Solestia folgte dem Vorbild von Venalys und seinen Nachbarn Leukonia und Vardentia. Kaiserlicher Einfluss und Austausch veränderten seine Kultur; noch während der Kaiserzeit entstand die eigene Identität des Herzogtums Solestia.' },
     { id:'after-empire', title:'Solestia bleibt Solestia', text:'Nach dem Zerfall des Alerischen Kaiserreiches blieb das Herzogtum bei seiner neuen Identität. Sein Traditionswandel verlief ähnlich wie in Goldmund, Weisenfluh und Aldingen; er bedeutete keine Abkehr vom Wohlstand des Seehandels.' },
   ],
   culture: [

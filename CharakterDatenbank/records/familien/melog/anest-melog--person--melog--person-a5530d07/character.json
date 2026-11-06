@@ -1,0 +1,397 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--melog--person-a5530d07",
+  "slug": "anest-melog",
+  "identity": {
+    "name": "Anest Melog",
+    "aliases": [],
+    "worldPersonId": "person--melog--person-a5530d07"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "melog",
+      "label": "Familie Melog"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "melog",
+        "familyTitle": "Familie Melog",
+        "personId": "person-a5530d07",
+        "worldPersonId": "person--melog--person-a5530d07",
+        "houseId": "house-melog",
+        "houseName": "Melog",
+        "familyRole": "core",
+        "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-a5530d07",
+        "fingerprint": "{\"name\":\"Anest Melog\",\"title\":\"Konditor/Bäckereimeisterin\",\"birth\":\"1701\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-a5530d07.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"},{\"personId\":\"person-30cd0b46\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"partners\":[{\"personId\":\"person-d9df75d6\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d9df75d6\",\"name\":\"Eiffion\"}],\"children\":[{\"personId\":\"person-5b669286\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-5b669286\",\"name\":\"Nerys Melog\"},{\"personId\":\"person-c6293356\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-c6293356\",\"name\":\"Elisedd Melog\"},{\"personId\":\"person-02518ead\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-02518ead\",\"name\":\"Teleri Melog\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--melog--person-a5530d07",
+      "documentIds": [
+        "person--melog--person-a5530d07"
+      ],
+      "documents": [
+        {
+          "documentId": "person--melog--person-a5530d07",
+          "createdAt": "2026-11-05T18:00:00.000Z",
+          "updatedAt": "2026-11-05T18:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "melog",
+        "personId": "person-a5530d07",
+        "worldPersonId": "person--melog--person-a5530d07",
+        "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-a5530d07"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Melog Honigtoertchen/person-a5530d07.json",
+    "sourceExportedAt": "2026-11-05T18:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-05T18:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--melog--person-a5530d07"
+    ],
+    "contentHash": "0ef25d107112c70b3e7a9a207f91ce2145a58aad5475687819d1c2dd174b662e"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "melog-honigtoertchen-20261105"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Anest Melog",
+        "title": "Konditor- und Bäckermeisterin",
+        "fraktion": "Melog",
+        "role": "Konditor- und Bäckermeisterin",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Gwynthor",
+        "origin": "Cenyri",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Anest ist Konditor- und Bäckermeisterin aus der Familie Melog. Sie ist eine Tochter von Tewdwr und Morfudd und gehört zum Handwerk des Familienbetriebs „Zum Honigtörtchen“ in Gwynthor. Ihr Gemahl Eiffion kümmert sich um Einkauf und Lieferungen. Ihre Kinder heißen Nerys, Elisedd und Teleri.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-05T18:00:00.000Z",
+        "updatedAt": "2026-11-05T18:00:00.000Z",
+        "portrait": "../Stammbäume/assets/images/portraits/melog/person-a5530d07.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Anest Melog"
+            },
+            {
+              "label": "Geburt",
+              "value": "1701"
+            },
+            {
+              "label": "Haus und Familie",
+              "value": "Melog · Gwynthor"
+            },
+            {
+              "label": "Tätigkeit oder Eigenheit",
+              "value": "Konditor- und Bäckermeisterin"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/melog/person-a5530d07.png",
+            "biographyTitle": "Familie und Leben",
+            "biographyText": "<p>Anest ist Konditor- und Bäckermeisterin aus der Familie Melog. Sie ist eine Tochter von Tewdwr und Morfudd und gehört zum Handwerk des Familienbetriebs „Zum Honigtörtchen“ in Gwynthor. Ihr Gemahl Eiffion kümmert sich um Einkauf und Lieferungen. Ihre Kinder heißen Nerys, Elisedd und Teleri.</p>",
+            "documentsTitle": "Die Familie Melog",
+            "documents": [
+              {
+                "title": "Im Stammbaum ansehen",
+                "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+                "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-a5530d07"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--melog--person-a5530d07"
+        },
+        "genealogy": {
+          "worldPersonId": "person--melog--person-a5530d07",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1701",
+          "death": "",
+          "houseId": "house-melog",
+          "houseName": "Melog",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "melog",
+              "personId": "person-a5530d07",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-05T18:00:00.000Z",
+              "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-a5530d07",
+              "fingerprint": "{\"name\":\"Anest Melog\",\"title\":\"Konditor/Bäckereimeisterin\",\"birth\":\"1701\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-a5530d07.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"},{\"personId\":\"person-30cd0b46\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"partners\":[{\"personId\":\"person-d9df75d6\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d9df75d6\",\"name\":\"Eiffion\"}],\"children\":[{\"personId\":\"person-5b669286\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-5b669286\",\"name\":\"Nerys Melog\"},{\"personId\":\"person-c6293356\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-c6293356\",\"name\":\"Elisedd Melog\"},{\"personId\":\"person-02518ead\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-02518ead\",\"name\":\"Teleri Melog\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "person-0c68dade",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-0c68dade",
+                "name": "Tewdwr Melog"
+              },
+              {
+                "personId": "person-30cd0b46",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-30cd0b46",
+                "name": "Morfudd"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "person-d9df75d6",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-d9df75d6",
+                "name": "Eiffion"
+              }
+            ],
+            "children": [
+              {
+                "personId": "person-5b669286",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-5b669286",
+                "name": "Nerys Melog"
+              },
+              {
+                "personId": "person-c6293356",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-c6293356",
+                "name": "Elisedd Melog"
+              },
+              {
+                "personId": "person-02518ead",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-02518ead",
+                "name": "Teleri Melog"
+              }
+            ]
+          }
+        },
+        "id": "person--melog--person-a5530d07",
+        "race": "Mensch"
+      }
+    ]
+  },
+  "character": {
+    "name": "Anest Melog",
+    "title": "Konditor- und Bäckermeisterin",
+    "fraktion": "Melog",
+    "role": "Konditor- und Bäckermeisterin",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "Cenyri",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Anest ist Konditor- und Bäckermeisterin aus der Familie Melog. Sie ist eine Tochter von Tewdwr und Morfudd und gehört zum Handwerk des Familienbetriebs „Zum Honigtörtchen“ in Gwynthor. Ihr Gemahl Eiffion kümmert sich um Einkauf und Lieferungen. Ihre Kinder heißen Nerys, Elisedd und Teleri.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-05T18:00:00.000Z",
+    "updatedAt": "2026-11-05T18:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/melog/person-a5530d07.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Anest Melog"
+        },
+        {
+          "label": "Geburt",
+          "value": "1701"
+        },
+        {
+          "label": "Haus und Familie",
+          "value": "Melog · Gwynthor"
+        },
+        {
+          "label": "Tätigkeit oder Eigenheit",
+          "value": "Konditor- und Bäckermeisterin"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/melog/person-a5530d07.png",
+        "biographyTitle": "Familie und Leben",
+        "biographyText": "<p>Anest ist Konditor- und Bäckermeisterin aus der Familie Melog. Sie ist eine Tochter von Tewdwr und Morfudd und gehört zum Handwerk des Familienbetriebs „Zum Honigtörtchen“ in Gwynthor. Ihr Gemahl Eiffion kümmert sich um Einkauf und Lieferungen. Ihre Kinder heißen Nerys, Elisedd und Teleri.</p>",
+        "documentsTitle": "Die Familie Melog",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+            "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-a5530d07"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--melog--person-a5530d07"
+    },
+    "genealogy": {
+      "worldPersonId": "person--melog--person-a5530d07",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1701",
+      "death": "",
+      "houseId": "house-melog",
+      "houseName": "Melog",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "melog",
+          "personId": "person-a5530d07",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-05T18:00:00.000Z",
+          "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-a5530d07",
+          "fingerprint": "{\"name\":\"Anest Melog\",\"title\":\"Konditor/Bäckereimeisterin\",\"birth\":\"1701\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-a5530d07.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"},{\"personId\":\"person-30cd0b46\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"partners\":[{\"personId\":\"person-d9df75d6\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d9df75d6\",\"name\":\"Eiffion\"}],\"children\":[{\"personId\":\"person-5b669286\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-5b669286\",\"name\":\"Nerys Melog\"},{\"personId\":\"person-c6293356\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-c6293356\",\"name\":\"Elisedd Melog\"},{\"personId\":\"person-02518ead\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-02518ead\",\"name\":\"Teleri Melog\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-0c68dade",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-0c68dade",
+            "name": "Tewdwr Melog"
+          },
+          {
+            "personId": "person-30cd0b46",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-30cd0b46",
+            "name": "Morfudd"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "person-d9df75d6",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-d9df75d6",
+            "name": "Eiffion"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-5b669286",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-5b669286",
+            "name": "Nerys Melog"
+          },
+          {
+            "personId": "person-c6293356",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-c6293356",
+            "name": "Elisedd Melog"
+          },
+          {
+            "personId": "person-02518ead",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-02518ead",
+            "name": "Teleri Melog"
+          }
+        ]
+      }
+    },
+    "id": "person--melog--person-a5530d07",
+    "race": "Mensch"
+  }
+}

@@ -6,7 +6,7 @@ export function resolveCombatAttributeEffects(attribute, sources = []) {
     + (source.attributeModifiers || []).filter(entry => entry.attributeKey === key).reduce((sum, entry) => sum + entry.bonus, 0), 0);
   const caps = sources.flatMap(source => source.attributeCaps || []).filter(entry => entry.attributeKey === key).map(entry => entry.maximum);
   const maximum = caps.length ? Math.min(...caps) : null;
-  const score = Math.min(attribute.score + bonus, maximum ?? Infinity);
+  const score = Math.max(1, Math.min(attribute.score + bonus, maximum ?? Infinity));
   let modifierOverride = attribute.modifierOverride == null ? null
     : attribute.modifierOverride + naturalModifier(score) - naturalModifier(attribute.score);
   // A free override cannot bypass an explicit ceiling on this attribute.

@@ -12,6 +12,10 @@ import { getPsychologicalTraitOrigin, PSYCHOLOGICAL_TRAIT_NOTE } from './develop
 import { selectPsychologicalTrait } from './development-psychological-policy.js';
 import { getCombatTechniqueIconSource } from '../combat-styles/combat-technique-icons.js';
 import { renderDevelopmentAttributePreview } from './development-attribute-preview.js';
+import { getFamilyTraitOrigin, FAMILY_TRAIT_NOTE } from './development-family-traits.js';
+import { selectFamilyTrait } from './development-family-policy.js';
+import { EXPANSION_TRAIT_GROUPS } from './development-expansion-categories.js';
+import { getRetiredDevelopmentTrait, getOwnedRetiredDevelopmentTraits } from './development-retired-traits.js';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const sign = n => n > 0 ? `+${n}` : n;
 export function renderDevelopmentAttacks(profile, preview) {
@@ -38,10 +42,19 @@ export function renderDevelopmentTraits(plan, profile={}) {
   const needle=String(plan.traitSearch||'').toLocaleLowerCase('de');
   const traits=DEVELOPMENT_TRAITS.filter(t=>!needle||`${t.name} ${t.description}`.toLocaleLowerCase('de').includes(needle))
     .filter(t=>matchesTraitGroup(t,plan));
-  return traits.length?renderTraitCategoryNote(plan.traitGroup)+traits.map(t=>`<label class="development-trait"><input type="checkbox" data-development-trait="${t.id}"${plan.traitIds.includes(t.id)?' checked':''}><img src="${t.icon}" alt="" loading="lazy"><span><b>${escape(t.name)} <small>${sign(t.cost)} P</small></b><small>${escape(t.description)}</small>${renderDevelopmentTraitOrigin(t)}${existing.has(t.id)?`<small class="development-existing-effect">Ähnliche oder gleiche Rechenwirkung vorhanden: ${escape(existing.get(t.id).join(', '))}. Persönliche Merkmale bleiben erhalten.</small>`:''}</span></label>`).join(''):'<p>Keine passenden Traits.</p>';
+  const choices = traits.length?renderTraitCategoryNote(plan.traitGroup)+traits.map(t=>`<label class="development-trait${getFamilyTraitOrigin(t) ? ' development-trait-family' : ''}"><input type="checkbox" data-development-trait="${t.id}"${plan.traitIds.includes(t.id)?' checked':''}><img src="${t.icon}" alt="" loading="lazy"><span><b>${escape(t.name)} <small>${sign(t.cost)} P</small></b><small>${escape(t.description)}</small>${renderDevelopmentTraitOrigin(t)}${existing.has(t.id)?`<small class="development-existing-effect">Ähnliche oder gleiche Rechenwirkung vorhanden: ${escape(existing.get(t.id).join(', '))}. Persönliche Merkmale bleiben erhalten.</small>`:''}</span></label>`).join(''):'<p>Keine passenden Traits.</p>';
+  return renderRetiredDevelopmentTraits(plan, profile) + choices;
+}
+function renderRetiredDevelopmentTraits(plan, profile) {
+  const owned = getOwnedRetiredDevelopmentTraits(profile);
+  if (!owned.length) return '';
+  return `<section class="development-retired-traits" data-development-role="retired-traits" aria-label="Gespeicherter Altbestand"><h4>Gespeicherter Altbestand</h4><p>Diese früheren Einträge werden nicht mehr neu angeboten. Deine persönliche Wirkung und bisherigen Kosten bleiben erhalten. Abwählen deaktiviert den gespeicherten Eintrag.</p>${owned.map(trait => `<label class="development-trait"><input type="checkbox" data-development-trait="${escape(trait.id)}"${plan.traitIds.includes(trait.id) ? ' checked' : ''}>${trait.icon ? `<img src="${escape(trait.icon)}" alt="" loading="lazy">` : ''}<span><b>${escape(trait.name)} <small>${sign(trait.cost)} P · Altbestand</small></b><small>${escape(trait.description)}</small><small>${plan.traitIds.includes(trait.id) ? 'Aktiv beibehalten' : 'Deaktiviert; gespeicherte Fassung bleibt erhalten'}</small></span></label>`).join('')}</section>`;
 }
 function renderTraitCategoryNote(group) {
+  if (EXPANSION_TRAIT_GROUPS[group]) return `<p class="development-advice">${escape(EXPANSION_TRAIT_GROUPS[group].note)}</p>`;
   const notes = {
+    family: FAMILY_TRAIT_NOTE,
+    general: 'Allgemeine Eigenschaften mit kleinen, dauerhaft geltenden Boni und Mali. Fertigkeitsmodifikatoren vergeben keine Ausbildung.',
     bloodline: 'Blutträger sind Menschen mit einem infernalen oder celestialen Vorfahren. Diese angeborene Anlage wird hier dokumentiert oder nachgetragen. Die Punkte bewerten ihre Wirkung; Abstammung wird nicht durch Training erworben. Zauber und weitere Fähigkeiten werden individuell ausgearbeitet.',
     therianthropy: 'Zatrachs Fluchform und Jüngersegen sind verschiedene Ausprägungen. Die Fluchform wandelt ungewollt und verliert die Kontrolle; der Jüngersegen erhält grundsätzlich Verstand und Steuerung. Wähle die passende Ausprägung je Tier. Die Zahlen bilden die passive Grundprägung ab; Vollformen, Mondereignisse und ihre Handlungen werden individuell geführt.',
     symbiosis: 'Silvanas Symbiose ist erblich und nicht ansteckend. Diese Clanmerkmale bilden die Grundprägung der Tierverbundenheit ab. Tierkommunikation, kontrollierte Tiergestalt und die Urform eines Champions benötigen eine individuell belegte Ausprägung. Ein Clanname allein vergibt diese Fähigkeiten nicht.'
@@ -50,6 +63,8 @@ function renderTraitCategoryNote(group) {
   return note ? `<p class="development-advice">${note}</p>` : '';
 }
 function renderDevelopmentTraitOrigin(trait) {
+  const family = getFamilyTraitOrigin(trait);
+  if (family) return `<small>Angeboren · ${family.family === 'nuadat' ? 'Nuadat · Riesenerbe' : 'Arth · Übermenschliche Kraft'} · Stufe ${family.rank} von 6${family.heightCm ? ` · ${escape((family.heightCm / 100).toLocaleString('de-DE', { minimumFractionDigits: 1 }))} m Körpergröße` : ''}</small>`;
   const origin = getBloodlineTraitOrigin(trait.id);
   if (origin) {
     const examples = origin.examples.length ? ` · Belegtes Beispiel: ${origin.examples.map(example => example.name).join(', ')}` : '';
@@ -62,6 +77,7 @@ function renderDevelopmentTraitOrigin(trait) {
   return `<small><img class="development-clan-emblem" src="${escape(transformation.clanEmblem)}" alt="Wappen ${escape(transformation.clanName)}" loading="lazy"> <a href="${escape(transformation.clanUrl)}" target="_blank" rel="noopener">${escape(transformation.clanName)} ↗</a> · ${escape(transformation.animal)} · Angeborenes Clanerbe · ${source}${transformation.confidence === 'rare-unconfirmed-tradition' ? ' · Seltene Clanüberlieferung' : ''}</small>`;
 }
 function matchesTraitGroup(trait, plan) {
+  if (EXPANSION_TRAIT_GROUPS[plan.traitGroup]) return trait.tags.split(' · ').includes(EXPANSION_TRAIT_GROUPS[plan.traitGroup].tag);
   switch (plan.traitGroup) {
     case 'selected': return plan.traitIds.includes(trait.id);
     case 'body': return trait.tags.includes('Körper');
@@ -69,6 +85,8 @@ function matchesTraitGroup(trait, plan) {
     case 'unique': return trait.tags.includes('Besondere Eigenheit');
     case 'aptitude': return trait.tags.includes('Begabung');
     case 'bloodline': return trait.tags.includes('Blutträger');
+    case 'family': return trait.tags.includes('Familienblut');
+    case 'general': return trait.tags.includes('Allgemeine Eigenschaft');
     case 'therianthropy': return trait.tags.includes('Zatracher Theriantrophie');
     case 'symbiosis': return trait.tags.includes('Silvanische Symbiose');
     case 'affliction': return trait.tags.includes('Dauerhaftes Leiden');
@@ -89,14 +107,14 @@ export function renderDevelopmentShop(profile, preview) {
     <div class="cp-level-up-section-head"><div><span>Individuelle Ausbildung</span><h4>Attacken kaufen</h4></div><small>Vorhandene Attacken bleiben erhalten. Neue Attacken werden ausschließlich gewählt.</small></div>
     <div class="development-balance" data-development-role="balance" aria-live="polite">${renderDevelopmentBalance(preview)}</div>
     <details class="development-effective-attributes"><summary>Wirksame Attribute nach der Entwicklung</summary><p>Grundwerte enthalten die gewählten Steigerungen. Aktive Merkmale und ihre Obergrenzen bestimmen die wirksamen Werte.</p>${renderDevelopmentAttributePreview(preview.profile)}</details>
-    ${renderDevelopmentSelections(p)}
+    ${renderDevelopmentSelections(p, profile)}
     <details><summary>Balance und Preise anpassen</summary><div class="cp-level-up-fields">${settings.map(([key, label, min, max]) => `<label><span>${label}</span><input type="number" min="${min}" max="${max}" data-level-up-path="development.${key}" value="${p.development[key]}"></label>`).join('')}</div><p>Die Einstellungen gelten für diese Figur. Bereits bezahlte Käufe behalten ihren damaligen Preis. Bestehende Attacken kosten rückwirkend keine Punkte. Die Bilanz bewertet Käufe und hier gewählte Katalogtraits; persönliche Sondermerkmale und freie Grundausbildung werden nicht pauschal nachberechnet.</p></details>
     <div class="cp-level-up-fields"><label><span>Klasse</span><select data-level-up-path="purchaseClass"><option value="own"${p.purchaseClass === 'own' ? ' selected' : ''}>Eigene Klasse</option><option value=""${p.purchaseClass === '' ? ' selected' : ''}>Alle Klassen</option><option value="selected"${p.purchaseClass==='selected'?' selected':''}>Gewählte Käufe (${p.purchaseIds.length})</option>${classes.map(([id, name]) => `<option value="${escape(id)}"${p.purchaseClass === id ? ' selected' : ''}>${escape(name)}</option>`).join('')}</select></label><label><span>Attacke suchen</span><input type="search" data-level-up-path="purchaseSearch" value="${escape(p.purchaseSearch)}" placeholder="Name oder Form"></label></div>
     <div class="development-attacks" data-development-role="attacks">${renderDevelopmentAttacks(profile, preview)}</div>
     ${!getDevelopmentAttackCatalog().some(entry=>isOwnDevelopmentClass(profile,entry))?'<p class="development-advice">Für die eigene Klasse ist noch kein freigegebener Kaufkatalog hinterlegt. Fremde Klassen kannst du über „Alle Klassen“ ansehen. Entwurfstechniken werden durch einen Kauf nicht freigeschaltet.</p>':''}
     <p>Der Kauf bildet eine individuelle Einzelausbildung ab. Waffen-, Schild-, Reit- und Aktionsvoraussetzungen gelten beim Einsatz weiterhin; fremde Klassenpassiven werden nicht mitgekauft.</p>
-    <h4>${DEVELOPMENT_TRAITS.length} wählbare Traits</h4><p>Positive und negative Kosten zählen zur Balance. Traits können hier auch später geändert werden. Darunter sind 20 körperbezogene Merkmale. Zahlenboni können sich addieren; mehrfacher Vorteil, Expertise oder dieselbe Resistenz werden nicht vervielfacht.</p>
-    <div class="cp-level-up-fields"><label><span>Traits filtern</span><select data-level-up-path="traitGroup">${Object.entries({all:'Alle Traits',selected:'Gewählte Traits',normal:'Normale Traits',body:'Körpermerkmale',unique:'Besondere Eigenheiten',aptitude:'Begabungen',bloodline:'Blutträger · angeboren',therianthropy:'Zatracher Theriantrophie',symbiosis:'Silvanische Symbiose',...HEALTH_TRAIT_FILTERS,psychological:'Psychologische Prägungen',positive:'Positive Balancekosten',negative:'Negative Balancekosten'}).map(([id,label])=>`<option value="${id}"${p.traitGroup===id?' selected':''}>${label}</option>`).join('')}</select></label><label><span>Trait suchen</span><input type="search" data-level-up-path="traitSearch" value="${escape(p.traitSearch)}" placeholder="Name oder Wirkung"></label></div>
+    <h4>${DEVELOPMENT_TRAITS.length} wählbare Traits</h4><p>Positive und negative Kosten zählen zur Balance. Traits können hier auch später geändert werden. Familienblut hat alternative Stufen; je Linie wirkt nur die höchste aktive. Zahlenboni verschiedener Merkmale können sich addieren; mehrfacher Vorteil, Expertise oder dieselbe Resistenz werden nicht vervielfacht.</p>
+    <div class="cp-level-up-fields"><label><span>Traits filtern</span><select data-level-up-path="traitGroup">${Object.entries({all:'Alle Traits',selected:'Gewählte Traits',normal:'Normale Traits',body:'Körpermerkmale',unique:'Besondere Eigenheiten',aptitude:'Begabungen',bloodline:'Blutträger · angeboren',family:'Familienblut · Nuadat und Arth',general:'Allgemeine Eigenschaften',...Object.fromEntries(Object.entries(EXPANSION_TRAIT_GROUPS).map(([id,group])=>[id,group.label])),therianthropy:'Zatracher Theriantrophie',symbiosis:'Silvanische Symbiose',...HEALTH_TRAIT_FILTERS,psychological:'Psychologische Prägungen',positive:'Positive Balancekosten',negative:'Negative Balancekosten'}).map(([id,label])=>`<option value="${id}"${p.traitGroup===id?' selected':''}>${label}</option>`).join('')}</select></label><label><span>Trait suchen</span><input type="search" data-level-up-path="traitSearch" value="${escape(p.traitSearch)}" placeholder="Name oder Wirkung"></label></div>
     <div class="development-traits" data-development-role="traits">${renderDevelopmentTraits(p,profile)}</div>
   </section>`;
 }
@@ -104,7 +122,7 @@ export function updateDevelopmentSelection(plan, target) {
   const id = target.dataset.developmentPurchase || target.dataset.developmentTrait;
   if (!id) return false;
   const key = target.dataset.developmentPurchase ? 'purchaseIds' : 'traitIds';
-  plan[key] = target.dataset.developmentTrait && target.checked ? selectPsychologicalTrait(selectHealthTrait(plan[key] || [], id), id)
+  plan[key] = target.dataset.developmentTrait && target.checked ? selectFamilyTrait(selectPsychologicalTrait(selectHealthTrait(plan[key] || [], id), id), id)
     : [...new Set([...(plan[key] || []).filter(value => value !== id), ...(target.checked ? [id] : [])])];
   return true;
 }
@@ -116,9 +134,9 @@ export function refreshDevelopmentShop(root, profile, preview, changedTarget = n
   const attributes = root?.querySelector('[data-development-role="effective-attributes"]');
   if (attributes) attributes.outerHTML = renderDevelopmentAttributePreview(preview.profile);
   const selections = root?.querySelector('[data-development-role="selections"]');
-  if (selections) selections.outerHTML = renderDevelopmentSelections(preview.plan);
+  if (selections) selections.outerHTML = renderDevelopmentSelections(preview.plan, profile);
   const selected=root?.querySelector('[data-level-up-path="purchaseClass"] option[value="selected"]');
   if(selected)selected.textContent=`Gewählte Käufe (${preview.plan.purchaseIds.length})`;
   const traits=root?.querySelector('[data-development-role="traits"]');
-  if(traits&&(!changedTarget||['traitSearch','traitGroup'].includes(changedTarget.dataset.levelUpPath)||preview.plan.traitGroup==='selected'||getHealthTraitOrigin(changedTarget?.dataset?.developmentTrait)||getPsychologicalTraitOrigin(changedTarget?.dataset?.developmentTrait)))traits.innerHTML=renderDevelopmentTraits(preview.plan,profile);
+  if(traits&&(!changedTarget||['traitSearch','traitGroup'].includes(changedTarget.dataset.levelUpPath)||preview.plan.traitGroup==='selected'||getRetiredDevelopmentTrait(changedTarget?.dataset?.developmentTrait)||getHealthTraitOrigin(changedTarget?.dataset?.developmentTrait)||getPsychologicalTraitOrigin(changedTarget?.dataset?.developmentTrait)||getFamilyTraitOrigin(changedTarget?.dataset?.developmentTrait)||['development-trait-gross','development-trait-huenenhaft','development-trait-riesenblut'].includes(changedTarget?.dataset?.developmentTrait)))traits.innerHTML=renderDevelopmentTraits(preview.plan,profile);
 }

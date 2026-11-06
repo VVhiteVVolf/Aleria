@@ -19,6 +19,7 @@ import { normalizeDevelopment } from '../character-development/development-state
 import { applyDevelopmentChoices } from '../character-development/development-purchases.js';
 import { DEVELOPMENT_TRAITS } from '../character-development/development-traits.js';
 import { getDevelopmentTraitId } from '../character-development/development-entry-reference.js';
+import { getRetiredDevelopmentTrait } from '../character-development/development-retired-traits.js';
 const HIT_POINT_MODES = new Set(['recommended', 'manual', 'unchanged']);
 const SKILL_PROFICIENCIES = new Set(['none', 'trained', 'expertise']);
 export const CHARACTER_ATTRIBUTE_INCREASE_LEVELS = Object.freeze([4, 8, 12, 16, 20]);
@@ -99,10 +100,10 @@ function normalizePlan(profile, value = {}) {
     purchaseClass: value.purchaseClass == null ? 'own' : text(value.purchaseClass, 120),
     purchaseSearch: text(value.purchaseSearch, 120),
     traitSearch: text(value.traitSearch, 120),
-    traitGroup: ['all','selected','normal','body','unique','aptitude','bloodline','therianthropy','symbiosis','affliction','fever','addiction','tolerance','psychological','positive','negative'].includes(value.traitGroup) ? value.traitGroup : 'all',
+    traitGroup: ['all','selected','normal','body','unique','aptitude','bloodline','family','general','expansion-talents','expansion-quirks','expansion-abilities','therianthropy','symbiosis','affliction','fever','addiction','tolerance','psychological','positive','negative'].includes(value.traitGroup) ? value.traitGroup : 'all',
     development: normalizeDevelopment({ ...profile.progression.development, ...value.development }),
     purchaseIds: [...new Set((Array.isArray(value.purchaseIds)?value.purchaseIds:[]).map(id => text(id, 400)))].slice(0, 256),
-    traitIds: [...new Set((Array.isArray(value.traitIds)?value.traitIds:profile.quirks.filter(q => q.active !== false && DEVELOPMENT_TRAITS.some(t => t.id === getDevelopmentTraitId(q))).map(getDevelopmentTraitId)).map(id => text(id, 120)))],
+    traitIds: [...new Set((Array.isArray(value.traitIds)?value.traitIds:profile.quirks.filter(q => q.active !== false && (DEVELOPMENT_TRAITS.some(t => t.id === getDevelopmentTraitId(q)) || getRetiredDevelopmentTrait(q))).map(getDevelopmentTraitId)).map(id => text(id, 120)))],
     experience: boundedInteger(value.experience, profile.progression.experience, 0, 999999999),
     nextLevelExperience: optionalInteger(value.nextLevelExperience, 1, 999999999),
     hitPointMode: HIT_POINT_MODES.has(hpMode) ? hpMode : 'recommended',

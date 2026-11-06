@@ -1,0 +1,331 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--melog--person-aaae3c9f",
+  "slug": "tangwystl",
+  "identity": {
+    "name": "Tangwystl",
+    "aliases": [],
+    "worldPersonId": "person--melog--person-aaae3c9f"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "melog",
+      "label": "Familie Melog"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "melog",
+        "familyTitle": "Familie Melog",
+        "personId": "person-aaae3c9f",
+        "worldPersonId": "person--melog--person-aaae3c9f",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "married",
+        "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-aaae3c9f",
+        "fingerprint": "{\"name\":\"Tangwystl\",\"title\":\"\",\"birth\":\"1648\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-aaae3c9f.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-29ef1c22\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-29ef1c22\",\"name\":\"Ithel Melog\"}],\"children\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--melog--person-aaae3c9f",
+      "documentIds": [
+        "person--melog--person-aaae3c9f"
+      ],
+      "documents": [
+        {
+          "documentId": "person--melog--person-aaae3c9f",
+          "createdAt": "2026-11-05T18:00:00.000Z",
+          "updatedAt": "2026-11-05T18:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "melog",
+        "personId": "person-aaae3c9f",
+        "worldPersonId": "person--melog--person-aaae3c9f",
+        "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-aaae3c9f"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Melog Honigtoertchen/person-aaae3c9f.json",
+    "sourceExportedAt": "2026-11-05T18:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-05T18:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--melog--person-aaae3c9f"
+    ],
+    "contentHash": "0c6de9b0beb74ea0c42c12ec8b244f04776f9381405349593943aae343bf0e4e"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "melog-honigtoertchen-20261105"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Tangwystl",
+        "title": "Ithels Gemahlin · Tewdwrs Mutter",
+        "fraktion": "",
+        "role": "Ithels Gemahlin · Tewdwrs Mutter",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Gwynthor",
+        "origin": "Cenyri",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Tangwystl ist Ithels Gemahlin und Tewdwrs Mutter. Sie gehört zur älteren Generation der Familie Melog aus Gwynthor. Das Bäcker- und Konditorhandwerk verbindet die Generationen des Hauses; ihr Sohn Tewdwr führt heute die Bäckerei und Konditorei „Zum Honigtörtchen“.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-05T18:00:00.000Z",
+        "updatedAt": "2026-11-05T18:00:00.000Z",
+        "portrait": "../Stammbäume/assets/images/portraits/melog/person-aaae3c9f.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Tangwystl"
+            },
+            {
+              "label": "Geburt",
+              "value": "1648"
+            },
+            {
+              "label": "Haus und Familie",
+              "value": "Melog · Gwynthor"
+            },
+            {
+              "label": "Tätigkeit oder Eigenheit",
+              "value": "Ithels Gemahlin · Tewdwrs Mutter"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/melog/person-aaae3c9f.png",
+            "biographyTitle": "Familie und Leben",
+            "biographyText": "<p>Tangwystl ist Ithels Gemahlin und Tewdwrs Mutter. Sie gehört zur älteren Generation der Familie Melog aus Gwynthor. Das Bäcker- und Konditorhandwerk verbindet die Generationen des Hauses; ihr Sohn Tewdwr führt heute die Bäckerei und Konditorei „Zum Honigtörtchen“.</p>",
+            "documentsTitle": "Die Familie Melog",
+            "documents": [
+              {
+                "title": "Im Stammbaum ansehen",
+                "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+                "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-aaae3c9f"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--melog--person-aaae3c9f"
+        },
+        "genealogy": {
+          "worldPersonId": "person--melog--person-aaae3c9f",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1648",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "melog",
+              "personId": "person-aaae3c9f",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-05T18:00:00.000Z",
+              "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-aaae3c9f",
+              "fingerprint": "{\"name\":\"Tangwystl\",\"title\":\"\",\"birth\":\"1648\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-aaae3c9f.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-29ef1c22\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-29ef1c22\",\"name\":\"Ithel Melog\"}],\"children\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [],
+            "partners": [
+              {
+                "personId": "person-29ef1c22",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-29ef1c22",
+                "name": "Ithel Melog"
+              }
+            ],
+            "children": [
+              {
+                "personId": "person-0c68dade",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-0c68dade",
+                "name": "Tewdwr Melog"
+              }
+            ]
+          }
+        },
+        "id": "person--melog--person-aaae3c9f",
+        "race": "Mensch"
+      }
+    ]
+  },
+  "character": {
+    "name": "Tangwystl",
+    "title": "Ithels Gemahlin · Tewdwrs Mutter",
+    "fraktion": "",
+    "role": "Ithels Gemahlin · Tewdwrs Mutter",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "Cenyri",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Tangwystl ist Ithels Gemahlin und Tewdwrs Mutter. Sie gehört zur älteren Generation der Familie Melog aus Gwynthor. Das Bäcker- und Konditorhandwerk verbindet die Generationen des Hauses; ihr Sohn Tewdwr führt heute die Bäckerei und Konditorei „Zum Honigtörtchen“.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-05T18:00:00.000Z",
+    "updatedAt": "2026-11-05T18:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/melog/person-aaae3c9f.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Tangwystl"
+        },
+        {
+          "label": "Geburt",
+          "value": "1648"
+        },
+        {
+          "label": "Haus und Familie",
+          "value": "Melog · Gwynthor"
+        },
+        {
+          "label": "Tätigkeit oder Eigenheit",
+          "value": "Ithels Gemahlin · Tewdwrs Mutter"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/melog/person-aaae3c9f.png",
+        "biographyTitle": "Familie und Leben",
+        "biographyText": "<p>Tangwystl ist Ithels Gemahlin und Tewdwrs Mutter. Sie gehört zur älteren Generation der Familie Melog aus Gwynthor. Das Bäcker- und Konditorhandwerk verbindet die Generationen des Hauses; ihr Sohn Tewdwr führt heute die Bäckerei und Konditorei „Zum Honigtörtchen“.</p>",
+        "documentsTitle": "Die Familie Melog",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+            "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-aaae3c9f"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--melog--person-aaae3c9f"
+    },
+    "genealogy": {
+      "worldPersonId": "person--melog--person-aaae3c9f",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1648",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "melog",
+          "personId": "person-aaae3c9f",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-05T18:00:00.000Z",
+          "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-aaae3c9f",
+          "fingerprint": "{\"name\":\"Tangwystl\",\"title\":\"\",\"birth\":\"1648\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-aaae3c9f.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-29ef1c22\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-29ef1c22\",\"name\":\"Ithel Melog\"}],\"children\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "person-29ef1c22",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-29ef1c22",
+            "name": "Ithel Melog"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-0c68dade",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-0c68dade",
+            "name": "Tewdwr Melog"
+          }
+        ]
+      }
+    },
+    "id": "person--melog--person-aaae3c9f",
+    "race": "Mensch"
+  }
+}

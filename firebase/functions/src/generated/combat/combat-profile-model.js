@@ -1,15 +1,17 @@
 import { normalizeDevelopment } from '../character-development/development-state.js';
 import { projectCombatRuntimeConditions } from './combat-runtime-condition-projection.js';
 import { reconcileDevelopmentTraitRevision } from '../character-development/development-trait-revisions.js';
+import { getRetiredDevelopmentTrait } from '../character-development/development-retired-traits.js';
 import { isHealthTraitMechanicallyActive, resolveHealthWalkingMovement } from '../character-health/health-trait-policy.js';
 import { isPsychologicalTraitMechanicallyActive } from '../character-development/development-psychological-policy.js';
+import { isFamilyTraitMechanicallyActive } from '../character-development/development-family-policy.js';
 import { resolveCombatAttributeEffects } from './combat-attribute-effects.js';
 import { normalizeSubstanceState } from '../character-health/substance-profiles.js';
 import { getSkillIdentity } from '../skill-checks/skill-definitions.js';
 import { normalizeAdditionalClassSelections } from '../character-development/character-training-state.js';
 import { YLVA_DUEL_OWNER_ID, describeYlvaTechniques } from '../characters/personal-techniques/ylva-technique-prose.js';
 import { normalizeConditionDuration } from './combat-condition-duration.js';
-import { conditionalWeaponModifier, conditionalSkillModifier, conditionalSaveModifier, personalWeaponAttribute } from './combat-personal-modifiers.js';
+import { conditionalWeaponModifier, conditionalSkillModifier, conditionalSaveModifier, personalWeaponAttribute, normalizeWeaponAttributeOverride } from './combat-personal-modifiers.js';
 import { isCombatProfileReadModel, freezeCombatProfileReadModel } from './combat-profile-read-model.js';
 import { reconcileClassDamageRevisions } from '../classes/class-damage-revisions.js?v=20260905-damage-balance-v1';
 import { reconcileFrekiTechniques } from '../creatures/catalog/freki-actions.js';
@@ -183,7 +185,9 @@ function sanitizeMechanicalModifiers(value = {}) {
     ...(source.attributeCaps ? { attributeCaps: sanitizeList(source.attributeCaps, m => ({ attributeKey: getAttributeKey(m?.attributeKey, ''), maximum: normalizeOptionalNumber(m?.maximum, 1, 40) })).filter(m => m.attributeKey && m.maximum != null) } : {}),
     ...(source.dexterityWeaponTypes ? { dexterityWeaponTypes: source.dexterityWeaponTypes.filter(t => WEAPON_TYPES.has(t)) } : {}),
     ...(source.weaponModifiers ? { weaponModifiers: sanitizeList(source.weaponModifiers, m => ({
-      weaponTypes: (m.weaponTypes || []).filter(t => WEAPON_TYPES.has(t)), attack: normalizeNumber(m.attack), damage: normalizeNumber(m.damage) })) } : {}),
+      weaponTypes: (m.weaponTypes || []).filter(t => WEAPON_TYPES.has(t)),
+      ...(m.attackAttributes !== undefined ? { attackAttributes: sanitizeAttributeKeyList(m.attackAttributes) } : {}),
+      attack: normalizeNumber(m.attack), damage: normalizeNumber(m.damage) })) } : {}),
     ...(source.skillModifiers ? { skillModifiers: sanitizeList(source.skillModifiers, m => ({ name: normalizeText(m.name), bonus: normalizeNumber(m.bonus) })) } : {}),
     ...(source.skillProficiencies ? { skillProficiencies: sanitizeList(source.skillProficiencies, m => ({ name: normalizeText(m.name), proficiency: PROFICIENCY_LEVELS.has(m.proficiency) ? m.proficiency : 'none' })) } : {}),
     ...(source.damageAffinities ? { damageAffinities: sanitizeList(source.damageAffinities, normalizeDamageAffinity) } : {}),
@@ -475,6 +479,8 @@ function sanitizeQuirkFields(value = {}, index = 0) {
   return {
     id: normalizeId(source.id, `quirk-${index + 1}`),
     ...(source.developmentTraitId?{developmentTraitId:normalizeId(source.developmentTraitId,'')}:{}),
+    ...(getRetiredDevelopmentTrait(source) && source.cost != null && source.cost !== '' && Number.isFinite(Number(source.cost))
+      ? { cost: normalizeNumber(source.cost, 0, -99999, 99999) } : {}),
     ...(source.icon ? { icon: normalizeText(source.icon, 1000) } : {}),
     name: normalizeText(source.name, 100),
     type: ['quirk', 'trait', 'ideal', 'bond', 'flaw', 'rule'].includes(type) ? type : 'quirk',
@@ -1060,6 +1066,8 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
       overrideMode: armorClass.overrideMode === 'base' ? 'base' : 'total'
     },
     combat: {
+      ...(normalizeWeaponAttributeOverride(combat.weaponAttributeOverride)
+        ? { weaponAttributeOverride: normalizeWeaponAttributeOverride(combat.weaponAttributeOverride) } : {}),
       movement: normalizeNumber(combat.movement, 9, 0, 999),
       initiativeBonus: normalizeNumber(combat.initiativeBonus, 0, -99, 99),
       attackBonus: normalizeNumber(combat.attackBonus ?? source.baseAttackBonus, 0, -99, 99),
@@ -1186,7 +1194,7 @@ function collectActiveMechanicalSources(profile) {
   const equipmentSources = (profile.armorItems || []).filter(item => item.armorRuleVersion === 2 && isActiveEquippedArmor(profile, item))
     .map(item => ({ active: true, mechanics: item.mechanics }));
   return [...profile.quirks, ...profile.conditions, ...profile.abilities, ...auraSources, ...equipmentSources]
-    .filter(entry => entry.active && isHealthTraitMechanicallyActive(entry, profile) && isPsychologicalTraitMechanicallyActive(entry, profile))
+    .filter(entry => entry.active && isHealthTraitMechanicallyActive(entry, profile) && isPsychologicalTraitMechanicallyActive(entry, profile) && isFamilyTraitMechanicallyActive(entry, profile))
     .map(entry => entry.mechanics);
 }
 

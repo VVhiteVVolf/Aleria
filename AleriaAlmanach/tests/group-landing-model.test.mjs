@@ -103,6 +103,7 @@ test('Active session calendar follows the shared timeline and immutable play sta
   const active = projectGroupScene(scenes[0], [{}], { calendar, timeline: () => [{ endSeconds: 45000, aleriaEndDayIndex: 3 }] });
   assert.equal(active.dayLabel, 'Tag 3');
   assert.equal(active.time, '12:30');
+  assert.equal(active.timeSeconds, 45000);
   assert.equal(classifyGroupScene({ ...active, threadId: 'older', ordinal: active.ordinal - 1 }, active, calendar), 'Früher');
   assert.equal(classifyGroupScene({ ...active, threadId: 'next', ordinal: active.ordinal + 1 }, active, calendar), 'Kommend');
   assert.equal(classifyGroupScene({ ...active, threadId: 'unknown', ordinal: null }, active, calendar), 'Zeit offen');

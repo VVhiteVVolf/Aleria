@@ -1,0 +1,121 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-05T18:00:00.000Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Melog Honigtoertchen/person-02518ead.json",
+  "character": {
+    "name": "Teleri Melog",
+    "title": "Kleine Schauspielerin",
+    "fraktion": "Melog",
+    "role": "Kleine Schauspielerin",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "Cenyri",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Teleri ist die jüngste Tochter von Anest und Eiffion und die Schwester von Nerys und Elisedd. Die Familie beschreibt sie als kleine Schauspielerin. Ihre Großeltern Tewdwr und Morfudd gehören zur Leitung des Honigtörtchens, der Bäckerei und Konditorei der Familie Melog in Gwynthor.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-05T18:00:00.000Z",
+    "updatedAt": "2026-11-05T18:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/melog/person-02518ead.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Teleri Melog"
+        },
+        {
+          "label": "Geburt",
+          "value": "1730"
+        },
+        {
+          "label": "Haus und Familie",
+          "value": "Melog · Gwynthor"
+        },
+        {
+          "label": "Tätigkeit oder Eigenheit",
+          "value": "Kleine Schauspielerin"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/melog/person-02518ead.png",
+        "biographyTitle": "Familie und Leben",
+        "biographyText": "<p>Teleri ist die jüngste Tochter von Anest und Eiffion und die Schwester von Nerys und Elisedd. Die Familie beschreibt sie als kleine Schauspielerin. Ihre Großeltern Tewdwr und Morfudd gehören zur Leitung des Honigtörtchens, der Bäckerei und Konditorei der Familie Melog in Gwynthor.</p>",
+        "documentsTitle": "Die Familie Melog",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+            "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-02518ead"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--melog--person-02518ead"
+    },
+    "genealogy": {
+      "worldPersonId": "person--melog--person-02518ead",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1730",
+      "death": "",
+      "houseId": "house-melog",
+      "houseName": "Melog",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "melog",
+          "personId": "person-02518ead",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-05T18:00:00.000Z",
+          "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-02518ead",
+          "fingerprint": "{\"name\":\"Teleri Melog\",\"title\":\"kleine Schauspielerin\",\"birth\":\"1730\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-02518ead.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-a5530d07\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"},{\"personId\":\"person-d9df75d6\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d9df75d6\",\"name\":\"Eiffion\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-a5530d07",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-a5530d07",
+            "name": "Anest Melog"
+          },
+          {
+            "personId": "person-d9df75d6",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-d9df75d6",
+            "name": "Eiffion"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--melog--person-02518ead",
+    "race": "Mensch"
+  }
+}

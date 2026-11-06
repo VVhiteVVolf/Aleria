@@ -1,10 +1,12 @@
-/** Bestätigter Nutzerkontext; reine Anzeigedaten für die lokale Vorbereitung. */
+import { IMPERIAL_TERRITORIAL_RULES, IMPERIAL_APPOINTMENT_PROPOSALS } from './imperial-territorial-rules.mjs';
+
+/** Active user amendments take precedence over the retained earlier source account. */
 export const REALM_CONTEXT = {
   title: 'Leukonia',
   subtitle: 'Provinz des Kaiserreiches Argentum',
   empireTitle: 'Kaiserreich Argentum',
-  introduction: 'Leukonia ist eine der drei großen Provinzen des Silbernen Kaiserreiches. Seine Wurzeln liegen bei den Albath, den Weißalben am südöstlichen Rand Tirnaras.',
-  summary: 'Nach dem Zerfall des Alerischen Kaiserreiches ergriff Sylvarant die Initiative und annektierte benachbarte Regionen, darunter Leukonia. Daraus ging Argentum hervor. Diese Vorbereitung beginnt mit Leukonia und ordnet die Geschichte, Verwaltung und Gesellschaft des Reiches ein.',
+  introduction: 'Leukonia ist eine der drei großen Provinzen des Silbernen Kaiserreiches. Seine zunächst lockeren Stadtstaaten wurden von Shirazad und Phalantia bedrängt und tyrannisiert, ehe Zuwanderer und Befreier aus dem älteren Vardentia ihre Fremdherrschaft brachen.',
+  summary: 'Die gemeinsame Geschichte beginnt im östlichen Vardentia. Von dort wanderten Menschen nach Leukonia und befreiten dessen Stadtstaaten. Nach der späteren Zugehörigkeit zum Alerischen Kaiserreich gingen Vardentia und Leukonia nach dessen Zerfall im Kaiserreich Argentum auf.',
   scope: 'Lokaler Arbeitsentwurf · Leukonia mit fünf aktiven Festlandarchonaten und 26 Orten. Die südliche Insel bleibt vorerst ausgenommen.',
   history: [
     {
@@ -15,17 +17,17 @@ export const REALM_CONTEXT = {
     {
       id: 'albath-argonath',
       title: 'Albath und Argonath',
-      text: 'Die Albath, die sogenannten Weißalben, bewohnten den südöstlichen Rand Tirnaras. Von ihnen spalteten sich die Argonath ab und segelten nach Osten. Beide Volksgruppen wurden nie in das Königreich der Alben integriert und entwickelten eigene Sprachen, Kulturen und Länder.',
+      text: 'Albath, die sogenannten Weißalben, und Argonath gehören zum frühen albischen Erbe Argentums. Außerhalb des Königreiches der Alben entwickelten sie eigene Kulturen und Sprachen. Im östlichen Vardentia wuchs der ältere Ausgangsraum heran; von hier wanderten später Menschen nach Leukonia.',
     },
     {
       id: 'leukonia-silverant',
-      title: 'Leukonia und Sylvarant',
-      text: 'Unter den Albath etablierte sich Leukonia als Land beziehungsweise Provinz. Im Osten blühte Sylvarant auf. Das spätere Kaiserreich von Aleria verleibte sich beide Provinzen ein.',
+      title: 'Vardentia und die Befreiung Leukonias',
+      text: 'Im Osten blühte Vardentia auf. Von dort wanderten Menschen nach Westen in das heutige Leukonia. Dort bestanden lose verbundene Stadtstaaten, die von Shirazad und Phalantia tyrannisiert wurden. Die Vardentier befreiten diese Städte und ließen sich in ihrem Land nieder. Später gehörten beide Länder zum Alerischen Kaiserreich.',
     },
     {
       id: 'argentum',
       title: 'Das Silberne Kaiserreich',
-      text: 'Nach dem Zerfall des großen Alerischen Kaiserreiches annektierte Sylvarant benachbarte Regionen, darunter Leukonia. Gemeinsam wurden sie zum Kaiserreich Argentum. Im entstandenen Machtvakuum etablierte sich das neue Reich rasch als Großmacht.',
+      text: 'Nach dem Zerfall des großen Alerischen Kaiserreiches ergriff Vardentia die Initiative zur Bildung einer neuen imperialen Ordnung. Vardentia und das zuvor befreite Leukonia gingen im Kaiserreich Argentum auf. Das Silberne Kaiserreich etablierte sich im entstandenen Machtvakuum rasch als Großmacht.',
     },
     {
       id: 'tlapatlan',
@@ -39,33 +41,35 @@ export const REALM_CONTEXT = {
     },
   ],
   provinces: [
-    { id: 'leukonia', name: 'Leukonia', text: 'Das Land der Albath am südöstlichen Rand Tirnaras. Diese Großprovinz bildet den Schwerpunkt der aktuellen Vorbereitung.' },
-    { id: 'silverant', name: 'Sylvarant', text: 'Die im Osten aufgeblühte Provinz ergriff nach dem Zerfall des alten Reiches die Initiative zur Expansion und zur Entstehung Argentums.' },
+    { id: 'leukonia', name: 'Leukonia', text: 'Aus lockeren Stadtstaaten hervorgegangen, die von Vardentiern von der Tyrannei Shirazads und Phalantias befreit wurden. Diese Großprovinz bildet den Schwerpunkt der Vorbereitung.' },
+    { id: 'silverant', name: 'Vardentia', text: 'Der ältere östliche Ausgangsraum. Von hier kamen die Zuwanderer und Befreier Leukonias; nach dem Zerfall des alten Reiches ging von hier die Bildung Argentums aus.' },
     { id: 'calidaria', name: 'Calidaria', text: 'Das vom Reich umbenannte Archipel hieß bei den Tlapanui Tlapatlan. Heute leben dort Argenter und Tlapanui als Mischvolk.' },
   ],
   government: {
     title: 'Kaiseramt und Senat',
-    text: 'Argentum wird von einem Kaiser regiert, gegenwärtig einer Kaiserin. Ein Senat vereint wichtige Posten des Reiches. Das frühere höchste politische Amt des Konsuls wurde wegen der Monarchie abgeschafft.',
+    text: 'Argentum besitzt ein imperiales System und wird von einem Kaiser regiert, gegenwärtig einer Kaiserin. Ein Senat vereint wichtige Posten des Reiches. Das frühere höchste politische Amt des Konsuls wurde wegen der Monarchie abgeschafft.',
     senateNote: 'Die drei Prokonsule besitzen automatisch hohe Senatssitze. Auch die Archone sind automatisch Senatoren. Die Gesamtzahl des Senats ist noch nicht festgelegt.',
   },
   administration: {
     chain: [
       { title: 'Kaiseramt', text: 'An der Spitze des Reiches steht gegenwärtig eine Kaiserin.' },
-      { title: 'Prokonsul · Großprovinz', text: 'Drei Prokonsule regieren Leukonia, Sylvarant und Calidaria. Ihnen unterstehen die Archone ihrer Provinz.' },
-      { title: 'Archon · Archonat', text: 'Ein Archon kontrolliert eine große Region innerhalb der Großprovinz. Sein Adelsrang entspricht dem eines Grafen.' },
+      { title: 'Prokonsul · Großprovinz', text: 'Drei Prokonsule regieren Leukonia, Vardentia und Calidaria. Ihnen unterstehen die Archone ihrer Provinz.' },
+      { title: 'Archon · Archonat', text: 'Ein Archon ist ein sesshafter Adliger seiner großen Region innerhalb der Großprovinz. Sein Adelsrang entspricht dem eines Grafen; die örtliche Ausübung von Aufgaben kann er Familien übertragen.' },
     ],
     localPosts: [
       { title: 'Präfekt', text: 'Verwaltet eine größere Region. Der Vergleich mit Baron oder Ritterfürst beschreibt seine Stellung; es handelt sich um ein staatliches Amt.' },
       { title: 'Magistrat', text: 'Regiert eine einzelne Stadt und ihren Bannkreis als staatlicher Amtsträger.' },
     ],
-    appointments: 'Präfekt und Magistrat sind nicht erblich. Der Archon entscheidet über Fortführung oder Neuvergabe; der Kaiser kann auf bestimmten Amtsführungen insistieren.',
+    appointments: 'Präfekt und Magistrat sind nicht erblich. Der Archon entscheidet über Fortführung oder Neuvergabe; der Kaiser kann auf bestimmten Amtsführungen insistieren. Beauftragte Familien erhalten ihre Befugnisse aus dem Amt, während ihr Familienrang davon getrennt bleibt.',
     note: 'Unter dem Archon bestehen keine weiteren Adelsränge. Präfekt und Magistrat sind Verwaltungsposten; eine feste Weisungskette zwischen diesen beiden Ämtern ist nicht festgelegt. Der Größenvergleich von Provinzen mit Grafschaften bleibt neben den drei Großprovinzen und ihren Archonaten begrifflich offen.',
   },
+  territorialRules: IMPERIAL_TERRITORIAL_RULES,
+  appointmentProposals: IMPERIAL_APPOINTMENT_PROPOSALS,
   nobility: [
     { id: 'archon', title: 'Archon', role: 'Adliger einer Region im Rang eines Grafen.', type: 'Adelsrang', note: 'Kontrolliert ein Archonat, untersteht dem Prokonsul und ist automatisch Senator.' },
   ],
   offices: [
-    { id: 'prokonsul', title: 'Prokonsul', role: 'Gouverneur einer gesamten Großprovinz.', type: 'Staatsamt', note: 'Drei Sitze: Leukonia, Sylvarant und Calidaria. Automatischer hoher Senatssitz; oft mit einem weiteren Amt verbunden.' },
+    { id: 'prokonsul', title: 'Prokonsul', role: 'Gouverneur einer gesamten Großprovinz.', type: 'Staatsamt', note: 'Drei Sitze: Leukonia, Vardentia und Calidaria. Automatischer hoher Senatssitz; oft mit einem weiteren Amt verbunden.' },
     { id: 'legat', title: 'Legat', role: 'Oberster militärischer Führer und Marschall des Reiches.', type: 'Staatsamt', note: '' },
     { id: 'quaestor', title: 'Quästor', role: 'Oberster Verwalter und Kämmerer.', type: 'Staatsamt', note: 'Jedem Quästor sind genau fünf Aedile zugeordnet. Auch der Nauticus steht unter ihm.' },
     { id: 'praetor', title: 'Prätor', role: 'Oberster Vorsteher der Justiz und Justiziar.', type: 'Staatsamt', note: 'Leitet zugleich die Judikatur des Othorin.' },
@@ -107,14 +111,14 @@ export const REALM_CONTEXT = {
     'Gesellschaftliche Kaste, Adelsrang, Staatsamt und militärischer Verband werden getrennt geführt. Aus der Kaste allein folgt keine Amtsgewalt.',
     'Präfekt und Magistrat sind lokale Verwaltungsposten; die dreizehn aufgeführten Reichsposten und der Archon als Adelsrang bilden die vierzehn ausdrücklich beschriebenen Posten.',
     'Die sieben aufgezählten Militärentwürfe sind bestätigt. Sie besitzen noch keine festgelegten Klassennamen.',
-    'Die aktive Vorbereitung umfasst fünf Festlandarchonate und 26 Orte. Apinia, Bolar, Lex, Orania, Pelagia und Tremelia bleiben die sechs Archonhäuser; Bolars regionale Zuordnung bleibt offen. Mede beherrscht Zaphias als kaiserliche Domäne.',
+    'Die aktive Vorbereitung umfasst fünf Festlandarchonate und 26 Orte. Apinia, Bolar, Lex, Orania, Pelagia und Tremelia bleiben die sechs Archonhäuser; Bolars regionale Zuordnung bleibt offen. Mede beherrscht Caldessara als kaiserliche Domäne.',
     'Zuerst entstehen die sieben Klassentypen, danach 39 Hausfiguren: sieben bestehende Häuser einschließlich Mede und 32 neue Häuser. Die 32 neuen Hauswappen folgen aus 26 Orten plus sechs weiteren Wappen.',
     'Die südliche Insel bleibt im gelieferten Kartenbild sichtbar, gehört aber vorerst nicht zur aktiven Leukonia-Vorbereitung. Ihre Zugehörigkeit ist offen; sie ist kein sechstes aktives Archonat.',
   ],
   openQuestions: [
     'Die Größenanalogie Provinz ungefähr Grafschaft ist gegenüber den drei Großprovinzen und ihren Archonaten noch begrifflich zu präzisieren.',
     'Die fünf Festlandarchonate tragen noch geografische Arbeitsnamen. Bolars regionale Zuordnung bleibt offen.',
-    'Die Gesamtzahl des Senats, Amtszeiten und weitere Ernennungsregeln sind offen.',
+    'Die Gesamtzahl des Senats und Amtszeiten sind offen. Die ergänzenden Ernennungsverfahren sind als Vorschläge zur Ausgestaltung getrennt von den bestätigten Territorialregeln ausgewiesen.',
     'Die sieben aufgezählten Klassentypen sind inzwischen bestätigt; ihre Klassennamen sind noch offen.',
   ],
 };

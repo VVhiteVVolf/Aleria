@@ -123,9 +123,10 @@ test('output generators, unknown entry points and always tasks never become chec
 
 test('existing validation-only groups are eligible while output-owning groups remain required', () => {
   const tasks = SITE_BUILD_TASKS.map(value => ({ ...value, fingerprint: fingerprint(value.id) }));
-  assert.equal(tasks.filter(canCheckpointTask).length, 45);
+  assert.equal(tasks.filter(canCheckpointTask).length, 46);
   assert.equal(canCheckpointTask(tasks.find(value => value.id === 'notice-boards')), false);
   assert.equal(canCheckpointTask(tasks.find(value => value.id === 'regional-catalog')), false);
   assert.equal(canCheckpointTask(tasks.find(value => value.id === 'map-media')), false);
   assert.equal(canCheckpointTask(tasks.find(value => value.id === 'family-charts')), true);
+  assert.equal(canCheckpointTask(tasks.find(value => value.id === 'honigtoertchen')), true);
 });

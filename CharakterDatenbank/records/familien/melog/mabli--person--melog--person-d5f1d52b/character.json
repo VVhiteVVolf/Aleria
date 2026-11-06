@@ -1,0 +1,331 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--melog--person-d5f1d52b",
+  "slug": "mabli",
+  "identity": {
+    "name": "Mabli",
+    "aliases": [],
+    "worldPersonId": "person--melog--person-d5f1d52b"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "melog",
+      "label": "Familie Melog"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "melog",
+        "familyTitle": "Familie Melog",
+        "personId": "person-d5f1d52b",
+        "worldPersonId": "person--melog--person-d5f1d52b",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "married",
+        "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-d5f1d52b",
+        "fingerprint": "{\"name\":\"Mabli\",\"title\":\"Verpackung und Einkauf / Llywarchs Schwester\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-d5f1d52b.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-a24c0d08\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a24c0d08\",\"name\":\"Guto Melog\"}],\"children\":[{\"personId\":\"person-157c1853\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-157c1853\",\"name\":\"Iddon Melog\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--melog--person-d5f1d52b",
+      "documentIds": [
+        "person--melog--person-d5f1d52b"
+      ],
+      "documents": [
+        {
+          "documentId": "person--melog--person-d5f1d52b",
+          "createdAt": "2026-11-05T18:00:00.000Z",
+          "updatedAt": "2026-11-05T18:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "melog",
+        "personId": "person-d5f1d52b",
+        "worldPersonId": "person--melog--person-d5f1d52b",
+        "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-d5f1d52b"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Melog Honigtoertchen/person-d5f1d52b.json",
+    "sourceExportedAt": "2026-11-05T18:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-05T18:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--melog--person-d5f1d52b"
+    ],
+    "contentHash": "9d16069835324ca604f90db526e91940105ff20a97b371371cab166ddc841b92"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "melog-honigtoertchen-20261105"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Mabli",
+        "title": "Verpackung und Einkauf",
+        "fraktion": "",
+        "role": "Verpackung und Einkauf",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Gwynthor",
+        "origin": "Cenyri",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Mabli betreut Verpackung und Einkauf im Honigtörtchen in Gwynthor. Sie ist mit dem Bäcker Guto Melog verheiratet und die Mutter von Iddon. Ihr Bruder Llywarch ist mit Gutos Schwester Afanen verheiratet und kümmert sich im Familienbetrieb um Verkauf und Gäste.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-05T18:00:00.000Z",
+        "updatedAt": "2026-11-05T18:00:00.000Z",
+        "portrait": "../Stammbäume/assets/images/portraits/melog/person-d5f1d52b.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Mabli"
+            },
+            {
+              "label": "Geburt",
+              "value": "1712"
+            },
+            {
+              "label": "Haus und Familie",
+              "value": "Melog · Gwynthor"
+            },
+            {
+              "label": "Tätigkeit oder Eigenheit",
+              "value": "Verpackung und Einkauf"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/melog/person-d5f1d52b.png",
+            "biographyTitle": "Familie und Leben",
+            "biographyText": "<p>Mabli betreut Verpackung und Einkauf im Honigtörtchen in Gwynthor. Sie ist mit dem Bäcker Guto Melog verheiratet und die Mutter von Iddon. Ihr Bruder Llywarch ist mit Gutos Schwester Afanen verheiratet und kümmert sich im Familienbetrieb um Verkauf und Gäste.</p>",
+            "documentsTitle": "Die Familie Melog",
+            "documents": [
+              {
+                "title": "Im Stammbaum ansehen",
+                "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+                "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-d5f1d52b"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--melog--person-d5f1d52b"
+        },
+        "genealogy": {
+          "worldPersonId": "person--melog--person-d5f1d52b",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1712",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "melog",
+              "personId": "person-d5f1d52b",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-05T18:00:00.000Z",
+              "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-d5f1d52b",
+              "fingerprint": "{\"name\":\"Mabli\",\"title\":\"Verpackung und Einkauf / Llywarchs Schwester\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-d5f1d52b.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-a24c0d08\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a24c0d08\",\"name\":\"Guto Melog\"}],\"children\":[{\"personId\":\"person-157c1853\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-157c1853\",\"name\":\"Iddon Melog\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [],
+            "partners": [
+              {
+                "personId": "person-a24c0d08",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-a24c0d08",
+                "name": "Guto Melog"
+              }
+            ],
+            "children": [
+              {
+                "personId": "person-157c1853",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-157c1853",
+                "name": "Iddon Melog"
+              }
+            ]
+          }
+        },
+        "id": "person--melog--person-d5f1d52b",
+        "race": "Mensch"
+      }
+    ]
+  },
+  "character": {
+    "name": "Mabli",
+    "title": "Verpackung und Einkauf",
+    "fraktion": "",
+    "role": "Verpackung und Einkauf",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "Cenyri",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Mabli betreut Verpackung und Einkauf im Honigtörtchen in Gwynthor. Sie ist mit dem Bäcker Guto Melog verheiratet und die Mutter von Iddon. Ihr Bruder Llywarch ist mit Gutos Schwester Afanen verheiratet und kümmert sich im Familienbetrieb um Verkauf und Gäste.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-05T18:00:00.000Z",
+    "updatedAt": "2026-11-05T18:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/melog/person-d5f1d52b.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Mabli"
+        },
+        {
+          "label": "Geburt",
+          "value": "1712"
+        },
+        {
+          "label": "Haus und Familie",
+          "value": "Melog · Gwynthor"
+        },
+        {
+          "label": "Tätigkeit oder Eigenheit",
+          "value": "Verpackung und Einkauf"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/melog/person-d5f1d52b.png",
+        "biographyTitle": "Familie und Leben",
+        "biographyText": "<p>Mabli betreut Verpackung und Einkauf im Honigtörtchen in Gwynthor. Sie ist mit dem Bäcker Guto Melog verheiratet und die Mutter von Iddon. Ihr Bruder Llywarch ist mit Gutos Schwester Afanen verheiratet und kümmert sich im Familienbetrieb um Verkauf und Gäste.</p>",
+        "documentsTitle": "Die Familie Melog",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+            "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-d5f1d52b"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--melog--person-d5f1d52b"
+    },
+    "genealogy": {
+      "worldPersonId": "person--melog--person-d5f1d52b",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1712",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "melog",
+          "personId": "person-d5f1d52b",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-05T18:00:00.000Z",
+          "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-d5f1d52b",
+          "fingerprint": "{\"name\":\"Mabli\",\"title\":\"Verpackung und Einkauf / Llywarchs Schwester\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-d5f1d52b.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-a24c0d08\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a24c0d08\",\"name\":\"Guto Melog\"}],\"children\":[{\"personId\":\"person-157c1853\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-157c1853\",\"name\":\"Iddon Melog\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "person-a24c0d08",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-a24c0d08",
+            "name": "Guto Melog"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-157c1853",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-157c1853",
+            "name": "Iddon Melog"
+          }
+        ]
+      }
+    },
+    "id": "person--melog--person-d5f1d52b",
+    "race": "Mensch"
+  }
+}

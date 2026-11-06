@@ -152,6 +152,7 @@ import { renderHouseWarriorGallery } from '../../modules/warrior-gallery/house-w
     const target = root.querySelector("[data-haeuser-figures-table-body]");
     if (!target || !figures) return;
     target.closest('table').hidden = !entries.length;
+    target.closest('table').dataset.mobileLayout = figures.mobileLayout === 'stacked' ? 'stacked' : '';
     if (!entries.length) {
       target.replaceChildren();
       return;

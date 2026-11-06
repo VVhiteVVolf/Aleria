@@ -1,16 +1,26 @@
 import { getSkillIdentity } from '../skill-checks/skill-definitions.js';
 import { isHealthTraitMechanicallyActive } from '../character-health/health-trait-policy.js';
 import { isPsychologicalTraitMechanicallyActive } from '../character-development/development-psychological-policy.js';
-// Conditional training stays on the person, never on a transferable item.
+import { isFamilyTraitMechanicallyActive } from '../character-development/development-family-policy.js';
+export function normalizeWeaponAttributeOverride(value) {
+  return value === 'strength' || value === 'dexterity' ? value : '';
+}
+
+// Attribute choice and conditional training stay on the person, never on a transferable item.
 export function personalWeaponAttribute(profile, weapon) {
+  const override = normalizeWeaponAttributeOverride(profile.combat?.weaponAttributeOverride);
+  if (override) return override;
   const trained = (profile.abilities || []).some(a => a.active !== false && a.activationType === 'passive'
     && a.mechanics?.dexterityWeaponTypes?.includes(weapon.weaponType));
   return trained ? 'dexterity' : weapon.attackAttribute;
 }
 export function conditionalWeaponModifier(profile, weapon, key) {
+  const attackAttribute = personalWeaponAttribute(profile, weapon);
   return passiveSources(profile)
     .flatMap(a => a.mechanics?.weaponModifiers || [])
-    .filter(m => m.weaponTypes.includes(weapon.weaponType))
+    .filter(m => (m.weaponTypes.includes(weapon.weaponType)
+      || (!m.weaponTypes.length && Array.isArray(m.attackAttributes)))
+      && (!Array.isArray(m.attackAttributes) || m.attackAttributes.includes(attackAttribute)))
     .reduce((sum, m) => sum + Number(m[key] || 0), 0);
 }
 export function conditionalSkillModifier(profile, skill) {
@@ -23,7 +33,7 @@ function passiveSources(profile) {
   return [...(profile.abilities || []).filter(a => a.activationType === 'passive'),
     ...(profile.quirks || []), ...(profile.conditions || [])]
     .filter(source => source.active !== false && isHealthTraitMechanicallyActive(source, profile)
-      && isPsychologicalTraitMechanicallyActive(source, profile));
+      && isPsychologicalTraitMechanicallyActive(source, profile) && isFamilyTraitMechanicallyActive(source, profile));
 }
 export function conditionalSaveModifier(profile, context = {}) {
   const effects = context.effects || [];

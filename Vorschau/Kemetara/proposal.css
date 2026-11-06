@@ -1,0 +1,17 @@
+@import url('../shared/country-workbench/workbench.css');
+@import url('../shared/country-workbench/heraldry-gallery.css');
+@import url('../shared/country-workbench/estate-cards.css');
+@import url('./kemetara-context.css');
+@import url('./kemetara-map.css');
+@import url('./kemetara-art.css');
+.kemetara-workbench{--paper:#f3ead5;--ink:#332c23;--muted:#75694e;--accent:#92752d;--line:#ccb88b;background:#d8caac}
+.kemetara-workbench .hero{background:linear-gradient(120deg,#f8efd9,#d9decf);gap:35px}
+.kemetara-workbench .lead{color:var(--muted)}
+.kemetara-workbench .toolbar nav{gap:15px}
+.kemetara-workbench .house-art-card,.kemetara-workbench .prototype-grid article{background:#eaddbd}
+.skip-link{position:fixed;left:15px;top:-80px;z-index:100;padding:12px 18px;background:var(--paper)}
+.skip-link:focus{top:12px}
+@media(max-width:1050px){.kemetara-workbench .toolbar{flex-wrap:wrap}.kemetara-workbench .toolbar nav{width:100%;justify-content:space-between;margin:0}}
+@media(max-width:650px){.kemetara-workbench .hero{grid-template-columns:1fr}}
+@media(max-width:420px){.kemetara-workbench .toolbar nav{gap:7px;font-size:10px}}
+@media print{.skip-link{display:none}}

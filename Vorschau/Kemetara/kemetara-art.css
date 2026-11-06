@@ -1,0 +1,11 @@
+.kemetara-workbench .prototype-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.kemetara-art-dialog h2{overflow-wrap:anywhere}
+.kemetara-art-dialog .art-detail-layout figure{position:static}
+.kemetara-art-dialog .art-detail-layout figure img{max-height:72vh;object-fit:contain}
+.kemetara-art-dialog .prototype-art-detail figure img{height:72vh}
+.kemetara-art-dialog .house-figure-pair{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:center}
+.kemetara-art-dialog .house-figure-pair figure:first-child img{max-height:45vh}
+.kemetara-art-dialog .house-figure-pair figure:nth-child(2) img{height:72vh}
+.region-card .art-button img{height:280px;object-fit:contain}
+@media(max-width:1100px){.kemetara-workbench .prototype-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.kemetara-workbench .prototype-grid,.kemetara-art-dialog .house-figure-pair{grid-template-columns:1fr}}

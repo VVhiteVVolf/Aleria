@@ -70,7 +70,7 @@ export const ARCHONATES = Object.freeze([
     "id": "archonat-nordost",
     "name": "Nordostarchonat",
     "nameStatus": "geographic-working-label",
-    "description": "Mintgrünes nordöstliches Festlandsgebiet; Zaphias bleibt darin als eigene kaiserliche Stadtdomäne.",
+    "description": "Mintgrünes nordöstliches Festlandsgebiet; Caldessara bleibt darin als eigene kaiserliche Stadtdomäne.",
     "colour": "#6cddbe",
     "houseId": "house-pelagia",
     "assignmentStatus": "editable-proposal",
@@ -125,11 +125,11 @@ export const ARCHONATES = Object.freeze([
   }
 ].map((entry) => Object.freeze(entry)));
 
-// Four source names remain; the other 22 mainland names are workshop proposals from 2026-11-03.
+// Four retired baked labels are replaced in the active view by the 2026-11-06 user amendment; IDs and anchors remain stable.
 export const SETTLEMENTS = Object.freeze([
   {
     "id": "alvanista",
-    "name": "Alvanista",
+    "name": "Neravessa",
     "archonateId": "archonat-nord",
     "point": [
       26.8982,
@@ -151,7 +151,7 @@ export const SETTLEMENTS = Object.freeze([
       2203.5,
       178.5
     ],
-    "nameStatus": "source",
+    "nameStatus": "replacement-proposal",
     "sourceKey": "alvanista"
   },
   {
@@ -225,7 +225,7 @@ export const SETTLEMENTS = Object.freeze([
       11.7808
     ],
     "overlayLabel": true,
-    "description": "Mintgrünes nordöstliches Festlandsgebiet; Zaphias bleibt darin als eigene kaiserliche Stadtdomäne.",
+    "description": "Mintgrünes nordöstliches Festlandsgebiet; Caldessara bleibt darin als eigene kaiserliche Stadtdomäne.",
     "kind": "circle",
     "sourceMarkerShape": "circle",
     "sourcePixelCentre": [
@@ -291,7 +291,7 @@ export const SETTLEMENTS = Object.freeze([
   },
   {
     "id": "aspio",
-    "name": "Aspio",
+    "name": "Ascervia",
     "archonateId": "archonat-west",
     "point": [
       8.6975,
@@ -313,7 +313,7 @@ export const SETTLEMENTS = Object.freeze([
       712.5,
       867.5
     ],
-    "nameStatus": "source",
+    "nameStatus": "replacement-proposal",
     "sourceKey": "aspio"
   },
   {
@@ -387,7 +387,7 @@ export const SETTLEMENTS = Object.freeze([
       29.8097
     ],
     "overlayLabel": true,
-    "description": "Mintgrünes nordöstliches Festlandsgebiet; Zaphias bleibt darin als eigene kaiserliche Stadtdomäne.",
+    "description": "Mintgrünes nordöstliches Festlandsgebiet; Caldessara bleibt darin als eigene kaiserliche Stadtdomäne.",
     "kind": "circle",
     "sourceMarkerShape": "circle",
     "sourcePixelCentre": [
@@ -414,7 +414,7 @@ export const SETTLEMENTS = Object.freeze([
       30.2567
     ],
     "overlayLabel": true,
-    "description": "Mintgrünes nordöstliches Festlandsgebiet; Zaphias bleibt darin als eigene kaiserliche Stadtdomäne.",
+    "description": "Mintgrünes nordöstliches Festlandsgebiet; Caldessara bleibt darin als eigene kaiserliche Stadtdomäne.",
     "kind": "circle",
     "sourceMarkerShape": "circle",
     "sourcePixelCentre": [
@@ -441,7 +441,7 @@ export const SETTLEMENTS = Object.freeze([
       32.0447
     ],
     "overlayLabel": true,
-    "description": "Mintgrünes nordöstliches Festlandsgebiet; Zaphias bleibt darin als eigene kaiserliche Stadtdomäne.",
+    "description": "Mintgrünes nordöstliches Festlandsgebiet; Caldessara bleibt darin als eigene kaiserliche Stadtdomäne.",
     "kind": "circle",
     "sourceMarkerShape": "circle",
     "sourcePixelCentre": [
@@ -480,7 +480,7 @@ export const SETTLEMENTS = Object.freeze([
   },
   {
     "id": "zaphias",
-    "name": "Zaphias",
+    "name": "Caldessara",
     "archonateId": "archonat-nordost",
     "point": [
       56.2073,
@@ -495,14 +495,14 @@ export const SETTLEMENTS = Object.freeze([
       44.1562
     ],
     "overlayLabel": false,
-    "description": "Mintgrünes nordöstliches Festlandsgebiet; Zaphias bleibt darin als eigene kaiserliche Stadtdomäne.",
+    "description": "Mintgrünes nordöstliches Festlandsgebiet; Caldessara bleibt darin als eigene kaiserliche Stadtdomäne.",
     "kind": "square",
     "sourceMarkerShape": "square",
     "sourcePixelCentre": [
       4604.5,
       1980.5
     ],
-    "nameStatus": "source",
+    "nameStatus": "replacement-proposal",
     "sourceKey": "zaphias",
     "imperialDomain": true,
     "kindLabel": "Kaiserliche Domäne",
@@ -537,7 +537,7 @@ export const SETTLEMENTS = Object.freeze([
   },
   {
     "id": "allantaic",
-    "name": "Allantaic",
+    "name": "Orthevia",
     "archonateId": "archonat-west",
     "point": [
       6.3293,
@@ -559,7 +559,7 @@ export const SETTLEMENTS = Object.freeze([
       518.5,
       2031.5
     ],
-    "nameStatus": "source",
+    "nameStatus": "replacement-proposal",
     "sourceKey": "allantaic"
   },
   {

@@ -26,8 +26,11 @@ export function describeCombatMechanics(mechanics = {}) {
   for (const entry of mechanics.skillProficiencies || []) if (proficiency(entry.proficiency)) parts.push(`${entry.name}: ${proficiency(entry.proficiency)}`);
   for (const entry of mechanics.weaponModifiers || []) {
     const weapons = entry.weaponTypes?.length ? entry.weaponTypes.map(weapon).join('/') : 'Alle Waffen';
-    if (Number(entry.attack)) parts.push(`${weapons}: Angriff ${signed(entry.attack)}`);
-    if (Number(entry.damage)) parts.push(`${weapons}: Schaden ${signed(entry.damage)}`);
+    if (Array.isArray(entry.attackAttributes) && !entry.attackAttributes.length) continue;
+    const scope = entry.attackAttributes?.length
+      ? `${weapons} mit ${entry.attackAttributes.map(attribute).join('/')} als Angriffsattribut` : weapons;
+    if (Number(entry.attack)) parts.push(`${scope}: Angriff ${signed(entry.attack)}`);
+    if (Number(entry.damage)) parts.push(`${scope}: Schaden ${signed(entry.damage)}`);
   }
   if (mechanics.dexterityWeaponTypes?.length) parts.push(`GES für ${mechanics.dexterityWeaponTypes.map(weapon).join('/')}`);
   for (const entry of mechanics.saveAttributeModifiers || []) if (Number(entry.bonus)) parts.push(`${attribute(entry.attributeKey)}-Rettung ${signed(entry.bonus)}`);

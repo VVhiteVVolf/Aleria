@@ -1,4 +1,4 @@
-﻿    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
     import { getAuth, onIdTokenChanged, signInAnonymously, EmailAuthProvider, linkWithCredential, signInWithEmailAndPassword, signOut, sendPasswordResetEmail, sendEmailVerification, updateProfile, setPersistence, browserLocalPersistence, reload }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
     import { getFunctions, httpsCallable }
@@ -1186,7 +1186,7 @@
           }, { merge: true });
         });
       },
-      async loadRecentComments(n) {
+      async loadRecentComments(n, options = {}) {
         try {
           const { getDocs, collection } = await import(
             "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"
@@ -1204,12 +1204,13 @@
         } catch(e) {
           console.error('loadRecentComments:', e);
           notifyAppStatus(getFirebaseErrorMessage(e, 'Letzte Aktivitäten konnten nicht geladen werden.'));
+          if (options.throwOnError) throw e;
           return [];
         }
       },
-      async loadAllComments() {
+      async loadAllComments(options = {}) {
         try {
-          const snap = await getDocs(collection(db, 'comments'));
+          const snap = await (options.serverOnly === true ? getDocsFromServer : getDocs)(collection(db, 'comments'));
           return snap.docs.map(d => ({ id: d.id, ...d.data() }));
         } catch(e) {
           console.error('loadAllComments:', e);

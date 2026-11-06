@@ -13,7 +13,7 @@ export const ARTWORKS = [
   },
   {
     "id": "province-sylvarant",
-    "name": "Sylvarant · Provinzwappen",
+    "name": "Vardentia · Provinzwappen",
     "kind": "province",
     "description": "Ein silberner Legionär auf dem Berg verzehrt sich nach der Berührung des geflügelten Halbgottes. Die Gestik ist an Michelangelos Schöpfung Adams angelehnt.",
     "motif": "Ein silberner römischer Legionär steht angespannt auf einem Berg und streckt sich sehnsüchtig nach dem Finger eines geflügelten Halbgottes. Seine freie Hand liegt an der Brust; zwischen den Fingerspitzen bleibt eine kleine Lücke.",

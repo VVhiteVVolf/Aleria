@@ -4,7 +4,7 @@ export const MAP_VARIANTS = Object.freeze([
     "id": "regions",
     "number": 1,
     "short": "Gelieferte Karte",
-    "file": "Kaiserreich (Sylvarant).png",
+    "file": "Vardentia · Gebietskarte",
     "map": "assets/maps/sylvarant.webp",
     "imageSize": [
       4063,

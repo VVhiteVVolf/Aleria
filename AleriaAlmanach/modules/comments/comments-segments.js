@@ -1,4 +1,4 @@
-﻿function renderCommentSegmentList() {
+function renderCommentSegmentList() {
   const list = document.getElementById('cf-segment-list');
   if (!list) return;
   if (!_commentSegments.length) _commentSegments = [makeCommentSegment('speech')];
@@ -214,7 +214,7 @@ function getBaseCommentActorState() {
         name: char.name || 'Unbekannt',
         title: char.title || '',
         portrait: char.portrait || null,
-        characterId: _selectedCharId,
+        characterId: char.id,
         avatarKind: 'portrait',
         char
       };

@@ -30,6 +30,9 @@ const SOURCE_ARCHIVE_ROOTS = [
   'Vorschau/Phalantia/scripts/',
   'Vorschau/Klythesia/sources/',
   'Vorschau/Klythesia/scripts/',
+  'Vorschau/Kemetara/sources/',
+  'Vorschau/Kemetara/scripts/',
+  'Vorschau/Kemetara/tests/',
   'Vorschau/Mathringen/sources/',
   'Vorschau/Mathringen/scripts/',
   'Vorschau/Mathringen/tests/',
@@ -96,6 +99,9 @@ export function isAuthoringArchive(file) {
     || file === 'Vorschau/Phalantia/source-import.json'
     || file === 'Vorschau/Klythesia/assets.source.json'
     || file === 'Vorschau/Klythesia/source-import.json'
+    || file === 'Vorschau/Kemetara/assets.source.json'
+    || file === 'Vorschau/Kemetara/source-import.json'
+    || /^Vorschau\/Kemetara\/assets\/(?:estates|warriors|emblems|regions)\/(?:[a-z-]*manifest\.json|generated(?:-archive)?\/)/.test(file)
     || file === 'Vorschau/Mathringen/assets.source.json'
     || file === 'Vorschau/Mathringen/source-import.json'
     || /^Vorschau\/Mathringen\/assets\/(?:estates|warriors|emblems)\/(?:[a-z-]*manifest\.json|generated(?:-archive)?\/)/.test(file)

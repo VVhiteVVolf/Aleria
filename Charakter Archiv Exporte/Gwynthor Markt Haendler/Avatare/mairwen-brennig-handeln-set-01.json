@@ -1,0 +1,69 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-05T16:07:25.012Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthor Markt Haendler/Avatare/mairwen-brennig-handeln-set-01.json",
+  "character": {
+    "id": "gwynthor-markt-mairwen-brennig",
+    "name": "Mairwen Brennig",
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Fmairwen-brennig%2Feacacb21c38a7dd93bab8d6e4677acd8a1cd198f5990567ab4ca8eb5ab708e7a.png?alt=media&token=a62387cc-1b23-45d9-94c1-5cc88153b7fd",
+        "emotes": [],
+        "createdAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "handeln-set-01",
+        "name": "Feilschen & Handeln",
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Fmairwen-brennig%2Feacacb21c38a7dd93bab8d6e4677acd8a1cd198f5990567ab4ca8eb5ab708e7a.png?alt=media&token=a62387cc-1b23-45d9-94c1-5cc88153b7fd",
+        "emotes": [
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fmairwen-brennig%2F7e86744d2203f65da33bc16b3f16ccad112f521ff441bb5779e5ffc9197cb31c.png?alt=media&token=38e96574-bad6-4eef-847a-33da12235a81",
+            "label": "Kundschaft locken"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fmairwen-brennig%2F1bfa1f026b8333a3f46fa7df41b973482021a10e2af57971af43a703be164618.png?alt=media&token=ed7f53ff-3225-4e71-878f-f9752e08d4da",
+            "label": "Anpreisen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fmairwen-brennig%2F1ea52b1d348684ef66e5b1b7068215b2e59a907e33269fd9c89e04775198af72.png?alt=media&token=9d19d018-aa04-4275-ab0f-53e0fd6a98d0",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fmairwen-brennig%2Fa5c972580a2c8c8fcd225a88526f7f1cfa4a06e195df282ff4a37684df7d6740.png?alt=media&token=7e7ac56b-078a-4f52-b7b6-690a5ff3291e",
+            "label": "Zu wenig!"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fmairwen-brennig%2Fd0067ed92c95e0a0ad89fe79161d5ee19435904e8d531c8317ef83ed7a165921.png?alt=media&token=d6cc1757-74a3-447f-ae92-3bc610295223",
+            "label": "Preis abwägen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fmairwen-brennig%2F962a802c129891f1c5ef3c43de34add6e1c1aba5982a6de9a1c5bb708e4f75f9.png?alt=media&token=66470757-ae69-4778-89ae-5219b3a7aadb",
+            "label": "Fester Preis"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fmairwen-brennig%2F5859f7d01d95eb29332727a51606c375980d48807c1506e00999278c075ca686.png?alt=media&token=87f3a6c0-df5e-4343-b929-a0541f68d608",
+            "label": "Letzter Nachlass"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fmairwen-brennig%2F387d30966747fca1adb21d68270216ae90bd017f8b2c8c76625faddaf2ff96c3.png?alt=media&token=d7e9c6a6-dcc6-4fd6-b2da-0b220a17b149",
+            "label": "Einlenken"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fmairwen-brennig%2F2c318091f57bf1f21e8e65e744a724e6e4265a5ab6129a5c80200cf1aaf16728.png?alt=media&token=98ef4907-73e0-4f63-94a5-e544d12a24d3",
+            "label": "Geschäftsabschluss"
+          }
+        ],
+        "createdAt": "2026-11-05T00:00:00.000Z",
+        "updatedAt": "2026-11-05T00:00:00.000Z"
+      }
+    ],
+    "imageSetsOverride": true,
+    "updatedAt": "2026-11-05T16:07:25.012Z"
+  }
+}

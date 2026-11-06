@@ -32,8 +32,10 @@ Nach Zarakhuls Niederlage blieb Tirnara von zerstreuten Sippen, vermischten
 Bevölkerungen und neuen Machtbildungen geprägt. Im heutigen Phalantia und
 Klythesia schufen Phalantias Begründer eine männerdominierte Kriegerkultur.
 Aus einem Stadtstaat entstand durch die Eroberung weiterer Städte eine
-größere Herrschaft. Leukonias Widerstand und die nördliche Wüste begrenzten
-ihre Ausdehnung.
+größere Herrschaft. Die lockeren Stadtstaaten Leukonias litten unter
+phalantischer und shirazadischer Tyrannei. Menschen aus dem älteren östlichen
+Vardentia wanderten nach Leukonia und befreiten diese Städte. Die nördliche
+Wüste blieb eine Grenze phalantischer Ausdehnung.
 
 Nach Jahrhunderten wurde Phalantia in das Alerische Kaiserreich eingegliedert.
 Es blieb ein widerspenstiger Grenzvasall und rebellierte häufig. Beim Zerfall
@@ -45,6 +47,14 @@ Kyreon als Gottkönig in einer amazonischen, matriarchalen Kriegergesellschaft.
 Phalantia und Klythesia teilen weiterhin die Sprache **Stoicheia**.
 
 ## Sprache und Schrift auseinanderhalten
+
+Die ergänzende Landesfestlegung vom 6. November 2026 setzt den östlichen
+Ausgangsraum **Vardentia** vor die Wanderung nach Leukonia. Leukonia ist in dieser
+Geschichte nicht das ältere Mutterland einer anschließenden Ostauswanderung.
+Die frühere aktive Bezeichnung Sylvarant ist ersetzt; historische Originalpakete
+und stabile interne Kennungen bleiben erhalten. Diese politische und
+bevölkerungsgeschichtliche Korrektur schafft keinen weiteren Sprachbruch und
+ändert keine Lautwerte, Wörter oder Namenslisten.
 
 - **Kana’anith:** Eigenständiger tirnarischer Sprachraum nach dem Sprachbruch.
   Das Ogham-Erbe bezeichnet die ältere Schrifttradition, keine ungebrochene

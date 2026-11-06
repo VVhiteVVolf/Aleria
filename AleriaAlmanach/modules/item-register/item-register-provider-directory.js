@@ -22,6 +22,7 @@ export const PROVIDER_REGIONS = Object.freeze({
 });
 
 const directory = Object.freeze({
+  'zum-honigtoertchen': { tradeId: 'other', regionId: 'celtigerns-wacht', location: 'Gwynthor · Bäckerei & Konditorei', image: './assets/zum-honigtoertchen/scenes/aussenansicht.png' },
   'lothaires-arkaneum': { tradeId: 'other', regionId: 'celtigerns-wacht', location: 'Gwynthor-Stadt · Parkviertel', image: './assets/herluin-lothaire/module-art/ladenschild.png' },
   'gortach-brauerei': { tradeId: 'brewers', regionId: 'tir-na-tonn', location: 'Broch an Ear' },
   'teyrngarch-brauerzunft': { tradeId: 'brewers', regionId: 'sonnenkueste', location: 'Aberon' },

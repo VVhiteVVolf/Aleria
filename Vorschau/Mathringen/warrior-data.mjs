@@ -69,5 +69,15 @@ export const CLASS_PROTOTYPES = [
     "image": "assets/warriors/previews/greifenreiter.webp",
     "fullsize": "assets/warriors/production/greifenreiter.png",
     "ready": true
+  },
+  {
+    "id": "demogryphenritter",
+    "name": "Demogryphenritter",
+    "description": "Ein schwer gepanzerter Reiter auf einem flügellosen Demogryphen: Adlerkopf, zwei vogelige Vorderbeine und löwenartige Hinterhand. Der neue Klassenentwurf legt keine weiteren Greifenreitprivilegien für Häuser fest.",
+    "equipment": "Lanze, schwerer Plattenharnisch, flügelloser Demogryph mit Sattel und Zaumzeug",
+    "gender": "male",
+    "image": "assets/warriors/previews/demogryphenritter.webp",
+    "fullsize": "assets/warriors/production/demogryphenritter.png",
+    "ready": true
   }
 ];

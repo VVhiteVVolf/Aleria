@@ -5,6 +5,7 @@ import { getCombatResolutionTree, getCommentCombatResolutionGroups } from './com
 import { getCombatAttackRange } from './combat-attack-range.js';
 import { getCombatSupportEquipment } from './combat-support-equipment.js';
 import { getCombatReactionBlock } from './combat-action-permission.js';
+import { getCombatStoredConditions } from './combat-runtime-condition-projection.js';
 import '../scene-regeneration/scene-regeneration-policy.js';
 
 export const COMBAT_RULE_PHASES = Object.freeze([
@@ -72,8 +73,9 @@ function tagKey(value) {
 
 function collectProfileTags(profile = {}) {
   const values = [];
-  ['quirks', 'conditions', 'abilities'].forEach(collection => {
-    (Array.isArray(profile?.[collection]) ? profile[collection] : []).forEach(entry => {
+  const conditions = [...getCombatStoredConditions(profile), ...(Array.isArray(profile.temporaryConditions) ? profile.temporaryConditions : [])];
+  [profile.quirks, conditions, profile.abilities].forEach(entries => {
+    (Array.isArray(entries) ? entries : []).forEach(entry => {
       if (entry?.active === false) return;
       values.push(entry?.name);
       values.push(...String(entry?.tags || '').split(/[,;·]/));
@@ -258,11 +260,17 @@ function actionAllows(rule, actionKind, profileActionId = '', state = {}) {
   if (rule.weaponAttackOnly && state.actorProfile?.actionResolutionMode !== 'weapon-attack') return false;
   if (rule.attackRange && rule.attackRange !== getCombatAttackRange(state.actorProfile)) return false;
   if (rule.damageTypes?.length) {
-    const actor=state.actorProfile || {},weapon=actor.weapon || {};
-    const damageTypes=state.saveContext ? [state.saveContext.damageType].filter(Boolean) : [weapon.damageType,...(actor.selectedAction?.effects || actor.actionEffects || [])
-      .filter(effect=>effect.type==='damage').map(effect=>resolveCombatEffectDamageType(effect,weapon))]
-      .filter(Boolean).map(type=>String(type).toLowerCase());
-    if(!rule.damageTypes.some(type=>damageTypes.includes(type)))return false;
+    const actor = state.actorProfile || {}, weapon = actor.weapon || {};
+    const effects = normalizeCombatEffects(Array.isArray(actor.selectedAction?.effects) ? actor.selectedAction.effects : actor.actionEffects || []);
+    const damageEffects = effects.filter(effect => effect.type === 'damage' && effect.target !== 'self');
+    const effectTypes = damageEffects.map(effect => resolveCombatEffectDamageType(effect, weapon));
+    // Match the resolver: structured effects replace implicit weapon damage.
+    // An empty legacy action retains its base unless explicitly non-damaging.
+    const hasBaseDamage = effects.length === 0 && !actor.selectedAction?.nonDamaging;
+    const types = state.saveContext ? [state.saveContext.damageType]
+      : [...(hasBaseDamage ? [weapon.damageType] : []), ...effectTypes];
+    const damageTypes = types.filter(Boolean).map(type => String(type).toLowerCase());
+    if (!rule.damageTypes.some(type => damageTypes.includes(type))) return false;
   }
   if (rule.requiredWeaponId) {
     if (!['weapon', 'technique'].includes(actionKind)) return false;

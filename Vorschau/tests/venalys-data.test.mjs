@@ -130,6 +130,25 @@ test('all 17 Magnarier and all five patrician houses have a noble military repre
   assert.match(context.governance.senate, /ab 30/);
 });
 
+test('five existing patrician houses supply the Doges while the elected tribune chairs and mediates the Senate', () => {
+  const government = context.governance;
+  const doges = government.offices.find(office => office.title === 'Fünf Dogen');
+  assert(doges);
+  for (const house of houses.filter(house => house.rank === 'patrician')) {
+    assert(doges.description.includes(house.name), house.name);
+    assert(government.leadership.includes(house.name), house.name);
+  }
+  assert.match(government.leadership, /gemeinsam mit dem Senat und dem Rat/);
+  assert.match(government.council, /Zusammensetzung.*noch nicht festgelegt/);
+  const tribune = government.secondaryOffices.find(office => office.title === 'Volkstribun');
+  assert.match(tribune.description, /vom Volk gewählt/);
+  assert.match(tribune.description, /schlichtet im Senat/);
+  assert.match(tribune.description, /leitet dessen Reden und Beratungen/);
+  assert.match(tribune.description, /Vetorecht/);
+  assert.doesNotMatch(tribune.description, /jährlich|einmal.*Jahr/i);
+  assert.doesNotMatch(JSON.stringify(government), /Zwei Dogen|zwei Staatsoberhäupter/);
+});
+
 test('Venalys runtime dependency closure is publishable without its excluded authoring source archive', () => {
   const seen = new Set();
   function visit(url) {

@@ -9,6 +9,7 @@ import { normalizeDevelopment, getDevelopmentBalance } from './development-state
 import { reviewDevelopmentTraitBalance } from './development-balance-review.js';
 import { getCharacterClassIds } from './character-training-state.js';
 import { getDevelopmentTraitId, getDevelopmentTechniqueId } from './development-entry-reference.js';
+import { getRetiredDevelopmentTrait, getOwnedRetiredDevelopmentTraits } from './development-retired-traits.js';
 
 let catalog;
 export function getDevelopmentAttackCatalog() {
@@ -41,8 +42,10 @@ export function getDevelopmentAttackCost(profile, entry, settings = profile.prog
 }
 export function getDevelopmentSummary(profile) {
   const balance = getDevelopmentBalance(profile);
-  const traits=(profile.quirks||[]).filter(q=>q.active!==false).map(q=>DEVELOPMENT_TRAITS.find(t=>t.id===getDevelopmentTraitId(q))).filter(Boolean);
+  const retired=getOwnedRetiredDevelopmentTraits(profile).filter(trait=>trait.active!==false);
+  const traits=(profile.quirks||[]).filter(q=>q.active!==false).map(q=>DEVELOPMENT_TRAITS.find(t=>t.id===getDevelopmentTraitId(q))).filter(Boolean).concat(retired);
   const review=reviewDevelopmentTraitBalance(profile,traits);
+  if (retired.length) review.warnings.push('Gespeicherter Altbestand bleibt mit seiner persönlichen Wirkung und bisherigen Kosten erhalten. Er wird nicht mehr neu angeboten und kann unter Altbestand deaktiviert werden.');
   return { ...balance, ...review, remaining: balance.remaining - review.traitCost };
 }
 export function applyDevelopmentChoices(profile, plan) {
@@ -68,11 +71,20 @@ export function applyDevelopmentChoices(profile, plan) {
   }
   const selected = new Set(plan.traitIds || []);
   const managed = new Set(DEVELOPMENT_TRAITS.map(t => t.id));
-  for(const id of selected)if(!managed.has(id))errors.push(`Unbekannter Trait: ${id}`);
+  const ownedRetired = new Set(getOwnedRetiredDevelopmentTraits(profile).map(trait=>trait.id));
+  for(const id of selected)if(!managed.has(id)&&!ownedRetired.has(id))errors.push(`Unbekannter Trait: ${id}`);
   const priorIds = new Set(next.quirks.map(q => getDevelopmentTraitId(q)||q.id));
   const signatures=new Set();
   next.quirks = next.quirks.filter(q => {
     const reference=getDevelopmentTraitId(q);
+    if (ownedRetired.has(reference) && getRetiredDevelopmentTrait(q)) {
+      const active = selected.has(reference);
+      if ((q.active !== false) !== active) {
+        changes.push({ key: reference, label: active ? 'Altbestand aktiviert' : 'Altbestand deaktiviert', before: q.name, after: active ? 'Aktiv' : 'Inaktiv' });
+        q.active = active;
+      }
+      return true;
+    }
     if(!managed.has(reference))return true;
     if(!selected.has(reference))return false;
     const signature=JSON.stringify([reference,q.name,q.description,q.mechanics,q.triggerRules]);

@@ -4,6 +4,7 @@ import { getBloodlineTraitOrigin } from './development-bloodline-traits.js';
 import { getTransformationTraitOrigin } from './development-theriantrophie-traits.js';
 import { effectiveHealthTraits, healthSelectionWarnings } from '../character-health/health-trait-policy.js';
 import { effectivePsychologicalTraits, psychologicalSelectionWarnings } from './development-psychological-policy.js';
+import { effectiveFamilyTraits, familySelectionWarnings } from './development-family-policy.js';
 
 const damageAliases = {fire:'feuer',cold:'kälte',kaelte:'kälte',lightning:'blitz',elektrisch:'blitz',elektrizität:'blitz',
   poison:'gift',acid:'säure',saeure:'säure',thunder:'donner',schall:'donner',sonic:'donner'};
@@ -44,9 +45,9 @@ function relevantSources(profile,managedIds) {
 // resistance, vulnerability, expertise and advantage have only one real effect.
 export function reviewDevelopmentTraitBalance(profile,traits) {
   const selectedTraits = traits;
-  traits = effectivePsychologicalTraits(effectiveHealthTraits(traits));
+  traits = effectiveFamilyTraits(effectivePsychologicalTraits(effectiveHealthTraits(traits)));
   const ids=new Set(traits.map(t=>t.id));
-  const external=relevantSources(profile,ids);
+  const external=relevantSources(profile,new Set(selectedTraits.map(t=>t.id)));
   const externalParts=[...external.flatMap(nonStackingParts),...nonStackingParts({mechanics:{damageAffinities:profile.damageAffinities}}),
     ...(profile.skills||[]).filter(s=>s.proficiency==='expertise').map(s=>component(`expertise:${getSkillIdentity(s.name)}`,3))];
   const supplied=new Set(externalParts.map(p=>p.key));
@@ -56,7 +57,7 @@ export function reviewDevelopmentTraitBalance(profile,traits) {
     return (otherType==='all'||otherType===type)&&(otherScope==='any'||otherScope===scope);
   });
   const groups=new Map();
-  const warnings=[...healthSelectionWarnings(selectedTraits), ...psychologicalSelectionWarnings(selectedTraits)];
+  const warnings=[...healthSelectionWarnings(selectedTraits), ...psychologicalSelectionWarnings(selectedTraits), ...familySelectionWarnings(selectedTraits, profile)];
   let nominalCost=traits.reduce((sum,t)=>sum+t.cost,0),traitCost=nominalCost;
   for(const trait of traits)for(const part of nonStackingParts(trait)){
     if(!groups.has(part.key))groups.set(part.key,{...part,owners:[]});

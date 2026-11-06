@@ -51,11 +51,101 @@ test('Historische Profilaufrufe öffnen die Hauptakte, Altakte bleibt als Rückf
   assert(start>=0&&end>start);
   const old={id:'old',mergeIdentity:{status:'merged',canonicalCharacterId:'current'}},current={id:'current'};
   const context={_characters:[old,current]};
-  vm.runInNewContext(`${source.slice(start,end)}\nresult=getCharacterById('old');`,context);
+  const helperStart=source.indexOf('function getCharacterWorldIdentity('),helperEnd=source.indexOf('\nfunction normalizeCharacterPlayerOwner(',helperStart);
+  vm.runInNewContext(`${source.slice(helperStart,helperEnd)}\n${source.slice(start,end)}\nresult=getCharacterById('old');`,context);
   assert.equal(context.result,current);
   context._characters=[old];
   vm.runInNewContext("result=getCharacterById('old');",context);
   assert.equal(context.result,old);
+});
+
+async function loadCharacterProjection(characters, { builtins = {}, castIds = [] } = {}) {
+  const source=await readFile(new URL('../modules/characters/character-data.js',import.meta.url),'utf8');
+  const imageSets=await readFile(new URL('../modules/characters/character-image-sets.js',import.meta.url),'utf8');
+  const imageLibrary=await readFile(new URL('../modules/image-library/image-library-model.js',import.meta.url),'utf8');
+  const context=vm.createContext({
+    structuredClone, console, URL, _characters:characters, _hiddenBuiltinCharacterIds:new Set(),
+    BUILTIN_COMMENT_CHARACTERS:builtins, window:{}, document:{addEventListener(){}},
+    normalizeSearchText:value=>String(value||'').toLocaleLowerCase('de').trim(),
+    getValidSections:()=>[], getCurrentCommentCastIds:()=>castIds,
+    getCharacterStatusValue:value=>value, getCharacterRelevanceValue:value=>value
+  });
+  vm.runInContext(`${imageLibrary}\n${imageSets}\n${source}`,context);
+  return context;
+}
+
+test('Ansichtsprojektion hält bestätigte Altakten in jeder Reihenfolge von aktuellen Akten getrennt',async()=>{
+  for(const rule of CONFIRMED_CHARACTER_RETIREMENTS){
+    const current={id:rule.canonicalCharacterId,name:rule.canonicalName,archived:false,
+      identity:{worldPersonId:rule.canonicalWorldPersonId},inventory:{items:[{id:'current'}]},
+      combatProfile:{revision:7,hitPoints:{current:3}},portrait:'https://example.invalid/current.png',emotes:[{img:'https://example.invalid/current-emote.png',label:'Aktuell'}]};
+    const old=applyConfirmedCharacterRetirement({id:rule.legacyId,name:rule.canonicalName,
+      inventory:{items:[{id:'old'}]},combatProfile:{revision:1},portrait:'https://example.invalid/old.png',emotes:[{img:'https://example.invalid/old-emote.png',label:'Alt'}]});
+    for(const rows of [[current,old],[old,current]]){
+      const original=structuredClone(rows),context=await loadCharacterProjection(rows,{castIds:[old.id]});
+      const all=vm.runInContext('getAllCharacterRecords()',context);
+      assert.equal(all.length,2);
+      const active=vm.runInContext('getVisibleCharacterRecords()',context);
+      assert.equal(active.length,1);
+      assert.equal(active[0].id,current.id);
+      assert.equal(active[0].archived,false);
+      assert.equal(active[0].mergeIdentity,undefined);
+      for(const field of ['inventory','combatProfile','portrait','emotes']) assert.deepEqual(structuredClone(active[0][field]),current[field]);
+      assert.equal(all.find(row=>row.id===old.id).archived,true);
+      context.legacyId=old.id;
+      assert.equal(vm.runInContext('getAvailableCommentCharacterById(legacyId).id',context),current.id);
+      assert.equal(vm.runInContext('getAvailableCommentCharacters()[0].id',context),current.id);
+      assert.deepEqual(rows,original);
+    }
+  }
+});
+
+test('Beide Gwendolyn-Aliasse und historische Cast-IDs zeigen genau eine aktuelle Hauptakte',async()=>{
+  const rules=CONFIRMED_CHARACTER_RETIREMENTS.filter(row=>row.canonicalName==='Gwendolyn Draig');
+  const current={id:rules[0].canonicalCharacterId,name:'Gwendolyn Draig',archived:false,
+    identity:{worldPersonId:rules[0].canonicalWorldPersonId}};
+  const old=rules.map(rule=>applyConfirmedCharacterRetirement({id:rule.legacyId,name:'Gwendolyn Draig'}));
+  for(const rows of [[current,...old],[...old,current]]){
+    const context=await loadCharacterProjection(rows,{castIds:old.map(row=>row.id)});
+    assert.equal(vm.runInContext('getAvailableCommentCharacters().length',context),1);
+    for(const record of old){
+      context.legacyId=record.id;
+      assert.equal(vm.runInContext('getAvailableCommentCharacterById(legacyId).id',context),current.id);
+    }
+  }
+  const restored=await loadCharacterProjection([current,...old.map(row=>({...row,archived:false}))]);
+  assert.equal(vm.runInContext('getAvailableCommentCharacters().length',restored),1);
+  for(const record of old){
+    restored.legacyId=record.id;
+    assert.equal(vm.runInContext('getAvailableCommentCharacterById(legacyId).id',restored),current.id);
+  }
+});
+
+test('Fehlende, archivierte oder widersprechende Hauptakten und Aliaszyklen werden nicht zum Posten aktiviert',async()=>{
+  const old={id:'old',name:'Figur',archived:true,mergeIdentity:{status:'merged',canonicalCharacterId:'current',canonicalWorldPersonId:'person-current'}};
+  for(const rows of [
+    [old],
+    [old,{id:'current',name:'Figur',archived:true,identity:{worldPersonId:'person-current'}}],
+    [old,{id:'current',name:'Figur',archived:false,identity:{worldPersonId:'person-other'}}],
+    [old,{id:'current',name:'Figur',archived:true,mergeIdentity:{status:'merged',canonicalCharacterId:'old'}}]
+  ]){
+    const context=await loadCharacterProjection(rows,{castIds:['old']});
+    assert.equal(vm.runInContext("getAvailableCommentCharacterById('old')",context),null);
+  }
+});
+
+test('Unabhängige Weltidentitäten bleiben getrennt und normale Archivierung unterdrückt die Builtin-Fassung',async()=>{
+  const first={id:'first',name:'Gleichnamig',identity:{worldPersonId:'person-first'}};
+  const second={id:'second',name:'Gleichnamig',identity:{worldPersonId:'person-second'}};
+  const context=await loadCharacterProjection([first,second],{castIds:['first']});
+  assert.equal(vm.runInContext('getVisibleCharacterRecords().length',context),2);
+  assert.equal(vm.runInContext('getAvailableCommentCharacters().length',context),2);
+  const archived=await loadCharacterProjection([{id:'saved',name:'Archiviert',archived:true}],{
+    builtins:{template:{id:'builtin:archived',name:'Archiviert'}},castIds:['builtin:archived']
+  });
+  assert.equal(vm.runInContext('getAvailableCommentCharacters().length',archived),0);
+  assert.equal(vm.runInContext("getAvailableCommentCharacterById('builtin:archived')",archived),null);
+  assert.equal(vm.runInContext("getAvailableCommentCharacterById('saved')",archived),null);
 });
 
 test('Live-Plan schreibt nur Archivierung und Aliasbeleg mit Versionsguards und Rücknahmebeleg',()=>{

@@ -1,0 +1,10 @@
+.kemetara-placement .map-canvas{min-width:760px}
+.kemetara-placement .crest-group{max-width:160px;flex-wrap:wrap;white-space:normal}
+.kemetara-placement .house-choice{align-items:flex-start;gap:10px}
+.kemetara-placement .house-choice>span{min-width:0;width:100%}
+.kemetara-placement .house-choice strong{font-size:19px;overflow-wrap:anywhere}
+.kemetara-placement .seat-card>header{min-height:0}
+.kemetara-placement #map-dialog .map-canvas{min-width:0}
+.kemetara-placement .placement-toolbar{background:#e6d7b6;border-color:var(--line)}
+.kemetara-placement .unassigned{background:#e9ddc2;border-color:var(--line)}
+@media print{.kemetara-placement .map-canvas{min-width:0}}

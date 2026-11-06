@@ -7,7 +7,7 @@ test('saving into a live thread reuses the subscription and errors allow a new s
   let subscriptions = 0, listener, errorListener;
   const scroll = { dataset: {} };
   const backend = { subscribeComments(_thread, next, error) { subscriptions++; listener = next; errorListener = error; return () => {}; } };
-  const context = vm.createContext({ window: {}, document: { dispatchEvent() {} }, console, CustomEvent: class {}, getCommentBackend: async () => backend,
+  const context = vm.createContext({ window: {}, document: { dispatchEvent() {}, addEventListener() {} }, console, CustomEvent: class {}, getCommentBackend: async () => backend,
     loadCommentTurnIntoPage() {}, stopCommentTurnUpdates() {}, renderCommentsToScroll() {}, setCommentPageTarget() {}, showCommentFallbackNotice() {}, getLocalCommentBackend: () => ({ loadComments: async () => [] }) });
   vm.runInContext(await readFile(new URL('../modules/comments/comments-thread.js', import.meta.url), 'utf8'), context);
   context.getCommentsScrollForThread = () => scroll;

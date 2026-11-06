@@ -1,0 +1,69 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-05T16:07:25.012Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthor Markt Haendler/Avatare/cadwal-wernig-handeln-set-01.json",
+  "character": {
+    "id": "gwynthor-markt-cadwal-wernig",
+    "name": "Cadwal Wernig",
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Fcadwal-wernig%2F9db44f9636aea09c3f3e0297b3724db58150f7976232c67bd0fcd974578e3bbd.png?alt=media&token=97c10652-0458-4ba9-affa-fc9c9983f5ae",
+        "emotes": [],
+        "createdAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "handeln-set-01",
+        "name": "Feilschen & Handeln",
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Fcadwal-wernig%2F9db44f9636aea09c3f3e0297b3724db58150f7976232c67bd0fcd974578e3bbd.png?alt=media&token=97c10652-0458-4ba9-affa-fc9c9983f5ae",
+        "emotes": [
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fcadwal-wernig%2F6ed25c7927b0b6d9f4a78d57c5a181f857a7a85a88a4b875b4758cc2e6e5adde.png?alt=media&token=782c6922-bf5a-4813-8328-9ae676568466",
+            "label": "Kundschaft locken"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fcadwal-wernig%2F3830cbc4576556afb86d8037b896834dc6ea74391c028d65d0c46d1aab858762.png?alt=media&token=3904823e-3793-4761-9cc5-8e74276a1794",
+            "label": "Anpreisen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fcadwal-wernig%2F3409d5eeb60aa6b1f397b5271fd0b006370bc7897a76e144871141738c5a5883.png?alt=media&token=f69ae415-3330-4a03-9f14-1303eaca6cce",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fcadwal-wernig%2Fa7c4acef6ad0e11f04d4c48e1bbc3f23a4c251c9d7a161f84a6c809154acc756.png?alt=media&token=210eabc2-97b2-4d1f-ae75-1d404a4b6e26",
+            "label": "Zu wenig!"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fcadwal-wernig%2Fb60ca2d112eac0b009c52cd460ed925b9cdd0e237dd15aae4e602babceda0bda.png?alt=media&token=0d62cc52-fd38-47bd-9e29-756726569ff0",
+            "label": "Preis abwägen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fcadwal-wernig%2Fe78ca8e3a3df721a4385e4c25abcf1a7a814d6b43c8c96361910420de92cb728.png?alt=media&token=d97c39f0-4895-4c99-97a7-a5a613913560",
+            "label": "Fester Preis"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fcadwal-wernig%2Fbdeca22f47021bdba5d9f880a07b82b91be6760db600fcd3eebae2143fddede1.png?alt=media&token=73276dfb-63c8-4598-9a16-d21e3738cd8b",
+            "label": "Letzter Nachlass"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fcadwal-wernig%2F34f4961c86e86c343d64a0df0702827dbe470202a6b97279bcacf9ce57ca291d.png?alt=media&token=3c951e6b-aa13-41fa-aeea-d418595002f4",
+            "label": "Einlenken"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Fcadwal-wernig%2Fd8e41dbc915c3ca66f26e1b12fc1f9cacf392d5a0c2eee543d525a5d2e5f18ca.png?alt=media&token=65b72054-ce67-4f78-b487-8f03d49b3213",
+            "label": "Geschäftsabschluss"
+          }
+        ],
+        "createdAt": "2026-11-05T00:00:00.000Z",
+        "updatedAt": "2026-11-05T00:00:00.000Z"
+      }
+    ],
+    "imageSetsOverride": true,
+    "updatedAt": "2026-11-05T16:07:25.012Z"
+  }
+}

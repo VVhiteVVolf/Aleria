@@ -1,5 +1,73 @@
 # Individuelle Charakterentwicklung
 
+## Allgemeine RPG-Talente und passive Fähigkeiten vom 6. November 2026
+
+Auf Korrekturauftrag ersetzen 15 breite RPG-Talente und 15 allgemein nutzbare
+passive Fähigkeiten die 30 zuvor ergänzten Nischenentwürfe. Die 15 Marotten
+bleiben erhalten. Neue Kennungen verhindern, dass alte persönliche Kopien
+unbemerkt eine andere Wirkung erhalten. Alte Bilder und Belege bleiben erhalten;
+alle Ersatzdefinitionen besitzen eigene neue Icons. Der Katalog enthält weiter
+272 Traits und 34 Hintergründe. Beide Assistenten verwenden dieselben Definitionen.
+[Aktuelle Werte, Kosten und Abgrenzungen](../../docs/combat/STANDARD_TALENTS_ABILITIES_2026-11-06.md).
+Die darunter dokumentierte erste 45er-Ergänzung ist insoweit historisch überholt.
+
+## 45 weitere Talente, Marotten und Fähigkeiten vom 6. November 2026
+
+Der Katalog umfasst jetzt **272 Traits und 34 Hintergründe**. Je 15 neue Talente,
+Marotten und erlernte passive Fähigkeiten besitzen eigene Filter in Starthilfe
+und Stufenassistent sowie jeweils ein eigenes neu generiertes Comicicon.
+[Alle Werte und Kosten](../../docs/combat/TALENTS_QUIRKS_ABILITIES_2026-11-06.md)
+sind gegen den vorhandenen Archivkatalog auf gleiche Namen und Rechenwirkungen
+abgeglichen. Die drei `development-expansion-*.js`-Datenmodule besitzen die
+Definitionen; `development-expansion-categories.js` bündelt ihre Kategorien.
+
+Die Fähigkeiten verwenden bestehende passive Rechenwege und bedingte Regeln.
+Lückenlesen prüft den aktuell aktiven Zustand des Ziels; Schadensfilter prüfen
+die tatsächliche Aktion einschließlich ihres Grundschadens und Zusatzwirkungen.
+Ein reiner Zustandszauber übernimmt keinen Schadenstyp einer gehaltenen Waffe.
+Aktuelle TP, Ressourcen und vorhandener Besitz werden nicht aufgefüllt.
+Originale, vollständige Prompts, Bildbelege und Desktop-/Mobilprüfung:
+`diagnostics/talents-quirks-abilities-20261106/README.md`.
+
+## Eigene Icons vom 6. November 2026
+
+Auf Folgeauftrag haben alle zwölf Nuadat-/Arth-Ausprägungen, alle 30 neuen
+allgemeinen Eigenschaften und alle 24 neuen Hintergründe eigene neu generierte
+kreisförmige Comicicons. Die frühere Wiederverwendung ist für diese Einträge
+ersetzt. Jede Stufe besitzt ein eigenes Motiv. Originale liegen unter
+`assets/development-traits/<id>.png`, die 192-Pixel-WebP-Ableitungen unter `web/`.
+Hintergrundbilder verwenden `background-<id>` und erscheinen in der vorhandenen
+Hintergrundvorschau der Starthilfe. Spielwerte und Vorschläge bleiben gleich.
+Übersichten, vollständige Prompts und Belege:
+`diagnostics/creation-icons-20261106/README.md`.
+
+## Familienblut und Alltagsergänzung vom 6. November 2026
+
+Der Katalog umfasst jetzt **227 Traits und 34 Hintergründe**. Die vollständige
+[Planung und Wertematrix](../../docs/combat/CHARACTER_CREATION_EXPANSION_2026-11-06.md)
+beschreibt Riesenblut der Nuadat I–VI (2,0 bis 4,0 Meter), Das Blut der Arth I–VI,
+30 allgemeine Eigenschaften und 24 herkömmliche Hintergründe. Beide Assistenten
+bieten eigene Filter für Familienblut und allgemeine Eigenschaften.
+
+`development-family-traits.js` besitzt die Ausprägungen,
+`development-family-policy.js` ihre Rang-, Auswahl- und Größenersetzungsregeln.
+Je Linie wirkt und kostet ausschließlich die höchste aktive Stufe. Nuadat
+ersetzt die vollständigen allgemeinen Größenmerkmale Groß, Hünenhaft und
+Riesenblut. Der Detailbogen kennzeichnet verdrängte Einträge als ohne Rechenwirkung.
+`development-general-traits.js` besitzt die 30 Alltagseigenschaften mit eigenen
+Comicicons; stabile Merkmalskennungen bleiben erhalten.
+`creation-background-templates.js` ergänzt die unverbindlichen Ausbildungsvorschläge.
+
+Arth-Zusatzschaden verwendet `weaponModifiers.attackAttributes` und das tatsächliche
+Waffenattribut einschließlich persönlicher GES-Ausbildung. Werteberechnung,
+Fertigkeiten, Rettungen, Waffenschaden und Bilanz teilen dieselben Rangregeln;
+Archivreferenzen bleiben erhalten. Effektive Attribute haben eine Untergrenze 1.
+Bewusste TP-Gesamtmaxima und Gesamt-RK behalten Vorrang; konkrete Hinweise machen
+überdeckte Nuadat-Wirkungen sichtbar. Aktuelle TP werden nicht aufgefüllt.
+
+Gezielte Fach- und Browserbelege: `diagnostics/creation-traits-20261106/`.
+Die darunter folgenden datierten Bestandszahlen beschreiben historische Prüfstände.
+
 ## Balanceprüfung vom 3. November 2026
 
 Die vollständige [Prüfmatrix aller 185 Traits](../../docs/combat/TRAIT_BALANCE_2026-11-03.md)

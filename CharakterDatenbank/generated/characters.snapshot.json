@@ -27,6 +27,9 @@
     "Charakter Archiv Exporte/Fleischsammler Argall/maelor-ffionydd.json",
     "Charakter Archiv Exporte/Fleischsammler Argall/perwyn-argall.json",
     "Charakter Archiv Exporte/Fleischsammler Argall/rhydric-argall.json",
+    "Charakter Archiv Exporte/Gwynthor Markt Haendler/alrik-tannholt.json",
+    "Charakter Archiv Exporte/Gwynthor Markt Haendler/cadwal-wernig.json",
+    "Charakter Archiv Exporte/Gwynthor Markt Haendler/mairwen-brennig.json",
     "Charakter Archiv Exporte/Gwynthor Sieben/briallen-awenor.json",
     "Charakter Archiv Exporte/Gwynthor Sieben/caralyn-chwedlonol.json",
     "Charakter Archiv Exporte/Gwynthor Sieben/evie-rhyddid.json",
@@ -86,6 +89,22 @@
     "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/yLJ0Rr5suTSLa42sL743.json",
     "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/zitteraale-schwarzer-zitteraal.json",
     "Charakter Archiv Exporte/J4wpNQON98GsdPzsaIUk-tierbegleiter-2026-10-11.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-02518ead.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-0c68dade.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-157c1853.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-29ef1c22.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-30cd0b46.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-4c366307.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-5b669286.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-9a399999.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-9ffeda8d.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-a24c0d08.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-a5530d07.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-aaae3c9f.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-c6293356.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-d32c2160.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-d5f1d52b.json",
+    "Charakter Archiv Exporte/Melog Honigtoertchen/person-d9df75d6.json",
     "Charakter Archiv Exporte/Patrick Biografien 2026-11-03/person--family-tree--unknown-cadogan-spouse.json",
     "Charakter Archiv Exporte/Patrick Biografien 2026-11-03/person--haus-draenmelyn--rhiannon-draenmelyn.json",
     "Charakter Archiv Exporte/Patrick Biografien 2026-11-03/person--haus-sgrechiwr--cadogan-sgrechiwr.json",
@@ -312,7 +331,7 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-11-04T23:48:13.218393Z",
+  "sourceExportedAt": "2026-11-05T18:00:00.000Z",
   "characters": [
     {
       "id": "kCmUm4WvMZDYetqrSWQ0",
@@ -226194,6 +226213,3095 @@
         },
         "authoredFeature": "perllan"
       }
+    },
+    {
+      "name": "Cadwal Wernig",
+      "title": "Tuch- und Kurzwarenhändler",
+      "fraktion": "",
+      "role": "Tuch- und Kurzwarenhändler",
+      "status": "active",
+      "relevance": "minor",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor > Gwynthor-Stadt",
+      "currentLocation": "Gwynthor · Marktplatz",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Cadwal Wernig ist ein 42-jähriger Cenyri und betreibt einen Tuch- und Kurzwarenstand auf dem Marktplatz von Gwynthor. Sein Sortiment umfasst Stoffe und kleine Dinge für das tägliche Nähen und Ausbessern. Der rothaarige Händler mit dem Schnauzer wirkt schmierig und versucht, seine Ware mit geschäftiger Beredsamkeit an die Kundschaft zu bringen.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T15:00:00.000Z",
+      "updatedAt": "2026-11-05T15:00:00.000Z",
+      "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Fcadwal-wernig%2F9db44f9636aea09c3f3e0297b3724db58150f7976232c67bd0fcd974578e3bbd.png?alt=media&token=97c10652-0458-4ba9-affa-fc9c9983f5ae",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Vollständiger Name",
+            "value": "Cadwal Wernig"
+          },
+          {
+            "label": "Alter",
+            "value": "42 Jahre"
+          },
+          {
+            "label": "Tätigkeit",
+            "value": "Tuch- und Kurzwarenhändler"
+          },
+          {
+            "label": "Standort des Marktstands",
+            "value": "Gwynthor · Marktplatz"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Cenyri"
+          }
+        ],
+        "biography": {
+          "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Fcadwal-wernig%2F9db44f9636aea09c3f3e0297b3724db58150f7976232c67bd0fcd974578e3bbd.png?alt=media&token=97c10652-0458-4ba9-affa-fc9c9983f5ae",
+          "biographyTitle": "Biografie",
+          "biographyText": "Cadwal Wernig ist ein 42-jähriger Cenyri und betreibt einen Tuch- und Kurzwarenstand auf dem Marktplatz von Gwynthor. Sein Sortiment umfasst Stoffe und kleine Dinge für das tägliche Nähen und Ausbessern. Der rothaarige Händler mit dem Schnauzer wirkt schmierig und versucht, seine Ware mit geschäftiger Beredsamkeit an die Kundschaft zu bringen.",
+          "extraSections": [
+            {
+              "position": "afterIntro",
+              "mode": "text",
+              "title": "Erscheinung",
+              "text": "Rothaarig, mit Schnauzer und einem schmierigen Auftreten."
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": ""
+      },
+      "genealogy": {
+        "worldPersonId": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "sources": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "id": "gwynthor-markt-cadwal-wernig",
+      "race": "Mensch",
+      "age": 42,
+      "localRecord": {
+        "recordId": "character--gwynthor-markt-cadwal-wernig",
+        "path": "records/orte/gwynthor/cadwal-wernig--gwynthor-markt-cadwal-wernig/character.json",
+        "schemaVersion": 1,
+        "contentHash": "422f7651127409873f6dbfb1abbff667811be03c66db1a5c8bdd1c6cb3b02835",
+        "firestoreDocumentIds": [
+          "gwynthor-markt-cadwal-wernig"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-markt-haendler"
+      }
+    },
+    {
+      "name": "Alrik Tannholt",
+      "title": "Haushaltswarenhändler",
+      "fraktion": "",
+      "role": "Haushaltswarenhändler",
+      "status": "active",
+      "relevance": "minor",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor > Gwynthor-Stadt",
+      "currentLocation": "Gwynthor · Marktplatz",
+      "origin": "Aldrimar",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Alrik Tannholt ist ein 61-jähriger Aldrimar. Auf dem Marktplatz von Gwynthor bietet er Haushaltswaren, Körbe und einfache Holzwaren an. Sein Stand richtet sich an Menschen, die praktische Dinge für Küche, Vorratshaltung und Haushalt suchen. Der ältere blonde Händler kennt den Gebrauch seiner Waren und erklärt ihn ohne großes Aufheben.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T15:00:00.000Z",
+      "updatedAt": "2026-11-05T15:00:00.000Z",
+      "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Falrik-tannholt%2Fe0f0e92823a9a98f433edf1307a00d3dfc1149ec1ef394f41510b2061b712b0c.png?alt=media&token=c60123d0-4395-49e2-a3ab-7ffc5b83ace2",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Vollständiger Name",
+            "value": "Alrik Tannholt"
+          },
+          {
+            "label": "Alter",
+            "value": "61 Jahre"
+          },
+          {
+            "label": "Tätigkeit",
+            "value": "Haushaltswarenhändler"
+          },
+          {
+            "label": "Standort des Marktstands",
+            "value": "Gwynthor · Marktplatz"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Aldrimar"
+          }
+        ],
+        "biography": {
+          "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Falrik-tannholt%2Fe0f0e92823a9a98f433edf1307a00d3dfc1149ec1ef394f41510b2061b712b0c.png?alt=media&token=c60123d0-4395-49e2-a3ab-7ffc5b83ace2",
+          "biographyTitle": "Biografie",
+          "biographyText": "Alrik Tannholt ist ein 61-jähriger Aldrimar. Auf dem Marktplatz von Gwynthor bietet er Haushaltswaren, Körbe und einfache Holzwaren an. Sein Stand richtet sich an Menschen, die praktische Dinge für Küche, Vorratshaltung und Haushalt suchen. Der ältere blonde Händler kennt den Gebrauch seiner Waren und erklärt ihn ohne großes Aufheben.",
+          "extraSections": [
+            {
+              "position": "afterIntro",
+              "mode": "text",
+              "title": "Erscheinung",
+              "text": "Ein älterer Mann mit blondem, altersbedingt ergrauendem Haar."
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": ""
+      },
+      "genealogy": {
+        "worldPersonId": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "sources": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "id": "gwynthor-markt-alrik-tannholt",
+      "race": "Mensch",
+      "age": 61,
+      "localRecord": {
+        "recordId": "character--gwynthor-markt-alrik-tannholt",
+        "path": "records/orte/gwynthor/alrik-tannholt--gwynthor-markt-alrik-tannholt/character.json",
+        "schemaVersion": 1,
+        "contentHash": "10b78bcc94cc8d41e8963565b3f243be86db77976dee68eb13a8877ffa32009f",
+        "firestoreDocumentIds": [
+          "gwynthor-markt-alrik-tannholt"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-markt-haendler"
+      }
+    },
+    {
+      "name": "Mairwen Brennig",
+      "title": "Gemüse- und Kräuterhändlerin",
+      "fraktion": "",
+      "role": "Gemüse- und Kräuterhändlerin",
+      "status": "active",
+      "relevance": "minor",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor > Gwynthor-Stadt",
+      "currentLocation": "Gwynthor · Marktplatz",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Mairwen Brennig ist 59 Jahre alt und lebt in Gwynthor. An ihrem Stand auf dem Gwynthorer Marktplatz verkauft sie Gemüse, Kräuter und Trockenwaren für den täglichen Bedarf. Die ältere brünette Händlerin hält die verschiedenen Waren übersichtlich beieinander und berät ihre Kundschaft bei der Auswahl.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T15:00:00.000Z",
+      "updatedAt": "2026-11-05T15:00:00.000Z",
+      "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Fmairwen-brennig%2Feacacb21c38a7dd93bab8d6e4677acd8a1cd198f5990567ab4ca8eb5ab708e7a.png?alt=media&token=a62387cc-1b23-45d9-94c1-5cc88153b7fd",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Vollständiger Name",
+            "value": "Mairwen Brennig"
+          },
+          {
+            "label": "Alter",
+            "value": "59 Jahre"
+          },
+          {
+            "label": "Tätigkeit",
+            "value": "Gemüse- und Kräuterhändlerin"
+          },
+          {
+            "label": "Standort des Marktstands",
+            "value": "Gwynthor · Marktplatz"
+          }
+        ],
+        "biography": {
+          "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Fmairwen-brennig%2Feacacb21c38a7dd93bab8d6e4677acd8a1cd198f5990567ab4ca8eb5ab708e7a.png?alt=media&token=a62387cc-1b23-45d9-94c1-5cc88153b7fd",
+          "biographyTitle": "Biografie",
+          "biographyText": "Mairwen Brennig ist 59 Jahre alt und lebt in Gwynthor. An ihrem Stand auf dem Gwynthorer Marktplatz verkauft sie Gemüse, Kräuter und Trockenwaren für den täglichen Bedarf. Die ältere brünette Händlerin hält die verschiedenen Waren übersichtlich beieinander und berät ihre Kundschaft bei der Auswahl.",
+          "extraSections": [
+            {
+              "position": "afterIntro",
+              "mode": "text",
+              "title": "Erscheinung",
+              "text": "Eine ältere brünette Frau."
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": ""
+      },
+      "genealogy": {
+        "worldPersonId": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "sources": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "id": "gwynthor-markt-mairwen-brennig",
+      "race": "Mensch",
+      "age": 59,
+      "localRecord": {
+        "recordId": "character--gwynthor-markt-mairwen-brennig",
+        "path": "records/orte/gwynthor/mairwen-brennig--gwynthor-markt-mairwen-brennig/character.json",
+        "schemaVersion": 1,
+        "contentHash": "7f182b4cfac81120322000161d88aa350d3af181681e19488da308e82ce4f8cd",
+        "firestoreDocumentIds": [
+          "gwynthor-markt-mairwen-brennig"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-markt-haendler"
+      }
+    },
+    {
+      "name": "Ithel Melog",
+      "title": "Früherer Konditor- und Bäckermeister",
+      "fraktion": "Melog",
+      "role": "Früherer Konditor- und Bäckermeister",
+      "status": "dead",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Ithel war Konditor- und Bäckermeister und stand dem Haus Melog vor. 1690 fertigte er mit seinem fünfzehnjährigen Sohn Tewdwr in der Hofküche von Castell Draig einen Ersatz für die verschwundene Hochzeitstorte von Meurig Draig und Heledd Gwyvern. Meurig schenkte ihm aus Dankbarkeit ein silbernes Tortenmesser mit Draigs Wappen. Es wird heute in der Konditorei ausgestellt. Ithel starb 1723.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-29ef1c22.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Ithel Melog"
+          },
+          {
+            "label": "Geburt",
+            "value": "1647"
+          },
+          {
+            "label": "Tod",
+            "value": "1723"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Früherer Konditor- und Bäckermeister"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-29ef1c22.png",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Ithel war Konditor- und Bäckermeister und stand dem Haus Melog vor. 1690 fertigte er mit seinem fünfzehnjährigen Sohn Tewdwr in der Hofküche von Castell Draig einen Ersatz für die verschwundene Hochzeitstorte von Meurig Draig und Heledd Gwyvern. Meurig schenkte ihm aus Dankbarkeit ein silbernes Tortenmesser mit Draigs Wappen. Es wird heute in der Konditorei ausgestellt. Ithel starb 1723.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-29ef1c22"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-29ef1c22"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-29ef1c22",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1647",
+        "death": "1723",
+        "houseId": "house-melog",
+        "houseName": "Melog",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-29ef1c22",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-29ef1c22",
+            "fingerprint": "{\"name\":\"Ithel Melog\",\"title\":\"Konditormeister/Bäckereimeister/Oberhaupt\",\"birth\":\"1647\",\"death\":\"1723\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-29ef1c22.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"melog-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--melog--melog-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"melog-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--melog--melog-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"person-aaae3c9f\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-aaae3c9f\",\"name\":\"Tangwystl\"}],\"children\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "melog-gruender",
+              "type": "claimed",
+              "legitimacy": "unknown",
+              "certainty": "probable",
+              "worldPersonId": "person--melog--melog-gruender",
+              "name": "Unbekannter Gründer"
+            },
+            {
+              "personId": "melog-gruenderin",
+              "type": "claimed",
+              "legitimacy": "unknown",
+              "certainty": "probable",
+              "worldPersonId": "person--melog--melog-gruenderin",
+              "name": "Unbekannte Gründerin"
+            }
+          ],
+          "partners": [
+            {
+              "personId": "person-aaae3c9f",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-aaae3c9f",
+              "name": "Tangwystl"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-0c68dade",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-0c68dade",
+              "name": "Tewdwr Melog"
+            }
+          ]
+        }
+      },
+      "id": "person--melog--person-29ef1c22",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-29ef1c22",
+        "path": "records/familien/melog/ithel-melog--person--melog--person-29ef1c22/character.json",
+        "schemaVersion": 1,
+        "contentHash": "39dd2e9f7e8776839acca6cd09ce7890e715ddf89917278d4e29791b9f3eeb73",
+        "firestoreDocumentIds": [
+          "person--melog--person-29ef1c22"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-29ef1c22",
+              "worldPersonId": "person--melog--person-29ef1c22",
+              "houseId": "house-melog",
+              "houseName": "Melog",
+              "familyRole": "core",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-29ef1c22",
+              "fingerprint": "{\"name\":\"Ithel Melog\",\"title\":\"Konditormeister/Bäckereimeister/Oberhaupt\",\"birth\":\"1647\",\"death\":\"1723\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-29ef1c22.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"melog-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--melog--melog-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"melog-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--melog--melog-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"person-aaae3c9f\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-aaae3c9f\",\"name\":\"Tangwystl\"}],\"children\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
+    },
+    {
+      "name": "Tangwystl",
+      "title": "Ithels Gemahlin · Tewdwrs Mutter",
+      "fraktion": "",
+      "role": "Ithels Gemahlin · Tewdwrs Mutter",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Tangwystl ist Ithels Gemahlin und Tewdwrs Mutter. Sie gehört zur älteren Generation der Familie Melog aus Gwynthor. Das Bäcker- und Konditorhandwerk verbindet die Generationen des Hauses; ihr Sohn Tewdwr führt heute die Bäckerei und Konditorei „Zum Honigtörtchen“.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-aaae3c9f.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Tangwystl"
+          },
+          {
+            "label": "Geburt",
+            "value": "1648"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Ithels Gemahlin · Tewdwrs Mutter"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-aaae3c9f.png",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Tangwystl ist Ithels Gemahlin und Tewdwrs Mutter. Sie gehört zur älteren Generation der Familie Melog aus Gwynthor. Das Bäcker- und Konditorhandwerk verbindet die Generationen des Hauses; ihr Sohn Tewdwr führt heute die Bäckerei und Konditorei „Zum Honigtörtchen“.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-aaae3c9f"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-aaae3c9f"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-aaae3c9f",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1648",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "married",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-aaae3c9f",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-aaae3c9f",
+            "fingerprint": "{\"name\":\"Tangwystl\",\"title\":\"\",\"birth\":\"1648\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-aaae3c9f.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-29ef1c22\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-29ef1c22\",\"name\":\"Ithel Melog\"}],\"children\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [
+            {
+              "personId": "person-29ef1c22",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-29ef1c22",
+              "name": "Ithel Melog"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-0c68dade",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-0c68dade",
+              "name": "Tewdwr Melog"
+            }
+          ]
+        }
+      },
+      "id": "person--melog--person-aaae3c9f",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-aaae3c9f",
+        "path": "records/familien/melog/tangwystl--person--melog--person-aaae3c9f/character.json",
+        "schemaVersion": 1,
+        "contentHash": "0c6de9b0beb74ea0c42c12ec8b244f04776f9381405349593943aae343bf0e4e",
+        "firestoreDocumentIds": [
+          "person--melog--person-aaae3c9f"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-aaae3c9f",
+              "worldPersonId": "person--melog--person-aaae3c9f",
+              "houseId": "",
+              "houseName": "",
+              "familyRole": "married",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-aaae3c9f",
+              "fingerprint": "{\"name\":\"Tangwystl\",\"title\":\"\",\"birth\":\"1648\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-aaae3c9f.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-29ef1c22\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-29ef1c22\",\"name\":\"Ithel Melog\"}],\"children\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
+    },
+    {
+      "name": "Tewdwr Melog",
+      "title": "Konditor- und Bäckermeister · Oberhaupt",
+      "fraktion": "Melog",
+      "role": "Konditor- und Bäckermeister · Oberhaupt",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Tewdwr ist Konditor- und Bäckermeister und führt als Oberhaupt das Haus Melog. Als Fünfzehnjähriger half er 1690 seinem Vater Ithel, die verschwundene Hochzeitstorte für Meurig Draig und Heledd Gwyvern zu ersetzen. Heute leitet er die Bäckerei und Konditorei „Zum Honigtörtchen“ in Gwynthor und bewahrt die Rezeptur jener berühmten Torte. Mit Morfudd hat er Anest, Afanen und Guto.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-0c68dade.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Tewdwr Melog"
+          },
+          {
+            "label": "Geburt",
+            "value": "1675"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Konditor- und Bäckermeister · Oberhaupt"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-0c68dade.png",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Tewdwr ist Konditor- und Bäckermeister und führt als Oberhaupt das Haus Melog. Als Fünfzehnjähriger half er 1690 seinem Vater Ithel, die verschwundene Hochzeitstorte für Meurig Draig und Heledd Gwyvern zu ersetzen. Heute leitet er die Bäckerei und Konditorei „Zum Honigtörtchen“ in Gwynthor und bewahrt die Rezeptur jener berühmten Torte. Mit Morfudd hat er Anest, Afanen und Guto.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-0c68dade"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-0c68dade"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-0c68dade",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1675",
+        "death": "",
+        "houseId": "house-melog",
+        "houseName": "Melog",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-0c68dade",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-0c68dade",
+            "fingerprint": "{\"name\":\"Tewdwr Melog\",\"title\":\"Konditormeister/Bäckereimeister/Oberhaupt\",\"birth\":\"1675\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-0c68dade.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-29ef1c22\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-29ef1c22\",\"name\":\"Ithel Melog\"},{\"personId\":\"person-aaae3c9f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-aaae3c9f\",\"name\":\"Tangwystl\"}],\"partners\":[{\"personId\":\"person-30cd0b46\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"children\":[{\"personId\":\"person-a5530d07\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"},{\"personId\":\"person-9ffeda8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"},{\"personId\":\"person-a24c0d08\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a24c0d08\",\"name\":\"Guto Melog\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-29ef1c22",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-29ef1c22",
+              "name": "Ithel Melog"
+            },
+            {
+              "personId": "person-aaae3c9f",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-aaae3c9f",
+              "name": "Tangwystl"
+            }
+          ],
+          "partners": [
+            {
+              "personId": "person-30cd0b46",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-30cd0b46",
+              "name": "Morfudd"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-a5530d07",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-a5530d07",
+              "name": "Anest Melog"
+            },
+            {
+              "personId": "person-9ffeda8d",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-9ffeda8d",
+              "name": "Afanen Melog"
+            },
+            {
+              "personId": "person-a24c0d08",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-a24c0d08",
+              "name": "Guto Melog"
+            }
+          ]
+        }
+      },
+      "id": "person--melog--person-0c68dade",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-0c68dade",
+        "path": "records/familien/melog/tewdwr-melog--person--melog--person-0c68dade/character.json",
+        "schemaVersion": 1,
+        "contentHash": "75dd00f95b19abd3f88e037301c6dd27a5b2a34d1275748c173bc3d1e7f21073",
+        "firestoreDocumentIds": [
+          "person--melog--person-0c68dade"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-0c68dade",
+              "worldPersonId": "person--melog--person-0c68dade",
+              "houseId": "house-melog",
+              "houseName": "Melog",
+              "familyRole": "core",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-0c68dade",
+              "fingerprint": "{\"name\":\"Tewdwr Melog\",\"title\":\"Konditormeister/Bäckereimeister/Oberhaupt\",\"birth\":\"1675\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-0c68dade.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-29ef1c22\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-29ef1c22\",\"name\":\"Ithel Melog\"},{\"personId\":\"person-aaae3c9f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-aaae3c9f\",\"name\":\"Tangwystl\"}],\"partners\":[{\"personId\":\"person-30cd0b46\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"children\":[{\"personId\":\"person-a5530d07\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"},{\"personId\":\"person-9ffeda8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"},{\"personId\":\"person-a24c0d08\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a24c0d08\",\"name\":\"Guto Melog\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
+    },
+    {
+      "name": "Morfudd",
+      "title": "Buchhaltung und Finanzen",
+      "fraktion": "",
+      "role": "Buchhaltung und Finanzen",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Morfudd betreut Buchhaltung und Finanzen der Familie Melog und ihres Bäcker- und Konditorbetriebs „Zum Honigtörtchen“ in Gwynthor. Ihr Gemahl Tewdwr führt das Haus als Konditor- und Bäckermeister. Ihre gemeinsamen Kinder Anest, Afanen und Guto tragen das Handwerk und den Verkauf in der nächsten Generation weiter.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-30cd0b46.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Morfudd"
+          },
+          {
+            "label": "Geburt",
+            "value": "1679"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Buchhaltung und Finanzen"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-30cd0b46.png",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Morfudd betreut Buchhaltung und Finanzen der Familie Melog und ihres Bäcker- und Konditorbetriebs „Zum Honigtörtchen“ in Gwynthor. Ihr Gemahl Tewdwr führt das Haus als Konditor- und Bäckermeister. Ihre gemeinsamen Kinder Anest, Afanen und Guto tragen das Handwerk und den Verkauf in der nächsten Generation weiter.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-30cd0b46"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-30cd0b46"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-30cd0b46",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1679",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "married",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-30cd0b46",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-30cd0b46",
+            "fingerprint": "{\"name\":\"Morfudd\",\"title\":\"Buchhaltung/Finanzen\",\"birth\":\"1679\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-30cd0b46.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-0c68dade\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"}],\"children\":[{\"personId\":\"person-a5530d07\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"},{\"personId\":\"person-9ffeda8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"},{\"personId\":\"person-a24c0d08\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a24c0d08\",\"name\":\"Guto Melog\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [
+            {
+              "personId": "person-0c68dade",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-0c68dade",
+              "name": "Tewdwr Melog"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-a5530d07",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-a5530d07",
+              "name": "Anest Melog"
+            },
+            {
+              "personId": "person-9ffeda8d",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-9ffeda8d",
+              "name": "Afanen Melog"
+            },
+            {
+              "personId": "person-a24c0d08",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-a24c0d08",
+              "name": "Guto Melog"
+            }
+          ]
+        }
+      },
+      "id": "person--melog--person-30cd0b46",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-30cd0b46",
+        "path": "records/familien/melog/morfudd--person--melog--person-30cd0b46/character.json",
+        "schemaVersion": 1,
+        "contentHash": "f2bfdacf36166a8e11aabd3ce1e67998555e98b5442e53f0153bcf5754568210",
+        "firestoreDocumentIds": [
+          "person--melog--person-30cd0b46"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-30cd0b46",
+              "worldPersonId": "person--melog--person-30cd0b46",
+              "houseId": "",
+              "houseName": "",
+              "familyRole": "married",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-30cd0b46",
+              "fingerprint": "{\"name\":\"Morfudd\",\"title\":\"Buchhaltung/Finanzen\",\"birth\":\"1679\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-30cd0b46.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-0c68dade\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"}],\"children\":[{\"personId\":\"person-a5530d07\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"},{\"personId\":\"person-9ffeda8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"},{\"personId\":\"person-a24c0d08\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a24c0d08\",\"name\":\"Guto Melog\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
+    },
+    {
+      "name": "Anest Melog",
+      "title": "Konditor- und Bäckermeisterin",
+      "fraktion": "Melog",
+      "role": "Konditor- und Bäckermeisterin",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Anest ist Konditor- und Bäckermeisterin aus der Familie Melog. Sie ist eine Tochter von Tewdwr und Morfudd und gehört zum Handwerk des Familienbetriebs „Zum Honigtörtchen“ in Gwynthor. Ihr Gemahl Eiffion kümmert sich um Einkauf und Lieferungen. Ihre Kinder heißen Nerys, Elisedd und Teleri.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-a5530d07.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Anest Melog"
+          },
+          {
+            "label": "Geburt",
+            "value": "1701"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Konditor- und Bäckermeisterin"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-a5530d07.png",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Anest ist Konditor- und Bäckermeisterin aus der Familie Melog. Sie ist eine Tochter von Tewdwr und Morfudd und gehört zum Handwerk des Familienbetriebs „Zum Honigtörtchen“ in Gwynthor. Ihr Gemahl Eiffion kümmert sich um Einkauf und Lieferungen. Ihre Kinder heißen Nerys, Elisedd und Teleri.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-a5530d07"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-a5530d07"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-a5530d07",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1701",
+        "death": "",
+        "houseId": "house-melog",
+        "houseName": "Melog",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-a5530d07",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-a5530d07",
+            "fingerprint": "{\"name\":\"Anest Melog\",\"title\":\"Konditor/Bäckereimeisterin\",\"birth\":\"1701\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-a5530d07.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"},{\"personId\":\"person-30cd0b46\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"partners\":[{\"personId\":\"person-d9df75d6\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d9df75d6\",\"name\":\"Eiffion\"}],\"children\":[{\"personId\":\"person-5b669286\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-5b669286\",\"name\":\"Nerys Melog\"},{\"personId\":\"person-c6293356\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-c6293356\",\"name\":\"Elisedd Melog\"},{\"personId\":\"person-02518ead\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-02518ead\",\"name\":\"Teleri Melog\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-0c68dade",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-0c68dade",
+              "name": "Tewdwr Melog"
+            },
+            {
+              "personId": "person-30cd0b46",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-30cd0b46",
+              "name": "Morfudd"
+            }
+          ],
+          "partners": [
+            {
+              "personId": "person-d9df75d6",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-d9df75d6",
+              "name": "Eiffion"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-5b669286",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-5b669286",
+              "name": "Nerys Melog"
+            },
+            {
+              "personId": "person-c6293356",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-c6293356",
+              "name": "Elisedd Melog"
+            },
+            {
+              "personId": "person-02518ead",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-02518ead",
+              "name": "Teleri Melog"
+            }
+          ]
+        }
+      },
+      "id": "person--melog--person-a5530d07",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-a5530d07",
+        "path": "records/familien/melog/anest-melog--person--melog--person-a5530d07/character.json",
+        "schemaVersion": 1,
+        "contentHash": "0ef25d107112c70b3e7a9a207f91ce2145a58aad5475687819d1c2dd174b662e",
+        "firestoreDocumentIds": [
+          "person--melog--person-a5530d07"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-a5530d07",
+              "worldPersonId": "person--melog--person-a5530d07",
+              "houseId": "house-melog",
+              "houseName": "Melog",
+              "familyRole": "core",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-a5530d07",
+              "fingerprint": "{\"name\":\"Anest Melog\",\"title\":\"Konditor/Bäckereimeisterin\",\"birth\":\"1701\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-a5530d07.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"},{\"personId\":\"person-30cd0b46\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"partners\":[{\"personId\":\"person-d9df75d6\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d9df75d6\",\"name\":\"Eiffion\"}],\"children\":[{\"personId\":\"person-5b669286\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-5b669286\",\"name\":\"Nerys Melog\"},{\"personId\":\"person-c6293356\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-c6293356\",\"name\":\"Elisedd Melog\"},{\"personId\":\"person-02518ead\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-02518ead\",\"name\":\"Teleri Melog\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
+    },
+    {
+      "name": "Afanen Melog",
+      "title": "Verkaufsleitung",
+      "fraktion": "Melog",
+      "role": "Verkaufsleitung",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Afanen leitet den Verkauf im Honigtörtchen, der Bäckerei und Konditorei ihrer Familie in Gwynthor. Sie ist eine Tochter von Tewdwr und Morfudd und die Schwester von Anest und Guto. Ihr Gemahl Llywarch arbeitet in Verkauf und Gästebetreuung. Lleufer und Cerys sind ihre gemeinsamen Kinder.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-9ffeda8d.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Afanen Melog"
+          },
+          {
+            "label": "Geburt",
+            "value": "1697"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Verkaufsleitung"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-9ffeda8d.png",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Afanen leitet den Verkauf im Honigtörtchen, der Bäckerei und Konditorei ihrer Familie in Gwynthor. Sie ist eine Tochter von Tewdwr und Morfudd und die Schwester von Anest und Guto. Ihr Gemahl Llywarch arbeitet in Verkauf und Gästebetreuung. Lleufer und Cerys sind ihre gemeinsamen Kinder.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9ffeda8d"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-9ffeda8d"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-9ffeda8d",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "houseId": "house-melog",
+        "houseName": "Melog",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-9ffeda8d",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9ffeda8d",
+            "fingerprint": "{\"name\":\"Afanen Melog\",\"title\":\"Verkaufsleitung\",\"birth\":\"1697\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-9ffeda8d.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"},{\"personId\":\"person-30cd0b46\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"partners\":[{\"personId\":\"person-d32c2160\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d32c2160\",\"name\":\"Llywarch\"}],\"children\":[{\"personId\":\"person-9a399999\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9a399999\",\"name\":\"Lleufer Melog\"},{\"personId\":\"person-4c366307\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-4c366307\",\"name\":\"Cerys Melog\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-0c68dade",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-0c68dade",
+              "name": "Tewdwr Melog"
+            },
+            {
+              "personId": "person-30cd0b46",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-30cd0b46",
+              "name": "Morfudd"
+            }
+          ],
+          "partners": [
+            {
+              "personId": "person-d32c2160",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-d32c2160",
+              "name": "Llywarch"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-9a399999",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-9a399999",
+              "name": "Lleufer Melog"
+            },
+            {
+              "personId": "person-4c366307",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-4c366307",
+              "name": "Cerys Melog"
+            }
+          ]
+        }
+      },
+      "id": "person--melog--person-9ffeda8d",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-9ffeda8d",
+        "path": "records/familien/melog/afanen-melog--person--melog--person-9ffeda8d/character.json",
+        "schemaVersion": 1,
+        "contentHash": "2e99b3c28891cdb61b514181d128fd25d7484b698571f04b2432754340da1c00",
+        "firestoreDocumentIds": [
+          "person--melog--person-9ffeda8d"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-9ffeda8d",
+              "worldPersonId": "person--melog--person-9ffeda8d",
+              "houseId": "house-melog",
+              "houseName": "Melog",
+              "familyRole": "core",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9ffeda8d",
+              "fingerprint": "{\"name\":\"Afanen Melog\",\"title\":\"Verkaufsleitung\",\"birth\":\"1697\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-9ffeda8d.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"},{\"personId\":\"person-30cd0b46\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"partners\":[{\"personId\":\"person-d32c2160\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d32c2160\",\"name\":\"Llywarch\"}],\"children\":[{\"personId\":\"person-9a399999\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9a399999\",\"name\":\"Lleufer Melog\"},{\"personId\":\"person-4c366307\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-4c366307\",\"name\":\"Cerys Melog\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
+    },
+    {
+      "name": "Guto Melog",
+      "title": "Bäcker · Naschkatze",
+      "fraktion": "Melog",
+      "role": "Bäcker · Naschkatze",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Guto arbeitet als Bäcker im Familienbetrieb „Zum Honigtörtchen“ in Gwynthor. Der Sohn von Tewdwr und Morfudd wird zugleich als Naschkatze beschrieben. Er ist mit Mabli verheiratet, die Verpackung und Einkauf betreut. Ihr Sohn Iddon trägt mit seiner Vorliebe für Süßes den Beinamen „Klein-Guto“.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-a24c0d08.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Guto Melog"
+          },
+          {
+            "label": "Geburt",
+            "value": "1710"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Bäcker · Naschkatze"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-a24c0d08.png",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Guto arbeitet als Bäcker im Familienbetrieb „Zum Honigtörtchen“ in Gwynthor. Der Sohn von Tewdwr und Morfudd wird zugleich als Naschkatze beschrieben. Er ist mit Mabli verheiratet, die Verpackung und Einkauf betreut. Ihr Sohn Iddon trägt mit seiner Vorliebe für Süßes den Beinamen „Klein-Guto“.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-a24c0d08"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-a24c0d08"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-a24c0d08",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1710",
+        "death": "",
+        "houseId": "house-melog",
+        "houseName": "Melog",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-a24c0d08",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-a24c0d08",
+            "fingerprint": "{\"name\":\"Guto Melog\",\"title\":\"Bäcker/Naschkatze\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-a24c0d08.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"},{\"personId\":\"person-30cd0b46\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"partners\":[{\"personId\":\"person-d5f1d52b\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d5f1d52b\",\"name\":\"Mabli\"}],\"children\":[{\"personId\":\"person-157c1853\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-157c1853\",\"name\":\"Iddon Melog\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-0c68dade",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-0c68dade",
+              "name": "Tewdwr Melog"
+            },
+            {
+              "personId": "person-30cd0b46",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-30cd0b46",
+              "name": "Morfudd"
+            }
+          ],
+          "partners": [
+            {
+              "personId": "person-d5f1d52b",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-d5f1d52b",
+              "name": "Mabli"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-157c1853",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-157c1853",
+              "name": "Iddon Melog"
+            }
+          ]
+        }
+      },
+      "id": "person--melog--person-a24c0d08",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-a24c0d08",
+        "path": "records/familien/melog/guto-melog--person--melog--person-a24c0d08/character.json",
+        "schemaVersion": 1,
+        "contentHash": "ebac2e9d19e0280f205d04a4463134e79e9c457a299970983235c1b29c2af182",
+        "firestoreDocumentIds": [
+          "person--melog--person-a24c0d08"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-a24c0d08",
+              "worldPersonId": "person--melog--person-a24c0d08",
+              "houseId": "house-melog",
+              "houseName": "Melog",
+              "familyRole": "core",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-a24c0d08",
+              "fingerprint": "{\"name\":\"Guto Melog\",\"title\":\"Bäcker/Naschkatze\",\"birth\":\"1710\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-a24c0d08.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"},{\"personId\":\"person-30cd0b46\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"partners\":[{\"personId\":\"person-d5f1d52b\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d5f1d52b\",\"name\":\"Mabli\"}],\"children\":[{\"personId\":\"person-157c1853\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-157c1853\",\"name\":\"Iddon Melog\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
+    },
+    {
+      "name": "Eiffion",
+      "title": "Einkauf und Lieferungen",
+      "fraktion": "",
+      "role": "Einkauf und Lieferungen",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Eiffion übernimmt Einkauf und Lieferungen für das Honigtörtchen in Gwynthor. Seine Gemahlin Anest ist Konditor- und Bäckermeisterin und eine Tochter von Tewdwr und Morfudd Melog. Nerys, Elisedd und Teleri gehören zu ihrer gemeinsamen Familie.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-d9df75d6.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Eiffion"
+          },
+          {
+            "label": "Geburt",
+            "value": "1698"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Einkauf und Lieferungen"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-d9df75d6.png",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Eiffion übernimmt Einkauf und Lieferungen für das Honigtörtchen in Gwynthor. Seine Gemahlin Anest ist Konditor- und Bäckermeisterin und eine Tochter von Tewdwr und Morfudd Melog. Nerys, Elisedd und Teleri gehören zu ihrer gemeinsamen Familie.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-d9df75d6"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-d9df75d6"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-d9df75d6",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "married",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-d9df75d6",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-d9df75d6",
+            "fingerprint": "{\"name\":\"Eiffion\",\"title\":\"Einkauf und Lieferungen\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-d9df75d6.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-a5530d07\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"}],\"children\":[{\"personId\":\"person-5b669286\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-5b669286\",\"name\":\"Nerys Melog\"},{\"personId\":\"person-c6293356\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-c6293356\",\"name\":\"Elisedd Melog\"},{\"personId\":\"person-02518ead\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-02518ead\",\"name\":\"Teleri Melog\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [
+            {
+              "personId": "person-a5530d07",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-a5530d07",
+              "name": "Anest Melog"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-5b669286",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-5b669286",
+              "name": "Nerys Melog"
+            },
+            {
+              "personId": "person-c6293356",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-c6293356",
+              "name": "Elisedd Melog"
+            },
+            {
+              "personId": "person-02518ead",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-02518ead",
+              "name": "Teleri Melog"
+            }
+          ]
+        }
+      },
+      "id": "person--melog--person-d9df75d6",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-d9df75d6",
+        "path": "records/familien/melog/eiffion--person--melog--person-d9df75d6/character.json",
+        "schemaVersion": 1,
+        "contentHash": "5107b7ebf037afcc6a98928aad252b4e1a2d595e555ec9ce936c659058acd12d",
+        "firestoreDocumentIds": [
+          "person--melog--person-d9df75d6"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-d9df75d6",
+              "worldPersonId": "person--melog--person-d9df75d6",
+              "houseId": "",
+              "houseName": "",
+              "familyRole": "married",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-d9df75d6",
+              "fingerprint": "{\"name\":\"Eiffion\",\"title\":\"Einkauf und Lieferungen\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-d9df75d6.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-a5530d07\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"}],\"children\":[{\"personId\":\"person-5b669286\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-5b669286\",\"name\":\"Nerys Melog\"},{\"personId\":\"person-c6293356\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-c6293356\",\"name\":\"Elisedd Melog\"},{\"personId\":\"person-02518ead\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-02518ead\",\"name\":\"Teleri Melog\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
+    },
+    {
+      "name": "Llywarch",
+      "title": "Verkauf und Gästebetreuung",
+      "fraktion": "",
+      "role": "Verkauf und Gästebetreuung",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Llywarch arbeitet im Verkauf und in der Gästebetreuung des Honigtörtchens in Gwynthor. Seine Gemahlin Afanen leitet den Verkauf; ihre Kinder heißen Lleufer und Cerys. Llywarch ist der Bruder von Mabli, die mit Afanens Bruder Guto verheiratet ist.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-d32c2160.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Llywarch"
+          },
+          {
+            "label": "Geburt",
+            "value": "1696"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Verkauf und Gästebetreuung"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-d32c2160.png",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Llywarch arbeitet im Verkauf und in der Gästebetreuung des Honigtörtchens in Gwynthor. Seine Gemahlin Afanen leitet den Verkauf; ihre Kinder heißen Lleufer und Cerys. Llywarch ist der Bruder von Mabli, die mit Afanens Bruder Guto verheiratet ist.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-d32c2160"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-d32c2160"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-d32c2160",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "married",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-d32c2160",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-d32c2160",
+            "fingerprint": "{\"name\":\"Llywarch\",\"title\":\"Verkauf und Gästebetreuung / Mablis Bruder\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-d32c2160.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-9ffeda8d\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"}],\"children\":[{\"personId\":\"person-9a399999\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9a399999\",\"name\":\"Lleufer Melog\"},{\"personId\":\"person-4c366307\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-4c366307\",\"name\":\"Cerys Melog\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [
+            {
+              "personId": "person-9ffeda8d",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-9ffeda8d",
+              "name": "Afanen Melog"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-9a399999",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-9a399999",
+              "name": "Lleufer Melog"
+            },
+            {
+              "personId": "person-4c366307",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-4c366307",
+              "name": "Cerys Melog"
+            }
+          ]
+        }
+      },
+      "id": "person--melog--person-d32c2160",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-d32c2160",
+        "path": "records/familien/melog/llywarch--person--melog--person-d32c2160/character.json",
+        "schemaVersion": 1,
+        "contentHash": "79275c25b86eaf127ccaa334ce94b3d62324fc53deef8ccb4db9f1f98192aab6",
+        "firestoreDocumentIds": [
+          "person--melog--person-d32c2160"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-d32c2160",
+              "worldPersonId": "person--melog--person-d32c2160",
+              "houseId": "",
+              "houseName": "",
+              "familyRole": "married",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-d32c2160",
+              "fingerprint": "{\"name\":\"Llywarch\",\"title\":\"Verkauf und Gästebetreuung / Mablis Bruder\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-d32c2160.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-9ffeda8d\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"}],\"children\":[{\"personId\":\"person-9a399999\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9a399999\",\"name\":\"Lleufer Melog\"},{\"personId\":\"person-4c366307\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-4c366307\",\"name\":\"Cerys Melog\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
+    },
+    {
+      "name": "Mabli",
+      "title": "Verpackung und Einkauf",
+      "fraktion": "",
+      "role": "Verpackung und Einkauf",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Mabli betreut Verpackung und Einkauf im Honigtörtchen in Gwynthor. Sie ist mit dem Bäcker Guto Melog verheiratet und die Mutter von Iddon. Ihr Bruder Llywarch ist mit Gutos Schwester Afanen verheiratet und kümmert sich im Familienbetrieb um Verkauf und Gäste.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-d5f1d52b.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Mabli"
+          },
+          {
+            "label": "Geburt",
+            "value": "1712"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Verpackung und Einkauf"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-d5f1d52b.png",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Mabli betreut Verpackung und Einkauf im Honigtörtchen in Gwynthor. Sie ist mit dem Bäcker Guto Melog verheiratet und die Mutter von Iddon. Ihr Bruder Llywarch ist mit Gutos Schwester Afanen verheiratet und kümmert sich im Familienbetrieb um Verkauf und Gäste.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-d5f1d52b"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-d5f1d52b"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-d5f1d52b",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1712",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "married",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-d5f1d52b",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-d5f1d52b",
+            "fingerprint": "{\"name\":\"Mabli\",\"title\":\"Verpackung und Einkauf / Llywarchs Schwester\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-d5f1d52b.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-a24c0d08\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a24c0d08\",\"name\":\"Guto Melog\"}],\"children\":[{\"personId\":\"person-157c1853\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-157c1853\",\"name\":\"Iddon Melog\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [
+            {
+              "personId": "person-a24c0d08",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-a24c0d08",
+              "name": "Guto Melog"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-157c1853",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-157c1853",
+              "name": "Iddon Melog"
+            }
+          ]
+        }
+      },
+      "id": "person--melog--person-d5f1d52b",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-d5f1d52b",
+        "path": "records/familien/melog/mabli--person--melog--person-d5f1d52b/character.json",
+        "schemaVersion": 1,
+        "contentHash": "9d16069835324ca604f90db526e91940105ff20a97b371371cab166ddc841b92",
+        "firestoreDocumentIds": [
+          "person--melog--person-d5f1d52b"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-d5f1d52b",
+              "worldPersonId": "person--melog--person-d5f1d52b",
+              "houseId": "",
+              "houseName": "",
+              "familyRole": "married",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-d5f1d52b",
+              "fingerprint": "{\"name\":\"Mabli\",\"title\":\"Verpackung und Einkauf / Llywarchs Schwester\",\"birth\":\"1712\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-d5f1d52b.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-a24c0d08\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a24c0d08\",\"name\":\"Guto Melog\"}],\"children\":[{\"personId\":\"person-157c1853\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-157c1853\",\"name\":\"Iddon Melog\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
+    },
+    {
+      "name": "Nerys Melog",
+      "title": "Chaos-Konditorin",
+      "fraktion": "Melog",
+      "role": "Chaos-Konditorin",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Nerys gehört zur jüngeren Generation der Familie Melog und wird als „Chaos-Konditorin“ beschrieben. Ihre Eltern sind die Konditor- und Bäckermeisterin Anest und der für Einkauf und Lieferungen zuständige Eiffion. Mit Elisedd und Teleri hat sie zwei jüngere Geschwister. Die Familie betreibt das Honigtörtchen in Gwynthor.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-5b669286.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Nerys Melog"
+          },
+          {
+            "label": "Geburt",
+            "value": "1722"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Chaos-Konditorin"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-5b669286.png",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Nerys gehört zur jüngeren Generation der Familie Melog und wird als „Chaos-Konditorin“ beschrieben. Ihre Eltern sind die Konditor- und Bäckermeisterin Anest und der für Einkauf und Lieferungen zuständige Eiffion. Mit Elisedd und Teleri hat sie zwei jüngere Geschwister. Die Familie betreibt das Honigtörtchen in Gwynthor.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-5b669286"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-5b669286"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-5b669286",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "houseId": "house-melog",
+        "houseName": "Melog",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-5b669286",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-5b669286",
+            "fingerprint": "{\"name\":\"Nerys Melog\",\"title\":\"Chaos-Konditorin\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-5b669286.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-a5530d07\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"},{\"personId\":\"person-d9df75d6\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d9df75d6\",\"name\":\"Eiffion\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-a5530d07",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-a5530d07",
+              "name": "Anest Melog"
+            },
+            {
+              "personId": "person-d9df75d6",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-d9df75d6",
+              "name": "Eiffion"
+            }
+          ],
+          "partners": [],
+          "children": []
+        }
+      },
+      "id": "person--melog--person-5b669286",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-5b669286",
+        "path": "records/familien/melog/nerys-melog--person--melog--person-5b669286/character.json",
+        "schemaVersion": 1,
+        "contentHash": "f4cf3f00bef6184daf85a6dac40b3e8b2d8f04d657eb0e155984e9a862bea167",
+        "firestoreDocumentIds": [
+          "person--melog--person-5b669286"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-5b669286",
+              "worldPersonId": "person--melog--person-5b669286",
+              "houseId": "house-melog",
+              "houseName": "Melog",
+              "familyRole": "core",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-5b669286",
+              "fingerprint": "{\"name\":\"Nerys Melog\",\"title\":\"Chaos-Konditorin\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-5b669286.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-a5530d07\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"},{\"personId\":\"person-d9df75d6\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d9df75d6\",\"name\":\"Eiffion\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
+    },
+    {
+      "name": "Elisedd Melog",
+      "title": "Begabtes Allroundtalent",
+      "fraktion": "Melog",
+      "role": "Begabtes Allroundtalent",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Elisedd ist ein Sohn von Anest und Eiffion aus der Familie Melog. Er wird als begabtes Allroundtalent beschrieben. Seine ältere Schwester Nerys ist die „Chaos-Konditorin“, seine jüngere Schwester Teleri die kleine Schauspielerin der Familie. Das Honigtörtchen in Gwynthor ist der Bäcker- und Konditorbetrieb seiner Familie.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-c6293356.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Elisedd Melog"
+          },
+          {
+            "label": "Geburt",
+            "value": "1725"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Begabtes Allroundtalent"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-c6293356.png",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Elisedd ist ein Sohn von Anest und Eiffion aus der Familie Melog. Er wird als begabtes Allroundtalent beschrieben. Seine ältere Schwester Nerys ist die „Chaos-Konditorin“, seine jüngere Schwester Teleri die kleine Schauspielerin der Familie. Das Honigtörtchen in Gwynthor ist der Bäcker- und Konditorbetrieb seiner Familie.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-c6293356"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-c6293356"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-c6293356",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "houseId": "house-melog",
+        "houseName": "Melog",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-c6293356",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-c6293356",
+            "fingerprint": "{\"name\":\"Elisedd Melog\",\"title\":\"Begabtes Allroundtalent\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-c6293356.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-a5530d07\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"},{\"personId\":\"person-d9df75d6\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d9df75d6\",\"name\":\"Eiffion\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-a5530d07",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-a5530d07",
+              "name": "Anest Melog"
+            },
+            {
+              "personId": "person-d9df75d6",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-d9df75d6",
+              "name": "Eiffion"
+            }
+          ],
+          "partners": [],
+          "children": []
+        }
+      },
+      "id": "person--melog--person-c6293356",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-c6293356",
+        "path": "records/familien/melog/elisedd-melog--person--melog--person-c6293356/character.json",
+        "schemaVersion": 1,
+        "contentHash": "5193f81e06832f60ed17c3eaa0502b6633b1b27f1612e347340a77cd450125ab",
+        "firestoreDocumentIds": [
+          "person--melog--person-c6293356"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-c6293356",
+              "worldPersonId": "person--melog--person-c6293356",
+              "houseId": "house-melog",
+              "houseName": "Melog",
+              "familyRole": "core",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-c6293356",
+              "fingerprint": "{\"name\":\"Elisedd Melog\",\"title\":\"Begabtes Allroundtalent\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-c6293356.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-a5530d07\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"},{\"personId\":\"person-d9df75d6\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d9df75d6\",\"name\":\"Eiffion\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
+    },
+    {
+      "name": "Teleri Melog",
+      "title": "Kleine Schauspielerin",
+      "fraktion": "Melog",
+      "role": "Kleine Schauspielerin",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Teleri ist die jüngste Tochter von Anest und Eiffion und die Schwester von Nerys und Elisedd. Die Familie beschreibt sie als kleine Schauspielerin. Ihre Großeltern Tewdwr und Morfudd gehören zur Leitung des Honigtörtchens, der Bäckerei und Konditorei der Familie Melog in Gwynthor.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-02518ead.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Teleri Melog"
+          },
+          {
+            "label": "Geburt",
+            "value": "1730"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Kleine Schauspielerin"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-02518ead.png",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Teleri ist die jüngste Tochter von Anest und Eiffion und die Schwester von Nerys und Elisedd. Die Familie beschreibt sie als kleine Schauspielerin. Ihre Großeltern Tewdwr und Morfudd gehören zur Leitung des Honigtörtchens, der Bäckerei und Konditorei der Familie Melog in Gwynthor.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-02518ead"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-02518ead"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-02518ead",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "houseId": "house-melog",
+        "houseName": "Melog",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-02518ead",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-02518ead",
+            "fingerprint": "{\"name\":\"Teleri Melog\",\"title\":\"kleine Schauspielerin\",\"birth\":\"1730\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-02518ead.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-a5530d07\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"},{\"personId\":\"person-d9df75d6\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d9df75d6\",\"name\":\"Eiffion\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-a5530d07",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-a5530d07",
+              "name": "Anest Melog"
+            },
+            {
+              "personId": "person-d9df75d6",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-d9df75d6",
+              "name": "Eiffion"
+            }
+          ],
+          "partners": [],
+          "children": []
+        }
+      },
+      "id": "person--melog--person-02518ead",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-02518ead",
+        "path": "records/familien/melog/teleri-melog--person--melog--person-02518ead/character.json",
+        "schemaVersion": 1,
+        "contentHash": "e1d0daa9a4c3354f5838642e4fd689551f61700b40ccacd9702b85c598156476",
+        "firestoreDocumentIds": [
+          "person--melog--person-02518ead"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-02518ead",
+              "worldPersonId": "person--melog--person-02518ead",
+              "houseId": "house-melog",
+              "houseName": "Melog",
+              "familyRole": "core",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-02518ead",
+              "fingerprint": "{\"name\":\"Teleri Melog\",\"title\":\"kleine Schauspielerin\",\"birth\":\"1730\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-02518ead.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-a5530d07\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"},{\"personId\":\"person-d9df75d6\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d9df75d6\",\"name\":\"Eiffion\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
+    },
+    {
+      "name": "Lleufer Melog",
+      "title": "Eitler Charmeur",
+      "fraktion": "Melog",
+      "role": "Eitler Charmeur",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Lleufer ist ein Sohn von Afanen und Llywarch und der Bruder von Cerys. Die Familie beschreibt ihn als eitlen Charmeur. Seine Mutter leitet den Verkauf des Honigtörtchens in Gwynthor; sein Vater kümmert sich um Verkauf und Gästebetreuung. Er gehört damit zur jüngeren Generation des Hauses Melog.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-9a399999.jpg",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Lleufer Melog"
+          },
+          {
+            "label": "Geburt",
+            "value": "1716"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Eitler Charmeur"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-9a399999.jpg",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Lleufer ist ein Sohn von Afanen und Llywarch und der Bruder von Cerys. Die Familie beschreibt ihn als eitlen Charmeur. Seine Mutter leitet den Verkauf des Honigtörtchens in Gwynthor; sein Vater kümmert sich um Verkauf und Gästebetreuung. Er gehört damit zur jüngeren Generation des Hauses Melog.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9a399999"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-9a399999"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-9a399999",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "houseId": "house-melog",
+        "houseName": "Melog",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-9a399999",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9a399999",
+            "fingerprint": "{\"name\":\"Lleufer Melog\",\"title\":\"eitler Charmeur\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-9a399999.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-9ffeda8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"},{\"personId\":\"person-d32c2160\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d32c2160\",\"name\":\"Llywarch\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-9ffeda8d",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-9ffeda8d",
+              "name": "Afanen Melog"
+            },
+            {
+              "personId": "person-d32c2160",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-d32c2160",
+              "name": "Llywarch"
+            }
+          ],
+          "partners": [],
+          "children": []
+        }
+      },
+      "id": "person--melog--person-9a399999",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-9a399999",
+        "path": "records/familien/melog/lleufer-melog--person--melog--person-9a399999/character.json",
+        "schemaVersion": 1,
+        "contentHash": "f1c7d651f1255bed3875e764b863267bf673fbeb15d455b0eda965675a8f44c5",
+        "firestoreDocumentIds": [
+          "person--melog--person-9a399999"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-9a399999",
+              "worldPersonId": "person--melog--person-9a399999",
+              "houseId": "house-melog",
+              "houseName": "Melog",
+              "familyRole": "core",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9a399999",
+              "fingerprint": "{\"name\":\"Lleufer Melog\",\"title\":\"eitler Charmeur\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-9a399999.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-9ffeda8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"},{\"personId\":\"person-d32c2160\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d32c2160\",\"name\":\"Llywarch\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
+    },
+    {
+      "name": "Cerys Melog",
+      "title": "Geschäftstüchtiges, etwas eingebildetes Kind",
+      "fraktion": "Melog",
+      "role": "Geschäftstüchtiges, etwas eingebildetes Kind",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Cerys ist eine Tochter von Afanen und Llywarch und die jüngere Schwester von Lleufer. Sie ist ein geschäftstüchtiges, etwas eingebildetes Kind. Ihre Eltern arbeiten im Verkauf und in der Gästebetreuung des Honigtörtchens in Gwynthor, des Bäcker- und Konditorbetriebs ihrer Familie. Cerys gehört zum Familienleben, hat aber keine feste Aufgabe als Ladenangestellte.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-4c366307.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Cerys Melog"
+          },
+          {
+            "label": "Geburt",
+            "value": "1731"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Geschäftstüchtiges, etwas eingebildetes Kind"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-4c366307.png",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Cerys ist eine Tochter von Afanen und Llywarch und die jüngere Schwester von Lleufer. Sie ist ein geschäftstüchtiges, etwas eingebildetes Kind. Ihre Eltern arbeiten im Verkauf und in der Gästebetreuung des Honigtörtchens in Gwynthor, des Bäcker- und Konditorbetriebs ihrer Familie. Cerys gehört zum Familienleben, hat aber keine feste Aufgabe als Ladenangestellte.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-4c366307"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-4c366307"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-4c366307",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1731",
+        "death": "",
+        "houseId": "house-melog",
+        "houseName": "Melog",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-4c366307",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-4c366307",
+            "fingerprint": "{\"name\":\"Cerys Melog\",\"title\":\"eingebildete geschäftstüchtige Händlerin\",\"birth\":\"1731\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-4c366307.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-9ffeda8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"},{\"personId\":\"person-d32c2160\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d32c2160\",\"name\":\"Llywarch\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-9ffeda8d",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-9ffeda8d",
+              "name": "Afanen Melog"
+            },
+            {
+              "personId": "person-d32c2160",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-d32c2160",
+              "name": "Llywarch"
+            }
+          ],
+          "partners": [],
+          "children": []
+        }
+      },
+      "id": "person--melog--person-4c366307",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-4c366307",
+        "path": "records/familien/melog/cerys-melog--person--melog--person-4c366307/character.json",
+        "schemaVersion": 1,
+        "contentHash": "eb54614a36494fa457bf5b8a882b21df0453a228fe725c9eb90f273b7661b783",
+        "firestoreDocumentIds": [
+          "person--melog--person-4c366307"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-4c366307",
+              "worldPersonId": "person--melog--person-4c366307",
+              "houseId": "house-melog",
+              "houseName": "Melog",
+              "familyRole": "core",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-4c366307",
+              "fingerprint": "{\"name\":\"Cerys Melog\",\"title\":\"eingebildete geschäftstüchtige Händlerin\",\"birth\":\"1731\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-4c366307.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-9ffeda8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"},{\"personId\":\"person-d32c2160\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d32c2160\",\"name\":\"Llywarch\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
+    },
+    {
+      "name": "Iddon Melog",
+      "title": "Klein-Guto · Naschkatze",
+      "fraktion": "Melog",
+      "role": "Klein-Guto · Naschkatze",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "Cenyri",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Iddon ist der Sohn des Bäckers Guto und seiner Gemahlin Mabli. Wie sein Vater wird er als Naschkatze beschrieben und trägt den Beinamen „Klein-Guto“. Sein Vater arbeitet in der Backstube, seine Mutter betreut Verpackung und Einkauf. Das Honigtörtchen in Gwynthor ist der Familienbetrieb der Melogs.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-05T18:00:00.000Z",
+      "updatedAt": "2026-11-05T18:00:00.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/melog/person-157c1853.jpg",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "inventory": null,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Iddon Melog"
+          },
+          {
+            "label": "Geburt",
+            "value": "1732"
+          },
+          {
+            "label": "Haus und Familie",
+            "value": "Melog · Gwynthor"
+          },
+          {
+            "label": "Tätigkeit oder Eigenheit",
+            "value": "Klein-Guto · Naschkatze"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/melog/person-157c1853.jpg",
+          "biographyTitle": "Familie und Leben",
+          "biographyText": "<p>Iddon ist der Sohn des Bäckers Guto und seiner Gemahlin Mabli. Wie sein Vater wird er als Naschkatze beschrieben und trägt den Beinamen „Klein-Guto“. Sein Vater arbeitet in der Backstube, seine Mutter betreut Verpackung und Einkauf. Das Honigtörtchen in Gwynthor ist der Familienbetrieb der Melogs.</p>",
+          "documentsTitle": "Die Familie Melog",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+              "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-157c1853"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--melog--person-157c1853"
+      },
+      "genealogy": {
+        "worldPersonId": "person--melog--person-157c1853",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1732",
+        "death": "",
+        "houseId": "house-melog",
+        "houseName": "Melog",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "melog",
+            "personId": "person-157c1853",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-05T18:00:00.000Z",
+            "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-157c1853",
+            "fingerprint": "{\"name\":\"Iddon Melog\",\"title\":\"Klein-Guto / Naschkatze\",\"birth\":\"1732\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-157c1853.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-a24c0d08\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a24c0d08\",\"name\":\"Guto Melog\"},{\"personId\":\"person-d5f1d52b\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d5f1d52b\",\"name\":\"Mabli\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-a24c0d08",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-a24c0d08",
+              "name": "Guto Melog"
+            },
+            {
+              "personId": "person-d5f1d52b",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--melog--person-d5f1d52b",
+              "name": "Mabli"
+            }
+          ],
+          "partners": [],
+          "children": []
+        }
+      },
+      "id": "person--melog--person-157c1853",
+      "race": "Mensch",
+      "localRecord": {
+        "recordId": "character--person--melog--person-157c1853",
+        "path": "records/familien/melog/iddon-melog--person--melog--person-157c1853/character.json",
+        "schemaVersion": 1,
+        "contentHash": "3c1d0f68983e9b530ff9a5e82abed07864da11d0a4531a425b89d0d8421c9c4a",
+        "firestoreDocumentIds": [
+          "person--melog--person-157c1853"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "melog",
+            "label": "Familie Melog"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "melog",
+              "familyTitle": "Familie Melog",
+              "personId": "person-157c1853",
+              "worldPersonId": "person--melog--person-157c1853",
+              "houseId": "house-melog",
+              "houseName": "Melog",
+              "familyRole": "core",
+              "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-157c1853",
+              "fingerprint": "{\"name\":\"Iddon Melog\",\"title\":\"Klein-Guto / Naschkatze\",\"birth\":\"1732\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-157c1853.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-a24c0d08\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a24c0d08\",\"name\":\"Guto Melog\"},{\"personId\":\"person-d5f1d52b\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d5f1d52b\",\"name\":\"Mabli\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "melog-honigtoertchen-20261105"
+      }
     }
   ],
   "charTabs": {
@@ -226400,7 +229508,26 @@
         "person--perllan--person-458a8c43",
         "person--perllan--person-b758cea4",
         "person--perllan--person-f3cccc1a",
-        "person--perllan--person-02e7bc53"
+        "person--perllan--person-02e7bc53",
+        "gwynthor-markt-cadwal-wernig",
+        "gwynthor-markt-alrik-tannholt",
+        "gwynthor-markt-mairwen-brennig",
+        "person--melog--person-29ef1c22",
+        "person--melog--person-aaae3c9f",
+        "person--melog--person-0c68dade",
+        "person--melog--person-30cd0b46",
+        "person--melog--person-a5530d07",
+        "person--melog--person-9ffeda8d",
+        "person--melog--person-a24c0d08",
+        "person--melog--person-d9df75d6",
+        "person--melog--person-d32c2160",
+        "person--melog--person-d5f1d52b",
+        "person--melog--person-5b669286",
+        "person--melog--person-c6293356",
+        "person--melog--person-02518ead",
+        "person--melog--person-9a399999",
+        "person--melog--person-4c366307",
+        "person--melog--person-157c1853"
       ],
       "Dun Athar": [
         "2bCru7S3YGrzjFnYpnN9",

@@ -160,7 +160,7 @@ test('the ducal house and land share the unchanged supplied emblem while the anc
 test('Solestian history retains its confirmed cultural sequence and trade wealth without inheriting Argentum offices',() => {
   assert.deepEqual(REALM_CONTEXT.history.map(item => item.id),['tarranath','zarakhul','imperial-trade','after-empire']);
   const lore = JSON.stringify(REALM_CONTEXT);
-  for (const name of ['Tarranath','Felsalben','Grianeach','Zarakhul','Venalys','Leukonia','Sylvarant','Weisenfluh']) assert(lore.includes(name),name);
+  for (const name of ['Tarranath','Felsalben','Grianeach','Zarakhul','Venalys','Leukonia','Vardentia','Weisenfluh']) assert(lore.includes(name),name);
   assert.match(REALM_CONTEXT.title,/Herzogtum Solestia/);
   assert.match(REALM_CONTEXT.subtitle,/reiche/);
   for (const key of ['offices','institutions','government','castes','socialCastes']) assert.equal(REALM_CONTEXT[key],undefined,key);

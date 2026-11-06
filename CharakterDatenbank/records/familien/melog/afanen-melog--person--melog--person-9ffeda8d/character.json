@@ -1,0 +1,381 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--melog--person-9ffeda8d",
+  "slug": "afanen-melog",
+  "identity": {
+    "name": "Afanen Melog",
+    "aliases": [],
+    "worldPersonId": "person--melog--person-9ffeda8d"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "melog",
+      "label": "Familie Melog"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "melog",
+        "familyTitle": "Familie Melog",
+        "personId": "person-9ffeda8d",
+        "worldPersonId": "person--melog--person-9ffeda8d",
+        "houseId": "house-melog",
+        "houseName": "Melog",
+        "familyRole": "core",
+        "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9ffeda8d",
+        "fingerprint": "{\"name\":\"Afanen Melog\",\"title\":\"Verkaufsleitung\",\"birth\":\"1697\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-9ffeda8d.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"},{\"personId\":\"person-30cd0b46\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"partners\":[{\"personId\":\"person-d32c2160\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d32c2160\",\"name\":\"Llywarch\"}],\"children\":[{\"personId\":\"person-9a399999\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9a399999\",\"name\":\"Lleufer Melog\"},{\"personId\":\"person-4c366307\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-4c366307\",\"name\":\"Cerys Melog\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--melog--person-9ffeda8d",
+      "documentIds": [
+        "person--melog--person-9ffeda8d"
+      ],
+      "documents": [
+        {
+          "documentId": "person--melog--person-9ffeda8d",
+          "createdAt": "2026-11-05T18:00:00.000Z",
+          "updatedAt": "2026-11-05T18:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "melog",
+        "personId": "person-9ffeda8d",
+        "worldPersonId": "person--melog--person-9ffeda8d",
+        "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9ffeda8d"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Melog Honigtoertchen/person-9ffeda8d.json",
+    "sourceExportedAt": "2026-11-05T18:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-05T18:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--melog--person-9ffeda8d"
+    ],
+    "contentHash": "2e99b3c28891cdb61b514181d128fd25d7484b698571f04b2432754340da1c00"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "melog-honigtoertchen-20261105"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Afanen Melog",
+        "title": "Verkaufsleitung",
+        "fraktion": "Melog",
+        "role": "Verkaufsleitung",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Gwynthor",
+        "origin": "Cenyri",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Afanen leitet den Verkauf im Honigtörtchen, der Bäckerei und Konditorei ihrer Familie in Gwynthor. Sie ist eine Tochter von Tewdwr und Morfudd und die Schwester von Anest und Guto. Ihr Gemahl Llywarch arbeitet in Verkauf und Gästebetreuung. Lleufer und Cerys sind ihre gemeinsamen Kinder.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-05T18:00:00.000Z",
+        "updatedAt": "2026-11-05T18:00:00.000Z",
+        "portrait": "../Stammbäume/assets/images/portraits/melog/person-9ffeda8d.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Afanen Melog"
+            },
+            {
+              "label": "Geburt",
+              "value": "1697"
+            },
+            {
+              "label": "Haus und Familie",
+              "value": "Melog · Gwynthor"
+            },
+            {
+              "label": "Tätigkeit oder Eigenheit",
+              "value": "Verkaufsleitung"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/melog/person-9ffeda8d.png",
+            "biographyTitle": "Familie und Leben",
+            "biographyText": "<p>Afanen leitet den Verkauf im Honigtörtchen, der Bäckerei und Konditorei ihrer Familie in Gwynthor. Sie ist eine Tochter von Tewdwr und Morfudd und die Schwester von Anest und Guto. Ihr Gemahl Llywarch arbeitet in Verkauf und Gästebetreuung. Lleufer und Cerys sind ihre gemeinsamen Kinder.</p>",
+            "documentsTitle": "Die Familie Melog",
+            "documents": [
+              {
+                "title": "Im Stammbaum ansehen",
+                "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+                "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9ffeda8d"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--melog--person-9ffeda8d"
+        },
+        "genealogy": {
+          "worldPersonId": "person--melog--person-9ffeda8d",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1697",
+          "death": "",
+          "houseId": "house-melog",
+          "houseName": "Melog",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "melog",
+              "personId": "person-9ffeda8d",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-05T18:00:00.000Z",
+              "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9ffeda8d",
+              "fingerprint": "{\"name\":\"Afanen Melog\",\"title\":\"Verkaufsleitung\",\"birth\":\"1697\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-9ffeda8d.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"},{\"personId\":\"person-30cd0b46\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"partners\":[{\"personId\":\"person-d32c2160\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d32c2160\",\"name\":\"Llywarch\"}],\"children\":[{\"personId\":\"person-9a399999\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9a399999\",\"name\":\"Lleufer Melog\"},{\"personId\":\"person-4c366307\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-4c366307\",\"name\":\"Cerys Melog\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "person-0c68dade",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-0c68dade",
+                "name": "Tewdwr Melog"
+              },
+              {
+                "personId": "person-30cd0b46",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-30cd0b46",
+                "name": "Morfudd"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "person-d32c2160",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-d32c2160",
+                "name": "Llywarch"
+              }
+            ],
+            "children": [
+              {
+                "personId": "person-9a399999",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-9a399999",
+                "name": "Lleufer Melog"
+              },
+              {
+                "personId": "person-4c366307",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-4c366307",
+                "name": "Cerys Melog"
+              }
+            ]
+          }
+        },
+        "id": "person--melog--person-9ffeda8d",
+        "race": "Mensch"
+      }
+    ]
+  },
+  "character": {
+    "name": "Afanen Melog",
+    "title": "Verkaufsleitung",
+    "fraktion": "Melog",
+    "role": "Verkaufsleitung",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "Cenyri",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Afanen leitet den Verkauf im Honigtörtchen, der Bäckerei und Konditorei ihrer Familie in Gwynthor. Sie ist eine Tochter von Tewdwr und Morfudd und die Schwester von Anest und Guto. Ihr Gemahl Llywarch arbeitet in Verkauf und Gästebetreuung. Lleufer und Cerys sind ihre gemeinsamen Kinder.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-05T18:00:00.000Z",
+    "updatedAt": "2026-11-05T18:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/melog/person-9ffeda8d.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Afanen Melog"
+        },
+        {
+          "label": "Geburt",
+          "value": "1697"
+        },
+        {
+          "label": "Haus und Familie",
+          "value": "Melog · Gwynthor"
+        },
+        {
+          "label": "Tätigkeit oder Eigenheit",
+          "value": "Verkaufsleitung"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/melog/person-9ffeda8d.png",
+        "biographyTitle": "Familie und Leben",
+        "biographyText": "<p>Afanen leitet den Verkauf im Honigtörtchen, der Bäckerei und Konditorei ihrer Familie in Gwynthor. Sie ist eine Tochter von Tewdwr und Morfudd und die Schwester von Anest und Guto. Ihr Gemahl Llywarch arbeitet in Verkauf und Gästebetreuung. Lleufer und Cerys sind ihre gemeinsamen Kinder.</p>",
+        "documentsTitle": "Die Familie Melog",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+            "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9ffeda8d"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--melog--person-9ffeda8d"
+    },
+    "genealogy": {
+      "worldPersonId": "person--melog--person-9ffeda8d",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1697",
+      "death": "",
+      "houseId": "house-melog",
+      "houseName": "Melog",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "melog",
+          "personId": "person-9ffeda8d",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-05T18:00:00.000Z",
+          "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9ffeda8d",
+          "fingerprint": "{\"name\":\"Afanen Melog\",\"title\":\"Verkaufsleitung\",\"birth\":\"1697\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-9ffeda8d.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"},{\"personId\":\"person-30cd0b46\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"partners\":[{\"personId\":\"person-d32c2160\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d32c2160\",\"name\":\"Llywarch\"}],\"children\":[{\"personId\":\"person-9a399999\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9a399999\",\"name\":\"Lleufer Melog\"},{\"personId\":\"person-4c366307\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-4c366307\",\"name\":\"Cerys Melog\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-0c68dade",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-0c68dade",
+            "name": "Tewdwr Melog"
+          },
+          {
+            "personId": "person-30cd0b46",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-30cd0b46",
+            "name": "Morfudd"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "person-d32c2160",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-d32c2160",
+            "name": "Llywarch"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-9a399999",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-9a399999",
+            "name": "Lleufer Melog"
+          },
+          {
+            "personId": "person-4c366307",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-4c366307",
+            "name": "Cerys Melog"
+          }
+        ]
+      }
+    },
+    "id": "person--melog--person-9ffeda8d",
+    "race": "Mensch"
+  }
+}

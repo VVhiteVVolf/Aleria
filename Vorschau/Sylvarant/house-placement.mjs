@@ -13,7 +13,7 @@ export function mountHousePlacement({ root, onHouse, notice }, { houses, settlem
     houses, settlements, createPlacementState:() => createHousePlacementState({ houses, settlements }),
     createMapProposal:placements => createMapProposal({ houses, placements }), escapeHtml,
     houseCard:renderHouseCard, renderSeats:createSeatRenderer({ houses, settlements, archonates:regions }), rankLabel,
-    storageKey:PLACEMENT_STORAGE_KEY, exportName:'sylvarant-sitzentwurf.json',
+    storageKey:PLACEMENT_STORAGE_KEY, exportName:'vardentia-sitzentwurf.json',
     getSelectionFocusTarget:() => mapDialog.open ? mapDialog.querySelector('.map-viewport') : null,
     resetMessage:'Die Ausgangszuordnung ist wiederhergestellt: Mede in der Hauptstadt, die übrigen Häuser ohne Sitz.',
     caption:proposal => {

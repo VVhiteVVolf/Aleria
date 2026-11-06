@@ -8,7 +8,7 @@ const biographyImage = source => !source ? '' : source.startsWith('../') ? sourc
 export function createHousePageData(content) {
   const images = {
     'haus-wappen': { src: content.images.crest, alt: `Wappen von ${content.name}`, format: 'square' },
-    'haus-hauptbild': { src: content.images.scene, alt: content.images.sceneAlt || `Ritter von ${content.name}`, format: 'portrait', maxHeight: 580, ...(!content.images.scene ? { emptyLabel: 'Illustration folgt …' } : {}) },
+    'haus-hauptbild': { src: content.images.scene, alt: content.images.sceneAlt || `Ritter von ${content.name}`, format: 'portrait', maxHeight: 580, ...(content.images.sceneHref ? { href: content.images.sceneHref } : {}), ...(!content.images.scene ? { emptyLabel: 'Illustration folgt …' } : {}) },
     'haus-banner': { src: content.images.banner, href: content.territoryHref || '', alt: `Herrschaftsbanner von ${content.territoryName || content.county || content.profile.seat}`, format: 'square' },
   };
   const card = (entry, key) => {
@@ -46,8 +46,8 @@ export function createHousePageData(content) {
     ...(content.scenes?.length ? { scenes: content.scenes } : {}),
     ...(content.warriorGallery?.entries?.length ? { warriorGallery: content.warriorGallery } : {}),
     images, court: { groups, cadets },
-    figures: { heading: content.sectionTitles?.historicalFigures || (content.page === 'kleinehaeuser.html' ? '11. Historische Figuren' : '12. Historische Figuren'), tableTitle: content.figuresTitle, entries: figures },
-    familyTreeEmbed: { src: treeLink(content.id), title: `Stammbaum von ${content.name}` },
+    figures: { heading: content.sectionTitles?.historicalFigures || (content.page === 'kleinehaeuser.html' ? '11. Historische Figuren' : '12. Historische Figuren'), tableTitle: content.figuresTitle, entries: figures, ...(content.figuresMobileLayout ? { mobileLayout: content.figuresMobileLayout } : {}) },
+    familyTreeEmbed: { src: `${treeLink(content.id)}${content.familyTreeCompact ? '&embed=1' : ''}`, title: `Stammbaum von ${content.name}` },
     trivia: content.trivia,
   };
 }

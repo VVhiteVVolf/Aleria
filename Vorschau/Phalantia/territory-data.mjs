@@ -39,6 +39,6 @@ export const REGIONS = Object.freeze(SETTLEMENTS.map(city => Object.freeze({
 
 export const MAP_CONTEXT = Object.freeze({
   sourceImageSize:imageSize, measuredIcons:8, bordersDrawn:false,
-  outsidePlaces:[{name:'Alantaic',reason:'Der angeschnittene Ort gehört laut Nutzer nicht zu Phalantia.'}],
-  note:'Die acht Städte sind die sichtbaren Hauptsitze. Tausende kleine Siedlungen sind damit nicht vollständig kartiert. Alantaic bleibt als auswärtiger Karteninhalt erhalten und ist kein Zuordnungsziel.'
+  outsidePlaces:[{name:'Orthevia',sourceName:'Alantaic',reason:'Der angeschnittene Nachbarort gehört nicht zu Phalantia.'}],
+  note:'Die acht Städte sind die sichtbaren Hauptsitze. Tausende kleine Siedlungen sind damit nicht vollständig kartiert. Orthevia bleibt ein auswärtiger Nachbarort und ist kein Zuordnungsziel.'
 });

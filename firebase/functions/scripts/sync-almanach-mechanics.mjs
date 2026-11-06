@@ -6,6 +6,13 @@ import { buildSceneTradeBuiltins } from '../../../AleriaAlmanach/scripts/build-s
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
 const sourceRoot = resolve(root, 'AleriaAlmanach/modules');
 const targetRoot = resolve(root, 'firebase/functions/src/generated');
+const selectedFiles = [];
+for (let index = 2; index < process.argv.length; index += 2) {
+  if (process.argv[index] !== '--only' || !process.argv[index + 1]) {
+    throw new Error('Use --only <shared-module-path> for each selected mechanics file.');
+  }
+  selectedFiles.push(process.argv[index + 1]);
+}
 const files = [
   'character-development/development-state.js',
   'item-definitions/authored-item-catalog.js',
@@ -164,12 +171,17 @@ async function collectMechanicsFiles(entryPoints) {
 
 // Build the canonical public source snapshot first, then use the ordinary
 // shared-mechanics projection so browser/server bytes have one owner.
-await buildSceneTradeBuiltins({ root });
+// A bounded projection never rebuilds merchant sources or removes other modules.
+if (!selectedFiles.length) await buildSceneTradeBuiltins({ root });
 const mechanicsFiles = await collectMechanicsFiles(files);
 const expectedTarget = resolve(root, 'firebase/functions/src/generated');
 if (targetRoot !== expectedTarget || relative(root, targetRoot).startsWith('..')) throw new Error('Unsafe generated mechanics target');
-await rm(targetRoot, { recursive: true, force: true });
-for (const relativePath of mechanicsFiles) {
+const projectedFiles = selectedFiles.length ? [...new Set(selectedFiles)] : mechanicsFiles;
+for (const relativePath of projectedFiles) {
+  if (!mechanicsFiles.includes(relativePath)) throw new Error(`Unknown shared mechanics module: ${relativePath}`);
+}
+if (!selectedFiles.length) await rm(targetRoot, { recursive: true, force: true });
+for (const relativePath of projectedFiles) {
   const target = resolve(targetRoot, relativePath);
   await mkdir(dirname(target), { recursive: true });
   await cp(resolve(sourceRoot, relativePath), target);

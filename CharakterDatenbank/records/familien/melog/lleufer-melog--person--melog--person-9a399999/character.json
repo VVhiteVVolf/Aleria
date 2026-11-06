@@ -1,0 +1,329 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--melog--person-9a399999",
+  "slug": "lleufer-melog",
+  "identity": {
+    "name": "Lleufer Melog",
+    "aliases": [],
+    "worldPersonId": "person--melog--person-9a399999"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "melog",
+      "label": "Familie Melog"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "melog",
+        "familyTitle": "Familie Melog",
+        "personId": "person-9a399999",
+        "worldPersonId": "person--melog--person-9a399999",
+        "houseId": "house-melog",
+        "houseName": "Melog",
+        "familyRole": "core",
+        "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9a399999",
+        "fingerprint": "{\"name\":\"Lleufer Melog\",\"title\":\"eitler Charmeur\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-9a399999.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-9ffeda8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"},{\"personId\":\"person-d32c2160\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d32c2160\",\"name\":\"Llywarch\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--melog--person-9a399999",
+      "documentIds": [
+        "person--melog--person-9a399999"
+      ],
+      "documents": [
+        {
+          "documentId": "person--melog--person-9a399999",
+          "createdAt": "2026-11-05T18:00:00.000Z",
+          "updatedAt": "2026-11-05T18:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "melog",
+        "personId": "person-9a399999",
+        "worldPersonId": "person--melog--person-9a399999",
+        "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9a399999"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Melog Honigtoertchen/person-9a399999.json",
+    "sourceExportedAt": "2026-11-05T18:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-05T18:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--melog--person-9a399999"
+    ],
+    "contentHash": "f1c7d651f1255bed3875e764b863267bf673fbeb15d455b0eda965675a8f44c5"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "melog-honigtoertchen-20261105"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Lleufer Melog",
+        "title": "Eitler Charmeur",
+        "fraktion": "Melog",
+        "role": "Eitler Charmeur",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Gwynthor",
+        "origin": "Cenyri",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Lleufer ist ein Sohn von Afanen und Llywarch und der Bruder von Cerys. Die Familie beschreibt ihn als eitlen Charmeur. Seine Mutter leitet den Verkauf des Honigtörtchens in Gwynthor; sein Vater kümmert sich um Verkauf und Gästebetreuung. Er gehört damit zur jüngeren Generation des Hauses Melog.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-05T18:00:00.000Z",
+        "updatedAt": "2026-11-05T18:00:00.000Z",
+        "portrait": "../Stammbäume/assets/images/portraits/melog/person-9a399999.jpg",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Lleufer Melog"
+            },
+            {
+              "label": "Geburt",
+              "value": "1716"
+            },
+            {
+              "label": "Haus und Familie",
+              "value": "Melog · Gwynthor"
+            },
+            {
+              "label": "Tätigkeit oder Eigenheit",
+              "value": "Eitler Charmeur"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/melog/person-9a399999.jpg",
+            "biographyTitle": "Familie und Leben",
+            "biographyText": "<p>Lleufer ist ein Sohn von Afanen und Llywarch und der Bruder von Cerys. Die Familie beschreibt ihn als eitlen Charmeur. Seine Mutter leitet den Verkauf des Honigtörtchens in Gwynthor; sein Vater kümmert sich um Verkauf und Gästebetreuung. Er gehört damit zur jüngeren Generation des Hauses Melog.</p>",
+            "documentsTitle": "Die Familie Melog",
+            "documents": [
+              {
+                "title": "Im Stammbaum ansehen",
+                "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+                "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9a399999"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--melog--person-9a399999"
+        },
+        "genealogy": {
+          "worldPersonId": "person--melog--person-9a399999",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1716",
+          "death": "",
+          "houseId": "house-melog",
+          "houseName": "Melog",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "melog",
+              "personId": "person-9a399999",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-05T18:00:00.000Z",
+              "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9a399999",
+              "fingerprint": "{\"name\":\"Lleufer Melog\",\"title\":\"eitler Charmeur\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-9a399999.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-9ffeda8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"},{\"personId\":\"person-d32c2160\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d32c2160\",\"name\":\"Llywarch\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "person-9ffeda8d",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-9ffeda8d",
+                "name": "Afanen Melog"
+              },
+              {
+                "personId": "person-d32c2160",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-d32c2160",
+                "name": "Llywarch"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "id": "person--melog--person-9a399999",
+        "race": "Mensch"
+      }
+    ]
+  },
+  "character": {
+    "name": "Lleufer Melog",
+    "title": "Eitler Charmeur",
+    "fraktion": "Melog",
+    "role": "Eitler Charmeur",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "Cenyri",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Lleufer ist ein Sohn von Afanen und Llywarch und der Bruder von Cerys. Die Familie beschreibt ihn als eitlen Charmeur. Seine Mutter leitet den Verkauf des Honigtörtchens in Gwynthor; sein Vater kümmert sich um Verkauf und Gästebetreuung. Er gehört damit zur jüngeren Generation des Hauses Melog.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-05T18:00:00.000Z",
+    "updatedAt": "2026-11-05T18:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/melog/person-9a399999.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Lleufer Melog"
+        },
+        {
+          "label": "Geburt",
+          "value": "1716"
+        },
+        {
+          "label": "Haus und Familie",
+          "value": "Melog · Gwynthor"
+        },
+        {
+          "label": "Tätigkeit oder Eigenheit",
+          "value": "Eitler Charmeur"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/melog/person-9a399999.jpg",
+        "biographyTitle": "Familie und Leben",
+        "biographyText": "<p>Lleufer ist ein Sohn von Afanen und Llywarch und der Bruder von Cerys. Die Familie beschreibt ihn als eitlen Charmeur. Seine Mutter leitet den Verkauf des Honigtörtchens in Gwynthor; sein Vater kümmert sich um Verkauf und Gästebetreuung. Er gehört damit zur jüngeren Generation des Hauses Melog.</p>",
+        "documentsTitle": "Die Familie Melog",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+            "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9a399999"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--melog--person-9a399999"
+    },
+    "genealogy": {
+      "worldPersonId": "person--melog--person-9a399999",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1716",
+      "death": "",
+      "houseId": "house-melog",
+      "houseName": "Melog",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "melog",
+          "personId": "person-9a399999",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-05T18:00:00.000Z",
+          "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-9a399999",
+          "fingerprint": "{\"name\":\"Lleufer Melog\",\"title\":\"eitler Charmeur\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-9a399999.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-9ffeda8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"},{\"personId\":\"person-d32c2160\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d32c2160\",\"name\":\"Llywarch\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-9ffeda8d",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-9ffeda8d",
+            "name": "Afanen Melog"
+          },
+          {
+            "personId": "person-d32c2160",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-d32c2160",
+            "name": "Llywarch"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--melog--person-9a399999",
+    "race": "Mensch"
+  }
+}

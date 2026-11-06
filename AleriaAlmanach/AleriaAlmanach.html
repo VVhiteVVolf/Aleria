@@ -130,7 +130,7 @@
 <link rel="stylesheet" href="./styles/icon-directory.css?v=20260704-icon-directory-list-v1">
 <link rel="stylesheet" href="./styles/topic-board.css?v=20261012-topic-board-image-button-v1">
 <link rel="stylesheet" href="./styles/topic-board-participants.css?v=20260911-topic-board-studio-v1">
-<link rel="stylesheet" href="./styles/world-date.css?v=20260911-calendar-v2">
+<link rel="stylesheet" href="./styles/world-date.css?v=20261105-latest-scene-v1">
 <link rel="stylesheet" href="./styles/mobile.css?v=20260910-archive-navigation-v1" media="(max-width: 640px)">
 <link rel="stylesheet" href="./styles/session-mobile.css?v=20261017-intro-collapse-v1">
 <link rel="stylesheet" href="./modules/sync/firebase-sync-status.css?v=20261104-online-priority-v1">
@@ -138,7 +138,7 @@
 <link rel="stylesheet" href="./styles/combat-status.css?v=20260922-profile-design-v1">
 <link rel="stylesheet" href="./styles/comments-condition-tracker.css?v=20260906-effect-rolls-v1">
 <link rel="stylesheet" href="./styles/combat-roll-mode.css?v=20260906-effect-rolls-v1">
-<link rel="stylesheet" href="./modules/modal/modal-navigation.css?v=20260908-module-layout-v3">
+<link rel="stylesheet" href="./modules/modal/modal-navigation.css?v=20261105-mobile-navigation-v4">
 <link rel="stylesheet" href="./modules/modal/modal-surface.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./modules/module-editor/module-preview.css?v=20260909-template-layout-v1">
   <link rel="stylesheet" href="./modules/organization-network/organization-network.css?v=20260909-newspaper-guilds-v1">
@@ -147,7 +147,7 @@
   <link rel="stylesheet" href="./modules/theatre-program/theatre-program.css?v=20261017-v1">
   <!-- Firebase -->
   <link rel="stylesheet" href="./styles/account.css?v=20261012-guild-v3">
-  <script type="module" src="./modules/auth/firebase-bootstrap.mjs?v=20261104-startup-v1"></script>
+  <script type="module" src="./modules/auth/firebase-bootstrap.mjs?v=20261105-comment-recovery-v1"></script>
   <script type="module" src="./modules/character-genealogy/genealogy-bootstrap.js?v=20261104-startup-v1"></script>
   <script src="../Fonts/Rheunwaith-Font-1.000/rheunwaith.js?v=2-gezeiten" defer></script>
   <script src="../Fonts/Karnrith-Font-2.000/karnrith.js?v=3" defer></script>
@@ -194,6 +194,7 @@
   <script src="./modules/gortach-brauerei/gortach-brewery-data.js?v=20261007-raised-prices-v2" defer></script>
   <script src="./modules/brewer-guilds/brewer-guilds-data.js?v=20261014-aldrimar-brewers-v1" defer></script>
   <script src="./modules/goettliche-eleganz/eleganz-data.js?v=20261104-clothing-v1" defer></script>
+  <script src="./modules/zum-honigtoertchen/honigtoertchen-data.js?v=20261105-v1" defer></script>
   <script src="./modules/gwynthor-theater/theater-data.js?v=20261031-formlingssache" defer></script>
   <script src="./modules/gwynthor-arena/arena-data.js?v=20261017-local-v1" defer></script>
   <script src="./modules/gwynthor-marktplatz/marketplace-data.js?v=20261101-v1" defer></script>
@@ -255,6 +256,7 @@
   <script src="./modules/world-date/world-date-scene-default.js?v=20260911-calendar-v2" defer></script>
   <script src="./modules/world-date/world-date-ui.js?v=20260919-play-days-v1" defer></script>
   <script src="./modules/world-date/world-date-events.js?v=20260826-world-date-shared-v3" defer></script>
+  <script type="module" src="./modules/world-date/world-date-latest-scene.mjs?v=20261105-latest-scene-v1"></script>
   <script src="./modules/icon-directory/icon-directory.js?v=20261104-startup-v1" defer></script>
   <script src="../Karten/karten.registry.js?v=20260723-landing-map-picker-v1" defer></script>
   <script src="./modules/module-section-manager/module-section-manager-template.js?v=20260912-v1" defer></script>
@@ -471,7 +473,7 @@
   <script src="./modules/comments/comments-toolbar.js?v=20261104-comment-controls-v1" defer></script>
   <script src="./modules/session/session-status.js?v=20260710-session-status-v1" defer></script>
   <script src="./modules/comments/comments-page.js?v=20261104-comment-controls-v1" defer></script>
-  <script src="./modules/comments/comments-backend.js?v=20260911-calendar-v2" defer></script>
+  <script src="./modules/comments/comments-backend.js?v=20261105-comment-recovery-v1" defer></script>
   <script src="./modules/comments/comments-form-state.js?v=20260906-segment-avatars-v1" defer></script>
   <script src="./modules/comments/comments-scene-cast.js?v=20260806-materialize-v1" defer></script>
   <script src="./modules/comments/comments-form.js?v=20261104-startup-v1" defer></script>
@@ -481,9 +483,9 @@
   <script src="./modules/comments/comments-richtext.js?v=20260804-preview-debounce-v1" defer></script>
   <script src="./modules/comments/comments-draft.js?v=20261104-startup-v1" defer></script>
   <script src="./modules/backup/scene-backup-ui.js?v=20261012-scene-backup-v1" defer></script>
-  <script src="./modules/comments/comments-turn.js?v=20261104-comment-controls-v1" defer></script>
+  <script src="./modules/comments/comments-turn.js?v=20261105-comment-recovery-v1" defer></script>
   <script src="./modules/comments/comments-pagination.js?v=20261104-comment-controls-v1" defer></script>
-  <script src="./modules/comments/comments-thread.js?v=20261104-scene-trade-v1" defer></script>
+  <script src="./modules/comments/comments-thread.js?v=20261105-comment-recovery-v1" defer></script>
   <script src="./modules/dashboard/dashboard-scene-activity.js?v=20261104-startup-v1" defer></script>
   <script src="./modules/scene-time/scene-time-events.js?v=20260919-play-days-v1" defer></script>
   <script src="./modules/scene-dice/scene-dice-events.js?v=20261013-performance-v1" defer></script>
@@ -531,7 +533,7 @@
   <script src="./modules/modal/modal-curl.js?v=20260611-page-isolation-v1" defer></script>
   <script src="./modules/modal/modal-controller.js?v=20261104-startup-v1" defer></script>
   <script src="./modules/modal/modal-events.js?v=20261004-biography-export-v1" defer></script>
-  <script src="./modules/sidebar/sidebar-feed.js?v=20260622-scene-transition-v1" defer></script>
+  <script src="./modules/sidebar/sidebar-feed.js?v=20261105-comment-recovery-v1" defer></script>
   <script src="./modules/sidebar/sidebar-registers.js?v=20261006-sidebar-equipment-v2" defer></script>
   <script src="./modules/topic-board/topic-board-travel.js?v=20260911-topic-board-studio-v1" defer></script>
   <script src="./modules/topic-board/topic-board-schedule.js?v=20260911-topic-board-studio-v1" defer></script>
@@ -641,6 +643,14 @@
           <span data-world-date-sync>Firebase wird verbunden …</span>
         </div>
       </div>
+      <div class="world-date-latest-scene" data-world-date-latest-scene aria-live="polite" aria-busy="true">
+        <small>Zeitlich späteste Szene</small>
+        <button type="button" data-latest-scene-open hidden title="Spielszene öffnen">
+          <strong data-latest-scene-title></strong>
+          <span data-latest-scene-time></span>
+        </button>
+        <p data-latest-scene-status>Szenenzeit wird geladen …</p>
+      </div>
       <details class="world-date-tools">
         <summary aria-label="Datumsverwaltung öffnen" title="Datumsverwaltung"><span aria-hidden="true">···</span></summary>
         <div class="world-date-actions">
@@ -654,7 +664,7 @@
       <div class="sidebar-title">✦ &nbsp; Themenvorschläge</div>
       <p class="topic-board-sidebar-copy">Was soll als Nächstes angespielt werden?</p>
       <button class="topic-board-sidebar-create" type="button" data-topic-board-action="open-board" aria-label="Themenwand öffnen" title="Themenwand öffnen">
-        <img src="./public/assets/topic-board/button-topic-board-v1.webp" alt="" width="360" height="120" loading="lazy" decoding="async">
+        <img src="./public/assets/topic-board/button-topic-board-v2.webp" alt="" width="360" height="120" loading="lazy" decoding="async">
       </button>
       <button class="topic-board-sidebar-open" type="button" data-topic-board-action="open-board">
         <span data-topic-board-sidebar-count>0 offene Fäden</span>

@@ -1145,5 +1145,44 @@ export const HOUSES = [
     "fullsize": "assets/emblems/production/house-eisenwarth.png",
     "ready": true,
     "crest": "assets/emblems/previews/house-eisenwarth.webp"
+  },
+  {
+    "id": "splettinger",
+    "name": "Splettinger",
+    "sourceSeat": null,
+    "rank": "Rang offen",
+    "localTitle": "Rang offen",
+    "imperial": false,
+    "retainedSourceMotif": false,
+    "nameStatus": "user-established",
+    "nameOrigin": "explicit-user-instruction-20261106",
+    "sourceImage": null,
+    "motif": "Ein edler brauner, sich aufbäumender Hengst mit schwarzer Mähne und schwarzem Schweif auf weiß-rot gespaltenem Feld.",
+    "palette": [
+      "Rot",
+      "Weiß",
+      "Schwarz"
+    ],
+    "frame": "Schwarzes Kreisband mit weißen Eichenblättern und roten Rauten",
+    "prototypeId": null,
+    "prototypeStatus": null,
+    "warrior": {
+      "id": "house-splettinger",
+      "name": "Hauskrieger Splettinger",
+      "houseId": "splettinger",
+      "classId": "reichsritter",
+      "className": "Schwerer Hausritter",
+      "description": "Eine eigene männliche Hausdarstellung in Rot, Weiß und Schwarz mit braunem aufrechtem Hengst. Helm und Rüstung folgen dem mathringischen Stil; Rang und Amt des Hauses werden dadurch nicht festgelegt.",
+      "equipment": "Gerades Großschwert, geschlossener gotischer Helm, schwerer schwarz-silberner Plattenharnisch",
+      "gender": "male",
+      "image": "assets/warriors/previews/house-splettinger.webp",
+      "fullsize": "assets/warriors/production/house-splettinger.png",
+      "ready": true
+    },
+    "note": "Splettinger ist nach ausdrücklicher Nutzerfestlegung ergänzt. Rang und Stadtsitz sind noch offen. Keine Personen oder Stammbäume ergänzt.",
+    "image": "assets/emblems/previews/house-splettinger.webp",
+    "fullsize": "assets/emblems/production/house-splettinger.png",
+    "ready": true,
+    "crest": "assets/emblems/previews/house-splettinger.webp"
   }
 ];

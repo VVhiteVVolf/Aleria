@@ -3,6 +3,7 @@ import { renderCombatSheetHeader, renderCombatSheetPages } from '../combat-sheet
 import { createCombatSheetWorkspace } from '../combat-sheet/combat-sheet-workspace.js';
 const sheetWorkspace = createCombatSheetWorkspace();
 import { describeCombatAttributeValue } from '../combat/combat-attribute-effects.js';
+import { personalWeaponAttribute } from '../combat/combat-personal-modifiers.js';
 import { summarizeCombatMechanics } from '../combat/ui/combat-mechanics-presentation.js';
 import { describeCombatTriggerRule } from '../combat/ui/combat-rule-presentation.js';
 const SKILL_PROFICIENCY_LABELS={none:'Ungeübt',trained:'Geübt',expertise:'Expertise'};
@@ -558,9 +559,15 @@ function renderResources(profile) {
   </article>`;
 }
 
+function getWeaponAttributeLabel(profile, weapon) {
+  const key = personalWeaponAttribute(profile, weapon);
+  return COMBAT_ATTRIBUTE_DEFINITIONS.find(attribute => attribute.key === key)?.label || key;
+}
+
 function renderWeapons(profile) {
   return `<section class="cp-sheet-card">
     <div class="cp-sheet-section-head"><div><span>Inventar als Vorlage · danach frei</span><h4>Waffen</h4></div><div class="cp-sheet-head-actions"><select data-combat-inventory-picker="weapon">${renderInventoryOptions('weapon')}</select><button type="button" data-combat-action="copy-inventory" data-combat-kind="weapon">Übernehmen</button><button type="button" data-combat-action="add-item" data-combat-collection="weapons">+ Waffe</button></div></div>
+    <div class="cp-sheet-fields"><label class="wide"><span>Waffenattribut für diesen Charakter</span><select data-combat-path="combat.weaponAttributeOverride"><option value=""${selected(profile.combat.weaponAttributeOverride || '', '')}>Bisherige Regeln</option><option value="strength"${selected(profile.combat.weaponAttributeOverride, 'strength')}>Stärke</option><option value="dexterity"${selected(profile.combat.weaponAttributeOverride, 'dexterity')}>Geschicklichkeit</option></select><small>Stärke oder Geschicklichkeit ist frei wählbar und gilt für Angriff und Schaden aller Waffen. „Bisherige Regeln“ verwendet die jeweiligen Waffen- und persönlichen Regeln.</small></label></div>
     <div class="cp-sheet-item-list">${profile.weapons.length ? profile.weapons.map(weapon => `<details class="cp-sheet-item ${weapon.equipped ? 'equipped' : ''}" data-sheet-entry="${escapeMarkup('weapon:' + weapon.id)}" data-sheet-search-text="${escapeMarkup([weapon.name,weapon.damageType,weapon.properties].join(' '))}"><summary class="cs-weapon-summary"><span><strong>${escapeMarkup(weapon.name || 'Unbenannte Waffe')}</strong><small>${escapeMarkup(weapon.damageType)} · ${escapeMarkup(weapon.range)}</small></span><b>${escapeMarkup(weapon.damageFormula.toUpperCase().replace(/D/g,'W'))}</b>${weapon.equipped ? '<em>Aktiv</em>' : `<button type="button" data-combat-action="equip-weapon" data-combat-item-id="${escapeMarkup(weapon.id)}">Auswählen</button>`}</summary><div class="cs-weapon-body">
       <div class="cp-sheet-item-title"><label class="cp-sheet-equipped"><input type="radio" name="cp-equipped-weapon" data-combat-action="equip-weapon" data-combat-item-id="${escapeMarkup(weapon.id)}"${checked(weapon.equipped)}> aktiv</label><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="name" value="${escapeMarkup(weapon.name)}" maxlength="120" placeholder="Waffenname">${weapon.inventoryItemId ? '<span class="cp-sheet-equipment-link">Inventar verknüpft</span>' : '<span class="cp-sheet-equipment-link is-system">Grundangriff</span>'}<button type="button" data-combat-action="edit-action-rules" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-entry-kind="weapon">Einsatz &amp; Kosten</button><button type="button" class="cp-sheet-remove" data-combat-action="remove-item" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}">×</button></div>
       ${renderEquipmentArtwork(weapon, { characterId: activeCharacter?.id })}
@@ -570,7 +577,7 @@ function renderWeapons(profile) {
         <label><span>Schadensart</span><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="damageType" value="${escapeMarkup(weapon.damageType)}" maxlength="80"></label>
         <label><span>Waffenart</span><select data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="weaponType">${COMBAT_WEAPON_TYPE_OPTIONS.map(option => `<option value="${option.id}"${selected(weapon.weaponType, option.id)}>${option.label}</option>`).join('')}</select></label>
         <label><span>Ausbildung</span><select data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="training"><option value="simple"${selected(weapon.training, 'simple')}>Schlicht / simpel</option><option value="martial"${selected(weapon.training, 'martial')}>Kriegerisch</option><option value="special"${selected(weapon.training, 'special')}>Besonders</option></select></label>
-        <label><span>Attribut</span><select data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="attackAttribute">${renderAttributeOptions(weapon.attackAttribute)}</select></label>
+        <label><span>Waffenstandard</span><select data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="attackAttribute">${renderAttributeOptions(weapon.attackAttribute)}</select><small>Verwendet: <b data-combat-weapon-attribute="${escapeMarkup(weapon.id)}">${escapeMarkup(getWeaponAttributeLabel(profile, weapon))}</b></small></label>
         <label><span>Reichweite</span><input data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="range" value="${escapeMarkup(weapon.range)}" maxlength="80"></label>
         <label><span>Angriff extra</span><input type="number" min="-99" max="99" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="attackBonus" value="${weapon.attackBonus}"></label>
         <label><span>Schaden extra</span><input type="number" min="-99" max="99" data-combat-collection="weapons" data-combat-item-id="${escapeMarkup(weapon.id)}" data-combat-property="damageBonus" value="${weapon.damageBonus}"></label>
@@ -1097,8 +1104,10 @@ function updateDerivedView() {
   profile.weapons.forEach(weapon => {
     const attack = document.querySelector(`[data-combat-weapon-attack="${CSS.escape(weapon.id)}"]`);
     const damage = document.querySelector(`[data-combat-weapon-damage="${CSS.escape(weapon.id)}"]`);
+    const attribute = document.getElementById('cp-combat-sheet-root')?.querySelector(`[data-combat-weapon-attribute="${CSS.escape(weapon.id)}"]`);
     if (attack) attack.textContent = displayModifier(getWeaponAttackModifier(profile, weapon));
     if (damage) damage.textContent = displayModifier(getWeaponDamageModifier(profile, weapon));
+    if (attribute) attribute.textContent = getWeaponAttributeLabel(profile, weapon);
   });
   const radar = document.querySelector('[data-combat-radar-polygon]');
   if (radar) radar.setAttribute('points', getRadarPoints(profile));

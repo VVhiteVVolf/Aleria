@@ -25,7 +25,7 @@ export function createArtDialogs({ dialog, houses, warriors, prototypes, artwork
       { label:'Belegter Hauskontext', value:house.note },
     ];
     if (warrior?.ready && house.ready) {
-      session.open(renderHouseDossier({ title:house.name, source:'Sylvarant · Hausdarstellung', headingId:'art-title',
+      session.open(renderHouseDossier({ title:house.name, source:'Vardentia · Hausdarstellung', headingId:'art-title',
         warrior:{...warrior, className:prototype?.role || prototype?.name || warrior.role || warrior.className,
           roleLabel:warrior.status === 'supplied' ? 'Vorhandene Darstellung' : 'Kriegerentwurf',
           reason:warrior.reason || warrior.description, equipment:list(warrior.equipment), palette:list(warrior.palette || house.palette),
@@ -35,7 +35,7 @@ export function createArtDialogs({ dialog, houses, warriors, prototypes, artwork
       },e));
       return;
     }
-    session.open(`<p class="eyebrow">Sylvarant · Hauswappen</p><h2 id="art-title">${e(house.name)}</h2><div class="art-detail-layout">${imageFigure({...house,image:house.crest},house.name)}<div><p>${e(house.motif)}</p>${factsMarkup(facts)}<p class="subtle">${house.status === 'supplied' ? 'Geliefertes Wappen, unverändert übernommen.' : 'Neuer Wappenentwurf; der Hausname wird am Ende ausgearbeitet.'}</p>${onChoose ? `<button class="primary" data-action="select-from-dialog" data-house="${e(id)}">Dieses Haus auf der Karte platzieren</button>` : ''}</div></div>`);
+    session.open(`<p class="eyebrow">Vardentia · Hauswappen</p><h2 id="art-title">${e(house.name)}</h2><div class="art-detail-layout">${imageFigure({...house,image:house.crest},house.name)}<div><p>${e(house.motif)}</p>${factsMarkup(facts)}<p class="subtle">${house.status === 'supplied' ? 'Geliefertes Wappen, unverändert übernommen.' : 'Neuer Wappenentwurf; der Hausname wird am Ende ausgearbeitet.'}</p>${onChoose ? `<button class="primary" data-action="select-from-dialog" data-house="${e(id)}">Dieses Haus auf der Karte platzieren</button>` : ''}</div></div>`);
   }
   function show(kind, id) {
     if (kind === 'house') { showHouse(id); return; }
@@ -43,7 +43,7 @@ export function createArtDialogs({ dialog, houses, warriors, prototypes, artwork
     const item = (prototype ? prototypes : artworks).find(entry => entry.id === id);
     if (!item) return;
     const title = item.role || item.name;
-    const label = prototype ? 'Sylvarant · Kriegerprototyp' : item.kind === 'realm' ? 'Kaiserreich Argentum · Geliefertes Reichswappen' : 'Sylvarant · Provinzwappen';
+    const label = prototype ? 'Vardentia · Kriegerprototyp' : item.kind === 'realm' ? 'Kaiserreich Argentum · Geliefertes Reichswappen' : 'Vardentia · Provinzwappen';
     session.open(`<p class="eyebrow">${e(label)}</p><h2 id="art-title">${e(title)}</h2><div class="art-detail-layout${prototype ? ' prototype-art-detail' : ''}">${imageFigure(item,title)}<div><p>${e(item.description || item.motif)}</p>${factsMarkup([{label:'Ausrüstung',value:list(item.equipment)},{label:'Farben',value:list(item.palette)},{label:'Rahmen',value:item.frame}])}${item.mount?.href ? `<p><a href="${e(item.mount.href)}" target="_blank" rel="noopener">${e(item.mount.name)} im Bestiarium ↗</a></p>` : ''}<p class="subtle">Darstellung zur gemeinsamen Vorbereitung.</p></div></div>`);
   }
   return { show, showHouse, destroy:session.destroy };

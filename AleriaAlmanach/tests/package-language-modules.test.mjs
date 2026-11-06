@@ -12,7 +12,7 @@ test('current province spelling overrides only the old Nuatlapa canonical label'
   const original = JSON.parse(readFileSync(new URL(`../../Fonts/${source.package}/Daten/Nuatlapa_Sprachdaten_1.000.json`, import.meta.url), 'utf8'));
   const { data } = await loadPackageLanguageSource(source);
   assert(original.kanon.some(([name]) => name === 'Silverant'));
-  assert(data.kanon.some(([name]) => name === 'Sylvarant'));
+  assert(data.kanon.some(([name]) => name === 'Vardentia'));
   assert(!data.kanon.some(([name]) => name === 'Silverant'));
   for (const key of ['silben', 'woerter', 'namen_maennlich', 'namen_weiblich']) assert.deepEqual(data[key], original[key]);
 });

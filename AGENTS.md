@@ -1,3 +1,7 @@
+# Öffentlicher Sammelrelease vom 6. November 2026
+
+Ausdrücklicher Nutzerauftrag: sämtliche lokalen öffentlichen Neuerungen gemeinsam prüfen, auf master pushen und deployen, anschließend belegbar entbehrliche temporäre Daten entfernen und erst nach Abschluss den Computer herunterfahren. Der Umfang umfasst neue allgemeine Talente und passive Fähigkeiten statt der verworfenen Nischenentwürfe, Marotten, Familienblut, Hintergründe und eigene Icons, freie Waffenattributwahl, Melog mit Honigtörtchen/Wohnstube, drei Marktfiguren, Länderwerkstätten sowie Kommentar-/Sidebar-Korrekturen. Private Quellen, Täteridentitäten, Sicherungen und bereits erfolgte persönliche Livevergaben bleiben erhalten beziehungsweise werden nicht erneut ausgeführt. Der isolierte öffentliche Quellenweg und alle bestehenden Releaseprüfungen bleiben verbindlich.
+
 # Mathringen: gezielte Releasefreigabe vom 5. November 2026
 
 Der Nutzer hat Push auf master, Deploy und anschließende Bereinigung temporärer Daten freigegeben. Veröffentlicht werden die Mathringen-Vorbereitung und ihre gemeinsamen Darstellungsabhängigkeiten. 44 Haus- und Stadtsitze bleiben Vorschläge; 21 Stände-/Rang-/Kleruscomics und sieben männliche Klassenprototypen sind geprüft. Quellen, Prompts, Vorversionen und unabhängige lokale Aufträge bleiben erhalten. Keine Firebase- oder Spieldatenänderungen.

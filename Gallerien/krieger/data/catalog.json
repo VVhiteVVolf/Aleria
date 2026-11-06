@@ -18338,6 +18338,22 @@
         "bild-4b2ac0399face742"
       ],
       "missingNote": ""
+    },
+    {
+      "id": "melog",
+      "name": "Familie Melog",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=melog&mode=view",
+      "sources": [
+        "melog"
+      ],
+      "illustrationIds": [
+        "bild-db4dc69d4d17221d"
+      ],
+      "missingNote": ""
     }
   ],
   "illustrations": [
@@ -53061,6 +53077,27 @@
       ],
       "copies": [
         "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Perllan/assets/perllan-buerger.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-db4dc69d4d17221d",
+      "name": "Familie Melog · Hausdarstellung",
+      "category": "Bürgerliche Bäcker- und Konditordarstellung",
+      "affiliation": "",
+      "image": "AleriaAlmanach/assets/zum-honigtoertchen/figures/baecker-melog.png",
+      "sha256": "db4dc69d4d17221d56fb04321f893d11c75f8cd4c14faafe4c83773abed8200a",
+      "houseIds": [
+        "melog"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Melog/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "AleriaAlmanach/assets/zum-honigtoertchen/figures/baecker-melog.png"
       ],
       "note": ""
     }

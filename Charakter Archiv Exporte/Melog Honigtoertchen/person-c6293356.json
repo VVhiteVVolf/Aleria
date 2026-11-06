@@ -1,0 +1,121 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-05T18:00:00.000Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Melog Honigtoertchen/person-c6293356.json",
+  "character": {
+    "name": "Elisedd Melog",
+    "title": "Begabtes Allroundtalent",
+    "fraktion": "Melog",
+    "role": "Begabtes Allroundtalent",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "Cenyri",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Elisedd ist ein Sohn von Anest und Eiffion aus der Familie Melog. Er wird als begabtes Allroundtalent beschrieben. Seine ältere Schwester Nerys ist die „Chaos-Konditorin“, seine jüngere Schwester Teleri die kleine Schauspielerin der Familie. Das Honigtörtchen in Gwynthor ist der Bäcker- und Konditorbetrieb seiner Familie.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-05T18:00:00.000Z",
+    "updatedAt": "2026-11-05T18:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/melog/person-c6293356.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Elisedd Melog"
+        },
+        {
+          "label": "Geburt",
+          "value": "1725"
+        },
+        {
+          "label": "Haus und Familie",
+          "value": "Melog · Gwynthor"
+        },
+        {
+          "label": "Tätigkeit oder Eigenheit",
+          "value": "Begabtes Allroundtalent"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/melog/person-c6293356.png",
+        "biographyTitle": "Familie und Leben",
+        "biographyText": "<p>Elisedd ist ein Sohn von Anest und Eiffion aus der Familie Melog. Er wird als begabtes Allroundtalent beschrieben. Seine ältere Schwester Nerys ist die „Chaos-Konditorin“, seine jüngere Schwester Teleri die kleine Schauspielerin der Familie. Das Honigtörtchen in Gwynthor ist der Bäcker- und Konditorbetrieb seiner Familie.</p>",
+        "documentsTitle": "Die Familie Melog",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+            "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-c6293356"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--melog--person-c6293356"
+    },
+    "genealogy": {
+      "worldPersonId": "person--melog--person-c6293356",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1725",
+      "death": "",
+      "houseId": "house-melog",
+      "houseName": "Melog",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "melog",
+          "personId": "person-c6293356",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-05T18:00:00.000Z",
+          "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-c6293356",
+          "fingerprint": "{\"name\":\"Elisedd Melog\",\"title\":\"Begabtes Allroundtalent\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-c6293356.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-a5530d07\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"},{\"personId\":\"person-d9df75d6\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-d9df75d6\",\"name\":\"Eiffion\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-a5530d07",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-a5530d07",
+            "name": "Anest Melog"
+          },
+          {
+            "personId": "person-d9df75d6",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-d9df75d6",
+            "name": "Eiffion"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--melog--person-c6293356",
+    "race": "Mensch"
+  }
+}

@@ -218,6 +218,7 @@ export const HOUSE_RANKS = Object.freeze({
   "haus-glyn": "Bürgerlich",
   "haus-jernigan": "Bürgerlich",
   "haus-talfryn": "Bürgerlich",
+  "melog": "Bürgerlich",
   "perllan": "Bürgerlich",
   "sept-cneacail": "Septoberhaupt (bürgerlicher Rang)",
   "haus-arwydd": "Ritterfürst",

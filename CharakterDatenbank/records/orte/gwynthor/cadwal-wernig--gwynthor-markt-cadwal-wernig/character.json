@@ -1,0 +1,257 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--gwynthor-markt-cadwal-wernig",
+  "slug": "cadwal-wernig",
+  "identity": {
+    "name": "Cadwal Wernig",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "gwynthor-markt-cadwal-wernig",
+      "documentIds": [
+        "gwynthor-markt-cadwal-wernig"
+      ],
+      "documents": [
+        {
+          "documentId": "gwynthor-markt-cadwal-wernig",
+          "createdAt": "2026-11-05T15:00:00.000Z",
+          "updatedAt": "2026-11-05T15:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthor Markt Haendler/cadwal-wernig.json",
+    "sourceExportedAt": "2026-11-05T15:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-05T15:00:00.000Z",
+    "sourceDocumentIds": [
+      "gwynthor-markt-cadwal-wernig"
+    ],
+    "contentHash": "422f7651127409873f6dbfb1abbff667811be03c66db1a5c8bdd1c6cb3b02835"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-markt-haendler"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Cadwal Wernig",
+        "title": "Tuch- und Kurzwarenhändler",
+        "fraktion": "",
+        "role": "Tuch- und Kurzwarenhändler",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor > Gwynthor-Stadt",
+        "currentLocation": "Gwynthor · Marktplatz",
+        "origin": "Cenyri",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Cadwal Wernig ist ein 42-jähriger Cenyri und betreibt einen Tuch- und Kurzwarenstand auf dem Marktplatz von Gwynthor. Sein Sortiment umfasst Stoffe und kleine Dinge für das tägliche Nähen und Ausbessern. Der rothaarige Händler mit dem Schnauzer wirkt schmierig und versucht, seine Ware mit geschäftiger Beredsamkeit an die Kundschaft zu bringen.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-05T15:00:00.000Z",
+        "updatedAt": "2026-11-05T15:00:00.000Z",
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Fcadwal-wernig%2F9db44f9636aea09c3f3e0297b3724db58150f7976232c67bd0fcd974578e3bbd.png?alt=media&token=97c10652-0458-4ba9-affa-fc9c9983f5ae",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Cadwal Wernig"
+            },
+            {
+              "label": "Alter",
+              "value": "42 Jahre"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Tuch- und Kurzwarenhändler"
+            },
+            {
+              "label": "Standort des Marktstands",
+              "value": "Gwynthor · Marktplatz"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Cenyri"
+            }
+          ],
+          "biography": {
+            "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Fcadwal-wernig%2F9db44f9636aea09c3f3e0297b3724db58150f7976232c67bd0fcd974578e3bbd.png?alt=media&token=97c10652-0458-4ba9-affa-fc9c9983f5ae",
+            "biographyTitle": "Biografie",
+            "biographyText": "Cadwal Wernig ist ein 42-jähriger Cenyri und betreibt einen Tuch- und Kurzwarenstand auf dem Marktplatz von Gwynthor. Sein Sortiment umfasst Stoffe und kleine Dinge für das tägliche Nähen und Ausbessern. Der rothaarige Händler mit dem Schnauzer wirkt schmierig und versucht, seine Ware mit geschäftiger Beredsamkeit an die Kundschaft zu bringen.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Erscheinung",
+                "text": "Rothaarig, mit Schnauzer und einem schmierigen Auftreten."
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": ""
+        },
+        "genealogy": {
+          "worldPersonId": "",
+          "sex": "male",
+          "status": "alive",
+          "birth": "",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "",
+          "portraitPlaceholder": "",
+          "tags": [],
+          "sources": [],
+          "relationships": {
+            "parents": [],
+            "partners": [],
+            "children": []
+          }
+        },
+        "id": "gwynthor-markt-cadwal-wernig",
+        "race": "Mensch",
+        "age": 42
+      }
+    ]
+  },
+  "character": {
+    "name": "Cadwal Wernig",
+    "title": "Tuch- und Kurzwarenhändler",
+    "fraktion": "",
+    "role": "Tuch- und Kurzwarenhändler",
+    "status": "active",
+    "relevance": "minor",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor > Gwynthor-Stadt",
+    "currentLocation": "Gwynthor · Marktplatz",
+    "origin": "Cenyri",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Cadwal Wernig ist ein 42-jähriger Cenyri und betreibt einen Tuch- und Kurzwarenstand auf dem Marktplatz von Gwynthor. Sein Sortiment umfasst Stoffe und kleine Dinge für das tägliche Nähen und Ausbessern. Der rothaarige Händler mit dem Schnauzer wirkt schmierig und versucht, seine Ware mit geschäftiger Beredsamkeit an die Kundschaft zu bringen.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-05T15:00:00.000Z",
+    "updatedAt": "2026-11-05T15:00:00.000Z",
+    "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Fcadwal-wernig%2F9db44f9636aea09c3f3e0297b3724db58150f7976232c67bd0fcd974578e3bbd.png?alt=media&token=97c10652-0458-4ba9-affa-fc9c9983f5ae",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Cadwal Wernig"
+        },
+        {
+          "label": "Alter",
+          "value": "42 Jahre"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Tuch- und Kurzwarenhändler"
+        },
+        {
+          "label": "Standort des Marktstands",
+          "value": "Gwynthor · Marktplatz"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Cenyri"
+        }
+      ],
+      "biography": {
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Fcadwal-wernig%2F9db44f9636aea09c3f3e0297b3724db58150f7976232c67bd0fcd974578e3bbd.png?alt=media&token=97c10652-0458-4ba9-affa-fc9c9983f5ae",
+        "biographyTitle": "Biografie",
+        "biographyText": "Cadwal Wernig ist ein 42-jähriger Cenyri und betreibt einen Tuch- und Kurzwarenstand auf dem Marktplatz von Gwynthor. Sein Sortiment umfasst Stoffe und kleine Dinge für das tägliche Nähen und Ausbessern. Der rothaarige Händler mit dem Schnauzer wirkt schmierig und versucht, seine Ware mit geschäftiger Beredsamkeit an die Kundschaft zu bringen.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "Rothaarig, mit Schnauzer und einem schmierigen Auftreten."
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "male",
+      "status": "alive",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "gwynthor-markt-cadwal-wernig",
+    "race": "Mensch",
+    "age": 42
+  }
+}

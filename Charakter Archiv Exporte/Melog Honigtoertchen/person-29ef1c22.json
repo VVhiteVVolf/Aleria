@@ -1,0 +1,143 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-05T18:00:00.000Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Melog Honigtoertchen/person-29ef1c22.json",
+  "character": {
+    "name": "Ithel Melog",
+    "title": "Früherer Konditor- und Bäckermeister",
+    "fraktion": "Melog",
+    "role": "Früherer Konditor- und Bäckermeister",
+    "status": "dead",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "Cenyri",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Ithel war Konditor- und Bäckermeister und stand dem Haus Melog vor. 1690 fertigte er mit seinem fünfzehnjährigen Sohn Tewdwr in der Hofküche von Castell Draig einen Ersatz für die verschwundene Hochzeitstorte von Meurig Draig und Heledd Gwyvern. Meurig schenkte ihm aus Dankbarkeit ein silbernes Tortenmesser mit Draigs Wappen. Es wird heute in der Konditorei ausgestellt. Ithel starb 1723.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-05T18:00:00.000Z",
+    "updatedAt": "2026-11-05T18:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/melog/person-29ef1c22.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Ithel Melog"
+        },
+        {
+          "label": "Geburt",
+          "value": "1647"
+        },
+        {
+          "label": "Tod",
+          "value": "1723"
+        },
+        {
+          "label": "Haus und Familie",
+          "value": "Melog · Gwynthor"
+        },
+        {
+          "label": "Tätigkeit oder Eigenheit",
+          "value": "Früherer Konditor- und Bäckermeister"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/melog/person-29ef1c22.png",
+        "biographyTitle": "Familie und Leben",
+        "biographyText": "<p>Ithel war Konditor- und Bäckermeister und stand dem Haus Melog vor. 1690 fertigte er mit seinem fünfzehnjährigen Sohn Tewdwr in der Hofküche von Castell Draig einen Ersatz für die verschwundene Hochzeitstorte von Meurig Draig und Heledd Gwyvern. Meurig schenkte ihm aus Dankbarkeit ein silbernes Tortenmesser mit Draigs Wappen. Es wird heute in der Konditorei ausgestellt. Ithel starb 1723.</p>",
+        "documentsTitle": "Die Familie Melog",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+            "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-29ef1c22"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--melog--person-29ef1c22"
+    },
+    "genealogy": {
+      "worldPersonId": "person--melog--person-29ef1c22",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1647",
+      "death": "1723",
+      "houseId": "house-melog",
+      "houseName": "Melog",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "melog",
+          "personId": "person-29ef1c22",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-05T18:00:00.000Z",
+          "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-29ef1c22",
+          "fingerprint": "{\"name\":\"Ithel Melog\",\"title\":\"Konditormeister/Bäckereimeister/Oberhaupt\",\"birth\":\"1647\",\"death\":\"1723\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-29ef1c22.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"melog-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--melog--melog-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"melog-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--melog--melog-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"person-aaae3c9f\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-aaae3c9f\",\"name\":\"Tangwystl\"}],\"children\":[{\"personId\":\"person-0c68dade\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-0c68dade\",\"name\":\"Tewdwr Melog\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "melog-gruender",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "probable",
+            "worldPersonId": "person--melog--melog-gruender",
+            "name": "Unbekannter Gründer"
+          },
+          {
+            "personId": "melog-gruenderin",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "probable",
+            "worldPersonId": "person--melog--melog-gruenderin",
+            "name": "Unbekannte Gründerin"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "person-aaae3c9f",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-aaae3c9f",
+            "name": "Tangwystl"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-0c68dade",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-0c68dade",
+            "name": "Tewdwr Melog"
+          }
+        ]
+      }
+    },
+    "id": "person--melog--person-29ef1c22",
+    "race": "Mensch"
+  }
+}

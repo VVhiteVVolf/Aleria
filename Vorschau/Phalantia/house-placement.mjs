@@ -14,7 +14,7 @@ export function mountHousePlacement({root,onHouse,notice},{houses,settlements,re
     getSelectionFocusTarget:() => mapDialog.open ? mapDialog.querySelector('.map-viewport') : null,
     storageKey:PLACEMENT_STORAGE_KEY,exportName:'phalantia-sitzentwurf.json',rootClanLabel:'Gemeinsame Krone Phalantias',
     resetMessage:'Die beiden Königshäuser wohnen wieder in Lysandreia; jede der sieben Periökenstädte besitzt ihr vorgeschlagenes Haus.',
-    caption:proposal => `${proposal.clans.filter(house => house.seat).length} zugeordnete Wappen · 8 Städte · Originalkarte ohne neue Grenzlinien.`,
+    caption:proposal => `${proposal.clans.filter(house => house.seat).length} zugeordnete Wappen · 8 Städte · Keine neuen Grenzlinien. Orthevia ist ein äußerer Nachbarort und gehört nicht zu Phalantia.`,
   });
   scope.addEventListener('click',event => {
     const button = event.target.closest('button[data-action="show-house"]');

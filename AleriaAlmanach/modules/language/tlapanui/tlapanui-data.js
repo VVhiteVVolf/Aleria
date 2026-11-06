@@ -30,7 +30,7 @@ const TLAPANUI_REFERENCE_DATA = Object.freeze({
       "Silbernes Kaiserreich"
     ],
     [
-      "Sylvarant",
+      "Vardentia",
       "östliche Kernprovinz"
     ],
     [

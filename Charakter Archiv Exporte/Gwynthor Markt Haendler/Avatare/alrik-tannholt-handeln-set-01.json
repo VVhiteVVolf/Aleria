@@ -1,0 +1,69 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-05T16:07:25.012Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthor Markt Haendler/Avatare/alrik-tannholt-handeln-set-01.json",
+  "character": {
+    "id": "gwynthor-markt-alrik-tannholt",
+    "name": "Alrik Tannholt",
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Falrik-tannholt%2Fe0f0e92823a9a98f433edf1307a00d3dfc1149ec1ef394f41510b2061b712b0c.png?alt=media&token=c60123d0-4395-49e2-a3ab-7ffc5b83ace2",
+        "emotes": [],
+        "createdAt": "",
+        "updatedAt": ""
+      },
+      {
+        "id": "handeln-set-01",
+        "name": "Feilschen & Handeln",
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Falrik-tannholt%2Fe0f0e92823a9a98f433edf1307a00d3dfc1149ec1ef394f41510b2061b712b0c.png?alt=media&token=c60123d0-4395-49e2-a3ab-7ffc5b83ace2",
+        "emotes": [
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Falrik-tannholt%2F01df4b9665f778279f872ec21d3720badc30a4e6923eb0228371166ddc40895f.png?alt=media&token=f7e723eb-ec0c-4be7-9b28-4c9c7e3fb3b8",
+            "label": "Kundschaft locken"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Falrik-tannholt%2F3db5cdff4693875850e6b606ec35101d3d5464a143c0961b80cd0c99b16cb910.png?alt=media&token=13793a13-c9e5-4dd6-bb57-cc22b9b3293a",
+            "label": "Anpreisen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Falrik-tannholt%2Fa21e62f9cca7ba9bcb5dce77f3dbe85c4fae3281bfe1cbb067aa59b00ec84d2b.png?alt=media&token=e3dbcc73-a3ed-4cd6-9a5d-8c5ef0f44242",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Falrik-tannholt%2Fdfafa5cb28c0bd12c70f7bed1cd03d511e41d8d0e4bf822417b89cea777975e8.png?alt=media&token=f5665673-3198-4c68-a698-79e6830d1831",
+            "label": "Zu wenig!"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Falrik-tannholt%2F7608171c22f73efa840b162c64952e9322afd4477c662cb59435fb15c1308e1d.png?alt=media&token=a717ae47-374a-406f-93a6-14a15a227cf5",
+            "label": "Preis abwägen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Falrik-tannholt%2F354368f7be0d14648b4bfada8a53f96486c967a28340c465a4fce299c755b174.png?alt=media&token=812924e2-1913-4403-968c-a9f3ce96b9c6",
+            "label": "Fester Preis"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Falrik-tannholt%2F3d53c4e79562a056e6df9b887daa62a290440ebc1d914e754b13319598d4504b.png?alt=media&token=546312af-5db8-4808-8485-92122a379d82",
+            "label": "Letzter Nachlass"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Falrik-tannholt%2Fe7ad40b90ffb083865394db67ed62118f4ae125b4ebe1073b747325184e3f3ac.png?alt=media&token=227dce5a-deb9-471b-8867-7735024668e6",
+            "label": "Einlenken"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler-avatare%2Falrik-tannholt%2Fa131196fe12aa70cb08877206048406d789316074358c83623bf6b0015f1b132.png?alt=media&token=459ce8cd-04e9-4f7e-9616-0f89df9771e8",
+            "label": "Geschäftsabschluss"
+          }
+        ],
+        "createdAt": "2026-11-05T00:00:00.000Z",
+        "updatedAt": "2026-11-05T00:00:00.000Z"
+      }
+    ],
+    "imageSetsOverride": true,
+    "updatedAt": "2026-11-05T16:07:25.012Z"
+  }
+}

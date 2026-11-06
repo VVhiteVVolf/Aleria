@@ -19,7 +19,7 @@ export function projectGroupScene(scene, comments = [], { calendar, resolveStart
   const date = calendar?.isValid(start) ? calendar.shift(start, Math.max(1, Number(last?.aleriaEndDayIndex) || 1) - 1) : null;
   const seconds = last ? ((Math.floor(last.endSeconds) % 86400) + 86400) % 86400 : null;
   const time = seconds == null ? '' : [Math.floor(seconds / 3600), Math.floor(seconds % 3600 / 60)].map(value => String(value).padStart(2, '0')).join(':');
-  return { ...scene, date, time, ordinal: date ? calendar.ordinal(date) : null,
+  return { ...scene, date, time, timeSeconds: seconds, ordinal: date ? calendar.ordinal(date) : null,
     dateLabel: date ? calendar.format(date) : 'Datum offen', dayLabel: date ? calendar.playDayLabel(date) : 'Play-Tag offen',
     commentCount: comments.filter(comment => !isSilentSceneRegeneration(comment)).length, phase: [...comments].reverse().find(comment => comment.sceneTimeEvent?.title)?.sceneTimeEvent.title || scene.phase };
 }

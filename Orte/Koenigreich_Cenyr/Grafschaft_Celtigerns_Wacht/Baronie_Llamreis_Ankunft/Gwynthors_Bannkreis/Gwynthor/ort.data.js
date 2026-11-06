@@ -312,6 +312,7 @@
           commonerHouse("vann", "Vann"),
           commonerHouse("fontani", "Fontani"),
           commonerHouse("rhwyd", "Rhwyd"),
+          house("melog", "Haus Melog", "Bürgerliches Haus", "Gwynthor · Zum Honigtörtchen", "Haus Draig", `${commonerRoot}/Melog/melog-emblem.png`),
           house("haus-gofrann", "Haus Gofrann", "Bürgerliches Haus", "Gwynthor · Zum Dritten Funken", "Haus Tlawd", `${commonerRoot}/Gofrann.png`),
           commonerHouse("braglas", "Braglas"),
           commonerHouse("tonnarth", "Tonnarth"),
@@ -327,6 +328,14 @@
     ]),
 
     merchants: Object.freeze([
+      Object.freeze({
+        name: "Zum Honigtörtchen", category: "handwerk",
+        image: "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Melog/melog-emblem.png",
+        symbolAlt: "Familie Melog · Zum Honigtörtchen",
+        trade: "Bäckerei · Konditorei · Hochzeitstorten und Festaufträge", owner: "Tewdwr Melog und Familie",
+        wealth: "Beschaulich", reputation: "Ausgezeichnet", influence: "Gwynthor · besondere Wertschätzung durch Haus Draig",
+        description: "Alteingesessener Familienbetrieb mit Verkauf, kleinem Gastraum und eigener Backstube. Berühmt für die von Ithel und Tewdwr gerettete Draig-Hochzeitstorte von 1690; das silberne Dankesmesser liegt noch heute in der Vitrine. Brot, Gebäck und Kuchen im Alltag, persönliche Festtorten auf Vorbestellung."
+      }),
       Object.freeze({ name: "Der Handelshof des Marktes der Fortuna", category: "handel", image: "/Fraktionen/assets/emblems/gilden/markt-der-fortuna.webp", symbolAlt: "Markt der Fortuna · Handelshof und alter Hafen",
         trade: "Handel · Handwerk · Blaue Bank · Blaue Kompanie", owner: "Neunerrat der sieben Interessenbünde", wealth: "Sehr vermögend", reputation: "Seit Jahrhunderten verwurzelt", influence: "Gwynthor · Seeverbindungen nach Venalys, Tirnara und Weisenfluh",
         description: "Falto und Nerva, beide Magnarierhäuser unter Vinicius, ringen um die örtliche Vormacht. Tonnarth, Braglas, Aelmor, Coeddu und Maerllys halten eigene Ratssitze; Aelmor dient Saethwyr und baut Handelsschiffe. Vann, Raves und der Volle Korb haben eigene Verbindungen zu Fortuna. Mariels Gabe unterhält hier die kleine Tafel der Mutter und nutzt den Fortuna-Hafen für ihre Weisenfluher Warenankünfte." }),

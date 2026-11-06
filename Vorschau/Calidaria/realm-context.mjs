@@ -17,6 +17,8 @@ export const REALM_CONTEXT = {
   ],
   government: ARGENTUM.government,
   administration: ARGENTUM.administration,
+  territorialRules: ARGENTUM.territorialRules,
+  appointmentProposals: ARGENTUM.appointmentProposals,
   nobility: ARGENTUM.nobility,
   offices: ARGENTUM.offices,
   institutions: ARGENTUM.institutions,

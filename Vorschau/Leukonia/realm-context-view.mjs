@@ -14,6 +14,8 @@ export function renderGovernment(context) {
   <div class="administration-chain">${copy(administration.chain)}</div>${administration.note ? `<p class="section-intro">${e(administration.note)}</p>` : ''}
   ${administration.localPosts?.length ? `<div class="local-posts">${copy(administration.localPosts)}</div>` : ''}
   ${administration.appointments ? `<p class="section-intro">${e(administration.appointments)}</p>` : ''}
+  ${context.territorialRules?.length ? `<h3>Bestätigte Regeln territorialer Herrschaft</h3><div class="local-posts">${copy(context.territorialRules)}</div>` : ''}
+  ${context.appointmentProposals?.length ? `<aside class="government-context"><p class="eyebrow">Vorschläge zur weiteren Ausgestaltung</p><h3>Ernennungen und bestehende Rechte</h3><div class="local-posts">${copy(context.appointmentProposals)}</div></aside>` : ''}
   <div class="government-columns"><article class="nobility-context"><h3>Der Archon</h3>${officeList(context.nobility)}</article><article class="office-context"><h3>Ämter und öffentliche Aufgaben</h3>${officeList(context.offices)}</article></div></section>`;
 }
 

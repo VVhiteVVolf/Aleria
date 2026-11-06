@@ -1,0 +1,35 @@
+# Zum Honigtörtchen · Familie Melog
+
+Lokales Shopmodul für die Bäckerei und Konditorei in Gwynthor. Die Hausgeschichte stammt aus dem gelieferten HTML, Personen und Beziehungen aus `melog.json`. Originale und das ausdrücklich freigegebene Jahresamendment liegen unter `Stammbäume/assets/data/source-inventories/melog-20261105/`.
+
+`honigtoertchen-profile.mjs` besitzt Modulkennung, Links und Ort. `honigtoertchen-people.mjs` projiziert die kanonische Familie über den vorhandenen Genealogieadapter; Identitäten, Jahre und Porträts werden nicht unabhängig gepflegt. Die Rollenanzeige, die drei Arbeitsbereichsreiter und die Szenen bleiben im Shopfeature. Cerys, Iddon und Teleri sind Kinder ohne Angestelltenrolle; Elisedd erhält keinen erfundenen Meistertitel. Die 16 benannten Personen bekommen begrenzte Figurenakten; die zwei unbekannten Gründer bleiben ausschließlich im Stammbaum.
+
+Auf ergänzenden Nutzerwunsch stehen sieben einzelne Silhouettenplätze für später ausfüllbare Nebenrollen bereit: Bäckergeselle, Bäckergesellin, Konditoreihilfe, Bäckerlehrling, Konditorlehrling und Backstubenhilfe im vorhandenen Backstubenreiter sowie eine Lieferhilfe im Verkaufsreiter. Alle sind ausdrücklich unbesetzt; die vorhandene Kalkulation führt sie ohne Lohn oder Kosttage. Es entstehen keine weiteren Familienpersonen oder Figurenakten. Im gezielten echten Desktop-/Mobiltest wurden alle sieben Plätze angesehen und die echten Hierarchie-Editorfelder gesammelt, probeweise ausgefüllt und wiederhergestellt. 18 neue Screenshots sind über zwei Kontaktbögen angesehen; die unveränderten Register-, Snapshot- und Familienbytes sind belegt. Ergänzungsbericht: `diagnostics/melog-20261105/shop/browser/vacancies-1793902977071/report.json`.
+
+Das Modul hat zwölf eigene Seiten: Übersicht, Geschäftsgeschichte, Tewdwr als Meister, Hausorganisation, Güterregister, Sonderwünsche sowie sechs bespielbare Orte (Außenansicht, Verkauf, Gastraum, Backstube, Vorratskammer und die Wohnstube in der oberen Etage). Die neue Wohnstube vom 6. November steht als letzte eigene Seite vor der automatisch ergänzten Kalkulation. Die Dienstleistungsseite enthält zwölf ausführliche Dienste mit vorhandenen Icons und kein Szenenbild. Die bisherigen Raumszenen behalten ihre Positionen und dauerhaften semantischen Threadkennungen.
+
+Die bestehende Wirtschaftsfunktion ergänzt im Almanach ihre vorläufige Kalkulationsseite; die Laufzeit zeigt aktuell dreizehn Seiten. Der ursprüngliche echte Chrome-Lauf vom 5. November auf Desktop (1440×1050) und Mobil (390×844) prüfte den damaligen Stand mit zwölf Laufzeitseiten, drei Personalreitern, fünf Warengruppen, zehn geöffneten Warendetails, Suche/Fokus/Leeren, zwölf Diensticons je Größe und fünf vollständig geladenen lokalen Leerszenen. 56 Screenshots sind über sieben Kontaktbögen tatsächlich angesehen. Der Lauf belegte eine vorhandene mobile Überdeckung des Weiter-Buttons durch die Modulaktionen; getrennte Zeilen im zuständigen `modules/modal/modal-navigation.css` beheben sie. Die bestehenden neun Modalnavigationstests und die Überdeckungsprüfung auf jeder Browserseite bestanden. Methode und historischer Bericht bleiben erhalten: `diagnostics/melog-20261105/shop/browser/verification.json`. Firebase war deaktiviert, externe Zugriffe und sämtliche Schreibanfragen waren gesperrt; eigene Browser und Server wurden beendet. Zwei anschließend gewünschte reine Textglättungen sind im Bericht gesondert dokumentiert und im Modul neu erzeugt.
+
+Die Wohnstuben-Ergänzung vom 6. November ist gesondert auf Desktop und Mobil geprüft: direkter Threadlink, Einleitung auf-/zuklappen, Navigation zur Vorratskammer und zur Kalkulation sowie Sprung zum bestehenden Gastraum und zurück. Alle elf Fachtests und der gezielte Builderabgleich bestanden. Die fünf bisherigen Szenen einschließlich ihrer Bildbytes, alle bisherigen elf Seitenkennungen und sämtliche 24 Warenangebote mit Revisionen blieben erhalten. Zwölf neue Screenshots sind über zwei Kontaktbögen tatsächlich angesehen. Methode und Bericht: `diagnostics/melog-wohnstube-20261106/verification.json`. Der Lauf verwendete ausschließlich lokale GET-Anfragen und beendete den eigenen Browser und Server; Familien- und Figurenquellen blieben unverändert.
+
+`honigtoertchen-assortment.mjs` beschreibt 24 neu ausgearbeitete Angebote in fünf Gruppen mit Einzelpreisen und eindeutigen Portionen, Zutaten und Bestellfristen. Die Waren sind ausdrücklich Speisen und werden über das bestehende Güterregister in geteilte, versionierte Gegenstandsdefinitionen mit Verbrauchsmodus projiziert. Sie geben keine erfundenen Kampfboni. Die passenden Speisenuntertitel erhalten diese Zuordnung auch nach einem Durchlauf durch den bestehenden Editor-Sanitizer. Individuelle Dienstleistungen erzeugen keine eigenständigen Inventargegenstände. Das silberne Draig-Messer ist ein Familienexponat und niemals Verkaufsware.
+
+Die neuen Raum- und Produktbeschreibungen, Mengen, Preise und Dienstleistungsbedingungen sind beauftragte Ausgestaltung des Shops; sie sind keine zusätzlichen historischen Quellen. Produktbilder liegen einzeln unter `assets/zum-honigtoertchen/food/`, Szenen unter `scenes/`. Der Bildablauf samt Originalen und tatsächlich ausgeführten Prompts wird beim gemeinsamen Auftrag dokumentiert.
+
+Aus der Projektwurzel:
+
+```powershell
+node AleriaAlmanach/scripts/build-honigtoertchen.mjs
+node AleriaAlmanach/scripts/build-honigtoertchen.mjs --check
+node AleriaAlmanach/scripts/build-melog-characters.mjs
+node AleriaAlmanach/scripts/build-melog-characters.mjs --check
+node --test AleriaAlmanach/tests/honigtoertchen.test.mjs
+```
+
+Der Figurenbuilder verwendet den bestehenden begrenzten Import mit expliziten Melog-Weltpersonen und prüft davor sämtliche Zuordnungen. Er legt 16 Exporte unter `Charakter Archiv Exporte/Melog Honigtoertchen/` an, erhält alle fremden Snapshotzeilen/Registereinträge und kontrolliert zusätzlich die Bytes aller fremden Einzelakten. `--check` schreibt weder Exporte noch Datenbank oder Diagnosebeleg. Keine Firestore-Zugriffe, keine Inventarvergabe und kein pauschaler Charakterarchivabgleich.
+
+Der Modulbuilder schreibt ausschließlich seine generierte Datenregistrierung und das eigene importierbare Modulpaket. Das HTML bindet diese Registrierung in die bestehende Gwynthor-Stadthierarchie ein; vorhandene Benutzerentwürfe und gespeicherte Module werden nicht überschrieben. Die Übersicht des Güterregisters erhält eine Ortszuordnung über das vorhandene Anbieterregister.
+
+Die serverseitigen eingebauten Angebote werden absichtlich erst aus einem geprüften öffentlichen Commit erzeugt. Beim später freigegebenen Release muss die neue HTML-Registrierung über den bestehenden kanonischen Katalog- und Functions-Weg aufgenommen werden. Ein lokaler Neubau des gesamten Katalogs aus privaten Arbeitsquellen ist ausgeschlossen. Der vorliegende Auftrag schreibt keine produktiven Daten und führt keinen Push oder Deploy aus.
+
+Einstieg: `AleriaAlmanach.html?entry=zum-honigtoertchen`. Hausseite: `../Familien Häuser und Clans/kleinehaeuser.html?haus=melog`. Familie: `../Stammbäume/Stammbaum.html?family=melog&mode=view`.

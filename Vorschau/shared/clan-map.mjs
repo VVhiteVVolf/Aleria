@@ -1,3 +1,5 @@
+import {renderMapLabelReplacements} from './map-label-replacements.mjs';
+
 export function createClanMap({root,dialog,tooltip,getVariant,escape,onClan,
  assetUrl=path=>path,rankLabel=clan=>clan.rank||'Rang offen',imageSize=[4096,3365],
  hasBakedNames=variant=>Boolean(variant.bakedNames),rootClanLabel='Lehnsherr noch offen',
@@ -19,7 +21,8 @@ export function createClanMap({root,dialog,tooltip,getVariant,escape,onClan,
   const labelledPlaces=hasBakedNames(variant)?variant.settlements.filter(place=>place.overlayLabel):variant.settlements;
   const names=labelledPlaces.map(place=>{const position=place.label??[place.point[0],place.point[1]+3.6];return `<span class="city-name" style="left:${position[0]}%;top:${position[1]}%">${escape(place.name)}</span>`;}).join('');
   const [width,height]=variant.imageSize??imageSize;
-  return `<img src="${assetUrl(variant.map)}" alt="${escape(variant.file)} – Karte der Variante ${variant.number}" width="${width}" height="${height}"><div class="crest-layer" ${showCrests?'':'hidden'}><svg class="crest-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${lines}</svg>${pins}</div><div class="city-names" ${showNames?'':'hidden'}>${names}</div>`;
+  const replacements=renderMapLabelReplacements({replacements:variant.labelReplacements,settlements:variant.settlements,showNames,escape});
+  return `<img src="${assetUrl(variant.map)}" alt="${escape(variant.file)} – Karte der Variante ${variant.number}" width="${width}" height="${height}">${replacements}<div class="crest-layer" ${showCrests?'':'hidden'}><svg class="crest-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${lines}</svg>${pins}</div><div class="city-names" ${showNames?'':'hidden'}>${names}</div>`;
  }
  function render(){
   hideTooltip();
@@ -29,9 +32,10 @@ export function createClanMap({root,dialog,tooltip,getVariant,escape,onClan,
   dialog.querySelector('[data-role="map-title"]').textContent=`Variante ${variant.number} · ${variant.short}`;
   const namesButton=root.querySelector('[data-action="toggle-names"]');
   if(namesButton){
-   namesButton.disabled=hasBakedNames(variant);
-   namesButton.textContent=hasBakedNames(variant)?'Ortsnamen im Kartenbild':'Ortsnamen';
-   namesButton.setAttribute('aria-pressed',String(hasBakedNames(variant)||showNames));
+   const fixedNames=hasBakedNames(variant)&&!variant.replacementNamesToggleable;
+   namesButton.disabled=fixedNames;
+   namesButton.textContent=fixedNames?'Ortsnamen im Kartenbild':'Ortsnamen';
+   namesButton.setAttribute('aria-pressed',String(fixedNames||showNames));
   }
   sizeOverview();
  }

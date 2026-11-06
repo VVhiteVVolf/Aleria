@@ -11,7 +11,7 @@ try {
   page.on('pageerror',e=>errors.push(e.message));
   await page.route('**/*',route=>new URL(route.request().url()).origin===origin?route.continue():route.abort());
   for(const [id,count,groups] of [
-    ['gwynthor',14,['handel','handwerk','gastwirtschaft','freudenhaus','badehaus','kultur']],
+    ['gwynthor',15,['handel','handwerk','gastwirtschaft','freudenhaus','badehaus','kultur']],
     ['lysfaen',6,['gastwirtschaft','landwirtschaft','tierzucht']],
     ['craithglyn',1,['handel']],['abergwint',0,[]],
   ]) {

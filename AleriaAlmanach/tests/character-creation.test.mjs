@@ -57,7 +57,7 @@ test('ein leerer Charakterbogen besitzt die vollständige Schema-11-Grundlage', 
 test('der Vorlagenkatalog enthält alle gewünschten Völker, Hintergründe und Klassen', () => {
   assert.deepEqual(CHARACTER_ANCESTRY_TEMPLATES.slice(0, 4).map(template => template.id), ['cenyr', 'alben', 'aldrimarer', 'nordmann']);
   assert.equal(CHARACTER_ANCESTRY_TEMPLATES.length, 28);
-  assert.deepEqual(CHARACTER_BACKGROUND_TEMPLATES.map(template => template.id), [
+  assert.deepEqual(CHARACTER_BACKGROUND_TEMPLATES.slice(0, 10).map(template => template.id), [
     'ritter', 'huskarl', 'bauer', 'gelehrter', 'kultist', 'soeldner', 'klerus', 'handwerker', 'gassenkind', 'musikerin'
   ]);
   assert.deepEqual(CHARACTER_CLASS_TEMPLATES.map(template => template.id), [

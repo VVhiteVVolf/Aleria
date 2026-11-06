@@ -7,7 +7,7 @@ import {SETTLEMENTS,REGIONS,MAP_VARIANTS,MAP_CONTEXT} from '../territory-data.mj
 import {createMapProposal} from '../map-data.mjs';
 import {createHousePlacementState,PLACEMENT_STORAGE_KEY} from '../placement-state.mjs';
 
-test('the source map supplies eight Phalantian seats; Alantaic remains outside the realm',() => {
+test('the source map supplies eight Phalantian seats; Orthevia remains outside the realm',() => {
   assert.equal(SETTLEMENTS.length,8);
   assert.equal(SETTLEMENTS.filter(city => city.capital).length,1);
   assert.equal(SETTLEMENTS.find(city => city.capital).id,'lysandreia');
@@ -15,7 +15,8 @@ test('the source map supplies eight Phalantian seats; Alantaic remains outside t
   assert.equal(REGIONS.length,8);
   assert.deepEqual(REGIONS.flatMap(region => region.cityIds),SETTLEMENTS.map(city => city.id));
   assert.equal(MAP_CONTEXT.bordersDrawn,false);
-  assert.equal(MAP_CONTEXT.outsidePlaces[0].name,'Alantaic');
+  assert.equal(MAP_CONTEXT.outsidePlaces[0].name,'Orthevia');
+  assert.equal(MAP_CONTEXT.outsidePlaces[0].sourceName,'Alantaic');
   assert.deepEqual(MAP_VARIANTS[0].imageSize,[1281,925]);
   assert.equal(MAP_VARIANTS[0].bakedNames,true);
   for (const city of SETTLEMENTS) {

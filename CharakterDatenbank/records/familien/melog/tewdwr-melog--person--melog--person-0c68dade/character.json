@@ -1,0 +1,397 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--melog--person-0c68dade",
+  "slug": "tewdwr-melog",
+  "identity": {
+    "name": "Tewdwr Melog",
+    "aliases": [],
+    "worldPersonId": "person--melog--person-0c68dade"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "melog",
+      "label": "Familie Melog"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "melog",
+        "familyTitle": "Familie Melog",
+        "personId": "person-0c68dade",
+        "worldPersonId": "person--melog--person-0c68dade",
+        "houseId": "house-melog",
+        "houseName": "Melog",
+        "familyRole": "core",
+        "source": "Stammbäume/assets/data/source-inventories/melog-20261105/melog-original.json",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-0c68dade",
+        "fingerprint": "{\"name\":\"Tewdwr Melog\",\"title\":\"Konditormeister/Bäckereimeister/Oberhaupt\",\"birth\":\"1675\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-0c68dade.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-29ef1c22\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-29ef1c22\",\"name\":\"Ithel Melog\"},{\"personId\":\"person-aaae3c9f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-aaae3c9f\",\"name\":\"Tangwystl\"}],\"partners\":[{\"personId\":\"person-30cd0b46\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"children\":[{\"personId\":\"person-a5530d07\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"},{\"personId\":\"person-9ffeda8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"},{\"personId\":\"person-a24c0d08\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a24c0d08\",\"name\":\"Guto Melog\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--melog--person-0c68dade",
+      "documentIds": [
+        "person--melog--person-0c68dade"
+      ],
+      "documents": [
+        {
+          "documentId": "person--melog--person-0c68dade",
+          "createdAt": "2026-11-05T18:00:00.000Z",
+          "updatedAt": "2026-11-05T18:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "melog",
+        "personId": "person-0c68dade",
+        "worldPersonId": "person--melog--person-0c68dade",
+        "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-0c68dade"
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Melog Honigtoertchen/person-0c68dade.json",
+    "sourceExportedAt": "2026-11-05T18:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-05T18:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--melog--person-0c68dade"
+    ],
+    "contentHash": "75dd00f95b19abd3f88e037301c6dd27a5b2a34d1275748c173bc3d1e7f21073"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "melog-honigtoertchen-20261105"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Tewdwr Melog",
+        "title": "Konditor- und Bäckermeister · Oberhaupt",
+        "fraktion": "Melog",
+        "role": "Konditor- und Bäckermeister · Oberhaupt",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Gwynthor",
+        "origin": "Cenyri",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Tewdwr ist Konditor- und Bäckermeister und führt als Oberhaupt das Haus Melog. Als Fünfzehnjähriger half er 1690 seinem Vater Ithel, die verschwundene Hochzeitstorte für Meurig Draig und Heledd Gwyvern zu ersetzen. Heute leitet er die Bäckerei und Konditorei „Zum Honigtörtchen“ in Gwynthor und bewahrt die Rezeptur jener berühmten Torte. Mit Morfudd hat er Anest, Afanen und Guto.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-05T18:00:00.000Z",
+        "updatedAt": "2026-11-05T18:00:00.000Z",
+        "portrait": "../Stammbäume/assets/images/portraits/melog/person-0c68dade.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Tewdwr Melog"
+            },
+            {
+              "label": "Geburt",
+              "value": "1675"
+            },
+            {
+              "label": "Haus und Familie",
+              "value": "Melog · Gwynthor"
+            },
+            {
+              "label": "Tätigkeit oder Eigenheit",
+              "value": "Konditor- und Bäckermeister · Oberhaupt"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/melog/person-0c68dade.png",
+            "biographyTitle": "Familie und Leben",
+            "biographyText": "<p>Tewdwr ist Konditor- und Bäckermeister und führt als Oberhaupt das Haus Melog. Als Fünfzehnjähriger half er 1690 seinem Vater Ithel, die verschwundene Hochzeitstorte für Meurig Draig und Heledd Gwyvern zu ersetzen. Heute leitet er die Bäckerei und Konditorei „Zum Honigtörtchen“ in Gwynthor und bewahrt die Rezeptur jener berühmten Torte. Mit Morfudd hat er Anest, Afanen und Guto.</p>",
+            "documentsTitle": "Die Familie Melog",
+            "documents": [
+              {
+                "title": "Im Stammbaum ansehen",
+                "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+                "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-0c68dade"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--melog--person-0c68dade"
+        },
+        "genealogy": {
+          "worldPersonId": "person--melog--person-0c68dade",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1675",
+          "death": "",
+          "houseId": "house-melog",
+          "houseName": "Melog",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "melog",
+              "personId": "person-0c68dade",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-05T18:00:00.000Z",
+              "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-0c68dade",
+              "fingerprint": "{\"name\":\"Tewdwr Melog\",\"title\":\"Konditormeister/Bäckereimeister/Oberhaupt\",\"birth\":\"1675\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-0c68dade.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-29ef1c22\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-29ef1c22\",\"name\":\"Ithel Melog\"},{\"personId\":\"person-aaae3c9f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-aaae3c9f\",\"name\":\"Tangwystl\"}],\"partners\":[{\"personId\":\"person-30cd0b46\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"children\":[{\"personId\":\"person-a5530d07\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"},{\"personId\":\"person-9ffeda8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"},{\"personId\":\"person-a24c0d08\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a24c0d08\",\"name\":\"Guto Melog\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "person-29ef1c22",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-29ef1c22",
+                "name": "Ithel Melog"
+              },
+              {
+                "personId": "person-aaae3c9f",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-aaae3c9f",
+                "name": "Tangwystl"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "person-30cd0b46",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-30cd0b46",
+                "name": "Morfudd"
+              }
+            ],
+            "children": [
+              {
+                "personId": "person-a5530d07",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-a5530d07",
+                "name": "Anest Melog"
+              },
+              {
+                "personId": "person-9ffeda8d",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-9ffeda8d",
+                "name": "Afanen Melog"
+              },
+              {
+                "personId": "person-a24c0d08",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--melog--person-a24c0d08",
+                "name": "Guto Melog"
+              }
+            ]
+          }
+        },
+        "id": "person--melog--person-0c68dade",
+        "race": "Mensch"
+      }
+    ]
+  },
+  "character": {
+    "name": "Tewdwr Melog",
+    "title": "Konditor- und Bäckermeister · Oberhaupt",
+    "fraktion": "Melog",
+    "role": "Konditor- und Bäckermeister · Oberhaupt",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "Cenyri",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Tewdwr ist Konditor- und Bäckermeister und führt als Oberhaupt das Haus Melog. Als Fünfzehnjähriger half er 1690 seinem Vater Ithel, die verschwundene Hochzeitstorte für Meurig Draig und Heledd Gwyvern zu ersetzen. Heute leitet er die Bäckerei und Konditorei „Zum Honigtörtchen“ in Gwynthor und bewahrt die Rezeptur jener berühmten Torte. Mit Morfudd hat er Anest, Afanen und Guto.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-05T18:00:00.000Z",
+    "updatedAt": "2026-11-05T18:00:00.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/melog/person-0c68dade.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Tewdwr Melog"
+        },
+        {
+          "label": "Geburt",
+          "value": "1675"
+        },
+        {
+          "label": "Haus und Familie",
+          "value": "Melog · Gwynthor"
+        },
+        {
+          "label": "Tätigkeit oder Eigenheit",
+          "value": "Konditor- und Bäckermeister · Oberhaupt"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/melog/person-0c68dade.png",
+        "biographyTitle": "Familie und Leben",
+        "biographyText": "<p>Tewdwr ist Konditor- und Bäckermeister und führt als Oberhaupt das Haus Melog. Als Fünfzehnjähriger half er 1690 seinem Vater Ithel, die verschwundene Hochzeitstorte für Meurig Draig und Heledd Gwyvern zu ersetzen. Heute leitet er die Bäckerei und Konditorei „Zum Honigtörtchen“ in Gwynthor und bewahrt die Rezeptur jener berühmten Torte. Mit Morfudd hat er Anest, Afanen und Guto.</p>",
+        "documentsTitle": "Die Familie Melog",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Eltern, Verbindungen und Nachkommen der gelieferten Familienakte.",
+            "link": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-0c68dade"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--melog--person-0c68dade"
+    },
+    "genealogy": {
+      "worldPersonId": "person--melog--person-0c68dade",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1675",
+      "death": "",
+      "houseId": "house-melog",
+      "houseName": "Melog",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "melog",
+          "personId": "person-0c68dade",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-05T18:00:00.000Z",
+          "lastSyncedAt": "2026-11-05T18:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=melog&mode=view&person=person-0c68dade",
+          "fingerprint": "{\"name\":\"Tewdwr Melog\",\"title\":\"Konditormeister/Bäckereimeister/Oberhaupt\",\"birth\":\"1675\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-melog\",\"portrait\":\"../Stammbäume/assets/images/portraits/melog/person-0c68dade.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-29ef1c22\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-29ef1c22\",\"name\":\"Ithel Melog\"},{\"personId\":\"person-aaae3c9f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-aaae3c9f\",\"name\":\"Tangwystl\"}],\"partners\":[{\"personId\":\"person-30cd0b46\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-30cd0b46\",\"name\":\"Morfudd\"}],\"children\":[{\"personId\":\"person-a5530d07\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a5530d07\",\"name\":\"Anest Melog\"},{\"personId\":\"person-9ffeda8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-9ffeda8d\",\"name\":\"Afanen Melog\"},{\"personId\":\"person-a24c0d08\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--melog--person-a24c0d08\",\"name\":\"Guto Melog\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-29ef1c22",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-29ef1c22",
+            "name": "Ithel Melog"
+          },
+          {
+            "personId": "person-aaae3c9f",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-aaae3c9f",
+            "name": "Tangwystl"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "person-30cd0b46",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-30cd0b46",
+            "name": "Morfudd"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-a5530d07",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-a5530d07",
+            "name": "Anest Melog"
+          },
+          {
+            "personId": "person-9ffeda8d",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-9ffeda8d",
+            "name": "Afanen Melog"
+          },
+          {
+            "personId": "person-a24c0d08",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--melog--person-a24c0d08",
+            "name": "Guto Melog"
+          }
+        ]
+      }
+    },
+    "id": "person--melog--person-0c68dade",
+    "race": "Mensch"
+  }
+}

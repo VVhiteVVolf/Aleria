@@ -58,7 +58,7 @@ function templatePreview(title, template, emptyText) {
   const proficiencies = template.proficiencies || {};
   return `<article class="cp-setup-template-preview">
     <span>${escapeHtml(title)}</span>
-    ${template.originKind === 'culture' && template.icon ? `<img src="${escapeHtml(template.icon)}" alt="" width="40" height="40" loading="lazy">` : ''}
+    ${template.icon ? `<img src="${escapeHtml(template.icon)}" alt="" width="40" height="40" loading="lazy">` : ''}
     <h4>${escapeHtml(template.label)}${template.subtitle ? ` · ${escapeHtml(template.subtitle)}` : ''}</h4>
     <p>${escapeHtml(template.description)}</p>
     ${template.attributeBonuses ? `<strong>${escapeHtml(attributeBonusText(template))}</strong>` : ''}

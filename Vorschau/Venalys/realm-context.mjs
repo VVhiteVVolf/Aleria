@@ -31,8 +31,9 @@ export const context = {
     { name: 'Advena', description: 'Ausländer, häufig wegen Partnerschaft, Arbeit oder Handel in Venalys. Partner und Gäste werden gut behandelt; andere müssen sich ihre Stellung oft erst erarbeiten. Keine feste unterste Stufe der Standesleiter.' },
   ],
   governance: {
+    leadership: 'Venalys wird von fünf Dogen geführt: Jedes der fünf Patrizierhäuser Vinicius, Avenicci, Abor, Tullius und Arentino stellt einen Dogen. Die fünf führen die Republik gemeinsam mit dem Senat und dem Rat.',
     offices: [
-      { title: 'Zwei Dogen', area: 'Staatsoberhäupter', description: 'Die Republik besitzt zwei Staatsoberhäupter. Konkrete Amtsinhaber, Wahlverfahren und Amtszeiten sind noch nicht benannt.' },
+      { title: 'Fünf Dogen', area: 'Staatsoberhäupter', description: 'Je ein Doge aus Vinicius, Avenicci, Abor, Tullius und Arentino. Sie führen die Republik gemeinsam mit Senat und Rat. Konkrete Amtsinhaber, Wahlverfahren und Amtszeiten sind noch nicht benannt.' },
       { title: 'Legat', area: 'Militär', description: 'Führt die eigenständige Stadtwache. Haus- und Gildenstreitkräfte bilden keine Teile dieser Wache.' },
       { title: 'Quästor', area: 'Finanzen', description: 'Verantwortet die Finanzen der Stadtregierung.' },
       { title: 'Advokat', area: 'Justiz', description: 'Verantwortet die Justiz der Stadtregierung.' },
@@ -42,10 +43,11 @@ export const context = {
     ],
     secondaryOffices: [
       { title: 'Ädil', area: 'Hafen', description: 'Das nachgeordnete Amt für den Hafen.' },
-      { title: 'Volkstribun', area: 'Bürgersprecher', description: 'Spricht für die Bürgerschaft. Weitere sekundäre Ämter bleiben offen.' },
+      { title: 'Volkstribun', area: 'Schlichtung und Senatsleitung', description: 'Wird vom Volk gewählt, schlichtet im Senat und leitet dessen Reden und Beratungen. Er besitzt ein Vetorecht.' },
     ],
     watch: { size: 1000, leader: 'Legat', text: 'Die 1.000 Mann starke Stadtwache nimmt ausschließlich einheimische Venalier nach strenger Prüfung auf. Sie bleibt institutionell von sämtlichen Streitkräften der Patrizier, Magnarier und Gilden getrennt. Die Republik will so Bürgerkrieg und Kontrollverlust verhindern.' },
     senate: 'Jeder Mann aus einem Magnarier- oder Patrizierhaus erhält ab 30 Jahren Senatorenstatus und darf am Senat teilnehmen. Mercantier, Plebejer und bloße militärische Laufbahnen begründen diesen Status nicht.',
+    council: 'Der Rat wirkt neben den fünf Dogen und dem Senat an der Regierung mit. Seine Zusammensetzung und die genaue Aufgabenverteilung sind noch nicht festgelegt.',
   },
   labels: { warriorHeading: 'Die Krieger der Häuser.', warriorIntro: 'Die 17 Magnarierhäuser erhalten eigene Vertreter. Hinzu kommen die ausdrücklich gewünschten Patrizierentwürfe der Avenicci mit Löwenhelm und der Abor mit goldenem Helm und blauem Helmkamm. Die Hausstreitkräfte sind von der eigenständigen Stadtwache getrennt.' },
   relatedPages: [{ href: '../../Klassenordner/Klassenseite.html#venalys', label: 'Klassen Venalys’' }, { href: '../Aeldrunmar/', label: 'Aeldrunmar' }, { href: '../Brevanor/', label: 'Brevanor' }],

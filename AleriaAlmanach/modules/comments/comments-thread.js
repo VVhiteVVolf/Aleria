@@ -1,8 +1,10 @@
-﻿// Comment cache, live thread rendering, navigation tools, and preview splitter.
+// Comment cache, live thread rendering, navigation tools, and preview splitter.
 // Comment cache to avoid slow reloads
 const _commentCache = {};
 let _commentLiveThreadId = null;
 let _commentLiveUnsubscribe = null;
+let _commentLoadGeneration = 0;
+let _commentLiveGeneration = 0;
 const _commentAutoScrollThreads = new Set();
 function getCommentTimestampMs(comment) {
   const seconds = Number(comment?.ts?.seconds ?? comment?.ts?._seconds);
@@ -110,13 +112,22 @@ function getNextCommentOrderKey(threadId, insertAfterId = null) {
 
 // Comment backend and local fallback live in modules/comments/comments-backend.js.
 
-function stopCommentLiveUpdates() {
+function stopCommentLiveUpdates(options = {}) {
+  _commentLoadGeneration++;
+  _commentLiveGeneration++;
   if (_commentLiveUnsubscribe) {
     _commentLiveUnsubscribe();
     _commentLiveUnsubscribe = null;
   }
   _commentLiveThreadId = null;
-  stopCommentTurnUpdates();
+  if (!options.preserveTurn) stopCommentTurnUpdates();
+}
+
+function isCurrentCommentScroll(scroll, threadId) {
+  if (!scroll || scroll.isConnected === false || scroll.dataset.commentThreadId !== threadId) return false;
+  if (typeof getCurrentCommentThread === 'function' && getCurrentCommentThread()?.threadId !== threadId) return false;
+  const modal = scroll.closest?.('#modal-overlay');
+  return !modal || modal.classList.contains('active');
 }
 
 function requestCommentAutoScroll(threadId) {
@@ -167,17 +178,25 @@ function getCommentsScrollForThread(threadId, options = {}) {
 }
 
 async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {}) {
-  const scroll = getCommentsScrollForThread(entryId, { allowUnbound: true });
+  if (typeof getCurrentCommentThread === 'function' && getCurrentCommentThread()?.threadId !== entryId) return;
+  const scroll = getCommentsScrollForThread(entryId, { allowUnbound: options.allowUnbound !== false });
   if (!scroll) return;
+  const loadGeneration = ++_commentLoadGeneration;
   scroll.dataset.commentThreadId = entryId;
   let pageTarget = options.page;
   const withBuiltinTestComments = comments => {
     const incoming = Array.isArray(comments) ? comments : [];
     const builtins = window.AleriaCombatTestScene?.getComments?.(entryId) || [];
-    if (!builtins.length) return incoming;
+    const localComments = (_commentCache[entryId] || []).filter(comment => comment.localOnly === true);
+    if (!builtins.length && !localComments.length) return incoming;
     const ids = new Set(incoming.map(comment => String(comment?.id || '')));
     return sortCommentsByTimeline([
-      ...builtins.filter(comment => !ids.has(String(comment.id || ''))),
+      ...[...builtins, ...localComments].filter(comment => {
+        const id = String(comment.id || '');
+        if (ids.has(id)) return false;
+        ids.add(id);
+        return true;
+      }),
       ...incoming
     ]);
   };
@@ -194,7 +213,8 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
     maybeAutoScrollComments(scroll, _commentCache[entryId]);
   }
 
-  const backend = await getCommentBackend();
+  const backend = await getCommentBackend({ source: 'comments' });
+  if (loadGeneration !== _commentLoadGeneration || !isCurrentCommentScroll(scroll, entryId)) return;
 
   if (_commentLiveThreadId === entryId && _commentLiveUnsubscribe && options.restartLive !== true) {
     // The existing subscription already receives acknowledged writes. Reusing
@@ -204,54 +224,84 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
       renderCommentsToScroll(scroll, _commentCache[entryId]);
       maybeAutoScrollComments(scroll, _commentCache[entryId]);
     }
-    loadCommentTurnIntoPage(entryId, forceRefresh);
+    if (options.refreshTurn !== false) loadCommentTurnIntoPage(entryId, forceRefresh);
     return;
   }
-  stopCommentLiveUpdates();
-  loadCommentTurnIntoPage(entryId, forceRefresh);
+  stopCommentLiveUpdates({ preserveTurn: true });
+  const readGeneration = _commentLoadGeneration;
+  if (options.refreshTurn !== false) loadCommentTurnIntoPage(entryId, forceRefresh);
 
   if (typeof backend.subscribeComments === 'function') {
     _commentLiveThreadId = entryId;
-    _commentLiveUnsubscribe = backend.subscribeComments(entryId, comments => {
+    const liveGeneration = _commentLiveGeneration;
+    const isCurrent = () => liveGeneration === _commentLiveGeneration && _commentLiveThreadId === entryId
+      && isCurrentCommentScroll(getCommentsScrollForThread(entryId, { allowUnbound: false }), entryId);
+    const unsubscribe = backend.subscribeComments(entryId, comments => {
+      if (!isCurrent()) return;
+      const currentScroll = getCommentsScrollForThread(entryId, { allowUnbound: false });
+      if (!isCurrentCommentScroll(currentScroll, entryId)) return;
       const mergedComments = withBuiltinTestComments(comments);
       _commentCache[entryId] = mergedComments;
       announceCommentThreadUpdate(entryId, mergedComments);
       applyPageTarget(mergedComments);
-      const currentScroll = getCommentsScrollForThread(entryId, { allowUnbound: false });
       if (currentScroll?.dataset.commentThreadId === entryId) {
         renderCommentsToScroll(currentScroll, mergedComments);
         maybeAutoScrollComments(currentScroll, mergedComments);
       }
       if (typeof loadSidebarFeed === 'function') loadSidebarFeed();
+      document.dispatchEvent(new CustomEvent('aleria:comment-backend-connected', { detail: { source: 'comments' } }));
     }, async error => {
-      // Firestore stops a listener permanently after an error. Let the next
-      // explicit reload establish a fresh one rather than reusing its handle.
-      if (_commentLiveThreadId === entryId) stopCommentLiveUpdates();
+      if (!isCurrent()) return;
+      // A failed listener is permanently closed; retry with a fresh subscription.
+      stopCommentLiveUpdates({ preserveTurn: true });
+      const fallbackGeneration = _commentLoadGeneration;
       if (typeof showFriendlyAppError === 'function') {
         showFriendlyAppError(error, 'Live-Kommentare konnten nicht geladen werden.');
       }
       const fallbackBackend = getLocalCommentBackend();
-      showCommentFallbackNotice();
-      const comments = withBuiltinTestComments(await fallbackBackend.loadComments(entryId));
+      showCommentFallbackNotice(error, 'comments');
+      const localComments = await fallbackBackend.loadComments(entryId);
+      const currentScroll = getCommentsScrollForThread(entryId, { allowUnbound: false });
+      if (fallbackGeneration !== _commentLoadGeneration || !isCurrentCommentScroll(currentScroll, entryId)) return;
+      // Keep acknowledged history visible, along with unsent local contributions.
+      const retained = [...new Map([...(_commentCache[entryId] || []), ...localComments].map(comment => [comment.id, comment])).values()];
+      const comments = withBuiltinTestComments(retained);
       _commentCache[entryId] = comments;
       announceCommentThreadUpdate(entryId, comments);
       applyPageTarget(comments);
-      const currentScroll = getCommentsScrollForThread(entryId, { allowUnbound: false });
       if (currentScroll?.dataset.commentThreadId === entryId) {
         renderCommentsToScroll(currentScroll, comments);
         maybeAutoScrollComments(currentScroll, comments);
       }
     });
+    if (isCurrent()) _commentLiveUnsubscribe = unsubscribe;
+    else unsubscribe?.();
     return;
   }
 
   const comments = withBuiltinTestComments(await backend.loadComments(entryId));
+  if (readGeneration !== _commentLoadGeneration || !isCurrentCommentScroll(scroll, entryId)) return;
   _commentCache[entryId] = comments;
   announceCommentThreadUpdate(entryId, comments);
   applyPageTarget(comments);
   renderCommentsToScroll(scroll, comments);
   maybeAutoScrollComments(scroll, comments);
 }
+
+document.addEventListener('aleria:comment-backend-reconnect', event => {
+  const threadId = typeof getCurrentCommentThread === 'function' ? getCurrentCommentThread()?.threadId : null;
+  const scroll = threadId && getCommentsScrollForThread(threadId, { allowUnbound: false });
+  if (!isCurrentCommentScroll(scroll, threadId)) return;
+  const sources = event.detail?.sources || ['backend'];
+  const refresh = sources.includes('comments') || sources.includes('backend')
+    ? loadCommentsIntoPage(threadId, false, {
+      allowUnbound: false, refreshTurn: sources.includes('turn') || sources.includes('backend')
+    })
+    : sources.includes('turn') ? loadCommentTurnIntoPage(threadId) : Promise.resolve();
+  refresh.catch(error => {
+    if (typeof showFriendlyAppError === 'function') showFriendlyAppError(error, 'Kommentarverbindung konnte nicht erneuert werden.');
+  });
+});
 
 function renderCommentsToScroll(scroll, comments) {
   const sortedHistory = typeof dedupeSceneTransitionComments === 'function'

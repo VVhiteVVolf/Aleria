@@ -15,8 +15,7 @@
   border: 0;
   background: transparent;
   cursor: pointer;
-  filter: drop-shadow(0 5px 5px rgba(77, 45, 13, 0.16));
-  transition: filter 160ms ease, transform 160ms ease;
+  transition: box-shadow 160ms ease, transform 160ms ease;
 }
 
 .topic-board-sidebar-create img {
@@ -28,8 +27,13 @@
 
 .topic-board-sidebar-create:hover,
 .topic-board-sidebar-create:focus-visible {
-  filter: drop-shadow(0 7px 8px rgba(91, 49, 10, 0.25)) saturate(1.08);
+  box-shadow: 0 2px 7px rgba(77, 45, 13, 0.16);
   transform: translateY(-1px);
+}
+
+.topic-board-sidebar-create:focus-visible {
+  outline: 2px solid var(--theme-accent);
+  outline-offset: 3px;
 }
 
 .topic-board-sidebar-create:active { transform: translateY(1px) scale(0.97); }

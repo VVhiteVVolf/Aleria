@@ -8,9 +8,11 @@
 .development-attack small, .development-trait small { display:block; }
 .development-traits { display:grid; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); gap:.6rem; }
 .development-traits > .development-advice { grid-column:1 / -1; }
+.development-retired-traits { grid-column:1 / -1; }
 .development-trait { display:flex; gap:.6rem; align-items:center; border:1px solid #9b845f66; padding:.6rem; border-radius:.5rem; cursor:pointer; }
 .development-trait img { width:54px; height:54px; border-radius:50%; object-fit:contain; flex:none; }
 .development-trait > span { min-width:0; overflow-wrap:anywhere; }
+.development-trait-family { grid-column:1 / -1; align-items:flex-start; }
 .development-trait .development-clan-emblem { display:inline-block; width:22px; height:22px; vertical-align:middle; }
 .development-trait:has(input:checked), .development-attack:has(input:checked) { border-color:#cba75a; background:#bc9c4922; }
 .development-shop input[type=checkbox] { width:1.1rem; height:1.1rem; flex:none; }

@@ -58,8 +58,40 @@ function findCharacterByNameKeys(characters, source) {
   const sourceKeys = getCharacterNameKeys(source);
   if (!sourceKeys.size) return null;
   return characters.find(char =>
-    Array.from(getCharacterNameKeys(char)).some(key => sourceKeys.has(key))
+    !characterWorldIdentitiesConflict(char, source)
+    && Array.from(getCharacterNameKeys(char)).some(key => sourceKeys.has(key))
   ) || null;
+}
+
+function getCharacterWorldIdentity(char) {
+  return String(char?.identity?.worldPersonId || char?.genealogy?.worldPersonId || '').trim();
+}
+
+function characterWorldIdentitiesConflict(first, second) {
+  const firstId = getCharacterWorldIdentity(first);
+  const secondId = getCharacterWorldIdentity(second);
+  return !!(firstId && secondId && firstId !== secondId);
+}
+
+function resolveStoredCharacterById(id) {
+  const safeId = String(id || '').trim();
+  if (!safeId) return null;
+  let record = _characters.find(char => String(char.id || '').trim() === safeId)
+    || _characters.find(char => char.localRecord?.firestoreDocumentIds?.includes(safeId));
+  if (!record) return null;
+  const seen = new Set();
+  while (record.mergeIdentity?.status === 'merged') {
+    const canonicalId = String(record.mergeIdentity.canonicalCharacterId || '').trim();
+    if (!canonicalId || seen.has(canonicalId)) return null;
+    seen.add(String(record.id || '').trim());
+    const canonical = _characters.find(char => String(char.id || '').trim() === canonicalId);
+    const expectedIdentity = String(record.mergeIdentity.canonicalWorldPersonId || '').trim();
+    if (!canonical || characterWorldIdentitiesConflict(record, canonical)
+      || (expectedIdentity && getCharacterWorldIdentity(canonical)
+        && expectedIdentity !== getCharacterWorldIdentity(canonical))) return null;
+    record = canonical;
+  }
+  return record;
 }
 
 function normalizeCharacterPlayerOwner(value) {
@@ -205,8 +237,19 @@ function resolveCommentCastCharacter(castId, allCharacters, byId) {
   const direct = byId.get(safeId);
   if (direct) return direct;
 
+  const saved = resolveStoredCharacterById(safeId);
+  if (saved) return byId.get(String(saved.id || '').trim()) || null;
+  // An unavailable archived receipt must not fall through to a builtin alias.
+  if (_characters.some(char => String(char.id || '').trim() === safeId)) return null;
+
   const builtin = getBuiltinCommentCharacterById(safeId);
   if (!builtin) return null;
+
+  const storedMatch = findCharacterByNameKeys(_characters, builtin);
+  if (storedMatch) {
+    const current = resolveStoredCharacterById(storedMatch.id);
+    return current ? byId.get(String(current.id || '').trim()) || null : null;
+  }
 
   const savedMatch = findCharacterByNameKeys(allCharacters, builtin);
   return savedMatch ? mergeCharacterRecords(savedMatch, builtin) : builtin;
@@ -280,9 +323,8 @@ function getCharacterById(id) {
   if (!id) return null;
   const safeId = String(id || '').trim();
   const saved = _characters.find(char => String(char.id || '').trim() === safeId);
-  const canonicalId = saved?.mergeIdentity?.status === 'merged' ? saved.mergeIdentity.canonicalCharacterId : '';
-  const canonical = canonicalId && _characters.find(char => String(char.id || '').trim() === canonicalId);
-  if (canonical && canonical.id !== saved.id) return canonical;
+  const canonical = resolveStoredCharacterById(safeId);
+  if (canonical) return canonical;
   if (saved) return saved;
   const archivedAlias = _characters.find(char => char.localRecord?.firestoreDocumentIds?.includes(safeId));
   if (archivedAlias) return archivedAlias;
@@ -306,8 +348,17 @@ function getAllCharacterRecords() {
     if (!char) return;
     const key = normalizeSearchText(char.name || char.id);
     if (!key) return;
-    const existing = combined.get(key);
-    combined.set(key, existing ? mergeCharacterRecords(char, existing) : cloneCharacterRecord(char));
+    const group = combined.get(key) || [];
+    // Retired source documents are separate archive receipts. Merging them by
+    // name would leak their archive flag, old inventory and merge metadata into
+    // the active record, with the result depending on load order.
+    const retired = char.mergeIdentity?.status === 'merged';
+    const index = group.findIndex(existing => retired
+      ? existing.mergeIdentity?.status === 'merged' && existing.id === char.id
+      : existing.mergeIdentity?.status !== 'merged' && !characterWorldIdentitiesConflict(existing, char));
+    if (index >= 0) group[index] = mergeCharacterRecords(char, group[index]);
+    else group.push(cloneCharacterRecord(char));
+    combined.set(key, group);
   };
 
   getBuiltinLibraryCharacters().forEach(char => {
@@ -324,7 +375,7 @@ function getAllCharacterRecords() {
     addCombined(char);
   });
 
-  const records = Array.from(combined.values()).sort((a, b) =>
+  const records = Array.from(combined.values()).flat().sort((a, b) =>
     (a.name || '').localeCompare(b.name || '', 'de', { sensitivity: 'base' })
   );
   _characterRecordReadCache = {
@@ -337,7 +388,7 @@ function getAllCharacterRecords() {
 }
 
 function getVisibleCharacterRecords() {
-  return getAllCharacterRecords().filter(char => !char.archived);
+  return getAllCharacterRecords().filter(char => !char.archived && char.mergeIdentity?.status !== 'merged');
 }
 
 function replaceCharacterIdInTabs(fromId, toId) {
@@ -422,23 +473,20 @@ function getAvailableCommentCharacters() {
   if (castIds.length) {
     const prioritized = [];
     const seenIds = new Set();
-    const seenNames = new Set();
     castIds.forEach(id => {
       const safeId = String(id || '').trim();
       if (!safeId || seenIds.has(safeId)) return;
       const matched = resolveCommentCastCharacter(safeId, allCharacters, byId);
       if (!matched) return;
-      const nameKey = normalizeSearchText(matched.name || matched.id);
+      if (seenIds.has(String(matched.id || '').trim())) return;
       seenIds.add(safeId);
       if (matched.id) seenIds.add(String(matched.id).trim());
-      if (nameKey) seenNames.add(nameKey);
       prioritized.push(matched);
     });
 
     const remainder = allCharacters.filter(char => {
       const charId = String(char.id || '').trim();
-      const nameKey = normalizeSearchText(char.name || char.id);
-      return !seenIds.has(charId) && !seenNames.has(nameKey);
+      return !seenIds.has(charId);
     });
 
     return appendAvailableCreatureActors([...prioritized, ...remainder]);
@@ -456,11 +504,8 @@ function appendAvailableCreatureActors(characters = []) {
 function getAvailableCommentCharacterById(id) {
   const safeId = String(id || '').trim();
   const characters = getAvailableCommentCharacters();
-  const direct = characters.find(char => String(char.id || '').trim() === safeId);
-  if (direct) return direct;
-  const builtin = getBuiltinCommentCharacterById(safeId);
-  if (!builtin) return null;
-  return findCharacterByNameKeys(characters, builtin) || builtin;
+  const byId = new Map(characters.map(char => [String(char.id || '').trim(), char]));
+  return resolveCommentCastCharacter(safeId, characters, byId);
 }
 
 function getAvailableCommentCharacterByName(name) {

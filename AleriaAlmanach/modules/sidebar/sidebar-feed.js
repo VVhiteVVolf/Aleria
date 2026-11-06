@@ -133,17 +133,28 @@ function buildSidebarFeedItem(comment, sections) {
   </div>`;
 }
 
+const _sidebarFeedLoads = new WeakMap();
+
 function loadSidebarFeed() {
   const run = async () => {
     const feed = document.getElementById('sidebar-feed');
     if (!feed) return;
+    const request = {};
+    _sidebarFeedLoads.set(feed, request);
+    const isCurrent = () => _sidebarFeedLoads.get(feed) === request
+      && document.getElementById('sidebar-feed') === feed && feed.isConnected !== false;
 
     try {
       const backend = typeof getCommentBackend === 'function'
-        ? await getCommentBackend({ timeoutMs: 1200 })
+        ? await getCommentBackend({ timeoutMs: 1200, source: 'sidebar' })
         : (await waitForFirebaseReady(1200), window._fb);
+      if (!isCurrent()) return;
       if (!backend?.loadRecentComments) return;
-      const comments = sortSidebarFeedComments(await backend.loadRecentComments(SIDEBAR_FEED_CANDIDATE_LIMIT));
+      const comments = sortSidebarFeedComments(await backend.loadRecentComments(SIDEBAR_FEED_CANDIDATE_LIMIT, { throwOnError: true }));
+      if (!isCurrent()) return;
+      if (!backend._localFallback) {
+        document.dispatchEvent(new CustomEvent('aleria:comment-backend-connected', { detail: { source: 'sidebar' } }));
+      }
       const sections = getValidSections();
 
       if (!comments || comments.length === 0) {
@@ -164,7 +175,9 @@ function loadSidebarFeed() {
         ? items.join('')
         : '<div class="sidebar-feed-empty">Noch keine Aktivitäten</div>';
     } catch (error) {
+      if (!isCurrent()) return;
       console.error('Sidebar feed error:', error);
+      if (typeof showCommentFallbackNotice === 'function') showCommentFallbackNotice(error, 'sidebar');
       showFriendlyAppError(error, 'Letzte Aktivitäten konnten nicht geladen werden.');
       feed.innerHTML = '<div class="sidebar-feed-empty">Konnte nicht laden.</div>';
     }
@@ -172,6 +185,11 @@ function loadSidebarFeed() {
 
   return run();
 }
+
+document.addEventListener('aleria:comment-backend-reconnect', event => {
+  const sources = event.detail?.sources || ['backend'];
+  if (sources.includes('backend') || sources.includes('sidebar')) loadSidebarFeed();
+});
 
 function openEntryById(entryId) {
   const location = parseCommentThreadLocation(entryId);

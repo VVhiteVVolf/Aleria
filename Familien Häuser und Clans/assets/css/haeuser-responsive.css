@@ -24,3 +24,22 @@
     width: 100%;
   }
 }
+
+/* Optional for portrait-rich family articles; existing house tables keep their layout. */
+@media (max-width: 520px) {
+  .haeuser-page[data-haeuser-layout="responsive"] .haeuser-section-cell:has(> .haeuser-historical-table[data-mobile-layout="stacked"]) { overflow: visible; }
+  .haeuser-page[data-haeuser-layout="responsive"] .haeuser-historical-table[data-mobile-layout="stacked"],
+  .haeuser-historical-table[data-mobile-layout="stacked"] :is(tbody, tr, td, th) {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .haeuser-historical-table[data-mobile-layout="stacked"] .haeuser-history-header { display: none; }
+  .haeuser-page[data-haeuser-layout="responsive"] .haeuser-historical-table[data-mobile-layout="stacked"] .portrait-cell { width: 100%; }
+  .haeuser-historical-table[data-mobile-layout="stacked"] .haeuser-history-desc { min-height: 0; }
+  .haeuser-historical-table[data-mobile-layout="stacked"] .haeuser-history-portrait { height: 360px; }
+  .haeuser-historical-table[data-mobile-layout="stacked"] .haeuser-history-portrait-slot {
+    width: min(100%, 240px);
+    margin-inline: auto;
+  }
+}

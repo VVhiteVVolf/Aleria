@@ -122,7 +122,7 @@ export const WORLD_CONTENT_TASKS = [
     id: 'uathneach-preview', label: 'Isolated regional proposals and complete preview assets',
     inputs: ['Vorschau/'],
     commands: [tests('Vorschau/tests'),tests('Vorschau/Solestia/tests'),tests('Vorschau/Phalantia/tests'),
-      tests('Vorschau/Klythesia/scripts'), tests('Vorschau/Mathringen/tests'),
+      tests('Vorschau/Klythesia/scripts'), tests('Vorschau/Mathringen/tests'), tests('Vorschau/Kemetara/tests'),
       tests('Vorschau/Calidaria/tests'),tests('Vorschau/Sylvarant/tests'),
       ['--test','--experimental-test-isolation=none',
         'netlify/tests/leukonia-source-publication.test.mjs',
