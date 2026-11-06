@@ -4,6 +4,7 @@ let _charTabsLoaded = false;
 const CHARACTER_ARCHIVE_TAB = 'Archiv';
 let _localCharacterDatabaseRequest = null;
 let _characterLoadRequest = null;
+let _characterLoadPatches = null;
 
 let _charTabs = ['Alle'];
 let _charTabMap = {};
@@ -44,26 +45,79 @@ function loadLocalCharacterDatabaseState() {
 }
 
 function loadCharacters() {
-  if (_charactersLoaded && _charTabsLoaded) {
+  if (_charactersLoaded && _charTabsLoaded && !getMissingCanonicalCharacterIds(_characters).length) {
     // Archive navigation recreates the host even when records remain cached.
     renderCharSubtabs();
     renderCharGrid();
     return Promise.resolve();
   }
   if (!_characterLoadRequest) {
-    _characterLoadRequest = loadCharacterRegisterData().finally(() => { _characterLoadRequest = null; });
+    _characterLoadPatches = new Map();
+    _characterLoadRequest = loadCharacterRegisterData()
+      .catch(error => { _charactersLoaded = false; throw error; })
+      .finally(() => { _characterLoadRequest = null; _characterLoadPatches = null; });
   }
   return _characterLoadRequest;
 }
 
+function getMissingCanonicalCharacterIds(records) {
+  const ids = new Set(records.map(record => String(record?.id || '').trim()));
+  return [...new Set(records
+    .filter(record => record?.mergeIdentity?.status === 'merged')
+    .map(record => String(record.mergeIdentity.canonicalCharacterId || '').trim())
+    .filter(id => id && !ids.has(id)))];
+}
+
+function preserveCharacterUpdatesDuringLoad(records, previousRecords) {
+  const changed = _characters.filter(record => previousRecords.get(String(record?.id || '').trim()) !== record);
+  if (!changed.length) return records;
+  const merged = new Map(records.map(record => [String(record?.id || '').trim(), record]));
+  changed.forEach(record => {
+    const id = String(record?.id || '').trim();
+    const patch = _characterLoadPatches?.get(id);
+    merged.set(id, patch ? cloneCharacterRecord({ ...merged.get(id), ...patch, id }) : record);
+  });
+  return [...merged.values()];
+}
+
+function rememberCharacterUpdateDuringLoad(record) {
+  if (!_characterLoadPatches) return;
+  const id = String(record?.id || '').trim();
+  if (!id) return;
+  const patch = typeof structuredClone === 'function' ? structuredClone(record) : JSON.parse(JSON.stringify(record));
+  _characterLoadPatches.set(id, { ..._characterLoadPatches.get(id), ...patch, id });
+}
+
+async function completeCanonicalCharacterRecords(records, previousRecords) {
+  let result = records;
+  let missing = getMissingCanonicalCharacterIds(result);
+  while (missing.length) {
+    const loaded = await window._fb.loadCharacters({ ids: missing, fromServer: true, throwOnError: true });
+    const received = new Map(loaded.filter(record => missing.includes(String(record?.id || '').trim()))
+      .map(record => [String(record.id).trim(), record]));
+    if (missing.some(id => !received.has(id))) throw new Error('Eine zugeordnete Hauptakte konnte nicht geladen werden. Bitte die Figurenauswahl erneut öffnen.');
+    const completed = new Map(result.map(record => [String(record?.id || '').trim(), record]));
+    missing.forEach(id => completed.set(id, cloneCharacterRecord(received.get(id))));
+    result = preserveCharacterUpdatesDuringLoad([...completed.values()], previousRecords);
+    missing = getMissingCanonicalCharacterIds(result);
+  }
+  return result;
+}
+
 async function loadCharacterRegisterData() {
+  const initialCharacters = [..._characters];
+  const previousRecords = new Map(initialCharacters.map(record => [String(record?.id || '').trim(), record]));
   const localStateRequest = loadLocalCharacterDatabaseState();
   if (!_fbReady) await waitForFirebaseReady();
   const localState = await localStateRequest;
   const localCharacters = localState.database?.characters || [];
   if (!window._fb?.loadCharacters) {
-    if (!_charactersLoaded) {
-      _characters = localCharacters.map(cloneCharacterRecord);
+    if (!_charactersLoaded || getMissingCanonicalCharacterIds(initialCharacters).length) {
+      const offlineCharacters = localState.repository?.mergeCharacterDatabases
+        ? localState.repository.mergeCharacterDatabases(initialCharacters, localCharacters)
+        : initialCharacters.length ? initialCharacters : localCharacters;
+      if (getMissingCanonicalCharacterIds(offlineCharacters).length) throw new Error('Die Hauptakte fehlt im geladenen Bestand. Bitte die Online-Verbindung prüfen und die Figurenauswahl erneut öffnen.');
+      _characters = preserveCharacterUpdatesDuringLoad(offlineCharacters.map(cloneCharacterRecord), previousRecords);
       _charactersLoaded = true;
       showAppStatus(
         localCharacters.length
@@ -89,13 +143,16 @@ async function loadCharacterRegisterData() {
     return;
   }
 
+  let loadedCharacters = initialCharacters;
   if (!_charactersLoaded) {
     const onlineCharacters = await window._fb.loadCharacters();
-    _characters = localState.repository?.mergeCharacterDatabases
+    loadedCharacters = localState.repository?.mergeCharacterDatabases
       ? localState.repository.mergeCharacterDatabases(onlineCharacters, localCharacters).map(cloneCharacterRecord)
       : onlineCharacters.map(cloneCharacterRecord);
-    _charactersLoaded = true;
   }
+  const completedCharacters = await completeCanonicalCharacterRecords(loadedCharacters, previousRecords);
+  _characters = preserveCharacterUpdatesDuringLoad(completedCharacters, previousRecords);
+  _charactersLoaded = true;
 
   if (!_charTabsLoaded) {
     const onlineSaved = window._fb?.loadCharTabs ? await window._fb.loadCharTabs() : null;
@@ -131,6 +188,7 @@ function handleExternallySavedCharacter(event) {
   const record = event?.detail?.record;
   const id = String(record?.id || '').trim();
   if (!id) return;
+  rememberCharacterUpdateDuringLoad(record);
   const index = _characters.findIndex(character => String(character.id || '') === id);
   // Externe Feature-Editoren veröffentlichen gezielte Teilbereichs-Patches. Ein solcher Patch
   // darf den bereits geladenen Rest der Figur (vor allem Inventar und Kampfprofil) lokal ebenso
@@ -142,7 +200,7 @@ function handleExternallySavedCharacter(event) {
   });
   if (index >= 0) _characters[index] = normalized;
   else _characters.push(normalized);
-  _charactersLoaded = true;
+  // A single feature save does not mean that the complete register was loaded.
   renderCharSubtabs();
   renderCharGrid();
   renderCharPickerInForm();
@@ -160,6 +218,7 @@ document.addEventListener('aleria:item-register-records', event => {
   for (const record of event.detail.characters || []) {
     const index = _characters.findIndex(character => character.id === record.id);
     if (index >= 0 && JSON.stringify(_characters[index]) === JSON.stringify(record)) continue;
+    rememberCharacterUpdateDuringLoad(record);
     const normalized = cloneCharacterRecord(record);
     if (index >= 0) _characters[index] = normalized;
     else _characters.push(normalized);

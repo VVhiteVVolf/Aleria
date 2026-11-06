@@ -134,6 +134,25 @@ test('Fehlende, archivierte oder widersprechende Hauptakten und Aliaszyklen werd
   }
 });
 
+test('Gwendolyns fehlende Hauptakte wird nicht durch die Zweikachel-Builtin-Figur ersetzt',async()=>{
+  const rules=CONFIRMED_CHARACTER_RETIREMENTS.filter(row=>row.canonicalName==='Gwendolyn Draig');
+  const cold='https://i.imgur.com/ZX7jU9h.png';
+  const aliases=rules.map((rule,index)=>applyConfirmedCharacterRetirement({id:rule.legacyId,name:rule.canonicalName,
+    emotes:Array.from({length:index?42:1},(_,number)=>({img:number?`https://example.invalid/old-${number}.png`:cold}))}));
+  const before=structuredClone(aliases);
+  const context=await loadCharacterProjection(aliases,{builtins:{gwendolyn:{id:'builtin:gwendolyn-draig',name:'Gwendolyn Draig',
+    identity:{worldPersonId:rules[0].canonicalWorldPersonId},portrait:cold,emotes:[{img:cold,label:'kalt'}]}}});
+  assert.equal(vm.runInContext('getAvailableCommentCharacters().length',context),0);
+  assert.equal(vm.runInContext("getAvailableCommentCharacterById('builtin:gwendolyn-draig')",context),null);
+  const main={id:rules[0].canonicalCharacterId,name:'Gwendolyn Draig',archived:false,
+    emotes:Array.from({length:43},(_,index)=>({img:index?`https://example.invalid/current-${index}.png`:cold,label:index?'':'kalt'}))};
+  context._characters.push(main);
+  const selected=vm.runInContext("getAvailableCommentCharacterById('builtin:gwendolyn-draig')",context);
+  assert.equal(selected.id,main.id);
+  assert.equal(selected.emotes.length,43);
+  assert.deepEqual(aliases.slice(0,2),before);
+});
+
 test('Unabhängige Weltidentitäten bleiben getrennt und normale Archivierung unterdrückt die Builtin-Fassung',async()=>{
   const first={id:'first',name:'Gleichnamig',identity:{worldPersonId:'person-first'}};
   const second={id:'second',name:'Gleichnamig',identity:{worldPersonId:'person-second'}};

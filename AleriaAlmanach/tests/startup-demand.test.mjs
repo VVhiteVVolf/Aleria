@@ -67,6 +67,158 @@ test('character demand shares remote work, announces actual readiness and repain
   assert.deepEqual(context.records()[0].inventory.items, ['protected']);
 });
 
+function canonicalLoadingHarness(records,{loaded=false,load}={}) {
+  const events=[],document=new EventTarget(),window=new EventTarget();
+  document.addEventListener('aleria:characters-changed',event=>events.push(event.detail));
+  window._fb={loadCharacters:load,loadCharTabs:async()=>({tabs:['Alle']})};
+  const context=vm.createContext({document,window,console,Promise,Set,Map,initialRecords:structuredClone(records),
+    CustomEvent:class extends Event {constructor(type,init){super(type);this.detail=init?.detail;}},
+    _fbReady:true,cloneCharacterRecord:value=>structuredClone(value),normalizeCharTabState(){},
+    renderCharGrid(){},renderCharSubtabs(){},renderCharPickerInForm(){},refreshAllModuleCastPickers(){},
+    getAllCharacterRecords:()=>context.records()});
+  vm.runInContext(read('characters/character-tabs.js'),context);
+  context.renderCharGrid=()=>{};context.renderCharSubtabs=()=>{};
+  vm.runInContext(`_characters=initialRecords;_charactersLoaded=${loaded};_charTabsLoaded=${loaded};
+    _localCharacterDatabaseRequest=Promise.resolve({repository:null,database:{characters:[]}});
+    globalThis.records=()=>_characters;globalThis.loaded=()=>_charactersLoaded;`,context);
+  return {context,events};
+}
+
+function gwendolynRecords() {
+  const main={id:'15ml9RhSvJPXof7z4qY3',name:'Gwendolyn Draig',archived:false,
+    emotes:Array.from({length:43},(_,index)=>({img:`https://example.invalid/current-${index}.png`}))};
+  const aliases=['XWJ6XXwvpESHR3zAXkJx','uiKiMFXC6OEWOdDenbiM'].map((id,index)=>({id,name:'Gwendolyn Draig',archived:true,
+    mergeIdentity:{status:'merged',canonicalCharacterId:main.id},
+    emotes:Array.from({length:index?42:1},(_,number)=>({img:`https://example.invalid/old-${index}-${number}.png`}))}));
+  return {main,aliases};
+}
+
+test('a partial feature save cannot mark the complete character collection as loaded',async()=>{
+  const {main,aliases}=gwendolynRecords();let reads=0;
+  const {context}=canonicalLoadingHarness([],{load:async()=>{reads++;return [...aliases,main];}});
+  context.handleExternallySavedCharacter({detail:{record:aliases[0]}});
+  assert.equal(context.loaded(),false,'one editor record is not a complete register read');
+  await context.loadCharacters();
+  assert.equal(reads,1);
+  assert.equal(context.records().find(row=>row.id===main.id).emotes.length,43);
+  assert.equal(context.loaded(),true);
+});
+
+test('an incomplete character cache waits for one deduplicated server read of the missing main record',async()=>{
+  const {main,aliases}=gwendolynRecords(),pending=deferred(),calls=[];
+  const before=structuredClone(aliases);
+  const {context,events}=canonicalLoadingHarness(aliases,{loaded:true,load:options=>{calls.push(structuredClone(options));return pending.promise;}});
+  const first=context.loadCharacters(),second=context.loadCharacters();
+  assert.equal(first,second);await turn();
+  assert.deepEqual(calls,[{ids:[main.id],fromServer:true,throwOnError:true}]);
+  assert.equal(events.length,0,'readiness must wait for the canonical record');
+  pending.resolve([main]);await first;
+  assert.equal(events.length,1);
+  assert.equal(context.records().find(row=>row.id===main.id).emotes.length,43);
+  assert.deepEqual(structuredClone(context.records().filter(row=>row.archived)),before);
+  assert.deepEqual(aliases,before);
+});
+
+test('failed or empty canonical reads preserve the cached records and can be retried',async()=>{
+  for(const failure of [()=>Promise.reject(Error('offline')),()=>Promise.resolve([])]) {
+    const {main,aliases}=gwendolynRecords();let attempts=0;
+    const before=structuredClone(aliases);
+    const {context,events}=canonicalLoadingHarness(aliases,{loaded:true,load:(options={})=>!options.ids?Promise.resolve(aliases):++attempts===1?failure():Promise.resolve([main])});
+    await assert.rejects(context.loadCharacters(),/offline|Hauptakte/);
+    assert.deepEqual(context.records(),before);
+    assert.equal(events.length,0);
+    await context.loadCharacters();
+    assert.equal(attempts,2);
+    assert.equal(context.records().find(row=>row.id===main.id).emotes.length,43);
+    assert.equal(events.length,1);
+  }
+});
+
+test('a newer feature save during either initial or canonical loading wins without duplicating the main record',async()=>{
+  for(const loaded of [false,true]) {
+    const {main,aliases}=gwendolynRecords(),remote=deferred();
+    const old={...main,inventory:{revision:7,money:1},combatProfile:{hitPoints:{current:1}}};
+    const current={...main,inventory:{revision:8,money:9},combatProfile:{hitPoints:{current:3}}};
+    const {context}=canonicalLoadingHarness(loaded?aliases:[],{loaded,load:()=>remote.promise});
+    const request=context.loadCharacters();await turn();
+    context.handleExternallySavedCharacter({detail:{record:current}});
+    remote.resolve(loaded?[old]:[...aliases,old]);await request;
+    const matches=context.records().filter(record=>record.id===main.id);
+    assert.equal(matches.length,1);
+    assert.deepEqual(matches[0].inventory,current.inventory);
+    assert.deepEqual(matches[0].combatProfile,current.combatProfile);
+    assert.equal(matches[0].emotes.length,43);
+    assert.deepEqual(old.inventory,{revision:7,money:1});
+    assert.deepEqual(old.combatProfile,{hitPoints:{current:1}});
+  }
+});
+
+test('a feature save in the final completion microtask is preserved even when no canonical read is needed',async()=>{
+  const {main}=gwendolynRecords(),remote=deferred();
+  const old={...main,inventory:{revision:7,money:1},combatProfile:{hitPoints:{current:1}}};
+  const current={...main,inventory:{revision:8,money:9},combatProfile:{hitPoints:{current:3}}};
+  const {context}=canonicalLoadingHarness([],{load:()=>remote.promise});
+  const request=context.loadCharacters();await turn();
+  remote.resolve([old]);
+  queueMicrotask(()=>queueMicrotask(()=>context.handleExternallySavedCharacter({detail:{record:current}})));
+  await request;await turn();
+  const matches=context.records().filter(record=>record.id===main.id);
+  assert.equal(matches.length,1);
+  assert.equal(matches[0].inventory.revision,8);
+  assert.equal(matches[0].inventory.money,9);
+  assert.equal(matches[0].combatProfile.hitPoints.current,3);
+});
+
+test('a genuine partial feature patch during either read keeps all unedited server fields',async()=>{
+  for(const loaded of [false,true]) {
+    const {main,aliases}=gwendolynRecords(),remote=deferred();
+    const server={...main,inventory:{revision:7,money:1},combatProfile:{hitPoints:{current:5}},title:'Existing title'};
+    const {context}=canonicalLoadingHarness(loaded?aliases:[],{loaded,load:()=>remote.promise});
+    const request=context.loadCharacters();await turn();
+    context.handleExternallySavedCharacter({detail:{record:{id:main.id,name:main.name,portrait:'new.png'}}});
+    remote.resolve(loaded?[server]:[...aliases,server]);await request;
+    const matches=context.records().filter(record=>record.id===main.id);
+    assert.equal(matches.length,1);
+    assert.equal(matches[0].portrait,'new.png');
+    assert.equal(matches[0].title,'Existing title');
+    assert.equal(matches[0].emotes.length,43);
+    assert.deepEqual(matches[0].inventory,server.inventory);
+    assert.deepEqual(matches[0].combatProfile,server.combatProfile);
+  }
+});
+
+test('a provisional feature patch cannot satisfy a missing main record before the authoritative read',async()=>{
+  const {main,aliases}=gwendolynRecords(),remote=deferred(),calls=[];
+  const server={...main,inventory:{revision:7},combatProfile:{hitPoints:{current:5}}};
+  const {context}=canonicalLoadingHarness([],{load:options=>{
+    calls.push(options||{});return options?.ids?Promise.resolve([server]):remote.promise;
+  }});
+  const request=context.loadCharacters();await turn();
+  context.handleExternallySavedCharacter({detail:{record:{id:main.id,name:main.name,portrait:'new.png'}}});
+  remote.resolve(aliases);await request;
+  assert.equal(calls.length,2);
+  assert.deepEqual(structuredClone(calls[1].ids),[main.id]);
+  const current=context.records().find(record=>record.id===main.id);
+  assert.equal(current.emotes.length,43);
+  assert.equal(current.portrait,'new.png');
+  assert.deepEqual(current.inventory,server.inventory);
+});
+
+test('targeted character reads use the requested server documents and retain their real IDs',async()=>{
+  const source=readFileSync(new URL('../firebase.js',import.meta.url),'utf8');
+  const start=source.indexOf('async loadCharacters(options = {}) {');
+  const end=source.indexOf('async loadCharacterArchiveEntries()',start);
+  const calls=[];
+  const context=vm.createContext({console,Map,Set,db:{},
+    doc:(_db,collection,id)=>({collection,id}),
+    getDoc:()=>{throw Error('The canonical recovery must bypass the browser cache');},
+    getDocFromServer:async reference=>{calls.push(reference);return{exists:()=>true,id:reference.id,data:()=>({id:'stale-field',name:'Gwendolyn Draig'})};}});
+  vm.runInContext(`globalThis.backend={${source.slice(start,end)}};`,context);
+  const records=await context.backend.loadCharacters({ids:['main','main'],fromServer:true,throwOnError:true});
+  assert.deepEqual(calls,[{collection:'characters',id:'main'}]);
+  assert.equal(records[0].id,'main');
+});
+
 test('creature demand joins pending reads, remains cached and mounts fresh hosts without more remote work', async () => {
   const remote = deferred(), calls = { reads: 0, renders: 0, changed: 0 };
   const source = read('creatures/creature-system.js');

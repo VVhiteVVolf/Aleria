@@ -319,6 +319,19 @@ function getBuiltinLibraryCharacters() {
   return _builtinLibraryCharactersCache.map(cloneCharacterRecord);
 }
 
+function hasUnavailableStoredCharacterSource(builtin) {
+  const builtinWorldId = getCharacterWorldIdentity(builtin);
+  const builtinNames = getCharacterNameKeys(builtin);
+  return _characters.some(record => {
+    if (record.mergeIdentity?.status !== 'merged') return false;
+    const expectedWorldId = String(record.mergeIdentity.canonicalWorldPersonId || getCharacterWorldIdentity(record)).trim();
+    if (builtinWorldId && expectedWorldId && builtinWorldId !== expectedWorldId) return false;
+    const samePerson = (builtinWorldId && expectedWorldId === builtinWorldId)
+      || [...getCharacterNameKeys(record)].some(name => builtinNames.has(name));
+    return samePerson && !resolveStoredCharacterById(record.id);
+  });
+}
+
 function getCharacterById(id) {
   if (!id) return null;
   const safeId = String(id || '').trim();
@@ -363,11 +376,13 @@ function getAllCharacterRecords() {
 
   getBuiltinLibraryCharacters().forEach(char => {
     if (_hiddenBuiltinCharacterIds.has(String(char.id || ''))) return;
+    if (hasUnavailableStoredCharacterSource(char)) return;
     addCombined(char);
   });
 
   getBuiltinCommentCharacters().forEach(char => {
     if (_hiddenBuiltinCharacterIds.has(String(char.id || ''))) return;
+    if (hasUnavailableStoredCharacterSource(char)) return;
     addCombined(char);
   });
 

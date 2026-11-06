@@ -848,6 +848,12 @@
       },
       async loadCharacters(options = {}) {
         try {
+          if (Array.isArray(options.ids)) {
+            const ids = [...new Set(options.ids.map(value => String(value || '').trim()).filter(Boolean))];
+            const read = options.fromServer === true ? getDocFromServer : getDoc;
+            const snapshots = await Promise.all(ids.map(id => read(doc(db, 'characters', id))));
+            return snapshots.filter(snapshot => snapshot.exists()).map(snapshot => ({ ...snapshot.data(), id: snapshot.id }));
+          }
           const q = query(collection(db, 'characters'), orderBy('name', 'asc'));
           const snap = await getDocs(q);
           return snap.docs.map(d => ({ id: d.id, ...d.data() }));
