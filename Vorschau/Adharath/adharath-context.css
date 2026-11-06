@@ -1,0 +1,15 @@
+.adharath-workbench .history-grid,.adharath-workbench .culture-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.adharath-workbench .history-grid article{padding-left:20px;border-left:2px solid var(--line)}
+.adharath-workbench .history-grid p,.adharath-workbench .culture-grid p{font-size:16px;color:var(--muted);margin-bottom:0}
+.adharath-workbench .language-note{margin-top:34px;padding:26px;border:1px solid var(--line);background:#eee3cd}
+.adharath-workbench .language-note p{margin-bottom:0;color:var(--muted)}
+.adharath-workbench .clan-search{max-width:660px;margin:0 0 15px}
+.adharath-workbench .clan-search label{display:block;font:12px/1.5 var(--sans);margin-bottom:9px}
+.adharath-workbench .clan-search>div{display:flex;gap:10px}
+.adharath-workbench .clan-search input{min-width:0;flex:1;border:1px solid var(--line);background:#fffaf0;padding:11px 14px;font:14px/1.4 var(--sans);color:var(--ink);border-radius:3px}
+.adharath-workbench .clan-search input:focus-visible{outline:3px solid #b2824d;outline-offset:3px}
+.adharath-workbench .clan-count{font:12px/1.6 var(--sans);color:var(--muted);margin:0 0 24px}
+.adharath-workbench .empty-clans{grid-column:1/-1;padding:24px;background:#ece3ce}
+.adharath-workbench .source-notes li{font-size:14px;margin-block:10px}
+@media(max-width:650px){.adharath-workbench .history-grid,.adharath-workbench .culture-grid{grid-template-columns:1fr}.adharath-workbench .clan-search>div{flex-wrap:wrap}.adharath-workbench .clan-search input{flex-basis:100%}}
+@media print{.adharath-workbench .clan-search,.adharath-workbench .clan-count{display:none}}

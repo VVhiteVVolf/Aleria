@@ -1,3 +1,7 @@
+# Adharath: öffentlicher Vorbereitungsauftrag vom 6. November 2026
+
+Der Nutzer hat die Veröffentlichung der neuen Adharath-Werkstatt samt aktualisierter Übersicht ausdrücklich beauftragt. Zwölf Clanvorschläge, 13 Wappen, drei Standescomics und fünf Kriegerprototypen sind enthalten. Adharath bleibt der Volksname; Dúinreach das ausgelöschte Fürstentum. Sippenführer heißen Ceann. Keine Personen-, Stammbaum- oder produktiven Spielwerte werden angelegt oder verändert. Unabhängige lokale Aufträge und private Bildquellen sind nicht Teil dieses Releases.
+
 # Öffentlicher Sammelrelease vom 6. November 2026
 
 Ausdrücklicher Nutzerauftrag: sämtliche lokalen öffentlichen Neuerungen gemeinsam prüfen, auf master pushen und deployen, anschließend belegbar entbehrliche temporäre Daten entfernen und erst nach Abschluss den Computer herunterfahren. Der Umfang umfasst neue allgemeine Talente und passive Fähigkeiten statt der verworfenen Nischenentwürfe, Marotten, Familienblut, Hintergründe und eigene Icons, freie Waffenattributwahl, Melog mit Honigtörtchen/Wohnstube, drei Marktfiguren, Länderwerkstätten sowie Kommentar-/Sidebar-Korrekturen. Private Quellen, Täteridentitäten, Sicherungen und bereits erfolgte persönliche Livevergaben bleiben erhalten beziehungsweise werden nicht erneut ausgeführt. Der isolierte öffentliche Quellenweg und alle bestehenden Releaseprüfungen bleiben verbindlich.

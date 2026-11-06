@@ -1,0 +1,13 @@
+.adharath-workbench .house-art-card{background:#ede4ce}
+.adharath-workbench .house-art-card h3{font-size:26px}
+.adharath-workbench .prototype-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.adharath-workbench .prototype-grid article{background:#eae0c9}
+.adharath-workbench .prototype-grid h3{font-size:25px;margin-top:24px}
+.adharath-workbench .prototype-grid .figure-art-button img{height:440px}
+.adharath-workbench .prototype-art-detail{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
+.adharath-workbench .house-figure-pair{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center}
+.adharath-workbench .house-figure-pair figure{position:static}
+.adharath-workbench .house-figure-pair figure img{max-height:690px}
+.adharath-workbench .house-detail-copy{margin-top:25px}
+.adharath-workbench .prototype-disclaimer{padding:18px;border-left:3px solid var(--accent);background:#eee3cd;font-size:15px}
+@media(max-width:700px){.adharath-workbench .prototype-art-detail,.adharath-workbench .house-figure-pair{grid-template-columns:1fr}.adharath-workbench .prototype-grid{grid-template-columns:1fr}.adharath-workbench .prototype-grid .figure-art-button img{height:390px}.adharath-workbench .art-dialog-content{padding:22px}.adharath-workbench .art-dialog h2{overflow-wrap:anywhere}}

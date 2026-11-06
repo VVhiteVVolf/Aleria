@@ -36,6 +36,10 @@ const SOURCE_ARCHIVE_ROOTS = [
   'Vorschau/Mathringen/sources/',
   'Vorschau/Mathringen/scripts/',
   'Vorschau/Mathringen/tests/',
+  'Vorschau/Adharath/sources/',
+  'Vorschau/Adharath/scripts/',
+  'Vorschau/Adharath/tests/',
+  'Vorschau/Adharath/assets/originals/',
   'Vorschau/shared/heraldic-artifacts/',
   'AleriaAlmanach/assets/gwynthor-marktplatz/',
   'AleriaAlmanach/modules/gawain-duncan/source/',
@@ -103,6 +107,8 @@ export function isAuthoringArchive(file) {
     || file === 'Vorschau/Kemetara/source-import.json'
     || /^Vorschau\/Kemetara\/assets\/(?:estates|warriors|emblems|regions)\/(?:[a-z-]*manifest\.json|generated(?:-archive)?\/)/.test(file)
     || file === 'Vorschau/Mathringen/assets.source.json'
+    || file === 'Vorschau/Adharath/assets.source.json'
+    || /^Vorschau\/Adharath\/assets\/(?:warriors|castes)\/manifest\.json$/.test(file)
     || file === 'Vorschau/Mathringen/source-import.json'
     || /^Vorschau\/Mathringen\/assets\/(?:estates|warriors|emblems)\/(?:[a-z-]*manifest\.json|generated(?:-archive)?\/)/.test(file)
     || /^Vorschau\/(?:Phalantia|Klythesia)\/assets\/(?:warriors|emblems|estates)\/(?:house-|realm-)?manifest\.json$/.test(file)

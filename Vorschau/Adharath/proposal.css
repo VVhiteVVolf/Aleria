@@ -1,0 +1,13 @@
+@import url('../shared/country-workbench/base.css');
+@import url('../shared/country-workbench/art-dialogs.css');
+@import url('../shared/country-workbench/heraldry-gallery.css');
+@import url('../shared/country-workbench/estate-cards.css');
+@import url('./adharath-context.css');
+@import url('./adharath-art.css');
+.adharath-workbench{--paper:#f4eddb;--ink:#302e27;--muted:#6b675b;--accent:#786347;--line:#cec2a9;background:#d3c7ae}
+.adharath-workbench .hero{background:linear-gradient(120deg,#f5eddb,#ded6bc)}
+.adharath-workbench .skip-link{position:fixed;left:15px;top:-80px;z-index:100;padding:12px 18px;background:var(--paper)}
+.adharath-workbench .skip-link:focus{top:12px}
+.adharath-workbench .toolbar nav{gap:16px}
+@media(max-width:800px){.adharath-workbench .toolbar{flex-wrap:wrap}.adharath-workbench .toolbar nav{width:100%;margin:0;justify-content:space-between}}
+@media print{.adharath-workbench .skip-link{display:none}}
