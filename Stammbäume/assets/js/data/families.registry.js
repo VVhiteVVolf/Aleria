@@ -48,6 +48,7 @@ import { GWYNTHOR_COMMONER_HOUSE_FAMILIES } from './gwynthor-commoner-house-fami
 import { HOUSE_BRADRHITH_FAMILY } from './house-bradrhith-family.js';
 import { HOUSE_PERLLAN_FAMILY } from './house-perllan-family.js';
 import { HOUSE_MELOG_FAMILY } from './house-melog-family.js';
+import { HOUSE_PERT_FAMILY } from './house-pert-family.js';
 import { HOUSE_VELTRANE_FAMILY } from './eleganz-family-records.js';
 import { HOUSE_FONTANI_FAMILY } from './house-fontani-family.js';
 import { HOUSE_RHWYD_FAMILY } from './house-rhwyd-family.js';
@@ -173,6 +174,7 @@ function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed',
 }
 
 export const FAMILY_REGISTRY = Object.freeze([
+  familyRecord({ id: 'pert', title: 'Familie Pert', family: HOUSE_PERT_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'melog', title: 'Familie Melog', family: HOUSE_MELOG_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'perllan', title: 'Familie Perllan', family: HOUSE_PERLLAN_FAMILY, type: 'commoner' }),
   familyRecord({id:'haus-hamnett',title:'Haus Hamnett',family:HOUSE_HAMNETT_FAMILY,type:'commoner'}),

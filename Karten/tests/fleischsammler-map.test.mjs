@@ -69,8 +69,13 @@ test('the focused admission preserves every other pin and all map metadata', () 
   const changedIds = new Set(source.locations.map(location => location.pinId));
   const { pins, ...stateMetadata } = data.state;
   const { revision, updatedAt, state, ...documentMetadata } = data;
+  // The later, independently sourced Pert admission fills one formerly empty
+  // farm. Project only that acknowledged patch back to its retained original
+  // before checking this earlier seven-location admission's boundary.
+  const pert = read('pert-maesglas.source.json');
+  const earlierPins = pins.map(pin => pin.id === pert.pinId ? pert.originalPin : pin);
   const preservation = source.publicationPreservation || source.preservation;
-  assert.equal(hash(pins.filter(pin => !changedIds.has(pin.id))), preservation.untouchedPinsSha256);
+  assert.equal(hash(earlierPins.filter(pin => !changedIds.has(pin.id))), preservation.untouchedPinsSha256);
   assert.equal(hash(stateMetadata), preservation.stateMetadataSha256);
   assert.equal(hash(documentMetadata), preservation.documentMetadataSha256);
   assert.ok(revision > preservation.originalRevision);

@@ -1,0 +1,333 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--pert--person-618119d8",
+  "slug": "roisin-pert",
+  "identity": {
+    "name": "Roísin Pert",
+    "aliases": [],
+    "worldPersonId": "person--pert--person-618119d8"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "pert",
+      "label": "Familie Pert"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "pert",
+        "familyTitle": "Familie Pert",
+        "personId": "person-618119d8",
+        "worldPersonId": "person--pert--person-618119d8",
+        "houseId": "house-pert",
+        "houseName": "Pert",
+        "familyRole": "bastard",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Roísin Pert\",\"title\":\"\",\"birth\":\"1732\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-618119d8.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4ee10c57\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--pert--person-618119d8",
+      "documentIds": [
+        "person--pert--person-618119d8"
+      ],
+      "documents": [
+        {
+          "documentId": "person--pert--person-618119d8",
+          "createdAt": "2026-11-06T17:09:43.000Z",
+          "updatedAt": "2026-11-06T17:09:43.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "pert",
+        "personId": "person-618119d8",
+        "worldPersonId": "person--pert--person-618119d8",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Pert/person-618119d8.json",
+    "sourceExportedAt": "2026-11-06T17:09:43.000Z",
+    "sourceUpdatedAt": "2026-11-06T17:09:43.000Z",
+    "sourceDocumentIds": [
+      "person--pert--person-618119d8"
+    ],
+    "contentHash": "623095035b51341edbb5f25d4f94047186e8f5f810b01adea7f9ff3f3a7fd548"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "pert-20261106"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Roísin Pert",
+        "title": "",
+        "fraktion": "Pert",
+        "role": "",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Gwynthor",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Roísin Pert wurde 1732 geboren und wird als legitimierte Tochter Sioneds geführt. Sioned ist die Tochter von Idwal Pert und Mared Maesglas und die Schwester des Hofbesitzers Geraint. Roísin gehört damit zum landwirtschaftlichen Zweig der Familie, dessen Mittelpunkt Hof Maesglas bei Gwynthor ist.\n\nIhre Mutter kümmert sich besonders um Rinder und Milchwirtschaft. Sioneds Lebensgefährte Donnchadh stammt aus Ceitheach und betreut auf dem Hof Pferde und Stallungen. Der Vater Roísins ist in der Familienüberlieferung nicht benannt.\n\nEin eigener Beruf oder ein persönliches Amt Roísins ist nicht überliefert. Sie gehört zur jüngeren Generation einer Familie, die Gastfreundschaft, gemeinsame Mahlzeiten und die Unterstützung ihrer Angehörigen betont. Die überlieferte Elternzuordnung bleibt auf Sioned beschränkt.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-06T17:09:43.000Z",
+        "updatedAt": "2026-11-06T17:09:43.000Z",
+        "portrait": "../Stammbäume/assets/images/portraits/pert/person-618119d8.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Roísin Pert"
+            },
+            {
+              "label": "Familie",
+              "value": "Pert"
+            },
+            {
+              "label": "Stand",
+              "value": "Bürgerlich"
+            },
+            {
+              "label": "Geburt",
+              "value": "1732"
+            },
+            {
+              "label": "Lebensstatus",
+              "value": "Lebend"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/pert/person-618119d8.png",
+            "portraitCaption": "Roísin Pert",
+            "biographyTitle": "Familie und Lebensweg",
+            "biographyText": "<p>Roísin Pert wurde 1732 geboren und wird als legitimierte Tochter Sioneds geführt. Sioned ist die Tochter von Idwal Pert und Mared Maesglas und die Schwester des Hofbesitzers Geraint. Roísin gehört damit zum landwirtschaftlichen Zweig der Familie, dessen Mittelpunkt Hof Maesglas bei Gwynthor ist.</p><p>Ihre Mutter kümmert sich besonders um Rinder und Milchwirtschaft. Sioneds Lebensgefährte Donnchadh stammt aus Ceitheach und betreut auf dem Hof Pferde und Stallungen. Der Vater Roísins ist in der Familienüberlieferung nicht benannt.</p><p>Ein eigener Beruf oder ein persönliches Amt Roísins ist nicht überliefert. Sie gehört zur jüngeren Generation einer Familie, die Gastfreundschaft, gemeinsame Mahlzeiten und die Unterstützung ihrer Angehörigen betont. Die überlieferte Elternzuordnung bleibt auf Sioned beschränkt.</p>",
+            "documentsTitle": "Familie Pert",
+            "documents": [
+              {
+                "title": "Im Stammbaum ansehen",
+                "text": "Angehörige und Verbindungen der Familie Pert.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+                "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-618119d8"
+              },
+              {
+                "title": "Hausgeschichte der Perts",
+                "text": "Castell Draig und Hof Maesglas.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+                "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--pert--person-618119d8"
+        },
+        "genealogy": {
+          "worldPersonId": "person--pert--person-618119d8",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1732",
+          "death": "",
+          "houseId": "house-pert",
+          "houseName": "Pert",
+          "familyRole": "bastard",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "pert",
+              "personId": "person-618119d8",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-06T17:09:43.000Z",
+              "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-618119d8",
+              "fingerprint": "{\"name\":\"Roísin Pert\",\"title\":\"\",\"birth\":\"1732\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-618119d8.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4ee10c57\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "person-4ee10c57",
+                "type": "biological",
+                "legitimacy": "legitimized",
+                "certainty": "confirmed",
+                "worldPersonId": "person--pert--person-4ee10c57",
+                "name": "Sioned Pert"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "id": "person--pert--person-618119d8"
+      }
+    ]
+  },
+  "character": {
+    "name": "Roísin Pert",
+    "title": "",
+    "fraktion": "Pert",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Roísin Pert wurde 1732 geboren und wird als legitimierte Tochter Sioneds geführt. Sioned ist die Tochter von Idwal Pert und Mared Maesglas und die Schwester des Hofbesitzers Geraint. Roísin gehört damit zum landwirtschaftlichen Zweig der Familie, dessen Mittelpunkt Hof Maesglas bei Gwynthor ist.\n\nIhre Mutter kümmert sich besonders um Rinder und Milchwirtschaft. Sioneds Lebensgefährte Donnchadh stammt aus Ceitheach und betreut auf dem Hof Pferde und Stallungen. Der Vater Roísins ist in der Familienüberlieferung nicht benannt.\n\nEin eigener Beruf oder ein persönliches Amt Roísins ist nicht überliefert. Sie gehört zur jüngeren Generation einer Familie, die Gastfreundschaft, gemeinsame Mahlzeiten und die Unterstützung ihrer Angehörigen betont. Die überlieferte Elternzuordnung bleibt auf Sioned beschränkt.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-06T17:09:43.000Z",
+    "updatedAt": "2026-11-06T17:09:43.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/pert/person-618119d8.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Roísin Pert"
+        },
+        {
+          "label": "Familie",
+          "value": "Pert"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Geburt",
+          "value": "1732"
+        },
+        {
+          "label": "Lebensstatus",
+          "value": "Lebend"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/pert/person-618119d8.png",
+        "portraitCaption": "Roísin Pert",
+        "biographyTitle": "Familie und Lebensweg",
+        "biographyText": "<p>Roísin Pert wurde 1732 geboren und wird als legitimierte Tochter Sioneds geführt. Sioned ist die Tochter von Idwal Pert und Mared Maesglas und die Schwester des Hofbesitzers Geraint. Roísin gehört damit zum landwirtschaftlichen Zweig der Familie, dessen Mittelpunkt Hof Maesglas bei Gwynthor ist.</p><p>Ihre Mutter kümmert sich besonders um Rinder und Milchwirtschaft. Sioneds Lebensgefährte Donnchadh stammt aus Ceitheach und betreut auf dem Hof Pferde und Stallungen. Der Vater Roísins ist in der Familienüberlieferung nicht benannt.</p><p>Ein eigener Beruf oder ein persönliches Amt Roísins ist nicht überliefert. Sie gehört zur jüngeren Generation einer Familie, die Gastfreundschaft, gemeinsame Mahlzeiten und die Unterstützung ihrer Angehörigen betont. Die überlieferte Elternzuordnung bleibt auf Sioned beschränkt.</p>",
+        "documentsTitle": "Familie Pert",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Angehörige und Verbindungen der Familie Pert.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-618119d8"
+          },
+          {
+            "title": "Hausgeschichte der Perts",
+            "text": "Castell Draig und Hof Maesglas.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--pert--person-618119d8"
+    },
+    "genealogy": {
+      "worldPersonId": "person--pert--person-618119d8",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1732",
+      "death": "",
+      "houseId": "house-pert",
+      "houseName": "Pert",
+      "familyRole": "bastard",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "pert",
+          "personId": "person-618119d8",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-06T17:09:43.000Z",
+          "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-618119d8",
+          "fingerprint": "{\"name\":\"Roísin Pert\",\"title\":\"\",\"birth\":\"1732\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-618119d8.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4ee10c57\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-4ee10c57",
+            "type": "biological",
+            "legitimacy": "legitimized",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-4ee10c57",
+            "name": "Sioned Pert"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--pert--person-618119d8"
+  }
+}

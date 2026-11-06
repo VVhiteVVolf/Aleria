@@ -1,0 +1,18 @@
+{
+  "schema": "aleria.family-source-decisions",
+  "schemaVersion": 1,
+  "familyId": "pert",
+  "reviewed": "2026-11-06",
+  "rhiainSex": "female",
+  "decisions": [
+    { "topic": "Goronvy / Goronwy", "source": "Genealogische JSON: Goronvy; HTML: Goronwy", "decision": "Die genealogische Schreibweise Goronvy bleibt. Goronwy wird als belegte Quellvariante dokumentiert; keine zweite Person." },
+    { "topic": "Rhiain", "source": "JSON sex=unknown; HTML nennt Rhiain ausdrücklich bei ihrer Großmutter Gwerfyl.", "decision": "sex=female ergänzt anhand des ausdrücklichen Textbelegs und bestätigter Quellenentscheidung. unknown ist keine positive Gegenbehauptung; Originalwert bleibt im unveränderten Export und Inventar. Keine Ableitung aus Portrait oder Rollenbezeichnung." },
+    { "topic": "Canna", "source": "JSON sex=unknown; im gelieferten Fließtext kein eindeutiger Geschlechtsbeleg.", "decision": "unknown bleibt unverändert; Name und Portrait bestimmen das Geschlecht nicht." },
+    { "topic": "Geteiltes Portrait", "source": "Geraint und Donnchadh verwenden beide https://i.imgur.com/v48lzfy.jpeg.", "decision": "Zwei Personen, zwei Weltpersonen, getrennte Rollen und Lebensdaten; dasselbe Bild wird bytegleich erhalten." },
+    { "topic": "Roísins Elternschaft", "source": "Genealogische parentage-61abde43 nennt ausschließlich Sioned; legitimacy=legitimized.", "decision": "Nur Sioned bleibt biologisch erfasst. Donnchadh wird nicht ohne Beleg als Vater ergänzt; die Partnerschaft bleibt affair wie geliefert." },
+    { "topic": "Aufwachsen nach 1720", "source": "Kevan lebt bei Geraint/Bethan, Rhiain bei Gwerfyl.", "decision": "Betreuungs- und Wohnangaben in Notizen erhalten; keine erfundenen Adoptionen oder Änderung der biologischen Eltern." },
+    { "topic": "Maesglas", "source": "Hof und Mareds Herkunftsfamilie werden in HTML/JSON genannt; Namensprüfung lokal/GitHub ohne früheren Treffer.", "decision": "Der gelieferte Hofname Maesglas wird übernommen. Keine zweite Maesglas-Dynastie oder unbekannte Vorfahren erfunden. Der genaue Hofstandort wird getrennt geprüft." },
+    { "topic": "Kevan-Altfassung", "source": "Lokale bestehende Gardistenakte mit gleichem Namen/Portrait nennt Seren/Emry als Großeltern; neue Genealogie Iorwerth/Gwerfyl.", "decision": "Gegenquellenkonflikt dokumentiert. Bestehende Figurenakte, Besitz und Spielwerte bleiben unverändert; keine automatische Namensverschmelzung oder zweite Kevan-Akte." },
+    { "topic": "Leere Vorlagenfelder", "source": "Motto, Gründung, Hauptpatrone und weitere Tabellenfelder sind leer oder Platzhalter.", "decision": "Keine Werte oder Militärzahlen erfunden. Kultur Cenyri, bürgerlicher Rang, Gwynthor, Alerische Kirche und Bindung zu Draig sind im Profil belegt." }
+  ]
+}

@@ -40,6 +40,7 @@ const VALIDATION_CHECKS = new Set([
   "AleriaAlmanach/scripts/build-gwynthor-troetzli.mjs",
   "AleriaAlmanach/scripts/build-honigtoertchen.mjs",
   "AleriaAlmanach/scripts/build-melog-characters.mjs",
+  "AleriaAlmanach/scripts/build-pert-characters.mjs",
   "AleriaAlmanach/scripts/build-item-register.mjs",
   "AleriaAlmanach/scripts/build-klingende-krone.mjs",
   "AleriaAlmanach/scripts/build-klingende-muenze-gwynthor.mjs",

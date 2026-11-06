@@ -2,6 +2,17 @@
 
 Der Nutzer hat die Veröffentlichung der neuen Adharath-Werkstatt samt aktualisierter Übersicht ausdrücklich beauftragt. Zwölf Clanvorschläge, 13 Wappen, drei Standescomics und fünf Kriegerprototypen sind enthalten. Adharath bleibt der Volksname; Dúinreach das ausgelöschte Fürstentum. Sippenführer heißen Ceann. Keine Personen-, Stammbaum- oder produktiven Spielwerte werden angelegt oder verändert. Unabhängige lokale Aufträge und private Bildquellen sind nicht Teil dieses Releases.
 
+# Pert: freigegebener isolierter Release vom 6. November 2026
+
+Der Nutzer hat Familie Pert, Hausseite/Hausbio, Stammbaum, Bauerndarstellung,
+transparentes Wappen und Hof Maesglas zur isolierten Veröffentlichung auf
+master und Netlify freigegeben. Die zusätzliche ausdrückliche Anweisung
+umfasst die benannten Angehörigen mit Biografien im AleriaAlmanach.
+Bestehende Kevan-Kennung und sämtliche Spielwerte bleiben geschützt; seine
+Familienbio folgt den neuen Pert-Quellen. Kein Shopmodul. Unabhängige lokale
+Arbeiten sind ausgeschlossen. Quellen und Prüfmethoden: diagnostics/pert-20261106/;
+Releasebelege lokal unter diagnostics/pert-release-20261106/.
+
 # Öffentlicher Sammelrelease vom 6. November 2026
 
 Ausdrücklicher Nutzerauftrag: sämtliche lokalen öffentlichen Neuerungen gemeinsam prüfen, auf master pushen und deployen, anschließend belegbar entbehrliche temporäre Daten entfernen und erst nach Abschluss den Computer herunterfahren. Der Umfang umfasst neue allgemeine Talente und passive Fähigkeiten statt der verworfenen Nischenentwürfe, Marotten, Familienblut, Hintergründe und eigene Icons, freie Waffenattributwahl, Melog mit Honigtörtchen/Wohnstube, drei Marktfiguren, Länderwerkstätten sowie Kommentar-/Sidebar-Korrekturen. Private Quellen, Täteridentitäten, Sicherungen und bereits erfolgte persönliche Livevergaben bleiben erhalten beziehungsweise werden nicht erneut ausgeführt. Der isolierte öffentliche Quellenweg und alle bestehenden Releaseprüfungen bleiben verbindlich.

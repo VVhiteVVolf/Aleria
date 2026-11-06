@@ -1,0 +1,141 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-06T17:09:43.000Z",
+  "mergeStrategy": "replace-reviewed-metadata-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Pert/person-3a869794.json",
+  "source": {
+    "kind": "supplied-family-export-and-house-prose",
+    "familyId": "pert",
+    "personId": "person-3a869794",
+    "worldPersonId": "person--pert--person-3a869794"
+  },
+  "character": {
+    "name": "Rhiain Pert",
+    "title": "Brotmeister Haus Draig",
+    "fraktion": "Pert",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Rhiain Pert wurde 1719 als Tochter von Goronvy und Lowri geboren. Kevan ist ihr älterer Bruder. Als beide Eltern 1720 im Krieg gegen Ceitheach fielen, war die Familie auf den Rückhalt ihrer Verwandten angewiesen. Rhiain blieb bei ihrer Großmutter Gwerfyl auf Castell Draig, während Kevan bei Geraint und Bethan auf Hof Maesglas ein neues Zuhause fand.\n\nGwerfyl ist Küchenmeisterin des Hauses Draig. Rhiains Großvater Iorwerth hatte als Brotmeister die Vorratskammern verwaltet und versorgt; er war bereits 1715 gestorben. Rhiain ist heute selbst als Brotmeister des Hauses Draig verzeichnet und führt damit Aufgaben einer jüngeren Generation in der Versorgung der Burg fort.\n\nIhr Leben steht für die Verbindung von Dienst und familiärer Fürsorge innerhalb der Perts. Auch wenn Burgzweig und Hofzweig unterschiedliche Arbeiten übernehmen, bleiben beide eng verbunden und unterstützen Angehörige in einer Notlage.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-06T17:09:43.000Z",
+    "updatedAt": "2026-11-06T17:09:43.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/pert/person-3a869794.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Rhiain Pert"
+        },
+        {
+          "label": "Familie",
+          "value": "Pert"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Geburt",
+          "value": "1719"
+        },
+        {
+          "label": "Lebensstatus",
+          "value": "Lebend"
+        },
+        {
+          "label": "Aufgabe oder Stellung",
+          "value": "Brotmeister Haus Draig"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/pert/person-3a869794.jpg",
+        "portraitCaption": "Rhiain Pert",
+        "biographyTitle": "Familie und Lebensweg",
+        "biographyText": "<p>Rhiain Pert wurde 1719 als Tochter von Goronvy und Lowri geboren. Kevan ist ihr älterer Bruder. Als beide Eltern 1720 im Krieg gegen Ceitheach fielen, war die Familie auf den Rückhalt ihrer Verwandten angewiesen. Rhiain blieb bei ihrer Großmutter Gwerfyl auf Castell Draig, während Kevan bei Geraint und Bethan auf Hof Maesglas ein neues Zuhause fand.</p><p>Gwerfyl ist Küchenmeisterin des Hauses Draig. Rhiains Großvater Iorwerth hatte als Brotmeister die Vorratskammern verwaltet und versorgt; er war bereits 1715 gestorben. Rhiain ist heute selbst als Brotmeister des Hauses Draig verzeichnet und führt damit Aufgaben einer jüngeren Generation in der Versorgung der Burg fort.</p><p>Ihr Leben steht für die Verbindung von Dienst und familiärer Fürsorge innerhalb der Perts. Auch wenn Burgzweig und Hofzweig unterschiedliche Arbeiten übernehmen, bleiben beide eng verbunden und unterstützen Angehörige in einer Notlage.</p>",
+        "documentsTitle": "Familie Pert",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Angehörige und Verbindungen der Familie Pert.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-3a869794"
+          },
+          {
+            "title": "Hausgeschichte der Perts",
+            "text": "Castell Draig und Hof Maesglas.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--pert--person-3a869794"
+    },
+    "genealogy": {
+      "worldPersonId": "person--pert--person-3a869794",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1719",
+      "death": "",
+      "houseId": "house-pert",
+      "houseName": "Pert",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "pert",
+          "personId": "person-3a869794",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-06T17:09:43.000Z",
+          "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-3a869794",
+          "fingerprint": "{\"name\":\"Rhiain Pert\",\"title\":\"Brotmeister Haus Draig\",\"birth\":\"1719\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-3a869794.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-1f86b441\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"},{\"personId\":\"person-ab6f684c\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-ab6f684c\",\"name\":\"Lowri\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-1f86b441",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-1f86b441",
+            "name": "Goronvy Pert"
+          },
+          {
+            "personId": "person-ab6f684c",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-ab6f684c",
+            "name": "Lowri"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--pert--person-3a869794"
+  }
+}

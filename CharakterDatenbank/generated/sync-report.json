@@ -2,15 +2,15 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-11-05T18:00:00.000Z",
+  "sourceExportedAt": "2026-11-06T17:09:43.000Z",
   "summary": {
-    "sourceDocuments": 553,
-    "total": 312,
+    "sourceDocuments": 570,
+    "total": 328,
     "mergedSameNameGroups": 45,
-    "familyLinked": 217,
+    "familyLinked": 234,
     "familyAmbiguous": 0,
-    "familyPending": 95,
-    "primaryFamily": 216,
+    "familyPending": 94,
+    "primaryFamily": 232,
     "primaryGroup": 31,
     "primaryPlace": 31,
     "primaryUnassigned": 34,
@@ -464,18 +464,6 @@
     {
       "recordId": "character--67GWb6YWz8rBsxNUNRoI",
       "name": "Huw",
-      "status": "pending",
-      "primary": {
-        "kind": "place",
-        "id": "gwynthor",
-        "label": "Gwynthor",
-        "source": "archive-tab"
-      },
-      "familyAlternatives": []
-    },
-    {
-      "recordId": "character--jTzoT0bqb2lfmslJ05FJ",
-      "name": "Kevan Pert",
       "status": "pending",
       "primary": {
         "kind": "place",

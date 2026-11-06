@@ -1,0 +1,205 @@
+{
+  "schema": "aleria.gwynthor-family-farm-source",
+  "schemaVersion": 1,
+  "sourceDate": "2026-11-06",
+  "mapId": "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis",
+  "pinId": "gwynthor-marking-157",
+  "familyId": "pert",
+  "houseId": "house-pert",
+  "position": [
+    0.17822265625,
+    0.7861714285714286
+  ],
+  "sources": [
+    "Gelieferter Pert-Hausartikel vom 6. November 2026",
+    "Gelieferte pert.json mit ursprünglichen Personen- und Weltpersonenkennungen",
+    "Nutzerscreenshot des bereits vorhandenen Bauernhofmarkers"
+  ],
+  "selectionEvidence": {
+    "method": "Originales Markierungsbild und bestehende native Koordinaten; Root hat den markierten Ausschnitt mit dem Nutzerscreenshot verglichen und Pin157 ausdrücklich bestätigt.",
+    "confirmedAt": "2026-11-06",
+    "eastOfRiver": true,
+    "southOfTower": "gwynthor-marking-155",
+    "excludes": [
+      "gwynthor-marking-147"
+    ],
+    "note": "Pin147 liegt westlich des Flusses. Keine neuen Pins oder geratenen Koordinaten."
+  },
+  "personnel": [
+    {
+      "name": "Geraint",
+      "personId": "person-4506547d",
+      "worldPersonId": "person--pert--person-4506547d",
+      "responsibility": "Hofbesitzer"
+    },
+    {
+      "name": "Bethan",
+      "personId": "person-cada9cd4",
+      "worldPersonId": "person--pert--person-cada9cd4",
+      "responsibility": "Haushalt und Hofalltag"
+    },
+    {
+      "name": "Sioned",
+      "personId": "person-4ee10c57",
+      "worldPersonId": "person--pert--person-4ee10c57",
+      "responsibility": "Rinder und Milchwirtschaft"
+    },
+    {
+      "name": "Donnchadh",
+      "personId": "person-35fdbd7b",
+      "worldPersonId": "person--pert--person-35fdbd7b",
+      "responsibility": "Pferde und Stallungen"
+    }
+  ],
+  "boundaries": "Keine Flächengrößen, Erträge, Tierbestände, Geldbeträge, Lieferverträge oder neuen Herrschaftsknoten ergänzt. Die Draig-Dienstbindung und Hofeigentum bleiben getrennt. Keine neue Maesglas-Familienakte aus Mareds Herkunft erzeugt.",
+  "preservation": {
+    "originalRevision": 18,
+    "originalUpdatedAt": "2026-11-03T18:30:57.354Z",
+    "untouchedPinsSha256": "938e7e9853d8457fde45fdb62f0cf5302854745356893a0ff461fcf1d7689c59",
+    "stateMetadataSha256": "a8449ce8987a97ee9851a91e862feeadb6c3bfeb9b1caef3d9a2a16df68867c4",
+    "documentMetadataSha256": "970433b82cb524b37b0388096e5f7634ef051f921eeb533fd2ac869588fc188b"
+  },
+  "originalPin": {
+    "id": "gwynthor-marking-157",
+    "x": 0.17822265625,
+    "y": 0.7861714285714286,
+    "title": "Bauernhof",
+    "cat": "muosqiyl9n1p",
+    "kind": "place",
+    "img": "",
+    "imgLink": "",
+    "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+    "crestLink": "",
+    "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+    "bannerLink": "",
+    "region": "",
+    "house": "",
+    "faction": "",
+    "table": [
+      {
+        "k": "Name",
+        "v": ""
+      },
+      {
+        "k": "Typ",
+        "v": ""
+      },
+      {
+        "k": "Besitzer",
+        "v": ""
+      },
+      {
+        "k": "Bewirtschaftung",
+        "v": ""
+      },
+      {
+        "k": "Anbau",
+        "v": ""
+      },
+      {
+        "k": "Erzeugnisse",
+        "v": ""
+      },
+      {
+        "k": "Fläche",
+        "v": ""
+      },
+      {
+        "k": "Arbeitskräfte",
+        "v": ""
+      },
+      {
+        "k": "Versorgung / Abnehmer",
+        "v": ""
+      },
+      {
+        "k": "Zustand",
+        "v": ""
+      },
+      {
+        "k": "Gefahren",
+        "v": ""
+      },
+      {
+        "k": "Besonderheiten",
+        "v": ""
+      }
+    ],
+    "text": "",
+    "secret": false,
+    "templateId": "landwirtschaft"
+  },
+  "patch": {
+    "title": "Hof Maesglas",
+    "img": "/Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Pert/assets/pert-bauer.png",
+    "imgLink": "/Familien Häuser und Clans/kleinehaeuser.html?haus=pert",
+    "imgPosition": "top",
+    "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+    "crestLink": "/Stammbäume/Stammbaum.html?family=pert&mode=view",
+    "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
+    "house": "Familie Pert",
+    "faction": "Haus Draig · langjährige Dienstbindung der Familie",
+    "residentFamilyIds": [
+      "pert"
+    ],
+    "table": [
+      {
+        "k": "Name",
+        "v": "Hof Maesglas"
+      },
+      {
+        "k": "Typ",
+        "v": "Landwirtschaftlicher Familienhof"
+      },
+      {
+        "k": "Besitzer",
+        "v": "Geraint Pert"
+      },
+      {
+        "k": "Haushalt / Hofalltag",
+        "v": "Bethan Pert"
+      },
+      {
+        "k": "Bewirtschaftung",
+        "v": "Ackerbau, Rinder- und Milchwirtschaft sowie Pferdehaltung"
+      },
+      {
+        "k": "Rinder / Milch",
+        "v": "Sioned Pert"
+      },
+      {
+        "k": "Pferde / Stallungen",
+        "v": "Donnchadh, Sioneds Lebensgefährte"
+      },
+      {
+        "k": "Anbau",
+        "v": "Ackerbau · einzelne Kulturen nicht benannt"
+      },
+      {
+        "k": "Erzeugnisse",
+        "v": "Landwirtschaftliche Erzeugnisse und Milch"
+      },
+      {
+        "k": "Fläche",
+        "v": "Nicht überliefert"
+      },
+      {
+        "k": "Arbeitskräfte",
+        "v": "Familie Pert"
+      },
+      {
+        "k": "Versorgung / Abnehmer",
+        "v": "Nicht näher benannt"
+      },
+      {
+        "k": "Zustand",
+        "v": "Bewirtschaftet"
+      },
+      {
+        "k": "Besonderheiten",
+        "v": "Durch Mared Maesglas in die Familie Pert gelangter Hof; familiäre Verbindung zu Castell Draig"
+      }
+    ],
+    "text": "**Hof Maesglas** liegt im südwestlichen Bannkreis von Gwynthor, östlich des Flusses zwischen dem Ufer und dem Weg. Er ist der landwirtschaftliche Mittelpunkt der **Familie Pert**. Zum Anwesen gehören Nutzflächen, Stallungen und Wirtschaftsgebäude. Ackerbau, Rinderhaltung und Milchwirtschaft stehen neben der Haltung und Betreuung der Pferde.\n\nDer Hof gelangte durch **Mared Maesglas** und ihre Verbindung mit **Idwal Pert** an den landwirtschaftlichen Familienzweig. Heute ist ihr Sohn **Geraint Pert** Hofbesitzer und bewirtschaftet das Anwesen gemeinsam mit seiner Gemahlin **Bethan**. Sie kümmert sich um Haushalt und Hofalltag; die Verantwortung für den laufenden Hofbetrieb wird innerhalb der Familie geteilt.\n\n**Sioned Pert**, Geraints Schwester, betreut insbesondere die Rinder und die Milchwirtschaft. Ihr Lebensgefährte **Donnchadh** ist für die Pferde und die Stallungen zuständig. Der Mann ceitheachischer Herkunft hat auf Maesglas eine Heimat bei den Perts gefunden. Die beiderseitige Fürsorge der Familie reicht damit über Herkunftsgrenzen hinaus.\n\nDie enge Bindung an **Haus Draig** prägt auch das Leben auf Maesglas. Während der eine Familienzweig den Hof führt, arbeiten andere Angehörige auf **Castell Draig** in Küche, Vorratsverwaltung und Wachdienst. Diese über Generationen gewachsene Verbindung gründet auf gewissenhafter Arbeit, Zuverlässigkeit und gegenseitigem Vertrauen.\n\nMaesglas ist zugleich ein Ort familiären Zusammenhalts. Nach dem Tod seiner Eltern im Krieg gegen Ceitheach 1720 fand **Kevan** bei Geraint und Bethan ein Zuhause. Gemeinsame Mahlzeiten, Gastfreundschaft und die Unterstützung von Verwandten gehören zum Selbstverständnis der Perts. Auch wer seinen Alltag auf Castell Draig verbringt, bleibt mit dem Hofzweig verbunden.\n\n[URL=/Familien Häuser und Clans/kleinehaeuser.html?haus=pert]Hausseite und Familiengeschichte der Pert[/URL] · [URL=/Stammbäume/Stammbaum.html?family=pert&mode=view]Stammbaum der Familie Pert[/URL]"
+  }
+}

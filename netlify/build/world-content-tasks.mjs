@@ -92,9 +92,26 @@ export const WORLD_CONTENT_TASKS = [
       ['Karten/tools/build-households.mjs', '--check'], tests('Karten/tests')]
   },
   {
-    id: 'family-records', label: 'Reviewed territorial allegiance and Dunfal portrait update',
+    id: 'family-records', label: 'Reviewed family records, sources, portraits and biographies',
     inputs: ['Stammbäume/assets/js/', 'Stammbäume/assets/data/', 'Stammbäume/tests/',
-      'Familien Häuser und Clans/'],
+      'Familien Häuser und Clans/',
+      'AleriaAlmanach/modules/pert/',
+      'AleriaAlmanach/scripts/build-pert-characters.mjs',
+      'AleriaAlmanach/tests/pert-character-import.test.mjs',
+      'AleriaAlmanach/modules/character-genealogy/',
+      'AleriaAlmanach/modules/characters/character-save-guard.js',
+      'AleriaAlmanach/modules/characters/character-import-policy.js',
+      'AleriaAlmanach/modules/house-armor/',
+      'js/world-identity/',
+      'js/biography/',
+      'CharakterDatenbank/lib/',
+      'CharakterDatenbank/registry.json',
+      'CharakterDatenbank/generated/',
+      'CharakterDatenbank/records/familien/pert/',
+      'CharakterDatenbank/records/orte/gwynthor/kevan-pert--jTzoT0bqb2lfmslJ05FJ/character.json',
+      'Charakter Archiv Exporte/Pert/',
+      'Stammbäume/assets/images/portraits/pert/',
+      'Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/'],
     excludes: ['Stammbäume/assets/data/published-families/backups/'],
     // Historical import snapshots assert the exact world size of their import
     // date. Keep the release gate on the changed features; schema and geometry
@@ -106,7 +123,10 @@ export const WORLD_CONTENT_TASKS = [
       'Stammbäume/tests/albic-fief-placements.test.js',
       'Stammbäume/tests/source-family-metadata-boundaries.test.mjs',
       'Stammbäume/tests/source-family-metadata-provenance.test.mjs',
-      'Stammbäume/tests/dunfal-portrait-upgrade.test.js']]
+      'Stammbäume/tests/dunfal-portrait-upgrade.test.js',
+      'Stammbäume/tests/house-pert.test.js'],
+      ['AleriaAlmanach/scripts/build-pert-characters.mjs', '--check'],
+      ['--test', '--experimental-test-isolation=none', 'AleriaAlmanach/tests/pert-character-import.test.mjs']]
   },
   {
     id: 'events-calendar', label: 'Event pages, battles and calendar integration',

@@ -129,4 +129,7 @@ test('existing validation-only groups are eligible while output-owning groups re
   assert.equal(canCheckpointTask(tasks.find(value => value.id === 'map-media')), false);
   assert.equal(canCheckpointTask(tasks.find(value => value.id === 'family-charts')), true);
   assert.equal(canCheckpointTask(tasks.find(value => value.id === 'honigtoertchen')), true);
+  assert.equal(canCheckpointTask(tasks.find(value => value.id === 'family-records')), true);
+  assert.equal(canCheckpointTask(task('pert-check', { commands: [['AleriaAlmanach/scripts/build-pert-characters.mjs', '--check']] })), true);
+  assert.equal(canCheckpointTask(task('pert-apply', { commands: [['AleriaAlmanach/scripts/build-pert-characters.mjs', '--apply']] })), false);
 });
