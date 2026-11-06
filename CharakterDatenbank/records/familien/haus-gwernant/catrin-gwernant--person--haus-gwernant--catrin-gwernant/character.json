@@ -1,0 +1,609 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-gwernant--catrin-gwernant",
+  "slug": "catrin-gwernant",
+  "identity": {
+    "name": "Catrin Gwernant",
+    "aliases": [],
+    "worldPersonId": "person--haus-gwernant--catrin-gwernant"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-gwernant",
+      "label": "Familie Gwernant"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-gwernant",
+        "familyTitle": "Familie Gwernant",
+        "personId": "catrin-gwernant",
+        "worldPersonId": "person--haus-gwernant--catrin-gwernant",
+        "houseId": "house-gwernant",
+        "houseName": "Familie Gwernant",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwernant&mode=view&person=catrin-gwernant",
+        "fingerprint": "{\"name\":\"Catrin Gwernant\",\"title\":\"Göttliche Eleganz · Beratung für Maßaufträge\",\"birth\":\"1714\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwernant\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwernant/catrin-gwernant.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"idwal-gwernant\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwernant--idwal-gwernant\",\"name\":\"Idwal Gwernant\"},{\"personId\":\"gwenllian-spouse-gwernant\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwernant--gwenllian-spouse-gwernant\",\"name\":\"Gwenllian\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gottliche-eleganz",
+        "label": "Göttliche Eleganz",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Göttliche Eleganz"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-gwernant--catrin-gwernant",
+      "documentIds": [
+        "person--haus-gwernant--catrin-gwernant"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-gwernant--catrin-gwernant",
+          "createdAt": "2026-11-06T19:30:00.000Z",
+          "updatedAt": "2026-11-06T19:30:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-gwernant",
+        "personId": "catrin-gwernant",
+        "worldPersonId": "person--haus-gwernant--catrin-gwernant",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-gwernant&mode=view&person=catrin-gwernant"
+      }
+    ],
+    "profile": "../Stammbäume/Stammbaum.html?family=haus-gwernant&mode=view&person=catrin-gwernant"
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Göttliche Eleganz Personal/catrin-gwernant.json",
+    "sourceExportedAt": "2026-11-06T19:30:00.000Z",
+    "sourceUpdatedAt": "2026-11-06T19:30:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-gwernant--catrin-gwernant"
+    ],
+    "contentHash": "10b238caaa5b49a7539cf017a4682ad7d3411d1c754c9b118a086f7f5a954923"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "goettliche-eleganz-sales-staff"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Catrin Gwernant",
+        "title": "Verkauf · Maßaufträge",
+        "fraktion": "Göttliche Eleganz",
+        "role": "Verkauf · Maßaufträge",
+        "status": "active",
+        "relevance": "minor",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Gwynthor · Göttliche Eleganz",
+        "origin": "Gwynthor · Familie Gwernant",
+        "plotNode": "",
+        "profileLink": "../Stammbäume/Stammbaum.html?family=haus-gwernant&mode=view&person=catrin-gwernant",
+        "playerOwner": "",
+        "bio": "Catrin Gwernant ist 26 Jahre alt und arbeitet in der Göttlichen Eleganz in Gwynthor. Catrin Gwernant nimmt erste Wünsche zu Maßaufträgen auf, begleitet die Anprobe und hält Änderungen für die Werkstatt fest. Termine und besondere Anliegen stimmt sie mit Maelwen Coeddu ab.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-06T19:30:00.000Z",
+        "updatedAt": "2026-11-06T19:30:00.000Z",
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F318ebbd3fd57a32587b7f676bd34be9a2b2fc0050cb18f45284c6553df774e6e.png?alt=media&token=e8eda9d1-26c2-42ff-8939-6273152d94a4",
+        "emotes": [
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F499f673b8c8630657cd74b4a68e74262fdb43ade8796f883fac64cf56ead2138.png?alt=media&token=17586fdd-937c-43da-9d05-2e953a83745b",
+            "label": "Redend"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Fa70444e4b8a8cacc1743bd8d10a54baaff90b930b8f770fdf38f881321cfc2ef.png?alt=media&token=ecdca04a-8de7-4c68-a3e8-a3c0c7c8713b",
+            "label": "Freundlich"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Fca8d35db4d0a008c2a527ede6929c638437bb0991408a6d7c9d9e1a4c37edffe.png?alt=media&token=89a057b3-8629-4988-add1-8828cc7e5c29",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F7d5e5eac8af518583ab0143affbfcc5af061fd61487b8c2d7753d659f5cf72de.png?alt=media&token=7ba89e68-8a16-45f9-86a3-5acf0e855025",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F6f4c6e004e762cb56e9af49c1bc078146cf51229754c79e2a2bbb3428d5c3d2d.png?alt=media&token=783487f3-6a73-4d02-8802-80bfc1c0603e",
+            "label": "Überrascht"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Fea71c37696ee69a48e2db0f258c10fc8c32391de561b4acebfdc3e7ddb24c136.png?alt=media&token=89a7f9c1-34a8-4b1d-934e-0225826a913a",
+            "label": "Genervt"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F6e65c0309488db1ac7fb5168f53a84941c7853b6fdad453a8a7286876f65cef0.png?alt=media&token=7299d491-6591-4765-842e-7e4bd76e1504",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F8868bea36a9eb58f84d4bd38fbaba776b705e22d13b4ea0ec6256f2560d26b00.png?alt=media&token=b5c4f78d-8b8f-454a-925d-2ad0ebd0d24c",
+            "label": "Verärgert"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F95cc9055ceaaf84a90162372342147935070468bf071b0caccf0a9634b04dc67.png?alt=media&token=15b954da-2f14-49ab-93e1-21f933d87f80",
+            "label": "Unsicher"
+          }
+        ],
+        "emotesOverride": true,
+        "imageSetSchemaVersion": 1,
+        "imageSets": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F318ebbd3fd57a32587b7f676bd34be9a2b2fc0050cb18f45284c6553df774e6e.png?alt=media&token=e8eda9d1-26c2-42ff-8939-6273152d94a4",
+            "emotes": [
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F499f673b8c8630657cd74b4a68e74262fdb43ade8796f883fac64cf56ead2138.png?alt=media&token=17586fdd-937c-43da-9d05-2e953a83745b",
+                "label": "Redend"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Fa70444e4b8a8cacc1743bd8d10a54baaff90b930b8f770fdf38f881321cfc2ef.png?alt=media&token=ecdca04a-8de7-4c68-a3e8-a3c0c7c8713b",
+                "label": "Freundlich"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Fca8d35db4d0a008c2a527ede6929c638437bb0991408a6d7c9d9e1a4c37edffe.png?alt=media&token=89a057b3-8629-4988-add1-8828cc7e5c29",
+                "label": "Nachdenklich"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F7d5e5eac8af518583ab0143affbfcc5af061fd61487b8c2d7753d659f5cf72de.png?alt=media&token=7ba89e68-8a16-45f9-86a3-5acf0e855025",
+                "label": "Skeptisch"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F6f4c6e004e762cb56e9af49c1bc078146cf51229754c79e2a2bbb3428d5c3d2d.png?alt=media&token=783487f3-6a73-4d02-8802-80bfc1c0603e",
+                "label": "Überrascht"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Fea71c37696ee69a48e2db0f258c10fc8c32391de561b4acebfdc3e7ddb24c136.png?alt=media&token=89a7f9c1-34a8-4b1d-934e-0225826a913a",
+                "label": "Genervt"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F6e65c0309488db1ac7fb5168f53a84941c7853b6fdad453a8a7286876f65cef0.png?alt=media&token=7299d491-6591-4765-842e-7e4bd76e1504",
+                "label": "Entschlossen"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F8868bea36a9eb58f84d4bd38fbaba776b705e22d13b4ea0ec6256f2560d26b00.png?alt=media&token=b5c4f78d-8b8f-454a-925d-2ad0ebd0d24c",
+                "label": "Verärgert"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F95cc9055ceaaf84a90162372342147935070468bf071b0caccf0a9634b04dc67.png?alt=media&token=15b954da-2f14-49ab-93e1-21f933d87f80",
+                "label": "Unsicher"
+              }
+            ],
+            "createdAt": "2026-11-06T19:30:00.000Z",
+            "updatedAt": "2026-11-06T19:30:00.000Z"
+          },
+          {
+            "id": "verkaeuferin-set-02",
+            "name": "Verkäuferin",
+            "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F318ebbd3fd57a32587b7f676bd34be9a2b2fc0050cb18f45284c6553df774e6e.png?alt=media&token=e8eda9d1-26c2-42ff-8939-6273152d94a4",
+            "emotes": [
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F7f2800824bb6ac3fee2a1f722007ca8611e1d90911b9cfaea9a9f9bd5258959f.png?alt=media&token=8414a474-ced0-46e7-8f60-bd6a2e99ca51",
+                "label": "Begrüßen"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F2cc65da4fd1b6866b6824b305c1592c9553bd295640e529fb51cb18e8b79d1f3.png?alt=media&token=bea608d7-5b1c-4edd-b5d4-00577e9d389b",
+                "label": "Zuhören"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F4d354a1e35c12cb42c8c5d0fcc46f596fc2db591ad272bc1c21f1ebabbb06f27.png?alt=media&token=8f865462-2e97-44de-ac83-0dc68fdc8421",
+                "label": "Beraten"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F5d773a136513b7d61e56acd9fc835dcd72d9555b3e0a977b8020e669590fc216.png?alt=media&token=a58db4c4-9383-4abf-8224-ab41d833705d",
+                "label": "Präsentieren"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F1bd9f6c8ce4fbb8a7d1c04a3e0f9e9ce2f78708c1153f9779278e2b33cc21476.png?alt=media&token=fb3b644b-35d5-4a4b-a1dc-fc3f51cbf4ae",
+                "label": "Abwägen"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F63530b47b3a2ea66c83fac9888745aa4886d37bd594deabdebab0888baf2c729.png?alt=media&token=27dc4275-4293-414d-81e2-52b189f0ffa1",
+                "label": "Beruhigen"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Ff4f817425bdfeca2f804b82c1399f8eb00092d7cb25bda8e654ddc24413c0dd6.png?alt=media&token=3bd903d7-274e-45ce-8e73-08a22be6ebd7",
+                "label": "Bestimmt"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Fdafad611889c470f563506a9b302fc2efa0effc7f949d1d879d81d3124be48a2.png?alt=media&token=3fb95b8e-b41e-45c5-aa39-50a6f8a8eebc",
+                "label": "Anprobe"
+              },
+              {
+                "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Ffb5141c7b4991dcfc4d37b97148d52c9a7cc9331702d90c47b15d4a22fa05062.png?alt=media&token=a4f6efcd-fc0f-40b8-af14-45cd3f0dd28f",
+                "label": "Verabschieden"
+              }
+            ],
+            "createdAt": "2026-11-06T19:30:00.000Z",
+            "updatedAt": "2026-11-06T19:30:00.000Z"
+          }
+        ],
+        "activeImageSetId": "standard",
+        "imageSetsOverride": true,
+        "inventory": null,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Catrin Gwernant"
+            },
+            {
+              "label": "Alter",
+              "value": "26 Jahre"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Verkauf · Maßaufträge"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Gwernant"
+            },
+            {
+              "label": "Arbeitsort",
+              "value": "Gwynthor · Göttliche Eleganz"
+            },
+            {
+              "label": "Vorgesetzte",
+              "value": "Maelwen Coeddu"
+            },
+            {
+              "label": "Familienstand",
+              "value": "Unverheiratet"
+            }
+          ],
+          "biography": {
+            "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F318ebbd3fd57a32587b7f676bd34be9a2b2fc0050cb18f45284c6553df774e6e.png?alt=media&token=e8eda9d1-26c2-42ff-8939-6273152d94a4",
+            "biographyTitle": "Biografie",
+            "biographyText": "Catrin Gwernant ist 26 Jahre alt und arbeitet in der Göttlichen Eleganz in Gwynthor. Catrin Gwernant nimmt erste Wünsche zu Maßaufträgen auf, begleitet die Anprobe und hält Änderungen für die Werkstatt fest. Termine und besondere Anliegen stimmt sie mit Maelwen Coeddu ab.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Familie und Herkunft",
+                "text": "Catrin Gwernant ist die Tochter Idwal Gwernants und Gwenllians und die Schwester von Efa Gwernant. Die Familie betreibt einen kleinen Leinen- und Kurzwarenladen in Gwynthor. Sie ist unverheiratet und nicht verlobt."
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-gwernant--catrin-gwernant"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-gwernant--catrin-gwernant",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1714",
+          "death": "",
+          "houseId": "house-gwernant",
+          "houseName": "Familie Gwernant",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-gwernant",
+              "personId": "catrin-gwernant",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-06T19:30:00.000Z",
+              "lastSyncedAt": "2026-11-06T19:30:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-gwernant&mode=view&person=catrin-gwernant",
+              "fingerprint": "{\"name\":\"Catrin Gwernant\",\"title\":\"Göttliche Eleganz · Beratung für Maßaufträge\",\"birth\":\"1714\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwernant\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwernant/catrin-gwernant.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"idwal-gwernant\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwernant--idwal-gwernant\",\"name\":\"Idwal Gwernant\"},{\"personId\":\"gwenllian-spouse-gwernant\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwernant--gwenllian-spouse-gwernant\",\"name\":\"Gwenllian\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "idwal-gwernant",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-gwernant--idwal-gwernant",
+                "name": "Idwal Gwernant"
+              },
+              {
+                "personId": "gwenllian-spouse-gwernant",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-gwernant--gwenllian-spouse-gwernant",
+                "name": "Gwenllian"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "id": "person--haus-gwernant--catrin-gwernant",
+        "age": 26
+      }
+    ]
+  },
+  "character": {
+    "name": "Catrin Gwernant",
+    "title": "Verkauf · Maßaufträge",
+    "fraktion": "Göttliche Eleganz",
+    "role": "Verkauf · Maßaufträge",
+    "status": "active",
+    "relevance": "minor",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor · Göttliche Eleganz",
+    "origin": "Gwynthor · Familie Gwernant",
+    "plotNode": "",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=haus-gwernant&mode=view&person=catrin-gwernant",
+    "playerOwner": "",
+    "bio": "Catrin Gwernant ist 26 Jahre alt und arbeitet in der Göttlichen Eleganz in Gwynthor. Catrin Gwernant nimmt erste Wünsche zu Maßaufträgen auf, begleitet die Anprobe und hält Änderungen für die Werkstatt fest. Termine und besondere Anliegen stimmt sie mit Maelwen Coeddu ab.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-06T19:30:00.000Z",
+    "updatedAt": "2026-11-06T19:30:00.000Z",
+    "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F318ebbd3fd57a32587b7f676bd34be9a2b2fc0050cb18f45284c6553df774e6e.png?alt=media&token=e8eda9d1-26c2-42ff-8939-6273152d94a4",
+    "emotes": [
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F499f673b8c8630657cd74b4a68e74262fdb43ade8796f883fac64cf56ead2138.png?alt=media&token=17586fdd-937c-43da-9d05-2e953a83745b",
+        "label": "Redend"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Fa70444e4b8a8cacc1743bd8d10a54baaff90b930b8f770fdf38f881321cfc2ef.png?alt=media&token=ecdca04a-8de7-4c68-a3e8-a3c0c7c8713b",
+        "label": "Freundlich"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Fca8d35db4d0a008c2a527ede6929c638437bb0991408a6d7c9d9e1a4c37edffe.png?alt=media&token=89a057b3-8629-4988-add1-8828cc7e5c29",
+        "label": "Nachdenklich"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F7d5e5eac8af518583ab0143affbfcc5af061fd61487b8c2d7753d659f5cf72de.png?alt=media&token=7ba89e68-8a16-45f9-86a3-5acf0e855025",
+        "label": "Skeptisch"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F6f4c6e004e762cb56e9af49c1bc078146cf51229754c79e2a2bbb3428d5c3d2d.png?alt=media&token=783487f3-6a73-4d02-8802-80bfc1c0603e",
+        "label": "Überrascht"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Fea71c37696ee69a48e2db0f258c10fc8c32391de561b4acebfdc3e7ddb24c136.png?alt=media&token=89a7f9c1-34a8-4b1d-934e-0225826a913a",
+        "label": "Genervt"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F6e65c0309488db1ac7fb5168f53a84941c7853b6fdad453a8a7286876f65cef0.png?alt=media&token=7299d491-6591-4765-842e-7e4bd76e1504",
+        "label": "Entschlossen"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F8868bea36a9eb58f84d4bd38fbaba776b705e22d13b4ea0ec6256f2560d26b00.png?alt=media&token=b5c4f78d-8b8f-454a-925d-2ad0ebd0d24c",
+        "label": "Verärgert"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F95cc9055ceaaf84a90162372342147935070468bf071b0caccf0a9634b04dc67.png?alt=media&token=15b954da-2f14-49ab-93e1-21f933d87f80",
+        "label": "Unsicher"
+      }
+    ],
+    "emotesOverride": true,
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F318ebbd3fd57a32587b7f676bd34be9a2b2fc0050cb18f45284c6553df774e6e.png?alt=media&token=e8eda9d1-26c2-42ff-8939-6273152d94a4",
+        "emotes": [
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F499f673b8c8630657cd74b4a68e74262fdb43ade8796f883fac64cf56ead2138.png?alt=media&token=17586fdd-937c-43da-9d05-2e953a83745b",
+            "label": "Redend"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Fa70444e4b8a8cacc1743bd8d10a54baaff90b930b8f770fdf38f881321cfc2ef.png?alt=media&token=ecdca04a-8de7-4c68-a3e8-a3c0c7c8713b",
+            "label": "Freundlich"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Fca8d35db4d0a008c2a527ede6929c638437bb0991408a6d7c9d9e1a4c37edffe.png?alt=media&token=89a057b3-8629-4988-add1-8828cc7e5c29",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F7d5e5eac8af518583ab0143affbfcc5af061fd61487b8c2d7753d659f5cf72de.png?alt=media&token=7ba89e68-8a16-45f9-86a3-5acf0e855025",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F6f4c6e004e762cb56e9af49c1bc078146cf51229754c79e2a2bbb3428d5c3d2d.png?alt=media&token=783487f3-6a73-4d02-8802-80bfc1c0603e",
+            "label": "Überrascht"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Fea71c37696ee69a48e2db0f258c10fc8c32391de561b4acebfdc3e7ddb24c136.png?alt=media&token=89a7f9c1-34a8-4b1d-934e-0225826a913a",
+            "label": "Genervt"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F6e65c0309488db1ac7fb5168f53a84941c7853b6fdad453a8a7286876f65cef0.png?alt=media&token=7299d491-6591-4765-842e-7e4bd76e1504",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F8868bea36a9eb58f84d4bd38fbaba776b705e22d13b4ea0ec6256f2560d26b00.png?alt=media&token=b5c4f78d-8b8f-454a-925d-2ad0ebd0d24c",
+            "label": "Verärgert"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F95cc9055ceaaf84a90162372342147935070468bf071b0caccf0a9634b04dc67.png?alt=media&token=15b954da-2f14-49ab-93e1-21f933d87f80",
+            "label": "Unsicher"
+          }
+        ],
+        "createdAt": "2026-11-06T19:30:00.000Z",
+        "updatedAt": "2026-11-06T19:30:00.000Z"
+      },
+      {
+        "id": "verkaeuferin-set-02",
+        "name": "Verkäuferin",
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F318ebbd3fd57a32587b7f676bd34be9a2b2fc0050cb18f45284c6553df774e6e.png?alt=media&token=e8eda9d1-26c2-42ff-8939-6273152d94a4",
+        "emotes": [
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F7f2800824bb6ac3fee2a1f722007ca8611e1d90911b9cfaea9a9f9bd5258959f.png?alt=media&token=8414a474-ced0-46e7-8f60-bd6a2e99ca51",
+            "label": "Begrüßen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F2cc65da4fd1b6866b6824b305c1592c9553bd295640e529fb51cb18e8b79d1f3.png?alt=media&token=bea608d7-5b1c-4edd-b5d4-00577e9d389b",
+            "label": "Zuhören"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F4d354a1e35c12cb42c8c5d0fcc46f596fc2db591ad272bc1c21f1ebabbb06f27.png?alt=media&token=8f865462-2e97-44de-ac83-0dc68fdc8421",
+            "label": "Beraten"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F5d773a136513b7d61e56acd9fc835dcd72d9555b3e0a977b8020e669590fc216.png?alt=media&token=a58db4c4-9383-4abf-8224-ab41d833705d",
+            "label": "Präsentieren"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F1bd9f6c8ce4fbb8a7d1c04a3e0f9e9ce2f78708c1153f9779278e2b33cc21476.png?alt=media&token=fb3b644b-35d5-4a4b-a1dc-fc3f51cbf4ae",
+            "label": "Abwägen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F63530b47b3a2ea66c83fac9888745aa4886d37bd594deabdebab0888baf2c729.png?alt=media&token=27dc4275-4293-414d-81e2-52b189f0ffa1",
+            "label": "Beruhigen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Ff4f817425bdfeca2f804b82c1399f8eb00092d7cb25bda8e654ddc24413c0dd6.png?alt=media&token=3bd903d7-274e-45ce-8e73-08a22be6ebd7",
+            "label": "Bestimmt"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Fdafad611889c470f563506a9b302fc2efa0effc7f949d1d879d81d3124be48a2.png?alt=media&token=3fb95b8e-b41e-45c5-aa39-50a6f8a8eebc",
+            "label": "Anprobe"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2Ffb5141c7b4991dcfc4d37b97148d52c9a7cc9331702d90c47b15d4a22fa05062.png?alt=media&token=a4f6efcd-fc0f-40b8-af14-45cd3f0dd28f",
+            "label": "Verabschieden"
+          }
+        ],
+        "createdAt": "2026-11-06T19:30:00.000Z",
+        "updatedAt": "2026-11-06T19:30:00.000Z"
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetsOverride": true,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Catrin Gwernant"
+        },
+        {
+          "label": "Alter",
+          "value": "26 Jahre"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Verkauf · Maßaufträge"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Gwernant"
+        },
+        {
+          "label": "Arbeitsort",
+          "value": "Gwynthor · Göttliche Eleganz"
+        },
+        {
+          "label": "Vorgesetzte",
+          "value": "Maelwen Coeddu"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Unverheiratet"
+        }
+      ],
+      "biography": {
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fcatrin-gwernant%2F318ebbd3fd57a32587b7f676bd34be9a2b2fc0050cb18f45284c6553df774e6e.png?alt=media&token=e8eda9d1-26c2-42ff-8939-6273152d94a4",
+        "biographyTitle": "Biografie",
+        "biographyText": "Catrin Gwernant ist 26 Jahre alt und arbeitet in der Göttlichen Eleganz in Gwynthor. Catrin Gwernant nimmt erste Wünsche zu Maßaufträgen auf, begleitet die Anprobe und hält Änderungen für die Werkstatt fest. Termine und besondere Anliegen stimmt sie mit Maelwen Coeddu ab.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Herkunft",
+            "text": "Catrin Gwernant ist die Tochter Idwal Gwernants und Gwenllians und die Schwester von Efa Gwernant. Die Familie betreibt einen kleinen Leinen- und Kurzwarenladen in Gwynthor. Sie ist unverheiratet und nicht verlobt."
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-gwernant--catrin-gwernant"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-gwernant--catrin-gwernant",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1714",
+      "death": "",
+      "houseId": "house-gwernant",
+      "houseName": "Familie Gwernant",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-gwernant",
+          "personId": "catrin-gwernant",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-06T19:30:00.000Z",
+          "lastSyncedAt": "2026-11-06T19:30:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gwernant&mode=view&person=catrin-gwernant",
+          "fingerprint": "{\"name\":\"Catrin Gwernant\",\"title\":\"Göttliche Eleganz · Beratung für Maßaufträge\",\"birth\":\"1714\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwernant\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwernant/catrin-gwernant.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"idwal-gwernant\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwernant--idwal-gwernant\",\"name\":\"Idwal Gwernant\"},{\"personId\":\"gwenllian-spouse-gwernant\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwernant--gwenllian-spouse-gwernant\",\"name\":\"Gwenllian\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "idwal-gwernant",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gwernant--idwal-gwernant",
+            "name": "Idwal Gwernant"
+          },
+          {
+            "personId": "gwenllian-spouse-gwernant",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gwernant--gwenllian-spouse-gwernant",
+            "name": "Gwenllian"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--haus-gwernant--catrin-gwernant",
+    "age": 26
+  }
+}

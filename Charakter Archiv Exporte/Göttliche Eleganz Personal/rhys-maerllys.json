@@ -1,0 +1,261 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-06T19:30:00.000Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Göttliche Eleganz",
+  "sourcePath": "Charakter Archiv Exporte/Göttliche Eleganz Personal/rhys-maerllys.json",
+  "character": {
+    "name": "Rhys Maerllys",
+    "title": "Verkauf · Alltag & gute Tuche",
+    "fraktion": "Göttliche Eleganz",
+    "role": "Verkauf · Alltag & gute Tuche",
+    "status": "active",
+    "relevance": "minor",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor · Göttliche Eleganz",
+    "origin": "Gwynthor · Haus Maerllys",
+    "plotNode": "",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=rhys-maerllys",
+    "playerOwner": "",
+    "bio": "Rhys Maerllys ist 21 Jahre alt und arbeitet in der Göttlichen Eleganz in Gwynthor. Rhys Maerllys berät zu den Alltagsgarnituren und guten Tuchen. Er erklärt die Pflege, prüft vorrätige Größen und stimmt Wünsche nach einer Anprobe mit Maelwen ab.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-06T19:30:00.000Z",
+    "updatedAt": "2026-11-06T19:30:00.000Z",
+    "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F0904ca4fe2bdbb5e805688eb20379e5a2293600d9eec217c3f1c9f4016c15e60.png?alt=media&token=51051872-401b-407c-b1ec-002ee5199fdd",
+    "emotes": [
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2Fadfb58cdc835677b0273691ab3eb0671470f412cfda443c50808091ded9ccc08.png?alt=media&token=2afa049b-0ca1-4f4c-8310-cc51d3b9a1e2",
+        "label": "Redend"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F8da203477c68b36436b2a157a1b40594644bc2025aea8e40d12d132558e8e7c7.png?alt=media&token=a048250d-a52e-40ca-9fae-439fe15708a1",
+        "label": "Freundlich"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F6670d1d361f344b57625504a50ca6a785cb711c90c2632a8e4e2104e07ec8124.png?alt=media&token=5625c051-7e47-43e4-a16c-f29d10ad5267",
+        "label": "Nachdenklich"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2Fa64253b7ec272e1e0d9d536c0b1a6189743ed9f26d539db4fe6a93460199aa7c.png?alt=media&token=49a669fb-fbb5-4971-ad96-6c5266c259a8",
+        "label": "Skeptisch"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2Fa5ec22a28358d3c38f20cf7e0bbaaca4111b15d05660e46548e4f36bd869b716.png?alt=media&token=1d971cfc-53e8-4fb0-bffb-e142c4000443",
+        "label": "Überrascht"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2Ff8027803c03696fe84c6a74b496716cea15d2958127d53ab9b9d712b68ab64e9.png?alt=media&token=f288037b-9ba2-4cbc-80da-8b7417c561e0",
+        "label": "Genervt"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2Fffd0ebf8294790a7f45dbda77686aad1351ecbaca53c7bf6b0fe8572c172a427.png?alt=media&token=56286047-cdf0-457c-9d9d-727377ae61e6",
+        "label": "Entschlossen"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F5e5ca83b3fe90965582e23b28f1057e1192b37c0054d1aac79f14b86599f7071.png?alt=media&token=73fb921a-7c05-426a-a6f0-4bd26a46361c",
+        "label": "Verärgert"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F51b23e41b073cc3203954df2a8412d792d93f6bcff6ae1ababde8c9fd8d42297.png?alt=media&token=c689cf6f-586a-46e8-b35e-9db7636aaffc",
+        "label": "Unsicher"
+      }
+    ],
+    "emotesOverride": true,
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F0904ca4fe2bdbb5e805688eb20379e5a2293600d9eec217c3f1c9f4016c15e60.png?alt=media&token=51051872-401b-407c-b1ec-002ee5199fdd",
+        "emotes": [
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2Fadfb58cdc835677b0273691ab3eb0671470f412cfda443c50808091ded9ccc08.png?alt=media&token=2afa049b-0ca1-4f4c-8310-cc51d3b9a1e2",
+            "label": "Redend"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F8da203477c68b36436b2a157a1b40594644bc2025aea8e40d12d132558e8e7c7.png?alt=media&token=a048250d-a52e-40ca-9fae-439fe15708a1",
+            "label": "Freundlich"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F6670d1d361f344b57625504a50ca6a785cb711c90c2632a8e4e2104e07ec8124.png?alt=media&token=5625c051-7e47-43e4-a16c-f29d10ad5267",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2Fa64253b7ec272e1e0d9d536c0b1a6189743ed9f26d539db4fe6a93460199aa7c.png?alt=media&token=49a669fb-fbb5-4971-ad96-6c5266c259a8",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2Fa5ec22a28358d3c38f20cf7e0bbaaca4111b15d05660e46548e4f36bd869b716.png?alt=media&token=1d971cfc-53e8-4fb0-bffb-e142c4000443",
+            "label": "Überrascht"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2Ff8027803c03696fe84c6a74b496716cea15d2958127d53ab9b9d712b68ab64e9.png?alt=media&token=f288037b-9ba2-4cbc-80da-8b7417c561e0",
+            "label": "Genervt"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2Fffd0ebf8294790a7f45dbda77686aad1351ecbaca53c7bf6b0fe8572c172a427.png?alt=media&token=56286047-cdf0-457c-9d9d-727377ae61e6",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F5e5ca83b3fe90965582e23b28f1057e1192b37c0054d1aac79f14b86599f7071.png?alt=media&token=73fb921a-7c05-426a-a6f0-4bd26a46361c",
+            "label": "Verärgert"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F51b23e41b073cc3203954df2a8412d792d93f6bcff6ae1ababde8c9fd8d42297.png?alt=media&token=c689cf6f-586a-46e8-b35e-9db7636aaffc",
+            "label": "Unsicher"
+          }
+        ],
+        "createdAt": "2026-11-06T19:30:00.000Z",
+        "updatedAt": "2026-11-06T19:30:00.000Z"
+      },
+      {
+        "id": "verkaeufer-set-02",
+        "name": "Verkäufer",
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F0904ca4fe2bdbb5e805688eb20379e5a2293600d9eec217c3f1c9f4016c15e60.png?alt=media&token=51051872-401b-407c-b1ec-002ee5199fdd",
+        "emotes": [
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F34837e822bac22923089920b85c427c6be292e42d5254fd01382396452f73662.png?alt=media&token=5752f799-6359-4ce0-8d1d-3255ee37b8ea",
+            "label": "Begrüßen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2Fbb703f99dc08a96a25496955fe9ef56a4b19f395c709d0088213a93bfbf404cc.png?alt=media&token=9a231b15-bd0c-4de5-bc06-2c45fd45380d",
+            "label": "Zuhören"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F7a96555a34c36a8c6b31ad2e0d1cce09694e649646c44321b3497d84d4b49711.png?alt=media&token=0887f30b-84a1-4bb9-8a73-cd13337c91d9",
+            "label": "Beraten"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2Fb645c31291f86c33377bcb7051784fe82e833da3c74ffed6e75525c46ec21cc9.png?alt=media&token=afaff8dd-54bc-4280-9c3a-c528837796bc",
+            "label": "Präsentieren"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2Fa14c51c5f438831fc3fba343a2ec83594ea720796d870968cba25b1c090f5bae.png?alt=media&token=692e09fe-7181-4ec7-a700-51c7d72a0911",
+            "label": "Abwägen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2Fd234f6546428e6bfbf77eb8e8f262011f15026ca0ae546f08869b8132dda24c9.png?alt=media&token=36228fef-8014-485e-be6a-1570ebd0fbbb",
+            "label": "Beruhigen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2Fb644fed20a3953ae0b51a3ae8970a909c67d6aac82b0ff09f15a9bf891782c3c.png?alt=media&token=abeb176d-9cc2-4dbc-803f-bdf0a719bb22",
+            "label": "Bestimmt"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F83d405ea9a944a94a12bf1fe8656454bba461150542ddf5a08f328676e78c01f.png?alt=media&token=f0e39895-543d-468c-81f3-11990fd644c9",
+            "label": "Anprobe"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F69808743ec40094f7737c18385d3e0dab7a76a9d1da622ff1ae6077e3d41307e.png?alt=media&token=74715986-ffb1-40c1-ba32-2a661b4c7ee7",
+            "label": "Verabschieden"
+          }
+        ],
+        "createdAt": "2026-11-06T19:30:00.000Z",
+        "updatedAt": "2026-11-06T19:30:00.000Z"
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetsOverride": true,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Rhys Maerllys"
+        },
+        {
+          "label": "Alter",
+          "value": "21 Jahre"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Verkauf · Alltag & gute Tuche"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Maerllys"
+        },
+        {
+          "label": "Arbeitsort",
+          "value": "Gwynthor · Göttliche Eleganz"
+        },
+        {
+          "label": "Vorgesetzte",
+          "value": "Maelwen Coeddu"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Unverheiratet"
+        }
+      ],
+      "biography": {
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Frhys-maerllys%2F0904ca4fe2bdbb5e805688eb20379e5a2293600d9eec217c3f1c9f4016c15e60.png?alt=media&token=51051872-401b-407c-b1ec-002ee5199fdd",
+        "biographyTitle": "Biografie",
+        "biographyText": "Rhys Maerllys ist 21 Jahre alt und arbeitet in der Göttlichen Eleganz in Gwynthor. Rhys Maerllys berät zu den Alltagsgarnituren und guten Tuchen. Er erklärt die Pflege, prüft vorrätige Größen und stimmt Wünsche nach einer Anprobe mit Maelwen ab.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Herkunft",
+            "text": "Rhys gehört zur bürgerlichen Familie Maerllys aus Gwynthor und ist der jüngere Bruder Nia Maerllys’. Er ist unverheiratet und nicht verlobt."
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-maerllys--rhys-maerllys"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-maerllys--rhys-maerllys",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1719",
+      "death": "",
+      "houseId": "house-maerllys",
+      "houseName": "Haus Maerllys",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-maerllys",
+          "personId": "rhys-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-06T19:30:00.000Z",
+          "lastSyncedAt": "2026-11-06T19:30:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=rhys-maerllys",
+          "fingerprint": "{\"name\":\"Rhys Maerllys\",\"title\":\"Jüngerer Bruder Nia Maerllys’\",\"birth\":\"1719\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"},{\"personId\":\"bronwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "iorwerth-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
+            "name": "Iorwerth Maerllys"
+          },
+          {
+            "personId": "bronwen-swyll",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-swyll--bronwen-swyll",
+            "name": "Bronwen Swyll"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--haus-maerllys--rhys-maerllys",
+    "age": 21
+  }
+}

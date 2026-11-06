@@ -44,7 +44,7 @@ import { UATHNEACH_HOUSE_FAMILIES } from './uathneach-house-families.js?v=202611
 import { LOWER_KNIGHT_HOUSE_FAMILIES } from './lower-knight-house-families.js?v=armel-bio-20260912';
 import { ARTUS_STREBEN_HOUSE_FAMILIES } from './artus-streben-house-families.js';
 import { GWENDOLYNS_UFER_HOUSE_FAMILIES } from './gwendolyns-ufer-house-families.js';
-import { GWYNTHOR_COMMONER_HOUSE_FAMILIES } from './gwynthor-commoner-house-families.js?v=20261016-eleganz-v1';
+import { GWYNTHOR_COMMONER_HOUSE_FAMILIES } from './gwynthor-commoner-house-families.js?v=20261106-gwernant-v1';
 import { HOUSE_BRADRHITH_FAMILY } from './house-bradrhith-family.js';
 import { HOUSE_PERLLAN_FAMILY } from './house-perllan-family.js';
 import { HOUSE_MELOG_FAMILY } from './house-melog-family.js';

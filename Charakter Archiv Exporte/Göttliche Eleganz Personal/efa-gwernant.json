@@ -1,0 +1,261 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-06T20:19:13.000Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Göttliche Eleganz",
+  "sourcePath": "Charakter Archiv Exporte/Göttliche Eleganz Personal/efa-gwernant.json",
+  "character": {
+    "name": "Efa Gwernant",
+    "title": "Hausmagd · Verkaufsraum & Wäsche",
+    "fraktion": "Göttliche Eleganz",
+    "role": "Hausmagd · Verkaufsraum & Wäsche",
+    "status": "active",
+    "relevance": "minor",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor · Göttliche Eleganz",
+    "origin": "Gwynthor · Familie Gwernant",
+    "plotNode": "",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=haus-gwernant&mode=view&person=efa-gwernant",
+    "playerOwner": "",
+    "bio": "Efa Gwernant ist 22 Jahre alt und arbeitet in der Göttlichen Eleganz in Gwynthor. Efa Gwernant pflegt Verkaufsraum, Vorhänge und Probiertücher. Sie richtet die Anprobeecke zwischen den Terminen her und stimmt die anfallende Wäschepflege mit Maelwen Coeddu ab. Catrin ist ihre ältere Schwester.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-06T19:30:00.000Z",
+    "updatedAt": "2026-11-06T20:19:13.000Z",
+    "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2Fa419002b842eb2c39f0543c3acc9fba784457359bad5f4d5811201a389f6d420.png?alt=media&token=0bc9dea7-25d7-437b-bd74-13f271a545b4",
+    "emotes": [
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2Faab129fa3e494c19a18e49dd84169402a095a824cadc578eeccb52fb8212ebc7.png?alt=media&token=2ccbea7e-5cc6-418f-a6db-4e38698e595e",
+        "label": "Redend"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F7d60e45a6c5996a16376bf57b16eabbe81944335cb8a927dd5d217336be7d1e7.png?alt=media&token=cffafbc6-f169-4008-8af7-158046c2dcab",
+        "label": "Freundlich"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F947158a70ed4d1716d0f84136a62a33e7e33d297da899205fa79b7746ab367fb.png?alt=media&token=d58a1e44-547a-403b-a26d-344b1b58f63a",
+        "label": "Nachdenklich"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F350937798853cc2417b9c57f367f3b8df34e915293fdaf420c1f57ed9f0c4d07.png?alt=media&token=1e52667c-1b9e-4de8-b1fc-63d93bfff8de",
+        "label": "Skeptisch"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F5dfead6b1fc06462e6b08678480c26610a0a2a3457626b87a832225f5746bb7d.png?alt=media&token=859d4d4c-c3ce-4a4e-9837-63e31241ef37",
+        "label": "Überrascht"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2Fbe1b937a38ad939cee6b0c177b9d34465e6dd3374b7e660786048f2851213dce.png?alt=media&token=561df2a6-7b1d-429e-9317-796c57d1ca98",
+        "label": "Genervt"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F0d5b60d559403a3c904ab062eb02f3193793af1a86db02a145b6d434bff5a4f5.png?alt=media&token=fc91e193-ca15-4e2a-96ae-cbff32742cf8",
+        "label": "Entschlossen"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F1488d802b14f789208059db297255af66f833e86c76f875f4bec9c52e09fb506.png?alt=media&token=52f1ec2a-dcec-465b-a6dd-ee6c64da4beb",
+        "label": "Verärgert"
+      },
+      {
+        "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F8e6ebaf7161e2244bb15fd4ea9305a28f857d679a28ad06e3d386bc9c5c5a14a.png?alt=media&token=f6cf5cc9-b7de-4ee3-9a75-d2837422aed2",
+        "label": "Unsicher"
+      }
+    ],
+    "emotesOverride": true,
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2Fa419002b842eb2c39f0543c3acc9fba784457359bad5f4d5811201a389f6d420.png?alt=media&token=0bc9dea7-25d7-437b-bd74-13f271a545b4",
+        "emotes": [
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2Faab129fa3e494c19a18e49dd84169402a095a824cadc578eeccb52fb8212ebc7.png?alt=media&token=2ccbea7e-5cc6-418f-a6db-4e38698e595e",
+            "label": "Redend"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F7d60e45a6c5996a16376bf57b16eabbe81944335cb8a927dd5d217336be7d1e7.png?alt=media&token=cffafbc6-f169-4008-8af7-158046c2dcab",
+            "label": "Freundlich"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F947158a70ed4d1716d0f84136a62a33e7e33d297da899205fa79b7746ab367fb.png?alt=media&token=d58a1e44-547a-403b-a26d-344b1b58f63a",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F350937798853cc2417b9c57f367f3b8df34e915293fdaf420c1f57ed9f0c4d07.png?alt=media&token=1e52667c-1b9e-4de8-b1fc-63d93bfff8de",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F5dfead6b1fc06462e6b08678480c26610a0a2a3457626b87a832225f5746bb7d.png?alt=media&token=859d4d4c-c3ce-4a4e-9837-63e31241ef37",
+            "label": "Überrascht"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2Fbe1b937a38ad939cee6b0c177b9d34465e6dd3374b7e660786048f2851213dce.png?alt=media&token=561df2a6-7b1d-429e-9317-796c57d1ca98",
+            "label": "Genervt"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F0d5b60d559403a3c904ab062eb02f3193793af1a86db02a145b6d434bff5a4f5.png?alt=media&token=fc91e193-ca15-4e2a-96ae-cbff32742cf8",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F1488d802b14f789208059db297255af66f833e86c76f875f4bec9c52e09fb506.png?alt=media&token=52f1ec2a-dcec-465b-a6dd-ee6c64da4beb",
+            "label": "Verärgert"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F8e6ebaf7161e2244bb15fd4ea9305a28f857d679a28ad06e3d386bc9c5c5a14a.png?alt=media&token=f6cf5cc9-b7de-4ee3-9a75-d2837422aed2",
+            "label": "Unsicher"
+          }
+        ],
+        "createdAt": "2026-11-06T19:30:00.000Z",
+        "updatedAt": "2026-11-06T20:19:13.000Z"
+      },
+      {
+        "id": "hausdienst-set-02",
+        "name": "Hausdienst",
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2Fa419002b842eb2c39f0543c3acc9fba784457359bad5f4d5811201a389f6d420.png?alt=media&token=0bc9dea7-25d7-437b-bd74-13f271a545b4",
+        "emotes": [
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F6ef5d9ac2c486473462773930bfbcd2768e898149f3fd4f0629bc965e4c14cc4.png?alt=media&token=83977df7-7b0c-4128-8b8e-b91fa046cda6",
+            "label": "Dienstbereit"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F3f1cb4a5556b2d2cd0df3272eec4b39a70bd7283f23329e1613f0767ed86fda6.png?alt=media&token=4cdbbada-7b90-46ba-ba8d-eada244b7f24",
+            "label": "Aufmerksam"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2Ffddb02c90ab46ba6a6ac53fecff25f405ddcebf09bf0018ef6bf397865dda196.png?alt=media&token=6c308333-90ff-4aaf-96ea-0937f60d9720",
+            "label": "Hinweisend"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F0562d5b59460555731fc8061a0f8b43c2ffcef46e52e32d05a4bccfd136473ad.png?alt=media&token=01a4b052-35de-455b-b5d6-0a6f3644f8b5",
+            "label": "Abstimmend"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F756fe843fd95d7462e31a1cb31d4b1f0c1636a333ab31accc0dbfeac93083531.png?alt=media&token=8dd5b514-3120-4ee9-927e-733a4c05e9b3",
+            "label": "Prüfend"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F77ac90eb2f4bd183104784d52a36f742cb91ff7c2fc9016301e95a66d1493cbf.png?alt=media&token=76a9738a-4bfe-4707-a104-748f278adfc6",
+            "label": "Beruhigend"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F71a1a04328c797b127034fcbe3a72f04b2be4d7ee3a2f23e63c98c4f16bdde21.png?alt=media&token=29472816-0746-48cd-8194-9884674270e2",
+            "label": "Höflich bestimmt"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2Fd60ce17fffb18133c6df3b306630ad1701c51c585f7d128b63ce1400c2963b83.png?alt=media&token=3bceeb66-646f-4a5b-b7cc-94c8ae129f90",
+            "label": "Eilfertig"
+          },
+          {
+            "img": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2F63a995299f10619b34b360ed85831bb91c8c5622b11045eac4c20165c8a895f2.png?alt=media&token=a05d8a67-8df5-4e2e-9034-27685e2e6633",
+            "label": "Zufrieden"
+          }
+        ],
+        "createdAt": "2026-11-06T20:19:13.000Z",
+        "updatedAt": "2026-11-06T20:19:13.000Z"
+      }
+    ],
+    "activeImageSetId": "standard",
+    "imageSetsOverride": true,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Efa Gwernant"
+        },
+        {
+          "label": "Alter",
+          "value": "22 Jahre"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Hausmagd · Verkaufsraum & Wäsche"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Gwernant"
+        },
+        {
+          "label": "Arbeitsort",
+          "value": "Gwynthor · Göttliche Eleganz"
+        },
+        {
+          "label": "Vorgesetzte",
+          "value": "Maelwen Coeddu"
+        },
+        {
+          "label": "Familienstand",
+          "value": "Unverheiratet"
+        }
+      ],
+      "biography": {
+        "portrait": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgoettliche-eleganz%2Fefa-gwernant%2Fa419002b842eb2c39f0543c3acc9fba784457359bad5f4d5811201a389f6d420.png?alt=media&token=0bc9dea7-25d7-437b-bd74-13f271a545b4",
+        "biographyTitle": "Biografie",
+        "biographyText": "Efa Gwernant ist 22 Jahre alt und arbeitet in der Göttlichen Eleganz in Gwynthor. Efa Gwernant pflegt Verkaufsraum, Vorhänge und Probiertücher. Sie richtet die Anprobeecke zwischen den Terminen her und stimmt die anfallende Wäschepflege mit Maelwen Coeddu ab. Catrin ist ihre ältere Schwester.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Herkunft",
+            "text": "Efa Gwernant ist die Tochter Idwal Gwernants und Gwenllians und die Schwester von Catrin Gwernant. Die Familie betreibt einen kleinen Leinen- und Kurzwarenladen in Gwynthor. Sie ist unverheiratet und nicht verlobt."
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-gwernant--efa-gwernant"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-gwernant--efa-gwernant",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1718",
+      "death": "",
+      "houseId": "house-gwernant",
+      "houseName": "Familie Gwernant",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-gwernant",
+          "personId": "efa-gwernant",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-06T19:30:00.000Z",
+          "lastSyncedAt": "2026-11-06T19:30:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gwernant&mode=view&person=efa-gwernant",
+          "fingerprint": "{\"name\":\"Efa Gwernant\",\"title\":\"Göttliche Eleganz · Hausmagd und Wäschepflege\",\"birth\":\"1718\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwernant\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gwernant/efa-gwernant.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"idwal-gwernant\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwernant--idwal-gwernant\",\"name\":\"Idwal Gwernant\"},{\"personId\":\"gwenllian-spouse-gwernant\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwernant--gwenllian-spouse-gwernant\",\"name\":\"Gwenllian\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "idwal-gwernant",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gwernant--idwal-gwernant",
+            "name": "Idwal Gwernant"
+          },
+          {
+            "personId": "gwenllian-spouse-gwernant",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gwernant--gwenllian-spouse-gwernant",
+            "name": "Gwenllian"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--haus-gwernant--efa-gwernant",
+    "age": 22
+  }
+}

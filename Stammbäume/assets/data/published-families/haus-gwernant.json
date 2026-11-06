@@ -1,0 +1,642 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-gwernant",
+  "revision": 2,
+  "updatedAt": "2026-11-06T19:17:46.437Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-gwernant",
+      "title": "Familie Gwernant",
+      "motto": "",
+      "description": "Kleine bürgerliche Leinen- und Kurzwarenhändlerfamilie aus Gwynthor. Der konkrete Familienkreis beginnt mit Bryn und Mabli; ältere Generationen bleiben hinter einem seriellen Überlieferungssprung unbekannt.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwernant/gwernant-emblem.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-gwernant-gruender",
+        "worldPersonId": "person--haus-gwernant--haus-gwernant-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwernant",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-gwernant-gruenderin",
+        "worldPersonId": "person--haus-gwernant--haus-gwernant-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwernant",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "bryn-gwernant",
+        "worldPersonId": "person--haus-gwernant--bryn-gwernant",
+        "name": "Bryn Gwernant",
+        "title": "Früherer Leinenhändler",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1660",
+        "death": "1731",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwernant",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Älteste namentlich ausgearbeitete Generation. Führte mit Mabli den kleinen Leinenhandel in Gwynthor; Idwal und Emrys sind ihre Söhne. Die unbekannten älteren Generationen werden nicht zu seinen unmittelbaren Eltern erklärt.",
+        "extensions": {
+          "authoredSource": "gwernant-20261106"
+        }
+      },
+      {
+        "id": "mabli-spouse-gwernant",
+        "worldPersonId": "person--haus-gwernant--mabli-spouse-gwernant",
+        "name": "Mabli",
+        "title": "Frühere Kurzwarenhändlerin",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1664",
+        "death": "1736",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Gemahlin Bryns seit 1686 und Mutter Idwals und Emrys’. Betreute im Familiengeschäft Garn, Bänder und kleine Nähzutaten. Ihr Herkunftshaus ist nicht festgelegt.",
+        "extensions": {
+          "authoredSource": "gwernant-20261106"
+        }
+      },
+      {
+        "id": "idwal-gwernant",
+        "worldPersonId": "person--haus-gwernant--idwal-gwernant",
+        "name": "Idwal Gwernant",
+        "title": "Leinen- und Kurzwarenhändler",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1688",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwernant",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "52 Jahre. Führt den kleinen Laden der Familie in Gwynthor. Ehemann Gwenllians seit 1712; Vater Catrins und Efas. Solide örtliche Kundschaft, kein Fernhandelshaus und kein politisches Amt.",
+        "extensions": {
+          "authoredSource": "gwernant-20261106"
+        }
+      },
+      {
+        "id": "gwenllian-spouse-gwernant",
+        "worldPersonId": "person--haus-gwernant--gwenllian-spouse-gwernant",
+        "name": "Gwenllian",
+        "title": "Haushalt und Warenpflege",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "49 Jahre. Gemahlin Idwals und Mutter Catrins und Efas. Betreut Haushalt und Warenpflege, hält Leinen sauber und trocken und richtet kleinere Kundenbestellungen. Herkunftsfamilie und Mädchenname bleiben offen.",
+        "extensions": {
+          "authoredSource": "gwernant-20261106"
+        }
+      },
+      {
+        "id": "emrys-gwernant",
+        "worldPersonId": "person--haus-gwernant--emrys-gwernant",
+        "name": "Emrys Gwernant",
+        "title": "Wareneinkauf und Lieferwege",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwernant",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "48 Jahre. Idwals jüngerer Bruder unterstützt den gemeinsamen Familienladen beim örtlichen Wareneinkauf und bei Lieferungen. Ehemann Nerys’ und Vater Aleds; kein eigener zweiter Laden.",
+        "extensions": {
+          "authoredSource": "gwernant-20261106"
+        }
+      },
+      {
+        "id": "nerys-spouse-gwernant",
+        "worldPersonId": "person--haus-gwernant--nerys-spouse-gwernant",
+        "name": "Nerys",
+        "title": "Kurzwaren und Verpackung",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "44 Jahre. Gemahlin Emrys’ seit 1719 und Mutter Aleds. Sortiert Garn und Bänder, zählt kleine Warenbestände und richtet Lieferbündel. Ihre Herkunftsfamilie ist nicht festgelegt.",
+        "extensions": {
+          "authoredSource": "gwernant-20261106"
+        }
+      },
+      {
+        "id": "catrin-gwernant",
+        "worldPersonId": "person--haus-gwernant--catrin-gwernant",
+        "name": "Catrin Gwernant",
+        "title": "Göttliche Eleganz · Beratung für Maßaufträge",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1714",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gwernant/catrin-gwernant.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwernant",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "26 Jahre; unverheiratet und ohne Verlobung. Ältere Tochter Idwals und Gwenllians. Ist mit Leinen, Bändern und dem Umgang mit Kundschaft aufgewachsen. Nimmt unter Maelwen Coeddu erste Wünsche zu Maßaufträgen auf und hält Änderungen für die Schneiderei fest. Sie ist keine Schneidermeisterin.",
+        "extensions": {
+          "authoredSource": "gwernant-20261106"
+        }
+      },
+      {
+        "id": "efa-gwernant",
+        "worldPersonId": "person--haus-gwernant--efa-gwernant",
+        "name": "Efa Gwernant",
+        "title": "Göttliche Eleganz · Hausmagd und Wäschepflege",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-gwernant/efa-gwernant.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwernant",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "22 Jahre; unverheiratet und ohne Verlobung. Jüngere Tochter Idwals und Gwenllians, Catrins Schwester. Vertraut mit sorgfältiger Leinen- und Haushaltspflege. Pflegt unter Maelwen Coeddu Verkaufsraum, Vorhänge und Probiertücher und richtet die Anprobeecke her.",
+        "extensions": {
+          "authoredSource": "gwernant-20261106"
+        }
+      },
+      {
+        "id": "aled-gwernant",
+        "worldPersonId": "person--haus-gwernant--aled-gwernant",
+        "name": "Aled Gwernant",
+        "title": "Hilfe im Familienladen",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwernant",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "19 Jahre; unverheiratet und ohne Verlobung. Sohn Emrys’ und Nerys’, Vetter Catrins und Efas. Lernt im Familienladen Warenannahme, Zählen und das saubere Verpacken kleiner Bestellungen. Kein weiterer Arbeitsplatz festgelegt.",
+        "extensions": {
+          "authoredSource": "gwernant-20261106"
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-gwernant-founders",
+        "participantIds": [
+          "haus-gwernant-gruender",
+          "haus-gwernant-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Unbekanntes historisches Gründerpaar; kein erfundenes Ehejahr.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-bryn-mabli-gwernant",
+        "participantIds": [
+          "bryn-gwernant",
+          "mabli-spouse-gwernant"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1686",
+        "end": "1731",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true
+        }
+      },
+      {
+        "id": "marriage-idwal-gwenllian-gwernant",
+        "participantIds": [
+          "idwal-gwernant",
+          "gwenllian-spouse-gwernant"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1712",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true
+        }
+      },
+      {
+        "id": "marriage-emrys-nerys-gwernant",
+        "participantIds": [
+          "emrys-gwernant",
+          "nerys-spouse-gwernant"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1719",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignParentPairOverChildPersonId": "aled-gwernant"
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-bryn-gwernant",
+        "childId": "bryn-gwernant",
+        "parentIds": [
+          "haus-gwernant-gruender",
+          "haus-gwernant-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-gwernant-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Nur Zugehörigkeit über mehrere nicht ausgearbeitete Generationen; keine unmittelbare biologische Elternschaft.",
+        "extensions": {
+          "timeJumpId": "gap-gwernant-to-1660"
+        }
+      },
+      {
+        "id": "parentage-idwal-gwernant",
+        "childId": "idwal-gwernant",
+        "parentIds": [
+          "bryn-gwernant",
+          "mabli-spouse-gwernant"
+        ],
+        "partnershipId": "marriage-bryn-mabli-gwernant",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-emrys-gwernant",
+        "childId": "emrys-gwernant",
+        "parentIds": [
+          "bryn-gwernant",
+          "mabli-spouse-gwernant"
+        ],
+        "partnershipId": "marriage-bryn-mabli-gwernant",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-catrin-gwernant",
+        "childId": "catrin-gwernant",
+        "parentIds": [
+          "idwal-gwernant",
+          "gwenllian-spouse-gwernant"
+        ],
+        "partnershipId": "marriage-idwal-gwenllian-gwernant",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-efa-gwernant",
+        "childId": "efa-gwernant",
+        "parentIds": [
+          "idwal-gwernant",
+          "gwenllian-spouse-gwernant"
+        ],
+        "partnershipId": "marriage-idwal-gwenllian-gwernant",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-aled-gwernant",
+        "childId": "aled-gwernant",
+        "parentIds": [
+          "emrys-gwernant",
+          "nerys-spouse-gwernant"
+        ],
+        "partnershipId": "marriage-emrys-nerys-gwernant",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-gwernant",
+        "name": "Familie Gwernant",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwernant/gwernant-emblem.png",
+        "status": "active",
+        "extensions": {}
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "gap-gwernant-to-1660",
+        "parentPartnershipId": "marriage-haus-gwernant-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "bryn-gwernant"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1660",
+        "label": "Nicht einzeln bekannte Generationen bis Bryn Gwernant",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-gwernant-founders",
+      "houseId": "house-gwernant",
+      "crestSubtitle": "Bürgerliche Leinen- und Kurzwarenhändler · Gwynthor",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-gwernant-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": false,
+      "pendingDescendantReview": false,
+      "sourceRevision": 2,
+      "chartLayoutPolicy": "strict-v1",
+      "chartAlignLineageOriginOverPersonId": "bryn-gwernant",
+      "registryManagedExtensionFields": [
+        "chartLayoutPolicy",
+        "chartAlignLineageOriginOverPersonId"
+      ],
+      "authoredOn": "2026-11-06",
+      "sourceNote": "Neue Familie auf ausdrücklichen Nutzerauftrag vom 6. November 2026. Catrin26 und Efa22, ihre Ledigkeit, Eltern Idwal52 und Gwenllian49 sowie der gewöhnliche örtliche Leinen-/Kurzwarenhandel folgen dem angenommenen Entwurf. Großeltern, kleiner Onkelzweig und ältere Lebensdaten sind autorisierte redaktionelle Ausgestaltung. Neun benannte Personen und zwei unbekannte Gründer, drei konkrete Generationen, ein serieller Zeitsprung. Keine besondere Abstammung, kein Adel, kein neuer Kartenpin, kein separates Shopmodul und keine Beziehungen zu bestehenden Namensgleichen. Herkunftshäuser der eingeheirateten Frauen bleiben offen.",
+      "registryManagedDocumentFieldRevisions": {},
+      "registryManagedHouseProfileFieldRevisions": {},
+      "registryManagedExtensionFieldRevisions": {
+        "chartLayoutPolicy": 2,
+        "chartAlignLineageOriginOverPersonId": 2
+      },
+      "registryManagedViewFieldRevisions": {},
+      "registryManagedLineageFieldRevisions": {},
+      "registryManagedEntitySourceRevision": 2,
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Familie Gwernant",
+        "housePage": true,
+        "image": "../Stammbäume/assets/images/portraits/haus-gwernant/catrin-gwernant.png",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Kleine bürgerliche Leinen- und Kurzwarenhändlerfamilie aus Gwynthor. Idwal Gwernant führt den gemeinsamen Familienladen; sein Bruder Emrys unterstützt Einkauf und Lieferwege. Catrin und Efa arbeiten unter Maelwen Coeddu in der Göttlichen Eleganz und behalten ihre Gwernant-Identität.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Familie Gwernant"
+          ],
+          [
+            "Rang",
+            "Bürgerlich"
+          ],
+          [
+            "Stammsitz",
+            "Gwynthor"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Idwal Gwernant"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Draig"
+          ],
+          [
+            "Ursprung",
+            "Gwynthor · örtlicher Leinen- und Kurzwarenhandel"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwernant/gwernant-emblem.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über die Familie",
+          "biographyText": "Kleine bürgerliche Leinen- und Kurzwarenhändlerfamilie aus Gwynthor. Idwal Gwernant führt den gemeinsamen Familienladen; sein Bruder Emrys unterstützt Einkauf und Lieferwege. Catrin und Efa arbeiten unter Maelwen Coeddu in der Göttlichen Eleganz und behalten ihre Gwernant-Identität.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Drei Generationen im örtlichen Handel",
+          "historyText": "Nach unbekannten älteren Gründern beginnt die konkrete Linie mit Bryn (1660–1731) und Mabli (1664–1736). Ihre Söhne sind Idwal, geboren 1688, und Emrys, geboren 1692. Idwal und Gwenllian sind die Eltern Catrins und Efas. Emrys und Nerys haben den Sohn Aled. Die Herkunftshäuser der eingeheirateten Frauen sind nicht festgelegt.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Saubere Ware, nachvollziehbare Mengen und eingehaltene Zusagen bestimmen den Umgang mit der Kundschaft. Die Familie achtet auf sorgsames Falten, trockenes Lagern und das genaue Zählen kleiner Waren. Bei größeren Wünschen wird zuerst besprochen, was sich tatsächlich beschaffen lässt. Der Ruf eines verlässlichen kleinen Ladens ist wichtiger als ein großspuriges Versprechen."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Traditionen und Hausleben",
+              "text": "Der kleine Laden und der Haushalt bleiben eng verbunden. Waren werden gemeinsam gezählt, Leinen sorgfältig gefaltet und Lieferbündel deutlich auseinandergehalten. Kinder lernen die Arbeiten kennen; die beiden Töchter haben inzwischen eigene Arbeitsstellen angenommen."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Die Lebensgrundlage ist ein kleiner gemeinsamer Leinen- und Kurzwarenladen in Gwynthor. Für die Familie sind weder eine weitere Filiale noch Landgüter oder ein eigener Fernhandel festgelegt. Eine genaue Straßenlage ist nicht benannt. Aus den Arbeitsstellen Catrins und Efas entsteht kein Eigentums- oder Lieferanspruch gegenüber der Göttlichen Eleganz."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Catrin betreut in der Göttlichen Eleganz Maßwünsche und die Abstimmung vor der Anprobe; Efa pflegt Verkaufsraum, Vorhänge und Probiertücher. Beide sind unverheiratet und ohne Verlobung. Ihr Dienst unter Maelwen begründet keine Verwandtschaft mit Raves oder Coeddu."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwernant/gwernant-emblem.png",
+              "title": "Familie Gwernant · vollständige Hausseite",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gwernant"
+            },
+            {
+              "title": "Göttliche Eleganz",
+              "text": "Arbeitsstelle Catrins und Efas unter Maelwen Coeddu.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=goettliche-eleganz",
+              "icon": "../AleriaAlmanach/assets/goettliche-eleganz/schild.png"
+            }
+          ],
+          "footer": ""
+        }
+      },
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 1,
+        "toRevision": 2
+      }
+    }
+  }
+}

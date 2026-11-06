@@ -18370,6 +18370,22 @@
         "bild-bf082ea86627c3d9"
       ],
       "missingNote": ""
+    },
+    {
+      "id": "haus-gwernant",
+      "name": "Familie Gwernant",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-gwernant&mode=view",
+      "sources": [
+        "haus-gwernant"
+      ],
+      "illustrationIds": [
+        "bild-318ebbd3fd57a325"
+      ],
+      "missingNote": ""
     }
   ],
   "illustrations": [
@@ -53135,6 +53151,27 @@
       ],
       "copies": [
         "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Pert/assets/pert-bauer.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-318ebbd3fd57a325",
+      "name": "Familie Gwernant · Hausdarstellung",
+      "category": "Bürgerliches Familienporträt · Catrin Gwernant",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/portraits/haus-gwernant/catrin-gwernant.png",
+      "sha256": "318ebbd3fd57a32587b7f676bd34be9a2b2fc0050cb18f45284c6553df774e6e",
+      "houseIds": [
+        "haus-gwernant"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Gwernant/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/portraits/haus-gwernant/catrin-gwernant.png"
       ],
       "note": ""
     }

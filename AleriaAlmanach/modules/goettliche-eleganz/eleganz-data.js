@@ -502,11 +502,11 @@
                 "label": "Beratung im Verkaufsraum",
                 "nodes": [
                   {
-                    "id": "eleganz-post-verkauf-alltag",
-                    "title": "Verkauf · Alltag & gute Tuche",
-                    "subtitle": "Unbesetzter Posten",
-                    "portrait": "",
-                    "text": "<p>Berät zu den preiswerteren Garnituren, erklärt Pflege und prüft die vorrätigen Größen.</p>"
+                    "id": "eleganz-person-rhys-maerllys",
+                    "title": "Rhys Maerllys",
+                    "subtitle": "Verkauf · Alltag & gute Tuche · 21 Jahre",
+                    "portrait": "./assets/goettliche-eleganz/portraits/rhys-maerllys.png",
+                    "text": "<p>Rhys Maerllys berät zu den Alltagsgarnituren und guten Tuchen. Er erklärt die Pflege, prüft vorrätige Größen und stimmt Wünsche nach einer Anprobe mit Maelwen ab.</p>"
                   },
                   {
                     "id": "eleganz-person-eirlys-vann",
@@ -516,11 +516,11 @@
                     "text": "<p>Eirlys lebt seit ihrer Heirat mit Orestian im Haus Raves und berät die Kundschaft bei Festkleidung. Sie versieht keinen Dienst mehr in der Letzten Rast.</p>"
                   },
                   {
-                    "id": "eleganz-post-verkauf-mass",
-                    "title": "Verkauf · Maßaufträge",
-                    "subtitle": "Unbesetzter Posten",
-                    "portrait": "",
-                    "text": "<p>Nimmt erste Wünsche auf, führt die Kundschaft zur Anprobe und hält Änderungen für die Werkstatt fest.</p>"
+                    "id": "eleganz-person-catrin-gwernant",
+                    "title": "Catrin Gwernant",
+                    "subtitle": "Verkauf · Maßaufträge · 26 Jahre",
+                    "portrait": "../Stammbäume/assets/images/portraits/haus-gwernant/catrin-gwernant.png",
+                    "text": "<p>Catrin Gwernant nimmt erste Wünsche zu Maßaufträgen auf, begleitet die Anprobe und hält Änderungen für die Werkstatt fest. Termine und besondere Anliegen stimmt sie mit Maelwen Coeddu ab.</p>"
                   }
                 ]
               },
@@ -528,11 +528,11 @@
                 "label": "Pflege des Hauses",
                 "nodes": [
                   {
-                    "id": "eleganz-post-hausmagd",
-                    "title": "Hausmagd · Verkaufsraum & Wäsche",
-                    "subtitle": "Unbesetzter Posten",
-                    "portrait": "",
-                    "text": "<p>Pflegt Vorhänge, Probiertücher und den Verkaufsraum; richtet die Anprobeecke zwischen den Terminen her.</p>"
+                    "id": "eleganz-person-efa-gwernant",
+                    "title": "Efa Gwernant",
+                    "subtitle": "Hausmagd · Verkaufsraum & Wäsche · 22 Jahre",
+                    "portrait": "../Stammbäume/assets/images/portraits/haus-gwernant/efa-gwernant.png",
+                    "text": "<p>Efa Gwernant pflegt Verkaufsraum, Vorhänge und Probiertücher. Sie richtet die Anprobeecke zwischen den Terminen her und stimmt die anfallende Wäschepflege mit Maelwen Coeddu ab. Catrin ist ihre ältere Schwester.</p>"
                   }
                 ]
               }

@@ -314,6 +314,7 @@
           commonerHouse("rhwyd", "Rhwyd"),
           house("melog", "Haus Melog", "Bürgerliches Haus", "Gwynthor · Zum Honigtörtchen", "Haus Draig", `${commonerRoot}/Melog/melog-emblem.png`),
           house("pert", "Familie Pert", "Bürgerliches Haus", "Gwynthor · Castell Draig und Hof Maesglas", "Haus Draig", `${commonerRoot}/Pert/pert-emblem.png`),
+          house("haus-gwernant", "Familie Gwernant", "Bürgerliche Händlerfamilie", "Gwynthor", "Haus Draig", `${commonerRoot}/Gwernant/gwernant-emblem.png`),
           house("haus-gofrann", "Haus Gofrann", "Bürgerliches Haus", "Gwynthor · Zum Dritten Funken", "Haus Tlawd", `${commonerRoot}/Gofrann.png`),
           commonerHouse("braglas", "Braglas"),
           commonerHouse("tonnarth", "Tonnarth"),

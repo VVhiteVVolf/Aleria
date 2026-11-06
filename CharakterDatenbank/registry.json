@@ -37,6 +37,9 @@
     "Charakter Archiv Exporte/Gwynthor Sieben/rhosyn-awenydd.json",
     "Charakter Archiv Exporte/Gwynthor Sieben/rianna-wyrm.json",
     "Charakter Archiv Exporte/Gwynthor Sieben/saerwyn-gwyllach.json",
+    "Charakter Archiv Exporte/Göttliche Eleganz Personal/catrin-gwernant.json",
+    "Charakter Archiv Exporte/Göttliche Eleganz Personal/efa-gwernant.json",
+    "Charakter Archiv Exporte/Göttliche Eleganz Personal/rhys-maerllys.json",
     "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/0Sku8euk5jhlWebdsskI.json",
     "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/0caPdKpJoVazPUuu2KMu.json",
     "Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/15ml9RhSvJPXof7z4qY3.json",
@@ -348,8 +351,8 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-11-06T17:09:43.000Z",
-  "count": 328,
+  "sourceExportedAt": "2026-11-06T20:19:13.000Z",
+  "count": 331,
   "records": [
     {
       "recordId": "character--kCmUm4WvMZDYetqrSWQ0",
@@ -6581,6 +6584,60 @@
       "familyStatus": "linked",
       "path": "records/familien/pert/roisin-pert--person--pert--person-618119d8/character.json",
       "contentHash": "623095035b51341edbb5f25d4f94047186e8f5f810b01adea7f9ff3f3a7fd548"
+    },
+    {
+      "recordId": "character--person--haus-maerllys--rhys-maerllys",
+      "name": "Rhys Maerllys",
+      "aliases": [],
+      "worldPersonId": "person--haus-maerllys--rhys-maerllys",
+      "firestoreDocumentId": "person--haus-maerllys--rhys-maerllys",
+      "firestoreDocumentIds": [
+        "person--haus-maerllys--rhys-maerllys"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-maerllys",
+        "label": "Haus Maerllys"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-maerllys/rhys-maerllys--person--haus-maerllys--rhys-maerllys/character.json",
+      "contentHash": "632f44cad7d5e806403caaa4dc106b2683ddabdc36dadc7b3bca0d00c077a958"
+    },
+    {
+      "recordId": "character--person--haus-gwernant--catrin-gwernant",
+      "name": "Catrin Gwernant",
+      "aliases": [],
+      "worldPersonId": "person--haus-gwernant--catrin-gwernant",
+      "firestoreDocumentId": "person--haus-gwernant--catrin-gwernant",
+      "firestoreDocumentIds": [
+        "person--haus-gwernant--catrin-gwernant"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-gwernant",
+        "label": "Familie Gwernant"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-gwernant/catrin-gwernant--person--haus-gwernant--catrin-gwernant/character.json",
+      "contentHash": "10b238caaa5b49a7539cf017a4682ad7d3411d1c754c9b118a086f7f5a954923"
+    },
+    {
+      "recordId": "character--person--haus-gwernant--efa-gwernant",
+      "name": "Efa Gwernant",
+      "aliases": [],
+      "worldPersonId": "person--haus-gwernant--efa-gwernant",
+      "firestoreDocumentId": "person--haus-gwernant--efa-gwernant",
+      "firestoreDocumentIds": [
+        "person--haus-gwernant--efa-gwernant"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-gwernant",
+        "label": "Familie Gwernant"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-gwernant/efa-gwernant--person--haus-gwernant--efa-gwernant/character.json",
+      "contentHash": "3e400310f9506ad2006256187a82cae8cacb661e203ea87843285f23a3f9459d"
     }
   ]
 }

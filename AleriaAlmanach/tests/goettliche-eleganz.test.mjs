@@ -5,6 +5,7 @@ import vm from 'node:vm';
 import { buildGoettlicheEleganz } from '../modules/goettliche-eleganz/eleganz-module.mjs';
 import { ELEGANZ_PEOPLE,ELEGANZ_MARRIAGES } from '../modules/goettliche-eleganz/eleganz-family-people.mjs';
 import { ELEGANZ_COLLECTION } from '../modules/goettliche-eleganz/eleganz-collection.mjs';
+import { ELEGANZ_SALES_STAFF } from '../modules/goettliche-eleganz/eleganz-sales-staff.mjs';
 import { planEleganzCharacters } from '../modules/goettliche-eleganz/eleganz-characters.mjs';
 import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
 import { assertValidFamily } from '../../Stammbäume/assets/js/domain/family-schema.js';
@@ -23,18 +24,45 @@ test('shop uses the existing six page templates, one room and stable family cast
   assert.equal(entry.sessionCast.length,7);
   assert.equal(entry.pages[2].stats.find(row=>row[0]==='Alter')[1],'39 Jahre');
 });
-test('department tabs retain fourteen vacancies and include the married-in Eirlys',()=>{
+test('department tabs fill the accepted Rhys and Gwernant positions and retain Eirlys and eleven vacancies',()=>{
   const hierarchy=entry.pages[3].hierarchy;
   assert.equal(hierarchy.treeDisplayMode,'tabs');
   assert.equal(hierarchy.trees.length,3);
   const nodes=hierarchy.trees.flatMap(tree=>tree.levels.flatMap(level=>level.nodes));
   const vacant=nodes.filter(node=>!node.portrait);
-  assert.equal(vacant.length,14);
-  assert.equal(new Set(vacant.map(node=>node.id)).size,14);
+  assert.equal(vacant.length,11);
+  assert.equal(new Set(vacant.map(node=>node.id)).size,11);
   const working=new Set(ELEGANZ_PEOPLE.filter(person=>person.resident!==false).map(person=>person.name));
   working.add('Eirlys Vann');
+  working.add('Rhys Maerllys');
+  working.add('Catrin Gwernant');
+  working.add('Efa Gwernant');
   assert.deepEqual(new Set(nodes.filter(node=>node.portrait).map(node=>node.title)),working);
-  assert.equal(working.size,8);
+  assert.equal(working.size,11);
+  const sales=hierarchy.trees.find(tree=>tree.id==='verkauf');
+  const advice=sales.levels.find(level=>level.label==='Beratung im Verkaufsraum').nodes;
+  const rhys=advice.find(node=>node.id==='eleganz-person-rhys-maerllys');
+  assert.equal(rhys.title,'Rhys Maerllys');
+  assert.equal(rhys.subtitle,'Verkauf · Alltag & gute Tuche · 21 Jahre');
+  assert.equal(rhys.portrait,'./assets/goettliche-eleganz/portraits/rhys-maerllys.png');
+  assert(!nodes.some(node=>node.id==='eleganz-post-verkauf-alltag'));
+  const source=registered('maerllys').family.persons.find(person=>person.id==='rhys-maerllys');
+  assert.equal(ELEGANZ_SALES_STAFF[0].personId,source.id);
+  assert.equal(ELEGANZ_SALES_STAFF[0].worldPersonId,source.worldPersonId);
+  assert.equal(ELEGANZ_SALES_STAFF[0].worldPersonId,'person--haus-maerllys--rhys-maerllys');
+  assert.equal(advice.find(node=>node.id==='eleganz-person-eirlys-vann').title,'Eirlys Vann');
+  assert.equal(sales.levels.find(level=>level.label==='Empfang & Termine').nodes[0].title,'Maelwen Coeddu');
+  for(const [id,role] of [['catrin-gwernant','Verkauf · Maßaufträge · 26 Jahre'],['efa-gwernant','Hausmagd · Verkaufsraum & Wäsche · 22 Jahre']]) {
+    const person=registered('gwernant').family.persons.find(person=>person.id===id);
+    const assignment=ELEGANZ_SALES_STAFF.find(staff=>staff.personId===id);
+    const node=nodes.find(node=>node.id===assignment.nodeId);
+    assert.equal(node.subtitle,role);
+    assert.equal(node.title,person.name);
+    assert.equal(node.portrait,`../Stammbäume/${person.portrait}`);
+    assert.equal(assignment.worldPersonId,person.worldPersonId);
+    assert(!nodes.some(node=>node.id===assignment.slotId));
+  }
+  assert(!nodes.some(node=>/Falchdyn/.test(node.title)));
   for(const person of ELEGANZ_PEOPLE.filter(person=>person.death || person.age<14 || person.destination)) assert(!nodes.some(node=>node.title===person.name));
 });
 test('three generations, reciprocal marriages and existing identities survive the new branches',async()=>{

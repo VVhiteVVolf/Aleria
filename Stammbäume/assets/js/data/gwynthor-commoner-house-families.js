@@ -16,6 +16,7 @@ import { KANNE_FAMILY_DEFINITIONS } from './krumme-kanne-family-people.js';
 import { HOUSE_RAVES_FAMILY } from './eleganz-family-records.js';
 import { HOUSE_GOFRANN_FAMILY } from './gofrann-family-records.js';
 import { HOUSE_VANN_FAMILY } from './vann-family-records.js';
+import { HOUSE_GWERNANT_FAMILY } from './house-gwernant-family.js';
 
 const EMBLEM_ROOT = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor';
 
@@ -34,6 +35,7 @@ export const GWYNTHOR_COMMONER_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'ysgrif', title: 'Ysgrif', file: 'Ysgrif.png' }),
   Object.freeze({ slug: 'falchdyn', title: 'Falchdyn', file: 'Falchdyn.png' }),
   Object.freeze({ slug: 'coeddu', title: 'Coeddu', file: 'Coeddu.png' }),
+  Object.freeze({ slug: 'gwernant', title: 'Gwernant', file: 'Gwernant/gwernant-emblem.png' }),
   Object.freeze({ slug: 'craigddu', title: 'Craigddu', file: 'Craigddu.png' })
 ]);
 
@@ -52,6 +54,7 @@ const DEVELOPED_FAMILIES = Object.freeze({
   tonnarth: HOUSE_TONNARTH_FAMILY,
   ysgrif: HOUSE_YSGRIF_FAMILY,
   coeddu: HOUSE_COEDDU_FAMILY,
+  gwernant: HOUSE_GWERNANT_FAMILY,
   craigddu: HOUSE_CRAIGDDU_FAMILY
 });
 

@@ -83,6 +83,7 @@
       family("perllan", "Perllan", "Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png", { seat: "Gwynthor", rank: "Bürgerliche Familie" }),
       family("melog", "Melog", "Llamreis Ankunft/Bürgerliche/Gwynthor/Melog/melog-emblem.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliche Familie" }),
       family("pert", "Pert", "Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png", { seat: "Gwynthor · Hof Maesglas", liege: "Draig", rank: "Bürgerliche Familie" }),
+      family("haus-gwernant", "Gwernant", "Llamreis Ankunft/Bürgerliche/Gwynthor/Gwernant/gwernant-emblem.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliche Händlerfamilie" }),
       family("haus-gwregysdu", "Gwregysdu", "Llamreis Ankunft/Bürgerliche/Gwynthor/Gwregysdu.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliches Haus" }),
       family("haus-valerus", "Valerus", "Venalys/haus-valerus.png", { seat: "Gwynthor · Die rote Klaue", rank: "Bürgerliches Haus" }),
       family("haus-fearnan", "Fearnan", "/AleriaAlmanach/assets/gwynthor-heime/fearnan/wappen.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliche Familie" }),
