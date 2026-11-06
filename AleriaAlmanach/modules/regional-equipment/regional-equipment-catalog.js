@@ -33,6 +33,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "kaiserreich-argentum"
     ],
     "houseIds": [
+      "pert",
       "melog",
       "perllan",
       "haus-draig",
@@ -840,6 +841,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "cenyr/tal-der-milane"
     ],
     "houseIds": [
+      "pert",
       "melog",
       "perllan",
       "haus-draig",
@@ -1149,6 +1151,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "cenyr/celtigerns-wacht/camruisge"
     ],
     "houseIds": [
+      "pert",
       "melog",
       "perllan",
       "haus-draig",
@@ -1286,6 +1289,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "cenyr/celtigerns-wacht/llamreis-ankunft/burgerliche"
     ],
     "houseIds": [
+      "pert",
       "melog",
       "perllan",
       "haus-draig",
@@ -1374,6 +1378,7 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
       "cenyr/celtigerns-wacht/llamreis-ankunft/gwynthor/bradrhith-hof"
     ],
     "houseIds": [
+      "pert",
       "melog",
       "perllan",
       "haus-draig",
@@ -16153,6 +16158,18 @@ export const REGIONAL_EQUIPMENT_TERRITORIES = [
   }
 ];
 export const REGIONAL_EQUIPMENT_HOUSES = [
+  {
+    "id": "pert",
+    "name": "Familie Pert",
+    "image": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Pert/pert-emblem.png",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Gwynthor"
+    ],
+    "tree": "/Stammbäume/Stammbaum.html?family=pert&mode=view"
+  },
   {
     "id": "melog",
     "name": "Familie Melog",

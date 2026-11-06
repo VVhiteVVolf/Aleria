@@ -6881,6 +6881,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "9558bbedde3586",
+    "name": "pert emblem",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Pert/pert-emblem.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor / Pert",
+    "source": "Hauswappen"
+  },
+  {
     "id": "ec773983665241",
     "name": "Argall",
     "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Llysfaen/Argall.png",
