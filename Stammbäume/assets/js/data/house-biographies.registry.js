@@ -217,6 +217,7 @@ import { HOUSE_BIOGRAPHY as haus_jernigan } from "../../../../Familien Häuser u
 import { HOUSE_BIOGRAPHY as haus_talfryn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Llysfaen/Haus_Talfryn/haus.biography.mjs?v=20261103-cenyr-editorial-v2";
 import { HOUSE_BIOGRAPHY as melog } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Melog/haus.biography.mjs?v=20261105-melog-v3";
 import { HOUSE_BIOGRAPHY as perllan } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Perllan/haus.biography.mjs?v=20261104-perllan-v1";
+import { HOUSE_BIOGRAPHY as pert } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Pert/haus.biography.mjs?v=20261106-pert-v1";
 import { HOUSE_BIOGRAPHY as sept_cneacail } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Sept_Cneacail/haus.biography.mjs?v=20261103-cenyr-completeness-v1";
 import { HOUSE_BIOGRAPHY as haus_arwydd } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Arwydd/haus.biography.mjs?v=20261024-housebio-v1";
 import { HOUSE_BIOGRAPHY as haus_gwared } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Rhonwens_Traenen/Haus_Gwared/haus.biography.mjs?v=20261024-housebio-v1";
@@ -865,6 +866,7 @@ export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-talfryn": Object.freeze({ sourceRevision: 3, biography: haus_talfryn, replacedDefaultFingerprints: Object.freeze(["2450:82ac3812:cb6eefa4"]) }),
   "melog": Object.freeze({ sourceRevision: 1, biography: melog, replacedDefaultFingerprints: Object.freeze([]) }),
   "perllan": Object.freeze({ sourceRevision: 1, biography: perllan, replacedDefaultFingerprints: Object.freeze([]) }),
+  "pert": Object.freeze({ sourceRevision: 1, biography: pert, replacedDefaultFingerprints: Object.freeze([]) }),
   "sept-cneacail": Object.freeze({ sourceRevision: 3, biography: sept_cneacail, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-arwydd": Object.freeze({ sourceRevision: 4, biography: haus_arwydd, replacedDefaultFingerprints: Object.freeze(["2698:a681842f:ff26bce5"]) }),
   "haus-gwared": Object.freeze({ sourceRevision: 6, biography: haus_gwared, replacedDefaultFingerprints: Object.freeze(["1876:8604b629:944893af","1997:e5c945af:2010a3e1","1890:db30d50e:cc233d7c"]) }),

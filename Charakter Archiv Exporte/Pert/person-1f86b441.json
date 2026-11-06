@@ -1,0 +1,171 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-06T17:09:43.000Z",
+  "mergeStrategy": "replace-reviewed-metadata-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Pert/person-1f86b441.json",
+  "source": {
+    "kind": "supplied-family-export-and-house-prose",
+    "familyId": "pert",
+    "personId": "person-1f86b441",
+    "worldPersonId": "person--pert--person-1f86b441"
+  },
+  "character": {
+    "name": "Goronvy Pert",
+    "title": "Draig Leibgarde",
+    "fraktion": "Pert",
+    "role": "",
+    "status": "dead",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Goronvy Pert wurde 1692 als Sohn von Iorwerth und Gwerfyl geboren. In der Hausgeschichte erscheint sein Name auch in der Schreibweise Goronwy. Er gehörte der Leibgarde des Hauses Draig an und führte damit die langjährige Dienstbeziehung seiner Familie zum Grafenhaus in einer militärischen Aufgabe fort.\n\nSeine Gemahlin Lowri diente ebenfalls in der Draig-Leibgarde. Ihre Kinder sind Kevan, geboren 1716, und Rhiain, geboren 1719. Im Jahr 1720 fielen Goronvy und Lowri im Krieg gegen Ceitheach. Ein genauer Schlachtort oder weitere Einzelheiten ihres Todes sind nicht überliefert.\n\nNach dem Verlust der Eltern übernahmen Verwandte die Sorge für die Kinder. Rhiain blieb bei der Großmutter Gwerfyl auf Castell Draig, Kevan wurde von Geraint und Bethan auf Hof Maesglas aufgenommen. Beide gehören heute wieder zu den im Dienst des Hauses Draig verzeichneten Angehörigen der Familie.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-06T17:09:43.000Z",
+    "updatedAt": "2026-11-06T17:09:43.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/pert/person-1f86b441.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Goronvy Pert"
+        },
+        {
+          "label": "Familie",
+          "value": "Pert"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Geburt",
+          "value": "1692"
+        },
+        {
+          "label": "Tod",
+          "value": "1720"
+        },
+        {
+          "label": "Lebensstatus",
+          "value": "Verstorben"
+        },
+        {
+          "label": "Aufgabe oder Stellung",
+          "value": "Draig Leibgarde"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/pert/person-1f86b441.png",
+        "portraitCaption": "Goronvy Pert",
+        "biographyTitle": "Familie und Lebensweg",
+        "biographyText": "<p>Goronvy Pert wurde 1692 als Sohn von Iorwerth und Gwerfyl geboren. In der Hausgeschichte erscheint sein Name auch in der Schreibweise Goronwy. Er gehörte der Leibgarde des Hauses Draig an und führte damit die langjährige Dienstbeziehung seiner Familie zum Grafenhaus in einer militärischen Aufgabe fort.</p><p>Seine Gemahlin Lowri diente ebenfalls in der Draig-Leibgarde. Ihre Kinder sind Kevan, geboren 1716, und Rhiain, geboren 1719. Im Jahr 1720 fielen Goronvy und Lowri im Krieg gegen Ceitheach. Ein genauer Schlachtort oder weitere Einzelheiten ihres Todes sind nicht überliefert.</p><p>Nach dem Verlust der Eltern übernahmen Verwandte die Sorge für die Kinder. Rhiain blieb bei der Großmutter Gwerfyl auf Castell Draig, Kevan wurde von Geraint und Bethan auf Hof Maesglas aufgenommen. Beide gehören heute wieder zu den im Dienst des Hauses Draig verzeichneten Angehörigen der Familie.</p>",
+        "documentsTitle": "Familie Pert",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Angehörige und Verbindungen der Familie Pert.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-1f86b441"
+          },
+          {
+            "title": "Hausgeschichte der Perts",
+            "text": "Castell Draig und Hof Maesglas.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--pert--person-1f86b441"
+    },
+    "genealogy": {
+      "worldPersonId": "person--pert--person-1f86b441",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1692",
+      "death": "1720",
+      "houseId": "house-pert",
+      "houseName": "Pert",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "pert",
+          "personId": "person-1f86b441",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-06T17:09:43.000Z",
+          "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-1f86b441",
+          "fingerprint": "{\"name\":\"Goronvy Pert\",\"title\":\"Draig Leibgarde\",\"birth\":\"1692\",\"death\":\"1720\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-1f86b441.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-cde44b00\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cde44b00\",\"name\":\"Iorwerth Pert\"},{\"personId\":\"person-e6511832\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-e6511832\",\"name\":\"Gwerfyl\"}],\"partners\":[{\"personId\":\"person-ab6f684c\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-ab6f684c\",\"name\":\"Lowri\"}],\"children\":[{\"personId\":\"person-52becf61\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-52becf61\",\"name\":\"Kevan Pert\"},{\"personId\":\"person-3a869794\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-3a869794\",\"name\":\"Rhiain Pert\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-cde44b00",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-cde44b00",
+            "name": "Iorwerth Pert"
+          },
+          {
+            "personId": "person-e6511832",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-e6511832",
+            "name": "Gwerfyl"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "person-ab6f684c",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-ab6f684c",
+            "name": "Lowri"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-52becf61",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-52becf61",
+            "name": "Kevan Pert"
+          },
+          {
+            "personId": "person-3a869794",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-3a869794",
+            "name": "Rhiain Pert"
+          }
+        ]
+      }
+    },
+    "id": "person--pert--person-1f86b441"
+  }
+}

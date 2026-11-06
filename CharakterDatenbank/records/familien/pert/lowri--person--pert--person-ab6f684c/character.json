@@ -1,0 +1,383 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--pert--person-ab6f684c",
+  "slug": "lowri",
+  "identity": {
+    "name": "Lowri",
+    "aliases": [],
+    "worldPersonId": "person--pert--person-ab6f684c"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "pert",
+      "label": "Familie Pert"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "pert",
+        "familyTitle": "Familie Pert",
+        "personId": "person-ab6f684c",
+        "worldPersonId": "person--pert--person-ab6f684c",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Lowri\",\"title\":\"Draig Leibgarde\",\"birth\":\"1695\",\"death\":\"1720\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-ab6f684c.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-1f86b441\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"}],\"children\":[{\"personId\":\"person-52becf61\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-52becf61\",\"name\":\"Kevan Pert\"},{\"personId\":\"person-3a869794\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-3a869794\",\"name\":\"Rhiain Pert\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--pert--person-ab6f684c",
+      "documentIds": [
+        "person--pert--person-ab6f684c"
+      ],
+      "documents": [
+        {
+          "documentId": "person--pert--person-ab6f684c",
+          "createdAt": "2026-11-06T17:09:43.000Z",
+          "updatedAt": "2026-11-06T17:09:43.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "pert",
+        "personId": "person-ab6f684c",
+        "worldPersonId": "person--pert--person-ab6f684c",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Pert/person-ab6f684c.json",
+    "sourceExportedAt": "2026-11-06T17:09:43.000Z",
+    "sourceUpdatedAt": "2026-11-06T17:09:43.000Z",
+    "sourceDocumentIds": [
+      "person--pert--person-ab6f684c"
+    ],
+    "contentHash": "52148b9ff6aa75b604f3a8143a843072910ab74bd6016e254b35bedf5160baa1"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "pert-20261106"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Lowri",
+        "title": "Draig Leibgarde",
+        "fraktion": "",
+        "role": "",
+        "status": "dead",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Lowri wurde 1695 geboren und war mit Goronvy Pert verheiratet. Wie ihr Gemahl gehörte sie zur Leibgarde des Hauses Draig. Ihre persönliche Tätigkeit steht damit neben den Aufgaben der Familie in Küche, Vorratsverwaltung und Landwirtschaft als ein weiterer Bereich des Dienstes für das Grafenhaus.\n\nLowri und Goronvy sind die Eltern von Kevan und Rhiain. Beide Eltern fielen 1720 im Krieg gegen Ceitheach. Über den genauen Ort oder Ablauf ihres letzten Einsatzes liegen keine weiteren Angaben vor. Die überlieferten Lebensdaten halten Lowris Tod im selben Jahr wie den ihres Gemahls fest.\n\nDie Kinder fanden anschließend innerhalb der Familie Schutz: Rhiain blieb bei Gwerfyl, Goronvys Mutter, auf Castell Draig. Kevan wuchs bei Geraint und Bethan auf Hof Maesglas auf. Die Hilfe zwischen Burgzweig und Hofzweig bewahrte den familiären Rückhalt der beiden Kinder.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-06T17:09:43.000Z",
+        "updatedAt": "2026-11-06T17:09:43.000Z",
+        "portrait": "../Stammbäume/assets/images/portraits/pert/person-ab6f684c.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Lowri"
+            },
+            {
+              "label": "Familie",
+              "value": "Pert"
+            },
+            {
+              "label": "Stand",
+              "value": "Bürgerlich"
+            },
+            {
+              "label": "Geburt",
+              "value": "1695"
+            },
+            {
+              "label": "Tod",
+              "value": "1720"
+            },
+            {
+              "label": "Lebensstatus",
+              "value": "Verstorben"
+            },
+            {
+              "label": "Aufgabe oder Stellung",
+              "value": "Draig Leibgarde"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/pert/person-ab6f684c.png",
+            "portraitCaption": "Lowri",
+            "biographyTitle": "Familie und Lebensweg",
+            "biographyText": "<p>Lowri wurde 1695 geboren und war mit Goronvy Pert verheiratet. Wie ihr Gemahl gehörte sie zur Leibgarde des Hauses Draig. Ihre persönliche Tätigkeit steht damit neben den Aufgaben der Familie in Küche, Vorratsverwaltung und Landwirtschaft als ein weiterer Bereich des Dienstes für das Grafenhaus.</p><p>Lowri und Goronvy sind die Eltern von Kevan und Rhiain. Beide Eltern fielen 1720 im Krieg gegen Ceitheach. Über den genauen Ort oder Ablauf ihres letzten Einsatzes liegen keine weiteren Angaben vor. Die überlieferten Lebensdaten halten Lowris Tod im selben Jahr wie den ihres Gemahls fest.</p><p>Die Kinder fanden anschließend innerhalb der Familie Schutz: Rhiain blieb bei Gwerfyl, Goronvys Mutter, auf Castell Draig. Kevan wuchs bei Geraint und Bethan auf Hof Maesglas auf. Die Hilfe zwischen Burgzweig und Hofzweig bewahrte den familiären Rückhalt der beiden Kinder.</p>",
+            "documentsTitle": "Familie Pert",
+            "documents": [
+              {
+                "title": "Im Stammbaum ansehen",
+                "text": "Angehörige und Verbindungen der Familie Pert.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+                "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-ab6f684c"
+              },
+              {
+                "title": "Hausgeschichte der Perts",
+                "text": "Castell Draig und Hof Maesglas.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+                "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--pert--person-ab6f684c"
+        },
+        "genealogy": {
+          "worldPersonId": "person--pert--person-ab6f684c",
+          "sex": "female",
+          "status": "dead",
+          "birth": "1695",
+          "death": "1720",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "pert",
+              "personId": "person-ab6f684c",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-06T17:09:43.000Z",
+              "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-ab6f684c",
+              "fingerprint": "{\"name\":\"Lowri\",\"title\":\"Draig Leibgarde\",\"birth\":\"1695\",\"death\":\"1720\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-ab6f684c.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-1f86b441\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"}],\"children\":[{\"personId\":\"person-52becf61\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-52becf61\",\"name\":\"Kevan Pert\"},{\"personId\":\"person-3a869794\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-3a869794\",\"name\":\"Rhiain Pert\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [],
+            "partners": [
+              {
+                "personId": "person-1f86b441",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--pert--person-1f86b441",
+                "name": "Goronvy Pert"
+              }
+            ],
+            "children": [
+              {
+                "personId": "person-52becf61",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--pert--person-52becf61",
+                "name": "Kevan Pert"
+              },
+              {
+                "personId": "person-3a869794",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--pert--person-3a869794",
+                "name": "Rhiain Pert"
+              }
+            ]
+          }
+        },
+        "id": "person--pert--person-ab6f684c"
+      }
+    ]
+  },
+  "character": {
+    "name": "Lowri",
+    "title": "Draig Leibgarde",
+    "fraktion": "",
+    "role": "",
+    "status": "dead",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Lowri wurde 1695 geboren und war mit Goronvy Pert verheiratet. Wie ihr Gemahl gehörte sie zur Leibgarde des Hauses Draig. Ihre persönliche Tätigkeit steht damit neben den Aufgaben der Familie in Küche, Vorratsverwaltung und Landwirtschaft als ein weiterer Bereich des Dienstes für das Grafenhaus.\n\nLowri und Goronvy sind die Eltern von Kevan und Rhiain. Beide Eltern fielen 1720 im Krieg gegen Ceitheach. Über den genauen Ort oder Ablauf ihres letzten Einsatzes liegen keine weiteren Angaben vor. Die überlieferten Lebensdaten halten Lowris Tod im selben Jahr wie den ihres Gemahls fest.\n\nDie Kinder fanden anschließend innerhalb der Familie Schutz: Rhiain blieb bei Gwerfyl, Goronvys Mutter, auf Castell Draig. Kevan wuchs bei Geraint und Bethan auf Hof Maesglas auf. Die Hilfe zwischen Burgzweig und Hofzweig bewahrte den familiären Rückhalt der beiden Kinder.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-06T17:09:43.000Z",
+    "updatedAt": "2026-11-06T17:09:43.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/pert/person-ab6f684c.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Lowri"
+        },
+        {
+          "label": "Familie",
+          "value": "Pert"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Geburt",
+          "value": "1695"
+        },
+        {
+          "label": "Tod",
+          "value": "1720"
+        },
+        {
+          "label": "Lebensstatus",
+          "value": "Verstorben"
+        },
+        {
+          "label": "Aufgabe oder Stellung",
+          "value": "Draig Leibgarde"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/pert/person-ab6f684c.png",
+        "portraitCaption": "Lowri",
+        "biographyTitle": "Familie und Lebensweg",
+        "biographyText": "<p>Lowri wurde 1695 geboren und war mit Goronvy Pert verheiratet. Wie ihr Gemahl gehörte sie zur Leibgarde des Hauses Draig. Ihre persönliche Tätigkeit steht damit neben den Aufgaben der Familie in Küche, Vorratsverwaltung und Landwirtschaft als ein weiterer Bereich des Dienstes für das Grafenhaus.</p><p>Lowri und Goronvy sind die Eltern von Kevan und Rhiain. Beide Eltern fielen 1720 im Krieg gegen Ceitheach. Über den genauen Ort oder Ablauf ihres letzten Einsatzes liegen keine weiteren Angaben vor. Die überlieferten Lebensdaten halten Lowris Tod im selben Jahr wie den ihres Gemahls fest.</p><p>Die Kinder fanden anschließend innerhalb der Familie Schutz: Rhiain blieb bei Gwerfyl, Goronvys Mutter, auf Castell Draig. Kevan wuchs bei Geraint und Bethan auf Hof Maesglas auf. Die Hilfe zwischen Burgzweig und Hofzweig bewahrte den familiären Rückhalt der beiden Kinder.</p>",
+        "documentsTitle": "Familie Pert",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Angehörige und Verbindungen der Familie Pert.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-ab6f684c"
+          },
+          {
+            "title": "Hausgeschichte der Perts",
+            "text": "Castell Draig und Hof Maesglas.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--pert--person-ab6f684c"
+    },
+    "genealogy": {
+      "worldPersonId": "person--pert--person-ab6f684c",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1695",
+      "death": "1720",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "pert",
+          "personId": "person-ab6f684c",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-06T17:09:43.000Z",
+          "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-ab6f684c",
+          "fingerprint": "{\"name\":\"Lowri\",\"title\":\"Draig Leibgarde\",\"birth\":\"1695\",\"death\":\"1720\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-ab6f684c.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-1f86b441\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"}],\"children\":[{\"personId\":\"person-52becf61\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-52becf61\",\"name\":\"Kevan Pert\"},{\"personId\":\"person-3a869794\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-3a869794\",\"name\":\"Rhiain Pert\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "person-1f86b441",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-1f86b441",
+            "name": "Goronvy Pert"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-52becf61",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-52becf61",
+            "name": "Kevan Pert"
+          },
+          {
+            "personId": "person-3a869794",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-3a869794",
+            "name": "Rhiain Pert"
+          }
+        ]
+      }
+    },
+    "id": "person--pert--person-ab6f684c"
+  }
+}

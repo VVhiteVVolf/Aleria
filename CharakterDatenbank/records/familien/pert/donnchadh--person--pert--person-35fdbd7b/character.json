@@ -1,0 +1,341 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--pert--person-35fdbd7b",
+  "slug": "donnchadh",
+  "identity": {
+    "name": "Donnchadh",
+    "aliases": [],
+    "worldPersonId": "person--pert--person-35fdbd7b"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "pert",
+      "label": "Familie Pert"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "pert",
+        "familyTitle": "Familie Pert",
+        "personId": "person-35fdbd7b",
+        "worldPersonId": "person--pert--person-35fdbd7b",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "affair",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Donnchadh\",\"title\":\"Stallmeister Hof\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-35fdbd7b.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-4ee10c57\",\"type\":\"affair\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--pert--person-35fdbd7b",
+      "documentIds": [
+        "person--pert--person-35fdbd7b"
+      ],
+      "documents": [
+        {
+          "documentId": "person--pert--person-35fdbd7b",
+          "createdAt": "2026-11-06T17:09:43.000Z",
+          "updatedAt": "2026-11-06T17:09:43.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "pert",
+        "personId": "person-35fdbd7b",
+        "worldPersonId": "person--pert--person-35fdbd7b",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Pert/person-35fdbd7b.json",
+    "sourceExportedAt": "2026-11-06T17:09:43.000Z",
+    "sourceUpdatedAt": "2026-11-06T17:09:43.000Z",
+    "sourceDocumentIds": [
+      "person--pert--person-35fdbd7b"
+    ],
+    "contentHash": "2741e9afeb4e828565df452211684914b44a29a2433f83c3e14de25af337ada1"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "pert-20261106"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Donnchadh",
+        "title": "Stallmeister Hof",
+        "fraktion": "",
+        "role": "",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Gwynthor",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Donnchadh wurde 1705 geboren und stammt aus Ceitheach. Auf Hof Maesglas in der Umgebung Gwynthors fand er eine neue Heimat. Dort arbeitet er als Stallmeister und betreut die Pferde und Stallungen. Seine Aufgabe ergänzt die Landwirtschaft des von Geraint und Bethan Pert bewirtschafteten Hofes.\n\nEr ist der Lebensgefährte von Sioned Pert, die besonders für Rinder und Milchwirtschaft verantwortlich ist. Seine Aufnahme in das Umfeld der Familie hat vor dem Hintergrund ihrer Geschichte besonderes Gewicht: Goronvy und Lowri Pert waren 1720 im Krieg gegen Ceitheach gefallen. Dennoch richten die Perts ihr Verhältnis zu Donnchadh nach der einzelnen Person aus.\n\nSioned hat die Tochter Roísin. Deren Vater ist in der Familienüberlieferung nicht benannt. Donnchadhs eigene Herkunft und sein Platz auf dem Hof sind belegt; darüber hinausgehende Verwandtschaften oder ein eigener Hofbesitz sind nicht überliefert.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-06T17:09:43.000Z",
+        "updatedAt": "2026-11-06T17:09:43.000Z",
+        "portrait": "../Stammbäume/assets/images/portraits/pert/person-35fdbd7b.jpg",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Donnchadh"
+            },
+            {
+              "label": "Familie",
+              "value": "Pert"
+            },
+            {
+              "label": "Stand",
+              "value": "Bürgerlich"
+            },
+            {
+              "label": "Geburt",
+              "value": "1705"
+            },
+            {
+              "label": "Lebensstatus",
+              "value": "Lebend"
+            },
+            {
+              "label": "Aufgabe oder Stellung",
+              "value": "Stallmeister Hof"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/pert/person-35fdbd7b.jpg",
+            "portraitCaption": "Donnchadh",
+            "biographyTitle": "Familie und Lebensweg",
+            "biographyText": "<p>Donnchadh wurde 1705 geboren und stammt aus Ceitheach. Auf Hof Maesglas in der Umgebung Gwynthors fand er eine neue Heimat. Dort arbeitet er als Stallmeister und betreut die Pferde und Stallungen. Seine Aufgabe ergänzt die Landwirtschaft des von Geraint und Bethan Pert bewirtschafteten Hofes.</p><p>Er ist der Lebensgefährte von Sioned Pert, die besonders für Rinder und Milchwirtschaft verantwortlich ist. Seine Aufnahme in das Umfeld der Familie hat vor dem Hintergrund ihrer Geschichte besonderes Gewicht: Goronvy und Lowri Pert waren 1720 im Krieg gegen Ceitheach gefallen. Dennoch richten die Perts ihr Verhältnis zu Donnchadh nach der einzelnen Person aus.</p><p>Sioned hat die Tochter Roísin. Deren Vater ist in der Familienüberlieferung nicht benannt. Donnchadhs eigene Herkunft und sein Platz auf dem Hof sind belegt; darüber hinausgehende Verwandtschaften oder ein eigener Hofbesitz sind nicht überliefert.</p>",
+            "documentsTitle": "Familie Pert",
+            "documents": [
+              {
+                "title": "Im Stammbaum ansehen",
+                "text": "Angehörige und Verbindungen der Familie Pert.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+                "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-35fdbd7b"
+              },
+              {
+                "title": "Hausgeschichte der Perts",
+                "text": "Castell Draig und Hof Maesglas.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+                "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--pert--person-35fdbd7b"
+        },
+        "genealogy": {
+          "worldPersonId": "person--pert--person-35fdbd7b",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1705",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "affair",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "pert",
+              "personId": "person-35fdbd7b",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-06T17:09:43.000Z",
+              "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-35fdbd7b",
+              "fingerprint": "{\"name\":\"Donnchadh\",\"title\":\"Stallmeister Hof\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-35fdbd7b.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-4ee10c57\",\"type\":\"affair\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [],
+            "partners": [
+              {
+                "personId": "person-4ee10c57",
+                "type": "affair",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--pert--person-4ee10c57",
+                "name": "Sioned Pert"
+              }
+            ],
+            "children": []
+          }
+        },
+        "id": "person--pert--person-35fdbd7b"
+      }
+    ]
+  },
+  "character": {
+    "name": "Donnchadh",
+    "title": "Stallmeister Hof",
+    "fraktion": "",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Donnchadh wurde 1705 geboren und stammt aus Ceitheach. Auf Hof Maesglas in der Umgebung Gwynthors fand er eine neue Heimat. Dort arbeitet er als Stallmeister und betreut die Pferde und Stallungen. Seine Aufgabe ergänzt die Landwirtschaft des von Geraint und Bethan Pert bewirtschafteten Hofes.\n\nEr ist der Lebensgefährte von Sioned Pert, die besonders für Rinder und Milchwirtschaft verantwortlich ist. Seine Aufnahme in das Umfeld der Familie hat vor dem Hintergrund ihrer Geschichte besonderes Gewicht: Goronvy und Lowri Pert waren 1720 im Krieg gegen Ceitheach gefallen. Dennoch richten die Perts ihr Verhältnis zu Donnchadh nach der einzelnen Person aus.\n\nSioned hat die Tochter Roísin. Deren Vater ist in der Familienüberlieferung nicht benannt. Donnchadhs eigene Herkunft und sein Platz auf dem Hof sind belegt; darüber hinausgehende Verwandtschaften oder ein eigener Hofbesitz sind nicht überliefert.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-06T17:09:43.000Z",
+    "updatedAt": "2026-11-06T17:09:43.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/pert/person-35fdbd7b.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Donnchadh"
+        },
+        {
+          "label": "Familie",
+          "value": "Pert"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Geburt",
+          "value": "1705"
+        },
+        {
+          "label": "Lebensstatus",
+          "value": "Lebend"
+        },
+        {
+          "label": "Aufgabe oder Stellung",
+          "value": "Stallmeister Hof"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/pert/person-35fdbd7b.jpg",
+        "portraitCaption": "Donnchadh",
+        "biographyTitle": "Familie und Lebensweg",
+        "biographyText": "<p>Donnchadh wurde 1705 geboren und stammt aus Ceitheach. Auf Hof Maesglas in der Umgebung Gwynthors fand er eine neue Heimat. Dort arbeitet er als Stallmeister und betreut die Pferde und Stallungen. Seine Aufgabe ergänzt die Landwirtschaft des von Geraint und Bethan Pert bewirtschafteten Hofes.</p><p>Er ist der Lebensgefährte von Sioned Pert, die besonders für Rinder und Milchwirtschaft verantwortlich ist. Seine Aufnahme in das Umfeld der Familie hat vor dem Hintergrund ihrer Geschichte besonderes Gewicht: Goronvy und Lowri Pert waren 1720 im Krieg gegen Ceitheach gefallen. Dennoch richten die Perts ihr Verhältnis zu Donnchadh nach der einzelnen Person aus.</p><p>Sioned hat die Tochter Roísin. Deren Vater ist in der Familienüberlieferung nicht benannt. Donnchadhs eigene Herkunft und sein Platz auf dem Hof sind belegt; darüber hinausgehende Verwandtschaften oder ein eigener Hofbesitz sind nicht überliefert.</p>",
+        "documentsTitle": "Familie Pert",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Angehörige und Verbindungen der Familie Pert.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-35fdbd7b"
+          },
+          {
+            "title": "Hausgeschichte der Perts",
+            "text": "Castell Draig und Hof Maesglas.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--pert--person-35fdbd7b"
+    },
+    "genealogy": {
+      "worldPersonId": "person--pert--person-35fdbd7b",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1705",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "affair",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "pert",
+          "personId": "person-35fdbd7b",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-06T17:09:43.000Z",
+          "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-35fdbd7b",
+          "fingerprint": "{\"name\":\"Donnchadh\",\"title\":\"Stallmeister Hof\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-35fdbd7b.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-4ee10c57\",\"type\":\"affair\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "person-4ee10c57",
+            "type": "affair",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-4ee10c57",
+            "name": "Sioned Pert"
+          }
+        ],
+        "children": []
+      }
+    },
+    "id": "person--pert--person-35fdbd7b"
+  }
+}

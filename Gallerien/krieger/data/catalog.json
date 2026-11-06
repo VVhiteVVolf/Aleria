@@ -18354,6 +18354,22 @@
         "bild-db4dc69d4d17221d"
       ],
       "missingNote": ""
+    },
+    {
+      "id": "pert",
+      "name": "Familie Pert",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=pert&mode=view",
+      "sources": [
+        "pert"
+      ],
+      "illustrationIds": [
+        "bild-bf082ea86627c3d9"
+      ],
+      "missingNote": ""
     }
   ],
   "illustrations": [
@@ -53098,6 +53114,27 @@
       ],
       "copies": [
         "AleriaAlmanach/assets/zum-honigtoertchen/figures/baecker-melog.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-bf082ea86627c3d9",
+      "name": "Geraint Pert · Bauer von Hof Maesglas",
+      "category": "Bürgerliche Bauerndarstellung",
+      "affiliation": "Hof Maesglas",
+      "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Pert/assets/pert-bauer.png",
+      "sha256": "bf082ea86627c3d96f3e84ed3535723d60751f4c3476ccd0fdf678360feca743",
+      "houseIds": [
+        "pert"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Pert/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Pert/assets/pert-bauer.png"
       ],
       "note": ""
     }

@@ -1,0 +1,357 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--pert--person-da2c039f",
+  "slug": "goleuddydd-pert",
+  "identity": {
+    "name": "Goleuddydd Pert",
+    "aliases": [],
+    "worldPersonId": "person--pert--person-da2c039f"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "pert",
+      "label": "Familie Pert"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "pert",
+        "familyTitle": "Familie Pert",
+        "personId": "person-da2c039f",
+        "worldPersonId": "person--pert--person-da2c039f",
+        "houseId": "house-pert",
+        "houseName": "Pert",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Goleuddydd Pert\",\"title\":\"Besessen von Kevan\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-da2c039f.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-cada9cd4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cada9cd4\",\"name\":\"Bethan\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--pert--person-da2c039f",
+      "documentIds": [
+        "person--pert--person-da2c039f"
+      ],
+      "documents": [
+        {
+          "documentId": "person--pert--person-da2c039f",
+          "createdAt": "2026-11-06T17:09:43.000Z",
+          "updatedAt": "2026-11-06T17:09:43.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "pert",
+        "personId": "person-da2c039f",
+        "worldPersonId": "person--pert--person-da2c039f",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Pert/person-da2c039f.json",
+    "sourceExportedAt": "2026-11-06T17:09:43.000Z",
+    "sourceUpdatedAt": "2026-11-06T17:09:43.000Z",
+    "sourceDocumentIds": [
+      "person--pert--person-da2c039f"
+    ],
+    "contentHash": "28006b164c16e241fe3be50ad338d6fdcdf1aa76d2e2d8aead48f2820109b1fd"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "pert-20261106"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Goleuddydd Pert",
+        "title": "Besessen von Kevan",
+        "fraktion": "Pert",
+        "role": "",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Gwynthor",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Goleuddydd Pert wurde 1722 als Tochter von Geraint und Bethan geboren. Ihre Geschwister heißen Lleian, Canna und Iolo. Die Familie bewirtschaftet Hof Maesglas in der Umgebung Gwynthors; Iolo ist als Erbe des Hofes verzeichnet. Die Arbeit des landwirtschaftlichen Zweiges umfasst Nutzflächen, Viehzucht, Rinder- und Milchwirtschaft sowie Pferdehaltung.\n\nEine besondere persönliche Angabe betrifft Goleuddydds starke Fixierung auf Kevan. Die Familienakte beschreibt sie mit der Rollenbezeichnung „Besessen von Kevan“. Eine Partnerschaft oder ein Verlöbnis zwischen beiden ist nicht überliefert. Kevan war nach dem Tod seiner Eltern 1720 von Geraint und Bethan auf dem Hof aufgenommen worden.\n\nEin eigenes berufliches Amt Goleuddydds wird nicht genannt. Ihre Einordnung bleibt die einer Angehörigen des Hofzweiges, dessen Familienleben von gemeinsamen Mahlzeiten, Gastfreundschaft und gegenseitiger Hilfe geprägt ist.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-06T17:09:43.000Z",
+        "updatedAt": "2026-11-06T17:09:43.000Z",
+        "portrait": "../Stammbäume/assets/images/portraits/pert/person-da2c039f.jpg",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Goleuddydd Pert"
+            },
+            {
+              "label": "Familie",
+              "value": "Pert"
+            },
+            {
+              "label": "Stand",
+              "value": "Bürgerlich"
+            },
+            {
+              "label": "Geburt",
+              "value": "1722"
+            },
+            {
+              "label": "Lebensstatus",
+              "value": "Lebend"
+            },
+            {
+              "label": "Aufgabe oder Stellung",
+              "value": "Besessen von Kevan"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/pert/person-da2c039f.jpg",
+            "portraitCaption": "Goleuddydd Pert",
+            "biographyTitle": "Familie und Lebensweg",
+            "biographyText": "<p>Goleuddydd Pert wurde 1722 als Tochter von Geraint und Bethan geboren. Ihre Geschwister heißen Lleian, Canna und Iolo. Die Familie bewirtschaftet Hof Maesglas in der Umgebung Gwynthors; Iolo ist als Erbe des Hofes verzeichnet. Die Arbeit des landwirtschaftlichen Zweiges umfasst Nutzflächen, Viehzucht, Rinder- und Milchwirtschaft sowie Pferdehaltung.</p><p>Eine besondere persönliche Angabe betrifft Goleuddydds starke Fixierung auf Kevan. Die Familienakte beschreibt sie mit der Rollenbezeichnung „Besessen von Kevan“. Eine Partnerschaft oder ein Verlöbnis zwischen beiden ist nicht überliefert. Kevan war nach dem Tod seiner Eltern 1720 von Geraint und Bethan auf dem Hof aufgenommen worden.</p><p>Ein eigenes berufliches Amt Goleuddydds wird nicht genannt. Ihre Einordnung bleibt die einer Angehörigen des Hofzweiges, dessen Familienleben von gemeinsamen Mahlzeiten, Gastfreundschaft und gegenseitiger Hilfe geprägt ist.</p>",
+            "documentsTitle": "Familie Pert",
+            "documents": [
+              {
+                "title": "Im Stammbaum ansehen",
+                "text": "Angehörige und Verbindungen der Familie Pert.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+                "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-da2c039f"
+              },
+              {
+                "title": "Hausgeschichte der Perts",
+                "text": "Castell Draig und Hof Maesglas.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+                "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--pert--person-da2c039f"
+        },
+        "genealogy": {
+          "worldPersonId": "person--pert--person-da2c039f",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1722",
+          "death": "",
+          "houseId": "house-pert",
+          "houseName": "Pert",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "pert",
+              "personId": "person-da2c039f",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-06T17:09:43.000Z",
+              "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-da2c039f",
+              "fingerprint": "{\"name\":\"Goleuddydd Pert\",\"title\":\"Besessen von Kevan\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-da2c039f.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-cada9cd4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cada9cd4\",\"name\":\"Bethan\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "person-4506547d",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--pert--person-4506547d",
+                "name": "Geraint Pert"
+              },
+              {
+                "personId": "person-cada9cd4",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--pert--person-cada9cd4",
+                "name": "Bethan"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "id": "person--pert--person-da2c039f"
+      }
+    ]
+  },
+  "character": {
+    "name": "Goleuddydd Pert",
+    "title": "Besessen von Kevan",
+    "fraktion": "Pert",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Goleuddydd Pert wurde 1722 als Tochter von Geraint und Bethan geboren. Ihre Geschwister heißen Lleian, Canna und Iolo. Die Familie bewirtschaftet Hof Maesglas in der Umgebung Gwynthors; Iolo ist als Erbe des Hofes verzeichnet. Die Arbeit des landwirtschaftlichen Zweiges umfasst Nutzflächen, Viehzucht, Rinder- und Milchwirtschaft sowie Pferdehaltung.\n\nEine besondere persönliche Angabe betrifft Goleuddydds starke Fixierung auf Kevan. Die Familienakte beschreibt sie mit der Rollenbezeichnung „Besessen von Kevan“. Eine Partnerschaft oder ein Verlöbnis zwischen beiden ist nicht überliefert. Kevan war nach dem Tod seiner Eltern 1720 von Geraint und Bethan auf dem Hof aufgenommen worden.\n\nEin eigenes berufliches Amt Goleuddydds wird nicht genannt. Ihre Einordnung bleibt die einer Angehörigen des Hofzweiges, dessen Familienleben von gemeinsamen Mahlzeiten, Gastfreundschaft und gegenseitiger Hilfe geprägt ist.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-06T17:09:43.000Z",
+    "updatedAt": "2026-11-06T17:09:43.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/pert/person-da2c039f.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Goleuddydd Pert"
+        },
+        {
+          "label": "Familie",
+          "value": "Pert"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Geburt",
+          "value": "1722"
+        },
+        {
+          "label": "Lebensstatus",
+          "value": "Lebend"
+        },
+        {
+          "label": "Aufgabe oder Stellung",
+          "value": "Besessen von Kevan"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/pert/person-da2c039f.jpg",
+        "portraitCaption": "Goleuddydd Pert",
+        "biographyTitle": "Familie und Lebensweg",
+        "biographyText": "<p>Goleuddydd Pert wurde 1722 als Tochter von Geraint und Bethan geboren. Ihre Geschwister heißen Lleian, Canna und Iolo. Die Familie bewirtschaftet Hof Maesglas in der Umgebung Gwynthors; Iolo ist als Erbe des Hofes verzeichnet. Die Arbeit des landwirtschaftlichen Zweiges umfasst Nutzflächen, Viehzucht, Rinder- und Milchwirtschaft sowie Pferdehaltung.</p><p>Eine besondere persönliche Angabe betrifft Goleuddydds starke Fixierung auf Kevan. Die Familienakte beschreibt sie mit der Rollenbezeichnung „Besessen von Kevan“. Eine Partnerschaft oder ein Verlöbnis zwischen beiden ist nicht überliefert. Kevan war nach dem Tod seiner Eltern 1720 von Geraint und Bethan auf dem Hof aufgenommen worden.</p><p>Ein eigenes berufliches Amt Goleuddydds wird nicht genannt. Ihre Einordnung bleibt die einer Angehörigen des Hofzweiges, dessen Familienleben von gemeinsamen Mahlzeiten, Gastfreundschaft und gegenseitiger Hilfe geprägt ist.</p>",
+        "documentsTitle": "Familie Pert",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Angehörige und Verbindungen der Familie Pert.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-da2c039f"
+          },
+          {
+            "title": "Hausgeschichte der Perts",
+            "text": "Castell Draig und Hof Maesglas.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--pert--person-da2c039f"
+    },
+    "genealogy": {
+      "worldPersonId": "person--pert--person-da2c039f",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1722",
+      "death": "",
+      "houseId": "house-pert",
+      "houseName": "Pert",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "pert",
+          "personId": "person-da2c039f",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-06T17:09:43.000Z",
+          "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-da2c039f",
+          "fingerprint": "{\"name\":\"Goleuddydd Pert\",\"title\":\"Besessen von Kevan\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-da2c039f.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-cada9cd4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cada9cd4\",\"name\":\"Bethan\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-4506547d",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-4506547d",
+            "name": "Geraint Pert"
+          },
+          {
+            "personId": "person-cada9cd4",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-cada9cd4",
+            "name": "Bethan"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--pert--person-da2c039f"
+  }
+}

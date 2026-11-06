@@ -6,7 +6,7 @@
   "identity": {
     "name": "Kevan Pert",
     "aliases": [],
-    "worldPersonId": ""
+    "worldPersonId": "person--pert--person-52becf61"
   },
   "classification": {
     "primary": {
@@ -15,8 +15,28 @@
       "label": "Gwynthor",
       "source": "archive-tab"
     },
-    "familyStatus": "pending",
-    "families": [],
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "pert",
+        "familyTitle": "Familie Pert",
+        "personId": "person-52becf61",
+        "worldPersonId": "person--pert--person-52becf61",
+        "houseId": "house-pert",
+        "houseName": "Pert",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Kevan Pert\",\"title\":\"Waffenknecht Haus Draig\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-52becf61.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-1f86b441\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"},{\"personId\":\"person-ab6f684c\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-ab6f684c\",\"name\":\"Lowri\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
     "familyAlternatives": [],
     "groups": [],
     "places": [
@@ -40,6 +60,7 @@
       "collection": "characters",
       "documentId": "jTzoT0bqb2lfmslJ05FJ",
       "documentIds": [
+        "jTzoT0bqb2lfmslJ05FJ",
         "jTzoT0bqb2lfmslJ05FJ"
       ],
       "documents": [
@@ -47,21 +68,34 @@
           "documentId": "jTzoT0bqb2lfmslJ05FJ",
           "createdAt": "",
           "updatedAt": ""
+        },
+        {
+          "documentId": "jTzoT0bqb2lfmslJ05FJ",
+          "createdAt": "",
+          "updatedAt": "2026-11-06T17:09:43.000Z"
         }
       ]
     },
-    "familyTree": [],
+    "familyTree": [
+      {
+        "familyId": "pert",
+        "personId": "person-52becf61",
+        "worldPersonId": "person--pert--person-52becf61",
+        "url": ""
+      }
+    ],
     "profile": ""
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-10-12T22:24:41.567Z",
-    "sourceUpdatedAt": "",
+    "sourceArchive": "Charakter Archiv Exporte/Pert/person-52becf61.json",
+    "sourceExportedAt": "2026-11-06T17:09:43.000Z",
+    "sourceUpdatedAt": "2026-11-06T17:09:43.000Z",
     "sourceDocumentIds": [
+      "jTzoT0bqb2lfmslJ05FJ",
       "jTzoT0bqb2lfmslJ05FJ"
     ],
-    "contentHash": "dcb1c0499e83db80a2dba8fe3e23e84029e92d48c5524b2249c1cefce0cc2f8b"
+    "contentHash": "0b11a47e2eec9c4f2d3b1883de73726c1819af6b6b8b68723656addee1fbb960"
   },
   "local": {
     "notes": "",
@@ -556,12 +590,119 @@
         "title": "Draig Gardist, Gwynthor",
         "portrait": "https://i.imgur.com/Sl4ntci.png",
         "fraktion": "Haus Draig, Celtigerns Wacht"
+      },
+      {
+        "id": "jTzoT0bqb2lfmslJ05FJ",
+        "name": "Kevan Pert",
+        "bio": "Kevan Pert wurde 1716 als Sohn von Goronvy und Lowri geboren. Seine Schwester Rhiain kam 1719 zur Welt. Beide Eltern dienten in der Leibgarde des Hauses Draig und fielen 1720 im Krieg gegen Ceitheach. Während Rhiain bei der Großmutter Gwerfyl auf Castell Draig blieb, nahmen Geraint und Bethan Kevan auf Hof Maesglas auf. Seine Großeltern väterlicherseits sind Iorwerth und Gwerfyl Pert.\n\nKevan ist als Waffenknecht des Hauses Draig verzeichnet. Seine ältere Dienstgeschichte berichtet, dass er zunächst als Wachsoldat an der Grenze Gwynthors die östliche Straße sicherte. Als seine Großmutter erkrankte, veranlasste der Marschall seine Versetzung an den Hof, damit er bei ihr bleiben konnte. Nach ihrer Genesung blieb Kevan als Gardist auf Castell Draig.\n\nSein Lebensweg verbindet damit die beiden Familienzweige: die Kindheit nach dem Tod der Eltern auf dem landwirtschaftlichen Hof und den späteren Dienst im Umfeld des Grafenhauses. Die Perts beschreiben gegenseitige Verantwortung und zuverlässige Arbeit als tragende Werte ihrer Gemeinschaft.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Kevan Pert"
+            },
+            {
+              "label": "Familie",
+              "value": "Pert"
+            },
+            {
+              "label": "Stand",
+              "value": "Bürgerlich"
+            },
+            {
+              "label": "Geburt",
+              "value": "1716"
+            },
+            {
+              "label": "Lebensstatus",
+              "value": "Lebend"
+            },
+            {
+              "label": "Aufgabe oder Stellung",
+              "value": "Waffenknecht Haus Draig"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/pert/person-52becf61.png",
+            "portraitCaption": "Kevan Pert",
+            "biographyTitle": "Familie und Lebensweg",
+            "biographyText": "<p>Kevan Pert wurde 1716 als Sohn von Goronvy und Lowri geboren. Seine Schwester Rhiain kam 1719 zur Welt. Beide Eltern dienten in der Leibgarde des Hauses Draig und fielen 1720 im Krieg gegen Ceitheach. Während Rhiain bei der Großmutter Gwerfyl auf Castell Draig blieb, nahmen Geraint und Bethan Kevan auf Hof Maesglas auf. Seine Großeltern väterlicherseits sind Iorwerth und Gwerfyl Pert.</p><p>Kevan ist als Waffenknecht des Hauses Draig verzeichnet. Seine ältere Dienstgeschichte berichtet, dass er zunächst als Wachsoldat an der Grenze Gwynthors die östliche Straße sicherte. Als seine Großmutter erkrankte, veranlasste der Marschall seine Versetzung an den Hof, damit er bei ihr bleiben konnte. Nach ihrer Genesung blieb Kevan als Gardist auf Castell Draig.</p><p>Sein Lebensweg verbindet damit die beiden Familienzweige: die Kindheit nach dem Tod der Eltern auf dem landwirtschaftlichen Hof und den späteren Dienst im Umfeld des Grafenhauses. Die Perts beschreiben gegenseitige Verantwortung und zuverlässige Arbeit als tragende Werte ihrer Gemeinschaft.</p>",
+            "documentsTitle": "Familie Pert",
+            "documents": [
+              {
+                "title": "Im Stammbaum ansehen",
+                "text": "Angehörige und Verbindungen der Familie Pert.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+                "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-52becf61"
+              },
+              {
+                "title": "Hausgeschichte der Perts",
+                "text": "Castell Draig und Hof Maesglas.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+                "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+              }
+            ]
+          }
+        },
+        "portrait": "../Stammbäume/assets/images/portraits/pert/person-52becf61.png",
+        "identity": {
+          "worldPersonId": "person--pert--person-52becf61"
+        },
+        "genealogy": {
+          "worldPersonId": "person--pert--person-52becf61",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1716",
+          "death": "",
+          "houseId": "house-pert",
+          "houseName": "Pert",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "pert",
+              "personId": "person-52becf61",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-06T17:09:43.000Z",
+              "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-52becf61",
+              "fingerprint": "{\"name\":\"Kevan Pert\",\"title\":\"Waffenknecht Haus Draig\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-52becf61.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-1f86b441\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"},{\"personId\":\"person-ab6f684c\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-ab6f684c\",\"name\":\"Lowri\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "person-1f86b441",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--pert--person-1f86b441",
+                "name": "Goronvy Pert"
+              },
+              {
+                "personId": "person-ab6f684c",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--pert--person-ab6f684c",
+                "name": "Lowri"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "updatedAt": "2026-11-06T17:09:43.000Z"
       }
     ]
   },
   "character": {
     "id": "jTzoT0bqb2lfmslJ05FJ",
-    "bio": "Kevan Pert ist der Enkel von Seren und Emry Pert. Seine Großmutter arbeitet als Köchin in der Küche des Küchenmeisters der Draig, sein Großvater fiel im Krieg. Lange diente er als Wachsoldat an der Grenze Gwnythors und sicherte mit anderen die östliche Straße. Als seine Großmutter erkrankte, veranlasste der Marschall seine Versetzung an den Hof als Gardist, damit er bei ihr bleiben konnte. Nun ist sie wieder gesund, doch niemand am Hof will die alte Dame kränken, indem er Kevan wieder aufs Land schickt. Deshalb bleibt er.",
+    "bio": "Kevan Pert wurde 1716 als Sohn von Goronvy und Lowri geboren. Seine Schwester Rhiain kam 1719 zur Welt. Beide Eltern dienten in der Leibgarde des Hauses Draig und fielen 1720 im Krieg gegen Ceitheach. Während Rhiain bei der Großmutter Gwerfyl auf Castell Draig blieb, nahmen Geraint und Bethan Kevan auf Hof Maesglas auf. Seine Großeltern väterlicherseits sind Iorwerth und Gwerfyl Pert.\n\nKevan ist als Waffenknecht des Hauses Draig verzeichnet. Seine ältere Dienstgeschichte berichtet, dass er zunächst als Wachsoldat an der Grenze Gwynthors die östliche Straße sicherte. Als seine Großmutter erkrankte, veranlasste der Marschall seine Versetzung an den Hof, damit er bei ihr bleiben konnte. Nach ihrer Genesung blieb Kevan als Gardist auf Castell Draig.\n\nSein Lebensweg verbindet damit die beiden Familienzweige: die Kindheit nach dem Tod der Eltern auf dem landwirtschaftlichen Hof und den späteren Dienst im Umfeld des Grafenhauses. Die Perts beschreiben gegenseitige Verantwortung und zuverlässige Arbeit als tragende Werte ihrer Gemeinschaft.",
     "name": "Kevan Pert",
     "emotes": [
       {
@@ -1042,28 +1183,108 @@
     "aliases": [],
     "emotesOverride": true,
     "title": "Draig Gardist, Gwynthor",
-    "portrait": "https://i.imgur.com/Sl4ntci.png",
+    "portrait": "../Stammbäume/assets/images/portraits/pert/person-52becf61.png",
     "fraktion": "Haus Draig, Celtigerns Wacht",
     "identity": {
-      "worldPersonId": ""
+      "worldPersonId": "person--pert--person-52becf61"
     },
     "genealogy": {
-      "worldPersonId": "",
-      "sex": "",
-      "status": "",
-      "birth": "",
+      "worldPersonId": "person--pert--person-52becf61",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1716",
       "death": "",
-      "houseId": "",
-      "houseName": "",
-      "familyRole": "",
-      "portraitPlaceholder": "",
+      "houseId": "house-pert",
+      "houseName": "Pert",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
       "tags": [],
-      "sources": [],
+      "sources": [
+        {
+          "familyId": "pert",
+          "personId": "person-52becf61",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-06T17:09:43.000Z",
+          "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-52becf61",
+          "fingerprint": "{\"name\":\"Kevan Pert\",\"title\":\"Waffenknecht Haus Draig\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-52becf61.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-1f86b441\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"},{\"personId\":\"person-ab6f684c\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-ab6f684c\",\"name\":\"Lowri\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
       "relationships": {
-        "parents": [],
+        "parents": [
+          {
+            "personId": "person-1f86b441",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-1f86b441",
+            "name": "Goronvy Pert"
+          },
+          {
+            "personId": "person-ab6f684c",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-ab6f684c",
+            "name": "Lowri"
+          }
+        ],
         "partners": [],
         "children": []
       }
-    }
+    },
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Kevan Pert"
+        },
+        {
+          "label": "Familie",
+          "value": "Pert"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Geburt",
+          "value": "1716"
+        },
+        {
+          "label": "Lebensstatus",
+          "value": "Lebend"
+        },
+        {
+          "label": "Aufgabe oder Stellung",
+          "value": "Waffenknecht Haus Draig"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/pert/person-52becf61.png",
+        "portraitCaption": "Kevan Pert",
+        "biographyTitle": "Familie und Lebensweg",
+        "biographyText": "<p>Kevan Pert wurde 1716 als Sohn von Goronvy und Lowri geboren. Seine Schwester Rhiain kam 1719 zur Welt. Beide Eltern dienten in der Leibgarde des Hauses Draig und fielen 1720 im Krieg gegen Ceitheach. Während Rhiain bei der Großmutter Gwerfyl auf Castell Draig blieb, nahmen Geraint und Bethan Kevan auf Hof Maesglas auf. Seine Großeltern väterlicherseits sind Iorwerth und Gwerfyl Pert.</p><p>Kevan ist als Waffenknecht des Hauses Draig verzeichnet. Seine ältere Dienstgeschichte berichtet, dass er zunächst als Wachsoldat an der Grenze Gwynthors die östliche Straße sicherte. Als seine Großmutter erkrankte, veranlasste der Marschall seine Versetzung an den Hof, damit er bei ihr bleiben konnte. Nach ihrer Genesung blieb Kevan als Gardist auf Castell Draig.</p><p>Sein Lebensweg verbindet damit die beiden Familienzweige: die Kindheit nach dem Tod der Eltern auf dem landwirtschaftlichen Hof und den späteren Dienst im Umfeld des Grafenhauses. Die Perts beschreiben gegenseitige Verantwortung und zuverlässige Arbeit als tragende Werte ihrer Gemeinschaft.</p>",
+        "documentsTitle": "Familie Pert",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Angehörige und Verbindungen der Familie Pert.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-52becf61"
+          },
+          {
+            "title": "Hausgeschichte der Perts",
+            "text": "Castell Draig und Hof Maesglas.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+          }
+        ]
+      }
+    },
+    "updatedAt": "2026-11-06T17:09:43.000Z"
   }
 }

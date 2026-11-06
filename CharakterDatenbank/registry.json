@@ -135,6 +135,23 @@
     "Charakter Archiv Exporte/Perllan/person-ec01a3c1.json",
     "Charakter Archiv Exporte/Perllan/person-f3cccc1a.json",
     "Charakter Archiv Exporte/Perllan/person-ffc03267.json",
+    "Charakter Archiv Exporte/Pert/person-02756f76.json",
+    "Charakter Archiv Exporte/Pert/person-1f86b441.json",
+    "Charakter Archiv Exporte/Pert/person-35fdbd7b.json",
+    "Charakter Archiv Exporte/Pert/person-3a869794.json",
+    "Charakter Archiv Exporte/Pert/person-4506547d.json",
+    "Charakter Archiv Exporte/Pert/person-4ee10c57.json",
+    "Charakter Archiv Exporte/Pert/person-52becf61.json",
+    "Charakter Archiv Exporte/Pert/person-618119d8.json",
+    "Charakter Archiv Exporte/Pert/person-96cdce72.json",
+    "Charakter Archiv Exporte/Pert/person-ab6f684c.json",
+    "Charakter Archiv Exporte/Pert/person-cada9cd4.json",
+    "Charakter Archiv Exporte/Pert/person-cde44b00.json",
+    "Charakter Archiv Exporte/Pert/person-cf926021.json",
+    "Charakter Archiv Exporte/Pert/person-da2c039f.json",
+    "Charakter Archiv Exporte/Pert/person-dcc5c8f4.json",
+    "Charakter Archiv Exporte/Pert/person-e6511832.json",
+    "Charakter Archiv Exporte/Pert/person-f61ee33a.json",
     "Charakter Archiv Exporte/Silberhirsch Eigentum 2026-11-02/person--haus-wyrm--rianna-wyrm.json",
     "Charakter Archiv Exporte/Silberhirsch Eigentum 2026-11-02/vk0xAa3ZcEhVvGC1CzNq.json",
     "Charakter Archiv Exporte/Startbesitz 2026-11-02/caralyn-chwedlonol.json",
@@ -331,8 +348,8 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-11-05T18:00:00.000Z",
-  "count": 312,
+  "sourceExportedAt": "2026-11-06T17:09:43.000Z",
+  "count": 328,
   "records": [
     {
       "recordId": "character--kCmUm4WvMZDYetqrSWQ0",
@@ -4169,9 +4186,10 @@
       "recordId": "character--jTzoT0bqb2lfmslJ05FJ",
       "name": "Kevan Pert",
       "aliases": [],
-      "worldPersonId": "",
+      "worldPersonId": "person--pert--person-52becf61",
       "firestoreDocumentId": "jTzoT0bqb2lfmslJ05FJ",
       "firestoreDocumentIds": [
+        "jTzoT0bqb2lfmslJ05FJ",
         "jTzoT0bqb2lfmslJ05FJ"
       ],
       "primary": {
@@ -4180,9 +4198,9 @@
         "label": "Gwynthor",
         "source": "archive-tab"
       },
-      "familyStatus": "pending",
+      "familyStatus": "linked",
       "path": "records/orte/gwynthor/kevan-pert--jTzoT0bqb2lfmslJ05FJ/character.json",
-      "contentHash": "dcb1c0499e83db80a2dba8fe3e23e84029e92d48c5524b2249c1cefce0cc2f8b"
+      "contentHash": "0b11a47e2eec9c4f2d3b1883de73726c1819af6b6b8b68723656addee1fbb960"
     },
     {
       "recordId": "character--wQWeGmSn3YRBxoituMEh",
@@ -6275,6 +6293,294 @@
       "familyStatus": "linked",
       "path": "records/familien/melog/iddon-melog--person--melog--person-157c1853/character.json",
       "contentHash": "3c1d0f68983e9b530ff9a5e82abed07864da11d0a4531a425b89d0d8421c9c4a"
+    },
+    {
+      "recordId": "character--person--pert--person-cde44b00",
+      "name": "Iorwerth Pert",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-cde44b00",
+      "firestoreDocumentId": "person--pert--person-cde44b00",
+      "firestoreDocumentIds": [
+        "person--pert--person-cde44b00"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/iorwerth-pert--person--pert--person-cde44b00/character.json",
+      "contentHash": "6a2b9475222d52f1e8f1bddf3daccd7e8ddbc629a6307534dafdcfe50e401a84"
+    },
+    {
+      "recordId": "character--person--pert--person-02756f76",
+      "name": "Idwal Pert",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-02756f76",
+      "firestoreDocumentId": "person--pert--person-02756f76",
+      "firestoreDocumentIds": [
+        "person--pert--person-02756f76"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/idwal-pert--person--pert--person-02756f76/character.json",
+      "contentHash": "d2404d0a6916431a6d43061e4a75b6a617f489f6c897b59ba2530dce32f4a9bf"
+    },
+    {
+      "recordId": "character--person--pert--person-e6511832",
+      "name": "Gwerfyl",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-e6511832",
+      "firestoreDocumentId": "person--pert--person-e6511832",
+      "firestoreDocumentIds": [
+        "person--pert--person-e6511832"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/gwerfyl--person--pert--person-e6511832/character.json",
+      "contentHash": "6c43fe0140e2452cb62e7f38b1c4a65c7c6452f8f3575e6cbfe82bf2b097fb66"
+    },
+    {
+      "recordId": "character--person--pert--person-dcc5c8f4",
+      "name": "Mared Maesglas",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-dcc5c8f4",
+      "firestoreDocumentId": "person--pert--person-dcc5c8f4",
+      "firestoreDocumentIds": [
+        "person--pert--person-dcc5c8f4"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/mared-maesglas--person--pert--person-dcc5c8f4/character.json",
+      "contentHash": "be405a936c0c78f5e9ee81570b27a36e6c749746789d6aaff78d4b0a6144efd7"
+    },
+    {
+      "recordId": "character--person--pert--person-1f86b441",
+      "name": "Goronvy Pert",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-1f86b441",
+      "firestoreDocumentId": "person--pert--person-1f86b441",
+      "firestoreDocumentIds": [
+        "person--pert--person-1f86b441"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/goronvy-pert--person--pert--person-1f86b441/character.json",
+      "contentHash": "eac0a4f629b156f063f1f78b6173e5933c65b438fb8bba288c74ae6b4bef2bbd"
+    },
+    {
+      "recordId": "character--person--pert--person-ab6f684c",
+      "name": "Lowri",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-ab6f684c",
+      "firestoreDocumentId": "person--pert--person-ab6f684c",
+      "firestoreDocumentIds": [
+        "person--pert--person-ab6f684c"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/lowri--person--pert--person-ab6f684c/character.json",
+      "contentHash": "52148b9ff6aa75b604f3a8143a843072910ab74bd6016e254b35bedf5160baa1"
+    },
+    {
+      "recordId": "character--person--pert--person-4506547d",
+      "name": "Geraint Pert",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-4506547d",
+      "firestoreDocumentId": "person--pert--person-4506547d",
+      "firestoreDocumentIds": [
+        "person--pert--person-4506547d"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/geraint-pert--person--pert--person-4506547d/character.json",
+      "contentHash": "7482a079ee77fe650c5996377e3f924225ca39c57801f3188c906dde1152ab53"
+    },
+    {
+      "recordId": "character--person--pert--person-4ee10c57",
+      "name": "Sioned Pert",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-4ee10c57",
+      "firestoreDocumentId": "person--pert--person-4ee10c57",
+      "firestoreDocumentIds": [
+        "person--pert--person-4ee10c57"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/sioned-pert--person--pert--person-4ee10c57/character.json",
+      "contentHash": "210624f24bdb029f38d16e3d2bd3d45bc7c64bae9474fb566e7b894862e2250f"
+    },
+    {
+      "recordId": "character--person--pert--person-cada9cd4",
+      "name": "Bethan",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-cada9cd4",
+      "firestoreDocumentId": "person--pert--person-cada9cd4",
+      "firestoreDocumentIds": [
+        "person--pert--person-cada9cd4"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/bethan--person--pert--person-cada9cd4/character.json",
+      "contentHash": "2c266202de018b93b67310ed9274f7f1e289008cfbcff6e6e6f06029f1fb5d11"
+    },
+    {
+      "recordId": "character--person--pert--person-35fdbd7b",
+      "name": "Donnchadh",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-35fdbd7b",
+      "firestoreDocumentId": "person--pert--person-35fdbd7b",
+      "firestoreDocumentIds": [
+        "person--pert--person-35fdbd7b"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/donnchadh--person--pert--person-35fdbd7b/character.json",
+      "contentHash": "2741e9afeb4e828565df452211684914b44a29a2433f83c3e14de25af337ada1"
+    },
+    {
+      "recordId": "character--person--pert--person-3a869794",
+      "name": "Rhiain Pert",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-3a869794",
+      "firestoreDocumentId": "person--pert--person-3a869794",
+      "firestoreDocumentIds": [
+        "person--pert--person-3a869794"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/rhiain-pert--person--pert--person-3a869794/character.json",
+      "contentHash": "997c5f1b7966172b58c1d44752d68e73b1e592cdfbc626db9a88f77c781574e6"
+    },
+    {
+      "recordId": "character--person--pert--person-da2c039f",
+      "name": "Goleuddydd Pert",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-da2c039f",
+      "firestoreDocumentId": "person--pert--person-da2c039f",
+      "firestoreDocumentIds": [
+        "person--pert--person-da2c039f"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/goleuddydd-pert--person--pert--person-da2c039f/character.json",
+      "contentHash": "28006b164c16e241fe3be50ad338d6fdcdf1aa76d2e2d8aead48f2820109b1fd"
+    },
+    {
+      "recordId": "character--person--pert--person-f61ee33a",
+      "name": "Lleian Pert",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-f61ee33a",
+      "firestoreDocumentId": "person--pert--person-f61ee33a",
+      "firestoreDocumentIds": [
+        "person--pert--person-f61ee33a"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/lleian-pert--person--pert--person-f61ee33a/character.json",
+      "contentHash": "48989bf545318435877ace74eb3a9287cc1e5902d08443c584b5a6e72469f81a"
+    },
+    {
+      "recordId": "character--person--pert--person-cf926021",
+      "name": "Canna Pert",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-cf926021",
+      "firestoreDocumentId": "person--pert--person-cf926021",
+      "firestoreDocumentIds": [
+        "person--pert--person-cf926021"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/canna-pert--person--pert--person-cf926021/character.json",
+      "contentHash": "9126fcaef1e7e827d8b98f0861434002459b26f2bc57fee0c4cfd0998ca2e9af"
+    },
+    {
+      "recordId": "character--person--pert--person-96cdce72",
+      "name": "Iolo Pert",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-96cdce72",
+      "firestoreDocumentId": "person--pert--person-96cdce72",
+      "firestoreDocumentIds": [
+        "person--pert--person-96cdce72"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/iolo-pert--person--pert--person-96cdce72/character.json",
+      "contentHash": "f4719314fb1ae61d8c505d4a51a26e69ca8374dff07a59735ba4ae23aec48bd2"
+    },
+    {
+      "recordId": "character--person--pert--person-618119d8",
+      "name": "Roísin Pert",
+      "aliases": [],
+      "worldPersonId": "person--pert--person-618119d8",
+      "firestoreDocumentId": "person--pert--person-618119d8",
+      "firestoreDocumentIds": [
+        "person--pert--person-618119d8"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "pert",
+        "label": "Familie Pert"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/pert/roisin-pert--person--pert--person-618119d8/character.json",
+      "contentHash": "623095035b51341edbb5f25d4f94047186e8f5f810b01adea7f9ff3f3a7fd548"
     }
   ]
 }

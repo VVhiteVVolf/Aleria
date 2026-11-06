@@ -1,0 +1,41 @@
+{
+  "schema": "aleria.house-source-manifest",
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "familyId": "pert",
+  "housePageId": "pert",
+  "houseId": "house-pert",
+  "sources": [
+    { "file": "animexx-original.html", "origin": "Vom Nutzer gelieferter HTML-Text, Eingefügter Text.txt", "sha256": "9c5d5bb36cc42bb450415dbd76074fc65537443e7f36affb11c68047e41d9876" },
+    { "file": "pert-original.json", "origin": "Vom Nutzer gelieferte Familienakte C:/Users/fhg_r/Downloads/pert.json", "sha256": "e8d201d8d7bbbb91d697ba47ddfef85c7babc7b42f5ed9612d2c121c833cba16" }
+  ],
+  "coverage": [
+    "Bürgerliche Familie aus Gwynthor, Haus Draig, Cenyri, beschaulicher Wohlstand, Alerische Kirche",
+    "Zwei eng verbundene Zweige: Versorgung und Dienst auf Castell Draig sowie Landwirtschaft auf Hof Maesglas",
+    "Goldenes Füllhorn mit Früchten, Getreide und landwirtschaftlichen Erzeugnissen",
+    "Iorwerth als Brotmeister, Gwerfyl als Küchenmeisterin, Idwals Ehe mit der Hoferbin Mared Maesglas",
+    "Goronvys und Lowris Tod im Krieg gegen Ceitheach 1720, Kevans Aufnahme bei Geraint und Bethan, Rhiain bei Gwerfyl",
+    "Hofbesitz mit Ackerflächen, Stallungen, Wirtschaftsgebäuden, Rinder- und Milchwirtschaft sowie Pferdehaltung",
+    "Sioned und Donnchadh mit ihren überlieferten Aufgaben; Einkünfte des Burgzweiges aus Anstellungen",
+    "Gemeinsame Mahlzeiten, Gastfreundschaft, frühe Verantwortungsübernahme und Hilfe in Notlagen",
+    "Draig-Dienstbeziehung, fehlende politische Ambitionen, keine bekannten offenen Fehden",
+    "Donnchadhs ceitheachische Herkunft trotz der eigenen Kriegsverluste",
+    "Fleiß, Zuverlässigkeit, Gewissenhaftigkeit und gegenseitige Verantwortung",
+    "Alle 17 namentlich bekannten Personen mit gelieferten Portraits, Rollen, Lebensdaten und Stammbaumverweisen"
+  ],
+  "decisions": [
+    "Kanonische Familien- und Hausseiten-ID pert, Haus-ID house-pert; sämtliche gelieferten Personen- und Beziehungskennungen erhalten.",
+    "Kein Shop und kein Almanach-Modul; keine produktiven Daten und keine Charakterdatenbankakten geschrieben.",
+    "Unbekannte Gründer bleiben zwei Stammbaumplatzhalter. Die Zeitsprung-Verbindungen zu Iorwerth und Idwal werden nicht als unmittelbare biologische Elternschaft ausgegeben.",
+    "Primärer Personenname Goronvy aus der JSON; Goronwy aus der Hausprosa als belegte Schreibvariante erhalten.",
+    "Rhiains Geschlecht wird anhand der positiven weiblichen Formulierung in der gelieferten Hausprosa ergänzt. Das ursprüngliche JSON-unknown bleibt im Original erhalten. Canna bleibt unknown.",
+    "Roísin besitzt ausschließlich Sioned als überlieferten Elternteil und behält legitimacy=legitimized. Donnchadhs Partnerschaft mit Sioned erzeugt keine zusätzliche Elternschaft.",
+    "Geraint und Donnchadh verwenden dasselbe gelieferte Portraitmotiv und bleiben verschiedene Personen.",
+    "Ein vorhandener älterer Charakterdatenbankeintrag Kevan Pert hat abweichende Familienangaben. Er wird nicht automatisch verschmolzen, überschrieben oder als zweite Figur importiert. Konfliktbeleg beim Familienimport.",
+    "Maesglas ist der belegte Name aus der Quelle; projektweiter und GitHub-Abgleich bestätigen keine kollidierende eigenständige Haus- oder Hofzuordnung.",
+    "Der Bauernbildauftrag zeigt Geraint nach seinem gelieferten Portrait, ohne eine zusätzliche Person zu schaffen.",
+    "Ein Familienoberhaupt ist nicht benannt. Iolo ist Hoferbe, kein neu erfundener Adeliger oder Amtsinhaber.",
+    "Das leere Kulturkapitel wird ausschließlich mit Cenyri und Alerischer Kirche aus dem gelieferten Profil gefüllt. Keine eigenen Götterpatrone oder religiösen Bräuche ergänzt."
+  ],
+  "publication": "Lokale Quellenübernahme; kein Push, Deploy oder produktiver Schreibzugriff."
+}

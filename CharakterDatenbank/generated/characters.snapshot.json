@@ -135,6 +135,23 @@
     "Charakter Archiv Exporte/Perllan/person-ec01a3c1.json",
     "Charakter Archiv Exporte/Perllan/person-f3cccc1a.json",
     "Charakter Archiv Exporte/Perllan/person-ffc03267.json",
+    "Charakter Archiv Exporte/Pert/person-02756f76.json",
+    "Charakter Archiv Exporte/Pert/person-1f86b441.json",
+    "Charakter Archiv Exporte/Pert/person-35fdbd7b.json",
+    "Charakter Archiv Exporte/Pert/person-3a869794.json",
+    "Charakter Archiv Exporte/Pert/person-4506547d.json",
+    "Charakter Archiv Exporte/Pert/person-4ee10c57.json",
+    "Charakter Archiv Exporte/Pert/person-52becf61.json",
+    "Charakter Archiv Exporte/Pert/person-618119d8.json",
+    "Charakter Archiv Exporte/Pert/person-96cdce72.json",
+    "Charakter Archiv Exporte/Pert/person-ab6f684c.json",
+    "Charakter Archiv Exporte/Pert/person-cada9cd4.json",
+    "Charakter Archiv Exporte/Pert/person-cde44b00.json",
+    "Charakter Archiv Exporte/Pert/person-cf926021.json",
+    "Charakter Archiv Exporte/Pert/person-da2c039f.json",
+    "Charakter Archiv Exporte/Pert/person-dcc5c8f4.json",
+    "Charakter Archiv Exporte/Pert/person-e6511832.json",
+    "Charakter Archiv Exporte/Pert/person-f61ee33a.json",
     "Charakter Archiv Exporte/Silberhirsch Eigentum 2026-11-02/person--haus-wyrm--rianna-wyrm.json",
     "Charakter Archiv Exporte/Silberhirsch Eigentum 2026-11-02/vk0xAa3ZcEhVvGC1CzNq.json",
     "Charakter Archiv Exporte/Startbesitz 2026-11-02/caralyn-chwedlonol.json",
@@ -331,7 +348,7 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-11-05T18:00:00.000Z",
+  "sourceExportedAt": "2026-11-06T17:09:43.000Z",
   "characters": [
     {
       "id": "kCmUm4WvMZDYetqrSWQ0",
@@ -188408,7 +188425,7 @@
     },
     {
       "id": "jTzoT0bqb2lfmslJ05FJ",
-      "bio": "Kevan Pert ist der Enkel von Seren und Emry Pert. Seine Großmutter arbeitet als Köchin in der Küche des Küchenmeisters der Draig, sein Großvater fiel im Krieg. Lange diente er als Wachsoldat an der Grenze Gwnythors und sicherte mit anderen die östliche Straße. Als seine Großmutter erkrankte, veranlasste der Marschall seine Versetzung an den Hof als Gardist, damit er bei ihr bleiben konnte. Nun ist sie wieder gesund, doch niemand am Hof will die alte Dame kränken, indem er Kevan wieder aufs Land schickt. Deshalb bleibt er.",
+      "bio": "Kevan Pert wurde 1716 als Sohn von Goronvy und Lowri geboren. Seine Schwester Rhiain kam 1719 zur Welt. Beide Eltern dienten in der Leibgarde des Hauses Draig und fielen 1720 im Krieg gegen Ceitheach. Während Rhiain bei der Großmutter Gwerfyl auf Castell Draig blieb, nahmen Geraint und Bethan Kevan auf Hof Maesglas auf. Seine Großeltern väterlicherseits sind Iorwerth und Gwerfyl Pert.\n\nKevan ist als Waffenknecht des Hauses Draig verzeichnet. Seine ältere Dienstgeschichte berichtet, dass er zunächst als Wachsoldat an der Grenze Gwynthors die östliche Straße sicherte. Als seine Großmutter erkrankte, veranlasste der Marschall seine Versetzung an den Hof, damit er bei ihr bleiben konnte. Nach ihrer Genesung blieb Kevan als Gardist auf Castell Draig.\n\nSein Lebensweg verbindet damit die beiden Familienzweige: die Kindheit nach dem Tod der Eltern auf dem landwirtschaftlichen Hof und den späteren Dienst im Umfeld des Grafenhauses. Die Perts beschreiben gegenseitige Verantwortung und zuverlässige Arbeit als tragende Werte ihrer Gemeinschaft.",
       "name": "Kevan Pert",
       "emotes": [
         {
@@ -188889,25 +188906,53 @@
       "aliases": [],
       "emotesOverride": true,
       "title": "Draig Gardist, Gwynthor",
-      "portrait": "https://i.imgur.com/Sl4ntci.png",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-52becf61.png",
       "fraktion": "Haus Draig, Celtigerns Wacht",
       "identity": {
-        "worldPersonId": ""
+        "worldPersonId": "person--pert--person-52becf61"
       },
       "genealogy": {
-        "worldPersonId": "",
-        "sex": "",
-        "status": "",
-        "birth": "",
+        "worldPersonId": "person--pert--person-52becf61",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1716",
         "death": "",
-        "houseId": "",
-        "houseName": "",
-        "familyRole": "",
-        "portraitPlaceholder": "",
+        "houseId": "house-pert",
+        "houseName": "Pert",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
         "tags": [],
-        "sources": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-52becf61",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-52becf61",
+            "fingerprint": "{\"name\":\"Kevan Pert\",\"title\":\"Waffenknecht Haus Draig\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-52becf61.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-1f86b441\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"},{\"personId\":\"person-ab6f684c\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-ab6f684c\",\"name\":\"Lowri\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
         "relationships": {
-          "parents": [],
+          "parents": [
+            {
+              "personId": "person-1f86b441",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-1f86b441",
+              "name": "Goronvy Pert"
+            },
+            {
+              "personId": "person-ab6f684c",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-ab6f684c",
+              "name": "Lowri"
+            }
+          ],
           "partners": [],
           "children": []
         }
@@ -188916,8 +188961,9 @@
         "recordId": "character--jTzoT0bqb2lfmslJ05FJ",
         "path": "records/orte/gwynthor/kevan-pert--jTzoT0bqb2lfmslJ05FJ/character.json",
         "schemaVersion": 1,
-        "contentHash": "dcb1c0499e83db80a2dba8fe3e23e84029e92d48c5524b2249c1cefce0cc2f8b",
+        "contentHash": "0b11a47e2eec9c4f2d3b1883de73726c1819af6b6b8b68723656addee1fbb960",
         "firestoreDocumentIds": [
+          "jTzoT0bqb2lfmslJ05FJ",
           "jTzoT0bqb2lfmslJ05FJ"
         ],
         "classification": {
@@ -188927,8 +188973,28 @@
             "label": "Gwynthor",
             "source": "archive-tab"
           },
-          "familyStatus": "pending",
-          "families": [],
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-52becf61",
+              "worldPersonId": "person--pert--person-52becf61",
+              "houseId": "house-pert",
+              "houseName": "Pert",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Kevan Pert\",\"title\":\"Waffenknecht Haus Draig\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-52becf61.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-1f86b441\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"},{\"personId\":\"person-ab6f684c\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-ab6f684c\",\"name\":\"Lowri\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
           "groups": [],
           "places": [
             {
@@ -188938,7 +189004,59 @@
             }
           ]
         }
-      }
+      },
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Kevan Pert"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1716"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Lebend"
+          },
+          {
+            "label": "Aufgabe oder Stellung",
+            "value": "Waffenknecht Haus Draig"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-52becf61.png",
+          "portraitCaption": "Kevan Pert",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Kevan Pert wurde 1716 als Sohn von Goronvy und Lowri geboren. Seine Schwester Rhiain kam 1719 zur Welt. Beide Eltern dienten in der Leibgarde des Hauses Draig und fielen 1720 im Krieg gegen Ceitheach. Während Rhiain bei der Großmutter Gwerfyl auf Castell Draig blieb, nahmen Geraint und Bethan Kevan auf Hof Maesglas auf. Seine Großeltern väterlicherseits sind Iorwerth und Gwerfyl Pert.</p><p>Kevan ist als Waffenknecht des Hauses Draig verzeichnet. Seine ältere Dienstgeschichte berichtet, dass er zunächst als Wachsoldat an der Grenze Gwynthors die östliche Straße sicherte. Als seine Großmutter erkrankte, veranlasste der Marschall seine Versetzung an den Hof, damit er bei ihr bleiben konnte. Nach ihrer Genesung blieb Kevan als Gardist auf Castell Draig.</p><p>Sein Lebensweg verbindet damit die beiden Familienzweige: die Kindheit nach dem Tod der Eltern auf dem landwirtschaftlichen Hof und den späteren Dienst im Umfeld des Grafenhauses. Die Perts beschreiben gegenseitige Verantwortung und zuverlässige Arbeit als tragende Werte ihrer Gemeinschaft.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-52becf61"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "updatedAt": "2026-11-06T17:09:43.000Z"
     },
     {
       "id": "wQWeGmSn3YRBxoituMEh",
@@ -229302,6 +229420,2952 @@
         },
         "authoredFeature": "melog-honigtoertchen-20261105"
       }
+    },
+    {
+      "name": "Iorwerth Pert",
+      "title": "Brotmeister Haus Draig",
+      "fraktion": "Pert",
+      "role": "",
+      "status": "dead",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Iorwerth Pert wurde 1666 geboren und gehörte zu dem auf Castell Draig tätigen Zweig der bürgerlichen Familie Pert. Als Brotmeister des Hauses Draig war er für die Verwaltung und Versorgung der Vorratskammern verantwortlich. Seine Arbeit gehört zu jener über Generationen gewachsenen Dienstbeziehung, auf der das Vertrauen zwischen den Perts und dem Grafenhaus beruht.\n\nSeine Gemahlin Gwerfyl übernahm das Amt der Küchenmeisterin. Ihr gemeinsamer Sohn heißt Goronvy; Kevan und Rhiain sind Iorwerths Enkelkinder. Iorwerths Bruder Idwal begründete durch seine Ehe mit Mared Maesglas den landwirtschaftlichen Familienzweig auf Hof Maesglas. Burgversorgung und Landwirtschaft blieben innerhalb der Familie eng miteinander verbunden.\n\nIorwerth starb 1715. Der spätere Tod seines Sohnes Goronvy und dessen Gemahlin Lowri im Krieg von 1720 fällt damit in die Zeit nach seinem eigenen Leben. Die älteren Anfänge vor Iorwerth und Idwal sind nur durch eine Überlieferungslücke mit den unbekannten Gründern verbunden.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-cde44b00.jpg",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Iorwerth Pert"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1666"
+          },
+          {
+            "label": "Tod",
+            "value": "1715"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Verstorben"
+          },
+          {
+            "label": "Aufgabe oder Stellung",
+            "value": "Brotmeister Haus Draig"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-cde44b00.jpg",
+          "portraitCaption": "Iorwerth Pert",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Iorwerth Pert wurde 1666 geboren und gehörte zu dem auf Castell Draig tätigen Zweig der bürgerlichen Familie Pert. Als Brotmeister des Hauses Draig war er für die Verwaltung und Versorgung der Vorratskammern verantwortlich. Seine Arbeit gehört zu jener über Generationen gewachsenen Dienstbeziehung, auf der das Vertrauen zwischen den Perts und dem Grafenhaus beruht.</p><p>Seine Gemahlin Gwerfyl übernahm das Amt der Küchenmeisterin. Ihr gemeinsamer Sohn heißt Goronvy; Kevan und Rhiain sind Iorwerths Enkelkinder. Iorwerths Bruder Idwal begründete durch seine Ehe mit Mared Maesglas den landwirtschaftlichen Familienzweig auf Hof Maesglas. Burgversorgung und Landwirtschaft blieben innerhalb der Familie eng miteinander verbunden.</p><p>Iorwerth starb 1715. Der spätere Tod seines Sohnes Goronvy und dessen Gemahlin Lowri im Krieg von 1720 fällt damit in die Zeit nach seinem eigenen Leben. Die älteren Anfänge vor Iorwerth und Idwal sind nur durch eine Überlieferungslücke mit den unbekannten Gründern verbunden.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-cde44b00"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-cde44b00"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-cde44b00",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1666",
+        "death": "1715",
+        "houseId": "house-pert",
+        "houseName": "Pert",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-cde44b00",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-cde44b00",
+            "fingerprint": "{\"name\":\"Iorwerth Pert\",\"title\":\"Brotmeister Haus Draig\",\"birth\":\"1666\",\"death\":\"1715\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-cde44b00.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"pert-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--pert--pert-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"pert-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--pert--pert-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"person-e6511832\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-e6511832\",\"name\":\"Gwerfyl\"}],\"children\":[{\"personId\":\"person-1f86b441\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "pert-gruender",
+              "type": "claimed",
+              "legitimacy": "unknown",
+              "certainty": "probable",
+              "worldPersonId": "person--pert--pert-gruender",
+              "name": "Unbekannter Gründer"
+            },
+            {
+              "personId": "pert-gruenderin",
+              "type": "claimed",
+              "legitimacy": "unknown",
+              "certainty": "probable",
+              "worldPersonId": "person--pert--pert-gruenderin",
+              "name": "Unbekannte Gründerin"
+            }
+          ],
+          "partners": [
+            {
+              "personId": "person-e6511832",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-e6511832",
+              "name": "Gwerfyl"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-1f86b441",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-1f86b441",
+              "name": "Goronvy Pert"
+            }
+          ]
+        }
+      },
+      "id": "person--pert--person-cde44b00",
+      "localRecord": {
+        "recordId": "character--person--pert--person-cde44b00",
+        "path": "records/familien/pert/iorwerth-pert--person--pert--person-cde44b00/character.json",
+        "schemaVersion": 1,
+        "contentHash": "6a2b9475222d52f1e8f1bddf3daccd7e8ddbc629a6307534dafdcfe50e401a84",
+        "firestoreDocumentIds": [
+          "person--pert--person-cde44b00"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-cde44b00",
+              "worldPersonId": "person--pert--person-cde44b00",
+              "houseId": "house-pert",
+              "houseName": "Pert",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Iorwerth Pert\",\"title\":\"Brotmeister Haus Draig\",\"birth\":\"1666\",\"death\":\"1715\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-cde44b00.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"pert-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--pert--pert-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"pert-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--pert--pert-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"person-e6511832\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-e6511832\",\"name\":\"Gwerfyl\"}],\"children\":[{\"personId\":\"person-1f86b441\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
+    },
+    {
+      "name": "Idwal Pert",
+      "title": "Heiratete die Erbin eines Hofes",
+      "fraktion": "Pert",
+      "role": "",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Idwal Pert wurde 1670 geboren und ist Iorwerths Bruder. Während Iorwerth als Brotmeister auf Castell Draig arbeitete, verband Idwal seinen Lebensweg mit einem landwirtschaftlichen Anwesen in der Umgebung Gwynthors. Seine Ehe mit Mared Maesglas, der Erbin des gleichnamigen Hofes, brachte den Hof in die Familie Pert.\n\nIdwal und Mared haben die Kinder Geraint und Sioned. Geraint bewirtschaftet das Anwesen heute mit seiner Gemahlin Bethan; Sioned kümmert sich besonders um Rinder und Milchwirtschaft. Damit liegt der wirtschaftliche Schwerpunkt dieses Zweiges in Ackerbau, Viehzucht und Pferdehaltung, während die Verwandten auf Castell Draig von ihrem Dienst für Haus Draig leben.\n\nMared starb 1724. Idwal ist weiterhin als lebend verzeichnet. Der Hof verbindet die Generationen auch als familiärer Zufluchtsort: Nach dem Tod Goronvys und Lowris nahm die Familie von Geraint und Bethan deren Sohn Kevan bei sich auf.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-02756f76.jpg",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Idwal Pert"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1670"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Lebend"
+          },
+          {
+            "label": "Aufgabe oder Stellung",
+            "value": "Heiratete die Erbin eines Hofes"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-02756f76.jpg",
+          "portraitCaption": "Idwal Pert",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Idwal Pert wurde 1670 geboren und ist Iorwerths Bruder. Während Iorwerth als Brotmeister auf Castell Draig arbeitete, verband Idwal seinen Lebensweg mit einem landwirtschaftlichen Anwesen in der Umgebung Gwynthors. Seine Ehe mit Mared Maesglas, der Erbin des gleichnamigen Hofes, brachte den Hof in die Familie Pert.</p><p>Idwal und Mared haben die Kinder Geraint und Sioned. Geraint bewirtschaftet das Anwesen heute mit seiner Gemahlin Bethan; Sioned kümmert sich besonders um Rinder und Milchwirtschaft. Damit liegt der wirtschaftliche Schwerpunkt dieses Zweiges in Ackerbau, Viehzucht und Pferdehaltung, während die Verwandten auf Castell Draig von ihrem Dienst für Haus Draig leben.</p><p>Mared starb 1724. Idwal ist weiterhin als lebend verzeichnet. Der Hof verbindet die Generationen auch als familiärer Zufluchtsort: Nach dem Tod Goronvys und Lowris nahm die Familie von Geraint und Bethan deren Sohn Kevan bei sich auf.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-02756f76"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-02756f76"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-02756f76",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1670",
+        "death": "",
+        "houseId": "house-pert",
+        "houseName": "Pert",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-02756f76",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-02756f76",
+            "fingerprint": "{\"name\":\"Idwal Pert\",\"title\":\"Heiratete die Erbin eines Hofes\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-02756f76.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"pert-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--pert--pert-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"pert-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--pert--pert-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"person-dcc5c8f4\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-dcc5c8f4\",\"name\":\"Mared Maesglas\"}],\"children\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-4ee10c57\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "pert-gruender",
+              "type": "claimed",
+              "legitimacy": "unknown",
+              "certainty": "probable",
+              "worldPersonId": "person--pert--pert-gruender",
+              "name": "Unbekannter Gründer"
+            },
+            {
+              "personId": "pert-gruenderin",
+              "type": "claimed",
+              "legitimacy": "unknown",
+              "certainty": "probable",
+              "worldPersonId": "person--pert--pert-gruenderin",
+              "name": "Unbekannte Gründerin"
+            }
+          ],
+          "partners": [
+            {
+              "personId": "person-dcc5c8f4",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-dcc5c8f4",
+              "name": "Mared Maesglas"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-4506547d",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-4506547d",
+              "name": "Geraint Pert"
+            },
+            {
+              "personId": "person-4ee10c57",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-4ee10c57",
+              "name": "Sioned Pert"
+            }
+          ]
+        }
+      },
+      "id": "person--pert--person-02756f76",
+      "localRecord": {
+        "recordId": "character--person--pert--person-02756f76",
+        "path": "records/familien/pert/idwal-pert--person--pert--person-02756f76/character.json",
+        "schemaVersion": 1,
+        "contentHash": "d2404d0a6916431a6d43061e4a75b6a617f489f6c897b59ba2530dce32f4a9bf",
+        "firestoreDocumentIds": [
+          "person--pert--person-02756f76"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-02756f76",
+              "worldPersonId": "person--pert--person-02756f76",
+              "houseId": "house-pert",
+              "houseName": "Pert",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Idwal Pert\",\"title\":\"Heiratete die Erbin eines Hofes\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-02756f76.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"pert-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--pert--pert-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"pert-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--pert--pert-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"person-dcc5c8f4\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-dcc5c8f4\",\"name\":\"Mared Maesglas\"}],\"children\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-4ee10c57\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
+    },
+    {
+      "name": "Gwerfyl",
+      "title": "Küchenmeisterin Haus Draig",
+      "fraktion": "",
+      "role": "",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Gwerfyl wurde 1668 geboren und ist die Gemahlin des 1715 verstorbenen Brotmeisters Iorwerth Pert. Als Küchenmeisterin des Hauses Draig wurde sie zu einer festen Größe im Personal von Castell Draig. Ihre Tätigkeit steht neben Iorwerths früherer Verantwortung für die Vorratskammern für die enge Verbindung der Perts mit der Versorgung der Burg.\n\nGwerfyl und Iorwerth sind die Eltern von Goronvy. Als Goronvy und seine Gemahlin Lowri 1720 im Krieg gegen Ceitheach fielen, blieben ihre Kinder auf die Hilfe der Verwandten angewiesen. Rhiain wuchs bei Gwerfyl auf Castell Draig auf; Kevan fand bei Geraint und Bethan auf Hof Maesglas ein neues Zuhause.\n\nHeute übernimmt Rhiain selbst als Brotmeister Aufgaben in der Burgversorgung. In Gwerfyls Familienzweig verbinden sich damit die Arbeit mehrerer Generationen und die persönliche Fürsorge für die nach den Kriegsverlusten aufgenommenen Enkelkinder.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-e6511832.jpg",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Gwerfyl"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1668"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Lebend"
+          },
+          {
+            "label": "Aufgabe oder Stellung",
+            "value": "Küchenmeisterin Haus Draig"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-e6511832.jpg",
+          "portraitCaption": "Gwerfyl",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Gwerfyl wurde 1668 geboren und ist die Gemahlin des 1715 verstorbenen Brotmeisters Iorwerth Pert. Als Küchenmeisterin des Hauses Draig wurde sie zu einer festen Größe im Personal von Castell Draig. Ihre Tätigkeit steht neben Iorwerths früherer Verantwortung für die Vorratskammern für die enge Verbindung der Perts mit der Versorgung der Burg.</p><p>Gwerfyl und Iorwerth sind die Eltern von Goronvy. Als Goronvy und seine Gemahlin Lowri 1720 im Krieg gegen Ceitheach fielen, blieben ihre Kinder auf die Hilfe der Verwandten angewiesen. Rhiain wuchs bei Gwerfyl auf Castell Draig auf; Kevan fand bei Geraint und Bethan auf Hof Maesglas ein neues Zuhause.</p><p>Heute übernimmt Rhiain selbst als Brotmeister Aufgaben in der Burgversorgung. In Gwerfyls Familienzweig verbinden sich damit die Arbeit mehrerer Generationen und die persönliche Fürsorge für die nach den Kriegsverlusten aufgenommenen Enkelkinder.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-e6511832"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-e6511832"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-e6511832",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1668",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "married",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-e6511832",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-e6511832",
+            "fingerprint": "{\"name\":\"Gwerfyl\",\"title\":\"Küchenmeisterin Haus Draig\",\"birth\":\"1668\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-e6511832.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-cde44b00\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cde44b00\",\"name\":\"Iorwerth Pert\"}],\"children\":[{\"personId\":\"person-1f86b441\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [
+            {
+              "personId": "person-cde44b00",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-cde44b00",
+              "name": "Iorwerth Pert"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-1f86b441",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-1f86b441",
+              "name": "Goronvy Pert"
+            }
+          ]
+        }
+      },
+      "id": "person--pert--person-e6511832",
+      "localRecord": {
+        "recordId": "character--person--pert--person-e6511832",
+        "path": "records/familien/pert/gwerfyl--person--pert--person-e6511832/character.json",
+        "schemaVersion": 1,
+        "contentHash": "6c43fe0140e2452cb62e7f38b1c4a65c7c6452f8f3575e6cbfe82bf2b097fb66",
+        "firestoreDocumentIds": [
+          "person--pert--person-e6511832"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-e6511832",
+              "worldPersonId": "person--pert--person-e6511832",
+              "houseId": "",
+              "houseName": "",
+              "familyRole": "married",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Gwerfyl\",\"title\":\"Küchenmeisterin Haus Draig\",\"birth\":\"1668\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-e6511832.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-cde44b00\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cde44b00\",\"name\":\"Iorwerth Pert\"}],\"children\":[{\"personId\":\"person-1f86b441\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
+    },
+    {
+      "name": "Mared Maesglas",
+      "title": "Letzte Überlebende Haus Maesglas",
+      "fraktion": "",
+      "role": "",
+      "status": "dead",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Mared Maesglas wurde 1672 geboren und ist als letzte Überlebende ihrer Herkunftsfamilie sowie als Erbin eines Hofes verzeichnet. Durch ihre Ehe mit Idwal Pert gelangte Hof Maesglas in die Familie Pert. Das Anwesen in der Umgebung Gwynthors wurde zum Mittelpunkt des landwirtschaftlichen Zweiges.\n\nMared und Idwal haben die Kinder Geraint und Sioned. Zum Hof gehören Nutzflächen, Stallungen und Wirtschaftsgebäude. Ackerbau, die Haltung von Rindern und Pferden sowie die Milchwirtschaft bilden seine überlieferten Arbeitsbereiche. Heute bewirtschaften Geraint und Bethan das Anwesen, während Sioned sich besonders um Rinder und Milch kümmert.\n\nMared starb 1724. Ihr Name bleibt im Namen des Hofes und in der Familiengeschichte erhalten. Ihre Nachkommen verbinden den bäuerlichen Alltag mit dem Zusammenhalt der Perts, deren anderer Zweig auf Castell Draig dient.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-dcc5c8f4.jpg",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Mared Maesglas"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1672"
+          },
+          {
+            "label": "Tod",
+            "value": "1724"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Verstorben"
+          },
+          {
+            "label": "Aufgabe oder Stellung",
+            "value": "Letzte Überlebende Haus Maesglas"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-dcc5c8f4.jpg",
+          "portraitCaption": "Mared Maesglas",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Mared Maesglas wurde 1672 geboren und ist als letzte Überlebende ihrer Herkunftsfamilie sowie als Erbin eines Hofes verzeichnet. Durch ihre Ehe mit Idwal Pert gelangte Hof Maesglas in die Familie Pert. Das Anwesen in der Umgebung Gwynthors wurde zum Mittelpunkt des landwirtschaftlichen Zweiges.</p><p>Mared und Idwal haben die Kinder Geraint und Sioned. Zum Hof gehören Nutzflächen, Stallungen und Wirtschaftsgebäude. Ackerbau, die Haltung von Rindern und Pferden sowie die Milchwirtschaft bilden seine überlieferten Arbeitsbereiche. Heute bewirtschaften Geraint und Bethan das Anwesen, während Sioned sich besonders um Rinder und Milch kümmert.</p><p>Mared starb 1724. Ihr Name bleibt im Namen des Hofes und in der Familiengeschichte erhalten. Ihre Nachkommen verbinden den bäuerlichen Alltag mit dem Zusammenhalt der Perts, deren anderer Zweig auf Castell Draig dient.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-dcc5c8f4"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-dcc5c8f4"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-dcc5c8f4",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1672",
+        "death": "1724",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "married",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-dcc5c8f4",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-dcc5c8f4",
+            "fingerprint": "{\"name\":\"Mared Maesglas\",\"title\":\"Letzte Überlebende Haus Maesglas\",\"birth\":\"1672\",\"death\":\"1724\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-dcc5c8f4.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-02756f76\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-02756f76\",\"name\":\"Idwal Pert\"}],\"children\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-4ee10c57\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [
+            {
+              "personId": "person-02756f76",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-02756f76",
+              "name": "Idwal Pert"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-4506547d",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-4506547d",
+              "name": "Geraint Pert"
+            },
+            {
+              "personId": "person-4ee10c57",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-4ee10c57",
+              "name": "Sioned Pert"
+            }
+          ]
+        }
+      },
+      "id": "person--pert--person-dcc5c8f4",
+      "localRecord": {
+        "recordId": "character--person--pert--person-dcc5c8f4",
+        "path": "records/familien/pert/mared-maesglas--person--pert--person-dcc5c8f4/character.json",
+        "schemaVersion": 1,
+        "contentHash": "be405a936c0c78f5e9ee81570b27a36e6c749746789d6aaff78d4b0a6144efd7",
+        "firestoreDocumentIds": [
+          "person--pert--person-dcc5c8f4"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-dcc5c8f4",
+              "worldPersonId": "person--pert--person-dcc5c8f4",
+              "houseId": "",
+              "houseName": "",
+              "familyRole": "married",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Mared Maesglas\",\"title\":\"Letzte Überlebende Haus Maesglas\",\"birth\":\"1672\",\"death\":\"1724\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-dcc5c8f4.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-02756f76\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-02756f76\",\"name\":\"Idwal Pert\"}],\"children\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-4ee10c57\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
+    },
+    {
+      "name": "Goronvy Pert",
+      "title": "Draig Leibgarde",
+      "fraktion": "Pert",
+      "role": "",
+      "status": "dead",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Goronvy Pert wurde 1692 als Sohn von Iorwerth und Gwerfyl geboren. In der Hausgeschichte erscheint sein Name auch in der Schreibweise Goronwy. Er gehörte der Leibgarde des Hauses Draig an und führte damit die langjährige Dienstbeziehung seiner Familie zum Grafenhaus in einer militärischen Aufgabe fort.\n\nSeine Gemahlin Lowri diente ebenfalls in der Draig-Leibgarde. Ihre Kinder sind Kevan, geboren 1716, und Rhiain, geboren 1719. Im Jahr 1720 fielen Goronvy und Lowri im Krieg gegen Ceitheach. Ein genauer Schlachtort oder weitere Einzelheiten ihres Todes sind nicht überliefert.\n\nNach dem Verlust der Eltern übernahmen Verwandte die Sorge für die Kinder. Rhiain blieb bei der Großmutter Gwerfyl auf Castell Draig, Kevan wurde von Geraint und Bethan auf Hof Maesglas aufgenommen. Beide gehören heute wieder zu den im Dienst des Hauses Draig verzeichneten Angehörigen der Familie.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-1f86b441.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Goronvy Pert"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1692"
+          },
+          {
+            "label": "Tod",
+            "value": "1720"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Verstorben"
+          },
+          {
+            "label": "Aufgabe oder Stellung",
+            "value": "Draig Leibgarde"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-1f86b441.png",
+          "portraitCaption": "Goronvy Pert",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Goronvy Pert wurde 1692 als Sohn von Iorwerth und Gwerfyl geboren. In der Hausgeschichte erscheint sein Name auch in der Schreibweise Goronwy. Er gehörte der Leibgarde des Hauses Draig an und führte damit die langjährige Dienstbeziehung seiner Familie zum Grafenhaus in einer militärischen Aufgabe fort.</p><p>Seine Gemahlin Lowri diente ebenfalls in der Draig-Leibgarde. Ihre Kinder sind Kevan, geboren 1716, und Rhiain, geboren 1719. Im Jahr 1720 fielen Goronvy und Lowri im Krieg gegen Ceitheach. Ein genauer Schlachtort oder weitere Einzelheiten ihres Todes sind nicht überliefert.</p><p>Nach dem Verlust der Eltern übernahmen Verwandte die Sorge für die Kinder. Rhiain blieb bei der Großmutter Gwerfyl auf Castell Draig, Kevan wurde von Geraint und Bethan auf Hof Maesglas aufgenommen. Beide gehören heute wieder zu den im Dienst des Hauses Draig verzeichneten Angehörigen der Familie.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-1f86b441"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-1f86b441"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-1f86b441",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1692",
+        "death": "1720",
+        "houseId": "house-pert",
+        "houseName": "Pert",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-1f86b441",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-1f86b441",
+            "fingerprint": "{\"name\":\"Goronvy Pert\",\"title\":\"Draig Leibgarde\",\"birth\":\"1692\",\"death\":\"1720\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-1f86b441.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-cde44b00\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cde44b00\",\"name\":\"Iorwerth Pert\"},{\"personId\":\"person-e6511832\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-e6511832\",\"name\":\"Gwerfyl\"}],\"partners\":[{\"personId\":\"person-ab6f684c\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-ab6f684c\",\"name\":\"Lowri\"}],\"children\":[{\"personId\":\"person-52becf61\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-52becf61\",\"name\":\"Kevan Pert\"},{\"personId\":\"person-3a869794\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-3a869794\",\"name\":\"Rhiain Pert\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-cde44b00",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-cde44b00",
+              "name": "Iorwerth Pert"
+            },
+            {
+              "personId": "person-e6511832",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-e6511832",
+              "name": "Gwerfyl"
+            }
+          ],
+          "partners": [
+            {
+              "personId": "person-ab6f684c",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-ab6f684c",
+              "name": "Lowri"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-52becf61",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-52becf61",
+              "name": "Kevan Pert"
+            },
+            {
+              "personId": "person-3a869794",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-3a869794",
+              "name": "Rhiain Pert"
+            }
+          ]
+        }
+      },
+      "id": "person--pert--person-1f86b441",
+      "localRecord": {
+        "recordId": "character--person--pert--person-1f86b441",
+        "path": "records/familien/pert/goronvy-pert--person--pert--person-1f86b441/character.json",
+        "schemaVersion": 1,
+        "contentHash": "eac0a4f629b156f063f1f78b6173e5933c65b438fb8bba288c74ae6b4bef2bbd",
+        "firestoreDocumentIds": [
+          "person--pert--person-1f86b441"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-1f86b441",
+              "worldPersonId": "person--pert--person-1f86b441",
+              "houseId": "house-pert",
+              "houseName": "Pert",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Goronvy Pert\",\"title\":\"Draig Leibgarde\",\"birth\":\"1692\",\"death\":\"1720\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-1f86b441.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-cde44b00\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cde44b00\",\"name\":\"Iorwerth Pert\"},{\"personId\":\"person-e6511832\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-e6511832\",\"name\":\"Gwerfyl\"}],\"partners\":[{\"personId\":\"person-ab6f684c\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-ab6f684c\",\"name\":\"Lowri\"}],\"children\":[{\"personId\":\"person-52becf61\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-52becf61\",\"name\":\"Kevan Pert\"},{\"personId\":\"person-3a869794\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-3a869794\",\"name\":\"Rhiain Pert\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
+    },
+    {
+      "name": "Lowri",
+      "title": "Draig Leibgarde",
+      "fraktion": "",
+      "role": "",
+      "status": "dead",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Lowri wurde 1695 geboren und war mit Goronvy Pert verheiratet. Wie ihr Gemahl gehörte sie zur Leibgarde des Hauses Draig. Ihre persönliche Tätigkeit steht damit neben den Aufgaben der Familie in Küche, Vorratsverwaltung und Landwirtschaft als ein weiterer Bereich des Dienstes für das Grafenhaus.\n\nLowri und Goronvy sind die Eltern von Kevan und Rhiain. Beide Eltern fielen 1720 im Krieg gegen Ceitheach. Über den genauen Ort oder Ablauf ihres letzten Einsatzes liegen keine weiteren Angaben vor. Die überlieferten Lebensdaten halten Lowris Tod im selben Jahr wie den ihres Gemahls fest.\n\nDie Kinder fanden anschließend innerhalb der Familie Schutz: Rhiain blieb bei Gwerfyl, Goronvys Mutter, auf Castell Draig. Kevan wuchs bei Geraint und Bethan auf Hof Maesglas auf. Die Hilfe zwischen Burgzweig und Hofzweig bewahrte den familiären Rückhalt der beiden Kinder.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-ab6f684c.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Lowri"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1695"
+          },
+          {
+            "label": "Tod",
+            "value": "1720"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Verstorben"
+          },
+          {
+            "label": "Aufgabe oder Stellung",
+            "value": "Draig Leibgarde"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-ab6f684c.png",
+          "portraitCaption": "Lowri",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Lowri wurde 1695 geboren und war mit Goronvy Pert verheiratet. Wie ihr Gemahl gehörte sie zur Leibgarde des Hauses Draig. Ihre persönliche Tätigkeit steht damit neben den Aufgaben der Familie in Küche, Vorratsverwaltung und Landwirtschaft als ein weiterer Bereich des Dienstes für das Grafenhaus.</p><p>Lowri und Goronvy sind die Eltern von Kevan und Rhiain. Beide Eltern fielen 1720 im Krieg gegen Ceitheach. Über den genauen Ort oder Ablauf ihres letzten Einsatzes liegen keine weiteren Angaben vor. Die überlieferten Lebensdaten halten Lowris Tod im selben Jahr wie den ihres Gemahls fest.</p><p>Die Kinder fanden anschließend innerhalb der Familie Schutz: Rhiain blieb bei Gwerfyl, Goronvys Mutter, auf Castell Draig. Kevan wuchs bei Geraint und Bethan auf Hof Maesglas auf. Die Hilfe zwischen Burgzweig und Hofzweig bewahrte den familiären Rückhalt der beiden Kinder.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-ab6f684c"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-ab6f684c"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-ab6f684c",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1695",
+        "death": "1720",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "married",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-ab6f684c",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-ab6f684c",
+            "fingerprint": "{\"name\":\"Lowri\",\"title\":\"Draig Leibgarde\",\"birth\":\"1695\",\"death\":\"1720\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-ab6f684c.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-1f86b441\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"}],\"children\":[{\"personId\":\"person-52becf61\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-52becf61\",\"name\":\"Kevan Pert\"},{\"personId\":\"person-3a869794\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-3a869794\",\"name\":\"Rhiain Pert\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [
+            {
+              "personId": "person-1f86b441",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-1f86b441",
+              "name": "Goronvy Pert"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-52becf61",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-52becf61",
+              "name": "Kevan Pert"
+            },
+            {
+              "personId": "person-3a869794",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-3a869794",
+              "name": "Rhiain Pert"
+            }
+          ]
+        }
+      },
+      "id": "person--pert--person-ab6f684c",
+      "localRecord": {
+        "recordId": "character--person--pert--person-ab6f684c",
+        "path": "records/familien/pert/lowri--person--pert--person-ab6f684c/character.json",
+        "schemaVersion": 1,
+        "contentHash": "52148b9ff6aa75b604f3a8143a843072910ab74bd6016e254b35bedf5160baa1",
+        "firestoreDocumentIds": [
+          "person--pert--person-ab6f684c"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-ab6f684c",
+              "worldPersonId": "person--pert--person-ab6f684c",
+              "houseId": "",
+              "houseName": "",
+              "familyRole": "married",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Lowri\",\"title\":\"Draig Leibgarde\",\"birth\":\"1695\",\"death\":\"1720\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-ab6f684c.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-1f86b441\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"}],\"children\":[{\"personId\":\"person-52becf61\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-52becf61\",\"name\":\"Kevan Pert\"},{\"personId\":\"person-3a869794\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-3a869794\",\"name\":\"Rhiain Pert\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
+    },
+    {
+      "name": "Geraint Pert",
+      "title": "Hofbesitzer",
+      "fraktion": "Pert",
+      "role": "",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Geraint Pert wurde 1697 als Sohn von Idwal Pert und Mared Maesglas geboren. Er ist der Besitzer von Hof Maesglas in der Umgebung Gwynthors und bewirtschaftet das Anwesen gemeinsam mit seiner Gemahlin Bethan. Zum Hof gehören landwirtschaftliche Nutzflächen, Stallungen und Wirtschaftsgebäude; Ackerbau, Viehzucht und Pferdehaltung sind seine überlieferten Schwerpunkte.\n\nGeraints Schwester Sioned ist besonders für Rinder und Milchwirtschaft verantwortlich. Ihr Lebensgefährte Donnchadh betreut die Pferde und Stallungen. Bethan kümmert sich um den Haushalt. Geraint und Bethan haben die Kinder Goleuddydd, Lleian, Canna und Iolo; Iolo ist als Hoferbe verzeichnet.\n\nNach dem Tod von Goronvy und Lowri im Krieg von 1720 nahmen Geraint und Bethan deren Sohn Kevan auf dem Hof auf. Das Anwesen besitzt damit neben seiner wirtschaftlichen Bedeutung auch einen festen Platz als familiärer Zufluchtsort. Gemeinsame Mahlzeiten, Gastfreundschaft und gegenseitige Unterstützung gehören zum Selbstverständnis der Perts.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-4506547d.jpg",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Geraint Pert"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1697"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Lebend"
+          },
+          {
+            "label": "Aufgabe oder Stellung",
+            "value": "Hofbesitzer"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-4506547d.jpg",
+          "portraitCaption": "Geraint Pert",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Geraint Pert wurde 1697 als Sohn von Idwal Pert und Mared Maesglas geboren. Er ist der Besitzer von Hof Maesglas in der Umgebung Gwynthors und bewirtschaftet das Anwesen gemeinsam mit seiner Gemahlin Bethan. Zum Hof gehören landwirtschaftliche Nutzflächen, Stallungen und Wirtschaftsgebäude; Ackerbau, Viehzucht und Pferdehaltung sind seine überlieferten Schwerpunkte.</p><p>Geraints Schwester Sioned ist besonders für Rinder und Milchwirtschaft verantwortlich. Ihr Lebensgefährte Donnchadh betreut die Pferde und Stallungen. Bethan kümmert sich um den Haushalt. Geraint und Bethan haben die Kinder Goleuddydd, Lleian, Canna und Iolo; Iolo ist als Hoferbe verzeichnet.</p><p>Nach dem Tod von Goronvy und Lowri im Krieg von 1720 nahmen Geraint und Bethan deren Sohn Kevan auf dem Hof auf. Das Anwesen besitzt damit neben seiner wirtschaftlichen Bedeutung auch einen festen Platz als familiärer Zufluchtsort. Gemeinsame Mahlzeiten, Gastfreundschaft und gegenseitige Unterstützung gehören zum Selbstverständnis der Perts.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-4506547d"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-4506547d"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-4506547d",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "houseId": "house-pert",
+        "houseName": "Pert",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-4506547d",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-4506547d",
+            "fingerprint": "{\"name\":\"Geraint Pert\",\"title\":\"Hofbesitzer\",\"birth\":\"1697\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-4506547d.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-02756f76\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-02756f76\",\"name\":\"Idwal Pert\"},{\"personId\":\"person-dcc5c8f4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-dcc5c8f4\",\"name\":\"Mared Maesglas\"}],\"partners\":[{\"personId\":\"person-cada9cd4\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cada9cd4\",\"name\":\"Bethan\"}],\"children\":[{\"personId\":\"person-da2c039f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-da2c039f\",\"name\":\"Goleuddydd Pert\"},{\"personId\":\"person-f61ee33a\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-f61ee33a\",\"name\":\"Lleian Pert\"},{\"personId\":\"person-cf926021\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cf926021\",\"name\":\"Canna Pert\"},{\"personId\":\"person-96cdce72\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-96cdce72\",\"name\":\"Iolo Pert\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-02756f76",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-02756f76",
+              "name": "Idwal Pert"
+            },
+            {
+              "personId": "person-dcc5c8f4",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-dcc5c8f4",
+              "name": "Mared Maesglas"
+            }
+          ],
+          "partners": [
+            {
+              "personId": "person-cada9cd4",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-cada9cd4",
+              "name": "Bethan"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-da2c039f",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-da2c039f",
+              "name": "Goleuddydd Pert"
+            },
+            {
+              "personId": "person-f61ee33a",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-f61ee33a",
+              "name": "Lleian Pert"
+            },
+            {
+              "personId": "person-cf926021",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-cf926021",
+              "name": "Canna Pert"
+            },
+            {
+              "personId": "person-96cdce72",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-96cdce72",
+              "name": "Iolo Pert"
+            }
+          ]
+        }
+      },
+      "id": "person--pert--person-4506547d",
+      "localRecord": {
+        "recordId": "character--person--pert--person-4506547d",
+        "path": "records/familien/pert/geraint-pert--person--pert--person-4506547d/character.json",
+        "schemaVersion": 1,
+        "contentHash": "7482a079ee77fe650c5996377e3f924225ca39c57801f3188c906dde1152ab53",
+        "firestoreDocumentIds": [
+          "person--pert--person-4506547d"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-4506547d",
+              "worldPersonId": "person--pert--person-4506547d",
+              "houseId": "house-pert",
+              "houseName": "Pert",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Geraint Pert\",\"title\":\"Hofbesitzer\",\"birth\":\"1697\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-4506547d.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-02756f76\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-02756f76\",\"name\":\"Idwal Pert\"},{\"personId\":\"person-dcc5c8f4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-dcc5c8f4\",\"name\":\"Mared Maesglas\"}],\"partners\":[{\"personId\":\"person-cada9cd4\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cada9cd4\",\"name\":\"Bethan\"}],\"children\":[{\"personId\":\"person-da2c039f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-da2c039f\",\"name\":\"Goleuddydd Pert\"},{\"personId\":\"person-f61ee33a\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-f61ee33a\",\"name\":\"Lleian Pert\"},{\"personId\":\"person-cf926021\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cf926021\",\"name\":\"Canna Pert\"},{\"personId\":\"person-96cdce72\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-96cdce72\",\"name\":\"Iolo Pert\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
+    },
+    {
+      "name": "Sioned Pert",
+      "title": "Kümmert sich ums Vieh",
+      "fraktion": "Pert",
+      "role": "",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Sioned Pert wurde 1705 als Tochter von Idwal und Mared Maesglas geboren. Ihr Bruder Geraint bewirtschaftet mit Bethan den Hof Maesglas. Sioned kümmert sich dort besonders um die Rinder und die Milchwirtschaft und übernimmt damit einen benannten Teil der Arbeit des landwirtschaftlichen Familienzweiges.\n\nIhr Lebensgefährte Donnchadh stammt aus Ceitheach und betreut auf dem Hof Pferde und Stallungen. Dass er trotz der Kriegsverluste der Perts dort eine neue Heimat fand, ist Teil der überlieferten Familiengeschichte. Die Familie unterscheidet die politische Feindschaft früherer Kriegsgegner von der Begegnung mit einem einzelnen Menschen.\n\nRoísin, geboren 1732, wird als Sioneds legitimierte Tochter geführt. Der Vater des Kindes ist nicht benannt. Sioned gehört mit ihrer Arbeit, ihrer Tochter und ihrer Verbindung zu Donnchadh zum heutigen Familienleben auf Hof Maesglas.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-4ee10c57.jpg",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Sioned Pert"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1705"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Lebend"
+          },
+          {
+            "label": "Aufgabe oder Stellung",
+            "value": "Kümmert sich ums Vieh"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-4ee10c57.jpg",
+          "portraitCaption": "Sioned Pert",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Sioned Pert wurde 1705 als Tochter von Idwal und Mared Maesglas geboren. Ihr Bruder Geraint bewirtschaftet mit Bethan den Hof Maesglas. Sioned kümmert sich dort besonders um die Rinder und die Milchwirtschaft und übernimmt damit einen benannten Teil der Arbeit des landwirtschaftlichen Familienzweiges.</p><p>Ihr Lebensgefährte Donnchadh stammt aus Ceitheach und betreut auf dem Hof Pferde und Stallungen. Dass er trotz der Kriegsverluste der Perts dort eine neue Heimat fand, ist Teil der überlieferten Familiengeschichte. Die Familie unterscheidet die politische Feindschaft früherer Kriegsgegner von der Begegnung mit einem einzelnen Menschen.</p><p>Roísin, geboren 1732, wird als Sioneds legitimierte Tochter geführt. Der Vater des Kindes ist nicht benannt. Sioned gehört mit ihrer Arbeit, ihrer Tochter und ihrer Verbindung zu Donnchadh zum heutigen Familienleben auf Hof Maesglas.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-4ee10c57"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-4ee10c57"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-4ee10c57",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1705",
+        "death": "",
+        "houseId": "house-pert",
+        "houseName": "Pert",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-4ee10c57",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-4ee10c57",
+            "fingerprint": "{\"name\":\"Sioned Pert\",\"title\":\"Kümmert sich ums Vieh\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-4ee10c57.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-02756f76\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-02756f76\",\"name\":\"Idwal Pert\"},{\"personId\":\"person-dcc5c8f4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-dcc5c8f4\",\"name\":\"Mared Maesglas\"}],\"partners\":[{\"personId\":\"person-35fdbd7b\",\"type\":\"affair\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-35fdbd7b\",\"name\":\"Donnchadh\"}],\"children\":[{\"personId\":\"person-618119d8\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-618119d8\",\"name\":\"Roísin Pert\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-02756f76",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-02756f76",
+              "name": "Idwal Pert"
+            },
+            {
+              "personId": "person-dcc5c8f4",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-dcc5c8f4",
+              "name": "Mared Maesglas"
+            }
+          ],
+          "partners": [
+            {
+              "personId": "person-35fdbd7b",
+              "type": "affair",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-35fdbd7b",
+              "name": "Donnchadh"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-618119d8",
+              "type": "biological",
+              "legitimacy": "legitimized",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-618119d8",
+              "name": "Roísin Pert"
+            }
+          ]
+        }
+      },
+      "id": "person--pert--person-4ee10c57",
+      "localRecord": {
+        "recordId": "character--person--pert--person-4ee10c57",
+        "path": "records/familien/pert/sioned-pert--person--pert--person-4ee10c57/character.json",
+        "schemaVersion": 1,
+        "contentHash": "210624f24bdb029f38d16e3d2bd3d45bc7c64bae9474fb566e7b894862e2250f",
+        "firestoreDocumentIds": [
+          "person--pert--person-4ee10c57"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-4ee10c57",
+              "worldPersonId": "person--pert--person-4ee10c57",
+              "houseId": "house-pert",
+              "houseName": "Pert",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Sioned Pert\",\"title\":\"Kümmert sich ums Vieh\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-4ee10c57.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-02756f76\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-02756f76\",\"name\":\"Idwal Pert\"},{\"personId\":\"person-dcc5c8f4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-dcc5c8f4\",\"name\":\"Mared Maesglas\"}],\"partners\":[{\"personId\":\"person-35fdbd7b\",\"type\":\"affair\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-35fdbd7b\",\"name\":\"Donnchadh\"}],\"children\":[{\"personId\":\"person-618119d8\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-618119d8\",\"name\":\"Roísin Pert\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
+    },
+    {
+      "name": "Bethan",
+      "title": "Haushalt",
+      "fraktion": "",
+      "role": "",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Bethan wurde 1698 geboren und ist mit Geraint Pert verheiratet. Gemeinsam bewirtschaften sie Hof Maesglas in der Umgebung von Gwynthor. Bethans ausdrücklich genannte Aufgabe ist der Haushalt. Das Anwesen mit seinen Nutzflächen, Stallungen und Wirtschaftsgebäuden bildet den Mittelpunkt des landwirtschaftlichen Familienzweiges.\n\nIhre gemeinsamen Kinder heißen Goleuddydd, Lleian, Canna und Iolo. Iolo ist als Hoferbe verzeichnet. Auf dem Hof arbeiten auch Geraints Schwester Sioned, die Rinder und Milchwirtschaft betreut, und deren Lebensgefährte Donnchadh, der für Pferde und Stallungen zuständig ist.\n\nAls Goronvy und Lowri 1720 im Krieg gegen Ceitheach fielen, nahmen Bethan und Geraint deren Sohn Kevan bei sich auf. Der gemeinsame Tisch und die Hilfe für Angehörige in Not gehören zu den beschriebenen Werten der Perts. Bethans Haushalt wurde für Kevan auf diese Weise zu einem neuen Zuhause.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-cada9cd4.jpg",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Bethan"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1698"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Lebend"
+          },
+          {
+            "label": "Aufgabe oder Stellung",
+            "value": "Haushalt"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-cada9cd4.jpg",
+          "portraitCaption": "Bethan",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Bethan wurde 1698 geboren und ist mit Geraint Pert verheiratet. Gemeinsam bewirtschaften sie Hof Maesglas in der Umgebung von Gwynthor. Bethans ausdrücklich genannte Aufgabe ist der Haushalt. Das Anwesen mit seinen Nutzflächen, Stallungen und Wirtschaftsgebäuden bildet den Mittelpunkt des landwirtschaftlichen Familienzweiges.</p><p>Ihre gemeinsamen Kinder heißen Goleuddydd, Lleian, Canna und Iolo. Iolo ist als Hoferbe verzeichnet. Auf dem Hof arbeiten auch Geraints Schwester Sioned, die Rinder und Milchwirtschaft betreut, und deren Lebensgefährte Donnchadh, der für Pferde und Stallungen zuständig ist.</p><p>Als Goronvy und Lowri 1720 im Krieg gegen Ceitheach fielen, nahmen Bethan und Geraint deren Sohn Kevan bei sich auf. Der gemeinsame Tisch und die Hilfe für Angehörige in Not gehören zu den beschriebenen Werten der Perts. Bethans Haushalt wurde für Kevan auf diese Weise zu einem neuen Zuhause.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-cada9cd4"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-cada9cd4"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-cada9cd4",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "married",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-cada9cd4",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-cada9cd4",
+            "fingerprint": "{\"name\":\"Bethan\",\"title\":\"Haushalt\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-cada9cd4.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-4506547d\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"}],\"children\":[{\"personId\":\"person-da2c039f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-da2c039f\",\"name\":\"Goleuddydd Pert\"},{\"personId\":\"person-f61ee33a\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-f61ee33a\",\"name\":\"Lleian Pert\"},{\"personId\":\"person-cf926021\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cf926021\",\"name\":\"Canna Pert\"},{\"personId\":\"person-96cdce72\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-96cdce72\",\"name\":\"Iolo Pert\"}]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [
+            {
+              "personId": "person-4506547d",
+              "type": "marriage",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-4506547d",
+              "name": "Geraint Pert"
+            }
+          ],
+          "children": [
+            {
+              "personId": "person-da2c039f",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-da2c039f",
+              "name": "Goleuddydd Pert"
+            },
+            {
+              "personId": "person-f61ee33a",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-f61ee33a",
+              "name": "Lleian Pert"
+            },
+            {
+              "personId": "person-cf926021",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-cf926021",
+              "name": "Canna Pert"
+            },
+            {
+              "personId": "person-96cdce72",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-96cdce72",
+              "name": "Iolo Pert"
+            }
+          ]
+        }
+      },
+      "id": "person--pert--person-cada9cd4",
+      "localRecord": {
+        "recordId": "character--person--pert--person-cada9cd4",
+        "path": "records/familien/pert/bethan--person--pert--person-cada9cd4/character.json",
+        "schemaVersion": 1,
+        "contentHash": "2c266202de018b93b67310ed9274f7f1e289008cfbcff6e6e6f06029f1fb5d11",
+        "firestoreDocumentIds": [
+          "person--pert--person-cada9cd4"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-cada9cd4",
+              "worldPersonId": "person--pert--person-cada9cd4",
+              "houseId": "",
+              "houseName": "",
+              "familyRole": "married",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Bethan\",\"title\":\"Haushalt\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-cada9cd4.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-4506547d\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"}],\"children\":[{\"personId\":\"person-da2c039f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-da2c039f\",\"name\":\"Goleuddydd Pert\"},{\"personId\":\"person-f61ee33a\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-f61ee33a\",\"name\":\"Lleian Pert\"},{\"personId\":\"person-cf926021\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cf926021\",\"name\":\"Canna Pert\"},{\"personId\":\"person-96cdce72\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-96cdce72\",\"name\":\"Iolo Pert\"}]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
+    },
+    {
+      "name": "Donnchadh",
+      "title": "Stallmeister Hof",
+      "fraktion": "",
+      "role": "",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Donnchadh wurde 1705 geboren und stammt aus Ceitheach. Auf Hof Maesglas in der Umgebung Gwynthors fand er eine neue Heimat. Dort arbeitet er als Stallmeister und betreut die Pferde und Stallungen. Seine Aufgabe ergänzt die Landwirtschaft des von Geraint und Bethan Pert bewirtschafteten Hofes.\n\nEr ist der Lebensgefährte von Sioned Pert, die besonders für Rinder und Milchwirtschaft verantwortlich ist. Seine Aufnahme in das Umfeld der Familie hat vor dem Hintergrund ihrer Geschichte besonderes Gewicht: Goronvy und Lowri Pert waren 1720 im Krieg gegen Ceitheach gefallen. Dennoch richten die Perts ihr Verhältnis zu Donnchadh nach der einzelnen Person aus.\n\nSioned hat die Tochter Roísin. Deren Vater ist in der Familienüberlieferung nicht benannt. Donnchadhs eigene Herkunft und sein Platz auf dem Hof sind belegt; darüber hinausgehende Verwandtschaften oder ein eigener Hofbesitz sind nicht überliefert.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-35fdbd7b.jpg",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Donnchadh"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1705"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Lebend"
+          },
+          {
+            "label": "Aufgabe oder Stellung",
+            "value": "Stallmeister Hof"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-35fdbd7b.jpg",
+          "portraitCaption": "Donnchadh",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Donnchadh wurde 1705 geboren und stammt aus Ceitheach. Auf Hof Maesglas in der Umgebung Gwynthors fand er eine neue Heimat. Dort arbeitet er als Stallmeister und betreut die Pferde und Stallungen. Seine Aufgabe ergänzt die Landwirtschaft des von Geraint und Bethan Pert bewirtschafteten Hofes.</p><p>Er ist der Lebensgefährte von Sioned Pert, die besonders für Rinder und Milchwirtschaft verantwortlich ist. Seine Aufnahme in das Umfeld der Familie hat vor dem Hintergrund ihrer Geschichte besonderes Gewicht: Goronvy und Lowri Pert waren 1720 im Krieg gegen Ceitheach gefallen. Dennoch richten die Perts ihr Verhältnis zu Donnchadh nach der einzelnen Person aus.</p><p>Sioned hat die Tochter Roísin. Deren Vater ist in der Familienüberlieferung nicht benannt. Donnchadhs eigene Herkunft und sein Platz auf dem Hof sind belegt; darüber hinausgehende Verwandtschaften oder ein eigener Hofbesitz sind nicht überliefert.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-35fdbd7b"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-35fdbd7b"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-35fdbd7b",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1705",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "affair",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-35fdbd7b",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-35fdbd7b",
+            "fingerprint": "{\"name\":\"Donnchadh\",\"title\":\"Stallmeister Hof\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-35fdbd7b.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-4ee10c57\",\"type\":\"affair\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [],
+          "partners": [
+            {
+              "personId": "person-4ee10c57",
+              "type": "affair",
+              "status": "active",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-4ee10c57",
+              "name": "Sioned Pert"
+            }
+          ],
+          "children": []
+        }
+      },
+      "id": "person--pert--person-35fdbd7b",
+      "localRecord": {
+        "recordId": "character--person--pert--person-35fdbd7b",
+        "path": "records/familien/pert/donnchadh--person--pert--person-35fdbd7b/character.json",
+        "schemaVersion": 1,
+        "contentHash": "2741e9afeb4e828565df452211684914b44a29a2433f83c3e14de25af337ada1",
+        "firestoreDocumentIds": [
+          "person--pert--person-35fdbd7b"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-35fdbd7b",
+              "worldPersonId": "person--pert--person-35fdbd7b",
+              "houseId": "",
+              "houseName": "",
+              "familyRole": "affair",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Donnchadh\",\"title\":\"Stallmeister Hof\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-35fdbd7b.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-4ee10c57\",\"type\":\"affair\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
+    },
+    {
+      "name": "Rhiain Pert",
+      "title": "Brotmeister Haus Draig",
+      "fraktion": "Pert",
+      "role": "",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Rhiain Pert wurde 1719 als Tochter von Goronvy und Lowri geboren. Kevan ist ihr älterer Bruder. Als beide Eltern 1720 im Krieg gegen Ceitheach fielen, war die Familie auf den Rückhalt ihrer Verwandten angewiesen. Rhiain blieb bei ihrer Großmutter Gwerfyl auf Castell Draig, während Kevan bei Geraint und Bethan auf Hof Maesglas ein neues Zuhause fand.\n\nGwerfyl ist Küchenmeisterin des Hauses Draig. Rhiains Großvater Iorwerth hatte als Brotmeister die Vorratskammern verwaltet und versorgt; er war bereits 1715 gestorben. Rhiain ist heute selbst als Brotmeister des Hauses Draig verzeichnet und führt damit Aufgaben einer jüngeren Generation in der Versorgung der Burg fort.\n\nIhr Leben steht für die Verbindung von Dienst und familiärer Fürsorge innerhalb der Perts. Auch wenn Burgzweig und Hofzweig unterschiedliche Arbeiten übernehmen, bleiben beide eng verbunden und unterstützen Angehörige in einer Notlage.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-3a869794.jpg",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Rhiain Pert"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1719"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Lebend"
+          },
+          {
+            "label": "Aufgabe oder Stellung",
+            "value": "Brotmeister Haus Draig"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-3a869794.jpg",
+          "portraitCaption": "Rhiain Pert",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Rhiain Pert wurde 1719 als Tochter von Goronvy und Lowri geboren. Kevan ist ihr älterer Bruder. Als beide Eltern 1720 im Krieg gegen Ceitheach fielen, war die Familie auf den Rückhalt ihrer Verwandten angewiesen. Rhiain blieb bei ihrer Großmutter Gwerfyl auf Castell Draig, während Kevan bei Geraint und Bethan auf Hof Maesglas ein neues Zuhause fand.</p><p>Gwerfyl ist Küchenmeisterin des Hauses Draig. Rhiains Großvater Iorwerth hatte als Brotmeister die Vorratskammern verwaltet und versorgt; er war bereits 1715 gestorben. Rhiain ist heute selbst als Brotmeister des Hauses Draig verzeichnet und führt damit Aufgaben einer jüngeren Generation in der Versorgung der Burg fort.</p><p>Ihr Leben steht für die Verbindung von Dienst und familiärer Fürsorge innerhalb der Perts. Auch wenn Burgzweig und Hofzweig unterschiedliche Arbeiten übernehmen, bleiben beide eng verbunden und unterstützen Angehörige in einer Notlage.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-3a869794"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-3a869794"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-3a869794",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "houseId": "house-pert",
+        "houseName": "Pert",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-3a869794",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-3a869794",
+            "fingerprint": "{\"name\":\"Rhiain Pert\",\"title\":\"Brotmeister Haus Draig\",\"birth\":\"1719\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-3a869794.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-1f86b441\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"},{\"personId\":\"person-ab6f684c\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-ab6f684c\",\"name\":\"Lowri\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-1f86b441",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-1f86b441",
+              "name": "Goronvy Pert"
+            },
+            {
+              "personId": "person-ab6f684c",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-ab6f684c",
+              "name": "Lowri"
+            }
+          ],
+          "partners": [],
+          "children": []
+        }
+      },
+      "id": "person--pert--person-3a869794",
+      "localRecord": {
+        "recordId": "character--person--pert--person-3a869794",
+        "path": "records/familien/pert/rhiain-pert--person--pert--person-3a869794/character.json",
+        "schemaVersion": 1,
+        "contentHash": "997c5f1b7966172b58c1d44752d68e73b1e592cdfbc626db9a88f77c781574e6",
+        "firestoreDocumentIds": [
+          "person--pert--person-3a869794"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-3a869794",
+              "worldPersonId": "person--pert--person-3a869794",
+              "houseId": "house-pert",
+              "houseName": "Pert",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Rhiain Pert\",\"title\":\"Brotmeister Haus Draig\",\"birth\":\"1719\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-3a869794.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-1f86b441\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-1f86b441\",\"name\":\"Goronvy Pert\"},{\"personId\":\"person-ab6f684c\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-ab6f684c\",\"name\":\"Lowri\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
+    },
+    {
+      "name": "Goleuddydd Pert",
+      "title": "Besessen von Kevan",
+      "fraktion": "Pert",
+      "role": "",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Goleuddydd Pert wurde 1722 als Tochter von Geraint und Bethan geboren. Ihre Geschwister heißen Lleian, Canna und Iolo. Die Familie bewirtschaftet Hof Maesglas in der Umgebung Gwynthors; Iolo ist als Erbe des Hofes verzeichnet. Die Arbeit des landwirtschaftlichen Zweiges umfasst Nutzflächen, Viehzucht, Rinder- und Milchwirtschaft sowie Pferdehaltung.\n\nEine besondere persönliche Angabe betrifft Goleuddydds starke Fixierung auf Kevan. Die Familienakte beschreibt sie mit der Rollenbezeichnung „Besessen von Kevan“. Eine Partnerschaft oder ein Verlöbnis zwischen beiden ist nicht überliefert. Kevan war nach dem Tod seiner Eltern 1720 von Geraint und Bethan auf dem Hof aufgenommen worden.\n\nEin eigenes berufliches Amt Goleuddydds wird nicht genannt. Ihre Einordnung bleibt die einer Angehörigen des Hofzweiges, dessen Familienleben von gemeinsamen Mahlzeiten, Gastfreundschaft und gegenseitiger Hilfe geprägt ist.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-da2c039f.jpg",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Goleuddydd Pert"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1722"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Lebend"
+          },
+          {
+            "label": "Aufgabe oder Stellung",
+            "value": "Besessen von Kevan"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-da2c039f.jpg",
+          "portraitCaption": "Goleuddydd Pert",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Goleuddydd Pert wurde 1722 als Tochter von Geraint und Bethan geboren. Ihre Geschwister heißen Lleian, Canna und Iolo. Die Familie bewirtschaftet Hof Maesglas in der Umgebung Gwynthors; Iolo ist als Erbe des Hofes verzeichnet. Die Arbeit des landwirtschaftlichen Zweiges umfasst Nutzflächen, Viehzucht, Rinder- und Milchwirtschaft sowie Pferdehaltung.</p><p>Eine besondere persönliche Angabe betrifft Goleuddydds starke Fixierung auf Kevan. Die Familienakte beschreibt sie mit der Rollenbezeichnung „Besessen von Kevan“. Eine Partnerschaft oder ein Verlöbnis zwischen beiden ist nicht überliefert. Kevan war nach dem Tod seiner Eltern 1720 von Geraint und Bethan auf dem Hof aufgenommen worden.</p><p>Ein eigenes berufliches Amt Goleuddydds wird nicht genannt. Ihre Einordnung bleibt die einer Angehörigen des Hofzweiges, dessen Familienleben von gemeinsamen Mahlzeiten, Gastfreundschaft und gegenseitiger Hilfe geprägt ist.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-da2c039f"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-da2c039f"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-da2c039f",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "houseId": "house-pert",
+        "houseName": "Pert",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-da2c039f",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-da2c039f",
+            "fingerprint": "{\"name\":\"Goleuddydd Pert\",\"title\":\"Besessen von Kevan\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-da2c039f.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-cada9cd4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cada9cd4\",\"name\":\"Bethan\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-4506547d",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-4506547d",
+              "name": "Geraint Pert"
+            },
+            {
+              "personId": "person-cada9cd4",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-cada9cd4",
+              "name": "Bethan"
+            }
+          ],
+          "partners": [],
+          "children": []
+        }
+      },
+      "id": "person--pert--person-da2c039f",
+      "localRecord": {
+        "recordId": "character--person--pert--person-da2c039f",
+        "path": "records/familien/pert/goleuddydd-pert--person--pert--person-da2c039f/character.json",
+        "schemaVersion": 1,
+        "contentHash": "28006b164c16e241fe3be50ad338d6fdcdf1aa76d2e2d8aead48f2820109b1fd",
+        "firestoreDocumentIds": [
+          "person--pert--person-da2c039f"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-da2c039f",
+              "worldPersonId": "person--pert--person-da2c039f",
+              "houseId": "house-pert",
+              "houseName": "Pert",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Goleuddydd Pert\",\"title\":\"Besessen von Kevan\",\"birth\":\"1722\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-da2c039f.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-cada9cd4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cada9cd4\",\"name\":\"Bethan\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
+    },
+    {
+      "name": "Lleian Pert",
+      "title": "",
+      "fraktion": "Pert",
+      "role": "",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Lleian Pert wurde 1725 als Tochter von Geraint und Bethan geboren. Ihre ältere Schwester heißt Goleuddydd; Canna und Iolo gehören ebenfalls zu ihren Geschwistern. Geraint und Bethan bewirtschaften Hof Maesglas, der durch Lleians Großmutter Mared Maesglas in die Familie Pert gelangte.\n\nDer Hof bildet den landwirtschaftlichen Mittelpunkt des Hauses. Geraints Schwester Sioned ist besonders für Rinder und Milchwirtschaft zuständig, ihr Lebensgefährte Donnchadh für Pferde und Stallungen. Neben Stallungen und Wirtschaftsgebäuden gehören landwirtschaftliche Nutzflächen zum Anwesen.\n\nFür Lleian sind weder ein eigener Beruf noch ein persönliches Amt benannt. Die überlieferten Familienbräuche betonen gemeinsame Mahlzeiten, Gastfreundschaft und das schrittweise Übernehmen von Verantwortung. Diese Angaben beschreiben das Umfeld, in dem die jüngere Generation der Perts lebt.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-f61ee33a.jpg",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Lleian Pert"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1725"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Lebend"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-f61ee33a.jpg",
+          "portraitCaption": "Lleian Pert",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Lleian Pert wurde 1725 als Tochter von Geraint und Bethan geboren. Ihre ältere Schwester heißt Goleuddydd; Canna und Iolo gehören ebenfalls zu ihren Geschwistern. Geraint und Bethan bewirtschaften Hof Maesglas, der durch Lleians Großmutter Mared Maesglas in die Familie Pert gelangte.</p><p>Der Hof bildet den landwirtschaftlichen Mittelpunkt des Hauses. Geraints Schwester Sioned ist besonders für Rinder und Milchwirtschaft zuständig, ihr Lebensgefährte Donnchadh für Pferde und Stallungen. Neben Stallungen und Wirtschaftsgebäuden gehören landwirtschaftliche Nutzflächen zum Anwesen.</p><p>Für Lleian sind weder ein eigener Beruf noch ein persönliches Amt benannt. Die überlieferten Familienbräuche betonen gemeinsame Mahlzeiten, Gastfreundschaft und das schrittweise Übernehmen von Verantwortung. Diese Angaben beschreiben das Umfeld, in dem die jüngere Generation der Perts lebt.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-f61ee33a"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-f61ee33a"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-f61ee33a",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "houseId": "house-pert",
+        "houseName": "Pert",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-f61ee33a",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-f61ee33a",
+            "fingerprint": "{\"name\":\"Lleian Pert\",\"title\":\"\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-f61ee33a.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-cada9cd4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cada9cd4\",\"name\":\"Bethan\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-4506547d",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-4506547d",
+              "name": "Geraint Pert"
+            },
+            {
+              "personId": "person-cada9cd4",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-cada9cd4",
+              "name": "Bethan"
+            }
+          ],
+          "partners": [],
+          "children": []
+        }
+      },
+      "id": "person--pert--person-f61ee33a",
+      "localRecord": {
+        "recordId": "character--person--pert--person-f61ee33a",
+        "path": "records/familien/pert/lleian-pert--person--pert--person-f61ee33a/character.json",
+        "schemaVersion": 1,
+        "contentHash": "48989bf545318435877ace74eb3a9287cc1e5902d08443c584b5a6e72469f81a",
+        "firestoreDocumentIds": [
+          "person--pert--person-f61ee33a"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-f61ee33a",
+              "worldPersonId": "person--pert--person-f61ee33a",
+              "houseId": "house-pert",
+              "houseName": "Pert",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Lleian Pert\",\"title\":\"\",\"birth\":\"1725\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-f61ee33a.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-cada9cd4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cada9cd4\",\"name\":\"Bethan\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
+    },
+    {
+      "name": "Canna Pert",
+      "title": "",
+      "fraktion": "Pert",
+      "role": "",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Canna Pert wurde 1729 geboren und ist ein Kind von Geraint und Bethan. Goleuddydd, Lleian und Iolo sind die Geschwister. Die Eltern bewirtschaften Hof Maesglas in der Umgebung Gwynthors. Das Anwesen kam durch Mared Maesglas, Cannas Großmutter, in die Familie Pert und bildet den Mittelpunkt des landwirtschaftlichen Zweiges.\n\nAuf dem Hof gehören Ackerbau, Rinderhaltung, Milchwirtschaft sowie die Versorgung von Pferden und Stallungen zum überlieferten Alltag. Die benannten Erwachsenen teilen diese Aufgaben unter sich auf. Cannas jüngerer Bruder Iolo ist als Hoferbe verzeichnet.\n\nWeitere persönliche Eigenschaften, eine berufliche Ausbildung und ein eigener Aufgabenbereich Cannas sind nicht beschrieben. Die Familie legt Wert auf Zusammenhalt, gewissenhafte Arbeit und die Unterstützung von Angehörigen in Not. Das Geschlecht bleibt in der Familienakte unbestimmt.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-cf926021.jpg",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Canna Pert"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1729"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Lebend"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-cf926021.jpg",
+          "portraitCaption": "Canna Pert",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Canna Pert wurde 1729 geboren und ist ein Kind von Geraint und Bethan. Goleuddydd, Lleian und Iolo sind die Geschwister. Die Eltern bewirtschaften Hof Maesglas in der Umgebung Gwynthors. Das Anwesen kam durch Mared Maesglas, Cannas Großmutter, in die Familie Pert und bildet den Mittelpunkt des landwirtschaftlichen Zweiges.</p><p>Auf dem Hof gehören Ackerbau, Rinderhaltung, Milchwirtschaft sowie die Versorgung von Pferden und Stallungen zum überlieferten Alltag. Die benannten Erwachsenen teilen diese Aufgaben unter sich auf. Cannas jüngerer Bruder Iolo ist als Hoferbe verzeichnet.</p><p>Weitere persönliche Eigenschaften, eine berufliche Ausbildung und ein eigener Aufgabenbereich Cannas sind nicht beschrieben. Die Familie legt Wert auf Zusammenhalt, gewissenhafte Arbeit und die Unterstützung von Angehörigen in Not. Das Geschlecht bleibt in der Familienakte unbestimmt.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-cf926021"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-cf926021"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-cf926021",
+        "sex": "unknown",
+        "status": "alive",
+        "birth": "1729",
+        "death": "",
+        "houseId": "house-pert",
+        "houseName": "Pert",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-cf926021",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-cf926021",
+            "fingerprint": "{\"name\":\"Canna Pert\",\"title\":\"\",\"birth\":\"1729\",\"death\":\"\",\"sex\":\"unknown\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-cf926021.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-cada9cd4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cada9cd4\",\"name\":\"Bethan\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-4506547d",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-4506547d",
+              "name": "Geraint Pert"
+            },
+            {
+              "personId": "person-cada9cd4",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-cada9cd4",
+              "name": "Bethan"
+            }
+          ],
+          "partners": [],
+          "children": []
+        }
+      },
+      "id": "person--pert--person-cf926021",
+      "localRecord": {
+        "recordId": "character--person--pert--person-cf926021",
+        "path": "records/familien/pert/canna-pert--person--pert--person-cf926021/character.json",
+        "schemaVersion": 1,
+        "contentHash": "9126fcaef1e7e827d8b98f0861434002459b26f2bc57fee0c4cfd0998ca2e9af",
+        "firestoreDocumentIds": [
+          "person--pert--person-cf926021"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-cf926021",
+              "worldPersonId": "person--pert--person-cf926021",
+              "houseId": "house-pert",
+              "houseName": "Pert",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Canna Pert\",\"title\":\"\",\"birth\":\"1729\",\"death\":\"\",\"sex\":\"unknown\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-cf926021.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-cada9cd4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cada9cd4\",\"name\":\"Bethan\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
+    },
+    {
+      "name": "Iolo Pert",
+      "title": "Hoferbe",
+      "fraktion": "Pert",
+      "role": "",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Iolo Pert wurde 1735 als Sohn von Geraint und Bethan geboren. Goleuddydd, Lleian und Canna sind seine älteren Geschwister. In der Familienakte ist Iolo als Hoferbe verzeichnet. Diese Bezeichnung bezieht sich auf Hof Maesglas, den landwirtschaftlichen Besitz der Familie in der Umgebung Gwynthors.\n\nSeine Eltern bewirtschaften das Anwesen mit seinen Nutzflächen, Stallungen und Wirtschaftsgebäuden. Geraints Schwester Sioned betreut besonders Rinder und Milchwirtschaft; Donnchadh kümmert sich um Pferde und Stallungen. Der Hof gelangte über Iolos Großmutter Mared Maesglas in die Familie.\n\nIolo gehört zur jüngsten Generation der Perts. Ein eigener heutiger Beruf ist nicht benannt. Die spätere Hofnachfolge steht neben einer Kindheit im familiären Umfeld, in dem gemeinsamer Tisch, Gastfreundschaft und gegenseitige Verantwortung als wichtige Werte beschrieben werden.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-96cdce72.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Iolo Pert"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1735"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Lebend"
+          },
+          {
+            "label": "Aufgabe oder Stellung",
+            "value": "Hoferbe"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-96cdce72.png",
+          "portraitCaption": "Iolo Pert",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Iolo Pert wurde 1735 als Sohn von Geraint und Bethan geboren. Goleuddydd, Lleian und Canna sind seine älteren Geschwister. In der Familienakte ist Iolo als Hoferbe verzeichnet. Diese Bezeichnung bezieht sich auf Hof Maesglas, den landwirtschaftlichen Besitz der Familie in der Umgebung Gwynthors.</p><p>Seine Eltern bewirtschaften das Anwesen mit seinen Nutzflächen, Stallungen und Wirtschaftsgebäuden. Geraints Schwester Sioned betreut besonders Rinder und Milchwirtschaft; Donnchadh kümmert sich um Pferde und Stallungen. Der Hof gelangte über Iolos Großmutter Mared Maesglas in die Familie.</p><p>Iolo gehört zur jüngsten Generation der Perts. Ein eigener heutiger Beruf ist nicht benannt. Die spätere Hofnachfolge steht neben einer Kindheit im familiären Umfeld, in dem gemeinsamer Tisch, Gastfreundschaft und gegenseitige Verantwortung als wichtige Werte beschrieben werden.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-96cdce72"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-96cdce72"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-96cdce72",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1735",
+        "death": "",
+        "houseId": "house-pert",
+        "houseName": "Pert",
+        "familyRole": "core",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-96cdce72",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-96cdce72",
+            "fingerprint": "{\"name\":\"Iolo Pert\",\"title\":\"Hoferbe\",\"birth\":\"1735\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-96cdce72.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-cada9cd4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cada9cd4\",\"name\":\"Bethan\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-4506547d",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-4506547d",
+              "name": "Geraint Pert"
+            },
+            {
+              "personId": "person-cada9cd4",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-cada9cd4",
+              "name": "Bethan"
+            }
+          ],
+          "partners": [],
+          "children": []
+        }
+      },
+      "id": "person--pert--person-96cdce72",
+      "localRecord": {
+        "recordId": "character--person--pert--person-96cdce72",
+        "path": "records/familien/pert/iolo-pert--person--pert--person-96cdce72/character.json",
+        "schemaVersion": 1,
+        "contentHash": "f4719314fb1ae61d8c505d4a51a26e69ca8374dff07a59735ba4ae23aec48bd2",
+        "firestoreDocumentIds": [
+          "person--pert--person-96cdce72"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-96cdce72",
+              "worldPersonId": "person--pert--person-96cdce72",
+              "houseId": "house-pert",
+              "houseName": "Pert",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Iolo Pert\",\"title\":\"Hoferbe\",\"birth\":\"1735\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-96cdce72.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-cada9cd4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cada9cd4\",\"name\":\"Bethan\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
+    },
+    {
+      "name": "Roísin Pert",
+      "title": "",
+      "fraktion": "Pert",
+      "role": "",
+      "status": "active",
+      "relevance": "",
+      "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+      "currentLocation": "Gwynthor",
+      "origin": "",
+      "plotNode": "",
+      "profileLink": "",
+      "playerOwner": "",
+      "bio": "Roísin Pert wurde 1732 geboren und wird als legitimierte Tochter Sioneds geführt. Sioned ist die Tochter von Idwal Pert und Mared Maesglas und die Schwester des Hofbesitzers Geraint. Roísin gehört damit zum landwirtschaftlichen Zweig der Familie, dessen Mittelpunkt Hof Maesglas bei Gwynthor ist.\n\nIhre Mutter kümmert sich besonders um Rinder und Milchwirtschaft. Sioneds Lebensgefährte Donnchadh stammt aus Ceitheach und betreut auf dem Hof Pferde und Stallungen. Der Vater Roísins ist in der Familienüberlieferung nicht benannt.\n\nEin eigener Beruf oder ein persönliches Amt Roísins ist nicht überliefert. Sie gehört zur jüngeren Generation einer Familie, die Gastfreundschaft, gemeinsame Mahlzeiten und die Unterstützung ihrer Angehörigen betont. Die überlieferte Elternzuordnung bleibt auf Sioned beschränkt.",
+      "aliases": [],
+      "archived": false,
+      "createdAt": "2026-11-06T17:09:43.000Z",
+      "updatedAt": "2026-11-06T17:09:43.000Z",
+      "portrait": "../Stammbäume/assets/images/portraits/pert/person-618119d8.png",
+      "emotes": [],
+      "emotesOverride": false,
+      "imageSetSchemaVersion": 0,
+      "imageSets": [],
+      "activeImageSetId": "",
+      "imageSetsOverride": false,
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Roísin Pert"
+          },
+          {
+            "label": "Familie",
+            "value": "Pert"
+          },
+          {
+            "label": "Stand",
+            "value": "Bürgerlich"
+          },
+          {
+            "label": "Geburt",
+            "value": "1732"
+          },
+          {
+            "label": "Lebensstatus",
+            "value": "Lebend"
+          }
+        ],
+        "biography": {
+          "portrait": "../Stammbäume/assets/images/portraits/pert/person-618119d8.png",
+          "portraitCaption": "Roísin Pert",
+          "biographyTitle": "Familie und Lebensweg",
+          "biographyText": "<p>Roísin Pert wurde 1732 geboren und wird als legitimierte Tochter Sioneds geführt. Sioned ist die Tochter von Idwal Pert und Mared Maesglas und die Schwester des Hofbesitzers Geraint. Roísin gehört damit zum landwirtschaftlichen Zweig der Familie, dessen Mittelpunkt Hof Maesglas bei Gwynthor ist.</p><p>Ihre Mutter kümmert sich besonders um Rinder und Milchwirtschaft. Sioneds Lebensgefährte Donnchadh stammt aus Ceitheach und betreut auf dem Hof Pferde und Stallungen. Der Vater Roísins ist in der Familienüberlieferung nicht benannt.</p><p>Ein eigener Beruf oder ein persönliches Amt Roísins ist nicht überliefert. Sie gehört zur jüngeren Generation einer Familie, die Gastfreundschaft, gemeinsame Mahlzeiten und die Unterstützung ihrer Angehörigen betont. Die überlieferte Elternzuordnung bleibt auf Sioned beschränkt.</p>",
+          "documentsTitle": "Familie Pert",
+          "documents": [
+            {
+              "title": "Im Stammbaum ansehen",
+              "text": "Angehörige und Verbindungen der Familie Pert.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-618119d8"
+            },
+            {
+              "title": "Hausgeschichte der Perts",
+              "text": "Castell Draig und Hof Maesglas.",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+            }
+          ]
+        }
+      },
+      "identity": {
+        "worldPersonId": "person--pert--person-618119d8"
+      },
+      "genealogy": {
+        "worldPersonId": "person--pert--person-618119d8",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1732",
+        "death": "",
+        "houseId": "house-pert",
+        "houseName": "Pert",
+        "familyRole": "bastard",
+        "portraitPlaceholder": "auto",
+        "tags": [],
+        "sources": [
+          {
+            "familyId": "pert",
+            "personId": "person-618119d8",
+            "releaseId": "",
+            "publishedAt": "",
+            "importedAt": "2026-11-06T17:09:43.000Z",
+            "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+            "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-618119d8",
+            "fingerprint": "{\"name\":\"Roísin Pert\",\"title\":\"\",\"birth\":\"1732\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-618119d8.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4ee10c57\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}],\"partners\":[],\"children\":[]}}"
+          }
+        ],
+        "relationships": {
+          "parents": [
+            {
+              "personId": "person-4ee10c57",
+              "type": "biological",
+              "legitimacy": "legitimized",
+              "certainty": "confirmed",
+              "worldPersonId": "person--pert--person-4ee10c57",
+              "name": "Sioned Pert"
+            }
+          ],
+          "partners": [],
+          "children": []
+        }
+      },
+      "id": "person--pert--person-618119d8",
+      "localRecord": {
+        "recordId": "character--person--pert--person-618119d8",
+        "path": "records/familien/pert/roisin-pert--person--pert--person-618119d8/character.json",
+        "schemaVersion": 1,
+        "contentHash": "623095035b51341edbb5f25d4f94047186e8f5f810b01adea7f9ff3f3a7fd548",
+        "firestoreDocumentIds": [
+          "person--pert--person-618119d8"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "family",
+            "id": "pert",
+            "label": "Familie Pert"
+          },
+          "familyStatus": "linked",
+          "families": [
+            {
+              "familyId": "pert",
+              "familyTitle": "Familie Pert",
+              "personId": "person-618119d8",
+              "worldPersonId": "person--pert--person-618119d8",
+              "houseId": "house-pert",
+              "houseName": "Pert",
+              "familyRole": "bastard",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "",
+              "fingerprint": "{\"name\":\"Roísin Pert\",\"title\":\"\",\"birth\":\"1732\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-618119d8.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4ee10c57\",\"type\":\"biological\",\"legitimacy\":\"legitimized\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}],\"partners\":[],\"children\":[]}}",
+              "score": 1000
+            }
+          ],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "pert-20261106"
+      }
     }
   ],
   "charTabs": {
@@ -229527,7 +232591,23 @@
         "person--melog--person-02518ead",
         "person--melog--person-9a399999",
         "person--melog--person-4c366307",
-        "person--melog--person-157c1853"
+        "person--melog--person-157c1853",
+        "person--pert--person-cde44b00",
+        "person--pert--person-02756f76",
+        "person--pert--person-e6511832",
+        "person--pert--person-dcc5c8f4",
+        "person--pert--person-1f86b441",
+        "person--pert--person-ab6f684c",
+        "person--pert--person-4506547d",
+        "person--pert--person-4ee10c57",
+        "person--pert--person-cada9cd4",
+        "person--pert--person-35fdbd7b",
+        "person--pert--person-3a869794",
+        "person--pert--person-da2c039f",
+        "person--pert--person-f61ee33a",
+        "person--pert--person-cf926021",
+        "person--pert--person-96cdce72",
+        "person--pert--person-618119d8"
       ],
       "Dun Athar": [
         "2bCru7S3YGrzjFnYpnN9",

@@ -220,13 +220,13 @@
         }),
         "wappen-banner-png": encodeURI("/Stammbäume/assets/images/regions/celtigerns-wacht.png"),
         "karten-bild-png": Object.freeze({
-          src: `${mapAssetRoot}/GwynthorBannkreis.png?v=20260901b`,
+          src: `${mapAssetRoot}/GwynthorBannkreis.jpg?v=20260901b`,
           alt: "Karte von Gwynthor und seinem Bannkreis",
           href: mapHref,
           fit: "contain"
         }),
         "stadtsektionen-png": Object.freeze({
-          src: `${mapAssetRoot}/GwynthorBannkreisZonen.png?v=20260901b`,
+          src: `${mapAssetRoot}/GwynthorBannkreisZonen.webp?v=20260901b`,
           alt: "Bezirke von Gwynthor",
           href: mapHref,
           fit: "contain"
@@ -313,6 +313,7 @@
           commonerHouse("fontani", "Fontani"),
           commonerHouse("rhwyd", "Rhwyd"),
           house("melog", "Haus Melog", "Bürgerliches Haus", "Gwynthor · Zum Honigtörtchen", "Haus Draig", `${commonerRoot}/Melog/melog-emblem.png`),
+          house("pert", "Familie Pert", "Bürgerliches Haus", "Gwynthor · Castell Draig und Hof Maesglas", "Haus Draig", `${commonerRoot}/Pert/pert-emblem.png`),
           house("haus-gofrann", "Haus Gofrann", "Bürgerliches Haus", "Gwynthor · Zum Dritten Funken", "Haus Tlawd", `${commonerRoot}/Gofrann.png`),
           commonerHouse("braglas", "Braglas"),
           commonerHouse("tonnarth", "Tonnarth"),

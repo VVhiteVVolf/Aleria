@@ -1,0 +1,383 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--pert--person-dcc5c8f4",
+  "slug": "mared-maesglas",
+  "identity": {
+    "name": "Mared Maesglas",
+    "aliases": [],
+    "worldPersonId": "person--pert--person-dcc5c8f4"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "pert",
+      "label": "Familie Pert"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "pert",
+        "familyTitle": "Familie Pert",
+        "personId": "person-dcc5c8f4",
+        "worldPersonId": "person--pert--person-dcc5c8f4",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Mared Maesglas\",\"title\":\"Letzte Überlebende Haus Maesglas\",\"birth\":\"1672\",\"death\":\"1724\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-dcc5c8f4.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-02756f76\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-02756f76\",\"name\":\"Idwal Pert\"}],\"children\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-4ee10c57\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--pert--person-dcc5c8f4",
+      "documentIds": [
+        "person--pert--person-dcc5c8f4"
+      ],
+      "documents": [
+        {
+          "documentId": "person--pert--person-dcc5c8f4",
+          "createdAt": "2026-11-06T17:09:43.000Z",
+          "updatedAt": "2026-11-06T17:09:43.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "pert",
+        "personId": "person-dcc5c8f4",
+        "worldPersonId": "person--pert--person-dcc5c8f4",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Pert/person-dcc5c8f4.json",
+    "sourceExportedAt": "2026-11-06T17:09:43.000Z",
+    "sourceUpdatedAt": "2026-11-06T17:09:43.000Z",
+    "sourceDocumentIds": [
+      "person--pert--person-dcc5c8f4"
+    ],
+    "contentHash": "be405a936c0c78f5e9ee81570b27a36e6c749746789d6aaff78d4b0a6144efd7"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "pert-20261106"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Mared Maesglas",
+        "title": "Letzte Überlebende Haus Maesglas",
+        "fraktion": "",
+        "role": "",
+        "status": "dead",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "",
+        "origin": "",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Mared Maesglas wurde 1672 geboren und ist als letzte Überlebende ihrer Herkunftsfamilie sowie als Erbin eines Hofes verzeichnet. Durch ihre Ehe mit Idwal Pert gelangte Hof Maesglas in die Familie Pert. Das Anwesen in der Umgebung Gwynthors wurde zum Mittelpunkt des landwirtschaftlichen Zweiges.\n\nMared und Idwal haben die Kinder Geraint und Sioned. Zum Hof gehören Nutzflächen, Stallungen und Wirtschaftsgebäude. Ackerbau, die Haltung von Rindern und Pferden sowie die Milchwirtschaft bilden seine überlieferten Arbeitsbereiche. Heute bewirtschaften Geraint und Bethan das Anwesen, während Sioned sich besonders um Rinder und Milch kümmert.\n\nMared starb 1724. Ihr Name bleibt im Namen des Hofes und in der Familiengeschichte erhalten. Ihre Nachkommen verbinden den bäuerlichen Alltag mit dem Zusammenhalt der Perts, deren anderer Zweig auf Castell Draig dient.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-06T17:09:43.000Z",
+        "updatedAt": "2026-11-06T17:09:43.000Z",
+        "portrait": "../Stammbäume/assets/images/portraits/pert/person-dcc5c8f4.jpg",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Mared Maesglas"
+            },
+            {
+              "label": "Familie",
+              "value": "Pert"
+            },
+            {
+              "label": "Stand",
+              "value": "Bürgerlich"
+            },
+            {
+              "label": "Geburt",
+              "value": "1672"
+            },
+            {
+              "label": "Tod",
+              "value": "1724"
+            },
+            {
+              "label": "Lebensstatus",
+              "value": "Verstorben"
+            },
+            {
+              "label": "Aufgabe oder Stellung",
+              "value": "Letzte Überlebende Haus Maesglas"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/pert/person-dcc5c8f4.jpg",
+            "portraitCaption": "Mared Maesglas",
+            "biographyTitle": "Familie und Lebensweg",
+            "biographyText": "<p>Mared Maesglas wurde 1672 geboren und ist als letzte Überlebende ihrer Herkunftsfamilie sowie als Erbin eines Hofes verzeichnet. Durch ihre Ehe mit Idwal Pert gelangte Hof Maesglas in die Familie Pert. Das Anwesen in der Umgebung Gwynthors wurde zum Mittelpunkt des landwirtschaftlichen Zweiges.</p><p>Mared und Idwal haben die Kinder Geraint und Sioned. Zum Hof gehören Nutzflächen, Stallungen und Wirtschaftsgebäude. Ackerbau, die Haltung von Rindern und Pferden sowie die Milchwirtschaft bilden seine überlieferten Arbeitsbereiche. Heute bewirtschaften Geraint und Bethan das Anwesen, während Sioned sich besonders um Rinder und Milch kümmert.</p><p>Mared starb 1724. Ihr Name bleibt im Namen des Hofes und in der Familiengeschichte erhalten. Ihre Nachkommen verbinden den bäuerlichen Alltag mit dem Zusammenhalt der Perts, deren anderer Zweig auf Castell Draig dient.</p>",
+            "documentsTitle": "Familie Pert",
+            "documents": [
+              {
+                "title": "Im Stammbaum ansehen",
+                "text": "Angehörige und Verbindungen der Familie Pert.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+                "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-dcc5c8f4"
+              },
+              {
+                "title": "Hausgeschichte der Perts",
+                "text": "Castell Draig und Hof Maesglas.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+                "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--pert--person-dcc5c8f4"
+        },
+        "genealogy": {
+          "worldPersonId": "person--pert--person-dcc5c8f4",
+          "sex": "female",
+          "status": "dead",
+          "birth": "1672",
+          "death": "1724",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "pert",
+              "personId": "person-dcc5c8f4",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-06T17:09:43.000Z",
+              "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-dcc5c8f4",
+              "fingerprint": "{\"name\":\"Mared Maesglas\",\"title\":\"Letzte Überlebende Haus Maesglas\",\"birth\":\"1672\",\"death\":\"1724\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-dcc5c8f4.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-02756f76\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-02756f76\",\"name\":\"Idwal Pert\"}],\"children\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-4ee10c57\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [],
+            "partners": [
+              {
+                "personId": "person-02756f76",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--pert--person-02756f76",
+                "name": "Idwal Pert"
+              }
+            ],
+            "children": [
+              {
+                "personId": "person-4506547d",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--pert--person-4506547d",
+                "name": "Geraint Pert"
+              },
+              {
+                "personId": "person-4ee10c57",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--pert--person-4ee10c57",
+                "name": "Sioned Pert"
+              }
+            ]
+          }
+        },
+        "id": "person--pert--person-dcc5c8f4"
+      }
+    ]
+  },
+  "character": {
+    "name": "Mared Maesglas",
+    "title": "Letzte Überlebende Haus Maesglas",
+    "fraktion": "",
+    "role": "",
+    "status": "dead",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Mared Maesglas wurde 1672 geboren und ist als letzte Überlebende ihrer Herkunftsfamilie sowie als Erbin eines Hofes verzeichnet. Durch ihre Ehe mit Idwal Pert gelangte Hof Maesglas in die Familie Pert. Das Anwesen in der Umgebung Gwynthors wurde zum Mittelpunkt des landwirtschaftlichen Zweiges.\n\nMared und Idwal haben die Kinder Geraint und Sioned. Zum Hof gehören Nutzflächen, Stallungen und Wirtschaftsgebäude. Ackerbau, die Haltung von Rindern und Pferden sowie die Milchwirtschaft bilden seine überlieferten Arbeitsbereiche. Heute bewirtschaften Geraint und Bethan das Anwesen, während Sioned sich besonders um Rinder und Milch kümmert.\n\nMared starb 1724. Ihr Name bleibt im Namen des Hofes und in der Familiengeschichte erhalten. Ihre Nachkommen verbinden den bäuerlichen Alltag mit dem Zusammenhalt der Perts, deren anderer Zweig auf Castell Draig dient.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-06T17:09:43.000Z",
+    "updatedAt": "2026-11-06T17:09:43.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/pert/person-dcc5c8f4.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Mared Maesglas"
+        },
+        {
+          "label": "Familie",
+          "value": "Pert"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Geburt",
+          "value": "1672"
+        },
+        {
+          "label": "Tod",
+          "value": "1724"
+        },
+        {
+          "label": "Lebensstatus",
+          "value": "Verstorben"
+        },
+        {
+          "label": "Aufgabe oder Stellung",
+          "value": "Letzte Überlebende Haus Maesglas"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/pert/person-dcc5c8f4.jpg",
+        "portraitCaption": "Mared Maesglas",
+        "biographyTitle": "Familie und Lebensweg",
+        "biographyText": "<p>Mared Maesglas wurde 1672 geboren und ist als letzte Überlebende ihrer Herkunftsfamilie sowie als Erbin eines Hofes verzeichnet. Durch ihre Ehe mit Idwal Pert gelangte Hof Maesglas in die Familie Pert. Das Anwesen in der Umgebung Gwynthors wurde zum Mittelpunkt des landwirtschaftlichen Zweiges.</p><p>Mared und Idwal haben die Kinder Geraint und Sioned. Zum Hof gehören Nutzflächen, Stallungen und Wirtschaftsgebäude. Ackerbau, die Haltung von Rindern und Pferden sowie die Milchwirtschaft bilden seine überlieferten Arbeitsbereiche. Heute bewirtschaften Geraint und Bethan das Anwesen, während Sioned sich besonders um Rinder und Milch kümmert.</p><p>Mared starb 1724. Ihr Name bleibt im Namen des Hofes und in der Familiengeschichte erhalten. Ihre Nachkommen verbinden den bäuerlichen Alltag mit dem Zusammenhalt der Perts, deren anderer Zweig auf Castell Draig dient.</p>",
+        "documentsTitle": "Familie Pert",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Angehörige und Verbindungen der Familie Pert.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-dcc5c8f4"
+          },
+          {
+            "title": "Hausgeschichte der Perts",
+            "text": "Castell Draig und Hof Maesglas.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--pert--person-dcc5c8f4"
+    },
+    "genealogy": {
+      "worldPersonId": "person--pert--person-dcc5c8f4",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1672",
+      "death": "1724",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "pert",
+          "personId": "person-dcc5c8f4",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-06T17:09:43.000Z",
+          "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-dcc5c8f4",
+          "fingerprint": "{\"name\":\"Mared Maesglas\",\"title\":\"Letzte Überlebende Haus Maesglas\",\"birth\":\"1672\",\"death\":\"1724\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-dcc5c8f4.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-02756f76\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-02756f76\",\"name\":\"Idwal Pert\"}],\"children\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-4ee10c57\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4ee10c57\",\"name\":\"Sioned Pert\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "person-02756f76",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-02756f76",
+            "name": "Idwal Pert"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-4506547d",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-4506547d",
+            "name": "Geraint Pert"
+          },
+          {
+            "personId": "person-4ee10c57",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-4ee10c57",
+            "name": "Sioned Pert"
+          }
+        ]
+      }
+    },
+    "id": "person--pert--person-dcc5c8f4"
+  }
+}

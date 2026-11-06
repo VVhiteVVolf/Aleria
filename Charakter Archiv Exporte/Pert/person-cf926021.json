@@ -1,0 +1,137 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-06T17:09:43.000Z",
+  "mergeStrategy": "replace-reviewed-metadata-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Pert/person-cf926021.json",
+  "source": {
+    "kind": "supplied-family-export-and-house-prose",
+    "familyId": "pert",
+    "personId": "person-cf926021",
+    "worldPersonId": "person--pert--person-cf926021"
+  },
+  "character": {
+    "name": "Canna Pert",
+    "title": "",
+    "fraktion": "Pert",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Canna Pert wurde 1729 geboren und ist ein Kind von Geraint und Bethan. Goleuddydd, Lleian und Iolo sind die Geschwister. Die Eltern bewirtschaften Hof Maesglas in der Umgebung Gwynthors. Das Anwesen kam durch Mared Maesglas, Cannas Großmutter, in die Familie Pert und bildet den Mittelpunkt des landwirtschaftlichen Zweiges.\n\nAuf dem Hof gehören Ackerbau, Rinderhaltung, Milchwirtschaft sowie die Versorgung von Pferden und Stallungen zum überlieferten Alltag. Die benannten Erwachsenen teilen diese Aufgaben unter sich auf. Cannas jüngerer Bruder Iolo ist als Hoferbe verzeichnet.\n\nWeitere persönliche Eigenschaften, eine berufliche Ausbildung und ein eigener Aufgabenbereich Cannas sind nicht beschrieben. Die Familie legt Wert auf Zusammenhalt, gewissenhafte Arbeit und die Unterstützung von Angehörigen in Not. Das Geschlecht bleibt in der Familienakte unbestimmt.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-06T17:09:43.000Z",
+    "updatedAt": "2026-11-06T17:09:43.000Z",
+    "portrait": "../Stammbäume/assets/images/portraits/pert/person-cf926021.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Canna Pert"
+        },
+        {
+          "label": "Familie",
+          "value": "Pert"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Geburt",
+          "value": "1729"
+        },
+        {
+          "label": "Lebensstatus",
+          "value": "Lebend"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/pert/person-cf926021.jpg",
+        "portraitCaption": "Canna Pert",
+        "biographyTitle": "Familie und Lebensweg",
+        "biographyText": "<p>Canna Pert wurde 1729 geboren und ist ein Kind von Geraint und Bethan. Goleuddydd, Lleian und Iolo sind die Geschwister. Die Eltern bewirtschaften Hof Maesglas in der Umgebung Gwynthors. Das Anwesen kam durch Mared Maesglas, Cannas Großmutter, in die Familie Pert und bildet den Mittelpunkt des landwirtschaftlichen Zweiges.</p><p>Auf dem Hof gehören Ackerbau, Rinderhaltung, Milchwirtschaft sowie die Versorgung von Pferden und Stallungen zum überlieferten Alltag. Die benannten Erwachsenen teilen diese Aufgaben unter sich auf. Cannas jüngerer Bruder Iolo ist als Hoferbe verzeichnet.</p><p>Weitere persönliche Eigenschaften, eine berufliche Ausbildung und ein eigener Aufgabenbereich Cannas sind nicht beschrieben. Die Familie legt Wert auf Zusammenhalt, gewissenhafte Arbeit und die Unterstützung von Angehörigen in Not. Das Geschlecht bleibt in der Familienakte unbestimmt.</p>",
+        "documentsTitle": "Familie Pert",
+        "documents": [
+          {
+            "title": "Im Stammbaum ansehen",
+            "text": "Angehörige und Verbindungen der Familie Pert.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-cf926021"
+          },
+          {
+            "title": "Hausgeschichte der Perts",
+            "text": "Castell Draig und Hof Maesglas.",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png",
+            "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--pert--person-cf926021"
+    },
+    "genealogy": {
+      "worldPersonId": "person--pert--person-cf926021",
+      "sex": "unknown",
+      "status": "alive",
+      "birth": "1729",
+      "death": "",
+      "houseId": "house-pert",
+      "houseName": "Pert",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "pert",
+          "personId": "person-cf926021",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-06T17:09:43.000Z",
+          "lastSyncedAt": "2026-11-06T17:09:43.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=pert&mode=view&person=person-cf926021",
+          "fingerprint": "{\"name\":\"Canna Pert\",\"title\":\"\",\"birth\":\"1729\",\"death\":\"\",\"sex\":\"unknown\",\"status\":\"alive\",\"houseId\":\"house-pert\",\"portrait\":\"../Stammbäume/assets/images/portraits/pert/person-cf926021.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-4506547d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-4506547d\",\"name\":\"Geraint Pert\"},{\"personId\":\"person-cada9cd4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--pert--person-cada9cd4\",\"name\":\"Bethan\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-4506547d",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-4506547d",
+            "name": "Geraint Pert"
+          },
+          {
+            "personId": "person-cada9cd4",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--pert--person-cada9cd4",
+            "name": "Bethan"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--pert--person-cf926021"
+  }
+}

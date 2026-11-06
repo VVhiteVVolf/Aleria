@@ -1,0 +1,1011 @@
+{
+  "schema": "aleria.family-source-inventory",
+  "schemaVersion": 1,
+  "reviewed": "2026-11-06",
+  "familyId": "pert",
+  "houseId": "house-pert",
+  "counts": {
+    "persons": 19,
+    "namedPersons": 17,
+    "founderPlaceholders": 2,
+    "portraits": 17,
+    "uniquePortraitUrls": 16,
+    "partnerships": 6,
+    "marriages": 5,
+    "affairs": 1,
+    "parentages": 12,
+    "timeJumps": 1,
+    "cadetBranches": 0
+  },
+  "files": [
+    {
+      "path": "pert-original.json",
+      "source": "C:/Users/fhg_r/Downloads/pert.json",
+      "bytes": 19139,
+      "sha256": "e8d201d8d7bbbb91d697ba47ddfef85c7babc7b42f5ed9612d2c121c833cba16"
+    },
+    {
+      "path": "pert-original.html",
+      "source": "C:/Users/fhg_r/.codex/attachments/93a03542-fc28-4451-8193-35799435a5ff/Eingefügter Text.txt",
+      "bytes": 25496,
+      "sha256": "9c5d5bb36cc42bb450415dbd76074fc65537443e7f36affb11c68047e41d9876"
+    },
+    {
+      "path": "portraits/person-cde44b00.jpg",
+      "source": "https://i.imgur.com/Qurtomy.jpeg",
+      "activePath": "assets/images/portraits/pert/person-cde44b00.jpg",
+      "bytes": 232420,
+      "sha256": "91a41b3b89de44796cac4e5f5b62e3873bd7be288f155865ac32529e3d4f7576",
+      "width": 1024,
+      "height": 1536,
+      "format": "JPEG"
+    },
+    {
+      "path": "portraits/person-02756f76.jpg",
+      "source": "https://i.imgur.com/WspFLiD.jpeg",
+      "activePath": "assets/images/portraits/pert/person-02756f76.jpg",
+      "bytes": 244024,
+      "sha256": "bdd58cb7cb87f97d693fb709b807415a722e4f295c43f9e0498c482fb32de803",
+      "width": 1024,
+      "height": 1536,
+      "format": "JPEG"
+    },
+    {
+      "path": "portraits/person-e6511832.jpg",
+      "source": "https://i.imgur.com/Av2LpHt.jpeg",
+      "activePath": "assets/images/portraits/pert/person-e6511832.jpg",
+      "bytes": 237085,
+      "sha256": "37cc539375af285b6836ad4347b251d06a11a003f46718e22ccbd0b050e6233b",
+      "width": 1024,
+      "height": 1536,
+      "format": "JPEG"
+    },
+    {
+      "path": "portraits/person-dcc5c8f4.jpg",
+      "source": "https://i.imgur.com/AdZEWev.jpeg",
+      "activePath": "assets/images/portraits/pert/person-dcc5c8f4.jpg",
+      "bytes": 166214,
+      "sha256": "9b0008a808be2a661305a24bee4565ddf218dd2ce47e13fd346de9802c17140a",
+      "width": 1024,
+      "height": 1536,
+      "format": "JPEG"
+    },
+    {
+      "path": "portraits/person-1f86b441.png",
+      "source": "https://i.imgur.com/JcUIF1G.png",
+      "activePath": "assets/images/portraits/pert/person-1f86b441.png",
+      "bytes": 1829569,
+      "sha256": "10a31524094a452bdff702cf4d8c9ae72ebb226a2247be579e3f4d97e513063e",
+      "width": 1024,
+      "height": 1536,
+      "format": "PNG"
+    },
+    {
+      "path": "portraits/person-ab6f684c.png",
+      "source": "https://i.imgur.com/vYM0YGc.png",
+      "activePath": "assets/images/portraits/pert/person-ab6f684c.png",
+      "bytes": 1935229,
+      "sha256": "a91b4ca04ab1606185fd6609cafea0b490929ab8aff4677c1211c7e1abfa5646",
+      "width": 1024,
+      "height": 1536,
+      "format": "PNG"
+    },
+    {
+      "path": "portraits/person-4506547d.jpg",
+      "source": "https://i.imgur.com/v48lzfy.jpeg",
+      "activePath": "assets/images/portraits/pert/person-4506547d.jpg",
+      "bytes": 205276,
+      "sha256": "9b1c40b44e1814e80d486f954ab734636e02159e0028e828fa2cd5847eebd08d",
+      "width": 1024,
+      "height": 1536,
+      "format": "JPEG"
+    },
+    {
+      "path": "portraits/person-4ee10c57.jpg",
+      "source": "https://i.imgur.com/BpF9s6o.jpeg",
+      "activePath": "assets/images/portraits/pert/person-4ee10c57.jpg",
+      "bytes": 242563,
+      "sha256": "0b20aace079c27b097ae173b613f02bfb8d526448862c5a61809f5c41ec8b44c",
+      "width": 1024,
+      "height": 1536,
+      "format": "JPEG"
+    },
+    {
+      "path": "portraits/person-cada9cd4.jpg",
+      "source": "https://i.imgur.com/tkuEN4M.jpeg",
+      "activePath": "assets/images/portraits/pert/person-cada9cd4.jpg",
+      "bytes": 270072,
+      "sha256": "38fe52dff118c71141465c35213b81fa1f268e6c29c94121654740b79bc87c9d",
+      "width": 1024,
+      "height": 1536,
+      "format": "JPEG"
+    },
+    {
+      "path": "portraits/person-35fdbd7b.jpg",
+      "source": "https://i.imgur.com/v48lzfy.jpeg",
+      "activePath": "assets/images/portraits/pert/person-35fdbd7b.jpg",
+      "bytes": 205276,
+      "sha256": "9b1c40b44e1814e80d486f954ab734636e02159e0028e828fa2cd5847eebd08d",
+      "width": 1024,
+      "height": 1536,
+      "format": "JPEG"
+    },
+    {
+      "path": "portraits/person-52becf61.png",
+      "source": "https://i.imgur.com/Sl4ntci.png",
+      "activePath": "assets/images/portraits/pert/person-52becf61.png",
+      "bytes": 1860457,
+      "sha256": "8a148314b8c5890039acbb321c57317c07528d2324f97272526904df277d0fe8",
+      "width": 939,
+      "height": 1408,
+      "format": "PNG"
+    },
+    {
+      "path": "portraits/person-3a869794.jpg",
+      "source": "https://i.imgur.com/JeVgEMi.jpeg",
+      "activePath": "assets/images/portraits/pert/person-3a869794.jpg",
+      "bytes": 237107,
+      "sha256": "d50b467693148a96f69b5f4c5f131730bae8de15108f91d7c827fcab07ad68e1",
+      "width": 1024,
+      "height": 1536,
+      "format": "JPEG"
+    },
+    {
+      "path": "portraits/person-da2c039f.jpg",
+      "source": "https://i.imgur.com/naBDQc6.jpeg",
+      "activePath": "assets/images/portraits/pert/person-da2c039f.jpg",
+      "bytes": 241826,
+      "sha256": "88a4ded0f0926fce8d03e2ea64671a2e23692fc58c310f2816fe5d66bdf8917e",
+      "width": 1024,
+      "height": 1536,
+      "format": "JPEG"
+    },
+    {
+      "path": "portraits/person-f61ee33a.jpg",
+      "source": "https://i.imgur.com/E0yZUaO.jpeg",
+      "activePath": "assets/images/portraits/pert/person-f61ee33a.jpg",
+      "bytes": 218676,
+      "sha256": "107d98bc4b9ff1e797ca69efb45194820c131a2634bf2c29076fa2158c8274e9",
+      "width": 1024,
+      "height": 1536,
+      "format": "JPEG"
+    },
+    {
+      "path": "portraits/person-cf926021.jpg",
+      "source": "https://i.imgur.com/QKyLPWV.jpeg",
+      "activePath": "assets/images/portraits/pert/person-cf926021.jpg",
+      "bytes": 225115,
+      "sha256": "36ca0c42510e5bf703f298615ef06642e0f200092af0612bbf4abf748595092e",
+      "width": 1024,
+      "height": 1536,
+      "format": "JPEG"
+    },
+    {
+      "path": "portraits/person-96cdce72.png",
+      "source": "https://i.imgur.com/jCSIngI.png",
+      "activePath": "assets/images/portraits/pert/person-96cdce72.png",
+      "bytes": 1884340,
+      "sha256": "b6bb78ef25fa87ea6c93590b94fc61c0fd0f8814534cde9837be5bae382517c3",
+      "width": 1024,
+      "height": 1536,
+      "format": "PNG"
+    },
+    {
+      "path": "portraits/person-618119d8.png",
+      "source": "https://i.imgur.com/7dCupHk.png",
+      "activePath": "assets/images/portraits/pert/person-618119d8.png",
+      "bytes": 1996286,
+      "sha256": "3e4f485c6c5b3425ce35ba8cf434ac21e6b48b80546253dcce44e0d26a359240",
+      "width": 1024,
+      "height": 1536,
+      "format": "PNG"
+    }
+  ],
+  "persons": [
+    {
+      "id": "pert-gruender",
+      "worldPersonId": "person--pert--pert-gruender",
+      "name": "Unbekannter Gründer",
+      "title": "Gründer des Hauses",
+      "sex": "male",
+      "status": "alive",
+      "birth": "",
+      "death": "",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-pert",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [
+        "Gründerfamilie"
+      ],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "",
+      "activeSex": "male"
+    },
+    {
+      "id": "pert-gruenderin",
+      "worldPersonId": "person--pert--pert-gruenderin",
+      "name": "Unbekannte Gründerin",
+      "title": "Gründerin des Hauses",
+      "sex": "female",
+      "status": "alive",
+      "birth": "",
+      "death": "",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-pert",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [
+        "Gründerfamilie"
+      ],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "",
+      "activeSex": "female"
+    },
+    {
+      "id": "person-cde44b00",
+      "worldPersonId": "person--pert--person-cde44b00",
+      "name": "Iorwerth",
+      "title": "Brotmeister Haus Draig",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1666",
+      "death": "1715",
+      "portrait": "https://i.imgur.com/Qurtomy.jpeg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-pert",
+      "familyRole": "core",
+      "lineageRole": "head",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-cde44b00.jpg",
+      "activeSex": "male"
+    },
+    {
+      "id": "person-02756f76",
+      "worldPersonId": "person--pert--person-02756f76",
+      "name": "Idwal",
+      "title": "Heiratete die Erbin eines Hofes",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1670",
+      "death": "",
+      "portrait": "https://i.imgur.com/WspFLiD.jpeg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-pert",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-02756f76.jpg",
+      "activeSex": "male"
+    },
+    {
+      "id": "person-e6511832",
+      "worldPersonId": "person--pert--person-e6511832",
+      "name": "Gwerfyl",
+      "title": "Küchenmeisterin Haus Draig",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1668",
+      "death": "",
+      "portrait": "https://i.imgur.com/Av2LpHt.jpeg",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-e6511832.jpg",
+      "activeSex": "female"
+    },
+    {
+      "id": "person-dcc5c8f4",
+      "worldPersonId": "person--pert--person-dcc5c8f4",
+      "name": "Mared Maesglas",
+      "title": "Letzte Überlebende Haus Maesglas",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1672",
+      "death": "1724",
+      "portrait": "https://i.imgur.com/AdZEWev.jpeg",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-dcc5c8f4.jpg",
+      "activeSex": "female"
+    },
+    {
+      "id": "person-1f86b441",
+      "worldPersonId": "person--pert--person-1f86b441",
+      "name": "Goronvy",
+      "title": "Draig Leibgarde",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1692",
+      "death": "1720",
+      "portrait": "https://i.imgur.com/JcUIF1G.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-pert",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-1f86b441.png",
+      "activeSex": "male"
+    },
+    {
+      "id": "person-ab6f684c",
+      "worldPersonId": "person--pert--person-ab6f684c",
+      "name": "Lowri",
+      "title": "Draig Leibgarde",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1695",
+      "death": "1720",
+      "portrait": "https://i.imgur.com/vYM0YGc.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-ab6f684c.png",
+      "activeSex": "female"
+    },
+    {
+      "id": "person-4506547d",
+      "worldPersonId": "person--pert--person-4506547d",
+      "name": "Geraint",
+      "title": "Hofbesitzer",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1697",
+      "death": "",
+      "portrait": "https://i.imgur.com/v48lzfy.jpeg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-pert",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-4506547d.jpg",
+      "activeSex": "male"
+    },
+    {
+      "id": "person-4ee10c57",
+      "worldPersonId": "person--pert--person-4ee10c57",
+      "name": "Sioned",
+      "title": "Kümmert sich ums Vieh",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1705",
+      "death": "",
+      "portrait": "https://i.imgur.com/BpF9s6o.jpeg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-pert",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-4ee10c57.jpg",
+      "activeSex": "female"
+    },
+    {
+      "id": "person-cada9cd4",
+      "worldPersonId": "person--pert--person-cada9cd4",
+      "name": "Bethan",
+      "title": "Haushalt",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1698",
+      "death": "",
+      "portrait": "https://i.imgur.com/tkuEN4M.jpeg",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-cada9cd4.jpg",
+      "activeSex": "female"
+    },
+    {
+      "id": "person-35fdbd7b",
+      "worldPersonId": "person--pert--person-35fdbd7b",
+      "name": "Donnchadh",
+      "title": "Stallmeister Hof",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1705",
+      "death": "",
+      "portrait": "https://i.imgur.com/v48lzfy.jpeg",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "affair",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-35fdbd7b.jpg",
+      "activeSex": "male"
+    },
+    {
+      "id": "person-52becf61",
+      "worldPersonId": "person--pert--person-52becf61",
+      "name": "Kevan",
+      "title": "Waffenknecht Haus Draig",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1716",
+      "death": "",
+      "portrait": "https://i.imgur.com/Sl4ntci.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-pert",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-52becf61.png",
+      "activeSex": "male"
+    },
+    {
+      "id": "person-3a869794",
+      "worldPersonId": "person--pert--person-3a869794",
+      "name": "Rhiain",
+      "title": "Brotmeister Haus Draig",
+      "sex": "unknown",
+      "status": "alive",
+      "birth": "1719",
+      "death": "",
+      "portrait": "https://i.imgur.com/JeVgEMi.jpeg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-pert",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-3a869794.jpg",
+      "activeSex": "female"
+    },
+    {
+      "id": "person-da2c039f",
+      "worldPersonId": "person--pert--person-da2c039f",
+      "name": "Goleuddydd",
+      "title": "Besessen von Kevan",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1722",
+      "death": "",
+      "portrait": "https://i.imgur.com/naBDQc6.jpeg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-pert",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-da2c039f.jpg",
+      "activeSex": "female"
+    },
+    {
+      "id": "person-f61ee33a",
+      "worldPersonId": "person--pert--person-f61ee33a",
+      "name": "Lleian",
+      "title": "",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1725",
+      "death": "",
+      "portrait": "https://i.imgur.com/E0yZUaO.jpeg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-pert",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-f61ee33a.jpg",
+      "activeSex": "female"
+    },
+    {
+      "id": "person-cf926021",
+      "worldPersonId": "person--pert--person-cf926021",
+      "name": "Canna",
+      "title": "",
+      "sex": "unknown",
+      "status": "alive",
+      "birth": "1729",
+      "death": "",
+      "portrait": "https://i.imgur.com/QKyLPWV.jpeg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-pert",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-cf926021.jpg",
+      "activeSex": "unknown"
+    },
+    {
+      "id": "person-96cdce72",
+      "worldPersonId": "person--pert--person-96cdce72",
+      "name": "Iolo",
+      "title": "Hoferbe",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1735",
+      "death": "",
+      "portrait": "https://i.imgur.com/jCSIngI.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-pert",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-96cdce72.png",
+      "activeSex": "male"
+    },
+    {
+      "id": "person-618119d8",
+      "worldPersonId": "person--pert--person-618119d8",
+      "name": "Roísin",
+      "title": "",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1732",
+      "death": "",
+      "portrait": "https://i.imgur.com/7dCupHk.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-pert",
+      "familyRole": "bastard",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {},
+      "activePortrait": "assets/images/portraits/pert/person-618119d8.png",
+      "activeSex": "female"
+    }
+  ],
+  "partnerships": [
+    {
+      "id": "marriage-pert-founders",
+      "participantIds": [
+        "pert-gruender",
+        "pert-gruenderin"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "Gründerehe des Hauses.",
+      "extensions": {}
+    },
+    {
+      "id": "partnership-1e3804e3",
+      "participantIds": [
+        "person-cde44b00",
+        "person-e6511832"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {
+        "chartAlignParentPairOverChildPersonId": "person-1f86b441",
+        "chartAutomaticSingleChildAlignment": true
+      }
+    },
+    {
+      "id": "partnership-136532a8",
+      "participantIds": [
+        "person-02756f76",
+        "person-dcc5c8f4"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "partnership-09698f2f",
+      "participantIds": [
+        "person-1f86b441",
+        "person-ab6f684c"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "partnership-92b8bf6b",
+      "participantIds": [
+        "person-4506547d",
+        "person-cada9cd4"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "partnership-c9b9af53",
+      "participantIds": [
+        "person-4ee10c57",
+        "person-35fdbd7b"
+      ],
+      "type": "affair",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "parentages": [
+    {
+      "id": "parentage-e05356b3",
+      "childId": "person-cde44b00",
+      "parentIds": [
+        "pert-gruender",
+        "pert-gruenderin"
+      ],
+      "partnershipId": "marriage-pert-founders",
+      "type": "claimed",
+      "legitimacy": "unknown",
+      "certainty": "probable",
+      "visibility": "public",
+      "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+      "extensions": {
+        "timeJumpId": "time-jump-263f82a7",
+        "timeJumpCreated": true
+      }
+    },
+    {
+      "id": "parentage-3a23333b",
+      "childId": "person-02756f76",
+      "parentIds": [
+        "pert-gruender",
+        "pert-gruenderin"
+      ],
+      "partnershipId": "marriage-pert-founders",
+      "type": "claimed",
+      "legitimacy": "unknown",
+      "certainty": "probable",
+      "visibility": "public",
+      "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+      "extensions": {
+        "timeJumpId": "time-jump-263f82a7",
+        "timeJumpCreated": true
+      }
+    },
+    {
+      "id": "parentage-01f4b83f",
+      "childId": "person-1f86b441",
+      "parentIds": [
+        "person-cde44b00",
+        "person-e6511832"
+      ],
+      "partnershipId": "partnership-1e3804e3",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-2bea3806",
+      "childId": "person-4506547d",
+      "parentIds": [
+        "person-02756f76",
+        "person-dcc5c8f4"
+      ],
+      "partnershipId": "partnership-136532a8",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-c40ba269",
+      "childId": "person-4ee10c57",
+      "parentIds": [
+        "person-02756f76",
+        "person-dcc5c8f4"
+      ],
+      "partnershipId": "partnership-136532a8",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-c4107b9c",
+      "childId": "person-52becf61",
+      "parentIds": [
+        "person-1f86b441",
+        "person-ab6f684c"
+      ],
+      "partnershipId": "partnership-09698f2f",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-dadfe8d9",
+      "childId": "person-3a869794",
+      "parentIds": [
+        "person-1f86b441",
+        "person-ab6f684c"
+      ],
+      "partnershipId": "partnership-09698f2f",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-9496a147",
+      "childId": "person-da2c039f",
+      "parentIds": [
+        "person-4506547d",
+        "person-cada9cd4"
+      ],
+      "partnershipId": "partnership-92b8bf6b",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-0e6fc1e8",
+      "childId": "person-f61ee33a",
+      "parentIds": [
+        "person-4506547d",
+        "person-cada9cd4"
+      ],
+      "partnershipId": "partnership-92b8bf6b",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-579c9cb5",
+      "childId": "person-cf926021",
+      "parentIds": [
+        "person-4506547d",
+        "person-cada9cd4"
+      ],
+      "partnershipId": "partnership-92b8bf6b",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-a18626d1",
+      "childId": "person-96cdce72",
+      "parentIds": [
+        "person-4506547d",
+        "person-cada9cd4"
+      ],
+      "partnershipId": "partnership-92b8bf6b",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-61abde43",
+      "childId": "person-618119d8",
+      "parentIds": [
+        "person-4ee10c57"
+      ],
+      "partnershipId": "",
+      "type": "biological",
+      "legitimacy": "legitimized",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "timeJumps": [
+    {
+      "id": "time-jump-263f82a7",
+      "parentPartnershipId": "marriage-pert-founders",
+      "sharedParentPartnershipIds": [],
+      "parentPersonId": "",
+      "childIds": [
+        "person-cde44b00",
+        "person-02756f76"
+      ],
+      "years": 0,
+      "fromYear": "",
+      "toYear": "",
+      "label": "",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "canonicalIdentityReview": {
+    "beforeCreation": true,
+    "registryCount": 80,
+    "registryGitBlobSha": "14351610e763ee8ebed1879ebbd044fce9e1c23c",
+    "registryMatches": [],
+    "directMasterPaths404": [
+      "Stammbäume/assets/data/published-families/pert.json",
+      "Stammbäume/assets/data/published-families/haus-pert.json"
+    ],
+    "codeSearchMatches": {
+      "Pert": [],
+      "Maesglas": []
+    },
+    "allRemoteBranches": [
+      "master"
+    ],
+    "branchPaginationComplete": true,
+    "decision": "Keine vorhandene GitHub-Familienakte oder weiterer Branchentwurf gefunden; gelieferte Familien-ID pert und alle Weltpersonen fortgeführt."
+  },
+  "decisions": {
+    "schema": "aleria.family-source-decisions",
+    "schemaVersion": 1,
+    "familyId": "pert",
+    "reviewed": "2026-11-06",
+    "rhiainSex": "female",
+    "decisions": [
+      {
+        "topic": "Goronvy / Goronwy",
+        "source": "Genealogische JSON: Goronvy; HTML: Goronwy",
+        "decision": "Die genealogische Schreibweise Goronvy bleibt. Goronwy wird als belegte Quellvariante dokumentiert; keine zweite Person."
+      },
+      {
+        "topic": "Rhiain",
+        "source": "JSON sex=unknown; HTML nennt Rhiain ausdrücklich bei ihrer Großmutter Gwerfyl.",
+        "decision": "sex=female ergänzt anhand des ausdrücklichen Textbelegs und bestätigter Quellenentscheidung. unknown ist keine positive Gegenbehauptung; Originalwert bleibt im unveränderten Export und Inventar. Keine Ableitung aus Portrait oder Rollenbezeichnung."
+      },
+      {
+        "topic": "Canna",
+        "source": "JSON sex=unknown; im gelieferten Fließtext kein eindeutiger Geschlechtsbeleg.",
+        "decision": "unknown bleibt unverändert; Name und Portrait bestimmen das Geschlecht nicht."
+      },
+      {
+        "topic": "Geteiltes Portrait",
+        "source": "Geraint und Donnchadh verwenden beide https://i.imgur.com/v48lzfy.jpeg.",
+        "decision": "Zwei Personen, zwei Weltpersonen, getrennte Rollen und Lebensdaten; dasselbe Bild wird bytegleich erhalten."
+      },
+      {
+        "topic": "Roísins Elternschaft",
+        "source": "Genealogische parentage-61abde43 nennt ausschließlich Sioned; legitimacy=legitimized.",
+        "decision": "Nur Sioned bleibt biologisch erfasst. Donnchadh wird nicht ohne Beleg als Vater ergänzt; die Partnerschaft bleibt affair wie geliefert."
+      },
+      {
+        "topic": "Aufwachsen nach 1720",
+        "source": "Kevan lebt bei Geraint/Bethan, Rhiain bei Gwerfyl.",
+        "decision": "Betreuungs- und Wohnangaben in Notizen erhalten; keine erfundenen Adoptionen oder Änderung der biologischen Eltern."
+      },
+      {
+        "topic": "Maesglas",
+        "source": "Hof und Mareds Herkunftsfamilie werden in HTML/JSON genannt; Namensprüfung lokal/GitHub ohne früheren Treffer.",
+        "decision": "Der gelieferte Hofname Maesglas wird übernommen. Keine zweite Maesglas-Dynastie oder unbekannte Vorfahren erfunden. Der genaue Hofstandort wird getrennt geprüft."
+      },
+      {
+        "topic": "Kevan-Altfassung",
+        "source": "Lokale bestehende Gardistenakte mit gleichem Namen/Portrait nennt Seren/Emry als Großeltern; neue Genealogie Iorwerth/Gwerfyl.",
+        "decision": "Gegenquellenkonflikt dokumentiert. Bestehende Figurenakte, Besitz und Spielwerte bleiben unverändert; keine automatische Namensverschmelzung oder zweite Kevan-Akte."
+      },
+      {
+        "topic": "Leere Vorlagenfelder",
+        "source": "Motto, Gründung, Hauptpatrone und weitere Tabellenfelder sind leer oder Platzhalter.",
+        "decision": "Keine Werte oder Militärzahlen erfunden. Kultur Cenyri, bürgerlicher Rang, Gwynthor, Alerische Kirche und Bindung zu Draig sind im Profil belegt."
+      }
+    ]
+  },
+  "displayAdaptations": [
+    "Zwei rein optische chartAlignChildGroupBelowParentPair-Erweiterungen für die vorhandenen Blattkindergruppen; keine fachlichen Beziehungstypen oder Eltern geändert."
+  ],
+  "counterpartConflicts": [
+    {
+      "name": "Kevan Pert",
+      "recordId": "character--jTzoT0bqb2lfmslJ05FJ",
+      "runtimeId": "jTzoT0bqb2lfmslJ05FJ",
+      "worldPersonId": "",
+      "portrait": "https://i.imgur.com/Sl4ntci.png",
+      "oldGrandparents": [
+        "Seren Pert",
+        "Emry Pert"
+      ],
+      "suppliedGrandparents": [
+        "Iorwerth",
+        "Gwerfyl"
+      ],
+      "action": "Keine automatische Figuren-Neuanlage oder Verschmelzung. Die bestehende Laufzeit-/Inventarakte bleibt unverändert; neue Genealogie bleibt quellengetreu."
+    }
+  ],
+  "chronologyAudit": {
+    "worldYear": 1740,
+    "dateChanges": 0,
+    "implausibleBiologicalParentAges": [],
+    "war1720": {
+      "deceased": [
+        "person-1f86b441",
+        "person-ab6f684c"
+      ],
+      "childrenBorn": [
+        "1716",
+        "1719"
+      ],
+      "consistent": true
+    }
+  },
+  "provenance": {
+    "html": "Nutzerquelle Haus Pert",
+    "json": "Nutzerexport pert.json",
+    "imagePrompts": "Gelieferte Portraits: unbekannt; keine Motive neu erfunden."
+  },
+  "publication": {
+    "state": "local",
+    "remoteWrites": 0,
+    "productionWrites": 0,
+    "moduleCreated": false
+  }
+}
