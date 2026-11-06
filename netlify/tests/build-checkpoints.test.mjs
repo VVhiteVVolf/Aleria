@@ -133,3 +133,19 @@ test('existing validation-only groups are eligible while output-owning groups re
   assert.equal(canCheckpointTask(task('pert-check', { commands: [['AleriaAlmanach/scripts/build-pert-characters.mjs', '--check']] })), true);
   assert.equal(canCheckpointTask(task('pert-apply', { commands: [['AleriaAlmanach/scripts/build-pert-characters.mjs', '--apply']] })), false);
 });
+
+
+test('reviewed scoped house and source-export modes are check-only with exact arguments', () => {
+  const eligible = args => canCheckpointTask(task('scoped-check', { commands: [args] }));
+  for (const script of ['Familien Häuser und Clans/scripts/build-house-content.mjs', 'Gallerien/krieger/scripts/build-catalog.mjs']) {
+    assert.equal(eligible([script, '--houses=haus-gwernant', '--check']), true);
+    assert.equal(eligible([script, '--houses=pert,haus-gwernant', '--check']), true);
+    for (const args of [[], ['--houses=haus-gwernant'], ['--houses=haus-gwernant', '--apply'], ['--houses=', '--check'], ['--houses=../private', '--check'], ['--houses=haus-gwernant', '--check', '--apply']]) assert.equal(eligible([script, ...args]), false);
+  }
+  const staff = 'AleriaAlmanach/scripts/build-eleganz-sales-characters.mjs';
+  assert.equal(eligible([staff, '--source-exports', '--check']), true);
+  for (const args of [[], ['--check'], ['--source-exports'], ['--source-exports', '--apply'], ['--source-exports', '--check', '--apply'], ['--artwork', '--check']]) assert.equal(eligible([staff, ...args]), false);
+  assert.equal(eligible(['AleriaAlmanach/scripts/build-goettliche-eleganz.mjs', '--check']), true);
+  assert.equal(eligible(['AleriaAlmanach/scripts/build-goettliche-eleganz.mjs', '--apply']), false);
+  assert.equal(eligible(['unreviewed.mjs', '--houses=haus-gwernant', '--check']), false);
+});

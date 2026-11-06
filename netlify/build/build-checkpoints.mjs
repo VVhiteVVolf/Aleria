@@ -30,6 +30,7 @@ const VALIDATION_CHECKS = new Set([
   "AleriaAlmanach/scripts/build-gestiefelte-muschi.mjs",
   "AleriaAlmanach/scripts/build-group-adventures.mjs",
   "AleriaAlmanach/scripts/build-group-section-migration.mjs",
+  "AleriaAlmanach/scripts/build-goettliche-eleganz.mjs",
   "AleriaAlmanach/scripts/build-gwregysdu-harbor.mjs",
   "AleriaAlmanach/scripts/build-gwynthor-erbstreit-assets.mjs",
   "AleriaAlmanach/scripts/build-gwynthor-geography.mjs",
@@ -113,6 +114,19 @@ const VALIDATION_CHECKS = new Set([
   "shared/accepted-realms/scripts/build-pages.mjs",
 ]);
 
+// These known builders keep their scoped modes read-only when --check is
+// present. Validate the entire argument list; flags or output modes cannot leak
+// into a checkpointable invocation. House identities remain caller-owned data.
+const SCOPED_HOUSE_CHECKS = new Set([
+  'Familien Häuser und Clans/scripts/build-house-content.mjs',
+  'Gallerien/krieger/scripts/build-catalog.mjs',
+]);
+function isScopedValidationCheck(args) {
+  if (args.length !== 3 || args[2] !== '--check') return false;
+  if (SCOPED_HOUSE_CHECKS.has(args[0])) return /^--houses=[a-z0-9][a-z0-9-]*(?:,[a-z0-9][a-z0-9-]*)*$/.test(args[1]);
+  return args[0] === 'AleriaAlmanach/scripts/build-eleganz-sales-characters.mjs' && args[1] === '--source-exports';
+}
+
 // Task checkpoints use the same validation-only command contract as published
 // task receipts. Preparations may install tools, but create no website output;
 // they are not skipped independently within a running task. Unknown commands and
@@ -120,6 +134,7 @@ const VALIDATION_CHECKS = new Set([
 export function canCheckpointTask(task) {
   if (task.always || !DIGEST.test(task.fingerprint || '')) return false;
   return task.commands.every(args => args[0] === '--test'
+    || isScopedValidationCheck(args)
     || (args.length === 2 && args[1] === '--check' && VALIDATION_CHECKS.has(args[0]))
     || args[0] === 'netlify/build/prepare-runtime-checks.mjs'
     || args[0] === 'netlify/build/verify-task-inputs.mjs'
