@@ -57,7 +57,7 @@ test('unchanged successful inputs reuse checks while every deploy rebuilds its g
 });
 
 test('an archive-only fix checks the archive without checking guides or family charts', () => {
-  assert.deepEqual(checks(select(changed('AleriaAlmanach/modules/archive/archive-dashboard.js'))), ['almanach-runtime']);
+  assert.deepEqual(checks(select(changed('AleriaAlmanach/modules/archive/archive-dashboard.js'))), ['honigtoertchen', 'almanach-runtime']);
 });
 
 test('market, venue and calculation changes invalidate economics without coupling archive-only fixes', () => {
@@ -74,8 +74,8 @@ test('cross-feature inputs trigger their consumers, including external house bio
   assert.ok(family.includes('gameplay-guides'));
   assert.ok(family.includes('regional-equipment'));
   assert.ok(family.includes('family-charts'));
-  assert.deepEqual(checks(select(changed('AleriaAlmanach/modules/combat/combat-profile-model.js'))), ['house-signets', 'character-health', 'character-development', 'almanach-runtime', 'gameplay-guides', 'character-reference-catalogs', 'group-community', 'item-mechanics']);
-  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['house-signets', 'fleischsammler-argall', 'balchder-characters', 'gameplay-guides', 'patrick-biographies', 'character-reference-catalogs', 'group-community', 'item-mechanics']);
+  assert.deepEqual(checks(select(changed('AleriaAlmanach/modules/combat/combat-profile-model.js'))), ['house-signets', 'character-health', 'character-development', 'honigtoertchen', 'almanach-runtime', 'gameplay-guides', 'character-reference-catalogs', 'group-community', 'item-mechanics']);
+  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['house-signets', 'honigtoertchen', 'fleischsammler-argall', 'balchder-characters', 'gameplay-guides', 'patrick-biographies', 'character-reference-catalogs', 'group-community', 'item-mechanics']);
 });
 
 test('the captain household source triggers both its character projection and public quest consumer', () => {
