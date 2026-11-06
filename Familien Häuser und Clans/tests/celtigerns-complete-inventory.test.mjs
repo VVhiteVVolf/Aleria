@@ -30,13 +30,13 @@ for (const record of families) {
   sources.set(record.id, (await import(source)).HOUSE_CONTENT);
 }
 
-test('Die 107 eigenständigen öffentlichen Hausseiten einschließlich Perllan, Melog und Pert bleiben erreichbar und mit ihren Bios verknüpft', async () => {
+test('Die 108 eigenständigen öffentlichen Hausseiten einschließlich Perllan, Melog, Pert und Gwernant bleiben erreichbar und mit ihren Bios verknüpft', async () => {
   const completedPageIds = [
     'haus-blevis', 'haus-brogar', 'haus-crewe', 'haus-glyn', 'haus-jernigan', 'haus-talfryn',
-    'haus-tarw', 'haus-tynged', 'haus-cochdon', 'haus-llythfor', 'haus-twyllod', 'perllan', 'melog', 'pert',
+    'haus-tarw', 'haus-tynged', 'haus-cochdon', 'haus-llythfor', 'haus-twyllod', 'perllan', 'melog', 'pert', 'haus-gwernant',
   ];
-  assert.equal(completedPageIds.length, 14);
-  assert.equal(families.length, 107);
+  assert.equal(completedPageIds.length, 15);
+  assert.equal(families.length, 108);
   assert.equal(families.filter(record => !completedPageIds.includes(record.id)).length, 93);
   for (const id of completedPageIds) assert.ok(sources.has(id), id);
   for (const record of families) {
@@ -85,7 +85,7 @@ test('Cochdon, Llythfor und Twyllod behalten ihre Hausbios; acht örtliche Famil
   assert.ok(areaFamilies.find(record => record.id === 'haus-twyllod').family.extensions.houseBiographyModule);
 });
 
-test('Grafschaft erhält exakt ihre 65 bisherigen Hauskarten und ergänzt die acht belegten örtlichen Familienprofile sowie Melog und Pert', async () => {
+test('Grafschaft erhält exakt ihre 65 bisherigen Hauskarten und ergänzt die acht belegten örtlichen Familienprofile sowie Melog, Pert und Gwernant', async () => {
   const context = { window: {} };
   vm.runInNewContext(await readFile(new URL('Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js', project), 'utf8'), context);
   const sections = context.window.KONTINENTE_DATA.view.familySections;
@@ -93,11 +93,11 @@ test('Grafschaft erhält exakt ihre 65 bisherigen Hauskarten und ergänzt die ac
   assert.equal(countyBaseline.beforeCommit, '887693c81224ec8fd7e17cab50c8dcbb5a0f6d05');
   assert.equal(countyBaseline.cards.length, 65);
   assert.equal(createHash('sha256').update(JSON.stringify(countyBaseline.cards)).digest('hex'), 'f024aebd0206f205811cf7947ae208f748bd6e596925e8f58280d5515b6f8e96');
-  const existingCards = cards.filter(card => !localityIds.has(card.id) && !['melog', 'pert'].includes(card.id));
+  const existingCards = cards.filter(card => !localityIds.has(card.id) && !['melog', 'pert', 'haus-gwernant'].includes(card.id));
   assert.deepEqual(existingCards, countyBaseline.cards, 'Every original card, image, link and card order remains unchanged');
   assert.deepEqual(cards.filter(card => localityIds.has(card.id)).map(card => card.id).sort(), [...localityIds].sort());
   assert.equal(localityIds.size, 8);
-  assert.equal(cards.length, countyBaseline.cards.length + localityIds.size + 2);
+  assert.equal(cards.length, countyBaseline.cards.length + localityIds.size + 3);
   const melog = cards.filter(card => card.id === 'melog');
   assert.equal(melog.length, 1);
   assert.equal(melog[0].name, 'Melog');
@@ -114,6 +114,14 @@ test('Grafschaft erhält exakt ihre 65 bisherigen Hauskarten und ergänzt die ac
   assert.equal(pert[0].rank, 'Bürgerliche Familie');
   assert.equal(pert[0].imageSrc, '/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pert/pert-emblem.png');
   assert.equal(pert[0].href, '/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=pert');
+  const gwernant = cards.filter(card => card.id === 'haus-gwernant');
+  assert.equal(gwernant.length, 1);
+  assert.equal(gwernant[0].name, 'Gwernant');
+  assert.equal(gwernant[0].seat, 'Gwynthor');
+  assert.equal(gwernant[0].liege, 'Draig');
+  assert.equal(gwernant[0].rank, 'Bürgerliche Händlerfamilie');
+  assert.equal(gwernant[0].imageSrc, '/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwernant/gwernant-emblem.png');
+  assert.equal(gwernant[0].href, '/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-gwernant');
   assert.equal(new Set(cards.map(c => c.id)).size, cards.length);
   const perllan = cards.filter(card => card.id === 'perllan');
   assert.equal(perllan.length, 1);
