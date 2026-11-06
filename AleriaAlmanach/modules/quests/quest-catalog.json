@@ -2543,6 +2543,30 @@
       "title": "Fortunas Häuser und Verbindungen"
     },
     {
+      "id": "zum-honigtoertchen",
+      "title": "Zum Honigtörtchen"
+    },
+    {
+      "id": "gwynthor-marktplatz",
+      "title": "Gwynthor Marktplatz"
+    },
+    {
+      "id": "lothaires-arkaneum",
+      "title": "Lothaires Arkaneum"
+    },
+    {
+      "id": "heim-der-fearnan",
+      "title": "Heim der Fearnan"
+    },
+    {
+      "id": "heim-der-torvik",
+      "title": "Heim der Torvik"
+    },
+    {
+      "id": "heim-der-celynfor",
+      "title": "Heim der Celynfor"
+    },
+    {
       "id": "gwynthorer-theater",
       "title": "Gwynthorer Theater"
     },
@@ -2573,26 +2597,6 @@
     {
       "id": "zum-dritten-funken",
       "title": "Zum Dritten Funken"
-    },
-    {
-      "id": "gwynthor-marktplatz",
-      "title": "Gwynthor Marktplatz"
-    },
-    {
-      "id": "lothaires-arkaneum",
-      "title": "Lothaires Arkaneum"
-    },
-    {
-      "id": "heim-der-fearnan",
-      "title": "Heim der Fearnan"
-    },
-    {
-      "id": "heim-der-torvik",
-      "title": "Heim der Torvik"
-    },
-    {
-      "id": "heim-der-celynfor",
-      "title": "Heim der Celynfor"
     },
     {
       "id": "zum-roten-tor",
@@ -3560,6 +3564,221 @@
       "moduleId": "gwynthor-fortuna-interessenbuende"
     },
     {
+      "id": "zum-honigtoertchen",
+      "title": "Zum Honigtörtchen",
+      "moduleId": "zum-honigtoertchen"
+    },
+    {
+      "id": "zum-honigtoertchen::page:honigtoertchen-ueberblick",
+      "title": "Zum Honigtörtchen · Zum Honigtörtchen",
+      "moduleId": "zum-honigtoertchen"
+    },
+    {
+      "id": "zum-honigtoertchen::page:honigtoertchen-hausgeschichte",
+      "title": "Zum Honigtörtchen · Das Haus · Melog & die gerettete Hochzeit",
+      "moduleId": "zum-honigtoertchen"
+    },
+    {
+      "id": "zum-honigtoertchen::page:honigtoertchen-personal",
+      "title": "Zum Honigtörtchen · Die Menschen · Aufgaben im Honigtörtchen",
+      "moduleId": "zum-honigtoertchen"
+    },
+    {
+      "id": "zum-honigtoertchen::page:honigtoertchen-dienstleistungen",
+      "title": "Zum Honigtörtchen · Sonderwünsche · Hochzeiten & Festaufträge",
+      "moduleId": "zum-honigtoertchen"
+    },
+    {
+      "id": "zum-honigtoertchen::session:honigtoertchen-szene-aussenansicht",
+      "title": "Zum Honigtörtchen · Vor dem Honigtörtchen",
+      "moduleId": "zum-honigtoertchen"
+    },
+    {
+      "id": "zum-honigtoertchen::session:honigtoertchen-szene-verkaufsraum",
+      "title": "Zum Honigtörtchen · Der Verkaufsraum · Auslage & Aufträge",
+      "moduleId": "zum-honigtoertchen"
+    },
+    {
+      "id": "zum-honigtoertchen::session:honigtoertchen-szene-gastraum",
+      "title": "Zum Honigtörtchen · Der kleine Gastraum",
+      "moduleId": "zum-honigtoertchen"
+    },
+    {
+      "id": "zum-honigtoertchen::session:honigtoertchen-szene-backstube",
+      "title": "Zum Honigtörtchen · Die Backstube · Teig & Ofenwärme",
+      "moduleId": "zum-honigtoertchen"
+    },
+    {
+      "id": "zum-honigtoertchen::session:honigtoertchen-szene-vorratskammer",
+      "title": "Zum Honigtörtchen · Vorratskammer & Lieferbereich",
+      "moduleId": "zum-honigtoertchen"
+    },
+    {
+      "id": "zum-honigtoertchen::session:honigtoertchen-szene-wohnstube",
+      "title": "Zum Honigtörtchen · Die Wohnstube · Obere Etage",
+      "moduleId": "zum-honigtoertchen"
+    },
+    {
+      "id": "gwynthor-marktplatz",
+      "title": "Gwynthor Marktplatz",
+      "moduleId": "gwynthor-marktplatz"
+    },
+    {
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-park-lindenhain",
+      "title": "Gwynthor Marktplatz · Park I · Unter den Linden",
+      "moduleId": "gwynthor-marktplatz"
+    },
+    {
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-park-rosengarten",
+      "title": "Gwynthor Marktplatz · Park II · Der Rosengarten",
+      "moduleId": "gwynthor-marktplatz"
+    },
+    {
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-park-schattengarten",
+      "title": "Gwynthor Marktplatz · Park III · Am flachen Wasserbecken",
+      "moduleId": "gwynthor-marktplatz"
+    },
+    {
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-park-spielwiese",
+      "title": "Gwynthor Marktplatz · Park IV · Die Spielwiese",
+      "moduleId": "gwynthor-marktplatz"
+    },
+    {
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-anzeigetafel",
+      "title": "Gwynthor Marktplatz · Die Anzeigetafel · Zwischen den Wartenden",
+      "moduleId": "gwynthor-marktplatz"
+    },
+    {
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-marktstaende",
+      "title": "Gwynthor Marktplatz · Der Markt · Zwischen Gemüse und Fisch",
+      "moduleId": "gwynthor-marktplatz"
+    },
+    {
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-marktbrunnen",
+      "title": "Gwynthor Marktplatz · Der Marktbrunnen · Am steinernen Rand",
+      "moduleId": "gwynthor-marktplatz"
+    },
+    {
+      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-spielleute",
+      "title": "Gwynthor Marktplatz · Die Spielleute · Unter dem Sonnentuch",
+      "moduleId": "gwynthor-marktplatz"
+    },
+    {
+      "id": "lothaires-arkaneum",
+      "title": "Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum"
+    },
+    {
+      "id": "lothaires-arkaneum::page:arkaneum-einordnung",
+      "title": "Lothaires Arkaneum · Lothaires Arkaneum",
+      "moduleId": "lothaires-arkaneum"
+    },
+    {
+      "id": "lothaires-arkaneum::page:arkaneum-betrieb",
+      "title": "Lothaires Arkaneum · Das Arkaneum · Zwischen Garten und Werkbank",
+      "moduleId": "lothaires-arkaneum"
+    },
+    {
+      "id": "lothaires-arkaneum::page:arkaneum-hierarchie",
+      "title": "Lothaires Arkaneum · Die Hände des Arkaneums",
+      "moduleId": "lothaires-arkaneum"
+    },
+    {
+      "id": "lothaires-arkaneum::page:arkaneum-leistungen",
+      "title": "Lothaires Arkaneum · Aufträge · Rat und Werkstatt",
+      "moduleId": "lothaires-arkaneum"
+    },
+    {
+      "id": "lothaires-arkaneum::session:arkaneum-verkaufsraum",
+      "title": "Lothaires Arkaneum · Der Verkaufsraum · Unter dem Amethystblick",
+      "moduleId": "lothaires-arkaneum"
+    },
+    {
+      "id": "lothaires-arkaneum::session:arkaneum-labor",
+      "title": "Lothaires Arkaneum · Das Labor · Was diesmal wohl gelingt",
+      "moduleId": "lothaires-arkaneum"
+    },
+    {
+      "id": "lothaires-arkaneum::session:arkaneum-vorratskammer",
+      "title": "Lothaires Arkaneum · Die Vorratskammer · Nauthagerds Ordnung",
+      "moduleId": "lothaires-arkaneum"
+    },
+    {
+      "id": "lothaires-arkaneum::session:arkaneum-kraeutergarten",
+      "title": "Lothaires Arkaneum · Der Hinterhof · Zwischen Blatt und Wurzel",
+      "moduleId": "lothaires-arkaneum"
+    },
+    {
+      "id": "lothaires-arkaneum::session:arkaneum-studierzimmer",
+      "title": "Lothaires Arkaneum · Das Studierzimmer · Bücher und Widersprüche",
+      "moduleId": "lothaires-arkaneum"
+    },
+    {
+      "id": "heim-der-fearnan",
+      "title": "Heim der Fearnan",
+      "moduleId": "heim-der-fearnan"
+    },
+    {
+      "id": "heim-der-fearnan::page:fearnan-heim",
+      "title": "Heim der Fearnan · Heim der Fearnan",
+      "moduleId": "heim-der-fearnan"
+    },
+    {
+      "id": "heim-der-fearnan::page:fearnan-familie",
+      "title": "Heim der Fearnan · Familie Fearnan",
+      "moduleId": "heim-der-fearnan"
+    },
+    {
+      "id": "heim-der-fearnan::session:fearnan-wohnstube",
+      "title": "Heim der Fearnan · Die Wohnstube",
+      "moduleId": "heim-der-fearnan"
+    },
+    {
+      "id": "heim-der-torvik",
+      "title": "Heim der Torvik",
+      "moduleId": "heim-der-torvik"
+    },
+    {
+      "id": "heim-der-torvik::page:torvik-heim",
+      "title": "Heim der Torvik · Heim der Torvik",
+      "moduleId": "heim-der-torvik"
+    },
+    {
+      "id": "heim-der-torvik::page:torvik-familie",
+      "title": "Heim der Torvik · Familie Torvik",
+      "moduleId": "heim-der-torvik"
+    },
+    {
+      "id": "heim-der-torvik::session:torvik-wohnstube",
+      "title": "Heim der Torvik · Die Wohnstube",
+      "moduleId": "heim-der-torvik"
+    },
+    {
+      "id": "heim-der-celynfor",
+      "title": "Heim der Celynfor",
+      "moduleId": "heim-der-celynfor"
+    },
+    {
+      "id": "heim-der-celynfor::page:celynfor-heim",
+      "title": "Heim der Celynfor · Heim der Celynfor",
+      "moduleId": "heim-der-celynfor"
+    },
+    {
+      "id": "heim-der-celynfor::page:celynfor-familie",
+      "title": "Heim der Celynfor · Familie Celynfor",
+      "moduleId": "heim-der-celynfor"
+    },
+    {
+      "id": "heim-der-celynfor::page:celynfor-hund",
+      "title": "Heim der Celynfor · Spant · Der Familienhund",
+      "moduleId": "heim-der-celynfor"
+    },
+    {
+      "id": "heim-der-celynfor::session:celynfor-wohnstube",
+      "title": "Heim der Celynfor · Die Wohnstube",
+      "moduleId": "heim-der-celynfor"
+    },
+    {
       "id": "gwynthorer-theater",
       "title": "Gwynthorer Theater",
       "moduleId": "gwynthorer-theater"
@@ -3898,166 +4117,6 @@
       "id": "zum-dritten-funken::session:gofrann-page-9",
       "title": "Zum Dritten Funken · Verwaltungsraum",
       "moduleId": "zum-dritten-funken"
-    },
-    {
-      "id": "gwynthor-marktplatz",
-      "title": "Gwynthor Marktplatz",
-      "moduleId": "gwynthor-marktplatz"
-    },
-    {
-      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-park-lindenhain",
-      "title": "Gwynthor Marktplatz · Park I · Unter den Linden",
-      "moduleId": "gwynthor-marktplatz"
-    },
-    {
-      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-park-rosengarten",
-      "title": "Gwynthor Marktplatz · Park II · Der Rosengarten",
-      "moduleId": "gwynthor-marktplatz"
-    },
-    {
-      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-park-schattengarten",
-      "title": "Gwynthor Marktplatz · Park III · Am flachen Wasserbecken",
-      "moduleId": "gwynthor-marktplatz"
-    },
-    {
-      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-park-spielwiese",
-      "title": "Gwynthor Marktplatz · Park IV · Die Spielwiese",
-      "moduleId": "gwynthor-marktplatz"
-    },
-    {
-      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-anzeigetafel",
-      "title": "Gwynthor Marktplatz · Die Anzeigetafel · Zwischen den Wartenden",
-      "moduleId": "gwynthor-marktplatz"
-    },
-    {
-      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-marktstaende",
-      "title": "Gwynthor Marktplatz · Der Markt · Zwischen Gemüse und Fisch",
-      "moduleId": "gwynthor-marktplatz"
-    },
-    {
-      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-marktbrunnen",
-      "title": "Gwynthor Marktplatz · Der Marktbrunnen · Am steinernen Rand",
-      "moduleId": "gwynthor-marktplatz"
-    },
-    {
-      "id": "gwynthor-marktplatz::session:gwynthor-marktplatz-spielleute",
-      "title": "Gwynthor Marktplatz · Die Spielleute · Unter dem Sonnentuch",
-      "moduleId": "gwynthor-marktplatz"
-    },
-    {
-      "id": "lothaires-arkaneum",
-      "title": "Lothaires Arkaneum",
-      "moduleId": "lothaires-arkaneum"
-    },
-    {
-      "id": "lothaires-arkaneum::page:arkaneum-einordnung",
-      "title": "Lothaires Arkaneum · Lothaires Arkaneum",
-      "moduleId": "lothaires-arkaneum"
-    },
-    {
-      "id": "lothaires-arkaneum::page:arkaneum-betrieb",
-      "title": "Lothaires Arkaneum · Das Arkaneum · Zwischen Garten und Werkbank",
-      "moduleId": "lothaires-arkaneum"
-    },
-    {
-      "id": "lothaires-arkaneum::page:arkaneum-hierarchie",
-      "title": "Lothaires Arkaneum · Die Hände des Arkaneums",
-      "moduleId": "lothaires-arkaneum"
-    },
-    {
-      "id": "lothaires-arkaneum::page:arkaneum-leistungen",
-      "title": "Lothaires Arkaneum · Aufträge · Rat und Werkstatt",
-      "moduleId": "lothaires-arkaneum"
-    },
-    {
-      "id": "lothaires-arkaneum::session:arkaneum-verkaufsraum",
-      "title": "Lothaires Arkaneum · Der Verkaufsraum · Unter dem Amethystblick",
-      "moduleId": "lothaires-arkaneum"
-    },
-    {
-      "id": "lothaires-arkaneum::session:arkaneum-labor",
-      "title": "Lothaires Arkaneum · Das Labor · Was diesmal wohl gelingt",
-      "moduleId": "lothaires-arkaneum"
-    },
-    {
-      "id": "lothaires-arkaneum::session:arkaneum-vorratskammer",
-      "title": "Lothaires Arkaneum · Die Vorratskammer · Nauthagerds Ordnung",
-      "moduleId": "lothaires-arkaneum"
-    },
-    {
-      "id": "lothaires-arkaneum::session:arkaneum-kraeutergarten",
-      "title": "Lothaires Arkaneum · Der Hinterhof · Zwischen Blatt und Wurzel",
-      "moduleId": "lothaires-arkaneum"
-    },
-    {
-      "id": "lothaires-arkaneum::session:arkaneum-studierzimmer",
-      "title": "Lothaires Arkaneum · Das Studierzimmer · Bücher und Widersprüche",
-      "moduleId": "lothaires-arkaneum"
-    },
-    {
-      "id": "heim-der-fearnan",
-      "title": "Heim der Fearnan",
-      "moduleId": "heim-der-fearnan"
-    },
-    {
-      "id": "heim-der-fearnan::page:fearnan-heim",
-      "title": "Heim der Fearnan · Heim der Fearnan",
-      "moduleId": "heim-der-fearnan"
-    },
-    {
-      "id": "heim-der-fearnan::page:fearnan-familie",
-      "title": "Heim der Fearnan · Familie Fearnan",
-      "moduleId": "heim-der-fearnan"
-    },
-    {
-      "id": "heim-der-fearnan::session:fearnan-wohnstube",
-      "title": "Heim der Fearnan · Die Wohnstube",
-      "moduleId": "heim-der-fearnan"
-    },
-    {
-      "id": "heim-der-torvik",
-      "title": "Heim der Torvik",
-      "moduleId": "heim-der-torvik"
-    },
-    {
-      "id": "heim-der-torvik::page:torvik-heim",
-      "title": "Heim der Torvik · Heim der Torvik",
-      "moduleId": "heim-der-torvik"
-    },
-    {
-      "id": "heim-der-torvik::page:torvik-familie",
-      "title": "Heim der Torvik · Familie Torvik",
-      "moduleId": "heim-der-torvik"
-    },
-    {
-      "id": "heim-der-torvik::session:torvik-wohnstube",
-      "title": "Heim der Torvik · Die Wohnstube",
-      "moduleId": "heim-der-torvik"
-    },
-    {
-      "id": "heim-der-celynfor",
-      "title": "Heim der Celynfor",
-      "moduleId": "heim-der-celynfor"
-    },
-    {
-      "id": "heim-der-celynfor::page:celynfor-heim",
-      "title": "Heim der Celynfor · Heim der Celynfor",
-      "moduleId": "heim-der-celynfor"
-    },
-    {
-      "id": "heim-der-celynfor::page:celynfor-familie",
-      "title": "Heim der Celynfor · Familie Celynfor",
-      "moduleId": "heim-der-celynfor"
-    },
-    {
-      "id": "heim-der-celynfor::page:celynfor-hund",
-      "title": "Heim der Celynfor · Spant · Der Familienhund",
-      "moduleId": "heim-der-celynfor"
-    },
-    {
-      "id": "heim-der-celynfor::session:celynfor-wohnstube",
-      "title": "Heim der Celynfor · Die Wohnstube",
-      "moduleId": "heim-der-celynfor"
     },
     {
       "id": "zum-roten-tor",
@@ -6352,6 +6411,7 @@
     "AleriaAlmanach/modules/theatre-program/theatre-program-data.js",
     "AleriaAlmanach/modules/uisge-beatha-hueter/uisge-beatha-hueter-data.js",
     "AleriaAlmanach/modules/windreiter/windreiter-data.js",
+    "AleriaAlmanach/modules/zum-honigtoertchen/honigtoertchen-data.js",
     "Anzeigetafeln/Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/data.json",
     "Anzeigetafeln/Cenyr/celtigerns-wacht/baronie-gwendolyns-ufer/morddyn/tafel.config.js",
     "Anzeigetafeln/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor/authored-notices.json",
