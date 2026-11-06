@@ -136,6 +136,9 @@ test('every imported Gwynthor pin uses its reviewed location motif without chang
   const state = JSON.parse(read('../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json')).state;
   const inventory = JSON.parse(read('../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/markings.inventory.json'));
   const source = JSON.parse(read('../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/fleischsammler-localities.source.json'));
+  const pert = JSON.parse(read('../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/pert-maesglas.source.json'));
+  assert.equal(pert.pinId, 'gwynthor-marking-157');
+  assert.equal(pert.originalPin.id, pert.pinId);
   assert.equal(source.mapId, FLEISCHSAMMLER_MAP_ID);
   assert.equal(source.locations.length, 7);
   assert.equal(new Set(source.locations.map(location => location.pinId)).size, 7);
@@ -162,8 +165,13 @@ test('every imported Gwynthor pin uses its reviewed location motif without chang
       assert.ok(category, pin.id);
       assert.ok(KartoCategoryCatalog.definition(category), pin.id);
     } else unchangedMotifs++;
+    // A later authored farm has its own image. Verify its retained original
+    // only for this historical import-motif contract; the Pert tests verify
+    // the actual current farm, images, table, links and all foreign pin data.
+    const motifPin = pin.id === pert.pinId ? pert.originalPin : pin;
+    if (pin.id === pert.pinId) assert.deepEqual([pin.x, pin.y], pert.position, pin.id);
     const expected = KartoCategoryCatalog.placeholder(category);
-    assert.equal(placeholders.resolve(pin,state.cats.find(cat => cat.id === pin.cat)).src,expected,pin.id);
+    assert.equal(placeholders.resolve(motifPin,state.cats.find(cat => cat.id === motifPin.cat)).src,expected,pin.id);
   }
   assert.equal(unchangedMotifs, 151, 'Every other imported pin retains its exact historical motif');
   assert.deepEqual(state,original);
