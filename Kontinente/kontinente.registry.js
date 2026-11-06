@@ -20526,7 +20526,7 @@ window.KONTINENTE_REGISTRY = [
     name: "Grafschaft Celtigerns Wacht - Gwyl Celtigern",
     type: "Grafschaft",
     page: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
-    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js?v=20261105-gwynthor-localities-v1",
+    data: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js?v=20261106-melog-v1",
     contentSource: "Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/celtigerns-wacht-grafschaft.inline-export.json?v=coeddu-craigddu-20260927",
     contentPolicy: {
       blockedLinkHosts: ["animexx.de"],
