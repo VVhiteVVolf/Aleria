@@ -64,7 +64,7 @@ test('thread rendering retains the complete mechanical history while displaying 
   const captured = {};
   const noop = () => {};
   const context = createContext({
-    document: { querySelector: () => null },
+    document: { querySelector: () => null, addEventListener: (name, listener) => { (captured.events ||= {})[name] = listener; } },
     AleriaSkillChecks: { setRenderContext: comments => { captured.skills = comments; } },
     AleriaHerausforderung: { setRenderContext: comments => { captured.challenge = comments; } },
     AleriaCombatEncounter: { renderActivePanel: (_scroll, _threadId, comments) => { captured.encounter = comments; } },
@@ -73,6 +73,7 @@ test('thread rendering retains the complete mechanical history while displaying 
   });
   vm.runInContext(moduleSource('comments/comments-pagination.js'), context);
   vm.runInContext(moduleSource('comments/comments-thread.js'), context);
+  assert.equal(typeof captured.events['aleria:comment-backend-reconnect'], 'function');
   context.patchCommentScroll = (_scroll, _top, units) => { captured.units = units; };
   context.renderCommentInsertControl = () => '';
   context.syncCommentJumpTools = (_scroll, comments) => { captured.jump = comments; };

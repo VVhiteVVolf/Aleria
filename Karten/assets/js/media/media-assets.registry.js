@@ -6633,6 +6633,14 @@ window.KARTO_MEDIA_ASSETS = Object.freeze([
     "source": "Hauswappen"
   },
   {
+    "id": "2e1aee2dc252a1",
+    "name": "melog emblem",
+    "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Melog/melog-emblem.png",
+    "kind": "crest",
+    "group": "Llamreis Ankunft / Bürgerliche / Gwynthor / Melog",
+    "source": "Hauswappen"
+  },
+  {
     "id": "9fc1d6e744f33e",
     "name": "document emblem",
     "url": "/Stammbäume/assets/images/houses/Llamreis%20Ankunft/B%C3%BCrgerliche/Gwynthor/Perllan/document-emblem.jpg",
