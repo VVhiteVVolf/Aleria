@@ -182,6 +182,29 @@ test('Historical religion snapshots match the original source hashes',async()=>{
   }
 });
 
+test('Canonical public source revisions retain the research hashes and document line-ending-only changes',async()=>{
+  const revision=await readJson('sources/public-source-revision-20261105.json');
+  assert.equal(revision.kind,'canonical-public-source-bytes');
+  assert.equal(revision.semanticChanges,0);
+  const research=await import('../sources/evidence-data-before-public-20261105.mjs');
+  const historic=[...research.RELIGION.sources,...research.CROSS_SOURCES.sources];
+  const active=[...RELIGION.sources,...CROSS_SOURCES.sources];
+  assert(revision.changes.length>0);
+  for(const change of revision.changes){
+    assert.equal(change.transformation,'crlf-to-lf');
+    const old=historic.find(source=>source.path===change.path);
+    assert(old,change.path);
+    assert.equal(change.researchSha256,old.sha256,change.path);
+    const current=await readFile(new URL(change.path,workspace));
+    assert.equal(hash(current),change.publicSha256,change.path);
+    assert.equal(change.normalizedResearchSha256,change.publicSha256,change.path);
+    assert.equal(active.find(source=>source.path===change.path)?.sha256,change.publicSha256,change.path);
+  }
+  for(const original of revision.preservedOriginals){
+    assert.equal(hash(await readFile(new URL(original.path,workspace))),original.sha256,original.path);
+  }
+});
+
 test('The active religion renderer contains current foundations and preserves all deity IDs',async()=>{
   const catalog=readReligionCatalog(),entry=catalog.entries.find(item=>item.id==='zirkel-des-ewigen-waldes');
   const actual=await readFile(new URL('Religionen/religionen/zirkel-des-ewigen-waldes/index.html',workspace),'utf8');
