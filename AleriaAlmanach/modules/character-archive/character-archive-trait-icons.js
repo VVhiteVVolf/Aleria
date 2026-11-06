@@ -46,7 +46,31 @@ const rules = [
   [/trunk|alkohol|trinkt/, 'Drunkard'],
   [/grausam|sadist/, 'Cruel'],
   [/misstrau|paranoi/, 'Paranoid'],
-  [/grosszug|freigebig/, 'Charitable']
+  [/grosszug|freigebig/, 'Charitable'],
+  // Ordinary background notes are also indexed as descriptive archive traits.
+  // Exact names keep these suggestions scoped; assigned icons retain priority.
+  [/^arbeit unter tage und prufender blick$/, 'Diligent'],
+  [/^bestandsfuhrung und organisatorische praxis$/, 'Administrator'],
+  [/^botengange und wegekenntnis$/, 'Organizer'],
+  [/^burgerlicher alltag und nachbarschaftserfahrung$/, 'Socializer'],
+  [/^decksroutine und sichere hand am tau$/, 'Adventurer'],
+  [/^fangpraxis und gewasserkenntnis$/, 'Hunter'],
+  [/^gastwirtschaft und umgang mit gasten$/, 'Gregarious'],
+  [/^gerichtsroutine und sorgfaltige aufnahme von aussagen$/, 'Just'],
+  [/^gespannfuhrung und strassenerfahrung$/, 'Cavalry_leader'],
+  [/^haushaltsroutine und aufmerksamer dienst$/, 'Administrator'],
+  [/^heimlicher warenverkehr$/, 'Deceitful'],
+  [/^herdenpflege und wachsamer weideblick$/, 'Patient'],
+  [/^kaufmannische erfahrung$/, 'Business_focus'],
+  [/^krankenpflege und ruhige untersuchung$/, 'Court_physician'],
+  [/^kuchenpraxis und zutatenkenntnis$/, 'Diligent'],
+  [/^pflanzenkenntnis und krauterpraxis$/, 'Gardener'],
+  [/^politische verantwortung und verhandlungspraxis$/, 'Grey_eminence'],
+  [/^routine in korperlicher alltagsarbeit$/, 'Sturdy'],
+  [/^schrift und aktenpraxis$/, 'Scholar'],
+  [/^truppendienst und verlassliche wachroutine$/, 'Heavy_infantry_leader'],
+  [/^vermittlung und gesandtschaftserfahrung$/, 'Grey_eminence'],
+  [/^wachdienst und aufmerksamkeit fur unruhe$/, 'Defensive_leader']
 ];
 
 export function getArchiveTraitIconSource(entry = {}) {
