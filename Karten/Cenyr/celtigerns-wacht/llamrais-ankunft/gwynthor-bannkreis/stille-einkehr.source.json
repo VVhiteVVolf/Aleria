@@ -150,6 +150,148 @@
     "baseRevision": 22,
     "baseDataSha256": "4322649c1d2403cb3955f303fd2f5739fec94994d5c23f896865959dddeb1df5",
     "revision": 23,
-    "note": "preservation records the original local authoring intake; this projection applies only locations[].patch to the unchanged public map state."
+    "note": "preservation records the original local authoring intake; this projection applies only locations[].patch to the unchanged public map state.",
+    "originalPins": [
+      {
+        "id": "gwynthor-marking-060",
+        "x": 0.77001953125,
+        "y": 0.2758730158730159,
+        "title": "Ahnenbaum",
+        "cat": "location-ahnenbaum",
+        "kind": "place",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": ""
+          },
+          {
+            "k": "Baumart",
+            "v": ""
+          },
+          {
+            "k": "Alter",
+            "v": ""
+          },
+          {
+            "k": "Verehrte Ahnen",
+            "v": ""
+          },
+          {
+            "k": "Hüter",
+            "v": ""
+          },
+          {
+            "k": "Rituale",
+            "v": ""
+          },
+          {
+            "k": "Magische Einflüsse",
+            "v": ""
+          },
+          {
+            "k": "Überlieferungen",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "templateId": "natur"
+      },
+      {
+        "id": "gwynthor-marking-065",
+        "x": 0.738037109375,
+        "y": 0.30391111111111113,
+        "title": "Heiligtum",
+        "cat": "location-heiligtum",
+        "kind": "place",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": ""
+          },
+          {
+            "k": "Gottheit / Verehrung",
+            "v": ""
+          },
+          {
+            "k": "Hüter",
+            "v": ""
+          },
+          {
+            "k": "Gemeinschaft",
+            "v": ""
+          },
+          {
+            "k": "Riten",
+            "v": ""
+          },
+          {
+            "k": "Opfergaben",
+            "v": ""
+          },
+          {
+            "k": "Reliquien",
+            "v": ""
+          },
+          {
+            "k": "Zugang",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "templateId": "institution"
+      }
+    ]
   }
 }

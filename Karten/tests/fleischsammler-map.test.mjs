@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { projectStilleEinkehrOriginalPins } from './support/stille-einkehr-pin-history.mjs';
 
 const directory = new URL('../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/', import.meta.url);
 const read = file => JSON.parse(readFileSync(new URL(file, directory), 'utf8'));
@@ -73,7 +74,8 @@ test('the focused admission preserves every other pin and all map metadata', () 
   // farm. Project only that acknowledged patch back to its retained original
   // before checking this earlier seven-location admission's boundary.
   const pert = read('pert-maesglas.source.json');
-  const earlierPins = pins.map(pin => pin.id === pert.pinId ? pert.originalPin : pin);
+  const earlierPins = projectStilleEinkehrOriginalPins(pins)
+    .map(pin => pin.id === pert.pinId ? pert.originalPin : pin);
   const preservation = source.publicationPreservation || source.preservation;
   assert.equal(hash(earlierPins.filter(pin => !changedIds.has(pin.id))), preservation.untouchedPinsSha256);
   assert.equal(hash(stateMetadata), preservation.stateMetadataSha256);
