@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
-  "revision": 22,
-  "updatedAt": "2026-11-07T19:09:36.290Z",
+  "revision": 23,
+  "updatedAt": "2026-11-07T23:04:08.317Z",
   "state": {
     "pins": [
       {
@@ -4804,7 +4804,7 @@
         "id": "gwynthor-marking-060",
         "x": 0.77001953125,
         "y": 0.2758730158730159,
-        "title": "Ahnenbaum",
+        "title": "Ahnenbaum des Fionnbharr",
         "cat": "location-ahnenbaum",
         "kind": "place",
         "img": "",
@@ -4813,60 +4813,60 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
+        "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
         "house": "",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Ahnenbaum des Fionnbharr"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Ahnenbaum auf einer Seeinsel"
           },
           {
             "k": "Baumart",
-            "v": ""
+            "v": "Nicht näher bestimmt"
           },
           {
             "k": "Alter",
-            "v": ""
+            "v": "Gilt als sehr alt"
           },
           {
             "k": "Verehrte Ahnen",
-            "v": ""
+            "v": "Die nähere Überlieferung ist unklar"
           },
           {
             "k": "Hüter",
-            "v": ""
+            "v": "Eine gegenwärtige Betreuung ist nicht bekannt"
           },
           {
             "k": "Rituale",
-            "v": ""
+            "v": "Mit alter Verehrung verbunden; Einzelheiten ungewiss"
           },
           {
             "k": "Magische Einflüsse",
-            "v": ""
+            "v": "Nicht verlässlich beschrieben"
           },
           {
             "k": "Überlieferungen",
-            "v": ""
+            "v": "Ein älteres albisches Heiligtum in der Nähe soll seinem Schutz gedient haben"
           },
           {
             "k": "Zustand",
-            "v": ""
+            "v": "Abgeschieden auf der Insel"
           },
           {
             "k": "Gefahren",
-            "v": ""
+            "v": "Nicht näher bekannt"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Im Bereich des Ahnenbaums gilt ein Angelverbot"
           }
         ],
-        "text": "",
+        "text": "Auf einer Insel im See nördlich von Caer Ysgellfor steht der Ahnenbaum des Fionnbharr. Alte Erzählungen verbinden ihn mit einem albischen Heiligtum, auf dessen Resten später das Asketenkloster der Stillen Einkehr entstanden sein soll. Auch von früheren Besuchen der Druidin Tlachtga wird berichtet. Ob diese Verbindung noch besteht und wer sich heute um den Baum kümmert, ist ungewiss. Im Bereich des Ahnenbaums gilt ein Angelverbot.",
         "secret": false,
         "templateId": "natur"
       },
@@ -5146,7 +5146,7 @@
         "id": "gwynthor-marking-065",
         "x": 0.738037109375,
         "y": 0.30391111111111113,
-        "title": "Heiligtum",
+        "title": "Asketenkloster der Stillen Einkehr",
         "cat": "location-heiligtum",
         "kind": "place",
         "img": "",
@@ -5155,60 +5155,60 @@
         "crestLink": "",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
+        "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
         "house": "",
         "faction": "",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Asketenkloster der Stillen Einkehr"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Verlassener Ort · ehemaliges Asketenkloster"
           },
           {
             "k": "Gottheit / Verehrung",
-            "v": ""
+            "v": "Asketische Einkehr; nähere Ausrichtung nicht benannt"
           },
           {
             "k": "Hüter",
-            "v": ""
+            "v": "Der zeitweilige Hüter gilt als vermisst"
           },
           {
             "k": "Gemeinschaft",
-            "v": ""
+            "v": "Keine ansässige Gemeinschaft mehr bekannt"
           },
           {
             "k": "Riten",
-            "v": ""
+            "v": "Der frühere regelmäßige Betrieb ist erloschen"
           },
           {
             "k": "Opfergaben",
-            "v": ""
+            "v": "Nicht näher überliefert"
           },
           {
             "k": "Reliquien",
-            "v": ""
+            "v": "Keine gesicherten Angaben"
           },
           {
             "k": "Zugang",
-            "v": ""
+            "v": "Abseits des Seeufers in den bewaldeten Hügeln"
           },
           {
             "k": "Zustand",
-            "v": ""
+            "v": "Verlassen"
           },
           {
             "k": "Gefahren",
-            "v": ""
+            "v": "Die Umstände um den Verbleib des Hüters sind ungeklärt"
           },
           {
             "k": "Besonderheiten",
-            "v": ""
+            "v": "Soll auf Resten eines älteren albischen Heiligtums stehen; weitere Nutzung offen"
           }
         ],
-        "text": "",
+        "text": "Ein kleines, verlassenes Asketenkloster in den bewaldeten Hügeln am See nördlich von Caer Ysgellfor, auch als Heiligtum der Stillen Einkehr bekannt. Nach dem Tod des letzten Meisters und dem Weggang seiner Schüler kam das gemeinschaftliche Leben zum Erliegen. Der zeitweilige Hüter soll seit einer Weile nicht mehr gesehen worden sein.\n\nNach älteren Erzählungen wurde die Anlage auf den Resten eines albischen Tempels errichtet, der dem Schutz des Ahnenbaums auf der Seeinsel gedient haben soll. Auch von Besuchen der Druidin Tlachtga wird berichtet. Wie viel davon noch zutrifft, ist ungewiss. Die weitere Nutzung der Anlage ist offen.",
         "secret": false,
         "templateId": "institution"
       },

@@ -1,0 +1,155 @@
+{
+  "schema": "aleria.gwynthor-sacred-site-context",
+  "schemaVersion": 1,
+  "sourceDate": "2026-11-07",
+  "mapId": "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis",
+  "sources": [
+    "Benutzerauftrag: Name und vager Kontext für bestehendes Kloster und bestehenden Ahnenbaum",
+    "Gelieferter Kartenausschnitt und Lage nördlich von Caer Ysgellfor",
+    "Traherns ausdrücklich unsichere Erinnerung an eine Erzählung seines Großvaters"
+  ],
+  "editorialChoice": {
+    "treeName": "Fionnbharr",
+    "identity": "Namensgebung des Baums; keine neue Personen- oder Familienakte"
+  },
+  "boundaries": "Tempelreste, Schutzfunktion und Besuche Tlachtgas bleiben Überlieferung. Keine Besuche in der Gegenwart bestätigt; keine Ursache des Verschwindens, magische Wirkung, künftige Nutzung oder Bauzustand als zerstörte Ruine festgelegt. Das Angelverbot wird örtlich am Ahnenbaum beschrieben; keine neue Fischereirechtsgrenze gezogen.",
+  "locations": [
+    {
+      "id": "gwynthor-marking-060",
+      "position": [
+        0.77001953125,
+        0.2758730158730159
+      ],
+      "patch": {
+        "title": "Ahnenbaum des Fionnbharr",
+        "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Ahnenbaum des Fionnbharr"
+          },
+          {
+            "k": "Typ",
+            "v": "Ahnenbaum auf einer Seeinsel"
+          },
+          {
+            "k": "Baumart",
+            "v": "Nicht näher bestimmt"
+          },
+          {
+            "k": "Alter",
+            "v": "Gilt als sehr alt"
+          },
+          {
+            "k": "Verehrte Ahnen",
+            "v": "Die nähere Überlieferung ist unklar"
+          },
+          {
+            "k": "Hüter",
+            "v": "Eine gegenwärtige Betreuung ist nicht bekannt"
+          },
+          {
+            "k": "Rituale",
+            "v": "Mit alter Verehrung verbunden; Einzelheiten ungewiss"
+          },
+          {
+            "k": "Magische Einflüsse",
+            "v": "Nicht verlässlich beschrieben"
+          },
+          {
+            "k": "Überlieferungen",
+            "v": "Ein älteres albisches Heiligtum in der Nähe soll seinem Schutz gedient haben"
+          },
+          {
+            "k": "Zustand",
+            "v": "Abgeschieden auf der Insel"
+          },
+          {
+            "k": "Gefahren",
+            "v": "Nicht näher bekannt"
+          },
+          {
+            "k": "Besonderheiten",
+            "v": "Im Bereich des Ahnenbaums gilt ein Angelverbot"
+          }
+        ],
+        "text": "Auf einer Insel im See nördlich von Caer Ysgellfor steht der Ahnenbaum des Fionnbharr. Alte Erzählungen verbinden ihn mit einem albischen Heiligtum, auf dessen Resten später das Asketenkloster der Stillen Einkehr entstanden sein soll. Auch von früheren Besuchen der Druidin Tlachtga wird berichtet. Ob diese Verbindung noch besteht und wer sich heute um den Baum kümmert, ist ungewiss. Im Bereich des Ahnenbaums gilt ein Angelverbot."
+      }
+    },
+    {
+      "id": "gwynthor-marking-065",
+      "position": [
+        0.738037109375,
+        0.30391111111111113
+      ],
+      "patch": {
+        "title": "Asketenkloster der Stillen Einkehr",
+        "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Asketenkloster der Stillen Einkehr"
+          },
+          {
+            "k": "Typ",
+            "v": "Verlassener Ort · ehemaliges Asketenkloster"
+          },
+          {
+            "k": "Gottheit / Verehrung",
+            "v": "Asketische Einkehr; nähere Ausrichtung nicht benannt"
+          },
+          {
+            "k": "Hüter",
+            "v": "Der zeitweilige Hüter gilt als vermisst"
+          },
+          {
+            "k": "Gemeinschaft",
+            "v": "Keine ansässige Gemeinschaft mehr bekannt"
+          },
+          {
+            "k": "Riten",
+            "v": "Der frühere regelmäßige Betrieb ist erloschen"
+          },
+          {
+            "k": "Opfergaben",
+            "v": "Nicht näher überliefert"
+          },
+          {
+            "k": "Reliquien",
+            "v": "Keine gesicherten Angaben"
+          },
+          {
+            "k": "Zugang",
+            "v": "Abseits des Seeufers in den bewaldeten Hügeln"
+          },
+          {
+            "k": "Zustand",
+            "v": "Verlassen"
+          },
+          {
+            "k": "Gefahren",
+            "v": "Die Umstände um den Verbleib des Hüters sind ungeklärt"
+          },
+          {
+            "k": "Besonderheiten",
+            "v": "Soll auf Resten eines älteren albischen Heiligtums stehen; weitere Nutzung offen"
+          }
+        ],
+        "text": "Ein kleines, verlassenes Asketenkloster in den bewaldeten Hügeln am See nördlich von Caer Ysgellfor, auch als Heiligtum der Stillen Einkehr bekannt. Nach dem Tod des letzten Meisters und dem Weggang seiner Schüler kam das gemeinschaftliche Leben zum Erliegen. Der zeitweilige Hüter soll seit einer Weile nicht mehr gesehen worden sein.\n\nNach älteren Erzählungen wurde die Anlage auf den Resten eines albischen Tempels errichtet, der dem Schutz des Ahnenbaums auf der Seeinsel gedient haben soll. Auch von Besuchen der Druidin Tlachtga wird berichtet. Wie viel davon noch zutrifft, ist ungewiss. Die weitere Nutzung der Anlage ist offen."
+      }
+    }
+  ],
+  "preservation": {
+    "originalRevision": 24,
+    "beforeSha256": "9caacd233f5615e40b130ebf3c6be5ad70d66586541bfcd7343b1916b22337b4",
+    "otherPinsSha256": "93336f952e6f4293b7587cc5c7498bb04ab3dba452f895f7d2b91f2a8b96fcde",
+    "settingsSha256": "a8449ce8987a97ee9851a91e862feeadb6c3bfeb9b1caef3d9a2a16df68867c4"
+  },
+  "publicProjection": {
+    "baseCommit": "9f33049750f6620162e93493721b036f76219373",
+    "baseRevision": 22,
+    "baseDataSha256": "4322649c1d2403cb3955f303fd2f5739fec94994d5c23f896865959dddeb1df5",
+    "revision": 23,
+    "note": "preservation records the original local authoring intake; this projection applies only locations[].patch to the unchanged public map state."
+  }
+}
