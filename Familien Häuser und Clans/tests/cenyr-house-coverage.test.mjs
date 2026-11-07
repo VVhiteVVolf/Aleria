@@ -81,11 +81,14 @@ test('actual house frames, family-profile links and supported biography return l
   }
 });
 
-test('the eight declared rural profiles expose their real biographies and crests without invented warrior art', () => {
+test('five source-owned rural profiles and three expanded houses retain their biographies and actual local art', () => {
+  const expandedIds = new Set(['haus-tirfelyn', 'haus-helfaen', 'haus-marchwern']);
+  const ruralLocalities = FLEISCHSAMMLER_FAMILIES_INDEX.filter(row => !expandedIds.has(row.familyId));
   const profiles = report.records.filter(record => record.existingPage.kind === 'family-record');
-  assert.deepEqual(profiles.map(record => record.stableId).sort(), FLEISCHSAMMLER_FAMILIES_INDEX.map(row => row.familyId).sort());
-  assert.equal(report.summary.familyProfiles, 8);
-  for (const locality of FLEISCHSAMMLER_FAMILIES_INDEX) {
+  assert.deepEqual(profiles.map(record => record.stableId).sort(), ruralLocalities.map(row => row.familyId).sort());
+  assert.equal(report.summary.familyProfiles, 5);
+  assert.equal(ruralLocalities.length, 5);
+  for (const locality of ruralLocalities) {
     const source = input.projectById.get(locality.familyId);
     const profile = createRuralFamilyCoverageProfile(source, source.family.extensions.houseBiographyModule);
     const row = profiles.find(record => record.stableId === locality.familyId);
@@ -100,6 +103,34 @@ test('the eight declared rural profiles expose their real biographies and crests
     const header = renderHouseBiographyHeader(source.family, profile.biography);
     assert.ok(header.includes(source.family.document.title));
     assert.ok(header.includes(locality.emblem));
+  }
+  // These three households now own commissioned house pages and portraits.
+  // Their expansion must not remove coverage from the five source-only profiles.
+  for (const locality of FLEISCHSAMMLER_FAMILIES_INDEX.filter(row => expandedIds.has(row.familyId))) {
+    const row = report.records.find(record => record.stableId === locality.familyId);
+    const family = input.projectById.get(locality.familyId).family;
+    const biography = family.extensions.houseBiographyModule;
+    assert.ok(row, locality.familyId);
+    assert.equal(row.existingPage.kind, 'standalone-house');
+    assert.equal(row.existingPage.present, true);
+    assert.equal(row.existingPage.prepared, false);
+    assert.equal(row.existingPage.canonicalDataId, locality.familyId);
+    assert.equal(row.existingAuthoring.kind, 'standalone-house');
+    assert.equal(row.existingAuthoring.active, true);
+    assert.equal(row.existingBiography.present, true);
+    assert.ok(biography.house.biographyText.trim());
+    assert.equal(row.emblem, locality.emblem);
+    assert.ok(fs.statSync(new URL('Stammbäume/' + locality.emblem, root)).isFile());
+    const header = renderHouseBiographyHeader(family, biography);
+    assert.ok(header.includes(family.document.title));
+    assert.ok(header.includes(locality.emblem));
+    assert.ok(row.boundPageScenePath.startsWith('AleriaAlmanach/assets/gwynthor-landfamilien/portraits/' + locality.slug + '/'));
+    assert.ok(fs.statSync(new URL(row.boundPageScenePath, root)).isFile());
+    assert.equal(row.availableOriginalArt, true);
+    assert.equal(row.links.iframeSupported, true);
+    assert.equal(row.links.iframeCanonical, true);
+    assert.equal(row.links.biographyBackLinkSupported, true);
+    assert.equal(row.links.biographyBackLinkCanonical, true);
   }
 });
 
