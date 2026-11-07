@@ -65,7 +65,25 @@ test('responsibilities, history and open farm quantities follow the supplied sou
 
 test('every unrelated pin and map setting remains byte-equivalent in its JSON model', () => {
   const { pins, ...metadata } = data.state;
-  assert.equal(hash(pins.filter(item => item.id !== source.pinId)), source.preservation.untouchedPinsSha256);
+  // These three independently reviewed household profiles were expanded after
+  // Pert. Reconstruct only their historical text fields for this older hash;
+  // every coordinate, affiliation and other field remains the current value.
+  const priorProfiles = JSON.parse(readFileSync(new URL('./fixtures/gwynthor-landfamilien-pin-profiles-before-20261107.json', import.meta.url), 'utf8'));
+  assert.equal(priorProfiles.referenceCommit, '1bf1ab605da1dd9e1a4624b1d8c6b710dd934636');
+  assert.deepEqual(priorProfiles.pins.map(item => item.id).sort(),
+    ['gwynthor-marking-092', 'gwynthor-marking-107', 'gwynthor-marking-115']);
+  const profilesById = new Map(priorProfiles.pins.map(item => [item.id, item]));
+  const reviewedLocalities = read('fleischsammler-localities.source.json');
+  const historicalPins = pins.map(item => {
+    const prior = profilesById.get(item.id);
+    if (!prior) return item;
+    const approved = reviewedLocalities.locations.find(location => location.pinId === item.id)?.patch;
+    assert.ok(approved, item.id);
+    assert.deepEqual(item.table, approved.table, item.id + '.table');
+    assert.equal(item.text, approved.text, item.id + '.text');
+    return { ...item, table: prior.table, text: prior.text };
+  });
+  assert.equal(hash(historicalPins.filter(item => item.id !== source.pinId)), source.preservation.untouchedPinsSha256);
   assert.equal(hash(metadata), source.preservation.stateMetadataSha256);
   const { revision, updatedAt, state, ...documentMetadata } = data;
   assert.equal(hash(documentMetadata), source.preservation.documentMetadataSha256);
