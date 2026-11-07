@@ -2603,6 +2603,18 @@
       "title": "Zum Roten Tor"
     },
     {
+      "id": "tirfelyn-hof",
+      "title": "Tirfelyn-Hof"
+    },
+    {
+      "id": "jagdhaus-helfaen",
+      "title": "Jagdhaus Helfaen"
+    },
+    {
+      "id": "marchwern-gestuet",
+      "title": "Marchwern-Gestüt"
+    },
+    {
       "id": "gwynthor-gwregysdu-lagerhaeuser",
       "title": "Die Lagerhäuser der Gwregysdu"
     },
@@ -4162,6 +4174,96 @@
       "id": "zum-roten-tor::session:tor-wagenhof-stall",
       "title": "Zum Roten Tor · Wagenhof und Stall · Vor der Weiterfahrt",
       "moduleId": "zum-roten-tor"
+    },
+    {
+      "id": "tirfelyn-hof",
+      "title": "Tirfelyn-Hof",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::page:tirfelyn-ueberblick",
+      "title": "Tirfelyn-Hof · Tirfelyn-Hof",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::page:tirfelyn-hierarchie",
+      "title": "Tirfelyn-Hof · Hierarchie · Betrieb und Familienrollen",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::page:tirfelyn-stammbaum",
+      "title": "Tirfelyn-Hof · Familie Tirfelyn · Stammbaum",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-szene-aussen",
+      "title": "Tirfelyn-Hof · Tirfelyn-Hof · Draußen",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-szene-wohnstube",
+      "title": "Tirfelyn-Hof · Die Wohnstube",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "jagdhaus-helfaen",
+      "title": "Jagdhaus Helfaen",
+      "moduleId": "jagdhaus-helfaen"
+    },
+    {
+      "id": "jagdhaus-helfaen::page:helfaen-ueberblick",
+      "title": "Jagdhaus Helfaen · Jagdhaus Helfaen",
+      "moduleId": "jagdhaus-helfaen"
+    },
+    {
+      "id": "jagdhaus-helfaen::page:helfaen-hierarchie",
+      "title": "Jagdhaus Helfaen · Hierarchie · Betrieb und Familienrollen",
+      "moduleId": "jagdhaus-helfaen"
+    },
+    {
+      "id": "jagdhaus-helfaen::page:helfaen-stammbaum",
+      "title": "Jagdhaus Helfaen · Familie Helfaen · Stammbaum",
+      "moduleId": "jagdhaus-helfaen"
+    },
+    {
+      "id": "jagdhaus-helfaen::session:helfaen-szene-aussen",
+      "title": "Jagdhaus Helfaen · Jagdhaus Helfaen · Draußen",
+      "moduleId": "jagdhaus-helfaen"
+    },
+    {
+      "id": "jagdhaus-helfaen::session:helfaen-szene-wohnstube",
+      "title": "Jagdhaus Helfaen · Die Wohnstube",
+      "moduleId": "jagdhaus-helfaen"
+    },
+    {
+      "id": "marchwern-gestuet",
+      "title": "Marchwern-Gestüt",
+      "moduleId": "marchwern-gestuet"
+    },
+    {
+      "id": "marchwern-gestuet::page:marchwern-ueberblick",
+      "title": "Marchwern-Gestüt · Marchwern-Gestüt",
+      "moduleId": "marchwern-gestuet"
+    },
+    {
+      "id": "marchwern-gestuet::page:marchwern-hierarchie",
+      "title": "Marchwern-Gestüt · Hierarchie · Betrieb und Familienrollen",
+      "moduleId": "marchwern-gestuet"
+    },
+    {
+      "id": "marchwern-gestuet::page:marchwern-stammbaum",
+      "title": "Marchwern-Gestüt · Familie Marchwern · Stammbaum",
+      "moduleId": "marchwern-gestuet"
+    },
+    {
+      "id": "marchwern-gestuet::session:marchwern-szene-aussen",
+      "title": "Marchwern-Gestüt · Marchwern-Gestüt · Draußen",
+      "moduleId": "marchwern-gestuet"
+    },
+    {
+      "id": "marchwern-gestuet::session:marchwern-szene-wohnstube",
+      "title": "Marchwern-Gestüt · Die Wohnstube",
+      "moduleId": "marchwern-gestuet"
     },
     {
       "id": "gwynthor-gwregysdu-lagerhaeuser",
@@ -6369,6 +6471,7 @@
     "AleriaAlmanach/modules/gwynthor-bathhouse/bathhouse-data.js",
     "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-data.js",
     "AleriaAlmanach/modules/gwynthor-heime/homes-data.js",
+    "AleriaAlmanach/modules/gwynthor-landfamilien/landfamilien-data.js",
     "AleriaAlmanach/modules/gwynthor-marktplatz/marketplace-data.js",
     "AleriaAlmanach/modules/gwynthor-theater/theater-data.js",
     "AleriaAlmanach/modules/house-retinues/house-retinues-data.js",
