@@ -22,6 +22,8 @@ const families = areaFamilies.filter(record => registry.byId(record.id));
 const familiesWithoutHousePage = areaFamilies.filter(record => !registry.byId(record.id));
 const profileCoverage = await auditCenyrHouseCoverage({ allowlistIds: publicCenyrScope.map(record => record.id) });
 const localityIds = new Set(FLEISCHSAMMLER_FAMILIES_INDEX.map(record => record.familyId));
+const expandedHouseIds = new Set(['haus-tirfelyn', 'haus-helfaen', 'haus-marchwern']);
+const ruralProfileIds = [...localityIds].filter(id => !expandedHouseIds.has(id));
 const sources = new Map();
 for (const record of families) {
   const entry = registry.byId(record.id);
@@ -30,14 +32,17 @@ for (const record of families) {
   sources.set(record.id, (await import(source)).HOUSE_CONTENT);
 }
 
-test('Die 108 eigenständigen öffentlichen Hausseiten einschließlich Perllan, Melog, Pert und Gwernant bleiben erreichbar und mit ihren Bios verknüpft', async () => {
+test('Die 108 bisherigen Hausseiten und drei ausgebaute Landfamilien bleiben erreichbar und mit ihren Bios verknüpft', async () => {
   const completedPageIds = [
     'haus-blevis', 'haus-brogar', 'haus-crewe', 'haus-glyn', 'haus-jernigan', 'haus-talfryn',
     'haus-tarw', 'haus-tynged', 'haus-cochdon', 'haus-llythfor', 'haus-twyllod', 'perllan', 'melog', 'pert', 'haus-gwernant',
   ];
   assert.equal(completedPageIds.length, 15);
-  assert.equal(families.length, 108);
-  assert.equal(families.filter(record => !completedPageIds.includes(record.id)).length, 93);
+  const priorFamilies = families.filter(record => !expandedHouseIds.has(record.id));
+  assert.equal(priorFamilies.length, 108);
+  assert.equal(families.length, 111);
+  assert.deepEqual(families.filter(record => expandedHouseIds.has(record.id)).map(record => record.id).sort(), [...expandedHouseIds].sort());
+  assert.equal(priorFamilies.filter(record => !completedPageIds.includes(record.id)).length, 93);
   for (const id of completedPageIds) assert.ok(sources.has(id), id);
   for (const record of families) {
     const entry = registry.byId(record.id);
@@ -57,10 +62,11 @@ test('Die 108 eigenständigen öffentlichen Hausseiten einschließlich Perllan, 
   }
 });
 
-test('Cochdon, Llythfor und Twyllod behalten ihre Hausbios; acht örtliche Familien besitzen echte zugängliche Familienprofile', async () => {
-  assert.deepEqual(familiesWithoutHousePage.map(record => record.id).sort(), [...localityIds].sort());
+test('Cochdon, Llythfor und Twyllod behalten ihre Hausbios; fünf Landfamilien behalten Profile und drei besitzen ausgebaute Hausseiten', async () => {
+  assert.equal(ruralProfileIds.length, 5);
+  assert.deepEqual(familiesWithoutHousePage.map(record => record.id).sort(), ruralProfileIds.sort());
   assert.equal(profileCoverage.ok, true);
-  assert.equal(profileCoverage.records.filter(record => record.existingPage.kind === 'family-record').length, localityIds.size);
+  assert.equal(profileCoverage.records.filter(record => record.existingPage.kind === 'family-record').length, 5);
   for (const record of familiesWithoutHousePage) {
     const profile = createRuralFamilyCoverageProfile(record, record.family.extensions.houseBiographyModule);
     const checked = profileCoverage.records.find(row => row.stableId === record.id);
@@ -74,6 +80,31 @@ test('Cochdon, Llythfor und Twyllod behalten ihre Hausbios; acht örtliche Famil
     await access(new URL(profile.sourcePath, project));
     await access(new URL(profile.href, project));
     assert.equal(checked.boundPageScenePath, '', 'A family crest is not a commissioned warrior image');
+  }
+  for (const locality of FLEISCHSAMMLER_FAMILIES_INDEX.filter(row => expandedHouseIds.has(row.familyId))) {
+    const id = locality.familyId;
+    const record = families.find(row => row.id === id);
+    const checked = profileCoverage.records.find(row => row.stableId === id);
+    const content = sources.get(id);
+    assert.ok(record, id);
+    assert.equal(registry.byId(id).page, 'kleinehaeuser.html', id);
+    assert.equal(content.id, id);
+    assert.equal(content.prepared, false, id);
+    assert.equal(checked.existingPage.kind, 'standalone-house', id);
+    assert.equal(checked.existingPage.present, true, id);
+    assert.equal(checked.existingPage.prepared, false, id);
+    assert.equal(checked.existingPage.canonicalDataId, id);
+    assert.equal(checked.existingAuthoring.active, true, id);
+    assert.equal(checked.existingBiography.present, true, id);
+    assert.ok(record.family.extensions.houseBiographyModule.house.biographyText.trim(), id);
+    assert.equal(checked.emblem, locality.emblem, id);
+    await access(new URL('Stammbäume/' + locality.emblem, project));
+    assert.ok(checked.boundPageScenePath.startsWith('AleriaAlmanach/assets/gwynthor-landfamilien/portraits/' + locality.slug + '/'), id);
+    await access(new URL(checked.boundPageScenePath, project));
+    assert.equal(checked.availableOriginalArt, true, id);
+    assert.deepEqual(checked.missing, { page: false, bio: false, art: false, localArt: false }, id);
+    assert.equal(checked.links.iframeCanonical, true, id);
+    assert.equal(checked.links.biographyBackLinkCanonical, true, id);
   }
   for (const id of ['haus-cochdon', 'haus-llythfor', 'haus-twyllod']) {
     const record = areaFamilies.find(record => record.id === id);
