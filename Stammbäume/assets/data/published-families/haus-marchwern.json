@@ -1,0 +1,1036 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-marchwern",
+  "revision": 1,
+  "updatedAt": "2026-11-07T19:09:43.724Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-marchwern",
+      "title": "Familie Marchwern",
+      "motto": "",
+      "description": "Das Marchwern-Gestüt ist ein wichtiger Zuchtbetrieb im östlichen Bannkreis von Gwynthor. Die Familie steht unmittelbar im Dienst des Hauses Wyrm und stellt gute Reitpferde bereit. Gwrgi Marchwern leitet den Betrieb mit Unterstützung seines Bruders Gwynog und seiner Frau Mared. Vierzehn lebende Angehörige gehören zum gemeinsamen Gestütshaushalt. Braunes Haar und grüne Augen prägen das Familienbild.\n\nZum Bestand gehören vielseitige Rhyfel, einige seltene reine Ceffyl und weitere geeignete Reitpferde. Verlässliche Bezugspersonen und feste Stallroutinen sind besonders für die anspruchsvollen Ceffyl wichtig. Der Dienst für Haus Wyrm begründet keinen anderen Wohnort: Die Familie lebt und arbeitet an ihrem Gestüt bei Gwynthor.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Marchwern-Gestüt",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-marchwern-gruender",
+        "worldPersonId": "person--haus-marchwern--haus-marchwern-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-marchwern-gruenderin",
+        "worldPersonId": "person--haus-marchwern--haus-marchwern-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "gwrgi-marchwern",
+        "worldPersonId": "person--haus-marchwern--gwrgi-marchwern",
+        "name": "Gwrgi Marchwern",
+        "title": "Gestütsvorsteher im Dienst des Hauses Wyrm",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [
+          "48 Jahre"
+        ],
+        "notes": "48 Jahre. Gwrgi leitet das Gestüt im unmittelbaren Dienst Haus Wyrms. Mit seinem Bruder Gwynog teilt er Aufzucht, Pflege und die Vorbereitung geeigneter Reitpferde ein. Erscheinung: braunes Haar, grüne Augen; kurz zurückgekämmt, kurzer Bart mit ersten grauen Strähnen.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "leitung",
+          "registryManagedFields": [
+            "birth",
+            "status",
+            "death",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 2,
+            "status": 2,
+            "death": 2,
+            "portrait": 2,
+            "title": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1692"
+            ],
+            "status": [
+              "alive"
+            ],
+            "death": [
+              ""
+            ],
+            "portrait": [
+              ""
+            ],
+            "title": [
+              "Gestütsvorsteher im Dienst des Hauses Wyrm"
+            ],
+            "notes": [
+              "48 Jahre. Führt den Familienbetrieb im Bannkreis Gwynthors. Die Dienstbindung an Haus Wyrm begründet keinen anderen Wohnort."
+            ]
+          }
+        }
+      },
+      {
+        "id": "mared-spouse-marchwern",
+        "worldPersonId": "person--family-tree--mared-spouse-marchwern",
+        "name": "Mared",
+        "title": "Züchterin und Verantwortliche für Stallroutinen",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mared-spouse-marchwern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "44 Jahre"
+        ],
+        "notes": "44 Jahre. Mared führt Aufzucht und feste Stallroutinen mit. Besonders die seltenen Ceffyl brauchen vertraute Bezugspersonen und verlässliche Betreuung. Erscheinung: braunes Haar, grüne Augen; geflochtener niedriger Haarknoten.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "zucht",
+          "registryManagedFields": [
+            "birth",
+            "status",
+            "death",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 2,
+            "status": 2,
+            "death": 2,
+            "portrait": 2,
+            "title": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1696"
+            ],
+            "status": [
+              "alive"
+            ],
+            "death": [
+              ""
+            ],
+            "portrait": [
+              ""
+            ],
+            "title": [
+              "Züchterin und Verantwortliche für Stallroutinen"
+            ],
+            "notes": [
+              "44 Jahre. Führt Pflege und feste Routinen mit. Herkunftsfamilie nicht festgelegt."
+            ]
+          }
+        }
+      },
+      {
+        "id": "rhun-marchwern",
+        "worldPersonId": "person--haus-marchwern--rhun-marchwern",
+        "name": "Rhun Marchwern",
+        "title": "Pferdepfleger und Bereiter",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhun-marchwern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "24 Jahre"
+        ],
+        "notes": "24 Jahre. Rhun pflegt und bereitet geeignete Reitpferde. Mit Gwenlliw und den Kindern Gwyndaf und Euron lebt er am Gestüt. Erscheinung: braunes Haar, grüne Augen; mittellang und seitlich gescheitelt, leichter Bart.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "bereitung",
+          "registryManagedFields": [
+            "birth",
+            "status",
+            "death",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 2,
+            "status": 2,
+            "death": 2,
+            "portrait": 2,
+            "title": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1716"
+            ],
+            "status": [
+              "alive"
+            ],
+            "death": [
+              ""
+            ],
+            "portrait": [
+              ""
+            ],
+            "title": [
+              "Pferdepfleger und Bereiter"
+            ],
+            "notes": [
+              "24 Jahre. Arbeitet mit Reitpferden des Gestüts und bereitet geeignete Tiere auf den Dienst vor."
+            ]
+          }
+        }
+      },
+      {
+        "id": "eluned-marchwern",
+        "worldPersonId": "person--haus-marchwern--eluned-marchwern",
+        "name": "Eluned Marchwern",
+        "title": "Züchterin und Aufzuchthelferin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/eluned-marchwern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "21 Jahre"
+        ],
+        "notes": "21 Jahre. Eluned hilft bei Aufzucht und Pflege. Sie achtet mit Mared auf feste Bezugspersonen für die anspruchsvollen Zuchttiere. Erscheinung: braunes Haar, grüne Augen; langer hoher Zopf mit seitlichen Flechtsträhnen.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "zucht",
+          "registryManagedFields": [
+            "birth",
+            "status",
+            "death",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 2,
+            "status": 2,
+            "death": 2,
+            "portrait": 2,
+            "title": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1719"
+            ],
+            "status": [
+              "alive"
+            ],
+            "death": [
+              ""
+            ],
+            "portrait": [
+              ""
+            ],
+            "title": [
+              "Züchterin"
+            ],
+            "notes": [
+              "21 Jahre. Hilft bei Aufzucht und Pflege; die geringe Zahl reiner Ceffyl wird sorgfältig betreut."
+            ]
+          }
+        }
+      },
+      {
+        "id": "rhunedd-marchwern",
+        "worldPersonId": "person--haus-marchwern--rhunedd-marchwern",
+        "name": "Rhunedd Marchwern",
+        "title": "Junge Stallpflegerin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhunedd-marchwern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "16 Jahre"
+        ],
+        "notes": "16 Jahre. Rhunedd hilft bei Stallpflege und Fütterung. Sie lernt die verlässlichen täglichen Abläufe des Gestüts. Erscheinung: braunes Haar, grüne Augen; schulterlanges gewelltes Haar, halb hochgesteckt.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "stall"
+        }
+      },
+      {
+        "id": "einion-marchwern",
+        "worldPersonId": "person--haus-marchwern--einion-marchwern",
+        "name": "Gwynog Marchwern",
+        "title": "Aufzuchtleiter und Stallkoordinator",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/einion-marchwern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [
+          "45 Jahre"
+        ],
+        "notes": "45 Jahre. Gwynog ist Gwrgi Marchwerns jüngerer Bruder. Er koordiniert Fütterung, Stallarbeit und Jungpferdeaufzucht und arbeitet selbst täglich mit. Erscheinung: braunes Haar, grüne Augen; kurze leicht gewellte Haare, breiter Schnurrbart.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "leitung"
+        }
+      },
+      {
+        "id": "cynwen-spouse-marchwern",
+        "worldPersonId": "person--family-tree--cynwen-spouse-marchwern",
+        "name": "Cynwen",
+        "title": "Verantwortliche für Futter und Hofhaushalt",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/cynwen-spouse-marchwern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "42 Jahre"
+        ],
+        "notes": "42 Jahre. Cynwen stimmt Futtervorräte und den gemeinsamen Hofhaushalt ab. Sie unterstützt die Stallarbeit nach Bedarf. Erscheinung: braunes Haar, grüne Augen; zwei zu einem Kranz hochgesteckte Zöpfe.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "haushalt"
+        }
+      },
+      {
+        "id": "mabon-marchwern",
+        "worldPersonId": "person--haus-marchwern--mabon-marchwern",
+        "name": "Cynog Marchwern",
+        "title": "Bereiter und Jungpferdepfleger",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mabon-marchwern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "22 Jahre"
+        ],
+        "notes": "22 Jahre. Cynog arbeitet bei Jungpferdepflege und Vorbereitung geeigneter Reittiere. Er unterstützt Rhun bei der Bereitung. Erscheinung: braunes Haar, grüne Augen; kurzer Seitenscheitel, glatt rasiert.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "bereitung"
+        }
+      },
+      {
+        "id": "luned-marchwern",
+        "worldPersonId": "person--haus-marchwern--luned-marchwern",
+        "name": "Dwynwen Marchwern",
+        "title": "Pferdepflegerin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/luned-marchwern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "18 Jahre"
+        ],
+        "notes": "18 Jahre. Dwynwen übernimmt Pflege, Fütterung und Stallarbeit. Feste tägliche Abläufe prägen ihre Arbeit am Gestüt. Erscheinung: braunes Haar, grüne Augen; langer seitlicher Zopf.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "stall"
+        }
+      },
+      {
+        "id": "gwynfor-marchwern",
+        "worldPersonId": "person--haus-marchwern--gwynfor-marchwern",
+        "name": "Eilfyw Marchwern",
+        "title": "Junger Stallhelfer",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1726",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwynfor-marchwern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "14 Jahre"
+        ],
+        "notes": "14 Jahre. Eilfyw hilft bei leichten Stallarbeiten und beim Bereitstellen von Futter. Selbständige Bereitung gehört noch nicht zu seinen Aufgaben. Erscheinung: braunes Haar, grüne Augen; kurzes zerzaustes Haar mit längerem Pony.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "nachwuchs"
+        }
+      },
+      {
+        "id": "rhosyn-marchwern",
+        "worldPersonId": "person--haus-marchwern--rhosyn-marchwern",
+        "name": "Llywela Marchwern",
+        "title": "Gestütskind und Futterhelferin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhosyn-marchwern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "10 Jahre"
+        ],
+        "notes": "10 Jahre. Llywela hilft bei einfachen, altersgemäßen Arbeiten. Sie wächst im gemeinsamen Gestütshaushalt auf. Erscheinung: braunes Haar, grüne Augen; zwei kurze seitliche Zöpfe.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "nachwuchs"
+        }
+      },
+      {
+        "id": "aneira-spouse-marchwern",
+        "worldPersonId": "person--family-tree--aneira-spouse-marchwern",
+        "name": "Gwenlliw",
+        "title": "Pferdepflegerin und Helferin im Hofhaushalt",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1717",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/aneira-spouse-marchwern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "23 Jahre"
+        ],
+        "notes": "23 Jahre. Gwenlliw hilft bei Pferdepflege und Hofhaushalt. Mit Rhun versorgt sie die beiden kleinen Kinder. Erscheinung: braunes Haar, grüne Augen; langes Haar in einem einfachen Nackenknoten.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "stall"
+        }
+      },
+      {
+        "id": "gwyndaf-marchwern",
+        "worldPersonId": "person--haus-marchwern--gwyndaf-marchwern",
+        "name": "Gwyndaf Marchwern",
+        "title": "Gestütskind",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1737",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwyndaf-marchwern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "3 Jahre"
+        ],
+        "notes": "3 Jahre. Gwyndaf wächst mit seinem jüngeren Bruder am Gestüt auf. Er hat keine Arbeitspflichten. Erscheinung: braunes Haar, grüne Augen; weiches kurzes Wuschelhaar.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "nachwuchs"
+        }
+      },
+      {
+        "id": "euron-marchwern",
+        "worldPersonId": "person--haus-marchwern--euron-marchwern",
+        "name": "Euron Marchwern",
+        "title": "Kleinkind am Gestüt",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1739",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/euron-marchwern.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "1 Jahre"
+        ],
+        "notes": "1 Jahre. Euron ist Rhuns und Gwenlliws jüngstes Kind. Die Familie versorgt ihn im gemeinsamen Haushalt. Erscheinung: braunes Haar, grüne Augen; feine kurze Haare mit kleinem Stirnwirbel.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "nachwuchs"
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-marchwern-founders",
+        "participantIds": [
+          "haus-marchwern-gruender",
+          "haus-marchwern-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Historisches unbekanntes Gründerpaar vor der Überlieferungslücke.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-gwrgi-mared-marchwern",
+        "participantIds": [
+          "gwrgi-marchwern",
+          "mared-spouse-marchwern"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsamer Familienhaushalt; kein genaues Hochzeitsjahr festgelegt.",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true
+        }
+      },
+      {
+        "id": "marriage-rhun-marchwern-aneira-spouse-marchwern",
+        "participantIds": [
+          "rhun-marchwern",
+          "aneira-spouse-marchwern"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsamer Familienhaushalt; kein genaues Hochzeitsjahr festgelegt.",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true
+        }
+      },
+      {
+        "id": "marriage-einion-marchwern-cynwen-spouse-marchwern",
+        "participantIds": [
+          "einion-marchwern",
+          "cynwen-spouse-marchwern"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsamer Familienhaushalt; kein genaues Hochzeitsjahr festgelegt.",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-gwrgi-marchwern",
+        "childId": "gwrgi-marchwern",
+        "parentIds": [
+          "haus-marchwern-gruender",
+          "haus-marchwern-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-marchwern-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Familienzugehörigkeit über unbekannte Generationen; keine unmittelbare biologische Elternschaft. Die konkreten heutigen Zweige beginnen erst hinter diesem Sprung.",
+        "extensions": {
+          "timeJumpId": "gap-marchwern-to-1692"
+        }
+      },
+      {
+        "id": "parentage-einion-marchwern",
+        "childId": "einion-marchwern",
+        "parentIds": [
+          "haus-marchwern-gruender",
+          "haus-marchwern-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-marchwern-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Familienzugehörigkeit über unbekannte Generationen; keine unmittelbare biologische Elternschaft. Die konkreten heutigen Zweige beginnen erst hinter diesem Sprung.",
+        "extensions": {
+          "timeJumpId": "gap-marchwern-to-1692"
+        }
+      },
+      {
+        "id": "parentage-rhun-marchwern",
+        "childId": "rhun-marchwern",
+        "parentIds": [
+          "gwrgi-marchwern",
+          "mared-spouse-marchwern"
+        ],
+        "partnershipId": "marriage-gwrgi-mared-marchwern",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-eluned-marchwern",
+        "childId": "eluned-marchwern",
+        "parentIds": [
+          "gwrgi-marchwern",
+          "mared-spouse-marchwern"
+        ],
+        "partnershipId": "marriage-gwrgi-mared-marchwern",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhunedd-marchwern",
+        "childId": "rhunedd-marchwern",
+        "parentIds": [
+          "gwrgi-marchwern",
+          "mared-spouse-marchwern"
+        ],
+        "partnershipId": "marriage-gwrgi-mared-marchwern",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-mabon-marchwern",
+        "childId": "mabon-marchwern",
+        "parentIds": [
+          "einion-marchwern",
+          "cynwen-spouse-marchwern"
+        ],
+        "partnershipId": "marriage-einion-marchwern-cynwen-spouse-marchwern",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-luned-marchwern",
+        "childId": "luned-marchwern",
+        "parentIds": [
+          "einion-marchwern",
+          "cynwen-spouse-marchwern"
+        ],
+        "partnershipId": "marriage-einion-marchwern-cynwen-spouse-marchwern",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gwynfor-marchwern",
+        "childId": "gwynfor-marchwern",
+        "parentIds": [
+          "einion-marchwern",
+          "cynwen-spouse-marchwern"
+        ],
+        "partnershipId": "marriage-einion-marchwern-cynwen-spouse-marchwern",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhosyn-marchwern",
+        "childId": "rhosyn-marchwern",
+        "parentIds": [
+          "einion-marchwern",
+          "cynwen-spouse-marchwern"
+        ],
+        "partnershipId": "marriage-einion-marchwern-cynwen-spouse-marchwern",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gwyndaf-marchwern",
+        "childId": "gwyndaf-marchwern",
+        "parentIds": [
+          "rhun-marchwern",
+          "aneira-spouse-marchwern"
+        ],
+        "partnershipId": "marriage-rhun-marchwern-aneira-spouse-marchwern",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-euron-marchwern",
+        "childId": "euron-marchwern",
+        "parentIds": [
+          "rhun-marchwern",
+          "aneira-spouse-marchwern"
+        ],
+        "partnershipId": "marriage-rhun-marchwern-aneira-spouse-marchwern",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-marchwern",
+        "name": "Familie Marchwern",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "gap-marchwern-to-1692",
+        "parentPartnershipId": "marriage-haus-marchwern-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "gwrgi-marchwern",
+          "einion-marchwern"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1692",
+        "label": "Nicht einzeln überlieferte Generationen bis zur heutigen Familie",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-marchwern-founders",
+      "houseId": "house-marchwern",
+      "crestSubtitle": "14 lebende Familienangehörige · Marchwern-Gestüt",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "gwrgi-marchwern",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": false,
+      "pendingDescendantReview": false,
+      "sourceRevision": 2,
+      "chartLayoutPolicy": "strict-v1",
+      "registryManagedLineageFields": [
+        "founderPartnershipId",
+        "crestSubtitle"
+      ],
+      "registryManagedLineageFieldRevisions": {
+        "founderPartnershipId": 2,
+        "crestSubtitle": 2
+      },
+      "registryManagedExtensionFields": [
+        "blankFamily",
+        "preparedTimeJump",
+        "chartLayoutPolicy"
+      ],
+      "registryManagedExtensionFieldRevisions": {
+        "blankFamily": 2,
+        "preparedTimeJump": 2,
+        "chartLayoutPolicy": 2,
+        "chartAlignLineageOriginOverPersonId": 2
+      },
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Familie Marchwern",
+        "housePage": true,
+        "image": "../AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Das Marchwern-Gestüt ist ein wichtiger Zuchtbetrieb im östlichen Bannkreis von Gwynthor. Die Familie steht unmittelbar im Dienst des Hauses Wyrm und stellt gute Reitpferde bereit. Gwrgi Marchwern leitet den Betrieb mit Unterstützung seines Bruders Gwynog und seiner Frau Mared. Vierzehn lebende Angehörige gehören zum gemeinsamen Gestütshaushalt. Braunes Haar und grüne Augen prägen das Familienbild.\n\nZum Bestand gehören vielseitige Rhyfel, einige seltene reine Ceffyl und weitere geeignete Reitpferde. Verlässliche Bezugspersonen und feste Stallroutinen sind besonders für die anspruchsvollen Ceffyl wichtig. Der Dienst für Haus Wyrm begründet keinen anderen Wohnort: Die Familie lebt und arbeitet an ihrem Gestüt bei Gwynthor.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Familie Marchwern"
+          ],
+          [
+            "Rang",
+            "Bürgerlich"
+          ],
+          [
+            "Stammsitz",
+            "Marchwern-Gestüt"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Gwrgi Marchwern und Gwynog Marchwern"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Draig"
+          ],
+          [
+            "Ursprung",
+            "Östlicher Bannkreis von Gwynthor"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Familie und Lebensgrundlage",
+          "biographyText": "Das Marchwern-Gestüt ist ein wichtiger Zuchtbetrieb im östlichen Bannkreis von Gwynthor. Die Familie steht unmittelbar im Dienst des Hauses Wyrm und stellt gute Reitpferde bereit. Gwrgi Marchwern leitet den Betrieb mit Unterstützung seines Bruders Gwynog und seiner Frau Mared. Vierzehn lebende Angehörige gehören zum gemeinsamen Gestütshaushalt. Braunes Haar und grüne Augen prägen das Familienbild.\n\nZum Bestand gehören vielseitige Rhyfel, einige seltene reine Ceffyl und weitere geeignete Reitpferde. Verlässliche Bezugspersonen und feste Stallroutinen sind besonders für die anspruchsvollen Ceffyl wichtig. Der Dienst für Haus Wyrm begründet keinen anderen Wohnort: Die Familie lebt und arbeitet an ihrem Gestüt bei Gwynthor.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Überlieferung und heutige Generationen",
+          "historyText": "Die Namen der älteren Gründer und der Generationen zwischen ihnen und der heutigen Familie sind nicht überliefert. Die näher bekannte Familie beginnt mit den Brüdern Gwrgi und Gwynog und führt über deren Kinder bis zu den kleinen Enkeln.\n\nGwrgi und Mared sind die Eltern Rhuns, Eluneds und Rhunedds. Rhun und seine Frau Gwenlliw haben die Söhne Gwyndaf und Euron. Gwynog und Cynwen sind die Eltern Cynogs, Dwynwens, Eilfyws und Llywelas. Die Herkunftsfamilien der angeheirateten Frauen sind nicht benannt. Die Familie lebt und arbeitet im von der ungelösten Mordserie betroffenen Umland.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Die Marchwern schätzen ruhigen, verlässlichen Umgang mit ihren Pferden. Pflege, Aufzucht und Vorbereitung gehören zusammen. Die tägliche Fürsorge soll weder wegen einer eiligen Lieferung noch wegen eines besonders wertvollen Tiers bei den übrigen Pferden vernachlässigt werden."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Traditionen und Hausleben",
+              "text": "Gwrgi koordiniert den Gesamtbetrieb, Mared Zucht und feste Stallroutinen, Gwynog Aufzucht und Stallarbeit. Rhun und Cynog helfen als Bereiter. Eluned arbeitet in der Aufzucht, Rhunedd und Dwynwen bei Pflege und Fütterung. Cynwen hält Futtervorräte und Hofhaushalt zusammen, Gwenlliw unterstützt Pferdepflege und Hausarbeit. Eilfyw und Llywela übernehmen altersgemäße Handgriffe. Die kleinen Kinder Gwyndaf und Euron haben keine Arbeitspflichten."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Die Lebensgrundlage ist das bestehende Marchwern-Gestüt bei Gwynthor. Zucht, Aufzucht und Pflege geeigneter Reitpferde dienen dem unmittelbaren Dienst für Haus Wyrm. Exakte Bestandszahlen, Weideflächen und weitere Güter sind nicht festgelegt."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Die unmittelbare Dienstbindung an Haus Wyrm und die Versorgung Gwynthors mit guten Reitpferden bleiben bestehen. Sie begründen weder eine neue Herrschaftsebene noch einen anderen Familienwohnsitz. Verwandtschaften zu bestehenden Namensgleichen sind nicht ergänzt."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+              "title": "Familie Marchwern · vollständige Hausseite",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-marchwern"
+            },
+            {
+              "title": "Marchwern-Gestüt",
+              "text": "Wichtige Rosszucht für Gwynthor. Die Betreiber dienen unmittelbar Haus Wyrm und stellen gute Reitpferde bereit, darunter Ceffyl und Rhyfel.",
+              "link": "../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-092",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png"
+            },
+            {
+              "title": "Ceffyl",
+              "text": "Seltene, anspruchsvolle Reitpferde mit enger Bindung an einen Reiter.",
+              "link": "../Bestiarium/tiere/pferde/ceffyl/",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png"
+            },
+            {
+              "title": "Rhyfel",
+              "text": "Vielseitige und verlässliche Reitpferde Cenyrs.",
+              "link": "../Bestiarium/tiere/pferde/rhyfel/",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png"
+            }
+          ],
+          "footer": ""
+        }
+      },
+      "sourceNote": "Nutzerauftrag vom 7. November 2026: 14 lebende eigene Angehörige; unbekannte historische Gründer und serieller Überlieferungssprung. Bestehende IDs erhalten. Lebensalter beziehen sich auf 1740. Neue Namen, Verwandtschaften und Aufgaben sind ausdrücklich beauftragte Ausarbeitung. Externe Verlobtenkarten zählen nicht zum örtlichen Haushalt. Angeheiratete Herkunftsfamilien bleiben offen."
+    }
+  }
+}

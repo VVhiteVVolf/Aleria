@@ -1,0 +1,206 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-07T00:00:00.000Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthorer Landfamilien/tirfelyn/ceridwen-tirfelyn.json",
+  "character": {
+    "name": "Ceridwen Tirfelyn",
+    "title": "Verstorbene Gemüsebäuerin",
+    "fraktion": "Familie Tirfelyn",
+    "role": "Verstorbene Gemüsebäuerin",
+    "status": "dead",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Tirfelyn-Hof · Bannkreis Gwynthor",
+    "origin": "Rheunwaith · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Ceridwen Tirfelyn wurde 1718 geboren und starb 1740 mit 22 Jahren. Sie gehörte zur Familie Tirfelyn auf dem Tirfelyn-Hof. Ihre Aufgabe vor ihrem Tod war die Gemüsewirtschaft des Familienhofs.\n\nCeridwen wurde 1740 mit zweiundzwanzig Jahren vor wenigen Wochen Opfer des Fleischsammlers. Sie wollte ihren Verlobten Gorwyn Helfaen besuchen und war am folgenden Morgen nicht zurückgekehrt; ein genauer Tat- oder Fundort bleibt offen.\n\nDie Eltern sind Caradog Tirfelyn, Enid. Zur Geschwisterreihe gehören Gareth Tirfelyn, Bedwyr Tirfelyn. Verlobung mit Gorwyn Helfaen; durch Ceridwens Tod im Jahr 1740 beendet.\n\nDer Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb.\n\nCeridwen wollte ihren Verlobten Gorwyn Helfaen im Jagdhaus besuchen und kam am folgenden Morgen nicht zurück. Vor wenigen Wochen wurde sie Opfer des Fleischsammlers. Der genaue Tat- und Fundort sowie der Ablauf ihrer letzten Nacht sind unbekannt.\n\nCeridwen Tirfelyn hatte rotes Haar und braune Augen. Sie trug ihr langes Haar offen und flocht an beiden Seiten einen feinen Zopf. Ihre Kleidung entsprach dem einfachen ländlichen Haushalt.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-07T00:00:00.000Z",
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/ceridwen-tirfelyn.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schemaVersion": 1,
+      "biographyPage": true,
+      "pageTitle": "Ceridwen Tirfelyn",
+      "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/ceridwen-tirfelyn.png",
+      "imageWidth": 32,
+      "imageTall": true,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "stats": [
+        [
+          "Name",
+          "Ceridwen Tirfelyn"
+        ],
+        [
+          "Geburt",
+          "1718"
+        ],
+        [
+          "Stand 1740",
+          "22 Jahre · verstorben 1740"
+        ],
+        [
+          "Familie",
+          "Tirfelyn"
+        ],
+        [
+          "Wohnort",
+          "Tirfelyn-Hof"
+        ],
+        [
+          "Aufgabe",
+          "Verstorbene Gemüsebäuerin"
+        ]
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/ceridwen-tirfelyn.png",
+        "portraitFit": "contain",
+        "biographyTitle": "Verstorbene Gemüsebäuerin",
+        "biographyText": "<p>Ceridwen Tirfelyn wurde 1718 geboren und starb 1740 mit 22 Jahren. Sie gehörte zur Familie Tirfelyn auf dem Tirfelyn-Hof. Ihre Aufgabe vor ihrem Tod war die Gemüsewirtschaft des Familienhofs.</p><p>Ceridwen wurde 1740 mit zweiundzwanzig Jahren vor wenigen Wochen Opfer des Fleischsammlers. Sie wollte ihren Verlobten Gorwyn Helfaen besuchen und war am folgenden Morgen nicht zurückgekehrt; ein genauer Tat- oder Fundort bleibt offen.</p>",
+        "historyTitle": "Familie und Lebensweg",
+        "historyText": "<p>Die Eltern sind Caradog Tirfelyn, Enid. Zur Geschwisterreihe gehören Gareth Tirfelyn, Bedwyr Tirfelyn. Verlobung mit Gorwyn Helfaen; durch Ceridwens Tod im Jahr 1740 beendet.</p><p>Ceridwen wollte ihren Verlobten Gorwyn Helfaen im Jagdhaus besuchen und kam am folgenden Morgen nicht zurück. Vor wenigen Wochen wurde sie Opfer des Fleischsammlers. Der genaue Tat- und Fundort sowie der Ablauf ihrer letzten Nacht sind unbekannt.</p>",
+        "worksTitle": "Der gemeinsame Lebensunterhalt",
+        "works": [
+          "Der Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb."
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "<p>Ceridwen Tirfelyn hatte rotes Haar und braune Augen. Sie trug ihr langes Haar offen und flocht an beiden Seiten einen feinen Zopf. Ihre Kleidung entsprach dem einfachen ländlichen Haushalt.</p>"
+          }
+        ],
+        "connectionsTitle": "Die nächsten Angehörigen",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Caradog Tirfelyn",
+            "detail": "Vater",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/caradog-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Enid",
+            "detail": "Mutter",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/enid-spouse-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Gorwyn Helfaen",
+            "detail": "Verlobung mit Gorwyn Helfaen; durch Ceridwens Tod im Jahr 1740 beendet",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/gorwyn-helfaen.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Gareth Tirfelyn",
+            "detail": "Bruder",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gareth-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Bedwyr Tirfelyn",
+            "detail": "Bruder",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/bedwyr-tirfelyn.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Haus und Herkunft",
+        "documents": [
+          {
+            "title": "Familie Tirfelyn",
+            "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+            "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=ceridwen-tirfelyn"
+          },
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Die gemeinsame Hausgeschichte der Familie.",
+            "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-tirfelyn"
+          }
+        ],
+        "footer": "Tirfelyn-Hof · Rheunwaith · Cenyr · Stand 1740"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-tirfelyn--ceridwen-tirfelyn"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-tirfelyn--ceridwen-tirfelyn",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1718",
+      "death": "1740",
+      "houseId": "house-tirfelyn",
+      "houseName": "Familie Tirfelyn",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "22 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-tirfelyn",
+          "personId": "ceridwen-tirfelyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-07T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=ceridwen-tirfelyn",
+          "fingerprint": "{\"name\":\"Ceridwen Tirfelyn\",\"title\":\"Verstorbene Gemüsebäuerin\",\"birth\":\"1718\",\"death\":\"1740\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-tirfelyn\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/ceridwen-tirfelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"22 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"caradog-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--caradog-tirfelyn\",\"name\":\"Caradog Tirfelyn\"},{\"personId\":\"enid-spouse-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--enid-spouse-tirfelyn\",\"name\":\"Enid\"}],\"partners\":[{\"personId\":\"gorwyn-helfaen\",\"type\":\"engagement\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-helfaen--gorwyn-helfaen\",\"name\":\"Gorwyn Helfaen\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "caradog-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tirfelyn--caradog-tirfelyn",
+            "name": "Caradog Tirfelyn"
+          },
+          {
+            "personId": "enid-spouse-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--enid-spouse-tirfelyn",
+            "name": "Enid"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "gorwyn-helfaen",
+            "type": "engagement",
+            "status": "ended",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-helfaen--gorwyn-helfaen",
+            "name": "Gorwyn Helfaen"
+          }
+        ],
+        "children": []
+      }
+    },
+    "id": "person--haus-tirfelyn--ceridwen-tirfelyn",
+    "race": "Mensch",
+    "age": 22
+  }
+}

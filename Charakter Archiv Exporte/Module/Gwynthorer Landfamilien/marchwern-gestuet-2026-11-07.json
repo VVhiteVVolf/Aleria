@@ -1,0 +1,436 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-07T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Marchwern-Gestüt",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Marchwern-Gestüt"
+      ],
+      "desc": "Vierzehn Angehörige und die tägliche Arbeit mit Gwynthors Reitpferden.",
+      "iconUrl": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png"
+    },
+    "entry": {
+      "id": "marchwern-gestuet",
+      "title": "Marchwern-Gestüt",
+      "subtitle": "Vierzehn Angehörige und die tägliche Arbeit mit Gwynthors Reitpferden.",
+      "type": "Familiengestüt",
+      "category": "Bannkreis Gwynthor",
+      "symbol": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+      "icon": "⌂",
+      "stamp": "Marchwern-Gestüt",
+      "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/marchwern-aussen-v2.png",
+      "previewImage": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/marchwern-aussen-v2.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--haus-marchwern--gwrgi-marchwern",
+        "person--family-tree--mared-spouse-marchwern",
+        "person--haus-marchwern--rhun-marchwern",
+        "person--haus-marchwern--eluned-marchwern",
+        "person--haus-marchwern--rhunedd-marchwern",
+        "person--haus-marchwern--einion-marchwern",
+        "person--family-tree--cynwen-spouse-marchwern",
+        "person--haus-marchwern--mabon-marchwern",
+        "person--haus-marchwern--luned-marchwern",
+        "person--haus-marchwern--gwynfor-marchwern",
+        "person--haus-marchwern--rhosyn-marchwern",
+        "person--family-tree--aneira-spouse-marchwern",
+        "person--haus-marchwern--gwyndaf-marchwern",
+        "person--haus-marchwern--euron-marchwern"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Marchwern-Gestüt",
+          "commentThreadKey": "marchwern-ueberblick",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/marchwern-aussen-v2.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Das Marchwern-Gestüt ist ein wichtiger Pferdezuchtbetrieb im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Die Marchwern dienen Haus Wyrm unmittelbar und stellen gute Reitpferde bereit.</p><p>Zucht, Fohlenaufzucht, Stallpflege, Futterwirtschaft und die Vorbereitung geeigneter Tiere greifen ineinander. Der Alltag verlangt feste Routinen und verlässliche Bezugspersonen. Neben vielseitigen Rhyfel werden auch wenige anspruchsvolle Ceffyl sorgfältig betreut.</p><p>Hauswirtschaft und Wege nach Gwynthor gehören ebenso dazu wie die Arbeit am Pferd. Die jüngeren Angehörigen lernen unter Aufsicht; sie übernehmen keine selbständige Verantwortung für schwierige Tiere. Die Dienstbindung an Wyrm bleibt vom tatsächlichen Wohnort am Gestüt bei Gwynthor getrennt.</p>",
+          "stats": [
+            [
+              "Ort",
+              "Marchwern-Gestüt · Bannkreis Gwynthor"
+            ],
+            [
+              "Familie",
+              "Familie Marchwern"
+            ],
+            [
+              "Lebende Angehörige",
+              "14"
+            ],
+            [
+              "Lebensunterhalt",
+              "Pferdezucht und Fohlenaufzucht · Stallpflege und Futterwirtschaft · Bereitung geeigneter Reitpferde für Haus Wyrm"
+            ],
+            [
+              "Lage",
+              "Östlicher Bannkreis von Gwynthor"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hierarchie · Betrieb und Familienrollen",
+          "commentThreadKey": "marchwern-hierarchie",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die Familie im Marchwern-Gestüt",
+            "eyebrow": "Familie Marchwern",
+            "subtitle": "Vierzehn lebende Angehörige im Familienbetrieb",
+            "centerLabel": "Marchwern-Gestüt",
+            "emblem": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+            "sideImage": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/marchwern-aussen-v2.png",
+            "motto": "Arbeit und Familie",
+            "description": "<p>Die Zuchtarbeit hat feste Zuständigkeiten. Bereitung, Stall und Hauswirtschaft unterstützen einander; die Aufgaben der Kinder sind vom selbständigen Umgang mit schwierigen Pferden getrennt.</p>",
+            "detailsTitle": "Der gemeinsame Alltag",
+            "details": [
+              {
+                "label": "Lebende Angehörige",
+                "value": "14"
+              },
+              {
+                "label": "Wohnort",
+                "value": "Marchwern-Gestüt · Bannkreis Gwynthor"
+              },
+              {
+                "label": "Lebensunterhalt",
+                "value": "Pferdezucht und Fohlenaufzucht · Stallpflege und Futterwirtschaft · Bereitung geeigneter Reitpferde für Haus Wyrm"
+              }
+            ],
+            "chartTitle": "Aufgaben und Verantwortung",
+            "chartIntro": "Jede lebende Person erscheint einmal mit ihrer hauptsächlichen Aufgabe. Familienzugehörigkeit und Verwandtschaft zeigt der eigene Stammbaum.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 92,
+            "trees": [
+              {
+                "id": "leitung",
+                "label": "Den Betrieb führen",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Den Betrieb führen",
+                    "nodes": [
+                      {
+                        "title": "Gwrgi Marchwern",
+                        "subtitle": "Gestütsvorsteher im Dienst des Hauses Wyrm · 48 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png",
+                        "text": "<p>Gwrgi leitet das Gestüt im unmittelbaren Dienst Haus Wyrms. Mit seinem Bruder Gwynog teilt er Aufzucht, Pflege und die Vorbereitung geeigneter Reitpferde ein.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&amp;person=gwrgi-marchwern\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Gwynog Marchwern",
+                        "subtitle": "Aufzuchtleiter und Stallkoordinator · 45 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/einion-marchwern.png",
+                        "text": "<p>Gwynog ist Gwrgi Marchwerns jüngerer Bruder. Er koordiniert Fütterung, Stallarbeit und Jungpferdeaufzucht und arbeitet selbst täglich mit.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&amp;person=einion-marchwern\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "zucht",
+                "label": "Zucht und Aufzucht",
+                "parentTreeId": "leitung",
+                "levels": [
+                  {
+                    "label": "Zucht und Aufzucht",
+                    "nodes": [
+                      {
+                        "title": "Mared",
+                        "subtitle": "Züchterin und Verantwortliche für Stallroutinen · 44 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mared-spouse-marchwern.png",
+                        "text": "<p>Mared führt Aufzucht und feste Stallroutinen mit. Besonders die seltenen Ceffyl brauchen vertraute Bezugspersonen und verlässliche Betreuung.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&amp;person=mared-spouse-marchwern\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Eluned Marchwern",
+                        "subtitle": "Züchterin und Aufzuchthelferin · 21 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/eluned-marchwern.png",
+                        "text": "<p>Eluned hilft bei Aufzucht und Pflege. Sie achtet mit Mared auf feste Bezugspersonen für die anspruchsvollen Zuchttiere.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&amp;person=eluned-marchwern\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "stall",
+                "label": "Stall und Futter",
+                "parentTreeId": "leitung",
+                "levels": [
+                  {
+                    "label": "Stall und Futter",
+                    "nodes": [
+                      {
+                        "title": "Rhunedd Marchwern",
+                        "subtitle": "Junge Stallpflegerin · 16 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhunedd-marchwern.png",
+                        "text": "<p>Rhunedd hilft bei Stallpflege und Fütterung. Sie lernt die verlässlichen täglichen Abläufe des Gestüts.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&amp;person=rhunedd-marchwern\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Dwynwen Marchwern",
+                        "subtitle": "Pferdepflegerin · 18 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/luned-marchwern.png",
+                        "text": "<p>Dwynwen übernimmt Pflege, Fütterung und Stallarbeit. Feste tägliche Abläufe prägen ihre Arbeit am Gestüt.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&amp;person=luned-marchwern\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Gwenlliw",
+                        "subtitle": "Pferdepflegerin und Helferin im Hofhaushalt · 23 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/aneira-spouse-marchwern.png",
+                        "text": "<p>Gwenlliw hilft bei Pferdepflege und Hofhaushalt. Mit Rhun versorgt sie die beiden kleinen Kinder.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&amp;person=aneira-spouse-marchwern\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "bereitung",
+                "label": "Bereitung und Wege",
+                "parentTreeId": "leitung",
+                "levels": [
+                  {
+                    "label": "Bereitung und Wege",
+                    "nodes": [
+                      {
+                        "title": "Rhun Marchwern",
+                        "subtitle": "Pferdepfleger und Bereiter · 24 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhun-marchwern.png",
+                        "text": "<p>Rhun pflegt und bereitet geeignete Reitpferde. Mit Gwenlliw und den Kindern Gwyndaf und Euron lebt er am Gestüt.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&amp;person=rhun-marchwern\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Cynog Marchwern",
+                        "subtitle": "Bereiter und Jungpferdepfleger · 22 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mabon-marchwern.png",
+                        "text": "<p>Cynog arbeitet bei Jungpferdepflege und Vorbereitung geeigneter Reittiere. Er unterstützt Rhun bei der Bereitung.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&amp;person=mabon-marchwern\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "haushalt",
+                "label": "Haus und Vorräte",
+                "parentTreeId": "leitung",
+                "levels": [
+                  {
+                    "label": "Haus und Vorräte",
+                    "nodes": [
+                      {
+                        "title": "Cynwen",
+                        "subtitle": "Verantwortliche für Futter und Hofhaushalt · 42 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/cynwen-spouse-marchwern.png",
+                        "text": "<p>Cynwen stimmt Futtervorräte und den gemeinsamen Hofhaushalt ab. Sie unterstützt die Stallarbeit nach Bedarf.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&amp;person=cynwen-spouse-marchwern\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "nachwuchs",
+                "label": "Unter Aufsicht lernen",
+                "parentTreeId": "leitung",
+                "levels": [
+                  {
+                    "label": "Unter Aufsicht lernen",
+                    "nodes": [
+                      {
+                        "title": "Eilfyw Marchwern",
+                        "subtitle": "Junger Stallhelfer · 14 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwynfor-marchwern.png",
+                        "text": "<p>Eilfyw hilft bei leichten Stallarbeiten und beim Bereitstellen von Futter. Selbständige Bereitung gehört noch nicht zu seinen Aufgaben.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&amp;person=gwynfor-marchwern\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Llywela Marchwern",
+                        "subtitle": "Gestütskind und Futterhelferin · 10 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhosyn-marchwern.png",
+                        "text": "<p>Llywela hilft bei einfachen, altersgemäßen Arbeiten. Sie wächst im gemeinsamen Gestütshaushalt auf.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&amp;person=rhosyn-marchwern\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Gwyndaf Marchwern",
+                        "subtitle": "Gestütskind · 3 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwyndaf-marchwern.png",
+                        "text": "<p>Gwyndaf wächst mit seinem jüngeren Bruder am Gestüt auf. Er hat keine Arbeitspflichten.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&amp;person=gwyndaf-marchwern\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Euron Marchwern",
+                        "subtitle": "Kleinkind am Gestüt · 1 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/euron-marchwern.png",
+                        "text": "<p>Euron ist Rhuns und Gwenlliws jüngstes Kind. Die Familie versorgt ihn im gemeinsamen Haushalt.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&amp;person=euron-marchwern\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Die Kinder sind Angehörige des Haushalts. Ihre altersgemäße Mithilfe ist von einer erwachsenen Arbeitsstelle getrennt."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Familie Marchwern · Hausbio",
+          "commentThreadKey": "marchwern-hausbio",
+          "biographyPage": true,
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png",
+          "imageWidth": 31,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "stats": [
+            [
+              "Familie",
+              "Marchwern"
+            ],
+            [
+              "Stand",
+              "Bürgerliche Rheunwaith-Familie"
+            ],
+            [
+              "Wohnort",
+              "Marchwern-Gestüt"
+            ],
+            [
+              "Lebende Angehörige",
+              "14"
+            ]
+          ],
+          "biography": {
+            "portraitFit": "contain",
+            "biographyTitle": "Familie und Lebensgrundlage",
+            "biographyText": "Das Marchwern-Gestüt ist ein wichtiger Zuchtbetrieb im östlichen Bannkreis von Gwynthor. Die Familie steht unmittelbar im Dienst des Hauses Wyrm und stellt gute Reitpferde bereit. Gwrgi Marchwern leitet den Betrieb mit Unterstützung seines Bruders Gwynog und seiner Frau Mared. Vierzehn lebende Angehörige gehören zum gemeinsamen Gestütshaushalt. Braunes Haar und grüne Augen prägen das Familienbild.\n\nZum Bestand gehören vielseitige Rhyfel, einige seltene reine Ceffyl und weitere geeignete Reitpferde. Verlässliche Bezugspersonen und feste Stallroutinen sind besonders für die anspruchsvollen Ceffyl wichtig. Der Dienst für Haus Wyrm begründet keinen anderen Wohnort: Die Familie lebt und arbeitet an ihrem Gestüt bei Gwynthor.",
+            "historyTitle": "Überlieferung und heutige Generationen",
+            "historyText": "Die Namen der älteren Gründer und der Generationen zwischen ihnen und der heutigen Familie sind nicht überliefert. Die näher bekannte Familie beginnt mit den Brüdern Gwrgi und Gwynog und führt über deren Kinder bis zu den kleinen Enkeln.\n\nGwrgi und Mared sind die Eltern Rhuns, Eluneds und Rhunedds. Rhun und seine Frau Gwenlliw haben die Söhne Gwyndaf und Euron. Gwynog und Cynwen sind die Eltern Cynogs, Dwynwens, Eilfyws und Llywelas. Die Herkunftsfamilien der angeheirateten Frauen sind nicht benannt. Die Familie lebt und arbeitet im von der ungelösten Mordserie betroffenen Umland.",
+            "worksTitle": "Arbeit und Lebensunterhalt",
+            "works": [],
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Die Angehörigen",
+                "text": "<p><strong>Gwrgi Marchwern</strong> (48) · Gestütsvorsteher im Dienst des Hauses Wyrm. Gwrgi leitet das Gestüt im unmittelbaren Dienst Haus Wyrms. Mit seinem Bruder Gwynog teilt er Aufzucht, Pflege und die Vorbereitung geeigneter Reitpferde ein.</p><p><strong>Mared</strong> (44) · Züchterin und Verantwortliche für Stallroutinen. Mared führt Aufzucht und feste Stallroutinen mit. Besonders die seltenen Ceffyl brauchen vertraute Bezugspersonen und verlässliche Betreuung.</p><p><strong>Rhun Marchwern</strong> (24) · Pferdepfleger und Bereiter. Rhun pflegt und bereitet geeignete Reitpferde. Mit Gwenlliw und den Kindern Gwyndaf und Euron lebt er am Gestüt.</p><p><strong>Eluned Marchwern</strong> (21) · Züchterin und Aufzuchthelferin. Eluned hilft bei Aufzucht und Pflege. Sie achtet mit Mared auf feste Bezugspersonen für die anspruchsvollen Zuchttiere.</p><p><strong>Rhunedd Marchwern</strong> (16) · Junge Stallpflegerin. Rhunedd hilft bei Stallpflege und Fütterung. Sie lernt die verlässlichen täglichen Abläufe des Gestüts.</p><p><strong>Gwynog Marchwern</strong> (45) · Aufzuchtleiter und Stallkoordinator. Gwynog ist Gwrgi Marchwerns jüngerer Bruder. Er koordiniert Fütterung, Stallarbeit und Jungpferdeaufzucht und arbeitet selbst täglich mit.</p><p><strong>Cynwen</strong> (42) · Verantwortliche für Futter und Hofhaushalt. Cynwen stimmt Futtervorräte und den gemeinsamen Hofhaushalt ab. Sie unterstützt die Stallarbeit nach Bedarf.</p><p><strong>Cynog Marchwern</strong> (22) · Bereiter und Jungpferdepfleger. Cynog arbeitet bei Jungpferdepflege und Vorbereitung geeigneter Reittiere. Er unterstützt Rhun bei der Bereitung.</p><p><strong>Dwynwen Marchwern</strong> (18) · Pferdepflegerin. Dwynwen übernimmt Pflege, Fütterung und Stallarbeit. Feste tägliche Abläufe prägen ihre Arbeit am Gestüt.</p><p><strong>Eilfyw Marchwern</strong> (14) · Junger Stallhelfer. Eilfyw hilft bei leichten Stallarbeiten und beim Bereitstellen von Futter. Selbständige Bereitung gehört noch nicht zu seinen Aufgaben.</p><p><strong>Llywela Marchwern</strong> (10) · Gestütskind und Futterhelferin. Llywela hilft bei einfachen, altersgemäßen Arbeiten. Sie wächst im gemeinsamen Gestütshaushalt auf.</p><p><strong>Gwenlliw</strong> (23) · Pferdepflegerin und Helferin im Hofhaushalt. Gwenlliw hilft bei Pferdepflege und Hofhaushalt. Mit Rhun versorgt sie die beiden kleinen Kinder.</p><p><strong>Gwyndaf Marchwern</strong> (3) · Gestütskind. Gwyndaf wächst mit seinem jüngeren Bruder am Gestüt auf. Er hat keine Arbeitspflichten.</p><p><strong>Euron Marchwern</strong> (1) · Kleinkind am Gestüt. Euron ist Rhuns und Gwenlliws jüngstes Kind. Die Familie versorgt ihn im gemeinsamen Haushalt.</p>"
+              }
+            ],
+            "connectionsTitle": "Drei Gesichter des Hauses",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Gwrgi Marchwern",
+                "detail": "Gestütsvorsteher im Dienst des Hauses Wyrm. Gwrgi leitet das Gestüt im unmittelbaren Dienst Haus Wyrms. Mit seinem Bruder Gwynog teilt er Aufzucht, Pflege und die Vorbereitung geeigneter Reitpferde ein.",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Mared",
+                "detail": "Züchterin und Verantwortliche für Stallroutinen. Mared führt Aufzucht und feste Stallroutinen mit. Besonders die seltenen Ceffyl brauchen vertraute Bezugspersonen und verlässliche Betreuung.",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mared-spouse-marchwern.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Gwynog Marchwern",
+                "detail": "Aufzuchtleiter und Stallkoordinator. Gwynog ist Gwrgi Marchwerns jüngerer Bruder. Er koordiniert Fütterung, Stallarbeit und Jungpferdeaufzucht und arbeitet selbst täglich mit.",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/einion-marchwern.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Familie, Haus und Ort",
+            "documents": [
+              {
+                "title": "Der Stammbaum Marchwern",
+                "text": "Unbekannte Gründer, Wappen, Überlieferungssprung und heutige Familie.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+                "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view"
+              },
+              {
+                "title": "Die Hausseite Marchwern",
+                "text": "Gemeinsame Familiengeschichte und bestehende Hausakte.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+                "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-marchwern"
+              },
+              {
+                "title": "Marchwern-Gestüt",
+                "text": "Der bestehende Standort auf der Bannkreiskarte.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+                "link": "../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-092"
+              },
+              {
+                "title": "Haus Wyrm",
+                "text": "Unmittelbarer Dienst und Bereitstellung guter Reitpferde.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+                "link": "../Familien Häuser und Clans/haus.html?haus=haus-wyrm"
+              }
+            ],
+            "footer": "Marchwern-Gestüt · Bannkreis Gwynthor · Jahr 1740"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Familie Marchwern · Stammbaum",
+          "commentThreadKey": "marchwern-stammbaum",
+          "familyTreePage": true,
+          "familyTree": {
+            "familyId": "haus-marchwern",
+            "source": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view",
+            "title": "Familie Marchwern",
+            "height": 760,
+            "intro": "Die Überlieferung beginnt mit unbekannten Gründern, dem Familienwappen und einem Zeitsprung. Danach folgt die heutige Familie mit ihren Beziehungen."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Marchwern-Gestüt · Draußen",
+          "commentThreadKey": "marchwern-szene-aussen",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/marchwern-aussen-v2.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Ein offener Gestütshof liegt zwischen langgestreckten Ställen, Wohnhaus und umzäunten Ausläufen. Gepflegte Holzriegel und breite Wege halten Pferdebereiche und Hauszugang übersichtlich. Hinter den Gebäuden liegen Weiden und Futterflächen. Vom Hoftor aus kann ein Gespräch mit den Züchtern, ein Besuch bei der Familie oder die Vorstellung eines Pferdes beginnen.</p>",
+          "sessionHint": "Ein Besuch bei der Familie am Marchwern-Gestüt.",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Frage oder ein Gespräch im gemeinsamen Alltag.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Wohnstube",
+          "commentThreadKey": "marchwern-szene-wohnstube",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/marchwern-wohnstube-v2.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Die Wohnstube der Marchwern ist geräumig und ordentlich. Ein langer Tisch, schwere Bänke und eine helle Herdstelle nehmen die Mitte ein; an der Wand stehen Truhen und ein einfaches Geschirrbrett. Saubere Mäntel hängen am Eingang, während Stallsachen draußen bleiben. Durch die Fenster sieht man den Hof und einen Teil der Einfriedung.</p>",
+          "sessionHint": "Ein Besuch bei der Familie am Marchwern-Gestüt.",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Frage oder ein Gespräch im gemeinsamen Alltag.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

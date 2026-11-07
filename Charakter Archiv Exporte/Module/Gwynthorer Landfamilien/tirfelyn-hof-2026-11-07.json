@@ -1,0 +1,442 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-07T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Tirfelyn-Hof",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Tirfelyn-Hof"
+      ],
+      "desc": "Zwei Brüder, ihre Familien und ein Hof für Gwynthors tägliche Versorgung.",
+      "iconUrl": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png"
+    },
+    "entry": {
+      "id": "tirfelyn-hof",
+      "title": "Tirfelyn-Hof",
+      "subtitle": "Zwei Brüder, ihre Familien und ein Hof für Gwynthors tägliche Versorgung.",
+      "type": "Bauernhof",
+      "category": "Bannkreis Gwynthor",
+      "symbol": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+      "icon": "⌂",
+      "stamp": "Tirfelyn-Hof",
+      "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/tirfelyn-aussen-v2.png",
+      "previewImage": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/tirfelyn-aussen-v2.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--haus-tirfelyn--caradog-tirfelyn",
+        "person--family-tree--enid-spouse-tirfelyn",
+        "person--haus-tirfelyn--gareth-tirfelyn",
+        "person--haus-tirfelyn--bedwyr-tirfelyn",
+        "person--haus-tirfelyn--eudaf-tirfelyn",
+        "person--family-tree--glesni-spouse-tirfelyn",
+        "person--haus-tirfelyn--cadfan-tirfelyn",
+        "person--haus-tirfelyn--gwion-tirfelyn",
+        "person--haus-tirfelyn--meleri-tirfelyn",
+        "person--haus-tirfelyn--tegwen-tirfelyn",
+        "person--haus-tirfelyn--maelgwn-tirfelyn",
+        "person--family-tree--eirwen-spouse-tirfelyn",
+        "person--haus-tirfelyn--heulwen-tirfelyn",
+        "person--haus-tirfelyn--clydog-tirfelyn",
+        "person--family-tree--olwen-spouse-tirfelyn",
+        "person--haus-tirfelyn--idwal-tirfelyn"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Tirfelyn-Hof",
+          "commentThreadKey": "tirfelyn-ueberblick",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/tirfelyn-aussen-v2.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Der Tirfelyn-Hof liegt unmittelbar vor Gwynthor. Hier gehören Viehhaltung, Getreidefelder und Gemüsewirtschaft zu einem gemeinsamen Familienbetrieb. Die Arbeit reicht vom Futter am Morgen bis zur Vorbereitung der nächsten Lieferung in die Stadt.</p><p>Zwei Brüder führen den Hof miteinander. Ihre Angehörigen übernehmen eigene Aufgaben in Stall, Feld, Garten, Vorratshaltung und Hauswirtschaft. Die jüngeren Kinder helfen bei überschaubaren Handgriffen und lernen den Betrieb an der Seite der Erwachsenen kennen.</p><p>Seit wenigen Wochen fehlt eine der Töchter am Familientisch. Die zweiundzwanzigjährige Ceridwen wollte ihren Verlobten bei den Helfaen besuchen und kam am nächsten Morgen nicht zurück. Sie wurde 1740 Opfer des Fleischsammlers. Der Verlust begleitet die Familie auch während der nötigen täglichen Arbeit.</p>",
+          "stats": [
+            [
+              "Ort",
+              "Tirfelyn-Hof · Bannkreis Gwynthor"
+            ],
+            [
+              "Familie",
+              "Familie Tirfelyn"
+            ],
+            [
+              "Lebende Angehörige",
+              "16"
+            ],
+            [
+              "Lebensunterhalt",
+              "Viehhaltung und Futterversorgung · Getreide- und Gemüseanbau · Vorräte und Lieferungen nach Gwynthor"
+            ],
+            [
+              "Lage",
+              "Östlicher Bannkreis von Gwynthor"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hierarchie · Betrieb und Familienrollen",
+          "commentThreadKey": "tirfelyn-hierarchie",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die Hände des Tirfelyn-Hofs",
+            "eyebrow": "Familie Tirfelyn",
+            "subtitle": "Große Bauernfamilie mit gemeinsamem Betrieb",
+            "centerLabel": "Tirfelyn-Hof",
+            "emblem": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+            "sideImage": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/tirfelyn-aussen-v2.png",
+            "motto": "Arbeit und Familie",
+            "description": "<p>Die Hofleitung liegt bei den beiden Brüdern. Die übrigen Erwachsenen tragen eigene Arbeitsbereiche; die Aufgaben der Kinder bleiben altersgemäß. Diese Struktur zeigt Verantwortung im Familienbetrieb.</p>",
+            "detailsTitle": "Der gemeinsame Alltag",
+            "details": [
+              {
+                "label": "Lebende Angehörige",
+                "value": "16"
+              },
+              {
+                "label": "Wohnort",
+                "value": "Tirfelyn-Hof · Bannkreis Gwynthor"
+              },
+              {
+                "label": "Lebensunterhalt",
+                "value": "Viehhaltung und Futterversorgung · Getreide- und Gemüseanbau · Vorräte und Lieferungen nach Gwynthor"
+              }
+            ],
+            "chartTitle": "Aufgaben und Verantwortung",
+            "chartIntro": "Jede lebende Person erscheint einmal mit ihrer hauptsächlichen Aufgabe. Familienzugehörigkeit und Verwandtschaft zeigt der eigene Stammbaum.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 92,
+            "trees": [
+              {
+                "id": "leitung",
+                "label": "Die beiden Brüder",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Die beiden Brüder",
+                    "nodes": [
+                      {
+                        "title": "Caradog Tirfelyn",
+                        "subtitle": "Hofvorsteher und Feldbaukoordinator · 55 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/caradog-tirfelyn.png",
+                        "text": "<p>Caradog führt den Tirfelyn-Hof gemeinsam mit seinem jüngeren Bruder Eudaf. Er stimmt Aussaat, Feldarbeit und Lieferungen an Gwynthor ab; der Tod seiner Tochter Ceridwen belastet ihn schwer.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=caradog-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Eudaf Tirfelyn",
+                        "subtitle": "Hofvorsteher und Viehwirtschaftskoordinator · 52 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eudaf-tirfelyn.png",
+                        "text": "<p>Eudaf führt den Hof gemeinsam mit seinem älteren Bruder Caradog. Er teilt die Arbeit an Stall, Futter und Vorräten ein und hilft selbst bei den täglichen Arbeiten mit.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=eudaf-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "feld",
+                "label": "Felder und Gemüse",
+                "parentTreeId": "leitung",
+                "levels": [
+                  {
+                    "label": "Felder und Gemüse",
+                    "nodes": [
+                      {
+                        "title": "Gwallog Tirfelyn",
+                        "subtitle": "Ackerbauer und Fuhrhelfer · 26 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/cadfan-tirfelyn.png",
+                        "text": "<p>Gwallog bestellt die Felder und bereitet die Lieferungen nach Gwynthor vor. Seine Frau Gwenfron und ihr Sohn Cynwal gehören zum gemeinsamen Hofhaushalt.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=cadfan-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Eiliwedd Tirfelyn",
+                        "subtitle": "Gemüsebäuerin und Lieferhelferin · 20 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/meleri-tirfelyn.png",
+                        "text": "<p>Eiliwedd arbeitet im Gemüseanbau und beim Zusammenstellen der Lieferungen. Nach Ceridwens Tod unterstützt sie deren Arbeitsbereich mit.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=meleri-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Tegfedd Tirfelyn",
+                        "subtitle": "Junge Bäuerin für Garten und Kleinvieh · 16 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/tegwen-tirfelyn.png",
+                        "text": "<p>Tegfedd hilft im Garten und beim Kleinvieh. Sie lernt die Arbeiten des Familienhofs von ihren Eltern und älteren Geschwistern.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=tegwen-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Gwenfron",
+                        "subtitle": "Bäuerin für Gemüse und Erntevorräte · 25 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/olwen-spouse-tirfelyn.png",
+                        "text": "<p>Gwenfron arbeitet im Gemüseanbau und bei der Ernteaufbereitung. Mit Gwallog versorgt sie ihren Sohn Cynwal.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=olwen-spouse-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "vieh",
+                "label": "Vieh und Futter",
+                "parentTreeId": "leitung",
+                "levels": [
+                  {
+                    "label": "Vieh und Futter",
+                    "nodes": [
+                      {
+                        "title": "Gareth Tirfelyn",
+                        "subtitle": "Bauer und Viehhalter · 25 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gareth-tirfelyn.png",
+                        "text": "<p>Gareth versorgt das Vieh und hilft auf den Feldern. Mit seiner Frau Gwenfyl und den Kindern Eiliwen und Clydog lebt er auf dem gemeinsamen Hof.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=gareth-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Cynddylan Tirfelyn",
+                        "subtitle": "Viehpfleger und Stallarbeiter · 23 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gwion-tirfelyn.png",
+                        "text": "<p>Cynddylan hilft bei Stallpflege, Fütterung und der Versorgung des Hofviehs. Er übernimmt auch anfallende schwere Hofarbeiten.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=gwion-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Gwenfyl",
+                        "subtitle": "Bäuerin für Milch und Vorräte · 24 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eirwen-spouse-tirfelyn.png",
+                        "text": "<p>Gwenfyl arbeitet bei Milchverarbeitung und Vorratshaltung. Mit Gareth sorgt sie für ihre beiden kleinen Kinder.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=eirwen-spouse-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "haushalt",
+                "label": "Haus, Vorräte und Wege",
+                "parentTreeId": "leitung",
+                "levels": [
+                  {
+                    "label": "Haus, Vorräte und Wege",
+                    "nodes": [
+                      {
+                        "title": "Enid",
+                        "subtitle": "Bäuerin für Garten und Vorräte · 45 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/enid-spouse-tirfelyn.png",
+                        "text": "<p>Enid führt Garten und Vorratshaltung mit. Sie ist die Mutter Gareths, Ceridwens und Bedwyrs und trauert um ihre ermordete Tochter.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=enid-spouse-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Madrun",
+                        "subtitle": "Bäuerin für Vorräte und gemeinsame Mahlzeiten · 49 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/glesni-spouse-tirfelyn.png",
+                        "text": "<p>Madrun organisiert mit Enid Vorräte und gemeinsame Mahlzeiten. Sie hält den Arbeitsalltag der beiden Familienzweige zusammen.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=glesni-spouse-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "nachwuchs",
+                "label": "Jüngere Hände",
+                "parentTreeId": "leitung",
+                "levels": [
+                  {
+                    "label": "Jüngere Hände",
+                    "nodes": [
+                      {
+                        "title": "Bedwyr Tirfelyn",
+                        "subtitle": "Hofkind und junger Viehhelfer · 13 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/bedwyr-tirfelyn.png",
+                        "text": "<p>Bedwyr übernimmt altersgemäße Arbeiten bei Tieren und Hofpflege. Er ist Gareths und Ceridwens jüngerer Bruder.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=bedwyr-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Gwynllyw Tirfelyn",
+                        "subtitle": "Hofkind und Futterhelfer · 11 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/maelgwn-tirfelyn.png",
+                        "text": "<p>Gwynllyw hilft bei leichten Futter- und Hofarbeiten. Schwere Arbeiten bleiben Sache der Erwachsenen.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=maelgwn-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Eiliwen Tirfelyn",
+                        "subtitle": "Hofkind · 4 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/heulwen-tirfelyn.png",
+                        "text": "<p>Eiliwen wächst mit ihrem kleinen Bruder Clydog im Hofhaushalt auf. Sie darf bei einfachen spielerischen Handgriffen helfen.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=heulwen-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Clydog Tirfelyn",
+                        "subtitle": "Kleinkind auf dem Hof · 1 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/clydog-tirfelyn.png",
+                        "text": "<p>Clydog ist Gareths und Gwenfyls jüngstes Kind. Er wird im gemeinsamen Hofhaushalt versorgt und hat keine Arbeitspflichten.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=clydog-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Cynwal Tirfelyn",
+                        "subtitle": "Hofkind · 3 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/idwal-tirfelyn.png",
+                        "text": "<p>Cynwal wächst als Sohn Gwallogs und Gwenfrons auf dem Familienhof auf. Er spielt bei den Erwachsenen und hat keine Arbeitspflichten.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&amp;person=idwal-tirfelyn\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Die Kinder sind Angehörige des Haushalts. Ihre altersgemäße Mithilfe ist von einer erwachsenen Arbeitsstelle getrennt."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Familie Tirfelyn · Hausbio",
+          "commentThreadKey": "tirfelyn-hausbio",
+          "biographyPage": true,
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/caradog-tirfelyn.png",
+          "imageWidth": 31,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "stats": [
+            [
+              "Familie",
+              "Tirfelyn"
+            ],
+            [
+              "Stand",
+              "Bürgerliche Rheunwaith-Familie"
+            ],
+            [
+              "Wohnort",
+              "Tirfelyn-Hof"
+            ],
+            [
+              "Lebende Angehörige",
+              "16"
+            ],
+            [
+              "Verstorben",
+              "Ceridwen Tirfelyn · 1718–1740"
+            ]
+          ],
+          "biography": {
+            "portraitFit": "contain",
+            "biographyTitle": "Familie und Lebensgrundlage",
+            "biographyText": "Der Tirfelyn-Hof liegt unmittelbar vor Gwynthor und versorgt die Stadt mit Vieh, Getreide und Gemüse. Caradog Tirfelyn, fünfundfünfzig Jahre alt, führt ihn gemeinsam mit seinem zweiundfünfzigjährigen Bruder Eudaf. Die beiden Familienzweige teilen Hof, Arbeit und Verantwortung. Sechzehn lebende Angehörige gehören zu diesem Betrieb. Rotes Haar und braune Augen prägen das heutige Familienbild.\n\nDie Arbeit verteilt sich auf Feldbau, Viehpflege, Garten, Vorräte und die Lieferungen in die Stadt. Alle helfen ihrem Alter entsprechend mit; die kleinen Kinder wachsen im gemeinsamen Haushalt auf. Der Hof bleibt ein Familienbetrieb, dessen Bedeutung aus seiner verlässlichen Versorgung Gwynthors erwächst.",
+            "historyTitle": "Überlieferung und heutige Generationen",
+            "historyText": "Die Namen und Lebensdaten der älteren Gründer sind unbekannt. Auch die dazwischenliegenden Generationen sind nicht überliefert. Die näher bekannte Familie beginnt bei den Brüdern Caradog und Eudaf und führt zu ihren Kindern und Enkeln.\n\nCaradog und Enid sind die Eltern Gareths, Ceridwens und Bedwyrs. Gareth und seine Frau Gwenfyl haben die Kinder Eiliwen und Clydog. Eudaf und Madrun sind die Eltern Gwallogs, Cynddylans, Eiliwedds, Tegfedds und Gwynllyws. Gwallog und Gwenfron haben den Sohn Cynwal. Die Herkunftsfamilien der angeheirateten Frauen sind noch nicht benannt.\n\nCeridwen wurde 1740 mit zweiundzwanzig Jahren vor wenigen Wochen Opfer des Fleischsammlers. Sie wollte ihren Verlobten Gorwyn Helfaen besuchen und kehrte am folgenden Morgen nicht nach Hause zurück. Ihr Tod trifft den gesamten Hof und den Jagdhaushalt der Helfaen. Der genaue Tat- und Fundort ist nicht bekannt.",
+            "worksTitle": "Arbeit und Lebensunterhalt",
+            "works": [],
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Die Angehörigen",
+                "text": "<p><strong>Caradog Tirfelyn</strong> (55) · Hofvorsteher und Feldbaukoordinator. Caradog führt den Tirfelyn-Hof gemeinsam mit seinem jüngeren Bruder Eudaf. Er stimmt Aussaat, Feldarbeit und Lieferungen an Gwynthor ab; der Tod seiner Tochter Ceridwen belastet ihn schwer.</p><p><strong>Enid</strong> (45) · Bäuerin für Garten und Vorräte. Enid führt Garten und Vorratshaltung mit. Sie ist die Mutter Gareths, Ceridwens und Bedwyrs und trauert um ihre ermordete Tochter.</p><p><strong>Gareth Tirfelyn</strong> (25) · Bauer und Viehhalter. Gareth versorgt das Vieh und hilft auf den Feldern. Mit seiner Frau Gwenfyl und den Kindern Eiliwen und Clydog lebt er auf dem gemeinsamen Hof.</p><p><strong>Ceridwen Tirfelyn</strong> (22; † 1740) · Verstorbene Gemüsebäuerin. Ceridwen wurde 1740 mit zweiundzwanzig Jahren vor wenigen Wochen Opfer des Fleischsammlers. Sie wollte ihren Verlobten Gorwyn Helfaen besuchen und war am folgenden Morgen nicht zurückgekehrt; ein genauer Tat- oder Fundort bleibt offen.</p><p><strong>Bedwyr Tirfelyn</strong> (13) · Hofkind und junger Viehhelfer. Bedwyr übernimmt altersgemäße Arbeiten bei Tieren und Hofpflege. Er ist Gareths und Ceridwens jüngerer Bruder.</p><p><strong>Eudaf Tirfelyn</strong> (52) · Hofvorsteher und Viehwirtschaftskoordinator. Eudaf führt den Hof gemeinsam mit seinem älteren Bruder Caradog. Er teilt die Arbeit an Stall, Futter und Vorräten ein und hilft selbst bei den täglichen Arbeiten mit.</p><p><strong>Madrun</strong> (49) · Bäuerin für Vorräte und gemeinsame Mahlzeiten. Madrun organisiert mit Enid Vorräte und gemeinsame Mahlzeiten. Sie hält den Arbeitsalltag der beiden Familienzweige zusammen.</p><p><strong>Gwallog Tirfelyn</strong> (26) · Ackerbauer und Fuhrhelfer. Gwallog bestellt die Felder und bereitet die Lieferungen nach Gwynthor vor. Seine Frau Gwenfron und ihr Sohn Cynwal gehören zum gemeinsamen Hofhaushalt.</p><p><strong>Cynddylan Tirfelyn</strong> (23) · Viehpfleger und Stallarbeiter. Cynddylan hilft bei Stallpflege, Fütterung und der Versorgung des Hofviehs. Er übernimmt auch anfallende schwere Hofarbeiten.</p><p><strong>Eiliwedd Tirfelyn</strong> (20) · Gemüsebäuerin und Lieferhelferin. Eiliwedd arbeitet im Gemüseanbau und beim Zusammenstellen der Lieferungen. Nach Ceridwens Tod unterstützt sie deren Arbeitsbereich mit.</p><p><strong>Tegfedd Tirfelyn</strong> (16) · Junge Bäuerin für Garten und Kleinvieh. Tegfedd hilft im Garten und beim Kleinvieh. Sie lernt die Arbeiten des Familienhofs von ihren Eltern und älteren Geschwistern.</p><p><strong>Gwynllyw Tirfelyn</strong> (11) · Hofkind und Futterhelfer. Gwynllyw hilft bei leichten Futter- und Hofarbeiten. Schwere Arbeiten bleiben Sache der Erwachsenen.</p><p><strong>Gwenfyl</strong> (24) · Bäuerin für Milch und Vorräte. Gwenfyl arbeitet bei Milchverarbeitung und Vorratshaltung. Mit Gareth sorgt sie für ihre beiden kleinen Kinder.</p><p><strong>Eiliwen Tirfelyn</strong> (4) · Hofkind. Eiliwen wächst mit ihrem kleinen Bruder Clydog im Hofhaushalt auf. Sie darf bei einfachen spielerischen Handgriffen helfen.</p><p><strong>Clydog Tirfelyn</strong> (1) · Kleinkind auf dem Hof. Clydog ist Gareths und Gwenfyls jüngstes Kind. Er wird im gemeinsamen Hofhaushalt versorgt und hat keine Arbeitspflichten.</p><p><strong>Gwenfron</strong> (25) · Bäuerin für Gemüse und Erntevorräte. Gwenfron arbeitet im Gemüseanbau und bei der Ernteaufbereitung. Mit Gwallog versorgt sie ihren Sohn Cynwal.</p><p><strong>Cynwal Tirfelyn</strong> (3) · Hofkind. Cynwal wächst als Sohn Gwallogs und Gwenfrons auf dem Familienhof auf. Er spielt bei den Erwachsenen und hat keine Arbeitspflichten.</p>"
+              }
+            ],
+            "connectionsTitle": "Drei Gesichter des Hauses",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Caradog Tirfelyn",
+                "detail": "Hofvorsteher und Feldbaukoordinator. Caradog führt den Tirfelyn-Hof gemeinsam mit seinem jüngeren Bruder Eudaf. Er stimmt Aussaat, Feldarbeit und Lieferungen an Gwynthor ab; der Tod seiner Tochter Ceridwen belastet ihn schwer.",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/caradog-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Gareth Tirfelyn",
+                "detail": "Bauer und Viehhalter. Gareth versorgt das Vieh und hilft auf den Feldern. Mit seiner Frau Gwenfyl und den Kindern Eiliwen und Clydog lebt er auf dem gemeinsamen Hof.",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gareth-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Eudaf Tirfelyn",
+                "detail": "Hofvorsteher und Viehwirtschaftskoordinator. Eudaf führt den Hof gemeinsam mit seinem älteren Bruder Caradog. Er teilt die Arbeit an Stall, Futter und Vorräten ein und hilft selbst bei den täglichen Arbeiten mit.",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eudaf-tirfelyn.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Familie, Haus und Ort",
+            "documents": [
+              {
+                "title": "Der Stammbaum Tirfelyn",
+                "text": "Unbekannte Gründer, Wappen, Überlieferungssprung und heutige Familie.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+                "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view"
+              },
+              {
+                "title": "Die Hausseite Tirfelyn",
+                "text": "Gemeinsame Familiengeschichte und bestehende Hausakte.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+                "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-tirfelyn"
+              },
+              {
+                "title": "Tirfelyn-Hof",
+                "text": "Der bestehende Standort auf der Bannkreiskarte.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+                "link": "../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-107"
+              },
+              {
+                "title": "Familie Helfaen",
+                "text": "Ceridwens Verlobung verbindet beide Familien. Nach ihrem Tod tragen sie die Trauer gemeinsam.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+                "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-helfaen&mode=view"
+              }
+            ],
+            "footer": "Tirfelyn-Hof · Bannkreis Gwynthor · Jahr 1740"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Familie Tirfelyn · Stammbaum",
+          "commentThreadKey": "tirfelyn-stammbaum",
+          "familyTreePage": true,
+          "familyTree": {
+            "familyId": "haus-tirfelyn",
+            "source": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view",
+            "title": "Familie Tirfelyn",
+            "height": 760,
+            "intro": "Die Überlieferung beginnt mit unbekannten Gründern, dem Familienwappen und einem Zeitsprung. Danach folgt die heutige Familie mit ihren Beziehungen."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Tirfelyn-Hof · Draußen",
+          "commentThreadKey": "tirfelyn-szene-aussen",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/tirfelyn-aussen-v2.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Ein breiter, festgetretener Hof verbindet Wohnhaus, Stall und Scheune. Hinter niedrigen Einfriedungen liegen Gemüsegärten und Futterplätze; an den Wegen beginnt das Ackerland. Vom Hoftor aus führen die täglichen Lieferwege nach Gwynthor. Hier kann man ankommen, nach der Familie fragen oder einen Tag bei der Hofarbeit beginnen.</p>",
+          "sessionHint": "Ein Besuch bei der Familie am Tirfelyn-Hof.",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Frage oder ein Gespräch im gemeinsamen Alltag.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Wohnstube",
+          "commentThreadKey": "tirfelyn-szene-wohnstube",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/tirfelyn-wohnstube-v2.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Eine geräumige, schlichte Wohnstube mit verputzten Wänden, sichtbaren Holzbalken und einer gemauerten Herdstelle. Am langen Familientisch stehen Bänke und verschieden alte Stühle. Geschirr, Leinentücher und Vorräte haben feste Plätze; durch das Fenster sieht man einen Teil des Hofs. Die Stube ist der Ort für Mahlzeiten, Absprachen und Gespräche unter Angehörigen.</p>",
+          "sessionHint": "Ein Besuch bei der Familie am Tirfelyn-Hof.",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Frage oder ein Gespräch im gemeinsamen Alltag.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

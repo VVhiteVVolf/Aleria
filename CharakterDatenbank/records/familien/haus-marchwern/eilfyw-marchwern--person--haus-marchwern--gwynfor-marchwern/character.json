@@ -1,0 +1,481 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-marchwern--gwynfor-marchwern",
+  "slug": "eilfyw-marchwern",
+  "identity": {
+    "name": "Eilfyw Marchwern",
+    "aliases": [],
+    "worldPersonId": "person--haus-marchwern--gwynfor-marchwern"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-marchwern",
+      "label": "Familie Marchwern"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-marchwern",
+        "familyTitle": "Familie Marchwern",
+        "personId": "gwynfor-marchwern",
+        "worldPersonId": "person--haus-marchwern--gwynfor-marchwern",
+        "houseId": "house-marchwern",
+        "houseName": "Familie Marchwern",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Eilfyw Marchwern\",\"title\":\"Junger Stallhelfer\",\"birth\":\"1726\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwynfor-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"14 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"einion-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--einion-marchwern\",\"name\":\"Gwynog Marchwern\"},{\"personId\":\"cynwen-spouse-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--cynwen-spouse-marchwern\",\"name\":\"Cynwen\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-marchwern--gwynfor-marchwern",
+      "documentIds": [
+        "person--haus-marchwern--gwynfor-marchwern"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-marchwern--gwynfor-marchwern",
+          "createdAt": "2026-11-07T00:00:00.000Z",
+          "updatedAt": "2026-11-07T00:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-marchwern",
+        "personId": "gwynfor-marchwern",
+        "worldPersonId": "person--haus-marchwern--gwynfor-marchwern",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthorer Landfamilien/marchwern/gwynfor-marchwern.json",
+    "sourceExportedAt": "2026-11-07T00:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-07T00:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-marchwern--gwynfor-marchwern"
+    ],
+    "contentHash": "99499d58f9f5310406cffb19a927c00208979569a03942702b2b559eac1b1d95"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-landfamilien"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Eilfyw Marchwern",
+        "title": "Junger Stallhelfer",
+        "fraktion": "Familie Marchwern",
+        "role": "Junger Stallhelfer",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Marchwern-Gestüt · Bannkreis Gwynthor",
+        "origin": "Rheunwaith · Cenyr",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Eilfyw Marchwern ist im Jahr 1740 14 Jahre alt und wurde 1726 geboren. Eilfyw Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.\n\nEilfyw hilft bei leichten Stallarbeiten und beim Bereitstellen von Futter. Selbständige Bereitung gehört noch nicht zu seinen Aufgaben.\n\nDie Eltern sind Gwynog Marchwern, Cynwen. Zur Geschwisterreihe gehören Cynog Marchwern, Dwynwen Marchwern, Llywela Marchwern.\n\nDas Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit.\n\nZucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.\n\nEilfyw Marchwern hat braunes Haar und grüne Augen. Sein kurzes Haar ist zerzaust; der Pony fällt etwas länger über die Stirn. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-07T00:00:00.000Z",
+        "updatedAt": "2026-11-07T00:00:00.000Z",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwynfor-marchwern.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schemaVersion": 1,
+          "biographyPage": true,
+          "pageTitle": "Eilfyw Marchwern",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwynfor-marchwern.png",
+          "imageWidth": 32,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "stats": [
+            [
+              "Name",
+              "Eilfyw Marchwern"
+            ],
+            [
+              "Geburt",
+              "1726"
+            ],
+            [
+              "Stand 1740",
+              "14 Jahre"
+            ],
+            [
+              "Familie",
+              "Marchwern"
+            ],
+            [
+              "Wohnort",
+              "Marchwern-Gestüt"
+            ],
+            [
+              "Aufgabe",
+              "Junger Stallhelfer"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwynfor-marchwern.png",
+            "portraitFit": "contain",
+            "biographyTitle": "Junger Stallhelfer",
+            "biographyText": "<p>Eilfyw Marchwern ist im Jahr 1740 14 Jahre alt und wurde 1726 geboren. Eilfyw Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.</p><p>Eilfyw hilft bei leichten Stallarbeiten und beim Bereitstellen von Futter. Selbständige Bereitung gehört noch nicht zu seinen Aufgaben.</p>",
+            "historyTitle": "Familie und Lebensweg",
+            "historyText": "<p>Die Eltern sind Gwynog Marchwern, Cynwen. Zur Geschwisterreihe gehören Cynog Marchwern, Dwynwen Marchwern, Llywela Marchwern.</p><p>Zucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.</p>",
+            "worksTitle": "Der gemeinsame Lebensunterhalt",
+            "works": [
+              "Das Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit."
+            ],
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Erscheinung",
+                "text": "<p>Eilfyw Marchwern hat braunes Haar und grüne Augen. Sein kurzes Haar ist zerzaust; der Pony fällt etwas länger über die Stirn. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+              }
+            ],
+            "connectionsTitle": "Die nächsten Angehörigen",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Gwynog Marchwern",
+                "detail": "Vater",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/einion-marchwern.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Cynwen",
+                "detail": "Mutter",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/cynwen-spouse-marchwern.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Cynog Marchwern",
+                "detail": "Bruder",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mabon-marchwern.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Dwynwen Marchwern",
+                "detail": "Schwester",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/luned-marchwern.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Llywela Marchwern",
+                "detail": "Schwester",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhosyn-marchwern.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Haus und Herkunft",
+            "documents": [
+              {
+                "title": "Familie Marchwern",
+                "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+                "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&person=gwynfor-marchwern"
+              },
+              {
+                "title": "Marchwern-Gestüt",
+                "text": "Die gemeinsame Hausgeschichte der Familie.",
+                "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-marchwern"
+              }
+            ],
+            "footer": "Marchwern-Gestüt · Rheunwaith · Cenyr · Stand 1740"
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-marchwern--gwynfor-marchwern"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-marchwern--gwynfor-marchwern",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1726",
+          "death": "",
+          "houseId": "house-marchwern",
+          "houseName": "Familie Marchwern",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [
+            "14 Jahre"
+          ],
+          "sources": [
+            {
+              "familyId": "haus-marchwern",
+              "personId": "gwynfor-marchwern",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-07T00:00:00.000Z",
+              "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view&person=gwynfor-marchwern",
+              "fingerprint": "{\"name\":\"Eilfyw Marchwern\",\"title\":\"Junger Stallhelfer\",\"birth\":\"1726\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwynfor-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"14 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"einion-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--einion-marchwern\",\"name\":\"Gwynog Marchwern\"},{\"personId\":\"cynwen-spouse-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--cynwen-spouse-marchwern\",\"name\":\"Cynwen\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "einion-marchwern",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-marchwern--einion-marchwern",
+                "name": "Gwynog Marchwern"
+              },
+              {
+                "personId": "cynwen-spouse-marchwern",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--cynwen-spouse-marchwern",
+                "name": "Cynwen"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "id": "person--haus-marchwern--gwynfor-marchwern",
+        "race": "Mensch",
+        "age": 14
+      }
+    ]
+  },
+  "character": {
+    "name": "Eilfyw Marchwern",
+    "title": "Junger Stallhelfer",
+    "fraktion": "Familie Marchwern",
+    "role": "Junger Stallhelfer",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Marchwern-Gestüt · Bannkreis Gwynthor",
+    "origin": "Rheunwaith · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Eilfyw Marchwern ist im Jahr 1740 14 Jahre alt und wurde 1726 geboren. Eilfyw Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.\n\nEilfyw hilft bei leichten Stallarbeiten und beim Bereitstellen von Futter. Selbständige Bereitung gehört noch nicht zu seinen Aufgaben.\n\nDie Eltern sind Gwynog Marchwern, Cynwen. Zur Geschwisterreihe gehören Cynog Marchwern, Dwynwen Marchwern, Llywela Marchwern.\n\nDas Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit.\n\nZucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.\n\nEilfyw Marchwern hat braunes Haar und grüne Augen. Sein kurzes Haar ist zerzaust; der Pony fällt etwas länger über die Stirn. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-07T00:00:00.000Z",
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwynfor-marchwern.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schemaVersion": 1,
+      "biographyPage": true,
+      "pageTitle": "Eilfyw Marchwern",
+      "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwynfor-marchwern.png",
+      "imageWidth": 32,
+      "imageTall": true,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "stats": [
+        [
+          "Name",
+          "Eilfyw Marchwern"
+        ],
+        [
+          "Geburt",
+          "1726"
+        ],
+        [
+          "Stand 1740",
+          "14 Jahre"
+        ],
+        [
+          "Familie",
+          "Marchwern"
+        ],
+        [
+          "Wohnort",
+          "Marchwern-Gestüt"
+        ],
+        [
+          "Aufgabe",
+          "Junger Stallhelfer"
+        ]
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwynfor-marchwern.png",
+        "portraitFit": "contain",
+        "biographyTitle": "Junger Stallhelfer",
+        "biographyText": "<p>Eilfyw Marchwern ist im Jahr 1740 14 Jahre alt und wurde 1726 geboren. Eilfyw Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.</p><p>Eilfyw hilft bei leichten Stallarbeiten und beim Bereitstellen von Futter. Selbständige Bereitung gehört noch nicht zu seinen Aufgaben.</p>",
+        "historyTitle": "Familie und Lebensweg",
+        "historyText": "<p>Die Eltern sind Gwynog Marchwern, Cynwen. Zur Geschwisterreihe gehören Cynog Marchwern, Dwynwen Marchwern, Llywela Marchwern.</p><p>Zucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.</p>",
+        "worksTitle": "Der gemeinsame Lebensunterhalt",
+        "works": [
+          "Das Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit."
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "<p>Eilfyw Marchwern hat braunes Haar und grüne Augen. Sein kurzes Haar ist zerzaust; der Pony fällt etwas länger über die Stirn. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+          }
+        ],
+        "connectionsTitle": "Die nächsten Angehörigen",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Gwynog Marchwern",
+            "detail": "Vater",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/einion-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Cynwen",
+            "detail": "Mutter",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/cynwen-spouse-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Cynog Marchwern",
+            "detail": "Bruder",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mabon-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Dwynwen Marchwern",
+            "detail": "Schwester",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/luned-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Llywela Marchwern",
+            "detail": "Schwester",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhosyn-marchwern.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Haus und Herkunft",
+        "documents": [
+          {
+            "title": "Familie Marchwern",
+            "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+            "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&person=gwynfor-marchwern"
+          },
+          {
+            "title": "Marchwern-Gestüt",
+            "text": "Die gemeinsame Hausgeschichte der Familie.",
+            "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-marchwern"
+          }
+        ],
+        "footer": "Marchwern-Gestüt · Rheunwaith · Cenyr · Stand 1740"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-marchwern--gwynfor-marchwern"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-marchwern--gwynfor-marchwern",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1726",
+      "death": "",
+      "houseId": "house-marchwern",
+      "houseName": "Familie Marchwern",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "14 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-marchwern",
+          "personId": "gwynfor-marchwern",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-07T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view&person=gwynfor-marchwern",
+          "fingerprint": "{\"name\":\"Eilfyw Marchwern\",\"title\":\"Junger Stallhelfer\",\"birth\":\"1726\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwynfor-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"14 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"einion-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--einion-marchwern\",\"name\":\"Gwynog Marchwern\"},{\"personId\":\"cynwen-spouse-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--cynwen-spouse-marchwern\",\"name\":\"Cynwen\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "einion-marchwern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-marchwern--einion-marchwern",
+            "name": "Gwynog Marchwern"
+          },
+          {
+            "personId": "cynwen-spouse-marchwern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--cynwen-spouse-marchwern",
+            "name": "Cynwen"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--haus-marchwern--gwynfor-marchwern",
+    "race": "Mensch",
+    "age": 14
+  }
+}

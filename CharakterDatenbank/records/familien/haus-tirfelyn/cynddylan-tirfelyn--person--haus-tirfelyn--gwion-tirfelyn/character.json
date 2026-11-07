@@ -1,0 +1,495 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-tirfelyn--gwion-tirfelyn",
+  "slug": "cynddylan-tirfelyn",
+  "identity": {
+    "name": "Cynddylan Tirfelyn",
+    "aliases": [],
+    "worldPersonId": "person--haus-tirfelyn--gwion-tirfelyn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-tirfelyn",
+      "label": "Familie Tirfelyn"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-tirfelyn",
+        "familyTitle": "Familie Tirfelyn",
+        "personId": "gwion-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--gwion-tirfelyn",
+        "houseId": "house-tirfelyn",
+        "houseName": "Familie Tirfelyn",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Cynddylan Tirfelyn\",\"title\":\"Viehpfleger und Stallarbeiter\",\"birth\":\"1717\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tirfelyn\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gwion-tirfelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"23 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"eudaf-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--eudaf-tirfelyn\",\"name\":\"Eudaf Tirfelyn\"},{\"personId\":\"glesni-spouse-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--glesni-spouse-tirfelyn\",\"name\":\"Madrun\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-tirfelyn--gwion-tirfelyn",
+      "documentIds": [
+        "person--haus-tirfelyn--gwion-tirfelyn"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-tirfelyn--gwion-tirfelyn",
+          "createdAt": "2026-11-07T00:00:00.000Z",
+          "updatedAt": "2026-11-07T00:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-tirfelyn",
+        "personId": "gwion-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--gwion-tirfelyn",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthorer Landfamilien/tirfelyn/gwion-tirfelyn.json",
+    "sourceExportedAt": "2026-11-07T00:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-07T00:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-tirfelyn--gwion-tirfelyn"
+    ],
+    "contentHash": "ae44848655502341fb3f351a683ae2f28373aedba85c996f5295a4dbe6e7e012"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-landfamilien"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Cynddylan Tirfelyn",
+        "title": "Viehpfleger und Stallarbeiter",
+        "fraktion": "Familie Tirfelyn",
+        "role": "Viehpfleger und Stallarbeiter",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "origin": "Rheunwaith · Cenyr",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Cynddylan Tirfelyn ist im Jahr 1740 23 Jahre alt und wurde 1717 geboren. Cynddylan Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.\n\nCynddylan hilft bei Stallpflege, Fütterung und der Versorgung des Hofviehs. Er übernimmt auch anfallende schwere Hofarbeiten.\n\nDie Eltern sind Eudaf Tirfelyn, Madrun. Zur Geschwisterreihe gehören Gwallog Tirfelyn, Eiliwedd Tirfelyn, Tegfedd Tirfelyn, Gwynllyw Tirfelyn.\n\nDer Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb.\n\nDer Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.\n\nCynddylan Tirfelyn hat rotes Haar und braune Augen. Er trägt dichte kurze Locken und ist glatt rasiert. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-07T00:00:00.000Z",
+        "updatedAt": "2026-11-07T00:00:00.000Z",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gwion-tirfelyn.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schemaVersion": 1,
+          "biographyPage": true,
+          "pageTitle": "Cynddylan Tirfelyn",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gwion-tirfelyn.png",
+          "imageWidth": 32,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "stats": [
+            [
+              "Name",
+              "Cynddylan Tirfelyn"
+            ],
+            [
+              "Geburt",
+              "1717"
+            ],
+            [
+              "Stand 1740",
+              "23 Jahre"
+            ],
+            [
+              "Familie",
+              "Tirfelyn"
+            ],
+            [
+              "Wohnort",
+              "Tirfelyn-Hof"
+            ],
+            [
+              "Aufgabe",
+              "Viehpfleger und Stallarbeiter"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gwion-tirfelyn.png",
+            "portraitFit": "contain",
+            "biographyTitle": "Viehpfleger und Stallarbeiter",
+            "biographyText": "<p>Cynddylan Tirfelyn ist im Jahr 1740 23 Jahre alt und wurde 1717 geboren. Cynddylan Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.</p><p>Cynddylan hilft bei Stallpflege, Fütterung und der Versorgung des Hofviehs. Er übernimmt auch anfallende schwere Hofarbeiten.</p>",
+            "historyTitle": "Familie und Lebensweg",
+            "historyText": "<p>Die Eltern sind Eudaf Tirfelyn, Madrun. Zur Geschwisterreihe gehören Gwallog Tirfelyn, Eiliwedd Tirfelyn, Tegfedd Tirfelyn, Gwynllyw Tirfelyn.</p><p>Der Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.</p>",
+            "worksTitle": "Der gemeinsame Lebensunterhalt",
+            "works": [
+              "Der Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb."
+            ],
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Erscheinung",
+                "text": "<p>Cynddylan Tirfelyn hat rotes Haar und braune Augen. Er trägt dichte kurze Locken und ist glatt rasiert. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+              }
+            ],
+            "connectionsTitle": "Die nächsten Angehörigen",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Eudaf Tirfelyn",
+                "detail": "Vater",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eudaf-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Madrun",
+                "detail": "Mutter",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/glesni-spouse-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Gwallog Tirfelyn",
+                "detail": "Bruder",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/cadfan-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Eiliwedd Tirfelyn",
+                "detail": "Schwester",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/meleri-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Tegfedd Tirfelyn",
+                "detail": "Schwester",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/tegwen-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Gwynllyw Tirfelyn",
+                "detail": "Bruder",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/maelgwn-tirfelyn.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Haus und Herkunft",
+            "documents": [
+              {
+                "title": "Familie Tirfelyn",
+                "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+                "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=gwion-tirfelyn"
+              },
+              {
+                "title": "Tirfelyn-Hof",
+                "text": "Die gemeinsame Hausgeschichte der Familie.",
+                "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-tirfelyn"
+              }
+            ],
+            "footer": "Tirfelyn-Hof · Rheunwaith · Cenyr · Stand 1740"
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-tirfelyn--gwion-tirfelyn"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-tirfelyn--gwion-tirfelyn",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1717",
+          "death": "",
+          "houseId": "house-tirfelyn",
+          "houseName": "Familie Tirfelyn",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [
+            "23 Jahre"
+          ],
+          "sources": [
+            {
+              "familyId": "haus-tirfelyn",
+              "personId": "gwion-tirfelyn",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-07T00:00:00.000Z",
+              "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=gwion-tirfelyn",
+              "fingerprint": "{\"name\":\"Cynddylan Tirfelyn\",\"title\":\"Viehpfleger und Stallarbeiter\",\"birth\":\"1717\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tirfelyn\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gwion-tirfelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"23 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"eudaf-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--eudaf-tirfelyn\",\"name\":\"Eudaf Tirfelyn\"},{\"personId\":\"glesni-spouse-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--glesni-spouse-tirfelyn\",\"name\":\"Madrun\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "eudaf-tirfelyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-tirfelyn--eudaf-tirfelyn",
+                "name": "Eudaf Tirfelyn"
+              },
+              {
+                "personId": "glesni-spouse-tirfelyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--glesni-spouse-tirfelyn",
+                "name": "Madrun"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "id": "person--haus-tirfelyn--gwion-tirfelyn",
+        "race": "Mensch",
+        "age": 23
+      }
+    ]
+  },
+  "character": {
+    "name": "Cynddylan Tirfelyn",
+    "title": "Viehpfleger und Stallarbeiter",
+    "fraktion": "Familie Tirfelyn",
+    "role": "Viehpfleger und Stallarbeiter",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Tirfelyn-Hof · Bannkreis Gwynthor",
+    "origin": "Rheunwaith · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Cynddylan Tirfelyn ist im Jahr 1740 23 Jahre alt und wurde 1717 geboren. Cynddylan Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.\n\nCynddylan hilft bei Stallpflege, Fütterung und der Versorgung des Hofviehs. Er übernimmt auch anfallende schwere Hofarbeiten.\n\nDie Eltern sind Eudaf Tirfelyn, Madrun. Zur Geschwisterreihe gehören Gwallog Tirfelyn, Eiliwedd Tirfelyn, Tegfedd Tirfelyn, Gwynllyw Tirfelyn.\n\nDer Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb.\n\nDer Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.\n\nCynddylan Tirfelyn hat rotes Haar und braune Augen. Er trägt dichte kurze Locken und ist glatt rasiert. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-07T00:00:00.000Z",
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gwion-tirfelyn.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schemaVersion": 1,
+      "biographyPage": true,
+      "pageTitle": "Cynddylan Tirfelyn",
+      "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gwion-tirfelyn.png",
+      "imageWidth": 32,
+      "imageTall": true,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "stats": [
+        [
+          "Name",
+          "Cynddylan Tirfelyn"
+        ],
+        [
+          "Geburt",
+          "1717"
+        ],
+        [
+          "Stand 1740",
+          "23 Jahre"
+        ],
+        [
+          "Familie",
+          "Tirfelyn"
+        ],
+        [
+          "Wohnort",
+          "Tirfelyn-Hof"
+        ],
+        [
+          "Aufgabe",
+          "Viehpfleger und Stallarbeiter"
+        ]
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gwion-tirfelyn.png",
+        "portraitFit": "contain",
+        "biographyTitle": "Viehpfleger und Stallarbeiter",
+        "biographyText": "<p>Cynddylan Tirfelyn ist im Jahr 1740 23 Jahre alt und wurde 1717 geboren. Cynddylan Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.</p><p>Cynddylan hilft bei Stallpflege, Fütterung und der Versorgung des Hofviehs. Er übernimmt auch anfallende schwere Hofarbeiten.</p>",
+        "historyTitle": "Familie und Lebensweg",
+        "historyText": "<p>Die Eltern sind Eudaf Tirfelyn, Madrun. Zur Geschwisterreihe gehören Gwallog Tirfelyn, Eiliwedd Tirfelyn, Tegfedd Tirfelyn, Gwynllyw Tirfelyn.</p><p>Der Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.</p>",
+        "worksTitle": "Der gemeinsame Lebensunterhalt",
+        "works": [
+          "Der Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb."
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "<p>Cynddylan Tirfelyn hat rotes Haar und braune Augen. Er trägt dichte kurze Locken und ist glatt rasiert. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+          }
+        ],
+        "connectionsTitle": "Die nächsten Angehörigen",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Eudaf Tirfelyn",
+            "detail": "Vater",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eudaf-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Madrun",
+            "detail": "Mutter",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/glesni-spouse-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Gwallog Tirfelyn",
+            "detail": "Bruder",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/cadfan-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Eiliwedd Tirfelyn",
+            "detail": "Schwester",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/meleri-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Tegfedd Tirfelyn",
+            "detail": "Schwester",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/tegwen-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Gwynllyw Tirfelyn",
+            "detail": "Bruder",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/maelgwn-tirfelyn.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Haus und Herkunft",
+        "documents": [
+          {
+            "title": "Familie Tirfelyn",
+            "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+            "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=gwion-tirfelyn"
+          },
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Die gemeinsame Hausgeschichte der Familie.",
+            "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-tirfelyn"
+          }
+        ],
+        "footer": "Tirfelyn-Hof · Rheunwaith · Cenyr · Stand 1740"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-tirfelyn--gwion-tirfelyn"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-tirfelyn--gwion-tirfelyn",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1717",
+      "death": "",
+      "houseId": "house-tirfelyn",
+      "houseName": "Familie Tirfelyn",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "23 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-tirfelyn",
+          "personId": "gwion-tirfelyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-07T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=gwion-tirfelyn",
+          "fingerprint": "{\"name\":\"Cynddylan Tirfelyn\",\"title\":\"Viehpfleger und Stallarbeiter\",\"birth\":\"1717\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tirfelyn\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gwion-tirfelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"23 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"eudaf-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--eudaf-tirfelyn\",\"name\":\"Eudaf Tirfelyn\"},{\"personId\":\"glesni-spouse-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--glesni-spouse-tirfelyn\",\"name\":\"Madrun\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "eudaf-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tirfelyn--eudaf-tirfelyn",
+            "name": "Eudaf Tirfelyn"
+          },
+          {
+            "personId": "glesni-spouse-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--glesni-spouse-tirfelyn",
+            "name": "Madrun"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--haus-tirfelyn--gwion-tirfelyn",
+    "race": "Mensch",
+    "age": 23
+  }
+}

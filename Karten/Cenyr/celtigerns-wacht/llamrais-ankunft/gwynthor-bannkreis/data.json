@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
-  "revision": 21,
-  "updatedAt": "2026-11-06T16:25:33.783Z",
+  "revision": 22,
+  "updatedAt": "2026-11-07T19:09:36.290Z",
   "state": {
     "pins": [
       {
@@ -6966,9 +6966,13 @@
           {
             "k": "Wohnort",
             "v": "Gwynthor, östlicher Bannkreis"
+          },
+          {
+            "k": "Bewohner",
+            "v": "14 lebende Angehörige der Familie Marchwern"
           }
         ],
-        "text": "Das **Marchwern-Gestüt** ist für Gwynthor ein wichtiger Ort der Pferdezucht. Die **Familie Marchwern** zieht hier unter anderem **Ceffyl** und **Rhyfel** sowie weitere gute Reitpferde auf. Sie betreibt die Rosszuchtsiedlung als Familienunternehmen.\n\nDie Marchwern leben mit ihren Pferden im Bannkreis von **Gwynthor**. Sie dienen **Haus Wyrm** unmittelbar und stellen ihm verlässliche Reitpferde bereit.",
+        "text": "Das **Marchwern-Gestüt** ist für Gwynthor ein wichtiger Ort der Pferdezucht. Die vierzehn lebenden Angehörigen der **Familie Marchwern** arbeiten gemeinsam an der Zucht und Aufzucht guter Reitpferde, darunter **Ceffyl** und **Rhyfel**, sowie an Stallpflege, Futterversorgung und dem Haushalt. Kinder übernehmen nur altersgemäße Aufgaben.\n\nDie Familie lebt im östlichen Bannkreis von **Gwynthor** und dient **Haus Wyrm** unmittelbar. Sie stellt dem Haus verlässliche Reitpferde bereit; diese Dienstbindung ändert ihren Wohnort und die bestehende territoriale Einordnung nicht.\n\n[Familie und Gestüt im Almanach](/AleriaAlmanach/AleriaAlmanach.html?entry=marchwern-gestuet)",
         "secret": false,
         "templateId": "siedlung",
         "residentFamilyIds": [
@@ -7828,9 +7832,21 @@
           {
             "k": "Familie",
             "v": "Freundliche, hilfsbereite Bauernfamilie"
+          },
+          {
+            "k": "Bewohner",
+            "v": "16 lebende Familienangehörige; gemeinsamer landwirtschaftlicher Familienbetrieb"
+          },
+          {
+            "k": "Leitung",
+            "v": "Die Brüder Caradog Tirfelyn (55) und Eudaf Tirfelyn (52)"
+          },
+          {
+            "k": "Zustand",
+            "v": "Die Familie trauert um Ceridwen Tirfelyn, 22 Jahre, gestorben 1740"
           }
         ],
-        "text": "Der **Tirfelyn-Hof** liegt unmittelbar vor Gwynthor und ist ein wichtiger Versorger der Stadt. Die **Familie Tirfelyn** hält Vieh, bestellt Getreidefelder und baut Gemüse an. Die verschiedenen Erzeugnisse machen den Hof zu einem verlässlichen Bestandteil der täglichen Versorgung Gwynthors.\n\nDie Tirfelyn sind eine freundliche und hilfsbereite Bauernfamilie. Ihr Hof bleibt ein arbeitender Familienbetrieb; seine Bedeutung entsteht aus den regelmäßigen Lieferungen an die nahe Stadt.",
+        "text": "**Tirfelyn-Hof** liegt unmittelbar vor Gwynthor und versorgt die Stadt mit Vieh, Getreide und Gemüse. Die Brüder **Caradog Tirfelyn (55)** und **Eudaf Tirfelyn (52)** führen den Hof gemeinsam. Ihre beiden Familienzweige teilen sich die Arbeit an Vieh, Feldern, Garten, Vorräten und Lieferungen; auch die Kinder helfen altersgemäß. Insgesamt gehören sechzehn lebende Angehörige zur Familie.\n\n**Ceridwen Tirfelyn**, Caradogs und Enids zweiundzwanzigjährige Tochter, wurde vor wenigen Wochen Opfer des Fleischsammlers. Sie wollte ihren Verlobten **Gorwyn Helfaen** im Jagdhaus Helfaen besuchen und kam am folgenden Morgen nicht zurück. Ihr Todesjahr ist **1740**. Ein genauer Tattag sowie Tat- und Fundort sind nicht festgelegt.\n\n[Familie und Hof im Almanach](/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof)",
         "secret": false,
         "templateId": "landwirtschaft",
         "residentFamilyIds": [
@@ -8215,7 +8231,7 @@
           },
           {
             "k": "Bewohner",
-            "v": "Ein kleiner ländlicher Familienhaushalt"
+            "v": "Cadwgan, Dilys, Gorwyn, Owain und Arianell: fünf Lebende in einem Haushalt"
           },
           {
             "k": "Erwerb",
@@ -8228,9 +8244,13 @@
           {
             "k": "Besonderheiten",
             "v": "Unscheinbarer Wohn- und Arbeitsort; kein großer Jagdhof"
+          },
+          {
+            "k": "Verbindung",
+            "v": "Gorwyn Helfaen war mit der 1740 verstorbenen Ceridwen Tirfelyn verlobt"
           }
         ],
-        "text": "Im **Jagdhaus Helfaen** lebt eine sehr kleine Jägerfamilie. Die **Helfaen** verdienen ihren Lebensunterhalt überwiegend mit Kleinwild. Das Haus dient zugleich als schlichte Unterkunft und als Ausgangspunkt ihrer täglichen Arbeit im nahen Umland. Der bescheidene Familienhaushalt ist eng mit dem Alltag zwischen Feldrändern und Waldwegen verbunden.",
+        "text": "Im **Jagdhaus Helfaen** lebt eine kleine Rheunwaith-Jägerfamilie: **Cadwgan**, seine Frau **Dilys** sowie **Gorwyn**, **Owain** und **Arianell Helfaen**. Die fünf lebenden Angehörigen bilden einen gemeinsamen Haushalt. Sie verdienen ihren Lebensunterhalt vor allem mit Kleinwildjagd, der Verarbeitung der Fänge und kleinen örtlichen Verkäufen.\n\n**Gorwyn Helfaen** war mit **Ceridwen Tirfelyn** verlobt. Sie wollte ihn vor wenigen Wochen besuchen und kehrte am folgenden Morgen nicht zum Tirfelyn-Hof zurück. Ceridwen gehört zu den Opfern des Fleischsammlers. Daraus folgt keine belegte Tat- oder Fundstelle am Jagdhaus.\n\n[Familie und Jagdhaus im Almanach](/AleriaAlmanach/AleriaAlmanach.html?entry=jagdhaus-helfaen)",
         "secret": false,
         "templateId": "gebaeude",
         "residentFamilyIds": [

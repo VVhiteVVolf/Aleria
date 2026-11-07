@@ -1,0 +1,549 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-marchwern--gwrgi-marchwern",
+  "slug": "gwrgi-marchwern",
+  "identity": {
+    "name": "Gwrgi Marchwern",
+    "aliases": [],
+    "worldPersonId": "person--haus-marchwern--gwrgi-marchwern"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-marchwern",
+      "label": "Familie Marchwern"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-marchwern",
+        "familyTitle": "Familie Marchwern",
+        "personId": "gwrgi-marchwern",
+        "worldPersonId": "person--haus-marchwern--gwrgi-marchwern",
+        "houseId": "house-marchwern",
+        "houseName": "Familie Marchwern",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Gwrgi Marchwern\",\"title\":\"Gestütsvorsteher im Dienst des Hauses Wyrm\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"48 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"haus-marchwern-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-marchwern-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"mared-spouse-marchwern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mared-spouse-marchwern\",\"name\":\"Mared\"}],\"children\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"eluned-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--eluned-marchwern\",\"name\":\"Eluned Marchwern\"},{\"personId\":\"rhunedd-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhunedd-marchwern\",\"name\":\"Rhunedd Marchwern\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-marchwern--gwrgi-marchwern",
+      "documentIds": [
+        "person--haus-marchwern--gwrgi-marchwern"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-marchwern--gwrgi-marchwern",
+          "createdAt": "2026-11-07T00:00:00.000Z",
+          "updatedAt": "2026-11-07T00:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-marchwern",
+        "personId": "gwrgi-marchwern",
+        "worldPersonId": "person--haus-marchwern--gwrgi-marchwern",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthorer Landfamilien/marchwern/gwrgi-marchwern.json",
+    "sourceExportedAt": "2026-11-07T00:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-07T00:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-marchwern--gwrgi-marchwern"
+    ],
+    "contentHash": "09b10848cde7d1430da62e22bc41a3e99f36c7cc7d7888be07864c45f49592e1"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-landfamilien"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Gwrgi Marchwern",
+        "title": "Gestütsvorsteher im Dienst des Hauses Wyrm",
+        "fraktion": "Familie Marchwern",
+        "role": "Gestütsvorsteher im Dienst des Hauses Wyrm",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Marchwern-Gestüt · Bannkreis Gwynthor",
+        "origin": "Rheunwaith · Cenyr",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Gwrgi Marchwern ist im Jahr 1740 48 Jahre alt und wurde 1692 geboren. Gwrgi Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.\n\nGwrgi leitet das Gestüt im unmittelbaren Dienst Haus Wyrms. Mit seinem Bruder Gwynog teilt er Aufzucht, Pflege und die Vorbereitung geeigneter Reitpferde ein.\n\nDie Eltern dieser nahen Familiengeneration sind nicht namentlich überliefert. Zur Geschwisterreihe gehören Gwynog Marchwern. Ehe mit Mared. Die Kinder sind Rhun Marchwern, Eluned Marchwern, Rhunedd Marchwern.\n\nDas Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit.\n\nZucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.\n\nGwrgi Marchwern hat braunes Haar und grüne Augen. Er kämmt das kurze Haar zurück und trägt einen kurzen Bart mit ersten grauen Strähnen. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-07T00:00:00.000Z",
+        "updatedAt": "2026-11-07T00:00:00.000Z",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schemaVersion": 1,
+          "biographyPage": true,
+          "pageTitle": "Gwrgi Marchwern",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png",
+          "imageWidth": 32,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "stats": [
+            [
+              "Name",
+              "Gwrgi Marchwern"
+            ],
+            [
+              "Geburt",
+              "1692"
+            ],
+            [
+              "Stand 1740",
+              "48 Jahre"
+            ],
+            [
+              "Familie",
+              "Marchwern"
+            ],
+            [
+              "Wohnort",
+              "Marchwern-Gestüt"
+            ],
+            [
+              "Aufgabe",
+              "Gestütsvorsteher im Dienst des Hauses Wyrm"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png",
+            "portraitFit": "contain",
+            "biographyTitle": "Gestütsvorsteher im Dienst des Hauses Wyrm",
+            "biographyText": "<p>Gwrgi Marchwern ist im Jahr 1740 48 Jahre alt und wurde 1692 geboren. Gwrgi Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.</p><p>Gwrgi leitet das Gestüt im unmittelbaren Dienst Haus Wyrms. Mit seinem Bruder Gwynog teilt er Aufzucht, Pflege und die Vorbereitung geeigneter Reitpferde ein.</p>",
+            "historyTitle": "Familie und Lebensweg",
+            "historyText": "<p>Die Eltern dieser nahen Familiengeneration sind nicht namentlich überliefert. Zur Geschwisterreihe gehören Gwynog Marchwern. Ehe mit Mared. Die Kinder sind Rhun Marchwern, Eluned Marchwern, Rhunedd Marchwern.</p><p>Zucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.</p>",
+            "worksTitle": "Der gemeinsame Lebensunterhalt",
+            "works": [
+              "Das Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit."
+            ],
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Erscheinung",
+                "text": "<p>Gwrgi Marchwern hat braunes Haar und grüne Augen. Er kämmt das kurze Haar zurück und trägt einen kurzen Bart mit ersten grauen Strähnen. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+              }
+            ],
+            "connectionsTitle": "Die nächsten Angehörigen",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Mared",
+                "detail": "Ehe mit Mared",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mared-spouse-marchwern.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Rhun Marchwern",
+                "detail": "Sohn",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhun-marchwern.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Eluned Marchwern",
+                "detail": "Tochter",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/eluned-marchwern.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Rhunedd Marchwern",
+                "detail": "Tochter",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhunedd-marchwern.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Gwynog Marchwern",
+                "detail": "Bruder",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/einion-marchwern.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Haus und Herkunft",
+            "documents": [
+              {
+                "title": "Familie Marchwern",
+                "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+                "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&person=gwrgi-marchwern"
+              },
+              {
+                "title": "Marchwern-Gestüt",
+                "text": "Die gemeinsame Hausgeschichte der Familie.",
+                "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-marchwern"
+              }
+            ],
+            "footer": "Marchwern-Gestüt · Rheunwaith · Cenyr · Stand 1740"
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-marchwern--gwrgi-marchwern"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-marchwern--gwrgi-marchwern",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1692",
+          "death": "",
+          "houseId": "house-marchwern",
+          "houseName": "Familie Marchwern",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [
+            "48 Jahre"
+          ],
+          "sources": [
+            {
+              "familyId": "haus-marchwern",
+              "personId": "gwrgi-marchwern",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-07T00:00:00.000Z",
+              "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view&person=gwrgi-marchwern",
+              "fingerprint": "{\"name\":\"Gwrgi Marchwern\",\"title\":\"Gestütsvorsteher im Dienst des Hauses Wyrm\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"48 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"haus-marchwern-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-marchwern-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"mared-spouse-marchwern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mared-spouse-marchwern\",\"name\":\"Mared\"}],\"children\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"eluned-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--eluned-marchwern\",\"name\":\"Eluned Marchwern\"},{\"personId\":\"rhunedd-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhunedd-marchwern\",\"name\":\"Rhunedd Marchwern\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "haus-marchwern-gruender",
+                "type": "claimed",
+                "legitimacy": "unknown",
+                "certainty": "unknown",
+                "worldPersonId": "person--haus-marchwern--haus-marchwern-gruender",
+                "name": "Unbekannter Gründer"
+              },
+              {
+                "personId": "haus-marchwern-gruenderin",
+                "type": "claimed",
+                "legitimacy": "unknown",
+                "certainty": "unknown",
+                "worldPersonId": "person--haus-marchwern--haus-marchwern-gruenderin",
+                "name": "Unbekannte Gründerin"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "mared-spouse-marchwern",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--mared-spouse-marchwern",
+                "name": "Mared"
+              }
+            ],
+            "children": [
+              {
+                "personId": "rhun-marchwern",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-marchwern--rhun-marchwern",
+                "name": "Rhun Marchwern"
+              },
+              {
+                "personId": "eluned-marchwern",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-marchwern--eluned-marchwern",
+                "name": "Eluned Marchwern"
+              },
+              {
+                "personId": "rhunedd-marchwern",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-marchwern--rhunedd-marchwern",
+                "name": "Rhunedd Marchwern"
+              }
+            ]
+          }
+        },
+        "id": "person--haus-marchwern--gwrgi-marchwern",
+        "race": "Mensch",
+        "age": 48
+      }
+    ]
+  },
+  "character": {
+    "name": "Gwrgi Marchwern",
+    "title": "Gestütsvorsteher im Dienst des Hauses Wyrm",
+    "fraktion": "Familie Marchwern",
+    "role": "Gestütsvorsteher im Dienst des Hauses Wyrm",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Marchwern-Gestüt · Bannkreis Gwynthor",
+    "origin": "Rheunwaith · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Gwrgi Marchwern ist im Jahr 1740 48 Jahre alt und wurde 1692 geboren. Gwrgi Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.\n\nGwrgi leitet das Gestüt im unmittelbaren Dienst Haus Wyrms. Mit seinem Bruder Gwynog teilt er Aufzucht, Pflege und die Vorbereitung geeigneter Reitpferde ein.\n\nDie Eltern dieser nahen Familiengeneration sind nicht namentlich überliefert. Zur Geschwisterreihe gehören Gwynog Marchwern. Ehe mit Mared. Die Kinder sind Rhun Marchwern, Eluned Marchwern, Rhunedd Marchwern.\n\nDas Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit.\n\nZucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.\n\nGwrgi Marchwern hat braunes Haar und grüne Augen. Er kämmt das kurze Haar zurück und trägt einen kurzen Bart mit ersten grauen Strähnen. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-07T00:00:00.000Z",
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schemaVersion": 1,
+      "biographyPage": true,
+      "pageTitle": "Gwrgi Marchwern",
+      "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png",
+      "imageWidth": 32,
+      "imageTall": true,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "stats": [
+        [
+          "Name",
+          "Gwrgi Marchwern"
+        ],
+        [
+          "Geburt",
+          "1692"
+        ],
+        [
+          "Stand 1740",
+          "48 Jahre"
+        ],
+        [
+          "Familie",
+          "Marchwern"
+        ],
+        [
+          "Wohnort",
+          "Marchwern-Gestüt"
+        ],
+        [
+          "Aufgabe",
+          "Gestütsvorsteher im Dienst des Hauses Wyrm"
+        ]
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png",
+        "portraitFit": "contain",
+        "biographyTitle": "Gestütsvorsteher im Dienst des Hauses Wyrm",
+        "biographyText": "<p>Gwrgi Marchwern ist im Jahr 1740 48 Jahre alt und wurde 1692 geboren. Gwrgi Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.</p><p>Gwrgi leitet das Gestüt im unmittelbaren Dienst Haus Wyrms. Mit seinem Bruder Gwynog teilt er Aufzucht, Pflege und die Vorbereitung geeigneter Reitpferde ein.</p>",
+        "historyTitle": "Familie und Lebensweg",
+        "historyText": "<p>Die Eltern dieser nahen Familiengeneration sind nicht namentlich überliefert. Zur Geschwisterreihe gehören Gwynog Marchwern. Ehe mit Mared. Die Kinder sind Rhun Marchwern, Eluned Marchwern, Rhunedd Marchwern.</p><p>Zucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.</p>",
+        "worksTitle": "Der gemeinsame Lebensunterhalt",
+        "works": [
+          "Das Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit."
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "<p>Gwrgi Marchwern hat braunes Haar und grüne Augen. Er kämmt das kurze Haar zurück und trägt einen kurzen Bart mit ersten grauen Strähnen. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+          }
+        ],
+        "connectionsTitle": "Die nächsten Angehörigen",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Mared",
+            "detail": "Ehe mit Mared",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mared-spouse-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Rhun Marchwern",
+            "detail": "Sohn",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhun-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Eluned Marchwern",
+            "detail": "Tochter",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/eluned-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Rhunedd Marchwern",
+            "detail": "Tochter",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhunedd-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Gwynog Marchwern",
+            "detail": "Bruder",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/einion-marchwern.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Haus und Herkunft",
+        "documents": [
+          {
+            "title": "Familie Marchwern",
+            "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+            "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&person=gwrgi-marchwern"
+          },
+          {
+            "title": "Marchwern-Gestüt",
+            "text": "Die gemeinsame Hausgeschichte der Familie.",
+            "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-marchwern"
+          }
+        ],
+        "footer": "Marchwern-Gestüt · Rheunwaith · Cenyr · Stand 1740"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-marchwern--gwrgi-marchwern"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-marchwern--gwrgi-marchwern",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1692",
+      "death": "",
+      "houseId": "house-marchwern",
+      "houseName": "Familie Marchwern",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "48 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-marchwern",
+          "personId": "gwrgi-marchwern",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-07T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view&person=gwrgi-marchwern",
+          "fingerprint": "{\"name\":\"Gwrgi Marchwern\",\"title\":\"Gestütsvorsteher im Dienst des Hauses Wyrm\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"48 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"haus-marchwern-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-marchwern-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"mared-spouse-marchwern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mared-spouse-marchwern\",\"name\":\"Mared\"}],\"children\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"eluned-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--eluned-marchwern\",\"name\":\"Eluned Marchwern\"},{\"personId\":\"rhunedd-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhunedd-marchwern\",\"name\":\"Rhunedd Marchwern\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "haus-marchwern-gruender",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "unknown",
+            "worldPersonId": "person--haus-marchwern--haus-marchwern-gruender",
+            "name": "Unbekannter Gründer"
+          },
+          {
+            "personId": "haus-marchwern-gruenderin",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "unknown",
+            "worldPersonId": "person--haus-marchwern--haus-marchwern-gruenderin",
+            "name": "Unbekannte Gründerin"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "mared-spouse-marchwern",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--mared-spouse-marchwern",
+            "name": "Mared"
+          }
+        ],
+        "children": [
+          {
+            "personId": "rhun-marchwern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-marchwern--rhun-marchwern",
+            "name": "Rhun Marchwern"
+          },
+          {
+            "personId": "eluned-marchwern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-marchwern--eluned-marchwern",
+            "name": "Eluned Marchwern"
+          },
+          {
+            "personId": "rhunedd-marchwern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-marchwern--rhunedd-marchwern",
+            "name": "Rhunedd Marchwern"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-marchwern--gwrgi-marchwern",
+    "race": "Mensch",
+    "age": 48
+  }
+}

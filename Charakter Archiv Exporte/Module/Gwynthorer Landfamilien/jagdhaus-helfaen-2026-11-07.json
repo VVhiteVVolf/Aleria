@@ -1,0 +1,337 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-07T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Jagdhaus Helfaen",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Jagdhaus Helfaen"
+      ],
+      "desc": "Ein kleiner Jägerhaushalt zwischen Waldwegen, Kleinwild und gemeinsamer Wohnstube.",
+      "iconUrl": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png"
+    },
+    "entry": {
+      "id": "jagdhaus-helfaen",
+      "title": "Jagdhaus Helfaen",
+      "subtitle": "Ein kleiner Jägerhaushalt zwischen Waldwegen, Kleinwild und gemeinsamer Wohnstube.",
+      "type": "Jagdhaus",
+      "category": "Bannkreis Gwynthor",
+      "symbol": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+      "icon": "⌂",
+      "stamp": "Jagdhaus Helfaen",
+      "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/helfaen-aussen-v2.png",
+      "previewImage": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/helfaen-aussen-v2.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--haus-helfaen--cadwgan-helfaen",
+        "person--family-tree--dilys-spouse-helfaen",
+        "person--haus-helfaen--owain-helfaen",
+        "person--haus-helfaen--gorwyn-helfaen",
+        "person--haus-helfaen--cerys-helfaen"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Jagdhaus Helfaen",
+          "commentThreadKey": "helfaen-ueberblick",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/helfaen-aussen-v2.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Das Jagdhaus Helfaen ist Wohn- und Arbeitsort einer kleinen Rheunwaith-Familie. Fünf lebende Angehörige teilen einen Haushalt. Ihr Lebensunterhalt beruht vorwiegend auf Kleinwildjagd, Verarbeitung und dem örtlichen Verkauf kleiner Überschüsse.</p><p>Die Erwachsenen teilen Jagd, Pflege der einfachen Ausrüstung, Wildverarbeitung und Hauswirtschaft untereinander auf. Der Nachwuchs wird behutsam an den Alltag herangeführt. Das Jagdhaus ist ein bescheidener Familienbetrieb.</p><p>Einer der Söhne war mit Ceridwen Tirfelyn verlobt. Sie wollte ihn hier besuchen und kehrte am folgenden Morgen nicht zurück. Ihr Tod vor wenigen Wochen im Jahr 1740 verbindet die Helfaen mit der Trauer auf dem Tirfelyn-Hof. Ein genauer Tatort und der Ablauf ihrer letzten Nacht sind nicht festgelegt.</p>",
+          "stats": [
+            [
+              "Ort",
+              "Jagdhaus Helfaen · Bannkreis Gwynthor"
+            ],
+            [
+              "Familie",
+              "Familie Helfaen"
+            ],
+            [
+              "Lebende Angehörige",
+              "5"
+            ],
+            [
+              "Lebensunterhalt",
+              "Kleinwildjagd · Wildverarbeitung und Haltbarmachen · Örtlicher Verkauf und gemeinsamer Haushalt"
+            ],
+            [
+              "Lage",
+              "Östlicher Bannkreis von Gwynthor"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hierarchie · Betrieb und Familienrollen",
+          "commentThreadKey": "helfaen-hierarchie",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Jagd, Haus und Familie Helfaen",
+            "eyebrow": "Familie Helfaen",
+            "subtitle": "Fünf lebende Angehörige in einem Haushalt",
+            "centerLabel": "Jagdhaus Helfaen",
+            "emblem": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+            "sideImage": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/helfaen-aussen-v2.png",
+            "motto": "Arbeit und Familie",
+            "description": "<p>Fünf Angehörige bilden einen Haushalt. Jagd und Verarbeitung greifen ineinander; jüngere Familienmitglieder haben überschaubare Aufgaben unter Aufsicht.</p>",
+            "detailsTitle": "Der gemeinsame Alltag",
+            "details": [
+              {
+                "label": "Lebende Angehörige",
+                "value": "5"
+              },
+              {
+                "label": "Wohnort",
+                "value": "Jagdhaus Helfaen · Bannkreis Gwynthor"
+              },
+              {
+                "label": "Lebensunterhalt",
+                "value": "Kleinwildjagd · Wildverarbeitung und Haltbarmachen · Örtlicher Verkauf und gemeinsamer Haushalt"
+              }
+            ],
+            "chartTitle": "Aufgaben und Verantwortung",
+            "chartIntro": "Jede lebende Person erscheint einmal mit ihrer hauptsächlichen Aufgabe. Familienzugehörigkeit und Verwandtschaft zeigt der eigene Stammbaum.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 92,
+            "trees": [
+              {
+                "id": "jagd",
+                "label": "Jagd und Wege",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Jagd und Wege",
+                    "nodes": [
+                      {
+                        "title": "Cadwgan Helfaen",
+                        "subtitle": "Kleinwildjäger und Haushaltsvorsteher · 51 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/cadwgan-helfaen.png",
+                        "text": "<p>Cadwgan führt den kleinen Jagdhaushalt mit Dilys. Er erlegt vor allem Kleinwild und stimmt die Arbeit mit seinem erwachsenen Sohn Gorwyn ab.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-helfaen&mode=view&amp;person=cadwgan-helfaen\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Gorwyn Helfaen",
+                        "subtitle": "Kleinwildjäger und Verlobter Ceridwens · 24 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/gorwyn-helfaen.png",
+                        "text": "<p>Gorwyn arbeitet mit seinen Eltern bei Kleinwildjagd und Versorgung des Jagdhauses. Seine Verlobte Ceridwen Tirfelyn wollte ihn besuchen und kehrte am nächsten Morgen nicht heim; sie wurde vor wenigen Wochen Opfer des Fleischsammlers.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-helfaen&mode=view&amp;person=gorwyn-helfaen\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "verarbeitung",
+                "label": "Verarbeitung und Haus",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Verarbeitung und Haus",
+                    "nodes": [
+                      {
+                        "title": "Dilys",
+                        "subtitle": "Jägerin und Wildverarbeiterin · 48 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/dilys-spouse-helfaen.png",
+                        "text": "<p>Dilys hilft bei Jagd, Verarbeitung und örtlichem Verkauf. Der Tod der Verlobten ihres Sohnes trifft auch ihren kleinen Haushalt.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-helfaen&mode=view&amp;person=dilys-spouse-helfaen\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      },
+                      {
+                        "title": "Arianell Helfaen",
+                        "subtitle": "Junge Wildverarbeiterin und Haushaltshilfe · 17 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/cerys-helfaen.png",
+                        "text": "<p>Arianell hilft bei Verarbeitung, Haltbarmachen und den Arbeiten des gemeinsamen Haushalts. Sie lernt von Dilys und ihren Brüdern.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-helfaen&mode=view&amp;person=cerys-helfaen\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "nachwuchs",
+                "label": "Im Haushalt aufwachsen",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Im Haushalt aufwachsen",
+                    "nodes": [
+                      {
+                        "title": "Owain Helfaen",
+                        "subtitle": "Kind im Jagdhaus · 10 Jahre",
+                        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/owain-helfaen.png",
+                        "text": "<p>Owain hilft bei einfachen Arbeiten im Jagdhaus. Er ist noch kein selbständiger Jäger.</p><p><a href=\"../Stammb%C3%A4ume/Stammbaum.html?family=haus-helfaen&mode=view&amp;person=owain-helfaen\" target=\"_blank\" rel=\"noopener\">Zur Person im Stammbaum</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Die Kinder sind Angehörige des Haushalts. Ihre altersgemäße Mithilfe ist von einer erwachsenen Arbeitsstelle getrennt."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Familie Helfaen · Hausbio",
+          "commentThreadKey": "helfaen-hausbio",
+          "biographyPage": true,
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/cadwgan-helfaen.png",
+          "imageWidth": 31,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "stats": [
+            [
+              "Familie",
+              "Helfaen"
+            ],
+            [
+              "Stand",
+              "Bürgerliche Rheunwaith-Familie"
+            ],
+            [
+              "Wohnort",
+              "Jagdhaus Helfaen"
+            ],
+            [
+              "Lebende Angehörige",
+              "5"
+            ]
+          ],
+          "biography": {
+            "portraitFit": "contain",
+            "biographyTitle": "Familie und Lebensgrundlage",
+            "biographyText": "Im Jagdhaus Helfaen leben fünf Angehörige in einem gemeinsamen Haushalt: Cadwgan und Dilys mit den Kindern Gorwyn, Arianell und Owain. Sie jagen vor allem Kleinwild, verarbeiten die Fänge und verkaufen kleine Überschüsse in der Umgebung. Braune lockige Haare und blaue Augen prägen ihr Familienbild.\n\nDer kleine Betrieb ernährt den Haushalt durch Jagd, Verarbeitung und sorgfältige Nutzung der Fänge. Cadwgan und Gorwyn tragen die tägliche Jagdarbeit, Dilys und Arianell helfen bei Verarbeitung und Haltbarmachen. Der zehnjährige Owain übernimmt einfache Arbeiten im Haus.",
+            "historyTitle": "Überlieferung und heutige Generationen",
+            "historyText": "Die Namen der älteren Gründer und der Generationen vor Cadwgan sind nicht überliefert. Die näher bekannte Familie beginnt mit Cadwgan und Dilys. Sie sind die Eltern des vierundzwanzigjährigen Gorwyn, der siebzehnjährigen Arianell und des zehnjährigen Owain.\n\nGorwyn war mit Ceridwen Tirfelyn verlobt. Ceridwen wollte ihn besuchen und war am folgenden Morgen nicht wieder zu Hause. Sie wurde im Jahr 1740, vor wenigen Wochen, mit zweiundzwanzig Jahren Opfer des Fleischsammlers. Die Verlobung endete mit ihrem Tod. Der Verlust betrifft den Jagdhaushalt ebenso wie Ceridwens Herkunftsfamilie; ein genauer Tat- oder Fundort ist nicht bekannt.",
+            "worksTitle": "Arbeit und Lebensunterhalt",
+            "works": [],
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Die Angehörigen",
+                "text": "<p><strong>Cadwgan Helfaen</strong> (51) · Kleinwildjäger und Haushaltsvorsteher. Cadwgan führt den kleinen Jagdhaushalt mit Dilys. Er erlegt vor allem Kleinwild und stimmt die Arbeit mit seinem erwachsenen Sohn Gorwyn ab.</p><p><strong>Dilys</strong> (48) · Jägerin und Wildverarbeiterin. Dilys hilft bei Jagd, Verarbeitung und örtlichem Verkauf. Der Tod der Verlobten ihres Sohnes trifft auch ihren kleinen Haushalt.</p><p><strong>Owain Helfaen</strong> (10) · Kind im Jagdhaus. Owain hilft bei einfachen Arbeiten im Jagdhaus. Er ist noch kein selbständiger Jäger.</p><p><strong>Gorwyn Helfaen</strong> (24) · Kleinwildjäger und Verlobter Ceridwens. Gorwyn arbeitet mit seinen Eltern bei Kleinwildjagd und Versorgung des Jagdhauses. Seine Verlobte Ceridwen Tirfelyn wollte ihn besuchen und kehrte am nächsten Morgen nicht heim; sie wurde vor wenigen Wochen Opfer des Fleischsammlers.</p><p><strong>Arianell Helfaen</strong> (17) · Junge Wildverarbeiterin und Haushaltshilfe. Arianell hilft bei Verarbeitung, Haltbarmachen und den Arbeiten des gemeinsamen Haushalts. Sie lernt von Dilys und ihren Brüdern.</p>"
+              }
+            ],
+            "connectionsTitle": "Drei Gesichter des Hauses",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Cadwgan Helfaen",
+                "detail": "Kleinwildjäger und Haushaltsvorsteher. Cadwgan führt den kleinen Jagdhaushalt mit Dilys. Er erlegt vor allem Kleinwild und stimmt die Arbeit mit seinem erwachsenen Sohn Gorwyn ab.",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/cadwgan-helfaen.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Dilys",
+                "detail": "Jägerin und Wildverarbeiterin. Dilys hilft bei Jagd, Verarbeitung und örtlichem Verkauf. Der Tod der Verlobten ihres Sohnes trifft auch ihren kleinen Haushalt.",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/dilys-spouse-helfaen.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Gorwyn Helfaen",
+                "detail": "Kleinwildjäger und Verlobter Ceridwens. Gorwyn arbeitet mit seinen Eltern bei Kleinwildjagd und Versorgung des Jagdhauses. Seine Verlobte Ceridwen Tirfelyn wollte ihn besuchen und kehrte am nächsten Morgen nicht heim; sie wurde vor wenigen Wochen Opfer des Fleischsammlers.",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/gorwyn-helfaen.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Familie, Haus und Ort",
+            "documents": [
+              {
+                "title": "Der Stammbaum Helfaen",
+                "text": "Unbekannte Gründer, Wappen, Überlieferungssprung und heutige Familie.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+                "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-helfaen&mode=view"
+              },
+              {
+                "title": "Die Hausseite Helfaen",
+                "text": "Gemeinsame Familiengeschichte und bestehende Hausakte.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+                "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-helfaen"
+              },
+              {
+                "title": "Jagdhaus Helfaen",
+                "text": "Der bestehende Standort auf der Bannkreiskarte.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+                "link": "../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-115"
+              },
+              {
+                "title": "Familie Tirfelyn",
+                "text": "Die verstorbene Ceridwen Tirfelyn war mit einem Sohn des Hauses verlobt.",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+                "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view"
+              }
+            ],
+            "footer": "Jagdhaus Helfaen · Bannkreis Gwynthor · Jahr 1740"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Familie Helfaen · Stammbaum",
+          "commentThreadKey": "helfaen-stammbaum",
+          "familyTreePage": true,
+          "familyTree": {
+            "familyId": "haus-helfaen",
+            "source": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-helfaen&mode=view",
+            "title": "Familie Helfaen",
+            "height": 760,
+            "intro": "Die Überlieferung beginnt mit unbekannten Gründern, dem Familienwappen und einem Zeitsprung. Danach folgt die heutige Familie mit ihren Beziehungen."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Jagdhaus Helfaen · Draußen",
+          "commentThreadKey": "helfaen-szene-aussen",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/helfaen-aussen-v2.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Ein kleines Jagdhaus aus Stein und dunklem Holz steht an einem ruhigen Weg zwischen Feldrand und Gehölz. Unter dem tiefen Vordach liegt trockenes Brennholz. Ein schlichter Arbeitsbereich hinter dem Haus dient den alltäglichen Handgriffen. Wer den Hof betritt, hört die Schritte vor der Tür und den Wind in den nahen Bäumen.</p>",
+          "sessionHint": "Ein Besuch bei der Familie am Jagdhaus Helfaen.",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Frage oder ein Gespräch im gemeinsamen Alltag.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Wohnstube",
+          "commentThreadKey": "helfaen-szene-wohnstube",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/scenes/helfaen-wohnstube-v2.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Die kleine gemeinsame Wohnstube hat eine niedrige Balkendecke, eine Herdstelle und einen kräftigen Holztisch. Fünf Sitzplätze, eine Truhe, einfaches Geschirr und sauber verwahrte Arbeitskleidung füllen den Raum. Durch das kleine Fenster fällt Licht vom Waldrand. Hier bespricht die Familie den nächsten Tag und empfängt einen Besucher am Feuer.</p>",
+          "sessionHint": "Ein Besuch bei der Familie am Jagdhaus Helfaen.",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Frage oder ein Gespräch im gemeinsamen Alltag.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

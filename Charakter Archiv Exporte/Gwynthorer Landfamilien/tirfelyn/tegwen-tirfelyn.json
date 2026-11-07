@@ -1,0 +1,204 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-07T00:00:00.000Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthorer Landfamilien/tirfelyn/tegwen-tirfelyn.json",
+  "character": {
+    "name": "Tegfedd Tirfelyn",
+    "title": "Junge Bäuerin für Garten und Kleinvieh",
+    "fraktion": "Familie Tirfelyn",
+    "role": "Junge Bäuerin für Garten und Kleinvieh",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Tirfelyn-Hof · Bannkreis Gwynthor",
+    "origin": "Rheunwaith · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Tegfedd Tirfelyn ist im Jahr 1740 16 Jahre alt und wurde 1724 geboren. Tegfedd Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.\n\nTegfedd hilft im Garten und beim Kleinvieh. Sie lernt die Arbeiten des Familienhofs von ihren Eltern und älteren Geschwistern.\n\nDie Eltern sind Eudaf Tirfelyn, Madrun. Zur Geschwisterreihe gehören Gwallog Tirfelyn, Cynddylan Tirfelyn, Eiliwedd Tirfelyn, Gwynllyw Tirfelyn.\n\nDer Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb.\n\nDer Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.\n\nTegfedd Tirfelyn hat rotes Haar und braune Augen. Sie trägt das schulterlange Haar halb hochgebunden. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-07T00:00:00.000Z",
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/tegwen-tirfelyn.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schemaVersion": 1,
+      "biographyPage": true,
+      "pageTitle": "Tegfedd Tirfelyn",
+      "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/tegwen-tirfelyn.png",
+      "imageWidth": 32,
+      "imageTall": true,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "stats": [
+        [
+          "Name",
+          "Tegfedd Tirfelyn"
+        ],
+        [
+          "Geburt",
+          "1724"
+        ],
+        [
+          "Stand 1740",
+          "16 Jahre"
+        ],
+        [
+          "Familie",
+          "Tirfelyn"
+        ],
+        [
+          "Wohnort",
+          "Tirfelyn-Hof"
+        ],
+        [
+          "Aufgabe",
+          "Junge Bäuerin für Garten und Kleinvieh"
+        ]
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/tegwen-tirfelyn.png",
+        "portraitFit": "contain",
+        "biographyTitle": "Junge Bäuerin für Garten und Kleinvieh",
+        "biographyText": "<p>Tegfedd Tirfelyn ist im Jahr 1740 16 Jahre alt und wurde 1724 geboren. Tegfedd Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.</p><p>Tegfedd hilft im Garten und beim Kleinvieh. Sie lernt die Arbeiten des Familienhofs von ihren Eltern und älteren Geschwistern.</p>",
+        "historyTitle": "Familie und Lebensweg",
+        "historyText": "<p>Die Eltern sind Eudaf Tirfelyn, Madrun. Zur Geschwisterreihe gehören Gwallog Tirfelyn, Cynddylan Tirfelyn, Eiliwedd Tirfelyn, Gwynllyw Tirfelyn.</p><p>Der Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.</p>",
+        "worksTitle": "Der gemeinsame Lebensunterhalt",
+        "works": [
+          "Der Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb."
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "<p>Tegfedd Tirfelyn hat rotes Haar und braune Augen. Sie trägt das schulterlange Haar halb hochgebunden. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+          }
+        ],
+        "connectionsTitle": "Die nächsten Angehörigen",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Eudaf Tirfelyn",
+            "detail": "Vater",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eudaf-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Madrun",
+            "detail": "Mutter",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/glesni-spouse-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Gwallog Tirfelyn",
+            "detail": "Bruder",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/cadfan-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Cynddylan Tirfelyn",
+            "detail": "Bruder",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gwion-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Eiliwedd Tirfelyn",
+            "detail": "Schwester",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/meleri-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Gwynllyw Tirfelyn",
+            "detail": "Bruder",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/maelgwn-tirfelyn.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Haus und Herkunft",
+        "documents": [
+          {
+            "title": "Familie Tirfelyn",
+            "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+            "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=tegwen-tirfelyn"
+          },
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Die gemeinsame Hausgeschichte der Familie.",
+            "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-tirfelyn"
+          }
+        ],
+        "footer": "Tirfelyn-Hof · Rheunwaith · Cenyr · Stand 1740"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-tirfelyn--tegwen-tirfelyn"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-tirfelyn--tegwen-tirfelyn",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1724",
+      "death": "",
+      "houseId": "house-tirfelyn",
+      "houseName": "Familie Tirfelyn",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "16 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-tirfelyn",
+          "personId": "tegwen-tirfelyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-07T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=tegwen-tirfelyn",
+          "fingerprint": "{\"name\":\"Tegfedd Tirfelyn\",\"title\":\"Junge Bäuerin für Garten und Kleinvieh\",\"birth\":\"1724\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-tirfelyn\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/tegwen-tirfelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"16 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"eudaf-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--eudaf-tirfelyn\",\"name\":\"Eudaf Tirfelyn\"},{\"personId\":\"glesni-spouse-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--glesni-spouse-tirfelyn\",\"name\":\"Madrun\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "eudaf-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tirfelyn--eudaf-tirfelyn",
+            "name": "Eudaf Tirfelyn"
+          },
+          {
+            "personId": "glesni-spouse-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--glesni-spouse-tirfelyn",
+            "name": "Madrun"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--haus-tirfelyn--tegwen-tirfelyn",
+    "race": "Mensch",
+    "age": 16
+  }
+}

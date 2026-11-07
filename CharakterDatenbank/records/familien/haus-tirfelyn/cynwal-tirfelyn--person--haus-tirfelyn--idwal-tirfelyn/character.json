@@ -1,0 +1,439 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-tirfelyn--idwal-tirfelyn",
+  "slug": "cynwal-tirfelyn",
+  "identity": {
+    "name": "Cynwal Tirfelyn",
+    "aliases": [],
+    "worldPersonId": "person--haus-tirfelyn--idwal-tirfelyn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-tirfelyn",
+      "label": "Familie Tirfelyn"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-tirfelyn",
+        "familyTitle": "Familie Tirfelyn",
+        "personId": "idwal-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--idwal-tirfelyn",
+        "houseId": "house-tirfelyn",
+        "houseName": "Familie Tirfelyn",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Cynwal Tirfelyn\",\"title\":\"Hofkind\",\"birth\":\"1737\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tirfelyn\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/idwal-tirfelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"3 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"cadfan-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--cadfan-tirfelyn\",\"name\":\"Gwallog Tirfelyn\"},{\"personId\":\"olwen-spouse-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--olwen-spouse-tirfelyn\",\"name\":\"Gwenfron\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-tirfelyn--idwal-tirfelyn",
+      "documentIds": [
+        "person--haus-tirfelyn--idwal-tirfelyn"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-tirfelyn--idwal-tirfelyn",
+          "createdAt": "2026-11-07T00:00:00.000Z",
+          "updatedAt": "2026-11-07T00:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-tirfelyn",
+        "personId": "idwal-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--idwal-tirfelyn",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthorer Landfamilien/tirfelyn/idwal-tirfelyn.json",
+    "sourceExportedAt": "2026-11-07T00:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-07T00:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-tirfelyn--idwal-tirfelyn"
+    ],
+    "contentHash": "abf1aad553b648e68cbcdb2d947554fa4765ff02e6d45288b6263c34a0067b53"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-landfamilien"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Cynwal Tirfelyn",
+        "title": "Hofkind",
+        "fraktion": "Familie Tirfelyn",
+        "role": "Hofkind",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "origin": "Rheunwaith · Cenyr",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Cynwal Tirfelyn ist im Jahr 1740 3 Jahre alt und wurde 1737 geboren. Cynwal Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.\n\nCynwal wächst als Sohn Gwallogs und Gwenfrons auf dem Familienhof auf. Er spielt bei den Erwachsenen und hat keine Arbeitspflichten.\n\nDie Eltern sind Gwallog Tirfelyn, Gwenfron.\n\nDer Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb.\n\nDer Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.\n\nCynwal Tirfelyn hat rotes Haar und braune Augen. Sein kurzes Wuschelhaar steht in alle Richtungen ab. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-07T00:00:00.000Z",
+        "updatedAt": "2026-11-07T00:00:00.000Z",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/idwal-tirfelyn.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schemaVersion": 1,
+          "biographyPage": true,
+          "pageTitle": "Cynwal Tirfelyn",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/idwal-tirfelyn.png",
+          "imageWidth": 32,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "stats": [
+            [
+              "Name",
+              "Cynwal Tirfelyn"
+            ],
+            [
+              "Geburt",
+              "1737"
+            ],
+            [
+              "Stand 1740",
+              "3 Jahre"
+            ],
+            [
+              "Familie",
+              "Tirfelyn"
+            ],
+            [
+              "Wohnort",
+              "Tirfelyn-Hof"
+            ],
+            [
+              "Aufgabe",
+              "Hofkind"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/idwal-tirfelyn.png",
+            "portraitFit": "contain",
+            "biographyTitle": "Hofkind",
+            "biographyText": "<p>Cynwal Tirfelyn ist im Jahr 1740 3 Jahre alt und wurde 1737 geboren. Cynwal Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.</p><p>Cynwal wächst als Sohn Gwallogs und Gwenfrons auf dem Familienhof auf. Er spielt bei den Erwachsenen und hat keine Arbeitspflichten.</p>",
+            "historyTitle": "Familie und Lebensweg",
+            "historyText": "<p>Die Eltern sind Gwallog Tirfelyn, Gwenfron.</p><p>Der Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.</p>",
+            "worksTitle": "Der gemeinsame Lebensunterhalt",
+            "works": [
+              "Der Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb."
+            ],
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Erscheinung",
+                "text": "<p>Cynwal Tirfelyn hat rotes Haar und braune Augen. Sein kurzes Wuschelhaar steht in alle Richtungen ab. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+              }
+            ],
+            "connectionsTitle": "Die nächsten Angehörigen",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Gwallog Tirfelyn",
+                "detail": "Vater",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/cadfan-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Gwenfron",
+                "detail": "Mutter",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/olwen-spouse-tirfelyn.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Haus und Herkunft",
+            "documents": [
+              {
+                "title": "Familie Tirfelyn",
+                "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+                "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=idwal-tirfelyn"
+              },
+              {
+                "title": "Tirfelyn-Hof",
+                "text": "Die gemeinsame Hausgeschichte der Familie.",
+                "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-tirfelyn"
+              }
+            ],
+            "footer": "Tirfelyn-Hof · Rheunwaith · Cenyr · Stand 1740"
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-tirfelyn--idwal-tirfelyn"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-tirfelyn--idwal-tirfelyn",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1737",
+          "death": "",
+          "houseId": "house-tirfelyn",
+          "houseName": "Familie Tirfelyn",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [
+            "3 Jahre"
+          ],
+          "sources": [
+            {
+              "familyId": "haus-tirfelyn",
+              "personId": "idwal-tirfelyn",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-07T00:00:00.000Z",
+              "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=idwal-tirfelyn",
+              "fingerprint": "{\"name\":\"Cynwal Tirfelyn\",\"title\":\"Hofkind\",\"birth\":\"1737\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tirfelyn\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/idwal-tirfelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"3 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"cadfan-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--cadfan-tirfelyn\",\"name\":\"Gwallog Tirfelyn\"},{\"personId\":\"olwen-spouse-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--olwen-spouse-tirfelyn\",\"name\":\"Gwenfron\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "cadfan-tirfelyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-tirfelyn--cadfan-tirfelyn",
+                "name": "Gwallog Tirfelyn"
+              },
+              {
+                "personId": "olwen-spouse-tirfelyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--olwen-spouse-tirfelyn",
+                "name": "Gwenfron"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "id": "person--haus-tirfelyn--idwal-tirfelyn",
+        "race": "Mensch",
+        "age": 3
+      }
+    ]
+  },
+  "character": {
+    "name": "Cynwal Tirfelyn",
+    "title": "Hofkind",
+    "fraktion": "Familie Tirfelyn",
+    "role": "Hofkind",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Tirfelyn-Hof · Bannkreis Gwynthor",
+    "origin": "Rheunwaith · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Cynwal Tirfelyn ist im Jahr 1740 3 Jahre alt und wurde 1737 geboren. Cynwal Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.\n\nCynwal wächst als Sohn Gwallogs und Gwenfrons auf dem Familienhof auf. Er spielt bei den Erwachsenen und hat keine Arbeitspflichten.\n\nDie Eltern sind Gwallog Tirfelyn, Gwenfron.\n\nDer Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb.\n\nDer Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.\n\nCynwal Tirfelyn hat rotes Haar und braune Augen. Sein kurzes Wuschelhaar steht in alle Richtungen ab. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-07T00:00:00.000Z",
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/idwal-tirfelyn.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schemaVersion": 1,
+      "biographyPage": true,
+      "pageTitle": "Cynwal Tirfelyn",
+      "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/idwal-tirfelyn.png",
+      "imageWidth": 32,
+      "imageTall": true,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "stats": [
+        [
+          "Name",
+          "Cynwal Tirfelyn"
+        ],
+        [
+          "Geburt",
+          "1737"
+        ],
+        [
+          "Stand 1740",
+          "3 Jahre"
+        ],
+        [
+          "Familie",
+          "Tirfelyn"
+        ],
+        [
+          "Wohnort",
+          "Tirfelyn-Hof"
+        ],
+        [
+          "Aufgabe",
+          "Hofkind"
+        ]
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/idwal-tirfelyn.png",
+        "portraitFit": "contain",
+        "biographyTitle": "Hofkind",
+        "biographyText": "<p>Cynwal Tirfelyn ist im Jahr 1740 3 Jahre alt und wurde 1737 geboren. Cynwal Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.</p><p>Cynwal wächst als Sohn Gwallogs und Gwenfrons auf dem Familienhof auf. Er spielt bei den Erwachsenen und hat keine Arbeitspflichten.</p>",
+        "historyTitle": "Familie und Lebensweg",
+        "historyText": "<p>Die Eltern sind Gwallog Tirfelyn, Gwenfron.</p><p>Der Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.</p>",
+        "worksTitle": "Der gemeinsame Lebensunterhalt",
+        "works": [
+          "Der Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb."
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "<p>Cynwal Tirfelyn hat rotes Haar und braune Augen. Sein kurzes Wuschelhaar steht in alle Richtungen ab. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+          }
+        ],
+        "connectionsTitle": "Die nächsten Angehörigen",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Gwallog Tirfelyn",
+            "detail": "Vater",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/cadfan-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Gwenfron",
+            "detail": "Mutter",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/olwen-spouse-tirfelyn.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Haus und Herkunft",
+        "documents": [
+          {
+            "title": "Familie Tirfelyn",
+            "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+            "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=idwal-tirfelyn"
+          },
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Die gemeinsame Hausgeschichte der Familie.",
+            "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-tirfelyn"
+          }
+        ],
+        "footer": "Tirfelyn-Hof · Rheunwaith · Cenyr · Stand 1740"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-tirfelyn--idwal-tirfelyn"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-tirfelyn--idwal-tirfelyn",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1737",
+      "death": "",
+      "houseId": "house-tirfelyn",
+      "houseName": "Familie Tirfelyn",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "3 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-tirfelyn",
+          "personId": "idwal-tirfelyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-07T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=idwal-tirfelyn",
+          "fingerprint": "{\"name\":\"Cynwal Tirfelyn\",\"title\":\"Hofkind\",\"birth\":\"1737\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tirfelyn\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/idwal-tirfelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"3 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"cadfan-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--cadfan-tirfelyn\",\"name\":\"Gwallog Tirfelyn\"},{\"personId\":\"olwen-spouse-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--olwen-spouse-tirfelyn\",\"name\":\"Gwenfron\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "cadfan-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tirfelyn--cadfan-tirfelyn",
+            "name": "Gwallog Tirfelyn"
+          },
+          {
+            "personId": "olwen-spouse-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--olwen-spouse-tirfelyn",
+            "name": "Gwenfron"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--haus-tirfelyn--idwal-tirfelyn",
+    "race": "Mensch",
+    "age": 3
+  }
+}

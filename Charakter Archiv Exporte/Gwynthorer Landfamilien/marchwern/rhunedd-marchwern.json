@@ -1,0 +1,190 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-07T00:00:00.000Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthorer Landfamilien/marchwern/rhunedd-marchwern.json",
+  "character": {
+    "name": "Rhunedd Marchwern",
+    "title": "Junge Stallpflegerin",
+    "fraktion": "Familie Marchwern",
+    "role": "Junge Stallpflegerin",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Marchwern-Gestüt · Bannkreis Gwynthor",
+    "origin": "Rheunwaith · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Rhunedd Marchwern ist im Jahr 1740 16 Jahre alt und wurde 1724 geboren. Rhunedd Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.\n\nRhunedd hilft bei Stallpflege und Fütterung. Sie lernt die verlässlichen täglichen Abläufe des Gestüts.\n\nDie Eltern sind Gwrgi Marchwern, Mared. Zur Geschwisterreihe gehören Rhun Marchwern, Eluned Marchwern.\n\nDas Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit.\n\nZucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.\n\nRhunedd Marchwern hat braunes Haar und grüne Augen. Ihr schulterlanges gewelltes Haar ist halb hochgesteckt. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-07T00:00:00.000Z",
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhunedd-marchwern.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schemaVersion": 1,
+      "biographyPage": true,
+      "pageTitle": "Rhunedd Marchwern",
+      "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhunedd-marchwern.png",
+      "imageWidth": 32,
+      "imageTall": true,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "stats": [
+        [
+          "Name",
+          "Rhunedd Marchwern"
+        ],
+        [
+          "Geburt",
+          "1724"
+        ],
+        [
+          "Stand 1740",
+          "16 Jahre"
+        ],
+        [
+          "Familie",
+          "Marchwern"
+        ],
+        [
+          "Wohnort",
+          "Marchwern-Gestüt"
+        ],
+        [
+          "Aufgabe",
+          "Junge Stallpflegerin"
+        ]
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhunedd-marchwern.png",
+        "portraitFit": "contain",
+        "biographyTitle": "Junge Stallpflegerin",
+        "biographyText": "<p>Rhunedd Marchwern ist im Jahr 1740 16 Jahre alt und wurde 1724 geboren. Rhunedd Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.</p><p>Rhunedd hilft bei Stallpflege und Fütterung. Sie lernt die verlässlichen täglichen Abläufe des Gestüts.</p>",
+        "historyTitle": "Familie und Lebensweg",
+        "historyText": "<p>Die Eltern sind Gwrgi Marchwern, Mared. Zur Geschwisterreihe gehören Rhun Marchwern, Eluned Marchwern.</p><p>Zucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.</p>",
+        "worksTitle": "Der gemeinsame Lebensunterhalt",
+        "works": [
+          "Das Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit."
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "<p>Rhunedd Marchwern hat braunes Haar und grüne Augen. Ihr schulterlanges gewelltes Haar ist halb hochgesteckt. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+          }
+        ],
+        "connectionsTitle": "Die nächsten Angehörigen",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Gwrgi Marchwern",
+            "detail": "Vater",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Mared",
+            "detail": "Mutter",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mared-spouse-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Rhun Marchwern",
+            "detail": "Bruder",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhun-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Eluned Marchwern",
+            "detail": "Schwester",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/eluned-marchwern.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Haus und Herkunft",
+        "documents": [
+          {
+            "title": "Familie Marchwern",
+            "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+            "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&person=rhunedd-marchwern"
+          },
+          {
+            "title": "Marchwern-Gestüt",
+            "text": "Die gemeinsame Hausgeschichte der Familie.",
+            "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-marchwern"
+          }
+        ],
+        "footer": "Marchwern-Gestüt · Rheunwaith · Cenyr · Stand 1740"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-marchwern--rhunedd-marchwern"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-marchwern--rhunedd-marchwern",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1724",
+      "death": "",
+      "houseId": "house-marchwern",
+      "houseName": "Familie Marchwern",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "16 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-marchwern",
+          "personId": "rhunedd-marchwern",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-07T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view&person=rhunedd-marchwern",
+          "fingerprint": "{\"name\":\"Rhunedd Marchwern\",\"title\":\"Junge Stallpflegerin\",\"birth\":\"1724\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhunedd-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"16 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"gwrgi-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--gwrgi-marchwern\",\"name\":\"Gwrgi Marchwern\"},{\"personId\":\"mared-spouse-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mared-spouse-marchwern\",\"name\":\"Mared\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "gwrgi-marchwern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-marchwern--gwrgi-marchwern",
+            "name": "Gwrgi Marchwern"
+          },
+          {
+            "personId": "mared-spouse-marchwern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--mared-spouse-marchwern",
+            "name": "Mared"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--haus-marchwern--rhunedd-marchwern",
+    "race": "Mensch",
+    "age": 16
+  }
+}

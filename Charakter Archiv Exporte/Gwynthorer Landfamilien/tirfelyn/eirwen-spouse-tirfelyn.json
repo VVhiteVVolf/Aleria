@@ -1,0 +1,192 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-07T00:00:00.000Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthorer Landfamilien/tirfelyn/eirwen-spouse-tirfelyn.json",
+  "character": {
+    "name": "Gwenfyl",
+    "title": "Bäuerin für Milch und Vorräte",
+    "fraktion": "",
+    "role": "Bäuerin für Milch und Vorräte",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Tirfelyn-Hof · Bannkreis Gwynthor",
+    "origin": "Rheunwaith · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Gwenfyl ist im Jahr 1740 24 Jahre alt und wurde 1716 geboren. Gwenfyl lebt mit der Familie Tirfelyn am Tirfelyn-Hof.\n\nGwenfyl arbeitet bei Milchverarbeitung und Vorratshaltung. Mit Gareth sorgt sie für ihre beiden kleinen Kinder.\n\nDie Eltern dieser nahen Familiengeneration sind nicht namentlich überliefert. Ehe mit Gareth Tirfelyn. Die Kinder sind Eiliwen Tirfelyn, Clydog Tirfelyn.\n\nDer Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb.\n\nDer Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.\n\nGwenfyl hat rotes Haar und braune Augen. Sie verbindet zwei geflochtene Zöpfe zu einem tiefen Haarknoten. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-07T00:00:00.000Z",
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eirwen-spouse-tirfelyn.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schemaVersion": 1,
+      "biographyPage": true,
+      "pageTitle": "Gwenfyl",
+      "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eirwen-spouse-tirfelyn.png",
+      "imageWidth": 32,
+      "imageTall": true,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "stats": [
+        [
+          "Name",
+          "Gwenfyl"
+        ],
+        [
+          "Geburt",
+          "1716"
+        ],
+        [
+          "Stand 1740",
+          "24 Jahre"
+        ],
+        [
+          "Familie",
+          "Tirfelyn"
+        ],
+        [
+          "Wohnort",
+          "Tirfelyn-Hof"
+        ],
+        [
+          "Aufgabe",
+          "Bäuerin für Milch und Vorräte"
+        ]
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eirwen-spouse-tirfelyn.png",
+        "portraitFit": "contain",
+        "biographyTitle": "Bäuerin für Milch und Vorräte",
+        "biographyText": "<p>Gwenfyl ist im Jahr 1740 24 Jahre alt und wurde 1716 geboren. Gwenfyl lebt mit der Familie Tirfelyn am Tirfelyn-Hof.</p><p>Gwenfyl arbeitet bei Milchverarbeitung und Vorratshaltung. Mit Gareth sorgt sie für ihre beiden kleinen Kinder.</p>",
+        "historyTitle": "Familie und Lebensweg",
+        "historyText": "<p>Die Eltern dieser nahen Familiengeneration sind nicht namentlich überliefert. Ehe mit Gareth Tirfelyn. Die Kinder sind Eiliwen Tirfelyn, Clydog Tirfelyn.</p><p>Der Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.</p>",
+        "worksTitle": "Der gemeinsame Lebensunterhalt",
+        "works": [
+          "Der Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb."
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "<p>Gwenfyl hat rotes Haar und braune Augen. Sie verbindet zwei geflochtene Zöpfe zu einem tiefen Haarknoten. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+          }
+        ],
+        "connectionsTitle": "Die nächsten Angehörigen",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Gareth Tirfelyn",
+            "detail": "Ehe mit Gareth Tirfelyn",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gareth-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Eiliwen Tirfelyn",
+            "detail": "Tochter",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/heulwen-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Clydog Tirfelyn",
+            "detail": "Sohn",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/clydog-tirfelyn.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Haus und Herkunft",
+        "documents": [
+          {
+            "title": "Familie Tirfelyn",
+            "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+            "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=eirwen-spouse-tirfelyn"
+          },
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Die gemeinsame Hausgeschichte der Familie.",
+            "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-tirfelyn"
+          }
+        ],
+        "footer": "Tirfelyn-Hof · Rheunwaith · Cenyr · Stand 1740"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--family-tree--eirwen-spouse-tirfelyn"
+    },
+    "genealogy": {
+      "worldPersonId": "person--family-tree--eirwen-spouse-tirfelyn",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1716",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "24 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-tirfelyn",
+          "personId": "eirwen-spouse-tirfelyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-07T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=eirwen-spouse-tirfelyn",
+          "fingerprint": "{\"name\":\"Gwenfyl\",\"title\":\"Bäuerin für Milch und Vorräte\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eirwen-spouse-tirfelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"24 Jahre\"],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gareth-tirfelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--gareth-tirfelyn\",\"name\":\"Gareth Tirfelyn\"}],\"children\":[{\"personId\":\"heulwen-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--heulwen-tirfelyn\",\"name\":\"Eiliwen Tirfelyn\"},{\"personId\":\"clydog-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--clydog-tirfelyn\",\"name\":\"Clydog Tirfelyn\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "gareth-tirfelyn",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tirfelyn--gareth-tirfelyn",
+            "name": "Gareth Tirfelyn"
+          }
+        ],
+        "children": [
+          {
+            "personId": "heulwen-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tirfelyn--heulwen-tirfelyn",
+            "name": "Eiliwen Tirfelyn"
+          },
+          {
+            "personId": "clydog-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tirfelyn--clydog-tirfelyn",
+            "name": "Clydog Tirfelyn"
+          }
+        ]
+      }
+    },
+    "id": "person--family-tree--eirwen-spouse-tirfelyn",
+    "race": "Mensch",
+    "age": 24
+  }
+}

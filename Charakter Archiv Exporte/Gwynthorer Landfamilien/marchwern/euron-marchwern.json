@@ -1,0 +1,183 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-07T00:00:00.000Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthorer Landfamilien/marchwern/euron-marchwern.json",
+  "character": {
+    "name": "Euron Marchwern",
+    "title": "Kleinkind am Gestüt",
+    "fraktion": "Familie Marchwern",
+    "role": "Kleinkind am Gestüt",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Marchwern-Gestüt · Bannkreis Gwynthor",
+    "origin": "Rheunwaith · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Euron Marchwern ist im Jahr 1740 1 Jahre alt und wurde 1739 geboren. Euron Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.\n\nEuron ist Rhuns und Gwenlliws jüngstes Kind. Die Familie versorgt ihn im gemeinsamen Haushalt.\n\nDie Eltern sind Rhun Marchwern, Gwenlliw. Zur Geschwisterreihe gehören Gwyndaf Marchwern.\n\nDas Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit.\n\nZucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.\n\nEuron Marchwern hat braunes Haar und grüne Augen. Sein feines kurzes Haar bildet einen kleinen Wirbel an der Stirn. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-07T00:00:00.000Z",
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/euron-marchwern.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schemaVersion": 1,
+      "biographyPage": true,
+      "pageTitle": "Euron Marchwern",
+      "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/euron-marchwern.png",
+      "imageWidth": 32,
+      "imageTall": true,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "stats": [
+        [
+          "Name",
+          "Euron Marchwern"
+        ],
+        [
+          "Geburt",
+          "1739"
+        ],
+        [
+          "Stand 1740",
+          "1 Jahre"
+        ],
+        [
+          "Familie",
+          "Marchwern"
+        ],
+        [
+          "Wohnort",
+          "Marchwern-Gestüt"
+        ],
+        [
+          "Aufgabe",
+          "Kleinkind am Gestüt"
+        ]
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/euron-marchwern.png",
+        "portraitFit": "contain",
+        "biographyTitle": "Kleinkind am Gestüt",
+        "biographyText": "<p>Euron Marchwern ist im Jahr 1740 1 Jahre alt und wurde 1739 geboren. Euron Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.</p><p>Euron ist Rhuns und Gwenlliws jüngstes Kind. Die Familie versorgt ihn im gemeinsamen Haushalt.</p>",
+        "historyTitle": "Familie und Lebensweg",
+        "historyText": "<p>Die Eltern sind Rhun Marchwern, Gwenlliw. Zur Geschwisterreihe gehören Gwyndaf Marchwern.</p><p>Zucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.</p>",
+        "worksTitle": "Der gemeinsame Lebensunterhalt",
+        "works": [
+          "Das Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit."
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "<p>Euron Marchwern hat braunes Haar und grüne Augen. Sein feines kurzes Haar bildet einen kleinen Wirbel an der Stirn. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+          }
+        ],
+        "connectionsTitle": "Die nächsten Angehörigen",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Rhun Marchwern",
+            "detail": "Vater",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhun-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Gwenlliw",
+            "detail": "Mutter",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/aneira-spouse-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Gwyndaf Marchwern",
+            "detail": "Bruder",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwyndaf-marchwern.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Haus und Herkunft",
+        "documents": [
+          {
+            "title": "Familie Marchwern",
+            "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+            "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&person=euron-marchwern"
+          },
+          {
+            "title": "Marchwern-Gestüt",
+            "text": "Die gemeinsame Hausgeschichte der Familie.",
+            "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-marchwern"
+          }
+        ],
+        "footer": "Marchwern-Gestüt · Rheunwaith · Cenyr · Stand 1740"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-marchwern--euron-marchwern"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-marchwern--euron-marchwern",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1739",
+      "death": "",
+      "houseId": "house-marchwern",
+      "houseName": "Familie Marchwern",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "1 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-marchwern",
+          "personId": "euron-marchwern",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-07T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view&person=euron-marchwern",
+          "fingerprint": "{\"name\":\"Euron Marchwern\",\"title\":\"Kleinkind am Gestüt\",\"birth\":\"1739\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/euron-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"1 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"aneira-spouse-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--aneira-spouse-marchwern\",\"name\":\"Gwenlliw\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "rhun-marchwern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-marchwern--rhun-marchwern",
+            "name": "Rhun Marchwern"
+          },
+          {
+            "personId": "aneira-spouse-marchwern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--aneira-spouse-marchwern",
+            "name": "Gwenlliw"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--haus-marchwern--euron-marchwern",
+    "race": "Mensch",
+    "age": 1
+  }
+}

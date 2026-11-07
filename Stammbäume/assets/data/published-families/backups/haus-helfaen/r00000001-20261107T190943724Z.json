@@ -1,0 +1,691 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-helfaen",
+  "revision": 1,
+  "updatedAt": "2026-11-07T19:09:43.724Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-helfaen",
+      "title": "Familie Helfaen",
+      "motto": "",
+      "description": "Im Jagdhaus Helfaen leben fünf Angehörige in einem gemeinsamen Haushalt: Cadwgan und Dilys mit den Kindern Gorwyn, Arianell und Owain. Sie jagen vor allem Kleinwild, verarbeiten die Fänge und verkaufen kleine Überschüsse in der Umgebung. Braune lockige Haare und blaue Augen prägen ihr Familienbild.\n\nDer kleine Betrieb ernährt den Haushalt durch Jagd, Verarbeitung und sorgfältige Nutzung der Fänge. Cadwgan und Gorwyn tragen die tägliche Jagdarbeit, Dilys und Arianell helfen bei Verarbeitung und Haltbarmachen. Der zehnjährige Owain übernimmt einfache Arbeiten im Haus.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Jagdhaus Helfaen",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-helfaen-gruender",
+        "worldPersonId": "person--haus-helfaen--haus-helfaen-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-helfaen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-helfaen-gruenderin",
+        "worldPersonId": "person--haus-helfaen--haus-helfaen-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-helfaen",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "cadwgan-helfaen",
+        "worldPersonId": "person--haus-helfaen--cadwgan-helfaen",
+        "name": "Cadwgan Helfaen",
+        "title": "Kleinwildjäger und Haushaltsvorsteher",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1689",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/cadwgan-helfaen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-helfaen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "51 Jahre"
+        ],
+        "notes": "51 Jahre. Cadwgan führt den kleinen Jagdhaushalt mit Dilys. Er erlegt vor allem Kleinwild und stimmt die Arbeit mit seinem erwachsenen Sohn Gorwyn ab. Erscheinung: braunes lockiges Haar, blaue Augen; kurze dichte Locken, kurzer lockiger Bart mit Grau.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "jagd",
+          "registryManagedFields": [
+            "birth",
+            "status",
+            "death",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 2,
+            "status": 2,
+            "death": 2,
+            "portrait": 2,
+            "title": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1705"
+            ],
+            "status": [
+              "alive"
+            ],
+            "death": [
+              ""
+            ],
+            "portrait": [
+              ""
+            ],
+            "title": [
+              "Kleinwildjäger"
+            ],
+            "notes": [
+              "35 Jahre. Führt den kleinen Jagdbetrieb; keine besondere Großwildjagd oder adelige Jagdherrschaft."
+            ]
+          }
+        }
+      },
+      {
+        "id": "dilys-spouse-helfaen",
+        "worldPersonId": "person--family-tree--dilys-spouse-helfaen",
+        "name": "Dilys",
+        "title": "Jägerin und Wildverarbeiterin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/dilys-spouse-helfaen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "48 Jahre"
+        ],
+        "notes": "48 Jahre. Dilys hilft bei Jagd, Verarbeitung und örtlichem Verkauf. Der Tod der Verlobten ihres Sohnes trifft auch ihren kleinen Haushalt. Erscheinung: braunes lockiges Haar, blaue Augen; kurze bis mittellange Locken, locker tief zusammengebunden.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "verarbeitung",
+          "registryManagedFields": [
+            "birth",
+            "status",
+            "death",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 2,
+            "status": 2,
+            "death": 2,
+            "portrait": 2,
+            "title": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1708"
+            ],
+            "status": [
+              "alive"
+            ],
+            "death": [
+              ""
+            ],
+            "portrait": [
+              ""
+            ],
+            "title": [
+              "Jägerin und Wildverarbeiterin"
+            ],
+            "notes": [
+              "32 Jahre. Cadwgans Ehefrau; arbeitet bei Jagd, Verarbeitung und örtlichem Verkauf mit. Ihre Herkunftsfamilie ist offen."
+            ]
+          }
+        }
+      },
+      {
+        "id": "owain-helfaen",
+        "worldPersonId": "person--haus-helfaen--owain-helfaen",
+        "name": "Owain Helfaen",
+        "title": "Kind im Jagdhaus",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/owain-helfaen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-helfaen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "10 Jahre"
+        ],
+        "notes": "10 Jahre. Owain hilft bei einfachen Arbeiten im Jagdhaus. Er ist noch kein selbständiger Jäger. Erscheinung: braunes lockiges Haar, blaue Augen; dichte kurze Ringellocken.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "nachwuchs",
+          "registryManagedFields": [
+            "birth",
+            "status",
+            "death",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 2,
+            "status": 2,
+            "death": 2,
+            "portrait": 2,
+            "title": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1730"
+            ],
+            "status": [
+              "alive"
+            ],
+            "death": [
+              ""
+            ],
+            "portrait": [
+              ""
+            ],
+            "title": [
+              "Kind im Jagdhaus"
+            ],
+            "notes": [
+              "10 Jahre. Hilft bei einfachen Arbeiten; kein selbständiger Jäger."
+            ]
+          }
+        }
+      },
+      {
+        "id": "gorwyn-helfaen",
+        "worldPersonId": "person--haus-helfaen--gorwyn-helfaen",
+        "name": "Gorwyn Helfaen",
+        "title": "Kleinwildjäger und Verlobter Ceridwens",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/gorwyn-helfaen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-helfaen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "24 Jahre"
+        ],
+        "notes": "24 Jahre. Gorwyn arbeitet mit seinen Eltern bei Kleinwildjagd und Versorgung des Jagdhauses. Seine Verlobte Ceridwen Tirfelyn wollte ihn besuchen und kehrte am nächsten Morgen nicht heim; sie wurde vor wenigen Wochen Opfer des Fleischsammlers. Erscheinung: braunes lockiges Haar, blaue Augen; mittellange lockere Locken, glatt rasiert.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "jagd"
+        }
+      },
+      {
+        "id": "cerys-helfaen",
+        "worldPersonId": "person--haus-helfaen--cerys-helfaen",
+        "name": "Arianell Helfaen",
+        "title": "Junge Wildverarbeiterin und Haushaltshilfe",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/cerys-helfaen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-helfaen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "17 Jahre"
+        ],
+        "notes": "17 Jahre. Arianell hilft bei Verarbeitung, Haltbarmachen und den Arbeiten des gemeinsamen Haushalts. Sie lernt von Dilys und ihren Brüdern. Erscheinung: braunes lockiges Haar, blaue Augen; schulterlange Locken, zwei vordere Strähnen zurückgebunden.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "verarbeitung"
+        }
+      },
+      {
+        "id": "ceridwen-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--ceridwen-tirfelyn",
+        "name": "Ceridwen Tirfelyn",
+        "title": "Verstorbene auswärtige Verlobte · Tirfelyn-Hof",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1718",
+        "death": "1740",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/ceridwen-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "22 Jahre",
+          "Auswärtige Verlobtenperson",
+          "Wohnort: Tirfelyn-Hof"
+        ],
+        "notes": "22 Jahre bei ihrem Tod. Ceridwen wurde 1740 mit zweiundzwanzig Jahren vor wenigen Wochen Opfer des Fleischsammlers. Sie wollte ihren Verlobten Gorwyn Helfaen besuchen und war am folgenden Morgen nicht zurückgekehrt; ein genauer Tat- oder Fundort bleibt offen. Stammte vom Tirfelyn-Hof; gehört zum dortigen Haushalt. Erscheinung: rotes Haar, braune Augen; langes Haar mit zwei feinen seitlichen Zöpfen, sonst offen.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": false,
+          "landfamilienWorkGroup": "gedenken"
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-helfaen-founders",
+        "participantIds": [
+          "haus-helfaen-gruender",
+          "haus-helfaen-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Historisches unbekanntes Gründerpaar vor der Überlieferungslücke.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-cadwgan-dilys-helfaen",
+        "participantIds": [
+          "cadwgan-helfaen",
+          "dilys-spouse-helfaen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsamer Familienhaushalt; kein genaues Hochzeitsjahr festgelegt.",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true
+        }
+      },
+      {
+        "id": "betrothal-ceridwen-tirfelyn-gorwyn-helfaen",
+        "participantIds": [
+          "ceridwen-tirfelyn",
+          "gorwyn-helfaen"
+        ],
+        "type": "engagement",
+        "status": "ended",
+        "start": "",
+        "end": "1740",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Die Verlobung endet mit Ceridwens Tod. Kein Hochzeitstermin festgelegt.",
+        "extensions": {
+          "linkedFamilyIds": [
+            "haus-tirfelyn",
+            "haus-helfaen"
+          ]
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-cadwgan-helfaen",
+        "childId": "cadwgan-helfaen",
+        "parentIds": [
+          "haus-helfaen-gruender",
+          "haus-helfaen-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-helfaen-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Familienzugehörigkeit über unbekannte Generationen; keine unmittelbare biologische Elternschaft. Die konkreten heutigen Zweige beginnen erst hinter diesem Sprung.",
+        "extensions": {
+          "timeJumpId": "gap-helfaen-to-1689"
+        }
+      },
+      {
+        "id": "parentage-owain-helfaen",
+        "childId": "owain-helfaen",
+        "parentIds": [
+          "cadwgan-helfaen",
+          "dilys-spouse-helfaen"
+        ],
+        "partnershipId": "marriage-cadwgan-dilys-helfaen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gorwyn-helfaen",
+        "childId": "gorwyn-helfaen",
+        "parentIds": [
+          "cadwgan-helfaen",
+          "dilys-spouse-helfaen"
+        ],
+        "partnershipId": "marriage-cadwgan-dilys-helfaen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-cerys-helfaen",
+        "childId": "cerys-helfaen",
+        "parentIds": [
+          "cadwgan-helfaen",
+          "dilys-spouse-helfaen"
+        ],
+        "partnershipId": "marriage-cadwgan-dilys-helfaen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-helfaen",
+        "name": "Familie Helfaen",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+        "status": "active"
+      },
+      {
+        "id": "house-tirfelyn",
+        "name": "Familie Tirfelyn",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "gap-helfaen-to-1689",
+        "parentPartnershipId": "marriage-haus-helfaen-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "cadwgan-helfaen"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1689",
+        "label": "Nicht einzeln überlieferte Generationen bis zur heutigen Familie",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-helfaen-founders",
+      "houseId": "house-helfaen",
+      "crestSubtitle": "5 lebende Familienangehörige · Jagdhaus Helfaen",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "cadwgan-helfaen",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": false,
+      "pendingDescendantReview": false,
+      "sourceRevision": 2,
+      "chartLayoutPolicy": "strict-v1",
+      "chartAlignLineageOriginOverPersonId": "cadwgan-helfaen",
+      "registryManagedLineageFields": [
+        "founderPartnershipId",
+        "crestSubtitle"
+      ],
+      "registryManagedLineageFieldRevisions": {
+        "founderPartnershipId": 2,
+        "crestSubtitle": 2
+      },
+      "registryManagedExtensionFields": [
+        "blankFamily",
+        "preparedTimeJump",
+        "chartLayoutPolicy",
+        "chartAlignLineageOriginOverPersonId"
+      ],
+      "registryManagedExtensionFieldRevisions": {
+        "blankFamily": 2,
+        "preparedTimeJump": 2,
+        "chartLayoutPolicy": 2,
+        "chartAlignLineageOriginOverPersonId": 2
+      },
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Familie Helfaen",
+        "housePage": true,
+        "image": "../AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/cadwgan-helfaen.png",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Im Jagdhaus Helfaen leben fünf Angehörige in einem gemeinsamen Haushalt: Cadwgan und Dilys mit den Kindern Gorwyn, Arianell und Owain. Sie jagen vor allem Kleinwild, verarbeiten die Fänge und verkaufen kleine Überschüsse in der Umgebung. Braune lockige Haare und blaue Augen prägen ihr Familienbild.\n\nDer kleine Betrieb ernährt den Haushalt durch Jagd, Verarbeitung und sorgfältige Nutzung der Fänge. Cadwgan und Gorwyn tragen die tägliche Jagdarbeit, Dilys und Arianell helfen bei Verarbeitung und Haltbarmachen. Der zehnjährige Owain übernimmt einfache Arbeiten im Haus.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Familie Helfaen"
+          ],
+          [
+            "Rang",
+            "Bürgerlich"
+          ],
+          [
+            "Stammsitz",
+            "Jagdhaus Helfaen"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Cadwgan Helfaen"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Draig"
+          ],
+          [
+            "Ursprung",
+            "Östlicher Bannkreis von Gwynthor"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Familie und Lebensgrundlage",
+          "biographyText": "Im Jagdhaus Helfaen leben fünf Angehörige in einem gemeinsamen Haushalt: Cadwgan und Dilys mit den Kindern Gorwyn, Arianell und Owain. Sie jagen vor allem Kleinwild, verarbeiten die Fänge und verkaufen kleine Überschüsse in der Umgebung. Braune lockige Haare und blaue Augen prägen ihr Familienbild.\n\nDer kleine Betrieb ernährt den Haushalt durch Jagd, Verarbeitung und sorgfältige Nutzung der Fänge. Cadwgan und Gorwyn tragen die tägliche Jagdarbeit, Dilys und Arianell helfen bei Verarbeitung und Haltbarmachen. Der zehnjährige Owain übernimmt einfache Arbeiten im Haus.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Überlieferung und heutige Generationen",
+          "historyText": "Die Namen der älteren Gründer und der Generationen vor Cadwgan sind nicht überliefert. Die näher bekannte Familie beginnt mit Cadwgan und Dilys. Sie sind die Eltern des vierundzwanzigjährigen Gorwyn, der siebzehnjährigen Arianell und des zehnjährigen Owain.\n\nGorwyn war mit Ceridwen Tirfelyn verlobt. Ceridwen wollte ihn besuchen und war am folgenden Morgen nicht wieder zu Hause. Sie wurde im Jahr 1740, vor wenigen Wochen, mit zweiundzwanzig Jahren Opfer des Fleischsammlers. Die Verlobung endete mit ihrem Tod. Der Verlust betrifft den Jagdhaushalt ebenso wie Ceridwens Herkunftsfamilie; ein genauer Tat- oder Fundort ist nicht bekannt.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Die Helfaen verlassen sich auf vertraute Handgriffe und klare Absprachen. Kleine Fänge sollen sorgfältig genutzt werden; das gemeinsame Auskommen zählt mehr als große Jagderfolge. Der Verlust Ceridwens hat die Sorge um Wege und Angehörige verstärkt."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Traditionen und Hausleben",
+              "text": "Alle fünf leben in demselben Jagdhaushalt. Cadwgan und Gorwyn stimmen die Kleinwildjagd ab. Dilys verarbeitet und konserviert die Fänge und betreut den örtlichen Verkauf, Arianell lernt und hilft dabei. Owain übernimmt leichte altersgemäße Aufgaben. Eigene weitere Haushalte oder Außenbetriebe sind nicht eingerichtet."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Das Jagdhaus ist Unterkunft und Ausgangspunkt des kleinen Jagdbetriebs. Eine besondere Jagdherrschaft, große Ländereien oder genaue Reviergrenzen sind nicht festgelegt. Geringe Überschüsse dienen dem örtlichen Verkauf."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Gorwyns verstorbene Verlobte Ceridwen stammt vom Tirfelyn-Hof. Die Verbindung der beiden jungen Menschen hat auch die Familien einander nähergebracht. Zu einer Hochzeit kam es nicht."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+              "title": "Familie Helfaen · vollständige Hausseite",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-helfaen"
+            },
+            {
+              "title": "Jagdhaus Helfaen",
+              "text": "Kleines Jagdhaus einer Familie, die vor allem Kleinwild erlegt und für den örtlichen Bedarf verarbeitet.",
+              "link": "../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-115",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png"
+            },
+            {
+              "title": "Familie Tirfelyn",
+              "text": "Ceridwen Tirfelyn, Gorwyns verstorbene Verlobte, stammte vom Tirfelyn-Hof.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-tirfelyn",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png"
+            }
+          ],
+          "footer": ""
+        }
+      },
+      "sourceNote": "Nutzerauftrag vom 7. November 2026: 5 lebende eigene Angehörige; unbekannte historische Gründer und serieller Überlieferungssprung. Bestehende IDs erhalten. Lebensalter beziehen sich auf 1740. Neue Namen, Verwandtschaften und Aufgaben sind ausdrücklich beauftragte Ausarbeitung. Externe Verlobtenkarten zählen nicht zum örtlichen Haushalt. Angeheiratete Herkunftsfamilien bleiben offen."
+    }
+  }
+}

@@ -627,6 +627,25 @@ export const SITE_BUILD_TASKS = [
       ['AleriaAlmanach/scripts/check-family-tree-template.js'], testCommand(almanach('gwynthor-heime'))]
   },
   {
+    id: 'gwynthor-landfamilien', label: 'Tirfelyn, Helfaen and Marchwern households, portraits and playable farm scenes',
+    inputs: ['AleriaAlmanach/modules/gwynthor-landfamilien/', 'AleriaAlmanach/assets/gwynthor-landfamilien/',
+      'AleriaAlmanach/scripts/build-gwynthor-landfamilien.mjs', 'AleriaAlmanach/scripts/build-gwynthor-landfamilien-characters.mjs',
+      'AleriaAlmanach/tests/gwynthor-landfamilien.browser.mjs', almanach('gwynthor-landfamilien'), almanach('gwynthor-landfamilien-integration'), almanach('gwynthor-landfamilien-characters'),
+      'Stammbäume/assets/js/data/gwynthor-fleischsammler/', 'Stammbäume/tests/gwynthor-landfamilien.test.mjs',
+      'Stammbäume/tests/fixtures/gwynthor-landfamilien-revision1.json',
+      'Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Tirfelyn/',
+      'Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Helfaen/',
+      'Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Marchwern/',
+      'Familien Häuser und Clans/modules/house-content/gwynthor-landfamilien-content.mjs',
+      'Charakter Archiv Exporte/Module/Gwynthorer Landfamilien/', 'Charakter Archiv Exporte/Gwynthorer Landfamilien/',
+      'AleriaAlmanach/modules/character-genealogy/', 'CharakterDatenbank/lib/', 'CharakterDatenbank/scripts/import-authored-characters.mjs',
+      'CharakterDatenbank/records/familien/haus-tirfelyn/', 'CharakterDatenbank/records/familien/haus-helfaen/', 'CharakterDatenbank/records/familien/haus-marchwern/',
+      'AleriaAlmanach/AleriaAlmanach.html'],
+    commands: [['AleriaAlmanach/scripts/build-gwynthor-landfamilien.mjs', '--check'],
+      ['AleriaAlmanach/scripts/build-gwynthor-landfamilien-characters.mjs', '--check'],
+      testCommand(almanach('gwynthor-landfamilien'), almanach('gwynthor-landfamilien-integration'), almanach('gwynthor-landfamilien-characters'), 'Stammbäume/tests/gwynthor-landfamilien.test.mjs')]
+  },
+  {
     id: 'economy-calculator', label: 'Price review and calculations for purchasable cultural locations',
     inputs: [...economySourceInputs, 'Markt/', 'AleriaAlmanach/docs/economy/',
       'AleriaAlmanach/modules/core/aleria-calendar.js', 'AleriaAlmanach/modules/core/app-core.js',

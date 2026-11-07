@@ -22,12 +22,14 @@ test('eight rural families have valid contemporary household graphs and one Gwyn
     assert.deepEqual(entry.folderPath, ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);
     assert.equal(entry.type, 'commoner');
     assert.equal(f.lineage.crestFrame, 'iron');
-    assert.equal(f.timeJumps.length, 0);
+    const expanded = ['haus-tirfelyn', 'haus-helfaen', 'haus-marchwern'].includes(f.document.id);
+    assert.equal(f.timeJumps.length, expanded ? 1 : 0);
     assert.ok(f.persons.every(p => p.name !== '???'));
     assert.equal(f.extensions.courtDecisionPending, undefined);
     assert.equal(f.extensions.houseBiographyModule.schema, 'aleria.house-module');
     const biography = normalizeHouseBiographyModule(f.extensions.houseBiographyModule);
-    assert.ok(biography.image.endsWith(`haus-${f.document.id.slice(5)}.png`));
+    assert.ok(expanded ? biography.image.includes('/gwynthor-landfamilien/portraits/')
+      : biography.image.endsWith(`haus-${f.document.id.slice(5)}.png`));
     assert.ok(biography.house.documents.every(document => document.icon));
   }
 });
@@ -62,13 +64,14 @@ test('neutral source cards identify seven real places and eight resident familie
   }
 });
 
-test('the three local victims remain distinct female people of the requested ages', () => {
-  const victims = families.flatMap(f => f.persons.filter(p => p.status === 'dead'));
-  assert.deepEqual(victims.map(p => p.id).sort(), ['catrin-bragwen', 'gwenith-spouse-brynial', 'lleian-dolweth']);
+test('the four local victims remain distinct women and cross-family cards do not add victims', () => {
+  const victims = [...new Map(families.flatMap(f => f.persons.filter(p => p.status === 'dead' && p.death === '1740')).map(p => [p.worldPersonId, p])).values()];
+  assert.deepEqual(victims.map(p => p.id).sort(), ['catrin-bragwen', 'ceridwen-tirfelyn', 'gwenith-spouse-brynial', 'lleian-dolweth']);
   assert.ok(victims.every(p => p.sex === 'female' && p.death === '1740'));
   assert.equal(1740 - Number(person('dolweth', 'lleian-dolweth').birth), 18);
   assert.equal(1740 - Number(person('brynial', 'gwenith-spouse-brynial').birth), 32);
   assert.equal(1740 - Number(person('bragwen', 'catrin-bragwen').birth), 20);
+  assert.equal(1740 - Number(person('tirfelyn', 'ceridwen-tirfelyn').birth), 22);
   assert.match(person('dolweth', 'lleian-dolweth').notes, /vor wenigen Tagen/);
   assert.match(person('bragwen', 'catrin-bragwen').notes, /nicht nach Hause/);
 });

@@ -154,7 +154,10 @@
     "check:group-section-migration": "node scripts/build-group-section-migration.mjs --check",
     "build:coastal-history": "node ../Ereignisse/scripts/build-coastal-history.mjs && node ../Ereignisse/scripts/build-events.mjs && node ../Fraktionen/scripts/build-factions.mjs",
     "check:coastal-history": "node ../Ereignisse/scripts/build-coastal-history.mjs --check",
-    "test:coastal-history": "node --test --experimental-test-isolation=none ../Ereignisse/tests/coastal-history.test.mjs"
+    "test:coastal-history": "node --test --experimental-test-isolation=none ../Ereignisse/tests/coastal-history.test.mjs",
+    "build:gwynthor-landfamilien": "node scripts/build-gwynthor-landfamilien.mjs",
+    "check:gwynthor-landfamilien": "node scripts/build-gwynthor-landfamilien.mjs --check && node scripts/build-gwynthor-landfamilien-characters.mjs --check",
+    "test:gwynthor-landfamilien": "node --test --experimental-test-isolation=none tests/gwynthor-landfamilien.test.mjs tests/gwynthor-landfamilien-integration.test.mjs ../Stammbäume/tests/gwynthor-landfamilien.test.mjs"
   },
   "dependencies": {
     "@3d-dice/dice-box": "1.1.4",

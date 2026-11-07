@@ -1,0 +1,1238 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-tirfelyn",
+  "revision": 1,
+  "updatedAt": "2026-11-07T19:09:43.724Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-tirfelyn",
+      "title": "Familie Tirfelyn",
+      "motto": "",
+      "description": "Der Tirfelyn-Hof liegt unmittelbar vor Gwynthor und versorgt die Stadt mit Vieh, Getreide und Gemüse. Caradog Tirfelyn, fünfundfünfzig Jahre alt, führt ihn gemeinsam mit seinem zweiundfünfzigjährigen Bruder Eudaf. Die beiden Familienzweige teilen Hof, Arbeit und Verantwortung. Sechzehn lebende Angehörige gehören zu diesem Betrieb. Rotes Haar und braune Augen prägen das heutige Familienbild.\n\nDie Arbeit verteilt sich auf Feldbau, Viehpflege, Garten, Vorräte und die Lieferungen in die Stadt. Alle helfen ihrem Alter entsprechend mit; die kleinen Kinder wachsen im gemeinsamen Haushalt auf. Der Hof bleibt ein Familienbetrieb, dessen Bedeutung aus seiner verlässlichen Versorgung Gwynthors erwächst.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Tirfelyn-Hof",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-tirfelyn-gruender",
+        "worldPersonId": "person--haus-tirfelyn--haus-tirfelyn-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-tirfelyn-gruenderin",
+        "worldPersonId": "person--haus-tirfelyn--haus-tirfelyn-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {}
+      },
+      {
+        "id": "caradog-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--caradog-tirfelyn",
+        "name": "Caradog Tirfelyn",
+        "title": "Hofvorsteher und Feldbaukoordinator",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1685",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/caradog-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [
+          "55 Jahre"
+        ],
+        "notes": "55 Jahre. Caradog führt den Tirfelyn-Hof gemeinsam mit seinem jüngeren Bruder Eudaf. Er stimmt Aussaat, Feldarbeit und Lieferungen an Gwynthor ab; der Tod seiner Tochter Ceridwen belastet ihn schwer. Erscheinung: rotes Haar, braune Augen; kurz gewellt, graue Schläfen, kurzer rötlichgrauer Bart.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "leitung",
+          "registryManagedFields": [
+            "birth",
+            "status",
+            "death",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 2,
+            "status": 2,
+            "death": 2,
+            "portrait": 2,
+            "title": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1691"
+            ],
+            "status": [
+              "alive"
+            ],
+            "death": [
+              ""
+            ],
+            "portrait": [
+              ""
+            ],
+            "title": [
+              "Hofvorsteher"
+            ],
+            "notes": [
+              "49 Jahre. Freundlicher, verlässlicher Bauer; koordiniert Feldarbeit, Vieh und Lieferungen nach Gwynthor."
+            ]
+          }
+        }
+      },
+      {
+        "id": "enid-spouse-tirfelyn",
+        "worldPersonId": "person--family-tree--enid-spouse-tirfelyn",
+        "name": "Enid",
+        "title": "Bäuerin für Garten und Vorräte",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/enid-spouse-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "45 Jahre"
+        ],
+        "notes": "45 Jahre. Enid führt Garten und Vorratshaltung mit. Sie ist die Mutter Gareths, Ceridwens und Bedwyrs und trauert um ihre ermordete Tochter. Erscheinung: rotes Haar, braune Augen; langes Haar als tiefer geflochtener Haarknoten.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "haushalt",
+          "registryManagedFields": [
+            "birth",
+            "status",
+            "death",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 2,
+            "status": 2,
+            "death": 2,
+            "portrait": 2,
+            "title": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1695"
+            ],
+            "status": [
+              "alive"
+            ],
+            "death": [
+              ""
+            ],
+            "portrait": [
+              ""
+            ],
+            "title": [
+              "Bäuerin und Verantwortliche für Garten und Vorräte"
+            ],
+            "notes": [
+              "45 Jahre. Führt Gemüsewirtschaft und Vorratshaltung mit; Herkunftsfamilie noch offen."
+            ]
+          }
+        }
+      },
+      {
+        "id": "gareth-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--gareth-tirfelyn",
+        "name": "Gareth Tirfelyn",
+        "title": "Bauer und Viehhalter",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1715",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gareth-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "25 Jahre"
+        ],
+        "notes": "25 Jahre. Gareth versorgt das Vieh und hilft auf den Feldern. Mit seiner Frau Gwenfyl und den Kindern Eiliwen und Clydog lebt er auf dem gemeinsamen Hof. Erscheinung: rotes Haar, braune Augen; mittellang, seitlich gescheitelt, glatt rasiert.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "vieh",
+          "registryManagedFields": [
+            "birth",
+            "status",
+            "death",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 2,
+            "status": 2,
+            "death": 2,
+            "portrait": 2,
+            "title": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1715"
+            ],
+            "status": [
+              "alive"
+            ],
+            "death": [
+              ""
+            ],
+            "portrait": [
+              ""
+            ],
+            "title": [
+              "Bauer und Viehhalter"
+            ],
+            "notes": [
+              "25 Jahre. Arbeitet bei Feldbestellung und Viehversorgung."
+            ]
+          }
+        }
+      },
+      {
+        "id": "ceridwen-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--ceridwen-tirfelyn",
+        "name": "Ceridwen Tirfelyn",
+        "title": "Verstorbene Gemüsebäuerin",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1718",
+        "death": "1740",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/ceridwen-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "22 Jahre"
+        ],
+        "notes": "22 Jahre bei ihrem Tod. Ceridwen wurde 1740 mit zweiundzwanzig Jahren vor wenigen Wochen Opfer des Fleischsammlers. Sie wollte ihren Verlobten Gorwyn Helfaen besuchen und war am folgenden Morgen nicht zurückgekehrt; ein genauer Tat- oder Fundort bleibt offen. Erscheinung: rotes Haar, braune Augen; langes Haar mit zwei feinen seitlichen Zöpfen, sonst offen.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "gedenken",
+          "registryManagedFields": [
+            "birth",
+            "status",
+            "death",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 2,
+            "status": 2,
+            "death": 2,
+            "portrait": 2,
+            "title": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1718"
+            ],
+            "status": [
+              "alive"
+            ],
+            "death": [
+              ""
+            ],
+            "portrait": [
+              ""
+            ],
+            "title": [
+              "Gemüsebäuerin"
+            ],
+            "notes": [
+              "22 Jahre. Kümmert sich mit Enid um Gemüse und die Lieferungen für die Stadt."
+            ]
+          }
+        }
+      },
+      {
+        "id": "bedwyr-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--bedwyr-tirfelyn",
+        "name": "Bedwyr Tirfelyn",
+        "title": "Hofkind und junger Viehhelfer",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1727",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/bedwyr-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "13 Jahre"
+        ],
+        "notes": "13 Jahre. Bedwyr übernimmt altersgemäße Arbeiten bei Tieren und Hofpflege. Er ist Gareths und Ceridwens jüngerer Bruder. Erscheinung: rotes Haar, braune Augen; kurzes lebhaftes Wuschelhaar.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "nachwuchs",
+          "registryManagedFields": [
+            "birth",
+            "status",
+            "death",
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 2,
+            "status": 2,
+            "death": 2,
+            "portrait": 2,
+            "title": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1727"
+            ],
+            "status": [
+              "alive"
+            ],
+            "death": [
+              ""
+            ],
+            "portrait": [
+              ""
+            ],
+            "title": [
+              "Hofkind"
+            ],
+            "notes": [
+              "13 Jahre. Übernimmt altersgemäße Arbeiten im Familienhaushalt."
+            ]
+          }
+        }
+      },
+      {
+        "id": "eudaf-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--eudaf-tirfelyn",
+        "name": "Eudaf Tirfelyn",
+        "title": "Hofvorsteher und Viehwirtschaftskoordinator",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1688",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eudaf-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [
+          "52 Jahre"
+        ],
+        "notes": "52 Jahre. Eudaf führt den Hof gemeinsam mit seinem älteren Bruder Caradog. Er teilt die Arbeit an Stall, Futter und Vorräten ein und hilft selbst bei den täglichen Arbeiten mit. Erscheinung: rotes Haar, braune Augen; zurückgebürstet, schmaler Schnurrbart, leicht ergraut.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "leitung"
+        }
+      },
+      {
+        "id": "glesni-spouse-tirfelyn",
+        "worldPersonId": "person--family-tree--glesni-spouse-tirfelyn",
+        "name": "Madrun",
+        "title": "Bäuerin für Vorräte und gemeinsame Mahlzeiten",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/glesni-spouse-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "49 Jahre"
+        ],
+        "notes": "49 Jahre. Madrun organisiert mit Enid Vorräte und gemeinsame Mahlzeiten. Sie hält den Arbeitsalltag der beiden Familienzweige zusammen. Erscheinung: rotes Haar, braune Augen; geflochtener Kranz, wenige lockere Schläfensträhnen.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "haushalt"
+        }
+      },
+      {
+        "id": "cadfan-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--cadfan-tirfelyn",
+        "name": "Gwallog Tirfelyn",
+        "title": "Ackerbauer und Fuhrhelfer",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1714",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/cadfan-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "26 Jahre"
+        ],
+        "notes": "26 Jahre. Gwallog bestellt die Felder und bereitet die Lieferungen nach Gwynthor vor. Seine Frau Gwenfron und ihr Sohn Cynwal gehören zum gemeinsamen Hofhaushalt. Erscheinung: rotes Haar, braune Augen; kurzer Seitenschnitt, längeres Oberhaar, leichter Kinnbart.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "feld"
+        }
+      },
+      {
+        "id": "gwion-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--gwion-tirfelyn",
+        "name": "Cynddylan Tirfelyn",
+        "title": "Viehpfleger und Stallarbeiter",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1717",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gwion-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "23 Jahre"
+        ],
+        "notes": "23 Jahre. Cynddylan hilft bei Stallpflege, Fütterung und der Versorgung des Hofviehs. Er übernimmt auch anfallende schwere Hofarbeiten. Erscheinung: rotes Haar, braune Augen; dichte kurze Locken, glatt rasiert.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "vieh"
+        }
+      },
+      {
+        "id": "meleri-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--meleri-tirfelyn",
+        "name": "Eiliwedd Tirfelyn",
+        "title": "Gemüsebäuerin und Lieferhelferin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/meleri-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "20 Jahre"
+        ],
+        "notes": "20 Jahre. Eiliwedd arbeitet im Gemüseanbau und beim Zusammenstellen der Lieferungen. Nach Ceridwens Tod unterstützt sie deren Arbeitsbereich mit. Erscheinung: rotes Haar, braune Augen; dicker langer Seitenzopf.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "feld"
+        }
+      },
+      {
+        "id": "tegwen-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--tegwen-tirfelyn",
+        "name": "Tegfedd Tirfelyn",
+        "title": "Junge Bäuerin für Garten und Kleinvieh",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/tegwen-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "16 Jahre"
+        ],
+        "notes": "16 Jahre. Tegfedd hilft im Garten und beim Kleinvieh. Sie lernt die Arbeiten des Familienhofs von ihren Eltern und älteren Geschwistern. Erscheinung: rotes Haar, braune Augen; schulterlanges Haar, halb hochgebunden.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "feld"
+        }
+      },
+      {
+        "id": "maelgwn-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--maelgwn-tirfelyn",
+        "name": "Gwynllyw Tirfelyn",
+        "title": "Hofkind und Futterhelfer",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1729",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/maelgwn-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "11 Jahre"
+        ],
+        "notes": "11 Jahre. Gwynllyw hilft bei leichten Futter- und Hofarbeiten. Schwere Arbeiten bleiben Sache der Erwachsenen. Erscheinung: rotes Haar, braune Augen; kurzer gerader Pony mit unordentlichen Spitzen.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "nachwuchs"
+        }
+      },
+      {
+        "id": "eirwen-spouse-tirfelyn",
+        "worldPersonId": "person--family-tree--eirwen-spouse-tirfelyn",
+        "name": "Gwenfyl",
+        "title": "Bäuerin für Milch und Vorräte",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eirwen-spouse-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "24 Jahre"
+        ],
+        "notes": "24 Jahre. Gwenfyl arbeitet bei Milchverarbeitung und Vorratshaltung. Mit Gareth sorgt sie für ihre beiden kleinen Kinder. Erscheinung: rotes Haar, braune Augen; zwei zu einem tiefen Knoten verbundene Zöpfe.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "vieh"
+        }
+      },
+      {
+        "id": "heulwen-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--heulwen-tirfelyn",
+        "name": "Eiliwen Tirfelyn",
+        "title": "Hofkind",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1736",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/heulwen-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "4 Jahre"
+        ],
+        "notes": "4 Jahre. Eiliwen wächst mit ihrem kleinen Bruder Clydog im Hofhaushalt auf. Sie darf bei einfachen spielerischen Handgriffen helfen. Erscheinung: rotes Haar, braune Augen; zwei kurze geflochtene Zöpfe.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "nachwuchs"
+        }
+      },
+      {
+        "id": "clydog-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--clydog-tirfelyn",
+        "name": "Clydog Tirfelyn",
+        "title": "Kleinkind auf dem Hof",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1739",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/clydog-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "1 Jahre"
+        ],
+        "notes": "1 Jahre. Clydog ist Gareths und Gwenfyls jüngstes Kind. Er wird im gemeinsamen Hofhaushalt versorgt und hat keine Arbeitspflichten. Erscheinung: rotes Haar, braune Augen; weiche kurze Löckchen.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "nachwuchs"
+        }
+      },
+      {
+        "id": "olwen-spouse-tirfelyn",
+        "worldPersonId": "person--family-tree--olwen-spouse-tirfelyn",
+        "name": "Gwenfron",
+        "title": "Bäuerin für Gemüse und Erntevorräte",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1715",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/olwen-spouse-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "25 Jahre"
+        ],
+        "notes": "25 Jahre. Gwenfron arbeitet im Gemüseanbau und bei der Ernteaufbereitung. Mit Gwallog versorgt sie ihren Sohn Cynwal. Erscheinung: rotes Haar, braune Augen; langes Haar als einfacher hochgesteckter Zopf.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "feld"
+        }
+      },
+      {
+        "id": "idwal-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--idwal-tirfelyn",
+        "name": "Cynwal Tirfelyn",
+        "title": "Hofkind",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1737",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/idwal-tirfelyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "3 Jahre"
+        ],
+        "notes": "3 Jahre. Cynwal wächst als Sohn Gwallogs und Gwenfrons auf dem Familienhof auf. Er spielt bei den Erwachsenen und hat keine Arbeitspflichten. Erscheinung: rotes Haar, braune Augen; kurzes abstehendes Wuschelhaar.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": true,
+          "landfamilienWorkGroup": "nachwuchs"
+        }
+      },
+      {
+        "id": "gorwyn-helfaen",
+        "worldPersonId": "person--haus-helfaen--gorwyn-helfaen",
+        "name": "Gorwyn Helfaen",
+        "title": "Auswärtiger Verlobter · Jagdhaus Helfaen",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/helfaen/gorwyn-helfaen.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-helfaen",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "24 Jahre",
+          "Auswärtige Verlobtenperson",
+          "Wohnort: Jagdhaus Helfaen"
+        ],
+        "notes": "24 Jahre. Gorwyn arbeitet mit seinen Eltern bei Kleinwildjagd und Versorgung des Jagdhauses. Seine Verlobte Ceridwen Tirfelyn wollte ihn besuchen und kehrte am nächsten Morgen nicht heim; sie wurde vor wenigen Wochen Opfer des Fleischsammlers. Wohnort: Jagdhaus Helfaen; gehört zum dortigen Haushalt. Erscheinung: braunes lockiges Haar, blaue Augen; mittellange lockere Locken, glatt rasiert.",
+        "extensions": {
+          "authoredSource": "gwynthor-landfamilien-20261107",
+          "landfamilienResident": false,
+          "landfamilienWorkGroup": "jagd"
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-tirfelyn-founders",
+        "participantIds": [
+          "haus-tirfelyn-gruender",
+          "haus-tirfelyn-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Historisches unbekanntes Gründerpaar vor der Überlieferungslücke.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-caradog-enid-tirfelyn",
+        "participantIds": [
+          "caradog-tirfelyn",
+          "enid-spouse-tirfelyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsamer Familienhaushalt; kein genaues Hochzeitsjahr festgelegt.",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true
+        }
+      },
+      {
+        "id": "marriage-gareth-tirfelyn-eirwen-spouse-tirfelyn",
+        "participantIds": [
+          "gareth-tirfelyn",
+          "eirwen-spouse-tirfelyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsamer Familienhaushalt; kein genaues Hochzeitsjahr festgelegt.",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true
+        }
+      },
+      {
+        "id": "marriage-eudaf-tirfelyn-glesni-spouse-tirfelyn",
+        "participantIds": [
+          "eudaf-tirfelyn",
+          "glesni-spouse-tirfelyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsamer Familienhaushalt; kein genaues Hochzeitsjahr festgelegt.",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true
+        }
+      },
+      {
+        "id": "marriage-cadfan-tirfelyn-olwen-spouse-tirfelyn",
+        "participantIds": [
+          "cadfan-tirfelyn",
+          "olwen-spouse-tirfelyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsamer Familienhaushalt; kein genaues Hochzeitsjahr festgelegt.",
+        "extensions": {
+          "chartAlignParentPairOverChildPersonId": "idwal-tirfelyn"
+        }
+      },
+      {
+        "id": "betrothal-ceridwen-tirfelyn-gorwyn-helfaen",
+        "participantIds": [
+          "ceridwen-tirfelyn",
+          "gorwyn-helfaen"
+        ],
+        "type": "engagement",
+        "status": "ended",
+        "start": "",
+        "end": "1740",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Die Verlobung endet mit Ceridwens Tod. Kein Hochzeitstermin festgelegt.",
+        "extensions": {
+          "linkedFamilyIds": [
+            "haus-tirfelyn",
+            "haus-helfaen"
+          ]
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-caradog-tirfelyn",
+        "childId": "caradog-tirfelyn",
+        "parentIds": [
+          "haus-tirfelyn-gruender",
+          "haus-tirfelyn-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-tirfelyn-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Familienzugehörigkeit über unbekannte Generationen; keine unmittelbare biologische Elternschaft. Die konkreten heutigen Zweige beginnen erst hinter diesem Sprung.",
+        "extensions": {
+          "timeJumpId": "gap-tirfelyn-to-1685"
+        }
+      },
+      {
+        "id": "parentage-eudaf-tirfelyn",
+        "childId": "eudaf-tirfelyn",
+        "parentIds": [
+          "haus-tirfelyn-gruender",
+          "haus-tirfelyn-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-tirfelyn-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Familienzugehörigkeit über unbekannte Generationen; keine unmittelbare biologische Elternschaft. Die konkreten heutigen Zweige beginnen erst hinter diesem Sprung.",
+        "extensions": {
+          "timeJumpId": "gap-tirfelyn-to-1685"
+        }
+      },
+      {
+        "id": "parentage-gareth-tirfelyn",
+        "childId": "gareth-tirfelyn",
+        "parentIds": [
+          "caradog-tirfelyn",
+          "enid-spouse-tirfelyn"
+        ],
+        "partnershipId": "marriage-caradog-enid-tirfelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-ceridwen-tirfelyn",
+        "childId": "ceridwen-tirfelyn",
+        "parentIds": [
+          "caradog-tirfelyn",
+          "enid-spouse-tirfelyn"
+        ],
+        "partnershipId": "marriage-caradog-enid-tirfelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-bedwyr-tirfelyn",
+        "childId": "bedwyr-tirfelyn",
+        "parentIds": [
+          "caradog-tirfelyn",
+          "enid-spouse-tirfelyn"
+        ],
+        "partnershipId": "marriage-caradog-enid-tirfelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-cadfan-tirfelyn",
+        "childId": "cadfan-tirfelyn",
+        "parentIds": [
+          "eudaf-tirfelyn",
+          "glesni-spouse-tirfelyn"
+        ],
+        "partnershipId": "marriage-eudaf-tirfelyn-glesni-spouse-tirfelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gwion-tirfelyn",
+        "childId": "gwion-tirfelyn",
+        "parentIds": [
+          "eudaf-tirfelyn",
+          "glesni-spouse-tirfelyn"
+        ],
+        "partnershipId": "marriage-eudaf-tirfelyn-glesni-spouse-tirfelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-meleri-tirfelyn",
+        "childId": "meleri-tirfelyn",
+        "parentIds": [
+          "eudaf-tirfelyn",
+          "glesni-spouse-tirfelyn"
+        ],
+        "partnershipId": "marriage-eudaf-tirfelyn-glesni-spouse-tirfelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-tegwen-tirfelyn",
+        "childId": "tegwen-tirfelyn",
+        "parentIds": [
+          "eudaf-tirfelyn",
+          "glesni-spouse-tirfelyn"
+        ],
+        "partnershipId": "marriage-eudaf-tirfelyn-glesni-spouse-tirfelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-maelgwn-tirfelyn",
+        "childId": "maelgwn-tirfelyn",
+        "parentIds": [
+          "eudaf-tirfelyn",
+          "glesni-spouse-tirfelyn"
+        ],
+        "partnershipId": "marriage-eudaf-tirfelyn-glesni-spouse-tirfelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-heulwen-tirfelyn",
+        "childId": "heulwen-tirfelyn",
+        "parentIds": [
+          "gareth-tirfelyn",
+          "eirwen-spouse-tirfelyn"
+        ],
+        "partnershipId": "marriage-gareth-tirfelyn-eirwen-spouse-tirfelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-clydog-tirfelyn",
+        "childId": "clydog-tirfelyn",
+        "parentIds": [
+          "gareth-tirfelyn",
+          "eirwen-spouse-tirfelyn"
+        ],
+        "partnershipId": "marriage-gareth-tirfelyn-eirwen-spouse-tirfelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-idwal-tirfelyn",
+        "childId": "idwal-tirfelyn",
+        "parentIds": [
+          "cadfan-tirfelyn",
+          "olwen-spouse-tirfelyn"
+        ],
+        "partnershipId": "marriage-cadfan-tirfelyn-olwen-spouse-tirfelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-tirfelyn",
+        "name": "Familie Tirfelyn",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+        "status": "active"
+      },
+      {
+        "id": "house-helfaen",
+        "name": "Familie Helfaen",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "gap-tirfelyn-to-1685",
+        "parentPartnershipId": "marriage-haus-tirfelyn-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "caradog-tirfelyn",
+          "eudaf-tirfelyn"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1685",
+        "label": "Nicht einzeln überlieferte Generationen bis zur heutigen Familie",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-tirfelyn-founders",
+      "houseId": "house-tirfelyn",
+      "crestSubtitle": "16 lebende Familienangehörige · Tirfelyn-Hof",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "caradog-tirfelyn",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": false,
+      "pendingDescendantReview": false,
+      "sourceRevision": 2,
+      "chartLayoutPolicy": "strict-v1",
+      "registryManagedLineageFields": [
+        "founderPartnershipId",
+        "crestSubtitle"
+      ],
+      "registryManagedLineageFieldRevisions": {
+        "founderPartnershipId": 2,
+        "crestSubtitle": 2
+      },
+      "registryManagedExtensionFields": [
+        "blankFamily",
+        "preparedTimeJump",
+        "chartLayoutPolicy"
+      ],
+      "registryManagedExtensionFieldRevisions": {
+        "blankFamily": 2,
+        "preparedTimeJump": 2,
+        "chartLayoutPolicy": 2,
+        "chartAlignLineageOriginOverPersonId": 2
+      },
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Familie Tirfelyn",
+        "housePage": true,
+        "image": "../AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/caradog-tirfelyn.png",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Der Tirfelyn-Hof liegt unmittelbar vor Gwynthor und versorgt die Stadt mit Vieh, Getreide und Gemüse. Caradog Tirfelyn, fünfundfünfzig Jahre alt, führt ihn gemeinsam mit seinem zweiundfünfzigjährigen Bruder Eudaf. Die beiden Familienzweige teilen Hof, Arbeit und Verantwortung. Sechzehn lebende Angehörige gehören zu diesem Betrieb. Rotes Haar und braune Augen prägen das heutige Familienbild.\n\nDie Arbeit verteilt sich auf Feldbau, Viehpflege, Garten, Vorräte und die Lieferungen in die Stadt. Alle helfen ihrem Alter entsprechend mit; die kleinen Kinder wachsen im gemeinsamen Haushalt auf. Der Hof bleibt ein Familienbetrieb, dessen Bedeutung aus seiner verlässlichen Versorgung Gwynthors erwächst.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Familie Tirfelyn"
+          ],
+          [
+            "Rang",
+            "Bürgerlich"
+          ],
+          [
+            "Stammsitz",
+            "Tirfelyn-Hof"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Caradog Tirfelyn und Eudaf Tirfelyn"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Draig"
+          ],
+          [
+            "Ursprung",
+            "Östlicher Bannkreis von Gwynthor"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Familie und Lebensgrundlage",
+          "biographyText": "Der Tirfelyn-Hof liegt unmittelbar vor Gwynthor und versorgt die Stadt mit Vieh, Getreide und Gemüse. Caradog Tirfelyn, fünfundfünfzig Jahre alt, führt ihn gemeinsam mit seinem zweiundfünfzigjährigen Bruder Eudaf. Die beiden Familienzweige teilen Hof, Arbeit und Verantwortung. Sechzehn lebende Angehörige gehören zu diesem Betrieb. Rotes Haar und braune Augen prägen das heutige Familienbild.\n\nDie Arbeit verteilt sich auf Feldbau, Viehpflege, Garten, Vorräte und die Lieferungen in die Stadt. Alle helfen ihrem Alter entsprechend mit; die kleinen Kinder wachsen im gemeinsamen Haushalt auf. Der Hof bleibt ein Familienbetrieb, dessen Bedeutung aus seiner verlässlichen Versorgung Gwynthors erwächst.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Überlieferung und heutige Generationen",
+          "historyText": "Die Namen und Lebensdaten der älteren Gründer sind unbekannt. Auch die dazwischenliegenden Generationen sind nicht überliefert. Die näher bekannte Familie beginnt bei den Brüdern Caradog und Eudaf und führt zu ihren Kindern und Enkeln.\n\nCaradog und Enid sind die Eltern Gareths, Ceridwens und Bedwyrs. Gareth und seine Frau Gwenfyl haben die Kinder Eiliwen und Clydog. Eudaf und Madrun sind die Eltern Gwallogs, Cynddylans, Eiliwedds, Tegfedds und Gwynllyws. Gwallog und Gwenfron haben den Sohn Cynwal. Die Herkunftsfamilien der angeheirateten Frauen sind noch nicht benannt.\n\nCeridwen wurde 1740 mit zweiundzwanzig Jahren vor wenigen Wochen Opfer des Fleischsammlers. Sie wollte ihren Verlobten Gorwyn Helfaen besuchen und kehrte am folgenden Morgen nicht nach Hause zurück. Ihr Tod trifft den gesamten Hof und den Jagdhaushalt der Helfaen. Der genaue Tat- und Fundort ist nicht bekannt.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Die Brüder erwarten verlässliche Absprachen und helfen selbst bei den alltäglichen Arbeiten. Gute Versorgung heißt für sie, Tiere, Felder und Vorräte gleichermaßen im Blick zu behalten. Die Familie ist freundlich und hilfsbereit; trotz des Verlusts müssen die täglichen Arbeiten weitergehen."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Traditionen und Hausleben",
+              "text": "Caradog koordiniert Feldbau und Lieferungen, Eudaf Viehwirtschaft und Stallarbeit. Enid und Madrun stimmen Garten, Vorräte und gemeinsame Mahlzeiten ab. Gareth und Cynddylan helfen am Vieh, Gwallog bei Feldern und Fuhren. Gwenfyl betreut Milch und Vorräte, Gwenfron und Eiliwedd Gemüse und Ernteaufbereitung. Tegfedd, Bedwyr und Gwynllyw übernehmen altersgemäße Arbeiten. Eiliwen, Cynwal und Clydog werden im gemeinsamen Haushalt versorgt."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Die Lebensgrundlage ist der bestehende Tirfelyn-Hof südwestlich von Caer Ysgellfor. Gemischte Viehhaltung, Getreide- und Gemüseanbau liefern für Hof und Stadt. Genaue Flächen, Tierzahlen, Besitzgrenzen oder weitere Güter sind nicht festgelegt."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Die Familie beliefert Gwynthor. Ceridwens beendete Verlobung mit Gorwyn Helfaen verbindet ihre Geschichte mit dem Jagdhaus Helfaen. Eine Eheschließung hatte nicht stattgefunden. Weitere Verwandtschaften oder politische Bindungen sind nicht festgelegt."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+              "title": "Familie Tirfelyn · vollständige Hausseite",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-tirfelyn"
+            },
+            {
+              "title": "Tirfelyn-Hof",
+              "text": "Bedeutender familiengeführter Versorger Gwynthors mit Vieh, Getreide und Gemüse.",
+              "link": "../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-107",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png"
+            },
+            {
+              "title": "Familie Helfaen",
+              "text": "Gorwyn Helfaen war Ceridwen Tirfelyns Verlobter.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-helfaen",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png"
+            }
+          ],
+          "footer": ""
+        }
+      },
+      "sourceNote": "Nutzerauftrag vom 7. November 2026: 16 lebende eigene Angehörige; unbekannte historische Gründer und serieller Überlieferungssprung. Bestehende IDs erhalten. Lebensalter beziehen sich auf 1740. Neue Namen, Verwandtschaften und Aufgaben sind ausdrücklich beauftragte Ausarbeitung. Externe Verlobtenkarten zählen nicht zum örtlichen Haushalt. Angeheiratete Herkunftsfamilien bleiben offen."
+    }
+  }
+}

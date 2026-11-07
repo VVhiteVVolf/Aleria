@@ -1,0 +1,467 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-marchwern--eluned-marchwern",
+  "slug": "eluned-marchwern",
+  "identity": {
+    "name": "Eluned Marchwern",
+    "aliases": [],
+    "worldPersonId": "person--haus-marchwern--eluned-marchwern"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-marchwern",
+      "label": "Familie Marchwern"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-marchwern",
+        "familyTitle": "Familie Marchwern",
+        "personId": "eluned-marchwern",
+        "worldPersonId": "person--haus-marchwern--eluned-marchwern",
+        "houseId": "house-marchwern",
+        "houseName": "Familie Marchwern",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Eluned Marchwern\",\"title\":\"Züchterin und Aufzuchthelferin\",\"birth\":\"1719\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/eluned-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"21 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"gwrgi-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--gwrgi-marchwern\",\"name\":\"Gwrgi Marchwern\"},{\"personId\":\"mared-spouse-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mared-spouse-marchwern\",\"name\":\"Mared\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-marchwern--eluned-marchwern",
+      "documentIds": [
+        "person--haus-marchwern--eluned-marchwern"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-marchwern--eluned-marchwern",
+          "createdAt": "2026-11-07T00:00:00.000Z",
+          "updatedAt": "2026-11-07T00:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-marchwern",
+        "personId": "eluned-marchwern",
+        "worldPersonId": "person--haus-marchwern--eluned-marchwern",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthorer Landfamilien/marchwern/eluned-marchwern.json",
+    "sourceExportedAt": "2026-11-07T00:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-07T00:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-marchwern--eluned-marchwern"
+    ],
+    "contentHash": "8e05fc6674f6f1dd7e5c126fd6de5ebffe276e72906ad1e936fa56e04baf3af8"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-landfamilien"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Eluned Marchwern",
+        "title": "Züchterin und Aufzuchthelferin",
+        "fraktion": "Familie Marchwern",
+        "role": "Züchterin und Aufzuchthelferin",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Marchwern-Gestüt · Bannkreis Gwynthor",
+        "origin": "Rheunwaith · Cenyr",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Eluned Marchwern ist im Jahr 1740 21 Jahre alt und wurde 1719 geboren. Eluned Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.\n\nEluned hilft bei Aufzucht und Pflege. Sie achtet mit Mared auf feste Bezugspersonen für die anspruchsvollen Zuchttiere.\n\nDie Eltern sind Gwrgi Marchwern, Mared. Zur Geschwisterreihe gehören Rhun Marchwern, Rhunedd Marchwern.\n\nDas Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit.\n\nZucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.\n\nEluned Marchwern hat braunes Haar und grüne Augen. Sie bindet das lange Haar zu einem hohen Zopf und flicht einzelne Strähnen an den Seiten. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-07T00:00:00.000Z",
+        "updatedAt": "2026-11-07T00:00:00.000Z",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/eluned-marchwern.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schemaVersion": 1,
+          "biographyPage": true,
+          "pageTitle": "Eluned Marchwern",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/eluned-marchwern.png",
+          "imageWidth": 32,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "stats": [
+            [
+              "Name",
+              "Eluned Marchwern"
+            ],
+            [
+              "Geburt",
+              "1719"
+            ],
+            [
+              "Stand 1740",
+              "21 Jahre"
+            ],
+            [
+              "Familie",
+              "Marchwern"
+            ],
+            [
+              "Wohnort",
+              "Marchwern-Gestüt"
+            ],
+            [
+              "Aufgabe",
+              "Züchterin und Aufzuchthelferin"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/eluned-marchwern.png",
+            "portraitFit": "contain",
+            "biographyTitle": "Züchterin und Aufzuchthelferin",
+            "biographyText": "<p>Eluned Marchwern ist im Jahr 1740 21 Jahre alt und wurde 1719 geboren. Eluned Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.</p><p>Eluned hilft bei Aufzucht und Pflege. Sie achtet mit Mared auf feste Bezugspersonen für die anspruchsvollen Zuchttiere.</p>",
+            "historyTitle": "Familie und Lebensweg",
+            "historyText": "<p>Die Eltern sind Gwrgi Marchwern, Mared. Zur Geschwisterreihe gehören Rhun Marchwern, Rhunedd Marchwern.</p><p>Zucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.</p>",
+            "worksTitle": "Der gemeinsame Lebensunterhalt",
+            "works": [
+              "Das Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit."
+            ],
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Erscheinung",
+                "text": "<p>Eluned Marchwern hat braunes Haar und grüne Augen. Sie bindet das lange Haar zu einem hohen Zopf und flicht einzelne Strähnen an den Seiten. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+              }
+            ],
+            "connectionsTitle": "Die nächsten Angehörigen",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Gwrgi Marchwern",
+                "detail": "Vater",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Mared",
+                "detail": "Mutter",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mared-spouse-marchwern.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Rhun Marchwern",
+                "detail": "Bruder",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhun-marchwern.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Rhunedd Marchwern",
+                "detail": "Schwester",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhunedd-marchwern.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Haus und Herkunft",
+            "documents": [
+              {
+                "title": "Familie Marchwern",
+                "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+                "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&person=eluned-marchwern"
+              },
+              {
+                "title": "Marchwern-Gestüt",
+                "text": "Die gemeinsame Hausgeschichte der Familie.",
+                "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-marchwern"
+              }
+            ],
+            "footer": "Marchwern-Gestüt · Rheunwaith · Cenyr · Stand 1740"
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-marchwern--eluned-marchwern"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-marchwern--eluned-marchwern",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1719",
+          "death": "",
+          "houseId": "house-marchwern",
+          "houseName": "Familie Marchwern",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [
+            "21 Jahre"
+          ],
+          "sources": [
+            {
+              "familyId": "haus-marchwern",
+              "personId": "eluned-marchwern",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-07T00:00:00.000Z",
+              "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view&person=eluned-marchwern",
+              "fingerprint": "{\"name\":\"Eluned Marchwern\",\"title\":\"Züchterin und Aufzuchthelferin\",\"birth\":\"1719\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/eluned-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"21 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"gwrgi-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--gwrgi-marchwern\",\"name\":\"Gwrgi Marchwern\"},{\"personId\":\"mared-spouse-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mared-spouse-marchwern\",\"name\":\"Mared\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "gwrgi-marchwern",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-marchwern--gwrgi-marchwern",
+                "name": "Gwrgi Marchwern"
+              },
+              {
+                "personId": "mared-spouse-marchwern",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--mared-spouse-marchwern",
+                "name": "Mared"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "id": "person--haus-marchwern--eluned-marchwern",
+        "race": "Mensch",
+        "age": 21
+      }
+    ]
+  },
+  "character": {
+    "name": "Eluned Marchwern",
+    "title": "Züchterin und Aufzuchthelferin",
+    "fraktion": "Familie Marchwern",
+    "role": "Züchterin und Aufzuchthelferin",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Marchwern-Gestüt · Bannkreis Gwynthor",
+    "origin": "Rheunwaith · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Eluned Marchwern ist im Jahr 1740 21 Jahre alt und wurde 1719 geboren. Eluned Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.\n\nEluned hilft bei Aufzucht und Pflege. Sie achtet mit Mared auf feste Bezugspersonen für die anspruchsvollen Zuchttiere.\n\nDie Eltern sind Gwrgi Marchwern, Mared. Zur Geschwisterreihe gehören Rhun Marchwern, Rhunedd Marchwern.\n\nDas Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit.\n\nZucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.\n\nEluned Marchwern hat braunes Haar und grüne Augen. Sie bindet das lange Haar zu einem hohen Zopf und flicht einzelne Strähnen an den Seiten. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-07T00:00:00.000Z",
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/eluned-marchwern.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schemaVersion": 1,
+      "biographyPage": true,
+      "pageTitle": "Eluned Marchwern",
+      "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/eluned-marchwern.png",
+      "imageWidth": 32,
+      "imageTall": true,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "stats": [
+        [
+          "Name",
+          "Eluned Marchwern"
+        ],
+        [
+          "Geburt",
+          "1719"
+        ],
+        [
+          "Stand 1740",
+          "21 Jahre"
+        ],
+        [
+          "Familie",
+          "Marchwern"
+        ],
+        [
+          "Wohnort",
+          "Marchwern-Gestüt"
+        ],
+        [
+          "Aufgabe",
+          "Züchterin und Aufzuchthelferin"
+        ]
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/eluned-marchwern.png",
+        "portraitFit": "contain",
+        "biographyTitle": "Züchterin und Aufzuchthelferin",
+        "biographyText": "<p>Eluned Marchwern ist im Jahr 1740 21 Jahre alt und wurde 1719 geboren. Eluned Marchwern lebt mit der Familie Marchwern am Marchwern-Gestüt.</p><p>Eluned hilft bei Aufzucht und Pflege. Sie achtet mit Mared auf feste Bezugspersonen für die anspruchsvollen Zuchttiere.</p>",
+        "historyTitle": "Familie und Lebensweg",
+        "historyText": "<p>Die Eltern sind Gwrgi Marchwern, Mared. Zur Geschwisterreihe gehören Rhun Marchwern, Rhunedd Marchwern.</p><p>Zucht, Fohlenaufzucht, Stallroutinen, Futterwirtschaft, Bereitung und Hauswirtschaft greifen ineinander. Zum Gestüt gehören vielseitige Rhyfel, einige seltene und anspruchsvolle Ceffyl sowie weitere geeignete Reitpferde. Jüngere Angehörige lernen unter Aufsicht; die kleinen Kinder wachsen im gemeinsamen Haushalt auf.</p>",
+        "worksTitle": "Der gemeinsame Lebensunterhalt",
+        "works": [
+          "Das Marchwern-Gestüt liegt im Bannkreis Gwynthors. Vierzehn lebende Angehörige tragen den Familienbetrieb. Gwrgi führt das Gestüt mit Unterstützung seines Bruders Gwynog und seiner Frau Mared; die Familie dient Haus Wyrm unmittelbar und stellt gute Reitpferde bereit."
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "<p>Eluned Marchwern hat braunes Haar und grüne Augen. Sie bindet das lange Haar zu einem hohen Zopf und flicht einzelne Strähnen an den Seiten. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+          }
+        ],
+        "connectionsTitle": "Die nächsten Angehörigen",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Gwrgi Marchwern",
+            "detail": "Vater",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Mared",
+            "detail": "Mutter",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mared-spouse-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Rhun Marchwern",
+            "detail": "Bruder",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhun-marchwern.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Rhunedd Marchwern",
+            "detail": "Schwester",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/rhunedd-marchwern.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Haus und Herkunft",
+        "documents": [
+          {
+            "title": "Familie Marchwern",
+            "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+            "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&person=eluned-marchwern"
+          },
+          {
+            "title": "Marchwern-Gestüt",
+            "text": "Die gemeinsame Hausgeschichte der Familie.",
+            "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-marchwern"
+          }
+        ],
+        "footer": "Marchwern-Gestüt · Rheunwaith · Cenyr · Stand 1740"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-marchwern--eluned-marchwern"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-marchwern--eluned-marchwern",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1719",
+      "death": "",
+      "houseId": "house-marchwern",
+      "houseName": "Familie Marchwern",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "21 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-marchwern",
+          "personId": "eluned-marchwern",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-07T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view&person=eluned-marchwern",
+          "fingerprint": "{\"name\":\"Eluned Marchwern\",\"title\":\"Züchterin und Aufzuchthelferin\",\"birth\":\"1719\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/eluned-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"21 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"gwrgi-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--gwrgi-marchwern\",\"name\":\"Gwrgi Marchwern\"},{\"personId\":\"mared-spouse-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mared-spouse-marchwern\",\"name\":\"Mared\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "gwrgi-marchwern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-marchwern--gwrgi-marchwern",
+            "name": "Gwrgi Marchwern"
+          },
+          {
+            "personId": "mared-spouse-marchwern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--mared-spouse-marchwern",
+            "name": "Mared"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--haus-marchwern--eluned-marchwern",
+    "race": "Mensch",
+    "age": 21
+  }
+}

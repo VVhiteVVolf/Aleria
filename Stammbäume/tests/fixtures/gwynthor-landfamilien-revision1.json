@@ -1,0 +1,2247 @@
+[
+  {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-ysgellfor",
+      "title": "Familie Ysgellfor",
+      "motto": "",
+      "description": "Bürgerliche Rheunwaith-Familie an der kleinen Straßenfestung Caer Ysgellfor. Madog und seine Angehörigen führen die Vorratsannahme und die für Gwynthor bestimmte Versorgung.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-ysgellfor.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Caer Ysgellfor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "houses": [
+      {
+        "id": "house-ysgellfor",
+        "name": "Familie Ysgellfor",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-ysgellfor.png",
+        "status": "active"
+      }
+    ],
+    "persons": [
+      {
+        "id": "madog-ysgellfor",
+        "worldPersonId": "person--haus-ysgellfor--madog-ysgellfor",
+        "name": "Madog Ysgellfor",
+        "title": "Leiter der Vorratsannahme von Caer Ysgellfor",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1693",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgellfor",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "47 Jahre. Führt mit seiner Familie die Annahme, Lagerung und Ausgabe der für Gwynthor bestimmten Vorräte. Der frühere lokale Entwurf als Hauptmann wurde durch die ausdrückliche Besetzung des Amts mit Rhydric Argall ersetzt; Madog ist eine eigenständige Person der Versorgungsfamilie.",
+        "extensions": {}
+      },
+      {
+        "id": "angharad-spouse-ysgellfor",
+        "worldPersonId": "person--family-tree--angharad-spouse-ysgellfor",
+        "name": "Angharad",
+        "title": "Verantwortliche für Vorräte und Ausgabe",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "44 Jahre. Madogs Ehefrau; führt die häuslichen Vorratslisten und organisiert Annahme und Ausgabe. Ihre Herkunftsfamilie ist noch nicht festgelegt.",
+        "extensions": {}
+      },
+      {
+        "id": "gwenonwy-ysgellfor",
+        "worldPersonId": "person--haus-ysgellfor--gwenonwy-ysgellfor",
+        "name": "Gwenonwy Ysgellfor",
+        "title": "Schreiberin bei der Vorratsannahme",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgellfor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "19 Jahre. Hilft beim Erfassen der Lieferungen und beim Abgleich der für Gwynthor bestimmten Fuhren.",
+        "extensions": {}
+      },
+      {
+        "id": "iorwerth-ysgellfor",
+        "worldPersonId": "person--haus-ysgellfor--iorwerth-ysgellfor",
+        "name": "Iorwerth Ysgellfor",
+        "title": "Lehrling der Vorratswirtschaft",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ysgellfor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "15 Jahre. Lernt das Lagern und Verladen; kein ausgebildeter Wachmann.",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-madog-angharad-ysgellfor",
+        "participantIds": [
+          "madog-ysgellfor",
+          "angharad-spouse-ysgellfor"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-gwenonwy-ysgellfor",
+        "childId": "gwenonwy-ysgellfor",
+        "parentIds": [
+          "madog-ysgellfor",
+          "angharad-spouse-ysgellfor"
+        ],
+        "partnershipId": "marriage-madog-angharad-ysgellfor",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-iorwerth-ysgellfor",
+        "childId": "iorwerth-ysgellfor",
+        "parentIds": [
+          "madog-ysgellfor",
+          "angharad-spouse-ysgellfor"
+        ],
+        "partnershipId": "marriage-madog-angharad-ysgellfor",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-madog-angharad-ysgellfor",
+      "houseId": "house-ysgellfor",
+      "crestSubtitle": "Haushalt im Jahr 1740",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      }
+    },
+    "cadetBranches": [],
+    "timeJumps": [],
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "madog-ysgellfor",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 1,
+      "sourceNote": "Nutzerauftrag vom 2. November 2026. Neue Rheunwaith-Familie und heutiger Landhaushalt; frühere Generationen sind nicht ausgearbeitet.",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "housePage": true,
+        "pageTitle": "Familie Ysgellfor",
+        "description": "Bürgerliche Rheunwaith-Familie an der kleinen Straßenfestung Caer Ysgellfor. Madog und seine Angehörigen führen die Vorratsannahme und die für Gwynthor bestimmte Versorgung.",
+        "quote": "",
+        "quoteBy": "",
+        "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-ysgellfor.png",
+        "stats": [
+          [
+            "Familie",
+            "Ysgellfor"
+          ],
+          [
+            "Stand",
+            "Bürgerliche Rheunwaith-Familie"
+          ],
+          [
+            "Stammsitz",
+            "Caer Ysgellfor · Gwynthor"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-ysgellfor.png",
+          "sideWidth": 100,
+          "biographyTitle": "Caer Ysgellfor",
+          "biographyText": "<p>Caer Ysgellfor ist eine kleine Festung an der Hauptstraße nach Gwynthor. Hier werden Getreide und andere Vorräte aus den umliegenden Höfen gesammelt, gelagert und für die Weiterfahrt in die Stadt zusammengeführt. Zugleich schützt die Besatzung die Höfe und den Straßenabschnitt.</p>",
+          "historyTitle": "Die heutige Familie",
+          "historyText": "<p>Madog Ysgellfor führt die Vorratsannahme mit seiner Frau Angharad und den Kindern Gwenonwy und Iorwerth. Burgverwaltung und Wachdienst liegen bei Hauptmann Rhydric Argall. Die Ysgellfor stimmen ihre Lieferungen und Ausgaben mit ihm ab, damit der Nachschub nach Gwynthor auch unter den gegenwärtigen Sorgen des Bannkreises weitergeht.</p>",
+          "worksTitle": "Arbeit und Versorgung",
+          "works": [
+            "Annahme und geordnete Weiterleitung von Getreide und Vorräten nach Gwynthor.",
+            "Geordnete Lagerung und Ausgabe der von den umliegenden Höfen gelieferten Vorräte.",
+            "Abstimmung mit Hauptmann Rhydric Argall und den ankommenden Fuhrleuten."
+          ],
+          "connectionsTitle": "Verbindungen",
+          "connections": [],
+          "documentsTitle": "Orte und Verweise",
+          "documents": [
+            {
+              "title": "Caer Ysgellfor",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-ysgellfor.png",
+              "text": "Kleine Straßenfestung und Sammelstelle für Getreide und Vorräte auf dem Weg nach Gwynthor; schützt die umliegenden Höfe.",
+              "link": "../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-091"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-helfaen",
+      "title": "Familie Helfaen",
+      "motto": "",
+      "description": "Sehr kleine Rheunwaith-Jägerfamilie im Jagdhaus Helfaen. Ihr bescheidener Betrieb widmet sich vor allem dem Kleinwild.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Jagdhaus Helfaen",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "houses": [
+      {
+        "id": "house-helfaen",
+        "name": "Familie Helfaen",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+        "status": "active"
+      }
+    ],
+    "persons": [
+      {
+        "id": "cadwgan-helfaen",
+        "worldPersonId": "person--haus-helfaen--cadwgan-helfaen",
+        "name": "Cadwgan Helfaen",
+        "title": "Kleinwildjäger",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1705",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-helfaen",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "35 Jahre. Führt den kleinen Jagdbetrieb; keine besondere Großwildjagd oder adelige Jagdherrschaft.",
+        "extensions": {}
+      },
+      {
+        "id": "dilys-spouse-helfaen",
+        "worldPersonId": "person--family-tree--dilys-spouse-helfaen",
+        "name": "Dilys",
+        "title": "Jägerin und Wildverarbeiterin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1708",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "32 Jahre. Cadwgans Ehefrau; arbeitet bei Jagd, Verarbeitung und örtlichem Verkauf mit. Ihre Herkunftsfamilie ist offen.",
+        "extensions": {}
+      },
+      {
+        "id": "owain-helfaen",
+        "worldPersonId": "person--haus-helfaen--owain-helfaen",
+        "name": "Owain Helfaen",
+        "title": "Kind im Jagdhaus",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-helfaen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "10 Jahre. Hilft bei einfachen Arbeiten; kein selbständiger Jäger.",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-cadwgan-dilys-helfaen",
+        "participantIds": [
+          "cadwgan-helfaen",
+          "dilys-spouse-helfaen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-owain-helfaen",
+        "childId": "owain-helfaen",
+        "parentIds": [
+          "cadwgan-helfaen",
+          "dilys-spouse-helfaen"
+        ],
+        "partnershipId": "marriage-cadwgan-dilys-helfaen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-cadwgan-dilys-helfaen",
+      "houseId": "house-helfaen",
+      "crestSubtitle": "Haushalt im Jahr 1740",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      }
+    },
+    "cadetBranches": [],
+    "timeJumps": [],
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "cadwgan-helfaen",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 1,
+      "sourceNote": "Nutzerauftrag vom 2. November 2026. Neue Rheunwaith-Familie und heutiger Landhaushalt; frühere Generationen sind nicht ausgearbeitet.",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "housePage": true,
+        "pageTitle": "Familie Helfaen",
+        "description": "Sehr kleine Rheunwaith-Jägerfamilie im Jagdhaus Helfaen. Ihr bescheidener Betrieb widmet sich vor allem dem Kleinwild.",
+        "quote": "",
+        "quoteBy": "",
+        "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+        "stats": [
+          [
+            "Familie",
+            "Helfaen"
+          ],
+          [
+            "Stand",
+            "Bürgerliche Rheunwaith-Familie"
+          ],
+          [
+            "Stammsitz",
+            "Jagdhaus Helfaen · Gwynthor"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+          "sideWidth": 100,
+          "biographyTitle": "Jagdhaus Helfaen",
+          "biographyText": "<p>Im Jagdhaus Helfaen lebt eine sehr kleine Familie. Cadwgan und Dilys erlegen vor allem Kleinwild, verarbeiten den Fang und verkaufen geringe Überschüsse in der Umgebung. Der Betrieb ernährt den Haushalt, ohne ein großes Jagdunternehmen zu bilden.</p>",
+          "historyTitle": "Die heutige Familie",
+          "historyText": "<p>Cadwgan, Dilys und ihr Sohn Owain teilen sich Haus und tägliche Arbeit. Ihr Leben richtet sich nach den kleinen Fängen und den bescheidenen Bedürfnissen des Haushalts.</p>",
+          "worksTitle": "Arbeit und Versorgung",
+          "works": [
+            "Jagd auf Kleinwild für den eigenen Haushalt und örtlichen Verkauf.",
+            "Verarbeitung und Haltbarmachen der kleinen Fänge.",
+            "Pflege des Jagdhauses und seiner einfachen Gerätschaften."
+          ],
+          "connectionsTitle": "Verbindungen",
+          "connections": [],
+          "documentsTitle": "Orte und Verweise",
+          "documents": [
+            {
+              "title": "Jagdhaus Helfaen",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-helfaen.png",
+              "text": "Kleines Jagdhaus einer Familie, die vor allem Kleinwild erlegt und für den örtlichen Bedarf verarbeitet.",
+              "link": "../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-115"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-marchwern",
+      "title": "Familie Marchwern",
+      "motto": "",
+      "description": "Rheunwaith-Rosszüchter am Marchwern-Gestüt bei Gwynthor. Die Familie dient unmittelbar Haus Wyrm und stellt hochwertige Reitpferde bereit.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Marchwern-Gestüt",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "houses": [
+      {
+        "id": "house-marchwern",
+        "name": "Familie Marchwern",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+        "status": "active"
+      }
+    ],
+    "persons": [
+      {
+        "id": "gwrgi-marchwern",
+        "worldPersonId": "person--haus-marchwern--gwrgi-marchwern",
+        "name": "Gwrgi Marchwern",
+        "title": "Gestütsvorsteher im Dienst des Hauses Wyrm",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "48 Jahre. Führt den Familienbetrieb im Bannkreis Gwynthors. Die Dienstbindung an Haus Wyrm begründet keinen anderen Wohnort.",
+        "extensions": {}
+      },
+      {
+        "id": "mared-spouse-marchwern",
+        "worldPersonId": "person--family-tree--mared-spouse-marchwern",
+        "name": "Mared",
+        "title": "Züchterin und Verantwortliche für Stallroutinen",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "44 Jahre. Führt Pflege und feste Routinen mit. Herkunftsfamilie nicht festgelegt.",
+        "extensions": {}
+      },
+      {
+        "id": "rhun-marchwern",
+        "worldPersonId": "person--haus-marchwern--rhun-marchwern",
+        "name": "Rhun Marchwern",
+        "title": "Pferdepfleger und Bereiter",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "24 Jahre. Arbeitet mit Reitpferden des Gestüts und bereitet geeignete Tiere auf den Dienst vor.",
+        "extensions": {}
+      },
+      {
+        "id": "eluned-marchwern",
+        "worldPersonId": "person--haus-marchwern--eluned-marchwern",
+        "name": "Eluned Marchwern",
+        "title": "Züchterin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-marchwern",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "21 Jahre. Hilft bei Aufzucht und Pflege; die geringe Zahl reiner Ceffyl wird sorgfältig betreut.",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-gwrgi-mared-marchwern",
+        "participantIds": [
+          "gwrgi-marchwern",
+          "mared-spouse-marchwern"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-rhun-marchwern",
+        "childId": "rhun-marchwern",
+        "parentIds": [
+          "gwrgi-marchwern",
+          "mared-spouse-marchwern"
+        ],
+        "partnershipId": "marriage-gwrgi-mared-marchwern",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-eluned-marchwern",
+        "childId": "eluned-marchwern",
+        "parentIds": [
+          "gwrgi-marchwern",
+          "mared-spouse-marchwern"
+        ],
+        "partnershipId": "marriage-gwrgi-mared-marchwern",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-gwrgi-mared-marchwern",
+      "houseId": "house-marchwern",
+      "crestSubtitle": "Haushalt im Jahr 1740",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      }
+    },
+    "cadetBranches": [],
+    "timeJumps": [],
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "gwrgi-marchwern",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 1,
+      "sourceNote": "Nutzerauftrag vom 2. November 2026. Neue Rheunwaith-Familie und heutiger Landhaushalt; frühere Generationen sind nicht ausgearbeitet.",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "housePage": true,
+        "pageTitle": "Familie Marchwern",
+        "description": "Rheunwaith-Rosszüchter am Marchwern-Gestüt bei Gwynthor. Die Familie dient unmittelbar Haus Wyrm und stellt hochwertige Reitpferde bereit.",
+        "quote": "",
+        "quoteBy": "",
+        "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+        "stats": [
+          [
+            "Familie",
+            "Marchwern"
+          ],
+          [
+            "Stand",
+            "Bürgerliche Rheunwaith-Familie"
+          ],
+          [
+            "Stammsitz",
+            "Marchwern-Gestüt · Gwynthor"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+          "sideWidth": 100,
+          "biographyTitle": "Marchwern-Gestüt",
+          "biographyText": "<p>Das Marchwern-Gestüt ist für Gwynthor ein wichtiger Zuchtbetrieb. Die Familie steht unmittelbar im Dienst des Hauses Wyrm und versorgt es mit guten Reitpferden. Zum Bestand gehören Rhyfel und einige sorgfältig betreute Ceffyl sowie weitere geeignete Reitpferde.</p><p>Die reinen Ceffyl bleiben selten. Ihre anspruchsvolle Haltung und die Bindung an einen Reiter erfordern feste Bezugspersonen und verlässliche Stallroutinen.</p>",
+          "historyTitle": "Die heutige Familie",
+          "historyText": "<p>Gwrgi und Mared führen den Familienbetrieb mit Rhun und Eluned. Am Gestüt bei Gwynthor kümmern sie sich gemeinsam um Zucht, Aufzucht und die für Haus Wyrm bestimmten Reitpferde.</p>",
+          "worksTitle": "Arbeit und Versorgung",
+          "works": [
+            "Zucht und Aufzucht guter Reitpferde für Gwynthor und den Dienst des Hauses Wyrm.",
+            "Pflege vielseitiger Rhyfel und weniger sorgfältig ausgewählter Ceffyl.",
+            "Verlässliche Stallroutinen, Betreuung und Vorbereitung geeigneter Reittiere."
+          ],
+          "connectionsTitle": "Verbindungen",
+          "connections": [
+            {
+              "name": "Haus Wyrm",
+              "detail": "Unmittelbarer Dienst und Bereitstellung guter Reitpferde."
+            }
+          ],
+          "documentsTitle": "Orte und Verweise",
+          "documents": [
+            {
+              "title": "Marchwern-Gestüt",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png",
+              "text": "Wichtige Rosszucht für Gwynthor. Die Betreiber dienen unmittelbar Haus Wyrm und stellen gute Reitpferde bereit, darunter Ceffyl und Rhyfel.",
+              "link": "../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-092"
+            },
+            {
+              "title": "Ceffyl",
+              "text": "Seltene, anspruchsvolle Reitpferde mit enger Bindung an ihren Reiter.",
+              "link": "../Bestiarium/tiere/pferde/ceffyl/",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png"
+            },
+            {
+              "title": "Rhyfel",
+              "text": "Vielseitige und verlässliche Reitpferde Cenyrs.",
+              "link": "../Bestiarium/tiere/pferde/rhyfel/",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-marchwern.png"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-tirfelyn",
+      "title": "Familie Tirfelyn",
+      "motto": "",
+      "description": "Freundliche Rheunwaith-Bauernfamilie auf dem Tirfelyn-Hof, einem wichtigen Versorger Gwynthors mit Vieh, Getreide und Gemüse.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Tirfelyn-Hof",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "houses": [
+      {
+        "id": "house-tirfelyn",
+        "name": "Familie Tirfelyn",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+        "status": "active"
+      }
+    ],
+    "persons": [
+      {
+        "id": "caradog-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--caradog-tirfelyn",
+        "name": "Caradog Tirfelyn",
+        "title": "Hofvorsteher",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "49 Jahre. Freundlicher, verlässlicher Bauer; koordiniert Feldarbeit, Vieh und Lieferungen nach Gwynthor.",
+        "extensions": {}
+      },
+      {
+        "id": "enid-spouse-tirfelyn",
+        "worldPersonId": "person--family-tree--enid-spouse-tirfelyn",
+        "name": "Enid",
+        "title": "Bäuerin und Verantwortliche für Garten und Vorräte",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "45 Jahre. Führt Gemüsewirtschaft und Vorratshaltung mit; Herkunftsfamilie noch offen.",
+        "extensions": {}
+      },
+      {
+        "id": "gareth-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--gareth-tirfelyn",
+        "name": "Gareth Tirfelyn",
+        "title": "Bauer und Viehhalter",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1715",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "25 Jahre. Arbeitet bei Feldbestellung und Viehversorgung.",
+        "extensions": {}
+      },
+      {
+        "id": "ceridwen-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--ceridwen-tirfelyn",
+        "name": "Ceridwen Tirfelyn",
+        "title": "Gemüsebäuerin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "22 Jahre. Kümmert sich mit Enid um Gemüse und die Lieferungen für die Stadt.",
+        "extensions": {}
+      },
+      {
+        "id": "bedwyr-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--bedwyr-tirfelyn",
+        "name": "Bedwyr Tirfelyn",
+        "title": "Hofkind",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1727",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-tirfelyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "13 Jahre. Übernimmt altersgemäße Arbeiten im Familienhaushalt.",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-caradog-enid-tirfelyn",
+        "participantIds": [
+          "caradog-tirfelyn",
+          "enid-spouse-tirfelyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-gareth-tirfelyn",
+        "childId": "gareth-tirfelyn",
+        "parentIds": [
+          "caradog-tirfelyn",
+          "enid-spouse-tirfelyn"
+        ],
+        "partnershipId": "marriage-caradog-enid-tirfelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-ceridwen-tirfelyn",
+        "childId": "ceridwen-tirfelyn",
+        "parentIds": [
+          "caradog-tirfelyn",
+          "enid-spouse-tirfelyn"
+        ],
+        "partnershipId": "marriage-caradog-enid-tirfelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-bedwyr-tirfelyn",
+        "childId": "bedwyr-tirfelyn",
+        "parentIds": [
+          "caradog-tirfelyn",
+          "enid-spouse-tirfelyn"
+        ],
+        "partnershipId": "marriage-caradog-enid-tirfelyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-caradog-enid-tirfelyn",
+      "houseId": "house-tirfelyn",
+      "crestSubtitle": "Haushalt im Jahr 1740",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      }
+    },
+    "cadetBranches": [],
+    "timeJumps": [],
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "caradog-tirfelyn",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 1,
+      "sourceNote": "Nutzerauftrag vom 2. November 2026. Neue Rheunwaith-Familie und heutiger Landhaushalt; frühere Generationen sind nicht ausgearbeitet.",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "housePage": true,
+        "pageTitle": "Familie Tirfelyn",
+        "description": "Freundliche Rheunwaith-Bauernfamilie auf dem Tirfelyn-Hof, einem wichtigen Versorger Gwynthors mit Vieh, Getreide und Gemüse.",
+        "quote": "",
+        "quoteBy": "",
+        "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+        "stats": [
+          [
+            "Familie",
+            "Tirfelyn"
+          ],
+          [
+            "Stand",
+            "Bürgerliche Rheunwaith-Familie"
+          ],
+          [
+            "Stammsitz",
+            "Tirfelyn-Hof · Gwynthor"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+          "sideWidth": 100,
+          "biographyTitle": "Tirfelyn-Hof",
+          "biographyText": "<p>Der Tirfelyn-Hof liegt auf der Gwynthor zugewandten Seite des ländlichen Versorgungsraums. Vieh, Getreide und Gemüse machen ihn zu einem wichtigen Lieferanten der Stadt. Die freundliche Betreiberfamilie lebt von verlässlicher gemeinsamer Arbeit und regelmäßiger Versorgung.</p>",
+          "historyTitle": "Die heutige Familie",
+          "historyText": "<p>Caradog und Enid führen den Hof mit Gareth, Ceridwen und dem jüngeren Bedwyr. Der Betrieb bleibt ein Familienhof, auch wenn sein Beitrag zur Ernährung Gwynthors erheblich ist.</p>",
+          "worksTitle": "Arbeit und Versorgung",
+          "works": [
+            "Haltung und Versorgung des Viehs.",
+            "Anbau und Lieferung von Getreide.",
+            "Gemüsewirtschaft für den Hof und Gwynthor."
+          ],
+          "connectionsTitle": "Verbindungen",
+          "connections": [],
+          "documentsTitle": "Orte und Verweise",
+          "documents": [
+            {
+              "title": "Tirfelyn-Hof",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-tirfelyn.png",
+              "text": "Bedeutender familiengeführter Versorger Gwynthors mit Vieh, Getreide und Gemüse.",
+              "link": "../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-107"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-dolweth",
+      "title": "Familie Dolweth",
+      "motto": "",
+      "description": "Kleine Rheunwaith-Familie auf der Dolweth-Kate mit bescheidenem Viehbestand. Sie trauert um ihre achtzehnjährige Tochter Lleian, die vor wenigen Tagen ermordet wurde.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-dolweth.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Dolweth-Kate",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "houses": [
+      {
+        "id": "house-dolweth",
+        "name": "Familie Dolweth",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-dolweth.png",
+        "status": "active"
+      }
+    ],
+    "persons": [
+      {
+        "id": "aled-dolweth",
+        "worldPersonId": "person--haus-dolweth--aled-dolweth",
+        "name": "Aled Dolweth",
+        "title": "Kleinbauer",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1699",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dolweth",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "41 Jahre. Bewirtschaftet mit seiner Frau eine kleine Kate mit wenigen Tieren. Trauert um Lleian.",
+        "extensions": {}
+      },
+      {
+        "id": "sioned-spouse-dolweth",
+        "worldPersonId": "person--family-tree--sioned-spouse-dolweth",
+        "name": "Sioned",
+        "title": "Kleinbäuerin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1701",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "39 Jahre. Mutter Lleians und Peredurs. Der Verlust der Tochter ist noch frisch; Herkunftsfamilie nicht festgelegt.",
+        "extensions": {}
+      },
+      {
+        "id": "lleian-dolweth",
+        "worldPersonId": "person--haus-dolweth--lleian-dolweth",
+        "name": "Lleian Dolweth",
+        "title": "Verstorbene Tochter",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1722",
+        "death": "1740",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dolweth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "18 Jahre. Wurde vor wenigen Tagen Opfer des Fleischsammlers. Ein genauer Tattag, Fundort, Tatablauf und eigene Hinweise auf den Täter sind nicht festgelegt.",
+        "extensions": {}
+      },
+      {
+        "id": "peredur-dolweth",
+        "worldPersonId": "person--haus-dolweth--peredur-dolweth",
+        "name": "Peredur Dolweth",
+        "title": "Kind auf der Kate",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1729",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-dolweth",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "11 Jahre. Lleians jüngerer Bruder; lebt im trauernden Haushalt.",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-aled-sioned-dolweth",
+        "participantIds": [
+          "aled-dolweth",
+          "sioned-spouse-dolweth"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-lleian-dolweth",
+        "childId": "lleian-dolweth",
+        "parentIds": [
+          "aled-dolweth",
+          "sioned-spouse-dolweth"
+        ],
+        "partnershipId": "marriage-aled-sioned-dolweth",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-peredur-dolweth",
+        "childId": "peredur-dolweth",
+        "parentIds": [
+          "aled-dolweth",
+          "sioned-spouse-dolweth"
+        ],
+        "partnershipId": "marriage-aled-sioned-dolweth",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-aled-sioned-dolweth",
+      "houseId": "house-dolweth",
+      "crestSubtitle": "Haushalt im Jahr 1740",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      }
+    },
+    "cadetBranches": [],
+    "timeJumps": [],
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "aled-dolweth",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 1,
+      "sourceNote": "Nutzerauftrag vom 2. November 2026. Neue Rheunwaith-Familie und heutiger Landhaushalt; frühere Generationen sind nicht ausgearbeitet. Lleians Alter und der wenige Tage zurückliegende Tod sind Nutzerfestlegungen; Name und übriger Haushalt wurden neu ausgearbeitet.",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "housePage": true,
+        "pageTitle": "Familie Dolweth",
+        "description": "Kleine Rheunwaith-Familie auf der Dolweth-Kate mit bescheidenem Viehbestand. Sie trauert um ihre achtzehnjährige Tochter Lleian, die vor wenigen Tagen ermordet wurde.",
+        "quote": "",
+        "quoteBy": "",
+        "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-dolweth.png",
+        "stats": [
+          [
+            "Familie",
+            "Dolweth"
+          ],
+          [
+            "Stand",
+            "Bürgerliche Rheunwaith-Familie"
+          ],
+          [
+            "Stammsitz",
+            "Dolweth-Kate · Gwynthor"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-dolweth.png",
+          "sideWidth": 100,
+          "biographyTitle": "Dolweth-Kate",
+          "biographyText": "<p>Die Dolweth-Kate liegt südlich des größeren Versorgerhofes. Die Familie hält nur wenige Tiere und ist nicht groß genug, um als eigener Viehhof zu gelten. Mit ihren bescheidenen Überschüssen leistet sie dennoch ihren Beitrag.</p>",
+          "historyTitle": "Die heutige Familie",
+          "historyText": "<p>Aled und Sioned leben mit ihrem Sohn Peredur in tiefer Trauer. Ihre Tochter Lleian wurde achtzehn Jahre alt. Vor wenigen Tagen wurde sie Opfer des Fleischsammlers. Die Familie hat den Verlust noch nicht verarbeitet.</p>",
+          "worksTitle": "Arbeit und Versorgung",
+          "works": [
+            "Versorgung weniger eigener Tiere.",
+            "Kleine Überschüsse für die Umgebung.",
+            "Weiterführen des Haushalts trotz des frischen Verlusts."
+          ],
+          "connectionsTitle": "Verbindungen",
+          "connections": [],
+          "documentsTitle": "Orte und Verweise",
+          "documents": [
+            {
+              "title": "Dolweth-Kate",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-dolweth.png",
+              "text": "Kleine ländliche Kate mit wenigen eigenen Viehbeständen; der bescheidene Haushalt trägt zur örtlichen Versorgung bei.",
+              "link": "../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-118"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-brynial",
+      "title": "Familie Brynial",
+      "motto": "",
+      "description": "Unscheinbare Rheunwaith-Landfamilie auf der Brynial-Kate. Der kleine Haushalt betreibt etwas Ackerbau und Viehhaltung; Gwenith, die Ehefrau, gehört zu den Mordopfern.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-brynial.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Brynial-Kate",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "houses": [
+      {
+        "id": "house-brynial",
+        "name": "Familie Brynial",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-brynial.png",
+        "status": "active"
+      }
+    ],
+    "persons": [
+      {
+        "id": "rhydderch-brynial",
+        "worldPersonId": "person--haus-brynial--rhydderch-brynial",
+        "name": "Rhydderch Brynial",
+        "title": "Kleinbauer und Witwer",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1703",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-brynial",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "37 Jahre. Führt nach Gweniths Tod den kleinen Landhaushalt mit zwei Kindern weiter.",
+        "extensions": {}
+      },
+      {
+        "id": "gwenith-spouse-brynial",
+        "worldPersonId": "person--family-tree--gwenith-spouse-brynial",
+        "name": "Gwenith",
+        "title": "Verstorbene Kleinbäuerin",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1708",
+        "death": "1740",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "32 Jahre. Rhydderchs Ehefrau und Mutter der beiden Kinder; Opfer des Fleischsammlers. Keine genauere Datierung, Fundstelle oder Täterbeobachtung ist ausgearbeitet. Herkunftsfamilie offen.",
+        "extensions": {}
+      },
+      {
+        "id": "ianto-brynial",
+        "worldPersonId": "person--haus-brynial--ianto-brynial",
+        "name": "Ianto Brynial",
+        "title": "Kind auf der Kate",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1732",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-brynial",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "8 Jahre. Sohn Rhydderchs und Gweniths.",
+        "extensions": {}
+      },
+      {
+        "id": "anwen-brynial",
+        "worldPersonId": "person--haus-brynial--anwen-brynial",
+        "name": "Anwen Brynial",
+        "title": "Kind auf der Kate",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1735",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-brynial",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "5 Jahre. Tochter Rhydderchs und Gweniths.",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-rhydderch-gwenith-brynial",
+        "participantIds": [
+          "rhydderch-brynial",
+          "gwenith-spouse-brynial"
+        ],
+        "type": "marriage",
+        "status": "widowed",
+        "start": "",
+        "end": "1740",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-ianto-brynial",
+        "childId": "ianto-brynial",
+        "parentIds": [
+          "rhydderch-brynial",
+          "gwenith-spouse-brynial"
+        ],
+        "partnershipId": "marriage-rhydderch-gwenith-brynial",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-anwen-brynial",
+        "childId": "anwen-brynial",
+        "parentIds": [
+          "rhydderch-brynial",
+          "gwenith-spouse-brynial"
+        ],
+        "partnershipId": "marriage-rhydderch-gwenith-brynial",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-rhydderch-gwenith-brynial",
+      "houseId": "house-brynial",
+      "crestSubtitle": "Haushalt im Jahr 1740",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      }
+    },
+    "cadetBranches": [],
+    "timeJumps": [],
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "rhydderch-brynial",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 1,
+      "sourceNote": "Nutzerauftrag vom 2. November 2026. Neue Rheunwaith-Familie und heutiger Landhaushalt; frühere Generationen sind nicht ausgearbeitet. Der Tod der Ehefrau ist Nutzerfestlegung; Namen, ihr Alter 32 und der kleine Haushalt sind heutige Ausarbeitung.",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "housePage": true,
+        "pageTitle": "Familie Brynial",
+        "description": "Unscheinbare Rheunwaith-Landfamilie auf der Brynial-Kate. Der kleine Haushalt betreibt etwas Ackerbau und Viehhaltung; Gwenith, die Ehefrau, gehört zu den Mordopfern.",
+        "quote": "",
+        "quoteBy": "",
+        "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-brynial.png",
+        "stats": [
+          [
+            "Familie",
+            "Brynial"
+          ],
+          [
+            "Stand",
+            "Bürgerliche Rheunwaith-Familie"
+          ],
+          [
+            "Stammsitz",
+            "Brynial-Kate · Gwynthor"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-brynial.png",
+          "sideWidth": 100,
+          "biographyTitle": "Brynial-Kate",
+          "biographyText": "<p>Die Brynial-Kate ist ein unscheinbarer Haushalt im nördlichen Umland Gwynthors. Etwas Ackerbau und wenige Tiere genügen für ein bescheidenes Landleben.</p>",
+          "historyTitle": "Die heutige Familie",
+          "historyText": "<p>Rhydderch Brynial hat seine Frau Gwenith verloren. Die zweiunddreißigjährige Mutter von Ianto und Anwen gehört zu den Opfern des Fleischsammlers. Die Kinder und ihr Vater müssen mit ihrem Verlust leben und die alltägliche Arbeit weiterführen.</p>",
+          "worksTitle": "Arbeit und Versorgung",
+          "works": [
+            "Bescheidener Ackerbau für den Haushalt.",
+            "Haltung weniger Tiere.",
+            "Versorgung der beiden Kinder und Weiterführen der Kate."
+          ],
+          "connectionsTitle": "Verbindungen",
+          "connections": [],
+          "documentsTitle": "Orte und Verweise",
+          "documents": [
+            {
+              "title": "Brynial-Kate",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-brynial.png",
+              "text": "Unscheinbarer Landhaushalt mit etwas Ackerbau und wenigen Tieren im östlichen Umland Gwynthors.",
+              "link": "../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-086"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-bragwen",
+      "title": "Familie Bragwen",
+      "motto": "",
+      "description": "Rheunwaith-Brauerfamilie am gemeinsam mit den Eiddfer geführten Brauerhof. Die verschwägerten Betreiber arbeiten mit der Teyrngarch Brauerzunft zusammen und beliefern Gwynthor.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-bragwen.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Brauerhof Bragwen & Eiddfer",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "houses": [
+      {
+        "id": "house-bragwen",
+        "name": "Familie Bragwen",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-bragwen.png",
+        "status": "active"
+      },
+      {
+        "id": "house-eiddfer",
+        "name": "Familie Eiddfer",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-eiddfer.png",
+        "status": "active"
+      }
+    ],
+    "persons": [
+      {
+        "id": "owain-bragwen",
+        "worldPersonId": "person--haus-bragwen--owain-bragwen",
+        "name": "Owain Bragwen",
+        "title": "Brauer und Mitbetreiber",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1690",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-bragwen",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "50 Jahre. Führt den Hof gemeinsam mit Familie Eiddfer und trauert um Catrin.",
+        "extensions": {}
+      },
+      {
+        "id": "eleri-spouse-bragwen",
+        "worldPersonId": "person--family-tree--eleri-spouse-bragwen",
+        "name": "Eleri",
+        "title": "Brauerin und Vorratsverwalterin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1693",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "47 Jahre. Mutter Iestyns und Catrins; Herkunftsfamilie noch nicht festgelegt.",
+        "extensions": {}
+      },
+      {
+        "id": "iestyn-bragwen",
+        "worldPersonId": "person--haus-bragwen--iestyn-bragwen",
+        "name": "Iestyn Bragwen",
+        "title": "Brauer",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1714",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-bragwen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "26 Jahre. Sohn Owains und Eleris; mit Rhiain Eiddfer verheiratet. Arbeitet am gemeinsamen Brauerhof.",
+        "extensions": {}
+      },
+      {
+        "id": "rhiain-eiddfer",
+        "worldPersonId": "person--haus-eiddfer--rhiain-eiddfer",
+        "name": "Rhiain Eiddfer",
+        "title": "Brauerin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1717",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eiddfer",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "23 Jahre. Tochter Cadells und Ffions; mit Iestyn Bragwen verheiratet. Ihre Ehe verbindet die beiden Betreiberfamilien.",
+        "extensions": {}
+      },
+      {
+        "id": "catrin-bragwen",
+        "worldPersonId": "person--haus-bragwen--catrin-bragwen",
+        "name": "Catrin Bragwen",
+        "title": "Verstorbene Tochter",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1720",
+        "death": "1740",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-bragwen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "20 Jahre. Kam eines Tages nicht nach Hause und gehört zu den Opfern des Fleischsammlers. Keine bestimmte Reise, Tätigkeit, Fundstelle oder Täterbeobachtung ergänzen.",
+        "extensions": {}
+      },
+      {
+        "id": "nerys-bragwen",
+        "worldPersonId": "person--haus-bragwen--nerys-bragwen",
+        "name": "Nerys Bragwen",
+        "title": "Kind auf dem Brauerhof",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1738",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-bragwen",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "2 Jahre. Tochter Iestyns und Rhiains; nur in der Bragwen-Akte fortgeführt.",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-owain-eleri-bragwen",
+        "participantIds": [
+          "owain-bragwen",
+          "eleri-spouse-bragwen"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-iestyn-bragwen-rhiain-eiddfer",
+        "participantIds": [
+          "iestyn-bragwen",
+          "rhiain-eiddfer"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1737",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsame Ehe in beiden Familienakten; Kinder werden ausschließlich bei Bragwen fortgeführt.",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-iestyn-bragwen",
+        "childId": "iestyn-bragwen",
+        "parentIds": [
+          "owain-bragwen",
+          "eleri-spouse-bragwen"
+        ],
+        "partnershipId": "marriage-owain-eleri-bragwen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-catrin-bragwen",
+        "childId": "catrin-bragwen",
+        "parentIds": [
+          "owain-bragwen",
+          "eleri-spouse-bragwen"
+        ],
+        "partnershipId": "marriage-owain-eleri-bragwen",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-nerys-bragwen",
+        "childId": "nerys-bragwen",
+        "parentIds": [
+          "iestyn-bragwen",
+          "rhiain-eiddfer"
+        ],
+        "partnershipId": "marriage-iestyn-bragwen-rhiain-eiddfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-owain-eleri-bragwen",
+      "houseId": "house-bragwen",
+      "crestSubtitle": "Haushalt im Jahr 1740",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      }
+    },
+    "cadetBranches": [],
+    "timeJumps": [],
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "owain-bragwen",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 1,
+      "sourceNote": "Nutzerauftrag vom 2. November 2026. Neue Rheunwaith-Familie und heutiger Landhaushalt; frühere Generationen sind nicht ausgearbeitet. Die beiden Betreiberfamilien und der Tod einer Tochter sind Nutzerfestlegungen. Catrins Name und Alter 20 sowie die konkrete verbindende Ehe wurden neu ausgearbeitet.",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "housePage": true,
+        "pageTitle": "Familie Bragwen",
+        "description": "Rheunwaith-Brauerfamilie am gemeinsam mit den Eiddfer geführten Brauerhof. Die verschwägerten Betreiber arbeiten mit der Teyrngarch Brauerzunft zusammen und beliefern Gwynthor.",
+        "quote": "",
+        "quoteBy": "",
+        "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-bragwen.png",
+        "stats": [
+          [
+            "Familie",
+            "Bragwen"
+          ],
+          [
+            "Stand",
+            "Bürgerliche Rheunwaith-Familie"
+          ],
+          [
+            "Stammsitz",
+            "Brauerhof Bragwen & Eiddfer · Gwynthor"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-bragwen.png",
+          "sideWidth": 100,
+          "biographyTitle": "Brauerhof Bragwen & Eiddfer",
+          "biographyText": "<p>Der Brauerhof Bragwen &amp; Eiddfer wird von zwei Familien gemeinsam betrieben. Die Ehe Iestyn Bragwens mit Rhiain Eiddfer hat ihre Haushalte auch verwandtschaftlich verbunden. Der Hof arbeitet mit der Teyrngarch Brauerzunft zusammen und versorgt Gwynthor mit Bier aus deren Produktion.</p>",
+          "historyTitle": "Die heutige Familie",
+          "historyText": "<p>Owain und Eleri Bragwen arbeiten mit Iestyn und seiner Frau Rhiain. Deren kleine Tochter Nerys wächst auf dem gemeinsamen Hof auf. Catrin, Owains und Eleris zwanzigjährige Tochter, kam eines Tages nicht nach Hause. Sie gehört zu den Mordopfern. Ihr Tod trifft beide verschwägerten Haushalte.</p>",
+          "worksTitle": "Arbeit und Versorgung",
+          "works": [
+            "Gemeinsame Brauarbeit und Hofwirtschaft mit Familie Eiddfer.",
+            "Zusammenarbeit mit der Teyrngarch Brauerzunft.",
+            "Versorgung Gwynthors mit Teyrngarch-Bier und zugehöriger Produktion."
+          ],
+          "connectionsTitle": "Verbindungen",
+          "connections": [
+            {
+              "name": "Familie Eiddfer",
+              "detail": "Verschwägerte Mitbetreiber desselben Brauerhofes."
+            },
+            {
+              "name": "Teyrngarch Brauerzunft",
+              "detail": "Kooperationspartner für die Bierproduktion und Versorgung Gwynthors."
+            }
+          ],
+          "documentsTitle": "Orte und Verweise",
+          "documents": [
+            {
+              "title": "Brauerhof Bragwen & Eiddfer",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-bragwen.png",
+              "text": "Gemeinsamer Brauerhof zweier verschwägerter Familien, die mit der Teyrngarch Brauerzunft zusammenarbeiten und Gwynthor mit deren Bier versorgen.",
+              "link": "../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-074"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-eiddfer",
+      "title": "Familie Eiddfer",
+      "motto": "",
+      "description": "Rheunwaith-Brauerfamilie, die gemeinsam mit den verschwägerten Bragwen den Brauerhof bei Gwynthor betreibt. Partner der Teyrngarch Brauerzunft.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-eiddfer.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Brauerhof Bragwen & Eiddfer",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "houses": [
+      {
+        "id": "house-eiddfer",
+        "name": "Familie Eiddfer",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-eiddfer.png",
+        "status": "active"
+      },
+      {
+        "id": "house-bragwen",
+        "name": "Familie Bragwen",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-bragwen.png",
+        "status": "active"
+      }
+    ],
+    "persons": [
+      {
+        "id": "cadell-eiddfer",
+        "worldPersonId": "person--haus-eiddfer--cadell-eiddfer",
+        "name": "Cadell Eiddfer",
+        "title": "Brauer und Mitbetreiber",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eiddfer",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "49 Jahre. Führt den Hof mit Owain Bragwen; Vater Rhiains und Tegids.",
+        "extensions": {}
+      },
+      {
+        "id": "ffion-spouse-eiddfer",
+        "worldPersonId": "person--family-tree--ffion-spouse-eiddfer",
+        "name": "Ffion",
+        "title": "Brauerin und Verantwortliche für Hoflieferungen",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "46 Jahre. Arbeitet in der gemeinsamen Hofwirtschaft; Herkunftsfamilie nicht festgelegt.",
+        "extensions": {}
+      },
+      {
+        "id": "rhiain-eiddfer",
+        "worldPersonId": "person--haus-eiddfer--rhiain-eiddfer",
+        "name": "Rhiain Eiddfer",
+        "title": "Brauerin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1717",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eiddfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "23 Jahre. Tochter Cadells und Ffions; mit Iestyn Bragwen verheiratet. Ihre Ehe verbindet die beiden Betreiberfamilien.",
+        "extensions": {}
+      },
+      {
+        "id": "iestyn-bragwen",
+        "worldPersonId": "person--haus-bragwen--iestyn-bragwen",
+        "name": "Iestyn Bragwen",
+        "title": "Brauer",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1714",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-bragwen",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "26 Jahre. Sohn Owains und Eleris; mit Rhiain Eiddfer verheiratet. Arbeitet am gemeinsamen Brauerhof.",
+        "extensions": {}
+      },
+      {
+        "id": "tegid-eiddfer",
+        "worldPersonId": "person--haus-eiddfer--tegid-eiddfer",
+        "name": "Tegid Eiddfer",
+        "title": "Brauer und Fuhrhelfer",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-eiddfer",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "21 Jahre. Arbeitet in der Produktion und beim Bereitstellen der Lieferungen. Keine besondere Kenntnis über den Mörder festgelegt.",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-cadell-ffion-eiddfer",
+        "participantIds": [
+          "cadell-eiddfer",
+          "ffion-spouse-eiddfer"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-iestyn-bragwen-rhiain-eiddfer",
+        "participantIds": [
+          "iestyn-bragwen",
+          "rhiain-eiddfer"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1737",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gemeinsame Ehe in beiden Familienakten; Kinder werden ausschließlich bei Bragwen fortgeführt.",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-rhiain-eiddfer",
+        "childId": "rhiain-eiddfer",
+        "parentIds": [
+          "cadell-eiddfer",
+          "ffion-spouse-eiddfer"
+        ],
+        "partnershipId": "marriage-cadell-ffion-eiddfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-tegid-eiddfer",
+        "childId": "tegid-eiddfer",
+        "parentIds": [
+          "cadell-eiddfer",
+          "ffion-spouse-eiddfer"
+        ],
+        "partnershipId": "marriage-cadell-ffion-eiddfer",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-cadell-ffion-eiddfer",
+      "houseId": "house-eiddfer",
+      "crestSubtitle": "Haushalt im Jahr 1740",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      }
+    },
+    "cadetBranches": [
+      {
+        "id": "married-rhiain-eiddfer-bragwen",
+        "name": "Rhiain · Familie Bragwen",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-iestyn-bragwen-rhiain-eiddfer",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-bragwen",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-bragwen.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-bragwen",
+        "notes": "Dieselbe Ehe und dieselben Personen wie bei Bragwen. Nerys und weitere Nachkommen werden ausschließlich dort fortgeführt.",
+        "extensions": {}
+      }
+    ],
+    "timeJumps": [],
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "cadell-eiddfer",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 1,
+      "sourceNote": "Nutzerauftrag vom 2. November 2026. Neue Rheunwaith-Familie und heutiger Landhaushalt; frühere Generationen sind nicht ausgearbeitet.",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "housePage": true,
+        "pageTitle": "Familie Eiddfer",
+        "description": "Rheunwaith-Brauerfamilie, die gemeinsam mit den verschwägerten Bragwen den Brauerhof bei Gwynthor betreibt. Partner der Teyrngarch Brauerzunft.",
+        "quote": "",
+        "quoteBy": "",
+        "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-eiddfer.png",
+        "stats": [
+          [
+            "Familie",
+            "Eiddfer"
+          ],
+          [
+            "Stand",
+            "Bürgerliche Rheunwaith-Familie"
+          ],
+          [
+            "Stammsitz",
+            "Brauerhof Bragwen & Eiddfer · Gwynthor"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-eiddfer.png",
+          "sideWidth": 100,
+          "biographyTitle": "Brauerhof Bragwen & Eiddfer",
+          "biographyText": "<p>Die Eiddfer betreiben den Brauerhof gemeinsam mit Familie Bragwen. Beide Familien teilen Arbeit und Lieferungen und sind durch Rhiains Ehe mit Iestyn Bragwen verschwägert. Ihre Kooperation mit der Teyrngarch Brauerzunft dient der Versorgung Gwynthors mit Bier.</p>",
+          "historyTitle": "Die heutige Familie",
+          "historyText": "<p>Cadell und Ffion arbeiten mit ihrem Sohn Tegid und der jüngeren, mit den Bragwen verbundenen Generation. Der Tod Catrin Bragwens belastet auch diesen Haushalt. Durch die gemeinsame Arbeit und die Ehe ihrer Kinder sind die beiden Familien eng miteinander verbunden.</p>",
+          "worksTitle": "Arbeit und Versorgung",
+          "works": [
+            "Gemeinsame Produktion und Hofarbeit mit Familie Bragwen.",
+            "Vorbereitung und Weiterleitung der Lieferungen nach Gwynthor.",
+            "Kooperation mit der Teyrngarch Brauerzunft."
+          ],
+          "connectionsTitle": "Verbindungen",
+          "connections": [
+            {
+              "name": "Familie Bragwen",
+              "detail": "Verschwägerte Mitbetreiber desselben Brauerhofes."
+            },
+            {
+              "name": "Teyrngarch Brauerzunft",
+              "detail": "Kooperationspartner des Brauerhofes."
+            }
+          ],
+          "documentsTitle": "Orte und Verweise",
+          "documents": [
+            {
+              "title": "Brauerhof Bragwen & Eiddfer",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-eiddfer.png",
+              "text": "Gemeinsamer Brauerhof zweier verschwägerter Familien, die mit der Teyrngarch Brauerzunft zusammenarbeiten und Gwynthor mit deren Bier versorgen.",
+              "link": "../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-074"
+            }
+          ]
+        }
+      }
+    }
+  }
+]

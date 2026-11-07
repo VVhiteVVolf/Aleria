@@ -1,0 +1,467 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-tirfelyn--bedwyr-tirfelyn",
+  "slug": "bedwyr-tirfelyn",
+  "identity": {
+    "name": "Bedwyr Tirfelyn",
+    "aliases": [],
+    "worldPersonId": "person--haus-tirfelyn--bedwyr-tirfelyn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-tirfelyn",
+      "label": "Familie Tirfelyn"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-tirfelyn",
+        "familyTitle": "Familie Tirfelyn",
+        "personId": "bedwyr-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--bedwyr-tirfelyn",
+        "houseId": "house-tirfelyn",
+        "houseName": "Familie Tirfelyn",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Bedwyr Tirfelyn\",\"title\":\"Hofkind und junger Viehhelfer\",\"birth\":\"1727\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tirfelyn\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/bedwyr-tirfelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"13 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"caradog-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--caradog-tirfelyn\",\"name\":\"Caradog Tirfelyn\"},{\"personId\":\"enid-spouse-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--enid-spouse-tirfelyn\",\"name\":\"Enid\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-tirfelyn--bedwyr-tirfelyn",
+      "documentIds": [
+        "person--haus-tirfelyn--bedwyr-tirfelyn"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-tirfelyn--bedwyr-tirfelyn",
+          "createdAt": "2026-11-07T00:00:00.000Z",
+          "updatedAt": "2026-11-07T00:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-tirfelyn",
+        "personId": "bedwyr-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--bedwyr-tirfelyn",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthorer Landfamilien/tirfelyn/bedwyr-tirfelyn.json",
+    "sourceExportedAt": "2026-11-07T00:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-07T00:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-tirfelyn--bedwyr-tirfelyn"
+    ],
+    "contentHash": "3458cf296971d98b75ddd6b73e41dec96f92e920952c64235cd7176f7bd1d2fe"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-landfamilien"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Bedwyr Tirfelyn",
+        "title": "Hofkind und junger Viehhelfer",
+        "fraktion": "Familie Tirfelyn",
+        "role": "Hofkind und junger Viehhelfer",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "origin": "Rheunwaith · Cenyr",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Bedwyr Tirfelyn ist im Jahr 1740 13 Jahre alt und wurde 1727 geboren. Bedwyr Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.\n\nBedwyr übernimmt altersgemäße Arbeiten bei Tieren und Hofpflege. Er ist Gareths und Ceridwens jüngerer Bruder.\n\nDie Eltern sind Caradog Tirfelyn, Enid. Zur Geschwisterreihe gehören Gareth Tirfelyn, Ceridwen Tirfelyn.\n\nDer Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb.\n\nDer Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.\n\nBedwyr Tirfelyn hat rotes Haar und braune Augen. Sein kurzes Haar steht in lebhaften, zerzausten Strähnen ab. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-07T00:00:00.000Z",
+        "updatedAt": "2026-11-07T00:00:00.000Z",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/bedwyr-tirfelyn.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schemaVersion": 1,
+          "biographyPage": true,
+          "pageTitle": "Bedwyr Tirfelyn",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/bedwyr-tirfelyn.png",
+          "imageWidth": 32,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "stats": [
+            [
+              "Name",
+              "Bedwyr Tirfelyn"
+            ],
+            [
+              "Geburt",
+              "1727"
+            ],
+            [
+              "Stand 1740",
+              "13 Jahre"
+            ],
+            [
+              "Familie",
+              "Tirfelyn"
+            ],
+            [
+              "Wohnort",
+              "Tirfelyn-Hof"
+            ],
+            [
+              "Aufgabe",
+              "Hofkind und junger Viehhelfer"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/bedwyr-tirfelyn.png",
+            "portraitFit": "contain",
+            "biographyTitle": "Hofkind und junger Viehhelfer",
+            "biographyText": "<p>Bedwyr Tirfelyn ist im Jahr 1740 13 Jahre alt und wurde 1727 geboren. Bedwyr Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.</p><p>Bedwyr übernimmt altersgemäße Arbeiten bei Tieren und Hofpflege. Er ist Gareths und Ceridwens jüngerer Bruder.</p>",
+            "historyTitle": "Familie und Lebensweg",
+            "historyText": "<p>Die Eltern sind Caradog Tirfelyn, Enid. Zur Geschwisterreihe gehören Gareth Tirfelyn, Ceridwen Tirfelyn.</p><p>Der Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.</p>",
+            "worksTitle": "Der gemeinsame Lebensunterhalt",
+            "works": [
+              "Der Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb."
+            ],
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Erscheinung",
+                "text": "<p>Bedwyr Tirfelyn hat rotes Haar und braune Augen. Sein kurzes Haar steht in lebhaften, zerzausten Strähnen ab. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+              }
+            ],
+            "connectionsTitle": "Die nächsten Angehörigen",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Caradog Tirfelyn",
+                "detail": "Vater",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/caradog-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Enid",
+                "detail": "Mutter",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/enid-spouse-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Gareth Tirfelyn",
+                "detail": "Bruder",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gareth-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Ceridwen Tirfelyn",
+                "detail": "Schwester",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/ceridwen-tirfelyn.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Haus und Herkunft",
+            "documents": [
+              {
+                "title": "Familie Tirfelyn",
+                "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+                "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=bedwyr-tirfelyn"
+              },
+              {
+                "title": "Tirfelyn-Hof",
+                "text": "Die gemeinsame Hausgeschichte der Familie.",
+                "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-tirfelyn"
+              }
+            ],
+            "footer": "Tirfelyn-Hof · Rheunwaith · Cenyr · Stand 1740"
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-tirfelyn--bedwyr-tirfelyn"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-tirfelyn--bedwyr-tirfelyn",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1727",
+          "death": "",
+          "houseId": "house-tirfelyn",
+          "houseName": "Familie Tirfelyn",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [
+            "13 Jahre"
+          ],
+          "sources": [
+            {
+              "familyId": "haus-tirfelyn",
+              "personId": "bedwyr-tirfelyn",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-07T00:00:00.000Z",
+              "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=bedwyr-tirfelyn",
+              "fingerprint": "{\"name\":\"Bedwyr Tirfelyn\",\"title\":\"Hofkind und junger Viehhelfer\",\"birth\":\"1727\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tirfelyn\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/bedwyr-tirfelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"13 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"caradog-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--caradog-tirfelyn\",\"name\":\"Caradog Tirfelyn\"},{\"personId\":\"enid-spouse-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--enid-spouse-tirfelyn\",\"name\":\"Enid\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "caradog-tirfelyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-tirfelyn--caradog-tirfelyn",
+                "name": "Caradog Tirfelyn"
+              },
+              {
+                "personId": "enid-spouse-tirfelyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--enid-spouse-tirfelyn",
+                "name": "Enid"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "id": "person--haus-tirfelyn--bedwyr-tirfelyn",
+        "race": "Mensch",
+        "age": 13
+      }
+    ]
+  },
+  "character": {
+    "name": "Bedwyr Tirfelyn",
+    "title": "Hofkind und junger Viehhelfer",
+    "fraktion": "Familie Tirfelyn",
+    "role": "Hofkind und junger Viehhelfer",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Tirfelyn-Hof · Bannkreis Gwynthor",
+    "origin": "Rheunwaith · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Bedwyr Tirfelyn ist im Jahr 1740 13 Jahre alt und wurde 1727 geboren. Bedwyr Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.\n\nBedwyr übernimmt altersgemäße Arbeiten bei Tieren und Hofpflege. Er ist Gareths und Ceridwens jüngerer Bruder.\n\nDie Eltern sind Caradog Tirfelyn, Enid. Zur Geschwisterreihe gehören Gareth Tirfelyn, Ceridwen Tirfelyn.\n\nDer Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb.\n\nDer Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.\n\nBedwyr Tirfelyn hat rotes Haar und braune Augen. Sein kurzes Haar steht in lebhaften, zerzausten Strähnen ab. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-07T00:00:00.000Z",
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/bedwyr-tirfelyn.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schemaVersion": 1,
+      "biographyPage": true,
+      "pageTitle": "Bedwyr Tirfelyn",
+      "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/bedwyr-tirfelyn.png",
+      "imageWidth": 32,
+      "imageTall": true,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "stats": [
+        [
+          "Name",
+          "Bedwyr Tirfelyn"
+        ],
+        [
+          "Geburt",
+          "1727"
+        ],
+        [
+          "Stand 1740",
+          "13 Jahre"
+        ],
+        [
+          "Familie",
+          "Tirfelyn"
+        ],
+        [
+          "Wohnort",
+          "Tirfelyn-Hof"
+        ],
+        [
+          "Aufgabe",
+          "Hofkind und junger Viehhelfer"
+        ]
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/bedwyr-tirfelyn.png",
+        "portraitFit": "contain",
+        "biographyTitle": "Hofkind und junger Viehhelfer",
+        "biographyText": "<p>Bedwyr Tirfelyn ist im Jahr 1740 13 Jahre alt und wurde 1727 geboren. Bedwyr Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.</p><p>Bedwyr übernimmt altersgemäße Arbeiten bei Tieren und Hofpflege. Er ist Gareths und Ceridwens jüngerer Bruder.</p>",
+        "historyTitle": "Familie und Lebensweg",
+        "historyText": "<p>Die Eltern sind Caradog Tirfelyn, Enid. Zur Geschwisterreihe gehören Gareth Tirfelyn, Ceridwen Tirfelyn.</p><p>Der Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.</p>",
+        "worksTitle": "Der gemeinsame Lebensunterhalt",
+        "works": [
+          "Der Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb."
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "<p>Bedwyr Tirfelyn hat rotes Haar und braune Augen. Sein kurzes Haar steht in lebhaften, zerzausten Strähnen ab. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+          }
+        ],
+        "connectionsTitle": "Die nächsten Angehörigen",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Caradog Tirfelyn",
+            "detail": "Vater",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/caradog-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Enid",
+            "detail": "Mutter",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/enid-spouse-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Gareth Tirfelyn",
+            "detail": "Bruder",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gareth-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Ceridwen Tirfelyn",
+            "detail": "Schwester",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/ceridwen-tirfelyn.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Haus und Herkunft",
+        "documents": [
+          {
+            "title": "Familie Tirfelyn",
+            "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+            "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=bedwyr-tirfelyn"
+          },
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Die gemeinsame Hausgeschichte der Familie.",
+            "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-tirfelyn"
+          }
+        ],
+        "footer": "Tirfelyn-Hof · Rheunwaith · Cenyr · Stand 1740"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-tirfelyn--bedwyr-tirfelyn"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-tirfelyn--bedwyr-tirfelyn",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1727",
+      "death": "",
+      "houseId": "house-tirfelyn",
+      "houseName": "Familie Tirfelyn",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "13 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-tirfelyn",
+          "personId": "bedwyr-tirfelyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-07T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=bedwyr-tirfelyn",
+          "fingerprint": "{\"name\":\"Bedwyr Tirfelyn\",\"title\":\"Hofkind und junger Viehhelfer\",\"birth\":\"1727\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tirfelyn\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/bedwyr-tirfelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"13 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"caradog-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--caradog-tirfelyn\",\"name\":\"Caradog Tirfelyn\"},{\"personId\":\"enid-spouse-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--enid-spouse-tirfelyn\",\"name\":\"Enid\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "caradog-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tirfelyn--caradog-tirfelyn",
+            "name": "Caradog Tirfelyn"
+          },
+          {
+            "personId": "enid-spouse-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--enid-spouse-tirfelyn",
+            "name": "Enid"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--haus-tirfelyn--bedwyr-tirfelyn",
+    "race": "Mensch",
+    "age": 13
+  }
+}

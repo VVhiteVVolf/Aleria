@@ -1,0 +1,609 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-tirfelyn--eudaf-tirfelyn",
+  "slug": "eudaf-tirfelyn",
+  "identity": {
+    "name": "Eudaf Tirfelyn",
+    "aliases": [],
+    "worldPersonId": "person--haus-tirfelyn--eudaf-tirfelyn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-tirfelyn",
+      "label": "Familie Tirfelyn"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-tirfelyn",
+        "familyTitle": "Familie Tirfelyn",
+        "personId": "eudaf-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--eudaf-tirfelyn",
+        "houseId": "house-tirfelyn",
+        "houseName": "Familie Tirfelyn",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Eudaf Tirfelyn\",\"title\":\"Hofvorsteher und Viehwirtschaftskoordinator\",\"birth\":\"1688\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tirfelyn\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eudaf-tirfelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"52 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"haus-tirfelyn-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-tirfelyn--haus-tirfelyn-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-tirfelyn-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-tirfelyn--haus-tirfelyn-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"glesni-spouse-tirfelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--glesni-spouse-tirfelyn\",\"name\":\"Madrun\"}],\"children\":[{\"personId\":\"cadfan-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--cadfan-tirfelyn\",\"name\":\"Gwallog Tirfelyn\"},{\"personId\":\"gwion-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--gwion-tirfelyn\",\"name\":\"Cynddylan Tirfelyn\"},{\"personId\":\"meleri-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--meleri-tirfelyn\",\"name\":\"Eiliwedd Tirfelyn\"},{\"personId\":\"tegwen-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--tegwen-tirfelyn\",\"name\":\"Tegfedd Tirfelyn\"},{\"personId\":\"maelgwn-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--maelgwn-tirfelyn\",\"name\":\"Gwynllyw Tirfelyn\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-tirfelyn--eudaf-tirfelyn",
+      "documentIds": [
+        "person--haus-tirfelyn--eudaf-tirfelyn"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-tirfelyn--eudaf-tirfelyn",
+          "createdAt": "2026-11-07T00:00:00.000Z",
+          "updatedAt": "2026-11-07T00:00:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-tirfelyn",
+        "personId": "eudaf-tirfelyn",
+        "worldPersonId": "person--haus-tirfelyn--eudaf-tirfelyn",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthorer Landfamilien/tirfelyn/eudaf-tirfelyn.json",
+    "sourceExportedAt": "2026-11-07T00:00:00.000Z",
+    "sourceUpdatedAt": "2026-11-07T00:00:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-tirfelyn--eudaf-tirfelyn"
+    ],
+    "contentHash": "2932ad396c7480ea61295531db090fb3a19e8b29162169fcbabbeba4d1cc5d7f"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-landfamilien"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Eudaf Tirfelyn",
+        "title": "Hofvorsteher und Viehwirtschaftskoordinator",
+        "fraktion": "Familie Tirfelyn",
+        "role": "Hofvorsteher und Viehwirtschaftskoordinator",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "origin": "Rheunwaith · Cenyr",
+        "plotNode": "",
+        "profileLink": "",
+        "playerOwner": "",
+        "bio": "Eudaf Tirfelyn ist im Jahr 1740 52 Jahre alt und wurde 1688 geboren. Eudaf Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.\n\nEudaf führt den Hof gemeinsam mit seinem älteren Bruder Caradog. Er teilt die Arbeit an Stall, Futter und Vorräten ein und hilft selbst bei den täglichen Arbeiten mit.\n\nDie Eltern dieser nahen Familiengeneration sind nicht namentlich überliefert. Zur Geschwisterreihe gehören Caradog Tirfelyn. Ehe mit Madrun. Die Kinder sind Gwallog Tirfelyn, Cynddylan Tirfelyn, Eiliwedd Tirfelyn, Tegfedd Tirfelyn, Gwynllyw Tirfelyn.\n\nDer Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb.\n\nDer Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.\n\nEudaf Tirfelyn hat rotes Haar und braune Augen. Er bürstet das bereits leicht ergraute Haar zurück und trägt einen schmalen Schnurrbart. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-11-07T00:00:00.000Z",
+        "updatedAt": "2026-11-07T00:00:00.000Z",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eudaf-tirfelyn.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "inventory": null,
+        "biography": {
+          "schemaVersion": 1,
+          "biographyPage": true,
+          "pageTitle": "Eudaf Tirfelyn",
+          "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eudaf-tirfelyn.png",
+          "imageWidth": 32,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "stats": [
+            [
+              "Name",
+              "Eudaf Tirfelyn"
+            ],
+            [
+              "Geburt",
+              "1688"
+            ],
+            [
+              "Stand 1740",
+              "52 Jahre"
+            ],
+            [
+              "Familie",
+              "Tirfelyn"
+            ],
+            [
+              "Wohnort",
+              "Tirfelyn-Hof"
+            ],
+            [
+              "Aufgabe",
+              "Hofvorsteher und Viehwirtschaftskoordinator"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eudaf-tirfelyn.png",
+            "portraitFit": "contain",
+            "biographyTitle": "Hofvorsteher und Viehwirtschaftskoordinator",
+            "biographyText": "<p>Eudaf Tirfelyn ist im Jahr 1740 52 Jahre alt und wurde 1688 geboren. Eudaf Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.</p><p>Eudaf führt den Hof gemeinsam mit seinem älteren Bruder Caradog. Er teilt die Arbeit an Stall, Futter und Vorräten ein und hilft selbst bei den täglichen Arbeiten mit.</p>",
+            "historyTitle": "Familie und Lebensweg",
+            "historyText": "<p>Die Eltern dieser nahen Familiengeneration sind nicht namentlich überliefert. Zur Geschwisterreihe gehören Caradog Tirfelyn. Ehe mit Madrun. Die Kinder sind Gwallog Tirfelyn, Cynddylan Tirfelyn, Eiliwedd Tirfelyn, Tegfedd Tirfelyn, Gwynllyw Tirfelyn.</p><p>Der Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.</p>",
+            "worksTitle": "Der gemeinsame Lebensunterhalt",
+            "works": [
+              "Der Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb."
+            ],
+            "extraSections": [
+              {
+                "position": "afterWorks",
+                "mode": "text",
+                "title": "Erscheinung",
+                "text": "<p>Eudaf Tirfelyn hat rotes Haar und braune Augen. Er bürstet das bereits leicht ergraute Haar zurück und trägt einen schmalen Schnurrbart. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+              }
+            ],
+            "connectionsTitle": "Die nächsten Angehörigen",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Madrun",
+                "detail": "Ehe mit Madrun",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/glesni-spouse-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Gwallog Tirfelyn",
+                "detail": "Sohn",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/cadfan-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Cynddylan Tirfelyn",
+                "detail": "Sohn",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gwion-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Eiliwedd Tirfelyn",
+                "detail": "Tochter",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/meleri-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Tegfedd Tirfelyn",
+                "detail": "Tochter",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/tegwen-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Gwynllyw Tirfelyn",
+                "detail": "Sohn",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/maelgwn-tirfelyn.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Caradog Tirfelyn",
+                "detail": "Bruder",
+                "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/caradog-tirfelyn.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Haus und Herkunft",
+            "documents": [
+              {
+                "title": "Familie Tirfelyn",
+                "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+                "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=eudaf-tirfelyn"
+              },
+              {
+                "title": "Tirfelyn-Hof",
+                "text": "Die gemeinsame Hausgeschichte der Familie.",
+                "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-tirfelyn"
+              }
+            ],
+            "footer": "Tirfelyn-Hof · Rheunwaith · Cenyr · Stand 1740"
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--haus-tirfelyn--eudaf-tirfelyn"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-tirfelyn--eudaf-tirfelyn",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1688",
+          "death": "",
+          "houseId": "house-tirfelyn",
+          "houseName": "Familie Tirfelyn",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [
+            "52 Jahre"
+          ],
+          "sources": [
+            {
+              "familyId": "haus-tirfelyn",
+              "personId": "eudaf-tirfelyn",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-07T00:00:00.000Z",
+              "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=eudaf-tirfelyn",
+              "fingerprint": "{\"name\":\"Eudaf Tirfelyn\",\"title\":\"Hofvorsteher und Viehwirtschaftskoordinator\",\"birth\":\"1688\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tirfelyn\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eudaf-tirfelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"52 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"haus-tirfelyn-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-tirfelyn--haus-tirfelyn-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-tirfelyn-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-tirfelyn--haus-tirfelyn-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"glesni-spouse-tirfelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--glesni-spouse-tirfelyn\",\"name\":\"Madrun\"}],\"children\":[{\"personId\":\"cadfan-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--cadfan-tirfelyn\",\"name\":\"Gwallog Tirfelyn\"},{\"personId\":\"gwion-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--gwion-tirfelyn\",\"name\":\"Cynddylan Tirfelyn\"},{\"personId\":\"meleri-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--meleri-tirfelyn\",\"name\":\"Eiliwedd Tirfelyn\"},{\"personId\":\"tegwen-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--tegwen-tirfelyn\",\"name\":\"Tegfedd Tirfelyn\"},{\"personId\":\"maelgwn-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--maelgwn-tirfelyn\",\"name\":\"Gwynllyw Tirfelyn\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "haus-tirfelyn-gruender",
+                "type": "claimed",
+                "legitimacy": "unknown",
+                "certainty": "unknown",
+                "worldPersonId": "person--haus-tirfelyn--haus-tirfelyn-gruender",
+                "name": "Unbekannter Gründer"
+              },
+              {
+                "personId": "haus-tirfelyn-gruenderin",
+                "type": "claimed",
+                "legitimacy": "unknown",
+                "certainty": "unknown",
+                "worldPersonId": "person--haus-tirfelyn--haus-tirfelyn-gruenderin",
+                "name": "Unbekannte Gründerin"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "glesni-spouse-tirfelyn",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--glesni-spouse-tirfelyn",
+                "name": "Madrun"
+              }
+            ],
+            "children": [
+              {
+                "personId": "cadfan-tirfelyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-tirfelyn--cadfan-tirfelyn",
+                "name": "Gwallog Tirfelyn"
+              },
+              {
+                "personId": "gwion-tirfelyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-tirfelyn--gwion-tirfelyn",
+                "name": "Cynddylan Tirfelyn"
+              },
+              {
+                "personId": "meleri-tirfelyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-tirfelyn--meleri-tirfelyn",
+                "name": "Eiliwedd Tirfelyn"
+              },
+              {
+                "personId": "tegwen-tirfelyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-tirfelyn--tegwen-tirfelyn",
+                "name": "Tegfedd Tirfelyn"
+              },
+              {
+                "personId": "maelgwn-tirfelyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-tirfelyn--maelgwn-tirfelyn",
+                "name": "Gwynllyw Tirfelyn"
+              }
+            ]
+          }
+        },
+        "id": "person--haus-tirfelyn--eudaf-tirfelyn",
+        "race": "Mensch",
+        "age": 52
+      }
+    ]
+  },
+  "character": {
+    "name": "Eudaf Tirfelyn",
+    "title": "Hofvorsteher und Viehwirtschaftskoordinator",
+    "fraktion": "Familie Tirfelyn",
+    "role": "Hofvorsteher und Viehwirtschaftskoordinator",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Tirfelyn-Hof · Bannkreis Gwynthor",
+    "origin": "Rheunwaith · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Eudaf Tirfelyn ist im Jahr 1740 52 Jahre alt und wurde 1688 geboren. Eudaf Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.\n\nEudaf führt den Hof gemeinsam mit seinem älteren Bruder Caradog. Er teilt die Arbeit an Stall, Futter und Vorräten ein und hilft selbst bei den täglichen Arbeiten mit.\n\nDie Eltern dieser nahen Familiengeneration sind nicht namentlich überliefert. Zur Geschwisterreihe gehören Caradog Tirfelyn. Ehe mit Madrun. Die Kinder sind Gwallog Tirfelyn, Cynddylan Tirfelyn, Eiliwedd Tirfelyn, Tegfedd Tirfelyn, Gwynllyw Tirfelyn.\n\nDer Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb.\n\nDer Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.\n\nEudaf Tirfelyn hat rotes Haar und braune Augen. Er bürstet das bereits leicht ergraute Haar zurück und trägt einen schmalen Schnurrbart. Die Kleidung entspricht dem einfachen ländlichen Haushalt.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-07T00:00:00.000Z",
+    "updatedAt": "2026-11-07T00:00:00.000Z",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eudaf-tirfelyn.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schemaVersion": 1,
+      "biographyPage": true,
+      "pageTitle": "Eudaf Tirfelyn",
+      "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eudaf-tirfelyn.png",
+      "imageWidth": 32,
+      "imageTall": true,
+      "imageFit": "contain",
+      "imagePosition": "center",
+      "stats": [
+        [
+          "Name",
+          "Eudaf Tirfelyn"
+        ],
+        [
+          "Geburt",
+          "1688"
+        ],
+        [
+          "Stand 1740",
+          "52 Jahre"
+        ],
+        [
+          "Familie",
+          "Tirfelyn"
+        ],
+        [
+          "Wohnort",
+          "Tirfelyn-Hof"
+        ],
+        [
+          "Aufgabe",
+          "Hofvorsteher und Viehwirtschaftskoordinator"
+        ]
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eudaf-tirfelyn.png",
+        "portraitFit": "contain",
+        "biographyTitle": "Hofvorsteher und Viehwirtschaftskoordinator",
+        "biographyText": "<p>Eudaf Tirfelyn ist im Jahr 1740 52 Jahre alt und wurde 1688 geboren. Eudaf Tirfelyn lebt mit der Familie Tirfelyn am Tirfelyn-Hof.</p><p>Eudaf führt den Hof gemeinsam mit seinem älteren Bruder Caradog. Er teilt die Arbeit an Stall, Futter und Vorräten ein und hilft selbst bei den täglichen Arbeiten mit.</p>",
+        "historyTitle": "Familie und Lebensweg",
+        "historyText": "<p>Die Eltern dieser nahen Familiengeneration sind nicht namentlich überliefert. Zur Geschwisterreihe gehören Caradog Tirfelyn. Ehe mit Madrun. Die Kinder sind Gwallog Tirfelyn, Cynddylan Tirfelyn, Eiliwedd Tirfelyn, Tegfedd Tirfelyn, Gwynllyw Tirfelyn.</p><p>Der Tod Ceridwens liegt erst wenige Wochen zurück. Die zweiundzwanzigjährige Tochter Caradogs und Enids wollte ihren Verlobten Gorwyn Helfaen besuchen und kam am folgenden Morgen nicht zurück. Die Trauer gehört seither zum Familienalltag; die tägliche Versorgung von Menschen und Tieren läuft weiter.</p>",
+        "worksTitle": "Der gemeinsame Lebensunterhalt",
+        "works": [
+          "Der Tirfelyn-Hof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und sein jüngerer Bruder Eudaf teilen die Leitung; Feldbau, Viehversorgung, Garten, Vorräte und Hauswirtschaft gehören zu demselben Familienbetrieb."
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Erscheinung",
+            "text": "<p>Eudaf Tirfelyn hat rotes Haar und braune Augen. Er bürstet das bereits leicht ergraute Haar zurück und trägt einen schmalen Schnurrbart. Die Kleidung entspricht dem einfachen ländlichen Haushalt.</p>"
+          }
+        ],
+        "connectionsTitle": "Die nächsten Angehörigen",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Madrun",
+            "detail": "Ehe mit Madrun",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/glesni-spouse-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Gwallog Tirfelyn",
+            "detail": "Sohn",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/cadfan-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Cynddylan Tirfelyn",
+            "detail": "Sohn",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/gwion-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Eiliwedd Tirfelyn",
+            "detail": "Tochter",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/meleri-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Tegfedd Tirfelyn",
+            "detail": "Tochter",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/tegwen-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Gwynllyw Tirfelyn",
+            "detail": "Sohn",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/maelgwn-tirfelyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Caradog Tirfelyn",
+            "detail": "Bruder",
+            "image": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/caradog-tirfelyn.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Haus und Herkunft",
+        "documents": [
+          {
+            "title": "Familie Tirfelyn",
+            "text": "Die Person und ihre Verwandtschaft im bestehenden Stammbaum.",
+            "link": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=eudaf-tirfelyn"
+          },
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Die gemeinsame Hausgeschichte der Familie.",
+            "link": "../Familien Häuser und Clans/kleinehaeuser.html?haus=haus-tirfelyn"
+          }
+        ],
+        "footer": "Tirfelyn-Hof · Rheunwaith · Cenyr · Stand 1740"
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-tirfelyn--eudaf-tirfelyn"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-tirfelyn--eudaf-tirfelyn",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1688",
+      "death": "",
+      "houseId": "house-tirfelyn",
+      "houseName": "Familie Tirfelyn",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "52 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-tirfelyn",
+          "personId": "eudaf-tirfelyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-07T00:00:00.000Z",
+          "lastSyncedAt": "2026-11-07T00:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-tirfelyn&mode=view&person=eudaf-tirfelyn",
+          "fingerprint": "{\"name\":\"Eudaf Tirfelyn\",\"title\":\"Hofvorsteher und Viehwirtschaftskoordinator\",\"birth\":\"1688\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tirfelyn\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/tirfelyn/eudaf-tirfelyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"52 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"haus-tirfelyn-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-tirfelyn--haus-tirfelyn-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-tirfelyn-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-tirfelyn--haus-tirfelyn-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"glesni-spouse-tirfelyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--glesni-spouse-tirfelyn\",\"name\":\"Madrun\"}],\"children\":[{\"personId\":\"cadfan-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--cadfan-tirfelyn\",\"name\":\"Gwallog Tirfelyn\"},{\"personId\":\"gwion-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--gwion-tirfelyn\",\"name\":\"Cynddylan Tirfelyn\"},{\"personId\":\"meleri-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--meleri-tirfelyn\",\"name\":\"Eiliwedd Tirfelyn\"},{\"personId\":\"tegwen-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--tegwen-tirfelyn\",\"name\":\"Tegfedd Tirfelyn\"},{\"personId\":\"maelgwn-tirfelyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tirfelyn--maelgwn-tirfelyn\",\"name\":\"Gwynllyw Tirfelyn\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "haus-tirfelyn-gruender",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "unknown",
+            "worldPersonId": "person--haus-tirfelyn--haus-tirfelyn-gruender",
+            "name": "Unbekannter Gründer"
+          },
+          {
+            "personId": "haus-tirfelyn-gruenderin",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "unknown",
+            "worldPersonId": "person--haus-tirfelyn--haus-tirfelyn-gruenderin",
+            "name": "Unbekannte Gründerin"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "glesni-spouse-tirfelyn",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--glesni-spouse-tirfelyn",
+            "name": "Madrun"
+          }
+        ],
+        "children": [
+          {
+            "personId": "cadfan-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tirfelyn--cadfan-tirfelyn",
+            "name": "Gwallog Tirfelyn"
+          },
+          {
+            "personId": "gwion-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tirfelyn--gwion-tirfelyn",
+            "name": "Cynddylan Tirfelyn"
+          },
+          {
+            "personId": "meleri-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tirfelyn--meleri-tirfelyn",
+            "name": "Eiliwedd Tirfelyn"
+          },
+          {
+            "personId": "tegwen-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tirfelyn--tegwen-tirfelyn",
+            "name": "Tegfedd Tirfelyn"
+          },
+          {
+            "personId": "maelgwn-tirfelyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tirfelyn--maelgwn-tirfelyn",
+            "name": "Gwynllyw Tirfelyn"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-tirfelyn--eudaf-tirfelyn",
+    "race": "Mensch",
+    "age": 52
+  }
+}
