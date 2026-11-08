@@ -31,8 +31,27 @@
           "Llamreis Ankunft",
           "Gwynthor"
         ],
-        "url": "",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=edern-vann",
         "fingerprint": "{\"name\":\"Edern Vann\",\"title\":\"Herbergsmeister · Zimmer und Buchungen\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-vann\",\"portrait\":\"../AleriaAlmanach/assets/letzte-rast/references/edern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"elowen-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--elowen-maerllys\",\"name\":\"Elowen Maerllys\"}],\"children\":[]}}",
+        "score": 1000
+      },
+      {
+        "familyId": "haus-vann",
+        "familyTitle": "Haus Vann",
+        "personId": "edern-vann",
+        "worldPersonId": "person--haus-vann--edern-vann",
+        "houseId": "house-vann",
+        "houseName": "Haus Vann",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-vann&mode=view&person=edern-vann",
+        "fingerprint": "{\"name\":\"Edern Vann\",\"title\":\"Herbergsmeister · Zimmer und Buchungen\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-vann\",\"portrait\":\"../AleriaAlmanach/assets/letzte-rast/references/edern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"madoc-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--madoc-vann\",\"name\":\"Madoc Vann\"},{\"personId\":\"lowri-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--lowri-vann\",\"name\":\"Lowri\"}],\"partners\":[{\"personId\":\"elowen-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--elowen-maerllys\",\"name\":\"Elowen Maerllys\"}],\"children\":[{\"personId\":\"celyn-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--celyn-vann\",\"name\":\"Celyn Vann\"},{\"personId\":\"iolo-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--iolo-vann\",\"name\":\"Iolo Vann\"}]}}",
         "score": 1000
       }
     ],
@@ -74,7 +93,13 @@
         "familyId": "haus-maerllys",
         "personId": "edern-vann",
         "worldPersonId": "person--haus-vann--edern-vann",
-        "url": ""
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=edern-vann"
+      },
+      {
+        "familyId": "haus-vann",
+        "personId": "edern-vann",
+        "worldPersonId": "person--haus-vann--edern-vann",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-vann&mode=view&person=edern-vann"
       }
     ],
     "profile": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=edern-vann"
@@ -87,7 +112,7 @@
     "sourceDocumentIds": [
       "person--haus-vann--edern-vann"
     ],
-    "contentHash": "08fdcfe78079a275bdfcb7c080b8fc7ce49ff4dec06da11e1920f767f8a33919"
+    "contentHash": "3816bbf5b9e7147256be09721b4d1b212ecc203bd0d63868fa9faedd9f90e1ea"
   },
   "local": {
     "notes": "",

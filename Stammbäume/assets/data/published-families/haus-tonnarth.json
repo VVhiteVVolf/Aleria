@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-tonnarth",
-  "revision": 9,
-  "updatedAt": "2026-11-08T16:12:19.209Z",
+  "revision": 10,
+  "updatedAt": "2026-11-08T17:36:05.524Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -303,13 +303,16 @@
         "tags": [],
         "notes": "Bruder Cadell Tonnarths; heiratete Rhoswen Maerllys und hat mit ihr drei Söhne.",
         "extensions": {
-          "registryManagedSourceRevision": 4,
+          "registryManagedFields": [
+            "portrait"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 5
           },
-          "registryManagedFields": [
-            "portrait"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 6
+          },
+          "registryManagedSourceRevision": 4
         }
       },
       {
@@ -329,13 +332,16 @@
         "tags": [],
         "notes": "Tochter Owain Maerllys’ und Gwenllian Ysgrifs; heiratete Madoc Tonnarth.",
         "extensions": {
-          "registryManagedSourceRevision": 4,
+          "registryManagedFields": [
+            "portrait"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 5
           },
-          "registryManagedFields": [
-            "portrait"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 6
+          },
+          "registryManagedSourceRevision": 4
         }
       },
       {
@@ -1429,13 +1435,13 @@
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
         "status": "active",
         "extensions": {
-          "registryManagedSourceRevision": 4,
+          "registryManagedFields": [
+            "emblem"
+          ],
           "registryManagedFieldRevisions": {
             "emblem": 5
           },
-          "registryManagedFields": [
-            "emblem"
-          ]
+          "registryManagedSourceRevision": 4
         }
       },
       {
@@ -1674,7 +1680,7 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 5,
+      "sourceRevision": 6,
       "registryManagedViewFields": [
         "focusPersonId",
         "limitGenerations"
@@ -1705,7 +1711,7 @@
       "registryManagedDocumentFieldRevisions": {},
       "registryManagedHouseProfileFieldRevisions": {},
       "registryManagedExtensionFieldRevisions": {
-        "tailoringContentInventory": 5
+        "tailoringContentInventory": 6
       },
       "registryManagedViewFieldRevisions": {
         "focusPersonId": 4,
@@ -1809,8 +1815,8 @@
         }
       },
       "registryUpgrade": {
-        "fromRevision": 4,
-        "toRevision": 5
+        "fromRevision": 5,
+        "toRevision": 6
       }
     }
   }

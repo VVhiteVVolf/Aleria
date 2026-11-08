@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-falchdyn",
-  "revision": 1,
-  "updatedAt": "2026-11-08T16:12:19.209Z",
+  "revision": 2,
+  "updatedAt": "2026-11-08T17:36:05.524Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -533,15 +533,18 @@
         "tags": [],
         "notes": "Tochter Madoc Falchdyns; heiratete Geraint Maerllys. Die Verbindung wird in beiden Familienakten geführt.",
         "extensions": {
-          "registryManagedSourceRevision": 3,
+          "registryManagedFields": [
+            "portrait",
+            "title"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 4,
             "title": 4
           },
-          "registryManagedFields": [
-            "portrait",
-            "title"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 5
+          },
+          "registryManagedSourceRevision": 3
         }
       },
       {
@@ -561,15 +564,18 @@
         "tags": [],
         "notes": "Angehöriger des Hauses Maerllys; heiratete Llio Falchdyn.",
         "extensions": {
-          "registryManagedSourceRevision": 3,
+          "registryManagedFields": [
+            "portrait",
+            "title"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 4,
             "title": 4
           },
-          "registryManagedFields": [
-            "portrait",
-            "title"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 5
+          },
+          "registryManagedSourceRevision": 3
         }
       },
       {
@@ -1709,13 +1715,13 @@
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
         "status": "active",
         "extensions": {
-          "registryManagedSourceRevision": 3,
+          "registryManagedFields": [
+            "emblem"
+          ],
           "registryManagedFieldRevisions": {
             "emblem": 4
           },
-          "registryManagedFields": [
-            "emblem"
-          ]
+          "registryManagedSourceRevision": 3
         }
       },
       {
@@ -1959,7 +1965,7 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 4,
+      "sourceRevision": 5,
       "sourceModule": "Haus Falchdyn und Celtigerns Echo (Ausarbeitung 1740)",
       "sourceNote": "Haus Falchdyn folgt der vorgegebenen Struktur: ein unbekanntes Gründerpaar, genau ein serieller Überlieferungssprung und danach drei Brüder als Großvätergeneration. Dafydd und Iorwerth leben 1740 und führen die Linie über jeweils zwei Söhne bis zu elf unverheirateten Sprösslingen fort. Madoc besitzt ausschließlich vier wegverheiratete Töchter. Nur Llio wird mit dem bereits bestehenden Geraint Maerllys verbunden; dieselbe Weltperson und dieselbe Ehe erscheinen beidseitig, ohne fremde Nachkommen im Falchdyn-Baum zu doppeln. Die übrigen drei Zielhäuser bleiben mangels Vorgabe unbekannt. Dreizehn bereitgestellte Personenportraits und Gethins neu erzeugtes Porträt, Wappen, Hausbild und Emblem von Celtigerns Echo wurden lokal gesichert und quellenbelegt. Die Berufsprofile der jungen Generation bleiben bis auf Ceredig, Branwen, Taliesin und den gerichtlich ausgebildeten Fürsprecher Gethin bewusst offen. Das eingebettete Häuser-Modul dokumentiert Zeitung, Schreiberschule, Redaktionsnetz und den volksnahen Familienkern.",
       "houseBiographyModule": {
@@ -2167,7 +2173,9 @@
         "liegeHouseName": 3,
         "regionEmblems": 3
       },
-      "registryManagedExtensionFieldRevisions": {},
+      "registryManagedExtensionFieldRevisions": {
+        "tailoringContentInventory": 5
+      },
       "registryManagedViewFieldRevisions": {
         "focusPersonId": 3,
         "limitGenerations": 3
@@ -2177,7 +2185,12 @@
       "tailoringContentInventory": "gwniwr-maerllys-20261108",
       "registryManagedExtensionFields": [
         "tailoringContentInventory"
-      ]
+      ],
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 4,
+        "toRevision": 5
+      }
     }
   }
 }

@@ -31,8 +31,27 @@
           "Llamreis Ankunft",
           "Gwynthor"
         ],
-        "url": "",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=iorwerth-maerllys",
         "fingerprint": "{\"name\":\"Iorwerth Maerllys\",\"title\":\"Schneidermeister · Leitung von Naht & Siegel\",\"birth\":\"1689\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/iorwerth-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"cadfan-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--cadfan-maerllys\",\"name\":\"Cadfan Maerllys\"},{\"personId\":\"eira-spouse-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--eira-spouse-maerllys\",\"name\":\"Eira\"}],\"partners\":[{\"personId\":\"bronwen-swyll\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"children\":[{\"personId\":\"elowen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--elowen-maerllys\",\"name\":\"Elowen Maerllys\"},{\"personId\":\"nia-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--nia-maerllys\",\"name\":\"Nia Maerllys\"},{\"personId\":\"rhys-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhys-maerllys\",\"name\":\"Rhys Maerllys\"}]}}",
+        "score": 1000
+      },
+      {
+        "familyId": "haus-swyll",
+        "familyTitle": "Haus Swyll",
+        "personId": "iorwerth-maerllys",
+        "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
+        "houseId": "house-maerllys",
+        "houseName": "Haus Maerllys",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=iorwerth-maerllys",
+        "fingerprint": "{\"name\":\"Iorwerth Maerllys\",\"title\":\"Schneidermeister · Leitung von Naht & Siegel\",\"birth\":\"1689\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/iorwerth-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"bronwen-swyll\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"children\":[]}}",
         "score": 1000
       }
     ],
@@ -74,7 +93,13 @@
         "familyId": "haus-maerllys",
         "personId": "iorwerth-maerllys",
         "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
-        "url": ""
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=iorwerth-maerllys"
+      },
+      {
+        "familyId": "haus-swyll",
+        "personId": "iorwerth-maerllys",
+        "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=iorwerth-maerllys"
       }
     ],
     "profile": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=iorwerth-maerllys"
@@ -87,7 +112,7 @@
     "sourceDocumentIds": [
       "person--haus-maerllys--iorwerth-maerllys"
     ],
-    "contentHash": "aacd232da6b782abc16910110238f4f1208d6dec25e797685d7faa7b49d4ecce"
+    "contentHash": "0768eb3af8102c54a148c782be6b62abee8a4672d65183504f7934dab39fa4be"
   },
   "local": {
     "notes": "",

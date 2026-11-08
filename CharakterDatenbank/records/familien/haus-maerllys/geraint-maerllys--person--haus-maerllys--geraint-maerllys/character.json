@@ -31,8 +31,27 @@
           "Llamreis Ankunft",
           "Gwynthor"
         ],
-        "url": "",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=geraint-maerllys",
         "fingerprint": "{\"name\":\"Geraint Maerllys\",\"title\":\"Werkstattleitung und Livreeschnitt · Naht & Siegel\",\"birth\":\"1691\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/geraint-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--owain-maerllys\",\"name\":\"Owain Maerllys\"},{\"personId\":\"gwenllian-ysgrif\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--gwenllian-ysgrif\",\"name\":\"Gwenllian Ysgrif\"}],\"partners\":[{\"personId\":\"llio-falchdyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falchdyn--llio-falchdyn\",\"name\":\"Llio Falchdyn\"}],\"children\":[]}}",
+        "score": 1000
+      },
+      {
+        "familyId": "haus-falchdyn",
+        "familyTitle": "Haus Falchdyn",
+        "personId": "geraint-maerllys",
+        "worldPersonId": "person--haus-maerllys--geraint-maerllys",
+        "houseId": "house-maerllys",
+        "houseName": "Haus Maerllys",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-falchdyn&mode=view&person=geraint-maerllys",
+        "fingerprint": "{\"name\":\"Geraint Maerllys\",\"title\":\"Werkstattleitung und Livreeschnitt · Naht & Siegel\",\"birth\":\"1691\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/geraint-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"llio-falchdyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falchdyn--llio-falchdyn\",\"name\":\"Llio Falchdyn\"}],\"children\":[]}}",
         "score": 1000
       }
     ],
@@ -74,7 +93,13 @@
         "familyId": "haus-maerllys",
         "personId": "geraint-maerllys",
         "worldPersonId": "person--haus-maerllys--geraint-maerllys",
-        "url": ""
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=geraint-maerllys"
+      },
+      {
+        "familyId": "haus-falchdyn",
+        "personId": "geraint-maerllys",
+        "worldPersonId": "person--haus-maerllys--geraint-maerllys",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-falchdyn&mode=view&person=geraint-maerllys"
       }
     ],
     "profile": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=geraint-maerllys"
@@ -87,7 +112,7 @@
     "sourceDocumentIds": [
       "person--haus-maerllys--geraint-maerllys"
     ],
-    "contentHash": "1aec14113f9110b044bdcc356b9ef935aff26d70ff2e378b6fa441f3b4fed287"
+    "contentHash": "5d34baa8e1675c49036ce8cb0f4abbf7f7173498ea28d8eb2abc9a66581780a0"
   },
   "local": {
     "notes": "",

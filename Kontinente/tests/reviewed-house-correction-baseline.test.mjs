@@ -8,8 +8,8 @@ import argall from './support/gwynthor-argall-family-review-20261105.json' with 
 import { projectReviewedHouseCorrections } from './support/reviewed-house-correction-projection.mjs';
 import { protectedAlbicFamilies, reviewHash } from './support/albic-review-baseline.mjs';
 import { applyFamilyMetadataReview } from './support/apply-family-metadata-review.mjs';
+import { assertReviewedArgallSourceFile } from './support/reviewed-registry-upgrade-source.mjs';
 import fs from 'node:fs';
-import { createHash } from 'node:crypto';
 
 const current = id => structuredClone(FAMILY_REGISTRY.find(record => record.id === id));
 const entityFor = (record, change) => change.collection === 'document' ? record.family.document
@@ -123,7 +123,7 @@ test('Argall source7 restores the exact source6 predecessor and rejects every un
   assert.equal(review.proof.sourceFiles.length, 9);
   for (const source of review.proof.sourceFiles) {
     const bytes = fs.readFileSync(new URL('../../' + source.path, import.meta.url));
-    assert.equal(createHash('sha256').update(bytes).digest('hex'), source.sha256, source.path);
+    assertReviewedArgallSourceFile(source, bytes);
   }
   for (const field of review.fields) {
     const record = current('haus-argall');

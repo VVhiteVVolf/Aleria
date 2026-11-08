@@ -45271,7 +45271,7 @@
         "recordId": "character--XVeiNvgFfsmtomLuIjcA",
         "path": "records/familien/craigddu/hywel-craigddu--XVeiNvgFfsmtomLuIjcA/character.json",
         "schemaVersion": 1,
-        "contentHash": "6e43c0e1973330b4a47d9f6fdd216def9964ca17e7e084705b91fc0fe8c37636",
+        "contentHash": "074991eb06fe992cfe574e50e8ad70845c2ed4246e986ac8a83da9213d911a84",
         "firestoreDocumentIds": [
           "XVeiNvgFfsmtomLuIjcA",
           "XVeiNvgFfsmtomLuIjcA",
@@ -45300,8 +45300,27 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-e847aa96",
               "fingerprint": "{\"name\":\"Hywel Craigddu\",\"title\":\"Waffenknecht in Gwynthor\",\"birth\":\"1708\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-craigddu\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-cf831497\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-cf831497\",\"name\":\"Eleri Gwniwr\"}],\"children\":[]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "craigddu",
+              "familyTitle": "Haus Craigddu",
+              "personId": "person-28b0e0a3",
+              "worldPersonId": "person--craigddu--person-28b0e0a3",
+              "houseId": "house-craigddu",
+              "houseName": "Haus Craigddu",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=craigddu&mode=view&person=person-28b0e0a3",
+              "fingerprint": "{\"name\":\"Hywel Craigddu\",\"title\":\"Waffenknecht in Gwynthor\",\"birth\":\"1708\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-craigddu\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"craigddu-gruender\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--craigddu-gruender\",\"name\":\"Iestyn Craigddu\"},{\"personId\":\"craigddu-gruenderin\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--craigddu-gruenderin\",\"name\":\"Mared Craigddu\"}],\"partners\":[{\"personId\":\"person-0774c56b\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-cf831497\",\"name\":\"Eleri\"}],\"children\":[{\"personId\":\"person-36234a87\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-36234a87\",\"name\":\"Lowri Craigddu\"},{\"personId\":\"person-abdbd916\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-abdbd916\",\"name\":\"Carys Craigddu\"},{\"personId\":\"person-650808a6\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-650808a6\",\"name\":\"Nerys Craigddu\"},{\"personId\":\"person-f54eea82\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-f54eea82\",\"name\":\"Ffion Craigddu\"},{\"personId\":\"person-70f41f8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-70f41f8d\",\"name\":\"Anwen Craigddu\"},{\"personId\":\"person-c5e97e4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-c5e97e4f\",\"name\":\"Eirlys Craigddu\"},{\"personId\":\"person-9be71788\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-9be71788\",\"name\":\"Mali Craigddu\"}]}}",
               "score": 1000
             }
           ],
@@ -125401,7 +125420,7 @@
         "recordId": "character--qN5et9e7KaWlIPTSrsXt",
         "path": "records/familien/haus-maerllys/nia-maerllys--qN5et9e7KaWlIPTSrsXt/character.json",
         "schemaVersion": 1,
-        "contentHash": "0058294e71ca69a7df4a5be4d3673624f4c2277204534e6db656efcb32aeb4aa",
+        "contentHash": "208af772472835d5e455e33e387ad42358970fd8ce5e6e8fcc1c5f65af46c970",
         "firestoreDocumentIds": [
           "qN5et9e7KaWlIPTSrsXt",
           "qN5et9e7KaWlIPTSrsXt"
@@ -125429,7 +125448,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=nia-maerllys",
               "fingerprint": "{\"name\":\"Nia Maerllys\",\"title\":\"Persönliche Zofe der Prinzessin Isobel Draig\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/nia-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"24 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"},{\"personId\":\"bronwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"partners\":[],\"children\":[]}}",
               "score": 1000
             }
@@ -232625,7 +232644,7 @@
         "recordId": "character--person--haus-maerllys--rhys-maerllys",
         "path": "records/familien/haus-maerllys/rhys-maerllys--person--haus-maerllys--rhys-maerllys/character.json",
         "schemaVersion": 1,
-        "contentHash": "3a95ed4084a0f7c9d69cd6fb070a039fdbfefdbe3708e160d563423772e7aff0",
+        "contentHash": "20075ae1eccc92d6cbebc30126331945004023cdc9dc1ca482dc4293eda46c63",
         "firestoreDocumentIds": [
           "person--haus-maerllys--rhys-maerllys",
           "person--haus-maerllys--rhys-maerllys"
@@ -232653,7 +232672,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=rhys-maerllys",
               "fingerprint": "{\"name\":\"Rhys Maerllys\",\"title\":\"Jüngerer Bruder Nia Maerllys’\",\"birth\":\"1719\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/rhys-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"},{\"personId\":\"bronwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"partners\":[],\"children\":[]}}",
               "score": 1000
             }
@@ -242247,7 +242266,7 @@
         "recordId": "character--person--gwniwr--person-7b6c292b",
         "path": "records/familien/gwniwr/emyr-gwniwr--person--gwniwr--person-7b6c292b/character.json",
         "schemaVersion": 1,
-        "contentHash": "8ae8a21a1eff036ec54e3b3f25be2cfc8aaaa2ddca918eab3ce70c4fbd214eae",
+        "contentHash": "74c82e1fb821ddc0336b0fefe32606102d1edf53d6d15613efcb3cf56a66344f",
         "firestoreDocumentIds": [
           "person--gwniwr--person-7b6c292b"
         ],
@@ -242274,7 +242293,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-7b6c292b",
               "fingerprint": "{\"name\":\"Emyr Gwniwr\",\"title\":\"Gemeinsame Leitung von Nadel & Faden · Tuch und Werkstatt\",\"birth\":\"1680\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwniwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-7b6c292b.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gwniwr-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--gwniwr--gwniwr-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"gwniwr-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--gwniwr--gwniwr-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"person-f926e0da\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-f926e0da\",\"name\":\"Gwenllian\"}],\"children\":[{\"personId\":\"person-ece54bdb\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-ece54bdb\",\"name\":\"Tudur Gwniwr\"},{\"personId\":\"person-cf831497\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-cf831497\",\"name\":\"Eleri Gwniwr\"}]}}",
               "score": 1000
             }
@@ -242429,7 +242448,7 @@
         "recordId": "character--person--gwniwr--person-f926e0da",
         "path": "records/familien/gwniwr/gwenllian--person--gwniwr--person-f926e0da/character.json",
         "schemaVersion": 1,
-        "contentHash": "ae83f7ab454ad1a070e3bdb9be2b4016962cbe83cebf237ed0b3e1bd6bea1cd9",
+        "contentHash": "6e2dab9121e9576db56bf84a7c159504c68a12d1687290598f77826deba66970",
         "firestoreDocumentIds": [
           "person--gwniwr--person-f926e0da"
         ],
@@ -242456,7 +242475,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-f926e0da",
               "fingerprint": "{\"name\":\"Gwenllian\",\"title\":\"Gemeinsame Leitung von Nadel & Faden · Beratung und Aufträge\",\"birth\":\"1684\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-f926e0da.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-7b6c292b\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-7b6c292b\",\"name\":\"Emyr Gwniwr\"}],\"children\":[{\"personId\":\"person-ece54bdb\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-ece54bdb\",\"name\":\"Tudur Gwniwr\"},{\"personId\":\"person-cf831497\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-cf831497\",\"name\":\"Eleri Gwniwr\"}]}}",
               "score": 1000
             }
@@ -242644,7 +242663,7 @@
         "recordId": "character--person--gwniwr--person-ece54bdb",
         "path": "records/familien/gwniwr/tudur-gwniwr--person--gwniwr--person-ece54bdb/character.json",
         "schemaVersion": 1,
-        "contentHash": "74a2e65e27e310ffac49700131eb542c7134ef1e6a1b47de1e3066fc0274c12e",
+        "contentHash": "4dcf9efbc6cd6001e420d403272112c33f0724b7a3c15f8256acc18050046415",
         "firestoreDocumentIds": [
           "person--gwniwr--person-ece54bdb"
         ],
@@ -242671,7 +242690,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-ece54bdb",
               "fingerprint": "{\"name\":\"Tudur Gwniwr\",\"title\":\"Schneidermeister · Nadel & Faden\",\"birth\":\"1704\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwniwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-ece54bdb.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-7b6c292b\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-7b6c292b\",\"name\":\"Emyr Gwniwr\"},{\"personId\":\"person-f926e0da\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-f926e0da\",\"name\":\"Gwenllian\"}],\"partners\":[{\"personId\":\"person-3f9eaf4f\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-3f9eaf4f\",\"name\":\"Catrin\"}],\"children\":[{\"personId\":\"person-178882ce\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-178882ce\",\"name\":\"Gethin Gwniwr\"},{\"personId\":\"person-558acc56\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-558acc56\",\"name\":\"Bleddyn Gwniwr\"},{\"personId\":\"person-38812666\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-38812666\",\"name\":\"Efa Gwniwr\"},{\"personId\":\"person-d55e335a\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-d55e335a\",\"name\":\"Micah Gwniwr\"}]}}",
               "score": 1000
             }
@@ -242893,7 +242912,7 @@
         "recordId": "character--person--gwniwr--person-cf831497",
         "path": "records/familien/gwniwr/eleri-gwniwr--person--gwniwr--person-cf831497/character.json",
         "schemaVersion": 1,
-        "contentHash": "3cf1c41f63744103c01f575dd61cdbe722ddaece63245a8796abdab998c3568f",
+        "contentHash": "16aa8284f4226327cff716b8870785044f598f49932dc7e0854cd74663aa9565",
         "firestoreDocumentIds": [
           "person--gwniwr--person-cf831497"
         ],
@@ -242920,8 +242939,27 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-cf831497",
               "fingerprint": "{\"name\":\"Eleri Gwniwr\",\"title\":\"Mithilfe im Familienladen · Ehefrau Hywel Craigddu’s\",\"birth\":\"1708\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwniwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-cf831497.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-7b6c292b\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-7b6c292b\",\"name\":\"Emyr Gwniwr\"},{\"personId\":\"person-f926e0da\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-f926e0da\",\"name\":\"Gwenllian\"}],\"partners\":[{\"personId\":\"person-e847aa96\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-28b0e0a3\",\"name\":\"Hywel Craigddu\"}],\"children\":[]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "craigddu",
+              "familyTitle": "Haus Craigddu",
+              "personId": "person-0774c56b",
+              "worldPersonId": "person--gwniwr--person-cf831497",
+              "houseId": "",
+              "houseName": "",
+              "familyRole": "married",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=craigddu&mode=view&person=person-0774c56b",
+              "fingerprint": "{\"name\":\"Eleri\",\"title\":\"Ehefrau Hywel Craigddu’s · geborene Gwniwr\",\"birth\":\"1708\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-cf831497.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-28b0e0a3\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-28b0e0a3\",\"name\":\"Hywel Craigddu\"}],\"children\":[{\"personId\":\"person-36234a87\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-36234a87\",\"name\":\"Lowri Craigddu\"},{\"personId\":\"person-abdbd916\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-abdbd916\",\"name\":\"Carys Craigddu\"},{\"personId\":\"person-650808a6\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-650808a6\",\"name\":\"Nerys Craigddu\"},{\"personId\":\"person-f54eea82\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-f54eea82\",\"name\":\"Ffion Craigddu\"},{\"personId\":\"person-70f41f8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-70f41f8d\",\"name\":\"Anwen Craigddu\"},{\"personId\":\"person-c5e97e4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-c5e97e4f\",\"name\":\"Eirlys Craigddu\"},{\"personId\":\"person-9be71788\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-9be71788\",\"name\":\"Mali Craigddu\"}]}}",
               "score": 1000
             }
           ],
@@ -243091,7 +243129,7 @@
         "recordId": "character--person--gwniwr--person-3f9eaf4f",
         "path": "records/familien/gwniwr/catrin--person--gwniwr--person-3f9eaf4f/character.json",
         "schemaVersion": 1,
-        "contentHash": "83f1887982cb8d31b4cca1821aac6904d6b7fd20944a27fd00781dc3d28b3ca1",
+        "contentHash": "c3c50ff8c483db145cdd3ee045832c44837c40faa1f9f3aff768f3ace1b9b956",
         "firestoreDocumentIds": [
           "person--gwniwr--person-3f9eaf4f"
         ],
@@ -243118,7 +243156,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-3f9eaf4f",
               "fingerprint": "{\"name\":\"Catrin\",\"title\":\"\",\"birth\":\"1708\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-3f9eaf4f.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-ece54bdb\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-ece54bdb\",\"name\":\"Tudur Gwniwr\"}],\"children\":[{\"personId\":\"person-178882ce\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-178882ce\",\"name\":\"Gethin Gwniwr\"},{\"personId\":\"person-558acc56\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-558acc56\",\"name\":\"Bleddyn Gwniwr\"},{\"personId\":\"person-38812666\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-38812666\",\"name\":\"Efa Gwniwr\"},{\"personId\":\"person-d55e335a\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-d55e335a\",\"name\":\"Micah Gwniwr\"}]}}",
               "score": 1000
             }
@@ -243264,7 +243302,7 @@
         "recordId": "character--person--gwniwr--person-178882ce",
         "path": "records/familien/gwniwr/gethin-gwniwr--person--gwniwr--person-178882ce/character.json",
         "schemaVersion": 1,
-        "contentHash": "e82792fbb768fed8380414da084b00f516731d3877b8b08feec3d8c4e821d7cd",
+        "contentHash": "4c37fa504bbc77c003ec357468c237a4d0c6662d72626c0b6fff138296550cea",
         "firestoreDocumentIds": [
           "person--gwniwr--person-178882ce"
         ],
@@ -243291,7 +243329,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-178882ce",
               "fingerprint": "{\"name\":\"Gethin Gwniwr\",\"title\":\"\",\"birth\":\"1724\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwniwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-178882ce.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-ece54bdb\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-ece54bdb\",\"name\":\"Tudur Gwniwr\"},{\"personId\":\"person-3f9eaf4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-3f9eaf4f\",\"name\":\"Catrin\"}],\"partners\":[],\"children\":[]}}",
               "score": 1000
             }
@@ -243437,7 +243475,7 @@
         "recordId": "character--person--gwniwr--person-558acc56",
         "path": "records/familien/gwniwr/bleddyn-gwniwr--person--gwniwr--person-558acc56/character.json",
         "schemaVersion": 1,
-        "contentHash": "b7c16cb2cd2fd142f36dc7e9be847f48034f5e2f3d1eb5627a9701da7aff02d6",
+        "contentHash": "12998ea62a86b23c3b47a77f5c52e3bb82367573762c6ed273cc48f8c16d9729",
         "firestoreDocumentIds": [
           "person--gwniwr--person-558acc56"
         ],
@@ -243464,7 +243502,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-558acc56",
               "fingerprint": "{\"name\":\"Bleddyn Gwniwr\",\"title\":\"\",\"birth\":\"1728\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwniwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-558acc56.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-ece54bdb\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-ece54bdb\",\"name\":\"Tudur Gwniwr\"},{\"personId\":\"person-3f9eaf4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-3f9eaf4f\",\"name\":\"Catrin\"}],\"partners\":[],\"children\":[]}}",
               "score": 1000
             }
@@ -243610,7 +243648,7 @@
         "recordId": "character--person--gwniwr--person-38812666",
         "path": "records/familien/gwniwr/efa-gwniwr--person--gwniwr--person-38812666/character.json",
         "schemaVersion": 1,
-        "contentHash": "4ebf35d69879dad27aea394d654beb970d30049a22d9fa5bd1e22db9af0af22a",
+        "contentHash": "f8f276133f66400bbc1a1a15b1b99333a1afd1104f7a21c3e2e220d0badbc113",
         "firestoreDocumentIds": [
           "person--gwniwr--person-38812666"
         ],
@@ -243637,7 +243675,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-38812666",
               "fingerprint": "{\"name\":\"Efa Gwniwr\",\"title\":\"\",\"birth\":\"1730\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwniwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-38812666.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-ece54bdb\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-ece54bdb\",\"name\":\"Tudur Gwniwr\"},{\"personId\":\"person-3f9eaf4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-3f9eaf4f\",\"name\":\"Catrin\"}],\"partners\":[],\"children\":[]}}",
               "score": 1000
             }
@@ -243783,7 +243821,7 @@
         "recordId": "character--person--gwniwr--person-d55e335a",
         "path": "records/familien/gwniwr/micah-gwniwr--person--gwniwr--person-d55e335a/character.json",
         "schemaVersion": 1,
-        "contentHash": "e123513954795eb6d58bc44be347aaeff915f8aff6ddb31c6d3902f32f62aa0c",
+        "contentHash": "16bbf80176da3a88190646a6e92e21169a7364f4700afe8821509db0cb1d5d22",
         "firestoreDocumentIds": [
           "person--gwniwr--person-d55e335a"
         ],
@@ -243810,7 +243848,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-d55e335a",
               "fingerprint": "{\"name\":\"Micah Gwniwr\",\"title\":\"\",\"birth\":\"1732\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwniwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-d55e335a.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-ece54bdb\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-ece54bdb\",\"name\":\"Tudur Gwniwr\"},{\"personId\":\"person-3f9eaf4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-3f9eaf4f\",\"name\":\"Catrin\"}],\"partners\":[],\"children\":[]}}",
               "score": 1000
             }
@@ -243966,7 +244004,7 @@
         "recordId": "character--person--haus-maerllys--cadfan-maerllys",
         "path": "records/familien/haus-maerllys/cadfan-maerllys--person--haus-maerllys--cadfan-maerllys/character.json",
         "schemaVersion": 1,
-        "contentHash": "3501f47f38611763c625941ad67a001157de88ee3d861ea0daa972efeae3e35a",
+        "contentHash": "15277f70601f522cf2a5e2405d9ba68588ed98db0094f14d69edad7411024b76",
         "firestoreDocumentIds": [
           "person--haus-maerllys--cadfan-maerllys"
         ],
@@ -243993,7 +244031,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=cadfan-maerllys",
               "fingerprint": "{\"name\":\"Cadfan Maerllys\",\"title\":\"Ältestes überliefertes Oberhaupt des Hauses Maerllys\",\"birth\":\"1662\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/cadfan-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"unbekannter-bruder-gwenora-maerllys\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--unbekannter-bruder-gwenora-maerllys\",\"name\":\"Unbekannter Bruder\"}],\"partners\":[{\"personId\":\"eira-spouse-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--eira-spouse-maerllys\",\"name\":\"Eira\"}],\"children\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"}]}}",
               "score": 1000
             }
@@ -244140,7 +244178,7 @@
         "recordId": "character--person--family-tree--eira-spouse-maerllys",
         "path": "records/familien/haus-maerllys/eira--person--family-tree--eira-spouse-maerllys/character.json",
         "schemaVersion": 1,
-        "contentHash": "dfad9f57bc38e7d9c375d3efe917b589da50776ea0a1e2c4eab165da5e7274fb",
+        "contentHash": "def6cf7fc3c3b75b38749fe1ae672b0ccf93683fd4b505f7aa75d913f264dc8d",
         "firestoreDocumentIds": [
           "person--family-tree--eira-spouse-maerllys"
         ],
@@ -244167,7 +244205,7 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=eira-spouse-maerllys",
               "fingerprint": "{\"name\":\"Eira\",\"title\":\"Großmutter Nia Maerllys’\",\"birth\":\"1666\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/eira-spouse-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"cadfan-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--cadfan-maerllys\",\"name\":\"Cadfan Maerllys\"}],\"children\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"}]}}",
               "score": 1000
             }
@@ -244341,7 +244379,7 @@
         "recordId": "character--person--haus-maerllys--owain-maerllys",
         "path": "records/familien/haus-maerllys/owain-maerllys--person--haus-maerllys--owain-maerllys/character.json",
         "schemaVersion": 1,
-        "contentHash": "fee108386d76e7d609d6f508681d209af3e416a07e9e148816d211937716358e",
+        "contentHash": "a957b2fbdccc6acd77ad5eb9c90ea224ff21e4eedfd0869588842e51f02299f2",
         "firestoreDocumentIds": [
           "person--haus-maerllys--owain-maerllys"
         ],
@@ -244368,8 +244406,27 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=owain-maerllys",
               "fingerprint": "{\"name\":\"Owain Maerllys\",\"title\":\"Großonkel Nia Maerllys’\",\"birth\":\"1665\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/owain-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"unbekannter-bruder-gwenora-maerllys\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--unbekannter-bruder-gwenora-maerllys\",\"name\":\"Unbekannter Bruder\"}],\"partners\":[{\"personId\":\"gwenllian-ysgrif\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--gwenllian-ysgrif\",\"name\":\"Gwenllian Ysgrif\"}],\"children\":[{\"personId\":\"geraint-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"},{\"personId\":\"rhoswen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "haus-ysgrif",
+              "familyTitle": "Haus Ysgrif",
+              "personId": "owain-maerllys",
+              "worldPersonId": "person--haus-maerllys--owain-maerllys",
+              "houseId": "house-maerllys",
+              "houseName": "Haus Maerllys",
+              "familyRole": "married",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=haus-ysgrif&mode=view&person=owain-maerllys",
+              "fingerprint": "{\"name\":\"Owain Maerllys\",\"title\":\"Großonkel Nia Maerllys’\",\"birth\":\"1665\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/owain-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenllian-ysgrif\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--gwenllian-ysgrif\",\"name\":\"Gwenllian Ysgrif\"}],\"children\":[]}}",
               "score": 1000
             }
           ],
@@ -244550,7 +244607,7 @@
         "recordId": "character--person--haus-ysgrif--gwenllian-ysgrif",
         "path": "records/familien/haus-maerllys/gwenllian-ysgrif--person--haus-ysgrif--gwenllian-ysgrif/character.json",
         "schemaVersion": 1,
-        "contentHash": "e09d00c3ef633a66352fc0c155c0b18a16c72fcdee1c2f2ad296a88746eeee8a",
+        "contentHash": "e23a5ee199c7956d7e6949ab09845947aec5ed7030da7fa1d7254839e7e4d212",
         "firestoreDocumentIds": [
           "person--haus-ysgrif--gwenllian-ysgrif"
         ],
@@ -244577,8 +244634,27 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenllian-ysgrif",
               "fingerprint": "{\"name\":\"Gwenllian Ysgrif\",\"title\":\"An Haus Maerllys verheiratete Ysgrif\",\"birth\":\"1668\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-ysgrif\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"owain-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--owain-maerllys\",\"name\":\"Owain Maerllys\"}],\"children\":[{\"personId\":\"geraint-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"},{\"personId\":\"rhoswen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "haus-ysgrif",
+              "familyTitle": "Haus Ysgrif",
+              "personId": "gwenllian-ysgrif",
+              "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif",
+              "houseId": "house-ysgrif",
+              "houseName": "Haus Ysgrif",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=haus-ysgrif&mode=view&person=gwenllian-ysgrif",
+              "fingerprint": "{\"name\":\"Gwenllian Ysgrif\",\"title\":\"An Haus Maerllys verheiratete Ysgrif\",\"birth\":\"1668\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-ysgrif\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-ysgrif-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--haus-ysgrif--haus-ysgrif-gruender\",\"name\":\"??? Ysgrif\"},{\"personId\":\"haus-ysgrif-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--haus-ysgrif--haus-ysgrif-gruenderin\",\"name\":\"??? Ysgrif\"}],\"partners\":[{\"personId\":\"owain-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--owain-maerllys\",\"name\":\"Owain Maerllys\"}],\"children\":[]}}",
               "score": 1000
             }
           ],
@@ -244742,7 +244818,7 @@
         "recordId": "character--person--haus-maerllys--geraint-maerllys",
         "path": "records/familien/haus-maerllys/geraint-maerllys--person--haus-maerllys--geraint-maerllys/character.json",
         "schemaVersion": 1,
-        "contentHash": "1aec14113f9110b044bdcc356b9ef935aff26d70ff2e378b6fa441f3b4fed287",
+        "contentHash": "5d34baa8e1675c49036ce8cb0f4abbf7f7173498ea28d8eb2abc9a66581780a0",
         "firestoreDocumentIds": [
           "person--haus-maerllys--geraint-maerllys"
         ],
@@ -244769,8 +244845,27 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=geraint-maerllys",
               "fingerprint": "{\"name\":\"Geraint Maerllys\",\"title\":\"Werkstattleitung und Livreeschnitt · Naht & Siegel\",\"birth\":\"1691\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/geraint-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--owain-maerllys\",\"name\":\"Owain Maerllys\"},{\"personId\":\"gwenllian-ysgrif\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--gwenllian-ysgrif\",\"name\":\"Gwenllian Ysgrif\"}],\"partners\":[{\"personId\":\"llio-falchdyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falchdyn--llio-falchdyn\",\"name\":\"Llio Falchdyn\"}],\"children\":[]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "haus-falchdyn",
+              "familyTitle": "Haus Falchdyn",
+              "personId": "geraint-maerllys",
+              "worldPersonId": "person--haus-maerllys--geraint-maerllys",
+              "houseId": "house-maerllys",
+              "houseName": "Haus Maerllys",
+              "familyRole": "married",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=haus-falchdyn&mode=view&person=geraint-maerllys",
+              "fingerprint": "{\"name\":\"Geraint Maerllys\",\"title\":\"Werkstattleitung und Livreeschnitt · Naht & Siegel\",\"birth\":\"1691\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/geraint-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"llio-falchdyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falchdyn--llio-falchdyn\",\"name\":\"Llio Falchdyn\"}],\"children\":[]}}",
               "score": 1000
             }
           ],
@@ -244934,7 +245029,7 @@
         "recordId": "character--person--haus-falchdyn--llio-falchdyn",
         "path": "records/familien/haus-maerllys/llio-falchdyn--person--haus-falchdyn--llio-falchdyn/character.json",
         "schemaVersion": 1,
-        "contentHash": "2bbb4df2976e5c4d0ce0693b5e36d5318cff816147559c391e50395efd4faa26",
+        "contentHash": "0f7db4b64b8338b16f8cb18032385757c1043d450ecbfcb9b7f76027d2307508",
         "firestoreDocumentIds": [
           "person--haus-falchdyn--llio-falchdyn"
         ],
@@ -244961,8 +245056,27 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=llio-falchdyn",
               "fingerprint": "{\"name\":\"Llio Falchdyn\",\"title\":\"Nähstube und Serienfertigung · Naht & Siegel\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-falchdyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"geraint-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"}],\"children\":[]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "haus-falchdyn",
+              "familyTitle": "Haus Falchdyn",
+              "personId": "llio-falchdyn",
+              "worldPersonId": "person--haus-falchdyn--llio-falchdyn",
+              "houseId": "house-falchdyn",
+              "houseName": "Haus Falchdyn",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=haus-falchdyn&mode=view&person=llio-falchdyn",
+              "fingerprint": "{\"name\":\"Llio Falchdyn\",\"title\":\"Nähstube und Serienfertigung · Naht & Siegel\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-falchdyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"madoc-falchdyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falchdyn--madoc-falchdyn\",\"name\":\"Madoc Falchdyn\"},{\"personId\":\"seren-spouse-falchdyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--seren-spouse-falchdyn\",\"name\":\"Seren\"}],\"partners\":[{\"personId\":\"geraint-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"}],\"children\":[]}}",
               "score": 1000
             }
           ],
@@ -245151,7 +245265,7 @@
         "recordId": "character--person--haus-maerllys--rhoswen-maerllys",
         "path": "records/familien/haus-maerllys/rhoswen-maerllys--person--haus-maerllys--rhoswen-maerllys/character.json",
         "schemaVersion": 1,
-        "contentHash": "f2b3365b3222066e0baec3c53ac6a636cc1757cd25921394692c5db06d5b0b3d",
+        "contentHash": "5228d269ce7567971569fd5e2a424cad6901e01918dcab82ec76d7b38dc833f4",
         "firestoreDocumentIds": [
           "person--haus-maerllys--rhoswen-maerllys"
         ],
@@ -245178,8 +245292,27 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=rhoswen-maerllys",
               "fingerprint": "{\"name\":\"Rhoswen Maerllys\",\"title\":\"An Haus Tonnarth verheiratete Maerllys\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/rhoswen-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--owain-maerllys\",\"name\":\"Owain Maerllys\"},{\"personId\":\"gwenllian-ysgrif\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--gwenllian-ysgrif\",\"name\":\"Gwenllian Ysgrif\"}],\"partners\":[{\"personId\":\"madoc-tonnarth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--madoc-tonnarth\",\"name\":\"Madoc Tonnarth\"}],\"children\":[]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "haus-tonnarth",
+              "familyTitle": "Haus Tonnarth",
+              "personId": "rhoswen-maerllys",
+              "worldPersonId": "person--haus-maerllys--rhoswen-maerllys",
+              "houseId": "house-maerllys",
+              "houseName": "Haus Maerllys",
+              "familyRole": "married",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=rhoswen-maerllys",
+              "fingerprint": "{\"name\":\"Rhoswen Maerllys\",\"title\":\"An Haus Tonnarth verheiratete Maerllys\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/rhoswen-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"madoc-tonnarth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--madoc-tonnarth\",\"name\":\"Madoc Tonnarth\"}],\"children\":[{\"personId\":\"bryn-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--bryn-tonnarth\",\"name\":\"Bryn Tonnarth\"},{\"personId\":\"emrys-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--emrys-tonnarth\",\"name\":\"Emrys Tonnarth\"},{\"personId\":\"aled-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--aled-tonnarth\",\"name\":\"Aled Tonnarth\"}]}}",
               "score": 1000
             }
           ],
@@ -245368,7 +245501,7 @@
         "recordId": "character--person--haus-tonnarth--madoc-tonnarth",
         "path": "records/familien/haus-maerllys/madoc-tonnarth--person--haus-tonnarth--madoc-tonnarth/character.json",
         "schemaVersion": 1,
-        "contentHash": "7326d60df3c9fa3af99a4a11efac400501b729c864ff023f0806e29e3c74d4f7",
+        "contentHash": "192f2ca08fd06822ad1ad781e99d2d928440893f724350ca4345ce32a54f93d1",
         "firestoreDocumentIds": [
           "person--haus-tonnarth--madoc-tonnarth"
         ],
@@ -245395,8 +245528,27 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=madoc-tonnarth",
               "fingerprint": "{\"name\":\"Madoc Tonnarth\",\"title\":\"Onkel Llewarch Tonnarths\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tonnarth\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/madoc-tonnarth.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"rhoswen-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}],\"children\":[]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "haus-tonnarth",
+              "familyTitle": "Haus Tonnarth",
+              "personId": "madoc-tonnarth",
+              "worldPersonId": "person--haus-tonnarth--madoc-tonnarth",
+              "houseId": "house-tonnarth",
+              "houseName": "Haus Tonnarth",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=madoc-tonnarth",
+              "fingerprint": "{\"name\":\"Madoc Tonnarth\",\"title\":\"Onkel Llewarch Tonnarths\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tonnarth\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/madoc-tonnarth.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"idris-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--idris-tonnarth\",\"name\":\"Idris Tonnarth\"},{\"personId\":\"lowri-spouse-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--lowri-spouse-tonnarth\",\"name\":\"Lowri\"}],\"partners\":[{\"personId\":\"rhoswen-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}],\"children\":[{\"personId\":\"bryn-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--bryn-tonnarth\",\"name\":\"Bryn Tonnarth\"},{\"personId\":\"emrys-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--emrys-tonnarth\",\"name\":\"Emrys Tonnarth\"},{\"personId\":\"aled-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--aled-tonnarth\",\"name\":\"Aled Tonnarth\"}]}}",
               "score": 1000
             }
           ],
@@ -245585,7 +245737,7 @@
         "recordId": "character--person--haus-maerllys--iorwerth-maerllys",
         "path": "records/familien/haus-maerllys/iorwerth-maerllys--person--haus-maerllys--iorwerth-maerllys/character.json",
         "schemaVersion": 1,
-        "contentHash": "aacd232da6b782abc16910110238f4f1208d6dec25e797685d7faa7b49d4ecce",
+        "contentHash": "0768eb3af8102c54a148c782be6b62abee8a4672d65183504f7934dab39fa4be",
         "firestoreDocumentIds": [
           "person--haus-maerllys--iorwerth-maerllys"
         ],
@@ -245612,8 +245764,27 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=iorwerth-maerllys",
               "fingerprint": "{\"name\":\"Iorwerth Maerllys\",\"title\":\"Schneidermeister · Leitung von Naht & Siegel\",\"birth\":\"1689\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/iorwerth-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"cadfan-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--cadfan-maerllys\",\"name\":\"Cadfan Maerllys\"},{\"personId\":\"eira-spouse-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--eira-spouse-maerllys\",\"name\":\"Eira\"}],\"partners\":[{\"personId\":\"bronwen-swyll\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"children\":[{\"personId\":\"elowen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--elowen-maerllys\",\"name\":\"Elowen Maerllys\"},{\"personId\":\"nia-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--nia-maerllys\",\"name\":\"Nia Maerllys\"},{\"personId\":\"rhys-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhys-maerllys\",\"name\":\"Rhys Maerllys\"}]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "haus-swyll",
+              "familyTitle": "Haus Swyll",
+              "personId": "iorwerth-maerllys",
+              "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
+              "houseId": "house-maerllys",
+              "houseName": "Haus Maerllys",
+              "familyRole": "married",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=iorwerth-maerllys",
+              "fingerprint": "{\"name\":\"Iorwerth Maerllys\",\"title\":\"Schneidermeister · Leitung von Naht & Siegel\",\"birth\":\"1689\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/iorwerth-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"bronwen-swyll\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"children\":[]}}",
               "score": 1000
             }
           ],
@@ -245802,7 +245973,7 @@
         "recordId": "character--person--haus-swyll--bronwen-swyll",
         "path": "records/familien/haus-maerllys/bronwen-swyll--person--haus-swyll--bronwen-swyll/character.json",
         "schemaVersion": 1,
-        "contentHash": "b26a83be81b9a04f9b08f42321c13becd0c65b4a6a9c5fd5772edc351cd02088",
+        "contentHash": "7bb033629ca03f4b6c81318500bf55f5d6f79ad270ed84e36aab9daf8af7f8fb",
         "firestoreDocumentIds": [
           "person--haus-swyll--bronwen-swyll"
         ],
@@ -245829,8 +246000,27 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=bronwen-swyll",
               "fingerprint": "{\"name\":\"Bronwen Swyll\",\"title\":\"Anprobe und Qualitätskontrolle · Naht & Siegel\",\"birth\":\"1691\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"}],\"children\":[{\"personId\":\"elowen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--elowen-maerllys\",\"name\":\"Elowen Maerllys\"},{\"personId\":\"nia-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--nia-maerllys\",\"name\":\"Nia Maerllys\"},{\"personId\":\"rhys-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhys-maerllys\",\"name\":\"Rhys Maerllys\"}]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "haus-swyll",
+              "familyTitle": "Haus Swyll",
+              "personId": "bronwen-swyll",
+              "worldPersonId": "person--haus-swyll--bronwen-swyll",
+              "houseId": "house-swyll",
+              "houseName": "Haus Swyll",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=bronwen-swyll",
+              "fingerprint": "{\"name\":\"Bronwen Swyll\",\"title\":\"Anprobe und Qualitätskontrolle · Naht & Siegel\",\"birth\":\"1691\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"emyr-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--emyr-swyll\",\"name\":\"Emyr Swyll\"},{\"personId\":\"tegwen-spouse-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--tegwen-spouse-swyll\",\"name\":\"Tegwen\"}],\"partners\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"}],\"children\":[]}}",
               "score": 1000
             }
           ],
@@ -246011,7 +246201,7 @@
         "recordId": "character--person--haus-maerllys--elowen-maerllys",
         "path": "records/familien/haus-maerllys/elowen-maerllys--person--haus-maerllys--elowen-maerllys/character.json",
         "schemaVersion": 1,
-        "contentHash": "d4c8c473726f1859da8665c63fb18ad3209b355cc2e10ea064e9f7659d33ad3a",
+        "contentHash": "15513046c3b6242824bd4feef9e3ff9588718941d3e41cfc0a24109e7c73bc4b",
         "firestoreDocumentIds": [
           "person--haus-maerllys--elowen-maerllys"
         ],
@@ -246038,8 +246228,27 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=elowen-maerllys",
               "fingerprint": "{\"name\":\"Elowen Maerllys\",\"title\":\"Empfang · Buchungen und Hausleinen\",\"birth\":\"1713\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/letzte-rast/portraits/elowen.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"},{\"personId\":\"bronwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"partners\":[{\"personId\":\"edern-vann\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--edern-vann\",\"name\":\"Edern Vann\"}],\"children\":[]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "haus-vann",
+              "familyTitle": "Haus Vann",
+              "personId": "elowen-maerllys",
+              "worldPersonId": "person--haus-maerllys--elowen-maerllys",
+              "houseId": "house-maerllys",
+              "houseName": "Haus Maerllys",
+              "familyRole": "married",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=haus-vann&mode=view&person=elowen-maerllys",
+              "fingerprint": "{\"name\":\"Elowen Maerllys\",\"title\":\"Empfang · Buchungen und Hausleinen\",\"birth\":\"1713\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/letzte-rast/portraits/elowen.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"edern-vann\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--edern-vann\",\"name\":\"Edern Vann\"}],\"children\":[{\"personId\":\"celyn-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--celyn-vann\",\"name\":\"Celyn Vann\"},{\"personId\":\"iolo-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--iolo-vann\",\"name\":\"Iolo Vann\"}]}}",
               "score": 1000
             }
           ],
@@ -246187,7 +246396,7 @@
         "recordId": "character--person--haus-maerllys--gwenora-maerllys",
         "path": "records/familien/haus-maerllys/gwenora-maerllys--person--haus-maerllys--gwenora-maerllys/character.json",
         "schemaVersion": 1,
-        "contentHash": "0a700da534830dcdf7cdb82b75f71b594470d2e11757e602103ae4618b599f9d",
+        "contentHash": "726b403526f4c722cb8767fdb4225f5d2073dbf50c321eba3339893021848240",
         "firestoreDocumentIds": [
           "person--haus-maerllys--gwenora-maerllys",
           "person--haus-maerllys--gwenora-maerllys",
@@ -246216,8 +246425,44 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenora-maerllys",
               "fingerprint": "{\"name\":\"Gwenora Maerllys\",\"title\":\"Schneidermeisterin · Mitbegründerin des Geschäfts\",\"birth\":\"1638\",\"death\":\"1714\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-maerllys-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--haus-maerllys-gruender\",\"name\":\"??? Maerllys\"},{\"personId\":\"haus-maerllys-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--haus-maerllys-gruenderin\",\"name\":\"??? Maerllys\"}],\"partners\":[{\"personId\":\"matteo-veltrane\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"}],\"children\":[]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "haus-raves",
+              "familyTitle": "Haus Raves",
+              "personId": "gwenora-maerllys",
+              "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
+              "houseId": "house-maerllys",
+              "houseName": "Haus Maerllys",
+              "familyRole": "married",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=gwenora-maerllys",
+              "fingerprint": "{\"name\":\"Gwenora Maerllys\",\"title\":\"Schneidermeisterin · Mitbegründerin des Geschäfts\",\"birth\":\"1638\",\"death\":\"1714\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"matteo-veltrane\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"}],\"children\":[{\"personId\":\"lorenzo-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lorenzo-raves\",\"name\":\"Lorenzo Cassian Raves\"},{\"personId\":\"livia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--livia-raves\",\"name\":\"Livia Aurelia Raves\"},{\"personId\":\"flavia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--flavia-raves\",\"name\":\"Flavia Marina Raves\"}]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "haus-veltrane",
+              "familyTitle": "Haus Veltrane",
+              "personId": "gwenora-maerllys",
+              "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
+              "houseId": "house-maerllys",
+              "houseName": "Haus Maerllys",
+              "familyRole": "married",
+              "source": "project",
+              "folderPath": [
+                "Kaiserreich Argentum",
+                "Unsortiert"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=haus-veltrane&mode=view&person=gwenora-maerllys",
+              "fingerprint": "{\"name\":\"Gwenora Maerllys\",\"title\":\"Schneidermeisterin · Mitbegründerin des Geschäfts\",\"birth\":\"1638\",\"death\":\"1714\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"matteo-veltrane\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"}],\"children\":[]}}",
               "score": 1000
             }
           ],
@@ -246365,7 +246610,7 @@
         "recordId": "character--person--haus-veltrane--matteo-veltrane",
         "path": "records/familien/haus-maerllys/matteo-septimus-veltrane--person--haus-veltrane--matteo-veltrane/character.json",
         "schemaVersion": 1,
-        "contentHash": "cd004cc226fccab5b4ea53eb5b10abcbe81ee5f94fafb4defc5afc8d10e3cd0c",
+        "contentHash": "7ad062bc221397ac1935d0c5206db7f6147586050f3f36f09ca3fc15eb7344fe",
         "firestoreDocumentIds": [
           "person--haus-veltrane--matteo-veltrane",
           "person--haus-veltrane--matteo-veltrane",
@@ -246394,8 +246639,44 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=matteo-veltrane",
               "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "haus-raves",
+              "familyTitle": "Haus Raves",
+              "personId": "matteo-veltrane",
+              "worldPersonId": "person--haus-veltrane--matteo-veltrane",
+              "houseId": "house-veltrane",
+              "houseName": "Haus Veltrane",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=matteo-veltrane",
+              "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[{\"personId\":\"lorenzo-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lorenzo-raves\",\"name\":\"Lorenzo Cassian Raves\"},{\"personId\":\"livia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--livia-raves\",\"name\":\"Livia Aurelia Raves\"},{\"personId\":\"flavia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--flavia-raves\",\"name\":\"Flavia Marina Raves\"}]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "haus-veltrane",
+              "familyTitle": "Haus Veltrane",
+              "personId": "matteo-veltrane",
+              "worldPersonId": "person--haus-veltrane--matteo-veltrane",
+              "houseId": "house-veltrane",
+              "houseName": "Haus Veltrane",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Kaiserreich Argentum",
+                "Unsortiert"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=haus-veltrane&mode=view&person=matteo-veltrane",
+              "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-veltrane-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-veltrane--haus-veltrane-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-veltrane-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-veltrane--haus-veltrane-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[]}}",
               "score": 1000
             }
           ],
@@ -246576,7 +246857,7 @@
         "recordId": "character--person--haus-vann--edern-vann",
         "path": "records/familien/haus-maerllys/edern-vann--person--haus-vann--edern-vann/character.json",
         "schemaVersion": 1,
-        "contentHash": "08fdcfe78079a275bdfcb7c080b8fc7ce49ff4dec06da11e1920f767f8a33919",
+        "contentHash": "3816bbf5b9e7147256be09721b4d1b212ecc203bd0d63868fa9faedd9f90e1ea",
         "firestoreDocumentIds": [
           "person--haus-vann--edern-vann"
         ],
@@ -246603,8 +246884,27 @@
                 "Llamreis Ankunft",
                 "Gwynthor"
               ],
-              "url": "",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=edern-vann",
               "fingerprint": "{\"name\":\"Edern Vann\",\"title\":\"Herbergsmeister · Zimmer und Buchungen\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-vann\",\"portrait\":\"../AleriaAlmanach/assets/letzte-rast/references/edern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"elowen-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--elowen-maerllys\",\"name\":\"Elowen Maerllys\"}],\"children\":[]}}",
+              "score": 1000
+            },
+            {
+              "familyId": "haus-vann",
+              "familyTitle": "Haus Vann",
+              "personId": "edern-vann",
+              "worldPersonId": "person--haus-vann--edern-vann",
+              "houseId": "house-vann",
+              "houseName": "Haus Vann",
+              "familyRole": "core",
+              "source": "project",
+              "folderPath": [
+                "Cenyr",
+                "Celtigerns Wacht",
+                "Llamreis Ankunft",
+                "Gwynthor"
+              ],
+              "url": "../Stammbäume/Stammbaum.html?family=haus-vann&mode=view&person=edern-vann",
+              "fingerprint": "{\"name\":\"Edern Vann\",\"title\":\"Herbergsmeister · Zimmer und Buchungen\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-vann\",\"portrait\":\"../AleriaAlmanach/assets/letzte-rast/references/edern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"madoc-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--madoc-vann\",\"name\":\"Madoc Vann\"},{\"personId\":\"lowri-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--lowri-vann\",\"name\":\"Lowri\"}],\"partners\":[{\"personId\":\"elowen-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--elowen-maerllys\",\"name\":\"Elowen Maerllys\"}],\"children\":[{\"personId\":\"celyn-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--celyn-vann\",\"name\":\"Celyn Vann\"},{\"personId\":\"iolo-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--iolo-vann\",\"name\":\"Iolo Vann\"}]}}",
               "score": 1000
             }
           ],

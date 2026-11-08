@@ -1,0 +1,29 @@
+{
+  "schema": "aleria.reviewed-source-successor",
+  "schemaVersion": 1,
+  "id": "gwniwr-maerllys-registry-upgrade-source-20261108",
+  "path": "Stammbäume/assets/js/services/family-registry-upgrade.js",
+  "predecessorSha256": "cf920821519a469452e7f54db3b82dba93504861c6aacdec23f5b4e751ec8b96",
+  "currentSha256": "3c05eb5b5e041a21d8be9c443270cda3118b2769c38fd654b2e493802e3322a7",
+  "reason": "The reviewed originHouse upgrade uses the exact managed lineage field boundary. The historical Argall receipts retain their original source hash; only these two exact later source edits are reversed for that comparison.",
+  "historicalReceipts": [
+    {
+      "path": "Kontinente/tests/support/gwynthor-argall-family-review-20261105.json",
+      "sha256": "4c16c5da3a30f6a3beaf0315cd1925b2bf60ddc4649a5005c556c713a3ebcd4b"
+    },
+    {
+      "path": "Stammbäume/tests/fixtures/argall-portrait-affair-amendment-20261105.json",
+      "sha256": "38871af260392343218b453b93992c9b48e44c1c02e7591cb0835159bdce216b"
+    }
+  ],
+  "hunks": [
+    {
+      "before": "  const mergedLineage = mergeRegisteredManagedFields(\n    registered.lineage,\n    local.lineage,\n    metadataFieldsForUpgrade(registered, localRevision, 'registryManagedLineageFields', applyManagedEntityFields)\n  );\n",
+      "after": "  const managedLineageFields = metadataFieldsForUpgrade(registered, localRevision, 'registryManagedLineageFields', applyManagedEntityFields);\n  const mergedLineage = mergeRegisteredManagedFields(\n    registered.lineage,\n    local.lineage,\n    managedLineageFields\n  );\n"
+    },
+    {
+      "before": "      originHouse: registeredRevision > localRevision && applyManagedEntityFields\n        ? registered.lineage.originHouse\n",
+      "after": "      originHouse: managedLineageFields.includes('originHouse')\n        ? mergedLineage.originHouse\n        : registeredRevision > localRevision && applyManagedEntityFields\n        ? registered.lineage.originHouse\n"
+    }
+  ]
+}

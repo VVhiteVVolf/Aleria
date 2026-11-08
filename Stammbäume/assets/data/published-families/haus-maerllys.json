@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-maerllys",
-  "revision": 4,
-  "updatedAt": "2026-11-08T16:37:10.746Z",
+  "revision": 6,
+  "updatedAt": "2026-11-08T17:51:03.835Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -93,13 +93,16 @@
         "tags": [],
         "notes": "",
         "extensions": {
-          "registryManagedSourceRevision": 8,
+          "registryManagedFields": [
+            "portrait"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 11
           },
-          "registryManagedFields": [
-            "portrait"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 13
+          },
+          "registryManagedSourceRevision": 8
         }
       },
       {
@@ -119,13 +122,16 @@
         "tags": [],
         "notes": "",
         "extensions": {
-          "registryManagedSourceRevision": 8,
+          "registryManagedFields": [
+            "portrait"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 11
           },
-          "registryManagedFields": [
-            "portrait"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 13
+          },
+          "registryManagedSourceRevision": 8
         }
       },
       {
@@ -145,13 +151,16 @@
         "tags": [],
         "notes": "Bruder Cadfan Maerllys’; heiratete Gwenllian Ysgrif.",
         "extensions": {
-          "registryManagedSourceRevision": 8,
+          "registryManagedFields": [
+            "portrait"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 11
           },
-          "registryManagedFields": [
-            "portrait"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 13
+          },
+          "registryManagedSourceRevision": 8
         }
       },
       {
@@ -171,13 +180,16 @@
         "tags": [],
         "notes": "Schwester Idris Ysgrifs; heiratete Owain Maerllys.",
         "extensions": {
-          "registryManagedSourceRevision": 8,
+          "registryManagedFields": [
+            "portrait"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 11
           },
-          "registryManagedFields": [
-            "portrait"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 13
+          },
+          "registryManagedSourceRevision": 8
         }
       },
       {
@@ -197,15 +209,18 @@
         "tags": [],
         "notes": "Angehöriger des Hauses Maerllys; heiratete Llio Falchdyn.",
         "extensions": {
-          "registryManagedSourceRevision": 8,
+          "registryManagedFields": [
+            "portrait",
+            "title"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 11,
             "title": 11
           },
-          "registryManagedFields": [
-            "portrait",
-            "title"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 13
+          },
+          "registryManagedSourceRevision": 8
         }
       },
       {
@@ -225,15 +240,18 @@
         "tags": [],
         "notes": "Tochter Madoc Falchdyns; heiratete Geraint Maerllys. Die Verbindung wird in beiden Familienakten geführt.",
         "extensions": {
-          "registryManagedSourceRevision": 8,
+          "registryManagedFields": [
+            "portrait",
+            "title"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 11,
             "title": 11
           },
-          "registryManagedFields": [
-            "portrait",
-            "title"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 13
+          },
+          "registryManagedSourceRevision": 8
         }
       },
       {
@@ -253,13 +271,16 @@
         "tags": [],
         "notes": "Tochter Owain Maerllys’ und Gwenllian Ysgrifs; heiratete Madoc Tonnarth.",
         "extensions": {
-          "registryManagedSourceRevision": 8,
+          "registryManagedFields": [
+            "portrait"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 11
           },
-          "registryManagedFields": [
-            "portrait"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 13
+          },
+          "registryManagedSourceRevision": 8
         }
       },
       {
@@ -279,13 +300,16 @@
         "tags": [],
         "notes": "Bruder Cadell Tonnarths; heiratete Rhoswen Maerllys und hat mit ihr drei Söhne.",
         "extensions": {
-          "registryManagedSourceRevision": 8,
+          "registryManagedFields": [
+            "portrait"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 11
           },
-          "registryManagedFields": [
-            "portrait"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 13
+          },
+          "registryManagedSourceRevision": 8
         }
       },
       {
@@ -305,15 +329,18 @@
         "tags": [],
         "notes": "Angehöriger des Hauses Maerllys; heiratete Bronwen Swyll.",
         "extensions": {
-          "registryManagedSourceRevision": 8,
+          "registryManagedFields": [
+            "portrait",
+            "title"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 11,
             "title": 11
           },
-          "registryManagedFields": [
-            "portrait",
-            "title"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 13
+          },
+          "registryManagedSourceRevision": 8
         }
       },
       {
@@ -333,15 +360,18 @@
         "tags": [],
         "notes": "Schwester Iestyn Swylls; heiratete Iorwerth Maerllys.",
         "extensions": {
-          "registryManagedSourceRevision": 8,
+          "registryManagedFields": [
+            "portrait",
+            "title"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 11,
             "title": 11
           },
-          "registryManagedFields": [
-            "portrait",
-            "title"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 13
+          },
+          "registryManagedSourceRevision": 8
         }
       },
       {
@@ -393,15 +423,15 @@
         ],
         "notes": "Im Jahr 1740 vierundzwanzig Jahre alt; unverheiratet und ohne Verlobung.",
         "extensions": {
-          "registryManagedSourceRevision": 8,
+          "registryManagedFields": [
+            "portrait",
+            "title"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 11,
             "title": 11
           },
-          "registryManagedFields": [
-            "portrait",
-            "title"
-          ]
+          "registryManagedSourceRevision": 8
         }
       },
       {
@@ -913,13 +943,13 @@
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
         "status": "active",
         "extensions": {
-          "registryManagedSourceRevision": 8,
+          "registryManagedFields": [
+            "emblem"
+          ],
           "registryManagedFieldRevisions": {
             "emblem": 11
           },
-          "registryManagedFields": [
-            "emblem"
-          ]
+          "registryManagedSourceRevision": 8
         }
       },
       {
@@ -1004,7 +1034,22 @@
         "name": "Familie Gwniwr",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwniwr/gwniwr-emblem.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "motto",
+            "emblem",
+            "status"
+          ],
+          "registryManagedFieldRevisions": {
+            "name": 12,
+            "motto": 12,
+            "emblem": 12,
+            "status": 12
+          },
+          "registryManagedSourceRevision": 12
+        }
       }
     ],
     "cadetBranches": [
@@ -1198,7 +1243,7 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 11,
+      "sourceRevision": 13,
       "registryManagedViewFields": [
         "focusPersonId",
         "limitGenerations"
@@ -1209,19 +1254,19 @@
         "emblem"
       ],
       "registryManagedDocumentFieldRevisions": {
-        "description": 11,
-        "emblem": 11
+        "description": 13,
+        "emblem": 13
       },
       "registryManagedHouseProfileFieldRevisions": {},
       "registryManagedExtensionFieldRevisions": {
-        "tailoringContentInventory": 11
+        "tailoringContentInventory": 13
       },
       "registryManagedViewFieldRevisions": {
         "focusPersonId": 8,
         "limitGenerations": 8
       },
       "registryManagedLineageFieldRevisions": {
-        "originHouse": 11
+        "originHouse": 13
       },
       "registryManagedEntitySourceRevision": 8,
       "tailoringContentInventory": "gwniwr-maerllys-20261108",
@@ -1340,8 +1385,8 @@
       },
       "registryTombstones": {},
       "registryUpgrade": {
-        "fromRevision": 8,
-        "toRevision": 11
+        "fromRevision": 12,
+        "toRevision": 13
       }
     }
   }

@@ -31,8 +31,27 @@
           "Llamreis Ankunft",
           "Gwynthor"
         ],
-        "url": "",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=madoc-tonnarth",
         "fingerprint": "{\"name\":\"Madoc Tonnarth\",\"title\":\"Onkel Llewarch Tonnarths\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tonnarth\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/madoc-tonnarth.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"rhoswen-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}],\"children\":[]}}",
+        "score": 1000
+      },
+      {
+        "familyId": "haus-tonnarth",
+        "familyTitle": "Haus Tonnarth",
+        "personId": "madoc-tonnarth",
+        "worldPersonId": "person--haus-tonnarth--madoc-tonnarth",
+        "houseId": "house-tonnarth",
+        "houseName": "Haus Tonnarth",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=madoc-tonnarth",
+        "fingerprint": "{\"name\":\"Madoc Tonnarth\",\"title\":\"Onkel Llewarch Tonnarths\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tonnarth\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/madoc-tonnarth.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"idris-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--idris-tonnarth\",\"name\":\"Idris Tonnarth\"},{\"personId\":\"lowri-spouse-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--lowri-spouse-tonnarth\",\"name\":\"Lowri\"}],\"partners\":[{\"personId\":\"rhoswen-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}],\"children\":[{\"personId\":\"bryn-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--bryn-tonnarth\",\"name\":\"Bryn Tonnarth\"},{\"personId\":\"emrys-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--emrys-tonnarth\",\"name\":\"Emrys Tonnarth\"},{\"personId\":\"aled-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--aled-tonnarth\",\"name\":\"Aled Tonnarth\"}]}}",
         "score": 1000
       }
     ],
@@ -74,7 +93,13 @@
         "familyId": "haus-maerllys",
         "personId": "madoc-tonnarth",
         "worldPersonId": "person--haus-tonnarth--madoc-tonnarth",
-        "url": ""
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=madoc-tonnarth"
+      },
+      {
+        "familyId": "haus-tonnarth",
+        "personId": "madoc-tonnarth",
+        "worldPersonId": "person--haus-tonnarth--madoc-tonnarth",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=madoc-tonnarth"
       }
     ],
     "profile": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=madoc-tonnarth"
@@ -87,7 +112,7 @@
     "sourceDocumentIds": [
       "person--haus-tonnarth--madoc-tonnarth"
     ],
-    "contentHash": "7326d60df3c9fa3af99a4a11efac400501b729c864ff023f0806e29e3c74d4f7"
+    "contentHash": "192f2ca08fd06822ad1ad781e99d2d928440893f724350ca4345ce32a54f93d1"
   },
   "local": {
     "notes": "",

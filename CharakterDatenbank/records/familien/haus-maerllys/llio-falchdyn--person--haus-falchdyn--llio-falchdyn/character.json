@@ -31,8 +31,27 @@
           "Llamreis Ankunft",
           "Gwynthor"
         ],
-        "url": "",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=llio-falchdyn",
         "fingerprint": "{\"name\":\"Llio Falchdyn\",\"title\":\"Nähstube und Serienfertigung · Naht & Siegel\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-falchdyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"geraint-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"}],\"children\":[]}}",
+        "score": 1000
+      },
+      {
+        "familyId": "haus-falchdyn",
+        "familyTitle": "Haus Falchdyn",
+        "personId": "llio-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--llio-falchdyn",
+        "houseId": "house-falchdyn",
+        "houseName": "Haus Falchdyn",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-falchdyn&mode=view&person=llio-falchdyn",
+        "fingerprint": "{\"name\":\"Llio Falchdyn\",\"title\":\"Nähstube und Serienfertigung · Naht & Siegel\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-falchdyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"madoc-falchdyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falchdyn--madoc-falchdyn\",\"name\":\"Madoc Falchdyn\"},{\"personId\":\"seren-spouse-falchdyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--seren-spouse-falchdyn\",\"name\":\"Seren\"}],\"partners\":[{\"personId\":\"geraint-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"}],\"children\":[]}}",
         "score": 1000
       }
     ],
@@ -74,7 +93,13 @@
         "familyId": "haus-maerllys",
         "personId": "llio-falchdyn",
         "worldPersonId": "person--haus-falchdyn--llio-falchdyn",
-        "url": ""
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=llio-falchdyn"
+      },
+      {
+        "familyId": "haus-falchdyn",
+        "personId": "llio-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--llio-falchdyn",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-falchdyn&mode=view&person=llio-falchdyn"
       }
     ],
     "profile": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=llio-falchdyn"
@@ -87,7 +112,7 @@
     "sourceDocumentIds": [
       "person--haus-falchdyn--llio-falchdyn"
     ],
-    "contentHash": "2bbb4df2976e5c4d0ce0693b5e36d5318cff816147559c391e50395efd4faa26"
+    "contentHash": "0f7db4b64b8338b16f8cb18032385757c1043d450ecbfcb9b7f76027d2307508"
   },
   "local": {
     "notes": "",

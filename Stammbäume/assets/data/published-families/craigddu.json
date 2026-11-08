@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "craigddu",
-  "revision": 5,
-  "updatedAt": "2026-11-08T16:12:19.209Z",
+  "revision": 6,
+  "updatedAt": "2026-11-08T17:36:05.524Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -1267,7 +1267,22 @@
         "name": "Familie Gwniwr",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwniwr/gwniwr-emblem.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "motto",
+            "emblem",
+            "status"
+          ],
+          "registryManagedFieldRevisions": {
+            "name": 5,
+            "motto": 5,
+            "emblem": 5,
+            "status": 5
+          },
+          "registryManagedSourceRevision": 5
+        }
       }
     ],
     "cadetBranches": [
@@ -1373,7 +1388,7 @@
       "showSiblings": true
     },
     "extensions": {
-      "sourceRevision": 4,
+      "sourceRevision": 5,
       "blankFamily": false,
       "sourceNote": "Erweiterung nach Benutzervorgaben vom 28.09.2026: unbekanntes Gründerpaar, Wappen und Zeitsprung zu Iestyn mit zwei Brüdern, drei Vettern Hywels und deren Kindern. Bestehende Personen-, Beziehungs- und Weltpersonen-IDs sowie bekannte Lebensjahre bleiben erhalten; die historischen IDs craigddu-gruender und craigddu-gruenderin bezeichnen weiterhin Iestyn und Mared. Namen und Lebensjahre der neuen jüngeren Angehörigen sind erzählerische Ergänzungen nach dem Rheunwaith-Namensarchiv. Eleris Gwniwr-Herkunft und dieselbe Ehe mit Hywel sind seit 8. November 2026 beidseitig verknüpft; alte Karten- und Ehekennungen bleiben erhalten.",
       "registry": {
@@ -1435,37 +1450,37 @@
         "sourceNote",
         "generatorProfile"
       ],
-      "gwniwrMarriageInventory": "gwniwr-maerllys-20261108",
       "registryManagedDocumentFieldRevisions": {
-        "title": 4,
-        "description": 4,
-        "emblem": 4
+        "title": 3,
+        "description": 3,
+        "emblem": 3
       },
       "registryManagedHouseProfileFieldRevisions": {
-        "rankId": 4,
-        "seat": 4,
-        "barony": 4,
-        "county": 4,
-        "kingdom": 4,
-        "liegeHouseId": 4,
-        "liegeHouseName": 4,
-        "regionEmblems": 4
+        "rankId": 3,
+        "seat": 3,
+        "barony": 3,
+        "county": 3,
+        "kingdom": 3,
+        "liegeHouseId": 3,
+        "liegeHouseName": 3,
+        "regionEmblems": 3
       },
       "registryManagedExtensionFieldRevisions": {
-        "registry": 4,
-        "sourceNote": 4,
-        "generatorProfile": 4
+        "registry": 3,
+        "sourceNote": 3,
+        "generatorProfile": 3
       },
       "registryManagedViewFieldRevisions": {
-        "focusPersonId": 4,
-        "limitGenerations": 4
+        "focusPersonId": 3,
+        "limitGenerations": 3
       },
       "registryManagedLineageFieldRevisions": {
-        "founderPartnershipId": 4,
-        "crestFrame": 4,
-        "timeGap": 4
+        "founderPartnershipId": 3,
+        "crestFrame": 3,
+        "timeGap": 3
       },
-      "registryManagedEntitySourceRevision": 4,
+      "registryManagedEntitySourceRevision": 3,
+      "gwniwrMarriageInventory": "gwniwr-maerllys-20261108",
       "houseBiographyModule": {
         "schema": "aleria.house-module",
         "schemaVersion": 1,
@@ -1558,8 +1573,8 @@
         }
       },
       "registryUpgrade": {
-        "fromRevision": 3,
-        "toRevision": 4
+        "fromRevision": 4,
+        "toRevision": 5
       }
     }
   }

@@ -137,7 +137,17 @@ function biography(name, paragraphs, portrait, stats){
   biography:{portrait,biographyTitle:'Biografie',biographyText:paragraphs[0],extraSections:paragraphs.slice(1).map((text,i)=>({position:'afterIntro',mode:'text',title:i===0?'Arbeit und Alltag':'Familie und Verbindungen',text}))}}}).biography;
 }
 export function tailoringFamilyCandidates(registry){
- return ['gwniwr','haus-maerllys'].flatMap(id=>{const record=registry.find(r=>r.id===id);if(!record)throw Error('Familie fehlt '+id);return createFamilyCandidates(record).filter(c=>TAILORING_LIFE[c.personId]||['nia-maerllys','rhys-maerllys','gwenora-maerllys','matteo-veltrane'].includes(c.personId));});
+ return ['gwniwr','haus-maerllys'].flatMap(id=>{const record=registry.find(r=>r.id===id);if(!record)throw Error('Familie fehlt '+id);return createFamilyCandidates(record).filter(c=>TAILORING_LIFE[c.personId]||['nia-maerllys','rhys-maerllys','gwenora-maerllys','matteo-veltrane'].includes(c.personId)).map(candidate=>({...candidate,url:buildFamilyPersonViewUrl(candidate)}));});
+}
+export function tailoringDatabaseCandidates(registry){
+ const selected=tailoringFamilyCandidates(registry),worldIds=new Set(selected.map(candidate=>candidate.worldPersonId));
+ const known=new Set(selected.map(candidate=>`${candidate.familyId}:${candidate.personId}`));
+ // Database links include confirmed counterpart charts without expanding the
+ // authored export roster or changing its preferred family projection order.
+ const counterparts=registry.flatMap(record=>createFamilyCandidates(record))
+  .filter(candidate=>worldIds.has(candidate.worldPersonId)&&!known.has(`${candidate.familyId}:${candidate.personId}`))
+  .map(candidate=>({...candidate,url:buildFamilyPersonViewUrl(candidate)}));
+ return [...selected,...counterparts];
 }
 export function buildTailoringCharacterExports(registry, existingCharacters=[]){
  const counterparts=registry.flatMap(record=>createFamilyCandidates(record));

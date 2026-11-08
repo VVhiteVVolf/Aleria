@@ -18,6 +18,7 @@ import patrickBiographies from './patrick-biography-person-review-20261103.json'
 import houseBiographyOwnership from './house-biography-ownership-review-20261103.json' with { type: 'json' };
 import sonnenkuesteAllegiance from './sonnenkueste-knight-allegiance-review-20261103.json' with { type: 'json' };
 import { applyFamilyMetadataReview } from './apply-family-metadata-review.mjs';
+import { projectReviewedTailoringSource } from './tailoring-family-baseline-projection.mjs';
 import { getRegisteredSourceMetadataProvenance } from '../../../Stammbäume/assets/js/data/families.registry.js';
 import { projectReviewedHouseCorrections } from './reviewed-house-correction-projection.mjs';
 
@@ -25,12 +26,13 @@ export const reviewHash = value => createHash('sha256').update(JSON.stringify(va
 
 export function protectedAlbicFamilies(records) {
   return records.map(record => {
-    const copy = structuredClone(record);
+    let copy = structuredClone(record);
     // Migration versions remain source-owned. Admit only the exact metadata
     // produced by the canonical wrapper pipeline, then retain the explicit
     // pre-existing versions for the historical content proof.
     const provenance = getRegisteredSourceMetadataProvenance(record.id);
     if (provenance.fields.length) applyFamilyMetadataReview(copy, { familyId: record.id, ...provenance });
+    copy = projectReviewedTailoringSource(copy);
     // Restore only the exact source7 portrait/view correction to its reviewed
     // source6 predecessor before the existing source6-to4 metadata proof.
     if (record.id === gwynthorArgall.layoutRevisionCorrection.familyId) {

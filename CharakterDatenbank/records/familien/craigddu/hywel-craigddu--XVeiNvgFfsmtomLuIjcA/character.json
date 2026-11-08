@@ -33,8 +33,27 @@
           "Llamreis Ankunft",
           "Gwynthor"
         ],
-        "url": "",
+        "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-e847aa96",
         "fingerprint": "{\"name\":\"Hywel Craigddu\",\"title\":\"Waffenknecht in Gwynthor\",\"birth\":\"1708\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-craigddu\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-cf831497\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-cf831497\",\"name\":\"Eleri Gwniwr\"}],\"children\":[]}}",
+        "score": 1000
+      },
+      {
+        "familyId": "craigddu",
+        "familyTitle": "Haus Craigddu",
+        "personId": "person-28b0e0a3",
+        "worldPersonId": "person--craigddu--person-28b0e0a3",
+        "houseId": "house-craigddu",
+        "houseName": "Haus Craigddu",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=craigddu&mode=view&person=person-28b0e0a3",
+        "fingerprint": "{\"name\":\"Hywel Craigddu\",\"title\":\"Waffenknecht in Gwynthor\",\"birth\":\"1708\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-craigddu\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"craigddu-gruender\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--craigddu-gruender\",\"name\":\"Iestyn Craigddu\"},{\"personId\":\"craigddu-gruenderin\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--craigddu-gruenderin\",\"name\":\"Mared Craigddu\"}],\"partners\":[{\"personId\":\"person-0774c56b\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-cf831497\",\"name\":\"Eleri\"}],\"children\":[{\"personId\":\"person-36234a87\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-36234a87\",\"name\":\"Lowri Craigddu\"},{\"personId\":\"person-abdbd916\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-abdbd916\",\"name\":\"Carys Craigddu\"},{\"personId\":\"person-650808a6\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-650808a6\",\"name\":\"Nerys Craigddu\"},{\"personId\":\"person-f54eea82\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-f54eea82\",\"name\":\"Ffion Craigddu\"},{\"personId\":\"person-70f41f8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-70f41f8d\",\"name\":\"Anwen Craigddu\"},{\"personId\":\"person-c5e97e4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-c5e97e4f\",\"name\":\"Eirlys Craigddu\"},{\"personId\":\"person-9be71788\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-9be71788\",\"name\":\"Mali Craigddu\"}]}}",
         "score": 1000
       }
     ],
@@ -82,7 +101,13 @@
         "familyId": "gwniwr",
         "personId": "person-e847aa96",
         "worldPersonId": "person--craigddu--person-28b0e0a3",
-        "url": ""
+        "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-e847aa96"
+      },
+      {
+        "familyId": "craigddu",
+        "personId": "person-28b0e0a3",
+        "worldPersonId": "person--craigddu--person-28b0e0a3",
+        "url": "../Stammbäume/Stammbaum.html?family=craigddu&mode=view&person=person-28b0e0a3"
       }
     ],
     "profile": ""
@@ -97,7 +122,7 @@
       "XVeiNvgFfsmtomLuIjcA",
       "XVeiNvgFfsmtomLuIjcA"
     ],
-    "contentHash": "6e43c0e1973330b4a47d9f6fdd216def9964ca17e7e084705b91fc0fe8c37636"
+    "contentHash": "074991eb06fe992cfe574e50e8ad70845c2ed4246e986ac8a83da9213d911a84"
   },
   "local": {
     "notes": "",

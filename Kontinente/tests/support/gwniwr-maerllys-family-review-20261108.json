@@ -1,0 +1,2490 @@
+{
+  "schema": "aleria.reviewed-tailoring-family-history",
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-08",
+  "baselineCommit": "c0ce3bc0a402f8f9149c03784c3b57b52f389958",
+  "reason": "Only reviewed Gwniwr/Maerllys content and explicit migration fields are inverted after current dynamic provenance and before the unchanged historical family proofs. New houses are exact additions, never an array exemption. Earlier failed own drafts are not historical predecessors.",
+  "newIndependentFamilyId": "gwniwr",
+  "reviews": [
+    {
+      "familyId": "haus-maerllys",
+      "proof": {
+        "baselineCommit": "c0ce3bc0a402f8f9149c03784c3b57b52f389958",
+        "expectedCurrentSha256": "b60a6ce465885e497e353b428bab47e96ca69f7f6b8ba48fbe17ad9a06b3781d",
+        "expectedHistoricalSha256": "22e781e639b857027c5333e90d098570491479f0cb94e6a81687f5d7c762e408",
+        "registeredBeforeSha256": "50a4c4c8148833212512816874edda316969a597b700fe54fb8cf1d25b4cb85e",
+        "registeredAfterSha256": "b60a6ce465885e497e353b428bab47e96ca69f7f6b8ba48fbe17ad9a06b3781d",
+        "oldDynamicProvenanceFields": 5,
+        "currentDynamicProvenanceFields": 0
+      },
+      "houseAdditions": [
+        {
+          "collectionPath": [
+            "family",
+            "houses"
+          ],
+          "index": 8,
+          "afterCount": 9,
+          "beforeCount": 8,
+          "house": {
+            "id": "house-gwniwr",
+            "name": "Familie Gwniwr",
+            "motto": "",
+            "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwniwr/gwniwr-emblem.png",
+            "status": "active",
+            "extensions": {
+              "registryManagedFields": [
+                "name",
+                "motto",
+                "emblem",
+                "status"
+              ],
+              "registryManagedFieldRevisions": {
+                "name": 13,
+                "motto": 13,
+                "emblem": 13,
+                "status": 13
+              },
+              "registryManagedSourceRevision": 13
+            }
+          }
+        }
+      ],
+      "fields": [
+        {
+          "path": [
+            "family",
+            "document",
+            "description"
+          ],
+          "beforePresent": true,
+          "before": "Gwynthorer Schneiderfamilie, deren Schere und Garnrolle seit Generationen für gute Arbeit stehen. Gwenora Maerllys begründete mit Matteo Veltrane die Raves-Linie; die jüngere Hauptlinie führt bis zu Nia und ihren Geschwistern.",
+          "afterPresent": true,
+          "after": "Gwynthorer Schneiderfamilie mit dem auf Dienstkleidung und Livreen spezialisierten Haus Naht & Siegel. Der ältere Maerllys-Zweig spaltete sich vor der Überlieferungslücke von Gwniwr ab. Gwenora und Matteo begründeten später die Raves-Linie; die jüngere Hauptlinie führt bis Nia und ihren Geschwistern."
+        },
+        {
+          "path": [
+            "family",
+            "document",
+            "emblem"
+          ],
+          "beforePresent": true,
+          "before": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+          "afterPresent": true,
+          "after": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png"
+        },
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-maerllys",
+            "emblem"
+          ],
+          "beforePresent": true,
+          "before": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+          "afterPresent": true,
+          "after": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png"
+        },
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-maerllys",
+            "extensions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "registryManagedFields": [
+              "emblem"
+            ],
+            "registryManagedFieldRevisions": {
+              "emblem": 13
+            }
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@cadfan-maerllys",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/cadfan-maerllys.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@cadfan-maerllys",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@cadfan-maerllys",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@cadfan-maerllys",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@eira-spouse-maerllys",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/eira-spouse-maerllys.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@eira-spouse-maerllys",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@eira-spouse-maerllys",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@eira-spouse-maerllys",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@owain-maerllys",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/owain-maerllys.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@owain-maerllys",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@owain-maerllys",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@owain-maerllys",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@gwenllian-ysgrif",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@gwenllian-ysgrif",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@gwenllian-ysgrif",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@gwenllian-ysgrif",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@geraint-maerllys",
+            "title"
+          ],
+          "beforePresent": true,
+          "before": "Sohn Owain Maerllys’ und Gwenllian Ysgrifs",
+          "afterPresent": true,
+          "after": "Werkstattleitung und Livreeschnitt · Naht & Siegel"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@geraint-maerllys",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/geraint-maerllys.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@geraint-maerllys",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait",
+            "title"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@geraint-maerllys",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13,
+            "title": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@geraint-maerllys",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@llio-falchdyn",
+            "title"
+          ],
+          "beforePresent": true,
+          "before": "An Haus Maerllys verheiratete Falchdyn",
+          "afterPresent": true,
+          "after": "Nähstube und Serienfertigung · Naht & Siegel"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@llio-falchdyn",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/llio-falchdyn.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@llio-falchdyn",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait",
+            "title"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@llio-falchdyn",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13,
+            "title": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@llio-falchdyn",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhoswen-maerllys",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/rhoswen-maerllys.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhoswen-maerllys",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhoswen-maerllys",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhoswen-maerllys",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@madoc-tonnarth",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/madoc-tonnarth.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@madoc-tonnarth",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@madoc-tonnarth",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@madoc-tonnarth",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@iorwerth-maerllys",
+            "title"
+          ],
+          "beforePresent": true,
+          "before": "Vater Nia Maerllys’",
+          "afterPresent": true,
+          "after": "Schneidermeister · Leitung von Naht & Siegel"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@iorwerth-maerllys",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/iorwerth-maerllys.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@iorwerth-maerllys",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait",
+            "title"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@iorwerth-maerllys",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13,
+            "title": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@iorwerth-maerllys",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@bronwen-swyll",
+            "title"
+          ],
+          "beforePresent": true,
+          "before": "An Haus Maerllys verheiratete Swyll",
+          "afterPresent": true,
+          "after": "Anprobe und Qualitätskontrolle · Naht & Siegel"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@bronwen-swyll",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/bronwen-swyll.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@bronwen-swyll",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait",
+            "title"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@bronwen-swyll",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13,
+            "title": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@bronwen-swyll",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@nia-maerllys",
+            "title"
+          ],
+          "beforePresent": true,
+          "before": "Angehörige des Hauses Maerllys",
+          "afterPresent": true,
+          "after": "Persönliche Zofe der Prinzessin Isobel Draig"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@nia-maerllys",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "title"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@nia-maerllys",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "title": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhys-maerllys",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/rhys-maerllys.png"
+        },
+        {
+          "path": [
+            "family",
+            "lineage",
+            "originHouse"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "enabled": true,
+            "id": "lineage-origin-gwniwr-maerllys",
+            "houseId": "house-gwniwr",
+            "name": "Familie Gwniwr",
+            "subtitle": "Historischer Ursprung vor dem Zeitsprung",
+            "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwniwr/gwniwr-emblem.png",
+            "emblemScale": 0.86,
+            "crestFrame": "iron",
+            "frameScale": 1,
+            "childIds": [
+              "haus-maerllys-gruender"
+            ],
+            "targetFamilyId": "gwniwr",
+            "notes": "Die Maerllys spalteten sich vor den namentlich überlieferten Generationen von Gwniwr ab. Die Hausverbindung ist ein Herkunftsverweis, keine biologische Elternschaft. Zeitpunkt, einzelne Ahnen und genaue Verwandtschaftsgrade sind nicht überliefert.",
+            "timeGap": {
+              "enabled": false,
+              "years": 0,
+              "fromYear": "",
+              "toYear": "",
+              "label": ""
+            }
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 9,
+          "afterPresent": true,
+          "after": 13
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceNote"
+          ],
+          "beforePresent": true,
+          "before": "Die konkrete Maerllys-Linie reicht nur bis zu Nias Großvater Cadfan und dessen Bruder Owain. Owain und Gwenllian Ysgrif haben Geraint sowie Rhoswen, die an Madoc Tonnarth verheiratet ist; ihre Ehe und der direkte Tonnarth-Zielknoten werden in beiden Gegenakten geführt, während die drei Kinder ausschließlich im Zielhaus Tonnarth erscheinen. Geraints Ehe mit Llio Falchdyn wird als dieselbe Weltperson und dieselbe Partnerschaft auch in der neuen Falchdyn-Gegenakte geführt; mangels vorgegebener Kinder entsteht daraus in keiner Akte eine zusätzliche Nachkommenslinie. Nia ist mangels vorgegebener Altersangabe im Jahr 1740 vorläufig vierundzwanzig Jahre alt; sie und Rhys bleiben unverheiratet und ohne Verlobung. Elowens Ehe mit Edern Vann wird in beiden Häusern geführt. Nias Mutter Bronwen Swyll und Großonkel Owains Ehe mit Gwenllian Ysgrif werden mit gemeinsamen Weltpersonen- und Partnerschafts-IDs in den jeweiligen Gegenstammbäumen geführt. Das vorgegebene Nia-Porträt wurde lokal gesichert. Ergänzung 16.10.2026: Edern Vann und Elowen Maerllys heirateten 1733. Die Fortsetzung dieser Ehe steht ausschließlich im Haus Vann.",
+          "afterPresent": true,
+          "after": "Die konkrete Maerllys-Linie reicht nur bis zu Nias Großvater Cadfan und dessen Bruder Owain. Owain und Gwenllian Ysgrif haben Geraint sowie Rhoswen, die an Madoc Tonnarth verheiratet ist; ihre Ehe und der direkte Tonnarth-Zielknoten werden in beiden Gegenakten geführt, während die drei Kinder ausschließlich im Zielhaus Tonnarth erscheinen. Geraints Ehe mit Llio Falchdyn wird als dieselbe Weltperson und dieselbe Partnerschaft auch in der neuen Falchdyn-Gegenakte geführt; mangels vorgegebener Kinder entsteht daraus in keiner Akte eine zusätzliche Nachkommenslinie. Nia ist mangels vorgegebener Altersangabe im Jahr 1740 vorläufig vierundzwanzig Jahre alt; sie und Rhys bleiben unverheiratet und ohne Verlobung. Elowens Ehe mit Edern Vann wird in beiden Häusern geführt. Nias Mutter Bronwen Swyll und Großonkel Owains Ehe mit Gwenllian Ysgrif werden mit gemeinsamen Weltpersonen- und Partnerschafts-IDs in den jeweiligen Gegenstammbäumen geführt. Das vorgegebene Nia-Porträt wurde lokal gesichert. Ergänzung 16.10.2026: Edern Vann und Elowen Maerllys heirateten 1733. Die Fortsetzung dieser Ehe steht ausschließlich im Haus Vann. Nutzerauftrag vom 8. November 2026: Maerllys ist der vor dem Zeitsprung abgespaltene Gwniwr-Zweig. Naht & Siegel fertigt Dienstkleidung für Arbeitgeber und kooperiert mit der Göttlichen Eleganz. Nias Dienst bei Prinzessin Isobel, Rhys’ Verkaufstätigkeit in der Eleganz und Elowens Ehe/Dienst in der Letzten Rast bleiben erhalten."
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedDocumentFields"
+          ],
+          "beforePresent": true,
+          "before": [
+            "description"
+          ],
+          "afterPresent": true,
+          "after": [
+            "description",
+            "emblem"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "description"
+          ],
+          "beforePresent": true,
+          "before": "Die Maerllys sind eine Schneiderfamilie aus Gwynthor. Schere und Garnrolle im Familienzeichen stehen für ihre handwerkliche Überlieferung. Die jüngere Hauptlinie führt bis zu Nia und ihren Geschwistern; ein älterer Zweig verband das Haus mit den venalysisch geprägten Raves.",
+          "afterPresent": true,
+          "after": "Die Maerllys sind eine bürgerliche Schneiderfamilie aus Gwynthor. Ihr Familienzeichen zeigt Schere und Garnrolle und verweist auf eine über Generationen bewahrte Handwerkstradition. Mit Naht & Siegel führt die jüngere Familie heute eine kleinere, professionelle Schneiderei für Dienstkleidung, Livreen und einheitliche Haushaltsgarnituren. Das Geschäft richtet sich vor allem an Arbeitgeber und Haushaltsverantwortliche.\n\nZofen, Vögte, Diener, Mägde, Burschen und Amtsträger benötigen Kleidung, die ihre Aufgabe sichtbar macht und im täglichen Dienst funktioniert. Deshalb stehen wiederholbare Schnitte, gute Passform und spätere Nachbestellungen im Mittelpunkt. Naht & Siegel kooperiert mit der Göttlichen Eleganz; preislich liegt es zwischen deren gehobener Mode und Nadel & Faden."
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "stats"
+          ],
+          "beforePresent": true,
+          "before": [
+            [
+              "Voller Name",
+              "Haus Maerllys"
+            ],
+            [
+              "Rang",
+              "Bürgerlich"
+            ],
+            [
+              "Stammsitz",
+              "Gwynthor"
+            ],
+            [
+              "Grafschaft",
+              "Celtigerns Wacht"
+            ],
+            [
+              "Oberhaupt",
+              "Cadfan Maerllys"
+            ],
+            [
+              "Lehnsherr",
+              "Haus Draig"
+            ]
+          ],
+          "afterPresent": true,
+          "after": [
+            [
+              "Voller Name",
+              "Haus Maerllys"
+            ],
+            [
+              "Rang",
+              "Bürgerlich"
+            ],
+            [
+              "Stammsitz",
+              "Gwynthor"
+            ],
+            [
+              "Grafschaft",
+              "Celtigerns Wacht"
+            ],
+            [
+              "Oberhaupt",
+              "Iorwerth und Bronwen · Geschäftsführung"
+            ],
+            [
+              "Lehnsherr",
+              "Haus Draig"
+            ],
+            [
+              "Ursprung",
+              "Historischer Gwniwr-Zweig"
+            ]
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "crestImage"
+          ],
+          "beforePresent": true,
+          "before": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+          "afterPresent": true,
+          "after": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "biographyText"
+          ],
+          "beforePresent": true,
+          "before": "Die Maerllys sind eine Schneiderfamilie aus Gwynthor. Schere und Garnrolle im Familienzeichen stehen für ihre handwerkliche Überlieferung. Die jüngere Hauptlinie führt bis zu Nia und ihren Geschwistern; ein älterer Zweig verband das Haus mit den venalysisch geprägten Raves.",
+          "afterPresent": true,
+          "after": "Die Maerllys sind eine bürgerliche Schneiderfamilie aus Gwynthor. Ihr Familienzeichen zeigt Schere und Garnrolle und verweist auf eine über Generationen bewahrte Handwerkstradition. Mit Naht & Siegel führt die jüngere Familie heute eine kleinere, professionelle Schneiderei für Dienstkleidung, Livreen und einheitliche Haushaltsgarnituren. Das Geschäft richtet sich vor allem an Arbeitgeber und Haushaltsverantwortliche.\n\nZofen, Vögte, Diener, Mägde, Burschen und Amtsträger benötigen Kleidung, die ihre Aufgabe sichtbar macht und im täglichen Dienst funktioniert. Deshalb stehen wiederholbare Schnitte, gute Passform und spätere Nachbestellungen im Mittelpunkt. Naht & Siegel kooperiert mit der Göttlichen Eleganz; preislich liegt es zwischen deren gehobener Mode und Nadel & Faden."
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "historyText"
+          ],
+          "beforePresent": true,
+          "before": "Cadfan und Eira stehen am Beginn der namentlich bekannten jüngeren Linie. Cadfans Bruder Owain heiratete Gwenllian Ysgrif. Aus der nächsten Generation führen Verbindungen zu Falchdyn, Tonnarth und Swyll. Die Schneidermeisterin Gwenora Maerllys begründete mit Matteo Veltrane die Raves-Linie und das spätere Familiengeschäft.",
+          "afterPresent": true,
+          "after": "Der ältere Maerllys-Zweig spaltete sich bereits vor den Überlieferungssprüngen von Gwniwr ab. Ein genauer Zeitpunkt und die Namen der damaligen Ahnen sind nicht überliefert. Wie aus der älteren Verwandtschaft ein eigenständiger Haushalt wurde, erzählt die Familienüberlieferung nur in Umrissen.\n\nDie Schneidermeisterin Gwenora Maerllys verband sich später mit Matteo Septimus Veltrane. Aus ihrem Geschäft ging der eigenständige Raves-Zweig hervor, zu dem die Göttliche Eleganz gehört. Gwenoras unbekannter Bruder führt über eine weitere Überlieferungslücke zur jüngeren Hauptlinie. Ihre Nachkommen führen das Raves-Haus bis in die Gegenwart fort.\n\nCadfan und sein Bruder Owain stehen am Beginn dieser konkret belegten jüngeren Generation. Cadfan und Eira haben den Sohn Iorwerth. Owain und Gwenllian Ysgrif sind die Eltern Geraints und Rhoswens. Die Ehen verbinden Maerllys mit Swyll, Falchdyn und Tonnarth. Iorwerth und Bronwen Swyll haben Elowen, Nia und Rhys.\n\nDie Geschwister gingen eigene Wege: Elowen heiratete Edern Vann 1733 und arbeitet in der Letzten Rast. Nia ist persönliche Zofe der Prinzessin Isobel Draig. Rhys verkauft in der Göttlichen Eleganz. Die Verbindung zur Familienwerkstatt begleitet diese eigenen Lebenswege."
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "extraSections"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Handwerk und weitreichende familiäre Verbindungen prägen die Überlieferung. Elowen Maerllys lebt und arbeitet seit ihrer Ehe mit Edern Vann in der Letzten Rast. Nias weiterer Lebensweg ist noch offen."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Belegt sind die handwerkliche Schneidertradition und Gwenoras Mitwirkung am Raves-Geschäft. Dieses eigenständige Nachfolgehaus wird dadurch nicht zu einem unselbstständigen Besitz der Maerllys."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Eheverbindungen führen zu Ysgrif, Falchdyn, Tonnarth, Swyll, Vann und zum Ursprung der Raves."
+            }
+          ],
+          "afterPresent": true,
+          "after": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Die Maerllys verbinden ein ordentliches Erscheinungsbild mit der Würde der Arbeit. Eine gute Livree muss die Hauszugehörigkeit zeigen, ohne die Arbeit ihrer Träger zu behindern. Sorgfältige Maßnahme, wiederholbare Fertigung und die Möglichkeit zur Ausbesserung wiegen für das Geschäft schwerer als bloße Schaueffekte. Rang, Amt und Heraldik werden von den Auftraggebern vorgegeben; die Schneiderei verleiht selbst keine Stellung."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Traditionen und Hausleben",
+              "text": "Die bewahrten Muster werden an den vorgesehenen Dienst angepasst. Vor der Fertigung werden Aufgabe, Stoff, Farbe, gewünschter Besatz und die Größenfolge besprochen. Erst die Anprobe zeigt, ob ein Gewand auch beim Sitzen, Tragen und Bewegen brauchbar bleibt. Diese heutige Werkstattpraxis entwickelt die belegte Schneidertradition weiter; sie ist keine neu behauptete mittelalterliche Zunftordnung.\n\nDie ältere Generation gehört zum beratenden Familienkreis. Cadfan, Eira, Owain und Gwenllian bringen Erfahrung ein; eine zusätzliche Vollzeitbelegschaft oder bezahlte Ämter entstehen dadurch nicht. Vorbereitete Gesellen-, Lehr- und Hilfsstellen bleiben ausdrücklich frei."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Naht & Siegel umfasst Auftragsberatung, Anprobe und die handwerkliche Fertigung von Dienstkleidung. Die Kollektion führt Garnituren für unterschiedliche Hausdienste und Amtsträger, robuste Arbeitskleidung und gehobenere Livreen. Die Preise bleiben unter vergleichbarer gehobener Mode der Göttlichen Eleganz und über der günstigen Bürgermode von Nadel & Faden.\n\nDas selbstständige Raves-Geschäft ist kein unselbstständiger Familienbesitz der Maerllys. Auch die Letzte Rast und der Tonnarth-Haushalt bleiben eigene Zielhäuser. Ein Hausgrundstück, Kapital, Tierbestand oder gesicherte Großaufträge werden nicht hinzuerfunden."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Die historische Verwandtschaft zu Gwniwr ist älter als die namentlich bekannten Generationen. Die Kooperation mit der Göttlichen Eleganz beruht auf verwandtem Handwerk und dem Raves-Zweig; beide Läden bleiben eigenständige Betriebe. Rhys’ bestehende Verkaufsstelle bei der Eleganz veranschaulicht die persönliche Verbindung.\n\nWeitere Ehen verbinden Maerllys mit Ysgrif, Swyll, Falchdyn, Tonnarth und Vann. Die persönlichen Verbindungen reichen damit über die eigene Werkstatt und den gemeinsamen Schneiderberuf hinaus."
+            }
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "documents"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+              "title": "Haus Maerllys · vollständige Hausseite",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-maerllys"
+            }
+          ],
+          "afterPresent": true,
+          "after": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
+              "title": "Haus Maerllys · vollständige Hausseite",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-maerllys"
+            }
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedDocumentFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "description": 13,
+            "emblem": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedHouseProfileFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "tailoringContentInventory": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "focusPersonId": 8,
+            "limitGenerations": 8
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedLineageFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "originHouse": 13
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "tailoringContentInventory"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": "gwniwr-maerllys-20261108"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "tailoringContentInventory"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedLineageFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "originHouse"
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "haus-swyll",
+      "proof": {
+        "baselineCommit": "c0ce3bc0a402f8f9149c03784c3b57b52f389958",
+        "expectedCurrentSha256": "def7bb1a060f953c02bb8f771f9cab480e7825d24605e1ea78c7047813f6c1b4",
+        "expectedHistoricalSha256": "849b0eafece21472c1379f124ae7086207df69ed64d73789f493c04ff73b6e60",
+        "registeredBeforeSha256": "db03416c0effc6a2d8cb87db284a9850b90c5ea71b369f820385997ee3e780fd",
+        "registeredAfterSha256": "def7bb1a060f953c02bb8f771f9cab480e7825d24605e1ea78c7047813f6c1b4",
+        "oldDynamicProvenanceFields": 5,
+        "currentDynamicProvenanceFields": 0
+      },
+      "houseAdditions": [],
+      "fields": [
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-maerllys",
+            "emblem"
+          ],
+          "beforePresent": true,
+          "before": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+          "afterPresent": true,
+          "after": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png"
+        },
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-maerllys",
+            "extensions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "registryManagedFields": [
+              "emblem"
+            ],
+            "registryManagedFieldRevisions": {
+              "emblem": 17
+            }
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@bronwen-swyll",
+            "title"
+          ],
+          "beforePresent": true,
+          "before": "An Haus Maerllys verheiratete Swyll",
+          "afterPresent": true,
+          "after": "Anprobe und Qualitätskontrolle · Naht & Siegel"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@bronwen-swyll",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/bronwen-swyll.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@bronwen-swyll",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait",
+            "title"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@bronwen-swyll",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 17,
+            "title": 17
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@bronwen-swyll",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 17
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@iorwerth-maerllys",
+            "title"
+          ],
+          "beforePresent": true,
+          "before": "Vater Nia Maerllys’",
+          "afterPresent": true,
+          "after": "Schneidermeister · Leitung von Naht & Siegel"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@iorwerth-maerllys",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/iorwerth-maerllys.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@iorwerth-maerllys",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait",
+            "title"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@iorwerth-maerllys",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 17,
+            "title": 17
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@iorwerth-maerllys",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 17
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 15,
+          "afterPresent": true,
+          "after": 17
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedDocumentFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedHouseProfileFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "tailoringContentInventory": 17
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "focusPersonId": 14,
+            "limitGenerations": 14
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedLineageFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "tailoringContentInventory"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": "gwniwr-maerllys-20261108"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "tailoringContentInventory"
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "haus-tonnarth",
+      "proof": {
+        "baselineCommit": "c0ce3bc0a402f8f9149c03784c3b57b52f389958",
+        "expectedCurrentSha256": "8700398225a14a0e6a024c972ec4b4d7a2699a72fb5dd6276e9a1e6438bf692c",
+        "expectedHistoricalSha256": "84369552a9939f52c2b2ce02370004bd1ae03301c4157dd32222d113e9660f23",
+        "registeredBeforeSha256": "596e8a7122e8e3a9e66b7ee66dc9e87650f98ef29e8c425596ebd3138b0e866f",
+        "registeredAfterSha256": "8700398225a14a0e6a024c972ec4b4d7a2699a72fb5dd6276e9a1e6438bf692c",
+        "oldDynamicProvenanceFields": 5,
+        "currentDynamicProvenanceFields": 0
+      },
+      "houseAdditions": [],
+      "fields": [
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-maerllys",
+            "emblem"
+          ],
+          "beforePresent": true,
+          "before": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+          "afterPresent": true,
+          "after": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png"
+        },
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-maerllys",
+            "extensions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "registryManagedFields": [
+              "emblem"
+            ],
+            "registryManagedFieldRevisions": {
+              "emblem": 6
+            }
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@madoc-tonnarth",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/madoc-tonnarth.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@madoc-tonnarth",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@madoc-tonnarth",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 6
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@madoc-tonnarth",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 6
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhoswen-maerllys",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/rhoswen-maerllys.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhoswen-maerllys",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhoswen-maerllys",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 6
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhoswen-maerllys",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 6
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 5,
+          "afterPresent": true,
+          "after": 6
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedDocumentFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedHouseProfileFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "tailoringContentInventory": 6
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "focusPersonId": 4,
+            "limitGenerations": 4
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedLineageFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "tailoringContentInventory"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": "gwniwr-maerllys-20261108"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "tailoringContentInventory"
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "haus-ysgrif",
+      "proof": {
+        "baselineCommit": "c0ce3bc0a402f8f9149c03784c3b57b52f389958",
+        "expectedCurrentSha256": "b6c9995a644ac8cdd0528db49e17f603c0906c76932ed2c6554df61bc1140806",
+        "expectedHistoricalSha256": "4584a48e441c3fd99d550fd055ec9dedf86bcf33eb4147c26e9d0d714fe4cc34",
+        "registeredBeforeSha256": "37dc5f8375410c5ae63129e3709415c75aed2b4ecad3eccbbb9cba214e7b1aca",
+        "registeredAfterSha256": "b6c9995a644ac8cdd0528db49e17f603c0906c76932ed2c6554df61bc1140806",
+        "oldDynamicProvenanceFields": 5,
+        "currentDynamicProvenanceFields": 0
+      },
+      "houseAdditions": [],
+      "fields": [
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-maerllys",
+            "emblem"
+          ],
+          "beforePresent": true,
+          "before": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+          "afterPresent": true,
+          "after": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png"
+        },
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-maerllys",
+            "extensions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "registryManagedFields": [
+              "emblem"
+            ],
+            "registryManagedFieldRevisions": {
+              "emblem": 7
+            }
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@gwenllian-ysgrif",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@gwenllian-ysgrif",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@gwenllian-ysgrif",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 7
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@gwenllian-ysgrif",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 7
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@owain-maerllys",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/owain-maerllys.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@owain-maerllys",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@owain-maerllys",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 7
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@owain-maerllys",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 7
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 6,
+          "afterPresent": true,
+          "after": 7
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedDocumentFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedHouseProfileFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "tailoringContentInventory": 7
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "focusPersonId": 4,
+            "limitGenerations": 4
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedLineageFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "tailoringContentInventory"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": "gwniwr-maerllys-20261108"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "tailoringContentInventory"
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "haus-falchdyn",
+      "proof": {
+        "baselineCommit": "c0ce3bc0a402f8f9149c03784c3b57b52f389958",
+        "expectedCurrentSha256": "dc79fe2c2bde5114b499963e59863892c03f389c11667b7af56f657d37da7bd3",
+        "expectedHistoricalSha256": "f1f806ea0890a3d02f171cc5ec9b630c16e50085077a17d277beebabf74e2efa",
+        "registeredBeforeSha256": "f1f806ea0890a3d02f171cc5ec9b630c16e50085077a17d277beebabf74e2efa",
+        "registeredAfterSha256": "dc79fe2c2bde5114b499963e59863892c03f389c11667b7af56f657d37da7bd3",
+        "oldDynamicProvenanceFields": 0,
+        "currentDynamicProvenanceFields": 0
+      },
+      "houseAdditions": [],
+      "fields": [
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-maerllys",
+            "emblem"
+          ],
+          "beforePresent": true,
+          "before": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+          "afterPresent": true,
+          "after": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png"
+        },
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-maerllys",
+            "extensions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "registryManagedFields": [
+              "emblem"
+            ],
+            "registryManagedFieldRevisions": {
+              "emblem": 5
+            }
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@llio-falchdyn",
+            "title"
+          ],
+          "beforePresent": true,
+          "before": "An Haus Maerllys verheiratete Falchdyn",
+          "afterPresent": true,
+          "after": "Nähstube und Serienfertigung · Naht & Siegel"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@llio-falchdyn",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/llio-falchdyn.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@llio-falchdyn",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait",
+            "title"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@llio-falchdyn",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 5,
+            "title": 5
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@llio-falchdyn",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 5
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@geraint-maerllys",
+            "title"
+          ],
+          "beforePresent": true,
+          "before": "Sohn Owain Maerllys’ und Gwenllian Ysgrifs",
+          "afterPresent": true,
+          "after": "Werkstattleitung und Livreeschnitt · Naht & Siegel"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@geraint-maerllys",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-maerllys/geraint-maerllys.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@geraint-maerllys",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait",
+            "title"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@geraint-maerllys",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 5,
+            "title": 5
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@geraint-maerllys",
+            "extensions",
+            "registryManagedFieldFillOnlyRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 5
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 3,
+          "afterPresent": true,
+          "after": 5
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedDocumentFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedHouseProfileFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "rankId": 3,
+            "seat": 3,
+            "barony": 3,
+            "county": 3,
+            "kingdom": 3,
+            "liegeHouseId": 3,
+            "liegeHouseName": 3,
+            "regionEmblems": 3
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "tailoringContentInventory": 5
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "focusPersonId": 3,
+            "limitGenerations": 3
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedLineageFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedEntitySourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "tailoringContentInventory"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": "gwniwr-maerllys-20261108"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "tailoringContentInventory"
+          ]
+        }
+      ]
+    },
+    {
+      "familyId": "craigddu",
+      "proof": {
+        "baselineCommit": "c0ce3bc0a402f8f9149c03784c3b57b52f389958",
+        "expectedCurrentSha256": "ebf51082da07eae474331d9f5d2d8047c37097263921cc1e950e9038113be8a4",
+        "expectedHistoricalSha256": "92156986661acf599a1249736b0dbd14902dccc3ad8dac93c3d9d84e88307da2",
+        "registeredBeforeSha256": "e1b346d83866b9f4dc2bccc27d8bd1e3b6eb8af53ac27c8411945fa0ae3c523c",
+        "registeredAfterSha256": "ebf51082da07eae474331d9f5d2d8047c37097263921cc1e950e9038113be8a4",
+        "oldDynamicProvenanceFields": 5,
+        "currentDynamicProvenanceFields": 0
+      },
+      "houseAdditions": [
+        {
+          "collectionPath": [
+            "family",
+            "houses"
+          ],
+          "index": 2,
+          "afterCount": 3,
+          "beforeCount": 2,
+          "house": {
+            "id": "house-gwniwr",
+            "name": "Familie Gwniwr",
+            "motto": "",
+            "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwniwr/gwniwr-emblem.png",
+            "status": "active",
+            "extensions": {
+              "registryManagedFields": [
+                "name",
+                "motto",
+                "emblem",
+                "status"
+              ],
+              "registryManagedFieldRevisions": {
+                "name": 5,
+                "motto": 5,
+                "emblem": 5,
+                "status": 5
+              },
+              "registryManagedSourceRevision": 5
+            }
+          }
+        }
+      ],
+      "fields": [
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-0774c56b",
+            "worldPersonId"
+          ],
+          "beforePresent": true,
+          "before": "person--craigddu--person-0774c56b",
+          "afterPresent": true,
+          "after": "person--gwniwr--person-cf831497"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-0774c56b",
+            "title"
+          ],
+          "beforePresent": true,
+          "before": "Ehefrau von Hywel Craigddu",
+          "afterPresent": true,
+          "after": "Ehefrau Hywel Craigddu’s · geborene Gwniwr"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-0774c56b",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/gwniwr/person-cf831497.jpg"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-0774c56b",
+            "notes"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "Eleri ist die 1708 geborene Tochter Emyr Gwniwrs und Gwenllians. Sie heiratete Hywel Craigddu und hilft mit ihren Kindern im elterlichen Laden Nadel & Faden. Die sieben Töchter werden ausschließlich hier in Craigddu fortgeführt."
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-0774c56b",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": true,
+          "before": [
+            "title"
+          ],
+          "afterPresent": true,
+          "after": [
+            "title",
+            "worldPersonId",
+            "portrait",
+            "notes"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-0774c56b",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "worldPersonId": 5,
+            "portrait": 5,
+            "title": 5,
+            "notes": 5
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-0774c56b",
+            "extensions",
+            "legacyWorldPersonIds"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "person--craigddu--person-0774c56b"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-0774c56b",
+            "extensions",
+            "registryManagedFieldPreviousValues"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "worldPersonId": [
+              "person--craigddu--person-0774c56b"
+            ]
+          }
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@partnership-8ce5d0c5",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "crossFamilyRelationship"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@partnership-8ce5d0c5",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "crossFamilyRelationship": 5
+          }
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@partnership-8ce5d0c5",
+            "extensions",
+            "crossFamilyRelationship"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "linkId": "marriage-hywel-craigddu-eleri-gwniwr",
+            "counterpartFamilyId": "gwniwr"
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 4,
+          "afterPresent": true,
+          "after": 5
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceNote"
+          ],
+          "beforePresent": true,
+          "before": "Erweiterung nach Benutzervorgaben vom 28.09.2026: unbekanntes Gründerpaar, Wappen und Zeitsprung zu Iestyn mit zwei Brüdern, drei Vettern Hywels und deren Kindern. Bestehende Personen-, Beziehungs- und Weltpersonen-IDs sowie bekannte Lebensjahre bleiben erhalten; die historischen IDs craigddu-gruender und craigddu-gruenderin bezeichnen weiterhin Iestyn und Mared. Namen und Lebensjahre der neuen jüngeren Angehörigen sind erzählerische Ergänzungen nach dem Rheunwaith-Namensarchiv.",
+          "afterPresent": true,
+          "after": "Erweiterung nach Benutzervorgaben vom 28.09.2026: unbekanntes Gründerpaar, Wappen und Zeitsprung zu Iestyn mit zwei Brüdern, drei Vettern Hywels und deren Kindern. Bestehende Personen-, Beziehungs- und Weltpersonen-IDs sowie bekannte Lebensjahre bleiben erhalten; die historischen IDs craigddu-gruender und craigddu-gruenderin bezeichnen weiterhin Iestyn und Mared. Namen und Lebensjahre der neuen jüngeren Angehörigen sind erzählerische Ergänzungen nach dem Rheunwaith-Namensarchiv. Eleris Gwniwr-Herkunft und dieselbe Ehe mit Hywel sind seit 8. November 2026 beidseitig verknüpft; alte Karten- und Ehekennungen bleiben erhalten."
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedDocumentFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "title": 3,
+            "description": 3,
+            "emblem": 3
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedHouseProfileFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "rankId": 3,
+            "seat": 3,
+            "barony": 3,
+            "county": 3,
+            "kingdom": 3,
+            "liegeHouseId": 3,
+            "liegeHouseName": 3,
+            "regionEmblems": 3
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "registry": 3,
+            "sourceNote": 3,
+            "generatorProfile": 3
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "focusPersonId": 3,
+            "limitGenerations": 3
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedLineageFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "founderPartnershipId": 3,
+            "crestFrame": 3,
+            "timeGap": 3
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "gwniwrMarriageInventory"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": "gwniwr-maerllys-20261108"
+        }
+      ]
+    }
+  ],
+  "sourceBindings": [
+    {
+      "path": "Stammbäume/assets/js/data/gwniwr-maerllys-links.js",
+      "sha256": "b487ffd3db78e3b81f5fab49ec39bd342d80ede117523af32cc3ff1db6ad6686"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/house-maerllys-portraits.js",
+      "sha256": "64c1d980c3aa2ee62594d75ba332851d7782a0a6a06ad60c020a54198c6d0f96"
+    },
+    {
+      "path": "Stammbäume/assets/js/data/families.registry.js",
+      "sha256": "5c0dfa66c4a79f27ee6d6b639674c02ccb192caf200171a92919fb872b4c4c88"
+    },
+    {
+      "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Maerllys/haus.content.mjs",
+      "sha256": "957310eef40e911c417c0cb45c01eb44d8b99881588b8a7eb575810b1717d712"
+    }
+  ]
+}

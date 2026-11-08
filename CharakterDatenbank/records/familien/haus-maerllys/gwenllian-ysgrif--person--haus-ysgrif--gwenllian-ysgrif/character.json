@@ -31,8 +31,27 @@
           "Llamreis Ankunft",
           "Gwynthor"
         ],
-        "url": "",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenllian-ysgrif",
         "fingerprint": "{\"name\":\"Gwenllian Ysgrif\",\"title\":\"An Haus Maerllys verheiratete Ysgrif\",\"birth\":\"1668\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-ysgrif\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"owain-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--owain-maerllys\",\"name\":\"Owain Maerllys\"}],\"children\":[{\"personId\":\"geraint-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"},{\"personId\":\"rhoswen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}]}}",
+        "score": 1000
+      },
+      {
+        "familyId": "haus-ysgrif",
+        "familyTitle": "Haus Ysgrif",
+        "personId": "gwenllian-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif",
+        "houseId": "house-ysgrif",
+        "houseName": "Haus Ysgrif",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-ysgrif&mode=view&person=gwenllian-ysgrif",
+        "fingerprint": "{\"name\":\"Gwenllian Ysgrif\",\"title\":\"An Haus Maerllys verheiratete Ysgrif\",\"birth\":\"1668\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-ysgrif\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-ysgrif-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--haus-ysgrif--haus-ysgrif-gruender\",\"name\":\"??? Ysgrif\"},{\"personId\":\"haus-ysgrif-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--haus-ysgrif--haus-ysgrif-gruenderin\",\"name\":\"??? Ysgrif\"}],\"partners\":[{\"personId\":\"owain-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--owain-maerllys\",\"name\":\"Owain Maerllys\"}],\"children\":[]}}",
         "score": 1000
       }
     ],
@@ -74,7 +93,13 @@
         "familyId": "haus-maerllys",
         "personId": "gwenllian-ysgrif",
         "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif",
-        "url": ""
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenllian-ysgrif"
+      },
+      {
+        "familyId": "haus-ysgrif",
+        "personId": "gwenllian-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-ysgrif&mode=view&person=gwenllian-ysgrif"
       }
     ],
     "profile": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenllian-ysgrif"
@@ -87,7 +112,7 @@
     "sourceDocumentIds": [
       "person--haus-ysgrif--gwenllian-ysgrif"
     ],
-    "contentHash": "e09d00c3ef633a66352fc0c155c0b18a16c72fcdee1c2f2ad296a88746eeee8a"
+    "contentHash": "e23a5ee199c7956d7e6949ab09845947aec5ed7030da7fa1d7254839e7e4d212"
   },
   "local": {
     "notes": "",

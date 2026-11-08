@@ -31,8 +31,27 @@
           "Llamreis Ankunft",
           "Gwynthor"
         ],
-        "url": "",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=bronwen-swyll",
         "fingerprint": "{\"name\":\"Bronwen Swyll\",\"title\":\"Anprobe und Qualitätskontrolle · Naht & Siegel\",\"birth\":\"1691\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"}],\"children\":[{\"personId\":\"elowen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--elowen-maerllys\",\"name\":\"Elowen Maerllys\"},{\"personId\":\"nia-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--nia-maerllys\",\"name\":\"Nia Maerllys\"},{\"personId\":\"rhys-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhys-maerllys\",\"name\":\"Rhys Maerllys\"}]}}",
+        "score": 1000
+      },
+      {
+        "familyId": "haus-swyll",
+        "familyTitle": "Haus Swyll",
+        "personId": "bronwen-swyll",
+        "worldPersonId": "person--haus-swyll--bronwen-swyll",
+        "houseId": "house-swyll",
+        "houseName": "Haus Swyll",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=bronwen-swyll",
+        "fingerprint": "{\"name\":\"Bronwen Swyll\",\"title\":\"Anprobe und Qualitätskontrolle · Naht & Siegel\",\"birth\":\"1691\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"emyr-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--emyr-swyll\",\"name\":\"Emyr Swyll\"},{\"personId\":\"tegwen-spouse-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--tegwen-spouse-swyll\",\"name\":\"Tegwen\"}],\"partners\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"}],\"children\":[]}}",
         "score": 1000
       }
     ],
@@ -74,7 +93,13 @@
         "familyId": "haus-maerllys",
         "personId": "bronwen-swyll",
         "worldPersonId": "person--haus-swyll--bronwen-swyll",
-        "url": ""
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=bronwen-swyll"
+      },
+      {
+        "familyId": "haus-swyll",
+        "personId": "bronwen-swyll",
+        "worldPersonId": "person--haus-swyll--bronwen-swyll",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=bronwen-swyll"
       }
     ],
     "profile": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=bronwen-swyll"
@@ -87,7 +112,7 @@
     "sourceDocumentIds": [
       "person--haus-swyll--bronwen-swyll"
     ],
-    "contentHash": "b26a83be81b9a04f9b08f42321c13becd0c65b4a6a9c5fd5772edc351cd02088"
+    "contentHash": "7bb033629ca03f4b6c81318500bf55f5d6f79ad270ed84e36aab9daf8af7f8fb"
   },
   "local": {
     "notes": "",

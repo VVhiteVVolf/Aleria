@@ -64,6 +64,7 @@ export const SITE_BUILD_TASKS = [
       "Stammbäume/tools/family-snapshot-identity-corrections.mjs",
       "Stammbäume/tests/gwniwr-maerllys.test.js",
       "Stammbäume/tests/family-chart-founder-house-links.test.js",
+      "Stammbäume/tests/tailoring-field-boundaries.test.js",
       "Stammbäume/tests/family-snapshot-identity-corrections.test.js",
       "Charakter Archiv Exporte/Gwniwr-Maerllys/",
       "CharakterDatenbank/"
@@ -89,6 +90,7 @@ export const SITE_BUILD_TASKS = [
         "AleriaAlmanach/tests/tailoring-character-import.test.mjs",
         "Stammbäume/tests/gwniwr-maerllys.test.js",
       "Stammbäume/tests/family-chart-founder-house-links.test.js",
+        "Stammbäume/tests/tailoring-field-boundaries.test.js",
         "Stammbäume/tests/family-snapshot-identity-corrections.test.js"
       ]
     ]

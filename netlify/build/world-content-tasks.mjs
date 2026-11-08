@@ -74,7 +74,8 @@ export const WORLD_CONTENT_TASKS = [
   {
     id: 'territory-pages', label: 'Realm hierarchies, territory pages and heraldry',
     inputs: ['Kontinente/', 'Karten/karten.registry.js', 'Karten/modules/regions/', 'Karten/Uathneach/',
-      'Stammbäume/assets/js/data/', 'Familien Häuser und Clans/', ...albicTerritoryInputs],
+      'Stammbäume/assets/js/data/', 'Stammbäume/assets/js/services/family-registry-upgrade.js',
+      'Familien Häuser und Clans/', ...albicTerritoryInputs],
     commands: [['Kontinente/scripts/build-continent-overviews.mjs', '--check'],
       ['Kontinente/scripts/review-albic-territories.mjs', '--check'],
       ['Kontinente/scripts/build-administration-vassals.mjs', '--check'],

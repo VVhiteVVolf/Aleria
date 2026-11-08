@@ -31,8 +31,44 @@
           "Llamreis Ankunft",
           "Gwynthor"
         ],
-        "url": "",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenora-maerllys",
         "fingerprint": "{\"name\":\"Gwenora Maerllys\",\"title\":\"Schneidermeisterin · Mitbegründerin des Geschäfts\",\"birth\":\"1638\",\"death\":\"1714\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-maerllys-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--haus-maerllys-gruender\",\"name\":\"??? Maerllys\"},{\"personId\":\"haus-maerllys-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--haus-maerllys-gruenderin\",\"name\":\"??? Maerllys\"}],\"partners\":[{\"personId\":\"matteo-veltrane\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"}],\"children\":[]}}",
+        "score": 1000
+      },
+      {
+        "familyId": "haus-raves",
+        "familyTitle": "Haus Raves",
+        "personId": "gwenora-maerllys",
+        "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
+        "houseId": "house-maerllys",
+        "houseName": "Haus Maerllys",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=gwenora-maerllys",
+        "fingerprint": "{\"name\":\"Gwenora Maerllys\",\"title\":\"Schneidermeisterin · Mitbegründerin des Geschäfts\",\"birth\":\"1638\",\"death\":\"1714\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"matteo-veltrane\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"}],\"children\":[{\"personId\":\"lorenzo-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lorenzo-raves\",\"name\":\"Lorenzo Cassian Raves\"},{\"personId\":\"livia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--livia-raves\",\"name\":\"Livia Aurelia Raves\"},{\"personId\":\"flavia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--flavia-raves\",\"name\":\"Flavia Marina Raves\"}]}}",
+        "score": 1000
+      },
+      {
+        "familyId": "haus-veltrane",
+        "familyTitle": "Haus Veltrane",
+        "personId": "gwenora-maerllys",
+        "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
+        "houseId": "house-maerllys",
+        "houseName": "Haus Maerllys",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Kaiserreich Argentum",
+          "Unsortiert"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-veltrane&mode=view&person=gwenora-maerllys",
+        "fingerprint": "{\"name\":\"Gwenora Maerllys\",\"title\":\"Schneidermeisterin · Mitbegründerin des Geschäfts\",\"birth\":\"1638\",\"death\":\"1714\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"matteo-veltrane\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"}],\"children\":[]}}",
         "score": 1000
       }
     ],
@@ -81,7 +117,19 @@
         "familyId": "haus-maerllys",
         "personId": "gwenora-maerllys",
         "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
-        "url": ""
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenora-maerllys"
+      },
+      {
+        "familyId": "haus-raves",
+        "personId": "gwenora-maerllys",
+        "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=gwenora-maerllys"
+      },
+      {
+        "familyId": "haus-veltrane",
+        "personId": "gwenora-maerllys",
+        "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-veltrane&mode=view&person=gwenora-maerllys"
       }
     ],
     "profile": ""
@@ -96,7 +144,7 @@
       "person--haus-maerllys--gwenora-maerllys",
       "person--haus-maerllys--gwenora-maerllys"
     ],
-    "contentHash": "0a700da534830dcdf7cdb82b75f71b594470d2e11757e602103ae4618b599f9d"
+    "contentHash": "726b403526f4c722cb8767fdb4225f5d2073dbf50c321eba3339893021848240"
   },
   "local": {
     "notes": "",

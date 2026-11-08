@@ -2,7 +2,7 @@
 // Belege: Stammbäume/assets/data/source-inventories/gwniwr-maerllys-20261108/.
 export const HOUSE_CONTENT = {
   "id": "haus-maerllys",
-  "contentVersion": "20261108-tailoring-v2",
+  "contentVersion": "20261108-tailoring-v4",
   "name": "Haus Maerllys",
   "type": "Bürgerliches Haus",
   "page": "kleinehaeuser.html",
@@ -16,7 +16,7 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 11,
+  "biographySourceRevision": 13,
   "biographyPreviousDefaultFingerprints": [
     "1741:ce940b97:2291e4d9",
     "2459:f04827ea:91600d9c"

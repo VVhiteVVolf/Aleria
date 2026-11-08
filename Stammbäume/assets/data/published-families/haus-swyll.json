@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-swyll",
-  "revision": 3,
-  "updatedAt": "2026-11-08T16:12:19.209Z",
+  "revision": 4,
+  "updatedAt": "2026-11-08T17:36:05.524Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -371,15 +371,18 @@
         "tags": [],
         "notes": "Schwester Iestyn Swylls; heiratete Iorwerth Maerllys.",
         "extensions": {
-          "registryManagedSourceRevision": 14,
+          "registryManagedFields": [
+            "portrait",
+            "title"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 16,
             "title": 16
           },
-          "registryManagedFields": [
-            "portrait",
-            "title"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 17
+          },
+          "registryManagedSourceRevision": 14
         }
       },
       {
@@ -399,15 +402,18 @@
         "tags": [],
         "notes": "Angehöriger des Hauses Maerllys; heiratete Bronwen Swyll.",
         "extensions": {
-          "registryManagedSourceRevision": 14,
+          "registryManagedFields": [
+            "portrait",
+            "title"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 16,
             "title": 16
           },
-          "registryManagedFields": [
-            "portrait",
-            "title"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 17
+          },
+          "registryManagedSourceRevision": 14
         }
       },
       {
@@ -1804,13 +1810,13 @@
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
         "status": "active",
         "extensions": {
-          "registryManagedSourceRevision": 14,
+          "registryManagedFields": [
+            "emblem"
+          ],
           "registryManagedFieldRevisions": {
             "emblem": 16
           },
-          "registryManagedFields": [
-            "emblem"
-          ]
+          "registryManagedSourceRevision": 14
         }
       },
       {
@@ -2166,7 +2172,7 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 16,
+      "sourceRevision": 17,
       "registryManagedViewFields": [
         "focusPersonId",
         "limitGenerations"
@@ -2206,7 +2212,7 @@
       "registryManagedDocumentFieldRevisions": {},
       "registryManagedHouseProfileFieldRevisions": {},
       "registryManagedExtensionFieldRevisions": {
-        "tailoringContentInventory": 16
+        "tailoringContentInventory": 17
       },
       "registryManagedViewFieldRevisions": {
         "focusPersonId": 14,
@@ -2309,8 +2315,8 @@
         }
       },
       "registryUpgrade": {
-        "fromRevision": 8,
-        "toRevision": 16
+        "fromRevision": 16,
+        "toRevision": 17
       }
     }
   }

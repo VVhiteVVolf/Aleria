@@ -4,13 +4,20 @@ import { buildAuthoredCharacterImport } from '../../../CharakterDatenbank/lib/au
 import { buildCharacterDatabase } from '../../../CharakterDatenbank/lib/character-database-model.mjs';
 import { confirmCharacterRecordProjection, hasNewerCharacterRecordProjection } from '../../../CharakterDatenbank/lib/character-record-confirmation.mjs';
 import { mergeCharacterRecordProjections } from '../../../CharakterDatenbank/lib/character-record-projections.mjs';
-import { buildTailoringCharacterExports, tailoringFamilyCandidates, TAILORING_CHARACTER_FEATURE } from './characters.mjs';
+import { buildTailoringCharacterExports, tailoringDatabaseCandidates, TAILORING_CHARACTER_FEATURE } from './characters.mjs';
 import { REVIEWED_EXISTING_CHARACTERS } from './reviewed-existing-characters.mjs';
+
+function mergeFamilyProjections(existing=[],reviewed=[]){
+ const key=link=>`${link.familyId}:${link.personId}`;
+ const merged=new Map(existing.map(link=>[key(link),structuredClone(link)]));
+ for(const link of reviewed)merged.set(key(link),{...merged.get(key(link)),...structuredClone(link)});
+ return [...merged.values()];
+}
 
 /** Apply only reviewed family metadata on the caller's own database basis. */
 export function projectTailoringCharacterDatabase(basis, families){
  const prior=[...REVIEWED_EXISTING_CHARACTERS,...basis.snapshot.characters.filter(c=>!REVIEWED_EXISTING_CHARACTERS.some(p=>p.id===c.id))];
- const exports=buildTailoringCharacterExports(families,prior),candidates=tailoringFamilyCandidates(families);
+ const exports=buildTailoringCharacterExports(families,prior),candidates=tailoringDatabaseCandidates(families);
  const ids=new Set(exports.map(e=>e.character.id));
  for(const entry of exports){
   const world=entry.character.identity?.worldPersonId;
@@ -52,9 +59,13 @@ export function projectTailoringCharacterDatabase(basis, families){
   }
   const [linked]=buildCharacterDatabase({characters:[character],charTabs:basis.snapshot.charTabs,exportedAt:entry.exportedAt},candidates,{sourcePath:entry.sourcePath}).records;
   next.identity.worldPersonId=character.identity.worldPersonId;
-  for(const field of ['familyStatus','families','familyAlternatives'])next.classification[field]=structuredClone(linked.record.classification[field]);
-  for(const field of ['familyStatus','families'])person.localRecord.classification[field]=structuredClone(linked.snapshotCharacter.localRecord.classification[field]);
-  next.links.familyTree=structuredClone(linked.record.links.familyTree);
+  next.classification.families=mergeFamilyProjections(existing.classification.families,linked.record.classification.families);
+  next.classification.familyAlternatives=mergeFamilyProjections(existing.classification.familyAlternatives,linked.record.classification.familyAlternatives);
+  next.classification.familyStatus=linked.record.classification.familyStatus==='linked'||!next.classification.families.length
+   ?linked.record.classification.familyStatus:existing.classification.familyStatus;
+  person.localRecord.classification.families=mergeFamilyProjections(previous.localRecord.classification.families,linked.snapshotCharacter.localRecord.classification.families);
+  person.localRecord.classification.familyStatus=next.classification.familyStatus;
+  next.links.familyTree=mergeFamilyProjections(existing.links.familyTree,linked.record.links.familyTree);
   // A historical receipt may serialize these same fields in an older order.
   // Reuse that exact receipt when its values match; do not append a new source
   // or duplicate document ID solely because object keys were reordered.

@@ -2,9 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
-import { buildTailoringCharacterExports, TAILORING_EXISTING_RUNTIME_IDS } from '../modules/gwniwr-maerllys/characters.mjs';
+import { buildTailoringCharacterExports, tailoringDatabaseCandidates, TAILORING_EXISTING_RUNTIME_IDS } from '../modules/gwniwr-maerllys/characters.mjs';
 import { REVIEWED_EXISTING_CHARACTERS } from '../modules/gwniwr-maerllys/reviewed-existing-characters.mjs';
 import { projectTailoringCharacterDatabase } from '../modules/gwniwr-maerllys/character-database.mjs';
+import { createFamilyCandidates } from '../modules/character-genealogy/genealogy-mapping.js';
 const exports=buildTailoringCharacterExports(FAMILY_REGISTRY,REVIEWED_EXISTING_CHARACTERS);
 test('31 named figures keep distinct IDs; unknown ancestors and vacancies stay outside the archive',()=>{
  assert.equal(exports.length,31);assert.equal(new Set(exports.map(e=>e.character.id)).size,31);
@@ -26,6 +27,35 @@ test('the imports create no inventories or combat values and assign no children 
  for(const{character:c}of exports){for(const key of['inventory','combatProfile','money','equipment','attributes','skills'])assert.ok(!Object.hasOwn(c,key));}
  for(const id of['person-178882ce','person-558acc56','person-38812666','person-d55e335a']){const c=exports.find(e=>e.sourcePath.endsWith(`/${id}.json`)).character;assert.equal(c.role,'');}
 });
+test('database matching stays within the authored world identities and excludes unrelated namesakes',()=>{
+ const worlds=new Set(exports.map(entry=>entry.character.identity.worldPersonId));
+ const namesakeFamily={id:'unrelated-namesake',title:'Unrelated',family:{persons:[{id:'rhys-namesake',name:'Rhys Maerllys',birth:'1719',worldPersonId:'unrelated-rhys'}]}};
+ assert.equal(createFamilyCandidates(namesakeFamily).length,1);
+ const candidates=tailoringDatabaseCandidates([...FAMILY_REGISTRY,namesakeFamily]);
+ assert.ok(candidates.every(candidate=>worlds.has(candidate.worldPersonId)));
+ assert.ok(!candidates.some(candidate=>candidate.familyId==='unrelated-namesake'));
+ assert.equal(buildTailoringCharacterExports(FAMILY_REGISTRY,REVIEWED_EXISTING_CHARACTERS).length,31);
+});
+test('existing family links, legacy export provenance and Rhys avatar library survive canonical link repair',async()=>{
+ const root=new URL('../../',import.meta.url),read=async p=>JSON.parse(await readFile(new URL(p,root),'utf8'));
+ const[registry,snapshot,report]=await Promise.all(['CharakterDatenbank/registry.json','CharakterDatenbank/generated/characters.snapshot.json','CharakterDatenbank/generated/sync-report.json'].map(read));
+ const ids=new Set(exports.map(entry=>entry.character.id));
+ const existingRecords=await Promise.all(registry.records.filter(row=>ids.has(row.firestoreDocumentId)).map(row=>read(`CharakterDatenbank/${row.path}`)));
+ const rhysId='person--haus-maerllys--rhys-maerllys',rhys=existingRecords.find(record=>record.character.id===rhysId);
+ const historicalLink={familyId:'historical-reviewed-chart',personId:'rhys-maerllys',worldPersonId:rhysId,url:'../Stammbäume/Stammbaum.html?family=historical-reviewed-chart&mode=view&person=rhys-maerllys'};
+ rhys.links.familyTree.push(historicalLink);
+ const historicalClassification={...rhys.classification.families[0],...historicalLink,source:'retained-historical-review'};
+ rhys.classification.families.push(historicalClassification);
+ const result=projectTailoringCharacterDatabase({registry,snapshot,report,existingRecords},FAMILY_REGISTRY);
+ const repaired=result.records.find(item=>item.record.character.id===rhysId).record;
+ assert.ok(repaired.links.familyTree.some(link=>link.familyId==='haus-maerllys'&&link.personId==='rhys-maerllys'&&link.url==='../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=rhys-maerllys'));
+ assert.deepEqual(repaired.links.familyTree.find(link=>link.familyId===historicalLink.familyId),historicalLink);
+ assert.deepEqual(repaired.classification.families.find(link=>link.familyId===historicalLink.familyId),historicalClassification);
+ assert.deepEqual(repaired.classification.primary,rhys.classification.primary);
+ for(const source of rhys.sources.firestoreExports)assert.ok(repaired.sources.firestoreExports.some(candidate=>JSON.stringify(candidate)===JSON.stringify(source)));
+ for(const key of ['portrait','imageSets','activeImageSetId','emotes','inventory','combatProfile','playerOwner','bio','biography','role','title','fraktion'])assert.deepEqual(repaired.character[key],rhys.character[key],key);
+ assert.equal(repaired.character.imageSets.flatMap(set=>set.emotes).length,18);
+});
 test('the bounded projector preserves all unrelated local characters and remains idempotent',async()=>{
  const root=new URL('../../',import.meta.url),read=async p=>JSON.parse(await readFile(new URL(p,root),'utf8'));
  const[registry,snapshot,report]=await Promise.all(['CharakterDatenbank/registry.json','CharakterDatenbank/generated/characters.snapshot.json','CharakterDatenbank/generated/sync-report.json'].map(read));
@@ -44,6 +74,17 @@ test('a genuinely fresh bounded import is immediately idempotent without adding 
  const basis={registry:{...registry,records:registry.records.filter(r=>!ids.has(r.firestoreDocumentId))},snapshot:{...snapshot,characters:snapshot.characters.filter(c=>!ids.has(c.id))},report,existingRecords:[]};
  const first=projectTailoringCharacterDatabase(basis,FAMILY_REGISTRY);
  assert.equal(first.newCount,31);
+ for(const[id,expectedFamily,expectedPerson]of[
+  ['XVeiNvgFfsmtomLuIjcA','craigddu','person-28b0e0a3'],
+  ['person--haus-maerllys--gwenora-maerllys','haus-raves','gwenora-maerllys'],
+  ['person--haus-veltrane--matteo-veltrane','haus-veltrane','matteo-veltrane'],
+  ['person--haus-maerllys--rhys-maerllys','haus-maerllys','rhys-maerllys']
+ ]){
+  const record=first.records.find(item=>item.record.character.id===id).record;
+  assert.ok(record.links.familyTree.some(link=>link.familyId===expectedFamily&&link.personId===expectedPerson&&link.url===`../Stammbäume/Stammbaum.html?family=${expectedFamily}&mode=view&person=${expectedPerson}`),`${id}: confirmed counterpart link`);
+  assert.ok(record.classification.families.some(link=>link.familyId===expectedFamily&&link.personId===expectedPerson),`${id}: counterpart classification`);
+  assert.ok(record.links.familyTree.every(link=>link.url),`${id}: no empty URLs`);
+ }
  const next=projectTailoringCharacterDatabase({...first,existingRecords:first.records.map(item=>item.record)},FAMILY_REGISTRY);
  assert.deepEqual(next.snapshot,first.snapshot);
  assert.deepEqual(next.registry,first.registry);

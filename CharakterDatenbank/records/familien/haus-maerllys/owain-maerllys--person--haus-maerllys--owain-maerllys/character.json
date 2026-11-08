@@ -31,8 +31,27 @@
           "Llamreis Ankunft",
           "Gwynthor"
         ],
-        "url": "",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=owain-maerllys",
         "fingerprint": "{\"name\":\"Owain Maerllys\",\"title\":\"Großonkel Nia Maerllys’\",\"birth\":\"1665\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/owain-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"unbekannter-bruder-gwenora-maerllys\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--unbekannter-bruder-gwenora-maerllys\",\"name\":\"Unbekannter Bruder\"}],\"partners\":[{\"personId\":\"gwenllian-ysgrif\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--gwenllian-ysgrif\",\"name\":\"Gwenllian Ysgrif\"}],\"children\":[{\"personId\":\"geraint-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"},{\"personId\":\"rhoswen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}]}}",
+        "score": 1000
+      },
+      {
+        "familyId": "haus-ysgrif",
+        "familyTitle": "Haus Ysgrif",
+        "personId": "owain-maerllys",
+        "worldPersonId": "person--haus-maerllys--owain-maerllys",
+        "houseId": "house-maerllys",
+        "houseName": "Haus Maerllys",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "../Stammbäume/Stammbaum.html?family=haus-ysgrif&mode=view&person=owain-maerllys",
+        "fingerprint": "{\"name\":\"Owain Maerllys\",\"title\":\"Großonkel Nia Maerllys’\",\"birth\":\"1665\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/owain-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenllian-ysgrif\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--gwenllian-ysgrif\",\"name\":\"Gwenllian Ysgrif\"}],\"children\":[]}}",
         "score": 1000
       }
     ],
@@ -74,7 +93,13 @@
         "familyId": "haus-maerllys",
         "personId": "owain-maerllys",
         "worldPersonId": "person--haus-maerllys--owain-maerllys",
-        "url": ""
+        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=owain-maerllys"
+      },
+      {
+        "familyId": "haus-ysgrif",
+        "personId": "owain-maerllys",
+        "worldPersonId": "person--haus-maerllys--owain-maerllys",
+        "url": "../Stammbäume/Stammbaum.html?family=haus-ysgrif&mode=view&person=owain-maerllys"
       }
     ],
     "profile": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=owain-maerllys"
@@ -87,7 +112,7 @@
     "sourceDocumentIds": [
       "person--haus-maerllys--owain-maerllys"
     ],
-    "contentHash": "fee108386d76e7d609d6f508681d209af3e416a07e9e148816d211937716358e"
+    "contentHash": "a957b2fbdccc6acd77ad5eb9c90ea224ff21e4eedfd0869588842e51f02299f2"
   },
   "local": {
     "notes": "",

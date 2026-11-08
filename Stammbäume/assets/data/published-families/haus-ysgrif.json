@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-ysgrif",
-  "revision": 3,
-  "updatedAt": "2026-11-08T16:12:19.209Z",
+  "revision": 4,
+  "updatedAt": "2026-11-08T17:36:05.524Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -135,13 +135,16 @@
         "tags": [],
         "notes": "Schwester Idris Ysgrifs; heiratete Owain Maerllys.",
         "extensions": {
-          "registryManagedSourceRevision": 4,
+          "registryManagedFields": [
+            "portrait"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 5
           },
-          "registryManagedFields": [
-            "portrait"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 7
+          },
+          "registryManagedSourceRevision": 4
         }
       },
       {
@@ -161,13 +164,16 @@
         "tags": [],
         "notes": "Bruder Cadfan Maerllys’; heiratete Gwenllian Ysgrif.",
         "extensions": {
-          "registryManagedSourceRevision": 4,
+          "registryManagedFields": [
+            "portrait"
+          ],
           "registryManagedFieldRevisions": {
             "portrait": 5
           },
-          "registryManagedFields": [
-            "portrait"
-          ]
+          "registryManagedFieldFillOnlyRevisions": {
+            "portrait": 7
+          },
+          "registryManagedSourceRevision": 4
         }
       },
       {
@@ -860,13 +866,13 @@
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
         "status": "active",
         "extensions": {
-          "registryManagedSourceRevision": 4,
+          "registryManagedFields": [
+            "emblem"
+          ],
           "registryManagedFieldRevisions": {
             "emblem": 5
           },
-          "registryManagedFields": [
-            "emblem"
-          ]
+          "registryManagedSourceRevision": 4
         }
       }
     ],
@@ -997,7 +1003,7 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 6,
+      "sourceRevision": 7,
       "registryManagedViewFields": [
         "focusPersonId",
         "limitGenerations"
@@ -1027,7 +1033,7 @@
       "registryManagedDocumentFieldRevisions": {},
       "registryManagedHouseProfileFieldRevisions": {},
       "registryManagedExtensionFieldRevisions": {
-        "tailoringContentInventory": 5
+        "tailoringContentInventory": 7
       },
       "registryManagedViewFieldRevisions": {
         "focusPersonId": 4,
@@ -1131,8 +1137,8 @@
         }
       },
       "registryUpgrade": {
-        "fromRevision": 4,
-        "toRevision": 6
+        "fromRevision": 6,
+        "toRevision": 7
       }
     }
   }
