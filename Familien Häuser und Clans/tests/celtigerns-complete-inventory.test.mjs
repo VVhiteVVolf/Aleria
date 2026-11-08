@@ -32,15 +32,22 @@ for (const record of families) {
   sources.set(record.id, (await import(source)).HOUSE_CONTENT);
 }
 
-test('Die 108 bisherigen Hausseiten und drei ausgebaute Landfamilien bleiben erreichbar und mit ihren Bios verknüpft', async () => {
+test('Die 108 bisherigen Hausseiten, Gwniwr und drei ausgebaute Landfamilien bleiben erreichbar und mit ihren Bios verknüpft', async () => {
   const completedPageIds = [
     'haus-blevis', 'haus-brogar', 'haus-crewe', 'haus-glyn', 'haus-jernigan', 'haus-talfryn',
     'haus-tarw', 'haus-tynged', 'haus-cochdon', 'haus-llythfor', 'haus-twyllod', 'perllan', 'melog', 'pert', 'haus-gwernant',
   ];
   assert.equal(completedPageIds.length, 15);
-  const priorFamilies = families.filter(record => !expandedHouseIds.has(record.id));
+  const currentPageFamilies = families.filter(record => !expandedHouseIds.has(record.id));
+  const priorFamilies = currentPageFamilies.filter(record => record.id !== 'gwniwr');
   assert.equal(priorFamilies.length, 108);
-  assert.equal(families.length, 111);
+  assert.equal(createHash('sha256').update(JSON.stringify(priorFamilies.map(record => record.id).sort())).digest('hex'),
+    '8e74abc9d11734af14f589b81efe4fdcf8d0d0e10b8c327eb1f54812611912d3', 'All 108 original house IDs remain present');
+  assert.equal(currentPageFamilies.length, 109);
+  assert.deepEqual(currentPageFamilies.filter(record => record.id === 'gwniwr').map(record => record.id), ['gwniwr']);
+  assert.equal(registry.linkFor('gwniwr'), 'kleinehaeuser.html?haus=gwniwr');
+  assert.equal(sources.get('gwniwr').id, 'gwniwr');
+  assert.equal(families.length, 112);
   assert.deepEqual(families.filter(record => expandedHouseIds.has(record.id)).map(record => record.id).sort(), [...expandedHouseIds].sort());
   assert.equal(priorFamilies.filter(record => !completedPageIds.includes(record.id)).length, 93);
   for (const id of completedPageIds) assert.ok(sources.has(id), id);
@@ -116,7 +123,7 @@ test('Cochdon, Llythfor und Twyllod behalten ihre Hausbios; fünf Landfamilien b
   assert.ok(areaFamilies.find(record => record.id === 'haus-twyllod').family.extensions.houseBiographyModule);
 });
 
-test('Grafschaft erhält exakt ihre 65 bisherigen Hauskarten und ergänzt die acht belegten örtlichen Familienprofile sowie Melog, Pert und Gwernant', async () => {
+test('Grafschaft erhält ihre 65 bisherigen Hauskarten mit genauem Maerllys-Wappennachfolger und ergänzt acht örtliche Familienprofile sowie Melog, Pert, Gwernant und Gwniwr', async () => {
   const context = { window: {} };
   vm.runInNewContext(await readFile(new URL('Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/grafschaft.data.js', project), 'utf8'), context);
   const sections = context.window.KONTINENTE_DATA.view.familySections;
@@ -124,11 +131,30 @@ test('Grafschaft erhält exakt ihre 65 bisherigen Hauskarten und ergänzt die ac
   assert.equal(countyBaseline.beforeCommit, '887693c81224ec8fd7e17cab50c8dcbb5a0f6d05');
   assert.equal(countyBaseline.cards.length, 65);
   assert.equal(createHash('sha256').update(JSON.stringify(countyBaseline.cards)).digest('hex'), 'f024aebd0206f205811cf7947ae208f748bd6e596925e8f58280d5515b6f8e96');
-  const existingCards = cards.filter(card => !localityIds.has(card.id) && !['melog', 'pert', 'haus-gwernant'].includes(card.id));
+  assert.deepEqual(cards.filter(card => card.id === 'gwniwr'), [{
+    id: 'gwniwr',
+    name: 'Gwniwr',
+    imageSrc: '/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwniwr/gwniwr-emblem.png',
+    imageAlt: 'Wappen Haus Gwniwr',
+    href: '/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=gwniwr',
+    seat: 'Gwynthor',
+    liege: 'Draig',
+    rank: '',
+    featured: false,
+    featuredLabel: ''
+  }]);
+  const maerllys = cards.filter(card => card.id === 'haus-maerllys');
+  assert.equal(maerllys.length, 1);
+  assert.equal(maerllys[0].imageSrc, '/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png');
+  const existingCards = cards.filter(card => !localityIds.has(card.id) && !['melog', 'pert', 'haus-gwernant', 'gwniwr'].includes(card.id))
+    .map(card => card.id === 'haus-maerllys'
+      ? { ...card, imageSrc: '/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png' }
+      : card);
   assert.deepEqual(existingCards, countyBaseline.cards, 'Every original card, image, link and card order remains unchanged');
+  assert.equal(JSON.stringify(existingCards), JSON.stringify(countyBaseline.cards), 'Original card field order and values remain byte-identical after the exact Maerllys image projection');
   assert.deepEqual(cards.filter(card => localityIds.has(card.id)).map(card => card.id).sort(), [...localityIds].sort());
   assert.equal(localityIds.size, 8);
-  assert.equal(cards.length, countyBaseline.cards.length + localityIds.size + 3);
+  assert.equal(cards.length, countyBaseline.cards.length + localityIds.size + 4);
   const melog = cards.filter(card => card.id === 'melog');
   assert.equal(melog.length, 1);
   assert.equal(melog[0].name, 'Melog');
