@@ -1,31 +1,31 @@
 {
   "schemaVersion": 1,
   "familyId": "gwniwr",
-  "revision": 1,
-  "updatedAt": "2026-11-08T14:43:59.658Z",
+  "revision": 2,
+  "updatedAt": "2026-11-08T16:12:19.209Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
     "document": {
       "id": "gwniwr",
-      "title": "Gwniwr",
+      "title": "Familie Gwniwr",
       "motto": "",
-      "description": "",
-      "emblem": "https://i.imgur.com/Ud95q8G.jpeg",
+      "description": "Alteingesessene Gwynthorer Schneiderfamilie hinter Nadel & Faden: langlebige schlichte bis gute Kleidung zu den niedrigsten Preisen der drei verwandten Schneidereien. Der ältere Maerllys-Zweig spaltete sich vor der Überlieferungslücke ab.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwniwr/gwniwr-emblem.png",
       "houseProfile": {
         "rankId": "commoner",
-        "seat": "",
-        "barony": "",
-        "county": "",
-        "kingdom": "",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
         "secondarySeats": [],
-        "liegeHouseId": "",
-        "liegeHouseName": "",
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
         "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": ""
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
         }
       }
     },
@@ -74,73 +74,161 @@
         "id": "person-7b6c292b",
         "worldPersonId": "person--gwniwr--person-7b6c292b",
         "name": "Emyr",
-        "title": "",
+        "title": "Gemeinsame Leitung von Nadel & Faden · Tuch und Werkstatt",
         "sex": "male",
         "status": "alive",
         "birth": "1680",
         "death": "",
-        "portrait": "https://i.imgur.com/iYlRgMR.jpeg",
+        "portrait": "assets/images/portraits/gwniwr/person-7b6c292b.jpg",
         "portraitPlaceholder": "auto",
         "houseId": "house-gwniwr",
         "familyRole": "core",
         "lineageRole": "head",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedFields": [
+            "portrait",
+            "title",
+            "name",
+            "worldPersonId",
+            "houseId",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "portrait": 2,
+            "title": 2,
+            "name": 2,
+            "worldPersonId": 2,
+            "houseId": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "https://i.imgur.com/iYlRgMR.jpeg"
+            ]
+          }
+        }
       },
       {
         "id": "person-f926e0da",
         "worldPersonId": "person--gwniwr--person-f926e0da",
         "name": "Gwenllian",
-        "title": "",
+        "title": "Gemeinsame Leitung von Nadel & Faden · Beratung und Aufträge",
         "sex": "female",
         "status": "alive",
         "birth": "1684",
         "death": "",
-        "portrait": "https://i.imgur.com/zNGfMnZ.jpeg",
+        "portrait": "assets/images/portraits/gwniwr/person-f926e0da.jpg",
         "portraitPlaceholder": "auto",
         "houseId": "",
         "familyRole": "married",
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedFields": [
+            "portrait",
+            "title",
+            "name",
+            "worldPersonId",
+            "houseId",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "portrait": 2,
+            "title": 2,
+            "name": 2,
+            "worldPersonId": 2,
+            "houseId": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "https://i.imgur.com/zNGfMnZ.jpeg"
+            ]
+          }
+        }
       },
       {
         "id": "person-ece54bdb",
         "worldPersonId": "person--gwniwr--person-ece54bdb",
         "name": "Tudur",
-        "title": "",
+        "title": "Schneidermeister · Nadel & Faden",
         "sex": "male",
         "status": "alive",
         "birth": "1704",
         "death": "",
-        "portrait": "https://i.imgur.com/PX2Td7g.jpeg",
+        "portrait": "assets/images/portraits/gwniwr/person-ece54bdb.jpg",
         "portraitPlaceholder": "auto",
         "houseId": "house-gwniwr",
         "familyRole": "core",
         "lineageRole": "mainline",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedFields": [
+            "portrait",
+            "title",
+            "name",
+            "worldPersonId",
+            "houseId",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "portrait": 2,
+            "title": 2,
+            "name": 2,
+            "worldPersonId": 2,
+            "houseId": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "https://i.imgur.com/PX2Td7g.jpeg"
+            ]
+          }
+        }
       },
       {
         "id": "person-cf831497",
         "worldPersonId": "person--gwniwr--person-cf831497",
         "name": "Eleri",
-        "title": "",
+        "title": "Mithilfe im Familienladen · Ehefrau Hywel Craigddu’s",
         "sex": "female",
         "status": "alive",
         "birth": "1708",
         "death": "",
-        "portrait": "https://i.imgur.com/dKnD2Ru.jpeg",
+        "portrait": "assets/images/portraits/gwniwr/person-cf831497.jpg",
         "portraitPlaceholder": "auto",
         "houseId": "house-gwniwr",
         "familyRole": "core",
         "lineageRole": "mainline",
         "tags": [],
-        "notes": "",
-        "extensions": {}
+        "notes": "Tochter Emyr Gwniwrs und Gwenllians, Schwester Tudurs. Eleri heiratete Hywel Craigddu und hilft mit ihren Kindern in Nadel & Faden. Die sieben Töchter stehen ausschließlich in der Craigddu-Akte.",
+        "extensions": {
+          "registryManagedFields": [
+            "portrait",
+            "title",
+            "name",
+            "worldPersonId",
+            "houseId",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "portrait": 2,
+            "title": 2,
+            "name": 2,
+            "worldPersonId": 2,
+            "houseId": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "https://i.imgur.com/dKnD2Ru.jpeg"
+            ]
+          }
+        }
       },
       {
         "id": "person-3f9eaf4f",
@@ -151,32 +239,79 @@
         "status": "alive",
         "birth": "1708",
         "death": "",
-        "portrait": "https://i.imgur.com/iuvtNZM.jpeg",
+        "portrait": "assets/images/portraits/gwniwr/person-3f9eaf4f.jpg",
         "portraitPlaceholder": "auto",
         "houseId": "",
         "familyRole": "married",
         "lineageRole": "mainline",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedFields": [
+            "portrait",
+            "title",
+            "name",
+            "worldPersonId",
+            "houseId",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "portrait": 2,
+            "title": 2,
+            "name": 2,
+            "worldPersonId": 2,
+            "houseId": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "https://i.imgur.com/iuvtNZM.jpeg"
+            ]
+          }
+        }
       },
       {
         "id": "person-e847aa96",
-        "worldPersonId": "person--gwniwr--person-e847aa96",
-        "name": "Hwyel Craigddu",
-        "title": "",
+        "worldPersonId": "person--craigddu--person-28b0e0a3",
+        "name": "Hywel Craigddu",
+        "title": "Waffenknecht in Gwynthor",
         "sex": "male",
         "status": "alive",
         "birth": "1708",
         "death": "",
-        "portrait": "https://i.imgur.com/8Y1N3SA.png",
+        "portrait": "assets/images/portraits/haus-craigddu/hywel-craigddu.png",
         "portraitPlaceholder": "auto",
-        "houseId": "",
+        "houseId": "house-craigddu",
         "familyRole": "married",
         "lineageRole": "branch",
         "tags": [],
-        "notes": "",
-        "extensions": {}
+        "notes": "Die genealogische Schreibweise Hwyel ist eine Übertragung von Hywel Craigddu (1708), bereits als Eleris Ehemann in der Craigddu-Akte belegt. Seine frühere Gwniwr-Kartenkennung bleibt erhalten; die Weltidentität ist mit Craigddu identisch.",
+        "extensions": {
+          "legacyWorldPersonIds": [
+            "person--gwniwr--person-e847aa96"
+          ],
+          "registryManagedFields": [
+            "portrait",
+            "title",
+            "name",
+            "worldPersonId",
+            "houseId",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "portrait": 2,
+            "title": 2,
+            "name": 2,
+            "worldPersonId": 2,
+            "houseId": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "https://i.imgur.com/8Y1N3SA.png"
+            ]
+          }
+        }
       },
       {
         "id": "person-178882ce",
@@ -187,14 +322,36 @@
         "status": "alive",
         "birth": "1724",
         "death": "",
-        "portrait": "https://i.imgur.com/hCn3K6q.jpeg",
+        "portrait": "assets/images/portraits/gwniwr/person-178882ce.jpg",
         "portraitPlaceholder": "auto",
         "houseId": "house-gwniwr",
         "familyRole": "core",
         "lineageRole": "mainline",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedFields": [
+            "portrait",
+            "title",
+            "name",
+            "worldPersonId",
+            "houseId",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "portrait": 2,
+            "title": 2,
+            "name": 2,
+            "worldPersonId": 2,
+            "houseId": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "https://i.imgur.com/hCn3K6q.jpeg"
+            ]
+          }
+        }
       },
       {
         "id": "person-558acc56",
@@ -205,14 +362,36 @@
         "status": "alive",
         "birth": "1728",
         "death": "",
-        "portrait": "https://i.imgur.com/gghIwzQ.jpeg",
+        "portrait": "assets/images/portraits/gwniwr/person-558acc56.jpg",
         "portraitPlaceholder": "auto",
         "houseId": "house-gwniwr",
         "familyRole": "core",
         "lineageRole": "mainline",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedFields": [
+            "portrait",
+            "title",
+            "name",
+            "worldPersonId",
+            "houseId",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "portrait": 2,
+            "title": 2,
+            "name": 2,
+            "worldPersonId": 2,
+            "houseId": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "https://i.imgur.com/gghIwzQ.jpeg"
+            ]
+          }
+        }
       },
       {
         "id": "person-38812666",
@@ -223,14 +402,36 @@
         "status": "alive",
         "birth": "1730",
         "death": "",
-        "portrait": "https://i.imgur.com/UKVI11U.jpeg",
+        "portrait": "assets/images/portraits/gwniwr/person-38812666.jpg",
         "portraitPlaceholder": "auto",
         "houseId": "house-gwniwr",
         "familyRole": "core",
         "lineageRole": "mainline",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedFields": [
+            "portrait",
+            "title",
+            "name",
+            "worldPersonId",
+            "houseId",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "portrait": 2,
+            "title": 2,
+            "name": 2,
+            "worldPersonId": 2,
+            "houseId": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "https://i.imgur.com/UKVI11U.jpeg"
+            ]
+          }
+        }
       },
       {
         "id": "person-d55e335a",
@@ -241,14 +442,36 @@
         "status": "alive",
         "birth": "1732",
         "death": "",
-        "portrait": "https://i.imgur.com/Rgi2O19.jpeg",
+        "portrait": "assets/images/portraits/gwniwr/person-d55e335a.jpg",
         "portraitPlaceholder": "auto",
         "houseId": "house-gwniwr",
         "familyRole": "core",
         "lineageRole": "mainline",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedFields": [
+            "portrait",
+            "title",
+            "name",
+            "worldPersonId",
+            "houseId",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "portrait": 2,
+            "title": 2,
+            "name": 2,
+            "worldPersonId": 2,
+            "houseId": 2,
+            "notes": 2
+          },
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "https://i.imgur.com/Rgi2O19.jpeg"
+            ]
+          }
+        }
       }
     ],
     "partnerships": [
@@ -295,7 +518,9 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true
+        }
       },
       {
         "id": "partnership-ce644db9",
@@ -310,7 +535,12 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "crossFamilyRelationship": {
+            "linkId": "marriage-hywel-craigddu-eleri-gwniwr",
+            "counterpartFamilyId": "craigddu"
+          }
+        }
       }
     ],
     "parentages": [
@@ -428,11 +658,76 @@
         "id": "house-gwniwr",
         "name": "Gwniwr",
         "motto": "",
-        "emblem": "https://i.imgur.com/Ud95q8G.jpeg",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwniwr/gwniwr-emblem.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "emblem"
+          ],
+          "registryManagedFieldRevisions": {
+            "name": 2,
+            "emblem": 2
+          }
+        }
+      },
+      {
+        "id": "house-maerllys",
+        "name": "Haus Maerllys",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
+        "status": "active"
+      },
+      {
+        "id": "house-craigddu",
+        "name": "Haus Craigddu",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Craigddu.png",
         "status": "active"
       }
     ],
-    "cadetBranches": [],
+    "cadetBranches": [
+      {
+        "id": "maerllys-branch-gwniwr",
+        "name": "Haus Maerllys",
+        "subtitle": "Gegründetes Kadettenhaus",
+        "linkType": "cadet-house",
+        "parentPartnershipId": "marriage-gwniwr-founders",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-maerllys",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-maerllys",
+        "notes": "Historische Abspaltung vor dem Zeitsprung; Zeitpunkt und einzelne Ahnen sind nicht überliefert.",
+        "extensions": {
+          "chartAlignBelowPartnership": true
+        }
+      },
+      {
+        "id": "married-away-eleri-craigddu-gwniwr",
+        "name": "Haus Craigddu",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "partnership-ce644db9",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-craigddu",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Craigddu.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "craigddu",
+        "notes": "Eleris und Hywels sieben Töchter stehen ausschließlich in der fortführenden Craigddu-Akte.",
+        "extensions": {
+          "chartAlignBelowPartnership": true
+        }
+      }
+    ],
     "timeJumps": [
       {
         "id": "time-jump-b26ff29a",
@@ -455,7 +750,7 @@
       "houseId": "house-gwniwr",
       "crestSubtitle": "",
       "crestEmblemScale": 0.86,
-      "crestFrame": "gold",
+      "crestFrame": "iron",
       "crestFrameScale": 1,
       "timeGap": {
         "enabled": false,
@@ -525,6 +820,165 @@
         "founderHouseName": "",
         "houseColors": "",
         "specialTraits": ""
+      },
+      "sourceRevision": 2,
+      "chartLayoutPolicy": "strict-v1",
+      "blankFamily": false,
+      "pendingDescendantReview": false,
+      "registryManagedDocumentFields": [
+        "title",
+        "description",
+        "emblem"
+      ],
+      "registryManagedHouseProfileFields": [
+        "rankId",
+        "seat",
+        "barony",
+        "county",
+        "kingdom",
+        "liegeHouseId",
+        "liegeHouseName",
+        "regionEmblems"
+      ],
+      "registryManagedRecordFields": [
+        "folderPath"
+      ],
+      "registryManagedLineageFields": [
+        "crestFrame"
+      ],
+      "sourceNote": "Gelieferte JSON und Hausprosa vom 8. November 2026; vorhandene öffentliche Gwniwr-Akte Revision1 und alle Karten-/Beziehungskennungen erhalten. Hwyel anhand der bestehenden Craigddu-Akte zu Hywel korrigiert. Eleris Gwniwr-Herkunft beidseitig verbunden. Gwniwr-Gründer bleiben unbekannte Quellenplatzhalter ohne Almanachakten. Maerllys-Abspaltung ist ausdrückliche Nutzerfestlegung; fehlende Generationen bleiben offen.",
+      "registryManagedDocumentFieldRevisions": {
+        "title": 2,
+        "description": 2,
+        "emblem": 2
+      },
+      "registryManagedHouseProfileFieldRevisions": {
+        "rankId": 2,
+        "seat": 2,
+        "barony": 2,
+        "county": 2,
+        "kingdom": 2,
+        "liegeHouseId": 2,
+        "liegeHouseName": 2,
+        "regionEmblems": 2
+      },
+      "registryManagedExtensionFieldRevisions": {},
+      "registryManagedViewFieldRevisions": {},
+      "registryManagedLineageFieldRevisions": {
+        "crestFrame": 2
+      },
+      "registryManagedEntitySourceRevision": 2,
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Familie Gwniwr",
+        "housePage": true,
+        "image": "../Stammbäume/assets/images/portraits/gwniwr/person-7b6c292b.jpg",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Die Gwniwr sind eine alteingesessene bürgerliche Schneiderfamilie aus Gwynthor. Ihr Geschäft Nadel & Faden steht seit beinahe zweihundert Jahren für haltbare Kleidung und faire Preise. Die Familie ist in der Cenyri-Handwerkskultur verwurzelt und gehört zum Umfeld des Hauses Draig. Ihr Ansehen beruht auf guter Arbeit, verlässlichen Absprachen und einem Betrieb, der schlichte Kundschaft ebenso ernst nimmt wie wohlhabende Käufer.\n\nHeute führen Emyr und Gwenllian das Geschäft gemeinsam. Ihr Sohn Tudur arbeitet bereits als Schneidermeister mit. Nadel & Faden bietet schlichte bis gute Kleidung in walisisch-gälischer mittelalterlicher Formensprache. Eine kleine Auswahl für Hochzeiten ergänzt das Alltagssortiment, ohne den Laden in ein Haus für Prunkmode zu verwandeln.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Familie Gwniwr"
+          ],
+          [
+            "Rang",
+            "Bürgerlich"
+          ],
+          [
+            "Stammsitz",
+            "Gwynthor"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Emyr und Gwenllian · Geschäftsführung"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Draig"
+          ],
+          [
+            "Ursprung",
+            "Gwynthor"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwniwr/gwniwr-emblem.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über das Haus",
+          "biographyText": "Die Gwniwr sind eine alteingesessene bürgerliche Schneiderfamilie aus Gwynthor. Ihr Geschäft Nadel & Faden steht seit beinahe zweihundert Jahren für haltbare Kleidung und faire Preise. Die Familie ist in der Cenyri-Handwerkskultur verwurzelt und gehört zum Umfeld des Hauses Draig. Ihr Ansehen beruht auf guter Arbeit, verlässlichen Absprachen und einem Betrieb, der schlichte Kundschaft ebenso ernst nimmt wie wohlhabende Käufer.\n\nHeute führen Emyr und Gwenllian das Geschäft gemeinsam. Ihr Sohn Tudur arbeitet bereits als Schneidermeister mit. Nadel & Faden bietet schlichte bis gute Kleidung in walisisch-gälischer mittelalterlicher Formensprache. Eine kleine Auswahl für Hochzeiten ergänzt das Alltagssortiment, ohne den Laden in ein Haus für Prunkmode zu verwandeln.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Geschichte",
+          "historyText": "Die älteren Anfänge sind durch unbekannte Gründer und eine Überlieferungslücke gekennzeichnet. Die beinahe zweihundertjährige Geschichte des Ladens liefert kein genaues Gründungsjahr. Schon vor dem Zeitsprung spaltete sich die spätere Familie Maerllys von Gwniwr ab; einzelne Ahnen und der Zeitpunkt dieser Abzweigung sind nicht bekannt. Beide Familien bewahren eine verwandte Schneidertradition, führen aber eigenständige Haushalte und Geschäfte.\n\nÜber Generationen galt Nadel & Faden als führende Schneiderei Gwynthors. Diese Stellung ging später an die Göttliche Eleganz verloren. Der Familienbetrieb blieb erfolgreich und insbesondere unter der Bürgerschaft beliebt. Sein heutiger Schwerpunkt sind langlebige und erschwingliche Gewänder. Aus dem früheren Führungsanspruch wurde kein überlieferter persönlicher Streit abgeleitet.\n\nDie Familie ist in den vergangenen Jahrzehnten kleiner geworden. Die konkrete jüngere Linie setzt mit Emyr und Gwenllian wieder ein. Tudur heiratete Catrin; ihre Kinder heißen Gethin, Bleddyn, Efa und Micah. Eleri heiratete Hywel Craigddu und hilft mit ihren Kindern im elterlichen Laden. Ihre sieben Töchter werden im Craigddu-Stammbaum fortgeführt.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "„Gute Kleidung ist kein Vorrecht des Adels.“ Dieser überlieferte Grundsatz steht für die Arbeitsauffassung der Gwniwr, ohne als unbelegtes förmliches Hausmotto ausgegeben zu werden. Einfache Arbeiter und angesehene Auftraggeber sollen auf dieselbe Ehrlichkeit und Sorgfalt vertrauen können. Faire Preise, Zuverlässigkeit und haltbare Arbeit zählen mehr als der gesellschaftliche Rang des Käufers."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Traditionen und Hausleben",
+              "text": "Männer und Frauen werden bei den Gwniwr gleichermaßen im Schneiderhandwerk ausgebildet. Ein angehender Meister fertigt zum Abschluss zwei Kleidungsstücke: eines aus einfachem und eines aus besonders kostbarem Stoff. Beide müssen dieselben hohen Anforderungen an Verarbeitung und Haltbarkeit erfüllen. Die Tradition erklärt, weshalb ein preisgünstiges Gewand im Familienverständnis keine nachlässige Arbeit sein darf.\n\nDer über Generationen gesammelte Bestand an Schnittmustern wird bewahrt und im Werkstattalltag weitergegeben. Neue Lehrplätze bleiben für spätere Besetzung offen; die Kinder der Familie erhalten dadurch weder vorweggenommene Meistertitel noch feste Arbeitsstellen."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Der wichtigste Familienbesitz ist Nadel & Faden mit Verkaufsraum, eigenen Werkstätten und der gewachsenen Sammlung von Schnittmustern. Gesellen und Lehrlinge unterstützen den Betrieb. Der Ausbau umfasst Kleidung für Damen und Herren, Änderungen und Ausbesserungen sowie eine begrenzte Hochzeitsauswahl. Alle Modelle sind im eigenen Almanachmodul mit Bildern und nachvollziehbaren Preisen erfasst.\n\nEine Grundstücksgröße, weitere Häuser, konkrete Vermögenssummen oder Lieferverträge sind nicht überliefert. Freie Personalstellen sind vorbereitete Plätze und keine bereits beschäftigten, namenlosen Personen."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Die Göttliche Eleganz ist der bedeutendste wirtschaftliche Konkurrent und heute das gehobene Modehaus. Nadel & Faden bleibt unter den drei Schneidereien der günstigste Anbieter. Maerllys ist ein historisch verwandter, eigenständiger Zweig und bedient mit Naht & Siegel vor allem Arbeitgeber, die ihre Dienerschaft einkleiden.\n\nDurch Eleris Ehe besteht eine konkrete Verbindung zu Craigddu. Hywels Waffenknechtsdienst bleibt seine eigene Tätigkeit und wird nicht zu einer Schneiderstelle. Adelstitel, Vasallen und eine eigene Herrschaftsverwaltung besitzt die Familie nicht."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [
+            {
+              "name": "Haus Draig",
+              "detail": "Lehnsherr",
+              "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-draig.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwniwr/gwniwr-emblem.png",
+              "title": "Familie Gwniwr · vollständige Hausseite",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=gwniwr"
+            }
+          ],
+          "footer": ""
+        }
+      },
+      "registryTombstones": {},
+      "registryUpgrade": {
+        "fromRevision": 0,
+        "toRevision": 2
       }
     }
   }

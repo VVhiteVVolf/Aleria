@@ -1,0 +1,427 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-ysgrif--gwenllian-ysgrif",
+  "slug": "gwenllian-ysgrif",
+  "identity": {
+    "name": "Gwenllian Ysgrif",
+    "aliases": [],
+    "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-maerllys",
+      "label": "Haus Maerllys"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-maerllys",
+        "familyTitle": "Haus Maerllys",
+        "personId": "gwenllian-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif",
+        "houseId": "house-ysgrif",
+        "houseName": "Haus Ysgrif",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Gwenllian Ysgrif\",\"title\":\"An Haus Maerllys verheiratete Ysgrif\",\"birth\":\"1668\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-ysgrif\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"owain-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--owain-maerllys\",\"name\":\"Owain Maerllys\"}],\"children\":[{\"personId\":\"geraint-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"},{\"personId\":\"rhoswen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-ysgrif--gwenllian-ysgrif",
+      "documentIds": [
+        "person--haus-ysgrif--gwenllian-ysgrif"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-ysgrif--gwenllian-ysgrif",
+          "createdAt": "2026-11-08T16:10:00.000Z",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-maerllys",
+        "personId": "gwenllian-ysgrif",
+        "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif",
+        "url": ""
+      }
+    ],
+    "profile": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenllian-ysgrif"
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/gwenllian-ysgrif.json",
+    "sourceExportedAt": "2026-11-08T16:10:00.000Z",
+    "sourceUpdatedAt": "2026-11-08T16:10:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-ysgrif--gwenllian-ysgrif"
+    ],
+    "contentHash": "e09d00c3ef633a66352fc0c155c0b18a16c72fcdee1c2f2ad296a88746eeee8a"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwniwr-maerllys-20261108"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "age": 72,
+        "aliases": [],
+        "archived": false,
+        "bio": "Gwenllian Ysgrif wurde 1668 geboren und ist Idris Ysgrifs Schwester. Sie heiratete Owain Maerllys und verbindet beide Gwynthorer Häuser. Ihre Kinder sind Geraint und Rhoswen.\n\nIm älteren Familienkreis richtet Gwenllian ihr Augenmerk auf Tuche, saubere Verarbeitung und praktische Pflege. Sie gehört zum beratenden Familienrat von Naht & Siegel. Eine geeignete Stoffwahl entscheidet für sie darüber, ob eine Dienstgarnitur nach vielen Arbeitstagen noch ordentlich aussieht und gut getragen werden kann.\n\nGeraints Ehe mit Llio Falchdyn und Rhoswens Ehe mit Madoc Tonnarth erweitern ihren Verwandtenkreis. Die Familie ihrer Tochter führt mit Bryn, Emrys und Aled eine weitere Generation fort. Ihre Ysgrif-Herkunft bleibt neben dem gemeinsamen Maerllys-Haushalt ein fester Teil ihrer Lebensgeschichte.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Gwenllian Ysgrif"
+            },
+            {
+              "label": "Geboren",
+              "value": "1668"
+            },
+            {
+              "label": "Alter",
+              "value": "72 Jahre"
+            },
+            {
+              "label": "Familie",
+              "value": "Haus Ysgrif"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "An Haus Maerllys verheiratete Ysgrif"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png",
+            "biographyTitle": "Biografie",
+            "biographyText": "Gwenllian Ysgrif wurde 1668 geboren und ist Idris Ysgrifs Schwester. Sie heiratete Owain Maerllys und verbindet beide Gwynthorer Häuser. Ihre Kinder sind Geraint und Rhoswen.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Arbeit und Alltag",
+                "text": "Im älteren Familienkreis richtet Gwenllian ihr Augenmerk auf Tuche, saubere Verarbeitung und praktische Pflege. Sie gehört zum beratenden Familienrat von Naht & Siegel. Eine geeignete Stoffwahl entscheidet für sie darüber, ob eine Dienstgarnitur nach vielen Arbeitstagen noch ordentlich aussieht und gut getragen werden kann."
+              },
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Familie und Verbindungen",
+                "text": "Geraints Ehe mit Llio Falchdyn und Rhoswens Ehe mit Madoc Tonnarth erweitern ihren Verwandtenkreis. Die Familie ihrer Tochter führt mit Bryn, Emrys und Aled eine weitere Generation fort. Ihre Ysgrif-Herkunft bleibt neben dem gemeinsamen Maerllys-Haushalt ein fester Teil ihrer Lebensgeschichte."
+              }
+            ]
+          }
+        },
+        "createdAt": "2026-11-08T16:10:00.000Z",
+        "currentLocation": "Gwynthor",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Ysgrif",
+        "genealogy": {
+          "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1668",
+          "death": "",
+          "houseId": "house-ysgrif",
+          "houseName": "Haus Ysgrif",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-maerllys",
+              "personId": "gwenllian-ysgrif",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-08T16:10:00.000Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenllian-ysgrif",
+              "fingerprint": "{\"name\":\"Gwenllian Ysgrif\",\"title\":\"An Haus Maerllys verheiratete Ysgrif\",\"birth\":\"1668\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-ysgrif\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"owain-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--owain-maerllys\",\"name\":\"Owain Maerllys\"}],\"children\":[{\"personId\":\"geraint-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"},{\"personId\":\"rhoswen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}]}}"
+            },
+            {
+              "familyId": "haus-ysgrif",
+              "personId": "gwenllian-ysgrif",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-08T16:10:00.000Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-ysgrif&mode=view&person=gwenllian-ysgrif",
+              "fingerprint": "{\"name\":\"Gwenllian Ysgrif\",\"title\":\"An Haus Maerllys verheiratete Ysgrif\",\"birth\":\"1668\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-ysgrif\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-ysgrif-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--haus-ysgrif--haus-ysgrif-gruender\",\"name\":\"??? Ysgrif\"},{\"personId\":\"haus-ysgrif-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--haus-ysgrif--haus-ysgrif-gruenderin\",\"name\":\"??? Ysgrif\"}],\"partners\":[{\"personId\":\"owain-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--owain-maerllys\",\"name\":\"Owain Maerllys\"}],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "haus-ysgrif-gruender",
+                "type": "claimed",
+                "legitimacy": "unknown",
+                "certainty": "probable",
+                "worldPersonId": "person--haus-ysgrif--haus-ysgrif-gruender",
+                "name": "??? Ysgrif"
+              },
+              {
+                "personId": "haus-ysgrif-gruenderin",
+                "type": "claimed",
+                "legitimacy": "unknown",
+                "certainty": "probable",
+                "worldPersonId": "person--haus-ysgrif--haus-ysgrif-gruenderin",
+                "name": "??? Ysgrif"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "owain-maerllys",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-maerllys--owain-maerllys",
+                "name": "Owain Maerllys"
+              }
+            ],
+            "children": [
+              {
+                "personId": "geraint-maerllys",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-maerllys--geraint-maerllys",
+                "name": "Geraint Maerllys"
+              },
+              {
+                "personId": "rhoswen-maerllys",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-maerllys--rhoswen-maerllys",
+                "name": "Rhoswen Maerllys"
+              }
+            ]
+          }
+        },
+        "id": "person--haus-ysgrif--gwenllian-ysgrif",
+        "identity": {
+          "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif"
+        },
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "imageSetsOverride": false,
+        "name": "Gwenllian Ysgrif",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png",
+        "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenllian-ysgrif",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "An Haus Maerllys verheiratete Ysgrif",
+        "updatedAt": "2026-11-08T16:10:00.000Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "age": 72,
+    "aliases": [],
+    "archived": false,
+    "bio": "Gwenllian Ysgrif wurde 1668 geboren und ist Idris Ysgrifs Schwester. Sie heiratete Owain Maerllys und verbindet beide Gwynthorer Häuser. Ihre Kinder sind Geraint und Rhoswen.\n\nIm älteren Familienkreis richtet Gwenllian ihr Augenmerk auf Tuche, saubere Verarbeitung und praktische Pflege. Sie gehört zum beratenden Familienrat von Naht & Siegel. Eine geeignete Stoffwahl entscheidet für sie darüber, ob eine Dienstgarnitur nach vielen Arbeitstagen noch ordentlich aussieht und gut getragen werden kann.\n\nGeraints Ehe mit Llio Falchdyn und Rhoswens Ehe mit Madoc Tonnarth erweitern ihren Verwandtenkreis. Die Familie ihrer Tochter führt mit Bryn, Emrys und Aled eine weitere Generation fort. Ihre Ysgrif-Herkunft bleibt neben dem gemeinsamen Maerllys-Haushalt ein fester Teil ihrer Lebensgeschichte.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Gwenllian Ysgrif"
+        },
+        {
+          "label": "Geboren",
+          "value": "1668"
+        },
+        {
+          "label": "Alter",
+          "value": "72 Jahre"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Ysgrif"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "An Haus Maerllys verheiratete Ysgrif"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Gwenllian Ysgrif wurde 1668 geboren und ist Idris Ysgrifs Schwester. Sie heiratete Owain Maerllys und verbindet beide Gwynthorer Häuser. Ihre Kinder sind Geraint und Rhoswen.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Im älteren Familienkreis richtet Gwenllian ihr Augenmerk auf Tuche, saubere Verarbeitung und praktische Pflege. Sie gehört zum beratenden Familienrat von Naht & Siegel. Eine geeignete Stoffwahl entscheidet für sie darüber, ob eine Dienstgarnitur nach vielen Arbeitstagen noch ordentlich aussieht und gut getragen werden kann."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Geraints Ehe mit Llio Falchdyn und Rhoswens Ehe mit Madoc Tonnarth erweitern ihren Verwandtenkreis. Die Familie ihrer Tochter führt mit Bryn, Emrys und Aled eine weitere Generation fort. Ihre Ysgrif-Herkunft bleibt neben dem gemeinsamen Maerllys-Haushalt ein fester Teil ihrer Lebensgeschichte."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Ysgrif",
+    "genealogy": {
+      "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1668",
+      "death": "",
+      "houseId": "house-ysgrif",
+      "houseName": "Haus Ysgrif",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-maerllys",
+          "personId": "gwenllian-ysgrif",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenllian-ysgrif",
+          "fingerprint": "{\"name\":\"Gwenllian Ysgrif\",\"title\":\"An Haus Maerllys verheiratete Ysgrif\",\"birth\":\"1668\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-ysgrif\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"owain-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--owain-maerllys\",\"name\":\"Owain Maerllys\"}],\"children\":[{\"personId\":\"geraint-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"},{\"personId\":\"rhoswen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}]}}"
+        },
+        {
+          "familyId": "haus-ysgrif",
+          "personId": "gwenllian-ysgrif",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-ysgrif&mode=view&person=gwenllian-ysgrif",
+          "fingerprint": "{\"name\":\"Gwenllian Ysgrif\",\"title\":\"An Haus Maerllys verheiratete Ysgrif\",\"birth\":\"1668\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-ysgrif\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-ysgrif-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--haus-ysgrif--haus-ysgrif-gruender\",\"name\":\"??? Ysgrif\"},{\"personId\":\"haus-ysgrif-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"probable\",\"worldPersonId\":\"person--haus-ysgrif--haus-ysgrif-gruenderin\",\"name\":\"??? Ysgrif\"}],\"partners\":[{\"personId\":\"owain-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--owain-maerllys\",\"name\":\"Owain Maerllys\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "haus-ysgrif-gruender",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "probable",
+            "worldPersonId": "person--haus-ysgrif--haus-ysgrif-gruender",
+            "name": "??? Ysgrif"
+          },
+          {
+            "personId": "haus-ysgrif-gruenderin",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "probable",
+            "worldPersonId": "person--haus-ysgrif--haus-ysgrif-gruenderin",
+            "name": "??? Ysgrif"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "owain-maerllys",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--owain-maerllys",
+            "name": "Owain Maerllys"
+          }
+        ],
+        "children": [
+          {
+            "personId": "geraint-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--geraint-maerllys",
+            "name": "Geraint Maerllys"
+          },
+          {
+            "personId": "rhoswen-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--rhoswen-maerllys",
+            "name": "Rhoswen Maerllys"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-ysgrif--gwenllian-ysgrif",
+    "identity": {
+      "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "name": "Gwenllian Ysgrif",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenllian-ysgrif",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "An Haus Maerllys verheiratete Ysgrif",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

@@ -72,6 +72,19 @@ export function createFamilyChartHouseLinkAlignmentPlan(family) {
   return Object.freeze({
     routes: Object.freeze(routes),
     partnershipRoutes: Object.freeze(partnershipRoutes),
+    // A founding pair already owns the native lineage crest. Reserve its
+    // central slot when that same pair also has a historical cadet-house link.
+    reservedPartnershipTargets: Object.freeze(partnershipRoutes
+      .filter(route => route.partnershipId === family?.lineage?.founderPartnershipId)
+      .slice(0, 1)
+      .map(route => Object.freeze({
+        branchId: `__lineage-crest-${family.document.id}`,
+        linkType: 'lineage-crest',
+        partnershipId: route.partnershipId,
+        parentPersonIds: route.parentPersonIds,
+        houseNodeId: `__lineage-crest-${family.document.id}`,
+        reserved: true
+      }))),
     invalidRequests: Object.freeze(invalidRequests)
   });
 }
@@ -156,6 +169,15 @@ export function applyFamilyChartHouseLinkAlignmentPlan({ tree, plan, orientation
     partnershipRouteGroups.set(groupKey, group);
   });
 
+  (plan?.reservedPartnershipTargets || []).forEach(route => {
+    const groupKey = [...route.parentPersonIds].sort().join('\u001f');
+    const group = partnershipRouteGroups.get(groupKey);
+    const houseNode = displayedNodeById(nodes, route.houseNodeId);
+    if (!group?.length || !houseNode) return;
+    group.push({ route, houseNode, parentCoordinates: group[0].parentCoordinates,
+      displayedParentNodeIds: group[0].displayedParentNodeIds });
+  });
+
   partnershipRouteGroups.forEach(group => {
     const pairCenter = (
       group[0].parentCoordinates[0] + group[0].parentCoordinates[1]
@@ -171,6 +193,7 @@ export function applyFamilyChartHouseLinkAlignmentPlan({ tree, plan, orientation
     const sortedGroup = [...group]
       .sort((first, second) => first.route.branchId.localeCompare(second.route.branchId, 'de'));
     const straightTypePriority = new Map([
+      ['lineage-crest', -1],
       ['married-away', 0],
       ['ward-away', 1],
       ['cadet-house', 2]
@@ -198,7 +221,7 @@ export function applyFamilyChartHouseLinkAlignmentPlan({ tree, plan, orientation
         const targetCoordinate = pairCenter + (slotOffset * step);
         entry.houseNode[axis] = targetCoordinate;
         entry.houseNode.sx = targetCoordinate;
-        alignedPartnershipRoutes.push(Object.freeze({
+        if (!entry.route.reserved) alignedPartnershipRoutes.push(Object.freeze({
           ...entry.route,
           axis,
           targetCoordinate,

@@ -8,7 +8,7 @@ export const HOUSE_BIOGRAPHY = {
   "imageWidth": 38,
   "imageSquare": false,
   "imageTall": true,
-  "description": "Die Maerllys sind eine Schneiderfamilie aus Gwynthor. Schere und Garnrolle im Familienzeichen stehen für ihre handwerkliche Überlieferung. Die jüngere Hauptlinie führt bis zu Nia und ihren Geschwistern; ein älterer Zweig verband das Haus mit den venalysisch geprägten Raves.",
+  "description": "Die Maerllys sind eine bürgerliche Schneiderfamilie aus Gwynthor. Ihr Familienzeichen zeigt Schere und Garnrolle und verweist auf eine über Generationen bewahrte Handwerkstradition. Mit Naht & Siegel führt die jüngere Familie heute eine kleinere, professionelle Schneiderei für Dienstkleidung, Livreen und einheitliche Haushaltsgarnituren. Das Geschäft richtet sich vor allem an Arbeitgeber und Haushaltsverantwortliche.\n\nZofen, Vögte, Diener, Mägde, Burschen und Amtsträger benötigen Kleidung, die ihre Aufgabe sichtbar macht und im täglichen Dienst funktioniert. Deshalb stehen wiederholbare Schnitte, gute Passform und spätere Nachbestellungen im Mittelpunkt. Naht & Siegel kooperiert mit der Göttlichen Eleganz; preislich liegt es zwischen deren gehobener Mode und Nadel & Faden.",
   "quote": "",
   "quoteBy": "",
   "commentSequence": [],
@@ -31,24 +31,28 @@ export const HOUSE_BIOGRAPHY = {
     ],
     [
       "Oberhaupt",
-      "Cadfan Maerllys"
+      "Iorwerth und Bronwen · Geschäftsführung"
     ],
     [
       "Lehnsherr",
       "Haus Draig"
+    ],
+    [
+      "Ursprung",
+      "Historischer Gwniwr-Zweig"
     ]
   ],
   "house": {
-    "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+    "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
     "sideWidth": 100,
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
     "biographyTitle": "Über das Haus",
-    "biographyText": "Die Maerllys sind eine Schneiderfamilie aus Gwynthor. Schere und Garnrolle im Familienzeichen stehen für ihre handwerkliche Überlieferung. Die jüngere Hauptlinie führt bis zu Nia und ihren Geschwistern; ein älterer Zweig verband das Haus mit den venalysisch geprägten Raves.",
+    "biographyText": "Die Maerllys sind eine bürgerliche Schneiderfamilie aus Gwynthor. Ihr Familienzeichen zeigt Schere und Garnrolle und verweist auf eine über Generationen bewahrte Handwerkstradition. Mit Naht & Siegel führt die jüngere Familie heute eine kleinere, professionelle Schneiderei für Dienstkleidung, Livreen und einheitliche Haushaltsgarnituren. Das Geschäft richtet sich vor allem an Arbeitgeber und Haushaltsverantwortliche.\n\nZofen, Vögte, Diener, Mägde, Burschen und Amtsträger benötigen Kleidung, die ihre Aufgabe sichtbar macht und im täglichen Dienst funktioniert. Deshalb stehen wiederholbare Schnitte, gute Passform und spätere Nachbestellungen im Mittelpunkt. Naht & Siegel kooperiert mit der Göttlichen Eleganz; preislich liegt es zwischen deren gehobener Mode und Nadel & Faden.",
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Cadfan und Eira stehen am Beginn der namentlich bekannten jüngeren Linie. Cadfans Bruder Owain heiratete Gwenllian Ysgrif. Aus der nächsten Generation führen Verbindungen zu Falchdyn, Tonnarth und Swyll. Die Schneidermeisterin Gwenora Maerllys begründete mit Matteo Veltrane die Raves-Linie und das spätere Familiengeschäft.",
+    "historyText": "Der ältere Maerllys-Zweig spaltete sich bereits vor den Überlieferungssprüngen von Gwniwr ab. Ein genauer Zeitpunkt und die Namen der damaligen Ahnen sind nicht überliefert. Wie aus der älteren Verwandtschaft ein eigenständiger Haushalt wurde, erzählt die Familienüberlieferung nur in Umrissen.\n\nDie Schneidermeisterin Gwenora Maerllys verband sich später mit Matteo Septimus Veltrane. Aus ihrem Geschäft ging der eigenständige Raves-Zweig hervor, zu dem die Göttliche Eleganz gehört. Gwenoras unbekannter Bruder führt über eine weitere Überlieferungslücke zur jüngeren Hauptlinie. Ihre Nachkommen führen das Raves-Haus bis in die Gegenwart fort.\n\nCadfan und sein Bruder Owain stehen am Beginn dieser konkret belegten jüngeren Generation. Cadfan und Eira haben den Sohn Iorwerth. Owain und Gwenllian Ysgrif sind die Eltern Geraints und Rhoswens. Die Ehen verbinden Maerllys mit Swyll, Falchdyn und Tonnarth. Iorwerth und Bronwen Swyll haben Elowen, Nia und Rhys.\n\nDie Geschwister gingen eigene Wege: Elowen heiratete Edern Vann 1733 und arbeitet in der Letzten Rast. Nia ist persönliche Zofe der Prinzessin Isobel Draig. Rhys verkauft in der Göttlichen Eleganz. Die Verbindung zur Familienwerkstatt begleitet diese eigenen Lebenswege.",
     "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
@@ -56,19 +60,25 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Handwerk und weitreichende familiäre Verbindungen prägen die Überlieferung. Elowen Maerllys lebt und arbeitet seit ihrer Ehe mit Edern Vann in der Letzten Rast. Nias weiterer Lebensweg ist noch offen."
+        "text": "Die Maerllys verbinden ein ordentliches Erscheinungsbild mit der Würde der Arbeit. Eine gute Livree muss die Hauszugehörigkeit zeigen, ohne die Arbeit ihrer Träger zu behindern. Sorgfältige Maßnahme, wiederholbare Fertigung und die Möglichkeit zur Ausbesserung wiegen für das Geschäft schwerer als bloße Schaueffekte. Rang, Amt und Heraldik werden von den Auftraggebern vorgegeben; die Schneiderei verleiht selbst keine Stellung."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Traditionen und Hausleben",
+        "text": "Die bewahrten Muster werden an den vorgesehenen Dienst angepasst. Vor der Fertigung werden Aufgabe, Stoff, Farbe, gewünschter Besatz und die Größenfolge besprochen. Erst die Anprobe zeigt, ob ein Gewand auch beim Sitzen, Tragen und Bewegen brauchbar bleibt. Diese heutige Werkstattpraxis entwickelt die belegte Schneidertradition weiter; sie ist keine neu behauptete mittelalterliche Zunftordnung.\n\nDie ältere Generation gehört zum beratenden Familienkreis. Cadfan, Eira, Owain und Gwenllian bringen Erfahrung ein; eine zusätzliche Vollzeitbelegschaft oder bezahlte Ämter entstehen dadurch nicht. Vorbereitete Gesellen-, Lehr- und Hilfsstellen bleiben ausdrücklich frei."
       },
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Besitz und Lebensgrundlage",
-        "text": "Belegt sind die handwerkliche Schneidertradition und Gwenoras Mitwirkung am Raves-Geschäft. Dieses eigenständige Nachfolgehaus wird dadurch nicht zu einem unselbstständigen Besitz der Maerllys."
+        "text": "Naht & Siegel umfasst Auftragsberatung, Anprobe und die handwerkliche Fertigung von Dienstkleidung. Die Kollektion führt Garnituren für unterschiedliche Hausdienste und Amtsträger, robuste Arbeitskleidung und gehobenere Livreen. Die Preise bleiben unter vergleichbarer gehobener Mode der Göttlichen Eleganz und über der günstigen Bürgermode von Nadel & Faden.\n\nDas selbstständige Raves-Geschäft ist kein unselbstständiger Familienbesitz der Maerllys. Auch die Letzte Rast und der Tonnarth-Haushalt bleiben eigene Zielhäuser. Ein Hausgrundstück, Kapital, Tierbestand oder gesicherte Großaufträge werden nicht hinzuerfunden."
       },
       {
         "position": "afterWorks",
         "mode": "text",
         "title": "Verbindungen",
-        "text": "Eheverbindungen führen zu Ysgrif, Falchdyn, Tonnarth, Swyll, Vann und zum Ursprung der Raves."
+        "text": "Die historische Verwandtschaft zu Gwniwr ist älter als die namentlich bekannten Generationen. Die Kooperation mit der Göttlichen Eleganz beruht auf verwandtem Handwerk und dem Raves-Zweig; beide Läden bleiben eigenständige Betriebe. Rhys’ bestehende Verkaufsstelle bei der Eleganz veranschaulicht die persönliche Verbindung.\n\nWeitere Ehen verbinden Maerllys mit Ysgrif, Swyll, Falchdyn, Tonnarth und Vann. Die persönlichen Verbindungen reichen damit über die eigene Werkstatt und den gemeinsamen Schneiderberuf hinaus."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -87,7 +97,7 @@ export const HOUSE_BIOGRAPHY = {
     "documentsTitle": "Mehr über das Haus",
     "documents": [
       {
-        "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+        "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
         "title": "Haus Maerllys · vollständige Hausseite",
         "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-maerllys"

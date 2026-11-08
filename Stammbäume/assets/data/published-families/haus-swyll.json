@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-swyll",
-  "revision": 2,
-  "updatedAt": "2026-09-02T21:52:30.020Z",
+  "revision": 3,
+  "updatedAt": "2026-11-08T16:12:19.209Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -48,7 +48,10 @@
           "Gründerfamilie"
         ],
         "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "haus-swyll-gruenderin",
@@ -68,7 +71,10 @@
           "Gründerfamilie"
         ],
         "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "emyr-swyll",
@@ -86,7 +92,10 @@
         "lineageRole": "head",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "tegwen-spouse-swyll",
@@ -104,7 +113,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "gwenifer-swyll",
@@ -122,7 +134,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Merediths Großtante Gwenifer wurde an ein nicht überliefertes Haus verheiratet.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "unknown-spouse-gwenifer-swyll",
@@ -140,7 +155,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Name und genaue Herkunft des Ehemanns von Gwenifer Swyll sind nicht überliefert.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "madryn-swyll",
@@ -158,7 +176,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Merediths Großonkel; fiel 1720 im Krieg und hinterließ weder Ehefrau noch Kinder.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "carys-swyll",
@@ -176,7 +197,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Merediths Tante Carys wurde an ein nicht überliefertes Haus verheiratet.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "unknown-spouse-carys-swyll",
@@ -194,7 +218,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Name und genaue Herkunft des Ehemanns von Carys Swyll sind nicht überliefert.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "llio-swyll",
@@ -212,7 +239,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Merediths Tante Llio wurde an ein nicht überliefertes Haus verheiratet.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "unknown-spouse-llio-swyll",
@@ -230,7 +260,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Name und genaue Herkunft des Ehemanns von Llio Swyll sind nicht überliefert.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "nerys-swyll",
@@ -248,7 +281,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Merediths Tante Nerys wurde an ein nicht überliefertes Haus verheiratet.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "unknown-spouse-nerys-swyll",
@@ -266,7 +302,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Name und genaue Herkunft des Ehemanns von Nerys Swyll sind nicht überliefert.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "eirwen-swyll",
@@ -284,7 +323,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Schwester Iestyn Swylls; heiratete Meilyr Pendrwn.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "meilyr-pendrwn",
@@ -295,50 +337,78 @@
         "status": "alive",
         "birth": "1687",
         "death": "",
-        "portrait": "",
+        "portrait": "assets/images/portraits/haus-pendrwn/meilyr-pendrwn.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-pendrwn",
         "familyRole": "married",
         "lineageRole": "branch",
         "tags": [],
         "notes": "Ehemann Eirwen Swylls und Vater der jüngsten Pendrwn-Geschwister.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedFields": [
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {
+            "portrait": 14
+          }
+        }
       },
       {
         "id": "bronwen-swyll",
         "worldPersonId": "person--haus-swyll--bronwen-swyll",
         "name": "Bronwen Swyll",
-        "title": "An Haus Maerllys verheiratete Swyll",
+        "title": "Anprobe und Qualitätskontrolle · Naht & Siegel",
         "sex": "female",
         "status": "alive",
         "birth": "1691",
         "death": "",
-        "portrait": "",
+        "portrait": "assets/images/portraits/haus-maerllys/bronwen-swyll.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-swyll",
         "familyRole": "core",
         "lineageRole": "branch",
         "tags": [],
         "notes": "Schwester Iestyn Swylls; heiratete Iorwerth Maerllys.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {
+            "portrait": 16,
+            "title": 16
+          },
+          "registryManagedFields": [
+            "portrait",
+            "title"
+          ]
+        }
       },
       {
         "id": "iorwerth-maerllys",
         "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
         "name": "Iorwerth Maerllys",
-        "title": "Vater Nia Maerllys’",
+        "title": "Schneidermeister · Leitung von Naht & Siegel",
         "sex": "male",
         "status": "alive",
         "birth": "1689",
         "death": "",
-        "portrait": "",
+        "portrait": "assets/images/portraits/haus-maerllys/iorwerth-maerllys.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-maerllys",
         "familyRole": "married",
         "lineageRole": "branch",
         "tags": [],
         "notes": "Angehöriger des Hauses Maerllys; heiratete Bronwen Swyll.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {
+            "portrait": 16,
+            "title": 16
+          },
+          "registryManagedFields": [
+            "portrait",
+            "title"
+          ]
+        }
       },
       {
         "id": "owain-swyll",
@@ -356,7 +426,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "eluned-spouse-swyll",
@@ -374,7 +447,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "iestyn-swyll",
@@ -392,25 +468,387 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Ehemann Rhiannon Draenmelyns; die Ehe verbindet die Bürgerhäuser Draenmelyn und Swyll.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedFields": [
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {
+            "portrait": 14
+          }
+        }
       },
       {
         "id": "rhiannon-draenmelyn",
         "worldPersonId": "person--haus-draenmelyn--rhiannon-draenmelyn",
-        "name": "Rhiannon Draenmelyn",
-        "title": "Bedienstete des Hauses Draig",
+        "name": "Rhiannon (geb. Draenmelyn) Swyll",
+        "title": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig",
         "sex": "female",
         "status": "alive",
         "birth": "1702",
         "death": "",
-        "portrait": "",
+        "portrait": "https://i.imgur.com/cyJqlDG.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-draenmelyn",
         "familyRole": "married",
         "lineageRole": "branch",
         "tags": [],
         "notes": "Tante von Taliesin und Myfanwy; heiratete in das bürgerliche Haus Swyll ein.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedFields": [
+            "portrait",
+            "name",
+            "title"
+          ],
+          "biographyModule": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "quote": "",
+            "quoteBy": "",
+            "revision": 1792332546794,
+            "biography": {
+              "portrait": "https://dieweltvonaleria.netlify.app/Stammb%C3%A4ume/assets/images/portraits/haus-draenmelyn/rhiannon-draenmelyn.png",
+              "portraitFit": "contain",
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 74,
+              "connectionTextOffset": 0,
+              "abilitiesTitle": "Persönlichkeit",
+              "documentsTitle": "Stammbaum",
+              "documents": [
+                {
+                  "title": "Haus Swyll",
+                  "link": "/Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=rhiannon-draenmelyn",
+                  "text": "Familienzweig um Iestyn, Rhiannon und ihre drei Kinder.",
+                  "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png"
+                },
+                {
+                  "title": "Haus Draenmelyn",
+                  "link": "/Stammbäume/Stammbaum.html?family=haus-draenmelyn&mode=view&person=rhiannon-draenmelyn",
+                  "text": "Rhiannons Herkunftsfamilie.",
+                  "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png"
+                }
+              ],
+              "footer": "Personenakte · Rhiannon Draenmelyn",
+              "connectionsTitle": "Familie Draenmelyn",
+              "knightMentors": [],
+              "triviaTitle": "Trivia",
+              "works": [
+                "Heraldik - Rhiannon verfügt über umfangreiche Kenntnisse der Wappen, heraldischen Zeichen und ihrer Verwendung innerhalb und außerhalb der albischen Fürstentümer.",
+                "Siegelkunde - Sie beherrscht die Prüfung und Zuordnung von Siegeln sowie den Vergleich mit bekannten und beglaubigten Vorlagen.",
+                "Zeichenprüfung - Sie erkennt selbst geringfügige Abweichungen in Formen, Linienführungen, Ornamenten und anderen charakteristischen Merkmalen.",
+                "Beglaubigungswesen - Sie kennt die Anforderungen an die Bestätigung von Wappen, Geleitzeichen, Siegelidentitäten und den damit verbundenen Vollmachten.",
+                "Dokumentation - Rhiannon führt sorgfältige Aufzeichnungen über geprüfte Zeichen, Beglaubigungen und auffällige Unregelmäßigkeiten.",
+                "Beobachtungsgabe - Ihr außergewöhnlich gutes Auge für Formen, Muster und Symmetrie zählt zu ihren größten beruflichen Stärken.",
+                "Verwaltungskenntnisse - Durch ihre Ausbildung und langjährige Tätigkeit besitzt sie fundierte Kenntnisse der höfischen Verwaltung und ihrer Abläufe.",
+                "Diplomatische Unterstützung - Sie unterstützt Gesandtschaften und den Herold bei der Überprüfung fremder Zeichen und Vollmachten.",
+                "Fachliche Beurteilung - Rhiannon unterscheidet zwischen tatsächlichen Unstimmigkeiten, möglichen Fälschungsmerkmalen und bloßen Abweichungen, die einer weiteren Prüfung bedürfen.",
+                "Stickerei - In ihrer Freizeit beschäftigt sie sich gerne mit feinen Stickarbeiten, bei denen ihr ausgeprägtes Gespür für Muster und Symmetrie besonders zur Geltung kommt.",
+                "Gartenarbeit - Sie besitzt Freude an der Pflege und Gestaltung von Gärten und bevorzugt dabei eine möglichst harmonische und wohlgeordnete Anordnung."
+              ],
+              "worksTitle": "Können & Fähigkeiten",
+              "biographyText": "<p>Rhiannon Swyll, geborene Draenmelyn, ist eine 38-jährige Bürgerin aus Gwynthor und bekleidet das Amt der Wappen- und Zeichenmeisterin des Herolds von Haus Draig. Sie ist die Gemahlin von Iestyn Swyll und Mutter dreier Kinder.</p><p>Sie entstammt dem kleinen Bürgerhaus Draenmelyn, dessen Angehörige seit Generationen als Diener und Bedienstete im Haushalt der Draigs tätig sind. Ihr Vater Ifor Draenmelyn steht der Zofen- und Kammerdienerschaft vor und arbeitet unmittelbar unter dem Vogt. Auch ihre drei älteren Brüder stehen im Dienst des Hauses Draig.</p><p><br></p><p>Rhiannon begann ihre eigene Laufbahn ebenfalls im persönlichen Dienst der gräflichen Familie. Ihre außergewöhnliche Beobachtungsgabe und ihr ausgeprägtes Gespür für Formen und kleinste Abweichungen erregten schließlich die Aufmerksamkeit des damaligen Herolds Trahern, der ihre weitere Ausbildung förderte.</p><p></p><p>Seit sieben Jahren bekleidet Rhiannon das Amt der Wappen- und Zeichenmeisterin. Sie ist unmittelbar Sir Cadfan, dem gegenwärtigen Herold und Chefdiplomaten des Hauses Draig, unterstellt und führt ein eigenständiges, den übrigen Kernämtern des Herolds gleichrangiges Amt.</p><p></p><p>Zu ihren Aufgaben gehören die Prüfung und Bestätigung von Wappen, Siegelidentitäten und Geleitzeichen sowie die Überprüfung der damit verbundenen Beglaubigungen und Vollmachten. Sie sorgt dafür, dass fremde Gesandtschaften, Bevollmächtigte und Schriftstücke nicht aufgrund falscher oder unzureichender</p><p>Zeichen anerkannt werden.</p><p></p><p>Rhiannon gilt als gewissenhafte, sachkundige und außerordentlich genaue Fachfrau, deren Urteil innerhalb ihres Zuständigkeitsbereichs großes Vertrauen genießt.</p>",
+              "historyTitle": "Charakter",
+              "trivia": [
+                "Rhiannon trägt nahezu immer ein kleines, ledergebundenes Notizbuch bei sich, in dem sie Beobachtungen, Auffälligkeiten und wichtige Informationen festhält.",
+                "Sie besitzt die Angewohnheit, schief liegende oder ungleichmäßig angeordnete Gegenstände beinahe unbewusst geradezurücken.",
+                "Besonders schief hängende Bilder empfindet sie als ausgesprochen störend. Es fällt ihr schwer, einen Raum zu verlassen, ohne sie vorher auszurichten.",
+                "Ihr eigener Schreibtisch ist stets sorgfältig geordnet. Jedes Schreibgerät und jedes Schriftstück besitzt einen festen Platz.",
+                "Extreme Unordnung kann Rhiannon tatsächlich aus der Fassung bringen. Besonders chaotische Wohnräume betrachtet sie mit aufrichtigem Entsetzen.",
+                "Sie legt ihrem Gemahl Iestyn gelegentlich bereits am Vorabend die Kleidung für den nächsten Tag bereit.",
+                "Ihr trockener Humor kommt häufig vollkommen unerwartet und wird meist von einem kaum merklichen Lächeln begleitet.",
+                "Mit Cadogan Sgrechiwr versteht sie sich grundsätzlich gut. Allerdings geraten die beiden gelegentlich aneinander, wenn ihre unterschiedlichen Vorstellungen von Ordnung aufeinandertreffen.",
+                "Sie liebt Gartenarbeit und bevorzugt dabei harmonische Formen, saubere Wege und sorgfältig angeordnete Beete.",
+                "Der Gartenmeister des Hauses Draig dürfte ihre gut gemeinten Anregungen zur Gestaltung der Gartenanlagen inzwischen nur allzu gut kennen.",
+                "Rhiannon stickt gerne und besitzt eine besondere Vorliebe für geometrische Muster und symmetrische Ornamente.",
+                "Sie schätzt die Gemälde ihrer Freundin Gwen Hamnett sehr, kann deren unordentliches Atelier jedoch nur schwer ertragen.",
+                "Innerhalb ihrer Familie ist bekannt, dass Rhiannon selbst kleine Verfehlungen über erstaunlich lange Zeit in Erinnerung behält.",
+                "Ihr persönlicher Grundsatz lautet: „Ich kann verzeihen. Aber ich vergesse niemals.“",
+                "Trotz ihrer gelegentlich bestimmenden Art ist Rhiannon eine ausgesprochen liebevolle Mutter, die sich aufrichtig um das Wohlergehen ihrer Kinder sorgt."
+              ],
+              "extraSections": [
+                {
+                  "position": "afterWorks",
+                  "mode": "text",
+                  "title": "Geschichte & Vergangenheit",
+                  "text": "Rhiannon wurde im Jahr 1702 als jüngstes Kind von Ifor Draenmelyn geboren. Ihre drei älteren Brüder Afan, Meurig und Caradog waren zu diesem Zeitpunkt bereits Teil der Familie, deren Angehörige seit Generationen im Dienst des Hauses Draig standen.\n\nSie wuchs in Gwynthor in einem Umfeld auf, das von höfischen Pflichten, Verlässlichkeit und persönlichem Dienst geprägt war. Ihr Vater Ifor bekleidete eine verantwortungsvolle Stellung innerhalb der gräflichen Dienerschaft und vermittelte seinen Kindern früh die Bedeutung von Gewissenhaftigkeit und Diskretion.\n\nWie zahlreiche Angehörige der im Dienst der Draigs stehenden Bürgerfamilien erhielt Rhiannon eine Ausbildung an der Schule des Ritterhauses Balchder.\n\nAnschließend trat sie als Zofe in den Dienst von Dwynwen Draig, der Schwester des späteren Herolds Sir Cadfan. Während dieser Tätigkeit fiel ihre außergewöhnliche Aufmerksamkeit für Formen, Muster und kleinste Unregelmäßigkeiten auf.\n\nDer damalige Herold Trahern erkannte schließlich ihr besonderes Talent und ermöglichte ihr eine weiterführende Ausbildung im Zeichenwesen. Rhiannon wurde dem damaligen Wappen- und Zeichenmeister zugeteilt und erhielt dort eine umfassende praktische Unterweisung.\n\nIn den folgenden Jahren erwarb sie sich umfangreiche Kenntnisse der Heraldik, Siegelkunde und Beglaubigungspraxis. Ihre natürliche Beobachtungsgabe verband sie dabei mit großer Disziplin und einer bemerkenswerten Sorgfalt bei der Dokumentation.\n\nWährend ihrer Tätigkeit im Umfeld des Herolds vertiefte sich auch ihre Bekanntschaft mit Iestyn Swyll, dessen Familie ebenfalls seit Generationen dem Haus Draig verbunden war. Aus der bereits bestehenden familiären Bekanntschaft entwickelte sich schließlich eine persönliche Zuneigung.\n\nDie beiden heirateten und gründeten eine Familie. Ihre Kinder Gareth, Meredith und Rhydwen wurden zu einem wichtigen Mittelpunkt ihres gemeinsamen Lebens.\n\nIm Jahr 1733 wurde Rhiannon im Alter von 31 Jahren zur Wappen- und Zeichenmeisterin ernannt. Sie übernahm damit ein eigenständiges Kernamt innerhalb des Herolds und diente zunächst weiterhin unter Trahern.\n\nNach dessen Amtszeit setzte sie ihre Tätigkeit unter Sir Cadfan fort, zu dem sie ein gutes und vertrauensvolles berufliches Verhältnis unterhält."
+                },
+                {
+                  "position": "afterWorks",
+                  "mode": "text",
+                  "title": "Geschichte & Wirkung",
+                  "text": "Rhiannon Swyll gehört zu den erfahrenen und angesehenen Fachbeamtinnen des Herolds von Haus Draig.\n\nIhre Arbeit bildet einen wichtigen Bestandteil der diplomatischen und administrativen Sicherheit des Hauses. Durch die sorgfältige Überprüfung von Wappen, Siegelidentitäten, Geleitzeichen und Beglaubigungen trägt sie dazu bei, falsche Anerkennungen und die Verwendung unberechtigter Vollmachten zu verhindern.\n\nBesonders ihre Fähigkeit, geringfügige Unterschiede zwischen scheinbar identischen Zeichen zu erkennen, hat ihr innerhalb ihres Zuständigkeitsbereichs einen ausgezeichneten Ruf eingebracht.\n\nDabei versteht Rhiannon ihre Aufgabe nicht als Ermittlung oder Rechtsprechung. Verdächtige Abweichungen werden dokumentiert und gegebenenfalls zur weiteren Untersuchung an die zuständigen Stellen weitergeleitet. Ein ungewöhnliches Zeichen stellt für sie zunächst einen Prüfgrund dar und noch keinen Beweis für eine Fälschung.\n\nIn ihrer Arbeit steht sie in regelmäßigem Austausch mit dem Archiv, den zuständigen Ermittlern und den übrigen Ämtern des Herolds.\n\nIhre Stellung ist auch innerhalb ihrer Herkunftsfamilie bemerkenswert. Während zahlreiche Angehörige der Draenmelyn weiterhin im persönlichen Dienst des Hauses Draig stehen, hat Rhiannon durch ihre besondere Begabung und ihre Ausbildung ein verantwortungsvolles Fachamt erreicht.\n\nSie betrachtet diesen Werdegang jedoch nicht als Abkehr von ihrer Herkunft. Vielmehr ist sie stolz auf die langjährige Verbindung ihrer Familie zum Haus Draig und auf die Aufgaben, welche die Draenmelyn seit Generationen erfüllen."
+                },
+                {
+                  "position": "afterWorks",
+                  "mode": "text",
+                  "title": "Besondere Bindung - Iestyn Swyll – ihr Gemahl",
+                  "text": "Rhiannon führt mit ihrem Gemahl Iestyn Swyll eine glückliche und weitgehend harmonische Ehe.\n\nBeide stammen aus Bürgerfamilien, die seit Generationen im Dienst des Hauses Draig stehen, und teilen ein ausgeprägtes Pflichtbewusstsein sowie eine enge Verbundenheit mit dem gräflichen Haushalt.\n\nIhre gemeinsame Tätigkeit im Umfeld des Herolds hat ihre Beziehung zusätzlich geprägt.\n\nIm privaten Alltag übernimmt Rhiannon häufig die Organisation des gemeinsamen Haushalts. Sie legt großen Wert auf geregelte Abläufe und kümmert sich mit bemerkenswerter Selbstverständlichkeit um zahlreiche alltägliche Angelegenheiten.\n\nDazu gehört gelegentlich sogar die Auswahl der Kleidung ihres Gemahls, die sie ihm sorgfältig vorbereitet.\n\nIestyn hat sich an diese Eigenheit seiner Frau weitgehend gewöhnt und begegnet ihr meist mit Gelassenheit. Dennoch besitzt er durchaus eigene Vorstellungen und lässt sich nicht in sämtlichen Angelegenheiten von ihr bestimmen.\n\nRhiannon schätzt an ihrem Gemahl insbesondere seine Verlässlichkeit und die Ruhe, mit der er ihren gelegentlichen Perfektionismus erträgt."
+                },
+                {
+                  "position": "afterWorks",
+                  "mode": "text",
+                  "title": "Besondere Bindung  - Gareth, Meredith und Rhydwen – ihre Kinder",
+                  "text": "Ihre drei Kinder besitzen einen außerordentlich hohen Stellenwert in Rhiannons Leben.\n\nIhr ältester Sohn Gareth ist 20 Jahre alt, ihre Tochter Meredith 18 und ihre jüngste Tochter Rhydwen 15 Jahre.\n\nMeredith steht bereits als persönliche Zofe von Rhiannon Draig im Dienst der gräflichen Familie und führt damit die lange Diensttradition ihrer Verwandtschaft fort.\n\nRhiannon ist eine liebevolle, aber gelegentlich etwas bestimmende Mutter. Sie möchte ihren Kindern möglichst gute Voraussetzungen für ihre Zukunft bieten und neigt deshalb dazu, auch deren Angelegenheiten sorgfältig zu organisieren.\n\nDabei muss sie sich gelegentlich daran erinnern, dass ihre Kinder zunehmend eigene Entscheidungen treffen möchten."
+                },
+                {
+                  "position": "afterWorks",
+                  "mode": "text",
+                  "title": "Besondere Bindung  - Gwen Hamnett – ihre Freundin",
+                  "text": "Mit der Malerin Gwen Hamnett verbindet Rhiannon eine herzliche, gelegentlich jedoch durchaus streitbare Freundschaft.\nRhiannon bewundert Gwens künstlerisches Talent und besitzt eine ausgeprägte Wertschätzung für ihre Gemälde. Insbesondere ihre Fähigkeit, Menschen und Landschaften lebendig darzustellen, beeindruckt sie.\n\nAllerdings unterscheiden sich die beiden Frauen in ihren Vorstellungen von Ordnung und Alltagsgestaltung erheblich.\n\nWährend Rhiannon eine wohlgeordnete Umgebung bevorzugt, kann Gwen während schöpferischer Phasen ein beträchtliches Chaos verursachen und sämtliche Verpflichtungen vergessen.\n\nRhiannon betrachtet diese Unberechenbarkeit mit erheblichem Unverständnis und versucht gelegentlich, wenigstens etwas Ordnung in Gwens Atelier zu bringen.\n\nGwen wiederum begegnet diesen Bemühungen meist mit Humor und erinnert ihre Freundin daran, dass künstlerische Arbeit nicht immer nach festen Regeln funktioniert.\n\nTrotz gelegentlicher Meinungsverschiedenheiten schätzen sich beide Frauen sehr."
+                }
+              ],
+              "biographyTitle": "Hintergrund – Wer ist sie?",
+              "quotes": [
+                "„Ich kann verzeihen. Aber ich vergesse niemals.“"
+              ],
+              "abilities": [
+                {
+                  "title": "Ordnungsliebend",
+                  "detail": "Rhiannon legt größten Wert auf Sauberkeit, klare Strukturen und die richtige Anordnung von Gegenständen.",
+                  "icon": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/biography-trait-icons/order-loving-20261103.png"
+                },
+                {
+                  "title": "Gewissenhaft",
+                  "detail": "Sie erfüllt ihre Aufgaben mit großer Sorgfalt und nimmt ihre berufliche Verantwortung ausgesprochen ernst.",
+                  "icon": "/IconOrdner/Traits%20Icon/Diligent.png"
+                },
+                {
+                  "title": "Beobachtend",
+                  "detail": "Selbst kleinste Unregelmäßigkeiten und Abweichungen fallen ihr häufig unmittelbar auf.",
+                  "icon": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/biography-trait-icons/observant-20261103.png"
+                },
+                {
+                  "title": "Selbstbewusst",
+                  "detail": "Sie kennt ihre Fähigkeiten und vertritt ihre fachlichen Einschätzungen auch gegenüber gesellschaftlich höhergestellten Personen.",
+                  "icon": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/biography-trait-icons/self-confident-20261103.png"
+                },
+                {
+                  "title": "Freundlich",
+                  "detail": "Im persönlichen Umgang zeigt sie sich höflich, zuvorkommend und grundsätzlich zugänglich.",
+                  "icon": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/biography-trait-icons/friendly-20261103.png"
+                },
+                {
+                  "title": "Zurückhaltend",
+                  "detail": "Obwohl sie durchaus gesellig sein kann, gewährt sie nur wenigen Menschen einen wirklich tiefen Einblick in ihr Privatleben.",
+                  "icon": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/biography-trait-icons/reserved-20261103.png"
+                },
+                {
+                  "title": "Humorvoll",
+                  "detail": "Sie besitzt einen trockenen, gelegentlich spöttischen Humor, der jedoch selten verletzend oder herabwürdigend ist.",
+                  "icon": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/biography-trait-icons/humorous-20261103.png"
+                },
+                {
+                  "title": "Diszipliniert",
+                  "detail": "Rhiannon bevorzugt einen geregelten Alltag und erledigt ihre Verpflichtungen möglichst ohne unnötige Verzögerungen.",
+                  "icon": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/biography-trait-icons/disciplined-20261103.png"
+                },
+                {
+                  "title": "Familienverbunden",
+                  "detail": "Ihre Familie besitzt für sie einen außerordentlich hohen Stellenwert. Sie sorgt sich aufrichtig um ihren Gemahl und ihre Kinder.",
+                  "icon": "/IconOrdner/Traits%20Icon/Family_focus.png"
+                },
+                {
+                  "title": "Bestimmend",
+                  "detail": "Besonders innerhalb ihrer Familie neigt sie dazu, Abläufe und Entscheidungen zu organisieren, selbst wenn niemand ausdrücklich darum gebeten hat.",
+                  "icon": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/biography-trait-icons/assertive-organizer-20261103.png"
+                },
+                {
+                  "title": "Nachtragend",
+                  "detail": "Rhiannon kann Fehler und Kränkungen verzeihen, vergisst jedoch nur selten, wenn jemand ihr Vertrauen enttäuscht hat.",
+                  "icon": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/biography-trait-icons/holds-grudges-20261103.png"
+                },
+                {
+                  "title": "Perfektionistisch",
+                  "detail": "Sie besitzt eine ausgeprägte Vorliebe für Symmetrie und Genauigkeit. Unordnung empfindet sie häufig als störend und beseitigt sie nach Möglichkeit unmittelbar.",
+                  "icon": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/public/assets/biography-trait-icons/perfectionist-20261103.png"
+                }
+              ],
+              "historyText": "<p>Rhiannon Swyll ist eine freundliche, selbstbewusste und gewissenhafte Frau, deren Persönlichkeit in besonderem Maße von ihrer Liebe zu Ordnung, Genauigkeit<br>und Verlässlichkeit geprägt wird.</p><br><p>Im gewöhnlichen Umgang zeigt sie sich höflich und zugänglich, wahrt jedoch eine gewisse persönliche Distanz. Sie kann durchaus gesellig sein und schätzt anregende Gespräche, lässt aber nur wenige Menschen wirklich an ihren Gedanken und Gefühlen teilhaben.</p><br><p>Besonders auffällig ist ihr ausgeprägter Ordnungssinn.</p><br><p>Rhiannon bevorzugt eine saubere, übersichtliche und möglichst symmetrische Umgebung. Gegenstände besitzen für sie einen bestimmten Platz, und sie empfindet es als ausgesprochen störend, wenn sie ohne erkennbaren Grund anders angeordnet werden.</p><br><p>Diese Vorliebe äußert sich häufig in kleinen, beinahe unbewussten Handlungen. Liegt ein Schreibgerät schief auf einem Tisch, richtet sie es gerade. Hängt ein Bild nicht waagerecht, korrigiert sie seine Position. Stehen mehrere Bücher ungleichmäßig nebeneinander, bringt sie diese in eine ordentliche Reihe.</p><p>Dabei handelt es sich nicht um eine krankhafte Zwanghaftigkeit. Rhiannon ist durchaus in der Lage, Unordnung zu ertragen, wenn die Umstände es verlangen. Sie bevorzugt jedoch entschieden, sie möglichst rasch zu beseitigen.</p><br><p>Extreme Unordnung kann sie tatsächlich aus der Fassung bringen. Besonders chaotische Räumlichkeiten betrachtet sie mit einer Mischung aus Fassungslosigkeit und aufrichtigem Unverständnis.</p><br><p>Trotz ihrer Genauigkeit besitzt Rhiannon einen ausgeprägten Sinn für Humor. Ihre Bemerkungen fallen häufig trocken und überraschend treffend aus, ohne dass<br>sie ihr Gegenüber absichtlich verletzen möchte.</p><br><p>Eine weniger angenehme Eigenschaft ist ihr bemerkenswert gutes Gedächtnis für persönliche Enttäuschungen.</p><br><p>Rhiannon ist durchaus bereit, Fehler zu verzeihen und Menschen eine zweite Chance zu gewähren. Ein einmal erschüttertes Vertrauen lässt sich bei ihr jedoch nur schwer vollständig wiederherstellen.</p><br><p>„Ich kann verzeihen. Aber ich vergesse niemals.“</p><br><p>Dieser Grundsatz beschreibt ihre Haltung recht treffend.</p><br><p>Innerhalb ihrer Familie zeigt Rhiannon eine ausgesprochen fürsorgliche Seite. Sie liebt ihren Gemahl und ihre Kinder und möchte ihnen ein möglichst sicheres, geordnetes und angenehmes Leben ermöglichen.</p><br><p>Allerdings neigt sie dazu, auch deren Alltag nach ihren eigenen Vorstellungen organisieren zu wollen. Insbesondere ihre Kinder können sich dadurch gelegentlich bevormundet fühlen.</p><br><p>Rhiannon handelt dabei gewöhnlich aus Fürsorge und nicht aus dem Wunsch heraus, andere Menschen zu beherrschen. Dennoch fällt es ihr manchmal schwer, hinzunehmen, dass ihre Angehörigen eigene Vorstellungen von Ordnung und Lebensführung besitzen.</p>",
+              "quotesTitle": "Zitate",
+              "connections": [
+                {
+                  "type": "connection",
+                  "name": "Ifor Draenmelyn",
+                  "detail": "Belegtes Elternteil.",
+                  "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/biographies/patrick-20261103/originals/ifor-draenmelyn.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Nest Draenmelyn",
+                  "detail": "Belegtes Elternteil.",
+                  "image": "/Stammbäume/assets/images/placeholders/female.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Afan Draenmelyn",
+                  "detail": "Älterer Bruder",
+                  "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/biographies/patrick-20261103/originals/afan-draenmelyn.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Meurig Draenmelyn",
+                  "detail": "Älterer Bruder",
+                  "image": "/Stammbäume/assets/images/placeholders/male.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Caradog  Draenmelyn",
+                  "detail": "Älterer Bruder",
+                  "image": "/Stammbäume/assets/images/placeholders/male.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Sioned Draenmelyn",
+                  "detail": "Nichte",
+                  "image": "/Stammbäume/assets/images/portraits/haus-draenmelyn/sioned-draenmelyn.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Taliesin Draenmelyn",
+                  "detail": "Neffe",
+                  "image": "/Stammbäume/assets/images/portraits/haus-draenmelyn/taliesin-draenmelyn.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Gethin Draenmelyn",
+                  "detail": "Neffe",
+                  "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/biographies/patrick-20261103/originals/gethin-draenmelyn.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Owain Draenmelyn",
+                  "detail": "Neffe",
+                  "image": "/Stammbäume/assets/images/placeholders/male.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Myfanwy Draenmelyn",
+                  "detail": "Nichte",
+                  "image": "/Stammbäume/assets/images/portraits/haus-draenmelyn/myfanwy-draenmelyn.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Eleri Draenmelyn",
+                  "detail": "Nichte",
+                  "image": "/Stammbäume/assets/images/placeholders/female.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "heading",
+                  "title": "Familie Swyll",
+                  "detail": ""
+                },
+                {
+                  "type": "connection",
+                  "name": "Iestyn Swyll",
+                  "detail": "Ehemann",
+                  "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/biographies/patrick-20261103/originals/iestyn-swyll.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Gareth Swyll",
+                  "detail": "Sohn",
+                  "image": "https://dieweltvonaleria.netlify.app/Stammb%C3%A4ume/assets/images/portraits/haus-swyll/gareth-swyll.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Meredith Swyll",
+                  "detail": "Tochter",
+                  "image": "/Stammbäume/assets/images/portraits/haus-swyll/meredith-swyll.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Rhydwen Swyll",
+                  "detail": "Tochter",
+                  "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/biographies/patrick-20261103/originals/rhydwen-swyll.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "connection",
+                  "name": "Emyr  Swyll",
+                  "detail": "Schwiegervater",
+                  "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/biographies/patrick-20261103/originals/emyr-swyll.png",
+                  "imageFormat": "portrait"
+                },
+                {
+                  "type": "heading",
+                  "title": "Tierische Begleiter",
+                  "detail": ""
+                },
+                {
+                  "type": "connection",
+                  "name": "Perle",
+                  "detail": "Ihr Ryfel.",
+                  "image": "https://dieweltvonaleria.netlify.app/AleriaAlmanach/assets/biographies/patrick-20261103/originals/perle.png",
+                  "imageFormat": "portrait"
+                }
+              ]
+            },
+            "stats": [
+              {
+                "label": "Vollständiger Name",
+                "value": "Rhiannon Swyll (geb. Draenmelyn)"
+              },
+              {
+                "label": "Geboren / Alter",
+                "value": "1702 · 38 Jahre (1740)"
+              },
+              {
+                "label": "Stand",
+                "value": "Bürgerlich"
+              },
+              {
+                "label": "Herkunft",
+                "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht · Cenyr"
+              },
+              {
+                "label": "Haus",
+                "value": "Haus Draenmelyn"
+              },
+              {
+                "label": "Rolle",
+                "value": "Wappen- und Zeichenmeisterin des Herolds von Haus Draig"
+              },
+              {
+                "label": "Ehepartner",
+                "value": "Iestyn Swyll"
+              },
+              {
+                "label": "Kinder",
+                "value": "Gareth Swyll, Meredith Swyll, Rhydwen Swyll"
+              },
+              {
+                "label": "Wohnsitz",
+                "value": "Gwynthor"
+              }
+            ]
+          },
+          "registryManagedSourceRevision": 15,
+          "registryManagedFieldRevisions": {
+            "portrait": 15,
+            "name": 15,
+            "title": 15
+          }
+        }
       },
       {
         "id": "cadfan-swyll",
@@ -428,7 +866,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Merediths Onkel; fiel 1719 im Krieg, unverheiratet und ohne Kinder.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "rhodri-swyll",
@@ -446,7 +887,111 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Merediths Onkel; unterhielt eine Affäre mit Morwen, aus der zwei nicht eheliche Kinder hervorgingen.",
-        "extensions": {}
+        "extensions": {
+          "twinGroupId": "twins-rhodri-lleucu-swyll-1702",
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "lleucu-swyll",
+        "worldPersonId": "person--haus-swyll--lleucu-swyll",
+        "name": "Lleucu Swyll",
+        "title": "Reederin · Mitglied des Marktes der Fortuna",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1702",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gwynthor-erbstreit/portraits/lleucu-swyll.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-swyll",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "38 Jahre. Tochter Emyr Swylls und Tegwens, Zwillingsschwester Rhodri Swylls. Nach der vermuteten Niederlage und dem Verlust Gwrgans 1720 zunächst achtzehnjährige Frau eines verschollenen Seehändlers. Gwrgan wurde 1724 amtlich für tot erklärt. Sein Vater vererbte ihr 1728 den verbliebenen Besitz ausdrücklich. Mit Anschubhilfe ihrer Verwandten verkaufte sie eines der beiden heruntergekommenen Schiffe und baute mit Eifion Twyllod den Betrieb neu auf. Heute fünf Handelsschiffe und gegenüber der damaligen Lage vervierfachtes Vermögen. Heiratete Eifion 1729 nach anerkannter Witwenschaft; drei gemeinsame Kinder. Mit Gwrgan hat sie kein Kind. Erkennt den Heimkehrer als Gwrgan an; der Ausgang seines Gesuchs ist offen.",
+        "extensions": {
+          "twinGroupId": "twins-rhodri-lleucu-swyll-1702",
+          "registryManagedFields": [
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "chartCenterBetweenSpousePersonIds": [
+            "gwrgan-cochdon",
+            "eifion-twyllod"
+          ],
+          "chartKeepPartnerGroupTogether": true,
+          "registryManagedExtensionFields": [
+            "chartCenterBetweenSpousePersonIds",
+            "chartKeepPartnerGroupTogether"
+          ],
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {
+            "portrait": 14,
+            "title": 14,
+            "notes": 14
+          }
+        }
+      },
+      {
+        "id": "gwrgan-cochdon",
+        "worldPersonId": "person--haus-cochdon--gwrgan-cochdon",
+        "name": "Gwrgan Cochdon",
+        "title": "Heimgekehrter Seehändler · Kläger",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gwynthor-erbstreit/portraits/gwrgan-cochdon.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-cochdon",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Gebürtiger Gwynthorer. Zog mit seinen drei Brüdern mit Rhodri Draigs Aufgebot nach Vennyr. Nach der Schlacht der tausend Wellen 1720 geriet er als einzig überlebender Bruder in nordische Gefangenschaft. Sechs Jahre Minenarbeit, danach bis 1737 zunehmende Verantwortung als Thrallführer des Clans Valdruna; anschließend drei Jahre Hafenaufsicht und Fluchtvorbereitung. Entkam 1740 mit fünfzig weiteren Thralls. Cynfarch Llafnfor rettete ihn und zwölf Mitflüchtende vor den Verfolgern; 38 starben. Nach der Heimkehr bestreitet er die Folgen seiner Todesannahme für Vermögen und Ehe. Seine Forderungen sind keine bereits feststehenden Gerichtsurteile.",
+        "extensions": {
+          "registryManagedFields": [
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {
+            "portrait": 14,
+            "title": 14,
+            "notes": 14
+          }
+        }
+      },
+      {
+        "id": "eifion-twyllod",
+        "worldPersonId": "person--haus-twyllod--eifion-twyllod",
+        "name": "Eifion Twyllod",
+        "title": "Kapitän des Hauptschiffes · Lleucus zweiter Ehemann",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gwynthor-erbstreit/portraits/eifion-twyllod.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-twyllod",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "44 Jahre. Jüngerer Bruder Arian Twyllods, aus einer gewöhnlichen Fischerfamilie in Gwynthors Bannkreis. Erarbeitete sich sein Können und seine Stellung auf See. Arbeitete für die Cochdon und stand Lleucu nach dem Verlust ihres Mannes im Alltag und beim Aufbau des Betriebes bei. Aus Beistand entstand Liebe. Führt heute das Hauptschiff und hält die Arbeit der fünf Schiffe zusammen. Vater von drei Kindern mit Lleucu. Die Vorgeschichte seiner Herkunftsfamilie um Eithne, Arian und Glendower bleibt bestehen; Eifions konkrete damalige Haltung wird nicht nachträglich als belegt ausgegeben.",
+        "extensions": {
+          "registryManagedFields": [
+            "portrait",
+            "title",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {
+            "portrait": 14,
+            "title": 14,
+            "notes": 14
+          }
+        }
       },
       {
         "id": "morwen-affair-swyll",
@@ -464,7 +1009,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Mutter von Rhodris zwei nicht ehelichen Kindern.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "gareth-swyll",
@@ -482,7 +1030,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Unverheiratet und ohne Verlobung; seine weitere Lebenslinie bleibt bewusst offen.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "meredith-swyll",
@@ -502,7 +1053,10 @@
           "18 Jahre"
         ],
         "notes": "Achtzehnjährige Tochter von Iestyn Swyll und Rhiannon Draenmelyn; zwischen Gareth und Rhydwen geboren.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "rhydwen-swyll",
@@ -520,7 +1074,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "aled-swyll",
@@ -538,7 +1095,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "enid-swyll",
@@ -556,7 +1116,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "carwyn-swyll",
@@ -574,7 +1137,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Nicht ehelicher Sohn Rhodri Swylls und Morwens; ungefähr in Merediths Alter.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "lowri-swyll",
@@ -592,7 +1158,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Nicht eheliche Tochter Rhodri Swylls und Morwens; ungefähr in Merediths Alter.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       }
     ],
     "partnerships": [
@@ -609,7 +1178,55 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "Gründerehe des Hauses.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-gwrgan-cochdon-lleucu-swyll",
+        "participantIds": [
+          "gwrgan-cochdon",
+          "lleucu-swyll"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1720",
+        "end": "1724",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "1724 infolge der amtlichen Todesannahme als beendet behandelt. Gwrgan lebt und kehrte 1740 zurück. Die Rechtsfolgen für diese und die zweite Ehe sind Gegenstand des noch offenen Verfahrens; keine belegte Scheidung und kein neues Urteil vorwegnehmen.",
+        "extensions": {
+          "endedByPresumedDeath": true,
+          "returneeLegalStatus": "pending",
+          "registryManagedFields": [
+            "notes",
+            "extensions"
+          ],
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {
+            "notes": 14,
+            "extensions": 14
+          }
+        }
+      },
+      {
+        "id": "marriage-eifion-twyllod-lleucu-swyll",
+        "participantIds": [
+          "eifion-twyllod",
+          "lleucu-swyll"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1729",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Nach anerkannter Witwenschaft geschlossen. Gwrgan bestreitet die Rechtsfolgen; ein Gerichtsurteil hierzu liegt noch nicht vor.",
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-emyr-tegwen-swyll",
@@ -624,7 +1241,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-gwenifer-unknown-swyll",
@@ -639,7 +1259,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-carys-unknown-swyll",
@@ -654,7 +1277,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-llio-unknown-swyll",
@@ -669,7 +1295,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-nerys-unknown-swyll",
@@ -684,7 +1313,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-owain-eluned-swyll",
@@ -699,7 +1331,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-rhiannon-draenmelyn-iestyn-swyll",
@@ -714,7 +1349,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-meilyr-pendrwn-eirwen-swyll",
@@ -729,7 +1367,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-iorwerth-maerllys-bronwen-swyll",
@@ -744,7 +1385,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "affair-rhodri-morwen-swyll",
@@ -759,7 +1403,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "Rhodris Affäre mit Morwen; aus ihr gingen Carwyn und Lowri hervor.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       }
     ],
     "parentages": [
@@ -777,7 +1424,9 @@
         "visibility": "public",
         "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Emyr, Gwenifer und Madryn.",
         "extensions": {
-          "timeJumpId": "gap-swyll-to-1663"
+          "timeJumpId": "gap-swyll-to-1663",
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
         }
       },
       {
@@ -794,7 +1443,9 @@
         "visibility": "public",
         "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Emyr, Gwenifer und Madryn.",
         "extensions": {
-          "timeJumpId": "gap-swyll-to-1663"
+          "timeJumpId": "gap-swyll-to-1663",
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
         }
       },
       {
@@ -811,7 +1462,9 @@
         "visibility": "public",
         "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Emyr, Gwenifer und Madryn.",
         "extensions": {
-          "timeJumpId": "gap-swyll-to-1663"
+          "timeJumpId": "gap-swyll-to-1663",
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
         }
       },
       {
@@ -827,7 +1480,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-emyr-bronwen-swyll",
@@ -842,7 +1498,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-emyr-carys-swyll",
@@ -857,7 +1516,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-emyr-owain-swyll",
@@ -872,7 +1534,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-emyr-iestyn-swyll",
@@ -887,7 +1552,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-emyr-cadfan-swyll",
@@ -902,7 +1570,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-emyr-rhodri-swyll",
@@ -917,7 +1588,28 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-emyr-lleucu-swyll",
+        "childId": "lleucu-swyll",
+        "parentIds": [
+          "emyr-swyll",
+          "tegwen-spouse-swyll"
+        ],
+        "partnershipId": "marriage-emyr-tegwen-swyll",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-emyr-llio-swyll",
@@ -932,7 +1624,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-emyr-nerys-swyll",
@@ -947,7 +1642,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-gareth-swyll",
@@ -962,7 +1660,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-meredith-swyll",
@@ -977,7 +1678,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-rhydwen-swyll",
@@ -992,7 +1696,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-aled-swyll",
@@ -1007,7 +1714,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-enid-swyll",
@@ -1022,7 +1732,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-carwyn-swyll",
@@ -1037,7 +1750,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "Nicht eheliches Kind aus Rhodri Swylls Affäre mit Morwen.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-lowri-swyll",
@@ -1052,7 +1768,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "Nicht eheliches Kind aus Rhodri Swylls Affäre mit Morwen.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       }
     ],
     "houses": [
@@ -1061,59 +1780,160 @@
         "name": "Haus Swyll",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "house-draenmelyn",
         "name": "Haus Draenmelyn",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Draenmelyn.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "house-maerllys",
         "name": "Haus Maerllys",
         "motto": "",
-        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
-        "status": "active"
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {
+            "emblem": 16
+          },
+          "registryManagedFields": [
+            "emblem"
+          ]
+        }
       },
       {
         "id": "house-pendrwn",
         "name": "Haus Pendrwn",
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Pendrwn.png",
-        "status": "active"
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "house-cochdon",
+        "name": "Haus Cochdon",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Cochdon.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "house-twyllod",
+        "name": "Familie Twyllod",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Twyllod.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "house-unbekannt-gross-tante-gwenifer-swyll",
         "name": "Unbekanntes Haus",
         "motto": "",
         "emblem": "",
-        "status": "active"
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "house-unbekannt-carys-swyll",
         "name": "Unbekanntes Haus",
         "motto": "",
         "emblem": "",
-        "status": "active"
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "house-unbekannt-llio-swyll",
         "name": "Unbekanntes Haus",
         "motto": "",
         "emblem": "",
-        "status": "active"
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "house-unbekannt-nerys-swyll",
         "name": "Unbekanntes Haus",
         "motto": "",
         "emblem": "",
-        "status": "active"
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       }
     ],
     "cadetBranches": [
+      {
+        "id": "married-away-lleucu-cochdon",
+        "name": "Haus Cochdon",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-gwrgan-cochdon-lleucu-swyll",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-cochdon",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Cochdon.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-cochdon",
+        "notes": "Lleucus erste Ehe; die Rechtsfolgen von Gwrgans Rückkehr sind noch nicht entschieden.",
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "married-away-lleucu-twyllod",
+        "name": "Familie Twyllod",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-eifion-twyllod-lleucu-swyll",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-twyllod",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Twyllod.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-twyllod",
+        "notes": "Lleucus anerkannte zweite Ehe mit Kapitän Eifion; drei gemeinsame Kinder.",
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
+      },
       {
         "id": "married-away-gross-tante-gwenifer-swyll",
         "name": "Unbekanntes Haus",
@@ -1130,7 +1950,10 @@
         "founded": "",
         "targetFamilyId": "haus-unbekannt",
         "notes": "Merediths Großtante Gwenifer wurde an ein nicht überliefertes Haus verheiratet.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "married-away-carys-swyll",
@@ -1148,7 +1971,10 @@
         "founded": "",
         "targetFamilyId": "haus-unbekannt",
         "notes": "Merediths Tante Carys wurde an ein nicht überliefertes Haus verheiratet.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "married-away-llio-swyll",
@@ -1166,7 +1992,10 @@
         "founded": "",
         "targetFamilyId": "haus-unbekannt",
         "notes": "Merediths Tante Llio wurde an ein nicht überliefertes Haus verheiratet.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "married-away-nerys-swyll",
@@ -1184,7 +2013,10 @@
         "founded": "",
         "targetFamilyId": "haus-unbekannt",
         "notes": "Merediths Tante Nerys wurde an ein nicht überliefertes Haus verheiratet.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "married-away-pendrwn-eirwen-swyll",
@@ -1202,7 +2034,10 @@
         "founded": "",
         "targetFamilyId": "haus-pendrwn",
         "notes": "Eirwen Swyll wurde an Meilyr Pendrwn verheiratet; dieselbe Ehe wird in der Pendrwn-Gegenakte geführt.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "married-away-maerllys-bronwen-swyll",
@@ -1220,7 +2055,10 @@
         "founded": "",
         "targetFamilyId": "haus-maerllys",
         "notes": "Bronwen Swyll wurde an Iorwerth Maerllys verheiratet; dieselbe Ehe wird in der Maerllys-Gegenakte geführt.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {}
+        }
       }
     ],
     "timeJumps": [
@@ -1249,7 +2087,17 @@
             "toYear",
             "label",
             "notes"
-          ]
+          ],
+          "registryManagedSourceRevision": 14,
+          "registryManagedFieldRevisions": {
+            "parentPartnershipId": 14,
+            "parentPersonId": 14,
+            "childIds": 14,
+            "fromYear": 14,
+            "toYear": 14,
+            "label": 14,
+            "notes": 14
+          }
         }
       }
     ],
@@ -1318,13 +2166,16 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 8,
+      "sourceRevision": 16,
       "registryManagedViewFields": [
         "focusPersonId",
         "limitGenerations"
       ],
       "registryTombstones": {
         "persons": [
+          "gwenfor-twyllod",
+          "eirwen-twyllod",
+          "nudd-twyllod",
           "mair-ysgrif",
           "unknown-spouse-eirwen-swyll",
           "unknown-spouse-bronwen-swyll"
@@ -1335,7 +2186,10 @@
           "marriage-bronwen-unknown-swyll"
         ],
         "parentages": [
-          "parentage-iestyn-swyll"
+          "parentage-iestyn-swyll",
+          "parentage-gwenfor-twyllod",
+          "parentage-eirwen-twyllod",
+          "parentage-nudd-twyllod"
         ],
         "houses": [
           "house-ysgrif",
@@ -1347,7 +2201,117 @@
           "married-away-bronwen-swyll"
         ]
       },
-      "sourceNote": "Meredith Swyll ist im Jahr 1740 achtzehn Jahre alt und das mittlere von drei Kindern Iestyn Swylls und Rhiannon Draenmelyns. Sie ist eine gewöhnliche Personenkarte, niemals Diagrammwurzel oder Zeitsprunganker. Iestyn und Rhiannon sowie ihre Ehe bleiben mit der Draenmelyn-Gegenakte synchron; ihre Kinder werden ausschließlich im Zielhaus Swyll geführt. Merediths Bruder Gareth bleibt unverheiratet und ohne Verlobung. Iestyn besitzt fünf wegverheiratete Schwestern: Eirwens Ehe mit Meilyr Pendrwn und Bronwens Ehe mit Iorwerth Maerllys werden in den jeweiligen Gegenakten gespiegelt; nur Carys, Llio und Nerys führen noch zu unbekannten Häusern. Hinzu kommen der kinderreiche Bruder Owain, der 1719 kinderlos im Krieg gefallene Cadfan und der Lebemann Rhodri. Rhodris Affäre mit Morwen führt eindeutig zu den altersnahen Bastarden Carwyn und Lowri. Emyrs Schwester Gwenifer ist als wegverheiratete Großtante verknüpft; sein Bruder Madryn fiel 1720 kinderlos im Krieg. Das vorgegebene Meredith-Porträt wurde lokal gesichert."
+      "sourceNote": "Meredith Swyll ist im Jahr 1740 achtzehn Jahre alt und das mittlere von drei Kindern Iestyn Swylls und Rhiannon Draenmelyns. Sie ist eine gewöhnliche Personenkarte, niemals Diagrammwurzel oder Zeitsprunganker. Iestyn und Rhiannon sowie ihre Ehe bleiben mit der Draenmelyn-Gegenakte synchron; ihre Kinder werden ausschließlich im Zielhaus Swyll geführt. Merediths Bruder Gareth bleibt unverheiratet und ohne Verlobung. Iestyn besitzt fünf wegverheiratete Schwestern: Eirwens Ehe mit Meilyr Pendrwn und Bronwens Ehe mit Iorwerth Maerllys werden in den jeweiligen Gegenakten gespiegelt; nur Carys, Llio und Nerys führen noch zu unbekannten Häusern. Hinzu kommen der kinderreiche Bruder Owain, der 1719 kinderlos im Krieg gefallene Cadfan und der Lebemann Rhodri. Rhodris Affäre mit Morwen führt eindeutig zu den altersnahen Bastarden Carwyn und Lowri. Emyrs Schwester Gwenifer ist als wegverheiratete Großtante verknüpft; sein Bruder Madryn fiel 1720 kinderlos im Krieg. Das vorgegebene Meredith-Porträt wurde lokal gesichert.",
+      "registryManagedEntitySourceRevision": 14,
+      "registryManagedDocumentFieldRevisions": {},
+      "registryManagedHouseProfileFieldRevisions": {},
+      "registryManagedExtensionFieldRevisions": {
+        "tailoringContentInventory": 16
+      },
+      "registryManagedViewFieldRevisions": {
+        "focusPersonId": 14,
+        "limitGenerations": 14
+      },
+      "registryManagedLineageFieldRevisions": {},
+      "tailoringContentInventory": "gwniwr-maerllys-20261108",
+      "registryManagedExtensionFields": [
+        "tailoringContentInventory"
+      ],
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Swyll",
+        "housePage": true,
+        "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Swyll/assets/hausfigur-2026-10-24.png",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Die Swyll sind eine weit verzweigte Bürgerfamilie aus Gwynthor. Ihre jüngste Generation umfasst Meredith, ihren älteren Bruder Gareth und die jüngere Schwester Rhydwen. Das Haus steht durch mehrere Ehen in enger Verbindung mit anderen Bürgerfamilien der Stadt.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Swyll"
+          ],
+          [
+            "Rang",
+            "Bürgerlich"
+          ],
+          [
+            "Stammsitz",
+            "Gwynthor"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Emyr Swyll"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Draig"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über das Haus",
+          "biographyText": "Die Swyll sind eine weit verzweigte Bürgerfamilie aus Gwynthor. Ihre jüngste Generation umfasst Meredith, ihren älteren Bruder Gareth und die jüngere Schwester Rhydwen. Das Haus steht durch mehrere Ehen in enger Verbindung mit anderen Bürgerfamilien der Stadt.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Geschichte",
+          "historyText": "Emyr Swyll und Tegwen gehören zur ältesten namentlich überlieferten Generation. Unter ihren Nachkommen verbinden Eirwen und Bronwen das Haus mit Pendrwn und Maerllys. Iestyns Ehe mit Rhiannon Draenmelyn führt zu Gareth, Meredith und Rhydwen. Der Krieg hinterließ Verluste: Cadfan fiel 1719, Madryn 1720; beide hinterließen weder Ehefrau noch Kinder.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Die Familiengeschichte umfasst Haupt- und Seitenlinien sowie Rhodris nicht eheliche Kinder Carwyn und Lowri. Ein gemeinsamer Beruf, ein bestimmter Betrieb und ein verbindliches Hausmotto sind bisher nicht belegt."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Die Ehen mit Draenmelyn, Pendrwn und Maerllys gehören zum belegten Familiennetz. Für mehrere wegverheiratete Frauen sind die Zielhäuser noch unbekannt."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [
+            {
+              "name": "Haus Draig",
+              "detail": "Lehnsherr",
+              "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-draig.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Swyll.png",
+              "title": "Haus Swyll · vollständige Hausseite",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-swyll"
+            }
+          ],
+          "footer": ""
+        }
+      },
+      "registryUpgrade": {
+        "fromRevision": 8,
+        "toRevision": 16
+      }
     }
   }
 }

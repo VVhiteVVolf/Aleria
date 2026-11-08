@@ -1,0 +1,68 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-08T16:10:00.000Z",
+  "mergeStrategy": "replace-reviewed-metadata-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwniwr-Maerllys/personal/meirion-wym.json",
+  "character": {
+    "age": 62,
+    "bio": "Meirion Wym ist 62 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Meirion arbeitet bei Nadel & Faden. In der Werkstatt widmet er sich dem Tuch, sauberen Nähten und der Frage, ob sich ein getragenes Kleidungsstück sinnvoll erhalten lässt.\n\nIm Laden von Emyr und Gwenllian gilt die gleiche Sorgfalt für schlichte und gute Kleidung. Die Arbeit wird mit Schneidermeister Tudur und den übrigen Händen abgestimmt. Ausbesserungen, klare Absprachen und haltbare Nähte sind ebenso wichtig wie ein neues Kleidungsstück.\n\nZum Arbeitskreis gehören neben Emyr, Gwenllian und Tudur auch die anderen Angestellten und der junge Lehrling Osian. Die Aufgaben greifen ineinander: Beratung und Anprobe, Zuschnitt und Nähstube führen gemeinsam zu einem Kleidungsstück, auf das der Käufer vertrauen kann.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Meirion Wym"
+        },
+        {
+          "label": "Alter",
+          "value": "62 Jahre"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Schneiderei · Tuchprüfung & Ausbesserungen"
+        },
+        {
+          "label": "Arbeitsort",
+          "value": "Nadel & Faden · Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwniwr/portraits/meirion-wym.jpg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Meirion Wym ist 62 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Meirion arbeitet bei Nadel & Faden. In der Werkstatt widmet er sich dem Tuch, sauberen Nähten und der Frage, ob sich ein getragenes Kleidungsstück sinnvoll erhalten lässt.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Im Laden von Emyr und Gwenllian gilt die gleiche Sorgfalt für schlichte und gute Kleidung. Die Arbeit wird mit Schneidermeister Tudur und den übrigen Händen abgestimmt. Ausbesserungen, klare Absprachen und haltbare Nähte sind ebenso wichtig wie ein neues Kleidungsstück."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Zum Arbeitskreis gehören neben Emyr, Gwenllian und Tudur auch die anderen Angestellten und der junge Lehrling Osian. Die Aufgaben greifen ineinander: Beratung und Anprobe, Zuschnitt und Nähstube führen gemeinsam zu einem Kleidungsstück, auf das der Käufer vertrauen kann."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor · Nadel & Faden",
+    "fraktion": "Nadel & Faden",
+    "id": "person--gwniwr-staff--meirion-wym",
+    "identity": {
+      "worldPersonId": "person--gwniwr-staff--meirion-wym"
+    },
+    "name": "Meirion Wym",
+    "origin": "",
+    "portrait": "./assets/gwniwr/portraits/meirion-wym.jpg",
+    "relevance": "minor",
+    "role": "Schneiderei · Tuchprüfung & Ausbesserungen",
+    "status": "active",
+    "title": "Schneiderei · Tuchprüfung & Ausbesserungen",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

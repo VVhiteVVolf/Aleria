@@ -1,0 +1,342 @@
+{
+  "schema": "aleria.source-inventory",
+  "schemaVersion": 1,
+  "date": "2026-11-08",
+  "counts": {
+    "gwniwrPersons": 12,
+    "gwniwrNamed": 10,
+    "gwniwrPartnerships": 4,
+    "gwniwrParentages": 7,
+    "gwniwrTimeJumps": 1,
+    "maerllysPersons": 19,
+    "maerllysNamed": 16,
+    "employees": 5,
+    "characters": 31,
+    "newOnlineIntended": 26,
+    "existingOnlinePreserved": 5
+  },
+  "files": [
+    {
+      "source": "C:/Users/fhg_r/Downloads/gwniwr.json",
+      "path": "Stammbäume/assets/data/source-inventories/gwniwr-maerllys-20261108/gwniwr-original.json",
+      "sha256": "30670a96713d8f678d6ca975d1e5cf2a80fb912682310fe54231f6f502818142",
+      "bytes": 12841
+    },
+    {
+      "source": "C:/Users/fhg_r/.codex/attachments/829cc9b7-2ca8-4c6e-8137-6d32f732571b/Eingefügter Text.txt",
+      "path": "Stammbäume/assets/data/source-inventories/gwniwr-maerllys-20261108/gwniwr-original.html",
+      "sha256": "e3b5551d3a0c42f088ffa6b703bd9067bd3359d66058e3c9a6aca284cc72ea43",
+      "bytes": 24318
+    }
+  ],
+  "images": [
+    {
+      "id": "person-7b6c292b",
+      "url": "https://i.imgur.com/iYlRgMR.jpeg",
+      "path": "Stammbäume/assets/images/portraits/gwniwr/person-7b6c292b.jpg",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/person-7b6c292b.jpg",
+      "sha256": "dbd79b9d3864e3115d883a487bfe6c41f4963edea96929c67a74f24e05594ea1",
+      "bytes": 267126,
+      "generatorPrompt": null
+    },
+    {
+      "id": "person-f926e0da",
+      "url": "https://i.imgur.com/zNGfMnZ.jpeg",
+      "path": "Stammbäume/assets/images/portraits/gwniwr/person-f926e0da.jpg",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/person-f926e0da.jpg",
+      "sha256": "2e533d020aec0ae1db45e706250f0bb7d2a9c41dd273353dd6ae0e1dcd38631b",
+      "bytes": 238369,
+      "generatorPrompt": null
+    },
+    {
+      "id": "person-ece54bdb",
+      "url": "https://i.imgur.com/PX2Td7g.jpeg",
+      "path": "Stammbäume/assets/images/portraits/gwniwr/person-ece54bdb.jpg",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/person-ece54bdb.jpg",
+      "sha256": "d67a48d5adcb66c1da3828fae1cd41b949438c8fb29fb0b0a8f9fe9c0a4a40cb",
+      "bytes": 261625,
+      "generatorPrompt": null
+    },
+    {
+      "id": "person-cf831497",
+      "url": "https://i.imgur.com/dKnD2Ru.jpeg",
+      "path": "Stammbäume/assets/images/portraits/gwniwr/person-cf831497.jpg",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/person-cf831497.jpg",
+      "sha256": "f594d01096ce71c9cdc7aebc041b23170509c93f217fce297eb7f1e7e2fca02a",
+      "bytes": 271115,
+      "generatorPrompt": null
+    },
+    {
+      "id": "person-3f9eaf4f",
+      "url": "https://i.imgur.com/iuvtNZM.jpeg",
+      "path": "Stammbäume/assets/images/portraits/gwniwr/person-3f9eaf4f.jpg",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/person-3f9eaf4f.jpg",
+      "sha256": "c020cc7d7d857a1ff7ee90f97af0be116b16e540a20461d61bfae89d662ad612",
+      "bytes": 285693,
+      "generatorPrompt": null
+    },
+    {
+      "id": "person-e847aa96",
+      "url": "https://i.imgur.com/8Y1N3SA.png",
+      "path": "Stammbäume/assets/images/portraits/gwniwr/person-e847aa96.png",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/person-e847aa96.png",
+      "sha256": "079564587a798c89a1a5da0da96a5dd2239fdeaa100e8d875db0b1aa6483f4df",
+      "bytes": 2808916,
+      "generatorPrompt": null
+    },
+    {
+      "id": "person-178882ce",
+      "url": "https://i.imgur.com/hCn3K6q.jpeg",
+      "path": "Stammbäume/assets/images/portraits/gwniwr/person-178882ce.jpg",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/person-178882ce.jpg",
+      "sha256": "7dfbf8861b109e89c9c8ebd267baae6788077884e7d6c7a023e5268260967133",
+      "bytes": 255762,
+      "generatorPrompt": null
+    },
+    {
+      "id": "person-558acc56",
+      "url": "https://i.imgur.com/gghIwzQ.jpeg",
+      "path": "Stammbäume/assets/images/portraits/gwniwr/person-558acc56.jpg",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/person-558acc56.jpg",
+      "sha256": "8ba055e7d730dc1fd4bc3677f46ad6c7734de502d2fc08e1a09875b8e31bff54",
+      "bytes": 250020,
+      "generatorPrompt": null
+    },
+    {
+      "id": "person-38812666",
+      "url": "https://i.imgur.com/UKVI11U.jpeg",
+      "path": "Stammbäume/assets/images/portraits/gwniwr/person-38812666.jpg",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/person-38812666.jpg",
+      "sha256": "66ffc3dc90e0fc46bd0b1a62501398f33c002e5c476db4d04689d657ccc9e6f3",
+      "bytes": 255194,
+      "generatorPrompt": null
+    },
+    {
+      "id": "person-d55e335a",
+      "url": "https://i.imgur.com/Rgi2O19.jpeg",
+      "path": "Stammbäume/assets/images/portraits/gwniwr/person-d55e335a.jpg",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/person-d55e335a.jpg",
+      "sha256": "012b8b16f3ae9e95a0aad78e9b7db50466ea4a1ebc854a47db8634e64b6b0022",
+      "bytes": 251119,
+      "generatorPrompt": null
+    },
+    {
+      "id": "gwniwr-emblem",
+      "url": "https://i.imgur.com/Ud95q8G.jpeg",
+      "path": "diagnostics/gwniwr-maerllys-20261108/families/art/gwniwr-emblem-original.jpg",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/gwniwr-emblem-original.jpg",
+      "sha256": "8a787c0ea27fafe7ecfcc59c2946aa8aed8f295c2bc329640828a73463a6d9df",
+      "bytes": 301623,
+      "generatorPrompt": null
+    },
+    {
+      "id": "meirion-wym",
+      "url": "https://i.imgur.com/7GY1Nii.jpeg",
+      "path": "AleriaAlmanach/assets/gwniwr/portraits/meirion-wym.jpg",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/meirion-wym.jpg",
+      "sha256": "93e29c91a0c23d3942ea62a0e049dc3ef47b9162b4136e4e8067a3a1470cf534",
+      "bytes": 253911,
+      "generatorPrompt": null
+    },
+    {
+      "id": "iwan-trevor",
+      "url": "https://i.imgur.com/2XBOdgf.jpeg",
+      "path": "AleriaAlmanach/assets/gwniwr/portraits/iwan-trevor.jpg",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/iwan-trevor.jpg",
+      "sha256": "e5808f84ed66782a374af811b550c8e36b193e2ad0affcb63dd0e89fe2ed7e49",
+      "bytes": 268587,
+      "generatorPrompt": null
+    },
+    {
+      "id": "briallen-wym",
+      "url": "https://i.imgur.com/RFniGNJ.jpeg",
+      "path": "AleriaAlmanach/assets/gwniwr/portraits/briallen-wym.jpg",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/briallen-wym.jpg",
+      "sha256": "8540ba3ad788887ffd73d4e8eb6c33c39141a397130a7bf9bb3158d22ca58661",
+      "bytes": 311745,
+      "generatorPrompt": null
+    },
+    {
+      "id": "nesta-ferchwyn",
+      "url": "https://i.imgur.com/5Dfjuim.jpeg",
+      "path": "AleriaAlmanach/assets/gwniwr/portraits/nesta-ferchwyn.jpg",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/nesta-ferchwyn.jpg",
+      "sha256": "57b6fba12e604919bca1cba5cf52875bac29e41dc5b7eaf210c66bd8c63819a8",
+      "bytes": 285118,
+      "generatorPrompt": null
+    },
+    {
+      "id": "osian",
+      "url": "https://i.imgur.com/hzryIOp.jpeg",
+      "path": "AleriaAlmanach/assets/gwniwr/portraits/osian.jpg",
+      "original": "diagnostics/gwniwr-maerllys-20261108/families/art/source-originals/osian.jpg",
+      "sha256": "03ffb7151299288e10a9c7a088ca2e3520cb335b19f1c730937185e541b41857",
+      "bytes": 282213,
+      "generatorPrompt": null
+    }
+  ],
+  "identityCorrections": "identity-corrections.json",
+  "sourcePriority": "Explicit current user instructions, supplied genealogy, existing confirmed counterpart identities, supplied house prose; technical notes stay in this inventory.",
+  "generatedImages": [
+    {
+      "id": "cadfan-maerllys",
+      "activePath": "Stammbäume/assets/images/portraits/haus-maerllys/cadfan-maerllys.png",
+      "sha256": "15e9777dd55955f1bc49fdc4c5cead72a19db1374c5073a4fdc821a72e07ad79",
+      "generatorOriginalSha256": "15e9777dd55955f1bc49fdc4c5cead72a19db1374c5073a4fdc821a72e07ad79",
+      "tool": "built-in-imagegen",
+      "selected": true,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "eira-spouse-maerllys",
+      "activePath": "Stammbäume/assets/images/portraits/haus-maerllys/eira-spouse-maerllys.png",
+      "sha256": "84b2b17f2b2c52adefd55bc8abee5e5d6a005733f678fe00bc69e2395e69f4d9",
+      "generatorOriginalSha256": "84b2b17f2b2c52adefd55bc8abee5e5d6a005733f678fe00bc69e2395e69f4d9",
+      "tool": "built-in-imagegen",
+      "selected": true,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "owain-maerllys",
+      "activePath": "Stammbäume/assets/images/portraits/haus-maerllys/owain-maerllys.png",
+      "sha256": "5dd7a7b378c543688778f7ee606b5d935641cb2cff95c00b4d9c9557accd1d9b",
+      "generatorOriginalSha256": "5dd7a7b378c543688778f7ee606b5d935641cb2cff95c00b4d9c9557accd1d9b",
+      "tool": "built-in-imagegen",
+      "selected": true,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "gwenllian-ysgrif",
+      "activePath": "Stammbäume/assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png",
+      "sha256": "e90102e80d74d37b6911d9c1e08c5dddaf58411a67636fa386df9646666d77c9",
+      "generatorOriginalSha256": "e90102e80d74d37b6911d9c1e08c5dddaf58411a67636fa386df9646666d77c9",
+      "tool": "built-in-imagegen",
+      "selected": true,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "iorwerth-maerllys",
+      "activePath": "Stammbäume/assets/images/portraits/haus-maerllys/iorwerth-maerllys.png",
+      "sha256": "7ae9a2e66826fbe69319004919ec1de8c03de84ffeb64b0cee2e6fedf5c27040",
+      "generatorOriginalSha256": "7ae9a2e66826fbe69319004919ec1de8c03de84ffeb64b0cee2e6fedf5c27040",
+      "tool": "built-in-imagegen",
+      "selected": true,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "bronwen-swyll",
+      "activePath": "Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png",
+      "sha256": "f532a91b25505ac67e38b94e48a793ee7d09206dce6ccfd2ade3ae03b6a57c52",
+      "generatorOriginalSha256": "f532a91b25505ac67e38b94e48a793ee7d09206dce6ccfd2ade3ae03b6a57c52",
+      "tool": "built-in-imagegen",
+      "selected": true,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "geraint-maerllys",
+      "activePath": "Stammbäume/assets/images/portraits/haus-maerllys/geraint-maerllys.png",
+      "sha256": "40c5422378de5fc9774e896db2e0503e0f8df50097c295ec8e860091876d6439",
+      "generatorOriginalSha256": "40c5422378de5fc9774e896db2e0503e0f8df50097c295ec8e860091876d6439",
+      "tool": "built-in-imagegen",
+      "selected": true,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "llio-falchdyn",
+      "activePath": "Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png",
+      "sha256": "87904c1b9384cd6d437b15178af2273e5071da7cb0e7d9bbd4e09c0239403ec9",
+      "generatorOriginalSha256": "87904c1b9384cd6d437b15178af2273e5071da7cb0e7d9bbd4e09c0239403ec9",
+      "tool": "built-in-imagegen",
+      "selected": true,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "rhoswen-maerllys",
+      "activePath": "Stammbäume/assets/images/portraits/haus-maerllys/rhoswen-maerllys.png",
+      "sha256": "be83b05f4ce0515194b36c751b614002d53416bfb4dc4f067e682b20ba71d1ff",
+      "generatorOriginalSha256": "be83b05f4ce0515194b36c751b614002d53416bfb4dc4f067e682b20ba71d1ff",
+      "tool": "built-in-imagegen",
+      "selected": true,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "madoc-tonnarth",
+      "activePath": "Stammbäume/assets/images/portraits/haus-maerllys/madoc-tonnarth.png",
+      "sha256": "d7a925ae2e34ae7a19dd125a82cfffd05312ac8c46708600fe8cc8c4f569c153",
+      "generatorOriginalSha256": "d7a925ae2e34ae7a19dd125a82cfffd05312ac8c46708600fe8cc8c4f569c153",
+      "tool": "built-in-imagegen",
+      "selected": true,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "id": "gwniwr",
+      "activePath": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwniwr/gwniwr-emblem.png",
+      "sha256": "16acf633858ffabfe378dd824181c5990b7558d314137de1c4ae9becc47d9c4d",
+      "generatorOriginalSha256": "7280a1899dec1ef7d410419309b1aafeb997745f89e71716b130c5b5edef63b8",
+      "tool": "built-in-imagegen",
+      "selected": true,
+      "processing": {
+        "size": [
+          1320,
+          1320
+        ],
+        "padding": {
+          "left": 35,
+          "top": 42
+        },
+        "circle": {
+          "centre": [
+            660,
+            660
+          ],
+          "radius": 580
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "maerllys",
+      "activePath": "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
+      "sha256": "799503cf9cf4abf4a1df2a80dfdb6c954f2bda2a12196b58cbbbeb20ff4096d3",
+      "generatorOriginalSha256": "2a5dc71d2664e5647ad690b2f15263823619e88b2c2586ea03cf7cbce20a57e4",
+      "tool": "built-in-imagegen",
+      "selected": true,
+      "processing": {
+        "size": [
+          1346,
+          1346
+        ],
+        "padding": {
+          "left": 48,
+          "top": 49
+        },
+        "circle": {
+          "centre": [
+            673,
+            673
+          ],
+          "radius": 592
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    }
+  ]
+}

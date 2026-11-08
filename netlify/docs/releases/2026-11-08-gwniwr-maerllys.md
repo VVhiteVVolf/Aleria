@@ -1,0 +1,13 @@
+# Gwniwr und Maerllys
+
+Zwei eigenständige Gwynthorer Schneidereien verwenden die bestehenden sechsseitigen Almanachvorlagen und den vorhandenen Warenhandel. Nadel & Faden der Gwniwr bietet 51 schlichte bis gute walisisch-gälische Garnituren, darunter vier Damen- und drei Herrenmodelle für Hochzeiten. Naht & Siegel der Maerllys führt 51 Garnituren für Hausdienst, Hofverwaltung, Gefolge und Außendienst. Die Preise liegen bei 12–240 beziehungsweise 18–1.200 Kupfertalern; sechs vergleichbare Material- und Aufwandstufen ordnen beide Häuser unterhalb der gehobenen Eleganz ein.
+
+Jeder Laden hat sechs eigene Seitenmotive, ein hölzernes Ladenschild, eine eigene Kollektion, ausführliche Leistungen und elf offene Personalstellen. Die besetzte Kernarbeit umfasst neun Personen bei Gwniwr und vier bei Maerllys. Nia bleibt Isobels persönliche Zofe, Rhys im Verkauf der Göttlichen Eleganz und Elowen in der Letzten Rast.
+
+Die beiden Hausseiten, Hausbiografien und Stammbäume ergänzen die ältere Abspaltung der Maerllys von den Gwniwr. Unbekannte Generationen bleiben offen. Zehn fehlende Maerllys-Porträts führen die vorhandenen Erscheinungsmerkmale fort. Beide Familienwappen sind außen transparent; auch die ältere Maerllys-Bildadresse liefert die bereinigte Fassung.
+
+31 benannte Figuren besitzen begrenzte Almanachquellen. Die Onlineveröffentlichung ergänzt 26 fehlende Akten und verknüpft fünf bestehende Kennungen. Nia und Hywel erhalten ausführlichere Bios. Vorhandene Avatarsets, Dienststellungen, Inventare und Spielwerte bleiben erhalten. Hywel und Eleri werden anhand ihrer Ehe, Lebensdaten, Gegenakten und unveränderten Quellbytes identifiziert; alle Karten- und Beziehungskennungen sowie die sieben Craigddu-Töchter bleiben erhalten.
+
+Gezielte Ergänzungen der vorhandenen Stammbaumsysteme verhindern eine Kollision zwischen Stamm- und Zweigwappen am Gründerpaar und lassen ausdrücklich verwaltete Ursprungshaus-Metadaten auch nach einer früheren Genealogieübernahme aktualisieren. Alte örtliche Personenänderungen bleiben geschützt. Der Figurenimport verwendet vorhandene semantisch identische Quellenbelege erneut und ist unmittelbar nach dem Erstimport wiederholbar.
+
+Die öffentliche Quelle wird aus dem bestehenden GitHub-Stand isoliert aufgebaut. Andere Arbeitsstände und private Diagnose-/Generatororiginale werden nicht übernommen. Fachprüfungen, echte Desktop-/Mobilkontrollen und der bestehende native Releaseweg prüfen den vollständigen Stand. Die serverseitige Änderung ist auf die gemeinsame Szenenprojektion beschränkt; produktive Testkäufe und andere Spielbuchungen gehören nicht zum Veröffentlichungsverfahren.

@@ -1,0 +1,178 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-08T16:10:00.000Z",
+  "mergeStrategy": "replace-reviewed-metadata-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/iorwerth-maerllys.json",
+  "character": {
+    "activeImageSetId": "",
+    "age": 51,
+    "aliases": [],
+    "archived": false,
+    "bio": "Iorwerth Maerllys wurde 1689 als Sohn Cadfans und Eiras geboren. Er ist mit Bronwen Swyll verheiratet; ihre Kinder sind Elowen, Nia und Rhys. Die Schneidertradition der Familie führt er heute in Naht & Siegel fort, einer professionellen Werkstatt für Dienstkleidung, Livreen und einheitliche Garnituren.\n\nIorwerth leitet Auftragsplanung und Uniformschnitt. Seine Kunden sind Haushalte und Arbeitgeber, die Zofen, Diener, Vögte, Mägde, Burschen und Amtsträger passend einkleiden möchten. Ein Auftrag beginnt für ihn mit der Frage, welche Arbeit die Kleidung aushalten muss. Bewegungsweite, Erkennbarkeit der Hausfarben und die spätere Nachbestellung werden zusammen geplant.\n\nDer Betrieb arbeitet mit der Göttlichen Eleganz zusammen und liegt preislich zwischen deren gehobener Mode und der günstigen Alltagskleidung von Nadel & Faden. Iorwerth bewahrt zugleich die eigenständigen Wege seiner Kinder: Elowen arbeitet nach ihrer Ehe in der Letzten Rast, Nia dient Prinzessin Isobel und Rhys verkauft in der Eleganz.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Iorwerth Maerllys"
+        },
+        {
+          "label": "Geboren",
+          "value": "1689"
+        },
+        {
+          "label": "Alter",
+          "value": "51 Jahre"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Maerllys"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Schneidermeister · Leitung von Naht & Siegel"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/iorwerth-maerllys.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Iorwerth Maerllys wurde 1689 als Sohn Cadfans und Eiras geboren. Er ist mit Bronwen Swyll verheiratet; ihre Kinder sind Elowen, Nia und Rhys. Die Schneidertradition der Familie führt er heute in Naht & Siegel fort, einer professionellen Werkstatt für Dienstkleidung, Livreen und einheitliche Garnituren.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Iorwerth leitet Auftragsplanung und Uniformschnitt. Seine Kunden sind Haushalte und Arbeitgeber, die Zofen, Diener, Vögte, Mägde, Burschen und Amtsträger passend einkleiden möchten. Ein Auftrag beginnt für ihn mit der Frage, welche Arbeit die Kleidung aushalten muss. Bewegungsweite, Erkennbarkeit der Hausfarben und die spätere Nachbestellung werden zusammen geplant."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Der Betrieb arbeitet mit der Göttlichen Eleganz zusammen und liegt preislich zwischen deren gehobener Mode und der günstigen Alltagskleidung von Nadel & Faden. Iorwerth bewahrt zugleich die eigenständigen Wege seiner Kinder: Elowen arbeitet nach ihrer Ehe in der Letzten Rast, Nia dient Prinzessin Isobel und Rhys verkauft in der Eleganz."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Maerllys",
+    "genealogy": {
+      "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1689",
+      "death": "",
+      "houseId": "house-maerllys",
+      "houseName": "Haus Maerllys",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-maerllys",
+          "personId": "iorwerth-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=iorwerth-maerllys",
+          "fingerprint": "{\"name\":\"Iorwerth Maerllys\",\"title\":\"Schneidermeister · Leitung von Naht & Siegel\",\"birth\":\"1689\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/iorwerth-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"cadfan-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--cadfan-maerllys\",\"name\":\"Cadfan Maerllys\"},{\"personId\":\"eira-spouse-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--eira-spouse-maerllys\",\"name\":\"Eira\"}],\"partners\":[{\"personId\":\"bronwen-swyll\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"children\":[{\"personId\":\"elowen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--elowen-maerllys\",\"name\":\"Elowen Maerllys\"},{\"personId\":\"nia-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--nia-maerllys\",\"name\":\"Nia Maerllys\"},{\"personId\":\"rhys-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhys-maerllys\",\"name\":\"Rhys Maerllys\"}]}}"
+        },
+        {
+          "familyId": "haus-swyll",
+          "personId": "iorwerth-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=iorwerth-maerllys",
+          "fingerprint": "{\"name\":\"Iorwerth Maerllys\",\"title\":\"Schneidermeister · Leitung von Naht & Siegel\",\"birth\":\"1689\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/iorwerth-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"bronwen-swyll\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "cadfan-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--cadfan-maerllys",
+            "name": "Cadfan Maerllys"
+          },
+          {
+            "personId": "eira-spouse-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--eira-spouse-maerllys",
+            "name": "Eira"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "bronwen-swyll",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-swyll--bronwen-swyll",
+            "name": "Bronwen Swyll"
+          }
+        ],
+        "children": [
+          {
+            "personId": "elowen-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--elowen-maerllys",
+            "name": "Elowen Maerllys"
+          },
+          {
+            "personId": "nia-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--nia-maerllys",
+            "name": "Nia Maerllys"
+          },
+          {
+            "personId": "rhys-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--rhys-maerllys",
+            "name": "Rhys Maerllys"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-maerllys--iorwerth-maerllys",
+    "identity": {
+      "worldPersonId": "person--haus-maerllys--iorwerth-maerllys"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "name": "Iorwerth Maerllys",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/iorwerth-maerllys.png",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=iorwerth-maerllys",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Schneidermeister · Leitung von Naht & Siegel",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

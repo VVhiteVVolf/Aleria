@@ -229,10 +229,11 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
     local.view,
     metadataFieldsForUpgrade(registered, localRevision, 'registryManagedViewFields', applyManagedEntityFields)
   );
+  const managedLineageFields = metadataFieldsForUpgrade(registered, localRevision, 'registryManagedLineageFields', applyManagedEntityFields);
   const mergedLineage = mergeRegisteredManagedFields(
     registered.lineage,
     local.lineage,
-    metadataFieldsForUpgrade(registered, localRevision, 'registryManagedLineageFields', applyManagedEntityFields)
+    managedLineageFields
   );
   const mergedExtensions = mergeRegisteredManagedFields(
     registered.extensions,
@@ -272,7 +273,9 @@ export function resolveRegisteredFamilyUpgrade(registeredInput, localInput) {
     },
     lineage: {
       ...mergedLineage,
-      originHouse: registeredRevision > localRevision && applyManagedEntityFields
+      originHouse: managedLineageFields.includes('originHouse')
+        ? mergedLineage.originHouse
+        : registeredRevision > localRevision && applyManagedEntityFields
         ? registered.lineage.originHouse
         : {
             ...registered.lineage.originHouse,

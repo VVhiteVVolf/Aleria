@@ -1,0 +1,443 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-swyll--bronwen-swyll",
+  "slug": "bronwen-swyll",
+  "identity": {
+    "name": "Bronwen Swyll",
+    "aliases": [],
+    "worldPersonId": "person--haus-swyll--bronwen-swyll"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-maerllys",
+      "label": "Haus Maerllys"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-maerllys",
+        "familyTitle": "Haus Maerllys",
+        "personId": "bronwen-swyll",
+        "worldPersonId": "person--haus-swyll--bronwen-swyll",
+        "houseId": "house-swyll",
+        "houseName": "Haus Swyll",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Bronwen Swyll\",\"title\":\"Anprobe und Qualitätskontrolle · Naht & Siegel\",\"birth\":\"1691\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"}],\"children\":[{\"personId\":\"elowen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--elowen-maerllys\",\"name\":\"Elowen Maerllys\"},{\"personId\":\"nia-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--nia-maerllys\",\"name\":\"Nia Maerllys\"},{\"personId\":\"rhys-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhys-maerllys\",\"name\":\"Rhys Maerllys\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-swyll--bronwen-swyll",
+      "documentIds": [
+        "person--haus-swyll--bronwen-swyll"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-swyll--bronwen-swyll",
+          "createdAt": "2026-11-08T16:10:00.000Z",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-maerllys",
+        "personId": "bronwen-swyll",
+        "worldPersonId": "person--haus-swyll--bronwen-swyll",
+        "url": ""
+      }
+    ],
+    "profile": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=bronwen-swyll"
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/bronwen-swyll.json",
+    "sourceExportedAt": "2026-11-08T16:10:00.000Z",
+    "sourceUpdatedAt": "2026-11-08T16:10:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-swyll--bronwen-swyll"
+    ],
+    "contentHash": "b26a83be81b9a04f9b08f42321c13becd0c65b4a6a9c5fd5772edc351cd02088"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwniwr-maerllys-20261108"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "age": 49,
+        "aliases": [],
+        "archived": false,
+        "bio": "Bronwen Swyll wurde 1691 geboren und ist Iestyn Swylls Schwester. Durch ihre Ehe mit Iorwerth Maerllys kam sie in die Gwynthorer Schneiderfamilie. Elowen, Nia und Rhys sind ihre Kinder. Ihre Verbindung hält den Kontakt zwischen beiden Familien lebendig.\n\nBei Naht & Siegel betreut Bronwen Anproben und Qualitätskontrolle. Eine Dienstgarnitur soll im Stehen ordentlich wirken und zugleich beim Treppensteigen, Tragen oder Arbeiten bequem bleiben. Sie prüft deshalb nicht nur die äußere Linie, sondern Ärmelweite, Verschlüsse, Saumlänge und die Beanspruchung im vorgesehenen Dienst.\n\nMit Iorwerth stimmt sie die Aufträge der Haushalte ab; Geraint und Llio übernehmen Werkstatt und Serienfertigung. Bronwen achtet darauf, dass verschiedene Größen eines Auftrags als zusammengehörig erkennbar bleiben. Der Betrieb schafft die Kleidung, vergibt aber weder Ämter noch Rangzeichen einer Herrschaft aus eigener Macht.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Bronwen Swyll"
+            },
+            {
+              "label": "Geboren",
+              "value": "1691"
+            },
+            {
+              "label": "Alter",
+              "value": "49 Jahre"
+            },
+            {
+              "label": "Familie",
+              "value": "Haus Swyll"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Anprobe und Qualitätskontrolle · Naht & Siegel"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png",
+            "biographyTitle": "Biografie",
+            "biographyText": "Bronwen Swyll wurde 1691 geboren und ist Iestyn Swylls Schwester. Durch ihre Ehe mit Iorwerth Maerllys kam sie in die Gwynthorer Schneiderfamilie. Elowen, Nia und Rhys sind ihre Kinder. Ihre Verbindung hält den Kontakt zwischen beiden Familien lebendig.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Arbeit und Alltag",
+                "text": "Bei Naht & Siegel betreut Bronwen Anproben und Qualitätskontrolle. Eine Dienstgarnitur soll im Stehen ordentlich wirken und zugleich beim Treppensteigen, Tragen oder Arbeiten bequem bleiben. Sie prüft deshalb nicht nur die äußere Linie, sondern Ärmelweite, Verschlüsse, Saumlänge und die Beanspruchung im vorgesehenen Dienst."
+              },
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Familie und Verbindungen",
+                "text": "Mit Iorwerth stimmt sie die Aufträge der Haushalte ab; Geraint und Llio übernehmen Werkstatt und Serienfertigung. Bronwen achtet darauf, dass verschiedene Größen eines Auftrags als zusammengehörig erkennbar bleiben. Der Betrieb schafft die Kleidung, vergibt aber weder Ämter noch Rangzeichen einer Herrschaft aus eigener Macht."
+              }
+            ]
+          }
+        },
+        "createdAt": "2026-11-08T16:10:00.000Z",
+        "currentLocation": "Gwynthor",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Swyll",
+        "genealogy": {
+          "worldPersonId": "person--haus-swyll--bronwen-swyll",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1691",
+          "death": "",
+          "houseId": "house-swyll",
+          "houseName": "Haus Swyll",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-maerllys",
+              "personId": "bronwen-swyll",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-08T16:10:00.000Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=bronwen-swyll",
+              "fingerprint": "{\"name\":\"Bronwen Swyll\",\"title\":\"Anprobe und Qualitätskontrolle · Naht & Siegel\",\"birth\":\"1691\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"}],\"children\":[{\"personId\":\"elowen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--elowen-maerllys\",\"name\":\"Elowen Maerllys\"},{\"personId\":\"nia-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--nia-maerllys\",\"name\":\"Nia Maerllys\"},{\"personId\":\"rhys-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhys-maerllys\",\"name\":\"Rhys Maerllys\"}]}}"
+            },
+            {
+              "familyId": "haus-swyll",
+              "personId": "bronwen-swyll",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-08T16:10:00.000Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=bronwen-swyll",
+              "fingerprint": "{\"name\":\"Bronwen Swyll\",\"title\":\"Anprobe und Qualitätskontrolle · Naht & Siegel\",\"birth\":\"1691\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"emyr-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--emyr-swyll\",\"name\":\"Emyr Swyll\"},{\"personId\":\"tegwen-spouse-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--tegwen-spouse-swyll\",\"name\":\"Tegwen\"}],\"partners\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"}],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "emyr-swyll",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-swyll--emyr-swyll",
+                "name": "Emyr Swyll"
+              },
+              {
+                "personId": "tegwen-spouse-swyll",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--tegwen-spouse-swyll",
+                "name": "Tegwen"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "iorwerth-maerllys",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
+                "name": "Iorwerth Maerllys"
+              }
+            ],
+            "children": [
+              {
+                "personId": "elowen-maerllys",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-maerllys--elowen-maerllys",
+                "name": "Elowen Maerllys"
+              },
+              {
+                "personId": "nia-maerllys",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-maerllys--nia-maerllys",
+                "name": "Nia Maerllys"
+              },
+              {
+                "personId": "rhys-maerllys",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-maerllys--rhys-maerllys",
+                "name": "Rhys Maerllys"
+              }
+            ]
+          }
+        },
+        "id": "person--haus-swyll--bronwen-swyll",
+        "identity": {
+          "worldPersonId": "person--haus-swyll--bronwen-swyll"
+        },
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "imageSetsOverride": false,
+        "name": "Bronwen Swyll",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png",
+        "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=bronwen-swyll",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "Anprobe und Qualitätskontrolle · Naht & Siegel",
+        "updatedAt": "2026-11-08T16:10:00.000Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "age": 49,
+    "aliases": [],
+    "archived": false,
+    "bio": "Bronwen Swyll wurde 1691 geboren und ist Iestyn Swylls Schwester. Durch ihre Ehe mit Iorwerth Maerllys kam sie in die Gwynthorer Schneiderfamilie. Elowen, Nia und Rhys sind ihre Kinder. Ihre Verbindung hält den Kontakt zwischen beiden Familien lebendig.\n\nBei Naht & Siegel betreut Bronwen Anproben und Qualitätskontrolle. Eine Dienstgarnitur soll im Stehen ordentlich wirken und zugleich beim Treppensteigen, Tragen oder Arbeiten bequem bleiben. Sie prüft deshalb nicht nur die äußere Linie, sondern Ärmelweite, Verschlüsse, Saumlänge und die Beanspruchung im vorgesehenen Dienst.\n\nMit Iorwerth stimmt sie die Aufträge der Haushalte ab; Geraint und Llio übernehmen Werkstatt und Serienfertigung. Bronwen achtet darauf, dass verschiedene Größen eines Auftrags als zusammengehörig erkennbar bleiben. Der Betrieb schafft die Kleidung, vergibt aber weder Ämter noch Rangzeichen einer Herrschaft aus eigener Macht.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Bronwen Swyll"
+        },
+        {
+          "label": "Geboren",
+          "value": "1691"
+        },
+        {
+          "label": "Alter",
+          "value": "49 Jahre"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Swyll"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Anprobe und Qualitätskontrolle · Naht & Siegel"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Bronwen Swyll wurde 1691 geboren und ist Iestyn Swylls Schwester. Durch ihre Ehe mit Iorwerth Maerllys kam sie in die Gwynthorer Schneiderfamilie. Elowen, Nia und Rhys sind ihre Kinder. Ihre Verbindung hält den Kontakt zwischen beiden Familien lebendig.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Bei Naht & Siegel betreut Bronwen Anproben und Qualitätskontrolle. Eine Dienstgarnitur soll im Stehen ordentlich wirken und zugleich beim Treppensteigen, Tragen oder Arbeiten bequem bleiben. Sie prüft deshalb nicht nur die äußere Linie, sondern Ärmelweite, Verschlüsse, Saumlänge und die Beanspruchung im vorgesehenen Dienst."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Mit Iorwerth stimmt sie die Aufträge der Haushalte ab; Geraint und Llio übernehmen Werkstatt und Serienfertigung. Bronwen achtet darauf, dass verschiedene Größen eines Auftrags als zusammengehörig erkennbar bleiben. Der Betrieb schafft die Kleidung, vergibt aber weder Ämter noch Rangzeichen einer Herrschaft aus eigener Macht."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Swyll",
+    "genealogy": {
+      "worldPersonId": "person--haus-swyll--bronwen-swyll",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1691",
+      "death": "",
+      "houseId": "house-swyll",
+      "houseName": "Haus Swyll",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-maerllys",
+          "personId": "bronwen-swyll",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=bronwen-swyll",
+          "fingerprint": "{\"name\":\"Bronwen Swyll\",\"title\":\"Anprobe und Qualitätskontrolle · Naht & Siegel\",\"birth\":\"1691\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"}],\"children\":[{\"personId\":\"elowen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--elowen-maerllys\",\"name\":\"Elowen Maerllys\"},{\"personId\":\"nia-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--nia-maerllys\",\"name\":\"Nia Maerllys\"},{\"personId\":\"rhys-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhys-maerllys\",\"name\":\"Rhys Maerllys\"}]}}"
+        },
+        {
+          "familyId": "haus-swyll",
+          "personId": "bronwen-swyll",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-swyll&mode=view&person=bronwen-swyll",
+          "fingerprint": "{\"name\":\"Bronwen Swyll\",\"title\":\"Anprobe und Qualitätskontrolle · Naht & Siegel\",\"birth\":\"1691\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-swyll\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"emyr-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--emyr-swyll\",\"name\":\"Emyr Swyll\"},{\"personId\":\"tegwen-spouse-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--tegwen-spouse-swyll\",\"name\":\"Tegwen\"}],\"partners\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "emyr-swyll",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-swyll--emyr-swyll",
+            "name": "Emyr Swyll"
+          },
+          {
+            "personId": "tegwen-spouse-swyll",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--tegwen-spouse-swyll",
+            "name": "Tegwen"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "iorwerth-maerllys",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
+            "name": "Iorwerth Maerllys"
+          }
+        ],
+        "children": [
+          {
+            "personId": "elowen-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--elowen-maerllys",
+            "name": "Elowen Maerllys"
+          },
+          {
+            "personId": "nia-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--nia-maerllys",
+            "name": "Nia Maerllys"
+          },
+          {
+            "personId": "rhys-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--rhys-maerllys",
+            "name": "Rhys Maerllys"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-swyll--bronwen-swyll",
+    "identity": {
+      "worldPersonId": "person--haus-swyll--bronwen-swyll"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "name": "Bronwen Swyll",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=bronwen-swyll",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Anprobe und Qualitätskontrolle · Naht & Siegel",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

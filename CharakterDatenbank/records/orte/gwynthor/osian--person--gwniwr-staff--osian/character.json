@@ -1,0 +1,283 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--gwniwr-staff--osian",
+  "slug": "osian",
+  "identity": {
+    "name": "Osian",
+    "aliases": [],
+    "worldPersonId": "person--gwniwr-staff--osian"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--gwniwr-staff--osian",
+      "documentIds": [
+        "person--gwniwr-staff--osian",
+        "person--gwniwr-staff--osian"
+      ],
+      "documents": [
+        {
+          "documentId": "person--gwniwr-staff--osian",
+          "createdAt": "2026-11-08T16:10:00.000Z",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
+        },
+        {
+          "documentId": "person--gwniwr-staff--osian",
+          "createdAt": "",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwniwr-Maerllys/personal/osian.json",
+    "sourceExportedAt": "2026-11-08T16:10:00.000Z",
+    "sourceUpdatedAt": "2026-11-08T16:10:00.000Z",
+    "sourceDocumentIds": [
+      "person--gwniwr-staff--osian",
+      "person--gwniwr-staff--osian"
+    ],
+    "contentHash": "de19a1630d5645707e2dd68a69f3abc008f600606bfd556dfa90ef73a7c15bb8"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwniwr-maerllys-20261108"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "age": 16,
+        "bio": "Osian ist 16 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Osian ist der sechzehnjährige Lehrling von Nadel & Faden. Er lernt an Heftnähten, Säumen und der sorgfältigen Vorbereitung des Werkzeugs; die endgültige Prüfung bleibt bei den erfahrenen Händen.\n\nAls Lehrling übt Osian unter Anleitung an Heftnähten, Säumen und einfachen vorbereitenden Arbeiten. Er trägt noch keine Meisterverantwortung. Der Familienbrauch verlangt zum Abschluss der Meisterausbildung Arbeiten aus einfachem und kostbarem Tuch. Bis zu einer solchen Arbeit hat Osian noch viel zu lernen.\n\nIm Familienbetrieb lernt Osian das Handwerk neben Gesellen und erfahrenen Schneiderhänden kennen. Zur Mannschaft gehören Meirion Wym, Iwan Trevor, Briallen Wym und Nesta Ferchwyn. Auch Eleri Craigddu hilft in ihrem Elternhaus.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Osian"
+            },
+            {
+              "label": "Alter",
+              "value": "16 Jahre"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Schneiderlehrling · Heften & Säumen"
+            },
+            {
+              "label": "Arbeitsort",
+              "value": "Nadel & Faden · Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "assets/gwniwr/portraits/osian.jpg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Osian ist 16 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Osian ist der sechzehnjährige Lehrling von Nadel & Faden. Er lernt an Heftnähten, Säumen und der sorgfältigen Vorbereitung des Werkzeugs; die endgültige Prüfung bleibt bei den erfahrenen Händen.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Arbeit und Alltag",
+                "text": "Als Lehrling übt Osian unter Anleitung an Heftnähten, Säumen und einfachen vorbereitenden Arbeiten. Er trägt noch keine Meisterverantwortung. Der Familienbrauch verlangt zum Abschluss der Meisterausbildung Arbeiten aus einfachem und kostbarem Tuch. Bis zu einer solchen Arbeit hat Osian noch viel zu lernen."
+              },
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Familie und Verbindungen",
+                "text": "Im Familienbetrieb lernt Osian das Handwerk neben Gesellen und erfahrenen Schneiderhänden kennen. Zur Mannschaft gehören Meirion Wym, Iwan Trevor, Briallen Wym und Nesta Ferchwyn. Auch Eleri Craigddu hilft in ihrem Elternhaus."
+              }
+            ]
+          }
+        },
+        "createdAt": "2026-11-08T16:10:00.000Z",
+        "currentLocation": "Gwynthor · Nadel & Faden",
+        "fraktion": "Nadel & Faden",
+        "id": "person--gwniwr-staff--osian",
+        "identity": {
+          "worldPersonId": "person--gwniwr-staff--osian"
+        },
+        "name": "Osian",
+        "origin": "",
+        "portrait": "assets/gwniwr/portraits/osian.jpg",
+        "relevance": "minor",
+        "role": "Schneiderlehrling · Heften & Säumen",
+        "status": "active",
+        "title": "Schneiderlehrling · Heften & Säumen",
+        "updatedAt": "2026-11-08T16:10:00.000Z"
+      },
+      {
+        "age": 16,
+        "bio": "Osian ist 16 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Osian ist der sechzehnjährige Lehrling von Nadel & Faden. Er lernt an Heftnähten, Säumen und der sorgfältigen Vorbereitung des Werkzeugs; die endgültige Prüfung bleibt bei den erfahrenen Händen.\n\nAls Lehrling übt Osian unter Anleitung an Heftnähten, Säumen und einfachen vorbereitenden Arbeiten. Er trägt noch keine Meisterverantwortung. Der Familienbrauch verlangt zum Abschluss der Meisterausbildung Arbeiten aus einfachem und kostbarem Tuch. Bis zu einer solchen Arbeit hat Osian noch viel zu lernen.\n\nIm Familienbetrieb lernt Osian das Handwerk neben Gesellen und erfahrenen Schneiderhänden kennen. Zur Mannschaft gehören Meirion Wym, Iwan Trevor, Briallen Wym und Nesta Ferchwyn. Auch Eleri Craigddu hilft in ihrem Elternhaus.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Osian"
+            },
+            {
+              "label": "Alter",
+              "value": "16 Jahre"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Schneiderlehrling · Heften & Säumen"
+            },
+            {
+              "label": "Arbeitsort",
+              "value": "Nadel & Faden · Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "./assets/gwniwr/portraits/osian.jpg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Osian ist 16 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Osian ist der sechzehnjährige Lehrling von Nadel & Faden. Er lernt an Heftnähten, Säumen und der sorgfältigen Vorbereitung des Werkzeugs; die endgültige Prüfung bleibt bei den erfahrenen Händen.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Arbeit und Alltag",
+                "text": "Als Lehrling übt Osian unter Anleitung an Heftnähten, Säumen und einfachen vorbereitenden Arbeiten. Er trägt noch keine Meisterverantwortung. Der Familienbrauch verlangt zum Abschluss der Meisterausbildung Arbeiten aus einfachem und kostbarem Tuch. Bis zu einer solchen Arbeit hat Osian noch viel zu lernen."
+              },
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Familie und Verbindungen",
+                "text": "Im Familienbetrieb lernt Osian das Handwerk neben Gesellen und erfahrenen Schneiderhänden kennen. Zur Mannschaft gehören Meirion Wym, Iwan Trevor, Briallen Wym und Nesta Ferchwyn. Auch Eleri Craigddu hilft in ihrem Elternhaus."
+              }
+            ]
+          }
+        },
+        "createdAt": "2026-11-08T16:10:00.000Z",
+        "currentLocation": "Gwynthor · Nadel & Faden",
+        "fraktion": "Nadel & Faden",
+        "id": "person--gwniwr-staff--osian",
+        "identity": {
+          "worldPersonId": "person--gwniwr-staff--osian"
+        },
+        "name": "Osian",
+        "origin": "",
+        "portrait": "./assets/gwniwr/portraits/osian.jpg",
+        "relevance": "minor",
+        "role": "Schneiderlehrling · Heften & Säumen",
+        "status": "active",
+        "title": "Schneiderlehrling · Heften & Säumen",
+        "updatedAt": "2026-11-08T16:10:00.000Z"
+      }
+    ]
+  },
+  "character": {
+    "age": 16,
+    "bio": "Osian ist 16 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Osian ist der sechzehnjährige Lehrling von Nadel & Faden. Er lernt an Heftnähten, Säumen und der sorgfältigen Vorbereitung des Werkzeugs; die endgültige Prüfung bleibt bei den erfahrenen Händen.\n\nAls Lehrling übt Osian unter Anleitung an Heftnähten, Säumen und einfachen vorbereitenden Arbeiten. Er trägt noch keine Meisterverantwortung. Der Familienbrauch verlangt zum Abschluss der Meisterausbildung Arbeiten aus einfachem und kostbarem Tuch. Bis zu einer solchen Arbeit hat Osian noch viel zu lernen.\n\nIm Familienbetrieb lernt Osian das Handwerk neben Gesellen und erfahrenen Schneiderhänden kennen. Zur Mannschaft gehören Meirion Wym, Iwan Trevor, Briallen Wym und Nesta Ferchwyn. Auch Eleri Craigddu hilft in ihrem Elternhaus.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Osian"
+        },
+        {
+          "label": "Alter",
+          "value": "16 Jahre"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Schneiderlehrling · Heften & Säumen"
+        },
+        {
+          "label": "Arbeitsort",
+          "value": "Nadel & Faden · Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwniwr/portraits/osian.jpg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Osian ist 16 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Osian ist der sechzehnjährige Lehrling von Nadel & Faden. Er lernt an Heftnähten, Säumen und der sorgfältigen Vorbereitung des Werkzeugs; die endgültige Prüfung bleibt bei den erfahrenen Händen.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Als Lehrling übt Osian unter Anleitung an Heftnähten, Säumen und einfachen vorbereitenden Arbeiten. Er trägt noch keine Meisterverantwortung. Der Familienbrauch verlangt zum Abschluss der Meisterausbildung Arbeiten aus einfachem und kostbarem Tuch. Bis zu einer solchen Arbeit hat Osian noch viel zu lernen."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Im Familienbetrieb lernt Osian das Handwerk neben Gesellen und erfahrenen Schneiderhänden kennen. Zur Mannschaft gehören Meirion Wym, Iwan Trevor, Briallen Wym und Nesta Ferchwyn. Auch Eleri Craigddu hilft in ihrem Elternhaus."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor · Nadel & Faden",
+    "fraktion": "Nadel & Faden",
+    "id": "person--gwniwr-staff--osian",
+    "identity": {
+      "worldPersonId": "person--gwniwr-staff--osian"
+    },
+    "name": "Osian",
+    "origin": "",
+    "portrait": "./assets/gwniwr/portraits/osian.jpg",
+    "relevance": "minor",
+    "role": "Schneiderlehrling · Heften & Säumen",
+    "status": "active",
+    "title": "Schneiderlehrling · Heften & Säumen",
+    "updatedAt": "2026-11-08T16:10:00.000Z",
+    "aliases": [],
+    "genealogy": {
+      "worldPersonId": "person--gwniwr-staff--osian",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

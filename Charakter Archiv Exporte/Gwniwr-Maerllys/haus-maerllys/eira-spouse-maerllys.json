@@ -1,0 +1,135 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-08T16:10:00.000Z",
+  "mergeStrategy": "replace-reviewed-metadata-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/eira-spouse-maerllys.json",
+  "character": {
+    "activeImageSetId": "",
+    "age": 74,
+    "aliases": [],
+    "archived": false,
+    "bio": "Eira wurde 1666 geboren und ist die Gemahlin Cadfan Maerllys’. Iorwerth ist ihr Sohn; Elowen, Nia und Rhys ihre Enkel. Über ihre Herkunftsfamilie ist wenig bekannt. Gemeinsam mit Cadfan gehört sie zur ältesten konkret bekannten Generation des jüngeren Maerllys-Haushalts.\n\nIm heutigen Hausleben ist Eira eine erfahrene Ansprechpartnerin für Wäsche, Ausbesserung und sorgfältige Handnähte. Naht & Siegel fertigt Kleidung, die lange im Dienst getragen werden soll. Ihr Blick auf Pflege und Erhaltung ergänzt deshalb die Arbeit der jüngeren Generation, die das Geschäft führt.\n\nDie Wege ihrer Enkel führen zur Letzten Rast, in den persönlichen Dienst bei Prinzessin Isobel und in den Verkauf der Göttlichen Eleganz. Die ältere Schneidertradition bleibt der gemeinsame Hintergrund, obwohl jeder der drei seinen eigenen Platz im Stadtleben gefunden hat.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Eira"
+        },
+        {
+          "label": "Geboren",
+          "value": "1666"
+        },
+        {
+          "label": "Alter",
+          "value": "74 Jahre"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Maerllys"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Großmutter Nia Maerllys’"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/eira-spouse-maerllys.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Eira wurde 1666 geboren und ist die Gemahlin Cadfan Maerllys’. Iorwerth ist ihr Sohn; Elowen, Nia und Rhys ihre Enkel. Über ihre Herkunftsfamilie ist wenig bekannt. Gemeinsam mit Cadfan gehört sie zur ältesten konkret bekannten Generation des jüngeren Maerllys-Haushalts.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Im heutigen Hausleben ist Eira eine erfahrene Ansprechpartnerin für Wäsche, Ausbesserung und sorgfältige Handnähte. Naht & Siegel fertigt Kleidung, die lange im Dienst getragen werden soll. Ihr Blick auf Pflege und Erhaltung ergänzt deshalb die Arbeit der jüngeren Generation, die das Geschäft führt."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Die Wege ihrer Enkel führen zur Letzten Rast, in den persönlichen Dienst bei Prinzessin Isobel und in den Verkauf der Göttlichen Eleganz. Die ältere Schneidertradition bleibt der gemeinsame Hintergrund, obwohl jeder der drei seinen eigenen Platz im Stadtleben gefunden hat."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "",
+    "genealogy": {
+      "worldPersonId": "person--family-tree--eira-spouse-maerllys",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1666",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-maerllys",
+          "personId": "eira-spouse-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=eira-spouse-maerllys",
+          "fingerprint": "{\"name\":\"Eira\",\"title\":\"Großmutter Nia Maerllys’\",\"birth\":\"1666\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/eira-spouse-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"cadfan-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--cadfan-maerllys\",\"name\":\"Cadfan Maerllys\"}],\"children\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "cadfan-maerllys",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--cadfan-maerllys",
+            "name": "Cadfan Maerllys"
+          }
+        ],
+        "children": [
+          {
+            "personId": "iorwerth-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
+            "name": "Iorwerth Maerllys"
+          }
+        ]
+      }
+    },
+    "id": "person--family-tree--eira-spouse-maerllys",
+    "identity": {
+      "worldPersonId": "person--family-tree--eira-spouse-maerllys"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "name": "Eira",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/eira-spouse-maerllys.png",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=eira-spouse-maerllys",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Großmutter Nia Maerllys’",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

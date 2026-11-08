@@ -1,0 +1,170 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-08T16:10:00.000Z",
+  "mergeStrategy": "replace-reviewed-metadata-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/edern-vann.json",
+  "character": {
+    "activeImageSetId": "",
+    "age": 35,
+    "aliases": [],
+    "archived": false,
+    "bio": "Edern Vann wurde 1705 geboren und ist Herbergsmeister in der Letzten Rast in Gwynthor. Zu seinen Aufgaben gehören Zimmer und Buchungen. Im Jahr 1733 heiratete er Elowen Maerllys, die seither mit ihm im Umfeld des Familienbetriebs lebt und arbeitet.\n\nEderns Arbeit gilt der Belegung des Hauses, verlässlichen Absprachen und der Aufnahme von Gästen. Ein gut geführtes Gästehaus braucht Übersicht über ankommende Reisende und freie Räume. Seine Tätigkeit verbindet die persönliche Begegnung mit dem geordneten Alltag der Herberge.\n\nDurch Elowen ist Edern mit der Maerllys-Schneiderfamilie verwandt. Seine Schwägerin Nia steht im persönlichen Dienst der Prinzessin Isobel; sein Schwager Rhys arbeitet im Verkauf der Göttlichen Eleganz. Die verschiedenen Arbeitswelten begegnen sich so innerhalb eines gemeinsamen Verwandtenkreises in Gwynthor.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Edern Vann"
+        },
+        {
+          "label": "Geboren",
+          "value": "1705"
+        },
+        {
+          "label": "Alter",
+          "value": "35 Jahre"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Vann"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Herbergsmeister · Zimmer und Buchungen"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/references/edern.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Edern Vann wurde 1705 geboren und ist Herbergsmeister in der Letzten Rast in Gwynthor. Zu seinen Aufgaben gehören Zimmer und Buchungen. Im Jahr 1733 heiratete er Elowen Maerllys, die seither mit ihm im Umfeld des Familienbetriebs lebt und arbeitet.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Ederns Arbeit gilt der Belegung des Hauses, verlässlichen Absprachen und der Aufnahme von Gästen. Ein gut geführtes Gästehaus braucht Übersicht über ankommende Reisende und freie Räume. Seine Tätigkeit verbindet die persönliche Begegnung mit dem geordneten Alltag der Herberge."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Durch Elowen ist Edern mit der Maerllys-Schneiderfamilie verwandt. Seine Schwägerin Nia steht im persönlichen Dienst der Prinzessin Isobel; sein Schwager Rhys arbeitet im Verkauf der Göttlichen Eleganz. Die verschiedenen Arbeitswelten begegnen sich so innerhalb eines gemeinsamen Verwandtenkreises in Gwynthor."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Vann",
+    "genealogy": {
+      "worldPersonId": "person--haus-vann--edern-vann",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1705",
+      "death": "",
+      "houseId": "house-vann",
+      "houseName": "Haus Vann",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-maerllys",
+          "personId": "edern-vann",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=edern-vann",
+          "fingerprint": "{\"name\":\"Edern Vann\",\"title\":\"Herbergsmeister · Zimmer und Buchungen\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-vann\",\"portrait\":\"../AleriaAlmanach/assets/letzte-rast/references/edern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"elowen-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--elowen-maerllys\",\"name\":\"Elowen Maerllys\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-vann",
+          "personId": "edern-vann",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-vann&mode=view&person=edern-vann",
+          "fingerprint": "{\"name\":\"Edern Vann\",\"title\":\"Herbergsmeister · Zimmer und Buchungen\",\"birth\":\"1705\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-vann\",\"portrait\":\"../AleriaAlmanach/assets/letzte-rast/references/edern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"madoc-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--madoc-vann\",\"name\":\"Madoc Vann\"},{\"personId\":\"lowri-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--lowri-vann\",\"name\":\"Lowri\"}],\"partners\":[{\"personId\":\"elowen-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--elowen-maerllys\",\"name\":\"Elowen Maerllys\"}],\"children\":[{\"personId\":\"celyn-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--celyn-vann\",\"name\":\"Celyn Vann\"},{\"personId\":\"iolo-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--iolo-vann\",\"name\":\"Iolo Vann\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "madoc-vann",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-vann--madoc-vann",
+            "name": "Madoc Vann"
+          },
+          {
+            "personId": "lowri-vann",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-vann--lowri-vann",
+            "name": "Lowri"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "elowen-maerllys",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--elowen-maerllys",
+            "name": "Elowen Maerllys"
+          }
+        ],
+        "children": [
+          {
+            "personId": "celyn-vann",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-vann--celyn-vann",
+            "name": "Celyn Vann"
+          },
+          {
+            "personId": "iolo-vann",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-vann--iolo-vann",
+            "name": "Iolo Vann"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-vann--edern-vann",
+    "identity": {
+      "worldPersonId": "person--haus-vann--edern-vann"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "name": "Edern Vann",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../AleriaAlmanach/assets/letzte-rast/references/edern.png",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=edern-vann",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Herbergsmeister · Zimmer und Buchungen",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

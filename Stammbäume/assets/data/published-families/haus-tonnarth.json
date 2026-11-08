@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-tonnarth",
-  "revision": 8,
-  "updatedAt": "2026-10-16T00:26:06.470Z",
+  "revision": 9,
+  "updatedAt": "2026-11-08T16:12:19.209Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -48,7 +48,10 @@
           "Gründerfamilie"
         ],
         "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "haus-tonnarth-gruenderin",
@@ -68,7 +71,10 @@
           "Gründerfamilie"
         ],
         "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "idris-tonnarth",
@@ -86,7 +92,10 @@
         "lineageRole": "head",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "lowri-spouse-tonnarth",
@@ -104,7 +113,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "eira-tonnarth",
@@ -122,7 +134,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Llewarchs Großtante Eira wurde an ein nicht überliefertes Haus verheiratet.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "unknown-spouse-eira-tonnarth",
@@ -140,7 +155,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Name und genaue Herkunft des Ehemanns von Eira Tonnarth sind nicht überliefert.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "tegwen-tonnarth",
@@ -158,7 +176,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Llewarchs Großtante Tegwen wurde an ein nicht überliefertes Haus verheiratet.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "unknown-spouse-tegwen-tonnarth",
@@ -176,7 +197,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Name und genaue Herkunft des Ehemanns von Tegwen Tonnarth sind nicht überliefert.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "cadell-tonnarth",
@@ -194,7 +218,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "ceridwen-spouse-tonnarth",
@@ -212,7 +239,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "anwen-tonnarth",
@@ -230,7 +260,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Llewarchs Tante Anwen wurde an ein nicht überliefertes Haus verheiratet.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "unknown-spouse-anwen-tonnarth",
@@ -248,7 +281,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Name und genaue Herkunft des Ehemanns von Anwen Tonnarth sind nicht überliefert.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "madoc-tonnarth",
@@ -259,14 +295,22 @@
         "status": "alive",
         "birth": "1692",
         "death": "",
-        "portrait": "",
+        "portrait": "assets/images/portraits/haus-maerllys/madoc-tonnarth.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-tonnarth",
         "familyRole": "core",
         "lineageRole": "branch",
         "tags": [],
         "notes": "Bruder Cadell Tonnarths; heiratete Rhoswen Maerllys und hat mit ihr drei Söhne.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "portrait": 5
+          },
+          "registryManagedFields": [
+            "portrait"
+          ]
+        }
       },
       {
         "id": "rhoswen-maerllys",
@@ -277,14 +321,22 @@
         "status": "alive",
         "birth": "1694",
         "death": "",
-        "portrait": "",
+        "portrait": "assets/images/portraits/haus-maerllys/rhoswen-maerllys.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-maerllys",
         "familyRole": "married",
         "lineageRole": "branch",
         "tags": [],
         "notes": "Tochter Owain Maerllys’ und Gwenllian Ysgrifs; heiratete Madoc Tonnarth.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "portrait": 5
+          },
+          "registryManagedFields": [
+            "portrait"
+          ]
+        }
       },
       {
         "id": "gareth-tonnarth",
@@ -302,7 +354,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Blieb unverheiratet; aus seiner beendeten Affäre mit Mair ging ein nicht ehelicher Sohn hervor.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "mair-affair-tonnarth",
@@ -325,7 +380,13 @@
             "title",
             "notes",
             "portrait"
-          ]
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "title": 4,
+            "notes": 4,
+            "portrait": 4
+          }
         }
       },
       {
@@ -344,7 +405,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Unverheiratet und ohne Verlobung.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "llewarch-tonnarth",
@@ -365,6 +429,8 @@
         ],
         "notes": "Im Jahr 1740 fünfundzwanzig Jahre alt; unverheiratet und ohne Verlobung.",
         "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {},
           "biographyModule": {
             "schema": "aleria.biography-module",
             "schemaVersion": 1,
@@ -539,7 +605,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Unverheiratet und ohne Verlobung.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "elowen-tonnarth",
@@ -557,7 +626,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Unverheiratet und ohne Verlobung.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "rhys-tonnarth",
@@ -575,7 +647,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Unverheiratet und ohne Verlobung.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "bryn-tonnarth",
@@ -593,7 +668,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "emrys-tonnarth",
@@ -611,7 +689,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "aled-tonnarth",
@@ -629,7 +710,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "caradog-bastard-tonnarth",
@@ -653,6 +737,12 @@
             "notes",
             "portrait"
           ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "title": 4,
+            "notes": 4,
+            "portrait": 4
+          },
           "biographyModule": {
             "schema": "aleria.biography-module",
             "schemaVersion": 1,
@@ -838,7 +928,13 @@
             "title",
             "notes",
             "portrait"
-          ]
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "title": 4,
+            "notes": 4,
+            "portrait": 4
+          }
         }
       }
     ],
@@ -856,7 +952,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "Gründerehe des Hauses.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-idris-lowri-tonnarth",
@@ -871,7 +970,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-eira-unknown-tonnarth",
@@ -886,7 +988,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-tegwen-unknown-tonnarth",
@@ -901,7 +1006,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-anwen-unknown-tonnarth",
@@ -916,7 +1024,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-cadell-ceridwen-tonnarth",
@@ -931,7 +1042,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-madoc-tonnarth-rhoswen-maerllys",
@@ -946,7 +1060,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "affair-gareth-mair-tonnarth",
@@ -965,7 +1082,9 @@
           "crossFamilyRelationship": {
             "linkId": "affair-gareth-mair-tonnarth",
             "counterpartFamilyId": "haus-dubhdarach"
-          }
+          },
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
         }
       },
       {
@@ -985,7 +1104,9 @@
           "crossFamilyRelationship": {
             "linkId": "marriage-aedan-mair-kanne",
             "counterpartFamilyId": "haus-dubhdarach"
-          }
+          },
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
         }
       }
     ],
@@ -1004,7 +1125,9 @@
         "visibility": "public",
         "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Idris, Eira und Tegwen.",
         "extensions": {
-          "timeJumpId": "gap-tonnarth-to-1663"
+          "timeJumpId": "gap-tonnarth-to-1663",
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
         }
       },
       {
@@ -1021,7 +1144,9 @@
         "visibility": "public",
         "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Idris, Eira und Tegwen.",
         "extensions": {
-          "timeJumpId": "gap-tonnarth-to-1663"
+          "timeJumpId": "gap-tonnarth-to-1663",
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
         }
       },
       {
@@ -1038,7 +1163,9 @@
         "visibility": "public",
         "notes": "Nicht einzeln überlieferte Generationen verbinden das Gründerpaar mit Idris, Eira und Tegwen.",
         "extensions": {
-          "timeJumpId": "gap-tonnarth-to-1663"
+          "timeJumpId": "gap-tonnarth-to-1663",
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
         }
       },
       {
@@ -1054,7 +1181,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-anwen-tonnarth",
@@ -1069,7 +1199,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-madoc-tonnarth",
@@ -1084,7 +1217,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-gareth-tonnarth",
@@ -1099,7 +1235,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-iorwerth-tonnarth",
@@ -1114,7 +1253,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-llewarch-tonnarth",
@@ -1129,7 +1271,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-gwenllian-tonnarth",
@@ -1144,7 +1289,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-elowen-tonnarth",
@@ -1159,7 +1307,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-rhys-tonnarth",
@@ -1174,7 +1325,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-bryn-tonnarth",
@@ -1189,7 +1343,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-emrys-tonnarth",
@@ -1204,7 +1361,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-aled-tonnarth",
@@ -1219,7 +1379,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-caradog-bastard-tonnarth",
@@ -1238,7 +1401,12 @@
           "registryManagedFields": [
             "legitimacy",
             "notes"
-          ]
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "legitimacy": 4,
+            "notes": 4
+          }
         }
       }
     ],
@@ -1249,15 +1417,26 @@
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Tonnarth.png",
         "status": "active",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "house-maerllys",
         "name": "Haus Maerllys",
         "motto": "",
-        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
         "status": "active",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "emblem": 5
+          },
+          "registryManagedFields": [
+            "emblem"
+          ]
+        }
       },
       {
         "id": "house-unbekannt-great-aunt-eira-tonnarth",
@@ -1265,7 +1444,10 @@
         "motto": "",
         "emblem": "",
         "status": "active",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "house-unbekannt-great-aunt-tegwen-tonnarth",
@@ -1273,7 +1455,10 @@
         "motto": "",
         "emblem": "",
         "status": "active",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "house-unbekannt-aunt-anwen-tonnarth",
@@ -1281,7 +1466,10 @@
         "motto": "",
         "emblem": "",
         "status": "active",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "house-dubhdarach",
@@ -1289,7 +1477,10 @@
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Dubhdarach.png",
         "status": "active",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       }
     ],
     "cadetBranches": [
@@ -1309,7 +1500,10 @@
         "founded": "",
         "targetFamilyId": "haus-unbekannt",
         "notes": "Llewarchs Großtante Eira wurde an ein nicht überliefertes Haus verheiratet.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "married-away-great-aunt-tegwen-tonnarth",
@@ -1327,7 +1521,10 @@
         "founded": "",
         "targetFamilyId": "haus-unbekannt",
         "notes": "Llewarchs Großtante Tegwen wurde an ein nicht überliefertes Haus verheiratet.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "married-away-aunt-anwen-tonnarth",
@@ -1345,7 +1542,10 @@
         "founded": "",
         "targetFamilyId": "haus-unbekannt",
         "notes": "Llewarchs Tante Anwen wurde an ein nicht überliefertes Haus verheiratet.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "married-away-mair-dubhdarach",
@@ -1363,7 +1563,10 @@
         "founded": "",
         "targetFamilyId": "haus-dubhdarach",
         "notes": "Mair heiratete Aedan Dubhdarach. Neifion und Eirlys führen seine Linie fort; Caradog bleibt im Haus Tonnarth.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       }
     ],
     "timeJumps": [
@@ -1392,7 +1595,17 @@
             "toYear",
             "label",
             "notes"
-          ]
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "parentPartnershipId": 4,
+            "parentPersonId": 4,
+            "childIds": 4,
+            "fromYear": 4,
+            "toYear": 4,
+            "label": 4,
+            "notes": 4
+          }
         }
       }
     ],
@@ -1461,7 +1674,7 @@
       "blankFamily": false,
       "preparedTimeJump": true,
       "pendingDescendantReview": false,
-      "sourceRevision": 4,
+      "sourceRevision": 5,
       "registryManagedViewFields": [
         "focusPersonId",
         "limitGenerations"
@@ -1489,15 +1702,31 @@
           "targetFamilyId": "haus-dubhdarach"
         }
       ],
+      "registryManagedDocumentFieldRevisions": {},
+      "registryManagedHouseProfileFieldRevisions": {},
+      "registryManagedExtensionFieldRevisions": {
+        "tailoringContentInventory": 5
+      },
+      "registryManagedViewFieldRevisions": {
+        "focusPersonId": 4,
+        "limitGenerations": 4
+      },
+      "registryManagedLineageFieldRevisions": {},
+      "registryManagedEntitySourceRevision": 4,
+      "tailoringContentInventory": "gwniwr-maerllys-20261108",
+      "registryManagedExtensionFields": [
+        "tailoringContentInventory"
+      ],
       "houseBiographyModule": {
         "schema": "aleria.house-module",
         "schemaVersion": 1,
         "pageTitle": "Haus Tonnarth",
         "housePage": true,
-        "image": "",
-        "imageWidth": 30,
-        "imageSquare": true,
-        "description": "Haus Tonnarth ist eine bürgerliche Familie aus Gwynthor.",
+        "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Tonnarth/assets/hausfigur-2026-10-24.png",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Haus Tonnarth ist eine bürgerliche Familie aus Gwynthor mit mehreren Seitenlinien. Ihre jüngste Generation gruppiert sich um Llewarch und seine Geschwister. Die Familiengeschichte berührt sowohl die Maerllys als auch das Umfeld der Krummen Kanne und der Tiefenwyrm.",
         "quote": "",
         "quoteBy": "",
         "commentSequence": [],
@@ -1520,23 +1749,11 @@
           ],
           [
             "Oberhaupt",
-            ""
-          ],
-          [
-            "Erbe",
-            ""
+            "Idris Tonnarth"
           ],
           [
             "Lehnsherr",
             "Haus Draig"
-          ],
-          [
-            "Ursprung",
-            ""
-          ],
-          [
-            "Schutzpatronin",
-            ""
           ]
         ],
         "house": {
@@ -1545,19 +1762,25 @@
           "connectionPortraitHeight": 80,
           "connectionTextOffset": 0,
           "biographyTitle": "Über das Haus",
-          "biographyText": "Haus Tonnarth ist eine bürgerliche Familie aus Gwynthor.",
+          "biographyText": "Haus Tonnarth ist eine bürgerliche Familie aus Gwynthor mit mehreren Seitenlinien. Ihre jüngste Generation gruppiert sich um Llewarch und seine Geschwister. Die Familiengeschichte berührt sowohl die Maerllys als auch das Umfeld der Krummen Kanne und der Tiefenwyrm.",
           "abilitiesTitle": "Einfluss und Aufgaben",
           "abilities": [],
           "historyTitle": "Geschichte",
-          "historyText": "Folgt …",
-          "worksTitle": "Hausgeschichte",
+          "historyText": "Idris und Lowri gehören zur ältesten bekannten Generation. Ihr Sohn Cadell ist mit Ceridwen verheiratet und Vater der Geschwister Iorwerth, Llewarch, Gwenllian, Elowen und Rhys. Cadells Bruder Madoc heiratete Rhoswen Maerllys. Aus Gareths früherer Beziehung mit Mair ging Caradog hervor.",
+          "worksTitle": "Prägende Ereignisse",
           "works": [],
           "extraSections": [
             {
               "position": "afterWorks",
               "mode": "text",
               "title": "Werte und Stellung",
-              "text": "Folgt …"
+              "text": "Mair arbeitet als Rechnungsführerin der Krummen Kanne; Caradog führt Idwals Logbuch und unterstützt die Schriftführung der Tiefenwyrm. Diese persönlichen Aufgaben machen weder Gasthaus noch Schiff zum Besitz der Tonnarth. Ein gemeinsamer Hausbetrieb ist nicht überliefert."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Madoc und Rhoswen verbinden Tonnarth mit Maerllys. Mairs späterer Lebenskreis um Aedan Dubhdarach bleibt von Gareths beendeter Beziehung getrennt."
             }
           ],
           "triviaTitle": "Besonderheiten",
@@ -1578,7 +1801,7 @@
             {
               "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Tonnarth.png",
               "title": "Haus Tonnarth · vollständige Hausseite",
-              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
               "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-tonnarth"
             }
           ],
@@ -1586,8 +1809,8 @@
         }
       },
       "registryUpgrade": {
-        "fromRevision": 3,
-        "toRevision": 4
+        "fromRevision": 4,
+        "toRevision": 5
       }
     }
   }

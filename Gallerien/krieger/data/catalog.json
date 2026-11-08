@@ -12951,7 +12951,8 @@
         "haus-tonnarth",
         "haus-ysgrif",
         "haus-falchdyn",
-        "haus-veltrane"
+        "haus-veltrane",
+        "gwniwr"
       ],
       "illustrationIds": [
         "bild-5fe0243d80e2f37d"
@@ -18384,6 +18385,23 @@
       ],
       "illustrationIds": [
         "bild-318ebbd3fd57a325"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "gwniwr",
+      "name": "Familie Gwniwr",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=gwniwr&mode=view",
+      "sources": [
+        "gwniwr",
+        "haus-maerllys"
+      ],
+      "illustrationIds": [
+        "bild-dbd79b9d3864e311"
       ],
       "missingNote": ""
     }
@@ -27111,7 +27129,7 @@
     {
       "id": "bild-5fe0243d80e2f37d",
       "name": "Haus Maerllys · Hausdarstellung",
-      "category": "Bürgerliche Hausdarstellung",
+      "category": "Bürgerliche Schneiderdarstellung",
       "affiliation": "",
       "image": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Maerllys/assets/hausfigur-2026-10-24.png",
       "sha256": "5fe0243d80e2f37dedbfdde420608069e5fcc5232c3280a358571b70fe75d21a",
@@ -53172,6 +53190,27 @@
       ],
       "copies": [
         "Stammbäume/assets/images/portraits/haus-gwernant/catrin-gwernant.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-dbd79b9d3864e311",
+      "name": "Familie Gwniwr · Hausdarstellung",
+      "category": "Bürgerliche Schneiderdarstellung",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/portraits/gwniwr/person-7b6c292b.jpg",
+      "sha256": "dbd79b9d3864e3115d883a487bfe6c41f4963edea96929c67a74f24e05594ea1",
+      "houseIds": [
+        "gwniwr"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Gwniwr/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/portraits/gwniwr/person-7b6c292b.jpg"
       ],
       "note": ""
     }

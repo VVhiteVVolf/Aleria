@@ -31,9 +31,9 @@
           "Llamreis Ankunft",
           "Gwynthor"
         ],
-        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=nia-maerllys",
-        "fingerprint": "{\"name\":\"Nia Maerllys\",\"title\":\"Angehörige des Hauses Maerllys\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/nia-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"24 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"},{\"personId\":\"bronwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"partners\":[],\"children\":[]}}",
-        "score": 185
+        "url": "",
+        "fingerprint": "{\"name\":\"Nia Maerllys\",\"title\":\"Persönliche Zofe der Prinzessin Isobel Draig\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/nia-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"24 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"},{\"personId\":\"bronwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
       }
     ],
     "familyAlternatives": [],
@@ -59,6 +59,7 @@
       "collection": "characters",
       "documentId": "qN5et9e7KaWlIPTSrsXt",
       "documentIds": [
+        "qN5et9e7KaWlIPTSrsXt",
         "qN5et9e7KaWlIPTSrsXt"
       ],
       "documents": [
@@ -66,6 +67,11 @@
           "documentId": "qN5et9e7KaWlIPTSrsXt",
           "createdAt": "2026-07-27T02:57:43.238Z",
           "updatedAt": "2026-07-27T02:57:44.434Z"
+        },
+        {
+          "documentId": "qN5et9e7KaWlIPTSrsXt",
+          "createdAt": "",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
         }
       ]
     },
@@ -74,20 +80,21 @@
         "familyId": "haus-maerllys",
         "personId": "nia-maerllys",
         "worldPersonId": "person--haus-maerllys--nia-maerllys",
-        "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=nia-maerllys"
+        "url": ""
       }
     ],
     "profile": ""
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-    "sourceExportedAt": "2026-10-12T22:24:41.567Z",
-    "sourceUpdatedAt": "2026-07-27T02:57:44.434Z",
+    "sourceArchive": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/nia-maerllys.json",
+    "sourceExportedAt": "2026-11-08T16:10:00.000Z",
+    "sourceUpdatedAt": "2026-11-08T16:10:00.000Z",
     "sourceDocumentIds": [
+      "qN5et9e7KaWlIPTSrsXt",
       "qN5et9e7KaWlIPTSrsXt"
     ],
-    "contentHash": "8024eab377a46bb5e3f13ac5f189561992780af57fd8048514ac1b869974957b"
+    "contentHash": "0058294e71ca69a7df4a5be4d3673624f4c2277204534e6db656efcb32aeb4aa"
   },
   "local": {
     "notes": "",
@@ -657,13 +664,115 @@
         "playerOwner": "patrick",
         "archived": false,
         "currentLocation": ""
+      },
+      {
+        "id": "qN5et9e7KaWlIPTSrsXt",
+        "name": "Nia Maerllys",
+        "identity": {
+          "worldPersonId": "person--haus-maerllys--nia-maerllys"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-maerllys--nia-maerllys",
+          "sex": "unknown",
+          "status": "alive",
+          "birth": "1716",
+          "death": "",
+          "houseId": "house-maerllys",
+          "houseName": "Haus Maerllys",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [
+            "24 Jahre"
+          ],
+          "sources": [
+            {
+              "familyId": "haus-maerllys",
+              "personId": "nia-maerllys",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-08T16:10:00.000Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=nia-maerllys",
+              "fingerprint": "{\"name\":\"Nia Maerllys\",\"title\":\"Persönliche Zofe der Prinzessin Isobel Draig\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/nia-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"24 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"},{\"personId\":\"bronwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "iorwerth-maerllys",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
+                "name": "Iorwerth Maerllys"
+              },
+              {
+                "personId": "bronwen-swyll",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-swyll--bronwen-swyll",
+                "name": "Bronwen Swyll"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "updatedAt": "2026-11-08T16:10:00.000Z",
+        "bio": "Nia Maerllys wurde 1716 als Tochter Iorwerth Maerllys’ und Bronwen Swylls geboren. Im Jahr 1740 ist sie vierundzwanzig Jahre alt. Elowen ist ihre ältere Schwester, Rhys ihr jüngerer Bruder. Ihre Großeltern väterlicherseits heißen Cadfan und Eira.\n\nNia dient als persönliche Zofe der Prinzessin Isobel Draig. Ihr Alltag gehört damit zum unmittelbaren Umfeld der Prinzessin und des Hauses Draig. Die bürgerliche Schneiderfamilie ihrer Herkunft bleibt ihr verwandtschaftlicher Rückhalt, während ihr eigener Dienst sie an einen anderen Platz führt als die Werkstatt der Eltern.\n\nElowen heiratete 1733 Edern Vann und arbeitet seither in der Letzten Rast; Rhys verkauft in der Göttlichen Eleganz. Nia selbst ist unverheiratet und ohne Verlobung. Ihr dunkelrotes Haar und ihre blauen Augen verbinden ihr Aussehen mit den Geschwistern. Der ältere Maerllys-Zweig stammt von den Gwniwr ab; die einzelnen Ahnen vor den langen Überlieferungslücken sind unbekannt.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Nia Maerllys"
+            },
+            {
+              "label": "Geboren",
+              "value": "1716"
+            },
+            {
+              "label": "Alter",
+              "value": "24 Jahre"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Persönliche Zofe der Prinzessin Isobel Draig"
+            },
+            {
+              "label": "Familie",
+              "value": "Haus Maerllys"
+            }
+          ],
+          "biography": {
+            "portrait": "https://i.imgur.com/TY1Vpop.png",
+            "biographyTitle": "Biografie",
+            "biographyText": "Nia Maerllys wurde 1716 als Tochter Iorwerth Maerllys’ und Bronwen Swylls geboren. Im Jahr 1740 ist sie vierundzwanzig Jahre alt. Elowen ist ihre ältere Schwester, Rhys ihr jüngerer Bruder. Ihre Großeltern väterlicherseits heißen Cadfan und Eira.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Arbeit und Alltag",
+                "text": "Nia dient als persönliche Zofe der Prinzessin Isobel Draig. Ihr Alltag gehört damit zum unmittelbaren Umfeld der Prinzessin und des Hauses Draig. Die bürgerliche Schneiderfamilie ihrer Herkunft bleibt ihr verwandtschaftlicher Rückhalt, während ihr eigener Dienst sie an einen anderen Platz führt als die Werkstatt der Eltern."
+              },
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Familie und Verbindungen",
+                "text": "Elowen heiratete 1733 Edern Vann und arbeitet seither in der Letzten Rast; Rhys verkauft in der Göttlichen Eleganz. Nia selbst ist unverheiratet und ohne Verlobung. Ihr dunkelrotes Haar und ihre blauen Augen verbinden ihr Aussehen mit den Geschwistern. Der ältere Maerllys-Zweig stammt von den Gwniwr ab; die einzelnen Ahnen vor den langen Überlieferungslücken sind unbekannt."
+              }
+            ]
+          }
+        }
       }
     ]
   },
   "character": {
     "id": "qN5et9e7KaWlIPTSrsXt",
     "origin": "",
-    "bio": "Nia Maerllys ist die persönliche Zofe der Prinzessin Isobel Draig.",
+    "bio": "Nia Maerllys wurde 1716 als Tochter Iorwerth Maerllys’ und Bronwen Swylls geboren. Im Jahr 1740 ist sie vierundzwanzig Jahre alt. Elowen ist ihre ältere Schwester, Rhys ihr jüngerer Bruder. Ihre Großeltern väterlicherseits heißen Cadfan und Eira.\n\nNia dient als persönliche Zofe der Prinzessin Isobel Draig. Ihr Alltag gehört damit zum unmittelbaren Umfeld der Prinzessin und des Hauses Draig. Die bürgerliche Schneiderfamilie ihrer Herkunft bleibt ihr verwandtschaftlicher Rückhalt, während ihr eigener Dienst sie an einen anderen Platz führt als die Werkstatt der Eltern.\n\nElowen heiratete 1733 Edern Vann und arbeitet seither in der Letzten Rast; Rhys verkauft in der Göttlichen Eleganz. Nia selbst ist unverheiratet und ohne Verlobung. Ihr dunkelrotes Haar und ihre blauen Augen verbinden ihr Aussehen mit den Geschwistern. Der ältere Maerllys-Zweig stammt von den Gwniwr ab; die einzelnen Ahnen vor den langen Überlieferungslücken sind unbekannt.",
     "relevance": "",
     "emotes": [
       {
@@ -1188,13 +1297,30 @@
     "fraktion": "",
     "createdAt": "2026-07-27T02:57:43.238Z",
     "genealogy": {
+      "worldPersonId": "person--haus-maerllys--nia-maerllys",
+      "sex": "unknown",
+      "status": "alive",
+      "birth": "1716",
+      "death": "",
+      "houseId": "house-maerllys",
+      "houseName": "Haus Maerllys",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
       "tags": [
         "24 Jahre"
       ],
-      "familyRole": "core",
-      "houseName": "Haus Maerllys",
-      "sex": "unknown",
-      "birth": "1716",
+      "sources": [
+        {
+          "familyId": "haus-maerllys",
+          "personId": "nia-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=nia-maerllys",
+          "fingerprint": "{\"name\":\"Nia Maerllys\",\"title\":\"Persönliche Zofe der Prinzessin Isobel Draig\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/nia-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"24 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"},{\"personId\":\"bronwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
       "relationships": {
         "parents": [
           {
@@ -1216,24 +1342,7 @@
         ],
         "partners": [],
         "children": []
-      },
-      "houseId": "house-maerllys",
-      "death": "",
-      "status": "alive",
-      "worldPersonId": "person--haus-maerllys--nia-maerllys",
-      "portraitPlaceholder": "auto",
-      "sources": [
-        {
-          "familyId": "haus-maerllys",
-          "personId": "nia-maerllys",
-          "releaseId": "",
-          "publishedAt": "",
-          "importedAt": "2026-10-12T22:24:41.567Z",
-          "lastSyncedAt": "2026-10-12T22:24:41.567Z",
-          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=nia-maerllys",
-          "fingerprint": "{\"name\":\"Nia Maerllys\",\"title\":\"Angehörige des Hauses Maerllys\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/nia-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"24 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"},{\"personId\":\"bronwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"partners\":[],\"children\":[]}}"
-        }
-      ]
+      }
     },
     "role": "",
     "emotesOverride": true,
@@ -1243,12 +1352,57 @@
     },
     "plotNode": "",
     "profileLink": "",
-    "updatedAt": "2026-07-27T02:57:44.434Z",
+    "updatedAt": "2026-11-08T16:10:00.000Z",
     "status": "",
     "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
     "aliases": [],
     "playerOwner": "patrick",
     "archived": false,
-    "currentLocation": ""
+    "currentLocation": "",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Nia Maerllys"
+        },
+        {
+          "label": "Geboren",
+          "value": "1716"
+        },
+        {
+          "label": "Alter",
+          "value": "24 Jahre"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Persönliche Zofe der Prinzessin Isobel Draig"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Maerllys"
+        }
+      ],
+      "biography": {
+        "portrait": "https://i.imgur.com/TY1Vpop.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Nia Maerllys wurde 1716 als Tochter Iorwerth Maerllys’ und Bronwen Swylls geboren. Im Jahr 1740 ist sie vierundzwanzig Jahre alt. Elowen ist ihre ältere Schwester, Rhys ihr jüngerer Bruder. Ihre Großeltern väterlicherseits heißen Cadfan und Eira.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Nia dient als persönliche Zofe der Prinzessin Isobel Draig. Ihr Alltag gehört damit zum unmittelbaren Umfeld der Prinzessin und des Hauses Draig. Die bürgerliche Schneiderfamilie ihrer Herkunft bleibt ihr verwandtschaftlicher Rückhalt, während ihr eigener Dienst sie an einen anderen Platz führt als die Werkstatt der Eltern."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Elowen heiratete 1733 Edern Vann und arbeitet seither in der Letzten Rast; Rhys verkauft in der Göttlichen Eleganz. Nia selbst ist unverheiratet und ohne Verlobung. Ihr dunkelrotes Haar und ihre blauen Augen verbinden ihr Aussehen mit den Geschwistern. Der ältere Maerllys-Zweig stammt von den Gwniwr ab; die einzelnen Ahnen vor den langen Überlieferungslücken sind unbekannt."
+          }
+        ]
+      }
+    }
   }
 }

@@ -1,3 +1,4 @@
+import { withMaerllysTailoringContent } from './gwniwr-maerllys-links.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { withKrummeKanneTonnarthLink } from './krumme-kanne-tonnarth-link.js?v=20261016-eleganz-v1';
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
@@ -299,4 +300,6 @@ const TONNARTH_SOURCE_FAMILY = Object.freeze({
   })
 });
 
-export const HOUSE_TONNARTH_FAMILY = withKrummeKanneTonnarthLink(TONNARTH_SOURCE_FAMILY);
+const HOUSE_TONNARTH_FAMILY_BEFORE_TAILORING = withKrummeKanneTonnarthLink(TONNARTH_SOURCE_FAMILY);
+
+export const HOUSE_TONNARTH_FAMILY = withMaerllysTailoringContent(HOUSE_TONNARTH_FAMILY_BEFORE_TAILORING);

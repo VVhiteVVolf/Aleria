@@ -1,0 +1,110 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-08T16:10:00.000Z",
+  "mergeStrategy": "replace-reviewed-metadata-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/nia-maerllys.json",
+  "character": {
+    "bio": "Nia Maerllys wurde 1716 als Tochter Iorwerth Maerllys’ und Bronwen Swylls geboren. Im Jahr 1740 ist sie vierundzwanzig Jahre alt. Elowen ist ihre ältere Schwester, Rhys ihr jüngerer Bruder. Ihre Großeltern väterlicherseits heißen Cadfan und Eira.\n\nNia dient als persönliche Zofe der Prinzessin Isobel Draig. Ihr Alltag gehört damit zum unmittelbaren Umfeld der Prinzessin und des Hauses Draig. Die bürgerliche Schneiderfamilie ihrer Herkunft bleibt ihr verwandtschaftlicher Rückhalt, während ihr eigener Dienst sie an einen anderen Platz führt als die Werkstatt der Eltern.\n\nElowen heiratete 1733 Edern Vann und arbeitet seither in der Letzten Rast; Rhys verkauft in der Göttlichen Eleganz. Nia selbst ist unverheiratet und ohne Verlobung. Ihr dunkelrotes Haar und ihre blauen Augen verbinden ihr Aussehen mit den Geschwistern. Der ältere Maerllys-Zweig stammt von den Gwniwr ab; die einzelnen Ahnen vor den langen Überlieferungslücken sind unbekannt.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Nia Maerllys"
+        },
+        {
+          "label": "Geboren",
+          "value": "1716"
+        },
+        {
+          "label": "Alter",
+          "value": "24 Jahre"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Persönliche Zofe der Prinzessin Isobel Draig"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Maerllys"
+        }
+      ],
+      "biography": {
+        "portrait": "https://i.imgur.com/TY1Vpop.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Nia Maerllys wurde 1716 als Tochter Iorwerth Maerllys’ und Bronwen Swylls geboren. Im Jahr 1740 ist sie vierundzwanzig Jahre alt. Elowen ist ihre ältere Schwester, Rhys ihr jüngerer Bruder. Ihre Großeltern väterlicherseits heißen Cadfan und Eira.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Nia dient als persönliche Zofe der Prinzessin Isobel Draig. Ihr Alltag gehört damit zum unmittelbaren Umfeld der Prinzessin und des Hauses Draig. Die bürgerliche Schneiderfamilie ihrer Herkunft bleibt ihr verwandtschaftlicher Rückhalt, während ihr eigener Dienst sie an einen anderen Platz führt als die Werkstatt der Eltern."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Elowen heiratete 1733 Edern Vann und arbeitet seither in der Letzten Rast; Rhys verkauft in der Göttlichen Eleganz. Nia selbst ist unverheiratet und ohne Verlobung. Ihr dunkelrotes Haar und ihre blauen Augen verbinden ihr Aussehen mit den Geschwistern. Der ältere Maerllys-Zweig stammt von den Gwniwr ab; die einzelnen Ahnen vor den langen Überlieferungslücken sind unbekannt."
+          }
+        ]
+      }
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-maerllys--nia-maerllys",
+      "sex": "unknown",
+      "status": "alive",
+      "birth": "1716",
+      "death": "",
+      "houseId": "house-maerllys",
+      "houseName": "Haus Maerllys",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "24 Jahre"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-maerllys",
+          "personId": "nia-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=nia-maerllys",
+          "fingerprint": "{\"name\":\"Nia Maerllys\",\"title\":\"Persönliche Zofe der Prinzessin Isobel Draig\",\"birth\":\"1716\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/nia-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"24 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"},{\"personId\":\"bronwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "iorwerth-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
+            "name": "Iorwerth Maerllys"
+          },
+          {
+            "personId": "bronwen-swyll",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-swyll--bronwen-swyll",
+            "name": "Bronwen Swyll"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "qN5et9e7KaWlIPTSrsXt",
+    "identity": {
+      "worldPersonId": "person--haus-maerllys--nia-maerllys"
+    },
+    "name": "Nia Maerllys",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-08T16:10:00.000Z",
+  "mergeStrategy": "replace-reviewed-metadata-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/geraint-maerllys.json",
+  "character": {
+    "activeImageSetId": "",
+    "age": 49,
+    "aliases": [],
+    "archived": false,
+    "bio": "Geraint Maerllys wurde 1691 als Sohn Owains und Gwenllian Ysgrifs geboren. Er ist Iorwerths Vetter und Rhoswens Bruder. Seine Gemahlin heißt Llio Falchdyn. Durch ihre Ehe begegnen sich zwei in Gwynthor verwurzelte bürgerliche Familien.\n\nIn Naht & Siegel leitet Geraint die Werkstatt und arbeitet am Schnitt der Herrenlivreen. Bei einem größeren Haushaltsauftrag müssen Stoffrichtung, Hausfarben, Besatz und Größenfolge zusammenpassen. Er ordnet die Arbeitsschritte so, dass einzelne Stücke später nachgefertigt und beschädigte Teile ohne vollständigen Neukauf ersetzt werden können.\n\nDie Spezialisierung der Maerllys richtet sich an Arbeitgeber. Geraint fertigt daher kein bloßes Festkostüm, sondern Kleidung für wiederholten Dienst. Mit Iorwerths Auftragsplanung, Bronwens Anproben und Llios Nähstube bildet seine Werkstatt den Kern des kleineren, professionellen Familienbetriebs.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Geraint Maerllys"
+        },
+        {
+          "label": "Geboren",
+          "value": "1691"
+        },
+        {
+          "label": "Alter",
+          "value": "49 Jahre"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Maerllys"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Werkstattleitung und Livreeschnitt · Naht & Siegel"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/geraint-maerllys.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Geraint Maerllys wurde 1691 als Sohn Owains und Gwenllian Ysgrifs geboren. Er ist Iorwerths Vetter und Rhoswens Bruder. Seine Gemahlin heißt Llio Falchdyn. Durch ihre Ehe begegnen sich zwei in Gwynthor verwurzelte bürgerliche Familien.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "In Naht & Siegel leitet Geraint die Werkstatt und arbeitet am Schnitt der Herrenlivreen. Bei einem größeren Haushaltsauftrag müssen Stoffrichtung, Hausfarben, Besatz und Größenfolge zusammenpassen. Er ordnet die Arbeitsschritte so, dass einzelne Stücke später nachgefertigt und beschädigte Teile ohne vollständigen Neukauf ersetzt werden können."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Die Spezialisierung der Maerllys richtet sich an Arbeitgeber. Geraint fertigt daher kein bloßes Festkostüm, sondern Kleidung für wiederholten Dienst. Mit Iorwerths Auftragsplanung, Bronwens Anproben und Llios Nähstube bildet seine Werkstatt den Kern des kleineren, professionellen Familienbetriebs."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Maerllys",
+    "genealogy": {
+      "worldPersonId": "person--haus-maerllys--geraint-maerllys",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1691",
+      "death": "",
+      "houseId": "house-maerllys",
+      "houseName": "Haus Maerllys",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-maerllys",
+          "personId": "geraint-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=geraint-maerllys",
+          "fingerprint": "{\"name\":\"Geraint Maerllys\",\"title\":\"Werkstattleitung und Livreeschnitt · Naht & Siegel\",\"birth\":\"1691\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/geraint-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--owain-maerllys\",\"name\":\"Owain Maerllys\"},{\"personId\":\"gwenllian-ysgrif\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--gwenllian-ysgrif\",\"name\":\"Gwenllian Ysgrif\"}],\"partners\":[{\"personId\":\"llio-falchdyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falchdyn--llio-falchdyn\",\"name\":\"Llio Falchdyn\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-falchdyn",
+          "personId": "geraint-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-falchdyn&mode=view&person=geraint-maerllys",
+          "fingerprint": "{\"name\":\"Geraint Maerllys\",\"title\":\"Werkstattleitung und Livreeschnitt · Naht & Siegel\",\"birth\":\"1691\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/geraint-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"llio-falchdyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falchdyn--llio-falchdyn\",\"name\":\"Llio Falchdyn\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "owain-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--owain-maerllys",
+            "name": "Owain Maerllys"
+          },
+          {
+            "personId": "gwenllian-ysgrif",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif",
+            "name": "Gwenllian Ysgrif"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "llio-falchdyn",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-falchdyn--llio-falchdyn",
+            "name": "Llio Falchdyn"
+          }
+        ],
+        "children": []
+      }
+    },
+    "id": "person--haus-maerllys--geraint-maerllys",
+    "identity": {
+      "worldPersonId": "person--haus-maerllys--geraint-maerllys"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "name": "Geraint Maerllys",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/geraint-maerllys.png",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=geraint-maerllys",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Werkstattleitung und Livreeschnitt · Naht & Siegel",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

@@ -1,0 +1,393 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-falchdyn--llio-falchdyn",
+  "slug": "llio-falchdyn",
+  "identity": {
+    "name": "Llio Falchdyn",
+    "aliases": [],
+    "worldPersonId": "person--haus-falchdyn--llio-falchdyn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-maerllys",
+      "label": "Haus Maerllys"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-maerllys",
+        "familyTitle": "Haus Maerllys",
+        "personId": "llio-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--llio-falchdyn",
+        "houseId": "house-falchdyn",
+        "houseName": "Haus Falchdyn",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Llio Falchdyn\",\"title\":\"Nähstube und Serienfertigung · Naht & Siegel\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-falchdyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"geraint-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"}],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-falchdyn--llio-falchdyn",
+      "documentIds": [
+        "person--haus-falchdyn--llio-falchdyn"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-falchdyn--llio-falchdyn",
+          "createdAt": "2026-11-08T16:10:00.000Z",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-maerllys",
+        "personId": "llio-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--llio-falchdyn",
+        "url": ""
+      }
+    ],
+    "profile": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=llio-falchdyn"
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/llio-falchdyn.json",
+    "sourceExportedAt": "2026-11-08T16:10:00.000Z",
+    "sourceUpdatedAt": "2026-11-08T16:10:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-falchdyn--llio-falchdyn"
+    ],
+    "contentHash": "2bbb4df2976e5c4d0ce0693b5e36d5318cff816147559c391e50395efd4faa26"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwniwr-maerllys-20261108"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "age": 48,
+        "aliases": [],
+        "archived": false,
+        "bio": "Llio Falchdyn wurde 1692 geboren und ist eine Tochter Madoc Falchdyns. Sie heiratete Geraint Maerllys und lebt im Umfeld der Gwynthorer Schneiderfamilie. Ihre Herkunft verbindet die Maerllys mit dem Haus Falchdyn.\n\nLlio betreut in Naht & Siegel die Nähstube und die Serienfertigung. Eine Reihe von Dienstkleidern soll gleichmäßig wirken und trotzdem zu Menschen unterschiedlicher Größe passen. Sie achtet auf wiederkehrende Nahtführung, saubere Innenverarbeitung und eine Arbeitsfolge, in der Änderungen vor der letzten Fertigstellung möglich bleiben.\n\nMit Geraints Werkstattleitung und Bronwens abschließender Anprobe verbindet sich ihre Arbeit zu einer verlässlichen Abfolge. Eine Bestellung für einen ganzen Haushalt verlangt Geduld und gleichbleibende Sorgfalt. Gerade in der Wiederholung sieht Llio den Unterschied zwischen bloßer Gleichförmigkeit und gutem Handwerk.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Llio Falchdyn"
+            },
+            {
+              "label": "Geboren",
+              "value": "1692"
+            },
+            {
+              "label": "Alter",
+              "value": "48 Jahre"
+            },
+            {
+              "label": "Familie",
+              "value": "Haus Falchdyn"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Nähstube und Serienfertigung · Naht & Siegel"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png",
+            "biographyTitle": "Biografie",
+            "biographyText": "Llio Falchdyn wurde 1692 geboren und ist eine Tochter Madoc Falchdyns. Sie heiratete Geraint Maerllys und lebt im Umfeld der Gwynthorer Schneiderfamilie. Ihre Herkunft verbindet die Maerllys mit dem Haus Falchdyn.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Arbeit und Alltag",
+                "text": "Llio betreut in Naht & Siegel die Nähstube und die Serienfertigung. Eine Reihe von Dienstkleidern soll gleichmäßig wirken und trotzdem zu Menschen unterschiedlicher Größe passen. Sie achtet auf wiederkehrende Nahtführung, saubere Innenverarbeitung und eine Arbeitsfolge, in der Änderungen vor der letzten Fertigstellung möglich bleiben."
+              },
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Familie und Verbindungen",
+                "text": "Mit Geraints Werkstattleitung und Bronwens abschließender Anprobe verbindet sich ihre Arbeit zu einer verlässlichen Abfolge. Eine Bestellung für einen ganzen Haushalt verlangt Geduld und gleichbleibende Sorgfalt. Gerade in der Wiederholung sieht Llio den Unterschied zwischen bloßer Gleichförmigkeit und gutem Handwerk."
+              }
+            ]
+          }
+        },
+        "createdAt": "2026-11-08T16:10:00.000Z",
+        "currentLocation": "Gwynthor",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Falchdyn",
+        "genealogy": {
+          "worldPersonId": "person--haus-falchdyn--llio-falchdyn",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1692",
+          "death": "",
+          "houseId": "house-falchdyn",
+          "houseName": "Haus Falchdyn",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-maerllys",
+              "personId": "llio-falchdyn",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-08T16:10:00.000Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=llio-falchdyn",
+              "fingerprint": "{\"name\":\"Llio Falchdyn\",\"title\":\"Nähstube und Serienfertigung · Naht & Siegel\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-falchdyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"geraint-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"}],\"children\":[]}}"
+            },
+            {
+              "familyId": "haus-falchdyn",
+              "personId": "llio-falchdyn",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-08T16:10:00.000Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-falchdyn&mode=view&person=llio-falchdyn",
+              "fingerprint": "{\"name\":\"Llio Falchdyn\",\"title\":\"Nähstube und Serienfertigung · Naht & Siegel\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-falchdyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"madoc-falchdyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falchdyn--madoc-falchdyn\",\"name\":\"Madoc Falchdyn\"},{\"personId\":\"seren-spouse-falchdyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--seren-spouse-falchdyn\",\"name\":\"Seren\"}],\"partners\":[{\"personId\":\"geraint-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"}],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "madoc-falchdyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-falchdyn--madoc-falchdyn",
+                "name": "Madoc Falchdyn"
+              },
+              {
+                "personId": "seren-spouse-falchdyn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--family-tree--seren-spouse-falchdyn",
+                "name": "Seren"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "geraint-maerllys",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-maerllys--geraint-maerllys",
+                "name": "Geraint Maerllys"
+              }
+            ],
+            "children": []
+          }
+        },
+        "id": "person--haus-falchdyn--llio-falchdyn",
+        "identity": {
+          "worldPersonId": "person--haus-falchdyn--llio-falchdyn"
+        },
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "imageSetsOverride": false,
+        "name": "Llio Falchdyn",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png",
+        "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=llio-falchdyn",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "Nähstube und Serienfertigung · Naht & Siegel",
+        "updatedAt": "2026-11-08T16:10:00.000Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "age": 48,
+    "aliases": [],
+    "archived": false,
+    "bio": "Llio Falchdyn wurde 1692 geboren und ist eine Tochter Madoc Falchdyns. Sie heiratete Geraint Maerllys und lebt im Umfeld der Gwynthorer Schneiderfamilie. Ihre Herkunft verbindet die Maerllys mit dem Haus Falchdyn.\n\nLlio betreut in Naht & Siegel die Nähstube und die Serienfertigung. Eine Reihe von Dienstkleidern soll gleichmäßig wirken und trotzdem zu Menschen unterschiedlicher Größe passen. Sie achtet auf wiederkehrende Nahtführung, saubere Innenverarbeitung und eine Arbeitsfolge, in der Änderungen vor der letzten Fertigstellung möglich bleiben.\n\nMit Geraints Werkstattleitung und Bronwens abschließender Anprobe verbindet sich ihre Arbeit zu einer verlässlichen Abfolge. Eine Bestellung für einen ganzen Haushalt verlangt Geduld und gleichbleibende Sorgfalt. Gerade in der Wiederholung sieht Llio den Unterschied zwischen bloßer Gleichförmigkeit und gutem Handwerk.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Llio Falchdyn"
+        },
+        {
+          "label": "Geboren",
+          "value": "1692"
+        },
+        {
+          "label": "Alter",
+          "value": "48 Jahre"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Falchdyn"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Nähstube und Serienfertigung · Naht & Siegel"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Llio Falchdyn wurde 1692 geboren und ist eine Tochter Madoc Falchdyns. Sie heiratete Geraint Maerllys und lebt im Umfeld der Gwynthorer Schneiderfamilie. Ihre Herkunft verbindet die Maerllys mit dem Haus Falchdyn.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Llio betreut in Naht & Siegel die Nähstube und die Serienfertigung. Eine Reihe von Dienstkleidern soll gleichmäßig wirken und trotzdem zu Menschen unterschiedlicher Größe passen. Sie achtet auf wiederkehrende Nahtführung, saubere Innenverarbeitung und eine Arbeitsfolge, in der Änderungen vor der letzten Fertigstellung möglich bleiben."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Mit Geraints Werkstattleitung und Bronwens abschließender Anprobe verbindet sich ihre Arbeit zu einer verlässlichen Abfolge. Eine Bestellung für einen ganzen Haushalt verlangt Geduld und gleichbleibende Sorgfalt. Gerade in der Wiederholung sieht Llio den Unterschied zwischen bloßer Gleichförmigkeit und gutem Handwerk."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Falchdyn",
+    "genealogy": {
+      "worldPersonId": "person--haus-falchdyn--llio-falchdyn",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1692",
+      "death": "",
+      "houseId": "house-falchdyn",
+      "houseName": "Haus Falchdyn",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-maerllys",
+          "personId": "llio-falchdyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=llio-falchdyn",
+          "fingerprint": "{\"name\":\"Llio Falchdyn\",\"title\":\"Nähstube und Serienfertigung · Naht & Siegel\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-falchdyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"geraint-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-falchdyn",
+          "personId": "llio-falchdyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-falchdyn&mode=view&person=llio-falchdyn",
+          "fingerprint": "{\"name\":\"Llio Falchdyn\",\"title\":\"Nähstube und Serienfertigung · Naht & Siegel\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-falchdyn\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"madoc-falchdyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-falchdyn--madoc-falchdyn\",\"name\":\"Madoc Falchdyn\"},{\"personId\":\"seren-spouse-falchdyn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--seren-spouse-falchdyn\",\"name\":\"Seren\"}],\"partners\":[{\"personId\":\"geraint-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "madoc-falchdyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-falchdyn--madoc-falchdyn",
+            "name": "Madoc Falchdyn"
+          },
+          {
+            "personId": "seren-spouse-falchdyn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--seren-spouse-falchdyn",
+            "name": "Seren"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "geraint-maerllys",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--geraint-maerllys",
+            "name": "Geraint Maerllys"
+          }
+        ],
+        "children": []
+      }
+    },
+    "id": "person--haus-falchdyn--llio-falchdyn",
+    "identity": {
+      "worldPersonId": "person--haus-falchdyn--llio-falchdyn"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "name": "Llio Falchdyn",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=llio-falchdyn",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Nähstube und Serienfertigung · Naht & Siegel",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

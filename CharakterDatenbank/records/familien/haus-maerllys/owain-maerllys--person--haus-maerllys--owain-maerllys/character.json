@@ -1,0 +1,411 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-maerllys--owain-maerllys",
+  "slug": "owain-maerllys",
+  "identity": {
+    "name": "Owain Maerllys",
+    "aliases": [],
+    "worldPersonId": "person--haus-maerllys--owain-maerllys"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-maerllys",
+      "label": "Haus Maerllys"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-maerllys",
+        "familyTitle": "Haus Maerllys",
+        "personId": "owain-maerllys",
+        "worldPersonId": "person--haus-maerllys--owain-maerllys",
+        "houseId": "house-maerllys",
+        "houseName": "Haus Maerllys",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Owain Maerllys\",\"title\":\"Großonkel Nia Maerllys’\",\"birth\":\"1665\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/owain-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"unbekannter-bruder-gwenora-maerllys\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--unbekannter-bruder-gwenora-maerllys\",\"name\":\"Unbekannter Bruder\"}],\"partners\":[{\"personId\":\"gwenllian-ysgrif\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--gwenllian-ysgrif\",\"name\":\"Gwenllian Ysgrif\"}],\"children\":[{\"personId\":\"geraint-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"},{\"personId\":\"rhoswen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-maerllys--owain-maerllys",
+      "documentIds": [
+        "person--haus-maerllys--owain-maerllys"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-maerllys--owain-maerllys",
+          "createdAt": "2026-11-08T16:10:00.000Z",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-maerllys",
+        "personId": "owain-maerllys",
+        "worldPersonId": "person--haus-maerllys--owain-maerllys",
+        "url": ""
+      }
+    ],
+    "profile": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=owain-maerllys"
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/owain-maerllys.json",
+    "sourceExportedAt": "2026-11-08T16:10:00.000Z",
+    "sourceUpdatedAt": "2026-11-08T16:10:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-maerllys--owain-maerllys"
+    ],
+    "contentHash": "fee108386d76e7d609d6f508681d209af3e416a07e9e148816d211937716358e"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwniwr-maerllys-20261108"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "age": 75,
+        "aliases": [],
+        "archived": false,
+        "bio": "Owain Maerllys wurde 1665 geboren und ist Cadfans Bruder. Er heiratete Gwenllian Ysgrif. Ihre Kinder heißen Geraint und Rhoswen. Die beiden Brüder stehen am Beginn der namentlich bekannten jüngeren Maerllys-Linie; die früheren Generationen sind nur lückenhaft überliefert.\n\nOwain bringt als älterer Handwerker Erfahrung bei Schnittfragen und alten Mustern ein. Für die Dienstgarnituren von Naht & Siegel sind bewährte Schnitte wichtig, die sich wiederholen und an verschiedene Körper anpassen lassen. Während Geraint die heutige Werkstatt leitet, behält Owain im Familienrat den Blick auf das ältere Handwerkswissen.\n\nGeraint ist mit Llio Falchdyn verheiratet. Rhoswen heiratete Madoc Tonnarth und hat mit ihm die drei Söhne Bryn, Emrys und Aled. Owains Familie ist damit in mehrere Gwynthorer Haushalte verzweigt und bewahrt über die Ehen den persönlichen Kontakt über die eigene Werkstatt hinaus.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Owain Maerllys"
+            },
+            {
+              "label": "Geboren",
+              "value": "1665"
+            },
+            {
+              "label": "Alter",
+              "value": "75 Jahre"
+            },
+            {
+              "label": "Familie",
+              "value": "Haus Maerllys"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Großonkel Nia Maerllys’"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/owain-maerllys.png",
+            "biographyTitle": "Biografie",
+            "biographyText": "Owain Maerllys wurde 1665 geboren und ist Cadfans Bruder. Er heiratete Gwenllian Ysgrif. Ihre Kinder heißen Geraint und Rhoswen. Die beiden Brüder stehen am Beginn der namentlich bekannten jüngeren Maerllys-Linie; die früheren Generationen sind nur lückenhaft überliefert.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Arbeit und Alltag",
+                "text": "Owain bringt als älterer Handwerker Erfahrung bei Schnittfragen und alten Mustern ein. Für die Dienstgarnituren von Naht & Siegel sind bewährte Schnitte wichtig, die sich wiederholen und an verschiedene Körper anpassen lassen. Während Geraint die heutige Werkstatt leitet, behält Owain im Familienrat den Blick auf das ältere Handwerkswissen."
+              },
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Familie und Verbindungen",
+                "text": "Geraint ist mit Llio Falchdyn verheiratet. Rhoswen heiratete Madoc Tonnarth und hat mit ihm die drei Söhne Bryn, Emrys und Aled. Owains Familie ist damit in mehrere Gwynthorer Haushalte verzweigt und bewahrt über die Ehen den persönlichen Kontakt über die eigene Werkstatt hinaus."
+              }
+            ]
+          }
+        },
+        "createdAt": "2026-11-08T16:10:00.000Z",
+        "currentLocation": "Gwynthor",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Maerllys",
+        "genealogy": {
+          "worldPersonId": "person--haus-maerllys--owain-maerllys",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1665",
+          "death": "",
+          "houseId": "house-maerllys",
+          "houseName": "Haus Maerllys",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-maerllys",
+              "personId": "owain-maerllys",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-08T16:10:00.000Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=owain-maerllys",
+              "fingerprint": "{\"name\":\"Owain Maerllys\",\"title\":\"Großonkel Nia Maerllys’\",\"birth\":\"1665\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/owain-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"unbekannter-bruder-gwenora-maerllys\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--unbekannter-bruder-gwenora-maerllys\",\"name\":\"Unbekannter Bruder\"}],\"partners\":[{\"personId\":\"gwenllian-ysgrif\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--gwenllian-ysgrif\",\"name\":\"Gwenllian Ysgrif\"}],\"children\":[{\"personId\":\"geraint-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"},{\"personId\":\"rhoswen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}]}}"
+            },
+            {
+              "familyId": "haus-ysgrif",
+              "personId": "owain-maerllys",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-08T16:10:00.000Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-ysgrif&mode=view&person=owain-maerllys",
+              "fingerprint": "{\"name\":\"Owain Maerllys\",\"title\":\"Großonkel Nia Maerllys’\",\"birth\":\"1665\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/owain-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenllian-ysgrif\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--gwenllian-ysgrif\",\"name\":\"Gwenllian Ysgrif\"}],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "unbekannter-bruder-gwenora-maerllys",
+                "type": "claimed",
+                "legitimacy": "unknown",
+                "certainty": "unknown",
+                "worldPersonId": "person--haus-maerllys--unbekannter-bruder-gwenora-maerllys",
+                "name": "Unbekannter Bruder"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "gwenllian-ysgrif",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif",
+                "name": "Gwenllian Ysgrif"
+              }
+            ],
+            "children": [
+              {
+                "personId": "geraint-maerllys",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-maerllys--geraint-maerllys",
+                "name": "Geraint Maerllys"
+              },
+              {
+                "personId": "rhoswen-maerllys",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-maerllys--rhoswen-maerllys",
+                "name": "Rhoswen Maerllys"
+              }
+            ]
+          }
+        },
+        "id": "person--haus-maerllys--owain-maerllys",
+        "identity": {
+          "worldPersonId": "person--haus-maerllys--owain-maerllys"
+        },
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "imageSetsOverride": false,
+        "name": "Owain Maerllys",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/owain-maerllys.png",
+        "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=owain-maerllys",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "Großonkel Nia Maerllys’",
+        "updatedAt": "2026-11-08T16:10:00.000Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "age": 75,
+    "aliases": [],
+    "archived": false,
+    "bio": "Owain Maerllys wurde 1665 geboren und ist Cadfans Bruder. Er heiratete Gwenllian Ysgrif. Ihre Kinder heißen Geraint und Rhoswen. Die beiden Brüder stehen am Beginn der namentlich bekannten jüngeren Maerllys-Linie; die früheren Generationen sind nur lückenhaft überliefert.\n\nOwain bringt als älterer Handwerker Erfahrung bei Schnittfragen und alten Mustern ein. Für die Dienstgarnituren von Naht & Siegel sind bewährte Schnitte wichtig, die sich wiederholen und an verschiedene Körper anpassen lassen. Während Geraint die heutige Werkstatt leitet, behält Owain im Familienrat den Blick auf das ältere Handwerkswissen.\n\nGeraint ist mit Llio Falchdyn verheiratet. Rhoswen heiratete Madoc Tonnarth und hat mit ihm die drei Söhne Bryn, Emrys und Aled. Owains Familie ist damit in mehrere Gwynthorer Haushalte verzweigt und bewahrt über die Ehen den persönlichen Kontakt über die eigene Werkstatt hinaus.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Owain Maerllys"
+        },
+        {
+          "label": "Geboren",
+          "value": "1665"
+        },
+        {
+          "label": "Alter",
+          "value": "75 Jahre"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Maerllys"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Großonkel Nia Maerllys’"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/owain-maerllys.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Owain Maerllys wurde 1665 geboren und ist Cadfans Bruder. Er heiratete Gwenllian Ysgrif. Ihre Kinder heißen Geraint und Rhoswen. Die beiden Brüder stehen am Beginn der namentlich bekannten jüngeren Maerllys-Linie; die früheren Generationen sind nur lückenhaft überliefert.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Owain bringt als älterer Handwerker Erfahrung bei Schnittfragen und alten Mustern ein. Für die Dienstgarnituren von Naht & Siegel sind bewährte Schnitte wichtig, die sich wiederholen und an verschiedene Körper anpassen lassen. Während Geraint die heutige Werkstatt leitet, behält Owain im Familienrat den Blick auf das ältere Handwerkswissen."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Geraint ist mit Llio Falchdyn verheiratet. Rhoswen heiratete Madoc Tonnarth und hat mit ihm die drei Söhne Bryn, Emrys und Aled. Owains Familie ist damit in mehrere Gwynthorer Haushalte verzweigt und bewahrt über die Ehen den persönlichen Kontakt über die eigene Werkstatt hinaus."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Maerllys",
+    "genealogy": {
+      "worldPersonId": "person--haus-maerllys--owain-maerllys",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1665",
+      "death": "",
+      "houseId": "house-maerllys",
+      "houseName": "Haus Maerllys",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-maerllys",
+          "personId": "owain-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=owain-maerllys",
+          "fingerprint": "{\"name\":\"Owain Maerllys\",\"title\":\"Großonkel Nia Maerllys’\",\"birth\":\"1665\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/owain-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"unbekannter-bruder-gwenora-maerllys\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--unbekannter-bruder-gwenora-maerllys\",\"name\":\"Unbekannter Bruder\"}],\"partners\":[{\"personId\":\"gwenllian-ysgrif\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--gwenllian-ysgrif\",\"name\":\"Gwenllian Ysgrif\"}],\"children\":[{\"personId\":\"geraint-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--geraint-maerllys\",\"name\":\"Geraint Maerllys\"},{\"personId\":\"rhoswen-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}]}}"
+        },
+        {
+          "familyId": "haus-ysgrif",
+          "personId": "owain-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-ysgrif&mode=view&person=owain-maerllys",
+          "fingerprint": "{\"name\":\"Owain Maerllys\",\"title\":\"Großonkel Nia Maerllys’\",\"birth\":\"1665\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/owain-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenllian-ysgrif\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--gwenllian-ysgrif\",\"name\":\"Gwenllian Ysgrif\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "unbekannter-bruder-gwenora-maerllys",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "unknown",
+            "worldPersonId": "person--haus-maerllys--unbekannter-bruder-gwenora-maerllys",
+            "name": "Unbekannter Bruder"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "gwenllian-ysgrif",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif",
+            "name": "Gwenllian Ysgrif"
+          }
+        ],
+        "children": [
+          {
+            "personId": "geraint-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--geraint-maerllys",
+            "name": "Geraint Maerllys"
+          },
+          {
+            "personId": "rhoswen-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--rhoswen-maerllys",
+            "name": "Rhoswen Maerllys"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-maerllys--owain-maerllys",
+    "identity": {
+      "worldPersonId": "person--haus-maerllys--owain-maerllys"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "name": "Owain Maerllys",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/owain-maerllys.png",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=owain-maerllys",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Großonkel Nia Maerllys’",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

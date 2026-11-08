@@ -44,6 +44,56 @@ const economySourceInputs = [
 // which deliberately blocks image requests, but CSS, vendor code and family data do.
 export const SITE_BUILD_TASKS = [
   {
+    "id": "gwniwr-maerllys",
+    "label": "Gwniwr and Maerllys families, clothing catalogues and bounded biographies",
+    "inputs": [
+      "AleriaAlmanach/modules/gwniwr/",
+      "AleriaAlmanach/modules/maerllys/",
+      "AleriaAlmanach/modules/gwniwr-maerllys/",
+      "AleriaAlmanach/assets/gwniwr/",
+      "AleriaAlmanach/assets/maerllys/",
+      "AleriaAlmanach/scripts/build-gwniwr-shop.mjs",
+      "AleriaAlmanach/scripts/build-maerllys.mjs",
+      "AleriaAlmanach/scripts/build-tailoring-characters.mjs",
+      "AleriaAlmanach/tests/gwniwr-shop.test.mjs",
+      "AleriaAlmanach/tests/maerllys.test.mjs",
+      "AleriaAlmanach/tests/tailoring-character-import.test.mjs",
+      "Stammbäume/assets/js/data/",
+      "Stammbäume/assets/data/source-inventories/gwniwr-maerllys-20261108/",
+      "Stammbäume/tools/publish-family-snapshots.mjs",
+      "Stammbäume/tools/family-snapshot-identity-corrections.mjs",
+      "Stammbäume/tests/gwniwr-maerllys.test.js",
+      "Stammbäume/tests/family-chart-founder-house-links.test.js",
+      "Stammbäume/tests/family-snapshot-identity-corrections.test.js",
+      "Charakter Archiv Exporte/Gwniwr-Maerllys/",
+      "CharakterDatenbank/"
+    ],
+    "commands": [
+      [
+        "AleriaAlmanach/scripts/build-gwniwr-shop.mjs",
+        "--check"
+      ],
+      [
+        "AleriaAlmanach/scripts/build-maerllys.mjs",
+        "--check"
+      ],
+      [
+        "AleriaAlmanach/scripts/build-tailoring-characters.mjs",
+        "--check"
+      ],
+      [
+        "--test",
+        "--experimental-test-isolation=none",
+        "AleriaAlmanach/tests/gwniwr-shop.test.mjs",
+        "AleriaAlmanach/tests/maerllys.test.mjs",
+        "AleriaAlmanach/tests/tailoring-character-import.test.mjs",
+        "Stammbäume/tests/gwniwr-maerllys.test.js",
+      "Stammbäume/tests/family-chart-founder-house-links.test.js",
+        "Stammbäume/tests/family-snapshot-identity-corrections.test.js"
+      ]
+    ]
+  },
+  {
     id: 'inventory-theme', label: 'Inventory presentation, images, card data and equipment/transfer invariants',
     inputs: ['firebase/functions/package.json', 'firebase/functions/package-lock.json',
       'AleriaAlmanach/modules/character-inventory/', 'AleriaAlmanach/modules/characters/character-inventory-profile.js',

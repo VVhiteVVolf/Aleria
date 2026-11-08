@@ -1,0 +1,283 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--gwniwr-staff--nesta-ferchwyn",
+  "slug": "nesta-ferchwyn",
+  "identity": {
+    "name": "Nesta Ferchwyn",
+    "aliases": [],
+    "worldPersonId": "person--gwniwr-staff--nesta-ferchwyn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--gwniwr-staff--nesta-ferchwyn",
+      "documentIds": [
+        "person--gwniwr-staff--nesta-ferchwyn",
+        "person--gwniwr-staff--nesta-ferchwyn"
+      ],
+      "documents": [
+        {
+          "documentId": "person--gwniwr-staff--nesta-ferchwyn",
+          "createdAt": "2026-11-08T16:10:00.000Z",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
+        },
+        {
+          "documentId": "person--gwniwr-staff--nesta-ferchwyn",
+          "createdAt": "",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwniwr-Maerllys/personal/nesta-ferchwyn.json",
+    "sourceExportedAt": "2026-11-08T16:10:00.000Z",
+    "sourceUpdatedAt": "2026-11-08T16:10:00.000Z",
+    "sourceDocumentIds": [
+      "person--gwniwr-staff--nesta-ferchwyn",
+      "person--gwniwr-staff--nesta-ferchwyn"
+    ],
+    "contentHash": "8a72ff9adf876c3d880afd7ad87cb7ceeec92cdbad1abe2ebfd641afa6bb2b0c"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwniwr-maerllys-20261108"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "age": 34,
+        "bio": "Nesta Ferchwyn ist 34 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Nesta arbeitet im Laden Nadel & Faden. Sie begleitet die Auswahl der Tuche und hält bei einer Anprobe fest, welche Änderungen vor der Abholung noch nötig sind.\n\nIm Laden von Emyr und Gwenllian gilt die gleiche Sorgfalt für schlichte und gute Kleidung. Die Arbeit wird mit Schneidermeister Tudur und den übrigen Händen abgestimmt. Ausbesserungen, klare Absprachen und haltbare Nähte sind ebenso wichtig wie ein neues Kleidungsstück.\n\nZum Arbeitskreis gehören neben Emyr, Gwenllian und Tudur auch die anderen Angestellten und der junge Lehrling Osian. Die Aufgaben greifen ineinander: Beratung und Anprobe, Zuschnitt und Nähstube führen gemeinsam zu einem Kleidungsstück, auf das der Käufer vertrauen kann.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Nesta Ferchwyn"
+            },
+            {
+              "label": "Alter",
+              "value": "34 Jahre"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Verkauf · Stoffwahl & Anproben"
+            },
+            {
+              "label": "Arbeitsort",
+              "value": "Nadel & Faden · Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "assets/gwniwr/portraits/nesta-ferchwyn.jpg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Nesta Ferchwyn ist 34 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Nesta arbeitet im Laden Nadel & Faden. Sie begleitet die Auswahl der Tuche und hält bei einer Anprobe fest, welche Änderungen vor der Abholung noch nötig sind.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Arbeit und Alltag",
+                "text": "Im Laden von Emyr und Gwenllian gilt die gleiche Sorgfalt für schlichte und gute Kleidung. Die Arbeit wird mit Schneidermeister Tudur und den übrigen Händen abgestimmt. Ausbesserungen, klare Absprachen und haltbare Nähte sind ebenso wichtig wie ein neues Kleidungsstück."
+              },
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Familie und Verbindungen",
+                "text": "Zum Arbeitskreis gehören neben Emyr, Gwenllian und Tudur auch die anderen Angestellten und der junge Lehrling Osian. Die Aufgaben greifen ineinander: Beratung und Anprobe, Zuschnitt und Nähstube führen gemeinsam zu einem Kleidungsstück, auf das der Käufer vertrauen kann."
+              }
+            ]
+          }
+        },
+        "createdAt": "2026-11-08T16:10:00.000Z",
+        "currentLocation": "Gwynthor · Nadel & Faden",
+        "fraktion": "Nadel & Faden",
+        "id": "person--gwniwr-staff--nesta-ferchwyn",
+        "identity": {
+          "worldPersonId": "person--gwniwr-staff--nesta-ferchwyn"
+        },
+        "name": "Nesta Ferchwyn",
+        "origin": "",
+        "portrait": "assets/gwniwr/portraits/nesta-ferchwyn.jpg",
+        "relevance": "minor",
+        "role": "Verkauf · Stoffwahl & Anproben",
+        "status": "active",
+        "title": "Verkauf · Stoffwahl & Anproben",
+        "updatedAt": "2026-11-08T16:10:00.000Z"
+      },
+      {
+        "age": 34,
+        "bio": "Nesta Ferchwyn ist 34 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Nesta arbeitet im Laden Nadel & Faden. Sie begleitet die Auswahl der Tuche und hält bei einer Anprobe fest, welche Änderungen vor der Abholung noch nötig sind.\n\nIm Laden von Emyr und Gwenllian gilt die gleiche Sorgfalt für schlichte und gute Kleidung. Die Arbeit wird mit Schneidermeister Tudur und den übrigen Händen abgestimmt. Ausbesserungen, klare Absprachen und haltbare Nähte sind ebenso wichtig wie ein neues Kleidungsstück.\n\nZum Arbeitskreis gehören neben Emyr, Gwenllian und Tudur auch die anderen Angestellten und der junge Lehrling Osian. Die Aufgaben greifen ineinander: Beratung und Anprobe, Zuschnitt und Nähstube führen gemeinsam zu einem Kleidungsstück, auf das der Käufer vertrauen kann.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Nesta Ferchwyn"
+            },
+            {
+              "label": "Alter",
+              "value": "34 Jahre"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Verkauf · Stoffwahl & Anproben"
+            },
+            {
+              "label": "Arbeitsort",
+              "value": "Nadel & Faden · Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "./assets/gwniwr/portraits/nesta-ferchwyn.jpg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Nesta Ferchwyn ist 34 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Nesta arbeitet im Laden Nadel & Faden. Sie begleitet die Auswahl der Tuche und hält bei einer Anprobe fest, welche Änderungen vor der Abholung noch nötig sind.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Arbeit und Alltag",
+                "text": "Im Laden von Emyr und Gwenllian gilt die gleiche Sorgfalt für schlichte und gute Kleidung. Die Arbeit wird mit Schneidermeister Tudur und den übrigen Händen abgestimmt. Ausbesserungen, klare Absprachen und haltbare Nähte sind ebenso wichtig wie ein neues Kleidungsstück."
+              },
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Familie und Verbindungen",
+                "text": "Zum Arbeitskreis gehören neben Emyr, Gwenllian und Tudur auch die anderen Angestellten und der junge Lehrling Osian. Die Aufgaben greifen ineinander: Beratung und Anprobe, Zuschnitt und Nähstube führen gemeinsam zu einem Kleidungsstück, auf das der Käufer vertrauen kann."
+              }
+            ]
+          }
+        },
+        "createdAt": "2026-11-08T16:10:00.000Z",
+        "currentLocation": "Gwynthor · Nadel & Faden",
+        "fraktion": "Nadel & Faden",
+        "id": "person--gwniwr-staff--nesta-ferchwyn",
+        "identity": {
+          "worldPersonId": "person--gwniwr-staff--nesta-ferchwyn"
+        },
+        "name": "Nesta Ferchwyn",
+        "origin": "",
+        "portrait": "./assets/gwniwr/portraits/nesta-ferchwyn.jpg",
+        "relevance": "minor",
+        "role": "Verkauf · Stoffwahl & Anproben",
+        "status": "active",
+        "title": "Verkauf · Stoffwahl & Anproben",
+        "updatedAt": "2026-11-08T16:10:00.000Z"
+      }
+    ]
+  },
+  "character": {
+    "age": 34,
+    "bio": "Nesta Ferchwyn ist 34 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Nesta arbeitet im Laden Nadel & Faden. Sie begleitet die Auswahl der Tuche und hält bei einer Anprobe fest, welche Änderungen vor der Abholung noch nötig sind.\n\nIm Laden von Emyr und Gwenllian gilt die gleiche Sorgfalt für schlichte und gute Kleidung. Die Arbeit wird mit Schneidermeister Tudur und den übrigen Händen abgestimmt. Ausbesserungen, klare Absprachen und haltbare Nähte sind ebenso wichtig wie ein neues Kleidungsstück.\n\nZum Arbeitskreis gehören neben Emyr, Gwenllian und Tudur auch die anderen Angestellten und der junge Lehrling Osian. Die Aufgaben greifen ineinander: Beratung und Anprobe, Zuschnitt und Nähstube führen gemeinsam zu einem Kleidungsstück, auf das der Käufer vertrauen kann.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Nesta Ferchwyn"
+        },
+        {
+          "label": "Alter",
+          "value": "34 Jahre"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Verkauf · Stoffwahl & Anproben"
+        },
+        {
+          "label": "Arbeitsort",
+          "value": "Nadel & Faden · Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwniwr/portraits/nesta-ferchwyn.jpg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Nesta Ferchwyn ist 34 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Nesta arbeitet im Laden Nadel & Faden. Sie begleitet die Auswahl der Tuche und hält bei einer Anprobe fest, welche Änderungen vor der Abholung noch nötig sind.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Im Laden von Emyr und Gwenllian gilt die gleiche Sorgfalt für schlichte und gute Kleidung. Die Arbeit wird mit Schneidermeister Tudur und den übrigen Händen abgestimmt. Ausbesserungen, klare Absprachen und haltbare Nähte sind ebenso wichtig wie ein neues Kleidungsstück."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Zum Arbeitskreis gehören neben Emyr, Gwenllian und Tudur auch die anderen Angestellten und der junge Lehrling Osian. Die Aufgaben greifen ineinander: Beratung und Anprobe, Zuschnitt und Nähstube führen gemeinsam zu einem Kleidungsstück, auf das der Käufer vertrauen kann."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor · Nadel & Faden",
+    "fraktion": "Nadel & Faden",
+    "id": "person--gwniwr-staff--nesta-ferchwyn",
+    "identity": {
+      "worldPersonId": "person--gwniwr-staff--nesta-ferchwyn"
+    },
+    "name": "Nesta Ferchwyn",
+    "origin": "",
+    "portrait": "./assets/gwniwr/portraits/nesta-ferchwyn.jpg",
+    "relevance": "minor",
+    "role": "Verkauf · Stoffwahl & Anproben",
+    "status": "active",
+    "title": "Verkauf · Stoffwahl & Anproben",
+    "updatedAt": "2026-11-08T16:10:00.000Z",
+    "aliases": [],
+    "genealogy": {
+      "worldPersonId": "person--gwniwr-staff--nesta-ferchwyn",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

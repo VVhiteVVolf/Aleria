@@ -1,0 +1,103 @@
+{
+  "schema": "aleria.reviewed-family-identity-corrections",
+  "schemaVersion": 1,
+  "sourcePath": "Stammbäume/assets/data/source-inventories/gwniwr-maerllys-20261108/gwniwr-original.json",
+  "sourceSha256": "30670a96713d8f678d6ca975d1e5cf2a80fb912682310fe54231f6f502818142",
+  "evidence": "Gwniwr-JSON und Hausprosa nennen Eleri1708 mit Hywel1708. Die bereits kanonische Craigddu-Akte führt dasselbe Paar mit sieben Töchtern; Hywels identisches geliefertes Bild und das übereinstimmende Alter bestätigen den Abgleich. Die Hausprosa nennt Eleri ausdrücklich als Tochter der Gwniwr.",
+  "marriageLinkId": "marriage-hywel-craigddu-eleri-gwniwr",
+  "corrections": [
+    {
+      "familyId": "gwniwr",
+      "personId": "person-e847aa96",
+      "fromWorldPersonId": "person--gwniwr--person-e847aa96",
+      "toWorldPersonId": "person--craigddu--person-28b0e0a3",
+      "fromHouseId": "",
+      "toHouseId": "house-craigddu",
+      "birth": "1708",
+      "sex": "male",
+      "counterpartFamilyId": "craigddu",
+      "counterpartPersonId": "person-28b0e0a3",
+      "marriageLinkId": "marriage-hywel-craigddu-eleri-gwniwr",
+      "sourcePath": "Stammbäume/assets/data/source-inventories/gwniwr-maerllys-20261108/gwniwr-original.json",
+      "sourceSha256": "30670a96713d8f678d6ca975d1e5cf2a80fb912682310fe54231f6f502818142",
+      "reason": "Hywel1708 ist Eleris1708 Ehemann in Gwniwr und Craigddu. Das gelieferte Gwniwr-Porträt ist byteidentisch zum kanonischen Craigddu-Porträt. Name in der HTML-Quelle Hywel; JSON-Übertragung Hwyel. Bestehende Karten-ID bleibt erhalten."
+    },
+    {
+      "familyId": "craigddu",
+      "personId": "person-0774c56b",
+      "fromWorldPersonId": "person--craigddu--person-0774c56b",
+      "toWorldPersonId": "person--gwniwr--person-cf831497",
+      "fromHouseId": "",
+      "toHouseId": "",
+      "birth": "1708",
+      "sex": "female",
+      "counterpartFamilyId": "gwniwr",
+      "counterpartPersonId": "person-cf831497",
+      "marriageLinkId": "marriage-hywel-craigddu-eleri-gwniwr",
+      "sourcePath": "Stammbäume/assets/data/source-inventories/gwniwr-maerllys-20261108/gwniwr-original.json",
+      "sourceSha256": "30670a96713d8f678d6ca975d1e5cf2a80fb912682310fe54231f6f502818142",
+      "reason": "Eleri1708 ist Hywels1708 Ehefrau in beiden Quellen. Die Gwniwr-JSON und Hausprosa belegen Eleri als Tochter Emyrs und Gwenllians und Schwester Tudurs; die Craigddu-Karten-ID und alle sieben Elternschaften bleiben erhalten."
+    }
+  ],
+  "hywelPortraitEvidence": {
+    "deliveredSha256": "079564587a798c89a1a5da0da96a5dd2239fdeaa100e8d875db0b1aa6483f4df",
+    "existingSha256": "079564587a798c89a1a5da0da96a5dd2239fdeaa100e8d875db0b1aa6483f4df",
+    "byteIdentical": true
+  },
+  "fieldCorrections": [
+    {
+      "familyId": "gwniwr",
+      "personId": "person-e847aa96",
+      "worldPersonId": "person--gwniwr--person-e847aa96",
+      "field": "worldPersonId",
+      "from": "person--gwniwr--person-e847aa96",
+      "to": "person--craigddu--person-28b0e0a3",
+      "counterpartFamilyId": "craigddu",
+      "counterpartPersonId": "person-28b0e0a3",
+      "birth": "1708",
+      "sex": "male",
+      "partnerWorldPersonId": "person--gwniwr--person-cf831497",
+      "sourceSha256": "30670a96713d8f678d6ca975d1e5cf2a80fb912682310fe54231f6f502818142",
+      "reason": "Bereits vorhandener Hywel Craigddu; gleicher Ehepartner, gleiches Alter und identisches geliefertes Porträt. Karten-ID bleibt erhalten."
+    },
+    {
+      "familyId": "gwniwr",
+      "personId": "person-e847aa96",
+      "worldPersonId": "person--gwniwr--person-e847aa96",
+      "field": "houseId",
+      "from": "",
+      "to": "house-craigddu",
+      "counterpartFamilyId": "craigddu",
+      "counterpartPersonId": "person-28b0e0a3",
+      "birth": "1708",
+      "sex": "male",
+      "partnerWorldPersonId": "person--gwniwr--person-cf831497",
+      "sourceSha256": "30670a96713d8f678d6ca975d1e5cf2a80fb912682310fe54231f6f502818142",
+      "reason": "Hywel gehört zum bereits vorhandenen Haus Craigddu und ist kein herkunftsloser Gwniwr."
+    },
+    {
+      "familyId": "craigddu",
+      "personId": "person-0774c56b",
+      "worldPersonId": "person--craigddu--person-0774c56b",
+      "field": "worldPersonId",
+      "from": "person--craigddu--person-0774c56b",
+      "to": "person--gwniwr--person-cf831497",
+      "counterpartFamilyId": "gwniwr",
+      "counterpartPersonId": "person-cf831497",
+      "birth": "1708",
+      "sex": "female",
+      "partnerWorldPersonId": "person--craigddu--person-28b0e0a3",
+      "sourceSha256": "30670a96713d8f678d6ca975d1e5cf2a80fb912682310fe54231f6f502818142",
+      "reason": "Eleri ist als 1708 geborene Gwniwr-Tochter und Ehefrau Hywels belegt. Die eigene Craigddu-Karten-ID und alle sieben Elternschaften bleiben erhalten."
+    }
+  ],
+  "snapshotFamilyIds": [
+    "gwniwr",
+    "haus-maerllys",
+    "craigddu",
+    "haus-swyll",
+    "haus-ysgrif",
+    "haus-falchdyn",
+    "haus-tonnarth"
+  ]
+}

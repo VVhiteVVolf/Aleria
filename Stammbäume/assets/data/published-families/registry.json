@@ -576,30 +576,34 @@
     {
       "id": "gwniwr",
       "familyId": "gwniwr",
-      "title": "Gwniwr",
+      "title": "Familie Gwniwr",
       "motto": "",
-      "emblem": "https://i.imgur.com/Ud95q8G.jpeg",
-      "folderPath": [],
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwniwr/gwniwr-emblem.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
       "houseProfile": {
         "rankId": "commoner",
-        "seat": "",
-        "barony": "",
-        "county": "",
-        "kingdom": "",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
         "secondarySeats": [],
-        "liegeHouseId": "",
-        "liegeHouseName": "",
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
         "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": ""
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
         }
       },
       "personCount": 12,
-      "sourceRevision": 0,
-      "revision": 1,
-      "updatedAt": "2026-11-08T14:43:59.658Z",
+      "revision": 2,
+      "updatedAt": "2026-11-08T16:12:19.209Z",
       "link": "Stammbaum.html?family=gwniwr&mode=view",
       "source": "github"
     },
@@ -1069,8 +1073,8 @@
         }
       },
       "personCount": 29,
-      "revision": 4,
-      "updatedAt": "2026-09-27T22:40:51.817Z",
+      "revision": 5,
+      "updatedAt": "2026-11-08T16:12:19.209Z",
       "link": "Stammbaum.html?family=craigddu&mode=view",
       "source": "github"
     },
@@ -1785,7 +1789,7 @@
       "familyId": "haus-maerllys",
       "title": "Haus Maerllys",
       "motto": "",
-      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
       "folderPath": [
         "Cenyr",
         "Celtigerns Wacht",
@@ -1809,8 +1813,8 @@
         }
       },
       "personCount": 19,
-      "revision": 3,
-      "updatedAt": "2026-10-17T00:23:36.950Z",
+      "revision": 4,
+      "updatedAt": "2026-11-08T16:37:10.746Z",
       "link": "Stammbaum.html?family=haus-maerllys&mode=view",
       "source": "github"
     },
@@ -2595,9 +2599,9 @@
           "kingdom": "assets/images/regions/koenigreich-cenyr.png"
         }
       },
-      "personCount": 31,
-      "revision": 2,
-      "updatedAt": "2026-09-02T21:52:30.020Z",
+      "personCount": 34,
+      "revision": 3,
+      "updatedAt": "2026-11-08T16:12:19.209Z",
       "link": "Stammbaum.html?family=haus-swyll&mode=view",
       "source": "github"
     },
@@ -2664,8 +2668,8 @@
         }
       },
       "personCount": 26,
-      "revision": 8,
-      "updatedAt": "2026-10-16T00:26:06.470Z",
+      "revision": 9,
+      "updatedAt": "2026-11-08T16:12:19.209Z",
       "link": "Stammbaum.html?family=haus-tonnarth&mode=view",
       "source": "github"
     },
@@ -2909,8 +2913,8 @@
         }
       },
       "personCount": 17,
-      "revision": 2,
-      "updatedAt": "2026-08-09T03:41:38.250Z",
+      "revision": 3,
+      "updatedAt": "2026-11-08T16:12:19.209Z",
       "link": "Stammbaum.html?family=haus-ysgrif&mode=view",
       "source": "github"
     },
@@ -2944,6 +2948,40 @@
       "revision": 1,
       "updatedAt": "2026-08-12T11:03:00.281Z",
       "link": "Stammbaum.html?family=tharn&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-falchdyn",
+      "familyId": "haus-falchdyn",
+      "title": "Haus Falchdyn",
+      "motto": "Was gehört wird, geht nicht verloren.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 35,
+      "revision": 1,
+      "updatedAt": "2026-11-08T16:12:19.209Z",
+      "link": "Stammbaum.html?family=haus-falchdyn&mode=view",
       "source": "github"
     }
   ]

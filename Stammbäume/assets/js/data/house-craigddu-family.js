@@ -1,3 +1,4 @@
+import { withGwniwrCraigdduLink } from './gwniwr-maerllys-links.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import { createFamilyPerson, createMarriage, createParentages, createMarriedAwayBranch } from './family-record-builders.js';
@@ -22,7 +23,7 @@ function child(id, childId, parentIds, partnershipId) {
   return { id, childId, parentIds, partnershipId, type: 'biological', legitimacy: 'legitimate', certainty: 'confirmed', visibility: 'public', notes: '', extensions: {} };
 }
 
-export const HOUSE_CRAIGDDU_FAMILY = Object.freeze({
+const HOUSE_CRAIGDDU_FAMILY_BEFORE_TAILORING = Object.freeze({
   schema: 'aleria.family-tree', schemaVersion: 1,
   document: {
     id: 'craigddu', title: 'Haus Craigddu', motto: '',
@@ -170,3 +171,5 @@ export const HOUSE_CRAIGDDU_FAMILY = Object.freeze({
     registryManagedExtensionFields: ['registry', 'sourceNote', 'generatorProfile']
   }
 });
+
+export const HOUSE_CRAIGDDU_FAMILY = withGwniwrCraigdduLink(HOUSE_CRAIGDDU_FAMILY_BEFORE_TAILORING);

@@ -75,12 +75,12 @@ window.HAEUSER_DATA = {
     "founding": "",
     "milestoneOne": "",
     "milestoneTwo": "",
-    "people": "",
+    "people": "16 namentlich geführte Angehörige und Ehepersonen",
     "wealth": "",
-    "religion": "",
+    "religion": "Nicht näher überliefert",
     "patronDeities": "",
-    "origin": "",
-    "cadetBranches": "",
+    "origin": "Historischer Gwniwr-Zweig",
+    "cadetBranches": "Haus Raves",
     "allies": "",
     "enemies": ""
   },
@@ -93,25 +93,27 @@ window.HAEUSER_DATA = {
   },
   "showMotto": false,
   "sections": {
-    "overview": "Die Maerllys sind eine Schneiderfamilie aus Gwynthor. Schere und Garnrolle im Familienzeichen stehen für ihre handwerkliche Überlieferung. Die jüngere Hauptlinie führt bis zu Nia und ihren Geschwistern; ein älterer Zweig verband das Haus mit den venalysisch geprägten Raves.",
-    "history": "Cadfan und Eira stehen am Beginn der namentlich bekannten jüngeren Linie. Cadfans Bruder Owain heiratete Gwenllian Ysgrif. Aus der nächsten Generation führen Verbindungen zu Falchdyn, Tonnarth und Swyll. Die Schneidermeisterin Gwenora Maerllys begründete mit Matteo Veltrane die Raves-Linie und das spätere Familiengeschäft.",
-    "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
-    "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
-    "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
-    "holdings": "Belegt sind die handwerkliche Schneidertradition und Gwenoras Mitwirkung am Raves-Geschäft. Dieses eigenständige Nachfolgehaus wird dadurch nicht zu einem unselbstständigen Besitz der Maerllys.",
-    "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
-    "conflictsAlliances": "Eheverbindungen führen zu Ysgrif, Falchdyn, Tonnarth, Swyll, Vann und zum Ursprung der Raves.",
-    "values": "Handwerk und weitreichende familiäre Verbindungen prägen die Überlieferung. Elowen Maerllys lebt und arbeitet seit ihrer Ehe mit Edern Vann in der Letzten Rast. Nias weiterer Lebensweg ist noch offen.",
-    "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
-    "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
-    "historicalFigures": "Weitere historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
+    "overview": "Die Maerllys sind eine bürgerliche Schneiderfamilie aus Gwynthor. Ihr Familienzeichen zeigt Schere und Garnrolle und verweist auf eine über Generationen bewahrte Handwerkstradition. Mit Naht & Siegel führt die jüngere Familie heute eine kleinere, professionelle Schneiderei für Dienstkleidung, Livreen und einheitliche Haushaltsgarnituren. Das Geschäft richtet sich vor allem an Arbeitgeber und Haushaltsverantwortliche.\n\nZofen, Vögte, Diener, Mägde, Burschen und Amtsträger benötigen Kleidung, die ihre Aufgabe sichtbar macht und im täglichen Dienst funktioniert. Deshalb stehen wiederholbare Schnitte, gute Passform und spätere Nachbestellungen im Mittelpunkt. Naht & Siegel kooperiert mit der Göttlichen Eleganz; preislich liegt es zwischen deren gehobener Mode und Nadel & Faden.",
+    "history": "Der ältere Maerllys-Zweig spaltete sich bereits vor den Überlieferungssprüngen von Gwniwr ab. Ein genauer Zeitpunkt und die Namen der damaligen Ahnen sind nicht überliefert. Wie aus der älteren Verwandtschaft ein eigenständiger Haushalt wurde, erzählt die Familienüberlieferung nur in Umrissen.\n\nDie Schneidermeisterin Gwenora Maerllys verband sich später mit Matteo Septimus Veltrane. Aus ihrem Geschäft ging der eigenständige Raves-Zweig hervor, zu dem die Göttliche Eleganz gehört. Gwenoras unbekannter Bruder führt über eine weitere Überlieferungslücke zur jüngeren Hauptlinie. Ihre Nachkommen führen das Raves-Haus bis in die Gegenwart fort.\n\nCadfan und sein Bruder Owain stehen am Beginn dieser konkret belegten jüngeren Generation. Cadfan und Eira haben den Sohn Iorwerth. Owain und Gwenllian Ysgrif sind die Eltern Geraints und Rhoswens. Die Ehen verbinden Maerllys mit Swyll, Falchdyn und Tonnarth. Iorwerth und Bronwen Swyll haben Elowen, Nia und Rhys.\n\nDie Geschwister gingen eigene Wege: Elowen heiratete Edern Vann 1733 und arbeitet in der Letzten Rast. Nia ist persönliche Zofe der Prinzessin Isobel Draig. Rhys verkauft in der Göttlichen Eleganz. Die Verbindung zur Familienwerkstatt begleitet diese eigenen Lebenswege.",
+    "traditions": "Die bewahrten Muster werden an den vorgesehenen Dienst angepasst. Vor der Fertigung werden Aufgabe, Stoff, Farbe, gewünschter Besatz und die Größenfolge besprochen. Erst die Anprobe zeigt, ob ein Gewand auch beim Sitzen, Tragen und Bewegen brauchbar bleibt. Diese heutige Werkstattpraxis entwickelt die belegte Schneidertradition weiter; sie ist keine neu behauptete mittelalterliche Zunftordnung.\n\nDie ältere Generation gehört zum beratenden Familienkreis. Cadfan, Eira, Owain und Gwenllian bringen Erfahrung ein; eine zusätzliche Vollzeitbelegschaft oder bezahlte Ämter entstehen dadurch nicht. Vorbereitete Gesellen-, Lehr- und Hilfsstellen bleiben ausdrücklich frei.",
+    "holdings": "Naht & Siegel umfasst Auftragsberatung, Anprobe und die handwerkliche Fertigung von Dienstkleidung. Die Kollektion führt Garnituren für unterschiedliche Hausdienste und Amtsträger, robuste Arbeitskleidung und gehobenere Livreen. Die Preise bleiben unter vergleichbarer gehobener Mode der Göttlichen Eleganz und über der günstigen Bürgermode von Nadel & Faden.\n\nDas selbstständige Raves-Geschäft ist kein unselbstständiger Familienbesitz der Maerllys. Auch die Letzte Rast und der Tonnarth-Haushalt bleiben eigene Zielhäuser. Ein Hausgrundstück, Kapital, Tierbestand oder gesicherte Großaufträge werden nicht hinzuerfunden.",
+    "values": "Die Maerllys verbinden ein ordentliches Erscheinungsbild mit der Würde der Arbeit. Eine gute Livree muss die Hauszugehörigkeit zeigen, ohne die Arbeit ihrer Träger zu behindern. Sorgfältige Maßnahme, wiederholbare Fertigung und die Möglichkeit zur Ausbesserung wiegen für das Geschäft schwerer als bloße Schaueffekte. Rang, Amt und Heraldik werden von den Auftraggebern vorgegeben; die Schneiderei verleiht selbst keine Stellung.",
+    "knighthood": "Die Familie ist bürgerlichen Standes. Ein Handwerksbetrieb begründet keinen Adelstitel und keine eigene Herrschaft. Dienststellungen einzelner Angehöriger bleiben persönliche Aufgaben.",
+    "succession": "Die gegenwärtige Geschäftsführung ist von einer nicht überlieferten förmlichen Erb- oder Oberhauptfolge zu unterscheiden. Kinder und freie Personalstellen werden nicht zu vorbestimmten Nachfolgern gemacht.",
+    "court": "Iorwerth leitet Aufträge und Uniformschnitt, Bronwen Anprobe und Qualitätskontrolle. Geraint betreut die Werkstatt, Llio die Nähstube und Serienfertigung. Die älteren vier Angehörigen beraten die Familie. Nia, Rhys und Elowen behalten ihre bestehenden Dienste außerhalb des Ladens. Weitere Stellen bleiben zur späteren Besetzung frei.",
+    "familyTree": "Der Stammbaum verbindet die ältere Schneiderfamilie um Gwenora mit der jüngeren Linie um Cadfan und Owain. Die Lücken zwischen den Generationen bleiben sichtbar. Die historischen Gwniwr-Wurzeln und die durch Ehen verbundenen Häuser führen zu ihren eigenen Familienzweigen.",
+    "historicalFigures": "Die ältere Schneidertradition und die jüngeren Familienzweige begegnen sich in den folgenden Angehörigen. Ihre Wege führen von der eigenen Werkstatt in die Letzte Rast, die Göttliche Eleganz und den persönlichen Dienst der Prinzessin Isobel.",
+    "cultureReligion": "Die Familie ist im bürgerlichen Handwerk Gwynthors und der Cenyri-Kultur verwurzelt. Die Formensprache der Dienstkleidung folgt der walisisch-gälischen Umgebung: klare wollene und leinene Schichten, gut lesbare Hausfarben und zweckmäßige Verschlüsse. Eine besondere religiöse Überlieferung oder neue Schutzpatrone sind für Maerllys nicht festgelegt.",
+    "conflictsAlliances": "Die historische Verwandtschaft zu Gwniwr ist älter als die namentlich bekannten Generationen. Die Kooperation mit der Göttlichen Eleganz beruht auf verwandtem Handwerk und dem Raves-Zweig; beide Läden bleiben eigenständige Betriebe. Rhys’ bestehende Verkaufsstelle bei der Eleganz veranschaulicht die persönliche Verbindung.\n\nWeitere Ehen verbinden Maerllys mit Ysgrif, Swyll, Falchdyn, Tonnarth und Vann. Die persönlichen Verbindungen reichen damit über die eigene Werkstatt und den gemeinsamen Schneiderberuf hinaus."
   },
   "sectionTitles": {
-    "knighthood": "4. Beruf und Hausleben"
+    "knighthood": "4. Beruf und Hausleben",
+    "court": "8. Familie und Werkstatt",
+    "historicalFigures": "11. Familienmitglieder"
   },
   "images": {
     "haus-wappen": {
-      "src": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+      "src": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
       "alt": "Wappen von Haus Maerllys",
       "format": "square"
     },
@@ -127,101 +129,167 @@ window.HAEUSER_DATA = {
       "alt": "Herrschaftsbanner von Celtigerns Wacht",
       "format": "square"
     },
-    "hof-founder-1": {
-      "src": "../Stammbäume/../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png",
+    "hof-heads-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-maerllys/iorwerth-maerllys.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=iorwerth-maerllys",
+      "alt": "Iorwerth Maerllys",
+      "format": "portrait"
+    },
+    "hof-heads-2": {
+      "src": "../Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=bronwen-swyll",
+      "alt": "Bronwen Swyll",
+      "format": "portrait"
+    },
+    "hof-offices-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-maerllys/geraint-maerllys.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=geraint-maerllys",
+      "alt": "Geraint Maerllys",
+      "format": "portrait"
+    },
+    "hof-offices-2": {
+      "src": "../Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=llio-falchdyn",
+      "alt": "Llio Falchdyn",
+      "format": "portrait"
+    },
+    "haus-figur-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-maerllys/cadfan-maerllys.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=cadfan-maerllys",
+      "alt": "Cadfan Maerllys",
+      "format": "portrait"
+    },
+    "haus-figur-2": {
+      "src": "../Stammbäume/assets/images/portraits/haus-maerllys/eira-spouse-maerllys.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=eira-spouse-maerllys",
+      "alt": "Eira",
+      "format": "portrait"
+    },
+    "haus-figur-3": {
+      "src": "../Stammbäume/assets/images/portraits/haus-maerllys/owain-maerllys.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=owain-maerllys",
+      "alt": "Owain Maerllys",
+      "format": "portrait"
+    },
+    "haus-figur-4": {
+      "src": "../Stammbäume/assets/images/portraits/haus-maerllys/gwenllian-ysgrif.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenllian-ysgrif",
+      "alt": "Gwenllian Ysgrif",
+      "format": "portrait"
+    },
+    "haus-figur-5": {
+      "src": "../Stammbäume/assets/images/portraits/haus-maerllys/geraint-maerllys.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=geraint-maerllys",
+      "alt": "Geraint Maerllys",
+      "format": "portrait"
+    },
+    "haus-figur-6": {
+      "src": "../Stammbäume/assets/images/portraits/haus-maerllys/llio-falchdyn.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=llio-falchdyn",
+      "alt": "Llio Falchdyn",
+      "format": "portrait"
+    },
+    "haus-figur-7": {
+      "src": "../Stammbäume/assets/images/portraits/haus-maerllys/rhoswen-maerllys.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=rhoswen-maerllys",
+      "alt": "Rhoswen Maerllys",
+      "format": "portrait"
+    },
+    "haus-figur-8": {
+      "src": "../Stammbäume/assets/images/portraits/haus-maerllys/madoc-tonnarth.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=madoc-tonnarth",
+      "alt": "Madoc Tonnarth",
+      "format": "portrait"
+    },
+    "haus-figur-9": {
+      "src": "../Stammbäume/assets/images/portraits/haus-maerllys/iorwerth-maerllys.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=iorwerth-maerllys",
+      "alt": "Iorwerth Maerllys",
+      "format": "portrait"
+    },
+    "haus-figur-10": {
+      "src": "../Stammbäume/assets/images/portraits/haus-maerllys/bronwen-swyll.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=bronwen-swyll",
+      "alt": "Bronwen Swyll",
+      "format": "portrait"
+    },
+    "haus-figur-11": {
+      "src": "../AleriaAlmanach/assets/letzte-rast/portraits/elowen.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=elowen-maerllys",
+      "alt": "Elowen Maerllys",
+      "format": "portrait"
+    },
+    "haus-figur-12": {
+      "src": "../Stammbäume/assets/images/portraits/haus-maerllys/nia-maerllys.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=nia-maerllys",
+      "alt": "Nia Maerllys",
+      "format": "portrait"
+    },
+    "haus-figur-13": {
+      "src": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/rhys-maerllys.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=rhys-maerllys",
+      "alt": "Rhys Maerllys",
+      "format": "portrait"
+    },
+    "haus-figur-14": {
+      "src": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenora-maerllys",
       "alt": "Gwenora Maerllys",
+      "format": "portrait"
+    },
+    "haus-figur-15": {
+      "src": "../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=matteo-veltrane",
+      "alt": "Matteo Septimus Veltrane",
+      "format": "portrait"
+    },
+    "haus-figur-16": {
+      "src": "../AleriaAlmanach/assets/letzte-rast/references/edern.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=edern-vann",
+      "alt": "Edern Vann",
       "format": "portrait"
     }
   },
   "court": {
     "groups": [
       {
-        "id": "founder",
-        "title": "Gründer",
-        "entries": [
-          {
-            "name": "Gwenora Maerllys",
-            "role": "Schneidermeisterin · Mitbegründerin des Geschäfts",
-            "detail": "Schneidermeisterin · Mitbegründerin des Geschäfts",
-            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenora-maerllys",
-            "imageKey": "hof-founder-1"
-          }
-        ]
-      },
-      {
         "id": "heads",
-        "title": "Familienführung und Haushalt",
-        "note": "Belegte Aufgaben im heutigen Familienkreis; keine erfundene historische Amtsfolge.",
+        "title": "Geschäftsführung und Familie",
+        "note": "Die heutige Geschäftsführung und ihre Aufgaben im Familienbetrieb.",
         "entries": [
           {
-            "name": "Cadfan Maerllys",
-            "role": "Ältestes überliefertes Oberhaupt des Hauses Maerllys",
-            "detail": "Ältestes überliefertes Oberhaupt des Hauses Maerllys",
-            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=cadfan-maerllys",
-            "imageKey": ""
+            "name": "Iorwerth Maerllys",
+            "role": "Schneidermeister · Leitung von Naht & Siegel",
+            "detail": "Schneidermeister · Leitung von Naht & Siegel",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=iorwerth-maerllys",
+            "imageKey": "hof-heads-1"
+          },
+          {
+            "name": "Bronwen Swyll",
+            "role": "Anprobe und Qualitätskontrolle · Naht & Siegel",
+            "detail": "Anprobe und Qualitätskontrolle · Naht & Siegel",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=bronwen-swyll",
+            "imageKey": "hof-heads-2"
           }
         ]
       },
       {
         "id": "offices",
-        "title": "Angehörige und Aufgaben",
+        "title": "Aufgaben im Familienbetrieb",
         "entries": [
           {
-            "name": "Eira",
-            "role": "Großmutter Nia Maerllys’",
-            "detail": "Großmutter Nia Maerllys’",
-            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=eira-spouse-maerllys",
-            "imageKey": ""
-          },
-          {
-            "name": "Owain Maerllys",
-            "role": "Großonkel Nia Maerllys’",
-            "detail": "Großonkel Nia Maerllys’",
-            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=owain-maerllys",
-            "imageKey": ""
-          },
-          {
-            "name": "Gwenllian Ysgrif",
-            "role": "An Haus Maerllys verheiratete Ysgrif",
-            "detail": "An Haus Maerllys verheiratete Ysgrif",
-            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenllian-ysgrif",
-            "imageKey": ""
+            "name": "Geraint Maerllys",
+            "role": "Werkstattleitung und Livreeschnitt · Naht & Siegel",
+            "detail": "Werkstattleitung und Livreeschnitt · Naht & Siegel",
+            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=geraint-maerllys",
+            "imageKey": "hof-offices-1"
           },
           {
             "name": "Llio Falchdyn",
-            "role": "An Haus Maerllys verheiratete Falchdyn",
-            "detail": "An Haus Maerllys verheiratete Falchdyn",
+            "role": "Nähstube und Serienfertigung · Naht & Siegel",
+            "detail": "Nähstube und Serienfertigung · Naht & Siegel",
             "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=llio-falchdyn",
-            "imageKey": ""
-          },
-          {
-            "name": "Rhoswen Maerllys",
-            "role": "An Haus Tonnarth verheiratete Maerllys",
-            "detail": "An Haus Tonnarth verheiratete Maerllys",
-            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=rhoswen-maerllys",
-            "imageKey": ""
-          },
-          {
-            "name": "Madoc Tonnarth",
-            "role": "Onkel Llewarch Tonnarths",
-            "detail": "Onkel Llewarch Tonnarths",
-            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=madoc-tonnarth",
-            "imageKey": ""
-          },
-          {
-            "name": "Iorwerth Maerllys",
-            "role": "Vater Nia Maerllys’",
-            "detail": "Vater Nia Maerllys’",
-            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=iorwerth-maerllys",
-            "imageKey": ""
-          },
-          {
-            "name": "Bronwen Swyll",
-            "role": "An Haus Maerllys verheiratete Swyll",
-            "detail": "An Haus Maerllys verheiratete Swyll",
-            "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&person=bronwen-swyll",
-            "imageKey": ""
+            "imageKey": "hof-offices-2"
           }
         ]
       }
@@ -229,15 +297,131 @@ window.HAEUSER_DATA = {
     "cadets": []
   },
   "figures": {
-    "heading": "11. Historische Figuren",
-    "tableTitle": "Prägende historische Persönlichkeiten",
-    "entries": []
+    "heading": "11. Familienmitglieder",
+    "tableTitle": "Familie und Angehörige",
+    "entries": [
+      {
+        "group": "Familie und Angehörige",
+        "role": "Ältestes überliefertes Oberhaupt des Hauses Maerllys",
+        "name": "Cadfan Maerllys",
+        "description": "Cadfan Maerllys wurde 1662 geboren und ist das älteste namentlich überlieferte Oberhaupt der jüngeren Maerllys-Linie. Mit seiner Gemahlin Eira hat er den Sohn Iorwerth. Sein Bruder Owain begründete durch die Ehe mit Gwenllian Ysgrif den zweiten bekannten Zweig. Die Generationen vor den beiden Brüdern sind nur lückenhaft überliefert.",
+        "imageKey": "haus-figur-1"
+      },
+      {
+        "group": "Familie und Angehörige",
+        "role": "Großmutter Nia Maerllys’",
+        "name": "Eira",
+        "description": "Eira wurde 1666 geboren und ist mit Cadfan Maerllys verheiratet. Iorwerth ist ihr Sohn; Elowen, Nia und Rhys gehören zur Enkelgeneration. Ihre eigene Herkunftsfamilie ist nicht benannt. In der Maerllys-Akte steht sie am Beginn des konkret überlieferten jüngeren Familienhaushalts.",
+        "imageKey": "haus-figur-2"
+      },
+      {
+        "group": "Familie und Angehörige",
+        "role": "Großonkel Nia Maerllys’",
+        "name": "Owain Maerllys",
+        "description": "Owain Maerllys wurde 1665 geboren und ist Cadfans Bruder. Er heiratete Gwenllian Ysgrif. Ihre Kinder heißen Geraint und Rhoswen. Gemeinsam stehen die Brüder hinter der Überlieferungslücke am Beginn der namentlich bekannten jüngeren Maerllys-Linie.",
+        "imageKey": "haus-figur-3"
+      },
+      {
+        "group": "Familie und Angehörige",
+        "role": "An Haus Maerllys verheiratete Ysgrif",
+        "name": "Gwenllian Ysgrif",
+        "description": "Gwenllian Ysgrif wurde 1668 geboren und ist die Gemahlin Owain Maerllys’. Sie ist Idris Ysgrifs Schwester und verbindet damit beide Häuser. Geraint und Rhoswen sind ihre Kinder. Ihre Ehe bleibt in den Maerllys- und Ysgrif-Akten dieselbe Verbindung.",
+        "imageKey": "haus-figur-4"
+      },
+      {
+        "group": "Familie und Angehörige",
+        "role": "Werkstattleitung und Livreeschnitt · Naht & Siegel",
+        "name": "Geraint Maerllys",
+        "description": "Geraint Maerllys wurde 1691 als Sohn Owains und Gwenllian Ysgrifs geboren. Er ist Iorwerths Vetter und Rhoswens Bruder. Seine Gemahlin heißt Llio Falchdyn. Durch ihre Ehe begegnen sich zwei in Gwynthor verwurzelte bürgerliche Familien.",
+        "imageKey": "haus-figur-5"
+      },
+      {
+        "group": "Familie und Angehörige",
+        "role": "Nähstube und Serienfertigung · Naht & Siegel",
+        "name": "Llio Falchdyn",
+        "description": "Llio Falchdyn wurde 1692 geboren und ist eine Tochter Madoc Falchdyns. Sie heiratete Geraint Maerllys. Die Verbindung wird beidseitig mit denselben Weltpersonen geführt. Aus ihrer Ehe werden keine nicht überlieferten Kinder ergänzt.",
+        "imageKey": "haus-figur-6"
+      },
+      {
+        "group": "Familie und Angehörige",
+        "role": "An Haus Tonnarth verheiratete Maerllys",
+        "name": "Rhoswen Maerllys",
+        "description": "Rhoswen Maerllys wurde 1694 als Tochter Owains und Gwenllian Ysgrifs geboren. Geraint ist ihr Bruder. Sie heiratete Madoc Tonnarth und gehört damit zu einer ausdrücklich wegverheirateten Linie der Maerllys.",
+        "imageKey": "haus-figur-7"
+      },
+      {
+        "group": "Familie und Angehörige",
+        "role": "Onkel Llewarch Tonnarths",
+        "name": "Madoc Tonnarth",
+        "description": "Madoc Tonnarth wurde 1692 geboren und ist Cadell Tonnarths Bruder sowie Llewarchs Onkel. Er ist mit Rhoswen Maerllys verheiratet. Die Ehe verbindet die beiden Gwynthorer Familien und wird in beiden Stammbäumen als dieselbe Beziehung geführt.",
+        "imageKey": "haus-figur-8"
+      },
+      {
+        "group": "Familie und Angehörige",
+        "role": "Schneidermeister · Leitung von Naht & Siegel",
+        "name": "Iorwerth Maerllys",
+        "description": "Iorwerth Maerllys wurde 1689 als Sohn Cadfans und Eiras geboren. Er ist mit Bronwen Swyll verheiratet; ihre Kinder sind Elowen, Nia und Rhys. Die Schneidertradition der Familie führt er heute in Naht & Siegel fort, einer professionellen Werkstatt für Dienstkleidung, Livreen und einheitliche Garnituren.",
+        "imageKey": "haus-figur-9"
+      },
+      {
+        "group": "Familie und Angehörige",
+        "role": "Anprobe und Qualitätskontrolle · Naht & Siegel",
+        "name": "Bronwen Swyll",
+        "description": "Bronwen Swyll wurde 1691 geboren und ist Iestyn Swylls Schwester. Durch ihre Ehe mit Iorwerth Maerllys kam sie in die Gwynthorer Schneiderfamilie. Elowen, Nia und Rhys sind ihre Kinder. Ihre Verbindung hält den Kontakt zwischen beiden Familien lebendig.",
+        "imageKey": "haus-figur-10"
+      },
+      {
+        "group": "Familie und Angehörige",
+        "role": "Empfang · Buchungen und Hausleinen",
+        "name": "Elowen Maerllys",
+        "description": "Elowen Maerllys wurde 1713 als Tochter Iorwerths und Bronwen Swylls geboren. Sie ist die ältere Schwester von Nia und Rhys. Im Jahr 1733 heiratete sie Edern Vann und lebt und arbeitet seither in der Letzten Rast in Gwynthor.",
+        "imageKey": "haus-figur-11"
+      },
+      {
+        "group": "Familie und Angehörige",
+        "role": "Persönliche Zofe der Prinzessin Isobel Draig",
+        "name": "Nia Maerllys",
+        "description": "Im Jahr 1740 vierundzwanzig Jahre alt; unverheiratet und ohne Verlobung.",
+        "imageKey": "haus-figur-12"
+      },
+      {
+        "group": "Familie und Angehörige",
+        "role": "Jüngerer Bruder Nia Maerllys’",
+        "name": "Rhys Maerllys",
+        "description": "Unverheiratet und ohne Verlobung.",
+        "imageKey": "haus-figur-13"
+      },
+      {
+        "group": "Familie und Angehörige",
+        "role": "Schneidermeisterin · Mitbegründerin des Geschäfts",
+        "name": "Gwenora Maerllys",
+        "description": "Gwenora verstand mehr von Stoff als die meisten Tuchhändler. Sie nähte für Gwynthors Bürger, handelte selbstbewusst mit dem fremden Kapitän und brachte ihm bei, dass ein gutes Geschäft am Saum ebenso leicht scheitert wie auf See.",
+        "imageKey": "haus-figur-14"
+      },
+      {
+        "group": "Familie und Angehörige",
+        "role": "Handelskapitän · Begründer der Gwynthorer Linie",
+        "name": "Matteo Septimus Veltrane",
+        "description": "Matteo kam mit Seide und Olivenöl nach Gwynthor und fand in Gwenoras Werkstatt einen Grund zu bleiben. Aus seinem kleinen Krämerladen und ihren Aufträgen wuchs ein Geschäft, das die Schiffe seines Stammhauses nie aus den Augen verlor.",
+        "imageKey": "haus-figur-15"
+      },
+      {
+        "group": "Familie und Angehörige",
+        "role": "Herbergsmeister · Zimmer und Buchungen",
+        "name": "Edern Vann",
+        "description": "Edern Vann wurde 1705 geboren und ist mit Elowen Maerllys verheiratet. Die beiden heirateten 1733. Er gehört zum Familienkreis der Letzten Rast in Gwynthor und ist als Herbergsmeister für Zimmer und Buchungen verzeichnet.",
+        "imageKey": "haus-figur-16"
+      }
+    ],
+    "mobileLayout": "stacked"
   },
   "familyTreeEmbed": {
-    "src": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view",
+    "src": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-maerllys&mode=view&embed=1",
     "title": "Stammbaum von Haus Maerllys"
   },
   "trivia": [
-    "Schneiderfamilie"
+    "Naht & Siegel fertigt Dienstkleidung für ganze Haushalte.",
+    "Nia dient Prinzessin Isobel, Rhys verkauft in der Göttlichen Eleganz und Elowen arbeitet in der Letzten Rast.",
+    "Die Maerllys stammen aus einem älteren Gwniwr-Zweig; später ging aus Gwenoras Familie die Raves-Linie hervor."
   ]
 };

@@ -1,0 +1,178 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-08T16:10:00.000Z",
+  "mergeStrategy": "replace-reviewed-metadata-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/rhoswen-maerllys.json",
+  "character": {
+    "activeImageSetId": "",
+    "age": 46,
+    "aliases": [],
+    "archived": false,
+    "bio": "Rhoswen Maerllys wurde 1694 als Tochter Owains und Gwenllian Ysgrifs geboren. Geraint ist ihr Bruder. Ihre Ehe mit Madoc Tonnarth führte sie in einen anderen Gwynthorer Familienhaushalt.\n\nMit Madoc hat Rhoswen die drei Söhne Bryn, Emrys und Aled. Ihr engerer Familienkreis gehört damit zur jüngeren Tonnarth-Linie. Die Verbindung zu ihren Eltern und ihrem Bruder bleibt neben dem eigenen Haushalt ein Teil ihres Lebens.\n\nDie Schneidertradition der Maerllys bildet Rhoswens Herkunft. Inzwischen richtet Naht & Siegel sein Handwerk auf die Dienstkleidung größerer Haushalte aus. Rhoswens eigener Familienzweig führt die gemeinsame Geschichte bei Tonnarth weiter und verbindet ihre Kinder mit den Verwandten beider Eltern.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Rhoswen Maerllys"
+        },
+        {
+          "label": "Geboren",
+          "value": "1694"
+        },
+        {
+          "label": "Alter",
+          "value": "46 Jahre"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Maerllys"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "An Haus Tonnarth verheiratete Maerllys"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/rhoswen-maerllys.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Rhoswen Maerllys wurde 1694 als Tochter Owains und Gwenllian Ysgrifs geboren. Geraint ist ihr Bruder. Ihre Ehe mit Madoc Tonnarth führte sie in einen anderen Gwynthorer Familienhaushalt.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Mit Madoc hat Rhoswen die drei Söhne Bryn, Emrys und Aled. Ihr engerer Familienkreis gehört damit zur jüngeren Tonnarth-Linie. Die Verbindung zu ihren Eltern und ihrem Bruder bleibt neben dem eigenen Haushalt ein Teil ihres Lebens."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Die Schneidertradition der Maerllys bildet Rhoswens Herkunft. Inzwischen richtet Naht & Siegel sein Handwerk auf die Dienstkleidung größerer Haushalte aus. Rhoswens eigener Familienzweig führt die gemeinsame Geschichte bei Tonnarth weiter und verbindet ihre Kinder mit den Verwandten beider Eltern."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Maerllys",
+    "genealogy": {
+      "worldPersonId": "person--haus-maerllys--rhoswen-maerllys",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1694",
+      "death": "",
+      "houseId": "house-maerllys",
+      "houseName": "Haus Maerllys",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-maerllys",
+          "personId": "rhoswen-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=rhoswen-maerllys",
+          "fingerprint": "{\"name\":\"Rhoswen Maerllys\",\"title\":\"An Haus Tonnarth verheiratete Maerllys\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/rhoswen-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"owain-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--owain-maerllys\",\"name\":\"Owain Maerllys\"},{\"personId\":\"gwenllian-ysgrif\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ysgrif--gwenllian-ysgrif\",\"name\":\"Gwenllian Ysgrif\"}],\"partners\":[{\"personId\":\"madoc-tonnarth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--madoc-tonnarth\",\"name\":\"Madoc Tonnarth\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-tonnarth",
+          "personId": "rhoswen-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=rhoswen-maerllys",
+          "fingerprint": "{\"name\":\"Rhoswen Maerllys\",\"title\":\"An Haus Tonnarth verheiratete Maerllys\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/rhoswen-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"madoc-tonnarth\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--madoc-tonnarth\",\"name\":\"Madoc Tonnarth\"}],\"children\":[{\"personId\":\"bryn-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--bryn-tonnarth\",\"name\":\"Bryn Tonnarth\"},{\"personId\":\"emrys-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--emrys-tonnarth\",\"name\":\"Emrys Tonnarth\"},{\"personId\":\"aled-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--aled-tonnarth\",\"name\":\"Aled Tonnarth\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "owain-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--owain-maerllys",
+            "name": "Owain Maerllys"
+          },
+          {
+            "personId": "gwenllian-ysgrif",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ysgrif--gwenllian-ysgrif",
+            "name": "Gwenllian Ysgrif"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "madoc-tonnarth",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tonnarth--madoc-tonnarth",
+            "name": "Madoc Tonnarth"
+          }
+        ],
+        "children": [
+          {
+            "personId": "bryn-tonnarth",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tonnarth--bryn-tonnarth",
+            "name": "Bryn Tonnarth"
+          },
+          {
+            "personId": "emrys-tonnarth",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tonnarth--emrys-tonnarth",
+            "name": "Emrys Tonnarth"
+          },
+          {
+            "personId": "aled-tonnarth",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tonnarth--aled-tonnarth",
+            "name": "Aled Tonnarth"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-maerllys--rhoswen-maerllys",
+    "identity": {
+      "worldPersonId": "person--haus-maerllys--rhoswen-maerllys"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "name": "Rhoswen Maerllys",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/rhoswen-maerllys.png",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=rhoswen-maerllys",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "An Haus Tonnarth verheiratete Maerllys",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

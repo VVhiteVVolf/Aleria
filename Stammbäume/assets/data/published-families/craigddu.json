@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "craigddu",
-  "revision": 4,
-  "updatedAt": "2026-09-27T22:40:51.817Z",
+  "revision": 5,
+  "updatedAt": "2026-11-08T16:12:19.209Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -421,24 +421,38 @@
       },
       {
         "id": "person-0774c56b",
-        "worldPersonId": "person--craigddu--person-0774c56b",
+        "worldPersonId": "person--gwniwr--person-cf831497",
         "name": "Eleri",
-        "title": "Ehefrau von Hywel Craigddu",
+        "title": "Ehefrau Hywel Craigddu’s · geborene Gwniwr",
         "sex": "female",
         "status": "alive",
         "birth": "1708",
         "death": "",
-        "portrait": "",
+        "portrait": "assets/images/portraits/gwniwr/person-cf831497.jpg",
         "portraitPlaceholder": "auto",
         "houseId": "",
         "familyRole": "married",
         "lineageRole": "mainline",
         "tags": [],
-        "notes": "",
+        "notes": "Eleri ist die 1708 geborene Tochter Emyr Gwniwrs und Gwenllians. Sie heiratete Hywel Craigddu und hilft mit ihren Kindern im elterlichen Laden Nadel & Faden. Die sieben Töchter werden ausschließlich hier in Craigddu fortgeführt.",
         "extensions": {
           "registryManagedFields": [
             "title"
-          ]
+          ],
+          "registryManagedFieldRevisions": {
+            "worldPersonId": 4,
+            "portrait": 4,
+            "title": 4,
+            "notes": 4
+          },
+          "legacyWorldPersonIds": [
+            "person--craigddu--person-0774c56b"
+          ],
+          "registryManagedFieldPreviousValues": {
+            "worldPersonId": [
+              "person--craigddu--person-0774c56b"
+            ]
+          }
         }
       },
       {
@@ -899,7 +913,18 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedFields": [
+            "crossFamilyRelationship"
+          ],
+          "registryManagedFieldRevisions": {
+            "crossFamilyRelationship": 4
+          },
+          "crossFamilyRelationship": {
+            "linkId": "marriage-hywel-craigddu-eleri-gwniwr",
+            "counterpartFamilyId": "gwniwr"
+          }
+        }
       },
       {
         "id": "partnership-0f65c1d1",
@@ -1236,6 +1261,13 @@
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Coeddu.png",
         "status": "active",
         "extensions": {}
+      },
+      {
+        "id": "house-gwniwr",
+        "name": "Familie Gwniwr",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwniwr/gwniwr-emblem.png",
+        "status": "active"
       }
     ],
     "cadetBranches": [
@@ -1341,9 +1373,9 @@
       "showSiblings": true
     },
     "extensions": {
-      "sourceRevision": 3,
+      "sourceRevision": 4,
       "blankFamily": false,
-      "sourceNote": "Erweiterung nach Benutzervorgaben vom 28.09.2026: unbekanntes Gründerpaar, Wappen und Zeitsprung zu Iestyn mit zwei Brüdern, drei Vettern Hywels und deren Kindern. Bestehende Personen-, Beziehungs- und Weltpersonen-IDs sowie bekannte Lebensjahre bleiben erhalten; die historischen IDs craigddu-gruender und craigddu-gruenderin bezeichnen weiterhin Iestyn und Mared. Namen und Lebensjahre der neuen jüngeren Angehörigen sind erzählerische Ergänzungen nach dem Rheunwaith-Namensarchiv.",
+      "sourceNote": "Erweiterung nach Benutzervorgaben vom 28.09.2026: unbekanntes Gründerpaar, Wappen und Zeitsprung zu Iestyn mit zwei Brüdern, drei Vettern Hywels und deren Kindern. Bestehende Personen-, Beziehungs- und Weltpersonen-IDs sowie bekannte Lebensjahre bleiben erhalten; die historischen IDs craigddu-gruender und craigddu-gruenderin bezeichnen weiterhin Iestyn und Mared. Namen und Lebensjahre der neuen jüngeren Angehörigen sind erzählerische Ergänzungen nach dem Rheunwaith-Namensarchiv. Eleris Gwniwr-Herkunft und dieselbe Ehe mit Hywel sind seit 8. November 2026 beidseitig verknüpft; alte Karten- und Ehekennungen bleiben erhalten.",
       "registry": {
         "folderPath": [
           "Cenyr",
@@ -1403,15 +1435,47 @@
         "sourceNote",
         "generatorProfile"
       ],
+      "gwniwrMarriageInventory": "gwniwr-maerllys-20261108",
+      "registryManagedDocumentFieldRevisions": {
+        "title": 4,
+        "description": 4,
+        "emblem": 4
+      },
+      "registryManagedHouseProfileFieldRevisions": {
+        "rankId": 4,
+        "seat": 4,
+        "barony": 4,
+        "county": 4,
+        "kingdom": 4,
+        "liegeHouseId": 4,
+        "liegeHouseName": 4,
+        "regionEmblems": 4
+      },
+      "registryManagedExtensionFieldRevisions": {
+        "registry": 4,
+        "sourceNote": 4,
+        "generatorProfile": 4
+      },
+      "registryManagedViewFieldRevisions": {
+        "focusPersonId": 4,
+        "limitGenerations": 4
+      },
+      "registryManagedLineageFieldRevisions": {
+        "founderPartnershipId": 4,
+        "crestFrame": 4,
+        "timeGap": 4
+      },
+      "registryManagedEntitySourceRevision": 4,
       "houseBiographyModule": {
         "schema": "aleria.house-module",
         "schemaVersion": 1,
         "pageTitle": "Haus Craigddu",
         "housePage": true,
         "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Craigddu/assets/craigddu-krieger.png",
-        "imageWidth": 30,
-        "imageSquare": true,
-        "description": "Haus Craigddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Aus einer Baumeisterfamilie gingen zunehmend Wachen, Waffenknechte und vereinzelt auch Ritter hervor. Das Bauwesen blieb dennoch Teil des Familienlebens: Mehrere Angehörige arbeiten weiterhin in Gwynthors örtlicher Baumeistergilde.",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Die Craigddu sind eine Baumeisterfamilie und ein kriegerisches Bürgerhaus Gwynthors. Aus ihren Reihen gingen Wachen, Waffenknechte und einzelne Ritter im Dienst der Draigs hervor. Mehrere Angehörige arbeiten weiterhin in der örtlichen Baumeistergilde.",
         "quote": "",
         "quoteBy": "",
         "commentSequence": [],
@@ -1433,24 +1497,12 @@
             "Celtigerns Wacht"
           ],
           [
-            "Oberhaupt",
-            ""
-          ],
-          [
-            "Erbe",
-            ""
-          ],
-          [
             "Lehnsherr",
             "Haus Draig"
           ],
           [
             "Ursprung",
             "Gwynthor · Baumeisterfamilie"
-          ],
-          [
-            "Schutzpatronin",
-            ""
           ]
         ],
         "house": {
@@ -1459,19 +1511,25 @@
           "connectionPortraitHeight": 80,
           "connectionTextOffset": 0,
           "biographyTitle": "Über das Haus",
-          "biographyText": "Haus Craigddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Aus einer Baumeisterfamilie gingen zunehmend Wachen, Waffenknechte und vereinzelt auch Ritter hervor. Das Bauwesen blieb dennoch Teil des Familienlebens: Mehrere Angehörige arbeiten weiterhin in Gwynthors örtlicher Baumeistergilde.",
+          "biographyText": "Die Craigddu sind eine Baumeisterfamilie und ein kriegerisches Bürgerhaus Gwynthors. Aus ihren Reihen gingen Wachen, Waffenknechte und einzelne Ritter im Dienst der Draigs hervor. Mehrere Angehörige arbeiten weiterhin in der örtlichen Baumeistergilde.",
           "abilitiesTitle": "Einfluss und Aufgaben",
           "abilities": [],
           "historyTitle": "Geschichte",
-          "historyText": "Die Craigddu stammen aus dem Bauhandwerk. Über Generationen gewann der Waffendienst für Haus Draig innerhalb der Familie an Bedeutung, bis das Haus ebenso mit seinen Kriegern wie mit seinen Baumeistern verbunden wurde. Namen und Lebensdaten des ursprünglichen Gründerpaares sind unbekannt. Nach der Überlieferungslücke setzt der Stammbaum bei den Brüdern Brenwyn, Iestyn und Cyran ein. Iestyn und Mared sind die Eltern von Hywel und Catrin. Hywel dient als Waffenknecht; Catrins Ehe mit Llywelyn Coeddu verbindet die Craigddu mit dem Haus der Gwynthorer Waffenschmiede.",
-          "worksTitle": "Hausgeschichte",
+          "historyText": "Die jüngere Überlieferung verzweigt sich unter den Brüdern Brenwyn, Iestyn und Cyran. Brenwyn und sein Sohn Rhydric arbeiten als Baumeister, während Cyran, Maelor und Thalwyn im Wachdienst stehen. Iestyns Kinder sind Hywel und Catrin.",
+          "worksTitle": "Prägende Ereignisse",
           "works": [],
           "extraSections": [
             {
               "position": "afterWorks",
               "mode": "text",
               "title": "Werte und Stellung",
-              "text": "Der Dienst für Haus Draig und die Arbeit im Bauwesen bestehen in dieser Familie nebeneinander fort. Brenwyn Craigddu und sein Sohn Rhydric sind in der örtlichen Baumeistergilde tätig; Cyran sowie die jüngeren Angehörigen Hywel, Maelor und Thalwyn vertreten die kriegerische Seite des Hauses. Einzelne Ritter stammen aus der Familie, doch die Craigddu bleiben ein Bürgerhaus."
+              "text": "Hywel ist Waffenknecht, Llywelyn Coeddus bester Freund und mit Eleri Vater von sieben Töchtern. Catrins Ehe mit Llywelyn verbindet Craigddu und Coeddu. Die Familie bewahrt ihre bürgerliche Stellung neben dem generationslangen Dienst für Draig."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Die Tätigkeit in Gwynthors Baumeistergilde ist belegt; sie macht die Gilde nicht zum Besitz der Familie. Weitere eigene Betriebe sind nicht benannt."
             }
           ],
           "triviaTitle": "Besonderheiten",
@@ -1492,7 +1550,7 @@
             {
               "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Craigddu.png",
               "title": "Haus Craigddu · vollständige Hausseite",
-              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
               "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=craigddu"
             }
           ],
@@ -1500,8 +1558,8 @@
         }
       },
       "registryUpgrade": {
-        "fromRevision": 2,
-        "toRevision": 3
+        "fromRevision": 3,
+        "toRevision": 4
       }
     }
   }

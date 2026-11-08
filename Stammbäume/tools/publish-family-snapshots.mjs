@@ -5,13 +5,19 @@ import { FAMILY_REGISTRY } from '../assets/js/data/families.registry.js';
 import { reconcileFamilyWithProjectOrigin } from '../assets/js/modules/family-sync/project-origin-reconciliation.js';
 import { assertValidFamily } from '../assets/js/domain/family-schema.js';
 import { assertMirroredCrossFamilyBatch } from '../assets/js/modules/family-sync/cross-family-sync-invariant.js';
+import { assertReviewedSnapshotIdentityCorrection, verifyIdentityCorrectionSources } from './family-snapshot-identity-corrections.mjs';
 
-// Stable identities and house membership are never replaceable. A specifically
-// reviewed life-date correction must name the same person and exact old/new values.
-export function assertSnapshotPersonIdentity(familyId, previous, current, corrections = []) {
+// Ordinary updates preserve identities and membership. Date corrections name
+// exact old/new values; same-person identity corrections additionally require
+// verified source bytes, mirrored spouse evidence and retained legacy IDs.
+export function assertSnapshotPersonIdentity(familyId, previous, current, corrections = [], identityReview = {}) {
   const applied = [];
   for (const field of ['id', 'worldPersonId', 'birth', 'death', 'houseId']) {
     if (current[field] === previous[field]) continue;
+    if (['worldPersonId', 'houseId'].includes(field) && identityReview.corrections?.length) {
+      applied.push(assertReviewedSnapshotIdentityCorrection({ familyId, previous, current, field, ...identityReview }));
+      continue;
+    }
     const correction = corrections.find(item => item.familyId === familyId
       && item.personId === previous.id && item.worldPersonId === previous.worldPersonId
       && item.field === field && item.from === previous[field] && item.to === current[field]);
@@ -22,10 +28,12 @@ export function assertSnapshotPersonIdentity(familyId, previous, current, correc
   return applied;
 }
 
-export async function publishFamilySnapshots(familyIds, { apply = false, refreshHouseProfiles = false, houseProfilesOnly = false, personFieldCorrections = [] } = {}) {
+export async function publishFamilySnapshots(familyIds, { apply = false, refreshHouseProfiles = false, houseProfilesOnly = false, personFieldCorrections = [], reviewedIdentityCorrections = [] } = {}) {
 assert(familyIds.length && new Set(familyIds).size === familyIds.length, 'Eindeutige Familienauswahl erforderlich.');
 const root = new URL('../assets/data/published-families/', import.meta.url);
 const registry = JSON.parse(await readFile(new URL('registry.json', root), 'utf8'));
+const verifiedSourceHashes = await verifyIdentityCorrectionSources(reviewedIdentityCorrections,
+  file => readFile(new URL('../../' + file, import.meta.url)));
 const now = new Date().toISOString();
 const records = [];
 const appliedPersonCorrections = [];
@@ -61,7 +69,8 @@ for (const record of records) for (const old of record.previous?.family.persons 
         `Abstammung der fortgeführten Person: ${old.id}`);
     }
   }
-  appliedPersonCorrections.push(...assertSnapshotPersonIdentity(record.family.document.id, old, current, personFieldCorrections));
+  appliedPersonCorrections.push(...assertSnapshotPersonIdentity(record.family.document.id, old, current, personFieldCorrections,
+    { corrections: reviewedIdentityCorrections, records, verifiedSourceHashes }));
 }
 assertMirroredCrossFamilyBatch(records);
 const changed = records.filter(record => record.changed);

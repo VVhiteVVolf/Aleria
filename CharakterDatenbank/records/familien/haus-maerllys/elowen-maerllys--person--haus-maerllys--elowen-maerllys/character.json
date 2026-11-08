@@ -1,0 +1,427 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-maerllys--elowen-maerllys",
+  "slug": "elowen-maerllys",
+  "identity": {
+    "name": "Elowen Maerllys",
+    "aliases": [],
+    "worldPersonId": "person--haus-maerllys--elowen-maerllys"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-maerllys",
+      "label": "Haus Maerllys"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-maerllys",
+        "familyTitle": "Haus Maerllys",
+        "personId": "elowen-maerllys",
+        "worldPersonId": "person--haus-maerllys--elowen-maerllys",
+        "houseId": "house-maerllys",
+        "houseName": "Haus Maerllys",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Elowen Maerllys\",\"title\":\"Empfang · Buchungen und Hausleinen\",\"birth\":\"1713\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/letzte-rast/portraits/elowen.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"},{\"personId\":\"bronwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"partners\":[{\"personId\":\"edern-vann\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--edern-vann\",\"name\":\"Edern Vann\"}],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-maerllys--elowen-maerllys",
+      "documentIds": [
+        "person--haus-maerllys--elowen-maerllys"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-maerllys--elowen-maerllys",
+          "createdAt": "2026-11-08T16:10:00.000Z",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-maerllys",
+        "personId": "elowen-maerllys",
+        "worldPersonId": "person--haus-maerllys--elowen-maerllys",
+        "url": ""
+      }
+    ],
+    "profile": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=elowen-maerllys"
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/elowen-maerllys.json",
+    "sourceExportedAt": "2026-11-08T16:10:00.000Z",
+    "sourceUpdatedAt": "2026-11-08T16:10:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-maerllys--elowen-maerllys"
+    ],
+    "contentHash": "d4c8c473726f1859da8665c63fb18ad3209b355cc2e10ea064e9f7659d33ad3a"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwniwr-maerllys-20261108"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "age": 27,
+        "aliases": [],
+        "archived": false,
+        "bio": "Elowen Maerllys wurde 1713 als Tochter Iorwerths und Bronwen Swylls geboren. Sie ist die ältere Schwester Nias und Rhys’. Im Jahr 1733 heiratete sie Edern Vann und lebt und arbeitet seither in der Letzten Rast in Gwynthor.\n\nIhre Herkunft ist die Schneiderfamilie Maerllys. Mit der Ehe verlagerte sich ihr täglicher Mittelpunkt in das Herbergsleben der Vann. Gäste, Zimmer und die Abläufe eines Hauses, in dem Reisende ein- und ausgehen, gehören zu einer anderen Arbeitswelt als Zuschnitt und Nähstube, bleiben aber ebenso auf Verlässlichkeit angewiesen.\n\nAuch ihre Geschwister fanden eigene Aufgaben: Nia dient Prinzessin Isobel Draig persönlich, Rhys verkauft in der Göttlichen Eleganz. Die drei bleiben durch Eltern und Großeltern verbunden. Elowens dunkelrotes Haar und ihre blauen Augen ähneln denen ihrer jüngeren Geschwister.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Elowen Maerllys"
+            },
+            {
+              "label": "Geboren",
+              "value": "1713"
+            },
+            {
+              "label": "Alter",
+              "value": "27 Jahre"
+            },
+            {
+              "label": "Familie",
+              "value": "Haus Maerllys"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Empfang · Buchungen und Hausleinen"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/elowen.png",
+            "biographyTitle": "Biografie",
+            "biographyText": "Elowen Maerllys wurde 1713 als Tochter Iorwerths und Bronwen Swylls geboren. Sie ist die ältere Schwester Nias und Rhys’. Im Jahr 1733 heiratete sie Edern Vann und lebt und arbeitet seither in der Letzten Rast in Gwynthor.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Arbeit und Alltag",
+                "text": "Ihre Herkunft ist die Schneiderfamilie Maerllys. Mit der Ehe verlagerte sich ihr täglicher Mittelpunkt in das Herbergsleben der Vann. Gäste, Zimmer und die Abläufe eines Hauses, in dem Reisende ein- und ausgehen, gehören zu einer anderen Arbeitswelt als Zuschnitt und Nähstube, bleiben aber ebenso auf Verlässlichkeit angewiesen."
+              },
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Familie und Verbindungen",
+                "text": "Auch ihre Geschwister fanden eigene Aufgaben: Nia dient Prinzessin Isobel Draig persönlich, Rhys verkauft in der Göttlichen Eleganz. Die drei bleiben durch Eltern und Großeltern verbunden. Elowens dunkelrotes Haar und ihre blauen Augen ähneln denen ihrer jüngeren Geschwister."
+              }
+            ]
+          }
+        },
+        "createdAt": "2026-11-08T16:10:00.000Z",
+        "currentLocation": "Gwynthor",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Haus Maerllys",
+        "genealogy": {
+          "worldPersonId": "person--haus-maerllys--elowen-maerllys",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1713",
+          "death": "",
+          "houseId": "house-maerllys",
+          "houseName": "Haus Maerllys",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-maerllys",
+              "personId": "elowen-maerllys",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-08T16:10:00.000Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=elowen-maerllys",
+              "fingerprint": "{\"name\":\"Elowen Maerllys\",\"title\":\"Empfang · Buchungen und Hausleinen\",\"birth\":\"1713\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/letzte-rast/portraits/elowen.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"},{\"personId\":\"bronwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"partners\":[{\"personId\":\"edern-vann\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--edern-vann\",\"name\":\"Edern Vann\"}],\"children\":[]}}"
+            },
+            {
+              "familyId": "haus-vann",
+              "personId": "elowen-maerllys",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-08T16:10:00.000Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-vann&mode=view&person=elowen-maerllys",
+              "fingerprint": "{\"name\":\"Elowen Maerllys\",\"title\":\"Empfang · Buchungen und Hausleinen\",\"birth\":\"1713\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/letzte-rast/portraits/elowen.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"edern-vann\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--edern-vann\",\"name\":\"Edern Vann\"}],\"children\":[{\"personId\":\"celyn-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--celyn-vann\",\"name\":\"Celyn Vann\"},{\"personId\":\"iolo-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--iolo-vann\",\"name\":\"Iolo Vann\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "iorwerth-maerllys",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
+                "name": "Iorwerth Maerllys"
+              },
+              {
+                "personId": "bronwen-swyll",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-swyll--bronwen-swyll",
+                "name": "Bronwen Swyll"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "edern-vann",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-vann--edern-vann",
+                "name": "Edern Vann"
+              }
+            ],
+            "children": [
+              {
+                "personId": "celyn-vann",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-vann--celyn-vann",
+                "name": "Celyn Vann"
+              },
+              {
+                "personId": "iolo-vann",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-vann--iolo-vann",
+                "name": "Iolo Vann"
+              }
+            ]
+          }
+        },
+        "id": "person--haus-maerllys--elowen-maerllys",
+        "identity": {
+          "worldPersonId": "person--haus-maerllys--elowen-maerllys"
+        },
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "imageSetsOverride": false,
+        "name": "Elowen Maerllys",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/elowen.png",
+        "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=elowen-maerllys",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "Empfang · Buchungen und Hausleinen",
+        "updatedAt": "2026-11-08T16:10:00.000Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "age": 27,
+    "aliases": [],
+    "archived": false,
+    "bio": "Elowen Maerllys wurde 1713 als Tochter Iorwerths und Bronwen Swylls geboren. Sie ist die ältere Schwester Nias und Rhys’. Im Jahr 1733 heiratete sie Edern Vann und lebt und arbeitet seither in der Letzten Rast in Gwynthor.\n\nIhre Herkunft ist die Schneiderfamilie Maerllys. Mit der Ehe verlagerte sich ihr täglicher Mittelpunkt in das Herbergsleben der Vann. Gäste, Zimmer und die Abläufe eines Hauses, in dem Reisende ein- und ausgehen, gehören zu einer anderen Arbeitswelt als Zuschnitt und Nähstube, bleiben aber ebenso auf Verlässlichkeit angewiesen.\n\nAuch ihre Geschwister fanden eigene Aufgaben: Nia dient Prinzessin Isobel Draig persönlich, Rhys verkauft in der Göttlichen Eleganz. Die drei bleiben durch Eltern und Großeltern verbunden. Elowens dunkelrotes Haar und ihre blauen Augen ähneln denen ihrer jüngeren Geschwister.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Elowen Maerllys"
+        },
+        {
+          "label": "Geboren",
+          "value": "1713"
+        },
+        {
+          "label": "Alter",
+          "value": "27 Jahre"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Maerllys"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Empfang · Buchungen und Hausleinen"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/elowen.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Elowen Maerllys wurde 1713 als Tochter Iorwerths und Bronwen Swylls geboren. Sie ist die ältere Schwester Nias und Rhys’. Im Jahr 1733 heiratete sie Edern Vann und lebt und arbeitet seither in der Letzten Rast in Gwynthor.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Ihre Herkunft ist die Schneiderfamilie Maerllys. Mit der Ehe verlagerte sich ihr täglicher Mittelpunkt in das Herbergsleben der Vann. Gäste, Zimmer und die Abläufe eines Hauses, in dem Reisende ein- und ausgehen, gehören zu einer anderen Arbeitswelt als Zuschnitt und Nähstube, bleiben aber ebenso auf Verlässlichkeit angewiesen."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Auch ihre Geschwister fanden eigene Aufgaben: Nia dient Prinzessin Isobel Draig persönlich, Rhys verkauft in der Göttlichen Eleganz. Die drei bleiben durch Eltern und Großeltern verbunden. Elowens dunkelrotes Haar und ihre blauen Augen ähneln denen ihrer jüngeren Geschwister."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Maerllys",
+    "genealogy": {
+      "worldPersonId": "person--haus-maerllys--elowen-maerllys",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1713",
+      "death": "",
+      "houseId": "house-maerllys",
+      "houseName": "Haus Maerllys",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-maerllys",
+          "personId": "elowen-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=elowen-maerllys",
+          "fingerprint": "{\"name\":\"Elowen Maerllys\",\"title\":\"Empfang · Buchungen und Hausleinen\",\"birth\":\"1713\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/letzte-rast/portraits/elowen.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"},{\"personId\":\"bronwen-swyll\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-swyll--bronwen-swyll\",\"name\":\"Bronwen Swyll\"}],\"partners\":[{\"personId\":\"edern-vann\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--edern-vann\",\"name\":\"Edern Vann\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-vann",
+          "personId": "elowen-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-vann&mode=view&person=elowen-maerllys",
+          "fingerprint": "{\"name\":\"Elowen Maerllys\",\"title\":\"Empfang · Buchungen und Hausleinen\",\"birth\":\"1713\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/letzte-rast/portraits/elowen.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"edern-vann\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--edern-vann\",\"name\":\"Edern Vann\"}],\"children\":[{\"personId\":\"celyn-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--celyn-vann\",\"name\":\"Celyn Vann\"},{\"personId\":\"iolo-vann\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-vann--iolo-vann\",\"name\":\"Iolo Vann\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "iorwerth-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
+            "name": "Iorwerth Maerllys"
+          },
+          {
+            "personId": "bronwen-swyll",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-swyll--bronwen-swyll",
+            "name": "Bronwen Swyll"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "edern-vann",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-vann--edern-vann",
+            "name": "Edern Vann"
+          }
+        ],
+        "children": [
+          {
+            "personId": "celyn-vann",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-vann--celyn-vann",
+            "name": "Celyn Vann"
+          },
+          {
+            "personId": "iolo-vann",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-vann--iolo-vann",
+            "name": "Iolo Vann"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-maerllys--elowen-maerllys",
+    "identity": {
+      "worldPersonId": "person--haus-maerllys--elowen-maerllys"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "name": "Elowen Maerllys",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../AleriaAlmanach/assets/letzte-rast/portraits/elowen.png",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=elowen-maerllys",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Empfang · Buchungen und Hausleinen",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

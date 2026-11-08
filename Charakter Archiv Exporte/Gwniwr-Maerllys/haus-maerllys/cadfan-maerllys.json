@@ -1,0 +1,144 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-08T16:10:00.000Z",
+  "mergeStrategy": "replace-reviewed-metadata-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/cadfan-maerllys.json",
+  "character": {
+    "activeImageSetId": "",
+    "age": 78,
+    "aliases": [],
+    "archived": false,
+    "bio": "Cadfan Maerllys wurde 1662 geboren und ist das älteste namentlich bekannte Oberhaupt der jüngeren Maerllys-Linie. Mit seiner Gemahlin Eira hat er den Sohn Iorwerth. Sein Bruder Owain heiratete Gwenllian Ysgrif und begründete den zweiten bekannten Zweig. Die Geschichte vor den beiden Brüdern verliert sich in einer langen Überlieferungslücke.\n\nHeute gibt Cadfan als Altmeister Erfahrungen und alte Schnittvorlagen an Naht & Siegel weiter. Die tägliche Arbeit tragen Iorwerth und die jüngeren Hände. Cadfans Platz liegt im beratenden Familienkreis, wo die bewährten Lösungen vergangener Werkstattjahre neben neuen Anforderungen an Dienstkleidung stehen.\n\nSeine Enkel heißen Elowen, Nia und Rhys. Elowen gehört seit ihrer Ehe zum Haushalt der Letzten Rast, Nia dient der Prinzessin Isobel, Rhys arbeitet in der Göttlichen Eleganz. Cadfans Familie bleibt durch diese unterschiedlichen Wege eng mit dem Leben Gwynthors verbunden.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Cadfan Maerllys"
+        },
+        {
+          "label": "Geboren",
+          "value": "1662"
+        },
+        {
+          "label": "Alter",
+          "value": "78 Jahre"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Maerllys"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Ältestes überliefertes Oberhaupt des Hauses Maerllys"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/cadfan-maerllys.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Cadfan Maerllys wurde 1662 geboren und ist das älteste namentlich bekannte Oberhaupt der jüngeren Maerllys-Linie. Mit seiner Gemahlin Eira hat er den Sohn Iorwerth. Sein Bruder Owain heiratete Gwenllian Ysgrif und begründete den zweiten bekannten Zweig. Die Geschichte vor den beiden Brüdern verliert sich in einer langen Überlieferungslücke.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Heute gibt Cadfan als Altmeister Erfahrungen und alte Schnittvorlagen an Naht & Siegel weiter. Die tägliche Arbeit tragen Iorwerth und die jüngeren Hände. Cadfans Platz liegt im beratenden Familienkreis, wo die bewährten Lösungen vergangener Werkstattjahre neben neuen Anforderungen an Dienstkleidung stehen."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Seine Enkel heißen Elowen, Nia und Rhys. Elowen gehört seit ihrer Ehe zum Haushalt der Letzten Rast, Nia dient der Prinzessin Isobel, Rhys arbeitet in der Göttlichen Eleganz. Cadfans Familie bleibt durch diese unterschiedlichen Wege eng mit dem Leben Gwynthors verbunden."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Maerllys",
+    "genealogy": {
+      "worldPersonId": "person--haus-maerllys--cadfan-maerllys",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1662",
+      "death": "",
+      "houseId": "house-maerllys",
+      "houseName": "Haus Maerllys",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-maerllys",
+          "personId": "cadfan-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=cadfan-maerllys",
+          "fingerprint": "{\"name\":\"Cadfan Maerllys\",\"title\":\"Ältestes überliefertes Oberhaupt des Hauses Maerllys\",\"birth\":\"1662\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-maerllys\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/cadfan-maerllys.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"unbekannter-bruder-gwenora-maerllys\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--unbekannter-bruder-gwenora-maerllys\",\"name\":\"Unbekannter Bruder\"}],\"partners\":[{\"personId\":\"eira-spouse-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--eira-spouse-maerllys\",\"name\":\"Eira\"}],\"children\":[{\"personId\":\"iorwerth-maerllys\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--iorwerth-maerllys\",\"name\":\"Iorwerth Maerllys\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "unbekannter-bruder-gwenora-maerllys",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "unknown",
+            "worldPersonId": "person--haus-maerllys--unbekannter-bruder-gwenora-maerllys",
+            "name": "Unbekannter Bruder"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "eira-spouse-maerllys",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--eira-spouse-maerllys",
+            "name": "Eira"
+          }
+        ],
+        "children": [
+          {
+            "personId": "iorwerth-maerllys",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--iorwerth-maerllys",
+            "name": "Iorwerth Maerllys"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-maerllys--cadfan-maerllys",
+    "identity": {
+      "worldPersonId": "person--haus-maerllys--cadfan-maerllys"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "name": "Cadfan Maerllys",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/cadfan-maerllys.png",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=cadfan-maerllys",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Ältestes überliefertes Oberhaupt des Hauses Maerllys",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

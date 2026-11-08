@@ -1,0 +1,478 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-veltrane--matteo-veltrane",
+  "slug": "matteo-septimus-veltrane",
+  "identity": {
+    "name": "Matteo Septimus Veltrane",
+    "aliases": [],
+    "worldPersonId": "person--haus-veltrane--matteo-veltrane"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-maerllys",
+      "label": "Haus Maerllys"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-maerllys",
+        "familyTitle": "Haus Maerllys",
+        "personId": "matteo-veltrane",
+        "worldPersonId": "person--haus-veltrane--matteo-veltrane",
+        "houseId": "house-veltrane",
+        "houseName": "Haus Veltrane",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-veltrane--matteo-veltrane",
+      "documentIds": [
+        "person--haus-veltrane--matteo-veltrane",
+        "person--haus-veltrane--matteo-veltrane",
+        "person--haus-veltrane--matteo-veltrane"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-veltrane--matteo-veltrane",
+          "createdAt": "2026-10-15T23:44:30.684Z",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
+        },
+        {
+          "documentId": "person--haus-veltrane--matteo-veltrane",
+          "createdAt": "",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-maerllys",
+        "personId": "matteo-veltrane",
+        "worldPersonId": "person--haus-veltrane--matteo-veltrane",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/matteo-veltrane.json",
+    "sourceExportedAt": "2026-11-08T16:10:00.000Z",
+    "sourceUpdatedAt": "2026-11-08T16:10:00.000Z",
+    "sourceDocumentIds": [
+      "person--haus-veltrane--matteo-veltrane",
+      "person--haus-veltrane--matteo-veltrane",
+      "person--haus-veltrane--matteo-veltrane"
+    ],
+    "contentHash": "cd004cc226fccab5b4ea53eb5b10abcbe81ee5f94fafb4defc5afc8d10e3cd0c"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwniwr-maerllys-20261108"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-veltrane--matteo-veltrane",
+        "name": "Matteo Septimus Veltrane",
+        "title": "Handelskapitän · Begründer der Gwynthorer Linie",
+        "role": "Handelskapitän · Begründer der Gwynthorer Linie",
+        "fraktion": "Göttliche Eleganz",
+        "taxonomyPath": "Kaiserreich Argentum > Unsortiert",
+        "currentLocation": "",
+        "origin": "Tirnara · Kaiserreich Argentum",
+        "profileLink": "",
+        "bio": "Matteo kam mit Seide und Olivenöl nach Gwynthor und fand in Gwenoras Werkstatt einen Grund zu bleiben. Aus seinem kleinen Krämerladen und ihren Aufträgen wuchs ein Geschäft, das die Schiffe seines Stammhauses nie aus den Augen verlor.",
+        "biography": null,
+        "portrait": "./assets/goettliche-eleganz/portraits/matteo.png",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "identity": {
+          "worldPersonId": "person--haus-veltrane--matteo-veltrane"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-veltrane--matteo-veltrane",
+          "sex": "male",
+          "status": "dead",
+          "birth": "1633",
+          "death": "1708",
+          "houseId": "house-veltrane",
+          "houseName": "Haus Veltrane",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-raves",
+              "personId": "matteo-veltrane",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-15T23:44:30.684Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=matteo-veltrane",
+              "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[{\"personId\":\"lorenzo-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lorenzo-raves\",\"name\":\"Lorenzo Cassian Raves\"},{\"personId\":\"livia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--livia-raves\",\"name\":\"Livia Aurelia Raves\"},{\"personId\":\"flavia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--flavia-raves\",\"name\":\"Flavia Marina Raves\"}]}}"
+            },
+            {
+              "familyId": "haus-maerllys",
+              "personId": "matteo-veltrane",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-15T23:44:30.684Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=matteo-veltrane",
+              "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[]}}"
+            },
+            {
+              "familyId": "haus-veltrane",
+              "personId": "matteo-veltrane",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-15T23:44:30.684Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-veltrane&mode=view&person=matteo-veltrane",
+              "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-veltrane-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-veltrane--haus-veltrane-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-veltrane-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-veltrane--haus-veltrane-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "haus-veltrane-gruender",
+                "type": "claimed",
+                "legitimacy": "unknown",
+                "certainty": "unknown",
+                "worldPersonId": "person--haus-veltrane--haus-veltrane-gruender",
+                "name": "Unbekannter Gründer"
+              },
+              {
+                "personId": "haus-veltrane-gruenderin",
+                "type": "claimed",
+                "legitimacy": "unknown",
+                "certainty": "unknown",
+                "worldPersonId": "person--haus-veltrane--haus-veltrane-gruenderin",
+                "name": "Unbekannte Gründerin"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "gwenora-maerllys",
+                "type": "marriage",
+                "status": "ended",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
+                "name": "Gwenora Maerllys"
+              }
+            ],
+            "children": [
+              {
+                "personId": "lorenzo-raves",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-raves--lorenzo-raves",
+                "name": "Lorenzo Cassian Raves"
+              },
+              {
+                "personId": "livia-raves",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-raves--livia-raves",
+                "name": "Livia Aurelia Raves"
+              },
+              {
+                "personId": "flavia-raves",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-raves--flavia-raves",
+                "name": "Flavia Marina Raves"
+              }
+            ]
+          }
+        },
+        "status": "dead",
+        "relevance": "minor",
+        "aliases": [],
+        "archived": false,
+        "createdAt": "2026-10-15T23:44:30.684Z",
+        "updatedAt": "2026-11-08T16:10:00.000Z"
+      },
+      {
+        "genealogy": {
+          "worldPersonId": "person--haus-veltrane--matteo-veltrane",
+          "sex": "male",
+          "status": "dead",
+          "birth": "1633",
+          "death": "1708",
+          "houseId": "house-veltrane",
+          "houseName": "Haus Veltrane",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-raves",
+              "personId": "matteo-veltrane",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-15T23:44:30.684Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=matteo-veltrane",
+              "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[{\"personId\":\"lorenzo-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lorenzo-raves\",\"name\":\"Lorenzo Cassian Raves\"},{\"personId\":\"livia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--livia-raves\",\"name\":\"Livia Aurelia Raves\"},{\"personId\":\"flavia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--flavia-raves\",\"name\":\"Flavia Marina Raves\"}]}}"
+            },
+            {
+              "familyId": "haus-maerllys",
+              "personId": "matteo-veltrane",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-15T23:44:30.684Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=matteo-veltrane",
+              "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[]}}"
+            },
+            {
+              "familyId": "haus-veltrane",
+              "personId": "matteo-veltrane",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-10-15T23:44:30.684Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-veltrane&mode=view&person=matteo-veltrane",
+              "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-veltrane-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-veltrane--haus-veltrane-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-veltrane-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-veltrane--haus-veltrane-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "haus-veltrane-gruender",
+                "type": "claimed",
+                "legitimacy": "unknown",
+                "certainty": "unknown",
+                "worldPersonId": "person--haus-veltrane--haus-veltrane-gruender",
+                "name": "Unbekannter Gründer"
+              },
+              {
+                "personId": "haus-veltrane-gruenderin",
+                "type": "claimed",
+                "legitimacy": "unknown",
+                "certainty": "unknown",
+                "worldPersonId": "person--haus-veltrane--haus-veltrane-gruenderin",
+                "name": "Unbekannte Gründerin"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "gwenora-maerllys",
+                "type": "marriage",
+                "status": "ended",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
+                "name": "Gwenora Maerllys"
+              }
+            ],
+            "children": [
+              {
+                "personId": "lorenzo-raves",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-raves--lorenzo-raves",
+                "name": "Lorenzo Cassian Raves"
+              },
+              {
+                "personId": "livia-raves",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-raves--livia-raves",
+                "name": "Livia Aurelia Raves"
+              },
+              {
+                "personId": "flavia-raves",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-raves--flavia-raves",
+                "name": "Flavia Marina Raves"
+              }
+            ]
+          }
+        },
+        "id": "person--haus-veltrane--matteo-veltrane",
+        "identity": {
+          "worldPersonId": "person--haus-veltrane--matteo-veltrane"
+        },
+        "name": "Matteo Septimus Veltrane",
+        "updatedAt": "2026-11-08T16:10:00.000Z"
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-veltrane--matteo-veltrane",
+    "name": "Matteo Septimus Veltrane",
+    "title": "Handelskapitän · Begründer der Gwynthorer Linie",
+    "role": "Handelskapitän · Begründer der Gwynthorer Linie",
+    "fraktion": "Göttliche Eleganz",
+    "taxonomyPath": "Kaiserreich Argentum > Unsortiert",
+    "currentLocation": "",
+    "origin": "Tirnara · Kaiserreich Argentum",
+    "profileLink": "",
+    "bio": "Matteo kam mit Seide und Olivenöl nach Gwynthor und fand in Gwenoras Werkstatt einen Grund zu bleiben. Aus seinem kleinen Krämerladen und ihren Aufträgen wuchs ein Geschäft, das die Schiffe seines Stammhauses nie aus den Augen verlor.",
+    "biography": null,
+    "portrait": "./assets/goettliche-eleganz/portraits/matteo.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "identity": {
+      "worldPersonId": "person--haus-veltrane--matteo-veltrane"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-veltrane--matteo-veltrane",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1633",
+      "death": "1708",
+      "houseId": "house-veltrane",
+      "houseName": "Haus Veltrane",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-raves",
+          "personId": "matteo-veltrane",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-15T23:44:30.684Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=matteo-veltrane",
+          "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[{\"personId\":\"lorenzo-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lorenzo-raves\",\"name\":\"Lorenzo Cassian Raves\"},{\"personId\":\"livia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--livia-raves\",\"name\":\"Livia Aurelia Raves\"},{\"personId\":\"flavia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--flavia-raves\",\"name\":\"Flavia Marina Raves\"}]}}"
+        },
+        {
+          "familyId": "haus-maerllys",
+          "personId": "matteo-veltrane",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-15T23:44:30.684Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=matteo-veltrane",
+          "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-veltrane",
+          "personId": "matteo-veltrane",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-15T23:44:30.684Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-veltrane&mode=view&person=matteo-veltrane",
+          "fingerprint": "{\"name\":\"Matteo Septimus Veltrane\",\"title\":\"Handelskapitän · Begründer der Gwynthorer Linie\",\"birth\":\"1633\",\"death\":\"1708\",\"sex\":\"male\",\"status\":\"dead\",\"houseId\":\"house-veltrane\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/matteo.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-veltrane-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-veltrane--haus-veltrane-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-veltrane-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-veltrane--haus-veltrane-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"gwenora-maerllys\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--gwenora-maerllys\",\"name\":\"Gwenora Maerllys\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "haus-veltrane-gruender",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "unknown",
+            "worldPersonId": "person--haus-veltrane--haus-veltrane-gruender",
+            "name": "Unbekannter Gründer"
+          },
+          {
+            "personId": "haus-veltrane-gruenderin",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "unknown",
+            "worldPersonId": "person--haus-veltrane--haus-veltrane-gruenderin",
+            "name": "Unbekannte Gründerin"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "gwenora-maerllys",
+            "type": "marriage",
+            "status": "ended",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
+            "name": "Gwenora Maerllys"
+          }
+        ],
+        "children": [
+          {
+            "personId": "lorenzo-raves",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-raves--lorenzo-raves",
+            "name": "Lorenzo Cassian Raves"
+          },
+          {
+            "personId": "livia-raves",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-raves--livia-raves",
+            "name": "Livia Aurelia Raves"
+          },
+          {
+            "personId": "flavia-raves",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-raves--flavia-raves",
+            "name": "Flavia Marina Raves"
+          }
+        ]
+      }
+    },
+    "status": "dead",
+    "relevance": "minor",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-10-15T23:44:30.684Z",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

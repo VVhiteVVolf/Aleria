@@ -1,0 +1,178 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-08T16:10:00.000Z",
+  "mergeStrategy": "replace-reviewed-metadata-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/madoc-tonnarth.json",
+  "character": {
+    "activeImageSetId": "",
+    "age": 48,
+    "aliases": [],
+    "archived": false,
+    "bio": "Madoc Tonnarth wurde 1692 geboren und ist Cadell Tonnarths Bruder sowie Llewarchs Onkel. Er heiratete Rhoswen Maerllys, die Tochter Owains und Gwenllian Ysgrifs. Die Ehe verbindet zwei bürgerliche Familien Gwynthors.\n\nMadoc und Rhoswen haben die drei Söhne Bryn, Emrys und Aled. Mit ihnen bildet das Paar einen fortgeführten Zweig innerhalb der Tonnarth-Familie. Auf Rhoswens Seite gehören Geraint und die ältere Maerllys-Generation zum weiteren Verwandtenkreis.\n\nÜber die Familie seiner Frau reicht diese Verbindung zu den Schneidereien der Stadt. Madocs persönliche Aufgaben sind darüber hinaus wenig beschrieben. Sein Platz in der Familiengeschichte wird durch seinen eigenen Haushalt, seine Brüder und die gemeinsame jüngste Generation bestimmt.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Madoc Tonnarth"
+        },
+        {
+          "label": "Geboren",
+          "value": "1692"
+        },
+        {
+          "label": "Alter",
+          "value": "48 Jahre"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Tonnarth"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Onkel Llewarch Tonnarths"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/madoc-tonnarth.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Madoc Tonnarth wurde 1692 geboren und ist Cadell Tonnarths Bruder sowie Llewarchs Onkel. Er heiratete Rhoswen Maerllys, die Tochter Owains und Gwenllian Ysgrifs. Die Ehe verbindet zwei bürgerliche Familien Gwynthors.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Madoc und Rhoswen haben die drei Söhne Bryn, Emrys und Aled. Mit ihnen bildet das Paar einen fortgeführten Zweig innerhalb der Tonnarth-Familie. Auf Rhoswens Seite gehören Geraint und die ältere Maerllys-Generation zum weiteren Verwandtenkreis."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Über die Familie seiner Frau reicht diese Verbindung zu den Schneidereien der Stadt. Madocs persönliche Aufgaben sind darüber hinaus wenig beschrieben. Sein Platz in der Familiengeschichte wird durch seinen eigenen Haushalt, seine Brüder und die gemeinsame jüngste Generation bestimmt."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Haus Tonnarth",
+    "genealogy": {
+      "worldPersonId": "person--haus-tonnarth--madoc-tonnarth",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1692",
+      "death": "",
+      "houseId": "house-tonnarth",
+      "houseName": "Haus Tonnarth",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-maerllys",
+          "personId": "madoc-tonnarth",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=madoc-tonnarth",
+          "fingerprint": "{\"name\":\"Madoc Tonnarth\",\"title\":\"Onkel Llewarch Tonnarths\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tonnarth\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/madoc-tonnarth.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"rhoswen-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-tonnarth",
+          "personId": "madoc-tonnarth",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-tonnarth&mode=view&person=madoc-tonnarth",
+          "fingerprint": "{\"name\":\"Madoc Tonnarth\",\"title\":\"Onkel Llewarch Tonnarths\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-tonnarth\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-maerllys/madoc-tonnarth.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"idris-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--idris-tonnarth\",\"name\":\"Idris Tonnarth\"},{\"personId\":\"lowri-spouse-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--lowri-spouse-tonnarth\",\"name\":\"Lowri\"}],\"partners\":[{\"personId\":\"rhoswen-maerllys\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-maerllys--rhoswen-maerllys\",\"name\":\"Rhoswen Maerllys\"}],\"children\":[{\"personId\":\"bryn-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--bryn-tonnarth\",\"name\":\"Bryn Tonnarth\"},{\"personId\":\"emrys-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--emrys-tonnarth\",\"name\":\"Emrys Tonnarth\"},{\"personId\":\"aled-tonnarth\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-tonnarth--aled-tonnarth\",\"name\":\"Aled Tonnarth\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "idris-tonnarth",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tonnarth--idris-tonnarth",
+            "name": "Idris Tonnarth"
+          },
+          {
+            "personId": "lowri-spouse-tonnarth",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--family-tree--lowri-spouse-tonnarth",
+            "name": "Lowri"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "rhoswen-maerllys",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-maerllys--rhoswen-maerllys",
+            "name": "Rhoswen Maerllys"
+          }
+        ],
+        "children": [
+          {
+            "personId": "bryn-tonnarth",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tonnarth--bryn-tonnarth",
+            "name": "Bryn Tonnarth"
+          },
+          {
+            "personId": "emrys-tonnarth",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tonnarth--emrys-tonnarth",
+            "name": "Emrys Tonnarth"
+          },
+          {
+            "personId": "aled-tonnarth",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-tonnarth--aled-tonnarth",
+            "name": "Aled Tonnarth"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-tonnarth--madoc-tonnarth",
+    "identity": {
+      "worldPersonId": "person--haus-tonnarth--madoc-tonnarth"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "name": "Madoc Tonnarth",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-maerllys/madoc-tonnarth.png",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=madoc-tonnarth",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "Onkel Llewarch Tonnarths",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

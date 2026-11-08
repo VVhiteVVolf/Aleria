@@ -1,0 +1,283 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--gwniwr-staff--iwan-trevor",
+  "slug": "iwan-trevor",
+  "identity": {
+    "name": "Iwan Trevor",
+    "aliases": [],
+    "worldPersonId": "person--gwniwr-staff--iwan-trevor"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--gwniwr-staff--iwan-trevor",
+      "documentIds": [
+        "person--gwniwr-staff--iwan-trevor",
+        "person--gwniwr-staff--iwan-trevor"
+      ],
+      "documents": [
+        {
+          "documentId": "person--gwniwr-staff--iwan-trevor",
+          "createdAt": "2026-11-08T16:10:00.000Z",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
+        },
+        {
+          "documentId": "person--gwniwr-staff--iwan-trevor",
+          "createdAt": "",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwniwr-Maerllys/personal/iwan-trevor.json",
+    "sourceExportedAt": "2026-11-08T16:10:00.000Z",
+    "sourceUpdatedAt": "2026-11-08T16:10:00.000Z",
+    "sourceDocumentIds": [
+      "person--gwniwr-staff--iwan-trevor",
+      "person--gwniwr-staff--iwan-trevor"
+    ],
+    "contentHash": "cad0a5f18a2ace09f72a1984b7e2e20b870c18d92d336b8639e8737d79e1d331"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwniwr-maerllys-20261108"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "age": 28,
+        "bio": "Iwan Trevor ist 28 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Iwan arbeitet bei Nadel & Faden an den schlichten und guten Herrengarnituren. Schulterweite, Ärmel und die Belastungsnähte der Alltagskleidung verlangen dabei ebenso viel Aufmerksamkeit wie die äußere Linie.\n\nIm Laden von Emyr und Gwenllian gilt die gleiche Sorgfalt für schlichte und gute Kleidung. Die Arbeit wird mit Schneidermeister Tudur und den übrigen Händen abgestimmt. Ausbesserungen, klare Absprachen und haltbare Nähte sind ebenso wichtig wie ein neues Kleidungsstück.\n\nZum Arbeitskreis gehören neben Emyr, Gwenllian und Tudur auch die anderen Angestellten und der junge Lehrling Osian. Die Aufgaben greifen ineinander: Beratung und Anprobe, Zuschnitt und Nähstube führen gemeinsam zu einem Kleidungsstück, auf das der Käufer vertrauen kann.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Iwan Trevor"
+            },
+            {
+              "label": "Alter",
+              "value": "28 Jahre"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Schneiderei · Herrengarnituren"
+            },
+            {
+              "label": "Arbeitsort",
+              "value": "Nadel & Faden · Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "assets/gwniwr/portraits/iwan-trevor.jpg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Iwan Trevor ist 28 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Iwan arbeitet bei Nadel & Faden an den schlichten und guten Herrengarnituren. Schulterweite, Ärmel und die Belastungsnähte der Alltagskleidung verlangen dabei ebenso viel Aufmerksamkeit wie die äußere Linie.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Arbeit und Alltag",
+                "text": "Im Laden von Emyr und Gwenllian gilt die gleiche Sorgfalt für schlichte und gute Kleidung. Die Arbeit wird mit Schneidermeister Tudur und den übrigen Händen abgestimmt. Ausbesserungen, klare Absprachen und haltbare Nähte sind ebenso wichtig wie ein neues Kleidungsstück."
+              },
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Familie und Verbindungen",
+                "text": "Zum Arbeitskreis gehören neben Emyr, Gwenllian und Tudur auch die anderen Angestellten und der junge Lehrling Osian. Die Aufgaben greifen ineinander: Beratung und Anprobe, Zuschnitt und Nähstube führen gemeinsam zu einem Kleidungsstück, auf das der Käufer vertrauen kann."
+              }
+            ]
+          }
+        },
+        "createdAt": "2026-11-08T16:10:00.000Z",
+        "currentLocation": "Gwynthor · Nadel & Faden",
+        "fraktion": "Nadel & Faden",
+        "id": "person--gwniwr-staff--iwan-trevor",
+        "identity": {
+          "worldPersonId": "person--gwniwr-staff--iwan-trevor"
+        },
+        "name": "Iwan Trevor",
+        "origin": "",
+        "portrait": "assets/gwniwr/portraits/iwan-trevor.jpg",
+        "relevance": "minor",
+        "role": "Schneiderei · Herrengarnituren",
+        "status": "active",
+        "title": "Schneiderei · Herrengarnituren",
+        "updatedAt": "2026-11-08T16:10:00.000Z"
+      },
+      {
+        "age": 28,
+        "bio": "Iwan Trevor ist 28 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Iwan arbeitet bei Nadel & Faden an den schlichten und guten Herrengarnituren. Schulterweite, Ärmel und die Belastungsnähte der Alltagskleidung verlangen dabei ebenso viel Aufmerksamkeit wie die äußere Linie.\n\nIm Laden von Emyr und Gwenllian gilt die gleiche Sorgfalt für schlichte und gute Kleidung. Die Arbeit wird mit Schneidermeister Tudur und den übrigen Händen abgestimmt. Ausbesserungen, klare Absprachen und haltbare Nähte sind ebenso wichtig wie ein neues Kleidungsstück.\n\nZum Arbeitskreis gehören neben Emyr, Gwenllian und Tudur auch die anderen Angestellten und der junge Lehrling Osian. Die Aufgaben greifen ineinander: Beratung und Anprobe, Zuschnitt und Nähstube führen gemeinsam zu einem Kleidungsstück, auf das der Käufer vertrauen kann.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Iwan Trevor"
+            },
+            {
+              "label": "Alter",
+              "value": "28 Jahre"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Schneiderei · Herrengarnituren"
+            },
+            {
+              "label": "Arbeitsort",
+              "value": "Nadel & Faden · Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "./assets/gwniwr/portraits/iwan-trevor.jpg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Iwan Trevor ist 28 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Iwan arbeitet bei Nadel & Faden an den schlichten und guten Herrengarnituren. Schulterweite, Ärmel und die Belastungsnähte der Alltagskleidung verlangen dabei ebenso viel Aufmerksamkeit wie die äußere Linie.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Arbeit und Alltag",
+                "text": "Im Laden von Emyr und Gwenllian gilt die gleiche Sorgfalt für schlichte und gute Kleidung. Die Arbeit wird mit Schneidermeister Tudur und den übrigen Händen abgestimmt. Ausbesserungen, klare Absprachen und haltbare Nähte sind ebenso wichtig wie ein neues Kleidungsstück."
+              },
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Familie und Verbindungen",
+                "text": "Zum Arbeitskreis gehören neben Emyr, Gwenllian und Tudur auch die anderen Angestellten und der junge Lehrling Osian. Die Aufgaben greifen ineinander: Beratung und Anprobe, Zuschnitt und Nähstube führen gemeinsam zu einem Kleidungsstück, auf das der Käufer vertrauen kann."
+              }
+            ]
+          }
+        },
+        "createdAt": "2026-11-08T16:10:00.000Z",
+        "currentLocation": "Gwynthor · Nadel & Faden",
+        "fraktion": "Nadel & Faden",
+        "id": "person--gwniwr-staff--iwan-trevor",
+        "identity": {
+          "worldPersonId": "person--gwniwr-staff--iwan-trevor"
+        },
+        "name": "Iwan Trevor",
+        "origin": "",
+        "portrait": "./assets/gwniwr/portraits/iwan-trevor.jpg",
+        "relevance": "minor",
+        "role": "Schneiderei · Herrengarnituren",
+        "status": "active",
+        "title": "Schneiderei · Herrengarnituren",
+        "updatedAt": "2026-11-08T16:10:00.000Z"
+      }
+    ]
+  },
+  "character": {
+    "age": 28,
+    "bio": "Iwan Trevor ist 28 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Iwan arbeitet bei Nadel & Faden an den schlichten und guten Herrengarnituren. Schulterweite, Ärmel und die Belastungsnähte der Alltagskleidung verlangen dabei ebenso viel Aufmerksamkeit wie die äußere Linie.\n\nIm Laden von Emyr und Gwenllian gilt die gleiche Sorgfalt für schlichte und gute Kleidung. Die Arbeit wird mit Schneidermeister Tudur und den übrigen Händen abgestimmt. Ausbesserungen, klare Absprachen und haltbare Nähte sind ebenso wichtig wie ein neues Kleidungsstück.\n\nZum Arbeitskreis gehören neben Emyr, Gwenllian und Tudur auch die anderen Angestellten und der junge Lehrling Osian. Die Aufgaben greifen ineinander: Beratung und Anprobe, Zuschnitt und Nähstube führen gemeinsam zu einem Kleidungsstück, auf das der Käufer vertrauen kann.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Iwan Trevor"
+        },
+        {
+          "label": "Alter",
+          "value": "28 Jahre"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Schneiderei · Herrengarnituren"
+        },
+        {
+          "label": "Arbeitsort",
+          "value": "Nadel & Faden · Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwniwr/portraits/iwan-trevor.jpg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Iwan Trevor ist 28 Jahre alt und arbeitet bei Nadel & Faden in Gwynthor. Iwan arbeitet bei Nadel & Faden an den schlichten und guten Herrengarnituren. Schulterweite, Ärmel und die Belastungsnähte der Alltagskleidung verlangen dabei ebenso viel Aufmerksamkeit wie die äußere Linie.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Im Laden von Emyr und Gwenllian gilt die gleiche Sorgfalt für schlichte und gute Kleidung. Die Arbeit wird mit Schneidermeister Tudur und den übrigen Händen abgestimmt. Ausbesserungen, klare Absprachen und haltbare Nähte sind ebenso wichtig wie ein neues Kleidungsstück."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Zum Arbeitskreis gehören neben Emyr, Gwenllian und Tudur auch die anderen Angestellten und der junge Lehrling Osian. Die Aufgaben greifen ineinander: Beratung und Anprobe, Zuschnitt und Nähstube führen gemeinsam zu einem Kleidungsstück, auf das der Käufer vertrauen kann."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor · Nadel & Faden",
+    "fraktion": "Nadel & Faden",
+    "id": "person--gwniwr-staff--iwan-trevor",
+    "identity": {
+      "worldPersonId": "person--gwniwr-staff--iwan-trevor"
+    },
+    "name": "Iwan Trevor",
+    "origin": "",
+    "portrait": "./assets/gwniwr/portraits/iwan-trevor.jpg",
+    "relevance": "minor",
+    "role": "Schneiderei · Herrengarnituren",
+    "status": "active",
+    "title": "Schneiderei · Herrengarnituren",
+    "updatedAt": "2026-11-08T16:10:00.000Z",
+    "aliases": [],
+    "genealogy": {
+      "worldPersonId": "person--gwniwr-staff--iwan-trevor",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

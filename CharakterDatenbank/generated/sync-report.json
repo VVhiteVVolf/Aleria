@@ -2,17 +2,17 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-11-07T00:00:00.000Z",
+  "sourceExportedAt": "2026-11-08T16:10:00.000Z",
   "summary": {
-    "sourceDocuments": 609,
-    "total": 367,
+    "sourceDocuments": 649,
+    "total": 395,
     "mergedSameNameGroups": 45,
-    "familyLinked": 273,
+    "familyLinked": 296,
     "familyAmbiguous": 0,
-    "familyPending": 94,
-    "primaryFamily": 271,
+    "familyPending": 99,
+    "primaryFamily": 294,
     "primaryGroup": 31,
-    "primaryPlace": 31,
+    "primaryPlace": 36,
     "primaryUnassigned": 34,
     "duplicateWorldPeople": 0
   },
@@ -1102,6 +1102,66 @@
     {
       "recordId": "character--gwynthor-markt-mairwen-brennig",
       "name": "Mairwen Brennig",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwniwr-staff--meirion-wym",
+      "name": "Meirion Wym",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwniwr-staff--iwan-trevor",
+      "name": "Iwan Trevor",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwniwr-staff--briallen-wym",
+      "name": "Briallen Wym",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwniwr-staff--nesta-ferchwyn",
+      "name": "Nesta Ferchwyn",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwniwr-staff--osian",
+      "name": "Osian",
       "status": "pending",
       "primary": {
         "kind": "place",

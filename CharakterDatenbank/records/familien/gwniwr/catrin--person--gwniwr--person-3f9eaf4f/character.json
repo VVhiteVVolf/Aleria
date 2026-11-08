@@ -1,0 +1,405 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--gwniwr--person-3f9eaf4f",
+  "slug": "catrin",
+  "identity": {
+    "name": "Catrin",
+    "aliases": [],
+    "worldPersonId": "person--gwniwr--person-3f9eaf4f"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "gwniwr",
+      "label": "Familie Gwniwr"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "gwniwr",
+        "familyTitle": "Familie Gwniwr",
+        "personId": "person-3f9eaf4f",
+        "worldPersonId": "person--gwniwr--person-3f9eaf4f",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Catrin\",\"title\":\"\",\"birth\":\"1708\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-3f9eaf4f.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-ece54bdb\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-ece54bdb\",\"name\":\"Tudur Gwniwr\"}],\"children\":[{\"personId\":\"person-178882ce\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-178882ce\",\"name\":\"Gethin Gwniwr\"},{\"personId\":\"person-558acc56\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-558acc56\",\"name\":\"Bleddyn Gwniwr\"},{\"personId\":\"person-38812666\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-38812666\",\"name\":\"Efa Gwniwr\"},{\"personId\":\"person-d55e335a\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-d55e335a\",\"name\":\"Micah Gwniwr\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--gwniwr--person-3f9eaf4f",
+      "documentIds": [
+        "person--gwniwr--person-3f9eaf4f"
+      ],
+      "documents": [
+        {
+          "documentId": "person--gwniwr--person-3f9eaf4f",
+          "createdAt": "2026-11-08T16:10:00.000Z",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "gwniwr",
+        "personId": "person-3f9eaf4f",
+        "worldPersonId": "person--gwniwr--person-3f9eaf4f",
+        "url": ""
+      }
+    ],
+    "profile": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-3f9eaf4f"
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwniwr-Maerllys/gwniwr/person-3f9eaf4f.json",
+    "sourceExportedAt": "2026-11-08T16:10:00.000Z",
+    "sourceUpdatedAt": "2026-11-08T16:10:00.000Z",
+    "sourceDocumentIds": [
+      "person--gwniwr--person-3f9eaf4f"
+    ],
+    "contentHash": "83f1887982cb8d31b4cca1821aac6904d6b7fd20944a27fd00781dc3d28b3ca1"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwniwr-maerllys-20261108"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "age": 32,
+        "aliases": [],
+        "archived": false,
+        "bio": "Catrin wurde 1708 geboren und ist mit dem Schneidermeister Tudur Gwniwr verheiratet. Gemeinsam haben sie Gethin, Bleddyn, Efa und Micah. Zum engeren Familienkreis gehören auch Tudurs Eltern Emyr und Gwenllian, die Nadel & Faden führen. Über Catrins Herkunft vor der Ehe ist wenig bekannt.\n\nDie Schneiderei verbindet die Familie mit vielen Bürgern Gwynthors. Stoffe, Anproben und die Weitergabe handwerklicher Kenntnisse gehören zum Umfeld ihres Haushalts. Die Kinder wachsen mit dem Anspruch auf, dass ein einfaches Arbeitsgewand ebenso zuverlässig verarbeitet werden soll wie gute Festkleidung. In der Familie werden Mädchen und Jungen gleichermaßen an das überlieferte Wissen herangeführt.\n\nTudurs Schwester Eleri ist mit dem Waffenknecht Hywel Craigddu verheiratet. So verbindet Catrins heutiger Familienkreis die Werkstatt mit einem weiteren Gwynthorer Haushalt. Während Tudur als Meister an den Schnitten arbeitet, bleibt das gemeinsame Familienleben mit den vier Kindern ein eigener Teil der Gwniwr-Geschichte.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Catrin"
+            },
+            {
+              "label": "Geboren",
+              "value": "1708"
+            },
+            {
+              "label": "Alter",
+              "value": "32 Jahre"
+            },
+            {
+              "label": "Familie",
+              "value": "Familie Gwniwr"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Familienangehörige/r"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/gwniwr/person-3f9eaf4f.jpg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Catrin wurde 1708 geboren und ist mit dem Schneidermeister Tudur Gwniwr verheiratet. Gemeinsam haben sie Gethin, Bleddyn, Efa und Micah. Zum engeren Familienkreis gehören auch Tudurs Eltern Emyr und Gwenllian, die Nadel & Faden führen. Über Catrins Herkunft vor der Ehe ist wenig bekannt.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Arbeit und Alltag",
+                "text": "Die Schneiderei verbindet die Familie mit vielen Bürgern Gwynthors. Stoffe, Anproben und die Weitergabe handwerklicher Kenntnisse gehören zum Umfeld ihres Haushalts. Die Kinder wachsen mit dem Anspruch auf, dass ein einfaches Arbeitsgewand ebenso zuverlässig verarbeitet werden soll wie gute Festkleidung. In der Familie werden Mädchen und Jungen gleichermaßen an das überlieferte Wissen herangeführt."
+              },
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Familie und Verbindungen",
+                "text": "Tudurs Schwester Eleri ist mit dem Waffenknecht Hywel Craigddu verheiratet. So verbindet Catrins heutiger Familienkreis die Werkstatt mit einem weiteren Gwynthorer Haushalt. Während Tudur als Meister an den Schnitten arbeitet, bleibt das gemeinsame Familienleben mit den vier Kindern ein eigener Teil der Gwniwr-Geschichte."
+              }
+            ]
+          }
+        },
+        "createdAt": "2026-11-08T16:10:00.000Z",
+        "currentLocation": "Gwynthor",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "",
+        "genealogy": {
+          "worldPersonId": "person--gwniwr--person-3f9eaf4f",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1708",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "gwniwr",
+              "personId": "person-3f9eaf4f",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-08T16:10:00.000Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-3f9eaf4f",
+              "fingerprint": "{\"name\":\"Catrin\",\"title\":\"\",\"birth\":\"1708\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-3f9eaf4f.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-ece54bdb\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-ece54bdb\",\"name\":\"Tudur Gwniwr\"}],\"children\":[{\"personId\":\"person-178882ce\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-178882ce\",\"name\":\"Gethin Gwniwr\"},{\"personId\":\"person-558acc56\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-558acc56\",\"name\":\"Bleddyn Gwniwr\"},{\"personId\":\"person-38812666\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-38812666\",\"name\":\"Efa Gwniwr\"},{\"personId\":\"person-d55e335a\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-d55e335a\",\"name\":\"Micah Gwniwr\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [],
+            "partners": [
+              {
+                "personId": "person-ece54bdb",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--gwniwr--person-ece54bdb",
+                "name": "Tudur Gwniwr"
+              }
+            ],
+            "children": [
+              {
+                "personId": "person-178882ce",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--gwniwr--person-178882ce",
+                "name": "Gethin Gwniwr"
+              },
+              {
+                "personId": "person-558acc56",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--gwniwr--person-558acc56",
+                "name": "Bleddyn Gwniwr"
+              },
+              {
+                "personId": "person-38812666",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--gwniwr--person-38812666",
+                "name": "Efa Gwniwr"
+              },
+              {
+                "personId": "person-d55e335a",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--gwniwr--person-d55e335a",
+                "name": "Micah Gwniwr"
+              }
+            ]
+          }
+        },
+        "id": "person--gwniwr--person-3f9eaf4f",
+        "identity": {
+          "worldPersonId": "person--gwniwr--person-3f9eaf4f"
+        },
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "imageSetsOverride": false,
+        "name": "Catrin",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/gwniwr/person-3f9eaf4f.jpg",
+        "profileLink": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-3f9eaf4f",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-11-08T16:10:00.000Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "age": 32,
+    "aliases": [],
+    "archived": false,
+    "bio": "Catrin wurde 1708 geboren und ist mit dem Schneidermeister Tudur Gwniwr verheiratet. Gemeinsam haben sie Gethin, Bleddyn, Efa und Micah. Zum engeren Familienkreis gehören auch Tudurs Eltern Emyr und Gwenllian, die Nadel & Faden führen. Über Catrins Herkunft vor der Ehe ist wenig bekannt.\n\nDie Schneiderei verbindet die Familie mit vielen Bürgern Gwynthors. Stoffe, Anproben und die Weitergabe handwerklicher Kenntnisse gehören zum Umfeld ihres Haushalts. Die Kinder wachsen mit dem Anspruch auf, dass ein einfaches Arbeitsgewand ebenso zuverlässig verarbeitet werden soll wie gute Festkleidung. In der Familie werden Mädchen und Jungen gleichermaßen an das überlieferte Wissen herangeführt.\n\nTudurs Schwester Eleri ist mit dem Waffenknecht Hywel Craigddu verheiratet. So verbindet Catrins heutiger Familienkreis die Werkstatt mit einem weiteren Gwynthorer Haushalt. Während Tudur als Meister an den Schnitten arbeitet, bleibt das gemeinsame Familienleben mit den vier Kindern ein eigener Teil der Gwniwr-Geschichte.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Catrin"
+        },
+        {
+          "label": "Geboren",
+          "value": "1708"
+        },
+        {
+          "label": "Alter",
+          "value": "32 Jahre"
+        },
+        {
+          "label": "Familie",
+          "value": "Familie Gwniwr"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Familienangehörige/r"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/gwniwr/person-3f9eaf4f.jpg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Catrin wurde 1708 geboren und ist mit dem Schneidermeister Tudur Gwniwr verheiratet. Gemeinsam haben sie Gethin, Bleddyn, Efa und Micah. Zum engeren Familienkreis gehören auch Tudurs Eltern Emyr und Gwenllian, die Nadel & Faden führen. Über Catrins Herkunft vor der Ehe ist wenig bekannt.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Die Schneiderei verbindet die Familie mit vielen Bürgern Gwynthors. Stoffe, Anproben und die Weitergabe handwerklicher Kenntnisse gehören zum Umfeld ihres Haushalts. Die Kinder wachsen mit dem Anspruch auf, dass ein einfaches Arbeitsgewand ebenso zuverlässig verarbeitet werden soll wie gute Festkleidung. In der Familie werden Mädchen und Jungen gleichermaßen an das überlieferte Wissen herangeführt."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Tudurs Schwester Eleri ist mit dem Waffenknecht Hywel Craigddu verheiratet. So verbindet Catrins heutiger Familienkreis die Werkstatt mit einem weiteren Gwynthorer Haushalt. Während Tudur als Meister an den Schnitten arbeitet, bleibt das gemeinsame Familienleben mit den vier Kindern ein eigener Teil der Gwniwr-Geschichte."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "",
+    "genealogy": {
+      "worldPersonId": "person--gwniwr--person-3f9eaf4f",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1708",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "gwniwr",
+          "personId": "person-3f9eaf4f",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-3f9eaf4f",
+          "fingerprint": "{\"name\":\"Catrin\",\"title\":\"\",\"birth\":\"1708\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-3f9eaf4f.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-ece54bdb\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-ece54bdb\",\"name\":\"Tudur Gwniwr\"}],\"children\":[{\"personId\":\"person-178882ce\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-178882ce\",\"name\":\"Gethin Gwniwr\"},{\"personId\":\"person-558acc56\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-558acc56\",\"name\":\"Bleddyn Gwniwr\"},{\"personId\":\"person-38812666\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-38812666\",\"name\":\"Efa Gwniwr\"},{\"personId\":\"person-d55e335a\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-d55e335a\",\"name\":\"Micah Gwniwr\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "person-ece54bdb",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--gwniwr--person-ece54bdb",
+            "name": "Tudur Gwniwr"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-178882ce",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--gwniwr--person-178882ce",
+            "name": "Gethin Gwniwr"
+          },
+          {
+            "personId": "person-558acc56",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--gwniwr--person-558acc56",
+            "name": "Bleddyn Gwniwr"
+          },
+          {
+            "personId": "person-38812666",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--gwniwr--person-38812666",
+            "name": "Efa Gwniwr"
+          },
+          {
+            "personId": "person-d55e335a",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--gwniwr--person-d55e335a",
+            "name": "Micah Gwniwr"
+          }
+        ]
+      }
+    },
+    "id": "person--gwniwr--person-3f9eaf4f",
+    "identity": {
+      "worldPersonId": "person--gwniwr--person-3f9eaf4f"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "name": "Catrin",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/gwniwr/person-3f9eaf4f.jpg",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-3f9eaf4f",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

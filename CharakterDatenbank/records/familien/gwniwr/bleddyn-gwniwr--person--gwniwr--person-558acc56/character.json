@@ -1,0 +1,355 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--gwniwr--person-558acc56",
+  "slug": "bleddyn-gwniwr",
+  "identity": {
+    "name": "Bleddyn Gwniwr",
+    "aliases": [],
+    "worldPersonId": "person--gwniwr--person-558acc56"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "gwniwr",
+      "label": "Familie Gwniwr"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "gwniwr",
+        "familyTitle": "Familie Gwniwr",
+        "personId": "person-558acc56",
+        "worldPersonId": "person--gwniwr--person-558acc56",
+        "houseId": "house-gwniwr",
+        "houseName": "Gwniwr",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Bleddyn Gwniwr\",\"title\":\"\",\"birth\":\"1728\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwniwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-558acc56.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-ece54bdb\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-ece54bdb\",\"name\":\"Tudur Gwniwr\"},{\"personId\":\"person-3f9eaf4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-3f9eaf4f\",\"name\":\"Catrin\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--gwniwr--person-558acc56",
+      "documentIds": [
+        "person--gwniwr--person-558acc56"
+      ],
+      "documents": [
+        {
+          "documentId": "person--gwniwr--person-558acc56",
+          "createdAt": "2026-11-08T16:10:00.000Z",
+          "updatedAt": "2026-11-08T16:10:00.000Z"
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "gwniwr",
+        "personId": "person-558acc56",
+        "worldPersonId": "person--gwniwr--person-558acc56",
+        "url": ""
+      }
+    ],
+    "profile": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-558acc56"
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwniwr-Maerllys/gwniwr/person-558acc56.json",
+    "sourceExportedAt": "2026-11-08T16:10:00.000Z",
+    "sourceUpdatedAt": "2026-11-08T16:10:00.000Z",
+    "sourceDocumentIds": [
+      "person--gwniwr--person-558acc56"
+    ],
+    "contentHash": "b7c16cb2cd2fd142f36dc7e9be847f48034f5e2f3d1eb5627a9701da7aff02d6"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwniwr-maerllys-20261108"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "activeImageSetId": "",
+        "age": 12,
+        "aliases": [],
+        "archived": false,
+        "bio": "Bleddyn Gwniwr wurde 1728 geboren und ist zwölf Jahre alt. Seine Eltern heißen Tudur und Catrin. Gethin ist sein älterer Bruder; Efa und Micah sind jünger. Die vier Geschwister gehören zur jüngsten Generation der Gwynthorer Schneiderfamilie.\n\nNadel & Faden bildet den handwerklichen Hintergrund seiner Kindheit. Großvater Emyr und Großmutter Gwenllian führen den Betrieb, während Tudur als Meister arbeitet. Der Anspruch auf haltbare, ehrliche Arbeit gehört zu den Vorstellungen, mit denen die Kinder in diesem Familienkreis aufwachsen.\n\nBleddyns Tante Eleri lebt mit Hywel Craigddu und ihren sieben Töchtern in einem weiteren großen Haushalt. Seine eigene Zukunft bleibt offen. Noch steht er als Kind zwischen den unterschiedlichen Generationen der Familie, deren Geschichte sich zugleich um das gemeinsame Handwerk und den Zusammenhalt der Angehörigen dreht.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Vollständiger Name",
+              "value": "Bleddyn Gwniwr"
+            },
+            {
+              "label": "Geboren",
+              "value": "1728"
+            },
+            {
+              "label": "Alter",
+              "value": "12 Jahre"
+            },
+            {
+              "label": "Familie",
+              "value": "Gwniwr"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Familienangehörige/r"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/gwniwr/person-558acc56.jpg",
+            "biographyTitle": "Biografie",
+            "biographyText": "Bleddyn Gwniwr wurde 1728 geboren und ist zwölf Jahre alt. Seine Eltern heißen Tudur und Catrin. Gethin ist sein älterer Bruder; Efa und Micah sind jünger. Die vier Geschwister gehören zur jüngsten Generation der Gwynthorer Schneiderfamilie.",
+            "extraSections": [
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Arbeit und Alltag",
+                "text": "Nadel & Faden bildet den handwerklichen Hintergrund seiner Kindheit. Großvater Emyr und Großmutter Gwenllian führen den Betrieb, während Tudur als Meister arbeitet. Der Anspruch auf haltbare, ehrliche Arbeit gehört zu den Vorstellungen, mit denen die Kinder in diesem Familienkreis aufwachsen."
+              },
+              {
+                "position": "afterIntro",
+                "mode": "text",
+                "title": "Familie und Verbindungen",
+                "text": "Bleddyns Tante Eleri lebt mit Hywel Craigddu und ihren sieben Töchtern in einem weiteren großen Haushalt. Seine eigene Zukunft bleibt offen. Noch steht er als Kind zwischen den unterschiedlichen Generationen der Familie, deren Geschichte sich zugleich um das gemeinsame Handwerk und den Zusammenhalt der Angehörigen dreht."
+              }
+            ]
+          }
+        },
+        "createdAt": "2026-11-08T16:10:00.000Z",
+        "currentLocation": "Gwynthor",
+        "emotes": [],
+        "emotesOverride": false,
+        "fraktion": "Gwniwr",
+        "genealogy": {
+          "worldPersonId": "person--gwniwr--person-558acc56",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1728",
+          "death": "",
+          "houseId": "house-gwniwr",
+          "houseName": "Gwniwr",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "gwniwr",
+              "personId": "person-558acc56",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-08T16:10:00.000Z",
+              "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-558acc56",
+              "fingerprint": "{\"name\":\"Bleddyn Gwniwr\",\"title\":\"\",\"birth\":\"1728\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwniwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-558acc56.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-ece54bdb\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-ece54bdb\",\"name\":\"Tudur Gwniwr\"},{\"personId\":\"person-3f9eaf4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-3f9eaf4f\",\"name\":\"Catrin\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "person-ece54bdb",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--gwniwr--person-ece54bdb",
+                "name": "Tudur Gwniwr"
+              },
+              {
+                "personId": "person-3f9eaf4f",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--gwniwr--person-3f9eaf4f",
+                "name": "Catrin"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "id": "person--gwniwr--person-558acc56",
+        "identity": {
+          "worldPersonId": "person--gwniwr--person-558acc56"
+        },
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "imageSetsOverride": false,
+        "name": "Bleddyn Gwniwr",
+        "origin": "",
+        "playerOwner": "",
+        "plotNode": "",
+        "portrait": "../Stammbäume/assets/images/portraits/gwniwr/person-558acc56.jpg",
+        "profileLink": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-558acc56",
+        "relevance": "",
+        "role": "",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "title": "",
+        "updatedAt": "2026-11-08T16:10:00.000Z"
+      }
+    ]
+  },
+  "character": {
+    "activeImageSetId": "",
+    "age": 12,
+    "aliases": [],
+    "archived": false,
+    "bio": "Bleddyn Gwniwr wurde 1728 geboren und ist zwölf Jahre alt. Seine Eltern heißen Tudur und Catrin. Gethin ist sein älterer Bruder; Efa und Micah sind jünger. Die vier Geschwister gehören zur jüngsten Generation der Gwynthorer Schneiderfamilie.\n\nNadel & Faden bildet den handwerklichen Hintergrund seiner Kindheit. Großvater Emyr und Großmutter Gwenllian führen den Betrieb, während Tudur als Meister arbeitet. Der Anspruch auf haltbare, ehrliche Arbeit gehört zu den Vorstellungen, mit denen die Kinder in diesem Familienkreis aufwachsen.\n\nBleddyns Tante Eleri lebt mit Hywel Craigddu und ihren sieben Töchtern in einem weiteren großen Haushalt. Seine eigene Zukunft bleibt offen. Noch steht er als Kind zwischen den unterschiedlichen Generationen der Familie, deren Geschichte sich zugleich um das gemeinsame Handwerk und den Zusammenhalt der Angehörigen dreht.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Bleddyn Gwniwr"
+        },
+        {
+          "label": "Geboren",
+          "value": "1728"
+        },
+        {
+          "label": "Alter",
+          "value": "12 Jahre"
+        },
+        {
+          "label": "Familie",
+          "value": "Gwniwr"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Familienangehörige/r"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/gwniwr/person-558acc56.jpg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Bleddyn Gwniwr wurde 1728 geboren und ist zwölf Jahre alt. Seine Eltern heißen Tudur und Catrin. Gethin ist sein älterer Bruder; Efa und Micah sind jünger. Die vier Geschwister gehören zur jüngsten Generation der Gwynthorer Schneiderfamilie.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Nadel & Faden bildet den handwerklichen Hintergrund seiner Kindheit. Großvater Emyr und Großmutter Gwenllian führen den Betrieb, während Tudur als Meister arbeitet. Der Anspruch auf haltbare, ehrliche Arbeit gehört zu den Vorstellungen, mit denen die Kinder in diesem Familienkreis aufwachsen."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Bleddyns Tante Eleri lebt mit Hywel Craigddu und ihren sieben Töchtern in einem weiteren großen Haushalt. Seine eigene Zukunft bleibt offen. Noch steht er als Kind zwischen den unterschiedlichen Generationen der Familie, deren Geschichte sich zugleich um das gemeinsame Handwerk und den Zusammenhalt der Angehörigen dreht."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Gwniwr",
+    "genealogy": {
+      "worldPersonId": "person--gwniwr--person-558acc56",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1728",
+      "death": "",
+      "houseId": "house-gwniwr",
+      "houseName": "Gwniwr",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "gwniwr",
+          "personId": "person-558acc56",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-558acc56",
+          "fingerprint": "{\"name\":\"Bleddyn Gwniwr\",\"title\":\"\",\"birth\":\"1728\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gwniwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-558acc56.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-ece54bdb\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-ece54bdb\",\"name\":\"Tudur Gwniwr\"},{\"personId\":\"person-3f9eaf4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-3f9eaf4f\",\"name\":\"Catrin\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-ece54bdb",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--gwniwr--person-ece54bdb",
+            "name": "Tudur Gwniwr"
+          },
+          {
+            "personId": "person-3f9eaf4f",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--gwniwr--person-3f9eaf4f",
+            "name": "Catrin"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--gwniwr--person-558acc56",
+    "identity": {
+      "worldPersonId": "person--gwniwr--person-558acc56"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "name": "Bleddyn Gwniwr",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/gwniwr/person-558acc56.jpg",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-558acc56",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

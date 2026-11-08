@@ -1,3 +1,4 @@
+import { withMaerllysTailoringContent } from './gwniwr-maerllys-links.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
 import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
@@ -58,7 +59,7 @@ const GRANDPARENT_IDS = ['idris-ysgrif', 'efa-spouse-ysgrif'];
 const PARENT_IDS = ['aneirin-ysgrif', 'catrin-spouse-ysgrif'];
 const BRYN_IDS = ['bryn-ysgrif', 'elen-spouse-ysgrif'];
 
-export const HOUSE_YSGRIF_FAMILY = Object.freeze({
+const HOUSE_YSGRIF_FAMILY_BEFORE_TAILORING = Object.freeze({
   ...BASE_FAMILY,
   houses: Object.freeze([
     ...BASE_FAMILY.houses,
@@ -236,3 +237,5 @@ export const HOUSE_YSGRIF_FAMILY = Object.freeze({
     sourceNote: 'Floyd Ysgrif ist im Jahr 1740 einundzwanzig Jahre alt, unverheiratet und besitzt zwei ebenfalls unverheiratete Schwestern. Ihre weiteren Lebenslinien bleiben bewusst offen. Bryn hat drei unverheiratete Söhne; Madoc lebt als kinderloser Söldner. Idris ist der einzige konkret ausgearbeitete Großvater; seine Schwester Gwenllian ist an Owain Maerllys verheiratet und führt einen direkten, beidseitig registrierten Wegverheiratet-Knoten zu Haus Maerllys. Das eigene Ysgrif-Wappen und Floyds Portrait wurden lokal aus den vorgegebenen Quellen gesichert.'
   })
 });
+
+export const HOUSE_YSGRIF_FAMILY = withMaerllysTailoringContent(HOUSE_YSGRIF_FAMILY_BEFORE_TAILORING);

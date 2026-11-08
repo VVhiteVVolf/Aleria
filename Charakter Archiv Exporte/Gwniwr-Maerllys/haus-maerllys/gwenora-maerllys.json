@@ -1,0 +1,116 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-08T16:10:00.000Z",
+  "mergeStrategy": "replace-reviewed-metadata-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwniwr-Maerllys/haus-maerllys/gwenora-maerllys.json",
+  "character": {
+    "genealogy": {
+      "worldPersonId": "person--haus-maerllys--gwenora-maerllys",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1638",
+      "death": "1714",
+      "houseId": "house-maerllys",
+      "houseName": "Haus Maerllys",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-raves",
+          "personId": "gwenora-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-15T23:44:30.684Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-raves&mode=view&person=gwenora-maerllys",
+          "fingerprint": "{\"name\":\"Gwenora Maerllys\",\"title\":\"Schneidermeisterin · Mitbegründerin des Geschäfts\",\"birth\":\"1638\",\"death\":\"1714\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"matteo-veltrane\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"}],\"children\":[{\"personId\":\"lorenzo-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--lorenzo-raves\",\"name\":\"Lorenzo Cassian Raves\"},{\"personId\":\"livia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--livia-raves\",\"name\":\"Livia Aurelia Raves\"},{\"personId\":\"flavia-raves\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-raves--flavia-raves\",\"name\":\"Flavia Marina Raves\"}]}}"
+        },
+        {
+          "familyId": "haus-maerllys",
+          "personId": "gwenora-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-15T23:44:30.684Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-maerllys&mode=view&person=gwenora-maerllys",
+          "fingerprint": "{\"name\":\"Gwenora Maerllys\",\"title\":\"Schneidermeisterin · Mitbegründerin des Geschäfts\",\"birth\":\"1638\",\"death\":\"1714\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"haus-maerllys-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--haus-maerllys-gruender\",\"name\":\"??? Maerllys\"},{\"personId\":\"haus-maerllys-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-maerllys--haus-maerllys-gruenderin\",\"name\":\"??? Maerllys\"}],\"partners\":[{\"personId\":\"matteo-veltrane\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"}],\"children\":[]}}"
+        },
+        {
+          "familyId": "haus-veltrane",
+          "personId": "gwenora-maerllys",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-10-15T23:44:30.684Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-veltrane&mode=view&person=gwenora-maerllys",
+          "fingerprint": "{\"name\":\"Gwenora Maerllys\",\"title\":\"Schneidermeisterin · Mitbegründerin des Geschäfts\",\"birth\":\"1638\",\"death\":\"1714\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"house-maerllys\",\"portrait\":\"../AleriaAlmanach/assets/goettliche-eleganz/portraits/gwenora-v2.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"matteo-veltrane\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-veltrane--matteo-veltrane\",\"name\":\"Matteo Septimus Veltrane\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "haus-maerllys-gruender",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "unknown",
+            "worldPersonId": "person--haus-maerllys--haus-maerllys-gruender",
+            "name": "??? Maerllys"
+          },
+          {
+            "personId": "haus-maerllys-gruenderin",
+            "type": "claimed",
+            "legitimacy": "unknown",
+            "certainty": "unknown",
+            "worldPersonId": "person--haus-maerllys--haus-maerllys-gruenderin",
+            "name": "??? Maerllys"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "matteo-veltrane",
+            "type": "marriage",
+            "status": "ended",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-veltrane--matteo-veltrane",
+            "name": "Matteo Septimus Veltrane"
+          }
+        ],
+        "children": [
+          {
+            "personId": "lorenzo-raves",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-raves--lorenzo-raves",
+            "name": "Lorenzo Cassian Raves"
+          },
+          {
+            "personId": "livia-raves",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-raves--livia-raves",
+            "name": "Livia Aurelia Raves"
+          },
+          {
+            "personId": "flavia-raves",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-raves--flavia-raves",
+            "name": "Flavia Marina Raves"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-maerllys--gwenora-maerllys",
+    "identity": {
+      "worldPersonId": "person--haus-maerllys--gwenora-maerllys"
+    },
+    "name": "Gwenora Maerllys",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

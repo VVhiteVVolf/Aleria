@@ -1,0 +1,192 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-08T16:10:00.000Z",
+  "mergeStrategy": "replace-reviewed-metadata-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwniwr-Maerllys/gwniwr/person-e847aa96.json",
+  "character": {
+    "bio": "Hywel Craigddu wurde 1708 geboren und dient als Waffenknecht in Gwynthor. Er ist der Sohn Iestyn Craigddu’s und Mareds, Catrins Bruder und Llywelyn Coeddus Freund. Seine Ehe mit Eleri verbindet die Craigddu mit der Schneiderfamilie Gwniwr.\n\nEleri ist die Tochter Emyrs und Gwenllians, die Nadel & Faden führen. Sie hilft mit ihren Kindern im Laden. Für Hywel führt die familiäre Verbindung damit aus dem eigenen Dienstalltag in ein anderes Handwerk: In der Schneiderstube seiner Schwiegereltern zählen gute Tuche, brauchbare Schnitte und verlässliche Absprachen.\n\nDas Paar hat die sieben Töchter Lowri, Carys, Nerys, Ffion, Anwen, Eirlys und Mali. Hywels großer Haushalt steht neben den Familien seiner Schwester und seiner Vettern im weitverzweigten Craigddu-Kreis. Eleris fortdauernde Mithilfe bei ihren Eltern hält zugleich die Nähe zu den Gwniwr lebendig.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Hywel Craigddu"
+        },
+        {
+          "label": "Geboren",
+          "value": "1708"
+        },
+        {
+          "label": "Alter",
+          "value": "32 Jahre"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Waffenknecht in Gwynthor"
+        },
+        {
+          "label": "Familie",
+          "value": "Haus Craigddu"
+        }
+      ],
+      "biography": {
+        "portrait": "https://i.imgur.com/8Y1N3SA.png",
+        "biographyTitle": "Biografie",
+        "biographyText": "Hywel Craigddu wurde 1708 geboren und dient als Waffenknecht in Gwynthor. Er ist der Sohn Iestyn Craigddu’s und Mareds, Catrins Bruder und Llywelyn Coeddus Freund. Seine Ehe mit Eleri verbindet die Craigddu mit der Schneiderfamilie Gwniwr.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Eleri ist die Tochter Emyrs und Gwenllians, die Nadel & Faden führen. Sie hilft mit ihren Kindern im Laden. Für Hywel führt die familiäre Verbindung damit aus dem eigenen Dienstalltag in ein anderes Handwerk: In der Schneiderstube seiner Schwiegereltern zählen gute Tuche, brauchbare Schnitte und verlässliche Absprachen."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Das Paar hat die sieben Töchter Lowri, Carys, Nerys, Ffion, Anwen, Eirlys und Mali. Hywels großer Haushalt steht neben den Familien seiner Schwester und seiner Vettern im weitverzweigten Craigddu-Kreis. Eleris fortdauernde Mithilfe bei ihren Eltern hält zugleich die Nähe zu den Gwniwr lebendig."
+          }
+        ]
+      }
+    },
+    "genealogy": {
+      "worldPersonId": "person--craigddu--person-28b0e0a3",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1708",
+      "death": "",
+      "houseId": "house-craigddu",
+      "houseName": "Haus Craigddu",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "craigddu",
+          "personId": "person-28b0e0a3",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-09-27T20:33:20.104Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=craigddu&mode=view&person=person-28b0e0a3",
+          "fingerprint": "{\"name\":\"Hywel Craigddu\",\"title\":\"Waffenknecht in Gwynthor\",\"birth\":\"1708\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-craigddu\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"craigddu-gruender\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--craigddu-gruender\",\"name\":\"Iestyn Craigddu\"},{\"personId\":\"craigddu-gruenderin\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--craigddu-gruenderin\",\"name\":\"Mared Craigddu\"}],\"partners\":[{\"personId\":\"person-0774c56b\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-cf831497\",\"name\":\"Eleri\"}],\"children\":[{\"personId\":\"person-36234a87\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-36234a87\",\"name\":\"Lowri Craigddu\"},{\"personId\":\"person-abdbd916\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-abdbd916\",\"name\":\"Carys Craigddu\"},{\"personId\":\"person-650808a6\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-650808a6\",\"name\":\"Nerys Craigddu\"},{\"personId\":\"person-f54eea82\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-f54eea82\",\"name\":\"Ffion Craigddu\"},{\"personId\":\"person-70f41f8d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-70f41f8d\",\"name\":\"Anwen Craigddu\"},{\"personId\":\"person-c5e97e4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-c5e97e4f\",\"name\":\"Eirlys Craigddu\"},{\"personId\":\"person-9be71788\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--craigddu--person-9be71788\",\"name\":\"Mali Craigddu\"}]}}"
+        },
+        {
+          "familyId": "gwniwr",
+          "personId": "person-e847aa96",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-e847aa96",
+          "fingerprint": "{\"name\":\"Hywel Craigddu\",\"title\":\"Waffenknecht in Gwynthor\",\"birth\":\"1708\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-craigddu\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-cf831497\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-cf831497\",\"name\":\"Eleri Gwniwr\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "craigddu-gruender",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--craigddu--craigddu-gruender",
+            "name": "Iestyn Craigddu"
+          },
+          {
+            "personId": "craigddu-gruenderin",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--craigddu--craigddu-gruenderin",
+            "name": "Mared Craigddu"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "person-0774c56b",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--craigddu--person-0774c56b",
+            "name": "Eleri"
+          },
+          {
+            "personId": "person-cf831497",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--gwniwr--person-cf831497",
+            "name": "Eleri Gwniwr"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-36234a87",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--craigddu--person-36234a87",
+            "name": "Lowri Craigddu"
+          },
+          {
+            "personId": "person-abdbd916",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--craigddu--person-abdbd916",
+            "name": "Carys Craigddu"
+          },
+          {
+            "personId": "person-650808a6",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--craigddu--person-650808a6",
+            "name": "Nerys Craigddu"
+          },
+          {
+            "personId": "person-f54eea82",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--craigddu--person-f54eea82",
+            "name": "Ffion Craigddu"
+          },
+          {
+            "personId": "person-70f41f8d",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--craigddu--person-70f41f8d",
+            "name": "Anwen Craigddu"
+          },
+          {
+            "personId": "person-c5e97e4f",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--craigddu--person-c5e97e4f",
+            "name": "Eirlys Craigddu"
+          },
+          {
+            "personId": "person-9be71788",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--craigddu--person-9be71788",
+            "name": "Mali Craigddu"
+          }
+        ]
+      }
+    },
+    "id": "XVeiNvgFfsmtomLuIjcA",
+    "identity": {
+      "worldPersonId": "person--craigddu--person-28b0e0a3"
+    },
+    "name": "Hywel Craigddu",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}

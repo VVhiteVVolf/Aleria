@@ -1,3 +1,4 @@
+import { withMaerllysTailoringContent } from './gwniwr-maerllys-links.js';
 import { DEFAULT_RELATIONSHIP_COLORS } from '../config/family-colors.js';
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
 import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
@@ -332,7 +333,7 @@ export const FALCHDYN_HOUSE_BIOGRAPHY = Object.freeze({
   quoteBy: 'Leitspruch des Hauses Falchdyn'
 });
 
-export const HOUSE_FALCHDYN_FAMILY = Object.freeze({
+const HOUSE_FALCHDYN_FAMILY_BEFORE_TAILORING = Object.freeze({
   ...BASE_FAMILY,
   document: Object.freeze({
     ...BASE_FAMILY.document,
@@ -553,3 +554,5 @@ export const HOUSE_FALCHDYN_FAMILY = Object.freeze({
     registryManagedViewFields: Object.freeze(['focusPersonId', 'limitGenerations'])
   })
 });
+
+export const HOUSE_FALCHDYN_FAMILY = withMaerllysTailoringContent(HOUSE_FALCHDYN_FAMILY_BEFORE_TAILORING);

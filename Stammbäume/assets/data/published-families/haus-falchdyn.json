@@ -1,0 +1,2183 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-falchdyn",
+  "revision": 1,
+  "updatedAt": "2026-11-08T16:12:19.209Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-falchdyn",
+      "title": "Haus Falchdyn",
+      "motto": "Was gehört wird, geht nicht verloren.",
+      "description": "Volksnahe Schreiber- und Journalistenfamilie aus Gwynthor, die Celtigerns Echo herausgibt, Schreibende ausbildet und mit kleinen Redaktionsstuben in den größeren Orten Celtigerns Wacht vertreten ist.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "haus-draig",
+        "liegeHouseName": "Haus Draig",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-falchdyn-gruender",
+        "worldPersonId": "person--haus-falchdyn--haus-falchdyn-gruender",
+        "name": "???",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "haus-falchdyn-gruenderin",
+        "worldPersonId": "person--haus-falchdyn--haus-falchdyn-gruenderin",
+        "name": "???",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Historische Gründerfigur vor dem Überlieferungssprung; Name und genaue Lebensdaten sind noch nicht belegt.",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "dafydd-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--dafydd-falchdyn",
+        "name": "Dafydd Falchdyn",
+        "title": "Seniorautor · Stimme der Leserschaft",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1660",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-falchdyn/dafydd-falchdyn.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [
+          "Seniorautor",
+          "Celtigerns Echo"
+        ],
+        "notes": "Lebt 1740 noch und hört besonders gern den Sorgen, Erinnerungen und kleinen Erfolgen der Gwynthorer Bevölkerung zu.",
+        "extensions": {
+          "registryManagedFields": [
+            "death",
+            "status",
+            "title",
+            "tags",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "death": 3,
+            "status": 3,
+            "title": 3,
+            "tags": 3,
+            "notes": 3,
+            "portrait": 3
+          }
+        }
+      },
+      {
+        "id": "eirlys-spouse-falchdyn",
+        "worldPersonId": "person--family-tree--eirlys-spouse-falchdyn",
+        "name": "Eirlys",
+        "title": "Ehefrau Dafydd Falchdyns",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1664",
+        "death": "1736",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "iorwerth-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--iorwerth-falchdyn",
+        "name": "Iorwerth Falchdyn",
+        "title": "Chronist und Quellenprüfer",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1663",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-falchdyn/iorwerth-falchdyn.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Chronik",
+          "Quellenprüfung",
+          "Celtigerns Echo"
+        ],
+        "notes": "Lebt 1740 noch und bewahrt das Gedächtnis der Redaktion; Behauptungen ohne überprüfbare Herkunft begegnet er mit sichtbarer Skepsis.",
+        "extensions": {
+          "registryManagedFields": [
+            "death",
+            "status",
+            "title",
+            "tags",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "death": 3,
+            "status": 3,
+            "title": 3,
+            "tags": 3,
+            "notes": 3,
+            "portrait": 3
+          }
+        }
+      },
+      {
+        "id": "mabli-spouse-falchdyn",
+        "worldPersonId": "person--family-tree--mabli-spouse-falchdyn",
+        "name": "Mabli",
+        "title": "Ehefrau Iorwerth Falchdyns",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1667",
+        "death": "1738",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "madoc-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--madoc-falchdyn",
+        "name": "Madoc Falchdyn",
+        "title": "Schreiber · Vater von vier wegverheirateten Töchtern",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1666",
+        "death": "1737",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "seren-spouse-falchdyn",
+        "worldPersonId": "person--family-tree--seren-spouse-falchdyn",
+        "name": "Seren",
+        "title": "Ehefrau Madoc Falchdyns",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1669",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "aneirin-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--aneirin-falchdyn",
+        "name": "Aneirin Falchdyn",
+        "title": "Oberhaupt des Hauses · Herausgeber von Celtigerns Echo",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1687",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-falchdyn/aneirin-falchdyn.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [
+          "Herausgeber",
+          "Celtigerns Echo"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "portrait": 3
+          }
+        }
+      },
+      {
+        "id": "catrin-spouse-falchdyn",
+        "worldPersonId": "person--family-tree--catrin-spouse-falchdyn",
+        "name": "Catrin Pencaletwch",
+        "title": "Autorin bei Celtigerns Echo",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1690",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-falchdyn/catrin-pencaletwch.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Autorin",
+          "Celtigerns Echo"
+        ],
+        "notes": "Stammt aus einer nördlichen Familie; ihre genauere Herkunft bleibt vorerst offen.",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "tags",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "title": 3,
+            "tags": 3,
+            "notes": 3,
+            "portrait": 3
+          }
+        }
+      },
+      {
+        "id": "rhodri-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--rhodri-falchdyn",
+        "name": "Rhodri Falchdyn",
+        "title": "Leiter des Korrespondentennetzes",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1690",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-falchdyn/rhodri-falchdyn.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Korrespondenten",
+          "Celtigerns Echo"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "tags",
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "tags": 3,
+            "portrait": 3
+          }
+        }
+      },
+      {
+        "id": "enid-spouse-falchdyn",
+        "worldPersonId": "person--family-tree--enid-spouse-falchdyn",
+        "name": "Enid Braffwrdd",
+        "title": "Autorin bei Celtigerns Echo",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1693",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-falchdyn/enid-braffwrdd.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Autorin",
+          "Celtigerns Echo"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "tags",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "title": 3,
+            "tags": 3,
+            "notes": 3,
+            "portrait": 3
+          }
+        }
+      },
+      {
+        "id": "emrys-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--emrys-falchdyn",
+        "name": "Emrys Falchdyn",
+        "title": "Politikbeobachter und Kolumnist",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-falchdyn/emrys-falchdyn.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Kolumnist",
+          "Stadtpolitik",
+          "Celtigerns Echo"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "tags",
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "tags": 3,
+            "portrait": 3
+          }
+        }
+      },
+      {
+        "id": "lowri-spouse-falchdyn",
+        "worldPersonId": "person--family-tree--lowri-spouse-falchdyn",
+        "name": "Lowri Llawen",
+        "title": "Autorin bei Celtigerns Echo",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-falchdyn/lowri-llawen.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Autorin",
+          "Celtigerns Echo"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "tags",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "title": 3,
+            "tags": 3,
+            "notes": 3,
+            "portrait": 3
+          }
+        }
+      },
+      {
+        "id": "owain-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--owain-falchdyn",
+        "name": "Owain Falchdyn",
+        "title": "Ausbilder und Redaktionsverwalter",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-falchdyn/owain-falchdyn.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Schreiberschule",
+          "Celtigerns Echo"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "tags",
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "tags": 3,
+            "portrait": 3
+          }
+        }
+      },
+      {
+        "id": "nerys-spouse-falchdyn",
+        "worldPersonId": "person--family-tree--nerys-spouse-falchdyn",
+        "name": "Nerys Anfoesgarwch",
+        "title": "Autorin bei Celtigerns Echo",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-falchdyn/nerys-anfoesgarwch.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Autorin",
+          "Celtigerns Echo"
+        ],
+        "notes": "",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "title",
+            "tags",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "title": 3,
+            "tags": 3,
+            "notes": 3,
+            "portrait": 3
+          }
+        }
+      },
+      {
+        "id": "llio-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--llio-falchdyn",
+        "name": "Llio Falchdyn",
+        "title": "Nähstube und Serienfertigung · Naht & Siegel",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-maerllys/llio-falchdyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Tochter Madoc Falchdyns; heiratete Geraint Maerllys. Die Verbindung wird in beiden Familienakten geführt.",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "portrait": 4,
+            "title": 4
+          },
+          "registryManagedFields": [
+            "portrait",
+            "title"
+          ]
+        }
+      },
+      {
+        "id": "geraint-maerllys",
+        "worldPersonId": "person--haus-maerllys--geraint-maerllys",
+        "name": "Geraint Maerllys",
+        "title": "Werkstattleitung und Livreeschnitt · Naht & Siegel",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-maerllys/geraint-maerllys.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-maerllys",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Angehöriger des Hauses Maerllys; heiratete Llio Falchdyn.",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "portrait": 4,
+            "title": 4
+          },
+          "registryManagedFields": [
+            "portrait",
+            "title"
+          ]
+        }
+      },
+      {
+        "id": "angharad-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--angharad-falchdyn",
+        "name": "Angharad Falchdyn",
+        "title": "Wegverheiratete Tochter Madoc Falchdyns",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Heiratete in ein nicht näher überliefertes Bürgerhaus; ihre Nachkommen werden nicht in der Falchdyn-Linie fortgeführt.",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "unknown-spouse-angharad-falchdyn",
+        "worldPersonId": "person--haus-unbekannt-angharad-falchdyn--unknown-spouse-angharad-falchdyn",
+        "name": "Unbekannter Ehemann",
+        "title": "Ehemann von Angharad Falchdyn",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "????",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-angharad-falchdyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Name und Herkunft des Ehemanns von Angharad Falchdyn sind nicht überliefert.",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "efa-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--efa-falchdyn",
+        "name": "Efa Falchdyn",
+        "title": "Wegverheiratete Tochter Madoc Falchdyns",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1698",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Heiratete in ein nicht näher überliefertes Bürgerhaus; ihre Nachkommen werden nicht in der Falchdyn-Linie fortgeführt.",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "unknown-spouse-efa-falchdyn",
+        "worldPersonId": "person--haus-unbekannt-efa-falchdyn--unknown-spouse-efa-falchdyn",
+        "name": "Unbekannter Ehemann",
+        "title": "Ehemann von Efa Falchdyn",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "????",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-efa-falchdyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Name und Herkunft des Ehemanns von Efa Falchdyn sind nicht überliefert.",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "nest-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--nest-falchdyn",
+        "name": "Nest Falchdyn",
+        "title": "Wegverheiratete Tochter Madoc Falchdyns",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1701",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Heiratete in ein nicht näher überliefertes Bürgerhaus; ihre Nachkommen werden nicht in der Falchdyn-Linie fortgeführt.",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "unknown-spouse-nest-falchdyn",
+        "worldPersonId": "person--haus-unbekannt-nest-falchdyn--unknown-spouse-nest-falchdyn",
+        "name": "Unbekannter Ehemann",
+        "title": "Ehemann von Nest Falchdyn",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "????",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-unbekannt-nest-falchdyn",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Name und Herkunft des Ehemanns von Nest Falchdyn sind nicht überliefert.",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "ceredig-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--ceredig-falchdyn",
+        "name": "Ceredig Falchdyn",
+        "title": "Lokalreporter von Gwynthors Bannkreis",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1712",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-falchdyn/ceredig-falchdyn.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [
+          "Lokalreporter",
+          "Celtigerns Echo"
+        ],
+        "notes": "Ältester Sohn Aneirins und vorgesehener Nachfolger des Hauses. Berichtet unmittelbar aus Gwynthor und den Siedlungen seines Bannkreises. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "tags",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "tags": 3,
+            "notes": 3,
+            "portrait": 3
+          }
+        }
+      },
+      {
+        "id": "branwen-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--branwen-falchdyn",
+        "name": "Branwen Falchdyn",
+        "title": "Freche Nachwuchsreporterin",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1715",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-falchdyn/branwen-falchdyn.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Nachwuchsreporterin",
+          "Celtigerns Echo"
+        ],
+        "notes": "Sucht ihre Geschichten in Werkstätten, auf Märkten und mitten in den Nachbarschaften; ihre direkte Art bringt sie schnell ins Gespräch. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "tags",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "tags": 3,
+            "notes": 3,
+            "portrait": 3
+          }
+        }
+      },
+      {
+        "id": "taliesin-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--taliesin-falchdyn",
+        "name": "Taliesin Falchdyn",
+        "title": "Karikaturist und Satiriker",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-falchdyn/taliesin-falchdyn.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Karikatur",
+          "Satire",
+          "Celtigerns Echo"
+        ],
+        "notes": "Verdichtet große Eitelkeiten und kleine Alltagswidersprüche zu frechen Zeichnungen, ohne das Blatt in bloßen Klatsch abgleiten zu lassen. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "tags",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "tags": 3,
+            "notes": 3,
+            "portrait": 3
+          }
+        }
+      },
+      {
+        "id": "tegid-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--tegid-falchdyn",
+        "name": "Tegid Falchdyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Unverheiratet und ohne Verlobung; seine berufliche Ausrichtung ist noch nicht festgelegt.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "eluned-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--eluned-falchdyn",
+        "name": "Eluned Falchdyn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Unverheiratet und ohne Verlobung; ihre berufliche Ausrichtung ist noch nicht festgelegt.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "gethin-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--gethin-falchdyn",
+        "name": "Gethin Falchdyn",
+        "title": "Fürsprecher · vom gräflichen Hof für Gwrgan Cochdon bestellt",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1714",
+        "death": "",
+        "portrait": "../AleriaAlmanach/assets/gwynthor-erbstreit/portraits/gethin-falchdyn.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Fürsprecher",
+          "26 Jahre",
+          "Gericht von Gwynthor"
+        ],
+        "notes": "Sohn Emrys Falchdyns und Lowri Llawens. Erlernte Schriftführung und Urkundenprüfung im Umfeld seiner Familie und wurde anschließend in der Gwynthorer Gerichtskanzlei zum Fürsprecher ausgebildet. Führt eine bescheidene eigene Praxis und übernimmt vom Hof zugewiesene Vertretungen mittelloser Parteien. Im Verfahren Gwrgan gegen Lleucu vertritt er den Heimkehrer. Er ist kein Mitglied des Marktes der Fortuna. Sachlich, beharrlich und mit Aktenarbeit vertraut; seine geringeren Mittel machen ihn nicht zum unfähigen Gegenpart Valeriano Faltos. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "tags",
+            "notes",
+            "portrait"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "tags": 3,
+            "notes": 3,
+            "portrait": 3
+          }
+        }
+      },
+      {
+        "id": "seren-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--seren-falchdyn",
+        "name": "Seren Falchdyn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Unverheiratet und ohne Verlobung; ihre berufliche Ausrichtung ist noch nicht festgelegt.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "aled-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--aled-falchdyn",
+        "name": "Aled Falchdyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Unverheiratet und ohne Verlobung; seine berufliche Ausrichtung ist noch nicht festgelegt.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "maredudd-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--maredudd-falchdyn",
+        "name": "Maredudd Falchdyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1717",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Unverheiratet und ohne Verlobung; seine berufliche Ausrichtung ist noch nicht festgelegt.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "ffion-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--ffion-falchdyn",
+        "name": "Ffion Falchdyn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Unverheiratet und ohne Verlobung; ihre berufliche Ausrichtung ist noch nicht festgelegt.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      },
+      {
+        "id": "idris-falchdyn",
+        "worldPersonId": "person--haus-falchdyn--idris-falchdyn",
+        "name": "Idris Falchdyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1725",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-falchdyn",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Unverheiratet und ohne Verlobung; seine berufliche Ausrichtung ist noch nicht festgelegt.",
+        "extensions": {
+          "registryManagedFields": [
+            "title",
+            "tags",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-falchdyn-founders",
+        "participantIds": [
+          "haus-falchdyn-gruender",
+          "haus-falchdyn-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-dafydd-eirlys-falchdyn",
+        "participantIds": [
+          "dafydd-falchdyn",
+          "eirlys-spouse-falchdyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-iorwerth-mabli-falchdyn",
+        "participantIds": [
+          "iorwerth-falchdyn",
+          "mabli-spouse-falchdyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-madoc-seren-falchdyn",
+        "participantIds": [
+          "madoc-falchdyn",
+          "seren-spouse-falchdyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true,
+          "registryManagedExtensionFields": [
+            "chartAlignChildGroupBelowParentPair"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-aneirin-catrin-falchdyn",
+        "participantIds": [
+          "aneirin-falchdyn",
+          "catrin-spouse-falchdyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true,
+          "registryManagedExtensionFields": [
+            "chartAlignChildGroupBelowParentPair"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-rhodri-enid-falchdyn",
+        "participantIds": [
+          "rhodri-falchdyn",
+          "enid-spouse-falchdyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true,
+          "registryManagedExtensionFields": [
+            "chartAlignChildGroupBelowParentPair"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-emrys-lowri-falchdyn",
+        "participantIds": [
+          "emrys-falchdyn",
+          "lowri-spouse-falchdyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true,
+          "registryManagedExtensionFields": [
+            "chartAlignChildGroupBelowParentPair"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-owain-nerys-falchdyn",
+        "participantIds": [
+          "owain-falchdyn",
+          "nerys-spouse-falchdyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true,
+          "registryManagedExtensionFields": [
+            "chartAlignChildGroupBelowParentPair"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-geraint-maerllys-llio-falchdyn",
+        "participantIds": [
+          "geraint-maerllys",
+          "llio-falchdyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-angharad-unknown-falchdyn",
+        "participantIds": [
+          "angharad-falchdyn",
+          "unknown-spouse-angharad-falchdyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-efa-unknown-falchdyn",
+        "participantIds": [
+          "efa-falchdyn",
+          "unknown-spouse-efa-falchdyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "marriage-nest-unknown-falchdyn",
+        "participantIds": [
+          "nest-falchdyn",
+          "unknown-spouse-nest-falchdyn"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-dafydd-falchdyn",
+        "childId": "dafydd-falchdyn",
+        "parentIds": [
+          "haus-falchdyn-gruender",
+          "haus-falchdyn-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-falchdyn-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Generationen verbinden das unbekannte Gründerpaar mit den drei belegten Falchdyn-Brüdern.",
+        "extensions": {
+          "timeJumpId": "gap-falchdyn-to-1660",
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-iorwerth-falchdyn",
+        "childId": "iorwerth-falchdyn",
+        "parentIds": [
+          "haus-falchdyn-gruender",
+          "haus-falchdyn-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-falchdyn-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Generationen verbinden das unbekannte Gründerpaar mit den drei belegten Falchdyn-Brüdern.",
+        "extensions": {
+          "timeJumpId": "gap-falchdyn-to-1660",
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-madoc-falchdyn",
+        "childId": "madoc-falchdyn",
+        "parentIds": [
+          "haus-falchdyn-gruender",
+          "haus-falchdyn-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-falchdyn-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nicht einzeln überlieferte Generationen verbinden das unbekannte Gründerpaar mit den drei belegten Falchdyn-Brüdern.",
+        "extensions": {
+          "timeJumpId": "gap-falchdyn-to-1660",
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-aneirin-falchdyn",
+        "childId": "aneirin-falchdyn",
+        "parentIds": [
+          "dafydd-falchdyn",
+          "eirlys-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-dafydd-eirlys-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-rhodri-falchdyn",
+        "childId": "rhodri-falchdyn",
+        "parentIds": [
+          "dafydd-falchdyn",
+          "eirlys-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-dafydd-eirlys-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-emrys-falchdyn",
+        "childId": "emrys-falchdyn",
+        "parentIds": [
+          "iorwerth-falchdyn",
+          "mabli-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-iorwerth-mabli-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-owain-falchdyn",
+        "childId": "owain-falchdyn",
+        "parentIds": [
+          "iorwerth-falchdyn",
+          "mabli-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-iorwerth-mabli-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-llio-falchdyn",
+        "childId": "llio-falchdyn",
+        "parentIds": [
+          "madoc-falchdyn",
+          "seren-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-madoc-seren-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-angharad-falchdyn",
+        "childId": "angharad-falchdyn",
+        "parentIds": [
+          "madoc-falchdyn",
+          "seren-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-madoc-seren-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-efa-falchdyn",
+        "childId": "efa-falchdyn",
+        "parentIds": [
+          "madoc-falchdyn",
+          "seren-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-madoc-seren-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-nest-falchdyn",
+        "childId": "nest-falchdyn",
+        "parentIds": [
+          "madoc-falchdyn",
+          "seren-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-madoc-seren-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-ceredig-falchdyn",
+        "childId": "ceredig-falchdyn",
+        "parentIds": [
+          "aneirin-falchdyn",
+          "catrin-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-aneirin-catrin-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-branwen-falchdyn",
+        "childId": "branwen-falchdyn",
+        "parentIds": [
+          "aneirin-falchdyn",
+          "catrin-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-aneirin-catrin-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-taliesin-falchdyn",
+        "childId": "taliesin-falchdyn",
+        "parentIds": [
+          "aneirin-falchdyn",
+          "catrin-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-aneirin-catrin-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-tegid-falchdyn",
+        "childId": "tegid-falchdyn",
+        "parentIds": [
+          "rhodri-falchdyn",
+          "enid-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-rhodri-enid-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-eluned-falchdyn",
+        "childId": "eluned-falchdyn",
+        "parentIds": [
+          "rhodri-falchdyn",
+          "enid-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-rhodri-enid-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-gethin-falchdyn",
+        "childId": "gethin-falchdyn",
+        "parentIds": [
+          "emrys-falchdyn",
+          "lowri-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-emrys-lowri-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-seren-falchdyn",
+        "childId": "seren-falchdyn",
+        "parentIds": [
+          "emrys-falchdyn",
+          "lowri-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-emrys-lowri-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-aled-falchdyn",
+        "childId": "aled-falchdyn",
+        "parentIds": [
+          "emrys-falchdyn",
+          "lowri-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-emrys-lowri-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-maredudd-falchdyn",
+        "childId": "maredudd-falchdyn",
+        "parentIds": [
+          "owain-falchdyn",
+          "nerys-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-owain-nerys-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-ffion-falchdyn",
+        "childId": "ffion-falchdyn",
+        "parentIds": [
+          "owain-falchdyn",
+          "nerys-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-owain-nerys-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "parentage-idris-falchdyn",
+        "childId": "idris-falchdyn",
+        "parentIds": [
+          "owain-falchdyn",
+          "nerys-spouse-falchdyn"
+        ],
+        "partnershipId": "marriage-owain-nerys-falchdyn",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-falchdyn",
+        "name": "Haus Falchdyn",
+        "motto": "Was gehört wird, geht nicht verloren.",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "house-maerllys",
+        "name": "Haus Maerllys",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "emblem": 4
+          },
+          "registryManagedFields": [
+            "emblem"
+          ]
+        }
+      },
+      {
+        "id": "house-unbekannt-angharad-falchdyn",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "house-unbekannt-efa-falchdyn",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "house-unbekannt-nest-falchdyn",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active",
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-maerllys-llio-falchdyn",
+        "name": "Haus Maerllys",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-geraint-maerllys-llio-falchdyn",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-maerllys",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-maerllys",
+        "notes": "Llio Falchdyn wurde an Geraint Maerllys verheiratet. Person und Ehe werden mit denselben IDs in beiden Familienakten geführt.",
+        "extensions": {
+          "chartAlignBelowPartnership": true,
+          "registryManagedExtensionFields": [
+            "chartAlignBelowPartnership"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "married-away-angharad-falchdyn",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-angharad-unknown-falchdyn",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-angharad-falchdyn",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Angharad Falchdyn heiratete in ein nicht näher überliefertes Bürgerhaus.",
+        "extensions": {
+          "chartAlignBelowPartnership": true,
+          "registryManagedExtensionFields": [
+            "chartAlignBelowPartnership"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "married-away-efa-falchdyn",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-efa-unknown-falchdyn",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-efa-falchdyn",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Efa Falchdyn heiratete in ein nicht näher überliefertes Bürgerhaus.",
+        "extensions": {
+          "chartAlignBelowPartnership": true,
+          "registryManagedExtensionFields": [
+            "chartAlignBelowPartnership"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "married-away-nest-falchdyn",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-nest-unknown-falchdyn",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-nest-falchdyn",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Nest Falchdyn heiratete in ein nicht näher überliefertes Bürgerhaus.",
+        "extensions": {
+          "chartAlignBelowPartnership": true,
+          "registryManagedExtensionFields": [
+            "chartAlignBelowPartnership"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-falchdyn-to-1660",
+        "parentPartnershipId": "marriage-haus-falchdyn-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "dafydd-falchdyn",
+          "iorwerth-falchdyn",
+          "madoc-falchdyn"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1660",
+        "label": "Die belegte Falchdyn-Linie setzt mit drei Brüdern um 1660 wieder ein",
+        "notes": "Der Zeitsprung bleibt der einzige absolute Generationentrenner unter dem Falchdyn-Wappen; Dafydd, Iorwerth und Madoc folgen gemeinsam dahinter.",
+        "extensions": {
+          "preparedPlaceholder": true,
+          "registryManagedFields": [
+            "parentPartnershipId",
+            "parentPersonId",
+            "childIds",
+            "fromYear",
+            "toYear",
+            "label",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "parentPartnershipId": 3,
+            "parentPersonId": 3,
+            "childIds": 3,
+            "fromYear": 3,
+            "toYear": 3,
+            "label": 3,
+            "notes": 3
+          }
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-falchdyn-founders",
+      "houseId": "house-falchdyn",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "haus-falchdyn-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 20,
+      "descendantDepth": 20,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "sourceRevision": 4,
+      "sourceModule": "Haus Falchdyn und Celtigerns Echo (Ausarbeitung 1740)",
+      "sourceNote": "Haus Falchdyn folgt der vorgegebenen Struktur: ein unbekanntes Gründerpaar, genau ein serieller Überlieferungssprung und danach drei Brüder als Großvätergeneration. Dafydd und Iorwerth leben 1740 und führen die Linie über jeweils zwei Söhne bis zu elf unverheirateten Sprösslingen fort. Madoc besitzt ausschließlich vier wegverheiratete Töchter. Nur Llio wird mit dem bereits bestehenden Geraint Maerllys verbunden; dieselbe Weltperson und dieselbe Ehe erscheinen beidseitig, ohne fremde Nachkommen im Falchdyn-Baum zu doppeln. Die übrigen drei Zielhäuser bleiben mangels Vorgabe unbekannt. Dreizehn bereitgestellte Personenportraits und Gethins neu erzeugtes Porträt, Wappen, Hausbild und Emblem von Celtigerns Echo wurden lokal gesichert und quellenbelegt. Die Berufsprofile der jungen Generation bleiben bis auf Ceredig, Branwen, Taliesin und den gerichtlich ausgebildeten Fürsprecher Gethin bewusst offen. Das eingebettete Häuser-Modul dokumentiert Zeitung, Schreiberschule, Redaktionsnetz und den volksnahen Familienkern.",
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "I — Haus Falchdyn",
+        "image": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn-Hausbild.png",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "housePage": true,
+        "description": "Volksnahe Schreiber- und Journalistenfamilie aus Gwynthor und Herausgeberin des lokalen Zeitungsblatts Celtigerns Echo.",
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Falchdyn"
+          ],
+          [
+            "Stammsitz",
+            "Gwynthor"
+          ],
+          [
+            "Gegründet",
+            "Vor dem überlieferten Zeitsprung"
+          ],
+          [
+            "Oberhaupt",
+            "Aneirin Falchdyn"
+          ],
+          [
+            "Nachfolger",
+            "Ceredig Falchdyn"
+          ],
+          [
+            "Lehnshaus",
+            "Haus Draig"
+          ],
+          [
+            "Betrieb",
+            "Celtigerns Echo"
+          ],
+          [
+            "Wirkungsgebiet",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Wappen",
+            "Druckerpresse über einem beschriebenen Blatt"
+          ],
+          [
+            "Hausfarben",
+            "Dunkelrot · Schwarz · Pergament"
+          ],
+          [
+            "Rang",
+            "Bürgerfamilie"
+          ],
+          [
+            "Status",
+            "Aktiv"
+          ]
+        ],
+        "house": {
+          "biographyTitle": "Über dieses Haus",
+          "biographyText": "Haus Falchdyn ist eine alte Gwynthorer Schreiber- und Journalistenfamilie. Seine Angehörigen führen das Zeitungsblatt Celtigerns Echo, bilden Schreiberinnen und Schreiber aus und stellen sowohl feste Autoren als auch freie Stimmen aus der Grafschaft ein. Die Hauptredaktion sitzt in Gwynthor; kleinere Redaktionsstuben an den größeren Orten Celtigerns Wacht sammeln Berichte, Briefe und Anliegen für die nächste Ausgabe.",
+          "abilitiesTitle": "Einflussbereiche & Zuständigkeiten",
+          "abilities": [
+            {
+              "icon": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Celtigerns-Echo.png",
+              "title": "Celtigerns Echo",
+              "detail": "Herausgabe, Redaktion und Verteilung eines lokalen Blattes für Gwynthor und die größeren Orte der Grafschaft."
+            },
+            {
+              "icon": "../IconOrdner/ZunftsWappen/Schreiber.png",
+              "title": "Schreiberausbildung",
+              "detail": "Ausbildung in Schrift, Mitschrift, Quellenprüfung, verständlicher Sprache und verantwortlichem Umgang mit Aussagen."
+            },
+            {
+              "icon": "../IconOrdner/Organisationsicons/Administration.png",
+              "title": "Redaktionsnetz",
+              "detail": "Koordination kleiner Redaktionsstuben, Korrespondenten und Botenwege innerhalb Celtigerns Wacht."
+            }
+          ],
+          "extraSections": [
+            {
+              "title": "Das Herz des Blattes",
+              "text": "Celtigerns Echo sucht nicht zuerst den Skandal, sondern die Stimmen, die sonst überhört werden: Sorgen aus einem Viertel, ein Streit um einen Brunnen, eine gelungene Ernte, ein vermisster Bote oder die Geschichte einer Handwerkerin. Das Blatt will Zusammenhalt fördern, ohne Schwierigkeiten schönzureden."
+            },
+            {
+              "title": "Anspruch und Wirklichkeit",
+              "text": "Auch Falchdyns Redaktion kennt Zeitdruck, knappe Kassen, missverständliche Aussagen und den Einfluss mächtiger Interessen. Fehler werden nicht als Schande verschwiegen, sondern nach Möglichkeit berichtigt. Innerhalb der Familie wird regelmäßig darum gerungen, wie nahbar ein Blatt sein kann, ohne unkritisch zu werden."
+            }
+          ],
+          "historyTitle": "Geschichte des Hauses",
+          "historyText": "Die Namen des Gründerpaares und die frühen Generationen sind nicht erhalten. Um 1660 setzt die belegte Linie mit den Brüdern Dafydd, Iorwerth und Madoc wieder ein. Aus den Schreiberstuben der Familie entwickelte sich über mehrere Jahrzehnte ein regelmäßiges Nachrichtenblatt. Aneirin Falchdyn führt heute Haus und Hauptredaktion; seine Brüder und Vettern teilen Ausbildung, Druck, Korrespondentennetz und Verwaltung untereinander. Madocs vier Töchter heirateten aus dem Haus fort, darunter Llio Falchdyn, deren Ehe mit Geraint Maerllys beide Bürgerfamilien verbindet.",
+          "worksTitle": "Bekannte Leistungen",
+          "works": [
+            "Aufbau der Hauptredaktion von Celtigerns Echo in Gwynthor.",
+            "Einrichtung kleiner Redaktionsstuben an größeren Orten Celtigerns Wacht.",
+            "Offene Ausbildung von Schreibern, Setzern, Korrespondenten und angehenden Autoren.",
+            "Regelmäßiger Raum für lokale Anliegen, Gegendarstellungen und kleine Geschichten aus dem Alltag."
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [
+            "Ein Beitrag muss nicht groß sein, um gedruckt zu werden; entscheidend ist, ob er für die Menschen vor Ort Bedeutung besitzt.",
+            "Klatsch ohne überprüfbaren Anlass gilt in der Hauptredaktion als schlechte Arbeit und nicht als guter Verkaufstrick.",
+            "Lehrlinge beginnen im Archiv und beim Abschreiben, bevor sie selbst Gespräche führen oder Texte zeichnen dürfen.",
+            "In jeder Redaktionsstube liegt ein öffentliches Anliegenbuch aus, in das Bürger Themen eintragen lassen können."
+          ],
+          "quotesTitle": "Hausworte & Redaktionssätze",
+          "quotes": [
+            "„Was gehört wird, geht nicht verloren.“",
+            "„Eine kleine Geschichte kann für ein ganzes Viertel die wichtigste sein.“",
+            "„Erst zuhören. Dann prüfen. Dann drucken.“"
+          ],
+          "connectionsTitle": "Bindungen & Zusammenarbeit",
+          "connections": [
+            {
+              "type": "heading",
+              "title": "Lehens- und Ortsbindung",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Haus Draig",
+              "detail": "Lehnshaus der Gwynthorer Bürgerfamilie; Celtigerns Echo bleibt dennoch als lokales Blatt eigenständig in seiner Themenwahl.",
+              "image": "assets/images/houses/Llamreis Ankunft/haus-draig.png",
+              "imageFormat": "square"
+            },
+            {
+              "type": "heading",
+              "title": "Familienbande",
+              "detail": ""
+            },
+            {
+              "type": "connection",
+              "name": "Haus Maerllys",
+              "detail": "Llio Falchdyn ist mit Geraint Maerllys verheiratet; dieselbe Verbindung wird in beiden Stammbäumen geführt.",
+              "image": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Betriebe & Besitz",
+          "documents": [
+            {
+              "icon": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn.png",
+              "title": "Haus Falchdyn · Hausseite",
+              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-falchdyn"
+            },
+            {
+              "icon": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Celtigerns-Echo.png",
+              "title": "Celtigerns Echo",
+              "text": "Zeitungsblatt mit Hauptredaktion und Druckerei in Gwynthor sowie kleineren Redaktionsstuben in der Grafschaft.",
+              "link": ""
+            },
+            {
+              "icon": "../IconOrdner/ZunftsWappen/Schreiber.png",
+              "title": "Falchdyns Schreiberschule",
+              "text": "Familiengeführte Ausbildung für Schreiber, Korrektoren, Setzer und Autoren; geeignete Außenstehende können aufgenommen und angestellt werden.",
+              "link": ""
+            },
+            {
+              "icon": "../IconOrdner/Organisationsicons/Administration.png",
+              "title": "Anliegenbücher",
+              "text": "Öffentlich zugängliche Bücher der Redaktionsstuben, in denen Sorgen, Hinweise und erzählenswerte Begebenheiten gesammelt werden.",
+              "link": ""
+            }
+          ],
+          "footer": "Nah am Volk. Sorgfältig im Wort.",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 68,
+          "connectionTextOffset": 0,
+          "crestImage": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Falchdyn.png"
+        },
+        "commentSequence": [],
+        "quote": "„Was gehört wird, geht nicht verloren.“",
+        "quoteBy": "Leitspruch des Hauses Falchdyn"
+      },
+      "chartLayoutPolicy": "strict-v1",
+      "registryManagedHouseProfileFields": [
+        "rankId",
+        "seat",
+        "barony",
+        "county",
+        "kingdom",
+        "liegeHouseId",
+        "liegeHouseName",
+        "regionEmblems"
+      ],
+      "registryManagedRecordFields": [
+        "folderPath"
+      ],
+      "registryManagedViewFields": [
+        "focusPersonId",
+        "limitGenerations"
+      ],
+      "registryManagedDocumentFieldRevisions": {},
+      "registryManagedHouseProfileFieldRevisions": {
+        "rankId": 3,
+        "seat": 3,
+        "barony": 3,
+        "county": 3,
+        "kingdom": 3,
+        "liegeHouseId": 3,
+        "liegeHouseName": 3,
+        "regionEmblems": 3
+      },
+      "registryManagedExtensionFieldRevisions": {},
+      "registryManagedViewFieldRevisions": {
+        "focusPersonId": 3,
+        "limitGenerations": 3
+      },
+      "registryManagedLineageFieldRevisions": {},
+      "registryManagedEntitySourceRevision": 3,
+      "tailoringContentInventory": "gwniwr-maerllys-20261108",
+      "registryManagedExtensionFields": [
+        "tailoringContentInventory"
+      ]
+    }
+  }
+}

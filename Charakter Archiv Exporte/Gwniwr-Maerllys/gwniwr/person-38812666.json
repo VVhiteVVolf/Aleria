@@ -1,0 +1,134 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-08T16:10:00.000Z",
+  "mergeStrategy": "replace-reviewed-metadata-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwniwr-Maerllys/gwniwr/person-38812666.json",
+  "character": {
+    "activeImageSetId": "",
+    "age": 10,
+    "aliases": [],
+    "archived": false,
+    "bio": "Efa Gwniwr wurde 1730 geboren und ist zehn Jahre alt. Sie ist die Tochter Tudurs und Catrins und die Schwester von Gethin, Bleddyn und Micah. Ihre Großeltern Emyr und Gwenllian führen Nadel & Faden in Gwynthor.\n\nDie Gwniwr möchten gute Kleidung auch Menschen mit wenig Geld zugänglich machen. In diesem bürgerlichen Handwerksumfeld wächst Efa auf. Dass Männer und Frauen das Schneidern gleichermaßen erlernen können, gehört seit Generationen zum Selbstverständnis ihrer Familie.\n\nDurch ihre Tante Eleri ist Efa mit dem großen Craigddu-Haushalt verbunden. Der ältere Maerllys-Zweig gehört zur weiter zurückreichenden Familiengeschichte. Für Efa selbst steht die Kindheit im gegenwärtigen Gwniwr-Kreis im Mittelpunkt; welchen Weg sie später einschlagen wird, ist noch ungewiss.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Efa Gwniwr"
+        },
+        {
+          "label": "Geboren",
+          "value": "1730"
+        },
+        {
+          "label": "Alter",
+          "value": "10 Jahre"
+        },
+        {
+          "label": "Familie",
+          "value": "Gwniwr"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Familienangehörige/r"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/gwniwr/person-38812666.jpg",
+        "biographyTitle": "Biografie",
+        "biographyText": "Efa Gwniwr wurde 1730 geboren und ist zehn Jahre alt. Sie ist die Tochter Tudurs und Catrins und die Schwester von Gethin, Bleddyn und Micah. Ihre Großeltern Emyr und Gwenllian führen Nadel & Faden in Gwynthor.",
+        "extraSections": [
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Arbeit und Alltag",
+            "text": "Die Gwniwr möchten gute Kleidung auch Menschen mit wenig Geld zugänglich machen. In diesem bürgerlichen Handwerksumfeld wächst Efa auf. Dass Männer und Frauen das Schneidern gleichermaßen erlernen können, gehört seit Generationen zum Selbstverständnis ihrer Familie."
+          },
+          {
+            "position": "afterIntro",
+            "mode": "text",
+            "title": "Familie und Verbindungen",
+            "text": "Durch ihre Tante Eleri ist Efa mit dem großen Craigddu-Haushalt verbunden. Der ältere Maerllys-Zweig gehört zur weiter zurückreichenden Familiengeschichte. Für Efa selbst steht die Kindheit im gegenwärtigen Gwniwr-Kreis im Mittelpunkt; welchen Weg sie später einschlagen wird, ist noch ungewiss."
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-11-08T16:10:00.000Z",
+    "currentLocation": "Gwynthor",
+    "emotes": [],
+    "emotesOverride": false,
+    "fraktion": "Gwniwr",
+    "genealogy": {
+      "worldPersonId": "person--gwniwr--person-38812666",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1730",
+      "death": "",
+      "houseId": "house-gwniwr",
+      "houseName": "Gwniwr",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "gwniwr",
+          "personId": "person-38812666",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-08T16:10:00.000Z",
+          "lastSyncedAt": "2026-11-08T16:10:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-38812666",
+          "fingerprint": "{\"name\":\"Efa Gwniwr\",\"title\":\"\",\"birth\":\"1730\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-gwniwr\",\"portrait\":\"../Stammbäume/assets/images/portraits/gwniwr/person-38812666.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-ece54bdb\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-ece54bdb\",\"name\":\"Tudur Gwniwr\"},{\"personId\":\"person-3f9eaf4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--gwniwr--person-3f9eaf4f\",\"name\":\"Catrin\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-ece54bdb",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--gwniwr--person-ece54bdb",
+            "name": "Tudur Gwniwr"
+          },
+          {
+            "personId": "person-3f9eaf4f",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--gwniwr--person-3f9eaf4f",
+            "name": "Catrin"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--gwniwr--person-38812666",
+    "identity": {
+      "worldPersonId": "person--gwniwr--person-38812666"
+    },
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "imageSetsOverride": false,
+    "name": "Efa Gwniwr",
+    "origin": "",
+    "playerOwner": "",
+    "plotNode": "",
+    "portrait": "../Stammbäume/assets/images/portraits/gwniwr/person-38812666.jpg",
+    "profileLink": "../Stammbäume/Stammbaum.html?family=gwniwr&mode=view&person=person-38812666",
+    "relevance": "",
+    "role": "",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "title": "",
+    "updatedAt": "2026-11-08T16:10:00.000Z"
+  }
+}
