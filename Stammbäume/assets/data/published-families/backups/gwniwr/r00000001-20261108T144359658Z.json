@@ -1,0 +1,531 @@
+{
+  "schemaVersion": 1,
+  "familyId": "gwniwr",
+  "revision": 1,
+  "updatedAt": "2026-11-08T14:43:59.658Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "gwniwr",
+      "title": "Gwniwr",
+      "motto": "",
+      "description": "",
+      "emblem": "https://i.imgur.com/Ud95q8G.jpeg",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": "",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "gwniwr-gruender",
+        "worldPersonId": "person--gwniwr--gwniwr-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwniwr",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "gwniwr-gruenderin",
+        "worldPersonId": "person--gwniwr--gwniwr-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwniwr",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-7b6c292b",
+        "worldPersonId": "person--gwniwr--person-7b6c292b",
+        "name": "Emyr",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1680",
+        "death": "",
+        "portrait": "https://i.imgur.com/iYlRgMR.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwniwr",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-f926e0da",
+        "worldPersonId": "person--gwniwr--person-f926e0da",
+        "name": "Gwenllian",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1684",
+        "death": "",
+        "portrait": "https://i.imgur.com/zNGfMnZ.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-ece54bdb",
+        "worldPersonId": "person--gwniwr--person-ece54bdb",
+        "name": "Tudur",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "https://i.imgur.com/PX2Td7g.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwniwr",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-cf831497",
+        "worldPersonId": "person--gwniwr--person-cf831497",
+        "name": "Eleri",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1708",
+        "death": "",
+        "portrait": "https://i.imgur.com/dKnD2Ru.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwniwr",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-3f9eaf4f",
+        "worldPersonId": "person--gwniwr--person-3f9eaf4f",
+        "name": "Catrin",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1708",
+        "death": "",
+        "portrait": "https://i.imgur.com/iuvtNZM.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-e847aa96",
+        "worldPersonId": "person--gwniwr--person-e847aa96",
+        "name": "Hwyel Craigddu",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1708",
+        "death": "",
+        "portrait": "https://i.imgur.com/8Y1N3SA.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-178882ce",
+        "worldPersonId": "person--gwniwr--person-178882ce",
+        "name": "Gethin",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "https://i.imgur.com/hCn3K6q.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwniwr",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-558acc56",
+        "worldPersonId": "person--gwniwr--person-558acc56",
+        "name": "Bleddyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1728",
+        "death": "",
+        "portrait": "https://i.imgur.com/gghIwzQ.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwniwr",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-38812666",
+        "worldPersonId": "person--gwniwr--person-38812666",
+        "name": "Efa",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "portrait": "https://i.imgur.com/UKVI11U.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwniwr",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-d55e335a",
+        "worldPersonId": "person--gwniwr--person-d55e335a",
+        "name": "Micah",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1732",
+        "death": "",
+        "portrait": "https://i.imgur.com/Rgi2O19.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-gwniwr",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-gwniwr-founders",
+        "participantIds": [
+          "gwniwr-gruender",
+          "gwniwr-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-c1286390",
+        "participantIds": [
+          "person-7b6c292b",
+          "person-f926e0da"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-4503ed32",
+        "participantIds": [
+          "person-ece54bdb",
+          "person-3f9eaf4f"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-ce644db9",
+        "participantIds": [
+          "person-cf831497",
+          "person-e847aa96"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-04c65c4d",
+        "childId": "person-7b6c292b",
+        "parentIds": [
+          "gwniwr-gruender",
+          "gwniwr-gruenderin"
+        ],
+        "partnershipId": "marriage-gwniwr-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+        "extensions": {
+          "timeJumpId": "time-jump-b26ff29a",
+          "timeJumpCreated": true
+        }
+      },
+      {
+        "id": "parentage-a3a1cc2e",
+        "childId": "person-ece54bdb",
+        "parentIds": [
+          "person-7b6c292b",
+          "person-f926e0da"
+        ],
+        "partnershipId": "partnership-c1286390",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-e3b51584",
+        "childId": "person-cf831497",
+        "parentIds": [
+          "person-7b6c292b",
+          "person-f926e0da"
+        ],
+        "partnershipId": "partnership-c1286390",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-83b1211f",
+        "childId": "person-178882ce",
+        "parentIds": [
+          "person-ece54bdb",
+          "person-3f9eaf4f"
+        ],
+        "partnershipId": "partnership-4503ed32",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-2b85c55b",
+        "childId": "person-558acc56",
+        "parentIds": [
+          "person-ece54bdb",
+          "person-3f9eaf4f"
+        ],
+        "partnershipId": "partnership-4503ed32",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-c26d2f6b",
+        "childId": "person-38812666",
+        "parentIds": [
+          "person-ece54bdb",
+          "person-3f9eaf4f"
+        ],
+        "partnershipId": "partnership-4503ed32",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-a90d65c3",
+        "childId": "person-d55e335a",
+        "parentIds": [
+          "person-ece54bdb",
+          "person-3f9eaf4f"
+        ],
+        "partnershipId": "partnership-4503ed32",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-gwniwr",
+        "name": "Gwniwr",
+        "motto": "",
+        "emblem": "https://i.imgur.com/Ud95q8G.jpeg",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "time-jump-b26ff29a",
+        "parentPartnershipId": "marriage-gwniwr-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "person-7b6c292b"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": "",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-gwniwr-founders",
+      "houseId": "house-gwniwr",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "gwniwr-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "registry": {
+        "folderPath": [],
+        "unclassified": true
+      },
+      "generatorProfile": {
+        "origin": "",
+        "culture": "",
+        "religion": "",
+        "governance": "",
+        "foundingYear": "",
+        "founderHouseName": "",
+        "houseColors": "",
+        "specialTraits": ""
+      }
+    }
+  }
+}
