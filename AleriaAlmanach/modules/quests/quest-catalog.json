@@ -2527,6 +2527,14 @@
       "title": "Göttliche Eleganz"
     },
     {
+      "id": "nadel-und-faden-gwniwr",
+      "title": "Nadel & Faden"
+    },
+    {
+      "id": "naht-und-siegel",
+      "title": "Naht & Siegel"
+    },
+    {
       "id": "gwynthor-zum-vollen-korb",
       "title": "Zum Vollen Korb"
     },
@@ -3369,6 +3377,61 @@
       "id": "goettliche-eleganz::session:eleganz-page-6",
       "title": "Göttliche Eleganz · Der Verkaufsraum · Beratung & Anprobe",
       "moduleId": "goettliche-eleganz"
+    },
+    {
+      "id": "nadel-und-faden-gwniwr",
+      "title": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr"
+    },
+    {
+      "id": "nadel-und-faden-gwniwr::page:gwniwr-shop-page-1",
+      "title": "Nadel & Faden · Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr"
+    },
+    {
+      "id": "nadel-und-faden-gwniwr::page:gwniwr-shop-page-2",
+      "title": "Nadel & Faden · Das Geschäft · Handwerk & Sonderwünsche",
+      "moduleId": "nadel-und-faden-gwniwr"
+    },
+    {
+      "id": "nadel-und-faden-gwniwr::page:gwniwr-shop-page-4",
+      "title": "Nadel & Faden · Die Menschen · Familie, Werkstatt & freie Stellen",
+      "moduleId": "nadel-und-faden-gwniwr"
+    },
+    {
+      "id": "nadel-und-faden-gwniwr::session:gwniwr-shop-page-6",
+      "title": "Nadel & Faden · Der Laden · Beratung & Anprobe",
+      "moduleId": "nadel-und-faden-gwniwr"
+    },
+    {
+      "id": "naht-und-siegel",
+      "title": "Naht & Siegel",
+      "moduleId": "naht-und-siegel"
+    },
+    {
+      "id": "naht-und-siegel::page:maerllys-page-1",
+      "title": "Naht & Siegel · Naht & Siegel",
+      "moduleId": "naht-und-siegel"
+    },
+    {
+      "id": "naht-und-siegel::page:maerllys-page-2",
+      "title": "Naht & Siegel · Das Haus · Herkunft & Handwerk",
+      "moduleId": "naht-und-siegel"
+    },
+    {
+      "id": "naht-und-siegel::page:maerllys-page-3",
+      "title": "Naht & Siegel · Dienstleistungen · Ein Haushalt nach Maß",
+      "moduleId": "naht-und-siegel"
+    },
+    {
+      "id": "naht-und-siegel::page:maerllys-page-4",
+      "title": "Naht & Siegel · Die Menschen · Werkstatt & offene Stellen",
+      "moduleId": "naht-und-siegel"
+    },
+    {
+      "id": "naht-und-siegel::session:maerllys-page-6",
+      "title": "Naht & Siegel · Der Verkaufsraum · Beratung & Anprobe",
+      "moduleId": "naht-und-siegel"
     },
     {
       "id": "gwynthor-zum-vollen-korb",
@@ -6466,6 +6529,7 @@
     "AleriaAlmanach/modules/gofrann-schmiede/gofrann-data.js",
     "AleriaAlmanach/modules/gortach-brauerei/gortach-brewery-data.js",
     "AleriaAlmanach/modules/guild-services/guild-services-data.js",
+    "AleriaAlmanach/modules/gwniwr/gwniwr-data.js",
     "AleriaAlmanach/modules/gwregysdu-harbor/harbor-data.js",
     "AleriaAlmanach/modules/gwynthor-arena/arena-data.js",
     "AleriaAlmanach/modules/gwynthor-bathhouse/bathhouse-data.js",
@@ -6496,6 +6560,7 @@
     "AleriaAlmanach/modules/language/tlapanui/tlapanui-entry.js",
     "AleriaAlmanach/modules/letzte-rast/rast-data.js",
     "AleriaAlmanach/modules/letzter-heller/heller-data.js",
+    "AleriaAlmanach/modules/maerllys/maerllys-data.js",
     "AleriaAlmanach/modules/markt-der-fortuna-gwynthor/fortuna-data.js",
     "AleriaAlmanach/modules/module-editor/module-editor-data.js",
     "AleriaAlmanach/modules/name-list/name-list-data.js",
