@@ -75,7 +75,7 @@ test('cross-feature inputs trigger their consumers, including external house bio
   assert.ok(family.includes('regional-equipment'));
   assert.ok(family.includes('family-charts'));
   assert.deepEqual(checks(select(changed('AleriaAlmanach/modules/combat/combat-profile-model.js'))), ['house-signets', 'character-health', 'character-development', 'honigtoertchen', 'almanach-runtime', 'gameplay-guides', 'character-reference-catalogs', 'group-community', 'item-mechanics']);
-  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['house-signets', 'honigtoertchen', 'fleischsammler-argall', 'balchder-characters', 'gameplay-guides', 'patrick-biographies', 'character-reference-catalogs', 'family-records', 'group-community', 'item-mechanics']);
+  assert.deepEqual(checks(select(changed('CharakterDatenbank/generated/characters.snapshot.json'))), ['gwniwr-maerllys', 'house-signets', 'honigtoertchen', 'fleischsammler-argall', 'balchder-characters', 'gameplay-guides', 'patrick-biographies', 'character-reference-catalogs', 'family-records', 'group-community', 'item-mechanics']);
 });
 
 test('the captain household source triggers both its character projection and public quest consumer', () => {
