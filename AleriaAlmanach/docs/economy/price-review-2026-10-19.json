@@ -4,12 +4,12 @@
   "moneyUnit": "Kupfertaler",
   "method": "Interne Konsistenzprüfung einer fiktiven Wirtschaft. Vergleichsskala: 24 KT sparsamer Vierpersonenbedarf + 3 KT freie Mittel; 27 KT Hafenlohn bei sechs Diensttagen. Keine historische Preisstatistik.",
   "summary": {
-    "rows": 1371,
+    "rows": 1473,
     "adjusted": 148,
-    "retained": 1016,
+    "retained": 1118,
     "notOffered": 205,
     "unavailable": 2,
-    "eligibleVenues": 16,
+    "eligibleVenues": 18,
     "horseAndLivestockPriceChanges": 0
   },
   "limitations": [
@@ -73,6 +73,36 @@
     {
       "id": "goettliche-eleganz",
       "title": "Göttliche Eleganz",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Der Markt der Fortuna - Gwynthor"
+      ],
+      "eligible": true,
+      "reason": "Begehbarer Verkaufsort mit Güterangebot."
+    },
+    {
+      "id": "nadel-und-faden-gwniwr",
+      "title": "Nadel & Faden",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Der Markt der Fortuna - Gwynthor"
+      ],
+      "eligible": true,
+      "reason": "Begehbarer Verkaufsort mit Güterangebot."
+    },
+    {
+      "id": "naht-und-siegel",
+      "title": "Naht & Siegel",
       "tab": "Völker & Kulturen",
       "path": [
         "Cenyr",
@@ -12665,6 +12695,2352 @@
       ],
       "decision": "angepasst",
       "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 0,
+      "id": "gwniwr-flachstag",
+      "optionIndex": 0,
+      "name": "Flachstag",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 1,
+      "id": "gwniwr-marktgruen",
+      "optionIndex": 0,
+      "name": "Marktgrün",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 15,
+        "maxCopper": 15
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        15,
+        15
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 2,
+      "id": "gwniwr-hafergold",
+      "optionIndex": 0,
+      "name": "Hafergold",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 17,
+        "maxCopper": 17
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        17,
+        17
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 3,
+      "id": "gwniwr-weidenlauf",
+      "optionIndex": 0,
+      "name": "Weidenlauf",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 19,
+        "maxCopper": 19
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        19,
+        19
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 4,
+      "id": "gwniwr-kieselgrau",
+      "optionIndex": 0,
+      "name": "Kieselgrau",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 21,
+        "maxCopper": 21
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        21,
+        21
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 5,
+      "id": "gwniwr-ziegelrot",
+      "optionIndex": 0,
+      "name": "Ziegelrot",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 23,
+        "maxCopper": 23
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        23,
+        23
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 6,
+      "id": "gwniwr-blaubeersaum",
+      "optionIndex": 0,
+      "name": "Blaubeersaum",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 25,
+        "maxCopper": 25
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        25,
+        25
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 7,
+      "id": "gwniwr-haselzweig",
+      "optionIndex": 0,
+      "name": "Haselzweig",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 27,
+        "maxCopper": 27
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        27,
+        27
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 8,
+      "id": "gwniwr-regenfenster",
+      "optionIndex": 0,
+      "name": "Regenfenster",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 29,
+        "maxCopper": 29
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        29,
+        29
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 9,
+      "id": "gwniwr-heller-hof",
+      "optionIndex": 0,
+      "name": "Heller Hof",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 31,
+        "maxCopper": 31
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        31,
+        31
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 10,
+      "id": "gwniwr-heidepfad",
+      "optionIndex": 0,
+      "name": "Heidepfad",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 34,
+        "maxCopper": 34
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        34,
+        34
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 11,
+      "id": "gwniwr-waldsaum",
+      "optionIndex": 0,
+      "name": "Waldsaum",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 37,
+        "maxCopper": 37
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        37,
+        37
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 12,
+      "id": "gwniwr-kupferabend",
+      "optionIndex": 0,
+      "name": "Kupferabend",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 40,
+        "maxCopper": 40
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        40,
+        40
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 13,
+      "id": "gwniwr-maiblatt",
+      "optionIndex": 0,
+      "name": "Maiblatt",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 44,
+        "maxCopper": 44
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        44,
+        44
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 14,
+      "id": "gwniwr-bannkreisblau",
+      "optionIndex": 0,
+      "name": "Bannkreisblau",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 48,
+        "maxCopper": 48
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        48,
+        48
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 15,
+      "id": "gwniwr-sonntagsfaden",
+      "optionIndex": 0,
+      "name": "Sonntagsfaden",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 53,
+        "maxCopper": 53
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        53,
+        53
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 16,
+      "id": "gwniwr-hafennebel",
+      "optionIndex": 0,
+      "name": "Hafennebel",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 59,
+        "maxCopper": 59
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        59,
+        59
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 17,
+      "id": "gwniwr-beerenlaub",
+      "optionIndex": 0,
+      "name": "Beerenlaub",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 65,
+        "maxCopper": 65
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        65,
+        65
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 18,
+      "id": "gwniwr-goldener-acker",
+      "optionIndex": 0,
+      "name": "Goldener Acker",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 73,
+        "maxCopper": 73
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        73,
+        73
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 19,
+      "id": "gwniwr-abendgruen",
+      "optionIndex": 0,
+      "name": "Abendgrün",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 84,
+        "maxCopper": 84
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        84,
+        84
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 20,
+      "id": "gwniwr-dornrose",
+      "optionIndex": 0,
+      "name": "Dornrose",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 105,
+        "maxCopper": 105
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        105,
+        105
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 21,
+      "id": "gwniwr-gutes-tuch",
+      "optionIndex": 0,
+      "name": "Gutes Tuch",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 150,
+        "maxCopper": 150
+      },
+      "category": "damen",
+      "status": "available",
+      "before": null,
+      "after": [
+        150,
+        150
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 22,
+      "id": "gwniwr-tagwerk",
+      "optionIndex": 0,
+      "name": "Tagwerk",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 23,
+      "id": "gwniwr-steinweg",
+      "optionIndex": 0,
+      "name": "Steinweg",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 15,
+        "maxCopper": 15
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        15,
+        15
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 24,
+      "id": "gwniwr-morgengruen",
+      "optionIndex": 0,
+      "name": "Morgengrün",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 17,
+        "maxCopper": 17
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        17,
+        17
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 25,
+      "id": "gwniwr-haferweg",
+      "optionIndex": 0,
+      "name": "Haferweg",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 19,
+        "maxCopper": 19
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        19,
+        19
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 26,
+      "id": "gwniwr-ziegelwams",
+      "optionIndex": 0,
+      "name": "Ziegelwams",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 21,
+        "maxCopper": 21
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        21,
+        21
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 27,
+      "id": "gwniwr-weidensteg",
+      "optionIndex": 0,
+      "name": "Weidensteg",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 23,
+        "maxCopper": 23
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        23,
+        23
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 28,
+      "id": "gwniwr-gerberbraun",
+      "optionIndex": 0,
+      "name": "Gerberbraun",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 25,
+        "maxCopper": 25
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        25,
+        25
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 29,
+      "id": "gwniwr-fischerblau",
+      "optionIndex": 0,
+      "name": "Fischerblau",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 27,
+        "maxCopper": 27
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        27,
+        27
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 30,
+      "id": "gwniwr-regenfreund",
+      "optionIndex": 0,
+      "name": "Regenfreund",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 29,
+        "maxCopper": 29
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        29,
+        29
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 31,
+      "id": "gwniwr-hobelgrau",
+      "optionIndex": 0,
+      "name": "Hobelgrau",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 31,
+        "maxCopper": 31
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        31,
+        31
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 32,
+      "id": "gwniwr-eichensteg",
+      "optionIndex": 0,
+      "name": "Eichensteg",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 34,
+        "maxCopper": 34
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        34,
+        34
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 33,
+      "id": "gwniwr-bannkreisweg",
+      "optionIndex": 0,
+      "name": "Bannkreisweg",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 37,
+        "maxCopper": 37
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        37,
+        37
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 34,
+      "id": "gwniwr-kupferstich",
+      "optionIndex": 0,
+      "name": "Kupferstich",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 40,
+        "maxCopper": 40
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        40,
+        40
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 35,
+      "id": "gwniwr-hafenabend",
+      "optionIndex": 0,
+      "name": "Hafenabend",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 44,
+        "maxCopper": 44
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        44,
+        44
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 36,
+      "id": "gwniwr-apfelhain",
+      "optionIndex": 0,
+      "name": "Apfelhain",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 48,
+        "maxCopper": 48
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        48,
+        48
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 37,
+      "id": "gwniwr-sonntagsgang",
+      "optionIndex": 0,
+      "name": "Sonntagsgang",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 53,
+        "maxCopper": 53
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        53,
+        53
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 38,
+      "id": "gwniwr-dunkler-erlenzweig",
+      "optionIndex": 0,
+      "name": "Dunkler Erlenzweig",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 59,
+        "maxCopper": 59
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        59,
+        59
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 39,
+      "id": "gwniwr-beerenabend",
+      "optionIndex": 0,
+      "name": "Beerenabend",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 65,
+        "maxCopper": 65
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        65,
+        65
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 40,
+      "id": "gwniwr-ockerbund",
+      "optionIndex": 0,
+      "name": "Ockerbund",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 73,
+        "maxCopper": 73
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        73,
+        73
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 41,
+      "id": "gwniwr-abendlauf",
+      "optionIndex": 0,
+      "name": "Abendlauf",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 84,
+        "maxCopper": 84
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        84,
+        84
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 42,
+      "id": "gwniwr-roter-faden",
+      "optionIndex": 0,
+      "name": "Roter Faden",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 105,
+        "maxCopper": 105
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        105,
+        105
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 43,
+      "id": "gwniwr-meistertuch",
+      "optionIndex": 0,
+      "name": "Meistertuch",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 150,
+        "maxCopper": 150
+      },
+      "category": "herren",
+      "status": "available",
+      "before": null,
+      "after": [
+        150,
+        150
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 44,
+      "id": "gwniwr-braut-flachsband",
+      "optionIndex": 0,
+      "name": "Flachsband",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 65,
+        "maxCopper": 65
+      },
+      "category": "damen-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        65,
+        65
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 45,
+      "id": "gwniwr-braut-heidebund",
+      "optionIndex": 0,
+      "name": "Heidebund",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 110,
+        "maxCopper": 110
+      },
+      "category": "damen-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        110,
+        110
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 46,
+      "id": "gwniwr-braut-maienlicht",
+      "optionIndex": 0,
+      "name": "Maienlicht",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 175,
+        "maxCopper": 175
+      },
+      "category": "damen-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        175,
+        175
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 47,
+      "id": "gwniwr-braut-treuekleid",
+      "optionIndex": 0,
+      "name": "Treuekleid",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 240,
+        "maxCopper": 240
+      },
+      "category": "damen-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        240,
+        240
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 48,
+      "id": "gwniwr-braeutigam-flachsschwur",
+      "optionIndex": 0,
+      "name": "Flachsschwur",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 65,
+        "maxCopper": 65
+      },
+      "category": "herren-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        65,
+        65
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 49,
+      "id": "gwniwr-braeutigam-heideschwur",
+      "optionIndex": 0,
+      "name": "Heideschwur",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 120,
+        "maxCopper": 120
+      },
+      "category": "herren-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        120,
+        120
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Nadel & Faden",
+      "moduleId": "nadel-und-faden-gwniwr",
+      "pageIndex": 4,
+      "itemIndex": 50,
+      "id": "gwniwr-braeutigam-treuebund",
+      "optionIndex": 0,
+      "name": "Treuebund",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 220,
+        "maxCopper": 220
+      },
+      "category": "herren-hochzeit",
+      "status": "available",
+      "before": null,
+      "after": [
+        220,
+        220
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 0,
+      "id": "maerllys-fruehe-kammer",
+      "optionIndex": 0,
+      "name": "Frühe Kammer",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 18,
+        "maxCopper": 18
+      },
+      "category": "hausdienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        18,
+        18
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 1,
+      "id": "maerllys-saubere-diele",
+      "optionIndex": 0,
+      "name": "Saubere Diele",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 22,
+        "maxCopper": 22
+      },
+      "category": "hausdienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        22,
+        22
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 2,
+      "id": "maerllys-kuechenhilfe",
+      "optionIndex": 0,
+      "name": "Am Küchenfeuer",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 24,
+        "maxCopper": 24
+      },
+      "category": "hausdienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        24,
+        24
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 3,
+      "id": "maerllys-speisekammer",
+      "optionIndex": 0,
+      "name": "Die Speisekammer",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 28,
+        "maxCopper": 28
+      },
+      "category": "hausdienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        28,
+        28
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 4,
+      "id": "maerllys-ofendienst",
+      "optionIndex": 0,
+      "name": "Warme Stube",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 32,
+        "maxCopper": 32
+      },
+      "category": "hausdienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        32,
+        32
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 5,
+      "id": "maerllys-leinenwart",
+      "optionIndex": 0,
+      "name": "Leinenwart",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 35,
+        "maxCopper": 35
+      },
+      "category": "hausdienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        35,
+        35
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 6,
+      "id": "maerllys-waeschemarsch",
+      "optionIndex": 0,
+      "name": "Wäschegang",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 38,
+        "maxCopper": 38
+      },
+      "category": "hausdienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        38,
+        38
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 7,
+      "id": "maerllys-hausbursche",
+      "optionIndex": 0,
+      "name": "Der Hausbursche",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 40,
+        "maxCopper": 40
+      },
+      "category": "hausdienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        40,
+        40
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 8,
+      "id": "maerllys-zofenalltag",
+      "optionIndex": 0,
+      "name": "Zofentag",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 45,
+        "maxCopper": 45
+      },
+      "category": "hausdienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        45,
+        45
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 9,
+      "id": "maerllys-kammerdiener",
+      "optionIndex": 0,
+      "name": "Kammerdiener",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 52,
+        "maxCopper": 52
+      },
+      "category": "hausdienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        52,
+        52
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 10,
+      "id": "maerllys-ankleidezofe",
+      "optionIndex": 0,
+      "name": "Die Ankleidezofe",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 65,
+        "maxCopper": 65
+      },
+      "category": "hausdienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        65,
+        65
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 11,
+      "id": "maerllys-kaemmerer",
+      "optionIndex": 0,
+      "name": "Der Kämmerer",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 72,
+        "maxCopper": 72
+      },
+      "category": "hausdienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        72,
+        72
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 12,
+      "id": "maerllys-obermagd",
+      "optionIndex": 0,
+      "name": "Ordnung im Haus",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 86,
+        "maxCopper": 86
+      },
+      "category": "hausdienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        86,
+        86
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 13,
+      "id": "maerllys-hausmeister",
+      "optionIndex": 0,
+      "name": "Der Hausmeister",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 105,
+        "maxCopper": 105
+      },
+      "category": "hausdienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        105,
+        105
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 14,
+      "id": "maerllys-haushofmeister",
+      "optionIndex": 0,
+      "name": "Der Haushofmeister",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 145,
+        "maxCopper": 145
+      },
+      "category": "hausdienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        145,
+        145
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 15,
+      "id": "maerllys-schreibstube",
+      "optionIndex": 0,
+      "name": "Schreibstube",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 45,
+        "maxCopper": 45
+      },
+      "category": "verwaltung",
+      "status": "available",
+      "before": null,
+      "after": [
+        45,
+        45
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 16,
+      "id": "maerllys-botenstube",
+      "optionIndex": 0,
+      "name": "Botenstube",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 52,
+        "maxCopper": 52
+      },
+      "category": "verwaltung",
+      "status": "available",
+      "before": null,
+      "after": [
+        52,
+        52
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 17,
+      "id": "maerllys-rechnungsfuehrer",
+      "optionIndex": 0,
+      "name": "Rechnungsführer",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 65,
+        "maxCopper": 65
+      },
+      "category": "verwaltung",
+      "status": "available",
+      "before": null,
+      "after": [
+        65,
+        65
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 18,
+      "id": "maerllys-siegelfuehrer",
+      "optionIndex": 0,
+      "name": "Siegelstube",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 78,
+        "maxCopper": 78
+      },
+      "category": "verwaltung",
+      "status": "available",
+      "before": null,
+      "after": [
+        78,
+        78
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 19,
+      "id": "maerllys-zollschreiber",
+      "optionIndex": 0,
+      "name": "Zollschreiber",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 92,
+        "maxCopper": 92
+      },
+      "category": "verwaltung",
+      "status": "available",
+      "before": null,
+      "after": [
+        92,
+        92
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 20,
+      "id": "maerllys-gutsverwalter",
+      "optionIndex": 0,
+      "name": "Der Gutsverwalter",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 115,
+        "maxCopper": 115
+      },
+      "category": "verwaltung",
+      "status": "available",
+      "before": null,
+      "after": [
+        115,
+        115
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 21,
+      "id": "maerllys-vogt",
+      "optionIndex": 0,
+      "name": "Die Vogtsgarnitur",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 150,
+        "maxCopper": 150
+      },
+      "category": "verwaltung",
+      "status": "available",
+      "before": null,
+      "after": [
+        150,
+        150
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 22,
+      "id": "maerllys-gerichtsschreiber",
+      "optionIndex": 0,
+      "name": "Gerichtsschreiber",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 180,
+        "maxCopper": 180
+      },
+      "category": "verwaltung",
+      "status": "available",
+      "before": null,
+      "after": [
+        180,
+        180
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 23,
+      "id": "maerllys-rentmeister",
+      "optionIndex": 0,
+      "name": "Der Rentmeister",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 220,
+        "maxCopper": 220
+      },
+      "category": "verwaltung",
+      "status": "available",
+      "before": null,
+      "after": [
+        220,
+        220
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 24,
+      "id": "maerllys-archivwart",
+      "optionIndex": 0,
+      "name": "Archivwart",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 270,
+        "maxCopper": 270
+      },
+      "category": "verwaltung",
+      "status": "available",
+      "before": null,
+      "after": [
+        270,
+        270
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 25,
+      "id": "maerllys-zeremonienmeister",
+      "optionIndex": 0,
+      "name": "Zeremonienmeister",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 330,
+        "maxCopper": 330
+      },
+      "category": "verwaltung",
+      "status": "available",
+      "before": null,
+      "after": [
+        330,
+        330
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 26,
+      "id": "maerllys-hofsekretaer",
+      "optionIndex": 0,
+      "name": "Hofsekretär",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 420,
+        "maxCopper": 420
+      },
+      "category": "verwaltung",
+      "status": "available",
+      "before": null,
+      "after": [
+        420,
+        420
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 27,
+      "id": "maerllys-kanzleidiener",
+      "optionIndex": 0,
+      "name": "Kanzleidienst",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 560,
+        "maxCopper": 560
+      },
+      "category": "verwaltung",
+      "status": "available",
+      "before": null,
+      "after": [
+        560,
+        560
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 28,
+      "id": "maerllys-landvogt",
+      "optionIndex": 0,
+      "name": "Landvogt",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 800,
+        "maxCopper": 800
+      },
+      "category": "verwaltung",
+      "status": "available",
+      "before": null,
+      "after": [
+        800,
+        800
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 29,
+      "id": "maerllys-erster-amtstraeger",
+      "optionIndex": 0,
+      "name": "Erster Amtsträger",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 1200,
+        "maxCopper": 1200
+      },
+      "category": "verwaltung",
+      "status": "available",
+      "before": null,
+      "after": [
+        1200,
+        1200
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 30,
+      "id": "maerllys-stallbursche",
+      "optionIndex": 0,
+      "name": "Stallbursche",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 32,
+        "maxCopper": 32
+      },
+      "category": "gefolge",
+      "status": "available",
+      "before": null,
+      "after": [
+        32,
+        32
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 31,
+      "id": "maerllys-fuhrknecht",
+      "optionIndex": 0,
+      "name": "Fuhrknecht",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 45,
+        "maxCopper": 45
+      },
+      "category": "gefolge",
+      "status": "available",
+      "before": null,
+      "after": [
+        45,
+        45
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 32,
+      "id": "maerllys-jagdknecht",
+      "optionIndex": 0,
+      "name": "Jagdknecht",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 58,
+        "maxCopper": 58
+      },
+      "category": "gefolge",
+      "status": "available",
+      "before": null,
+      "after": [
+        58,
+        58
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 33,
+      "id": "maerllys-reisebegleiter",
+      "optionIndex": 0,
+      "name": "Reisebegleiter",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 75,
+        "maxCopper": 75
+      },
+      "category": "gefolge",
+      "status": "available",
+      "before": null,
+      "after": [
+        75,
+        75
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 34,
+      "id": "maerllys-pfortendienst",
+      "optionIndex": 0,
+      "name": "An der Pforte",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 90,
+        "maxCopper": 90
+      },
+      "category": "gefolge",
+      "status": "available",
+      "before": null,
+      "after": [
+        90,
+        90
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 35,
+      "id": "maerllys-fackeltraeger",
+      "optionIndex": 0,
+      "name": "Fackelträger",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 110,
+        "maxCopper": 110
+      },
+      "category": "gefolge",
+      "status": "available",
+      "before": null,
+      "after": [
+        110,
+        110
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 36,
+      "id": "maerllys-hauswache",
+      "optionIndex": 0,
+      "name": "Hauswachenlivree",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 135,
+        "maxCopper": 135
+      },
+      "category": "gefolge",
+      "status": "available",
+      "before": null,
+      "after": [
+        135,
+        135
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 37,
+      "id": "maerllys-gefolgedienst",
+      "optionIndex": 0,
+      "name": "Gemeinsamer Auftritt",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 175,
+        "maxCopper": 175
+      },
+      "category": "gefolge",
+      "status": "available",
+      "before": null,
+      "after": [
+        175,
+        175
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 38,
+      "id": "maerllys-festdienerin",
+      "optionIndex": 0,
+      "name": "Dienst beim Fest",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 220,
+        "maxCopper": 220
+      },
+      "category": "gefolge",
+      "status": "available",
+      "before": null,
+      "after": [
+        220,
+        220
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 39,
+      "id": "maerllys-mundschenk",
+      "optionIndex": 0,
+      "name": "Der Mundschenk",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 290,
+        "maxCopper": 290
+      },
+      "category": "gefolge",
+      "status": "available",
+      "before": null,
+      "after": [
+        290,
+        290
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 40,
+      "id": "maerllys-hoflaeufer",
+      "optionIndex": 0,
+      "name": "Hofläufer",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 370,
+        "maxCopper": 370
+      },
+      "category": "gefolge",
+      "status": "available",
+      "before": null,
+      "after": [
+        370,
+        370
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 41,
+      "id": "maerllys-ehrengefolge",
+      "optionIndex": 0,
+      "name": "Ehrengefolge",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 540,
+        "maxCopper": 540
+      },
+      "category": "gefolge",
+      "status": "available",
+      "before": null,
+      "after": [
+        540,
+        540
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 42,
+      "id": "maerllys-grossempfang",
+      "optionIndex": 0,
+      "name": "Der große Empfang",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 900,
+        "maxCopper": 900
+      },
+      "category": "gefolge",
+      "status": "available",
+      "before": null,
+      "after": [
+        900,
+        900
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 43,
+      "id": "maerllys-regenwache",
+      "optionIndex": 0,
+      "name": "Wettergang",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 60,
+        "maxCopper": 60
+      },
+      "category": "aussendienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        60,
+        60
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 44,
+      "id": "maerllys-kurier",
+      "optionIndex": 0,
+      "name": "Der Hauskurier",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 85,
+        "maxCopper": 85
+      },
+      "category": "aussendienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        85,
+        85
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 45,
+      "id": "maerllys-feldaufseher",
+      "optionIndex": 0,
+      "name": "Feldaufseher",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 120,
+        "maxCopper": 120
+      },
+      "category": "aussendienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        120,
+        120
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 46,
+      "id": "maerllys-hofvogt",
+      "optionIndex": 0,
+      "name": "Der Hofvogt",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 165,
+        "maxCopper": 165
+      },
+      "category": "aussendienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        165,
+        165
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 47,
+      "id": "maerllys-waldaufseher",
+      "optionIndex": 0,
+      "name": "Waldaufseher",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 220,
+        "maxCopper": 220
+      },
+      "category": "aussendienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        220,
+        220
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 48,
+      "id": "maerllys-reitbote",
+      "optionIndex": 0,
+      "name": "Reitbote",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 310,
+        "maxCopper": 310
+      },
+      "category": "aussendienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        310,
+        310
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 49,
+      "id": "maerllys-winterwache",
+      "optionIndex": 0,
+      "name": "Winterdienst",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 430,
+        "maxCopper": 430
+      },
+      "category": "aussendienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        430,
+        430
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Naht & Siegel",
+      "moduleId": "naht-und-siegel",
+      "pageIndex": 4,
+      "itemIndex": 50,
+      "id": "maerllys-hofreise",
+      "optionIndex": 0,
+      "name": "Hofreise",
+      "unit": "1 Garnitur",
+      "price": {
+        "minCopper": 640,
+        "maxCopper": 640
+      },
+      "category": "aussendienst",
+      "status": "available",
+      "before": null,
+      "after": [
+        640,
+        640
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
     },
     {
       "source": "Zum Vollen Korb",
