@@ -2551,6 +2551,10 @@
       "title": "Fortunas Häuser und Verbindungen"
     },
     {
+      "id": "die-goldene-fassung",
+      "title": "Die goldene Fassung"
+    },
+    {
       "id": "zum-honigtoertchen",
       "title": "Zum Honigtörtchen"
     },
@@ -3637,6 +3641,41 @@
       "id": "gwynthor-fortuna-interessenbuende::page:fortuna-partnernetz",
       "title": "Fortunas Häuser und Verbindungen · Die gewachsenen Verbindungen",
       "moduleId": "gwynthor-fortuna-interessenbuende"
+    },
+    {
+      "id": "die-goldene-fassung",
+      "title": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung"
+    },
+    {
+      "id": "die-goldene-fassung::page:goldene-fassung-laden",
+      "title": "Die goldene Fassung · Die goldene Fassung",
+      "moduleId": "die-goldene-fassung"
+    },
+    {
+      "id": "die-goldene-fassung::page:goldene-fassung-hierarchie",
+      "title": "Die goldene Fassung · Hierarchie · Laden & Werkstatt",
+      "moduleId": "die-goldene-fassung"
+    },
+    {
+      "id": "die-goldene-fassung::session:goldene-fassung-verkaufsraum",
+      "title": "Die goldene Fassung · Der Verkaufsraum",
+      "moduleId": "die-goldene-fassung"
+    },
+    {
+      "id": "die-goldene-fassung::session:goldene-fassung-werkstatt",
+      "title": "Die goldene Fassung · Die Werkstatt",
+      "moduleId": "die-goldene-fassung"
+    },
+    {
+      "id": "die-goldene-fassung::session:goldene-fassung-keller",
+      "title": "Die goldene Fassung · Der Keller",
+      "moduleId": "die-goldene-fassung"
+    },
+    {
+      "id": "die-goldene-fassung::session:goldene-fassung-wohnstube",
+      "title": "Die goldene Fassung · Die Wohnstube über dem Juwelier",
+      "moduleId": "die-goldene-fassung"
     },
     {
       "id": "zum-honigtoertchen",
@@ -6527,6 +6566,7 @@
     "AleriaAlmanach/modules/gestiefelte-muschi/muschi-data.js",
     "AleriaAlmanach/modules/goettliche-eleganz/eleganz-data.js",
     "AleriaAlmanach/modules/gofrann-schmiede/gofrann-data.js",
+    "AleriaAlmanach/modules/goldene-fassung/ffals-data.js",
     "AleriaAlmanach/modules/gortach-brauerei/gortach-brewery-data.js",
     "AleriaAlmanach/modules/guild-services/guild-services-data.js",
     "AleriaAlmanach/modules/gwniwr/gwniwr-data.js",
