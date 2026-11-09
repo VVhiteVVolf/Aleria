@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-ffals",
+  "revision": 1,
+  "updatedAt": "2026-11-09T15:22:06.801Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-ffals",
+      "title": "Familie Ffals",
+      "motto": "",
+      "description": "Die tatsächliche Familie Ffals: Händler von der Silberinsel, heute in Venalys. Der verwandte Gwynthorer Juwelierzweig ist ohne Nachkommen erloschen; der genaue Verwandtschaftsgrad bleibt offen.",
+      "emblem": "assets/images/houses/Venalys/Ffals/ffals-emblem.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Venalys",
+        "barony": "",
+        "county": "",
+        "kingdom": "Venalys",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": "assets/images/regions/venalys.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-ffals-gruender",
+        "worldPersonId": "person--haus-ffals--haus-ffals-gruender",
+        "name": "Unbekannter Vater",
+        "title": "Eltern der Brüder · nicht benannt",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ffals",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Gemeinsamer Elternplatzhalter für Alwyn und dessen jüngeren Bruder. Namen, Lebensdaten und weitere Familiengeschichte sind nicht überliefert; dies sind keine benannten historischen Gründer.",
+        "extensions": {
+          "authoredSource": "ffals-real-family-20261109",
+          "unresearchedParentPlaceholder": true,
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "haus-ffals-gruenderin",
+        "worldPersonId": "person--haus-ffals--haus-ffals-gruenderin",
+        "name": "Unbekannte Mutter",
+        "title": "Eltern der Brüder · nicht benannt",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ffals",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Gemeinsamer Elternplatzhalter für Alwyn und dessen jüngeren Bruder. Namen, Lebensdaten und weitere Familiengeschichte sind nicht überliefert; dies sind keine benannten historischen Gründer.",
+        "extensions": {
+          "authoredSource": "ffals-real-family-20261109",
+          "unresearchedParentPlaceholder": true,
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "alwyn-ffals-echt",
+        "worldPersonId": "person--haus-ffals--alwyn-ffals-echt",
+        "name": "Alwyn Ffals",
+        "title": "Händler von der Silberinsel",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ffals",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "Verwitweter Händler von der Silberinsel. Nach dem Tod seiner Frau zog er mit seinen beiden bereits erwachsenen Kindern und seinem jüngeren Bruder nach Venalys. Die Lebensdaten und der Zeitpunkt dieses Umzugs sind nicht benannt.",
+        "extensions": {
+          "authoredSource": "ffals-real-family-20261109",
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "unbenannte-gemahlin-alwyn-ffals",
+        "worldPersonId": "person--haus-ffals--unbenannte-gemahlin-alwyn-ffals",
+        "name": "Unbenannte Gemahlin Alwyns",
+        "title": "Alwyns verstorbene Gemahlin",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Verstorbene Ehefrau Alwyns und Mutter seiner beiden Kinder. Ihr Name, ihre Herkunft und ihre Lebensdaten bleiben offen. Ihr Tod liegt vor dem Umzug der Familie nach Venalys.",
+        "extensions": {
+          "authoredSource": "ffals-real-family-20261109",
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "bryn-ffals-echt",
+        "worldPersonId": "person--haus-ffals--bryn-ffals-echt",
+        "name": "Bryn Ffals",
+        "title": "Alwyns jüngerer Bruder",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ffals",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Jüngerer Bruder Alwyns. Zog gemeinsam mit Alwyn und dessen zwei Kindern von der Silberinsel nach Venalys. Beruf, Familienstand und Lebensdaten sind nicht benannt.",
+        "extensions": {
+          "authoredSource": "ffals-real-family-20261109",
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "seren-ffals-echt",
+        "worldPersonId": "person--haus-ffals--seren-ffals-echt",
+        "name": "Seren Ffals",
+        "title": "Erwachsene Tochter Alwyns",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ffals",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Alwyns bereits erwachsene Tochter. Zog nach dem Tod ihrer Mutter mit ihrem Vater, ihrem Bruder und ihrem Onkel nach Venalys. Beruf, Familienstand und Lebensdaten sind nicht benannt.",
+        "extensions": {
+          "authoredSource": "ffals-real-family-20261109",
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "rhun-ffals-echt",
+        "worldPersonId": "person--haus-ffals--rhun-ffals-echt",
+        "name": "Rhun Ffals",
+        "title": "Erwachsener Sohn Alwyns",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-ffals",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Alwyns bereits erwachsener Sohn. Zog nach dem Tod seiner Mutter mit seinem Vater, seiner Schwester und seinem Onkel nach Venalys. Beruf, Familienstand und Lebensdaten sind nicht benannt.",
+        "extensions": {
+          "authoredSource": "ffals-real-family-20261109",
+          "portraitIntentionallyAbsent": true
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-ffals-founders",
+        "participantIds": [
+          "haus-ffals-gruender",
+          "haus-ffals-gruenderin"
+        ],
+        "type": "union",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Allgemeiner Verbindungsplatzhalter für die nicht benannten Eltern der Brüder; eine Eheschließung, deren Zeitpunkt und weitere Lebensgeschichte sind nicht belegt.",
+        "extensions": {
+          "registryManagedFields": [
+            "type",
+            "notes"
+          ],
+          "registryManagedSourceRevision": 2
+        }
+      },
+      {
+        "id": "marriage-alwyn-ffals-unbenannte-gemahlin",
+        "participantIds": [
+          "alwyn-ffals-echt",
+          "unbenannte-gemahlin-alwyn-ffals"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Die Gemahlin ist verstorben. Name, Herkunft und Lebensdaten sowie Ehe- und Todesjahr sind nicht überliefert.",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-alwyn-ffals-echt",
+        "childId": "alwyn-ffals-echt",
+        "parentIds": [
+          "haus-ffals-gruender",
+          "haus-ffals-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-ffals-founders",
+        "type": "biological",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Die Geschwisterschaft der Brüder ist belegt; die Eltern sind nicht benannt und werden ausschließlich als gemeinsamer Platzhalter dargestellt.",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-bryn-ffals-echt",
+        "childId": "bryn-ffals-echt",
+        "parentIds": [
+          "haus-ffals-gruender",
+          "haus-ffals-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-ffals-founders",
+        "type": "biological",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Die Geschwisterschaft der Brüder ist belegt; die Eltern sind nicht benannt und werden ausschließlich als gemeinsamer Platzhalter dargestellt.",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-seren-ffals-echt",
+        "childId": "seren-ffals-echt",
+        "parentIds": [
+          "alwyn-ffals-echt",
+          "unbenannte-gemahlin-alwyn-ffals"
+        ],
+        "partnershipId": "marriage-alwyn-ffals-unbenannte-gemahlin",
+        "type": "biological",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Zwei bereits erwachsene Kinder Alwyns und seiner verstorbenen Gemahlin; keine Lebensdaten ergänzt.",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhun-ffals-echt",
+        "childId": "rhun-ffals-echt",
+        "parentIds": [
+          "alwyn-ffals-echt",
+          "unbenannte-gemahlin-alwyn-ffals"
+        ],
+        "partnershipId": "marriage-alwyn-ffals-unbenannte-gemahlin",
+        "type": "biological",
+        "legitimacy": "unknown",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Zwei bereits erwachsene Kinder Alwyns und seiner verstorbenen Gemahlin; keine Lebensdaten ergänzt.",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-ffals",
+        "name": "Familie Ffals",
+        "motto": "",
+        "emblem": "assets/images/houses/Venalys/Ffals/ffals-emblem.png",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-ffals-founders",
+      "houseId": "house-ffals",
+      "crestSubtitle": "Händlerfamilie · Silberinsel → Venalys",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "alwyn-ffals-echt",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "sourceRevision": 2,
+      "chartLayoutPolicy": "strict-v1",
+      "authoredOn": "2026-11-09",
+      "sourceNote": "Nutzerquelle vom 9. November 2026. Schreibweise Ffals folgt dem mehrfachen Erzähltext und den beschrifteten Karten; Fflas bleibt eine Quellschreibvariante. Die Namen Seren, Rhun und Bryn sowie ihre Rollen als Tochter, Sohn und jüngerer Bruder wurden aus den Kartenbeschriftungen und der beschriebenen Familienkonstellation zusammengeführt. Namen unbekannter Angehöriger, Lebensdaten und die genaue Verbindung zum erloschenen Gwynthorer Zweig bleiben offen. Für diese Familienakte wurden keine Personenporträts erstellt oder übernommen.",
+      "registryManagedDocumentFieldRevisions": {},
+      "registryManagedHouseProfileFieldRevisions": {},
+      "registryManagedExtensionFieldRevisions": {},
+      "registryManagedViewFieldRevisions": {},
+      "registryManagedLineageFieldRevisions": {},
+      "registryManagedEntitySourceRevision": 2,
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Familie Ffals",
+        "housePage": true,
+        "image": "",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Die Ffals sind eine bürgerliche Händlerfamilie mit Wurzeln auf der Silberinsel. Alwyn Ffals war dort als Händler tätig. Nach dem Tod seiner Frau zog er mit seinen zwei erwachsenen Kindern Seren und Rhun sowie seinem jüngeren Bruder Bryn nach Venalys. Dort liegt der heutige Familienwohnsitz; ein genauer Stadtbezirk und eine eigene Niederlassung sind nicht benannt.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Familie Ffals"
+          ],
+          [
+            "Rang",
+            "Bürgerlich"
+          ],
+          [
+            "Stammsitz",
+            "Venalys"
+          ],
+          [
+            "Heutiger Wohnort",
+            "Venalys"
+          ],
+          [
+            "Oberhaupt",
+            "Alwyn Ffals"
+          ],
+          [
+            "Ursprung",
+            "Silberinsel"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Venalys/Ffals/ffals-emblem.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Die tatsächliche Familie",
+          "biographyText": "Die Ffals sind eine bürgerliche Händlerfamilie mit Wurzeln auf der Silberinsel. Alwyn Ffals war dort als Händler tätig. Nach dem Tod seiner Frau zog er mit seinen zwei erwachsenen Kindern Seren und Rhun sowie seinem jüngeren Bruder Bryn nach Venalys. Dort liegt der heutige Familienwohnsitz; ein genauer Stadtbezirk und eine eigene Niederlassung sind nicht benannt.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Von der Silberinsel nach Venalys",
+          "historyText": "Ein verwandter Zweig der Ffals betrieb in Gwynthor einen Juwelier. Diese örtliche Linie ist mangels Nachkommen erloschen. Die Verwandtschaft mit Alwyns Familie ist überliefert, ihr genauer Grad jedoch nicht. Deshalb führt der Stammbaum keine erfundene Verbindung zu einem namentlich nicht bekannten letzten Gwynthorer Angehörigen.\n\nDer bekannte Familienkreis umfasst den verwitweten Alwyn, seine verstorbene unbenannte Gemahlin, die beiden erwachsenen Kinder und Alwyns jüngeren Bruder. Namen und Lebensdaten früherer Generationen sind nicht überliefert. Die beiden Elternkarten der Brüder dienen als unbenannte Platzhalter. Das Jahr des Umzugs nach Venalys und die Lebensdaten aller Angehörigen bleiben offen.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Eine bürgerliche Händlerfamilie. Besondere Familienwerte, Ämter und eine überlieferte Hausdevise sind nicht benannt."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Für den erloschenen Gwynthorer Zweig ist ein Juweliergeschäft überliefert. Alwyn selbst ist als Händler von der Silberinsel beschrieben. Ein heutiger Besitz-, Erb- oder Rechtsanspruch auf den Gwynthorer Betrieb ist damit nicht festgestellt. Weitere Läden, Landbesitz und Vermögenswerte sind nicht benannt."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Alwyn und Bryn sind Brüder. Seren und Rhun sind Alwyns bereits erwachsene Kinder. Der genaue Verwandtschaftsgrad zum erloschenen Gwynthorer Juwelierzweig bleibt offen."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Venalys/Ffals/ffals-emblem.png",
+              "title": "Familie Ffals · vollständige Hausseite",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ffals"
+            }
+          ],
+          "footer": ""
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2528 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-09T15:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "tab": "Völker & Kulturen",
+      "key": "Gwynthor-Stadt",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "desc": "Orte und Geschäfte innerhalb Gwynthors."
+    },
+    "entry": {
+      "id": "die-goldene-fassung",
+      "title": "Die goldene Fassung",
+      "subtitle": "Der Juwelier der Ffals · kleine Kostbarkeiten in Gwynthor",
+      "type": "Juwelier & Schmuckhandel",
+      "category": "Gwynthor-Stadt · Geschäfte",
+      "symbol": "./assets/goldene-fassung/schild.png",
+      "icon": "◈",
+      "stamp": "FFALS · GWYNTHOR",
+      "image": "./assets/goldene-fassung/verkaufsraum.png",
+      "previewImage": "./assets/goldene-fassung/verkaufsraum.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "h0Ifj6cWfP3jqwWmeJJy",
+        "OACnmvvmPeyO95CNt2Cm",
+        "gj2lAsfeeqEpWvXumIma",
+        "QRUp1YQDmMr5uBvgx1aD"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die goldene Fassung",
+          "commentThreadKey": "goldene-fassung-laden",
+          "image": "./assets/goldene-fassung/verkaufsraum.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Ein bemaltes Holzschild mit goldener Ringfassung hängt an dunklen Eisenbeschlägen über der Tür. Dahinter liegt <strong>Die goldene Fassung</strong>, ein gepflegter Juwelierladen in Gwynthor-Stadt. Silber, Bronze, kleine Schmucksteine und wenige schmale Goldarbeiten füllen die Auslage.</p><p>Der Laden bedient Bürgerinnen und Bürger, die ein schönes Geschenk, einen schlichten Ring oder ein gutes Stück für einen besonderen Tag suchen. Er verdient ordentlich an überschaubaren Arbeiten und verlässlicher Laufkundschaft; höfischer Prunk bestimmt weder Einrichtung noch Sortiment.</p><p>Alwyn Ffals betreut Einkauf und Geschäftskontakte. Mit Seren, Rhun und Bryn bildet er die vierköpfige Besetzung. Zum Haus gehören Verkaufsraum, Werkstatt, Keller und die Wohnstube im Obergeschoss. Material, Lieferumfang und Änderungen werden vor einer Bestellung besprochen.</p>",
+          "stats": [
+            [
+              "Ort",
+              "Gwynthor-Stadt"
+            ],
+            [
+              "Geschäft",
+              "Bürgerlicher Juwelier"
+            ],
+            [
+              "Leitung",
+              "Alwyn Ffals"
+            ],
+            [
+              "Preisrahmen",
+              "8–90 Kupfertaler im gewöhnlichen Schmucksortiment"
+            ]
+          ],
+          "quote": "Ein gutes Stück muss nicht für einen Fürsten gemacht sein.",
+          "quoteBy": "Die goldene Fassung"
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die vier im Laden",
+          "commentThreadKey": "goldene-fassung-personen",
+          "biographyPage": true,
+          "image": "./assets/goldene-fassung/personal.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "biography": {
+            "biographyTitle": "Die Besetzung der Goldenen Fassung",
+            "biographyText": "<p><strong>Alwyn Ffals</strong> · Alwyn tritt in Gwynthor als Händler der Familie Ffals auf und führt Die goldene Fassung. Er betreut Einkauf, Geschäftskontakte und die Vereinbarungen mit der Kundschaft. Weitere gesicherte Angaben zu seinem bisherigen Lebenslauf liegen noch nicht vor.</p><p><strong>Seren Ffals</strong> · Seren gehört zur vierköpfigen Besetzung der Goldenen Fassung. Im Laden übernimmt sie Beratung, Warenpräsentation und Verkauf. Ihr genauer bisheriger Lebenslauf ist noch nicht ausgearbeitet.</p><p><strong>Rhun Ffals</strong> · Rhun arbeitet in der Goldenen Fassung als Juweliergehilfe. Auslage, kleine Handreichungen und Botengänge bilden seine vorgesehene Ladenrolle. Gesicherte Lebensdaten und weitere Stationen bleiben offen.</p><p><strong>Bryn Ffals</strong> · Bryn gehört zur Besetzung der Goldenen Fassung. Seine vorgesehene Rolle umfasst Warenannahme, Lager und Hilfsarbeiten in der Werkstatt. Eine abgeschlossene Goldschmiedeausbildung oder Meisterschaft ist damit nicht festgelegt.</p>",
+            "connectionsTitle": "Ladenrollen",
+            "connections": [
+              {
+                "name": "Alwyn Ffals",
+                "detail": "Inhaber · Einkauf und Geschäftsführung",
+                "image": "./assets/goldene-fassung/portraits/alwyn-ffals.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "name": "Seren Ffals",
+                "detail": "Verkauf · Beratung und Präsentation",
+                "image": "./assets/goldene-fassung/portraits/seren-ffals.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "name": "Rhun Ffals",
+                "detail": "Juweliergehilfe · Auslage und Botengänge",
+                "image": "./assets/goldene-fassung/portraits/rhun-ffals.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "name": "Bryn Ffals",
+                "detail": "Werkstattgehilfe · Lager und Warenannahme",
+                "image": "./assets/goldene-fassung/portraits/bryn-ffals.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "worksTitle": "Was bisher feststeht",
+            "works": [
+              "Vier benannte Figuren gehören zur Besetzung des Ladens.",
+              "Die Einträge sammeln die bekannten Ladenaufgaben. Weitere Lebensdaten werden bei späterer Ausarbeitung ergänzt."
+            ],
+            "footer": "Die Profile bleiben unter ihren bestehenden Figurenkennungen erreichbar."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hierarchie · Laden & Werkstatt",
+          "commentThreadKey": "goldene-fassung-hierarchie",
+          "hierarchyPage": true,
+          "image": "./assets/goldene-fassung/personal.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "hierarchy": {
+            "eyebrow": "Die goldene Fassung",
+            "organizationTitle": "Laden, Werkstatt & freie Stellen",
+            "centerLabel": "Die goldene Fassung",
+            "emblem": "./assets/goldene-fassung/schild.png",
+            "sideImage": "./assets/goldene-fassung/personal.png",
+            "motto": "Ein passendes Stück für den richtigen Anlass.",
+            "subtitle": "Vier Ladenrollen und einzeln vorgesehene Fachstellen",
+            "description": "<p>Alwyn führt das Geschäft, Seren betreut die Kundschaft, Rhun hilft im Laden und Bryn bei Warenannahme und Werkstatt. Weitere Fach- und Ausbildungsstellen können einzeln besetzt werden. Die freien Stellen sind keine bereits beschäftigten Personen.</p>",
+            "chartTitle": "Vom Einkauf bis zur Abholung",
+            "chartIntro": "Geschäftsführung, Ladendienst und handwerkliche Facharbeit bleiben als Aufgaben getrennt.",
+            "layoutMode": "vertical",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 125,
+            "cardFontScale": 95,
+            "details": [
+              {
+                "icon": "✦",
+                "label": "Standort",
+                "value": "Gwynthor-Stadt"
+              },
+              {
+                "icon": "◈",
+                "label": "Leitung",
+                "value": "Alwyn Ffals"
+              }
+            ],
+            "trees": [
+              {
+                "id": "leitung",
+                "label": "Leitung & Verkauf",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Geschäftsführung und Einkauf",
+                    "nodes": [
+                      {
+                        "id": "goldene-fassung-person-alwyn",
+                        "characterId": "h0Ifj6cWfP3jqwWmeJJy",
+                        "title": "Alwyn Ffals",
+                        "subtitle": "Inhaber · Einkauf und Geschäftsführung",
+                        "portrait": "./assets/goldene-fassung/portraits/alwyn-ffals.png",
+                        "text": "<p>Alwyn tritt in Gwynthor als Händler der Familie Ffals auf und führt Die goldene Fassung. Er betreut Einkauf, Geschäftskontakte und die Vereinbarungen mit der Kundschaft. Weitere gesicherte Angaben zu seinem bisherigen Lebenslauf liegen noch nicht vor.</p>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Beratung und Ladendienst",
+                    "nodes": [
+                      {
+                        "id": "goldene-fassung-person-seren",
+                        "characterId": "OACnmvvmPeyO95CNt2Cm",
+                        "title": "Seren Ffals",
+                        "subtitle": "Verkauf · Beratung und Präsentation",
+                        "portrait": "./assets/goldene-fassung/portraits/seren-ffals.png",
+                        "text": "<p>Seren gehört zur vierköpfigen Besetzung der Goldenen Fassung. Im Laden übernimmt sie Beratung, Warenpräsentation und Verkauf. Ihr genauer bisheriger Lebenslauf ist noch nicht ausgearbeitet.</p>"
+                      },
+                      {
+                        "id": "goldene-fassung-person-rhun",
+                        "characterId": "gj2lAsfeeqEpWvXumIma",
+                        "title": "Rhun Ffals",
+                        "subtitle": "Juweliergehilfe · Auslage und Botengänge",
+                        "portrait": "./assets/goldene-fassung/portraits/rhun-ffals.png",
+                        "text": "<p>Rhun arbeitet in der Goldenen Fassung als Juweliergehilfe. Auslage, kleine Handreichungen und Botengänge bilden seine vorgesehene Ladenrolle. Gesicherte Lebensdaten und weitere Stationen bleiben offen.</p>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Aufträge und Abholungen",
+                    "nodes": [
+                      {
+                        "id": "goldene-fassung-post-kontor",
+                        "title": "Kontorhilfe · Listen und Abholungen",
+                        "subtitle": "Unbesetzter Posten",
+                        "portrait": "",
+                        "text": "<p>Hält Warenannahme, vereinbarte Aufträge und Abholtermine übersichtlich fest.</p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "werkstatt",
+                "label": "Werkstatt & Lager",
+                "parentTreeId": "leitung",
+                "levels": [
+                  {
+                    "label": "Vorgesehene fachliche Verantwortung",
+                    "nodes": [
+                      {
+                        "id": "goldene-fassung-post-goldschmied",
+                        "title": "Goldschmiedemeister · Fachverantwortung",
+                        "subtitle": "Unbesetzter Posten",
+                        "portrait": "",
+                        "text": "<p>Prüft Edelmetallarbeiten und übernimmt anspruchsvollere Anfertigungen und Reparaturen.</p>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Steine und Metallarbeiten",
+                    "nodes": [
+                      {
+                        "id": "goldene-fassung-post-fasser",
+                        "title": "Edelsteinfasser · Besatz und Reparatur",
+                        "subtitle": "Unbesetzter Posten",
+                        "portrait": "",
+                        "text": "<p>Fasst geeignete Schmucksteine und prüft den Sitz bereits vorhandener Fassungen.</p>"
+                      },
+                      {
+                        "id": "goldene-fassung-post-geselle",
+                        "title": "Schmuckgeselle · Werkbank",
+                        "subtitle": "Unbesetzter Posten",
+                        "portrait": "",
+                        "text": "<p>Übernimmt gewöhnliche Metallarbeiten, Polieren und die Vorbereitung von Reparaturen.</p>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Warenannahme und Mithilfe",
+                    "nodes": [
+                      {
+                        "id": "goldene-fassung-person-bryn",
+                        "characterId": "QRUp1YQDmMr5uBvgx1aD",
+                        "title": "Bryn Ffals",
+                        "subtitle": "Werkstattgehilfe · Lager und Warenannahme",
+                        "portrait": "./assets/goldene-fassung/portraits/bryn-ffals.png",
+                        "text": "<p>Bryn gehört zur Besetzung der Goldenen Fassung. Seine vorgesehene Rolle umfasst Warenannahme, Lager und Hilfsarbeiten in der Werkstatt. Eine abgeschlossene Goldschmiedeausbildung oder Meisterschaft ist damit nicht festgelegt.</p>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Ausbildung",
+                    "nodes": [
+                      {
+                        "id": "goldene-fassung-post-lehrling",
+                        "title": "Juwelierlehrling · Ausbildung",
+                        "subtitle": "Unbesetzter Posten",
+                        "portrait": "",
+                        "text": "<p>Erlernt unter fachlicher Anleitung Werkzeugpflege und einfache Werkstattarbeiten.</p>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [
+              {
+                "label": "Geschäftsführung und Einkauf",
+                "nodes": [
+                  {
+                    "id": "goldene-fassung-person-alwyn",
+                    "characterId": "h0Ifj6cWfP3jqwWmeJJy",
+                    "title": "Alwyn Ffals",
+                    "subtitle": "Inhaber · Einkauf und Geschäftsführung",
+                    "portrait": "./assets/goldene-fassung/portraits/alwyn-ffals.png",
+                    "text": "<p>Alwyn tritt in Gwynthor als Händler der Familie Ffals auf und führt Die goldene Fassung. Er betreut Einkauf, Geschäftskontakte und die Vereinbarungen mit der Kundschaft. Weitere gesicherte Angaben zu seinem bisherigen Lebenslauf liegen noch nicht vor.</p>"
+                  }
+                ]
+              },
+              {
+                "label": "Beratung und Ladendienst",
+                "nodes": [
+                  {
+                    "id": "goldene-fassung-person-seren",
+                    "characterId": "OACnmvvmPeyO95CNt2Cm",
+                    "title": "Seren Ffals",
+                    "subtitle": "Verkauf · Beratung und Präsentation",
+                    "portrait": "./assets/goldene-fassung/portraits/seren-ffals.png",
+                    "text": "<p>Seren gehört zur vierköpfigen Besetzung der Goldenen Fassung. Im Laden übernimmt sie Beratung, Warenpräsentation und Verkauf. Ihr genauer bisheriger Lebenslauf ist noch nicht ausgearbeitet.</p>"
+                  },
+                  {
+                    "id": "goldene-fassung-person-rhun",
+                    "characterId": "gj2lAsfeeqEpWvXumIma",
+                    "title": "Rhun Ffals",
+                    "subtitle": "Juweliergehilfe · Auslage und Botengänge",
+                    "portrait": "./assets/goldene-fassung/portraits/rhun-ffals.png",
+                    "text": "<p>Rhun arbeitet in der Goldenen Fassung als Juweliergehilfe. Auslage, kleine Handreichungen und Botengänge bilden seine vorgesehene Ladenrolle. Gesicherte Lebensdaten und weitere Stationen bleiben offen.</p>"
+                  }
+                ]
+              },
+              {
+                "label": "Aufträge und Abholungen",
+                "nodes": [
+                  {
+                    "id": "goldene-fassung-post-kontor",
+                    "title": "Kontorhilfe · Listen und Abholungen",
+                    "subtitle": "Unbesetzter Posten",
+                    "portrait": "",
+                    "text": "<p>Hält Warenannahme, vereinbarte Aufträge und Abholtermine übersichtlich fest.</p>"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Sortiment · Juwelier",
+          "commentThreadKey": "goldene-fassung-juwelier",
+          "tradeCatalogPage": true,
+          "tradeCatalog": {
+            "title": "Sortiment · Die goldene Fassung",
+            "subtitle": "Zwanzig klassische Schmuckstücke · schlicht bis gut",
+            "headerIcon": "./assets/goldene-fassung/schild.png",
+            "categories": [
+              {
+                "id": "schmuck",
+                "label": "Ringe, Ketten & Zierstücke"
+              }
+            ],
+            "allLabel": "Das ganze Sortiment",
+            "searchPlaceholder": "Stück, Material oder Verwendung suchen …",
+            "noteIcon": "◈",
+            "noteTitle": "Ein gutes Stück ohne höfischen Prunk",
+            "noteText": "Kleine Edelsteine, Silber, Bronze und wenige schmale Goldarbeiten bestimmen das Angebot. Es ist ein gut gehendes Bürgergeschäft mit begrenztem Preisrahmen.",
+            "items": [
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "16",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-silberbandring",
+                "category": "schmuck",
+                "title": "Silberbandring",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/silberbandring.png",
+                "unit": "1 Stück",
+                "description": "<p>Ein schlichter, sorgfältig polierter Silberring ohne Stein. Ein solides Geschenk und ein unaufdringliches Alltagsstück.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "90",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-schmaler-goldring",
+                "category": "schmuck",
+                "title": "Schmaler Goldring",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/schmaler-goldring.png",
+                "unit": "1 Stück",
+                "description": "<p>Ein leichter, schmaler Goldring mit glatter Oberfläche. Zurückhaltend gearbeitet, ohne kostspieligen Edelstein.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "48",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-granat-silberring",
+                "category": "schmuck",
+                "title": "Granat-Silberring",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/granat-silberring.png",
+                "unit": "1 Stück",
+                "description": "<p>Ein kleiner dunkelroter Granat in einer einfachen Silberfassung. Der Stein ist hübsch, sein Schliff bewusst bescheiden.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "8",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-kupferring-glas",
+                "category": "schmuck",
+                "title": "Kupferring mit Glasstein",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/kupferring-glas.png",
+                "unit": "1 Stück",
+                "description": "<p>Ein warmer Kupferreif mit einem kleinen blauen Glasstein. Hübscher Alltagsschmuck, ausdrücklich kein Saphir.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "18",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-messing-siegelring",
+                "category": "schmuck",
+                "title": "Blanker Messingsiegelring",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/messing-siegelring.png",
+                "unit": "1 Stück",
+                "description": "<p>Ein Messingsiegelring mit noch ungravierter Platte. Eine spätere persönliche Gravur ist gesonderte Handarbeit.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "24",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-bergkristall-anhaenger",
+                "category": "schmuck",
+                "title": "Bergkristallanhänger",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/bergkristall-anhaenger.png",
+                "unit": "1 Stück",
+                "description": "<p>Ein kleiner klarer Bergkristall an einer schlichten Silberöse und einer kurzen Leinenkordel. Ohne Verzauberung.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "22",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-bernstein-anhaenger",
+                "category": "schmuck",
+                "title": "Bernsteinanhänger",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/bernstein-anhaenger.png",
+                "unit": "1 Stück",
+                "description": "<p>Ein honigfarbener Bernstein in einer einfachen Bronzefassung, getragen an einer dunklen Kordel.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "28",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-perlmutt-medaillon",
+                "category": "schmuck",
+                "title": "Perlmuttmedaillon",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/perlmutt-medaillon.png",
+                "unit": "1 Stück",
+                "description": "<p>Ein kleines rundes Medaillon mit matter Perlmuttauflage und einem schlichten Messingrand.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "36",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-schlichte-silberkette",
+                "category": "schmuck",
+                "title": "Schlichte Silberkette",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/schlichte-silberkette.png",
+                "unit": "1 Stück",
+                "description": "<p>Eine feine Silberkette aus kleinen gleichmäßigen Gliedern. Ohne Anhänger und ohne aufwendige Zierarbeit.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "12",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-bronze-gewandfibel",
+                "category": "schmuck",
+                "title": "Bronzene Gewandfibel",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/bronze-gewandfibel.png",
+                "unit": "1 Stück",
+                "description": "<p>Eine ringförmige bronzene Gewandfibel mit kräftigem Dorn. Ein praktischer Verschluss mit schlichter Zierkerbe.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "26",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-silber-haarspange",
+                "category": "schmuck",
+                "title": "Silberne Haarspange",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/silber-haarspange.png",
+                "unit": "1 Stück",
+                "description": "<p>Eine kleine Haarspange aus Silber, mit einer flachen Blattlinie verziert. Für Marktbesuch und Feiertag gleichermaßen.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "14",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-messing-armreif",
+                "category": "schmuck",
+                "title": "Messingarmreif",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/messing-armreif.png",
+                "unit": "1 Stück",
+                "description": "<p>Ein offener Messingarmreif mit glatt gerundeten Enden. Robuste Handarbeit für den täglichen Gebrauch.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "44",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-silber-gliederarmband",
+                "category": "schmuck",
+                "title": "Silbernes Gliederarmband",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/silber-gliederarmband.png",
+                "unit": "1 Stück",
+                "description": "<p>Ein schmales Armband aus kräftigen Silbergliedern mit Hakenverschluss. Solide statt prunkvoll.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "32",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-suesswasserperlen-ohrringe",
+                "category": "schmuck",
+                "title": "Süßwasserperlenohrringe",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/suesswasserperlen-ohrringe.png",
+                "unit": "1 Paar",
+                "description": "<p>Zwei kleine, leicht unregelmäßige Süßwasserperlen an schlichten Silberhaken. Kein vollkommen gleichförmiger Hofschmuck.</p>",
+                "features": [
+                  "1 Paar"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "24",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-karneol-ohrringe",
+                "category": "schmuck",
+                "title": "Karneolohrringe",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/karneol-ohrringe.png",
+                "unit": "1 Paar",
+                "description": "<p>Zwei kleine orangebraune Karneoltropfen an einfachen Bronzehaken. Warme Farbe ohne aufwendige Fassung.</p>",
+                "features": [
+                  "1 Paar"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "38",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-silber-eheringpaar",
+                "category": "schmuck",
+                "title": "Silbernes Eheringpaar",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/silber-eheringpaar.png",
+                "unit": "1 Paar",
+                "description": "<p>Zwei schlichte Silberringe mit leicht gerundeter Oberfläche. Als Paar angeboten, ohne Gravur.</p>",
+                "features": [
+                  "1 Paar"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "54",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-amethyst-brosche",
+                "category": "schmuck",
+                "title": "Kleine Amethystbrosche",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/amethyst-brosche.png",
+                "unit": "1 Stück",
+                "description": "<p>Eine kleine Brosche mit einem handelsüblichen Amethyst und vier schlichten Silberkrappen. Ohne magische Wirkung.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "34",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-vergoldete-bronzekette",
+                "category": "schmuck",
+                "title": "Vergoldete Bronzekette",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/vergoldete-bronzekette.png",
+                "unit": "1 Stück",
+                "description": "<p>Eine schmale Bronzekette mit dünner Vergoldung. Freundlicher Goldglanz zu einem überschaubaren Preis.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "12",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-bronze-guertelschnalle",
+                "category": "schmuck",
+                "title": "Bronzene Gürtelschnalle",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/bronze-guertelschnalle.png",
+                "unit": "1 Stück",
+                "description": "<p>Eine kleine bronzene Gürtelschnalle mit einfacher Knotenzier. Der Ledergürtel ist nicht enthalten.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "20",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-onyx-reversnadel",
+                "category": "schmuck",
+                "title": "Onyx-Reversnadel",
+                "subtitle": "Bürgerlicher Schmuck · unverzaubert",
+                "badge": "Schlicht bis gut",
+                "image": "./assets/goldene-fassung/items/onyx-reversnadel.png",
+                "unit": "1 Stück",
+                "description": "<p>Eine schmale bronzene Gewandnadel mit einem kleinen schwarzen Onyxkopf. Dezenter Schmuck für Kragen oder Mantel.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Schmuck",
+                  "Unverzaubert"
+                ],
+                "origin": "Gewöhnliche Handels- und Werkstattware. Material und Besatz entsprechen der beschriebenen Ausführung.",
+                "usageTags": [
+                  "Schmuck und kleine Geschenke"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Ohne Verzauberung. Ringweite, Verschluss und Material werden vor der Übergabe geprüft. Nicht genannte Anpassungen werden gesondert vereinbart."
+              }
+            ],
+            "footerCards": []
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Sortiment · Hehler",
+          "commentThreadKey": "goldene-fassung-hehler",
+          "tradeCatalogPage": true,
+          "tradeCatalog": {
+            "title": "Hehler · Hinter dem Ladentisch",
+            "subtitle": "Zehn wechselnde Gebrauchtwaren und eine kleine Schwarzmarktauswahl",
+            "headerIcon": "./assets/goldene-fassung/schild.png",
+            "categories": [
+              {
+                "id": "wechselware",
+                "label": "Wechselnde Gebrauchtware"
+              },
+              {
+                "id": "schwarzmarkt",
+                "label": "Aus dem Schwarzmarkt"
+              }
+            ],
+            "allLabel": "Das ganze Sortiment",
+            "searchPlaceholder": "Stück, Material oder Verwendung suchen …",
+            "noteIcon": "◈",
+            "noteTitle": "Keine gewöhnliche Auslage",
+            "noteText": "Diese Auswahl gehört zu gesonderten Geschäften. Gebrauchtstücke wechseln, besondere Ware wird erst nach bestätigter Beschaffung zugesagt. Mächtige Artefakte und legendäre Raritäten gehören nicht zu diesem Angebot.",
+            "items": [
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "5",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-gebrauchter-guertelbeutel",
+                "category": "wechselware",
+                "title": "Gebrauchter Gürtelbeutel",
+                "subtitle": "Wechselnde Gebrauchtware",
+                "badge": "Einzelne Fund- und Gebrauchtstücke",
+                "image": "./assets/goldene-fassung/items/gebrauchter-guertelbeutel.png",
+                "unit": "1 Stück",
+                "description": "<p>Ein kleiner gebrauchter Lederbeutel mit Kordelzug. Leer angeboten; die Herkunft ist nicht näher belegt.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Gebrauchtware",
+                  "Unverzaubert"
+                ],
+                "origin": "Wechselnde Ankäufe; genauer Vorbesitz und Zustand werden für das vorgelegte Stück geklärt.",
+                "usageTags": [
+                  "Gebrauchsgegenstand"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Nach tatsächlichem Bestand und Zustand. Kein Anspruch auf ein bestimmtes früheres Eigentumsstück; die Katalogware ist kein kanonisches Unikat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "3",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-gebrauchter-holzkamm",
+                "category": "wechselware",
+                "title": "Gebrauchter Holzkamm",
+                "subtitle": "Wechselnde Gebrauchtware",
+                "badge": "Einzelne Fund- und Gebrauchtstücke",
+                "image": "./assets/goldene-fassung/items/gebrauchter-holzkamm.png",
+                "unit": "1 Stück",
+                "description": "<p>Ein schlichter geschnitzter Holzkamm. Ein unscheinbares Stück aus dem wechselnden Ankauf.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Gebrauchtware",
+                  "Unverzaubert"
+                ],
+                "origin": "Wechselnde Ankäufe; genauer Vorbesitz und Zustand werden für das vorgelegte Stück geklärt.",
+                "usageTags": [
+                  "Gebrauchsgegenstand"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Nach tatsächlichem Bestand und Zustand. Kein Anspruch auf ein bestimmtes früheres Eigentumsstück; die Katalogware ist kein kanonisches Unikat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "4",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-kleine-holzfigur",
+                "category": "wechselware",
+                "title": "Kleine Holzfigur",
+                "subtitle": "Wechselnde Gebrauchtware",
+                "badge": "Einzelne Fund- und Gebrauchtstücke",
+                "image": "./assets/goldene-fassung/items/kleine-holzfigur.png",
+                "unit": "1 Stück",
+                "description": "<p>Eine kleine geschnitzte, verhüllte Gestalt aus Holz. Ihre frühere Verwendung und Herkunft sind offen.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Gebrauchtware",
+                  "Unverzaubert"
+                ],
+                "origin": "Wechselnde Ankäufe; genauer Vorbesitz und Zustand werden für das vorgelegte Stück geklärt.",
+                "usageTags": [
+                  "Gebrauchsgegenstand"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Nach tatsächlichem Bestand und Zustand. Kein Anspruch auf ein bestimmtes früheres Eigentumsstück; die Katalogware ist kein kanonisches Unikat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "12",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-schnallenkaestchen",
+                "category": "wechselware",
+                "title": "Schnallenkästchen",
+                "subtitle": "Wechselnde Gebrauchtware",
+                "badge": "Einzelne Fund- und Gebrauchtstücke",
+                "image": "./assets/goldene-fassung/items/schnallenkaestchen.png",
+                "unit": "1 Kästchen",
+                "description": "<p>Ein kleines Holzkästchen mit verschiedenen gebrauchten Schnallen und Beschlagteilen. Als gemischte Partie angeboten.</p>",
+                "features": [
+                  "1 Kästchen"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Gebrauchtware",
+                  "Unverzaubert"
+                ],
+                "origin": "Wechselnde Ankäufe; genauer Vorbesitz und Zustand werden für das vorgelegte Stück geklärt.",
+                "usageTags": [
+                  "Gebrauchsgegenstand"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Nach tatsächlichem Bestand und Zustand. Kein Anspruch auf ein bestimmtes früheres Eigentumsstück; die Katalogware ist kein kanonisches Unikat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "10",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-altes-schreibbesteck",
+                "category": "wechselware",
+                "title": "Altes Schreibbesteck",
+                "subtitle": "Wechselnde Gebrauchtware",
+                "badge": "Einzelne Fund- und Gebrauchtstücke",
+                "image": "./assets/goldene-fassung/items/altes-schreibbesteck.png",
+                "unit": "1 Satz",
+                "description": "<p>Eine gebrauchte Schreibfeder mit kleiner Tintenflasche. Keine Papiere, Namen oder Siegel enthalten.</p>",
+                "features": [
+                  "1 Satz"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Gebrauchtware",
+                  "Unverzaubert"
+                ],
+                "origin": "Wechselnde Ankäufe; genauer Vorbesitz und Zustand werden für das vorgelegte Stück geklärt.",
+                "usageTags": [
+                  "Gebrauchsgegenstand"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Nach tatsächlichem Bestand und Zustand. Kein Anspruch auf ein bestimmtes früheres Eigentumsstück; die Katalogware ist kein kanonisches Unikat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "14",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-kleiner-handspiegel",
+                "category": "wechselware",
+                "title": "Kleiner Handspiegel",
+                "subtitle": "Wechselnde Gebrauchtware",
+                "badge": "Einzelne Fund- und Gebrauchtstücke",
+                "image": "./assets/goldene-fassung/items/kleiner-handspiegel.png",
+                "unit": "1 Stück",
+                "description": "<p>Ein kleiner Handspiegel mit schlichtem Messingrahmen. Ein brauchbares Alltagsstück aus dem Ankauf.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Gebrauchtware",
+                  "Unverzaubert"
+                ],
+                "origin": "Wechselnde Ankäufe; genauer Vorbesitz und Zustand werden für das vorgelegte Stück geklärt.",
+                "usageTags": [
+                  "Gebrauchsgegenstand"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Nach tatsächlichem Bestand und Zustand. Kein Anspruch auf ein bestimmtes früheres Eigentumsstück; die Katalogware ist kein kanonisches Unikat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "5",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-holzspielwuerfel",
+                "category": "wechselware",
+                "title": "Holzspielwürfel",
+                "subtitle": "Wechselnde Gebrauchtware",
+                "badge": "Einzelne Fund- und Gebrauchtstücke",
+                "image": "./assets/goldene-fassung/items/holzspielwuerfel.png",
+                "unit": "1 Satz · drei Würfel",
+                "description": "<p>Drei schlichte hölzerne Spielwürfel. Eine Manipulation wird damit nicht zugesichert.</p>",
+                "features": [
+                  "1 Satz · drei Würfel"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Gebrauchtware",
+                  "Unverzaubert"
+                ],
+                "origin": "Wechselnde Ankäufe; genauer Vorbesitz und Zustand werden für das vorgelegte Stück geklärt.",
+                "usageTags": [
+                  "Gebrauchsgegenstand"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Nach tatsächlichem Bestand und Zustand. Kein Anspruch auf ein bestimmtes früheres Eigentumsstück; die Katalogware ist kein kanonisches Unikat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "24",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-gebrauchte-balkenwaage",
+                "category": "wechselware",
+                "title": "Gebrauchte Balkenwaage",
+                "subtitle": "Wechselnde Gebrauchtware",
+                "badge": "Einzelne Fund- und Gebrauchtstücke",
+                "image": "./assets/goldene-fassung/items/gebrauchte-balkenwaage.png",
+                "unit": "1 Satz",
+                "description": "<p>Eine kleine Balkenwaage mit Gewichten. Vor verbindlichen Wägungen sind Gewichte und Gleichlauf zu prüfen.</p>",
+                "features": [
+                  "1 Satz"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Gebrauchtware",
+                  "Unverzaubert"
+                ],
+                "origin": "Wechselnde Ankäufe; genauer Vorbesitz und Zustand werden für das vorgelegte Stück geklärt.",
+                "usageTags": [
+                  "Gebrauchsgegenstand"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Nach tatsächlichem Bestand und Zustand. Kein Anspruch auf ein bestimmtes früheres Eigentumsstück; die Katalogware ist kein kanonisches Unikat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "12",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-gebrauchte-schriftroehre",
+                "category": "wechselware",
+                "title": "Gebrauchte Schriftröhre",
+                "subtitle": "Wechselnde Gebrauchtware",
+                "badge": "Einzelne Fund- und Gebrauchtstücke",
+                "image": "./assets/goldene-fassung/items/gebrauchte-schriftroehre.png",
+                "unit": "1 Stück",
+                "description": "<p>Eine leere lederne Schriftröhre mit abnehmbarem Deckel und Trageriemen. Es werden keine Dokumente mitverkauft.</p>",
+                "features": [
+                  "1 Stück"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Gebrauchtware",
+                  "Unverzaubert"
+                ],
+                "origin": "Wechselnde Ankäufe; genauer Vorbesitz und Zustand werden für das vorgelegte Stück geklärt.",
+                "usageTags": [
+                  "Gebrauchsgegenstand"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Nach tatsächlichem Bestand und Zustand. Kein Anspruch auf ein bestimmtes früheres Eigentumsstück; die Katalogware ist kein kanonisches Unikat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "9",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-gewuerzdose-reste",
+                "category": "wechselware",
+                "title": "Gewürzdose mit Resten",
+                "subtitle": "Wechselnde Gebrauchtware",
+                "badge": "Einzelne Fund- und Gebrauchtstücke",
+                "image": "./assets/goldene-fassung/items/gewuerzdose-reste.png",
+                "unit": "1 Dose",
+                "description": "<p>Eine kleine unterteilte Metalldose mit Gewürzresten. Sorte, Frische und ursprünglicher Besitzer sind nicht belegt.</p>",
+                "features": [
+                  "1 Dose"
+                ],
+                "attributes": [],
+                "tags": [
+                  "Gebrauchtware",
+                  "Unverzaubert"
+                ],
+                "origin": "Wechselnde Ankäufe; genauer Vorbesitz und Zustand werden für das vorgelegte Stück geklärt.",
+                "usageTags": [
+                  "Gebrauchsgegenstand"
+                ],
+                "priceNote": "Preis für den ausdrücklich beschriebenen Lieferumfang.",
+                "conditions": "Nach tatsächlichem Bestand und Zustand. Kein Anspruch auf ein bestimmtes früheres Eigentumsstück; die Katalogware ist kein kanonisches Unikat."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "20",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-schwarzmarkt-blutstaub",
+                "canonicalKey": "standard:schwarzmarkt:blutstaub",
+                "category": "schwarzmarkt",
+                "title": "Blutstaub (Schale)",
+                "subtitle": "Aus dem bestehenden Schwarzmarktsortiment",
+                "unit": "Schale",
+                "image": "./assets/goldene-fassung/blackmarket/blutstaub.png",
+                "attributes": [
+                  {
+                    "label": "Gefahr",
+                    "value": 6
+                  },
+                  {
+                    "label": "Verbot",
+                    "value": 7
+                  },
+                  {
+                    "label": "Magie",
+                    "value": 2
+                  },
+                  {
+                    "label": "Nutzen",
+                    "value": 5
+                  },
+                  {
+                    "label": "Seltenheit",
+                    "value": 6
+                  },
+                  {
+                    "label": "Risiko",
+                    "value": 8
+                  }
+                ],
+                "tags": [
+                  "Wachheit",
+                  "Adrenalin",
+                  "Abhängigkeit"
+                ],
+                "features": [
+                  "Schale"
+                ],
+                "description": "<p>Blutstaub ist eine billige Droge, die wach macht und die Konzentration steigert. Langfristig zerstört sie Organe und Seele.</p>",
+                "badge": "Nur auf gesonderte Nachfrage",
+                "origin": "Bestehender Schwarzmarktkatalog; Preis, Menge und Eigenschaften folgen der kanonischen Ware.",
+                "usageTags": [
+                  "Wachheit",
+                  "Adrenalin",
+                  "Abhängigkeit"
+                ],
+                "priceNote": "Unveränderter Standardpreis für die angegebene Menge.",
+                "conditions": "Rauschmittel mit den im Standardgut beschriebenen Risiken und Folgen. Keine gewöhnliche Juwelierware; nur bei tatsächlicher Beschaffung."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "200",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-schwarzmarkt-kriss",
+                "canonicalKey": "standard:schwarzmarkt:kriss",
+                "category": "schwarzmarkt",
+                "title": "Kriss (Phiole)",
+                "subtitle": "Aus dem bestehenden Schwarzmarktsortiment",
+                "unit": "Phiole",
+                "image": "./assets/goldene-fassung/blackmarket/kriss.png",
+                "attributes": [
+                  {
+                    "label": "Gefahr",
+                    "value": 8
+                  },
+                  {
+                    "label": "Verbot",
+                    "value": 9
+                  },
+                  {
+                    "label": "Magie",
+                    "value": 8
+                  },
+                  {
+                    "label": "Nutzen",
+                    "value": 6
+                  },
+                  {
+                    "label": "Seltenheit",
+                    "value": 7
+                  },
+                  {
+                    "label": "Risiko",
+                    "value": 9
+                  }
+                ],
+                "tags": [
+                  "Traumkorn",
+                  "Diebesgilde",
+                  "Sucht"
+                ],
+                "features": [
+                  "Phiole"
+                ],
+                "description": "<p>Kriss ist ein sirupartiges Rauschmittel aus Traumkorn. Es schärft Wahrnehmung und Reflexe, ist stark süchtig und nur illegal erhältlich.</p>",
+                "badge": "Nur auf gesonderte Nachfrage",
+                "origin": "Bestehender Schwarzmarktkatalog; Preis, Menge und Eigenschaften folgen der kanonischen Ware.",
+                "usageTags": [
+                  "Traumkorn",
+                  "Diebesgilde",
+                  "Sucht"
+                ],
+                "priceNote": "Unveränderter Standardpreis für die angegebene Menge.",
+                "conditions": "Rauschmittel mit den im Standardgut beschriebenen Risiken und Folgen. Keine gewöhnliche Juwelierware; nur bei tatsächlicher Beschaffung."
+              },
+              {
+                "status": "available",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageFormat": "square",
+                "imageHeight": 280,
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Lieferumfang",
+                "originTitle": "Material & Herkunft",
+                "usageTitle": "Verwendung",
+                "priceTitle": "Preis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "priceMin": "50",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "goldene-fassung-schwarzmarkt-traumkorn",
+                "canonicalKey": "standard:schwarzmarkt:traumkorn",
+                "category": "schwarzmarkt",
+                "title": "Traumkorn (Beutel)",
+                "subtitle": "Aus dem bestehenden Schwarzmarktsortiment",
+                "unit": "Beutel",
+                "image": "./assets/goldene-fassung/blackmarket/traumkorn.png",
+                "attributes": [
+                  {
+                    "label": "Gefahr",
+                    "value": 7
+                  },
+                  {
+                    "label": "Verbot",
+                    "value": 8
+                  },
+                  {
+                    "label": "Magie",
+                    "value": 8
+                  },
+                  {
+                    "label": "Nutzen",
+                    "value": 6
+                  },
+                  {
+                    "label": "Seltenheit",
+                    "value": 8
+                  },
+                  {
+                    "label": "Risiko",
+                    "value": 8
+                  }
+                ],
+                "tags": [
+                  "Rohform",
+                  "Kriss",
+                  "Magicka"
+                ],
+                "features": [
+                  "Beutel"
+                ],
+                "description": "<p>Traumkorn ist die rohe Kristallform von Kriss. Es ist legal, aber streng reguliert und liefert Rohmagie für gefährliche Mixturen.</p>",
+                "badge": "Nur auf gesonderte Nachfrage",
+                "origin": "Bestehender Schwarzmarktkatalog; Preis, Menge und Eigenschaften folgen der kanonischen Ware.",
+                "usageTags": [
+                  "Rohform",
+                  "Kriss",
+                  "Magicka"
+                ],
+                "priceNote": "Unveränderter Standardpreis für die angegebene Menge.",
+                "conditions": "Streng reguliertes Rohmaterial. Die vorhandenen Beschaffungs- und Verwendungsbedingungen gelten unverändert."
+              }
+            ],
+            "footerCards": []
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Der Verkaufsraum",
+          "commentThreadKey": "goldene-fassung-verkaufsraum",
+          "sessionPage": true,
+          "image": "./assets/goldene-fassung/verkaufsraum.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionIntro": "Auf dunklem Holz liegen kleine Ringe, Fibeln und Anhänger auf weinrotem Tuch. Hinter dem Tresen stehen niedrige Schränke. Die Auslage lässt Raum für ein Gespräch über Material, Ringweite und den Anlass eines Geschenks.",
+          "sessionHint": "Beratung, Ankauf, Bestellung oder die Abholung einer kleinen Arbeit beginnen am Tresen.",
+          "sessionEmptyTitle": "Der Verkaufsraum",
+          "sessionEmptyText": "Der Ort ist bereit für die nächste Szene.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Werkstatt",
+          "commentThreadKey": "goldene-fassung-werkstatt",
+          "sessionPage": true,
+          "image": "./assets/goldene-fassung/werkstatt.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionIntro": "Hinter dem Ladendienst liegen Werkbänke, eine kleine Esse und Schubladen für Werkzeug und Beschläge. Tageslicht fällt auf den Platz für feine Arbeiten. Aufträge und Reparaturstücke werden getrennt von den Vorräten abgelegt.",
+          "sessionHint": "Eine Begutachtung oder ein Werkstattgespräch kann hier ausgespielt werden. Anspruchsvolle Arbeiten benötigen eine entsprechend fachkundige Person.",
+          "sessionEmptyTitle": "Die Werkstatt",
+          "sessionEmptyText": "Der Ort ist bereit für die nächste Szene.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Der Keller",
+          "commentThreadKey": "goldene-fassung-keller",
+          "sessionPage": true,
+          "image": "./assets/goldene-fassung/keller.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionIntro": "Eine schmale Treppe führt unter den Laden. Zwischen kühlen Steinwänden stehen Kisten und schlichte Vorratsregale; eine feste innere Tür trennt einen kleinen Nebenraum ab. Von der geschäftigen Straße dringt hier nur wenig herein.",
+          "sessionHint": "Der Keller ist ein eigener Szenenort. Was hinter einer verschlossenen Tür liegt, ergibt sich aus dem jeweiligen Spielverlauf.",
+          "sessionEmptyTitle": "Der Keller",
+          "sessionEmptyText": "Der Ort ist bereit für die nächste Szene.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Wohnstube über dem Juwelier",
+          "commentThreadKey": "goldene-fassung-wohnstube",
+          "sessionPage": true,
+          "image": "./assets/goldene-fassung/wohnstube.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionIntro": "Über dem Geschäft liegt eine gemeinsame Wohnstube mit Holztisch, vier Stühlen und einer einfachen Feuerstelle. Ein paar Kissen, ein Geschirrschrank und Vorhänge machen den Raum wohnlich. Die Treppe verbindet den Alltag oben mit dem Laden darunter.",
+          "sessionHint": "Ein gemeinsames Essen, ein ruhiges Gespräch oder die Planung des nächsten Tages finden hier Platz.",
+          "sessionEmptyTitle": "Die Wohnstube über dem Juwelier",
+          "sessionEmptyText": "Der Ort ist bereit für die nächste Szene.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Kalkulation · Einnahmen und Lebensunterhalt",
+          "commentThreadKey": "wirtschaft-kalkulation",
+          "economyCalculationPage": true,
+          "enableComments": false,
+          "economyCalculation": {
+            "scenario": {
+              "id": "die-goldene-fassung",
+              "title": "Die goldene Fassung · Juwelierbetrieb",
+              "tier": "Gut gehendes bürgerliches Fachgeschäft",
+              "contextId": "gwynthor",
+              "introduction": "Vorläufige Modellrechnung des gewöhnlichen Juweliergeschäfts. Sechs Öffnungstage je Neuntagewoche; Absatz, Kosten und Vergütung sind veränderbare Ansätze. Unbekannte Vermögenswerte bleiben offen.",
+              "assumptions": [
+                "Warenpreise stammen aus den zwanzig gewöhnlichen Schmuckangeboten. Pro Stück sind durchschnittlich 0,8 Verkäufe je Neuntagewoche angesetzt; dies sind keine gebuchten Verkäufe.",
+                "55 % Wareneinsatz und 2 % gewöhnlicher Schwund sind offene Ansätze. Gewöhnliche Zukäufe und eingekaufte Handwerksarbeit sind im Wareneinsatz enthalten.",
+                "Die vier benannten Ladenrollen werden einmal berücksichtigt. Unbesetzte Fachstellen verursachen keinen Lohn; ihre Besetzung muss im Szenario gesondert ergänzt werden.",
+                "Modelllöhne folgen den vorhandenen Rollenansätzen. Daraus entstehen keine Arbeitsverträge, Meisterqualifikationen oder privaten Eigentumsanteile.",
+                "Die wechselnde Hehler- und Schwarzmarktauswahl wird ohne belegten Umsatz mit null Einnahmen angesetzt und nicht als sichere Finanzierung des Ladens verwendet.",
+                "Pacht, laufende Kosten, Rücklage, Haushaltsentnahme und 2 % Betriebsabgabe sind veränderbare Modellannahmen. Eigentümer, Schulden und Immobilienwert sind nicht belegt.",
+                "Die Rechnung verändert keine Spielkassen, Inventare oder Online-Bestände. Sie verwendet den gemeinsamen Kalender mit neun Tagen je Woche."
+              ],
+              "seats": 0,
+              "turns": 1,
+              "occupancy": 0.5,
+              "openDays": 6,
+              "workers": [
+                {
+                  "id": "person-alwyn-ffals",
+                  "label": "",
+                  "note": "Lohnansatz für diese Rolle; Kost und einfacher Schlafplatz nur für die Person. Keine Lohnableitung aus Geschlecht oder Herkunft.",
+                  "source": "Aktuelle Hierarchie · Die goldene Fassung · Leitung & Verkauf",
+                  "name": "Alwyn Ffals",
+                  "role": "Inhaber · Einkauf und Geschäftsführung",
+                  "areas": [
+                    "Leitung & Verkauf"
+                  ],
+                  "kind": "owner",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 0,
+                  "boardDays": 0,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 0,
+                  "fairDaily": 9,
+                  "ownerShare": 1,
+                  "anonymous": false,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "person-seren-ffals",
+                  "label": "",
+                  "note": "Lohnansatz für diese Rolle; Kost und einfacher Schlafplatz nur für die Person. Keine Lohnableitung aus Geschlecht oder Herkunft.",
+                  "source": "Aktuelle Hierarchie · Die goldene Fassung · Leitung & Verkauf",
+                  "name": "Seren Ffals",
+                  "role": "Verkauf · Beratung und Präsentation",
+                  "areas": [
+                    "Leitung & Verkauf"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": false,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "person-rhun-ffals",
+                  "label": "",
+                  "note": "Lohnansatz für diese Rolle; Kost und einfacher Schlafplatz nur für die Person. Keine Lohnableitung aus Geschlecht oder Herkunft.",
+                  "source": "Aktuelle Hierarchie · Die goldene Fassung · Leitung & Verkauf",
+                  "name": "Rhun Ffals",
+                  "role": "Juweliergehilfe · Auslage und Botengänge",
+                  "areas": [
+                    "Leitung & Verkauf"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": false,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "position-goldene-fassung-post-kontor",
+                  "label": "",
+                  "note": "Lohnansatz für diese Rolle; Kost und einfacher Schlafplatz nur für die Person. Keine Lohnableitung aus Geschlecht oder Herkunft.",
+                  "source": "Aktuelle Hierarchie · Die goldene Fassung · Leitung & Verkauf",
+                  "name": "Kontorhilfe · Listen und Abholungen",
+                  "role": "Unbesetzter Posten",
+                  "areas": [
+                    "Leitung & Verkauf"
+                  ],
+                  "kind": "vacancy",
+                  "count": 1,
+                  "days": 0,
+                  "dailyCash": 0,
+                  "boardDays": 0,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 0,
+                  "fairDaily": 0,
+                  "ownerShare": 0,
+                  "anonymous": false,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "position-goldene-fassung-post-goldschmied",
+                  "label": "",
+                  "note": "Lohnansatz für diese Rolle; Kost und einfacher Schlafplatz nur für die Person. Keine Lohnableitung aus Geschlecht oder Herkunft.",
+                  "source": "Aktuelle Hierarchie · Die goldene Fassung · Werkstatt & Lager",
+                  "name": "Goldschmiedemeister · Fachverantwortung",
+                  "role": "Unbesetzter Posten",
+                  "areas": [
+                    "Werkstatt & Lager"
+                  ],
+                  "kind": "vacancy",
+                  "count": 1,
+                  "days": 0,
+                  "dailyCash": 0,
+                  "boardDays": 0,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 0,
+                  "fairDaily": 0,
+                  "ownerShare": 0,
+                  "anonymous": false,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "position-goldene-fassung-post-fasser",
+                  "label": "",
+                  "note": "Lohnansatz für diese Rolle; Kost und einfacher Schlafplatz nur für die Person. Keine Lohnableitung aus Geschlecht oder Herkunft.",
+                  "source": "Aktuelle Hierarchie · Die goldene Fassung · Werkstatt & Lager",
+                  "name": "Edelsteinfasser · Besatz und Reparatur",
+                  "role": "Unbesetzter Posten",
+                  "areas": [
+                    "Werkstatt & Lager"
+                  ],
+                  "kind": "vacancy",
+                  "count": 1,
+                  "days": 0,
+                  "dailyCash": 0,
+                  "boardDays": 0,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 0,
+                  "fairDaily": 0,
+                  "ownerShare": 0,
+                  "anonymous": false,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "position-goldene-fassung-post-geselle",
+                  "label": "",
+                  "note": "Lohnansatz für diese Rolle; Kost und einfacher Schlafplatz nur für die Person. Keine Lohnableitung aus Geschlecht oder Herkunft.",
+                  "source": "Aktuelle Hierarchie · Die goldene Fassung · Werkstatt & Lager",
+                  "name": "Schmuckgeselle · Werkbank",
+                  "role": "Unbesetzter Posten",
+                  "areas": [
+                    "Werkstatt & Lager"
+                  ],
+                  "kind": "vacancy",
+                  "count": 1,
+                  "days": 0,
+                  "dailyCash": 0,
+                  "boardDays": 0,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 0,
+                  "fairDaily": 0,
+                  "ownerShare": 0,
+                  "anonymous": false,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "person-bryn-ffals",
+                  "label": "",
+                  "note": "Lohnansatz für diese Rolle; Kost und einfacher Schlafplatz nur für die Person. Keine Lohnableitung aus Geschlecht oder Herkunft.",
+                  "source": "Aktuelle Hierarchie · Die goldene Fassung · Werkstatt & Lager",
+                  "name": "Bryn Ffals",
+                  "role": "Werkstattgehilfe · Lager und Warenannahme",
+                  "areas": [
+                    "Werkstatt & Lager"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": false,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "position-goldene-fassung-post-lehrling",
+                  "label": "",
+                  "note": "Lohnansatz für diese Rolle; Kost und einfacher Schlafplatz nur für die Person. Keine Lohnableitung aus Geschlecht oder Herkunft.",
+                  "source": "Aktuelle Hierarchie · Die goldene Fassung · Werkstatt & Lager",
+                  "name": "Juwelierlehrling · Ausbildung",
+                  "role": "Unbesetzter Posten",
+                  "areas": [
+                    "Werkstatt & Lager"
+                  ],
+                  "kind": "vacancy",
+                  "count": 1,
+                  "days": 0,
+                  "dailyCash": 0,
+                  "boardDays": 0,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 0,
+                  "fairDaily": 0,
+                  "ownerShare": 0,
+                  "anonymous": false,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                }
+              ],
+              "channels": [
+                {
+                  "id": "absatz-goldene-fassung-silberbandring",
+                  "label": "Silberbandring",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-silberbandring",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 16,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-schmaler-goldring",
+                  "label": "Schmaler Goldring",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-schmaler-goldring",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 90,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-granat-silberring",
+                  "label": "Granat-Silberring",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-granat-silberring",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 48,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-kupferring-glas",
+                  "label": "Kupferring mit Glasstein",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-kupferring-glas",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 8,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-messing-siegelring",
+                  "label": "Blanker Messingsiegelring",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-messing-siegelring",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 18,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-bergkristall-anhaenger",
+                  "label": "Bergkristallanhänger",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-bergkristall-anhaenger",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 24,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-bernstein-anhaenger",
+                  "label": "Bernsteinanhänger",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-bernstein-anhaenger",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 22,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-perlmutt-medaillon",
+                  "label": "Perlmuttmedaillon",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-perlmutt-medaillon",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 28,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-schlichte-silberkette",
+                  "label": "Schlichte Silberkette",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-schlichte-silberkette",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 36,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-bronze-gewandfibel",
+                  "label": "Bronzene Gewandfibel",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-bronze-gewandfibel",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 12,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-silber-haarspange",
+                  "label": "Silberne Haarspange",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-silber-haarspange",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 26,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-messing-armreif",
+                  "label": "Messingarmreif",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-messing-armreif",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 14,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-silber-gliederarmband",
+                  "label": "Silbernes Gliederarmband",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-silber-gliederarmband",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 44,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-suesswasserperlen-ohrringe",
+                  "label": "Süßwasserperlenohrringe",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-suesswasserperlen-ohrringe",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 32,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Paar"
+                },
+                {
+                  "id": "absatz-goldene-fassung-karneol-ohrringe",
+                  "label": "Karneolohrringe",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-karneol-ohrringe",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 24,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Paar"
+                },
+                {
+                  "id": "absatz-goldene-fassung-silber-eheringpaar",
+                  "label": "Silbernes Eheringpaar",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-silber-eheringpaar",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 38,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Paar"
+                },
+                {
+                  "id": "absatz-goldene-fassung-amethyst-brosche",
+                  "label": "Kleine Amethystbrosche",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-amethyst-brosche",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 54,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-vergoldete-bronzekette",
+                  "label": "Vergoldete Bronzekette",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-vergoldete-bronzekette",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 34,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-bronze-guertelschnalle",
+                  "label": "Bronzene Gürtelschnalle",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-bronze-guertelschnalle",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 12,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-goldene-fassung-onyx-reversnadel",
+                  "label": "Onyx-Reversnadel",
+                  "note": "Modellansatz: durchschnittlich 0,8 beschriebene Verkaufseinheiten je Neuntagewoche. Änderungen der Auswahl erzeugen keine zusätzlichen Kunden.",
+                  "source": "Aktuelles Juweliersortiment · goldene-fassung-onyx-reversnadel",
+                  "basis": "fixed",
+                  "quantity": 0.8,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 20,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.02,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                }
+              ],
+              "overheads": [
+                {
+                  "id": "betrieb",
+                  "label": "Licht, Brennstoff, Reinigung und Verbrauchsmaterial",
+                  "note": "",
+                  "source": "",
+                  "weeklyCopper": 12
+                }
+              ],
+              "rentWeekly": 12,
+              "levyRate": 0.02,
+              "guildWeekly": 0,
+              "badDebtRate": 0,
+              "churchEnabled": false,
+              "churchRate": 0.1,
+              "churchBasis": "surplus",
+              "debt": 0,
+              "annualInterestRate": 0.08,
+              "principalWeekly": 0,
+              "replacementWeekly": 8,
+              "householdWeekly": 8,
+              "assetValuesKnown": false,
+              "assets": {
+                "cash": 0,
+                "receivables": 0,
+                "building": 0,
+                "equipment": 0,
+                "inventory": 0
+              },
+              "coverage": []
+            },
+            "showComparison": true,
+            "showHouseholds": true
+          }
+        }
+      ]
+    }
+  }
+}

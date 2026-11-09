@@ -44,6 +44,18 @@ const economySourceInputs = [
 // which deliberately blocks image requests, but CSS, vendor code and family data do.
 export const SITE_BUILD_TASKS = [
   {
+    id: 'goldene-fassung', label: 'Ffals jewellery shop, catalogues, staffing and four rooms',
+    inputs: ['AleriaAlmanach/modules/goldene-fassung/', 'AleriaAlmanach/assets/goldene-fassung/',
+      'AleriaAlmanach/scripts/build-goldene-fassung.mjs', 'AleriaAlmanach/tests/goldene-fassung.test.mjs',
+      'Stammbäume/assets/js/data/house-ffals-family.js', 'Stammbäume/tests/ffals-family.test.js',
+      'Familien Häuser und Clans/Estryll/Venalys/Familie_Ffals/',
+      'AleriaAlmanach/modules/trade-catalog/', 'AleriaAlmanach/modules/item-register/',
+      'AleriaAlmanach/modules/economy-calculator/', 'AleriaAlmanach/AleriaAlmanach.html'],
+    commands: [['AleriaAlmanach/scripts/build-goldene-fassung.mjs', '--check'],
+      ['Familien Häuser und Clans/scripts/build-house-content.mjs', '--check', '--houses=haus-ffals'],
+      testCommand(almanach('goldene-fassung'), 'Stammbäume/tests/ffals-family.test.js')]
+  },
+  {
     "id": "gwniwr-maerllys",
     "label": "Gwniwr and Maerllys families, clothing catalogues and bounded biographies",
     "inputs": [

@@ -453,6 +453,7 @@ export const HOUSE_RANKS = Object.freeze({
   "haus-roich": "Mor Tiarna",
   "haus-scathain": "Laird",
   "haus-suilgeach": "Dún Tiarna",
+  "haus-ffals": "Bürgerlich",
   "haus-adharcan": "Junker",
   "haus-ankerhold": "Junker",
   "haus-brechten": "Junker",

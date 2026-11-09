@@ -450,6 +450,7 @@ import { HOUSE_BIOGRAPHY as haus_reannachain } from "../../../../Familien Häuse
 import { HOUSE_BIOGRAPHY as haus_roich } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_roich/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
 import { HOUSE_BIOGRAPHY as haus_scathain } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_scathain/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
 import { HOUSE_BIOGRAPHY as haus_suilgeach } from "../../../../Familien Häuser und Clans/Estryll/Uathneach/Clan_suilgeach/haus.biography.mjs?v=20261027-uathneach-warriors-v1";
+import { HOUSE_BIOGRAPHY as haus_ffals } from "../../../../Familien Häuser und Clans/Estryll/Venalys/Familie_Ffals/haus.biography.mjs?v=20261109-ffals-real-v1";
 import { HOUSE_BIOGRAPHY as haus_adharcan } from "../../../../Familien Häuser und Clans/Lothir/Aldingen/haus-adharcan/haus.biography.mjs?v=accepted-realms-20261029a";
 import { HOUSE_BIOGRAPHY as haus_ankerhold } from "../../../../Familien Häuser und Clans/Lothir/Aldingen/haus-ankerhold/haus.biography.mjs?v=accepted-realms-20261029a";
 import { HOUSE_BIOGRAPHY as haus_brechten } from "../../../../Familien Häuser und Clans/Lothir/Aldingen/haus-brechten/haus.biography.mjs?v=accepted-realms-20261029a";
@@ -1104,6 +1105,7 @@ export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-roich": Object.freeze({ sourceRevision: 5, biography: haus_roich, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-scathain": Object.freeze({ sourceRevision: 5, biography: haus_scathain, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-suilgeach": Object.freeze({ sourceRevision: 5, biography: haus_suilgeach, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-ffals": Object.freeze({ sourceRevision: 1, biography: haus_ffals, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-adharcan": Object.freeze({ sourceRevision: 1, biography: haus_adharcan, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-ankerhold": Object.freeze({ sourceRevision: 1, biography: haus_ankerhold, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-brechten": Object.freeze({ sourceRevision: 1, biography: haus_brechten, replacedDefaultFingerprints: Object.freeze([]) }),
