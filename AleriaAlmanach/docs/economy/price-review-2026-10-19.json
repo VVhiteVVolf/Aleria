@@ -4,12 +4,12 @@
   "moneyUnit": "Kupfertaler",
   "method": "Interne Konsistenzprüfung einer fiktiven Wirtschaft. Vergleichsskala: 24 KT sparsamer Vierpersonenbedarf + 3 KT freie Mittel; 27 KT Hafenlohn bei sechs Diensttagen. Keine historische Preisstatistik.",
   "summary": {
-    "rows": 1473,
+    "rows": 1506,
     "adjusted": 148,
-    "retained": 1118,
+    "retained": 1151,
     "notOffered": 205,
     "unavailable": 2,
-    "eligibleVenues": 18,
+    "eligibleVenues": 19,
     "horseAndLivestockPriceChanges": 0
   },
   "limitations": [
@@ -141,6 +141,20 @@
         "Bannkreis Gwynthor",
         "Gwynthor-Stadt",
         "Der Markt der Fortuna - Gwynthor"
+      ],
+      "eligible": true,
+      "reason": "Begehbarer Verkaufsort mit Güterangebot."
+    },
+    {
+      "id": "die-goldene-fassung",
+      "title": "Die goldene Fassung",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
       ],
       "eligible": true,
       "reason": "Begehbarer Verkaufsort mit Güterangebot."
@@ -18411,6 +18425,765 @@
       ],
       "decision": "beibehalten",
       "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 0,
+      "id": "goldene-fassung-silberbandring",
+      "optionIndex": 0,
+      "name": "Silberbandring",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 16,
+        "maxCopper": 16
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        16,
+        16
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 1,
+      "id": "goldene-fassung-schmaler-goldring",
+      "optionIndex": 0,
+      "name": "Schmaler Goldring",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 90,
+        "maxCopper": 90
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        90,
+        90
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 2,
+      "id": "goldene-fassung-granat-silberring",
+      "optionIndex": 0,
+      "name": "Granat-Silberring",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 48,
+        "maxCopper": 48
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        48,
+        48
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 3,
+      "id": "goldene-fassung-kupferring-glas",
+      "optionIndex": 0,
+      "name": "Kupferring mit Glasstein",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 8,
+        "maxCopper": 8
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        8,
+        8
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 4,
+      "id": "goldene-fassung-messing-siegelring",
+      "optionIndex": 0,
+      "name": "Blanker Messingsiegelring",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 18,
+        "maxCopper": 18
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        18,
+        18
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 5,
+      "id": "goldene-fassung-bergkristall-anhaenger",
+      "optionIndex": 0,
+      "name": "Bergkristallanhänger",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 24,
+        "maxCopper": 24
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        24,
+        24
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 6,
+      "id": "goldene-fassung-bernstein-anhaenger",
+      "optionIndex": 0,
+      "name": "Bernsteinanhänger",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 22,
+        "maxCopper": 22
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        22,
+        22
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 7,
+      "id": "goldene-fassung-perlmutt-medaillon",
+      "optionIndex": 0,
+      "name": "Perlmuttmedaillon",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 28,
+        "maxCopper": 28
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        28,
+        28
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 8,
+      "id": "goldene-fassung-schlichte-silberkette",
+      "optionIndex": 0,
+      "name": "Schlichte Silberkette",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 36,
+        "maxCopper": 36
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        36,
+        36
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 9,
+      "id": "goldene-fassung-bronze-gewandfibel",
+      "optionIndex": 0,
+      "name": "Bronzene Gewandfibel",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 10,
+      "id": "goldene-fassung-silber-haarspange",
+      "optionIndex": 0,
+      "name": "Silberne Haarspange",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 26,
+        "maxCopper": 26
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        26,
+        26
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 11,
+      "id": "goldene-fassung-messing-armreif",
+      "optionIndex": 0,
+      "name": "Messingarmreif",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 14,
+        "maxCopper": 14
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        14,
+        14
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 12,
+      "id": "goldene-fassung-silber-gliederarmband",
+      "optionIndex": 0,
+      "name": "Silbernes Gliederarmband",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 44,
+        "maxCopper": 44
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        44,
+        44
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 13,
+      "id": "goldene-fassung-suesswasserperlen-ohrringe",
+      "optionIndex": 0,
+      "name": "Süßwasserperlenohrringe",
+      "unit": "1 Paar",
+      "price": {
+        "minCopper": 32,
+        "maxCopper": 32
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        32,
+        32
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 14,
+      "id": "goldene-fassung-karneol-ohrringe",
+      "optionIndex": 0,
+      "name": "Karneolohrringe",
+      "unit": "1 Paar",
+      "price": {
+        "minCopper": 24,
+        "maxCopper": 24
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        24,
+        24
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 15,
+      "id": "goldene-fassung-silber-eheringpaar",
+      "optionIndex": 0,
+      "name": "Silbernes Eheringpaar",
+      "unit": "1 Paar",
+      "price": {
+        "minCopper": 38,
+        "maxCopper": 38
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        38,
+        38
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 16,
+      "id": "goldene-fassung-amethyst-brosche",
+      "optionIndex": 0,
+      "name": "Kleine Amethystbrosche",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 54,
+        "maxCopper": 54
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        54,
+        54
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 17,
+      "id": "goldene-fassung-vergoldete-bronzekette",
+      "optionIndex": 0,
+      "name": "Vergoldete Bronzekette",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 34,
+        "maxCopper": 34
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        34,
+        34
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 18,
+      "id": "goldene-fassung-bronze-guertelschnalle",
+      "optionIndex": 0,
+      "name": "Bronzene Gürtelschnalle",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 3,
+      "itemIndex": 19,
+      "id": "goldene-fassung-onyx-reversnadel",
+      "optionIndex": 0,
+      "name": "Onyx-Reversnadel",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 20,
+        "maxCopper": 20
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        20,
+        20
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 4,
+      "itemIndex": 0,
+      "id": "goldene-fassung-gebrauchter-guertelbeutel",
+      "optionIndex": 0,
+      "name": "Gebrauchter Gürtelbeutel",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 5,
+        "maxCopper": 5
+      },
+      "category": "wechselware",
+      "status": "available",
+      "before": null,
+      "after": [
+        5,
+        5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 4,
+      "itemIndex": 1,
+      "id": "goldene-fassung-gebrauchter-holzkamm",
+      "optionIndex": 0,
+      "name": "Gebrauchter Holzkamm",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 3,
+        "maxCopper": 3
+      },
+      "category": "wechselware",
+      "status": "available",
+      "before": null,
+      "after": [
+        3,
+        3
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 4,
+      "itemIndex": 2,
+      "id": "goldene-fassung-kleine-holzfigur",
+      "optionIndex": 0,
+      "name": "Kleine Holzfigur",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 4,
+        "maxCopper": 4
+      },
+      "category": "wechselware",
+      "status": "available",
+      "before": null,
+      "after": [
+        4,
+        4
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 4,
+      "itemIndex": 3,
+      "id": "goldene-fassung-schnallenkaestchen",
+      "optionIndex": 0,
+      "name": "Schnallenkästchen",
+      "unit": "1 Kästchen",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "wechselware",
+      "status": "available",
+      "before": null,
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 4,
+      "itemIndex": 4,
+      "id": "goldene-fassung-altes-schreibbesteck",
+      "optionIndex": 0,
+      "name": "Altes Schreibbesteck",
+      "unit": "1 Satz",
+      "price": {
+        "minCopper": 10,
+        "maxCopper": 10
+      },
+      "category": "wechselware",
+      "status": "available",
+      "before": null,
+      "after": [
+        10,
+        10
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 4,
+      "itemIndex": 5,
+      "id": "goldene-fassung-kleiner-handspiegel",
+      "optionIndex": 0,
+      "name": "Kleiner Handspiegel",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 14,
+        "maxCopper": 14
+      },
+      "category": "wechselware",
+      "status": "available",
+      "before": null,
+      "after": [
+        14,
+        14
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 4,
+      "itemIndex": 6,
+      "id": "goldene-fassung-holzspielwuerfel",
+      "optionIndex": 0,
+      "name": "Holzspielwürfel",
+      "unit": "1 Satz · drei Würfel",
+      "price": {
+        "minCopper": 5,
+        "maxCopper": 5
+      },
+      "category": "wechselware",
+      "status": "available",
+      "before": null,
+      "after": [
+        5,
+        5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 4,
+      "itemIndex": 7,
+      "id": "goldene-fassung-gebrauchte-balkenwaage",
+      "optionIndex": 0,
+      "name": "Gebrauchte Balkenwaage",
+      "unit": "1 Satz",
+      "price": {
+        "minCopper": 24,
+        "maxCopper": 24
+      },
+      "category": "wechselware",
+      "status": "available",
+      "before": null,
+      "after": [
+        24,
+        24
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 4,
+      "itemIndex": 8,
+      "id": "goldene-fassung-gebrauchte-schriftroehre",
+      "optionIndex": 0,
+      "name": "Gebrauchte Schriftröhre",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "wechselware",
+      "status": "available",
+      "before": null,
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 4,
+      "itemIndex": 9,
+      "id": "goldene-fassung-gewuerzdose-reste",
+      "optionIndex": 0,
+      "name": "Gewürzdose mit Resten",
+      "unit": "1 Dose",
+      "price": {
+        "minCopper": 9,
+        "maxCopper": 9
+      },
+      "category": "wechselware",
+      "status": "available",
+      "before": null,
+      "after": [
+        9,
+        9
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 4,
+      "itemIndex": 10,
+      "id": "goldene-fassung-schwarzmarkt-blutstaub",
+      "optionIndex": 0,
+      "name": "Blutstaub (Schale)",
+      "unit": "Schale",
+      "price": {
+        "minCopper": 20,
+        "maxCopper": 20
+      },
+      "category": "schwarzmarkt",
+      "status": "available",
+      "before": null,
+      "after": [
+        20,
+        20
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 4,
+      "itemIndex": 11,
+      "id": "goldene-fassung-schwarzmarkt-kriss",
+      "optionIndex": 0,
+      "name": "Kriss (Phiole)",
+      "unit": "Phiole",
+      "price": {
+        "minCopper": 200,
+        "maxCopper": 200
+      },
+      "category": "schwarzmarkt",
+      "status": "available",
+      "before": null,
+      "after": [
+        200,
+        200
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die goldene Fassung",
+      "moduleId": "die-goldene-fassung",
+      "pageIndex": 4,
+      "itemIndex": 12,
+      "id": "goldene-fassung-schwarzmarkt-traumkorn",
+      "optionIndex": 0,
+      "name": "Traumkorn (Beutel)",
+      "unit": "Beutel",
+      "price": {
+        "minCopper": 50,
+        "maxCopper": 50
+      },
+      "category": "schwarzmarkt",
+      "status": "available",
+      "before": null,
+      "after": [
+        50,
+        50
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
     },
     {
       "source": "Zum Honigtörtchen",
