@@ -17,5 +17,7 @@ Ladenrollen, `ffals-hierarchy.mjs` für Stellen, `ffals-catalog.mjs` für Güter
 liegen im auftragsbezogenen lokalen Diagnoseordner.
 
 Erzeugen: `node AleriaAlmanach/scripts/build-goldene-fassung.mjs`.
-Prüfen: gleicher Aufruf mit `--check` und
+Prüfen im kanonischen öffentlichen Checkout: gleicher Aufruf mit `--check` und
 `node --test AleriaAlmanach/tests/goldene-fassung.test.mjs`.
+Die beiden Berichtsintegrationstests prüfen dabei auch die aktuellen gemeinsamen
+Preis- und Wirtschaftsprojektionen gegen die Modulquelle.

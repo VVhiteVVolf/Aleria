@@ -9,6 +9,7 @@ import { FFALS_BLACKMARKET_IDS } from '../modules/goldene-fassung/ffals-catalog.
 import { STANDARD_ITEMS } from '../modules/item-register/item-register-standard.js';
 import { buildModuleOffers } from '../modules/item-register/item-register-module-catalog.js';
 import { calculateBusiness } from '../modules/economy-calculator/economy-engine.mjs';
+import { parsePrice } from '../modules/item-register/item-register-money.js';
 const entry = buildFfalsModule();
 const calendar = { daysPerWeek: 9, daysPerMonth: 36, daysPerYear: 468, monthsPerYear: 13 };
 
@@ -43,8 +44,8 @@ test('twenty jewellery offers and ten secondhand offers are ordinary purchasable
   assert.equal(offers.length, 33);
   assert.equal(new Set(offers.map(offer => offer.id)).size, 33);
   assert(offers.every(offer => offer.priceRange.minCopper > 0));
-  assert.equal(Math.min(...jewellery.map(item => Number(item.priceMin))), 8);
-  assert.equal(Math.max(...jewellery.map(item => Number(item.priceMin))), 90);
+  assert.equal(Math.min(...jewellery.map(item => Number(item.priceMin))), 18);
+  assert.equal(Math.max(...jewellery.map(item => Number(item.priceMin))), 280);
   assert(![...jewellery, ...other].some(item => item.definitionKind === 'unique'));
 });
 
@@ -91,4 +92,24 @@ test('all newly referenced scenes, portraits, signs and inventory images exist',
     if (/^https?:/.test(image)) continue;
     await access(new URL(image, new URL('../', import.meta.url)));
   }
+});
+
+test('the published price review matches all thirty-three current shop offers', async () => {
+  const report = JSON.parse(await readFile(new URL('../docs/economy/price-review-2026-10-19.json', import.meta.url), 'utf8'));
+  const records = report.records.filter(row => row.moduleId === entry.id);
+  assert.equal(records.length, 33, 'Rebuild the public price review after editing this catalogue.');
+  for (const [pageIndex, page] of entry.pages.entries()) for (const item of page.tradeCatalog?.items || []) {
+    const record = records.find(row => row.pageIndex === pageIndex && row.id === item.id);
+    assert(record, item.id);
+    const amount = item.priceMax ? `${item.priceMin} - ${item.priceMax}` : item.priceMin;
+    assert.deepEqual(record.price, parsePrice(amount, item.currencyCode), item.id);
+    assert.equal(record.unit, item.unit);
+  }
+});
+
+test('the published economy scenario preserves the authored current shop calculation', async () => {
+  const { ECONOMY_EXAMPLES } = await import('../modules/economy-calculator/economy-catalog.generated.mjs');
+  const scenario = ECONOMY_EXAMPLES.find(candidate => candidate.id === entry.id);
+  assert(scenario, 'Rebuild the public economy catalogue after adding this shop.');
+  assert.deepEqual(scenario, entry.pages.at(-1).economyCalculation.scenario);
 });

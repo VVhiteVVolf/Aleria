@@ -32,7 +32,7 @@ export function buildFfalsModule() {
         description: paragraphs('Ein bemaltes Holzschild mit goldener Ringfassung hängt an dunklen Eisenbeschlägen über der Tür. Dahinter liegt <strong>Die goldene Fassung</strong>, ein gepflegter Juwelierladen in Gwynthor-Stadt. Silber, Bronze, kleine Schmucksteine und wenige schmale Goldarbeiten füllen die Auslage.',
           'Der Laden bedient Bürgerinnen und Bürger, die ein schönes Geschenk, einen schlichten Ring oder ein gutes Stück für einen besonderen Tag suchen. Er verdient ordentlich an überschaubaren Arbeiten und verlässlicher Laufkundschaft; höfischer Prunk bestimmt weder Einrichtung noch Sortiment.',
           'Alwyn Ffals betreut Einkauf und Geschäftskontakte. Mit Seren, Rhun und Bryn bildet er die vierköpfige Besetzung. Zum Haus gehören Verkaufsraum, Werkstatt, Keller und die Wohnstube im Obergeschoss. Material, Lieferumfang und Änderungen werden vor einer Bestellung besprochen.'),
-        stats: [['Ort', 'Gwynthor-Stadt'], ['Geschäft', 'Bürgerlicher Juwelier'], ['Leitung', 'Alwyn Ffals'], ['Preisrahmen', '8–90 Kupfertaler im gewöhnlichen Schmucksortiment']],
+        stats: [['Ort', 'Gwynthor-Stadt'], ['Geschäft', 'Bürgerlicher Juwelier'], ['Leitung', 'Alwyn Ffals'], ['Preisrahmen', '18–280 Kupfertaler im gewöhnlichen Schmucksortiment']],
         quote: 'Ein gutes Stück muss nicht für einen Fürsten gemacht sein.', quoteBy: 'Die goldene Fassung' },
       biographyPage(),
       { pageTitle: 'Hierarchie · Laden & Werkstatt', commentThreadKey: 'goldene-fassung-hierarchie', hierarchyPage: true, ...illustration('personal'), hierarchy: buildFfalsHierarchy() },
