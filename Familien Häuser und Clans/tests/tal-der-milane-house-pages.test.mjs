@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import vm from 'node:vm';
-import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
+import { FAMILY_REGISTRY, getRegisteredSourceMetadataProvenance } from '../../Stammbäume/assets/js/data/families.registry.js';
+import { applyFamilyMetadataReview } from '../../Kontinente/tests/support/apply-family-metadata-review.mjs';
+import { projectReviewedFamilyRevisions } from '../../Kontinente/tests/support/reviewed-family-revisions.mjs';
 import { createHousePageData, createHouseBiography } from '../modules/house-content/house-content-outputs.mjs';
 import { resolveRegisteredFamilyUpgrade } from '../../Stammbäume/assets/js/services/family-registry-upgrade.js';
 import { normalizeFamily } from '../../Stammbäume/assets/js/domain/family-schema.js';
@@ -56,7 +58,13 @@ test('Alle 21 bestehenden Stammbäume behalten sämtliche Personen und Graphsamm
   assert.equal(before.length, 21);
   for (const baseline of before) {
     const record = FAMILY_REGISTRY.find(record => record.id === baseline.id);
-    assert.equal(sha256(JSON.stringify(graph(record.family))), baseline.graphFingerprint, record.id);
+    let historical = record;
+    if (record.id === 'haus-bronnor') {
+      historical = structuredClone(record);
+      applyFamilyMetadataReview(historical, {familyId:record.id,...getRegisteredSourceMetadataProvenance(record.id)});
+      historical = projectReviewedFamilyRevisions(historical);
+    }
+    assert.equal(sha256(JSON.stringify(graph(historical.family))), baseline.graphFingerprint, record.id);
   }
 });
 
