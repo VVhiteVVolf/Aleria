@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
 import { access, readFile } from 'node:fs/promises';
 import { buildCharacterDatabase, markCharacterDatabaseOverlay } from '../../CharakterDatenbank/lib/character-database-model.mjs';
@@ -174,7 +175,13 @@ test('frozen biography sources preserve prose, relations, mentors, history and s
     assert.deepEqual(projectExactBiographyTraitLeaves(entry), expected, oldEntry.name);
   }
   assert.equal(replaced, 5);
-  assert.equal(current.entries.length, original.entries.length);
+  // Four independently published biographies already exist in public commit ae12a14.
+  // Preserve their exact payload while retaining every original review assertion above.
+  const originalKeys = new Set(original.entries.map(entry => entry.key));
+  const laterPublished = current.entries.filter(entry => !originalKeys.has(entry.key));
+  assert.equal(laterPublished.length, 4);
+  assert.equal(createHash('sha256').update(JSON.stringify(laterPublished)).digest('hex'), '5713bd94f6daa9ab95cc84db11a4b1b67685b5d9321f67f6a5d664167241abb3');
+  assert.equal(current.entries.length, original.entries.length + laterPublished.length);
   const { GAIS_WYRM_BIOGRAPHY } = await import('../../Stammbäume/assets/js/data/person-biographies/gais-wyrm.js');
   const { GAWAIN_PUBLIC_BIOGRAPHY } = await import('../modules/gawain-duncan/gawain-public-biography.mjs');
   assert.deepEqual(reviseDevelopmentTraitBiographyCards(GAIS_WYRM_BIOGRAPHY.biography.abilities), reviewedBiographyTraitCards(assignment('Gais Wyrm').id));
