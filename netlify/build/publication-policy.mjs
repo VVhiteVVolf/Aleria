@@ -3,6 +3,7 @@
 const SOURCE_ARCHIVE_ROOTS = [
   'assets/source/comment-foreign-voice/',
   'AleriaAlmanach/docs/art/character-style/experiments/',
+  'shared/world-directory/tests/',
   'AleriaAlmanach/docs/art/combat-technique-icons/',
   'AleriaAlmanach/docs/art/weapon-standards/',
   'AleriaAlmanach/docs/art/ability-icons/',
@@ -16,7 +17,6 @@ const SOURCE_ARCHIVE_ROOTS = [
   'shared/accepted-realms/sources/',
   'shared/accepted-realms/scripts/',
   'shared/accepted-realms/authoring/',
-  'shared/world-directory/tests/',
   'Vorschau/Venalys/sources/',
   'Vorschau/Venalys/scripts/',
   'Vorschau/Ishtaran/sources/',
@@ -35,6 +35,7 @@ const SOURCE_ARCHIVE_ROOTS = [
   'Vorschau/Klythesia/scripts/',
   'Vorschau/Kemetara/sources/',
   'Vorschau/Kemetara/scripts/',
+  'Vorschau/Kemetara/tests/',
   'Vorschau/Mathringen/sources/',
   'Vorschau/Mathringen/scripts/',
   'Vorschau/Mathringen/tests/',
@@ -46,6 +47,8 @@ const SOURCE_ARCHIVE_ROOTS = [
   'AleriaAlmanach/assets/gwynthor-marktplatz/',
   'AleriaAlmanach/modules/gawain-duncan/source/',
   'AleriaAlmanach/modules/group-adventures/source/',
+  'AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Gwen Hamnett/',
+  'AleriaAlmanach/AvatarWerkstatt/Output/Gwen Hamnett/',
   'AleriaAlmanach/backups/scenes/'
 ];
 
@@ -108,13 +111,14 @@ export function isAuthoringArchive(file) {
     || file === 'Vorschau/Klythesia/source-import.json'
     || file === 'Vorschau/Kemetara/assets.source.json'
     || file === 'Vorschau/Kemetara/source-import.json'
+    || /^Vorschau\/Kemetara\/assets\/(?:estates|warriors|emblems|regions)\/(?:[a-z-]*manifest\.json|generated(?:-archive)?\/)/.test(file)
     || file === 'Vorschau/Mathringen/assets.source.json'
     || file === 'Vorschau/Adharath/assets.source.json'
     || /^Vorschau\/Adharath\/assets\/(?:warriors|castes)\/manifest\.json$/.test(file)
     || file === 'Vorschau/Mathringen/source-import.json'
     || /^Vorschau\/Mathringen\/assets\/(?:estates|warriors|emblems)\/(?:[a-z-]*manifest\.json|generated(?:-archive)?\/)/.test(file)
-    || /^Vorschau\/Phalantia\/assets\/(?:warriors|emblems|estates)\/manifest\.json$/.test(file)
-    || /^Vorschau\/Phalantia\/assets\/(?:warriors|emblems|estates)\/originals\//.test(file)
+    || /^Vorschau\/(?:Phalantia|Klythesia)\/assets\/(?:warriors|emblems|estates)\/(?:house-|realm-)?manifest\.json$/.test(file)
+    || /^Vorschau\/(?:Phalantia|Klythesia)\/assets\/(?:warriors|emblems|estates)\/originals\//.test(file)
     || file === 'Vorschau/Venalys/assets/estates/manifest.json'
     || file.startsWith('Vorschau/Venalys/assets/estates/generated/')
     || file.startsWith('Vorschau/Solestia/assets/estates/generated/')

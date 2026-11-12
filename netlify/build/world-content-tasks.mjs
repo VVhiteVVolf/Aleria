@@ -168,7 +168,7 @@ export const WORLD_CONTENT_TASKS = [
     id: 'uathneach-preview', label: 'Isolated regional proposals and complete preview assets',
     inputs: ['Vorschau/'],
     commands: [tests('Vorschau/tests'),tests('Vorschau/Solestia/tests'),tests('Vorschau/Phalantia/tests'),
-      tests('Vorschau/Mathringen/tests'),
+      tests('Vorschau/Klythesia/scripts'), tests('Vorschau/Mathringen/tests'), tests('Vorschau/Kemetara/tests'),
       tests('Vorschau/Calidaria/tests'),tests('Vorschau/Sylvarant/tests'),
       ['--test','--experimental-test-isolation=none','Vorschau/Adharath/tests/adharath.test.mjs'],
       ['--test','--experimental-test-isolation=none',
@@ -177,6 +177,7 @@ export const WORLD_CONTENT_TASKS = [
         'netlify/tests/calidaria-source-publication.test.mjs',
         'netlify/tests/sylvarant-source-publication.test.mjs',
         'netlify/tests/solestia-source-publication.test.mjs',
-        'netlify/tests/phalantia-source-publication.test.mjs']]
+        'netlify/tests/phalantia-source-publication.test.mjs',
+        'netlify/tests/klythesia-source-publication.test.mjs']]
   }
 ];
