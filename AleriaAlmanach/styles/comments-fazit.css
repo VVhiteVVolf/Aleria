@@ -1,1177 +1,164 @@
-/* Fazit feature: block editor and rich scene card. Base comment form primitives live in comments.css. */
-#fazit-form-overlay .fazit-form-card {
-  position: relative;
-  height: min(96vh, 1080px);
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 12% 0, rgba(255, 249, 226, 0.78), transparent 34%),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(139, 105, 20, 0.035)),
-    var(--parchment);
-}
-
-#fazit-form-overlay .comment-form-title {
-  display: flex;
-  align-items: center;
-  min-height: 2rem;
-  color: var(--gold-dark);
-  border-bottom-color: rgba(139, 105, 20, 0.38);
-}
-
-.fazit-title-field {
-  padding: 0.05rem;
-}
-
-.fazit-title-field input {
-  min-height: 2.7rem;
-  font-family: 'Cinzel', serif;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-}
-
-.fazit-commandbar {
-  position: sticky;
-  top: -1px;
-  z-index: 12;
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  min-height: 2.75rem;
-  padding: 0.45rem 0.55rem;
-  border: 1px solid rgba(139, 105, 20, 0.34);
-  background: rgba(242, 226, 183, 0.96);
-  box-shadow: 0 4px 12px rgba(67, 43, 13, 0.1);
-  backdrop-filter: blur(8px);
-}
-
-.fazit-commandbar-group {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-
-.fazit-commandbar button {
-  min-height: 1.95rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
-  padding: 0.3rem 0.5rem;
-  border: 1px solid rgba(139, 105, 20, 0.3);
-  background: rgba(255, 255, 255, 0.28);
-  color: var(--ink);
-  font: 600 0.54rem/1.1 'Cinzel', serif;
-  letter-spacing: 0.025em;
-  cursor: pointer;
-}
-
-.fazit-commandbar button:hover:not(:disabled),
-.fazit-commandbar button:focus-visible {
-  border-color: var(--gold);
-  background: rgba(139, 105, 20, 0.13);
-  outline: none;
-}
-
-.fazit-commandbar button:disabled {
-  opacity: 0.36;
-  cursor: default;
-}
-
-.fazit-draft-status {
-  margin-left: auto;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  color: var(--ink-faded);
-  font: 0.56rem/1.2 'Cinzel', serif;
-  white-space: nowrap;
-}
-
-.fazit-draft-status > span {
-  color: #71834b;
-  font-size: 0.48rem;
-}
-
-.fazit-draft-status-saving > span {
-  color: var(--gold-dark);
-  animation: fazit-draft-pulse 0.8s ease-in-out infinite alternate;
-}
-
-.fazit-draft-status-unavailable > span { color: #9b4a42; }
-
-@keyframes fazit-draft-pulse {
-  to { opacity: 0.3; transform: scale(0.82); }
-}
-
-.fazit-outline {
-  border: 1px solid rgba(139, 105, 20, 0.28);
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.fazit-outline-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding: 0.38rem 0.55rem;
-  border-bottom: 1px solid rgba(139, 105, 20, 0.18);
-  color: var(--gold-dark);
-  font: 600 0.56rem/1.2 'Cinzel', serif;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.fazit-outline-head small {
-  color: var(--ink-faded);
-  font-size: 0.48rem;
-  letter-spacing: 0.04em;
-}
-
-.fazit-outline-list {
-  display: flex;
-  gap: 0.35rem;
-  overflow-x: auto;
-  padding: 0.4rem;
-  scrollbar-width: thin;
-}
-
-.fazit-outline-item {
-  flex: 0 0 clamp(170px, 23%, 235px);
-  min-width: 0;
-  display: grid;
-  grid-template-columns: 1.35rem 1.35rem minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 0.28rem;
-  padding: 0.38rem;
-  border: 1px solid rgba(139, 105, 20, 0.24);
-  background: rgba(255, 255, 255, 0.22);
-  color: var(--ink);
-  text-align: left;
-  cursor: pointer;
-}
-
-.fazit-outline-item:hover,
-.fazit-outline-item:focus-visible,
-.fazit-outline-item.is-active {
-  border-color: var(--gold);
-  background: rgba(139, 105, 20, 0.12);
-  outline: none;
-}
-
-.fazit-outline-item.is-active {
-  box-shadow: inset 3px 0 0 var(--gold-dark);
-}
-
-.fazit-outline-index,
-.fazit-outline-glyph {
-  width: 1.25rem;
-  height: 1.25rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  font: 0.52rem/1 'Cinzel', serif;
-}
-
-.fazit-outline-index {
-  border: 1px solid rgba(139, 105, 20, 0.28);
-  color: var(--ink-faded);
-}
-
-.fazit-outline-glyph {
-  background: var(--ink);
-  color: var(--gold);
-}
-
-.fazit-outline-copy {
-  min-width: 0;
-  display: grid;
-  gap: 0.04rem;
-}
-
-.fazit-outline-copy strong {
-  color: var(--gold-dark);
-  font: 600 0.51rem/1.15 'Cinzel', serif;
-  text-transform: uppercase;
-}
-
-.fazit-outline-copy small {
-  overflow: hidden;
-  color: var(--ink-faded);
-  font-size: 0.61rem;
-  line-height: 1.15;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.fazit-outline-collapsed {
-  color: var(--gold-dark);
-  font-size: 1rem;
-}
-
-.fazit-editor-toolbar {
-  display: grid;
-  grid-template-columns: minmax(200px, 0.75fr) minmax(420px, 1.5fr);
-  align-items: center;
-  gap: 1rem;
-  padding: 0.85rem 0.95rem;
-  border: 1px solid rgba(139, 105, 20, 0.36);
-  background:
-    linear-gradient(100deg, rgba(139, 105, 20, 0.14), transparent 48%),
-    rgba(255, 255, 255, 0.18);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
-}
-
-.fazit-editor-toolbar-copy {
-  display: grid;
-  gap: 0.12rem;
-}
-
-.fazit-editor-toolbar-kicker {
-  font-family: 'Cinzel', serif;
-  font-size: 0.56rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--gold-dark);
-}
-
-.fazit-editor-toolbar-copy strong {
-  font: 600 0.95rem/1.25 'Cinzel', serif;
-  color: var(--ink);
-}
-
-.fazit-editor-toolbar-copy small {
-  color: var(--ink-faded);
-  font-size: 0.72rem;
-  line-height: 1.35;
-}
-
-.fazit-lines-editor-head-actions {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.42rem;
-}
-
-.fazit-add-block-btn {
-  min-height: 2.8rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.42rem;
-  padding: 0.45rem 0.6rem;
-  border: 1px solid rgba(139, 105, 20, 0.42);
-  background: rgba(255, 255, 255, 0.25);
-  color: var(--ink);
-  font: 600 0.61rem/1.2 'Cinzel', serif;
-  letter-spacing: 0.045em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: transform 0.15s, border-color 0.15s, background 0.15s, box-shadow 0.15s;
-}
-
-.fazit-add-block-btn span {
-  width: 1.35rem;
-  height: 1.35rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--ink);
-  color: var(--gold);
-  font-size: 0.7rem;
-}
-
-.fazit-add-block-btn:hover,
-.fazit-add-block-btn:focus-visible {
-  transform: translateY(-1px);
-  border-color: var(--gold);
-  background: rgba(139, 105, 20, 0.14);
-  box-shadow: 0 3px 10px rgba(80, 52, 18, 0.1);
-  outline: none;
-}
-
-.fazit-add-block-btn:disabled {
-  opacity: 0.42;
-  transform: none;
-  box-shadow: none;
-  cursor: default;
-}
-
-.fazit-editor-toolbar-inline {
-  grid-template-columns: minmax(155px, 0.52fr) minmax(420px, 1.48fr);
-  gap: 0.65rem;
-  margin-top: -0.58rem;
-  padding: 0.5rem 0.6rem;
-  border-top-style: dashed;
-  background:
-    linear-gradient(90deg, rgba(139, 105, 20, 0.1), transparent 42%),
-    rgba(255, 255, 255, 0.11);
-  box-shadow: none;
-}
-
-.fazit-editor-toolbar-inline .fazit-editor-toolbar-copy {
-  gap: 0.02rem;
-}
-
-.fazit-editor-toolbar-inline .fazit-editor-toolbar-copy strong {
-  font-size: 0.72rem;
-}
-
-.fazit-editor-toolbar-inline .fazit-editor-toolbar-copy small {
-  font-size: 0.62rem;
-}
-
-.fazit-editor-toolbar-inline .fazit-add-block-btn {
-  min-height: 2.15rem;
-  padding: 0.32rem 0.45rem;
-  font-size: 0.55rem;
-}
-
-.fazit-editor-toolbar-inline .fazit-add-block-btn span {
-  width: 1.12rem;
-  height: 1.12rem;
-  font-size: 0.58rem;
-}
-
-.fazit-capacity-count {
-  margin-left: 0.18rem;
-  color: var(--ink-faded);
-  font-size: 0.5rem;
-  letter-spacing: 0.04em;
-}
-
-#fazit-form-overlay .module-editor-mini-btn:disabled {
-  opacity: 0.42;
-  cursor: default;
-}
-
-#fazit-form-overlay .fazit-lines-editor {
-  gap: 0.85rem;
-  padding: 0 0.12rem 0.2rem 0;
-}
-
-#fazit-form-overlay .fazit-line-editor {
-  position: relative;
-  padding: 0;
-  gap: 0;
-  overflow: visible;
-  border-left-width: 1px;
-  background:
-    linear-gradient(155deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.08)),
-    rgba(238, 217, 161, 0.22);
-  box-shadow: 0 5px 14px rgba(80, 52, 18, 0.07);
-}
-
-.fazit-line-editor-head {
-  min-height: 2.35rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.7rem;
-  padding: 0.42rem 0.55rem 0.42rem 0.72rem;
-  border-bottom: 1px solid rgba(139, 105, 20, 0.2);
-  background: linear-gradient(90deg, rgba(139, 105, 20, 0.13), rgba(255, 255, 255, 0.12));
-}
-
-.fazit-line-drag-handle {
-  flex: 0 0 1.55rem;
-  width: 1.55rem;
-  height: 1.65rem;
-  display: grid;
-  place-items: center;
-  padding: 0;
-  border: 1px solid transparent;
-  background: transparent;
-  color: rgba(73, 52, 25, 0.52);
-  font: 0.78rem/1 monospace;
-  letter-spacing: -0.15em;
-  cursor: grab;
-}
-
-.fazit-line-drag-handle:hover,
-.fazit-line-drag-handle:focus-visible {
-  border-color: rgba(139, 105, 20, 0.34);
-  background: rgba(255, 255, 255, 0.26);
-  color: var(--ink);
-  outline: none;
-}
-
-.fazit-line-drag-handle:active { cursor: grabbing; }
-
-.fazit-line-collapsed-summary {
-  min-width: 0;
-  display: none;
-  overflow: hidden;
-  color: var(--ink-faded);
-  font-size: 0.72rem;
-  font-style: italic;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-#fazit-form-overlay .fazit-line-editor.is-active {
-  border-color: rgba(139, 105, 20, 0.68);
-  box-shadow: 0 7px 18px rgba(80, 52, 18, 0.12), inset 3px 0 0 var(--gold-dark);
-}
-
-#fazit-form-overlay .fazit-line-editor.is-collapsed .fazit-line-editor-body,
-#fazit-form-overlay .fazit-line-editor.is-collapsed .fazit-line-actions,
-#fazit-form-overlay .fazit-line-editor.is-collapsed > .fazit-person-picker {
-  display: none;
-}
-
-#fazit-form-overlay .fazit-line-editor.is-collapsed .fazit-line-collapsed-summary {
-  display: block;
-}
-
-#fazit-form-overlay .fazit-line-editor.is-dragging {
-  opacity: 0.42;
-}
-
-#fazit-form-overlay .fazit-line-editor.is-drop-before::before,
-#fazit-form-overlay .fazit-line-editor.is-drop-after::after {
-  content: '';
-  position: absolute;
-  z-index: 6;
-  left: 0.4rem;
-  right: 0.4rem;
-  height: 3px;
-  border-radius: 999px;
-  background: var(--gold-dark);
-  box-shadow: 0 0 0 2px rgba(242, 226, 183, 0.92);
-}
-
-#fazit-form-overlay .fazit-line-editor.is-drop-before::before { top: -0.45rem; }
-#fazit-form-overlay .fazit-line-editor.is-drop-after::after { bottom: -0.45rem; }
-
-.fazit-line-kind {
-  display: flex;
-  align-items: center;
-  gap: 0.42rem;
-  font-family: 'Cinzel', serif;
-  color: var(--gold-dark);
-}
-
-.fazit-line-kind > span {
-  width: 1.35rem;
-  height: 1.35rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--ink);
-  color: var(--gold);
-  font-size: 0.62rem;
-}
-
-.fazit-line-kind strong {
-  font-size: 0.63rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.fazit-line-kind small {
-  min-width: 1.35rem;
-  padding: 0.1rem 0.35rem;
-  border: 1px solid rgba(139, 105, 20, 0.22);
-  border-radius: 999px;
-  text-align: center;
-  font-size: 0.52rem;
-  color: var(--ink-faded);
-}
-
-.fazit-line-order-actions,
-.fazit-token-editor-actions,
-.fazit-list-item-actions {
-  display: inline-flex;
-  gap: 0.22rem;
-}
-
-.fazit-line-order-actions button,
-.fazit-token-editor-actions button,
-.fazit-list-item-actions button {
-  width: 1.65rem;
-  height: 1.65rem;
-  display: grid;
-  place-items: center;
-  padding: 0;
-  border: 1px solid rgba(139, 105, 20, 0.3);
-  background: rgba(255, 255, 255, 0.3);
-  color: var(--gold-dark);
-  font: 0.78rem/1 'Cinzel', serif;
-  cursor: pointer;
-}
-
-.fazit-line-order-actions button:hover:not(:disabled),
-.fazit-token-editor-actions button:hover:not(:disabled),
-.fazit-list-item-actions button:hover:not(:disabled) {
-  border-color: var(--gold);
-  background: rgba(139, 105, 20, 0.13);
-  color: var(--ink);
-}
-
-.fazit-line-order-actions button:disabled,
-.fazit-token-editor-actions button:disabled,
-.fazit-list-item-actions button:disabled {
-  opacity: 0.32;
-  cursor: default;
-}
-
-.fazit-line-order-actions button.is-danger:hover,
-.fazit-token-editor-actions button.is-danger:hover,
-.fazit-list-item-actions button.is-danger:hover {
-  border-color: rgba(126, 42, 42, 0.6);
-  background: rgba(126, 42, 42, 0.1);
-  color: #742c2c;
-}
-
-.fazit-line-editor-body {
-  padding: 0.7rem;
-}
-
-#fazit-form-overlay .fazit-line-actions {
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0.6rem 0.7rem;
-  border-top: 1px solid rgba(139, 105, 20, 0.16);
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.fazit-line-add-actions {
-  display: flex;
-  gap: 0.35rem;
-}
-
-.fazit-line-alignment,
-.fazit-list-style {
-  display: flex !important;
-  align-items: center;
-  gap: 0.35rem;
-  margin: 0 !important;
-  white-space: nowrap;
-}
-
-.fazit-list-icon-control {
-  flex: 1 1 100%;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding-top: 0.15rem;
-}
-
-.fazit-list-icon-control > span {
-  color: var(--gold-dark);
-  font: 0.54rem/1 'Cinzel', serif;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.fazit-list-icon-picker,
-.fazit-list-icon-clear {
-  min-height: 2rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.3rem 0.55rem;
-  border: 1px solid rgba(139, 105, 20, 0.32);
-  background: rgba(255, 255, 255, 0.25);
-  color: var(--gold-dark);
-  font: 0.56rem/1.2 'Cinzel', serif;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.fazit-list-icon-picker:hover,
-.fazit-list-icon-clear:hover:not(:disabled) {
-  border-color: var(--gold);
-  background: rgba(139, 105, 20, 0.12);
-  color: var(--ink);
-}
-
-.fazit-list-icon-picker img {
-  width: 1.35rem;
-  height: 1.35rem;
-  object-fit: contain;
-}
-
-.fazit-list-icon-fallback {
-  width: 1.35rem;
-  display: grid;
-  place-items: center;
-  font-size: 1rem;
-}
-
-.fazit-list-icon-clear:disabled {
-  opacity: 0.42;
-  cursor: default;
-}
-
-#fazit-form-overlay .fazit-line-alignment select,
-#fazit-form-overlay .fazit-list-style select {
-  width: auto;
-  min-height: 1.9rem;
-  padding: 0.25rem 1.7rem 0.25rem 0.45rem;
-  font-size: 0.72rem;
-}
-
-#fazit-form-overlay .fazit-line-tokens {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-  gap: 0.55rem;
-  align-items: stretch;
-}
-
-#fazit-form-overlay .fazit-token-editor {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  align-content: start;
-  gap: 0;
-  min-width: 0;
-  padding: 0;
-  border: 1px solid rgba(139, 105, 20, 0.28);
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.fazit-token-editor-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding: 0.28rem 0.38rem 0.28rem 0.55rem;
-  border-bottom: 1px solid rgba(139, 105, 20, 0.16);
-  color: var(--gold-dark);
-  font: 600 0.52rem/1.2 'Cinzel', serif;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.fazit-token-main-fields {
-  min-width: 0;
-  display: grid;
-  grid-template-columns: 4.2rem minmax(0, 1fr);
-  align-items: center;
-  gap: 0.55rem;
-  padding: 0.55rem;
-}
-
-.fazit-token-label-field {
-  min-width: 0;
-  margin: 0 !important;
-}
-
-#fazit-form-overlay .fazit-token-label-input {
-  width: 100%;
-  min-height: 2.15rem;
-}
-
-.fazit-token-symbol-picker {
-  display: grid;
-  grid-template-columns: 3rem minmax(0, 1fr);
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.fazit-token-symbol-preview {
-  width: 3rem;
-  height: 3rem;
-  grid-row: 1;
-  display: grid;
-  place-items: center;
-  padding: 0.25rem;
-  border: 1px dashed rgba(139, 105, 20, 0.55);
-  background: rgba(246, 232, 190, 0.38);
-  color: var(--gold-dark);
-  cursor: pointer;
-}
-
-.fazit-token-symbol-preview:hover {
-  border-style: solid;
-  background: rgba(139, 105, 20, 0.12);
-}
-
-.fazit-token-symbol-preview img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-#fazit-form-overlay .fazit-token-icon-input {
-  grid-column: 1 / -1;
-  grid-row: 2;
-  width: 100%;
-  min-height: 1.75rem;
-  padding: 0.3rem 0.42rem;
-  font-size: 0.68rem;
-}
-
-#fazit-form-overlay .fazit-token-portrait-btn {
-  width: 3.2rem;
-  height: 3.2rem;
-  justify-self: center;
-}
-
-.fazit-token-options {
-  min-width: 0;
-  display: flex;
-  align-items: end;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  padding: 0.42rem 0.55rem 0.55rem;
-  border-top: 1px solid rgba(139, 105, 20, 0.14);
-}
-
-.fazit-token-option {
-  flex: 1 1 6.5rem;
-  min-width: 0;
-  margin: 0 !important;
-}
-
-#fazit-form-overlay .fazit-token-option select {
-  min-height: 1.9rem;
-  padding: 0.25rem 0.4rem;
-  font-size: 0.72rem;
-}
-
-.fazit-token-option-btn {
-  min-height: 1.9rem;
-  flex: 1 1 6.5rem;
-  padding: 0.3rem 0.5rem;
-  border: 1px solid rgba(139, 105, 20, 0.3);
-  background: rgba(255, 255, 255, 0.28);
-  color: var(--gold-dark);
-  font: 0.56rem/1.2 'Cinzel', serif;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.fazit-token-option-btn.is-active {
-  border-color: var(--gold);
-  background: rgba(139, 105, 20, 0.18);
-  color: var(--ink);
-}
-
-.fazit-symbol-library {
-  flex: 1 1 100%;
-  border: 1px solid rgba(139, 105, 20, 0.22);
-  background: rgba(255, 255, 255, 0.18);
-}
-
-.fazit-symbol-library summary {
-  padding: 0.45rem 0.6rem;
-  color: var(--gold-dark);
-  font: 600 0.56rem/1.2 'Cinzel', serif;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.fazit-symbol-presets {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(94px, 1fr));
-  gap: 0.35rem;
-  padding: 0 0.5rem 0.5rem;
-}
-
-.fazit-symbol-preset {
-  min-width: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.32rem 0.4rem;
-  border: 1px solid rgba(139, 105, 20, 0.24);
-  background: rgba(246, 232, 190, 0.36);
-  color: var(--ink);
-  font: 0.62rem/1.2 'EB Garamond', serif;
-  cursor: pointer;
-}
-
-.fazit-symbol-preset:hover {
-  border-color: var(--gold);
-  background: rgba(139, 105, 20, 0.12);
-}
-
-.fazit-symbol-preset img {
-  width: 1.45rem;
-  height: 1.45rem;
-  flex: 0 0 auto;
-  object-fit: contain;
-}
-
-.fazit-symbol-preset span {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.fazit-connector-group {
-  flex: 1 1 100%;
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-}
-
-.fazit-connector-group > span {
-  color: var(--gold-dark);
-  font: 0.54rem/1 'Cinzel', serif;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-#fazit-form-overlay .fazit-connector-buttons {
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-#fazit-form-overlay .fazit-connector-btn {
-  width: auto;
-  min-width: 1.9rem;
-  padding: 0 0.4rem;
-  font-size: 0.72rem;
-}
-
-.fazit-heading-editor-fields {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 10rem;
-  gap: 0.65rem;
-}
-
-.fazit-heading-editor-fields label,
-.fazit-line-text-editor label {
-  margin: 0 !important;
-}
-
-.fazit-heading-editor-fields input {
-  font-family: 'Cinzel', serif !important;
-  font-weight: 600;
-}
-
-#fazit-form-overlay .fazit-line-text-editor {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 10rem;
-  align-items: start;
-  gap: 0.65rem;
-}
-
-#fazit-form-overlay .fazit-line-text-editor textarea {
-  min-height: 5rem;
-  resize: vertical;
-}
-
-.fazit-list-editor {
-  display: grid;
-  gap: 0.38rem;
-}
-
-.fazit-list-item-editor {
-  display: grid;
-  grid-template-columns: 1.5rem minmax(0, 1fr) auto;
-  align-items: start;
-  gap: 0.42rem;
-}
-
-.fazit-list-item-marker {
-  min-height: 2.25rem;
-  display: grid;
-  place-items: center;
-  color: var(--gold-dark);
-  font: 600 0.82rem/1 'Cinzel', serif;
-}
-
-.fazit-list-item-marker img {
-  width: 1.25rem;
-  height: 1.25rem;
-  object-fit: contain;
-}
-
-#fazit-form-overlay .fazit-list-item-editor textarea {
-  min-height: 2.25rem;
-  resize: vertical;
-  line-height: 1.35;
-}
-
-.fazit-list-item-actions {
-  padding-top: 0.3rem;
-}
-
-#fazit-form-overlay .fazit-person-picker {
-  margin: 0;
-  border-width: 1px 0 0;
-  background: rgba(255, 255, 255, 0.2);
-}
-
-#fazit-form-overlay > .fazit-form-card > .comment-form-actions {
-  flex: 0 0 auto;
-  margin: 0 -1.95rem -1.75rem;
-  padding: 0.85rem 1.95rem 1rem;
-  border-top: 1px solid rgba(139, 105, 20, 0.32);
-  background: linear-gradient(180deg, rgba(246, 232, 190, 0.95), var(--parchment));
-  box-shadow: 0 -7px 18px rgba(80, 52, 18, 0.08);
-}
-
-/* Rich Fazit card */
-.comment-fazit-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.comment-fazit-card::before,
-.comment-fazit-card::after {
-  content: '✦';
-  position: absolute;
-  top: 0.45rem;
-  color: rgba(139, 105, 20, 0.42);
-  font-size: 0.7rem;
-}
-
-.comment-fazit-card::before { left: 0.65rem; }
-.comment-fazit-card::after { right: 0.65rem; }
-
-.fazit-line-heading {
-  max-width: 42rem;
-  margin: 0.95rem auto 0.35rem;
-  color: var(--gold-dark);
-  font-family: 'Cinzel', serif;
-  text-align: left;
-}
-
-.fazit-line-heading:first-child { margin-top: 0.2rem; }
-
-.fazit-line-heading-section {
-  padding: 0 0 0.38rem;
-  border-bottom: 1px solid rgba(139, 105, 20, 0.26);
-  font-size: 0.83rem;
-  letter-spacing: 0.085em;
-  text-transform: uppercase;
-}
-
-.fazit-line-heading-subsection {
-  font-size: 0.78rem;
-  letter-spacing: 0.045em;
-}
-
-.fazit-line-list {
-  width: min(40rem, calc(100% - 1rem));
-  margin: 0.35rem auto 0.55rem;
-  padding-left: 1.5rem;
-  color: var(--ink);
-  text-align: left;
-  font: 0.92rem/1.5 'EB Garamond', serif;
-}
-
-.fazit-line-list li {
-  padding: 0.12rem 0 0.12rem 0.18rem;
-}
-
-.fazit-line-list li::marker {
-  color: var(--gold-dark);
-  font-family: 'Cinzel', serif;
-}
-
-.fazit-line-list-check {
-  padding-left: 0;
-  list-style: none;
-}
-
-.fazit-line-list-check li {
-  position: relative;
-  padding-left: 1.45rem;
-}
-
-.fazit-line-list-check li::before {
-  content: '□';
-  position: absolute;
-  left: 0;
-  top: 0.08rem;
-  color: var(--gold-dark);
-  font-family: 'Cinzel', serif;
-}
-
-.fazit-line-list-custom-icon {
-  padding-left: 0;
-  list-style: none;
-}
-
-.fazit-line-list-custom-icon li {
-  display: grid;
-  grid-template-columns: 1.35rem minmax(0, 1fr);
-  align-items: start;
-  gap: 0.55rem;
-  padding-left: 0;
-}
-
-.fazit-line-list-icon {
-  width: 1.2rem;
-  height: 1.2rem;
-  margin-top: 0.12rem;
-  object-fit: contain;
-}
-
-.fazit-line-text-plain {
-  padding-left: 0.2rem;
-}
-
-.fazit-line-text-plain p {
-  font-style: normal !important;
-}
-
-.fazit-line-text-note {
-  padding: 0.55rem 0.7rem;
-  border-left: 2px solid rgba(139, 105, 20, 0.55);
-  background: rgba(139, 105, 20, 0.07);
-}
-
-.fazit-line-text-quote {
-  gap: 0.25rem;
-  padding: 0.45rem 1rem;
-}
-
-.fazit-quote-mark {
-  flex: 0 0 auto;
-  margin-top: -0.15rem;
-  color: rgba(139, 105, 20, 0.6);
-  font: 2rem/1 'EB Garamond', serif;
-}
-
-.fazit-line-text-quote p {
-  font-size: 1rem !important;
-}
-
-.fazit-line-align-left { justify-content: flex-start; }
-.fazit-line-align-center { justify-content: center; }
-.fazit-line-align-right { justify-content: flex-end; }
-
-.fazit-token-size-small .fazit-token-icon { width: 2.25rem; height: 2.25rem; }
-.fazit-token-size-medium .fazit-token-icon { width: 3rem; height: 3rem; }
-.fazit-token-size-large .fazit-token-icon { width: 4rem; height: 4rem; }
-.fazit-token-size-small .fazit-token-caption { font-size: 0.56rem; }
-.fazit-token-size-large .fazit-token-caption { font-size: 0.7rem; }
-
-.fazit-token-icon img.is-flipped { transform: scaleX(-1); }
-
-.fazit-token-icon-symbol.fazit-token-variant-tile {
-  padding: 0.32rem;
-  border: 1px solid var(--gold);
-  border-radius: 5px;
-  background: var(--ink);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-}
-
-.fazit-token-icon-symbol.fazit-token-variant-seal {
-  padding: 0.32rem;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-  background: rgba(246, 232, 190, 0.7);
-  box-shadow: 0 0 0 2px var(--parchment), 0 0 0 3px rgba(139, 105, 20, 0.45);
-}
-
-@media (max-width: 1100px) {
-  .fazit-commandbar {
-    flex-wrap: wrap;
-  }
-
-  .fazit-draft-status {
-    flex: 1 1 100%;
-    margin-left: 0;
-  }
-
-  .fazit-editor-toolbar {
-    grid-template-columns: 1fr;
-  }
-
-  .fazit-lines-editor-head-actions {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 760px) {
-  #fazit-form-overlay {
-    padding: 8px;
-  }
-
-  #fazit-form-overlay .fazit-form-card {
-    width: calc(100vw - 16px);
-    height: calc(100dvh - 16px);
-    max-height: none;
-    padding: 1rem;
-  }
-
-  #fazit-form-overlay .fazit-form-grid {
-    overflow-y: auto;
-  }
-
-  #fazit-form-overlay .fazit-form-fields,
-  #fazit-form-overlay .fazit-form-preview-col {
-    overflow: visible;
-    min-width: 0;
-  }
-
-  .fazit-commandbar {
-    position: static;
-    gap: 0.35rem;
-  }
-
-  .fazit-commandbar-group {
-    flex: 1 1 100%;
-  }
-
-  .fazit-commandbar button {
-    flex: 1 1 0;
-  }
-
-  .fazit-outline-item {
-    flex-basis: 190px;
-  }
-
-  .fazit-editor-toolbar {
-    padding: 0.7rem;
-  }
-
-  .fazit-lines-editor-head-actions {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .fazit-add-block-btn {
-    justify-content: flex-start;
-  }
-
-  .fazit-line-editor-head {
-    flex-wrap: wrap;
-  }
-
-  .fazit-line-collapsed-summary {
-    order: 4;
-    flex: 1 1 100%;
-    padding-left: 2rem;
-  }
-
-  .fazit-heading-editor-fields,
-  #fazit-form-overlay .fazit-line-text-editor {
-    grid-template-columns: 1fr;
-  }
-
-  #fazit-form-overlay .fazit-line-tokens {
-    grid-template-columns: 1fr;
-  }
-
-  .fazit-token-main-fields {
-    grid-template-columns: 3.7rem minmax(0, 1fr);
-  }
-
-  .fazit-list-item-editor {
-    grid-template-columns: 1.25rem minmax(0, 1fr);
-  }
-
-  .fazit-list-item-actions {
-    grid-column: 2;
-    justify-content: flex-end;
-    padding-top: 0;
-  }
-
-  #fazit-form-overlay > .fazit-form-card > .comment-form-actions {
-    margin: 0 -1rem -1rem;
-    padding: 0.75rem 1rem;
-  }
-
-  .comment-fazit-card {
-    padding: 0.9rem;
-  }
+/* Fazit workbench. Posted reports are owned by comments-fazit-report.css. */
+#fazit-form-overlay { --report-accent:#355f56; --report-border:#cfc2a4; --report-muted:#766c59; padding:18px; }
+#fazit-form-overlay .fazit-form-card { width:min(1520px,calc(100vw - 36px)); height:min(96dvh,1120px); max-height:none; padding:1.5rem 1.75rem 0; gap:0; overflow:hidden; background:#f4eedf; color:#382e20; border:1px solid #b59a65; border-radius:10px; box-shadow:0 24px 80px #241b1459; }
+.fazit-workbench-head { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-bottom:1rem; }
+.fazit-workbench-kicker { color:var(--report-muted); font:600 .7rem/1.3 'Cinzel',serif; letter-spacing:.12em; }
+#fazit-form-overlay .comment-form-title { margin:.25rem 0; padding:0; border:0; font:600 1.75rem/1.25 'EB Garamond',serif; letter-spacing:0; text-transform:none; color:#352c20; }
+.fazit-workbench-head p { margin:0; color:var(--report-muted); font:1rem/1.4 'EB Garamond',serif; }
+.fazit-view-switch { display:flex; padding:4px; border:1px solid var(--report-border); border-radius:7px; background:#ebe3d1; }
+#fazit-form-overlay .fazit-view-switch button { border:0; border-radius:4px; padding:.6rem .8rem; background:transparent; color:#5b5140; cursor:pointer; font:.9rem/1.2 'EB Garamond',serif; }
+#fazit-form-overlay .fazit-view-switch button[aria-pressed="true"] { background:var(--report-accent); color:#fff9e9; }
+.fazit-assistant { flex:0 0 auto; margin-bottom:1rem; border-block:1px solid var(--report-border); }
+.fazit-assistant > summary { padding:.7rem 0; cursor:pointer; color:#635238; font:.9rem/1.3 'EB Garamond',serif; }
+#fazit-form-overlay .fazit-hint-panel { border:0; background:#eee5cf; margin-bottom:.7rem; max-height:27vh; overflow:auto; }
+#fazit-form-overlay .fazit-chat-panel[hidden], #fazit-form-overlay .fazit-hint-status:empty { display:none; }
+#fazit-form-overlay .fazit-form-grid { gap:0; min-height:0; padding-bottom:1rem; }
+#fazit-form-overlay .fazit-form-fields { flex:1 1 52%; min-width:0; gap:.9rem; padding:0 .8rem 1rem 0; scrollbar-width:thin; }
+#fazit-form-overlay .fazit-form-preview-col { min-width:0; max-width:52%; padding:0 0 1rem .8rem; scrollbar-width:thin; }
+#fazit-form-overlay .comment-live-preview { padding:1rem; border:1px solid var(--report-border); border-radius:7px; background:#e8dfc9; }
+#fazit-form-overlay .comment-live-preview-head { display:flex; justify-content:space-between; gap:.5rem; margin-bottom:1rem; }
+#fazit-form-overlay .comment-live-preview-head small { color:var(--report-muted); font:.78rem/1.3 'EB Garamond',serif; }
+.fazit-title-field { padding:.25rem 0; }
+#fazit-form-overlay label { font:600 .8rem/1.4 'EB Garamond',serif; letter-spacing:0; text-transform:none; color:#63543d; }
+#fazit-form-overlay input, #fazit-form-overlay textarea, #fazit-form-overlay select { min-width:0; border:1px solid var(--report-border); border-radius:4px; background:#fffcf3; color:#352c20; font:1rem/1.5 'EB Garamond',serif; padding:.55rem .65rem; }
+#fazit-form-overlay input:focus, #fazit-form-overlay textarea:focus, #fazit-form-overlay select:focus { border-color:var(--report-accent); outline:2px solid #355f5626; outline-offset:1px; }
+#fazit-form-overlay #fz-title { font-size:1.4rem; min-height:3rem; border-width:0 0 1px; border-radius:0; background:transparent; padding-inline:0; }
+.fazit-commandbar { display:flex; flex-wrap:wrap; align-items:center; gap:.4rem; padding:.55rem 0; border-block:1px solid var(--report-border); }
+.fazit-commandbar-group { display:flex; gap:.25rem; }
+#fazit-form-overlay .fazit-commandbar button { background:transparent; border:1px solid transparent; border-radius:4px; padding:.4rem; color:#63543d; font:.8rem/1.3 'EB Garamond',serif; cursor:pointer; }
+#fazit-form-overlay button:disabled { opacity:.4; cursor:default; }
+#fazit-form-overlay button:focus-visible, #fazit-form-overlay summary:focus-visible { outline:2px solid var(--report-accent); outline-offset:2px; }
+.fazit-draft-status { margin-left:auto; color:var(--report-muted); font:.76rem/1.3 'EB Garamond',serif; }
+.fazit-draft-status > span { color:var(--report-accent); margin-right:.3rem; }
+.fazit-outline { border:1px solid var(--report-border); border-radius:5px; }
+.fazit-outline-head { display:flex; justify-content:space-between; padding:.5rem .65rem; color:var(--report-muted); font:.72rem/1.3 'Cinzel',serif; }
+.fazit-outline-list { display:flex; gap:.35rem; padding:0 .45rem .45rem; overflow-x:auto; scrollbar-width:thin; }
+.fazit-outline-item { flex:0 0 185px; display:grid; grid-template-columns:20px 20px minmax(0,1fr) auto; align-items:center; gap:.3rem; min-width:0; padding:.4rem; border:1px solid transparent; border-radius:4px; background:#eae2ce; text-align:left; cursor:pointer; }
+.fazit-outline-item.is-active { border-color:#a2b0a2; background:#e0e8df; }
+.fazit-outline-index, .fazit-outline-glyph { color:var(--report-accent); text-align:center; font-size:.8rem; }
+.fazit-outline-copy { min-width:0; display:grid; gap:.2rem; }
+.fazit-outline-copy strong { color:#4b493b; font:600 .75rem/1.1 'EB Garamond',serif; }
+.fazit-outline-copy small { overflow:hidden; white-space:nowrap; text-overflow:ellipsis; color:var(--report-muted); font:.75rem/1.2 'EB Garamond',serif; }
+.fazit-editor-toolbar { display:grid; gap:.7rem; padding:.8rem; border:1px solid var(--report-border); border-radius:6px; background:#ede5d2; }
+.fazit-report-add-menu > summary { padding:.6rem .2rem; color:var(--report-accent); cursor:pointer; font:600 .9rem/1.3 'EB Garamond',serif; }
+.fazit-report-add-menu > summary small { margin-left:.5rem; color:var(--report-muted); font-weight:400; }
+.fazit-editor-toolbar-copy { display:grid; gap:.15rem; }
+.fazit-editor-toolbar-kicker { color:var(--report-muted); font:.65rem/1.3 'Cinzel',serif; letter-spacing:.04em; }
+.fazit-editor-toolbar-copy strong { font:600 1.05rem/1.3 'EB Garamond',serif; }
+.fazit-editor-toolbar-copy small { color:var(--report-muted); font-size:.82rem; }
+.fazit-report-starters { display:grid; grid-template-columns:1fr 1fr; gap:.4rem; }
+.fazit-report-starters button { display:flex; align-items:center; gap:.5rem; min-width:0; padding:.55rem; border:1px solid #cbbd9a; border-radius:4px; background:#fffbef; color:#443c2b; font:.85rem/1.3 'EB Garamond',serif; text-align:left; cursor:pointer; }
+.fazit-report-starters button:hover { border-color:var(--report-accent); background:#eef1e6; }
+.fazit-report-starters img { width:25px; height:25px; object-fit:contain; flex-shrink:0; }
+.fazit-lines-editor-head-actions { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.35rem; }
+.fazit-add-block-btn { display:flex; align-items:center; justify-content:center; gap:.35rem; padding:.55rem .3rem; border:1px solid var(--report-border); border-radius:4px; background:transparent; color:#5d503d; font:.78rem/1.2 'EB Garamond',serif; cursor:pointer; }
+#fazit-form-overlay .fazit-lines-editor { display:flex; flex-direction:column; gap:0; }
+.fazit-line-editor { min-width:0; border:1px solid var(--report-border); border-radius:6px; background:#fffaf0; }
+.fazit-line-editor.is-active { border-color:#8b9b84; box-shadow:0 0 0 2px #355f5610; }
+.fazit-line-editor.is-dragging { opacity:.45; }
+.fazit-line-editor.is-drop-before { box-shadow:0 -4px var(--report-accent); }
+.fazit-line-editor.is-drop-after { box-shadow:0 4px var(--report-accent); }
+.fazit-line-editor-head { display:flex; gap:.4rem; align-items:center; min-height:2.7rem; padding:.35rem .5rem; border-bottom:1px solid #e5dbc3; background:#f1ead9; border-radius:6px 6px 0 0; }
+.fazit-line-drag-handle { flex:0 0 22px; background:transparent; color:#8a7c64; border:0; cursor:grab; }
+.fazit-line-kind { display:flex; align-items:center; gap:.4rem; color:#5c513e; }
+.fazit-line-kind strong { font:600 .85rem/1.2 'EB Garamond',serif; }
+.fazit-line-kind small { color:#9b8b6b; font-size:.7rem; }
+.fazit-line-order-actions { margin-left:auto; display:flex; gap:.15rem; }
+.fazit-line-order-actions button, .fazit-token-editor-actions button, .fazit-list-item-actions button { min-width:26px; height:28px; border:1px solid #d6c9ae; border-radius:3px; background:#fffaf0; color:#6a5d45; cursor:pointer; }
+.fazit-line-editor-body { padding:.85rem; }
+.fazit-line-actions { display:flex; flex-wrap:wrap; align-items:center; gap:.5rem; padding:0 .85rem .85rem; }
+.fazit-line-collapsed-summary { display:none; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:var(--report-muted); font:italic .85rem/1.3 'EB Garamond',serif; }
+.fazit-line-editor.is-collapsed .fazit-line-editor-body, .fazit-line-editor.is-collapsed .fazit-line-actions, .fazit-line-editor.is-collapsed > .fazit-person-picker { display:none; }
+.fazit-line-editor.is-collapsed .fazit-line-collapsed-summary { display:block; flex:1; }
+.fazit-editor-toolbar-inline { margin:.35rem 0 .8rem; }
+.fazit-editor-toolbar-inline > summary { padding:.3rem; text-align:center; color:#827154; font:.8rem/1.4 'EB Garamond',serif; cursor:pointer; }
+.fazit-editor-toolbar-inline .fazit-lines-editor-head-actions { padding:.5rem; border:1px dashed var(--report-border); border-radius:5px; }
+.fazit-heading-editor-fields { display:grid; grid-template-columns:minmax(0,1fr) 8rem; gap:.7rem; }
+.fazit-line-text-editor { display:grid; gap:.65rem; }
+#fazit-form-overlay .fazit-line-text-editor textarea { min-height:7rem; resize:vertical; }
+.fazit-line-text-editor label { display:flex; align-items:center; gap:.5rem; }
+#fazit-form-overlay .fazit-line-text-editor select { width:auto; padding-block:.25rem; }
+.fazit-list-editor { display:grid; gap:.5rem; }
+.fazit-list-item-editor { display:grid; grid-template-columns:22px minmax(0,1fr) auto; align-items:start; gap:.4rem; }
+.fazit-list-item-marker { padding-top:.55rem; color:var(--report-accent); }
+.fazit-list-item-marker img { width:22px; height:22px; object-fit:contain; }
+#fazit-form-overlay .fazit-list-item-editor textarea { min-height:3rem; resize:vertical; }
+.fazit-list-item-actions { display:flex; gap:.15rem; padding-top:.5rem; }
+.fazit-list-icon-control { display:flex; flex-wrap:wrap; align-items:center; gap:.4rem; font-size:.8rem; }
+.fazit-list-icon-picker { display:flex; align-items:center; gap:.4rem; }
+.fazit-list-icon-picker img { width:24px; height:24px; object-fit:contain; }
+.fazit-list-style, .fazit-line-alignment { display:flex; align-items:center; gap:.4rem; }
+#fazit-form-overlay .fazit-line-actions select { width:auto; padding-block:.25rem; }
+#fazit-form-overlay .fazit-line-actions button { border:1px solid var(--report-border); border-radius:4px; background:#f6efdf; color:#5b4b30; padding:.4rem .55rem; font:.8rem/1.3 'EB Garamond',serif; cursor:pointer; }
+.fazit-capacity-count { color:var(--report-muted); margin-left:.35rem; }
+#fazit-form-overlay .fazit-line-tokens { display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:.65rem; padding:0; }
+.fazit-token-editor { display:block; min-width:0; padding:0; border:1px solid var(--report-border); border-radius:5px; background:#f4eddd; }
+.fazit-token-editor-head { display:flex; align-items:center; justify-content:space-between; gap:.4rem; padding:.4rem; font-size:.78rem; color:var(--report-muted); }
+.fazit-token-editor-actions { display:flex; gap:.15rem; }
+.fazit-token-main-fields { display:grid; grid-template-columns:58px minmax(0,1fr); align-items:center; gap:.6rem; padding:.6rem; }
+#fazit-form-overlay .fazit-token-label-input { width:100%; }
+.fazit-token-portrait-btn, .fazit-token-symbol-preview { width:52px; height:52px; border:1px solid #bba478; border-radius:5px; background:#fffbef; padding:3px; cursor:pointer; }
+.fazit-token-portrait-btn { border-radius:50%; overflow:hidden; }
+.fazit-token-portrait-btn img, .fazit-token-symbol-preview img { width:100%; height:100%; object-fit:contain; }
+.fazit-token-portrait-btn img { object-fit:cover; }
+.fazit-token-symbol-picker { min-width:0; }
+#fazit-form-overlay .fazit-token-icon-input { width:100%; font-size:.8rem; }
+.fazit-token-address { flex-basis:100%; }
+.fazit-token-presentation { border-top:1px solid #ded2b8; }
+.fazit-token-presentation > summary { padding:.4rem .6rem; color:var(--report-muted); cursor:pointer; font-size:.8rem; }
+.fazit-token-options { display:flex; flex-wrap:wrap; gap:.5rem; padding:.5rem; }
+.fazit-token-option { flex:1; min-width:70px; }
+.fazit-token-option-btn { align-self:end; padding:.4rem; }
+.fazit-symbol-library { flex:1 1 100%; border-top:1px solid var(--report-border); }
+.fazit-symbol-library > summary { padding:.5rem 0; cursor:pointer; font-size:.85rem; }
+.fazit-symbol-presets { display:grid; grid-template-columns:repeat(auto-fit,minmax(105px,1fr)); gap:.35rem; }
+#fazit-form-overlay .fazit-symbol-preset { display:flex; align-items:center; gap:.4rem; text-align:left; }
+.fazit-symbol-preset img { width:25px; height:25px; object-fit:contain; }
+.fazit-connector-group { display:flex; flex:1 1 100%; align-items:center; gap:.5rem; font-size:.8rem; }
+#fazit-form-overlay .fazit-connector-buttons { display:flex; flex-wrap:wrap; gap:.25rem; margin:0; padding:0; border:0; }
+#fazit-form-overlay .fazit-connector-btn { min-width:29px; width:auto; padding:.3rem; }
+.fazit-person-picker { padding:.8rem; border-top:1px solid var(--report-border); }
+.fazit-person-picker-head { display:flex; gap:.4rem; }
+.fazit-person-picker-head input { flex:1; }
+.fazit-person-picker-list { margin-top:.5rem; max-height:230px; overflow:auto; }
+#fazit-form-overlay .fazit-person-picker-list .cf-char-option { font:inherit; cursor:pointer; }
+.fazit-line-empty, .fazit-lines-empty { color:var(--report-muted); font:italic .9rem/1.5 'EB Garamond',serif; }
+.fazit-preview-empty { padding:2.5rem 1.4rem; border:1px dashed #c5b691; text-align:center; background:#fcf7e9; }
+.fazit-preview-empty > span { color:#8a7751; letter-spacing:.14em; font:.7rem/1.4 'Cinzel',serif; }
+.fazit-preview-empty h3 { font:600 1.65rem/1.2 'EB Garamond',serif; margin:1rem 0; color:#4a3b24; }
+.fazit-preview-empty p { color:#7a6d54; font:1rem/1.6 'EB Garamond',serif; }
+#fazit-form-overlay .fmt-hint { font:.8rem/1.5 'EB Garamond',serif; color:var(--report-muted); }
+#fazit-form-overlay .comment-form-actions { flex:0 0 auto; margin:0 -1.75rem; padding:.9rem 1.75rem; border-top:1px solid var(--report-border); background:#ebe2cc; }
+#fazit-form-overlay .comment-btn-submit { background:var(--report-accent); color:#fff9e9; border:1px solid #294f46; border-radius:4px; padding:.65rem 1.5rem; font-size:.85rem; }
+#fazit-form-overlay .comment-btn-cancel { border-radius:4px; font-size:.85rem; }
+#fazit-form-overlay[data-fazit-view="write"] #fz-preview-pane, #fazit-form-overlay[data-fazit-view="write"] .fazit-splitter { display:none; }
+#fazit-form-overlay[data-fazit-view="preview"] #fz-fields-pane, #fazit-form-overlay[data-fazit-view="preview"] .fazit-splitter { display:none; }
+#fazit-form-overlay[data-fazit-view="preview"] #fz-preview-pane { flex:1; max-width:none; padding:0; }
+@media (max-width:1000px) {
+  .fazit-draft-status { width:100%; margin:.2rem 0 0; }
+  .fazit-lines-editor-head-actions { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:760px) {
+  #fazit-form-overlay { padding:0; }
+  #fazit-form-overlay .fazit-form-card { width:100vw; height:100dvh; padding:1rem 1rem 0; border-radius:0; }
+  .fazit-workbench-head { align-items:start; flex-direction:column; gap:.7rem; }
+  #fazit-form-overlay .comment-form-title { font-size:1.5rem; }
+  .fazit-workbench-head p { display:none; }
+  .fazit-view-switch { width:100%; }
+  #fazit-form-overlay .fazit-view-switch button { flex:1; }
+  .fazit-view-switch button[data-fazit-view="split"] { display:none; }
+  #fazit-form-overlay .fazit-form-grid { display:flex; flex-direction:column; overflow:hidden; }
+  #fazit-form-overlay .fazit-form-fields { overflow-y:auto; padding:0 0 1rem; }
+  #fazit-form-overlay .fazit-form-preview-col { display:none; max-width:none; padding:0; overflow-y:auto; }
+  #fazit-form-overlay[data-fazit-view="preview"] .fazit-form-preview-col { display:block; }
+  #fazit-form-overlay .fazit-splitter { display:none; }
+  .fazit-line-editor-head { flex-wrap:wrap; }
+  .fazit-line-kind { flex:1; }
+  .fazit-line-order-actions { margin-left:0; }
+  .fazit-heading-editor-fields { grid-template-columns:1fr; }
+  .fazit-list-item-editor { grid-template-columns:22px minmax(0,1fr); }
+  .fazit-list-item-actions { grid-column:2; justify-content:end; padding-top:0; }
+  #fazit-form-overlay .comment-live-preview { padding:.5rem; }
+  #fazit-form-overlay .comment-live-preview-head { flex-direction:column; }
+  #fazit-form-overlay .comment-form-actions { margin:0 -1rem; padding:.75rem 1rem; }
 }

@@ -138,20 +138,16 @@ function renderFazitLineMarkup(line) {
   return `<div class="fazit-line fazit-line-align-${line.align}">${line.tokens.map(renderFazitTokenMarkup).join('')}</div>`;
 }
 
-function renderFazitLineDivider() {
-  return '<div class="fazit-line-divider" aria-hidden="true"><span class="fazit-line-divider-glyph">✦</span></div>';
-}
-
-function renderCommentFazitCard(item) {
+function renderCommentFazitCard(item, { editable = false } = {}) {
   const lines = item.lines.map((line, index) => {
-    const previous = item.lines[index - 1];
-    const needsDivider = index > 0 && line.kind !== 'heading' && previous?.kind !== 'heading';
-    return `${needsDivider ? renderFazitLineDivider() : ''}${renderFazitLineMarkup(line)}`;
+    const edit = editable ? `<button class="fazit-preview-edit" type="button" data-action="focus-fazit-line" data-line-id="${escapeHtml(line.id)}" aria-label="Abschnitt ${index + 1} bearbeiten">Bearbeiten</button>` : '';
+    const editTarget = editable ? ` data-action="focus-fazit-line" data-line-id="${escapeHtml(line.id)}"` : '';
+    return `<div class="fazit-report-block fazit-report-block-${line.kind}"${editTarget}>${edit}${renderFazitLineMarkup(line)}</div>`;
   }).join('');
-  return `<div class="comment-fazit-card">
-    <div class="comment-fazit-title">${escapeHtml(item.title)}</div>
+  return `<article class="comment-fazit-card">
+    <header class="fazit-report-head"><img src="../IconOrdner/Fazit Icons/Dokument.png" alt=""><div><span class="fazit-report-kicker">Aus der Chronik · Szenenbericht</span><h2 class="comment-fazit-title">${escapeHtml(item.title)}</h2></div></header>
     <div class="comment-fazit-lines">${lines}</div>
-  </div>`;
+  </article>`;
 }
 
 function renderCommentFazit(comment, idx, item) {

@@ -1,8 +1,8 @@
 // Pure editor markup and Fazit-specific presets. State changes stay in comments-fazit.js;
 // this file owns the increasingly rich block editor UI.
 const FAZIT_LINE_KIND_META = Object.freeze({
-  tokens: { label: 'Symbolzeile', glyph: '✦' },
-  text: { label: 'Textabsatz', glyph: '¶' },
+  tokens: { label: 'Icons & Personen', glyph: '✦' },
+  text: { label: 'Berichtsabsatz', glyph: '¶' },
   heading: { label: 'Überschrift', glyph: 'H' },
   list: { label: 'Liste', glyph: '☷' }
 });
@@ -33,9 +33,21 @@ const FAZIT_SYMBOL_PRESETS = Object.freeze([
 const FAZIT_BLOCK_TYPES = Object.freeze([
   { kind: 'heading', label: 'Überschrift', glyph: 'H' },
   { kind: 'list', label: 'Liste', glyph: '☷' },
-  { kind: 'tokens', label: 'Symbolzeile', glyph: '✦' },
-  { kind: 'text', label: 'Textabsatz', glyph: '¶' }
+  { kind: 'tokens', label: 'Icons & Personen', glyph: '✦' },
+  { kind: 'text', label: 'Berichtsabsatz', glyph: '¶' }
 ]);
+
+const FAZIT_REPORT_SECTIONS = Object.freeze({
+  events: { title: 'Was geschehen ist', kind: 'text', icon: '../IconOrdner/Fazit Icons/Dokument.png' },
+  decisions: { title: 'Ergebnisse & Entscheidungen', kind: 'list', icon: '../IconOrdner/Fazit Icons/Vereinbarung.png' },
+  people: { title: 'Beteiligte & Beziehungen', kind: 'tokens', icon: '../IconOrdner/Fazit Icons/Handschlag.png' },
+  questions: { title: 'Offene Fragen & nächste Schritte', kind: 'list', icon: '../IconOrdner/Fazit Icons/Schlüssel.png' }
+});
+
+function renderFazitReportStarters() {
+  return `<div class="fazit-report-starters" aria-label="Berichtsabschnitt ergänzen">${Object.entries(FAZIT_REPORT_SECTIONS).map(([key, section]) =>
+    `<button type="button" data-action="add-fazit-report-section" data-report-section="${key}"><img src="${escapeHtml(section.icon)}" alt=""><span>${section.title}</span></button>`).join('')}</div>`;
+}
 
 function getFazitLineKindMeta(kind) {
   return FAZIT_LINE_KIND_META[kind] || FAZIT_LINE_KIND_META.tokens;
@@ -51,7 +63,7 @@ function renderFazitAddBlockButtons(afterLineId = '', disabled = false) {
   </button>`).join('');
 }
 
-function renderFazitBlockToolbar({ afterLineId = '', lineCount = 0, position = 0, variant = 'primary' } = {}) {
+function renderFazitBlockToolbar({ afterLineId = '', lineCount = 0, position = 0, variant = 'primary', expanded = true } = {}) {
   const inline = variant === 'inline';
   const limitReached = lineCount >= FAZIT_CONTENT_LIMITS.maxLines;
   const safePosition = Math.max(1, Number(position) || 1);
@@ -65,10 +77,12 @@ function renderFazitBlockToolbar({ afterLineId = '', lineCount = 0, position = 0
     : `<span class="fazit-editor-toolbar-kicker">Bausteine · ${lineCount} von ${FAZIT_CONTENT_LIMITS.maxLines}</span>
        <strong>Was möchtest du festhalten?</strong>
        <small>${limitReached ? `Maximal ${FAZIT_CONTENT_LIMITS.maxLines} Bausteine erreicht.` : 'Bausteine lassen sich jederzeit verschieben, duplizieren und anders gestalten.'}</small>`;
-  return `<div class="fazit-editor-toolbar${inline ? ' fazit-editor-toolbar-inline' : ''}" aria-label="${label}">
+  if (inline) return `<details class="fazit-editor-toolbar-inline"><summary>＋ Nach Abschnitt ${safePosition} ergänzen</summary><div class="fazit-lines-editor-head-actions">${renderFazitAddBlockButtons(afterLineId, limitReached)}</div></details>`;
+  return `<details class="fazit-report-add-menu"${expanded ? ' open' : ''}><summary>Abschnitt hinzufügen <small>Vorlagen, Icons, Listen & Text</small></summary><div class="fazit-editor-toolbar" aria-label="${label}">
     <div class="fazit-editor-toolbar-copy">${copy}</div>
+    ${renderFazitReportStarters()}
     <div class="fazit-lines-editor-head-actions">${renderFazitAddBlockButtons(afterLineId, limitReached)}</div>
-  </div>`;
+  </div></details>`;
 }
 
 function getFazitLineSummary(line, maxLength = 72) {
@@ -173,8 +187,10 @@ function renderFazitTokenEditor(line, token) {
         <button type="button" class="fazit-token-symbol-preview" data-action="pick-fazit-token-icon" data-line-id="${safeLineId}" data-token-id="${safeTokenId}" title="Symbol im Icon-Verzeichnis wählen">
           ${imageSrc ? `<img src="${imageSrc}" alt="">` : '<span aria-hidden="true">＋</span>'}
         </button>
-        <input type="text" class="fazit-token-icon-input" value="${safeIcon}" placeholder="Icon-URL oder Verzeichnis" data-action="update-fazit-token-icon" data-line-id="${safeLineId}" data-token-id="${safeTokenId}" aria-label="Icon-Adresse">
       </div>`;
+  const iconAddressField = token.kind === 'person' ? '' : `<label class="fazit-token-option fazit-token-address">Icon-Adresse
+    <input type="text" class="fazit-token-icon-input" value="${safeIcon}" placeholder="Icon-URL oder Verzeichnis" data-action="update-fazit-token-icon" data-line-id="${safeLineId}" data-token-id="${safeTokenId}">
+  </label>`;
   const variantSelect = token.kind === 'person' ? '' : `<label class="fazit-token-option">Darstellung
       <select data-action="update-fazit-token-variant" data-line-id="${safeLineId}" data-token-id="${safeTokenId}">
         <option value="plain"${token.variant === 'plain' ? ' selected' : ''}>Frei</option>
@@ -199,7 +215,7 @@ function renderFazitTokenEditor(line, token) {
         <input type="text" class="fazit-token-label-input" value="${escapeHtml(token.label)}" maxlength="80" placeholder="${token.kind === 'person' ? 'Name' : 'Optionaler Text'}" data-action="update-fazit-token-label" data-line-id="${safeLineId}" data-token-id="${safeTokenId}">
       </label>
     </div>
-    <div class="fazit-token-options">
+    <details class="fazit-token-presentation"><summary>Darstellung anpassen</summary><div class="fazit-token-options">
       <label class="fazit-token-option">Größe
         <select data-action="update-fazit-token-size" data-line-id="${safeLineId}" data-token-id="${safeTokenId}">
           <option value="small"${token.size === 'small' ? ' selected' : ''}>Klein</option>
@@ -209,7 +225,8 @@ function renderFazitTokenEditor(line, token) {
       </label>
       ${variantSelect}
       ${mirrorButton}
-    </div>
+      ${iconAddressField}
+    </div></details>
   </article>`;
 }
 

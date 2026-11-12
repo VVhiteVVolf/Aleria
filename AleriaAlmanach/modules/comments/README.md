@@ -84,3 +84,53 @@ Prüfungen schützen Kommentartransaktionen, Abonnementwiederverwendung, die
 Aktivitätsprojektion und den kompakten Synchronisationsstatus. Der lokale
 Browserablauf samt synthetischen Daten und Sichtbelegen liegt für diesen Fix unter
 `diagnostics/comments-loading-20261105/fix-browser/`.
+
+## Fazit als Szenenbericht
+
+`comments-fazit-render.js` normalisiert weiterhin das bestehende Fazitformat.
+Alte Berichte bleiben ohne Migration les- und bearbeitbar. Gespeicherte Berichte
+und die Vorschau verwenden denselben Renderer; nur die Vorschau bekommt
+Bearbeitungssprünge. Die Berichtsgestaltung liegt in
+`styles/comments-fazit-report.css`, die Werkbank in `styles/comments-fazit.css`.
+
+Die Werkbank bietet Schreiben, Nebeneinander und Vorschau; auf kleinen
+Bildschirmen Schreiben oder Vorschau. Ihre Ansicht bleibt am Dialog,
+nicht in den Kommentardaten. Die vier Abschnittsvorlagen ergänzen jeweils eine
+Überschrift und den passenden Inhalt als einen rückgängig machbaren Schritt.
+Freie Absätze, Listen, Icons, Personen, Verbindungssymbole und vorhandene
+Darstellungsoptionen bleiben verfügbar. Entwürfe, Verlauf, Verschieben und
+Speicheradapter behalten ihre bisherigen Verantwortlichkeiten.
+Das Menü zum Hinzufügen von Abschnitten startet mobil eingeklappt. Sein
+Öffnungszustand bleibt bei den laufenden Editoraktualisierungen erhalten.
+
+## Optionale gemalte Sprechblasen
+
+Nur `sessionAnimatedBubbles === true` auf einer interaktiven Modulseite aktiviert
+die experimentelle Darstellung. Fehlende, falsche oder anders typisierte Werte
+bleiben ausgeschaltet. Beide Moduleditoren besitzen denselben Haken.
+Der Seitensanitizer übernimmt ausschließlich den bewussten Opt-in.
+Es gibt keine automatische Änderung bestehender Module.
+
+`comments-page.js` setzt die Eigenschaft am lokalen Szenencontainer;
+`styles/comment-bubble-art.css` besitzt die davon abhängigen Regeln.
+Sechs transparente Rasterrahmen gestalten Flirt, Gebet, Gesang, Tiersprache,
+Telepathie, Zauberformeln und Wahnsinn; Zauberformeln teilen den arkanen Rahmen.
+Andere Beitragsarten behalten ihre Gestaltung. Inhalt und Beschriftung
+bleiben HTML. Die Animation betrifft nur das dekorative Leuchten; reduzierte
+Bewegung wird berücksichtigt. Quellen und Bildmanifest liegen unter
+`assets/speech-frame-lab`, Prompts unter `docs/art/speech-frame-lab`.
+
+## Kompakte Szenenbedienung
+
+`styles/session-controls-compact.css` besitzt die kleinere Szenennavigation,
+Uhr-/Werkzeugbuttons, Suche, Redestab- und Einfügeleisten. Die Einleitung startet
+eingeklappt. Auf schmalen Ansichten wird das Szenenbild als kleinerer Streifen
+gezeigt. Die bisherige Mindesthöhe des Kommentarbereichs wird innerhalb einer
+Szene aufgehoben, damit Header und Footer im verfügbaren Raum bleiben.
+Schrift- und Avatarregler behalten ihre Bedeutung; Dialogtexte werden
+dadurch nicht verkleinert. Andere Modulseiten sind nicht betroffen.
+
+Fachprüfungen: `fazit-block-editor.test.mjs`, `scene-presentation.test.mjs` und
+`comments-controls.test.mjs`, gemeinsam in der nativen Gruppe
+`scene-presentation`. Der lokale Browserbeleg für diesen Ausbau liegt unter
+`diagnostics/fazit-redesign-20261112/`.

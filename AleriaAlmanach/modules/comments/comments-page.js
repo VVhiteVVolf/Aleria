@@ -97,7 +97,7 @@ function buildSessionPage(page, entry, pageIndex, total) {
   const nav = buildNav(page, pageIndex, total);
   const focusMode = isSessionFocusModeEnabled();
   const intro = page.sessionIntro
-    ? `<details class="session-intro" open>
+    ? `<details class="session-intro">
         <summary class="session-intro-toggle">
           <span class="session-intro-label-open">Einleitung einklappen</span>
           <span class="session-intro-label-closed">Einleitung anzeigen</span>
@@ -111,7 +111,7 @@ function buildSessionPage(page, entry, pageIndex, total) {
   const threadId = getSessionThreadId(entry.id, getPageCommentThreadKey(page, pageIndex));
   return `
     ${nav}
-    <div class="session-page${focusMode ? ' session-focus-mode' : ''}">
+    <div class="session-page${focusMode ? ' session-focus-mode' : ''}" data-animated-bubbles="${page.sessionAnimatedBubbles === true}">
       <div class="session-art-col" id="modal-img-col-el" style="width:${imgW};">
         <img src="${sanitizeImageSrc(page.image || 'https://i.imgur.com/pEuJo6v.png')}" alt="${escapeHtml(entry.title)}" loading="eager" decoding="async" fetchpriority="high">
         <div class="session-art-overlay"></div>

@@ -65,12 +65,12 @@ function fazitPersonOptionsMarkup(characters) {
   return characters.map(character => {
     const safeName = escapeHtml(character.name || 'Unbenannt');
     const portraitSrc = sanitizeImageSrc(character.portrait || '');
-    return `<div class="cf-char-option" data-action="select-fazit-token-person" data-character-id="${escapeHtml(character.id)}">
+    return `<button type="button" class="cf-char-option" data-action="select-fazit-token-person" data-character-id="${escapeHtml(character.id)}">
       ${portraitSrc
         ? `<img src="${portraitSrc}" alt="${safeName}" loading="lazy" decoding="async">`
         : `<div class="cf-char-option-placeholder">${escapeHtml(getInitialChar(character.name))}</div>`}
       <div class="cf-char-option-name">${safeName}</div>
-    </div>`;
+    </button>`;
   }).join('');
 }
 
@@ -128,8 +128,8 @@ function updateFazitPreview() {
   if (!preview) return;
   const item = collectFazitFormPayload() || { title: _fazitTitle.trim() || 'Fazit', lines: [] };
   preview.innerHTML = item.lines.length
-    ? renderCommentFazitCard(item)
-    : '<p class="fazit-preview-empty">Noch nichts zum Anzeigen — füge Zeilen und Bausteine hinzu.</p>';
+    ? renderCommentFazitCard(item, { editable: true })
+    : '<div class="fazit-preview-empty"><span>Szenenbericht</span><h3>Das bleibt von eurer Szene.</h3><p>Halte Ereignisse, Entscheidungen und offene Fragen fest. Hier entsteht während des Schreibens dein fertiger Bericht.</p></div>';
 }
 
 function updateFazitTitle(value) {
@@ -151,6 +151,21 @@ function addFazitLine(kind = 'tokens', afterLineId = '') {
   finishFazitContentMutation({ renderLines: true });
   const field = document.querySelector(`[data-line-id="${CSS.escape(line.id)}"] input, [data-line-id="${CSS.escape(line.id)}"] textarea`);
   field?.focus({ preventScroll: true });
+}
+
+function addFazitReportSection(key) {
+  if (!Object.hasOwn(FAZIT_REPORT_SECTIONS, key)) return;
+  const section = FAZIT_REPORT_SECTIONS[key];
+  if (!section || _fazitLines.length > FAZIT_CONTENT_LIMITS.maxLines - 2) return;
+  captureFazitHistory();
+  const heading = newFazitLine('heading');
+  heading.text = section.title;
+  const body = newFazitLine(section.kind);
+  if (body.kind === 'list') body.bulletIcon = section.icon;
+  _fazitLines.push(heading, body);
+  _fazitActiveLineId = body.id;
+  finishFazitContentMutation({ renderLines: true });
+  focusFazitLine(body.id);
 }
 
 function updateFazitLineText(lineId, value) {
@@ -472,7 +487,11 @@ function closeFazitPersonPicker() {
 }
 
 function filterFazitPersonPicker(value) {
-  _fazitPersonSearch = String(value || '');
+  const nextSearch = String(value || '');
+  // The delegated input and change events can deliver the same value. Replacing
+  // the results again on blur would remove the option between pointerdown/click.
+  if (_fazitPersonSearch === nextSearch) return;
+  _fazitPersonSearch = nextSearch;
   const list = document.querySelector('[data-fazit-person-list]');
   if (!list) return;
   list.innerHTML = fazitPersonOptionsMarkup(filterFazitPersonCharacters(_fazitPersonSearch));
@@ -507,6 +526,7 @@ function resetFazitForm() {
   _fazitActiveLineId = '';
   _fazitDraftStatus = 'idle';
   _fazitHistory.reset();
+  setFazitWorkbenchView(window.matchMedia?.('(max-width:760px)')?.matches ? 'write' : 'split');
   if (typeof resetFazitHintPanel === 'function') resetFazitHintPanel();
   const title = document.getElementById('fz-title');
   if (title) title.value = _fazitTitle;
@@ -529,7 +549,7 @@ function openFazitForm() {
   cleanupOldFazitDrafts();
   const restored = restoreCurrentFazitDraft();
   if (!restored) {
-    const line = newFazitLine();
+    const line = newFazitLine('text');
     _fazitLines = [line];
     _fazitActiveLineId = line.id;
   }
@@ -572,7 +592,7 @@ function openEditFazitForm(commentId) {
 const FAZIT_PREVIEW_WIDTH_MIN = 280;
 const FAZIT_PREVIEW_WIDTH_MAX_RATIO = 0.6;
 const FAZIT_PREVIEW_WIDTH_STEP = 24;
-let _fazitPreviewWidth = 420;
+let _fazitPreviewWidth = 560;
 let _fazitSplitterDragState = null;
 
 function applyFazitPreviewWidth(width) {

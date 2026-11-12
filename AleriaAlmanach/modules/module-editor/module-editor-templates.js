@@ -674,6 +674,7 @@ function createDefaultSceneSessionPage(index = 0) {
     image: '',
     imageWidth: 36,
     sessionPage: true,
+    sessionAnimatedBubbles: false,
     sessionIntro: 'Einleitung der Szene. Beschreibe Ort, Anlass und Stimmung. Der eigentliche Szenenverlauf entsteht später über Kommentare.',
     sessionHint: 'Führe diese Szene als Kommentar fort.',
     sessionEmptyTitle: 'Die Szene ist offen',

@@ -81,7 +81,11 @@ function renderFazitEditorChrome() {
   const outline = document.getElementById('fz-outline');
   if (outline) outline.innerHTML = renderFazitOutline(_fazitLines, _fazitActiveLineId);
   const primaryToolbar = document.getElementById('fz-primary-toolbar');
-  if (primaryToolbar) primaryToolbar.innerHTML = renderFazitBlockToolbar({ lineCount: _fazitLines.length });
+  if (primaryToolbar) {
+    const expanded = primaryToolbar.querySelector?.('.fazit-report-add-menu')?.open
+      ?? !window.matchMedia?.('(max-width:760px)')?.matches;
+    primaryToolbar.innerHTML = renderFazitBlockToolbar({ lineCount: _fazitLines.length, expanded });
+  }
 }
 
 function saveCurrentFazitDraft() {
@@ -170,12 +174,22 @@ function setActiveFazitLine(lineId) {
 function focusFazitLine(lineId) {
   const line = findFazitLine(lineId);
   if (!line) return;
+  if (document.getElementById('fazit-form-overlay')?.dataset.fazitView === 'preview') setFazitWorkbenchView('write');
   line.collapsed = false;
   _fazitActiveLineId = line.id;
   renderFazitLinesEditor();
   const section = document.querySelector(`[data-fazit-line][data-line-id="${CSS.escape(line.id)}"]`);
   section?.scrollIntoView?.({ behavior: 'smooth', block: 'center' });
   section?.querySelector?.('input, textarea, select, button')?.focus?.({ preventScroll: true });
+}
+
+function setFazitWorkbenchView(view) {
+  const overlay = document.getElementById('fazit-form-overlay');
+  if (!overlay) return;
+  overlay.dataset.fazitView = ['write', 'preview'].includes(view) ? view : 'split';
+  overlay.querySelectorAll('[data-action="set-fazit-workbench-view"]').forEach(button => {
+    button.setAttribute('aria-pressed', String(button.dataset.fazitView === overlay.dataset.fazitView));
+  });
 }
 
 function undoFazitChange() {

@@ -1,0 +1,73 @@
+/* Compact scene controls. Story text and user-selected avatar sizes keep their existing scale. */
+.modal-navigation:has(+ .session-page) { min-height:50px; gap:5px 12px; padding:6px 56px 6px 16px; }
+.modal-navigation:has(+ .session-page) :is(.modal-page-btn,.modal-page-tool) { min-height:28px; padding:5px 8px; font-size:.64rem; }
+.modal-navigation:has(+ .session-page) .modal-menu-toggle { width:30px; padding:0 0 4px; font-size:1.25rem; }
+.modal-navigation:has(+ .session-page) .modal-page-tab { min-height:25px; padding:4px 7px; font-size:.6rem; }
+.session-page .comments-scroll { min-height:0; }
+.session-page .session-stage-bar { padding:8px 12px 6px; }
+.session-page .session-stage-head { gap:8px; align-items:center; margin-bottom:5px; }
+.session-page .session-stage-kicker { font-size:.55rem; line-height:1.2; letter-spacing:.1em; }
+.session-page .session-stage-title { margin-top:2px; font-size:.85rem; line-height:1.2; }
+.session-page .session-stage-actions { gap:5px; }
+.session-page .session-stage-actions button { min-width:26px; width:26px; min-height:26px; height:26px; padding:3px; font-size:.8rem; }
+.session-page .session-stage-actions button img { width:20px; height:20px; }
+.session-page .scene-clock { gap:5px; padding:0; }
+.session-page .scene-clock-icon { width:25px; height:31px; }
+.session-page .scene-clock-icon img { max-width:25px; max-height:31px; }
+.session-page .scene-clock-label { font-size:.47rem; line-height:1.1; }
+.session-page .scene-clock-copy strong { font-size:.75rem; line-height:1.2; }
+.session-page .scene-clock-date { font-size:.55rem; line-height:1.2; }
+.session-page .scene-clock > button { width:21px; min-width:21px; min-height:21px; height:21px; padding:1px; }
+.session-page .comment-view-controls { gap:5px; padding:4px 7px; min-height:0; margin-block:4px; }
+.session-page .comment-view-controls button { min-height:24px; padding:4px 8px; font-size:.63rem; }
+.session-page .comment-view-controls > span { font-size:.55rem; }
+.session-page .session-intro { margin-top:3px; }
+.session-page .session-intro-toggle { min-height:22px; padding:4px 0; font-size:.65rem; }
+.session-page .session-stage-copy { margin-top:4px; font-size:.8rem; line-height:1.4; }
+.session-page .session-footer { flex-shrink:0; }
+.session-page .comment-quick-tools { gap:4px 7px; padding:5px 10px; }
+.session-page .comment-jump-search { flex:0 1 210px; width:210px; gap:4px; align-items:center; }
+.session-page .comment-jump-field { gap:2px; font-size:.65rem; }
+.session-page .comment-jump-input { min-height:25px; height:25px; padding:2px 6px; border-radius:4px; font-size:.8rem; }
+.session-page .comment-jump-btn, .session-page .comment-scroll-btn, .session-page .comment-reader-reset { min-height:25px; height:25px; min-width:25px; padding:3px 6px; font-size:.65rem; border-radius:4px; }
+.session-page .comment-reader-controls { gap:5px; }
+.session-page .comment-reader-control { gap:2px; font-size:.62rem; }
+.session-page .comment-reader-control input { width:70px; height:12px; }
+.session-page .comment-jump-status { margin:0; font-size:.65rem; line-height:1.2; }
+.session-page .comment-turn-bar { flex-direction:row; justify-content:space-between; flex-wrap:wrap; gap:4px 8px; padding:5px 10px; min-height:0; }
+.session-page .comment-turn-main { gap:5px; }
+.session-page .comment-turn-kicker { font-size:.55rem; }
+.session-page .comment-turn-state { font-size:.75rem; }
+.session-page .comment-turn-actions { gap:4px; }
+.session-page .comment-turn-btn { min-height:25px; padding:3px 8px; font-size:.66rem; border-radius:4px; }
+.session-page .comments-form-bar { gap:5px; padding:6px 10px; align-items:center; }
+.session-page .comments-add-btn.comments-action-icon-btn { flex:0 0 28px; width:28px; height:28px; min-width:28px; min-height:28px; padding:2px; }
+.session-page .comments-action-icon { width:22px; height:22px; }
+.session-page .comments-form-hint { font-size:.65rem; line-height:1.25; }
+.session-page .comment-insert-control { gap:4px; padding:5px 0; margin-block:5px; }
+.session-page .comment-insert-control button { padding:4px 7px; min-height:23px; font-size:.65rem; }
+.session-page .comment-pagination { padding:5px; gap:4px; }
+.session-page .comment-pagination button { min-width:25px; min-height:25px; padding:3px 6px; font-size:.7rem; }
+.session-page .comment-divider { margin-block:14px; }
+@media (max-width:760px) {
+  .modal-navigation:has(+ .session-page) { padding:5px 48px 5px 8px; }
+  .session-page .session-stage-bar { padding:6px 8px 4px; }
+  .session-page .session-stage-head { flex-direction:row; flex-wrap:wrap; gap:5px; }
+  .session-page .session-stage-heading { flex:1 1 100px; }
+  .session-page .session-stage-actions { gap:4px; flex-wrap:nowrap; }
+  .session-page .scene-clock-label { display:none; }
+  .session-page .scene-clock-icon { width:21px; height:27px; }
+  .session-page .scene-clock-date { font-size:.5rem; }
+  .session-page .comment-quick-tools { gap:4px; padding:4px 8px; }
+  .session-page .comment-jump-search { flex:1 1 140px; width:auto; max-width:none; }
+  .session-page .comment-jump-field { font-size:.6rem; }
+  .session-page .comment-reader-control input { width:52px; }
+  .session-page .comment-reader-controls { flex:0 1 auto; }
+  .session-page .comment-turn-bar { padding:4px 8px; }
+  .session-page .comments-form-bar { padding:5px 8px; gap:4px; flex-wrap:wrap; }
+  .session-page .comments-add-btn.comments-action-icon-btn { width:27px; height:27px; min-width:27px; min-height:27px; flex-basis:27px; }
+  .session-page .comments-form-hint { flex-basis:100%; margin:0; }
+}
+@container module-content (max-width:760px) {
+  .session-page:not(.session-focus-mode) .session-art-col { height:clamp(64px,10dvh,90px); }
+}

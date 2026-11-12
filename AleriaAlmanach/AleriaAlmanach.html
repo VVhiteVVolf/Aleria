@@ -33,7 +33,8 @@
   <link rel="stylesheet" href="./styles/comments-foreign-voice.css?v=20261108-foreign-voice-v5">
   <link rel="stylesheet" href="./styles/scene-backup.css?v=20261012-scene-backup-v1">
   <link rel="stylesheet" href="./modules/comments/embedded-comments.css?v=20260909-newspaper-guilds-v1">
-  <link rel="stylesheet" href="./styles/comments-fazit.css?v=20260821-fazit-workbench-v3">
+  <link rel="stylesheet" href="./styles/comments-fazit.css?v=20261112-report-v1">
+  <link rel="stylesheet" href="./styles/comments-fazit-report.css?v=20261112-report-v1">
   <link rel="stylesheet" href="./styles/comment-transactions.css?v=20260803-transaction-lock-v1">
 <link rel="stylesheet" href="../Fonts/Rheunwaith-Font-1.000/rheunwaith.css?v=2-gezeiten">
 <link rel="stylesheet" href="../Fonts/Karnrith-Font-2.000/karnrith.css?v=3">
@@ -137,6 +138,8 @@
 <link rel="stylesheet" href="./styles/world-date.css?v=20261105-latest-scene-v1">
 <link rel="stylesheet" href="./styles/mobile.css?v=20260910-archive-navigation-v1" media="(max-width: 640px)">
 <link rel="stylesheet" href="./styles/session-mobile.css?v=20261017-intro-collapse-v1">
+<link rel="stylesheet" href="./styles/comment-bubble-art.css?v=20261112-experiment-v1">
+<link rel="stylesheet" href="./styles/session-controls-compact.css?v=20261112-v1">
 <link rel="stylesheet" href="./modules/sync/firebase-sync-status.css?v=20261104-online-priority-v1">
 <link rel="stylesheet" href="./styles/comment-combat-mini-profile.css?v=20261013-combat-checkup-v1">
 <link rel="stylesheet" href="./styles/combat-status.css?v=20260922-profile-design-v1">
@@ -244,7 +247,7 @@
   <script src="./modules/language/language-data.js?v=20260712-language-template-v1" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-data.js?v=20260716-family-tree-registry-v1" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-catalog.js?v=20260716-family-tree-registry-v1" defer></script>
-  <script src="./modules/core/app-core.js?v=20261021-bandenakte-v1" defer></script>
+  <script src="./modules/core/app-core.js?v=20261112-scene-report-v1" defer></script>
   <script src="./modules/core/content-safety.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/core/aleria-calendar.js?v=20260919-play-days-v1" defer></script>
   <script src="./modules/economy-calculator/economy-runtime.global.js?v=20261106-gwernant-staff-v1" defer></script>
@@ -299,7 +302,7 @@
   <script src="./modules/module-editor/module-editor-guest-register.js?v=20260620-guest-register-scroll-size-v1" defer></script>
   <script src="./modules/module-editor/module-editor-house-warriors.js?v=20260712-house-warriors-images-v2" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-editor.js?v=20260716-family-tree-registry-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-templates.js?v=20261102-biography-layout-v2" defer></script>
+  <script src="./modules/module-editor/module-editor-templates.js?v=20261112-scene-report-v1" defer></script>
   <script src="./modules/module-editor/module-editor-workflow.js?v=20261101-group-systems-v2" defer></script>
   <script src="./modules/module-editor/module-editor-drafts.js?v=20260711-module-drafts-v1" defer></script>
   <script src="./modules/module-editor/module-editor-cast-picker.js?v=20260520-cleanup-v1" defer></script>
@@ -313,7 +316,7 @@
   <script src="./modules/module-editor/module-editor-wanted.js?v=20260616-card-hierarchy-v1" defer></script>
   <script src="./modules/currency/currency-art.global.js?v=20261101-aleria-currency-v1" defer></script>
   <script src="./modules/module-editor/module-editor-character-inventory.js?v=20261104-explicit-empty-attributes-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-session.js?v=20260710-session-status-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-session.js?v=20261112-scene-report-v1" defer></script>
   <script src="./modules/module-editor/module-editor-biography.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/module-editor/module-editor-icon-field.js?v=20260925-creature-biography-v2" defer></script>
   <script src="./modules/module-editor/module-editor-row-schemas.js?v=20260709-row-schema-pilot-v1" defer></script>
@@ -357,7 +360,7 @@
   <script src="./modules/inline-editor/inline-editor-hierarchy.js?v=20261017-hierarchy-twelve-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-family.js?v=20260715-family-workbench-v2" defer></script>
   <script src="./modules/inline-editor/inline-editor-house-warriors.js?v=20260712-house-warriors-images-v2" defer></script>
-  <script src="./modules/inline-editor/inline-module-editor.js?v=20261019-economy-v1" defer></script>
+  <script src="./modules/inline-editor/inline-module-editor.js?v=20261112-scene-report-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-biography.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/inline-editor/inline-editor-house.js?v=20260709-row-schema-cutover-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-guild.js?v=20260711-guild-template-v1" defer></script>
@@ -476,14 +479,14 @@
   <script src="./modules/comments/comments-render.js?v=20261108-foreign-voice-v4" defer></script>
   <script src="./modules/combat/combat-test-scene.js?v=20260802-brandhof-test-v1" defer></script>
   <script src="./modules/comments/comments-showcase-render.js?v=20260602-mojibake-fix-v1" defer></script>
-  <script src="./modules/comments/comments-fazit-render.js?v=20260821-fazit-workbench-v3" defer></script>
+  <script src="./modules/comments/comments-fazit-render.js?v=20261112-scene-report-v1" defer></script>
   <script src="./modules/comments/comments-attachment-render.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-attachment-viewer.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-module-insert-render.js?v=20260711-guild-template-v1" defer></script>
   <script src="./modules/comments/comments-routing.js?v=20260911-page-comments-v1" defer></script>
   <script src="./modules/comments/comments-toolbar.js?v=20261104-comment-controls-v1" defer></script>
   <script src="./modules/session/session-status.js?v=20260710-session-status-v1" defer></script>
-  <script src="./modules/comments/comments-page.js?v=20261104-comment-controls-v1" defer></script>
+  <script src="./modules/comments/comments-page.js?v=20261112-scene-report-v1" defer></script>
   <script src="./modules/comments/comments-backend.js?v=20261105-comment-recovery-v1" defer></script>
   <script src="./modules/comments/comments-form-state.js?v=20260906-segment-avatars-v1" defer></script>
   <script src="./modules/comments/comments-scene-cast.js?v=20261108-foreign-voice-v1" defer></script>
@@ -512,9 +515,9 @@
   <script src="./modules/comments/comments-showcase-profile.js?v=20260520-cleanup-v1" defer></script>
   <script src="./modules/comments/comments-fazit-history.js?v=20260821-fazit-workbench-v3" defer></script>
   <script src="./modules/comments/comments-fazit-draft.js?v=20260821-fazit-workbench-v3" defer></script>
-  <script src="./modules/comments/comments-fazit-editor-markup.js?v=20260821-fazit-workbench-v3" defer></script>
-  <script src="./modules/comments/comments-fazit.js?v=20260821-fazit-workbench-v3" defer></script>
-  <script src="./modules/comments/comments-fazit-workbench.js?v=20260821-fazit-workbench-v3" defer></script>
+  <script src="./modules/comments/comments-fazit-editor-markup.js?v=20261112-scene-report-v1" defer></script>
+  <script src="./modules/comments/comments-fazit.js?v=20261112-scene-report-v1" defer></script>
+  <script src="./modules/comments/comments-fazit-workbench.js?v=20261112-scene-report-v1" defer></script>
   <script src="./modules/comments/comments-fazit-editor-events.js?v=20260821-fazit-workbench-v3" defer></script>
   <script src="./modules/comments/comments-fazit-ai.js?v=20260807-fazit-v4" defer></script>
   <script src="./modules/comments/comments-fazit-submit.js?v=20260821-fazit-workbench-v3" defer></script>
@@ -530,7 +533,7 @@
   <script src="./modules/comments/comments-delete.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/comments/comments-mechanical-undo.js?v=20260806-edit-text-v1" defer></script>
   <script src="./modules/comments/comments-markup.js?v=20260906-segment-avatars-v1" defer></script>
-  <script src="./modules/comments/comments-action-events.js?v=20260906-segment-avatars-v1" defer></script>
+  <script src="./modules/comments/comments-action-events.js?v=20261112-scene-report-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-config.js?v=20260605-netlify-ai-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-client.js?v=20260606-ai-context-controls-v1" defer></script>
   <script src="./modules/aleria-gpt/aleria-gpt-context-builder.js?v=20261104-startup-v1" defer></script>
@@ -1026,10 +1029,12 @@
 <!-- FAZIT FORM OVERLAY -->
 <div id="fazit-form-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="fazit-form-title" tabindex="-1">
   <div class="comment-form-card fazit-form-card">
-    <div class="comment-form-title" id="fazit-form-title">✦ &nbsp; Fazit eintragen &nbsp; ✦</div>
-    <div class="fazit-hint-panel">
+    <header class="fazit-workbench-head"><div><span class="fazit-workbench-kicker">Die Chronik eurer Geschichte</span><div class="comment-form-title" id="fazit-form-title">Fazit schreiben</div><p>Was ist geschehen – und was bleibt?</p></div>
+      <nav class="fazit-view-switch" aria-label="Berichtsansicht"><button type="button" data-action="set-fazit-workbench-view" data-fazit-view="write" aria-pressed="false">Schreiben</button><button type="button" data-action="set-fazit-workbench-view" data-fazit-view="split" aria-pressed="true">Nebeneinander</button><button type="button" data-action="set-fazit-workbench-view" data-fazit-view="preview" aria-pressed="false">Vorschau</button></nav>
+    </header>
+    <details class="fazit-assistant"><summary>Gedächtnisstütze · AleriaGPT</summary><div class="fazit-hint-panel">
       <div class="fazit-hint-head">
-        <div><span class="fazit-hint-kicker">AleriaGPT · Gedächtnisstütze</span><span class="fazit-hint-sub">Liest den Szenenverlauf und schlägt die wichtigsten Punkte als Stichpunkte vor — erstellt noch nichts von selbst.</span></div>
+        <div><span class="fazit-hint-kicker">AleriaGPT · Gedächtnisstütze</span><span class="fazit-hint-sub">Erinnert an wichtige Punkte aus dem Szenenverlauf. Du entscheidest, was in deinen Bericht kommt.</span></div>
         <span class="fazit-hint-buttons">
           <button type="button" class="fazit-hint-btn" id="fz-hint-btn" data-action="request-fazit-hints">✨ Wichtigste Punkte vorschlagen</button>
           <button type="button" class="fazit-hint-btn fazit-chat-toggle-btn" id="fz-chat-toggle-btn" data-action="toggle-fazit-chat" aria-expanded="false" aria-controls="fz-chat-panel" title="Mit AleriaGPT über diese Szene chatten">
@@ -1046,11 +1051,11 @@
           <button type="button" class="fazit-hint-btn" id="fz-chat-send-btn" data-action="send-fazit-chat">Senden</button>
         </div>
       </div>
-    </div>
+    </div></details>
     <div class="fazit-form-grid" id="fz-grid">
       <div class="fazit-form-fields" id="fz-fields-pane">
         <div class="fazit-title-field">
-          <label>Titel</label>
+          <label for="fz-title">Titel des Berichts</label>
           <input type="text" id="fz-title" maxlength="120" value="Fazit" placeholder="z.B. Fazit der Anhörung" data-action="update-fazit-title">
         </div>
         <div id="fz-commandbar"></div>
@@ -1062,7 +1067,7 @@
       <div class="fazit-splitter" data-action="fazit-splitter-handle" role="separator" aria-orientation="vertical" aria-label="Breite zwischen Bearbeitung und Vorschau anpassen" tabindex="0"></div>
       <div class="showcase-form-preview-col fazit-form-preview-col" id="fz-preview-pane">
         <div class="comment-live-preview">
-          <div class="comment-live-preview-head"><div class="comment-live-preview-kicker">Vorschau in der Szene</div></div>
+          <div class="comment-live-preview-head"><div class="comment-live-preview-kicker">Dein fertiger Bericht</div><small>Abschnitt antippen, um ihn zu bearbeiten.</small></div>
           <div id="fz-preview" aria-live="polite"></div>
         </div>
       </div>

@@ -16,6 +16,8 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'open-edit-attachment-form',
   'open-edit-fazit-form',
   'add-fazit-line',
+  'add-fazit-report-section',
+  'set-fazit-workbench-view',
   'undo-fazit-change',
   'redo-fazit-change',
   'toggle-fazit-line-collapse',
@@ -125,6 +127,14 @@ function handleCommentFormActionClick(event) {
   }
   if (action === 'add-fazit-line') {
     addFazitLine(trigger.dataset.lineKind || 'tokens', trigger.dataset.afterLineId || '');
+    return;
+  }
+  if (action === 'add-fazit-report-section') {
+    addFazitReportSection(trigger.dataset.reportSection);
+    return;
+  }
+  if (action === 'set-fazit-workbench-view') {
+    setFazitWorkbenchView(trigger.dataset.fazitView);
     return;
   }
   if (action === 'undo-fazit-change') {

@@ -1,0 +1,62 @@
+/* Experimental raster frames. Only an explicitly enabled interactive scene owns this presentation. */
+.session-page[data-animated-bubbles="true"] .comment-content { min-width:0; }
+.session-page[data-animated-bubbles="true"] .comment-animal-toggle { max-width:100%; white-space:pre-wrap; overflow-wrap:anywhere; }
+.session-page[data-animated-bubbles="true"] .comment-kind-flirt { --speech-frame:url('../assets/speech-frame-lab/flirt-frame-v1.png'); --speech-paper:#f8dfe7; --speech-ink:#6e2846; --speech-glow:#c86a8a; }
+.session-page[data-animated-bubbles="true"] .comment-kind-prayer { --speech-frame:url('../assets/speech-frame-lab/prayer-frame-v1.png'); --speech-paper:#f5efd9; --speech-ink:#5d4b27; --speech-glow:#bba05f; }
+.session-page[data-animated-bubbles="true"] .comment-kind-telepathy { --speech-frame:url('../assets/speech-frame-lab/telepathy-frame-v1.png'); --speech-paper:#173d3b; --speech-ink:#dcfff3; --speech-glow:#72c6b9; }
+.session-page[data-animated-bubbles="true"] .comment-kind-spell { --speech-frame:url('../assets/speech-frame-lab/telepathy-frame-v1.png'); --speech-paper:#d9e9df; --speech-ink:#23443c; --speech-glow:#72b9ac; }
+.session-page[data-animated-bubbles="true"] .comment-kind-song { --speech-frame:url('../assets/speech-frame-lab/song-frame-v1.png'); --speech-paper:#e4eaf0; --speech-ink:#374f6b; --speech-glow:#849bb6; }
+.session-page[data-animated-bubbles="true"] .comment-kind-animal { --speech-frame:url('../assets/speech-frame-lab/animal-frame-v1.png'); --speech-paper:#e1e6cb; --speech-ink:#34472c; --speech-glow:#798c54; }
+.session-page[data-animated-bubbles="true"] .comment-kind-madness { --speech-frame:url('../assets/speech-frame-lab/madness-frame-v1.png'); --speech-paper:#50231f; --speech-ink:#fff1d7; --speech-glow:#9b5347; }
+.session-page[data-animated-bubbles="true"] .comment-body:is(.comment-kind-flirt,.comment-kind-prayer,.comment-kind-telepathy,.comment-kind-spell,.comment-kind-song,.comment-kind-animal,.comment-kind-madness) {
+  position:relative;
+  isolation:isolate;
+  margin-block:18px;
+  border:0;
+  border-radius:9px;
+  padding:30px 36px;
+  min-height:120px;
+  background:var(--speech-paper);
+  color:var(--speech-ink);
+  box-shadow:0 6px 20px #382e2020;
+  animation:none;
+  transform:none;
+  filter:none;
+  clip-path:none;
+  overflow:visible;
+}
+.session-page[data-animated-bubbles="true"] .comment-body:is(.comment-kind-flirt,.comment-kind-prayer,.comment-kind-telepathy,.comment-kind-spell,.comment-kind-song,.comment-kind-animal,.comment-kind-madness)::before {
+  content:'';
+  position:absolute;
+  inset:-10px;
+  z-index:-1;
+  width:auto;
+  height:auto;
+  border:0 solid transparent;
+  border-image-source:var(--speech-frame);
+  border-image-slice:235 520;
+  border-image-width:48px 105px;
+  border-image-repeat:stretch;
+  border-radius:0;
+  background:none;
+  color:transparent;
+  text-shadow:none;
+  clip-path:none;
+  transform:none;
+  opacity:1;
+  filter:drop-shadow(0 0 2px var(--speech-glow));
+  pointer-events:none;
+  animation:paintedSpeechGlow 6s ease-in-out infinite;
+}
+.session-page[data-animated-bubbles="true"] .comment-body:is(.comment-kind-flirt,.comment-kind-prayer,.comment-kind-telepathy,.comment-kind-spell,.comment-kind-song,.comment-kind-animal,.comment-kind-madness)::after { content:none; animation:none; }
+.session-page[data-animated-bubbles="true"] .comment-body:is(.comment-kind-flirt,.comment-kind-prayer,.comment-kind-telepathy,.comment-kind-spell,.comment-kind-song,.comment-kind-animal,.comment-kind-madness) .comment-kind-icon { display:none; }
+.session-page[data-animated-bubbles="true"] .comment-body:is(.comment-kind-telepathy,.comment-kind-madness) .comment-text { color:var(--speech-ink); text-shadow:none; animation:none; }
+.session-page[data-animated-bubbles="true"] .comment-body:is(.comment-kind-telepathy,.comment-kind-madness) .comment-kind-badge { color:var(--speech-ink); border-color:currentColor; background:#ffffff12; }
+@keyframes paintedSpeechGlow { 0%,100% { filter:drop-shadow(0 0 1px var(--speech-glow)); } 50% { filter:drop-shadow(0 0 5px var(--speech-glow)); } }
+@media (max-width:760px) {
+  .session-page[data-animated-bubbles="true"] .comment-body:is(.comment-kind-flirt,.comment-kind-prayer,.comment-kind-telepathy,.comment-kind-spell,.comment-kind-song,.comment-kind-animal,.comment-kind-madness) { padding:25px 22px; margin-inline:7px; width:calc(100% - 14px); }
+  .session-page[data-animated-bubbles="true"] .comment-body:is(.comment-kind-flirt,.comment-kind-prayer,.comment-kind-telepathy,.comment-kind-spell,.comment-kind-song,.comment-kind-animal,.comment-kind-madness)::before { border-image-width:40px 78px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .session-page[data-animated-bubbles="true"] .comment-body::before { animation:none; }
+}

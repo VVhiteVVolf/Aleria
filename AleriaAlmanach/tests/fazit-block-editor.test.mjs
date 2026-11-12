@@ -30,6 +30,19 @@ function loadFazitRuntime() {
   return context;
 }
 
+test('Personensuche ersetzt Treffer beim anschließenden Change-Ereignis nicht erneut', () => {
+  const context = loadFazitEditorRuntime();
+  let renders = 0;
+  context.document.querySelector = selector => selector === '[data-fazit-person-list]'
+    ? { set innerHTML(value) { renders++; } } : null;
+  context.normalizeSearchText = value => value.toLowerCase();
+  context.getAvailableCommentCharacters = () => [{ id: 'alys', name: 'Alys' }];
+  context.getInitialChar = value => value[0];
+  vm.runInContext("filterFazitPersonPicker('Alys'); filterFazitPersonPicker('Alys');", context);
+  assert.equal(renders, 1, 'blur must retain the option that is being clicked');
+  assert.match(vm.runInContext("fazitPersonOptionsMarkup([{id:'alys', name:'Alys'}])", context), /<button type="button"/);
+});
+
 function loadFazitEditorRuntime() {
   const context = loadFazitRuntime();
   const storage = new Map();
@@ -75,6 +88,34 @@ function loadFazitEditorRuntime() {
   }
   return context;
 }
+
+test('Berichtsabschnitte ergänzen Inhalt ohne bestehende Notizen zu ersetzen und lassen sich gemeinsam rückgängig machen', () => {
+  const context = loadFazitEditorRuntime();
+  vm.runInContext("addFazitLine('text'); updateFazitLineText(_fazitLines[0].id, 'Unveränderte Notiz');", context);
+  const before = vm.runInContext('JSON.stringify(collectFazitFormPayload())', context);
+  vm.runInContext("addFazitReportSection('decisions')", context);
+  const payload = vm.runInContext('collectFazitFormPayload()', context);
+  assert.equal(payload.lines[0].text, 'Unveränderte Notiz');
+  assert.equal(payload.lines[1].text, 'Ergebnisse & Entscheidungen');
+  assert.match(vm.runInContext('_fazitLines.at(-1).bulletIcon', context), /Vereinbarung/);
+  vm.runInContext('undoFazitChange()', context);
+  assert.equal(vm.runInContext('JSON.stringify(collectFazitFormPayload())', context), before);
+});
+
+test('Abschnittsvorlagen respektieren die Inhaltsgrenze und übernehmen keine unbekannten Vorlagen', () => {
+  const context = loadFazitEditorRuntime();
+  vm.runInContext("addFazitReportSection('unknown'); addFazitReportSection('toString');", context);
+  assert.equal(vm.runInContext('_fazitLines.length', context), 0);
+  vm.runInContext("_fazitLines = Array.from({length:99}, () => newFazitLine('text')); addFazitReportSection('people');", context);
+  assert.equal(vm.runInContext('_fazitLines.length', context), 99);
+});
+
+test('nur die lokale Vorschau bietet Sprünge zur Bearbeitung, gespeicherte Berichte bleiben reine Lesekarten', () => {
+  const context = loadFazitRuntime();
+  const report = "{title:'Bericht',lines:[{id:'line-1',kind:'text',tone:'plain',text:'Eine sichere Notiz.'}]}";
+  assert.doesNotMatch(vm.runInContext(`renderCommentFazitCard(${report})`, context), /data-action="focus-fazit-line"/);
+  assert.match(vm.runInContext(`renderCommentFazitCard(${report},{editable:true})`, context), /data-action="focus-fazit-line"/);
+});
 
 test('bestehende Fazit-Zeilen bleiben rückwärtskompatibel', () => {
   const context = loadFazitRuntime();

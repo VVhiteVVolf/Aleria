@@ -318,6 +318,7 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   }
 
   if (page.sessionPage) {
+    if (page.sessionAnimatedBubbles === true) next.sessionAnimatedBubbles = true;
     next.sessionIntro = String(page.sessionIntro || '').trim();
     next.sessionHint = String(page.sessionHint || '').trim();
     next.sessionEmptyTitle = String(page.sessionEmptyTitle || '').trim();

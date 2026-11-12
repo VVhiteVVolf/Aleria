@@ -89,7 +89,7 @@ function syncInlinePageField(input) {
     return;
   }
 
-  if (field === 'commentDivider') {
+  if (field === 'commentDivider' || field === 'sessionAnimatedBubbles') {
     page[field] = !!input.checked;
     renderPage(currentPage, 0);
     return;
@@ -447,6 +447,10 @@ function buildInlineComplexEditor(entry, page, type) {
         <div class="inline-edit-field">
           <span class="inline-edit-label">Hinweis</span>
           <input class="inline-edit-input" type="text" data-inline-action="sync-page-field" data-page-field="sessionHint" value="${escapeHtml(page.sessionHint || '')}">
+        </div>
+        <div class="inline-edit-field wide">
+          <label><input type="checkbox" data-inline-action="sync-page-field" data-page-field="sessionAnimatedBubbles"${page.sessionAnimatedBubbles === true ? ' checked' : ''}> Animierte Sprechblasen (experimentell)</label>
+          <small>KI-gezeichnete Rahmen und dezente Animationen, nur für diese Szene. Standardmäßig ausgeschaltet.</small>
         </div>
         <div class="inline-edit-field">
           <span class="inline-edit-label">Ort</span>

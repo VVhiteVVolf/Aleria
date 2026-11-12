@@ -607,6 +607,16 @@ export const SITE_BUILD_TASKS = [
         'Karten/tests/pin-navigation.test.mjs', 'Karten/tests/pert-maesglas.test.mjs')]
   },
   {
+    id: 'scene-presentation', label: 'Fazit reports, optional painted speech and compact scene controls',
+    inputs: ['AleriaAlmanach/modules/comments/', 'AleriaAlmanach/modules/core/app-core.js',
+      'AleriaAlmanach/modules/module-editor/', 'AleriaAlmanach/modules/inline-editor/',
+      'AleriaAlmanach/styles/comments-fazit.css', 'AleriaAlmanach/styles/comments-fazit-report.css',
+      'AleriaAlmanach/styles/comment-bubble-art.css', 'AleriaAlmanach/styles/session-controls-compact.css',
+      'AleriaAlmanach/assets/speech-frame-lab/', 'AleriaAlmanach/AleriaAlmanach.html',
+      almanach('fazit-block-editor'), almanach('scene-presentation'), almanach('comments-controls')],
+    commands: [testCommand(almanach('fazit-block-editor'), almanach('scene-presentation'), almanach('comments-controls'))]
+  },
+  {
     "id": "almanach-runtime",
     "label": "Archive, authentication and module storage",
     "inputs": [
