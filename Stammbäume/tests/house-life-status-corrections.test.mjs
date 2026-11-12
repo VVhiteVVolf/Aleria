@@ -7,6 +7,7 @@ import { normalizeFamily } from '../assets/js/domain/family-schema.js';
 import { resolveRegisteredFamilyUpgrade } from '../assets/js/services/family-registry-upgrade.js';
 import { withHouseLifeStatusCorrections } from '../assets/js/modules/house-lore-corrections/house-life-status-corrections.js';
 import { biographyBeforeReviewedContentCorrection } from '../../Familien Häuser und Clans/tests/house-lore-reviewed-expectations.mjs';
+import { familyBeforeReviewedArgallViewAmendment } from './argall-portrait-affair-amendment.mjs';
 
 const root = new URL('../../', import.meta.url);
 const readJson = path => JSON.parse(readFileSync(new URL(path, root), 'utf8'));
@@ -48,7 +49,7 @@ function protectedValue(family) {
     const key = path.at(-1);
     if (JSON.stringify(parent[key]) === '{}') delete parent[key];
   }
-  return protectedCopy;
+  return familyBeforeReviewedArgallViewAmendment(protectedCopy);
 }
 
 function staleFamily(id) {
@@ -109,6 +110,29 @@ test('only the reviewed life fields and two death-related marriages change acros
     assert.equal(entity(family, row).extensions.registryManagedFieldRevisions[row.field],
       fixture.families[row.familyId].revision);
   }
+});
+
+test('the reviewed Argall view amendment restores the exact old protection and rejects unrelated changes', () => {
+  const family = records.get('haus-argall').family;
+  const original = structuredClone(family);
+  const previous = snapshots.get('haus-argall');
+  assert.equal(hash(protectedValue(family)), previous.protectedHash);
+  const changed = structuredClone(family);
+  changed.persons.find(person => person.id === 'gwenella-spouse-rhydric-argall').notes += ' Unreviewed edit';
+  assert.throws(() => protectedValue(changed), /Unexpected protected-family amendment/);
+  const changedView = structuredClone(family);
+  changedView.persons.find(person => person.id === 'gwenella-spouse-rhydric-argall').extensions.chartRepeatForPartnershipIds.push('unreviewed-partnership');
+  assert.throws(() => protectedValue(changedView), /Unexpected protected-family amendment/);
+  for (const id of ['rhydric-argall', 'perwyn-argall', 'gwenella-spouse-rhydric-argall', 'maelor-ffionydd']) {
+    for (const field of ['portrait', 'biographyPortrait']) {
+      const changedPortrait = structuredClone(family);
+      const target = changedPortrait.persons.find(person => person.id === id);
+      if (field === 'portrait') target.portrait = '../unreviewed-portrait.png';
+      else target.extensions.biographyModule.biography.portrait = '../unreviewed-biography.png';
+      assert.throws(() => protectedValue(changedPortrait), /Unexpected protected-family amendment/);
+    }
+  }
+  assert.deepEqual(family, original);
 });
 
 test('the five unresolved year and sex conflicts remain exactly as reviewed', () => {

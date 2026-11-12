@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile, access, stat } from 'node:fs/promises';
 import vm from 'node:vm';
 import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
+import { FLEISCHSAMMLER_FAMILIES_INDEX } from '../../Stammbäume/assets/js/data/gwynthor-fleischsammler/localities.mjs';
 import { projectHouseDirectories } from '../../shared/world-directory/house-projection.mjs';
 
 const root = new URL('../../', import.meta.url);
@@ -109,6 +110,24 @@ test('Wyrms bürgerliche Familien behalten ihren Wohnort unabhängig von ihrer D
         assert.equal(matches[0].seat, seat, id);
         assert.equal(matches[0].liege, 'Wyrm', id);
       }
+    }
+  }
+});
+
+test('all eight new rural families remain at their seven Gwynthor homes without creating a Wyrm territory placement', () => {
+  assert.equal(FLEISCHSAMMLER_FAMILIES_INDEX.length, 8);
+  const commoners = countySections[2].cards;
+  for (const locality of FLEISCHSAMMLER_FAMILIES_INDEX) {
+    const record = FAMILY_REGISTRY.find(record => record.id === locality.familyId);
+    const matches = commoners.filter(card => card.id === locality.familyId);
+    assert.equal(matches.length, 1, locality.familyId);
+    assert.equal(matches[0].seat, `${locality.placeName} · Gwynthor`);
+    assert.equal(matches[0].rank, 'Bürgerliche Familie');
+    assert.equal(matches[0].liege, record.family.document.houseProfile.liegeHouseName || '');
+    assert.equal(decodeURI(matches[0].imageSrc), '/Stammbäume/' + locality.emblem);
+    assert.deepEqual(record.folderPath, ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);
+    for (const sections of Object.values(territories)) {
+      assert(!sections.some(section => section.cards.some(card => card.id === locality.familyId)), locality.familyId);
     }
   }
 });
