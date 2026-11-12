@@ -2,10 +2,12 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import review from './gwniwr-maerllys-family-review-20261108.json' with {type:'json'};
 import {applyFamilyMetadataReview} from './apply-family-metadata-review.mjs';
+import {projectReviewedFamilyRevisions} from './reviewed-family-revisions.mjs';
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 /** Exact additive source amendment; all earlier territorial receipts stay intact. */
 export function projectReviewedTailoringSource(record){
+ record=projectReviewedFamilyRevisions(record);
  const approved=review.reviews.find(item=>item.familyId===record.id);
  if(!approved)return record;
  const copy=structuredClone(record),currentHash=hash(copy);

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "craigddu",
-  "revision": 5,
-  "updatedAt": "2026-11-07T21:45:27.696Z",
+  "revision": 7,
+  "updatedAt": "2026-11-12T18:28:42.482Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -48,7 +48,10 @@
           "Gründerfamilie"
         ],
         "notes": "Name, Lebensdaten und die Generationen bis zu den Brüdern Brenwyn, Iestyn und Cyran sind nicht überliefert.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "craigddu-ursprung-gruenderin",
@@ -68,7 +71,10 @@
           "Gründerfamilie"
         ],
         "notes": "Name, Lebensdaten und die Generationen bis zur jüngeren Craigddu-Familie sind nicht überliefert.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "craigddu-gruender",
@@ -91,8 +97,23 @@
             "title",
             "lineageRole",
             "tags",
-            "notes"
-          ]
+            "notes",
+            "portrait"
+          ],
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "",
+              "assets/images/placeholders/male.png"
+            ]
+          },
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3,
+            "portrait": 6
+          }
         }
       },
       {
@@ -116,7 +137,13 @@
             "title",
             "tags",
             "notes"
-          ]
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "title": 3,
+            "tags": 3,
+            "notes": 3
+          }
         }
       },
       {
@@ -135,7 +162,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Älterer Bruder Iestyns und Cyrans, Onkel von Hywel und Catrin. Mit Helyga verheiratet; Vater von Rhydric und Maelor. In der örtlichen Baumeistergilde tätig.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "helyga-craigddu",
@@ -153,7 +183,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "cyran-craigddu",
@@ -171,7 +204,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Jüngerer Bruder Brenwyns und Iestyns, Onkel von Hywel und Catrin. Ehemann Lleiras und Vater von Thalwyn.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "lleira-craigddu",
@@ -189,7 +225,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "rhydric-craigddu",
@@ -207,7 +246,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Sohn Brenwyns und Helygas, Bruder Maelors und Vetter Hywels. Arbeitet wie sein Vater in der örtlichen Baumeistergilde. Mit Maelena hat er Ellor und Sairwen.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "maelena-craigddu",
@@ -225,7 +267,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "maelor-craigddu",
@@ -243,7 +288,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Jüngerer Sohn Brenwyns und Helygas, Bruder Rhydrics und Vetter Hywels. Mit Avelia verheiratet; Vater von Perian.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "avelia-craigddu",
@@ -261,7 +309,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "thalwyn-craigddu",
@@ -279,7 +330,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Sohn Cyrans und Lleiras, Vetter Hywels. Mit Nerwen verheiratet; Vater von Gwenella.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "nerwen-craigddu",
@@ -297,7 +351,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "ellor-craigddu",
@@ -315,7 +372,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Sohn Rhydrics und Maelenas; älterer Bruder Sairwens.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "sairwen-craigddu",
@@ -333,7 +393,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Tochter Rhydrics und Maelenas; jüngere Schwester Ellors.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "perian-craigddu",
@@ -351,7 +414,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Sohn Maelors und Avelias.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "gwenella-craigddu",
@@ -369,7 +435,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Tochter Thalwyns und Nerwens.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "person-28b0e0a3",
@@ -393,7 +462,14 @@
             "title",
             "portrait",
             "notes"
-          ]
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "title": 3,
+            "portrait": 3,
+            "notes": 3
+          }
         }
       },
       {
@@ -416,29 +492,52 @@
           "registryManagedFields": [
             "name",
             "title"
-          ]
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "title": 3
+          }
         }
       },
       {
         "id": "person-0774c56b",
-        "worldPersonId": "person--craigddu--person-0774c56b",
+        "worldPersonId": "person--gwniwr--person-cf831497",
         "name": "Eleri",
-        "title": "Ehefrau von Hywel Craigddu",
+        "title": "Ehefrau Hywel Craigddu’s · geborene Gwniwr",
         "sex": "female",
         "status": "alive",
         "birth": "1708",
         "death": "",
-        "portrait": "",
+        "portrait": "assets/images/portraits/gwniwr/person-cf831497.jpg",
         "portraitPlaceholder": "auto",
         "houseId": "",
         "familyRole": "married",
         "lineageRole": "mainline",
         "tags": [],
-        "notes": "",
+        "notes": "Eleri ist die 1708 geborene Tochter Emyr Gwniwrs und Gwenllians. Sie heiratete Hywel Craigddu und hilft mit ihren Kindern im elterlichen Laden Nadel & Faden. Die sieben Töchter werden ausschließlich hier in Craigddu fortgeführt.",
         "extensions": {
           "registryManagedFields": [
-            "title"
-          ]
+            "title",
+            "worldPersonId",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "title": 5,
+            "worldPersonId": 5,
+            "portrait": 5,
+            "notes": 5
+          },
+          "legacyWorldPersonIds": [
+            "person--craigddu--person-0774c56b"
+          ],
+          "registryManagedFieldPreviousValues": {
+            "worldPersonId": [
+              "person--craigddu--person-0774c56b"
+            ]
+          },
+          "registryManagedSourceRevision": 3
         }
       },
       {
@@ -457,7 +556,10 @@
         "lineageRole": "mainline",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "person-abdbd916",
@@ -475,7 +577,10 @@
         "lineageRole": "mainline",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "person-650808a6",
@@ -493,7 +598,10 @@
         "lineageRole": "mainline",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "person-f54eea82",
@@ -511,7 +619,10 @@
         "lineageRole": "mainline",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "person-70f41f8d",
@@ -529,7 +640,10 @@
         "lineageRole": "mainline",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "person-c5e97e4f",
@@ -547,7 +661,10 @@
         "lineageRole": "mainline",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "person-9be71788",
@@ -565,7 +682,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "person-d189ca4a",
@@ -776,7 +896,16 @@
             "portrait",
             "houseId",
             "notes"
-          ]
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "title": 3,
+            "birth": 3,
+            "portrait": 3,
+            "houseId": 3,
+            "notes": 3
+          }
         }
       }
     ],
@@ -794,7 +923,10 @@
         "certainty": "unknown",
         "visibility": "public",
         "notes": "Unbekanntes historisches Gründerpaar vor der Überlieferungslücke.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-craigddu-founders",
@@ -809,7 +941,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-brenwyn-helyga-craigddu",
@@ -824,7 +959,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-cyran-lleira-craigddu",
@@ -839,7 +977,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-rhydric-maelena-craigddu",
@@ -854,7 +995,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-maelor-avelia-craigddu",
@@ -869,7 +1013,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-thalwyn-nerwen-craigddu",
@@ -884,7 +1031,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "partnership-8ce5d0c5",
@@ -899,7 +1049,19 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedFields": [
+            "crossFamilyRelationship"
+          ],
+          "registryManagedFieldRevisions": {
+            "crossFamilyRelationship": 5
+          },
+          "crossFamilyRelationship": {
+            "linkId": "marriage-hywel-craigddu-eleri-gwniwr",
+            "counterpartFamilyId": "gwniwr"
+          },
+          "registryManagedSourceRevision": 3
+        }
       },
       {
         "id": "partnership-0f65c1d1",
@@ -918,7 +1080,9 @@
           "crossFamilyRelationship": {
             "linkId": "marriage-llywelyn-coeddu-catrin-craigddu",
             "counterpartFamilyId": "haus-coeddu"
-          }
+          },
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
         }
       }
     ],
@@ -937,7 +1101,9 @@
         "visibility": "public",
         "notes": "Brenwyn, Iestyn und Cyran sind Brüder. Ihre Verbindung zum Gründerpaar bezeichnet die Abstammung über nicht überlieferte Generationen, keine unmittelbare Elternschaft.",
         "extensions": {
-          "timeJumpId": "gap-craigddu-to-iestyn-generation"
+          "timeJumpId": "gap-craigddu-to-iestyn-generation",
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
         }
       },
       {
@@ -954,7 +1120,9 @@
         "visibility": "public",
         "notes": "Brenwyn, Iestyn und Cyran sind Brüder. Ihre Verbindung zum Gründerpaar bezeichnet die Abstammung über nicht überlieferte Generationen, keine unmittelbare Elternschaft.",
         "extensions": {
-          "timeJumpId": "gap-craigddu-to-iestyn-generation"
+          "timeJumpId": "gap-craigddu-to-iestyn-generation",
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
         }
       },
       {
@@ -971,7 +1139,9 @@
         "visibility": "public",
         "notes": "Brenwyn, Iestyn und Cyran sind Brüder. Ihre Verbindung zum Gründerpaar bezeichnet die Abstammung über nicht überlieferte Generationen, keine unmittelbare Elternschaft.",
         "extensions": {
-          "timeJumpId": "gap-craigddu-to-iestyn-generation"
+          "timeJumpId": "gap-craigddu-to-iestyn-generation",
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
         }
       },
       {
@@ -987,7 +1157,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-maelor-craigddu",
@@ -1002,7 +1175,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-thalwyn-craigddu",
@@ -1017,7 +1193,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-ellor-craigddu",
@@ -1032,7 +1211,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-sairwen-craigddu",
@@ -1047,7 +1229,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-perian-craigddu",
@@ -1062,7 +1247,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-gwenella-craigddu",
@@ -1077,7 +1265,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-8b9ecbe3",
@@ -1092,7 +1283,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-3ba743cd",
@@ -1107,7 +1301,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-506a2c5f",
@@ -1122,7 +1319,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-ccb75498",
@@ -1137,7 +1337,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-7151685d",
@@ -1152,7 +1355,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-9dd20cb1",
@@ -1167,7 +1373,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-bb51296c",
@@ -1182,7 +1391,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-f2ae4cc1",
@@ -1197,7 +1409,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-6b0659db",
@@ -1212,7 +1427,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       }
     ],
     "houses": [
@@ -1226,7 +1444,12 @@
           "registryManagedFields": [
             "name",
             "emblem"
-          ]
+          ],
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {
+            "name": 3,
+            "emblem": 3
+          }
         }
       },
       {
@@ -1235,7 +1458,32 @@
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Coeddu.png",
         "status": "active",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
+      },
+      {
+        "id": "house-gwniwr",
+        "name": "Familie Gwniwr",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwniwr/gwniwr-emblem.png",
+        "status": "active",
+        "extensions": {
+          "registryManagedFields": [
+            "name",
+            "motto",
+            "emblem",
+            "status"
+          ],
+          "registryManagedFieldRevisions": {
+            "name": 5,
+            "motto": 5,
+            "emblem": 5,
+            "status": 5
+          },
+          "registryManagedSourceRevision": 5
+        }
       }
     ],
     "cadetBranches": [
@@ -1255,7 +1503,10 @@
         "founded": "",
         "targetFamilyId": "haus-coeddu",
         "notes": "Catrins und Llywelyns Sohn Ellian wird ausschließlich in der fortführenden Coeddu-Akte geführt.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
+        }
       }
     ],
     "timeJumps": [
@@ -1275,7 +1526,9 @@
         "label": "Nicht einzeln überlieferte Generationen bis zu Iestyn und seinen Brüdern",
         "notes": "Das Hauswappen folgt dem unbekannten Gründerpaar. Erst hinter dem Zeitsprung beginnt die Generation von Hywels Vater Iestyn und dessen Brüdern Brenwyn und Cyran.",
         "extensions": {
-          "preparedPlaceholder": false
+          "preparedPlaceholder": false,
+          "registryManagedSourceRevision": 3,
+          "registryManagedFieldRevisions": {}
         }
       }
     ],
@@ -1341,9 +1594,9 @@
       "showSiblings": true
     },
     "extensions": {
-      "sourceRevision": 3,
+      "sourceRevision": 6,
       "blankFamily": false,
-      "sourceNote": "Erweiterung nach Benutzervorgaben vom 28.09.2026: unbekanntes Gründerpaar, Wappen und Zeitsprung zu Iestyn mit zwei Brüdern, drei Vettern Hywels und deren Kindern. Bestehende Personen-, Beziehungs- und Weltpersonen-IDs sowie bekannte Lebensjahre bleiben erhalten; die historischen IDs craigddu-gruender und craigddu-gruenderin bezeichnen weiterhin Iestyn und Mared. Namen und Lebensjahre der neuen jüngeren Angehörigen sind erzählerische Ergänzungen nach dem Rheunwaith-Namensarchiv.",
+      "sourceNote": "Erweiterung nach Benutzervorgaben vom 28.09.2026: unbekanntes Gründerpaar, Wappen und Zeitsprung zu Iestyn mit zwei Brüdern, drei Vettern Hywels und deren Kindern. Bestehende Personen-, Beziehungs- und Weltpersonen-IDs sowie bekannte Lebensjahre bleiben erhalten; die historischen IDs craigddu-gruender und craigddu-gruenderin bezeichnen weiterhin Iestyn und Mared. Namen und Lebensjahre der neuen jüngeren Angehörigen sind erzählerische Ergänzungen nach dem Rheunwaith-Namensarchiv. Eleris Gwniwr-Herkunft und dieselbe Ehe mit Hywel sind seit 8. November 2026 beidseitig verknüpft; alte Karten- und Ehekennungen bleiben erhalten.",
       "registry": {
         "folderPath": [
           "Cenyr",
@@ -1401,17 +1654,52 @@
       "registryManagedExtensionFields": [
         "registry",
         "sourceNote",
-        "generatorProfile"
+        "generatorProfile",
+        "fatherPortraitInventory"
       ],
+      "registryManagedDocumentFieldRevisions": {
+        "title": 3,
+        "description": 3,
+        "emblem": 3
+      },
+      "registryManagedHouseProfileFieldRevisions": {
+        "rankId": 3,
+        "seat": 3,
+        "barony": 3,
+        "county": 3,
+        "kingdom": 3,
+        "liegeHouseId": 3,
+        "liegeHouseName": 3,
+        "regionEmblems": 3
+      },
+      "registryManagedExtensionFieldRevisions": {
+        "registry": 3,
+        "sourceNote": 3,
+        "generatorProfile": 3,
+        "fatherPortraitInventory": 6
+      },
+      "registryManagedViewFieldRevisions": {
+        "focusPersonId": 3,
+        "limitGenerations": 3
+      },
+      "registryManagedLineageFieldRevisions": {
+        "founderPartnershipId": 3,
+        "crestFrame": 3,
+        "timeGap": 3
+      },
+      "registryManagedEntitySourceRevision": 3,
+      "gwniwrMarriageInventory": "gwniwr-maerllys-20261108",
+      "fatherPortraitInventory": "assets/images/portraits/haus-craigddu/portrait-sources.json",
       "houseBiographyModule": {
         "schema": "aleria.house-module",
         "schemaVersion": 1,
         "pageTitle": "Haus Craigddu",
         "housePage": true,
         "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Craigddu/assets/craigddu-krieger.png",
-        "imageWidth": 30,
-        "imageSquare": true,
-        "description": "Haus Craigddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Aus einer Baumeisterfamilie gingen zunehmend Wachen, Waffenknechte und vereinzelt auch Ritter hervor. Das Bauwesen blieb dennoch Teil des Familienlebens: Mehrere Angehörige arbeiten weiterhin in Gwynthors örtlicher Baumeistergilde.",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Die Craigddu sind eine Baumeisterfamilie und ein kriegerisches Bürgerhaus Gwynthors. Aus ihren Reihen gingen Wachen, Waffenknechte und einzelne Ritter im Dienst der Draigs hervor. Mehrere Angehörige arbeiten weiterhin in der örtlichen Baumeistergilde.",
         "quote": "",
         "quoteBy": "",
         "commentSequence": [],
@@ -1433,24 +1721,12 @@
             "Celtigerns Wacht"
           ],
           [
-            "Oberhaupt",
-            ""
-          ],
-          [
-            "Erbe",
-            ""
-          ],
-          [
             "Lehnsherr",
             "Haus Draig"
           ],
           [
             "Ursprung",
             "Gwynthor · Baumeisterfamilie"
-          ],
-          [
-            "Schutzpatronin",
-            ""
           ]
         ],
         "house": {
@@ -1459,19 +1735,25 @@
           "connectionPortraitHeight": 80,
           "connectionTextOffset": 0,
           "biographyTitle": "Über das Haus",
-          "biographyText": "Haus Craigddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Aus einer Baumeisterfamilie gingen zunehmend Wachen, Waffenknechte und vereinzelt auch Ritter hervor. Das Bauwesen blieb dennoch Teil des Familienlebens: Mehrere Angehörige arbeiten weiterhin in Gwynthors örtlicher Baumeistergilde.",
+          "biographyText": "Die Craigddu sind eine Baumeisterfamilie und ein kriegerisches Bürgerhaus Gwynthors. Aus ihren Reihen gingen Wachen, Waffenknechte und einzelne Ritter im Dienst der Draigs hervor. Mehrere Angehörige arbeiten weiterhin in der örtlichen Baumeistergilde.",
           "abilitiesTitle": "Einfluss und Aufgaben",
           "abilities": [],
           "historyTitle": "Geschichte",
-          "historyText": "Die Craigddu stammen aus dem Bauhandwerk. Über Generationen gewann der Waffendienst für Haus Draig innerhalb der Familie an Bedeutung, bis das Haus ebenso mit seinen Kriegern wie mit seinen Baumeistern verbunden wurde. Namen und Lebensdaten des ursprünglichen Gründerpaares sind unbekannt. Nach der Überlieferungslücke setzt der Stammbaum bei den Brüdern Brenwyn, Iestyn und Cyran ein. Iestyn und Mared sind die Eltern von Hywel und Catrin. Hywel dient als Waffenknecht; Catrins Ehe mit Llywelyn Coeddu verbindet die Craigddu mit dem Haus der Gwynthorer Waffenschmiede.",
-          "worksTitle": "Hausgeschichte",
+          "historyText": "Die jüngere Überlieferung verzweigt sich unter den Brüdern Brenwyn, Iestyn und Cyran. Brenwyn und sein Sohn Rhydric arbeiten als Baumeister, während Cyran, Maelor und Thalwyn im Wachdienst stehen. Iestyns Kinder sind Hywel und Catrin.",
+          "worksTitle": "Prägende Ereignisse",
           "works": [],
           "extraSections": [
             {
               "position": "afterWorks",
               "mode": "text",
               "title": "Werte und Stellung",
-              "text": "Der Dienst für Haus Draig und die Arbeit im Bauwesen bestehen in dieser Familie nebeneinander fort. Brenwyn Craigddu und sein Sohn Rhydric sind in der örtlichen Baumeistergilde tätig; Cyran sowie die jüngeren Angehörigen Hywel, Maelor und Thalwyn vertreten die kriegerische Seite des Hauses. Einzelne Ritter stammen aus der Familie, doch die Craigddu bleiben ein Bürgerhaus."
+              "text": "Hywel ist Waffenknecht, Llywelyn Coeddus bester Freund und mit Eleri Vater von sieben Töchtern. Catrins Ehe mit Llywelyn verbindet Craigddu und Coeddu. Die Familie bewahrt ihre bürgerliche Stellung neben dem generationslangen Dienst für Draig."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Die Tätigkeit in Gwynthors Baumeistergilde ist belegt; sie macht die Gilde nicht zum Besitz der Familie. Weitere eigene Betriebe sind nicht benannt."
             }
           ],
           "triviaTitle": "Besonderheiten",
@@ -1492,16 +1774,12 @@
             {
               "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Craigddu.png",
               "title": "Haus Craigddu · vollständige Hausseite",
-              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
               "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=craigddu"
             }
           ],
           "footer": ""
         }
-      },
-      "registryUpgrade": {
-        "fromRevision": 2,
-        "toRevision": 3
       }
     }
   }

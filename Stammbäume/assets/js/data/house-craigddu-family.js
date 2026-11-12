@@ -176,12 +176,10 @@ const CRAIGDDU_SOURCE_FAMILY = Object.freeze({
 });
 
 // A portrait revision must preserve earlier genealogy, metadata and edited images.
-const HOUSE_CRAIGDDU_FAMILY_BEFORE_TAILORING = Object.freeze(withSourceFamilyFieldUpgrade(
-  preserveSourceMetadataBoundaries(CRAIGDDU_SOURCE_FAMILY),
-  { revision: 5, collections: { persons: {
+export const HOUSE_CRAIGDDU_FAMILY = Object.freeze(withSourceFamilyFieldUpgrade(
+  preserveSourceMetadataBoundaries(withGwniwrCraigdduLink(CRAIGDDU_SOURCE_FAMILY)),
+  { revision: 6, collections: { persons: {
     'craigddu-gruender': { portrait: CRAIGDDU_PORTRAITS['craigddu-gruender'] }
   } } },
   { inventory: 'assets/images/portraits/haus-craigddu/portrait-sources.json', marker: 'fatherPortraitInventory' }
 ));
-
-export const HOUSE_CRAIGDDU_FAMILY = withGwniwrCraigdduLink(HOUSE_CRAIGDDU_FAMILY_BEFORE_TAILORING);

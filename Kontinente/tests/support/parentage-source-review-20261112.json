@@ -1,0 +1,19 @@
+{
+  "schema": "aleria.reviewed-parentage-source-successor",
+  "schemaVersion": 1,
+  "base": "ae12a14b16737be597ce50f07abdee1ae91d280a",
+  "path": "Stammbäume/assets/js/adapters/family-chart-adapter.js",
+  "predecessorSha256": "03190ccc9d5f87c84830b73006ddfb9d167ac36163458638de4eda30ce6aa3e1",
+  "currentSha256": "e19a6853729cfe30d9120027f253a3812bcde455d22fb4f84d77b84f8335c0bd",
+  "hunks": [
+    {
+      "before": "} from './family-chart-parentage-group.js';\nimport { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';\nimport { createFamilyChartAppearanceLayout } from './family-chart-appearance-layout.js';\nimport { completeFamilyChartPartnerTraversal } from './family-chart-partner-traversal.js';\nimport {\n  insertTimeJumpAsSerialBarrier,\n",
+      "after": "} from './family-chart-parentage-group.js';\nimport { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';\nimport { createFamilyChartAppearanceLayout } from './family-chart-appearance-layout.js';\nimport { applyUnpartneredParentLayoutPairs } from './family-chart-parentage-layout.js';\nimport { completeFamilyChartPartnerTraversal } from './family-chart-partner-traversal.js';\nimport {\n  insertTimeJumpAsSerialBarrier,\n"
+    },
+    {
+      "before": "    }\n  });\n\n  applyLineageStructure({ family, chartById, selectedParentageByChild, parentageLines, houseById, personById });\n  applyCadetBranches({\n    family,\n",
+      "after": "    }\n  });\n\n  diagnostics.push(...applyUnpartneredParentLayoutPairs({\n    parentages: [...selectedParentageByChild.values()], chartById, pairMetadata, pairKey,\n    parentageColor: type => relationColor(family, type),\n    resolvePersonId: (personId, partnershipId) => appearancePlan.resolveParticipantId(personId, partnershipId)\n  }));\n\n  applyLineageStructure({ family, chartById, selectedParentageByChild, parentageLines, houseById, personById });\n  applyCadetBranches({\n    family,\n"
+    }
+  ],
+  "purpose": "Both confirmed biological parents can be laid out without inventing a partnership; all other adapter bytes and historical receipts remain protected."
+}

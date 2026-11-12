@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "haus-coeddu",
-  "revision": 7,
-  "updatedAt": "2026-11-07T21:49:59.180Z",
+  "revision": 8,
+  "updatedAt": "2026-11-12T18:28:42.482Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -48,7 +48,10 @@
           "Gründerfamilie"
         ],
         "notes": "Historischer Ursprung der Familie; Name, Lebensdaten und dazwischenliegende Generationen sind unbekannt.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "haus-coeddu-gruenderin",
@@ -68,7 +71,10 @@
           "Gründerfamilie"
         ],
         "notes": "Historischer Ursprung der Familie; Name, Lebensdaten und dazwischenliegende Generationen sind unbekannt.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "brenric-coeddu",
@@ -253,7 +259,30 @@
               ],
               "footer": "Personenakte · Brenric Coeddu · Kriegswart der Aufklärung"
             }
-          }
+          },
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "",
+              "assets/images/placeholders/male.png"
+            ],
+            "title": [
+              "Waffenknecht im Ruhestand · Veteran des Großen Krieges"
+            ],
+            "notes": [
+              "Diente im Großen Krieg unter Sir Maredudd. Wiederkehrende Gelenkbeschwerden, besonders am Fuß, führten zu seinem Ruhestand. Vater von Rhydian, Llywelyn, Maelwen und Thalor."
+            ]
+          },
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "portrait": 6,
+            "title": 6,
+            "notes": 6
+          },
+          "registryManagedFields": [
+            "portrait",
+            "title",
+            "notes"
+          ]
         }
       },
       {
@@ -272,7 +301,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "Ehefrau Brenrics und Mutter der vier Geschwister.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "rhydian-coeddu",
@@ -290,7 +322,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "llywelyn-coeddu",
@@ -493,7 +528,9 @@
               ],
               "footer": "Personenakte · Llywelyn Coeddu · Haus Coeddu"
             }
-          }
+          },
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
         }
       },
       {
@@ -517,7 +554,13 @@
             "title",
             "notes",
             "portrait"
-          ]
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "title": 4,
+            "notes": 4,
+            "portrait": 4
+          }
         }
       },
       {
@@ -536,7 +579,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "catrin-craigddu",
@@ -554,7 +600,10 @@
         "lineageRole": "branch",
         "tags": [],
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "ellian-coeddu",
@@ -572,7 +621,10 @@
         "lineageRole": "mainline",
         "tags": [],
         "notes": "Junger Sohn Llywelyns und Catrins; im Jahr 1740 fünf Jahre alt.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "tiberian-raves",
@@ -595,7 +647,13 @@
             "title",
             "notes",
             "portrait"
-          ]
+          ],
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {
+            "title": 4,
+            "notes": 4,
+            "portrait": 4
+          }
         }
       }
     ],
@@ -613,7 +671,10 @@
         "certainty": "unknown",
         "visibility": "public",
         "notes": "Gründerehe des Hauses.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-brenric-gweneth-coeddu",
@@ -628,7 +689,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "marriage-llywelyn-coeddu-catrin-craigddu",
@@ -647,7 +711,9 @@
           "crossFamilyRelationship": {
             "linkId": "marriage-llywelyn-coeddu-catrin-craigddu",
             "counterpartFamilyId": "craigddu"
-          }
+          },
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
         }
       },
       {
@@ -667,7 +733,9 @@
           "crossFamilyRelationship": {
             "linkId": "marriage-tiberian-maelwen-raves",
             "counterpartFamilyId": "haus-raves"
-          }
+          },
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
         }
       }
     ],
@@ -686,7 +754,9 @@
         "visibility": "public",
         "notes": "Tradierte Abstammung über nicht einzeln überlieferte Generationen; keine unmittelbare Elternschaft.",
         "extensions": {
-          "timeJumpId": "gap-coeddu-to-1682"
+          "timeJumpId": "gap-coeddu-to-1682",
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
         }
       },
       {
@@ -702,7 +772,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-llywelyn-coeddu",
@@ -717,7 +790,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-maelwen-coeddu",
@@ -732,7 +808,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-thalor-coeddu",
@@ -747,7 +826,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "parentage-ellian-coeddu",
@@ -762,7 +844,10 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       }
     ],
     "houses": [
@@ -772,7 +857,10 @@
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Coeddu.png",
         "status": "active",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "house-craigddu",
@@ -780,7 +868,10 @@
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Craigddu.png",
         "status": "active",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       },
       {
         "id": "house-raves",
@@ -788,7 +879,10 @@
         "motto": "",
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Raves.png",
         "status": "active",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       }
     ],
     "cadetBranches": [
@@ -808,7 +902,10 @@
         "founded": "",
         "targetFamilyId": "haus-raves",
         "notes": "Maelwen heiratete Tiberian Raves. Die vollständige Raves-Linie steht in ihrer eigenen Akte.",
-        "extensions": {}
+        "extensions": {
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
+        }
       }
     ],
     "timeJumps": [
@@ -826,7 +923,9 @@
         "label": "Nicht einzeln überlieferte Generationen bis Brenric",
         "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
         "extensions": {
-          "preparedPlaceholder": false
+          "preparedPlaceholder": false,
+          "registryManagedSourceRevision": 4,
+          "registryManagedFieldRevisions": {}
         }
       }
     ],
@@ -893,10 +992,13 @@
     },
     "extensions": {
       "blankFamily": false,
-      "sourceRevision": 4,
+      "sourceRevision": 6,
       "registryManagedDocumentFields": [
         "description"
       ],
+      "registryManagedDocumentFieldRevisions": {
+        "description": 6
+      },
       "sourceNote": "Benutzervorgaben vom 27.09.2026. Llywelyn ist 1740 dreißig Jahre alt; Catrin, ihre Lebensdaten und die Ehe stammen aus der bestehenden Craigddu-Akte. Ergänzte Namen Brenric, Gweneth, Rhydian, Maelwen, Thalor und Ellian folgen dem Rheunwaith-Namensarchiv. Ihre Lebensjahre sind erzählerische Ergänzungen. Der historische Ursprung bleibt ausdrücklich unbekannt.",
       "registryTombstones": {
         "persons": [
@@ -913,15 +1015,27 @@
           "targetFamilyId": "haus-raves"
         }
       ],
+      "registryManagedHouseProfileFieldRevisions": {},
+      "registryManagedExtensionFieldRevisions": {
+        "fatherPortraitInventory": 6
+      },
+      "registryManagedViewFieldRevisions": {},
+      "registryManagedLineageFieldRevisions": {},
+      "registryManagedEntitySourceRevision": 4,
+      "fatherPortraitInventory": "assets/images/portraits/haus-coeddu/portrait-sources.json",
+      "registryManagedExtensionFields": [
+        "fatherPortraitInventory"
+      ],
       "houseBiographyModule": {
         "schema": "aleria.house-module",
         "schemaVersion": 1,
         "pageTitle": "Haus Coeddu",
         "housePage": true,
         "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Coeddu/assets/coeddu-krieger.png",
-        "imageWidth": 30,
-        "imageSquare": true,
-        "description": "Haus Coeddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Die Familie stellt Wachen und Waffenknechte; einzelne Angehörige haben auch den Ritterschlag erhalten. Neben dem Waffendienst unterhalten die Coeddu eine beliebte Waffenschmiede in Gwynthor. Ihr Name steht in der Stadt damit sowohl für die Männer und Frauen im Dienst der Draig als auch für das Waffenhandwerk.",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Die Coeddu sind ein kriegerisches Bürgerhaus aus Gwynthor mit einer beliebten Waffenschmiede. Seit Generationen dienen Angehörige als Wachen und Waffenknechte, vereinzelt auch als Ritter, den Draigs. Das Handwerk und der persönliche Waffendienst stehen nebeneinander.",
         "quote": "",
         "quoteBy": "",
         "commentSequence": [],
@@ -943,24 +1057,12 @@
             "Celtigerns Wacht"
           ],
           [
-            "Oberhaupt",
-            ""
-          ],
-          [
-            "Erbe",
-            ""
-          ],
-          [
             "Lehnsherr",
             "Haus Draig"
           ],
           [
             "Ursprung",
             "Gwynthor · Waffendienst und Waffenschmiede"
-          ],
-          [
-            "Schutzpatronin",
-            ""
           ]
         ],
         "house": {
@@ -969,19 +1071,25 @@
           "connectionPortraitHeight": 80,
           "connectionTextOffset": 0,
           "biographyTitle": "Über das Haus",
-          "biographyText": "Haus Coeddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Die Familie stellt Wachen und Waffenknechte; einzelne Angehörige haben auch den Ritterschlag erhalten. Neben dem Waffendienst unterhalten die Coeddu eine beliebte Waffenschmiede in Gwynthor. Ihr Name steht in der Stadt damit sowohl für die Männer und Frauen im Dienst der Draig als auch für das Waffenhandwerk.",
+          "biographyText": "Die Coeddu sind ein kriegerisches Bürgerhaus aus Gwynthor mit einer beliebten Waffenschmiede. Seit Generationen dienen Angehörige als Wachen und Waffenknechte, vereinzelt auch als Ritter, den Draigs. Das Handwerk und der persönliche Waffendienst stehen nebeneinander.",
           "abilitiesTitle": "Einfluss und Aufgaben",
           "abilities": [],
           "historyTitle": "Geschichte",
-          "historyText": "Die Namen des ursprünglichen Gründerpaares und die frühen Generationen sind nicht überliefert. Der Dienst für Haus Draig gehört seit Generationen zur Geschichte der Familie. Mit Brenric wird die jüngere Linie greifbar: Er kämpfte im Großen Krieg unter Sir Maredudd und zog sich wegen wiederkehrender Gelenkbeschwerden, besonders am Fuß, aus dem Felddienst zurück. Heute dient er den Draigs als persönlicher Ritter und Kriegswart der Aufklärung: Unter Sir Maredudd wertet er Meldungen aus, führt Lagekarten und ordnet Boten- sowie Signalberichte in Abstimmung mit Efael. Sein Sohn Llywelyn dient als Waffenknecht. Durch dessen Ehe mit Catrin Craigddu sind die Coeddu mit einer weiteren kriegerischen Bürgerfamilie Gwynthors verbunden.",
-          "worksTitle": "Hausgeschichte",
+          "historyText": "Brenric Coeddu diente im Großen Krieg unter Sir Maredudd. Gelenk- und Fußbeschwerden führten zunächst zum Rückzug aus dem Felddienst. Heute dient er den Draigs als persönlicher Ritter und Kriegswart der Aufklärung: Unter Sir Maredudd wertet er Meldungen aus, führt Lagekarten und ordnet Boten- sowie Signalberichte in Abstimmung mit Efael. Mit Gweneth hat er die Kinder Rhydian, Llywelyn, Maelwen und Thalor. Llywelyn ist Waffenknecht und mit Catrin Craigddu verheiratet; ihr Sohn heißt Ellian.",
+          "worksTitle": "Prägende Ereignisse",
           "works": [],
           "extraSections": [
             {
               "position": "afterWorks",
               "mode": "text",
               "title": "Werte und Stellung",
-              "text": "Waffendienst und Waffenschmiede prägen das Haus gleichermaßen. Die beliebte Schmiede verankert die Coeddu im städtischen Handwerk, während ihre Wachen, Waffenknechte und gelegentlichen Ritter für Haus Draig einstehen. Das Haus bleibt bürgerlich; der Ritterschlag einzelner Angehöriger macht nicht die ganze Familie zu einem Adelshaus."
+              "text": "Llywelyns Freundschaft mit Hywel Craigddu und die Ehe mit dessen Schwester Catrin verbinden die beiden Bürgerhäuser. Maelwens Ehe mit Tiberian Raves führt in den kaufmännischen Familienkreis. Brenrics neues Amt ist eine persönliche Aufgabe im Dienst der Draigs; Haus Coeddu bleibt bürgerlich."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Die Waffenschmiede ist als Familienbetrieb belegt. Tätigkeiten einzelner Angehöriger in anderen Betrieben bleiben eigenständige Arbeitsverbindungen."
             }
           ],
           "triviaTitle": "Besonderheiten",
@@ -1002,16 +1110,12 @@
             {
               "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Coeddu.png",
               "title": "Haus Coeddu · vollständige Hausseite",
-              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
               "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-coeddu"
             }
           ],
           "footer": ""
         }
-      },
-      "registryUpgrade": {
-        "fromRevision": 3,
-        "toRevision": 4
       }
     }
   }

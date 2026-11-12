@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import successor from './gwniwr-maerllys-registry-upgrade-source-review-20261108.json' with { type: 'json' };
+import {reviewedParentageSourceHash} from './reviewed-parentage-source.mjs';
 
 const sourcePath = 'Stammbäume/assets/js/services/family-registry-upgrade.js';
 const predecessorSha256 = 'cf920821519a469452e7f54db3b82dba93504861c6aacdec23f5b4e751ec8b96';
@@ -9,6 +10,8 @@ const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 // Keep the historical receipt immutable. Admit one exact later source version,
 // undo only its two reviewed edits, then prove the complete predecessor bytes.
 export function assertReviewedArgallSourceFile(source, bytes, review = successor) {
+  const reviewedParentage=reviewedParentageSourceHash(source,bytes);
+  if(reviewedParentage)return reviewedParentage;
   const actual = hash(bytes);
   if (source.path !== sourcePath) {
     assert.equal(actual, source.sha256, source.path);

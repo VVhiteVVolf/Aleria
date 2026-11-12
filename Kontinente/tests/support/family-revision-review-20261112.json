@@ -1,0 +1,5734 @@
+{
+  "schema": "aleria.reviewed-family-source-history",
+  "schemaVersion": 1,
+  "baselineCommit": "ae12a14b16737be597ce50f07abdee1ae91d280a",
+  "reason": "Coeddu biographies, two father portraits, Bronnor parentage and Loer/Aurdden engagement, with explicit source ownership metadata. All preexisting identities are retained. Complete predecessor and successor hashes are mandatory; historical receipts are unchanged.",
+  "reviews": [
+    {
+      "familyId": "craigddu",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "persons",
+            "@craigddu-ursprung-gruender",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@craigddu-ursprung-gruender",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@craigddu-ursprung-gruenderin",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@craigddu-ursprung-gruenderin",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@craigddu-gruender",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-craigddu/iestyn-craigddu.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@craigddu-gruender",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": true,
+          "before": [
+            "title",
+            "lineageRole",
+            "tags",
+            "notes"
+          ],
+          "afterPresent": true,
+          "after": [
+            "title",
+            "lineageRole",
+            "tags",
+            "notes",
+            "portrait"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@craigddu-gruender",
+            "extensions",
+            "registryManagedFieldPreviousValues"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": [
+              "",
+              "assets/images/placeholders/male.png"
+            ]
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@craigddu-gruender",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@craigddu-gruender",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "title": 3,
+            "lineageRole": 3,
+            "tags": 3,
+            "notes": 3,
+            "portrait": 6
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@craigddu-gruenderin",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@craigddu-gruenderin",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "title": 3,
+            "tags": 3,
+            "notes": 3
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@brenwyn-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@brenwyn-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@helyga-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@helyga-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@cyran-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@cyran-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@lleira-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@lleira-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhydric-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhydric-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@maelena-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@maelena-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@maelor-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@maelor-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@avelia-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@avelia-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@thalwyn-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@thalwyn-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@nerwen-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@nerwen-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@ellor-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@ellor-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@sairwen-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@sairwen-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@perian-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@perian-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@gwenella-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@gwenella-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-28b0e0a3",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-28b0e0a3",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "name": 3,
+            "title": 3,
+            "portrait": 3,
+            "notes": 3
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-bc7dd4e8",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-bc7dd4e8",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "name": 3,
+            "title": 3
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-0774c56b",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-36234a87",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-36234a87",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-abdbd916",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-abdbd916",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-650808a6",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-650808a6",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-f54eea82",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-f54eea82",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-70f41f8d",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-70f41f8d",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-c5e97e4f",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-c5e97e4f",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-9be71788",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-9be71788",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-d189ca4a",
+            "extensions",
+            "biographyModule",
+            "biography",
+            "historyText"
+          ],
+          "beforePresent": true,
+          "before": "<p>Llywelyn stammt aus dem <strong>bürgerlichen Haus Coeddu</strong> in Gwynthor. Seine Eltern sind <strong>Brenric Coeddu</strong> und <strong>Gweneth</strong>. Mit seinem älteren Bruder <strong>Rhydian</strong>, seiner jüngeren Schwester <strong>Maelwen</strong> und dem jüngsten Bruder <strong>Thalor</strong> wuchs er in einer Familie auf, der bewaffneter Dienst keineswegs fremd war.</p><p>Brenric kämpfte im <strong>Großen Krieg unter Sir Maredudd</strong>. Für Llywelyn war der Krieg damit nie ausschließlich eine Sache aus Liedern und Erzählungen über große Ritter. Er kannte einen der Männer, die tatsächlich gedient hatten, als seinen Vater. Brenrics Erfahrung gab dem Waffenhandwerk einen sehr alltäglichen Hintergrund: Pflichten, Kameraden, lange Tage auf den Beinen und die Frage, ob man danach wieder heimkam.</p><p>Inzwischen ist Brenric im <strong>Ruhestand</strong>. Seine Gelenke machen ihm immer wieder Beschwerden, besonders der Fuß. Das erschwert ihm den Dienst so sehr, dass er ihn aufgegeben hat. Für Llywelyn gehört die Rücksicht auf den Vater heute ebenso zum Familienleben wie dessen Erinnerungen an frühere Dienstjahre.</p><p>Llywelyn selbst wurde ebenfalls <strong>Waffenknecht</strong>. Sein Alltag führt ihn in den Dienst von Haus Draig in Gwynthor. Er trägt diese Aufgabe ohne große Worte über Ruhm oder besondere Bestimmung. Dass ein Mann eine Waffe führt, bedeutet für ihn zunächst, dass andere darauf vertrauen dürfen, dass er seine Arbeit beherrscht und an seinem Platz bleibt.</p>",
+          "afterPresent": true,
+          "after": "<p>Llywelyn stammt aus dem <strong>bürgerlichen Haus Coeddu</strong> in Gwynthor. Seine Eltern sind <strong>Brenric Coeddu</strong> und <strong>Gweneth</strong>. Mit seinem älteren Bruder <strong>Rhydian</strong>, seiner jüngeren Schwester <strong>Maelwen</strong> und dem jüngsten Bruder <strong>Thalor</strong> wuchs er in einer Familie auf, der bewaffneter Dienst keineswegs fremd war.</p><p>Brenric kämpfte im <strong>Großen Krieg unter Sir Maredudd</strong>. Für Llywelyn war der Krieg damit nie ausschließlich eine Sache aus Liedern und Erzählungen über große Ritter. Er kannte einen der Männer, die tatsächlich gedient hatten, als seinen Vater. Brenrics Erfahrung gab dem Waffenhandwerk einen sehr alltäglichen Hintergrund: Pflichten, Kameraden, lange Tage auf den Beinen und die Frage, ob man danach wieder heimkam.</p><p>Wiederkehrende Gelenk- und besonders Fußbeschwerden zwangen Brenric zunächst zum <strong>Rückzug aus dem Felddienst</strong>. Heute dient er den Draigs als <strong>persönlicher Ritter und Kriegswart der Aufklärung</strong>. Unter Sir Maredudd wertet er Meldungen aus, führt Lagekarten und ordnet Boten- sowie Signalberichte; dabei stimmt er sich mit Efael ab. Die neue Aufgabe nutzt seine Kriegserfahrung, ohne seine körperlichen Beschwerden zu leugnen. Für Llywelyn gehört die Rücksicht auf den Vater weiterhin zum Familienleben.</p><p>Llywelyn selbst wurde ebenfalls <strong>Waffenknecht</strong>. Sein Alltag führt ihn in den Dienst von Haus Draig in Gwynthor. Er trägt diese Aufgabe ohne große Worte über Ruhm oder besondere Bestimmung. Dass ein Mann eine Waffe führt, bedeutet für ihn zunächst, dass andere darauf vertrauen dürfen, dass er seine Arbeit beherrscht und an seinem Platz bleibt.</p>"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-d189ca4a",
+            "extensions",
+            "biographyModule",
+            "biography",
+            "connections"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "type": "connection",
+              "name": "Brenric Coeddu",
+              "image": "../Stammbäume/assets/images/placeholders/male.png",
+              "imageFormat": "portrait",
+              "detail": "Vater und Veteran des Großen Krieges unter Sir Maredudd. Wiederkehrende Gelenk- und besonders Fußbeschwerden haben ihn in den Ruhestand geführt."
+            },
+            {
+              "type": "connection",
+              "name": "Gweneth",
+              "image": "../Stammbäume/assets/images/placeholders/female.png",
+              "imageFormat": "portrait",
+              "detail": "Mutter von Llywelyn, Rhydian, Maelwen und Thalor."
+            },
+            {
+              "type": "connection",
+              "name": "Catrin Craigddu",
+              "image": "../Stammbäume/assets/images/placeholders/female.png",
+              "imageFormat": "portrait",
+              "detail": "Seine Ehefrau, Ellians Mutter und Hywels jüngere Schwester."
+            },
+            {
+              "type": "connection",
+              "name": "Ellian Coeddu",
+              "image": "../Stammbäume/assets/images/placeholders/male.png",
+              "imageFormat": "portrait",
+              "detail": "Sein junger Sohn, geboren 1735 und im Jahr 1740 fünf Jahre alt."
+            },
+            {
+              "type": "connection",
+              "name": "Hywel Craigddu",
+              "image": "../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png",
+              "imageFormat": "portrait",
+              "detail": "Bester Freund, Kamerad und Schwager. Für Llywelyn nimmt der zwei Jahre ältere Hywel beinahe die Rolle eines großen Bruders ein."
+            }
+          ],
+          "afterPresent": true,
+          "after": [
+            {
+              "type": "connection",
+              "name": "Brenric Coeddu",
+              "image": "../Stammbäume/assets/images/portraits/haus-coeddu/brenric-coeddu.png",
+              "imageFormat": "portrait",
+              "detail": "Vater, Veteran des Großen Krieges und heute persönlicher Ritter sowie Kriegswart der Aufklärung. Nach dem Rückzug aus dem Felddienst wegen Gelenk- und Fußbeschwerden wertet er unter Sir Maredudd Meldungen aus, führt Lagekarten und ordnet Boten- und Signalberichte in Abstimmung mit Efael."
+            },
+            {
+              "type": "connection",
+              "name": "Gweneth",
+              "image": "../Stammbäume/assets/images/placeholders/female.png",
+              "imageFormat": "portrait",
+              "detail": "Mutter von Llywelyn, Rhydian, Maelwen und Thalor."
+            },
+            {
+              "type": "connection",
+              "name": "Catrin Craigddu",
+              "image": "../Stammbäume/assets/images/placeholders/female.png",
+              "imageFormat": "portrait",
+              "detail": "Seine Ehefrau, Ellians Mutter und Hywels jüngere Schwester."
+            },
+            {
+              "type": "connection",
+              "name": "Ellian Coeddu",
+              "image": "../Stammbäume/assets/images/placeholders/male.png",
+              "imageFormat": "portrait",
+              "detail": "Sein junger Sohn, geboren 1735 und im Jahr 1740 fünf Jahre alt."
+            },
+            {
+              "type": "connection",
+              "name": "Hywel Craigddu",
+              "image": "../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png",
+              "imageFormat": "portrait",
+              "detail": "Bester Freund, Kamerad und Schwager. Für Llywelyn nimmt der zwei Jahre ältere Hywel beinahe die Rolle eines großen Bruders ein."
+            }
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-d189ca4a",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-d189ca4a",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "name": 3,
+            "title": 3,
+            "birth": 3,
+            "portrait": 3,
+            "houseId": 3,
+            "notes": 3
+          }
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-craigddu-unknown-founders",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-craigddu-unknown-founders",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-craigddu-founders",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-craigddu-founders",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-brenwyn-helyga-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-brenwyn-helyga-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-cyran-lleira-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-cyran-lleira-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-rhydric-maelena-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-rhydric-maelena-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-maelor-avelia-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-maelor-avelia-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-thalwyn-nerwen-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-thalwyn-nerwen-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@partnership-8ce5d0c5",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@partnership-0f65c1d1",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@partnership-0f65c1d1",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-brenwyn-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-brenwyn-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-craigddu-gruender",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-craigddu-gruender",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-cyran-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-cyran-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-rhydric-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-rhydric-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-maelor-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-maelor-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-thalwyn-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-thalwyn-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-ellor-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-ellor-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-sairwen-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-sairwen-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-perian-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-perian-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-gwenella-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-gwenella-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-8b9ecbe3",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-8b9ecbe3",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-3ba743cd",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-3ba743cd",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-506a2c5f",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-506a2c5f",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-ccb75498",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-ccb75498",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-7151685d",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-7151685d",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-9dd20cb1",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-9dd20cb1",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-bb51296c",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-bb51296c",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-f2ae4cc1",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-f2ae4cc1",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-6b0659db",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-6b0659db",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "name": 3,
+            "emblem": 3
+          }
+        },
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-coeddu",
+            "extensions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "registryManagedSourceRevision": 3,
+            "registryManagedFieldRevisions": {}
+          }
+        },
+        {
+          "path": [
+            "family",
+            "cadetBranches",
+            "@married-away-coeddu-catrin",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "cadetBranches",
+            "@married-away-coeddu-catrin",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "timeJumps",
+            "@gap-craigddu-to-iestyn-generation",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 3
+        },
+        {
+          "path": [
+            "family",
+            "timeJumps",
+            "@gap-craigddu-to-iestyn-generation",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 5,
+          "afterPresent": true,
+          "after": 6
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": true,
+          "before": [
+            "registry",
+            "sourceNote",
+            "generatorProfile"
+          ],
+          "afterPresent": true,
+          "after": [
+            "registry",
+            "sourceNote",
+            "generatorProfile",
+            "fatherPortraitInventory"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "fatherPortraitInventory"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-craigddu/portrait-sources.json"
+        }
+      ],
+      "historicalObjectOrders": [
+        {
+          "path": [
+            "family",
+            "persons",
+            "@craigddu-ursprung-gruender",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@craigddu-ursprung-gruenderin",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@craigddu-gruender",
+            "extensions"
+          ],
+          "keys": [
+            "registryManagedFields"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@craigddu-gruenderin",
+            "extensions"
+          ],
+          "keys": [
+            "registryManagedFields"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@brenwyn-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@helyga-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@cyran-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@lleira-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhydric-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@maelena-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@maelor-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@avelia-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@thalwyn-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@nerwen-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@ellor-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@sairwen-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@perian-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@gwenella-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-28b0e0a3",
+            "extensions"
+          ],
+          "keys": [
+            "registryManagedFields"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-bc7dd4e8",
+            "extensions"
+          ],
+          "keys": [
+            "registryManagedFields"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-0774c56b",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "keys": [
+            "worldPersonId",
+            "portrait",
+            "title",
+            "notes"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-0774c56b",
+            "extensions"
+          ],
+          "keys": [
+            "registryManagedFields",
+            "registryManagedFieldRevisions",
+            "legacyWorldPersonIds",
+            "registryManagedFieldPreviousValues"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-36234a87",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-abdbd916",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-650808a6",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-f54eea82",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-70f41f8d",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-c5e97e4f",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-9be71788",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@person-d189ca4a",
+            "extensions"
+          ],
+          "keys": [
+            "biographyModule",
+            "registryManagedFields"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-craigddu-unknown-founders",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-craigddu-founders",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-brenwyn-helyga-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-cyran-lleira-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-rhydric-maelena-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-maelor-avelia-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-thalwyn-nerwen-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@partnership-8ce5d0c5",
+            "extensions"
+          ],
+          "keys": [
+            "registryManagedFields",
+            "registryManagedFieldRevisions",
+            "crossFamilyRelationship"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@partnership-0f65c1d1",
+            "extensions"
+          ],
+          "keys": [
+            "crossFamilyRelationship"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-brenwyn-craigddu",
+            "extensions"
+          ],
+          "keys": [
+            "timeJumpId"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-craigddu-gruender",
+            "extensions"
+          ],
+          "keys": [
+            "timeJumpId"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-cyran-craigddu",
+            "extensions"
+          ],
+          "keys": [
+            "timeJumpId"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-rhydric-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-maelor-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-thalwyn-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-ellor-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-sairwen-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-perian-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-gwenella-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-8b9ecbe3",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-3ba743cd",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-506a2c5f",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-ccb75498",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-7151685d",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-9dd20cb1",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-bb51296c",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-f2ae4cc1",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-6b0659db",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-craigddu",
+            "extensions"
+          ],
+          "keys": [
+            "registryManagedFields"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "cadetBranches",
+            "@married-away-coeddu-catrin",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "timeJumps",
+            "@gap-craigddu-to-iestyn-generation",
+            "extensions"
+          ],
+          "keys": [
+            "preparedPlaceholder"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "extensions"
+          ],
+          "keys": [
+            "sourceRevision",
+            "blankFamily",
+            "sourceNote",
+            "registry",
+            "generatorProfile",
+            "registryTombstones",
+            "registryManagedDocumentFields",
+            "registryManagedHouseProfileFields",
+            "registryManagedLineageFields",
+            "registryManagedViewFields",
+            "registryManagedRecordFields",
+            "registryManagedExtensionFields",
+            "registryManagedDocumentFieldRevisions",
+            "registryManagedHouseProfileFieldRevisions",
+            "registryManagedExtensionFieldRevisions",
+            "registryManagedViewFieldRevisions",
+            "registryManagedLineageFieldRevisions",
+            "registryManagedEntitySourceRevision",
+            "gwniwrMarriageInventory",
+            "houseBiographyModule"
+          ]
+        }
+      ],
+      "proof": {
+        "expectedCurrentSha256": "ef5117b77e75e0fb9283f3cfb6084a89ade2c0bc1d1596679eaf9c83718db725",
+        "expectedHistoricalSha256": "ebf51082da07eae474331d9f5d2d8047c37097263921cc1e950e9038113be8a4"
+      }
+    },
+    {
+      "familyId": "haus-coeddu",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "document",
+            "description"
+          ],
+          "beforePresent": true,
+          "before": "Kriegerisches Bürgerhaus aus Gwynthor mit einer beliebten Waffenschmiede. Die Coeddu dienen Haus Draig seit Generationen als Wachen, Waffenknechte und vereinzelt als Ritter. Brenric ist Veteran des Großen Krieges; sein Sohn Llywelyn dient als Waffenknecht.",
+          "afterPresent": true,
+          "after": "Kriegerisches Bürgerhaus aus Gwynthor mit einer beliebten Waffenschmiede. Die Coeddu dienen Haus Draig seit Generationen als Wachen, Waffenknechte und vereinzelt als Ritter. Brenric ist Veteran des Großen Krieges und heute Kriegswart der Aufklärung; sein Sohn Llywelyn dient als Waffenknecht."
+        },
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-coeddu",
+            "extensions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "registryManagedSourceRevision": 4,
+            "registryManagedFieldRevisions": {}
+          }
+        },
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-craigddu",
+            "extensions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "registryManagedSourceRevision": 4,
+            "registryManagedFieldRevisions": {}
+          }
+        },
+        {
+          "path": [
+            "family",
+            "houses",
+            "@house-raves",
+            "extensions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "registryManagedSourceRevision": 4,
+            "registryManagedFieldRevisions": {}
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@haus-coeddu-gruender",
+            "extensions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "registryManagedSourceRevision": 4,
+            "registryManagedFieldRevisions": {}
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@haus-coeddu-gruenderin",
+            "extensions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "registryManagedSourceRevision": 4,
+            "registryManagedFieldRevisions": {}
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@brenric-coeddu",
+            "title"
+          ],
+          "beforePresent": true,
+          "before": "Waffenknecht im Ruhestand · Veteran des Großen Krieges",
+          "afterPresent": true,
+          "after": "Kriegswart der Aufklärung · Ritter im Dienst von Haus Draig"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@brenric-coeddu",
+            "portrait"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-coeddu/brenric-coeddu.png"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@brenric-coeddu",
+            "notes"
+          ],
+          "beforePresent": true,
+          "before": "Diente im Großen Krieg unter Sir Maredudd. Wiederkehrende Gelenkbeschwerden, besonders am Fuß, führten zu seinem Ruhestand. Vater von Rhydian, Llywelyn, Maelwen und Thalor.",
+          "afterPresent": true,
+          "after": "Veteran des Großen Krieges unter Sir Maredudd. Wegen wiederkehrender Gelenk- und Fußbeschwerden zog er sich aus dem Felddienst zurück. Heute ist er persönlicher Ritter im Dienst der Draigs und Kriegswart der Aufklärung: Er wertet Meldungen aus, führt Lagekarten und ordnet Boten- sowie Signalberichte unter Sir Maredudd und in Abstimmung mit Efael. Vater von Rhydian, Llywelyn, Maelwen und Thalor."
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@brenric-coeddu",
+            "extensions",
+            "biographyModule"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "schema": "aleria.biography-module",
+            "schemaVersion": 1,
+            "stats": [
+              {
+                "label": "Name",
+                "value": "Brenric Coeddu"
+              },
+              {
+                "label": "Geboren",
+                "value": "1682"
+              },
+              {
+                "label": "Alter im Jahr 1740",
+                "value": "58 Jahre"
+              },
+              {
+                "label": "Haus",
+                "value": "Haus Coeddu · bürgerlich"
+              },
+              {
+                "label": "Heimat",
+                "value": "Gwynthor · Llamreis Ankunft · Celtigerns Wacht"
+              },
+              {
+                "label": "Persönlicher Stand",
+                "value": "Ritter im Dienst von Haus Draig"
+              },
+              {
+                "label": "Amt",
+                "value": "Kriegswart der Aufklärung"
+              },
+              {
+                "label": "Vorgesetzter",
+                "value": "Feldmarschall Maredudd Draig"
+              },
+              {
+                "label": "Familienstand",
+                "value": "Verheiratet mit Gweneth"
+              },
+              {
+                "label": "Kinder",
+                "value": "Rhydian, Llywelyn, Maelwen und Thalor Coeddu"
+              }
+            ],
+            "quote": "Sagt mir, was ihr gesehen habt. Danach sprechen wir darüber, was es bedeutet.",
+            "quoteBy": "Brenric Coeddu",
+            "biography": {
+              "portraitStages": [
+                "",
+                "",
+                "",
+                ""
+              ],
+              "sideWidth": 100,
+              "connectionPortraitHeight": 78,
+              "connectionTextOffset": 0,
+              "biographyTitle": "Brenric Coeddu – Erfahrung vor Gewissheit",
+              "biographyText": "<p><strong>Brenric Coeddu</strong> ist im Jahr 1740 achtundfünfzig Jahre alt, ein Ritter im Dienst von <strong>Haus Draig</strong> und der <strong>Kriegswart der Aufklärung</strong> unter Feldmarschall <strong>Maredudd Draig</strong>. Er stammt aus dem bürgerlichen Haus Coeddu in Gwynthor, dessen Angehörige seit Generationen als Wachen, Waffenknechte und vereinzelt als Ritter dienen. Sein persönlicher Ritterstand ändert den Rang seiner Familie nicht.</p><p>Das silberne, im Nacken gebundene Haar, das schmale bartlose Gesicht und sein ruhiger Blick geben ihm eine strenge Erscheinung. Brenric braucht wenig Bewegung, um in einer Besprechung Gewicht zu besitzen. Er hört eine Meldung zunächst zu Ende und fragt dann nach Weg, Entfernung und Zeitpunkt. Ein selbstsicherer Vortrag beeindruckt ihn weniger als eine klare Antwort auf eine einfache Rückfrage.</p><p>Er kennt den bewaffneten Dienst aus eigener Erfahrung und hat den Großen Krieg unter Sir Maredudd erlebt. Wiederkehrende Gelenk- und besonders Fußbeschwerden zwangen ihn später zum Rückzug aus dem Felddienst. Mit dem neuen Amt bringt er seine Erfahrung in die militärische Führung zurück: Er ordnet Lageberichte, Karten, Botenwesen und Signale. Lange Märsche und die persönliche Erkundung im Gelände überlässt er den dafür eingesetzten Kräften.</p>",
+              "abilitiesTitle": "Persönlichkeit",
+              "abilities": [
+                {
+                  "title": "Aufmerksam",
+                  "icon": "../IconOrdner/Traits%20Icon/Conscientious.png",
+                  "detail": "Brenric achtet auf die kleine Unstimmigkeit zwischen zwei Berichten. Er lässt sich erklären, von wo ein Beobachter etwas erkennen konnte und welche Teile einer Meldung bloß weitergesagt wurden."
+                },
+                {
+                  "title": "Geduldig",
+                  "icon": "../IconOrdner/Traits%20Icon/Patient.png",
+                  "detail": "Ein unsicherer Bote erhält Zeit, seine Erinnerung zu ordnen. Brenric kann dieselbe Frage auf andere Weise stellen, bis deutlich wird, was tatsächlich beobachtet wurde."
+                },
+                {
+                  "title": "Pflichtbewusst",
+                  "icon": "../IconOrdner/Traits%20Icon/Diligent.png",
+                  "detail": "Zu einem Auftrag gehören für ihn ein zuständiger Empfänger und eine Rückmeldung. Er hält auch unscheinbare Lücken fest, wenn eine ausgefallene Nachricht den nächsten Schritt der Truppe gefährden könnte."
+                },
+                {
+                  "title": "Nüchtern",
+                  "icon": "../IconOrdner/Traits%20Icon/Temperate.png",
+                  "detail": "Er kann eine unangenehme Lage aussprechen, ohne sie mit großen Worten auszuschmücken. Ebenso erwartet er, dass eine offene Frage offen bleiben darf, solange die Belege für eine Antwort fehlen."
+                },
+                {
+                  "title": "Erfahrener Organisator",
+                  "icon": "../IconOrdner/Traits%20Icon/Organizer.png",
+                  "detail": "Er führt verschiedene Fachberichte zu einer verständlichen Lage zusammen. Sein Anspruch ist, dass Feldmarschall und Kommandanten erkennen können, welche Nachricht dringend ist und welche Prüfung noch aussteht."
+                }
+              ],
+              "historyTitle": "Vom Waffenknecht zum Kriegswart",
+              "historyText": "<p>Brenric wurde <strong>1682</strong> geboren. Seine Familie gehört zu den bürgerlichen Häusern Gwynthors und ist dem bewaffneten Dienst für die Draig seit Langem verbunden. Im <strong>Großen Krieg</strong> kämpfte er als Waffenknecht unter <strong>Sir Maredudd</strong>. Aus dieser Zeit stammt seine persönliche Erfahrung mit dem Dienst, auf dessen verlässlichen Meldungen und Absprachen die Führung angewiesen ist.</p><p>Später machten ihm seine Gelenke wiederholt Beschwerden; besonders der Fuß erschwerte den Dienst auf den Beinen. Brenric gab den Felddienst auf und trat in den <strong>Ruhestand</strong>. Dieser Rückzug gehört weiterhin zu seiner Lebensgeschichte. Auch als Kriegswart sind die Beschwerden nicht verschwunden. Sie bestimmen mit, welche Aufgaben er selbst übernimmt und wofür er geeignete Kräfte einsetzt.</p><p>Heute dient er als <strong>Ritter und Kriegswart der Aufklärung</strong> erneut unter Maredudd, nun in dessen Fachführung. Sein Schwerpunkt liegt auf der Auswertung und auf der geordneten Verbindung der militärischen Nachrichtendienste. Der Zeitpunkt seines Ritterschlags und ein genauer Ernennungstag sind nicht überliefert.</p>",
+              "worksTitle": "Amt & Können",
+              "works": [
+                "Militärische Lage · Verbindet Beobachtungen über Gelände, Wege und Truppenbewegungen mit dem tatsächlichen Bedarf der Führung. Herkunft, Zeitpunkt und Sicherheit einer Meldung bleiben erkennbar.",
+                "Karten und Erkundung · Lässt Übergänge, Marschwege und bedeutsame Geländepunkte prüfen. Erkundungsaufträge gehen an geeignete Kräfte; zurückkehrende Berichte werden mit den vorhandenen Karten abgeglichen.",
+                "Boten- und Signalordnung · Führt die Fachaufsicht über militärische Übermittlung und verständliche Zeichen. Der Boten- und Signalmeister organisiert die Ausführung; Brenric verfolgt offene Übergaben und widersprüchliche Meldungen.",
+                "Quellenprüfung · Trennt eigene Beobachtung, überbrachte Nachricht und Schlussfolgerung. Gegenmeldungen und veraltete Angaben werden gekennzeichnet, bevor sie in eine Lagevorlage eingehen.",
+                "Nachrichtenaustausch · Stimmt militärisch bedeutsame Hinweise mit Efael Gwyllachs Aufklärungsnetz ab und legt Maredudd die geprüfte Lage vor. Die unmittelbare Truppenführung verbleibt in der militärischen Befehlskette."
+              ],
+              "extraSections": [
+                {
+                  "title": "Unter Maredudd, im Austausch mit Efael",
+                  "position": "afterWorks",
+                  "mode": "text",
+                  "text": "<p>Als einer der fünf gleichrangigen Kriegswarte berichtet Brenric an <strong>Feldmarschall Maredudd Draig</strong>. Er liefert eine verständliche Grundlage für Aufstellung, Marsch und Schutz der Truppen. Die örtlichen Kommandanten führen ihre Verbände; Brenric verantwortet die fachliche Qualität der Aufklärung und ihrer Übermittlung.</p><p>Mit <strong>Efael Gwyllach</strong>, dem Netzmeister der Aufklärung, gleicht er Hinweise ab, die für militärische Entscheidungen wichtig sind. Brenric führt damit kein eigenes geheimes Spionagenetz und übernimmt weder Efaels Netz noch Meredydd Gwyllachs Fahndungsnetz. In der Zusammenarbeit kommt es ihm darauf an, dass bei einer weitergereichten Nachricht ihre Herkunft und ihre Grenzen erhalten bleiben.</p>"
+                },
+                {
+                  "title": "Gweneth und die vier Kinder",
+                  "position": "afterWorks",
+                  "mode": "text",
+                  "text": "<p>Brenric ist mit <strong>Gweneth</strong> verheiratet. Ihre vier Kinder sind <strong>Rhydian</strong>, <strong>Llywelyn</strong>, <strong>Maelwen</strong> und <strong>Thalor Coeddu</strong>. Rhydian ist der Älteste, Thalor der Jüngste. In dieser Familie war der Krieg für die Kinder immer auch die Vergangenheit ihres Vaters; später erlebten sie ebenso, welche Grenzen ihm die Beschwerden setzten.</p><p><strong>Llywelyn</strong> dient selbst als Waffenknecht für Haus Draig. Mit seiner Frau <strong>Catrin Craigddu</strong> hat er den fünfjährigen Sohn <strong>Ellian</strong>, Brenrics Enkel. Llywelyns ruhiger, oft gemütlicher Umgang mit dem Alltag steht neben Brenrics prüfender Art. Beide verbinden den Dienst mit einer Verantwortung, die nach der Ablösung zu Hause weitergeht.</p>"
+                }
+              ],
+              "triviaTitle": "Im Umgang mit Brenric",
+              "trivia": [
+                "Fragt bei einer Meldung zuerst nach Ort und Zeitpunkt; erst anschließend will er die Deutung hören.",
+                "Lässt eine Unsicherheit ausdrücklich festhalten. Ein ehrliches „Das konnte ich nicht erkennen“ ist für ihn brauchbarer als eine zur Sicherheit ergänzte Einzelheit.",
+                "Hält Besprechungen in einem ruhigen Ton. Wird eine Auskunft widersprüchlich, werden seine Fragen kürzer und genauer.",
+                "Teilt längere Aufgaben so ein, dass sein Fuß Ruhe bekommt. Die Rücksicht auf seine Beschwerden ist Teil seines Arbeitsalltags."
+              ],
+              "quotesTitle": "In eigenen Worten",
+              "quotes": [
+                "„Ein Bote kann sich irren. Darum frage ich ihn, wo er stand.“",
+                "„Die Karte soll uns zeigen, was wir wissen. Lasst Platz für das, was wir noch prüfen müssen.“",
+                "„Maredudd braucht eine brauchbare Meldung. Gebt mir die unbequemen Einzelheiten gleich dazu.“"
+              ],
+              "connectionsTitle": "Familie & Dienst",
+              "connections": [
+                {
+                  "type": "connection",
+                  "name": "Gweneth",
+                  "image": "../Stammbäume/assets/images/placeholders/female.png",
+                  "imageFormat": "portrait",
+                  "detail": "Seine Ehefrau und Mutter ihrer vier Kinder Rhydian, Llywelyn, Maelwen und Thalor."
+                },
+                {
+                  "type": "connection",
+                  "name": "Llywelyn Coeddu",
+                  "image": "../Stammbäume/assets/images/portraits/haus-coeddu/llywelyn-coeddu.png",
+                  "imageFormat": "portrait",
+                  "detail": "Sein dreißigjähriger Sohn, Waffenknecht im Dienst von Haus Draig; mit Catrin Craigddu verheiratet und Vater von Ellian."
+                },
+                {
+                  "type": "connection",
+                  "name": "Maredudd Draig",
+                  "image": "../Stammbäume/assets/images/portraits/haus-draig/maredudd-draig.jpg",
+                  "imageFormat": "portrait",
+                  "detail": "Feldmarschall und unmittelbarer Vorgesetzter. Brenric diente bereits im Großen Krieg als Waffenknecht unter ihm."
+                },
+                {
+                  "type": "connection",
+                  "name": "Efael Gwyllach",
+                  "image": "../Stammbäume/assets/images/portraits/haus-gwyllach/efael-gwyllach.jpg",
+                  "imageFormat": "portrait",
+                  "detail": "Netzmeister der Aufklärung und Ansprechpartner für den Abgleich militärisch bedeutsamer Hinweise. Die jeweiligen Führungsaufgaben bleiben getrennt."
+                }
+              ],
+              "documentsTitle": "Haus & Familienakte",
+              "documents": [
+                {
+                  "title": "Haus Coeddu",
+                  "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Coeddu.png",
+                  "link": "../Stammbäume/Stammbaum.html?family=haus-coeddu&mode=view&person=brenric-coeddu",
+                  "text": "Brenrics bestehender Eintrag im Stammbaum mit Gweneth, den vier Kindern und Enkel Ellian."
+                }
+              ],
+              "footer": "Personenakte · Brenric Coeddu · Kriegswart der Aufklärung"
+            }
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@brenric-coeddu",
+            "extensions",
+            "registryManagedFieldPreviousValues"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": [
+              "",
+              "assets/images/placeholders/male.png"
+            ],
+            "title": [
+              "Waffenknecht im Ruhestand · Veteran des Großen Krieges"
+            ],
+            "notes": [
+              "Diente im Großen Krieg unter Sir Maredudd. Wiederkehrende Gelenkbeschwerden, besonders am Fuß, führten zu seinem Ruhestand. Vater von Rhydian, Llywelyn, Maelwen und Thalor."
+            ]
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@brenric-coeddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@brenric-coeddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "portrait": 6,
+            "title": 6,
+            "notes": 6
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@brenric-coeddu",
+            "extensions",
+            "registryManagedFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "portrait",
+            "title",
+            "notes"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@gweneth-coeddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@gweneth-coeddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhydian-coeddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhydian-coeddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@llywelyn-coeddu",
+            "extensions",
+            "biographyModule",
+            "biography",
+            "historyText"
+          ],
+          "beforePresent": true,
+          "before": "<p>Llywelyn stammt aus dem <strong>bürgerlichen Haus Coeddu</strong> in Gwynthor. Seine Eltern sind <strong>Brenric Coeddu</strong> und <strong>Gweneth</strong>. Mit seinem älteren Bruder <strong>Rhydian</strong>, seiner jüngeren Schwester <strong>Maelwen</strong> und dem jüngsten Bruder <strong>Thalor</strong> wuchs er in einer Familie auf, der bewaffneter Dienst keineswegs fremd war.</p><p>Brenric kämpfte im <strong>Großen Krieg unter Sir Maredudd</strong>. Für Llywelyn war der Krieg damit nie ausschließlich eine Sache aus Liedern und Erzählungen über große Ritter. Er kannte einen der Männer, die tatsächlich gedient hatten, als seinen Vater. Brenrics Erfahrung gab dem Waffenhandwerk einen sehr alltäglichen Hintergrund: Pflichten, Kameraden, lange Tage auf den Beinen und die Frage, ob man danach wieder heimkam.</p><p>Inzwischen ist Brenric im <strong>Ruhestand</strong>. Seine Gelenke machen ihm immer wieder Beschwerden, besonders der Fuß. Das erschwert ihm den Dienst so sehr, dass er ihn aufgegeben hat. Für Llywelyn gehört die Rücksicht auf den Vater heute ebenso zum Familienleben wie dessen Erinnerungen an frühere Dienstjahre.</p><p>Llywelyn selbst wurde ebenfalls <strong>Waffenknecht</strong>. Sein Alltag führt ihn in den Dienst von Haus Draig in Gwynthor. Er trägt diese Aufgabe ohne große Worte über Ruhm oder besondere Bestimmung. Dass ein Mann eine Waffe führt, bedeutet für ihn zunächst, dass andere darauf vertrauen dürfen, dass er seine Arbeit beherrscht und an seinem Platz bleibt.</p>",
+          "afterPresent": true,
+          "after": "<p>Llywelyn stammt aus dem <strong>bürgerlichen Haus Coeddu</strong> in Gwynthor. Seine Eltern sind <strong>Brenric Coeddu</strong> und <strong>Gweneth</strong>. Mit seinem älteren Bruder <strong>Rhydian</strong>, seiner jüngeren Schwester <strong>Maelwen</strong> und dem jüngsten Bruder <strong>Thalor</strong> wuchs er in einer Familie auf, der bewaffneter Dienst keineswegs fremd war.</p><p>Brenric kämpfte im <strong>Großen Krieg unter Sir Maredudd</strong>. Für Llywelyn war der Krieg damit nie ausschließlich eine Sache aus Liedern und Erzählungen über große Ritter. Er kannte einen der Männer, die tatsächlich gedient hatten, als seinen Vater. Brenrics Erfahrung gab dem Waffenhandwerk einen sehr alltäglichen Hintergrund: Pflichten, Kameraden, lange Tage auf den Beinen und die Frage, ob man danach wieder heimkam.</p><p>Wiederkehrende Gelenk- und besonders Fußbeschwerden zwangen Brenric zunächst zum <strong>Rückzug aus dem Felddienst</strong>. Heute dient er den Draigs als <strong>persönlicher Ritter und Kriegswart der Aufklärung</strong>. Unter Sir Maredudd wertet er Meldungen aus, führt Lagekarten und ordnet Boten- sowie Signalberichte; dabei stimmt er sich mit Efael ab. Die neue Aufgabe nutzt seine Kriegserfahrung, ohne seine körperlichen Beschwerden zu leugnen. Für Llywelyn gehört die Rücksicht auf den Vater weiterhin zum Familienleben.</p><p>Llywelyn selbst wurde ebenfalls <strong>Waffenknecht</strong>. Sein Alltag führt ihn in den Dienst von Haus Draig in Gwynthor. Er trägt diese Aufgabe ohne große Worte über Ruhm oder besondere Bestimmung. Dass ein Mann eine Waffe führt, bedeutet für ihn zunächst, dass andere darauf vertrauen dürfen, dass er seine Arbeit beherrscht und an seinem Platz bleibt.</p>"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@llywelyn-coeddu",
+            "extensions",
+            "biographyModule",
+            "biography",
+            "connections"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "type": "connection",
+              "name": "Brenric Coeddu",
+              "image": "../Stammbäume/assets/images/placeholders/male.png",
+              "imageFormat": "portrait",
+              "detail": "Vater und Veteran des Großen Krieges unter Sir Maredudd. Wiederkehrende Gelenk- und besonders Fußbeschwerden haben ihn in den Ruhestand geführt."
+            },
+            {
+              "type": "connection",
+              "name": "Gweneth",
+              "image": "../Stammbäume/assets/images/placeholders/female.png",
+              "imageFormat": "portrait",
+              "detail": "Mutter von Llywelyn, Rhydian, Maelwen und Thalor."
+            },
+            {
+              "type": "connection",
+              "name": "Catrin Craigddu",
+              "image": "../Stammbäume/assets/images/placeholders/female.png",
+              "imageFormat": "portrait",
+              "detail": "Seine Ehefrau, Ellians Mutter und Hywels jüngere Schwester."
+            },
+            {
+              "type": "connection",
+              "name": "Ellian Coeddu",
+              "image": "../Stammbäume/assets/images/placeholders/male.png",
+              "imageFormat": "portrait",
+              "detail": "Sein junger Sohn, geboren 1735 und im Jahr 1740 fünf Jahre alt."
+            },
+            {
+              "type": "connection",
+              "name": "Hywel Craigddu",
+              "image": "../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png",
+              "imageFormat": "portrait",
+              "detail": "Bester Freund, Kamerad und Schwager. Für Llywelyn nimmt der zwei Jahre ältere Hywel beinahe die Rolle eines großen Bruders ein."
+            }
+          ],
+          "afterPresent": true,
+          "after": [
+            {
+              "type": "connection",
+              "name": "Brenric Coeddu",
+              "image": "../Stammbäume/assets/images/portraits/haus-coeddu/brenric-coeddu.png",
+              "imageFormat": "portrait",
+              "detail": "Vater, Veteran des Großen Krieges und heute persönlicher Ritter sowie Kriegswart der Aufklärung. Nach dem Rückzug aus dem Felddienst wegen Gelenk- und Fußbeschwerden wertet er unter Sir Maredudd Meldungen aus, führt Lagekarten und ordnet Boten- und Signalberichte in Abstimmung mit Efael."
+            },
+            {
+              "type": "connection",
+              "name": "Gweneth",
+              "image": "../Stammbäume/assets/images/placeholders/female.png",
+              "imageFormat": "portrait",
+              "detail": "Mutter von Llywelyn, Rhydian, Maelwen und Thalor."
+            },
+            {
+              "type": "connection",
+              "name": "Catrin Craigddu",
+              "image": "../Stammbäume/assets/images/placeholders/female.png",
+              "imageFormat": "portrait",
+              "detail": "Seine Ehefrau, Ellians Mutter und Hywels jüngere Schwester."
+            },
+            {
+              "type": "connection",
+              "name": "Ellian Coeddu",
+              "image": "../Stammbäume/assets/images/placeholders/male.png",
+              "imageFormat": "portrait",
+              "detail": "Sein junger Sohn, geboren 1735 und im Jahr 1740 fünf Jahre alt."
+            },
+            {
+              "type": "connection",
+              "name": "Hywel Craigddu",
+              "image": "../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png",
+              "imageFormat": "portrait",
+              "detail": "Bester Freund, Kamerad und Schwager. Für Llywelyn nimmt der zwei Jahre ältere Hywel beinahe die Rolle eines großen Bruders ein."
+            }
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@llywelyn-coeddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@llywelyn-coeddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@maelwen-coeddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@maelwen-coeddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "title": 4,
+            "notes": 4,
+            "portrait": 4
+          }
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@thalor-coeddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@thalor-coeddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@catrin-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@catrin-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@ellian-coeddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@ellian-coeddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@tiberian-raves",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@tiberian-raves",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "title": 4,
+            "notes": 4,
+            "portrait": 4
+          }
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-haus-coeddu-founders",
+            "extensions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "registryManagedSourceRevision": 4,
+            "registryManagedFieldRevisions": {}
+          }
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-brenric-gweneth-coeddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-brenric-gweneth-coeddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-llywelyn-coeddu-catrin-craigddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-llywelyn-coeddu-catrin-craigddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-tiberian-maelwen-raves",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-tiberian-maelwen-raves",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-brenric-coeddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-brenric-coeddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-rhydian-coeddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-rhydian-coeddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-llywelyn-coeddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-llywelyn-coeddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-maelwen-coeddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-maelwen-coeddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-thalor-coeddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-thalor-coeddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-ellian-coeddu",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-ellian-coeddu",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "cadetBranches",
+            "@married-away-maelwen-raves",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "cadetBranches",
+            "@married-away-maelwen-raves",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "timeJumps",
+            "@gap-coeddu-to-1682",
+            "extensions",
+            "registryManagedSourceRevision"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "timeJumps",
+            "@gap-coeddu-to-1682",
+            "extensions",
+            "registryManagedFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 5,
+          "afterPresent": true,
+          "after": 6
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "historyText"
+          ],
+          "beforePresent": true,
+          "before": "Brenric Coeddu diente im Großen Krieg unter Sir Maredudd. Gelenkbeschwerden führten später zu seinem Ruhestand. Mit Gweneth hat er die Kinder Rhydian, Llywelyn, Maelwen und Thalor. Llywelyn ist Waffenknecht und mit Catrin Craigddu verheiratet; ihr Sohn heißt Ellian.",
+          "afterPresent": true,
+          "after": "Brenric Coeddu diente im Großen Krieg unter Sir Maredudd. Gelenk- und Fußbeschwerden führten zunächst zum Rückzug aus dem Felddienst. Heute dient er den Draigs als persönlicher Ritter und Kriegswart der Aufklärung: Unter Sir Maredudd wertet er Meldungen aus, führt Lagekarten und ordnet Boten- sowie Signalberichte in Abstimmung mit Efael. Mit Gweneth hat er die Kinder Rhydian, Llywelyn, Maelwen und Thalor. Llywelyn ist Waffenknecht und mit Catrin Craigddu verheiratet; ihr Sohn heißt Ellian."
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "extraSections"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Llywelyns Freundschaft mit Hywel Craigddu und die Ehe mit dessen Schwester Catrin verbinden die beiden Bürgerhäuser. Maelwens Ehe mit Tiberian Raves führt in den kaufmännischen Familienkreis. Brenrics Veteranenrolle begründet keine unbekannte Amtsfolge."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Die Waffenschmiede ist als Familienbetrieb belegt. Tätigkeiten einzelner Angehöriger in anderen Betrieben bleiben eigenständige Arbeitsverbindungen."
+            }
+          ],
+          "afterPresent": true,
+          "after": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Llywelyns Freundschaft mit Hywel Craigddu und die Ehe mit dessen Schwester Catrin verbinden die beiden Bürgerhäuser. Maelwens Ehe mit Tiberian Raves führt in den kaufmännischen Familienkreis. Brenrics neues Amt ist eine persönliche Aufgabe im Dienst der Draigs; Haus Coeddu bleibt bürgerlich."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Die Waffenschmiede ist als Familienbetrieb belegt. Tätigkeiten einzelner Angehöriger in anderen Betrieben bleiben eigenständige Arbeitsverbindungen."
+            }
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedDocumentFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "description": 6
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedHouseProfileFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedLineageFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "fatherPortraitInventory"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": "assets/images/portraits/haus-coeddu/portrait-sources.json"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "fatherPortraitInventory"
+          ]
+        }
+      ],
+      "historicalObjectOrders": [
+        {
+          "path": [
+            "family",
+            "persons",
+            "@brenric-coeddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@gweneth-coeddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@rhydian-coeddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@llywelyn-coeddu",
+            "extensions"
+          ],
+          "keys": [
+            "biographyModule"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@maelwen-coeddu",
+            "extensions"
+          ],
+          "keys": [
+            "registryManagedFields"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@thalor-coeddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@catrin-craigddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@ellian-coeddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@tiberian-raves",
+            "extensions"
+          ],
+          "keys": [
+            "registryManagedFields"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-brenric-gweneth-coeddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-llywelyn-coeddu-catrin-craigddu",
+            "extensions"
+          ],
+          "keys": [
+            "crossFamilyRelationship"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-tiberian-maelwen-raves",
+            "extensions"
+          ],
+          "keys": [
+            "crossFamilyRelationship"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-brenric-coeddu",
+            "extensions"
+          ],
+          "keys": [
+            "timeJumpId"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-rhydian-coeddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-llywelyn-coeddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-maelwen-coeddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-thalor-coeddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-ellian-coeddu",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "cadetBranches",
+            "@married-away-maelwen-raves",
+            "extensions"
+          ],
+          "keys": []
+        },
+        {
+          "path": [
+            "family",
+            "timeJumps",
+            "@gap-coeddu-to-1682",
+            "extensions"
+          ],
+          "keys": [
+            "preparedPlaceholder"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "extensions"
+          ],
+          "keys": [
+            "blankFamily",
+            "sourceRevision",
+            "registryManagedDocumentFields",
+            "sourceNote",
+            "registryTombstones",
+            "registryTransferredPersons",
+            "registryManagedEntitySourceRevision",
+            "houseBiographyModule"
+          ]
+        }
+      ],
+      "proof": {
+        "expectedCurrentSha256": "4553f70406aa72fb1c09cd56431fee7b1af23383024dc15d406127b73b45e0a2",
+        "expectedHistoricalSha256": "79929d480d647e678f8076422f6ed5fd76a61dd334c629cee5d2212419e3d26c"
+      }
+    },
+    {
+      "familyId": "haus-bronnor",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "document",
+            "description"
+          ],
+          "beforePresent": true,
+          "before": "Vorbereitete Familienakte des Haus Bronnor aus dem Tal der Milane.",
+          "afterPresent": true,
+          "after": "Haus Bronnor: vorbereitete Familienakte mit unbekanntem Gründerpaar, Hauswappen und Überlieferungslücke vor den namentlich bekannten Angehörigen."
+        },
+        {
+          "path": [
+            "family",
+            "houses"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "house-bronnor",
+              "name": "Haus Bronnor",
+              "motto": "",
+              "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-bronnor.png",
+              "status": "active"
+            }
+          ],
+          "afterPresent": true,
+          "after": [
+            {
+              "id": "house-bronnor",
+              "name": "Haus Bronnor",
+              "motto": "",
+              "emblem": "assets/images/houses/Tal der Milane/Yvains Klamm/haus-bronnor.png",
+              "status": "active"
+            },
+            {
+              "id": "house-brandyddyn",
+              "name": "Haus Brândyddyn",
+              "motto": "",
+              "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Brândyddyn/brandyddyn-emblem.png",
+              "status": "active"
+            }
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "haus-bronnor-gruender",
+              "name": "???",
+              "title": "Gründer des Hauses",
+              "sex": "male",
+              "status": "alive",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-bronnor",
+              "familyRole": "core",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": ""
+            },
+            {
+              "id": "haus-bronnor-gruenderin",
+              "name": "???",
+              "title": "Gründerin des Hauses",
+              "sex": "female",
+              "status": "alive",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-bronnor",
+              "familyRole": "married",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": ""
+            }
+          ],
+          "afterPresent": true,
+          "after": [
+            {
+              "id": "haus-bronnor-gruender",
+              "worldPersonId": "person--haus-bronnor--haus-bronnor-gruender",
+              "name": "Unbekannter Gründer",
+              "title": "Gründer des Hauses",
+              "sex": "male",
+              "status": "unknown",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-bronnor",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+              "extensions": {
+                "registryManagedFields": [
+                  "name"
+                ],
+                "registryManagedFieldPreviousValues": {
+                  "name": [
+                    "???"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "haus-bronnor-gruenderin",
+              "worldPersonId": "person--haus-bronnor--haus-bronnor-gruenderin",
+              "name": "Unbekannte Gründerin",
+              "title": "Gründerin des Hauses",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-bronnor",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "Gründerfamilie"
+              ],
+              "notes": "Historische Platzhalterfigur; Name und genaue Lebensdaten sind nicht überliefert.",
+              "extensions": {
+                "registryManagedFields": [
+                  "name"
+                ],
+                "registryManagedFieldPreviousValues": {
+                  "name": [
+                    "???"
+                  ]
+                }
+              }
+            },
+            {
+              "id": "ysabel-bronnor",
+              "worldPersonId": "person--haus-bronnor--ysabel-bronnor",
+              "name": "Ysabel Bronnor",
+              "title": "Leutnant der Leibgarde",
+              "sex": "female",
+              "status": "alive",
+              "birth": "",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-bronnor/ysabel-bronnor.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-bronnor",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Mitglied des Ritterhauses Bronnor aus dem Tal der Milane. Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Mutter Eurgains. Alterserscheinung: etwa 35–45 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+              "extensions": {
+                "authoredSource": "draig-garde-20261112",
+                "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen. Eine Ehe mit Pellinard ist nicht belegt; der Herkunftsname Bronnor bleibt ausdrücklich erhalten.",
+                "ageEstimate": "etwa 35–45 Jahre"
+              }
+            },
+            {
+              "id": "pellinard-brandyddyn",
+              "worldPersonId": "person--haus-brandyddyn--pellinard-brandyddyn",
+              "name": "Pellinard Brândyddyn",
+              "title": "Leutnant der Leibgarde",
+              "sex": "male",
+              "status": "alive",
+              "birth": "",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-brandyddyn/pellinard-brandyddyn.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-brandyddyn",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Vater Eurgains. Alterserscheinung: etwa 45–55 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+              "extensions": {
+                "authoredSource": "draig-garde-20261112",
+                "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen. Die Schreibweise Pellinard Brândyddyn folgt der beschrifteten Gardeübersicht; im Nutzertext auch Pelinard und Brandyddyn.",
+                "ageEstimate": "etwa 45–55 Jahre"
+              }
+            },
+            {
+              "id": "eurgain-brandyddyn",
+              "worldPersonId": "person--haus-brandyddyn--eurgain-brandyddyn",
+              "name": "Eurgain Brândyddyn",
+              "title": "Ritter der Leibgarde",
+              "sex": "female",
+              "status": "alive",
+              "birth": "",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-brandyddyn/eurgain-brandyddyn.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-brandyddyn",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Tochter von Pellinard Brândyddyn und Ysabel Bronnor. Alterserscheinung: etwa 20–30 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+              "extensions": {
+                "authoredSource": "draig-garde-20261112",
+                "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen. Elternschaft gemäß ausdrücklicher Nutzerangabe; Lebensdaten und Familienstand sind nicht bekannt.",
+                "ageEstimate": "etwa 20–30 Jahre"
+              }
+            }
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-haus-bronnor-founders",
+            "certainty"
+          ],
+          "beforePresent": true,
+          "before": "confirmed",
+          "afterPresent": true,
+          "after": "unknown"
+        },
+        {
+          "path": [
+            "family",
+            "partnerships",
+            "@marriage-haus-bronnor-founders",
+            "notes"
+          ],
+          "beforePresent": true,
+          "before": "Gründerehe des Hauses.",
+          "afterPresent": true,
+          "after": "Platzhalter des unbekannten Gründerpaares; keine Ehejahre oder Namen sind belegt."
+        },
+        {
+          "path": [
+            "family",
+            "parentages"
+          ],
+          "beforePresent": true,
+          "before": [],
+          "afterPresent": true,
+          "after": [
+            {
+              "id": "parentage-eurgain-brandyddyn",
+              "childId": "eurgain-brandyddyn",
+              "parentIds": [
+                "pellinard-brandyddyn",
+                "ysabel-bronnor"
+              ],
+              "partnershipId": "",
+              "type": "biological",
+              "legitimacy": "unknown",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "Ausdrücklich bestätigte Elternschaft; Ehe, Verlobung und heutiger Beziehungsstatus der Eltern bleiben offen.",
+              "extensions": {
+                "chartPairParentsWithoutPartnership": true
+              }
+            }
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "lineage",
+            "crestSubtitle"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "after": "Ritterhaus · Tal der Milane"
+        },
+        {
+          "path": [
+            "family",
+            "timeJumps"
+          ],
+          "beforePresent": true,
+          "before": [],
+          "afterPresent": true,
+          "after": [
+            {
+              "id": "gap-bronnor-unrecorded-generations",
+              "parentPartnershipId": "marriage-haus-bronnor-founders",
+              "parentPersonId": "",
+              "childIds": [
+                "ysabel-bronnor"
+              ],
+              "years": 0,
+              "fromYear": "",
+              "toYear": "",
+              "label": "Nicht einzeln überlieferte Generationen",
+              "notes": "Reiner Darstellungsanker für die unvollständig überlieferte Hauslinie. Keine unmittelbare Elternschaft, Geschwisterschaft oder genaue Generationenzahl wird daraus abgeleitet.",
+              "extensions": {
+                "preparedPlaceholder": true
+              }
+            }
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "view",
+            "limitGenerations"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": false
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "blankFamily"
+          ],
+          "beforePresent": true,
+          "before": true,
+          "afterPresent": true,
+          "after": false
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedEntitySourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 0,
+          "afterPresent": true,
+          "after": 2
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 1,
+          "afterPresent": true,
+          "after": 2
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "extraSections"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Auf dem vorhandenen Hauszeichen ist ein roter Adler mit ausgebreiteten Schwingen über einem roten Fels auf dunklem Grund dargestellt. Darüber hinaus sind besondere Hausbräuche, Werte und ein verbindlicher Leitspruch noch nicht ausgearbeitet."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Weitere familiäre Verbindungen, Bündnisse und Fehden sind bisher nicht ausgearbeitet."
+            }
+          ],
+          "afterPresent": true,
+          "after": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Auf dem vorhandenen Hauszeichen ist ein roter Adler mit ausgebreiteten Schwingen über einem roten Fels auf dunklem Grund dargestellt. Darüber hinaus sind besondere Hausbräuche, Werte und ein verbindlicher Leitspruch noch nicht ausgearbeitet."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Ysabel Bronnor gehört diesem Ritterhaus aus dem Tal der Milane an und ist Leutnant der Draig-Leibgarde. Sie ist eine Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Ysabel und Pellinard Brândyddyn sind die Eltern Eurgain Brândyddyns; Ehe, Verlobung und heutiger Beziehungsstatus der Eltern sind nicht belegt. Ysabel bleibt unter ihrer Herkunftsidentität Bronnor verzeichnet."
+            }
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "documents"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Tal der Milane/Yvains Klamm/haus-bronnor.png",
+              "title": "Haus Bronnor · vollständige Hausseite",
+              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bronnor"
+            }
+          ],
+          "afterPresent": true,
+          "after": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Tal der Milane/Yvains Klamm/haus-bronnor.png",
+              "title": "Haus Bronnor · vollständige Hausseite",
+              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bronnor"
+            },
+            {
+              "title": "Haus Brândyddyn",
+              "text": "Eurgain ist die Tochter Ysabel Bronnors und Pellinard Brândyddyns.",
+              "link": "kleinehaeuser.html?haus=haus-brandyddyn",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Brândyddyn/brandyddyn-emblem.png"
+            }
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "preparedTimeJump"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": true
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "pendingDescendantReview"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": false
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "chartLayoutPolicy"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": "strict-v1"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "authoredOn"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": "2026-11-12"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "chartAlignLineageOriginOverPersonId"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": "ysabel-bronnor"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceNote"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": "Nutzerauftrag Draig-Garde vom 12. November 2026. Unbekanntes Gründerpaar, Hauswappen und genau ein serieller Zeitsprung. Die ersten bekannten Mitglieder besitzen keine erfundenen Eltern. Namensgleiche Angehörige werden ohne belegte nähere Beziehung nicht zu Geschwistern oder Eltern und Kindern erklärt. Altersschätzungen sind ausschließlich textlich; keine Geburtsjahre daraus errechnet. Bestätigte Elternschaft Pellinard und Ysabel zu Eurgain wird in beiden Gegenakten geteilt; Ehe, Verlobung und Familienstand bleiben unbekannt."
+        }
+      ],
+      "historicalObjectOrders": [
+        {
+          "path": [
+            "family",
+            "view"
+          ],
+          "keys": [
+            "focusPersonId",
+            "orientation",
+            "ancestorDepth",
+            "descendantDepth",
+            "showSiblings"
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "extensions"
+          ],
+          "keys": [
+            "blankFamily",
+            "registryManagedEntitySourceRevision",
+            "sourceRevision",
+            "houseBiographyModule"
+          ]
+        }
+      ],
+      "proof": {
+        "expectedCurrentSha256": "b4f2574f8dbaa13cebe6ed4a765395a3a037d754b90af6284ea31aeb6387404e",
+        "expectedHistoricalSha256": "2d6d469c10dc6324ff1d6241964c87f75b81f4c77335d75ba424fbd4e1c09479"
+      }
+    },
+    {
+      "familyId": "haus-loer",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "houses"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "house-loer",
+              "name": "Haus Loer",
+              "motto": "",
+              "emblem": "assets/images/houses/Llamreis Ankunft/haus-loer.png",
+              "status": "active"
+            },
+            {
+              "id": "house-unbekannt-rhiannedd",
+              "name": "Unbekanntes Haus",
+              "motto": "",
+              "emblem": "",
+              "status": "active"
+            },
+            {
+              "id": "house-unbekannt-glenys-1667",
+              "name": "Unbekanntes Haus",
+              "motto": "",
+              "emblem": "",
+              "status": "active"
+            },
+            {
+              "id": "house-unbekannt-glenys-1695",
+              "name": "Unbekanntes Haus",
+              "motto": "",
+              "emblem": "",
+              "status": "active"
+            }
+          ],
+          "afterPresent": true,
+          "after": [
+            {
+              "id": "house-loer",
+              "name": "Haus Loer",
+              "motto": "",
+              "emblem": "assets/images/houses/Llamreis Ankunft/haus-loer.png",
+              "status": "active"
+            },
+            {
+              "id": "house-unbekannt-rhiannedd",
+              "name": "Unbekanntes Haus",
+              "motto": "",
+              "emblem": "",
+              "status": "active"
+            },
+            {
+              "id": "house-unbekannt-glenys-1667",
+              "name": "Unbekanntes Haus",
+              "motto": "",
+              "emblem": "",
+              "status": "active"
+            },
+            {
+              "id": "house-unbekannt-glenys-1695",
+              "name": "Unbekanntes Haus",
+              "motto": "",
+              "emblem": "",
+              "status": "active"
+            },
+            {
+              "id": "house-aurdden",
+              "name": "Familie Aurdden",
+              "motto": "",
+              "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Aurdden/aurdden-emblem.png",
+              "status": "active",
+              "extensions": {
+                "registryManagedSourceRevision": 4
+              }
+            }
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "persons"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "cadfarch-loer",
+              "worldPersonId": "person--haus-loer--cadfarch-loer",
+              "name": "Cadfarch Loer",
+              "title": "Begründer des Ritterherrenhauses Loer",
+              "sex": "male",
+              "status": "dead",
+              "birth": "????",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "head",
+              "tags": [],
+              "notes": "Erschloss der Überlieferung nach die ersten ergiebigen Edelsteinadern Craithglyns und errichtete zu ihrem Schutz die Stammburg; sein eigentlicher Name ist nicht überliefert.",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-cadfarch-spouse",
+              "worldPersonId": "person--family-tree--unknown-cadfarch-spouse",
+              "name": "Unbekannte Ehefrau",
+              "title": "",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "????",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "maddocc-loer",
+              "worldPersonId": "person--haus-loer--maddocc-loer",
+              "name": "Maddocc Loer",
+              "title": "",
+              "sex": "male",
+              "status": "dead",
+              "birth": "1639",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "head",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-maddocc-spouse",
+              "worldPersonId": "person--family-tree--unknown-maddocc-spouse",
+              "name": "Unbekannte Ehefrau",
+              "title": "",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "1641",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "rhiannedd-loer",
+              "worldPersonId": "person--haus-loer--rhiannedd-loer",
+              "name": "Rhiannedd Loer",
+              "title": "",
+              "sex": "female",
+              "status": "dead",
+              "birth": "1636",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-rhiannedd-spouse",
+              "worldPersonId": "person--family-tree--unknown-rhiannedd-spouse",
+              "name": "Unbekannter Ehemann",
+              "title": "",
+              "sex": "male",
+              "status": "unknown",
+              "birth": "1634",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "eurgain-loer",
+              "worldPersonId": "person--haus-loer--eurgain-loer",
+              "name": "Eurgain Loer",
+              "title": "Ritterherr des Hauses Loer",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1664",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/eurgain-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "head",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-eurgain-spouse",
+              "worldPersonId": "person--family-tree--unknown-eurgain-spouse",
+              "name": "Unbekannte Ehefrau",
+              "title": "",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "1666",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "glenys-1667-loer",
+              "worldPersonId": "person--haus-loer--glenys-1667-loer",
+              "name": "Glenys Loer",
+              "title": "",
+              "sex": "female",
+              "status": "dead",
+              "birth": "1667",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-glenys-1667-spouse",
+              "worldPersonId": "person--family-tree--unknown-glenys-1667-spouse",
+              "name": "Unbekannter Ehemann",
+              "title": "",
+              "sex": "male",
+              "status": "unknown",
+              "birth": "1665",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "dwynarth-loer",
+              "worldPersonId": "person--haus-loer--dwynarth-loer",
+              "name": "Dwynarth Loer",
+              "title": "",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1670",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/dwynarth-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Hauptmann Craithglyns.",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-dwynarth-spouse",
+              "worldPersonId": "person--family-tree--unknown-dwynarth-spouse",
+              "name": "Unbekannte Ehefrau",
+              "title": "",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "1672",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "ynyrion-loer",
+              "worldPersonId": "person--haus-loer--ynyrion-loer",
+              "name": "Ynyrion Loer",
+              "title": "",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1689",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/ynyrion-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "mainline",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-ynyrion-spouse",
+              "worldPersonId": "person--family-tree--unknown-ynyrion-spouse",
+              "name": "Unbekannte Ehefrau",
+              "title": "",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "1691",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "gwynan-loer",
+              "worldPersonId": "person--haus-loer--gwynan-loer",
+              "name": "Gwynan Loer",
+              "title": "",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1692",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/gwynan-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-gwynan-spouse",
+              "worldPersonId": "person--family-tree--unknown-gwynan-spouse",
+              "name": "Unbekannte Ehefrau",
+              "title": "",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "1694",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "garmon-loer",
+              "worldPersonId": "person--haus-loer--garmon-loer",
+              "name": "Garmon Loer",
+              "title": "",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1692",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/garmon-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-garmon-spouse",
+              "worldPersonId": "person--family-tree--unknown-garmon-spouse",
+              "name": "Unbekannte Ehefrau",
+              "title": "",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "1694",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "glenys-1695-loer",
+              "worldPersonId": "person--haus-loer--glenys-1695-loer",
+              "name": "Glenys Loer",
+              "title": "",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1695",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/glenys-1695-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-glenys-1695-spouse",
+              "worldPersonId": "person--family-tree--unknown-glenys-1695-spouse",
+              "name": "Unbekannter Ehemann",
+              "title": "",
+              "sex": "male",
+              "status": "unknown",
+              "birth": "1693",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "aeron-loer",
+              "worldPersonId": "person--haus-loer--aeron-loer",
+              "name": "Aeron Loer",
+              "title": "",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1712",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/aeron-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "mainline",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "gwion-loer",
+              "worldPersonId": "person--haus-loer--gwion-loer",
+              "name": "Gwion Loer",
+              "title": "",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1715",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/gwion-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "gwallter-loer",
+              "worldPersonId": "person--haus-loer--gwallter-loer",
+              "name": "Gwallter Loer",
+              "title": "",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1717",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/gwallter-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "olwen-loer",
+              "worldPersonId": "person--haus-loer--olwen-loer",
+              "name": "Olwen Loer",
+              "title": "",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1720",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/olwen-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "gwenfaen-loer",
+              "worldPersonId": "person--haus-loer--gwenfaen-loer",
+              "name": "Gwenfaen Loer",
+              "title": "",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1715",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/gwenfaen-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "islwyna-loer",
+              "worldPersonId": "person--haus-loer--islwyna-loer",
+              "name": "Islwyna Loer",
+              "title": "",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1720",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/islwyna-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "tyne-loer",
+              "worldPersonId": "person--haus-loer--tyne-loer",
+              "name": "Tyne Loer",
+              "title": "",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1717",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/tyne-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "tesni-loer",
+              "worldPersonId": "person--haus-loer--tesni-loer",
+              "name": "Tesni Loer",
+              "title": "",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1722",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/tesni-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            }
+          ],
+          "afterPresent": true,
+          "after": [
+            {
+              "id": "cadfarch-loer",
+              "worldPersonId": "person--haus-loer--cadfarch-loer",
+              "name": "Cadfarch Loer",
+              "title": "Begründer des Ritterherrenhauses Loer",
+              "sex": "male",
+              "status": "dead",
+              "birth": "????",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "head",
+              "tags": [],
+              "notes": "Erschloss der Überlieferung nach die ersten ergiebigen Edelsteinadern Craithglyns und errichtete zu ihrem Schutz die Stammburg; sein eigentlicher Name ist nicht überliefert.",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-cadfarch-spouse",
+              "worldPersonId": "person--family-tree--unknown-cadfarch-spouse",
+              "name": "Unbekannte Ehefrau",
+              "title": "",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "????",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "maddocc-loer",
+              "worldPersonId": "person--haus-loer--maddocc-loer",
+              "name": "Maddocc Loer",
+              "title": "",
+              "sex": "male",
+              "status": "dead",
+              "birth": "1639",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "head",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-maddocc-spouse",
+              "worldPersonId": "person--family-tree--unknown-maddocc-spouse",
+              "name": "Unbekannte Ehefrau",
+              "title": "",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "1641",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "rhiannedd-loer",
+              "worldPersonId": "person--haus-loer--rhiannedd-loer",
+              "name": "Rhiannedd Loer",
+              "title": "",
+              "sex": "female",
+              "status": "dead",
+              "birth": "1636",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-rhiannedd-spouse",
+              "worldPersonId": "person--family-tree--unknown-rhiannedd-spouse",
+              "name": "Unbekannter Ehemann",
+              "title": "",
+              "sex": "male",
+              "status": "unknown",
+              "birth": "1634",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "eurgain-loer",
+              "worldPersonId": "person--haus-loer--eurgain-loer",
+              "name": "Eurgain Loer",
+              "title": "Ritterherr des Hauses Loer",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1664",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/eurgain-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "head",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-eurgain-spouse",
+              "worldPersonId": "person--family-tree--unknown-eurgain-spouse",
+              "name": "Unbekannte Ehefrau",
+              "title": "",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "1666",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "glenys-1667-loer",
+              "worldPersonId": "person--haus-loer--glenys-1667-loer",
+              "name": "Glenys Loer",
+              "title": "",
+              "sex": "female",
+              "status": "dead",
+              "birth": "1667",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-glenys-1667-spouse",
+              "worldPersonId": "person--family-tree--unknown-glenys-1667-spouse",
+              "name": "Unbekannter Ehemann",
+              "title": "",
+              "sex": "male",
+              "status": "unknown",
+              "birth": "1665",
+              "death": "????",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "dwynarth-loer",
+              "worldPersonId": "person--haus-loer--dwynarth-loer",
+              "name": "Dwynarth Loer",
+              "title": "",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1670",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/dwynarth-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "Hauptmann Craithglyns.",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-dwynarth-spouse",
+              "worldPersonId": "person--family-tree--unknown-dwynarth-spouse",
+              "name": "Unbekannte Ehefrau",
+              "title": "",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "1672",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "ynyrion-loer",
+              "worldPersonId": "person--haus-loer--ynyrion-loer",
+              "name": "Ynyrion Loer",
+              "title": "",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1689",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/ynyrion-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "mainline",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-ynyrion-spouse",
+              "worldPersonId": "person--family-tree--unknown-ynyrion-spouse",
+              "name": "Unbekannte Ehefrau",
+              "title": "",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "1691",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "gwynan-loer",
+              "worldPersonId": "person--haus-loer--gwynan-loer",
+              "name": "Gwynan Loer",
+              "title": "",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1692",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/gwynan-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-gwynan-spouse",
+              "worldPersonId": "person--family-tree--unknown-gwynan-spouse",
+              "name": "Unbekannte Ehefrau",
+              "title": "",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "1694",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "garmon-loer",
+              "worldPersonId": "person--haus-loer--garmon-loer",
+              "name": "Garmon Loer",
+              "title": "",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1692",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/garmon-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-garmon-spouse",
+              "worldPersonId": "person--family-tree--unknown-garmon-spouse",
+              "name": "Unbekannte Ehefrau",
+              "title": "",
+              "sex": "female",
+              "status": "unknown",
+              "birth": "1694",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "glenys-1695-loer",
+              "worldPersonId": "person--haus-loer--glenys-1695-loer",
+              "name": "Glenys Loer",
+              "title": "",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1695",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/glenys-1695-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "unknown-glenys-1695-spouse",
+              "worldPersonId": "person--family-tree--unknown-glenys-1695-spouse",
+              "name": "Unbekannter Ehemann",
+              "title": "",
+              "sex": "male",
+              "status": "unknown",
+              "birth": "1693",
+              "death": "",
+              "portrait": "",
+              "portraitPlaceholder": "auto",
+              "houseId": "",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "aeron-loer",
+              "worldPersonId": "person--haus-loer--aeron-loer",
+              "name": "Aeron Loer",
+              "title": "",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1712",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/aeron-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "mainline",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "gwion-loer",
+              "worldPersonId": "person--haus-loer--gwion-loer",
+              "name": "Gwion Loer",
+              "title": "",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1715",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/gwion-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "gwallter-loer",
+              "worldPersonId": "person--haus-loer--gwallter-loer",
+              "name": "Gwallter Loer",
+              "title": "",
+              "sex": "male",
+              "status": "alive",
+              "birth": "1717",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/gwallter-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "olwen-loer",
+              "worldPersonId": "person--haus-loer--olwen-loer",
+              "name": "Olwen Loer",
+              "title": "",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1720",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/olwen-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "gwenfaen-loer",
+              "worldPersonId": "person--haus-loer--gwenfaen-loer",
+              "name": "Gwenfaen Loer",
+              "title": "",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1715",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/gwenfaen-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "islwyna-loer",
+              "worldPersonId": "person--haus-loer--islwyna-loer",
+              "name": "Islwyna Loer",
+              "title": "",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1720",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/islwyna-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "tyne-loer",
+              "worldPersonId": "person--haus-loer--tyne-loer",
+              "name": "Tyne Loer",
+              "title": "",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1717",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/tyne-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "tesni-loer",
+              "worldPersonId": "person--haus-loer--tesni-loer",
+              "name": "Tesni Loer",
+              "title": "",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1722",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-loer/tesni-loer.jpg",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-loer",
+              "familyRole": "core",
+              "lineageRole": "branch",
+              "tags": [],
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "avelin-aurdden",
+              "worldPersonId": "person--haus-aurdden--avelin-aurdden",
+              "name": "Avelin Aurdden",
+              "title": "An Aeron Loer wegverlobt",
+              "sex": "female",
+              "status": "alive",
+              "birth": "1713",
+              "death": "",
+              "portrait": "assets/images/portraits/haus-aurdden/avelin-aurdden.png",
+              "portraitPlaceholder": "auto",
+              "houseId": "house-aurdden",
+              "familyRole": "married",
+              "lineageRole": "branch",
+              "tags": [
+                "An Haus Loer wegverlobt"
+              ],
+              "notes": "27 Jahre. Älteste Tochter Kyrwyns und Avelenas. Mit dem 28-jährigen Aeron Loer verlobt und für ihren künftigen Haushalt an Haus Loer gebunden. Die Ehe ist noch nicht geschlossen; Avelin hat keine Aufgabe im Juwelier.",
+              "extensions": {
+                "authoredSource": "aurdden-20261109",
+                "registryManagedSourceRevision": 4
+              }
+            }
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "partnerships"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "marriage-cadfarch-spouse",
+              "participantIds": [
+                "cadfarch-loer",
+                "unknown-cadfarch-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-maddocc-spouse",
+              "participantIds": [
+                "maddocc-loer",
+                "unknown-maddocc-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-rhiannedd-spouse",
+              "participantIds": [
+                "rhiannedd-loer",
+                "unknown-rhiannedd-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-eurgain-spouse",
+              "participantIds": [
+                "eurgain-loer",
+                "unknown-eurgain-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-glenys-1667-spouse",
+              "participantIds": [
+                "glenys-1667-loer",
+                "unknown-glenys-1667-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-dwynarth-spouse",
+              "participantIds": [
+                "dwynarth-loer",
+                "unknown-dwynarth-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-ynyrion-spouse",
+              "participantIds": [
+                "ynyrion-loer",
+                "unknown-ynyrion-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-gwynan-spouse",
+              "participantIds": [
+                "gwynan-loer",
+                "unknown-gwynan-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-garmon-spouse",
+              "participantIds": [
+                "garmon-loer",
+                "unknown-garmon-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-glenys-1695-spouse",
+              "participantIds": [
+                "glenys-1695-loer",
+                "unknown-glenys-1695-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            }
+          ],
+          "afterPresent": true,
+          "after": [
+            {
+              "id": "marriage-cadfarch-spouse",
+              "participantIds": [
+                "cadfarch-loer",
+                "unknown-cadfarch-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-maddocc-spouse",
+              "participantIds": [
+                "maddocc-loer",
+                "unknown-maddocc-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-rhiannedd-spouse",
+              "participantIds": [
+                "rhiannedd-loer",
+                "unknown-rhiannedd-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-eurgain-spouse",
+              "participantIds": [
+                "eurgain-loer",
+                "unknown-eurgain-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-glenys-1667-spouse",
+              "participantIds": [
+                "glenys-1667-loer",
+                "unknown-glenys-1667-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-dwynarth-spouse",
+              "participantIds": [
+                "dwynarth-loer",
+                "unknown-dwynarth-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-ynyrion-spouse",
+              "participantIds": [
+                "ynyrion-loer",
+                "unknown-ynyrion-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-gwynan-spouse",
+              "participantIds": [
+                "gwynan-loer",
+                "unknown-gwynan-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-garmon-spouse",
+              "participantIds": [
+                "garmon-loer",
+                "unknown-garmon-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "marriage-glenys-1695-spouse",
+              "participantIds": [
+                "glenys-1695-loer",
+                "unknown-glenys-1695-spouse"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "",
+              "extensions": {}
+            },
+            {
+              "id": "engagement-aeron-loer-avelin-aurdden",
+              "participantIds": [
+                "aeron-loer",
+                "avelin-aurdden"
+              ],
+              "type": "engagement",
+              "status": "active",
+              "start": "1740",
+              "end": "",
+              "certainty": "confirmed",
+              "visibility": "public",
+              "notes": "Aeron Loer (28) und Avelin Aurdden (27) sind verlobt. Avelin ist an Haus Loer wegverlobt und hat keine Ladenaufgabe. Die Ehe ist noch nicht geschlossen.",
+              "extensions": {
+                "crossFamilyRelationship": {
+                  "linkId": "engagement-aeron-loer-avelin-aurdden",
+                  "counterpartFamilyId": "haus-aurdden"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "sourceRevision"
+          ],
+          "beforePresent": true,
+          "before": 3,
+          "afterPresent": true,
+          "after": 4
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "houseBiographyModule",
+            "house",
+            "extraSections"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Handwerkliche Meisterschaft und die Verbindung zur Regenbogenschmiede sind prägend. Eurgain führt das Haus; weitere Einzelheiten folgen."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Traditionen und Hausleben",
+              "text": "Die Loer messen handwerklicher Vollkommenheit höchsten Wert bei."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Der Stammsitz des Hauses ist eine befestigte Höhenburg im Gebirge nahe Craithglyn, umgeben von Steinbrüchen, Minenschächten und weit verzweigten Stollensystemen."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Kultur und Glaube",
+              "text": "Die Loer gehören der Alerischen Kirche an und pflegen eine enge Verbindung zur Regenbogenschmiede. Weitere Einzelheiten folgen."
+            }
+          ],
+          "afterPresent": true,
+          "after": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Handwerkliche Meisterschaft und die Verbindung zur Regenbogenschmiede sind prägend. Eurgain führt das Haus; weitere Einzelheiten folgen."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Traditionen und Hausleben",
+              "text": "Die Loer messen handwerklicher Vollkommenheit höchsten Wert bei."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Der Stammsitz des Hauses ist eine befestigte Höhenburg im Gebirge nahe Craithglyn, umgeben von Steinbrüchen, Minenschächten und weit verzweigten Stollensystemen."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Kultur und Glaube",
+              "text": "Die Loer gehören der Alerischen Kirche an und pflegen eine enge Verbindung zur Regenbogenschmiede. Weitere Einzelheiten folgen."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Die wohlhabenden Aurdden dienen den Loer als Goldschmiede, Juweliere und Bankiers. Loer liefern Rohmaterial und sind am Ertrag beteiligt. Aeron Loer, geboren 1712, ist seit 1740 mit Avelin Aurdden, geboren 1713, verlobt. Ihre Ehe ist noch nicht geschlossen. Die bestehenden übrigen Ehen bleiben unverändert; das Münzprägerecht liegt allein bei den Loer und die Rote Bank wird weiterhin von den Ergalla geleitet."
+            }
+          ]
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedDocumentFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedHouseProfileFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {
+            "aurddenEngagementInventory": 4
+          }
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedViewFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedLineageFieldRevisions"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": {}
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "aurddenEngagementInventory"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": "aurdden-20261109"
+        },
+        {
+          "path": [
+            "family",
+            "extensions",
+            "registryManagedExtensionFields"
+          ],
+          "beforePresent": false,
+          "afterPresent": true,
+          "after": [
+            "aurddenEngagementInventory"
+          ]
+        }
+      ],
+      "historicalObjectOrders": [
+        {
+          "path": [
+            "family",
+            "extensions"
+          ],
+          "keys": [
+            "sourceNote",
+            "blankFamily",
+            "sourceRevision",
+            "registryManagedEntitySourceRevision",
+            "houseBiographyModule"
+          ]
+        }
+      ],
+      "proof": {
+        "expectedCurrentSha256": "a6fbabfbd533a50ed49252091582950d98acd336c145e9e4dba884aaa45bdc1d",
+        "expectedHistoricalSha256": "fdcf09e95aed0ce5cc5eb0ac158ea64a4cecdafc8935aba29977c4546e60ddf9"
+      }
+    }
+  ]
+}

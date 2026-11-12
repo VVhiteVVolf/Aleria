@@ -68,3 +68,11 @@ test('unrelated sources still require their own exact direct hash and cannot use
   for (const hunk of successor.hunks) predecessor = predecessor.replace(hunk.after, hunk.before);
   assert.throws(() => assertReviewedArgallSourceFile(source, Buffer.from(predecessor)), /current-full-hash/);
 });
+
+test('the two exact unpartnered-parent layout edits preserve the complete historical adapter and reject extra edits',()=>{
+  const item=argall.layoutRevisionCorrection.proof.sourceFiles.find(row=>row.path.endsWith('/family-chart-adapter.js'));
+  const current=readFileSync(new URL(item.path,root));
+  assert.equal(assertReviewedArgallSourceFile(item,current),item.sha256);
+  assert.throws(()=>assertReviewedArgallSourceFile(item,Buffer.concat([current,Buffer.from('\n// extra edit\n')])),/complete-current/);
+  assert.throws(()=>assertReviewedArgallSourceFile({...item,sha256:hash(current)},current),/historical-hash/);
+});
