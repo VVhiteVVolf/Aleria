@@ -61,10 +61,13 @@ test('Lokale Klassenbilder bleiben auf die Bildbibliothek begrenzt',()=>{
 test('Comicicons und normale Krieger haben getrennte Presets; alle finalen Icons sind nachweisbar',async()=>{
  const presets=JSON.parse(await readFile(new URL('AleriaAlmanach/docs/art/image-style-presets.json',workspace),'utf8')).presets;
  assert.equal(presets['fantasy-class-icon'].separateFrom,'fantasy-rpg-character');
- assert.match(presets['fantasy-rpg-character'].approvedReferenceImage,/approved-house-knight/);
+ const characterReference=presets['fantasy-rpg-character'].approvedReferenceImage;
+ assert.match(characterReference,/approved-house-(?:knight|figure)/);
+ assert.equal(createHash('sha256').update(await readFile(new URL(characterReference,workspace))).digest('hex'),presets['fantasy-rpg-character'].approvedReferenceSha256);
  const config=JSON.parse(await readFile(new URL('Brevanor/icon-prompts.json',classes),'utf8'));
  assert.equal(config.jobs.length,7);assert.equal(config.stylePreset,'fantasy-class-icon');
  assert.ok(config.jobs.every(j=>j.references.every(p=>!p.includes('approved-house-knight'))));
+ assert.ok(config.jobs.every(j=>j.references.every(p=>!p.endsWith(characterReference.split('/').at(-1)))));
  const manifest=JSON.parse(await readFile(new URL('assets/images/brevanor/icons/manifest.json',classes),'utf8'));
  assert.equal(manifest.entries.length,7);
  for(const e of manifest.entries){
