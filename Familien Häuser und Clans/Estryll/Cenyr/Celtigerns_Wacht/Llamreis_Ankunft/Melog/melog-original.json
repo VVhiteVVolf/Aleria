@@ -1,0 +1,729 @@
+{
+  "schema": "aleria.family-tree",
+  "schemaVersion": 1,
+  "document": {
+    "id": "melog",
+    "title": "Melog",
+    "motto": "",
+    "description": "",
+    "emblem": "https://i.imgur.com/hIUiXnp.jpeg",
+    "houseProfile": {
+      "rankId": "commoner",
+      "seat": "",
+      "barony": "",
+      "county": "",
+      "kingdom": "",
+      "secondarySeats": [],
+      "liegeHouseId": "",
+      "liegeHouseName": "",
+      "regionEmblems": {
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": ""
+      }
+    }
+  },
+  "persons": [
+    {
+      "id": "melog-gruender",
+      "worldPersonId": "person--melog--melog-gruender",
+      "name": "Unbekannter Gründer",
+      "title": "Gründer des Hauses",
+      "sex": "male",
+      "status": "alive",
+      "birth": "",
+      "death": "",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-melog",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [
+        "Gründerfamilie"
+      ],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "melog-gruenderin",
+      "worldPersonId": "person--melog--melog-gruenderin",
+      "name": "Unbekannte Gründerin",
+      "title": "Gründerin des Hauses",
+      "sex": "female",
+      "status": "alive",
+      "birth": "",
+      "death": "",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-melog",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [
+        "Gründerfamilie"
+      ],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-29ef1c22",
+      "worldPersonId": "person--melog--person-29ef1c22",
+      "name": "Ithel",
+      "title": "Konditormeister/Bäckereimeister/Oberhaupt",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1647",
+      "death": "1723",
+      "portrait": "https://i.imgur.com/SC1usoA.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-melog",
+      "familyRole": "core",
+      "lineageRole": "head",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-aaae3c9f",
+      "worldPersonId": "person--melog--person-aaae3c9f",
+      "name": "Tangwystl",
+      "title": "",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1648",
+      "death": "",
+      "portrait": "https://i.imgur.com/nVbEyeu.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-0c68dade",
+      "worldPersonId": "person--melog--person-0c68dade",
+      "name": "Tewdwr",
+      "title": "Konditormeister/Bäckereimeister/Oberhaupt",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1675",
+      "death": "",
+      "portrait": "https://i.imgur.com/aKa4udv.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-melog",
+      "familyRole": "core",
+      "lineageRole": "head",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-30cd0b46",
+      "worldPersonId": "person--melog--person-30cd0b46",
+      "name": "Morfudd",
+      "title": "Buchhaltung/Finanzen",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1679",
+      "death": "",
+      "portrait": "https://i.imgur.com/LghmPH7.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-a5530d07",
+      "worldPersonId": "person--melog--person-a5530d07",
+      "name": "Anest",
+      "title": "Konditor/Bäckereimeisterin",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1701",
+      "death": "",
+      "portrait": "https://i.imgur.com/gl3g1rX.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-melog",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-9ffeda8d",
+      "worldPersonId": "person--melog--person-9ffeda8d",
+      "name": "Afanen",
+      "title": "Verkaufsleitung",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1705",
+      "death": "",
+      "portrait": "https://i.imgur.com/heJvo0O.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-melog",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-a24c0d08",
+      "worldPersonId": "person--melog--person-a24c0d08",
+      "name": "Guto",
+      "title": "Bäcker/Naschkatze",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1710",
+      "death": "",
+      "portrait": "https://i.imgur.com/wlCNPB3.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-melog",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-d9df75d6",
+      "worldPersonId": "person--melog--person-d9df75d6",
+      "name": "Eiffion",
+      "title": "Einkauf und Lieferungen",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1698",
+      "death": "",
+      "portrait": "https://i.imgur.com/YYKDL1Z.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-d32c2160",
+      "worldPersonId": "person--melog--person-d32c2160",
+      "name": "Llywarch",
+      "title": "Verkauf und Gästebetreuung / Mablis Bruder",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1704",
+      "death": "",
+      "portrait": "https://i.imgur.com/WeT2fIK.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-d5f1d52b",
+      "worldPersonId": "person--melog--person-d5f1d52b",
+      "name": "Mabli",
+      "title": "Verpackung und Einkauf / Llywarchs Schwester",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1712",
+      "death": "",
+      "portrait": "https://i.imgur.com/1S1nLMo.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-5b669286",
+      "worldPersonId": "person--melog--person-5b669286",
+      "name": "Nerys",
+      "title": "Chaos-Konditorin",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1722",
+      "death": "",
+      "portrait": "https://i.imgur.com/jKdyd4K.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-melog",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-c6293356",
+      "worldPersonId": "person--melog--person-c6293356",
+      "name": "Elisedd",
+      "title": "Begabtes Allroundtalent",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1725",
+      "death": "",
+      "portrait": "https://i.imgur.com/b3wj8RZ.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-melog",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-02518ead",
+      "worldPersonId": "person--melog--person-02518ead",
+      "name": "Teleri",
+      "title": "kleine Schauspielerin",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1730",
+      "death": "",
+      "portrait": "https://i.imgur.com/roykT1U.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-melog",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-9a399999",
+      "worldPersonId": "person--melog--person-9a399999",
+      "name": "Lleufer",
+      "title": "eitler Charmeur",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1716",
+      "death": "",
+      "portrait": "https://i.imgur.com/KfkFWY1.jpeg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-melog",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-4c366307",
+      "worldPersonId": "person--melog--person-4c366307",
+      "name": "Cerys",
+      "title": "eingebildete geschäftstüchtige Händlerin",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1721",
+      "death": "",
+      "portrait": "https://i.imgur.com/JCDAWof.png",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-melog",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "person-157c1853",
+      "worldPersonId": "person--melog--person-157c1853",
+      "name": "Iddon",
+      "title": "Klein-Guto / Naschkatze",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1722",
+      "death": "",
+      "portrait": "https://i.imgur.com/BT8Ng2b.jpeg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-melog",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "partnerships": [
+    {
+      "id": "marriage-melog-founders",
+      "participantIds": [
+        "melog-gruender",
+        "melog-gruenderin"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "Gründerehe des Hauses.",
+      "extensions": {}
+    },
+    {
+      "id": "partnership-14ddf9e7",
+      "participantIds": [
+        "person-29ef1c22",
+        "person-aaae3c9f"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {
+        "chartAlignParentPairOverChildPersonId": "person-0c68dade",
+        "chartAutomaticSingleChildAlignment": true
+      }
+    },
+    {
+      "id": "partnership-e0399a8b",
+      "participantIds": [
+        "person-0c68dade",
+        "person-30cd0b46"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "partnership-0dc76571",
+      "participantIds": [
+        "person-a5530d07",
+        "person-d9df75d6"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "partnership-88fa1c34",
+      "participantIds": [
+        "person-9ffeda8d",
+        "person-d32c2160"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "partnership-db44bb8b",
+      "participantIds": [
+        "person-a24c0d08",
+        "person-d5f1d52b"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {
+        "chartAlignParentPairOverChildPersonId": "person-157c1853",
+        "chartAutomaticSingleChildAlignment": true
+      }
+    }
+  ],
+  "parentages": [
+    {
+      "id": "parentage-195f7400",
+      "childId": "person-29ef1c22",
+      "parentIds": [
+        "melog-gruender",
+        "melog-gruenderin"
+      ],
+      "partnershipId": "marriage-melog-founders",
+      "type": "claimed",
+      "legitimacy": "unknown",
+      "certainty": "probable",
+      "visibility": "public",
+      "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+      "extensions": {
+        "timeJumpId": "time-jump-2a7d8560",
+        "timeJumpCreated": true
+      }
+    },
+    {
+      "id": "parentage-3cf320c5",
+      "childId": "person-0c68dade",
+      "parentIds": [
+        "person-29ef1c22",
+        "person-aaae3c9f"
+      ],
+      "partnershipId": "partnership-14ddf9e7",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-c0557c42",
+      "childId": "person-a5530d07",
+      "parentIds": [
+        "person-0c68dade",
+        "person-30cd0b46"
+      ],
+      "partnershipId": "partnership-e0399a8b",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-457440cc",
+      "childId": "person-9ffeda8d",
+      "parentIds": [
+        "person-0c68dade",
+        "person-30cd0b46"
+      ],
+      "partnershipId": "partnership-e0399a8b",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-b4e7ac40",
+      "childId": "person-a24c0d08",
+      "parentIds": [
+        "person-0c68dade",
+        "person-30cd0b46"
+      ],
+      "partnershipId": "partnership-e0399a8b",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-bb06ff72",
+      "childId": "person-5b669286",
+      "parentIds": [
+        "person-a5530d07",
+        "person-d9df75d6"
+      ],
+      "partnershipId": "partnership-0dc76571",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-a97a7fd7",
+      "childId": "person-c6293356",
+      "parentIds": [
+        "person-a5530d07",
+        "person-d9df75d6"
+      ],
+      "partnershipId": "partnership-0dc76571",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-acd1bf3b",
+      "childId": "person-02518ead",
+      "parentIds": [
+        "person-a5530d07",
+        "person-d9df75d6"
+      ],
+      "partnershipId": "partnership-0dc76571",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-5030889b",
+      "childId": "person-9a399999",
+      "parentIds": [
+        "person-9ffeda8d",
+        "person-d32c2160"
+      ],
+      "partnershipId": "partnership-88fa1c34",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-b4bfb8b0",
+      "childId": "person-4c366307",
+      "parentIds": [
+        "person-9ffeda8d",
+        "person-d32c2160"
+      ],
+      "partnershipId": "partnership-88fa1c34",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-fe58ad59",
+      "childId": "person-157c1853",
+      "parentIds": [
+        "person-a24c0d08",
+        "person-d5f1d52b"
+      ],
+      "partnershipId": "partnership-db44bb8b",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "houses": [
+    {
+      "id": "house-melog",
+      "name": "Melog",
+      "motto": "",
+      "emblem": "https://i.imgur.com/hIUiXnp.jpeg",
+      "status": "active"
+    }
+  ],
+  "cadetBranches": [],
+  "timeJumps": [
+    {
+      "id": "time-jump-2a7d8560",
+      "parentPartnershipId": "marriage-melog-founders",
+      "sharedParentPartnershipIds": [],
+      "parentPersonId": "",
+      "childIds": [
+        "person-29ef1c22"
+      ],
+      "years": 0,
+      "fromYear": "",
+      "toYear": "1647",
+      "label": "",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "lineage": {
+    "founderPartnershipId": "marriage-melog-founders",
+    "houseId": "house-melog",
+    "crestSubtitle": "",
+    "crestEmblemScale": 0.86,
+    "crestFrame": "gold",
+    "crestFrameScale": 1,
+    "timeGap": {
+      "enabled": false,
+      "years": 0,
+      "fromYear": "",
+      "toYear": "",
+      "label": ""
+    },
+    "originHouse": {
+      "enabled": false,
+      "id": "lineage-origin-house",
+      "houseId": "",
+      "name": "Ursprungshaus",
+      "subtitle": "",
+      "emblem": "",
+      "emblemScale": 0.86,
+      "crestFrame": "gold",
+      "frameScale": 1,
+      "childIds": [],
+      "targetFamilyId": "",
+      "notes": "",
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      }
+    }
+  },
+  "presentation": {
+    "relationshipColors": {
+      "marriage": "#326c4a",
+      "engagement": "#b88b37",
+      "union": "#8e2724",
+      "affair": "#704485",
+      "concubinage": "#704485",
+      "political": "#9d7d48",
+      "forced": "#c7a974",
+      "biological": "#8e2724",
+      "adoptive": "#2f75a8",
+      "foster": "#2f75a8",
+      "step": "#7eb4d7",
+      "magical": "#704485",
+      "claimed": "#62615e"
+    }
+  },
+  "view": {
+    "focusPersonId": "melog-gruender",
+    "orientation": "vertical",
+    "ancestorDepth": 8,
+    "descendantDepth": 8,
+    "limitGenerations": false,
+    "showSiblings": true
+  },
+  "extensions": {
+    "registry": {
+      "folderPath": [],
+      "unclassified": true
+    },
+    "generatorProfile": {
+      "origin": "",
+      "culture": "Cenyri",
+      "religion": "Alerische Kirche",
+      "governance": "",
+      "foundingYear": "",
+      "founderHouseName": "",
+      "houseColors": "",
+      "specialTraits": ""
+    }
+  }
+}

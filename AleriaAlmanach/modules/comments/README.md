@@ -1,5 +1,44 @@
 # Kommentarverbindung
 
+## Fremde Stimme innerhalb eines Beitrags
+
+`comments-foreign-voice.js` besitzt den festen Silhouettenkatalog und die
+Normalisierung von `foreignVoiceName` (optional, höchstens 80 Zeichen) und
+`foreignVoiceAvatarId`. Der Katalog enthält 23 Silhouetten: je drei Jungen,
+Mädchen, Frauen und Männer, zehn Rollen sowie eine neutrale Person. Die Rollen
+sind Alte Frau, Alter Bürger, Dirne, Diener, Stadtwache, Ritter, Söldner,
+Räuber, Ritter Variante und Söldner Variante. Die ursprünglichen IDs
+`boy`, `girl`, `woman`, `man` behalten ihre Bilder; die zwei Varianten je Gruppe
+tragen die Endungen `-2` und `-3`. `person` bleibt die letzte Auswahl und der
+Standard für fehlende oder unbekannte IDs. Alle Namen und Bildpfade werden
+aus diesem gemeinsamen Katalog abgeleitet.
+Ein leerer Name erscheint als **Fremde/r**. `comments-foreign-voice-ui.js` liefert
+die gemeinsamen Erstellen-/Bearbeiten-Steuerelemente; Eingaben laufen durch die
+bestehende Abschnittsdelegation. Der State bleibt im jeweiligen Abschnitt.
+
+Die Beitragsfigur bleibt Autorin des gesamten Posts. Ein Abschnitt der Art
+`foreignvoice` ist eine beiläufige andere Stimme ohne eigene Figurenakte und
+ohne Profil- oder Kampfzuordnung. Eigene Bildsets und Emotes stehen dort nicht
+zur Auswahl. Speichern, Entwürfe und Bearbeiten erhalten nur die feste Auswahl;
+die Anzeige leitet Bild und Namen immer aus diesen Feldern ab, auch bei älteren
+oder von außen importierten abweichenden Portrait-/Identitätsfeldern.
+Die Charakterauswahl sowie normale Nachbarabschnitte behalten ihre bisherige
+Verantwortung. Die Aktivitätsvorschau verwendet dieselbe feste Darstellung.
+
+Auch im Erzähler-Modus stehen `foreignvoice` und `secretaction` beim Erstellen
+und Bearbeiten zur Verfügung. Der gesamte Beitrag bleibt ein Erzählerbeitrag;
+die beiden Abschnittsarten behalten ihre eigene Darstellung und Links-/Rechtswahl.
+Eine Erzähler-Geheimaktion trägt am Abschnitt `commentMode: 'narrator'` und
+erscheint als **Unbekannte Gestalt** ohne Porträt- oder Profilzuordnung. Der
+Renderer ignoriert geerbte Figurenfelder und Emotemarker in diesem Kontext.
+Normale Handlungen und das bestehende Einfügen von Szenengegenständen bleiben
+Erzählerabschnitte mit ihrem bisherigen Verhalten. Figuren-Geheimaktionen
+verwenden weiterhin ihre bestehende Darstellung.
+
+Die Fachregression liegt in `tests/comment-foreign-voice.test.mjs`.
+
+## Verbindung und Wiederanbindung
+
 `comments-backend.js` besitzt den lokalen Ersatzspeicher und die Wiederverbindung.
 Ein Starttimeout sperrt den später verfügbaren Onlineadapter nicht. Wartende
 Bereitschaftslistener und Timer werden nach ihrem Abschluss entfernt.

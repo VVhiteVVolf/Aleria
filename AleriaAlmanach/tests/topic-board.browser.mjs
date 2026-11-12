@@ -1,45 +1,187 @@
 import assert from 'node:assert/strict';
-import { mkdir } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const origin = process.env.TOPIC_BOARD_TEST_ORIGIN || 'http://127.0.0.1:4187';
 const shots = process.env.TOPIC_BOARD_SCREENSHOTS;
+const localFontCss = process.env.TOPIC_BOARD_FONT_CSS
+  ? (await readFile(process.env.TOPIC_BOARD_FONT_CSS, 'utf8')).replace(/https:\/\/fonts\.gstatic\.com\/[^)'"\s]+/g, url => `${process.env.TOPIC_BOARD_FONT_BASE_URL || `${origin}/diagnostics/topic-board-redesign-20261108/fonts/`}${new URL(url).pathname.split('/').pop()}`)
+  : '';
 if (shots) await mkdir(shots, { recursive: true });
 const browser = await chromium.launch({ headless: true, executablePath: process.env.PLAYWRIGHT_EXECUTABLE });
 const context = await browser.newContext({ viewport: { width: 1600, height: 1050 } });
 // The real page is exercised with local fixtures. No Firebase writes or external requests.
-await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+await context.route('**/*', route => {
+  const url = new URL(route.request().url());
+  if (localFontCss && url.hostname === 'fonts.googleapis.com' && route.request().method() === 'GET') return route.fulfill({ status: 200, contentType: 'text/css; charset=utf-8', body: localFontCss });
+  return url.origin === origin && route.request().method() === 'GET' ? route.continue() : route.abort();
+});
 const page = await context.newPage();
 const errors = [];
+const screenshots = [];
+const checks = [];
+const resourceFailures = [];
+const geometry = [];
+let fontVerification = { mode: 'system-fallback' };
 page.on('pageerror', error => { if (error.stack?.includes('topic-board')) errors.push(error.message); });
-const shot = async name => { if (shots) await page.screenshot({ path: `${shots}/${name}.png` }); };
+page.on('response', response => { if (response.status() >= 400 && response.url().startsWith(origin) && /topic-board/.test(response.url())) resourceFailures.push({ url: response.url(), status: response.status() }); });
+const shot = async name => {
+  if (!shots) return;
+  await page.evaluate(() => globalThis.dismissAppStatus?.());
+  await page.screenshot({ path: `${shots}/${name}.png` });
+  screenshots.push(`${shots}/${name}.png`);
+};
 const people = () => page.locator('[data-people-picker]');
 const selectTab = name => page.locator(`.topic-board-editor-sections [data-topic-board-editor-section-target="${name}"]`).click();
+const createUndatedIdea = async suffix => {
+  await page.locator('[data-topic-board-action="open-editor"]').click();
+  await people().locator('[data-people-query]').waitFor({ state: 'attached' });
+  await page.locator('[name="title"]').fill('Ein Abend ohne festen Termin');
+  await selectTab('schedule');
+  await page.locator('[name="scheduleUnscheduled"]').check();
+  assert.equal(await page.locator('[name="scheduleStartDay"]').isDisabled(), true);
+  await shot(`editor-undated-${suffix}`);
+  await selectTab('preview');
+  assert.equal(await page.locator('[data-topic-board-preview] .topic-board-schedule-badge.is-unscheduled').count(), 1);
+  await shot(`editor-undated-preview-${suffix}`);
+  await page.locator('.topic-board-save-button').click();
+  await page.locator('[data-topic-board-editor]').waitFor({ state: 'hidden' });
+  const saved = await page.evaluate(() => savedBoardFixture);
+  assert.equal(saved.schedule.startDate.day, null);
+  assert.equal(saved.schedule.startDate.month, null);
+  assert.equal(saved.schedule.startDate.year, null);
+};
+const assertOverviewFits = async width => {
+  const sizes = await page.locator('.topic-board-dialog').evaluate(dialog => {
+    const list = dialog.querySelector('[data-topic-board-list]');
+    const rect = dialog.getBoundingClientRect();
+    return { dialog: { width: dialog.clientWidth, scroll: dialog.scrollWidth }, list: { width: list.clientWidth, scroll: list.scrollWidth }, clippedCards: [...list.querySelectorAll('[data-topic-board-card]')].filter(card => { const box = card.getBoundingClientRect(); return box.right > rect.right + 1 || box.left < rect.left - 1; }).length };
+  });
+  geometry.push({ viewport: width, ...sizes });
+  assert.ok(sizes.dialog.scroll <= sizes.dialog.width + 1, `board dialog overflow at ${width}: ${JSON.stringify(sizes)}`);
+  assert.ok(sizes.list.scroll <= sizes.list.width + 1, `board list overflow at ${width}: ${JSON.stringify(sizes)}`);
+  assert.equal(sizes.clippedCards, 0, `cards clipped at ${width}`);
+};
 try {
   await page.goto(`${origin}/AleriaAlmanach/AleriaAlmanach.html`, { waitUntil: 'load' });
   await page.waitForFunction(() => !!globalThis.AleriaTopicBoardUI);
+  await page.waitForFunction(() => ['ready', 'slow'].includes(document.querySelector('[data-loading-screen]')?.dataset.state));
+  const enter = page.locator('[data-loading-action="enter"]');
+  await (await enter.isEnabled() ? enter : page.locator('[data-loading-action="continue"]')).click();
   await page.evaluate(() => {
+    globalThis.AleriaWorldDateStore = Object.freeze({ getState: () => ({ date: { day: 10, month: 3, year: 1740 } }) });
     const archive = getVisibleCharacterRecords();
     const names = ['Idwal Draig', 'Trevor', 'Siânmue', 'Naria Windreiter'];
-    const cast = names.map((name, index) => ({ id: `fixture-${index}`, name, title: ['Kapitän', 'Wächter', 'Windreiterin', 'Gesandte'][index], portrait: archive[index]?.portrait || '' }));
+    const cast = names.map((name, index) => ({ id: `fixture-${index}`, name, title: ['Kapitän', 'Wächter', 'Windreiterin', 'Gesandte'][index], portrait: index === 0 ? '/Stammb%C3%A4ume/assets/images/portraits/haus-draig/idwal-draig.jpg' : '' }));
     globalThis.boardFixtureCharacters = [...cast, ...archive.filter(record => !names.includes(record.name))];
     getVisibleCharacterRecords = () => boardFixtureCharacters;
     globalThis.boardFixtures = [
-      { id: 'reise', title: 'Aufbruch nach Tûr Rhewgorn', category: 'reise', description: 'Anurat reist mit Neithon, Idwal und ihrem Gefolge nach Tûr Rhewgorn. Wer begleitet die Reise, und welche offenen Fragen nehmen wir mit?', location: 'Tûr Rhewgorn', duration: 'Drei Tage', participants: cast.slice(0, 3), votes: { a: true, b: true, c: true } },
+      { id: 'reise', title: 'Aufbruch nach Tûr Rhewgorn', category: 'reise', description: 'Anurat reist mit Neithon, Idwal und ihrem Gefolge nach Tûr Rhewgorn. Wer begleitet die Reise, und welche offenen Fragen nehmen wir mit?', location: 'Tûr Rhewgorn', duration: 'Drei Tage', themeIconUrl: './public/assets/topic-board/themenvorschlag-icon.png', participants: cast.slice(0, 3), votes: { a: true, b: true, c: true } },
       { id: 'schiff', title: 'Idwal und Trevor treffen sich mit der Mannschaft', category: 'begegnung', description: 'Ein Abend auf dem Schiff. Die Mannschaft wartet auf neue Befehle.', location: 'Idwals Schiff', participants: cast.slice(0, 2), votes: { a: true } },
       { id: 'audienz', title: 'Eine Audienz im Haus des Draig', category: 'hof', description: 'Die Gesandten kommen nach Gwynthor. Ein Gespräch über Bündnisse und Versprechen.', location: 'Haus des Draig', participants: cast.slice(2), votes: { a: true, b: true } },
       { id: 'suche', title: 'Owetas Suche', category: 'alltag', description: 'Oweta liebt Gwynthor und möchte ihr Leben dort verbringen. Sie sucht einen geeigneten Platz.', participants: cast.slice(1) },
       { id: 'lehre', title: 'Rhiannons Lehrstunde', category: 'anderes', description: 'Myrddin unterweist seinen Lehrling in arkaner Kunde.', participants: [{ id: 'missing', name: 'Ehemalige Begleitung' }] }
     ].map((item, index) => normalizeTopicProposal({ ...item, schedule: { startDate: { day: 10 + index, month: 3, year: 1740 } } }));
-    getTopicBoardState = () => ({ proposals: boardFixtures, view: 'open', loading: false, syncState: 'online', pendingCount: 0 });
-    getTopicBoardVisibleProposals = () => boardFixtures;
+    globalThis.boardFixtures.push(normalizeTopicProposal({ id: 'idee', title: 'Ein neuer Faden ohne Termin', category: 'anderes', description: 'Noch eine lose Idee für einen gemeinsamen Abend.', createdAtClient: 1, participants: [] }));
+    globalThis.boardFixtures.push(normalizeTopicProposal({ id: 'alt', title: 'Ein ausgespielter Abend', category: 'alltag', status: 'archived', schedule: { startDate: { day: 9, month: 3, year: 1740 } } }));
+    globalThis.boardFixtureView = 'open';
+    getTopicBoardState = () => ({ proposals: boardFixtures, view: boardFixtureView, loading: false, syncState: 'online', pendingCount: 0 });
+    getTopicBoardVisibleProposals = () => boardFixtures.filter(item => item.status === boardFixtureView);
+    setTopicBoardView = view => { boardFixtureView = view === 'archived' ? 'archived' : 'open'; };
+    getTopicBoardViewerId = () => 'fixture-viewer';
     getTopicBoardProposalById = id => boardFixtures.find(item => item.id === id) || null;
+    toggleTopicBoardProposalVote = async id => {
+      const item = getTopicBoardProposalById(id);
+      const votes = { ...item.votes };
+      if (votes['fixture-viewer']) delete votes['fixture-viewer'];
+      else votes['fixture-viewer'] = true;
+      Object.assign(item, normalizeTopicProposal({ ...item, votes }));
+      return item;
+    };
+    setTopicBoardProposalArchived = async (id, archived) => {
+      const item = getTopicBoardProposalById(id);
+      item.status = archived ? 'archived' : 'open';
+      item.archivedAtClient = archived ? Date.now() : 0;
+      return item;
+    };
     createTopicBoardProposal = async payload => { globalThis.savedBoardFixture = payload; return { ...payload, id: 'new-fixture' }; };
     updateTopicBoardProposal = async (id, payload) => { globalThis.savedBoardFixture = { ...payload, id }; return payload; };
   });
   await page.locator('.topic-board-sidebar-create').click();
+  if (localFontCss) {
+    fontVerification = await page.evaluate(async () => {
+      const requests = ['400 16px Cinzel', '600 16px Cinzel', '700 16px Cinzel', '400 16px "EB Garamond"', '600 16px "EB Garamond"', '700 16px "EB Garamond"', 'italic 400 16px "EB Garamond"', 'italic 600 16px "EB Garamond"'];
+      const loads = await Promise.all(requests.map(async request => ({ request, faces: (await document.fonts.load(request)).map(face => ({ family: face.family, weight: face.weight, style: face.style, status: face.status })) })));
+      await document.fonts.ready;
+      return { mode: 'local-replay-of-page-fonts', loads };
+    });
+    assert.ok(fontVerification.loads.every(load => load.faces.length > 0 && load.faces.every(face => face.status === 'loaded')), 'Every declared page font face is actually loaded.');
+    checks.push('All eight Cinzel/EB Garamond font faces loaded from local replay bytes; no external font request was sent.');
+  }
   assert.equal(await page.locator('[data-topic-board-editor]').isVisible(), false);
-  assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').count(), 5);
+  assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').count(), 6);
+  await page.waitForFunction(() => [...document.querySelectorAll('[data-topic-board-card="reise"] img')].every(image => image.complete && image.naturalWidth > 0));
+  checks.push('Local theme PNG and Idwal portrait decode successfully before first capture; missing portraits display initials.');
+  await assertOverviewFits(1600);
   await shot('board-desktop');
+  checks.push('Overview opens with editor closed and all six fixture plays.');
+  const focus = name => page.locator(`[data-topic-board-action="set-focus"][data-topic-board-focus="${name}"]`);
+  await focus('relevant').click();
+  assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').count(), 1);
+  assert.equal(await focus('relevant').getAttribute('aria-pressed'), 'true');
+  await focus('upcoming').click();
+  assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').count(), 4);
+  await focus('unscheduled').click();
+  assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').count(), 1);
+  assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').first().getAttribute('data-topic-board-card'), 'idee');
+  await focus('all').click();
+  checks.push('World-date filters separate current/due, future and undated plays, excluding archive.');
+  const query = page.locator('[data-topic-board-list-field="query"]');
+  await query.fill('Siânmue');
+  assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').count(), 3);
+  assert.equal(await query.evaluate(input => document.activeElement === input), true);
+  await query.fill('Aucun résultat');
+  assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').count(), 0);
+  await page.locator('[data-topic-board-action="clear-list-filters"]').first().click();
+  assert.equal(await query.inputValue(), '');
+  const category = page.locator('[data-topic-board-list-field="category"]');
+  await category.selectOption('reise');
+  assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').count(), 1);
+  await category.selectOption('all');
+  await page.locator('[data-topic-board-list-field="sort"]').selectOption('votes');
+  assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').first().getAttribute('data-topic-board-card'), 'reise');
+  await page.locator('[data-topic-board-list-field="sort"]').selectOption('title');
+  assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').first().getAttribute('data-topic-board-card'), 'reise');
+  await page.locator('[data-topic-board-list-field="sort"]').selectOption('due');
+  assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').last().getAttribute('data-topic-board-card'), 'idee');
+  checks.push('Accent-aware person search, empty-result reset, category and sort work without losing search focus.');
+  const ship = () => page.locator('[data-topic-board-card="schiff"]');
+  await ship().locator('[data-topic-board-action="toggle-details"]').click();
+  assert.equal(await ship().locator('[data-topic-board-details]').isVisible(), true);
+  await ship().locator('[data-topic-board-details]').scrollIntoViewIfNeeded();
+  await shot('board-details-desktop');
+  await ship().locator('[data-topic-board-action="vote"]').click();
+  await page.waitForFunction(() => getTopicBoardProposalById('schiff').voteCount === 2);
+  assert.equal(await ship().locator('[data-topic-board-action="vote"]').getAttribute('aria-pressed'), 'true');
+  await ship().locator('[data-topic-board-action="vote"]').click();
+  await page.waitForFunction(() => getTopicBoardProposalById('schiff').voteCount === 1);
+  await ship().locator('[data-topic-board-action="archive"]').click();
+  await page.waitForFunction(() => getTopicBoardProposalById('schiff').status === 'archived');
+  await page.locator('[data-topic-board-action="set-view"][data-topic-board-view="archived"]').click();
+  assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').count(), 2);
+  assert.equal(await page.locator('[data-topic-board-list-field="sort"]').inputValue(), 'played');
+  assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').first().getAttribute('data-topic-board-card'), 'schiff');
+  assert.equal(await page.locator('[data-topic-board-list] [data-topic-board-action="vote"]').count(), 0);
+  assert.match(await ship().locator('.topic-board-vote-history').innerText(), /1 gemeinsame Stimme/);
+  assert.doesNotMatch(await ship().locator('.topic-board-schedule-badge').innerText(), /fällig|Morgen|gestern/);
+  await shot('board-archive-desktop');
+  await ship().locator('[data-topic-board-action="toggle-details"]').click();
+  await ship().locator('[data-topic-board-details]').scrollIntoViewIfNeeded();
+  assert.match(await ship().locator('[data-topic-board-details]').innerText(), /Gespeicherter Spielwelttermin/);
+  await shot('board-archive-details-desktop');
+  await ship().locator('[data-topic-board-action="restore"]').click();
+  await page.waitForFunction(() => getTopicBoardProposalById('schiff').status === 'open');
+  await page.locator('[data-topic-board-action="set-view"][data-topic-board-view="open"]').click();
+  checks.push('Details, reversible voting, archive and restore use local fixture adapters.');
   await page.locator('[data-topic-board-action="open-editor"]').click();
   await people().locator('[data-people-query]').waitFor({ state: 'attached' });
   assert.equal(await page.locator('.topic-board-save-button').innerText(), 'Eintragen');
@@ -80,6 +222,7 @@ try {
   await page.locator('[name="travelManualDays"]').fill('3');
   await selectTab('preview');
   assert.match(await page.locator('[data-topic-board-preview]').innerText(), /Gemeinsam aufbrechen/);
+  await shot('editor-preview');
   await page.locator('.topic-board-save-button').click();
   await page.locator('[data-topic-board-editor]').waitFor({ state: 'hidden' });
   const saved = await page.evaluate(() => savedBoardFixture);
@@ -93,9 +236,49 @@ try {
   await page.locator('.topic-board-save-button').click();
   await page.locator('[data-topic-board-editor]').waitFor({ state: 'hidden' });
   assert.equal(await page.evaluate(() => savedBoardFixture.participants[0].id), 'missing');
+  await createUndatedIdea('desktop');
+  await page.locator('[data-topic-board-action="edit"][data-topic-board-id="idee"]').click();
+  await people().locator('[data-people-query]').waitFor({ state: 'attached' });
+  await selectTab('schedule');
+  assert.equal(await page.locator('[name="scheduleUnscheduled"]').isChecked(), true);
+  await page.locator('.topic-board-save-button').click();
+  await page.locator('[data-topic-board-editor]').waitFor({ state: 'hidden' });
+  assert.equal(await page.evaluate(() => savedBoardFixture.schedule.startDate.day), null);
+  await page.locator('[data-topic-board-action="edit"][data-topic-board-id="idee"]').click();
+  await people().locator('[data-people-query]').waitFor({ state: 'attached' });
+  await selectTab('schedule');
+  await page.locator('[data-topic-board-schedule-offset="1"]').click();
+  assert.equal(await page.locator('[name="scheduleUnscheduled"]').isChecked(), false);
+  assert.equal(await page.locator('[name="scheduleStartDay"]').isDisabled(), false);
+  assert.equal(await page.locator('[name="scheduleStartDay"]').inputValue(), '11');
+  await page.locator('[data-topic-board-action="close-editor"]').first().click();
+  checks.push('Undated ideas can be created, edited without gaining a date, and explicitly scheduled using a relative date.');
   for (const width of [390, 768, 1100]) {
     await page.setViewportSize({ width, height: 900 });
+    await page.locator('.topic-board-overview, .topic-board-main').evaluateAll(elements => elements.forEach(element => element.scrollTo({ top: 0 })));
+    await assertOverviewFits(width);
     await shot(`board-${width}`);
+    if (width === 390) {
+      await page.setViewportSize({ width, height: 844 });
+      await assertOverviewFits(width);
+      await shot('board-390-844');
+      const firstTitle = await page.locator('[data-topic-board-list] .topic-board-card-title').first().boundingBox();
+      assert.ok(firstTitle && firstTitle.y + firstTitle.height < 844, 'First play title is visible before scrolling at 390×844.');
+      await page.setViewportSize({ width, height: 900 });
+    }
+    await focus('unscheduled').click();
+    assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').count(), 1);
+    await focus('all').click();
+    await query.fill('Gwynthor');
+    assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').count(), 2);
+    assert.equal(await query.evaluate(input => document.activeElement === input), true);
+    await query.fill('');
+    await ship().locator('[data-topic-board-action="toggle-details"]').click();
+    assert.equal(await ship().locator('[data-topic-board-details]').isVisible(), true);
+    await ship().locator('[data-topic-board-details]').scrollIntoViewIfNeeded();
+    await shot(`details-${width}`);
+    await ship().locator('[data-topic-board-action="toggle-details"]').click();
+    if (width === 390) await createUndatedIdea('390');
     await page.locator('[data-topic-board-action="open-editor"]').click();
     await people().locator('[data-people-query]').waitFor({ state: 'attached' });
     await selectTab('participants');
@@ -114,6 +297,18 @@ try {
   await page.locator('[data-topic-board-action="close-board"]').click();
   await page.locator('.topic-board-sidebar-create').click();
   assert.equal(await page.locator('[data-topic-board-editor]').isVisible(), false);
+  await page.setViewportSize({ width: 1600, height: 1050 });
+  await page.evaluate(() => { globalThis.boardFixtureOriginals = boardFixtures; globalThis.boardFixtures = []; renderTopicBoard(); });
+  assert.equal(await page.locator('[data-topic-board-list] .topic-board-card').count(), 0);
+  assert.equal(await page.locator('[data-topic-board-list] .topic-board-empty').isVisible(), true);
+  await shot('board-empty-desktop');
+  await page.evaluate(() => { globalThis.boardFixtures = boardFixtureOriginals; renderTopicBoard(); });
   assert.deepEqual(errors, []);
-  console.log('Themenwand: default closed editor, multiple-name search, batch selection, undo, reuse, save, missing characters, keyboard and 4 viewport checks passed.');
+  assert.deepEqual(resourceFailures, []);
+  checks.push('Existing editor, participant selection, travel/date save, missing cast, keyboard and escape checks passed at 1600, 390, 768 and 1100 pixels.');
+  if (process.env.TOPIC_BOARD_REPORT) await writeFile(process.env.TOPIC_BOARD_REPORT, JSON.stringify({ status: 'passed', method: 'Current real Almanach controllers with local fixtures, GET-only loopback browser network and optional local replay of page font bytes; no production writes.', viewports: [1600, 390, 768, 1100], checks, geometry, fontVerification, topicBoardPageErrors: errors, topicBoardResourceFailures: resourceFailures, screenshots, visualReview: 'pending' }, null, 2));
+  console.log('Themenwand: planning filters, search/focus, sorting, details, votes/archive/restore, editor/participants/travel, keyboard and four responsive viewports passed.');
+} catch (error) {
+  await shot('failure').catch(() => {});
+  throw error;
 } finally { await browser.close(); }

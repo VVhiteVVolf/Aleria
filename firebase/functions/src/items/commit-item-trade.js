@@ -10,7 +10,7 @@ export const commitItemTrade = onCall({ region: 'europe-west1', timeoutSeconds: 
   try {
     if (request.data?.action === 'availability') return await readMerchantAvailabilityOperation(getFirestore(), request.auth, request.data);
     if (request.data?.action === 'sold') return await readMerchantSoldOperation(getFirestore(), request.auth, request.data);
-    if (request.data?.action === 'checkout') return await commitSceneTradeOperation(getFirestore(), request.auth, request.data);
+    if (['checkout', 'catalog-checkout'].includes(request.data?.action)) return await commitSceneTradeOperation(getFirestore(), request.auth, request.data);
     if (!request.data?.entryId || !['buy', 'sell'].includes(request.data?.action)) throw new HttpsError('invalid-argument', 'Ein Szenenhandel benötigt eine Szene und einen Kauf oder Verkauf.');
     return await commitItemRegisterOperation(getFirestore(), request.auth, request.data);
   }

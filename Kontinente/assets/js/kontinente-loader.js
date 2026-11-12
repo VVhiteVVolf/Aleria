@@ -9,7 +9,8 @@
 
   function start() {
     const requestedId = readRequestedId();
-    const entry = findEntry(requestedId) || findDefaultEntry();
+    const explicit = ['kontinent', 'reich', 'kingdom', 'id'].some(key => new URLSearchParams(window.location.search).get(key));
+    const entry = findEntry(requestedId) || (explicit ? null : findDefaultEntry());
 
     if (!entry) {
       withRoot(() => renderMissingState(requestedId));
@@ -64,11 +65,11 @@
       return;
     }
 
+    window.KONTINENTE_DATA = null;
+    window.ORT_DATA = null;
     if (entry.dataType === "module") {
       import(resolveFeaturePath(entry.data)).then(({ default: data }) => {
-        window.KONTINENTE_DATA = data;
-        window.ORT_DATA = data;
-        notifyDataReady(data);
+        publishData(entry, data);
       }).catch((error) => {
         console.warn(`Kontinentdaten konnten nicht geladen werden: ${entry.data}`, error);
         notifyDataReady(null);
@@ -80,12 +81,22 @@
     script.src = resolveFeaturePath(entry.data);
     script.defer = true;
     script.dataset.kontinenteDataScript = entry.id || "";
-    script.onload = () => notifyDataReady(window.KONTINENTE_DATA || null);
+    script.onload = () => publishData(entry, window.KONTINENTE_DATA || null);
     script.onerror = () => {
       console.warn(`Kontinentdaten konnten nicht geladen werden: ${entry.data}`);
       notifyDataReady(null);
     };
     document.head.appendChild(script);
+  }
+
+  async function publishData(entry, data) {
+    try {
+      const { projectHouseDirectories } = await import(new URL('../../../shared/world-directory/house-projection.mjs?v=20261112b', loaderScript.src));
+      data = projectHouseDirectories(data, entry.id, 'territories');
+    } catch (error) { console.warn('Hausregister konnte nicht ergänzt werden.', error); }
+    window.KONTINENTE_DATA = data;
+    window.ORT_DATA = data;
+    notifyDataReady(data);
   }
 
   function notifyDataReady(data) {

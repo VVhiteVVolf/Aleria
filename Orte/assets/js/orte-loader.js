@@ -2,13 +2,14 @@
   "use strict";
 
   const registry = Array.isArray(window.ORTE_REGISTRY) ? window.ORTE_REGISTRY : [];
+  const loaderScript = document.currentScript;
   let root = document.querySelector("[data-orte-static-template], [data-orte-root]");
 
   start();
 
   function start() {
-    const requestedId = readRequestedId();
-    const entry = findEntry(requestedId) || findDefaultEntry();
+    const { id: requestedId, explicit } = readPlaceRequest();
+    const entry = findEntry(requestedId) || (explicit ? null : findDefaultEntry());
 
     if (!entry) {
       withRoot(() => renderMissingState(requestedId));
@@ -27,10 +28,12 @@
     loadDataScript(entry);
   }
 
-  function readRequestedId() {
+  function readPlaceRequest() {
     const params = new URLSearchParams(window.location.search);
     const fallbackId = getRoot()?.dataset.defaultId || "";
-    return normalizeId(params.get("id") || params.get("ort") || window.location.hash.slice(1) || fallbackId);
+    const explicitId = params.get("id") || params.get("ort");
+    const hashId = normalizeId(window.location.hash.slice(1));
+    return { id: normalizeId(explicitId || (findEntry(hashId) ? hashId : fallbackId)), explicit: Boolean(explicitId) };
   }
 
   function findEntry(id) {
@@ -47,11 +50,16 @@
 
   function loadDataScript(entry) {
     if (!entry.data) return;
+    window.ORT_DATA = null;
     const script = document.createElement("script");
     script.src = resolveOrtePath(entry.data);
     script.defer = true;
     script.dataset.orteDataScript = entry.id || "";
-    script.onload = () => {
+    script.onload = async () => {
+      try {
+        const { projectHouseDirectories } = await import(new URL('../../../shared/world-directory/house-projection.mjs?v=20261112b', loaderScript.src));
+        window.ORT_DATA = projectHouseDirectories(window.ORT_DATA, entry.id, 'places');
+      } catch (error) { console.warn('Hausregister konnte nicht ergänzt werden.', error); }
       document.dispatchEvent(new CustomEvent("aleria:orte:data-ready", {
         detail: {
           entry,
@@ -61,6 +69,7 @@
     };
     script.onerror = () => {
       console.warn(`Ortsdaten konnten nicht geladen werden: ${entry.data}`);
+      withRoot(() => renderErrorState(entry, new Error('Die Ortsdaten sind nicht erreichbar.')));
     };
     document.head.appendChild(script);
   }
@@ -103,7 +112,7 @@
 
   function resolveOrtePath(path) {
     if (/^(https?:)?\/\//i.test(path) || path.startsWith("/")) return path;
-    return `/Orte/${path.replace(/^\.?\//, "")}`;
+    return new URL(path.replace(/^\.?\//, ""), new URL('../../', loaderScript.src)).href;
   }
 
   function renderMissingState(requestedId) {

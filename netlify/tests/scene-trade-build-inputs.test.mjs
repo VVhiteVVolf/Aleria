@@ -32,12 +32,14 @@ test('built-in generator and future feature helpers invalidate the same gate', (
 
 test('the complete trade feature, styles and every feature test are gated before publication', () => {
   for (const file of ['AleriaAlmanach/modules/scene-trade/future-participant-picker.js',
-    'AleriaAlmanach/styles/scene-trade.css', 'AleriaAlmanach/styles/scene-trade-notification.css']) {
+    'AleriaAlmanach/styles/scene-trade.css', 'AleriaAlmanach/styles/scene-trade-notification.css',
+    'AleriaAlmanach/modules/catalog-purchase/future-checkout-helper.js',
+    'AleriaAlmanach/styles/catalog-purchase.css', 'AleriaAlmanach/modules/goods/goods-renderer.js']) {
     assert.ok(isTaskInput(task, file), file);
     assert.notEqual(taskFingerprint(task, [source(file)], runtime), taskFingerprint(task, [source(file, 'b')], runtime), file);
   }
   const tests = readdirSync(new URL('../../AleriaAlmanach/tests/', import.meta.url))
-    .filter(file => /^scene-trade-[a-z0-9-]+\.test\.mjs$/.test(file));
+    .filter(file => /^(?:scene-trade|catalog-purchase)-[a-z0-9-]+\.test\.mjs$/.test(file));
   tests.push('item-register-trade-projection.test.mjs');
   assert.ok(tests.length >= 8);
   for (const name of tests) {

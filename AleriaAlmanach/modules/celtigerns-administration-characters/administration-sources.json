@@ -1,0 +1,164 @@
+{
+  "schema": "aleria.administration-character-sources",
+  "schemaVersion": 1,
+  "feature": "celtigerns-administration-characters",
+  "identityAuditPath": "diagnostics/brenric-kriegswart-20261107/administration-identity-audit.json",
+  "mediaManifestPath": "AleriaAlmanach/modules/celtigerns-administration-characters/administration-artwork.json",
+  "sources": [
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/niniane-chwedlonol.json",
+      "worldPersonId": "person--haus-chwedlonol--niniane-chwedlonol",
+      "knownNames": [
+        "Niniane Chwedlonol",
+        "Niniane Chwedonol"
+      ],
+      "sha256": "966d76531f9b35e2435699ae3d0eed5fd679d68332b6ae5e513581e6e1df9cc5"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/gwaeron-awenor.json",
+      "worldPersonId": "person--haus-awenor--gwaeron-awenor",
+      "knownNames": [
+        "Gwaeron Awenor"
+      ],
+      "sha256": "6e3983563e88d050c0e38b34ff8ea49c9be8d25cff9676458355c804d18e4e20"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/ffraid-awenor.json",
+      "worldPersonId": "person--haus-awenor--ffraid-awenor",
+      "knownNames": [
+        "Ffraid Awenor"
+      ],
+      "sha256": "8cc94317d98be8eb71dae58f41b4c1fa101a3d37706c919104118d8d85da6955"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/derfel-awenydd.json",
+      "worldPersonId": "person--haus-awenydd--derfel-awenydd",
+      "knownNames": [
+        "Derfel Awenydd"
+      ],
+      "sha256": "d1b3eb98b0c1c1f3c3ade47d1fc405a6d8f9b1d9fb41823e4b36354cdc240cb1"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/rhonwen-chwedlonol.json",
+      "worldPersonId": "person--haus-chwedlonol--rhonwen-chwedlonol",
+      "knownNames": [
+        "Rhonwen Chwedlonol",
+        "Rhonwen Chwedonol"
+      ],
+      "sha256": "e2ec3bd4ca96116fb12b1fdaf800dcefa95337469e5f023fe912141f477a3d14"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/meredithe-1677-chwedlonol.json",
+      "worldPersonId": "person--haus-chwedlonol--meredithe-1677-chwedlonol",
+      "knownNames": [
+        "Meredithe Chwedlonol",
+        "Meredithe Chwedonol"
+      ],
+      "sha256": "a65e5eb450b3eaaa165bf40ee44ec378f2350d84f80208bc3503dc65919166de"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/euddogwy.json",
+      "worldPersonId": "person--gwynthor-formlingssache--euddogwy",
+      "knownNames": [
+        "Euddogwy O'Cenyr"
+      ],
+      "sha256": "4d06ee92b9d510b496fda415025caadc102b079f6c823667339cd657502fa801"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/peredur-eneiniog.json",
+      "worldPersonId": "person--haus-eneiniog--peredur-eneiniog",
+      "knownNames": [
+        "Peredur Eneiniog"
+      ],
+      "sha256": "b2bd22a3c46d05a12d32f551201a65201facf34acc4ff65775feca48b8342caf"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/gwenydd-anghof.json",
+      "worldPersonId": "person--celtigerns-wacht--gwenydd-anghof",
+      "knownNames": [
+        "Gwenydd Anghof"
+      ],
+      "sha256": "9e0eb4cd093cc85be2fec16eb66305ec14b18d644e27d97ea6615117583ae363"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/torri-vikar-wyrm.json",
+      "worldPersonId": "person--celtigerns-wacht--torri-vikar-wyrm",
+      "knownNames": [
+        "Torri"
+      ],
+      "sha256": "cf4faf7efe7e51ff64e1168426efd81cc796441ac3c0fcb9c02bbcf8167022a3"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/angharad-eneiniog.json",
+      "worldPersonId": "person--haus-eneiniog--angharad-eneiniog",
+      "knownNames": [
+        "Angharad Eneiniog"
+      ],
+      "sha256": "2b568f5caf762c6ee1ba67be0b537a2608fdffd01c7fc8f2b9ccd1e5784ad024"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/kimball-balchder.json",
+      "worldPersonId": "person--haus-balchder--kimball-balchder",
+      "knownNames": [
+        "Kimball Balchder"
+      ],
+      "sha256": "615c571085bd5539f1f6882d32667e4785e2e5782dc66209206f6c541ade55d7"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/avan-balchder.json",
+      "worldPersonId": "person--haus-balchder--avan-balchder",
+      "knownNames": [
+        "Avan Balchder"
+      ],
+      "sha256": "e81a4306462ff8f46dc0c422d6408907f04a2377e4b8ff466a30a802e6927723"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/meirion-gwyllach.json",
+      "worldPersonId": "person--haus-gwyllach--meirion-gwyllach",
+      "knownNames": [
+        "Meirion Gwyllach"
+      ],
+      "sha256": "f5464403751c3b4252186e5d72941617fa71bb6c82c46cd28091958b756c3d84"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/efael-gwyllach.json",
+      "worldPersonId": "person--haus-gwyllach--efael-gwyllach",
+      "knownNames": [
+        "Efael Gwyllach"
+      ],
+      "sha256": "764f41a462e91f410b950962c5f3d2874e7d1ce6eb1c65eda30a7ed4a8aa895f"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/meredydd-gwyllach.json",
+      "worldPersonId": "person--haus-gwyllach--meredydd-gwyllach",
+      "knownNames": [
+        "Meredydd Gwyllach"
+      ],
+      "sha256": "13e24eed50a7bac8b91f4c39edd6b4056789609c0643bff1909ff3ae3cfa3fe9"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/anelen-gwyllach.json",
+      "worldPersonId": "person--haus-gwyllach--anelen-gwyllach",
+      "knownNames": [
+        "Anelen Gwyllach"
+      ],
+      "sha256": "46639a4b6b08d1a524c654d08aa2b09c0c0044f92706f2eeb1f6b3aea7f0cbbe"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/drystan-gwyllach.json",
+      "worldPersonId": "person--haus-gwyllach--drystan-gwyllach",
+      "knownNames": [
+        "Drystan Gwyllach"
+      ],
+      "sha256": "c46f06ef4a1b415ed7359cceeac22c6f1f38f5244c73dad2906db1db7262a167"
+    },
+    {
+      "path": "Charakter Archiv Exporte/Celtigerns Verwaltung/talyfer-gwyllach.json",
+      "worldPersonId": "person--haus-gwyllach--talyfer-gwyllach",
+      "knownNames": [
+        "Talyfer Gwyllach"
+      ],
+      "sha256": "99fe166b0a63b71d781dc2e421e59cdebb6daa4939e5248801985d7483d86281"
+    }
+  ]
+}

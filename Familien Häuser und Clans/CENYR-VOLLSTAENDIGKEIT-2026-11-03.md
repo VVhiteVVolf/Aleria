@@ -116,27 +116,3 @@ dokumentiert. Der unabhängig geprüfte Bildbestand steht in
 
 Alle Arbeiten und Prüfungen bleiben lokal; es gab keinen Push, Deploy oder
 Firebase-Schreibzugriff.
-
-## Ergänzung: örtliche Familienprofile vom 5. November 2026
-
-Die acht neu freigegebenen Landfamilien in Gwynthor besitzen bereits eigene
-Familienakten, Hausbiografien und Wappen. Ihre territorialen Verweise öffnen
-die jeweilige Akte direkt im schreibgeschützten Stammbaum. Das vorhandene
-Hausbiografie-Fenster öffnet sich über das Wappen beziehungsweise die Aktion
-`open-house-biography`. Eine zusätzliche Kriegerdarstellung ist für diese
-Haushalte nicht beauftragt.
-
-`modules/house-coverage/rural-family-profile.mjs` bindet diese Profilart an den
-öffentlichen Ortsindex, die eigene Dokument-ID, die tatsächlich vorhandene
-Quellakte und deren Wappen. Der Prüfer weist die Profilart als `family-record`
-und das Identitätsbild als `family-crest` aus. Er meldet keine erfundene
-Hausdarstellung und ersetzt keine vorhandene eigenständige Hausseite durch
-einen Ausweichlink. Für eigenständige Hausseiten bleiben die bisherigen
-Bild-, Iframe- und Rückverweisprüfungen verbindlich. Gespeicherte eigene
-Biografien und ausdrückliche Löschungen bleiben geschützt.
-
-Die dynamische öffentliche Auswahl enthält diese acht Familien vollständig.
-Die elf Abdeckungsprüfungen bestätigen außerdem die echten Profilziele,
-Quell- und Wappenbindungen, die gerenderte Hausbio sowie die Ablehnung falscher
-Dokument- und Bildzuordnungen. Private Akten und private Bildpfade bleiben
-ausgeschlossen; ein historischer Dateiname ist kein Sichtbarkeitsmerkmal.

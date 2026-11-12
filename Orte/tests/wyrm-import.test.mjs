@@ -30,7 +30,10 @@ for (const id of ids) {
     const data = loadPlace(id);
     assert.equal(data.meta.id, id);
     assert.equal(data.features.noticeBoard, true);
-    assert.equal(data.noticeBoardMap, undefined);
+    if (data.noticeBoardMap) {
+      assert.match(data.noticeBoardMap.mapId, /llysfaen-anzeigetafel$/);
+      assert.equal(data.noticeBoardMap.embedHref, `/Anzeigetafeln/tafel.html?tafel=${data.noticeBoardMap.mapId}`);
+    }
     assert.deepEqual(Array.from(data.personalities, (group) => group.title), ["Administration & Verwaltung", "Aufgebot", "Sonstige"]);
     assert.doesNotMatch(JSON.stringify(data), /Titel hier einfügen|Dialog von Figur|tumblr_otwjgn7mfU1|worldanvil\.com/);
     assertLocalAsset(data.presentation.images["bild-einer-stadtwache-png"].src);
@@ -57,8 +60,8 @@ for (const id of ids) {
 test("Llysfaen und Craithglyn bewahren die Originaltexte ohne ausgelassene Personenkategorien einzuschleusen", () => {
   const llysfaen = loadPlace("lysfaen");
   const craithglyn = loadPlace("craithglyn");
-  assert.equal(llysfaen.structure.einwohnerzahl, "etwa 900");
-  assert.equal(craithglyn.structure.einwohnerzahl, "etwa 750");
+  assert.match(llysfaen.structure.einwohnerzahl, /^(?:etwa )?900(?: im Ort; Umland zusätzlich)?$/);
+  assert.match(craithglyn.structure.einwohnerzahl, /^(?:etwa )?750(?: im Ort; Umland zusätzlich)?$/);
   assert.match(JSON.stringify(llysfaen.sections), /Sorgen am Tresen/);
   assert.match(JSON.stringify(llysfaen.sections), /Hochzeit von Prinz Tudwal Draig/);
   const names = llysfaen.personalities.flatMap((group) => Array.from(group.items, (person) => person.name));

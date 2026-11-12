@@ -1,0 +1,1239 @@
+{
+    "version":  1,
+    "catalogId":  "avatar-prompts-14-sets-20261112",
+    "sourceDocument":  "Avatar_Prompts_14_Sets.docx",
+    "sourceSha256":  "3620508f1f0c873f398e6419134f1443f6aefd1c5a994c6c2805bd84e45cf248",
+    "readingCopy":  "Lesefassungen/Avatar_Prompts_14_Sets.txt",
+    "numbering":  "Die expliziten Setüberschriften 1 bis 14 sind verbindlich. Die neun Panelpositionen werden zeilenweise von oben links nach unten rechts gelesen.",
+    "sets":  [
+                 {
+                     "number":  1,
+                     "id":  "set-01",
+                     "title":  "Grundemotionen und Mimik",
+                     "introduction":  "Erstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:",
+                     "panels":  [
+                                    {
+                                        "index":  1,
+                                        "position":  "Oben links",
+                                        "emotion":  "Neutral / Redend",
+                                        "gesture":  "Offene Handflächen, lockere erklärende Gestik, aufmerksamer Blick.",
+                                        "sourceText":  "1. Neutral / Redend: Offene Handflächen, lockere erklärende Gestik, aufmerksamer Blick.",
+                                        "sourceParagraph":  5
+                                    },
+                                    {
+                                        "index":  2,
+                                        "position":  "Oben Mitte",
+                                        "emotion":  "Freundlich / Amüsiert",
+                                        "gesture":  "Ehrliches leichtes Lächeln, eine Hand locker erhoben, entspannte Schultern.",
+                                        "sourceText":  "2. Freundlich / Amüsiert: Ehrliches leichtes Lächeln, eine Hand locker erhoben, entspannte Schultern.",
+                                        "sourceParagraph":  6
+                                    },
+                                    {
+                                        "index":  3,
+                                        "position":  "Oben rechts",
+                                        "emotion":  "Nachdenklich",
+                                        "gesture":  "Hand am Kinn, Blick leicht seitlich oder nach oben, zusammengezogene Brauen.",
+                                        "sourceText":  "3. Nachdenklich: Hand am Kinn, Blick leicht seitlich oder nach oben, zusammengezogene Brauen.",
+                                        "sourceParagraph":  7
+                                    },
+                                    {
+                                        "index":  4,
+                                        "position":  "Mitte links",
+                                        "emotion":  "Skeptisch / Misstrauisch",
+                                        "gesture":  "Eine Braue hochgezogen, Arme verschränkt oder eine Hand skeptisch angewinkelt.",
+                                        "sourceText":  "4. Skeptisch / Misstrauisch: Eine Braue hochgezogen, Arme verschränkt oder eine Hand skeptisch angewinkelt.",
+                                        "sourceParagraph":  8
+                                    },
+                                    {
+                                        "index":  5,
+                                        "position":  "Mitte Mitte",
+                                        "emotion":  "Überrascht / Verblüfft",
+                                        "gesture":  "Geweitete Augen, leicht geöffneter Mund, beide Hände spontan angehoben.",
+                                        "sourceText":  "5. Überrascht / Verblüfft: Geweitete Augen, leicht geöffneter Mund, beide Hände spontan angehoben.",
+                                        "sourceParagraph":  9
+                                    },
+                                    {
+                                        "index":  6,
+                                        "position":  "Mitte rechts",
+                                        "emotion":  "Genervt / Missbilligend",
+                                        "gesture":  "Halb geschlossene Augen, angespannter Mund, eine Hand abwinkend oder demonstrativ an der Hüfte.",
+                                        "sourceText":  "6. Genervt / Missbilligend: Halb geschlossene Augen, angespannter Mund, eine Hand abwinkend oder demonstrativ an der Hüfte.",
+                                        "sourceParagraph":  10
+                                    },
+                                    {
+                                        "index":  7,
+                                        "position":  "Unten links",
+                                        "emotion":  "Entschlossen / Ernst",
+                                        "gesture":  "Direkter Blick, aufrechte Haltung, eine Faust vor der Brust oder feste erklärende Handbewegung.",
+                                        "sourceText":  "7. Entschlossen / Ernst: Direkter Blick, aufrechte Haltung, eine Faust vor der Brust oder feste erklärende Handbewegung.",
+                                        "sourceParagraph":  11
+                                    },
+                                    {
+                                        "index":  8,
+                                        "position":  "Unten Mitte",
+                                        "emotion":  "Verärgert / Konfrontativ",
+                                        "gesture":  "Zusammengezogene Brauen, eine Hand deutlich zeigend, Oberkörper leicht vorgelehnt.",
+                                        "sourceText":  "8. Verärgert / Konfrontativ: Zusammengezogene Brauen, eine Hand deutlich zeigend, Oberkörper leicht vorgelehnt.",
+                                        "sourceParagraph":  12
+                                    },
+                                    {
+                                        "index":  9,
+                                        "position":  "Unten rechts",
+                                        "emotion":  "Unsicher / Keine Ahnung",
+                                        "gesture":  "Leicht schiefer Gesichtsausdruck, beide Hände in einem klaren Schulterzucken geöffnet, Schultern hochgezogen.",
+                                        "sourceText":  "9. Unsicher / Keine Ahnung: Leicht schiefer Gesichtsausdruck, beide Hände in einem klaren Schulterzucken geöffnet, Schultern hochgezogen.",
+                                        "sourceParagraph":  13
+                                    }
+                                ],
+                     "instructions":  [
+                                          "Orientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.",
+                                          "Alle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden."
+                                      ],
+                     "prompt":  "Set 1 | Grundemotionen und Mimik\nErstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:\n1. Neutral / Redend: Offene Handflächen, lockere erklärende Gestik, aufmerksamer Blick.\n2. Freundlich / Amüsiert: Ehrliches leichtes Lächeln, eine Hand locker erhoben, entspannte Schultern.\n3. Nachdenklich: Hand am Kinn, Blick leicht seitlich oder nach oben, zusammengezogene Brauen.\n4. Skeptisch / Misstrauisch: Eine Braue hochgezogen, Arme verschränkt oder eine Hand skeptisch angewinkelt.\n5. Überrascht / Verblüfft: Geweitete Augen, leicht geöffneter Mund, beide Hände spontan angehoben.\n6. Genervt / Missbilligend: Halb geschlossene Augen, angespannter Mund, eine Hand abwinkend oder demonstrativ an der Hüfte.\n7. Entschlossen / Ernst: Direkter Blick, aufrechte Haltung, eine Faust vor der Brust oder feste erklärende Handbewegung.\n8. Verärgert / Konfrontativ: Zusammengezogene Brauen, eine Hand deutlich zeigend, Oberkörper leicht vorgelehnt.\n9. Unsicher / Keine Ahnung: Leicht schiefer Gesichtsausdruck, beide Hände in einem klaren Schulterzucken geöffnet, Schultern hochgezogen.\nVerbindliche Vorgaben\nOrientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.\nAlle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.\n",
+                     "sourceParagraphStart":  3,
+                     "sourceParagraphEnd":  17
+                 },
+                 {
+                     "number":  2,
+                     "id":  "set-02",
+                     "title":  "Gespräch und Kommunikation",
+                     "introduction":  "Erstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:",
+                     "panels":  [
+                                    {
+                                        "index":  1,
+                                        "position":  "Oben links",
+                                        "emotion":  "Redend",
+                                        "gesture":  "Eine Hand mit offener Handfläche vor dem Oberkörper, die andere unterstützt mit einer kleinen erklärenden Bewegung; lebendiger, zugewandter Blick.",
+                                        "sourceText":  "1. Redend: Eine Hand mit offener Handfläche vor dem Oberkörper, die andere unterstützt mit einer kleinen erklärenden Bewegung; lebendiger, zugewandter Blick.",
+                                        "sourceParagraph":  20
+                                    },
+                                    {
+                                        "index":  2,
+                                        "position":  "Oben Mitte",
+                                        "emotion":  "Gedanke",
+                                        "gesture":  "Zeigefinger leicht an der Schläfe, die andere Hand locker am Körper, nach innen gerichteter, konzentrierter Blick.",
+                                        "sourceText":  "2. Gedanke: Zeigefinger leicht an der Schläfe, die andere Hand locker am Körper, nach innen gerichteter, konzentrierter Blick.",
+                                        "sourceParagraph":  21
+                                    },
+                                    {
+                                        "index":  3,
+                                        "position":  "Oben rechts",
+                                        "emotion":  "Zuflüsternd",
+                                        "gesture":  "Oberkörper seitlich geneigt, eine Hand schirmt den Mund ab, die andere bleibt locker geöffnet; leiser, vertraulicher Ausdruck.",
+                                        "sourceText":  "3. Zuflüsternd: Oberkörper seitlich geneigt, eine Hand schirmt den Mund ab, die andere bleibt locker geöffnet; leiser, vertraulicher Ausdruck.",
+                                        "sourceParagraph":  22
+                                    },
+                                    {
+                                        "index":  4,
+                                        "position":  "Mitte links",
+                                        "emotion":  "Schelmisch / Lästernd zuflüsternd",
+                                        "gesture":  "Eine Hand seitlich am Mund, die andere deutet verschwörerisch zur Seite; schiefes Grinsen und hochgezogene Augenbraue.",
+                                        "sourceText":  "4. Schelmisch / Lästernd zuflüsternd: Eine Hand seitlich am Mund, die andere deutet verschwörerisch zur Seite; schiefes Grinsen und hochgezogene Augenbraue.",
+                                        "sourceParagraph":  23
+                                    },
+                                    {
+                                        "index":  5,
+                                        "position":  "Mitte Mitte",
+                                        "emotion":  "Rufen",
+                                        "gesture":  "Eine Hand als Schalltrichter neben dem Mund, die andere ausgestreckt, als wolle die Figur jemanden auf sich aufmerksam machen.",
+                                        "sourceText":  "5. Rufen: Eine Hand als Schalltrichter neben dem Mund, die andere ausgestreckt, als wolle die Figur jemanden auf sich aufmerksam machen.",
+                                        "sourceParagraph":  24
+                                    },
+                                    {
+                                        "index":  6,
+                                        "position":  "Mitte rechts",
+                                        "emotion":  "Verkünden",
+                                        "gesture":  "Ein Arm hoch und weit geöffnet, die andere Hand mit feierlicher Geste vor der Brust; aufrechte Haltung, bedeutungsvoller Ausdruck.",
+                                        "sourceText":  "6. Verkünden: Ein Arm hoch und weit geöffnet, die andere Hand mit feierlicher Geste vor der Brust; aufrechte Haltung, bedeutungsvoller Ausdruck.",
+                                        "sourceParagraph":  25
+                                    },
+                                    {
+                                        "index":  7,
+                                        "position":  "Unten links",
+                                        "emotion":  "Schreiend / Wütend",
+                                        "gesture":  "Beide Hände energisch vor dem Körper, eine zur Faust geballt, die andere mit gespreizten Fingern; Mund weit geöffnet, angespannter Oberkörper.",
+                                        "sourceText":  "7. Schreiend / Wütend: Beide Hände energisch vor dem Körper, eine zur Faust geballt, die andere mit gespreizten Fingern; Mund weit geöffnet, angespannter Oberkörper.",
+                                        "sourceParagraph":  26
+                                    },
+                                    {
+                                        "index":  8,
+                                        "position":  "Unten Mitte",
+                                        "emotion":  "Flirtend",
+                                        "gesture":  "Eine Hand verspielt nahe am Gesicht, die andere elegant seitlich geöffnet; geneigter Kopf, charmanter Blick und ein kleines Lächeln.",
+                                        "sourceText":  "8. Flirtend: Eine Hand verspielt nahe am Gesicht, die andere elegant seitlich geöffnet; geneigter Kopf, charmanter Blick und ein kleines Lächeln.",
+                                        "sourceParagraph":  27
+                                    },
+                                    {
+                                        "index":  9,
+                                        "position":  "Unten rechts",
+                                        "emotion":  "Zeigend / Deutend",
+                                        "gesture":  "Ein Arm klar in eine seitliche Richtung ausgestreckt, Zeigefinger präzise ausgerichtet; die andere Hand unterstützt die Richtung mit offener Handfläche.",
+                                        "sourceText":  "9. Zeigend / Deutend: Ein Arm klar in eine seitliche Richtung ausgestreckt, Zeigefinger präzise ausgerichtet; die andere Hand unterstützt die Richtung mit offener Handfläche.",
+                                        "sourceParagraph":  28
+                                    }
+                                ],
+                     "instructions":  [
+                                          "Orientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.",
+                                          "Alle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden."
+                                      ],
+                     "prompt":  "Set 2 | Gespräch und Kommunikation\nErstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:\n1. Redend: Eine Hand mit offener Handfläche vor dem Oberkörper, die andere unterstützt mit einer kleinen erklärenden Bewegung; lebendiger, zugewandter Blick.\n2. Gedanke: Zeigefinger leicht an der Schläfe, die andere Hand locker am Körper, nach innen gerichteter, konzentrierter Blick.\n3. Zuflüsternd: Oberkörper seitlich geneigt, eine Hand schirmt den Mund ab, die andere bleibt locker geöffnet; leiser, vertraulicher Ausdruck.\n4. Schelmisch / Lästernd zuflüsternd: Eine Hand seitlich am Mund, die andere deutet verschwörerisch zur Seite; schiefes Grinsen und hochgezogene Augenbraue.\n5. Rufen: Eine Hand als Schalltrichter neben dem Mund, die andere ausgestreckt, als wolle die Figur jemanden auf sich aufmerksam machen.\n6. Verkünden: Ein Arm hoch und weit geöffnet, die andere Hand mit feierlicher Geste vor der Brust; aufrechte Haltung, bedeutungsvoller Ausdruck.\n7. Schreiend / Wütend: Beide Hände energisch vor dem Körper, eine zur Faust geballt, die andere mit gespreizten Fingern; Mund weit geöffnet, angespannter Oberkörper.\n8. Flirtend: Eine Hand verspielt nahe am Gesicht, die andere elegant seitlich geöffnet; geneigter Kopf, charmanter Blick und ein kleines Lächeln.\n9. Zeigend / Deutend: Ein Arm klar in eine seitliche Richtung ausgestreckt, Zeigefinger präzise ausgerichtet; die andere Hand unterstützt die Richtung mit offener Handfläche.\nVerbindliche Vorgaben\nOrientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.\nAlle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.\n",
+                     "sourceParagraphStart":  18,
+                     "sourceParagraphEnd":  32
+                 },
+                 {
+                     "number":  3,
+                     "id":  "set-03",
+                     "title":  "Zusätzliche Emotionen",
+                     "introduction":  "Erstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:",
+                     "panels":  [
+                                    {
+                                        "index":  1,
+                                        "position":  "Oben links",
+                                        "emotion":  "Verlegen / Beschämt",
+                                        "gesture":  "Leicht gerötete Wangen, schiefes unsicheres Lächeln, eine Hand am Hinterkopf, die andere verlegen vor dem Körper; Blick abgewandt.",
+                                        "sourceText":  "1. Verlegen / Beschämt: Leicht gerötete Wangen, schiefes unsicheres Lächeln, eine Hand am Hinterkopf, die andere verlegen vor dem Körper; Blick abgewandt.",
+                                        "sourceParagraph":  35
+                                    },
+                                    {
+                                        "index":  2,
+                                        "position":  "Oben Mitte",
+                                        "emotion":  "Überheblich / Herablassend",
+                                        "gesture":  "Kinn angehoben, selbstgefälliges Schmunzeln, halb geschlossene Augen; eine Hand an der Hüfte, die andere abwertend nach unten gerichtet.",
+                                        "sourceText":  "2. Überheblich / Herablassend: Kinn angehoben, selbstgefälliges Schmunzeln, halb geschlossene Augen; eine Hand an der Hüfte, die andere abwertend nach unten gerichtet.",
+                                        "sourceParagraph":  36
+                                    },
+                                    {
+                                        "index":  3,
+                                        "position":  "Oben rechts",
+                                        "emotion":  "Fassungslos / Entsetzt",
+                                        "gesture":  "Augen weit aufgerissen, Mund sprachlos geöffnet; eine Hand an der Stirn, die andere mit gespreizten Fingern vor der Brust.",
+                                        "sourceText":  "3. Fassungslos / Entsetzt: Augen weit aufgerissen, Mund sprachlos geöffnet; eine Hand an der Stirn, die andere mit gespreizten Fingern vor der Brust.",
+                                        "sourceParagraph":  37
+                                    },
+                                    {
+                                        "index":  4,
+                                        "position":  "Mitte links",
+                                        "emotion":  "Verschmitzt / Verschwörerisch",
+                                        "gesture":  "Spitzbübisches Grinsen, zusammengekniffene Augen, ein Zeigefinger vor den Lippen; Körper leicht zur Seite geneigt.",
+                                        "sourceText":  "4. Verschmitzt / Verschwörerisch: Spitzbübisches Grinsen, zusammengekniffene Augen, ein Zeigefinger vor den Lippen; Körper leicht zur Seite geneigt.",
+                                        "sourceParagraph":  38
+                                    },
+                                    {
+                                        "index":  5,
+                                        "position":  "Mitte Mitte",
+                                        "emotion":  "Triumphierend / Siegesgewiss",
+                                        "gesture":  "Breites stolzes Grinsen, erhobenes Kinn, eine Faust hochgereckt, die andere an der Hüfte; Brust herausgestreckt.",
+                                        "sourceText":  "5. Triumphierend / Siegesgewiss: Breites stolzes Grinsen, erhobenes Kinn, eine Faust hochgereckt, die andere an der Hüfte; Brust herausgestreckt.",
+                                        "sourceParagraph":  39
+                                    },
+                                    {
+                                        "index":  6,
+                                        "position":  "Mitte rechts",
+                                        "emotion":  "Traurig / Niedergeschlagen",
+                                        "gesture":  "Gesenkter Kopf, feuchte Augen, hängende Schultern; eine Hand bedrückt auf der Brust, die andere kraftlos herabhängend.",
+                                        "sourceText":  "6. Traurig / Niedergeschlagen: Gesenkter Kopf, feuchte Augen, hängende Schultern; eine Hand bedrückt auf der Brust, die andere kraftlos herabhängend.",
+                                        "sourceParagraph":  40
+                                    },
+                                    {
+                                        "index":  7,
+                                        "position":  "Unten links",
+                                        "emotion":  "Angewidert / Abscheu",
+                                        "gesture":  "Gerümpfte Nase, verzogener Mund; Oberkörper zurückgelehnt, eine Hand mit ausgestreckter Handfläche abwehrend nach vorne.",
+                                        "sourceText":  "7. Angewidert / Abscheu: Gerümpfte Nase, verzogener Mund; Oberkörper zurückgelehnt, eine Hand mit ausgestreckter Handfläche abwehrend nach vorne.",
+                                        "sourceParagraph":  41
+                                    },
+                                    {
+                                        "index":  8,
+                                        "position":  "Unten Mitte",
+                                        "emotion":  "Bittend / Flehend",
+                                        "gesture":  "Eindringliche Augen, hochgezogene innere Brauen; beide Hände vor der Brust ineinandergelegt, Oberkörper leicht vorgebeugt.",
+                                        "sourceText":  "8. Bittend / Flehend: Eindringliche Augen, hochgezogene innere Brauen; beide Hände vor der Brust ineinandergelegt, Oberkörper leicht vorgebeugt.",
+                                        "sourceParagraph":  42
+                                    },
+                                    {
+                                        "index":  9,
+                                        "position":  "Unten rechts",
+                                        "emotion":  "Schadenfroh / Hämisch",
+                                        "gesture":  "Boshaftes Grinsen, schräg zusammengekniffene Augen; eine Hand verdeckt teilweise den lachenden Mund, die andere liegt am Bauch.",
+                                        "sourceText":  "9. Schadenfroh / Hämisch: Boshaftes Grinsen, schräg zusammengekniffene Augen; eine Hand verdeckt teilweise den lachenden Mund, die andere liegt am Bauch.",
+                                        "sourceParagraph":  43
+                                    }
+                                ],
+                     "instructions":  [
+                                          "Orientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.",
+                                          "Alle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden."
+                                      ],
+                     "prompt":  "Set 3 | Zusätzliche Emotionen\nErstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:\n1. Verlegen / Beschämt: Leicht gerötete Wangen, schiefes unsicheres Lächeln, eine Hand am Hinterkopf, die andere verlegen vor dem Körper; Blick abgewandt.\n2. Überheblich / Herablassend: Kinn angehoben, selbstgefälliges Schmunzeln, halb geschlossene Augen; eine Hand an der Hüfte, die andere abwertend nach unten gerichtet.\n3. Fassungslos / Entsetzt: Augen weit aufgerissen, Mund sprachlos geöffnet; eine Hand an der Stirn, die andere mit gespreizten Fingern vor der Brust.\n4. Verschmitzt / Verschwörerisch: Spitzbübisches Grinsen, zusammengekniffene Augen, ein Zeigefinger vor den Lippen; Körper leicht zur Seite geneigt.\n5. Triumphierend / Siegesgewiss: Breites stolzes Grinsen, erhobenes Kinn, eine Faust hochgereckt, die andere an der Hüfte; Brust herausgestreckt.\n6. Traurig / Niedergeschlagen: Gesenkter Kopf, feuchte Augen, hängende Schultern; eine Hand bedrückt auf der Brust, die andere kraftlos herabhängend.\n7. Angewidert / Abscheu: Gerümpfte Nase, verzogener Mund; Oberkörper zurückgelehnt, eine Hand mit ausgestreckter Handfläche abwehrend nach vorne.\n8. Bittend / Flehend: Eindringliche Augen, hochgezogene innere Brauen; beide Hände vor der Brust ineinandergelegt, Oberkörper leicht vorgebeugt.\n9. Schadenfroh / Hämisch: Boshaftes Grinsen, schräg zusammengekniffene Augen; eine Hand verdeckt teilweise den lachenden Mund, die andere liegt am Bauch.\nVerbindliche Vorgaben\nOrientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.\nAlle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.\n",
+                     "sourceParagraphStart":  33,
+                     "sourceParagraphEnd":  47
+                 },
+                 {
+                     "number":  4,
+                     "id":  "set-04",
+                     "title":  "Ausgeprägte Hand- und Körpergesten",
+                     "introduction":  "Erstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:",
+                     "panels":  [
+                                    {
+                                        "index":  1,
+                                        "position":  "Oben links",
+                                        "emotion":  "Beschwichtigend / Beruhigend",
+                                        "gesture":  "Beide Arme nach vorne ausgestreckt, Handflächen offen nach unten; leicht vorgebeugter Oberkörper und ruhiger Blick.",
+                                        "sourceText":  "1. Beschwichtigend / Beruhigend: Beide Arme nach vorne ausgestreckt, Handflächen offen nach unten; leicht vorgebeugter Oberkörper und ruhiger Blick.",
+                                        "sourceParagraph":  50
+                                    },
+                                    {
+                                        "index":  2,
+                                        "position":  "Oben Mitte",
+                                        "emotion":  "Abwägend / Vergleichend",
+                                        "gesture":  "Beide Arme seitlich angewinkelt, Handflächen nach oben, auf unterschiedlicher Höhe; Blick zwischen den Händen.",
+                                        "sourceText":  "2. Abwägend / Vergleichend: Beide Arme seitlich angewinkelt, Handflächen nach oben, auf unterschiedlicher Höhe; Blick zwischen den Händen.",
+                                        "sourceParagraph":  51
+                                    },
+                                    {
+                                        "index":  3,
+                                        "position":  "Oben rechts",
+                                        "emotion":  "Einladend / Heranwinkend",
+                                        "gesture":  "Ein Arm weit zur Seite geöffnet, die andere Hand mit gekrümmten Fingern heranwinkend; leicht gedrehter Oberkörper.",
+                                        "sourceText":  "3. Einladend / Heranwinkend: Ein Arm weit zur Seite geöffnet, die andere Hand mit gekrümmten Fingern heranwinkend; leicht gedrehter Oberkörper.",
+                                        "sourceParagraph":  52
+                                    },
+                                    {
+                                        "index":  4,
+                                        "position":  "Mitte links",
+                                        "emotion":  "Unterbrechend / Einhalt gebietend",
+                                        "gesture":  "Ein Arm energisch nach vorne, Handfläche senkrecht zum Betrachter; andere Hand nahe am Körper, bestimmender Blick.",
+                                        "sourceText":  "4. Unterbrechend / Einhalt gebietend: Ein Arm energisch nach vorne, Handfläche senkrecht zum Betrachter; andere Hand nahe am Körper, bestimmender Blick.",
+                                        "sourceParagraph":  53
+                                    },
+                                    {
+                                        "index":  5,
+                                        "position":  "Mitte Mitte",
+                                        "emotion":  "Ausführlich / Etwas beschreibend",
+                                        "gesture":  "Beide Hände vor dem Oberkörper mit Abstand zueinander, Finger leicht gekrümmt, als würde die Figur eine unsichtbare Form beschreiben.",
+                                        "sourceText":  "5. Ausführlich / Etwas beschreibend: Beide Hände vor dem Oberkörper mit Abstand zueinander, Finger leicht gekrümmt, als würde die Figur eine unsichtbare Form beschreiben.",
+                                        "sourceParagraph":  54
+                                    },
+                                    {
+                                        "index":  6,
+                                        "position":  "Mitte rechts",
+                                        "emotion":  "Zurechtweisend / Ermahnend",
+                                        "gesture":  "Ein Zeigefinger aufrecht erhoben und belehrend nach vorne geneigt, andere Hand fest an der Hüfte; mahnender Blick.",
+                                        "sourceText":  "6. Zurechtweisend / Ermahnend: Ein Zeigefinger aufrecht erhoben und belehrend nach vorne geneigt, andere Hand fest an der Hüfte; mahnender Blick.",
+                                        "sourceParagraph":  55
+                                    },
+                                    {
+                                        "index":  7,
+                                        "position":  "Unten links",
+                                        "emotion":  "Abwinkend / Geringschätzig",
+                                        "gesture":  "Ein Arm in großzügiger seitlicher Wegwischbewegung, andere Hand entspannt am Bauch; Kopf leicht abgewandt.",
+                                        "sourceText":  "7. Abwinkend / Geringschätzig: Ein Arm in großzügiger seitlicher Wegwischbewegung, andere Hand entspannt am Bauch; Kopf leicht abgewandt.",
+                                        "sourceParagraph":  56
+                                    },
+                                    {
+                                        "index":  8,
+                                        "position":  "Unten Mitte",
+                                        "emotion":  "Feierlich / Einen Schwur leistend",
+                                        "gesture":  "Eine Hand auf dem Herzen, der andere Arm auf Schulterhöhe erhoben, Handfläche offen nach vorne; würdevoll aufrecht.",
+                                        "sourceText":  "8. Feierlich / Einen Schwur leistend: Eine Hand auf dem Herzen, der andere Arm auf Schulterhöhe erhoben, Handfläche offen nach vorne; würdevoll aufrecht.",
+                                        "sourceParagraph":  57
+                                    },
+                                    {
+                                        "index":  9,
+                                        "position":  "Unten rechts",
+                                        "emotion":  "Herausfordernd / Provozierend",
+                                        "gesture":  "Oberkörper nach vorne geneigt, ein Arm seitlich ausgestreckt mit nach oben gerichteter auffordernder Handfläche, andere Hand zur Faust an der Hüfte.",
+                                        "sourceText":  "9. Herausfordernd / Provozierend: Oberkörper nach vorne geneigt, ein Arm seitlich ausgestreckt mit nach oben gerichteter auffordernder Handfläche, andere Hand zur Faust an der Hüfte.",
+                                        "sourceParagraph":  58
+                                    }
+                                ],
+                     "instructions":  [
+                                          "Orientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.",
+                                          "Alle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.",
+                                          "Besonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets."
+                                      ],
+                     "prompt":  "Set 4 | Ausgeprägte Hand- und Körpergesten\nErstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:\n1. Beschwichtigend / Beruhigend: Beide Arme nach vorne ausgestreckt, Handflächen offen nach unten; leicht vorgebeugter Oberkörper und ruhiger Blick.\n2. Abwägend / Vergleichend: Beide Arme seitlich angewinkelt, Handflächen nach oben, auf unterschiedlicher Höhe; Blick zwischen den Händen.\n3. Einladend / Heranwinkend: Ein Arm weit zur Seite geöffnet, die andere Hand mit gekrümmten Fingern heranwinkend; leicht gedrehter Oberkörper.\n4. Unterbrechend / Einhalt gebietend: Ein Arm energisch nach vorne, Handfläche senkrecht zum Betrachter; andere Hand nahe am Körper, bestimmender Blick.\n5. Ausführlich / Etwas beschreibend: Beide Hände vor dem Oberkörper mit Abstand zueinander, Finger leicht gekrümmt, als würde die Figur eine unsichtbare Form beschreiben.\n6. Zurechtweisend / Ermahnend: Ein Zeigefinger aufrecht erhoben und belehrend nach vorne geneigt, andere Hand fest an der Hüfte; mahnender Blick.\n7. Abwinkend / Geringschätzig: Ein Arm in großzügiger seitlicher Wegwischbewegung, andere Hand entspannt am Bauch; Kopf leicht abgewandt.\n8. Feierlich / Einen Schwur leistend: Eine Hand auf dem Herzen, der andere Arm auf Schulterhöhe erhoben, Handfläche offen nach vorne; würdevoll aufrecht.\n9. Herausfordernd / Provozierend: Oberkörper nach vorne geneigt, ein Arm seitlich ausgestreckt mit nach oben gerichteter auffordernder Handfläche, andere Hand zur Faust an der Hüfte.\nVerbindliche Vorgaben\nOrientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.\nAlle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.\nBesonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets.\n",
+                     "sourceParagraphStart":  48,
+                     "sourceParagraphEnd":  63
+                 },
+                 {
+                     "number":  5,
+                     "id":  "set-05",
+                     "title":  "Neue gestische Ausdrucksformen",
+                     "introduction":  "Erstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:",
+                     "panels":  [
+                                    {
+                                        "index":  1,
+                                        "position":  "Oben links",
+                                        "emotion":  "Zählend / Aufzählend",
+                                        "gesture":  "Eine Hand vor der Brust, drei Finger deutlich nacheinander aufgerichtet; der Zeigefinger der anderen Hand tippt auf einen dieser Finger. Sachlich konzentrierter Blick.",
+                                        "sourceText":  "1. Zählend / Aufzählend: Eine Hand vor der Brust, drei Finger deutlich nacheinander aufgerichtet; der Zeigefinger der anderen Hand tippt auf einen dieser Finger. Sachlich konzentrierter Blick.",
+                                        "sourceParagraph":  66
+                                    },
+                                    {
+                                        "index":  2,
+                                        "position":  "Oben Mitte",
+                                        "emotion":  "Etwas einräumend / Zugestehend",
+                                        "gesture":  "Eine Hand flach auf die eigene Brust gelegt, die andere seitlich mit halb geöffneter Handfläche nach außen geschoben; leicht geneigter Kopf, versöhnlicher Ausdruck.",
+                                        "sourceText":  "2. Etwas einräumend / Zugestehend: Eine Hand flach auf die eigene Brust gelegt, die andere seitlich mit halb geöffneter Handfläche nach außen geschoben; leicht geneigter Kopf, versöhnlicher Ausdruck.",
+                                        "sourceParagraph":  67
+                                    },
+                                    {
+                                        "index":  3,
+                                        "position":  "Oben rechts",
+                                        "emotion":  "Ungeduldig / Antreibend",
+                                        "gesture":  "Beide Unterarme vor dem Körper, Hände führen eine deutlich nach vorne rollende, beschleunigende Bewegung aus; gespannte Schultern, drängender Blick.",
+                                        "sourceText":  "3. Ungeduldig / Antreibend: Beide Unterarme vor dem Körper, Hände führen eine deutlich nach vorne rollende, beschleunigende Bewegung aus; gespannte Schultern, drängender Blick.",
+                                        "sourceParagraph":  68
+                                    },
+                                    {
+                                        "index":  4,
+                                        "position":  "Mitte links",
+                                        "emotion":  "Geheimnisvoll / Andeutend",
+                                        "gesture":  "Eine Hand dicht vor dem Oberkörper, Daumen und Zeigefinger nur einen winzigen Abstand voneinander entfernt; die andere Hand halb geöffnet, vielsagender Seitenblick.",
+                                        "sourceText":  "4. Geheimnisvoll / Andeutend: Eine Hand dicht vor dem Oberkörper, Daumen und Zeigefinger nur einen winzigen Abstand voneinander entfernt; die andere Hand halb geöffnet, vielsagender Seitenblick.",
+                                        "sourceParagraph":  69
+                                    },
+                                    {
+                                        "index":  5,
+                                        "position":  "Mitte Mitte",
+                                        "emotion":  "Empört / Sich verteidigend",
+                                        "gesture":  "Beide Hände mit geöffneten Handflächen deutlich auf sich selbst gerichtet, Ellenbogen nach außen; Oberkörper zurückgenommen, ungläubig empörter Blick.",
+                                        "sourceText":  "5. Empört / Sich verteidigend: Beide Hände mit geöffneten Handflächen deutlich auf sich selbst gerichtet, Ellenbogen nach außen; Oberkörper zurückgenommen, ungläubig empörter Blick.",
+                                        "sourceParagraph":  70
+                                    },
+                                    {
+                                        "index":  6,
+                                        "position":  "Mitte rechts",
+                                        "emotion":  "Großzügig / Präsentierend",
+                                        "gesture":  "Beide Arme asymmetrisch weit geöffnet, eine Handfläche hoch wie eine Bühne, die andere ausgestreckt zum imaginären Publikum; stolzer, einladender Blick.",
+                                        "sourceText":  "6. Großzügig / Präsentierend: Beide Arme asymmetrisch weit geöffnet, eine Handfläche hoch wie eine Bühne, die andere ausgestreckt zum imaginären Publikum; stolzer, einladender Blick.",
+                                        "sourceParagraph":  71
+                                    },
+                                    {
+                                        "index":  7,
+                                        "position":  "Unten links",
+                                        "emotion":  "Ratlos / Suchend",
+                                        "gesture":  "Eine Hand als Blende über den Augen, der andere Arm seitlich tastend ausgestreckt; Oberkörper leicht gedreht, suchender Blick in die Ferne.",
+                                        "sourceText":  "7. Ratlos / Suchend: Eine Hand als Blende über den Augen, der andere Arm seitlich tastend ausgestreckt; Oberkörper leicht gedreht, suchender Blick in die Ferne.",
+                                        "sourceParagraph":  72
+                                    },
+                                    {
+                                        "index":  8,
+                                        "position":  "Unten Mitte",
+                                        "emotion":  "Ablehnend / Verneinend",
+                                        "gesture":  "Beide Unterarme vor der Brust deutlich zu einem X gekreuzt, Hände offen, Handflächen nach außen; feste, unmissverständliche Mimik.",
+                                        "sourceText":  "8. Ablehnend / Verneinend: Beide Unterarme vor der Brust deutlich zu einem X gekreuzt, Hände offen, Handflächen nach außen; feste, unmissverständliche Mimik.",
+                                        "sourceParagraph":  73
+                                    },
+                                    {
+                                        "index":  9,
+                                        "position":  "Unten rechts",
+                                        "emotion":  "Erleichtert / Aufatmend",
+                                        "gesture":  "Beide Hände locker auf den Oberschenkeln abgestützt, Oberkörper leicht nach vorne geneigt; Schultern sinken sichtbar ab, Augen kurz geschlossen, erleichtertes Lächeln.",
+                                        "sourceText":  "9. Erleichtert / Aufatmend: Beide Hände locker auf den Oberschenkeln abgestützt, Oberkörper leicht nach vorne geneigt; Schultern sinken sichtbar ab, Augen kurz geschlossen, erleichtertes Lächeln.",
+                                        "sourceParagraph":  74
+                                    }
+                                ],
+                     "instructions":  [
+                                          "Orientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.",
+                                          "Alle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.",
+                                          "Besonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets."
+                                      ],
+                     "prompt":  "Set 5 | Neue gestische Ausdrucksformen\nErstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:\n1. Zählend / Aufzählend: Eine Hand vor der Brust, drei Finger deutlich nacheinander aufgerichtet; der Zeigefinger der anderen Hand tippt auf einen dieser Finger. Sachlich konzentrierter Blick.\n2. Etwas einräumend / Zugestehend: Eine Hand flach auf die eigene Brust gelegt, die andere seitlich mit halb geöffneter Handfläche nach außen geschoben; leicht geneigter Kopf, versöhnlicher Ausdruck.\n3. Ungeduldig / Antreibend: Beide Unterarme vor dem Körper, Hände führen eine deutlich nach vorne rollende, beschleunigende Bewegung aus; gespannte Schultern, drängender Blick.\n4. Geheimnisvoll / Andeutend: Eine Hand dicht vor dem Oberkörper, Daumen und Zeigefinger nur einen winzigen Abstand voneinander entfernt; die andere Hand halb geöffnet, vielsagender Seitenblick.\n5. Empört / Sich verteidigend: Beide Hände mit geöffneten Handflächen deutlich auf sich selbst gerichtet, Ellenbogen nach außen; Oberkörper zurückgenommen, ungläubig empörter Blick.\n6. Großzügig / Präsentierend: Beide Arme asymmetrisch weit geöffnet, eine Handfläche hoch wie eine Bühne, die andere ausgestreckt zum imaginären Publikum; stolzer, einladender Blick.\n7. Ratlos / Suchend: Eine Hand als Blende über den Augen, der andere Arm seitlich tastend ausgestreckt; Oberkörper leicht gedreht, suchender Blick in die Ferne.\n8. Ablehnend / Verneinend: Beide Unterarme vor der Brust deutlich zu einem X gekreuzt, Hände offen, Handflächen nach außen; feste, unmissverständliche Mimik.\n9. Erleichtert / Aufatmend: Beide Hände locker auf den Oberschenkeln abgestützt, Oberkörper leicht nach vorne geneigt; Schultern sinken sichtbar ab, Augen kurz geschlossen, erleichtertes Lächeln.\nVerbindliche Vorgaben\nOrientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.\nAlle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.\nBesonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets.\n",
+                     "sourceParagraphStart":  64,
+                     "sourceParagraphEnd":  79
+                 },
+                 {
+                     "number":  6,
+                     "id":  "set-06",
+                     "title":  "Gelassene Gesprächsreaktionen",
+                     "introduction":  "Erstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:",
+                     "panels":  [
+                                    {
+                                        "index":  1,
+                                        "position":  "Oben links",
+                                        "emotion":  "Aufmerksam / Zuhörend",
+                                        "gesture":  "Kopf leicht geneigt, ruhiger direkter Blick; eine Hand locker am Unterarm der anderen, die zweite entspannt geöffnet, als würde die Figur geduldig zuhören.",
+                                        "sourceText":  "1. Aufmerksam / Zuhörend: Kopf leicht geneigt, ruhiger direkter Blick; eine Hand locker am Unterarm der anderen, die zweite entspannt geöffnet, als würde die Figur geduldig zuhören.",
+                                        "sourceParagraph":  82
+                                    },
+                                    {
+                                        "index":  2,
+                                        "position":  "Oben Mitte",
+                                        "emotion":  "Zustimmend / Bestätigend",
+                                        "gesture":  "Ein kleines, sicheres Nicken, geschlossene Lippen mit angedeutetem Lächeln; eine Hand leicht angehoben, Daumen und Finger locker beieinander.",
+                                        "sourceText":  "2. Zustimmend / Bestätigend: Ein kleines, sicheres Nicken, geschlossene Lippen mit angedeutetem Lächeln; eine Hand leicht angehoben, Daumen und Finger locker beieinander.",
+                                        "sourceParagraph":  83
+                                    },
+                                    {
+                                        "index":  3,
+                                        "position":  "Oben rechts",
+                                        "emotion":  "Wohlwollend / Anerkennend",
+                                        "gesture":  "Warmer Blick und dezentes Lächeln; eine Hand kurz und zurückhaltend zum Gegenüber geöffnet, die andere ruht locker vor dem Bauch.",
+                                        "sourceText":  "3. Wohlwollend / Anerkennend: Warmer Blick und dezentes Lächeln; eine Hand kurz und zurückhaltend zum Gegenüber geöffnet, die andere ruht locker vor dem Bauch.",
+                                        "sourceParagraph":  84
+                                    },
+                                    {
+                                        "index":  4,
+                                        "position":  "Mitte links",
+                                        "emotion":  "Abwartend / Geduldig",
+                                        "gesture":  "Entspannte Schultern, gerader Stand; beide Hände locker vor dem Körper ineinandergelegt, aufmerksamer Blick ohne Drängen.",
+                                        "sourceText":  "4. Abwartend / Geduldig: Entspannte Schultern, gerader Stand; beide Hände locker vor dem Körper ineinandergelegt, aufmerksamer Blick ohne Drängen.",
+                                        "sourceParagraph":  85
+                                    },
+                                    {
+                                        "index":  5,
+                                        "position":  "Mitte Mitte",
+                                        "emotion":  "Milde amüsiert / Schmunzelnd",
+                                        "gesture":  "Ein kaum unterdrücktes Schmunzeln und leicht gesenkte Lider; eine Hand berührt beiläufig den eigenen Unterarm, der Kopf neigt sich minimal.",
+                                        "sourceText":  "5. Milde amüsiert / Schmunzelnd: Ein kaum unterdrücktes Schmunzeln und leicht gesenkte Lider; eine Hand berührt beiläufig den eigenen Unterarm, der Kopf neigt sich minimal.",
+                                        "sourceParagraph":  86
+                                    },
+                                    {
+                                        "index":  6,
+                                        "position":  "Mitte rechts",
+                                        "emotion":  "Überlegend / Innerlich prüfend",
+                                        "gesture":  "Lippen leicht zusammengepresst, Blick nach unten zur Seite; die Fingerspitzen beider Hände berühren sich lose vor der Brust.",
+                                        "sourceText":  "6. Überlegend / Innerlich prüfend: Lippen leicht zusammengepresst, Blick nach unten zur Seite; die Fingerspitzen beider Hände berühren sich lose vor der Brust.",
+                                        "sourceParagraph":  87
+                                    },
+                                    {
+                                        "index":  7,
+                                        "position":  "Unten links",
+                                        "emotion":  "Verständnisvoll / Mitfühlend",
+                                        "gesture":  "Weiche Augenbrauen, dezentes ernstes Lächeln; eine Hand behutsam nach vorne geöffnet, die andere nahe am Körper.",
+                                        "sourceText":  "7. Verständnisvoll / Mitfühlend: Weiche Augenbrauen, dezentes ernstes Lächeln; eine Hand behutsam nach vorne geöffnet, die andere nahe am Körper.",
+                                        "sourceParagraph":  88
+                                    },
+                                    {
+                                        "index":  8,
+                                        "position":  "Unten Mitte",
+                                        "emotion":  "Zurückhaltend / Höflich",
+                                        "gesture":  "Kleines höfliches Lächeln, Kinn leicht gesenkt; Hände offen und tief vor dem Körper, zurückgenommene Armhaltung.",
+                                        "sourceText":  "8. Zurückhaltend / Höflich: Kleines höfliches Lächeln, Kinn leicht gesenkt; Hände offen und tief vor dem Körper, zurückgenommene Armhaltung.",
+                                        "sourceParagraph":  89
+                                    },
+                                    {
+                                        "index":  9,
+                                        "position":  "Unten rechts",
+                                        "emotion":  "Gelassen / Unbeeindruckt",
+                                        "gesture":  "Ruhiger Blick und kaum gehobene Braue; eine Hand hängt locker, die andere ruht beiläufig an der eigenen Seite, ohne abwertende Geste.",
+                                        "sourceText":  "9. Gelassen / Unbeeindruckt: Ruhiger Blick und kaum gehobene Braue; eine Hand hängt locker, die andere ruht beiläufig an der eigenen Seite, ohne abwertende Geste.",
+                                        "sourceParagraph":  90
+                                    }
+                                ],
+                     "instructions":  [
+                                          "Orientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.",
+                                          "Alle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.",
+                                          "Besonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets."
+                                      ],
+                     "prompt":  "Set 6 | Gelassene Gesprächsreaktionen\nErstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:\n1. Aufmerksam / Zuhörend: Kopf leicht geneigt, ruhiger direkter Blick; eine Hand locker am Unterarm der anderen, die zweite entspannt geöffnet, als würde die Figur geduldig zuhören.\n2. Zustimmend / Bestätigend: Ein kleines, sicheres Nicken, geschlossene Lippen mit angedeutetem Lächeln; eine Hand leicht angehoben, Daumen und Finger locker beieinander.\n3. Wohlwollend / Anerkennend: Warmer Blick und dezentes Lächeln; eine Hand kurz und zurückhaltend zum Gegenüber geöffnet, die andere ruht locker vor dem Bauch.\n4. Abwartend / Geduldig: Entspannte Schultern, gerader Stand; beide Hände locker vor dem Körper ineinandergelegt, aufmerksamer Blick ohne Drängen.\n5. Milde amüsiert / Schmunzelnd: Ein kaum unterdrücktes Schmunzeln und leicht gesenkte Lider; eine Hand berührt beiläufig den eigenen Unterarm, der Kopf neigt sich minimal.\n6. Überlegend / Innerlich prüfend: Lippen leicht zusammengepresst, Blick nach unten zur Seite; die Fingerspitzen beider Hände berühren sich lose vor der Brust.\n7. Verständnisvoll / Mitfühlend: Weiche Augenbrauen, dezentes ernstes Lächeln; eine Hand behutsam nach vorne geöffnet, die andere nahe am Körper.\n8. Zurückhaltend / Höflich: Kleines höfliches Lächeln, Kinn leicht gesenkt; Hände offen und tief vor dem Körper, zurückgenommene Armhaltung.\n9. Gelassen / Unbeeindruckt: Ruhiger Blick und kaum gehobene Braue; eine Hand hängt locker, die andere ruht beiläufig an der eigenen Seite, ohne abwertende Geste.\nVerbindliche Vorgaben\nOrientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.\nAlle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.\nBesonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets.\n",
+                     "sourceParagraphStart":  80,
+                     "sourceParagraphEnd":  95
+                 },
+                 {
+                     "number":  7,
+                     "id":  "set-07",
+                     "title":  "Subtile Zwischentöne und leise Reaktionen",
+                     "introduction":  "Erstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:",
+                     "panels":  [
+                                    {
+                                        "index":  1,
+                                        "position":  "Oben links",
+                                        "emotion":  "Leicht irritiert / Verwundert",
+                                        "gesture":  "Ein kaum merkliches Stirnrunzeln, Lippen einen Spalt geöffnet; eine Hand dreht sich fragend auf, die andere bleibt tief und entspannt.",
+                                        "sourceText":  "1. Leicht irritiert / Verwundert: Ein kaum merkliches Stirnrunzeln, Lippen einen Spalt geöffnet; eine Hand dreht sich fragend auf, die andere bleibt tief und entspannt.",
+                                        "sourceParagraph":  98
+                                    },
+                                    {
+                                        "index":  2,
+                                        "position":  "Oben Mitte",
+                                        "emotion":  "Vorsichtig optimistisch",
+                                        "gesture":  "Zögerndes kleines Lächeln, angehobene Augenbrauen; beide Hände locker vor dem Körper, eine öffnet sich behutsam nach vorne.",
+                                        "sourceText":  "2. Vorsichtig optimistisch: Zögerndes kleines Lächeln, angehobene Augenbrauen; beide Hände locker vor dem Körper, eine öffnet sich behutsam nach vorne.",
+                                        "sourceParagraph":  99
+                                    },
+                                    {
+                                        "index":  3,
+                                        "position":  "Oben rechts",
+                                        "emotion":  "Nachsichtig / Milde belustigt",
+                                        "gesture":  "Sanftes Kopfschütteln mit freundlichem Schmunzeln; eine Hand liegt locker am Bauch, die andere hebt sich in einer kleinen versöhnlichen Geste.",
+                                        "sourceText":  "3. Nachsichtig / Milde belustigt: Sanftes Kopfschütteln mit freundlichem Schmunzeln; eine Hand liegt locker am Bauch, die andere hebt sich in einer kleinen versöhnlichen Geste.",
+                                        "sourceParagraph":  100
+                                    },
+                                    {
+                                        "index":  4,
+                                        "position":  "Mitte links",
+                                        "emotion":  "Resigniert / Hinnehmend",
+                                        "gesture":  "Kurzes Ausatmen, leicht gesenkte Lider; beide Arme sinken locker ab, eine Handfläche dreht sich ergeben nach oben.",
+                                        "sourceText":  "4. Resigniert / Hinnehmend: Kurzes Ausatmen, leicht gesenkte Lider; beide Arme sinken locker ab, eine Handfläche dreht sich ergeben nach oben.",
+                                        "sourceParagraph":  101
+                                    },
+                                    {
+                                        "index":  5,
+                                        "position":  "Mitte Mitte",
+                                        "emotion":  "Diskret erfreut",
+                                        "gesture":  "Geschlossenes zufriedenes Lächeln und wacher Blick; eine Hand bildet eine kleine zurückgehaltene Faust nahe der Taille, die andere bleibt offen.",
+                                        "sourceText":  "5. Diskret erfreut: Geschlossenes zufriedenes Lächeln und wacher Blick; eine Hand bildet eine kleine zurückgehaltene Faust nahe der Taille, die andere bleibt offen.",
+                                        "sourceParagraph":  102
+                                    },
+                                    {
+                                        "index":  6,
+                                        "position":  "Mitte rechts",
+                                        "emotion":  "Leise besorgt",
+                                        "gesture":  "Zusammengezogene innere Augenbrauen, ernster Blick; eine Hand greift locker an den eigenen gegenüberliegenden Unterarm.",
+                                        "sourceText":  "6. Leise besorgt: Zusammengezogene innere Augenbrauen, ernster Blick; eine Hand greift locker an den eigenen gegenüberliegenden Unterarm.",
+                                        "sourceParagraph":  103
+                                    },
+                                    {
+                                        "index":  7,
+                                        "position":  "Unten links",
+                                        "emotion":  "Unentschlossen / Zögerlich",
+                                        "gesture":  "Blick kurz zur Seite, leicht schiefer Mund; eine halb erhobene Hand hält mitten in einer begonnenen Geste inne.",
+                                        "sourceText":  "7. Unentschlossen / Zögerlich: Blick kurz zur Seite, leicht schiefer Mund; eine halb erhobene Hand hält mitten in einer begonnenen Geste inne.",
+                                        "sourceParagraph":  104
+                                    },
+                                    {
+                                        "index":  8,
+                                        "position":  "Unten Mitte",
+                                        "emotion":  "Aufrichtig dankbar",
+                                        "gesture":  "Warmes, ruhiges Lächeln, Kopf leicht geneigt; eine Hand liegt sanft am oberen Brustbereich, die andere bleibt offen und tief.",
+                                        "sourceText":  "8. Aufrichtig dankbar: Warmes, ruhiges Lächeln, Kopf leicht geneigt; eine Hand liegt sanft am oberen Brustbereich, die andere bleibt offen und tief.",
+                                        "sourceParagraph":  105
+                                    },
+                                    {
+                                        "index":  9,
+                                        "position":  "Unten rechts",
+                                        "emotion":  "Gefasst / Ernsthaft ruhig",
+                                        "gesture":  "Fester, aber entspannter Blick; beide Hände auf Bauchhöhe locker übereinander, aufrechte Haltung ohne Drohgebärde.",
+                                        "sourceText":  "9. Gefasst / Ernsthaft ruhig: Fester, aber entspannter Blick; beide Hände auf Bauchhöhe locker übereinander, aufrechte Haltung ohne Drohgebärde.",
+                                        "sourceParagraph":  106
+                                    }
+                                ],
+                     "instructions":  [
+                                          "Orientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.",
+                                          "Alle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.",
+                                          "Besonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets."
+                                      ],
+                     "prompt":  "Set 7 | Subtile Zwischentöne und leise Reaktionen\nErstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:\n1. Leicht irritiert / Verwundert: Ein kaum merkliches Stirnrunzeln, Lippen einen Spalt geöffnet; eine Hand dreht sich fragend auf, die andere bleibt tief und entspannt.\n2. Vorsichtig optimistisch: Zögerndes kleines Lächeln, angehobene Augenbrauen; beide Hände locker vor dem Körper, eine öffnet sich behutsam nach vorne.\n3. Nachsichtig / Milde belustigt: Sanftes Kopfschütteln mit freundlichem Schmunzeln; eine Hand liegt locker am Bauch, die andere hebt sich in einer kleinen versöhnlichen Geste.\n4. Resigniert / Hinnehmend: Kurzes Ausatmen, leicht gesenkte Lider; beide Arme sinken locker ab, eine Handfläche dreht sich ergeben nach oben.\n5. Diskret erfreut: Geschlossenes zufriedenes Lächeln und wacher Blick; eine Hand bildet eine kleine zurückgehaltene Faust nahe der Taille, die andere bleibt offen.\n6. Leise besorgt: Zusammengezogene innere Augenbrauen, ernster Blick; eine Hand greift locker an den eigenen gegenüberliegenden Unterarm.\n7. Unentschlossen / Zögerlich: Blick kurz zur Seite, leicht schiefer Mund; eine halb erhobene Hand hält mitten in einer begonnenen Geste inne.\n8. Aufrichtig dankbar: Warmes, ruhiges Lächeln, Kopf leicht geneigt; eine Hand liegt sanft am oberen Brustbereich, die andere bleibt offen und tief.\n9. Gefasst / Ernsthaft ruhig: Fester, aber entspannter Blick; beide Hände auf Bauchhöhe locker übereinander, aufrechte Haltung ohne Drohgebärde.\nVerbindliche Vorgaben\nOrientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.\nAlle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.\nBesonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets.\n",
+                     "sourceParagraphStart":  96,
+                     "sourceParagraphEnd":  111
+                 },
+                 {
+                     "number":  8,
+                     "id":  "set-08",
+                     "title":  "Arroganz und demonstrative Überlegenheit",
+                     "introduction":  "Erstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:",
+                     "panels":  [
+                                    {
+                                        "index":  1,
+                                        "position":  "Oben links",
+                                        "emotion":  "Selbstgefällig / Überlegen",
+                                        "gesture":  "Kinn hoch, schmaler selbstsicherer Mundwinkel; eine Hand liegt lässig an der Hüfte, die andere streicht beiläufig über den eigenen Handschuh.",
+                                        "sourceText":  "1. Selbstgefällig / Überlegen: Kinn hoch, schmaler selbstsicherer Mundwinkel; eine Hand liegt lässig an der Hüfte, die andere streicht beiläufig über den eigenen Handschuh.",
+                                        "sourceParagraph":  114
+                                    },
+                                    {
+                                        "index":  2,
+                                        "position":  "Oben Mitte",
+                                        "emotion":  "Spöttisch / Belächelnd",
+                                        "gesture":  "Eine Braue angehoben, dünnes schiefes Lächeln; zwei Finger machen eine kleine abschätzige Bewegung vor der Brust.",
+                                        "sourceText":  "2. Spöttisch / Belächelnd: Eine Braue angehoben, dünnes schiefes Lächeln; zwei Finger machen eine kleine abschätzige Bewegung vor der Brust.",
+                                        "sourceParagraph":  115
+                                    },
+                                    {
+                                        "index":  3,
+                                        "position":  "Oben rechts",
+                                        "emotion":  "Gelangweilt / Desinteressiert",
+                                        "gesture":  "Halb gesenkte Lider, Blick am Gegenüber vorbei; eine Hand stützt locker den Ellbogen, die andere hängt mit entspanntem Handgelenk.",
+                                        "sourceText":  "3. Gelangweilt / Desinteressiert: Halb gesenkte Lider, Blick am Gegenüber vorbei; eine Hand stützt locker den Ellbogen, die andere hängt mit entspanntem Handgelenk.",
+                                        "sourceParagraph":  116
+                                    },
+                                    {
+                                        "index":  4,
+                                        "position":  "Mitte links",
+                                        "emotion":  "Herablassend / Belehrend",
+                                        "gesture":  "Kopf leicht nach hinten, prüfender Blick von oben; eine Hand zeichnet eine kleine langsame Korrekturbewegung mit dem Zeigefinger.",
+                                        "sourceText":  "4. Herablassend / Belehrend: Kopf leicht nach hinten, prüfender Blick von oben; eine Hand zeichnet eine kleine langsame Korrekturbewegung mit dem Zeigefinger.",
+                                        "sourceParagraph":  117
+                                    },
+                                    {
+                                        "index":  5,
+                                        "position":  "Mitte Mitte",
+                                        "emotion":  "Eitel / Sich bewundernd",
+                                        "gesture":  "Selbstzufriedenes Lächeln, Brust leicht herausgestreckt; eine Hand richtet demonstrativ den eigenen Kragen, die andere ruht an der Taille.",
+                                        "sourceText":  "5. Eitel / Sich bewundernd: Selbstzufriedenes Lächeln, Brust leicht herausgestreckt; eine Hand richtet demonstrativ den eigenen Kragen, die andere ruht an der Taille.",
+                                        "sourceParagraph":  118
+                                    },
+                                    {
+                                        "index":  6,
+                                        "position":  "Mitte rechts",
+                                        "emotion":  "Verächtlich / Geringschätzend",
+                                        "gesture":  "Einseitig hochgezogene Oberlippe, schmaler Blick; eine Hand wendet sich mit minimaler abwertender Drehung nach außen.",
+                                        "sourceText":  "6. Verächtlich / Geringschätzend: Einseitig hochgezogene Oberlippe, schmaler Blick; eine Hand wendet sich mit minimaler abwertender Drehung nach außen.",
+                                        "sourceParagraph":  119
+                                    },
+                                    {
+                                        "index":  7,
+                                        "position":  "Unten links",
+                                        "emotion":  "Unantastbar / Souverän",
+                                        "gesture":  "Kühle, reglose Mimik; Hände hinterlassen keine aggressive Silhouette, eine ruht vor dem Bauch, die andere hält den eigenen Unterarm.",
+                                        "sourceText":  "7. Unantastbar / Souverän: Kühle, reglose Mimik; Hände hinterlassen keine aggressive Silhouette, eine ruht vor dem Bauch, die andere hält den eigenen Unterarm.",
+                                        "sourceParagraph":  120
+                                    },
+                                    {
+                                        "index":  8,
+                                        "position":  "Unten Mitte",
+                                        "emotion":  "Provokant / Überheblich",
+                                        "gesture":  "Kopf seitlich geneigt, herausforderndes Grinsen; eine Hand hebt zwei Finger in einer beiläufigen, spöttischen Einladung.",
+                                        "sourceText":  "8. Provokant / Überheblich: Kopf seitlich geneigt, herausforderndes Grinsen; eine Hand hebt zwei Finger in einer beiläufigen, spöttischen Einladung.",
+                                        "sourceParagraph":  121
+                                    },
+                                    {
+                                        "index":  9,
+                                        "position":  "Unten rechts",
+                                        "emotion":  "Selbstsicher / Abschließend",
+                                        "gesture":  "Festes Lächeln, ruhiger Blick; eine Hand führt eine kurze endgültige Abwärtsbewegung aus, die andere bleibt an der Hüfte.",
+                                        "sourceText":  "9. Selbstsicher / Abschließend: Festes Lächeln, ruhiger Blick; eine Hand führt eine kurze endgültige Abwärtsbewegung aus, die andere bleibt an der Hüfte.",
+                                        "sourceParagraph":  122
+                                    }
+                                ],
+                     "instructions":  [
+                                          "Orientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.",
+                                          "Alle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.",
+                                          "Besonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets."
+                                      ],
+                     "prompt":  "Set 8 | Arroganz und demonstrative Überlegenheit\nErstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:\n1. Selbstgefällig / Überlegen: Kinn hoch, schmaler selbstsicherer Mundwinkel; eine Hand liegt lässig an der Hüfte, die andere streicht beiläufig über den eigenen Handschuh.\n2. Spöttisch / Belächelnd: Eine Braue angehoben, dünnes schiefes Lächeln; zwei Finger machen eine kleine abschätzige Bewegung vor der Brust.\n3. Gelangweilt / Desinteressiert: Halb gesenkte Lider, Blick am Gegenüber vorbei; eine Hand stützt locker den Ellbogen, die andere hängt mit entspanntem Handgelenk.\n4. Herablassend / Belehrend: Kopf leicht nach hinten, prüfender Blick von oben; eine Hand zeichnet eine kleine langsame Korrekturbewegung mit dem Zeigefinger.\n5. Eitel / Sich bewundernd: Selbstzufriedenes Lächeln, Brust leicht herausgestreckt; eine Hand richtet demonstrativ den eigenen Kragen, die andere ruht an der Taille.\n6. Verächtlich / Geringschätzend: Einseitig hochgezogene Oberlippe, schmaler Blick; eine Hand wendet sich mit minimaler abwertender Drehung nach außen.\n7. Unantastbar / Souverän: Kühle, reglose Mimik; Hände hinterlassen keine aggressive Silhouette, eine ruht vor dem Bauch, die andere hält den eigenen Unterarm.\n8. Provokant / Überheblich: Kopf seitlich geneigt, herausforderndes Grinsen; eine Hand hebt zwei Finger in einer beiläufigen, spöttischen Einladung.\n9. Selbstsicher / Abschließend: Festes Lächeln, ruhiger Blick; eine Hand führt eine kurze endgültige Abwärtsbewegung aus, die andere bleibt an der Hüfte.\nVerbindliche Vorgaben\nOrientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.\nAlle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.\nBesonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets.\n",
+                     "sourceParagraphStart":  112,
+                     "sourceParagraphEnd":  127
+                 },
+                 {
+                     "number":  9,
+                     "id":  "set-09",
+                     "title":  "Autorität, Führung und Befehlsgewalt",
+                     "introduction":  "Erstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:",
+                     "panels":  [
+                                    {
+                                        "index":  1,
+                                        "position":  "Oben links",
+                                        "emotion":  "Befehlend / Anweisend",
+                                        "gesture":  "Gerader Rücken, durchdringender Blick; ein Arm weist mit gestreckter offener Hand präzise in eine Richtung, die andere Hand nahe der Taille.",
+                                        "sourceText":  "1. Befehlend / Anweisend: Gerader Rücken, durchdringender Blick; ein Arm weist mit gestreckter offener Hand präzise in eine Richtung, die andere Hand nahe der Taille.",
+                                        "sourceParagraph":  130
+                                    },
+                                    {
+                                        "index":  2,
+                                        "position":  "Oben Mitte",
+                                        "emotion":  "Disziplinierend / Streng",
+                                        "gesture":  "Gespannte Kieferpartie, schmale Augen; ein erhobener Zeigefinger bleibt reglos auf Brusthöhe, die andere Hand fest hinter dem eigenen Rückenansatz seitlich sichtbar.",
+                                        "sourceText":  "2. Disziplinierend / Streng: Gespannte Kieferpartie, schmale Augen; ein erhobener Zeigefinger bleibt reglos auf Brusthöhe, die andere Hand fest hinter dem eigenen Rückenansatz seitlich sichtbar.",
+                                        "sourceParagraph":  131
+                                    },
+                                    {
+                                        "index":  3,
+                                        "position":  "Oben rechts",
+                                        "emotion":  "Unnachgiebig / Endgültig",
+                                        "gesture":  "Geschlossener Mund, unbewegter Blick; eine flache Hand führt eine kurze entschlossene Schnittbewegung nach unten aus.",
+                                        "sourceText":  "3. Unnachgiebig / Endgültig: Geschlossener Mund, unbewegter Blick; eine flache Hand führt eine kurze entschlossene Schnittbewegung nach unten aus.",
+                                        "sourceParagraph":  132
+                                    },
+                                    {
+                                        "index":  4,
+                                        "position":  "Mitte links",
+                                        "emotion":  "Kontrollierend / Überblickend",
+                                        "gesture":  "Kinn leicht angehoben, Blick über eine gedachte Gruppe; beide Hände tief vor dem Körper, eine zeigt mit zwei Fingern eine klare Richtung an.",
+                                        "sourceText":  "4. Kontrollierend / Überblickend: Kinn leicht angehoben, Blick über eine gedachte Gruppe; beide Hände tief vor dem Körper, eine zeigt mit zwei Fingern eine klare Richtung an.",
+                                        "sourceParagraph":  133
+                                    },
+                                    {
+                                        "index":  5,
+                                        "position":  "Mitte Mitte",
+                                        "emotion":  "Zur Ordnung rufend",
+                                        "gesture":  "Strenger Blick, leicht geöffneter Mund; eine Hand auf Schulterhöhe mit nach unten gewendeter Handfläche, die andere deutet knapp auf den vorgesehenen Platz.",
+                                        "sourceText":  "5. Zur Ordnung rufend: Strenger Blick, leicht geöffneter Mund; eine Hand auf Schulterhöhe mit nach unten gewendeter Handfläche, die andere deutet knapp auf den vorgesehenen Platz.",
+                                        "sourceParagraph":  134
+                                    },
+                                    {
+                                        "index":  6,
+                                        "position":  "Mitte rechts",
+                                        "emotion":  "Entscheidend / Urteilend",
+                                        "gesture":  "Ernster, ruhiger Gesichtsausdruck; eine Hand wird mit geschlossenen Fingern bewusst nach vorn gesetzt, als falle eine endgültige Entscheidung.",
+                                        "sourceText":  "6. Entscheidend / Urteilend: Ernster, ruhiger Gesichtsausdruck; eine Hand wird mit geschlossenen Fingern bewusst nach vorn gesetzt, als falle eine endgültige Entscheidung.",
+                                        "sourceParagraph":  135
+                                    },
+                                    {
+                                        "index":  7,
+                                        "position":  "Unten links",
+                                        "emotion":  "Verantwortung übernehmend",
+                                        "gesture":  "Aufrechte, würdige Haltung; eine Hand fest auf der Brust, die andere zeigt offen und bestimmt auf die eigene Person.",
+                                        "sourceText":  "7. Verantwortung übernehmend: Aufrechte, würdige Haltung; eine Hand fest auf der Brust, die andere zeigt offen und bestimmt auf die eigene Person.",
+                                        "sourceParagraph":  136
+                                    },
+                                    {
+                                        "index":  8,
+                                        "position":  "Unten Mitte",
+                                        "emotion":  "Prüfend / Musternd",
+                                        "gesture":  "Kritisch verengte Augen; eine Hand hält den anderen Unterarm, der freie Zeigefinger weist knapp auf einen bestimmten Punkt.",
+                                        "sourceText":  "8. Prüfend / Musternd: Kritisch verengte Augen; eine Hand hält den anderen Unterarm, der freie Zeigefinger weist knapp auf einen bestimmten Punkt.",
+                                        "sourceParagraph":  137
+                                    },
+                                    {
+                                        "index":  9,
+                                        "position":  "Unten rechts",
+                                        "emotion":  "Stille Drohung / Einschüchternd",
+                                        "gesture":  "Völlig ruhiges, hartes Gesicht, leicht vorgebeugter Oberkörper; beide Hände tief, eine zur kontrollierten Faust geschlossen, ohne dramatisches Schreien.",
+                                        "sourceText":  "9. Stille Drohung / Einschüchternd: Völlig ruhiges, hartes Gesicht, leicht vorgebeugter Oberkörper; beide Hände tief, eine zur kontrollierten Faust geschlossen, ohne dramatisches Schreien.",
+                                        "sourceParagraph":  138
+                                    }
+                                ],
+                     "instructions":  [
+                                          "Orientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.",
+                                          "Alle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.",
+                                          "Besonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets."
+                                      ],
+                     "prompt":  "Set 9 | Autorität, Führung und Befehlsgewalt\nErstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:\n1. Befehlend / Anweisend: Gerader Rücken, durchdringender Blick; ein Arm weist mit gestreckter offener Hand präzise in eine Richtung, die andere Hand nahe der Taille.\n2. Disziplinierend / Streng: Gespannte Kieferpartie, schmale Augen; ein erhobener Zeigefinger bleibt reglos auf Brusthöhe, die andere Hand fest hinter dem eigenen Rückenansatz seitlich sichtbar.\n3. Unnachgiebig / Endgültig: Geschlossener Mund, unbewegter Blick; eine flache Hand führt eine kurze entschlossene Schnittbewegung nach unten aus.\n4. Kontrollierend / Überblickend: Kinn leicht angehoben, Blick über eine gedachte Gruppe; beide Hände tief vor dem Körper, eine zeigt mit zwei Fingern eine klare Richtung an.\n5. Zur Ordnung rufend: Strenger Blick, leicht geöffneter Mund; eine Hand auf Schulterhöhe mit nach unten gewendeter Handfläche, die andere deutet knapp auf den vorgesehenen Platz.\n6. Entscheidend / Urteilend: Ernster, ruhiger Gesichtsausdruck; eine Hand wird mit geschlossenen Fingern bewusst nach vorn gesetzt, als falle eine endgültige Entscheidung.\n7. Verantwortung übernehmend: Aufrechte, würdige Haltung; eine Hand fest auf der Brust, die andere zeigt offen und bestimmt auf die eigene Person.\n8. Prüfend / Musternd: Kritisch verengte Augen; eine Hand hält den anderen Unterarm, der freie Zeigefinger weist knapp auf einen bestimmten Punkt.\n9. Stille Drohung / Einschüchternd: Völlig ruhiges, hartes Gesicht, leicht vorgebeugter Oberkörper; beide Hände tief, eine zur kontrollierten Faust geschlossen, ohne dramatisches Schreien.\nVerbindliche Vorgaben\nOrientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.\nAlle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.\nBesonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets.\n",
+                     "sourceParagraphStart":  128,
+                     "sourceParagraphEnd":  143
+                 },
+                 {
+                     "number":  10,
+                     "id":  "set-10",
+                     "title":  "Erklären, Nachfragen und Befragen",
+                     "introduction":  "Erstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:",
+                     "panels":  [
+                                    {
+                                        "index":  1,
+                                        "position":  "Oben links",
+                                        "emotion":  "Sachverhalt erläuternd",
+                                        "gesture":  "Eine Hand auf Brusthöhe geöffnet, die andere markiert mit dem Zeigefinger einen imaginären Punkt darüber; ruhiger didaktischer Blick.",
+                                        "sourceText":  "1. Sachverhalt erläuternd: Eine Hand auf Brusthöhe geöffnet, die andere markiert mit dem Zeigefinger einen imaginären Punkt darüber; ruhiger didaktischer Blick.",
+                                        "sourceParagraph":  146
+                                    },
+                                    {
+                                        "index":  2,
+                                        "position":  "Oben Mitte",
+                                        "emotion":  "Präzisierend / Konkretisierend",
+                                        "gesture":  "Daumen und Zeigefinger einer Hand formen einen kleinen Abstand, die andere Hand grenzt daneben einen Bereich ab; konzentrierte Augen.",
+                                        "sourceText":  "2. Präzisierend / Konkretisierend: Daumen und Zeigefinger einer Hand formen einen kleinen Abstand, die andere Hand grenzt daneben einen Bereich ab; konzentrierte Augen.",
+                                        "sourceParagraph":  147
+                                    },
+                                    {
+                                        "index":  3,
+                                        "position":  "Oben rechts",
+                                        "emotion":  "Nachhakend / Kritisch fragend",
+                                        "gesture":  "Kopf leicht nach vorne geneigt, eine Braue gehoben; eine Handfläche nach oben geöffnet, die andere mit locker gekrümmtem Zeigefinger auf das Gegenüber gerichtet.",
+                                        "sourceText":  "3. Nachhakend / Kritisch fragend: Kopf leicht nach vorne geneigt, eine Braue gehoben; eine Handfläche nach oben geöffnet, die andere mit locker gekrümmtem Zeigefinger auf das Gegenüber gerichtet.",
+                                        "sourceParagraph":  148
+                                    },
+                                    {
+                                        "index":  4,
+                                        "position":  "Mitte links",
+                                        "emotion":  "Um Erklärung bittend",
+                                        "gesture":  "Beide Hände leicht versetzt und offen vor dem Körper, Blick fragend auf das Gegenüber gerichtet; höflich angehobene Augenbrauen.",
+                                        "sourceText":  "4. Um Erklärung bittend: Beide Hände leicht versetzt und offen vor dem Körper, Blick fragend auf das Gegenüber gerichtet; höflich angehobene Augenbrauen.",
+                                        "sourceParagraph":  149
+                                    },
+                                    {
+                                        "index":  5,
+                                        "position":  "Mitte Mitte",
+                                        "emotion":  "Schrittweise erklärend",
+                                        "gesture":  "Eine Hand zeigt zwei deutlich ausgestreckte Finger, die andere führt daneben eine kleine vorwärts gerichtete Bewegung aus; sachliche Mimik.",
+                                        "sourceText":  "5. Schrittweise erklärend: Eine Hand zeigt zwei deutlich ausgestreckte Finger, die andere führt daneben eine kleine vorwärts gerichtete Bewegung aus; sachliche Mimik.",
+                                        "sourceParagraph":  150
+                                    },
+                                    {
+                                        "index":  6,
+                                        "position":  "Mitte rechts",
+                                        "emotion":  "Ursache und Wirkung erklärend",
+                                        "gesture":  "Eine Hand links auf Brusthöhe als Ausgangspunkt, die andere rechts etwas weiter vorne als Ergebnis; Blick folgt der gedachten Verbindung.",
+                                        "sourceText":  "6. Ursache und Wirkung erklärend: Eine Hand links auf Brusthöhe als Ausgangspunkt, die andere rechts etwas weiter vorne als Ergebnis; Blick folgt der gedachten Verbindung.",
+                                        "sourceParagraph":  151
+                                    },
+                                    {
+                                        "index":  7,
+                                        "position":  "Unten links",
+                                        "emotion":  "Verständnis überprüfend",
+                                        "gesture":  "Kopf leicht geneigt, suchender Augenkontakt; eine Hand bleibt offen zum Gegenüber, die andere zeigt kurz auf die eigene Schläfe.",
+                                        "sourceText":  "7. Verständnis überprüfend: Kopf leicht geneigt, suchender Augenkontakt; eine Hand bleibt offen zum Gegenüber, die andere zeigt kurz auf die eigene Schläfe.",
+                                        "sourceParagraph":  152
+                                    },
+                                    {
+                                        "index":  8,
+                                        "position":  "Unten Mitte",
+                                        "emotion":  "Widerspruch hinterfragend",
+                                        "gesture":  "Leicht gerunzelte Stirn und zusammengepresste Lippen; beide Handflächen in unterschiedlicher Höhe zueinander gewandt, als würden zwei Aussagen nicht zusammenpassen.",
+                                        "sourceText":  "8. Widerspruch hinterfragend: Leicht gerunzelte Stirn und zusammengepresste Lippen; beide Handflächen in unterschiedlicher Höhe zueinander gewandt, als würden zwei Aussagen nicht zusammenpassen.",
+                                        "sourceParagraph":  153
+                                    },
+                                    {
+                                        "index":  9,
+                                        "position":  "Unten rechts",
+                                        "emotion":  "Zusammenfassend / Schlussfolgernd",
+                                        "gesture":  "Ruhiger, klarer Blick; die Fingerspitzen beider Hände kommen vor der Brust kontrolliert zusammen, als würden mehrere Gedanken zu einem Ergebnis geführt.",
+                                        "sourceText":  "9. Zusammenfassend / Schlussfolgernd: Ruhiger, klarer Blick; die Fingerspitzen beider Hände kommen vor der Brust kontrolliert zusammen, als würden mehrere Gedanken zu einem Ergebnis geführt.",
+                                        "sourceParagraph":  154
+                                    }
+                                ],
+                     "instructions":  [
+                                          "Orientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.",
+                                          "Alle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.",
+                                          "Besonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets."
+                                      ],
+                     "prompt":  "Set 10 | Erklären, Nachfragen und Befragen\nErstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:\n1. Sachverhalt erläuternd: Eine Hand auf Brusthöhe geöffnet, die andere markiert mit dem Zeigefinger einen imaginären Punkt darüber; ruhiger didaktischer Blick.\n2. Präzisierend / Konkretisierend: Daumen und Zeigefinger einer Hand formen einen kleinen Abstand, die andere Hand grenzt daneben einen Bereich ab; konzentrierte Augen.\n3. Nachhakend / Kritisch fragend: Kopf leicht nach vorne geneigt, eine Braue gehoben; eine Handfläche nach oben geöffnet, die andere mit locker gekrümmtem Zeigefinger auf das Gegenüber gerichtet.\n4. Um Erklärung bittend: Beide Hände leicht versetzt und offen vor dem Körper, Blick fragend auf das Gegenüber gerichtet; höflich angehobene Augenbrauen.\n5. Schrittweise erklärend: Eine Hand zeigt zwei deutlich ausgestreckte Finger, die andere führt daneben eine kleine vorwärts gerichtete Bewegung aus; sachliche Mimik.\n6. Ursache und Wirkung erklärend: Eine Hand links auf Brusthöhe als Ausgangspunkt, die andere rechts etwas weiter vorne als Ergebnis; Blick folgt der gedachten Verbindung.\n7. Verständnis überprüfend: Kopf leicht geneigt, suchender Augenkontakt; eine Hand bleibt offen zum Gegenüber, die andere zeigt kurz auf die eigene Schläfe.\n8. Widerspruch hinterfragend: Leicht gerunzelte Stirn und zusammengepresste Lippen; beide Handflächen in unterschiedlicher Höhe zueinander gewandt, als würden zwei Aussagen nicht zusammenpassen.\n9. Zusammenfassend / Schlussfolgernd: Ruhiger, klarer Blick; die Fingerspitzen beider Hände kommen vor der Brust kontrolliert zusammen, als würden mehrere Gedanken zu einem Ergebnis geführt.\nVerbindliche Vorgaben\nOrientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.\nAlle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.\nBesonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets.\n",
+                     "sourceParagraphStart":  144,
+                     "sourceParagraphEnd":  159
+                 },
+                 {
+                     "number":  11,
+                     "id":  "set-11",
+                     "title":  "Humorvolle Reaktionen und Gestiken",
+                     "introduction":  "Erstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:",
+                     "panels":  [
+                                    {
+                                        "index":  1,
+                                        "position":  "Oben links",
+                                        "emotion":  "Amüsiert / Trocken kommentierend",
+                                        "gesture":  "Ein Mundwinkel leicht hochgezogen, halb gelassener halb spöttischer Blick; eine Hand mit lockerer offener Handfläche seitlich erhoben, die andere macht eine kleine erklärende Geste, als würde die Figur einen ironischen Kommentar abgeben.",
+                                        "sourceText":  "Amüsiert / Trocken kommentierend: Ein Mundwinkel leicht hochgezogen, halb gelassener halb spöttischer Blick; eine Hand mit lockerer offener Handfläche seitlich erhoben, die andere macht eine kleine erklärende Geste, als würde die Figur einen ironischen Kommentar abgeben.",
+                                        "sourceParagraph":  162
+                                    },
+                                    {
+                                        "index":  2,
+                                        "position":  "Oben Mitte",
+                                        "emotion":  "Schadenfroh / Belustigt",
+                                        "gesture":  "Ein breites, unterdrücktes Grinsen, leicht zusammengekniffene Augen; eine Hand vor dem Mund, die andere locker am Bauch, als müsste die Figur über ein Missgeschick lachen.",
+                                        "sourceText":  "Schadenfroh / Belustigt: Ein breites, unterdrücktes Grinsen, leicht zusammengekniffene Augen; eine Hand vor dem Mund, die andere locker am Bauch, als müsste die Figur über ein Missgeschick lachen.",
+                                        "sourceParagraph":  163
+                                    },
+                                    {
+                                        "index":  3,
+                                        "position":  "Oben rechts",
+                                        "emotion":  "Überrascht belustigt / Prustend",
+                                        "gesture":  "Augen geweitet, dann lachend zusammengezogen; eine Hand spontan erhoben, die andere vor der Brust, als würde die Figur plötzlich loslachen.",
+                                        "sourceText":  "Überrascht belustigt / Prustend: Augen geweitet, dann lachend zusammengezogen; eine Hand spontan erhoben, die andere vor der Brust, als würde die Figur plötzlich loslachen.",
+                                        "sourceParagraph":  164
+                                    },
+                                    {
+                                        "index":  4,
+                                        "position":  "Mitte links",
+                                        "emotion":  "Selbstironisch / Verlegen humorvoll",
+                                        "gesture":  "Schiefes Lächeln, leicht gerötete Wangen; eine Hand am Hinterkopf, die andere nach außen geöffnet, als wolle die Figur über die eigene Peinlichkeit scherzen.",
+                                        "sourceText":  "Selbstironisch / Verlegen humorvoll: Schiefes Lächeln, leicht gerötete Wangen; eine Hand am Hinterkopf, die andere nach außen geöffnet, als wolle die Figur über die eigene Peinlichkeit scherzen.",
+                                        "sourceParagraph":  165
+                                    },
+                                    {
+                                        "index":  5,
+                                        "position":  "Mitte Mitte",
+                                        "emotion":  "Frech / Neckisch",
+                                        "gesture":  "Spitzbübisches Grinsen, hochgezogene Braue; ein Zeigefinger locker nach vorn gerichtet, die andere Hand lässig an der Hüfte, als würde die Figur jemanden spielerisch aufziehen.",
+                                        "sourceText":  "Frech / Neckisch: Spitzbübisches Grinsen, hochgezogene Braue; ein Zeigefinger locker nach vorn gerichtet, die andere Hand lässig an der Hüfte, als würde die Figur jemanden spielerisch aufziehen.",
+                                        "sourceParagraph":  166
+                                    },
+                                    {
+                                        "index":  6,
+                                        "position":  "Mitte rechts",
+                                        "emotion":  "Theatralisch empört / Komödiantisch",
+                                        "gesture":  "Übertriebene Empörung mit offenem Mund und hochgezogenen Brauen; beide Hände geöffnet vor dem Oberkörper, als würde die Figur dramatisch \u0027Das gibt\u0027s doch nicht!\u0027 spielen.",
+                                        "sourceText":  "Theatralisch empört / Komödiantisch: Übertriebene Empörung mit offenem Mund und hochgezogenen Brauen; beide Hände geöffnet vor dem Oberkörper, als würde die Figur dramatisch \u0027Das gibt\u0027s doch nicht!\u0027 spielen.",
+                                        "sourceParagraph":  167
+                                    },
+                                    {
+                                        "index":  7,
+                                        "position":  "Unten links",
+                                        "emotion":  "Verschwörerisch humorvoll",
+                                        "gesture":  "Schiefes Lächeln, vielsagender Seitenblick; eine Hand seitlich am Mund, die andere mit lockerer Zeigegeste, als würde die Figur einen witzigen Seitenhieb teilen.",
+                                        "sourceText":  "Verschwörerisch humorvoll: Schiefes Lächeln, vielsagender Seitenblick; eine Hand seitlich am Mund, die andere mit lockerer Zeigegeste, als würde die Figur einen witzigen Seitenhieb teilen.",
+                                        "sourceParagraph":  168
+                                    },
+                                    {
+                                        "index":  8,
+                                        "position":  "Unten Mitte",
+                                        "emotion":  "Triumphierend komisch / Prahlend",
+                                        "gesture":  "Breites, fröhliches Grinsen; eine Hand mit Daumen zur eigenen Brust, die andere weit geöffnet, als würde die Figur sich augenzwinkernd selbst feiern.",
+                                        "sourceText":  "Triumphierend komisch / Prahlend: Breites, fröhliches Grinsen; eine Hand mit Daumen zur eigenen Brust, die andere weit geöffnet, als würde die Figur sich augenzwinkernd selbst feiern.",
+                                        "sourceParagraph":  169
+                                    },
+                                    {
+                                        "index":  9,
+                                        "position":  "Unten rechts",
+                                        "emotion":  "Gelöst lachend / Herzlich",
+                                        "gesture":  "Augen geschlossen vor Lachen, offenes ehrliches Lächeln; beide Hände locker und offen vor dem Körper, Schultern entspannt, als sei die Figur von echter Heiterkeit mitgerissen.",
+                                        "sourceText":  "Gelöst lachend / Herzlich: Augen geschlossen vor Lachen, offenes ehrliches Lächeln; beide Hände locker und offen vor dem Körper, Schultern entspannt, als sei die Figur von echter Heiterkeit mitgerissen.",
+                                        "sourceParagraph":  170
+                                    }
+                                ],
+                     "instructions":  [
+                                          "Orientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.",
+                                          "Alle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.",
+                                          "Besonders wichtig: Die thematische Grundstimmung des Sets muss klar spürbar sein, aber jede der neun Varianten braucht dennoch eine eigene emotionale Nuance. Variiere bewusst Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung, Blickrichtung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets."
+                                      ],
+                     "prompt":  "Set 11 | Humorvolle Reaktionen und Gestiken\nErstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:\nAmüsiert / Trocken kommentierend: Ein Mundwinkel leicht hochgezogen, halb gelassener halb spöttischer Blick; eine Hand mit lockerer offener Handfläche seitlich erhoben, die andere macht eine kleine erklärende Geste, als würde die Figur einen ironischen Kommentar abgeben.\nSchadenfroh / Belustigt: Ein breites, unterdrücktes Grinsen, leicht zusammengekniffene Augen; eine Hand vor dem Mund, die andere locker am Bauch, als müsste die Figur über ein Missgeschick lachen.\nÜberrascht belustigt / Prustend: Augen geweitet, dann lachend zusammengezogen; eine Hand spontan erhoben, die andere vor der Brust, als würde die Figur plötzlich loslachen.\nSelbstironisch / Verlegen humorvoll: Schiefes Lächeln, leicht gerötete Wangen; eine Hand am Hinterkopf, die andere nach außen geöffnet, als wolle die Figur über die eigene Peinlichkeit scherzen.\nFrech / Neckisch: Spitzbübisches Grinsen, hochgezogene Braue; ein Zeigefinger locker nach vorn gerichtet, die andere Hand lässig an der Hüfte, als würde die Figur jemanden spielerisch aufziehen.\nTheatralisch empört / Komödiantisch: Übertriebene Empörung mit offenem Mund und hochgezogenen Brauen; beide Hände geöffnet vor dem Oberkörper, als würde die Figur dramatisch \u0027Das gibt\u0027s doch nicht!\u0027 spielen.\nVerschwörerisch humorvoll: Schiefes Lächeln, vielsagender Seitenblick; eine Hand seitlich am Mund, die andere mit lockerer Zeigegeste, als würde die Figur einen witzigen Seitenhieb teilen.\nTriumphierend komisch / Prahlend: Breites, fröhliches Grinsen; eine Hand mit Daumen zur eigenen Brust, die andere weit geöffnet, als würde die Figur sich augenzwinkernd selbst feiern.\nGelöst lachend / Herzlich: Augen geschlossen vor Lachen, offenes ehrliches Lächeln; beide Hände locker und offen vor dem Körper, Schultern entspannt, als sei die Figur von echter Heiterkeit mitgerissen.\nVerbindliche Vorgaben\nOrientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.\nAlle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.\nBesonders wichtig: Die thematische Grundstimmung des Sets muss klar spürbar sein, aber jede der neun Varianten braucht dennoch eine eigene emotionale Nuance. Variiere bewusst Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung, Blickrichtung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets.\n",
+                     "sourceParagraphStart":  160,
+                     "sourceParagraphEnd":  175
+                 },
+                 {
+                     "number":  12,
+                     "id":  "set-12",
+                     "title":  "Euphorische Reaktionen und Gestiken",
+                     "introduction":  "Erstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:",
+                     "panels":  [
+                                    {
+                                        "index":  1,
+                                        "position":  "Oben links",
+                                        "emotion":  "Freudig überwältigt",
+                                        "gesture":  "Strahlende Augen, offener jubelnder Mund; beide Hände begeistert vor der Brust angehoben, als könne die Figur ihr Glück kaum fassen.",
+                                        "sourceText":  "Freudig überwältigt: Strahlende Augen, offener jubelnder Mund; beide Hände begeistert vor der Brust angehoben, als könne die Figur ihr Glück kaum fassen.",
+                                        "sourceParagraph":  178
+                                    },
+                                    {
+                                        "index":  2,
+                                        "position":  "Oben Mitte",
+                                        "emotion":  "Triumphierend euphorisch",
+                                        "gesture":  "Breites Siegergrinsen, erhobenes Kinn; eine Faust kraftvoll nach oben gereckt, die andere Hand offen ausgestreckt, Brust deutlich herausgestreckt.",
+                                        "sourceText":  "Triumphierend euphorisch: Breites Siegergrinsen, erhobenes Kinn; eine Faust kraftvoll nach oben gereckt, die andere Hand offen ausgestreckt, Brust deutlich herausgestreckt.",
+                                        "sourceParagraph":  179
+                                    },
+                                    {
+                                        "index":  3,
+                                        "position":  "Oben rechts",
+                                        "emotion":  "Erleichtert euphorisch",
+                                        "gesture":  "Geschlossene Augen, tiefes aufatmendes Lächeln; eine Hand auf dem Herzen, die andere leicht geöffnet nach außen, als falle eine riesige Last ab.",
+                                        "sourceText":  "Erleichtert euphorisch: Geschlossene Augen, tiefes aufatmendes Lächeln; eine Hand auf dem Herzen, die andere leicht geöffnet nach außen, als falle eine riesige Last ab.",
+                                        "sourceParagraph":  180
+                                    },
+                                    {
+                                        "index":  4,
+                                        "position":  "Mitte links",
+                                        "emotion":  "Ungläubig euphorisch / Sprachlos glücklich",
+                                        "gesture":  "Weit geöffnete Augen, lachend geöffneter Mund; beide Hände offen zum Betrachter hin, als würde die Figur sagen \u0027Wirklich?! Das ist fantastisch!\u0027.",
+                                        "sourceText":  "Ungläubig euphorisch / Sprachlos glücklich: Weit geöffnete Augen, lachend geöffneter Mund; beide Hände offen zum Betrachter hin, als würde die Figur sagen \u0027Wirklich?! Das ist fantastisch!\u0027.",
+                                        "sourceParagraph":  181
+                                    },
+                                    {
+                                        "index":  5,
+                                        "position":  "Mitte Mitte",
+                                        "emotion":  "Herausfordernd euphorisch / Aufgeputscht",
+                                        "gesture":  "Kühnes Grinsen, gespannter Blick; ein Arm fordernd nach vorne, die andere Hand zur Faust geballt, als würde die Figur im Hochgefühl direkt die nächste Herausforderung suchen.",
+                                        "sourceText":  "Herausfordernd euphorisch / Aufgeputscht: Kühnes Grinsen, gespannter Blick; ein Arm fordernd nach vorne, die andere Hand zur Faust geballt, als würde die Figur im Hochgefühl direkt die nächste Herausforderung suchen.",
+                                        "sourceParagraph":  182
+                                    },
+                                    {
+                                        "index":  6,
+                                        "position":  "Mitte rechts",
+                                        "emotion":  "Feierlich euphorisch / Verkündend",
+                                        "gesture":  "Strahlender, bedeutungsvoller Blick; ein Arm weit geöffnet, die andere Hand vor der Brust, als würde die Figur eine großartige Neuigkeit in die Welt hinausrufen.",
+                                        "sourceText":  "Feierlich euphorisch / Verkündend: Strahlender, bedeutungsvoller Blick; ein Arm weit geöffnet, die andere Hand vor der Brust, als würde die Figur eine großartige Neuigkeit in die Welt hinausrufen.",
+                                        "sourceParagraph":  183
+                                    },
+                                    {
+                                        "index":  7,
+                                        "position":  "Unten links",
+                                        "emotion":  "Wütend euphorisch / Aufgedreht",
+                                        "gesture":  "Entschlossener, elektrisierter Gesichtsausdruck, Zähne sichtbar; beide Hände angespannt vor dem Oberkörper, eine zur Faust geballt, die andere gespreizt, als sei die Figur vor Adrenalin am Kochen.",
+                                        "sourceText":  "Wütend euphorisch / Aufgedreht: Entschlossener, elektrisierter Gesichtsausdruck, Zähne sichtbar; beide Hände angespannt vor dem Oberkörper, eine zur Faust geballt, die andere gespreizt, als sei die Figur vor Adrenalin am Kochen.",
+                                        "sourceParagraph":  184
+                                    },
+                                    {
+                                        "index":  8,
+                                        "position":  "Unten Mitte",
+                                        "emotion":  "Humorvoll euphorisiert / Übersprudelnd",
+                                        "gesture":  "Lächelnd lachende Augen, kaum gebändigtes Grinsen; eine Hand locker vor dem Mund, die andere weit ausladend, als würde die Figur vor Begeisterung einen Scherz hinterherschieben.",
+                                        "sourceText":  "Humorvoll euphorisiert / Übersprudelnd: Lächelnd lachende Augen, kaum gebändigtes Grinsen; eine Hand locker vor dem Mund, die andere weit ausladend, als würde die Figur vor Begeisterung einen Scherz hinterherschieben.",
+                                        "sourceParagraph":  185
+                                    },
+                                    {
+                                        "index":  9,
+                                        "position":  "Unten rechts",
+                                        "emotion":  "Ansteckend begeistert / Mitreißend",
+                                        "gesture":  "Offenes strahlendes Lächeln; beide Arme einladend nach außen geöffnet, als wolle die Figur alle anderen in die Euphorie hineinziehen.",
+                                        "sourceText":  "Ansteckend begeistert / Mitreißend: Offenes strahlendes Lächeln; beide Arme einladend nach außen geöffnet, als wolle die Figur alle anderen in die Euphorie hineinziehen.",
+                                        "sourceParagraph":  186
+                                    }
+                                ],
+                     "instructions":  [
+                                          "Orientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.",
+                                          "Alle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.",
+                                          "Besonders wichtig: Die thematische Grundstimmung des Sets muss klar spürbar sein, aber jede der neun Varianten braucht dennoch eine eigene emotionale Nuance. Variiere bewusst Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung, Blickrichtung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets."
+                                      ],
+                     "prompt":  "Set 12 | Euphorische Reaktionen und Gestiken\nErstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:\nFreudig überwältigt: Strahlende Augen, offener jubelnder Mund; beide Hände begeistert vor der Brust angehoben, als könne die Figur ihr Glück kaum fassen.\nTriumphierend euphorisch: Breites Siegergrinsen, erhobenes Kinn; eine Faust kraftvoll nach oben gereckt, die andere Hand offen ausgestreckt, Brust deutlich herausgestreckt.\nErleichtert euphorisch: Geschlossene Augen, tiefes aufatmendes Lächeln; eine Hand auf dem Herzen, die andere leicht geöffnet nach außen, als falle eine riesige Last ab.\nUngläubig euphorisch / Sprachlos glücklich: Weit geöffnete Augen, lachend geöffneter Mund; beide Hände offen zum Betrachter hin, als würde die Figur sagen \u0027Wirklich?! Das ist fantastisch!\u0027.\nHerausfordernd euphorisch / Aufgeputscht: Kühnes Grinsen, gespannter Blick; ein Arm fordernd nach vorne, die andere Hand zur Faust geballt, als würde die Figur im Hochgefühl direkt die nächste Herausforderung suchen.\nFeierlich euphorisch / Verkündend: Strahlender, bedeutungsvoller Blick; ein Arm weit geöffnet, die andere Hand vor der Brust, als würde die Figur eine großartige Neuigkeit in die Welt hinausrufen.\nWütend euphorisch / Aufgedreht: Entschlossener, elektrisierter Gesichtsausdruck, Zähne sichtbar; beide Hände angespannt vor dem Oberkörper, eine zur Faust geballt, die andere gespreizt, als sei die Figur vor Adrenalin am Kochen.\nHumorvoll euphorisiert / Übersprudelnd: Lächelnd lachende Augen, kaum gebändigtes Grinsen; eine Hand locker vor dem Mund, die andere weit ausladend, als würde die Figur vor Begeisterung einen Scherz hinterherschieben.\nAnsteckend begeistert / Mitreißend: Offenes strahlendes Lächeln; beide Arme einladend nach außen geöffnet, als wolle die Figur alle anderen in die Euphorie hineinziehen.\nVerbindliche Vorgaben\nOrientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.\nAlle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.\nBesonders wichtig: Die thematische Grundstimmung des Sets muss klar spürbar sein, aber jede der neun Varianten braucht dennoch eine eigene emotionale Nuance. Variiere bewusst Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung, Blickrichtung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets.\n",
+                     "sourceParagraphStart":  176,
+                     "sourceParagraphEnd":  191
+                 },
+                 {
+                     "number":  13,
+                     "id":  "set-13",
+                     "title":  "Aufgebrachte Reaktionen und Gestiken",
+                     "introduction":  "Erstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:",
+                     "panels":  [
+                                    {
+                                        "index":  1,
+                                        "position":  "Oben links",
+                                        "emotion":  "Genervt aufgebracht / Gereizt",
+                                        "gesture":  "Zusammengezogene Brauen, angespannter Mund; eine Hand abwinkend nach außen, die andere an der Hüfte, als habe die Figur endgültig genug.",
+                                        "sourceText":  "Genervt aufgebracht / Gereizt: Zusammengezogene Brauen, angespannter Mund; eine Hand abwinkend nach außen, die andere an der Hüfte, als habe die Figur endgültig genug.",
+                                        "sourceParagraph":  194
+                                    },
+                                    {
+                                        "index":  2,
+                                        "position":  "Oben Mitte",
+                                        "emotion":  "Entrüstet / Laut widersprechend",
+                                        "gesture":  "Offener Mund mitten im Gegenargument, funkelnder Blick; beide Hände energisch vor dem Oberkörper, die Handflächen nach außen und leicht auf sich selbst gerichtet.",
+                                        "sourceText":  "Entrüstet / Laut widersprechend: Offener Mund mitten im Gegenargument, funkelnder Blick; beide Hände energisch vor dem Oberkörper, die Handflächen nach außen und leicht auf sich selbst gerichtet.",
+                                        "sourceParagraph":  195
+                                    },
+                                    {
+                                        "index":  3,
+                                        "position":  "Oben rechts",
+                                        "emotion":  "Explosiv wütend",
+                                        "gesture":  "Zähne gefletscht oder Mund weit geöffnet, Stirn stark angespannt; eine Faust hart vor der Brust, die andere Hand mit gespreizten Fingern aggressiv nach vorne gerichtet.",
+                                        "sourceText":  "Explosiv wütend: Zähne gefletscht oder Mund weit geöffnet, Stirn stark angespannt; eine Faust hart vor der Brust, die andere Hand mit gespreizten Fingern aggressiv nach vorne gerichtet.",
+                                        "sourceParagraph":  196
+                                    },
+                                    {
+                                        "index":  4,
+                                        "position":  "Mitte links",
+                                        "emotion":  "Empört verletzt / Aufgebracht enttäuscht",
+                                        "gesture":  "Schmerzlich angespannter Ausdruck; eine Hand auf der Brust, die andere offen nach außen, als könne die Figur nicht glauben, was gesagt oder getan wurde.",
+                                        "sourceText":  "Empört verletzt / Aufgebracht enttäuscht: Schmerzlich angespannter Ausdruck; eine Hand auf der Brust, die andere offen nach außen, als könne die Figur nicht glauben, was gesagt oder getan wurde.",
+                                        "sourceParagraph":  197
+                                    },
+                                    {
+                                        "index":  5,
+                                        "position":  "Mitte Mitte",
+                                        "emotion":  "Befehlend aufgebracht",
+                                        "gesture":  "Kalter strenger Blick, scharf geöffneter Mund; ein Arm energisch nach vorne ausgestreckt, Zeigefinger oder offene Hand dominant ausgerichtet, die andere Hand fest an der Hüfte.",
+                                        "sourceText":  "Befehlend aufgebracht: Kalter strenger Blick, scharf geöffneter Mund; ein Arm energisch nach vorne ausgestreckt, Zeigefinger oder offene Hand dominant ausgerichtet, die andere Hand fest an der Hüfte.",
+                                        "sourceParagraph":  198
+                                    },
+                                    {
+                                        "index":  6,
+                                        "position":  "Mitte rechts",
+                                        "emotion":  "Sarkastisch aufgebracht / Giftig",
+                                        "gesture":  "Schiefes, scharfes Lächeln mit gereizten Augen; eine Hand halb geöffnet in einer spitzen, abwertenden Geste, die andere locker, aber angespannt am Körper.",
+                                        "sourceText":  "Sarkastisch aufgebracht / Giftig: Schiefes, scharfes Lächeln mit gereizten Augen; eine Hand halb geöffnet in einer spitzen, abwertenden Geste, die andere locker, aber angespannt am Körper.",
+                                        "sourceParagraph":  199
+                                    },
+                                    {
+                                        "index":  7,
+                                        "position":  "Unten links",
+                                        "emotion":  "Aufgebracht suchend / Fassungslos",
+                                        "gesture":  "Augen weit, Mund empört geöffnet; beide Hände seitlich geöffnet und leicht angehoben, als verlange die Figur eine Erklärung.",
+                                        "sourceText":  "Aufgebracht suchend / Fassungslos: Augen weit, Mund empört geöffnet; beide Hände seitlich geöffnet und leicht angehoben, als verlange die Figur eine Erklärung.",
+                                        "sourceParagraph":  200
+                                    },
+                                    {
+                                        "index":  8,
+                                        "position":  "Unten Mitte",
+                                        "emotion":  "Dramatisch resigniert / Überreizt",
+                                        "gesture":  "Kopf leicht zurückgeworfen oder zur Seite gedreht, Augen genervt halb geschlossen; eine Hand an der Stirn, die andere nach außen geworfen, als sei alles zu viel.",
+                                        "sourceText":  "Dramatisch resigniert / Überreizt: Kopf leicht zurückgeworfen oder zur Seite gedreht, Augen genervt halb geschlossen; eine Hand an der Stirn, die andere nach außen geworfen, als sei alles zu viel.",
+                                        "sourceParagraph":  201
+                                    },
+                                    {
+                                        "index":  9,
+                                        "position":  "Unten rechts",
+                                        "emotion":  "Kampfbereit aufgebracht / Konfrontativ",
+                                        "gesture":  "Oberkörper leicht vorgebeugt, harter Blick nach vorn; eine Faust geballt, die andere Hand fordernd ausgestreckt, als wäre die Figur bereit, den Streit sofort auszutragen.",
+                                        "sourceText":  "Kampfbereit aufgebracht / Konfrontativ: Oberkörper leicht vorgebeugt, harter Blick nach vorn; eine Faust geballt, die andere Hand fordernd ausgestreckt, als wäre die Figur bereit, den Streit sofort auszutragen.",
+                                        "sourceParagraph":  202
+                                    }
+                                ],
+                     "instructions":  [
+                                          "Orientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.",
+                                          "Alle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.",
+                                          "Besonders wichtig: Die thematische Grundstimmung des Sets muss klar spürbar sein, aber jede der neun Varianten braucht dennoch eine eigene emotionale Nuance. Variiere bewusst Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung, Blickrichtung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets."
+                                      ],
+                     "prompt":  "Set 13 | Aufgebrachte Reaktionen und Gestiken\nErstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:\nGenervt aufgebracht / Gereizt: Zusammengezogene Brauen, angespannter Mund; eine Hand abwinkend nach außen, die andere an der Hüfte, als habe die Figur endgültig genug.\nEntrüstet / Laut widersprechend: Offener Mund mitten im Gegenargument, funkelnder Blick; beide Hände energisch vor dem Oberkörper, die Handflächen nach außen und leicht auf sich selbst gerichtet.\nExplosiv wütend: Zähne gefletscht oder Mund weit geöffnet, Stirn stark angespannt; eine Faust hart vor der Brust, die andere Hand mit gespreizten Fingern aggressiv nach vorne gerichtet.\nEmpört verletzt / Aufgebracht enttäuscht: Schmerzlich angespannter Ausdruck; eine Hand auf der Brust, die andere offen nach außen, als könne die Figur nicht glauben, was gesagt oder getan wurde.\nBefehlend aufgebracht: Kalter strenger Blick, scharf geöffneter Mund; ein Arm energisch nach vorne ausgestreckt, Zeigefinger oder offene Hand dominant ausgerichtet, die andere Hand fest an der Hüfte.\nSarkastisch aufgebracht / Giftig: Schiefes, scharfes Lächeln mit gereizten Augen; eine Hand halb geöffnet in einer spitzen, abwertenden Geste, die andere locker, aber angespannt am Körper.\nAufgebracht suchend / Fassungslos: Augen weit, Mund empört geöffnet; beide Hände seitlich geöffnet und leicht angehoben, als verlange die Figur eine Erklärung.\nDramatisch resigniert / Überreizt: Kopf leicht zurückgeworfen oder zur Seite gedreht, Augen genervt halb geschlossen; eine Hand an der Stirn, die andere nach außen geworfen, als sei alles zu viel.\nKampfbereit aufgebracht / Konfrontativ: Oberkörper leicht vorgebeugt, harter Blick nach vorn; eine Faust geballt, die andere Hand fordernd ausgestreckt, als wäre die Figur bereit, den Streit sofort auszutragen.\nVerbindliche Vorgaben\nOrientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.\nAlle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.\nBesonders wichtig: Die thematische Grundstimmung des Sets muss klar spürbar sein, aber jede der neun Varianten braucht dennoch eine eigene emotionale Nuance. Variiere bewusst Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung, Blickrichtung und Oberkörperdrehung. Vermeide Wiederholungen früherer Sets.\n\n",
+                     "sourceParagraphStart":  192,
+                     "sourceParagraphEnd":  208
+                 },
+                 {
+                     "number":  14,
+                     "id":  "set-14",
+                     "title":  "Genervte, abwinkende und belehrende Reaktionen",
+                     "introduction":  "Erstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:",
+                     "panels":  [
+                                    {
+                                        "index":  1,
+                                        "position":  "Oben links",
+                                        "emotion":  "Genervt / Zum Himmel blickend",
+                                        "gesture":  "Kopf leicht nach hinten geneigt, Augen genervt nach oben gerichtet, Mund angespannt oder seufzend geöffnet; beide Hände fest an der Taille oder in die Hüften gestemmt. Die Haltung vermittelt deutliches inneres Augenrollen und gereizte Ungeduld.",
+                                        "sourceText":  "Genervt / Zum Himmel blickend: Kopf leicht nach hinten geneigt, Augen genervt nach oben gerichtet, Mund angespannt oder seufzend geöffnet; beide Hände fest an der Taille oder in die Hüften gestemmt. Die Haltung vermittelt deutliches inneres Augenrollen und gereizte Ungeduld.",
+                                        "sourceParagraph":  211
+                                    },
+                                    {
+                                        "index":  2,
+                                        "position":  "Oben Mitte",
+                                        "emotion":  "Abwinkend / Wegwerfend",
+                                        "gesture":  "Eine Hand führt eine klare seitliche Wegwischbewegung aus, die andere ruht an der Hüfte; halb geschlossene Augen und ein schiefer, missbilligender Mund. Die Figur wirkt, als wolle sie ein Thema sofort vom Tisch wischen.",
+                                        "sourceText":  "Abwinkend / Wegwerfend: Eine Hand führt eine klare seitliche Wegwischbewegung aus, die andere ruht an der Hüfte; halb geschlossene Augen und ein schiefer, missbilligender Mund. Die Figur wirkt, als wolle sie ein Thema sofort vom Tisch wischen.",
+                                        "sourceParagraph":  212
+                                    },
+                                    {
+                                        "index":  3,
+                                        "position":  "Oben rechts",
+                                        "emotion":  "Belehrend / Besserwisserisch",
+                                        "gesture":  "Ein Zeigefinger ist erhoben und leicht nach vorne geneigt, die andere Hand bleibt streng an der Hüfte; zusammengezogene Brauen und ein schmaler, bestimmender Mund. Die Figur wirkt, als würde sie jemanden mit Nachdruck korrigieren.",
+                                        "sourceText":  "Belehrend / Besserwisserisch: Ein Zeigefinger ist erhoben und leicht nach vorne geneigt, die andere Hand bleibt streng an der Hüfte; zusammengezogene Brauen und ein schmaler, bestimmender Mund. Die Figur wirkt, als würde sie jemanden mit Nachdruck korrigieren.",
+                                        "sourceParagraph":  213
+                                    },
+                                    {
+                                        "index":  4,
+                                        "position":  "Mitte links",
+                                        "emotion":  "Ungeduldig / Antreibend",
+                                        "gesture":  "Beide Hände vor dem Körper, eine in einer kurzen fordernden Vorwärtsbewegung, die andere offen unterstützend; vorgeneigter Oberkörper, drängender Blick. Die Figur scheint zu sagen: „Na los, jetzt komm endlich zum Punkt.“",
+                                        "sourceText":  "Ungeduldig / Antreibend: Beide Hände vor dem Körper, eine in einer kurzen fordernden Vorwärtsbewegung, die andere offen unterstützend; vorgeneigter Oberkörper, drängender Blick. Die Figur scheint zu sagen: „Na los, jetzt komm endlich zum Punkt.“",
+                                        "sourceParagraph":  214
+                                    },
+                                    {
+                                        "index":  5,
+                                        "position":  "Mitte Mitte",
+                                        "emotion":  "Missbilligend / Streng musternd",
+                                        "gesture":  "Arme verschränkt oder eine Hand hält den eigenen Unterarm, während der Kopf leicht zur Seite geneigt ist; eine Braue skeptisch angehoben, fester abschätziger Blick. Die Figur bewertet das Gegenüber sichtbar kritisch.",
+                                        "sourceText":  "Missbilligend / Streng musternd: Arme verschränkt oder eine Hand hält den eigenen Unterarm, während der Kopf leicht zur Seite geneigt ist; eine Braue skeptisch angehoben, fester abschätziger Blick. Die Figur bewertet das Gegenüber sichtbar kritisch.",
+                                        "sourceParagraph":  215
+                                    },
+                                    {
+                                        "index":  6,
+                                        "position":  "Mitte rechts",
+                                        "emotion":  "Herablassend genervt / Korrigierend",
+                                        "gesture":  "Eine Hand mit Daumen und Zeigefinger in einer kleinen präzisierenden Geste, die andere locker aber streng am Körper; leicht verzogener Mund und angespannter Blick. Die Figur wirkt, als müsse sie einen offensichtlichen Fehler widerwillig richtigstellen.",
+                                        "sourceText":  "Herablassend genervt / Korrigierend: Eine Hand mit Daumen und Zeigefinger in einer kleinen präzisierenden Geste, die andere locker aber streng am Körper; leicht verzogener Mund und angespannter Blick. Die Figur wirkt, als müsse sie einen offensichtlichen Fehler widerwillig richtigstellen.",
+                                        "sourceParagraph":  216
+                                    },
+                                    {
+                                        "index":  7,
+                                        "position":  "Unten links",
+                                        "emotion":  "Einhalt gebietend / Genug jetzt",
+                                        "gesture":  "Eine Hand ist mit senkrechter Handfläche klar nach vorne gestreckt, die andere bleibt tief am Körper oder an der Hüfte; strenger Blick und angespannter Kiefer. Die Figur setzt unmissverständlich eine Grenze.",
+                                        "sourceText":  "Einhalt gebietend / Genug jetzt: Eine Hand ist mit senkrechter Handfläche klar nach vorne gestreckt, die andere bleibt tief am Körper oder an der Hüfte; strenger Blick und angespannter Kiefer. Die Figur setzt unmissverständlich eine Grenze.",
+                                        "sourceParagraph":  217
+                                    },
+                                    {
+                                        "index":  8,
+                                        "position":  "Unten Mitte",
+                                        "emotion":  "Vorwurfsvoll / Tadelnd",
+                                        "gesture":  "Ein Arm zeigt deutlich auf das Gegenüber, die andere Hand liegt an der Hüfte; zusammengezogene Brauen, leicht geöffneter Mund mitten im Tadel. Die Figur wirkt konfrontativ und vorwurfsvoll, ohne in blanke Wut zu kippen.",
+                                        "sourceText":  "Vorwurfsvoll / Tadelnd: Ein Arm zeigt deutlich auf das Gegenüber, die andere Hand liegt an der Hüfte; zusammengezogene Brauen, leicht geöffneter Mund mitten im Tadel. Die Figur wirkt konfrontativ und vorwurfsvoll, ohne in blanke Wut zu kippen.",
+                                        "sourceParagraph":  218
+                                    },
+                                    {
+                                        "index":  9,
+                                        "position":  "Unten rechts",
+                                        "emotion":  "Erschöpft genervt / Seufzend resigniert",
+                                        "gesture":  "Eine Hand an der Stirn oder Schläfe, die andere abwinkend oder locker geöffnet nach außen; Schultern minimal abgesunken, Augen genervt halb geschlossen. Die Figur scheint innerlich zu denken: „Ich kann das gerade wirklich nicht fassen.“",
+                                        "sourceText":  "Erschöpft genervt / Seufzend resigniert: Eine Hand an der Stirn oder Schläfe, die andere abwinkend oder locker geöffnet nach außen; Schultern minimal abgesunken, Augen genervt halb geschlossen. Die Figur scheint innerlich zu denken: „Ich kann das gerade wirklich nicht fassen.“",
+                                        "sourceParagraph":  219
+                                    }
+                                ],
+                     "instructions":  [
+                                          "Orientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.",
+                                          "Alle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.",
+                                          "Besonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung, Blickrichtung und Oberkörperdrehung. Der Schwerpunkt dieses Sets liegt auf genervten, abweisenden, korrigierenden und tadelnden Reaktionen. Vermeide Wiederholungen früherer Sets."
+                                      ],
+                     "prompt":  "Set 14 | Genervte, abwinkende und belehrende Reaktionen\nErstelle anhand der bereitgestellten Originalabbildung ein neues Avatarset mit neun gleich großen Feldern im 3×3-Raster. Das gesamte Set hat ein quadratisches Seitenverhältnis von 1:1. Zeige in jedem Feld dieselbe Figur stehend, mit genügend Platz für Arme, Hände und Gestik. Die neun Varianten lauten:\nGenervt / Zum Himmel blickend: Kopf leicht nach hinten geneigt, Augen genervt nach oben gerichtet, Mund angespannt oder seufzend geöffnet; beide Hände fest an der Taille oder in die Hüften gestemmt. Die Haltung vermittelt deutliches inneres Augenrollen und gereizte Ungeduld.\nAbwinkend / Wegwerfend: Eine Hand führt eine klare seitliche Wegwischbewegung aus, die andere ruht an der Hüfte; halb geschlossene Augen und ein schiefer, missbilligender Mund. Die Figur wirkt, als wolle sie ein Thema sofort vom Tisch wischen.\nBelehrend / Besserwisserisch: Ein Zeigefinger ist erhoben und leicht nach vorne geneigt, die andere Hand bleibt streng an der Hüfte; zusammengezogene Brauen und ein schmaler, bestimmender Mund. Die Figur wirkt, als würde sie jemanden mit Nachdruck korrigieren.\nUngeduldig / Antreibend: Beide Hände vor dem Körper, eine in einer kurzen fordernden Vorwärtsbewegung, die andere offen unterstützend; vorgeneigter Oberkörper, drängender Blick. Die Figur scheint zu sagen: „Na los, jetzt komm endlich zum Punkt.“\nMissbilligend / Streng musternd: Arme verschränkt oder eine Hand hält den eigenen Unterarm, während der Kopf leicht zur Seite geneigt ist; eine Braue skeptisch angehoben, fester abschätziger Blick. Die Figur bewertet das Gegenüber sichtbar kritisch.\nHerablassend genervt / Korrigierend: Eine Hand mit Daumen und Zeigefinger in einer kleinen präzisierenden Geste, die andere locker aber streng am Körper; leicht verzogener Mund und angespannter Blick. Die Figur wirkt, als müsse sie einen offensichtlichen Fehler widerwillig richtigstellen.\nEinhalt gebietend / Genug jetzt: Eine Hand ist mit senkrechter Handfläche klar nach vorne gestreckt, die andere bleibt tief am Körper oder an der Hüfte; strenger Blick und angespannter Kiefer. Die Figur setzt unmissverständlich eine Grenze.\nVorwurfsvoll / Tadelnd: Ein Arm zeigt deutlich auf das Gegenüber, die andere Hand liegt an der Hüfte; zusammengezogene Brauen, leicht geöffneter Mund mitten im Tadel. Die Figur wirkt konfrontativ und vorwurfsvoll, ohne in blanke Wut zu kippen.\nErschöpft genervt / Seufzend resigniert: Eine Hand an der Stirn oder Schläfe, die andere abwinkend oder locker geöffnet nach außen; Schultern minimal abgesunken, Augen genervt halb geschlossen. Die Figur scheint innerlich zu denken: „Ich kann das gerade wirklich nicht fassen.“\nVerbindliche Vorgaben\nOrientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.\nAlle neun Felder: identischer Hintergrund, gleiche Beleuchtung, gleiche Figur und einheitlicher Bildausschnitt. Stehende Haltung, beide Hände frei zum Gestikulieren, Arme und Hände vollständig sichtbar, anatomisch korrekte Finger. Keine Waffen, Gegenstände, Schriftzeichen oder Nummern im Bild. Jede Gestik muss auf den ersten Blick erkennbar sein und sich von den anderen Varianten unterscheiden.\nBesonders wichtig: Die Körpersprache steht im Mittelpunkt. Unterscheide Armhöhe, Handflächenrichtung, Fingerstellung, Schulterhaltung, Blickrichtung und Oberkörperdrehung. Der Schwerpunkt dieses Sets liegt auf genervten, abweisenden, korrigierenden und tadelnden Reaktionen. Vermeide Wiederholungen früherer Sets.",
+                     "sourceParagraphStart":  209,
+                     "sourceParagraphEnd":  223
+                 }
+             ]
+}

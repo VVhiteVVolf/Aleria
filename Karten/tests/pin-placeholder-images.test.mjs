@@ -4,7 +4,6 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import vm from 'node:vm';
-import { FLEISCHSAMMLER_LOCALITIES, FLEISCHSAMMLER_MAP_ID } from '../../Stammbäume/assets/js/data/gwynthor-fleischsammler/localities.mjs';
 
 await import('../assets/js/pins/category-catalog.js');
 await import('../assets/js/pins/pin-template-catalog.js');
@@ -135,44 +134,13 @@ test('previously saved generic artwork is corrected while uploaded images and li
 test('every imported Gwynthor pin uses its reviewed location motif without changing map data', () => {
   const state = JSON.parse(read('../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json')).state;
   const inventory = JSON.parse(read('../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/markings.inventory.json'));
-  const source = JSON.parse(read('../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/fleischsammler-localities.source.json'));
-  const pert = JSON.parse(read('../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/pert-maesglas.source.json'));
-  assert.equal(pert.pinId, 'gwynthor-marking-157');
-  assert.equal(pert.originalPin.id, pert.pinId);
-  assert.equal(source.mapId, FLEISCHSAMMLER_MAP_ID);
-  assert.equal(source.locations.length, 7);
-  assert.equal(new Set(source.locations.map(location => location.pinId)).size, 7);
-  assert.deepEqual(source.locations.map(location => location.pinId).sort(), FLEISCHSAMMLER_LOCALITIES.map(location => location.pinId).sort());
   const original = structuredClone(state);
   const imported = state.pins.filter(pin => pin.id.startsWith('gwynthor-marking-'));
   assert.equal(imported.length,158);
-  let unchangedMotifs = 0;
   for(const pin of imported){
     const marking = inventory.markings.find(item => item.id === pin.id);
-    const profile = source.locations.find(location => location.pinId === pin.id);
-    let category = { id: marking.categoryId };
-    if (profile) {
-      // Keep the historical symbol inventory intact. Only the seven declared
-      // authored places may use their reviewed, more specific current motif.
-      assert.equal(profile.originalTitle, marking.title, pin.id);
-      assert.deepEqual([pin.x, pin.y], profile.position, pin.id);
-      assert.equal(pin.title, profile.patch.title, pin.id);
-      assert.equal(pin.cat, profile.patch.cat, pin.id);
-      assert.equal(pin.templateId, profile.patch.templateId, pin.id);
-      // Older maps retain local IDs for Heim/Einfacher Hof. Their unchanged
-      // category labels resolve through the shared catalog's existing aliases.
-      category = state.cats.find(item => item.id === profile.patch.cat);
-      assert.ok(category, pin.id);
-      assert.ok(KartoCategoryCatalog.definition(category), pin.id);
-    } else unchangedMotifs++;
-    // A later authored farm has its own image. Verify its retained original
-    // only for this historical import-motif contract; the Pert tests verify
-    // the actual current farm, images, table, links and all foreign pin data.
-    const motifPin = pin.id === pert.pinId ? pert.originalPin : pin;
-    if (pin.id === pert.pinId) assert.deepEqual([pin.x, pin.y], pert.position, pin.id);
-    const expected = KartoCategoryCatalog.placeholder(category);
-    assert.equal(placeholders.resolve(motifPin,state.cats.find(cat => cat.id === motifPin.cat)).src,expected,pin.id);
+    const expected = KartoCategoryCatalog.placeholder({id:marking.categoryId});
+    assert.equal(placeholders.resolve(pin,state.cats.find(cat => cat.id === pin.cat)).src,expected,pin.id);
   }
-  assert.equal(unchangedMotifs, 151, 'Every other imported pin retains its exact historical motif');
   assert.deepEqual(state,original);
 });

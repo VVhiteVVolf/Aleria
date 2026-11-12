@@ -128,6 +128,11 @@ function gwynthorCommonerProfile() {
 }
 
 export const GWYNTHOR_COMMONER_HOUSE_PROFILES = Object.freeze({
+  brandyddyn: gwynthorCommonerProfile(),
+  curiad: gwynthorCommonerProfile(),
+  caelrith: gwynthorCommonerProfile(),
+  myrgath: gwynthorCommonerProfile(),
+  aelgorn: gwynthorCommonerProfile(),
   trevoryn: gwynthorCommonerProfile(),
   svathamar: gwynthorCommonerProfile(),
   dubhdarach: gwynthorCommonerProfile(),

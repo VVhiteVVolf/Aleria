@@ -111,6 +111,45 @@ test('Firestore map ordering and old sync receipts do not create conflicts', asy
   assert.equal(saved.length, 0);
 });
 
+test('cross-tab cache comparison ignores sync timing and map order but retains real content and schema changes', () => {
+  const { context } = syncContext();
+  const compare = (first, second) => context.areModuleStoreLocalRecordsEquivalent('module-store', JSON.stringify(first), JSON.stringify(second));
+  const first = { ...store(100, 'Gemeinsamer Stand'), moduleNodeAssignments: { z: 'root', a: 'root' } };
+  const second = { ...clone(first), version: 1, updatedAtClient: 200, moduleNodeAssignments: { a: 'root', z: 'root' } };
+  assert.equal(compare(first, second), true);
+  assert.equal(compare(first, store(200, 'Eigener Entwurf')), false);
+  assert.equal(compare(second, { ...second, version: 2 }), false);
+  assert.equal(compare({ ...first, version: 2 }, { ...second, version: 2 }), false);
+  assert.equal(compare({ ...first, version: '1' }, second), false);
+  assert.equal(compare({ ...first, futureMetadata: 'keep' }, { ...second, futureMetadata: 'changed' }), false);
+  const extraEntryField = clone(first);
+  extraEntryField.customSections[0].entries[0].futureField = 'Unbekannte Bearbeitung erhalten';
+  assert.equal(compare(first, extraEntryField), false);
+  assert.equal(compare(null, {}), false);
+  assert.equal(compare([], {}), false);
+  assert.equal(context.areModuleStoreLocalRecordsEquivalent('module-store', 'broken', '{}'), false);
+  assert.equal(context.areModuleStoreLocalRecordsEquivalent('unrelated', JSON.stringify(first), JSON.stringify(second)), false);
+  const ordered = { ...first, customSections: [{ key: 'Ort', entries: [{ id: 'a' }, { id: 'b' }] }] };
+  const reordered = clone(ordered);
+  reordered.customSections[0].entries.reverse();
+  assert.equal(compare(ordered, reordered), false);
+});
+
+test('cross-tab sync receipts match only the same valid acknowledgement regardless of its timestamp', () => {
+  const { context } = syncContext();
+  const compare = (first, second) => context.areModuleStoreLocalRecordsEquivalent('sync-meta', JSON.stringify(first), JSON.stringify(second));
+  const first = { signature: `sha256:${'a'.repeat(64)}`, syncedAt: 10, updatedAtClient: 100 };
+  const second = { ...first, syncedAt: 20, updatedAtClient: 200 };
+  assert.equal(compare(first, second), true);
+  assert.equal(compare(first, { ...second, signature: `sha256:${'b'.repeat(64)}` }), false);
+  assert.equal(compare({ syncedAt: 10 }, { syncedAt: 20 }), false);
+  for (const signature of ['', 'broken', 'sha256:abc', 'null', '[]', '{"version":2}']) {
+    assert.equal(compare({ signature, syncedAt: 10 }, { signature, syncedAt: 20 }), false);
+  }
+  const legacy = JSON.stringify(store(100, 'Alter bestätigter Stand'));
+  assert.equal(compare({ signature: legacy, syncedAt: 10 }, { signature: legacy, syncedAt: 20 }), true);
+});
+
 test('hidden modules participate in sync state even without custom modules', async () => {
   const { context } = syncContext();
   const before = {};

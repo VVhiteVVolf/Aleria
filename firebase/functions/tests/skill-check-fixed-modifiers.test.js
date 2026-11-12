@@ -18,7 +18,8 @@ for (const injected of [-99, 99]) for (const skillId of ['perception', 'save:wis
       data: { entryId: 'scene', text: event.title, metadata: { herausforderung: event } } }, { database: db, now: 100 });
     const kind = skillId.startsWith('save:') ? 'interact' : 'thought';
     const response = await commitSkillCommentOperation({ auth: { uid: 'player', token: { aleriaRole: 'player' } }, data: {
-      entryId: 'scene', charName: 'Ylva', text: 'Ich beobachte ihn.', metadata: { characterId: actorId, commentSegments: [{
+      entryId: 'scene', charName: 'Ylva', text: 'Ich beobachte ihn.', metadata: { characterId: actorId,
+      sceneStartDateAleria: { year: 1740, month: 3, day: 9 }, commentSegments: [{
         kind, commentKind: kind, mechanicMode: 'skill', skillId, skillCustomModifier: injected,
         skillTargetChallengeId: `herausforderung:${created.id}:observe`, text: 'Ich beobachte ihn.',
         skillResolution: { resolutionId: 'forged', actorId, actorPersistence: { kind: 'character', recordId: actorId },
@@ -31,6 +32,7 @@ for (const injected of [-99, 99]) for (const skillId of ['perception', 'save:wis
     assert.equal(result.profileModifier, skillId === 'perception' ? 4 : 2);
     assert.equal(result.total, 10 + result.profileModifier);
     assert.equal(result.outcome, 'failure');
+    assert.deepEqual(db.data.get(`comments/${response.id}`).sceneStartDateAleria, { year: 1740, month: 3, day: 9 });
     assert.equal(db.data.get('characters/' + actorId).combatProfile.hitPoints.current, 40);
   });
 }

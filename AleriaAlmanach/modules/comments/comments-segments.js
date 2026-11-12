@@ -1,4 +1,4 @@
-function renderCommentSegmentList() {
+﻿function renderCommentSegmentList() {
   const list = document.getElementById('cf-segment-list');
   if (!list) return;
   if (!_commentSegments.length) _commentSegments = [makeCommentSegment('speech')];
@@ -21,6 +21,7 @@ function renderCommentSegmentList() {
         ${getSegmentSideControl(segment, false)}
         ${getCommentLanguageControls(segment, false)}
         ${getCommentSegmentImageSetPicker(segment, false)}
+        ${segment.kind === 'foreignvoice' ? getCommentForeignVoiceControls(segment, false) : ''}
         ${canUseEmote ? getSegmentEmotePalette(segment, false) : ''}
         ${segment.kind === 'action' ? '<div class="comment-segment-note">Handlungen werden als Erzähler-Abschnitt ausgegeben.</div>' : ''}
         ${segment.kind === 'secretaction' ? '<div class="comment-segment-note">Erscheint anonym mit Silhouette statt Portrait und Name.</div>' : ''}
@@ -75,6 +76,9 @@ function setCommentSegmentKind(id, kind) {
   if (!getAllowedCommentSegmentKinds(false).includes(kind)) kind = 'action';
   if (!isCommentSegmentKindAllowedForMechanicMode(segment, kind, false)) return;
   segment.kind = normalizeCommentKind(kind);
+  if (segment.kind === 'foreignvoice') {
+    Object.assign(segment, AleriaCommentForeignVoice.normalize(segment), { emoteIndex: null, imageSetId: '', actorId: '' });
+  }
   if (segment.kind !== 'performance') {
     segment.skillChallengeEnabled = false;
   }
@@ -118,7 +122,7 @@ function setCommentSegmentText(id, value) {
 function setCommentSegmentActor(id, actorId) {
   const segment = _commentSegments.find(item => item.id === id);
   const actor = window.AleriaCommentSceneCast?.getActor?.(actorId, false);
-  if (!segment || !actor) return;
+  if (!segment || !actor || segment.kind === 'foreignvoice' || _commentMode === 'narrator') return;
   segment.actorId = actor.id;
   segment.emoteIndex = null;
   segment.combatActionId = '';
@@ -258,6 +262,8 @@ function buildCommentSegmentsForSave() {
     .filter(segment => segment.text || segment.kind === 'sceneitem')
     .map(segment => {
       if (_commentMode === 'narrator' && segment.kind === 'sceneitem') return window.AleriaSceneItems.serializeSegment(segment);
+      if (segment.kind === 'foreignvoice') return buildCommentForeignVoiceSegment(segment);
+      if (_commentMode === 'narrator' && segment.kind === 'secretaction') return buildCommentNarratorSecretActionSegment(segment);
       if (_commentMode === 'narrator' || segment.kind === 'action') {
         return {
           clientSegmentId: segment.id,

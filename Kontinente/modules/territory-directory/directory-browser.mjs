@@ -1,10 +1,12 @@
 import { element } from './directory-elements.mjs?v=panels-20260911a';
+import { mountDirectoryView } from './directory-view.mjs?v=20261112a';
 
 // Filtering belongs to one rendered register. No document listeners or saved state.
 export function directoryState(root) {
   return {
     query: root?.querySelector('[data-directory-query]')?.value || '',
     group: root?.querySelector('[data-directory-group]')?.value || '',
+    view: root?.dataset.directoryViewPreference || '',
   };
 }
 
@@ -15,13 +17,13 @@ export function mountDirectoryBrowser(root, { kind = 'houses', state = {} } = {}
     node, section,
     search: normalize(`${section.dataset.directorySection} ${node.textContent}`),
   })));
-  // Small registers remain simple lists; controls earn their space in longer ones.
-  if (entries.length < 8) return;
+  if (!entries.length || (kind === 'places' && entries.length < 8)) return;
+  const searchable = entries.length >= 8;
 
   const noun = kind === 'places' ? ['Ort', 'Orte'] : ['Haus', 'Häuser'];
   const toolbar = element('div', 'directory-toolbar');
-  toolbar.setAttribute('role', 'search');
-  toolbar.setAttribute('aria-label', `${noun[1]} im Register filtern`);
+  toolbar.setAttribute('role', searchable ? 'search' : 'group');
+  toolbar.setAttribute('aria-label', `${noun[1]} im Register`);
   toolbar.dataset.kontinenteGeneratedView = '';
   const searchLabel = element('label', 'directory-search');
   searchLabel.append(element('span', 'directory-control-label', `${noun[1]} durchsuchen`));
@@ -29,12 +31,12 @@ export function mountDirectoryBrowser(root, { kind = 'houses', state = {} } = {}
   input.type = 'search';
   input.dataset.directoryQuery = '';
   input.placeholder = kind === 'places' ? 'Name oder Einordnung …' : 'Name, Sitz, Lehnsherr oder Rang …';
-  input.value = state.query || '';
+  input.value = searchable ? state.query || '' : '';
   searchLabel.append(input);
-  toolbar.append(searchLabel);
+  if (searchable) toolbar.append(searchLabel);
 
   let select;
-  if (sections.length > 1) {
+  if (searchable && sections.length > 1) {
     const groupLabel = element('label', 'directory-group-filter');
     groupLabel.append(element('span', 'directory-control-label', 'Gruppe'));
     select = element('select');
@@ -55,6 +57,7 @@ export function mountDirectoryBrowser(root, { kind = 'houses', state = {} } = {}
   reset.type = 'button';
   reset.dataset.action = 'reset-directory';
   toolbar.append(status, reset);
+  if (kind === 'houses') mountDirectoryView(root, toolbar, entries.length, state.view);
   const empty = element('p', 'directory-empty', 'Keine passenden Einträge. Passe die Suche oder die Gruppe an.');
   empty.hidden = true;
   empty.dataset.kontinenteGeneratedView = '';

@@ -109,11 +109,11 @@
     createActors.push(actor);
     if (Array.isArray(global._commentSegments)) {
       global._commentSegments.forEach(segment => {
-        if (segment.kind !== 'action' && !segment.actorId) segment.actorId = actor.id;
+        if (!['action', 'foreignvoice'].includes(segment.kind) && !segment.actorId) segment.actorId = actor.id;
       });
     } else if (typeof _commentSegments !== 'undefined' && Array.isArray(_commentSegments)) {
       _commentSegments.forEach(segment => {
-        if (segment.kind !== 'action' && !segment.actorId) segment.actorId = actor.id;
+        if (!['action', 'foreignvoice'].includes(segment.kind) && !segment.actorId) segment.actorId = actor.id;
       });
     }
     notifyChange();

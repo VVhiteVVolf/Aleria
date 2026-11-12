@@ -1,3 +1,4 @@
+import { HOUSE_AURDDEN_FAMILY } from './house-aurdden-family.js?v=20261109-aurdden-v1';
 import { HOUSE_FFALS_FAMILY } from './house-ffals-family.js?v=20261109-ffals-real-v1';
 import { HOUSE_GWNIWR_FAMILY } from './house-gwniwr-family.js';
 import { HOUSE_DRAIG_FAMILY } from './house-draig-family.js?v=20261104-lore-fixes-v1';
@@ -176,6 +177,7 @@ function familyRecord({ id, title, family, type = 'dynasty', listing = 'listed',
 }
 
 export const FAMILY_REGISTRY = Object.freeze([
+  familyRecord({ id: 'haus-aurdden', title: 'Familie Aurdden', family: HOUSE_AURDDEN_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'haus-ffals', title: 'Familie Ffals', family: HOUSE_FFALS_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'gwniwr', title: 'Familie Gwniwr', family: HOUSE_GWNIWR_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'pert', title: 'Familie Pert', family: HOUSE_PERT_FAMILY, type: 'commoner' }),

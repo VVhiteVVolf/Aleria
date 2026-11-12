@@ -91,6 +91,7 @@ async function verifyEditCode() {
         segment.language || segment.spellFont,
         segment.languageColor,
         {
+          ...((segment.commentKind || segment.kind) === 'foreignvoice' ? AleriaCommentForeignVoice.normalize(segment) : {}),
           imageSetId: segment.imageSetId || data.imageSetId || '',
           mechanicMode: segment.mechanicMode,
           skillId: segment.skillId || segment.skillResolution?.skillId,
@@ -132,7 +133,9 @@ async function verifyEditCode() {
         }
       ));
     } else {
-      _editCommentSegments = [makeCommentSegment(data.commentKind || 'speech', data.text || '', Number.isInteger(data.emoteIndex) ? data.emoteIndex : null)];
+      _editCommentSegments = [makeCommentSegment(data.commentKind || 'speech', data.text || '', Number.isInteger(data.emoteIndex) ? data.emoteIndex : null,
+        data.side || 'left', data.durationSeconds, data.language, data.languageColor,
+        data.commentKind === 'foreignvoice' ? AleriaCommentForeignVoice.normalize(data) : {})];
     }
     // Set mode. Creature metadata is persisted independently from the display name,
     // so duplicated or renamed instances still reopen in the correct picker.

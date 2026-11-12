@@ -26,6 +26,8 @@ Archiv/Quellen/kuestenchroniken-2026-10-24/*.html -text whitespace=-blank-at-eol
 # Generated Bestiarium bundle preserves upstream CSS template-literal whitespace.
 AleriaAlmanach/DokumentenWerkstatt/assets/book-reader.bundle.js linguist-generated whitespace=-blank-at-eol
 # House import manifests also verify the exact original HTML bytes.
+# Preserve the complete recorded prompts and receipts, including their final blank line.
+AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/** -text whitespace=-blank-at-eof,cr-at-eol
 "Familien Häuser und Clans/**/animexx-*.html" -text whitespace=-blank-at-eol
 # Exact pre-amendment religion documents are preserved as historical source bytes.
 Vorschau/Klythesia/sources/religion-before-20261104/eintrag.json -text whitespace=-blank-at-eol

@@ -39,6 +39,7 @@ import {
 } from './family-chart-parentage-group.js';
 import { createFamilyChartPersonAppearancePlan } from './family-chart-person-appearance-router.js';
 import { createFamilyChartAppearanceLayout } from './family-chart-appearance-layout.js';
+import { applyUnpartneredParentLayoutPairs } from './family-chart-parentage-layout.js';
 import { completeFamilyChartPartnerTraversal } from './family-chart-partner-traversal.js';
 import {
   insertTimeJumpAsSerialBarrier,
@@ -988,6 +989,12 @@ export function toFamilyChartData(input, options = {}) {
       }));
     }
   });
+
+  diagnostics.push(...applyUnpartneredParentLayoutPairs({
+    parentages: [...selectedParentageByChild.values()], chartById, pairMetadata, pairKey,
+    parentageColor: type => relationColor(family, type),
+    resolvePersonId: (personId, partnershipId) => appearancePlan.resolveParticipantId(personId, partnershipId)
+  }));
 
   applyLineageStructure({ family, chartById, selectedParentageByChild, parentageLines, houseById, personById });
   applyCadetBranches({

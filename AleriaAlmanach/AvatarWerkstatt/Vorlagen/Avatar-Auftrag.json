@@ -1,12 +1,35 @@
 {
-  "version": 1,
+  "version": 4,
   "characterName": "[CHARAKTERNAME]",
   "characterFolder": "Charaktere/Einzelcharaktere/[CHARAKTERNAME]",
   "setId": "set-01",
+  "promptSetCatalog": "Anleitungen/avatar-prompt-sets-23.json",
+  "promptSetCatalogId": "avatar-prompts-23-sets-20261112",
+  "promptSetSourceDocument": "Anleitungen/Avatar_Prompts_23_Sets.docx",
+  "promptSetNumber": 1,
+  "promptSetSourceSha256": "facb4defa9d49c546656136eaf824297d557d3a737990949ed4492430dd3e982",
+  "allowsProps": false,
+  "allowedProps": [],
+  "propPolicy": {
+    "default": "Sets 1 bis 18 verwenden freie Hände ohne Requisiten.",
+    "allowedSetNumbers": [19, 20, 21, 22, 23],
+    "metadataRule": "Für Sets 19 bis 23 allowsProps, allowedProps, scope und instructions ausdrücklich aus dem gewählten Eintrag des aktiven Katalogs übernehmen. Erlaubt sind ausschließlich die im jeweiligen Panel genannten Gegenstände oder Umgebungselemente; keine Requisiten der übrigen Panels hinzufügen. Pauschale ältere Freihand- und Gegenstandsverbote dafür ersetzen, nicht zusätzlich beibehalten.",
+    "textRule": "Keine lesbaren Wörter, Buchstabenfolgen, Ziffern, Bildbeschriftungen oder Nummerierungen. Papier in Set 19 darf wenige abstrakte unlesbare Striche tragen; Würfelaugen in Set 20 sind Punkte, keine Ziffern.",
+    "referenceRule": "Die Laterne in Set 20 bleibt unbeleuchtet. Keine moderne Technik, Tische, zusätzlichen Personen oder zusätzlichen Hände. Referenzkleidung, Handschuhe, Rüstung und Hintergrund erhalten, soweit das gewählte Set keine eng begrenzte ausdrückliche Ausnahme enthält. Identität, Alter, Frisur, Zeichenstil und Beleuchtung bleiben erhalten.",
+    "canonRule": "Die Requisiten sind reine Bildmittel; keine Inventarvergabe oder neue Berufs- und Biografiefestlegung."
+  },
+  "setOverridePolicy": {
+    "setNumbers": [21, 22, 23],
+    "metadataFields": ["posePolicy", "framingPolicy", "clothingPolicy", "settingPolicy", "requiredInputs"],
+    "rule": "Für Sets 21 bis 23 die vorhandenen genannten Metadaten und sämtliche Zusatzvorgaben aus dem aktiven Seteintrag übernehmen. Nur die ausdrücklich pro Panel erlaubte Abweichung ersetzt die entsprechende ältere Masterregel; alle übrigen Regeln behalten ihre Gültigkeit.",
+    "set21": "Genau drei Schlaf-, drei Ohnmachts- und drei wache Unpässlichkeitsansichten, liegender Oberkörper. Kleidung, Rüstung und Handschuhe bleiben angelegt; nur genannte Bett-, Kissen- oder Bodenfläche, keine erfundene Verletzung, Diagnose oder Todesdarstellung.",
+    "set22": "Genau drei defensive, drei offensive und drei ausweichende Einzelposen mit genau einer bereits vereinbarten Waffe je Panel. Bestehende Vereinbarung ohne erneute Freigabe nutzen. Griff aus Referenz oder Auftrag bestimmen; vorhandenes Waffenbild ansehen, alternativ konkrete vereinbarte Beschreibung. Nur bei fehlenden erforderlichen Angaben oder ungeeigneter Haltung rückfragen. Vorher einheitlich weiten Ausschnitt mindestens Kopf bis Hüfte, bei Langwaffen gegebenenfalls Ganzkörper wählen; Hände, Griff und Waffenform prüfen.",
+    "set23": "Nur ausdrücklich erwachsene Referenzfiguren, keine bloße Altersschätzung. Alle neun wach, aktiv und selbstbestimmt: drei Bettliegeansichten, drei sitzende und drei leichte Vorneigungen mit gespitzten Lippen. Nur hier Kleidung im engen sichtbaren Ausschnitt weglassen; Gesicht, Hals, Schultern und höchstens oberer Brustansatz, Schnitt oberhalb jeder Brustwarze. Keine vollständigen Brüste, Brustunterseite, Intimbereiche, Unterkörper, expliziten Handlungen oder zweite Person. Keine Schlaf- oder Ohnmachtszustände übernehmen."
+  },
   "outputFolder": "Output",
   "referenceImage": "[RELATIVER PFAD ZUM VERBINDLICHEN PORTRÄT]",
   "characterDescription": "[IDENTITÄT, KLEIDUNG, FARBEN UND BESONDERHEITEN]",
-  "theme": "Allgemeine Reaktionen",
+  "theme": "Grundemotionen und Mimik",
   "promptTemplate": "Anleitungen/Lesefassungen/Charakter-Emotionssheet Master Prompt.txt",
   "sheet": {
     "aspectRatio": "1:1",
@@ -48,7 +71,7 @@
       "index": 6,
       "position": "Mitte rechts",
       "emotion": "Genervt / Missbilligend",
-      "gesture": "Halb geschlossene Augen, angespannter Mund, eine Hand abwinkend oder an der Hüfte."
+      "gesture": "Halb geschlossene Augen, angespannter Mund, eine Hand abwinkend oder demonstrativ an der Hüfte."
     },
     {
       "index": 7,
@@ -66,7 +89,7 @@
       "index": 9,
       "position": "Unten rechts",
       "emotion": "Unsicher / Keine Ahnung",
-      "gesture": "Leicht schiefer Gesichtsausdruck, beide Hände im Shrug geöffnet, Schultern hochgezogen."
+      "gesture": "Leicht schiefer Gesichtsausdruck, beide Hände in einem klaren Schulterzucken geöffnet, Schultern hochgezogen."
     }
   ],
   "splitter": {

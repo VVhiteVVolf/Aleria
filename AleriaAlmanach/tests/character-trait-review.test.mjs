@@ -174,36 +174,7 @@ test('frozen biography sources preserve prose, relations, mentors, history and s
     assert.deepEqual(projectExactBiographyTraitLeaves(entry), expected, oldEntry.name);
   }
   assert.equal(replaced, 5);
-  // The frozen 2 November population remains fully protected above. This
-  // release additionally admits exactly four independently authored Argall
-  // biographies; their source records are checked without altering that archive.
-  const publicArgallIds = [
-    'person--haus-argall--rhydric-argall', 'person--haus-argall--perwyn-argall',
-    'person--family-tree--gwenella-spouse-rhydric-argall', 'person--family-tree--maelor-ffionydd'
-  ];
-  const additions = current.entries.filter(entry => !original.entries.some(old => old.key === entry.key));
-  assert.deepEqual(additions.map(entry => entry.key).sort(), [...publicArgallIds].sort());
-  assert.equal(current.entries.length, original.entries.length + publicArgallIds.length);
-  const publicSnapshot = await json('CharakterDatenbank/generated/characters.snapshot.json');
-  const withoutParagraphWrapper = value => {
-    if (typeof value === 'string') return value.replace(/^<p>([^<>]*)<\/p>$/, '$1');
-    if (Array.isArray(value)) return value.map(withoutParagraphWrapper);
-    if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, withoutParagraphWrapper(item)]));
-    return value;
-  };
-  for (const entry of additions) {
-    assert.deepEqual(entry.characterIds, [entry.key]);
-    assert.equal(entry.source, 'CharakterDatenbank/generated/characters.snapshot.json');
-    const expectedBiography = structuredClone(publicSnapshot.characters.find(person => person.id === entry.key).biography);
-    if (entry.key === 'person--haus-argall--perwyn-argall') {
-      expectedBiography.biography.knightMentors = [{
-        name: 'Rhydric Argall', role: 'Rittervater',
-        detail: 'Sein Vater; Perwyn dient ihm gegenwärtig als Knappe.',
-        image: '/AleriaAlmanach/assets/fleischsammler-argall/portraits/rhydric-argall.png'
-      }];
-    }
-    assert.deepEqual(withoutParagraphWrapper(entry.biography), expectedBiography);
-  }
+  assert.equal(current.entries.length, original.entries.length);
   const { GAIS_WYRM_BIOGRAPHY } = await import('../../Stammbäume/assets/js/data/person-biographies/gais-wyrm.js');
   const { GAWAIN_PUBLIC_BIOGRAPHY } = await import('../modules/gawain-duncan/gawain-public-biography.mjs');
   assert.deepEqual(reviseDevelopmentTraitBiographyCards(GAIS_WYRM_BIOGRAPHY.biography.abilities), reviewedBiographyTraitCards(assignment('Gais Wyrm').id));

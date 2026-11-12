@@ -5,6 +5,7 @@ import { isTrustedSceneContributionComment, sortSceneHistory } from '../mechanic
 import { nextMechanicalCommentOrderKey } from '../mechanics/mechanical-comment-order.js';
 import { prepareCriticalCommentLifecycle, persistCriticalHitPointUpdates } from '../mechanics/critical-comment-lifecycle.js';
 import { containsPersistentMechanics, containsImmutableAuditMechanics } from '../mechanics/mechanical-comment-payload.js';
+import { normalizeCommentSceneStartDate } from './comment-scene-date.js';
 
 const MAX_COMMENT_BYTES = 700_000;
 
@@ -59,6 +60,7 @@ export function buildNarrativeCommentDocument(payload, entryId, request, now) {
     moduleInsertJson: clean(metadata.moduleInsertJson, 500000),
     documentAttachment: metadata.documentAttachment && typeof metadata.documentAttachment === 'object' ? metadata.documentAttachment : null,
     sceneTimeEvent: metadata.sceneTimeEvent && typeof metadata.sceneTimeEvent === 'object' ? metadata.sceneTimeEvent : null,
+    sceneStartDateAleria: normalizeCommentSceneStartDate(metadata.sceneStartDateAleria),
     sceneTransition: metadata.sceneTransition && typeof metadata.sceneTransition === 'object' ? metadata.sceneTransition : null,
     scenePoll: metadata.scenePoll && typeof metadata.scenePoll === 'object' ? metadata.scenePoll : null,
     sceneDiceRoll: metadata.sceneDiceRoll && typeof metadata.sceneDiceRoll === 'object' ? metadata.sceneDiceRoll : null,

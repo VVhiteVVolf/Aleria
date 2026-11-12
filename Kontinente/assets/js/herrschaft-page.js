@@ -5,9 +5,9 @@
   if (!page) return;
   const directoryUrl = new URL('../../modules/territory-directory/settlement-directory.mjs?v=weidebucht-20261019', document.currentScript.src);
   const { renderSettlementDomain } = await import(directoryUrl);
-  const { mountDirectoryBrowser, directoryState } = await import(new URL('directory-browser.mjs?v=register-20261018a', directoryUrl));
+  const { mountDirectoryBrowser, directoryState } = await import(new URL('directory-browser.mjs?v=20261112a', directoryUrl));
   const { renderCouncilGroups } = await import(new URL('council-directory.mjs?v=vortigern-20261018', directoryUrl));
-  const { renderTerritoryNavigation } = await import(new URL('../territory-page/territory-navigation.mjs?v=heraldry-20261022', directoryUrl));
+  const { renderTerritoryNavigation } = await import(new URL('../territory-page/territory-navigation.mjs?v=20261112a', directoryUrl));
 
   renderPageModules();
   window.addEventListener("aleria:kontinente:data-ready", renderPageModules);

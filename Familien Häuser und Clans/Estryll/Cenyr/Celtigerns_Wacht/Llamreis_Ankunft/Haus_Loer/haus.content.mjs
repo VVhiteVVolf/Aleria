@@ -15,7 +15,7 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 3,
+  "biographySourceRevision": 4,
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
@@ -24,7 +24,8 @@ export const HOUSE_CONTENT = {
     "character": "Handwerkliche Meisterschaft und die Verbindung zur Regenbogenschmiede sind prägend. Eurgain führt das Haus; weitere Einzelheiten folgen.",
     "customs": "Die Loer messen handwerklicher Vollkommenheit höchsten Wert bei.",
     "holdings": "Der Stammsitz des Hauses ist eine befestigte Höhenburg im Gebirge nahe Craithglyn, umgeben von Steinbrüchen, Minenschächten und weit verzweigten Stollensystemen.",
-    "culture": "Die Loer gehören der Alerischen Kirche an und pflegen eine enge Verbindung zur Regenbogenschmiede. Weitere Einzelheiten folgen."
+    "culture": "Die Loer gehören der Alerischen Kirche an und pflegen eine enge Verbindung zur Regenbogenschmiede. Weitere Einzelheiten folgen.",
+    "relations": "Die wohlhabenden Aurdden dienen den Loer als Goldschmiede, Juweliere und Bankiers. Loer liefern Rohmaterial und sind am Ertrag beteiligt. Aeron Loer, geboren 1712, ist seit 1740 mit Avelin Aurdden, geboren 1713, verlobt. Ihre Ehe ist noch nicht geschlossen. Die bestehenden übrigen Ehen bleiben unverändert; das Münzprägerecht liegt allein bei den Loer und die Rote Bank wird weiterhin von den Ergalla geleitet."
   },
   "placeholders": {
     "male": "../Stammbäume/assets/images/placeholders/male.png",
@@ -134,7 +135,8 @@ export const HOUSE_CONTENT = {
       "Als Vasallen stehen die Loer in enger Loyalität zum Ritterfürstenhaus Wyrm und pflegen gute Beziehungen zum Grafenhaus Draig.",
       "Ihre bedeutendste Rivalität besteht mit Haus Rhyddid.",
       "Während die Loer für Reichtum, Bergbau und wirtschaftliche Stärke stehen, verkörpert Haus Rhyddid eher Bodenständigkeit, Wehrhaftigkeit und den Schutz der Grenzlande. Zwischen beiden Häusern bestehen seit Generationen Konkurrenz um Einfluss im Hause Wyrm, um Verwaltungsämter und um wirtschaftliche Vorherrschaft.",
-      "Offene Feindschaft herrscht selten, doch politische Intrigen, Handelskonkurrenz und prestigeträchtige Wettstreite gehören beinahe zum Alltag."
+      "Offene Feindschaft herrscht selten, doch politische Intrigen, Handelskonkurrenz und prestigeträchtige Wettstreite gehören beinahe zum Alltag.",
+      "Die Aurdden verbinden mit den Loer unmittelbarer Dienst, Rohstofflieferungen und Gewinnbeteiligung. Ihr Juwelier heißt Der Sternenfang. Aeron Loer (28) und Avelin Aurdden (27) sind seit 1740 verlobt; die Ehe ist noch nicht geschlossen. Die bestehenden übrigen Partnerschaften bleiben erhalten."
     ],
     "values": [
       "Die Leitsätze des Hauses lauten:",
@@ -214,10 +216,11 @@ export const HOUSE_CONTENT = {
   "firstHeir": "Ynyrion Loer",
   "scenes": [],
   "headsNote": "Überlieferte Oberhäupter. Zeitangaben werden nur übernommen, soweit sie belegt sind.",
-  "contentVersion": "20261024-housebio-v1",
+  "contentVersion": "20261109-aurdden-loer-v1",
   "omitMilitaryProfile": true,
   "illustrationCategory": "Hausdarstellung",
   "biographyPreviousDefaultFingerprints": [
-    "2412:7d5646a3:56e86079"
+    "2412:7d5646a3:56e86079",
+    "5096:eb86cfe:eea034ac"
   ]
 };

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "id": "courtesan",
+  "label": "Dirne",
+  "version": "v1",
+  "status": "active",
+  "tool": "built-in image_gen",
+  "apiOrCliUsed": false,
+  "prompt": "Use case: style-transfer.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified speaker in Aleria, matching the existing \"Fremde Stimme\" silhouette series. Single image only; never a grid, sheet, collage or set.\nInput image 1 is a visual STYLE AND SERIES reference. Input image 2 is an additional shared series reference for silhouette darkness, framing and village-background simplicity. They determine rendering, proportions, palette, composition and mood, not the new person's identity or exact pose.\nShared direction: a large centered waist-up human silhouette gesturing in the foreground, head comfortably below the upper edge, both hands fully in view with comfortable side margins, no cropped fingers. Calm uncomplicated medieval village in daylight behind the figure: cream timber-and-plaster cottages with brown roofs, pale quiet lane, muted blue-gray sky, sparse greenery. Keep the backdrop lower contrast than the figure, softly muted and uncomplicated, like the references.\nStyle: matching matte Tales of Xillia/Frieren anime drawing, clear anime lineart, simple cel-shading and flat restrained dark-slate edge accents. No photorealistic materials, no 3D render, no painterly brush texture, no dramatic lighting.\nThe entire foreground human, INCLUDING face, neck, hands and clothing, is near-black charcoal. The head is COMPLETELY FACELESS: no visible eyes, brows, nose, mouth, cheeks, facial planes, facial features or facial lighting. Minimal thin dark-gray silhouette edge and clothing-division strokes only, just as in the references. Convey the requested age/role through outer hair shape, clothing shape, stature, posture and hands. Anatomically human with normal rounded human ears; never elf ears.\nHands freely gesticulate, natural fingers and relaxed conversational gesture, readable even at small thumbnail size. Standing conversational portrait, no prop held. Opaque full-square scene, not a transparent cutout. No weapons, modern objects, decorative symbols, speech bubbles, signs, writing, letters, text, watermark, border or frame.\nNEW SUBJECT courtesan / Dirne: one UNAMBIGUOUSLY ADULT HUMAN WOMAN, approximately thirty years old, with adult head-to-body proportions and long softly wavy hair loosely gathered over one shoulder. Fully dressed in historical medieval civilian clothing: a long-sleeve underdress with a MODEST CLOSED NECKLINE beneath a fitted front-laced sleeveless overdress, plus a loose shoulder scarf. Convey a historically dressed adult courtesan through the distinctive silhouette of the gathered hair, gently fitted overdress, clearly drawn simple front lacing and scarf. The person and every clothing piece remain near-black charcoal, with sparse dark-slate outline accents only. No skin tones, no nudity, no exposed chest, no lingerie, no transparent fabric, no sexualized pose or exaggerated anatomy. Upright matter-of-fact conversational posture, one hand open palm-up in an inviting-to-conversation gesture while the other rests lightly across the scarf near her shoulder. Natural relaxed hands fully visible. Absolutely featureless blank dark face, no facial details.",
+  "toolArguments": {
+    "prompt": "Use case: style-transfer.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified speaker in Aleria, matching the existing \"Fremde Stimme\" silhouette series. Single image only; never a grid, sheet, collage or set.\nInput image 1 is a visual STYLE AND SERIES reference. Input image 2 is an additional shared series reference for silhouette darkness, framing and village-background simplicity. They determine rendering, proportions, palette, composition and mood, not the new person's identity or exact pose.\nShared direction: a large centered waist-up human silhouette gesturing in the foreground, head comfortably below the upper edge, both hands fully in view with comfortable side margins, no cropped fingers. Calm uncomplicated medieval village in daylight behind the figure: cream timber-and-plaster cottages with brown roofs, pale quiet lane, muted blue-gray sky, sparse greenery. Keep the backdrop lower contrast than the figure, softly muted and uncomplicated, like the references.\nStyle: matching matte Tales of Xillia/Frieren anime drawing, clear anime lineart, simple cel-shading and flat restrained dark-slate edge accents. No photorealistic materials, no 3D render, no painterly brush texture, no dramatic lighting.\nThe entire foreground human, INCLUDING face, neck, hands and clothing, is near-black charcoal. The head is COMPLETELY FACELESS: no visible eyes, brows, nose, mouth, cheeks, facial planes, facial features or facial lighting. Minimal thin dark-gray silhouette edge and clothing-division strokes only, just as in the references. Convey the requested age/role through outer hair shape, clothing shape, stature, posture and hands. Anatomically human with normal rounded human ears; never elf ears.\nHands freely gesticulate, natural fingers and relaxed conversational gesture, readable even at small thumbnail size. Standing conversational portrait, no prop held. Opaque full-square scene, not a transparent cutout. No weapons, modern objects, decorative symbols, speech bubbles, signs, writing, letters, text, watermark, border or frame.\nNEW SUBJECT courtesan / Dirne: one UNAMBIGUOUSLY ADULT HUMAN WOMAN, approximately thirty years old, with adult head-to-body proportions and long softly wavy hair loosely gathered over one shoulder. Fully dressed in historical medieval civilian clothing: a long-sleeve underdress with a MODEST CLOSED NECKLINE beneath a fitted front-laced sleeveless overdress, plus a loose shoulder scarf. Convey a historically dressed adult courtesan through the distinctive silhouette of the gathered hair, gently fitted overdress, clearly drawn simple front lacing and scarf. The person and every clothing piece remain near-black charcoal, with sparse dark-slate outline accents only. No skin tones, no nudity, no exposed chest, no lingerie, no transparent fabric, no sexualized pose or exaggerated anatomy. Upright matter-of-fact conversational posture, one hand open palm-up in an inviting-to-conversation gesture while the other rests lightly across the scarf near her shoulder. Natural relaxed hands fully visible. Absolutely featureless blank dark face, no facial details.",
+    "referenced_image_paths": [
+      "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/woman.png",
+      "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/person.png"
+    ],
+    "transparent_background": false
+  },
+  "references": [
+    {
+      "path": "AleriaAlmanach/public/assets/comment-foreign-voice/woman.png",
+      "sha256": "7c1ae0ff8a653af5b3bd43f6ccea983df0eb4eb12c3b1f345cfecfa2adc82981",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "role": "viewed actual existing series reference passed to image_gen"
+    },
+    {
+      "path": "AleriaAlmanach/public/assets/comment-foreign-voice/person.png",
+      "sha256": "6caa629e94bc73cbfd40bd556ef574b35e7c0bcc89badbecb7a5af7d589e96f4",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "role": "viewed actual existing series reference passed to image_gen"
+    }
+  ],
+  "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-1a58b028-86cb-4cbf-97be-aeb40611e5e2.png",
+  "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/courtesan.png",
+  "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/courtesan-v1.png",
+  "sha256": "fd309a7e1543742b33cdb4628458d2e6b8a5ab8d7c23246406d7f8246dd9b0bb",
+  "bytes": 1748958,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGB",
+  "alpha": {
+    "fullyTransparentPixels": 0,
+    "fullyOpaquePixels": 1572516,
+    "partialPixels": 0
+  },
+  "transformation": "none: byte-identical generator PNG",
+  "visuallyInspected": true,
+  "visualReview": {
+    "actualFinishedImageViewed": true,
+    "checks": [
+      "completely featureless dark human face",
+      "gesturing human silhouette with complete visible hands",
+      "quiet matching medieval village background",
+      "square matte anime/cel series match",
+      "requested adult or elderly role readable through clothing/hair/posture"
+    ],
+    "additionalNotes": "Courtesan is clearly adult, fully clothed in a closed-neck long-sleeve underdress, front-laced overdress and scarf; upright nonsexual conversational pose."
+  },
+  "centralManifestsEdited": false
+}

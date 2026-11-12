@@ -1,20 +1,50 @@
 {
   "style": "fantasy-rpg-character",
-  "styleRevision": "2026-10-24-matte-painted-reference-figures",
-  "approvedAt": "2026-10-24",
-  "approvalQuote": "Genau so! Bitte überschreibe den stil, den wir vorher hatten auf diesen!",
-  "referenceImage": "2026-10-24-approved-house-knight.png",
+  "styleRevision": "2026-11-12-serious-house-figures-ink-watercolor-anime-face",
+  "approvedAt": "2026-11-12",
+  "approvalQuote": "Gut... speicher das als künftigen stil für Krieger/Leute Darstellung wenn wir Krieger für Adels und Bürgerhäuser darstellen wollen, NICHT FÜR PORTRAITS! Verwerfe die anderen.",
+  "scope": "Krieger- und Personendarstellungen als vollständige Ganzkörperfiguren für Adels- und Bürgerhäuser. Nicht für Charakterporträts.",
+  "excludeUseFor": [
+    "Charakterporträts",
+    "Porträtavatare",
+    "Szenenbilder",
+    "Vereinfachte Klassenicons"
+  ],
+  "referenceImage": "2026-11-12-approved-house-figure.png",
+  "referenceSha256": "7efa09a452ffd6b30aea872eb67f12a3b7db544b43fa88386e6e338881af1855",
+  "referenceUsage": "Vor jeder Generierung die neue freigegebene Hausfigur vom 12. November 2026 tatsächlich ansehen und als Stilreferenz mitgeben. Nur Proportionen, Gesichtsstilisierung, Tuschezeichnung, matte Aquarelltexturen und echte Freistellung übernehmen. Identität, Alter, Körperbau, Geschlecht, Kultur, Beruf, Kleidung, Rüstung, Waffen, Farben und Wappen folgen dem jeweiligen Motivauftrag. Den Eichenblatt-Ritter nicht als einheitliche Ausrüstungsschablone kopieren. Keine alte Krieger-Stilreferenz als Ersatz oder Fallback verwenden.",
+  "promptFile": "AleriaAlmanach/docs/art/character-style/house-figure-approved-20261112.txt",
+  "stylePrompt": "Handillustrierte klassische Fantasy-Ganzkörperfigur im 2:3-Hochformat. Normale erwachsene menschliche Proportionen, natürliche Kopfgröße, glaubwürdig bemessene Hände, Füße, Kleidung, Rüstung und Waffen. Ruhige, ernsthafte Haltung und nachvollziehbar konstruierte Ausrüstung.\n\nDas Gesicht besitzt eine deutlichere Anime-/Comiczeichnung: klar gestaltete ausdrucksstarke Augen, präzise Lid- und Brauenlinien, vereinfachte gezeichnete Nase, eine klar gefasste Kieferform und wenige bewusst gesetzte Gesichtsschatten. Die Mimik bleibt konzentriert und würdevoll. Alter und individuelle Merkmale bleiben erkennbar. Keine kindlichen Züge, übergroßen Köpfe oder karikaturhaften Nasen und Schnurrbärte. Der stärkere Anime-/Comiceinfluss gilt vor allem dem Gesicht; Körperbau, Rüstung und Ausrüstung behalten ihre ernsthafte Gestaltung.\n\nFeine bis mittelstarke, organisch unregelmäßige dunkelbraune Tuschekonturen mit dezenten Graphitspuren. Die bestätigte matte Aquarellwirkung bleibt erhalten: fleckige Farblasuren, ungleichmäßige Pigmentverteilung, Wasserränder, Dry-Brush und sichtbare Papierkörnung innerhalb der bemalten Figur. Warme, erdige, leicht entsättigte Farben. Metall mit wenigen matten Lichtflächen, Stoff und Leder mit einfachen Falten und gezeichneten Farbunterschieden. Keine realistischen Hautporen, Metallkratzerfelder, Fototexturen oder digitale Hochglanzmodellierung.\n\nEchter transparenter PNG-Hintergrund. Die gesamte Figur einschließlich Gesicht, Kleidung und Ausrüstung bleibt deckend; Lasuren und Papierkörnung erscheinen ausschließlich als Farb- und Oberflächenwirkung innerhalb ihrer Formen. Außerhalb der klaren Silhouette und in offenen Zwischenräumen vollständige Transparenz. Keine Papierfläche, Hintergrundfarbe, Farbflecken außerhalb der Figur, Bodenfläche, Bodenschatten, Halos oder auslaufenden Nebelsäume. Vollständige Figur und Ausrüstung mit freiem Rand. Keine Schrift und kein Rahmen.",
   "tool": "built-in image_gen",
   "prompts": [
-    "Use ONLY the THREE newly attached knight pictures from the user's last message as STRICT STYLE REFERENCES. The earlier generated blue knight images were REJECTED: do not carry their style forward. Make ONE new full-body knight for House Cymrath O'Traethlan in the EXACT quiet painted style of the three user references. Upright calm three-quarter standing pose, full figure from helmet plume to boots, gently simplified body proportions and large clear armor shapes. Closed visor helmet. Muted dusty blue tabard and cloak, dull ochre-gold trim, subdued grey steel plate with very soft shading. A simple GOLDEN WINGED LION emblem in a circle on the blue breastcloth matches this house. The knight rests one gauntleted hand on the pommel of a straight sword whose point faces down; other hand at his side, like the calm reference poses. Fine uniform dry grainy pigment texture, matte hand-painted gouache, restrained soft tonal changes, thin soft painted edge definition. Match the simple stylized little fantasy game figure feeling, NOT realistic illustration. NO thick black ink contours, NO bright saturated blue, NO glittering metal, NO dramatic sweeping cloak, NO oil impasto, NO paint splashes, NO paper rectangle, NO scenery, NO ground or shadow. Character cleanly isolated on TRUE TRANSPARENT PNG background. Portrait 2:3. No text. Study the reference silhouettes, muted finish, soft contour treatment and restrained detail level and closely reproduce that VISUAL LANGUAGE while changing the heraldry to this blue-and-gold winged-lion house.",
-    "Keep the knight in the most recent image EXACTLY as drawn: same quiet matte grainy painted style, closed helmet, dusty blue and ochre-gold tabard, circular winged-lion emblem, straight sword, same full-body pose and proportions. Correct ONLY the cutout: REMOVE ALL of the broad hazy grey-blue/yellow glow, fog and shadow currently surrounding the character. This must be a clean isolated sprite with genuinely fully transparent pixels immediately outside the actual silhouette of armor, plume, cape, boots and sword. Make the character itself fully opaque. The gaps between sword and legs and around the gauntlet must be transparent. No outer shadows, no lighting bloom, no aura, no gradient backdrop, no dark halo, no paint haze. Preserve the thin painted silhouette edge and subtle fine pigment texture WITHIN the character. Portrait PNG 2:3. Do not add or redesign anything."
+    "Use case: identity-preserve and style-transfer. Edit the attached accepted knight illustration. Preserve the same adult Cenyr knight, the accepted NORMAL HUMAN BODY PROPORTIONS, natural head size, serious pose, armor construction, green oak-leaf tabard and round shield, steel helmet with bronze ridge, brown gloves/boots, rust-red cape, straight downward sword, colour palette and textured ink/watercolor rendering. Do not enlarge his head, shorten his limbs, enlarge his boots or turn his armor into a cartoon.\n\nONLY TWO REQUESTED CHANGES:\n1. Re-draw the visible FACE in a more anime/comic illustrative language: more clearly shaped expressive eyes, crisp drawn eyelids and eyebrows, a simplified drawn nose, clean angular cheek/jaw shapes, and economical stylized facial shadow planes. Preserve his adult approximately forty-year-old identity, auburn hair and restrained auburn moustache. The expression stays serious, composed and watchful, mouth neutral. Not a comic smirk, chibi character, giant moustache or child. The anime/comic influence is localized to the face; the serious whole-body design and natural proportions stay as accepted.\n2. REMOVE THE ENTIRE PAPER BACKGROUND, all background watercolor stains and the floor/contact shadow. Deliver an actual transparent PNG cutout: alpha=0 everywhere outside the character, sword, shield and cloak, and in open gaps such as between sword and body/legs. Keep the entire painted figure opaque (alpha=255 in its interior); watercolor grain and mottling must remain inside the opaque character as colour texture, NOT become transparent holes or a semitransparent ghost. Keep clean natural edges with no paper fringe, white matte, cream halo, glow or fog.\n\nDo not repaint or smooth the accepted ink/watercolor textures on the armor, tabard, cloak or equipment. Retain their matte pigment mottling and paper-tooth appearance INSIDE the figure only. Full body 2:3 portrait, ideally 1024x1536. All helmet edges, sword tip, shield and both boots entirely inside canvas with a margin. No new objects, text or frame.\n\nCORRECTED REUSABLE STYLE:\nHandillustrierte klassische Fantasy-Ganzkörperfigur im 2:3-Hochformat. Normale erwachsene menschliche Proportionen, natürliche Kopfgröße, glaubwürdig bemessene Hände, Füße, Kleidung, Rüstung und Waffen. Ruhige, ernsthafte Haltung und nachvollziehbar konstruierte Ausrüstung.\n\nDas Gesicht besitzt eine deutlichere Anime-/Comiczeichnung: klar gestaltete ausdrucksstarke Augen, präzise Lid- und Brauenlinien, vereinfachte gezeichnete Nase, eine klar gefasste Kieferform und wenige bewusst gesetzte Gesichtsschatten. Die Mimik bleibt konzentriert und würdevoll. Alter und individuelle Merkmale bleiben erkennbar. Keine kindlichen Züge, übergroßen Köpfe oder karikaturhaften Nasen und Schnurrbärte. Der stärkere Anime-/Comiceinfluss gilt vor allem dem Gesicht; Körperbau, Rüstung und Ausrüstung behalten ihre ernsthafte Gestaltung.\n\nFeine bis mittelstarke, organisch unregelmäßige dunkelbraune Tuschekonturen mit dezenten Graphitspuren. Die bestätigte matte Aquarellwirkung bleibt erhalten: fleckige Farblasuren, ungleichmäßige Pigmentverteilung, Wasserränder, Dry-Brush und sichtbare Papierkörnung innerhalb der bemalten Figur. Warme, erdige, leicht entsättigte Farben. Metall mit wenigen matten Lichtflächen, Stoff und Leder mit einfachen Falten und gezeichneten Farbunterschieden. Keine realistischen Hautporen, Metallkratzerfelder, Fototexturen oder digitale Hochglanzmodellierung.\n\nEchter transparenter PNG-Hintergrund. Die gesamte Figur einschließlich Gesicht, Kleidung und Ausrüstung bleibt deckend; Lasuren und Papierkörnung erscheinen ausschließlich als Farb- und Oberflächenwirkung innerhalb ihrer Formen. Außerhalb der klaren Silhouette und in offenen Zwischenräumen vollständige Transparenz. Keine Papierfläche, Hintergrundfarbe, Farbflecken außerhalb der Figur, Bodenfläche, Bodenschatten, Halos oder auslaufenden Nebelsäume. Vollständige Figur und Ausrüstung mit freiem Rand. Keine Schrift und kein Rahmen."
   ],
-  "supersedes": "Bisheriger Oblivion-Classes-/Aquarell-RPG-Stil einschließlich der verworfenen realistischen, Comic- und Color-Bleed-/Ölfassungen.",
-  "notes": "Benutzerbilder und zuletzt freigegebener Hausritter bestimmen den Stil. Der Hausritter ist eine repräsentative Illustration für Cymrath O'Traethlan, kein Personenporträt.",
-  "approvedDesignReference": {
-    "image": "2026-10-24-approved-venalys-knight.png",
-    "house": "Cymrath O’Traethlan",
-    "culture": "Venalysisch",
-    "approvalQuote": "Sehr schön! Stil gut, design gut, fahre so weiter fort."
-  }
+  "sourceManifest": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/cenyr-knight-styles-04-06-v1/serious-anime-transparent-v3-manifest.json",
+  "originalGeneratorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1d06a-014e-7202-80d0-bf64bed927b9\\exec-1486c3f0-1e97-4afa-a9d7-4d9e7a360a3e.png",
+  "originalByteIdentityConfirmed": true,
+  "alphaReview": {
+    "range": [
+      0,
+      254
+    ],
+    "fullyTransparentPixels": 905985,
+    "alpha250OrHigherPixels": 642515,
+    "cornerAlpha": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "sampledOutsideAlpha": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "note": "Native generated alpha preserved without editing; foreground commonly alpha 253/255."
+  },
+  "previousApprovalArchive": "AleriaAlmanach/docs/art/character-style/archive/approved-style-20261024.json",
+  "retiredVariantsFile": "AleriaAlmanach/docs/art/character-style/retired-warrior-styles-20261112.json",
+  "application": "Einziger aktiver Stil für diese Hausfiguren. Die frühere Freigabe vom 24. Oktober 2026, die Vergleichsstile 1–6 und die vorletzte ernste Papierfassung sind als Alternativen verworfen. Historische Originale und Prompts bleiben ausschließlich als Herkunftsbelege erhalten."
 }

@@ -23,6 +23,8 @@ function setEditCommentKind(kind) {
 function setEditMode(mode) {
   mode = normalizeCommentComposerMode(mode);
   _editMode = mode;
+  const form = document.getElementById('edit-step-form');
+  if (form?.dataset) form.dataset.commentMode = mode;
   document.getElementById('ec-mode-char')?.classList.toggle('active', mode === 'charakter');
   document.getElementById('ec-mode-creature')?.classList.toggle('active', mode === 'creature');
   document.getElementById('ec-mode-narrator')?.classList.toggle('active', mode === 'narrator');

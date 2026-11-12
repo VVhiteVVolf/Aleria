@@ -48,36 +48,10 @@ function ensureTopicBoardDialog() {
   overlay.setAttribute('aria-modal', 'true');
   overlay.setAttribute('aria-hidden', 'true');
   overlay.setAttribute('aria-labelledby', 'topic-board-title');
-  overlay.innerHTML = `
-    <div class="topic-board-dialog">
-      <header class="topic-board-head">
-        <div class="topic-board-heading-mark" aria-hidden="true"><span>✦</span></div>
-        <div>
-          <div class="topic-board-kicker">Offene Fäden & nächste Szenen</div>
-          <h2 id="topic-board-title">Die Themenwand</h2>
-          <p>Vorschläge sammeln, gemeinsam gewichten und nach dem Anspielen ins Archiv legen.</p>
-        </div>
-        <button class="topic-board-close" type="button" data-topic-board-action="close-board" aria-label="Themenwand schließen">×</button>
-      </header>
-      <div class="topic-board-toolbar">
-        <div class="topic-board-tabs" role="tablist" aria-label="Themenwand-Ansicht">
-          <button type="button" role="tab" data-topic-board-action="set-view" data-topic-board-view="open">Offen <span data-topic-board-open-count>0</span></button>
-          <button type="button" role="tab" data-topic-board-action="set-view" data-topic-board-view="archived">Archiv <span data-topic-board-archive-count>0</span></button>
-        </div>
-        <div class="topic-board-list-controls">
-          <label class="topic-board-list-search"><span class="topic-board-visually-hidden">Themen durchsuchen</span><input type="search" data-topic-board-list-field="query" placeholder="Themen, Orte, Personen …" autocomplete="off"></label>
-          <label><span class="topic-board-visually-hidden">Kategorie filtern</span><select data-topic-board-list-field="category"><option value="all">Alle Themenarten</option>${TOPIC_BOARD_CATEGORIES.map(category => `<option value="${category.id}">${topicBoardEscape(category.label)}</option>`).join('')}</select></label>
-          <label><span class="topic-board-visually-hidden">Themen sortieren</span><select data-topic-board-list-field="sort"><option value="votes">Beliebteste zuerst</option><option value="due">Als Nächstes fällig</option><option value="newest">Neueste zuerst</option><option value="title">Nach Titel</option></select></label>
-          <span class="topic-board-result-count" data-topic-board-result-count aria-live="polite"></span>
-        </div>
-        <button class="topic-board-sync" type="button" data-topic-board-sync data-topic-board-action="retry-sync" title="Online-Verbindung erneut prüfen"></button>
-        <button class="topic-board-new" type="button" data-topic-board-action="open-editor" aria-expanded="false" aria-controls="topic-board-editor"><span aria-hidden="true">＋</span> Vorschlag anheften</button>
-      </div>
-      <div class="topic-board-workspace">
-        <main class="topic-board-list" data-topic-board-list></main>
-        <aside id="topic-board-editor" class="topic-board-editor" data-topic-board-editor hidden></aside>
-      </div>
-    </div>`;
+  overlay.innerHTML = globalThis.AleriaTopicBoardOverview.renderShell();
+  overlay.addEventListener('error', event => {
+    if (event.target.matches?.('.topic-board-cast-member img')) event.target.hidden = true;
+  }, true);
   document.body.appendChild(overlay);
   return overlay;
 }
@@ -95,15 +69,16 @@ function renderTopicBoardPortraits(participants, options = {}) {
   if (!participants.length) return `<${compact ? 'span' : 'div'} class="topic-board-no-cast">Besetzung noch offen</${compact ? 'span' : 'div'}>`;
   const visible = compact ? participants.slice(0, 4) : participants;
   const remaining = Math.max(0, participants.length - visible.length);
+  const records = typeof getVisibleCharacterRecords === 'function' ? getVisibleCharacterRecords() : [];
+  const portraits = new Map((Array.isArray(records) ? records : []).map(record => [record.id, getTopicBoardCharacterPortrait(record)]));
   const containerTag = compact ? 'span' : 'div';
-  return `<${containerTag} class="topic-board-cast${compact ? ' is-compact' : ''}" aria-label="Betroffene Figuren">
+  return `<${containerTag} class="topic-board-cast${compact ? ' is-compact' : ''}" aria-label="${topicBoardEscape(participants.map(person => person.name).join(', '))}">
     ${visible.map(participant => {
-      const portrait = topicBoardImage(participant.portrait);
-      return `<span class="topic-board-cast-member"${compact ? '' : ' tabindex="0"'} title="${topicBoardEscape(participant.name)}">
-        ${portrait
-          ? `<img src="${portrait}" alt="${topicBoardEscape(participant.name)}" loading="lazy" decoding="async">`
-          : `<span>${topicBoardEscape(topicBoardInitial(participant.name))}</span>`}
-      </span>`;
+      const portrait = topicBoardImage(participant.portrait || portraits.get(participant.id));
+      return `<span class="topic-board-cast-person" title="${topicBoardEscape(participant.name)}"><span class="topic-board-cast-member">
+        <span aria-hidden="true">${topicBoardEscape(topicBoardInitial(participant.name))}</span>
+        ${portrait ? `<img src="${portrait}" alt="" loading="lazy" decoding="async">` : ''}
+      </span>${compact ? '' : `<span class="topic-board-cast-name">${topicBoardEscape(participant.name)}</span>`}</span>`;
     }).join('')}${remaining ? `<span class="topic-board-cast-more" title="${remaining} weitere Figuren">+${remaining}</span>` : ''}
   </${containerTag}>`;
 }
@@ -154,25 +129,24 @@ function renderTopicBoardProposalCard(input, options = {}) {
   const expanded = preview || listState.expandedId === proposal.id;
   const viewerVoted = !preview && hasTopicProposalVote(proposal, getTopicBoardViewerId());
   const themeIcon = topicBoardImage(proposal.themeIconUrl);
-  const detailId = `topic-board-details-${encodeURIComponent(proposal.id || 'preview').replace(/%/g, '-')}`;
+  const detailId = `topic-board-details-${preview ? 'preview-' : ''}${encodeURIComponent(proposal.id || 'draft').replace(/%/g, '-')}`;
   const excerpt = topicBoardEscape(getTopicBoardExcerpt(proposal.description));
   const description = topicBoardEscape(proposal.description || 'Noch keine nähere Beschreibung.')
     .replace(/\n/g, '<br>');
   const actions = preview ? '' : `<div class="topic-board-card-actions is-persistent">
-    <button type="button" data-topic-board-action="vote" data-topic-board-id="${topicBoardEscape(proposal.id)}" aria-pressed="${viewerVoted}">
+    ${archived ? `<span class="topic-board-vote-history">✦ ${proposal.voteCount} ${proposal.voteCount === 1 ? 'gemeinsame Stimme' : 'gemeinsame Stimmen'}</span>` : `<button type="button" data-topic-board-action="vote" data-topic-board-id="${topicBoardEscape(proposal.id)}" aria-pressed="${viewerVoted}" aria-label="${viewerVoted ? 'Stimme zurücknehmen' : 'Für diesen Play stimmen'}">
       <span class="topic-board-vote-seal" aria-hidden="true">${viewerVoted ? '✓' : '✦'}</span>
-      <span>${viewerVoted ? 'Stimme zurücknehmen' : 'Dafür stimmen'}</span>
+      <span>${viewerVoted ? 'Deine Stimme' : 'Würde ich gern spielen'}</span>
       <strong>${proposal.voteCount}</strong>
-    </button>
+    </button>`}
     <button type="button" data-topic-board-action="edit" data-topic-board-id="${topicBoardEscape(proposal.id)}">Bearbeiten</button>
-    <button type="button" data-topic-board-action="${archived ? 'restore' : 'archive'}" data-topic-board-id="${topicBoardEscape(proposal.id)}">${archived ? 'Wieder öffnen' : 'Als gespielt abhaken'}</button>
+    <button type="button" data-topic-board-action="${archived ? 'restore' : 'archive'}" data-topic-board-id="${topicBoardEscape(proposal.id)}">${archived ? 'Wieder öffnen' : 'Gespielt ✓'}</button>
   </div>`;
   const summaryTag = preview ? 'div' : 'button';
   const summaryAttributes = preview
     ? ''
     : ` type="button" data-topic-board-action="toggle-details" data-topic-board-id="${topicBoardEscape(proposal.id)}" aria-expanded="${expanded}" aria-controls="${detailId}"`;
-  return `<article class="topic-board-card${archived ? ' is-archived' : ''}${preview ? ' is-preview' : ''}${expanded ? ' is-expanded' : ''}" data-topic-board-card="${topicBoardEscape(proposal.id)}">
-    <div class="topic-board-card-pin" aria-hidden="true"></div>
+  return `<article class="topic-board-card${archived ? ' is-archived' : ''}${preview ? ' is-preview' : ''}${expanded ? ' is-expanded' : ''}" data-topic-board-card="${topicBoardEscape(proposal.id)}" data-topic-board-timing="${archived ? 'archived' : getTopicBoardScheduleTimingCopy(proposal.schedule).state}">
     <${summaryTag} class="topic-board-card-summary"${summaryAttributes}>
       <span class="topic-board-card-icon">
         ${themeIcon
@@ -186,14 +160,13 @@ function renderTopicBoardProposalCard(input, options = {}) {
         <span class="topic-board-summary-excerpt">${excerpt}</span>
         <span class="topic-board-summary-meta">${renderTopicBoardSummaryMeta(proposal)}</span>
       </span>
-      ${globalThis.AleriaTopicBoardScheduleUI.renderBadge(proposal.schedule)}
-      <span class="topic-board-summary-cast">${renderTopicBoardPortraits(proposal.participants, { compact: true })}</span>
-      <span class="topic-board-card-score" title="Stimmen"><strong>${proposal.voteCount}</strong><span>Stimmen</span></span>
+      ${globalThis.AleriaTopicBoardScheduleUI.renderBadge(proposal.schedule, { archived })}
+      <span class="topic-board-summary-cast">${renderTopicBoardPortraits(proposal.participants, { compact: true })}${proposal.participants.length ? `<span class="topic-board-cast-count">${proposal.participants.length} ${proposal.participants.length === 1 ? 'Figur' : 'Figuren'}</span>` : ''}</span>
       ${preview ? '' : `<span class="topic-board-summary-chevron" aria-hidden="true">⌄</span>`}
     </${summaryTag}>
     <div class="topic-board-card-details" id="${detailId}" data-topic-board-details${expanded ? '' : ' hidden'}>
       <div class="topic-board-description">${description}</div>
-      ${globalThis.AleriaTopicBoardScheduleUI.renderCard(proposal.schedule)}
+      ${globalThis.AleriaTopicBoardScheduleUI.renderCard(proposal.schedule, { archived })}
       ${renderTopicBoardMeta(proposal)}
       ${globalThis.AleriaTopicBoardTravelUI.renderCard(proposal.travel)}
       <footer>
@@ -222,51 +195,34 @@ function renderTopicBoardList() {
   const allVisible = getTopicBoardVisibleProposals();
   const proposals = globalThis.AleriaTopicBoardListState.selectProposals(allVisible);
   const resultCount = overlay.querySelector('[data-topic-board-result-count]');
-  if (resultCount) resultCount.textContent = `${proposals.length} von ${allVisible.length}`;
+  if (resultCount) resultCount.textContent = state.loading ? 'Wird geladen …' : `${proposals.length} ${proposals.length === 1 ? 'Play' : 'Plays'}${proposals.length !== allVisible.length ? ` von ${allVisible.length}` : ''}`;
+  globalThis.AleriaTopicBoardOverview.refresh(overlay, state);
   if (!list) return;
   if (state.loading) {
     list.innerHTML = '<div class="topic-board-empty">Die Themenzettel werden geordnet …</div>';
     return;
   }
   if (proposals.length) {
-    list.innerHTML = proposals.map(renderTopicBoardProposalCard).join('');
+    const listState = globalThis.AleriaTopicBoardListState.getState();
+    list.innerHTML = globalThis.AleriaTopicBoardOverview.renderGroups(proposals, {
+      view: state.view, sort: listState.sort, renderCard: renderTopicBoardProposalCard
+    });
     return;
   }
   const filtered = globalThis.AleriaTopicBoardListState.hasFilters();
   list.innerHTML = `<div class="topic-board-empty">
     <span aria-hidden="true">${filtered ? '⌕' : (state.view === TOPIC_BOARD_STATUS_ARCHIVED ? '⌂' : '✦')}</span>
-    <h3>${filtered ? 'Keine passenden Themen' : (state.view === TOPIC_BOARD_STATUS_ARCHIVED ? 'Das Archiv ist noch leer' : 'Noch kein offener Faden')}</h3>
-    <p>${filtered ? 'Passe Suche oder Themenart an.' : (state.view === TOPIC_BOARD_STATUS_ARCHIVED ? 'Abgehakte Themen erscheinen später hier.' : 'Hefte den ersten Vorschlag an die Themenwand.')}</p>
+    <h3>${filtered ? 'Keine passenden Plays' : (state.view === TOPIC_BOARD_STATUS_ARCHIVED ? 'Eure Geschichten warten noch' : 'Euer nächstes Kapitel wartet')}</h3>
+    <p>${filtered ? 'Passe die Filter an oder setze sie zurück.' : (state.view === TOPIC_BOARD_STATUS_ARCHIVED ? 'Gespielte Plays erscheinen später hier.' : 'Haltet eine Idee für euren nächsten gemeinsamen Play fest.')}</p>
     ${filtered
       ? '<button type="button" data-topic-board-action="clear-list-filters">Filter zurücksetzen</button>'
-      : (state.view === TOPIC_BOARD_STATUS_OPEN ? '<button type="button" data-topic-board-action="open-editor">Ersten Vorschlag schreiben</button>' : '')}
+      : (state.view === TOPIC_BOARD_STATUS_OPEN ? '<button type="button" data-topic-board-action="open-editor">Ersten Play festhalten</button>' : '')}
   </div>`;
 }
 
 function renderTopicBoard() {
   const overlay = ensureTopicBoardDialog();
   const state = getTopicBoardState();
-  const open = state.proposals.filter(proposal => proposal.status === TOPIC_BOARD_STATUS_OPEN);
-  const archived = state.proposals.filter(proposal => proposal.status === TOPIC_BOARD_STATUS_ARCHIVED);
-  overlay.querySelector('[data-topic-board-open-count]').textContent = open.length;
-  overlay.querySelector('[data-topic-board-archive-count]').textContent = archived.length;
-  overlay.querySelectorAll('[data-topic-board-action="set-view"]').forEach(button => {
-    const active = button.dataset.topicBoardView === state.view;
-    button.classList.toggle('active', active);
-    button.setAttribute('aria-selected', String(active));
-  });
-  const sync = overlay.querySelector('[data-topic-board-sync]');
-  if (sync) {
-    const labels = {
-      online: 'Gemeinsam synchronisiert',
-      syncing: state.pendingCount === 1 ? '1 Thema wird veröffentlicht …' : `${state.pendingCount} Themen werden veröffentlicht …`,
-      error: 'Online-Sync gestört · erneut prüfen',
-      connecting: 'Firebase wird verbunden …'
-    };
-    sync.dataset.state = state.syncState || 'connecting';
-    sync.textContent = labels[state.syncState] || labels.connecting;
-    sync.title = state.syncError || 'Online-Verbindung erneut prüfen';
-  }
   syncTopicBoardListControls(overlay);
   renderTopicBoardList();
   updateTopicBoardSidebarSummary();
@@ -380,11 +336,14 @@ function openTopicBoardEditor(proposalId = '') {
   _topicBoardSelectedVehicleIcon = proposal?.vehicleIconUrl || '';
   const editor = overlay.querySelector('[data-topic-board-editor]');
   editor.hidden = false;
+  overlay.querySelector('.topic-board-overview').inert = true;
   overlay.classList.add('is-editing');
-  overlay.querySelector('[data-topic-board-action="open-editor"]').setAttribute('aria-expanded', 'true');
+  const opener = overlay.querySelector('.topic-board-new');
+  opener.setAttribute('aria-expanded', 'true');
+  opener.disabled = true;
   editor.innerHTML = `<form class="topic-board-form" data-topic-board-form>
     <header>
-      <div><small>${proposal ? 'Themenzettel überarbeiten' : 'Neuen Faden anheften'}</small><h3>${proposal ? 'Vorschlag bearbeiten' : 'Was spielen wir als Nächstes?'}</h3></div>
+      <div><small>${proposal ? 'Gemeinsamen Play überarbeiten' : 'Ein neues Kapitel'}</small><h3>${proposal ? 'Play bearbeiten' : 'Was möchtet ihr spielen?'}</h3></div>
       <button type="button" data-topic-board-action="close-editor" aria-label="Editor schließen">×</button>
     </header>
       <nav class="topic-board-editor-sections" role="tablist" aria-label="Bearbeitungsbereiche">
@@ -460,9 +419,14 @@ function closeTopicBoardEditor() {
   editor.innerHTML = '';
   const overlay = editor.closest('.topic-board-overlay');
   overlay?.classList.remove('is-editing');
-  const opener = overlay?.querySelector('[data-topic-board-action="open-editor"]');
+  const overview = overlay?.querySelector('.topic-board-overview');
+  if (overview) overview.inert = false;
+  const opener = overlay?.querySelector('.topic-board-new');
   opener?.setAttribute('aria-expanded', 'false');
-  opener?.focus({ preventScroll: true });
+  if (opener) opener.disabled = false;
+  const editButton = Array.from(overlay?.querySelectorAll('[data-topic-board-action="edit"]') || [])
+    .find(button => button.dataset.topicBoardId === _topicBoardEditingProposalId);
+  (editButton || opener)?.focus({ preventScroll: true });
   _topicBoardEditingProposalId = '';
   _topicBoardIconTarget = '';
 }
@@ -578,7 +542,7 @@ async function submitTopicBoardEditor() {
     document.querySelector('[data-topic-board-form] input[name="title"]')?.focus();
     return;
   }
-  if (!globalThis.AleriaTopicBoardSchedule.hasDate(payload.schedule?.startDate)) {
+  if (!form.elements.scheduleUnscheduled?.checked && !globalThis.AleriaTopicBoardSchedule.hasDate(payload.schedule?.startDate)) {
     scrollTopicBoardEditorToSection('schedule');
     setTopicBoardFormStatus('Bitte trage einen vollständigen Start- oder Fälligkeitstermin ein.', 'error');
     document.querySelector('[data-topic-board-form] input[name="scheduleStartDay"]')?.focus();

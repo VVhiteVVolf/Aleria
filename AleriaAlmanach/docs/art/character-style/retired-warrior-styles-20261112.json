@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-12",
+  "scope": "Krieger- und Personendarstellungen als vollständige Ganzkörperfiguren für Adels- und Bürgerhäuser. Nicht für Charakterporträts.",
+  "activePreset": "fantasy-rpg-character",
+  "activeStyleRevision": "2026-11-12-serious-house-figures-ink-watercolor-anime-face",
+  "approvedReference": "AleriaAlmanach/docs/art/character-style/2026-11-12-approved-house-figure.png",
+  "rule": "Einziger aktiver Stil für diese Hausfiguren. Die frühere Freigabe vom 24. Oktober 2026, die Vergleichsstile 1–6 und die vorletzte ernste Papierfassung sind als Alternativen verworfen. Historische Originale und Prompts bleiben ausschließlich als Herkunftsbelege erhalten.",
+  "retiredLegacyApproval": "AleriaAlmanach/docs/art/character-style/archive/approved-style-20261024.json",
+  "retiredPreset": "AleriaAlmanach/docs/art/character-style/archive/fantasy-rpg-character-20261024.json",
+  "retiredComparisons": [
+    {
+      "manifest": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/blue-warrior-three-prompts-v1/manifest.json",
+      "id": "warrior-prompt-01",
+      "promptFile": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/blue-warrior-three-prompts-v1/prompt-01-existing.txt",
+      "image": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/blue-warrior-three-prompts-v1/blue-warrior-prompt-01.png",
+      "status": "rejected"
+    },
+    {
+      "manifest": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/blue-warrior-three-prompts-v1/manifest.json",
+      "id": "warrior-prompt-02",
+      "promptFile": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/blue-warrior-three-prompts-v1/prompt-02-detailed.txt",
+      "image": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/blue-warrior-three-prompts-v1/blue-warrior-prompt-02.png",
+      "status": "rejected"
+    },
+    {
+      "manifest": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/blue-warrior-three-prompts-v1/manifest.json",
+      "id": "warrior-prompt-03",
+      "promptFile": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/blue-warrior-three-prompts-v1/prompt-03-short.txt",
+      "image": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/blue-warrior-three-prompts-v1/blue-warrior-prompt-03.png",
+      "status": "rejected"
+    },
+    {
+      "manifest": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/forsworn-warrior-three-prompts-v1/manifest.json",
+      "id": "warrior-prompt-01",
+      "promptFile": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/blue-warrior-three-prompts-v1/prompt-01-existing.txt",
+      "image": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/forsworn-warrior-three-prompts-v1/forsworn-warrior-prompt-01.png",
+      "status": "rejected"
+    },
+    {
+      "manifest": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/forsworn-warrior-three-prompts-v1/manifest.json",
+      "id": "warrior-prompt-02",
+      "promptFile": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/blue-warrior-three-prompts-v1/prompt-02-detailed.txt",
+      "image": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/forsworn-warrior-three-prompts-v1/forsworn-warrior-prompt-02.png",
+      "status": "rejected"
+    },
+    {
+      "manifest": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/forsworn-warrior-three-prompts-v1/manifest.json",
+      "id": "warrior-prompt-03",
+      "promptFile": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/blue-warrior-three-prompts-v1/prompt-03-short.txt",
+      "image": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/forsworn-warrior-three-prompts-v1/forsworn-warrior-prompt-03.png",
+      "status": "rejected"
+    },
+    {
+      "manifest": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/cenyr-knight-styles-04-06-v1/manifest.json",
+      "id": "warrior-style-04",
+      "promptFile": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/cenyr-knight-styles-04-06-v1/style-04-clear-comic.txt",
+      "image": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/cenyr-knight-styles-04-06-v1/cenyr-knight-style-04.png",
+      "status": "rejected"
+    },
+    {
+      "manifest": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/cenyr-knight-styles-04-06-v1/manifest.json",
+      "id": "warrior-style-05",
+      "promptFile": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/cenyr-knight-styles-04-06-v1/style-05-user-comic-bleeding.txt",
+      "image": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/cenyr-knight-styles-04-06-v1/cenyr-knight-style-05.png",
+      "status": "rejected"
+    },
+    {
+      "manifest": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/cenyr-knight-styles-04-06-v1/manifest.json",
+      "id": "warrior-style-06",
+      "promptFile": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/cenyr-knight-styles-04-06-v1/style-06-user-classic.txt",
+      "image": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/cenyr-knight-styles-04-06-v1/cenyr-knight-style-06.png",
+      "status": "rejected"
+    },
+    {
+      "manifest": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/cenyr-knight-styles-04-06-v1/serious-v2-manifest.json",
+      "image": "AleriaAlmanach/docs/art/character-style/experiments/2026-11-12/cenyr-knight-styles-04-06-v1/cenyr-knight-style-05-serious-v2.png",
+      "status": "rejected"
+    }
+  ],
+  "originalPolicy": "Original images, prompts and generation receipts preserved as historical evidence; not active style options."
+}

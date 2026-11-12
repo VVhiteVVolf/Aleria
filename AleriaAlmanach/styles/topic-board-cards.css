@@ -1,0 +1,163 @@
+/* Play cards, their participants and read-only schedule/travel details. */
+.topic-board-card {
+  position: relative;
+  min-width: 0;
+  border: 1px solid var(--board-line);
+  border-left: 3px solid var(--board-gold-light);
+  border-radius: 7px;
+  background: var(--board-surface);
+  box-shadow: 0 3px 10px #7c432006;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+.topic-board-card:hover { border-color: var(--board-outline); box-shadow: 0 5px 15px #7c43200a; }
+.topic-board-card[data-topic-board-timing="today"], .topic-board-card[data-topic-board-timing="active"] { border-left-color: var(--board-gold-deep); }
+.topic-board-card[data-topic-board-timing="overdue"] { border-left-color: var(--board-accent-warm); }
+.topic-board-card.is-expanded { border-color: var(--board-outline); box-shadow: 0 6px 18px #7c43200d; }
+.topic-board-card.is-archived { border-left-color: var(--board-line); background: var(--board-on-accent); }
+.topic-board-card-summary {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr) minmax(9rem, auto) 1rem;
+  grid-template-rows: auto auto;
+  align-items: start;
+  gap: .8rem 1rem;
+  padding: 1.2rem 1.2rem 1rem;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+button.topic-board-card-summary { cursor: pointer; }
+button.topic-board-card-summary:hover { background: #fff2cd55; }
+.topic-board-card-icon { grid-column: 1; grid-row: 1 / 3; display: grid; place-items: center; width: 3rem; height: 3rem; overflow: hidden; border: 1px solid var(--board-line); border-radius: 50%; background: var(--board-wash-light); color: var(--board-muted); font: 500 1.4rem 'Cinzel', serif; }
+.topic-board-card-icon img { width: 100%; height: 100%; object-fit: contain; }
+.topic-board-summary-copy { display: block; min-width: 0; grid-column: 2; grid-row: 1; }
+.topic-board-card-kicker { display: block; color: var(--board-muted); font: 600 .62rem/1.5 'Cinzel', serif; letter-spacing: .08em; text-transform: uppercase; }
+.topic-board-card-title { display: block; margin-top: .25rem; color: var(--board-ink); font: 600 1.22rem/1.25 'EB Garamond', Georgia, serif; overflow-wrap: anywhere; }
+.topic-board-summary-excerpt { display: -webkit-box; overflow: hidden; margin-top: .45rem; color: var(--board-muted); font-size: .96rem; line-height: 1.45; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.topic-board-summary-meta { display: flex; flex-wrap: wrap; gap: .3rem 1rem; margin-top: .6rem; color: var(--board-muted); font-size: .83rem; }
+.topic-board-summary-meta > span { min-width: 0; max-width: 22rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.topic-board-summary-meta i { margin-right: .35rem; color: var(--board-gold-deep); font-style: normal; }
+.topic-board-summary-meta-empty { font-style: italic; }
+.topic-board-summary-chevron { grid-column: 4; grid-row: 1 / 3; align-self: center; color: var(--board-gold-deep); font: 1.2rem Georgia, serif; text-align: center; transition: transform 150ms ease; }
+.topic-board-card.is-expanded .topic-board-summary-chevron { transform: rotate(180deg); }
+.topic-board-summary-cast { grid-column: 2; grid-row: 2; display: inline-flex; align-items: center; gap: .6rem; min-width: 0; }
+.topic-board-cast { display: flex; flex-wrap: wrap; gap: .5rem; }
+.topic-board-cast-person { display: inline-flex; align-items: center; gap: .45rem; min-width: 0; }
+.topic-board-cast-member { position: relative; flex-shrink: 0; display: grid; place-items: center; width: 2.1rem; height: 2.1rem; overflow: hidden; border: 2px solid var(--board-on-accent); border-radius: 50%; background: var(--board-gold-soft); color: var(--board-accent-warm); font: 600 .85rem 'Cinzel', serif; box-shadow: 0 0 0 1px var(--board-gold-light); }
+.topic-board-cast-member img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.topic-board-cast-member img[hidden] { display: none; }
+.topic-board-cast-name { color: var(--board-muted); font-size: .95rem; overflow-wrap: anywhere; }
+.topic-board-cast.is-compact { flex-wrap: nowrap; gap: 0; padding-right: .1rem; }
+.topic-board-cast.is-compact .topic-board-cast-person + .topic-board-cast-person { margin-left: -.35rem; }
+.topic-board-cast.is-compact .topic-board-cast-member { width: 1.8rem; height: 1.8rem; font-size: .7rem; }
+.topic-board-cast-more { display: grid; place-items: center; width: 1.8rem; height: 1.8rem; margin-left: -.35rem; border: 2px solid var(--board-surface); border-radius: 50%; background: var(--board-on-accent-muted); color: var(--board-muted); font: .7rem Georgia, serif; }
+.topic-board-cast-count, .topic-board-no-cast { color: var(--board-muted); font-size: .8rem; }
+.topic-board-no-cast { font-style: italic; }
+.topic-board-schedule-badge { grid-column: 3; grid-row: 1 / 3; display: grid; grid-template-columns: 2.65rem minmax(0, 1fr); gap: .7rem; align-items: center; min-width: 0; padding: .5rem .6rem; border: 1px solid var(--board-on-accent-muted); border-radius: 5px; background: var(--board-on-accent); }
+.topic-board-schedule-calendar { display: grid; grid-template-rows: auto 1fr auto; place-items: center; min-height: 3.2rem; overflow: hidden; border: 1px solid var(--board-gold-light); border-radius: 3px; background: var(--board-surface); }
+.topic-board-schedule-calendar small { width: 100%; padding: .1rem; background: var(--board-accent-warm); color: var(--board-wash-light); font: .52rem 'Cinzel', serif; text-align: center; }
+.topic-board-schedule-calendar strong { color: var(--board-accent); font: 600 1.3rem/1.2 'EB Garamond', Georgia, serif; }
+.topic-board-schedule-calendar em { padding-bottom: .15rem; color: var(--board-gold-deep); font: normal .5rem Georgia, serif; }
+.topic-board-schedule-badge > span:last-child > strong, .topic-board-schedule-badge > span:last-child > small { display: block; overflow-wrap: anywhere; }
+.topic-board-schedule-badge > span:last-child > strong { color: var(--board-accent-warm); font: 600 .65rem/1.4 'Cinzel', serif; }
+.topic-board-schedule-badge > span:last-child > small { margin-top: .25rem; color: var(--board-muted); font-size: .76rem; line-height: 1.3; }
+.topic-board-schedule-badge.is-today { background: var(--board-on-accent-muted); border-color: var(--board-gold); }
+.topic-board-schedule-badge.is-overdue { background: var(--board-wash); border-color: var(--board-outline); }
+.topic-board-schedule-badge.is-overdue > span:last-child > strong { color: var(--board-accent-warm); }
+.topic-board-schedule-badge.is-unscheduled { background: var(--board-on-accent); border-color: var(--board-line); }
+.topic-board-schedule-badge.is-unscheduled .topic-board-schedule-calendar { border-style: dashed; background: transparent; }
+.topic-board-schedule-badge.is-unscheduled .topic-board-schedule-calendar small { background: var(--board-outline); color: var(--board-text); }
+.topic-board-schedule-badge.is-archived { grid-template-columns: 1fr; background: transparent; border-style: dashed; }
+.topic-board-vote-history { margin-right: auto; padding: .45rem; color: var(--board-muted); font-size: .85rem; }
+.topic-board-archive-stamp { display: inline-block; margin-top: .4rem; color: var(--board-muted); font: .65rem 'Cinzel', serif; }
+.topic-board-card-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .45rem; padding: .65rem 1rem; border-top: 1px solid var(--board-wash); }
+.topic-board-card-actions button { min-height: 38px; padding: .45rem .65rem; border: 1px solid transparent; border-radius: 4px; background: transparent; color: var(--board-muted); cursor: pointer; font: .85rem 'EB Garamond', Georgia, serif; }
+.topic-board-card-actions button:hover { background: var(--board-wash-light); color: var(--board-accent); }
+.topic-board-card-actions button:disabled { cursor: wait; opacity: .5; }
+.topic-board-card-actions button:first-child { display: flex; align-items: center; gap: .5rem; margin-right: auto; padding-left: .45rem; color: var(--board-accent-warm); }
+.topic-board-card-actions button:first-child strong { display: grid; place-items: center; min-width: 1.35rem; min-height: 1.35rem; border-radius: 4px; background: var(--board-on-accent-muted); color: var(--board-accent-warm); font-size: .75rem; font-weight: 500; }
+.topic-board-vote-seal { font-size: 1rem; }
+.topic-board-card-actions button[aria-pressed="true"] { background: var(--board-gold-soft); color: var(--board-accent); }
+.topic-board-card-actions button[aria-pressed="true"] strong { background: var(--board-gold-soft); }
+.topic-board-card-actions button[data-topic-board-action="archive"] { color: var(--board-accent-warm); }
+.topic-board-card-details { padding: 1.2rem; border-top: 1px dashed var(--board-line); background: var(--board-paper); }
+.topic-board-card-details[hidden] { display: none; }
+.topic-board-description { margin-bottom: 1.2rem; color: var(--board-text); font-size: 1.05rem; line-height: 1.6; overflow-wrap: anywhere; }
+.topic-board-schedule-card { display: grid; grid-template-columns: 2.5rem repeat(2, minmax(0, 1fr)); gap: .7rem; align-items: center; padding: .9rem; margin-bottom: 1rem; border: 1px solid var(--board-line); border-radius: 5px; background: var(--board-wash-light); }
+.topic-board-schedule-card.is-unscheduled { grid-template-columns: 2.5rem minmax(0, 1fr); }
+.topic-board-schedule-card > div { min-width: 0; }
+.topic-board-schedule-card-icon, .topic-board-schedule-card.is-unscheduled > div:first-child { color: var(--board-gold-deep); font-size: 1.6rem; text-align: center; }
+.topic-board-schedule-card small, .topic-board-schedule-card strong, .topic-board-schedule-card span { display: block; overflow-wrap: anywhere; }
+.topic-board-schedule-card small { color: var(--board-muted); font: .65rem 'Cinzel', serif; }
+.topic-board-schedule-card strong { margin-top: .25rem; color: var(--board-accent-warm); font-size: 1rem; font-weight: 600; }
+.topic-board-schedule-card span { color: var(--board-muted); font-size: .85rem; }
+.topic-board-meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; margin-bottom: 1rem; }
+.topic-board-meta-item { display: flex; align-items: center; gap: .7rem; min-width: 0; padding: .6rem .8rem; border: 1px solid var(--board-line); border-radius: 4px; }
+.topic-board-meta-item > span { color: var(--board-gold-deep); font-size: 1.2rem; }
+.topic-board-meta-item > img { width: 1.6rem; height: 1.6rem; object-fit: contain; }
+.topic-board-meta-item small, .topic-board-meta-item strong { display: block; overflow-wrap: anywhere; }
+.topic-board-meta-item small { color: var(--board-muted); font: .62rem 'Cinzel', serif; }
+.topic-board-meta-item strong { color: var(--board-muted); font-size: .95rem; font-weight: 500; }
+.topic-board-travel-card { margin-bottom: 1rem; overflow: hidden; border: 1px solid var(--board-line); border-radius: 5px; background: var(--board-wash-light); }
+.topic-board-travel-card > header { display: flex; align-items: center; gap: .75rem; padding: .8rem 1rem; border-bottom: 1px solid var(--board-line); }
+.topic-board-travel-card > header > span { color: var(--board-gold-deep); font-size: 1.5rem; }
+.topic-board-travel-card header small, .topic-board-travel-card header strong { display: block; }
+.topic-board-travel-card header small { color: var(--board-muted); font: .65rem 'Cinzel', serif; }
+.topic-board-travel-card header strong { color: var(--board-accent-warm); font-size: 1rem; font-weight: 500; overflow-wrap: anywhere; }
+.topic-board-travel-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem 1rem; padding: .8rem 1rem; }
+.topic-board-travel-stats > div { min-width: 0; }
+.topic-board-travel-stats small, .topic-board-travel-stats strong { display: block; overflow-wrap: anywhere; }
+.topic-board-travel-stats small { color: var(--board-muted); font: .6rem 'Cinzel', serif; }
+.topic-board-travel-stats strong { color: var(--board-accent-warm); font-size: .95rem; font-weight: 500; }
+.topic-board-travel-pending, .topic-board-travel-pace { margin: 0; padding: .65rem 1rem; border-top: 1px solid var(--board-line); color: var(--board-muted); font-size: .9rem; font-style: italic; }
+.topic-board-travel-stops { margin: 0; padding: .75rem 1rem .75rem 2.2rem; border-top: 1px solid var(--board-line); color: var(--board-gold-deep); }
+.topic-board-travel-stops li + li { margin-top: .6rem; }
+.topic-board-travel-stops strong, .topic-board-travel-stops span { display: block; font-size: .95rem; overflow-wrap: anywhere; }
+.topic-board-travel-stops span { font-size: .85rem; }
+.topic-board-card-details > footer { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+.topic-board-card-details > footer > div { min-width: 0; }
+.topic-board-card-details > footer small { display: block; margin-bottom: .7rem; color: var(--board-muted); font: .65rem 'Cinzel', serif; }
+.topic-board-local-badge { color: var(--board-muted); font-size: .85rem; }
+.topic-board-card.is-preview .topic-board-card-summary { grid-template-columns: 2.8rem minmax(0, 1fr); }
+.topic-board-card.is-preview .topic-board-schedule-badge { grid-column: 2; grid-row: 2; justify-self: start; }
+.topic-board-card.is-preview .topic-board-summary-cast { grid-column: 2; grid-row: 3; }
+.topic-board-card.is-preview .topic-board-card-details { background: var(--board-paper); }
+
+@media (max-width: 1100px) {
+  .topic-board-card-summary { grid-template-columns: 2.8rem minmax(0, 1fr) 1rem; gap: .75rem; padding: 1rem; }
+  .topic-board-card-icon { width: 2.8rem; height: 2.8rem; }
+  .topic-board-schedule-badge { grid-column: 2; grid-row: 2; justify-self: start; }
+  .topic-board-summary-cast { grid-column: 2; grid-row: 3; }
+  .topic-board-summary-chevron { grid-column: 3; grid-row: 1 / 4; }
+}
+@media (max-width: 760px) {
+  .topic-board-card-actions button { min-height: 44px; }
+  .topic-board-card-actions { gap: .15rem; padding: .4rem .7rem; }
+  .topic-board-card-actions button:first-child { gap: .35rem; }
+  .topic-board-card-details { padding: 1rem; }
+  .topic-board-card-details > footer { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 440px) {
+  .topic-board-card-summary, .topic-board-card.is-preview .topic-board-card-summary { grid-template-columns: 2.2rem minmax(0, 1fr) .7rem; gap: .75rem .6rem; padding: .9rem .75rem; }
+  .topic-board-card-icon { width: 2.2rem; height: 2.2rem; font-size: 1rem; }
+  .topic-board-card-title { font-size: 1.15rem; }
+  .topic-board-summary-excerpt { font-size: .95rem; }
+  .topic-board-card-kicker { font-size: .58rem; }
+  .topic-board-summary-meta { font-size: .82rem; }
+  .topic-board-summary-meta > span { max-width: 100%; white-space: normal; }
+  .topic-board-card-actions { justify-content: space-between; }
+  .topic-board-card-actions button:first-child { flex-basis: 100%; margin: 0; }
+  .topic-board-card-actions button { padding-inline: .4rem; font-size: .9rem; }
+  .topic-board-schedule-badge { padding: .4rem .5rem; gap: .5rem; }
+  .topic-board-schedule-card { grid-template-columns: 1.8rem minmax(0, 1fr); gap: .5rem; padding: .7rem; }
+  .topic-board-schedule-card > div:nth-child(3) { grid-column: 2; margin-top: .5rem; }
+  .topic-board-meta { grid-template-columns: 1fr; }
+  .topic-board-travel-stats { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .topic-board-card, .topic-board-summary-chevron { transition: none; }
+}

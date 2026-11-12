@@ -4879,10 +4879,10 @@ export const SUBSTANCE_ITEM_CATALOG = Object.freeze([
     "offerIds": [
       "standard:taverne:apfelwein",
       "module:2c439c0b409cb43d:c55d99ab26e3cfa1",
-      "module:47dc8f522b82c38e:05897558b580e4ce",
-      "module:33ee466eddb114ac:05897558b580e4ce",
       "module:2043cc3b7c87b0cd:05897558b580e4ce",
       "module:6c37eddd73eea15b:c55d99ab26e3cfa1",
+      "module:47dc8f522b82c38e:05897558b580e4ce",
+      "module:33ee466eddb114ac:05897558b580e4ce",
       "module:cda6f697f4f9fb2f:c55d99ab26e3cfa1",
       "module:3e46fe141133ca66:c55d99ab26e3cfa1",
       "module:cd9d8d3689ad3fa0:c55d99ab26e3cfa1"
@@ -4911,12 +4911,12 @@ export const SUBSTANCE_ITEM_CATALOG = Object.freeze([
     "offerIds": [
       "standard:taverne:branntwein",
       "module:2c439c0b409cb43d:b0567ac389a4b0bb",
+      "module:2043cc3b7c87b0cd:332abf1ba62adfd5",
+      "module:6c37eddd73eea15b:b0567ac389a4b0bb",
       "module:4d1077fc24d00386:309c10a27c469438",
       "module:2a43feed37decd3d:55264175a280ac95",
       "module:47dc8f522b82c38e:332abf1ba62adfd5",
       "module:33ee466eddb114ac:332abf1ba62adfd5",
-      "module:2043cc3b7c87b0cd:332abf1ba62adfd5",
-      "module:6c37eddd73eea15b:b0567ac389a4b0bb",
       "module:cda6f697f4f9fb2f:b0567ac389a4b0bb",
       "module:3e46fe141133ca66:b0567ac389a4b0bb",
       "module:cd9d8d3689ad3fa0:b0567ac389a4b0bb"
@@ -4945,11 +4945,11 @@ export const SUBSTANCE_ITEM_CATALOG = Object.freeze([
     "offerIds": [
       "standard:taverne:duennes-bier",
       "module:2c439c0b409cb43d:4d74c889cefc9459",
+      "module:2043cc3b7c87b0cd:b1c2059d22379f2f",
+      "module:6c37eddd73eea15b:4d74c889cefc9459",
       "module:2a43feed37decd3d:d89602825319f6f4",
       "module:47dc8f522b82c38e:b1c2059d22379f2f",
       "module:33ee466eddb114ac:b1c2059d22379f2f",
-      "module:2043cc3b7c87b0cd:b1c2059d22379f2f",
-      "module:6c37eddd73eea15b:4d74c889cefc9459",
       "module:cda6f697f4f9fb2f:4d74c889cefc9459",
       "module:3e46fe141133ca66:4d74c889cefc9459",
       "module:cd9d8d3689ad3fa0:4d74c889cefc9459"
@@ -4978,9 +4978,9 @@ export const SUBSTANCE_ITEM_CATALOG = Object.freeze([
     "offerIds": [
       "standard:taverne:honigmet",
       "module:2c439c0b409cb43d:245ec52a62ff97f6",
-      "module:47dc8f522b82c38e:8768198b46ceecdb",
       "module:2043cc3b7c87b0cd:8768198b46ceecdb",
       "module:6c37eddd73eea15b:245ec52a62ff97f6",
+      "module:47dc8f522b82c38e:8768198b46ceecdb",
       "module:cda6f697f4f9fb2f:245ec52a62ff97f6",
       "module:3e46fe141133ca66:245ec52a62ff97f6",
       "module:cd9d8d3689ad3fa0:245ec52a62ff97f6"
@@ -5009,9 +5009,9 @@ export const SUBSTANCE_ITEM_CATALOG = Object.freeze([
     "offerIds": [
       "standard:taverne:kloster-spiritus",
       "module:2c439c0b409cb43d:c64b3151c87aaacf",
-      "module:47dc8f522b82c38e:e0bec1882ceb2ba2",
       "module:2043cc3b7c87b0cd:e0bec1882ceb2ba2",
       "module:6c37eddd73eea15b:c64b3151c87aaacf",
+      "module:47dc8f522b82c38e:e0bec1882ceb2ba2",
       "module:cda6f697f4f9fb2f:c64b3151c87aaacf",
       "module:3e46fe141133ca66:c64b3151c87aaacf",
       "module:cd9d8d3689ad3fa0:c64b3151c87aaacf"
@@ -5040,12 +5040,12 @@ export const SUBSTANCE_ITEM_CATALOG = Object.freeze([
     "offerIds": [
       "standard:taverne:klosterbier",
       "module:2c439c0b409cb43d:e18c808a5ce61cdc",
+      "module:2043cc3b7c87b0cd:2f7c42d79ec32271",
+      "module:6c37eddd73eea15b:e18c808a5ce61cdc",
       "module:4d1077fc24d00386:5739a4cae6859414",
       "module:2a43feed37decd3d:f67d2f540c0f08aa",
       "module:47dc8f522b82c38e:2f7c42d79ec32271",
       "module:33ee466eddb114ac:2f7c42d79ec32271",
-      "module:2043cc3b7c87b0cd:2f7c42d79ec32271",
-      "module:6c37eddd73eea15b:e18c808a5ce61cdc",
       "module:cda6f697f4f9fb2f:e18c808a5ce61cdc",
       "module:3e46fe141133ca66:e18c808a5ce61cdc",
       "module:cd9d8d3689ad3fa0:e18c808a5ce61cdc"
@@ -5074,9 +5074,9 @@ export const SUBSTANCE_ITEM_CATALOG = Object.freeze([
     "offerIds": [
       "standard:taverne:kraeuterschnaps",
       "module:2c439c0b409cb43d:f3d718fb237ed1fb",
-      "module:47dc8f522b82c38e:c6158d266efc8f96",
       "module:2043cc3b7c87b0cd:c6158d266efc8f96",
       "module:6c37eddd73eea15b:f3d718fb237ed1fb",
+      "module:47dc8f522b82c38e:c6158d266efc8f96",
       "module:cda6f697f4f9fb2f:f3d718fb237ed1fb",
       "module:3e46fe141133ca66:f3d718fb237ed1fb",
       "module:cd9d8d3689ad3fa0:f3d718fb237ed1fb"
@@ -5105,10 +5105,10 @@ export const SUBSTANCE_ITEM_CATALOG = Object.freeze([
     "offerIds": [
       "standard:taverne:starkbier",
       "module:2c439c0b409cb43d:ab1b5d0718181e43",
-      "module:47dc8f522b82c38e:fecbe8561ee6deae",
-      "module:33ee466eddb114ac:fecbe8561ee6deae",
       "module:2043cc3b7c87b0cd:fecbe8561ee6deae",
       "module:6c37eddd73eea15b:ab1b5d0718181e43",
+      "module:47dc8f522b82c38e:fecbe8561ee6deae",
+      "module:33ee466eddb114ac:fecbe8561ee6deae",
       "module:cda6f697f4f9fb2f:ab1b5d0718181e43",
       "module:3e46fe141133ca66:ab1b5d0718181e43",
       "module:cd9d8d3689ad3fa0:ab1b5d0718181e43"

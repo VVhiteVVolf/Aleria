@@ -140,6 +140,83 @@ test('der Editor startet am Seitendatum und bietet relative Schnelltermine', () 
   assert.deepEqual({ ...target }, { year: 1740, month: 3, day: 13 });
 });
 
+test('gespeicherte Ideen behalten ihren offenen Termin beim erneuten Bearbeiten', () => {
+  const context = loadScheduleUi();
+  const markup = vm.runInContext(`AleriaTopicBoardScheduleUI.renderEditor({
+    startDate: { year: null, month: null, day: null }
+  })`, context);
+  assert.match(markup, /name="scheduleUnscheduled"[^>]*checked/);
+  assert.match(markup, /name="scheduleStartDay"[^>]*value=""[^>]*disabled/);
+  assert.doesNotMatch(markup, /name="scheduleStartDay"[^>]*required/);
+  assert.match(markup, /Termin noch offen/);
+});
+
+test('offener Termin deaktiviert Datumsvalidierung, relative Schnelltermine aktivieren sie wieder', () => {
+  const context = loadScheduleUi();
+  const result = vm.runInContext(`(() => {
+    const summary = { innerHTML: '', dataset: {} };
+    const form = {
+      elements: {
+        scheduleUnscheduled: { checked: true },
+        scheduleStartDay: { value: '15' },
+        scheduleStartMonth: { value: '3' },
+        scheduleStartYear: { value: '1740' },
+        scheduleDurationDays: { value: '2' }
+      },
+      querySelector: selector => selector === '[data-topic-board-schedule-summary]' ? summary : null
+    };
+    AleriaTopicBoardScheduleUI.refresh(form);
+    const unscheduled = AleriaTopicBoardScheduleUI.collect(form);
+    const disabled = form.elements.scheduleStartDay.disabled;
+    const required = form.elements.scheduleStartDay.required;
+    const summaryMarkup = summary.innerHTML;
+    AleriaTopicBoardScheduleUI.setOffset(form, 2);
+    return {
+      unscheduled, disabled, required, summaryMarkup,
+      rescheduled: AleriaTopicBoardScheduleUI.collect(form),
+      checked: form.elements.scheduleUnscheduled.checked,
+      reenabled: !form.elements.scheduleStartDay.disabled && form.elements.scheduleStartDay.required
+    };
+  })()`, context);
+  assert.equal(result.unscheduled.startDate.year, null);
+  assert.equal(result.unscheduled.endDate, null);
+  assert.equal(result.unscheduled.durationDays, 2);
+  assert.equal(result.disabled, true);
+  assert.equal(result.required, false);
+  assert.match(result.summaryMarkup, /Termin noch offen/);
+  assert.equal(result.rescheduled.startDate.day, 11);
+  assert.equal(result.checked, false);
+  assert.equal(result.reenabled, true);
+});
+
+test('eine Reiseidee ohne Termin behält Route und Dauer, aber erhält keine erfundene Abfahrt', () => {
+  const context = loadCompletePlanningEditorUi();
+  context.document = {
+    querySelector: () => ({
+      elements: {
+        title: { value: 'Irgendwann nach Abergwint' },
+        scheduleUnscheduled: { checked: true },
+        scheduleStartDay: { value: '9' },
+        scheduleStartMonth: { value: '3' },
+        scheduleStartYear: { value: '1740' },
+        scheduleDurationDays: { value: '' },
+        travelEnabled: { checked: true },
+        travelOrigin: { value: 'Celtigerns Wacht' },
+        travelDestination: { value: 'Abergwint' },
+        travelManualDays: { value: '4' }
+      },
+      querySelectorAll: () => []
+    })
+  };
+  const payload = vm.runInContext('collectTopicBoardFormPayload()', context);
+  assert.equal(payload.schedule.startDate.year, null);
+  assert.equal(payload.travel.departureDate.year, null);
+  assert.equal(payload.travel.arrivalDate, null);
+  assert.equal(payload.travel.origin, 'Celtigerns Wacht');
+  assert.equal(payload.travel.destination, 'Abergwint');
+  assert.equal(payload.travel.totalDays, 4);
+});
+
 test('der vollständige Editor montiert Termin- und Reiseplanung in feste Formularplätze', () => {
   const context = loadCompletePlanningEditorUi();
   const scheduleSlot = { innerHTML: '', dataset: {} };
@@ -169,7 +246,7 @@ test('Kalendermodul und Firebase-Feldfreigabe sind in der Anwendung verdrahtet',
   const firebase = fs.readFileSync(new URL('../firebase.js', import.meta.url), 'utf8');
   const ui = fs.readFileSync(new URL('../modules/topic-board/topic-board-ui.js', import.meta.url), 'utf8');
   const events = fs.readFileSync(new URL('../modules/topic-board/topic-board-events.js', import.meta.url), 'utf8');
-  const css = fs.readFileSync(new URL('../styles/topic-board.css', import.meta.url), 'utf8');
+  const css = fs.readFileSync(new URL('../styles/topic-board-editor.css', import.meta.url), 'utf8');
   const scheduleIndex = html.indexOf('topic-board-schedule.js');
   const modelIndex = html.indexOf('topic-board-model.js');
 
@@ -183,6 +260,7 @@ test('Kalendermodul und Firebase-Feldfreigabe sind in der Anwendung verdrahtet',
   assert.match(ui, /data-topic-board-editor-section-target="travel"/);
   assert.match(events, /action === 'scroll-editor-section'/);
   assert.match(css, /\.topic-board-editor-sections\s*\{/);
-  assert.match(css, /\.topic-board-dialog\s*\{[^}]*width:\s*min\(1600px/s);
-  assert.match(css, /\.topic-board-editor\s*\{[^}]*width:\s*min\(640px/s);
+  assert.match(html, /styles\/topic-board-editor\.css/);
+  assert.match(html, /styles\/topic-board-cards\.css/);
+  assert.match(css, /\.topic-board-editor\s*\{[^}]*position:\s*absolute/s);
 });

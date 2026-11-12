@@ -19,6 +19,7 @@ const COMMENT_KIND_LABELS = {
   prayer: 'Gebet',
   flirt: 'Flirt',
   secretaction: 'Geheimaktion',
+  foreignvoice: 'Fremde Stimme',
   combataction: 'Kampfbeschreibung',
   narrator: 'Erzähler',
   'scene-time-event': 'Szenenzeit',
@@ -45,6 +46,7 @@ const COMMENT_KIND_ICONS = {
   prayer: '../IconOrdner/Buttom Icons/Beten.PNG',
   flirt: '../IconOrdner/Buttom Icons/Flirt.PNG',
   secretaction: '../IconOrdner/Buttom Icons/Geheimaktion.PNG',
+  foreignvoice: './public/assets/comment-icons/foreign-voice.png',
   combataction: '../IconOrdner/Buttom Icons/Kampfhandlung.PNG'
 };
 
@@ -88,6 +90,8 @@ const COMMENT_KIND_ALIASES = {
   geheimaktion: 'secretaction',
   geheimhandlung: 'secretaction',
   secret: 'secretaction',
+  'fremde stimme': 'foreignvoice',
+  fremdestimme: 'foreignvoice',
   kampfhandlung: 'combataction',
   kampf: 'combataction',
   combat: 'combataction'
@@ -125,7 +129,7 @@ function getCommentKindButtonIconMarkup(kind, className = 'comment-kind-icon') {
 }
 
 function commentKindUsesQuoteMark(kind) {
-  return ['speech', 'foreign', 'shout', 'performance', 'song', 'telepathy', 'spell', 'madness', 'prayer', 'flirt'].includes(normalizeCommentKind(kind));
+  return ['speech', 'foreignvoice', 'foreign', 'shout', 'performance', 'song', 'telepathy', 'spell', 'madness', 'prayer', 'flirt'].includes(normalizeCommentKind(kind));
 }
 
 function buildAnimalCommentTextMarkup(text, commentId, partIdx) {
@@ -139,6 +143,8 @@ function buildAnimalCommentTextMarkup(text, commentId, partIdx) {
 }
 
 function getCommentCharacterForStoredComment(c) {
+  if ((c?.commentKind || c?.kind) === 'foreignvoice') return null;
+  if ((c?.commentKind || c?.kind) === 'secretaction' && c.commentMode === 'narrator') return null;
   if (typeof getAvailableCommentCharacterById === 'function' && c?.characterId) {
     const byId = getAvailableCommentCharacterById(c.characterId);
     if (byId) return byId;
@@ -147,6 +153,15 @@ function getCommentCharacterForStoredComment(c) {
     return getAvailableCommentCharacterByName(c.charName);
   }
   return null;
+}
+
+function getCommentNarratorSecretActionPresentation() {
+  return {
+    commentMode: 'narrator', narrator: false,
+    charName: 'Unbekannte Gestalt', charTitle: '', portrait: null,
+    characterId: '', imageSetId: '', emoteIndex: null, avatarKind: 'silhouette',
+    actorType: '', creatureId: '', sceneActorId: '', sceneActorSourceId: ''
+  };
 }
 
 function getCommentEmotePortrait(c, idx) {
@@ -319,11 +334,20 @@ function renderCommentBubble(c, idx) {
     }).join('');
   }
 
+  const isForeignVoice = (c.commentKind || c.kind) === 'foreignvoice';
+  const isNarratorSecretAction = (c.commentKind || c.kind) === 'secretaction' && c.commentMode === 'narrator';
+  const hasAnonymousPresentation = isForeignVoice || isNarratorSecretAction;
+  if (isForeignVoice) {
+    c = { ...c, ...AleriaCommentForeignVoice.getPresentation(c), narrator: false,
+      actorType: '', creatureId: '', sceneActorId: '', sceneActorSourceId: '' };
+  } else if (isNarratorSecretAction) {
+    c = { ...c, ...getCommentNarratorSecretActionPresentation() };
+  }
   const commentId = escapeHtml(c.id);
   const charName = c.charName || 'Unbekannt';
   const safeCharName = escapeHtml(charName);
   const safeCharTitle = escapeHtml(c.charTitle || '');
-  const speakerProfileAttrs = [
+  const speakerProfileAttrs = hasAnonymousPresentation ? '' : [
     'data-action="open-speaker-profile"',
     `data-speaker-name="${safeCharName}"`,
     `data-speaker-title="${safeCharTitle}"`,
@@ -363,10 +387,12 @@ function renderCommentBubble(c, idx) {
   const entries = parts.map((part, partIdx) => {
     const portraitMarkup = part.portrait
       ? `<img class="comment-portrait${isSecretAction ? ' comment-portrait-silhouette' : ''}" src="${part.portrait}" alt="${safeDisplayCharName}" loading="lazy" decoding="async" ${speakerProfileAttrs}>`
-      : `<button type="button" class="comment-portrait-placeholder${isSecretAction ? ' comment-portrait-silhouette' : ''}" ${speakerProfileAttrs}>${isSecretAction ? '?' : getInitialChar(charName)}</button>`;
+      : isNarratorSecretAction
+        ? '<span class="comment-portrait-placeholder comment-portrait-silhouette" aria-label="Unbekannte Gestalt">?</span>'
+        : `<button type="button" class="comment-portrait-placeholder${isSecretAction ? ' comment-portrait-silhouette' : ''}" ${speakerProfileAttrs}>${isSecretAction ? '?' : getInitialChar(charName)}</button>`;
     const combatProfileCharacterId = String(c.sceneActorSourceId || c.creatureId || c.characterId || '').trim();
     const combatActorId = String(c.sceneActorId || c.characterId || combatProfileCharacterId).trim();
-    const portrait = isCompactUsage ? portraitMarkup : (window.AleriaCommentCombatMiniProfile?.renderPortrait?.({
+    const portrait = isCompactUsage || hasAnonymousPresentation ? portraitMarkup : (window.AleriaCommentCombatMiniProfile?.renderPortrait?.({
       portraitMarkup,
       characterId: combatProfileCharacterId,
       actorId: combatActorId,
@@ -408,11 +434,11 @@ function renderCommentBubble(c, idx) {
     }
 
     return `
-      <div class="comment-entry ${side} ${partIdx ? 'comment-subentry' : ''}${isFusedAction ? ' comment-entry-fused' : ''}" data-comment-id="${commentId}">
+      <div class="comment-entry ${side} ${partIdx ? 'comment-subentry' : ''}${isFusedAction ? ' comment-entry-fused' : ''}${isNarratorSecretAction ? ' comment-entry-narrator-secret' : ''}" data-comment-id="${commentId}">
         ${portrait}
         <div class="comment-content">
           <div class="comment-char-header">
-            <button type="button" class="comment-char-name" ${speakerProfileAttrs}>${safeDisplayCharName}</button>
+            ${hasAnonymousPresentation ? `<span class="comment-char-name${isForeignVoice ? ' comment-foreign-voice-speaker' : ''}">${safeDisplayCharName}</span>` : `<button type="button" class="comment-char-name" ${speakerProfileAttrs}>${safeDisplayCharName}</button>`}
             ${(c.charTitle && !isSecretAction) ? `<div class="comment-char-title">${safeCharTitle}</div>` : ''}
           </div>
           <div class="comment-body comment-kind-${commentKind}"${getCommentLanguageBubbleAttributes(c, commentKind)}>

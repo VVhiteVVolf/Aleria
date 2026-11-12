@@ -1,0 +1,444 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "id": "boy",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-7ecb88d4-2ce7-44be-ad8c-f7d83ed54b5b.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/boy-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/boy.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "girl",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-3b1edd8f-09bf-46ea-8d6d-49b97f05e489.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/girl-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/girl.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "woman",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-5d75d222-ea7c-4a6e-93a2-8cbe062093ec.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/woman-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/woman.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "man",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-f0177d87-0ece-461d-a084-b63c37649d7c.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/man-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/man.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "person",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-cd7be023-d1c4-4ce5-853b-c8388a34832f.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/person-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/person.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "foreign-voice-icon",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-131aa59a-5538-41ee-a7c5-6c306d95720b.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/foreign-voice-icon-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-icons/foreign-voice.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "boy-2",
+      "group": "boy",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-823dcc34-6b5f-4d2c-a20b-e6c2901bfc00.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/boy-2-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/boy-2.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true,
+      "promptFile": "generation-prompts-additions-v2.json",
+      "referenceAssetId": "boy",
+      "sha256": "dc6cc70194b57ccea75722ca594a16aa0f7a11f23e501546725dcd065ad9d3bc",
+      "bytes": 1627609,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha": {
+        "fullyTransparentPixels": 0,
+        "fullyOpaquePixels": 1572516,
+        "partialPixels": 0,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ],
+        "center": 255
+      }
+    },
+    {
+      "id": "boy-3",
+      "group": "boy",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-9e369df6-8a52-4e7c-8dbd-7dd182b2ac0a.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/boy-3-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/boy-3.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true,
+      "promptFile": "generation-prompts-additions-v2.json",
+      "referenceAssetId": "boy",
+      "sha256": "deef1c256175a84e769b2932fb1b8fdb1e5631058b12e4a65d073fdfab3546d0",
+      "bytes": 1633961,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha": {
+        "fullyTransparentPixels": 0,
+        "fullyOpaquePixels": 1572516,
+        "partialPixels": 0,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ],
+        "center": 255
+      }
+    },
+    {
+      "id": "girl-2",
+      "group": "girl",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-b546089f-6d28-49d8-8cd0-b9ab42594ea8.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/girl-2-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/girl-2.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true,
+      "promptFile": "generation-prompts-additions-v2.json",
+      "referenceAssetId": "girl",
+      "sha256": "6bf1c4ab9cf3e1e3c2f0e2e6b72a4b65d564dbc485f5cd44644006b8bdae5976",
+      "bytes": 1774608,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha": {
+        "fullyTransparentPixels": 0,
+        "fullyOpaquePixels": 1572516,
+        "partialPixels": 0,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ],
+        "center": 255
+      }
+    },
+    {
+      "id": "girl-3",
+      "group": "girl",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-494edce0-bd0d-48c9-92fc-f1594d67c0d2.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/girl-3-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/girl-3.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true,
+      "promptFile": "generation-prompts-additions-v2.json",
+      "referenceAssetId": "girl",
+      "sha256": "47ab71f0de206748242c385573107604698ba8c6c5a42eb881efc4a0bf2d76d6",
+      "bytes": 1731121,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha": {
+        "fullyTransparentPixels": 0,
+        "fullyOpaquePixels": 1572516,
+        "partialPixels": 0,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ],
+        "center": 255
+      }
+    },
+    {
+      "id": "woman-2",
+      "group": "woman",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-a3ef1f47-71f3-4ef5-89dc-3dd10a3fba08.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/woman-2-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/woman-2.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true,
+      "promptFile": "generation-prompts-additions-v2.json",
+      "referenceAssetId": "woman",
+      "sha256": "20393db8ec3867a519c2cb2bd1cf61c512de306f0631eeb541f5225329ca9024",
+      "bytes": 1739079,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha": {
+        "fullyTransparentPixels": 0,
+        "fullyOpaquePixels": 1572516,
+        "partialPixels": 0,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ],
+        "center": 255
+      }
+    },
+    {
+      "id": "woman-3",
+      "group": "woman",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-b589954e-2e0a-459e-a0a3-b83f5d00c31a.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/woman-3-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/woman-3.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true,
+      "promptFile": "generation-prompts-additions-v2.json",
+      "referenceAssetId": "woman",
+      "sha256": "bd0161686d49e562004a89201ff02b46ee56a94b69e3862e0f7517eb61ff01f9",
+      "bytes": 1716507,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha": {
+        "fullyTransparentPixels": 0,
+        "fullyOpaquePixels": 1572516,
+        "partialPixels": 0,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ],
+        "center": 255
+      }
+    },
+    {
+      "id": "man-2",
+      "group": "man",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-8b112fe8-700a-4bce-a463-06d3b1cc72e3.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/man-2-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/man-2.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true,
+      "promptFile": "generation-prompts-additions-v2.json",
+      "referenceAssetId": "man",
+      "sha256": "72878d8bf1c185f74c60f5b303f054d314c20c1fd883e7f02864a87bc5ba70c7",
+      "bytes": 1707170,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha": {
+        "fullyTransparentPixels": 0,
+        "fullyOpaquePixels": 1572516,
+        "partialPixels": 0,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ],
+        "center": 255
+      }
+    },
+    {
+      "id": "man-3",
+      "group": "man",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-37e35e96-e658-47a8-af80-5ea83abde170.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/man-3-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/man-3.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true,
+      "promptFile": "generation-prompts-additions-v2.json",
+      "referenceAssetId": "man",
+      "sha256": "125ea1d0b13ddd29cabcbf2ac221d017a87ca7e53aa965c28f99ffa19c59c468",
+      "bytes": 1717433,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha": {
+        "fullyTransparentPixels": 0,
+        "fullyOpaquePixels": 1572516,
+        "partialPixels": 0,
+        "corners": [
+          255,
+          255,
+          255,
+          255
+        ],
+        "center": 255
+      }
+    },
+    {
+      "id": "elderly-woman",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-5ec2c960-7a13-4106-b1b5-b8b204ffaf68.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/elderly-woman-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/elderly-woman.png",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/elderly-woman.json",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "elderly-citizen",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-06baef30-0d18-4537-aae4-9d6d5ae8ae71.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/elderly-citizen-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/elderly-citizen.png",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/elderly-citizen.json",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "courtesan",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-1a58b028-86cb-4cbf-97be-aeb40611e5e2.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/courtesan-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/courtesan.png",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/courtesan.json",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "servant",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd40-5070-7080-8b8b-af7681ddad67\\exec-240bf3f2-0cf2-4f17-8fa5-21fe803272a5.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/servant-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/servant.png",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/servant.json",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "city-guard",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd40-5070-7080-8b8b-af7681ddad67\\exec-a09ce482-29b5-4303-90c5-92babb17b5cf.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/city-guard-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/city-guard.png",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/city-guard.json",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "knight",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd40-5070-7080-8b8b-af7681ddad67\\exec-0728995b-9dee-4c29-9f5f-c401a3002500.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/knight-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/knight.png",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/knight.json",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "mercenary",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd40-5070-7080-8b8b-af7681ddad67\\exec-d3e59266-a3a9-467d-9405-f2dde3ccb54c.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/mercenary-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/mercenary.png",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/mercenary.json",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "robber",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-29071440-40f8-4ab5-9b99-169c77e57fce.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/robber-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/robber.png",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/robber.json",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "knight-2",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-2a80-78c1-862d-49f020e4f087\\exec-038768a5-dce3-4cc5-b5f8-26c40d3a0cfc.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/knight-2-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/knight-2.png",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/knight-2.json",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "mercenary-2",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-2a80-78c1-862d-49f020e4f087\\exec-9f6a605f-3417-4894-9339-dbae8840134a.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/mercenary-2-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/mercenary-2.png",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/mercenary-2.json",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    }
+  ],
+  "references": [
+    {
+      "path": "IconOrdner/Buttom Icons/Rede.PNG",
+      "copy": "assets/source/comment-foreign-voice/2026-11-08/references/rede.png",
+      "role": "circular speech button icon style"
+    },
+    {
+      "path": "AleriaAlmanach/public/assets/comment-icons/interact.png",
+      "copy": "assets/source/comment-foreign-voice/2026-11-08/references/interact.png",
+      "role": "gold/olive icon series style"
+    }
+  ],
+  "lastUpdated": "2026-11-12"
+}

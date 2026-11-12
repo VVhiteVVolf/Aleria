@@ -4,6 +4,7 @@ import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { nextMechanicalCommentOrderKey } from './mechanical-comment-order.js';
 import { buildSceneItemSegments } from './scene-item-authoring.js';
 import { prepareUniqueItemClaims } from '../items/item-definition-repository.js';
+import { normalizeCommentSceneStartDate } from '../comments/comment-scene-date.js';
 const clean = (value, max) => String(value || '').trim().slice(0, max);
 
 export async function placeSceneItem({ database, auth, input, now = Date.now() }) {
@@ -12,10 +13,12 @@ export async function placeSceneItem({ database, auth, input, now = Date.now() }
   const entryId = clean(input.entryId, 240), operationId = clean(input.operationId, 80);
   if (!entryId || !/^[a-zA-Z0-9-]{8,80}$/.test(operationId)) throw new HttpsError('invalid-argument', 'Szene und Vorgangskennung fehlen.');
   const legacy = !Array.isArray(input.commentSegments);
-  const segments = legacy ? [{ kind: 'sceneitem', sceneItemDraft: input }] : input.commentSegments;
+  const { sceneStartDateAleria: proposedSceneDate, ...legacyDraft } = input;
+  const segments = legacy ? [{ kind: 'sceneitem', sceneItemDraft: legacyDraft }] : input.commentSegments;
   if (!segments.length || segments.length > 24 || segments.some(segment => !segment || typeof segment !== 'object') || !segments.some(segment => segment.kind === 'sceneitem') || JSON.stringify(segments).length > 150000) {
     throw new HttpsError('invalid-argument', 'Bitte einen gültigen Gegenstandsabschnitt anlegen (maximal 24 Abschnitte).');
   }
+  const sceneStartDateAleria = normalizeCommentSceneStartDate(proposedSceneDate);
   const fingerprint = createHash('sha256').update(JSON.stringify({ entryId, segments })).digest('hex');
   const id = `scene-item-${auth.uid}-${operationId}`;
   const ref = database.collection('comments').doc(id);
@@ -23,6 +26,8 @@ export async function placeSceneItem({ database, auth, input, now = Date.now() }
     const existing = await transaction.get(ref);
     if (existing.exists) {
       const saved = existing.data();
+      // Calendar metadata does not change operation identity: retries retain
+      // the date of the first committed contribution, including old receipts.
       if (saved.entryId !== entryId || (saved.sceneItemFingerprint && saved.sceneItemFingerprint !== fingerprint)) throw new HttpsError('failed-precondition', 'Dieser Vorgang wurde bereits mit anderem Inhalt gespeichert. Bitte zuerst die Szene neu laden.');
       return { id, sceneItemEvent: saved.sceneItemEvent || saved.commentSegments?.find(segment => segment.sceneItemEvent)?.sceneItemEvent };
     }
@@ -42,6 +47,7 @@ export async function placeSceneItem({ database, auth, input, now = Date.now() }
     claim();
     transaction.create(ref, { entryId, text: commentSegments.map(segment => segment.text).join('\n\n'), charName: 'Erzähler', narrator: true, characterId: '', portrait: null,
       commentKind: legacy ? 'scene-item-event' : 'narrator', commentMode: 'narrator',
+      sceneStartDateAleria,
       ...(legacy ? { sceneItemEvent, commentSegments: null } : { commentSegments }),
       sceneItemFingerprint: fingerprint, serverValidatedMechanics: true, mechanicalAudit: true, createdBy: auth.uid, createdByRole: auth.token.aleriaRole,
       ...(claim.undo.length ? { itemClaimUndo: claim.undo } : {}),

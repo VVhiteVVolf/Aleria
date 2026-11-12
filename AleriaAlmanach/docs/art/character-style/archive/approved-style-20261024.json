@@ -1,0 +1,20 @@
+{
+  "style": "fantasy-rpg-character",
+  "styleRevision": "2026-10-24-matte-painted-reference-figures",
+  "approvedAt": "2026-10-24",
+  "approvalQuote": "Genau so! Bitte überschreibe den stil, den wir vorher hatten auf diesen!",
+  "referenceImage": "2026-10-24-approved-house-knight.png",
+  "tool": "built-in image_gen",
+  "prompts": [
+    "Use ONLY the THREE newly attached knight pictures from the user's last message as STRICT STYLE REFERENCES. The earlier generated blue knight images were REJECTED: do not carry their style forward. Make ONE new full-body knight for House Cymrath O'Traethlan in the EXACT quiet painted style of the three user references. Upright calm three-quarter standing pose, full figure from helmet plume to boots, gently simplified body proportions and large clear armor shapes. Closed visor helmet. Muted dusty blue tabard and cloak, dull ochre-gold trim, subdued grey steel plate with very soft shading. A simple GOLDEN WINGED LION emblem in a circle on the blue breastcloth matches this house. The knight rests one gauntleted hand on the pommel of a straight sword whose point faces down; other hand at his side, like the calm reference poses. Fine uniform dry grainy pigment texture, matte hand-painted gouache, restrained soft tonal changes, thin soft painted edge definition. Match the simple stylized little fantasy game figure feeling, NOT realistic illustration. NO thick black ink contours, NO bright saturated blue, NO glittering metal, NO dramatic sweeping cloak, NO oil impasto, NO paint splashes, NO paper rectangle, NO scenery, NO ground or shadow. Character cleanly isolated on TRUE TRANSPARENT PNG background. Portrait 2:3. No text. Study the reference silhouettes, muted finish, soft contour treatment and restrained detail level and closely reproduce that VISUAL LANGUAGE while changing the heraldry to this blue-and-gold winged-lion house.",
+    "Keep the knight in the most recent image EXACTLY as drawn: same quiet matte grainy painted style, closed helmet, dusty blue and ochre-gold tabard, circular winged-lion emblem, straight sword, same full-body pose and proportions. Correct ONLY the cutout: REMOVE ALL of the broad hazy grey-blue/yellow glow, fog and shadow currently surrounding the character. This must be a clean isolated sprite with genuinely fully transparent pixels immediately outside the actual silhouette of armor, plume, cape, boots and sword. Make the character itself fully opaque. The gaps between sword and legs and around the gauntlet must be transparent. No outer shadows, no lighting bloom, no aura, no gradient backdrop, no dark halo, no paint haze. Preserve the thin painted silhouette edge and subtle fine pigment texture WITHIN the character. Portrait PNG 2:3. Do not add or redesign anything."
+  ],
+  "supersedes": "Bisheriger Oblivion-Classes-/Aquarell-RPG-Stil einschließlich der verworfenen realistischen, Comic- und Color-Bleed-/Ölfassungen.",
+  "notes": "Benutzerbilder und zuletzt freigegebener Hausritter bestimmen den Stil. Der Hausritter ist eine repräsentative Illustration für Cymrath O'Traethlan, kein Personenporträt.",
+  "approvedDesignReference": {
+    "image": "2026-10-24-approved-venalys-knight.png",
+    "house": "Cymrath O’Traethlan",
+    "culture": "Venalysisch",
+    "approvalQuote": "Sehr schön! Stil gut, design gut, fahre so weiter fort."
+  }
+}

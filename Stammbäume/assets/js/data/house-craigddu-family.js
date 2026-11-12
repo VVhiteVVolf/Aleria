@@ -4,6 +4,8 @@ import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profi
 import { createFamilyPerson, createMarriage, createParentages, createMarriedAwayBranch } from './family-record-builders.js';
 import { COEDDU_CRAIGDDU_MARRIAGE } from './coeddu-craigddu-marriage.js';
 import { LLYWELYN_COEDDU_BIOGRAPHY } from './person-biographies/llywelyn-coeddu.js';
+import { CRAIGDDU_PORTRAITS } from './house-craigddu-portraits.js';
+import { preserveSourceMetadataBoundaries, withSourceFamilyFieldUpgrade } from './source-family-field-upgrade.js';
 
 const EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Craigddu.png';
 const COEDDU_EMBLEM = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Coeddu.png';
@@ -23,7 +25,7 @@ function child(id, childId, parentIds, partnershipId) {
   return { id, childId, parentIds, partnershipId, type: 'biological', legitimacy: 'legitimate', certainty: 'confirmed', visibility: 'public', notes: '', extensions: {} };
 }
 
-const HOUSE_CRAIGDDU_FAMILY_BEFORE_TAILORING = Object.freeze({
+const CRAIGDDU_SOURCE_FAMILY = Object.freeze({
   schema: 'aleria.family-tree', schemaVersion: 1,
   document: {
     id: 'craigddu', title: 'Haus Craigddu', motto: '',
@@ -43,7 +45,8 @@ const HOUSE_CRAIGDDU_FAMILY_BEFORE_TAILORING = Object.freeze({
     person('craigddu-gruender', 'Iestyn Craigddu', 'male', '1680', {
       title: 'Vater von Hywel und Catrin',
       notes: 'Ehemann Mareds und Bruder von Brenwyn und Cyran Craigddu. Vater von Hywel und Catrin.',
-      extensions: { registryManagedFields: ['title', 'lineageRole', 'tags', 'notes'] }
+      extensions: { registryManagedFields: ['title', 'lineageRole', 'tags', 'notes'],
+        registryManagedFieldPreviousValues: { portrait: ['', 'assets/images/placeholders/male.png'] } }
     }),
     person('craigddu-gruenderin', 'Mared', 'female', '1683', {
       title: 'Mutter von Hywel und Catrin', familyRole: 'married', lineageRole: 'branch',
@@ -171,5 +174,14 @@ const HOUSE_CRAIGDDU_FAMILY_BEFORE_TAILORING = Object.freeze({
     registryManagedExtensionFields: ['registry', 'sourceNote', 'generatorProfile']
   }
 });
+
+// A portrait revision must preserve earlier genealogy, metadata and edited images.
+const HOUSE_CRAIGDDU_FAMILY_BEFORE_TAILORING = Object.freeze(withSourceFamilyFieldUpgrade(
+  preserveSourceMetadataBoundaries(CRAIGDDU_SOURCE_FAMILY),
+  { revision: 5, collections: { persons: {
+    'craigddu-gruender': { portrait: CRAIGDDU_PORTRAITS['craigddu-gruender'] }
+  } } },
+  { inventory: 'assets/images/portraits/haus-craigddu/portrait-sources.json', marker: 'fatherPortraitInventory' }
+));
 
 export const HOUSE_CRAIGDDU_FAMILY = withGwniwrCraigdduLink(HOUSE_CRAIGDDU_FAMILY_BEFORE_TAILORING);

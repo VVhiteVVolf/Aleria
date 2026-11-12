@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "date": "2026-11-12",
+  "sourceDocument": "Avatar_Prompts_23_Sets.docx",
+  "sourceSha256": "facb4defa9d49c546656136eaf824297d557d3a737990949ed4492430dd3e982",
+  "setCount": 23,
+  "panelCount": 207,
+  "newSetsSourceSha256": "bb7a0d2eddad96898e3853c873bc49ee92219ca29a26d3079510e6b0bac62422",
+  "retained20Sha256": "02a1bdc1728767d2a5e16c0516592d60d403b41b8bfc73275098da2c5a195f69",
+  "first20PromptsExact": true,
+  "visualReview": {
+    "status": "passed",
+    "docxSha256": "facb4defa9d49c546656136eaf824297d557d3a737990949ed4492430dd3e982",
+    "allPagesActuallyViewed": true,
+    "pageCount": 28,
+    "dpi": 144,
+    "method": "Native Word PrintLayout Page.EnhMetaFileBits with Windows GDI+144dpi; all page images actually inspected. Ten exact SHA256-identical page images reuse the documented prior20v2 individual views.",
+    "newlyViewedPages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      13,
+      14,
+      15,
+      16,
+      17,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "priorActuallyViewedByteIdenticalPages": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      18,
+      19,
+      20,
+      21
+    ],
+    "reviewReports": [
+      "pages-1-14-visual-review.json",
+      "pages-15-28-visual-review.json"
+    ],
+    "renderReport": "render-emf/native-render-report.json",
+    "packagedRendererLimitation": "Bundled render_docx.py was attempted; runtime has no LibreOffice and native PDF/XPS filters block. Native Word pages are the actual layout fallback, not a synthetic recreation.",
+    "findings": []
+  },
+  "generated": [
+    {
+      "path": "Anleitungen\\Avatar_Prompts_23_Sets.docx",
+      "sha256": "facb4defa9d49c546656136eaf824297d557d3a737990949ed4492430dd3e982"
+    },
+    {
+      "path": "Anleitungen\\avatar-prompt-sets-23.json",
+      "sha256": "c453e9915b749e46ad22c4f1233d5ec2aa49e903a0d31218b7dc64e233f8667e"
+    },
+    {
+      "path": "Anleitungen\\Lesefassungen\\Avatar_Prompts_23_Sets.txt",
+      "sha256": "513d283df20967351f8bf67776af995bc9db189c6f771d9e64fd85a2be79b267"
+    }
+  ]
+}

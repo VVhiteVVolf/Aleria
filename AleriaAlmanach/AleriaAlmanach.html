@@ -30,6 +30,7 @@
 <link rel="stylesheet" href="./modules/archive/archive-hierarchy.css?v=20261019-bannkreis-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20261006-story-spacing-v2">
   <link rel="stylesheet" href="./styles/comments.css?v=20261104-comment-controls-v1">
+  <link rel="stylesheet" href="./styles/comments-foreign-voice.css?v=20261108-foreign-voice-v5">
   <link rel="stylesheet" href="./styles/scene-backup.css?v=20261012-scene-backup-v1">
   <link rel="stylesheet" href="./modules/comments/embedded-comments.css?v=20260909-newspaper-guilds-v1">
   <link rel="stylesheet" href="./styles/comments-fazit.css?v=20260821-fazit-workbench-v3">
@@ -48,6 +49,7 @@
 <link rel="stylesheet" href="./styles/scene-items.css?v=20260922-scene-items-v2">
 <link rel="stylesheet" href="./styles/scene-inventory.css?v=20261105-scene-money-v1">
 <link rel="stylesheet" href="./styles/scene-trade.css?v=20261104-scene-trade-v1">
+<link rel="stylesheet" href="./styles/catalog-purchase.css?v=20261108-catalog-purchase-v1">
 <link rel="stylesheet" href="./styles/scene-trade-notification.css?v=20261104-scene-trade-v1">
 <link rel="stylesheet" href="./styles/comment-attachment.css?v=20260710-image-attachment-v1">
 <link rel="stylesheet" href="./styles/scene-time.css?v=20260919-play-days-v1">
@@ -128,8 +130,10 @@
 <link rel="stylesheet" href="./modules/item-register/item-register-providers.css?v=20261007-provider-groups-v1">
 <link rel="stylesheet" href="./modules/regional-equipment/regional-equipment.css?v=20261006-regional-equipment-v2">
 <link rel="stylesheet" href="./styles/icon-directory.css?v=20260704-icon-directory-list-v1">
-<link rel="stylesheet" href="./styles/topic-board.css?v=20261012-topic-board-image-button-v1">
-<link rel="stylesheet" href="./styles/topic-board-participants.css?v=20260911-topic-board-studio-v1">
+<link rel="stylesheet" href="./styles/topic-board.css?v=20261108-play-planning-v1">
+<link rel="stylesheet" href="./styles/topic-board-cards.css?v=20261108-play-planning-v1">
+<link rel="stylesheet" href="./styles/topic-board-editor.css?v=20261108-play-planning-v1">
+<link rel="stylesheet" href="./styles/topic-board-participants.css?v=20261108-play-planning-v1">
 <link rel="stylesheet" href="./styles/world-date.css?v=20261105-latest-scene-v1">
 <link rel="stylesheet" href="./styles/mobile.css?v=20260910-archive-navigation-v1" media="(max-width: 640px)">
 <link rel="stylesheet" href="./styles/session-mobile.css?v=20261017-intro-collapse-v1">
@@ -197,6 +201,7 @@
   <script src="./modules/gwniwr/gwniwr-data.js?v=20261108-schneider-v1" defer></script>
   <script src="./modules/maerllys/maerllys-data.js?v=20261108-schneider-v1" defer></script>
   <script src="./modules/goldene-fassung/ffals-data.js?v=20261109-ffals-v1" defer></script>
+  <script src="./modules/loer-hofjuwelier/aurdden-data.js?v=20261109-aurdden-v1" defer></script>
   <script src="./modules/zum-honigtoertchen/honigtoertchen-data.js?v=20261105-v1" defer></script>
   <script src="./modules/gwynthor-theater/theater-data.js?v=20261031-formlingssache" defer></script>
   <script src="./modules/gwynthor-arena/arena-data.js?v=20261017-local-v1" defer></script>
@@ -251,13 +256,13 @@
   <script src="./modules/session/session-focus.js?v=20260908-module-navigation-v1" defer></script>
   <script src="./modules/module-store/module-section-policy.js?v=20260826-section-policy-v1" defer></script>
   <script src="./modules/module-store/module-store-tree.js?v=20261019-bannkreis-v1" defer></script>
-  <script src="./modules/module-store/module-store-local.js?v=20261104-online-priority-v1" defer></script>
-  <script src="./modules/module-store/module-store-sync.js?v=20261104-online-priority-v1" defer></script>
+  <script src="./modules/module-store/module-store-local.js?v=20261107-tab-sync-v1" defer></script>
+  <script src="./modules/module-store/module-store-sync.js?v=20261107-tab-sync-v1" defer></script>
   <script src="./modules/module-store/module-store-sections.js?v=20261019-bannkreis-v1" defer></script>
   <script src="./modules/module-store/module-entry-write.js?v=20261005-group-edit-access-v1" defer></script>
   <script src="./modules/world-date/world-date-model.js?v=20260826-world-date-v1" defer></script>
   <script src="./modules/world-date/world-date-store.js?v=20260826-world-date-shared-v4" defer></script>
-  <script src="./modules/world-date/world-date-scene-default.js?v=20260911-calendar-v2" defer></script>
+  <script src="./modules/world-date/world-date-scene-default.js?v=20261107-comment-date-v1" defer></script>
   <script src="./modules/world-date/world-date-ui.js?v=20260919-play-days-v1" defer></script>
   <script src="./modules/world-date/world-date-events.js?v=20260826-world-date-shared-v3" defer></script>
   <script type="module" src="./modules/world-date/world-date-latest-scene.mjs?v=20261105-latest-scene-v1"></script>
@@ -362,8 +367,9 @@
   <script src="./modules/inline-editor/inline-editor-events.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/court/court-renderer.js?v=20260617-court-dossier-v1" defer></script>
   <script src="./modules/bounty/bounty-renderer.js?v=20260712-bounty-traits-v1" defer></script>
-  <script src="./modules/goods/goods-renderer.js?v=20260620-goods-details-toggle-v1" defer></script>
-  <script type="module" src="./modules/trade-catalog/trade-catalog-renderer.js?v=20261018-availability-v1"></script>
+  <script src="./modules/goods/goods-renderer.js?v=20261108-catalog-purchase-v1" defer></script>
+  <script type="module" src="./modules/trade-catalog/trade-catalog-renderer.js?v=20261108-catalog-purchase-v1"></script>
+  <script type="module" src="./modules/catalog-purchase/catalog-purchase-entry.js?v=20261108-catalog-purchase-v1"></script>
   <script src="./modules/map-template/map-template-renderer.js?v=20260618-map-template-v1" defer></script>
   <script src="./modules/organization-network/organization-network-renderer.js?v=20260909-newspaper-guilds-v1" defer></script>
   <script src="./modules/guild-services/guild-services-renderer.js?v=20261016-gofrann-v1" defer></script>
@@ -433,7 +439,7 @@
   <script src="./modules/characters/character-result-pages.js?v=20261017-character-performance-v1" defer></script>
   <script src="./modules/characters/character-category-browser.js?v=20261017-character-performance-v1" defer></script>
   <script src="./modules/characters/character-grid.js?v=20261104-startup-v1" defer></script>
-  <script src="./modules/characters/character-comment-picker.js?v=20261017-character-performance-v1" defer></script>
+  <script src="./modules/characters/character-comment-picker.js?v=20261108-foreign-voice-v1" defer></script>
   <script src="./modules/characters/character-profile-events.js?v=20261102-set-order-v1" defer></script>
   <script src="./modules/characters/character-image-set-sorting.js?v=20261102-set-order-v1" defer></script>
   <script src="./modules/scene-regeneration/scene-regeneration-policy.js?v=20261103-scene-regeneration-v1" defer></script>
@@ -466,7 +472,8 @@
   <script src="./modules/comments/comments-spell-fonts.js?v=20261020-notice-fonts-v1" defer></script>
   <script src="./modules/comments/comments-transaction-policy.js?v=20261104-scene-trade-v1" defer></script>
   <script type="module" src="./modules/comments/comments-combat-mini-profile.js?v=20261013-combat-checkup-v1"></script>
-  <script src="./modules/comments/comments-render.js?v=20261104-scene-trade-v1" defer></script>
+  <script src="./modules/comments/comments-foreign-voice.js?v=20261112-foreign-voice-roles-v1" defer></script>
+  <script src="./modules/comments/comments-render.js?v=20261108-foreign-voice-v4" defer></script>
   <script src="./modules/combat/combat-test-scene.js?v=20260802-brandhof-test-v1" defer></script>
   <script src="./modules/comments/comments-showcase-render.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-fazit-render.js?v=20260821-fazit-workbench-v3" defer></script>
@@ -479,13 +486,14 @@
   <script src="./modules/comments/comments-page.js?v=20261104-comment-controls-v1" defer></script>
   <script src="./modules/comments/comments-backend.js?v=20261105-comment-recovery-v1" defer></script>
   <script src="./modules/comments/comments-form-state.js?v=20260906-segment-avatars-v1" defer></script>
-  <script src="./modules/comments/comments-scene-cast.js?v=20260806-materialize-v1" defer></script>
+  <script src="./modules/comments/comments-scene-cast.js?v=20261108-foreign-voice-v1" defer></script>
   <script src="./modules/comments/comments-form.js?v=20261104-startup-v1" defer></script>
-  <script src="./modules/comments/comments-segment-base.js?v=20261102-set-order-v1" defer></script>
-  <script src="./modules/comments/comments-segments.js?v=20261015-check-options-v1" defer></script>
-  <script src="./modules/comments/comments-preview.js?v=20260919-creature-pages-v1" defer></script>
+  <script src="./modules/comments/comments-segment-base.js?v=20261108-foreign-voice-v3" defer></script>
+  <script src="./modules/comments/comments-foreign-voice-ui.js?v=20261108-foreign-voice-v1" defer></script>
+  <script src="./modules/comments/comments-segments.js?v=20261108-foreign-voice-v3" defer></script>
+  <script src="./modules/comments/comments-preview.js?v=20261108-foreign-voice-v3" defer></script>
   <script src="./modules/comments/comments-richtext.js?v=20260804-preview-debounce-v1" defer></script>
-  <script src="./modules/comments/comments-draft.js?v=20261104-startup-v1" defer></script>
+  <script src="./modules/comments/comments-draft.js?v=20261108-foreign-voice-v3" defer></script>
   <script src="./modules/backup/scene-backup-ui.js?v=20261012-scene-backup-v1" defer></script>
   <script src="./modules/comments/comments-turn.js?v=20261105-comment-recovery-v1" defer></script>
   <script src="./modules/comments/comments-pagination.js?v=20261104-comment-controls-v1" defer></script>
@@ -497,7 +505,7 @@
   <script src="./modules/scene-transition/scene-transition-events.js?v=20261104-scene-transition-clarity-v1" defer></script>
   <script src="./modules/scene-polls/scene-polls-events.js?v=20260625-scene-polls-v1" defer></script>
   <script src="./modules/comments/comments-jump.js?v=20261104-comment-controls-v1" defer></script>
-  <script src="./modules/comments/comments-submit.js?v=20261014-herausforderung-combat-v1" defer></script>
+  <script src="./modules/comments/comments-submit.js?v=20261107-scene-date-v1" defer></script>
   <script src="./modules/comments/comments-showcase.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase-submit.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-showcase-edit-submit.js?v=20260602-mojibake-fix-v1" defer></script>
@@ -513,11 +521,11 @@
   <script src="./modules/comments/comments-fazit-edit-submit.js?v=20260821-fazit-workbench-v3" defer></script>
   <script src="./modules/comments/comments-attachments.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-module-insert.js?v=20260709-scene-module-import-export-v1" defer></script>
-  <script src="./modules/comments/comments-edit-state.js?v=20260906-segment-avatars-v1" defer></script>
-  <script src="./modules/comments/comments-edit-segments.js?v=20261015-check-options-v1" defer></script>
-  <script src="./modules/comments/comments-edit-preview.js?v=20260919-creature-pages-v1" defer></script>
-  <script src="./modules/comments/comments-edit.js?v=20261104-startup-v1" defer></script>
-  <script src="./modules/comments/comments-edit-character-picker.js?v=20260919-creature-pages-v1" defer></script>
+  <script src="./modules/comments/comments-edit-state.js?v=20261108-foreign-voice-v5" defer></script>
+  <script src="./modules/comments/comments-edit-segments.js?v=20261108-foreign-voice-v5" defer></script>
+  <script src="./modules/comments/comments-edit-preview.js?v=20261108-foreign-voice-v3" defer></script>
+  <script src="./modules/comments/comments-edit.js?v=20261108-foreign-voice-v1" defer></script>
+  <script src="./modules/comments/comments-edit-character-picker.js?v=20261108-foreign-voice-v1" defer></script>
   <script src="./modules/comments/comments-edit-submit.js?v=20260922-critical-v1" defer></script>
   <script src="./modules/comments/comments-delete.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/comments/comments-mechanical-undo.js?v=20260806-edit-text-v1" defer></script>
@@ -543,11 +551,13 @@
   <script src="./modules/topic-board/topic-board-schedule.js?v=20260911-topic-board-studio-v1" defer></script>
   <script src="./modules/topic-board/topic-board-model.js?v=20260911-topic-board-studio-v1" defer></script>
   <script src="./modules/topic-board/topic-board-travel-ui.js?v=20260911-topic-board-studio-v1" defer></script>
-  <script src="./modules/topic-board/topic-board-schedule-ui.js?v=20260911-topic-board-studio-v1" defer></script>
-  <script src="./modules/topic-board/topic-board-store.js?v=20260911-topic-board-studio-v1" defer></script>
-  <script src="./modules/topic-board/topic-board-list-state.js?v=20260911-topic-board-studio-v1" defer></script>
-  <script src="./modules/topic-board/topic-board-ui.js?v=20260911-topic-board-studio-v1" defer></script>
-  <script src="./modules/topic-board/topic-board-events.js?v=20260911-topic-board-studio-v1" defer></script>
+  <script src="./modules/topic-board/topic-board-schedule-ui.js?v=20261108-play-planning-v1" defer></script>
+  <script src="./modules/topic-board/topic-board-store.js?v=20261108-play-planning-v1" defer></script>
+  <script src="./modules/topic-board/topic-board-planning.js?v=20261108-play-planning-v1" defer></script>
+  <script src="./modules/topic-board/topic-board-list-state.js?v=20261108-play-planning-v1" defer></script>
+  <script src="./modules/topic-board/topic-board-overview.js?v=20261108-play-planning-v1" defer></script>
+  <script src="./modules/topic-board/topic-board-ui.js?v=20261108-play-planning-v1" defer></script>
+  <script src="./modules/topic-board/topic-board-events.js?v=20261108-play-planning-v1" defer></script>
 </head>
 <body class="almanach-app">
 
@@ -720,7 +730,7 @@
 <script src="./module-richtext.js?v=20261102-biography-layout-v2" defer></script>
 <script src="./module-import-export.js?v=20260703-scene-module-editor-v1" defer></script>
 <script src="./modules/app/app-interactions.js?v=20260804-preview-debounce-v1" defer></script>
-<script src="./modules/comments/comments-segment-events.js?v=20260816-segment-avatar-sets-v1" defer></script>
+<script src="./modules/comments/comments-segment-events.js?v=20261108-foreign-voice-v1" defer></script>
 <script src="./modules/comments/comments-assistant.js?v=20260816-segment-avatar-sets-v1" defer></script>
 <script src="./modules/comments/comments-input-events.js?v=20261104-comment-controls-v1" defer></script>
 <script src="./modules/comments/comments-reader-events.js?v=20260713-language-bubbles-v1" defer></script>
@@ -779,7 +789,7 @@
     <!-- ERZÄHLER-HINWEIS -->
     <div id="cf-narrator-hint" style="display:none;text-align:center;padding:0.8rem 0.5rem 0.4rem;">
       <img src="https://i.imgur.com/Bpo3Pzn.png" alt="Erzähler" style="width:64px;height:64px;border-radius:50%;border:1px solid var(--gold);object-fit:cover;margin-bottom:0.5rem;opacity:0.8;">
-      <div style="font-style:italic;font-size:0.75rem;color:var(--text-muted);">Der Text erscheint neutral und zentriert — ohne Portrait, ohne Name.</div>
+      <div style="font-style:italic;font-size:0.75rem;color:var(--text-muted);">Handlungen erscheinen als neutraler Erzählertext. Fremde Stimmen und Geheimaktionen kannst du als eigene Abschnitte ergänzen.</div>
     </div>
 
     <!-- Manuelle Felder (versteckt by default) -->
@@ -1259,7 +1269,7 @@
 
       <!-- Erzähler-Hinweis -->
       <div id="ec-narrator-hint" style="display:none;text-align:center;padding:0.5rem;">
-        <div style="font-style:italic;font-size:0.75rem;color:var(--text-muted);">Text erscheint neutral und zentriert — ohne Portrait und Namen.</div>
+        <div style="font-style:italic;font-size:0.75rem;color:var(--text-muted);">Handlungen erscheinen als neutraler Erzählertext. Fremde Stimmen und Geheimaktionen kannst du als eigene Abschnitte ergänzen.</div>
       </div>
 
       <!-- Text -->

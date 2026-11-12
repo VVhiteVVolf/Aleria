@@ -1,4 +1,4 @@
-// Comment cache, live thread rendering, navigation tools, and preview splitter.
+﻿// Comment cache, live thread rendering, navigation tools, and preview splitter.
 // Comment cache to avoid slow reloads
 const _commentCache = {};
 let _commentLiveThreadId = null;

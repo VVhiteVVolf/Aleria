@@ -8,7 +8,7 @@ Die Kopie vom 11. Oktober 2026 stammt aus `D:\0-KI Generierte\01 Bilder\Charakte
 
 | Ordner | Inhalt |
 | --- | --- |
-| [Anleitungen](Anleitungen/) | Die drei originalen Word-Anleitungen und vollständige UTF-8-Lesefassungen |
+| [Anleitungen](Anleitungen/) | Originale Word-Anleitungen, vollständige UTF-8-Lesefassungen und die nummernstabile 23-Set-Vorlage mit erhaltenen 14- und 20-Set-Vorläufern |
 | [Werkzeuge/Avatar Splitterer](Werkzeuge/Avatar%20Splitterer/) | Unveränderte V3 mit Startdatei, Abhängigkeiten, Anleitung und ursprünglicher Konfiguration |
 | [Beispiele/9er-Sheets](Beispiele/9er-Sheets/) | Sechs angesehene Beispiele: Aldo, Gais, Heledd, Morgan, Refri und Maredudd |
 | [Charaktere/Gruppen/Idwals Crew](Charaktere/Gruppen/Idwals%20Crew/) | Vollständige Kopie der 202 Dateien, einschließlich bisheriger `Benutzt`- und `output`-Ordner |
@@ -46,16 +46,62 @@ Für die Übergabe gilt seit dem 30. Oktober 2026 zusätzlich: Unter `AvatarWerk
 
 ## Avatar-Sheets erstellen
 
+### Nummerierte Sets
+
+Nach den Erweiterungsaufträgen vom 12. November 2026 beziehen sich Aufträge wie „Erstelle Set 2, 4 und 11 für diese Figur“ auf [Avatar_Prompts_23_Sets.docx](Anleitungen/Avatar_Prompts_23_Sets.docx). Die [vollständige Lesefassung](Anleitungen/Lesefassungen/Avatar_Prompts_23_Sets.txt) und der [aktive maschinenlesbare Setkatalog](Anleitungen/avatar-prompt-sets-23.json) enthalten 23 Sets mit je neun Reaktionen, exakten Gestiktexten und zeilenweiser Panelreihenfolge. Die ersten 20 Sets behalten ihre bisherigen Nummern, Themen, Reaktionen und vollständigen Setprompts unverändert; insbesondere bleiben die ursprünglichen Sets 1 bis 14 nummernstabil. Neu hinzugekommen sind zunächst 15 bis 20 und anschließend 21 bis 23.
+
+Der aktive Katalog verwendet die Kennung `avatar-prompts-23-sets-20261112` und bindet das aktuelle Word-Dokument über `sourceSha256`. Sets 1 bis 18 verwenden freie Hände ohne Requisiten. Sets 19 und 20 erlauben die im jeweiligen Panel ausdrücklich beschriebenen Gegenstände. Set 21 erlaubt die genannte Liegefläche und gegebenenfalls ein Kopfkissen, Set 22 genau die bereits vereinbarte Waffe und Set 23 die ausdrücklich genannte Bettumgebung. Die Einträge 19 bis 23 tragen `allowsProps: true`, eine `allowedProps`-Liste und die Begrenzung `scope`. Für Sets 21 bis 23 gelten zusätzlich die auf das jeweilige Panel begrenzten Angaben `posePolicy`, `framingPolicy`, `clothingPolicy` und `settingPolicy`; erforderliche Eingaben stehen gegebenenfalls in `requiredInputs`.
+
+Die ursprüngliche [14-Set-Worddatei](Anleitungen/Avatar_Prompts_14_Sets.docx), ihre [Lesefassung](Anleitungen/Lesefassungen/Avatar_Prompts_14_Sets.txt), der [historische 14-Set-Katalog](Anleitungen/avatar-prompt-sets.json) und der [Übernahmebeleg mit SHA-256](Anleitungen/avatar-prompt-sets.source.json) bleiben unverändert erhalten. Auch die fertig geprüfte [20-Set-Zwischenfassung](Anleitungen/Avatar_Prompts_20_Sets.docx), ihre [Lesefassung](Anleitungen/Lesefassungen/Avatar_Prompts_20_Sets.txt) und ihr [20-Set-Katalog](Anleitungen/avatar-prompt-sets-20.json) bleiben als Vorläufer erhalten. Historische Aufträge und Bildbelege werden nicht auf neue Quellen umgebogen. Die falsche Titelzeile des 14er-Originals über fünf Sets und 45 Varianten bleibt nur in dieser historischen Quelle bestehen. Ältere 13er-Vorlagen und individuelle Auftragszuordnungen bleiben ebenfalls erhalten.
+
+| Set | Thema |
+| --- | --- |
+| 1 | Grundemotionen und Mimik – Basisset |
+| 2 | Gespräch und Kommunikation |
+| 3 | Zusätzliche Emotionen |
+| 4 | Ausgeprägte Hand- und Körpergesten |
+| 5 | Neue gestische Ausdrucksformen |
+| 6 | Gelassene Gesprächsreaktionen |
+| 7 | Subtile Zwischentöne und leise Reaktionen |
+| 8 | Arroganz und demonstrative Überlegenheit |
+| 9 | Autorität, Führung und Befehlsgewalt |
+| 10 | Erklären, Nachfragen und Befragen |
+| 11 | Humorvolle Reaktionen und Gestiken |
+| 12 | Euphorische Reaktionen und Gestiken |
+| 13 | Aufgebrachte Reaktionen und Gestiken |
+| 14 | Genervte, abwinkende und belehrende Reaktionen |
+| 15 | Angst und Wachsamkeit |
+| 16 | Trauer und Trost |
+| 17 | Müdigkeit und körperliches Befinden |
+| 18 | Zuneigung und Vertrauen |
+| 19 | Schriftstücke und Notizen – mit den genannten Requisiten |
+| 20 | Alltagsgegenstände – mit der jeweils genannten Requisite |
+| 21 | Liegend: Schlaf, Ohnmacht und Unpässlichkeit |
+| 22 | Bewaffnete Abwehr, Angriff und Ausweichen – mit der bereits vereinbarten Waffe |
+| 23 | Erwachsene Koketterie im engen Bildausschnitt |
+
+Setnummern gelten für die inhaltliche Vorlage und werden nicht nach vorhandenen Ausgaben einer Figur neu gezählt. Im Auftrag `promptSetCatalog`, `promptSetSourceDocument`, `promptSetNumber` und `promptSetSourceSha256` festhalten; `setId` benennt das konkrete Ausgabeset der Figur. Bei historischen Sets mit anderer Belegung die belegte Zuordnung erhalten und eine neue Ausgabe eindeutig benennen. Das ausdrücklich gewählte Porträt bleibt die Identitätsreferenz; ausschließlich Set 23 erlaubt die dort eng begrenzte Abweichung von der sichtbaren Referenzkleidung. Ein gespeicherter Prompt ist keine Autorisierung, weitere Sets oder Publikationen selbständig auszuführen.
+
+### Arbeitsablauf
+
 1. Das verbindliche Porträt tatsächlich ansehen. Bei vorhandenen Figuren bestimmen seine Gesichtszüge, Alter, Haare, Bart, Kleidung, Rüstung, Farben und Zeichenstil die Identität. Andere Beispiele liefern nur Hinweise zu Layout und Gestik.
-2. Die [Master-Anleitung](Anleitungen/Lesefassungen/Charakter-Emotionssheet%20Master%20Prompt.txt), den [Expression-Sheet-Prompt](Anleitungen/Lesefassungen/Character_Expression_Sheet_Prompt.txt) und die [Avatar-Anweisungen](Anleitungen/Lesefassungen/Anweisungen.txt) lesen. Die `.docx`-Originale bleiben die vollständigen Ausgangsdokumente; die Textdateien sind reine Lesefassungen.
-3. [Vorlagen/Avatar-Auftrag.json](Vorlagen/Avatar-Auftrag.json) nach `Prompts` kopieren. Charakter, Referenzbild, Setname und alle neun Emotionen mit jeweils passender Gestik ausfüllen. Die vorbelegten allgemeinen Reaktionen stammen aus `Anweisungen.docx`; andere Themen sind möglich.
-4. Den vollständigen Master-Prompt verwenden und seine Platzhalter für Charakterbeschreibung, Thema und Panel-Liste ersetzen. Das Porträt als tatsächliche Bildreferenz mitgeben. Den konkret verwendeten Prompt neben dem Auftrag speichern.
+2. Die [Master-Anleitung](Anleitungen/Lesefassungen/Charakter-Emotionssheet%20Master%20Prompt.txt), den [Expression-Sheet-Prompt](Anleitungen/Lesefassungen/Character_Expression_Sheet_Prompt.txt), die [Avatar-Anweisungen](Anleitungen/Lesefassungen/Anweisungen.txt) und bei nummerierten Aufträgen die [aktive 23-Set-Vorlage](Anleitungen/Lesefassungen/Avatar_Prompts_23_Sets.txt) lesen. Die `.docx`-Originale bleiben die vollständigen Ausgangsdokumente; die Textdateien sind reine Lesefassungen. Die konkrete Setliste ersetzt die beispielhaften Reaktionslisten älterer Master-Anleitungen.
+3. [Vorlagen/Avatar-Auftrag.json](Vorlagen/Avatar-Auftrag.json) nach `Prompts` kopieren. Charakter, Referenzbild, Setname und alle neun Emotionen mit jeweils passender Gestik ausfüllen. Die vorbelegten Reaktionen entsprechen weiterhin unverändert Set 1. Bei anderen nummerierten Sets die jeweilige vollständige Liste und Zusatzvorgaben aus dem aktiven Setkatalog übernehmen. Für Sets 19 bis 23 außerdem `allowsProps`, `allowedProps`, `scope` und die spezifischen `instructions` ausdrücklich in den Auftrag übernehmen. Bei Sets 21 bis 23 zusätzlich `posePolicy`, `framingPolicy`, `clothingPolicy`, `settingPolicy` und gegebenenfalls `requiredInputs` übernehmen. Die leeren Hände, stehende Haltung oder unveränderte Kleidung des Basisset-Prompts dürfen nicht zusätzlich einer ausdrücklich erlaubten Ausnahme widersprechen. Andere ausdrücklich beauftragte Themen sind möglich.
+4. Den vollständigen Master-Prompt verwenden und seine Platzhalter für Charakterbeschreibung, Thema und Panel-Liste ersetzen. Ältere pauschale Vorgaben zu freien Händen, Haltung, Ausschnitt, Kleidung und Hintergrund nur dort gezielt ersetzen, wo der gewählte Seteintrag eine begrenzte Ausnahme enthält. Set 21 bleibt bekleidet liegend; Set 22 nutzt die bereits vereinbarte Waffe und einen für alle neun Panels passenden weiten Ausschnitt; Set 23 erlaubt nur bei ausdrücklich erwachsener, wacher Figur den engen Schnitt mit angedeuteter Unbekleidetheit. Identität, Alter, Frisur, Zeichenstil und Beleuchtung erhalten. Das Porträt als tatsächliche Bildreferenz mitgeben. Den konkret verwendeten Prompt neben dem Auftrag speichern.
 5. Ein **quadratisches Gesamtbild im Format 1:1 mit 3×3 gleich großen Feldern** erzeugen. Das 2:3-Format normaler Aleria-Porträts gilt für das Ausgangsporträt, nicht für dieses Sheet.
 6. Alle neun Felder prüfen und das vollständige Sheet unter `Sheets` sichern. Für neue Sheets sind durch drei teilbare quadratische Pixelmaße günstig; die vorhandenen Beispiele haben 1254×1254 Pixel und damit grundsätzlich 418×418 Pixel pro Feld.
 
-Die Person, der Hintergrund, die Beleuchtung, die Kameradistanz und der Bildausschnitt bleiben über alle Felder konsistent. Die Figur ist von Brust bis Oberkörper sichtbar, mit Platz für lesbare Hände und Gesten. Ausdruck entsteht durch Augen, Brauen, Mund, Blick und Körperhaltung; keine Verzerrung der Identität. Jedes Feld braucht einen eigenen erzählerischen Zweck und eine erkennbare passende Geste.
+Für Sets 1 bis 20 bleiben Person, Hintergrund, Beleuchtung, Kameradistanz und Bildausschnitt über alle Felder konsistent. Die stehende Figur ist vom Kopf bis mindestens zur Taille sichtbar; Unterarme, Hände und die ausdrücklich erlaubte Requisite bleiben vollständig innerhalb der eigenen Zelle. Sets 21 bis 23 verwenden ausschließlich die im jeweiligen Panel genannten Abweichungen. Set 21 zeigt den liegenden Oberkörper. Set 22 braucht denselben weiten Ausschnitt in allen neun Panels, mindestens Kopf bis Hüfte und bei langen Waffen gegebenenfalls Ganzkörper. Set 23 zeigt nur Gesicht, Hals, Schultern und höchstens den oberen Brustansatz; die Bildkante endet oberhalb jeder Brustwarze. Ausdruck entsteht durch Augen, Brauen, Mund, Blick und Körperhaltung; keine Verzerrung der Identität. Jedes Feld braucht einen eigenen erzählerischen Zweck und eine erkennbare passende Geste.
 
-Keine Schrift, Beschriftungen, Nummerierung, Symbole, Sprechblasen, weißen Trennlinien, äußeren Rahmen oder zusätzlichen Requisiten. Hände bleiben zum Gestikulieren frei. Ausdrückliche Motivwünsche des jeweiligen Auftrags haben Vorrang. Einige historische Beispiele enthalten Trennlinien oder Requisiten; daraus folgt keine Freigabe, diese in neue Sheets zu übernehmen.
+Keine lesbaren Wörter, Buchstabenfolgen, Ziffern, Bildbeschriftungen, Nummerierungen, zusätzlichen schwebenden Symbole, Sprechblasen, weißen Trennlinien oder äußeren Rahmen. Zeichen und Wappen vorhandener Referenzkleidung bleiben erhalten. In Sets 1 bis 18 bleiben die Hände frei von Requisiten. Set 19 erlaubt nur die je Panel genannten Schriftstücke und gegebenenfalls die Schreibfeder; Papier bleibt leer oder zeigt wenige abstrakte unlesbare Striche. Set 20 erlaubt nur den jeweils genannten Alltagsgegenstand. Würfelpunkte sind erlaubt, Ziffern nicht; die Laterne bleibt unbeleuchtet. Keine moderne Technik, Tische, zusätzlichen Personen oder ungefragten Requisiten ergänzen. Die Gegenstände sind Bildmittel, keine Vergabe kanonischer Inventare oder Festlegung neuer Berufe und Biografien.
+
+Set 21 enthält genau drei Schlaf-, drei Ohnmachts- und drei wache Unpässlichkeitsansichten. Kleidung, Rüstung und Handschuhe bleiben angelegt; keine Verletzung, Diagnose, Ursache oder Tod erfinden. Bett, Kopfkissen und Boden sind nur die ausdrücklich genannten kleinen Liegeflächen.
+
+Set 22 enthält genau drei defensive, drei offensive und drei ausweichende Einzelposen mit genau einer bereits vereinbarten Waffe pro Panel. Bestehende Vereinbarungen gelten ohne erneute Freigabe. Waffentyp aus dem Auftrag, Griffhand und Griffweise aus Referenz oder Auftrag übernehmen; vorhandene Waffenbilder tatsächlich ansehen, alternativ genügt eine hinreichend konkrete vereinbarte Beschreibung. Nur bei fehlenden erforderlichen Angaben oder mit dem Waffentyp nicht sinnvoll umsetzbaren Haltungen gezielt rückfragen. Keine zweite Waffe, zusätzlichen Schild, Gegner, Treffer oder Bewegungsschlieren ergänzen; Hände, Griff und Waffenform anschließend tatsächlich prüfen.
+
+Set 23 ist ausschließlich für ausdrücklich als erwachsen bestätigte Figuren bestimmt; eine Altersschätzung nach Aussehen reicht nicht. Alle neun Ansichten bleiben wach, aktiv und selbstbestimmt: drei Bettliegeansichten, drei sitzende und drei leichte Vorneigungen mit dezent gespitzten Lippen. Unbekleidetheit wird nur durch nackte Schultern und den engen Schnitt angedeutet. Keine Brustwarzen, vollständigen Brüste, Brustunterseite, Ansicht unter die Brust, Intimbereiche, Unterkörper, expliziten Handlungen, zweite Person oder fremden Hände. Nur Set 23 darf im genannten engen Ausschnitt von der Referenzkleidung abweichen; keine Schlaf- oder Ohnmachtszustände aus Set 21 übernehmen.
+
+Ausdrückliche Motivwünsche des jeweiligen Auftrags haben Vorrang. Einige historische Beispiele enthalten Trennlinien oder Requisiten; daraus folgt keine zusätzliche Erlaubnis, diese in andere neue Sets zu übernehmen.
 
 Wenn erst ein neues Ausgangsporträt benötigt wird, gelten dafür die [zentralen Bildstil-Vorlagen](../docs/art/image-style-presets.json). Ein bestehendes Referenzporträt für das Sheet wird nicht ungefragt in einen anderen Stil übertragen.
 

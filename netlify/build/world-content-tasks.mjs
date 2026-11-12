@@ -4,7 +4,7 @@ const root = new URL('../../', import.meta.url);
 const tests = (directory, extension = 'mjs') => ['--test', '--experimental-test-isolation=none',
   ...readdirSync(new URL(directory + '/', root)).filter(name => name.endsWith('.test.' + extension))
     .sort().map(name => directory + '/' + name)];
-const territoryBuilders = ['aislearneach', 'alben', 'blaithneach', 'ceitheach', 'cenyr-court',
+const territoryBuilders = ['aislearneach', 'alben', 'blaithneach', 'ceitheach', 'cenyr-court', 'cenyr-navigation',
   'dunfal', 'dunkelhain', 'faelaorn', 'fjordheim', 'heldenwacht', 'ivarsheim',
   'kraehenmoor', 'leitheach', 'schwarzfenn', 'skjaerheim', 'uathneach', 'vennyr'];
 const albicTerritoryInputs = ['Stammbäume/assets/js/modules/albic-territories/',
@@ -73,10 +73,11 @@ export const WORLD_CONTENT_TASKS = [
   },
   {
     id: 'territory-pages', label: 'Realm hierarchies, territory pages and heraldry',
-    inputs: ['Kontinente/', 'Karten/karten.registry.js', 'Karten/modules/regions/', 'Karten/Uathneach/',
-      'Stammbäume/assets/js/data/', 'Stammbäume/assets/js/services/family-registry-upgrade.js',
-      'Familien Häuser und Clans/', ...albicTerritoryInputs],
-    commands: [['Kontinente/scripts/build-continent-overviews.mjs', '--check'],
+    inputs: ['Kontinente/', 'Orte/', 'shared/world-directory/', 'Stammbäume/assets/js/domain/house-profile.js', 'Karten/karten.registry.js', 'Karten/modules/regions/', 'Karten/Uathneach/',
+      'Stammbäume/assets/js/data/', 'Stammbäume/assets/js/services/family-registry-upgrade.js', 'Familien Häuser und Clans/', ...albicTerritoryInputs],
+    commands: [['shared/world-directory/build-house-directories.mjs', '--check'],
+      tests('shared/world-directory/tests'),
+      ['Kontinente/scripts/build-continent-overviews.mjs', '--check'],
       ['Kontinente/scripts/review-albic-territories.mjs', '--check'],
       ['Kontinente/scripts/build-administration-vassals.mjs', '--check'],
       ...territoryBuilders.map(name => ['Kontinente/scripts/build-' + name + '.mjs', '--check']),
@@ -167,7 +168,7 @@ export const WORLD_CONTENT_TASKS = [
     id: 'uathneach-preview', label: 'Isolated regional proposals and complete preview assets',
     inputs: ['Vorschau/'],
     commands: [tests('Vorschau/tests'),tests('Vorschau/Solestia/tests'),tests('Vorschau/Phalantia/tests'),
-      tests('Vorschau/Klythesia/scripts'), tests('Vorschau/Mathringen/tests'), tests('Vorschau/Kemetara/tests'),
+      tests('Vorschau/Mathringen/tests'),
       tests('Vorschau/Calidaria/tests'),tests('Vorschau/Sylvarant/tests'),
       ['--test','--experimental-test-isolation=none','Vorschau/Adharath/tests/adharath.test.mjs'],
       ['--test','--experimental-test-isolation=none',
@@ -176,7 +177,6 @@ export const WORLD_CONTENT_TASKS = [
         'netlify/tests/calidaria-source-publication.test.mjs',
         'netlify/tests/sylvarant-source-publication.test.mjs',
         'netlify/tests/solestia-source-publication.test.mjs',
-        'netlify/tests/phalantia-source-publication.test.mjs',
-        'netlify/tests/klythesia-source-publication.test.mjs']]
+        'netlify/tests/phalantia-source-publication.test.mjs']]
   }
 ];

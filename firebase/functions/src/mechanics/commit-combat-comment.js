@@ -39,6 +39,7 @@ import { getTrustedSceneDay, isTrustedHerausforderungComment, isTrustedMechanica
 import { skillSegments, validateSkillCommentSegments, persistSkillChallengeClaims } from './skill-comment-validator.js';
 import { compactMechanicalSegmentsForStorage } from './mechanical-resolution-storage.js';
 import { undoInventoryFingerprint } from './mechanical-undo-inventory.js';
+import { normalizeCommentSceneStartDate } from '../comments/comment-scene-date.js';
 
 const RECORD_KINDS = new Set(['character', 'creature']);
 const MAX_COMMENT_BYTES = 700_000;
@@ -768,6 +769,7 @@ export async function commitCombatCommentOperation(request, {
       commentMode: cleanText(metadata.commentMode, 40),
       commentKind: cleanText(metadata.commentKind, 80),
       commentSegments: storedSegments,
+      sceneStartDateAleria: normalizeCommentSceneStartDate(metadata.sceneStartDateAleria),
       combatAction: resolutions.length === 1 ? storedSegments.find(segment => segment?.combatAction)?.combatAction || null : null,
       combatResolution: resolutions.length === 1 ? resolutions[0] : null,
       combatRecoveryDayKey: recoveryDayKey,

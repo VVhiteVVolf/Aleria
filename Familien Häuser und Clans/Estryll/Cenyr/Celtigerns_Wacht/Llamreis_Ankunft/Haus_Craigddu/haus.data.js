@@ -127,6 +127,12 @@ window.HAEUSER_DATA = {
       "alt": "Herrschaftsbanner von Celtigerns Wacht",
       "format": "square"
     },
+    "hof-offices-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-craigddu/iestyn-craigddu.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=craigddu&mode=view&person=craigddu-gruender",
+      "alt": "Iestyn Craigddu",
+      "format": "portrait"
+    },
     "hof-offices-8": {
       "src": "../Stammbäume/assets/images/portraits/haus-craigddu/hywel-craigddu.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=craigddu&mode=view&person=person-28b0e0a3",
@@ -145,7 +151,7 @@ window.HAEUSER_DATA = {
             "role": "Vater von Hywel und Catrin",
             "detail": "Vater von Hywel und Catrin",
             "href": "../Stammb%C3%A4ume/Stammbaum.html?family=craigddu&mode=view&person=craigddu-gruender",
-            "imageKey": ""
+            "imageKey": "hof-offices-1"
           },
           {
             "name": "Mared",

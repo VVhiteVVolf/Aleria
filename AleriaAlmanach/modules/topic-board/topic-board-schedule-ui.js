@@ -44,10 +44,13 @@ function getTopicBoardScheduleTimingCopy(input = {}, currentDate = getCurrentTop
   return { ...timing, label: 'Termin noch offen' };
 }
 
-function renderTopicBoardScheduleBadge(input = {}) {
+function renderTopicBoardScheduleBadge(input = {}, options = {}) {
   const schedule = globalThis.AleriaTopicBoardSchedule.normalize(input);
   const timing = getTopicBoardScheduleTimingCopy(input);
   const date = formatTopicBoardScheduleDate(schedule.startDate, { withWeekday: false });
+  if (options.archived) {
+    return `<span class="topic-board-schedule-badge is-archived" data-topic-board-schedule-state="archived"><span><strong>Gespielt</strong><small>${topicBoardScheduleEscape(date || 'Ohne festen Termin')}</small></span></span>`;
+  }
   if (!date) {
     return `<span class="topic-board-schedule-badge is-unscheduled" data-topic-board-schedule-state="unscheduled">
       <span class="topic-board-schedule-calendar" aria-hidden="true"><small>Termin</small><strong>?</strong></span>
@@ -60,7 +63,7 @@ function renderTopicBoardScheduleBadge(input = {}) {
   </span>`;
 }
 
-function renderTopicBoardScheduleCard(input = {}) {
+function renderTopicBoardScheduleCard(input = {}, options = {}) {
   const schedule = globalThis.AleriaTopicBoardSchedule.normalize(input);
   const start = formatTopicBoardScheduleDate(schedule.startDate);
   if (!start) {
@@ -68,7 +71,7 @@ function renderTopicBoardScheduleCard(input = {}) {
       <div aria-hidden="true">▣</div><div><small>Kalendereintrag</small><strong>Termin noch nicht festgelegt</strong><span>Beim Bearbeiten kann ein fester Aleria-Tag gesetzt werden.</span></div>
     </section>`;
   }
-  const timing = getTopicBoardScheduleTimingCopy(input);
+  const timing = options.archived ? { state: 'archived', label: 'Gespeicherter Spielwelttermin' } : getTopicBoardScheduleTimingCopy(input);
   const end = formatTopicBoardScheduleDate(input.endDate);
   const duration = Number(input.effectiveDurationDays);
   const durationCopy = Number.isFinite(duration) && duration > 0
@@ -84,7 +87,7 @@ function renderTopicBoardScheduleCard(input = {}) {
 function renderTopicBoardScheduleEditorSummary(input = {}, travel = {}) {
   const schedule = globalThis.AleriaTopicBoardSchedule.normalize(input, { travel });
   const start = formatTopicBoardScheduleDate(schedule.startDate);
-  if (!start) return '<span>Bitte einen vollständigen Aleria-Termin eintragen.</span>';
+  if (!start) return '<span><strong>Termin noch offen</strong> · Plant diesen Play später gemeinsam ein.</span>';
   const timing = getTopicBoardScheduleTimingCopy(schedule);
   const end = formatTopicBoardScheduleDate(schedule.endDate);
   const endLabel = schedule.durationSource === 'travel' ? 'Ankunft' : 'Ende';
@@ -93,7 +96,8 @@ function renderTopicBoardScheduleEditorSummary(input = {}, travel = {}) {
 
 function getTopicBoardScheduleEditorValue(input = {}, travel = {}) {
   const currentDate = getCurrentTopicBoardWorldDate();
-  const fallbackDate = globalThis.AleriaTopicBoardSchedule.hasDate(input?.startDate)
+  const explicitDate = Object.prototype.hasOwnProperty.call(input || {}, 'startDate');
+  const fallbackDate = explicitDate
     ? input.startDate
     : (globalThis.AleriaTopicBoardSchedule.hasDate(travel?.departureDate) ? travel.departureDate : currentDate);
   return globalThis.AleriaTopicBoardSchedule.normalize(input, { travel, fallbackDate });
@@ -101,20 +105,22 @@ function getTopicBoardScheduleEditorValue(input = {}, travel = {}) {
 
 function renderTopicBoardScheduleEditor(input = {}, travel = {}) {
   const schedule = getTopicBoardScheduleEditorValue(input, travel);
+  const unscheduled = !globalThis.AleriaTopicBoardSchedule.hasDate(schedule.startDate);
   const current = getCurrentTopicBoardWorldDate();
   const currentLabel = formatTopicBoardScheduleDate(current) || 'Seitendatum nicht gesetzt';
   return `<section class="topic-board-form-section topic-board-field-wide topic-board-schedule-editor" data-topic-board-schedule-editor>
     <header>
       <span class="topic-board-schedule-editor-icon" aria-hidden="true">▣</span>
-      <div><small>Verbindlicher Kalendereintrag</small><strong>Wann beginnt oder wird das Thema relevant?</strong></div>
+      <div><small>Euer Kalendereintrag</small><strong>Wann beginnt oder wird das Thema relevant?</strong></div>
       <span class="topic-board-schedule-current" data-topic-board-schedule-current>Seitendatum: ${topicBoardScheduleEscape(currentLabel)}</span>
     </header>
+    <label class="topic-board-schedule-unscheduled"><input name="scheduleUnscheduled" type="checkbox" data-topic-board-schedule-unscheduled${unscheduled ? ' checked' : ''}><span>Termin später festlegen<small>Die Idee bleibt unter „Ohne Termin“ im Blick.</small></span></label>
     <div class="topic-board-schedule-fields">
       <fieldset class="topic-board-schedule-date">
         <legend>Start- / Fälligkeitsdatum</legend>
-        <label><span>Tag</span><input name="scheduleStartDay" type="number" min="1" max="36" value="${schedule.startDate.day ?? ''}" required></label>
-        <label><span>Monat</span><input name="scheduleStartMonth" type="number" min="1" max="13" value="${schedule.startDate.month ?? ''}" required></label>
-        <label><span>Jahr</span><input name="scheduleStartYear" type="number" min="1" value="${schedule.startDate.year ?? ''}" required></label>
+        <label><span>Tag</span><input name="scheduleStartDay" type="number" min="1" max="36" value="${schedule.startDate.day ?? ''}"${unscheduled ? ' disabled' : ' required'}></label>
+        <label><span>Monat</span><input name="scheduleStartMonth" type="number" min="1" max="13" value="${schedule.startDate.month ?? ''}"${unscheduled ? ' disabled' : ' required'}></label>
+        <label><span>Jahr</span><input name="scheduleStartYear" type="number" min="1" value="${schedule.startDate.year ?? ''}"${unscheduled ? ' disabled' : ' required'}></label>
       </fieldset>
       <label class="topic-board-field topic-board-schedule-duration"><span>Dauer in Tagen</span><input name="scheduleDurationDays" type="number" min="1" max="${globalThis.AleriaTopicBoardSchedule.maxDays}" step="1" value="${schedule.durationDays ?? ''}" placeholder="optional"><small>Bei Reisen wird automatisch die berechnete Gesamtreisezeit verwendet.</small></label>
     </div>
@@ -136,8 +142,9 @@ function renderTopicBoardScheduleEditor(input = {}, travel = {}) {
 function collectTopicBoardScheduleForm(form, travel = {}) {
   if (!form) return globalThis.AleriaTopicBoardSchedule.normalize({}, { travel });
   const value = name => form.elements[name]?.value ?? '';
+  const unscheduled = form.elements.scheduleUnscheduled?.checked === true;
   return globalThis.AleriaTopicBoardSchedule.normalize({
-    startDate: {
+    startDate: unscheduled ? {} : {
       day: value('scheduleStartDay'),
       month: value('scheduleStartMonth'),
       year: value('scheduleStartYear')
@@ -147,6 +154,13 @@ function collectTopicBoardScheduleForm(form, travel = {}) {
 }
 
 function refreshTopicBoardScheduleEditor(form, travel = {}) {
+  const unscheduled = form?.elements?.scheduleUnscheduled?.checked === true;
+  for (const name of ['scheduleStartDay', 'scheduleStartMonth', 'scheduleStartYear']) {
+    const field = form?.elements?.[name];
+    if (!field) continue;
+    field.disabled = unscheduled;
+    field.required = !unscheduled;
+  }
   const current = form?.querySelector?.('[data-topic-board-schedule-current]');
   if (current) {
     const currentLabel = formatTopicBoardScheduleDate(getCurrentTopicBoardWorldDate()) || 'Seitendatum nicht gesetzt';
@@ -163,6 +177,7 @@ function refreshTopicBoardScheduleEditor(form, travel = {}) {
 function setTopicBoardScheduleOffset(form, days, travel = {}) {
   const current = getCurrentTopicBoardWorldDate();
   if (!form || !globalThis.AleriaWorldDateModel?.isValid?.(current)) return false;
+  if (form.elements.scheduleUnscheduled) form.elements.scheduleUnscheduled.checked = false;
   const target = globalThis.AleriaWorldDateModel.shift(current, Math.round(Number(days) || 0));
   form.elements.scheduleStartDay.value = target.day;
   form.elements.scheduleStartMonth.value = target.month;

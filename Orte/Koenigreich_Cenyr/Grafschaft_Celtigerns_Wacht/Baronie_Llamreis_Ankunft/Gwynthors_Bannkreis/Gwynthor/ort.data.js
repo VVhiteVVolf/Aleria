@@ -220,13 +220,13 @@
         }),
         "wappen-banner-png": encodeURI("/Stammbäume/assets/images/regions/celtigerns-wacht.png"),
         "karten-bild-png": Object.freeze({
-          src: `${mapAssetRoot}/GwynthorBannkreis.jpg?v=20260901b`,
+          src: `${mapAssetRoot}/GwynthorBannkreis.png?v=20260901b`,
           alt: "Karte von Gwynthor und seinem Bannkreis",
           href: mapHref,
           fit: "contain"
         }),
         "stadtsektionen-png": Object.freeze({
-          src: `${mapAssetRoot}/GwynthorBannkreisZonen.webp?v=20260901b`,
+          src: `${mapAssetRoot}/GwynthorBannkreisZonen.png?v=20260901b`,
           alt: "Bezirke von Gwynthor",
           href: mapHref,
           fit: "contain"
@@ -270,7 +270,7 @@
       Object.freeze({
         title: "Grafenhaus",
         items: Object.freeze([
-          nobleHouse("draig", "Draig", "Grafenhaus", "Gwynthor", "…")
+          Object.freeze({ ...nobleHouse("draig", "Draig", "Grafenhaus", "Gwynthor", "Haus Pendrag"), featured: true, featuredLabel: "Grafenhaus" })
         ])
       }),
       Object.freeze({

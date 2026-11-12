@@ -178,7 +178,7 @@ function buildTradePrice(item) {
     </section>`;
 }
 
-function buildTradeCatalogItem(item, activeCategory = 'all') {
+function buildTradeCatalogItem(item, activeCategory = 'all', itemIndex = 0, sourceItemId = '') {
   const searchText = [
     item.title,
     item.subtitle,
@@ -197,7 +197,7 @@ function buildTradeCatalogItem(item, activeCategory = 'all') {
     </article>`;
   }
   return `
-    <article class="trade-catalog-item${item.status === 'unavailable' ? ' trade-catalog-unavailable' : ''}" style="${escapeHtml(getTradeCatalogImageStyle(item))}" data-trade-category="${escapeHtml(item.category)}" data-trade-search="${escapeHtml(searchText)}"${hiddenAttr}>
+    <article class="trade-catalog-item${item.status === 'unavailable' ? ' trade-catalog-unavailable' : ''}" style="${escapeHtml(getTradeCatalogImageStyle(item))}" data-trade-category="${escapeHtml(item.category)}" data-trade-search="${escapeHtml(searchText)}" data-catalog-source-kind="trade-catalog" data-catalog-item-id="${escapeHtml(sourceItemId)}" data-catalog-item-index="${itemIndex}"${hiddenAttr}>
       <aside class="trade-catalog-visual">
         ${item.badge ? `<div class="trade-catalog-badge">${escapeHtml(item.badge)}</div>` : ''}
         <button type="button" class="trade-catalog-image-wrap trade-item-card-trigger ${escapeHtml(getTradeCatalogImageClasses(item))}" data-action="open-trade-item-card" aria-haspopup="dialog" aria-label="${escapeHtml(`Itemkarte öffnen: ${item.title}`)}" title="Itemkarte öffnen">
@@ -226,6 +226,7 @@ function buildTradeCatalogItem(item, activeCategory = 'all') {
           ${buildTradeTagList(item.usageTags, 'trade-catalog-use-tags')}
         </section>
         ${buildTradePrice(item)}
+        ${item.status !== 'unavailable' ? '<button type="button" class="catalog-purchase-trigger" data-action="catalog-purchase">Kaufen</button>' : ''}
         ${item.conditions ? `
         <section class="trade-catalog-meta-block trade-catalog-conditions">
           <h4>${escapeHtml(item.conditionsTitle)}</h4>
@@ -276,7 +277,7 @@ function buildTradeCatalogPage(page, entry, pageIndex, total) {
   const activeCategory = data.categories[0]?.id || 'all';
   return `
     ${nav}
-    <div class="trade-catalog-page">
+    <div class="trade-catalog-page" data-catalog-purchase-module="${escapeHtml(entry.id)}" data-catalog-page-index="${pageIndex}">
       <article class="trade-catalog-sheet">
         <header class="trade-catalog-header">
           ${buildTradeCatalogImage(page.image || data.headerIcon || entry.icon, page.image ? 'trade-catalog-header-scene' : 'trade-catalog-header-icon', 'H')}
@@ -297,7 +298,7 @@ function buildTradeCatalogPage(page, entry, pageIndex, total) {
           </label>
         </div>
         <main class="trade-catalog-list">
-          ${data.items.map(item => buildTradeCatalogItem(item, activeCategory)).join('')}
+          ${data.items.map((item, index) => buildTradeCatalogItem(item, activeCategory, index, page.tradeCatalog?.items?.[index]?.id || '')).join('')}
           <div class="trade-catalog-empty" data-trade-empty${data.items.some(item => activeCategory === 'all' || item.category === activeCategory) ? ' hidden' : ''}>Für diese Auswahl sind noch keine Waren eingetragen.</div>
         </main>
       </article>

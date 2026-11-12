@@ -2,7 +2,8 @@
 export const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
 export function safeImage(value) {
   const source = String(value || '').trim();
-  return /^(?:https?:\/\/|\.?\.?\/|data:image\/(?:png|jpeg|webp|gif);base64,)/i.test(source) ? source : '';
+  if (/[\\\x00-\x1f\x7f]/.test(source)) return '';
+  return /^(?:https?:\/\/|\/(?!\/)|\.{1,2}\/|data:image\/(?:png|jpeg|webp|gif);base64,)/i.test(source) ? source : '';
 }
 export function listEmblem(list, { fallback = true } = {}) {
   const image = (list?.images || []).map(safeImage).find(Boolean);

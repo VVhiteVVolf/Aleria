@@ -60,6 +60,7 @@ function buildGoodsCell(row, column, goods, table, rowIndex) {
         <td class="goods-name-cell" style="${escapeHtml(getGoodsItemImageStyle(row))}">
           ${buildGoodsImage(row.image, 'goods-item-image', fallback, value, getGoodsItemImageOptions(row))}
           <strong>${escapeHtml(value || 'Ware')}</strong>
+          <button type="button" class="catalog-purchase-trigger" data-action="catalog-purchase">Kaufen</button>
         </td>`;
   }
   if (column.id === 'price') {
@@ -88,20 +89,27 @@ function renderGoodsDetailText(value) {
     .join('');
 }
 
-function buildGoodsRows(table, goods, activeCategory = 'all') {
+function buildGoodsRows(table, goods, activeCategory = 'all', tableIndex = 0, sourceTable = null) {
   const rows = Array.isArray(table.rows) ? table.rows : [];
   const columns = Array.isArray(table.columns) && table.columns.length ? table.columns : getDefaultGoodsColumns();
   if (!rows.length) {
     return `<tr class="goods-empty-row"><td colspan="${escapeHtml(columns.length)}">Noch keine Waren eingetragen.</td></tr>`;
   }
+  // Presentation sanitization can remove empty rows and generate table IDs.
+  // Preserve the original register locator instead of buying by display order.
+  const sources = sourceTable && Array.isArray(sourceTable.rows)
+    ? sourceTable.rows.map((row, index) => ({ row, index }))
+      .filter(source => sanitizeGoodsRows([source.row], table.columns).length > 0) : [];
   return rows.map((item, index) => {
+    const source = sources[index] || { row: item, index };
+    const uniqueId = (source.row.definitionKind === 'unique' || source.row.kind === 'unique') && source.row.id;
     const category = slugify(item.category || 'sonstiges', 'sonstiges');
     const hiddenAttr = activeCategory !== 'all' && category !== activeCategory ? ' hidden' : '';
     const details = renderGoodsDetailText(item.details);
     const expandableClass = details ? ' is-expandable' : '';
     const expandableAttrs = details ? ' data-goods-detail-trigger tabindex="0" aria-expanded="false"' : '';
     return `
-      <tr class="goods-product-row goods-category-${escapeHtml(category)}${expandableClass}"${expandableAttrs}${hiddenAttr}>
+      <tr class="goods-product-row goods-category-${escapeHtml(category)}${expandableClass}" data-catalog-source-kind="goods-register" data-catalog-table-id="${escapeHtml(sourceTable ? sourceTable.id || String(tableIndex) : table.id || String(tableIndex))}" data-catalog-row-index="${source.index}"${uniqueId ? ` data-catalog-row-id="${escapeHtml(uniqueId)}"` : ''}${expandableAttrs}${hiddenAttr}>
         ${columns.map(column => buildGoodsCell(item, column, goods, table, index)).join('')}
       </tr>
       ${details ? `
@@ -115,7 +123,7 @@ function buildGoodsRows(table, goods, activeCategory = 'all') {
   }).join('');
 }
 
-function buildGoodsTableBlock(table, goods, scopeId) {
+function buildGoodsTableBlock(table, goods, scopeId, tableIndex = 0, sourceTable = null) {
   const columns = Array.isArray(table.columns) && table.columns.length ? table.columns : getDefaultGoodsColumns();
   const scrollClass = Array.isArray(table.rows) && table.rows.length > 8 ? ' scrollable' : '';
   const activeCategory = getGoodsInitialFilter(table);
@@ -128,7 +136,7 @@ function buildGoodsTableBlock(table, goods, scopeId) {
           <thead>
             <tr>${columns.map(column => `<th>${escapeHtml(column.label)}</th>`).join('')}</tr>
           </thead>
-          <tbody>${buildGoodsRows(table, goods, activeCategory)}</tbody>
+          <tbody>${buildGoodsRows(table, goods, activeCategory, tableIndex, sourceTable)}</tbody>
         </table>
       </div>
     </section>`;
@@ -170,6 +178,7 @@ document.addEventListener('click', event => {
   }
 
   const detailTrigger = event.target?.closest?.('[data-goods-detail-trigger]');
+  if (event.target?.closest?.('button, input, select, textarea, a')) return;
   if (!detailTrigger || !detailTrigger.closest('.goods-table-block')) return;
   event.preventDefault();
   toggleGoodsDetailRow(detailTrigger);
@@ -177,6 +186,7 @@ document.addEventListener('click', event => {
 
 document.addEventListener('keydown', event => {
   if (event.key !== 'Enter' && event.key !== ' ') return;
+  if (event.target?.closest?.('button, input, select, textarea, a')) return;
   const detailTrigger = event.target?.closest?.('[data-goods-detail-trigger]');
   if (!detailTrigger || !detailTrigger.closest('.goods-table-block')) return;
   event.preventDefault();
@@ -227,7 +237,7 @@ function buildGoodsTablePage(page, entry, pageIndex, total) {
 
   return `
     ${nav}
-    <div class="goods-page">
+    <div class="goods-page" data-catalog-purchase-module="${escapeHtml(entry.id)}" data-catalog-page-index="${pageIndex}">
       <article class="goods-sheet">
         <header class="goods-header">
           ${buildGoodsImage(goods.headerIcon || entry.icon, 'goods-header-icon', 'W', goods.title)}
@@ -240,7 +250,7 @@ function buildGoodsTablePage(page, entry, pageIndex, total) {
 
         <main class="goods-layout">
           <section class="goods-table-panel">
-            ${goods.tables.map((table, index) => buildGoodsTableBlock(table, goods, `${scopeId}-${index}`)).join('')}
+            ${goods.tables.map((table, index) => buildGoodsTableBlock(table, goods, `${scopeId}-${index}`, index, page.goodsTable?.tables?.[index])).join('')}
           </section>
 
           <aside class="goods-sidebar">

@@ -4,6 +4,7 @@
 function renderEditCommentSegmentList() {
   const list = document.getElementById('ec-segment-list');
   if (!list) return;
+  if (list.dataset) list.dataset.commentMode = _editMode;
   if (!_editCommentSegments.length) _editCommentSegments = [makeCommentSegment('speech')];
   coerceCommentSegmentsForMode(true);
   renderCommentSegmentActions(true);
@@ -23,6 +24,7 @@ function renderEditCommentSegmentList() {
         ${getSegmentSideControl(segment, true)}
         ${getCommentLanguageControls(segment, true)}
         ${getCommentSegmentImageSetPicker(segment, true)}
+        ${segment.kind === 'foreignvoice' ? getCommentForeignVoiceControls(segment, true) : ''}
         ${canUseEmote ? getSegmentEmotePalette(segment, true) : ''}
         ${segment.kind === 'action' ? '<div class="comment-segment-note">Handlungen werden als Erzähler-Abschnitt ausgegeben.</div>' : ''}
         ${segment.kind === 'secretaction' ? '<div class="comment-segment-note">Erscheint anonym mit Silhouette statt Portrait und Name.</div>' : ''}
@@ -75,6 +77,9 @@ function setEditCommentSegmentKind(id, kind) {
   if (!getAllowedCommentSegmentKinds(true).includes(kind)) kind = 'action';
   if (!isCommentSegmentKindAllowedForMechanicMode(segment, kind, true)) return;
   segment.kind = normalizeCommentKind(kind);
+  if (segment.kind === 'foreignvoice') {
+    Object.assign(segment, AleriaCommentForeignVoice.normalize(segment), { emoteIndex: null, imageSetId: '', actorId: '' });
+  }
   if (segment.kind !== 'performance') {
     segment.skillChallengeEnabled = false;
   }
@@ -115,7 +120,7 @@ function setEditCommentSegmentText(id, value) {
 function setEditCommentSegmentActor(id, actorId) {
   const segment = _editCommentSegments.find(item => item.id === id);
   const actor = window.AleriaCommentSceneCast?.getActor?.(actorId, true);
-  if (!segment || !actor) return;
+  if (!segment || !actor || segment.kind === 'foreignvoice' || _editMode === 'narrator') return;
   segment.actorId = actor.id;
   segment.emoteIndex = null;
   segment.combatActionId = '';
@@ -246,6 +251,8 @@ function buildEditCommentSegmentsForSave() {
     .map(segment => ({ ...segment, text: String(segment.text || '').trim() }))
     .filter(segment => segment.text)
     .map(segment => {
+      if (segment.kind === 'foreignvoice') return buildCommentForeignVoiceSegment(segment);
+      if (_editMode === 'narrator' && segment.kind === 'secretaction') return buildCommentNarratorSecretActionSegment(segment);
       if (_editMode === 'narrator' || segment.kind === 'action') {
         return {
           kind: segment.kind === 'action' ? 'action' : 'narrator',

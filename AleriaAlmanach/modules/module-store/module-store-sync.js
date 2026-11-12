@@ -220,8 +220,7 @@ function confirmBackupBeforeDestructiveImport(label, details = '') {
   return confirm(`${label} fortsetzen?${extra}\n\nVor diesem Import solltest du zuerst "Vollbackup herunterladen" nutzen. Der Import schreibt Daten nach Firebase und ueberschreibt gleiche IDs.`);
 }
 
-function getModuleStoreContentSignature(payload) {
-  const normalized = normalizeModuleStorePayload(payload);
+function getCanonicalModuleStoreJson(value) {
   // Firestore sorts map keys. Object insertion order must not turn an
   // unchanged round trip into a conflict; array order remains meaningful.
   const canonicalize = value => Array.isArray(value)
@@ -229,7 +228,12 @@ function getModuleStoreContentSignature(payload) {
     : value && typeof value === 'object'
       ? Object.fromEntries(Object.keys(value).sort().map(key => [key, canonicalize(value[key])]))
       : value;
-  return JSON.stringify(canonicalize({
+  return JSON.stringify(canonicalize(value));
+}
+
+function getModuleStoreContentSignature(payload) {
+  const normalized = normalizeModuleStorePayload(payload);
+  return getCanonicalModuleStoreJson({
     customSections: normalized.customSections,
     moduleSectionNodes: normalized.moduleSectionNodes,
     moduleNodeAssignments: normalized.moduleNodeAssignments,
@@ -237,7 +241,41 @@ function getModuleStoreContentSignature(payload) {
     hiddenModuleIds: normalized.hiddenModuleIds,
     archiveDashboardInsights: normalized.archiveDashboardInsights,
     entryOverrides: normalized.entryOverrides
-  }));
+  });
+}
+
+// Tabs share cache records, but sync timestamps and Firestore map ordering are
+// not edits. Only known content may relax the persistence layer's strict CAS.
+function areModuleStoreLocalRecordsEquivalent(key, left, right) {
+  if (left === right) return true;
+  if (typeof left !== 'string' || typeof right !== 'string') return false;
+  try {
+    const first = JSON.parse(left);
+    const second = JSON.parse(right);
+    const isRecord = value => value !== null && typeof value === 'object' && !Array.isArray(value);
+    const hasSupportedSchema = value => isRecord(value)
+      && (!Object.hasOwn(value, 'version') || value.version === MODULE_STORE_SCHEMA_VERSION);
+    if (!isRecord(first) || !isRecord(second)) return false;
+    if (key === MODULE_STORE_KEY) {
+      const content = value => {
+        const record = { version: MODULE_STORE_SCHEMA_VERSION, ...value };
+        delete record.updatedAtClient;
+        return getCanonicalModuleStoreJson(record);
+      };
+      // Compare the raw schema fields, including unfamiliar ones. Normalizing
+      // here could discard an edit before deciding whether it is safe to write.
+      return hasSupportedSchema(first) && hasSupportedSchema(second)
+        && content(first) === content(second);
+    }
+    if (key === MODULE_STORE_SYNC_META_KEY && first.signature === second.signature) {
+      const signature = first.signature;
+      if (typeof signature !== 'string') return false;
+      if (/^sha256:[a-f0-9]{64}$/.test(signature)) return true;
+      // Legacy receipts embed their original content instead of a digest.
+      return hasSupportedSchema(JSON.parse(signature));
+    }
+  } catch { /* Unreadable records retain byte-for-byte conflict protection. */ }
+  return false;
 }
 
 function readModuleStoreSyncMeta() {

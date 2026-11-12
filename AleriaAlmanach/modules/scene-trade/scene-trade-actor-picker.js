@@ -19,12 +19,12 @@ export function renderSceneTradeActorPicker({ accounts = [], selectedKey = '', l
 }
 
 /** One delegated listener set; closed pickers contain no list of archive records. */
-export function mountSceneTradeActorPickers(root, { getAccounts, canEdit, onSelect }) {
+export function mountSceneTradeActorPickers(root, { getAccounts, canEdit, onSelect, emptyMessage = 'Keine passende Person. Unter „Personen“ kannst du die Auswahl ergänzen.' }) {
   const lifetime = new AbortController();
   const findPicker = target => target?.closest?.('[data-trade-actor-picker]');
   function renderOptions(picker, more = false) {
     const query = normalizeSceneTradeSearch(picker.querySelector('[data-trade-picker-search]').value);
-    const records = getAccounts().filter(account => (!picker.dataset.pickerDebit || picker.dataset.pickerDebit !== 'true' || account.canDebit)
+    const records = getAccounts({ field: picker.dataset.pickerField }).filter(account => (!picker.dataset.pickerDebit || picker.dataset.pickerDebit !== 'true' || account.canDebit)
       && (picker.dataset.pickerActor !== 'true' || account.kind === 'character' && account.canDebit)
       && normalizeSceneTradeSearch(`${account.name} ${account.record.title || ''}`).includes(query));
     const limit = more ? Number(picker.dataset.pickerLimit || 12) + 12 : 12;
@@ -32,7 +32,7 @@ export function mountSceneTradeActorPickers(root, { getAccounts, canEdit, onSele
     picker.querySelector('[data-trade-actor-options]').innerHTML = records.slice(0, limit).map(account => {
       const value = picker.dataset.pickerActor === 'true' ? account.id : account.key;
       return `<button type="button" class="scene-trade-actor-option" data-trade-picker-value="${html(value)}" role="option" aria-selected="${value === picker.dataset.pickerValue}"${account.definitionsReady === false ? ' disabled' : ''}>${renderSceneTradeActorAvatar(account)}<span class="scene-trade-actor-name">${html(account.name)}${account.definitionsReady === false ? '<small>Inventar wird vorbereitet …</small>' : account.kind === 'group' ? '<small>Gruppenkasse</small>' : ''}</span></button>`;
-    }).join('') || '<p class="scene-trade-actor-hint">Keine passende Person. Unter „Personen“ kannst du die Auswahl ergänzen.</p>';
+    }).join('') || `<p class="scene-trade-actor-hint">${html(emptyMessage)}</p>`;
     if (records.length > limit) picker.querySelector('[data-trade-actor-options]').insertAdjacentHTML('beforeend', '<button type="button" class="scene-trade-actor-add" data-trade-picker-more>Weitere Personen zeigen</button>');
   }
   root.addEventListener('toggle', event => {

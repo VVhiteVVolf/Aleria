@@ -11,6 +11,7 @@ import { HOUSE_SLIABH_FAMILY } from './house-sliabh-family.js';
 import { HOUSE_DURDYNN_FAMILY } from './house-durdynn-family.js';
 import { HOUSE_MWYALCHEN_FAMILY } from './house-mwyalchen-family.js';
 import { HOUSE_TYLLUAN_FAMILY } from './house-tylluan-family.js';
+import { HOUSE_BRONNOR_FAMILY } from './draig-garde-house-families.js';
 
 export const TAL_DER_MILANE_DEPENDENT_HOUSE_DEFINITIONS = Object.freeze([
   Object.freeze({ slug: 'eryr', title: 'Haus Eryr' }),
@@ -62,6 +63,7 @@ function placeholderFamily(definition) {
 }
 
 const COMPLETED_HOUSE_FAMILIES = Object.freeze({
+  bronnor: HOUSE_BRONNOR_FAMILY,
   durdynn: HOUSE_DURDYNN_FAMILY,
   eryr: HOUSE_ERYR_FAMILY,
   gaeth: HOUSE_GAETH_FAMILY,

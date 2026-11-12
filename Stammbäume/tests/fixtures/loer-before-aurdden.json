@@ -1,0 +1,1188 @@
+{
+  "schema": "aleria.family-tree",
+  "schemaVersion": 1,
+  "document": {
+    "id": "haus-loer",
+    "title": "Haus Loer",
+    "motto": "",
+    "description": "Die belegte Linie des wohlhabenden, im Edelsteinhandel führenden Ritterherrenhauses Loer unter Haus Wyrm: vom Begründer Cadfarch bis zur Generation von 1722.",
+    "emblem": "assets/images/houses/Llamreis Ankunft/haus-loer.png",
+    "houseProfile": {
+      "rankId": "knight",
+      "seat": "Gwynthor",
+      "barony": "Llamreis Ankunft",
+      "county": "Celtigerns Wacht",
+      "kingdom": "Cenyr",
+      "secondarySeats": [
+        "Craithglyn"
+      ],
+      "liegeHouseId": "haus-wyrm",
+      "liegeHouseName": "Haus Wyrm",
+      "regionEmblems": {
+        "seat": "assets/images/regions/gwynthor.png",
+        "barony": "assets/images/regions/llamreis-ankunft.png",
+        "county": "assets/images/regions/celtigerns-wacht.png",
+        "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+      }
+    }
+  },
+  "houses": [
+    {
+      "id": "house-loer",
+      "name": "Haus Loer",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/haus-loer.png",
+      "status": "active"
+    },
+    {
+      "id": "house-unbekannt-rhiannedd",
+      "name": "Unbekanntes Haus",
+      "motto": "",
+      "emblem": "",
+      "status": "active"
+    },
+    {
+      "id": "house-unbekannt-glenys-1667",
+      "name": "Unbekanntes Haus",
+      "motto": "",
+      "emblem": "",
+      "status": "active"
+    },
+    {
+      "id": "house-unbekannt-glenys-1695",
+      "name": "Unbekanntes Haus",
+      "motto": "",
+      "emblem": "",
+      "status": "active"
+    }
+  ],
+  "persons": [
+    {
+      "id": "cadfarch-loer",
+      "worldPersonId": "person--haus-loer--cadfarch-loer",
+      "name": "Cadfarch Loer",
+      "title": "Begründer des Ritterherrenhauses Loer",
+      "sex": "male",
+      "status": "dead",
+      "birth": "????",
+      "death": "????",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "head",
+      "tags": [],
+      "notes": "Erschloss der Überlieferung nach die ersten ergiebigen Edelsteinadern Craithglyns und errichtete zu ihrem Schutz die Stammburg; sein eigentlicher Name ist nicht überliefert.",
+      "extensions": {}
+    },
+    {
+      "id": "unknown-cadfarch-spouse",
+      "worldPersonId": "person--family-tree--unknown-cadfarch-spouse",
+      "name": "Unbekannte Ehefrau",
+      "title": "",
+      "sex": "female",
+      "status": "unknown",
+      "birth": "????",
+      "death": "????",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "maddocc-loer",
+      "worldPersonId": "person--haus-loer--maddocc-loer",
+      "name": "Maddocc Loer",
+      "title": "",
+      "sex": "male",
+      "status": "dead",
+      "birth": "1639",
+      "death": "????",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "head",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "unknown-maddocc-spouse",
+      "worldPersonId": "person--family-tree--unknown-maddocc-spouse",
+      "name": "Unbekannte Ehefrau",
+      "title": "",
+      "sex": "female",
+      "status": "unknown",
+      "birth": "1641",
+      "death": "????",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "rhiannedd-loer",
+      "worldPersonId": "person--haus-loer--rhiannedd-loer",
+      "name": "Rhiannedd Loer",
+      "title": "",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1636",
+      "death": "????",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "unknown-rhiannedd-spouse",
+      "worldPersonId": "person--family-tree--unknown-rhiannedd-spouse",
+      "name": "Unbekannter Ehemann",
+      "title": "",
+      "sex": "male",
+      "status": "unknown",
+      "birth": "1634",
+      "death": "????",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "eurgain-loer",
+      "worldPersonId": "person--haus-loer--eurgain-loer",
+      "name": "Eurgain Loer",
+      "title": "Ritterherr des Hauses Loer",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1664",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-loer/eurgain-loer.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "head",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "unknown-eurgain-spouse",
+      "worldPersonId": "person--family-tree--unknown-eurgain-spouse",
+      "name": "Unbekannte Ehefrau",
+      "title": "",
+      "sex": "female",
+      "status": "unknown",
+      "birth": "1666",
+      "death": "",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "glenys-1667-loer",
+      "worldPersonId": "person--haus-loer--glenys-1667-loer",
+      "name": "Glenys Loer",
+      "title": "",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1667",
+      "death": "????",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "unknown-glenys-1667-spouse",
+      "worldPersonId": "person--family-tree--unknown-glenys-1667-spouse",
+      "name": "Unbekannter Ehemann",
+      "title": "",
+      "sex": "male",
+      "status": "unknown",
+      "birth": "1665",
+      "death": "????",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "dwynarth-loer",
+      "worldPersonId": "person--haus-loer--dwynarth-loer",
+      "name": "Dwynarth Loer",
+      "title": "",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1670",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-loer/dwynarth-loer.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "Hauptmann Craithglyns.",
+      "extensions": {}
+    },
+    {
+      "id": "unknown-dwynarth-spouse",
+      "worldPersonId": "person--family-tree--unknown-dwynarth-spouse",
+      "name": "Unbekannte Ehefrau",
+      "title": "",
+      "sex": "female",
+      "status": "unknown",
+      "birth": "1672",
+      "death": "",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "ynyrion-loer",
+      "worldPersonId": "person--haus-loer--ynyrion-loer",
+      "name": "Ynyrion Loer",
+      "title": "",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1689",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-loer/ynyrion-loer.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "unknown-ynyrion-spouse",
+      "worldPersonId": "person--family-tree--unknown-ynyrion-spouse",
+      "name": "Unbekannte Ehefrau",
+      "title": "",
+      "sex": "female",
+      "status": "unknown",
+      "birth": "1691",
+      "death": "",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "gwynan-loer",
+      "worldPersonId": "person--haus-loer--gwynan-loer",
+      "name": "Gwynan Loer",
+      "title": "",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1692",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-loer/gwynan-loer.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "unknown-gwynan-spouse",
+      "worldPersonId": "person--family-tree--unknown-gwynan-spouse",
+      "name": "Unbekannte Ehefrau",
+      "title": "",
+      "sex": "female",
+      "status": "unknown",
+      "birth": "1694",
+      "death": "",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "garmon-loer",
+      "worldPersonId": "person--haus-loer--garmon-loer",
+      "name": "Garmon Loer",
+      "title": "",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1692",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-loer/garmon-loer.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "unknown-garmon-spouse",
+      "worldPersonId": "person--family-tree--unknown-garmon-spouse",
+      "name": "Unbekannte Ehefrau",
+      "title": "",
+      "sex": "female",
+      "status": "unknown",
+      "birth": "1694",
+      "death": "",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "glenys-1695-loer",
+      "worldPersonId": "person--haus-loer--glenys-1695-loer",
+      "name": "Glenys Loer",
+      "title": "",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1695",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-loer/glenys-1695-loer.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "unknown-glenys-1695-spouse",
+      "worldPersonId": "person--family-tree--unknown-glenys-1695-spouse",
+      "name": "Unbekannter Ehemann",
+      "title": "",
+      "sex": "male",
+      "status": "unknown",
+      "birth": "1693",
+      "death": "",
+      "portrait": "",
+      "portraitPlaceholder": "auto",
+      "houseId": "",
+      "familyRole": "married",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "aeron-loer",
+      "worldPersonId": "person--haus-loer--aeron-loer",
+      "name": "Aeron Loer",
+      "title": "",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1712",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-loer/aeron-loer.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "mainline",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "gwion-loer",
+      "worldPersonId": "person--haus-loer--gwion-loer",
+      "name": "Gwion Loer",
+      "title": "",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1715",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-loer/gwion-loer.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "gwallter-loer",
+      "worldPersonId": "person--haus-loer--gwallter-loer",
+      "name": "Gwallter Loer",
+      "title": "",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1717",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-loer/gwallter-loer.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "olwen-loer",
+      "worldPersonId": "person--haus-loer--olwen-loer",
+      "name": "Olwen Loer",
+      "title": "",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1720",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-loer/olwen-loer.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "gwenfaen-loer",
+      "worldPersonId": "person--haus-loer--gwenfaen-loer",
+      "name": "Gwenfaen Loer",
+      "title": "",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1715",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-loer/gwenfaen-loer.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "islwyna-loer",
+      "worldPersonId": "person--haus-loer--islwyna-loer",
+      "name": "Islwyna Loer",
+      "title": "",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1720",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-loer/islwyna-loer.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "tyne-loer",
+      "worldPersonId": "person--haus-loer--tyne-loer",
+      "name": "Tyne Loer",
+      "title": "",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1717",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-loer/tyne-loer.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "tesni-loer",
+      "worldPersonId": "person--haus-loer--tesni-loer",
+      "name": "Tesni Loer",
+      "title": "",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1722",
+      "death": "",
+      "portrait": "assets/images/portraits/haus-loer/tesni-loer.jpg",
+      "portraitPlaceholder": "auto",
+      "houseId": "house-loer",
+      "familyRole": "core",
+      "lineageRole": "branch",
+      "tags": [],
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "partnerships": [
+    {
+      "id": "marriage-cadfarch-spouse",
+      "participantIds": [
+        "cadfarch-loer",
+        "unknown-cadfarch-spouse"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-maddocc-spouse",
+      "participantIds": [
+        "maddocc-loer",
+        "unknown-maddocc-spouse"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-rhiannedd-spouse",
+      "participantIds": [
+        "rhiannedd-loer",
+        "unknown-rhiannedd-spouse"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-eurgain-spouse",
+      "participantIds": [
+        "eurgain-loer",
+        "unknown-eurgain-spouse"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-glenys-1667-spouse",
+      "participantIds": [
+        "glenys-1667-loer",
+        "unknown-glenys-1667-spouse"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-dwynarth-spouse",
+      "participantIds": [
+        "dwynarth-loer",
+        "unknown-dwynarth-spouse"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-ynyrion-spouse",
+      "participantIds": [
+        "ynyrion-loer",
+        "unknown-ynyrion-spouse"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-gwynan-spouse",
+      "participantIds": [
+        "gwynan-loer",
+        "unknown-gwynan-spouse"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-garmon-spouse",
+      "participantIds": [
+        "garmon-loer",
+        "unknown-garmon-spouse"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "marriage-glenys-1695-spouse",
+      "participantIds": [
+        "glenys-1695-loer",
+        "unknown-glenys-1695-spouse"
+      ],
+      "type": "marriage",
+      "status": "active",
+      "start": "",
+      "end": "",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "parentages": [
+    {
+      "id": "parentage-maddocc-loer",
+      "childId": "maddocc-loer",
+      "parentIds": [
+        "cadfarch-loer",
+        "unknown-cadfarch-spouse"
+      ],
+      "partnershipId": "marriage-cadfarch-spouse",
+      "type": "claimed",
+      "legitimacy": "unknown",
+      "certainty": "probable",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-rhiannedd-loer",
+      "childId": "rhiannedd-loer",
+      "parentIds": [
+        "cadfarch-loer",
+        "unknown-cadfarch-spouse"
+      ],
+      "partnershipId": "marriage-cadfarch-spouse",
+      "type": "claimed",
+      "legitimacy": "unknown",
+      "certainty": "probable",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-eurgain-loer",
+      "childId": "eurgain-loer",
+      "parentIds": [
+        "maddocc-loer",
+        "unknown-maddocc-spouse"
+      ],
+      "partnershipId": "marriage-maddocc-spouse",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-glenys-1667-loer",
+      "childId": "glenys-1667-loer",
+      "parentIds": [
+        "maddocc-loer",
+        "unknown-maddocc-spouse"
+      ],
+      "partnershipId": "marriage-maddocc-spouse",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-dwynarth-loer",
+      "childId": "dwynarth-loer",
+      "parentIds": [
+        "maddocc-loer",
+        "unknown-maddocc-spouse"
+      ],
+      "partnershipId": "marriage-maddocc-spouse",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-ynyrion-loer",
+      "childId": "ynyrion-loer",
+      "parentIds": [
+        "eurgain-loer",
+        "unknown-eurgain-spouse"
+      ],
+      "partnershipId": "marriage-eurgain-spouse",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-gwynan-loer",
+      "childId": "gwynan-loer",
+      "parentIds": [
+        "eurgain-loer",
+        "unknown-eurgain-spouse"
+      ],
+      "partnershipId": "marriage-eurgain-spouse",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-garmon-loer",
+      "childId": "garmon-loer",
+      "parentIds": [
+        "dwynarth-loer",
+        "unknown-dwynarth-spouse"
+      ],
+      "partnershipId": "marriage-dwynarth-spouse",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-glenys-1695-loer",
+      "childId": "glenys-1695-loer",
+      "parentIds": [
+        "dwynarth-loer",
+        "unknown-dwynarth-spouse"
+      ],
+      "partnershipId": "marriage-dwynarth-spouse",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-aeron-loer",
+      "childId": "aeron-loer",
+      "parentIds": [
+        "ynyrion-loer",
+        "unknown-ynyrion-spouse"
+      ],
+      "partnershipId": "marriage-ynyrion-spouse",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-gwion-loer",
+      "childId": "gwion-loer",
+      "parentIds": [
+        "ynyrion-loer",
+        "unknown-ynyrion-spouse"
+      ],
+      "partnershipId": "marriage-ynyrion-spouse",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-gwallter-loer",
+      "childId": "gwallter-loer",
+      "parentIds": [
+        "ynyrion-loer",
+        "unknown-ynyrion-spouse"
+      ],
+      "partnershipId": "marriage-ynyrion-spouse",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-olwen-loer",
+      "childId": "olwen-loer",
+      "parentIds": [
+        "ynyrion-loer",
+        "unknown-ynyrion-spouse"
+      ],
+      "partnershipId": "marriage-ynyrion-spouse",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-gwenfaen-loer",
+      "childId": "gwenfaen-loer",
+      "parentIds": [
+        "gwynan-loer",
+        "unknown-gwynan-spouse"
+      ],
+      "partnershipId": "marriage-gwynan-spouse",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-islwyna-loer",
+      "childId": "islwyna-loer",
+      "parentIds": [
+        "gwynan-loer",
+        "unknown-gwynan-spouse"
+      ],
+      "partnershipId": "marriage-gwynan-spouse",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-tyne-loer",
+      "childId": "tyne-loer",
+      "parentIds": [
+        "garmon-loer",
+        "unknown-garmon-spouse"
+      ],
+      "partnershipId": "marriage-garmon-spouse",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    },
+    {
+      "id": "parentage-tesni-loer",
+      "childId": "tesni-loer",
+      "parentIds": [
+        "garmon-loer",
+        "unknown-garmon-spouse"
+      ],
+      "partnershipId": "marriage-garmon-spouse",
+      "type": "biological",
+      "legitimacy": "legitimate",
+      "certainty": "confirmed",
+      "visibility": "public",
+      "notes": "",
+      "extensions": {}
+    }
+  ],
+  "lineage": {
+    "founderPartnershipId": "marriage-cadfarch-spouse",
+    "houseId": "house-loer",
+    "crestSubtitle": "",
+    "crestEmblemScale": 0.8,
+    "crestFrame": "silver",
+    "crestFrameScale": 1,
+    "timeGap": {
+      "enabled": true,
+      "years": 0,
+      "fromYear": "????",
+      "toYear": "1639",
+      "label": "Nicht einzeln überlieferte Generationen"
+    }
+  },
+  "cadetBranches": [
+    {
+      "id": "married-away-unbekannt-rhiannedd",
+      "name": "Unbekanntes Haus",
+      "subtitle": "Wegverheiratete Linie",
+      "linkType": "married-away",
+      "parentPartnershipId": "marriage-rhiannedd-spouse",
+      "parentPersonId": "",
+      "childIds": [],
+      "houseId": "house-unbekannt-rhiannedd",
+      "emblem": "",
+      "emblemScale": 0.86,
+      "crestFrame": "gold",
+      "frameScale": 1,
+      "founded": "",
+      "targetFamilyId": "haus-unbekannt",
+      "notes": "Rhiannedd wurde einem in der Quelle nur als „???“ überlieferten Ehemann wegverheiratet; sein Haus ist nicht überliefert.",
+      "extensions": {}
+    },
+    {
+      "id": "married-away-unbekannt-glenys-1667",
+      "name": "Unbekanntes Haus",
+      "subtitle": "Wegverheiratete Linie",
+      "linkType": "married-away",
+      "parentPartnershipId": "marriage-glenys-1667-spouse",
+      "parentPersonId": "",
+      "childIds": [],
+      "houseId": "house-unbekannt-glenys-1667",
+      "emblem": "",
+      "emblemScale": 0.86,
+      "crestFrame": "gold",
+      "frameScale": 1,
+      "founded": "",
+      "targetFamilyId": "haus-unbekannt",
+      "notes": "Glenys, die Schwester Eurgains und Dwynarths, wurde einem in der Quelle nur als „???“ überlieferten Ehemann wegverheiratet; sein Haus ist nicht überliefert.",
+      "extensions": {}
+    },
+    {
+      "id": "married-away-unbekannt-glenys-1695",
+      "name": "Unbekanntes Haus",
+      "subtitle": "Wegverheiratete Linie",
+      "linkType": "married-away",
+      "parentPartnershipId": "marriage-glenys-1695-spouse",
+      "parentPersonId": "",
+      "childIds": [],
+      "houseId": "house-unbekannt-glenys-1695",
+      "emblem": "",
+      "emblemScale": 0.86,
+      "crestFrame": "gold",
+      "frameScale": 1,
+      "founded": "",
+      "targetFamilyId": "haus-unbekannt",
+      "notes": "Glenys, Dwynarths Tochter, wurde einem in der Quelle nur als „???“ überlieferten Ehemann wegverheiratet; sein Haus ist nicht überliefert.",
+      "extensions": {}
+    }
+  ],
+  "timeJumps": [],
+  "presentation": {
+    "relationshipColors": {
+      "marriage": "#326c4a",
+      "engagement": "#b88b37",
+      "union": "#8e2724",
+      "affair": "#704485",
+      "concubinage": "#704485",
+      "political": "#9d7d48",
+      "forced": "#c7a974",
+      "biological": "#8e2724",
+      "adoptive": "#2f75a8",
+      "foster": "#2f75a8",
+      "step": "#7eb4d7",
+      "magical": "#704485",
+      "claimed": "#62615e"
+    }
+  },
+  "view": {
+    "focusPersonId": "cadfarch-loer",
+    "orientation": "vertical",
+    "ancestorDepth": 10,
+    "descendantDepth": 10,
+    "showSiblings": true
+  },
+  "extensions": {
+    "sourceNote": "Die Quelltabelle überliefert für die frühen Generationen (Begründer und seine beiden Kinder) keine Namen, nur „...\"-Platzhalter; sie wurden mit passenden walisischen Namen ergänzt (Cadfarch, Maddocc, Rhiannedd). Keine Generation trägt eine feste Jahreszahl; Geburtsjahre der jüngsten Generation (Ynyrions Kinder Aeron, Gwion, Gwallter, Olwen; Gwynans Kinder Gwenfaen, Islwyna; Garmons Kinder Tyne, Tesni) wurden anhand des dargestellten Alters geschätzt, die Elterngenerationen rückwirkend mit einem gesunden Abstand von mindestens 20 Jahren zum jeweils ältesten Kind hochgerechnet. Eine weitere, in der Quelle nur als „???\" geführte Schwester Eurgains und Dwynarths erhielt den Namen Glenys; da Dwynarths eigene Tochter unabhängig davon ebenfalls Glenys heißt (Namensgleichheit über eine Generation hinweg, kein Fehler), sind beide über das Geburtsjahr in der ID disambiguiert. Sämtliche Ehepartner sind in der Quelle nur als unbeschriftetes Portraitfeld überliefert und bleiben namenlos; Rhiannedd und beide Glenys wurden an ein nicht näher überliefertes „Unbekanntes Haus\" wegverheiratet. Die Quelle nennt als Lehnsherr durchgängig Haus Wyrm (nicht Draig); das Registry wurde entsprechend korrigiert. Externe Portraitquellen wurden als lokale Projektdateien gesichert. Als Ritterherrenhaus führt Loer den silbernen Wappenrahmen, das Oberhaupt trägt den Titel Ritterherr.",
+    "blankFamily": false,
+    "sourceRevision": 3,
+    "registryManagedDocumentFieldRevisions": {},
+    "registryManagedHouseProfileFieldRevisions": {},
+    "registryManagedExtensionFieldRevisions": {},
+    "registryManagedViewFieldRevisions": {},
+    "registryManagedLineageFieldRevisions": {},
+    "registryManagedEntitySourceRevision": 1,
+    "houseBiographyModule": {
+      "schema": "aleria.house-module",
+      "schemaVersion": 1,
+      "pageTitle": "Haus Loer",
+      "housePage": true,
+      "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Loer/assets/hausmotiv.png",
+      "imageWidth": 38,
+      "imageSquare": false,
+      "imageTall": true,
+      "description": "Das Haus Loer ist ein niederes Rittergeschlecht aus den Gebirgen Craithglyns und Vasall des Ritterfürstenhauses Wyrm. Seine Macht gründet sich weniger auf große Heere als auf wirtschaftlichen Einfluss.\n\nDurch seine Beteiligungen an den Edelsteinminen Craithglyns sowie eigene Bergwerke, Goldschmieden und Juwelierbetriebe kontrolliert das Haus einen bedeutenden Teil des Edelsteinhandels innerhalb Gwynthors.\n\nDie Familie gilt als wohlhabend, zurückhaltend und äußerst geschäftstüchtig. Ihre Ritter treten in außergewöhnlich prachtvollen Rüstungen auf, reich verziert mit Gold, Silber und Edelsteinen, ohne dabei ihre militärische Disziplin einzubüßen.\n\nIn Craithglyn stellte Haus Loer mehrfach den Hauptmann der Stadt und zeitweise sogar den Lehensherrn. In Gwynthor unterhält das Haus lediglich ein repräsentatives Herrenhaus, das den Angehörigen während ihrer Aufenthalte am Grafenhof als Residenz dient.",
+      "quote": "",
+      "quoteBy": "",
+      "commentSequence": [],
+      "stats": [
+        [
+          "Voller Name",
+          "Haus Loer"
+        ],
+        [
+          "Rang",
+          "Ritterherr"
+        ],
+        [
+          "Stammsitz",
+          "Höhenburg bei Craithglyn; Herrenhaus in Gwynthor"
+        ],
+        [
+          "Grafschaft",
+          "Celtigerns Wacht"
+        ],
+        [
+          "Oberhaupt",
+          "Eurgain Loer"
+        ],
+        [
+          "Erbe",
+          "Ynyrion Loer"
+        ],
+        [
+          "Lehnsherr",
+          "Haus Wyrm"
+        ]
+      ],
+      "house": {
+        "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-loer.png",
+        "sideWidth": 100,
+        "connectionPortraitHeight": 80,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Über das Haus",
+        "biographyText": "Das Haus Loer ist ein niederes Rittergeschlecht aus den Gebirgen Craithglyns und Vasall des Ritterfürstenhauses Wyrm. Seine Macht gründet sich weniger auf große Heere als auf wirtschaftlichen Einfluss.\n\nDurch seine Beteiligungen an den Edelsteinminen Craithglyns sowie eigene Bergwerke, Goldschmieden und Juwelierbetriebe kontrolliert das Haus einen bedeutenden Teil des Edelsteinhandels innerhalb Gwynthors.\n\nDie Familie gilt als wohlhabend, zurückhaltend und äußerst geschäftstüchtig. Ihre Ritter treten in außergewöhnlich prachtvollen Rüstungen auf, reich verziert mit Gold, Silber und Edelsteinen, ohne dabei ihre militärische Disziplin einzubüßen.\n\nIn Craithglyn stellte Haus Loer mehrfach den Hauptmann der Stadt und zeitweise sogar den Lehensherrn. In Gwynthor unterhält das Haus lediglich ein repräsentatives Herrenhaus, das den Angehörigen während ihrer Aufenthalte am Grafenhof als Residenz dient.",
+        "abilitiesTitle": "Einfluss und Aufgaben",
+        "abilities": [],
+        "historyTitle": "Geschichte",
+        "historyText": "Die Ursprünge des Hauses reichen bis in die Erschließung der Gebirge rund um Craithglyn zurück. Der Überlieferung nach entdeckten ihre Vorfahren die ersten ergiebigen Edelsteinadern der Region und errichteten zum Schutz der Bergwerke ihre Burg zwischen den Gipfeln.\n\nWährend andere Ritterhäuser ihre Macht durch Ritterlichkeit vergrößerten, investierten die Loer in Bergbau, Schmiedekunst und Handel. Mit jedem neu erschlossenen Stollen wuchs ihr Vermögen ebenso wie ihr Einfluss.\n\nMehrfach übernahmen Angehörige des Hauses die Verwaltung Craithglyns und sorgten für den Ausbau der Minen, Handelsstraßen und Werkstätten. Dadurch entwickelte sich die Stadt zu einem der bedeutendsten Zentren für Edelsteine und Schmuck innerhalb Gwynthors.\n\nBis heute gilt Haus Loer als eines der wirtschaftlich stabilsten Ritterhäuser der Grafschaft.",
+        "worksTitle": "Prägende Ereignisse",
+        "works": [],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Werte und Stellung",
+            "text": "Handwerkliche Meisterschaft und die Verbindung zur Regenbogenschmiede sind prägend. Eurgain führt das Haus; weitere Einzelheiten folgen."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Traditionen und Hausleben",
+            "text": "Die Loer messen handwerklicher Vollkommenheit höchsten Wert bei."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Besitz und Lebensgrundlage",
+            "text": "Der Stammsitz des Hauses ist eine befestigte Höhenburg im Gebirge nahe Craithglyn, umgeben von Steinbrüchen, Minenschächten und weit verzweigten Stollensystemen."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Kultur und Glaube",
+            "text": "Die Loer gehören der Alerischen Kirche an und pflegen eine enge Verbindung zur Regenbogenschmiede. Weitere Einzelheiten folgen."
+          }
+        ],
+        "triviaTitle": "Besonderheiten",
+        "trivia": [],
+        "quotesTitle": "Hausmotto",
+        "quotes": [],
+        "connectionsTitle": "Verbündete und Kadettenhäuser",
+        "connections": [
+          {
+            "name": "Haus Wyrm",
+            "detail": "Lehnsherr",
+            "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-wyrm.png",
+            "imageFormat": "square"
+          }
+        ],
+        "documentsTitle": "Mehr über das Haus",
+        "documents": [
+          {
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-loer.png",
+            "title": "Haus Loer · vollständige Hausseite",
+            "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+            "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-loer"
+          }
+        ],
+        "footer": ""
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@ import {
   createParentages
 } from './family-record-builders.js';
 import { HOUSE_LOER_PORTRAITS } from './house-loer-portraits.js';
+import { withAurddenLoerEngagement } from './aurdden-loer-engagement.js';
 
 const LOER_EMBLEM = 'assets/images/houses/Llamreis Ankunft/haus-loer.png';
 const LOER_HOUSE_ID = 'house-loer';
@@ -54,7 +55,7 @@ const GWYNAN_IDS = ['gwynan-loer', 'unknown-gwynan-spouse'];
 const GARMON_IDS = ['garmon-loer', 'unknown-garmon-spouse'];
 const GLENYS_1695_IDS = ['glenys-1695-loer', 'unknown-glenys-1695-spouse'];
 
-export const HOUSE_LOER_FAMILY = Object.freeze({
+const HOUSE_LOER_BASE = Object.freeze({
   schema: 'aleria.family-tree',
   schemaVersion: 1,
   document: {
@@ -210,3 +211,5 @@ export const HOUSE_LOER_FAMILY = Object.freeze({
     sourceRevision: 1
   }
 });
+
+export const HOUSE_LOER_FAMILY = withAurddenLoerEngagement(HOUSE_LOER_BASE);

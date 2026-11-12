@@ -7,12 +7,16 @@ function normalizeCommentSegmentSide(side) {
 
 function commentSegmentUsesSide(kind, edit = false) {
   const mode = edit ? _editMode : _commentMode;
-  return mode !== 'narrator' && normalizeCommentKind(kind) !== 'action';
+  const normalized = normalizeCommentKind(kind);
+  return mode === 'narrator'
+    ? ['foreignvoice', 'secretaction'].includes(normalized)
+    : normalized !== 'action';
 }
 
 const COMMENT_SEGMENT_MECHANIC_MODES = new Set(['normal', 'skill', 'combat', 'magic']);
 
 function normalizeCommentSegmentMechanicMode(value, kind = 'speech', settings = {}) {
+  if (kind === 'foreignvoice') return 'normal';
   const mode = String(value || '').trim().toLowerCase();
   if (COMMENT_SEGMENT_MECHANIC_MODES.has(mode)) return mode;
   if (settings?.storedCombatResolution || settings?.storedCombatAction || settings?.combatResolution || settings?.combatAction) {
@@ -45,11 +49,12 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
   return {
     id: `seg-${Date.now().toString(36)}-${_commentSegmentSeq}`,
     kind: normalizedKind,
+    ...(normalizedKind === 'foreignvoice' ? AleriaCommentForeignVoice.normalize(combatSettings) : {}),
     text: String(text || ''),
     sceneItemDraft: combatSettings.sceneItemDraft ? JSON.parse(JSON.stringify(combatSettings.sceneItemDraft)) : null,
     sceneItemOperationId: String(combatSettings.sceneItemOperationId || ''),
-    emoteIndex: Number.isInteger(emoteIndex) ? emoteIndex : null,
-    imageSetId: String(combatSettings?.imageSetId || ''),
+    emoteIndex: normalizedKind !== 'foreignvoice' && Number.isInteger(emoteIndex) ? emoteIndex : null,
+    imageSetId: normalizedKind === 'foreignvoice' ? '' : String(combatSettings?.imageSetId || ''),
     side: normalizedKind === 'action' ? '' : normalizeCommentSegmentSide(side),
     durationSeconds: normalizeSceneTimeDurationSeconds(durationSeconds),
     language: normalizeCommentLanguage(language),
@@ -107,7 +112,7 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
       ? String(combatSettings.paymentMode || combatSettings.combatPaymentMode)
       : 'standard',
     combatPaymentConfirmed: usesCombatResolution && Boolean(combatSettings?.paymentConfirmed ?? combatSettings?.combatPaymentConfirmed),
-    actorId: String(combatSettings?.actorId || combatSettings?.sceneActorId || ''),
+    actorId: normalizedKind === 'foreignvoice' ? '' : String(combatSettings?.actorId || combatSettings?.sceneActorId || ''),
     storedCombatAction: usesCombatResolution && combatSettings?.storedCombatAction
       ? combatSettings.storedCombatAction
       : null,
@@ -126,6 +131,24 @@ function getCommentSegmentDurationControl(segment, edit = false) {
   return `<label class="comment-segment-duration"><span>Dauer</span><input type="number" min="0" max="86400" step="1" value="${getSceneTimeSegmentDuration(segment)}" data-action="${action}" data-segment-id="${escapeHtml(segment.id)}"><span>Sek.</span></label>`;
 }
 
+function buildCommentForeignVoiceSegment(segment) {
+  return {
+    clientSegmentId: segment.id, kind: 'foreignvoice', commentKind: 'foreignvoice',
+    text: segment.text, narrator: false, ...AleriaCommentForeignVoice.getPresentation(segment),
+    side: normalizeCommentSegmentSide(segment.side), mechanicMode: 'normal',
+    durationSeconds: getSceneTimeSegmentDuration(segment)
+  };
+}
+
+function buildCommentNarratorSecretActionSegment(segment) {
+  return {
+    clientSegmentId: segment.id, kind: 'secretaction', commentKind: 'secretaction',
+    text: segment.text, ...getCommentNarratorSecretActionPresentation(),
+    side: normalizeCommentSegmentSide(segment.side), mechanicMode: 'normal',
+    durationSeconds: getSceneTimeSegmentDuration(segment)
+  };
+}
+
 function renderCommentDurationTotal(edit = false) {
   const segments = edit ? _editCommentSegments : _commentSegments;
   const total = segments.reduce((sum, segment) => sum + getSceneTimeSegmentDuration(segment), 0);
@@ -135,8 +158,8 @@ function renderCommentDurationTotal(edit = false) {
 function getAllowedCommentSegmentKinds(edit = false) {
   const mode = edit ? _editMode : _commentMode;
   return mode === 'narrator'
-    ? (edit ? ['action'] : ['action', 'sceneitem'])
-    : ['speech', 'action', 'interact', 'consume', 'thought', 'whisper', 'shout', 'performance', 'combataction', 'foreign', 'song', 'telepathy', 'animal', 'spell', 'prayer', 'flirt', 'madness', 'secretaction'];
+    ? (edit ? ['action', 'foreignvoice', 'secretaction'] : ['action', 'sceneitem', 'foreignvoice', 'secretaction'])
+    : ['speech', 'action', 'interact', 'consume', 'thought', 'whisper', 'shout', 'performance', 'combataction', 'foreign', 'song', 'telepathy', 'animal', 'spell', 'prayer', 'flirt', 'madness', 'secretaction', 'foreignvoice'];
 }
 
 const COMMENT_SEGMENT_MODE_KINDS = Object.freeze({
@@ -192,6 +215,16 @@ function coerceCommentSegmentsForMode(edit = false) {
   const segments = edit ? _editCommentSegments : _commentSegments;
   const allowed = getAllowedCommentSegmentKinds(edit);
   segments.forEach(segment => {
+    if ((edit ? _editMode : _commentMode) === 'narrator' && ['foreignvoice', 'secretaction'].includes(segment.kind)) {
+      segment.mechanicMode = 'normal';
+      segment.skillChallengeEnabled = false;
+      segment.emoteIndex = null;
+      segment.imageSetId = '';
+      segment.actorId = '';
+    }
+    if (segment.kind === 'foreignvoice') {
+      Object.assign(segment, AleriaCommentForeignVoice.normalize(segment), { emoteIndex: null, imageSetId: '', actorId: '' });
+    }
     if (!allowed.includes(segment.kind)) {
       segment.kind = allowed[0];
       segment.emoteIndex = null;
@@ -246,6 +279,7 @@ function getSegmentTypeButtons(segment, edit = false) {
 }
 
 function getCommentSegmentActor(segment, edit = false) {
+  if (segment?.kind === 'foreignvoice' || (edit ? _editMode : _commentMode) === 'narrator') return null;
   const sceneActor = window.AleriaCommentSceneCast?.getActor?.(segment?.actorId, edit);
   if (sceneActor) return applyCharacterImageSetPresentation(sceneActor, segment?.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
   const selectedId = edit ? _editSelectedCharId : _selectedCharId;
@@ -257,7 +291,7 @@ function getCommentSegmentActor(segment, edit = false) {
 
 function getCommentSegmentImageSetContext(segment, edit = false) {
   const mode = edit ? _editMode : _commentMode;
-  if (!['charakter', 'creature'].includes(mode) || normalizeCommentKind(segment?.kind) === 'action') return null;
+  if (!['charakter', 'creature'].includes(mode) || ['action', 'foreignvoice'].includes(normalizeCommentKind(segment?.kind))) return null;
 
   const character = getCommentSegmentActor(segment, edit);
   if (!character) return null;
@@ -271,7 +305,7 @@ function getCommentSegmentImageSetContext(segment, edit = false) {
 }
 
 function applyCommentSegmentEmoteSelection(segment, value, edit = false) {
-  if (!segment) return false;
+  if (!segment || segment.kind === 'foreignvoice') return false;
 
   const actor = getCommentSegmentActor(segment, edit);
   if (!actor) return false;
@@ -311,7 +345,7 @@ function getCommentSegmentImageSetPicker(segment, edit = false) {
 
 function getCommentSegmentActorControl(segment, edit = false) {
   const mode = edit ? _editMode : _commentMode;
-  if (mode !== 'creature' || segment.kind === 'action') return '';
+  if (mode !== 'creature' || ['action', 'foreignvoice'].includes(segment.kind)) return '';
   const actors = window.AleriaCommentSceneCast?.getActors?.(edit) || [];
   if (!actors.length) return '';
   if (!actors.some(actor => actor.id === segment.actorId)) segment.actorId = actors[0].id;
@@ -367,6 +401,7 @@ function getCommentSegmentTextareaId(segment, edit = false) {
 
 function getCommentSegmentPlaceholder(kind) {
   const normalized = normalizeCommentKind(kind);
+  if (normalized === 'foreignvoice') return 'Was sagt die fremde Person?';
   if (normalized === 'action') return 'Was geschieht?';
   if (normalized === 'interact') return 'Wie interagiert die Figur mit ihrer Umgebung oder einer anderen Person?';
   if (normalized === 'consume') return 'Wie benutzt oder verbraucht die Figur den ausgewählten Gegenstand?';

@@ -10,6 +10,8 @@ const COMMENT_SEGMENT_CLICK_ACTIONS = new Set([
   'set-edit-comment-segment-emote',
   'set-comment-segment-image-set',
   'set-edit-comment-segment-image-set',
+  'set-comment-segment-foreign-voice-avatar',
+  'set-edit-comment-segment-foreign-voice-avatar',
   'remove-comment-segment',
   'remove-edit-comment-segment',
   'format-comment-segment-wrap',
@@ -25,6 +27,10 @@ function handleCommentSegmentActionClick(event) {
   const action = trigger.dataset.action;
   const segmentId = trigger.dataset.segmentId || trigger.closest('.comment-segment-card')?.dataset.segmentId || '';
   const kind = trigger.dataset.kind || 'speech';
+  if (action === 'set-comment-segment-foreign-voice-avatar' || action === 'set-edit-comment-segment-foreign-voice-avatar') {
+    setCommentSegmentForeignVoice(segmentId, 'avatar', trigger.dataset.avatarId || '', action.startsWith('set-edit-'));
+    return;
+  }
 
   if (action === 'add-comment-segment') {
     addCommentSegment(kind);
@@ -96,6 +102,10 @@ function handleCommentSegmentActionMouseDown(event) {
 
 function handleCommentSegmentTextInput(event) {
   const field = event.target;
+  if (field?.matches?.('[data-action="set-comment-segment-foreign-voice-name"], [data-action="set-edit-comment-segment-foreign-voice-name"]')) {
+    setCommentSegmentForeignVoice(field.dataset.segmentId || '', 'name', field.value, field.dataset.action.startsWith('set-edit-'));
+    return;
+  }
   if (field?.matches?.('[data-action="set-comment-segment-language"]')) {
     setCommentSegmentLanguage(field.dataset.segmentId || '', field.value);
     return;

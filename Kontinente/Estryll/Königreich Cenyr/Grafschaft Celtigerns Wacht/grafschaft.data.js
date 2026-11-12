@@ -54,6 +54,11 @@
       family("haus-cymrath-o-traethlan", "Cymrath O'Traethlan", "Llamreis Ankunft/haus-cymrath-o-traethlan.png", { seat: "Tŵr Traethlan", liege: "Draig" }),
     ]),
     familySection("Bürgerliche Häuser · Llamreis Ankunft", [
+      family("haus-brandyddyn", "Brândyddyn", "Llamreis Ankunft/Bürgerliche/Gwynthor/Brândyddyn/brandyddyn-emblem.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliches Haus · Erhebung ausstehend" }),
+      family("haus-curiad", "Curiad", "Llamreis Ankunft/Bürgerliche/Gwynthor/Curiad/curiad-emblem.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliches Haus · Erhebung ausstehend" }),
+      family("haus-caelrith", "Caelrith", "Llamreis Ankunft/Bürgerliche/Gwynthor/Caelrith/caelrith-emblem.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliches Haus" }),
+      family("haus-myrgath", "Myrgath", "Llamreis Ankunft/Bürgerliche/Gwynthor/Myrgath/myrgath-emblem.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliches Haus" }),
+      family("haus-aelgorn", "Aelgorn", "Llamreis Ankunft/Bürgerliche/Gwynthor/Aelgorn/aelgorn-emblem.png", { seat: "Gwynthor", liege: "Draig", rank: "Bürgerliches Haus" }),
       family("haus-bradrhith", "Bradrhith", "Llamreis Ankunft/Bürgerliche/Gwynthor/Bradrhith.png", {"seat": "Bradrhith Hof", "liege": "Awenydd"}),
       family("haus-gwyllach", "Gwyllach", "Llamreis Ankunft/haus-gwyllach.png", { seat: "Gwynthor", liege: "Draig" }),
       family("haus-sgrechiwr", "Sgrechiwr", "Llamreis Ankunft/haus-sgrechiwr.png", { seat: "Lynthor", liege: "Draig" }),
@@ -132,6 +137,7 @@
       { type: "Grafschaft", name: "Celtigerns Wacht", slug: "celtigerns-wacht" },
     ],
     view: {
+      familyScope: { kingdom: "Cenyr", county: "Celtigerns Wacht", barony: "Llamreis Ankunft" },
       familySections,
       portraitFamilyIds: {
         Arwydd: "haus-arwydd",

@@ -25,23 +25,13 @@ function ensureCurrentSceneStartDateAleria(selectedDate = null) {
   const thread = typeof getCurrentCommentThread === 'function' ? getCurrentCommentThread() : null;
   if (!thread || thread.kind !== 'session') return null;
   const existing = resolveSceneStartDateAleria(thread);
-  if (existing) {
-    if (!AleriaWorldDateModel.isValid(thread.page?.sessionDateAleria)) {
-      thread.page.sessionDateAleria = existing;
-      if (typeof setModuleSceneStartDateAleria === 'function') {
-        setModuleSceneStartDateAleria(thread.entry?.id, thread.pageIndex, existing);
-      }
-    }
-    return existing;
-  }
+  if (existing) return existing;
 
   const currentDate = AleriaWorldDateModel.isValid(selectedDate) ? selectedDate : AleriaWorldDateStore.getState().date;
   if (!AleriaWorldDateModel.isValid(currentDate)) return null;
-  thread.page.sessionDateAleria = currentDate;
-  if (typeof setModuleSceneStartDateAleria === 'function') {
-    setModuleSceneStartDateAleria(thread.entry?.id, thread.pageIndex, currentDate);
-  }
-  return currentDate;
+  // Automatic dates belong to the contribution's sceneStartDateAleria metadata.
+  // Reading or posting a scene must not edit or publish its containing module.
+  return AleriaWorldDateModel.normalize(currentDate);
 }
 
 globalThis.AleriaSceneDateDefaults = Object.freeze({

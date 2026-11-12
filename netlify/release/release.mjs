@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { readSourceTree, selectBuildTasks, isTaskInput } from '../build/site-build-plan.mjs';
 import { SITE_BUILD_TASKS } from '../build/site-build-tasks.mjs';
 import { executeBuildPlan } from '../build/run-site-build.mjs';
+import { readBuildConcurrency } from '../build/build-validation-scheduler.mjs';
 import { readPublishedReceipt, writeBuildReceipt, BUILD_RECEIPT_PATH } from '../build/site-build-receipt.mjs';
 import { RELEASE_SITE, RELEASE_STATE_DIRECTORY, GENERATED_OUTPUTS } from './config.mjs';
 import { git, assertReleaseWorkspace, releaseCommit, assertLocalReleaseMessage } from './git-state.mjs';
@@ -21,9 +22,10 @@ const runtime = `${process.version}/${process.platform}/${process.arch}`;
 const isBuildInput = file => SITE_BUILD_TASKS.some(task => isTaskInput(task, file));
 const args = new Set(process.argv.slice(2));
 const modes = ['--plan', '--prepare', '--publish', '--cleanup-stage'];
-if (modes.filter(mode => args.has(mode)).length !== 1 || [...args].some(arg => ![...modes, '--push', '--full'].includes(arg))) {
-  throw Error('Use one of --plan, --prepare, --publish [--push], --cleanup-stage; optionally --full.');
+if (modes.filter(mode => args.has(mode)).length !== 1 || [...args].some(arg => ![...modes, '--push', '--full'].includes(arg) && !arg.startsWith('--jobs='))) {
+  throw Error('Use one of --plan, --prepare, --publish [--push], --cleanup-stage; optionally --full and --jobs=1..4.');
 }
+const concurrency = readBuildConcurrency(process.argv.slice(2));
 
 async function run(command, commandArgs, cwd = root) {
   return new Promise((resolve, reject) => {
@@ -51,7 +53,8 @@ async function prepare() {
   // Only the verified prepared package authorizes already generated changes.
   // Unknown edits must still be committed rather than silently overwritten.
   await timings.measure('fresh-workspace-check', () => assertReleaseWorkspace(root, { expectedCommit: commit, isBuildInput }));
-  await timings.measure('checks', () => executeBuildPlan(plan, { root,
+  await timings.measure('checks', () => executeBuildPlan(plan, { root, preflight: true, concurrency,
+    onReport: report => writeReleaseTimings(path.join(stateDirectory, 'last-build-run.json'), report),
     localCheckpoints: { file: path.join(stateDirectory, 'task-checkpoints.json'), runtime,
       force: args.has('--full'), validateBeforeSave: validateWorkspace } }));
   await timings.measure('workspace-check-after-checks', validateWorkspace);
@@ -68,7 +71,7 @@ async function prepare() {
     if (!verified) throw Error('Canonical source snapshot failed full Git/byte/owner verification.');
   }
   console.log(JSON.stringify({ commit, files: snapshot.files.length,
-    bytes: snapshot.files.reduce((sum, item) => sum + item.bytes, 0), canonicalBinaryLinks: snapshot.canonicalBinaryLinks, canonicalBinaryBytes: snapshot.canonicalBinaryBytes, checksRun: plan.filter(task => task.run).length }));
+    bytes: snapshot.files.reduce((sum, item) => sum + item.bytes, 0), checksRun: plan.filter(task => task.run).length }));
   return prepared;
 }
 

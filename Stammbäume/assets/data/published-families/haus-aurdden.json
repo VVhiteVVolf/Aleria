@@ -1,0 +1,1722 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-aurdden",
+  "revision": 1,
+  "updatedAt": "2026-11-09T18:47:41.472Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-aurdden",
+      "title": "Familie Aurdden",
+      "motto": "",
+      "description": "Wohlhabende Gwynthorer Goldschmiede-, Juwelier- und Bankfamilie im unmittelbaren Dienst der Loer. Drei Brüder führen Gwynthors vornehmsten Juwelier, ihr erster Vetter den gesonderten Bankzweig.",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Aurdden/aurdden-emblem.png",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-loer",
+        "liegeHouseName": "Haus Loer",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-aurdden-gruender",
+        "worldPersonId": "person--haus-aurdden--haus-aurdden-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Unbekannte historische Gründerfigur vor der seriellen Überlieferungslücke; keine direkten Eltern der namentlich ausgearbeiteten Generation.",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "haus-aurdden-gruenderin",
+        "worldPersonId": "person--haus-aurdden--haus-aurdden-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "????",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Unbekannte historische Gründerfigur vor der seriellen Überlieferungslücke; keine direkten Eltern der namentlich ausgearbeiteten Generation.",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "heledric-aurdden",
+        "worldPersonId": "person--haus-aurdden--heledric-aurdden",
+        "name": "Heledric Aurdden",
+        "title": "Früher Goldschmied der Aurdden",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1636",
+        "death": "1728",
+        "portrait": "assets/images/portraits/haus-aurdden/heledric-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Älteste namentlich ausgearbeitete Generation nach der Überlieferungslücke. Ehemann Lleirwens und Vater Iwrwyns und Oeneths. Seine Söhne begründeten die heute getrennten Juwelier- und Bankzweige.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "lleirwen-spouse-aurdden",
+        "worldPersonId": "person--haus-aurdden--lleirwen-spouse-aurdden",
+        "name": "Lleirwen",
+        "title": "Gemahlin Heledrics",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1640",
+        "death": "1731",
+        "portrait": "assets/images/portraits/haus-aurdden/lleirwen-spouse-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Gemahlin Heledrics und Mutter Iwrwyns und Oeneths. Gehört zur ältesten namentlich ausgearbeiteten Generation. Ihr Herkunftshaus ist nicht festgelegt.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "iwrwyn-aurdden",
+        "worldPersonId": "person--haus-aurdden--iwrwyn-aurdden",
+        "name": "Iwrwyn Aurdden",
+        "title": "Verstorbener Vater der drei Juweliersbrüder",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1662",
+        "death": "1736",
+        "portrait": "assets/images/portraits/haus-aurdden/iwrwyn-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Älterer Sohn Heledrics und Lleirwens. Führte mit Brenella den Juwelierzweig; Vater Kyrwyns, Cyrwens, Thalans, Lleirenas und Saithens. Starb 1736, vor seiner Gemahlin.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "brenella-spouse-aurdden",
+        "worldPersonId": "person--haus-aurdden--brenella-spouse-aurdden",
+        "name": "Brenella",
+        "title": "Verstorbene Mutter der fünf Geschwister",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1664",
+        "death": "1737",
+        "portrait": "assets/images/portraits/haus-aurdden/brenella-spouse-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Gemahlin Iwrwyns und Mutter der drei Brüder und ihrer beiden Schwestern. Starb 1737. Ihr Herkunftshaus ist nicht festgelegt.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "kyrwyn-aurdden",
+        "worldPersonId": "person--haus-aurdden--kyrwyn-aurdden",
+        "name": "Kyrwyn Aurdden",
+        "title": "Ältester Bruder · Leitung und Entwurf",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1685",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/kyrwyn-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "55 Jahre. Ältester der drei Brüder, die Gwynthors vornehmsten Juwelier gemeinsam führen. Goldschmied und verantwortlicher Entwerfer für große Loer-Aufträge; mit Avelena verheiratet, Vater von vier Töchtern.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "cyrwen-aurdden",
+        "worldPersonId": "person--haus-aurdden--cyrwen-aurdden",
+        "name": "Cyrwen Aurdden",
+        "title": "Wegverheiratete Schwester",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1687",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/cyrwen-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "53 Jahre. Schwester Kyrwyns, Thalans, Lleirenas und Saithens. An einen unbekannten Ehemann in ein unbekanntes Haus wegverheiratet. Sie arbeitet nicht im Juwelier; Kinder und heutiger Wohnort sind nicht ausgearbeitet.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "thalan-aurdden",
+        "worldPersonId": "person--haus-aurdden--thalan-aurdden",
+        "name": "Thalan Aurdden",
+        "title": "Zweiter Bruder · Edelsteine und Werkstatt",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1689",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/thalan-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "51 Jahre. Führt die Werkstatt und verantwortet Edelsteinprüfung, Schliff und Fassung. Ehemann Firwens, Vater von zwei Söhnen und einer Tochter. Führt denselben Laden wie seine Brüder.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "lleirena-aurdden",
+        "worldPersonId": "person--haus-aurdden--lleirena-aurdden",
+        "name": "Lleirena Aurdden",
+        "title": "Wegverheiratete Schwester",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1692",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/lleirena-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Wegverheiratet"
+        ],
+        "notes": "48 Jahre. Schwester der drei Juweliersbrüder und Cyrwens. An einen unbekannten Ehemann in ein unbekanntes Haus wegverheiratet. Sie besitzt keine Ladenaufgabe; Kinder und heutiger Wohnort bleiben offen.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "saithen-aurdden",
+        "worldPersonId": "person--haus-aurdden--saithen-aurdden",
+        "name": "Saithen Aurdden",
+        "title": "Jüngster Bruder · Verkauf und Sonderaufträge",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1694",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/saithen-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "46 Jahre. Führt Beratung, Verkauf und die Abstimmung besonderer Kundenwünsche. Mit Perdella verheiratet und Vater von sechs ehelichen Kindern. Aus einer früheren Affäre mit einer unbekannten Frau stammt außerdem sein 22-jähriger Sohn Cyrion.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109",
+          "chartCenterBetweenPartnerPersonIds": [
+            "perdella-spouse-aurdden",
+            "unknown-cyrion-mother"
+          ]
+        }
+      },
+      {
+        "id": "avelena-spouse-aurdden",
+        "worldPersonId": "person--haus-aurdden--avelena-spouse-aurdden",
+        "name": "Avelena",
+        "title": "Kundenbetreuung und Auftragsbücher",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1688",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/avelena-spouse-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "52 Jahre. Ehefrau Kyrwyns und Mutter Avelins, Iwrias, Dyrwens und Saithwens. Betreut diskrete Kundentermine und die Auftragsbücher. Ihre Herkunftsfamilie ist nicht festgelegt.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "firwen-spouse-aurdden",
+        "worldPersonId": "person--haus-aurdden--firwen-spouse-aurdden",
+        "name": "Firwen",
+        "title": "Warenprüfung und Präsentation",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1691",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/firwen-spouse-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "49 Jahre. Ehefrau Thalans und Mutter Kyrans, Gwaedens und Janeths. Prüft die fertigen Arbeiten vor der Präsentation und betreut die geordnete Warenübergabe. Herkunftshaus und Mädchenname bleiben offen.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "perdella-spouse-aurdden",
+        "worldPersonId": "person--haus-aurdden--perdella-spouse-aurdden",
+        "name": "Perdella",
+        "title": "Privatkunden und Hausorganisation",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/perdella-spouse-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "44 Jahre. Ehefrau Saithens und Mutter seiner sechs ehelichen Kinder. Betreut Privatkundschaft, Termine und die Organisation des Juwelierhauses. Ihre Herkunftsfamilie ist nicht festgelegt.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "avelin-aurdden",
+        "worldPersonId": "person--haus-aurdden--avelin-aurdden",
+        "name": "Avelin Aurdden",
+        "title": "An Aeron Loer wegverlobt",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1713",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/avelin-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "An Haus Loer wegverlobt"
+        ],
+        "notes": "27 Jahre. Älteste Tochter Kyrwyns und Avelenas. Mit dem 28-jährigen Aeron Loer verlobt und für ihren künftigen Haushalt an Haus Loer gebunden. Die Ehe ist noch nicht geschlossen; Avelin hat keine Aufgabe im Juwelier.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "iwria-aurdden",
+        "worldPersonId": "person--haus-aurdden--iwria-aurdden",
+        "name": "Iwria Aurdden",
+        "title": "Goldschmiedin · Feinarbeit",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/iwria-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "24 Jahre. Zweite Tochter Kyrwyns und Avelenas. Arbeitet an feinen Goldarbeiten und Oberflächen. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "dyrwen-aurdden",
+        "worldPersonId": "person--haus-aurdden--dyrwen-aurdden",
+        "name": "Dyrwen Aurdden",
+        "title": "Schmuckberatung und Präsentation",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1720",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/dyrwen-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "20 Jahre. Dritte Tochter Kyrwyns und Avelenas. Berät zu tragbarem Schmuck und richtet die Präsentation fertiger Arbeiten. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "saithwen-aurdden",
+        "worldPersonId": "person--haus-aurdden--saithwen-aurdden",
+        "name": "Saithwen Aurdden",
+        "title": "Jüngste Tochter Kyrwyns",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1726",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/saithwen-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "14 Jahre. Jüngste Tochter Kyrwyns und Avelenas. Lernt im Familienhaushalt und darf die handwerkliche Ausbildung beobachten; sie besitzt keinen eigenständigen Ladenposten. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "kyran-aurdden",
+        "worldPersonId": "person--haus-aurdden--kyran-aurdden",
+        "name": "Kyran Aurdden",
+        "title": "Edelsteinschleifer",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/kyran-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "24 Jahre. Älterer Sohn Thalans und Firwens. Arbeitet im Edelsteinschliff unter seinem Vater. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "gwaeden-aurdden",
+        "worldPersonId": "person--haus-aurdden--gwaeden-aurdden",
+        "name": "Gwaeden Aurdden",
+        "title": "Silber- und Fassungsarbeiten",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1719",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/gwaeden-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "21 Jahre. Jüngerer Sohn Thalans und Firwens. Bearbeitet Silber und fertigt Fassungen in der Werkstatt. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "janeth-aurdden",
+        "worldPersonId": "person--haus-aurdden--janeth-aurdden",
+        "name": "Janeth Aurdden",
+        "title": "Goldschmiedelehrling",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/janeth-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "16 Jahre. Tochter Thalans und Firwens. Lernt unter Aufsicht die Grundlagen der Goldschmiede und Warenpflege. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "oenric-aurdden",
+        "worldPersonId": "person--haus-aurdden--oenric-aurdden",
+        "name": "Oenric Aurdden",
+        "title": "Sonderanfertigungen · Geselle",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/oenric-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "22 Jahre. Ältestes eheliches Kind Saithens und Perdellas. Arbeitet als Geselle an Sonderanfertigungen. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "helygen-aurdden",
+        "worldPersonId": "person--haus-aurdden--helygen-aurdden",
+        "name": "Helygen Aurdden",
+        "title": "Perlen und Kettenarbeiten",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/helygen-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "19 Jahre. Zweites Kind Saithens und Perdellas. Arbeitet an Perlschmuck, feinen Ketten und Verschlüssen. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "thalric-aurdden",
+        "worldPersonId": "person--haus-aurdden--thalric-aurdden",
+        "name": "Thalric Aurdden",
+        "title": "Fassungslehrling",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1723",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/thalric-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "17 Jahre. Drittes Kind Saithens und Perdellas. Lernt Fassungsarbeiten unter Thalan und Gwaeden. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "nerella-aurdden",
+        "worldPersonId": "person--haus-aurdden--nerella-aurdden",
+        "name": "Nerella Aurdden",
+        "title": "Tochter Saithens und Perdellas",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1726",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/nerella-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "14 Jahre. Viertes Kind Saithens und Perdellas. Lernt im Familienhaushalt; kein eigenständiger Ladenposten. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "iwrin-aurdden",
+        "worldPersonId": "person--haus-aurdden--iwrin-aurdden",
+        "name": "Iwrin Aurdden",
+        "title": "Jüngere Tochter Saithens",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1728",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/iwrin-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "12 Jahre. Fünftes Kind Saithens und Perdellas. Ihre Ausbildung steht am Anfang; keine Ladenanstellung. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "firian-aurdden",
+        "worldPersonId": "person--haus-aurdden--firian-aurdden",
+        "name": "Firian Aurdden",
+        "title": "Jüngstes Kind Saithens",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/firian-aurdden.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "10 Jahre. Jüngstes Kind Saithens und Perdellas. Lebt im Familienhaushalt und hat keine Ladenaufgabe. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "cyrion-aurdden-bastard",
+        "worldPersonId": "person--haus-aurdden--cyrion-aurdden-bastard",
+        "name": "Cyrion",
+        "title": "Unehelicher Sohn Saithens",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1718",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-aurdden/cyrion-aurdden-bastard.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "22 Jahre. Saithens unehelicher Sohn aus einer Affäre mit einer unbekannten Frau. Kein Angehöriger der ehelichen Kinderschar Perdellas, kein Familiennachname und keine Tätigkeit im Juwelier. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109"
+        }
+      },
+      {
+        "id": "oeneth-aurdden",
+        "worldPersonId": "person--haus-aurdden--oeneth-aurdden",
+        "name": "Oeneth Aurdden",
+        "title": "Verstorbener Begründer des Bankzweigs",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1665",
+        "death": "1738",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Jüngerer Sohn Heledrics und Lleirwens und Bruder Iwrwyns. Führte mit Rhewae den Bankzweig der Familie. Vater Pereths; keine Leitung der Roten Bank und kein Münzprägerecht.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109",
+          "portraitIntentionallyAbsent": true,
+          "aurddenBranch": "bank"
+        }
+      },
+      {
+        "id": "rhewae-spouse-aurdden",
+        "worldPersonId": "person--haus-aurdden--rhewae-spouse-aurdden",
+        "name": "Rhewae",
+        "title": "Verstorbene Gemahlin Oeneths",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1666",
+        "death": "1739",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Gemahlin Oeneths und Mutter Pereths. Gehört zum gesonderten Bankzweig. Ihr Herkunftshaus ist nicht festgelegt.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109",
+          "portraitIntentionallyAbsent": true,
+          "aurddenBranch": "bank"
+        }
+      },
+      {
+        "id": "pereth-aurdden",
+        "worldPersonId": "person--haus-aurdden--pereth-aurdden",
+        "name": "Pereth Aurdden",
+        "title": "Vetter der Juweliersbrüder · Bankgeschäft",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1688",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "52 Jahre. Sohn Oeneths und Rhewaes, erster Vetter Kyrwyns, Thalans und Saithens. Führt das eigene Bankgeschäft des Aurdden-Zweigs mit seiner Ehefrau Uffyria. Kein Schmuckverkauf, keine Leitung der Roten Bank und kein eigenes Münzprägerecht.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109",
+          "portraitIntentionallyAbsent": true,
+          "aurddenBranch": "bank"
+        }
+      },
+      {
+        "id": "uffyria-spouse-aurdden",
+        "worldPersonId": "person--haus-aurdden--uffyria-spouse-aurdden",
+        "name": "Uffyria",
+        "title": "Bankzweig · Bücher und Korrespondenz",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1690",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "50 Jahre. Ehefrau Pereths und Mutter Ellrics, Kyrias und Neddans. Betreut Bücher und Korrespondenz im Bankzweig. Kein Ladenposten im Juwelier; ihr Herkunftshaus bleibt offen.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109",
+          "portraitIntentionallyAbsent": true,
+          "aurddenBranch": "bank"
+        }
+      },
+      {
+        "id": "ellric-aurdden",
+        "worldPersonId": "person--haus-aurdden--ellric-aurdden",
+        "name": "Ellric Aurdden",
+        "title": "Bankzweig · Kontor und Abrechnung",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1716",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "24 Jahre. Ältestes Kind Pereths und Uffyrias. Unterstützt Kontor und Abrechnung des Bankzweigs. Kein Juwelierposten; unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109",
+          "portraitIntentionallyAbsent": true,
+          "aurddenBranch": "bank"
+        }
+      },
+      {
+        "id": "kyria-aurdden",
+        "worldPersonId": "person--haus-aurdden--kyria-aurdden",
+        "name": "Kyria Aurdden",
+        "title": "Bankzweig · Schriftverkehr",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "19 Jahre. Tochter Pereths und Uffyrias. Lernt die geschäftliche Korrespondenz des Bankzweigs. Keine Beschäftigung im Schmuckladen; unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109",
+          "portraitIntentionallyAbsent": true,
+          "aurddenBranch": "bank"
+        }
+      },
+      {
+        "id": "neddan-aurdden",
+        "worldPersonId": "person--haus-aurdden--neddan-aurdden",
+        "name": "Neddan Aurdden",
+        "title": "Jüngstes Kind des Bankvetters",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1728",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-aurdden",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "12 Jahre. Jüngster Sohn Pereths und Uffyrias. Lebt im Haushalt des Bankzweigs und besitzt weder Bankamt noch Juwelierposten. Unverheiratet und ohne Verlobung.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109",
+          "portraitIntentionallyAbsent": true,
+          "aurddenBranch": "bank"
+        }
+      },
+      {
+        "id": "unknown-cyrwen-aurdden-husband",
+        "worldPersonId": "person--haus-aurdden--unknown-cyrwen-aurdden-husband",
+        "name": "Unbekannter Ehemann Cyrwens",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Unbenannte Person; Name, Herkunft und Lebensdaten bleiben offen.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109",
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "unknown-lleirena-aurdden-husband",
+        "worldPersonId": "person--haus-aurdden--unknown-lleirena-aurdden-husband",
+        "name": "Unbekannter Ehemann Lleirenas",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Unbenannte Person; Name, Herkunft und Lebensdaten bleiben offen.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109",
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "unknown-cyrion-mother",
+        "worldPersonId": "person--haus-aurdden--unknown-cyrion-mother",
+        "name": "Unbekannte Mutter Cyrions",
+        "title": "",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "affair",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Unbenannte Person; Name, Herkunft und Lebensdaten bleiben offen.",
+        "extensions": {
+          "authoredSource": "aurdden-20261109",
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "aeron-loer",
+        "worldPersonId": "person--haus-loer--aeron-loer",
+        "name": "Aeron Loer",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1712",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-loer/aeron-loer.jpg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-loer",
+        "familyRole": "married",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-aurdden-founders",
+        "participantIds": [
+          "haus-aurdden-gruender",
+          "haus-aurdden-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Unbekanntes historisches Gründerpaar; kein erfundenes Ehejahr.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-aurdden-grandparents",
+        "participantIds": [
+          "heledric-aurdden",
+          "lleirwen-spouse-aurdden"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1660",
+        "end": "1728",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignParentPairOverChildPersonId": "iwrwyn-aurdden",
+          "chartPackLeafSiblingBranchesBesideAlignedChild": true
+        }
+      },
+      {
+        "id": "marriage-aurdden-parents",
+        "participantIds": [
+          "iwrwyn-aurdden",
+          "brenella-spouse-aurdden"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1683",
+        "end": "1736",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-aurdden-uncle",
+        "participantIds": [
+          "oeneth-aurdden",
+          "rhewae-spouse-aurdden"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1686",
+        "end": "1738",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignParentPairOverChildPersonId": "pereth-aurdden"
+        }
+      },
+      {
+        "id": "marriage-aurdden-eldest",
+        "participantIds": [
+          "kyrwyn-aurdden",
+          "avelena-spouse-aurdden"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1711",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true
+        }
+      },
+      {
+        "id": "marriage-aurdden-second",
+        "participantIds": [
+          "thalan-aurdden",
+          "firwen-spouse-aurdden"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1714",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true
+        }
+      },
+      {
+        "id": "marriage-aurdden-youngest",
+        "participantIds": [
+          "saithen-aurdden",
+          "perdella-spouse-aurdden"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1716",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignPartnerOverChildrenPersonId": "perdella-spouse-aurdden"
+        }
+      },
+      {
+        "id": "marriage-aurdden-cousin",
+        "participantIds": [
+          "pereth-aurdden",
+          "uffyria-spouse-aurdden"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1714",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignChildGroupBelowParentPair": true
+        }
+      },
+      {
+        "id": "marriage-aurdden-cyrwen",
+        "participantIds": [
+          "cyrwen-aurdden",
+          "unknown-cyrwen-aurdden-husband"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Wegverheiratet; Name, Herkunft, Lebensdaten des Ehemanns und Ehejahr sind nicht festgelegt.",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-aurdden-lleirena",
+        "participantIds": [
+          "lleirena-aurdden",
+          "unknown-lleirena-aurdden-husband"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Wegverheiratet; Name, Herkunft, Lebensdaten des Ehemanns und Ehejahr sind nicht festgelegt.",
+        "extensions": {}
+      },
+      {
+        "id": "affair-saithen-unknown-cyrion-mother",
+        "participantIds": [
+          "saithen-aurdden",
+          "unknown-cyrion-mother"
+        ],
+        "type": "affair",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Frühere Affäre Saithens mit einer unbekannten Frau; aus ihr stammt Cyrion, geboren 1718. Kein Name, Beruf, weiterer Lebensstatus oder Beziehungszeitraum der Mutter festgelegt.",
+        "extensions": {
+          "chartAlignPartnerOverChildrenPersonId": "unknown-cyrion-mother"
+        }
+      },
+      {
+        "id": "engagement-aeron-loer-avelin-aurdden",
+        "participantIds": [
+          "aeron-loer",
+          "avelin-aurdden"
+        ],
+        "type": "engagement",
+        "status": "active",
+        "start": "1740",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Aeron Loer (28) und Avelin Aurdden (27) sind verlobt. Avelin ist an Haus Loer wegverlobt und hat keine Ladenaufgabe. Die Ehe ist noch nicht geschlossen.",
+        "extensions": {
+          "crossFamilyRelationship": {
+            "linkId": "engagement-aeron-loer-avelin-aurdden",
+            "counterpartFamilyId": "haus-loer"
+          }
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-heledric-aurdden",
+        "childId": "heledric-aurdden",
+        "parentIds": [
+          "haus-aurdden-gruender",
+          "haus-aurdden-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-aurdden-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Familienkontinuität über mehrere unbekannte Generationen; keine direkte biologische Elternschaft.",
+        "extensions": {
+          "timeJumpId": "gap-aurdden-to-1636"
+        }
+      },
+      {
+        "id": "parentage-iwrwyn-aurdden",
+        "childId": "iwrwyn-aurdden",
+        "parentIds": [
+          "heledric-aurdden",
+          "lleirwen-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-grandparents",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-oeneth-aurdden",
+        "childId": "oeneth-aurdden",
+        "parentIds": [
+          "heledric-aurdden",
+          "lleirwen-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-grandparents",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-kyrwyn-aurdden",
+        "childId": "kyrwyn-aurdden",
+        "parentIds": [
+          "iwrwyn-aurdden",
+          "brenella-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-parents",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-cyrwen-aurdden",
+        "childId": "cyrwen-aurdden",
+        "parentIds": [
+          "iwrwyn-aurdden",
+          "brenella-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-parents",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-thalan-aurdden",
+        "childId": "thalan-aurdden",
+        "parentIds": [
+          "iwrwyn-aurdden",
+          "brenella-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-parents",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-lleirena-aurdden",
+        "childId": "lleirena-aurdden",
+        "parentIds": [
+          "iwrwyn-aurdden",
+          "brenella-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-parents",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-saithen-aurdden",
+        "childId": "saithen-aurdden",
+        "parentIds": [
+          "iwrwyn-aurdden",
+          "brenella-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-parents",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-pereth-aurdden",
+        "childId": "pereth-aurdden",
+        "parentIds": [
+          "oeneth-aurdden",
+          "rhewae-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-uncle",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-avelin-aurdden",
+        "childId": "avelin-aurdden",
+        "parentIds": [
+          "kyrwyn-aurdden",
+          "avelena-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-eldest",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-iwria-aurdden",
+        "childId": "iwria-aurdden",
+        "parentIds": [
+          "kyrwyn-aurdden",
+          "avelena-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-eldest",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-dyrwen-aurdden",
+        "childId": "dyrwen-aurdden",
+        "parentIds": [
+          "kyrwyn-aurdden",
+          "avelena-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-eldest",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-saithwen-aurdden",
+        "childId": "saithwen-aurdden",
+        "parentIds": [
+          "kyrwyn-aurdden",
+          "avelena-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-eldest",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-kyran-aurdden",
+        "childId": "kyran-aurdden",
+        "parentIds": [
+          "thalan-aurdden",
+          "firwen-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-second",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gwaeden-aurdden",
+        "childId": "gwaeden-aurdden",
+        "parentIds": [
+          "thalan-aurdden",
+          "firwen-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-second",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-janeth-aurdden",
+        "childId": "janeth-aurdden",
+        "parentIds": [
+          "thalan-aurdden",
+          "firwen-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-second",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-oenric-aurdden",
+        "childId": "oenric-aurdden",
+        "parentIds": [
+          "saithen-aurdden",
+          "perdella-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-youngest",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-helygen-aurdden",
+        "childId": "helygen-aurdden",
+        "parentIds": [
+          "saithen-aurdden",
+          "perdella-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-youngest",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-thalric-aurdden",
+        "childId": "thalric-aurdden",
+        "parentIds": [
+          "saithen-aurdden",
+          "perdella-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-youngest",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-nerella-aurdden",
+        "childId": "nerella-aurdden",
+        "parentIds": [
+          "saithen-aurdden",
+          "perdella-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-youngest",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-iwrin-aurdden",
+        "childId": "iwrin-aurdden",
+        "parentIds": [
+          "saithen-aurdden",
+          "perdella-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-youngest",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-firian-aurdden",
+        "childId": "firian-aurdden",
+        "parentIds": [
+          "saithen-aurdden",
+          "perdella-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-youngest",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-cyrion-aurdden-bastard",
+        "childId": "cyrion-aurdden-bastard",
+        "parentIds": [
+          "saithen-aurdden",
+          "unknown-cyrion-mother"
+        ],
+        "partnershipId": "affair-saithen-unknown-cyrion-mother",
+        "type": "biological",
+        "legitimacy": "illegitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-ellric-aurdden",
+        "childId": "ellric-aurdden",
+        "parentIds": [
+          "pereth-aurdden",
+          "uffyria-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-cousin",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-kyria-aurdden",
+        "childId": "kyria-aurdden",
+        "parentIds": [
+          "pereth-aurdden",
+          "uffyria-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-cousin",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-neddan-aurdden",
+        "childId": "neddan-aurdden",
+        "parentIds": [
+          "pereth-aurdden",
+          "uffyria-spouse-aurdden"
+        ],
+        "partnershipId": "marriage-aurdden-cousin",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-aurdden",
+        "name": "Familie Aurdden",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Aurdden/aurdden-emblem.png",
+        "status": "active"
+      },
+      {
+        "id": "house-loer",
+        "name": "Haus Loer",
+        "motto": "",
+        "emblem": "assets/images/houses/Llamreis Ankunft/haus-loer.png",
+        "status": "active"
+      },
+      {
+        "id": "house-unknown-cyrwen-aurdden",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-unknown-lleirena-aurdden",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "married-away-cyrwen-aurdden",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-aurdden-cyrwen",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unknown-cyrwen-aurdden",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Cyrwen ist wegverheiratet und besitzt keine Ladenaufgabe.",
+        "extensions": {
+          "chartAlignBelowPartnership": true
+        }
+      },
+      {
+        "id": "married-away-lleirena-aurdden",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratete Linie",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-aurdden-lleirena",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unknown-lleirena-aurdden",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Lleirena ist wegverheiratet und besitzt keine Ladenaufgabe.",
+        "extensions": {
+          "chartAlignBelowPartnership": true
+        }
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-aurdden-to-1636",
+        "parentPartnershipId": "marriage-haus-aurdden-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "heledric-aurdden"
+        ],
+        "years": 0,
+        "fromYear": "????",
+        "toYear": "1636",
+        "label": "Nicht einzeln bekannte Generationen bis Heledric Aurdden",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-aurdden-founders",
+      "houseId": "house-aurdden",
+      "crestSubtitle": "Goldschmiede, Juweliere und Bankiers · im Dienst der Loer",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "iron",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "kyrwyn-aurdden",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": false,
+      "pendingDescendantReview": false,
+      "sourceRevision": 1,
+      "chartLayoutPolicy": "strict-v1",
+      "chartAlignLineageOriginOverPersonId": "heledric-aurdden",
+      "authoredOn": "2026-11-09",
+      "sourceNote": "Ausarbeitung der bereits veröffentlichten Aurdden auf ausdrücklichen Nutzerauftrag vom 9. November 2026. Dienst, Gewinnbeteiligung, Loer-Rohstoffe und häufige historische Ehen stammen aus dem bestehenden Modul der Klingenden Münze; die Aurdden besitzen kein Münzprägerecht und leiten nicht die Rote Bank. Namen, Lebensdaten und aktuelle Familienglieder sind autorisierte neue Ausgestaltung. Unbekannte Gründer, Hausknoten und serieller Zeitsprung vor Heledric; vier konkrete Generationen. Drei Brüder im Alter 55/51/46 mit insgesamt dreizehn ehelichen Kindern und Saithens unehelichem Sohn Cyrion. Zwei Schwestern sind an unbekannte Männer wegverheiratet. Nur Avelin ist mit dem bestehenden, zuvor unverheirateten und unverlobten Aeron Loer verlobt, beidseitig unter derselben Welt- und Verbindungskennung. Keine weiteren Loer-Ehen erzwungen. Der Bankzweig führt über Iwrwyns Bruder Oeneth zu dem echten ersten Vetter Pereth und dessen drei ungebundenen Kindern; für diese sieben Bankangehörigen keine Porträts erstellt. Keine Adelserhebung, keine erfundenen historischen Zwischenahnen und keine unbekannten Angehörigen benannt.",
+      "registryManagedDocumentFieldRevisions": {},
+      "registryManagedHouseProfileFieldRevisions": {},
+      "registryManagedExtensionFieldRevisions": {},
+      "registryManagedViewFieldRevisions": {},
+      "registryManagedLineageFieldRevisions": {},
+      "registryManagedEntitySourceRevision": 1,
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Familie Aurdden",
+        "housePage": true,
+        "image": "../Stammbäume/assets/images/portraits/haus-aurdden/kyrwyn-aurdden.png",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Wohlhabende bürgerliche Goldschmiede-, Juwelier- und Bankfamilie aus Gwynthor im unmittelbaren Dienst der Loer. Die drei Brüder Kyrwyn, Thalan und Saithen führen den Sternenfang, Gwynthors vornehmsten Juwelier in der Klingenden Münze. Ihr erster Vetter Pereth betreut den gesonderten Bankzweig.",
+        "quote": "Was die Tiefe birgt, bringen wir ans Licht.",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Familie Aurdden"
+          ],
+          [
+            "Rang",
+            "Bürgerlich"
+          ],
+          [
+            "Stammsitz",
+            "Gwynthor"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Kyrwyn, Thalan und Saithen Aurdden"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Loer"
+          ],
+          [
+            "Ursprung",
+            "Gwynthor"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Aurdden/aurdden-emblem.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Über die Aurdden",
+          "biographyText": "Wohlhabende bürgerliche Goldschmiede-, Juwelier- und Bankfamilie aus Gwynthor im unmittelbaren Dienst der Loer. Die drei Brüder Kyrwyn, Thalan und Saithen führen den Sternenfang, Gwynthors vornehmsten Juwelier in der Klingenden Münze. Ihr erster Vetter Pereth betreut den gesonderten Bankzweig.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Goldschmiede und Bankzweig",
+          "historyText": "Unbekannte Gründer und ein serieller Überlieferungssprung gehen Heledric (1636–1728) und Lleirwen (1640–1731) voraus. Ihr Sohn Iwrwyn und Brenella sind die bereits verstorbenen Eltern der drei Juweliersbrüder und ihrer beiden wegverheirateten Schwestern. Der jüngere Sohn Oeneth und Rhewae begründen Pereths Bankzweig.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Schönheit soll durch präzise Arbeit entstehen. Fassungen müssen halten, Schliffe dem Stein entsprechen und Kundenwünsche ehrlich eingeschätzt werden. Reichtum zeigt sich im Haus sichtbar, doch hinter jeder aufwendigen Präsentation stehen geordnete Auftragsbücher, klare Zuständigkeiten und die Geduld der Werkstatt."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Traditionen und Hausleben",
+              "text": "Handwerkliche Genauigkeit, diskrete Beratung und sichtbar kostbare Präsentation prägen das Haus. Junge Angehörige lernen unter Aufsicht; eine Verwandtschaft allein verleiht keinen Meisterrang."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Der Sternenfang vereint Verkauf, diskrete Kundenberatung und Goldschmiedearbeit in Gwynthor. Der Bankzweig bleibt ein eigener Arbeitsbereich unter Pereth und Uffyria; er erhält aus seiner Verwandtschaft keinen Juwelierposten. Die Aurdden besitzen kein eigenes Münzprägerecht. Dieses liegt allein bei den Loer; die Leitung der Roten Bank bleibt bei den Ergalla. Größe des Familienvermögens, weitere Gebäude und Landbesitz sind nicht beziffert."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Verbindungen",
+              "text": "Die unmittelbare Dienst- und Geschäftsbindung gilt Haus Loer. Avelin Aurdden (27) und Aeron Loer (28) sind verlobt; ihre Ehe ist noch nicht geschlossen. Die älteren Loer-Ehen bleiben unverändert. Cyrwen und Lleirena sind an unbekannte Ehemänner und Häuser wegverheiratet. Pereth ist über die Brüder Iwrwyn und Oeneth ein echter erster Vetter der drei Ladenführer."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [
+            {
+              "name": "Haus Loer",
+              "detail": "Unmittelbarer Dienstherr · Rohstoffe und Gewinnbeteiligung · Avelins Verlobung mit Aeron",
+              "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-loer.png",
+              "imageFormat": "square",
+              "href": "kleinehaeuser.html?haus=haus-loer"
+            }
+          ],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Aurdden/aurdden-emblem.png",
+              "title": "Familie Aurdden · vollständige Hausseite",
+              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-aurdden"
+            },
+            {
+              "title": "Der Sternenfang",
+              "text": "Goldschmiede und Juwelier der Aurdden in Gwynthor.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=der-sternenfang-aurdden",
+              "icon": "../AleriaAlmanach/assets/loer-hofjuwelier/schild.png"
+            }
+          ],
+          "footer": ""
+        }
+      }
+    }
+  }
+}

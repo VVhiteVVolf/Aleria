@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "tool": "built-in image_gen",
+  "apiOrCliUsed": false,
+  "records": [
+    {
+      "id": "elderly-woman",
+      "label": "Alte Frau",
+      "status": "active",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/elderly-woman.json",
+      "toolArguments": {
+        "prompt": "Use case: style-transfer.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified speaker in Aleria, matching the existing \"Fremde Stimme\" silhouette series. Single image only; never a grid, sheet, collage or set.\nInput image 1 is a visual STYLE AND SERIES reference. Input image 2 is an additional shared series reference for silhouette darkness, framing and village-background simplicity. They determine rendering, proportions, palette, composition and mood, not the new person's identity or exact pose.\nShared direction: a large centered waist-up human silhouette gesturing in the foreground, head comfortably below the upper edge, both hands fully in view with comfortable side margins, no cropped fingers. Calm uncomplicated medieval village in daylight behind the figure: cream timber-and-plaster cottages with brown roofs, pale quiet lane, muted blue-gray sky, sparse greenery. Keep the backdrop lower contrast than the figure, softly muted and uncomplicated, like the references.\nStyle: matching matte Tales of Xillia/Frieren anime drawing, clear anime lineart, simple cel-shading and flat restrained dark-slate edge accents. No photorealistic materials, no 3D render, no painterly brush texture, no dramatic lighting.\nThe entire foreground human, INCLUDING face, neck, hands and clothing, is near-black charcoal. The head is COMPLETELY FACELESS: no visible eyes, brows, nose, mouth, cheeks, facial planes, facial features or facial lighting. Minimal thin dark-gray silhouette edge and clothing-division strokes only, just as in the references. Convey the requested age/role through outer hair shape, clothing shape, stature, posture and hands. Anatomically human with normal rounded human ears; never elf ears.\nHands freely gesticulate, natural fingers and relaxed conversational gesture, readable even at small thumbnail size. Standing conversational portrait, no prop held. Opaque full-square scene, not a transparent cutout. No weapons, modern objects, decorative symbols, speech bubbles, signs, writing, letters, text, watermark, border or frame.\nNEW SUBJECT elderly-woman / Alte Frau: one ELDERLY HUMAN WOMAN, approximately seventy to eighty years old, with a slightly forward-set head and gently rounded upper back, narrow older shoulders, and a plain small linen coif/headscarf tied low at the nape over a compact low hair bun. The headscarf and substantial wraparound shoulder shawl are entirely charcoal-dark, with sparse slate outline strokes. Modest closed-neck long-sleeve medieval dress. Avoid the youthful bob or long loose hair of the existing young adults. Her age must read from the slight stoop, senior proportions and traditional scarf/shawl outline without any facial details. Warm attentive storytelling gesture: one hand held open palm-up in front of her at lower chest height, the other gently raised beside the shawl, fingers relaxed. Both hands remain fully visible, separated from torso, no staff or other props.",
+        "referenced_image_paths": [
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/woman.png",
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/person.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "elderly-citizen",
+      "label": "Alter B?rger",
+      "status": "active",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/elderly-citizen.json",
+      "toolArguments": {
+        "prompt": "Use case: style-transfer.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified speaker in Aleria, matching the existing \"Fremde Stimme\" silhouette series. Single image only; never a grid, sheet, collage or set.\nInput image 1 is a visual STYLE AND SERIES reference. Input image 2 is an additional shared series reference for silhouette darkness, framing and village-background simplicity. They determine rendering, proportions, palette, composition and mood, not the new person's identity or exact pose.\nShared direction: a large centered waist-up human silhouette gesturing in the foreground, head comfortably below the upper edge, both hands fully in view with comfortable side margins, no cropped fingers. Calm uncomplicated medieval village in daylight behind the figure: cream timber-and-plaster cottages with brown roofs, pale quiet lane, muted blue-gray sky, sparse greenery. Keep the backdrop lower contrast than the figure, softly muted and uncomplicated, like the references.\nStyle: matching matte Tales of Xillia/Frieren anime drawing, clear anime lineart, simple cel-shading and flat restrained dark-slate edge accents. No photorealistic materials, no 3D render, no painterly brush texture, no dramatic lighting.\nThe entire foreground human, INCLUDING face, neck, hands and clothing, is near-black charcoal. The head is COMPLETELY FACELESS: no visible eyes, brows, nose, mouth, cheeks, facial planes, facial features or facial lighting. Minimal thin dark-gray silhouette edge and clothing-division strokes only, just as in the references. Convey the requested age/role through outer hair shape, clothing shape, stature, posture and hands. Anatomically human with normal rounded human ears; never elf ears.\nHands freely gesticulate, natural fingers and relaxed conversational gesture, readable even at small thumbnail size. Standing conversational portrait, no prop held. Opaque full-square scene, not a transparent cutout. No weapons, modern objects, decorative symbols, speech bubbles, signs, writing, letters, text, watermark, border or frame.\nNEW SUBJECT elderly-citizen / Alter Bürger: one ELDERLY HUMAN MALE CITIZEN, approximately seventy to eighty years old, with a slightly bent but dignified posture, rounded older shoulders, receding hairline with a smooth bald crown and short sparse side hair, and a short rounded beard outline that is only part of his charcoal silhouette. The face itself stays absolutely blank and dark with NO features. Simple well-worn-looking medieval civilian coat with a closed collar over a long-sleeve tunic; broad simple lapel and hem shapes, no decorative badge, no hat, no armor. Hands and body remain dark silhouettes. Calm explaining gesture: one hand open toward the viewer at waist height while the other makes a small relaxed indicating gesture near chest height. Clear elderly male outline, distinct from the existing upright youthful man. Both hands fully in frame, no cane or held props.",
+        "referenced_image_paths": [
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png",
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/person.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "courtesan",
+      "label": "Dirne",
+      "status": "active",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/courtesan.json",
+      "toolArguments": {
+        "prompt": "Use case: style-transfer.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified speaker in Aleria, matching the existing \"Fremde Stimme\" silhouette series. Single image only; never a grid, sheet, collage or set.\nInput image 1 is a visual STYLE AND SERIES reference. Input image 2 is an additional shared series reference for silhouette darkness, framing and village-background simplicity. They determine rendering, proportions, palette, composition and mood, not the new person's identity or exact pose.\nShared direction: a large centered waist-up human silhouette gesturing in the foreground, head comfortably below the upper edge, both hands fully in view with comfortable side margins, no cropped fingers. Calm uncomplicated medieval village in daylight behind the figure: cream timber-and-plaster cottages with brown roofs, pale quiet lane, muted blue-gray sky, sparse greenery. Keep the backdrop lower contrast than the figure, softly muted and uncomplicated, like the references.\nStyle: matching matte Tales of Xillia/Frieren anime drawing, clear anime lineart, simple cel-shading and flat restrained dark-slate edge accents. No photorealistic materials, no 3D render, no painterly brush texture, no dramatic lighting.\nThe entire foreground human, INCLUDING face, neck, hands and clothing, is near-black charcoal. The head is COMPLETELY FACELESS: no visible eyes, brows, nose, mouth, cheeks, facial planes, facial features or facial lighting. Minimal thin dark-gray silhouette edge and clothing-division strokes only, just as in the references. Convey the requested age/role through outer hair shape, clothing shape, stature, posture and hands. Anatomically human with normal rounded human ears; never elf ears.\nHands freely gesticulate, natural fingers and relaxed conversational gesture, readable even at small thumbnail size. Standing conversational portrait, no prop held. Opaque full-square scene, not a transparent cutout. No weapons, modern objects, decorative symbols, speech bubbles, signs, writing, letters, text, watermark, border or frame.\nNEW SUBJECT courtesan / Dirne: one UNAMBIGUOUSLY ADULT HUMAN WOMAN, approximately thirty years old, with adult head-to-body proportions and long softly wavy hair loosely gathered over one shoulder. Fully dressed in historical medieval civilian clothing: a long-sleeve underdress with a MODEST CLOSED NECKLINE beneath a fitted front-laced sleeveless overdress, plus a loose shoulder scarf. Convey a historically dressed adult courtesan through the distinctive silhouette of the gathered hair, gently fitted overdress, clearly drawn simple front lacing and scarf. The person and every clothing piece remain near-black charcoal, with sparse dark-slate outline accents only. No skin tones, no nudity, no exposed chest, no lingerie, no transparent fabric, no sexualized pose or exaggerated anatomy. Upright matter-of-fact conversational posture, one hand open palm-up in an inviting-to-conversation gesture while the other rests lightly across the scarf near her shoulder. Natural relaxed hands fully visible. Absolutely featureless blank dark face, no facial details.",
+        "referenced_image_paths": [
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/woman.png",
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/person.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "servant",
+      "label": "Diener",
+      "status": "active",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/servant.json",
+      "toolArguments": {
+        "prompt": "Use case: style-transfer.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an anonymous speaking NPC (\"Fremde Stimme\"). One image only, never a sheet, grid, collage or icon badge.\nInput image 1 is a STYLE AND SERIES REFERENCE ONLY, not an edit target. Match its anonymous near-black human silhouette, matte anime linework and cel-shading, simple medieval village backdrop, calm daylight, muted palette and large upper-body framing. Create the new role described below.\nScene: a quiet uncomplicated medieval village lane with two or three cream plaster-and-timber cottages, muted brown roofs, a little subdued greenery and soft blue sky. Background light and lower contrast than the figure, no crowd or signs.\nSubject and framing: one centered human adult, waist-up, head comfortably below the top edge, conversational gesturing hands fully inside the frame. Human face, head, hands, all exposed skin, clothing and equipment remain nearly black charcoal, with only sparse flat dark-slate outlines to distinguish broad garment shapes. Absolutely no eyes, nose, mouth, skin-colored patches, visible facial planes or facial detail. This is an anonymous living human speaking, not a ghost, monster, statue or assassin.\nStyle: match the supplied existing Tales of Xillia/Frieren-inspired clean matte anime / cel-shaded silhouette series. Clear simple contours, restrained flat values, no photorealism, realistic textures, painterly finish, bright metallic highlights or detailed materials. Keep the outer contour and conversational gesture exceptionally readable as a 48px thumbnail.\nConstraints: opaque full-square village scene, no transparency. No text, speech bubbles, watermark, border or frame. No invented heraldry, insignia, uniforms, religious emblems or decorative symbols. Natural human anatomy. Equipment is for recognizing the role through its dark silhouette, not for violence. No aggressive pose, fighting, blood or injury.\nNEW ROLE: An adult human servant in a simple modest long-sleeved medieval tunic. A neatly folded serving towel draped over one bent forearm, the other hand held open in a courteous speaking/serving gesture. Towel, face, hands and tunic all near-black, with minimal dark-slate edge lines. A relaxed upright figure, no tray, goblet, weapon or livery badge.",
+        "referenced_image_paths": [
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "city-guard",
+      "label": "Stadtwache",
+      "status": "active",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/city-guard.json",
+      "toolArguments": {
+        "prompt": "Use case: style-transfer.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an anonymous speaking NPC (\"Fremde Stimme\"). One image only, never a sheet, grid, collage or icon badge.\nInput image 1 is a STYLE AND SERIES REFERENCE ONLY, not an edit target. Match its anonymous near-black human silhouette, matte anime linework and cel-shading, simple medieval village backdrop, calm daylight, muted palette and large upper-body framing. Create the new role described below.\nScene: a quiet uncomplicated medieval village lane with two or three cream plaster-and-timber cottages, muted brown roofs, a little subdued greenery and soft blue sky. Background light and lower contrast than the figure, no crowd or signs.\nSubject and framing: one centered human adult, waist-up, head comfortably below the top edge, conversational gesturing hands fully inside the frame. Human face, head, hands, all exposed skin, clothing and equipment remain nearly black charcoal, with only sparse flat dark-slate outlines to distinguish broad garment shapes. Absolutely no eyes, nose, mouth, skin-colored patches, visible facial planes or facial detail. This is an anonymous living human speaking, not a ghost, monster, statue or assassin.\nStyle: match the supplied existing Tales of Xillia/Frieren-inspired clean matte anime / cel-shaded silhouette series. Clear simple contours, restrained flat values, no photorealism, realistic textures, painterly finish, bright metallic highlights or detailed materials. Keep the outer contour and conversational gesture exceptionally readable as a 48px thumbnail.\nConstraints: opaque full-square village scene, no transparency. No text, speech bubbles, watermark, border or frame. No invented heraldry, insignia, uniforms, religious emblems or decorative symbols. Natural human anatomy. Equipment is for recognizing the role through its dark silhouette, not for violence. No aggressive pose, fighting, blood or injury.\nNEW ROLE: An adult human town guard with the clear outer contour of a simple plain rounded medieval helmet, practical tunic and restrained light protective gear. One hand holds a single plain polearm upright and vertical at the side, the other free hand points calmly toward the village lane while speaking. Helmet, weapon and every part of the human remain near-black; no visor opening revealing eyes, no badge, crest, heraldry, shield, banner or uniform insignia. Keep helmet and polearm tip fully in frame. Calm directions, not a confrontation.",
+        "referenced_image_paths": [
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "knight",
+      "label": "Ritter",
+      "status": "active",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/knight.json",
+      "toolArguments": {
+        "prompt": "Use case: style-transfer.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an anonymous speaking NPC (\"Fremde Stimme\"). One image only, never a sheet, grid, collage or icon badge.\nInput image 1 is a STYLE AND SERIES REFERENCE ONLY, not an edit target. Match its anonymous near-black human silhouette, matte anime linework and cel-shading, simple medieval village backdrop, calm daylight, muted palette and large upper-body framing. Create the new role described below.\nScene: a quiet uncomplicated medieval village lane with two or three cream plaster-and-timber cottages, muted brown roofs, a little subdued greenery and soft blue sky. Background light and lower contrast than the figure, no crowd or signs.\nSubject and framing: one centered human adult, waist-up, head comfortably below the top edge, conversational gesturing hands fully inside the frame. Human face, head, hands, all exposed skin, clothing and equipment remain nearly black charcoal, with only sparse flat dark-slate outlines to distinguish broad garment shapes. Absolutely no eyes, nose, mouth, skin-colored patches, visible facial planes or facial detail. This is an anonymous living human speaking, not a ghost, monster, statue or assassin.\nStyle: match the supplied existing Tales of Xillia/Frieren-inspired clean matte anime / cel-shaded silhouette series. Clear simple contours, restrained flat values, no photorealism, realistic textures, painterly finish, bright metallic highlights or detailed materials. Keep the outer contour and conversational gesture exceptionally readable as a 48px thumbnail.\nConstraints: opaque full-square village scene, no transparency. No text, speech bubbles, watermark, border or frame. No invented heraldry, insignia, uniforms, religious emblems or decorative symbols. Natural human anatomy. Equipment is for recognizing the role through its dark silhouette, not for violence. No aggressive pose, fighting, blood or injury.\nNEW ROLE: An adult human knight recognizable by the broad outer shapes of plain plate armor, a closed featureless helmet/visor and a simple cloak. One open gauntleted hand extends in a measured conversational gesture, the other arm rests naturally near the waist. Armor and visor remain nearly black with very sparse flat dark-slate divisions, no bright steel, no face or eyes through the helmet, no heraldry, crest, badge or religious sign. No drawn weapon, shield, attack or fighting.",
+        "referenced_image_paths": [
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "mercenary",
+      "label": "Söldner",
+      "status": "active",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/mercenary.json",
+      "toolArguments": {
+        "prompt": "Use case: style-transfer.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an anonymous speaking NPC (\"Fremde Stimme\"). One image only, never a sheet, grid, collage or icon badge.\nInput image 1 is a STYLE AND SERIES REFERENCE ONLY, not an edit target. Match its anonymous near-black human silhouette, matte anime linework and cel-shading, simple medieval village backdrop, calm daylight, muted palette and large upper-body framing. Create the new role described below.\nScene: a quiet uncomplicated medieval village lane with two or three cream plaster-and-timber cottages, muted brown roofs, a little subdued greenery and soft blue sky. Background light and lower contrast than the figure, no crowd or signs.\nSubject and framing: one centered human adult, waist-up, head comfortably below the top edge, conversational gesturing hands fully inside the frame. Human face, head, hands, all exposed skin, clothing and equipment remain nearly black charcoal, with only sparse flat dark-slate outlines to distinguish broad garment shapes. Absolutely no eyes, nose, mouth, skin-colored patches, visible facial planes or facial detail. This is an anonymous living human speaking, not a ghost, monster, statue or assassin.\nStyle: match the supplied existing Tales of Xillia/Frieren-inspired clean matte anime / cel-shaded silhouette series. Clear simple contours, restrained flat values, no photorealism, realistic textures, painterly finish, bright metallic highlights or detailed materials. Keep the outer contour and conversational gesture exceptionally readable as a 48px thumbnail.\nConstraints: opaque full-square village scene, no transparency. No text, speech bubbles, watermark, border or frame. No invented heraldry, insignia, uniforms, religious emblems or decorative symbols. Natural human anatomy. Equipment is for recognizing the role through its dark silhouette, not for violence. No aggressive pose, fighting, blood or injury.\nNEW ROLE: An adult human mercenary identifiable by an irregular practical mix of worn-looking leather and a few metal armor shapes: asymmetric shoulder pieces, an uneven cross-body gear strap and a small travel pouch carried at an angle. One free hand is open in a casual explanatory speaking gesture, the other near the belt. All human surfaces and equipment near-black with very sparse flat dark-slate lines. The outfit is rough and mismatched, not ornate or uniform; no badge, heraldry or emblem. No drawn weapon, threatening gesture or combat.",
+        "referenced_image_paths": [
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "robber",
+      "label": "R?uber",
+      "status": "active",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/robber.json",
+      "toolArguments": {
+        "prompt": "Use case: style-transfer.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified adult speaker in Aleria, matching the existing \"Fremde Stimme\" silhouette series. Exactly one image, no sheet, collage or grid.\nInput image 1 is the existing adult male silhouette avatar, a STYLE AND SERIES REFERENCE: match the scale, waist-up framing, charcoal silhouette treatment, matte anime linework, cel-shading, village palette and calm daylight. Create a new role, not the same hair or outfit.\nSubject: robber / Räuber, an adult HUMAN MAN in a worn hood, simple medieval leather waistcoat over a long-sleeve tunic, and a plain EMPTY belt. The hood has a softly uneven, worn outer edge, the clothing simple readable divisions. The interior of the hood and the entire face are absolutely black and FEATURELESS: no eyes, nose, mouth, mask, mask holes, facial planes or light revealing any face. This is a living adult human with normal human proportions and hands, never a ghost, specter, magical creature or floating cloak. All exposed skin, hands and clothing remain near-black charcoal with only sparse dark-slate outline accents, consistent with the reference.\nPose: standing quietly and gesturing in ordinary conversation, one hand open palm-up at waist-to-chest height while the other makes a small open explaining gesture beside the torso. Natural relaxed anatomy, both hands and all fingers fully visible inside frame, comfortable margin. Convey the rough traveler/robber role only through hood and worn plain civilian clothing. NO attack, threat, victim, theft scene, depicted crime, weapon, loot, bag or held prop. Empty belt, no knife or pouches.\nBackground: same quiet simple medieval village lane as the reference, cream timber-and-plaster cottages, brown roofs, muted blue-gray sky and sparse greenery; unobtrusive lower-contrast backdrop, no crowds, no signs or text.\nRendering: square opaque scene, centered waist-up figure dominating foreground; matte Tales of Xillia/Frieren anime drawing, clear anime lineart, simple cel-shading and restrained flat charcoal/slate shapes. No photorealistic texture, no 3D, no painterly brushwork or dramatic lighting. Human ears rounded if visible. Readable at small thumbnail size.\nNo speech bubbles, decorative symbols, letters, text, watermark, frame or border. No transparency.",
+        "referenced_image_paths": [
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "knight-2",
+      "label": "Ritter Variante",
+      "status": "active",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/knight-2.json",
+      "toolArguments": {
+        "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone square 1:1 RPG comment avatar of an anonymous human NPC speaking, not a sheet or collage.\nReference image: supplied existing role avatar is style, palette and village-backdrop reference. This requested image is a DIFFERENT variant of that same role, with substantially different headgear/body outline and conversational hand position. Keep the exact established image series look.\nStyle: Tales of Xillia/Frieren anime lineart with matte clean cel shading, simple textures, not realistic or painterly. Main human INCLUDING face and hands is completely dark charcoal, only restrained dark-slate edge lines. No visible eyes, mouth, nose, facial planes, skin colors or glowing slits. Entire person must read as faceless human silhouette.\nComposition: centered waist-up adult with head below top edge and hands in frame, foreground figure dominant and legible at 48px. Light quiet medieval timber-and-plaster village with 2-3 cream houses, brown roofs, pale lane and muted foliage, softly blue daylight sky behind. Full opaque square. Natural conversational gesturing, no combat, sinister atmosphere or supernatural effects.\nNo text, letters, insignia, heraldic symbols, frame, border, speech bubbles or watermark.\nVariant subject: A second adult medieval knight: sturdy broad build, rounded sallet helmet with visor raised above an entirely blank near-black face, overlapping rounded plate pauldrons, short plain tabard over a plate cuirass, WITHOUT the long shoulder cloak of the reference. Left arm bent with gauntlet resting across his chest in a respectful speaking gesture; other hand opened palm up to his side as if explaining. Hands dark gauntlets. No weapon held, no plumes or decorative emblems. Make rounded helmet and open silhouette pose clearly distinct from the reference's pointed closed visor and one-hand-at-waist pose.",
+        "referenced_image_paths": [
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/knight.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "mercenary-2",
+      "label": "Söldner Variante",
+      "status": "active",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/mercenary-2.json",
+      "toolArguments": {
+        "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone square 1:1 RPG comment avatar of an anonymous human NPC speaking, not a sheet or collage.\nReference image: supplied existing role avatar is style, palette and village-backdrop reference. This requested image is a DIFFERENT variant of that same role, with substantially different headgear/body outline and conversational hand position. Keep the exact established image series look.\nStyle: Tales of Xillia/Frieren anime lineart with matte clean cel shading, simple textures, not realistic or painterly. Main human INCLUDING face and hands is completely dark charcoal, only restrained dark-slate edge lines. No visible eyes, mouth, nose, facial planes, skin colors or glowing slits. Entire person must read as faceless human silhouette.\nComposition: centered waist-up adult with head below top edge and hands in frame, foreground figure dominant and legible at 48px. Light quiet medieval timber-and-plaster village with 2-3 cream houses, brown roofs, pale lane and muted foliage, softly blue daylight sky behind. Full opaque square. Natural conversational gesturing, no combat, sinister atmosphere or supernatural effects.\nNo text, letters, insignia, heraldic symbols, frame, border, speech bubbles or watermark.\nVariant subject: A second adult medieval mercenary: older stockier broad build with receding short hair and a short squared beard outline, all near-black and absolutely NO facial features. Simple worn quilted leather jack with one small mismatched metal shoulder cap, a scarf around neck and a belt with a plain sheathed sword hilt just at waist; no diagonal chest satchel strap. Both hands visible, one held open outward at shoulder height, the other palm up in front of the chest. No fighting, no weapon drawn. Clearly different from the reference's young tousled short hair, layered metal shoulders, diagonal satchel and one hand on hip.",
+        "referenced_image_paths": [
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/mercenary.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "merchant",
+      "label": "Händler",
+      "status": "unselected",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/merchant.json",
+      "toolArguments": {
+        "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified speaking NPC (\"Fremde Stimme\"). A single image, never a sheet or collage.\nReference images: the supplied existing man and woman avatars are style and composition references ONLY. Match their series exactly, with a different adult role, outfit outline and gesture.\nStyle: Tales of Xillia/Frieren anime drawing, clear anime lineart and clean matte cel shading, simple anime textures. No realism, painterly texture or 3D.\nComposition: centered waist-up human dominates the foreground, top of head below top edge, both hands fully visible and separated from the torso. Entire human INCLUDING face, skin and hands is near-black charcoal with restrained dark-slate edge accents. Absolutely featureless face: no eyes, nose, mouth or facial planes. Normal rounded human ears, no fantasy species.\nBackdrop: two or three simple cream timber-and-plaster medieval village cottages, brown roofs beside pale quiet lane, muted foliage and soft blue sky. Light background, calm warm-neutral daylight, low contrast behind dark figure. No other people, no shop signs.\nKeep human silhouette and conversational hand gestures very legible at 48px. Full opaque square scene. No text, logos, heraldry, frame, border, speech bubbles or watermark. Not sinister, supernatural or aggressive.\nSubject variant: An adult male medieval merchant, stockier mature build, soft folded merchant cap and simple layered tunic with a modest belt pouch visible at waist. One open hand raised as if offering a price, the other open palm extended toward the viewer in a welcoming conversational gesture. Clothing and pouch rendered in the same near-black silhouette palette; avoid coins, writing, products or a sales stall. Distinctive capped merchant contour, entirely faceless.",
+        "referenced_image_paths": [
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png",
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/woman.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "traveler",
+      "label": "Reisende",
+      "status": "unselected",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/traveler.json",
+      "toolArguments": {
+        "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified speaking NPC (\"Fremde Stimme\"). A single image, never a sheet or collage.\nReference images: the supplied existing man and woman avatars are style and composition references ONLY. Match their series exactly, with a different adult role, outfit outline and gesture.\nStyle: Tales of Xillia/Frieren anime drawing, clear anime lineart and clean matte cel shading, simple anime textures. No realism, painterly texture or 3D.\nComposition: centered waist-up human dominates the foreground, top of head below top edge, both hands fully visible and separated from the torso. Entire human INCLUDING face, skin and hands is near-black charcoal with restrained dark-slate edge accents. Absolutely featureless face: no eyes, nose, mouth or facial planes. Normal rounded human ears, no fantasy species.\nBackdrop: two or three simple cream timber-and-plaster medieval village cottages, brown roofs beside pale quiet lane, muted foliage and soft blue sky. Light background, calm warm-neutral daylight, low contrast behind dark figure. No other people, no shop signs.\nKeep human silhouette and conversational hand gestures very legible at 48px. Full opaque square scene. No text, logos, heraldry, frame, border, speech bubbles or watermark. Not sinister, supernatural or aggressive.\nSubject variant: An adult female medieval traveler with a hood pushed back around her shoulders, shoulder-length hair outline, a short practical traveling cloak and a plain diagonal satchel strap. One hand gestures outward as if asking directions, the other open hand beside her chest. No weapons, no staff or large backpack obscuring the figure. Same near-black silhouette palette, completely featureless face and hands dark throughout.",
+        "referenced_image_paths": [
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png",
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/woman.png"
+        ],
+        "transparent_background": false
+      }
+    },
+    {
+      "id": "craftsperson",
+      "label": "Handwerker",
+      "status": "unselected",
+      "receipt": "assets/source/comment-foreign-voice/2026-11-12/receipts/craftsperson.json",
+      "toolArguments": {
+        "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified speaking NPC (\"Fremde Stimme\"). A single image, never a sheet or collage.\nReference images: the supplied existing man and woman avatars are style and composition references ONLY. Match their series exactly, with a different adult role, outfit outline and gesture.\nStyle: Tales of Xillia/Frieren anime drawing, clear anime lineart and clean matte cel shading, simple anime textures. No realism, painterly texture or 3D.\nComposition: centered waist-up human dominates the foreground, top of head below top edge, both hands fully visible and separated from the torso. Entire human INCLUDING face, skin and hands is near-black charcoal with restrained dark-slate edge accents. Absolutely featureless face: no eyes, nose, mouth or facial planes. Normal rounded human ears, no fantasy species.\nBackdrop: two or three simple cream timber-and-plaster medieval village cottages, brown roofs beside pale quiet lane, muted foliage and soft blue sky. Light background, calm warm-neutral daylight, low contrast behind dark figure. No other people, no shop signs.\nKeep human silhouette and conversational hand gestures very legible at 48px. Full opaque square scene. No text, logos, heraldry, frame, border, speech bubbles or watermark. Not sinister, supernatural or aggressive.\nSubject variant: An adult male medieval village craftsman with broad shoulders, short hair contour, rolled-up tunic sleeves and a plain sturdy work apron. A small hammer outline tucked at the side of his waist, never brandished. Both dark hands open in an explanatory talking gesture, one palm up to the side and the other loosely before the chest. Clothing and exposed arms all near-black charcoal; no visible skin or facial features. No workshop clutter, sparks or action scene.",
+        "referenced_image_paths": [
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png",
+          "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/woman.png"
+        ],
+        "transparent_background": false
+      }
+    }
+  ]
+}

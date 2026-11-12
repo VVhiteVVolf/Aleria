@@ -1,5 +1,39 @@
 # Draig Leibgarde – Bilder und Quellen
 
+## Ergänzte Dienstordnung vom 12. November 2026
+
+Die aktuelle Dienstordnung folgt den gelieferten Gardeübersichten: Steffan bleibt
+Kommandant der Hausmacht; Marared Curiad führt die Leibgarde. Pellinard Brândyddyn
+und Ysabel Bronnor sind Leutnante; Eurgain Brândyddyn, Urien Caelrith und Mathon
+Curiad dienen als Ritter. Llywelyn Coeddu, Hywel Craigddu, Morcant Curiad, Lleucu
+Myrgath und Angharad Aelgorn stehen in der ersten Gardistenreihe. Zwei generische
+Ritter- und fünf Gardistenkarten bleiben unbenannte Platzhalter. Die weiteren
+15 freien Plätze sowie die Ehemaligen bleiben erhalten.
+
+Die neuen Personen stammen aus der gemeinsamen Identitätsquelle
+[`draig-garde-people.js`](../../../Stammbäume/assets/js/data/draig-garde-people.js).
+[`draig-garde-active-levels.mjs`](draig-garde-active-levels.mjs) verantwortet nur
+ihre Platzierung. [`draig-leibgarde-entry.mjs`](draig-leibgarde-entry.mjs) exportiert
+die reine Projektion `getDraigGardeEntry({mediaByKey})`; sie akzeptiert eine Map
+oder ein Objekt mit `portrait:<personen-id>` und `placeholder:garde-ritter` bzw.
+`placeholder:gardist`. Werte sind Bildlinks oder Medienbelege mit `url` bzw.
+`verifiedURL`. Andere Medien bleiben unverändert.
+
+Der klassische Seed wird gezielt erzeugt; bestehende Ladereihenfolge und
+Registrierung bleiben erhalten:
+
+```powershell
+node AleriaAlmanach/scripts/build-draig-garde-module.mjs --write
+node AleriaAlmanach/scripts/build-draig-garde-module.mjs
+```
+
+Generische Karten haben einen leeren Untertitel. Damit behandelt auch die
+bisher veröffentlichte Mannschaftslogik sie als unbenannte Rollen. Die sichtbare
+Ritterbezeichnung steht in der Kartenbeschreibung. Daraus werden keine neuen
+Charaktere oder auswählbaren Mannschaftsmitglieder.
+
+Die folgenden Abschnitte dokumentieren unverändert den historischen Bildauftrag.
+
 Stand: 30. September 2026.
 
 Modul: `draig-leibgarde`, Pfad: Gruppen > Cenyr > Celtigerns Wacht > Haus Draig.

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "tool": "built-in image_gen",
+  "prompts": [
+    {
+      "id": "merchant",
+      "label": "Händler",
+      "referencePaths": [
+        "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/woman.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified speaking NPC (\"Fremde Stimme\"). A single image, never a sheet or collage.\nReference images: the supplied existing man and woman avatars are style and composition references ONLY. Match their series exactly, with a different adult role, outfit outline and gesture.\nStyle: Tales of Xillia/Frieren anime drawing, clear anime lineart and clean matte cel shading, simple anime textures. No realism, painterly texture or 3D.\nComposition: centered waist-up human dominates the foreground, top of head below top edge, both hands fully visible and separated from the torso. Entire human INCLUDING face, skin and hands is near-black charcoal with restrained dark-slate edge accents. Absolutely featureless face: no eyes, nose, mouth or facial planes. Normal rounded human ears, no fantasy species.\nBackdrop: two or three simple cream timber-and-plaster medieval village cottages, brown roofs beside pale quiet lane, muted foliage and soft blue sky. Light background, calm warm-neutral daylight, low contrast behind dark figure. No other people, no shop signs.\nKeep human silhouette and conversational hand gestures very legible at 48px. Full opaque square scene. No text, logos, heraldry, frame, border, speech bubbles or watermark. Not sinister, supernatural or aggressive.\nSubject variant: An adult male medieval merchant, stockier mature build, soft folded merchant cap and simple layered tunic with a modest belt pouch visible at waist. One open hand raised as if offering a price, the other open palm extended toward the viewer in a welcoming conversational gesture. Clothing and pouch rendered in the same near-black silhouette palette; avoid coins, writing, products or a sales stall. Distinctive capped merchant contour, entirely faceless."
+    },
+    {
+      "id": "traveler",
+      "label": "Reisende",
+      "referencePaths": [
+        "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/woman.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified speaking NPC (\"Fremde Stimme\"). A single image, never a sheet or collage.\nReference images: the supplied existing man and woman avatars are style and composition references ONLY. Match their series exactly, with a different adult role, outfit outline and gesture.\nStyle: Tales of Xillia/Frieren anime drawing, clear anime lineart and clean matte cel shading, simple anime textures. No realism, painterly texture or 3D.\nComposition: centered waist-up human dominates the foreground, top of head below top edge, both hands fully visible and separated from the torso. Entire human INCLUDING face, skin and hands is near-black charcoal with restrained dark-slate edge accents. Absolutely featureless face: no eyes, nose, mouth or facial planes. Normal rounded human ears, no fantasy species.\nBackdrop: two or three simple cream timber-and-plaster medieval village cottages, brown roofs beside pale quiet lane, muted foliage and soft blue sky. Light background, calm warm-neutral daylight, low contrast behind dark figure. No other people, no shop signs.\nKeep human silhouette and conversational hand gestures very legible at 48px. Full opaque square scene. No text, logos, heraldry, frame, border, speech bubbles or watermark. Not sinister, supernatural or aggressive.\nSubject variant: An adult female medieval traveler with a hood pushed back around her shoulders, shoulder-length hair outline, a short practical traveling cloak and a plain diagonal satchel strap. One hand gestures outward as if asking directions, the other open hand beside her chest. No weapons, no staff or large backpack obscuring the figure. Same near-black silhouette palette, completely featureless face and hands dark throughout."
+    },
+    {
+      "id": "craftsperson",
+      "label": "Handwerker",
+      "referencePaths": [
+        "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png",
+        "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/woman.png"
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified speaking NPC (\"Fremde Stimme\"). A single image, never a sheet or collage.\nReference images: the supplied existing man and woman avatars are style and composition references ONLY. Match their series exactly, with a different adult role, outfit outline and gesture.\nStyle: Tales of Xillia/Frieren anime drawing, clear anime lineart and clean matte cel shading, simple anime textures. No realism, painterly texture or 3D.\nComposition: centered waist-up human dominates the foreground, top of head below top edge, both hands fully visible and separated from the torso. Entire human INCLUDING face, skin and hands is near-black charcoal with restrained dark-slate edge accents. Absolutely featureless face: no eyes, nose, mouth or facial planes. Normal rounded human ears, no fantasy species.\nBackdrop: two or three simple cream timber-and-plaster medieval village cottages, brown roofs beside pale quiet lane, muted foliage and soft blue sky. Light background, calm warm-neutral daylight, low contrast behind dark figure. No other people, no shop signs.\nKeep human silhouette and conversational hand gestures very legible at 48px. Full opaque square scene. No text, logos, heraldry, frame, border, speech bubbles or watermark. Not sinister, supernatural or aggressive.\nSubject variant: An adult male medieval village craftsman with broad shoulders, short hair contour, rolled-up tunic sleeves and a plain sturdy work apron. A small hammer outline tucked at the side of his waist, never brandished. Both dark hands open in an explanatory talking gesture, one palm up to the side and the other loosely before the chest. Clothing and exposed arms all near-black charcoal; no visible skin or facial features. No workshop clutter, sparks or action scene."
+    }
+  ]
+}

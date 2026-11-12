@@ -113,7 +113,7 @@ try {
 
   await page.goto(origin + '/Orte/grossstadt.html?ort=lysfaen', { waitUntil: 'networkidle' });
   const city = page.locator('[data-orte-houses]');
-  await city.locator('[data-directory-query]').fill('rhyddid');
+  await city.locator('[data-directory-query]').fill('jernigan');
   await page.evaluate(() => document.dispatchEvent(new CustomEvent('aleria:orte:data-ready', { detail: { data: window.ORT_DATA } })));
   assert.equal(await city.locator('[data-directory-entry]:visible').count(), 1, 'City refresh preserves filters');
   assert.equal(await city.locator('.directory-toolbar').count(), 1);

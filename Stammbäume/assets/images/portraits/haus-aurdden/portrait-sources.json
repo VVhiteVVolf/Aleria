@@ -1,0 +1,797 @@
+{
+  "familyId": "haus-aurdden",
+  "method": "built-in image_gen",
+  "style": "Tales of Xillia/Frieren base with user-approved fine matte v3 reference",
+  "styleRun": "approved-xillia-frieren-v3",
+  "approvedPrimaryReferenceSha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033",
+  "styleReferenceIndex": 1,
+  "editTargetReferenceIndex": 0,
+  "existingIdentityOriginalsRetained": true,
+  "portraitCount": 28,
+  "expectedCount": 28,
+  "originalsByteIdentical": true,
+  "noResizingOrCropping": true,
+  "allFinalImagesActuallyViewed": true,
+  "bankBranchPortraitsCreated": 0,
+  "portraits": {
+    "heledric-aurdden": {
+      "id": "heledric-aurdden",
+      "name": "Heledric Aurdden",
+      "age": 92,
+      "hair": "grau",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/heledric-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/heledric-aurdden-v4.png",
+      "sha256": "6a2c06935e34a5216baf5f7f7fd0f6fbf2a07b28983af4e8419572e116056591",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 4,
+      "visualReview": {
+        "status": "passed",
+        "method": "actual full edited image viewed",
+        "reviewer": "/root/luxury_portraits",
+        "style": "approved-xillia-frieren-v3",
+        "checks": [
+          "previous individual identity age hairstyle clothing pose and close framing retained",
+          "fresher anime colours and softer clear cel shading",
+          "harmonious natural mature face without de-aging",
+          "blue eyes and correct all-red or all-white/grey hair",
+          "standing calm posture and empty hands",
+          "quiet medieval background without modern fittings"
+        ]
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/heledric-aurdden-v3.png",
+      "previousVersion": 3,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/heledric-aurdden.json"
+    },
+    "lleirwen-spouse-aurdden": {
+      "id": "lleirwen-spouse-aurdden",
+      "name": "Lleirwen",
+      "age": 91,
+      "hair": "grau",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/lleirwen-spouse-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/lleirwen-spouse-aurdden-v4.png",
+      "sha256": "3e4c0c81b8584f98c7c29ffe3eee34ccb19b5ee5e3d215e5952621f1959ee934",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 4,
+      "visualReview": {
+        "status": "passed",
+        "method": "actual full edited image viewed",
+        "reviewer": "/root/luxury_portraits",
+        "style": "approved-xillia-frieren-v3",
+        "checks": [
+          "same elderly individual identity age pose clothing and close framing retained",
+          "all-grey/white hair eyebrows and beard retained, blue eyes",
+          "harmonious natural elderly expression without de-aging",
+          "fresher matte anime colours and soft clear cel shading",
+          "empty hands and quiet medieval background retained"
+        ]
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/lleirwen-spouse-aurdden-v3.png",
+      "previousVersion": 3,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/lleirwen-spouse-aurdden.json"
+    },
+    "iwrwyn-aurdden": {
+      "id": "iwrwyn-aurdden",
+      "name": "Iwrwyn Aurdden",
+      "age": 74,
+      "hair": "grau",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/iwrwyn-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/iwrwyn-aurdden-v4.png",
+      "sha256": "a04ac70208d4d6fe36aae181f7553be4d034fc6ad6c47c67fd0ff0395298cb3f",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 4,
+      "visualReview": {
+        "status": "passed",
+        "method": "actual full edited image viewed",
+        "reviewer": "/root/luxury_portraits",
+        "style": "approved-xillia-frieren-v3",
+        "checks": [
+          "same elderly individual identity age pose clothing and close framing retained",
+          "all-grey/white hair eyebrows and beard retained, blue eyes",
+          "harmonious natural elderly expression without de-aging",
+          "fresher matte anime colours and soft clear cel shading",
+          "empty hands and quiet medieval background retained"
+        ]
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/iwrwyn-aurdden-v3.png",
+      "previousVersion": 3,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/iwrwyn-aurdden.json"
+    },
+    "brenella-spouse-aurdden": {
+      "id": "brenella-spouse-aurdden",
+      "name": "Brenella",
+      "age": 73,
+      "hair": "grau",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/brenella-spouse-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/brenella-spouse-aurdden-v5.png",
+      "sha256": "38a978430c5daff31a2e6d228b597f3e7288e9f3a1d17cd030d24dab51f20475",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 5,
+      "visualReview": {
+        "status": "passed",
+        "method": "actual full edited image viewed",
+        "reviewer": "/root/luxury_portraits",
+        "style": "approved-xillia-frieren-v3",
+        "checks": [
+          "same elderly individual identity age pose clothing and close framing retained",
+          "all-grey/white hair eyebrows and beard retained, blue eyes",
+          "harmonious natural elderly expression without de-aging",
+          "fresher matte anime colours and soft clear cel shading",
+          "empty hands and quiet medieval background retained"
+        ]
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/brenella-spouse-aurdden-v4.png",
+      "previousVersion": 4,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/brenella-spouse-aurdden.json"
+    },
+    "kyrwyn-aurdden": {
+      "id": "kyrwyn-aurdden",
+      "name": "Kyrwyn Aurdden",
+      "age": 55,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/kyrwyn-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/kyrwyn-aurdden-v4.png",
+      "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 4,
+      "visualReview": {
+        "status": "passed",
+        "method": "actual approved local image viewed",
+        "reviewer": "/root/luxury_portraits",
+        "style": "approved-xillia-frieren-v3",
+        "checks": [
+          "exact user-approved v3 picture adopted unchanged",
+          "face and upper torso focus with complete hairstyle",
+          "age55, red curled hair and red beard/brows, blue eyes",
+          "fine matte drawing with clearer fresher anime colours and calm soft cel shading",
+          "standing calm posture and empty subordinate hands",
+          "quiet medieval shop background without modern fittings"
+        ]
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/kyrwyn-aurdden-v3.png",
+      "previousVersion": 3,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/kyrwyn-aurdden.json"
+    },
+    "cyrwen-aurdden": {
+      "id": "cyrwen-aurdden",
+      "name": "Cyrwen Aurdden",
+      "age": 53,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/cyrwen-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/cyrwen-aurdden-v4.png",
+      "sha256": "409625056cfb4ee6dbf9dfe7835d6fde165293d3b4abae21a27a1f8d6019b073",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 4,
+      "visualReview": {
+        "status": "passed",
+        "method": "actual full edited image viewed",
+        "reviewer": "/root/luxury_portraits",
+        "style": "approved-xillia-frieren-v3",
+        "checks": [
+          "same identity mature age hairstyle clothing pose and upper-body framing retained",
+          "red strong curls and blue eyes without grey",
+          "harmonious attractive natural facial drawing without de-aging",
+          "fresher matte anime colours and softer clear cel shading",
+          "empty hands and quiet medieval background retained"
+        ]
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/cyrwen-aurdden-v3.png",
+      "previousVersion": 3,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/cyrwen-aurdden.json"
+    },
+    "thalan-aurdden": {
+      "id": "thalan-aurdden",
+      "name": "Thalan Aurdden",
+      "age": 51,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/thalan-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/thalan-aurdden-v5.png",
+      "sha256": "7523a3d5a52ccff329d195ffbad4a5f859d23c6dbe885bacccf8abb526734274",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 5,
+      "visualReview": {
+        "status": "passed",
+        "method": "actual full edited image viewed",
+        "reviewer": "/root/luxury_portraits",
+        "style": "approved-xillia-frieren-v3",
+        "checks": [
+          "previous individual identity age hairstyle clothing pose and close framing retained",
+          "fresher anime colours and softer clear cel shading",
+          "harmonious natural mature face without de-aging",
+          "blue eyes and correct all-red or all-white/grey hair",
+          "standing calm posture and empty hands",
+          "quiet medieval background without modern fittings"
+        ]
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/thalan-aurdden-v4.png",
+      "previousVersion": 4,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/thalan-aurdden.json"
+    },
+    "lleirena-aurdden": {
+      "id": "lleirena-aurdden",
+      "name": "Lleirena Aurdden",
+      "age": 48,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/lleirena-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/lleirena-aurdden-v4.png",
+      "sha256": "029784d6e24f2c879e6ef70825c176d25d8c606193214ac394d36c9bce2380b9",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 4,
+      "visualReview": {
+        "status": "passed",
+        "method": "actual full edited image viewed",
+        "reviewer": "/root/luxury_portraits",
+        "style": "approved-xillia-frieren-v3",
+        "checks": [
+          "same identity mature age hairstyle clothing pose and upper-body framing retained",
+          "red strong curls and blue eyes without grey",
+          "harmonious attractive natural facial drawing without de-aging",
+          "fresher matte anime colours and softer clear cel shading",
+          "empty hands and quiet medieval background retained"
+        ]
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/lleirena-aurdden-v3.png",
+      "previousVersion": 3,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/lleirena-aurdden.json"
+    },
+    "saithen-aurdden": {
+      "id": "saithen-aurdden",
+      "name": "Saithen Aurdden",
+      "age": 46,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/saithen-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/saithen-aurdden-v4.png",
+      "sha256": "74b7b85f47a0f1ba98f128034257f1a5429abf1d1eb1c220c28b16fb44a1328d",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 4,
+      "visualReview": {
+        "status": "passed",
+        "method": "actual full edited image viewed",
+        "reviewer": "/root/luxury_portraits",
+        "style": "approved-xillia-frieren-v3",
+        "checks": [
+          "previous individual identity age hairstyle clothing pose and close framing retained",
+          "fresher anime colours and softer clear cel shading",
+          "harmonious natural mature face without de-aging",
+          "blue eyes and correct all-red or all-white/grey hair",
+          "standing calm posture and empty hands",
+          "quiet medieval background without modern fittings"
+        ]
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/saithen-aurdden-v3.png",
+      "previousVersion": 3,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/saithen-aurdden.json"
+    },
+    "avelena-spouse-aurdden": {
+      "id": "avelena-spouse-aurdden",
+      "name": "Avelena",
+      "age": 52,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/avelena-spouse-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/avelena-spouse-aurdden-v4.png",
+      "sha256": "799c5d195e397d03de274f6d59db931e3eebd568a7bd8eb0cdaed3a3130cf169",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 4,
+      "visualReview": {
+        "status": "passed",
+        "method": "actual full edited image viewed",
+        "reviewer": "/root/luxury_portraits",
+        "style": "approved-xillia-frieren-v3",
+        "checks": [
+          "same identity mature age hairstyle clothing pose and upper-body framing retained",
+          "red strong curls and blue eyes without grey",
+          "harmonious attractive natural facial drawing without de-aging",
+          "fresher matte anime colours and softer clear cel shading",
+          "empty hands and quiet medieval background retained"
+        ]
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/avelena-spouse-aurdden-v3.png",
+      "previousVersion": 3,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/avelena-spouse-aurdden.json"
+    },
+    "firwen-spouse-aurdden": {
+      "id": "firwen-spouse-aurdden",
+      "name": "Firwen",
+      "age": 49,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/firwen-spouse-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/firwen-spouse-aurdden-v3.png",
+      "sha256": "6d020136c06157c9a26ad2d9ae4687c87a6886d40652acd085b58cefe665b1bd",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "actuallyViewed": true,
+        "reviewer": "luxury_goods",
+        "findings": [],
+        "notes": "Immutable target and approved Kyrwyn-v3 style reference actually viewed before edit. Final generated 1024x1536 PNG individually viewed: original identity, age, hair, blue eyes, clothing, standing pose, close upper-body crop and quiet shop background preserved; finer cleaner warmer anime treatment, subtly harmonious sympathetic face, no new objects."
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/firwen-spouse-aurdden-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/firwen-spouse-aurdden.json"
+    },
+    "perdella-spouse-aurdden": {
+      "id": "perdella-spouse-aurdden",
+      "name": "Perdella",
+      "age": 44,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/perdella-spouse-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/perdella-spouse-aurdden-v3.png",
+      "sha256": "9665853712e50bd889bd25a0108c56888625dea8b20eeee241c3ff6276fca919",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "actuallyViewed": true,
+        "reviewer": "luxury_goods",
+        "findings": [],
+        "notes": "Immutable target and approved Kyrwyn-v3 style reference actually viewed before edit. Final generated 1024x1536 PNG individually viewed: original identity, age, hair, blue eyes, clothing, standing pose, close upper-body crop and quiet shop background preserved; finer cleaner warmer anime treatment, subtly harmonious sympathetic face, no new objects."
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/perdella-spouse-aurdden-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/perdella-spouse-aurdden.json"
+    },
+    "avelin-aurdden": {
+      "id": "avelin-aurdden",
+      "name": "Avelin Aurdden",
+      "age": 27,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/avelin-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/avelin-aurdden-v3.png",
+      "sha256": "bebd1bf2d0e70bd8373c64537ec1c340b6b97ecf4673faaf9eec92274ae3044f",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "actuallyViewed": true,
+        "reviewer": "luxury_goods",
+        "findings": [],
+        "notes": "Immutable target and approved Kyrwyn-v3 style reference actually viewed before edit. Final generated 1024x1536 PNG individually viewed: original identity, age, hair, blue eyes, clothing, standing pose, close upper-body crop and quiet shop background preserved; finer cleaner warmer anime treatment, subtly harmonious sympathetic face, no new objects."
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/avelin-aurdden-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/avelin-aurdden.json"
+    },
+    "iwria-aurdden": {
+      "id": "iwria-aurdden",
+      "name": "Iwria Aurdden",
+      "age": 24,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/iwria-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/iwria-aurdden-v3.png",
+      "sha256": "a1b1538d24031d75496a23c733646933ba487863098cba9e5d3ff0fa070cda86",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "actuallyViewed": true,
+        "reviewer": "luxury_goods",
+        "findings": [],
+        "notes": "Immutable target and approved Kyrwyn-v3 style reference actually viewed before edit. Final generated 1024x1536 PNG individually viewed: original identity, age, hair, blue eyes, clothing, standing pose, close upper-body crop and quiet shop background preserved; finer cleaner warmer anime treatment, subtly harmonious sympathetic face, no new objects."
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/iwria-aurdden-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/iwria-aurdden.json"
+    },
+    "dyrwen-aurdden": {
+      "id": "dyrwen-aurdden",
+      "name": "Dyrwen Aurdden",
+      "age": 20,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/dyrwen-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/dyrwen-aurdden-v3.png",
+      "sha256": "cf3ef6891186f25e8a691247e817076acf104e2be9fee4511afb283f7a4e90e9",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "actuallyViewed": true,
+        "reviewer": "luxury_goods",
+        "findings": [],
+        "notes": "Immutable target and approved Kyrwyn-v3 style reference actually viewed before edit. Final generated 1024x1536 PNG individually viewed: original identity, age, hair, blue eyes, clothing, standing pose, close upper-body crop and quiet shop background preserved; finer cleaner warmer anime treatment, subtly harmonious sympathetic face, no new objects."
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/dyrwen-aurdden-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/dyrwen-aurdden.json"
+    },
+    "saithwen-aurdden": {
+      "id": "saithwen-aurdden",
+      "name": "Saithwen Aurdden",
+      "age": 14,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/saithwen-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/saithwen-aurdden-v4.png",
+      "sha256": "5b0103d0fbcf8e79a746ca08d4e816f87f80b1a6a730c72217d2d5fc816e07c4",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 4,
+      "visualReview": {
+        "status": "passed",
+        "actuallyViewed": true,
+        "reviewer": "luxury_goods",
+        "findings": [],
+        "notes": "Immutable target and approved Kyrwyn-v3 style reference actually viewed before edit. Final generated 1024x1536 PNG individually viewed: original identity, age, hair, blue eyes, clothing, standing pose, close upper-body crop and quiet shop background preserved; finer cleaner warmer anime treatment, subtly harmonious sympathetic face, no new objects."
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/saithwen-aurdden-v3.png",
+      "previousVersion": 3,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/saithwen-aurdden.json"
+    },
+    "kyran-aurdden": {
+      "id": "kyran-aurdden",
+      "name": "Kyran Aurdden",
+      "age": 24,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/kyran-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/kyran-aurdden-v3.png",
+      "sha256": "09b27545ca95e4ff27f5a16896b39bb627dc74bbee1ccf3cbe374d75d004959f",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "method": "Direct full-image inspection against immutable prior portrait and approved Kyrwyn-v3 style reference",
+        "style": "Approved Xillia/Frieren v3; cleaner brighter matte anime colors, flowing fine lineart and softer cel shading",
+        "preservation": "Identity, true age, red curls, blue eyes, clothing, pose, empty hands, crop and quiet shop background retained",
+        "appearance": "Subtly more harmonious and sympathetic; Janeth remains visibly adolescent",
+        "findings": []
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/kyran-aurdden-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/kyran-aurdden.json"
+    },
+    "gwaeden-aurdden": {
+      "id": "gwaeden-aurdden",
+      "name": "Gwaeden Aurdden",
+      "age": 21,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/gwaeden-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/gwaeden-aurdden-v3.png",
+      "sha256": "8d871107bf8e9276ee67a6c29fc4268c618ade3c89fec16aea0d2c6faed78502",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "method": "Direct full-image inspection against immutable prior portrait and approved Kyrwyn-v3 style reference",
+        "style": "Approved Xillia/Frieren v3; cleaner brighter matte anime colors, flowing fine lineart and softer cel shading",
+        "preservation": "Identity, true age, red curls, blue eyes, clothing, pose, empty hands, crop and quiet shop background retained",
+        "appearance": "Subtly more harmonious and sympathetic; Janeth remains visibly adolescent",
+        "findings": []
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/gwaeden-aurdden-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/gwaeden-aurdden.json"
+    },
+    "janeth-aurdden": {
+      "id": "janeth-aurdden",
+      "name": "Janeth Aurdden",
+      "age": 16,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/janeth-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/janeth-aurdden-v3.png",
+      "sha256": "2398ff51e5a53e6f9d8968867421cfacde5d040a010121bad5a871006bff888b",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "method": "Direct full-image inspection against immutable prior portrait and approved Kyrwyn-v3 style reference",
+        "style": "Approved Xillia/Frieren v3; cleaner brighter matte anime colors, flowing fine lineart and softer cel shading",
+        "preservation": "Identity, true age, red curls, blue eyes, clothing, pose, empty hands, crop and quiet shop background retained",
+        "appearance": "Subtly more harmonious and sympathetic; Janeth remains visibly adolescent",
+        "findings": []
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/janeth-aurdden-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/janeth-aurdden.json"
+    },
+    "oenric-aurdden": {
+      "id": "oenric-aurdden",
+      "name": "Oenric Aurdden",
+      "age": 22,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/oenric-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/oenric-aurdden-v3.png",
+      "sha256": "75a586229e6058f0b8ff20475a181bafdb44426ff9b32c34cdf24d985ce005b8",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "method": "Direct full-image inspection against immutable prior portrait and approved Kyrwyn-v3 style reference",
+        "style": "Approved Xillia/Frieren v3; cleaner brighter matte anime colors, flowing fine lineart and softer cel shading",
+        "preservation": "Individual Oenric22/Helygen19/Thalric17 identities, red curls, blue eyes, clothing, pose, empty hands, crop and quiet shop background retained",
+        "appearance": "Subtly more harmonious and sympathetic, with distinct ages and hairstyles",
+        "findings": []
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/oenric-aurdden-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/oenric-aurdden.json"
+    },
+    "helygen-aurdden": {
+      "id": "helygen-aurdden",
+      "name": "Helygen Aurdden",
+      "age": 19,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/helygen-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/helygen-aurdden-v3.png",
+      "sha256": "285a7302ae8a03b633fc6ceac1be722d9a7de3a75f9dfd1ac15fcaf277d81f50",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "method": "Direct full-image inspection against immutable prior portrait and approved Kyrwyn-v3 style reference",
+        "style": "Approved Xillia/Frieren v3; cleaner brighter matte anime colors, flowing fine lineart and softer cel shading",
+        "preservation": "Individual Oenric22/Helygen19/Thalric17 identities, red curls, blue eyes, clothing, pose, empty hands, crop and quiet shop background retained",
+        "appearance": "Subtly more harmonious and sympathetic, with distinct ages and hairstyles",
+        "findings": []
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/helygen-aurdden-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/helygen-aurdden.json"
+    },
+    "thalric-aurdden": {
+      "id": "thalric-aurdden",
+      "name": "Thalric Aurdden",
+      "age": 17,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/thalric-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/thalric-aurdden-v3.png",
+      "sha256": "7f3447b74a3171e2a76b3450924548537c38f7a38499268b9124d6c141286a63",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "method": "Direct full-image inspection against immutable prior portrait and approved Kyrwyn-v3 style reference",
+        "style": "Approved Xillia/Frieren v3; cleaner brighter matte anime colors, flowing fine lineart and softer cel shading",
+        "preservation": "Individual Oenric22/Helygen19/Thalric17 identities, red curls, blue eyes, clothing, pose, empty hands, crop and quiet shop background retained",
+        "appearance": "Subtly more harmonious and sympathetic, with distinct ages and hairstyles",
+        "findings": []
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/thalric-aurdden-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/thalric-aurdden.json"
+    },
+    "nerella-aurdden": {
+      "id": "nerella-aurdden",
+      "name": "Nerella Aurdden",
+      "age": 14,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/nerella-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/nerella-aurdden-v3.png",
+      "sha256": "6d77d7b51c2055dd739625c9ae72597a0ef9868856b4a45a95a0d1254afd529a",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "method": "Direct full-image inspection against immutable prior portrait and approved Kyrwyn-v3 style reference",
+        "style": "Approved Xillia/Frieren v3; cleaner brighter matte anime colors, flowing fine lineart and softer cel shading",
+        "preservation": "Nerella14/Iwrin12/Firian10 remain clearly young, with original red curls, blue eyes, age-appropriate clothing, individual pose and crop retained",
+        "appearance": "Friendly youthful faces, no adult look or added makeup; no new objects",
+        "findings": []
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/nerella-aurdden-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/nerella-aurdden.json"
+    },
+    "iwrin-aurdden": {
+      "id": "iwrin-aurdden",
+      "name": "Iwrin Aurdden",
+      "age": 12,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/iwrin-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/iwrin-aurdden-v3.png",
+      "sha256": "bc5c4d2aa3994b92c18428338851ed057367494300a721806fb99d513cc3a12f",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "method": "Direct full-image inspection against immutable prior portrait and approved Kyrwyn-v3 style reference",
+        "style": "Approved Xillia/Frieren v3; cleaner brighter matte anime colors, flowing fine lineart and softer cel shading",
+        "preservation": "Nerella14/Iwrin12/Firian10 remain clearly young, with original red curls, blue eyes, age-appropriate clothing, individual pose and crop retained",
+        "appearance": "Friendly youthful faces, no adult look or added makeup; no new objects",
+        "findings": []
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/iwrin-aurdden-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/iwrin-aurdden.json"
+    },
+    "firian-aurdden": {
+      "id": "firian-aurdden",
+      "name": "Firian Aurdden",
+      "age": 10,
+      "hair": "rot",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/firian-aurdden.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/firian-aurdden-v3.png",
+      "sha256": "3796eae7e140ed1ad156b910e235100e55756d7382146cd2e0a8ad42a9b7da7a",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "method": "Direct full-image inspection against immutable prior portrait and approved Kyrwyn-v3 style reference",
+        "style": "Approved Xillia/Frieren v3; cleaner brighter matte anime colors, flowing fine lineart and softer cel shading",
+        "preservation": "Nerella14/Iwrin12/Firian10 remain clearly young, with original red curls, blue eyes, age-appropriate clothing, individual pose and crop retained",
+        "appearance": "Friendly youthful faces, no adult look or added makeup; no new objects",
+        "findings": []
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/firian-aurdden-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/firian-aurdden.json"
+    },
+    "cyrion-aurdden-bastard": {
+      "id": "cyrion-aurdden-bastard",
+      "name": "Cyrion",
+      "age": 22,
+      "hair": "dunkelbraun",
+      "eyes": "blau",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/cyrion-aurdden-bastard.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/cyrion-aurdden-bastard-v3.png",
+      "sha256": "5c6afa4093fdcce90db21a83bae0623ac0ab8c1eadd523a518e98fc28d07b464",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "method": "Direct full-image inspection against immutable prior portrait and approved Kyrwyn-v3 style reference",
+        "style": "Approved Xillia/Frieren v3; cleaner brighter matte anime colors, flowing fine lineart and softer cel shading",
+        "preservation": "Cyrion22 keeps dark-brown curls, blue eyes, plain clothing, visitor crop and pose",
+        "appearance": "Subtly more harmonious and sympathetic without merging identities or erasing the guards' characterful features",
+        "guardsDistinct": true,
+        "findings": []
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/cyrion-aurdden-bastard-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/cyrion-aurdden-bastard.json"
+    },
+    "hjalrik-stenholm": {
+      "id": "hjalrik-stenholm",
+      "name": "Hjalrik Stenholm",
+      "age": 34,
+      "hair": "blond",
+      "eyes": "frei unterscheiden",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/hjalrik-stenholm.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/hjalrik-stenholm-v3.png",
+      "sha256": "d0c4c67454da6a9a66b7206aee6a17596edf000695ee38040df49e031eb2cdb2",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 3,
+      "visualReview": {
+        "status": "passed",
+        "method": "Direct full-image inspection against immutable prior portrait and approved Kyrwyn-v3 style reference",
+        "style": "Approved Xillia/Frieren v3; cleaner brighter matte anime colors, flowing fine lineart and softer cel shading",
+        "preservation": "Guard identity, age, blond hair, moustache or braid, existing facial features, distinct military clothing, pose and empty hands retained",
+        "appearance": "Subtly more harmonious and sympathetic without merging identities or erasing the guards' characterful features",
+        "guardsDistinct": true,
+        "findings": []
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/hjalrik-stenholm-v2.png",
+      "previousVersion": 2,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/hjalrik-stenholm.json"
+    },
+    "bjarne-haldsvik": {
+      "id": "bjarne-haldsvik",
+      "name": "Bjarne Haldsvik",
+      "age": 41,
+      "hair": "blond",
+      "eyes": "frei unterscheiden",
+      "active": "Stammbäume/assets/images/portraits/haus-aurdden/bjarne-haldsvik.png",
+      "original": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/bjarne-haldsvik-v2.png",
+      "sha256": "23f4b71f16048d0663959c26cb4a5acec8b895d7c5e62f234091cfd5022dd22a",
+      "size": [
+        1024,
+        1536
+      ],
+      "version": 2,
+      "visualReview": {
+        "status": "passed",
+        "method": "Direct full-image inspection against immutable prior portrait and approved Kyrwyn-v3 style reference",
+        "style": "Approved Xillia/Frieren v3; cleaner brighter matte anime colors, flowing fine lineart and softer cel shading",
+        "preservation": "Guard identity, age, blond hair, moustache or braid, existing facial features, distinct military clothing, pose and empty hands retained",
+        "appearance": "Subtly more harmonious and sympathetic without merging identities or erasing the guards' characterful features",
+        "guardsDistinct": true,
+        "findings": []
+      },
+      "editTarget": "diagnostics/loer-hofjuwelier-20261109/portraits/originals/bjarne-haldsvik-v1.png",
+      "previousVersion": 1,
+      "receipt": "diagnostics/loer-hofjuwelier-20261109/portraits/bjarne-haldsvik.json"
+    }
+  }
+}

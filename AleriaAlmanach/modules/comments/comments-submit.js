@@ -1,4 +1,4 @@
-// Comment submit flow.
+﻿// Comment submit flow.
 // Keeps save, fallback, and post-save reload behavior separate from form rendering.
 
 async function submitComment() {
@@ -161,7 +161,7 @@ async function submitComment() {
     if (hasSceneItems && (!backend?.placeSceneItem || backend._localFallback)) throw new Error('Gegenstände können nur mit der gemeinsamen Online-Szene gespeichert werden. Bitte Verbindung und Veröffentlichung prüfen.');
     const saveResult = hasSceneItems
       ? await backend.placeSceneItem(threadId, { operationId: commentSegments.find(segment => segment.kind === 'sceneitem').sceneItemOperationId,
-        commentSegments: commentMetadata.commentSegments })
+        commentSegments: commentMetadata.commentSegments, sceneStartDateAleria: commentMetadata.sceneStartDateAleria })
       : hasProfileTransaction && typeof backend.addCombatComment === 'function'
       ? await backend.addCombatComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata)
       : (hasSkillTransaction && typeof backend.addSkillComment === 'function'

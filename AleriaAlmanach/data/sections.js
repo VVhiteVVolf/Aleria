@@ -1,4 +1,4 @@
-const YVAIN = {
+﻿const YVAIN = {
   name: "Yvain Seldryn",
   title: "Loremaster, Abergwint",
   avatars: {

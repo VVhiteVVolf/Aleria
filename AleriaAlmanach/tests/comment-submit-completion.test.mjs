@@ -53,3 +53,22 @@ test('an unchanged mechanical retry retains the exact request and does not prepa
   await h.run(); await h.run();
   assert.equal(prepared, 1); assert.equal(sent.length, 2); assert.deepEqual(sent[0], sent[1]); assert.ok(sent[0].operationId);
 });
+
+test('scene-item submissions carry the resolved scene date without a module save or a second comment', async () => {
+  const h = harness();
+  const date = { year: 1740, month: 3, day: 9 };
+  const sent = [];
+  h.context.globalThis.AleriaSceneDateDefaults = { ensureForCurrentThread: () => date };
+  h.context.globalThis.AleriaWorldDateModel = { isValid: () => true, normalize: value => ({ ...value }) };
+  h.context.saveModuleStore = () => assert.fail('Comment submission must not save modules');
+  h.context.buildCommentSegmentsForSave = () => [{ kind: 'sceneitem', text: 'Ein Beutel liegt dort.', sceneItemOperationId: 'scene-item-date-001' }];
+  h.context.getCommentBackend = async () => ({ placeSceneItem: async (...args) => { sent.push(args); return { id: 'placed' }; } });
+  await h.run();
+  assert.equal(sent.length, 1);
+  assert.equal(sent[0][0], 'scene');
+  assert.equal(sent[0][1].operationId, 'scene-item-date-001');
+  assert.deepEqual(sent[0][1].sceneStartDateAleria, date);
+  assert.equal(h.calls.includes('save'), false);
+  assert.equal(h.calls.includes('local-write'), false);
+  assert.ok(h.calls.includes('refresh'));
+});

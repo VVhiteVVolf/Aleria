@@ -1,4 +1,4 @@
-let _selectedCharId = null;
+﻿let _selectedCharId = null;
 let _manualMode = false;
 let _selectedEmoteIdx = null;
 let _selectedImageSetId = CHARACTER_IMAGE_SET_DEFAULT_ID;
@@ -115,7 +115,7 @@ function selectCharForComment(id, options = {}) {
     : CHARACTER_IMAGE_SET_DEFAULT_ID;
   if (Array.isArray(_commentSegments) && characterChanged && !options.preserveSegmentImageSets) {
     _commentSegments.forEach(segment => {
-      if (segment.kind !== 'action') {
+      if (!['action', 'foreignvoice'].includes(segment.kind)) {
         segment.imageSetId = _selectedImageSetId;
         segment.emoteIndex = null;
       }
@@ -138,7 +138,7 @@ function selectCharForComment(id, options = {}) {
 
 function selectEmote(idx, options = {}) {
   _selectedEmoteIdx = idx;
-  if (Array.isArray(_commentSegments) && _commentSegments.length && _commentSegments[0].kind !== 'action') {
+  if (Array.isArray(_commentSegments) && _commentSegments.length && !['action', 'foreignvoice'].includes(_commentSegments[0].kind)) {
     _commentSegments[0].emoteIndex = idx;
     _commentSegments[0].imageSetId = _selectedImageSetId;
     if (options.render !== false && typeof renderCommentSegmentList === 'function') renderCommentSegmentList();

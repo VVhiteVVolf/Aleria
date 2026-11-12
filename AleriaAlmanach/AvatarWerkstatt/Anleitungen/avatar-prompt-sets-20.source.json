@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "date": "2026-11-12",
+  "authoredFrom": "Avatar_Prompts_14_Sets.docx",
+  "retainedOriginalSha256": "3620508f1f0c873f398e6419134f1443f6aefd1c5a994c6c2805bd84e45cf248",
+  "request": "Erweitere auf20Sets;19und20mitGegenständen",
+  "newSetsSource": "diagnostics\\avatar-sets-20-20261112\\new-sets.json",
+  "newSetsSourceSha256": "9a878657e218fac254d2e62841639a34aa1ac07b02ffe37f88d71def8bbbbb04",
+  "retainedPath": "Anleitungen/Avatar_Prompts_20_Sets.docx",
+  "sourceSha256": "02a1bdc1728767d2a5e16c0516592d60d403b41b8bfc73275098da2c5a195f69",
+  "setCount": 20,
+  "panelCount": 180,
+  "old14SetsUnchanged": true,
+  "propSets": [
+    19,
+    20
+  ],
+  "historicalCatalogPreserved": "Anleitungen/avatar-prompt-sets.json",
+  "generated": [
+    {
+      "path": "Anleitungen\\Avatar_Prompts_20_Sets.docx",
+      "sha256": "02a1bdc1728767d2a5e16c0516592d60d403b41b8bfc73275098da2c5a195f69"
+    },
+    {
+      "path": "Anleitungen\\Lesefassungen\\Avatar_Prompts_20_Sets.txt",
+      "sha256": "4864972bcd79b8b7b805f01fc7d57a4de1305abbb55c748c2856714cf525844b"
+    },
+    {
+      "path": "Anleitungen\\avatar-prompt-sets-20.json",
+      "sha256": "6c8e0dd3d0af55b8e39503e2a28e9d886410bf3f49d2458ed1b4fb57c24930a4"
+    }
+  ],
+  "visualReview": {
+    "status": "passed",
+    "docxSha256": "02a1bdc1728767d2a5e16c0516592d60d403b41b8bfc73275098da2c5a195f69",
+    "allPagesActuallyViewed": true,
+    "pageCount": 22,
+    "dpi": 144,
+    "method": "Actual native Word PrintLayout Page.EnhMetaFileBits; Windows GDI+ rasterization. Packaged renderer was attempted but this runtime lacks LibreOffice; native PDF/XPS filters hung.",
+    "reviewReports": [
+      "pages-1-12-visual-review.json",
+      "pages-13-22-visual-review.json"
+    ],
+    "renderReport": "render-emf/native-render-report.json",
+    "findings": []
+  }
+}

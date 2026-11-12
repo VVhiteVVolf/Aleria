@@ -6,7 +6,8 @@ import { describeSceneTrade } from '../generated/scene-trade/scene-trade-summary
 import { readItemDefinitionIndex, prepareUniqueItemClaims } from '../items/item-definition-repository.js';
 import { selectiveItemInventoryUpdate } from '../items/item-inventory-update.js';
 import { withProtectedRecordRevisions } from '../mechanics/protected-record-revisions.js';
-import { readTradeMerchant, readTradeScene, tradeId, tradeMerchantId } from './scene-trade-context.js';
+import { readTradeMerchant, tradeId, tradeMerchantId } from './scene-trade-context.js';
+import { readTradeCheckoutContext, tradeCheckoutPolicy } from './scene-trade-checkout-context.js';
 import { readTradeAccounts, tradeAccountKey } from './scene-trade-accounts.js';
 import { prepareTradeProducts } from './scene-trade-products.js';
 import { normalizeItemDefinitionRef } from '../generated/item-definitions/item-definition-model.js';
@@ -72,10 +73,11 @@ function recordChanges(target, next, lines, receipt, now) {
 export async function commitSceneTradeOperation(database, auth, input = {}) {
   if (!auth) throw new HttpsError('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
   validateInput(input);
+  const policy = tradeCheckoutPolicy(input);
   const operationId = tradeId(input.operationId), fingerprint = hash(JSON.stringify(input));
   const receiptRef = database.doc(`scene_trade_transactions/${auth.uid}-${operationId}`);
   const identity = `trade:${hash(receiptRef.path).slice(0, 32)}`, now = new Date().toISOString();
-  const commentRef = database.collection('comments').doc();
+  const commentRef = policy.createsComment ? database.collection('comments').doc() : null;
   return database.runTransaction(async transaction => {
     const prior = await transaction.get(receiptRef);
     if (prior.exists) {
@@ -83,9 +85,8 @@ export async function commitSceneTradeOperation(database, auth, input = {}) {
       return { receipt: prior.data().receipt, commentId: prior.data().commentId, ...accountReply(await currentRecords(database, transaction, prior.data().accountKeys)) };
     }
     const manifest = (await transaction.get(database.doc('char_tabs/config'))).data()?.moduleStoreManifest;
-    const scene = await readTradeScene(database, transaction, input.entryId, manifest);
-    const merchant = await readTradeMerchant(database, transaction, input.merchantId, manifest);
-    const accounts = await readTradeAccounts(database, transaction, input, scene);
+    const context = await readTradeCheckoutContext(database, transaction, input, manifest, policy), { merchant } = context;
+    const accounts = await readTradeAccounts(database, transaction, input, context);
     const definitions = await readItemDefinitionIndex(database, transaction, accounts.records);
     const prepared = await prepareTradeProducts(database, transaction, input.lines, merchant, accounts.records, definitions, identity, { actorUid: auth.uid, now, publishHead: true });
     const result = applySceneTradeOrder({ records: accounts.records, lines: prepared.lines, merchant: { id: merchant.id, name: merchant.name, kind: 'merchant' }, operationId, now });
@@ -100,7 +101,8 @@ export async function commitSceneTradeOperation(database, auth, input = {}) {
     if (!Number.isSafeInteger(netMinor)) throw new HttpsError('failed-precondition', 'Das Händlerjournal überschreitet den unterstützten Zahlenbereich.');
     const receipt = { ...result.receipt, actor: { id: accounts.actor.id, key: `character:${accounts.actor.id}`, name: accounts.actor.name || '', portrait: accounts.actor.portrait || '' },
       merchant: { ...result.receipt.merchant, kind: 'merchant', portrait: merchant.portrait || '' },
-      participants: accounts.records.map(record => ({ key: record.key, id: record.id, kind: record.kind, name: record.name || '', portrait: record.portrait || '' })), createdAt: now };
+      participants: accounts.records.map(record => ({ key: record.key, id: record.id, kind: record.kind, name: record.name || '', portrait: record.portrait || '' })),
+      ...(policy.kind === 'catalog' ? { context: { kind: 'catalog', moduleId: merchant.id.slice(7) } } : {}), createdAt: now };
     const changes = result.records.map(record => ({ record, target: accounts.targets.get(record.key), changes: recordChanges(accounts.targets.get(record.key), record, prepared.lines, receipt, now) }));
     // Every authoritative read and validation precedes this single write phase.
     prepared.write(); claim();
@@ -116,14 +118,14 @@ export async function commitSceneTradeOperation(database, auth, input = {}) {
     }
     for (const creature of prepared.creatures) transaction.update(creature.reference, { itemOrigin: { ...creature.origin,
       ownerCharacterId: '', ownerCharacterName: '', ownerGroupId: '', ownerMerchantId: merchant.id, disposition: 'sold', soldAt: now }, updatedAt: now });
-    const text = describeSceneTrade(receipt);
-    transaction.create(commentRef, { entryId: input.entryId, text, charName: 'Erzähler', narrator: true, characterId: '', avatarKind: 'narrator',
+    if (commentRef) transaction.create(commentRef, { entryId: input.entryId, text: describeSceneTrade(receipt), charName: 'Erzähler', narrator: true, characterId: '', avatarKind: 'narrator',
       commentMode: 'scene-inventory-transfer', commentKind: 'scene-inventory-transfer-event', sceneTrade: receipt,
       inventoryTransaction: { schemaVersion: 3, validatedBy: 'commitItemTrade', trade: true, operations: receipt.lines.length },
       serverValidatedMechanics: true, serverCommitted: true, createdBy: auth.uid, createdByRole: String(auth.token?.aleriaRole || 'player'),
       schemaVersion: 3, orderKey: Date.now(), createdAtClient: Date.now(), ts: FieldValue.serverTimestamp(), activityAt: FieldValue.serverTimestamp() });
-    transaction.create(receiptRef, { actorUid: auth.uid, operationId, fingerprint, receipt, commentId: commentRef.id, accountKeys: accounts.records.map(record => record.key), at: now });
-    return { receipt, commentId: commentRef.id, ...accountReply(changes.map(entry => ({ ...entry.record, ...(entry.changes || {}) }))) };
+    const commentId = commentRef?.id || null;
+    transaction.create(receiptRef, { actorUid: auth.uid, operationId, fingerprint, receipt, commentId, accountKeys: accounts.records.map(record => record.key), at: now });
+    return { receipt, commentId, ...accountReply(changes.map(entry => ({ ...entry.record, ...(entry.changes || {}) }))) };
   });
 }
 

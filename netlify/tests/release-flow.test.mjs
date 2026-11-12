@@ -8,6 +8,15 @@ import { execFileSync } from 'node:child_process';
 
 const sourceRoot = fileURLToPath(new URL('../../', import.meta.url));
 
+async function copyBuildModules(root) {
+  for (const name of ['site-build-plan', 'site-build-receipt', 'run-site-build', 'site-publish',
+    'site-build-metrics', 'build-checkpoints', 'publication-policy', 'validation-commands',
+    'build-preflight', 'build-validation-scheduler']) {
+    await mkdir(path.join(root, 'netlify/build'), { recursive: true });
+    await copyFile(path.join(sourceRoot, 'netlify/build', name + '.mjs'), path.join(root, 'netlify/build', name + '.mjs'));
+  }
+}
+
 test('prepare resumes the verified package, full runs revalidate, and unknown overlay edits stay protected', async t => {
   const root = await mkdtemp(path.join(tmpdir(), 'aleria-release-flow-'));
   t.after(() => rm(root, { recursive: true, force: true }));
@@ -17,11 +26,7 @@ test('prepare resumes the verified package, full runs revalidate, and unknown ov
     await mkdir(path.join(root, 'netlify/release'), { recursive: true });
     await copyFile(path.join(sourceRoot, 'netlify/release', name + '.mjs'), path.join(root, 'netlify/release', name + '.mjs'));
   }
-  for (const name of ['site-build-plan', 'site-build-receipt', 'run-site-build', 'site-publish',
-    'site-build-metrics', 'build-checkpoints', 'publication-policy']) {
-    await mkdir(path.join(root, 'netlify/build'), { recursive: true });
-    await copyFile(path.join(sourceRoot, 'netlify/build', name + '.mjs'), path.join(root, 'netlify/build', name + '.mjs'));
-  }
+  await copyBuildModules(root);
   // HTTP is rejected before fetch by the baseline reader: this fixture never
   // connects to GitHub, Netlify, or any other external service.
   await writeFile(path.join(root, 'netlify/release/config.mjs'), `
@@ -53,7 +58,11 @@ test('prepare resumes the verified package, full runs revalidate, and unknown ov
   git(['add', '.']); git(['commit', '-qm', 'fixture']);
   const prepare = extra => execFileSync(process.execPath, ['netlify/release/release.mjs', '--prepare', ...extra],
     { cwd: root, encoding: 'utf8', stdio: 'pipe' });
-  prepare([]);
+  prepare(['--jobs=1']);
+  const buildRun = JSON.parse(await readFile(path.join(root, '.release-state/last-build-run.json'), 'utf8'));
+  assert.equal(buildRun.concurrency, 1);
+  assert.equal(buildRun.status, 'passed');
+  assert.ok(buildRun.commands.some(command => command.entryPoint === 'generate.mjs'));
   const first = await readFile(path.join(root, '.release-state/prepared.json'), 'utf8');
   assert.equal(await readFile(path.join(root, '.release-state/count'), 'utf8'), '1');
   assert.match(prepare([]), /Reuse verified prepared package/);
@@ -71,4 +80,32 @@ test('prepare resumes the verified package, full runs revalidate, and unknown ov
   const failed = JSON.parse(await readFile(path.join(root, '.release-state/last-run-timings.json'), 'utf8'));
   assert.equal(failed.status, 'failed');
   assert.equal(failed.phases.at(-1).name, 'fresh-workspace-check');
+});
+
+test('standalone preflight works without Git, collects multiple failures and never runs fixtures that write outputs', async t => {
+  const root = await mkdtemp(path.join(tmpdir(), 'aleria-preflight-cli-'));
+  t.after(() => rm(root, { recursive: true, force: true }));
+  await copyBuildModules(root);
+  await mkdir(path.join(root, 'AleriaAlmanach/scripts'), { recursive: true });
+  await mkdir(path.join(root, 'Karten/tools'), { recursive: true });
+  await writeFile(path.join(root, 'netlify/build/site-build-tasks.mjs'), `
+    export const SHARED_BUILD_INPUTS = [];
+    export const SITE_BUILD_TASKS = [{ id: 'fixtures', commands: [
+      ['generate.mjs'], ['AleriaAlmanach/scripts/build-quest-catalog.mjs', '--check'],
+      ['Karten/tools/build-households.mjs', '--check']
+    ] }];
+  `);
+  await writeFile(path.join(root, 'generate.mjs'), 'throw Error("output generator must not run");');
+  for (const name of ['AleriaAlmanach/scripts/build-quest-catalog.mjs', 'Karten/tools/build-households.mjs']) {
+    await writeFile(path.join(root, name), 'throw Error("stale fixture catalog");');
+  }
+  try {
+    execFileSync(process.execPath, ['netlify/build/run-site-build.mjs', '--preflight'], { cwd: root, stdio: 'pipe' });
+    assert.fail('preflight must fail');
+  } catch (error) {
+    assert.equal(error.status, 1);
+    assert.match(error.stderr.toString(), /preflight failed \(2\/2\)/);
+    assert.ok(!error.stderr.toString().includes('output generator must not run'));
+  }
+  await assert.rejects(readFile(path.join(root, '.release-state/prepared.json')), { code: 'ENOENT' });
 });

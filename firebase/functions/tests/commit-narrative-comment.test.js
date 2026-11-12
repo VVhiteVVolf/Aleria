@@ -1,6 +1,10 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { readFileSync } from 'node:fs';
+import vm from 'node:vm';
 import { narrativeCommentInternals, buildNarrativeCommentDocument, commitNarrativeCommentOperation } from '../src/comments/commit-narrative-comment.js';
+import { normalizeCommentSceneStartDate } from '../src/comments/comment-scene-date.js';
+import { database } from './fixtures/combat-transaction-database.js';
 
 test('trade receipts cannot be forged through narrative comments, even as a nested segment', async () => {
   for (const metadata of [{ sceneTrade: { lines: [] } }, { commentSegments: [{ sceneTrade: { lines: [] } }] }]) {
@@ -60,4 +64,50 @@ test('ein fehlendes oder ungueltiges Fazit-Feld wird zu null statt zu einem Abst
   assert.equal(withoutFazit.fazit, null);
   const withInvalidFazit = buildNarrativeCommentDocument({ text: 'Text', metadata: { fazit: 'not-an-object' } }, 'entry-1', request, 1);
   assert.equal(withInvalidFazit.fazit, null);
+});
+
+test('valid scene dates use the same calendar as the browser and retain only normalized date fields', () => {
+  const browser = vm.createContext({});
+  vm.runInContext(readFileSync(new URL('../../../AleriaAlmanach/modules/world-date/world-date-model.js', import.meta.url), 'utf8'), browser);
+  for (const year of [1, 1740, 99999]) for (let month = 1; month <= 13; month++) for (const day of [1, 36]) {
+    const date = { year, month, day };
+    const normalized = normalizeCommentSceneStartDate({ ...date, unrelated: 'discard' });
+    assert.deepEqual(normalized, date);
+    assert.equal(browser.AleriaWorldDateModel.isValid(normalized), true);
+    assert.deepEqual({ ...browser.AleriaWorldDateModel.normalize(normalized) }, normalized);
+  }
+});
+
+test('the shared narrative document preserves a valid scene start date and drops invalid optional dates', () => {
+  const request = { auth: { uid: 'player', token: {} } };
+  const date = { year: 1740, month: 13, day: 36 };
+  const document = buildNarrativeCommentDocument({ text: 'Wartet.', metadata: { sceneStartDateAleria: { ...date, unwanted: true } } }, 'scene', request, 1);
+  assert.deepEqual(document.sceneStartDateAleria, date);
+  for (const invalid of [undefined, null, '1740-3-9', [], {}, { year: '1740', month: 3, day: 9 },
+    { year: 0, month: 3, day: 9 }, { year: 1740.5, month: 3, day: 9 },
+    { year: Number.MAX_SAFE_INTEGER + 1, month: 3, day: 9 }, { year: Infinity, month: 3, day: 9 },
+    { year: 1740, month: 14, day: 9 }, { year: 1740, month: 0, day: 9 },
+    { year: 1740, month: 3.5, day: 9 }, { year: 1740, month: 3, day: 0 },
+    { year: 1740, month: 3, day: 37 }, { year: 1740, month: 3, day: 9.5 }]) {
+    const result = buildNarrativeCommentDocument({ text: 'Wartet.', metadata: { sceneStartDateAleria: invalid } }, 'scene', request, 1);
+    assert.equal(result.sceneStartDateAleria, null);
+  }
+});
+
+test('a committed scene comment restores its start date after reload without a module date', async () => {
+  const db = database({});
+  const date = { year: 1740, month: 3, day: 9 };
+  const result = await commitNarrativeCommentOperation({ auth: { uid: 'player', token: {} },
+    data: { entryId: 'scene', charName: 'Rianna Wyrm', text: 'Liest die Anzeigetafel.', metadata: { sceneStartDateAleria: date } }
+  }, { database: db, now: 100 });
+  const saved = db.data.get(`comments/${result.id}`);
+  assert.deepEqual(saved.sceneStartDateAleria, date);
+  assert.deepEqual([...db.data.keys()], [`comments/${result.id}`]);
+
+  const browser = vm.createContext({});
+  for (const filename of ['world-date-model.js', 'world-date-scene-default.js']) {
+    vm.runInContext(readFileSync(new URL(`../../../AleriaAlmanach/modules/world-date/${filename}`, import.meta.url), 'utf8'), browser);
+  }
+  const restored = browser.AleriaSceneDateDefaults.resolve({ page: {}, threadId: 'scene' }, [JSON.parse(JSON.stringify(saved))]);
+  assert.deepEqual({ ...restored }, date);
 });

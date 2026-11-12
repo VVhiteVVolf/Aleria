@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "id": "robber",
+  "label": "R?uber",
+  "version": "v1",
+  "status": "active",
+  "tool": "built-in image_gen",
+  "apiOrCliUsed": false,
+  "prompt": "Use case: style-transfer.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified adult speaker in Aleria, matching the existing \"Fremde Stimme\" silhouette series. Exactly one image, no sheet, collage or grid.\nInput image 1 is the existing adult male silhouette avatar, a STYLE AND SERIES REFERENCE: match the scale, waist-up framing, charcoal silhouette treatment, matte anime linework, cel-shading, village palette and calm daylight. Create a new role, not the same hair or outfit.\nSubject: robber / Räuber, an adult HUMAN MAN in a worn hood, simple medieval leather waistcoat over a long-sleeve tunic, and a plain EMPTY belt. The hood has a softly uneven, worn outer edge, the clothing simple readable divisions. The interior of the hood and the entire face are absolutely black and FEATURELESS: no eyes, nose, mouth, mask, mask holes, facial planes or light revealing any face. This is a living adult human with normal human proportions and hands, never a ghost, specter, magical creature or floating cloak. All exposed skin, hands and clothing remain near-black charcoal with only sparse dark-slate outline accents, consistent with the reference.\nPose: standing quietly and gesturing in ordinary conversation, one hand open palm-up at waist-to-chest height while the other makes a small open explaining gesture beside the torso. Natural relaxed anatomy, both hands and all fingers fully visible inside frame, comfortable margin. Convey the rough traveler/robber role only through hood and worn plain civilian clothing. NO attack, threat, victim, theft scene, depicted crime, weapon, loot, bag or held prop. Empty belt, no knife or pouches.\nBackground: same quiet simple medieval village lane as the reference, cream timber-and-plaster cottages, brown roofs, muted blue-gray sky and sparse greenery; unobtrusive lower-contrast backdrop, no crowds, no signs or text.\nRendering: square opaque scene, centered waist-up figure dominating foreground; matte Tales of Xillia/Frieren anime drawing, clear anime lineart, simple cel-shading and restrained flat charcoal/slate shapes. No photorealistic texture, no 3D, no painterly brushwork or dramatic lighting. Human ears rounded if visible. Readable at small thumbnail size.\nNo speech bubbles, decorative symbols, letters, text, watermark, frame or border. No transparency.",
+  "toolArguments": {
+    "prompt": "Use case: style-transfer.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified adult speaker in Aleria, matching the existing \"Fremde Stimme\" silhouette series. Exactly one image, no sheet, collage or grid.\nInput image 1 is the existing adult male silhouette avatar, a STYLE AND SERIES REFERENCE: match the scale, waist-up framing, charcoal silhouette treatment, matte anime linework, cel-shading, village palette and calm daylight. Create a new role, not the same hair or outfit.\nSubject: robber / Räuber, an adult HUMAN MAN in a worn hood, simple medieval leather waistcoat over a long-sleeve tunic, and a plain EMPTY belt. The hood has a softly uneven, worn outer edge, the clothing simple readable divisions. The interior of the hood and the entire face are absolutely black and FEATURELESS: no eyes, nose, mouth, mask, mask holes, facial planes or light revealing any face. This is a living adult human with normal human proportions and hands, never a ghost, specter, magical creature or floating cloak. All exposed skin, hands and clothing remain near-black charcoal with only sparse dark-slate outline accents, consistent with the reference.\nPose: standing quietly and gesturing in ordinary conversation, one hand open palm-up at waist-to-chest height while the other makes a small open explaining gesture beside the torso. Natural relaxed anatomy, both hands and all fingers fully visible inside frame, comfortable margin. Convey the rough traveler/robber role only through hood and worn plain civilian clothing. NO attack, threat, victim, theft scene, depicted crime, weapon, loot, bag or held prop. Empty belt, no knife or pouches.\nBackground: same quiet simple medieval village lane as the reference, cream timber-and-plaster cottages, brown roofs, muted blue-gray sky and sparse greenery; unobtrusive lower-contrast backdrop, no crowds, no signs or text.\nRendering: square opaque scene, centered waist-up figure dominating foreground; matte Tales of Xillia/Frieren anime drawing, clear anime lineart, simple cel-shading and restrained flat charcoal/slate shapes. No photorealistic texture, no 3D, no painterly brushwork or dramatic lighting. Human ears rounded if visible. Readable at small thumbnail size.\nNo speech bubbles, decorative symbols, letters, text, watermark, frame or border. No transparency.",
+    "referenced_image_paths": [
+      "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png"
+    ],
+    "transparent_background": false
+  },
+  "references": [
+    {
+      "path": "AleriaAlmanach/public/assets/comment-foreign-voice/man.png",
+      "sha256": "8bc9d3f37a982f17e7a8c87fdab4ba107370ff9abc1a8a98217fd72ffad7d33e",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "role": "viewed actual existing adult man series reference passed to image_gen"
+    }
+  ],
+  "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-29071440-40f8-4ab5-9b99-169c77e57fce.png",
+  "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/robber.png",
+  "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/robber-v1.png",
+  "sha256": "a6a3851f7d490c0dbc7c05d73ee7ef061c1b394c664e40ce61fbef775327a677",
+  "bytes": 1763955,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGB",
+  "alpha": {
+    "fullyTransparentPixels": 0,
+    "fullyOpaquePixels": 1572516,
+    "partialPixels": 0
+  },
+  "transformation": "none: byte-identical generator PNG",
+  "visuallyInspected": true,
+  "visualReview": {
+    "actualFinishedImageViewed": true,
+    "checks": [
+      "adult human form with solid body and natural visible hands",
+      "worn hood with completely dark featureless face inside, no mask or eyes",
+      "simple worn waistcoat and empty belt",
+      "ordinary conversational gesture, no crime or victim depicted",
+      "matching calm medieval village and matte anime/cel series"
+    ],
+    "additionalNotes": "No weapons, loot, victim, attack or concrete criminal act depicted."
+  },
+  "centralManifestsEdited": false
+}

@@ -65,7 +65,7 @@ function selectEditChar(id, options = {}) {
     : CHARACTER_IMAGE_SET_DEFAULT_ID;
   if (characterChanged && !options.preserveSegmentImageSets) {
     _editCommentSegments.forEach(segment => {
-      if (segment.kind !== 'action') {
+      if (!['action', 'foreignvoice'].includes(segment.kind)) {
         segment.imageSetId = _editSelectedImageSetId;
         segment.emoteIndex = null;
       }

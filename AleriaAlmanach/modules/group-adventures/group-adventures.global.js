@@ -1060,7 +1060,7 @@ var AleriaGroupAdventures = (() => {
     fever("arkanistenfieber-anzeichen", "Anzeichen vom Arkanistenfieber", 1, "Beginnende arkane \xDCberreizung: +1 Zauberangriff, \u22121 Initiative. Eine Beobachtung, noch kein sicher festgestelltes Hauptstadium.", { spellAttack: 1, initiative: -1 }, 1),
     fever("arkanistenfieber-symptome", "Erste Symptome des Arkanistenfiebers", 2, "Der kurzzeitige Magieschub bleibt: +1 Zauberangriff; \u22121 Initiative und \u22121 auf KON-Rettungsw\xFCrfe. Weitere Magie gef\xE4hrdet die Figur.", { spellAttack: 1, initiative: -1, saveAttributeModifiers: [save3("constitution", -1)] }, 0),
     ...["human", "druid"].flatMap((variant) => [1, 2, 3, 4].map((stage) => {
-      const roman2 = ["I", "II", "III", "IV"][stage - 1];
+      const roman = ["I", "II", "III", "IV"][stage - 1];
       const mechanics = {
         skill: -stage,
         initiative: -stage,
@@ -1073,7 +1073,7 @@ var AleriaGroupAdventures = (() => {
       const values = `\u2212${stage} auf Fertigkeiten, Rettungsw\xFCrfe und Initiative; \u2212${stage} m Bewegung${variant === "human" && stage > 1 ? `; \u2212${[0, 2, 6, 8][stage - 1]} maximale TP` : ""}${variant === "druid" ? `; zus\xE4tzlich \u2212${stage} auf WEI-Rettungsw\xFCrfe` : ""}.`;
       return fever(
         `arkanes-fieber-${variant}-${stage}`,
-        `Arkanes Fieber ${roman2}. Stadium${variant === "druid" ? " (Druidenvariante)" : ""}`,
+        `Arkanes Fieber ${roman}. Stadium${variant === "druid" ? " (Druidenvariante)" : ""}`,
         stage + 2,
         `${symptoms}. ${values}${stage === 4 ? " Keine selbstbestimmten Kampfhandlungen; Abwarten bleibt m\xF6glich." : ""} Keine Heilung durch TP-Heilung oder Rast.`,
         mechanics,
@@ -1184,434 +1184,8 @@ var AleriaGroupAdventures = (() => {
     return origins.get(typeof entry === "string" ? entry : entry?.developmentTraitId || entry?.id) || null;
   }
 
-  // modules/character-development/development-family-traits.js
-  var attribute = (attributeKey, bonus) => ({ attributeKey, bonus });
-  var skill10 = (name, bonus) => ({ name, bonus });
-  var roman = ["I", "II", "III", "IV", "V", "VI"];
-  var nuadat = [
-    // height in cm, STR score, maximum HP, STR save, DEX score, stealth, acrobatics, AC, cost
-    [200, 2, 4, 0, 0, -1, 0, 0, 5],
-    [240, 3, 7, 0, -1, -2, -1, 0, 7],
-    [280, 4, 10, 1, -1, -2, -1, -1, 9],
-    [320, 6, 14, 1, -2, -3, -2, -1, 12],
-    [360, 8, 18, 2, -2, -3, -2, -1, 16],
-    [400, 10, 24, 2, -2, -4, -3, -2, 20]
-  ];
-  var arth = [
-    // STR score, additional STR-based weapon damage, DEX score, stealth, cost
-    [1, 1, 0, -1, 3],
-    [2, 1, 0, -1, 5],
-    [3, 2, -1, -1, 7],
-    [4, 2, -1, -2, 9],
-    [6, 3, -1, -2, 12],
-    [8, 4, -2, -2, 15]
-  ];
-  var signed = (value) => `${value < 0 ? "\u2212" : "+"}${Math.abs(value)}`;
-  var heightLabel = (cm) => (cm / 100).toLocaleString("de-DE", { minimumFractionDigits: 1 });
-  var rankNote = "Nur die h\xF6chste aktive Stufe dieser Linie wirkt.";
-  var FAMILY_TRAIT_DEFINITIONS = Object.freeze([
-    ...nuadat.map(([height, strength, hp, strengthSave, dexterity, stealth, acrobatics, armorClass, cost], index) => [
-      `nuadat-riesenblut-${index + 1}`,
-      `Riesenblut der Nuadat (Stufe ${roman[index]})`,
-      `Angeborenes Riesenerbe: ${heightLabel(height)} Meter K\xF6rpergr\xF6\xDFe; +${strength} ST\xC4-Attributswert und +${hp} maximale TP (abgeleitet)${strengthSave ? `, +${strengthSave} ST\xC4-Rettung` : ""}; ${[
-        ...dexterity ? [`${signed(dexterity)} GES-Attributswert`] : [],
-        `${signed(stealth)} Heimlichkeit`,
-        ...acrobatics ? [`${signed(acrobatics)} Akrobatik`] : [],
-        ...armorClass ? [`${signed(armorClass)} RK`] : []
-      ].join(", ")}. Attributsmodifikatoren wirken zus\xE4tzlich. ${rankNote} Ersetzt Gro\xDF, H\xFCnenhaft und Riesenblut vollst\xE4ndig. Aktuelle TP bleiben erhalten. Gr\xF6\xDFe bei Durchg\xE4ngen und Ausr\xFCstung beachten; Reichweite und Waffenw\xFCrfel bleiben unver\xE4ndert.`,
-      {
-        attributeModifiers: [attribute("strength", strength), ...dexterity ? [attribute("dexterity", dexterity)] : []],
-        maximumHitPoints: hp,
-        ...strengthSave ? { saveAttributeModifiers: [attribute("strength", strengthSave)] } : {},
-        skillModifiers: [skill10("Heimlichkeit", stealth), ...acrobatics ? [skill10("Akrobatik", acrobatics)] : []],
-        ...armorClass ? { armorClass } : {}
-      },
-      cost,
-      { icon: `/AleriaAlmanach/assets/development-traits/web/nuadat-riesenblut-${index + 1}.webp`, family: "nuadat", rank: index + 1, heightCm: height }
-    ]),
-    ...arth.map(([strength, damage, dexterity, stealth, cost], index) => [
-      `arth-blut-${index + 1}`,
-      `Das Blut der Arth (Stufe ${roman[index]})`,
-      `Angeborene \xFCbermenschliche Kraft: +${strength} ST\xC4-Attributswert und zus\xE4tzlich +${damage} Schaden bei ST\xC4-Waffenangriffen; ${dexterity ? `${signed(dexterity)} GES-Attributswert und ` : ""}${signed(stealth)} Heimlichkeit. Attributsmodifikatoren wirken zus\xE4tzlich auf passende Angriffe, Schaden, Proben und Rettungen. Der Zusatzschaden gilt ausschlie\xDFlich f\xFCr das tats\xE4chliche ST\xC4-Waffenattribut. ${rankNote}`,
-      {
-        attributeModifiers: [attribute("strength", strength), ...dexterity ? [attribute("dexterity", dexterity)] : []],
-        weaponModifiers: [{ attackAttributes: ["strength"], damage }],
-        skillModifiers: [skill10("Heimlichkeit", stealth)]
-      },
-      cost,
-      { icon: `/AleriaAlmanach/assets/development-traits/web/arth-blut-${index + 1}.webp`, family: "arth", rank: index + 1 }
-    ])
-  ]);
-  var origins2 = new Map(FAMILY_TRAIT_DEFINITIONS.map(([id, name, , , , policy]) => [`development-trait-${id}`, Object.freeze({
-    id: `development-trait-${id}`,
-    name,
-    ...policy,
-    exclusiveGroup: `family-blood-${policy.family}`
-  })]));
-  function getFamilyTraitOrigin(entry) {
-    return origins2.get(typeof entry === "string" ? entry : entry?.developmentTraitId || entry?.id) || null;
-  }
-
-  // modules/character-development/development-general-traits.js
-  var skill11 = (name, bonus) => ({ name, bonus });
-  var save4 = (attributeKey, bonus) => ({ attributeKey, bonus });
-  var GENERAL_TRAIT_DEFINITIONS = Object.freeze([
-    ["ruhiger-atem", "Ruhiger Atem", "Gleichm\xE4\xDFiges Atmen hilft dir, den K\xF6rper ruhig und Bewegungen unauff\xE4llig zu halten; bis du handelst, vergeht etwas Zeit: +1 auf K\xF6rperbeherrschung und Heimlichkeit, \u22121 Initiative.", { skillModifiers: [skill11("K\xF6rperbeherrschung", 1), skill11("Heimlichkeit", 1)], initiative: -1 }, 1],
-    ["kraftvoller-griff", "Kraftvoller Griff", "Deine H\xE4nde packen sicher und kr\xE4ftig zu, sind bei feinen Handgriffen aber weniger behutsam: +1 auf Athletik, \u22121 auf Fingerfertigkeit.", { skillModifiers: [skill11("Athletik", 1), skill11("Fingerfertigkeit", -1)] }, 0],
-    ["behutsame-haende", "Behutsame H\xE4nde", "Du arbeitest an kleinen Dingen und bei der Versorgung besonders vorsichtig; spontane Handlungen fallen dir schwerer: +1 auf Fingerfertigkeit und Heilkunde, \u22121 Initiative. Medizinische Kenntnisse werden dadurch nicht ersetzt.", { skillModifiers: [skill11("Fingerfertigkeit", 1), skill11("Heilkunde", 1)], initiative: -1 }, 1],
-    ["federnder-gang", "Federnder Gang", "Dein schwungvoller Gang unterst\xFCtzt schnelle, bewegliche Schritte, ist aber h\xF6rbarer: +1 auf Akrobatik und +1 m Bewegung, \u22121 auf Heimlichkeit.", { skillModifiers: [skill11("Akrobatik", 1), skill11("Heimlichkeit", -1)], movement: 1 }, 1],
-    ["schwere-schritte", "Schwere Schritte", "Du setzt deine Schritte fest und kontrolliert auf, aber wenig leise: +1 auf K\xF6rperbeherrschung, \u22121 auf Heimlichkeit. Daraus entsteht kein zus\xE4tzlicher R\xFCstungsschutz.", { skillModifiers: [skill11("K\xF6rperbeherrschung", 1), skill11("Heimlichkeit", -1)] }, 0],
-    ["leiser-tritt", "Leiser Tritt", "Du setzt jeden Schritt bedacht und m\xF6glichst ger\xE4uschlos: +1 auf Heimlichkeit, \u22121 m Bewegung.", { skillModifiers: [skill11("Heimlichkeit", 1)], movement: -1 }, 0],
-    ["lautes-organ", "Lautes Organ", "Deine kr\xE4ftige Stimme tr\xE4gt weit und wirkt eindringlich, l\xE4sst sich aber schwer verbergen: +1 auf Auftreten und Einsch\xFCchtern, \u22121 auf Heimlichkeit. Die Werte sind allgemeine Probenmodifikatoren, keine automatische Reichweitenerh\xF6hung.", { skillModifiers: [skill11("Auftreten", 1), skill11("Einsch\xFCchtern", 1), skill11("Heimlichkeit", -1)] }, 1],
-    ["fluesterstimme", "Fl\xFCsterstimme", "Du sprichst gew\xF6hnlich leise und unauff\xE4llig, doch deiner Stimme fehlt Nachdruck: +1 auf Heimlichkeit, \u22121 auf Einsch\xFCchtern. Die kleine Erleichterung ist ein allgemeiner Probenbonus.", { skillModifiers: [skill11("Heimlichkeit", 1), skill11("Einsch\xFCchtern", -1)] }, 0],
-    ["zaeher-marsch", "Z\xE4her Marsch", "Du teilst k\xF6rperliche Anstrengung gut ein und h\xE4ltst ein gleichm\xE4\xDFiges, langsameres Tempo: +1 auf Athletik und K\xF6rperbeherrschung, \u22121 m Bewegung. Keine automatische Immunit\xE4t gegen Ersch\xF6pfung.", { skillModifiers: [skill11("Athletik", 1), skill11("K\xF6rperbeherrschung", 1)], movement: -1 }, 1],
-    ["hastiger-schritt", "Hastiger Schritt", "Du bist rasch unterwegs und setzt deine F\xFC\xDFe dabei weniger sorgf\xE4ltig: +1 m Bewegung, \u22121 auf Akrobatik.", { movement: 1, skillModifiers: [skill11("Akrobatik", -1)] }, 0],
-    ["geduldiger-beobachter", "Geduldiger Beobachter", "Du nimmst dir Zeit, Einzelheiten wahrzunehmen und zu pr\xFCfen: +1 auf Wahrnehmung und Nachforschungen, \u22121 Initiative.", { skillModifiers: [skill11("Wahrnehmung", 1), skill11("Nachforschungen", 1)], initiative: -1 }, 1],
-    ["rascher-entschluss", "Rascher Entschluss", "Du entscheidest schnell, bevor du alle Einzelheiten gepr\xFCft hast: +1 Initiative, \u22121 auf Nachforschungen.", { initiative: 1, skillModifiers: [skill11("Nachforschungen", -1)] }, 0],
-    ["umsichtig", "Umsichtig", "Du pr\xFCfst Gefahren sorgf\xE4ltig und h\xE4ltst einen Ausweg offen, reagierst dadurch jedoch sp\xE4ter: +1 auf Nachforschungen und GES-Rettungsw\xFCrfe, \u22121 Initiative.", { skillModifiers: [skill11("Nachforschungen", 1)], saveAttributeModifiers: [save4("dexterity", 1)], initiative: -1 }, 1],
-    ["tunnelblick", "Tunnelblick", "Du verfolgst Einzelheiten sehr aufmerksam und \xFCbersiehst dabei leichter dein Umfeld: +2 auf Nachforschungen, \u22121 auf Wahrnehmung.", { skillModifiers: [skill11("Nachforschungen", 2), skill11("Wahrnehmung", -1)] }, 1],
-    ["zerstreute-gedanken", "Zerstreute Gedanken", "Gedanken springen h\xE4ufig ab und bekannte Einzelheiten sind schwerer abrufbar: \u22121 auf Nachforschungen und Geschichte. Die Grundattribute bleiben unver\xE4ndert.", { skillModifiers: [skill11("Nachforschungen", -1), skill11("Geschichte", -1)] }, -1],
-    ["wissensdurst", "Wissensdurst", "Du sammelst gern Erz\xE4hlungen und Naturbeobachtungen, verlierst dabei aber dein unmittelbares Umfeld aus dem Blick: +1 auf Geschichte und Naturkunde, \u22121 auf Wahrnehmung. Unbekanntes Wissen muss weiterhin beschafft werden.", { skillModifiers: [skill11("Geschichte", 1), skill11("Naturkunde", 1), skill11("Wahrnehmung", -1)] }, 1],
-    ["naturverbundener-pragmatiker", "Naturverbundener Pragmatiker", "Du besch\xE4ftigst dich lieber mit beobachtbaren Naturzusammenh\xE4ngen als mit arkaner Theorie: +1 auf Naturkunde, \u22121 auf Arkane Kunde. Kein Verlust von Magiezugang oder bereits gelerntem Wissen.", { skillModifiers: [skill11("Naturkunde", 1), skill11("Arkane Kunde", -1)] }, 0],
-    ["geuebtes-schaetzen", "Ge\xFCbtes Sch\xE4tzen", "Du pr\xFCfst Gr\xF6\xDFen, Mengen und auff\xE4llige Abweichungen mit sicherem Augenma\xDF: +1 auf Nachforschungen und Wahrnehmung. Das ersetzt keine Messung und bestimmt keine Warenpreise automatisch.", { skillModifiers: [skill11("Nachforschungen", 1), skill11("Wahrnehmung", 1)] }, 1],
-    ["unerschuetterliche-ruhe", "Unersch\xFCtterliche Ruhe", "Du h\xE4ltst Atmung und K\xF6rper auch bei Schrecken ruhiger, brauchst aber einen Moment zum Anlaufen: +1 auf K\xF6rperbeherrschung und Rettungsw\xFCrfe gegen Furcht, \u22121 Initiative.", { skillModifiers: [skill11("K\xF6rperbeherrschung", 1)], saveModifiers: [{ kind: "fear", bonus: 1 }], initiative: -1 }, 1],
-    ["nervoeser-antrieb", "Nerv\xF6ser Antrieb", "Anspannung l\xE4sst dich fr\xFCh reagieren, macht dich aber anf\xE4lliger f\xFCr Schrecken: +1 Initiative, \u22121 auf Rettungsw\xFCrfe gegen Furcht.", { initiative: 1, saveModifiers: [{ kind: "fear", bonus: -1 }] }, 0],
-    ["warmherzig", "Warmherzig", "Du gehst einf\xFChlsam und zugewandt auf andere ein; Drohungen liegen dir weniger: +1 auf \xDCberzeugen und Motiv erkennen, \u22121 auf Einsch\xFCchtern.", { skillModifiers: [skill11("\xDCberzeugen", 1), skill11("Motiv erkennen", 1), skill11("Einsch\xFCchtern", -1)] }, 1],
-    ["strenger-blick", "Strenger Blick", "Dein ernster, durchdringender Blick unterstreicht Drohungen, wirkt bei Ann\xE4herungen aber abweisend: +1 auf Einsch\xFCchtern, \u22121 auf Flirten.", { skillModifiers: [skill11("Einsch\xFCchtern", 1), skill11("Flirten", -1)] }, 0],
-    ["trockener-humor", "Trockener Humor", "Deine knappen, n\xFCchternen Pointen gelingen vor Publikum besser als bei z\xE4rtlichen Ann\xE4herungen: +1 auf Auftreten, \u22121 auf Flirten.", { skillModifiers: [skill11("Auftreten", 1), skill11("Flirten", -1)] }, 0],
-    ["skeptischer-zuhoerer", "Skeptischer Zuh\xF6rer", "Du achtest auf verborgene Absichten und h\xE4ltst deine eigenen zur\xFCck, wirkst dabei jedoch misstrauisch: +1 auf Motiv erkennen und T\xE4uschen, \u22121 auf \xDCberzeugen.", { skillModifiers: [skill11("Motiv erkennen", 1), skill11("T\xE4uschen", 1), skill11("\xDCberzeugen", -1)] }, 1],
-    ["leichtglaeubig", "Leichtgl\xE4ubig", "Du nimmst fremde Aussagen schnell f\xFCr bare M\xFCnze: \u22122 auf Motiv erkennen. Vertrauen verleiht keine automatische \xDCberzeugungskraft.", { skillModifiers: [skill11("Motiv erkennen", -2)] }, -1],
-    ["streitlustig", "Streitlustig", "Du gehst rasch in Konfrontation und setzt andere unter Druck, findest aber schwerer einen einvernehmlichen Ton: +1 auf Einsch\xFCchtern, \u22121 auf \xDCberzeugen.", { skillModifiers: [skill11("Einsch\xFCchtern", 1), skill11("\xDCberzeugen", -1)] }, 0],
-    ["harmoniebeduerftig", "Harmoniebed\xFCrftig", "Du suchst Ausgleich und vermeidest offenen Druck: +1 auf \xDCberzeugen, \u22121 auf Einsch\xFCchtern.", { skillModifiers: [skill11("\xDCberzeugen", 1), skill11("Einsch\xFCchtern", -1)] }, 0],
-    ["schelmisch", "Schelmisch", "Dir liegen Scherze und gespielte Rollen; ernste Zusicherungen wirken dadurch weniger verl\xE4sslich: +1 auf T\xE4uschen und Auftreten, \u22121 auf \xDCberzeugen.", { skillModifiers: [skill11("T\xE4uschen", 1), skill11("Auftreten", 1), skill11("\xDCberzeugen", -1)] }, 1],
-    ["pedantisch", "Pedantisch", "Du pr\xFCfst Angaben und bekannte Einzelheiten sehr genau, verlierst dich im Gespr\xE4ch aber leicht in Korrekturen: +1 auf Nachforschungen und Geschichte, \u22121 auf \xDCberzeugen.", { skillModifiers: [skill11("Nachforschungen", 1), skill11("Geschichte", 1), skill11("\xDCberzeugen", -1)] }, 1],
-    ["pflichtbewusst", "Pflichtbewusst", "Ein klares Pflichtgef\xFChl festigt deine Selbstbehauptung, macht bewusste Ausreden aber schwerer: +1 auf CHA-Rettungsw\xFCrfe, \u22121 auf T\xE4uschen.", { saveAttributeModifiers: [save4("charisma", 1)], skillModifiers: [skill11("T\xE4uschen", -1)] }, 0]
-  ]);
-  var GENERAL_TRAIT_ICONS = Object.freeze(Object.fromEntries(
-    GENERAL_TRAIT_DEFINITIONS.map(([id]) => [id, id])
-  ));
-
-  // modules/character-development/development-expansion-talents.js
-  var attribute2 = (attributeKey, bonus = 1) => ({ attributeKey, bonus });
-  var skill12 = (name, bonus = 1) => ({ name, bonus });
-  var skillAdvantage = (id, skillId) => [{
-    id,
-    phase: "pre-roll",
-    recipient: "actor",
-    sourceRelation: "self",
-    activation: "passive",
-    frequency: "always",
-    condition: "always",
-    actionKinds: ["skill"],
-    skillIds: [skillId],
-    effects: { rollMode: "advantage" }
-  }];
-  var EXPANSION_TALENT_DEFINITIONS = Object.freeze([
-    [
-      "talent-athlet",
-      "Athlet",
-      "Kraft und nat\xFCrliche Sportlichkeit: +1 ST\xC4-Attributswert und Vorteil bei Athletik-Proben.",
-      { attributeModifiers: [attribute2("strength")] },
-      5,
-      { triggerRules: skillAdvantage("talent-athlet-athletik", "athletics") }
-    ],
-    [
-      "talent-akrobat",
-      "Akrobat",
-      "Beweglichkeit und sicherer Gleichgewichtssinn: +1 GES-Attributswert und Vorteil bei Akrobatik-Proben.",
-      { attributeModifiers: [attribute2("dexterity")] },
-      5,
-      { triggerRules: skillAdvantage("talent-akrobat-akrobatik", "acrobatics") }
-    ],
-    [
-      "talent-wachsam",
-      "Wachsam",
-      "Ausgepr\xE4gte Aufmerksamkeit und schnelle Reaktion: +2 Initiative und Vorteil bei Wahrnehmungsproben.",
-      { initiative: 2 },
-      5,
-      { triggerRules: skillAdvantage("talent-wachsam-wahrnehmung", "perception") }
-    ],
-    [
-      "talent-ausdauernd",
-      "Ausdauernd",
-      "Hohe k\xF6rperliche Ausdauer: +1 KON-Attributswert und +4 maximale TP. Aktuelle TP bleiben erhalten.",
-      { attributeModifiers: [attribute2("constitution")], maximumHitPoints: 4 },
-      5
-    ],
-    [
-      "talent-willensstark",
-      "Willensstark",
-      "Ein gefestigter Wille: Vorteil auf WEI-Rettungsw\xFCrfe und +1 auf CHA-Rettungsw\xFCrfe.",
-      { savingThrowAdvantageAttributes: ["wisdom"], saveAttributeModifiers: [attribute2("charisma")] },
-      4
-    ],
-    [
-      "talent-alleskoenner",
-      "Allesk\xF6nner",
-      "Breite allgemeine Begabung: +1 auf s\xE4mtliche Fertigkeits- und freie Attributsproben. Ausbildung und Expertise werden nicht ver\xE4ndert.",
-      { skill: 1 },
-      5
-    ],
-    [
-      "talent-belesen",
-      "Belesen",
-      "Breite geistige Bildung: +1 INT-Attributswert und je +1 auf Geschichte, Religion, Arkane Kunde und Naturkunde.",
-      { attributeModifiers: [attribute2("intelligence")], skillModifiers: [skill12("Geschichte"), skill12("Religion"), skill12("Arkane Kunde"), skill12("Naturkunde")] },
-      5
-    ],
-    [
-      "talent-naturbursche",
-      "Naturbursche",
-      "Gutes Gesp\xFCr f\xFCr die nat\xFCrliche Welt: +1 WEI-Attributswert und je +1 auf \xDCberleben, Naturkunde und Mit Tieren umgehen.",
-      { attributeModifiers: [attribute2("wisdom")], skillModifiers: [skill12("\xDCberleben"), skill12("Naturkunde"), skill12("Mit Tieren umgehen")] },
-      4
-    ],
-    [
-      "talent-redetalent",
-      "Redetalent",
-      "Nat\xFCrliche sprachliche \xDCberzeugungskraft: +1 CHA-Attributswert, +2 auf \xDCberzeugen und +1 auf T\xE4uschen.",
-      { attributeModifiers: [attribute2("charisma")], skillModifiers: [skill12("\xDCberzeugen", 2), skill12("T\xE4uschen")] },
-      4
-    ],
-    [
-      "talent-kundschafter",
-      "Kundschafter",
-      "Unauff\xE4llig und aufmerksam unterwegs: +1 m Bewegung, +2 auf Heimlichkeit und je +1 auf Wahrnehmung und \xDCberleben.",
-      { movement: 1, skillModifiers: [skill12("Heimlichkeit", 2), skill12("Wahrnehmung"), skill12("\xDCberleben")] },
-      4
-    ],
-    [
-      "talent-feinmotoriker",
-      "Feinmotoriker",
-      "Geschickte H\xE4nde und sichere K\xF6rperkontrolle: +1 GES-Attributswert, +2 auf Fingerfertigkeit und +1 auf K\xF6rperbeherrschung.",
-      { attributeModifiers: [attribute2("dexterity")], skillModifiers: [skill12("Fingerfertigkeit", 2), skill12("K\xF6rperbeherrschung")] },
-      4
-    ],
-    [
-      "talent-magiebegabt",
-      "Magiebegabt",
-      "Starke nat\xFCrliche Magieanlage: +1 Zauberangriff und +1 Zauber-SG. Ben\xF6tigt vorhandenen Magiezugang; verleiht keine Zauber oder Vorr\xE4te.",
-      { spellAttack: 1, spellSaveDc: 1 },
-      6
-    ],
-    [
-      "talent-widerstandsfaehig",
-      "Widerstandsf\xE4hig",
-      "Hohe k\xF6rperliche Widerstandskraft: Vorteil auf KON-Rettungsw\xFCrfe und +1 auf ST\xC4-Rettungsw\xFCrfe.",
-      { savingThrowAdvantageAttributes: ["constitution"], saveAttributeModifiers: [attribute2("strength")] },
-      4
-    ],
-    [
-      "talent-scharfer-verstand",
-      "Scharfer Verstand",
-      "Klare Gedanken und schnelle Auffassung: Vorteil auf INT-Rettungsw\xFCrfe, +2 auf Nachforschungen und +1 auf Geschichte.",
-      { savingThrowAdvantageAttributes: ["intelligence"], skillModifiers: [skill12("Nachforschungen", 2), skill12("Geschichte")] },
-      5
-    ],
-    [
-      "talent-anfuehrer",
-      "Anf\xFChrer",
-      "Selbstsicherheit und nat\xFCrliche Autorit\xE4t: Vorteil auf CHA-Rettungsw\xFCrfe und je +1 auf \xDCberzeugen und Einsch\xFCchtern.",
-      { savingThrowAdvantageAttributes: ["charisma"], skillModifiers: [skill12("\xDCberzeugen"), skill12("Einsch\xFCchtern")] },
-      4
-    ]
-  ]);
-
-  // modules/character-development/development-expansion-quirks.js
-  var skill13 = (name, bonus) => ({ name, bonus });
-  var EXPANSION_QUIRK_DEFINITIONS = Object.freeze([
-    ["marotte-selbstgespraeche", "Selbstgespr\xE4che", "Du ordnest Gedanken h\xF6rbar im Gespr\xE4ch mit dir selbst und gibst dabei deine Anwesenheit leichter preis: +1 auf Nachforschungen, \u22121 auf Heimlichkeit. Die Werte gelten als allgemeine Probenmodifikatoren.", { skillModifiers: [skill13("Nachforschungen", 1), skill13("Heimlichkeit", -1)] }, 0],
-    ["marotte-raeuspergewohnheit", "R\xE4uspergewohnheit", "Du r\xE4usperst dich h\xE4ufig, auch ohne sprechen zu wollen; das macht dich h\xF6rbar und unterbricht deinen Vortrag: \u22121 auf Heimlichkeit und Auftreten.", { skillModifiers: [skill13("Heimlichkeit", -1), skill13("Auftreten", -1)] }, -1],
-    ["marotte-blickscheu", "Blickscheu", "Du weichst Blickkontakt aus und nimmst die Mimik anderer dadurch weniger gut auf; eigene Argumente wirken unsicherer: \u22121 auf Motiv erkennen und \xDCberzeugen.", { skillModifiers: [skill13("Motiv erkennen", -1), skill13("\xDCberzeugen", -1)] }, -1],
-    ["marotte-wortschwall", "Wortschwall", "Du f\xFCllst jede Pause mit Worten und h\xE4ltst damit leicht die Aufmerksamkeit, \xFCbergehst aber die eigentliche Frage: +1 auf Auftreten, \u22121 auf \xDCberzeugen.", { skillModifiers: [skill13("Auftreten", 1), skill13("\xDCberzeugen", -1)] }, 0],
-    ["marotte-verschlossene-auskunft", "Verschlossene Auskunft", "Du l\xE4sst dir gew\xF6hnlich wenig entlocken und wahrst den Schein, bleibst vor Publikum aber zu zur\xFCckhaltend: +1 auf T\xE4uschen, \u22121 auf Auftreten.", { skillModifiers: [skill13("T\xE4uschen", 1), skill13("Auftreten", -1)] }, 0],
-    ["marotte-rechthaberei", "Rechthaberei", "Du bestehst nachdr\xFCcklich auf deiner Sicht und \xFCbersiehst dabei leichter, was andere bewegt: +1 auf Einsch\xFCchtern, \u22121 auf Motiv erkennen.", { skillModifiers: [skill13("Einsch\xFCchtern", 1), skill13("Motiv erkennen", -1)] }, 0],
-    ["marotte-umwege-aus-neugier", "Umwege aus Neugier", "Du schweifst mit Blick und Schritten gern zum Rand des Weges ab: +1 auf Wahrnehmung, \u22121 m Bewegung. Der Wahrnehmungsbonus gilt allgemein, ohne automatisches Entdecken verborgener Dinge.", { skillModifiers: [skill13("Wahrnehmung", 1)], movement: -1 }, 0],
-    ["marotte-nestelnde-finger", "Nestelnde Finger", "Du besch\xE4ftigst die H\xE4nde st\xE4ndig mit Schn\xFCren, Kn\xF6pfen und kleinen Bewegungen; dabei entgeht dir eher etwas im Umfeld: +1 auf Fingerfertigkeit, \u22121 auf Wahrnehmung.", { skillModifiers: [skill13("Fingerfertigkeit", 1), skill13("Wahrnehmung", -1)] }, 0],
-    ["marotte-begruessungsueberschwang", "Begr\xFC\xDFungs\xFCberschwang", "Du trittst mit gro\xDFen Gesten, offener Stimme und herzlich direkter Ansprache auf: +1 auf \xDCberzeugen, \u22121 auf Heimlichkeit. Der Abzug bildet deine auff\xE4llige Gewohnheit allgemein ab.", { skillModifiers: [skill13("\xDCberzeugen", 1), skill13("Heimlichkeit", -1)] }, 0],
-    ["marotte-foermliche-anrede", "F\xF6rmliche Anrede", "Du bleibst selbst in vertraulicher Runde bei f\xF6rmlichen Wendungen; geordnete Anliegen gelingen dir besser als unbefangene Ann\xE4herungen: +1 auf \xDCberzeugen, \u22121 auf Flirten.", { skillModifiers: [skill13("\xDCberzeugen", 1), skill13("Flirten", -1)] }, 0],
-    ["marotte-ausladende-verbeugung", "Ausladende Verbeugung", "Du setzt auf h\xF6fliche, aufwendige Begr\xFC\xDFungs- und Abschiedsgesten, die N\xE4he schaffen, dich aber einen Augenblick kosten: +1 auf Flirten, \u22121 Initiative.", { skillModifiers: [skill13("Flirten", 1)], initiative: -1 }, 0],
-    ["marotte-notizdrang", "Notizdrang", "Du h\xE4ltst Erlebtes und geh\xF6rte \xDCberlieferungen beharrlich fest und h\xE4ltst vor spontanem Handeln erst inne: +1 auf Geschichte, \u22121 Initiative. Unbekanntes Wissen wird dadurch nicht verf\xFCgbar.", { skillModifiers: [skill13("Geschichte", 1)], initiative: -1 }, 0],
-    ["marotte-schuhputzfimmel", "Schuhputzfimmel", "Du h\xE4ltst beim Gehen immer wieder kurz inne, um Staub oder Schlamm von den Schuhen zu streifen: \u22121 m Bewegung. Die Verz\xF6gerung wird als allgemeiner Bewegungsabzug gef\xFChrt.", { movement: -1 }, -1],
-    ["marotte-noergelei", "N\xF6rgelei", "Du findest in Gespr\xE4chen schnell einen Grund zum Klagen; das erschwert gemeinsame L\xF6sungen und pers\xF6nliche Ann\xE4herungen: \u22121 auf \xDCberzeugen und Flirten.", { skillModifiers: [skill13("\xDCberzeugen", -1), skill13("Flirten", -1)] }, -1],
-    ["marotte-kraeftemessen", "St\xE4ndiges Kr\xE4ftemessen", "Jahrelange Gewohnheit kraftbetonter Wettbewerbe hat dich im Ziehen, Stemmen und Ringen ge\xFCbt; fremde Absichten verlieren sich hinter deinem Siegeswillen: +1 auf Athletik, \u22121 auf Motiv erkennen.", { skillModifiers: [skill13("Athletik", 1), skill13("Motiv erkennen", -1)] }, 0]
-  ]);
-
-  // modules/character-development/development-expansion-abilities.js
-  var skill14 = (name, bonus) => ({ name, bonus });
-  var training = (name, proficiency = "expertise") => ({ name, proficiency });
-  var weaponRule2 = (id, phase, attackRange, effects) => ({
-    id,
-    phase,
-    recipient: "actor",
-    sourceRelation: "self",
-    activation: "passive",
-    frequency: "always",
-    condition: "always",
-    actionKinds: ["weapon", "technique"],
-    weaponAttackOnly: true,
-    attackRange,
-    effects
-  });
-  var concentrationAdvantage = [{
-    id: "magiekontrolle-konzentration",
-    phase: "on-concentration-check",
-    recipient: "target",
-    sourceRelation: "self",
-    activation: "passive",
-    frequency: "always",
-    condition: "always",
-    effects: { rollMode: "advantage" }
-  }];
-  var EXPANSION_ABILITY_DEFINITIONS = Object.freeze([
-    [
-      "faehigkeit-nahkampftraining",
-      "Nahkampftraining",
-      "+1 auf Angriffsw\xFCrfe mit Nahkampfwaffen, einschlie\xDFlich entsprechender Techniken. Gilt nicht f\xFCr Fernkampf oder Zauber.",
-      {},
-      2,
-      { triggerRules: [weaponRule2("nahkampftraining", "pre-roll", "melee", { attackModifier: 1 })] }
-    ],
-    [
-      "faehigkeit-fernkampftraining",
-      "Fernkampftraining",
-      "+1 auf Angriffsw\xFCrfe mit Fernkampfwaffen, einschlie\xDFlich entsprechender Techniken. Gilt nicht f\xFCr Nahkampf oder Zauber.",
-      {},
-      2,
-      { triggerRules: [weaponRule2("fernkampftraining", "pre-roll", "ranged", { attackModifier: 1 })] }
-    ],
-    [
-      "faehigkeit-unbewaffneter-kampf",
-      "Unbewaffneter Kampf",
-      "+1 Angriff und +1 Schaden bei unbewaffneten Angriffen und entsprechenden Techniken. Verleiht keine zus\xE4tzlichen Angriffe oder Waffen.",
-      { weaponModifiers: [{ weaponTypes: ["unarmed"], attack: 1, damage: 1 }] },
-      2
-    ],
-    [
-      "faehigkeit-kraftangriff",
-      "Kraftangriff",
-      "Kr\xE4ftige statt sichere Treffer: \u22121 Angriff und +2 Schaden mit Nahkampfwaffen, einschlie\xDFlich entsprechender Techniken. Wirkt, solange die F\xE4higkeit aktiv ist.",
-      {},
-      1,
-      { triggerRules: [
-        weaponRule2("kraftangriff-angriff", "pre-roll", "melee", { attackModifier: -1 }),
-        weaponRule2("kraftangriff-schaden", "pre-damage", "melee", { damageModifier: 2 })
-      ] }
-    ],
-    [
-      "faehigkeit-praezisionsschuetze",
-      "Pr\xE4zisionssch\xFCtze",
-      "Anspruchsvolle gezielte Sch\xFCsse: \u22121 Angriff und +2 Schaden mit Fernkampfwaffen, einschlie\xDFlich entsprechender Techniken. Wirkt, solange die F\xE4higkeit aktiv ist.",
-      {},
-      1,
-      { triggerRules: [
-        weaponRule2("praezisionsschuetze-angriff", "pre-roll", "ranged", { attackModifier: -1 }),
-        weaponRule2("praezisionsschuetze-schaden", "pre-damage", "ranged", { damageModifier: 2 })
-      ] }
-    ],
-    [
-      "faehigkeit-ausweichen",
-      "Ausweichen",
-      "Ge\xFCbte Abwehrbewegungen: +1 RK. Verleiht keine zus\xE4tzliche Reaktion; ein fest eingetragener Gesamt-RK-Wert beh\xE4lt Vorrang.",
-      { armorClass: 1 },
-      3
-    ],
-    [
-      "faehigkeit-magiekontrolle",
-      "Magiekontrolle",
-      "+1 Zauber-SG und Vorteil auf KON-Rettungsw\xFCrfe zum Aufrechterhalten von Konzentration. Verleiht keine Zauber; mehrfacher Vorteil erzeugt keine zus\xE4tzlichen W\xFCrfel.",
-      { spellSaveDc: 1 },
-      6,
-      { triggerRules: concentrationAdvantage }
-    ],
-    [
-      "faehigkeit-kampfzauberer",
-      "Kampfzauberer",
-      "+1 Zauberangriff und +1 auf KON-Rettungsw\xFCrfe. Verleiht keinen Magiezugang und keine zus\xE4tzlichen Zauber oder Aktionen.",
-      { spellAttack: 1, saveAttributeModifiers: [{ attributeKey: "constitution", bonus: 1 }] },
-      3
-    ],
-    [
-      "faehigkeit-arkane-abwehr",
-      "Arkane Abwehr",
-      "+1 auf Attributsrettungsw\xFCrfe gegen Zauber, Gebete und Ges\xE4nge, einschlie\xDFlich ihrer sekund\xE4ren Rettungen. Verringert keinen Schaden und wirkt nicht gegen gew\xF6hnliche Waffen.",
-      {},
-      2,
-      { triggerRules: traitSaveModifier("arkane-abwehr", 1, { actionKinds: ["spell", "prayer", "song"] }) }
-    ],
-    [
-      "faehigkeit-widerstandstraining",
-      "Widerstandstraining",
-      "+1 auf alle Attributsrettungsw\xFCrfe. Zustandsfolgen m\xFCssen weiterhin ausgew\xFCrfelt werden; keine Immunit\xE4ten.",
-      { savingThrow: 1 },
-      3
-    ],
-    [
-      "faehigkeit-wildniskunde",
-      "Wildniskunde",
-      "Expertise in Naturkunde und mindestens ausgebildet in \xDCberleben. Vorhandene h\xF6here Ausbildung bleibt erhalten; unbekanntes Wissen muss weiterhin erprobt werden.",
-      { skillProficiencies: [training("Naturkunde"), training("\xDCberleben", "trained")] },
-      5
-    ],
-    [
-      "faehigkeit-heilkunst",
-      "Heilkunst",
-      "Expertise in Heilkunde und +1 auf K\xF6rperbeherrschung. Behandlungen ben\xF6tigen die \xFCblichen Proben und Mittel; keine automatische Heilung.",
-      { skillProficiencies: [training("Heilkunde")], skillModifiers: [skill14("K\xF6rperbeherrschung", 1)] },
-      4
-    ],
-    [
-      "faehigkeit-diplomatie",
-      "Diplomatie",
-      "Expertise in \xDCberzeugen und +1 auf Motiv erkennen. Andere Figuren behalten ihren Willen; keine automatische Zustimmung.",
-      { skillProficiencies: [training("\xDCberzeugen")], skillModifiers: [skill14("Motiv erkennen", 1)] },
-      4
-    ],
-    [
-      "faehigkeit-diebeskunst",
-      "Diebeskunst",
-      "Expertise in Fingerfertigkeit und +1 auf Heimlichkeit. Werkzeuge, geeignete Gelegenheiten und erfolgreiche Proben bleiben n\xF6tig.",
-      { skillProficiencies: [training("Fingerfertigkeit")], skillModifiers: [skill14("Heimlichkeit", 1)] },
-      4
-    ],
-    [
-      "faehigkeit-kampfreflexe",
-      "Kampfreflexe",
-      "+2 Initiative und +1 auf GES-Rettungsw\xFCrfe. Verleiht keine zus\xE4tzlichen Aktionen oder Reaktionen.",
-      { initiative: 2, saveAttributeModifiers: [{ attributeKey: "dexterity", bonus: 1 }] },
-      3
-    ]
-  ]);
-
-  // modules/character-development/development-expansion-categories.js
-  var EXPANSION_TRAIT_GROUPS = Object.freeze({
-    "expansion-talents": Object.freeze({
-      label: "Talente",
-      tag: "Talent",
-      note: "Allgemeine RPG-Talente mit breiten, dauerhaft nutzbaren Vorteilen. Kosten und vollst\xE4ndige Wirkung stehen beim jeweiligen Talent.",
-      definitions: EXPANSION_TALENT_DEFINITIONS
-    }),
-    "expansion-quirks": Object.freeze({
-      label: "Marotten",
-      tag: "Marotte",
-      note: "Gewohnheiten mit kleinen Vor- und Nachteilen. Die angegebenen Abz\xFCge gelten im jeweils beschriebenen Regelbereich.",
-      definitions: EXPANSION_QUIRK_DEFINITIONS
-    }),
-    "expansion-abilities": Object.freeze({
-      label: "Erlernte passive F\xE4higkeiten",
-      tag: "Erlernte F\xE4higkeit",
-      note: "Klassenfreie passive Fertigkeiten. Bedingte Boni gelten bei ihrem angegebenen Ausl\xF6ser; sie ben\xF6tigen keine zus\xE4tzliche Aktivierung.",
-      definitions: EXPANSION_ABILITY_DEFINITIONS
-    })
-  });
-  var EXPANSION_TRAIT_DEFINITIONS = Object.freeze(Object.values(EXPANSION_TRAIT_GROUPS).flatMap((group) => group.definitions));
-  var categories = new Map(Object.entries(EXPANSION_TRAIT_GROUPS).flatMap(([id, group]) => group.definitions.map(([traitId]) => [`development-trait-${traitId}`, Object.freeze({ id, label: group.label, tag: group.tag })])));
-  function getExpansionTraitCategory(entry) {
-    return categories.get(typeof entry === "string" ? entry : entry?.developmentTraitId || entry?.id) || null;
-  }
-
   // modules/character-development/development-traits.js
-  var skill15 = (name, bonus) => ({ name, bonus });
+  var skill10 = (name, bonus) => ({ name, bonus });
   var definitions = [
     [
       "feuer-phobie",
@@ -1621,7 +1195,7 @@ var AleriaGroupAdventures = (() => {
       -2,
       { triggerRules: traitSaveDisadvantage("feuerangst", { damageTypes: ["feuer", "fire"] }) }
     ],
-    ["naturkind", "In der Natur aufgewachsen", "Vertrautheit mit der Wildnis: +1 auf Naturkunde und Mit Tieren umgehen. Keine automatische Expertise.", { skillModifiers: [skill15("Naturkunde", 1), skill15("Mit Tieren umgehen", 1)] }, 2],
+    ["naturkind", "In der Natur aufgewachsen", "Vertrautheit mit der Wildnis: +1 auf Naturkunde und Mit Tieren umgehen. Keine automatische Expertise.", { skillModifiers: [skill10("Naturkunde", 1), skill10("Mit Tieren umgehen", 1)] }, 2],
     ["flink", "Flinke F\xFC\xDFe", "+2 m Bewegung, \u22121 RK.", { movement: 2, armorClass: -1 }, 0],
     ["standfest", "Standfest", "+1 RK, \u22121 m Bewegung.", { armorClass: 1, movement: -1 }, 2],
     ["wachsam", "Wachsamer Blick", "+2 passive Wahrnehmung und +1 Initiative.", { passivePerception: 2, initiative: 1 }, 2],
@@ -1633,11 +1207,11 @@ var AleriaGroupAdventures = (() => {
     ["giftfest", "Giftfeste Konstitution", "Resistenz gegen Giftschaden; +1 auf Rettungsw\xFCrfe gegen Gift.", { saveModifiers: [{ kind: "poison", bonus: 1 }] }, 4, { damageAffinities: [{ damageType: "gift", response: "resistant" }] }],
     ["frostempfindlich", "Frostempfindlich", "Doppelter K\xE4lteschaden.", {}, -2, { damageAffinities: [{ damageType: "k\xE4lte", response: "vulnerable" }] }],
     ["glutgewoehnt", "An Glut gew\xF6hnt", "Ruhe beim Umgang mit Feuer: +1 auf Rettungsw\xFCrfe gegen feuerbasierte Angriffe; \u22121 Initiative. Gew\xF6hnung halbiert keinen Feuerschaden.", { initiative: -1 }, 0, { triggerRules: traitSaveModifier("glutgewoehnung", 1, { damageTypes: ["feuer", "fire"] }) }],
-    ["gelehrt", "B\xFCcherwurm", "Expertise in Geschichte; \u22121 auf Athletik.", { skillProficiencies: [{ name: "Geschichte", proficiency: "expertise" }], skillModifiers: [skill15("Athletik", -1)] }, 2],
-    ["empathisch", "Menschenkenner", "+1 auf Motiv erkennen und \xDCberzeugen. Einf\xFChlung unterst\xFCtzt den Umgang mit Menschen, ersetzt aber keine Ausbildung.", { skillModifiers: [skill15("Motiv erkennen", 1), skill15("\xDCberzeugen", 1)] }, 1],
-    ["schroff", "Schroffe Ehrlichkeit", "+1 auf Einsch\xFCchtern, \u22121 auf T\xE4uschen.", { skillModifiers: [skill15("Einsch\xFCchtern", 1), skill15("T\xE4uschen", -1)] }, 0],
-    ["silberzunge", "Silberzunge", "Expertise in \xDCberzeugen; \u22121 auf Motiv erkennen.", { skillProficiencies: [{ name: "\xDCberzeugen", proficiency: "expertise" }], skillModifiers: [skill15("Motiv erkennen", -1)] }, 2],
-    ["ungeschickt", "Zwei linke H\xE4nde", "\u22122 auf Fingerfertigkeit. Ungeschicklichkeit ver\xE4ndert die k\xF6rperliche Widerstandskraft nicht.", { skillModifiers: [skill15("Fingerfertigkeit", -2)] }, -1],
+    ["gelehrt", "B\xFCcherwurm", "Expertise in Geschichte; \u22121 auf Athletik.", { skillProficiencies: [{ name: "Geschichte", proficiency: "expertise" }], skillModifiers: [skill10("Athletik", -1)] }, 2],
+    ["empathisch", "Menschenkenner", "+1 auf Motiv erkennen und \xDCberzeugen. Einf\xFChlung unterst\xFCtzt den Umgang mit Menschen, ersetzt aber keine Ausbildung.", { skillModifiers: [skill10("Motiv erkennen", 1), skill10("\xDCberzeugen", 1)] }, 1],
+    ["schroff", "Schroffe Ehrlichkeit", "+1 auf Einsch\xFCchtern, \u22121 auf T\xE4uschen.", { skillModifiers: [skill10("Einsch\xFCchtern", 1), skill10("T\xE4uschen", -1)] }, 0],
+    ["silberzunge", "Silberzunge", "Expertise in \xDCberzeugen; \u22121 auf Motiv erkennen.", { skillProficiencies: [{ name: "\xDCberzeugen", proficiency: "expertise" }], skillModifiers: [skill10("Motiv erkennen", -1)] }, 2],
+    ["ungeschickt", "Zwei linke H\xE4nde", "\u22122 auf Fingerfertigkeit. Ungeschicklichkeit ver\xE4ndert die k\xF6rperliche Widerstandskraft nicht.", { skillModifiers: [skill10("Fingerfertigkeit", -2)] }, -1],
     ["scharfschuetze", "Ruhige Sehne", "+1 Angriff mit B\xF6gen und Armbr\xFCsten; \u22121 Initiative.", { weaponModifiers: [{ weaponTypes: ["bow", "crossbow"], attack: 1 }], initiative: -1 }, 1],
     ["klingenmut", "Klingenmut", "+1 Schaden mit Schwertern und Dolchen; \u22121 RK.", { weaponModifiers: [{ weaponTypes: ["sword", "dagger"], damage: 1 }], armorClass: -1 }, 0],
     ["arkaner-fokus", "Arkaner Fokus", "+1 Zauberangriff, \u22121 Waffenangriff.", { spellAttack: 1, attack: -1, attackScope: "weapon" }, 2],
@@ -1650,13 +1224,12 @@ var AleriaGroupAdventures = (() => {
       { id: "eiserne-konzentration", phase: "on-concentration-check", recipient: "target", sourceRelation: "self", activation: "passive", frequency: "always", condition: "always", effects: { rollMode: "advantage" } }
     ] }],
     ["lebhafter-geist", "Lebhafter Geist", "+1 auf alle Fertigkeitsproben; \u22121 RK.", { skill: 1, armorClass: -1 }, 3],
-    ["kraftpaket", "Kraftpaket", "+2 auf Athletik und +1 Schaden mit \xC4xten und Keulen; \u22121 auf Heimlichkeit.", { skillModifiers: [skill15("Athletik", 2), skill15("Heimlichkeit", -1)], weaponModifiers: [{ weaponTypes: ["axe", "mace"], damage: 1 }] }, 2],
+    ["kraftpaket", "Kraftpaket", "+2 auf Athletik und +1 Schaden mit \xC4xten und Keulen; \u22121 auf Heimlichkeit.", { skillModifiers: [skill10("Athletik", 2), skill10("Heimlichkeit", -1)], weaponModifiers: [{ weaponTypes: ["axe", "mace"], damage: 1 }] }, 2],
     ["duennhaeutig", "D\xFCnnh\xE4utig", "\u22121 auf CHA-Rettungsw\xFCrfe. Empfindlichkeit verleiht keine zus\xE4tzliche B\xFChnenfertigkeit.", { saveAttributeModifiers: [{ attributeKey: "charisma", bonus: -1 }] }, -1]
   ];
   var bodyIds = new Set(BODY_TRAIT_DEFINITIONS.map((trait) => trait[0]));
   var uniqueIds = new Set(UNIQUE_TRAIT_DEFINITIONS.map((trait) => trait[0]));
   var aptitudeIds = new Set(APTITUDE_TRAIT_DEFINITIONS.map((trait) => trait[0]));
-  var generalIds = new Set(GENERAL_TRAIT_DEFINITIONS.map((trait) => trait[0]));
   function transformationTags(id) {
     const origin = getTransformationTraitOrigin(`development-trait-${id}`);
     if (!origin) return "";
@@ -1669,9 +1242,6 @@ var AleriaGroupAdventures = (() => {
     aptitudeIds.has(id) ? "Begabung" : "",
     getBloodlineTraitOrigin(`development-trait-${id}`) ? "Bluttr\xE4ger \xB7 Angeboren" : "",
     transformationTags(id),
-    getFamilyTraitOrigin(`development-trait-${id}`) ? "Familienblut \xB7 Angeboren" : "",
-    generalIds.has(id) ? "Allgemeine Eigenschaft" : "",
-    getExpansionTraitCategory(`development-trait-${id}`)?.tag || "",
     getPsychologicalTraitOrigin(`development-trait-${id}`) ? "Psychologische Pr\xE4gung" : ""
   ].filter(Boolean).join(" \xB7 ");
   var DEVELOPMENT_TRAITS = Object.freeze([
@@ -1684,21 +1254,18 @@ var AleriaGroupAdventures = (() => {
     ...BLOODLINE_TRAIT_DEFINITIONS,
     ...THERIANTHROPY_TRAIT_DEFINITIONS,
     ...SYMBIOSIS_TRAIT_DEFINITIONS,
-    ...PSYCHOLOGICAL_TRAIT_DEFINITIONS,
-    ...FAMILY_TRAIT_DEFINITIONS,
-    ...GENERAL_TRAIT_DEFINITIONS,
-    ...EXPANSION_TRAIT_DEFINITIONS
+    ...PSYCHOLOGICAL_TRAIT_DEFINITIONS
   ].map(([id, name, description, mechanics, cost, extra = {}]) => ({
     id: `development-trait-${id}`,
     name,
     description,
     cost,
-    icon: extra.icon || `/AleriaAlmanach/assets/development-traits/web/${GENERAL_TRAIT_ICONS[id] || id}.webp`,
+    icon: `/AleriaAlmanach/assets/development-traits/web/${id}.webp`,
     type: "trait",
     active: true,
     target: "Selbst",
     duration: "Dauerhaft",
-    appliesWhen: getFamilyTraitOrigin(`development-trait-${id}`) ? "Angeborenes Familienerbe; nur die h\xF6chste aktive Stufe je Linie wirkt" : getBloodlineTraitOrigin(`development-trait-${id}`) ? "Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren" : "Solange ausgew\xE4hlt und aktiv",
+    appliesWhen: getBloodlineTraitOrigin(`development-trait-${id}`) ? "Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren" : "Solange ausgew\xE4hlt und aktiv",
     tags: traitTags(id),
     mechanics: { ...mechanics, ...extra.damageAffinities ? { damageAffinities: traitDamageAffinities(extra.damageAffinities) } : {} },
     triggerRules: extra.triggerRules || []

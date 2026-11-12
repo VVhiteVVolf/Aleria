@@ -34,38 +34,80 @@ test('Familien wird entfernt, Test bleibt gespeichert aber unsichtbar', () => {
   })`, context), true);
 });
 
-test('eine undatierte Szene übernimmt das Weltdatum genau einmal', () => {
-  const assigned = [];
+function sceneDateContext({ date = { year: 1740, month: 3, day: 9 }, comments = [], kind = 'session', page = { sessionPage: true } } = {}) {
   const thread = {
-    kind: 'session',
+    kind,
     threadId: 'chronik::session:0',
     entry: { id: 'chronik' },
     pageIndex: 0,
-    page: { sessionPage: true }
+    page
   };
   const context = runFiles([
     '../modules/world-date/world-date-model.js',
     '../modules/world-date/world-date-scene-default.js'
   ], {
-    _commentCache: {},
+    _commentCache: { [thread.threadId]: comments },
     getCurrentCommentThread: () => thread,
-    setModuleSceneStartDateAleria: (entryId, pageIndex, date) => {
-      assigned.push({ entryId, pageIndex, date: { ...date } });
-      return true;
-    },
-    AleriaWorldDateStore: {
-      getState: () => ({ date: { year: 1740, month: 3, day: 9 } })
-    }
+    setModuleSceneStartDateAleria: () => assert.fail('Comment dates must not write the containing module'),
+    AleriaWorldDateStore: { getState: () => ({ date }) }
   });
+  return { context, thread };
+}
 
+test('eine undatierte Szene trägt das Weltdatum im Beitrag und verändert das Modul nicht', () => {
+  const { context, thread } = sceneDateContext();
+  const before = structuredClone(thread);
   const first = vm.runInContext('AleriaSceneDateDefaults.ensureForCurrentThread()', context);
   assert.deepEqual({ ...first }, { year: 1740, month: 3, day: 9 });
-  assert.equal(assigned.length, 1);
+  assert.deepEqual(thread, before);
 
+  // The comment backend returns this metadata as part of the scene history.
+  context._commentCache[thread.threadId] = [{ sceneStartDateAleria: first }];
   context.AleriaWorldDateStore.getState = () => ({ date: { year: 1740, month: 3, day: 10 } });
   const second = vm.runInContext('AleriaSceneDateDefaults.ensureForCurrentThread()', context);
   assert.deepEqual({ ...second }, { year: 1740, month: 3, day: 9 });
-  assert.equal(assigned.length, 1);
+  assert.deepEqual(thread, before);
+});
+
+test('ein explizites Moduldatum hat Vorrang vor Kommentarhistorie und ausgewähltem Datum', () => {
+  const { context, thread } = sceneDateContext({
+    page: { sessionPage: true, sessionDateAleria: { year: 1739, month: 13, day: 36 } },
+    comments: [{ sceneStartDateAleria: { year: 1740, month: 2, day: 1 } }]
+  });
+  const before = structuredClone(thread);
+  const result = vm.runInContext('AleriaSceneDateDefaults.ensureForCurrentThread({year:1740,month:4,day:1})', context);
+  assert.deepEqual({ ...result }, { year: 1739, month: 13, day: 36 });
+  assert.deepEqual(thread, before);
+});
+
+test('ein Szenendatum aus der Kommentarhistorie bleibt nach Modulneuladen ohne Moduländerung verfügbar', () => {
+  const { context, thread } = sceneDateContext({ comments: [
+    { sceneStartDateAleria: { year: 1739, month: 13, day: 36 } }
+  ] });
+  // A fresh page has no automatic date written back into the module source.
+  thread.page = Object.freeze({ sessionPage: true });
+  const result = vm.runInContext('AleriaSceneDateDefaults.ensureForCurrentThread({year:1740,month:4,day:1})', context);
+  assert.deepEqual({ ...result }, { year: 1739, month: 13, day: 36 });
+  assert.equal(Object.hasOwn(thread.page, 'sessionDateAleria'), false);
+});
+
+test('ausgewählte Startdaten werden normalisiert und Weltdaten nicht per Referenz verändert', () => {
+  const date = { year: 1740, month: 3, day: 9 };
+  const { context } = sceneDateContext({ date });
+  const selected = vm.runInContext("AleriaSceneDateDefaults.ensureForCurrentThread({year:'1741',month:'1',day:'2'})", context);
+  assert.deepEqual({ ...selected }, { year: 1741, month: 1, day: 2 });
+  const fallback = vm.runInContext('AleriaSceneDateDefaults.ensureForCurrentThread({year:0})', context);
+  assert.deepEqual({ ...fallback }, date);
+  fallback.day = 10;
+  assert.equal(date.day, 9);
+});
+
+test('ungültige Weltdaten und Kommentare außerhalb von Szenen erhalten kein automatisches Startdatum', () => {
+  const invalid = sceneDateContext({ date: { year: 0 } }).context;
+  assert.equal(vm.runInContext('AleriaSceneDateDefaults.ensureForCurrentThread()', invalid), null);
+  const nonScene = sceneDateContext({ kind: 'entry-comments' }).context;
+  nonScene.AleriaWorldDateStore.getState = () => assert.fail('Non-scenes do not need the world date');
+  assert.equal(vm.runInContext('AleriaSceneDateDefaults.ensureForCurrentThread()', nonScene), null);
 });
 
 test('ein im ersten Kommentar gespeichertes Startdatum dient als stabile Wiederherstellung', () => {

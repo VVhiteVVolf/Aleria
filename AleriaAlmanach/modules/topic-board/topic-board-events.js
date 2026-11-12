@@ -48,7 +48,13 @@ function handleTopicBoardClick(event) {
   } else if (action === 'set-view') {
     event.preventDefault();
     setTopicBoardView(button.dataset.topicBoardView || TOPIC_BOARD_STATUS_OPEN);
+    globalThis.AleriaTopicBoardListState.setFocus('all');
+    globalThis.AleriaTopicBoardListState.setSort(button.dataset.topicBoardView === TOPIC_BOARD_STATUS_ARCHIVED ? 'played' : 'due');
     globalThis.AleriaTopicBoardListState.clearExpanded();
+    renderTopicBoard();
+  } else if (action === 'set-focus') {
+    event.preventDefault();
+    globalThis.AleriaTopicBoardListState.setFocus(button.dataset.topicBoardFocus);
     renderTopicBoard();
   } else if (action === 'toggle-details') {
     event.preventDefault();
@@ -56,6 +62,7 @@ function handleTopicBoardClick(event) {
   } else if (action === 'clear-list-filters') {
     event.preventDefault();
     globalThis.AleriaTopicBoardListState.resetFilters();
+    if (getTopicBoardState().view === TOPIC_BOARD_STATUS_ARCHIVED) globalThis.AleriaTopicBoardListState.setSort('played');
     renderTopicBoard();
   } else if (action === 'retry-sync') {
     event.preventDefault();
@@ -101,7 +108,7 @@ function handleTopicBoardInput(event) {
   if (listField) {
     if (listField === 'query') globalThis.AleriaTopicBoardListState.setQuery(event.target.value || '');
     else if (listField === 'category') globalThis.AleriaTopicBoardListState.setCategory(event.target.value || 'all');
-    else if (listField === 'sort') globalThis.AleriaTopicBoardListState.setSort(event.target.value || 'votes');
+    else if (listField === 'sort') globalThis.AleriaTopicBoardListState.setSort(event.target.value || 'due');
     renderTopicBoardList();
     return;
   }

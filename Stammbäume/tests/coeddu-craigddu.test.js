@@ -129,7 +129,8 @@ test('Beide Bürgerhäuser, ihre Portraits und CK2-Eigenschaften besitzen erreic
     assert.equal(record.family.lineage.crestFrame, 'iron');
     await access(new URL('../' + record.family.document.emblem, import.meta.url));
     await access(new URL(record.family.extensions.houseBiographyModule.image, new URL('../', import.meta.url)));
-    assert.match(record.family.extensions.houseBiographyModule.house.biographyText, /Haus Draig seit Generationen/);
+    assert.equal(record.family.document.houseProfile.liegeHouseId, 'haus-draig');
+    assert.match(record.family.extensions.houseBiographyModule.house.biographyText, /Draigs?/);
     for (const person of record.family.persons.filter(person => person.portrait)) {
       await access(new URL('../' + person.portrait, import.meta.url));
     }
@@ -141,4 +142,32 @@ test('Beide Bürgerhäuser, ihre Portraits und CK2-Eigenschaften besitzen erreic
   }
   assert.match(bio.biography.historyText, /Brenric.*Großen Krieg.*Sir Maredudd/s);
   assert.match(bio.biography.biographyText, /pflichtbewusst, aber gemütlich/);
+});
+
+test('Väterporträts und Brenrics neues Amt migrieren feldgenau und erhalten eigene Bilder und Familienwerte', () => {
+  for (const [family, id] of [[craigddu, 'craigddu-gruender'], [coeddu, 'brenric-coeddu']]) {
+    const source = family.persons.find(person => person.id === id);
+    const prior = structuredClone(family);
+    prior.extensions.sourceRevision = family.extensions.sourceRevision - 1;
+    prior.document.motto = 'Eigene Familiennotiz';
+    const father = prior.persons.find(person => person.id === id);
+    father.portrait = '';
+    if (id === 'brenric-coeddu') {
+      father.title = source.extensions.registryManagedFieldPreviousValues.title[0];
+      father.notes = source.extensions.registryManagedFieldPreviousValues.notes[0];
+    }
+    const upgraded = resolveRegisteredFamilyUpgrade(family, prior);
+    const actual = upgraded.persons.find(person => person.id === id);
+    assert.equal(actual.portrait, source.portrait);
+    assert.equal(actual.title, source.title);
+    assert.equal(actual.notes, source.notes);
+    assert.equal(upgraded.document.motto, prior.document.motto);
+    assert.equal(upgraded.document.houseProfile.rankId, 'commoner');
+    for (const key of ['partnerships', 'parentages', 'cadetBranches', 'timeJumps']) assert.deepEqual(upgraded[key], prior[key]);
+    assert.deepEqual(upgraded.persons.map(person => [person.id, person.worldPersonId, person.birth, person.death, person.houseId]),
+      prior.persons.map(person => [person.id, person.worldPersonId, person.birth, person.death, person.houseId]));
+    assert.deepEqual(resolveRegisteredFamilyUpgrade(family, upgraded), upgraded);
+    father.portrait = 'assets/images/portraits/eigenes-portraet.png';
+    assert.equal(resolveRegisteredFamilyUpgrade(family, prior).persons.find(person => person.id === id).portrait, father.portrait);
+  }
 });

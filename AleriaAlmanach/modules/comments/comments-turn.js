@@ -1,4 +1,4 @@
-// Comment turn-state subscription and controls.
+﻿// Comment turn-state subscription and controls.
 let _commentTurnThreadId = null;
 let _commentTurnUnsubscribe = null;
 let _commentTurnState = null;

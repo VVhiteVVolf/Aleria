@@ -135,7 +135,7 @@ export const HOUSE_CONTENT = {
       "familyId": "craigddu",
       "name": "Iestyn Craigddu",
       "role": "Vater von Hywel und Catrin",
-      "image": "",
+      "image": "../Stammbäume/assets/images/portraits/haus-craigddu/iestyn-craigddu.png",
       "detail": "Vater von Hywel und Catrin"
     },
     {

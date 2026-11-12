@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "city-guard",
+  "label": "Stadtwache",
+  "date": "2026-11-12",
+  "version": "v1",
+  "status": "active",
+  "tool": "built-in image_gen",
+  "apiOrCliUsed": false,
+  "generation": {
+    "prompt": "Use case: style-transfer.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an anonymous speaking NPC (\"Fremde Stimme\"). One image only, never a sheet, grid, collage or icon badge.\nInput image 1 is a STYLE AND SERIES REFERENCE ONLY, not an edit target. Match its anonymous near-black human silhouette, matte anime linework and cel-shading, simple medieval village backdrop, calm daylight, muted palette and large upper-body framing. Create the new role described below.\nScene: a quiet uncomplicated medieval village lane with two or three cream plaster-and-timber cottages, muted brown roofs, a little subdued greenery and soft blue sky. Background light and lower contrast than the figure, no crowd or signs.\nSubject and framing: one centered human adult, waist-up, head comfortably below the top edge, conversational gesturing hands fully inside the frame. Human face, head, hands, all exposed skin, clothing and equipment remain nearly black charcoal, with only sparse flat dark-slate outlines to distinguish broad garment shapes. Absolutely no eyes, nose, mouth, skin-colored patches, visible facial planes or facial detail. This is an anonymous living human speaking, not a ghost, monster, statue or assassin.\nStyle: match the supplied existing Tales of Xillia/Frieren-inspired clean matte anime / cel-shaded silhouette series. Clear simple contours, restrained flat values, no photorealism, realistic textures, painterly finish, bright metallic highlights or detailed materials. Keep the outer contour and conversational gesture exceptionally readable as a 48px thumbnail.\nConstraints: opaque full-square village scene, no transparency. No text, speech bubbles, watermark, border or frame. No invented heraldry, insignia, uniforms, religious emblems or decorative symbols. Natural human anatomy. Equipment is for recognizing the role through its dark silhouette, not for violence. No aggressive pose, fighting, blood or injury.\nNEW ROLE: An adult human town guard with the clear outer contour of a simple plain rounded medieval helmet, practical tunic and restrained light protective gear. One hand holds a single plain polearm upright and vertical at the side, the other free hand points calmly toward the village lane while speaking. Helmet, weapon and every part of the human remain near-black; no visor opening revealing eyes, no badge, crest, heraldry, shield, banner or uniform insignia. Keep helmet and polearm tip fully in frame. Calm directions, not a confrontation.",
+    "referenced_image_paths": [
+      "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png"
+    ],
+    "transparent_background": false
+  },
+  "references": [
+    {
+      "path": "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png",
+      "sha256": "8bc9d3f37a982f17e7a8c87fdab4ba107370ff9abc1a8a98217fd72ffad7d33e",
+      "role": "style-and-series-reference",
+      "actuallyViewed": true
+    }
+  ],
+  "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd40-5070-7080-8b8b-af7681ddad67\\exec-a09ce482-29b5-4303-90c5-92babb17b5cf.png",
+  "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/city-guard-v1.png",
+  "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/city-guard.png",
+  "sha256": "1d5f92b4b80ff3c242a874b6e6e0ee3a42a8bdec266f9b9c736269a44a0b6da6",
+  "bytes": 1692910,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGB",
+  "pngBitDepth": 8,
+  "pngColorType": 2,
+  "transformation": "none: byte-identical generator PNG",
+  "generatorOriginalAndActiveByteIdentical": true,
+  "visualInspection": {
+    "actuallyInspected": true,
+    "method": "Generated output and final active PNG opened with view_image",
+    "date": "2026-11-12",
+    "result": "passed",
+    "notes": "Gesichtslose dunkle Stadtwachensilhouette mit schlichtem Helm, senkrechter Stangenwaffe und ruhig deutender freier Hand. Waffenmotiv dient der Rollenlesbarkeit; keine Gewaltszene oder Heraldik."
+  },
+  "checks": {
+    "square": true,
+    "opaqueRgb": true,
+    "anonymousHumanSilhouette": true,
+    "noVisibleFaceOrSkin": true,
+    "conversationalGesture": true,
+    "simpleVillageBackground": true,
+    "noTextOrWatermark": true,
+    "noInventedHeraldryOrInsignia": true
+  },
+  "uiVerification": "Delegated to the parent integration/browser review; this receipt does not claim an executed UI check."
+}

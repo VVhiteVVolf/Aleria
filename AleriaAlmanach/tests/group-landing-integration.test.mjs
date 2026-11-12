@@ -44,7 +44,11 @@ test('The built-in Draig guard receives a page and selects actual serving member
   const source = JSON.parse(JSON.stringify(section.entries[0]));
   const entry = migrateGroupLandingEntry(source, { tab: section.tab });
   assert.equal(entry.pages[4].landingPage, true);
-  assert.deepEqual(collectGroupRoster(entry).map(member => member.name), ['Steffan Draig', 'Llywelyn Coeddu', 'Hywel Craigddu', 'Mathon Curiad']);
+  assert.deepEqual(collectGroupRoster(entry).map(member => member.name), [
+    'Steffan Draig', 'Sir Marared Curiad', 'Sir Pellinard Brândyddyn', 'Lady Ysabel Bronnor',
+    'Lady Eurgain Brândyddyn', 'Sir Urien Caelrith', 'Sir Mathon Curiad',
+    'Llywelyn Coeddu', 'Hywel Craigddu', 'Morcant Curiad', 'Lleucu Myrgath', 'Angharad Aelgorn'
+  ]);
   assert.equal(source.pages.length, 4);
 });
 

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "knight-2",
+  "label": "Ritter Variante",
+  "date": "2026-11-12",
+  "tool": "built-in image_gen",
+  "apiOrCliUsed": false,
+  "version": "v1",
+  "status": "active",
+  "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone square 1:1 RPG comment avatar of an anonymous human NPC speaking, not a sheet or collage.\nReference image: supplied existing role avatar is style, palette and village-backdrop reference. This requested image is a DIFFERENT variant of that same role, with substantially different headgear/body outline and conversational hand position. Keep the exact established image series look.\nStyle: Tales of Xillia/Frieren anime lineart with matte clean cel shading, simple textures, not realistic or painterly. Main human INCLUDING face and hands is completely dark charcoal, only restrained dark-slate edge lines. No visible eyes, mouth, nose, facial planes, skin colors or glowing slits. Entire person must read as faceless human silhouette.\nComposition: centered waist-up adult with head below top edge and hands in frame, foreground figure dominant and legible at 48px. Light quiet medieval timber-and-plaster village with 2-3 cream houses, brown roofs, pale lane and muted foliage, softly blue daylight sky behind. Full opaque square. Natural conversational gesturing, no combat, sinister atmosphere or supernatural effects.\nNo text, letters, insignia, heraldic symbols, frame, border, speech bubbles or watermark.\nVariant subject: A second adult medieval knight: sturdy broad build, rounded sallet helmet with visor raised above an entirely blank near-black face, overlapping rounded plate pauldrons, short plain tabard over a plate cuirass, WITHOUT the long shoulder cloak of the reference. Left arm bent with gauntlet resting across his chest in a respectful speaking gesture; other hand opened palm up to his side as if explaining. Hands dark gauntlets. No weapon held, no plumes or decorative emblems. Make rounded helmet and open silhouette pose clearly distinct from the reference's pointed closed visor and one-hand-at-waist pose.",
+  "referencePaths": [
+    "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/knight.png"
+  ],
+  "transparent_background": false,
+  "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-2a80-78c1-862d-49f020e4f087\\exec-038768a5-dce3-4cc5-b5f8-26c40d3a0cfc.png",
+  "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/knight-2-v1.png",
+  "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/knight-2.png",
+  "transformation": "none: byte-identical generator PNG",
+  "visuallyInspected": true,
+  "visualReview": "Root inspected the actual generated image returned by image_gen.",
+  "sha256": "a618840321353b802949f89b513611416ed6ea44750174e595e86776edcca55c",
+  "bytes": 1749846,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGB"
+}

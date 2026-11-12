@@ -1,3 +1,5 @@
+import { isDeepStrictEqual } from 'node:util';
+
 // Convert exported REST values for the existing scene JSON format. The private
 // project archive always keeps the untouched REST representation instead.
 export function decodeFirestoreValue(value) {
@@ -37,4 +39,20 @@ export function encodeFirestoreValue(input) {
 }
 export function encodeFirestoreFields(input) {
   return Object.fromEntries(Object.entries(input).map(([key,value])=>[key,encodeFirestoreValue(value)]));
+}
+
+// Editorial patches reuse unchanged typed REST values, including nested values.
+// JSON alone cannot reconstruct timestamp/reference/bytes oneof representations.
+export function encodeFirestoreValuePreservingTypes(previous, value) {
+  if (previous && isDeepStrictEqual(decodeFirestoreValue(previous), value)) return structuredClone(previous);
+  if (previous?.mapValue && value && typeof value === 'object' && !Array.isArray(value)) {
+    const fields = previous.mapValue.fields || {};
+    return { mapValue: { fields: Object.fromEntries(Object.entries(value).map(([key, child]) =>
+      [key, encodeFirestoreValuePreservingTypes(fields[key], child)])) } };
+  }
+  if (previous?.arrayValue && Array.isArray(value)) {
+    return { arrayValue: { values: value.map((child, index) =>
+      encodeFirestoreValuePreservingTypes(previous.arrayValue.values?.[index], child)) } };
+  }
+  return encodeFirestoreValue(value);
 }

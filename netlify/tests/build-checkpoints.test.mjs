@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { executeBuildPlan } from '../build/run-site-build.mjs';
-import { canCheckpointTask } from '../build/build-checkpoints.mjs';
+import { canCheckpointTask, openBuildCheckpoints } from '../build/build-checkpoints.mjs';
 import { SITE_BUILD_TASKS } from '../build/site-build-tasks.mjs';
 import { MAX_VALIDATION_AGE_MS } from '../build/site-build-plan.mjs';
 
@@ -123,7 +123,9 @@ test('output generators, unknown entry points and always tasks never become chec
 
 test('existing validation-only groups are eligible while output-owning groups remain required', () => {
   const tasks = SITE_BUILD_TASKS.map(value => ({ ...value, fingerprint: fingerprint(value.id) }));
-  assert.equal(tasks.filter(canCheckpointTask).length, 46);
+  for (const id of ['goldene-fassung', 'loer-hofjuwelier', 'gwynthor-landfamilien', 'character-reference-catalogs', 'gwynthor-heime', 'economy-calculator']) {
+    assert.equal(canCheckpointTask(tasks.find(value => value.id === id)), true, id);
+  }
   assert.equal(canCheckpointTask(tasks.find(value => value.id === 'notice-boards')), false);
   assert.equal(canCheckpointTask(tasks.find(value => value.id === 'regional-catalog')), false);
   assert.equal(canCheckpointTask(tasks.find(value => value.id === 'map-media')), false);
@@ -148,4 +150,30 @@ test('reviewed scoped house and source-export modes are check-only with exact ar
   assert.equal(eligible(['AleriaAlmanach/scripts/build-goettliche-eleganz.mjs', '--check']), true);
   assert.equal(eligible(['AleriaAlmanach/scripts/build-goettliche-eleganz.mjs', '--apply']), false);
   assert.equal(eligible(['unreviewed.mjs', '--houses=haus-gwernant', '--check']), false);
+});
+
+test('simultaneous task completions retain every successful checkpoint', async t => {
+  const options = await fixture(t);
+  const checkpoints = await openBuildCheckpoints(options.root, options.localCheckpoints);
+  const completed = Array.from({ length: 12 }, (_, i) => task(`parallel-${i}`, { verifiedAt: new Date().toISOString() }));
+  await Promise.all(completed.map(value => checkpoints.save(value)));
+  const saved = JSON.parse(await readFile(options.file, 'utf8'));
+  assert.deepEqual(Object.keys(saved.tasks).sort(), completed.map(value => value.id).sort());
+  for (const value of completed) assert.equal(await checkpoints.reuse(value), value.verifiedAt);
+});
+
+test('a parallel failure drains and saves a successful sibling; retry runs only missing groups', async t => {
+  const options = await fixture(t);
+  const make = () => ['passed', 'failed', 'unstarted'].map(id => task(id, { parallelValidation: true }));
+  const firstCalls = [];
+  await assert.rejects(executeBuildPlan(make(), { ...options, log() {}, run: async args => {
+    firstCalls.push(args[1]);
+    if (args[1] === 'failed.test.mjs') throw Error('parallel failure');
+  } }), /parallel failure/);
+  assert.deepEqual(firstCalls, ['passed.test.mjs', 'failed.test.mjs']);
+  const saved = JSON.parse(await readFile(options.file, 'utf8'));
+  assert.deepEqual(Object.keys(saved.tasks), ['passed']);
+  const nextCalls = [];
+  await executeBuildPlan(make(), { ...options, log() {}, run: async args => { nextCalls.push(args[1]); } });
+  assert.deepEqual(nextCalls.sort(), ['failed.test.mjs', 'unstarted.test.mjs']);
 });

@@ -11,6 +11,7 @@ function loadTopicBoardListState() {
     '../modules/topic-board/topic-board-travel.js',
     '../modules/topic-board/topic-board-schedule.js',
     '../modules/topic-board/topic-board-model.js',
+    '../modules/topic-board/topic-board-planning.js',
     '../modules/topic-board/topic-board-list-state.js'
   ]) {
     vm.runInContext(fs.readFileSync(new URL(relativePath, import.meta.url), 'utf8'), context);
@@ -35,6 +36,7 @@ function loadTopicBoardUi() {
     '../modules/topic-board/topic-board-travel.js',
     '../modules/topic-board/topic-board-schedule.js',
     '../modules/topic-board/topic-board-model.js',
+    '../modules/topic-board/topic-board-planning.js',
     '../modules/topic-board/topic-board-list-state.js',
     '../modules/topic-board/topic-board-travel-ui.js',
     '../modules/topic-board/topic-board-schedule-ui.js',
@@ -112,6 +114,82 @@ test('Kalendersortierung stellt den nächsten festen Termin zuerst', () => {
   })()`, context);
 
   assert.deepEqual(Array.from(ids), ['zuerst', 'spaeter', 'offen']);
+});
+
+test('Archivsortierung zeigt kürzlich gespielte Plays vor neueren Spielweltterminen und späteren Bearbeitungen', () => {
+  const context = loadTopicBoardListState();
+  const result = vm.runInContext(`(() => {
+    const input = [
+      { id: 'frueher-gespielt', status: 'archived', archivedAtClient: 100, updatedAtClient: 900,
+        schedule: { startDate: { year: 1740, month: 4, day: 2 } } },
+      { id: 'zuletzt-gespielt', status: 'archived', archivedAtClient: 300, updatedAtClient: 301,
+        schedule: { startDate: { year: 1740, month: 3, day: 9 } } },
+      { id: 'alter-archivbestand', status: 'archived', updatedAtClient: 200,
+        schedule: { startDate: { year: 1740, month: 3, day: 12 } } }
+    ];
+    const before = JSON.stringify(input);
+    AleriaTopicBoardListState.setSort('played');
+    const ids = AleriaTopicBoardListState.selectProposals(input).map(proposal => proposal.id);
+    return { ids, sort: AleriaTopicBoardListState.getState().sort, unchanged: before === JSON.stringify(input) };
+  })()`, context);
+  assert.deepEqual(Array.from(result.ids), ['zuletzt-gespielt', 'alter-archivbestand', 'frueher-gespielt']);
+  assert.equal(result.sort, 'played');
+  assert.equal(result.unchanged, true);
+});
+
+test('Planungsfokus folgt dem aktuellen Weltdatum und verbindet sich mit Suche und Themenart', () => {
+  const context = loadTopicBoardListState();
+  context.AleriaWorldDateStore = { getState: () => ({ date: { year: 1740, month: 3, day: 10 } }) };
+  const first = vm.runInContext(`(() => {
+    globalThis.planned = [
+      { id: 'today', title: 'Schiff heute', category: 'reise', schedule: { startDate: { year: 1740, month: 3, day: 10 } } },
+      { id: 'tomorrow', title: 'Schiff morgen', category: 'reise', schedule: { startDate: { year: 1740, month: 3, day: 11 } } },
+      { id: 'court', title: 'Schiff am Hof', category: 'hof', schedule: { startDate: { year: 1740, month: 3, day: 11 } } },
+      { id: 'idea', title: 'Schiff später', category: 'reise' }
+    ];
+    AleriaTopicBoardListState.setCategory('reise');
+    AleriaTopicBoardListState.setQuery('schiff');
+    AleriaTopicBoardListState.setFocus('upcoming');
+    return AleriaTopicBoardListState.selectProposals(planned).map(proposal => proposal.id);
+  })()`, context);
+  assert.deepEqual(Array.from(first), ['tomorrow']);
+
+  context.AleriaWorldDateStore = { getState: () => ({ date: { year: 1740, month: 3, day: 11 } }) };
+  const later = vm.runInContext(`(() => {
+    const upcoming = AleriaTopicBoardListState.selectProposals(planned).map(proposal => proposal.id);
+    AleriaTopicBoardListState.setFocus('relevant');
+    return { upcoming, relevant: AleriaTopicBoardListState.selectProposals(planned).map(proposal => proposal.id) };
+  })()`, context);
+  assert.deepEqual(Array.from(later.upcoming), []);
+  assert.deepEqual(Array.from(later.relevant), ['today', 'tomorrow']);
+});
+
+test('Planungsfokus und Kalendersortierung werden vollständig zurückgesetzt, ohne Vorschläge zu verändern', () => {
+  const context = loadTopicBoardListState();
+  const result = vm.runInContext(`(() => {
+    const input = [
+      { id: 'idea', title: 'Schiff ohne Termin', category: 'reise' },
+      { id: 'later', title: 'Schiff später', category: 'reise', schedule: { startDate: { year: 1740, month: 3, day: 12 } } },
+      { id: 'first', title: 'Schiff morgen', category: 'reise', schedule: { startDate: { year: 1740, month: 3, day: 10 } } }
+    ];
+    const before = JSON.stringify(input);
+    const initialSort = AleriaTopicBoardListState.getState().sort;
+    AleriaTopicBoardListState.setFocus('unscheduled');
+    const filtered = AleriaTopicBoardListState.hasFilters();
+    const ids = AleriaTopicBoardListState.selectProposals(input).map(proposal => proposal.id);
+    AleriaTopicBoardListState.setSort('votes');
+    AleriaTopicBoardListState.resetFilters();
+    const restored = AleriaTopicBoardListState.selectProposals(input).map(proposal => proposal.id);
+    return { initialSort, filtered, ids, restored, state: AleriaTopicBoardListState.getState(), unchanged: before === JSON.stringify(input), filters: AleriaTopicBoardListState.hasFilters() };
+  })()`, context);
+  assert.equal(result.initialSort, 'due');
+  assert.equal(result.filtered, true);
+  assert.deepEqual(Array.from(result.ids), ['idea']);
+  assert.deepEqual(Array.from(result.restored), ['first', 'later', 'idea']);
+  assert.equal(result.state.focus, 'all');
+  assert.equal(result.state.sort, 'due');
+  assert.equal(result.unchanged, true);
+  assert.equal(result.filters, false);
 });
 
 test('in der kompakten Liste ist immer hoechstens ein Thema aufgeklappt', () => {

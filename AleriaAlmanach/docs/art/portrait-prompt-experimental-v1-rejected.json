@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "presetId": "anime-portrait-experimental-reference-v1",
+  "status": "rejected",
+  "rejectedAt": "2026-11-12",
+  "application": "Vollstaendig verworfen. Nicht fuer neue Charakterportraets verwenden, anbieten oder als Fallback einsetzen. Nur historischer Herkunftsbeleg.",
+  "decisionQuote": "Mir gefallen 1 und 3 am besten. Verwerfe 2. komplett. Wir benutzen nur noch 1 oder 2 fuer Charakter Portraits.",
+  "originalPreset": {
+    "name": "Experimentelles Porträt nach den sieben Nutzerbeispielen",
+    "status": "experimental",
+    "useFor": [
+      "Eigenständige Figurenporträts mit Gesicht und Oberkörper im Fokus"
+    ],
+    "aspectRatio": "2:3",
+    "transparentBackground": false,
+    "basedOn": "anime-scene-portrait",
+    "referenceSource": "Sieben im Chat am 9. November 2026 gelieferte Beispielbilder; keine lokalen Originalpfade behauptet.",
+    "referenceUsage": "Die Beispiele wurden visuell ausgewertet. Ihre Zeichnung, matte Farbgebung und gezeichneten Materialien dienen als Stilrichtung; Identitäten, Ausrüstung, moderne Elemente oder spitze Ohren nicht automatisch übernehmen.",
+    "prompt": "Bildformat 2:3, hochkant. Ein handgezeichnet wirkendes Anime-Fantasy-Porträt nach dem Erscheinungsbild der beigefügten Beispielbilder.\n\nFIGUR: [NAME, ALTER, AUSSEHEN UND INDIVIDUELLE GESICHTSZÜGE].\nKLEIDUNG UND FARBEN: [ZUR FIGUR PASSENDE MITTELALTERLICHE KLEIDUNG].\nHALTUNG UND AUSDRUCK: [RUHIGE STEHPOSE UND PERSÖNLICHE MIMIK].\nHINTERGRUND: [ZUR FIGUR UND ZUM ORT PASSENDE MITTELALTERLICHE UMGEBUNG].\n\nKomposition: Die Figur steht ruhig und natürlich. Gesicht und Oberkörper sind der eindeutige Bildschwerpunkt. Zeige die vollständige Frisur und den Oberkörper bis ungefähr zur Taille oder oberen Hüfte. Das Gesicht ist groß, ausdrucksstark und gut lesbar. Keine weit entfernte Ganzkörperansicht; Beine und Boden erhalten keinen eigenen Bildraum. Natürliche aufrechte Haltung mit einer leichten individuellen Körperdrehung. Hände nur, soweit sie selbstverständlich in den Ausschnitt gehören; sie bleiben gegenüber dem Gesicht untergeordnet.\n\nZeichenstil: Feine, sichere, leicht variierende dunkelbraune bis anthrazitfarbene Konturen. Lebendige gezeichnete Linien statt gleichmäßig dicker Umrandungen. Charaktervolle Anime-Gesichter mit individuellen Nasen, Brauen, Augenformen, Wangen und Kieferlinien. Natürlich wirkende Anime-Proportionen. Das konkrete Alter muss sichtbar sein: Erwachsene und ältere Menschen haben passende Gesichtszüge, Kinder erkennbare kindliche Proportionen. Die Mimik vermittelt Persönlichkeit statt eines austauschbaren Schönheitsgesichts.\n\nFarbflächen und Licht: Matte, harmonische Farben mit natürlichen Hauttönen. Überwiegend klares, ruhiges Cel-Shading mit wenigen zusammenhängenden Schattenformen und behutsamen weicheren Übergängen an ausgewählten Stellen. Dezente Wärme und atmosphärische Tiefe wie in den Beispielen. Sparsame Glanzlichter, kein hochglänzender Kunststoff- oder Renderlook.\n\nMaterialien: Stoff, Leder, Holz und Metall bleiben deutlich gezeichnet. Wenige gezielte Falten, Nähte und feine Oberflächenunregelmäßigkeiten geben ihnen Substanz. Gebrauchsspuren nur, wenn sie zur Figur und ihrer Kleidung passen. Gepflegte hochwertige Kleidung bleibt gepflegt. Materialdetails ordnen sich dem Gesicht unter; keine überladene Muster- oder Schmuckflut.\n\nUmgebung: Immer ein passender, erkennbarer Hintergrund, der Beruf, Herkunft oder Aufenthaltsort unterstützt. Ruhige Architektur und wenige sinnvoll gewählte Formen genügen. Der Hintergrund ist etwas weicher und kontrastärmer als die Figur. Kein leerer Studiogradient und keine Freistellung. Licht durch Tageslicht, Kerzen oder einfache historische Öllampen; ausschließlich mittelalterlich passende Ausstattung.\n\nRequisiten: Keine zusätzlich erfundenen Gegenstände, Waffen, Tiere, dekorativen Anhängsel oder Effekte. Hände möglichst leer. Nur ausdrücklich zur Figur gehörende, angefragte Ausrüstung verwenden und auch dann die Bildfläche ruhig halten.\n\nDie Beispielbilder bestimmen ausschließlich Zeichnung, Farbbehandlung und Materialdarstellung. Identität, Haarfarbe, Augenfarbe, Kleidung und Ort stammen aus der Figurenbeschreibung. Menschen und Alben haben anatomisch menschliche, abgerundete Ohren; keine spitzen oder verlängerten Elfenohren übernehmen. Kein Fotorealismus, keine dreidimensionale Renderästhetik, keine übertriebene Weichzeichnung, keine modernen Gegenstände, keine Schrift, kein Rahmen und kein Wasserzeichen.",
+    "promptFile": "AleriaAlmanach/docs/art/portrait-prompt-experimental-v1.txt",
+    "compositionPreference": "Ruhig stehend, vollständige Frisur bis Taille oder obere Hüfte, Gesicht und Oberkörper im Fokus, passende erkennbare Umgebung, möglichst leere Hände, wenige Requisiten.",
+    "application": "Separater experimenteller Zweitprompt. Kein automatischer Wechsel des bisherigen Presets oder Ersatz vorhandener Porträts.",
+    "provenance": "Nutzerauftrag vom 9. November 2026: Neben dem alten Porträtprompt eine experimentelle Variante aus sieben Beispielen erstellen. Ergänzung: 2:3, Gesicht/Oberkörper, stehend, passender Hintergrund, keine Überladung."
+  }
+}

@@ -94,14 +94,14 @@ window.HAEUSER_DATA = {
   "showMotto": false,
   "sections": {
     "overview": "Die Coeddu sind ein kriegerisches Bürgerhaus aus Gwynthor mit einer beliebten Waffenschmiede. Seit Generationen dienen Angehörige als Wachen und Waffenknechte, vereinzelt auch als Ritter, den Draigs. Das Handwerk und der persönliche Waffendienst stehen nebeneinander.",
-    "history": "Brenric Coeddu diente im Großen Krieg unter Sir Maredudd. Gelenkbeschwerden führten später zu seinem Ruhestand. Mit Gweneth hat er die Kinder Rhydian, Llywelyn, Maelwen und Thalor. Llywelyn ist Waffenknecht und mit Catrin Craigddu verheiratet; ihr Sohn heißt Ellian.",
+    "history": "Brenric Coeddu diente im Großen Krieg unter Sir Maredudd. Gelenk- und Fußbeschwerden führten zunächst zum Rückzug aus dem Felddienst. Heute dient er den Draigs als persönlicher Ritter und Kriegswart der Aufklärung: Unter Sir Maredudd wertet er Meldungen aus, führt Lagekarten und ordnet Boten- sowie Signalberichte in Abstimmung mit Efael. Mit Gweneth hat er die Kinder Rhydian, Llywelyn, Maelwen und Thalor. Llywelyn ist Waffenknecht und mit Catrin Craigddu verheiratet; ihr Sohn heißt Ellian.",
     "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
     "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
     "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
     "holdings": "Die Waffenschmiede ist als Familienbetrieb belegt. Tätigkeiten einzelner Angehöriger in anderen Betrieben bleiben eigenständige Arbeitsverbindungen.",
     "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
     "conflictsAlliances": "Weitere Hausallianzen und Fehden sind bisher nicht belegt.",
-    "values": "Llywelyns Freundschaft mit Hywel Craigddu und die Ehe mit dessen Schwester Catrin verbinden die beiden Bürgerhäuser. Maelwens Ehe mit Tiberian Raves führt in den kaufmännischen Familienkreis. Brenrics Veteranenrolle begründet keine unbekannte Amtsfolge.",
+    "values": "Llywelyns Freundschaft mit Hywel Craigddu und die Ehe mit dessen Schwester Catrin verbinden die beiden Bürgerhäuser. Maelwens Ehe mit Tiberian Raves führt in den kaufmännischen Familienkreis. Brenrics neues Amt ist eine persönliche Aufgabe im Dienst der Draigs; Haus Coeddu bleibt bürgerlich.",
     "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
     "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
     "historicalFigures": "Weitere historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
@@ -126,6 +126,12 @@ window.HAEUSER_DATA = {
       "href": "../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html",
       "alt": "Herrschaftsbanner von Celtigerns Wacht",
       "format": "square"
+    },
+    "hof-offices-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-coeddu/brenric-coeddu.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-coeddu&mode=view&person=brenric-coeddu",
+      "alt": "Brenric Coeddu",
+      "format": "portrait"
     },
     "hof-offices-2": {
       "src": "../Stammbäume/assets/images/portraits/haus-coeddu/llywelyn-coeddu.png",
@@ -154,10 +160,10 @@ window.HAEUSER_DATA = {
         "entries": [
           {
             "name": "Brenric Coeddu",
-            "role": "Waffenknecht im Ruhestand · Veteran des Großen Krieges",
-            "detail": "Waffenknecht im Ruhestand · Veteran des Großen Krieges",
+            "role": "Kriegswart der Aufklärung · Ritter im Dienst von Haus Draig",
+            "detail": "Kriegswart der Aufklärung · Ritter im Dienst von Haus Draig",
             "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-coeddu&mode=view&person=brenric-coeddu",
-            "imageKey": ""
+            "imageKey": "hof-offices-1"
           },
           {
             "name": "Llywelyn Coeddu",

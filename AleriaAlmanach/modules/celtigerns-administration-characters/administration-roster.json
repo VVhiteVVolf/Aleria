@@ -1,0 +1,334 @@
+{
+    "schema":  "aleria.administration-character-roster",
+    "schemaVersion":  1,
+    "feature":  "celtigerns-administration-characters",
+    "authoredAt":  "2026-11-07T22:00:00.000Z",
+    "scope":  "Nur die 19 fehlenden Figuren der acht bestehenden Verwaltungsquellen; Brenric separat, bestehende Onlineakten ausgeschlossen.",
+    "people":  [
+                   {
+                       "worldPersonId":  "person--haus-chwedlonol--niniane-chwedlonol",
+                       "name":  "Niniane Chwedonol",
+                       "familyId":  "haus-chwedlonol",
+                       "personId":  "niniane-chwedlonol",
+                       "aliases":  [
+                                       "Niniane Chwedlonol",
+                                       "Niniane Chwedonol"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "militaer",
+                                                 "roleId":  "niniane-chwedlonol"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   },
+                   {
+                       "worldPersonId":  "person--haus-awenor--gwaeron-awenor",
+                       "name":  "Gwaeron Awenor",
+                       "familyId":  "haus-awenor",
+                       "personId":  "gwaeron-awenor",
+                       "aliases":  [
+                                       "Gwaeron Awenor"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "militaer",
+                                                 "roleId":  "gwaeron-awenor"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   },
+                   {
+                       "worldPersonId":  "person--haus-awenor--ffraid-awenor",
+                       "name":  "Ffraid Awenor",
+                       "familyId":  "haus-awenor",
+                       "personId":  "ffraid-awenor",
+                       "aliases":  [
+                                       "Ffraid Awenor"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "militaer",
+                                                 "roleId":  "ffraid-awenor"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   },
+                   {
+                       "worldPersonId":  "person--haus-awenydd--derfel-awenydd",
+                       "name":  "Derfel Awenydd",
+                       "familyId":  "haus-awenydd",
+                       "personId":  "derfel-awenydd",
+                       "aliases":  [
+                                       "Derfel Awenydd"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "militaer",
+                                                 "roleId":  "derfel-awenydd"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   },
+                   {
+                       "worldPersonId":  "person--haus-chwedlonol--rhonwen-chwedlonol",
+                       "name":  "Rhonwen Chwedonol",
+                       "familyId":  "haus-chwedlonol",
+                       "personId":  "rhonwen-chwedlonol",
+                       "aliases":  [
+                                       "Rhonwen Chwedlonol",
+                                       "Rhonwen Chwedonol"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "militaer",
+                                                 "roleId":  "rhonwen-chwedlonol"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   },
+                   {
+                       "worldPersonId":  "person--haus-chwedlonol--meredithe-1677-chwedlonol",
+                       "name":  "Meredithe Chwedonol",
+                       "familyId":  "haus-chwedlonol",
+                       "personId":  "meredithe-1677-chwedlonol",
+                       "aliases":  [
+                                       "Meredithe Chwedlonol",
+                                       "Meredithe Chwedonol"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "militaer",
+                                                 "roleId":  "meredithe-1677-chwedlonol"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   },
+                   {
+                       "worldPersonId":  "person--gwynthor-formlingssache--euddogwy",
+                       "name":  "Euddogwy O\u0027Cenyr",
+                       "familyId":  "",
+                       "personId":  "euddogwy",
+                       "aliases":  [
+                                       "Euddogwy O\u0027Cenyr"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "klerus",
+                                                 "roleId":  "klerus-sekretaer"
+                                             }
+                                         ],
+                       "contextualIdentity":  {
+                                                  "worldPersonId":  "person--gwynthor-formlingssache--euddogwy",
+                                                  "personId":  "euddogwy",
+                                                  "birth":  "1702",
+                                                  "sourcePath":  "AleriaAlmanach/modules/gwynthor-cathedral/patriarch-adjutant.mjs",
+                                                  "note":  "Vorhandene eigenständige native Identität; keine Stammbaumfamilie überliefert."
+                                              }
+                   },
+                   {
+                       "worldPersonId":  "person--haus-eneiniog--peredur-eneiniog",
+                       "name":  "Peredur Eneiniog",
+                       "familyId":  "haus-eneiniog",
+                       "personId":  "peredur-eneiniog",
+                       "aliases":  [
+                                       "Peredur Eneiniog"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "klerus",
+                                                 "roleId":  "klerus-peredur"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   },
+                   {
+                       "worldPersonId":  "person--celtigerns-wacht--gwenydd-anghof",
+                       "name":  "Gwenydd Anghof",
+                       "familyId":  "",
+                       "personId":  "gwenydd-anghof",
+                       "aliases":  [
+                                       "Gwenydd Anghof"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "klerus",
+                                                 "roleId":  "klerus-gwendolyn"
+                                             }
+                                         ],
+                       "contextualIdentity":  {
+                                                  "worldPersonId":  "person--celtigerns-wacht--gwenydd-anghof",
+                                                  "personId":  "gwenydd-anghof",
+                                                  "birth":  "",
+                                                  "sourcePath":  "Kontinente/modules/administration/data/celtigerns-klerus.mjs",
+                                                  "note":  "Eigenständige belegte Amtsfigur; genealogische Zuordnung ausdrücklich offen. Kein Ersatz durch eine namensgleiche andere Familie."
+                                              }
+                   },
+                   {
+                       "worldPersonId":  "person--celtigerns-wacht--torri-vikar-wyrm",
+                       "name":  "Torri",
+                       "familyId":  "",
+                       "personId":  "torri-vikar-wyrm",
+                       "aliases":  [
+                                       "Torri"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "klerus",
+                                                 "roleId":  "klerus-wyrm"
+                                             }
+                                         ],
+                       "contextualIdentity":  {
+                                                  "worldPersonId":  "person--celtigerns-wacht--torri-vikar-wyrm",
+                                                  "personId":  "torri-vikar-wyrm",
+                                                  "birth":  "",
+                                                  "sourcePath":  "Kontinente/modules/administration/data/celtigerns-klerus.mjs",
+                                                  "note":  "Eigenständiger Vikar der Wyrm ohne überlieferten Familiennamen; getrennt von der historischen Asyn-Ehefrau und dem jungen Torri Gelyn."
+                                              }
+                   },
+                   {
+                       "worldPersonId":  "person--haus-eneiniog--angharad-eneiniog",
+                       "name":  "Angharad Eneiniog",
+                       "familyId":  "haus-eneiniog",
+                       "personId":  "angharad-eneiniog",
+                       "aliases":  [
+                                       "Angharad Eneiniog"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "klerus",
+                                                 "roleId":  "klerus-angharad"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   },
+                   {
+                       "worldPersonId":  "person--haus-balchder--kimball-balchder",
+                       "name":  "Kimball Balchder",
+                       "familyId":  "haus-balchder",
+                       "personId":  "kimball-balchder",
+                       "aliases":  [
+                                       "Kimball Balchder"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "gerichtsbarkeit",
+                                                 "roleId":  "akten"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   },
+                   {
+                       "worldPersonId":  "person--haus-balchder--avan-balchder",
+                       "name":  "Avan Balchder",
+                       "familyId":  "haus-balchder",
+                       "personId":  "avan-balchder",
+                       "aliases":  [
+                                       "Avan Balchder"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "finanzen",
+                                                 "roleId":  "rechnung"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   },
+                   {
+                       "worldPersonId":  "person--haus-gwyllach--meirion-gwyllach",
+                       "name":  "Meirion Gwyllach",
+                       "familyId":  "haus-gwyllach",
+                       "personId":  "meirion-gwyllach",
+                       "aliases":  [
+                                       "Meirion Gwyllach"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "spionage",
+                                                 "roleId":  "meirion-gwyllach"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   },
+                   {
+                       "worldPersonId":  "person--haus-gwyllach--efael-gwyllach",
+                       "name":  "Efael Gwyllach",
+                       "familyId":  "haus-gwyllach",
+                       "personId":  "efael-gwyllach",
+                       "aliases":  [
+                                       "Efael Gwyllach"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "spionage",
+                                                 "roleId":  "efael-gwyllach"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   },
+                   {
+                       "worldPersonId":  "person--haus-gwyllach--meredydd-gwyllach",
+                       "name":  "Meredydd Gwyllach",
+                       "familyId":  "haus-gwyllach",
+                       "personId":  "meredydd-gwyllach",
+                       "aliases":  [
+                                       "Meredydd Gwyllach"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "spionage",
+                                                 "roleId":  "meredydd-gwyllach"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   },
+                   {
+                       "worldPersonId":  "person--haus-gwyllach--anelen-gwyllach",
+                       "name":  "Anelen Gwyllach",
+                       "familyId":  "haus-gwyllach",
+                       "personId":  "anelen-gwyllach",
+                       "aliases":  [
+                                       "Anelen Gwyllach"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "spionage",
+                                                 "roleId":  "anelen-gwyllach"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   },
+                   {
+                       "worldPersonId":  "person--haus-gwyllach--drystan-gwyllach",
+                       "name":  "Drystan Gwyllach",
+                       "familyId":  "haus-gwyllach",
+                       "personId":  "drystan-gwyllach",
+                       "aliases":  [
+                                       "Drystan Gwyllach"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "spionage",
+                                                 "roleId":  "drystan-gwyllach"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   },
+                   {
+                       "worldPersonId":  "person--haus-gwyllach--talyfer-gwyllach",
+                       "name":  "Talyfer Gwyllach",
+                       "familyId":  "haus-gwyllach",
+                       "personId":  "talyfer-gwyllach",
+                       "aliases":  [
+                                       "Talyfer Gwyllach"
+                                   ],
+                       "officeSources":  [
+                                             {
+                                                 "areaId":  "spionage",
+                                                 "roleId":  "talyfer-gwyllach"
+                                             }
+                                         ],
+                       "contextualIdentity":  null
+                   }
+               ]
+}

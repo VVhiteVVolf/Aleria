@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "craftsperson",
+  "label": "Handwerker",
+  "date": "2026-11-12",
+  "tool": "built-in image_gen",
+  "apiOrCliUsed": false,
+  "version": "v1",
+  "status": "unselected",
+  "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified speaking NPC (\"Fremde Stimme\"). A single image, never a sheet or collage.\nReference images: the supplied existing man and woman avatars are style and composition references ONLY. Match their series exactly, with a different adult role, outfit outline and gesture.\nStyle: Tales of Xillia/Frieren anime drawing, clear anime lineart and clean matte cel shading, simple anime textures. No realism, painterly texture or 3D.\nComposition: centered waist-up human dominates the foreground, top of head below top edge, both hands fully visible and separated from the torso. Entire human INCLUDING face, skin and hands is near-black charcoal with restrained dark-slate edge accents. Absolutely featureless face: no eyes, nose, mouth or facial planes. Normal rounded human ears, no fantasy species.\nBackdrop: two or three simple cream timber-and-plaster medieval village cottages, brown roofs beside pale quiet lane, muted foliage and soft blue sky. Light background, calm warm-neutral daylight, low contrast behind dark figure. No other people, no shop signs.\nKeep human silhouette and conversational hand gestures very legible at 48px. Full opaque square scene. No text, logos, heraldry, frame, border, speech bubbles or watermark. Not sinister, supernatural or aggressive.\nSubject variant: An adult male medieval village craftsman with broad shoulders, short hair contour, rolled-up tunic sleeves and a plain sturdy work apron. A small hammer outline tucked at the side of his waist, never brandished. Both dark hands open in an explanatory talking gesture, one palm up to the side and the other loosely before the chest. Clothing and exposed arms all near-black charcoal; no visible skin or facial features. No workshop clutter, sparks or action scene.",
+  "referencePaths": [
+    "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/man.png",
+    "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/woman.png"
+  ],
+  "transparent_background": false,
+  "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-2a80-78c1-862d-49f020e4f087\\exec-5f370190-2262-4658-a1e7-b79ec83070be.png",
+  "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/craftsperson-v1.png",
+  "activePath": null,
+  "transformation": "none: byte-identical generator PNG",
+  "visuallyInspected": true,
+  "visualReview": "Root inspected the actual generated image returned by image_gen.",
+  "sha256": "5aac6b185b1b80c08185bfe259d1fc79181803234f0110a788288cd55f50a148",
+  "bytes": 1794148,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGB",
+  "formerActivePath": "AleriaAlmanach/public/assets/comment-foreign-voice/craftsperson.png",
+  "selectionNote": "User selected robber, knight-2 and mercenary-2 instead. Original retained; only the verified identical active copy was removed."
+}

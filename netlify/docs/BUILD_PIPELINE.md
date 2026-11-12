@@ -21,6 +21,20 @@ globale Kette mehr, die bei jeder Änderung sämtliche Fachbereiche prüft.
   Git-Stand enthalten. Sie einfach wegzulassen könnte ältere Kataloge ausliefern.
 - Die kleine Prüfung der Build-Auswahl läuft bei jedem Build.
 
+Der Runner prüft ausgewählte Quest-, Wappen- und Wirtschaftsprojektionen zuerst
+und meldet deren Fehler gesammelt, bevor längere Tests beginnen. Diese frühe
+Prüfung ist rein lesend; die zugehörigen Fachprüfungen bleiben vollständig.
+`--preflight` führt nur diesen kurzen Abgleich gegen den Arbeitsbaum aus.
+
+`build-validation-scheduler.mjs` führt ausdrücklich mit `parallelValidation`
+markierte, bekannte reine Prüfgruppen mit höchstens zwei gleichzeitigen Gruppen
+aus. `--jobs=1..4` setzt die Grenze. Aufgaben mit Installationen, unbekannten
+Befehlen oder erzeugten Ausgaben bleiben serielle Grenzen. Die Freigaben der
+einzelnen Befehle liegen gemeinsam mit dem Checkpointvertrag in
+`validation-commands.mjs`. Eine Parallelmarkierung allein genügt nicht.
+Gemeinsame Eingabegrenzen bleiben konservativ, bis ihre Verbraucher gesondert
+geprüft wurden.
+
 ## Erfolgreiche Prüfungen wiederverwenden
 
 Jede erfolgreiche Veröffentlichung enthält `build-meta/validation.json`. Die

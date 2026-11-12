@@ -1039,8 +1039,9 @@
         }
       },
       "personCount": 11,
-      "revision": 5,
-      "updatedAt": "2026-10-16T00:26:06.470Z",
+      "sourceRevision": 4,
+      "revision": 7,
+      "updatedAt": "2026-11-07T21:49:59.180Z",
       "link": "Stammbaum.html?family=haus-coeddu&mode=view",
       "source": "github"
     },
@@ -1073,8 +1074,9 @@
         }
       },
       "personCount": 29,
-      "revision": 6,
-      "updatedAt": "2026-11-08T17:36:05.524Z",
+      "sourceRevision": 3,
+      "revision": 5,
+      "updatedAt": "2026-11-07T21:45:27.696Z",
       "link": "Stammbaum.html?family=craigddu&mode=view",
       "source": "github"
     },
@@ -3014,6 +3016,76 @@
       "revision": 1,
       "updatedAt": "2026-11-09T15:22:06.801Z",
       "link": "Stammbaum.html?family=haus-ffals&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-aurdden",
+      "familyId": "haus-aurdden",
+      "title": "Familie Aurdden",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Aurdden/aurdden-emblem.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-loer",
+        "liegeHouseName": "Haus Loer",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      },
+      "personCount": 39,
+      "revision": 1,
+      "updatedAt": "2026-11-09T18:47:41.472Z",
+      "link": "Stammbaum.html?family=haus-aurdden&mode=view",
+      "source": "github"
+    },
+    {
+      "id": "haus-loer",
+      "familyId": "haus-loer",
+      "title": "Haus Loer",
+      "motto": "",
+      "emblem": "assets/images/houses/Llamreis Ankunft/haus-loer.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "knight",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [
+          "Craithglyn"
+        ],
+        "liegeHouseId": "haus-wyrm",
+        "liegeHouseName": "Haus Wyrm",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 29,
+      "revision": 1,
+      "updatedAt": "2026-11-09T18:47:41.472Z",
+      "link": "Stammbaum.html?family=haus-loer&mode=view",
       "source": "github"
     }
   ]

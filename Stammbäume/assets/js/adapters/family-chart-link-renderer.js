@@ -649,7 +649,9 @@ export function createFamilyChartLinkRenderer({
     extraLinks.filter(link => !['parentage', 'parentage-group'].includes(link.kind)).forEach(link => partnerships.push({
       ...link, first: cardPositions.get(link.firstId), second: cardPositions.get(link.secondId)
     }));
-    const namedPartnerships = partnerships.map(pair => ({ ...pair, firstName: names.get(pair.firstId), secondName: names.get(pair.secondId) }));
+    // Layout-only parent pairs expose both parents and a biological parent
+    // rail. They do not imply a union or receive partnership UI.
+    const namedPartnerships = partnerships.filter(pair => !pair.layoutOnly).map(pair => ({ ...pair, firstName: names.get(pair.firstId), secondName: names.get(pair.secondId) }));
     const references = planFamilyChartConnectionReferences({
       partnerships: namedPartnerships,
       cardPositions, orientation

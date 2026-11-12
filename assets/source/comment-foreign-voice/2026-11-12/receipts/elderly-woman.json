@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "id": "elderly-woman",
+  "label": "Alte Frau",
+  "version": "v1",
+  "status": "active",
+  "tool": "built-in image_gen",
+  "apiOrCliUsed": false,
+  "prompt": "Use case: style-transfer.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified speaker in Aleria, matching the existing \"Fremde Stimme\" silhouette series. Single image only; never a grid, sheet, collage or set.\nInput image 1 is a visual STYLE AND SERIES reference. Input image 2 is an additional shared series reference for silhouette darkness, framing and village-background simplicity. They determine rendering, proportions, palette, composition and mood, not the new person's identity or exact pose.\nShared direction: a large centered waist-up human silhouette gesturing in the foreground, head comfortably below the upper edge, both hands fully in view with comfortable side margins, no cropped fingers. Calm uncomplicated medieval village in daylight behind the figure: cream timber-and-plaster cottages with brown roofs, pale quiet lane, muted blue-gray sky, sparse greenery. Keep the backdrop lower contrast than the figure, softly muted and uncomplicated, like the references.\nStyle: matching matte Tales of Xillia/Frieren anime drawing, clear anime lineart, simple cel-shading and flat restrained dark-slate edge accents. No photorealistic materials, no 3D render, no painterly brush texture, no dramatic lighting.\nThe entire foreground human, INCLUDING face, neck, hands and clothing, is near-black charcoal. The head is COMPLETELY FACELESS: no visible eyes, brows, nose, mouth, cheeks, facial planes, facial features or facial lighting. Minimal thin dark-gray silhouette edge and clothing-division strokes only, just as in the references. Convey the requested age/role through outer hair shape, clothing shape, stature, posture and hands. Anatomically human with normal rounded human ears; never elf ears.\nHands freely gesticulate, natural fingers and relaxed conversational gesture, readable even at small thumbnail size. Standing conversational portrait, no prop held. Opaque full-square scene, not a transparent cutout. No weapons, modern objects, decorative symbols, speech bubbles, signs, writing, letters, text, watermark, border or frame.\nNEW SUBJECT elderly-woman / Alte Frau: one ELDERLY HUMAN WOMAN, approximately seventy to eighty years old, with a slightly forward-set head and gently rounded upper back, narrow older shoulders, and a plain small linen coif/headscarf tied low at the nape over a compact low hair bun. The headscarf and substantial wraparound shoulder shawl are entirely charcoal-dark, with sparse slate outline strokes. Modest closed-neck long-sleeve medieval dress. Avoid the youthful bob or long loose hair of the existing young adults. Her age must read from the slight stoop, senior proportions and traditional scarf/shawl outline without any facial details. Warm attentive storytelling gesture: one hand held open palm-up in front of her at lower chest height, the other gently raised beside the shawl, fingers relaxed. Both hands remain fully visible, separated from torso, no staff or other props.",
+  "toolArguments": {
+    "prompt": "Use case: style-transfer.\nAsset type: ONE standalone square 1:1 RPG comment avatar for an unidentified speaker in Aleria, matching the existing \"Fremde Stimme\" silhouette series. Single image only; never a grid, sheet, collage or set.\nInput image 1 is a visual STYLE AND SERIES reference. Input image 2 is an additional shared series reference for silhouette darkness, framing and village-background simplicity. They determine rendering, proportions, palette, composition and mood, not the new person's identity or exact pose.\nShared direction: a large centered waist-up human silhouette gesturing in the foreground, head comfortably below the upper edge, both hands fully in view with comfortable side margins, no cropped fingers. Calm uncomplicated medieval village in daylight behind the figure: cream timber-and-plaster cottages with brown roofs, pale quiet lane, muted blue-gray sky, sparse greenery. Keep the backdrop lower contrast than the figure, softly muted and uncomplicated, like the references.\nStyle: matching matte Tales of Xillia/Frieren anime drawing, clear anime lineart, simple cel-shading and flat restrained dark-slate edge accents. No photorealistic materials, no 3D render, no painterly brush texture, no dramatic lighting.\nThe entire foreground human, INCLUDING face, neck, hands and clothing, is near-black charcoal. The head is COMPLETELY FACELESS: no visible eyes, brows, nose, mouth, cheeks, facial planes, facial features or facial lighting. Minimal thin dark-gray silhouette edge and clothing-division strokes only, just as in the references. Convey the requested age/role through outer hair shape, clothing shape, stature, posture and hands. Anatomically human with normal rounded human ears; never elf ears.\nHands freely gesticulate, natural fingers and relaxed conversational gesture, readable even at small thumbnail size. Standing conversational portrait, no prop held. Opaque full-square scene, not a transparent cutout. No weapons, modern objects, decorative symbols, speech bubbles, signs, writing, letters, text, watermark, border or frame.\nNEW SUBJECT elderly-woman / Alte Frau: one ELDERLY HUMAN WOMAN, approximately seventy to eighty years old, with a slightly forward-set head and gently rounded upper back, narrow older shoulders, and a plain small linen coif/headscarf tied low at the nape over a compact low hair bun. The headscarf and substantial wraparound shoulder shawl are entirely charcoal-dark, with sparse slate outline strokes. Modest closed-neck long-sleeve medieval dress. Avoid the youthful bob or long loose hair of the existing young adults. Her age must read from the slight stoop, senior proportions and traditional scarf/shawl outline without any facial details. Warm attentive storytelling gesture: one hand held open palm-up in front of her at lower chest height, the other gently raised beside the shawl, fingers relaxed. Both hands remain fully visible, separated from torso, no staff or other props.",
+    "referenced_image_paths": [
+      "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/woman.png",
+      "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/person.png"
+    ],
+    "transparent_background": false
+  },
+  "references": [
+    {
+      "path": "AleriaAlmanach/public/assets/comment-foreign-voice/woman.png",
+      "sha256": "7c1ae0ff8a653af5b3bd43f6ccea983df0eb4eb12c3b1f345cfecfa2adc82981",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "role": "viewed actual existing series reference passed to image_gen"
+    },
+    {
+      "path": "AleriaAlmanach/public/assets/comment-foreign-voice/person.png",
+      "sha256": "6caa629e94bc73cbfd40bd556ef574b35e7c0bcc89badbecb7a5af7d589e96f4",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "role": "viewed actual existing series reference passed to image_gen"
+    }
+  ],
+  "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-5ec2c960-7a13-4106-b1b5-b8b204ffaf68.png",
+  "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/elderly-woman.png",
+  "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/elderly-woman-v1.png",
+  "sha256": "dee12d49a9c9b6e2d70d1d51bae195899af2a80571564ecf971fbaa6d59bc617",
+  "bytes": 1739090,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGB",
+  "alpha": {
+    "fullyTransparentPixels": 0,
+    "fullyOpaquePixels": 1572516,
+    "partialPixels": 0
+  },
+  "transformation": "none: byte-identical generator PNG",
+  "visuallyInspected": true,
+  "visualReview": {
+    "actualFinishedImageViewed": true,
+    "checks": [
+      "completely featureless dark human face",
+      "gesturing human silhouette with complete visible hands",
+      "quiet matching medieval village background",
+      "square matte anime/cel series match",
+      "requested adult or elderly role readable through clothing/hair/posture"
+    ],
+    "additionalNotes": "Elderly posture and hair/headwear contours distinguish the subject without adding facial features."
+  },
+  "centralManifestsEdited": false
+}

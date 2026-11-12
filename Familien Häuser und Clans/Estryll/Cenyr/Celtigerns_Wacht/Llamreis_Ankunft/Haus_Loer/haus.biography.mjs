@@ -79,6 +79,12 @@ export const HOUSE_BIOGRAPHY = {
         "mode": "text",
         "title": "Kultur und Glaube",
         "text": "Die Loer gehören der Alerischen Kirche an und pflegen eine enge Verbindung zur Regenbogenschmiede. Weitere Einzelheiten folgen."
+      },
+      {
+        "position": "afterWorks",
+        "mode": "text",
+        "title": "Verbindungen",
+        "text": "Die wohlhabenden Aurdden dienen den Loer als Goldschmiede, Juweliere und Bankiers. Loer liefern Rohmaterial und sind am Ertrag beteiligt. Aeron Loer, geboren 1712, ist seit 1740 mit Avelin Aurdden, geboren 1713, verlobt. Ihre Ehe ist noch nicht geschlossen. Die bestehenden übrigen Ehen bleiben unverändert; das Münzprägerecht liegt allein bei den Loer und die Rote Bank wird weiterhin von den Ergalla geleitet."
       }
     ],
     "triviaTitle": "Besonderheiten",

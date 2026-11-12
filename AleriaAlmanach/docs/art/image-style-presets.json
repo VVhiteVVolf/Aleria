@@ -1,16 +1,23 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-03",
+  "updatedAt": "2026-11-12",
   "description": "Dauerhafte Bildstil-Vorgaben des Nutzers für Aleria. Den passenden Stil ohne erneute Erinnerung verwenden; ausdrückliche Vorgaben des aktuellen Auftrags haben Vorrang.",
   "defaultPreset": "anime-scene-portrait",
   "presets": {
     "fantasy-class-icon": {
       "name": "Flache Comic-Klassenicons nach Morgorn",
-      "useFor": ["Vereinfachte Figurenicons im Klassenregister", "Kleine kulturelle Klassenfiguren"],
+      "useFor": [
+        "Vereinfachte Figurenicons im Klassenregister",
+        "Kleine kulturelle Klassenfiguren"
+      ],
       "aspectRatio": "2:3",
       "transparentBackground": true,
       "referenceDirectory": "AleriaAlmanach/docs/art/class-icon-style",
-      "referenceImages": ["morgorn-varor.png", "morgorn-kuralan.png", "morgorn-bragan.png"],
+      "referenceImages": [
+        "morgorn-varor.png",
+        "morgorn-kuralan.png",
+        "morgorn-bragan.png"
+      ],
       "referenceUsage": "Die passenden Morgorn-Klassenicons tatsächlich ansehen und als Bildreferenzen mitgeben. Nur die flache Comiczeichnung übernehmen; Kultur, Ausrüstung und Farben stammen aus dem Auftrag. Hintergrundflächen, Schatten und etwaige Beschnitte der Referenzen nicht übernehmen.",
       "prompt": "Eine flache, verspielte zweidimensionale Comic-Klassenfigur wie die bestehenden Morgorn-Klassenicons. Kurze kräftige, leicht überzeichnete Proportionen, einfache ausdrucksstarke Gesichtszüge, große lesbare Ausrüstungsformen. Kräftige etwas unregelmäßige dunkelbraune oder schwarze gezeichnete Konturen. Wenige große matte Farbflächen, höchstens zwei klar getrennte flache Tonwerte je Material, dezente gleichmäßige Druckkörnung. Die Zeichnung wirkt wie eine gedruckte mittelalterliche Märchenbuchfigur. Keine plastische Modellierung, keine Verläufe, Glanzstellen, Reflexe, volumetrische Beleuchtung, realistische Materialien, Render- oder Spielzeugästhetik. Alle Rundungen durch gezeichnete Konturen statt durch Licht und Schatten zeigen. Vollständige Silhouette einschließlich Füßen, Helmzier und Waffenspitzen mit freiem Rand. Echter transparenter PNG-Hintergrund einschließlich offener Zwischenräume. Keine Papierfläche, Umgebung, Bodenfläche, äußeren Schatten, Farbsäume, Schrift oder Rahmen.",
       "separateFrom": "fantasy-rpg-character",
@@ -18,29 +25,43 @@
       "provenance": "Nutzerkorrektur vom 30. Oktober 2026: Zu dreidimensional; wirklich comichafte Darstellungen wie bei Morgorn. Diesen Stil ausdrücklich von normalen Kriegerdarstellungen trennen."
     },
     "fantasy-rpg-character": {
-      "name": "Freigestellte matte Fantasy-Hausfiguren",
+      "name": "Hausfiguren: ernste Proportionen, Anime-/Comicgesicht und Tusche-Aquarelltexturen",
       "useFor": [
-        "Kriegergalerie und Hausabbildungen",
-        "Ritter- und große Klassenillustrationen; vereinfachte Registericons verwenden fantasy-class-icon",
-        "Beruflich passende bürgerliche Hausfiguren",
-        "Vollständige freigestellte Fantasy-Ganzkörperfiguren"
+        "Kriegergalerie und Hausabbildungen der Adels- und Buergerhaeuser",
+        "Beruflich passende buergerliche Hausfiguren",
+        "Vollstaendige freigestellte Ganzkoerper-Personendarstellungen fuer diese Haeuser"
       ],
       "aspectRatio": "2:3",
       "referenceDirectory": "AleriaAlmanach/docs/art/character-style",
-      "referenceUsage": "Vor jeder Generierung die freigegebene Hausritter-Referenz tatsächlich ansehen und als tatsächliche Bildreferenz mitgeben. Sie ersetzt die bisherigen Oblivion-Classes- und Comic-/Aquarell-/Ölvarianten. Motiv, Hausfarben, Wappen und Beruf wechseln; matte Malweise, ruhige Pose, vereinfachte Formen, feine Körnung und echte Freistellung bleiben erhalten.",
-      "prompt": "Stilrichtung: Freigestellte handgemalte Fantasy-Ganzkörperfigur im 2:3-Hochformat, eng an den drei vom Nutzer am 24. Oktober 2026 gelieferten Ritterreferenzen orientiert. Ruhige aufrechte Dreiviertelpose, klare vollständige Silhouette bis zu den Füßen, leicht stilisierte und vereinfachte Proportionen. Große gut lesbare Rüstungs-, Stoff- und Werkzeugformen; weiche dünne gemalte Konturen und behutsame dunklere Formtrennungen. Matte gedeckte erdige Farben, weiche sparsame Schattierung und dezente gleichmäßige körnige Gouache-/Pigmenttextur. Metall und Stoff sind zurückhaltend gemalt, ohne Glanz oder realistische Materialdetails. Das Bild wirkt wie eine schlichte liebevoll gemalte historische Fantasy-Spielfigur. Ritter tragen zur Hausgeschichte passende Rüstung und Waffen, Bürgerliche belegte Berufs- oder schlichte Alltagskleidung. Hausfarben und Wappensymbole erhalten, in die gedeckte Palette übertragen. Echter transparenter PNG-Hintergrund, keine Umgebung, Bodenfläche, äußeren Schatten oder Papierfläche. Keine kräftigen schwarzen Comic-Outlines, keine realistische Haut, kein CGI, keine dramatische Beleuchtung, keine dicken Ölfarbstriche, keine Farbspritzer und keine auslaufenden Farbwolken außerhalb der Figur. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.",
+      "referenceUsage": "Vor jeder Generierung die neue freigegebene Hausfigur vom 12. November 2026 tatsächlich ansehen und als Stilreferenz mitgeben. Nur Proportionen, Gesichtsstilisierung, Tuschezeichnung, matte Aquarelltexturen und echte Freistellung übernehmen. Identität, Alter, Körperbau, Geschlecht, Kultur, Beruf, Kleidung, Rüstung, Waffen, Farben und Wappen folgen dem jeweiligen Motivauftrag. Den Eichenblatt-Ritter nicht als einheitliche Ausrüstungsschablone kopieren. Keine alte Krieger-Stilreferenz als Ersatz oder Fallback verwenden.",
+      "prompt": "Handillustrierte klassische Fantasy-Ganzkörperfigur im 2:3-Hochformat. Normale erwachsene menschliche Proportionen, natürliche Kopfgröße, glaubwürdig bemessene Hände, Füße, Kleidung, Rüstung und Waffen. Ruhige, ernsthafte Haltung und nachvollziehbar konstruierte Ausrüstung.\n\nDas Gesicht besitzt eine deutlichere Anime-/Comiczeichnung: klar gestaltete ausdrucksstarke Augen, präzise Lid- und Brauenlinien, vereinfachte gezeichnete Nase, eine klar gefasste Kieferform und wenige bewusst gesetzte Gesichtsschatten. Die Mimik bleibt konzentriert und würdevoll. Alter und individuelle Merkmale bleiben erkennbar. Keine kindlichen Züge, übergroßen Köpfe oder karikaturhaften Nasen und Schnurrbärte. Der stärkere Anime-/Comiceinfluss gilt vor allem dem Gesicht; Körperbau, Rüstung und Ausrüstung behalten ihre ernsthafte Gestaltung.\n\nFeine bis mittelstarke, organisch unregelmäßige dunkelbraune Tuschekonturen mit dezenten Graphitspuren. Die bestätigte matte Aquarellwirkung bleibt erhalten: fleckige Farblasuren, ungleichmäßige Pigmentverteilung, Wasserränder, Dry-Brush und sichtbare Papierkörnung innerhalb der bemalten Figur. Warme, erdige, leicht entsättigte Farben. Metall mit wenigen matten Lichtflächen, Stoff und Leder mit einfachen Falten und gezeichneten Farbunterschieden. Keine realistischen Hautporen, Metallkratzerfelder, Fototexturen oder digitale Hochglanzmodellierung.\n\nEchter transparenter PNG-Hintergrund. Die gesamte Figur einschließlich Gesicht, Kleidung und Ausrüstung bleibt deckend; Lasuren und Papierkörnung erscheinen ausschließlich als Farb- und Oberflächenwirkung innerhalb ihrer Formen. Außerhalb der klaren Silhouette und in offenen Zwischenräumen vollständige Transparenz. Keine Papierfläche, Hintergrundfarbe, Farbflecken außerhalb der Figur, Bodenfläche, Bodenschatten, Halos oder auslaufenden Nebelsäume. Vollständige Figur und Ausrüstung mit freiem Rand. Keine Schrift und kein Rahmen.",
       "anatomyRule": "Nutzerkorrektur vom 3. November 2026: Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.",
-      "styleRevision": "2026-10-24-matte-painted-reference-figures",
-      "userCorrection": "24. Oktober 2026: Der Nutzer verwirft sowohl die realistische Erstfassung als auch die spätere Comic-/Color-Bleed-/Ölfassung. Maßgeblich sind seine drei anschließend gelieferten freigestellten Ritterreferenzen: ruhige Ganzkörperposen, einfache Formen, matte gedeckte Farben, feine gleichmäßige Maltextur. Keine dramatischen Posen, kräftigen Comic-Outlines oder Farbspritzer.",
+      "styleRevision": "2026-11-12-serious-house-figures-ink-watercolor-anime-face",
+      "userCorrection": "12. November 2026: normale ernsthafte Körperproportionen und glaubwürdige Rüstung, Gesicht deutlicher Anime/Comic, bestätigte matte Tusche-/Aquarelltexturen innerhalb der Figur und echter transparenter Hintergrund. Ausdrücklich für Krieger und andere Hausfiguren, NICHT für Porträts. Alle anderen Kriegerstilvarianten verworfen.",
       "transparentBackground": true,
       "status": "approved",
-      "approvedAt": "2026-10-24",
-      "approvalQuote": "Genau so! Bitte überschreibe den stil, den wir vorher hatten auf diesen!",
-      "previousReferenceDirectory": "D:\\0-KI Generierte\\01 Bilder\\Oblivion Classes",
-      "approvedReferenceImage": "AleriaAlmanach/docs/art/character-style/2026-10-24-approved-house-knight.png",
+      "approvedAt": "2026-11-12",
+      "approvalQuote": "Gut... speicher das als künftigen stil für Krieger/Leute Darstellung wenn wir Krieger für Adels und Bürgerhäuser darstellen wollen, NICHT FÜR PORTRAITS! Verwerfe die anderen.",
+      "approvedReferenceImage": "AleriaAlmanach/docs/art/character-style/2026-11-12-approved-house-figure.png",
       "approvedTestPromptManifest": "AleriaAlmanach/docs/art/character-style/approved-style.json",
-      "designUsage": "Nutzerklarstellung vom 24. Oktober 2026: Die Freigabe betrifft den künstlerischen Stil. Rüstungsdesign, Helm, Waffen, Kleidung und kulturelle Formensprache werden eigenständig passend zu Hausgeschichte, Herkunft und Beruf gewählt. Die westliche Plattenrüstung des Stilreferenzritters ist keine allgemeine Designvorlage. Venalysisch geprägte Häuser wie Cymrath kombinieren Ritter-, Legionärs- und byzantinische Lamellenrüstung mit geschlossenen legionärsartigen Helmen.",
-      "existingAssetPolicy": "Nutzerklarstellung vom 24. Oktober 2026: Wenn einer Hausvorlage eine passende R?stung oder Hausdarstellung beiliegt, diese direkt ?bernehmen und unver?ndert lokal sichern. Das gilt ausdr?cklich f?r Fiachraoin. Nur fehlende Darstellungen im aktuellen Stil neu erzeugen."
+      "designUsage": "Nutzerklarstellung vom 24. Oktober 2026: Die Freigabe betrifft den künstlerischen Stil. Rüstungsdesign, Helm, Waffen, Kleidung und kulturelle Formensprache werden eigenständig passend zu Hausgeschichte, Herkunft und Beruf gewählt. Die westliche Plattenrüstung des Stilreferenzritters ist keine allgemeine Designvorlage. Venalysisch geprägte Häuser wie Cymrath kombinieren Ritter-, Legionärs- und byzantinische Lamellenrüstung mit geschlossenen legionärsartigen Helmen. Vor jeder Generierung die neue freigegebene Hausfigur vom 12. November 2026 tatsächlich ansehen und als Stilreferenz mitgeben. Nur Proportionen, Gesichtsstilisierung, Tuschezeichnung, matte Aquarelltexturen und echte Freistellung übernehmen. Identität, Alter, Körperbau, Geschlecht, Kultur, Beruf, Kleidung, Rüstung, Waffen, Farben und Wappen folgen dem jeweiligen Motivauftrag. Den Eichenblatt-Ritter nicht als einheitliche Ausrüstungsschablone kopieren. Keine alte Krieger-Stilreferenz als Ersatz oder Fallback verwenden.",
+      "existingAssetPolicy": "Nutzerklarstellung vom 24. Oktober 2026: Wenn einer Hausvorlage eine passende R?stung oder Hausdarstellung beiliegt, diese direkt ?bernehmen und unver?ndert lokal sichern. Das gilt ausdr?cklich f?r Fiachraoin. Nur fehlende Darstellungen im aktuellen Stil neu erzeugen.",
+      "scope": "Krieger- und Personendarstellungen als vollständige Ganzkörperfiguren für Adels- und Bürgerhäuser. Nicht für Charakterporträts.",
+      "excludeUseFor": [
+        "Charakterporträts",
+        "Porträtavatare",
+        "Szenenbilder",
+        "Vereinfachte Klassenicons"
+      ],
+      "promptFile": "AleriaAlmanach/docs/art/character-style/house-figure-approved-20261112.txt",
+      "promptUsage": "Den vollständigen gespeicherten Prompt für Hausfiguren verwenden. Kultur, Beruf, Persönlichkeit, tatsächliches Alter und individuelle Merkmale aus dem Motivauftrag bestimmen. Kinder erhalten ihrem tatsächlichen Alter entsprechende Proportionen und Gesichter. Keine erneute Stilabfrage und kein automatischer Austausch bestehender Hausdarstellungen. Charakterporträts verwenden ausschließlich ihre getrennten beiden Porträtstile.",
+      "referenceImages": [
+        "2026-11-12-approved-house-figure.png"
+      ],
+      "approvedReferenceSha256": "7efa09a452ffd6b30aea872eb67f12a3b7db544b43fa88386e6e338881af1855",
+      "legacyApprovalArchive": "AleriaAlmanach/docs/art/character-style/archive/approved-style-20261024.json",
+      "retiredVariantsFile": "AleriaAlmanach/docs/art/character-style/retired-warrior-styles-20261112.json",
+      "application": "Einziger aktiver Stil für diese Hausfiguren. Die frühere Freigabe vom 24. Oktober 2026, die Vergleichsstile 1–6 und die vorletzte ernste Papierfassung sind als Alternativen verworfen. Historische Originale und Prompts bleiben ausschließlich als Herkunftsbelege erhalten."
     },
     "fantasy-inventory-item": {
       "name": "Fantasy-Items im Stil der Häuser aus Celtigerns Wacht",
@@ -137,7 +158,62 @@
       "shape": "circle",
       "shapeUsage": "Seit 16. Oktober 2026 ausnahmslos exakte Kreisform für die vorhandenen Frames. Auch bei anderer kultureller Ornamentik keine Spitzschilde, Schildschultern, ovalen Konturen oder überstehenden Verzierungen."
     },
+    "anime-portrait-alternative-2": {
+      "name": "Portraetstil 2: Tales of Xillia meets Frieren, differenziertes Cel-Shading",
+      "status": "approved",
+      "alternativeNumber": 2,
+      "useFor": [
+        "Charakterportraets im freigegebenen Stil 2 (bisheriges Vergleichsbild 3)"
+      ],
+      "aspectRatio": "2:3",
+      "requiresAnimeStyleSelection": false,
+      "promptUsage": "Den vollstaendigen Prompt mit der bereits gewaehlten Anime-Referenz Tales of Xillia meets Frieren verwenden. Keine erneute Stilabfrage fuer diesen freigegebenen Stil; ausdrueckliche neue Nutzervorgaben haben Vorrang.",
+      "prompt": "Bildformat 2:3. Strenger Tales of Xillia meets Frieren Art Style. Markante, stilisierte Gesichtszüge und Proportionen, ausdrucksstarke Mimik, präzise Anime-Lineart und hochwertiges, differenziertes Cel-Shading.\n\nMaterialien und Texturen: Hochwertige, stilisierte Anime-Materialdarstellung mit klar definierten Oberflächen, kontrollierten Lichtreflexionen und glaubwürdiger Materialwirkung. Haut mit sanften Farbverläufen und subtiler Schattierung, Stoffe mit natürlichen Faltenwürfen und dezenter Gewebestruktur, Metall mit präzisen Glanzlichtern und differenzierten Reflexionen. Holz und Stein mit zurückhaltenden, aber erkennbaren Oberflächendetails und sauberer Lichtführung.\n\nVisuelle Ausrichtung: Detailreiche, professionelle JRPG-Charakterillustration mit harmonischer Farbpalette, klarer Formensprache und konsistenter Materialqualität. Keine übermäßig glatten oder plastisch wirkenden Oberflächen, keine groben Fototexturen, kein Fotorealismus und keine impressionistische oder malerische Darstellung. Die Ästhetik bleibt konsequent handgezeichnet und anime-typisch.",
+      "promptFile": "AleriaAlmanach/docs/art/portrait-prompt-alternative-2.txt",
+      "application": "Aktiver Portraetstil 2. Die bisherige Alternative 3 wird hiermit zu 2 umnummeriert. Fuer neue Charakterportraets sind ausschliesslich Stil 1 und dieser Stil 2 zugelassen.",
+      "provenance": "Nutzerauftrag vom 12. November 2026: Den vollständig gelieferten Prompt als 3. Alternative für Porträtbilder speichern; Anime-Stil vor Verwendung abfragen. Nutzerwahl im Vergleich: Tales of Xillia meets Frieren. Anschliessende Freigabe am 12. November 2026: Bilder 1 und 3 behalten, bisheriges Bild 2 komplett verwerfen und bisherigen Stil 3 kuenftig als Stil 2 verwenden.",
+      "approvedAt": "2026-11-12",
+      "previousPresetId": "anime-portrait-alternative-3",
+      "defaultAnimeReference": "Tales of Xillia meets Frieren",
+      "originalTemplateFile": "AleriaAlmanach/docs/art/portrait-prompt-alternative-3.txt",
+      "transparentBackground": false,
+      "referenceDirectory": "AleriaAlmanach/docs/art/portrait-experiments/2026-11-12/cenyr-tavern-three-styles-v1",
+      "referenceImages": [
+        "cenyr-tavern-style-03.png"
+      ],
+      "referenceUsage": "Das freigegebene bisherige Vergleichsbild 3 vor Generierung ansehen und als Stilreferenz mitgeben. Nur Lineart, Gesichtszeichnung, Materialdarstellung und Cel-Shading uebernehmen; Identitaet, Koerperbau, Kleidung und Hintergrund folgen dem jeweiligen Figurenauftrag.",
+      "portraitComposition": "2:3, ruhig stehend, vollständige Frisur bis Taille oder obere Hüfte, Gesicht und Oberkörper im Fokus, passende ruhige Umgebung, möglichst leere Hände und wenige Requisiten.",
+      "anatomyRule": "Menschen und Alben haben menschliche, abgerundete Ohren. Elfen existieren in Aleria nicht."
+    },
     "anime-scene-portrait": {
+      "name": "Tales of Xillia/Frieren mit der freigegebenen matten Aleria-Referenz",
+      "status": "approved",
+      "approvedAt": "2026-11-09",
+      "useFor": [
+        "Personenporträts mit Fokus auf Gesicht und Oberkörper",
+        "Szenenbilder",
+        "Story- und Modulillustrationen",
+        "Stillleben innerhalb dieser Bildwelt"
+      ],
+      "aspectRatio": "2:3",
+      "transparentBackground": false,
+      "referenceDirectory": "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09",
+      "referenceImages": [
+        "kyrwyn-experimental-v3.png"
+      ],
+      "referenceUsage": "Vor einer Generierung die aktuelle v3-Referenz tatsächlich ansehen und als Bildreferenz mitgeben. Tales of Xillia/Frieren ist die Grundeinstellung. Individuelle Identität, Alter, Kleidung und Umgebung folgen dem Auftrag; die Referenz liefert den Stil.",
+      "prompt": "Bildformat 2:3. Tales of Xillia/Frieren Anime Art Style als Grundeinstellung. Handgezeichnet wirkende Anime-Fantasy-Illustration nach der bestätigten Aleria-Referenz kyrwyn-experimental-v3.png vom 9. November 2026. Die feine matte experimentelle Bildsprache bleibt erhalten und nähert sich der ursprünglichen Animezeichnung um etwa 15 % an; dies ist eine gestalterische Orientierung, kein wörtliches Mischungsverhältnis. Die Referenz bestimmt den Zeichenstil, nicht Identität, Kleidung oder Ort.\n\nFeine, sichere, leicht variierende dunkelbraune bis anthrazitfarbene Konturen. Die wichtigsten Gesichts- und Haarlinien sind klar und entschieden, bleiben aber fein. Charaktervolle individuelle Anime-Gesichter mit lebendigen ausdrucksstarken Augen und gut unterscheidbaren Nasen, Brauen, Wangen und Kieferlinien. Natürlich wirkende Anime-Proportionen; das tatsächliche Alter muss erkennbar bleiben. Kinder erscheinen kindlich, reife und ältere Personen erhalten passende Gesichtszüge.\n\nMenschen etwas attraktiver darstellen: harmonische natürliche Gesichtszüge, ein klarer wacher Blick, gute gezeichnete Gesichtsproportionen und eine sympathische persönliche Ausstrahlung. Individuelle Wiedererkennbarkeit, Alter, Körperbau und belegte Merkmale bleiben erhalten. Reife und ältere Menschen wirken ansprechend und charaktervoll in ihrem tatsächlichen Alter. Kinder bleiben eindeutig kindlich und altersgerecht.\n\nMatte harmonische, etwas frischer und klarer wirkende Anime-Farben und natürliche Hauttöne. Ruhiges, sauber geformtes, weich abgestimmtes Anime-Cel-Shading mit wenigen zusammenhängenden Licht- und Schattenflächen. Klar erkennbare Schattenkanten, an ausgewählten Stellen behutsame weichere Übergänge. Dezente Wärme, sparsame Glanzlichter und kaum Oberflächenkörnung. Haut, Stoff, Holz, Stein, Leder und Metall wirken gezeichnet; wenige gezielte Falten, Nähte und Materialdetails genügen. Gebrauchsspuren nur, wenn sie zur konkreten Figur und Ausstattung passen. Keine fotorealistischen Oberflächen, kein Plastikglanz, keine 3D-Renderästhetik und keine grobe Papier- oder Pigmentkörnung.\n\nFür Personenporträts: ruhig und natürlich STEHEND. Fokus deutlich auf GESICHT UND OBERKÖRPER. Vollständige Frisur und Oberkörper bis ungefähr zur Taille oder oberen Hüfte; Gesicht groß und gut lesbar. Keine weit entfernte Ganzkörperdarstellung mit viel Bein- oder Bodenfläche. Individuelle gelassene Haltung und persönliche Mimik. Hände möglichst leer und im Bild untergeordnet.\n\nFür Szenen: der konkrete Szenenauftrag bestimmt Personen, Handlung und räumlichen Ausschnitt. Die gleiche feine Zeichnung, matte Farbgebung und klare ruhige Schattierung verwenden. Keine künstliche Porträtkomposition auf reine Räume oder Stillleben übertragen.\n\nImmer eine passende erkennbare Umgebung, die Ort und Situation unterstützt. Bei Porträts bleibt der Hintergrund ruhiger, etwas weicher und kontrastärmer als die Figur. Wenige sinnvoll gewählte Hintergrundformen und Requisiten; das Bild nicht überladen. Keine zusätzlich erfundenen Gegenstände, Waffen, Tiere oder Effekte. Mittelalterlich passende Ausstattung und Beleuchtung: Tageslicht, Kerzen oder einfache historische Öllampen; keine modernen Geräte oder Leuchten. Keine Schrift, Rahmen oder Wasserzeichen.\n\nMenschen und Alben besitzen anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren aus Referenzen übernehmen. Ausdrückliche Motiv-, Identitäts-, Alters-, Haar- und Augenvorgaben des jeweiligen Auftrags gelten unverändert.",
+      "promptFile": "AleriaAlmanach/docs/art/portrait-scene-approved-20261109.txt",
+      "defaultAnimeReference": "Tales of Xillia/Frieren",
+      "animeUsage": "Tales of Xillia/Frieren als Basis verwenden, verbunden mit dem bestätigten feinen matten Referenzlook und etwa 15 % Annäherung an die ursprüngliche Animezeichnung.",
+      "portraitComposition": "2:3, ruhig stehend, vollständige Frisur bis Taille oder obere Hüfte, Gesicht und Oberkörper im Fokus, passende ruhige Umgebung, möglichst leere Hände und wenige Requisiten.",
+      "sceneComposition": "Auftrag und Handlung bestimmen die Szene; den bestätigten Zeichenstil übertragen, keinen Porträtbeschnitt auf reine Räume oder Stillleben erzwingen.",
+      "anatomyRule": "Menschen und Alben haben menschliche, abgerundete Ohren. Elfen existieren in Aleria nicht.",
+      "provenance": "Nutzerkorrektur vom 9. November 2026: etwa 15 % mehr zum ursprünglichen Stil und Tales of Xillia/Frieren als Grundeinstellung. V3 wurde mit „Das ist besser! speicher das, und mach die menschen etwas attraktiver“ bestätigt; anschließend ausdrücklich „MAch die übrigen auch neu!“.",
+      "legacyPreset": "anime-scene-portrait-legacy-20261109",
+      "attractiveness": "Menschen etwas attraktiver und harmonischer, dabei individuell und altersgerecht darstellen; erkennbare Charaktermerkmale erhalten."
+    },
+    "anime-scene-portrait-legacy-20261109": {
       "name": "Anime für Szenen und Figurenporträts",
       "useFor": [
         "Szenenbilder",
@@ -151,16 +227,70 @@
       "animeUsage": "Den Platzhalter durch die im Auftrag genannte Anime-Referenz ersetzen. Ohne neue Stilvorgabe die bisher für Aleria vereinbarte Referenz Tales of Xillia/Frieren verwenden.",
       "prompt": "Bildformat 2:3. [ANIME EINTRAGEN] Anime Art Style. Markante, überzeichnete Gesichtszüge und Proportionen, starke Mimik, klare Anime-Lineart und sauberes Cel-Shading. Weiche, simple Anime-Texturen für Haut, Stoff, Holz, Stein und Hintergrund. Keine realistischen Texturen, kein Fotorealismus, keine malerische Darstellung. Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.",
       "anatomyRule": "Nutzerkorrektur vom 3. November 2026: Menschen und Alben erhalten anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren; aus der albenischen Kulturbezeichnung keine Elfenanatomie ableiten. Diese Vorgabe hat Vorrang vor abweichender Anatomie in Motiv- oder Anime-Referenzen. Elfen existieren in Aleria nicht.",
-      "compositionPreference": "Die Szene nicht mit Gegenständen überladen; weniger ist mehr. Je nach Motiv sind Stillleben ohne Personen ausdrücklich passend. Speisen und Getränke für Güterkarten, Menüs und Warenangebote sind davon ausgenommen: immer fantasy-inventory-item, 1:1 und echter transparenter PNG-Hintergrund, ohne Tisch, Raum oder Szenenhintergrund. Nutzerkorrektur vom 19. Oktober 2026."
+      "compositionPreference": "Die Szene nicht mit Gegenständen überladen; weniger ist mehr. Je nach Motiv sind Stillleben ohne Personen ausdrücklich passend. Speisen und Getränke für Güterkarten, Menüs und Warenangebote sind davon ausgenommen: immer fantasy-inventory-item, 1:1 und echter transparenter PNG-Hintergrund, ohne Tisch, Raum oder Szenenhintergrund. Nutzerkorrektur vom 19. Oktober 2026.",
+      "status": "legacy",
+      "supersededAt": "2026-11-09"
+    },
+    "anime-scene-portrait-reference-v2-20261109": {
+      "name": "Freigegebener Aleria-Stil für Personenporträts und Szenen",
+      "status": "legacy-approved",
+      "approvedAt": "2026-11-09",
+      "useFor": [
+        "Personenporträts mit Fokus auf Gesicht und Oberkörper",
+        "Szenenbilder",
+        "Story- und Modulillustrationen",
+        "Stillleben innerhalb dieser Bildwelt"
+      ],
+      "aspectRatio": "2:3",
+      "transparentBackground": false,
+      "referenceDirectory": "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09",
+      "referenceImages": [
+        "kyrwyn-experimental-v2.png"
+      ],
+      "referenceUsage": "Vor einer Generierung die bestätigte v2-Referenz tatsächlich ansehen und als Bildreferenz mitgeben. Sie liefert ausschließlich die Bildsprache; Identität, Kleidung, Alter, Haar-/Augenfarbe und Umgebung stammen aus dem aktuellen Auftrag. V1 und reine Berseria-Vorlagen ersetzen nicht die bestätigte v2-Referenz.",
+      "prompt": "Bildformat 2:3. Handgezeichnet wirkende Anime-Fantasy-Illustration nach der freigegebenen Aleria-Referenz vom 9. November 2026, kyrwyn-experimental-v2.png. Die Referenz bestimmt den Zeichenstil, nicht die dargestellte Identität, Kleidung oder Umgebung.\n\nFeine, sichere, leicht variierende dunkelbraune bis anthrazitfarbene Konturen. Die wichtigsten Gesichts- und Haarlinien sind klar und entschieden, bleiben aber fein. Charaktervolle individuelle Anime-Gesichter mit ausdrucksstarken Augen und gut unterscheidbaren Nasen, Brauen, Wangen und Kieferlinien. Natürlich wirkende Anime-Proportionen; das tatsächliche Alter muss erkennbar bleiben. Kinder erscheinen kindlich, reife und ältere Personen erhalten passende Gesichtszüge.\n\nMatte harmonische Farben und natürliche Hauttöne. Ruhiges, sauber geformtes Cel-Shading mit wenigen zusammenhängenden Licht- und Schattenflächen. Klar erkennbare Schattenkanten, an ausgewählten Stellen behutsame weichere Übergänge. Dezente Wärme, sparsame Glanzlichter und kaum Oberflächenkörnung. Haut, Stoff, Holz, Stein, Leder und Metall wirken gezeichnet; wenige gezielte Falten, Nähte und Materialdetails genügen. Gebrauchsspuren nur, wenn sie zur konkreten Figur und Ausstattung passen. Keine fotorealistischen Oberflächen, kein Plastikglanz, keine 3D-Renderästhetik und keine grobe Papier- oder Pigmentkörnung.\n\nFür Personenporträts: ruhig und natürlich STEHEND. Fokus deutlich auf GESICHT UND OBERKÖRPER. Vollständige Frisur und Oberkörper bis ungefähr zur Taille oder oberen Hüfte; Gesicht groß und gut lesbar. Keine weit entfernte Ganzkörperdarstellung mit viel Bein- oder Bodenfläche. Individuelle gelassene Haltung und persönliche Mimik. Hände möglichst leer und im Bild untergeordnet.\n\nFür Szenen: der konkrete Szenenauftrag bestimmt Personen, Handlung und räumlichen Ausschnitt. Die gleiche feine Zeichnung, matte Farbgebung und klare ruhige Schattierung verwenden. Keine künstliche Porträtkomposition auf reine Räume oder Stillleben übertragen.\n\nImmer eine passende erkennbare Umgebung, die Ort und Situation unterstützt. Bei Porträts bleibt der Hintergrund ruhiger, etwas weicher und kontrastärmer als die Figur. Wenige sinnvoll gewählte Hintergrundformen und Requisiten; das Bild nicht überladen. Keine zusätzlich erfundenen Gegenstände, Waffen, Tiere oder Effekte. Mittelalterlich passende Ausstattung und Beleuchtung: Tageslicht, Kerzen oder einfache historische Öllampen; keine modernen Geräte oder Leuchten. Keine Schrift, Rahmen oder Wasserzeichen.\n\nMenschen und Alben besitzen anatomisch menschliche, abgerundete Ohren. Keine spitzen oder verlängerten Elfenohren aus Referenzen übernehmen. Ausdrückliche Motiv-, Identitäts-, Alters-, Haar- und Augenvorgaben des jeweiligen Auftrags gelten unverändert.",
+      "promptFile": "AleriaAlmanach/docs/art/portrait-scene-approved-20261109-v2.txt",
+      "defaultAnimeReference": "Freigegebene Aleria-Referenz vom 9. November 2026",
+      "animeUsage": "Maßgeblich sind die bestätigte Bildreferenz und der vollständige aktuelle Prompt. Die bisherigen namentlichen Anime-Mischungen sind als frühere Vorlagen erhalten; nicht automatisch wieder einfügen.",
+      "portraitComposition": "2:3, ruhig stehend, vollständige Frisur bis Taille oder obere Hüfte, Gesicht und Oberkörper im Fokus, passende ruhige Umgebung, möglichst leere Hände und wenige Requisiten.",
+      "sceneComposition": "Auftrag und Handlung bestimmen die Szene; den bestätigten Zeichenstil übertragen, keinen Porträtbeschnitt auf reine Räume oder Stillleben erzwingen.",
+      "anatomyRule": "Menschen und Alben haben menschliche, abgerundete Ohren. Elfen existieren in Aleria nicht.",
+      "provenance": "Vom Nutzer nach sieben Beispielbildern und einem experimentellen Porträt entwickelt. Anschließend ein kleiner Anteil der früheren klaren Animezeichnung ergänzt. Finale v2 mit „Ja so ist es gut. Fahre fort.“ freigegeben und ausdrücklich für künftige Personenporträts und Szenen als Stil gemerkt.",
+      "legacyPreset": "anime-scene-portrait-legacy-20261109"
     }
   },
   "applicationRules": [
+    "Nur die beiden nummerierten Stile 1 und 2 fuer neue Charakterportraets verwenden. Der bisherige experimentelle Stil 2 ist vollstaendig verworfen; historische Vorlagen sind keine weiteren Auswahlmoeglichkeiten.",
+    "Für Krieger- und Personendarstellungen der Adels- und Bürgerhäuser ausschließlich fantasy-rpg-character in der Freigabe vom 12. November 2026 verwenden: normale ernsthafte Proportionen und Ausrüstung, Anime-/Comicgesicht, matte Tusche-/Aquarelltexturen und echter transparenter Hintergrund. Nicht auf Charakterporträts übertragen; ihre beiden gespeicherten Stile bleiben eigenständig. Frühere Kriegerstilvarianten sind verworfen und keine Fallbacks.",
     "Den passenden Stilblock vollständig in den konkreten Bildprompt übernehmen und Motiv, Person, Kleidung, Wappen, Region und Handlung passend zum Auftrag ergänzen.",
-    "Die fünf Stilrichtungen nach Verwendungszweck getrennt verwenden: freigestellte matte Fantasy-Hausfiguren nach der am 24. Oktober 2026 freigegebenen Referenz (2:3, ruhige Pose, einfache Formen, feine Pigmentkörnung, echte Transparenz), Anime-Szenen und -Porträts mit Lineart und Cel-Shading (2:3), freigestellte Fantasy-Inventaritems im belegten Item-Stil (1:1 mit echtem Alphakanal), verspielte Tusche-/Aquarell-Worldmap-Stamps (echter Alphakanal, keine äußeren Schatten), kreisrunde nordisch-keltische Wappen (innen deckend, nur außen transparent).",
+    "Die Stilrichtungen nach Verwendungszweck getrennt verwenden: Hausfiguren nach der Freigabe vom 12. November 2026 (2:3, normale ernsthafte Proportionen, Anime-/Comicgesicht, matte Tusche-/Aquarelltexturen, echte Transparenz), Anime-Szenen und die beiden getrennten Porträtstile, freigestellte Fantasy-Inventaritems (1:1, echter Alphakanal), verspielte Tusche-/Aquarell-Worldmap-Stamps (echter Alphakanal), kreisrunde Wappen (innen deckend, außen transparent) sowie die eigenen flachen Klassenicons.",
     "Bei Itembildern fantasy-inventory-item wählen. Ein Gegenstand als Teil einer Szene macht die gesamte Szene nicht zum Inventarbild; Szenen und Stillleben mit Umgebung bleiben im passenden Szenenstil.",
     "Bei Map Stamps, Worldmap-Markern und freigestellter Kartenarchitektur fantasy-worldmap-stamp Stilversion 2 verwenden: freigegebenes Bauernhaus ansehen und als Haupt-Bildreferenz mitgeben, neuen kurzen prompt anwenden, sehr geringen Detailgrad beibehalten. Der abgelehnte alte Prompt und die ersten vier Serienbilder sind keine Stilgrundlage.",
     "Bei eigenständigen Clan-, Haus- und Familienwappen fantasy-heraldic-emblem wählen. Vor Vorschlägen die vorhandenen Wappen der passenden Kultur oder Region aus der Stammbaum-Liste ansehen, dann konkrete Entwürfe vorschlagen und nach der Auswahl gemeinsam erstellen. Für einen Aldrimar-Clan die Wappen der Aldrimar-Clans als Referenzen verwenden. Außen Alpha = 0, die gesamte Wappeninnenfläche Alpha = 255; keine transparenten Zwischenräume innerhalb des Rahmens.",
     "Bei bereits bekannten Figuren vorhandene Porträts und bei Häusern oder Organisationen vorhandene Wappen als Referenzen einbeziehen, soweit sie im Motiv vorkommen.",
     "Explizite Stil-, Format- und Motivvorgaben des aktuellen Auftrags haben Vorrang vor diesen Standards. Die Standards nicht bei jedem neuen Bildauftrag erneut abfragen."
-  ]
+  ],
+  "characterPortraitStyles": {
+    "updatedAt": "2026-11-12",
+    "scope": "Neue Charakterportraets",
+    "defaultStyle": 1,
+    "styles": [
+      {
+        "number": 1,
+        "preset": "anime-scene-portrait",
+        "name": "Kyrwyn-v3: feine matte Animezeichnung",
+        "approvedComparisonImage": "AleriaAlmanach/docs/art/portrait-experiments/2026-11-12/cenyr-tavern-three-styles-v1/cenyr-tavern-style-01.png"
+      },
+      {
+        "number": 2,
+        "preset": "anime-portrait-alternative-2",
+        "name": "Tales of Xillia meets Frieren: differenziertes Anime-Cel-Shading",
+        "previousComparisonNumber": 3,
+        "approvedComparisonImage": "AleriaAlmanach/docs/art/portrait-experiments/2026-11-12/cenyr-tavern-three-styles-v1/cenyr-tavern-style-03.png"
+      }
+    ],
+    "rejectedPreset": "anime-portrait-experimental-reference-v1",
+    "rejectedPresetArchive": "AleriaAlmanach/docs/art/portrait-prompt-experimental-v1-rejected.json",
+    "rule": "Nur die beiden nummerierten Stile 1 und 2 fuer neue Charakterportraets verwenden. Der bisherige experimentelle Stil 2 ist vollstaendig verworfen; historische Vorlagen sind keine weiteren Auswahlmoeglichkeiten."
+  }
 }

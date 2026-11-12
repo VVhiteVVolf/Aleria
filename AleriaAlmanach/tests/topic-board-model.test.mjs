@@ -163,3 +163,28 @@ test('neue Themen werden ohne Firebase nicht mehr still nur lokal gespeichert', 
   );
   assert.equal(vm.runInContext('getTopicBoardState().proposals.length', context), 0);
 });
+
+test('ausdrücklich terminlose Ideen bleiben bei Anlage und Speicheradapter-Readback ohne Datum', async () => {
+  const context = loadTopicBoardStore();
+  vm.runInContext('initializeTopicBoardState()', context);
+  const created = await vm.runInContext(`createTopicBoardProposal({
+    title: 'Eine Idee für später',
+    schedule: { startDate: { year: null, month: null, day: null } },
+    travel: { enabled: true, origin: 'Gwynthor', destination: 'Abergwint', manualTravelDays: 3 }
+  })`, context);
+  const proposalId = created.proposal.id;
+  assert.equal(created.proposal.schedule.startDate.year, null);
+  assert.equal(created.proposal.travel.departureDate.year, null);
+  assert.equal(created.proposal.travel.arrivalDate, null);
+  const readback = vm.runInContext(`getTopicBoardProposalById('${proposalId}')`, context);
+  assert.equal(readback.schedule.startDate.year, null);
+  assert.equal(readback.travel.origin, 'Gwynthor');
+  assert.equal(readback.travel.totalDays, 3);
+
+  const updated = await vm.runInContext(`updateTopicBoardProposal('${proposalId}', {
+    title: 'Die überarbeitete Idee'
+  })`, context);
+  assert.equal(updated.proposal.schedule.startDate.year, null);
+  assert.equal(updated.proposal.travel.departureDate.year, null);
+  assert.equal(updated.proposal.travel.destination, 'Abergwint');
+});

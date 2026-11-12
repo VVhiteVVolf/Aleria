@@ -1,6 +1,6 @@
 // Owns the browser's module cache. The synchronous snapshot serves existing
 // editors; write promises resolve only after the database transaction commits.
-function createModuleStoreLocalPersistence({ indexedDB, storage, keys, databaseName = 'aleria-module-store' }) {
+function createModuleStoreLocalPersistence({ indexedDB, storage, keys, databaseName = 'aleria-module-store', equivalent = () => false }) {
   const values = new Map();
   const persisted = new Map();
   let database;
@@ -9,6 +9,14 @@ function createModuleStoreLocalPersistence({ indexedDB, storage, keys, databaseN
   let pending = Promise.resolve();
   let pendingWrites = 0;
   const dirtyKeys = new Set();
+  const latestWrites = new Map();
+
+  function recordsMatch(key, left, right) {
+    if (left === right) return true;
+    // A malformed record or unavailable schema must keep the strict guard.
+    try { return equivalent(key, left, right) === true; }
+    catch { return false; }
+  }
 
   function transact(mode, operation) {
     return new Promise((resolve, reject) => {
@@ -96,12 +104,14 @@ function createModuleStoreLocalPersistence({ indexedDB, storage, keys, databaseN
     }
     values.set(key, value);
     dirtyKeys.add(key);
+    const writeToken = {};
+    latestWrites.set(key, writeToken);
     pendingWrites += 1;
     const commit = pending.catch(() => {}).then(() => transact('readwrite', (store, _setResult, fail) => {
       const request = store.get(key);
       request.onsuccess = () => {
         const current = request.result ?? null;
-        if (current !== persisted.get(key) && current !== value) {
+        if (!recordsMatch(key, current, persisted.get(key)) && !recordsMatch(key, current, value)) {
           const error = new Error('Der Modulstand wurde in einem anderen Tab geändert. Bitte deine Änderungen als JSON exportieren und dann erneut laden.');
           error.code = 'module-store-concurrent-write';
           fail(error);
@@ -113,7 +123,10 @@ function createModuleStoreLocalPersistence({ indexedDB, storage, keys, databaseN
     }));
     pending = commit.then(() => {
       persisted.set(key, value);
-      if (values.get(key) === value) dirtyKeys.delete(key);
+      if (latestWrites.get(key) === writeToken) {
+        latestWrites.delete(key);
+        dirtyKeys.delete(key);
+      }
     }).finally(() => { pendingWrites -= 1; });
     // Callers still receive the rejected promise; this handler prevents an
     // unhandled rejection in synchronous editor actions.
@@ -169,7 +182,8 @@ function createModuleStoreLocalPersistence({ indexedDB, storage, keys, databaseN
 const moduleStoreLocalPersistence = createModuleStoreLocalPersistence({
   indexedDB: globalThis.indexedDB,
   storage: localStorage,
-  keys: [MODULE_STORE_KEY, MODULE_STORE_SYNC_META_KEY]
+  keys: [MODULE_STORE_KEY, MODULE_STORE_SYNC_META_KEY],
+  equivalent: (key, left, right) => areModuleStoreLocalRecordsEquivalent(key, left, right)
 });
 
 window.addEventListener('beforeunload', event => {

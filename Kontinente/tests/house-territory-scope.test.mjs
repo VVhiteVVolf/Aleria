@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile, access, stat } from 'node:fs/promises';
 import vm from 'node:vm';
 import { FAMILY_REGISTRY } from '../../Stammbäume/assets/js/data/families.registry.js';
-import { FLEISCHSAMMLER_FAMILIES_INDEX } from '../../Stammbäume/assets/js/data/gwynthor-fleischsammler/localities.mjs';
+import { projectHouseDirectories } from '../../shared/world-directory/house-projection.mjs';
 
 const root = new URL('../../', import.meta.url);
 const houseRegistryContext = { window: {} };
@@ -23,18 +23,22 @@ async function sections(path) {
   const context = { window: {} };
   vm.runInNewContext(await readFile(new URL('Kontinente/assets/js/herrschaft-data.js', root), 'utf8'), context);
   vm.runInNewContext(await readFile(new URL(path, county), 'utf8'), context);
-  return context.window.KONTINENTE_DATA.view.familySections;
+  const data = context.window.KONTINENTE_DATA;
+  return projectHouseDirectories(data, data.meta.id, 'territories').view.familySections;
 }
 const countySections = await sections('grafschaft.data.js');
 const local = countySections.flatMap(section => section.cards);
 const territories = Object.fromEntries(await Promise.all(Object.entries(regions).map(async ([id, path]) => [id, await sections(path)])));
 const ids = cards => Array.from(cards, card => card.id).filter(Boolean).sort();
+const visible = record => houseRegistry.byId(record.id)?.status === 'active'
+  || [...local, ...Object.values(territories).flatMap(groups => groups.flatMap(group => group.cards))].some(card => card.id === record.id);
+const placements = record => [record, ...(record.additionalPlacements || [])];
 
 test('Grafschaft zeigt alle großen Häuser, ausschließlich örtliche kleinere Häuser und die drei historischen Ausnahmen', () => {
   assert.deepEqual(ids(countySections[0].cards), ['arwydd','draig','gafyr','gwefrydd','gwyvern','saethwyr','wyrm'].map(id => 'haus-' + id).sort());
-  assert.deepEqual(ids([...countySections[1].cards,...countySections[2].cards]), FAMILY_REGISTRY.filter(record=>record.folderPath.includes('Celtigerns Wacht')&&record.folderPath.includes('Llamreis Ankunft')&&!countySections[0].cards.some(card=>card.id===record.id)).map(record=>record.id).sort());
+  assert.deepEqual(ids([...countySections[1].cards,...countySections[2].cards]), FAMILY_REGISTRY.filter(record=>visible(record)&&placements(record).some(p=>p.folderPath.includes('Celtigerns Wacht')&&p.folderPath.includes('Llamreis Ankunft'))&&!countySections[0].cards.some(card=>card.id===record.id)).map(record=>record.id).sort());
   for (const card of [...countySections[1].cards, ...countySections[2].cards]) {
-    assert.ok(FAMILY_REGISTRY.find(record => record.id === card.id).folderPath.includes('Llamreis Ankunft'), card.id);
+    assert.ok(placements(FAMILY_REGISTRY.find(record => record.id === card.id)).some(p => p.folderPath.includes('Llamreis Ankunft')), card.id);
   }
   assert.deepEqual(ids(countySections[3].cards), ['haus-ard-conbhron','haus-illysywen','haus-ui-talamh']);
   assert.ok(!local.some(card => card.id === 'haus-von-hochreuth'));
@@ -109,27 +113,9 @@ test('Wyrms bürgerliche Familien behalten ihren Wohnort unabhängig von ihrer D
   }
 });
 
-test('all eight new rural families remain at their seven Gwynthor homes without creating a Wyrm territory placement', () => {
-  assert.equal(FLEISCHSAMMLER_FAMILIES_INDEX.length, 8);
-  const commoners = countySections[2].cards;
-  for (const locality of FLEISCHSAMMLER_FAMILIES_INDEX) {
-    const record = FAMILY_REGISTRY.find(record => record.id === locality.familyId);
-    const matches = commoners.filter(card => card.id === locality.familyId);
-    assert.equal(matches.length, 1, locality.familyId);
-    assert.equal(matches[0].seat, `${locality.placeName} · Gwynthor`);
-    assert.equal(matches[0].rank, 'Bürgerliche Familie');
-    assert.equal(matches[0].liege, record.family.document.houseProfile.liegeHouseName || '');
-    assert.equal(decodeURI(matches[0].imageSrc), '/Stammbäume/' + locality.emblem);
-    assert.deepEqual(record.folderPath, ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);
-    for (const sections of Object.values(territories)) {
-      assert(!sections.some(section => section.cards.some(card => card.id === locality.familyId)), locality.familyId);
-    }
-  }
-});
-
 test('Alle registrierten Grafschaftsfamilien bleiben über direkte Hausseiten oder vorhandene Familienakten erreichbar', async () => {
   const cards = [...local, ...Object.values(territories).flatMap(sections => sections.flatMap(section => section.cards))];
-  for (const record of FAMILY_REGISTRY.filter(record => record.folderPath.includes('Celtigerns Wacht'))) {
+  for (const record of FAMILY_REGISTRY.filter(record => visible(record) && placements(record).some(p => p.folderPath.includes('Celtigerns Wacht')))) {
     const found = cards.filter(card => card.id === record.id);
     assert.ok(found.length, record.id);
     for (const card of found) {

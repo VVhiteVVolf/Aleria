@@ -1,0 +1,43 @@
+{
+  "schema": "aleria.house-source-manifest",
+  "schemaVersion": 1,
+  "housePageId": "melog",
+  "houseId": "house-melog",
+  "familyId": "melog",
+  "date": "2026-11-05",
+  "source": {
+    "file": "animexx-original.html",
+    "origin": "Vom Nutzer in diesem Auftrag gelieferter HTML-Quelltext, Eingefügter Text.txt",
+    "sha256": "85e3faf1a8a23dad33432829c0e6ade3e01798baca81ffa6c685af97ac475775",
+    "crestUrl": "https://i.imgur.com/hIUiXnp.jpeg"
+  },
+  "familySource": {
+    "file": "melog-original.json",
+    "origin": "Vom Nutzer nachgereichte vollständige Familienakte C:/Users/fhg_r/Downloads/melog.json",
+    "sha256": "0c84307823c97a14fabe10b30d60258077d9558533df0779a9e79496f49d816d",
+    "persons": 18,
+    "namedPersons": 16,
+    "partnerships": 6,
+    "parentages": 11,
+    "timeJumps": 1
+  },
+  "coverage": ["Bürgerlicher Rang, Gwynthor, Haus Draig, Cenyri, beschaulicher Wohlstand, Alerische Kirche", "Mehrgenerationenhandwerk und Ruf der Konditorei", "Rettung der Hochzeit von Meurig Draig und Heledd Gwyvern 1690", "Vater und fünfzehnjähriger Sohn, Hofküche und Ersatz innerhalb weniger Stunden", "Silbernes Tortenmesser als Draig-Geschenk, Familienbesitz und Ausstellung", "Tod des damaligen Meisters und heutige Geschäftsführung des Sohnes", "Hochzeiten Rhys Draig/Brona Eisenherz und Alicyn Draig/Sir Egon Gafyr", "Weitergabe des Handwerks und Bewahrung der wandelbaren Tortenrezeptur", "Sämtliche beschriebenen Bereiche des Gebäudes", "Tharim, Neun Göttliche, Nachbarschaft und Feste", "Wertschätzung Draigs, Neid der Konkurrenten als Fremdsicht, Lieferantenbeziehungen", "Fleiß, Ehrlichkeit, Zuverlässigkeit und handwerkliche Sorgfalt", "Alle 16 namentlich bekannten Angehörigen, Rollen, Lebensdaten und gelieferten Portraits aus melog.json", "Ithel und Tewdwr als die beiden zur Tortenrettung passenden Meister", "Familienlinien, Ehepartner, unbekannte Gründer und Überlieferungslücke der JSON"],
+  "decisions": [
+    "Platzhalter für Motto, Zitatgeber, Gründung, unbekannte Personen und nicht ausgefüllte Vorlagenszenen entfallen.",
+    "Die nachgereichte vollständige JSON ergänzt die zunächst nur erzählerisch bekannten Meister: Ithel (1647–1723) und sein Sohn Tewdwr (1675). Alle ursprünglichen Identitäten werden aus der JSON übernommen; die vorläufigen haus-melog-Platzhalter werden nicht weitergeführt.",
+    "Kanonische Familien- und Hausseiten-ID ist melog, Haus-ID bleibt house-melog. Keine zweite Hausseite unter haus-melog.",
+    "Die zwei unbekannten Gründer bleiben Platzhalter im Stammbaum. Der Zeitsprung zu Ithel bleibt eine Überlieferungslücke; keine direkte biologische Elternschaft behauptet.",
+    "Die Rollenbezeichnungen nennen Llywarch und Mabli als Geschwister. Ihre Eltern werden nicht erfunden.",
+    "Nutzerfreigabe für logische Jahreskorrekturen: Afanen 1705→1697, Llywarch 1704→1696, Cerys 1721→1731 und Iddon 1722→1732. Lleufer bleibt 1716. Die aktive Familienquelle führt diese vier Änderungen als separates Amendment; beide Originalquellen bleiben bytegleich.",
+    "Cerys und Iddon sind nach Portrait- und Generationenabgleich Kinder. Cerys' Händlerbezeichnung ist eine kindliche geschäftstüchtige Neigung, keine volljährige Ladenführung.",
+    "Meurig, Heledd, Rhys, Brona, Alicyn und Egon sind externe historische Bezugspersonen, keine Melog-Abstammung.",
+    "Haus Draig ist als Zugehörigkeit und Lehnsherr aus dem gelieferten Profil übernommen. Daraus wird kein Adelstitel abgeleitet.",
+    "Die ungeklärte Ursache der verschwundenen Torte bleibt ungeklärt.",
+    "Konkurrenzbehauptungen bleiben fremde Bewertungen und werden nicht als erwiesene Bevorzugung ausgegeben.",
+    "Die Quelle nennt keine Tortenbestandteile. Das neue Shop-Sortiment und Dienstleistungsangebot sind beauftragte Ausgestaltungen, keine nachträglich behauptete alte Rezeptur.",
+    "Die neue Bäckerfigur ist eine gestalterische Hausdarstellung. Historische Portraitähnlichkeit wird nicht behauptet.",
+    "Ein vorhandenes Wappen wird durch Root technisch transparent aufbereitet; kein neues Hauszeichen erfunden.",
+    "Keine produktiven Inventare, Geldwerte oder Besitzbelege geschrieben; das Familienmesser bleibt außerhalb des Verkaufssortiments."
+  ],
+  "publication": "Lokal erstellt; dieser Quellenimport löst keinen Push oder Deploy aus."
+}

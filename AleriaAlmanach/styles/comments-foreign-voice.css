@@ -1,0 +1,70 @@
+.comment-foreign-voice-controls {
+  display: grid;
+  gap: 0.65rem;
+  margin-block: 0.65rem;
+}
+
+#ec-segment-list[data-comment-mode="narrator"] .comment-segment-types {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 860px) {
+  /* The narrator's stacked panels belong to the form's existing scroll area.
+     Shrinking an overflow-visible editor would place later panels over its inputs. */
+  #edit-step-form[data-comment-mode="narrator"] > .edit-comment-text-panel,
+  #edit-step-form[data-comment-mode="narrator"] > .edit-comment-preview-panel,
+  #edit-step-form[data-comment-mode="narrator"] > #ec-narrator-hint {
+    flex-shrink: 0;
+  }
+}
+
+.comment-foreign-voice-name {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.comment-foreign-voice-name input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid var(--border, #d7cbb6);
+  border-radius: 4px;
+  padding: 0.55rem 0.65rem;
+  color: inherit;
+  background: var(--surface, #faf7ef);
+  font: inherit;
+}
+
+.comment-foreign-voice-avatars {
+  --comment-segment-avatar-size: 50.6px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4.2rem, 1fr));
+  gap: 0.5rem;
+}
+
+.comment-foreign-voice-avatar[aria-pressed="true"] {
+  outline: 2px solid var(--gold, #b38b3b);
+  outline-offset: 2px;
+}
+
+.comment-kind-foreignvoice .comment-text {
+  overflow-wrap: anywhere;
+}
+
+.comment-char-header .comment-foreign-voice-speaker {
+  cursor: default;
+  overflow-wrap: anywhere;
+}
+
+/* Keep the drifting veil inside a narrator's anonymous bubble at every frame.
+   The existing character-secret fusion and its portrait glow stay unchanged. */
+.comment-entry-narrator-secret .comment-body.comment-kind-secretaction::after {
+  inset: 8%;
+}
+
+.comment-foreign-voice-name input:focus-visible,
+.comment-foreign-voice-avatar:focus-visible {
+  outline: 2px solid var(--gold, #b38b3b);
+  outline-offset: 2px;
+}

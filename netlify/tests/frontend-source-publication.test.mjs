@@ -4,6 +4,26 @@ import { access, readFile } from 'node:fs/promises';
 import { shouldPublish } from '../build/site-publish.mjs';
 import { isAuthoringArchive } from '../build/publication-policy.mjs';
 
+test('incidental-speaker generation originals stay out of the static package while active portraits remain public', () => {
+  assert.equal(shouldPublish('assets/source/comment-foreign-voice/2026-11-12/originals/knight-v1.png'), false);
+  assert.equal(shouldPublish('AleriaAlmanach/public/assets/comment-foreign-voice/knight.png'), true);
+});
+
+test('world directory ships its runtime projection and keeps readers, builders and tests as sources',async()=>{
+  for(const path of ['shared/world-directory/source-reader.mjs','shared/world-directory/build-house-directories.mjs',
+    'shared/world-directory/house-placement.mjs','shared/world-directory/tests/catalog-coverage.test.mjs']) {
+    await access(new URL(`../../${path}`,import.meta.url));
+    assert.equal(isAuthoringArchive(path),true,path);
+    assert.equal(shouldPublish(path),false,path);
+  }
+  for(const path of ['shared/world-directory/house-projection.mjs','shared/world-directory/house-directories.generated.json']) {
+    await access(new URL(`../../${path}`,import.meta.url));
+    assert.equal(shouldPublish(path),true,path);
+  }
+  const runtime=await readFile(new URL('../../shared/world-directory/house-projection.mjs',import.meta.url),'utf8');
+  assert.doesNotMatch(runtime,/source-reader|house-placement|build-house-directories|node:/);
+});
+
 test('raw public review snapshots, scene backups and currency prompts stay repository sources',async()=>{
   for(const path of [
     'AleriaAlmanach/modules/gawain-duncan/source/gawain-public-profile-2026-11-01.json',

@@ -14,10 +14,10 @@ const currencyArtInputs = ['AleriaAlmanach/modules/currency/', 'AleriaAlmanach/a
   'AleriaAlmanach/public/assets/inventory/coins/eisenpfennig.png'];
 const mechanicalFeatures = ['combat', 'combat-critical', 'combat-status', 'combat-styles', 'characters', 'classes',
   'creatures', 'character-equipment', 'character-inventory', 'item-definitions', 'item-register', 'item-builder',
-  'inventory-use', 'scene-inventory', 'scene-items', 'scene-rest', 'scene-regeneration', 'scene-trade', 'trade-catalog', 'house-armor']
+  'inventory-use', 'scene-inventory', 'scene-items', 'scene-rest', 'scene-regeneration', 'scene-trade', 'trade-catalog', 'catalog-purchase', 'house-armor']
   .map(name => `AleriaAlmanach/modules/${name}/`);
 const sceneTradeTests = readdirSync(new URL('../../AleriaAlmanach/tests/', import.meta.url))
-  .filter(name => /^scene-trade-[a-z0-9-]+\.test\.mjs$/.test(name)).sort().map(name => name.slice(0, -'.test.mjs'.length));
+  .filter(name => /^(?:scene-trade|catalog-purchase)-[a-z0-9-]+\.test\.mjs$/.test(name)).sort().map(name => name.slice(0, -'.test.mjs'.length));
 const groupTests = ['group-adventure-content', 'group-community', 'group-roster-window', 'group-scene-state',
   'group-landing-model', 'group-landing-inventory', 'group-landing-integration', 'group-account',
   'group-section-migration', 'gawain-duncan', 'gawain-content-source-projection', 'gawain-character-database', 'gawain-family-snapshot',
@@ -59,6 +59,7 @@ export const ADVENTURE_SYSTEM_TASKS = [
       'AleriaAlmanach/AleriaAlmanach.html', 'AleriaAlmanach/modules/economy-calculator/',
       'AleriaAlmanach/modules/economy-pricing/', 'AleriaAlmanach/modules/gwynthor-geography/',
       'AleriaAlmanach/styles/scene-trade.css', 'AleriaAlmanach/styles/scene-trade-notification.css',
+      'AleriaAlmanach/styles/catalog-purchase.css', 'AleriaAlmanach/modules/goods/',
       'Anzeigetafeln/tools/build-notice-reward-catalog.mjs', 'Anzeigetafeln/assets/data/notice-reward-catalog.json', 'Anzeigetafeln/assets/js/rewards/notice-rewards-model.mjs',
       'AleriaAlmanach/scripts/build-item-register.mjs', 'AleriaAlmanach/scripts/source-pages/', 'AleriaAlmanach/docs/inventory/',
       'AleriaAlmanach/scripts/build-scene-trade-builtins.mjs', 'AleriaAlmanach/scripts/scene-trade/',

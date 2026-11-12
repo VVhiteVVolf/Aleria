@@ -137,10 +137,6 @@ function createLineageOriginRoute(family, invalidRequests) {
   const founderDescendantIds = new Set((family?.parentages || [])
     .filter(parentage => parentage.partnershipId === founderPartnership?.id)
     .map(parentage => parentage.childId));
-  const targetsAreValid = targetPersonIds.length > 0 && (
-    alignOverVisibleTree
-    || targetPersonIds.every(personId => founderDescendantIds.has(personId))
-  );
   const directTimeJump = (family?.timeJumps || []).find(timeJump => (
     timeJump.parentPartnershipId === founderPartnership?.id
     && (
@@ -148,6 +144,13 @@ function createLineageOriginRoute(family, invalidRequests) {
       || targetPersonIds.every(personId => timeJump.childIds?.includes(personId))
     )
   ));
+  // Explicit roots beyond an unrecorded-generation gap need no invented
+  // biological or claimed parentage to align their structural lineage axis.
+  const targetsAreValid = targetPersonIds.length > 0 && (
+    alignOverVisibleTree
+    || Boolean(directTimeJump)
+    || targetPersonIds.every(personId => founderDescendantIds.has(personId))
+  );
 
   if (!founderPartnership || !targetsAreValid) {
     invalidRequests.push(Object.freeze({

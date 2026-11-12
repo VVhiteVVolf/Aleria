@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "mercenary-2",
+  "label": "Söldner Variante",
+  "date": "2026-11-12",
+  "tool": "built-in image_gen",
+  "apiOrCliUsed": false,
+  "version": "v1",
+  "status": "active",
+  "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone square 1:1 RPG comment avatar of an anonymous human NPC speaking, not a sheet or collage.\nReference image: supplied existing role avatar is style, palette and village-backdrop reference. This requested image is a DIFFERENT variant of that same role, with substantially different headgear/body outline and conversational hand position. Keep the exact established image series look.\nStyle: Tales of Xillia/Frieren anime lineart with matte clean cel shading, simple textures, not realistic or painterly. Main human INCLUDING face and hands is completely dark charcoal, only restrained dark-slate edge lines. No visible eyes, mouth, nose, facial planes, skin colors or glowing slits. Entire person must read as faceless human silhouette.\nComposition: centered waist-up adult with head below top edge and hands in frame, foreground figure dominant and legible at 48px. Light quiet medieval timber-and-plaster village with 2-3 cream houses, brown roofs, pale lane and muted foliage, softly blue daylight sky behind. Full opaque square. Natural conversational gesturing, no combat, sinister atmosphere or supernatural effects.\nNo text, letters, insignia, heraldic symbols, frame, border, speech bubbles or watermark.\nVariant subject: A second adult medieval mercenary: older stockier broad build with receding short hair and a short squared beard outline, all near-black and absolutely NO facial features. Simple worn quilted leather jack with one small mismatched metal shoulder cap, a scarf around neck and a belt with a plain sheathed sword hilt just at waist; no diagonal chest satchel strap. Both hands visible, one held open outward at shoulder height, the other palm up in front of the chest. No fighting, no weapon drawn. Clearly different from the reference's young tousled short hair, layered metal shoulders, diagonal satchel and one hand on hip.",
+  "referencePaths": [
+    "E:/Aleria/AleriaAlmanach/public/assets/comment-foreign-voice/mercenary.png"
+  ],
+  "transparent_background": false,
+  "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-2a80-78c1-862d-49f020e4f087\\exec-9f6a605f-3417-4894-9339-dbae8840134a.png",
+  "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-12/originals/mercenary-2-v1.png",
+  "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/mercenary-2.png",
+  "transformation": "none: byte-identical generator PNG",
+  "visuallyInspected": true,
+  "visualReview": "Root inspected the actual generated image returned by image_gen.",
+  "sha256": "2324af5d43520e1d3a4511abaae5ebfc1cc8349cf8b8af50b1321ca645a390a9",
+  "bytes": 1766202,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGB"
+}

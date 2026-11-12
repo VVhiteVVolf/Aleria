@@ -8,6 +8,7 @@ import { commitItemDefinitionOperation } from '../../src/items/commit-item-defin
 import { undoMechanicalCommentOperation } from '../../src/mechanics/commit-undo-mechanical-comment.js';
 import { STANDARD_ITEMS } from '../../src/generated/item-register/item-register-standard.js';
 import { commitItemRecordOperation } from '../../src/items/commit-item-record.js';
+import { catalogEntry, catalogRequest, catalogGroup } from '../fixtures/catalog-trade.js';
 
 const projectId = 'demo-aleria-scene-trade';
 if (process.env.FIRESTORE_EMULATOR_HOST !== '127.0.0.1:8187') throw Error('Only the isolated local Firestore emulator at 127.0.0.1:8187 is allowed.');
@@ -37,6 +38,69 @@ beforeEach(async () => {
   await batch.commit();
 });
 after(() => db.terminate());
+
+async function seedCatalog(source = catalogEntry()) {
+  await db.doc('module_store_entries/catalog').set({ entryJson: JSON.stringify(source) });
+  const config = await read('char_tabs/config');
+  config.moduleStoreManifest.customSections[0].entryIds.push('catalog');
+  await db.doc('char_tabs/config').set(config);
+}
+
+test('real catalog purchase gifts exact gold change once without any scene, NPC purse update or source mutation', async () => {
+  const source = catalogEntry(); await seedCatalog(source);
+  await db.doc('characters/gawain').update({ 'inventory.moneyState': { gold: 1 } });
+  const input = catalogRequest();
+  const profiles = [(await read('characters/gawain')).combatProfile, (await read('characters/ylva')).combatProfile];
+  const [first, retry] = await Promise.all([commitSceneTradeOperation(db, player, input), commitSceneTradeOperation(db, player, input)]);
+  assert.equal(first.commentId, null); assert.equal(retry.commentId, null);
+  assert.deepEqual(first.receipt, retry.receipt);
+  const after = await state();
+  assert.deepEqual(after.gawain.inventory.moneyState, { gold: 0, silver: 9, copper: 98, pfennig: 99, totalCopper: 998.99 });
+  assert.equal(after.ylva.inventory.items[0].ownerCharacterId, 'ylva');
+  assert.equal(after.ylva.inventory.items.length, 1);
+  assert.deepEqual([after.gawain.combatProfile, after.ylva.combatProfile], profiles);
+  assert.equal(after.receipts, 1); assert.equal(after.comments, 0);
+  assert.deepEqual(await read('module_store_entries/catalog'), { entryJson: JSON.stringify(source) });
+  assert.equal((await readMerchantAvailabilityOperation(db, player, { merchantId: 'module:catalog' })).products[0].available, true);
+});
+
+test('real catalog group spending requires membership but does not require a scene link, and failed spending remains atomic', async () => {
+  await seedCatalog();
+  await db.doc('module_store_entries/crew').set({ entryJson: JSON.stringify(catalogGroup()) });
+  await db.doc('group_quest_accounts/crew').set({ id: 'crew', name: 'Reisegruppe', managerUids: ['unrelated-manager'], revision: 1,
+    inventory: { revision: 1, items: [], moneyState: { silver: 1 } } });
+  const input = catalogRequest(); input.lines[0].payerKey = 'group:crew'; input.expectedRevisions = { 'group:crew': 1, 'character:ylva': 1 };
+  const rejected = structuredClone(input); rejected.actorCharacterId = 'ylva';
+  await assert.rejects(commitSceneTradeOperation(db, player, rejected), /Gruppenhierarchie/);
+  assert.equal((await read('group_quest_accounts/crew')).revision, 1);
+  assert.equal((await state()).receipts, 0);
+  const response = await commitSceneTradeOperation(db, player, input);
+  assert.equal(response.groups[0].inventory.moneyState.totalCopper, 98.99);
+  assert.deepEqual(response.groups[0].managerUids, ['unrelated-manager']);
+  assert.equal((await read('characters/gawain')).inventory.moneyState.totalCopper, 100);
+  assert.equal((await state()).comments, 0);
+  const invalid = catalogRequest(catalogEntry(), { operationId: 'locked', expectedRevisions: {
+    'character:gawain': 1, 'character:ylva': (await read('characters/ylva')).inventory.revision,
+  } });
+  await db.doc('combat_profile_locks/characters/records/ylva').set({ activeEncounterKeys: ['fight'] });
+  const snapshot = await state();
+  await assert.rejects(commitSceneTradeOperation(db, player, invalid), /Kampf/);
+  assert.deepEqual(await state(), snapshot);
+});
+
+test('real catalog competitors grant one unique and expose its public source locator without changing catalog stock', async () => {
+  const source = catalogEntry({ definitionKind: 'unique' }); await seedCatalog(source);
+  const input = catalogRequest(source);
+  const competing = { ...input, operationId: 'competitor', actorCharacterId: 'ylva', lines: [{ ...input.lines[0], payerKey: 'character:ylva', recipientKey: 'character:gawain' }] };
+  const attempts = await Promise.allSettled([commitSceneTradeOperation(db, player, input), commitSceneTradeOperation(db, player, competing)]);
+  assert.equal(attempts.filter(result => result.status === 'fulfilled').length, 1);
+  const after = await state(); assert.equal(after.receipts, 1); assert.equal(after.comments, 0);
+  assert.equal(after.gawain.inventory.items.length + after.ylva.inventory.items.length, 1);
+  const availability = (await readMerchantAvailabilityOperation(db, player, { merchantId: 'module:catalog' })).products[0];
+  assert.equal(availability.available, false); assert.equal(availability.status, 'owned');
+  assert.deepEqual(availability.sourceRefs[0], { kind: 'trade-catalog', pageIndex: 0, itemIndex: 0, itemId: 'chalk' });
+  assert.deepEqual(await read('module_store_entries/catalog'), { entryJson: JSON.stringify(source) });
+});
 
 test('real player checkout buys, gifts and sells for unowned and foreign figures without ownership changes', async () => {
   const unowned = record('gawain'); delete unowned.ownerUid;

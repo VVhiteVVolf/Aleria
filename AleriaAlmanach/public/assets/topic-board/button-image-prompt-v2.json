@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-05",
+  "generator": "Built-in image_gen",
+  "file": "button-topic-board-v2.webp",
+  "originalFile": "originals/button-topic-board-v2.png",
+  "size": [
+    2172,
+    724
+  ],
+  "originalSha256": "0de873e2c9ae77de555f2ce8bfe52b48638a871a15902183ff300ab60743aaf2",
+  "sha256": "248dd13fbc1367ace45c216311e644ae9584988daff03e0c4a9f88be8e5249e6",
+  "delivery": "WebP quality85; original dimensions preserved; opaque rectangular parchment.",
+  "previousFile": "button-topic-board-v1.webp",
+  "previousVersionPreserved": true,
+  "references": [
+    {
+      "path": "IconOrdner/ReiterIcons/Kalender.png",
+      "sha256": "9529c2e2c8e7566647c76be7a7850fc76319c8543fefd68d4d28a28dae0c948e",
+      "role": "style reference"
+    },
+    {
+      "path": "IconOrdner/ReiterIcons/Markt.png",
+      "sha256": "3eeac46310792811e72afe84d69eea4f66fce94defbef29800937f9841e2a96f",
+      "role": "style reference"
+    }
+  ],
+  "prompt": "Create ONE finished replacement UI button asset for the Aleria sidebar, as a style-transfer adaptation of these two reference icons. Both inputs are STYLE references only: match their flat medieval woodcut/ink illustration, warm antique parchment grain, restrained ochre and dark sepia palette, fine engraved botanical corner ornament and double-line rectangular border. Replace their calendar/market subject entirely.\nOutput a very WIDE, LOW landscape rectangle, 3:1 canvas, ideally 1536x512. The rectangle fills the canvas edge to edge, straight edges, no surrounding background/margin. This is the button itself, not a UI mockup. Quiet, elegant, mature, consistent with the reference icon set. On the LEFT, a modest dark-sepia quill crossing two pinned parchment notes, simple readable emblem taking only 18-22 percent of width. Across CENTER and RIGHT, the exact text \"THEMENWAND\" in a single line, dignified engraved medieval Roman serif, generously spaced, dark sepia, readable when reduced to 250px wide. Spell T H E M E N W A N D exactly. Fine muted ochre botanical border at all four corners, plenty of breathing room around lettering. Flat printed/etched treatment with subtle parchment texture. No raised wooden sign, no red wax seal, no giant feather, no chunky cartoon outlines, no comic shading, no metallic shine, no exaggerated swirls, no 3D bevels, no cast shadow, no extra words, no watermark. Preserve the reference set's restrained archival parchment look."
+}

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { combatCommentInternals } from '../src/mechanics/commit-combat-comment.js';
+import { combatCommentInternals, commitCombatCommentOperation } from '../src/mechanics/commit-combat-comment.js';
+import { database } from './fixtures/combat-transaction-database.js';
 
 function resolution() {
   return { profileActionId: 'ability:shield-bash' };
@@ -90,4 +91,25 @@ test('excess selected support rules are rejected before any selection is silentl
   assert.throws(() => combatCommentInternals.ruleSelectionDescriptors({ segment: { combatAction: {
     ruleSelections: Array.from({ length: 21 }, () => ({}))
   } } }), /höchstens 20 ausgewählte Unterstützungsregeln/);
+});
+
+test('mechanical contributions preserve validated scene dates through the real inventory transaction', async () => {
+  const date = { year: 1740, month: 3, day: 9 };
+  for (const sceneStartDateAleria of [date, { year: 1740, month: 3, day: 37 }]) {
+    const db = database({ 'characters/actor': { id: 'actor', name: 'Actor', ownerUid: 'player',
+      inventory: { revision: 1, items: [{ id: 'ration', name: 'Ration', category: 'food', quantity: '2' }] },
+      combatProfile: { hitPoints: { current: 4, maximumOverride: 20 }, weapons: [] }
+    } });
+    const result = await commitCombatCommentOperation({ auth: { uid: 'player', token: { aleriaRole: 'player' } },
+      data: { entryId: 'scene', text: 'Isst eine Ration.', metadata: { characterId: 'actor', sceneStartDateAleria,
+        commentSegments: [{ kind: 'consume', characterId: 'actor', inventoryUse: {
+          actorId: 'actor', actorPersistence: { kind: 'character', recordId: 'actor' }, item: { id: 'ration' }, mode: 'consume'
+        } }]
+      } }
+    }, { database: db, nowClient: 100 });
+    const saved = db.data.get(`comments/${result.id}`);
+    assert.deepEqual(saved.sceneStartDateAleria, sceneStartDateAleria === date ? date : null);
+    assert.equal(db.data.get('characters/actor').inventory.items[0].quantity, '1');
+    assert.equal(saved.serverValidatedMechanics, true);
+  }
 });

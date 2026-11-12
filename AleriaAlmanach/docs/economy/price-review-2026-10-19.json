@@ -4,12 +4,12 @@
   "moneyUnit": "Kupfertaler",
   "method": "Interne Konsistenzprüfung einer fiktiven Wirtschaft. Vergleichsskala: 24 KT sparsamer Vierpersonenbedarf + 3 KT freie Mittel; 27 KT Hafenlohn bei sechs Diensttagen. Keine historische Preisstatistik.",
   "summary": {
-    "rows": 1506,
+    "rows": 1562,
     "adjusted": 148,
-    "retained": 1151,
+    "retained": 1207,
     "notOffered": 205,
     "unavailable": 2,
-    "eligibleVenues": 19,
+    "eligibleVenues": 20,
     "horseAndLivestockPriceChanges": 0
   },
   "limitations": [
@@ -188,6 +188,81 @@
       "reason": "Kalkulation für diesen Ort ausdrücklich zurückgestellt."
     },
     {
+      "id": "der-sternenfang-aurdden",
+      "title": "Der Sternenfang",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Die Klingende Münze - Gwynthor"
+      ],
+      "eligible": true,
+      "reason": "Begehbarer Verkaufsort mit Güterangebot."
+    },
+    {
+      "id": "gwynthor-gwregysdu-lagerhaeuser",
+      "title": "Die Lagerhäuser der Gwregysdu",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Die Klingende Münze - Gwynthor"
+      ],
+      "eligible": false,
+      "reason": "Ausgenommener Szenenort oder organisatorische Struktur."
+    },
+    {
+      "id": "gwynthor-zur-klingenden-krone",
+      "title": "Zur Klingenden Krone",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Die Klingende Münze - Gwynthor"
+      ],
+      "eligible": true,
+      "reason": "Begehbarer Verkaufsort mit Güterangebot."
+    },
+    {
+      "id": "die-lachende-nixe",
+      "title": "Die Lachende Nixe",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Die Klingende Münze - Gwynthor"
+      ],
+      "eligible": true,
+      "reason": "Begehbarer Verkaufsort mit Güterangebot."
+    },
+    {
+      "id": "gwynthor-die-rote-klaue",
+      "title": "Die rote Klaue",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Die Klingende Münze - Gwynthor"
+      ],
+      "eligible": false,
+      "reason": "Kalkulation für diesen Ort ausdrücklich zurückgestellt."
+    },
+    {
       "id": "gwynthor-badehaus-fontani",
       "title": "Badehaus der Fontani",
       "tab": "Völker & Kulturen",
@@ -270,66 +345,6 @@
       ],
       "eligible": true,
       "reason": "Begehbarer Verkaufsort mit Güterangebot."
-    },
-    {
-      "id": "gwynthor-gwregysdu-lagerhaeuser",
-      "title": "Die Lagerhäuser der Gwregysdu",
-      "tab": "Völker & Kulturen",
-      "path": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Bannkreis Gwynthor",
-        "Gwynthor-Stadt",
-        "Die Klingende Münze - Gwynthor"
-      ],
-      "eligible": false,
-      "reason": "Ausgenommener Szenenort oder organisatorische Struktur."
-    },
-    {
-      "id": "gwynthor-zur-klingenden-krone",
-      "title": "Zur Klingenden Krone",
-      "tab": "Völker & Kulturen",
-      "path": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Bannkreis Gwynthor",
-        "Gwynthor-Stadt",
-        "Die Klingende Münze - Gwynthor"
-      ],
-      "eligible": true,
-      "reason": "Begehbarer Verkaufsort mit Güterangebot."
-    },
-    {
-      "id": "die-lachende-nixe",
-      "title": "Die Lachende Nixe",
-      "tab": "Völker & Kulturen",
-      "path": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Bannkreis Gwynthor",
-        "Gwynthor-Stadt",
-        "Die Klingende Münze - Gwynthor"
-      ],
-      "eligible": true,
-      "reason": "Begehbarer Verkaufsort mit Güterangebot."
-    },
-    {
-      "id": "gwynthor-die-rote-klaue",
-      "title": "Die rote Klaue",
-      "tab": "Völker & Kulturen",
-      "path": [
-        "Cenyr",
-        "Celtigerns Wacht",
-        "Llamreis Ankunft",
-        "Bannkreis Gwynthor",
-        "Gwynthor-Stadt",
-        "Die Klingende Münze - Gwynthor"
-      ],
-      "eligible": false,
-      "reason": "Kalkulation für diesen Ort ausdrücklich zurückgestellt."
     },
     {
       "id": "windreiter",
@@ -21624,6 +21639,3450 @@
       "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
     },
     {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 4,
+      "itemIndex": 0,
+      "id": "loer-hofjuwelier-silberreif-seidenkante",
+      "optionIndex": 0,
+      "name": "Silberreif Seidenkante",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 95,
+        "maxCopper": 95
+      },
+      "category": "ringe",
+      "status": "available",
+      "before": null,
+      "after": [
+        95,
+        95
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 4,
+      "itemIndex": 1,
+      "id": "loer-hofjuwelier-goldring-millgriff",
+      "optionIndex": 0,
+      "name": "Goldring mit Perlsaum",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 420,
+        "maxCopper": 420
+      },
+      "category": "ringe",
+      "status": "available",
+      "before": null,
+      "after": [
+        420,
+        420
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 4,
+      "itemIndex": 2,
+      "id": "loer-hofjuwelier-granat-goldring",
+      "optionIndex": 0,
+      "name": "Granatring Abendglut",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 780,
+        "maxCopper": 780
+      },
+      "category": "ringe",
+      "status": "available",
+      "before": null,
+      "after": [
+        780,
+        780
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 4,
+      "itemIndex": 3,
+      "id": "loer-hofjuwelier-aquamarin-doppelreif",
+      "optionIndex": 0,
+      "name": "Aquamarinring Zweiklang",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 1150,
+        "maxCopper": 1150
+      },
+      "category": "ringe",
+      "status": "available",
+      "before": null,
+      "after": [
+        1150,
+        1150
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 4,
+      "itemIndex": 4,
+      "id": "loer-hofjuwelier-onyx-siegelring",
+      "optionIndex": 0,
+      "name": "Goldsiegelring mit Onyx",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 1500,
+        "maxCopper": 1500
+      },
+      "category": "ringe",
+      "status": "available",
+      "before": null,
+      "after": [
+        1500,
+        1500
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 4,
+      "itemIndex": 5,
+      "id": "loer-hofjuwelier-perlenkranz-ring",
+      "optionIndex": 0,
+      "name": "Perlenring Morgentau",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 1850,
+        "maxCopper": 1850
+      },
+      "category": "ringe",
+      "status": "available",
+      "before": null,
+      "after": [
+        1850,
+        1850
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 4,
+      "itemIndex": 6,
+      "id": "loer-hofjuwelier-smaragd-rankenring",
+      "optionIndex": 0,
+      "name": "Smaragdring Laubgesang",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 2600,
+        "maxCopper": 2600
+      },
+      "category": "ringe",
+      "status": "available",
+      "before": null,
+      "after": [
+        2600,
+        2600
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 4,
+      "itemIndex": 7,
+      "id": "loer-hofjuwelier-rubin-rosettenring",
+      "optionIndex": 0,
+      "name": "Rubinring Flammenrose",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 3900,
+        "maxCopper": 3900
+      },
+      "category": "ringe",
+      "status": "available",
+      "before": null,
+      "after": [
+        3900,
+        3900
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 4,
+      "itemIndex": 8,
+      "id": "loer-hofjuwelier-saphir-diamant-ring",
+      "optionIndex": 0,
+      "name": "Saphirring Tiefenstern",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 6200,
+        "maxCopper": 6200
+      },
+      "category": "ringe",
+      "status": "available",
+      "before": null,
+      "after": [
+        6200,
+        6200
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 4,
+      "itemIndex": 9,
+      "id": "loer-hofjuwelier-prunkring-sternenhof",
+      "optionIndex": 0,
+      "name": "Prunkring Sternenhof",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 9800,
+        "maxCopper": 9800
+      },
+      "category": "ringe",
+      "status": "available",
+      "before": null,
+      "after": [
+        9800,
+        9800
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 5,
+      "itemIndex": 0,
+      "id": "loer-hofjuwelier-silberamulett-taublatt",
+      "optionIndex": 0,
+      "name": "Silberamulett Taublatt",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 220,
+        "maxCopper": 220
+      },
+      "category": "amulette",
+      "status": "available",
+      "before": null,
+      "after": [
+        220,
+        220
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 5,
+      "itemIndex": 1,
+      "id": "loer-hofjuwelier-goldamulett-sonnenfaden",
+      "optionIndex": 0,
+      "name": "Goldamulett Sonnenfaden",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 750,
+        "maxCopper": 750
+      },
+      "category": "amulette",
+      "status": "available",
+      "before": null,
+      "after": [
+        750,
+        750
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 5,
+      "itemIndex": 2,
+      "id": "loer-hofjuwelier-granatamulett-herzflamme",
+      "optionIndex": 0,
+      "name": "Granatamulett Herzflamme",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 1150,
+        "maxCopper": 1150
+      },
+      "category": "amulette",
+      "status": "available",
+      "before": null,
+      "after": [
+        1150,
+        1150
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 5,
+      "itemIndex": 3,
+      "id": "loer-hofjuwelier-mondsteinamulett-silbernacht",
+      "optionIndex": 0,
+      "name": "Mondsteinamulett Silbernacht",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 1450,
+        "maxCopper": 1450
+      },
+      "category": "amulette",
+      "status": "available",
+      "before": null,
+      "after": [
+        1450,
+        1450
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 5,
+      "itemIndex": 4,
+      "id": "loer-hofjuwelier-aquamarinamulett-wellenlied",
+      "optionIndex": 0,
+      "name": "Aquamarinamulett Wellenlied",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 1850,
+        "maxCopper": 1850
+      },
+      "category": "amulette",
+      "status": "available",
+      "before": null,
+      "after": [
+        1850,
+        1850
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 5,
+      "itemIndex": 5,
+      "id": "loer-hofjuwelier-opalmedaillon-abendhimmel",
+      "optionIndex": 0,
+      "name": "Opalmedaillon Abendhimmel",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 2400,
+        "maxCopper": 2400
+      },
+      "category": "amulette",
+      "status": "available",
+      "before": null,
+      "after": [
+        2400,
+        2400
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 5,
+      "itemIndex": 6,
+      "id": "loer-hofjuwelier-smaragdamulett-gartenpforte",
+      "optionIndex": 0,
+      "name": "Smaragdamulett Gartenpforte",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 3400,
+        "maxCopper": 3400
+      },
+      "category": "amulette",
+      "status": "available",
+      "before": null,
+      "after": [
+        3400,
+        3400
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 5,
+      "itemIndex": 7,
+      "id": "loer-hofjuwelier-rubinamulett-rotes-gestirn",
+      "optionIndex": 0,
+      "name": "Rubinamulett Rotes Gestirn",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 4900,
+        "maxCopper": 4900
+      },
+      "category": "amulette",
+      "status": "available",
+      "before": null,
+      "after": [
+        4900,
+        4900
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 5,
+      "itemIndex": 8,
+      "id": "loer-hofjuwelier-saphiramulett-himmelstor",
+      "optionIndex": 0,
+      "name": "Saphiramulett Himmelstor",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 7800,
+        "maxCopper": 7800
+      },
+      "category": "amulette",
+      "status": "available",
+      "before": null,
+      "after": [
+        7800,
+        7800
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 5,
+      "itemIndex": 9,
+      "id": "loer-hofjuwelier-prunkamulett-morgenkonzert",
+      "optionIndex": 0,
+      "name": "Prunkamulett Morgenkonzert",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 12000,
+        "maxCopper": 12000
+      },
+      "category": "amulette",
+      "status": "available",
+      "before": null,
+      "after": [
+        12000,
+        12000
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 6,
+      "itemIndex": 0,
+      "id": "loer-hofjuwelier-silber-haarnadel",
+      "optionIndex": 0,
+      "name": "Silberne Haarnadel Blattfeder",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 260,
+        "maxCopper": 260
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        260,
+        260
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 6,
+      "itemIndex": 1,
+      "id": "loer-hofjuwelier-perlenohrringe-goldtropfen",
+      "optionIndex": 0,
+      "name": "Perlenohrringe Goldtropfen",
+      "unit": "1 Paar",
+      "price": {
+        "minCopper": 980,
+        "maxCopper": 980
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        980,
+        980
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 6,
+      "itemIndex": 2,
+      "id": "loer-hofjuwelier-goldarmreif-rankenlicht",
+      "optionIndex": 0,
+      "name": "Goldarmreif Rankenlicht",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 2400,
+        "maxCopper": 2400
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        2400,
+        2400
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 6,
+      "itemIndex": 3,
+      "id": "loer-hofjuwelier-diamantdiadem-sterngarten",
+      "optionIndex": 0,
+      "name": "Diamantdiadem Sterngarten",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 14500,
+        "maxCopper": 14500
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        14500,
+        14500
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 6,
+      "itemIndex": 4,
+      "id": "loer-hofjuwelier-goldkette-sechsboegen",
+      "optionIndex": 0,
+      "name": "Goldkette Rankenbögen",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 3600,
+        "maxCopper": 3600
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        3600,
+        3600
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 6,
+      "itemIndex": 5,
+      "id": "loer-hofjuwelier-smaragdbrosche-laubstern",
+      "optionIndex": 0,
+      "name": "Smaragdbrosche Laubstern",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 1800,
+        "maxCopper": 1800
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        1800,
+        1800
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 6,
+      "itemIndex": 6,
+      "id": "loer-hofjuwelier-onyx-manschettenknoepfe",
+      "optionIndex": 0,
+      "name": "Goldene Onyx-Manschettenknöpfe",
+      "unit": "1 Paar",
+      "price": {
+        "minCopper": 1200,
+        "maxCopper": 1200
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        1200,
+        1200
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 6,
+      "itemIndex": 7,
+      "id": "loer-hofjuwelier-rubin-mantelschliesse",
+      "optionIndex": 0,
+      "name": "Rubin-Mantelschließe Flammenbogen",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 2800,
+        "maxCopper": 2800
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        2800,
+        2800
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 6,
+      "itemIndex": 8,
+      "id": "loer-hofjuwelier-goldener-perlenkamm",
+      "optionIndex": 0,
+      "name": "Goldener Perlenkamm",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 1900,
+        "maxCopper": 1900
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        1900,
+        1900
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 6,
+      "itemIndex": 9,
+      "id": "loer-hofjuwelier-saphir-guertelschliesse",
+      "optionIndex": 0,
+      "name": "Saphir-Gürtelschließe Hoflicht",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 4900,
+        "maxCopper": 4900
+      },
+      "category": "schmuck",
+      "status": "available",
+      "before": null,
+      "after": [
+        4900,
+        4900
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 0,
+      "id": "sternenfang-rohstoff-amethyst",
+      "optionIndex": 0,
+      "name": "Amethyst",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 75,
+        "maxCopper": 75
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        75,
+        75
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 1,
+      "id": "sternenfang-rohstoff-rubin",
+      "optionIndex": 0,
+      "name": "Rubin",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 450,
+        "maxCopper": 450
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        450,
+        450
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 2,
+      "id": "sternenfang-rohstoff-saphir",
+      "optionIndex": 0,
+      "name": "Saphir",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 400,
+        "maxCopper": 400
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        400,
+        400
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 3,
+      "id": "sternenfang-rohstoff-smaragd",
+      "optionIndex": 0,
+      "name": "Smaragd",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 425,
+        "maxCopper": 425
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        425,
+        425
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 4,
+      "id": "sternenfang-rohstoff-diamant",
+      "optionIndex": 0,
+      "name": "Diamant",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 900,
+        "maxCopper": 900
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        900,
+        900
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 5,
+      "id": "sternenfang-rohstoff-opal",
+      "optionIndex": 0,
+      "name": "Opal",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 250,
+        "maxCopper": 250
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        250,
+        250
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 6,
+      "id": "sternenfang-rohstoff-topas",
+      "optionIndex": 0,
+      "name": "Topas",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 100,
+        "maxCopper": 100
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        100,
+        100
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 7,
+      "id": "sternenfang-rohstoff-granat",
+      "optionIndex": 0,
+      "name": "Granat",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 85,
+        "maxCopper": 85
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        85,
+        85
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 8,
+      "id": "sternenfang-rohstoff-aquamarin",
+      "optionIndex": 0,
+      "name": "Aquamarin",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 150,
+        "maxCopper": 150
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        150,
+        150
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 9,
+      "id": "sternenfang-rohstoff-turmalin",
+      "optionIndex": 0,
+      "name": "Turmalin",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 125,
+        "maxCopper": 125
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        125,
+        125
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 10,
+      "id": "sternenfang-rohstoff-jade",
+      "optionIndex": 0,
+      "name": "Jade",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 60,
+        "maxCopper": 60
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        60,
+        60
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 11,
+      "id": "sternenfang-rohstoff-bergkristall",
+      "optionIndex": 0,
+      "name": "Bergkristall",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 20,
+        "maxCopper": 20
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        20,
+        20
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 12,
+      "id": "sternenfang-rohstoff-onyx",
+      "optionIndex": 0,
+      "name": "Onyx",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 50,
+        "maxCopper": 50
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        50,
+        50
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 13,
+      "id": "sternenfang-rohstoff-mondstein",
+      "optionIndex": 0,
+      "name": "Mondstein",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 100,
+        "maxCopper": 100
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        100,
+        100
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 14,
+      "id": "sternenfang-rohstoff-tuerkis",
+      "optionIndex": 0,
+      "name": "Türkis",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 50,
+        "maxCopper": 50
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        50,
+        50
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 15,
+      "id": "sternenfang-rohstoff-bernstein",
+      "optionIndex": 0,
+      "name": "Bernstein",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 40,
+        "maxCopper": 40
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        40,
+        40
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 16,
+      "id": "sternenfang-rohstoff-perle",
+      "optionIndex": 0,
+      "name": "Perle",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 120,
+        "maxCopper": 120
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        120,
+        120
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 17,
+      "id": "sternenfang-rohstoff-lapislazuli",
+      "optionIndex": 0,
+      "name": "Lapislazuli",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 60,
+        "maxCopper": 60
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        60,
+        60
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 18,
+      "id": "sternenfang-rohstoff-malachit",
+      "optionIndex": 0,
+      "name": "Malachit",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 35,
+        "maxCopper": 35
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        35,
+        35
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "pageIndex": 7,
+      "itemIndex": 19,
+      "id": "sternenfang-rohstoff-zirkon",
+      "optionIndex": 0,
+      "name": "Zirkon",
+      "unit": "1 kleiner Schmuckstein · etwa 0,2 g",
+      "price": {
+        "minCopper": 120,
+        "maxCopper": 120
+      },
+      "category": "rohstoffe",
+      "status": "available",
+      "before": null,
+      "after": [
+        120,
+        120
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "id": "service-0",
+      "name": "Schmuck und Edelsteine begutachten",
+      "unit": "Ein gewöhnliches Schmuckstück",
+      "price": {
+        "minCopper": 60,
+        "maxCopper": 60
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        60,
+        60
+      ],
+      "after": [
+        60,
+        60
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "id": "service-1",
+      "name": "Ringweite und Verschlüsse anpassen",
+      "unit": "Eine einfache Anpassung",
+      "price": {
+        "minCopper": 80,
+        "maxCopper": 80
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        80,
+        80
+      ],
+      "after": [
+        80,
+        80
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "id": "service-2",
+      "name": "Gravur und persönliche Widmung",
+      "unit": "Eine kurze einfache Gravur",
+      "price": {
+        "minCopper": 90,
+        "maxCopper": 90
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        90,
+        90
+      ],
+      "after": [
+        90,
+        90
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "id": "service-3",
+      "name": "Individueller Schmuckentwurf",
+      "unit": "Beratung und ein vereinbarter Entwurf",
+      "price": {
+        "minCopper": 240,
+        "maxCopper": 240
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        240,
+        240
+      ],
+      "after": [
+        240,
+        240
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "id": "service-4",
+      "name": "Steine fassen und Fassungen erneuern",
+      "unit": "Eine einfache Fassung",
+      "price": {
+        "minCopper": 180,
+        "maxCopper": 180
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        180,
+        180
+      ],
+      "after": [
+        180,
+        180
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden",
+      "id": "service-5",
+      "name": "Erbstücke instand setzen",
+      "unit": "Ein überschaubarer Reparaturauftrag",
+      "price": {
+        "minCopper": 320,
+        "maxCopper": 320
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        320,
+        320
+      ],
+      "after": [
+        320,
+        320
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 0,
+      "id": "krone-standard-duennes-bier",
+      "optionIndex": 0,
+      "name": "Dünnes gewässertes Bier",
+      "unit": "Krug",
+      "price": {
+        "minCopper": 0.15,
+        "maxCopper": 0.15
+      },
+      "category": "standard",
+      "status": "available",
+      "before": [
+        0.15,
+        0.15
+      ],
+      "after": [
+        0.15,
+        0.15
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 1,
+      "id": "krone-standard-starkbier",
+      "optionIndex": 0,
+      "name": "Einfaches Starkbier",
+      "unit": "Krug",
+      "price": {
+        "minCopper": 0.5,
+        "maxCopper": 0.5
+      },
+      "category": "standard",
+      "status": "available",
+      "before": [
+        0.5,
+        0.5
+      ],
+      "after": [
+        0.5,
+        0.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 2,
+      "id": "krone-standard-honigmet",
+      "optionIndex": 0,
+      "name": "Schlichter Honigmet",
+      "unit": "Humpen",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "standard",
+      "status": "available",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 3,
+      "id": "krone-standard-apfelwein",
+      "optionIndex": 0,
+      "name": "Apfelwein",
+      "unit": "Becher",
+      "price": {
+        "minCopper": 0.6,
+        "maxCopper": 0.6
+      },
+      "category": "standard",
+      "status": "available",
+      "before": [
+        0.6,
+        0.6
+      ],
+      "after": [
+        0.6,
+        0.6
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 4,
+      "id": "krone-standard-wasser",
+      "optionIndex": 0,
+      "name": "Wasser",
+      "unit": "Krug",
+      "price": {
+        "minCopper": 0.05,
+        "maxCopper": 0.05
+      },
+      "category": "standard",
+      "status": "available",
+      "before": [
+        0.05,
+        0.05
+      ],
+      "after": [
+        0.05,
+        0.05
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 5,
+      "id": "krone-standard-klosterbier",
+      "optionIndex": 0,
+      "name": "Klosterbier",
+      "unit": "Krug",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "standard",
+      "status": "available",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 6,
+      "id": "krone-standard-kraeuteraufguss",
+      "optionIndex": 0,
+      "name": "Kräuteraufguss",
+      "unit": "Becher",
+      "price": {
+        "minCopper": 0.25,
+        "maxCopper": 0.25
+      },
+      "category": "standard",
+      "status": "available",
+      "before": [
+        0.25,
+        0.25
+      ],
+      "after": [
+        0.25,
+        0.25
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 7,
+      "id": "krone-standard-branntwein",
+      "optionIndex": 0,
+      "name": "Einfacher Branntwein",
+      "unit": "Glas",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 2
+      },
+      "category": "standard",
+      "status": "available",
+      "before": [
+        1,
+        2
+      ],
+      "after": [
+        1,
+        2
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 8,
+      "id": "krone-standard-kraeuterschnaps",
+      "optionIndex": 0,
+      "name": "Lokaler Kräuterschnaps",
+      "unit": "Glas",
+      "price": {
+        "minCopper": 2,
+        "maxCopper": 3
+      },
+      "category": "standard",
+      "status": "available",
+      "before": [
+        2,
+        3
+      ],
+      "after": [
+        2,
+        3
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 9,
+      "id": "krone-standard-kloster-spiritus",
+      "optionIndex": 0,
+      "name": "Kloster \"Spiritus\"",
+      "unit": "Glas",
+      "price": {
+        "minCopper": 3,
+        "maxCopper": 5
+      },
+      "category": "standard",
+      "status": "available",
+      "before": [
+        3,
+        5
+      ],
+      "after": [
+        3,
+        5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 10,
+      "id": "krone-flusshell",
+      "optionIndex": 0,
+      "name": "Cneacail · Flusshell",
+      "unit": "0,5 l",
+      "price": {
+        "minCopper": 2,
+        "maxCopper": 2
+      },
+      "category": "haus",
+      "status": "available",
+      "before": [
+        2,
+        2
+      ],
+      "after": [
+        2,
+        2
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 10,
+      "id": "krone-flusshell",
+      "optionIndex": 1,
+      "name": "Cneacail · Flusshell",
+      "unit": "1 l",
+      "price": {
+        "minCopper": 4,
+        "maxCopper": 4
+      },
+      "category": "haus",
+      "status": "available",
+      "before": [
+        4,
+        4
+      ],
+      "after": [
+        4,
+        4
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 10,
+      "id": "krone-flusshell",
+      "optionIndex": 2,
+      "name": "Cneacail · Flusshell",
+      "unit": "50 l",
+      "price": {
+        "minCopper": 200,
+        "maxCopper": 200
+      },
+      "category": "haus",
+      "status": "available",
+      "before": [
+        200,
+        200
+      ],
+      "after": [
+        200,
+        200
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 11,
+      "id": "krone-huegeldunkel",
+      "optionIndex": 0,
+      "name": "Cneacail · Hügeldunkel",
+      "unit": "0,5 l",
+      "price": {
+        "minCopper": 3,
+        "maxCopper": 3
+      },
+      "category": "haus",
+      "status": "available",
+      "before": [
+        3,
+        3
+      ],
+      "after": [
+        3,
+        3
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 11,
+      "id": "krone-huegeldunkel",
+      "optionIndex": 1,
+      "name": "Cneacail · Hügeldunkel",
+      "unit": "1 l",
+      "price": {
+        "minCopper": 6,
+        "maxCopper": 6
+      },
+      "category": "haus",
+      "status": "available",
+      "before": [
+        6,
+        6
+      ],
+      "after": [
+        6,
+        6
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 11,
+      "id": "krone-huegeldunkel",
+      "optionIndex": 2,
+      "name": "Cneacail · Hügeldunkel",
+      "unit": "50 l",
+      "price": {
+        "minCopper": 300,
+        "maxCopper": 300
+      },
+      "category": "haus",
+      "status": "available",
+      "before": [
+        300,
+        300
+      ],
+      "after": [
+        300,
+        300
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 12,
+      "id": "klingende-krone-whisky",
+      "optionIndex": 0,
+      "name": "Klingende Krone · 5 Jahre",
+      "unit": "4 cl",
+      "price": {
+        "minCopper": 8,
+        "maxCopper": 8
+      },
+      "category": "haus",
+      "status": "available",
+      "before": [
+        8,
+        8
+      ],
+      "after": [
+        8,
+        8
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 12,
+      "id": "klingende-krone-whisky",
+      "optionIndex": 1,
+      "name": "Klingende Krone · 5 Jahre",
+      "unit": "0,7 l",
+      "price": {
+        "minCopper": 140,
+        "maxCopper": 140
+      },
+      "category": "haus",
+      "status": "available",
+      "before": [
+        140,
+        140
+      ],
+      "after": [
+        140,
+        140
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 12,
+      "id": "klingende-krone-whisky",
+      "optionIndex": 2,
+      "name": "Klingende Krone · 5 Jahre",
+      "unit": "50 l",
+      "price": {
+        "minCopper": 10000,
+        "maxCopper": 10000
+      },
+      "category": "haus",
+      "status": "available",
+      "before": [
+        10000,
+        10000
+      ],
+      "after": [
+        10000,
+        10000
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 13,
+      "id": "krone-haferkaese",
+      "optionIndex": 0,
+      "name": "Haferfladen mit Hartkäse",
+      "unit": "Ein Brettchen",
+      "price": {
+        "minCopper": 1.5,
+        "maxCopper": 1.5
+      },
+      "category": "snacks",
+      "status": "available",
+      "before": [
+        1.5,
+        1.5
+      ],
+      "after": [
+        1.5,
+        1.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 14,
+      "id": "krone-essiggurken",
+      "optionIndex": 0,
+      "name": "Essiggurken und Rettich",
+      "unit": "Ein Schälchen",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "snacks",
+      "status": "available",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone",
+      "pageIndex": 5,
+      "itemIndex": 15,
+      "id": "krone-nussapfel",
+      "optionIndex": 0,
+      "name": "Haselnüsse und Dörräpfel",
+      "unit": "Eine kleine Schale",
+      "price": {
+        "minCopper": 1.5,
+        "maxCopper": 1.5
+      },
+      "category": "snacks",
+      "status": "available",
+      "before": [
+        1.5,
+        1.5
+      ],
+      "after": [
+        1.5,
+        1.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 0,
+      "id": "birne-frischkaese",
+      "optionIndex": 0,
+      "name": "Birne, Frischkäse & geröstete Walnuss",
+      "unit": "Kleine Portion",
+      "price": {
+        "minCopper": 4,
+        "maxCopper": 4
+      },
+      "category": "hauskarte",
+      "status": "available",
+      "before": [
+        4,
+        4
+      ],
+      "after": [
+        4,
+        4
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 1,
+      "id": "pilzessenz",
+      "optionIndex": 0,
+      "name": "Klare Waldpilzessenz",
+      "unit": "Kleine Portion",
+      "price": {
+        "minCopper": 4.5,
+        "maxCopper": 4.5
+      },
+      "category": "hauskarte",
+      "status": "available",
+      "before": [
+        4.5,
+        4.5
+      ],
+      "after": [
+        4.5,
+        4.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 2,
+      "id": "krebstoertchen",
+      "optionIndex": 0,
+      "name": "Kleines Krebstörtchen mit Dill",
+      "unit": "Kleine Portion",
+      "price": {
+        "minCopper": 5.5,
+        "maxCopper": 5.5
+      },
+      "category": "hauskarte",
+      "status": "available",
+      "before": [
+        5.5,
+        5.5
+      ],
+      "after": [
+        5.5,
+        5.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 3,
+      "id": "saibling-lauch",
+      "optionIndex": 0,
+      "name": "Saibling auf feinem Lauch",
+      "unit": "Kleine Portion",
+      "price": {
+        "minCopper": 9,
+        "maxCopper": 9
+      },
+      "category": "hauskarte",
+      "status": "available",
+      "before": [
+        9,
+        9
+      ],
+      "after": [
+        9,
+        9
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 4,
+      "id": "huhn-birnenjus",
+      "optionIndex": 0,
+      "name": "Zarte Hühnerbrust mit Birnenjus",
+      "unit": "Kleine Portion",
+      "price": {
+        "minCopper": 10.5,
+        "maxCopper": 10.5
+      },
+      "category": "hauskarte",
+      "status": "available",
+      "before": [
+        10.5,
+        10.5
+      ],
+      "after": [
+        10.5,
+        10.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 5,
+      "id": "kraeuterknoepfle",
+      "optionIndex": 0,
+      "name": "Kräuterknöpfle mit Waldpilzen",
+      "unit": "Kleine Portion",
+      "price": {
+        "minCopper": 8,
+        "maxCopper": 8
+      },
+      "category": "hauskarte",
+      "status": "available",
+      "before": [
+        8,
+        8
+      ],
+      "after": [
+        8,
+        8
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 6,
+      "id": "wachtel-traubenjus",
+      "optionIndex": 0,
+      "name": "Wachtelbrust an dunklem Traubenjus",
+      "unit": "Kleine Portion",
+      "price": {
+        "minCopper": 16.5,
+        "maxCopper": 16.5
+      },
+      "category": "hauskarte",
+      "status": "available",
+      "before": [
+        16.5,
+        16.5
+      ],
+      "after": [
+        16.5,
+        16.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 7,
+      "id": "weinlaub-1734",
+      "optionIndex": 0,
+      "name": "Weinlaub · Jahrgang 1734",
+      "unit": "0,15 l",
+      "price": {
+        "minCopper": 8,
+        "maxCopper": 8
+      },
+      "category": "weine",
+      "status": "available",
+      "before": [
+        8,
+        8
+      ],
+      "after": [
+        8,
+        8
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 7,
+      "id": "weinlaub-1734",
+      "optionIndex": 1,
+      "name": "Weinlaub · Jahrgang 1734",
+      "unit": "0,75 l",
+      "price": {
+        "minCopper": 40,
+        "maxCopper": 40
+      },
+      "category": "weine",
+      "status": "available",
+      "before": [
+        40,
+        40
+      ],
+      "after": [
+        40,
+        40
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 8,
+      "id": "weinlaub-1728",
+      "optionIndex": 0,
+      "name": "Weinlaub · Jahrgang 1728",
+      "unit": "0,15 l",
+      "price": {
+        "minCopper": 14,
+        "maxCopper": 14
+      },
+      "category": "weine",
+      "status": "available",
+      "before": [
+        14,
+        14
+      ],
+      "after": [
+        14,
+        14
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 8,
+      "id": "weinlaub-1728",
+      "optionIndex": 1,
+      "name": "Weinlaub · Jahrgang 1728",
+      "unit": "0,75 l",
+      "price": {
+        "minCopper": 70,
+        "maxCopper": 70
+      },
+      "category": "weine",
+      "status": "available",
+      "before": [
+        70,
+        70
+      ],
+      "after": [
+        70,
+        70
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 9,
+      "id": "weissmann-weisswein",
+      "optionIndex": 0,
+      "name": "Weissmann · Weißwein",
+      "unit": "0,15 l",
+      "price": {
+        "minCopper": 6,
+        "maxCopper": 6
+      },
+      "category": "weine",
+      "status": "available",
+      "before": [
+        6,
+        6
+      ],
+      "after": [
+        6,
+        6
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 9,
+      "id": "weissmann-weisswein",
+      "optionIndex": 1,
+      "name": "Weissmann · Weißwein",
+      "unit": "0,75 l",
+      "price": {
+        "minCopper": 30,
+        "maxCopper": 30
+      },
+      "category": "weine",
+      "status": "available",
+      "before": [
+        30,
+        30
+      ],
+      "after": [
+        30,
+        30
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 10,
+      "id": "weissmann-champagnia",
+      "optionIndex": 0,
+      "name": "Weissmann · Champagnia",
+      "unit": "0,10 l",
+      "price": {
+        "minCopper": 18,
+        "maxCopper": 18
+      },
+      "category": "weine",
+      "status": "available",
+      "before": [
+        18,
+        18
+      ],
+      "after": [
+        18,
+        18
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 10,
+      "id": "weissmann-champagnia",
+      "optionIndex": 1,
+      "name": "Weissmann · Champagnia",
+      "unit": "0,75 l",
+      "price": {
+        "minCopper": 90,
+        "maxCopper": 90
+      },
+      "category": "weine",
+      "status": "available",
+      "before": [
+        90,
+        90
+      ],
+      "after": [
+        90,
+        90
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 11,
+      "id": "tischwein-rot",
+      "optionIndex": 0,
+      "name": "Roter Tischwein",
+      "unit": "Glas · 0,20 l",
+      "price": {
+        "minCopper": 0.8,
+        "maxCopper": 0.8
+      },
+      "category": "weine",
+      "status": "available",
+      "before": [
+        0.8,
+        0.8
+      ],
+      "after": [
+        0.8,
+        0.8
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 12,
+      "id": "tischwein-weiss",
+      "optionIndex": 0,
+      "name": "Weißer Tischwein",
+      "unit": "Glas · 0,20 l",
+      "price": {
+        "minCopper": 0.9,
+        "maxCopper": 0.9
+      },
+      "category": "weine",
+      "status": "available",
+      "before": [
+        0.9,
+        0.9
+      ],
+      "after": [
+        0.9,
+        0.9
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 13,
+      "id": "tischwein-rose",
+      "optionIndex": 0,
+      "name": "Rosé-Tischwein",
+      "unit": "Glas · 0,20 l",
+      "price": {
+        "minCopper": 1.1,
+        "maxCopper": 1.1
+      },
+      "category": "weine",
+      "status": "available",
+      "before": [
+        1.1,
+        1.1
+      ],
+      "after": [
+        1.1,
+        1.1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 14,
+      "id": "teyrngarch-brauerzunft-bier-hellwacht",
+      "optionIndex": 0,
+      "name": "Hellwacht",
+      "unit": "0,5 l",
+      "price": {
+        "minCopper": 2.6,
+        "maxCopper": 2.6
+      },
+      "category": "importe",
+      "status": "available",
+      "before": [
+        2.6,
+        2.6
+      ],
+      "after": [
+        2.6,
+        2.6
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 15,
+      "id": "teyrngarch-brauerzunft-bier-hopfgold",
+      "optionIndex": 0,
+      "name": "Hopfgold",
+      "unit": "0,5 l",
+      "price": {
+        "minCopper": 1.3,
+        "maxCopper": 1.3
+      },
+      "category": "importe",
+      "status": "available",
+      "before": [
+        1.3,
+        1.3
+      ],
+      "after": [
+        1.3,
+        1.3
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 16,
+      "id": "teyrngarch-brauerzunft-bier-sonnenglanz",
+      "optionIndex": 0,
+      "name": "Sonnenglanz",
+      "unit": "0,5 l",
+      "price": {
+        "minCopper": 0.6,
+        "maxCopper": 0.6
+      },
+      "category": "importe",
+      "status": "available",
+      "before": [
+        0.6,
+        0.6
+      ],
+      "after": [
+        0.6,
+        0.6
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 17,
+      "id": "penderyn-brauer-destillierzunft-bier-goldschuppen",
+      "optionIndex": 0,
+      "name": "Goldschuppen Bier",
+      "unit": "0,5 l",
+      "price": {
+        "minCopper": 2,
+        "maxCopper": 2
+      },
+      "category": "importe",
+      "status": "available",
+      "before": [
+        2,
+        2
+      ],
+      "after": [
+        2,
+        2
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 18,
+      "id": "penderyn-brauer-destillierzunft-whisky-rhagorol",
+      "optionIndex": 0,
+      "name": "Penderyn · Rhagorol",
+      "unit": "4 cl",
+      "price": {
+        "minCopper": 6.5,
+        "maxCopper": 6.5
+      },
+      "category": "importe",
+      "status": "available",
+      "before": [
+        6.5,
+        6.5
+      ],
+      "after": [
+        6.5,
+        6.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 19,
+      "id": "penderyn-brauer-destillierzunft-whisky-penderyn",
+      "optionIndex": 0,
+      "name": "Penderyn",
+      "unit": "4 cl",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "importe",
+      "status": "available",
+      "before": [
+        12,
+        12
+      ],
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 20,
+      "id": "standard-01",
+      "optionIndex": 0,
+      "name": "Eintopf des Tages",
+      "unit": "Pro Schüssel",
+      "price": {
+        "minCopper": 0.9,
+        "maxCopper": 0.9
+      },
+      "category": "speisen",
+      "status": "available",
+      "before": [
+        0.5,
+        0.5
+      ],
+      "after": [
+        0.9,
+        0.9
+      ],
+      "decision": "angepasst",
+      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 21,
+      "id": "standard-02",
+      "optionIndex": 0,
+      "name": "Geröstetes Fleisch",
+      "unit": "Pro Teller",
+      "price": {
+        "minCopper": 4,
+        "maxCopper": 4
+      },
+      "category": "speisen",
+      "status": "available",
+      "before": [
+        4,
+        4
+      ],
+      "after": [
+        4,
+        4
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 22,
+      "id": "standard-03",
+      "optionIndex": 0,
+      "name": "Hafergrütze mit Schmalz",
+      "unit": "Pro Schüssel",
+      "price": {
+        "minCopper": 0.25,
+        "maxCopper": 0.25
+      },
+      "category": "speisen",
+      "status": "available",
+      "before": [
+        0.1,
+        0.1
+      ],
+      "after": [
+        0.25,
+        0.25
+      ],
+      "decision": "angepasst",
+      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 23,
+      "id": "standard-04",
+      "optionIndex": 0,
+      "name": "Blutwurst & Kraut​",
+      "unit": "Pro Teller",
+      "price": {
+        "minCopper": 1.1,
+        "maxCopper": 1.1
+      },
+      "category": "speisen",
+      "status": "available",
+      "before": [
+        1.1,
+        1.1
+      ],
+      "after": [
+        1.1,
+        1.1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 24,
+      "id": "standard-05",
+      "optionIndex": 0,
+      "name": "Gebackenes Huhn",
+      "unit": "Pro Teller",
+      "price": {
+        "minCopper": 4.5,
+        "maxCopper": 4.5
+      },
+      "category": "speisen",
+      "status": "available",
+      "before": [
+        1.8,
+        1.8
+      ],
+      "after": [
+        4.5,
+        4.5
+      ],
+      "decision": "angepasst",
+      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 25,
+      "id": "standard-06",
+      "optionIndex": 0,
+      "name": "Bohneneintopf",
+      "unit": "Pro Schüssel",
+      "price": {
+        "minCopper": 0.85,
+        "maxCopper": 0.85
+      },
+      "category": "speisen",
+      "status": "available",
+      "before": [
+        0.85,
+        0.85
+      ],
+      "after": [
+        0.85,
+        0.85
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 26,
+      "id": "standard-07",
+      "optionIndex": 0,
+      "name": "Geröstetes Bauernbrot",
+      "unit": "Pro Teller",
+      "price": {
+        "minCopper": 0.2,
+        "maxCopper": 0.2
+      },
+      "category": "speisen",
+      "status": "available",
+      "before": [
+        0.15,
+        0.15
+      ],
+      "after": [
+        0.2,
+        0.2
+      ],
+      "decision": "angepasst",
+      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 27,
+      "id": "standard-08",
+      "optionIndex": 0,
+      "name": "Frühstücksteller",
+      "unit": "Pro Teller",
+      "price": {
+        "minCopper": 1.2,
+        "maxCopper": 1.2
+      },
+      "category": "speisen",
+      "status": "available",
+      "before": [
+        0.5,
+        0.5
+      ],
+      "after": [
+        1.2,
+        1.2
+      ],
+      "decision": "angepasst",
+      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 28,
+      "id": "standard-09",
+      "optionIndex": 0,
+      "name": "Räucherfleisch",
+      "unit": "Pro Teller",
+      "price": {
+        "minCopper": 2,
+        "maxCopper": 2
+      },
+      "category": "speisen",
+      "status": "available",
+      "before": [
+        2,
+        2
+      ],
+      "after": [
+        2,
+        2
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 29,
+      "id": "standard-10",
+      "optionIndex": 0,
+      "name": "Räucherfisch",
+      "unit": "Pro Teller",
+      "price": {
+        "minCopper": 3,
+        "maxCopper": 3
+      },
+      "category": "speisen",
+      "status": "available",
+      "before": [
+        3,
+        3
+      ],
+      "after": [
+        3,
+        3
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 30,
+      "id": "standard-11",
+      "optionIndex": 0,
+      "name": "Sauergemüse",
+      "unit": "Pro Teller",
+      "price": {
+        "minCopper": 0.3,
+        "maxCopper": 0.3
+      },
+      "category": "speisen",
+      "status": "available",
+      "before": [
+        0.3,
+        0.3
+      ],
+      "after": [
+        0.3,
+        0.3
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 31,
+      "id": "standard-12",
+      "optionIndex": 0,
+      "name": "Dünnes gewä. Bier",
+      "unit": "Pro Krug",
+      "price": {
+        "minCopper": 0.15,
+        "maxCopper": 0.15
+      },
+      "category": "getranke",
+      "status": "available",
+      "before": [
+        0.15,
+        0.15
+      ],
+      "after": [
+        0.15,
+        0.15
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 32,
+      "id": "standard-13",
+      "optionIndex": 0,
+      "name": "Einfaches Starkbier",
+      "unit": "Pro Krug",
+      "price": {
+        "minCopper": 0.5,
+        "maxCopper": 0.5
+      },
+      "category": "getranke",
+      "status": "available",
+      "before": [
+        0.5,
+        0.5
+      ],
+      "after": [
+        0.5,
+        0.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 33,
+      "id": "standard-14",
+      "optionIndex": 0,
+      "name": "Schlichter Honigmet",
+      "unit": "Pro Krug",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "getranke",
+      "status": "available",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 34,
+      "id": "standard-15",
+      "optionIndex": 0,
+      "name": "Apfelwein",
+      "unit": "Pro Glas",
+      "price": {
+        "minCopper": 0.6,
+        "maxCopper": 0.6
+      },
+      "category": "getranke",
+      "status": "available",
+      "before": [
+        0.6,
+        0.6
+      ],
+      "after": [
+        0.6,
+        0.6
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 35,
+      "id": "standard-16",
+      "optionIndex": 0,
+      "name": "Wasser",
+      "unit": "Pro Becher",
+      "price": {
+        "minCopper": 0.03,
+        "maxCopper": 0.03
+      },
+      "category": "getranke",
+      "status": "available",
+      "before": [
+        0.03,
+        0.03
+      ],
+      "after": [
+        0.03,
+        0.03
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 36,
+      "id": "standard-17",
+      "optionIndex": 0,
+      "name": "Klosterbier",
+      "unit": "Pro Krug",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "getranke",
+      "status": "available",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 37,
+      "id": "standard-18",
+      "optionIndex": 0,
+      "name": "Kräuteraufguss (Tee)",
+      "unit": "Pro Tasse",
+      "price": {
+        "minCopper": 0.25,
+        "maxCopper": 0.25
+      },
+      "category": "getranke",
+      "status": "available",
+      "before": [
+        0.25,
+        0.25
+      ],
+      "after": [
+        0.25,
+        0.25
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 38,
+      "id": "standard-19",
+      "optionIndex": 0,
+      "name": "Einfacher Branntwein",
+      "unit": "Pro Glas",
+      "price": {
+        "minCopper": 1,
+        "maxCopper": 1
+      },
+      "category": "getranke",
+      "status": "available",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        1,
+        1
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 39,
+      "id": "standard-20",
+      "optionIndex": 0,
+      "name": "Lokaler Kräuterschnaps",
+      "unit": "Pro Glas",
+      "price": {
+        "minCopper": 2,
+        "maxCopper": 3
+      },
+      "category": "getranke",
+      "status": "available",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        2,
+        3
+      ],
+      "decision": "angepasst",
+      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "pageIndex": 3,
+      "itemIndex": 40,
+      "id": "standard-21",
+      "optionIndex": 0,
+      "name": "Kloster \"Spiritus\"",
+      "unit": "Pro Glas",
+      "price": {
+        "minCopper": 3,
+        "maxCopper": 5
+      },
+      "category": "getranke",
+      "status": "available",
+      "before": [
+        1,
+        1
+      ],
+      "after": [
+        3,
+        5
+      ],
+      "decision": "angepasst",
+      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "id": "service-0",
+      "name": "Gesellschaft im Salon",
+      "unit": "Eine vereinbarte Stunde im öffentlichen Salon",
+      "price": {
+        "minCopper": 20,
+        "maxCopper": 20
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        20,
+        20
+      ],
+      "after": [
+        20,
+        20
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "id": "service-1",
+      "name": "Eine Stunde zu zweit",
+      "unit": "Eine vereinbarte Stunde in privatem Rahmen",
+      "price": {
+        "minCopper": 60,
+        "maxCopper": 60
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        60,
+        60
+      ],
+      "after": [
+        60,
+        60
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "id": "service-2",
+      "name": "Ein Abend in besonderer Gesellschaft",
+      "unit": "Zusammenhängender Abend · bis vier Stunden",
+      "price": {
+        "minCopper": 190,
+        "maxCopper": 190
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        190,
+        190
+      ],
+      "after": [
+        190,
+        190
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "id": "service-3",
+      "name": "Ein privater Tanz",
+      "unit": "Eine kurze Darbietung nach Termin",
+      "price": {
+        "minCopper": 15,
+        "maxCopper": 15
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        15,
+        15
+      ],
+      "after": [
+        15,
+        15
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "id": "service-4",
+      "name": "Kleine Tanzfolge",
+      "unit": "Zwei Tänzerinnen · Musikbegleitung gesondert",
+      "price": {
+        "minCopper": 40,
+        "maxCopper": 40
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        40,
+        40
+      ],
+      "after": [
+        40,
+        40
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "id": "service-5",
+      "name": "Eine persönliche Weise",
+      "unit": "Ein vereinbartes Stück im Salon",
+      "price": {
+        "minCopper": 5,
+        "maxCopper": 5
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        5,
+        5
+      ],
+      "after": [
+        5,
+        5
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "id": "service-6",
+      "name": "Musik im Hinterzimmer",
+      "unit": "Eine Musikerin · eine volle Stunde",
+      "price": {
+        "minCopper": 30,
+        "maxCopper": 30
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        30,
+        30
+      ],
+      "after": [
+        30,
+        30
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "id": "service-7",
+      "name": "Ein musikalischer Abend",
+      "unit": "Drei Stunden mit beiden Musikerinnen · nach gemeinsamer Verfügbarkeit",
+      "price": {
+        "minCopper": 150,
+        "maxCopper": 150
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        150,
+        150
+      ],
+      "after": [
+        150,
+        150
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "id": "service-8",
+      "name": "Eine ruhige Kammer",
+      "unit": "Eine Nacht · Ankunft und Abreise nach Hausabsprache",
+      "price": {
+        "minCopper": 12,
+        "maxCopper": 12
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        12,
+        12
+      ],
+      "after": [
+        12,
+        12
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "id": "service-9",
+      "name": "Die Perlenstube",
+      "unit": "Eine Nacht · bis zwei Personen",
+      "price": {
+        "minCopper": 25,
+        "maxCopper": 25
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        25,
+        25
+      ],
+      "after": [
+        25,
+        25
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "id": "service-10",
+      "name": "Ein festes Zimmer im Haus",
+      "unit": "Ein Aleria-Monat mit 36 Nächten · monatlich im Voraus",
+      "price": {
+        "minCopper": 360,
+        "maxCopper": 360
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        360,
+        360
+      ],
+      "after": [
+        360,
+        360
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "id": "service-11",
+      "name": "Die Perlenstube auf Dauer",
+      "unit": "Ein Aleria-Monat mit 36 Nächten · bis zwei Personen",
+      "price": {
+        "minCopper": 720,
+        "maxCopper": 720
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        720,
+        720
+      ],
+      "after": [
+        720,
+        720
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "id": "service-12",
+      "name": "Ein warmer Zuber",
+      "unit": "Ein vorbereiteter Zuber · nach Termin",
+      "price": {
+        "minCopper": 4,
+        "maxCopper": 4
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        4,
+        4
+      ],
+      "after": [
+        4,
+        4
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe",
+      "id": "service-13",
+      "name": "Ein Salon für die eigene Runde",
+      "unit": "Bis sechs Gäste · Speisen, Getränke und Künstler gesondert",
+      "price": {
+        "minCopper": 10,
+        "maxCopper": 10
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        10,
+        10
+      ],
+      "after": [
+        10,
+        10
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die rote Klaue",
+      "moduleId": "gwynthor-die-rote-klaue",
+      "id": "service-0",
+      "name": "Geld gegen Pfand",
+      "unit": "Meist bis zur Hälfte des vorsichtig geschätzten Wiederverkaufswerts",
+      "price": {
+        "minCopper": 3,
+        "maxCopper": 3
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        3,
+        3
+      ],
+      "after": [
+        3,
+        3
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die rote Klaue",
+      "moduleId": "gwynthor-die-rote-klaue",
+      "id": "service-1",
+      "name": "Darlehen auf Schuldbrief",
+      "unit": "Summe und Laufzeit nach Prüfung der Rückzahlung",
+      "price": {
+        "minCopper": 2,
+        "maxCopper": 2
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        2,
+        2
+      ],
+      "after": [
+        2,
+        2
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die rote Klaue",
+      "moduleId": "gwynthor-die-rote-klaue",
+      "id": "service-2",
+      "name": "Münzen prüfen und wechseln",
+      "unit": "Gewöhnliche Münzen in vorrätige örtliche Sorten",
+      "price": {
+        "minCopper": 2,
+        "maxCopper": 2
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        2,
+        2
+      ],
+      "after": [
+        2,
+        2
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die rote Klaue",
+      "moduleId": "gwynthor-die-rote-klaue",
+      "id": "service-4",
+      "name": "Wertschätzung und Vermittlung",
+      "unit": "Sichtung eines gewöhnlichen Gegenstands; besondere Fachprüfung nach Absprache",
+      "price": {
+        "minCopper": 2,
+        "maxCopper": 2
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        2,
+        2
+      ],
+      "after": [
+        2,
+        2
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
       "source": "Badehaus der Fontani",
       "moduleId": "gwynthor-badehaus-fontani",
       "id": "service-0",
@@ -26468,2162 +29927,6 @@
       "after": [
         0.5,
         0.5
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 0,
-      "id": "krone-standard-duennes-bier",
-      "optionIndex": 0,
-      "name": "Dünnes gewässertes Bier",
-      "unit": "Krug",
-      "price": {
-        "minCopper": 0.15,
-        "maxCopper": 0.15
-      },
-      "category": "standard",
-      "status": "available",
-      "before": [
-        0.15,
-        0.15
-      ],
-      "after": [
-        0.15,
-        0.15
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 1,
-      "id": "krone-standard-starkbier",
-      "optionIndex": 0,
-      "name": "Einfaches Starkbier",
-      "unit": "Krug",
-      "price": {
-        "minCopper": 0.5,
-        "maxCopper": 0.5
-      },
-      "category": "standard",
-      "status": "available",
-      "before": [
-        0.5,
-        0.5
-      ],
-      "after": [
-        0.5,
-        0.5
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 2,
-      "id": "krone-standard-honigmet",
-      "optionIndex": 0,
-      "name": "Schlichter Honigmet",
-      "unit": "Humpen",
-      "price": {
-        "minCopper": 1,
-        "maxCopper": 1
-      },
-      "category": "standard",
-      "status": "available",
-      "before": [
-        1,
-        1
-      ],
-      "after": [
-        1,
-        1
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 3,
-      "id": "krone-standard-apfelwein",
-      "optionIndex": 0,
-      "name": "Apfelwein",
-      "unit": "Becher",
-      "price": {
-        "minCopper": 0.6,
-        "maxCopper": 0.6
-      },
-      "category": "standard",
-      "status": "available",
-      "before": [
-        0.6,
-        0.6
-      ],
-      "after": [
-        0.6,
-        0.6
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 4,
-      "id": "krone-standard-wasser",
-      "optionIndex": 0,
-      "name": "Wasser",
-      "unit": "Krug",
-      "price": {
-        "minCopper": 0.05,
-        "maxCopper": 0.05
-      },
-      "category": "standard",
-      "status": "available",
-      "before": [
-        0.05,
-        0.05
-      ],
-      "after": [
-        0.05,
-        0.05
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 5,
-      "id": "krone-standard-klosterbier",
-      "optionIndex": 0,
-      "name": "Klosterbier",
-      "unit": "Krug",
-      "price": {
-        "minCopper": 1,
-        "maxCopper": 1
-      },
-      "category": "standard",
-      "status": "available",
-      "before": [
-        1,
-        1
-      ],
-      "after": [
-        1,
-        1
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 6,
-      "id": "krone-standard-kraeuteraufguss",
-      "optionIndex": 0,
-      "name": "Kräuteraufguss",
-      "unit": "Becher",
-      "price": {
-        "minCopper": 0.25,
-        "maxCopper": 0.25
-      },
-      "category": "standard",
-      "status": "available",
-      "before": [
-        0.25,
-        0.25
-      ],
-      "after": [
-        0.25,
-        0.25
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 7,
-      "id": "krone-standard-branntwein",
-      "optionIndex": 0,
-      "name": "Einfacher Branntwein",
-      "unit": "Glas",
-      "price": {
-        "minCopper": 1,
-        "maxCopper": 2
-      },
-      "category": "standard",
-      "status": "available",
-      "before": [
-        1,
-        2
-      ],
-      "after": [
-        1,
-        2
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 8,
-      "id": "krone-standard-kraeuterschnaps",
-      "optionIndex": 0,
-      "name": "Lokaler Kräuterschnaps",
-      "unit": "Glas",
-      "price": {
-        "minCopper": 2,
-        "maxCopper": 3
-      },
-      "category": "standard",
-      "status": "available",
-      "before": [
-        2,
-        3
-      ],
-      "after": [
-        2,
-        3
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 9,
-      "id": "krone-standard-kloster-spiritus",
-      "optionIndex": 0,
-      "name": "Kloster \"Spiritus\"",
-      "unit": "Glas",
-      "price": {
-        "minCopper": 3,
-        "maxCopper": 5
-      },
-      "category": "standard",
-      "status": "available",
-      "before": [
-        3,
-        5
-      ],
-      "after": [
-        3,
-        5
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 10,
-      "id": "krone-flusshell",
-      "optionIndex": 0,
-      "name": "Cneacail · Flusshell",
-      "unit": "0,5 l",
-      "price": {
-        "minCopper": 2,
-        "maxCopper": 2
-      },
-      "category": "haus",
-      "status": "available",
-      "before": [
-        2,
-        2
-      ],
-      "after": [
-        2,
-        2
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 10,
-      "id": "krone-flusshell",
-      "optionIndex": 1,
-      "name": "Cneacail · Flusshell",
-      "unit": "1 l",
-      "price": {
-        "minCopper": 4,
-        "maxCopper": 4
-      },
-      "category": "haus",
-      "status": "available",
-      "before": [
-        4,
-        4
-      ],
-      "after": [
-        4,
-        4
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 10,
-      "id": "krone-flusshell",
-      "optionIndex": 2,
-      "name": "Cneacail · Flusshell",
-      "unit": "50 l",
-      "price": {
-        "minCopper": 200,
-        "maxCopper": 200
-      },
-      "category": "haus",
-      "status": "available",
-      "before": [
-        200,
-        200
-      ],
-      "after": [
-        200,
-        200
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 11,
-      "id": "krone-huegeldunkel",
-      "optionIndex": 0,
-      "name": "Cneacail · Hügeldunkel",
-      "unit": "0,5 l",
-      "price": {
-        "minCopper": 3,
-        "maxCopper": 3
-      },
-      "category": "haus",
-      "status": "available",
-      "before": [
-        3,
-        3
-      ],
-      "after": [
-        3,
-        3
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 11,
-      "id": "krone-huegeldunkel",
-      "optionIndex": 1,
-      "name": "Cneacail · Hügeldunkel",
-      "unit": "1 l",
-      "price": {
-        "minCopper": 6,
-        "maxCopper": 6
-      },
-      "category": "haus",
-      "status": "available",
-      "before": [
-        6,
-        6
-      ],
-      "after": [
-        6,
-        6
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 11,
-      "id": "krone-huegeldunkel",
-      "optionIndex": 2,
-      "name": "Cneacail · Hügeldunkel",
-      "unit": "50 l",
-      "price": {
-        "minCopper": 300,
-        "maxCopper": 300
-      },
-      "category": "haus",
-      "status": "available",
-      "before": [
-        300,
-        300
-      ],
-      "after": [
-        300,
-        300
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 12,
-      "id": "klingende-krone-whisky",
-      "optionIndex": 0,
-      "name": "Klingende Krone · 5 Jahre",
-      "unit": "4 cl",
-      "price": {
-        "minCopper": 8,
-        "maxCopper": 8
-      },
-      "category": "haus",
-      "status": "available",
-      "before": [
-        8,
-        8
-      ],
-      "after": [
-        8,
-        8
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 12,
-      "id": "klingende-krone-whisky",
-      "optionIndex": 1,
-      "name": "Klingende Krone · 5 Jahre",
-      "unit": "0,7 l",
-      "price": {
-        "minCopper": 140,
-        "maxCopper": 140
-      },
-      "category": "haus",
-      "status": "available",
-      "before": [
-        140,
-        140
-      ],
-      "after": [
-        140,
-        140
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 12,
-      "id": "klingende-krone-whisky",
-      "optionIndex": 2,
-      "name": "Klingende Krone · 5 Jahre",
-      "unit": "50 l",
-      "price": {
-        "minCopper": 10000,
-        "maxCopper": 10000
-      },
-      "category": "haus",
-      "status": "available",
-      "before": [
-        10000,
-        10000
-      ],
-      "after": [
-        10000,
-        10000
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 13,
-      "id": "krone-haferkaese",
-      "optionIndex": 0,
-      "name": "Haferfladen mit Hartkäse",
-      "unit": "Ein Brettchen",
-      "price": {
-        "minCopper": 1.5,
-        "maxCopper": 1.5
-      },
-      "category": "snacks",
-      "status": "available",
-      "before": [
-        1.5,
-        1.5
-      ],
-      "after": [
-        1.5,
-        1.5
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 14,
-      "id": "krone-essiggurken",
-      "optionIndex": 0,
-      "name": "Essiggurken und Rettich",
-      "unit": "Ein Schälchen",
-      "price": {
-        "minCopper": 1,
-        "maxCopper": 1
-      },
-      "category": "snacks",
-      "status": "available",
-      "before": [
-        1,
-        1
-      ],
-      "after": [
-        1,
-        1
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone",
-      "pageIndex": 5,
-      "itemIndex": 15,
-      "id": "krone-nussapfel",
-      "optionIndex": 0,
-      "name": "Haselnüsse und Dörräpfel",
-      "unit": "Eine kleine Schale",
-      "price": {
-        "minCopper": 1.5,
-        "maxCopper": 1.5
-      },
-      "category": "snacks",
-      "status": "available",
-      "before": [
-        1.5,
-        1.5
-      ],
-      "after": [
-        1.5,
-        1.5
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 0,
-      "id": "birne-frischkaese",
-      "optionIndex": 0,
-      "name": "Birne, Frischkäse & geröstete Walnuss",
-      "unit": "Kleine Portion",
-      "price": {
-        "minCopper": 4,
-        "maxCopper": 4
-      },
-      "category": "hauskarte",
-      "status": "available",
-      "before": [
-        4,
-        4
-      ],
-      "after": [
-        4,
-        4
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 1,
-      "id": "pilzessenz",
-      "optionIndex": 0,
-      "name": "Klare Waldpilzessenz",
-      "unit": "Kleine Portion",
-      "price": {
-        "minCopper": 4.5,
-        "maxCopper": 4.5
-      },
-      "category": "hauskarte",
-      "status": "available",
-      "before": [
-        4.5,
-        4.5
-      ],
-      "after": [
-        4.5,
-        4.5
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 2,
-      "id": "krebstoertchen",
-      "optionIndex": 0,
-      "name": "Kleines Krebstörtchen mit Dill",
-      "unit": "Kleine Portion",
-      "price": {
-        "minCopper": 5.5,
-        "maxCopper": 5.5
-      },
-      "category": "hauskarte",
-      "status": "available",
-      "before": [
-        5.5,
-        5.5
-      ],
-      "after": [
-        5.5,
-        5.5
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 3,
-      "id": "saibling-lauch",
-      "optionIndex": 0,
-      "name": "Saibling auf feinem Lauch",
-      "unit": "Kleine Portion",
-      "price": {
-        "minCopper": 9,
-        "maxCopper": 9
-      },
-      "category": "hauskarte",
-      "status": "available",
-      "before": [
-        9,
-        9
-      ],
-      "after": [
-        9,
-        9
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 4,
-      "id": "huhn-birnenjus",
-      "optionIndex": 0,
-      "name": "Zarte Hühnerbrust mit Birnenjus",
-      "unit": "Kleine Portion",
-      "price": {
-        "minCopper": 10.5,
-        "maxCopper": 10.5
-      },
-      "category": "hauskarte",
-      "status": "available",
-      "before": [
-        10.5,
-        10.5
-      ],
-      "after": [
-        10.5,
-        10.5
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 5,
-      "id": "kraeuterknoepfle",
-      "optionIndex": 0,
-      "name": "Kräuterknöpfle mit Waldpilzen",
-      "unit": "Kleine Portion",
-      "price": {
-        "minCopper": 8,
-        "maxCopper": 8
-      },
-      "category": "hauskarte",
-      "status": "available",
-      "before": [
-        8,
-        8
-      ],
-      "after": [
-        8,
-        8
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 6,
-      "id": "wachtel-traubenjus",
-      "optionIndex": 0,
-      "name": "Wachtelbrust an dunklem Traubenjus",
-      "unit": "Kleine Portion",
-      "price": {
-        "minCopper": 16.5,
-        "maxCopper": 16.5
-      },
-      "category": "hauskarte",
-      "status": "available",
-      "before": [
-        16.5,
-        16.5
-      ],
-      "after": [
-        16.5,
-        16.5
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 7,
-      "id": "weinlaub-1734",
-      "optionIndex": 0,
-      "name": "Weinlaub · Jahrgang 1734",
-      "unit": "0,15 l",
-      "price": {
-        "minCopper": 8,
-        "maxCopper": 8
-      },
-      "category": "weine",
-      "status": "available",
-      "before": [
-        8,
-        8
-      ],
-      "after": [
-        8,
-        8
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 7,
-      "id": "weinlaub-1734",
-      "optionIndex": 1,
-      "name": "Weinlaub · Jahrgang 1734",
-      "unit": "0,75 l",
-      "price": {
-        "minCopper": 40,
-        "maxCopper": 40
-      },
-      "category": "weine",
-      "status": "available",
-      "before": [
-        40,
-        40
-      ],
-      "after": [
-        40,
-        40
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 8,
-      "id": "weinlaub-1728",
-      "optionIndex": 0,
-      "name": "Weinlaub · Jahrgang 1728",
-      "unit": "0,15 l",
-      "price": {
-        "minCopper": 14,
-        "maxCopper": 14
-      },
-      "category": "weine",
-      "status": "available",
-      "before": [
-        14,
-        14
-      ],
-      "after": [
-        14,
-        14
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 8,
-      "id": "weinlaub-1728",
-      "optionIndex": 1,
-      "name": "Weinlaub · Jahrgang 1728",
-      "unit": "0,75 l",
-      "price": {
-        "minCopper": 70,
-        "maxCopper": 70
-      },
-      "category": "weine",
-      "status": "available",
-      "before": [
-        70,
-        70
-      ],
-      "after": [
-        70,
-        70
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 9,
-      "id": "weissmann-weisswein",
-      "optionIndex": 0,
-      "name": "Weissmann · Weißwein",
-      "unit": "0,15 l",
-      "price": {
-        "minCopper": 6,
-        "maxCopper": 6
-      },
-      "category": "weine",
-      "status": "available",
-      "before": [
-        6,
-        6
-      ],
-      "after": [
-        6,
-        6
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 9,
-      "id": "weissmann-weisswein",
-      "optionIndex": 1,
-      "name": "Weissmann · Weißwein",
-      "unit": "0,75 l",
-      "price": {
-        "minCopper": 30,
-        "maxCopper": 30
-      },
-      "category": "weine",
-      "status": "available",
-      "before": [
-        30,
-        30
-      ],
-      "after": [
-        30,
-        30
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 10,
-      "id": "weissmann-champagnia",
-      "optionIndex": 0,
-      "name": "Weissmann · Champagnia",
-      "unit": "0,10 l",
-      "price": {
-        "minCopper": 18,
-        "maxCopper": 18
-      },
-      "category": "weine",
-      "status": "available",
-      "before": [
-        18,
-        18
-      ],
-      "after": [
-        18,
-        18
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 10,
-      "id": "weissmann-champagnia",
-      "optionIndex": 1,
-      "name": "Weissmann · Champagnia",
-      "unit": "0,75 l",
-      "price": {
-        "minCopper": 90,
-        "maxCopper": 90
-      },
-      "category": "weine",
-      "status": "available",
-      "before": [
-        90,
-        90
-      ],
-      "after": [
-        90,
-        90
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 11,
-      "id": "tischwein-rot",
-      "optionIndex": 0,
-      "name": "Roter Tischwein",
-      "unit": "Glas · 0,20 l",
-      "price": {
-        "minCopper": 0.8,
-        "maxCopper": 0.8
-      },
-      "category": "weine",
-      "status": "available",
-      "before": [
-        0.8,
-        0.8
-      ],
-      "after": [
-        0.8,
-        0.8
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 12,
-      "id": "tischwein-weiss",
-      "optionIndex": 0,
-      "name": "Weißer Tischwein",
-      "unit": "Glas · 0,20 l",
-      "price": {
-        "minCopper": 0.9,
-        "maxCopper": 0.9
-      },
-      "category": "weine",
-      "status": "available",
-      "before": [
-        0.9,
-        0.9
-      ],
-      "after": [
-        0.9,
-        0.9
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 13,
-      "id": "tischwein-rose",
-      "optionIndex": 0,
-      "name": "Rosé-Tischwein",
-      "unit": "Glas · 0,20 l",
-      "price": {
-        "minCopper": 1.1,
-        "maxCopper": 1.1
-      },
-      "category": "weine",
-      "status": "available",
-      "before": [
-        1.1,
-        1.1
-      ],
-      "after": [
-        1.1,
-        1.1
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 14,
-      "id": "teyrngarch-brauerzunft-bier-hellwacht",
-      "optionIndex": 0,
-      "name": "Hellwacht",
-      "unit": "0,5 l",
-      "price": {
-        "minCopper": 2.6,
-        "maxCopper": 2.6
-      },
-      "category": "importe",
-      "status": "available",
-      "before": [
-        2.6,
-        2.6
-      ],
-      "after": [
-        2.6,
-        2.6
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 15,
-      "id": "teyrngarch-brauerzunft-bier-hopfgold",
-      "optionIndex": 0,
-      "name": "Hopfgold",
-      "unit": "0,5 l",
-      "price": {
-        "minCopper": 1.3,
-        "maxCopper": 1.3
-      },
-      "category": "importe",
-      "status": "available",
-      "before": [
-        1.3,
-        1.3
-      ],
-      "after": [
-        1.3,
-        1.3
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 16,
-      "id": "teyrngarch-brauerzunft-bier-sonnenglanz",
-      "optionIndex": 0,
-      "name": "Sonnenglanz",
-      "unit": "0,5 l",
-      "price": {
-        "minCopper": 0.6,
-        "maxCopper": 0.6
-      },
-      "category": "importe",
-      "status": "available",
-      "before": [
-        0.6,
-        0.6
-      ],
-      "after": [
-        0.6,
-        0.6
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 17,
-      "id": "penderyn-brauer-destillierzunft-bier-goldschuppen",
-      "optionIndex": 0,
-      "name": "Goldschuppen Bier",
-      "unit": "0,5 l",
-      "price": {
-        "minCopper": 2,
-        "maxCopper": 2
-      },
-      "category": "importe",
-      "status": "available",
-      "before": [
-        2,
-        2
-      ],
-      "after": [
-        2,
-        2
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 18,
-      "id": "penderyn-brauer-destillierzunft-whisky-rhagorol",
-      "optionIndex": 0,
-      "name": "Penderyn · Rhagorol",
-      "unit": "4 cl",
-      "price": {
-        "minCopper": 6.5,
-        "maxCopper": 6.5
-      },
-      "category": "importe",
-      "status": "available",
-      "before": [
-        6.5,
-        6.5
-      ],
-      "after": [
-        6.5,
-        6.5
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 19,
-      "id": "penderyn-brauer-destillierzunft-whisky-penderyn",
-      "optionIndex": 0,
-      "name": "Penderyn",
-      "unit": "4 cl",
-      "price": {
-        "minCopper": 12,
-        "maxCopper": 12
-      },
-      "category": "importe",
-      "status": "available",
-      "before": [
-        12,
-        12
-      ],
-      "after": [
-        12,
-        12
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 20,
-      "id": "standard-01",
-      "optionIndex": 0,
-      "name": "Eintopf des Tages",
-      "unit": "Pro Schüssel",
-      "price": {
-        "minCopper": 0.9,
-        "maxCopper": 0.9
-      },
-      "category": "speisen",
-      "status": "available",
-      "before": [
-        0.5,
-        0.5
-      ],
-      "after": [
-        0.9,
-        0.9
-      ],
-      "decision": "angepasst",
-      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 21,
-      "id": "standard-02",
-      "optionIndex": 0,
-      "name": "Geröstetes Fleisch",
-      "unit": "Pro Teller",
-      "price": {
-        "minCopper": 4,
-        "maxCopper": 4
-      },
-      "category": "speisen",
-      "status": "available",
-      "before": [
-        4,
-        4
-      ],
-      "after": [
-        4,
-        4
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 22,
-      "id": "standard-03",
-      "optionIndex": 0,
-      "name": "Hafergrütze mit Schmalz",
-      "unit": "Pro Schüssel",
-      "price": {
-        "minCopper": 0.25,
-        "maxCopper": 0.25
-      },
-      "category": "speisen",
-      "status": "available",
-      "before": [
-        0.1,
-        0.1
-      ],
-      "after": [
-        0.25,
-        0.25
-      ],
-      "decision": "angepasst",
-      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 23,
-      "id": "standard-04",
-      "optionIndex": 0,
-      "name": "Blutwurst & Kraut​",
-      "unit": "Pro Teller",
-      "price": {
-        "minCopper": 1.1,
-        "maxCopper": 1.1
-      },
-      "category": "speisen",
-      "status": "available",
-      "before": [
-        1.1,
-        1.1
-      ],
-      "after": [
-        1.1,
-        1.1
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 24,
-      "id": "standard-05",
-      "optionIndex": 0,
-      "name": "Gebackenes Huhn",
-      "unit": "Pro Teller",
-      "price": {
-        "minCopper": 4.5,
-        "maxCopper": 4.5
-      },
-      "category": "speisen",
-      "status": "available",
-      "before": [
-        1.8,
-        1.8
-      ],
-      "after": [
-        4.5,
-        4.5
-      ],
-      "decision": "angepasst",
-      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 25,
-      "id": "standard-06",
-      "optionIndex": 0,
-      "name": "Bohneneintopf",
-      "unit": "Pro Schüssel",
-      "price": {
-        "minCopper": 0.85,
-        "maxCopper": 0.85
-      },
-      "category": "speisen",
-      "status": "available",
-      "before": [
-        0.85,
-        0.85
-      ],
-      "after": [
-        0.85,
-        0.85
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 26,
-      "id": "standard-07",
-      "optionIndex": 0,
-      "name": "Geröstetes Bauernbrot",
-      "unit": "Pro Teller",
-      "price": {
-        "minCopper": 0.2,
-        "maxCopper": 0.2
-      },
-      "category": "speisen",
-      "status": "available",
-      "before": [
-        0.15,
-        0.15
-      ],
-      "after": [
-        0.2,
-        0.2
-      ],
-      "decision": "angepasst",
-      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 27,
-      "id": "standard-08",
-      "optionIndex": 0,
-      "name": "Frühstücksteller",
-      "unit": "Pro Teller",
-      "price": {
-        "minCopper": 1.2,
-        "maxCopper": 1.2
-      },
-      "category": "speisen",
-      "status": "available",
-      "before": [
-        0.5,
-        0.5
-      ],
-      "after": [
-        1.2,
-        1.2
-      ],
-      "decision": "angepasst",
-      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 28,
-      "id": "standard-09",
-      "optionIndex": 0,
-      "name": "Räucherfleisch",
-      "unit": "Pro Teller",
-      "price": {
-        "minCopper": 2,
-        "maxCopper": 2
-      },
-      "category": "speisen",
-      "status": "available",
-      "before": [
-        2,
-        2
-      ],
-      "after": [
-        2,
-        2
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 29,
-      "id": "standard-10",
-      "optionIndex": 0,
-      "name": "Räucherfisch",
-      "unit": "Pro Teller",
-      "price": {
-        "minCopper": 3,
-        "maxCopper": 3
-      },
-      "category": "speisen",
-      "status": "available",
-      "before": [
-        3,
-        3
-      ],
-      "after": [
-        3,
-        3
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 30,
-      "id": "standard-11",
-      "optionIndex": 0,
-      "name": "Sauergemüse",
-      "unit": "Pro Teller",
-      "price": {
-        "minCopper": 0.3,
-        "maxCopper": 0.3
-      },
-      "category": "speisen",
-      "status": "available",
-      "before": [
-        0.3,
-        0.3
-      ],
-      "after": [
-        0.3,
-        0.3
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 31,
-      "id": "standard-12",
-      "optionIndex": 0,
-      "name": "Dünnes gewä. Bier",
-      "unit": "Pro Krug",
-      "price": {
-        "minCopper": 0.15,
-        "maxCopper": 0.15
-      },
-      "category": "getranke",
-      "status": "available",
-      "before": [
-        0.15,
-        0.15
-      ],
-      "after": [
-        0.15,
-        0.15
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 32,
-      "id": "standard-13",
-      "optionIndex": 0,
-      "name": "Einfaches Starkbier",
-      "unit": "Pro Krug",
-      "price": {
-        "minCopper": 0.5,
-        "maxCopper": 0.5
-      },
-      "category": "getranke",
-      "status": "available",
-      "before": [
-        0.5,
-        0.5
-      ],
-      "after": [
-        0.5,
-        0.5
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 33,
-      "id": "standard-14",
-      "optionIndex": 0,
-      "name": "Schlichter Honigmet",
-      "unit": "Pro Krug",
-      "price": {
-        "minCopper": 1,
-        "maxCopper": 1
-      },
-      "category": "getranke",
-      "status": "available",
-      "before": [
-        1,
-        1
-      ],
-      "after": [
-        1,
-        1
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 34,
-      "id": "standard-15",
-      "optionIndex": 0,
-      "name": "Apfelwein",
-      "unit": "Pro Glas",
-      "price": {
-        "minCopper": 0.6,
-        "maxCopper": 0.6
-      },
-      "category": "getranke",
-      "status": "available",
-      "before": [
-        0.6,
-        0.6
-      ],
-      "after": [
-        0.6,
-        0.6
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 35,
-      "id": "standard-16",
-      "optionIndex": 0,
-      "name": "Wasser",
-      "unit": "Pro Becher",
-      "price": {
-        "minCopper": 0.03,
-        "maxCopper": 0.03
-      },
-      "category": "getranke",
-      "status": "available",
-      "before": [
-        0.03,
-        0.03
-      ],
-      "after": [
-        0.03,
-        0.03
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 36,
-      "id": "standard-17",
-      "optionIndex": 0,
-      "name": "Klosterbier",
-      "unit": "Pro Krug",
-      "price": {
-        "minCopper": 1,
-        "maxCopper": 1
-      },
-      "category": "getranke",
-      "status": "available",
-      "before": [
-        1,
-        1
-      ],
-      "after": [
-        1,
-        1
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 37,
-      "id": "standard-18",
-      "optionIndex": 0,
-      "name": "Kräuteraufguss (Tee)",
-      "unit": "Pro Tasse",
-      "price": {
-        "minCopper": 0.25,
-        "maxCopper": 0.25
-      },
-      "category": "getranke",
-      "status": "available",
-      "before": [
-        0.25,
-        0.25
-      ],
-      "after": [
-        0.25,
-        0.25
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 38,
-      "id": "standard-19",
-      "optionIndex": 0,
-      "name": "Einfacher Branntwein",
-      "unit": "Pro Glas",
-      "price": {
-        "minCopper": 1,
-        "maxCopper": 1
-      },
-      "category": "getranke",
-      "status": "available",
-      "before": [
-        1,
-        1
-      ],
-      "after": [
-        1,
-        1
-      ],
-      "decision": "beibehalten",
-      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 39,
-      "id": "standard-20",
-      "optionIndex": 0,
-      "name": "Lokaler Kräuterschnaps",
-      "unit": "Pro Glas",
-      "price": {
-        "minCopper": 2,
-        "maxCopper": 3
-      },
-      "category": "getranke",
-      "status": "available",
-      "before": [
-        1,
-        1
-      ],
-      "after": [
-        2,
-        3
-      ],
-      "decision": "angepasst",
-      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "pageIndex": 3,
-      "itemIndex": 40,
-      "id": "standard-21",
-      "optionIndex": 0,
-      "name": "Kloster \"Spiritus\"",
-      "unit": "Pro Glas",
-      "price": {
-        "minCopper": 3,
-        "maxCopper": 5
-      },
-      "category": "getranke",
-      "status": "available",
-      "before": [
-        1,
-        1
-      ],
-      "after": [
-        3,
-        5
-      ],
-      "decision": "angepasst",
-      "reason": "Alten Preisbeleg mit dem aktuellen Standard- oder Markenangebot abgeglichen; keine pauschale Teuerung."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "id": "service-0",
-      "name": "Gesellschaft im Salon",
-      "unit": "Eine vereinbarte Stunde im öffentlichen Salon",
-      "price": {
-        "minCopper": 20,
-        "maxCopper": 20
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        20,
-        20
-      ],
-      "after": [
-        20,
-        20
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "id": "service-1",
-      "name": "Eine Stunde zu zweit",
-      "unit": "Eine vereinbarte Stunde in privatem Rahmen",
-      "price": {
-        "minCopper": 60,
-        "maxCopper": 60
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        60,
-        60
-      ],
-      "after": [
-        60,
-        60
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "id": "service-2",
-      "name": "Ein Abend in besonderer Gesellschaft",
-      "unit": "Zusammenhängender Abend · bis vier Stunden",
-      "price": {
-        "minCopper": 190,
-        "maxCopper": 190
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        190,
-        190
-      ],
-      "after": [
-        190,
-        190
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "id": "service-3",
-      "name": "Ein privater Tanz",
-      "unit": "Eine kurze Darbietung nach Termin",
-      "price": {
-        "minCopper": 15,
-        "maxCopper": 15
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        15,
-        15
-      ],
-      "after": [
-        15,
-        15
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "id": "service-4",
-      "name": "Kleine Tanzfolge",
-      "unit": "Zwei Tänzerinnen · Musikbegleitung gesondert",
-      "price": {
-        "minCopper": 40,
-        "maxCopper": 40
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        40,
-        40
-      ],
-      "after": [
-        40,
-        40
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "id": "service-5",
-      "name": "Eine persönliche Weise",
-      "unit": "Ein vereinbartes Stück im Salon",
-      "price": {
-        "minCopper": 5,
-        "maxCopper": 5
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        5,
-        5
-      ],
-      "after": [
-        5,
-        5
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "id": "service-6",
-      "name": "Musik im Hinterzimmer",
-      "unit": "Eine Musikerin · eine volle Stunde",
-      "price": {
-        "minCopper": 30,
-        "maxCopper": 30
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        30,
-        30
-      ],
-      "after": [
-        30,
-        30
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "id": "service-7",
-      "name": "Ein musikalischer Abend",
-      "unit": "Drei Stunden mit beiden Musikerinnen · nach gemeinsamer Verfügbarkeit",
-      "price": {
-        "minCopper": 150,
-        "maxCopper": 150
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        150,
-        150
-      ],
-      "after": [
-        150,
-        150
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "id": "service-8",
-      "name": "Eine ruhige Kammer",
-      "unit": "Eine Nacht · Ankunft und Abreise nach Hausabsprache",
-      "price": {
-        "minCopper": 12,
-        "maxCopper": 12
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        12,
-        12
-      ],
-      "after": [
-        12,
-        12
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "id": "service-9",
-      "name": "Die Perlenstube",
-      "unit": "Eine Nacht · bis zwei Personen",
-      "price": {
-        "minCopper": 25,
-        "maxCopper": 25
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        25,
-        25
-      ],
-      "after": [
-        25,
-        25
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "id": "service-10",
-      "name": "Ein festes Zimmer im Haus",
-      "unit": "Ein Aleria-Monat mit 36 Nächten · monatlich im Voraus",
-      "price": {
-        "minCopper": 360,
-        "maxCopper": 360
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        360,
-        360
-      ],
-      "after": [
-        360,
-        360
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "id": "service-11",
-      "name": "Die Perlenstube auf Dauer",
-      "unit": "Ein Aleria-Monat mit 36 Nächten · bis zwei Personen",
-      "price": {
-        "minCopper": 720,
-        "maxCopper": 720
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        720,
-        720
-      ],
-      "after": [
-        720,
-        720
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "id": "service-12",
-      "name": "Ein warmer Zuber",
-      "unit": "Ein vorbereiteter Zuber · nach Termin",
-      "price": {
-        "minCopper": 4,
-        "maxCopper": 4
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        4,
-        4
-      ],
-      "after": [
-        4,
-        4
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe",
-      "id": "service-13",
-      "name": "Ein Salon für die eigene Runde",
-      "unit": "Bis sechs Gäste · Speisen, Getränke und Künstler gesondert",
-      "price": {
-        "minCopper": 10,
-        "maxCopper": 10
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        10,
-        10
-      ],
-      "after": [
-        10,
-        10
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die rote Klaue",
-      "moduleId": "gwynthor-die-rote-klaue",
-      "id": "service-0",
-      "name": "Geld gegen Pfand",
-      "unit": "Meist bis zur Hälfte des vorsichtig geschätzten Wiederverkaufswerts",
-      "price": {
-        "minCopper": 3,
-        "maxCopper": 3
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        3,
-        3
-      ],
-      "after": [
-        3,
-        3
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die rote Klaue",
-      "moduleId": "gwynthor-die-rote-klaue",
-      "id": "service-1",
-      "name": "Darlehen auf Schuldbrief",
-      "unit": "Summe und Laufzeit nach Prüfung der Rückzahlung",
-      "price": {
-        "minCopper": 2,
-        "maxCopper": 2
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        2,
-        2
-      ],
-      "after": [
-        2,
-        2
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die rote Klaue",
-      "moduleId": "gwynthor-die-rote-klaue",
-      "id": "service-2",
-      "name": "Münzen prüfen und wechseln",
-      "unit": "Gewöhnliche Münzen in vorrätige örtliche Sorten",
-      "price": {
-        "minCopper": 2,
-        "maxCopper": 2
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        2,
-        2
-      ],
-      "after": [
-        2,
-        2
-      ],
-      "decision": "beibehalten",
-      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
-    },
-    {
-      "source": "Die rote Klaue",
-      "moduleId": "gwynthor-die-rote-klaue",
-      "id": "service-4",
-      "name": "Wertschätzung und Vermittlung",
-      "unit": "Sichtung eines gewöhnlichen Gegenstands; besondere Fachprüfung nach Absprache",
-      "price": {
-        "minCopper": 2,
-        "maxCopper": 2
-      },
-      "category": "Dienstleistung",
-      "unchangedService": true,
-      "before": [
-        2,
-        2
-      ],
-      "after": [
-        2,
-        2
       ],
       "decision": "beibehalten",
       "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."

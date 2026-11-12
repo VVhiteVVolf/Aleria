@@ -1,0 +1,36 @@
+{
+  "schema": "aleria.character-portraits",
+  "version": 1,
+  "collectionId": "gwynthor-markt-haendler",
+  "presetKey": "anime-scene-portrait",
+  "activeVersion": "upper-body",
+  "images": [
+    {
+      "id": "cadwal-wernig",
+      "path": "portraits/cadwal-wernig.png",
+      "sha256": "9db44f9636aea09c3f3e0297b3724db58150f7976232c67bd0fcd974578e3bbd",
+      "width": 1024,
+      "height": 1536,
+      "size": 1778663,
+      "url": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Fcadwal-wernig%2F9db44f9636aea09c3f3e0297b3724db58150f7976232c67bd0fcd974578e3bbd.png?alt=media&token=97c10652-0458-4ba9-affa-fc9c9983f5ae"
+    },
+    {
+      "id": "alrik-tannholt",
+      "path": "portraits/alrik-tannholt.png",
+      "sha256": "e0f0e92823a9a98f433edf1307a00d3dfc1149ec1ef394f41510b2061b712b0c",
+      "width": 1024,
+      "height": 1536,
+      "size": 1993390,
+      "url": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Falrik-tannholt%2Fe0f0e92823a9a98f433edf1307a00d3dfc1149ec1ef394f41510b2061b712b0c.png?alt=media&token=c60123d0-4395-49e2-a3ab-7ffc5b83ace2"
+    },
+    {
+      "id": "mairwen-brennig",
+      "path": "portraits/mairwen-brennig.png",
+      "sha256": "eacacb21c38a7dd93bab8d6e4677acd8a1cd198f5990567ab4ca8eb5ab708e7a",
+      "width": 1024,
+      "height": 1536,
+      "size": 1814243,
+      "url": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/character-assets%2Fgwynthor-markt-haendler%2Fmairwen-brennig%2Feacacb21c38a7dd93bab8d6e4677acd8a1cd198f5990567ab4ca8eb5ab708e7a.png?alt=media&token=a62387cc-1b23-45d9-94c1-5cc88153b7fd"
+    }
+  ]
+}

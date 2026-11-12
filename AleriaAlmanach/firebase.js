@@ -1,4 +1,4 @@
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+﻿    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
     import { getAuth, onIdTokenChanged, signInAnonymously, EmailAuthProvider, linkWithCredential, signInWithEmailAndPassword, signOut, sendPasswordResetEmail, sendEmailVerification, updateProfile, setPersistence, browserLocalPersistence, reload }
       from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
     import { getFunctions, httpsCallable }

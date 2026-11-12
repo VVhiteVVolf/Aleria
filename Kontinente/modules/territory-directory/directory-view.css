@@ -1,0 +1,74 @@
+/* Both views use the same entries, links and local filtering state. */
+.directory-view-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-inline-start: auto;
+}
+.directory-view-controls button {
+  min-height: 42px;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--directory-line);
+  border-radius: 2px;
+  background: #fffcf5;
+  color: var(--directory-accent);
+  font: inherit;
+  cursor: pointer;
+}
+.directory-view-controls button[aria-pressed="true"] {
+  border-color: var(--directory-accent);
+  background: #efe5d2;
+  box-shadow: inset 0 -2px var(--directory-accent);
+  font-weight: 700;
+}
+
+.territory-directory[data-directory-view="list"] .kingdom-family-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  gap: 0.3rem;
+}
+.territory-directory[data-directory-view="list"] .kingdom-family-featured > .kingdom-family-card {
+  width: min(100%, 700px);
+}
+.territory-directory[data-directory-view="list"] .kingdom-family-card {
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 0.65rem;
+  min-height: 64px;
+  padding: 0.45rem 0.65rem;
+}
+.territory-directory[data-directory-view="list"] .kingdom-family-crest,
+.territory-directory[data-directory-view="list"] .kingdom-family-crest img,
+.territory-directory[data-directory-view="list"] .kingdom-family-crest-placeholder {
+  width: 36px;
+  height: 40px;
+}
+.territory-directory[data-directory-view="list"] .directory-entry-copy {
+  display: block;
+}
+.territory-directory[data-directory-view="list"] .kingdom-family-status { grid-column: 1 / -1; }
+.territory-directory[data-directory-view="list"] .kingdom-family-name { margin: 0 0 0.25rem; font-size: 1rem; }
+.territory-directory[data-directory-view="list"] .directory-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.25rem 0.6rem;
+}
+.territory-directory[data-directory-view="list"] .directory-details > div { display: block; margin: 0; }
+.territory-directory[data-directory-view="list"] .directory-details dt { font-size: 0.68rem; }
+.territory-directory[data-directory-view="list"] .kingdom-family-crest-placeholder { font-size: 0.5rem; }
+@media (max-width: 1100px) {
+  .territory-directory[data-directory-view="list"] .kingdom-family-grid { grid-template-columns: minmax(0, 1fr); }
+  .territory-directory[data-directory-view="list"] .directory-entry-copy {
+    display: grid;
+    grid-template-columns: minmax(8rem, 1fr) minmax(0, 3fr);
+    gap: 0.2rem 0.75rem;
+    align-items: center;
+  }
+}
+@media (max-width: 760px) {
+  .territory-directory[data-directory-view="list"] .directory-entry-copy { display: block; }
+  .territory-directory[data-directory-view="list"] .kingdom-family-name { margin-bottom: 0.35rem; }
+  .territory-directory[data-directory-view="list"] .directory-details { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media print {
+  .territory-directory[data-directory-view="list"] .kingdom-family-card { break-inside: avoid; }
+}

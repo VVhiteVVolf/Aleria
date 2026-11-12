@@ -8603,7 +8603,8 @@
       "rank": "Niederes Rittergeschlecht",
       "tree": "Stammbäume/Stammbaum.html?family=haus-bronnor&mode=view",
       "sources": [
-        "haus-bronnor"
+        "haus-bronnor",
+        "haus-brandyddyn"
       ],
       "illustrationIds": [
         "bild-b7130207f8e899d9"
@@ -12758,7 +12759,8 @@
       "rank": "Niederes Rittergeschlecht",
       "tree": "Stammbäume/Stammbaum.html?family=haus-loer&mode=view",
       "sources": [
-        "haus-loer"
+        "haus-loer",
+        "haus-aurdden"
       ],
       "illustrationIds": [
         "bild-d05a008af6a67422"
@@ -18402,6 +18404,104 @@
       ],
       "illustrationIds": [
         "bild-dbd79b9d3864e311"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-aurdden",
+      "name": "Familie Aurdden",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-aurdden&mode=view",
+      "sources": [
+        "haus-aurdden",
+        "haus-loer"
+      ],
+      "illustrationIds": [
+        "bild-c15345d708f48cc1"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-aelgorn",
+      "name": "Haus Aelgorn",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-aelgorn&mode=view",
+      "sources": [
+        "haus-aelgorn"
+      ],
+      "illustrationIds": [
+        "bild-9c6403fb82db4b9d"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-brandyddyn",
+      "name": "Haus Brândyddyn",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-brandyddyn&mode=view",
+      "sources": [
+        "haus-brandyddyn",
+        "haus-bronnor"
+      ],
+      "illustrationIds": [
+        "bild-452ca805a379ad70"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-caelrith",
+      "name": "Haus Caelrith",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-caelrith&mode=view",
+      "sources": [
+        "haus-caelrith"
+      ],
+      "illustrationIds": [
+        "bild-280edfa13f7cb896"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-curiad",
+      "name": "Haus Curiad",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-curiad&mode=view",
+      "sources": [
+        "haus-curiad"
+      ],
+      "illustrationIds": [
+        "bild-2b971ef00d9230c6"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-myrgath",
+      "name": "Haus Myrgath",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-myrgath&mode=view",
+      "sources": [
+        "haus-myrgath"
+      ],
+      "illustrationIds": [
+        "bild-6bce050575fb043c"
       ],
       "missingNote": ""
     }
@@ -53211,6 +53311,132 @@
       ],
       "copies": [
         "Stammbäume/assets/images/portraits/gwniwr/person-7b6c292b.jpg"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-c15345d708f48cc1",
+      "name": "Familie Aurdden · Hausdarstellung",
+      "category": "Bürgerliches Familienporträt · Kyrwyn Aurdden",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/portraits/haus-aurdden/kyrwyn-aurdden.png",
+      "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033",
+      "houseIds": [
+        "haus-aurdden"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Aurdden/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/portraits/haus-aurdden/kyrwyn-aurdden.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-9c6403fb82db4b9d",
+      "name": "Haus Aelgorn · Hausdarstellung",
+      "category": "Bekannter Angehöriger der Draig-Leibgarde",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/portraits/haus-aelgorn/angharad-aelgorn.png",
+      "sha256": "9c6403fb82db4b9deb1a883f90d97b291143516c35d09e9a1371fef32aa2aa1d",
+      "houseIds": [
+        "haus-aelgorn"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Aelgorn/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/portraits/haus-aelgorn/angharad-aelgorn.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-452ca805a379ad70",
+      "name": "Haus Brândyddyn · Hausdarstellung",
+      "category": "Bekannter Angehöriger der Draig-Leibgarde",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/portraits/haus-brandyddyn/pellinard-brandyddyn.png",
+      "sha256": "452ca805a379ad7097692d9412b8bc929ea1406b34f91c597019e4830dba0650",
+      "houseIds": [
+        "haus-brandyddyn"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Brandyddyn/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/portraits/haus-brandyddyn/pellinard-brandyddyn.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-280edfa13f7cb896",
+      "name": "Haus Caelrith · Hausdarstellung",
+      "category": "Bekannter Angehöriger der Draig-Leibgarde",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/portraits/haus-caelrith/urien-caelrith.png",
+      "sha256": "280edfa13f7cb896e94e6b85cb85e3d5a6f1e51bbcd2c7d97ae14e3a8624ccea",
+      "houseIds": [
+        "haus-caelrith"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Caelrith/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/portraits/haus-caelrith/urien-caelrith.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-2b971ef00d9230c6",
+      "name": "Haus Curiad · Hausdarstellung",
+      "category": "Bekannter Angehöriger der Draig-Leibgarde",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/portraits/haus-curiad/marared-curiad.png",
+      "sha256": "2b971ef00d9230c64cd4072f8c68964db3ef59a790f0ee43c2a879172d241fc5",
+      "houseIds": [
+        "haus-curiad"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Curiad/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/portraits/haus-curiad/marared-curiad.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-6bce050575fb043c",
+      "name": "Haus Myrgath · Hausdarstellung",
+      "category": "Bekannter Angehöriger der Draig-Leibgarde",
+      "affiliation": "",
+      "image": "Stammbäume/assets/images/portraits/haus-myrgath/lleucu-myrgath.png",
+      "sha256": "6bce050575fb043c82b85599349f724b1046524719b689c4f6d62827bb8243ae",
+      "houseIds": [
+        "haus-myrgath"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Myrgath/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "Stammbäume/assets/images/portraits/haus-myrgath/lleucu-myrgath.png"
       ],
       "note": ""
     }

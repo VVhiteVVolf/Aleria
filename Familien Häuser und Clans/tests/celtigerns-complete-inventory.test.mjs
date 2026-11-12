@@ -32,22 +32,26 @@ for (const record of families) {
   sources.set(record.id, (await import(source)).HOUSE_CONTENT);
 }
 
-test('Die 108 bisherigen Hausseiten, Gwniwr und drei ausgebaute Landfamilien bleiben erreichbar und mit ihren Bios verknüpft', async () => {
+const newGuardHouseIds = new Set(['haus-brandyddyn', 'haus-curiad', 'haus-caelrith', 'haus-myrgath', 'haus-aelgorn']);
+const newReleaseHouseIds = new Set([...newGuardHouseIds, 'haus-aurdden']);
+
+test('Die bisherigen Hausseiten samt historischer ID-Prüfsumme und die sechs neuen Häuser bleiben erreichbar', async () => {
   const completedPageIds = [
     'haus-blevis', 'haus-brogar', 'haus-crewe', 'haus-glyn', 'haus-jernigan', 'haus-talfryn',
     'haus-tarw', 'haus-tynged', 'haus-cochdon', 'haus-llythfor', 'haus-twyllod', 'perllan', 'melog', 'pert', 'haus-gwernant',
   ];
   assert.equal(completedPageIds.length, 15);
   const currentPageFamilies = families.filter(record => !expandedHouseIds.has(record.id));
-  const priorFamilies = currentPageFamilies.filter(record => record.id !== 'gwniwr');
+  const priorFamilies = currentPageFamilies.filter(record => record.id !== 'gwniwr' && !newReleaseHouseIds.has(record.id));
   assert.equal(priorFamilies.length, 108);
   assert.equal(createHash('sha256').update(JSON.stringify(priorFamilies.map(record => record.id).sort())).digest('hex'),
     '8e74abc9d11734af14f589b81efe4fdcf8d0d0e10b8c327eb1f54812611912d3', 'All 108 original house IDs remain present');
-  assert.equal(currentPageFamilies.length, 109);
+  assert.equal(currentPageFamilies.length, 109 + newReleaseHouseIds.size);
+  assert.deepEqual(currentPageFamilies.filter(record => newReleaseHouseIds.has(record.id)).map(record => record.id).sort(), [...newReleaseHouseIds].sort());
   assert.deepEqual(currentPageFamilies.filter(record => record.id === 'gwniwr').map(record => record.id), ['gwniwr']);
   assert.equal(registry.linkFor('gwniwr'), 'kleinehaeuser.html?haus=gwniwr');
   assert.equal(sources.get('gwniwr').id, 'gwniwr');
-  assert.equal(families.length, 112);
+  assert.equal(families.length, 112 + newReleaseHouseIds.size);
   assert.deepEqual(families.filter(record => expandedHouseIds.has(record.id)).map(record => record.id).sort(), [...expandedHouseIds].sort());
   assert.equal(priorFamilies.filter(record => !completedPageIds.includes(record.id)).length, 93);
   for (const id of completedPageIds) assert.ok(sources.has(id), id);
@@ -146,7 +150,7 @@ test('Grafschaft erhält ihre 65 bisherigen Hauskarten mit genauem Maerllys-Wapp
   const maerllys = cards.filter(card => card.id === 'haus-maerllys');
   assert.equal(maerllys.length, 1);
   assert.equal(maerllys[0].imageSrc, '/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys/maerllys-emblem.png');
-  const existingCards = cards.filter(card => !localityIds.has(card.id) && !['melog', 'pert', 'haus-gwernant', 'gwniwr'].includes(card.id))
+  const existingCards = cards.filter(card => !localityIds.has(card.id) && !newGuardHouseIds.has(card.id) && !['melog', 'pert', 'haus-gwernant', 'gwniwr'].includes(card.id))
     .map(card => card.id === 'haus-maerllys'
       ? { ...card, imageSrc: '/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Maerllys.png' }
       : card);
@@ -154,7 +158,8 @@ test('Grafschaft erhält ihre 65 bisherigen Hauskarten mit genauem Maerllys-Wapp
   assert.equal(JSON.stringify(existingCards), JSON.stringify(countyBaseline.cards), 'Original card field order and values remain byte-identical after the exact Maerllys image projection');
   assert.deepEqual(cards.filter(card => localityIds.has(card.id)).map(card => card.id).sort(), [...localityIds].sort());
   assert.equal(localityIds.size, 8);
-  assert.equal(cards.length, countyBaseline.cards.length + localityIds.size + 4);
+  assert.equal(cards.length, countyBaseline.cards.length + localityIds.size + 4 + newGuardHouseIds.size);
+  assert.deepEqual(cards.filter(card => newGuardHouseIds.has(card.id)).map(card => card.id).sort(), [...newGuardHouseIds].sort());
   const melog = cards.filter(card => card.id === 'melog');
   assert.equal(melog.length, 1);
   assert.equal(melog[0].name, 'Melog');
@@ -219,6 +224,15 @@ test('Originalquellen bleiben archiviert; Vorbereitungen enthalten keine erfunde
       const family = families.find(record => record.id === content.id).family;
       assert.equal(content.sections.history, family.document.description.replace('Ritterherrenhaus', 'Ministerialenhaus'));
       for (const head of content.heads) assert.ok(family.persons.some(person => person.id === head.id));
+    } else if (newGuardHouseIds.has(content.id)) {
+      assert.equal(content.prepared, true);
+      assert.match(content.sections.history, /nicht überliefert/);
+      assert.match(content.sections.history, /keine unbekannten Verwandtschaftsgrade oder Lebensdaten/);
+      assert.equal(content.profile.founding, 'Nicht bekannt');
+      assert.equal(content.founder, null);
+      assert.deepEqual(content.heads, []);
+      const family = families.find(record => record.id === content.id).family;
+      assert.ok(content.figures.every(person => family.persons.some(member => member.id === person.id)));
     } else if (content.prepared) {
       assert.ok(neutralPreparedHistories.has(content.sections.history), content.id);
       assert.equal(content.profile.founding, '', content.id);

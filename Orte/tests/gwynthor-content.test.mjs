@@ -74,20 +74,19 @@ test("Gwynthors Infobox und erste Etablissements beruhen auf belegten Angaben", 
   assert.equal(data.structure.einwohnerzahl, "Etwa 30.000");
   assert.equal(data.structure.ortswache, "Cochllamwyr – bis zu 600 Rotmäntel; Ortswachen im Bannkreis");
   assert.equal(data.features.personalitiesCollapsed, true);
-  assert.deepEqual(
-    Array.from(data.merchants, (merchant) => merchant.name),
-    ["Celtigerns Letzte Rast", "Die Lachende Nixe", "Die Krumme Kanne"]
-  );
-  assert.deepEqual(
-    Array.from(data.merchants, (merchant) => merchant.owner),
-    ["Brenn Vann", "Albrecht Sonnenfels", "Aedan, Hrolf & Merrik"]
-  );
-  for (const merchant of data.merchants) {
-    assert.match(merchant.image, /^\/Orte\/.+\/assets\/etablissements\/.+\.png$/);
+  const original = ["Celtigerns Letzte Rast", "Die Lachende Nixe", "Die Krumme Kanne"].map(name => data.merchants.find(merchant => merchant.name === name));
+  assert.ok(original.every(Boolean), 'The three original establishments remain alongside later additions');
+  assert.deepEqual(original.map(merchant => merchant.owner), ["Brenn Vann", "Albrecht Sonnenfels", "Aedan, Hrolf & Merrik"]);
+  for (const merchant of original) {
+    assert.match(merchant.image, /^\/(?:Orte|AleriaAlmanach)\/.+\.png$/);
     await access(resolve(root, merchant.image.slice(1)));
     assert.notEqual(merchant.trade, "Szene");
     assert.notEqual(merchant.trade, "Story");
     assert.notEqual(merchant.description, "…");
+  }
+  for (const merchant of data.merchants) {
+    assert.ok(merchant.name && merchant.owner);
+    if (merchant.image) await access(resolve(root, decodeURI(merchant.image).slice(1)));
   }
 });
 

@@ -15,8 +15,9 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "prepared": false,
   "registerPage": true,
-  "biographySourceRevision": 5,
+  "biographySourceRevision": 6,
   "biographyPreviousDefaultFingerprints": [
+    "3003:a901ad8d:a5e6fdbb",
     "2223:5a8fd8ce:2d6090ec",
     "2237:9f388769:e74117ff",
     "3425:4b60914f:81ca0081"
@@ -25,8 +26,8 @@ export const HOUSE_CONTENT = {
   "biographyHistoryTitle": "Geschichte",
   "biographySummary": {
     "overview": "Die Coeddu sind ein kriegerisches Bürgerhaus aus Gwynthor mit einer beliebten Waffenschmiede. Seit Generationen dienen Angehörige als Wachen und Waffenknechte, vereinzelt auch als Ritter, den Draigs. Das Handwerk und der persönliche Waffendienst stehen nebeneinander.",
-    "history": "Brenric Coeddu diente im Großen Krieg unter Sir Maredudd. Gelenkbeschwerden führten später zu seinem Ruhestand. Mit Gweneth hat er die Kinder Rhydian, Llywelyn, Maelwen und Thalor. Llywelyn ist Waffenknecht und mit Catrin Craigddu verheiratet; ihr Sohn heißt Ellian.",
-    "character": "Llywelyns Freundschaft mit Hywel Craigddu und die Ehe mit dessen Schwester Catrin verbinden die beiden Bürgerhäuser. Maelwens Ehe mit Tiberian Raves führt in den kaufmännischen Familienkreis. Brenrics Veteranenrolle begründet keine unbekannte Amtsfolge.",
+    "history": "Brenric Coeddu diente im Großen Krieg unter Sir Maredudd. Gelenk- und Fußbeschwerden führten zunächst zum Rückzug aus dem Felddienst. Heute dient er den Draigs als persönlicher Ritter und Kriegswart der Aufklärung: Unter Sir Maredudd wertet er Meldungen aus, führt Lagekarten und ordnet Boten- sowie Signalberichte in Abstimmung mit Efael. Mit Gweneth hat er die Kinder Rhydian, Llywelyn, Maelwen und Thalor. Llywelyn ist Waffenknecht und mit Catrin Craigddu verheiratet; ihr Sohn heißt Ellian.",
+    "character": "Llywelyns Freundschaft mit Hywel Craigddu und die Ehe mit dessen Schwester Catrin verbinden die beiden Bürgerhäuser. Maelwens Ehe mit Tiberian Raves führt in den kaufmännischen Familienkreis. Brenrics neues Amt ist eine persönliche Aufgabe im Dienst der Draigs; Haus Coeddu bleibt bürgerlich.",
     "holdings": "Die Waffenschmiede ist als Familienbetrieb belegt. Tätigkeiten einzelner Angehöriger in anderen Betrieben bleiben eigenständige Arbeitsverbindungen."
   },
   "placeholders": {
@@ -107,14 +108,14 @@ export const HOUSE_CONTENT = {
   },
   "sections": {
     "overview": "Die Coeddu sind ein kriegerisches Bürgerhaus aus Gwynthor mit einer beliebten Waffenschmiede. Seit Generationen dienen Angehörige als Wachen und Waffenknechte, vereinzelt auch als Ritter, den Draigs. Das Handwerk und der persönliche Waffendienst stehen nebeneinander.",
-    "history": "Brenric Coeddu diente im Großen Krieg unter Sir Maredudd. Gelenkbeschwerden führten später zu seinem Ruhestand. Mit Gweneth hat er die Kinder Rhydian, Llywelyn, Maelwen und Thalor. Llywelyn ist Waffenknecht und mit Catrin Craigddu verheiratet; ihr Sohn heißt Ellian.",
+    "history": "Brenric Coeddu diente im Großen Krieg unter Sir Maredudd. Gelenk- und Fußbeschwerden führten zunächst zum Rückzug aus dem Felddienst. Heute dient er den Draigs als persönlicher Ritter und Kriegswart der Aufklärung: Unter Sir Maredudd wertet er Meldungen aus, führt Lagekarten und ordnet Boten- sowie Signalberichte in Abstimmung mit Efael. Mit Gweneth hat er die Kinder Rhydian, Llywelyn, Maelwen und Thalor. Llywelyn ist Waffenknecht und mit Catrin Craigddu verheiratet; ihr Sohn heißt Ellian.",
     "traditions": "Besondere Hausbräuche sind bislang nicht überliefert.",
     "knighthood": "Die Familie gehört dem bürgerlichen Stand an. Persönliche Dienststellungen einzelner Angehöriger sind in der Familienakte verzeichnet.",
     "succession": "Der aktuelle Familienkreis und die belegten Verbindungen stehen in der bestehenden Stammbaumakte. Eine nicht überlieferte Erb- oder Amtsfolge wird nicht ergänzt.",
     "holdings": "Die Waffenschmiede ist als Familienbetrieb belegt. Tätigkeiten einzelner Angehöriger in anderen Betrieben bleiben eigenständige Arbeitsverbindungen.",
     "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bislang nicht beschrieben.",
     "conflictsAlliances": "Weitere Hausallianzen und Fehden sind bisher nicht belegt.",
-    "values": "Llywelyns Freundschaft mit Hywel Craigddu und die Ehe mit dessen Schwester Catrin verbinden die beiden Bürgerhäuser. Maelwens Ehe mit Tiberian Raves führt in den kaufmännischen Familienkreis. Brenrics Veteranenrolle begründet keine unbekannte Amtsfolge.",
+    "values": "Llywelyns Freundschaft mit Hywel Craigddu und die Ehe mit dessen Schwester Catrin verbinden die beiden Bürgerhäuser. Maelwens Ehe mit Tiberian Raves führt in den kaufmännischen Familienkreis. Brenrics neues Amt ist eine persönliche Aufgabe im Dienst der Draigs; Haus Coeddu bleibt bürgerlich.",
     "court": "Der Familienhaushalt und seine belegten Aufgaben sind unten aufgeführt. Ein adliger Hofstaat gehört nicht zur Überlieferung.",
     "familyTree": "Die bestehende Familienakte ist hier eingebettet. Personen, Beziehungen und Quellenlücken bleiben dort erhalten; das Hauswappen öffnet die Hausbiografie.",
     "historicalFigures": "Weitere historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
@@ -134,9 +135,9 @@ export const HOUSE_CONTENT = {
       "id": "brenric-coeddu",
       "familyId": "haus-coeddu",
       "name": "Brenric Coeddu",
-      "role": "Waffenknecht im Ruhestand · Veteran des Großen Krieges",
-      "image": "",
-      "detail": "Waffenknecht im Ruhestand · Veteran des Großen Krieges"
+      "role": "Kriegswart der Aufklärung · Ritter im Dienst von Haus Draig",
+      "image": "../Stammbäume/assets/images/portraits/haus-coeddu/brenric-coeddu.png",
+      "detail": "Kriegswart der Aufklärung · Ritter im Dienst von Haus Draig"
     },
     {
       "id": "llywelyn-coeddu",
@@ -171,7 +172,7 @@ export const HOUSE_CONTENT = {
   "currentHead": "",
   "firstHeir": "",
   "headsNote": "Belegte Aufgaben im heutigen Familienkreis; keine erfundene historische Amtsfolge.",
-  "contentVersion": "20261024-housebio-v1",
+  "contentVersion": "20261107-brenric-aufklaerung-v1",
   "omitMilitaryProfile": true,
   "biographyManagedExternally": false,
   "illustrationCategory": "Bürgerliche Hausdarstellung",

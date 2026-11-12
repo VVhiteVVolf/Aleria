@@ -52,7 +52,7 @@ export const RELIGION = {
     {
       "id": "phalantian-external-view",
       "path": "Religionen/religionen/phalantischer-bund/eintrag.json",
-      "sha256": "a4ef89af52ffb04b0dae30fa0b7ac2ccccdab72d66c213ef6d63647546a42440",
+      "sha256": "c0b7090bb255161837c43416f0eafd43affdae3b25e455b6e777d73e6e9de4d9",
       "role": "external-religious-perspective",
       "note": "Ausschließlich als phalantische Fremdsicht verwendet."
     },
@@ -1408,7 +1408,7 @@ export const CROSS_SOURCES = {
       "id": "stoicheia-original",
       "path": "Fonts/Stoicheia-Gesamtpaket-1.000/Quellen/Originalvorlage_Stoicheia.txt",
       "type": "Ursprüngliche Sprachvorlage; HTML-Inhalt in einer Textdatei",
-      "sha256": "c881eae8ecbc941a1635fb6bf9ce7717bfe59956207fb7503908d41065c5ee29"
+      "sha256": "a23915bab61d934103b7e7a14fc70f21a8570848c8b8ed433c0c6f3dee663bf9"
     },
     {
       "id": "stoicheia-readme",
@@ -1421,20 +1421,20 @@ export const CROSS_SOURCES = {
       "path": "AleriaAlmanach/modules/name-list/name-list-data.js",
       "type": "Aktuelle Namensliste mit ausdrücklich dokumentierter Erweiterung",
       "section": "createStoicheiaNameListData()",
-      "sha256": "c0ffaea4824b3c4e6132a40862126d0245a447335a7030dceb031f39f455144c"
+      "sha256": "e38fe1821ac0660b9f866021e318c0040ce39a88792edbbf7c6174a56358196e"
     },
     {
       "id": "xanathos-profile",
       "path": "Bestiarium/tiere/pferde/xanathos/profil.json",
       "type": "Ausführliches öffentliches Bestiariumprofil",
-      "sha256": "bdb8d88a9e5846132097cda0f855fe35f43cbb96c5328628b5099b50b5ff8380"
+      "sha256": "e403af999628541cc91240e57c074a013cfc14867acc8c3107bce30cd824913c"
     },
     {
       "id": "xanathos-market",
       "path": "Markt/Rossmarkt/Rossmarkt.html",
       "type": "Öffentliche Marktübersicht",
       "section": "horse-row[data-name=xanathos]",
-      "sha256": "106fd8031e32ff828f2baa5b86eac7561d067450b867471551a3601c47545671"
+      "sha256": "9decb5281d686b31ad6b202b9d2ba806dcfc9f9dd89a185bed92f587dbd46475"
     },
     {
       "id": "xanathos-context",
@@ -1448,7 +1448,7 @@ export const CROSS_SOURCES = {
       "path": "Bestiarium/tiere/pferde/art.json",
       "type": "Kurze Bestiarium-Listenkarte",
       "pointer": "/atlas/groups/1/entries/3",
-      "sha256": "b2faea92279a3876c471a4dc8dbc8d8d50a5c4c0c4849283064ff05faaef70da"
+      "sha256": "f9eea9ee03810eb4431fb90c1e2d91cfa3100da8ea9f1c18238e6c0b23e280f9"
     },
     {
       "id": "phalantia-religion-comparison",

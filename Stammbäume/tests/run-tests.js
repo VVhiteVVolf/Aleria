@@ -6218,8 +6218,8 @@ test('bildet das wohlhabende Ritterherrenhaus Loer mit namensgleichen Glenys-Sch
   const graph = createFamilyGraph(family);
   const converted = toFamilyChartData(family);
 
-  assert.equal(family.persons.length, 28);
-  assert.equal(family.partnerships.length, 10);
+  assert.equal(family.persons.length, 29);
+  assert.equal(family.partnerships.length, 11);
   assert.equal(family.parentages.length, 17);
   assert.equal(family.cadetBranches.length, 3);
   assert.equal(family.timeJumps.length, 0);
@@ -6301,10 +6301,14 @@ test('bildet das wohlhabende Ritterherrenhaus Loer mit namensgleichen Glenys-Sch
   assert.equal(new Set(unknownPartners.map(person => person.id)).size, 10);
 
   const unpartneredPeople = [
-    'aeron-loer', 'gwallter-loer', 'gwion-loer', 'olwen-loer',
+    'gwallter-loer', 'gwion-loer', 'olwen-loer',
     'gwenfaen-loer', 'tyne-loer', 'islwyna-loer', 'tesni-loer'
   ];
   assert.ok(unpartneredPeople.every(personId => graph.getPartners(personId).length === 0));
+  assert.deepEqual(graph.getPartners('aeron-loer').map(person => person.id), ['avelin-aurdden']);
+  const aurddenEngagement = family.partnerships.find(partnership => partnership.id === 'engagement-aeron-loer-avelin-aurdden');
+  assert.equal(aurddenEngagement.type, 'engagement');
+  assert.equal(aurddenEngagement.extensions.crossFamilyRelationship.counterpartFamilyId, 'haus-aurdden');
 
   // Rhiannedd (Gründerskind) sowie beide Glenys (Eurgains/Dwynarths Schwester und Dwynarths Tochter)
   // sind an ein unbekanntes Zielhaus wegverheiratet.
@@ -6336,7 +6340,7 @@ test('bildet das wohlhabende Ritterherrenhaus Loer mit namensgleichen Glenys-Sch
   assert.equal(connectedIds.size, converted.data.length, 'Kein Ehepartner oder Hausknoten darf als getrennte Insel verborgen bleiben.');
 });
 
-test('liefert für Haus Loer alle 14 belegten Portraits lokal aus', async () => {
+test('liefert für Haus Loer die 14 belegten Portraits und Avelins wiederverwendetes Aurdden-Porträt lokal aus', async () => {
   const family = assertValidFamily(HOUSE_LOER_FAMILY).family;
   const picturedPeople = family.persons.filter(person => person.portrait);
   const placeholderPeople = family.persons.filter(person => !person.portrait);
@@ -6347,11 +6351,12 @@ test('liefert für Haus Loer alle 14 belegten Portraits lokal aus', async () => 
 
   assert.equal(Object.keys(HOUSE_LOER_PORTRAITS).length, 14);
   assert.equal(Object.keys(sourceManifest).length, 14);
-  assert.equal(picturedPeople.length, 14);
+  assert.equal(picturedPeople.length, 15);
   assert.equal(placeholderPeople.length, 14);
   assert.ok(Object.keys(sourceManifest).every(personId => HOUSE_LOER_PORTRAITS[personId]));
   assert.ok(Object.values(sourceManifest).every(source => !/7yB9PR6|51CghpL/.test(source)));
   assert.ok(placeholderPeople.every(person => person.portraitPlaceholder === 'auto'));
+  assert.equal(family.persons.find(person => person.id === 'avelin-aurdden').portrait, 'assets/images/portraits/haus-aurdden/avelin-aurdden.png');
 
   // Begründer, seine Kinder und die ältere Glenys bleiben trotz Namensnennung ohne Portrait
   // (nur Platzhalterbilder in der Quelle).
@@ -21467,7 +21472,14 @@ test('registriert 20 abhängige Häuser des Tals der Milane genau einmal neben A
     const { diagnostics } = assertValidFamily(family);
     const rankId = family.document.houseProfile.rankId;
     assert.equal(diagnostics.filter(item => item.severity === 'error').length, 0, family.document.id);
-    if (['haus-durdynn', 'haus-eryr', 'haus-gaeth', 'haus-hebog', 'haus-ilyuncu', 'haus-mwyalchen', 'haus-sliabh', 'haus-tylluan'].includes(family.document.id)) {
+    if (family.document.id === 'haus-bronnor') {
+      assert.equal(family.persons.length, 5);
+      assert.equal(family.partnerships.length, 1, 'Nur das unbekannte Gründerpaar ist als Partnerschaft angelegt.');
+      assert.equal(family.timeJumps.length, 1);
+      assert.deepEqual(family.timeJumps[0].childIds, ['ysabel-bronnor']);
+      assert.equal(family.parentages[0].childId, 'eurgain-brandyddyn');
+      assert.equal(family.extensions.blankFamily, false);
+    } else if (['haus-durdynn', 'haus-eryr', 'haus-gaeth', 'haus-hebog', 'haus-ilyuncu', 'haus-mwyalchen', 'haus-sliabh', 'haus-tylluan'].includes(family.document.id)) {
       const expectedFamily = {
         'haus-durdynn': HOUSE_DURDYNN_FAMILY,
         'haus-eryr': HOUSE_ERYR_FAMILY,

@@ -1,0 +1,45 @@
+/* Direct register purchases own their controls; scene layouts remain unchanged. */
+.catalog-purchase-trigger { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; max-width: 100%; margin-top: .7rem; padding: .45rem .9rem; border: 1px solid #927440; border-radius: 3px; background: #f5ead1; color: #493315; font: inherit; font-size: .85rem; white-space: normal; cursor: pointer; }
+.catalog-purchase-trigger:hover:not(:disabled) { background: #e9d9b9; }
+.catalog-purchase-trigger:disabled { cursor: default; }
+.catalog-purchase-sold .trade-catalog-visual, .catalog-purchase-sold .goods-item-image { filter: grayscale(1); opacity: .55; }
+.catalog-purchase-sold .catalog-purchase-trigger { color: #746b5e; border-color: #b9ad98; background: #ece6d9; }
+.goods-name-cell .catalog-purchase-trigger { grid-column: 2; justify-self: start; }
+.catalog-purchase-dialog.scene-trade-card { box-sizing: border-box; width: min(680px, calc(100vw - 24px)); height: fit-content; margin: auto; max-width: none; max-height: min(92dvh, 940px); padding: 0; border: 1px solid #b59b6c; border-radius: 7px; background: #fbf7ed; color: #35291d; overflow-y: auto; overscroll-behavior: contain; box-shadow: 0 16px 50px #0005; }
+.catalog-purchase-dialog::backdrop { background: #15100a70; }
+.catalog-purchase-dialog.scene-trade-card[open] { display: block; }
+.catalog-purchase-dialog.scene-trade-card:not([open]) { display: none; }
+.catalog-purchase-dialog *, .catalog-purchase-dialog *::before, .catalog-purchase-dialog *::after { box-sizing: border-box; }
+.catalog-purchase-header { display: flex; align-items: start; justify-content: space-between; gap: 1rem; padding: 1rem 1.25rem; border-bottom: 1px solid #dfcfb1; }
+.catalog-purchase-header h2 { margin: 0; font-size: 1.25rem; line-height: 1.35; overflow-wrap: anywhere; }
+.catalog-purchase-header p { margin: 0 0 .25rem; font-size: .75rem; color: #77654d; }
+.catalog-purchase-header > button { flex: none; width: 36px; min-height: 36px; font-size: 1.25rem; }
+.catalog-purchase-content { display: grid; gap: 1rem; padding: 1.1rem 1.25rem; }
+.catalog-purchase-product { display: flex; align-items: center; gap: .9rem; min-width: 0; }
+.catalog-purchase-product img { flex: none; width: 66px; height: 74px; object-fit: contain; }
+.catalog-purchase-product strong, .catalog-purchase-product span { display: block; overflow-wrap: anywhere; }
+.catalog-purchase-product span { color: #77654d; font-size: .8rem; margin-top: .25rem; }
+.catalog-purchase-people { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .8rem; align-items: start; }
+.catalog-purchase-dialog .scene-trade-actor-picker { min-width: 0; }
+.catalog-purchase-dialog .scene-trade-actor-trigger { width: 100%; min-height: 48px; }
+.catalog-purchase-dialog .scene-trade-actor-name { overflow-wrap: anywhere; }
+.catalog-purchase-dialog [data-trade-actor-options] { max-height: 210px; }
+.catalog-purchase-dialog input, .catalog-purchase-dialog select { min-width: 0; max-width: 100%; min-height: 40px; padding: .45rem .6rem; border: 1px solid #bda982; border-radius: 3px; background: #fffdf7; color: inherit; font: inherit; font-size: .9rem; }
+.catalog-purchase-dialog .scene-trade-actor-search { width: 100%; }
+.catalog-purchase-field { display: grid; gap: .3rem; color: #6e6049; font-size: .8rem; }
+.catalog-purchase-quantity { max-width: 110px; }
+.catalog-purchase-totals { display: grid; gap: .55rem; padding: .9rem 0; border-top: 1px solid #dfcfb1; }
+.catalog-purchase-totals > div { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.catalog-purchase-totals strong { text-align: right; overflow-wrap: anywhere; font-size: .88rem; }
+.catalog-purchase-totals p, .catalog-purchase-pending p { margin: .25rem 0; color: #77654d; font-size: .78rem; line-height: 1.5; }
+.catalog-purchase-dialog .catalog-purchase-confirm { width: 100%; min-height: 44px; padding: .6rem; background: #533a1e; color: #fff4d9; border: 1px solid #533a1e; border-radius: 3px; font: inherit; }
+.catalog-purchase-dialog .catalog-purchase-confirm:disabled { background: #e3dac9; color: #817562; border-color: #d0c4ae; }
+.catalog-purchase-status { min-height: 1.3em; margin: 0; color: #38613d; font-size: .85rem; line-height: 1.5; overflow-wrap: anywhere; }
+.catalog-purchase-status.is-error { color: #983d2e; }
+.catalog-purchase-loading { padding: 1.25rem; line-height: 1.5; }
+@media (max-width: 540px) {
+  .catalog-purchase-content, .catalog-purchase-header { padding: .85rem; }
+  .catalog-purchase-people { grid-template-columns: minmax(0, 1fr); }
+  .catalog-purchase-totals > div { display: grid; gap: .25rem; }
+  .catalog-purchase-totals strong { text-align: left; }
+}

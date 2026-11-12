@@ -205,7 +205,7 @@
     define("craithllyn", "Craithllyn", "Bergbausiedlung", "saethwyr"),
 
     define("twr-brynmawr", "Tŵr Brynmawr", "Turm", "wyrm", { dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Twr_Brynmawr/ort.data.js?v=wyrm-import-20260913a" }),
-    define("mwyncreig", "Mwyncreig", "Bergbausiedlung", "wyrm", { ...mappedPlaceOptions("mwyncreig", "Mwyncreig", "Bergbausiedlung", true), dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Mwyncreigs_Bannkreis/Mwyncreig/ort.data.js?v=wyrm-import-20260913a" }),
+    define("mwyncreig", "Mwyncreig", "Bergbausiedlung", "wyrm", { ...mappedPlaceOptions("mwyncreig", "Mwyncreig", "Bergbausiedlung", true), aliases: ["mwyncraig"], dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Mwyncreigs_Bannkreis/Mwyncreig/ort.data.js?v=wyrm-import-20260913a" }),
     define("craithglyn", "Craithglyn", "Bergbausiedlung", "wyrm", { dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Craithglyn/ort.data.js?v=merchant-directory-20261019" }),
     define("lysfaen", "Llysfaen", "Bauernsiedlung", "wyrm", { ...mappedPlaceOptions("llysfaen", "Llysfaen", "Bauernsiedlung", true), dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Lysfaens_Bannkreis/Lysfaen/ort.data.js?v=merchant-directory-20261019" }),
     define("bronhir", "Bronhir", "Bauernsiedlung", "wyrm", { ...mappedPlaceOptions("bronhir", "Bronhir", "Bauernsiedlung", true), dataPath: "Koenigreich_Cenyr/Grafschaft_Celtigerns_Wacht/Baronie_Llamreis_Ankunft/Herrschaft_Haus_Wyrm/Bronhirs_Bannkreis/Bronhir/ort.data.js?v=wyrm-import-20260913a" }),
@@ -233,14 +233,14 @@
   ]);
 
   const placesById = new Map(definitions.map((entry) => [entry.id, entry]));
-  const placesByName = new Map(definitions.map((entry) => [normalizeId(entry.name), entry]));
+  const placesByName = new Map(definitions.flatMap((entry) => [normalizeId(entry.name), ...entry.aliases].map(name => [name, entry])));
 
   const registryEntries = Object.freeze(definitions
     .filter((entry) => entry.id !== "lysfaen")
     .map((entry) => Object.freeze({
       id: entry.id,
       slug: entry.id,
-      aliases: Object.freeze([normalizeId(entry.name)]),
+      aliases: Object.freeze([...new Set([normalizeId(entry.name), ...entry.aliases])]),
       name: entry.name,
       status: "draft",
       type: normalizeId(entry.placeType),
@@ -288,6 +288,7 @@
       id,
       name,
       placeType,
+      aliases: Object.freeze((options.aliases || []).map(normalizeId)),
       featured: options.featured === true,
       dataPath: options.dataPath || "",
       domain: parent,

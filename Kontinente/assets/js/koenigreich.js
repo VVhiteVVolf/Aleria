@@ -13,7 +13,7 @@
     import(new URL('haeuser.registry.js?v=gwendolyn-20260911h', housePageBase)).catch((error) => {
       console.warn('Hausseitenregister konnte nicht geladen werden; vorhandene Familienlinks bleiben verfügbar.', error);
     }),
-    import(new URL('directory-browser.mjs?v=register-20261018a', directoryBase)),
+    import(new URL('directory-browser.mjs?v=20261112a', directoryBase)),
     import(new URL('reference-tables.mjs?v=20261018b', directoryBase)),
     import(new URL('../cenyr-court/royal-council.mjs?v=vortigern-20261018', directoryBase)),
   ]);

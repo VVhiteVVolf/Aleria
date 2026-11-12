@@ -4,6 +4,15 @@
 function getEditPreviewState() {
   const text = document.getElementById('ec-text')?.value.trim() || '';
 
+  if (_editCommentSegments[0]?.kind === 'foreignvoice') {
+    const voice = AleriaCommentForeignVoice.getPresentation(_editCommentSegments[0]);
+    return { narrator: false, commentKind: 'foreignvoice', name: voice.charName, title: '', portrait: voice.portrait, text };
+  }
+  if (_editMode === 'narrator' && _editCommentSegments[0]?.kind === 'secretaction') {
+    const actor = getCommentNarratorSecretActionPresentation();
+    return { ...actor, commentKind: 'secretaction', name: actor.charName, title: '', text };
+  }
+
   if (_editMode === 'narrator') {
     return { narrator: true, commentKind: 'narrator', name: 'Erzähler', title: '', portrait: null, text };
   }
@@ -58,6 +67,10 @@ function updateEditFormPreview() {
   if (!preview) return;
 
   const segments = buildEditCommentSegmentsForSave();
+  if (!segments.length && _editCommentSegments[0]?.kind === 'foreignvoice') segments.push(buildCommentForeignVoiceSegment(_editCommentSegments[0]));
+  if (!segments.length && _editMode === 'narrator' && _editCommentSegments[0]?.kind === 'secretaction') {
+    segments.push(buildCommentNarratorSecretActionSegment(_editCommentSegments[0]));
+  }
   if (segments.length) {
     preview.innerHTML = `
       <div class="comment-live-preview-head">

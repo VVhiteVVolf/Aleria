@@ -1,4 +1,5 @@
 import '../scene-regeneration/scene-regeneration-policy.js';
+import './comments-foreign-voice.js';
 
 const isSilentSceneRegeneration = globalThis.AleriaSceneRegenerationPolicy.isComment;
 
@@ -14,6 +15,11 @@ function milliseconds(value) {
 }
 
 function previewSpeaker(value = {}) {
+  if ((value.commentKind || value.kind) === 'foreignvoice') {
+    value = { ...value, ...globalThis.AleriaCommentForeignVoice.getPresentation(value), narrator: false };
+  } else if ((value.commentKind || value.kind) === 'secretaction' && value.commentMode === 'narrator') {
+    value = { ...value, charName: 'Unbekannte Gestalt', portrait: '', narrator: false };
+  }
   const portrait = String(value.portrait || '');
   return { charName: String(value.charName || value.name || '').slice(0, 300), narrator: !!value.narrator,
     portrait: portrait.startsWith('data:') ? '' : portrait.slice(0, 4096), text: String(value.text || '').slice(0, 1600) };

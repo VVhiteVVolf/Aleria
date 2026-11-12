@@ -94,12 +94,12 @@ window.HAEUSER_DATA = {
     "knighthood": "Der Ritterstand des Hauses ist im Register festgehalten. Eine eigene Rüstungstradition oder besondere Ausbildung ist bisher nicht beschrieben.",
     "holdings": "Eigene Ländereien, Burgen und Einnahmequellen sind bislang nicht näher beschrieben.",
     "cultureReligion": "Eine besondere religiöse Überlieferung des Hauses ist bisher nicht ausgearbeitet.",
-    "conflictsAlliances": "Weitere familiäre Verbindungen, Bündnisse und Fehden sind bisher nicht ausgearbeitet.",
+    "conflictsAlliances": "Ysabel Bronnor gehört diesem Ritterhaus aus dem Tal der Milane an und ist Leutnant der Draig-Leibgarde. Sie ist eine Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Ysabel und Pellinard Brândyddyn sind die Eltern Eurgain Brândyddyns; Ehe, Verlobung und heutiger Beziehungsstatus der Eltern sind nicht belegt. Ysabel bleibt unter ihrer Herkunftsidentität Bronnor verzeichnet.",
     "values": "Auf dem vorhandenen Hauszeichen ist ein roter Adler mit ausgebreiteten Schwingen über einem roten Fels auf dunklem Grund dargestellt. Darüber hinaus sind besondere Hausbräuche, Werte und ein verbindlicher Leitspruch noch nicht ausgearbeitet.",
     "succession": "Eine namentlich gesicherte Erbfolge ist noch nicht überliefert.",
-    "court": "Namentliche Oberhäupter und eigene Amtsbesetzungen sind bisher nicht belegt.",
-    "familyTree": "Hier ist die bereits vorhandene Familienakte eingebettet. Das Hauswappen im Stammbaum öffnet die Hausbiografie.",
-    "historicalFigures": "Historische Persönlichkeiten sind bisher nicht namentlich ausgearbeitet."
+    "court": "Ein namentliches Oberhaupt und eigene Hausämter sind bisher nicht belegt. Ysabel Bronnor dient als Leutnant in der Leibgarde des Hauses Draig.",
+    "familyTree": "Das unbekannte historische Gründerpaar steht vor dem Hauswappen und einem seriellen Überlieferungssprung zu Ysabel. Die bestätigte biologische Elternschaft Ysabels und Pellinards zu Eurgain ist in beiden Gegenakten verzeichnet. Keine Ehe oder neue Hauszugehörigkeit wird daraus abgeleitet. Das Hauswappen im Stammbaum öffnet die Hausbiografie.",
+    "historicalFigures": "Ysabel Bronnor ist als Angehörige des Hauses namentlich bekannt. Die Altersangabe bleibt eine Schätzung nach ihrem aktuellen Portrait."
   },
   "sectionTitles": {
     "knighthood": "4. Rittertum"
@@ -121,6 +121,12 @@ window.HAEUSER_DATA = {
       "href": "../Kontinente/Estryll/Königreich Cenyr/Grafschaft Tal der Milane/Grafschaft Tal der Milane.html",
       "alt": "Herrschaftsbanner von Tal der Milane",
       "format": "square"
+    },
+    "haus-figur-1": {
+      "src": "../Stammbäume/assets/images/portraits/haus-bronnor/ysabel-bronnor.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-bronnor&mode=view&person=ysabel-bronnor",
+      "alt": "Ysabel Bronnor",
+      "format": "portrait"
     }
   },
   "court": {
@@ -129,11 +135,20 @@ window.HAEUSER_DATA = {
   },
   "figures": {
     "heading": "11. Historische Figuren",
-    "tableTitle": "Historische Persönlichkeiten",
-    "entries": []
+    "tableTitle": "Namentlich bekannte Angehörige",
+    "entries": [
+      {
+        "group": "Namentlich bekannte Angehörige",
+        "role": "Leutnant der Leibgarde",
+        "name": "Ysabel Bronnor",
+        "description": "Mitglied des Ritterhauses Bronnor aus dem Tal der Milane. Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Mutter Eurgains. Alterserscheinung: etwa 35–45 Jahre; reine Portraitschätzung, keine gesicherten Lebensdaten.",
+        "imageKey": "haus-figur-1"
+      }
+    ],
+    "mobileLayout": "stacked"
   },
   "familyTreeEmbed": {
-    "src": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-bronnor&mode=view",
+    "src": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-bronnor&mode=view&embed=1",
     "title": "Stammbaum von Haus Bronnor"
   },
   "trivia": []

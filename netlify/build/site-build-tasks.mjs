@@ -1,4 +1,6 @@
 import { WORLD_CONTENT_TASKS } from './world-content-tasks.mjs';
+import { COMMENT_PRESENTATION_TASKS } from './comment-presentation-tasks.mjs';
+import { DRAIG_GARDE_TASKS } from './draig-garde-tasks.mjs';
 import { ADVENTURE_SYSTEM_TASKS } from './adventure-system-tasks.mjs';
 import { CHARACTER_REFERENCE_TASKS } from './character-reference-tasks.mjs';
 import { PATRICK_BIOGRAPHY_TASKS } from './patrick-biography-tasks.mjs';
@@ -37,14 +39,14 @@ const economySourceInputs = [
   'kleiner-durst', 'krumme-kanne', 'letzte-rast', 'goettliche-eleganz', 'zum-honigtoertchen',
   'pendrwn-general-store', 'gwynthor-bathhouse', 'gestiefelte-muschi',
   'letzter-heller', 'gofrann-schmiede', 'klingende-krone', 'lachende-nixe',
-  'gortach-brauerei', 'brewer-guilds', 'gwregysdu-harbor', 'windreiter', 'rotes-tor', 'arkaneum', 'gwynthor-heime'
+  'gortach-brauerei', 'brewer-guilds', 'gwregysdu-harbor', 'windreiter', 'rotes-tor', 'arkaneum', 'gwynthor-heime', 'loer-hofjuwelier'
 ].map(feature => `AleriaAlmanach/modules/${feature}/`);
 
 // Inputs include cross-feature dependencies. Images do not affect the chart audit,
 // which deliberately blocks image requests, but CSS, vendor code and family data do.
 export const SITE_BUILD_TASKS = [
   {
-    id: 'goldene-fassung', label: 'Ffals jewellery shop, catalogues, staffing and four rooms',
+    id: 'goldene-fassung', label: 'Ffals jewellery shop, catalogues, staffing and four rooms', parallelValidation: true,
     inputs: ['AleriaAlmanach/modules/goldene-fassung/', 'AleriaAlmanach/assets/goldene-fassung/',
       'AleriaAlmanach/scripts/build-goldene-fassung.mjs', 'AleriaAlmanach/tests/goldene-fassung.test.mjs',
       'Stammbäume/assets/js/data/house-ffals-family.js', 'Stammbäume/tests/ffals-family.test.js',
@@ -155,7 +157,7 @@ export const SITE_BUILD_TASKS = [
       testCommand('firebase/functions/tests/silberhirsch-protection.test.js')]
   },
   {
-    id: 'biography-layout', label: 'Shared biography layout, editorial defaults, training portraits and transfer',
+    id: 'biography-layout', label: 'Shared biography layout, editorial defaults, training portraits and transfer', parallelValidation: true,
     inputs: ['js/biography/', 'AleriaAlmanach/modules/biography/', 'AleriaAlmanach/modules/characters/character-biography-tab.js',
       'AleriaAlmanach/modules/rendering/module-renderer.js', 'AleriaAlmanach/modules/module-editor/module-editor-biography.js',
       'AleriaAlmanach/modules/module-editor/module-editor-pages.js', 'AleriaAlmanach/modules/module-editor/module-editor-templates.js',
@@ -170,7 +172,7 @@ export const SITE_BUILD_TASKS = [
       testCommand(almanach('biography-editions'), almanach('biography-transfer'), almanach('biography-portrait-captions'), almanach('biography-rich-text-compatibility'))]
   },
   {
-    id: 'character-health', label: 'Permanent afflictions, arcane fever, dependencies and scene-timed intoxication',
+    id: 'character-health', label: 'Permanent afflictions, arcane fever, dependencies and scene-timed intoxication', parallelValidation: true,
     inputs: ['AleriaAlmanach/modules/character-health/', 'AleriaAlmanach/modules/scene-time/',
       'AleriaAlmanach/modules/combat/', 'AleriaAlmanach/modules/combat-status/', 'AleriaAlmanach/modules/character-development/',
       'AleriaAlmanach/modules/inventory-use/', 'AleriaAlmanach/modules/item-definitions/', 'AleriaAlmanach/modules/item-builder/',
@@ -495,6 +497,7 @@ export const SITE_BUILD_TASKS = [
       'netlify/tests/prepared-release.test.mjs', 'netlify/tests/release-timings.test.mjs',
       'netlify/tests/release-flow.test.mjs',
       'netlify/tests/build-checkpoints.test.mjs', 'netlify/tests/site-build-fingerprints.test.mjs',
+      'netlify/tests/build-preflight.test.mjs', 'netlify/tests/build-validation-scheduler.test.mjs', 'netlify/tests/validation-commands.test.mjs',
       'netlify/tests/release-task-coverage.test.mjs', 'netlify/tests/avatar-source-publication.test.mjs',
       'netlify/tests/adventure-release.test.mjs', 'netlify/tests/frontend-source-publication.test.mjs',
       'netlify/tests/reference-art-publication.test.mjs', 'netlify/tests/house-source-publication.test.mjs',
@@ -667,6 +670,21 @@ export const SITE_BUILD_TASKS = [
       almanach('rotes-tor'), almanach('rotes-tor-menu')],
     commands: [['AleriaAlmanach/scripts/build-rotes-tor.mjs', '--check'],
       testCommand(almanach('rotes-tor'), almanach('rotes-tor-menu'))]
+  },
+  {
+    id: 'loer-hofjuwelier', label: 'Aurdden luxury jeweller, three lines and banking cousin branch', parallelValidation: true,
+    inputs: ['AleriaAlmanach/modules/loer-hofjuwelier/', 'AleriaAlmanach/assets/loer-hofjuwelier/',
+      'AleriaAlmanach/scripts/build-loer-hofjuwelier.mjs', 'AleriaAlmanach/scripts/build-aurdden-characters.mjs',
+      'Stammbäume/assets/js/data/aurdden-people.js', 'Stammbäume/assets/js/data/house-aurdden-family.js',
+      'Stammbäume/assets/js/data/house-aurdden-portraits.js', 'Stammbäume/assets/js/data/aurdden-loer-engagement.js',
+      'Stammbäume/assets/js/data/house-loer-family.js', 'Stammbäume/tests/aurdden-family.test.js',
+      'Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Aurdden/',
+      'AleriaAlmanach/modules/trade-catalog/', 'AleriaAlmanach/modules/item-register/',
+      'AleriaAlmanach/modules/economy-calculator/', 'AleriaAlmanach/AleriaAlmanach.html',
+      almanach('loer-hofjuwelier'), almanach('aurdden-characters')],
+    commands: [['AleriaAlmanach/scripts/build-loer-hofjuwelier.mjs', '--check'],
+      ['Familien Häuser und Clans/scripts/build-house-content.mjs', '--check', '--houses=haus-aurdden,haus-loer'],
+      testCommand(almanach('loer-hofjuwelier'), almanach('aurdden-characters'), 'Stammbäume/tests/aurdden-family.test.js')]
   },
   {
     id: 'arkaneum', label: 'Lothaire family, alchemy, arcane goods and rooms',
@@ -910,6 +928,8 @@ export const SITE_BUILD_TASKS = [
         'Familien Häuser und Clans/tests/haeuser-loader-routing.test.mjs')]
   },
   ...PATRICK_BIOGRAPHY_TASKS,
+  ...COMMENT_PRESENTATION_TASKS,
+  ...DRAIG_GARDE_TASKS,
   ...CHARACTER_REFERENCE_TASKS,
   ...WORLD_CONTENT_TASKS,
   ...ADVENTURE_SYSTEM_TASKS

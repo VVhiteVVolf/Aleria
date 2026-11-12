@@ -2,13 +2,14 @@ import { HttpsError } from 'firebase-functions/v2/https';
 import { readQuestGroupAccount } from '../quests/quest-group-account.js';
 import { assertGroupInventoryMember } from '../groups/group-inventory-membership.js';
 import { tradeId } from './scene-trade-context.js';
+import { assertTradeGroupContext } from './scene-trade-checkout-context.js';
 
 export function tradeAccountKey(value) {
   const match = typeof value === 'string' && value.match(/^(character|group):([\w:.-]{1,220})$/);
   if (!match) throw new HttpsError('invalid-argument', 'Eine Bestellung benötigt eindeutige Figuren- oder Gruppenkonten.');
   return { key: value, kind: match[1], id: tradeId(match[2]) };
 }
-export async function readTradeAccounts(database, transaction, input, scene) {
+export async function readTradeAccounts(database, transaction, input, context) {
   const actorId = tradeId(input.actorCharacterId);
   const actorSnapshot = await transaction.get(database.doc(`characters/${actorId}`));
   if (!actorSnapshot.exists) throw new HttpsError('not-found', 'Die bestellende Figur wurde nicht gefunden.');
@@ -21,8 +22,7 @@ export async function readTradeAccounts(database, transaction, input, scene) {
     let record, reference, exists = true, account = null;
     if (key.kind === 'group') {
       account = await readQuestGroupAccount(database, transaction, key.id);
-      const linked = [account.group.threadId, ...(account.group.sceneThreads || [])].includes(input.entryId);
-      if (!linked && scene.location.moduleId !== key.id) throw new HttpsError('permission-denied', 'Diese Gruppe ist nicht mit der Szene verknüpft.');
+      assertTradeGroupContext(account, key.id, input, context);
       await assertGroupInventoryMember(database, transaction, account, 'character', { ...actorSnapshot.data(), id: actorId });
       record = account.record; reference = account.reference; exists = account.exists;
     } else {

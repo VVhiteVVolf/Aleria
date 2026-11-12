@@ -2579,6 +2579,34 @@
       "title": "Heim der Celynfor"
     },
     {
+      "id": "der-sternenfang-aurdden",
+      "title": "Der Sternenfang"
+    },
+    {
+      "id": "gwynthor-gwregysdu-lagerhaeuser",
+      "title": "Die Lagerhäuser der Gwregysdu"
+    },
+    {
+      "id": "gwynthor-zur-klingenden-krone",
+      "title": "Zur Klingenden Krone"
+    },
+    {
+      "id": "die-lachende-nixe",
+      "title": "Die Lachende Nixe"
+    },
+    {
+      "id": "gwynthor-die-rote-klaue",
+      "title": "Die rote Klaue"
+    },
+    {
+      "id": "gwynthor-handelsposten-klingende-muenze",
+      "title": "Der Handelsposten der Klingenden Münze"
+    },
+    {
+      "id": "gwynthor-klingende-muenze-interessenbuende",
+      "title": "Die fünf Interessenbünde"
+    },
+    {
       "id": "gwynthorer-theater",
       "title": "Gwynthorer Theater"
     },
@@ -2625,30 +2653,6 @@
     {
       "id": "marchwern-gestuet",
       "title": "Marchwern-Gestüt"
-    },
-    {
-      "id": "gwynthor-gwregysdu-lagerhaeuser",
-      "title": "Die Lagerhäuser der Gwregysdu"
-    },
-    {
-      "id": "gwynthor-zur-klingenden-krone",
-      "title": "Zur Klingenden Krone"
-    },
-    {
-      "id": "die-lachende-nixe",
-      "title": "Die Lachende Nixe"
-    },
-    {
-      "id": "gwynthor-die-rote-klaue",
-      "title": "Die rote Klaue"
-    },
-    {
-      "id": "gwynthor-handelsposten-klingende-muenze",
-      "title": "Der Handelsposten der Klingenden Münze"
-    },
-    {
-      "id": "gwynthor-klingende-muenze-interessenbuende",
-      "title": "Die fünf Interessenbünde"
     },
     {
       "id": "drakenschluck-soeldner",
@@ -3893,6 +3897,311 @@
       "moduleId": "heim-der-celynfor"
     },
     {
+      "id": "der-sternenfang-aurdden",
+      "title": "Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden"
+    },
+    {
+      "id": "der-sternenfang-aurdden::page:sternenfang-laden",
+      "title": "Der Sternenfang · Der Sternenfang",
+      "moduleId": "der-sternenfang-aurdden"
+    },
+    {
+      "id": "der-sternenfang-aurdden::page:sternenfang-stammbaum",
+      "title": "Der Sternenfang · Stammbaum · Familie Aurdden",
+      "moduleId": "der-sternenfang-aurdden"
+    },
+    {
+      "id": "der-sternenfang-aurdden::page:sternenfang-hierarchie",
+      "title": "Der Sternenfang · Hierarchie · Laden und Werkstatt",
+      "moduleId": "der-sternenfang-aurdden"
+    },
+    {
+      "id": "der-sternenfang-aurdden::page:sternenfang-dienstleistungen",
+      "title": "Der Sternenfang · Dienstleistungen · Entwurf und Erhalt",
+      "moduleId": "der-sternenfang-aurdden"
+    },
+    {
+      "id": "der-sternenfang-aurdden::session:sternenfang-verkaufsraum",
+      "title": "Der Sternenfang · Der Verkaufsraum",
+      "moduleId": "der-sternenfang-aurdden"
+    },
+    {
+      "id": "der-sternenfang-aurdden::session:sternenfang-beratungssalon",
+      "title": "Der Sternenfang · Der Beratungssalon",
+      "moduleId": "der-sternenfang-aurdden"
+    },
+    {
+      "id": "der-sternenfang-aurdden::session:sternenfang-werkstatt",
+      "title": "Der Sternenfang · Die Goldschmiedewerkstatt",
+      "moduleId": "der-sternenfang-aurdden"
+    },
+    {
+      "id": "gwynthor-gwregysdu-lagerhaeuser",
+      "title": "Die Lagerhäuser der Gwregysdu",
+      "moduleId": "gwynthor-gwregysdu-lagerhaeuser"
+    },
+    {
+      "id": "gwynthor-gwregysdu-lagerhaeuser::page:gwregysdu-einordnung",
+      "title": "Die Lagerhäuser der Gwregysdu · Die Lagerhäuser der Gwregysdu",
+      "moduleId": "gwynthor-gwregysdu-lagerhaeuser"
+    },
+    {
+      "id": "gwynthor-gwregysdu-lagerhaeuser::page:gwregysdu-hierarchie",
+      "title": "Die Lagerhäuser der Gwregysdu · Haus, Logistik und Rote Kompanie",
+      "moduleId": "gwynthor-gwregysdu-lagerhaeuser"
+    },
+    {
+      "id": "gwynthor-gwregysdu-lagerhaeuser::page:gwregysdu-dienste",
+      "title": "Die Lagerhäuser der Gwregysdu · Vier Lagerhäuser · Dienste und Vertrieb",
+      "moduleId": "gwynthor-gwregysdu-lagerhaeuser"
+    },
+    {
+      "id": "gwynthor-gwregysdu-lagerhaeuser::session:gwregysdu-kaihof",
+      "title": "Die Lagerhäuser der Gwregysdu · Der Kaihof · Vor den vier Toren",
+      "moduleId": "gwynthor-gwregysdu-lagerhaeuser"
+    },
+    {
+      "id": "gwynthor-gwregysdu-lagerhaeuser::session:gwregysdu-lagerhalle",
+      "title": "Die Lagerhäuser der Gwregysdu · Die Lagerhalle · Gewicht und Siegel",
+      "moduleId": "gwynthor-gwregysdu-lagerhaeuser"
+    },
+    {
+      "id": "gwynthor-gwregysdu-lagerhaeuser::session:gwregysdu-kontor",
+      "title": "Die Lagerhäuser der Gwregysdu · Das Kontor · Unter verschlossenen Büchern",
+      "moduleId": "gwynthor-gwregysdu-lagerhaeuser"
+    },
+    {
+      "id": "gwynthor-zur-klingenden-krone",
+      "title": "Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone"
+    },
+    {
+      "id": "gwynthor-zur-klingenden-krone::page:krone-einordnung",
+      "title": "Zur Klingenden Krone · Zur Klingenden Krone",
+      "moduleId": "gwynthor-zur-klingenden-krone"
+    },
+    {
+      "id": "gwynthor-zur-klingenden-krone::page:krone-familie",
+      "title": "Zur Klingenden Krone · Ein neuer Zweig in Gwynthor",
+      "moduleId": "gwynthor-zur-klingenden-krone"
+    },
+    {
+      "id": "gwynthor-zur-klingenden-krone::page:krone-betrieb",
+      "title": "Zur Klingenden Krone · Die Münze hinter dem Kessel",
+      "moduleId": "gwynthor-zur-klingenden-krone"
+    },
+    {
+      "id": "gwynthor-zur-klingenden-krone::page:krone-personal",
+      "title": "Zur Klingenden Krone · Unter Finlay und der Gilde",
+      "moduleId": "gwynthor-zur-klingenden-krone"
+    },
+    {
+      "id": "gwynthor-zur-klingenden-krone::page:krone-dienste",
+      "title": "Zur Klingenden Krone · Am Tisch und ab Werk",
+      "moduleId": "gwynthor-zur-klingenden-krone"
+    },
+    {
+      "id": "gwynthor-zur-klingenden-krone::session:krone-schankstube",
+      "title": "Zur Klingenden Krone · Die Schankstube · Der bessere Abend",
+      "moduleId": "gwynthor-zur-klingenden-krone"
+    },
+    {
+      "id": "gwynthor-zur-klingenden-krone::session:krone-sudhaus",
+      "title": "Zur Klingenden Krone · Das Sudhaus · Malz und Kupfer",
+      "moduleId": "gwynthor-zur-klingenden-krone"
+    },
+    {
+      "id": "gwynthor-zur-klingenden-krone::session:krone-brennhaus",
+      "title": "Zur Klingenden Krone · Das Brennhaus · Ein langsamer Lauf",
+      "moduleId": "gwynthor-zur-klingenden-krone"
+    },
+    {
+      "id": "gwynthor-zur-klingenden-krone::session:krone-fasslager",
+      "title": "Zur Klingenden Krone · Das Fasslager · Fünf volle Jahre",
+      "moduleId": "gwynthor-zur-klingenden-krone"
+    },
+    {
+      "id": "gwynthor-zur-klingenden-krone::session:krone-ladehof",
+      "title": "Zur Klingenden Krone · Der Ladehof · Unter Verschluss",
+      "moduleId": "gwynthor-zur-klingenden-krone"
+    },
+    {
+      "id": "die-lachende-nixe",
+      "title": "Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe"
+    },
+    {
+      "id": "die-lachende-nixe::page:0",
+      "title": "Die Lachende Nixe · Die Lachende Nixe",
+      "moduleId": "die-lachende-nixe"
+    },
+    {
+      "id": "die-lachende-nixe::page:2",
+      "title": "Die Lachende Nixe · ✦ — Angestellte— ✦",
+      "moduleId": "die-lachende-nixe"
+    },
+    {
+      "id": "die-lachende-nixe::page:nixe-services-20261016",
+      "title": "Die Lachende Nixe · ✦ — Services — ✦",
+      "moduleId": "die-lachende-nixe"
+    },
+    {
+      "id": "die-lachende-nixe::page:p-mqmo049r-x6xqi",
+      "title": "Die Lachende Nixe · ✦ — Gästeverzeichnis — ✦",
+      "moduleId": "die-lachende-nixe"
+    },
+    {
+      "id": "die-lachende-nixe::session:5",
+      "title": "Die Lachende Nixe · II. — Schankraum",
+      "moduleId": "die-lachende-nixe"
+    },
+    {
+      "id": "die-lachende-nixe::session:6",
+      "title": "Die Lachende Nixe · III. — Hinterzimmer",
+      "moduleId": "die-lachende-nixe"
+    },
+    {
+      "id": "die-lachende-nixe::session:7",
+      "title": "Die Lachende Nixe · IV. — Küche",
+      "moduleId": "die-lachende-nixe"
+    },
+    {
+      "id": "die-lachende-nixe::session:8",
+      "title": "Die Lachende Nixe · V. — Vorratskammer",
+      "moduleId": "die-lachende-nixe"
+    },
+    {
+      "id": "die-lachende-nixe::session:9",
+      "title": "Die Lachende Nixe · VI. — Gästezimmer · Zimmer I. – Perlenstube",
+      "moduleId": "die-lachende-nixe"
+    },
+    {
+      "id": "gwynthor-die-rote-klaue",
+      "title": "Die rote Klaue",
+      "moduleId": "gwynthor-die-rote-klaue"
+    },
+    {
+      "id": "gwynthor-die-rote-klaue::page:klaue-einordnung",
+      "title": "Die rote Klaue · Die rote Klaue",
+      "moduleId": "gwynthor-die-rote-klaue"
+    },
+    {
+      "id": "gwynthor-die-rote-klaue::page:klaue-stammbaum",
+      "title": "Die rote Klaue · Familie Valerus · Der Stammbaum",
+      "moduleId": "gwynthor-die-rote-klaue"
+    },
+    {
+      "id": "gwynthor-die-rote-klaue::page:klaue-hierarchie",
+      "title": "Die rote Klaue · Die Hände der Klaue",
+      "moduleId": "gwynthor-die-rote-klaue"
+    },
+    {
+      "id": "gwynthor-die-rote-klaue::page:klaue-dienstleistungen",
+      "title": "Die rote Klaue · Darlehen, Wechsel und Pfand",
+      "moduleId": "gwynthor-die-rote-klaue"
+    },
+    {
+      "id": "gwynthor-die-rote-klaue::session:klaue-schalterraum",
+      "title": "Die rote Klaue · Am Pfandschalter",
+      "moduleId": "gwynthor-die-rote-klaue"
+    },
+    {
+      "id": "gwynthor-die-rote-klaue::session:klaue-schreibstube",
+      "title": "Die rote Klaue · Die Schreibstube",
+      "moduleId": "gwynthor-die-rote-klaue"
+    },
+    {
+      "id": "gwynthor-die-rote-klaue::session:klaue-pfandmagazin",
+      "title": "Die rote Klaue · Das verschlossene Magazin",
+      "moduleId": "gwynthor-die-rote-klaue"
+    },
+    {
+      "id": "gwynthor-handelsposten-klingende-muenze",
+      "title": "Der Handelsposten der Klingenden Münze",
+      "moduleId": "gwynthor-handelsposten-klingende-muenze"
+    },
+    {
+      "id": "gwynthor-handelsposten-klingende-muenze::page:muenze-einordnung",
+      "title": "Der Handelsposten der Klingenden Münze · Drei Gilden an einem Kai",
+      "moduleId": "gwynthor-handelsposten-klingende-muenze"
+    },
+    {
+      "id": "gwynthor-handelsposten-klingende-muenze::page:muenze-verbund",
+      "title": "Der Handelsposten der Klingenden Münze · Mitgliedschaft, Kapital und Grafschaft",
+      "moduleId": "gwynthor-handelsposten-klingende-muenze"
+    },
+    {
+      "id": "gwynthor-handelsposten-klingende-muenze::page:muenze-kaufmannsgilde",
+      "title": "Der Handelsposten der Klingenden Münze · Klingende Münze · Kaufmannsgilde",
+      "moduleId": "gwynthor-handelsposten-klingende-muenze"
+    },
+    {
+      "id": "gwynthor-handelsposten-klingende-muenze::page:muenze-rote-bank",
+      "title": "Der Handelsposten der Klingenden Münze · Rote Bank · Konten und Kapital",
+      "moduleId": "gwynthor-handelsposten-klingende-muenze"
+    },
+    {
+      "id": "gwynthor-handelsposten-klingende-muenze::page:muenze-rote-kompanie",
+      "title": "Der Handelsposten der Klingenden Münze · Rote Kompanie · Grafschaftskommando",
+      "moduleId": "gwynthor-handelsposten-klingende-muenze"
+    },
+    {
+      "id": "gwynthor-handelsposten-klingende-muenze::session:muenze-szene-kaihof",
+      "title": "Der Handelsposten der Klingenden Münze · Der Kaihof · Zwischen Tor und Gezeiten",
+      "moduleId": "gwynthor-handelsposten-klingende-muenze"
+    },
+    {
+      "id": "gwynthor-handelsposten-klingende-muenze::session:muenze-szene-ratssaal",
+      "title": "Der Handelsposten der Klingenden Münze · Der Ratssaal · Acht Plätze",
+      "moduleId": "gwynthor-handelsposten-klingende-muenze"
+    },
+    {
+      "id": "gwynthor-handelsposten-klingende-muenze::session:muenze-szene-bankhalle",
+      "title": "Der Handelsposten der Klingenden Münze · Die Bankhalle · Hinter dem Schalter",
+      "moduleId": "gwynthor-handelsposten-klingende-muenze"
+    },
+    {
+      "id": "gwynthor-handelsposten-klingende-muenze::session:muenze-szene-kommandantur",
+      "title": "Der Handelsposten der Klingenden Münze · Die Kommandantur · Wege und Befehle",
+      "moduleId": "gwynthor-handelsposten-klingende-muenze"
+    },
+    {
+      "id": "gwynthor-klingende-muenze-interessenbuende",
+      "title": "Die fünf Interessenbünde",
+      "moduleId": "gwynthor-klingende-muenze-interessenbuende"
+    },
+    {
+      "id": "gwynthor-klingende-muenze-interessenbuende::page:muenze-interessen",
+      "title": "Die fünf Interessenbünde · Fünf Bünde, acht Stimmen",
+      "moduleId": "gwynthor-klingende-muenze-interessenbuende"
+    },
+    {
+      "id": "gwynthor-klingende-muenze-interessenbuende::page:muenze-familie-falveri",
+      "title": "Die fünf Interessenbünde · Falveri · Seefahrt und Einfluss",
+      "moduleId": "gwynthor-klingende-muenze-interessenbuende"
+    },
+    {
+      "id": "gwynthor-klingende-muenze-interessenbuende::page:muenze-familie-ergalla",
+      "title": "Die fünf Interessenbünde · Ergalla · Die andere Hand am Geld",
+      "moduleId": "gwynthor-klingende-muenze-interessenbuende"
+    },
+    {
+      "id": "gwynthor-klingende-muenze-interessenbuende::page:muenze-familie-gwlannor",
+      "title": "Die fünf Interessenbünde · Gwlannor · Werften und Fahrwasser",
+      "moduleId": "gwynthor-klingende-muenze-interessenbuende"
+    },
+    {
+      "id": "gwynthor-klingende-muenze-interessenbuende::page:muenze-familie-halenrhyd",
+      "title": "Die fünf Interessenbünde · Halenrhyd · Zucht und Viehhandel",
+      "moduleId": "gwynthor-klingende-muenze-interessenbuende"
+    },
+    {
+      "id": "gwynthor-klingende-muenze-interessenbuende::page:muenze-familie-aurdden-loer",
+      "title": "Die fünf Interessenbünde · Aurdden & Loer · Stein, Gold und Münze",
+      "moduleId": "gwynthor-klingende-muenze-interessenbuende"
+    },
+    {
       "id": "gwynthorer-theater",
       "title": "Gwynthorer Theater",
       "moduleId": "gwynthorer-theater"
@@ -4366,271 +4675,6 @@
       "id": "marchwern-gestuet::session:marchwern-szene-wohnstube",
       "title": "Marchwern-Gestüt · Die Wohnstube",
       "moduleId": "marchwern-gestuet"
-    },
-    {
-      "id": "gwynthor-gwregysdu-lagerhaeuser",
-      "title": "Die Lagerhäuser der Gwregysdu",
-      "moduleId": "gwynthor-gwregysdu-lagerhaeuser"
-    },
-    {
-      "id": "gwynthor-gwregysdu-lagerhaeuser::page:gwregysdu-einordnung",
-      "title": "Die Lagerhäuser der Gwregysdu · Die Lagerhäuser der Gwregysdu",
-      "moduleId": "gwynthor-gwregysdu-lagerhaeuser"
-    },
-    {
-      "id": "gwynthor-gwregysdu-lagerhaeuser::page:gwregysdu-hierarchie",
-      "title": "Die Lagerhäuser der Gwregysdu · Haus, Logistik und Rote Kompanie",
-      "moduleId": "gwynthor-gwregysdu-lagerhaeuser"
-    },
-    {
-      "id": "gwynthor-gwregysdu-lagerhaeuser::page:gwregysdu-dienste",
-      "title": "Die Lagerhäuser der Gwregysdu · Vier Lagerhäuser · Dienste und Vertrieb",
-      "moduleId": "gwynthor-gwregysdu-lagerhaeuser"
-    },
-    {
-      "id": "gwynthor-gwregysdu-lagerhaeuser::session:gwregysdu-kaihof",
-      "title": "Die Lagerhäuser der Gwregysdu · Der Kaihof · Vor den vier Toren",
-      "moduleId": "gwynthor-gwregysdu-lagerhaeuser"
-    },
-    {
-      "id": "gwynthor-gwregysdu-lagerhaeuser::session:gwregysdu-lagerhalle",
-      "title": "Die Lagerhäuser der Gwregysdu · Die Lagerhalle · Gewicht und Siegel",
-      "moduleId": "gwynthor-gwregysdu-lagerhaeuser"
-    },
-    {
-      "id": "gwynthor-gwregysdu-lagerhaeuser::session:gwregysdu-kontor",
-      "title": "Die Lagerhäuser der Gwregysdu · Das Kontor · Unter verschlossenen Büchern",
-      "moduleId": "gwynthor-gwregysdu-lagerhaeuser"
-    },
-    {
-      "id": "gwynthor-zur-klingenden-krone",
-      "title": "Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone"
-    },
-    {
-      "id": "gwynthor-zur-klingenden-krone::page:krone-einordnung",
-      "title": "Zur Klingenden Krone · Zur Klingenden Krone",
-      "moduleId": "gwynthor-zur-klingenden-krone"
-    },
-    {
-      "id": "gwynthor-zur-klingenden-krone::page:krone-familie",
-      "title": "Zur Klingenden Krone · Ein neuer Zweig in Gwynthor",
-      "moduleId": "gwynthor-zur-klingenden-krone"
-    },
-    {
-      "id": "gwynthor-zur-klingenden-krone::page:krone-betrieb",
-      "title": "Zur Klingenden Krone · Die Münze hinter dem Kessel",
-      "moduleId": "gwynthor-zur-klingenden-krone"
-    },
-    {
-      "id": "gwynthor-zur-klingenden-krone::page:krone-personal",
-      "title": "Zur Klingenden Krone · Unter Finlay und der Gilde",
-      "moduleId": "gwynthor-zur-klingenden-krone"
-    },
-    {
-      "id": "gwynthor-zur-klingenden-krone::page:krone-dienste",
-      "title": "Zur Klingenden Krone · Am Tisch und ab Werk",
-      "moduleId": "gwynthor-zur-klingenden-krone"
-    },
-    {
-      "id": "gwynthor-zur-klingenden-krone::session:krone-schankstube",
-      "title": "Zur Klingenden Krone · Die Schankstube · Der bessere Abend",
-      "moduleId": "gwynthor-zur-klingenden-krone"
-    },
-    {
-      "id": "gwynthor-zur-klingenden-krone::session:krone-sudhaus",
-      "title": "Zur Klingenden Krone · Das Sudhaus · Malz und Kupfer",
-      "moduleId": "gwynthor-zur-klingenden-krone"
-    },
-    {
-      "id": "gwynthor-zur-klingenden-krone::session:krone-brennhaus",
-      "title": "Zur Klingenden Krone · Das Brennhaus · Ein langsamer Lauf",
-      "moduleId": "gwynthor-zur-klingenden-krone"
-    },
-    {
-      "id": "gwynthor-zur-klingenden-krone::session:krone-fasslager",
-      "title": "Zur Klingenden Krone · Das Fasslager · Fünf volle Jahre",
-      "moduleId": "gwynthor-zur-klingenden-krone"
-    },
-    {
-      "id": "gwynthor-zur-klingenden-krone::session:krone-ladehof",
-      "title": "Zur Klingenden Krone · Der Ladehof · Unter Verschluss",
-      "moduleId": "gwynthor-zur-klingenden-krone"
-    },
-    {
-      "id": "die-lachende-nixe",
-      "title": "Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe"
-    },
-    {
-      "id": "die-lachende-nixe::page:0",
-      "title": "Die Lachende Nixe · Die Lachende Nixe",
-      "moduleId": "die-lachende-nixe"
-    },
-    {
-      "id": "die-lachende-nixe::page:2",
-      "title": "Die Lachende Nixe · ✦ — Angestellte— ✦",
-      "moduleId": "die-lachende-nixe"
-    },
-    {
-      "id": "die-lachende-nixe::page:nixe-services-20261016",
-      "title": "Die Lachende Nixe · ✦ — Services — ✦",
-      "moduleId": "die-lachende-nixe"
-    },
-    {
-      "id": "die-lachende-nixe::page:p-mqmo049r-x6xqi",
-      "title": "Die Lachende Nixe · ✦ — Gästeverzeichnis — ✦",
-      "moduleId": "die-lachende-nixe"
-    },
-    {
-      "id": "die-lachende-nixe::session:5",
-      "title": "Die Lachende Nixe · II. — Schankraum",
-      "moduleId": "die-lachende-nixe"
-    },
-    {
-      "id": "die-lachende-nixe::session:6",
-      "title": "Die Lachende Nixe · III. — Hinterzimmer",
-      "moduleId": "die-lachende-nixe"
-    },
-    {
-      "id": "die-lachende-nixe::session:7",
-      "title": "Die Lachende Nixe · IV. — Küche",
-      "moduleId": "die-lachende-nixe"
-    },
-    {
-      "id": "die-lachende-nixe::session:8",
-      "title": "Die Lachende Nixe · V. — Vorratskammer",
-      "moduleId": "die-lachende-nixe"
-    },
-    {
-      "id": "die-lachende-nixe::session:9",
-      "title": "Die Lachende Nixe · VI. — Gästezimmer · Zimmer I. – Perlenstube",
-      "moduleId": "die-lachende-nixe"
-    },
-    {
-      "id": "gwynthor-die-rote-klaue",
-      "title": "Die rote Klaue",
-      "moduleId": "gwynthor-die-rote-klaue"
-    },
-    {
-      "id": "gwynthor-die-rote-klaue::page:klaue-einordnung",
-      "title": "Die rote Klaue · Die rote Klaue",
-      "moduleId": "gwynthor-die-rote-klaue"
-    },
-    {
-      "id": "gwynthor-die-rote-klaue::page:klaue-stammbaum",
-      "title": "Die rote Klaue · Familie Valerus · Der Stammbaum",
-      "moduleId": "gwynthor-die-rote-klaue"
-    },
-    {
-      "id": "gwynthor-die-rote-klaue::page:klaue-hierarchie",
-      "title": "Die rote Klaue · Die Hände der Klaue",
-      "moduleId": "gwynthor-die-rote-klaue"
-    },
-    {
-      "id": "gwynthor-die-rote-klaue::page:klaue-dienstleistungen",
-      "title": "Die rote Klaue · Darlehen, Wechsel und Pfand",
-      "moduleId": "gwynthor-die-rote-klaue"
-    },
-    {
-      "id": "gwynthor-die-rote-klaue::session:klaue-schalterraum",
-      "title": "Die rote Klaue · Am Pfandschalter",
-      "moduleId": "gwynthor-die-rote-klaue"
-    },
-    {
-      "id": "gwynthor-die-rote-klaue::session:klaue-schreibstube",
-      "title": "Die rote Klaue · Die Schreibstube",
-      "moduleId": "gwynthor-die-rote-klaue"
-    },
-    {
-      "id": "gwynthor-die-rote-klaue::session:klaue-pfandmagazin",
-      "title": "Die rote Klaue · Das verschlossene Magazin",
-      "moduleId": "gwynthor-die-rote-klaue"
-    },
-    {
-      "id": "gwynthor-handelsposten-klingende-muenze",
-      "title": "Der Handelsposten der Klingenden Münze",
-      "moduleId": "gwynthor-handelsposten-klingende-muenze"
-    },
-    {
-      "id": "gwynthor-handelsposten-klingende-muenze::page:muenze-einordnung",
-      "title": "Der Handelsposten der Klingenden Münze · Drei Gilden an einem Kai",
-      "moduleId": "gwynthor-handelsposten-klingende-muenze"
-    },
-    {
-      "id": "gwynthor-handelsposten-klingende-muenze::page:muenze-verbund",
-      "title": "Der Handelsposten der Klingenden Münze · Mitgliedschaft, Kapital und Grafschaft",
-      "moduleId": "gwynthor-handelsposten-klingende-muenze"
-    },
-    {
-      "id": "gwynthor-handelsposten-klingende-muenze::page:muenze-kaufmannsgilde",
-      "title": "Der Handelsposten der Klingenden Münze · Klingende Münze · Kaufmannsgilde",
-      "moduleId": "gwynthor-handelsposten-klingende-muenze"
-    },
-    {
-      "id": "gwynthor-handelsposten-klingende-muenze::page:muenze-rote-bank",
-      "title": "Der Handelsposten der Klingenden Münze · Rote Bank · Konten und Kapital",
-      "moduleId": "gwynthor-handelsposten-klingende-muenze"
-    },
-    {
-      "id": "gwynthor-handelsposten-klingende-muenze::page:muenze-rote-kompanie",
-      "title": "Der Handelsposten der Klingenden Münze · Rote Kompanie · Grafschaftskommando",
-      "moduleId": "gwynthor-handelsposten-klingende-muenze"
-    },
-    {
-      "id": "gwynthor-handelsposten-klingende-muenze::session:muenze-szene-kaihof",
-      "title": "Der Handelsposten der Klingenden Münze · Der Kaihof · Zwischen Tor und Gezeiten",
-      "moduleId": "gwynthor-handelsposten-klingende-muenze"
-    },
-    {
-      "id": "gwynthor-handelsposten-klingende-muenze::session:muenze-szene-ratssaal",
-      "title": "Der Handelsposten der Klingenden Münze · Der Ratssaal · Acht Plätze",
-      "moduleId": "gwynthor-handelsposten-klingende-muenze"
-    },
-    {
-      "id": "gwynthor-handelsposten-klingende-muenze::session:muenze-szene-bankhalle",
-      "title": "Der Handelsposten der Klingenden Münze · Die Bankhalle · Hinter dem Schalter",
-      "moduleId": "gwynthor-handelsposten-klingende-muenze"
-    },
-    {
-      "id": "gwynthor-handelsposten-klingende-muenze::session:muenze-szene-kommandantur",
-      "title": "Der Handelsposten der Klingenden Münze · Die Kommandantur · Wege und Befehle",
-      "moduleId": "gwynthor-handelsposten-klingende-muenze"
-    },
-    {
-      "id": "gwynthor-klingende-muenze-interessenbuende",
-      "title": "Die fünf Interessenbünde",
-      "moduleId": "gwynthor-klingende-muenze-interessenbuende"
-    },
-    {
-      "id": "gwynthor-klingende-muenze-interessenbuende::page:muenze-interessen",
-      "title": "Die fünf Interessenbünde · Fünf Bünde, acht Stimmen",
-      "moduleId": "gwynthor-klingende-muenze-interessenbuende"
-    },
-    {
-      "id": "gwynthor-klingende-muenze-interessenbuende::page:muenze-familie-falveri",
-      "title": "Die fünf Interessenbünde · Falveri · Seefahrt und Einfluss",
-      "moduleId": "gwynthor-klingende-muenze-interessenbuende"
-    },
-    {
-      "id": "gwynthor-klingende-muenze-interessenbuende::page:muenze-familie-ergalla",
-      "title": "Die fünf Interessenbünde · Ergalla · Die andere Hand am Geld",
-      "moduleId": "gwynthor-klingende-muenze-interessenbuende"
-    },
-    {
-      "id": "gwynthor-klingende-muenze-interessenbuende::page:muenze-familie-gwlannor",
-      "title": "Die fünf Interessenbünde · Gwlannor · Werften und Fahrwasser",
-      "moduleId": "gwynthor-klingende-muenze-interessenbuende"
-    },
-    {
-      "id": "gwynthor-klingende-muenze-interessenbuende::page:muenze-familie-halenrhyd",
-      "title": "Die fünf Interessenbünde · Halenrhyd · Zucht und Viehhandel",
-      "moduleId": "gwynthor-klingende-muenze-interessenbuende"
-    },
-    {
-      "id": "gwynthor-klingende-muenze-interessenbuende::page:muenze-familie-aurdden-loer",
-      "title": "Die fünf Interessenbünde · Aurdden & Loer · Stein, Gold und Münze",
-      "moduleId": "gwynthor-klingende-muenze-interessenbuende"
     },
     {
       "id": "drakenschluck-soeldner",
@@ -6600,6 +6644,7 @@
     "AleriaAlmanach/modules/language/tlapanui/tlapanui-entry.js",
     "AleriaAlmanach/modules/letzte-rast/rast-data.js",
     "AleriaAlmanach/modules/letzter-heller/heller-data.js",
+    "AleriaAlmanach/modules/loer-hofjuwelier/aurdden-data.js",
     "AleriaAlmanach/modules/maerllys/maerllys-data.js",
     "AleriaAlmanach/modules/markt-der-fortuna-gwynthor/fortuna-data.js",
     "AleriaAlmanach/modules/module-editor/module-editor-data.js",

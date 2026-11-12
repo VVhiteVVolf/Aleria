@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "familyId": "craigddu",
-  "revision": 6,
-  "updatedAt": "2026-11-08T17:36:05.524Z",
+  "revision": 5,
+  "updatedAt": "2026-11-07T21:45:27.696Z",
   "family": {
     "schema": "aleria.family-tree",
     "schemaVersion": 1,
@@ -79,7 +79,7 @@
         "status": "alive",
         "birth": "1680",
         "death": "",
-        "portrait": "",
+        "portrait": "assets/images/portraits/haus-craigddu/iestyn-craigddu.png",
         "portraitPlaceholder": "auto",
         "houseId": "house-craigddu",
         "familyRole": "core",
@@ -421,38 +421,24 @@
       },
       {
         "id": "person-0774c56b",
-        "worldPersonId": "person--gwniwr--person-cf831497",
+        "worldPersonId": "person--craigddu--person-0774c56b",
         "name": "Eleri",
-        "title": "Ehefrau Hywel Craigddu’s · geborene Gwniwr",
+        "title": "Ehefrau von Hywel Craigddu",
         "sex": "female",
         "status": "alive",
         "birth": "1708",
         "death": "",
-        "portrait": "assets/images/portraits/gwniwr/person-cf831497.jpg",
+        "portrait": "",
         "portraitPlaceholder": "auto",
         "houseId": "",
         "familyRole": "married",
         "lineageRole": "mainline",
         "tags": [],
-        "notes": "Eleri ist die 1708 geborene Tochter Emyr Gwniwrs und Gwenllians. Sie heiratete Hywel Craigddu und hilft mit ihren Kindern im elterlichen Laden Nadel & Faden. Die sieben Töchter werden ausschließlich hier in Craigddu fortgeführt.",
+        "notes": "",
         "extensions": {
           "registryManagedFields": [
             "title"
-          ],
-          "registryManagedFieldRevisions": {
-            "worldPersonId": 4,
-            "portrait": 4,
-            "title": 4,
-            "notes": 4
-          },
-          "legacyWorldPersonIds": [
-            "person--craigddu--person-0774c56b"
-          ],
-          "registryManagedFieldPreviousValues": {
-            "worldPersonId": [
-              "person--craigddu--person-0774c56b"
-            ]
-          }
+          ]
         }
       },
       {
@@ -691,7 +677,7 @@
                 }
               ],
               "historyTitle": "Der Sohn eines Kriegsveteranen",
-              "historyText": "<p>Llywelyn stammt aus dem <strong>bürgerlichen Haus Coeddu</strong> in Gwynthor. Seine Eltern sind <strong>Brenric Coeddu</strong> und <strong>Gweneth</strong>. Mit seinem älteren Bruder <strong>Rhydian</strong>, seiner jüngeren Schwester <strong>Maelwen</strong> und dem jüngsten Bruder <strong>Thalor</strong> wuchs er in einer Familie auf, der bewaffneter Dienst keineswegs fremd war.</p><p>Brenric kämpfte im <strong>Großen Krieg unter Sir Maredudd</strong>. Für Llywelyn war der Krieg damit nie ausschließlich eine Sache aus Liedern und Erzählungen über große Ritter. Er kannte einen der Männer, die tatsächlich gedient hatten, als seinen Vater. Brenrics Erfahrung gab dem Waffenhandwerk einen sehr alltäglichen Hintergrund: Pflichten, Kameraden, lange Tage auf den Beinen und die Frage, ob man danach wieder heimkam.</p><p>Inzwischen ist Brenric im <strong>Ruhestand</strong>. Seine Gelenke machen ihm immer wieder Beschwerden, besonders der Fuß. Das erschwert ihm den Dienst so sehr, dass er ihn aufgegeben hat. Für Llywelyn gehört die Rücksicht auf den Vater heute ebenso zum Familienleben wie dessen Erinnerungen an frühere Dienstjahre.</p><p>Llywelyn selbst wurde ebenfalls <strong>Waffenknecht</strong>. Sein Alltag führt ihn in den Dienst von Haus Draig in Gwynthor. Er trägt diese Aufgabe ohne große Worte über Ruhm oder besondere Bestimmung. Dass ein Mann eine Waffe führt, bedeutet für ihn zunächst, dass andere darauf vertrauen dürfen, dass er seine Arbeit beherrscht und an seinem Platz bleibt.</p>",
+              "historyText": "<p>Llywelyn stammt aus dem <strong>bürgerlichen Haus Coeddu</strong> in Gwynthor. Seine Eltern sind <strong>Brenric Coeddu</strong> und <strong>Gweneth</strong>. Mit seinem älteren Bruder <strong>Rhydian</strong>, seiner jüngeren Schwester <strong>Maelwen</strong> und dem jüngsten Bruder <strong>Thalor</strong> wuchs er in einer Familie auf, der bewaffneter Dienst keineswegs fremd war.</p><p>Brenric kämpfte im <strong>Großen Krieg unter Sir Maredudd</strong>. Für Llywelyn war der Krieg damit nie ausschließlich eine Sache aus Liedern und Erzählungen über große Ritter. Er kannte einen der Männer, die tatsächlich gedient hatten, als seinen Vater. Brenrics Erfahrung gab dem Waffenhandwerk einen sehr alltäglichen Hintergrund: Pflichten, Kameraden, lange Tage auf den Beinen und die Frage, ob man danach wieder heimkam.</p><p>Wiederkehrende Gelenk- und besonders Fußbeschwerden zwangen Brenric zunächst zum <strong>Rückzug aus dem Felddienst</strong>. Heute dient er den Draigs als <strong>persönlicher Ritter und Kriegswart der Aufklärung</strong>. Unter Sir Maredudd wertet er Meldungen aus, führt Lagekarten und ordnet Boten- sowie Signalberichte; dabei stimmt er sich mit Efael ab. Die neue Aufgabe nutzt seine Kriegserfahrung, ohne seine körperlichen Beschwerden zu leugnen. Für Llywelyn gehört die Rücksicht auf den Vater weiterhin zum Familienleben.</p><p>Llywelyn selbst wurde ebenfalls <strong>Waffenknecht</strong>. Sein Alltag führt ihn in den Dienst von Haus Draig in Gwynthor. Er trägt diese Aufgabe ohne große Worte über Ruhm oder besondere Bestimmung. Dass ein Mann eine Waffe führt, bedeutet für ihn zunächst, dass andere darauf vertrauen dürfen, dass er seine Arbeit beherrscht und an seinem Platz bleibt.</p>",
               "worksTitle": "Können & Dienst",
               "works": [
                 "Wach- und Garnisonsdienst · Vertraut mit dem Alltag eines Waffenknechts in Gwynthor, mit Wachen, Ablösungen und gemeinsamen Aufgaben. Er kennt seine Pflichten und ist Teil einer Mannschaft.",
@@ -732,9 +718,9 @@
                 {
                   "type": "connection",
                   "name": "Brenric Coeddu",
-                  "image": "../Stammbäume/assets/images/placeholders/male.png",
+                  "image": "../Stammbäume/assets/images/portraits/haus-coeddu/brenric-coeddu.png",
                   "imageFormat": "portrait",
-                  "detail": "Vater und Veteran des Großen Krieges unter Sir Maredudd. Wiederkehrende Gelenk- und besonders Fußbeschwerden haben ihn in den Ruhestand geführt."
+                  "detail": "Vater, Veteran des Großen Krieges und heute persönlicher Ritter sowie Kriegswart der Aufklärung. Nach dem Rückzug aus dem Felddienst wegen Gelenk- und Fußbeschwerden wertet er unter Sir Maredudd Meldungen aus, führt Lagekarten und ordnet Boten- und Signalberichte in Abstimmung mit Efael."
                 },
                 {
                   "type": "connection",
@@ -913,18 +899,7 @@
         "certainty": "confirmed",
         "visibility": "public",
         "notes": "",
-        "extensions": {
-          "registryManagedFields": [
-            "crossFamilyRelationship"
-          ],
-          "registryManagedFieldRevisions": {
-            "crossFamilyRelationship": 4
-          },
-          "crossFamilyRelationship": {
-            "linkId": "marriage-hywel-craigddu-eleri-gwniwr",
-            "counterpartFamilyId": "gwniwr"
-          }
-        }
+        "extensions": {}
       },
       {
         "id": "partnership-0f65c1d1",
@@ -1261,28 +1236,6 @@
         "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Coeddu.png",
         "status": "active",
         "extensions": {}
-      },
-      {
-        "id": "house-gwniwr",
-        "name": "Familie Gwniwr",
-        "motto": "",
-        "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Gwniwr/gwniwr-emblem.png",
-        "status": "active",
-        "extensions": {
-          "registryManagedFields": [
-            "name",
-            "motto",
-            "emblem",
-            "status"
-          ],
-          "registryManagedFieldRevisions": {
-            "name": 5,
-            "motto": 5,
-            "emblem": 5,
-            "status": 5
-          },
-          "registryManagedSourceRevision": 5
-        }
       }
     ],
     "cadetBranches": [
@@ -1388,9 +1341,9 @@
       "showSiblings": true
     },
     "extensions": {
-      "sourceRevision": 5,
+      "sourceRevision": 3,
       "blankFamily": false,
-      "sourceNote": "Erweiterung nach Benutzervorgaben vom 28.09.2026: unbekanntes Gründerpaar, Wappen und Zeitsprung zu Iestyn mit zwei Brüdern, drei Vettern Hywels und deren Kindern. Bestehende Personen-, Beziehungs- und Weltpersonen-IDs sowie bekannte Lebensjahre bleiben erhalten; die historischen IDs craigddu-gruender und craigddu-gruenderin bezeichnen weiterhin Iestyn und Mared. Namen und Lebensjahre der neuen jüngeren Angehörigen sind erzählerische Ergänzungen nach dem Rheunwaith-Namensarchiv. Eleris Gwniwr-Herkunft und dieselbe Ehe mit Hywel sind seit 8. November 2026 beidseitig verknüpft; alte Karten- und Ehekennungen bleiben erhalten.",
+      "sourceNote": "Erweiterung nach Benutzervorgaben vom 28.09.2026: unbekanntes Gründerpaar, Wappen und Zeitsprung zu Iestyn mit zwei Brüdern, drei Vettern Hywels und deren Kindern. Bestehende Personen-, Beziehungs- und Weltpersonen-IDs sowie bekannte Lebensjahre bleiben erhalten; die historischen IDs craigddu-gruender und craigddu-gruenderin bezeichnen weiterhin Iestyn und Mared. Namen und Lebensjahre der neuen jüngeren Angehörigen sind erzählerische Ergänzungen nach dem Rheunwaith-Namensarchiv.",
       "registry": {
         "folderPath": [
           "Cenyr",
@@ -1450,47 +1403,15 @@
         "sourceNote",
         "generatorProfile"
       ],
-      "registryManagedDocumentFieldRevisions": {
-        "title": 3,
-        "description": 3,
-        "emblem": 3
-      },
-      "registryManagedHouseProfileFieldRevisions": {
-        "rankId": 3,
-        "seat": 3,
-        "barony": 3,
-        "county": 3,
-        "kingdom": 3,
-        "liegeHouseId": 3,
-        "liegeHouseName": 3,
-        "regionEmblems": 3
-      },
-      "registryManagedExtensionFieldRevisions": {
-        "registry": 3,
-        "sourceNote": 3,
-        "generatorProfile": 3
-      },
-      "registryManagedViewFieldRevisions": {
-        "focusPersonId": 3,
-        "limitGenerations": 3
-      },
-      "registryManagedLineageFieldRevisions": {
-        "founderPartnershipId": 3,
-        "crestFrame": 3,
-        "timeGap": 3
-      },
-      "registryManagedEntitySourceRevision": 3,
-      "gwniwrMarriageInventory": "gwniwr-maerllys-20261108",
       "houseBiographyModule": {
         "schema": "aleria.house-module",
         "schemaVersion": 1,
         "pageTitle": "Haus Craigddu",
         "housePage": true,
         "image": "../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Craigddu/assets/craigddu-krieger.png",
-        "imageWidth": 38,
-        "imageSquare": false,
-        "imageTall": true,
-        "description": "Die Craigddu sind eine Baumeisterfamilie und ein kriegerisches Bürgerhaus Gwynthors. Aus ihren Reihen gingen Wachen, Waffenknechte und einzelne Ritter im Dienst der Draigs hervor. Mehrere Angehörige arbeiten weiterhin in der örtlichen Baumeistergilde.",
+        "imageWidth": 30,
+        "imageSquare": true,
+        "description": "Haus Craigddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Aus einer Baumeisterfamilie gingen zunehmend Wachen, Waffenknechte und vereinzelt auch Ritter hervor. Das Bauwesen blieb dennoch Teil des Familienlebens: Mehrere Angehörige arbeiten weiterhin in Gwynthors örtlicher Baumeistergilde.",
         "quote": "",
         "quoteBy": "",
         "commentSequence": [],
@@ -1512,12 +1433,24 @@
             "Celtigerns Wacht"
           ],
           [
+            "Oberhaupt",
+            ""
+          ],
+          [
+            "Erbe",
+            ""
+          ],
+          [
             "Lehnsherr",
             "Haus Draig"
           ],
           [
             "Ursprung",
             "Gwynthor · Baumeisterfamilie"
+          ],
+          [
+            "Schutzpatronin",
+            ""
           ]
         ],
         "house": {
@@ -1526,25 +1459,19 @@
           "connectionPortraitHeight": 80,
           "connectionTextOffset": 0,
           "biographyTitle": "Über das Haus",
-          "biographyText": "Die Craigddu sind eine Baumeisterfamilie und ein kriegerisches Bürgerhaus Gwynthors. Aus ihren Reihen gingen Wachen, Waffenknechte und einzelne Ritter im Dienst der Draigs hervor. Mehrere Angehörige arbeiten weiterhin in der örtlichen Baumeistergilde.",
+          "biographyText": "Haus Craigddu ist ein kriegerisches Bürgerhaus aus Gwynthor, das Haus Draig seit Generationen dient. Aus einer Baumeisterfamilie gingen zunehmend Wachen, Waffenknechte und vereinzelt auch Ritter hervor. Das Bauwesen blieb dennoch Teil des Familienlebens: Mehrere Angehörige arbeiten weiterhin in Gwynthors örtlicher Baumeistergilde.",
           "abilitiesTitle": "Einfluss und Aufgaben",
           "abilities": [],
           "historyTitle": "Geschichte",
-          "historyText": "Die jüngere Überlieferung verzweigt sich unter den Brüdern Brenwyn, Iestyn und Cyran. Brenwyn und sein Sohn Rhydric arbeiten als Baumeister, während Cyran, Maelor und Thalwyn im Wachdienst stehen. Iestyns Kinder sind Hywel und Catrin.",
-          "worksTitle": "Prägende Ereignisse",
+          "historyText": "Die Craigddu stammen aus dem Bauhandwerk. Über Generationen gewann der Waffendienst für Haus Draig innerhalb der Familie an Bedeutung, bis das Haus ebenso mit seinen Kriegern wie mit seinen Baumeistern verbunden wurde. Namen und Lebensdaten des ursprünglichen Gründerpaares sind unbekannt. Nach der Überlieferungslücke setzt der Stammbaum bei den Brüdern Brenwyn, Iestyn und Cyran ein. Iestyn und Mared sind die Eltern von Hywel und Catrin. Hywel dient als Waffenknecht; Catrins Ehe mit Llywelyn Coeddu verbindet die Craigddu mit dem Haus der Gwynthorer Waffenschmiede.",
+          "worksTitle": "Hausgeschichte",
           "works": [],
           "extraSections": [
             {
               "position": "afterWorks",
               "mode": "text",
               "title": "Werte und Stellung",
-              "text": "Hywel ist Waffenknecht, Llywelyn Coeddus bester Freund und mit Eleri Vater von sieben Töchtern. Catrins Ehe mit Llywelyn verbindet Craigddu und Coeddu. Die Familie bewahrt ihre bürgerliche Stellung neben dem generationslangen Dienst für Draig."
-            },
-            {
-              "position": "afterWorks",
-              "mode": "text",
-              "title": "Besitz und Lebensgrundlage",
-              "text": "Die Tätigkeit in Gwynthors Baumeistergilde ist belegt; sie macht die Gilde nicht zum Besitz der Familie. Weitere eigene Betriebe sind nicht benannt."
+              "text": "Der Dienst für Haus Draig und die Arbeit im Bauwesen bestehen in dieser Familie nebeneinander fort. Brenwyn Craigddu und sein Sohn Rhydric sind in der örtlichen Baumeistergilde tätig; Cyran sowie die jüngeren Angehörigen Hywel, Maelor und Thalwyn vertreten die kriegerische Seite des Hauses. Einzelne Ritter stammen aus der Familie, doch die Craigddu bleiben ein Bürgerhaus."
             }
           ],
           "triviaTitle": "Besonderheiten",
@@ -1565,7 +1492,7 @@
             {
               "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Craigddu.png",
               "title": "Haus Craigddu · vollständige Hausseite",
-              "text": "Familiengeschichte, Lebensgrundlage und verlinkte Angehörige.",
+              "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
               "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=craigddu"
             }
           ],
@@ -1573,8 +1500,8 @@
         }
       },
       "registryUpgrade": {
-        "fromRevision": 4,
-        "toRevision": 5
+        "fromRevision": 2,
+        "toRevision": 3
       }
     }
   }

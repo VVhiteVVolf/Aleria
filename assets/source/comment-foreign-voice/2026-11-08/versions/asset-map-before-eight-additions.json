@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "id": "boy",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-7ecb88d4-2ce7-44be-ad8c-f7d83ed54b5b.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/boy-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/boy.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "girl",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-3b1edd8f-09bf-46ea-8d6d-49b97f05e489.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/girl-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/girl.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "woman",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-5d75d222-ea7c-4a6e-93a2-8cbe062093ec.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/woman-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/woman.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "man",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-f0177d87-0ece-461d-a084-b63c37649d7c.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/man-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/man.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "person",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-cd7be023-d1c4-4ce5-853b-c8388a34832f.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/person-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-foreign-voice/person.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    },
+    {
+      "id": "foreign-voice-icon",
+      "version": "v1",
+      "status": "active",
+      "generatorPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1bd3a-9c8a-7bd2-ab27-a0633ac959bc\\exec-131aa59a-5538-41ee-a7c5-6c306d95720b.png",
+      "sourceOriginal": "assets/source/comment-foreign-voice/2026-11-08/originals/foreign-voice-icon-v1.png",
+      "activePath": "AleriaAlmanach/public/assets/comment-icons/foreign-voice.png",
+      "transformation": "none: byte-identical generator PNG",
+      "visuallyInspected": true
+    }
+  ],
+  "references": [
+    {
+      "path": "IconOrdner/Buttom Icons/Rede.PNG",
+      "copy": "assets/source/comment-foreign-voice/2026-11-08/references/rede.png",
+      "role": "circular speech button icon style"
+    },
+    {
+      "path": "AleriaAlmanach/public/assets/comment-icons/interact.png",
+      "copy": "assets/source/comment-foreign-voice/2026-11-08/references/interact.png",
+      "role": "gold/olive icon series style"
+    }
+  ]
+}

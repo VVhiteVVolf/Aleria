@@ -28,6 +28,23 @@ Speicher und verhindern eine erfolgreiche `flush()`. Änderungen anderer Tabs
 werden mit einem Vergleich des zuletzt gelesenen Datenbankstands geschützt.
 Vor dem Verlassen bei noch ungesicherten Änderungen erscheint die Browserwarnung.
 
+Der Tabvergleich ignoriert bei der aktuellen Modulschemaversion ausschließlich
+den äußeren `updatedAtClient`-Wert und die Reihenfolge von Objektfeldern.
+Arrayreihenfolgen, unbekannte Inhaltsfelder und echte Änderungen bleiben
+geschützt; ungültige oder fremde Schemaversionen werden strikt verglichen.
+Synchronisationsbelege mit derselben gültigen Signatur dürfen verschiedene
+Zeitstempel besitzen. Ein später vorgemerkter Schreibvorgang bleibt bis zu
+seinem eigenen Commit ungesichert, auch wenn vorher derselbe Text geschrieben
+wurde.
+
+Normale Szenenbeiträge speichern ihr automatisches Startdatum als
+`sceneStartDateAleria` am Beitrag. Sie verändern weder die Modulseite noch den
+gesamten Modulspeicher. Der Datumsresolver bevorzugt ein ausdrücklich gesetztes
+Seitendatum und danach die Kommentarhistorie. Narrative, Fertigkeits-, Kampf-
+und Gegenstandsbeiträge übernehmen das validierte Datum serverseitig. Ein
+wiederholter Gegenstandsvorgang behält den zuerst gespeicherten Beitrag samt
+Datum; vorhandene Vorgangsbelege werden nicht umgeschrieben.
+
 `saveModuleStore()` behält den bisherigen Boolean-Vertrag: `true` bedeutet, dass
 die Änderung zum Speichern angenommen wurde. Der Synchronisationsstatus meldet
 die lokale Sicherung erst nach dem Commit. Editoren, die ihre Wiederherstellungs-

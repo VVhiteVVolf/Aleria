@@ -57,6 +57,7 @@
   }
 
   function loadDataScript(entry) {
+    window.HAEUSER_DATA = null;
     if (!entry.data) {
       notifyDataReady(null);
       return;
@@ -70,6 +71,9 @@
     script.onerror = () => {
       console.warn(`Hausdaten konnten nicht geladen werden: ${entry.data}`);
       notifyDataReady(null);
+      withRoot(() => {
+        getRoot().innerHTML = `<section class="haeuser-error" role="alert"><h1>${escapeHtml(entry.name || 'Haus')}</h1><p>Die Hausdaten konnten nicht geladen werden.</p></section>`;
+      });
     };
     document.head.appendChild(script);
   }

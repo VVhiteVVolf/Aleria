@@ -48,7 +48,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Geschichte",
-    "historyText": "Brenric Coeddu diente im Großen Krieg unter Sir Maredudd. Gelenkbeschwerden führten später zu seinem Ruhestand. Mit Gweneth hat er die Kinder Rhydian, Llywelyn, Maelwen und Thalor. Llywelyn ist Waffenknecht und mit Catrin Craigddu verheiratet; ihr Sohn heißt Ellian.",
+    "historyText": "Brenric Coeddu diente im Großen Krieg unter Sir Maredudd. Gelenk- und Fußbeschwerden führten zunächst zum Rückzug aus dem Felddienst. Heute dient er den Draigs als persönlicher Ritter und Kriegswart der Aufklärung: Unter Sir Maredudd wertet er Meldungen aus, führt Lagekarten und ordnet Boten- sowie Signalberichte in Abstimmung mit Efael. Mit Gweneth hat er die Kinder Rhydian, Llywelyn, Maelwen und Thalor. Llywelyn ist Waffenknecht und mit Catrin Craigddu verheiratet; ihr Sohn heißt Ellian.",
     "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [
@@ -56,7 +56,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Werte und Stellung",
-        "text": "Llywelyns Freundschaft mit Hywel Craigddu und die Ehe mit dessen Schwester Catrin verbinden die beiden Bürgerhäuser. Maelwens Ehe mit Tiberian Raves führt in den kaufmännischen Familienkreis. Brenrics Veteranenrolle begründet keine unbekannte Amtsfolge."
+        "text": "Llywelyns Freundschaft mit Hywel Craigddu und die Ehe mit dessen Schwester Catrin verbinden die beiden Bürgerhäuser. Maelwens Ehe mit Tiberian Raves führt in den kaufmännischen Familienkreis. Brenrics neues Amt ist eine persönliche Aufgabe im Dienst der Draigs; Haus Coeddu bleibt bürgerlich."
       },
       {
         "position": "afterWorks",

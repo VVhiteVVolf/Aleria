@@ -80,7 +80,7 @@ function getTopicBoardViewerId() {
 }
 
 function getTopicBoardCreationSchedule(input = {}) {
-  if (globalThis.AleriaTopicBoardSchedule?.hasDate(input?.schedule?.startDate)) return input.schedule;
+  if (Object.prototype.hasOwnProperty.call(input?.schedule || {}, 'startDate')) return input.schedule;
   const model = globalThis.AleriaWorldDateModel;
   const current = globalThis.AleriaWorldDateStore?.getState?.().date || model?.getDefault?.();
   return {
