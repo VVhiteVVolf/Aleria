@@ -109,9 +109,10 @@ function buildSessionPage(page, entry, pageIndex, total) {
     ? `${Math.max(20, Math.min(70, Number(page.imageWidth) || 38))}%`
     : 'clamp(380px, 36vw, 560px)';
   const threadId = getSessionThreadId(entry.id, getPageCommentThreadKey(page, pageIndex));
+  const bubblePreference = window.AleriaCommentBubbles;
   return `
     ${nav}
-    <div class="session-page${focusMode ? ' session-focus-mode' : ''}" data-animated-bubbles="${page.sessionAnimatedBubbles === true}">
+    <div class="session-page${focusMode ? ' session-focus-mode' : ''}" data-animated-bubbles="${bubblePreference?.isEnabled() === true}">
       <div class="session-art-col" id="modal-img-col-el" style="width:${imgW};">
         <img src="${sanitizeImageSrc(page.image || 'https://i.imgur.com/pEuJo6v.png')}" alt="${escapeHtml(entry.title)}" loading="eager" decoding="async" fetchpriority="high">
         <div class="session-art-overlay"></div>
@@ -129,6 +130,7 @@ function buildSessionPage(page, entry, pageIndex, total) {
               ${buildSceneClockControl(threadId, page)}
               ${buildSceneInventoryControl(threadId)}
               ${buildSceneDiceControl(threadId)}
+              ${bubblePreference?.renderControl() || ''}
               ${buildSessionStatusControl(page, entry, threadId)}
             <button
               class="session-focus-toggle"

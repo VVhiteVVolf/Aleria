@@ -1,4 +1,8 @@
-/* Experimental raster frames. Only an explicitly enabled interactive scene owns this presentation. */
+/* Personal display control and experimental raster frames for interactive scenes. */
+.scene-bubble-preference { display:inline-flex; align-items:center; flex:0 0 auto; gap:4px; min-height:26px; margin:0; padding:3px 5px; border:1px solid #cbb98b; border-radius:4px; background:#fcf8ed; color:#645331; font:600 .64rem/1.2 'EB Garamond',serif; cursor:pointer; }
+.scene-bubble-preference input { width:14px; height:14px; margin:0; padding:0; accent-color:#355f56; cursor:pointer; }
+.scene-bubble-preference:has(input:checked) { background:#e1e9dc; border-color:#78927b; color:#355f56; }
+.scene-bubble-preference:focus-within { outline:2px solid #355f56; outline-offset:2px; }
 .session-page[data-animated-bubbles="true"] .comment-content { min-width:0; }
 .session-page[data-animated-bubbles="true"] .comment-animal-toggle { max-width:100%; white-space:pre-wrap; overflow-wrap:anywhere; }
 .session-page[data-animated-bubbles="true"] .comment-kind-flirt { --speech-frame:url('../assets/speech-frame-lab/flirt-frame-v1.png'); --speech-paper:#f8dfe7; --speech-ink:#6e2846; --speech-glow:#c86a8a; }

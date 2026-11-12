@@ -12,10 +12,6 @@ function buildSessionModuleEditorFields(page) {
             <input type="text" class="me-page-session-hint" value="${escapeHtml(page?.sessionHint || '')}">
           </div>
           <div class="module-editor-field">
-            <label><input type="checkbox" class="me-page-session-animated-bubbles"${page?.sessionAnimatedBubbles === true ? ' checked' : ''}> Animierte Sprechblasen (experimentell)</label>
-            <small>KI-gezeichnete Rahmen und dezente Animationen für diese Szene. Standardmäßig ausgeschaltet; reduzierte Bewegung wird berücksichtigt.</small>
-          </div>
-          <div class="module-editor-field">
             <label>Ort</label>
             <input type="text" class="me-page-session-location" value="${escapeHtml(page?.sessionLocation || '')}" placeholder="Llysfaen · Ratssaal">
           </div>
@@ -55,7 +51,6 @@ function collectSessionModuleEditorPage(card, page) {
   page.sessionPage = true;
   page.sessionIntro = getTrimmedFormValue(card, '.me-page-session-intro');
   page.sessionHint = getTrimmedFormValue(card, '.me-page-session-hint');
-  page.sessionAnimatedBubbles = card.querySelector('.me-page-session-animated-bubbles')?.checked === true;
   page.sessionLocation = getTrimmedFormValue(card, '.me-page-session-location');
   page.sessionDateAleria = collectAleriaDateFromBlock(card, 'me-page-session-aleriaDate');
   page.sessionPhase = getTrimmedFormValue(card, '.me-page-session-phase');

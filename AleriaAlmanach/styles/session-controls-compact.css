@@ -54,7 +54,7 @@
   .session-page .session-stage-bar { padding:6px 8px 4px; }
   .session-page .session-stage-head { flex-direction:row; flex-wrap:wrap; gap:5px; }
   .session-page .session-stage-heading { flex:1 1 100px; }
-  .session-page .session-stage-actions { gap:4px; flex-wrap:nowrap; }
+  .session-page .session-stage-actions { gap:4px; flex-wrap:wrap; }
   .session-page .scene-clock-label { display:none; }
   .session-page .scene-clock-icon { width:21px; height:27px; }
   .session-page .scene-clock-date { font-size:.5rem; }

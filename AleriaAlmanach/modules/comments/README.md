@@ -105,11 +105,14 @@ Das Menü zum Hinzufügen von Abschnitten startet mobil eingeklappt. Sein
 
 ## Optionale gemalte Sprechblasen
 
-Nur `sessionAnimatedBubbles === true` auf einer interaktiven Modulseite aktiviert
-die experimentelle Darstellung. Fehlende, falsche oder anders typisierte Werte
-bleiben ausgeschaltet. Beide Moduleditoren besitzen denselben Haken.
-Der Seitensanitizer übernimmt ausschließlich den bewussten Opt-in.
-Es gibt keine automatische Änderung bestehender Module.
+Der persönliche Haken **Frames** sitzt direkt neben dem Würfel in interaktiven
+Szenen und schaltet die experimentelle Darstellung sofort um. Er startet aus.
+`comment-bubble-preference.js` kapselt den Zustand und speichert die Wahl unter
+`aleria-comment-bubble-art-enabled-v1` im Browser; sie gilt auch beim Szenenwechsel
+und wird zwischen Tabs synchronisiert. Ohne verfügbaren Speicher funktioniert
+das Umschalten für die aktuelle Ansicht weiter. Beide Moduleditoren enthalten
+keinen Darstellungshaken. Alte `sessionAnimatedBubbles`-Felder bleiben als Daten
+erhalten, steuern die persönliche Ansicht aber nicht mehr.
 
 `comments-page.js` setzt die Eigenschaft am lokalen Szenencontainer;
 `styles/comment-bubble-art.css` besitzt die davon abhängigen Regeln.
