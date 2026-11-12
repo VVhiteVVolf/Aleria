@@ -100,6 +100,8 @@ test('marking import preserves existing pins and media, matches by position, and
 test('every reviewed Gwynthor symbol has one corresponding pin', () => {
   const base = '../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/';
   const inventory = JSON.parse(readFileSync(new URL(base+'markings.inventory.json',import.meta.url),'utf8'));
+  const profiles = JSON.parse(readFileSync(new URL(base+'fleischsammler-localities.source.json',import.meta.url),'utf8')).locations;
+  assert.equal(profiles.length, 7);
   const {state} = JSON.parse(readFileSync(new URL(base+'data.json',import.meta.url),'utf8'));
   const result = mergeMarkingPins(state,inventory);
   assert.equal(result.matches.length,inventory.markings.length);
@@ -110,11 +112,22 @@ test('every reviewed Gwynthor symbol has one corresponding pin', () => {
     assert.ok(globalThis.KartoPinTemplateCatalog.get(marking.templateId), marking.id);
     const pin = state.pins.find(item => item.id === marking.id);
     if(!pin) continue;
-    assert.equal(pin.templateId,marking.templateId,pin.id);
+    const profile = profiles.find(location => location.pinId === marking.id);
+    const expectedTemplate = profile?.patch.templateId || marking.templateId;
+    if (profile) {
+      // The historical pin may use a legacy local category ID; the reviewed
+      // symbol inventory already owns its normalized canonical category.
+      assert.equal(profile.originalTitle, marking.title);
+      assert.deepEqual([pin.x, pin.y], profile.position);
+      assert.equal(pin.title, profile.patch.title);
+      assert.equal(pin.cat, profile.patch.cat);
+    }
+    assert.ok(globalThis.KartoPinTemplateCatalog.get(expectedTemplate), pin.id);
+    assert.equal(pin.templateId,expectedTemplate,pin.id);
     // Enriched places intentionally have filled or extended tables. The state
     // comparison above already verifies that the import preserves them.
     if (pin.table.every(row => !String(row.v || '').trim())) {
-      assert.deepEqual(pin.table,globalThis.KartoPinTablePresets.createTable(marking.templateId,catalog.definition({id:marking.categoryId})));
+      assert.deepEqual(pin.table,globalThis.KartoPinTablePresets.createTable(expectedTemplate,catalog.definition({id:marking.categoryId})));
     }
   }
 });
