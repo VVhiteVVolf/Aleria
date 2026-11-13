@@ -19,8 +19,11 @@ test('35 authored Aurdden profiles have explicit identities, biographies and no 
     assert.ok(!character.combatProfile && !character.playerOwner);
     assert.ok(!character.id.includes('aeron-loer'));
   }
-  const bankIds = ['oeneth-aurdden', 'rhewae-spouse-aurdden', 'pereth-aurdden', 'uffyria-spouse-aurdden', 'ellric-aurdden', 'kyria-aurdden', 'neddan-aurdden'];
-  assert.equal(exports.filter(entry => entry.character.portrait === null).length, 7);
+  const bankIds = ['oeneth-aurdden', 'rhewae-spouse-aurdden', 'pereth-aurdden', 'uffyria-spouse-aurdden', 'ellric-aurdden', 'neddan-aurdden'];
+  assert.equal(exports.filter(entry => entry.character.portrait === null).length, 6);
+  const kyria = exports.find(entry => entry.character.id.endsWith('--kyria-aurdden')).character;
+  assert.match(kyria.title, /Finanzen/);
+  assert.match(kyria.portrait, /kyria-aurdden-v1\.png$/);
   for (const id of bankIds) {
     const { character } = exports.find(entry => entry.character.id.endsWith(`--${id}`));
     assert.equal(character.portrait, null);
