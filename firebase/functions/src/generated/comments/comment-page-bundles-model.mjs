@@ -32,7 +32,7 @@ export function normalizeBundlePage(value) {
   return page;
 }
 export function emptyBundleMetadata() {
-  return { schema: BUNDLE_SCHEMA, version: 1, revision: 0, pages: [], lastMutationId: '', lastMutationHash: '', updatedBy: '' };
+  return { schema: BUNDLE_SCHEMA, version: 1, revision: 0, pages: [], lastMutationId: '', lastMutationHash: '' };
 }
 export function normalizeBundleMetadata(value) {
   if (value == null) return emptyBundleMetadata();
@@ -43,8 +43,7 @@ export function normalizeBundleMetadata(value) {
   if (new Set(pages.map(page => page.id)).size !== pages.length) fail('failed-precondition', 'Die Seiteneinteilung enthält doppelte Kennungen.');
   return { schema: BUNDLE_SCHEMA, version: 1, revision: value.revision, pages,
     lastMutationId: typeof value.lastMutationId === 'string' ? value.lastMutationId : '',
-    lastMutationHash: typeof value.lastMutationHash === 'string' ? value.lastMutationHash : '',
-    updatedBy: typeof value.updatedBy === 'string' ? value.updatedBy : '' };
+    lastMutationHash: typeof value.lastMutationHash === 'string' ? value.lastMutationHash : '' };
 }
 export function compareBundlePositions(left, right) { return left.order - right.order || left.time - right.time; }
 
@@ -56,9 +55,9 @@ export function normalizeBundleMutation(operation) {
   fail('invalid-argument', 'Unbekannte Seitenaktion.');
 }
 
-export function applyBundleMutation(value, operation, actorUid, mutationId) {
+export function applyBundleMutation(value, operation, mutationId) {
   const metadata = normalizeBundleMetadata(value);
-  const actor = identifier(actorUid, 'Anmeldung'), mutation = identifier(mutationId, 'Auftragskennung');
+  const mutation = identifier(mutationId, 'Auftragskennung');
   if (!object(operation)) fail('invalid-argument', 'Wähle eine Seitenaktion.');
   let pages = metadata.pages.slice();
   if (operation.kind === 'create') {
@@ -86,7 +85,7 @@ export function applyBundleMutation(value, operation, actorUid, mutationId) {
     if (operation.kind === 'rename') pages[index] = { ...pages[index], title: normalizeBundleTitle(operation.title) };
     else pages.splice(index, 1);
   } else fail('invalid-argument', 'Unbekannte Seitenaktion.');
-  return { ...metadata, revision: metadata.revision + 1, pages, updatedBy: actor, lastMutationId: mutation };
+  return { ...metadata, revision: metadata.revision + 1, pages, lastMutationId: mutation };
 }
 
 function lowerBound(items, position, after = false) {
