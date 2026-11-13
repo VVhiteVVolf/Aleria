@@ -3,6 +3,17 @@
   "schemaVersion": 1,
   "frames": [
     {
+      "key": "action",
+      "path": "AleriaAlmanach/assets/speech-frame-lab/action-frame-v1.png",
+      "sourcePath": "AleriaAlmanach/assets/speech-frame-lab/sources/2026-11-13/action-frame-v1.png",
+      "sha256": "895bdb97d6471dafc7c9aff20170ceb4716914bee6d2cc596126bbd958bb2426",
+      "width": 2172,
+      "height": 724,
+      "bytes": 522428,
+      "centerAlpha": 0,
+      "interiorMaxAlpha": 1
+    },
+    {
       "key": "animal",
       "path": "AleriaAlmanach/assets/speech-frame-lab/animal-frame-v1.png",
       "sourcePath": "AleriaAlmanach/assets/speech-frame-lab/sources/2026-11-12/animal-frame-v1.png",
@@ -33,6 +44,17 @@
       "centerAlpha": 0
     },
     {
+      "key": "performance",
+      "path": "AleriaAlmanach/assets/speech-frame-lab/performance-frame-v1.png",
+      "sourcePath": "AleriaAlmanach/assets/speech-frame-lab/sources/2026-11-13/performance-frame-v1.png",
+      "sha256": "f7a99df3ea2ebca28e1b606da860653a1474238891d88d2b86b566396fd6ca26",
+      "width": 2172,
+      "height": 724,
+      "bytes": 496697,
+      "centerAlpha": 0,
+      "interiorMaxAlpha": 1
+    },
+    {
       "key": "prayer",
       "path": "AleriaAlmanach/assets/speech-frame-lab/prayer-frame-v1.png",
       "sourcePath": "AleriaAlmanach/assets/speech-frame-lab/sources/2026-11-12/prayer-frame-v1.png",
@@ -41,6 +63,17 @@
       "height": 724,
       "bytes": 518801,
       "centerAlpha": 0
+    },
+    {
+      "key": "shout",
+      "path": "AleriaAlmanach/assets/speech-frame-lab/shout-frame-v1.png",
+      "sourcePath": "AleriaAlmanach/assets/speech-frame-lab/sources/2026-11-13/shout-frame-v1.png",
+      "sha256": "463c1ef1299b0ed754d50e458b46b3850baa0599ac0e5873ba282c98b283405a",
+      "width": 2172,
+      "height": 724,
+      "bytes": 401878,
+      "centerAlpha": 0,
+      "interiorMaxAlpha": 1
     },
     {
       "key": "song",
@@ -53,6 +86,17 @@
       "centerAlpha": 0
     },
     {
+      "key": "speech",
+      "path": "AleriaAlmanach/assets/speech-frame-lab/speech-frame-v1.png",
+      "sourcePath": "AleriaAlmanach/assets/speech-frame-lab/sources/2026-11-13/speech-frame-v1.png",
+      "sha256": "8d535377533421ff92d2117f4c5cde975a3e70cb90c52fd365c1865ee91f228c",
+      "width": 2172,
+      "height": 724,
+      "bytes": 430213,
+      "centerAlpha": 0,
+      "interiorMaxAlpha": 1
+    },
+    {
       "key": "telepathy",
       "path": "AleriaAlmanach/assets/speech-frame-lab/telepathy-frame-v1.png",
       "sourcePath": "AleriaAlmanach/assets/speech-frame-lab/sources/2026-11-12/telepathy-frame-v1.png",
@@ -61,6 +105,28 @@
       "height": 724,
       "bytes": 515472,
       "centerAlpha": 0
+    },
+    {
+      "key": "thought",
+      "path": "AleriaAlmanach/assets/speech-frame-lab/thought-frame-v1.png",
+      "sourcePath": "AleriaAlmanach/assets/speech-frame-lab/sources/2026-11-13/thought-frame-v1.png",
+      "sha256": "b23f9a74f2d78c23efe01c030e0e3c9a2150f8f583d79d2cbd10126d9bb4c190",
+      "width": 2172,
+      "height": 724,
+      "bytes": 413613,
+      "centerAlpha": 0,
+      "interiorMaxAlpha": 1
+    },
+    {
+      "key": "whisper",
+      "path": "AleriaAlmanach/assets/speech-frame-lab/whisper-frame-v1.png",
+      "sourcePath": "AleriaAlmanach/assets/speech-frame-lab/sources/2026-11-13/whisper-frame-v1.png",
+      "sha256": "577830d6234fa6751a1e3f51140bcd350fbd60fc27807790f45c54a44de32d56",
+      "width": 2172,
+      "height": 724,
+      "bytes": 306959,
+      "centerAlpha": 0,
+      "interiorMaxAlpha": 1
     }
   ]
 }

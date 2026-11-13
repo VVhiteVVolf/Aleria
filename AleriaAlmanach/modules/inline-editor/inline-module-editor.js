@@ -438,6 +438,7 @@ function buildInlineComplexEditor(entry, page, type) {
   if (type === 'session') return wrapInlineEditor(`${moduleMeta}
     <div class="inline-edit-section">
       <div class="inline-edit-kicker">Sitzung</div>
+      <div class="inline-edit-field">${window.AleriaCommentBubbles?.renderControl() || ''}</div>
       <div class="inline-edit-grid single">
         <div class="inline-edit-field">
           <span class="inline-edit-label">Intro</span>

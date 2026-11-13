@@ -12,7 +12,7 @@ function runtime({ stored, blockedStorage = false } = {}) {
   const toggles = [false, false].map(checked => ({ checked, matches: selector => selector === 'input[data-comment-bubble-toggle]' }));
   const listen = (name, callback) => (events[name] ||= []).push(callback);
   const context = vm.createContext({ console,
-    document: { addEventListener: listen, querySelectorAll: selector => selector === '.session-page' ? scenes : toggles },
+    document: { addEventListener: listen, querySelectorAll: selector => selector === '.session-page, [data-comment-bubble-surface]' ? scenes : selector === '[data-comment-bubble-control]' ? [] : toggles },
     addEventListener: listen,
     localStorage: {
       getItem(key) { if (blockedStorage) throw Error('Storage unavailable'); return storage.get(key) ?? null; },
@@ -82,18 +82,29 @@ test('andere Tabs und das Leeren der Einstellungen synchronisieren die Ansicht',
   assert(r.toggles.every(toggle=>!toggle.checked));assert.equal(r.storage.size,0);
 });
 
-test('beide Moduleditoren enthalten keinen Darstellungshaken und behalten gespeicherte Altfelder',()=>{
+test('beide Moduleditoren zeigen den persönlichen Haken ohne das frühere Datenfeld zu ändern',()=>{
   const {context:c}=runtime();
-  assert.doesNotMatch(c.buildSessionModuleEditorFields({sessionAnimatedBubbles:true}),/animated-bubbles|Animierte Sprechblasen/);
+  const fields=c.buildSessionModuleEditorFields({sessionAnimatedBubbles:true});
+  assert.match(fields,/data-comment-bubble-toggle/);
+  assert.doesNotMatch(fields,/me-page-session-animated-bubbles|data-page-field="sessionAnimatedBubbles"/);
   const page=c.collectSessionModuleEditorPage({querySelector:()=>({value:''})},{sessionAnimatedBubbles:true});
   assert.equal(page.sessionAnimatedBubbles,true);
   assert.doesNotMatch(read('AleriaAlmanach/modules/inline-editor/inline-module-editor.js'),/data-page-field="sessionAnimatedBubbles"/);
+  assert.match(read('AleriaAlmanach/modules/inline-editor/inline-module-editor.js'),/AleriaCommentBubbles\?\.renderControl/);
 });
-test('sechs Rahmen sind transparente bytegleiche Generatororiginale mit gebundenem Manifest',()=>{
+test('zwölf Rahmen sind transparente bytegleiche Generatororiginale mit gebundenem Manifest',()=>{
   const manifest=JSON.parse(read('AleriaAlmanach/assets/speech-frame-lab/manifest.json'));
-  assert.equal(manifest.frames.length,6);
+  assert.equal(manifest.frames.length,12);
+  for(const key of ['speech','thought','whisper','shout','performance','action']) assert(manifest.frames.some(frame=>frame.key===key));
   for(const item of manifest.frames){const bytes=readFileSync(new URL(item.path,root)),source=readFileSync(new URL(item.sourcePath,root));
     assert(bytes.equals(source));assert.equal(createHash('sha256').update(bytes).digest('hex'),item.sha256);
     assert.equal(bytes.readUInt32BE(16),2172);assert.equal(bytes.readUInt32BE(20),724);assert.equal(bytes[25],6);
   }
+});
+
+test('Schreib- und Bearbeitungsdialog besitzen eigene Vorschauflächen und denselben persönlichen Schalter',()=>{
+  const html=read('AleriaAlmanach/AleriaAlmanach.html');
+  for(const id of ['cf-preview','ec-preview']) assert.match(html,new RegExp('id="'+id+'"[^>]*data-comment-bubble-surface'));
+  assert.equal((html.match(/data-comment-bubble-control/g)||[]).length,2);
+  assert.match(read('AleriaAlmanach/styles/comment-bubble-art.css'),/comment-live-preview-body:not\(\.narrator\)/);
 });

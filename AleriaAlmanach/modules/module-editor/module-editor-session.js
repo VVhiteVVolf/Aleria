@@ -3,6 +3,10 @@ function buildSessionModuleEditorFields(page) {
       <div class="module-page-type-block${inferModulePageType(page) === 'session' ? ' visible' : ''}" data-page-type="session">
         <div class="module-editor-grid single">
           <div class="module-editor-field">
+            <span>Persönliche Ansicht</span>
+            <div>${window.AleriaCommentBubbles?.renderControl() || ''}</div>
+          </div>
+          <div class="module-editor-field">
             <label>Introtext</label>
             ${buildTextFormatToolbar()}
             <textarea class="me-page-session-intro">${escapeHtml(page?.sessionIntro || '')}</textarea>

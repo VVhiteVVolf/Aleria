@@ -10,7 +10,7 @@
     if (persist) {
       try { localStorage.setItem(storageKey, enabled ? '1' : '0'); } catch { /* The current view still works. */ }
     }
-    document.querySelectorAll('.session-page').forEach(scene => {
+    document.querySelectorAll('.session-page, [data-comment-bubble-surface]').forEach(scene => {
       scene.dataset.animatedBubbles = String(enabled);
     });
     document.querySelectorAll(toggleSelector).forEach(toggle => { toggle.checked = enabled; });
@@ -31,4 +31,6 @@
   });
 
   window.AleriaCommentBubbles = Object.freeze({ isEnabled: () => enabled, renderControl });
+  document.querySelectorAll('[data-comment-bubble-control]').forEach(slot => { slot.innerHTML = renderControl(); });
+  applyPreference(enabled, false);
 })();

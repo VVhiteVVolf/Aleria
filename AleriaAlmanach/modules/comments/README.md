@@ -110,15 +110,22 @@ Szenen und schaltet die experimentelle Darstellung sofort um. Er startet aus.
 `comment-bubble-preference.js` kapselt den Zustand und speichert die Wahl unter
 `aleria-comment-bubble-art-enabled-v1` im Browser; sie gilt auch beim Szenenwechsel
 und wird zwischen Tabs synchronisiert. Ohne verfügbaren Speicher funktioniert
-das Umschalten für die aktuelle Ansicht weiter. Beide Moduleditoren enthalten
-keinen Darstellungshaken. Alte `sessionAnimatedBubbles`-Felder bleiben als Daten
-erhalten, steuern die persönliche Ansicht aber nicht mehr.
+das Umschalten für die aktuelle Ansicht weiter. Derselbe persönliche Haken steht
+zusätzlich in beiden Moduleditoren und in den Schreib-/Bearbeitungsdialogen.
+`data-comment-bubble-control` markiert deren statische Einfügepunkte;
+`data-comment-bubble-surface` markiert die synchronisierten Vorschauflächen.
+Alte `sessionAnimatedBubbles`-Felder bleiben als Daten erhalten, steuern die
+persönliche Ansicht aber nicht mehr. Keine dieser Auswahlen wird im Modul gespeichert.
 
 `comments-page.js` setzt die Eigenschaft am lokalen Szenencontainer;
 `styles/comment-bubble-art.css` besitzt die davon abhängigen Regeln.
-Sechs transparente Rasterrahmen gestalten Flirt, Gebet, Gesang, Tiersprache,
-Telepathie, Zauberformeln und Wahnsinn; Zauberformeln teilen den arkanen Rahmen.
-Andere Beitragsarten behalten ihre Gestaltung. Inhalt und Beschriftung
+Zwölf transparente Rasterrahmen decken sämtliche normalen Kommentarblasen ab:
+Rede (auch Fremdsprache/Fremde Stimme), Gedanken, Flüstern, Rufen, Schauspiel,
+Handlungen (auch Geheim-/Kampfhandlungen und kompakte Interaktionen), Flirt,
+Gebet, Gesang, Tiersprache, Telepathie/Zauberformeln und Wahnsinn.
+Die gemeinsame Basis besitzt einen neutralen Redeframe; neue Arten bekommen
+dadurch ebenfalls eine neue Kontur. Erzähler und strukturierte Ereigniskarten
+behalten ihre eigene Lesedarstellung. Inhalt und Beschriftung
 bleiben HTML. Die Animation betrifft nur das dekorative Leuchten; reduzierte
 Bewegung wird berücksichtigt. Quellen und Bildmanifest liegen unter
 `assets/speech-frame-lab`, Prompts unter `docs/art/speech-frame-lab`.

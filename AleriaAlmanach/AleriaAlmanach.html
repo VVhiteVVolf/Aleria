@@ -138,7 +138,7 @@
 <link rel="stylesheet" href="./styles/world-date.css?v=20261105-latest-scene-v1">
 <link rel="stylesheet" href="./styles/mobile.css?v=20260910-archive-navigation-v1" media="(max-width: 640px)">
 <link rel="stylesheet" href="./styles/session-mobile.css?v=20261017-intro-collapse-v1">
-<link rel="stylesheet" href="./styles/comment-bubble-art.css?v=20261112-direct-toggle-v1">
+<link rel="stylesheet" href="./styles/comment-bubble-art.css?v=20261113-all-frames-v1">
 <link rel="stylesheet" href="./styles/session-controls-compact.css?v=20261112-direct-toggle-v1">
 <link rel="stylesheet" href="./modules/sync/firebase-sync-status.css?v=20261104-online-priority-v1">
 <link rel="stylesheet" href="./styles/comment-combat-mini-profile.css?v=20261013-combat-checkup-v1">
@@ -316,7 +316,7 @@
   <script src="./modules/module-editor/module-editor-wanted.js?v=20260616-card-hierarchy-v1" defer></script>
   <script src="./modules/currency/currency-art.global.js?v=20261101-aleria-currency-v1" defer></script>
   <script src="./modules/module-editor/module-editor-character-inventory.js?v=20261104-explicit-empty-attributes-v1" defer></script>
-  <script src="./modules/module-editor/module-editor-session.js?v=20261112-direct-toggle-v1" defer></script>
+  <script src="./modules/module-editor/module-editor-session.js?v=20261113-all-frames-v1" defer></script>
   <script src="./modules/module-editor/module-editor-biography.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/module-editor/module-editor-icon-field.js?v=20260925-creature-biography-v2" defer></script>
   <script src="./modules/module-editor/module-editor-row-schemas.js?v=20260709-row-schema-pilot-v1" defer></script>
@@ -360,7 +360,7 @@
   <script src="./modules/inline-editor/inline-editor-hierarchy.js?v=20261017-hierarchy-twelve-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-family.js?v=20260715-family-workbench-v2" defer></script>
   <script src="./modules/inline-editor/inline-editor-house-warriors.js?v=20260712-house-warriors-images-v2" defer></script>
-  <script src="./modules/inline-editor/inline-module-editor.js?v=20261112-direct-toggle-v1" defer></script>
+  <script src="./modules/inline-editor/inline-module-editor.js?v=20261113-all-frames-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-biography.js?v=20261102-biography-layout-v2" defer></script>
   <script src="./modules/inline-editor/inline-editor-house.js?v=20260709-row-schema-cutover-v1" defer></script>
   <script src="./modules/inline-editor/inline-editor-guild.js?v=20260711-guild-template-v1" defer></script>
@@ -485,7 +485,7 @@
   <script src="./modules/comments/comments-module-insert-render.js?v=20260711-guild-template-v1" defer></script>
   <script src="./modules/comments/comments-routing.js?v=20260911-page-comments-v1" defer></script>
   <script src="./modules/comments/comments-toolbar.js?v=20261104-comment-controls-v1" defer></script>
-  <script src="./modules/comments/comment-bubble-preference.js?v=20261112-direct-toggle-v1" defer></script>
+  <script src="./modules/comments/comment-bubble-preference.js?v=20261113-all-frames-v1" defer></script>
   <script src="./modules/session/session-status.js?v=20260710-session-status-v1" defer></script>
   <script src="./modules/comments/comments-page.js?v=20261112-direct-toggle-v1" defer></script>
   <script src="./modules/comments/comments-backend.js?v=20261105-comment-recovery-v1" defer></script>
@@ -743,7 +743,7 @@
 <!-- COMMENT FORM OVERLAY -->
 <div id="comment-form-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="comment-form-title" tabindex="-1">
   <div class="comment-form-card">
-    <div class="comment-form-title" id="comment-form-title">✦ &nbsp; Stimme hinterlassen &nbsp; ✦</div>
+    <div class="comment-bubble-dialog-heading"><div class="comment-form-title" id="comment-form-title">✦ &nbsp; Stimme hinterlassen &nbsp; ✦</div><span data-comment-bubble-control></span></div>
 
     <!-- Modus-Umschalter -->
     <div class="cf-mode-toggle">
@@ -892,7 +892,7 @@
             <button type="button" class="comment-preview-panel-btn" data-action="toggle-comment-preview" data-preview-mode="maximized" data-comment-preview-maximize title="Live-Ansicht maximieren" aria-label="Live-Ansicht maximieren">[]</button>
           </div>
         </div>
-        <div class="comment-live-preview" id="cf-preview"></div>
+        <div class="comment-live-preview" id="cf-preview" data-comment-bubble-surface data-animated-bubbles="false"></div>
       </aside>
     </div>
     <div id="cf-error" class="comment-form-error" style="display:none"></div>
@@ -1226,7 +1226,7 @@
 <!-- EDIT COMMENT OVERLAY -->
 <div id="edit-comment-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="edit-comment-title" tabindex="-1">
   <div class="edit-comment-card">
-    <div class="edit-comment-title" id="edit-comment-title">✎ &nbsp; Kommentar bearbeiten</div>
+    <div class="comment-bubble-dialog-heading"><div class="edit-comment-title" id="edit-comment-title">✎ &nbsp; Kommentar bearbeiten</div><span data-comment-bubble-control></span></div>
 
     <!-- SCHRITT 1: Code-Eingabe -->
     <div class="edit-step-code" id="edit-step-code">
@@ -1339,7 +1339,7 @@
             <button type="button" class="comment-preview-panel-btn" data-action="toggle-comment-preview" data-preview-mode="maximized" data-comment-preview-maximize title="Live-Ansicht maximieren" aria-label="Live-Ansicht maximieren">[]</button>
           </div>
         </div>
-        <div class="comment-live-preview" id="ec-preview"></div>
+        <div class="comment-live-preview" id="ec-preview" data-comment-bubble-surface data-animated-bubbles="false"></div>
       </aside>
 
       <div id="ec-form-error" class="delete-error" style="display:none"></div>
