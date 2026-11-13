@@ -104,7 +104,7 @@ function updateCommentFormPreview() {
   const commentKind = normalizeCommentKind(state.commentKind, state.narrator);
   const kindLabel = getCommentKindLabel(commentKind);
   const parsedText = state.text
-    ? parseCommentMarkup(state.text)
+    ? buildCommentKindTextMarkup(state.text, commentKind)
     : '<span class="comment-live-preview-placeholder">Dein Text erscheint hier als Vorschau.</span>';
 
   if (state.narrator) {

@@ -132,6 +132,15 @@ function commentKindUsesQuoteMark(kind) {
   return ['speech', 'foreignvoice', 'foreign', 'shout', 'performance', 'song', 'telepathy', 'spell', 'madness', 'prayer', 'flirt'].includes(normalizeCommentKind(kind));
 }
 
+// Display punctuation belongs to the renderer, never to stored combat prose.
+function buildCommentKindTextMarkup(text, kind) {
+  if (normalizeCommentKind(kind) !== 'combataction') return parseCommentMarkup(text);
+  const raw = String(text || '').trim();
+  const enclosed = raw.match(/^([-–—])\s+([\s\S]*?)\s+\1$/);
+  const content = enclosed ? enclosed[2] : raw;
+  return `<span class="comment-combat-action-description">- ${parseCommentMarkup(content)} -</span>`;
+}
+
 function buildAnimalCommentTextMarkup(text, commentId, partIdx) {
   const safeId = escapeHtml(`${commentId}-animal-${partIdx}`);
   const animalText = parseCommentMarkup(text);
@@ -416,7 +425,7 @@ function renderCommentBubble(c, idx) {
       ? buildAnimalCommentTextMarkup(part.text, commentId, partIdx)
       : commentKindUsesLanguage(commentKind)
         ? buildCommentLanguageTextMarkup(part.text, c, commentKind, commentId, partIdx)
-        : `<span class="comment-text">${parseCommentMarkup(part.text)}</span>`;
+        : `<span class="comment-text">${buildCommentKindTextMarkup(part.text, commentKind)}</span>`;
 
     if (isCompactUsage) {
       return `

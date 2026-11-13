@@ -58,12 +58,24 @@
   background:var(--speech-paper); box-shadow:none; filter:none; clip-path:none;
   transform:none; opacity:1; animation:none; pointer-events:none;
 }
+/* Keep the existing portrait overlap from covering the painted action's text.
+   The legacy layout remains owned by comments.css and the mini-profile sheet. */
+:is(.session-page, [data-comment-bubble-surface])[data-animated-bubbles="true"] .comment-entry-fused { --painted-fused-inset:3.6rem; }
+:is(.session-page, [data-comment-bubble-surface])[data-animated-bubbles="true"] .comment-entry-fused.left .comment-body { padding-left:var(--painted-fused-inset); }
+:is(.session-page, [data-comment-bubble-surface])[data-animated-bubbles="true"] .comment-entry-fused.right .comment-body { padding-right:var(--painted-fused-inset); }
 @keyframes paintedSpeechGlow {
   0%,100% { filter:drop-shadow(0 0 1px var(--speech-glow)); opacity:.85; }
   50% { filter:drop-shadow(0 0 6px var(--speech-glow)); opacity:1; }
 }
 @media (max-width:760px) {
   :is(.session-page, [data-comment-bubble-surface])[data-animated-bubbles="true"] :is(.comment-body, .comment-live-preview-body:not(.narrator)) { padding:24px 22px; margin-inline:7px; width:calc(100% - 14px); --speech-frame-width-x:76px; --speech-frame-width-y:38px; }
+}
+@media (max-width:640px) {
+  :is(.session-page, [data-comment-bubble-surface])[data-animated-bubbles="true"] .comment-entry-fused { --painted-fused-inset:1.7rem; }
+}
+[data-comment-bubble-surface][data-animated-bubbles="true"] .comment-entry-fused { --painted-fused-inset:32px; }
+@media (max-width:760px) {
+  [data-comment-bubble-surface][data-animated-bubbles="true"] .comment-entry-fused { --painted-fused-inset:22px; }
 }
 @media (prefers-reduced-motion:reduce) {
   :is(.session-page, [data-comment-bubble-surface])[data-animated-bubbles="true"] :is(.comment-body, .comment-live-preview-body:not(.narrator))::before { animation:none; }

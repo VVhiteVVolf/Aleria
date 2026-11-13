@@ -108,3 +108,15 @@ test('Schreib- und Bearbeitungsdialog besitzen eigene Vorschauflächen und dense
   assert.equal((html.match(/data-comment-bubble-control/g)||[]).length,2);
   assert.match(read('AleriaAlmanach/styles/comment-bubble-art.css'),/comment-live-preview-body:not\(\.narrator\)/);
 });
+
+test('Kampfprosa bekommt einmalige Bindestriche, sichere Formatierung und verändert den gespeicherten Text nicht',()=>{
+  const context=vm.createContext({ document:{addEventListener(){}},escapeHtml:value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;') });
+  context.window=context;
+  for(const name of ['comments-markup','comments-render']) vm.runInContext(read('AleriaAlmanach/modules/comments/'+name+'.js'),context);
+  const source={text:'Gais hebt **seinen Schild**.\n<script>unerlaubt</script>'},before=JSON.stringify(source);
+  const html=context.buildCommentKindTextMarkup(source.text,'combataction');
+  assert.match(html,/^<span class="comment-combat-action-description">- Gais hebt <span class="c-b">seinen Schild<\/span>\.<br>&lt;script&gt;unerlaubt&lt;\/script&gt; -<\/span>$/);
+  assert.equal(JSON.stringify(source),before);
+  assert.equal(context.buildCommentKindTextMarkup('- Gais wartet. -','combataction'),context.buildCommentKindTextMarkup('Gais wartet.','combataction'));
+  for(const kind of ['speech','action','thought','secretaction']) assert.equal(context.buildCommentKindTextMarkup(source.text,kind),context.parseCommentMarkup(source.text));
+});

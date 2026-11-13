@@ -2508,6 +2508,10 @@
   .comment-kind-combataction .comment-text {
     color: #f4d9c2;
   }
+  .comment-combat-action-description {
+    font-style: italic;
+    font-weight: 400;
+  }
   .comment-animal-toggle:focus-visible {
     outline: 1px solid rgba(245,235,190,0.7);
     outline-offset: 0.16rem;
