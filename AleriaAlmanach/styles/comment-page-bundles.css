@@ -13,6 +13,14 @@
 .comment-page-bundle-options { display:grid; gap:8px; margin-block:14px; }
 .comment-page-bundle-options label { display:flex; align-items:center; gap:7px; }
 .comment-page-bundle-options input { width:15px; height:15px; margin:0; accent-color:#345e53; }
+.comment-page-bundle-check { display:flex; align-items:center; gap:7px; margin-block:14px; }
+.comment-page-bundle-time { display:grid; grid-template-columns:minmax(0,1fr) minmax(8rem,auto); gap:12px; align-items:start; }
+.comment-page-bundle-time .ac-picker { min-width:0; }
+.comment-page-bundle-time .ac-picker-popover { position:static; width:auto; max-width:100%; box-sizing:border-box; }
+.comment-page-bundle-time .ac-picker-nav { grid-template-columns:26px minmax(0,1fr) 64px 26px; }
+.comment-page-bundle-time .ac-picker-nav button { padding:4px 0; }
+.comment-page-bundle-time .ac-days button { padding:4px 0; min-width:0; }
+.comment-page-time { display:block; flex-basis:100%; color:#665332; }
 .comment-page-bundle-range { padding:10px; background:#eee4cb; border-radius:4px; }
 .comment-page-bundle-merge,.comment-page-bundle-hint { color:#786449; font-size:.9rem; }
 .comment-page-bundle-error { color:#963a2a; padding:8px; border-left:3px solid currentColor; }
@@ -25,4 +33,4 @@
 .comment-pagination-page[data-comment-bundle-id] { border-color:#587468; background:#e1e9df; }
 .comment-pagination-page[data-comment-bundle-id].active { background:#345e53; color:#fff9e8; border-color:#345e53; }
 .comment-pagination-select { max-width:min(16rem,100%); min-width:0; padding:4px; border:1px solid #ad8b4f; border-radius:4px; background:#fbf6e9; color:#47351d; font:inherit; }
-@media(max-width:480px) { .comment-page-bundle-card { padding:12px; } .comment-page-bundle-card h2 { font-size:.84rem; } .comment-page-bundle-list li { flex-wrap:wrap; } .comment-page-bundle-list li > div { flex-basis:100%; } }
+@media(max-width:480px) { .comment-page-bundle-card { padding:12px; } .comment-page-bundle-card h2 { font-size:.84rem; } .comment-page-bundle-list li { flex-wrap:wrap; } .comment-page-bundle-list li > div { flex-basis:100%; } .comment-page-bundle-time { grid-template-columns:minmax(0,1fr); } }

@@ -10,7 +10,7 @@
     import { createFirebaseAccountActions } from './modules/auth/firebase-account-actions.js';
     import { firebasePublicConfig } from './modules/auth/firebase-public-config.js';
     import { createCommentActivityRepository } from './modules/comments/comment-activity-repository.js?v=20261104-startup-v1';
-    import { createCommentPageBundleRepository } from './modules/comments/comment-page-bundles-firebase.mjs?v=20261113-v1';
+    import { createCommentPageBundleRepository } from './modules/comments/comment-page-bundles-firebase.mjs?v=20261113-continuation-v2';
     import { compactMechanicalMetadata }
       from "./modules/combat/combat-resolution-storage.js?v=20260804-referee-v1";
     import { finalizeCommittedCommentNarration }

@@ -1,5 +1,6 @@
 // Shared, presentation-only page boundaries. No comment content or game state lives here.
 export const BUNDLE_SCHEMA = 'aleria.comment-page-bundles';
+export const DEFAULT_COMMENT_PAGE_SIZE = 75;
 
 export class CommentPageBundleError extends Error {
   constructor(code, message) { super(message); this.name = 'CommentPageBundleError'; this.code = code; }
@@ -25,6 +26,32 @@ function anchor(value) {
   if (!object(value) || !Number.isFinite(value.order) || !Number.isFinite(value.time)) fail('invalid-argument', 'Die Kommentargrenze ist ungültig.');
   return { id: identifier(value.id, 'Kommentargrenze'), order: value.order, time: value.time, stable: value.stable === true };
 }
+export function normalizeCommentPageSize(value = DEFAULT_COMMENT_PAGE_SIZE) {
+  if (!Number.isSafeInteger(value) || value < 1 || value > 1000) fail('invalid-argument', 'Wähle 1 bis 1000 Kommentare pro regulärer Seite.');
+  return value;
+}
+export function normalizeRegularCommentPage(value) {
+  if (!object(value)) fail('invalid-argument', 'Die reguläre Seite ist ungültig.');
+  const title = value.title == null || typeof value.title === 'string' && !value.title.trim() ? '' : normalizeBundleTitle(value.title);
+  let time = null;
+  if (value.time != null) {
+    const { calendarDate: date, seconds } = value.time;
+    if (!object(date) || !Number.isInteger(date.year) || date.year < 1 || date.year > 100000
+      || !Number.isInteger(date.month) || date.month < 1 || date.month > 13
+      || !Number.isInteger(date.day) || date.day < 1 || date.day > 36
+      || !Number.isInteger(seconds) || seconds < 0 || seconds >= 86400) fail('invalid-argument', 'Wähle ein gültiges Aleria-Datum und eine Uhrzeit.');
+    time = { calendarDate: { year: date.year, month: date.month, day: date.day }, seconds };
+  }
+  return { id: identifier(value.id, 'Seitenkennung'), title, after: value.after == null ? null : anchor(value.after), time };
+}
+function upsertRegularPage(pages, value) {
+  const page = normalizeRegularCommentPage(value);
+  const others = pages.filter(existing => existing.id !== page.id);
+  if (others.some(existing => !existing.after && !page.after || existing.after && page.after && compareBundlePositions(existing.after, page.after) === 0)) {
+    fail('already-exists', 'An dieser Grenze beginnt bereits eine reguläre Seite. Bearbeite diese Seite.');
+  }
+  return [...others, page].sort((left, right) => !left.after ? -1 : !right.after ? 1 : compareBundlePositions(left.after, right.after));
+}
 export function normalizeBundlePage(value) {
   if (!object(value)) fail('invalid-argument', 'Die Seite ist ungültig.');
   const page = { id: identifier(value.id, 'Seitenkennung'), title: normalizeBundleTitle(value.title), start: anchor(value.start), end: anchor(value.end), before: value.before == null ? null : anchor(value.before) };
@@ -32,16 +59,20 @@ export function normalizeBundlePage(value) {
   return page;
 }
 export function emptyBundleMetadata() {
-  return { schema: BUNDLE_SCHEMA, version: 1, revision: 0, pages: [], lastMutationId: '', lastMutationHash: '' };
+  return { schema: BUNDLE_SCHEMA, version: 2, revision: 0, pages: [], regularPages: [], pageSize: DEFAULT_COMMENT_PAGE_SIZE, lastMutationId: '', lastMutationHash: '' };
 }
 export function normalizeBundleMetadata(value) {
   if (value == null) return emptyBundleMetadata();
-  if (!object(value) || value.schema !== BUNDLE_SCHEMA || value.version !== 1 || !Number.isSafeInteger(value.revision) || value.revision < 0 || !Array.isArray(value.pages)) {
+  if (!object(value) || value.schema !== BUNDLE_SCHEMA || ![1, 2].includes(value.version) || !Number.isSafeInteger(value.revision) || value.revision < 0 || !Array.isArray(value.pages)) {
     fail('failed-precondition', 'Diese Seiteneinteilung kann noch nicht bearbeitet werden. Lade die Szene neu.');
   }
   const pages = value.pages.map(normalizeBundlePage);
-  if (new Set(pages.map(page => page.id)).size !== pages.length) fail('failed-precondition', 'Die Seiteneinteilung enthält doppelte Kennungen.');
-  return { schema: BUNDLE_SCHEMA, version: 1, revision: value.revision, pages,
+  if (value.regularPages != null && !Array.isArray(value.regularPages)) fail('failed-precondition', 'Die regulären Seiten sind ungültig.');
+  const regularPages = (value.regularPages || []).map(normalizeRegularCommentPage);
+  const allPages = [...pages, ...regularPages];
+  if (new Set(allPages.map(page => page.id)).size !== allPages.length) fail('failed-precondition', 'Die Seiteneinteilung enthält doppelte Kennungen.');
+  regularPages.reduce(upsertRegularPage, []);
+  return { schema: BUNDLE_SCHEMA, version: 2, revision: value.revision, pages, regularPages, pageSize: normalizeCommentPageSize(value.pageSize),
     lastMutationId: typeof value.lastMutationId === 'string' ? value.lastMutationId : '',
     lastMutationHash: typeof value.lastMutationHash === 'string' ? value.lastMutationHash : '' };
 }
@@ -49,7 +80,10 @@ export function compareBundlePositions(left, right) { return left.order - right.
 
 export function normalizeBundleMutation(operation) {
   if (!object(operation)) fail('invalid-argument', 'Wähle eine Seitenaktion.');
-  if (operation.kind === 'create') return { kind: 'create', page: normalizeBundlePage(operation.page), replaceIds: [...new Set((Array.isArray(operation.replaceIds) ? operation.replaceIds : []).map(id => identifier(id)))].sort() };
+  if (operation.kind === 'create') return { kind: 'create', page: normalizeBundlePage(operation.page), replaceIds: [...new Set((Array.isArray(operation.replaceIds) ? operation.replaceIds : []).map(id => identifier(id)))].sort(), ...(operation.nextPage ? { nextPage: normalizeRegularCommentPage(operation.nextPage) } : {}) };
+  if (operation.kind === 'regular') return { kind: 'regular', page: normalizeRegularCommentPage(operation.page) };
+  if (operation.kind === 'remove-regular') return { kind: 'remove-regular', pageId: identifier(operation.pageId, 'Seitenkennung') };
+  if (operation.kind === 'configure') return { kind: 'configure', pageSize: normalizeCommentPageSize(operation.pageSize) };
   if (operation.kind === 'rename') return { kind: 'rename', pageId: identifier(operation.pageId, 'Seitenkennung'), title: normalizeBundleTitle(operation.title) };
   if (operation.kind === 'remove') return { kind: 'remove', pageId: identifier(operation.pageId, 'Seitenkennung') };
   fail('invalid-argument', 'Unbekannte Seitenaktion.');
@@ -58,8 +92,9 @@ export function normalizeBundleMutation(operation) {
 export function applyBundleMutation(value, operation, mutationId) {
   const metadata = normalizeBundleMetadata(value);
   const mutation = identifier(mutationId, 'Auftragskennung');
-  if (!object(operation)) fail('invalid-argument', 'Wähle eine Seitenaktion.');
+  operation = normalizeBundleMutation(operation);
   let pages = metadata.pages.slice();
+  let regularPages = metadata.regularPages.slice(), pageSize = metadata.pageSize;
   if (operation.kind === 'create') {
     const page = normalizeBundlePage(operation.page);
     if (pages.some(existing => existing.id === page.id)) fail('already-exists', 'Diese Seite wurde bereits angelegt.');
@@ -78,6 +113,18 @@ export function applyBundleMutation(value, operation, mutationId) {
     }
     pages.push(page);
     pages.sort((left, right) => compareBundlePositions(left.start, right.start));
+    if (operation.nextPage) {
+      if (!operation.nextPage.after || operation.nextPage.after.id !== page.end.id
+        || compareBundlePositions(operation.nextPage.after, page.end) !== 0) fail('invalid-argument', 'Die Folgeseite muss direkt nach dem Bündel beginnen.');
+      regularPages = upsertRegularPage(regularPages, operation.nextPage);
+    }
+  } else if (operation.kind === 'regular') {
+    regularPages = upsertRegularPage(regularPages, operation.page);
+  } else if (operation.kind === 'configure') {
+    pageSize = operation.pageSize;
+  } else if (operation.kind === 'remove-regular') {
+    if (!regularPages.some(page => page.id === operation.pageId)) fail('not-found', 'Diese reguläre Seite ist nicht mehr vorhanden.');
+    regularPages = regularPages.filter(page => page.id !== operation.pageId);
   } else if (operation.kind === 'rename' || operation.kind === 'remove') {
     const id = identifier(operation.pageId, 'Seitenkennung');
     const index = pages.findIndex(page => page.id === id);
@@ -85,7 +132,7 @@ export function applyBundleMutation(value, operation, mutationId) {
     if (operation.kind === 'rename') pages[index] = { ...pages[index], title: normalizeBundleTitle(operation.title) };
     else pages.splice(index, 1);
   } else fail('invalid-argument', 'Unbekannte Seitenaktion.');
-  return { ...metadata, revision: metadata.revision + 1, pages, lastMutationId: mutation };
+  return normalizeBundleMetadata({ ...metadata, revision: metadata.revision + 1, pages, regularPages, pageSize, lastMutationId: mutation });
 }
 
 function lowerBound(items, position, after = false) {
@@ -131,7 +178,35 @@ export function partitionBundleItems(items, pages) {
   if (cursor < items.length) groups.push({ type: 'comments', items: items.slice(cursor) });
   return { groups, owners, ...resolved };
 }
-function itemAnchor(item) { return { id: item.id, order: item.order, time: item.time, stable: item.stable === true }; }
+export function itemAnchor(item) { return { id: item.id, order: item.order, time: item.time, stable: item.stable === true }; }
+export function resolveRegularCommentPages(items, regularPages = []) {
+  const byId = new Map(items.map((item, index) => [item.id, index]));
+  return regularPages.map(page => ({ page, start: !page.after ? 0 : byId.has(page.after.id)
+    ? byId.get(page.after.id) + 1 : page.after.stable ? lowerBound(items, page.after, true) : null }))
+    .filter(section => section.start != null).sort((left, right) => left.start - right.start);
+}
+export function partitionCommentPageItems(items, metadata) {
+  const result = partitionBundleItems(items, metadata.pages);
+  const sections = resolveRegularCommentPages(items, metadata.regularPages).filter(section =>
+    !result.ranges.some(range => section.start >= range.start && section.start <= range.end));
+  const groups = [];
+  for (const group of result.groups) {
+    if (group.type === 'bundle') { groups.push(group); continue; }
+    let cursor = 0;
+    const start = group.items[0].index, end = group.items.at(-1).index + 1;
+    for (const section of sections.filter(section => section.start >= start && section.start < end)) {
+      const offset = section.start - start;
+      if (offset > cursor) groups.push({ type: 'comments', items: group.items.slice(cursor, offset) });
+      groups.push({ type: 'regular-start', ...section.page, items: [], startIndex: section.start });
+      cursor = offset;
+    }
+    if (cursor < group.items.length) groups.push({ type: 'comments', items: group.items.slice(cursor) });
+  }
+  for (const section of sections.filter(section => section.start === items.length)) {
+    groups.push({ type: 'regular-start', ...section.page, items: [], startIndex: section.start });
+  }
+  return { ...result, groups, sections };
+}
 export function planBundleBefore(items, pages, commentId, { includeComment = false, includeBundles = false } = {}) {
   const selected = items.findIndex(item => item.id === commentId);
   if (selected < 0) fail('not-found', 'Der gewählte Kommentar ist nicht mehr vorhanden.');

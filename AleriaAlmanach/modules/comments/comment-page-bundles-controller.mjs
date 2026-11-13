@@ -1,5 +1,6 @@
-import { emptyBundleMetadata, normalizeBundleMetadata, normalizeBundleTitle, partitionBundleItems, planBundleBefore, resolveBundleRanges } from './comment-page-bundles-model.mjs';
-import { createCommentPageBundleDialog } from './comment-page-bundles-ui.mjs';
+import { emptyBundleMetadata, normalizeBundleMetadata, normalizeBundleTitle, normalizeRegularCommentPage, normalizeCommentPageSize, partitionCommentPageItems, planBundleBefore, resolveBundleRanges, resolveRegularCommentPages, itemAnchor } from './comment-page-bundles-model.mjs?v=20261113-continuation-v2';
+import { createCommentPageBundleDialog } from './comment-page-bundles-ui.mjs?v=20261113-continuation-v2';
+import { formatCommentPageTime, getCommentPageTimeAnchor, getDefaultCommentPageTime, validateCommentPageTime } from './comment-page-time.mjs?v=20261113-continuation-v2';
 
 const records = new Map();
 let activeThread = '', unsubscribe = null, generation = 0, draft = null;
@@ -55,13 +56,17 @@ async function load(threadId) {
   const api = await backend(); receive(threadId, await api.loadCommentPageBundles(threadId)); return state(threadId);
 }
 function getGroups(threadId, comments) {
-  const record = state(threadId), result = partitionBundleItems(itemsFor(comments), record.metadata.pages);
+  const record = state(threadId), result = partitionCommentPageItems(itemsFor(comments), record.metadata);
   record.owners = result.owners;
   return result.groups;
 }
 function pageList(threadId) {
   const record = state(threadId), ranges = resolveBundleRanges(itemsFor(commentsFor(threadId)), record.metadata.pages).ranges;
-  return record.metadata.pages.map(page => { const range = ranges.find(item => item.page.id === page.id); return { ...page, count: range ? range.end - range.start + 1 : null }; });
+  const bundles = record.metadata.pages.map(page => { const range = ranges.find(item => item.page.id === page.id); return { ...page, kind: 'bundle', count: range ? range.end - range.start + 1 : null }; });
+  const regular = window.buildCommentTimelinePages(commentsFor(threadId), threadId).map((page, index) => ({ ...page,
+    id: page.regularPageId || '', title: page.regularPageId ? record.metadata.regularPages.find(item => item.id === page.regularPageId)?.title : '',
+    kind: 'regular', number: index + 1, count: page.items.length })).filter(page => page.type === 'comments');
+  return [...bundles, ...regular];
 }
 function currentDraft() { return draft && draft.threadId === activeThread ? draft : null; }
 function updatePlan(options = ui.read()) {
@@ -74,7 +79,8 @@ async function openBefore(threadId, commentId) {
   if (!isScene(threadId)) return;
   void bindThread(threadId);
   const token = draft = { mode: 'create', threadId, commentId, pageId: `page-${crypto.randomUUID()}`, mutationId: crypto.randomUUID(), expectedRevision: state(threadId).metadata.revision, options: { includeComment: false, includeBundles: false } };
-  ui.show({ mode: 'create', hasPages: !!state(threadId).metadata.pages.length }); ui.plan(null);
+  token.nextPageId = `regular-${crypto.randomUUID()}`;
+  ui.show({ mode: 'create', hasPages: !!state(threadId).metadata.pages.length, defaultTime: getDefaultCommentPageTime(commentsFor(threadId), window.getCurrentCommentThread?.()) }); ui.plan(null);
   try {
     await load(threadId); if (draft !== token) return;
     token.expectedRevision = state(threadId).metadata.revision;
@@ -89,10 +95,28 @@ function openRename(pageId) {
   ui.show({ mode: 'rename', title: page.title });
 }
 async function openManage(threadId) {
-  void bindThread(threadId); const token = draft = { mode: 'manage', threadId };
-  ui.show({ mode: 'manage', pages: pageList(threadId) });
-  try { await load(threadId); if (draft === token) ui.show({ mode: 'manage', pages: pageList(threadId) }); }
+  void bindThread(threadId); const token = draft = { mode: 'manage', threadId, mutationId: crypto.randomUUID() };
+  ui.show({ mode: 'manage', pages: pageList(threadId), pageSize: state(threadId).metadata.pageSize });
+  try { await load(threadId); if (draft === token) { token.expectedRevision = state(threadId).metadata.revision; ui.show({ mode: 'manage', pages: pageList(threadId), pageSize: state(threadId).metadata.pageSize }); } }
   catch (error) { if (draft === token) ui.error(error.message); }
+}
+async function openRegular(threadId, pageId = '', pageNumber = 1, isNew = false) {
+  if (!isScene(threadId)) return;
+  void bindThread(threadId);
+  const token = draft = { mode: 'regular', threadId, mutationId: crypto.randomUUID() };
+  ui.show({ mode: 'regular', isNew }); ui.busy(true);
+  try {
+    await load(threadId); if (draft !== token) return;
+    const record = state(threadId), comments = commentsFor(threadId), items = itemsFor(comments);
+    const pageInfo = window.buildCommentTimelinePages(comments, threadId)[pageNumber - 1];
+    const id = pageId || (!isNew && pageInfo?.regularPageId);
+    const existing = id && record.metadata.regularPages.find(page => page.id === id);
+    const start = isNew ? items.length : pageInfo?.startIndex || 0;
+    token.page = existing || { id: `regular-${crypto.randomUUID()}`, after: start ? itemAnchor(items[start - 1]) : null, title: '', time: null };
+    token.expectedRevision = record.metadata.revision;
+    ui.show({ mode: 'regular', title: token.page.title, time: token.page.time, removable: !!existing, isNew,
+      defaultTime: getDefaultCommentPageTime(isNew ? comments : comments.slice(0, start), window.getCurrentCommentThread?.()) });
+  } catch (error) { if (draft === token) { ui.busy(false); ui.error(error.message); } }
 }
 async function commit(operation, token) {
   if (token.busy) return;
@@ -101,24 +125,39 @@ async function commit(operation, token) {
     const api = await backend();
     const metadata = await api.commitCommentPageBundle({ threadId: token.threadId, expectedRevision: token.expectedRevision, mutationId: token.mutationId, operation });
     receive(token.threadId, metadata, operation.kind === 'create' ? operation.page.start.id : undefined);
+    const targetPageId = operation.nextPage?.id || (operation.kind === 'regular' ? operation.page.id : '');
+    if (targetPageId && token.threadId === activeThread) {
+      const comments = commentsFor(token.threadId), pages = window.buildCommentTimelinePages(comments, token.threadId);
+      const index = pages.findIndex(page => page.regularPageId === targetPageId);
+      if (index >= 0) { window.setCommentCurrentPage(token.threadId, index + 1, comments); refresh(token.threadId); }
+    }
     if (draft === token) { draft = null; ui.close(); }
   } catch (error) { if (draft === token) ui.error(error.message || 'Die Einteilung wurde nicht bestätigt. Dein Entwurf bleibt erhalten.'); }
   finally { token.busy = false; if (draft === token) { ui.busy(false); if (token.mode === 'create') ui.plan(token.plan, state(token.threadId).metadata.pages); } }
 }
 async function save() {
-  const token = currentDraft(); if (!token || token.mode === 'manage') return;
+  const token = currentDraft(); if (!token) return;
   try {
-    const title = normalizeBundleTitle(ui.read().title);
+    const fields = ui.read();
+    if (token.mode === 'manage') return commit({ kind: 'configure', pageSize: normalizeCommentPageSize(fields.pageSize) }, token);
+    if (token.mode === 'regular') {
+      const page = normalizeRegularCommentPage({ ...token.page, title: fields.regularTitle, time: fields.time });
+      validateCommentPageTime(page.time, window.getCurrentCommentThread?.());
+      return commit({ kind: 'regular', page }, token);
+    }
+    const title = normalizeBundleTitle(fields.title);
     if (token.mode === 'rename') return commit({ kind: 'rename', pageId: token.pageId, title }, token);
     updatePlan(); if (!token.plan?.count || token.plan.existingPage) return;
-    return commit({ kind: 'create', page: { id: token.pageId, title, start: token.plan.start, end: token.plan.end, before: token.plan.before }, replaceIds: token.plan.replaceIds }, token);
+    const nextPage = fields.nextPage ? normalizeRegularCommentPage({ id: token.nextPageId, title: fields.regularTitle, time: fields.time, after: token.plan.end }) : null;
+    validateCommentPageTime(nextPage?.time, window.getCurrentCommentThread?.());
+    return commit({ kind: 'create', page: { id: token.pageId, title, start: token.plan.start, end: token.plan.end, before: token.plan.before }, replaceIds: token.plan.replaceIds, ...(nextPage ? { nextPage } : {}) }, token);
   } catch (error) { ui.error(error.message); }
 }
-async function remove(pageId) {
+async function remove(pageId, kind) {
   const current = currentDraft(); if (!current) return;
   const token = pageId ? { mode: 'remove', threadId: current.threadId, pageId, expectedRevision: state(current.threadId).metadata.revision, mutationId: crypto.randomUUID() } : current;
   if (pageId) draft = token;
-  return commit({ kind: 'remove', pageId: token.pageId }, token);
+  return commit({ kind: kind === 'regular' || token.mode === 'regular' ? 'remove-regular' : 'remove', pageId: token.pageId || token.page?.id }, token);
 }
 async function refreshDraft() {
   const token = currentDraft(); if (!token) return;
@@ -126,18 +165,40 @@ async function refreshDraft() {
     const api = await backend(); receive(token.threadId, await api.loadCommentPageBundles(token.threadId));
     if (draft !== token) return; token.expectedRevision = state(token.threadId).metadata.revision; token.mutationId = crypto.randomUUID();
     ui.error(''); if (token.mode === 'create') updatePlan();
-    if (token.mode === 'manage') ui.show({ mode: 'manage', pages: pageList(token.threadId) });
+    // Refresh the revision without resetting any entered fields.
   } catch (error) { if (draft === token) ui.error(error.message); }
 }
-const ui = createCommentPageBundleDialog({ save, remove, refresh: refreshDraft, rename: openRename, optionsChanged: updatePlan, close() { draft = null; ui.close(); } });
+function timeSections(comments) {
+  if (!activeThread || window.getCurrentCommentThreadId?.() !== activeThread || comments.some(comment => comment.entryId && comment.entryId !== activeThread)) return [];
+  return resolveRegularCommentPages(itemsFor(comments), state(activeThread).metadata.regularPages);
+}
+const ui = createCommentPageBundleDialog({ save, remove, refresh: refreshDraft, rename: openRename, optionsChanged: updatePlan,
+  regular: (id, number) => openRegular(draft?.threadId || activeThread, id, number),
+  newPage: () => openRegular(draft?.threadId || activeThread, '', 1, true), close() { draft = null; ui.close(); } });
 window.AleriaCommentPageBundles = Object.freeze({ bindThread, unbind, getGroups,
   getBundle: (threadId, commentId) => state(threadId).owners.get(commentId),
-  count: threadId => state(threadId).metadata.pages.length });
+  count: threadId => state(threadId).metadata.pages.length + state(threadId).metadata.regularPages.length,
+  pageSize: threadId => state(threadId).metadata.pageSize, formatTime: formatCommentPageTime,
+  timeAnchors(comments) {
+    const items = itemsFor(comments), anchors = new Map();
+    for (const { page, start } of timeSections(comments)) {
+      const time = getCommentPageTimeAnchor(page.time, window.getCurrentCommentThread?.());
+      if (time && items[start]) anchors.set(items[start].id, time);
+    }
+    return anchors;
+  },
+  trailingTime(comments) {
+    const sections = timeSections(comments), end = itemsFor(comments).length;
+    const page = sections.filter(section => section.start === end).at(-1)?.page;
+    return getCommentPageTimeAnchor(page?.time, window.getCurrentCommentThread?.());
+  } });
 document.addEventListener('click', event => {
   const trigger = event.target.closest?.('[data-comment-page-action]'); if (!trigger) return;
   event.preventDefault(); const threadId = trigger.dataset.commentThreadId || window.getCurrentCommentThreadId?.();
   if (trigger.dataset.commentPageAction === 'before') void openBefore(threadId, trigger.dataset.commentId);
   if (trigger.dataset.commentPageAction === 'manage') void openManage(threadId);
+  if (trigger.dataset.commentPageAction === 'new') void openRegular(threadId, '', 1, true);
+  if (trigger.dataset.commentPageAction === 'regular') void openRegular(threadId, '', Number(trigger.dataset.commentPage));
   if (trigger.dataset.commentPageAction === 'rename') { draft = { threadId }; openRename(trigger.dataset.pageId); }
 });
 document.addEventListener('change', event => {

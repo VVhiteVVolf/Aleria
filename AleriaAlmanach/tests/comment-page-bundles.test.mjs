@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import { readFileSync } from 'node:fs';
-import { applyBundleMutation, emptyBundleMetadata, normalizeBundleMetadata, normalizeBundleTitle, partitionBundleItems, planBundleBefore, resolveBundleRanges, validateBundleThreadId } from '../modules/comments/comment-page-bundles-model.mjs';
+import { applyBundleMutation, emptyBundleMetadata, itemAnchor, normalizeBundleMetadata, normalizeBundleTitle, normalizeBundleMutation, partitionBundleItems, partitionCommentPageItems, planBundleBefore, resolveBundleRanges, validateBundleThreadId } from '../modules/comments/comment-page-bundles-model.mjs';
 
 const items = count => Array.from({ length: count }, (_, index) => ({ id: `c-${index}`, order: index*1000, time: index*1000, stable: true, index, comment: { id: `c-${index}`, orderKey: index*1000, text: `Unverändert ${index}` } }));
 function create(metadata, list, index, id, options = {}) {
@@ -14,7 +14,8 @@ function pagination(metadata) {
     isSceneTimeEventComment: comment => !!comment.day, isSceneTimeSegmentBreakEvent: comment => !!comment.day,
     getSceneTimeEventSegmentLabel: (_,index) => `Tag ${index}` });
   context.window=context;
-  context.AleriaCommentPageBundles={ count:()=>metadata.pages.length, getGroups:(_,comments)=>partitionBundleItems(comments.map((comment,index)=>({id:comment.id,order:comment.orderKey,time:comment.orderKey,stable:true,index,comment})),metadata.pages).groups };
+  context.AleriaCommentPageBundles={ count:()=>metadata.pages.length + metadata.regularPages.length, pageSize:()=>metadata.pageSize,
+    getGroups:(_,comments)=>partitionCommentPageItems(comments.map((comment,index)=>({id:comment.id,order:comment.orderKey,time:comment.orderKey,stable:true,index,comment})),metadata).groups };
   vm.runInContext(readFileSync(new URL('../modules/comments/comments-pagination.js',import.meta.url),'utf8'),context);
   return context;
 }
@@ -92,4 +93,76 @@ test('overlapping or malformed operations fail without modifying the existing me
   assert.throws(()=>normalizeBundleTitle('   '));assert.throws(()=>normalizeBundleTitle('x'.repeat(121)));
   assert.throws(()=>normalizeBundleMetadata({version:2,pages:[]}));assert.throws(()=>validateBundleThreadId('scene/escape::session:x'));
   assert.throws(()=>validateBundleThreadId('a::page:x'));assert.equal(JSON.stringify(metadata),before);
+});
+
+test('bundling every comment can atomically create an empty regular successor, preserved after reload and filled by new comments',()=>{
+  const list=items(120),plan=planBundleBefore(list,[],list.at(-1).id,{includeComment:true});
+  const nextPage={id:'regular-next',title:'Nach dem Übungskampf',after:plan.end,time:null};
+  let metadata=applyBundleMutation(emptyBundleMetadata(),{kind:'create',page:{id:'all',title:'Übungskampf',start:plan.start,end:plan.end,before:plan.before},nextPage},'bundle-with-successor');
+  metadata=normalizeBundleMetadata(JSON.parse(JSON.stringify(metadata)));
+  let pages=pagination(metadata).buildCommentTimelinePages(list.map(item=>item.comment),'scene::session:one');
+  assert.deepEqual(Array.from(pages,page=>[page.label,page.items.length]),[['Übungskampf',120],['Nach dem Übungskampf',0]]);
+  assert.equal(pages[1].regularPageId,'regular-next');
+  const expanded=items(123);
+  pages=pagination(metadata).buildCommentTimelinePages(expanded.map(item=>item.comment),'scene::session:one');
+  assert.deepEqual(Array.from(pages,page=>page.items.length),[120,3]);
+  assert.equal(pages[1].items[0].id,'c-120');
+});
+
+test('regular page size applies per scene; regular names and page time survive subsequent overflow',()=>{
+  const list=items(11),time={calendarDate:{year:1740,month:3,day:11},seconds:43200};
+  let metadata=applyBundleMutation(emptyBundleMetadata(),{kind:'configure',pageSize:3},'set-page-size');
+  metadata=applyBundleMutation(metadata,{kind:'regular',page:{id:'regular-second',title:'Mittag',after:itemAnchor(list[2]),time}},'name-regular-page');
+  const pages=pagination(metadata).buildCommentTimelinePages(list.map(item=>item.comment),'scene::session:one');
+  assert.deepEqual(Array.from(pages,page=>page.items.length),[3,3,3,2]);
+  assert.deepEqual(Array.from(pages,page=>page.label),['1','Mittag','2','3']);
+  assert.deepEqual(pages[1].time,time);
+  const unrelated=pagination(emptyBundleMetadata()).buildCommentTimelinePages(list.map(item=>item.comment),'other::session:two');
+  assert.equal(unrelated.length,1);
+});
+
+test('a regular successor can be added after an existing all-comment bundle without changing it',()=>{
+  const list=items(100),bundled=create(emptyBundleMetadata(),list,99,'Ganz',{includeComment:true}),old=JSON.stringify(bundled.pages);
+  let metadata=applyBundleMutation(bundled,{kind:'regular',page:{id:'next',after:itemAnchor(list[99]),title:'',time:null}},'new-empty-page');
+  const context=pagination(metadata),info=context.getCommentPaginationWindow(list.map(item=>item.comment),'scene::session:one');
+  assert.equal(info.pageCount,2);assert.equal(info.pages[1].label,'1');assert.equal(info.pages[1].items.length,0);
+  assert.equal(JSON.stringify(metadata.pages),old);
+  metadata=applyBundleMutation(metadata,{kind:'remove-regular',pageId:'next'},'remove-empty-page');
+  assert.equal(pagination(metadata).buildCommentTimelinePages(list.map(item=>item.comment)).length,1);
+  assert.equal(JSON.stringify(metadata.pages),old);
+});
+
+test('empty scenes expose management; empty pages never display an inverted comment range',()=>{
+  const metadata=applyBundleMutation(emptyBundleMetadata(),{kind:'regular',page:{id:'first',after:null,title:''}},'empty-scene-first');
+  const context=pagination(metadata),info=context.getCommentPaginationWindow([],'scene::session:one');
+  const html=context.renderCommentPaginationControls('scene::session:one',info);
+  assert.equal(info.pageCount,1);assert.match(html,/Neue Seite/);assert.match(html,/Seiten verwalten/);assert.match(html,/noch keine Kommentare/);
+  assert.doesNotMatch(html,/Kommentare 1-0/);
+});
+
+test('regular boundaries use saved positions when an anchor is deleted and preserve retroactive insertions',()=>{
+  const list=items(6),metadata=applyBundleMutation(emptyBundleMetadata(),{kind:'regular',page:{id:'next',title:'Weiter',after:itemAnchor(list[3])}},'stable-regular-page');
+  const retro={id:'retro',order:2500,time:2500,stable:true,comment:{id:'retro',orderKey:2500}};
+  const expanded=[...list.slice(0,3),retro,...list.slice(4)].map((item,index)=>({...item,index}));
+  const groups=partitionCommentPageItems(expanded,metadata).groups;
+  assert.deepEqual(groups.filter(group=>group.type==='comments').map(group=>group.items.map(item=>item.id)),[['c-0','c-1','c-2','retro'],['c-4','c-5']]);
+  assert.equal(new Set(groups.flatMap(group=>group.items.map(item=>item.id))).size,expanded.length);
+});
+
+test('invalid page settings, dates, duplicate boundaries and detached successors are rejected atomically',()=>{
+  const list=items(3),page={id:'first',title:'',after:itemAnchor(list[2])};
+  const metadata=applyBundleMutation(emptyBundleMetadata(),{kind:'regular',page},'first-marker'),before=JSON.stringify(metadata);
+  for(const pageSize of [0,-1,1.5,1001,'75',null]) assert.throws(()=>applyBundleMutation(metadata,{kind:'configure',pageSize},'bad-setting'));
+  assert.throws(()=>applyBundleMutation(metadata,{kind:'regular',page:{...page,id:'same-boundary'}},'duplicate-boundary'),/bereits/);
+  assert.throws(()=>normalizeBundleMutation({kind:'regular',page:{...page,time:{calendarDate:{year:1740,month:3,day:37},seconds:0}}}));
+  const plan=planBundleBefore(list,[],list[2].id,{includeComment:true});
+  assert.throws(()=>applyBundleMutation(emptyBundleMetadata(),{kind:'create',page:{id:'bundle',title:'Alle',start:plan.start,end:plan.end},nextPage:{...page,after:itemAnchor(list[0])}},'detached-page'),/direkt nach/);
+  assert.equal(JSON.stringify(metadata),before);
+});
+
+test('version-one metadata upgrades without losing bundles; normalization keeps every new setting',()=>{
+  const list=items(3),metadata=create(emptyBundleMetadata(),list,2,'Alt');
+  const old={schema:metadata.schema,version:1,revision:metadata.revision,pages:metadata.pages,lastMutationId:'original',lastMutationHash:'original-hash'};
+  const upgraded=normalizeBundleMetadata(old);
+  assert.equal(upgraded.version,2);assert.equal(upgraded.pageSize,75);assert.deepEqual(upgraded.regularPages,[]);assert.deepEqual(upgraded.pages,metadata.pages);
 });

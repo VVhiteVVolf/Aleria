@@ -29,17 +29,20 @@ function getCommentTimelineSegmentLabel(comment, segmentIndex) {
 
 function pushCommentTimelineCommentPages(pages, items, options = {}) {
   if (!items.length) return;
+  const pageSize = options.pageSize || COMMENT_PAGE_SIZE;
   const labelOffset = Number(options.labelOffset || 0);
-  for (let index = 0; index < items.length; index += COMMENT_PAGE_SIZE) {
-    const pageItems = items.slice(index, index + COMMENT_PAGE_SIZE);
-    const label = String(Math.floor(index / COMMENT_PAGE_SIZE) + 1 + labelOffset);
-    pages.push({
+  for (let index = 0; index < items.length; index += pageSize) {
+    const pageItems = items.slice(index, index + pageSize);
+    const label = String(Math.floor(index / pageSize) + 1 + labelOffset);
+    const page = {
       type: options.type || 'comments',
       label,
       items: pageItems,
       startIndex: pageItems[0]?.index || 0,
       endIndex: (pageItems[pageItems.length - 1]?.index || 0) + 1
-    });
+    };
+    if (index === 0 && options.firstPage) Object.assign(options.firstPage, page, { label: options.firstPage.label });
+    else pages.push(page);
   }
 }
 
@@ -49,11 +52,26 @@ function buildCommentTimelinePages(comments, threadId = '') {
   const pages = [];
   let segmentItems = [];
   let breakCount = 0;
+  let firstPage = null;
+  const pageSize = window.AleriaCommentPageBundles?.pageSize?.(threadId) || COMMENT_PAGE_SIZE;
+  const flush = () => {
+    pushCommentTimelineCommentPages(pages, segmentItems, { pageSize, firstPage });
+    if (segmentItems.length) firstPage = null;
+    segmentItems = [];
+  };
 
   const groups = window.AleriaCommentPageBundles?.getGroups(threadId, allComments)
     || [{ type: 'comments', items: allComments.map((comment, index) => ({ comment, index })) }];
   groups.forEach(group => {
+    if (group.type === 'regular-start') {
+      flush();
+      firstPage = { type: 'comments', label: group.title || '1', regularPageId: group.id, time: group.time,
+        items: [], startIndex: group.startIndex, endIndex: group.startIndex };
+      pages.push(firstPage);
+      return;
+    }
     if (group.type === 'bundle') {
+      flush(); firstPage = null;
       pages.push({ type: 'bundle', label: group.label, bundleId: group.id, items: group.items,
         startIndex: group.items[0]?.index || 0, endIndex: (group.items.at(-1)?.index || 0) + 1 });
       breakCount += group.items.filter(item => isCommentTimelineSegmentBreak(item.comment)).length;
@@ -66,8 +84,7 @@ function buildCommentTimelinePages(comments, threadId = '') {
         return;
       }
 
-      pushCommentTimelineCommentPages(pages, segmentItems);
-      segmentItems = [];
+      flush(); firstPage = null;
       breakCount += 1;
       pages.push({
         type: 'segment-break',
@@ -77,8 +94,7 @@ function buildCommentTimelinePages(comments, threadId = '') {
         endIndex: index + 1
       });
     });
-    pushCommentTimelineCommentPages(pages, segmentItems);
-    segmentItems = [];
+    flush();
   });
 
   return pages;
@@ -135,6 +151,8 @@ function getCommentPaginationWindow(comments, threadId) {
     pageLabel: page.label,
     pageType: page.type,
     bundleId: page.bundleId || '',
+    regularPageId: page.regularPageId || '',
+    time: page.time || null,
     startIndex: page.startIndex || 0,
     endIndex: page.endIndex || 0
   };
@@ -178,22 +196,26 @@ function buildCommentPaginationPageButtons(threadId, pageInfo) {
 function renderCommentPaginationControls(threadId, pageInfo) {
   if (!threadId || !pageInfo) return '';
   const bundleCount = window.AleriaCommentPageBundles?.count(threadId) || 0;
-  if (pageInfo.pageCount <= 1 && !bundleCount) return '';
+  const isScene = /^.+::session:.+$/.test(threadId);
+  if (pageInfo.pageCount <= 1 && !bundleCount && !isScene) return '';
 
   const { currentPage, pageCount, startIndex, endIndex, totalCount, pageLabel } = pageInfo;
   const safeThreadId = escapeHtml(threadId);
   const prevPage = Math.max(1, currentPage - 1);
   const nextPage = Math.min(pageCount, currentPage + 1);
-  const rangeText = !totalCount ? 'Noch keine Kommentare.' : pageInfo.pageType === 'segment-break'
+  const visibleCount = pageInfo.comments?.length ?? Math.max(0, endIndex - startIndex);
+  const rangeText = !visibleCount ? 'Auf dieser Seite sind noch keine Kommentare.' : pageInfo.pageType === 'segment-break'
     ? escapeHtml(String(pageLabel || 'Abschnitt'))
     : `${escapeHtml(String(pageLabel || currentPage))} · Kommentare ${startIndex + 1}-${endIndex} von ${totalCount}`;
-  const manager = bundleCount ? `<button type="button" class="comment-pagination-btn" data-comment-page-action="manage" data-comment-thread-id="${safeThreadId}">Seiten verwalten</button>` : '';
-  const rename = pageInfo.bundleId ? `<button type="button" class="comment-pagination-btn" data-comment-page-action="rename" data-comment-thread-id="${safeThreadId}" data-page-id="${escapeHtml(pageInfo.bundleId)}">Seite umbenennen</button>` : '';
+  const manager = isScene ? `<button type="button" class="comment-pagination-btn" data-comment-page-action="manage" data-comment-thread-id="${safeThreadId}">Seiten verwalten</button><button type="button" class="comment-pagination-btn" data-comment-page-action="new" data-comment-thread-id="${safeThreadId}">Neue Seite</button>` : '';
+  const rename = pageInfo.bundleId ? `<button type="button" class="comment-pagination-btn" data-comment-page-action="rename" data-comment-thread-id="${safeThreadId}" data-page-id="${escapeHtml(pageInfo.bundleId)}">Seite umbenennen</button>`
+    : isScene && pageInfo.pageType === 'comments' ? `<button type="button" class="comment-pagination-btn" data-comment-page-action="regular" data-comment-thread-id="${safeThreadId}" data-comment-page="${currentPage}">Seite bearbeiten</button>` : '';
+  const timeLabel = pageInfo.time ? window.AleriaCommentPageBundles?.formatTime?.(pageInfo.time) || '' : '';
   const selection = bundleCount && pageCount > 7 ? `<select class="comment-pagination-select" data-comment-page-select data-comment-thread-id="${safeThreadId}" aria-label="Kommentarseite wählen">${pageInfo.pages.map((page,index)=>`<option value="${index+1}"${index+1===currentPage?' selected':''}>${escapeHtml(page.type==='bundle'?page.label:`Seite ${page.label}`)}</option>`).join('')}</select>` : '';
   return `
     <nav class="comment-pagination" aria-label="Kommentarseiten">
       <div class="comment-pagination-summary">
-        ${rangeText}
+        ${rangeText}${timeLabel ? `<span class="comment-page-time">${escapeHtml(timeLabel)}</span>` : ''}
         ${rename}${manager}
       </div>
       <div class="comment-pagination-actions">

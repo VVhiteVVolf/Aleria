@@ -56,3 +56,24 @@ test('unauthenticated and invalid requests cannot write metadata',async()=>{
     const db=database();await assert.rejects(run(db,payload));assert.equal(db.writes.length,0);
   }
 });
+
+test('bundle plus empty successor is one metadata-only transaction; settings and names survive other edits',async()=>{
+  const original={threadId,current:'ended',sceneBackup:{status:'complete'},updatedAt:{seconds:12,nanoseconds:3}};
+  const db=database(original),nextPage={id:'regular-next',title:'Danach',after:page.end,time:{calendarDate:{year:1740,month:3,day:11},seconds:43200}};
+  await run(db,request({kind:'create',page,nextPage}));
+  assert.equal(db.writes.length,1);assert.equal(db.record().commentPageBundles.regularPages.length,1);
+  await run(db,request({kind:'configure',pageSize:40},1,'configure-size'));
+  await run(db,request({kind:'rename',pageId:page.id,title:'Morgen'},2,'rename-old-bundle'));
+  assert.equal(db.record().commentPageBundles.pageSize,40);assert.deepEqual(db.record().commentPageBundles.regularPages,[nextPage]);
+  const after=db.record();delete after.commentPageBundles;assert.deepEqual(after,original);
+  assert(db.writes.every(write=>Object.keys(write).join(',')==='commentPageBundles'));
+});
+
+test('a new page and page-size edits retain replay protection and conflict detection',async()=>{
+  const db=database();await run(db,request());
+  const payload=request({kind:'regular',page:{id:'next',title:'',after:page.end,time:null}},1,'add-successor');
+  await run(db,payload);await run(db,payload);assert.equal(db.writes.length,2);
+  await assert.rejects(run(db,request({kind:'configure',pageSize:25},1,'stale-page-size')),error=>error.code==='aborted');
+  await assert.rejects(run(db,request({kind:'configure',pageSize:0},2,'invalid-page-size')),error=>error.code==='invalid-argument');
+  assert.equal(db.writes.length,2);
+});

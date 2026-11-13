@@ -165,6 +165,21 @@ ergänzt um die isolierte Firestore-/Zweibrowser-Integration unter
 `diagnostics/frame-fit-comment-bundles-20261113/`. Die Quellenprüfung läuft in
 `scene-presentation`, das Backend im regulären Functions-Predeploy.
 
+Die Seitenverwaltung stellt die Zahl der Kommentare pro regulärer Seite für
+die jeweilige Szene ein (1–1000, Standard 75). Reguläre Seiten lassen sich
+benennen. „Neue Seite“ legt eine dauerhafte Grenze nach dem letzten Kommentar
+an; beim Bündeln kann dieselbe Folgeseite atomar mit angelegt werden. Sie bleibt
+auch leer erreichbar und nimmt nachfolgende Kommentare auf. Seitengrenzen
+lassen sich aufheben, ohne Kommentare zu löschen. Namen und Seitengrenzen
+bleiben auch bei einer späteren Änderung der regulären Seitengröße erhalten.
+
+Optional tragen reguläre Seitengrenzen ein Aleria-Datum mit Uhrzeit. Der Adapter
+`comment-page-time.mjs` bindet dies in die bestehende Szenenuhr ein, einschließlich
+der zunächst leeren Folgeseite. Ohne Zeitanker läuft die vorherige Zeit weiter.
+Es entstehen weder künstliche Kommentare noch Regenerations-/Kampftransaktionen.
+Metadatenschema 2 liest Schema 1 vollständig; alte Clients können Schema 2 nicht
+bearbeiten und dadurch dessen neue Felder nicht versehentlich verwerfen.
+
 ## Kompakte Szenenbedienung
 
 `styles/session-controls-compact.css` besitzt die kleinere Szenennavigation,

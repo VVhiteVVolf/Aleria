@@ -349,19 +349,20 @@ function renderCommentsToScroll(scroll, comments) {
     });
   }
   const sceneTimelineById = new Map(sceneTimeline.map(entry => [String(entry.comment?.id || ''), entry]));
-  const lastTimedEntry = sceneTimeline.slice().reverse().find(entry => Number.isFinite(entry.endSeconds));
+  const lastTimedEntry = window.AleriaCommentPageBundles?.trailingTime?.(sortedComments)
+    || sceneTimeline.slice().reverse().find(entry => Number.isFinite(entry.endSeconds));
   updateSceneClockTimeline(clockRoot, sceneStartDate, lastTimedEntry);
   const paginationTop = renderCommentPaginationControls(threadId, pageInfo);
   const paginationBottom = renderCommentPaginationControls(threadId, pageInfo);
-  if (sortedComments.length === 0) {
+  if (visibleComments.length === 0) {
     detachCommentAnimObserver(scroll);
-    const emptyTitle = escapeHtml(scroll.dataset.emptyTitle || 'Noch keine Stimmen');
-    const emptyText = escapeHtml(scroll.dataset.emptyText || 'Sei der Erste.');
+    const emptyTitle = escapeHtml(sortedComments.length ? 'Neue Seite' : scroll.dataset.emptyTitle || 'Noch keine Stimmen');
+    const emptyText = escapeHtml(sortedComments.length ? 'Hier geht die Szene mit dem nächsten Kommentar weiter.' : scroll.dataset.emptyText || 'Sei der Erste.');
     scroll.innerHTML = `${paginationTop}
       <div class="comment-empty">
         <div>${emptyTitle}</div>
         <div class="comment-empty-sub">${emptyText}</div>
-      </div>`;
+      </div>${paginationBottom}`;
   } else {
     const units = visibleComments.map((c, i) => {
       const absoluteIndex = pageInfo.commentItems?.[i]?.index ?? pageInfo.startIndex + i;

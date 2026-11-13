@@ -232,7 +232,10 @@ function buildSceneTimeline(comments = []) {
   let cursor = null;
   let aleriaDayIndex = 1;
   const visible = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(comments) || comments;
+  const pageTimeAnchors = globalThis.AleriaCommentPageBundles?.timeAnchors?.(visible);
   return (typeof sortCommentsByTimeline === 'function' ? sortCommentsByTimeline(visible) : visible).map(comment => {
+    const pageTime = pageTimeAnchors?.get(String(comment.id || ''));
+    if (pageTime) { cursor = pageTime.endSeconds; aleriaDayIndex = pageTime.aleriaEndDayIndex; }
     if (isSceneTimeEventComment(comment)) {
       const event = normalizeSceneTimeEvent(comment.sceneTimeEvent || comment);
       const previousClockDay = Number.isFinite(cursor) ? getSceneDayFromSeconds(cursor) : null;

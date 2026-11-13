@@ -1,5 +1,5 @@
 // Owns only the presentation field on the existing per-thread metadata document.
-import { normalizeBundleMetadata } from './comment-page-bundles-model.mjs';
+import { normalizeBundleMetadata } from './comment-page-bundles-model.mjs?v=20261113-continuation-v2';
 
 export function createCommentPageBundleRepository({ db, sdk, commit, requireUser }) {
   const ref = threadId => sdk.doc(db, 'comment_turns', threadId);
