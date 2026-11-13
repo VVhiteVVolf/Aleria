@@ -764,6 +764,28 @@
     gap: 0.2rem;
   }
 
+  /* Keep the actual scene renderer readable inside the narrow preview column. */
+  .comment-live-preview .comment-entry:not(.comment-entry-compact) {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 8px 10px;
+    max-width: 100%;
+    padding: 12px;
+  }
+  .comment-live-preview .comment-entry:not(.comment-entry-compact) > :first-child {
+    grid-column: 1;
+    grid-row: 1;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+  }
+  .comment-live-preview .comment-entry:not(.comment-entry-compact) .comment-content { display: contents; }
+  .comment-live-preview .comment-entry:not(.comment-entry-compact) .comment-char-header { grid-column: 2; grid-row: 1; min-width: 0; }
+  .comment-live-preview .comment-entry:not(.comment-entry-compact) .comment-body { grid-column: 1 / -1; grid-row: 2; min-width: 0; }
+  .comment-live-preview .comment-entry.right:not(.comment-entry-compact) { grid-template-columns: minmax(0, 1fr) 40px; }
+  .comment-live-preview .comment-entry.right:not(.comment-entry-compact) > :first-child { grid-column: 2; }
+  .comment-live-preview .comment-entry.right:not(.comment-entry-compact) .comment-char-header { grid-column: 1; }
+
 /* Comment form and live preview */
   /* Modal overlay for new comment */
   #comment-form-overlay {
@@ -5170,8 +5192,10 @@
   }
 
   #edit-comment-overlay .edit-comment-text-panel,
+  #edit-comment-overlay .edit-comment-preview-panel,
   #edit-comment-overlay #ec-char-section,
   #edit-comment-overlay #ec-narrator-hint {
     overflow: visible;
+    flex-shrink: 0;
   }
 }

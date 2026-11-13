@@ -8,16 +8,6 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-@media (max-width: 860px) {
-  /* The narrator's stacked panels belong to the form's existing scroll area.
-     Shrinking an overflow-visible editor would place later panels over its inputs. */
-  #edit-step-form[data-comment-mode="narrator"] > .edit-comment-text-panel,
-  #edit-step-form[data-comment-mode="narrator"] > .edit-comment-preview-panel,
-  #edit-step-form[data-comment-mode="narrator"] > #ec-narrator-hint {
-    flex-shrink: 0;
-  }
-}
-
 .comment-foreign-voice-name {
   display: grid;
   gap: 0.3rem;
