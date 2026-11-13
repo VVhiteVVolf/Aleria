@@ -31,6 +31,9 @@ test('metadata-only initialization creates no current turn and no comment record
 test('repeating an acknowledged request is idempotent; changing its payload is rejected',async()=>{
   const db=database(),first=await run(db,request()),again=await run(db,request());
   assert.deepEqual(again,first);assert.equal(db.writes.length,1);
+  assert(!JSON.stringify(db.record().commentPageBundles).includes('erdi'));
+  assert(!Object.hasOwn(db.record().commentPageBundles,'updatedBy'));
+  await assert.rejects(run(db,request(undefined,0,'mutation-first',{uid:'patrick',token:{}})),error=>error.code==='already-exists');
   await assert.rejects(run(db,request({kind:'create',page:{...page,title:'Anderer Titel'}})),error=>error.code==='already-exists');
   assert.equal(db.writes.length,1);
 });

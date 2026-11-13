@@ -7,7 +7,7 @@ import { applyBundleMutation, emptyBundleMetadata, normalizeBundleMetadata, norm
 const items = count => Array.from({ length: count }, (_, index) => ({ id: `c-${index}`, order: index*1000, time: index*1000, stable: true, index, comment: { id: `c-${index}`, orderKey: index*1000, text: `Unverändert ${index}` } }));
 function create(metadata, list, index, id, options = {}) {
   const plan = planBundleBefore(list, metadata.pages, list[index].id, options);
-  return applyBundleMutation(metadata, { kind: 'create', page: { id, title: id, start: plan.start, end: plan.end, before: plan.before }, replaceIds: plan.replaceIds }, 'erdi', `mutation-${id}`);
+  return applyBundleMutation(metadata, { kind: 'create', page: { id, title: id, start: plan.start, end: plan.end, before: plan.before }, replaceIds: plan.replaceIds }, `mutation-${id}`);
 }
 function pagination(metadata) {
   const context = vm.createContext({ console, escapeHtml: value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;'),
@@ -77,18 +77,18 @@ test('time markers inside a megapage stay visible and later day labels retain th
 test('renaming and unbundling affect presentation metadata only; titles are escaped in navigation',()=>{
   const list=items(180);let metadata=create(emptyBundleMetadata(),list,150,'Am Tor');
   const bounds=JSON.stringify(metadata.pages[0]);
-  metadata=applyBundleMutation(metadata,{kind:'rename',pageId:'Am Tor',title:'Abend <img src=x>'},'patrick','rename-one');
+  metadata=applyBundleMutation(metadata,{kind:'rename',pageId:'Am Tor',title:'Abend <img src=x>'},'rename-one');
   assert.equal(metadata.pages[0].start.id,JSON.parse(bounds).start.id);
   const context=pagination(metadata),info=context.getCommentPaginationWindow(list.map(item=>item.comment),'scene::session:one');
   const html=context.renderCommentPaginationControls('scene::session:one',info);
   assert.match(html,/Abend &lt;img src=x&gt;/);assert.doesNotMatch(html,/<img src=x>/);
-  metadata=applyBundleMutation(metadata,{kind:'remove',pageId:'Am Tor'},'patrick','remove-one');
+  metadata=applyBundleMutation(metadata,{kind:'remove',pageId:'Am Tor'},'remove-one');
   assert.equal(metadata.pages.length,0);assert.equal(pagination(metadata).buildCommentTimelinePages(list.map(item=>item.comment)).length,3);
 });
 test('overlapping or malformed operations fail without modifying the existing metadata',()=>{
   const list=items(30),metadata=create(emptyBundleMetadata(),list,10,'Erste'),before=JSON.stringify(metadata);
   const plan=planBundleBefore(list,[],list[20].id);
-  assert.throws(()=>applyBundleMutation(metadata,{kind:'create',page:{id:'overlap',title:'Überlappung',start:plan.start,end:plan.end,before:plan.before}},'erdi','overlap-request'),/bereits gebündelt/);
+  assert.throws(()=>applyBundleMutation(metadata,{kind:'create',page:{id:'overlap',title:'Überlappung',start:plan.start,end:plan.end,before:plan.before}},'overlap-request'),/bereits gebündelt/);
   assert.throws(()=>normalizeBundleTitle('   '));assert.throws(()=>normalizeBundleTitle('x'.repeat(121)));
   assert.throws(()=>normalizeBundleMetadata({version:2,pages:[]}));assert.throws(()=>validateBundleThreadId('scene/escape::session:x'));
   assert.throws(()=>validateBundleThreadId('a::page:x'));assert.equal(JSON.stringify(metadata),before);

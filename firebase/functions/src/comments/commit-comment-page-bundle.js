@@ -11,18 +11,19 @@ export async function commitCommentPageBundleOperation(request, { db = getFirest
     if (!Number.isSafeInteger(data.expectedRevision) || data.expectedRevision < 0) throw new CommentPageBundleError('invalid-argument', 'Die Seiteneinteilung muss zuerst geladen werden.');
     if (typeof data.mutationId !== 'string' || !/^[a-zA-Z0-9_-]{8,120}$/.test(data.mutationId)) throw new CommentPageBundleError('invalid-argument', 'Ungültige Auftragskennung.');
     const operation = normalizeBundleMutation(data.operation);
-    const mutationHash = createHash('sha256').update(JSON.stringify(operation)).digest('hex');
+    // Bind replay to this account and request without storing/exporting its UID.
+    const mutationHash = createHash('sha256').update(JSON.stringify([request.auth.uid, data.mutationId, operation])).digest('hex');
     const reference = db.collection('comment_turns').doc(threadId);
     let result;
     await db.runTransaction(async transaction => {
       const snapshot = await transaction.get(reference);
       const current = normalizeBundleMetadata(snapshot.exists ? snapshot.data().commentPageBundles : null);
-      if (current.lastMutationId === data.mutationId && current.updatedBy === request.auth.uid) {
+      if (current.lastMutationId === data.mutationId) {
         if (current.lastMutationHash !== mutationHash) throw new HttpsError('already-exists', 'Dieser Auftrag wurde bereits mit anderem Inhalt gespeichert. Aktualisiere die Seiteneinteilung.');
         result = current; return;
       }
       if (current.revision !== data.expectedRevision) throw new HttpsError('aborted', 'Die Seiteneinteilung wurde inzwischen geändert. Aktualisiere die Vorschau und versuche es erneut.');
-      result = { ...applyBundleMutation(current, operation, request.auth.uid, data.mutationId), lastMutationHash: mutationHash };
+      result = { ...applyBundleMutation(current, operation, data.mutationId), lastMutationHash: mutationHash };
       // Deliberately merge only this field. Current turn, backups, timestamps,
       // comments and every mechanical record retain their original values.
       transaction.set(reference, { ...(snapshot.exists ? {} : { threadId }), commentPageBundles: { ...result, updatedAt: timestamp() } }, { merge: true });
