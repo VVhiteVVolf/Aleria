@@ -33,9 +33,9 @@ for (const record of families) {
 }
 
 const newGuardHouseIds = new Set(['haus-brandyddyn', 'haus-curiad', 'haus-caelrith', 'haus-myrgath', 'haus-aelgorn']);
-const newReleaseHouseIds = new Set([...newGuardHouseIds, 'haus-aurdden']);
+const newReleaseHouseIds = new Set([...newGuardHouseIds, 'haus-aurdden', 'haus-halenrhyd', 'haus-caeffyn', 'haus-ruddgraen']);
 
-test('Die bisherigen Hausseiten samt historischer ID-Prüfsumme und die sechs neuen Häuser bleiben erreichbar', async () => {
+test('Die bisherigen Hausseiten samt historischer ID-Prüfsumme und die neun neuen Häuser bleiben erreichbar', async () => {
   const completedPageIds = [
     'haus-blevis', 'haus-brogar', 'haus-crewe', 'haus-glyn', 'haus-jernigan', 'haus-talfryn',
     'haus-tarw', 'haus-tynged', 'haus-cochdon', 'haus-llythfor', 'haus-twyllod', 'perllan', 'melog', 'pert', 'haus-gwernant',
