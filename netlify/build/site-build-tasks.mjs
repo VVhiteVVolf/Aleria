@@ -469,7 +469,7 @@ export const SITE_BUILD_TASKS = [
       'diagnostics/fleischsammler-quest-20261102/',
       'Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/',
       'Stammbäume/tests/gwynthor-fleischsammler.test.js', 'Karten/tests/fleischsammler-map.test.mjs',
-      'Karten/tests/support/stille-einkehr-pin-history.mjs',
+      'Karten/tests/support/stille-einkehr-pin-history.mjs', 'Karten/tests/support/halenrhyd-pin-history.mjs',
       'Karten/tools/build-fleischsammler-localities.mjs', 'Karten/modules/households/',
       'Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/'],
     commands: [['Karten/tools/build-fleischsammler-localities.mjs', '--check'],

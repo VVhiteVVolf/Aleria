@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { projectStilleEinkehrOriginalPins } from './support/stille-einkehr-pin-history.mjs';
+import { projectHalenrhydOriginalPins } from './support/halenrhyd-pin-history.mjs';
 
 const directory = new URL('../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/', import.meta.url);
 const read = file => JSON.parse(readFileSync(new URL(file, directory), 'utf8'));
@@ -74,7 +75,7 @@ test('the focused admission preserves every other pin and all map metadata', () 
   // farm. Project only that acknowledged patch back to its retained original
   // before checking this earlier seven-location admission's boundary.
   const pert = read('pert-maesglas.source.json');
-  const earlierPins = projectStilleEinkehrOriginalPins(pins)
+  const earlierPins = projectStilleEinkehrOriginalPins(projectHalenrhydOriginalPins(pins))
     .map(pin => pin.id === pert.pinId ? pert.originalPin : pin);
   const preservation = source.publicationPreservation || source.preservation;
   assert.equal(hash(earlierPins.filter(pin => !changedIds.has(pin.id))), preservation.untouchedPinsSha256);
@@ -82,4 +83,15 @@ test('the focused admission preserves every other pin and all map metadata', () 
   assert.equal(hash(documentMetadata), preservation.documentMetadataSha256);
   assert.ok(revision > preservation.originalRevision);
   assert.notEqual(updatedAt, preservation.originalUpdatedAt);
+});
+
+test('the later two Halenrhyd locations remain exact and cannot hide another map edit', () => {
+  const projected = projectHalenrhydOriginalPins(data.state.pins);
+  const originals = read('halenrhyd.source.json').publicProjection.originalPins;
+  for (const original of originals) assert.deepEqual(projected.find(pin => pin.id === original.id), original);
+  const changed = structuredClone(data.state.pins);
+  changed.find(pin => pin.id === 'gwynthor-marking-063').text += ' Unreviewed edit.';
+  assert.throws(() => projectHalenrhydOriginalPins(changed));
+  assert.deepEqual(projected.filter(pin => !originals.some(original => original.id === pin.id)),
+    data.state.pins.filter(pin => !originals.some(original => original.id === pin.id)));
 });
