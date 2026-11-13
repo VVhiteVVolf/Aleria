@@ -23,7 +23,8 @@ const eligible = records.filter(({ section, entry }) => evaluateVenueScope(entry
 const expected = ['gwynthor-zum-kleinen-durst', 'modul-1781474092957', 'celtigerns-letzte-rast', 'goettliche-eleganz', 'gwynthor-zum-vollen-korb',
   'gwynthor-badehaus-fontani', 'gwynthor-gestiefelte-muschi', 'gwynthor-zum-letzten-heller', 'zum-dritten-funken', 'gwynthor-zur-klingenden-krone',
   'die-lachende-nixe', 'herberge-bei-owains-anwesen', 'modul-1781813764249', 'zum-honigtoertchen', 'zum-roten-drachen-taverne', 'zum-roten-tor',
-  'nadel-und-faden-gwniwr', 'naht-und-siegel', 'die-goldene-fassung', 'der-sternenfang-aurdden'];
+  'nadel-und-faden-gwniwr', 'naht-und-siegel', 'die-goldene-fassung', 'der-sternenfang-aurdden',
+  'zum-silberhalm-halenrhyd', 'rhosmeres-roesser-gwynthor', 'zum-schiefen-nagel-ruddgraen'];
 
 test('only the actual culture-tab sales locations qualify, including legacy Story-tagged shops', () => {
   assert.deepEqual(eligible.map(row => row.entry.id).sort(), expected.sort());
