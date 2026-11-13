@@ -1,0 +1,28 @@
+.comment-page-bundle-overlay { position:fixed; inset:0; z-index:2100; display:none; align-items:center; justify-content:center; padding:16px; background:#291c18b3; }
+.comment-page-bundle-overlay.active { display:flex; }
+.comment-page-bundle-card { width:min(620px,100%); max-height:92dvh; overflow:auto; padding:18px; border:1px solid #997335; border-radius:8px; background:#faf5e6; color:#463620; box-shadow:0 12px 44px #20180f66; font-family:'EB Garamond',serif; }
+.comment-page-bundle-card [hidden] { display:none; }
+.comment-page-bundle-card header,.comment-page-bundle-card footer { display:flex; align-items:center; gap:8px; }
+.comment-page-bundle-card header { justify-content:space-between; margin-bottom:16px; }
+.comment-page-bundle-card h2 { margin:0; font:600 1rem 'Cinzel',serif; }
+.comment-page-bundle-card button { padding:5px 9px; border:1px solid #ad8b4f; border-radius:4px; background:#f4e8cc; color:#47351d; font:inherit; cursor:pointer; }
+.comment-page-bundle-card button:disabled { opacity:.5; cursor:default; }
+.comment-page-bundle-card button[type=submit] { background:#345e53; border-color:#345e53; color:#fff9e8; }
+.comment-page-bundle-title-field { display:grid; gap:5px; font-weight:600; }
+.comment-page-bundle-title-field input { width:100%; box-sizing:border-box; border:1px solid #b79c67; border-radius:4px; padding:8px; background:#fffdf6; color:#463620; font:inherit; }
+.comment-page-bundle-options { display:grid; gap:8px; margin-block:14px; }
+.comment-page-bundle-options label { display:flex; align-items:center; gap:7px; }
+.comment-page-bundle-options input { width:15px; height:15px; margin:0; accent-color:#345e53; }
+.comment-page-bundle-range { padding:10px; background:#eee4cb; border-radius:4px; }
+.comment-page-bundle-merge,.comment-page-bundle-hint { color:#786449; font-size:.9rem; }
+.comment-page-bundle-error { color:#963a2a; padding:8px; border-left:3px solid currentColor; }
+.comment-page-bundle-card footer { margin-top:18px; flex-wrap:wrap; }
+.comment-page-bundle-card footer > span { flex:1; }
+.comment-page-bundle-list { margin:0; padding:0; list-style:none; display:grid; gap:9px; }
+.comment-page-bundle-list li { display:flex; align-items:center; gap:6px; padding:9px 0; border-bottom:1px solid #d7c7a5; }
+.comment-page-bundle-list li > div { display:grid; gap:3px; flex:1; min-width:0; overflow-wrap:anywhere; }
+.comment-page-bundle-list small { color:#786449; }
+.comment-pagination-page[data-comment-bundle-id] { border-color:#587468; background:#e1e9df; }
+.comment-pagination-page[data-comment-bundle-id].active { background:#345e53; color:#fff9e8; border-color:#345e53; }
+.comment-pagination-select { max-width:min(16rem,100%); min-width:0; padding:4px; border:1px solid #ad8b4f; border-radius:4px; background:#fbf6e9; color:#47351d; font:inherit; }
+@media(max-width:480px) { .comment-page-bundle-card { padding:12px; } .comment-page-bundle-card h2 { font-size:.84rem; } .comment-page-bundle-list li { flex-wrap:wrap; } .comment-page-bundle-list li > div { flex-basis:100%; } }

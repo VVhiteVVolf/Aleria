@@ -25,6 +25,7 @@ const files = [
   'characters/character-save-guard.js',
   'item-register/item-register-companion-firebase.js',
   'comments/comment-activity-preview.js',
+  'comments/comment-page-bundles-model.mjs',
   'combat-critical/combat-critical-conditions.js',
   'combat-critical/combat-critical-lifecycle.js',
   'combat-critical/combat-critical-resolution.js',

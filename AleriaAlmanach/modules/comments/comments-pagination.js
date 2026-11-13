@@ -43,40 +43,51 @@ function pushCommentTimelineCommentPages(pages, items, options = {}) {
   }
 }
 
-function buildCommentTimelinePages(comments) {
+function buildCommentTimelinePages(comments, threadId = '') {
   const visibleComments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(comments) || comments;
   const allComments = Array.isArray(visibleComments) ? visibleComments : [];
   const pages = [];
   let segmentItems = [];
   let breakCount = 0;
 
-  allComments.forEach((comment, index) => {
-    const item = { comment, index };
-    if (!isCommentTimelineSegmentBreak(comment)) {
-      segmentItems.push(item);
+  const groups = window.AleriaCommentPageBundles?.getGroups(threadId, allComments)
+    || [{ type: 'comments', items: allComments.map((comment, index) => ({ comment, index })) }];
+  groups.forEach(group => {
+    if (group.type === 'bundle') {
+      pages.push({ type: 'bundle', label: group.label, bundleId: group.id, items: group.items,
+        startIndex: group.items[0]?.index || 0, endIndex: (group.items.at(-1)?.index || 0) + 1 });
+      breakCount += group.items.filter(item => isCommentTimelineSegmentBreak(item.comment)).length;
       return;
     }
+    group.items.forEach(item => {
+      const { comment, index } = item;
+      if (!isCommentTimelineSegmentBreak(comment)) {
+        segmentItems.push(item);
+        return;
+      }
 
+      pushCommentTimelineCommentPages(pages, segmentItems);
+      segmentItems = [];
+      breakCount += 1;
+      pages.push({
+        type: 'segment-break',
+        label: getCommentTimelineSegmentLabel(comment, breakCount),
+        items: [item],
+        startIndex: index,
+        endIndex: index + 1
+      });
+    });
     pushCommentTimelineCommentPages(pages, segmentItems);
     segmentItems = [];
-    breakCount += 1;
-    pages.push({
-      type: 'segment-break',
-      label: getCommentTimelineSegmentLabel(comment, breakCount),
-      items: [item],
-      startIndex: index,
-      endIndex: index + 1
-    });
   });
 
-  pushCommentTimelineCommentPages(pages, segmentItems);
   return pages;
 }
 
 function getCommentCurrentPage(threadId, totalCount) {
   const safeThreadId = String(threadId || '').trim();
   const pageCount = Array.isArray(totalCount)
-    ? Math.max(1, buildCommentTimelinePages(totalCount).length)
+    ? Math.max(1, buildCommentTimelinePages(totalCount, safeThreadId).length)
     : getCommentPageCount(totalCount);
   const stored = Number(_commentPaginationState.get(safeThreadId) || 1);
   return Math.max(1, Math.min(pageCount, Number.isFinite(stored) ? stored : 1));
@@ -87,14 +98,14 @@ function setCommentCurrentPage(threadId, page, totalCount = null) {
   if (!safeThreadId) return;
   const pageCount = totalCount == null
     ? Number.MAX_SAFE_INTEGER
-    : (Array.isArray(totalCount) ? Math.max(1, buildCommentTimelinePages(totalCount).length) : getCommentPageCount(totalCount));
+    : (Array.isArray(totalCount) ? Math.max(1, buildCommentTimelinePages(totalCount, safeThreadId).length) : getCommentPageCount(totalCount));
   const next = Math.max(1, Math.min(pageCount, Number(page) || 1));
   _commentPaginationState.set(safeThreadId, next);
 }
 
 function setCommentPageTarget(threadId, target, totalCount) {
   const pageCount = Array.isArray(totalCount)
-    ? Math.max(1, buildCommentTimelinePages(totalCount).length)
+    ? Math.max(1, buildCommentTimelinePages(totalCount, threadId).length)
     : getCommentPageCount(totalCount);
   if (target === 'last') {
     setCommentCurrentPage(threadId, pageCount, totalCount);
@@ -109,7 +120,7 @@ function getCommentPaginationWindow(comments, threadId) {
   const visibleComments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(comments) || comments;
   const allComments = Array.isArray(visibleComments) ? visibleComments : [];
   const totalCount = allComments.length;
-  const pages = buildCommentTimelinePages(allComments);
+  const pages = buildCommentTimelinePages(allComments, threadId);
   const pageCount = Math.max(1, pages.length);
   const currentPage = getCommentCurrentPage(threadId, allComments);
   const page = pages[currentPage - 1] || { items: [], label: '1', startIndex: 0, endIndex: 0, type: 'comments' };
@@ -123,6 +134,7 @@ function getCommentPaginationWindow(comments, threadId) {
     pages,
     pageLabel: page.label,
     pageType: page.type,
+    bundleId: page.bundleId || '',
     startIndex: page.startIndex || 0,
     endIndex: page.endIndex || 0
   };
@@ -155,6 +167,7 @@ function buildCommentPaginationPageButtons(threadId, pageInfo) {
         data-action="set-comment-page"
         data-comment-thread-id="${escapeHtml(threadId)}"
         data-comment-page="${page}"
+        title="${escapeHtml(pageLabel)}"${pageMeta.bundleId ? ` data-comment-bundle-id="${escapeHtml(pageMeta.bundleId)}"` : ''}
         aria-current="${active ? 'page' : 'false'}">${escapeHtml(pageLabel)}</button>`);
     previousPage = page;
   });
@@ -163,21 +176,28 @@ function buildCommentPaginationPageButtons(threadId, pageInfo) {
 }
 
 function renderCommentPaginationControls(threadId, pageInfo) {
-  if (!threadId || !pageInfo || pageInfo.pageCount <= 1) return '';
+  if (!threadId || !pageInfo) return '';
+  const bundleCount = window.AleriaCommentPageBundles?.count(threadId) || 0;
+  if (pageInfo.pageCount <= 1 && !bundleCount) return '';
 
   const { currentPage, pageCount, startIndex, endIndex, totalCount, pageLabel } = pageInfo;
   const safeThreadId = escapeHtml(threadId);
   const prevPage = Math.max(1, currentPage - 1);
   const nextPage = Math.min(pageCount, currentPage + 1);
-  const rangeText = pageInfo.pageType === 'segment-break'
+  const rangeText = !totalCount ? 'Noch keine Kommentare.' : pageInfo.pageType === 'segment-break'
     ? escapeHtml(String(pageLabel || 'Abschnitt'))
     : `${escapeHtml(String(pageLabel || currentPage))} · Kommentare ${startIndex + 1}-${endIndex} von ${totalCount}`;
+  const manager = bundleCount ? `<button type="button" class="comment-pagination-btn" data-comment-page-action="manage" data-comment-thread-id="${safeThreadId}">Seiten verwalten</button>` : '';
+  const rename = pageInfo.bundleId ? `<button type="button" class="comment-pagination-btn" data-comment-page-action="rename" data-comment-thread-id="${safeThreadId}" data-page-id="${escapeHtml(pageInfo.bundleId)}">Seite umbenennen</button>` : '';
+  const selection = bundleCount && pageCount > 7 ? `<select class="comment-pagination-select" data-comment-page-select data-comment-thread-id="${safeThreadId}" aria-label="Kommentarseite wählen">${pageInfo.pages.map((page,index)=>`<option value="${index+1}"${index+1===currentPage?' selected':''}>${escapeHtml(page.type==='bundle'?page.label:`Seite ${page.label}`)}</option>`).join('')}</select>` : '';
   return `
     <nav class="comment-pagination" aria-label="Kommentarseiten">
       <div class="comment-pagination-summary">
         ${rangeText}
+        ${rename}${manager}
       </div>
       <div class="comment-pagination-actions">
+        ${selection}
         <button
           type="button"
           class="comment-pagination-btn"
@@ -215,7 +235,7 @@ function setCommentPageForCommentId(threadId, commentId, comments = null) {
   if (!safeThreadId || !safeCommentId) return false;
 
   const sortedComments = comments || sortCommentsByTimeline(_commentCache[safeThreadId] || []);
-  const pages = buildCommentTimelinePages(sortedComments);
+  const pages = buildCommentTimelinePages(sortedComments, safeThreadId);
   const index = sortedComments.findIndex(comment => String(comment?.id || '') === safeCommentId);
   if (index < 0) return false;
 

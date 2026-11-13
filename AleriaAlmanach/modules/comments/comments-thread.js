@@ -120,7 +120,10 @@ function stopCommentLiveUpdates(options = {}) {
     _commentLiveUnsubscribe = null;
   }
   _commentLiveThreadId = null;
-  if (!options.preserveTurn) stopCommentTurnUpdates();
+  if (!options.preserveTurn) {
+    stopCommentTurnUpdates();
+    window.AleriaCommentPageBundles?.unbind();
+  }
 }
 
 function isCurrentCommentScroll(scroll, threadId) {
@@ -183,6 +186,7 @@ async function loadCommentsIntoPage(entryId, forceRefresh = false, options = {})
   if (!scroll) return;
   const loadGeneration = ++_commentLoadGeneration;
   scroll.dataset.commentThreadId = entryId;
+  void window.AleriaCommentPageBundles?.bindThread(entryId);
   let pageTarget = options.page;
   const withBuiltinTestComments = comments => {
     const incoming = Array.isArray(comments) ? comments : [];
@@ -353,7 +357,7 @@ function renderCommentsToScroll(scroll, comments) {
     detachCommentAnimObserver(scroll);
     const emptyTitle = escapeHtml(scroll.dataset.emptyTitle || 'Noch keine Stimmen');
     const emptyText = escapeHtml(scroll.dataset.emptyText || 'Sei der Erste.');
-    scroll.innerHTML = `
+    scroll.innerHTML = `${paginationTop}
       <div class="comment-empty">
         <div>${emptyTitle}</div>
         <div class="comment-empty-sub">${emptyText}</div>
@@ -477,6 +481,10 @@ function renderCommentInsertControl(comment, idx, comments) {
   const sceneTimeInsertButton = currentThreadKind === 'session'
     ? `<button type="button" data-action="open-scene-time-insert-after" data-comment-id="${safeId}" title="Alle folgenden Beitraege bis zum naechsten Tag-Marker zu einem benannten Tag zusammenfassen">Tag danach benennen</button>`
     : '';
+  const bundle = window.AleriaCommentPageBundles?.getBundle(getCurrentCommentThreadId(), id);
+  const bundleButton = currentThreadKind === 'session'
+    ? `<button type="button" data-comment-page-action="before" data-comment-thread-id="${escapeHtml(getCurrentCommentThreadId())}" data-comment-id="${safeId}">${bundle ? 'Gebündelte Seite bearbeiten' : 'Kommentare davor bündeln'}</button>`
+    : '';
   return `
     <div class="comment-insert-control">
       <button type="button" data-action="open-comment-form-after" data-comment-id="${safeId}">${label}</button>
@@ -484,6 +492,7 @@ function renderCommentInsertControl(comment, idx, comments) {
       ${moduleInsertButton}
       <button type="button" data-action="open-attachment-form-after" data-comment-id="${safeId}">Anhang danach</button>
       ${sceneTimeInsertButton}
+      ${bundleButton}
     </div>`;
 }
 

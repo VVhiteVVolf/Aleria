@@ -10,6 +10,7 @@
     import { createFirebaseAccountActions } from './modules/auth/firebase-account-actions.js';
     import { firebasePublicConfig } from './modules/auth/firebase-public-config.js';
     import { createCommentActivityRepository } from './modules/comments/comment-activity-repository.js?v=20261104-startup-v1';
+    import { createCommentPageBundleRepository } from './modules/comments/comment-page-bundles-firebase.mjs?v=20261113-v1';
     import { compactMechanicalMetadata }
       from "./modules/combat/combat-resolution-storage.js?v=20260804-referee-v1";
     import { finalizeCommittedCommentNarration }
@@ -47,6 +48,8 @@
       if (event.detail?.threadId && Array.isArray(event.detail.comments)) commentActivity.update(event.detail.threadId, event.detail.comments);
     });
     const functions = getFunctions(app, 'europe-west1');
+    const commentPageBundles = createCommentPageBundleRepository({ db, sdk: { doc, getDoc, onSnapshot },
+      commit: httpsCallable(functions, 'commitCommentPageBundle', { timeout: 20000 }), requireUser: requireFirebaseUser });
     const commitCombatCommentCallable = httpsCallable(functions, 'commitCombatComment', { timeout: 30000 });
     const commitSkillCommentCallable = httpsCallable(functions, 'commitSkillComment', { timeout: 30000 });
     const commitSceneRestCallable = httpsCallable(functions, 'commitSceneRest', { timeout: 30000 });
@@ -569,6 +572,7 @@
     }
 
     window._fb = {
+      ...commentPageBundles,
       calendar: createCalendarRepository({
         db, sdk: { collection, onSnapshot, doc, runTransaction, serverTimestamp },
         requireUser: requireFirebaseUser, getCalendar: () => globalThis.AleriaCalendar

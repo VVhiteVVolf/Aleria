@@ -130,6 +130,41 @@ bleiben HTML. Die Animation betrifft nur das dekorative Leuchten; reduzierte
 Bewegung wird berücksichtigt. Quellen und Bildmanifest liegen unter
 `assets/speech-frame-lab`, Prompts unter `docs/art/speech-frame-lab`.
 
+## Benannte Kommentarseiten
+
+Unter jedem normalen Szenenkommentar steht „Kommentare davor bündeln“.
+Der Dialog nennt die Anzahl und bündelt standardmäßig die noch ungebündelten
+Kommentare vor dieser Grenze. Der Grenzkommentar und frühere benannte Seiten
+können ausdrücklich mit einbezogen werden. Eine benannte Seite unterliegt
+nicht der normalen 75-Kommentare-Aufteilung. Umbenennen und Auflösen stehen
+an der Seitennavigation sowie in der Seitenverwaltung; Kommentare werden dabei
+weder verschoben noch gekürzt oder gelöscht.
+
+`comment-page-bundles-model.mjs` besitzt Grenzauflösung und Mutation, der
+Controller die lokale Ansicht und Abonnements, `comment-page-bundles-ui.mjs`
+ausschließlich den Dialog und `comment-page-bundles-firebase.mjs` den Adapter.
+Der vorhandene Paginator verwendet diese Gruppen und behält außerhalb davon
+seine bisherigen Tagesgrenzen und Seitengröße. IDs sind primäre Anker;
+gespeicherte Reihenfolge/Zeit dienen bei gelöschten Grenzen als Rückfall.
+Unauflösbare importierte Grenzen bleiben in der Verwaltung bearbeitbar,
+während ihre Kommentare normal angezeigt werden.
+
+Die gemeinsame Darstellung liegt ausschließlich unter
+`comment_turns/<threadId>.commentPageBundles`. Bestehende Szenensicherungen
+und deren Import erhalten dieses Metadatenfeld. Der authentifizierte Callable
+`commitCommentPageBundle` schreibt nur dieses Feld, auch nach Sitzungsende;
+Redestab, Sicherungen, Kommentare und Spielwerte bleiben unverändert. Er verlangt
+keine Admin- oder Besitzerrolle. Eigene Revision und Auftragskennung mit
+Inhaltshash verhindern doppelte Bestätigungen und das Überschreiben einer
+gleichzeitigen Änderung. Fehler lassen den eingegebenen Titel im Dialog stehen;
+„Einteilung aktualisieren“ lädt die aktuelle Fassung vor einem neuen Versuch.
+Es gibt keine stille rein lokale Speicherung und keine Lockerung der Regeln.
+
+Fachprüfungen: `comment-page-bundles.test.mjs` und das gleichnamige Backendtest,
+ergänzt um die isolierte Firestore-/Zweibrowser-Integration unter
+`diagnostics/frame-fit-comment-bundles-20261113/`. Die Quellenprüfung läuft in
+`scene-presentation`, das Backend im regulären Functions-Predeploy.
+
 ## Kompakte Szenenbedienung
 
 `styles/session-controls-compact.css` besitzt die kleinere Szenennavigation,
