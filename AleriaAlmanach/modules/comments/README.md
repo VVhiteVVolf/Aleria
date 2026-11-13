@@ -194,3 +194,31 @@ Fachprüfungen: `fazit-block-editor.test.mjs`, `scene-presentation.test.mjs` und
 `comments-controls.test.mjs`, gemeinsam in der nativen Gruppe
 `scene-presentation`. Der lokale Browserbeleg für diesen Ausbau liegt unter
 `diagnostics/fazit-redesign-20261112/`.
+
+## Begrenzte Optimierung der Szenendarstellung
+
+Die Ungelesen-Zusammenfassung wird in `scene-read-state.js` einmal je
+Kommentar-Render aus dem aktuellen sichtbaren Bestand berechnet. Der Renderer
+reicht sie an die einzelnen Beitragszeilen weiter. Es gibt keinen dauerhaften
+Historiencache; Bearbeitung, Löschung, neue Beiträge und Szenenwechsel werden
+weiterhin unmittelbar aus dem aktuellen Bestand ausgewertet. Technische
+Regenerationsereignisse bleiben aus der sichtbaren Ungelesen-Anzeige entfernt.
+
+`comments-pagination.js` verwendet die bereits ermittelte Seiteneinteilung zur
+Auswahl der aktuellen Seite. Sie wird nicht ein zweites Mal berechnet. Die
+Seitengrenzen, Megaseiten, leeren Folgeseiten, Namen, Zeitanker und Größen bleiben
+unverändert.
+
+`character-data.js` trennt die bestehende Cast-Reihenfolge der Charakterakten
+von der Ergänzung des Kreaturenkatalogs. Eine direkte Charakter-ID kann so aus
+derselben bisherigen Charakterprojektion aufgelöst werden, ohne sämtliche
+Kreaturen aufzubereiten. Vollständige Auswahl und Kreaturen-/Aliasauflösung
+verwenden weiterhin den vollständigen bisherigen Weg. Es gibt keinen neuen
+dauerhaften Figuren- oder Inventarcache.
+
+Regression: `tests/comment-render-performance.test.mjs` prüft lineare Arbeit bei
+langen Megaseiten, aktuelle Ungelesen-Werte, einmalige Seiteneinteilung,
+Cast-Reihenfolge, Namens-/ID-Abgrenzung, Kreaturen und aktualisierte/archivierte
+Figuren. Der Fall ist in der bestehenden nativen Gruppe `scene-presentation`
+enthalten. Messung und echte Browserprüfung mit synthetischen Daten:
+`diagnostics/scene-performance-20261113/`.

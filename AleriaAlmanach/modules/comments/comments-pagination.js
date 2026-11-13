@@ -100,13 +100,17 @@ function buildCommentTimelinePages(comments, threadId = '') {
   return pages;
 }
 
+function getStoredCommentPage(threadId, pageCount) {
+  const stored = Number(_commentPaginationState.get(String(threadId || '').trim()) || 1);
+  return Math.max(1, Math.min(pageCount, Number.isFinite(stored) ? stored : 1));
+}
+
 function getCommentCurrentPage(threadId, totalCount) {
   const safeThreadId = String(threadId || '').trim();
   const pageCount = Array.isArray(totalCount)
     ? Math.max(1, buildCommentTimelinePages(totalCount, safeThreadId).length)
     : getCommentPageCount(totalCount);
-  const stored = Number(_commentPaginationState.get(safeThreadId) || 1);
-  return Math.max(1, Math.min(pageCount, Number.isFinite(stored) ? stored : 1));
+  return getStoredCommentPage(safeThreadId, pageCount);
 }
 
 function setCommentCurrentPage(threadId, page, totalCount = null) {
@@ -138,7 +142,7 @@ function getCommentPaginationWindow(comments, threadId) {
   const totalCount = allComments.length;
   const pages = buildCommentTimelinePages(allComments, threadId);
   const pageCount = Math.max(1, pages.length);
-  const currentPage = getCommentCurrentPage(threadId, allComments);
+  const currentPage = getStoredCommentPage(threadId, pageCount);
   const page = pages[currentPage - 1] || { items: [], label: '1', startIndex: 0, endIndex: 0, type: 'comments' };
   const visibleItems = page.items || [];
   return {

@@ -12,19 +12,26 @@ function getSceneReadBaseline(threadId) {
   return value;
 }
 
-function getSceneFirstUnreadCommentId(threadId, comments = []) {
+function getSceneUnreadSummary(threadId, comments = []) {
   const baseline = getSceneReadBaseline(threadId);
-  if (!baseline) return '';
+  const summary = { firstUnreadId: '', count: 0 };
+  if (!baseline) return summary;
   const visibleComments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(comments) || comments;
-  const first = visibleComments.find((comment, index) => getCommentActivityMs(comment, index) > baseline);
-  return String(first?.id || '');
+  visibleComments.forEach((comment, index) => {
+    if (!(getCommentActivityMs(comment, index) > baseline)) return;
+    if (!summary.count) summary.firstUnreadId = String(comment?.id || '');
+    summary.count += 1;
+  });
+  return summary;
 }
 
-function renderSceneUnreadDivider(threadId, comment, comments = []) {
-  const firstUnreadId = getSceneFirstUnreadCommentId(threadId, comments);
+function getSceneFirstUnreadCommentId(threadId, comments = []) {
+  return getSceneUnreadSummary(threadId, comments).firstUnreadId;
+}
+
+function renderSceneUnreadDivider(threadId, comment, comments = [], unread = null) {
+  const { firstUnreadId, count } = unread || getSceneUnreadSummary(threadId, comments);
   if (!firstUnreadId || String(comment?.id || '') !== firstUnreadId) return '';
-  const visibleComments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(comments) || comments;
-  const count = visibleComments.filter((item, index) => getCommentActivityMs(item, index) > getSceneReadBaseline(threadId)).length;
   return `<div class="scene-unread-divider" data-scene-unread-divider><span>${count} ${count === 1 ? 'neuer Beitrag' : 'neue Beiträge'} seit deinem letzten Besuch</span></div>`;
 }
 

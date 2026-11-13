@@ -364,10 +364,11 @@ function renderCommentsToScroll(scroll, comments) {
         <div class="comment-empty-sub">${emptyText}</div>
       </div>${paginationBottom}`;
   } else {
+    const unread = typeof getSceneUnreadSummary === 'function' ? getSceneUnreadSummary(threadId, sortedComments) : null;
     const units = visibleComments.map((c, i) => {
       const absoluteIndex = pageInfo.commentItems?.[i]?.index ?? pageInfo.startIndex + i;
       const key = String(c?.id ?? `idx-${absoluteIndex}`);
-      const unreadDivider = typeof renderSceneUnreadDivider === 'function' ? renderSceneUnreadDivider(threadId, c, sortedComments) : '';
+      const unreadDivider = typeof renderSceneUnreadDivider === 'function' ? renderSceneUnreadDivider(threadId, c, sortedComments, unread) : '';
       const timeEntry = sceneTimelineById.get(String(c?.id || ''));
       const quietTrade = !!c?.sceneTrade || c?.inventoryTransaction?.trade === true || c?.sceneInventoryTransfer?.presentation === 'compact';
       const timeMarkup = !quietTrade && typeof renderSceneCommentTime === 'function' ? renderSceneCommentTime(timeEntry) : '';

@@ -480,7 +480,9 @@ async function loadSceneActorData() {
   if (failed) throw failed.reason;
 }
 
-function getAvailableCommentCharacters() {
+// Cast ordering belongs to character records. Creature projections are appended
+// only when the caller needs the full actor picker or a non-character lookup.
+function getCommentCharactersInCastOrder() {
   const castIds = getCurrentCommentCastIds();
   const allCharacters = getVisibleCharacterRecords();
   const byId = new Map(allCharacters.map(char => [String(char.id || '').trim(), char]));
@@ -504,10 +506,14 @@ function getAvailableCommentCharacters() {
       return !seenIds.has(charId);
     });
 
-    return appendAvailableCreatureActors([...prioritized, ...remainder]);
+    return [...prioritized, ...remainder];
   }
 
-  return appendAvailableCreatureActors(allCharacters);
+  return allCharacters;
+}
+
+function getAvailableCommentCharacters() {
+  return appendAvailableCreatureActors(getCommentCharactersInCastOrder());
 }
 
 function appendAvailableCreatureActors(characters = []) {
@@ -518,9 +524,13 @@ function appendAvailableCreatureActors(characters = []) {
 
 function getAvailableCommentCharacterById(id) {
   const safeId = String(id || '').trim();
-  const characters = getAvailableCommentCharacters();
+  if (!safeId) return null;
+  const characters = getCommentCharactersInCastOrder();
   const byId = new Map(characters.map(char => [String(char.id || '').trim(), char]));
-  return resolveCommentCastCharacter(safeId, characters, byId);
+  const direct = byId.get(safeId);
+  if (direct) return direct;
+  const actors = appendAvailableCreatureActors(characters);
+  return resolveCommentCastCharacter(safeId, actors, new Map(actors.map(actor => [String(actor.id || '').trim(), actor])));
 }
 
 function getAvailableCommentCharacterByName(name) {
