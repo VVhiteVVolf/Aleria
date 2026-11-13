@@ -1,3 +1,16 @@
+# Gwynthorer Pferdehändler: Releasevorbereitung vom 13. November 2026
+
+Drei beauftragte Betriebe direkt unter Gwynthor-Stadt: Zum Silberhalm,
+Rhosmeres Rösser – Gwynthor und Zum Schiefen Nagel. Halenrhyd/Caeffyn/Ruddgraen
+mit Hausseiten und Familien, Kyria als Finanzverwalterin statt Bankkorrespondenz.
+16 benannte Pferdeunikate, neun getrennte Szenen und tatsächliche Sattlerwaren.
+51 aktive eigene Motive; 57 Fassungen bleiben versioniert. Ruddgraen betreibt
+ausschließlich Mischlingsankauf/Weiterverkauf ohne Zucht und Sattlerei.
+Öffentliche Quelle gezielt aus eigener Featureänderung hergestellt; bestehende
+öffentliche Verfeinerungen und unabhängige Arbeiten bleiben erhalten.
+Die lokale Figurenprojektion bleibt außerhalb dieser statischen Gitübernahme.
+Prüf-/Releasebelege werden separat lokal erhalten.
+
 # Adharath: öffentlicher Vorbereitungsauftrag vom 6. November 2026
 
 Der Nutzer hat die Veröffentlichung der neuen Adharath-Werkstatt samt aktualisierter Übersicht ausdrücklich beauftragt. Zwölf Clanvorschläge, 13 Wappen, drei Standescomics und fünf Kriegerprototypen sind enthalten. Adharath bleibt der Volksname; Dúinreach das ausgelöschte Fürstentum. Sippenführer heißen Ceann. Keine Personen-, Stammbaum- oder produktiven Spielwerte werden angelegt oder verändert. Unabhängige lokale Aufträge und private Bildquellen sind nicht Teil dieses Releases.

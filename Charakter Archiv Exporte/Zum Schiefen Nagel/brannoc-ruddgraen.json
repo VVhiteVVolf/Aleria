@@ -1,0 +1,155 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-13T15:00:08.683Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Zum Schiefen Nagel/brannoc-ruddgraen.json",
+  "character": {
+    "name": "Brannoc Ruddgraen",
+    "title": "Inhaber · Pferdeankauf",
+    "fraktion": "Familie Ruddgraen",
+    "role": "Inhaber · Pferdeankauf",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Zum Schiefen Nagel · Gwynthor-Stadt",
+    "origin": "Gwynthor · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "57 Jahre. Mürrischer älterer Pferdehändler mit breiter Halbglatze und grau gewordenen rötlichen Haaren an den Seiten. Führt das kleine Gestüt Zum Schiefen Nagel. Kauft kräftige Gebrauchsmischlinge von Bauern, Söldnern und Reisenden an und verkauft sie nach Beobachtung weiter. Seine knappen Antworten und sein Brummen machen Verhandlungen selten gemütlich. Bekannte Eigenheiten und ungeklärte Abstammung müssen trotzdem im Kaufzettel stehen. Eigene Pferdezucht betreibt er nicht.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-13T15:00:08.683Z",
+    "updatedAt": "2026-11-13T15:00:08.683Z",
+    "portrait": "../AleriaAlmanach/assets/gwynthor-horse-resale/portraits/brannoc-ruddgraen-v1.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Brannoc Ruddgraen",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Brannoc Ruddgraen"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "57 Jahre"
+        },
+        {
+          "label": "Geburt",
+          "value": "1683"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Inhaber · Pferdeankauf"
+        }
+      ],
+      "biography": {
+        "portrait": "../AleriaAlmanach/assets/gwynthor-horse-resale/portraits/brannoc-ruddgraen-v1.png",
+        "biographyTitle": "Person und Familienbetrieb",
+        "biographyText": "<p>57 Jahre. Mürrischer älterer Pferdehändler mit breiter Halbglatze und grau gewordenen rötlichen Haaren an den Seiten. Führt das kleine Gestüt Zum Schiefen Nagel. Kauft kräftige Gebrauchsmischlinge von Bauern, Söldnern und Reisenden an und verkauft sie nach Beobachtung weiter. Seine knappen Antworten und sein Brummen machen Verhandlungen selten gemütlich. Bekannte Eigenheiten und ungeklärte Abstammung müssen trotzdem im Kaufzettel stehen. Eigene Pferdezucht betreibt er nicht.</p>",
+        "historyTitle": "Die Ruddgraen",
+        "historyText": "<p>Der Gwynthorer Haushalt führt den kleinen Pferdehandel Zum Schiefen Nagel. Er kauft Gebrauchsmischlinge von Bauern, Söldnern und Reisenden und verkauft sie nach Beobachtung weiter. Eigene Pferdezucht, Landgestüt und Sattlerei gehören nicht zum Betrieb.</p>",
+        "documentsTitle": "Familie und Ort",
+        "documents": [
+          {
+            "title": "Familie Ruddgraen",
+            "text": "Eltern und vier Kinder.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-ruddgraen&mode=view&person=brannoc-ruddgraen"
+          },
+          {
+            "title": "Zum Schiefen Nagel",
+            "text": "Der kleine Pferdehandel in Gwynthor-Stadt.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=zum-schiefen-nagel-ruddgraen"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-ruddgraen--brannoc-ruddgraen"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-ruddgraen--brannoc-ruddgraen",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1683",
+      "death": "",
+      "houseId": "house-ruddgraen",
+      "houseName": "Familie Ruddgraen",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-ruddgraen",
+          "personId": "brannoc-ruddgraen",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-13T15:00:08.683Z",
+          "lastSyncedAt": "2026-11-13T15:00:08.683Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-ruddgraen&mode=view&person=brannoc-ruddgraen",
+          "fingerprint": "{\"name\":\"Brannoc Ruddgraen\",\"title\":\"Inhaber · Pferdeankauf\",\"birth\":\"1683\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-ruddgraen\",\"portrait\":\"../AleriaAlmanach/assets/gwynthor-horse-resale/portraits/brannoc-ruddgraen-v1.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"edryssa-ruddgraen\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ruddgraen--edryssa-ruddgraen\",\"name\":\"Edryssa Ruddgraen\"}],\"children\":[{\"personId\":\"telynna-ruddgraen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ruddgraen--telynna-ruddgraen\",\"name\":\"Telynna Ruddgraen\"},{\"personId\":\"rhonessa-ruddgraen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ruddgraen--rhonessa-ruddgraen\",\"name\":\"Rhonessa Ruddgraen\"},{\"personId\":\"elvynna-ruddgraen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ruddgraen--elvynna-ruddgraen\",\"name\":\"Elvynna Ruddgraen\"},{\"personId\":\"bedryn-ruddgraen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ruddgraen--bedryn-ruddgraen\",\"name\":\"Bedryn Ruddgraen\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "edryssa-ruddgraen",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ruddgraen--edryssa-ruddgraen",
+            "name": "Edryssa Ruddgraen"
+          }
+        ],
+        "children": [
+          {
+            "personId": "telynna-ruddgraen",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ruddgraen--telynna-ruddgraen",
+            "name": "Telynna Ruddgraen"
+          },
+          {
+            "personId": "rhonessa-ruddgraen",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ruddgraen--rhonessa-ruddgraen",
+            "name": "Rhonessa Ruddgraen"
+          },
+          {
+            "personId": "elvynna-ruddgraen",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ruddgraen--elvynna-ruddgraen",
+            "name": "Elvynna Ruddgraen"
+          },
+          {
+            "personId": "bedryn-ruddgraen",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ruddgraen--bedryn-ruddgraen",
+            "name": "Bedryn Ruddgraen"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-ruddgraen--brannoc-ruddgraen",
+    "age": 57,
+    "race": "Mensch"
+  }
+}

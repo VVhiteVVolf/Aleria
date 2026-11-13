@@ -1,3 +1,4 @@
+import { KYRIA_STUD_ASSIGNMENT } from './caeffyn-aurdden-marriage.js';
 // Authored roster shared by genealogy, house content and the jeweller projection.
 // Bank relatives deliberately have no commissioned portraits or shop employment.
 const FAMILY_ID = 'haus-aurdden';
@@ -8,7 +9,7 @@ function member(id, name, sex, birth, title, notes, options = {}) {
   return Object.freeze({ id, name, sex, birth: String(birth), death,
     age: (death ? Number(death) : 1740) - Number(birth), title, notes, branch, spouse, shopEmployee,
     worldPersonId: `person--${FAMILY_ID}--${id}`,
-    portrait: portrait ? `${PORTRAIT_ROOT}/${id}.png` : '', portraitNeeded: portrait,
+    portrait: typeof portrait === 'string' ? portrait : portrait ? `${PORTRAIT_ROOT}/${id}.png` : '', portraitNeeded: !!portrait,
     ...extra });
 }
 
@@ -75,8 +76,8 @@ export const AURDDEN_FAMILY_PEOPLE = Object.freeze([
     '50 Jahre. Ehefrau Pereths und Mutter Ellrics, Kyrias und Neddans. Betreut Bücher und Korrespondenz im Bankzweig. Kein Ladenposten im Juwelier; ihr Herkunftshaus bleibt offen.', { spouse: true, branch: 'bank', portrait: false }),
   member('ellric-aurdden', 'Ellric Aurdden', 'male', 1716, 'Bankzweig · Kontor und Abrechnung',
     '24 Jahre. Ältestes Kind Pereths und Uffyrias. Unterstützt Kontor und Abrechnung des Bankzweigs. Kein Juwelierposten; unverheiratet und ohne Verlobung.', { branch: 'bank', portrait: false }),
-  member('kyria-aurdden', 'Kyria Aurdden', 'female', 1721, 'Bankzweig · Schriftverkehr',
-    '19 Jahre. Tochter Pereths und Uffyrias. Lernt die geschäftliche Korrespondenz des Bankzweigs. Keine Beschäftigung im Schmuckladen; unverheiratet und ohne Verlobung.', { branch: 'bank', portrait: false }),
+  member('kyria-aurdden', 'Kyria Aurdden', 'female', 1721, KYRIA_STUD_ASSIGNMENT.title,
+    KYRIA_STUD_ASSIGNMENT.notes, KYRIA_STUD_ASSIGNMENT),
   member('neddan-aurdden', 'Neddan Aurdden', 'male', 1728, 'Jüngstes Kind des Bankvetters',
     '12 Jahre. Jüngster Sohn Pereths und Uffyrias. Lebt im Haushalt des Bankzweigs und besitzt weder Bankamt noch Juwelierposten. Unverheiratet und ohne Verlobung.', { branch: 'bank', portrait: false })
 ]);

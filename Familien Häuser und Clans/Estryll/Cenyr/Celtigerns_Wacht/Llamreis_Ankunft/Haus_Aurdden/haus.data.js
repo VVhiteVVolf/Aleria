@@ -102,8 +102,8 @@ window.HAEUSER_DATA = {
     "succession": "Die drei Brüder leiten den Juwelier gemeinsam. Für die nächste Generation ist keine feste geschäftliche Nachfolge beschlossen. Die Banklinie führt Pereth mit Uffyria; ihre Kinder sind nicht mit Ladenämtern versehen.",
     "cultureReligion": "Die Familie ist in Gwynthors cenyrischem Handwerks- und Handelsleben verwurzelt. Das runde Wappen zeigt einen goldenen Schwan und drei Saphirsterne auf Purpur: Licht über dunklem Wasser. Ein eigener Kult oder eine besondere religiöse Befugnis ist nicht festgelegt.",
     "conflictsAlliances": "Die unmittelbare Dienst- und Geschäftsbindung gilt Haus Loer. Avelin Aurdden (27) und Aeron Loer (28) sind verlobt; ihre Ehe ist noch nicht geschlossen. Die älteren Loer-Ehen bleiben unverändert. Cyrwen und Lleirena sind an unbekannte Ehemänner und Häuser wegverheiratet. Pereth ist über die Brüder Iwrwyn und Oeneth ein echter erster Vetter der drei Ladenführer.",
-    "court": "Kyrwyn verantwortet Entwurf und Leitung, Thalan Werkstatt und Edelsteine, Saithen Beratung und Sonderaufträge. Avelena, Firwen und Perdella haben eigene Aufgaben im Juwelier; ältere Kinder arbeiten oder lernen unter Aufsicht. Die jüngsten Kinder besitzen keine selbstständigen Ladenposten. Zwei aldrimarische Söldner bewachen den Laden als fremde Beschäftigte. Pereth, Uffyria und ihre Kinder gehören ausschließlich zum Bankzweig.",
-    "familyTree": "Unbekanntes Gründerpaar → Hausknoten → ein serieller Zeitsprung → Heledric und Lleirwen. Von deren Söhnen Iwrwyn und Oeneth gehen der Juwelier- und der Bankzweig aus. Der Bankzweig ist bis zu Pereths drei Kindern ausgearbeitet, bleibt jedoch vorerst ohne Porträts. Die Verlobung Avelins mit Aeron wird in beiden Herkunftsakten mit denselben Identitäts- und Beziehungsschlüsseln geführt.",
+    "court": "Kyrwyn verantwortet Entwurf und Leitung, Thalan Werkstatt und Edelsteine, Saithen Beratung und Sonderaufträge. Avelena, Firwen und Perdella haben eigene Aufgaben im Juwelier; ältere Kinder arbeiten oder lernen unter Aufsicht. Die jüngsten Kinder besitzen keine selbstständigen Ladenposten. Zwei aldrimarische Söldner bewachen den Laden als fremde Beschäftigte. Pereth, Uffyria, Ellric und Neddan gehören zum Bankzweig. Kyria ist mit Maelrig Caeffyn verheiratet und verwaltet die Finanzen von Rhosmeres Rösser – Gwynthor; ihre frühere Korrespondenzstelle bleibt als unbesetzte Rolle erhalten.",
+    "familyTree": "Unbekanntes Gründerpaar → Hausknoten → ein serieller Zeitsprung → Heledric und Lleirwen. Von deren Söhnen Iwrwyn und Oeneth gehen der Juwelier- und der Bankzweig aus. Kyria bleibt als Tochter Pereths sichtbar und ist mit direktem Familienlink an Maelrig Caeffyn verheiratet. Nur sie erhält im bisherigen Bankzweig ein neues Porträt. Die Verlobung Avelins mit Aeron bleibt in beiden Herkunftsakten erhalten.",
     "historicalFigures": "Die folgenden Karten enthalten alle 33 benannten Familienangehörigen. Unbekannte Gründer, Ehemänner und Cyrions unbekannte Mutter bleiben unbenannte Platzhalter im Stammbaum."
   },
   "sectionTitles": {
@@ -175,6 +175,12 @@ window.HAEUSER_DATA = {
       "src": "../Stammbäume/assets/images/placeholders/female.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aurdden&mode=view&person=uffyria-spouse-aurdden",
       "alt": "Uffyria",
+      "format": "portrait"
+    },
+    "hof-offices-6": {
+      "src": "../Stammbäume/assets/images/placeholders/female.png",
+      "href": "",
+      "alt": "Silhouette · Korrespondenz · Bankzweig nicht benannt",
       "format": "portrait"
     },
     "haus-figur-1": {
@@ -364,7 +370,7 @@ window.HAEUSER_DATA = {
       "format": "portrait"
     },
     "haus-figur-32": {
-      "src": "../Stammbäume/assets/images/placeholders/female.png",
+      "src": "../Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-studs/portraits/kyria-aurdden-v1.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aurdden&mode=view&person=kyria-aurdden",
       "alt": "Kyria Aurdden",
       "format": "portrait"
@@ -444,6 +450,13 @@ window.HAEUSER_DATA = {
             "detail": "1690 · 50 Jahre",
             "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-aurdden&mode=view&person=uffyria-spouse-aurdden",
             "imageKey": "hof-offices-5"
+          },
+          {
+            "name": "Nicht benannt",
+            "role": "Korrespondenz · Bankzweig",
+            "detail": "",
+            "href": "",
+            "imageKey": "hof-offices-6"
           }
         ]
       }
@@ -673,9 +686,9 @@ window.HAEUSER_DATA = {
       },
       {
         "group": "Die Familie Aurdden",
-        "role": "Bankzweig · Schriftverkehr",
+        "role": "Hofverwalterin · Finanzen von Rhosmeres Rösser – Gwynthor",
         "name": "Kyria Aurdden",
-        "description": "1721 · 19 Jahre. Tochter Pereths und Uffyrias. Lernt die geschäftliche Korrespondenz des Bankzweigs. Keine Beschäftigung im Schmuckladen; unverheiratet und ohne Verlobung.",
+        "description": "1721 · 19 Jahre. Tochter Pereth Aurddens und Uffyrias. Die im Bankzweig gelernte geschäftliche Korrespondenz bildet die Grundlage ihrer neuen Aufgabe. Sie ist mit Maelrig Caeffyn verheiratet und führt als Hofverwalterin die Finanzen der Gwynthorer Niederlassung von Rhosmeres Rösser. Sie prüft Rechnungen, Verträge, vereinbarte Beteiligungen und die getrennten Eigentumsnachweise der Pferde. Ihre frühere Korrespondenzstelle im Aurdden-Bankzweig ist frei; das Paar hat noch keine Kinder.",
         "imageKey": "haus-figur-32"
       },
       {

@@ -8,6 +8,8 @@ const SOURCE_ARCHIVE_ROOTS = [
   'AleriaAlmanach/docs/art/weapon-standards/',
   'AleriaAlmanach/docs/art/ability-icons/',
   'AleriaAlmanach/docs/art/character-origins/',
+  'AleriaAlmanach/docs/art/gwynthor-horse-studs-20261113/',
+  'AleriaAlmanach/docs/art/gwynthor-horse-resale-20261113/',
   'AleriaAlmanach/modules/character-inventory/scripts/',
   'AleriaAlmanach/assets/inventory-ui/',
   'js/biography/sources/',

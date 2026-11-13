@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
-  "revision": 23,
-  "updatedAt": "2026-11-07T23:04:08.317Z",
+  "revision": 24,
+  "updatedAt": "2026-11-13T14:21:27.749Z",
   "state": {
     "pins": [
       {
@@ -5010,67 +5010,50 @@
         "id": "gwynthor-marking-063",
         "x": 0.943603515625,
         "y": 0.2844,
-        "title": "Rosszuchtsiedlung",
+        "title": "Halenrhyd-Landgestüt",
         "cat": "location-rosszuchtsiedlung",
         "kind": "place",
-        "img": "",
-        "imgLink": "",
-        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
-        "crestLink": "",
+        "img": "/AleriaAlmanach/assets/gwynthor-horse-studs/signs/halenrhyd-schild-v1.png",
+        "imgLink": "/AleriaAlmanach/AleriaAlmanach.html?entry=zum-silberhalm-halenrhyd",
+        "crest": "/AleriaAlmanach/assets/gwynthor-horse-studs/wappen/halenrhyd-wappen-v2.png",
+        "crestLink": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-halenrhyd",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
-        "faction": "",
+        "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
+        "house": "Familie Halenrhyd",
+        "faction": "Im Dienst Haus Wyrms",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Halenrhyd-Landgestüt"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Familiengestüt und Rosszucht"
           },
           {
-            "k": "Gewerbe",
-            "v": ""
+            "k": "Besitzer",
+            "v": "Familie Halenrhyd"
           },
           {
-            "k": "Regierungstyp",
-            "v": ""
+            "k": "Leitung",
+            "v": "Bryndor Halenrhyd und Melyssa"
           },
           {
-            "k": "Führung",
-            "v": ""
+            "k": "Aufgaben",
+            "v": "Pferdezucht, Fohlenaufzucht und Bereitung"
           },
           {
-            "k": "Lehensherr",
-            "v": ""
-          },
-          {
-            "k": "Bevölkerung",
-            "v": ""
-          },
-          {
-            "k": "Einwohnerzahl",
-            "v": ""
-          },
-          {
-            "k": "Bekannte Familien",
-            "v": ""
-          },
-          {
-            "k": "Gefahren",
-            "v": ""
-          },
-          {
-            "k": "Ressourcen",
-            "v": ""
+            "k": "Dienstbindung",
+            "v": "Haus Wyrm · keine neue Hoheitsgrenze"
           }
         ],
-        "text": "",
+        "text": "Das eigene Landgestüt der Halenrhyd liegt im östlichen Bannkreis Gwynthors. Bryndor und Melyssa führen mit ihrem Haushalt Zucht, Aufzucht und die Vorbereitung geeigneter Pferde. Der Stadtzweig verkauft Tiere im Gestüt Zum Silberhalm; der eigene Familienhof liefert Futter. Die Dienstbindung an Haus Wyrm bleibt erhalten und begründet keine neue territoriale Herrschaft.",
         "secret": false,
-        "templateId": "siedlung"
+        "templateId": "siedlung",
+        "residentFamilyIds": [
+          "haus-halenrhyd"
+        ]
       },
       {
         "id": "gwynthor-marking-064",
@@ -5216,71 +5199,50 @@
         "id": "gwynthor-marking-066",
         "x": 0.9814453125,
         "y": 0.3023619047619048,
-        "title": "Bauernhof",
+        "title": "Halenrhyd-Futterhof",
         "cat": "muosqiyl9n1p",
         "kind": "place",
-        "img": "",
-        "imgLink": "",
-        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
-        "crestLink": "",
+        "img": "/AleriaAlmanach/assets/gwynthor-horse-studs/signs/halenrhyd-schild-v1.png",
+        "imgLink": "/AleriaAlmanach/AleriaAlmanach.html?entry=zum-silberhalm-halenrhyd",
+        "crest": "/AleriaAlmanach/assets/gwynthor-horse-studs/wappen/halenrhyd-wappen-v2.png",
+        "crestLink": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-halenrhyd",
         "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
         "bannerLink": "",
-        "region": "",
-        "house": "",
-        "faction": "",
+        "region": "Bannkreis Gwynthor · Llamreis Ankunft · Celtigerns Wacht",
+        "house": "Familie Halenrhyd",
+        "faction": "Im Dienst Haus Wyrms",
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Halenrhyd-Futterhof"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Eigener Bauern- und Futterhof"
           },
           {
             "k": "Besitzer",
-            "v": ""
+            "v": "Familie Halenrhyd"
           },
           {
-            "k": "Bewirtschaftung",
-            "v": ""
+            "k": "Leitung",
+            "v": "Odrig Halenrhyd und Rhaenna"
           },
           {
-            "k": "Anbau",
-            "v": ""
+            "k": "Aufgaben",
+            "v": "Futter, Getreide, Gemüse und Viehhaltung"
           },
           {
-            "k": "Erzeugnisse",
-            "v": ""
-          },
-          {
-            "k": "Fläche",
-            "v": ""
-          },
-          {
-            "k": "Arbeitskräfte",
-            "v": ""
-          },
-          {
-            "k": "Versorgung / Abnehmer",
-            "v": ""
-          },
-          {
-            "k": "Zustand",
-            "v": ""
-          },
-          {
-            "k": "Gefahren",
-            "v": ""
-          },
-          {
-            "k": "Besonderheiten",
-            "v": ""
+            "k": "Dienstbindung",
+            "v": "Haus Wyrm · keine neue Hoheitsgrenze"
           }
         ],
-        "text": "",
+        "text": "Der eigene Bauernhof der Halenrhyd wird von Odrig, Rhaenna und ihrem Familienzweig bewirtschaftet. Futterpflanzen, Heu, Getreide und Gemüse sowie die Haltung von Hofvieh bilden seine Grundlage. Er versorgt die familieneigene Rosszucht und den Stadtbetrieb mit vereinbarten Lieferungen; Vorräte und Abrechnung bleiben nachvollziehbar. Grundstücksgröße und konkrete Abgabensätze sind nicht festgelegt.",
         "secret": false,
-        "templateId": "landwirtschaft"
+        "templateId": "landwirtschaft",
+        "residentFamilyIds": [
+          "haus-halenrhyd"
+        ]
       },
       {
         "id": "gwynthor-marking-067",

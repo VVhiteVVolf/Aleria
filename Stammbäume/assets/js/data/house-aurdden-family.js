@@ -3,6 +3,7 @@ import { createFamilyPerson, createMarriage, createMarriedAwayBranch, createPare
 import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
 import { AURDDEN_FAMILY_PEOPLE } from './aurdden-people.js';
 import { AURDDEN_EMBLEM, AURDDEN_HOUSE_ID, AURDDEN_AERON_LOER, createAurddenPerson, createAurddenLoerEngagement } from './aurdden-loer-engagement.js';
+import { withKyriaCaeffynMarriage } from './caeffyn-aurdden-marriage.js';
 
 const base = createFounderTimeJumpPlaceholderHouseFamily({
   id: 'haus-aurdden', title: 'Familie Aurdden', emblem: AURDDEN_EMBLEM,
@@ -48,7 +49,7 @@ const unknown = (id, name, sex, familyRole = 'married') => createFamilyPerson({
   extensions: { authoredSource: 'aurdden-20261109', portraitIntentionallyAbsent: true }
 });
 
-export const HOUSE_AURDDEN_FAMILY = Object.freeze({
+export const HOUSE_AURDDEN_FAMILY = withKyriaCaeffynMarriage(Object.freeze({
   ...base,
   houses: [...base.houses,
     { id: 'house-loer', name: 'Haus Loer', motto: '', emblem: 'assets/images/houses/Llamreis Ankunft/haus-loer.png', status: 'active' },
@@ -105,4 +106,4 @@ export const HOUSE_AURDDEN_FAMILY = Object.freeze({
     authoredOn: '2026-11-09',
     sourceNote: 'Ausarbeitung der bereits veröffentlichten Aurdden auf ausdrücklichen Nutzerauftrag vom 9. November 2026. Dienst, Gewinnbeteiligung, Loer-Rohstoffe und häufige historische Ehen stammen aus dem bestehenden Modul der Klingenden Münze; die Aurdden besitzen kein Münzprägerecht und leiten nicht die Rote Bank. Namen, Lebensdaten und aktuelle Familienglieder sind autorisierte neue Ausgestaltung. Unbekannte Gründer, Hausknoten und serieller Zeitsprung vor Heledric; vier konkrete Generationen. Drei Brüder im Alter 55/51/46 mit insgesamt dreizehn ehelichen Kindern und Saithens unehelichem Sohn Cyrion. Zwei Schwestern sind an unbekannte Männer wegverheiratet. Nur Avelin ist mit dem bestehenden, zuvor unverheirateten und unverlobten Aeron Loer verlobt, beidseitig unter derselben Welt- und Verbindungskennung. Keine weiteren Loer-Ehen erzwungen. Der Bankzweig führt über Iwrwyns Bruder Oeneth zu dem echten ersten Vetter Pereth und dessen drei ungebundenen Kindern; für diese sieben Bankangehörigen keine Porträts erstellt. Keine Adelserhebung, keine erfundenen historischen Zwischenahnen und keine unbekannten Angehörigen benannt.'
   }
-});
+}));

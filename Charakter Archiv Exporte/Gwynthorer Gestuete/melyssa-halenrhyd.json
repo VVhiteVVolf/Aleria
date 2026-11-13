@@ -1,0 +1,155 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-13T13:51:53.575Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthorer Gestuete/melyssa-halenrhyd.json",
+  "character": {
+    "name": "Melyssa",
+    "title": "Stutenpflege und Zuchtaufzeichnungen",
+    "fraktion": "Familie Halenrhyd",
+    "role": "Stutenpflege und Zuchtaufzeichnungen",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Halenrhyd-Landgestüt · östlicher Bannkreis Gwynthor",
+    "origin": "Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "42 Jahre. Bryndors Gemahlin. Führt Abstammungsaufzeichnungen und achtet auf feste Routinen bei Stuten und Fohlen.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-13T13:51:53.575Z",
+    "updatedAt": "2026-11-13T13:51:53.575Z",
+    "portrait": null,
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Melyssa",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Melyssa"
+        },
+        {
+          "label": "Geburt",
+          "value": "1698"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "42 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Stutenpflege und Zuchtaufzeichnungen"
+        }
+      ],
+      "biography": {
+        "portrait": "",
+        "biographyTitle": "Familie und Lebensweg",
+        "biographyText": "<p>42 Jahre. Bryndors Gemahlin. Führt Abstammungsaufzeichnungen und achtet auf feste Routinen bei Stuten und Fohlen.</p>",
+        "historyTitle": "Herkunft und Verbindungen",
+        "historyText": "<p>Die Halenrhyd sind eine bürgerliche Familie im Dienst Haus Wyrms. Stadtgestüt, Landzucht und eigener Futterhof werden von drei verwandten Haushalten getragen.</p>",
+        "documentsTitle": "Familie und Betrieb",
+        "documents": [
+          {
+            "title": "Familienstammbaum",
+            "text": "Bestehende Weltidentität und familiäre Verbindungen.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-halenrhyd&mode=view&person=melyssa-halenrhyd"
+          },
+          {
+            "title": "Der zugehörige Betrieb",
+            "text": "Halenrhyd-Landgestüt · östlicher Bannkreis Gwynthor",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=zum-silberhalm-halenrhyd"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-halenrhyd--melyssa-halenrhyd"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-halenrhyd--melyssa-halenrhyd",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1698",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-halenrhyd",
+          "personId": "melyssa-halenrhyd",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-13T13:51:53.575Z",
+          "lastSyncedAt": "2026-11-13T13:51:53.575Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-halenrhyd&mode=view&person=melyssa-halenrhyd",
+          "fingerprint": "{\"name\":\"Melyssa\",\"title\":\"Stutenpflege und Zuchtaufzeichnungen\",\"birth\":\"1698\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"bryndor-halenrhyd\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-halenrhyd--bryndor-halenrhyd\",\"name\":\"Bryndor Halenrhyd\"}],\"children\":[{\"personId\":\"brialeth-halenrhyd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-halenrhyd--brialeth-halenrhyd\",\"name\":\"Brialeth Halenrhyd\"},{\"personId\":\"odrann-halenrhyd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-halenrhyd--odrann-halenrhyd\",\"name\":\"Odrann Halenrhyd\"},{\"personId\":\"gwelric-halenrhyd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-halenrhyd--gwelric-halenrhyd\",\"name\":\"Gwelric Halenrhyd\"},{\"personId\":\"neryssa-halenrhyd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-halenrhyd--neryssa-halenrhyd\",\"name\":\"Neryssa Halenrhyd\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "bryndor-halenrhyd",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-halenrhyd--bryndor-halenrhyd",
+            "name": "Bryndor Halenrhyd"
+          }
+        ],
+        "children": [
+          {
+            "personId": "brialeth-halenrhyd",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-halenrhyd--brialeth-halenrhyd",
+            "name": "Brialeth Halenrhyd"
+          },
+          {
+            "personId": "odrann-halenrhyd",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-halenrhyd--odrann-halenrhyd",
+            "name": "Odrann Halenrhyd"
+          },
+          {
+            "personId": "gwelric-halenrhyd",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-halenrhyd--gwelric-halenrhyd",
+            "name": "Gwelric Halenrhyd"
+          },
+          {
+            "personId": "neryssa-halenrhyd",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-halenrhyd--neryssa-halenrhyd",
+            "name": "Neryssa Halenrhyd"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-halenrhyd--melyssa-halenrhyd",
+    "age": 42,
+    "race": "Mensch"
+  }
+}

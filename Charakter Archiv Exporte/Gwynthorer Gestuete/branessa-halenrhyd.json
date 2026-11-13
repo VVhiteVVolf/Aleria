@@ -1,0 +1,147 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-13T13:51:53.575Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthorer Gestuete/branessa-halenrhyd.json",
+  "character": {
+    "name": "Branessa",
+    "title": "Frühere Hofverwalterin",
+    "fraktion": "Familie Halenrhyd",
+    "role": "Frühere Hofverwalterin",
+    "status": "dead",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Zum Silberhalm · Gwynthor",
+    "origin": "Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "Gemahlin Idrens und Mutter der drei Brüder. Hielt die Rechnungen der Familienbetriebe zusammen.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-13T13:51:53.575Z",
+    "updatedAt": "2026-11-13T13:51:53.575Z",
+    "portrait": null,
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Branessa",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Branessa"
+        },
+        {
+          "label": "Geburt",
+          "value": "1667"
+        },
+        {
+          "label": "Tod",
+          "value": "1737"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Frühere Hofverwalterin"
+        }
+      ],
+      "biography": {
+        "portrait": "",
+        "biographyTitle": "Familie und Lebensweg",
+        "biographyText": "<p>Gemahlin Idrens und Mutter der drei Brüder. Hielt die Rechnungen der Familienbetriebe zusammen.</p>",
+        "historyTitle": "Herkunft und Verbindungen",
+        "historyText": "<p>Die Halenrhyd sind eine bürgerliche Familie im Dienst Haus Wyrms. Stadtgestüt, Landzucht und eigener Futterhof werden von drei verwandten Haushalten getragen.</p>",
+        "documentsTitle": "Familie und Betrieb",
+        "documents": [
+          {
+            "title": "Familienstammbaum",
+            "text": "Bestehende Weltidentität und familiäre Verbindungen.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-halenrhyd&mode=view&person=branessa-halenrhyd"
+          },
+          {
+            "title": "Der zugehörige Betrieb",
+            "text": "Zum Silberhalm · Gwynthor",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=zum-silberhalm-halenrhyd"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-halenrhyd--branessa-halenrhyd"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-halenrhyd--branessa-halenrhyd",
+      "sex": "female",
+      "status": "dead",
+      "birth": "1667",
+      "death": "1737",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-halenrhyd",
+          "personId": "branessa-halenrhyd",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-13T13:51:53.575Z",
+          "lastSyncedAt": "2026-11-13T13:51:53.575Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-halenrhyd&mode=view&person=branessa-halenrhyd",
+          "fingerprint": "{\"name\":\"Branessa\",\"title\":\"Frühere Hofverwalterin\",\"birth\":\"1667\",\"death\":\"1737\",\"sex\":\"female\",\"status\":\"dead\",\"houseId\":\"\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"idren-halenrhyd\",\"type\":\"marriage\",\"status\":\"ended\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-halenrhyd--idren-halenrhyd\",\"name\":\"Idren Halenrhyd\"}],\"children\":[{\"personId\":\"gorweth-halenrhyd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-halenrhyd--gorweth-halenrhyd\",\"name\":\"Gorweth Halenrhyd\"},{\"personId\":\"odrig-halenrhyd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-halenrhyd--odrig-halenrhyd\",\"name\":\"Odrig Halenrhyd\"},{\"personId\":\"bryndor-halenrhyd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-halenrhyd--bryndor-halenrhyd\",\"name\":\"Bryndor Halenrhyd\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "idren-halenrhyd",
+            "type": "marriage",
+            "status": "ended",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-halenrhyd--idren-halenrhyd",
+            "name": "Idren Halenrhyd"
+          }
+        ],
+        "children": [
+          {
+            "personId": "gorweth-halenrhyd",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-halenrhyd--gorweth-halenrhyd",
+            "name": "Gorweth Halenrhyd"
+          },
+          {
+            "personId": "odrig-halenrhyd",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-halenrhyd--odrig-halenrhyd",
+            "name": "Odrig Halenrhyd"
+          },
+          {
+            "personId": "bryndor-halenrhyd",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-halenrhyd--bryndor-halenrhyd",
+            "name": "Bryndor Halenrhyd"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-halenrhyd--branessa-halenrhyd",
+    "age": 70,
+    "race": "Mensch"
+  }
+}

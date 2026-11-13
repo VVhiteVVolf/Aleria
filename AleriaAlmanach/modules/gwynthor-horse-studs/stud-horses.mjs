@@ -1,0 +1,42 @@
+// Individual authored animals, never replenishable breed definitions.
+const horse = (id, name, venue, category, age, sex, appearance, character, history, options = {}) => Object.freeze({
+  id, name, venue, category, age, sex, appearance, character, history, ...options
+});
+export const STUD_HORSES = Object.freeze([
+  horse('kupfersegel', 'Kupfersegel', 'halenrhyd', 'zucht', 6, 'Wallach', 'Kupferfalbe, dunkle Mähne, kleines weißes Stirnmal; kräftig und tragfähig mit etwas kürzeren Läufen.',
+    'Gelassen, neugierig und futterbegeistert. Wartet am Tor lieber auf eine vertraute Stimme, als sich vorzudrängen.',
+    'Aus einer belegten Rhyfel-Stute und einem Hest-Hengst gezogen. Die Familie verfolgte mit der Paarung über mehrere Jahre ein genügsames, tragfähiges Reisepferd; Bodenarbeit und Gewöhnung an Wagenlärm erfolgten am Landgestüt.', { parents: ['rhyfel', 'hest'] }),
+  horse('dornfidel', 'Dornfidel', 'halenrhyd', 'zucht', 5, 'Stute', 'Heller Fuchs mit langer Flachsmähne; feiner Kopf und geschwungener Hals über kompaktem kräftigem Körper.',
+    'Aufmerksam und fein in den Hilfen. Bei hastigen Bewegungen wird sie vorsichtig, bei ruhiger Ansprache arbeitet sie bereitwillig mit.',
+    'Gezielt aus einer Ceffyl-Stute und einem Tirashan-Hengst gezogen. Abstammungsaufzeichnungen begleiten die Veredelung: feinere Reaktionen sollten mit der Trittsicherheit einer Waldkavallerielinie verbunden werden. Kein bereits an einen früheren Reiter gebundener reiner Ceffyl.', { parents: ['ceffyl', 'tirashan'] }),
+  horse('kesselkrume', 'Kesselkrume', 'halenrhyd', 'mischling', 10, 'Wallach', 'Kräftiger dunkelbrauner Arbeitswallach mit schwarzer Mähne und hellem Maul; einfacher breiter Kopf.',
+    'Geduldig und gutmütig. Bleibt bei klappernden Eimern stehen und sucht am Feierabend gern Gesellschaft am Zaun.',
+    'Von einem Bauern angekauft, dessen Sohn den Hof verkleinerte. Er kennt leichte Zug- und Hofarbeit sowie ruhige Ausritte. Zu den Eltern gibt es keine belastbaren Rassenbelege; sein Aussehen ersetzt keinen Abstammungsnachweis.', { priceFactor: .8 }),
+  horse('morgenknopf', 'Morgenknopf', 'halenrhyd', 'mischling', 8, 'Stute', 'Fast schwarzer Dunkelbrauner mit weißem Stern und einer weißen linken Hinterfessel; schlanker gesunder Körper.',
+    'Wach und gesellig. Folgt anderen Pferden gern, lässt sich aber mit ruhigen, deutlichen Hilfen auch allein führen.',
+    'Einer reisenden Söldnergruppe nach Auflösung ihres Gepäckzugs abgekauft. An Lagergeräusche und Reisealltag gewöhnt, ohne nachgewiesene Schlachtrossausbildung. Die genaue Abstammung ist unbekannt.', { priceFactor: 1.05 }),
+  horse('birkenschritt', 'Birkenschritt', 'halenrhyd', 'reinrassig', 6, 'Wallach', 'Graufalber Hest mit dunklem Aalstrich, dichter zottiger Mähne, breiter Brust und kurzen kräftigen Läufen.',
+    'Stoisch und freundlich. Nimmt sich an ungewohnten Übergängen einen Moment Zeit und setzt danach sicher einen Huf vor den anderen.',
+    'Am Landgestüt aus zwei dokumentierten Hest-Eltern aufgezogen. Die Linie wurde auf Genügsamkeit und sichere Arbeit im kühleren Wetter ausgewählt; er kennt Reise- und leichte Zugarbeit.', { breed: 'hest' }),
+  horse('regenzier', 'Regenzier', 'halenrhyd', 'reinrassig', 7, 'Stute', 'Kräftiger goldener Fuchs mit dichter Flachsmähne; breite Brust, tragfähiger Rücken und ruhiges ausdrucksstarkes Haupt.',
+    'Verlässlich, ausdauernd und angenehm unaufgeregt. Reagiert besser auf klare Hilfen als auf ständiges Antreiben.',
+    'Reine Rhyfel-Linie mit belegten Eltern. Von der Fohlenweide bis zur Bereitung im Familienbetrieb begleitet; für längere Reisen und solide Reitarbeit ausgewählt.', { breed: 'rhyfel' }),
+  horse('aurelklang', 'Aurelklang', 'rhosmere', 'zucht', 7, 'Hengst', 'Großer goldener Fuchs mit heller seidiger Mähne, schmaler Blesse, elegantem Hals und kraftvoller Brust.',
+    'Stolz und konzentriert. Prüft einen neuen Menschen aufmerksam und arbeitet bei ruhiger, präziser Führung ausgesprochen fein.',
+    'Aus einer belegten Ceffyl-Stute und einem ausgewählten Rhyfel-Hengst. Die Gilde führte Abstammung, Aufzucht und Bereitung über eine lange Veredelungsplanung zusammen. Maelrig wählte ihn wegen seines ausgeglichenen Gebäudes und der sorgfältigen Ausbildung für Gwynthor aus.', { parents: ['ceffyl', 'rhyfel'] }),
+  horse('silberfaehrte', 'Silberfährte', 'rhosmere', 'zucht', 6, 'Stute', 'Dunkelbraun mit schwarzer Mähne, schmaler Blesse und zwei kleinen weißen Hinterfesseln; kräftig und wendig.',
+    'Arbeitswillig und nervenfest. Wechselt nach einem schnellen Auftrag zuverlässig wieder in ruhigen Schritt.',
+    'Dokumentierte Rhyfel-Tirashan-Veredelung aus einem vertraglichen Partnerbetrieb. Die Gilde stellte Zuchttiere und Fachberatung, der Hof übernahm Aufzucht und Weidehaltung; die Übernahme erfolgte nach der vereinbarten Abrechnung mit Betrieb und Lehnsherrn.', { parents: ['rhyfel', 'tirashan'] }),
+  horse('wiesenkompass', 'Wiesenkompass', 'rhosmere', 'mischling', 7, 'Wallach', 'Rußiger Falbe mit schwarzer Mähne, dunklen Beinen und kleinem weißem Stirnhalbmond; ausgewogenes Gebäude.',
+    'Aufmerksam, freundlich und trittsicher. Bleibt bei unruhigem Verkehr ansprechbar und sucht eher Führung als Flucht.',
+    'Einem fahrenden Händler abgekauft. Nach einer längeren Beobachtungs- und Aufbauzeit durch die Gildenbereiter für verlässliche Reisewege ausgewählt. Körperbau und Verhalten sind geprüft, die Elternrassen bleiben unbewiesen.', { priceFactor: 1.55 }),
+  horse('nesselglanz', 'Nesselglanz', 'rhosmere', 'mischling', 6, 'Stute', 'Rotschimmel mit fuchsfarbenem Kopf und Beinen, rotbrauner Mähne und schmaler weißer Stirnzeichnung.',
+    'Lebhaft und lernfreudig. Begrüßt vertraute Pfleger leise und findet nach Bewegung schnell wieder Ruhe.',
+    'Von einer Reisenden übernommen, die auf ein kleineres Tier wechselte. Die Gilde investierte in Gewöhnung, Pflege und systematische Bereitung. Ein besseres Ausbildungsniveau macht aus ihr kein Pferd mit belegter Abstammung.', { priceFactor: 1.9 }),
+  horse('bernsteinwacht', 'Bernsteinwacht', 'rhosmere', 'reinrassig', 7, 'Hengst', 'Großer goldfarbener Ceffyl mit elfenbeinheller seidiger Mähne, langem geschwungenem Hals und kräftiger feiner Muskulatur.',
+    'Sensibel, stolz und hochintelligent. Braucht feste Bezugspersonen; die Annäherung an einen künftigen Reiter erfolgt behutsam.',
+    'Seltene reine Ceffyl-Linie mit vollständigem Elternnachweis. Ruhig aufgezogen und noch ohne lebenslange Bindung an einen einzigen Reiter vorgestellt. Die Gilde hat ihn lange auf diese erste Übergabe vorbereitet; für unerfahrene Reiter bleibt er ungeeignet.', { breed: 'ceffyl' }),
+  horse('mondzisel', 'Mondzisel', 'rhosmere', 'reinrassig', 6, 'Stute', 'Kompakter muskulöser dunkelbrauner Tirashan mit schwarzer Mähne, kleinem Stern, kurzem Rücken und kräftigen Hufen.',
+    'Wachsam, mutig und zuverlässig. Nimmt Waldgeräusche wahr, ohne deshalb die Arbeit abzubrechen.',
+    'Aus einer dokumentierten Tirashan-Linie eines Gildenpartnerhofs. Auf wechselnden Untergründen sorgfältig ausgebildet und nach Auswahlprüfung nach Gwynthor gebracht. Ihre Stärke liegt in beweglicher Geländearbeit, nicht im schweren Lanzenangriff.', { breed: 'tirashan' })
+]);

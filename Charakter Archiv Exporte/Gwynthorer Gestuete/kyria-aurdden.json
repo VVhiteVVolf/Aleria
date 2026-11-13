@@ -1,0 +1,141 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-13T13:51:53.575Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthorer Gestuete/kyria-aurdden.json",
+  "character": {
+    "name": "Kyria Aurdden",
+    "title": "Hofverwalterin · Finanzen von Rhosmeres Rösser – Gwynthor",
+    "fraktion": "Rhosmeres Rösser · Gwynthor",
+    "role": "Hofverwalterin · Finanzen von Rhosmeres Rösser – Gwynthor",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Rhosmeres Rösser – Gwynthor",
+    "origin": "Rheunwaith · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "19 Jahre. Tochter Pereth Aurddens und Uffyrias. Die im Bankzweig gelernte geschäftliche Korrespondenz bildet die Grundlage ihrer neuen Aufgabe. Sie ist mit Maelrig Caeffyn verheiratet und führt als Hofverwalterin die Finanzen der Gwynthorer Niederlassung von Rhosmeres Rösser. Sie prüft Rechnungen, Verträge, vereinbarte Beteiligungen und die getrennten Eigentumsnachweise der Pferde. Ihre frühere Korrespondenzstelle im Aurdden-Bankzweig ist frei; das Paar hat noch keine Kinder.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-09T17:19:15.387Z",
+    "updatedAt": "2026-11-13T13:51:53.575Z",
+    "portrait": "../Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-studs/portraits/kyria-aurdden-v1.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Kyria Aurdden",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Kyria Aurdden"
+        },
+        {
+          "label": "Geburt",
+          "value": "1721"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "19 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Hofverwalterin · Finanzen von Rhosmeres Rösser – Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-studs/portraits/kyria-aurdden-v1.png",
+        "biographyTitle": "Familie und Lebensweg",
+        "biographyText": "<p>19 Jahre. Tochter Pereth Aurddens und Uffyrias. Die im Bankzweig gelernte geschäftliche Korrespondenz bildet die Grundlage ihrer neuen Aufgabe. Sie ist mit Maelrig Caeffyn verheiratet und führt als Hofverwalterin die Finanzen der Gwynthorer Niederlassung von Rhosmeres Rösser. Sie prüft Rechnungen, Verträge, vereinbarte Beteiligungen und die getrennten Eigentumsnachweise der Pferde. Ihre frühere Korrespondenzstelle im Aurdden-Bankzweig ist frei; das Paar hat noch keine Kinder.</p>",
+        "historyTitle": "Herkunft und Verbindungen",
+        "historyText": "<p>Kyria bleibt die Tochter Pereth Aurddens und Uffyrias. Ihre Ausbildung im Schriftverkehr des Bankzweigs ging der neuen Aufgabe voraus. Die Ehe mit Maelrig Caeffyn und ihre Verwaltung des Gildenstandorts ersetzen diese Herkunft nicht.</p>",
+        "documentsTitle": "Familie und Betrieb",
+        "documents": [
+          {
+            "title": "Familienstammbaum",
+            "text": "Bestehende Weltidentität und familiäre Verbindungen.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-aurdden&mode=view&person=kyria-aurdden"
+          },
+          {
+            "title": "Der zugehörige Betrieb",
+            "text": "Rhosmeres Rösser – Gwynthor",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=rhosmeres-roesser-gwynthor"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-aurdden--kyria-aurdden"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-aurdden--kyria-aurdden",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1721",
+      "death": "",
+      "houseId": "house-aurdden",
+      "houseName": "Familie Aurdden",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "Wegverheiratet"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-aurdden",
+          "personId": "kyria-aurdden",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-09T17:19:15.387Z",
+          "lastSyncedAt": "2026-11-13T13:51:53.575Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-aurdden&mode=view&person=kyria-aurdden",
+          "fingerprint": "{\"name\":\"Kyria Aurdden\",\"title\":\"Hofverwalterin · Finanzen von Rhosmeres Rösser – Gwynthor\",\"birth\":\"1721\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-aurdden\",\"portrait\":\"../AleriaAlmanach/assets/gwynthor-horse-studs/portraits/kyria-aurdden-v1.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"pereth-aurdden\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aurdden--pereth-aurdden\",\"name\":\"Pereth Aurdden\"},{\"personId\":\"uffyria-spouse-aurdden\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aurdden--uffyria-spouse-aurdden\",\"name\":\"Uffyria\"}],\"partners\":[{\"personId\":\"maelrig-caeffyn\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-caeffyn--maelrig-caeffyn\",\"name\":\"Maelrig Caeffyn\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "pereth-aurdden",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-aurdden--pereth-aurdden",
+            "name": "Pereth Aurdden"
+          },
+          {
+            "personId": "uffyria-spouse-aurdden",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-aurdden--uffyria-spouse-aurdden",
+            "name": "Uffyria"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "maelrig-caeffyn",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-caeffyn--maelrig-caeffyn",
+            "name": "Maelrig Caeffyn"
+          }
+        ],
+        "children": []
+      }
+    },
+    "id": "person--haus-aurdden--kyria-aurdden",
+    "race": "Mensch",
+    "age": 19
+  }
+}

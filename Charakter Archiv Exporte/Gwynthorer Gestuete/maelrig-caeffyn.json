@@ -1,0 +1,122 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-13T13:51:53.575Z",
+  "mergeStrategy": "replace-exported-fields",
+  "assignedTab": "Gwynthor",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthorer Gestuete/maelrig-caeffyn.json",
+  "character": {
+    "name": "Maelrig Caeffyn",
+    "title": "Standortleiter · Rhosmeres Rösser – Gwynthor",
+    "fraktion": "Rhosmeres Rösser · Gwynthor",
+    "role": "Standortleiter · Rhosmeres Rösser – Gwynthor",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Rhosmeres Rösser – Gwynthor",
+    "origin": "Ährental · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "62 Jahre. Kräftig gebauter älterer Pferdezüchter und Pferdekenner mit grauem Haar und grauem Bart aus dem Ährental. Bei Rhosmeres Rösser ausgebildet, betreute er über viele Jahre kleinere Niederlassungen, bevor er den großen Standort in Gwynthor übernahm. Er verbindet genaue Abstammungsprüfung mit ruhiger Ausbildung und handelt Partnerschaften mit Zuchtbetrieben und deren Lehnsherren aus. Kyria Aurdden ist seine Frau; sie verantwortet die Finanzen des Standorts. Das Paar hat noch keine Kinder.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-13T13:51:53.575Z",
+    "updatedAt": "2026-11-13T13:51:53.575Z",
+    "portrait": "../Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-studs/portraits/maelrig-caeffyn-v3.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Maelrig Caeffyn",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Maelrig Caeffyn"
+        },
+        {
+          "label": "Geburt",
+          "value": "1678"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "62 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Standortleiter · Rhosmeres Rösser – Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-studs/portraits/maelrig-caeffyn-v3.png",
+        "biographyTitle": "Familie und Lebensweg",
+        "biographyText": "<p>62 Jahre. Kräftig gebauter älterer Pferdezüchter und Pferdekenner mit grauem Haar und grauem Bart aus dem Ährental. Bei Rhosmeres Rösser ausgebildet, betreute er über viele Jahre kleinere Niederlassungen, bevor er den großen Standort in Gwynthor übernahm. Er verbindet genaue Abstammungsprüfung mit ruhiger Ausbildung und handelt Partnerschaften mit Zuchtbetrieben und deren Lehnsherren aus. Kyria Aurdden ist seine Frau; sie verantwortet die Finanzen des Standorts. Das Paar hat noch keine Kinder.</p>",
+        "historyTitle": "Herkunft und Verbindungen",
+        "historyText": "<p>Aus dem Ährental führte sein Weg über die Ausbildung und kleinere Niederlassungen der Gilde nach Gwynthor. Weitere Verwandte werden zunächst nicht einzeln dargestellt.</p>",
+        "documentsTitle": "Familie und Betrieb",
+        "documents": [
+          {
+            "title": "Familienstammbaum",
+            "text": "Bestehende Weltidentität und familiäre Verbindungen.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-caeffyn&mode=view&person=maelrig-caeffyn"
+          },
+          {
+            "title": "Der zugehörige Betrieb",
+            "text": "Rhosmeres Rösser – Gwynthor",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=rhosmeres-roesser-gwynthor"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-caeffyn--maelrig-caeffyn"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-caeffyn--maelrig-caeffyn",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1678",
+      "death": "",
+      "houseId": "house-caeffyn",
+      "houseName": "Familie Caeffyn",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-caeffyn",
+          "personId": "maelrig-caeffyn",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-13T13:51:53.575Z",
+          "lastSyncedAt": "2026-11-13T13:51:53.575Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-caeffyn&mode=view&person=maelrig-caeffyn",
+          "fingerprint": "{\"name\":\"Maelrig Caeffyn\",\"title\":\"Standortleiter · Rhosmeres Rösser – Gwynthor\",\"birth\":\"1678\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-caeffyn\",\"portrait\":\"../AleriaAlmanach/assets/gwynthor-horse-studs/portraits/maelrig-caeffyn-v3.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"kyria-aurdden\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-aurdden--kyria-aurdden\",\"name\":\"Kyria Aurdden\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "kyria-aurdden",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-aurdden--kyria-aurdden",
+            "name": "Kyria Aurdden"
+          }
+        ],
+        "children": []
+      }
+    },
+    "id": "person--haus-caeffyn--maelrig-caeffyn",
+    "age": 62,
+    "race": "Mensch"
+  }
+}

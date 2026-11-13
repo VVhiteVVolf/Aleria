@@ -1,0 +1,3277 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-13T12:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "description": "Halenrhyd · Pferdeankauf, Verkauf und Sattlerei",
+      "icon": "./assets/gwynthor-horse-studs/signs/halenrhyd-schild-v1.png"
+    },
+    "entry": {
+      "id": "zum-silberhalm-halenrhyd",
+      "title": "Zum Silberhalm",
+      "subtitle": "Halenrhyd · Pferdeankauf, Verkauf und Sattlerei",
+      "type": "Gestüt & Pferdehandel",
+      "category": "Gwynthor-Stadt",
+      "symbol": "./assets/gwynthor-horse-studs/signs/halenrhyd-schild-v1.png",
+      "icon": "♞",
+      "stamp": "HALENRHYD · ZUM SILBERHALM",
+      "image": "./assets/gwynthor-horse-studs/scenes/halenrhyd-verkaufsraum-v1.png",
+      "previewImage": "./assets/gwynthor-horse-studs/scenes/halenrhyd-verkaufsraum-v1.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--haus-halenrhyd--gorweth-halenrhyd",
+        "person--haus-halenrhyd--eirfena-halenrhyd",
+        "person--haus-halenrhyd--odrig-halenrhyd",
+        "person--haus-halenrhyd--rhaenna-halenrhyd",
+        "person--haus-halenrhyd--bryndor-halenrhyd",
+        "person--haus-halenrhyd--melyssa-halenrhyd",
+        "person--haus-halenrhyd--rhydor-halenrhyd",
+        "person--haus-halenrhyd--gwenessa-halenrhyd",
+        "person--haus-halenrhyd--cerydd-halenrhyd",
+        "person--haus-halenrhyd--talwern-halenrhyd",
+        "person--haus-halenrhyd--eilrann-halenrhyd",
+        "person--haus-halenrhyd--iffryn-halenrhyd",
+        "person--haus-halenrhyd--enora-halenrhyd",
+        "person--haus-halenrhyd--brialeth-halenrhyd",
+        "person--haus-halenrhyd--odrann-halenrhyd",
+        "person--haus-halenrhyd--gwelric-halenrhyd",
+        "person--haus-halenrhyd--neryssa-halenrhyd",
+        "person--haus-halenrhyd--cynradd-halenrhyd",
+        "person--haus-halenrhyd--ffionna-halenrhyd",
+        "person--haus-halenrhyd--mairfena-halenrhyd",
+        "person--haus-halenrhyd--dewrann-halenrhyd",
+        "person--haus-halenrhyd--gwenrith-halenrhyd",
+        "person--haus-halenrhyd--eirwenna-halenrhyd"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Zum Silberhalm",
+          "commentThreadKey": "halenrhyd-einleitung",
+          "image": "./assets/gwynthor-horse-studs/scenes/halenrhyd-verkaufsraum-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Unter dem silbernen Ross und den drei goldenen Hafergarben kaufen und verkaufen die Halenrhyd Pferde. Stall, Vorführhof und Sattlerei gehören zum Stadtbetrieb; Zucht und Futterversorgung tragen die verwandten Haushalte im Bannkreis.</p><p>Rhyfel, Ceffyl, Hest und Tirashan stehen neben gezielten Veredelungen und angekauften Mischlingen im Angebot. Die benannten Einzelpferde haben eigene Herkunftsgeschichten; in der Sattlerei finden Reiter passende Ausrüstung.</p>",
+          "stats": [
+            [
+              "Ort",
+              "Gwynthor-Stadt"
+            ],
+            [
+              "Betrieb",
+              "Halenrhyd · Pferdeankauf, Verkauf und Sattlerei"
+            ],
+            [
+              "Leitung",
+              "Gorweth Halenrhyd"
+            ],
+            [
+              "Verbindungen",
+              "Haus Wyrm · Klingende Münze · eigene Rosszucht und eigener Futterhof"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Gestütsbio · Die Halenrhyd",
+          "commentThreadKey": "halenrhyd-betrieb-bio",
+          "biographyPage": true,
+          "image": "./assets/gwynthor-horse-studs/scenes/halenrhyd-stall-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "biography": {
+            "biographyTitle": "Betrieb, Herkunft und Verbindungen",
+            "biographyText": "<p>Die große bürgerliche Familie dient Haus Wyrm und besitzt einen Sitz im Achterrat der Klingenden Münze. Gorweth führt das Stadtgestüt mit seiner Frau Eirfena. Sein Bruder Bryndor betreut die Rosszucht im östlichen Bannkreis, Odrig den eigenen Hof für Futter, Getreide, Gemüse und Vieh. Die drei Haushalte bleiben ein Familienverbund mit getrennt nachvollziehbaren Lieferungen und Aufgaben. Der bestehende Hufschmied und die Fleischbetriebe gehören zur wirtschaftlichen Grundlage der Familie; dieses Modul beschreibt Pferdehandel und Pferdezubehör.</p><p>Die Halenrhyd verbinden direkten Pferdehandel mit dem eigenen Familiengestüt und der eigenen Landwirtschaft. Die Sattlerei bietet passende Ausrüstung und Reparaturen. Die Dienstbindung an Wyrm bleibt dabei bestehen; aus ihrem Ratssitz entsteht kein Eigentum an anderen Betrieben.</p><p>Gorweth und Eirfena leben beim Stadtbetrieb. Bryndors Haushalt führt die Landzucht; Odrigs Haushalt trägt Futterwirtschaft, Getreide und Vieh. Angehörige haben eigene Aufgaben und Wohnorte, ohne den Familienzusammenhang zu verlieren.</p>",
+            "worksTitle": "Arbeitsbereiche",
+            "works": [
+              "Ankauf, Herkunftsprüfung und Verkauf",
+              "Zucht, Aufzucht und fachliche Bereitung",
+              "Sattlerei, Riemenwerk und Hufpflege",
+              "Haus Wyrm · Klingende Münze · eigene Rosszucht und eigener Futterhof"
+            ],
+            "documentsTitle": "Familie und Fachwissen",
+            "documents": [
+              {
+                "title": "Die Familie im Stammbaum",
+                "text": "Verwandtschaft, Ehe und familiäre Herkunft.",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-halenrhyd&mode=view"
+              },
+              {
+                "title": "Zuchtbuch und Nachzuchtrechner",
+                "text": "Rassenwissen und bestehende Nachzuchtberechnung.",
+                "link": "../Bestiarium/tiere/pferde/zuchtbuch/"
+              }
+            ],
+            "footer": "Bürgerliche Familie · im Dienst Haus Wyrms · ein Sitz im Achterrat"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Inhaber · Gorweth Halenrhyd",
+          "commentThreadKey": "halenrhyd-leitung-bio",
+          "biographyPage": true,
+          "image": "../Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-studs/portraits/gorweth-halenrhyd-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center top",
+          "biography": {
+            "biographyTitle": "Gorweth Halenrhyd · 49 Jahre",
+            "biographyText": "<p>49 Jahre. Leitet das Gestüt Zum Silberhalm und den städtischen Pferdeankauf und -verkauf. Vertritt die Halenrhyd im Achterrat der Klingenden Münze und wahrt die Dienstbindung an Haus Wyrm. Prüft Herkunft und Eignung eines Pferdes geduldig; seine ruhige Stimme wird bei unklaren Besitzpapieren sehr bestimmt.</p><p>Gorweth kennt den Ankauf ebenso wie den Alltag der eigenen Zucht. Er verbindet die drei Familienzweige und vertritt ihre Interessen nach außen. Pferdekenntnis und kaufmännische Verantwortung liegen für ihn nahe beieinander.</p>",
+            "connectionsTitle": "Seine Frau und Mitverantwortliche",
+            "connections": [
+              {
+                "name": "Eirfena",
+                "detail": "47 Jahre · Stadtverwaltung · Hofhaushalt. 47 Jahre. Gorweths Gemahlin. Verantwortet mit ihm Rechnungen, Termine und den gemeinsamen Stadthaushalt. Kennt die Lieferwege ihrer Verwandten und besteht auf nachvollziehbaren Übergaben.",
+                "image": "../Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-studs/portraits/eirfena-halenrhyd-v1.png",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Verwandtschaft",
+            "documents": [
+              {
+                "title": "Zum Familienbaum",
+                "text": "Drei Betriebszweige und mehrere Generationen der Familie Halenrhyd.",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-halenrhyd&mode=view"
+              }
+            ],
+            "footer": "Stadtgestüt · Landzucht · eigener Futterhof"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hierarchie · Die gesamte Rosszucht",
+          "commentThreadKey": "halenrhyd-hierarchie",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Zum Silberhalm · Rossbetrieb",
+            "eyebrow": "Gwynthor · Celtigerns Wacht",
+            "subtitle": "Stellen und Verantwortlichkeiten · später einzeln besetzbar",
+            "centerLabel": "Zum Silberhalm · Rossbetrieb",
+            "emblem": "../AleriaAlmanach/assets/gwynthor-horse-studs/wappen/halenrhyd-wappen-v2.png",
+            "sideImage": "./assets/gwynthor-horse-studs/scenes/halenrhyd-stall-v1.png",
+            "motto": "Pferdekenntnis · Herkunft · Verlässlichkeit",
+            "description": "<p>Die Abteilungen bilden den gesamten Rossbetrieb mit seinen Außenbeziehungen ab. Jede Karte beschreibt die Rolle und die vorgesehene Stellenzahl. Silhouetten sind unbesetzte Rollenplätze; daraus entstehen keine zusätzlichen Figuren.</p>",
+            "detailsTitle": "Auftrag und Verantwortung",
+            "details": [
+              {
+                "label": "Ort",
+                "value": "Gwynthor-Stadt und zugehörige Betriebswege"
+              },
+              {
+                "label": "Verantwortung",
+                "value": "Haus Wyrm · Klingende Münze · eigene Rosszucht und eigener Futterhof"
+              }
+            ],
+            "chartTitle": "Abteilungen und Rollen",
+            "chartIntro": "Verwaltung, Handel, Zucht, Ausbildung, Handwerk, Versorgung und Schutz.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 72,
+            "cardFontScale": 90,
+            "trees": [
+              {
+                "id": "halenrhyd-leitung",
+                "label": "Leitung und Verwaltung",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Leitung",
+                    "nodes": [
+                      {
+                        "id": "halenrhyd-stelle-direktion",
+                        "title": "Gesamtleitung",
+                        "subtitle": "1 Stelle · Besetzt: Gorweth Halenrhyd",
+                        "portrait": "../Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-studs/portraits/gorweth-halenrhyd-v1.png",
+                        "characterId": "person--haus-halenrhyd--gorweth-halenrhyd",
+                        "text": "<p>Wirtschaftliche und fachliche Verantwortung, große Verträge, Personalauswahl und verbindliche Vertretung des Betriebs.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-verwaltung",
+                        "title": "Hofverwaltung und Finanzen",
+                        "subtitle": "1 Stelle · Besetzt: Eirfena",
+                        "portrait": "../Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-studs/portraits/eirfena-halenrhyd-v1.png",
+                        "characterId": "person--haus-halenrhyd--eirfena-halenrhyd",
+                        "text": "<p>Rechnungen, Zahlungsfristen, Bestandsbücher, Löhne und vereinbarte Beteiligungen prüfen; Hof- und Pferdeeigentum getrennt nachweisen.</p>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Verwaltung und Verträge",
+                    "nodes": [
+                      {
+                        "id": "halenrhyd-stelle-kontorleitung",
+                        "title": "Kontorleitung",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Arbeitsabläufe, Termine und Korrespondenz zusammenführen; der Gesamtleitung prüffähige Unterlagen vorlegen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-vertragsschreiber",
+                        "title": "Vertragsschreiber",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Kauf-, Pacht- und Aufzuchtvereinbarungen ausfertigen; Zustimmung des zuständigen Lehnsherrn und vereinbarte Anteile festhalten.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-buchhaltung",
+                        "title": "Buchführung",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Einnahmen, Ausgaben, Lieferungen und getrennte Eigentumsanteile in nachvollziehbaren Büchern führen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-kontorlehrling",
+                        "title": "Kontorlehrling",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Lesen, Rechnen, Abschriften und geordnete Ablage unter Aufsicht lernen.</p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "halenrhyd-verkauf",
+                "label": "Ankauf und Verkauf",
+                "parentTreeId": "halenrhyd-leitung",
+                "levels": [
+                  {
+                    "label": "Ankauf und Verkauf",
+                    "nodes": [
+                      {
+                        "id": "halenrhyd-stelle-verkaufsleitung",
+                        "title": "Verkaufsleitung",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Ankäufe und Vorstellungen abstimmen; Preise, Eignung und vollständige Übergabeunterlagen verantworten.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-rosspruefer",
+                        "title": "Rossprüfer",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Alter, Gebäude, Umgang, Ausbildung und Herkunft beurteilen; unsichere Abstammungen als solche kennzeichnen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-rosshaendler",
+                        "title": "Pferdehändler",
+                        "subtitle": "2 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Kunden beraten, Tiere vorstellen und Angebote innerhalb der vereinbarten Preis- und Vertragsgrenzen verhandeln.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-vorfuehrer",
+                        "title": "Pferdevorführer",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Tiere sicher führen und auf dem Vorführplatz zeigen; Probiertermine mit den Bereitern abstimmen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-verkaufslehrling",
+                        "title": "Lehrling im Pferdehandel",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Herkunftspapiere, Beratung und sichere Pferdevorstellung unter Aufsicht lernen.</p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "halenrhyd-zucht",
+                "label": "Zucht und Ausbildung",
+                "parentTreeId": "halenrhyd-leitung",
+                "levels": [
+                  {
+                    "label": "Zucht und Aufzucht",
+                    "nodes": [
+                      {
+                        "id": "halenrhyd-stelle-zuchtmeister",
+                        "title": "Zuchtmeister",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Zuchtziele, Paarungen und gesunde Aufzucht fachlich leiten; belegte Linien von unbekannter Abstammung trennen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-zuchtbuch",
+                        "title": "Zuchtbuchführung",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Eltern, Geburten, Eigentumsanteile und Entwicklungsbeobachtungen der einzelnen Pferde dokumentieren.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-stutenpflege",
+                        "title": "Stuten- und Fohlenpfleger",
+                        "subtitle": "2 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Zuchtstuten und Fohlen versorgen; Beobachtungen und auffällige Veränderungen an die Fachleitung melden.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-zuchtlehrling",
+                        "title": "Lehrling in Zucht und Aufzucht",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Fütterung, Gewöhnung, Dokumentation und sicheren Umgang mit Jungtieren unter enger Aufsicht lernen.</p>"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Bereitung und Ausbildung",
+                    "nodes": [
+                      {
+                        "id": "halenrhyd-stelle-bereitungsmeister",
+                        "title": "Bereitungsmeister",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Ausbildungsstand und Belastung planen; sichere Übergänge von Bodenarbeit zum Reiten und zur späteren Verwendung verantworten.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-bodenarbeit",
+                        "title": "Ausbilder für Bodenarbeit",
+                        "subtitle": "2 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Jungpferde behutsam an Führen, Berührung, Geräusche und verständliche Signale gewöhnen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-bereiter",
+                        "title": "Bereiter",
+                        "subtitle": "2 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Geeignete Pferde anreiten und weiter ausbilden; Hilfen, Gelände und Arbeitsaufgaben dem Tier anpassen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-bereiterlehrling",
+                        "title": "Bereiter in Ausbildung",
+                        "subtitle": "2 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Pflege, Bodenarbeit und geeignete Reitaufgaben unter Anleitung üben; keine eigenständige Arbeit mit schwierigen Tieren.</p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "halenrhyd-stall",
+                "label": "Stall und Pferdegesundheit",
+                "parentTreeId": "halenrhyd-leitung",
+                "levels": [
+                  {
+                    "label": "Stall, Weiden und Pferdegesundheit",
+                    "nodes": [
+                      {
+                        "id": "halenrhyd-stelle-stallmeister",
+                        "title": "Stallmeister",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Stalldienst, Futterrationen, sichere Belegung und Absonderung neu eingetroffener Tiere koordinieren.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-stallpflege",
+                        "title": "Pferdepfleger",
+                        "subtitle": "3 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Fütterung, Tränken, Einstreu und tägliche Fell- und Hufkontrolle nach dem vereinbarten Pflegeplan durchführen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-weidehirt",
+                        "title": "Weidehirten",
+                        "subtitle": "2 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Weidegruppen beaufsichtigen, Einfriedungen prüfen und Tiere sicher zwischen Stall und Weide führen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-futterwart",
+                        "title": "Futterwart",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Heu, Hafer und weitere Vorräte trocken lagern; Qualität, Ausgaben und Nachlieferungen kontrollieren.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-rossarzt",
+                        "title": "Rossarzt · vertragliche Fachstelle",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Gesundheitliche Beurteilung und Behandlung nach Fachkunde übernehmen; nicht im Tagesdienst erforderliche Besuche abstimmen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-stalllehrling",
+                        "title": "Lehrlinge in Pferdepflege",
+                        "subtitle": "2 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Tägliche Pflege und sichere Stallarbeit unter Aufsicht lernen.</p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "halenrhyd-sattlerei",
+                "label": "Sattlerei und Hufschmiede",
+                "parentTreeId": "halenrhyd-leitung",
+                "levels": [
+                  {
+                    "label": "Sattlerei und Hufschmiede",
+                    "nodes": [
+                      {
+                        "id": "halenrhyd-stelle-sattlermeister",
+                        "title": "Sattlermeister",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Passform, Sattelbäume, Materialauswahl und Qualität fertiger Lederarbeiten verantworten.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-sattlergeselle",
+                        "title": "Sattlergesellen",
+                        "subtitle": "2 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Sättel und Taschen fertigen, Polster anpassen und angenommene Reparaturen fachgerecht ausführen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-riemer",
+                        "title": "Riemer",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Zaumzeug, Halfter, Gurte und Führriemen zuschneiden, vernähen und auf sichere Verbindung prüfen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-sattlerlehrling",
+                        "title": "Sattlerlehrlinge",
+                        "subtitle": "2 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Lederpflege, Zuschnitt, Nähen und Werkzeuggebrauch unter Anleitung lernen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-hufschmied",
+                        "title": "Hufschmied",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Hufe pflegen und geeignete Beschläge anpassen; Beschlag und Gang mit Pflege- und Ausbildungsleitung abstimmen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-schmiedgehilfe",
+                        "title": "Schmiedgehilfe",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Feuer, Material und Werkzeuge vorbereiten; bei Beschlägen und einfachen Eisenarbeiten unterstützen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-schmiedlehrling",
+                        "title": "Schmiedlehrling",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Sicheren Umgang mit Feuer, Eisen und Werkstattgerät unter Aufsicht lernen.</p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "halenrhyd-versorgung",
+                "label": "Versorgung und Hausdienst",
+                "parentTreeId": "halenrhyd-leitung",
+                "levels": [
+                  {
+                    "label": "Versorgung, Fuhrwesen und Hausdienst",
+                    "nodes": [
+                      {
+                        "id": "halenrhyd-stelle-fuhrmann",
+                        "title": "Fuhrleute",
+                        "subtitle": "2 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Futter, Waren und vereinbarte Übergaben transportieren; Ladung, Routen und Ankunftsbelege prüfen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-lager",
+                        "title": "Lagerwart",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Leder, Wolle, Eisen und Betriebsbedarf getrennt lagern und den Werkstätten nachvollziehbar ausgeben.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-koch",
+                        "title": "Hofküche",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Mahlzeiten für den vereinbarten Personalbedarf planen und zubereiten.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-hausdienst",
+                        "title": "Reinigung und Wäsche",
+                        "subtitle": "2 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Kundenräume, Arbeitswäsche und gemeinschaftliche Flächen pflegen; saubere und verschmutzte Bereiche trennen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-bote",
+                        "title": "Bote und Lieferbegleiter",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Versiegelte Schreiben und vereinbarte kleine Lieferungen mit Empfangsnachweis überbringen.</p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "halenrhyd-wache",
+                "label": "Wachpersonal",
+                "parentTreeId": "halenrhyd-leitung",
+                "levels": [
+                  {
+                    "label": "Wachpersonal",
+                    "nodes": [
+                      {
+                        "id": "halenrhyd-stelle-wachmeister",
+                        "title": "Wachmeister",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Wachpläne, Schlüssel und Meldungen führen; Schutzdienst mit der Betriebsleitung abstimmen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-torwache",
+                        "title": "Tor- und Hofwächter",
+                        "subtitle": "2 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Zugänge und bestätigte Tierübergaben überwachen; fremde Personen an die zuständige Stelle verweisen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-nachtwache",
+                        "title": "Nachtwächter",
+                        "subtitle": "2 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Stallungen und Vorräte in verabredeten Rundgängen kontrollieren und bei Feuer, Unruhe oder unbefugtem Zutritt Alarm geben.</p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "halenrhyd-futterhof",
+                "label": "Eigener Bauern- und Futterhof",
+                "parentTreeId": "halenrhyd-leitung",
+                "levels": [
+                  {
+                    "label": "Eigener Bauern- und Futterhof",
+                    "nodes": [
+                      {
+                        "id": "halenrhyd-stelle-hofmeister",
+                        "title": "Hofleitung",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Futteranbau, Getreide, Vieh und Lieferungen der eigenen Landwirtschaft planen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-ackerbau",
+                        "title": "Ackerbau und Heuernte",
+                        "subtitle": "3 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Felder bestellen, Futter schneiden und Ernte nach Qualität und Verwendung einlagern.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-viehhaltung",
+                        "title": "Viehhaltung",
+                        "subtitle": "2 Stellen · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Hofvieh versorgen und Futterbedarf sowie geplante Abgaben mit der Hofleitung abstimmen.</p>"
+                      },
+                      {
+                        "id": "halenrhyd-stelle-vorratshof",
+                        "title": "Saatgut und Hofvorräte",
+                        "subtitle": "1 Stelle · Unbesetzter Rollenplatz",
+                        "portrait": "../Stammbäume/assets/images/placeholders/male.png",
+                        "text": "<p>Saatgut, Gemüse, Getreide und verarbeitete Vorräte führen; Lieferungen an die Gestüte verzeichnen.</p>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Vorgesehene Rollen und Stellenzahlen sind Organisationsplanung. Die beiden benannten Leitungsrollen sind davon ausdrücklich unterschieden."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Güterregister · Pferde",
+          "commentThreadKey": "halenrhyd-pferde",
+          "tradeCatalogPage": true,
+          "tradeCatalog": {
+            "title": "Zum Silberhalm · Pferde",
+            "subtitle": "Rasseangebote, gezielte Veredelungen und Pferde mit eigener Vorgeschichte",
+            "headerIcon": "./assets/gwynthor-horse-studs/signs/halenrhyd-schild-v1.png",
+            "categories": [
+              {
+                "id": "rassen",
+                "label": "Rassen zum Verkauf"
+              },
+              {
+                "id": "zucht",
+                "label": "Zuchtpferde – Exemplare"
+              },
+              {
+                "id": "mischling",
+                "label": "Mischlings – Exemplare"
+              },
+              {
+                "id": "reinrassig",
+                "label": "Rassen – Exemplare"
+              }
+            ],
+            "allLabel": "Alle Pferdeangebote",
+            "searchPlaceholder": "Name, Rasse oder Eigenschaft suchen …",
+            "noteTitle": "Rasse und einzelnes Pferd",
+            "noteText": "Rasseangebote beschreiben nachlieferbare Auswahl. Jedes benannte Exemplar ist ein einzelnes Pferd. Gezielte Veredelungen besitzen belegte Elternrassen; Mischlinge bleiben ohne gesicherten Abstammungsnachweis.",
+            "items": [
+              {
+                "status": "available",
+                "unit": "1 Pferd",
+                "imageFormat": "portrait",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 380,
+                "definitionCategory": "pferde",
+                "descriptionTitle": "Wesen und Erscheinung",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "2.240",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "halenrhyd-rasse-pferde-rhyfel",
+                "canonicalKey": "standard:rossmarkt:pferde-rhyfel",
+                "category": "rassen",
+                "title": "Rhyfel",
+                "subtitle": "Nachlieferbares Angebot · konkretes Tier nach Auswahl",
+                "image": "https://i.imgur.com/gqexfyR.png",
+                "tags": [
+                  "Pferderasse",
+                  "Cenyr, Vennyr (Estryll)",
+                  "Kavallerie",
+                  "Krieg",
+                  "Arbeit"
+                ],
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "Größe: Mittelgroß bis groß"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Körperbau: Kräftig, tragfähig"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Temperament: Ruhig, zuverlässig"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Reitbarkeit: Hoch"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Haupteinsatz: Krieg, Arbeit, Reise"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Stärken: Ausdauer, Robustheit"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Schwächen: Weniger elegant als Ceffyl"
+                  }
+                ],
+                "description": "<p>Der Rhyfel gilt als das verlässlichste und vielseitigste Pferd der Königreiche Cenyr und Vennyr . Er verbindet die rohe Widerstandskraft des nordischen Hest mit der Eleganz und Reitqualität des avallornischen Ceffyl . Dadurch ist er gleichermaßen auf dem Schlachtfeld, im Alltag wie auch im repräsentativen Dienst geschätzt.</p>",
+                "definitionRef": {
+                  "id": "standard:rossmarkt:pferde-rhyfel",
+                  "revision": "5d7aaaa0a19ecc2f38915222"
+                },
+                "definitionKind": "shared",
+                "badge": "Rasseangebot",
+                "origin": "Cenyr. Solide Familienzucht und geprüfter Ankauf.",
+                "priceNote": "Richtpreis für ein passendes durchschnittliches Verkaufstier dieser örtlichen Qualitätsstufe. Individuelle Pferde stehen in den Exemplarkategorien.",
+                "conditions": "Eignung, Gesundheitszustand, Herkunft und vereinbarte Übergabe werden am konkreten Tier geprüft."
+              },
+              {
+                "status": "available",
+                "unit": "1 Pferd",
+                "imageFormat": "portrait",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 380,
+                "definitionCategory": "pferde",
+                "descriptionTitle": "Wesen und Erscheinung",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "18.500",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "halenrhyd-rasse-pferde-ceffyl",
+                "canonicalKey": "standard:rossmarkt:pferde-ceffyl",
+                "category": "rassen",
+                "title": "Ceffyl",
+                "subtitle": "Nachlieferbares Angebot · konkretes Tier nach Auswahl",
+                "image": "https://i.imgur.com/HJa316g.png",
+                "tags": [
+                  "Pferderasse",
+                  "Cenyr, Vennyr (urspr. Avallorn)",
+                  "Kavallerie",
+                  "Krieg",
+                  "Turnier"
+                ],
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "Größe: Groß"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Körperbau: Elegant, muskulös"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Temperament: Stolz, intelligent, loyal"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Reitbarkeit: Sehr hoch"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Haupteinsatz: Ritter, Turniere, Elitekavallerie"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Stärken: Bindung, Ausdauer, Prestige"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Schwächen: Sensibel, teuer, anspruchsvoll"
+                  }
+                ],
+                "description": "<p>Der Ceffyl gilt als eine der edelsten und begehrtesten Pferderassen der bekannten Welt. Als direkter Nachkomme des mythischen Urpferdes von Avallorn verkörpert er Würde, Schnelligkeit und Loyalität. Wo ein Ceffyl erscheint, ist klar: Hier reitet kein gewöhnlicher Mann.</p>",
+                "definitionRef": {
+                  "id": "standard:rossmarkt:pferde-ceffyl",
+                  "revision": "327273d0ceaafe8ac5fc3c21"
+                },
+                "definitionKind": "shared",
+                "badge": "Rasseangebot",
+                "origin": "Avallorn. Solide Familienzucht und geprüfter Ankauf.",
+                "priceNote": "Richtpreis für ein passendes durchschnittliches Verkaufstier dieser örtlichen Qualitätsstufe. Individuelle Pferde stehen in den Exemplarkategorien.",
+                "conditions": "Seltenes Angebot nach Absprache. Feste Bezugspersonen und behutsame Reiterwahl sind erforderlich; kein bereits gebundener Ceffyl wird als beliebig austauschbares Reittier behandelt."
+              },
+              {
+                "status": "available",
+                "unit": "1 Pferd",
+                "imageFormat": "portrait",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 380,
+                "definitionCategory": "pferde",
+                "descriptionTitle": "Wesen und Erscheinung",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "620",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "halenrhyd-rasse-pferde-hest",
+                "canonicalKey": "standard:rossmarkt:pferde-hest",
+                "category": "rassen",
+                "title": "Hest",
+                "subtitle": "Nachlieferbares Angebot · konkretes Tier nach Auswahl",
+                "image": "https://i.imgur.com/KrS6EHi.png",
+                "tags": [
+                  "Pferderasse",
+                  "Nordcenyr, Aldrimar, Ceitheach, Fjordheim",
+                  "Arbeit",
+                  "Kavallerie",
+                  "Transport"
+                ],
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "Größe: Mittelgroß"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Körperbau: Kräftig, gedrungen"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Temperament: Ruhig, stoisch"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Reitbarkeit: Einfach"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Haupteinsatz: Arbeit, Transport, einfache Reiterei"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Stärken: Ausdauer, Robustheit"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Schwächen: Langsam, wenig elegant"
+                  }
+                ],
+                "description": "<p>Der Hest , auch Nordkleffer genannt, ist das klassische Pferd der kalten Regionen Estrylls. Er ist kein Tier des Prestiges, sondern eines der Notwendigkeit: robust, genügsam und nahezu unverwüstlich. Wo andere Pferde versagen, bleibt der Hest standhaft.</p>",
+                "definitionRef": {
+                  "id": "standard:rossmarkt:pferde-hest",
+                  "revision": "c6ec55ff4594422eda8c24b2"
+                },
+                "definitionKind": "shared",
+                "badge": "Rasseangebot",
+                "origin": "Aldrimar & Ceitheach. Solide Familienzucht und geprüfter Ankauf.",
+                "priceNote": "Richtpreis für ein passendes durchschnittliches Verkaufstier dieser örtlichen Qualitätsstufe. Individuelle Pferde stehen in den Exemplarkategorien.",
+                "conditions": "Eignung, Gesundheitszustand, Herkunft und vereinbarte Übergabe werden am konkreten Tier geprüft."
+              },
+              {
+                "status": "available",
+                "unit": "1 Pferd",
+                "imageFormat": "portrait",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 380,
+                "definitionCategory": "pferde",
+                "descriptionTitle": "Wesen und Erscheinung",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "1.030",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "halenrhyd-rasse-pferde-tirashan",
+                "canonicalKey": "standard:rossmarkt:pferde-tirashan",
+                "category": "rassen",
+                "title": "Tirashan",
+                "subtitle": "Nachlieferbares Angebot · konkretes Tier nach Auswahl",
+                "image": "https://i.imgur.com/MPJVPnT.png",
+                "tags": [
+                  "Pferderasse",
+                  "Leitheach, Dunfal, Blaithneach, Aislaerneach",
+                  "Kavallerie",
+                  "Wald",
+                  "Krieg"
+                ],
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "Größe: Mittelgroß"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Körperbau: Kompakt, muskulös, kräftige Läufe, stabile Hufe"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Temperament: Wachsam, arbeitswillig, mutig, gehorsam"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Reitbarkeit: Mittel"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Haupteinsatz: Waldkavallerie, Patrouillen, Überfälle, lange Märsche im schwierigen Gelände"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Stärken: Sehr geländegängig, ausdauernd, zuverlässig im Gefecht, unempfindlich gegenüber giftigen Pflanzen"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Schwächen: Wenig prestigeträchtig, unterlegen gegenüber schweren Schlachtrossen auf offenem Feld"
+                  }
+                ],
+                "description": "<p>Der Tirashan ist das klassische Kavalleriepferd der südlichen albischen Fürstentümer Estrylls. Er verbindet Wendigkeit, Zähigkeit und militärische Verlässlichkeit und gilt als das pragmatische Gegenstück zu traditionsreicheren, aber weniger kampftauglichen Rassen. Wo der Curragh symbolisch ist und der Hest grob, ist der Tirashan funktional.</p>",
+                "definitionRef": {
+                  "id": "standard:rossmarkt:pferde-tirashan",
+                  "revision": "35a804fe5ba5f48d6ee29eb8"
+                },
+                "definitionKind": "shared",
+                "badge": "Rasseangebot",
+                "origin": "Süd-Estryll. Solide Familienzucht und geprüfter Ankauf.",
+                "priceNote": "Richtpreis für ein passendes durchschnittliches Verkaufstier dieser örtlichen Qualitätsstufe. Individuelle Pferde stehen in den Exemplarkategorien.",
+                "conditions": "Eignung, Gesundheitszustand, Herkunft und vereinbarte Übergabe werden am konkreten Tier geprüft."
+              },
+              {
+                "status": "available",
+                "unit": "1 Pferd",
+                "imageFormat": "portrait",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 380,
+                "definitionCategory": "pferde",
+                "descriptionTitle": "Wesen und Erscheinung",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "1.100",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "horse-kupfersegel",
+                "category": "zucht",
+                "title": "Kupfersegel",
+                "subtitle": "6 Jahre · Wallach · rhyfel × hest",
+                "definitionKind": "unique",
+                "canonicalKey": "gwynthor-horse-studs:kupfersegel",
+                "badge": "Einmaliges Pferd",
+                "image": "./assets/gwynthor-horse-studs/horses/kupfersegel-v1.png",
+                "description": "<p>Kupferfalbe, dunkle Mähne, kleines weißes Stirnmal; kräftig und tragfähig mit etwas kürzeren Läufen.</p><p>Gelassen, neugierig und futterbegeistert. Wartet am Tor lieber auf eine vertraute Stimme, als sich vorzudrängen.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "6 Jahre"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Wallach"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Belegte Elternrassen: rhyfel × hest"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Ein einzelnes, namentlich geführtes Pferd"
+                  }
+                ],
+                "tags": [
+                  "Pferd",
+                  "Unikat",
+                  "zucht",
+                  "rhyfel",
+                  "hest"
+                ],
+                "origin": "Aus einer belegten Rhyfel-Stute und einem Hest-Hengst gezogen. Die Familie verfolgte mit der Paarung über mehrere Jahre ein genügsames, tragfähiges Reisepferd; Bodenarbeit und Gewöhnung an Wagenlärm erfolgten am Landgestüt.",
+                "usageTags": [
+                  "Eignung nach Ausbildung und Reiterkenntnis"
+                ],
+                "priceNote": "Preisgrundlage: Nachzuchtrechner · rhyfel × hest. Pflege, Ausbildung und örtliche Auswahl sind berücksichtigt.",
+                "conditions": "Genau dieses Pferd ist einmalig erhältlich. Nach abgeschlossenem Kauf ist das Exemplar verkauft und nicht erneut verfügbar. Pferdezubehör ist nicht im Kaufpreis enthalten."
+              },
+              {
+                "status": "available",
+                "unit": "1 Pferd",
+                "imageFormat": "portrait",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 380,
+                "definitionCategory": "pferde",
+                "descriptionTitle": "Wesen und Erscheinung",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "4.180",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "horse-dornfidel",
+                "category": "zucht",
+                "title": "Dornfidel",
+                "subtitle": "5 Jahre · Stute · ceffyl × tirashan",
+                "definitionKind": "unique",
+                "canonicalKey": "gwynthor-horse-studs:dornfidel",
+                "badge": "Einmaliges Pferd",
+                "image": "./assets/gwynthor-horse-studs/horses/dornfidel-v1.png",
+                "description": "<p>Heller Fuchs mit langer Flachsmähne; feiner Kopf und geschwungener Hals über kompaktem kräftigem Körper.</p><p>Aufmerksam und fein in den Hilfen. Bei hastigen Bewegungen wird sie vorsichtig, bei ruhiger Ansprache arbeitet sie bereitwillig mit.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "5 Jahre"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Stute"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Belegte Elternrassen: ceffyl × tirashan"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Ein einzelnes, namentlich geführtes Pferd"
+                  }
+                ],
+                "tags": [
+                  "Pferd",
+                  "Unikat",
+                  "zucht",
+                  "ceffyl",
+                  "tirashan"
+                ],
+                "origin": "Gezielt aus einer Ceffyl-Stute und einem Tirashan-Hengst gezogen. Abstammungsaufzeichnungen begleiten die Veredelung: feinere Reaktionen sollten mit der Trittsicherheit einer Waldkavallerielinie verbunden werden. Kein bereits an einen früheren Reiter gebundener reiner Ceffyl.",
+                "usageTags": [
+                  "Eignung nach Ausbildung und Reiterkenntnis"
+                ],
+                "priceNote": "Preisgrundlage: Nachzuchtrechner · ceffyl × tirashan. Pflege, Ausbildung und örtliche Auswahl sind berücksichtigt.",
+                "conditions": "Genau dieses Pferd ist einmalig erhältlich. Nach abgeschlossenem Kauf ist das Exemplar verkauft und nicht erneut verfügbar. Pferdezubehör ist nicht im Kaufpreis enthalten."
+              },
+              {
+                "status": "available",
+                "unit": "1 Pferd",
+                "imageFormat": "portrait",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 380,
+                "definitionCategory": "pferde",
+                "descriptionTitle": "Wesen und Erscheinung",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "240",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "horse-kesselkrume",
+                "category": "mischling",
+                "title": "Kesselkrume",
+                "subtitle": "10 Jahre · Wallach · Abstammung nicht belegt",
+                "definitionKind": "unique",
+                "canonicalKey": "gwynthor-horse-studs:kesselkrume",
+                "badge": "Einmaliges Pferd",
+                "image": "./assets/gwynthor-horse-studs/horses/kesselkrume-v1.png",
+                "description": "<p>Kräftiger dunkelbrauner Arbeitswallach mit schwarzer Mähne und hellem Maul; einfacher breiter Kopf.</p><p>Geduldig und gutmütig. Bleibt bei klappernden Eimern stehen und sucht am Feierabend gern Gesellschaft am Zaun.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "10 Jahre"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Wallach"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Keine belastbaren Elternrassen"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Ein einzelnes, namentlich geführtes Pferd"
+                  }
+                ],
+                "tags": [
+                  "Pferd",
+                  "Unikat",
+                  "mischling",
+                  "unbekannt"
+                ],
+                "origin": "Von einem Bauern angekauft, dessen Sohn den Hof verkleinerte. Er kennt leichte Zug- und Hofarbeit sowie ruhige Ausritte. Zu den Eltern gibt es keine belastbaren Rassenbelege; sein Aussehen ersetzt keinen Abstammungsnachweis.",
+                "usageTags": [
+                  "Geprüftes Gebrauchs- und Reisepferd"
+                ],
+                "priceNote": "Preisgrundlage: Handelsregister · Hest-Untergrenze, angepasst an Alter, Ausbildung und unbekannte Abstammung. Pflege, Ausbildung und örtliche Auswahl sind berücksichtigt.",
+                "conditions": "Genau dieses Pferd ist einmalig erhältlich. Nach abgeschlossenem Kauf ist das Exemplar verkauft und nicht erneut verfügbar. Pferdezubehör ist nicht im Kaufpreis enthalten."
+              },
+              {
+                "status": "available",
+                "unit": "1 Pferd",
+                "imageFormat": "portrait",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 380,
+                "definitionCategory": "pferde",
+                "descriptionTitle": "Wesen und Erscheinung",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "320",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "horse-morgenknopf",
+                "category": "mischling",
+                "title": "Morgenknopf",
+                "subtitle": "8 Jahre · Stute · Abstammung nicht belegt",
+                "definitionKind": "unique",
+                "canonicalKey": "gwynthor-horse-studs:morgenknopf",
+                "badge": "Einmaliges Pferd",
+                "image": "./assets/gwynthor-horse-studs/horses/morgenknopf-v2.png",
+                "description": "<p>Fast schwarzer Dunkelbrauner mit weißem Stern und einer weißen linken Hinterfessel; schlanker gesunder Körper.</p><p>Wach und gesellig. Folgt anderen Pferden gern, lässt sich aber mit ruhigen, deutlichen Hilfen auch allein führen.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "8 Jahre"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Stute"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Keine belastbaren Elternrassen"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Ein einzelnes, namentlich geführtes Pferd"
+                  }
+                ],
+                "tags": [
+                  "Pferd",
+                  "Unikat",
+                  "mischling",
+                  "unbekannt"
+                ],
+                "origin": "Einer reisenden Söldnergruppe nach Auflösung ihres Gepäckzugs abgekauft. An Lagergeräusche und Reisealltag gewöhnt, ohne nachgewiesene Schlachtrossausbildung. Die genaue Abstammung ist unbekannt.",
+                "usageTags": [
+                  "Geprüftes Gebrauchs- und Reisepferd"
+                ],
+                "priceNote": "Preisgrundlage: Handelsregister · Hest-Untergrenze, angepasst an Alter, Ausbildung und unbekannte Abstammung. Pflege, Ausbildung und örtliche Auswahl sind berücksichtigt.",
+                "conditions": "Genau dieses Pferd ist einmalig erhältlich. Nach abgeschlossenem Kauf ist das Exemplar verkauft und nicht erneut verfügbar. Pferdezubehör ist nicht im Kaufpreis enthalten."
+              },
+              {
+                "status": "available",
+                "unit": "1 Pferd",
+                "imageFormat": "portrait",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 380,
+                "definitionCategory": "pferde",
+                "descriptionTitle": "Wesen und Erscheinung",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "620",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "horse-birkenschritt",
+                "category": "reinrassig",
+                "title": "Birkenschritt",
+                "subtitle": "6 Jahre · Wallach · hest",
+                "definitionKind": "unique",
+                "canonicalKey": "gwynthor-horse-studs:birkenschritt",
+                "badge": "Einmaliges Pferd",
+                "image": "./assets/gwynthor-horse-studs/horses/birkenschritt-v1.png",
+                "description": "<p>Graufalber Hest mit dunklem Aalstrich, dichter zottiger Mähne, breiter Brust und kurzen kräftigen Läufen.</p><p>Stoisch und freundlich. Nimmt sich an ungewohnten Übergängen einen Moment Zeit und setzt danach sicher einen Huf vor den anderen.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "6 Jahre"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Wallach"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Reinrassig: hest"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Ein einzelnes, namentlich geführtes Pferd"
+                  }
+                ],
+                "tags": [
+                  "Pferd",
+                  "Unikat",
+                  "reinrassig",
+                  "hest"
+                ],
+                "origin": "Am Landgestüt aus zwei dokumentierten Hest-Eltern aufgezogen. Die Linie wurde auf Genügsamkeit und sichere Arbeit im kühleren Wetter ausgewählt; er kennt Reise- und leichte Zugarbeit.",
+                "usageTags": [
+                  "Eignung nach Ausbildung und Reiterkenntnis"
+                ],
+                "priceNote": "Preisgrundlage: Handelsregister · hest. Pflege, Ausbildung und örtliche Auswahl sind berücksichtigt.",
+                "conditions": "Genau dieses Pferd ist einmalig erhältlich. Nach abgeschlossenem Kauf ist das Exemplar verkauft und nicht erneut verfügbar. Pferdezubehör ist nicht im Kaufpreis enthalten."
+              },
+              {
+                "status": "available",
+                "unit": "1 Pferd",
+                "imageFormat": "portrait",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 380,
+                "definitionCategory": "pferde",
+                "descriptionTitle": "Wesen und Erscheinung",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "2.240",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "horse-regenzier",
+                "category": "reinrassig",
+                "title": "Regenzier",
+                "subtitle": "7 Jahre · Stute · rhyfel",
+                "definitionKind": "unique",
+                "canonicalKey": "gwynthor-horse-studs:regenzier",
+                "badge": "Einmaliges Pferd",
+                "image": "./assets/gwynthor-horse-studs/horses/regenzier-v1.png",
+                "description": "<p>Kräftiger goldener Fuchs mit dichter Flachsmähne; breite Brust, tragfähiger Rücken und ruhiges ausdrucksstarkes Haupt.</p><p>Verlässlich, ausdauernd und angenehm unaufgeregt. Reagiert besser auf klare Hilfen als auf ständiges Antreiben.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "7 Jahre"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Stute"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Reinrassig: rhyfel"
+                  },
+                  {
+                    "icon": "*",
+                    "text": "Ein einzelnes, namentlich geführtes Pferd"
+                  }
+                ],
+                "tags": [
+                  "Pferd",
+                  "Unikat",
+                  "reinrassig",
+                  "rhyfel"
+                ],
+                "origin": "Reine Rhyfel-Linie mit belegten Eltern. Von der Fohlenweide bis zur Bereitung im Familienbetrieb begleitet; für längere Reisen und solide Reitarbeit ausgewählt.",
+                "usageTags": [
+                  "Eignung nach Ausbildung und Reiterkenntnis"
+                ],
+                "priceNote": "Preisgrundlage: Handelsregister · rhyfel. Pflege, Ausbildung und örtliche Auswahl sind berücksichtigt.",
+                "conditions": "Genau dieses Pferd ist einmalig erhältlich. Nach abgeschlossenem Kauf ist das Exemplar verkauft und nicht erneut verfügbar. Pferdezubehör ist nicht im Kaufpreis enthalten."
+              }
+            ],
+            "footerCards": []
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Güterregister · Sattlerei",
+          "commentThreadKey": "halenrhyd-zubehoer",
+          "tradeCatalogPage": true,
+          "tradeCatalog": {
+            "title": "Zum Silberhalm · Sattlerei",
+            "subtitle": "Zehn mittelalterliche Waren für Reiten, Lasten und Pflege",
+            "headerIcon": "./assets/gwynthor-horse-studs/signs/halenrhyd-schild-v1.png",
+            "categories": [
+              {
+                "id": "sattlerei",
+                "label": "Pferdezubehör"
+              }
+            ],
+            "allLabel": "Das ganze Zubehör",
+            "searchPlaceholder": "Sattel, Riemen oder Pflegezeug suchen …",
+            "noteTitle": "Passform und Handarbeit",
+            "noteText": "Sattelbaum, Gurt und Zaumzeug werden am Pferd angepasst. Reparaturen werden nach Aufwand vereinbart. Preise gelten für die beschriebene Verkaufseinheit.",
+            "items": [
+              {
+                "status": "available",
+                "unit": "1 Sattel",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "definitionCategory": "werkzeuge",
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "480",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "halenrhyd-zubehoer-reitsattel",
+                "title": "Reitsattel",
+                "category": "sattlerei",
+                "definitionKind": "shared",
+                "image": "./assets/gwynthor-horse-studs/saddlery/sattlerei-reitsattel-v1.png",
+                "badge": "Sattlerarbeit",
+                "subtitle": "Leder, Holz, Wolle und geschmiedetes Eisen",
+                "description": "<p>Hölzerner Sattelbaum, lederner Sitz und wollene Polsterung; für alltägliche Reisen.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "1 Sattel"
+                  }
+                ],
+                "origin": "Sattlerei des Gestüts; mittelalterliche Handarbeit und gebrauchsfähige Materialien.",
+                "tags": [
+                  "Pferdezubehör",
+                  "Sattlerei"
+                ],
+                "usageTags": [
+                  "Reiten",
+                  "Pflege und Transport"
+                ],
+                "priceNote": "Nachlieferbare Ware; keine Unikatbindung.",
+                "conditions": "Größe und Passform vor der Übergabe prüfen. Keine magische Wirkung und kein automatischer Kampfbonus."
+              },
+              {
+                "status": "available",
+                "unit": "1 Sattel",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "definitionCategory": "werkzeuge",
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "420",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "halenrhyd-zubehoer-packsattel",
+                "title": "Packsattel",
+                "category": "sattlerei",
+                "definitionKind": "shared",
+                "image": "./assets/gwynthor-horse-studs/saddlery/sattlerei-packsattel-v1.png",
+                "badge": "Sattlerarbeit",
+                "subtitle": "Leder, Holz, Wolle und geschmiedetes Eisen",
+                "description": "<p>Holzgestell mit gepolsterten Auflagen und Befestigungsriemen für gleichmäßig verteilte Lasten.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "1 Sattel"
+                  }
+                ],
+                "origin": "Sattlerei des Gestüts; mittelalterliche Handarbeit und gebrauchsfähige Materialien.",
+                "tags": [
+                  "Pferdezubehör",
+                  "Sattlerei"
+                ],
+                "usageTags": [
+                  "Reiten",
+                  "Pflege und Transport"
+                ],
+                "priceNote": "Nachlieferbare Ware; keine Unikatbindung.",
+                "conditions": "Größe und Passform vor der Übergabe prüfen. Keine magische Wirkung und kein automatischer Kampfbonus."
+              },
+              {
+                "status": "available",
+                "unit": "1 Satz",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "definitionCategory": "werkzeuge",
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "145",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "halenrhyd-zubehoer-zaumzeug",
+                "title": "Zaumzeug mit Zügeln",
+                "category": "sattlerei",
+                "definitionKind": "shared",
+                "image": "./assets/gwynthor-horse-studs/saddlery/sattlerei-zaumzeug-v1.png",
+                "badge": "Sattlerarbeit",
+                "subtitle": "Leder, Holz, Wolle und geschmiedetes Eisen",
+                "description": "<p>Genähtes Lederzaumzeug mit einfachem eisernem Gebiss und einem Paar Zügel.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "1 Satz"
+                  }
+                ],
+                "origin": "Sattlerei des Gestüts; mittelalterliche Handarbeit und gebrauchsfähige Materialien.",
+                "tags": [
+                  "Pferdezubehör",
+                  "Sattlerei"
+                ],
+                "usageTags": [
+                  "Reiten",
+                  "Pflege und Transport"
+                ],
+                "priceNote": "Nachlieferbare Ware; keine Unikatbindung.",
+                "conditions": "Größe und Passform vor der Übergabe prüfen. Keine magische Wirkung und kein automatischer Kampfbonus."
+              },
+              {
+                "status": "available",
+                "unit": "1 Satz",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "definitionCategory": "werkzeuge",
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "65",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "halenrhyd-zubehoer-halfter",
+                "title": "Lederhalfter mit Führstrick",
+                "category": "sattlerei",
+                "definitionKind": "shared",
+                "image": "./assets/gwynthor-horse-studs/saddlery/sattlerei-halfter-v1.png",
+                "badge": "Sattlerarbeit",
+                "subtitle": "Leder, Holz, Wolle und geschmiedetes Eisen",
+                "description": "<p>Verstellbares Lederhalfter und geflochtener Hanfstrick für das sichere Führen.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "1 Satz"
+                  }
+                ],
+                "origin": "Sattlerei des Gestüts; mittelalterliche Handarbeit und gebrauchsfähige Materialien.",
+                "tags": [
+                  "Pferdezubehör",
+                  "Sattlerei"
+                ],
+                "usageTags": [
+                  "Reiten",
+                  "Pflege und Transport"
+                ],
+                "priceNote": "Nachlieferbare Ware; keine Unikatbindung.",
+                "conditions": "Größe und Passform vor der Übergabe prüfen. Keine magische Wirkung und kein automatischer Kampfbonus."
+              },
+              {
+                "status": "available",
+                "unit": "1 Stück",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "definitionCategory": "werkzeuge",
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "55",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "halenrhyd-zubehoer-sattelgurt",
+                "title": "Sattelgurt",
+                "category": "sattlerei",
+                "definitionKind": "shared",
+                "image": "./assets/gwynthor-horse-studs/saddlery/sattlerei-sattelgurt-v1.png",
+                "badge": "Sattlerarbeit",
+                "subtitle": "Leder, Holz, Wolle und geschmiedetes Eisen",
+                "description": "<p>Breites festes Gurtband mit Lederenden und geschmiedeten Schnallen.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "1 Stück"
+                  }
+                ],
+                "origin": "Sattlerei des Gestüts; mittelalterliche Handarbeit und gebrauchsfähige Materialien.",
+                "tags": [
+                  "Pferdezubehör",
+                  "Sattlerei"
+                ],
+                "usageTags": [
+                  "Reiten",
+                  "Pflege und Transport"
+                ],
+                "priceNote": "Nachlieferbare Ware; keine Unikatbindung.",
+                "conditions": "Größe und Passform vor der Übergabe prüfen. Keine magische Wirkung und kein automatischer Kampfbonus."
+              },
+              {
+                "status": "available",
+                "unit": "1 Paar",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "definitionCategory": "werkzeuge",
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "140",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "halenrhyd-zubehoer-steigbuegel",
+                "title": "Eiserne Steigbügel mit Riemen",
+                "category": "sattlerei",
+                "definitionKind": "shared",
+                "image": "./assets/gwynthor-horse-studs/saddlery/sattlerei-steigbuegel-v1.png",
+                "badge": "Sattlerarbeit",
+                "subtitle": "Leder, Holz, Wolle und geschmiedetes Eisen",
+                "description": "<p>Geschmiedete Steigbügel mit vernähten Lederriemen, paarweise angepasst.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "1 Paar"
+                  }
+                ],
+                "origin": "Sattlerei des Gestüts; mittelalterliche Handarbeit und gebrauchsfähige Materialien.",
+                "tags": [
+                  "Pferdezubehör",
+                  "Sattlerei"
+                ],
+                "usageTags": [
+                  "Reiten",
+                  "Pflege und Transport"
+                ],
+                "priceNote": "Nachlieferbare Ware; keine Unikatbindung.",
+                "conditions": "Größe und Passform vor der Übergabe prüfen. Keine magische Wirkung und kein automatischer Kampfbonus."
+              },
+              {
+                "status": "available",
+                "unit": "1 Paar",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "definitionCategory": "werkzeuge",
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "190",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "halenrhyd-zubehoer-satteltaschen",
+                "title": "Satteltaschen",
+                "category": "sattlerei",
+                "definitionKind": "shared",
+                "image": "./assets/gwynthor-horse-studs/saddlery/sattlerei-satteltaschen-v1.png",
+                "badge": "Sattlerarbeit",
+                "subtitle": "Leder, Holz, Wolle und geschmiedetes Eisen",
+                "description": "<p>Zwei zusammengehörige wettergeschützte Ledertaschen mit Riemenverschlüssen.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "1 Paar"
+                  }
+                ],
+                "origin": "Sattlerei des Gestüts; mittelalterliche Handarbeit und gebrauchsfähige Materialien.",
+                "tags": [
+                  "Pferdezubehör",
+                  "Sattlerei"
+                ],
+                "usageTags": [
+                  "Reiten",
+                  "Pflege und Transport"
+                ],
+                "priceNote": "Nachlieferbare Ware; keine Unikatbindung.",
+                "conditions": "Größe und Passform vor der Übergabe prüfen. Keine magische Wirkung und kein automatischer Kampfbonus."
+              },
+              {
+                "status": "available",
+                "unit": "1 Stück",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "definitionCategory": "werkzeuge",
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "95",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "halenrhyd-zubehoer-satteldecke",
+                "title": "Wollene Satteldecke",
+                "category": "sattlerei",
+                "definitionKind": "shared",
+                "image": "./assets/gwynthor-horse-studs/saddlery/sattlerei-satteldecke-v1.png",
+                "badge": "Sattlerarbeit",
+                "subtitle": "Leder, Holz, Wolle und geschmiedetes Eisen",
+                "description": "<p>Dicht gewebte Wolldecke als passende Unterlage zwischen Pferd und Sattel.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "1 Stück"
+                  }
+                ],
+                "origin": "Sattlerei des Gestüts; mittelalterliche Handarbeit und gebrauchsfähige Materialien.",
+                "tags": [
+                  "Pferdezubehör",
+                  "Sattlerei"
+                ],
+                "usageTags": [
+                  "Reiten",
+                  "Pflege und Transport"
+                ],
+                "priceNote": "Nachlieferbare Ware; keine Unikatbindung.",
+                "conditions": "Größe und Passform vor der Übergabe prüfen. Keine magische Wirkung und kein automatischer Kampfbonus."
+              },
+              {
+                "status": "available",
+                "unit": "1 Satz",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "definitionCategory": "werkzeuge",
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "38",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "halenrhyd-zubehoer-putzzeug",
+                "title": "Striegel und Rosshaarbürste",
+                "category": "sattlerei",
+                "definitionKind": "shared",
+                "image": "./assets/gwynthor-horse-studs/saddlery/sattlerei-putzzeug-v1.png",
+                "badge": "Sattlerarbeit",
+                "subtitle": "Leder, Holz, Wolle und geschmiedetes Eisen",
+                "description": "<p>Ein einfacher eiserner Striegel und eine Bürste mit Holzrücken zur täglichen Fellpflege.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "1 Satz"
+                  }
+                ],
+                "origin": "Sattlerei des Gestüts; mittelalterliche Handarbeit und gebrauchsfähige Materialien.",
+                "tags": [
+                  "Pferdezubehör",
+                  "Sattlerei"
+                ],
+                "usageTags": [
+                  "Reiten",
+                  "Pflege und Transport"
+                ],
+                "priceNote": "Nachlieferbare Ware; keine Unikatbindung.",
+                "conditions": "Größe und Passform vor der Übergabe prüfen. Keine magische Wirkung und kein automatischer Kampfbonus."
+              },
+              {
+                "status": "available",
+                "unit": "1 Stück",
+                "imageFormat": "square",
+                "imageFit": "contain",
+                "imagePosition": "center",
+                "imageHeight": 280,
+                "definitionCategory": "werkzeuge",
+                "descriptionTitle": "Die Ware",
+                "featuresTitle": "Pferdeakte",
+                "originTitle": "Herkunft und Aufzucht",
+                "usageTitle": "Eignung",
+                "priceTitle": "Kaufpreis",
+                "priceFill": 35,
+                "priceOptions": [],
+                "conditionsTitle": "Vor der Übergabe",
+                "attributes": [],
+                "priceMin": "18",
+                "priceMax": "",
+                "currencyCode": "KT",
+                "currencyLabel": "Kupfertaler",
+                "currencyIcon": "◈",
+                "id": "halenrhyd-zubehoer-hufkratzer",
+                "title": "Hufkratzer",
+                "category": "sattlerei",
+                "definitionKind": "shared",
+                "image": "./assets/gwynthor-horse-studs/saddlery/sattlerei-hufkratzer-v1.png",
+                "badge": "Sattlerarbeit",
+                "subtitle": "Leder, Holz, Wolle und geschmiedetes Eisen",
+                "description": "<p>Kleines geschmiedetes Pflegewerkzeug mit abgerundetem Griff und stumpfer Arbeitskante.</p>",
+                "features": [
+                  {
+                    "icon": "*",
+                    "text": "1 Stück"
+                  }
+                ],
+                "origin": "Sattlerei des Gestüts; mittelalterliche Handarbeit und gebrauchsfähige Materialien.",
+                "tags": [
+                  "Pferdezubehör",
+                  "Sattlerei"
+                ],
+                "usageTags": [
+                  "Reiten",
+                  "Pflege und Transport"
+                ],
+                "priceNote": "Nachlieferbare Ware; keine Unikatbindung.",
+                "conditions": "Größe und Passform vor der Übergabe prüfen. Keine magische Wirkung und kein automatischer Kampfbonus."
+              }
+            ],
+            "footerCards": []
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Szene · Verkaufsraum",
+          "commentThreadKey": "halenrhyd-szene-verkaufsraum",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-horse-studs/scenes/halenrhyd-verkaufsraum-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionIntro": "<p>Hinter dem mit zwei Eisenbeschlägen aufgehängten Ladenschild liegt der Verkaufsraum. Ein breiter Holztresen trennt Bücher und Herkunftspapiere von den Kundenbänken. Durch das Hoftor lässt sich ein vorgestelltes Pferd beobachten; an der Seitenwand hängen passende Riemen und Decken.</p>",
+          "sessionLocation": "Zum Silberhalm · Verkaufsraum",
+          "sessionHint": "Eine Beratung, Pferdevorstellung, Übergabe oder ein Besuch kann diese Szene beginnen.",
+          "sessionEmptyTitle": "Verkaufsraum",
+          "sessionEmptyText": "Der Raum ist bereit für die nächste Begegnung.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Szene · Stall",
+          "commentThreadKey": "halenrhyd-szene-stall",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-horse-studs/scenes/halenrhyd-stall-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionIntro": "<p>Die breite Stallgasse führt zwischen sauberen Boxen und Futterraufen hindurch zum Vorführhof. Eimer, Besen und Stallwerkzeug stehen außerhalb des Laufwegs. Pferde werden nach Gewöhnung und Verträglichkeit getrennt untergebracht; ein ruhiger Bereich bleibt für Neuankömmlinge frei.</p>",
+          "sessionLocation": "Zum Silberhalm · Stall",
+          "sessionHint": "Eine Beratung, Pferdevorstellung, Übergabe oder ein Besuch kann diese Szene beginnen.",
+          "sessionEmptyTitle": "Stall",
+          "sessionEmptyText": "Der Raum ist bereit für die nächste Begegnung.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Szene · Sattlerei",
+          "commentThreadKey": "halenrhyd-szene-sattlerei",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-horse-studs/scenes/halenrhyd-sattlerei-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionIntro": "<p>Auf dem Sattlerbock ruht ein hölzerner Sattelbaum. Lederbahnen, Riemen und Wollpolster liegen an der Werkbank; fertige Sättel und Taschen hängen daneben. Hinter einer niedrigen Steintrennung beginnt die Hufschmiede. Hier lassen sich Passform, Reparaturen und neue Ausrüstung besprechen.</p>",
+          "sessionLocation": "Zum Silberhalm · Sattlerei",
+          "sessionHint": "Eine Beratung, Pferdevorstellung, Übergabe oder ein Besuch kann diese Szene beginnen.",
+          "sessionEmptyTitle": "Sattlerei",
+          "sessionEmptyText": "Der Raum ist bereit für die nächste Begegnung.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Kalkulation · Einnahmen und Lebensunterhalt",
+          "commentThreadKey": "wirtschaft-kalkulation",
+          "economyCalculationPage": true,
+          "enableComments": false,
+          "economyCalculation": {
+            "scenario": {
+              "id": "zum-silberhalm-halenrhyd",
+              "title": "Zum Silberhalm · Betriebsrechnung",
+              "tier": "Familienbetrieb mit eigener Aufzucht",
+              "contextId": "gwynthor",
+              "introduction": "Offene Modellrechnung für Personal, Pferdehandel und Sattlerei. Die vorgesehenen Rollen werden für den Personalbedarf rechnerisch besetzt; daraus entstehen keine Figuren oder Verträge.",
+              "assumptions": [
+                "Alle Preise werden aus den Angeboten dieses Moduls gelesen. Die Pferdepreise beruhen auf dem Handelsregister beziehungsweise dem bestehenden Nachzuchtrechner.",
+                "Benannte Einzelpferde sind endliche Angebote und haben deshalb keinen automatisch wiederkehrenden Wochenabsatz. Rasseangebote und Zubehör bleiben nachlieferbar.",
+                "Die Modellbesetzung der vorgesehenen Stellen macht den Personalbedarf sichtbar; Silhouetten bleiben unbesetzte Figurenplätze. Löhne, Kost und Logis sind veränderbare Rechenansätze.",
+                "Material- und Beschaffungsanteile enthalten die angesetzte Aufzucht beziehungsweise den Einkauf der verkauften Pferde. Interne Futterlieferungen und Partnerhofleistungen erzeugen keinen zweiten Verkaufsumsatz.",
+                "Die tatsächlichen Pacht-, Abgaben- und Gewinnbeteiligungen von Haus Wyrm, anderen Lehnsherren und Partnerhöfen sind noch nicht beziffert. Der Überschuss gilt vor diesen offenen Ansprüchen. Null im Eingabefeld hebt keine Verpflichtung auf.",
+                "Gorweth führt den Familienbetrieb. Die Modellinhaberzuordnung legt keine neuen Eigentumsquoten innerhalb der Familie fest.",
+                "Pacht, Erneuerungsrücklage, Entnahmen und Rossarztbudget sind Modellwerte; keine bestätigten Schulden oder Immobilienwerte werden daraus abgeleitet.",
+                "Neun Tage je Woche. Keine automatische Veränderung von Pferden, Spielkassen oder Inventaren."
+              ],
+              "seats": 0,
+              "turns": 1,
+              "occupancy": 0.5,
+              "openDays": 6,
+              "workers": [
+                {
+                  "id": "halenrhyd-direktion",
+                  "label": "",
+                  "note": "Modellansatz für die benannte Aufgabe.",
+                  "source": "Vorgesehene Rolle · Leitung",
+                  "name": "Gorweth Halenrhyd",
+                  "role": "Gesamtleitung",
+                  "areas": [
+                    "Leitung"
+                  ],
+                  "kind": "owner",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 0,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 9,
+                  "ownerShare": 1,
+                  "anonymous": false,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-verwaltung",
+                  "label": "",
+                  "note": "Modellansatz für die benannte Aufgabe.",
+                  "source": "Vorgesehene Rolle · Leitung",
+                  "name": "Eirfena",
+                  "role": "Hofverwaltung und Finanzen",
+                  "areas": [
+                    "Leitung"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": false,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-kontorleitung",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Verwaltung und Verträge",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Kontorleitung",
+                  "areas": [
+                    "Verwaltung und Verträge"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 9,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 9,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-vertragsschreiber",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Verwaltung und Verträge",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Vertragsschreiber",
+                  "areas": [
+                    "Verwaltung und Verträge"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-buchhaltung",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Verwaltung und Verträge",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Buchführung",
+                  "areas": [
+                    "Verwaltung und Verträge"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-kontorlehrling",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Verwaltung und Verträge",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Kontorlehrling",
+                  "areas": [
+                    "Verwaltung und Verträge"
+                  ],
+                  "kind": "apprentice",
+                  "count": 1,
+                  "days": 4,
+                  "dailyCash": 1.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 1.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-verkaufsleitung",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Ankauf und Verkauf",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Verkaufsleitung",
+                  "areas": [
+                    "Ankauf und Verkauf"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 9,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 9,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-rosspruefer",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Ankauf und Verkauf",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Rossprüfer",
+                  "areas": [
+                    "Ankauf und Verkauf"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-rosshaendler",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Ankauf und Verkauf",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Pferdehändler",
+                  "areas": [
+                    "Ankauf und Verkauf"
+                  ],
+                  "kind": "employee",
+                  "count": 2,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-vorfuehrer",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Ankauf und Verkauf",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Pferdevorführer",
+                  "areas": [
+                    "Ankauf und Verkauf"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-verkaufslehrling",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Ankauf und Verkauf",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Lehrling im Pferdehandel",
+                  "areas": [
+                    "Ankauf und Verkauf"
+                  ],
+                  "kind": "apprentice",
+                  "count": 1,
+                  "days": 4,
+                  "dailyCash": 1.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 1.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-zuchtmeister",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Zucht und Aufzucht",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Zuchtmeister",
+                  "areas": [
+                    "Zucht und Aufzucht"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 9,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 9,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-zuchtbuch",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Zucht und Aufzucht",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Zuchtbuchführung",
+                  "areas": [
+                    "Zucht und Aufzucht"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-stutenpflege",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Zucht und Aufzucht",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Stuten- und Fohlenpfleger",
+                  "areas": [
+                    "Zucht und Aufzucht"
+                  ],
+                  "kind": "employee",
+                  "count": 2,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-zuchtlehrling",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Zucht und Aufzucht",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Lehrling in Zucht und Aufzucht",
+                  "areas": [
+                    "Zucht und Aufzucht"
+                  ],
+                  "kind": "apprentice",
+                  "count": 1,
+                  "days": 4,
+                  "dailyCash": 1.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 1.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-bereitungsmeister",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Bereitung und Ausbildung",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Bereitungsmeister",
+                  "areas": [
+                    "Bereitung und Ausbildung"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 9,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 9,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-bodenarbeit",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Bereitung und Ausbildung",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Ausbilder für Bodenarbeit",
+                  "areas": [
+                    "Bereitung und Ausbildung"
+                  ],
+                  "kind": "employee",
+                  "count": 2,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-bereiter",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Bereitung und Ausbildung",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Bereiter",
+                  "areas": [
+                    "Bereitung und Ausbildung"
+                  ],
+                  "kind": "employee",
+                  "count": 2,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-bereiterlehrling",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Bereitung und Ausbildung",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Bereiter in Ausbildung",
+                  "areas": [
+                    "Bereitung und Ausbildung"
+                  ],
+                  "kind": "apprentice",
+                  "count": 2,
+                  "days": 4,
+                  "dailyCash": 1.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 1.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-stallmeister",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Stall, Weiden und Pferdegesundheit",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Stallmeister",
+                  "areas": [
+                    "Stall, Weiden und Pferdegesundheit"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 9,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 9,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-stallpflege",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Stall, Weiden und Pferdegesundheit",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Pferdepfleger",
+                  "areas": [
+                    "Stall, Weiden und Pferdegesundheit"
+                  ],
+                  "kind": "employee",
+                  "count": 3,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-weidehirt",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Stall, Weiden und Pferdegesundheit",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Weidehirten",
+                  "areas": [
+                    "Stall, Weiden und Pferdegesundheit"
+                  ],
+                  "kind": "employee",
+                  "count": 2,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-futterwart",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Stall, Weiden und Pferdegesundheit",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Futterwart",
+                  "areas": [
+                    "Stall, Weiden und Pferdegesundheit"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-stalllehrling",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Stall, Weiden und Pferdegesundheit",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Lehrlinge in Pferdepflege",
+                  "areas": [
+                    "Stall, Weiden und Pferdegesundheit"
+                  ],
+                  "kind": "apprentice",
+                  "count": 2,
+                  "days": 4,
+                  "dailyCash": 1.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 1.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-sattlermeister",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Sattlerei und Hufschmiede",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Sattlermeister",
+                  "areas": [
+                    "Sattlerei und Hufschmiede"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 9,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 9,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-sattlergeselle",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Sattlerei und Hufschmiede",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Sattlergesellen",
+                  "areas": [
+                    "Sattlerei und Hufschmiede"
+                  ],
+                  "kind": "employee",
+                  "count": 2,
+                  "days": 6,
+                  "dailyCash": 7,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 7,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-riemer",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Sattlerei und Hufschmiede",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Riemer",
+                  "areas": [
+                    "Sattlerei und Hufschmiede"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-sattlerlehrling",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Sattlerei und Hufschmiede",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Sattlerlehrlinge",
+                  "areas": [
+                    "Sattlerei und Hufschmiede"
+                  ],
+                  "kind": "apprentice",
+                  "count": 2,
+                  "days": 4,
+                  "dailyCash": 1.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 1.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-hufschmied",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Sattlerei und Hufschmiede",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Hufschmied",
+                  "areas": [
+                    "Sattlerei und Hufschmiede"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-schmiedgehilfe",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Sattlerei und Hufschmiede",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Schmiedgehilfe",
+                  "areas": [
+                    "Sattlerei und Hufschmiede"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-schmiedlehrling",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Sattlerei und Hufschmiede",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Schmiedlehrling",
+                  "areas": [
+                    "Sattlerei und Hufschmiede"
+                  ],
+                  "kind": "apprentice",
+                  "count": 1,
+                  "days": 4,
+                  "dailyCash": 1.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 1.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-fuhrmann",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Versorgung, Fuhrwesen und Hausdienst",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Fuhrleute",
+                  "areas": [
+                    "Versorgung, Fuhrwesen und Hausdienst"
+                  ],
+                  "kind": "employee",
+                  "count": 2,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-lager",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Versorgung, Fuhrwesen und Hausdienst",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Lagerwart",
+                  "areas": [
+                    "Versorgung, Fuhrwesen und Hausdienst"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-koch",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Versorgung, Fuhrwesen und Hausdienst",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Hofküche",
+                  "areas": [
+                    "Versorgung, Fuhrwesen und Hausdienst"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-hausdienst",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Versorgung, Fuhrwesen und Hausdienst",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Reinigung und Wäsche",
+                  "areas": [
+                    "Versorgung, Fuhrwesen und Hausdienst"
+                  ],
+                  "kind": "employee",
+                  "count": 2,
+                  "days": 6,
+                  "dailyCash": 3,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 3,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-bote",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Versorgung, Fuhrwesen und Hausdienst",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Bote und Lieferbegleiter",
+                  "areas": [
+                    "Versorgung, Fuhrwesen und Hausdienst"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 9,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 9,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-wachmeister",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Wachpersonal",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Wachmeister",
+                  "areas": [
+                    "Wachpersonal"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 9,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 9,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-torwache",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Wachpersonal",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Tor- und Hofwächter",
+                  "areas": [
+                    "Wachpersonal"
+                  ],
+                  "kind": "employee",
+                  "count": 2,
+                  "days": 6,
+                  "dailyCash": 5.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 5.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-nachtwache",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Wachpersonal",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Nachtwächter",
+                  "areas": [
+                    "Wachpersonal"
+                  ],
+                  "kind": "employee",
+                  "count": 2,
+                  "days": 6,
+                  "dailyCash": 5.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 5.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-hofmeister",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Eigener Bauern- und Futterhof",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Hofleitung",
+                  "areas": [
+                    "Eigener Bauern- und Futterhof"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 9,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 9,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-ackerbau",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Eigener Bauern- und Futterhof",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Ackerbau und Heuernte",
+                  "areas": [
+                    "Eigener Bauern- und Futterhof"
+                  ],
+                  "kind": "employee",
+                  "count": 3,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-viehhaltung",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Eigener Bauern- und Futterhof",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Viehhaltung",
+                  "areas": [
+                    "Eigener Bauern- und Futterhof"
+                  ],
+                  "kind": "employee",
+                  "count": 2,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                },
+                {
+                  "id": "halenrhyd-vorratshof",
+                  "label": "",
+                  "note": "Rechnerisch besetzter Personalbedarf; die Silhouettenrolle ist weiterhin ohne benannte Figur und ohne tatsächlichen Arbeitsvertrag.",
+                  "source": "Vorgesehene Rolle · Eigener Bauern- und Futterhof",
+                  "name": "Geplante Modellbesetzung",
+                  "role": "Saatgut und Hofvorräte",
+                  "areas": [
+                    "Eigener Bauern- und Futterhof"
+                  ],
+                  "kind": "employee",
+                  "count": 1,
+                  "days": 6,
+                  "dailyCash": 4.5,
+                  "boardDays": 9,
+                  "boardDaily": 0.5,
+                  "lodgingWeekly": 1,
+                  "fairDaily": 4.5,
+                  "ownerShare": 0,
+                  "anonymous": true,
+                  "salesShare": 0,
+                  "salesChannelIds": []
+                }
+              ],
+              "channels": [
+                {
+                  "id": "absatz-halenrhyd-rasse-pferde-rhyfel",
+                  "label": "Rhyfel",
+                  "note": "Veränderbare Absatzannahme pro Neuntagewoche; keine gebuchte Bestellung.",
+                  "source": "Zum Silberhalm · Güterregister · halenrhyd-rasse-pferde-rhyfel",
+                  "basis": "fixed",
+                  "quantity": 2,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 2240,
+                  "materialRatio": 0.6,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Pferd"
+                },
+                {
+                  "id": "absatz-halenrhyd-rasse-pferde-ceffyl",
+                  "label": "Ceffyl",
+                  "note": "Veränderbare Absatzannahme pro Neuntagewoche; keine gebuchte Bestellung.",
+                  "source": "Zum Silberhalm · Güterregister · halenrhyd-rasse-pferde-ceffyl",
+                  "basis": "fixed",
+                  "quantity": 0.05,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 18500,
+                  "materialRatio": 0.6,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Pferd"
+                },
+                {
+                  "id": "absatz-halenrhyd-rasse-pferde-hest",
+                  "label": "Hest",
+                  "note": "Veränderbare Absatzannahme pro Neuntagewoche; keine gebuchte Bestellung.",
+                  "source": "Zum Silberhalm · Güterregister · halenrhyd-rasse-pferde-hest",
+                  "basis": "fixed",
+                  "quantity": 1.5,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 620,
+                  "materialRatio": 0.6,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Pferd"
+                },
+                {
+                  "id": "absatz-halenrhyd-rasse-pferde-tirashan",
+                  "label": "Tirashan",
+                  "note": "Veränderbare Absatzannahme pro Neuntagewoche; keine gebuchte Bestellung.",
+                  "source": "Zum Silberhalm · Güterregister · halenrhyd-rasse-pferde-tirashan",
+                  "basis": "fixed",
+                  "quantity": 1.5,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 1030,
+                  "materialRatio": 0.6,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Pferd"
+                },
+                {
+                  "id": "absatz-horse-kupfersegel",
+                  "label": "Kupfersegel",
+                  "note": "Einmaliges Exemplar: kein wiederkehrender Wochenabsatz. Bei Bedarf einmalig separat modellieren.",
+                  "source": "Zum Silberhalm · Güterregister · horse-kupfersegel",
+                  "basis": "fixed",
+                  "quantity": 0,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 1100,
+                  "materialRatio": 0.6,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Pferd"
+                },
+                {
+                  "id": "absatz-horse-dornfidel",
+                  "label": "Dornfidel",
+                  "note": "Einmaliges Exemplar: kein wiederkehrender Wochenabsatz. Bei Bedarf einmalig separat modellieren.",
+                  "source": "Zum Silberhalm · Güterregister · horse-dornfidel",
+                  "basis": "fixed",
+                  "quantity": 0,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 4180,
+                  "materialRatio": 0.6,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Pferd"
+                },
+                {
+                  "id": "absatz-horse-kesselkrume",
+                  "label": "Kesselkrume",
+                  "note": "Einmaliges Exemplar: kein wiederkehrender Wochenabsatz. Bei Bedarf einmalig separat modellieren.",
+                  "source": "Zum Silberhalm · Güterregister · horse-kesselkrume",
+                  "basis": "fixed",
+                  "quantity": 0,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 240,
+                  "materialRatio": 0.6,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Pferd"
+                },
+                {
+                  "id": "absatz-horse-morgenknopf",
+                  "label": "Morgenknopf",
+                  "note": "Einmaliges Exemplar: kein wiederkehrender Wochenabsatz. Bei Bedarf einmalig separat modellieren.",
+                  "source": "Zum Silberhalm · Güterregister · horse-morgenknopf",
+                  "basis": "fixed",
+                  "quantity": 0,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 320,
+                  "materialRatio": 0.6,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Pferd"
+                },
+                {
+                  "id": "absatz-horse-birkenschritt",
+                  "label": "Birkenschritt",
+                  "note": "Einmaliges Exemplar: kein wiederkehrender Wochenabsatz. Bei Bedarf einmalig separat modellieren.",
+                  "source": "Zum Silberhalm · Güterregister · horse-birkenschritt",
+                  "basis": "fixed",
+                  "quantity": 0,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 620,
+                  "materialRatio": 0.6,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Pferd"
+                },
+                {
+                  "id": "absatz-horse-regenzier",
+                  "label": "Regenzier",
+                  "note": "Einmaliges Exemplar: kein wiederkehrender Wochenabsatz. Bei Bedarf einmalig separat modellieren.",
+                  "source": "Zum Silberhalm · Güterregister · horse-regenzier",
+                  "basis": "fixed",
+                  "quantity": 0,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 2240,
+                  "materialRatio": 0.6,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Pferd"
+                },
+                {
+                  "id": "absatz-halenrhyd-zubehoer-reitsattel",
+                  "label": "Reitsattel",
+                  "note": "Veränderbare Absatzannahme pro Neuntagewoche; keine gebuchte Bestellung.",
+                  "source": "Zum Silberhalm · Güterregister · halenrhyd-zubehoer-reitsattel",
+                  "basis": "fixed",
+                  "quantity": 4,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 480,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Sattel"
+                },
+                {
+                  "id": "absatz-halenrhyd-zubehoer-packsattel",
+                  "label": "Packsattel",
+                  "note": "Veränderbare Absatzannahme pro Neuntagewoche; keine gebuchte Bestellung.",
+                  "source": "Zum Silberhalm · Güterregister · halenrhyd-zubehoer-packsattel",
+                  "basis": "fixed",
+                  "quantity": 4,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 420,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Sattel"
+                },
+                {
+                  "id": "absatz-halenrhyd-zubehoer-zaumzeug",
+                  "label": "Zaumzeug mit Zügeln",
+                  "note": "Veränderbare Absatzannahme pro Neuntagewoche; keine gebuchte Bestellung.",
+                  "source": "Zum Silberhalm · Güterregister · halenrhyd-zubehoer-zaumzeug",
+                  "basis": "fixed",
+                  "quantity": 4,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 145,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Satz"
+                },
+                {
+                  "id": "absatz-halenrhyd-zubehoer-halfter",
+                  "label": "Lederhalfter mit Führstrick",
+                  "note": "Veränderbare Absatzannahme pro Neuntagewoche; keine gebuchte Bestellung.",
+                  "source": "Zum Silberhalm · Güterregister · halenrhyd-zubehoer-halfter",
+                  "basis": "fixed",
+                  "quantity": 4,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 65,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Satz"
+                },
+                {
+                  "id": "absatz-halenrhyd-zubehoer-sattelgurt",
+                  "label": "Sattelgurt",
+                  "note": "Veränderbare Absatzannahme pro Neuntagewoche; keine gebuchte Bestellung.",
+                  "source": "Zum Silberhalm · Güterregister · halenrhyd-zubehoer-sattelgurt",
+                  "basis": "fixed",
+                  "quantity": 4,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 55,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-halenrhyd-zubehoer-steigbuegel",
+                  "label": "Eiserne Steigbügel mit Riemen",
+                  "note": "Veränderbare Absatzannahme pro Neuntagewoche; keine gebuchte Bestellung.",
+                  "source": "Zum Silberhalm · Güterregister · halenrhyd-zubehoer-steigbuegel",
+                  "basis": "fixed",
+                  "quantity": 4,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 140,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Paar"
+                },
+                {
+                  "id": "absatz-halenrhyd-zubehoer-satteltaschen",
+                  "label": "Satteltaschen",
+                  "note": "Veränderbare Absatzannahme pro Neuntagewoche; keine gebuchte Bestellung.",
+                  "source": "Zum Silberhalm · Güterregister · halenrhyd-zubehoer-satteltaschen",
+                  "basis": "fixed",
+                  "quantity": 4,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 190,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Paar"
+                },
+                {
+                  "id": "absatz-halenrhyd-zubehoer-satteldecke",
+                  "label": "Wollene Satteldecke",
+                  "note": "Veränderbare Absatzannahme pro Neuntagewoche; keine gebuchte Bestellung.",
+                  "source": "Zum Silberhalm · Güterregister · halenrhyd-zubehoer-satteldecke",
+                  "basis": "fixed",
+                  "quantity": 4,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 95,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                },
+                {
+                  "id": "absatz-halenrhyd-zubehoer-putzzeug",
+                  "label": "Striegel und Rosshaarbürste",
+                  "note": "Veränderbare Absatzannahme pro Neuntagewoche; keine gebuchte Bestellung.",
+                  "source": "Zum Silberhalm · Güterregister · halenrhyd-zubehoer-putzzeug",
+                  "basis": "fixed",
+                  "quantity": 4,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 38,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Satz"
+                },
+                {
+                  "id": "absatz-halenrhyd-zubehoer-hufkratzer",
+                  "label": "Hufkratzer",
+                  "note": "Veränderbare Absatzannahme pro Neuntagewoche; keine gebuchte Bestellung.",
+                  "source": "Zum Silberhalm · Güterregister · halenrhyd-zubehoer-hufkratzer",
+                  "basis": "fixed",
+                  "quantity": 4,
+                  "occupancy": 1,
+                  "days": 9,
+                  "unitCopper": 18,
+                  "materialRatio": 0.55,
+                  "lossRate": 0.01,
+                  "maxWeekly": null,
+                  "stockUnits": null,
+                  "unit": "1 Stück"
+                }
+              ],
+              "overheads": [
+                {
+                  "id": "rossarzt",
+                  "label": "Vertragliche Rossarztbesuche · Modellbudget",
+                  "note": "",
+                  "source": "",
+                  "weeklyCopper": 60
+                },
+                {
+                  "id": "betrieb",
+                  "label": "Einstreu, Wasser, Brennstoff, Werkzeug und Verwaltung",
+                  "note": "",
+                  "source": "",
+                  "weeklyCopper": 160
+                }
+              ],
+              "rentWeekly": 0,
+              "levyRate": 0,
+              "guildWeekly": 0,
+              "badDebtRate": 0,
+              "churchEnabled": false,
+              "churchRate": 0.1,
+              "churchBasis": "surplus",
+              "debt": 0,
+              "annualInterestRate": 0.08,
+              "principalWeekly": 0,
+              "replacementWeekly": 100,
+              "householdWeekly": 90,
+              "assetValuesKnown": false,
+              "assets": {
+                "cash": 0,
+                "receivables": 0,
+                "building": 0,
+                "equipment": 0,
+                "inventory": 0
+              },
+              "coverage": []
+            },
+            "showComparison": true,
+            "showHouseholds": true
+          }
+        }
+      ]
+    }
+  }
+}

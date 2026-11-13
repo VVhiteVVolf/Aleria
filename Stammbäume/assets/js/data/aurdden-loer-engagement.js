@@ -10,7 +10,7 @@ export const AURDDEN_LOER_ENGAGEMENT_ID = 'engagement-aeron-loer-avelin-aurdden'
 
 export function createAurddenPerson(source) {
   return createFamilyPerson({ ...source,
-    portrait: HOUSE_AURDDEN_PORTRAITS[source.id] || '',
+    portrait: HOUSE_AURDDEN_PORTRAITS[source.id] || source.portrait || '',
     houseId: source.spouse || source.bastard ? '' : AURDDEN_HOUSE_ID,
     familyRole: source.bastard ? 'bastard' : source.spouse ? 'married' : 'core',
     lineageRole: source.lineageRole || 'branch',

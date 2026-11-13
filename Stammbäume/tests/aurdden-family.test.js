@@ -26,8 +26,8 @@ test('Aurdden is a single valid civilian Loer family with a serial origin and no
   assert.equal(new Set(chart.data.map(node => node.id)).size, chart.data.length);
   const { persons, houses, partnerships, parentages, cadetBranches, timeJumps, ...root } = family;
   assert.equal(validateWorkspaceForPublishing({ root: { ...root, familyId: family.document.id }, collections: { persons, houses, partnerships, parentages, cadetBranches, timeJumps } }).valid, true);
-  assert.equal(persons.length, 39); assert.equal(partnerships.length, 12); assert.equal(parentages.length, 26);
-  assert.equal(cadetBranches.length, 2); assert.equal(timeJumps.length, 1);
+  assert.equal(persons.length, 40); assert.equal(partnerships.length, 13); assert.equal(parentages.length, 26);
+  assert.equal(cadetBranches.length, 3); assert.equal(timeJumps.length, 1);
   assert.equal(family.document.houseProfile.rankId, 'commoner');
   assert.equal(family.document.houseProfile.liegeHouseId, 'house-loer');
   assert.equal(family.lineage.crestFrame, 'iron');
@@ -64,7 +64,7 @@ test('away relatives and bastard remain outside shop employment and no engagemen
   const away = ['cyrwen-aurdden', 'lleirena-aurdden', 'avelin-aurdden', 'cyrion-aurdden-bastard'];
   for (const id of away) assert.equal(AURDDEN_FAMILY_PEOPLE.find(person => person.id === id).shopEmployee, false);
   for (const branch of family.cadetBranches) {
-    assert.equal(branch.targetFamilyId, 'haus-unbekannt');
+    assert.equal(branch.targetFamilyId, branch.id === 'married-away-kyria-caeffyn' ? 'haus-caeffyn' : 'haus-unbekannt');
     assert.equal(branch.linkType, 'married-away');
     assert.equal(family.partnerships.find(relation => relation.id === branch.parentPartnershipId).type, 'marriage');
   }
@@ -76,14 +76,14 @@ test('away relatives and bastard remain outside shop employment and no engagemen
   assert.equal(parentage.legitimacy, 'illegitimate');
   assert.equal(family.partnerships.find(relation => relation.id === parentage.partnershipId).type, 'affair');
   assert.equal(member('unknown-cyrion-mother').status, 'unknown');
-  for (const edge of family.parentages.filter(edge => Number(member(edge.childId).birth) >= 1713 && edge.childId !== 'avelin-aurdden')) {
+  for (const edge of family.parentages.filter(edge => Number(member(edge.childId).birth) >= 1713 && !['avelin-aurdden', 'kyria-aurdden'].includes(edge.childId))) {
     assert.equal(family.partnerships.filter(relation => relation.participantIds.includes(edge.childId)).length, 0);
   }
 });
 
 test('the separate unpictured bank branch is genuinely first-cousin kin and carries no jeweller or licence assignment', () => {
   const bank = AURDDEN_FAMILY_PEOPLE.filter(person => person.branch === 'bank');
-  assert.equal(bank.length, 7);
+  assert.equal(bank.length, 6);
   assert.ok(bank.every(person => person.portrait === '' && !person.portraitNeeded && !person.shopEmployee));
   assert.deepEqual(family.parentages.find(edge => edge.childId === 'oeneth-aurdden').parentIds, family.parentages.find(edge => edge.childId === 'iwrwyn-aurdden').parentIds);
   assert.deepEqual(family.parentages.find(edge => edge.childId === 'pereth-aurdden').parentIds, ['oeneth-aurdden', 'rhewae-spouse-aurdden']);
@@ -93,7 +93,7 @@ test('the separate unpictured bank branch is genuinely first-cousin kin and carr
   assert.match(HOUSE_CONTENT.sections.holdings, /Roten Bank.*Ergalla/);
   assert.equal(AURDDEN_GUARDS.length, 2);
   assert.ok(AURDDEN_GUARDS.every(person => !family.persons.some(relative => relative.id === person.id)));
-  assert.equal(AURDDEN_PORTRAIT_PEOPLE.length, 28);
+  assert.equal(AURDDEN_PORTRAIT_PEOPLE.length, 29);
 });
 
 test('Avelin and the originally free Aeron share exactly one reciprocal engagement and canonical world identities', async () => {
@@ -143,7 +143,7 @@ test('registered placement, native house outputs and the source roster agree', a
   assert.equal(records.length, 1); assert.equal(records[0].type, 'commoner');
   assert.deepEqual(records[0].folderPath, ['Cenyr', 'Celtigerns Wacht', 'Llamreis Ankunft', 'Gwynthor']);
   assert.equal(HOUSE_CONTENT.figures.length, 33);
-  assert.equal(HOUSE_CONTENT.figures.filter(person => person.image).length, 26);
+  assert.equal(HOUSE_CONTENT.figures.filter(person => person.image).length, 27);
   assert.equal(HOUSE_CONTENT.omitMilitaryProfile, true);
   assert.equal(HOUSE_CONTENT.relatedRecords[0].link, '../AleriaAlmanach/AleriaAlmanach.html?entry=der-sternenfang-aurdden');
   const directory = new URL('../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Aurdden/', import.meta.url);

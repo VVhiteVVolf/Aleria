@@ -23,8 +23,9 @@ function biographyPage() {
         ...AURDDEN_BROTHERS.map(person => `<strong>${person.name}</strong> · ${person.notes}`),
         'Ihre Eltern Iwrwyn und Brenella sind bereits verstorben. Die Schwestern Cyrwen und Lleirena sind in noch unbekannte Häuser wegverheiratet und arbeiten nicht im Juwelier. Auch Avelin, Kyrwyns älteste Tochter, hat als wegverlobte Braut Aeron Loers keine Ladenaufgabe.',
         'Saithens unehelicher Sohn Cyrion ist 22 Jahre alt, trägt keinen Familiennachnamen und hat mit dem Geschäft nichts zu tun. Seine Mutter bleibt unbekannt. Die jüngeren Kinder wachsen im Familienhaushalt auf; sie erhalten keinen eigenständigen Ladenposten.',
-        'Das Bankgeschäft liegt beim eigenen Vetternzweig um Pereth Aurdden und Uffyria mit Ellric, Kyria und Neddan. Dieser Zweig bleibt im Stammbaum sichtbar und erhält vorerst keine Porträts. Er leitet weder die Rote Bank noch besitzt er ein Münzprägerecht.'),
-      connectionsTitle: 'Die drei Brüder', connections: AURDDEN_BROTHERS.map(person => ({ name: person.name, detail: `${person.age} Jahre · ${person.title}`, image: person.portrait, imageFormat: 'portrait' })),
+        'Das Bankgeschäft liegt beim eigenen Vetternzweig um Pereth Aurdden und Uffyria mit Ellric und Neddan. Kyria ist mit Maelrig Caeffyn verheiratet und führt die Finanzen von Rhosmeres Rösser in Gwynthor. Ihre bisherige Korrespondenzstelle ist als unbesetzte Rolle erhalten. Der Bankzweig leitet weder die Rote Bank noch besitzt er ein Münzprägerecht.'),
+      connectionsTitle: 'Die drei Brüder und die freie Bankrolle', connections: [...AURDDEN_BROTHERS.map(person => ({ name: person.name, detail: `${person.age} Jahre · ${person.title}`, image: person.portrait, imageFormat: 'portrait' })),
+        { name: 'Korrespondenz · Bankzweig', detail: 'Unbesetzte Rolle. Geschäftsschreiben vorbereiten, Fristen und Belege führen und die Ablage mit der Buchführung abstimmen.', image: '../Stammbäume/assets/images/placeholders/female.png', imageFormat: 'portrait' }],
       worksTitle: 'Die drei Familienlinien', works: [
         `Kyrwyn und Avelena: ${branch(['avelin-aurdden', 'iwria-aurdden', 'dyrwen-aurdden', 'saithwen-aurdden'])}.`,
         `Thalan und Firwen: ${branch(['kyran-aurdden', 'gwaeden-aurdden', 'janeth-aurdden'])}.`,

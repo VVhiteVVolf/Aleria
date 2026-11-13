@@ -47,7 +47,7 @@ export function buildAurddenCharacterExports(records) {
       sourcePath: `Charakter Archiv Exporte/Aurdden Sternenfang/${person.id}.json`,
       character: { ...base, id: person.worldPersonId, name: person.name, title: person.title, role: person.title,
         race: 'Mensch', age: person.age, origin: person.branch === 'wache' ? 'Aldrimar' : 'Rheunwaith · Cenyr',
-        currentLocation: person.marriedAway || person.bastard ? '' : person.branch === 'bank' ? 'Gwynthor · Bankzweig' : 'Gwynthor',
+        currentLocation: person.branch === 'rhosmere' ? 'Rhosmeres Rösser – Gwynthor' : person.marriedAway || person.bastard ? '' : person.branch === 'bank' ? 'Gwynthor · Bankzweig' : 'Gwynthor',
         fraktion: person.branch === 'wache' ? 'Der Sternenfang · angeworbene Ladenwache' : 'Familie Aurdden',
         portrait: portraitPath(person) || null, bio: person.notes, biography: biography(person), archived: false }
     };

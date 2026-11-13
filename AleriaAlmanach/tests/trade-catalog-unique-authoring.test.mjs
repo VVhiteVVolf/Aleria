@@ -84,6 +84,22 @@ test('the catalog selector explicitly switches an unlinked row between repeatabl
   assert.equal(Object.hasOwn(context.sanitizeTradeCatalogItems(context.collectTradeCatalogItems(host))[0], 'definitionKind'), false);
 });
 
+test('explicit categories of unlinked horses and equipment survive both editor paths and preserve offer revisions', async () => {
+  const context = await editor();
+  for (const [category, definitionCategory, definitionKind] of [['mischling', 'pferde', 'unique'], ['reinrassig', 'pferde', 'unique'], ['sattlerei', 'werkzeuge', 'shared']]) {
+    const item = context.sanitizeTradeCatalogItems([{ id: `fixed-${category}`, title: category, category, definitionCategory, definitionKind, priceMin: '100', currencyCode: 'KT' }])[0];
+    const offer = value => buildModuleOffers([{ id: 'stud', title: 'Gestüt', pages: [{ tradeCatalogPage: true, tradeCatalog: { items: [plain(value)] } }] }])[0];
+    assert.equal(offer(item).category, definitionCategory);
+    const host = form(context.buildTradeCatalogItemRows([item]));
+    const collected = context.sanitizeTradeCatalogItems(context.collectTradeCatalogItems(host))[0];
+    assert.equal(collected.definitionCategory, definitionCategory); assert.deepEqual(offer(collected).definitionRef, offer(item).definitionRef);
+    context.draft = { tradeCatalog: { items: [plain(item)] } };
+    vm.runInContext('function getInlineDraftPage() { return draft; }', context);
+    context.updateInlineTradeCatalogListField({ dataset: { tradeList: 'items', tradeIndex: '0', tradeField: 'category' }, value: category });
+    assert.equal(context.draft.tradeCatalog.items[0].definitionCategory, definitionCategory);
+  }
+});
+
 test('linked Builder definitions preserve their immutable reference and kind without offering a conflicting toggle', async () => {
   const context = await editor();
   const reference = { id: 'unique:abendstern', revision: 'v1' };

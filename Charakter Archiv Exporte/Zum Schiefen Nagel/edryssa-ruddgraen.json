@@ -1,0 +1,155 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-13T15:00:08.683Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Zum Schiefen Nagel/edryssa-ruddgraen.json",
+  "character": {
+    "name": "Edryssa Ruddgraen",
+    "title": "Kasse · Hofhaushalt",
+    "fraktion": "Familie Ruddgraen",
+    "role": "Kasse · Hofhaushalt",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Zum Schiefen Nagel · Gwynthor-Stadt",
+    "origin": "Gwynthor · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "46 Jahre. Brannocs Frau und Mutter der vier Kinder. Rothaarig, blauäugig und häufig schon über die nächste unnötige Ausgabe verärgert. Nörgelt über verschütteten Hafer, offene Tore und Brannocs vermeintliche Schnäppchen. Führt Kasse und Vorräte, erinnert an Zahlungsfristen und lässt sich bei den Futterrechnungen nichts vormachen. Ihr scharfer Ton gehört zum Alltag des eng zusammenarbeitenden Haushalts.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-13T15:00:08.683Z",
+    "updatedAt": "2026-11-13T15:00:08.683Z",
+    "portrait": "../AleriaAlmanach/assets/gwynthor-horse-resale/portraits/edryssa-ruddgraen-v1.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Edryssa Ruddgraen",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Edryssa Ruddgraen"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "46 Jahre"
+        },
+        {
+          "label": "Geburt",
+          "value": "1694"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Kasse · Hofhaushalt"
+        }
+      ],
+      "biography": {
+        "portrait": "../AleriaAlmanach/assets/gwynthor-horse-resale/portraits/edryssa-ruddgraen-v1.png",
+        "biographyTitle": "Person und Familienbetrieb",
+        "biographyText": "<p>46 Jahre. Brannocs Frau und Mutter der vier Kinder. Rothaarig, blauäugig und häufig schon über die nächste unnötige Ausgabe verärgert. Nörgelt über verschütteten Hafer, offene Tore und Brannocs vermeintliche Schnäppchen. Führt Kasse und Vorräte, erinnert an Zahlungsfristen und lässt sich bei den Futterrechnungen nichts vormachen. Ihr scharfer Ton gehört zum Alltag des eng zusammenarbeitenden Haushalts.</p>",
+        "historyTitle": "Die Ruddgraen",
+        "historyText": "<p>Der Gwynthorer Haushalt führt den kleinen Pferdehandel Zum Schiefen Nagel. Er kauft Gebrauchsmischlinge von Bauern, Söldnern und Reisenden und verkauft sie nach Beobachtung weiter. Eigene Pferdezucht, Landgestüt und Sattlerei gehören nicht zum Betrieb.</p>",
+        "documentsTitle": "Familie und Ort",
+        "documents": [
+          {
+            "title": "Familie Ruddgraen",
+            "text": "Eltern und vier Kinder.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-ruddgraen&mode=view&person=edryssa-ruddgraen"
+          },
+          {
+            "title": "Zum Schiefen Nagel",
+            "text": "Der kleine Pferdehandel in Gwynthor-Stadt.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=zum-schiefen-nagel-ruddgraen"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-ruddgraen--edryssa-ruddgraen"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-ruddgraen--edryssa-ruddgraen",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1694",
+      "death": "",
+      "houseId": "house-ruddgraen",
+      "houseName": "Familie Ruddgraen",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-ruddgraen",
+          "personId": "edryssa-ruddgraen",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-13T15:00:08.683Z",
+          "lastSyncedAt": "2026-11-13T15:00:08.683Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-ruddgraen&mode=view&person=edryssa-ruddgraen",
+          "fingerprint": "{\"name\":\"Edryssa Ruddgraen\",\"title\":\"Kasse · Hofhaushalt\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-ruddgraen\",\"portrait\":\"../AleriaAlmanach/assets/gwynthor-horse-resale/portraits/edryssa-ruddgraen-v1.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"brannoc-ruddgraen\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ruddgraen--brannoc-ruddgraen\",\"name\":\"Brannoc Ruddgraen\"}],\"children\":[{\"personId\":\"telynna-ruddgraen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ruddgraen--telynna-ruddgraen\",\"name\":\"Telynna Ruddgraen\"},{\"personId\":\"rhonessa-ruddgraen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ruddgraen--rhonessa-ruddgraen\",\"name\":\"Rhonessa Ruddgraen\"},{\"personId\":\"elvynna-ruddgraen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ruddgraen--elvynna-ruddgraen\",\"name\":\"Elvynna Ruddgraen\"},{\"personId\":\"bedryn-ruddgraen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ruddgraen--bedryn-ruddgraen\",\"name\":\"Bedryn Ruddgraen\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "brannoc-ruddgraen",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ruddgraen--brannoc-ruddgraen",
+            "name": "Brannoc Ruddgraen"
+          }
+        ],
+        "children": [
+          {
+            "personId": "telynna-ruddgraen",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ruddgraen--telynna-ruddgraen",
+            "name": "Telynna Ruddgraen"
+          },
+          {
+            "personId": "rhonessa-ruddgraen",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ruddgraen--rhonessa-ruddgraen",
+            "name": "Rhonessa Ruddgraen"
+          },
+          {
+            "personId": "elvynna-ruddgraen",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ruddgraen--elvynna-ruddgraen",
+            "name": "Elvynna Ruddgraen"
+          },
+          {
+            "personId": "bedryn-ruddgraen",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ruddgraen--bedryn-ruddgraen",
+            "name": "Bedryn Ruddgraen"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-ruddgraen--edryssa-ruddgraen",
+    "age": 46,
+    "race": "Mensch"
+  }
+}

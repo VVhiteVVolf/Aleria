@@ -1,0 +1,130 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-13T15:00:08.683Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Zum Schiefen Nagel/rhonessa-ruddgraen.json",
+  "character": {
+    "name": "Rhonessa Ruddgraen",
+    "title": "Verkauf · Kaufzettel",
+    "fraktion": "Familie Ruddgraen",
+    "role": "Verkauf · Kaufzettel",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Zum Schiefen Nagel · Gwynthor-Stadt",
+    "origin": "Gwynthor · Cenyr",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "21 Jahre. Zweite Tochter, attraktive erwachsene Cenyri mit rötlich braunem Haar, Sommersprossen und blauen Augen. Verhandelt lebhafter als ihr Vater und führt die einzelnen Kauf- und Verkaufszettel. Kann charmant feilschen, hält aber Altersschätzungen und unsichere Herkunft ausdrücklich auseinander. Im kleinen Familienbetrieb ist sie häufig die erste Ansprechpartnerin für Kunden.",
+    "aliases": [],
+    "archived": false,
+    "createdAt": "2026-11-13T15:00:08.683Z",
+    "updatedAt": "2026-11-13T15:00:08.683Z",
+    "portrait": "../AleriaAlmanach/assets/gwynthor-horse-resale/portraits/rhonessa-ruddgraen-v1.png",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "inventory": null,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Rhonessa Ruddgraen",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Rhonessa Ruddgraen"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "21 Jahre"
+        },
+        {
+          "label": "Geburt",
+          "value": "1719"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Verkauf · Kaufzettel"
+        }
+      ],
+      "biography": {
+        "portrait": "../AleriaAlmanach/assets/gwynthor-horse-resale/portraits/rhonessa-ruddgraen-v1.png",
+        "biographyTitle": "Person und Familienbetrieb",
+        "biographyText": "<p>21 Jahre. Zweite Tochter, attraktive erwachsene Cenyri mit rötlich braunem Haar, Sommersprossen und blauen Augen. Verhandelt lebhafter als ihr Vater und führt die einzelnen Kauf- und Verkaufszettel. Kann charmant feilschen, hält aber Altersschätzungen und unsichere Herkunft ausdrücklich auseinander. Im kleinen Familienbetrieb ist sie häufig die erste Ansprechpartnerin für Kunden.</p>",
+        "historyTitle": "Die Ruddgraen",
+        "historyText": "<p>Der Gwynthorer Haushalt führt den kleinen Pferdehandel Zum Schiefen Nagel. Er kauft Gebrauchsmischlinge von Bauern, Söldnern und Reisenden und verkauft sie nach Beobachtung weiter. Eigene Pferdezucht, Landgestüt und Sattlerei gehören nicht zum Betrieb.</p>",
+        "documentsTitle": "Familie und Ort",
+        "documents": [
+          {
+            "title": "Familie Ruddgraen",
+            "text": "Eltern und vier Kinder.",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-ruddgraen&mode=view&person=rhonessa-ruddgraen"
+          },
+          {
+            "title": "Zum Schiefen Nagel",
+            "text": "Der kleine Pferdehandel in Gwynthor-Stadt.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=zum-schiefen-nagel-ruddgraen"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--haus-ruddgraen--rhonessa-ruddgraen"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-ruddgraen--rhonessa-ruddgraen",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1719",
+      "death": "",
+      "houseId": "house-ruddgraen",
+      "houseName": "Familie Ruddgraen",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-ruddgraen",
+          "personId": "rhonessa-ruddgraen",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-13T15:00:08.683Z",
+          "lastSyncedAt": "2026-11-13T15:00:08.683Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-ruddgraen&mode=view&person=rhonessa-ruddgraen",
+          "fingerprint": "{\"name\":\"Rhonessa Ruddgraen\",\"title\":\"Verkauf · Kaufzettel\",\"birth\":\"1719\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-ruddgraen\",\"portrait\":\"../AleriaAlmanach/assets/gwynthor-horse-resale/portraits/rhonessa-ruddgraen-v1.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"brannoc-ruddgraen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ruddgraen--brannoc-ruddgraen\",\"name\":\"Brannoc Ruddgraen\"},{\"personId\":\"edryssa-ruddgraen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-ruddgraen--edryssa-ruddgraen\",\"name\":\"Edryssa Ruddgraen\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "brannoc-ruddgraen",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ruddgraen--brannoc-ruddgraen",
+            "name": "Brannoc Ruddgraen"
+          },
+          {
+            "personId": "edryssa-ruddgraen",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-ruddgraen--edryssa-ruddgraen",
+            "name": "Edryssa Ruddgraen"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--haus-ruddgraen--rhonessa-ruddgraen",
+    "age": 21,
+    "race": "Mensch"
+  }
+}
