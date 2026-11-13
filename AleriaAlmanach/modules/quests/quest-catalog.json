@@ -2555,6 +2555,18 @@
       "title": "Die goldene Fassung"
     },
     {
+      "id": "zum-silberhalm-halenrhyd",
+      "title": "Zum Silberhalm"
+    },
+    {
+      "id": "rhosmeres-roesser-gwynthor",
+      "title": "Rhosmeres Rösser – Gwynthor"
+    },
+    {
+      "id": "zum-schiefen-nagel-ruddgraen",
+      "title": "Zum Schiefen Nagel"
+    },
+    {
       "id": "zum-honigtoertchen",
       "title": "Zum Honigtörtchen"
     },
@@ -3680,6 +3692,96 @@
       "id": "die-goldene-fassung::session:goldene-fassung-wohnstube",
       "title": "Die goldene Fassung · Die Wohnstube über dem Juwelier",
       "moduleId": "die-goldene-fassung"
+    },
+    {
+      "id": "zum-silberhalm-halenrhyd",
+      "title": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd"
+    },
+    {
+      "id": "zum-silberhalm-halenrhyd::page:halenrhyd-einleitung",
+      "title": "Zum Silberhalm · Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd"
+    },
+    {
+      "id": "zum-silberhalm-halenrhyd::page:halenrhyd-hierarchie",
+      "title": "Zum Silberhalm · Hierarchie · Die gesamte Rosszucht",
+      "moduleId": "zum-silberhalm-halenrhyd"
+    },
+    {
+      "id": "zum-silberhalm-halenrhyd::session:halenrhyd-szene-verkaufsraum",
+      "title": "Zum Silberhalm · Szene · Verkaufsraum",
+      "moduleId": "zum-silberhalm-halenrhyd"
+    },
+    {
+      "id": "zum-silberhalm-halenrhyd::session:halenrhyd-szene-stall",
+      "title": "Zum Silberhalm · Szene · Stall",
+      "moduleId": "zum-silberhalm-halenrhyd"
+    },
+    {
+      "id": "zum-silberhalm-halenrhyd::session:halenrhyd-szene-sattlerei",
+      "title": "Zum Silberhalm · Szene · Sattlerei",
+      "moduleId": "zum-silberhalm-halenrhyd"
+    },
+    {
+      "id": "rhosmeres-roesser-gwynthor",
+      "title": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor"
+    },
+    {
+      "id": "rhosmeres-roesser-gwynthor::page:rhosmere-einleitung",
+      "title": "Rhosmeres Rösser – Gwynthor · Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor"
+    },
+    {
+      "id": "rhosmeres-roesser-gwynthor::page:rhosmere-hierarchie",
+      "title": "Rhosmeres Rösser – Gwynthor · Hierarchie · Die gesamte Rosszucht",
+      "moduleId": "rhosmeres-roesser-gwynthor"
+    },
+    {
+      "id": "rhosmeres-roesser-gwynthor::session:rhosmere-szene-verkaufsraum",
+      "title": "Rhosmeres Rösser – Gwynthor · Szene · Verkaufsraum",
+      "moduleId": "rhosmeres-roesser-gwynthor"
+    },
+    {
+      "id": "rhosmeres-roesser-gwynthor::session:rhosmere-szene-stall",
+      "title": "Rhosmeres Rösser – Gwynthor · Szene · Stall",
+      "moduleId": "rhosmeres-roesser-gwynthor"
+    },
+    {
+      "id": "rhosmeres-roesser-gwynthor::session:rhosmere-szene-sattlerei",
+      "title": "Rhosmeres Rösser – Gwynthor · Szene · Sattlerei",
+      "moduleId": "rhosmeres-roesser-gwynthor"
+    },
+    {
+      "id": "zum-schiefen-nagel-ruddgraen",
+      "title": "Zum Schiefen Nagel",
+      "moduleId": "zum-schiefen-nagel-ruddgraen"
+    },
+    {
+      "id": "zum-schiefen-nagel-ruddgraen::page:ruddgraen-einleitung",
+      "title": "Zum Schiefen Nagel · Zum Schiefen Nagel",
+      "moduleId": "zum-schiefen-nagel-ruddgraen"
+    },
+    {
+      "id": "zum-schiefen-nagel-ruddgraen::page:ruddgraen-rollen",
+      "title": "Zum Schiefen Nagel · Hierarchie · Aufgaben im Familienbetrieb",
+      "moduleId": "zum-schiefen-nagel-ruddgraen"
+    },
+    {
+      "id": "zum-schiefen-nagel-ruddgraen::session:ruddgraen-szene-verkaufsraum",
+      "title": "Zum Schiefen Nagel · Szene · Verkaufsraum",
+      "moduleId": "zum-schiefen-nagel-ruddgraen"
+    },
+    {
+      "id": "zum-schiefen-nagel-ruddgraen::session:ruddgraen-szene-stall",
+      "title": "Zum Schiefen Nagel · Szene · Stall",
+      "moduleId": "zum-schiefen-nagel-ruddgraen"
+    },
+    {
+      "id": "zum-schiefen-nagel-ruddgraen::session:ruddgraen-szene-ankaufshof",
+      "title": "Zum Schiefen Nagel · Szene · Ankaufshof",
+      "moduleId": "zum-schiefen-nagel-ruddgraen"
     },
     {
       "id": "zum-honigtoertchen",
@@ -6619,6 +6721,8 @@
     "AleriaAlmanach/modules/gwynthor-bathhouse/bathhouse-data.js",
     "AleriaAlmanach/modules/gwynthor-cathedral/cathedral-data.js",
     "AleriaAlmanach/modules/gwynthor-heime/homes-data.js",
+    "AleriaAlmanach/modules/gwynthor-horse-resale/resale-data.js",
+    "AleriaAlmanach/modules/gwynthor-horse-studs/stud-data.js",
     "AleriaAlmanach/modules/gwynthor-landfamilien/landfamilien-data.js",
     "AleriaAlmanach/modules/gwynthor-marktplatz/marketplace-data.js",
     "AleriaAlmanach/modules/gwynthor-theater/theater-data.js",

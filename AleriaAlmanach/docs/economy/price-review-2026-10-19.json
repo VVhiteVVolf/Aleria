@@ -4,12 +4,12 @@
   "moneyUnit": "Kupfertaler",
   "method": "Interne Konsistenzprüfung einer fiktiven Wirtschaft. Vergleichsskala: 24 KT sparsamer Vierpersonenbedarf + 3 KT freie Mittel; 27 KT Hafenlohn bei sechs Diensttagen. Keine historische Preisstatistik.",
   "summary": {
-    "rows": 1562,
+    "rows": 1607,
     "adjusted": 148,
-    "retained": 1207,
+    "retained": 1252,
     "notOffered": 205,
     "unavailable": 2,
-    "eligibleVenues": 20,
+    "eligibleVenues": 23,
     "horseAndLivestockPriceChanges": 0
   },
   "limitations": [
@@ -148,6 +148,48 @@
     {
       "id": "die-goldene-fassung",
       "title": "Die goldene Fassung",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "eligible": true,
+      "reason": "Begehbarer Verkaufsort mit Güterangebot."
+    },
+    {
+      "id": "zum-silberhalm-halenrhyd",
+      "title": "Zum Silberhalm",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "eligible": true,
+      "reason": "Begehbarer Verkaufsort mit Güterangebot."
+    },
+    {
+      "id": "rhosmeres-roesser-gwynthor",
+      "title": "Rhosmeres Rösser – Gwynthor",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "eligible": true,
+      "reason": "Begehbarer Verkaufsort mit Güterangebot."
+    },
+    {
+      "id": "zum-schiefen-nagel-ruddgraen",
+      "title": "Zum Schiefen Nagel",
       "tab": "Völker & Kulturen",
       "path": [
         "Cenyr",
@@ -19196,6 +19238,1041 @@
       "after": [
         50,
         50
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 4,
+      "itemIndex": 0,
+      "id": "halenrhyd-rasse-pferde-rhyfel",
+      "optionIndex": 0,
+      "name": "Rhyfel",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 2240,
+        "maxCopper": 2240
+      },
+      "category": "rassen",
+      "status": "available",
+      "before": null,
+      "after": [
+        2240,
+        2240
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 4,
+      "itemIndex": 1,
+      "id": "halenrhyd-rasse-pferde-ceffyl",
+      "optionIndex": 0,
+      "name": "Ceffyl",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 18500,
+        "maxCopper": 18500
+      },
+      "category": "rassen",
+      "status": "available",
+      "before": null,
+      "after": [
+        18500,
+        18500
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 4,
+      "itemIndex": 2,
+      "id": "halenrhyd-rasse-pferde-hest",
+      "optionIndex": 0,
+      "name": "Hest",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 620,
+        "maxCopper": 620
+      },
+      "category": "rassen",
+      "status": "available",
+      "before": null,
+      "after": [
+        620,
+        620
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 4,
+      "itemIndex": 3,
+      "id": "halenrhyd-rasse-pferde-tirashan",
+      "optionIndex": 0,
+      "name": "Tirashan",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 1030,
+        "maxCopper": 1030
+      },
+      "category": "rassen",
+      "status": "available",
+      "before": null,
+      "after": [
+        1030,
+        1030
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 4,
+      "itemIndex": 4,
+      "id": "horse-kupfersegel",
+      "optionIndex": 0,
+      "name": "Kupfersegel",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 1100,
+        "maxCopper": 1100
+      },
+      "category": "zucht",
+      "status": "available",
+      "before": null,
+      "after": [
+        1100,
+        1100
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 4,
+      "itemIndex": 5,
+      "id": "horse-dornfidel",
+      "optionIndex": 0,
+      "name": "Dornfidel",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 4180,
+        "maxCopper": 4180
+      },
+      "category": "zucht",
+      "status": "available",
+      "before": null,
+      "after": [
+        4180,
+        4180
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 4,
+      "itemIndex": 6,
+      "id": "horse-kesselkrume",
+      "optionIndex": 0,
+      "name": "Kesselkrume",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 240,
+        "maxCopper": 240
+      },
+      "category": "mischling",
+      "status": "available",
+      "before": null,
+      "after": [
+        240,
+        240
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 4,
+      "itemIndex": 7,
+      "id": "horse-morgenknopf",
+      "optionIndex": 0,
+      "name": "Morgenknopf",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 320,
+        "maxCopper": 320
+      },
+      "category": "mischling",
+      "status": "available",
+      "before": null,
+      "after": [
+        320,
+        320
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 4,
+      "itemIndex": 8,
+      "id": "horse-birkenschritt",
+      "optionIndex": 0,
+      "name": "Birkenschritt",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 620,
+        "maxCopper": 620
+      },
+      "category": "reinrassig",
+      "status": "available",
+      "before": null,
+      "after": [
+        620,
+        620
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 4,
+      "itemIndex": 9,
+      "id": "horse-regenzier",
+      "optionIndex": 0,
+      "name": "Regenzier",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 2240,
+        "maxCopper": 2240
+      },
+      "category": "reinrassig",
+      "status": "available",
+      "before": null,
+      "after": [
+        2240,
+        2240
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 5,
+      "itemIndex": 0,
+      "id": "halenrhyd-zubehoer-reitsattel",
+      "optionIndex": 0,
+      "name": "Reitsattel",
+      "unit": "1 Sattel",
+      "price": {
+        "minCopper": 480,
+        "maxCopper": 480
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        480,
+        480
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 5,
+      "itemIndex": 1,
+      "id": "halenrhyd-zubehoer-packsattel",
+      "optionIndex": 0,
+      "name": "Packsattel",
+      "unit": "1 Sattel",
+      "price": {
+        "minCopper": 420,
+        "maxCopper": 420
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        420,
+        420
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 5,
+      "itemIndex": 2,
+      "id": "halenrhyd-zubehoer-zaumzeug",
+      "optionIndex": 0,
+      "name": "Zaumzeug mit Zügeln",
+      "unit": "1 Satz",
+      "price": {
+        "minCopper": 145,
+        "maxCopper": 145
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        145,
+        145
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 5,
+      "itemIndex": 3,
+      "id": "halenrhyd-zubehoer-halfter",
+      "optionIndex": 0,
+      "name": "Lederhalfter mit Führstrick",
+      "unit": "1 Satz",
+      "price": {
+        "minCopper": 65,
+        "maxCopper": 65
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        65,
+        65
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 5,
+      "itemIndex": 4,
+      "id": "halenrhyd-zubehoer-sattelgurt",
+      "optionIndex": 0,
+      "name": "Sattelgurt",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 55,
+        "maxCopper": 55
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        55,
+        55
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 5,
+      "itemIndex": 5,
+      "id": "halenrhyd-zubehoer-steigbuegel",
+      "optionIndex": 0,
+      "name": "Eiserne Steigbügel mit Riemen",
+      "unit": "1 Paar",
+      "price": {
+        "minCopper": 140,
+        "maxCopper": 140
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        140,
+        140
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 5,
+      "itemIndex": 6,
+      "id": "halenrhyd-zubehoer-satteltaschen",
+      "optionIndex": 0,
+      "name": "Satteltaschen",
+      "unit": "1 Paar",
+      "price": {
+        "minCopper": 190,
+        "maxCopper": 190
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        190,
+        190
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 5,
+      "itemIndex": 7,
+      "id": "halenrhyd-zubehoer-satteldecke",
+      "optionIndex": 0,
+      "name": "Wollene Satteldecke",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 95,
+        "maxCopper": 95
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        95,
+        95
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 5,
+      "itemIndex": 8,
+      "id": "halenrhyd-zubehoer-putzzeug",
+      "optionIndex": 0,
+      "name": "Striegel und Rosshaarbürste",
+      "unit": "1 Satz",
+      "price": {
+        "minCopper": 38,
+        "maxCopper": 38
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        38,
+        38
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Silberhalm",
+      "moduleId": "zum-silberhalm-halenrhyd",
+      "pageIndex": 5,
+      "itemIndex": 9,
+      "id": "halenrhyd-zubehoer-hufkratzer",
+      "optionIndex": 0,
+      "name": "Hufkratzer",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 18,
+        "maxCopper": 18
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        18,
+        18
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 4,
+      "itemIndex": 0,
+      "id": "rhosmere-rasse-pferde-rhyfel",
+      "optionIndex": 0,
+      "name": "Rhyfel",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 3520,
+        "maxCopper": 3520
+      },
+      "category": "rassen",
+      "status": "available",
+      "before": null,
+      "after": [
+        3520,
+        3520
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 4,
+      "itemIndex": 1,
+      "id": "rhosmere-rasse-pferde-ceffyl",
+      "optionIndex": 0,
+      "name": "Ceffyl",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 30500,
+        "maxCopper": 30500
+      },
+      "category": "rassen",
+      "status": "available",
+      "before": null,
+      "after": [
+        30500,
+        30500
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 4,
+      "itemIndex": 2,
+      "id": "rhosmere-rasse-pferde-hest",
+      "optionIndex": 0,
+      "name": "Hest",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 900,
+        "maxCopper": 900
+      },
+      "category": "rassen",
+      "status": "available",
+      "before": null,
+      "after": [
+        900,
+        900
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 4,
+      "itemIndex": 3,
+      "id": "rhosmere-rasse-pferde-tirashan",
+      "optionIndex": 0,
+      "name": "Tirashan",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 1590,
+        "maxCopper": 1590
+      },
+      "category": "rassen",
+      "status": "available",
+      "before": null,
+      "after": [
+        1590,
+        1590
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 4,
+      "itemIndex": 4,
+      "id": "horse-aurelklang",
+      "optionIndex": 0,
+      "name": "Aurelklang",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 9590,
+        "maxCopper": 9590
+      },
+      "category": "zucht",
+      "status": "available",
+      "before": null,
+      "after": [
+        9590,
+        9590
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 4,
+      "itemIndex": 5,
+      "id": "horse-silberfaehrte",
+      "optionIndex": 0,
+      "name": "Silberfährte",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 2230,
+        "maxCopper": 2230
+      },
+      "category": "zucht",
+      "status": "available",
+      "before": null,
+      "after": [
+        2230,
+        2230
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 4,
+      "itemIndex": 6,
+      "id": "horse-wiesenkompass",
+      "optionIndex": 0,
+      "name": "Wiesenkompass",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 470,
+        "maxCopper": 470
+      },
+      "category": "mischling",
+      "status": "available",
+      "before": null,
+      "after": [
+        470,
+        470
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 4,
+      "itemIndex": 7,
+      "id": "horse-nesselglanz",
+      "optionIndex": 0,
+      "name": "Nesselglanz",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 570,
+        "maxCopper": 570
+      },
+      "category": "mischling",
+      "status": "available",
+      "before": null,
+      "after": [
+        570,
+        570
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 4,
+      "itemIndex": 8,
+      "id": "horse-bernsteinwacht",
+      "optionIndex": 0,
+      "name": "Bernsteinwacht",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 30500,
+        "maxCopper": 30500
+      },
+      "category": "reinrassig",
+      "status": "available",
+      "before": null,
+      "after": [
+        30500,
+        30500
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 4,
+      "itemIndex": 9,
+      "id": "horse-mondzisel",
+      "optionIndex": 0,
+      "name": "Mondzisel",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 1590,
+        "maxCopper": 1590
+      },
+      "category": "reinrassig",
+      "status": "available",
+      "before": null,
+      "after": [
+        1590,
+        1590
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 5,
+      "itemIndex": 0,
+      "id": "rhosmere-zubehoer-reitsattel",
+      "optionIndex": 0,
+      "name": "Reitsattel",
+      "unit": "1 Sattel",
+      "price": {
+        "minCopper": 720,
+        "maxCopper": 720
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        720,
+        720
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 5,
+      "itemIndex": 1,
+      "id": "rhosmere-zubehoer-packsattel",
+      "optionIndex": 0,
+      "name": "Packsattel",
+      "unit": "1 Sattel",
+      "price": {
+        "minCopper": 630,
+        "maxCopper": 630
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        630,
+        630
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 5,
+      "itemIndex": 2,
+      "id": "rhosmere-zubehoer-zaumzeug",
+      "optionIndex": 0,
+      "name": "Zaumzeug mit Zügeln",
+      "unit": "1 Satz",
+      "price": {
+        "minCopper": 218,
+        "maxCopper": 218
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        218,
+        218
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 5,
+      "itemIndex": 3,
+      "id": "rhosmere-zubehoer-halfter",
+      "optionIndex": 0,
+      "name": "Lederhalfter mit Führstrick",
+      "unit": "1 Satz",
+      "price": {
+        "minCopper": 98,
+        "maxCopper": 98
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        98,
+        98
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 5,
+      "itemIndex": 4,
+      "id": "rhosmere-zubehoer-sattelgurt",
+      "optionIndex": 0,
+      "name": "Sattelgurt",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 83,
+        "maxCopper": 83
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        83,
+        83
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 5,
+      "itemIndex": 5,
+      "id": "rhosmere-zubehoer-steigbuegel",
+      "optionIndex": 0,
+      "name": "Eiserne Steigbügel mit Riemen",
+      "unit": "1 Paar",
+      "price": {
+        "minCopper": 210,
+        "maxCopper": 210
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        210,
+        210
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 5,
+      "itemIndex": 6,
+      "id": "rhosmere-zubehoer-satteltaschen",
+      "optionIndex": 0,
+      "name": "Satteltaschen",
+      "unit": "1 Paar",
+      "price": {
+        "minCopper": 285,
+        "maxCopper": 285
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        285,
+        285
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 5,
+      "itemIndex": 7,
+      "id": "rhosmere-zubehoer-satteldecke",
+      "optionIndex": 0,
+      "name": "Wollene Satteldecke",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 143,
+        "maxCopper": 143
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        143,
+        143
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 5,
+      "itemIndex": 8,
+      "id": "rhosmere-zubehoer-putzzeug",
+      "optionIndex": 0,
+      "name": "Striegel und Rosshaarbürste",
+      "unit": "1 Satz",
+      "price": {
+        "minCopper": 57,
+        "maxCopper": 57
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        57,
+        57
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Rhosmeres Rösser – Gwynthor",
+      "moduleId": "rhosmeres-roesser-gwynthor",
+      "pageIndex": 5,
+      "itemIndex": 9,
+      "id": "rhosmere-zubehoer-hufkratzer",
+      "optionIndex": 0,
+      "name": "Hufkratzer",
+      "unit": "1 Stück",
+      "price": {
+        "minCopper": 27,
+        "maxCopper": 27
+      },
+      "category": "sattlerei",
+      "status": "available",
+      "before": null,
+      "after": [
+        27,
+        27
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Schiefen Nagel",
+      "moduleId": "zum-schiefen-nagel-ruddgraen",
+      "pageIndex": 4,
+      "itemIndex": 0,
+      "id": "ruddgraen-arbeitsgaul",
+      "optionIndex": 0,
+      "name": "Mischling · einfacher Arbeitsgaul",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 180,
+        "maxCopper": 180
+      },
+      "category": "angebot",
+      "status": "available",
+      "before": null,
+      "after": [
+        180,
+        180
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Schiefen Nagel",
+      "moduleId": "zum-schiefen-nagel-ruddgraen",
+      "pageIndex": 4,
+      "itemIndex": 1,
+      "id": "horse-ruebenkopp",
+      "optionIndex": 0,
+      "name": "Rübenkopp",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 140,
+        "maxCopper": 140
+      },
+      "category": "mischling",
+      "status": "available",
+      "before": null,
+      "after": [
+        140,
+        140
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Schiefen Nagel",
+      "moduleId": "zum-schiefen-nagel-ruddgraen",
+      "pageIndex": 4,
+      "itemIndex": 2,
+      "id": "horse-torfstiefel",
+      "optionIndex": 0,
+      "name": "Torfstiefel",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 120,
+        "maxCopper": 120
+      },
+      "category": "mischling",
+      "status": "available",
+      "before": null,
+      "after": [
+        120,
+        120
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Schiefen Nagel",
+      "moduleId": "zum-schiefen-nagel-ruddgraen",
+      "pageIndex": 4,
+      "itemIndex": 3,
+      "id": "horse-blechpflaume",
+      "optionIndex": 0,
+      "name": "Blechpflaume",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 210,
+        "maxCopper": 210
+      },
+      "category": "mischling",
+      "status": "available",
+      "before": null,
+      "after": [
+        210,
+        210
+      ],
+      "decision": "beibehalten",
+      "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."
+    },
+    {
+      "source": "Zum Schiefen Nagel",
+      "moduleId": "zum-schiefen-nagel-ruddgraen",
+      "pageIndex": 4,
+      "itemIndex": 4,
+      "id": "horse-karrenschnute",
+      "optionIndex": 0,
+      "name": "Karrenschnute",
+      "unit": "1 Pferd",
+      "price": {
+        "minCopper": 180,
+        "maxCopper": 180
+      },
+      "category": "mischling",
+      "status": "available",
+      "before": null,
+      "after": [
+        180,
+        180
       ],
       "decision": "beibehalten",
       "reason": "Im Verhältnis zu einfachen Waren, gelernter Arbeit, Qualität und Luxusangeboten vertretbar. Nachfrage und Einkaufsverträge bleiben Modellannahmen."

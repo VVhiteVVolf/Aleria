@@ -18417,7 +18417,8 @@
       "tree": "Stammbäume/Stammbaum.html?family=haus-aurdden&mode=view",
       "sources": [
         "haus-aurdden",
-        "haus-loer"
+        "haus-loer",
+        "haus-caeffyn"
       ],
       "illustrationIds": [
         "bild-c15345d708f48cc1"
@@ -18502,6 +18503,55 @@
       ],
       "illustrationIds": [
         "bild-6bce050575fb043c"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-caeffyn",
+      "name": "Familie Caeffyn",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-caeffyn&mode=view",
+      "sources": [
+        "haus-caeffyn",
+        "haus-aurdden"
+      ],
+      "illustrationIds": [
+        "bild-adcf44ed47bf18fb"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-halenrhyd",
+      "name": "Familie Halenrhyd",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-halenrhyd&mode=view",
+      "sources": [
+        "haus-halenrhyd"
+      ],
+      "illustrationIds": [
+        "bild-be2953d627e7a72c"
+      ],
+      "missingNote": ""
+    },
+    {
+      "id": "haus-ruddgraen",
+      "name": "Familie Ruddgraen",
+      "kind": "registered",
+      "region": "Cenyr",
+      "location": "Cenyr · Celtigerns Wacht · Llamreis Ankunft · Gwynthor",
+      "rank": "Bürgerfamilie",
+      "tree": "Stammbäume/Stammbaum.html?family=haus-ruddgraen&mode=view",
+      "sources": [
+        "haus-ruddgraen"
+      ],
+      "illustrationIds": [
+        "bild-7748a579a9fcaa5f"
       ],
       "missingNote": ""
     }
@@ -53437,6 +53487,69 @@
       ],
       "copies": [
         "Stammbäume/assets/images/portraits/haus-myrgath/lleucu-myrgath.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-adcf44ed47bf18fb",
+      "name": "Familie Caeffyn · Hausdarstellung",
+      "category": "Hausdarstellung",
+      "affiliation": "",
+      "image": "AleriaAlmanach/assets/gwynthor-horse-studs/portraits/maelrig-caeffyn-v3.png",
+      "sha256": "adcf44ed47bf18fb41cf117e752c1e2f279340a821dd0379ec4fd6c89243fa52",
+      "houseIds": [
+        "haus-caeffyn"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Caeffyn/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "AleriaAlmanach/assets/gwynthor-horse-studs/portraits/maelrig-caeffyn-v3.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-be2953d627e7a72c",
+      "name": "Familie Halenrhyd · Hausdarstellung",
+      "category": "Hausdarstellung",
+      "affiliation": "",
+      "image": "AleriaAlmanach/assets/gwynthor-horse-studs/portraits/gorweth-halenrhyd-v1.png",
+      "sha256": "be2953d627e7a72c94330b65ac4f67b0f61343b33623c8703851e17d24615b04",
+      "houseIds": [
+        "haus-halenrhyd"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Halenrhyd/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "AleriaAlmanach/assets/gwynthor-horse-studs/portraits/gorweth-halenrhyd-v1.png"
+      ],
+      "note": ""
+    },
+    {
+      "id": "bild-7748a579a9fcaa5f",
+      "name": "Familie Ruddgraen · Hausdarstellung",
+      "category": "Hausdarstellung",
+      "affiliation": "",
+      "image": "AleriaAlmanach/assets/gwynthor-horse-resale/portraits/brannoc-ruddgraen-v1.png",
+      "sha256": "7748a579a9fcaa5f7ab313987e208ed78ff7507dbe85083fdb238e95722af826",
+      "houseIds": [
+        "haus-ruddgraen"
+      ],
+      "sources": [
+        {
+          "path": "Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Ruddgraen/haus.content.mjs",
+          "original": ""
+        }
+      ],
+      "copies": [
+        "AleriaAlmanach/assets/gwynthor-horse-resale/portraits/brannoc-ruddgraen-v1.png"
       ],
       "note": ""
     }

@@ -2,6 +2,84 @@
   "schemaVersion": 1,
   "families": [
     {
+      "id": "haus-halenrhyd",
+      "name": "Familie Halenrhyd",
+      "crest": "/Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-studs/wappen/halenrhyd-wappen-v2.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-halenrhyd&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [
+        {
+          "name": "Llamreis Ankunft",
+          "kingdom": "Cenyr",
+          "county": "Celtigerns Wacht"
+        }
+      ],
+      "priority": 21,
+      "residences": [
+        {
+          "seat": "Gwynthor",
+          "role": "Hauptsitz",
+          "kingdom": "Cenyr",
+          "county": "Celtigerns Wacht",
+          "territory": "Llamreis Ankunft",
+          "rank": "commoner"
+        }
+      ]
+    },
+    {
+      "id": "haus-caeffyn",
+      "name": "Familie Caeffyn",
+      "crest": "/Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-studs/wappen/caeffyn-wappen-v2.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-caeffyn&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [
+        {
+          "name": "Llamreis Ankunft",
+          "kingdom": "Cenyr",
+          "county": "Celtigerns Wacht"
+        }
+      ],
+      "priority": 21,
+      "residences": [
+        {
+          "seat": "Gwynthor",
+          "role": "Hauptsitz",
+          "kingdom": "Cenyr",
+          "county": "Celtigerns Wacht",
+          "territory": "Llamreis Ankunft",
+          "rank": "commoner"
+        }
+      ]
+    },
+    {
+      "id": "haus-ruddgraen",
+      "name": "Familie Ruddgraen",
+      "crest": "/Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-resale/wappen/ruddgraen-wappen-v1.png",
+      "href": "/Stammbäume/Stammbaum.html?family=haus-ruddgraen&mode=view",
+      "status": "active",
+      "formerSeat": "",
+      "territories": [
+        {
+          "name": "Llamreis Ankunft",
+          "kingdom": "Cenyr",
+          "county": "Celtigerns Wacht"
+        }
+      ],
+      "priority": 21,
+      "residences": [
+        {
+          "seat": "Gwynthor",
+          "role": "Hauptsitz",
+          "kingdom": "Cenyr",
+          "county": "Celtigerns Wacht",
+          "territory": "Llamreis Ankunft",
+          "rank": "commoner"
+        }
+      ]
+    },
+    {
       "id": "haus-aurdden",
       "name": "Familie Aurdden",
       "crest": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Aurdden/aurdden-emblem.png",

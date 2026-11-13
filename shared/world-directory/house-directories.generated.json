@@ -551,6 +551,33 @@
             "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-dubhdarach"
           },
           {
+            "name": "Familie Halenrhyd",
+            "rank": "Bürgerlich",
+            "seat": "Gwynthor",
+            "liege": "Haus Wyrm",
+            "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-halenrhyd",
+            "familyId": "haus-halenrhyd",
+            "emblem": "/Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-studs/wappen/halenrhyd-wappen-v2.png"
+          },
+          {
+            "name": "Familie Caeffyn",
+            "rank": "Bürgerlich",
+            "seat": "Gwynthor",
+            "liege": "",
+            "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-caeffyn",
+            "familyId": "haus-caeffyn",
+            "emblem": "/Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-studs/wappen/caeffyn-wappen-v2.png"
+          },
+          {
+            "name": "Familie Ruddgraen",
+            "rank": "Bürgerlich",
+            "seat": "Gwynthor",
+            "liege": "",
+            "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ruddgraen",
+            "familyId": "haus-ruddgraen",
+            "emblem": "/Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-resale/wappen/ruddgraen-wappen-v1.png"
+          },
+          {
             "name": "Familie Aurdden",
             "rank": "Bürgerlich",
             "seat": "Gwynthor",
@@ -7404,6 +7431,36 @@
             "rank": "",
             "featured": false,
             "featuredLabel": ""
+          },
+          {
+            "id": "haus-halenrhyd",
+            "name": "Familie Halenrhyd",
+            "rank": "Bürgerlich",
+            "seat": "Gwynthor",
+            "liege": "Haus Wyrm",
+            "imageSrc": "/Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-studs/wappen/halenrhyd-wappen-v2.png",
+            "imageAlt": "Wappen Familie Halenrhyd",
+            "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-halenrhyd"
+          },
+          {
+            "id": "haus-caeffyn",
+            "name": "Familie Caeffyn",
+            "rank": "Bürgerlich",
+            "seat": "Gwynthor",
+            "liege": "",
+            "imageSrc": "/Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-studs/wappen/caeffyn-wappen-v2.png",
+            "imageAlt": "Wappen Familie Caeffyn",
+            "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-caeffyn"
+          },
+          {
+            "id": "haus-ruddgraen",
+            "name": "Familie Ruddgraen",
+            "rank": "Bürgerlich",
+            "seat": "Gwynthor",
+            "liege": "",
+            "imageSrc": "/Stammbäume/../AleriaAlmanach/assets/gwynthor-horse-resale/wappen/ruddgraen-wappen-v1.png",
+            "imageAlt": "Wappen Familie Ruddgraen",
+            "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-ruddgraen"
           },
           {
             "id": "haus-aurdden",
