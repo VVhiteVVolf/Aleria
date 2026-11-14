@@ -142,13 +142,22 @@ export const SITE_BUILD_TASKS = [
       'Stammbäume/assets/js/data/families.registry.js', 'Stammbäume/assets/js/domain/house-profile.js',
       'Charakter Archiv Exporte/Haus-Siegelringe 2026-11-02/', 'diagnostics/house-knight-rings-20261102/',
       'firebase/scripts/content/publish-house-signets.mjs', 'firebase/scripts/content/publish-house-signets-artwork.mjs',
-      'firebase/functions/tests/silberhirsch-protection.test.js', almanach('house-signets-and-silberhirsch'), almanach('house-signets-database')],
+      'firebase/functions/tests/silberhirsch-protection.test.js', almanach('house-signets-and-silberhirsch'), almanach('house-signets-database'),
+      "AleriaAlmanach/modules/draig-starting-possessions/",
+      "CharakterDatenbank/scripts/sync-draig-starting-possessions.mjs",
+      "firebase/scripts/content/publish-draig-starting-possessions.mjs",
+      "Charakter Archiv Exporte/Startbesitz 2026-11-05/",
+      "AleriaAlmanach/tests/draig-starting-possessions.test.mjs",
+      "AleriaAlmanach/tests/draig-starting-possessions-database.test.mjs"
+    ],
     commands: [['netlify/build/prepare-runtime-checks.mjs', '--scope=firebase'],
       ['AleriaAlmanach/scripts/build-authored-item-catalog.mjs', '--check'],
       ['CharakterDatenbank/scripts/sync-house-signets.mjs', '--check'],
       testCommand(almanach('house-signets-and-silberhirsch'), almanach('house-signets-database'),
         almanach('equipment-damage-protection'), almanach('character-equipment-sync')),
-      testCommand('firebase/functions/tests/silberhirsch-protection.test.js')]
+      testCommand('firebase/functions/tests/silberhirsch-protection.test.js'),
+      ["--test","--experimental-test-isolation=none","AleriaAlmanach/tests/draig-starting-possessions.test.mjs","AleriaAlmanach/tests/draig-starting-possessions-database.test.mjs"]
+    ]
   },
   {
     id: 'biography-layout', label: 'Shared biography layout, editorial defaults, training portraits and transfer', parallelValidation: true,
@@ -362,14 +371,17 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/modules/gwynthor-troetzli/', 'AleriaAlmanach/modules/item-definitions/',
       'AleriaAlmanach/scripts/build-quest-catalog.mjs', 'AleriaAlmanach/scripts/build-troetzli-quest.mjs',
       'AleriaAlmanach/scripts/build-fleischsammler-quest.mjs', 'AleriaAlmanach/scripts/build-quest-preparations.mjs',
-      'Stammb?ume/assets/js/data/gwynthor-fleischsammler/',
-      'Stammb?ume/assets/images/houses/Llamreis Ankunft/B?rgerliche/Gwynthor/fleischsammler/',
+      'Stammbäume/assets/js/data/gwynthor-fleischsammler/',
+      'Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/',
       'Anzeigetafeln/', 'Karten/karten.registry.js', 'Karten/assets/js/lsb/',
       'Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/', 'Karten/assets/js/karto-app.js',
       'Stammbäume/assets/data/published-families/haus-penrudd.json', ...questCatalogInputs,
       'firebase/functions/src/quests/', 'firebase/functions/src/generated/quests/', 'firebase/functions/tests/quest-system.test.js',
       'firebase/firestore.indexes.json', 'firebase/functions/package.json', 'firebase/functions/package-lock.json',
-      ...['quest-system', 'quest-board-availability', 'landing-quest-journal', 'landing-presentation', 'landing-folio-view', 'troetzli-quest', 'fleischsammler-quest', 'group-landing-model', 'group-landing-inventory', 'group-landing-integration'].map(almanach)],
+      ...['quest-system', 'quest-board-availability', 'landing-quest-journal', 'landing-presentation', 'landing-folio-view', 'troetzli-quest', 'fleischsammler-quest', 'group-landing-model', 'group-landing-inventory', 'group-landing-integration'].map(almanach),
+      "Stammbäume/assets/js/data/gwynthor-fleischsammler/",
+      "Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/"
+    ],
     commands: [['netlify/build/prepare-runtime-checks.mjs', '--scope=firebase'],
       ['AleriaAlmanach/scripts/build-quest-preparations.mjs', '--check'], ['AleriaAlmanach/scripts/build-quest-catalog.mjs', '--check'],
       testCommand(...['quest-system', 'quest-board-availability', 'landing-quest-journal', 'landing-presentation', 'landing-folio-view', 'troetzli-quest', 'fleischsammler-quest', 'group-landing-model', 'group-landing-inventory', 'group-landing-integration'].map(almanach)),
@@ -413,7 +425,9 @@ export const SITE_BUILD_TASKS = [
       'netlify/tests/release-task-coverage.test.mjs', 'netlify/tests/avatar-source-publication.test.mjs',
       'netlify/tests/adventure-release.test.mjs', 'netlify/tests/frontend-source-publication.test.mjs',
       'netlify/tests/reference-art-publication.test.mjs', 'netlify/tests/house-source-publication.test.mjs',
-      'netlify/tests/language-package-publication.test.mjs')]
+      'netlify/tests/language-package-publication.test.mjs'),
+      ["--test","--experimental-test-isolation=none","netlify/tests/canonical-source.test.mjs","netlify/tests/runtime-checks.test.mjs"]
+    ]
   },
   {
     id: 'regional-catalog', label: 'Generate regional equipment catalog', always: true,
@@ -717,7 +731,15 @@ export const SITE_BUILD_TASKS = [
       'firebase/functions/src/generated/item-register/', 'firebase/functions/src/generated/economy-pricing/',
       'AleriaAlmanach/scripts/build-economy-calculator.mjs',
       'AleriaAlmanach/scripts/build-economy-price-reference.mjs', 'AleriaAlmanach/scripts/build-economy-price-review.mjs',
-      'AleriaAlmanach/tests/economy-calculator.test.mjs', 'AleriaAlmanach/tests/economy-price-review.test.mjs', 'AleriaAlmanach/AleriaAlmanach.html'],
+      'AleriaAlmanach/tests/economy-calculator.test.mjs', 'AleriaAlmanach/tests/economy-price-review.test.mjs', 'AleriaAlmanach/AleriaAlmanach.html',
+      "AleriaAlmanach/scripts/check-module-template-assets.js",
+      "AleriaAlmanach/scripts/check-module-template-roundtrip.js",
+      "AleriaAlmanach/modules/language/",
+      "AleriaAlmanach/modules/name-list/",
+      "AleriaAlmanach/modules/script-table/",
+      "AleriaAlmanach/data/sections.js",
+      "Fonts/"
+    ],
     commands: [['AleriaAlmanach/scripts/build-economy-price-reference.mjs', '--check'], ['AleriaAlmanach/scripts/build-economy-price-review.mjs', '--check'],
       ['AleriaAlmanach/scripts/build-economy-calculator.mjs', '--check'], testCommand(almanach('economy-calculator'), almanach('economy-price-review')),
       ['AleriaAlmanach/scripts/check-module-template-assets.js'], ['AleriaAlmanach/scripts/check-module-template-roundtrip.js']]

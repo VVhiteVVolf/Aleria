@@ -196,6 +196,10 @@ export const WORLD_CONTENT_TASKS = [
         'netlify/tests/calidaria-source-publication.test.mjs',
         'netlify/tests/sylvarant-source-publication.test.mjs',
         'netlify/tests/solestia-source-publication.test.mjs',
-        'netlify/tests/phalantia-source-publication.test.mjs']]
+        'netlify/tests/phalantia-source-publication.test.mjs'],
+      ["--test","--experimental-test-isolation=none","Vorschau/Klythesia/scripts/klythesia-expansion.test.mjs","Vorschau/Klythesia/scripts/klythesia.test.mjs"],
+      ["--test","--experimental-test-isolation=none","Vorschau/Kemetara/tests/kemetara-runtime.test.mjs"],
+      ["--test","--experimental-test-isolation=none","netlify/tests/klythesia-source-publication.test.mjs"]
+    ]
   }
 ];

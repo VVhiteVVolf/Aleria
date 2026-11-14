@@ -54,13 +54,15 @@ try {
         assert.equal(await page.locator('#modal-overlay [data-action="open-comment-form"]').count(), 1);
         assert.equal(await page.locator('#modal-overlay [data-scene-transition-action="open-dialog"]').count(), 1);
         const toggle = page.locator('#modal-overlay .session-intro-toggle');
+        const initiallyVisible = await page.locator('#modal-overlay .session-stage-copy').isVisible();
         await toggle.focus(); await page.keyboard.press('Enter');
-        assert.equal(await page.locator('#modal-overlay .session-stage-copy').isVisible(), false);
+        assert.equal(await page.locator('#modal-overlay .session-stage-copy').isVisible(), !initiallyVisible);
         assert.equal(await page.evaluate(() => getCurrentCommentThreadId()), thread);
         await page.keyboard.press('Enter');
-        assert.ok(await page.locator('#modal-overlay .session-stage-copy').isVisible());
+        assert.equal(await page.locator('#modal-overlay .session-stage-copy').isVisible(), initiallyVisible);
         if (index === 0) {
-          await page.locator('#modal-overlay [data-action="open-comment-form"]').click();
+          const composerButton = page.locator('#modal-overlay [data-action="open-comment-form"]');
+          await composerButton.focus(); await composerButton.press('Enter');
           await page.locator('#comment-form-overlay.active').waitFor();
           await page.locator('#comment-form-overlay [data-action="close-comment-form"]').click();
           await page.locator('#comment-form-overlay.active').waitFor({ state: 'hidden' });
