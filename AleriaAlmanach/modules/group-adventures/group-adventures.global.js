@@ -681,13 +681,13 @@ var AleriaGroupAdventures = (() => {
     ["breitschultrig", "Breitschultrig", "Breite Schultern und kr\xE4ftiger Oberk\xF6rper; +1 auf Athletik. Schulterbreite beeintr\xE4chtigt nicht automatisch die Feinmotorik.", { skillModifiers: [skill("Athletik", 1)] }, 1],
     ["sehnig", "Sehnig", "Drahtiger K\xF6rper mit kr\xE4ftigen Sehnen; +1 auf Athletik und Akrobatik.", { skillModifiers: [skill("Athletik", 1), skill("Akrobatik", 1)] }, 1],
     ["gelenkig", "Gelenkig", "Gro\xDFe Beweglichkeit; +2 auf Akrobatik und +1 auf Fingerfertigkeit.", { skillModifiers: [skill("Akrobatik", 2), skill("Fingerfertigkeit", 1)] }, 2],
-    ["steife-gelenke", "Steife Gelenke", "Eingeschr\xE4nkte Gelenkbeweglichkeit; \u22122 auf Akrobatik und \u22121 m Bewegung.", { movement: -1, skillModifiers: [skill("Akrobatik", -2)] }, -2],
+    ["steife-gelenke", "Steife Gelenke", "Eingeschr\xE4nkte Gelenkbeweglichkeit erschwert flinke Man\xF6ver und rasches Reagieren: \u22122 auf Akrobatik und \u22121 Initiative.", { initiative: -1, skillModifiers: [skill("Akrobatik", -2)] }, -2],
     ["scharfe-augen", "Scharfe Augen", "+2 auf Wahrnehmung und zus\xE4tzlich +1 passive Wahrnehmung. Die passive Wahrnehmung steigt dadurch insgesamt um 3.", { skillModifiers: [skill("Wahrnehmung", 2)], passivePerception: 1 }, 2],
     ["schwerhoerig", "Schwerh\xF6rig", "Eingeschr\xE4nktes H\xF6rverm\xF6gen; \u22122 auf Wahrnehmung. Der gespeicherte Abzug ist ein allgemeiner Probenabzug.", { skillModifiers: [skill("Wahrnehmung", -2)] }, -1],
     ["eiserne-lunge", "Eiserne Lunge", "Kr\xE4ftige Lunge und gro\xDFe Ausdauer; +1 auf KON-Rettungsw\xFCrfe und +1 auf Athletik.", { saveAttributeModifiers: [{ attributeKey: "constitution", bonus: 1 }], skillModifiers: [skill("Athletik", 1)] }, 2],
-    ["schneller-stoffwechsel", "Schneller Stoffwechsel", "Leichter, rasch erm\xFCdender K\xF6rper; +1 m Bewegung und \u22122 maximale TP.", { movement: 1, maximumHitPoints: -2 }, 0],
+    ["schneller-stoffwechsel", "Schneller Stoffwechsel", "Du wirst rasch wieder hungrig und brauchst regelm\xE4\xDFig Nahrung. Beschreibendes K\xF6rpermerkmal ohne pauschalen Kampfbonus oder TP-Abzug.", {}, 0],
     ["schwere-knochen", "Schwere Knochen", "Dichter, schwerer Knochenbau; +3 maximale TP und \u22121 Initiative.", { maximumHitPoints: 3, initiative: -1 }, 1],
-    ["robuste-haut", "Robuste Haut", "Widerstandsf\xE4hige, vernarbte Haut; +1 RK und \u22121 auf Auftreten.", { armorClass: 1, skillModifiers: [skill("Auftreten", -1)] }, 2]
+    ["robuste-haut", "Robuste Haut", "Besonders widerstandsf\xE4hige Haut als k\xF6rperliche Eigenheit: +1 RK. Narben oder Hautbeschaffenheit schm\xE4lern nicht automatisch die Ausdrucksf\xE4higkeit.", { armorClass: 1 }, 3]
   ];
 
   // modules/character-development/development-trait-rules.js
@@ -803,7 +803,7 @@ var AleriaGroupAdventures = (() => {
   }));
   var UNIQUE_TRAIT_DEFINITIONS = [
     ["ordnungszwang", "Ordnungszwang", "Dein Blick f\xFCr Abweichungen hilft ein wenig, Einzelheiten kosten Zeit: +1 auf Nachforschungen, \u22121 Initiative.", { skillModifiers: [skill4("Nachforschungen", 1)], initiative: -1 }, 0],
-    ["namenhueter", "Namenh\xFCter", "Namen und geh\xF6rte Lebensgeschichten bleiben dir im Ged\xE4chtnis: +1 auf Geschichte und \xDCberzeugen, \u22121 auf Wahrnehmung.", { skillModifiers: [skill4("Geschichte", 1), skill4("\xDCberzeugen", 1), skill4("Wahrnehmung", -1)] }, 1],
+    ["namenhueter", "Namenh\xFCter", "Namen und geh\xF6rte Lebensgeschichten bleiben dir im Ged\xE4chtnis und helfen bei der pers\xF6nlichen Ansprache: +1 auf Geschichte und \xDCberzeugen.", { skillModifiers: [skill4("Geschichte", 1), skill4("\xDCberzeugen", 1)] }, 1],
     ["unverbesserlicher-optimist", "Unverbesserlicher Optimist", "Du erwartest stets das Beste: +1 auf Rettungsw\xFCrfe gegen Furcht und \xDCberzeugen, \u22121 auf Motiv erkennen.", { saveModifiers: [{ kind: "fear", bonus: 1 }], skillModifiers: [skill4("\xDCberzeugen", 1), skill4("Motiv erkennen", -1)] }, 1],
     ["schwarzseher", "Schwarzseher", "Du rechnest mit Schwierigkeiten und wirkst entsprechend d\xFCster: +1 Initiative und +1 auf Motiv erkennen, \u22121 auf \xDCberzeugen.", { initiative: 1, skillModifiers: [skill4("Motiv erkennen", 1), skill4("\xDCberzeugen", -1)] }, 1],
     ["schweigegeluebde", "Schweigegel\xFCbde", "Du h\xF6rst eher zu und verzichtest auf deine Stimme: +1 auf Motiv erkennen, \u22121 auf \xDCberzeugen und Auftreten. Die kleinen Abz\xFCge bilden die eingeschr\xE4nkte Ausdrucksweise allgemein ab; Schrift und Geb\xE4rden bleiben m\xF6glich.", { skillModifiers: [skill4("Motiv erkennen", 1), skill4("\xDCberzeugen", -1), skill4("Auftreten", -1)] }, -1],
@@ -811,7 +811,7 @@ var AleriaGroupAdventures = (() => {
     ["ritualgebunden", "Ritualgebunden", "Du kennst deine wiederkehrenden Riten, reagierst aber z\xF6gerlich auf Neues: +1 auf Religion, \u22121 Initiative.", { skillModifiers: [skill4("Religion", 1)], initiative: -1 }, 0],
     ["neugier-vor-vorsicht", "Neugier vor Vorsicht", "Du schaust genauer hin, gehst dabei aber eher ein Risiko ein: +1 auf Nachforschungen, \u22121 auf GES-Rettungsw\xFCrfe. Neugier ersetzt keine Ermittlerausbildung.", { skillModifiers: [skill4("Nachforschungen", 1)], saveAttributeModifiers: [save("dexterity", -1)] }, 0],
     ["uebervorsichtig", "\xDCbervorsichtig", "Du suchst zuerst einen sicheren Ausweg und z\xF6gerst dadurch: +1 auf GES-Rettungsw\xFCrfe, \u22121 Initiative.", { saveAttributeModifiers: [save("dexterity", 1)], initiative: -1 }, 0],
-    ["wanderlust", "Wanderlust", "Du bleibst lieber unterwegs, als dich lange an einer Stelle aufzuhalten: +1 m Bewegung und +1 auf \xDCberleben, \u22121 auf Nachforschungen.", { movement: 1, skillModifiers: [skill4("\xDCberleben", 1), skill4("Nachforschungen", -1)] }, 1],
+    ["wanderlust", "Wanderlust", "Viele Wege und Aufenthalte im Freien haben dich ausdauernd und wildniserfahren gemacht: +1 auf Athletik und \xDCberleben.", { skillModifiers: [skill4("Athletik", 1), skill4("\xDCberleben", 1)] }, 1],
     ["totengraeberhumor", "Totengr\xE4berhumor", "Mit Bestattungsbr\xE4uchen vertraut begegnest du dem Unheimlichen mit unpassenden Scherzen: +1 auf Religion und Rettungsw\xFCrfe gegen Furcht, \u22121 auf Auftreten.", { skillModifiers: [skill4("Religion", 1), skill4("Auftreten", -1)], saveModifiers: [{ kind: "fear", bonus: 1 }] }, 1],
     ["stille-zeugin", "Stille Zeugin", "Du beobachtest lieber vom Rand aus: +1 passive Wahrnehmung, \u22121 auf Auftreten. Der Bonus ver\xE4ndert keine aktiven Wahrnehmungsproben.", { passivePerception: 1, skillModifiers: [skill4("Auftreten", -1)] }, 0],
     ["fremde-erinnerungen", "Fremde Erinnerungen", "Bruchst\xFCcke fremder Geschichten und Runen dr\xE4ngen sich in deinen Geist: +1 auf Geschichte und Arkane Kunde, \u22121 auf WEI-Rettungsw\xFCrfe.", { skillModifiers: [skill4("Geschichte", 1), skill4("Arkane Kunde", 1)], saveAttributeModifiers: [save("wisdom", -1)] }, 1],
@@ -822,7 +822,7 @@ var AleriaGroupAdventures = (() => {
       weaponRule("zweikampf-nah", "pre-roll", "actor", "melee", { attackModifier: 1 }),
       weaponRule("zweikampf-fern", "pre-roll", "actor", "ranged", { attackModifier: -1 })
     ] }],
-    ["deckungssucher", "Deckungssucher", "Du bewegst dich bed\xE4chtig und sch\xFCtzt dich vor Beschuss: \u22121 m Bewegung; eingehender Fernkampf-Waffenschaden wird um 1 reduziert. Keine Wirkung gegen Nahkampf oder Zauber.", { movement: -1 }, 1, { triggerRules: [
+    ["deckungssucher", "Deckungssucher", "Du suchst zuerst Schutz und handelst dadurch sp\xE4ter: \u22121 Initiative; eingehender Fernkampf-Waffenschaden wird um 1 reduziert. Keine Wirkung gegen Nahkampf oder Zauber.", { initiative: -1 }, 1, { triggerRules: [
       weaponRule("deckung-beschuss", "pre-damage", "target", "ranged", { damageReduction: 1 })
     ] }],
     ["magische-wetterfuehligkeit", "Magische Wetterf\xFChligkeit", "Magische Spannungen machen dich unruhig: +1 auf Rettungsw\xFCrfe gegen Zauber, Gebete und magische Lieder, \u22121 Initiative.", { initiative: -1 }, 1, { triggerRules: magicalSaveRules("wetterfuehlig", 1) }],
@@ -854,7 +854,7 @@ var AleriaGroupAdventures = (() => {
     ["bluttraeger-aelvarspross", "Bluttr\xE4ger (Aelvarspross)", "Angeborenes menschliches Erbe einer Aelvar: +1 Zauber-SG, +2 auf Heimlichkeit und +1 auf Religion. Die infernale Anlage ist von subtiler Magie und verborgenen Riten gepr\xE4gt.", { spellSaveDc: 1, skillModifiers: [skill6("Heimlichkeit", 2), skill6("Religion", 1)] }, 4],
     ["bluttraeger-nymphenspross", "Bluttr\xE4ger (Nymphenspross)", "Angeborenes menschliches Erbe einer celestialen Nymphe: +1 Zauber-SG und jeweils +1 auf Naturkunde, Heilkunde und Mit Tieren umgehen. Die Anlage ist lebens- und naturverbunden.", { spellSaveDc: 1, skillModifiers: [skill6("Naturkunde", 1), skill6("Heilkunde", 1), skill6("Mit Tieren umgehen", 1)] }, 4],
     ["bluttraeger-flammenspross", "Bluttr\xE4ger (Flammenspross)", "Angeborenes menschliches Erbe eines humanoiden Celestialen der Flamme: +1 Zauberangriff und Resistenz gegen Feuerschaden.", { spellAttack: 1 }, 5, { damageAffinities: [{ damageType: "feuer", response: "resistant" }] }],
-    ["bluttraeger-windspross", "Bluttr\xE4ger (Windspross)", "Angeborenes menschliches Erbe eines humanoiden Celestialen der Winde: +1 Zauberangriff, +1 m Bewegung und +1 auf Akrobatik.", { spellAttack: 1, movement: 1, skillModifiers: [skill6("Akrobatik", 1)] }, 4],
+    ["bluttraeger-windspross", "Bluttr\xE4ger (Windspross)", "Angeborenes menschliches Erbe eines humanoiden Celestialen der Winde: +1 Zauberangriff, +1 Initiative und +1 auf Akrobatik. Die Leichtigkeit zeigt sich in rascher Reaktion statt zus\xE4tzlicher Wegstrecke.", { spellAttack: 1, initiative: 1, skillModifiers: [skill6("Akrobatik", 1)] }, 4],
     ["bluttraeger-donnerspross", "Bluttr\xE4ger (Donnerspross)", "Angeborenes menschliches Erbe eines humanoiden Celestialen des Donners: +1 Zauberangriff und Resistenz gegen Blitzschaden.", { spellAttack: 1 }, 5, { damageAffinities: [{ damageType: "blitz", response: "resistant" }] }],
     ["bluttraeger-bergspross", "Bluttr\xE4ger (Bergspross)", "Angeborenes menschliches Erbe eines humanoiden Celestialen der Berge: +1 Zauber-SG, +2 maximale TP und +1 auf ST\xC4-Rettungsw\xFCrfe. Aktuelle TP werden nicht aufgef\xFCllt.", { spellSaveDc: 1, maximumHitPoints: 2, saveAttributeModifiers: [{ attributeKey: "strength", bonus: 1 }] }, 4]
   ];
@@ -1030,11 +1030,11 @@ var AleriaGroupAdventures = (() => {
     definition("fehlende-hand", "Fehlende Hand", "Eine Hand fehlt oder ist dauerhaft unbrauchbar: \u22121 auf Fingerfertigkeit. Handabh\xE4ngige Ausr\xFCstung ben\xF6tigt eine passende Alternative.", { skillModifiers: [skill8("Fingerfertigkeit", -1)] }, -3, { exclusiveGroup: "hand-loss", rank: 2, limitations: "Nur eine nutzbare Hand; Zweihandwaffen und Zweiwaffenf\xFChrung ben\xF6tigen einen geeigneten Ersatz." }),
     definition("fehlende-finger", "Fehlende Finger", "Mehrere Finger fehlen oder sind dauerhaft unbeweglich: \u22122 auf Fingerfertigkeit.", { skillModifiers: [skill8("Fingerfertigkeit", -2)] }, -1, { exclusiveGroup: "hand-loss", rank: 1 }),
     definition("handtremor", "Angeborener Handtremor", "Anhaltendes Zittern: \u22122 auf Fingerfertigkeit und \u22121 auf Angriffe mit B\xF6gen, Armbr\xFCsten und Feuerwaffen.", { skillModifiers: [skill8("Fingerfertigkeit", -2)], weaponModifiers: [{ weaponTypes: ["bow", "crossbow", "firearm"], attack: -1, damage: 0 }] }, -2, { innate: true }),
-    definition("chronisches-hinken", "Chronisches Hinken", "Dauerhaft beeintr\xE4chtigter Gang: \u22121 m Bewegung und \u22121 auf Akrobatik.", { movement: -1, skillModifiers: [skill8("Akrobatik", -1)] }, -1, { exclusiveGroup: "leg-mobility", rank: 1 }),
-    definition("versteiftes-knie", "Versteiftes Knie", "\u22122 m Bewegung und \u22122 auf Akrobatik. Die Einschr\xE4nkung bleibt nach Rasten bestehen.", { movement: -2, skillModifiers: [skill8("Akrobatik", -2)] }, -2, { exclusiveGroup: "leg-mobility", rank: 2 }),
-    definition("fehlender-fuss", "Fehlender Fu\xDF", "Ein Fu\xDF fehlt oder ist dauerhaft unbrauchbar: \u22123 m Bewegung und \u22122 auf K\xF6rperbeherrschung. Hilfsmittel werden individuell abgebildet.", { movement: -3, skillModifiers: [skill8("K\xF6rperbeherrschung", -2)] }, -3, { exclusiveGroup: "leg-mobility", rank: 3 }),
+    definition("chronisches-hinken", "Chronisches Hinken", "Dauerhaft beeintr\xE4chtigter Gang erschwert rasches Ansetzen und wendige Man\xF6ver: \u22121 Initiative und \u22121 auf Akrobatik.", { initiative: -1, skillModifiers: [skill8("Akrobatik", -1)] }, -1, { exclusiveGroup: "leg-mobility", rank: 1 }),
+    definition("versteiftes-knie", "Versteiftes Knie", "Eingeschr\xE4nkte Beinarbeit: \u22122 Initiative und \u22122 auf Akrobatik. Die Einschr\xE4nkung bleibt nach Rasten bestehen.", { initiative: -2, skillModifiers: [skill8("Akrobatik", -2)] }, -2, { exclusiveGroup: "leg-mobility", rank: 2 }),
+    definition("fehlender-fuss", "Fehlender Fu\xDF", "Ein Fu\xDF fehlt oder ist dauerhaft unbrauchbar: \u22121 Initiative sowie \u22122 auf Akrobatik und K\xF6rperbeherrschung. Hilfsmittel werden individuell abgebildet.", { initiative: -1, skillModifiers: [skill8("Akrobatik", -2), skill8("K\xF6rperbeherrschung", -2)] }, -3, { exclusiveGroup: "leg-mobility", rank: 3 }),
     definition("gelaehmte-beine", "Gel\xE4hmte Beine", "Eigenst\xE4ndige Fortbewegung mit den Beinen ist nicht m\xF6glich. \u22123 auf Akrobatik; Rollstuhl, Reittier, Tragen oder Magie ben\xF6tigen eine eigene Bewegungsregel.", { skillModifiers: [skill8("Akrobatik", -3)] }, -5, { exclusiveGroup: "leg-mobility", rank: 4, disablesWalking: true, limitations: "Keine gehende Bewegung. Arme, Denken und geeignete Hilfsmittel bleiben nutzbar." }),
-    definition("wirbelsaeulenverkruemmung", "Angeborene Wirbels\xE4ulenverkr\xFCmmung", "\u22121 auf Athletik und K\xF6rperbeherrschung sowie \u22121 m Bewegung.", { movement: -1, skillModifiers: [skill8("Athletik", -1), skill8("K\xF6rperbeherrschung", -1)] }, -2, { innate: true }),
+    definition("wirbelsaeulenverkruemmung", "Angeborene Wirbels\xE4ulenverkr\xFCmmung", "Die eingeschr\xE4nkte Rumpfbeweglichkeit wird mit \u22121 auf Athletik, K\xF6rperbeherrschung und Akrobatik abgebildet.", { skillModifiers: [skill8("Athletik", -1), skill8("K\xF6rperbeherrschung", -1), skill8("Akrobatik", -1)] }, -2, { innate: true }),
     definition("knochenbruechigkeit", "Angeborene Knochenbr\xFCchigkeit", "\u22124 maximale TP und \u22121 auf ST\xC4-Rettungsw\xFCrfe. Keine pauschale Verdoppelung s\xE4mtlichen Schadens.", { maximumHitPoints: -4, saveAttributeModifiers: [save3("strength", -1)] }, -3, { innate: true }),
     definition("bluterleiden", "Angeborenes Bluterleiden", "\u22122 maximale TP und \u22122 auf Rettungsw\xFCrfe gegen Blutungsfolgen. Bestehende feste Kritfolgen werden nicht verst\xE4rkt oder verl\xE4ngert.", { maximumHitPoints: -2, saveModifiers: [{ kind: "bleeding", bonus: -2 }] }, -2, { innate: true }),
     definition("lungenschwaeche", "Chronische Lungenschw\xE4che", "\u22122 auf KON-Rettungsw\xFCrfe und \u22121 auf Athletik.", { saveAttributeModifiers: [save3("constitution", -2)], skillModifiers: [skill8("Athletik", -1)] }, -2),
@@ -1065,12 +1065,11 @@ var AleriaGroupAdventures = (() => {
         skill: -stage,
         initiative: -stage,
         savingThrow: -stage,
-        movement: -stage,
         ...variant === "human" ? { maximumHitPoints: -[0, 2, 6, 8][stage - 1] } : { saveAttributeModifiers: [save3("wisdom", -stage)] },
         ...stage === 4 ? { blocksActions: true } : {}
       };
       const symptoms = variant === "druid" ? ["Ersch\xF6pfung und gest\xF6rte Aura", "Halluzinationen und instabile Instinkte", "Schwerer geistiger Verfall ohne Nekrose", "Vollst\xE4ndiger Ich-Verlust ohne Nekrose"][stage - 1] : ["M\xFCdigkeit, Bl\xE4sse und entz\xFCndete Augen", "Kr\xE4mpfe, Fieber und Organst\xF6rungen", "Fortschreitende Nekrose und geistiger Verfall", "Vollst\xE4ndiger Ich-Verlust"][stage - 1];
-      const values = `\u2212${stage} auf Fertigkeiten, Rettungsw\xFCrfe und Initiative; \u2212${stage} m Bewegung${variant === "human" && stage > 1 ? `; \u2212${[0, 2, 6, 8][stage - 1]} maximale TP` : ""}${variant === "druid" ? `; zus\xE4tzlich \u2212${stage} auf WEI-Rettungsw\xFCrfe` : ""}.`;
+      const values = `\u2212${stage} auf Fertigkeiten, Rettungsw\xFCrfe und Initiative${variant === "human" && stage > 1 ? `; \u2212${[0, 2, 6, 8][stage - 1]} maximale TP` : ""}${variant === "druid" ? `; zus\xE4tzlich \u2212${stage} auf WEI-Rettungsw\xFCrfe` : ""}.`;
       return fever(
         `arkanes-fieber-${variant}-${stage}`,
         `Arkanes Fieber ${roman2}. Stadium${variant === "druid" ? " (Druidenvariante)" : ""}`,
@@ -1256,30 +1255,30 @@ var AleriaGroupAdventures = (() => {
   var skill11 = (name, bonus) => ({ name, bonus });
   var save4 = (attributeKey, bonus) => ({ attributeKey, bonus });
   var GENERAL_TRAIT_DEFINITIONS = Object.freeze([
-    ["ruhiger-atem", "Ruhiger Atem", "Gleichm\xE4\xDFiges Atmen hilft dir, den K\xF6rper ruhig und Bewegungen unauff\xE4llig zu halten; bis du handelst, vergeht etwas Zeit: +1 auf K\xF6rperbeherrschung und Heimlichkeit, \u22121 Initiative.", { skillModifiers: [skill11("K\xF6rperbeherrschung", 1), skill11("Heimlichkeit", 1)], initiative: -1 }, 1],
-    ["kraftvoller-griff", "Kraftvoller Griff", "Deine H\xE4nde packen sicher und kr\xE4ftig zu, sind bei feinen Handgriffen aber weniger behutsam: +1 auf Athletik, \u22121 auf Fingerfertigkeit.", { skillModifiers: [skill11("Athletik", 1), skill11("Fingerfertigkeit", -1)] }, 0],
-    ["behutsame-haende", "Behutsame H\xE4nde", "Du arbeitest an kleinen Dingen und bei der Versorgung besonders vorsichtig; spontane Handlungen fallen dir schwerer: +1 auf Fingerfertigkeit und Heilkunde, \u22121 Initiative. Medizinische Kenntnisse werden dadurch nicht ersetzt.", { skillModifiers: [skill11("Fingerfertigkeit", 1), skill11("Heilkunde", 1)], initiative: -1 }, 1],
-    ["federnder-gang", "Federnder Gang", "Dein schwungvoller Gang unterst\xFCtzt schnelle, bewegliche Schritte, ist aber h\xF6rbarer: +1 auf Akrobatik und +1 m Bewegung, \u22121 auf Heimlichkeit.", { skillModifiers: [skill11("Akrobatik", 1), skill11("Heimlichkeit", -1)], movement: 1 }, 1],
+    ["ruhiger-atem", "Ruhiger Atem", "Gleichm\xE4\xDFiges Atmen hilft dir, den K\xF6rper ruhig und Bewegungen unauff\xE4llig zu halten: +1 auf K\xF6rperbeherrschung und Heimlichkeit.", { skillModifiers: [skill11("K\xF6rperbeherrschung", 1), skill11("Heimlichkeit", 1)] }, 1],
+    ["kraftvoller-griff", "Kraftvoller Griff", "Deine H\xE4nde packen sicher und kr\xE4ftig zu: +1 auf Athletik. Kraft beeintr\xE4chtigt nicht automatisch die Feinmotorik.", { skillModifiers: [skill11("Athletik", 1)] }, 1],
+    ["behutsame-haende", "Behutsame H\xE4nde", "Du arbeitest an kleinen Dingen und bei der Versorgung besonders vorsichtig: +1 auf Fingerfertigkeit und Heilkunde. Medizinische Kenntnisse werden dadurch nicht ersetzt.", { skillModifiers: [skill11("Fingerfertigkeit", 1), skill11("Heilkunde", 1)] }, 1],
+    ["federnder-gang", "Federnder Gang", "Dein schwungvoller Gang unterst\xFCtzt bewegliche Schritte, ist aber h\xF6rbarer: +2 auf Akrobatik, \u22121 auf Heimlichkeit.", { skillModifiers: [skill11("Akrobatik", 2), skill11("Heimlichkeit", -1)] }, 1],
     ["schwere-schritte", "Schwere Schritte", "Du setzt deine Schritte fest und kontrolliert auf, aber wenig leise: +1 auf K\xF6rperbeherrschung, \u22121 auf Heimlichkeit. Daraus entsteht kein zus\xE4tzlicher R\xFCstungsschutz.", { skillModifiers: [skill11("K\xF6rperbeherrschung", 1), skill11("Heimlichkeit", -1)] }, 0],
-    ["leiser-tritt", "Leiser Tritt", "Du setzt jeden Schritt bedacht und m\xF6glichst ger\xE4uschlos: +1 auf Heimlichkeit, \u22121 m Bewegung.", { skillModifiers: [skill11("Heimlichkeit", 1)], movement: -1 }, 0],
+    ["leiser-tritt", "Leiser Tritt", "Du setzt deine Schritte sicher und ger\xE4uscharm: +1 auf Heimlichkeit. Leises Gehen verursacht keinen pauschalen Reaktionsnachteil.", { skillModifiers: [skill11("Heimlichkeit", 1)] }, 1],
     ["lautes-organ", "Lautes Organ", "Deine kr\xE4ftige Stimme tr\xE4gt weit und wirkt eindringlich, l\xE4sst sich aber schwer verbergen: +1 auf Auftreten und Einsch\xFCchtern, \u22121 auf Heimlichkeit. Die Werte sind allgemeine Probenmodifikatoren, keine automatische Reichweitenerh\xF6hung.", { skillModifiers: [skill11("Auftreten", 1), skill11("Einsch\xFCchtern", 1), skill11("Heimlichkeit", -1)] }, 1],
     ["fluesterstimme", "Fl\xFCsterstimme", "Du sprichst gew\xF6hnlich leise und unauff\xE4llig, doch deiner Stimme fehlt Nachdruck: +1 auf Heimlichkeit, \u22121 auf Einsch\xFCchtern. Die kleine Erleichterung ist ein allgemeiner Probenbonus.", { skillModifiers: [skill11("Heimlichkeit", 1), skill11("Einsch\xFCchtern", -1)] }, 0],
-    ["zaeher-marsch", "Z\xE4her Marsch", "Du teilst k\xF6rperliche Anstrengung gut ein und h\xE4ltst ein gleichm\xE4\xDFiges, langsameres Tempo: +1 auf Athletik und K\xF6rperbeherrschung, \u22121 m Bewegung. Keine automatische Immunit\xE4t gegen Ersch\xF6pfung.", { skillModifiers: [skill11("Athletik", 1), skill11("K\xF6rperbeherrschung", 1)], movement: -1 }, 1],
-    ["hastiger-schritt", "Hastiger Schritt", "Du bist rasch unterwegs und setzt deine F\xFC\xDFe dabei weniger sorgf\xE4ltig: +1 m Bewegung, \u22121 auf Akrobatik.", { movement: 1, skillModifiers: [skill11("Akrobatik", -1)] }, 0],
+    ["zaeher-marsch", "Z\xE4her Marsch", "Du teilst k\xF6rperliche Anstrengung gut ein und h\xE4ltst lange durch: +1 auf Athletik und K\xF6rperbeherrschung. Keine automatische Immunit\xE4t gegen Ersch\xF6pfung.", { skillModifiers: [skill11("Athletik", 1), skill11("K\xF6rperbeherrschung", 1)] }, 1],
+    ["hastiger-schritt", "Hastiger Schritt", "Du setzt dich rasch in Bewegung, aber weniger sorgf\xE4ltig: +1 Initiative, \u22121 auf Akrobatik.", { initiative: 1, skillModifiers: [skill11("Akrobatik", -1)] }, 0],
     ["geduldiger-beobachter", "Geduldiger Beobachter", "Du nimmst dir Zeit, Einzelheiten wahrzunehmen und zu pr\xFCfen: +1 auf Wahrnehmung und Nachforschungen, \u22121 Initiative.", { skillModifiers: [skill11("Wahrnehmung", 1), skill11("Nachforschungen", 1)], initiative: -1 }, 1],
     ["rascher-entschluss", "Rascher Entschluss", "Du entscheidest schnell, bevor du alle Einzelheiten gepr\xFCft hast: +1 Initiative, \u22121 auf Nachforschungen.", { initiative: 1, skillModifiers: [skill11("Nachforschungen", -1)] }, 0],
     ["umsichtig", "Umsichtig", "Du pr\xFCfst Gefahren sorgf\xE4ltig und h\xE4ltst einen Ausweg offen, reagierst dadurch jedoch sp\xE4ter: +1 auf Nachforschungen und GES-Rettungsw\xFCrfe, \u22121 Initiative.", { skillModifiers: [skill11("Nachforschungen", 1)], saveAttributeModifiers: [save4("dexterity", 1)], initiative: -1 }, 1],
     ["tunnelblick", "Tunnelblick", "Du verfolgst Einzelheiten sehr aufmerksam und \xFCbersiehst dabei leichter dein Umfeld: +2 auf Nachforschungen, \u22121 auf Wahrnehmung.", { skillModifiers: [skill11("Nachforschungen", 2), skill11("Wahrnehmung", -1)] }, 1],
     ["zerstreute-gedanken", "Zerstreute Gedanken", "Gedanken springen h\xE4ufig ab und bekannte Einzelheiten sind schwerer abrufbar: \u22121 auf Nachforschungen und Geschichte. Die Grundattribute bleiben unver\xE4ndert.", { skillModifiers: [skill11("Nachforschungen", -1), skill11("Geschichte", -1)] }, -1],
-    ["wissensdurst", "Wissensdurst", "Du sammelst gern Erz\xE4hlungen und Naturbeobachtungen, verlierst dabei aber dein unmittelbares Umfeld aus dem Blick: +1 auf Geschichte und Naturkunde, \u22121 auf Wahrnehmung. Unbekanntes Wissen muss weiterhin beschafft werden.", { skillModifiers: [skill11("Geschichte", 1), skill11("Naturkunde", 1), skill11("Wahrnehmung", -1)] }, 1],
+    ["wissensdurst", "Wissensdurst", "Du sammelst gern Erz\xE4hlungen und Naturbeobachtungen: +1 auf Geschichte und Naturkunde. Unbekanntes Wissen muss weiterhin beschafft werden.", { skillModifiers: [skill11("Geschichte", 1), skill11("Naturkunde", 1)] }, 1],
     ["naturverbundener-pragmatiker", "Naturverbundener Pragmatiker", "Du besch\xE4ftigst dich lieber mit beobachtbaren Naturzusammenh\xE4ngen als mit arkaner Theorie: +1 auf Naturkunde, \u22121 auf Arkane Kunde. Kein Verlust von Magiezugang oder bereits gelerntem Wissen.", { skillModifiers: [skill11("Naturkunde", 1), skill11("Arkane Kunde", -1)] }, 0],
     ["geuebtes-schaetzen", "Ge\xFCbtes Sch\xE4tzen", "Du pr\xFCfst Gr\xF6\xDFen, Mengen und auff\xE4llige Abweichungen mit sicherem Augenma\xDF: +1 auf Nachforschungen und Wahrnehmung. Das ersetzt keine Messung und bestimmt keine Warenpreise automatisch.", { skillModifiers: [skill11("Nachforschungen", 1), skill11("Wahrnehmung", 1)] }, 1],
-    ["unerschuetterliche-ruhe", "Unersch\xFCtterliche Ruhe", "Du h\xE4ltst Atmung und K\xF6rper auch bei Schrecken ruhiger, brauchst aber einen Moment zum Anlaufen: +1 auf K\xF6rperbeherrschung und Rettungsw\xFCrfe gegen Furcht, \u22121 Initiative.", { skillModifiers: [skill11("K\xF6rperbeherrschung", 1)], saveModifiers: [{ kind: "fear", bonus: 1 }], initiative: -1 }, 1],
+    ["unerschuetterliche-ruhe", "Unersch\xFCtterliche Ruhe", "Du h\xE4ltst Atmung und K\xF6rper auch bei Schrecken ruhig: +1 auf K\xF6rperbeherrschung und Rettungsw\xFCrfe gegen Furcht.", { skillModifiers: [skill11("K\xF6rperbeherrschung", 1)], saveModifiers: [{ kind: "fear", bonus: 1 }] }, 1],
     ["nervoeser-antrieb", "Nerv\xF6ser Antrieb", "Anspannung l\xE4sst dich fr\xFCh reagieren, macht dich aber anf\xE4lliger f\xFCr Schrecken: +1 Initiative, \u22121 auf Rettungsw\xFCrfe gegen Furcht.", { initiative: 1, saveModifiers: [{ kind: "fear", bonus: -1 }] }, 0],
     ["warmherzig", "Warmherzig", "Du gehst einf\xFChlsam und zugewandt auf andere ein; Drohungen liegen dir weniger: +1 auf \xDCberzeugen und Motiv erkennen, \u22121 auf Einsch\xFCchtern.", { skillModifiers: [skill11("\xDCberzeugen", 1), skill11("Motiv erkennen", 1), skill11("Einsch\xFCchtern", -1)] }, 1],
     ["strenger-blick", "Strenger Blick", "Dein ernster, durchdringender Blick unterstreicht Drohungen, wirkt bei Ann\xE4herungen aber abweisend: +1 auf Einsch\xFCchtern, \u22121 auf Flirten.", { skillModifiers: [skill11("Einsch\xFCchtern", 1), skill11("Flirten", -1)] }, 0],
-    ["trockener-humor", "Trockener Humor", "Deine knappen, n\xFCchternen Pointen gelingen vor Publikum besser als bei z\xE4rtlichen Ann\xE4herungen: +1 auf Auftreten, \u22121 auf Flirten.", { skillModifiers: [skill11("Auftreten", 1), skill11("Flirten", -1)] }, 0],
-    ["skeptischer-zuhoerer", "Skeptischer Zuh\xF6rer", "Du achtest auf verborgene Absichten und h\xE4ltst deine eigenen zur\xFCck, wirkst dabei jedoch misstrauisch: +1 auf Motiv erkennen und T\xE4uschen, \u22121 auf \xDCberzeugen.", { skillModifiers: [skill11("Motiv erkennen", 1), skill11("T\xE4uschen", 1), skill11("\xDCberzeugen", -1)] }, 1],
+    ["trockener-humor", "Trockener Humor", "Deine knappen, n\xFCchternen Pointen sitzen: +1 auf Auftreten. Dieser Humor verhindert keine gelungene pers\xF6nliche Ann\xE4herung.", { skillModifiers: [skill11("Auftreten", 1)] }, 1],
+    ["skeptischer-zuhoerer", "Skeptischer Zuh\xF6rer", "Du pr\xFCfst Aussagen und achtest auf Widerspr\xFCche: +1 auf Motiv erkennen. Skepsis verleiht keine zus\xE4tzliche L\xFCgenfertigkeit.", { skillModifiers: [skill11("Motiv erkennen", 1)] }, 1],
     ["leichtglaeubig", "Leichtgl\xE4ubig", "Du nimmst fremde Aussagen schnell f\xFCr bare M\xFCnze: \u22122 auf Motiv erkennen. Vertrauen verleiht keine automatische \xDCberzeugungskraft.", { skillModifiers: [skill11("Motiv erkennen", -2)] }, -1],
     ["streitlustig", "Streitlustig", "Du gehst rasch in Konfrontation und setzt andere unter Druck, findest aber schwerer einen einvernehmlichen Ton: +1 auf Einsch\xFCchtern, \u22121 auf \xDCberzeugen.", { skillModifiers: [skill11("Einsch\xFCchtern", 1), skill11("\xDCberzeugen", -1)] }, 0],
     ["harmoniebeduerftig", "Harmoniebed\xFCrftig", "Du suchst Ausgleich und vermeidest offenen Druck: +1 auf \xDCberzeugen, \u22121 auf Einsch\xFCchtern.", { skillModifiers: [skill11("\xDCberzeugen", 1), skill11("Einsch\xFCchtern", -1)] }, 0],
@@ -1376,8 +1375,8 @@ var AleriaGroupAdventures = (() => {
     [
       "talent-kundschafter",
       "Kundschafter",
-      "Unauff\xE4llig und aufmerksam unterwegs: +1 m Bewegung, +2 auf Heimlichkeit und je +1 auf Wahrnehmung und \xDCberleben.",
-      { movement: 1, skillModifiers: [skill12("Heimlichkeit", 2), skill12("Wahrnehmung"), skill12("\xDCberleben")] },
+      "Unauff\xE4llig, aufmerksam und reaktionsschnell unterwegs: +1 Initiative, +2 auf Heimlichkeit und je +1 auf Wahrnehmung und \xDCberleben.",
+      { initiative: 1, skillModifiers: [skill12("Heimlichkeit", 2), skill12("Wahrnehmung"), skill12("\xDCberleben")] },
       4
     ],
     [
@@ -1425,16 +1424,16 @@ var AleriaGroupAdventures = (() => {
     ["marotte-blickscheu", "Blickscheu", "Du weichst Blickkontakt aus und nimmst die Mimik anderer dadurch weniger gut auf; eigene Argumente wirken unsicherer: \u22121 auf Motiv erkennen und \xDCberzeugen.", { skillModifiers: [skill13("Motiv erkennen", -1), skill13("\xDCberzeugen", -1)] }, -1],
     ["marotte-wortschwall", "Wortschwall", "Du f\xFCllst jede Pause mit Worten und h\xE4ltst damit leicht die Aufmerksamkeit, \xFCbergehst aber die eigentliche Frage: +1 auf Auftreten, \u22121 auf \xDCberzeugen.", { skillModifiers: [skill13("Auftreten", 1), skill13("\xDCberzeugen", -1)] }, 0],
     ["marotte-verschlossene-auskunft", "Verschlossene Auskunft", "Du l\xE4sst dir gew\xF6hnlich wenig entlocken und wahrst den Schein, bleibst vor Publikum aber zu zur\xFCckhaltend: +1 auf T\xE4uschen, \u22121 auf Auftreten.", { skillModifiers: [skill13("T\xE4uschen", 1), skill13("Auftreten", -1)] }, 0],
-    ["marotte-rechthaberei", "Rechthaberei", "Du bestehst nachdr\xFCcklich auf deiner Sicht und \xFCbersiehst dabei leichter, was andere bewegt: +1 auf Einsch\xFCchtern, \u22121 auf Motiv erkennen.", { skillModifiers: [skill13("Einsch\xFCchtern", 1), skill13("Motiv erkennen", -1)] }, 0],
-    ["marotte-umwege-aus-neugier", "Umwege aus Neugier", "Du schweifst mit Blick und Schritten gern zum Rand des Weges ab: +1 auf Wahrnehmung, \u22121 m Bewegung. Der Wahrnehmungsbonus gilt allgemein, ohne automatisches Entdecken verborgener Dinge.", { skillModifiers: [skill13("Wahrnehmung", 1)], movement: -1 }, 0],
-    ["marotte-nestelnde-finger", "Nestelnde Finger", "Du besch\xE4ftigst die H\xE4nde st\xE4ndig mit Schn\xFCren, Kn\xF6pfen und kleinen Bewegungen; dabei entgeht dir eher etwas im Umfeld: +1 auf Fingerfertigkeit, \u22121 auf Wahrnehmung.", { skillModifiers: [skill13("Fingerfertigkeit", 1), skill13("Wahrnehmung", -1)] }, 0],
+    ["marotte-rechthaberei", "Rechthaberei", "Du beharrst auf deiner Sicht und l\xE4sst Einw\xE4nde kaum gelten; das erschwert eine Einigung: \u22121 auf \xDCberzeugen. Rechthabenwollen verleiht keine zus\xE4tzliche Einsch\xFCchterungskraft.", { skillModifiers: [skill13("\xDCberzeugen", -1)] }, -1],
+    ["marotte-umwege-aus-neugier", "Umwege aus Neugier", "Du l\xE4sst dich von Einzelheiten am Wegesrand ablenken und brauchst einen Moment, um auf eine neue Lage umzuschalten: +1 auf Wahrnehmung, \u22121 Initiative. Kein automatisches Entdecken verborgener Dinge.", { skillModifiers: [skill13("Wahrnehmung", 1)], initiative: -1 }, 0],
+    ["marotte-nestelnde-finger", "Nestelnde Finger", "Du nestelst st\xE4ndig an Schn\xFCren und Kn\xF6pfen; die kleinen Bewegungen und Ger\xE4usche verraten dich leichter: \u22121 auf Heimlichkeit. Nesteln verleiht keine feinmotorische Ausbildung.", { skillModifiers: [skill13("Heimlichkeit", -1)] }, -1],
     ["marotte-begruessungsueberschwang", "Begr\xFC\xDFungs\xFCberschwang", "Du trittst mit gro\xDFen Gesten, offener Stimme und herzlich direkter Ansprache auf: +1 auf \xDCberzeugen, \u22121 auf Heimlichkeit. Der Abzug bildet deine auff\xE4llige Gewohnheit allgemein ab.", { skillModifiers: [skill13("\xDCberzeugen", 1), skill13("Heimlichkeit", -1)] }, 0],
     ["marotte-foermliche-anrede", "F\xF6rmliche Anrede", "Du bleibst selbst in vertraulicher Runde bei f\xF6rmlichen Wendungen; geordnete Anliegen gelingen dir besser als unbefangene Ann\xE4herungen: +1 auf \xDCberzeugen, \u22121 auf Flirten.", { skillModifiers: [skill13("\xDCberzeugen", 1), skill13("Flirten", -1)] }, 0],
     ["marotte-ausladende-verbeugung", "Ausladende Verbeugung", "Du setzt auf h\xF6fliche, aufwendige Begr\xFC\xDFungs- und Abschiedsgesten, die N\xE4he schaffen, dich aber einen Augenblick kosten: +1 auf Flirten, \u22121 Initiative.", { skillModifiers: [skill13("Flirten", 1)], initiative: -1 }, 0],
-    ["marotte-notizdrang", "Notizdrang", "Du h\xE4ltst Erlebtes und geh\xF6rte \xDCberlieferungen beharrlich fest und h\xE4ltst vor spontanem Handeln erst inne: +1 auf Geschichte, \u22121 Initiative. Unbekanntes Wissen wird dadurch nicht verf\xFCgbar.", { skillModifiers: [skill13("Geschichte", 1)], initiative: -1 }, 0],
-    ["marotte-schuhputzfimmel", "Schuhputzfimmel", "Du h\xE4ltst beim Gehen immer wieder kurz inne, um Staub oder Schlamm von den Schuhen zu streifen: \u22121 m Bewegung. Die Verz\xF6gerung wird als allgemeiner Bewegungsabzug gef\xFChrt.", { movement: -1 }, -1],
+    ["marotte-notizdrang", "Notizdrang", "Du h\xE4ltst Erlebtes und geh\xF6rte \xDCberlieferungen beharrlich fest und pr\xE4gst sie dir dadurch besser ein: +1 auf Geschichte. Unbekanntes Wissen wird dadurch nicht verf\xFCgbar.", { skillModifiers: [skill13("Geschichte", 1)] }, 1],
+    ["marotte-schuhputzfimmel", "Schuhputzfimmel", "Selbst beim raschen Aufbruch h\xE4ltst du erst inne, um Staub oder Schlamm von den Schuhen zu streifen: \u22121 Initiative.", { initiative: -1 }, -1],
     ["marotte-noergelei", "N\xF6rgelei", "Du findest in Gespr\xE4chen schnell einen Grund zum Klagen; das erschwert gemeinsame L\xF6sungen und pers\xF6nliche Ann\xE4herungen: \u22121 auf \xDCberzeugen und Flirten.", { skillModifiers: [skill13("\xDCberzeugen", -1), skill13("Flirten", -1)] }, -1],
-    ["marotte-kraeftemessen", "St\xE4ndiges Kr\xE4ftemessen", "Jahrelange Gewohnheit kraftbetonter Wettbewerbe hat dich im Ziehen, Stemmen und Ringen ge\xFCbt; fremde Absichten verlieren sich hinter deinem Siegeswillen: +1 auf Athletik, \u22121 auf Motiv erkennen.", { skillModifiers: [skill13("Athletik", 1), skill13("Motiv erkennen", -1)] }, 0]
+    ["marotte-kraeftemessen", "St\xE4ndiges Kr\xE4ftemessen", "Die Gewohnheit kraftbetonter Wettbewerbe hat dich im Ziehen, Stemmen und Ringen ge\xFCbt: +1 auf Athletik.", { skillModifiers: [skill13("Athletik", 1)] }, 1]
   ]);
 
   // modules/character-development/development-expansion-abilities.js
@@ -1610,6 +1609,45 @@ var AleriaGroupAdventures = (() => {
     return categories.get(typeof entry === "string" ? entry : entry?.developmentTraitId || entry?.id) || null;
   }
 
+  // modules/character-development/development-spiritual-traits.js
+  var stages = [
+    ["I", "Erste Zweifel", "Erste Zweifel tr\xFCben das bisher selbstverst\xE4ndliche Vertrauen in die Verbindung zur Gottheit."],
+    ["II", "Innere Unruhe", "Das eigene Handeln und die Ideale der Gottheit geraten sp\xFCrbar in Widerspruch."],
+    ["III", "Gest\xF6rte Einkehr", "Gebet und innere Einkehr sind von der wiederkehrenden Erfahrung der Entfremdung gepr\xE4gt."],
+    ["IV", "Tiefe Entfremdung", "Die Entfernung von den Tugenden und Idealen der Gottheit pr\xE4gt das geistliche Selbstverst\xE4ndnis."],
+    ["V", "Am Rand des Bruchs", "Die Verbindung zur Gottheit steht erz\xE4hlerisch kurz vor dem v\xF6lligen Bruch."],
+    ["VI", "Spiritueller Bruch", "Die Entfremdung erreicht ihren Endpunkt. Der im Konzept vorgesehene Verlust der Klerikerkr\xE4fte wird erst sp\xE4ter ausgearbeitet; derzeit bleiben sie vollst\xE4ndig nutzbar."]
+  ];
+  var dissonanceContext = "F\xFCr Kleriker nach wiederholtem oder schwerwiegendem Handeln gegen die Tugenden und Ideale ihrer Gottheit. Abbau durch Bu\xDFe und entsprechende Taten, nicht durch blo\xDFes Schlafen; die Stufe wird gemeinsam mit der Spielleitung manuell festgelegt.";
+  var noEffects = "Vorerst rein beschreibend: keine Boni, Mali, Kraftsperren oder Balancekosten.";
+  var SPIRITUAL_TRAIT_DEFINITIONS = Object.freeze([
+    ...stages.map(([roman2, title, description], index) => [
+      `spirituelle-dissonanz-${index + 1}`,
+      `Spirituelle Dissonanz ${roman2}`,
+      `${title}: ${description} ${dissonanceContext} ${noEffects}`,
+      {},
+      0,
+      {
+        tags: "Geistlicher Zustand \xB7 Kleriker",
+        rank: index + 1,
+        exclusiveGroup: "spiritual-dissonance",
+        appliesWhen: "Manuell festgelegte Dissonanzstufe; bleibt bis zur bewussten \xC4nderung bestehen"
+      }
+    ]),
+    [
+      "eidbruch",
+      "Eidbruch",
+      `F\xFCr Eiferer, Paladine und Schwurritter: Du hast einen f\xFCr deinen Weg bindenden Eid oder Schwur gebrochen. Welches Gel\xFCbde verletzt wurde und wie eine Wiedergutmachung aussehen kann, wird mit der Spielleitung festgehalten. Der Eintrag bleibt bis zur bewussten \xC4nderung bestehen. ${noEffects}`,
+      {},
+      0,
+      {
+        tags: "Geistlicher Zustand \xB7 Eiferer \xB7 Paladin \xB7 Schwurritter",
+        appliesWhen: "Manuell festgehaltener Bruch eines bindenden Eids oder Schwurs"
+      }
+    ]
+  ]);
+  var origins3 = new Map(SPIRITUAL_TRAIT_DEFINITIONS.map(([id, name, , , , policy]) => [`development-trait-${id}`, Object.freeze({ id: `development-trait-${id}`, name, ...policy })]));
+
   // modules/character-development/development-traits.js
   var skill15 = (name, bonus) => ({ name, bonus });
   var definitions = [
@@ -1622,8 +1660,8 @@ var AleriaGroupAdventures = (() => {
       { triggerRules: traitSaveDisadvantage("feuerangst", { damageTypes: ["feuer", "fire"] }) }
     ],
     ["naturkind", "In der Natur aufgewachsen", "Vertrautheit mit der Wildnis: +1 auf Naturkunde und Mit Tieren umgehen. Keine automatische Expertise.", { skillModifiers: [skill15("Naturkunde", 1), skill15("Mit Tieren umgehen", 1)] }, 2],
-    ["flink", "Flinke F\xFC\xDFe", "+2 m Bewegung, \u22121 RK.", { movement: 2, armorClass: -1 }, 0],
-    ["standfest", "Standfest", "+1 RK, \u22121 m Bewegung.", { armorClass: 1, movement: -1 }, 2],
+    ["flink", "Flinke F\xFC\xDFe", "Schnelle, sichere Schritte erleichtern das Ausweichen: +1 RK und +1 auf Akrobatik. Der Bonus bildet bewegliche Abwehr ohne Entfernungsz\xE4hlung ab.", { armorClass: 1, skillModifiers: [skill15("Akrobatik", 1)] }, 4],
+    ["standfest", "Standfest", "Ein fester, defensiver Stand erleichtert das Abfangen von Angriffen, erschwert aber wendige Man\xF6ver: +1 RK, \u22121 auf Akrobatik.", { armorClass: 1, skillModifiers: [skill15("Akrobatik", -1)] }, 2],
     ["wachsam", "Wachsamer Blick", "+2 passive Wahrnehmung und +1 Initiative.", { passivePerception: 2, initiative: 1 }, 2],
     ["vertraeumt", "Vertr\xE4umt", "Abschweifende Aufmerksamkeit: \u22121 Initiative und \u22121 passive Wahrnehmung. Tagtr\xE4ume verleihen kein arkanes Fachwissen.", { initiative: -1, passivePerception: -1 }, -1],
     ["zaeh", "Z\xE4h wie Leder", "+4 maximale TP; aktuelle TP werden nicht aufgef\xFCllt.", { maximumHitPoints: 4 }, 2],
@@ -1632,24 +1670,24 @@ var AleriaGroupAdventures = (() => {
     ["aengstlich", "Leicht zu erschrecken", "\u22122 auf Rettungsw\xFCrfe gegen Furcht. Schreckhaftigkeit verleiht keine zus\xE4tzliche Schleichfertigkeit.", { saveModifiers: [{ kind: "fear", bonus: -2 }] }, -1],
     ["giftfest", "Giftfeste Konstitution", "Resistenz gegen Giftschaden; +1 auf Rettungsw\xFCrfe gegen Gift.", { saveModifiers: [{ kind: "poison", bonus: 1 }] }, 4, { damageAffinities: [{ damageType: "gift", response: "resistant" }] }],
     ["frostempfindlich", "Frostempfindlich", "Doppelter K\xE4lteschaden.", {}, -2, { damageAffinities: [{ damageType: "k\xE4lte", response: "vulnerable" }] }],
-    ["glutgewoehnt", "An Glut gew\xF6hnt", "Ruhe beim Umgang mit Feuer: +1 auf Rettungsw\xFCrfe gegen feuerbasierte Angriffe; \u22121 Initiative. Gew\xF6hnung halbiert keinen Feuerschaden.", { initiative: -1 }, 0, { triggerRules: traitSaveModifier("glutgewoehnung", 1, { damageTypes: ["feuer", "fire"] }) }],
-    ["gelehrt", "B\xFCcherwurm", "Expertise in Geschichte; \u22121 auf Athletik.", { skillProficiencies: [{ name: "Geschichte", proficiency: "expertise" }], skillModifiers: [skill15("Athletik", -1)] }, 2],
+    ["glutgewoehnt", "An Glut gew\xF6hnt", "Ruhe beim Umgang mit Feuer: +1 auf Rettungsw\xFCrfe gegen feuerbasierte Angriffe. Gew\xF6hnung halbiert keinen Feuerschaden.", {}, 1, { triggerRules: traitSaveModifier("glutgewoehnung", 1, { damageTypes: ["feuer", "fire"] }) }],
+    ["gelehrt", "B\xFCcherwurm", "Ausdauernde Besch\xE4ftigung mit \xDCberlieferungen: Expertise in Geschichte. Lesen beeintr\xE4chtigt nicht automatisch die k\xF6rperliche Fitness.", { skillProficiencies: [{ name: "Geschichte", proficiency: "expertise" }] }, 3],
     ["empathisch", "Menschenkenner", "+1 auf Motiv erkennen und \xDCberzeugen. Einf\xFChlung unterst\xFCtzt den Umgang mit Menschen, ersetzt aber keine Ausbildung.", { skillModifiers: [skill15("Motiv erkennen", 1), skill15("\xDCberzeugen", 1)] }, 1],
     ["schroff", "Schroffe Ehrlichkeit", "+1 auf Einsch\xFCchtern, \u22121 auf T\xE4uschen.", { skillModifiers: [skill15("Einsch\xFCchtern", 1), skill15("T\xE4uschen", -1)] }, 0],
-    ["silberzunge", "Silberzunge", "Expertise in \xDCberzeugen; \u22121 auf Motiv erkennen.", { skillProficiencies: [{ name: "\xDCberzeugen", proficiency: "expertise" }], skillModifiers: [skill15("Motiv erkennen", -1)] }, 2],
+    ["silberzunge", "Silberzunge", "\xDCberzeugende Wortwahl und sicheres Argumentieren: Expertise in \xDCberzeugen. Andere behalten ihren eigenen Willen.", { skillProficiencies: [{ name: "\xDCberzeugen", proficiency: "expertise" }] }, 3],
     ["ungeschickt", "Zwei linke H\xE4nde", "\u22122 auf Fingerfertigkeit. Ungeschicklichkeit ver\xE4ndert die k\xF6rperliche Widerstandskraft nicht.", { skillModifiers: [skill15("Fingerfertigkeit", -2)] }, -1],
     ["scharfschuetze", "Ruhige Sehne", "+1 Angriff mit B\xF6gen und Armbr\xFCsten; \u22121 Initiative.", { weaponModifiers: [{ weaponTypes: ["bow", "crossbow"], attack: 1 }], initiative: -1 }, 1],
     ["klingenmut", "Klingenmut", "+1 Schaden mit Schwertern und Dolchen; \u22121 RK.", { weaponModifiers: [{ weaponTypes: ["sword", "dagger"], damage: 1 }], armorClass: -1 }, 0],
     ["arkaner-fokus", "Arkaner Fokus", "+1 Zauberangriff, \u22121 Waffenangriff.", { spellAttack: 1, attack: -1, attackScope: "weapon" }, 2],
-    ["zaehe-magie", "Z\xE4he Magie", "+1 Zauber-SG; \u22121 m Bewegung.", { spellSaveDc: 1, movement: -1 }, 2],
+    ["zaehe-magie", "Z\xE4he Magie", "Deine Magie l\xE4sst sich schwer absch\xFCtteln, braucht aber einen bed\xE4chtigen Aufbau: +1 Zauber-SG, \u22121 Initiative.", { spellSaveDc: 1, initiative: -1 }, 2],
     ["magiescheu", "Magiescheu", "\u22121 Zauberangriff und \u22121 Zauber-SG.", { spellAttack: -1, spellSaveDc: -1 }, -2],
     ["glueckspilz", "Gl\xFCckspilz", "Bei Angriffen, Proben und Attributsrettungsw\xFCrfen wird jede nat\xFCrliche 1 einmal automatisch neu gew\xFCrfelt; das zweite Ergebnis gilt. Auch bei Vorteil oder Nachteil wird jeder betroffene W20 genau einmal neu gew\xFCrfelt. Zus\xE4tzlich +1 auf alle Attributsrettungsw\xFCrfe.", { savingThrow: 1, naturalOneReroll: true }, 5],
     ["pechvogel", "Pechvogel", "Bei Angriffen, Proben und Attributsrettungsw\xFCrfen gelten nat\xFCrliche 1, 2 und 3 als kritischer Fehlschlag. Zus\xE4tzlich \u22121 auf alle Attributsrettungsw\xFCrfe.", { savingThrow: -1, criticalFailureMaximum: 3 }, -5],
-    ["kampfbereit", "Immer kampfbereit", "Zu Kampfbeginn 3 tempor\xE4re TP; \u22121 passive Wahrnehmung.", { combatStartTemporaryHitPoints: 3, passivePerception: -1 }, 1],
-    ["konzentriert", "Eiserne Konzentration", "Vorteil auf KON-Rettungsw\xFCrfe zum Aufrechterhalten einer Konzentration; \u22121 Initiative. Andere KON-Rettungsw\xFCrfe bleiben unver\xE4ndert.", { initiative: -1 }, 2, { triggerRules: [
+    ["kampfbereit", "Immer kampfbereit", "Entschlossenheit beim Eintritt in einen Kampf: zu Kampfbeginn 3 tempor\xE4re TP. Der bestehende Kampfstartbeleg verhindert erneutes Auff\xFCllen durch Wiederbeitritt.", { combatStartTemporaryHitPoints: 3 }, 2],
+    ["konzentriert", "Eiserne Konzentration", "Vorteil auf KON-Rettungsw\xFCrfe zum Aufrechterhalten einer Konzentration. Andere KON-Rettungsw\xFCrfe bleiben unver\xE4ndert.", {}, 3, { triggerRules: [
       { id: "eiserne-konzentration", phase: "on-concentration-check", recipient: "target", sourceRelation: "self", activation: "passive", frequency: "always", condition: "always", effects: { rollMode: "advantage" } }
     ] }],
-    ["lebhafter-geist", "Lebhafter Geist", "+1 auf alle Fertigkeitsproben; \u22121 RK.", { skill: 1, armorClass: -1 }, 3],
+    ["lebhafter-geist", "Lebhafter Geist", "Du erfasst neue Situationen und gedankliche Zusammenh\xE4nge rasch: +1 Initiative und +1 auf Nachforschungen. Das verleiht keine allgemeine Fachausbildung.", { initiative: 1, skillModifiers: [skill15("Nachforschungen", 1)] }, 2],
     ["kraftpaket", "Kraftpaket", "+2 auf Athletik und +1 Schaden mit \xC4xten und Keulen; \u22121 auf Heimlichkeit.", { skillModifiers: [skill15("Athletik", 2), skill15("Heimlichkeit", -1)], weaponModifiers: [{ weaponTypes: ["axe", "mace"], damage: 1 }] }, 2],
     ["duennhaeutig", "D\xFCnnh\xE4utig", "\u22121 auf CHA-Rettungsw\xFCrfe. Empfindlichkeit verleiht keine zus\xE4tzliche B\xFChnenfertigkeit.", { saveAttributeModifiers: [{ attributeKey: "charisma", bonus: -1 }] }, -1]
   ];
@@ -1687,7 +1725,8 @@ var AleriaGroupAdventures = (() => {
     ...PSYCHOLOGICAL_TRAIT_DEFINITIONS,
     ...FAMILY_TRAIT_DEFINITIONS,
     ...GENERAL_TRAIT_DEFINITIONS,
-    ...EXPANSION_TRAIT_DEFINITIONS
+    ...EXPANSION_TRAIT_DEFINITIONS,
+    ...SPIRITUAL_TRAIT_DEFINITIONS
   ].map(([id, name, description, mechanics, cost, extra = {}]) => ({
     id: `development-trait-${id}`,
     name,
@@ -1698,8 +1737,8 @@ var AleriaGroupAdventures = (() => {
     active: true,
     target: "Selbst",
     duration: "Dauerhaft",
-    appliesWhen: getFamilyTraitOrigin(`development-trait-${id}`) ? "Angeborenes Familienerbe; nur die h\xF6chste aktive Stufe je Linie wirkt" : getBloodlineTraitOrigin(`development-trait-${id}`) ? "Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren" : "Solange ausgew\xE4hlt und aktiv",
-    tags: traitTags(id),
+    appliesWhen: extra.appliesWhen || (getFamilyTraitOrigin(`development-trait-${id}`) ? "Angeborenes Familienerbe; nur die h\xF6chste aktive Stufe je Linie wirkt" : getBloodlineTraitOrigin(`development-trait-${id}`) ? "Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren" : "Solange ausgew\xE4hlt und aktiv"),
+    tags: [traitTags(id), extra.tags].filter(Boolean).join(" \xB7 "),
     mechanics: { ...mechanics, ...extra.damageAffinities ? { damageAffinities: traitDamageAffinities(extra.damageAffinities) } : {} },
     triggerRules: extra.triggerRules || []
   })).concat(HEALTH_TRAIT_DEFINITIONS.map((trait) => ({
@@ -3775,9 +3814,1206 @@ var AleriaGroupAdventures = (() => {
     }
   ];
 
+  // modules/character-development/development-trait-revision-20261112.js
+  var PREVIOUS_MAPLESS_DEVELOPMENT_TRAITS = Object.freeze([
+    {
+      "id": "development-trait-flink",
+      "name": "Flinke F\xFC\xDFe",
+      "description": "+2 m Bewegung, \u22121 RK.",
+      "cost": 0,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/flink.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung",
+      "mechanics": {
+        "movement": 2,
+        "armorClass": -1
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-standfest",
+      "name": "Standfest",
+      "description": "+1 RK, \u22121 m Bewegung.",
+      "cost": 2,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/standfest.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung",
+      "mechanics": {
+        "armorClass": 1,
+        "movement": -1
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-glutgewoehnt",
+      "name": "An Glut gew\xF6hnt",
+      "description": "Ruhe beim Umgang mit Feuer: +1 auf Rettungsw\xFCrfe gegen feuerbasierte Angriffe; \u22121 Initiative. Gew\xF6hnung halbiert keinen Feuerschaden.",
+      "cost": 0,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/glutgewoehnt.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung",
+      "mechanics": {
+        "initiative": -1
+      },
+      "triggerRules": [
+        {
+          "id": "glutgewoehnung-pre-roll",
+          "name": "glutgewoehnung",
+          "phase": "pre-roll",
+          "recipient": "target",
+          "sourceRelation": "self",
+          "activation": "passive",
+          "frequency": "always",
+          "condition": "always",
+          "saveAttributes": [
+            "strength",
+            "dexterity",
+            "constitution",
+            "intelligence",
+            "wisdom",
+            "charisma"
+          ],
+          "damageTypes": [
+            "feuer",
+            "fire"
+          ],
+          "effects": {
+            "savingThrowModifier": 1
+          }
+        },
+        {
+          "id": "glutgewoehnung-pre-secondary-save",
+          "name": "glutgewoehnung",
+          "phase": "pre-secondary-save",
+          "recipient": "target",
+          "sourceRelation": "self",
+          "activation": "passive",
+          "frequency": "always",
+          "condition": "always",
+          "saveAttributes": [
+            "strength",
+            "dexterity",
+            "constitution",
+            "intelligence",
+            "wisdom",
+            "charisma"
+          ],
+          "damageTypes": [
+            "feuer",
+            "fire"
+          ],
+          "effects": {
+            "savingThrowModifier": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "development-trait-gelehrt",
+      "name": "B\xFCcherwurm",
+      "description": "Expertise in Geschichte; \u22121 auf Athletik.",
+      "cost": 2,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/gelehrt.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung",
+      "mechanics": {
+        "skillProficiencies": [
+          {
+            "name": "Geschichte",
+            "proficiency": "expertise"
+          }
+        ],
+        "skillModifiers": [
+          {
+            "name": "Athletik",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-silberzunge",
+      "name": "Silberzunge",
+      "description": "Expertise in \xDCberzeugen; \u22121 auf Motiv erkennen.",
+      "cost": 2,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/silberzunge.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung",
+      "mechanics": {
+        "skillProficiencies": [
+          {
+            "name": "\xDCberzeugen",
+            "proficiency": "expertise"
+          }
+        ],
+        "skillModifiers": [
+          {
+            "name": "Motiv erkennen",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-zaehe-magie",
+      "name": "Z\xE4he Magie",
+      "description": "+1 Zauber-SG; \u22121 m Bewegung.",
+      "cost": 2,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/zaehe-magie.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung",
+      "mechanics": {
+        "spellSaveDc": 1,
+        "movement": -1
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-kampfbereit",
+      "name": "Immer kampfbereit",
+      "description": "Zu Kampfbeginn 3 tempor\xE4re TP; \u22121 passive Wahrnehmung.",
+      "cost": 1,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/kampfbereit.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung",
+      "mechanics": {
+        "combatStartTemporaryHitPoints": 3,
+        "passivePerception": -1
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-konzentriert",
+      "name": "Eiserne Konzentration",
+      "description": "Vorteil auf KON-Rettungsw\xFCrfe zum Aufrechterhalten einer Konzentration; \u22121 Initiative. Andere KON-Rettungsw\xFCrfe bleiben unver\xE4ndert.",
+      "cost": 2,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/konzentriert.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung",
+      "mechanics": {
+        "initiative": -1
+      },
+      "triggerRules": [
+        {
+          "id": "eiserne-konzentration",
+          "phase": "on-concentration-check",
+          "recipient": "target",
+          "sourceRelation": "self",
+          "activation": "passive",
+          "frequency": "always",
+          "condition": "always",
+          "effects": {
+            "rollMode": "advantage"
+          }
+        }
+      ]
+    },
+    {
+      "id": "development-trait-lebhafter-geist",
+      "name": "Lebhafter Geist",
+      "description": "+1 auf alle Fertigkeitsproben; \u22121 RK.",
+      "cost": 3,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/lebhafter-geist.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung",
+      "mechanics": {
+        "skill": 1,
+        "armorClass": -1
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-steife-gelenke",
+      "name": "Steife Gelenke",
+      "description": "Eingeschr\xE4nkte Gelenkbeweglichkeit; \u22122 auf Akrobatik und \u22121 m Bewegung.",
+      "cost": -2,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/steife-gelenke.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 K\xF6rper",
+      "mechanics": {
+        "movement": -1,
+        "skillModifiers": [
+          {
+            "name": "Akrobatik",
+            "bonus": -2
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-schneller-stoffwechsel",
+      "name": "Schneller Stoffwechsel",
+      "description": "Leichter, rasch erm\xFCdender K\xF6rper; +1 m Bewegung und \u22122 maximale TP.",
+      "cost": 0,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/schneller-stoffwechsel.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 K\xF6rper",
+      "mechanics": {
+        "movement": 1,
+        "maximumHitPoints": -2
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-robuste-haut",
+      "name": "Robuste Haut",
+      "description": "Widerstandsf\xE4hige, vernarbte Haut; +1 RK und \u22121 auf Auftreten.",
+      "cost": 2,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/robuste-haut.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 K\xF6rper",
+      "mechanics": {
+        "armorClass": 1,
+        "skillModifiers": [
+          {
+            "name": "Auftreten",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-namenhueter",
+      "name": "Namenh\xFCter",
+      "description": "Namen und geh\xF6rte Lebensgeschichten bleiben dir im Ged\xE4chtnis: +1 auf Geschichte und \xDCberzeugen, \u22121 auf Wahrnehmung.",
+      "cost": 1,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/namenhueter.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Besondere Eigenheit",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "Geschichte",
+            "bonus": 1
+          },
+          {
+            "name": "\xDCberzeugen",
+            "bonus": 1
+          },
+          {
+            "name": "Wahrnehmung",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-wanderlust",
+      "name": "Wanderlust",
+      "description": "Du bleibst lieber unterwegs, als dich lange an einer Stelle aufzuhalten: +1 m Bewegung und +1 auf \xDCberleben, \u22121 auf Nachforschungen.",
+      "cost": 1,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/wanderlust.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Besondere Eigenheit",
+      "mechanics": {
+        "movement": 1,
+        "skillModifiers": [
+          {
+            "name": "\xDCberleben",
+            "bonus": 1
+          },
+          {
+            "name": "Nachforschungen",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-deckungssucher",
+      "name": "Deckungssucher",
+      "description": "Du bewegst dich bed\xE4chtig und sch\xFCtzt dich vor Beschuss: \u22121 m Bewegung; eingehender Fernkampf-Waffenschaden wird um 1 reduziert. Keine Wirkung gegen Nahkampf oder Zauber.",
+      "cost": 1,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/deckungssucher.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Besondere Eigenheit",
+      "mechanics": {
+        "movement": -1
+      },
+      "triggerRules": [
+        {
+          "id": "deckung-beschuss",
+          "phase": "pre-damage",
+          "recipient": "target",
+          "sourceRelation": "self",
+          "activation": "passive",
+          "frequency": "always",
+          "condition": "always",
+          "actionKinds": [
+            "weapon",
+            "technique"
+          ],
+          "weaponAttackOnly": true,
+          "attackRange": "ranged",
+          "effects": {
+            "damageReduction": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "development-trait-bluttraeger-windspross",
+      "name": "Bluttr\xE4ger (Windspross)",
+      "description": "Angeborenes menschliches Erbe eines humanoiden Celestialen der Winde: +1 Zauberangriff, +1 m Bewegung und +1 auf Akrobatik.",
+      "cost": 4,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/bluttraeger-windspross.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren",
+      "tags": "Charakterentwicklung \xB7 Bluttr\xE4ger \xB7 Angeboren",
+      "mechanics": {
+        "spellAttack": 1,
+        "movement": 1,
+        "skillModifiers": [
+          {
+            "name": "Akrobatik",
+            "bonus": 1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-ruhiger-atem",
+      "name": "Ruhiger Atem",
+      "description": "Gleichm\xE4\xDFiges Atmen hilft dir, den K\xF6rper ruhig und Bewegungen unauff\xE4llig zu halten; bis du handelst, vergeht etwas Zeit: +1 auf K\xF6rperbeherrschung und Heimlichkeit, \u22121 Initiative.",
+      "cost": 1,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/ruhiger-atem.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Allgemeine Eigenschaft",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "K\xF6rperbeherrschung",
+            "bonus": 1
+          },
+          {
+            "name": "Heimlichkeit",
+            "bonus": 1
+          }
+        ],
+        "initiative": -1
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-kraftvoller-griff",
+      "name": "Kraftvoller Griff",
+      "description": "Deine H\xE4nde packen sicher und kr\xE4ftig zu, sind bei feinen Handgriffen aber weniger behutsam: +1 auf Athletik, \u22121 auf Fingerfertigkeit.",
+      "cost": 0,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/kraftvoller-griff.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Allgemeine Eigenschaft",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "Athletik",
+            "bonus": 1
+          },
+          {
+            "name": "Fingerfertigkeit",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-behutsame-haende",
+      "name": "Behutsame H\xE4nde",
+      "description": "Du arbeitest an kleinen Dingen und bei der Versorgung besonders vorsichtig; spontane Handlungen fallen dir schwerer: +1 auf Fingerfertigkeit und Heilkunde, \u22121 Initiative. Medizinische Kenntnisse werden dadurch nicht ersetzt.",
+      "cost": 1,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/behutsame-haende.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Allgemeine Eigenschaft",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "Fingerfertigkeit",
+            "bonus": 1
+          },
+          {
+            "name": "Heilkunde",
+            "bonus": 1
+          }
+        ],
+        "initiative": -1
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-federnder-gang",
+      "name": "Federnder Gang",
+      "description": "Dein schwungvoller Gang unterst\xFCtzt schnelle, bewegliche Schritte, ist aber h\xF6rbarer: +1 auf Akrobatik und +1 m Bewegung, \u22121 auf Heimlichkeit.",
+      "cost": 1,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/federnder-gang.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Allgemeine Eigenschaft",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "Akrobatik",
+            "bonus": 1
+          },
+          {
+            "name": "Heimlichkeit",
+            "bonus": -1
+          }
+        ],
+        "movement": 1
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-leiser-tritt",
+      "name": "Leiser Tritt",
+      "description": "Du setzt jeden Schritt bedacht und m\xF6glichst ger\xE4uschlos: +1 auf Heimlichkeit, \u22121 m Bewegung.",
+      "cost": 0,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/leiser-tritt.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Allgemeine Eigenschaft",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "Heimlichkeit",
+            "bonus": 1
+          }
+        ],
+        "movement": -1
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-zaeher-marsch",
+      "name": "Z\xE4her Marsch",
+      "description": "Du teilst k\xF6rperliche Anstrengung gut ein und h\xE4ltst ein gleichm\xE4\xDFiges, langsameres Tempo: +1 auf Athletik und K\xF6rperbeherrschung, \u22121 m Bewegung. Keine automatische Immunit\xE4t gegen Ersch\xF6pfung.",
+      "cost": 1,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/zaeher-marsch.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Allgemeine Eigenschaft",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "Athletik",
+            "bonus": 1
+          },
+          {
+            "name": "K\xF6rperbeherrschung",
+            "bonus": 1
+          }
+        ],
+        "movement": -1
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-hastiger-schritt",
+      "name": "Hastiger Schritt",
+      "description": "Du bist rasch unterwegs und setzt deine F\xFC\xDFe dabei weniger sorgf\xE4ltig: +1 m Bewegung, \u22121 auf Akrobatik.",
+      "cost": 0,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/hastiger-schritt.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Allgemeine Eigenschaft",
+      "mechanics": {
+        "movement": 1,
+        "skillModifiers": [
+          {
+            "name": "Akrobatik",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-wissensdurst",
+      "name": "Wissensdurst",
+      "description": "Du sammelst gern Erz\xE4hlungen und Naturbeobachtungen, verlierst dabei aber dein unmittelbares Umfeld aus dem Blick: +1 auf Geschichte und Naturkunde, \u22121 auf Wahrnehmung. Unbekanntes Wissen muss weiterhin beschafft werden.",
+      "cost": 1,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/wissensdurst.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Allgemeine Eigenschaft",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "Geschichte",
+            "bonus": 1
+          },
+          {
+            "name": "Naturkunde",
+            "bonus": 1
+          },
+          {
+            "name": "Wahrnehmung",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-unerschuetterliche-ruhe",
+      "name": "Unersch\xFCtterliche Ruhe",
+      "description": "Du h\xE4ltst Atmung und K\xF6rper auch bei Schrecken ruhiger, brauchst aber einen Moment zum Anlaufen: +1 auf K\xF6rperbeherrschung und Rettungsw\xFCrfe gegen Furcht, \u22121 Initiative.",
+      "cost": 1,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/unerschuetterliche-ruhe.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Allgemeine Eigenschaft",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "K\xF6rperbeherrschung",
+            "bonus": 1
+          }
+        ],
+        "saveModifiers": [
+          {
+            "kind": "fear",
+            "bonus": 1
+          }
+        ],
+        "initiative": -1
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-trockener-humor",
+      "name": "Trockener Humor",
+      "description": "Deine knappen, n\xFCchternen Pointen gelingen vor Publikum besser als bei z\xE4rtlichen Ann\xE4herungen: +1 auf Auftreten, \u22121 auf Flirten.",
+      "cost": 0,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/trockener-humor.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Allgemeine Eigenschaft",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "Auftreten",
+            "bonus": 1
+          },
+          {
+            "name": "Flirten",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-skeptischer-zuhoerer",
+      "name": "Skeptischer Zuh\xF6rer",
+      "description": "Du achtest auf verborgene Absichten und h\xE4ltst deine eigenen zur\xFCck, wirkst dabei jedoch misstrauisch: +1 auf Motiv erkennen und T\xE4uschen, \u22121 auf \xDCberzeugen.",
+      "cost": 1,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/skeptischer-zuhoerer.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Allgemeine Eigenschaft",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "Motiv erkennen",
+            "bonus": 1
+          },
+          {
+            "name": "T\xE4uschen",
+            "bonus": 1
+          },
+          {
+            "name": "\xDCberzeugen",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-talent-kundschafter",
+      "name": "Kundschafter",
+      "description": "Unauff\xE4llig und aufmerksam unterwegs: +1 m Bewegung, +2 auf Heimlichkeit und je +1 auf Wahrnehmung und \xDCberleben.",
+      "cost": 4,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/talent-kundschafter.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Talent",
+      "mechanics": {
+        "movement": 1,
+        "skillModifiers": [
+          {
+            "name": "Heimlichkeit",
+            "bonus": 2
+          },
+          {
+            "name": "Wahrnehmung",
+            "bonus": 1
+          },
+          {
+            "name": "\xDCberleben",
+            "bonus": 1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-marotte-rechthaberei",
+      "name": "Rechthaberei",
+      "description": "Du bestehst nachdr\xFCcklich auf deiner Sicht und \xFCbersiehst dabei leichter, was andere bewegt: +1 auf Einsch\xFCchtern, \u22121 auf Motiv erkennen.",
+      "cost": 0,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/marotte-rechthaberei.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Marotte",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "Einsch\xFCchtern",
+            "bonus": 1
+          },
+          {
+            "name": "Motiv erkennen",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-marotte-umwege-aus-neugier",
+      "name": "Umwege aus Neugier",
+      "description": "Du schweifst mit Blick und Schritten gern zum Rand des Weges ab: +1 auf Wahrnehmung, \u22121 m Bewegung. Der Wahrnehmungsbonus gilt allgemein, ohne automatisches Entdecken verborgener Dinge.",
+      "cost": 0,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/marotte-umwege-aus-neugier.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Marotte",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "Wahrnehmung",
+            "bonus": 1
+          }
+        ],
+        "movement": -1
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-marotte-nestelnde-finger",
+      "name": "Nestelnde Finger",
+      "description": "Du besch\xE4ftigst die H\xE4nde st\xE4ndig mit Schn\xFCren, Kn\xF6pfen und kleinen Bewegungen; dabei entgeht dir eher etwas im Umfeld: +1 auf Fingerfertigkeit, \u22121 auf Wahrnehmung.",
+      "cost": 0,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/marotte-nestelnde-finger.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Marotte",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "Fingerfertigkeit",
+            "bonus": 1
+          },
+          {
+            "name": "Wahrnehmung",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-marotte-notizdrang",
+      "name": "Notizdrang",
+      "description": "Du h\xE4ltst Erlebtes und geh\xF6rte \xDCberlieferungen beharrlich fest und h\xE4ltst vor spontanem Handeln erst inne: +1 auf Geschichte, \u22121 Initiative. Unbekanntes Wissen wird dadurch nicht verf\xFCgbar.",
+      "cost": 0,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/marotte-notizdrang.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Marotte",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "Geschichte",
+            "bonus": 1
+          }
+        ],
+        "initiative": -1
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-marotte-schuhputzfimmel",
+      "name": "Schuhputzfimmel",
+      "description": "Du h\xE4ltst beim Gehen immer wieder kurz inne, um Staub oder Schlamm von den Schuhen zu streifen: \u22121 m Bewegung. Die Verz\xF6gerung wird als allgemeiner Bewegungsabzug gef\xFChrt.",
+      "cost": -1,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/marotte-schuhputzfimmel.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Marotte",
+      "mechanics": {
+        "movement": -1
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-marotte-kraeftemessen",
+      "name": "St\xE4ndiges Kr\xE4ftemessen",
+      "description": "Jahrelange Gewohnheit kraftbetonter Wettbewerbe hat dich im Ziehen, Stemmen und Ringen ge\xFCbt; fremde Absichten verlieren sich hinter deinem Siegeswillen: +1 auf Athletik, \u22121 auf Motiv erkennen.",
+      "cost": 0,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/marotte-kraeftemessen.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Solange ausgew\xE4hlt und aktiv",
+      "tags": "Charakterentwicklung \xB7 Marotte",
+      "mechanics": {
+        "skillModifiers": [
+          {
+            "name": "Athletik",
+            "bonus": 1
+          },
+          {
+            "name": "Motiv erkennen",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-chronisches-hinken",
+      "name": "Chronisches Hinken",
+      "description": "Dauerhaft beeintr\xE4chtigter Gang: \u22121 m Bewegung und \u22121 auf Akrobatik.",
+      "cost": -1,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/chronisches-hinken.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Dauerhaft; nicht durch Heilung oder Rast entfernt",
+      "limitations": "",
+      "tags": "Charakterentwicklung \xB7 Dauerhaftes Leiden",
+      "mechanics": {
+        "movement": -1,
+        "skillModifiers": [
+          {
+            "name": "Akrobatik",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-versteiftes-knie",
+      "name": "Versteiftes Knie",
+      "description": "\u22122 m Bewegung und \u22122 auf Akrobatik. Die Einschr\xE4nkung bleibt nach Rasten bestehen.",
+      "cost": -2,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/versteiftes-knie.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Dauerhaft; nicht durch Heilung oder Rast entfernt",
+      "limitations": "",
+      "tags": "Charakterentwicklung \xB7 Dauerhaftes Leiden",
+      "mechanics": {
+        "movement": -2,
+        "skillModifiers": [
+          {
+            "name": "Akrobatik",
+            "bonus": -2
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-fehlender-fuss",
+      "name": "Fehlender Fu\xDF",
+      "description": "Ein Fu\xDF fehlt oder ist dauerhaft unbrauchbar: \u22123 m Bewegung und \u22122 auf K\xF6rperbeherrschung. Hilfsmittel werden individuell abgebildet.",
+      "cost": -3,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/fehlender-fuss.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Dauerhaft; nicht durch Heilung oder Rast entfernt",
+      "limitations": "",
+      "tags": "Charakterentwicklung \xB7 Dauerhaftes Leiden",
+      "mechanics": {
+        "movement": -3,
+        "skillModifiers": [
+          {
+            "name": "K\xF6rperbeherrschung",
+            "bonus": -2
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-wirbelsaeulenverkruemmung",
+      "name": "Angeborene Wirbels\xE4ulenverkr\xFCmmung",
+      "description": "\u22121 auf Athletik und K\xF6rperbeherrschung sowie \u22121 m Bewegung.",
+      "cost": -2,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/wirbelsaeulenverkruemmung.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Dauerhaft; nicht durch Heilung oder Rast entfernt",
+      "limitations": "",
+      "tags": "Charakterentwicklung \xB7 Dauerhaftes Leiden \xB7 Angeboren",
+      "mechanics": {
+        "movement": -1,
+        "skillModifiers": [
+          {
+            "name": "Athletik",
+            "bonus": -1
+          },
+          {
+            "name": "K\xF6rperbeherrschung",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-arkanes-fieber-human-1",
+      "name": "Arkanes Fieber I. Stadium",
+      "description": "M\xFCdigkeit, Bl\xE4sse und entz\xFCndete Augen. \u22121 auf Fertigkeiten, Rettungsw\xFCrfe und Initiative; \u22121 m Bewegung. Keine Heilung durch TP-Heilung oder Rast.",
+      "cost": -2,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-human-1.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Dauerhaft; nicht durch Heilung oder Rast entfernt",
+      "limitations": "",
+      "tags": "Charakterentwicklung \xB7 Arkanistenfieber",
+      "mechanics": {
+        "skill": -1,
+        "initiative": -1,
+        "savingThrow": -1,
+        "movement": -1,
+        "maximumHitPoints": 0
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-arkanes-fieber-human-2",
+      "name": "Arkanes Fieber II. Stadium",
+      "description": "Kr\xE4mpfe, Fieber und Organst\xF6rungen. \u22122 auf Fertigkeiten, Rettungsw\xFCrfe und Initiative; \u22122 m Bewegung; \u22122 maximale TP. Keine Heilung durch TP-Heilung oder Rast.",
+      "cost": -4,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-human-2.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Dauerhaft; nicht durch Heilung oder Rast entfernt",
+      "limitations": "",
+      "tags": "Charakterentwicklung \xB7 Arkanistenfieber",
+      "mechanics": {
+        "skill": -2,
+        "initiative": -2,
+        "savingThrow": -2,
+        "movement": -2,
+        "maximumHitPoints": -2
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-arkanes-fieber-human-3",
+      "name": "Arkanes Fieber III. Stadium",
+      "description": "Fortschreitende Nekrose und geistiger Verfall. \u22123 auf Fertigkeiten, Rettungsw\xFCrfe und Initiative; \u22123 m Bewegung; \u22126 maximale TP. Keine Heilung durch TP-Heilung oder Rast.",
+      "cost": -6,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-human-3.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Dauerhaft; nicht durch Heilung oder Rast entfernt",
+      "limitations": "",
+      "tags": "Charakterentwicklung \xB7 Arkanistenfieber",
+      "mechanics": {
+        "skill": -3,
+        "initiative": -3,
+        "savingThrow": -3,
+        "movement": -3,
+        "maximumHitPoints": -6
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-arkanes-fieber-human-4",
+      "name": "Arkanes Fieber IV. Stadium",
+      "description": "Vollst\xE4ndiger Ich-Verlust. \u22124 auf Fertigkeiten, Rettungsw\xFCrfe und Initiative; \u22124 m Bewegung; \u22128 maximale TP. Keine selbstbestimmten Kampfhandlungen; Abwarten bleibt m\xF6glich. Keine Heilung durch TP-Heilung oder Rast.",
+      "cost": -8,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-human-4.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Dauerhaft; nicht durch Heilung oder Rast entfernt",
+      "limitations": "",
+      "tags": "Charakterentwicklung \xB7 Arkanistenfieber",
+      "mechanics": {
+        "skill": -4,
+        "initiative": -4,
+        "savingThrow": -4,
+        "movement": -4,
+        "maximumHitPoints": -8,
+        "blocksActions": true
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-arkanes-fieber-druid-1",
+      "name": "Arkanes Fieber I. Stadium (Druidenvariante)",
+      "description": "Ersch\xF6pfung und gest\xF6rte Aura. \u22121 auf Fertigkeiten, Rettungsw\xFCrfe und Initiative; \u22121 m Bewegung; zus\xE4tzlich \u22121 auf WEI-Rettungsw\xFCrfe. Keine Heilung durch TP-Heilung oder Rast.",
+      "cost": -2,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-druid-1.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Dauerhaft; nicht durch Heilung oder Rast entfernt",
+      "limitations": "",
+      "tags": "Charakterentwicklung \xB7 Arkanistenfieber",
+      "mechanics": {
+        "skill": -1,
+        "initiative": -1,
+        "savingThrow": -1,
+        "movement": -1,
+        "saveAttributeModifiers": [
+          {
+            "attributeKey": "wisdom",
+            "bonus": -1
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-arkanes-fieber-druid-2",
+      "name": "Arkanes Fieber II. Stadium (Druidenvariante)",
+      "description": "Halluzinationen und instabile Instinkte. \u22122 auf Fertigkeiten, Rettungsw\xFCrfe und Initiative; \u22122 m Bewegung; zus\xE4tzlich \u22122 auf WEI-Rettungsw\xFCrfe. Keine Heilung durch TP-Heilung oder Rast.",
+      "cost": -4,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-druid-2.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Dauerhaft; nicht durch Heilung oder Rast entfernt",
+      "limitations": "",
+      "tags": "Charakterentwicklung \xB7 Arkanistenfieber",
+      "mechanics": {
+        "skill": -2,
+        "initiative": -2,
+        "savingThrow": -2,
+        "movement": -2,
+        "saveAttributeModifiers": [
+          {
+            "attributeKey": "wisdom",
+            "bonus": -2
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-arkanes-fieber-druid-3",
+      "name": "Arkanes Fieber III. Stadium (Druidenvariante)",
+      "description": "Schwerer geistiger Verfall ohne Nekrose. \u22123 auf Fertigkeiten, Rettungsw\xFCrfe und Initiative; \u22123 m Bewegung; zus\xE4tzlich \u22123 auf WEI-Rettungsw\xFCrfe. Keine Heilung durch TP-Heilung oder Rast.",
+      "cost": -6,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-druid-3.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Dauerhaft; nicht durch Heilung oder Rast entfernt",
+      "limitations": "",
+      "tags": "Charakterentwicklung \xB7 Arkanistenfieber",
+      "mechanics": {
+        "skill": -3,
+        "initiative": -3,
+        "savingThrow": -3,
+        "movement": -3,
+        "saveAttributeModifiers": [
+          {
+            "attributeKey": "wisdom",
+            "bonus": -3
+          }
+        ]
+      },
+      "triggerRules": []
+    },
+    {
+      "id": "development-trait-arkanes-fieber-druid-4",
+      "name": "Arkanes Fieber IV. Stadium (Druidenvariante)",
+      "description": "Vollst\xE4ndiger Ich-Verlust ohne Nekrose. \u22124 auf Fertigkeiten, Rettungsw\xFCrfe und Initiative; \u22124 m Bewegung; zus\xE4tzlich \u22124 auf WEI-Rettungsw\xFCrfe. Keine selbstbestimmten Kampfhandlungen; Abwarten bleibt m\xF6glich. Keine Heilung durch TP-Heilung oder Rast.",
+      "cost": -8,
+      "icon": "/AleriaAlmanach/assets/development-traits/web/arkanes-fieber-druid-4.webp",
+      "type": "trait",
+      "active": true,
+      "target": "Selbst",
+      "duration": "Dauerhaft",
+      "appliesWhen": "Dauerhaft; nicht durch Heilung oder Rast entfernt",
+      "limitations": "",
+      "tags": "Charakterentwicklung \xB7 Arkanistenfieber",
+      "mechanics": {
+        "skill": -4,
+        "initiative": -4,
+        "savingThrow": -4,
+        "movement": -4,
+        "saveAttributeModifiers": [
+          {
+            "attributeKey": "wisdom",
+            "bonus": -4
+          }
+        ],
+        "blocksActions": true
+      },
+      "triggerRules": []
+    }
+  ]);
+
   // modules/character-development/development-trait-revisions.js
   var current = new Map(DEVELOPMENT_TRAITS.map((entry) => [entry.id, entry]));
-  var previous = new Map(PREVIOUS_DEVELOPMENT_TRAITS.map((entry) => [entry.id, entry]));
+  var previous = /* @__PURE__ */ new Map();
+  for (const entry of [...PREVIOUS_DEVELOPMENT_TRAITS, ...PREVIOUS_MAPLESS_DEVELOPMENT_TRAITS]) {
+    previous.set(entry.id, [...previous.get(entry.id) || [], entry]);
+  }
   var completeSignature = (value) => {
     if (value === void 0) return "undefined";
     if (Array.isArray(value)) return `[${value.map(completeSignature).join(",")}]`;
@@ -3786,7 +5022,7 @@ var AleriaGroupAdventures = (() => {
   };
   function isExactDevelopmentTraitCatalogCopy(value, id = value?.id, project = (entry) => entry) {
     const matches = (entry) => entry && completeSignature(value) === completeSignature(project(entry));
-    return Boolean(matches(current.get(id)) || matches(previous.get(id)));
+    return Boolean(matches(current.get(id)) || previous.get(id)?.some(matches));
   }
 
   // modules/character-trait-review/reviewed-character-traits.js
