@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="./modules/archive/archive-entry-card.css?v=20260910-archive-navigation-v1">
 <link rel="stylesheet" href="./modules/archive/archive-hierarchy.css?v=20261019-bannkreis-v1">
 <link rel="stylesheet" href="./styles/modal.css?v=20261006-story-spacing-v2">
-  <link rel="stylesheet" href="./styles/comments.css?v=20261113-combat-prose-v2">
+  <link rel="stylesheet" href="./styles/comments.css?v=20261114-preview-avatar-v1">
   <link rel="stylesheet" href="./styles/comments-foreign-voice.css?v=20261113-preview-frames-v1">
   <link rel="stylesheet" href="./styles/scene-backup.css?v=20261012-scene-backup-v1">
   <link rel="stylesheet" href="./modules/comments/embedded-comments.css?v=20260909-newspaper-guilds-v1">
@@ -65,7 +65,8 @@
 <link rel="stylesheet" href="./styles/scene-polls.css?v=20260625-scene-polls-v1">
 <link rel="stylesheet" href="./styles/speaker-profile.css?v=20260606-ai-context-controls-v1">
 <link rel="stylesheet" href="./styles/comment-character-picker.css?v=20260922-composer-design-v1">
-<link rel="stylesheet" href="./styles/comment-composer.css?v=20260922-composer-design-v1">
+<link rel="stylesheet" href="./styles/comment-composer.css?v=20261114-preview-avatar-v1">
+  <link rel="stylesheet" href="./styles/comment-editor-appearance.css?v=20261114-v1">
 <link rel="stylesheet" href="./styles/session.css?v=20261017-intro-collapse-v1">
 <link rel="stylesheet" href="./styles/characters.css?v=20261102-biography-layout-v3-library">
 <link rel="stylesheet" href="./styles/character-image-library.css?v=20261102-set-order-v1">
@@ -499,6 +500,7 @@
   <script src="./modules/comments/comments-foreign-voice-ui.js?v=20261108-foreign-voice-v1" defer></script>
   <script src="./modules/comments/comments-segments.js?v=20261108-foreign-voice-v3" defer></script>
   <script src="./modules/comments/comments-preview.js?v=20261113-combat-prose-v1" defer></script>
+  <script src="./modules/comments/comment-editor-appearance.js?v=20261114-v1" defer></script>
   <script src="./modules/comments/comments-richtext.js?v=20260804-preview-debounce-v1" defer></script>
   <script src="./modules/comments/comments-draft.js?v=20261108-foreign-voice-v3" defer></script>
   <script src="./modules/backup/scene-backup-ui.js?v=20261012-scene-backup-v1" defer></script>
@@ -745,7 +747,7 @@
 <script src="./modules/comments/comments-overlay-events.js?v=20260709-scene-module-import-export-v1" defer></script>
 
 <!-- COMMENT FORM OVERLAY -->
-<div id="comment-form-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="comment-form-title" tabindex="-1">
+<div id="comment-form-overlay" data-comment-editor-appearance role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="comment-form-title" tabindex="-1">
   <div class="comment-form-card">
     <div class="comment-bubble-dialog-heading"><div class="comment-form-title" id="comment-form-title">✦ &nbsp; Stimme hinterlassen &nbsp; ✦</div><span data-comment-bubble-control></span></div>
 
@@ -845,6 +847,7 @@
         </div>
         <span class="comment-compose-section-hint">Typ, Emote, Seite und Dauer je Abschnitt</span>
       </div>
+      <div data-comment-avatar-control="segments" data-comment-avatar-id="cf-segments"></div>
       <div id="cf-segment-list" class="comment-segment-list"></div>
       <div class="comment-segment-actions">
         <button type="button" class="comment-segment-add" data-action="add-comment-segment" data-kind="speech">+ Rede</button>
@@ -896,6 +899,7 @@
             <button type="button" class="comment-preview-panel-btn" data-action="toggle-comment-preview" data-preview-mode="maximized" data-comment-preview-maximize title="Live-Ansicht maximieren" aria-label="Live-Ansicht maximieren">[]</button>
           </div>
         </div>
+        <div data-comment-avatar-control="preview" data-comment-avatar-id="cf-preview"></div>
         <div class="comment-live-preview" id="cf-preview" data-comment-bubble-surface data-animated-bubbles="false"></div>
       </aside>
     </div>
@@ -1228,7 +1232,7 @@
 </div>
 
 <!-- EDIT COMMENT OVERLAY -->
-<div id="edit-comment-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="edit-comment-title" tabindex="-1">
+<div id="edit-comment-overlay" data-comment-editor-appearance role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="edit-comment-title" tabindex="-1">
   <div class="edit-comment-card">
     <div class="comment-bubble-dialog-heading"><div class="edit-comment-title" id="edit-comment-title">✎ &nbsp; Kommentar bearbeiten</div><span data-comment-bubble-control></span></div>
 
@@ -1285,7 +1289,8 @@
       <!-- Text -->
       <div class="edit-comment-text-panel">
         <label style="font-family:'Cinzel',serif;font-size:0.68rem;color:var(--gold);letter-spacing:0.08em;">Text *</label>
-        <div id="ec-segment-list" class="comment-segment-list"></div>
+        <div data-comment-avatar-control="segments" data-comment-avatar-id="ec-segments"></div>
+      <div id="ec-segment-list" class="comment-segment-list"></div>
         <div class="comment-segment-actions">
           <button type="button" class="comment-segment-add" data-action="add-edit-comment-segment" data-kind="speech">+ Rede</button>
           <button type="button" class="comment-segment-add" data-action="add-edit-comment-segment" data-kind="action">+ Handlung</button>
@@ -1343,6 +1348,7 @@
             <button type="button" class="comment-preview-panel-btn" data-action="toggle-comment-preview" data-preview-mode="maximized" data-comment-preview-maximize title="Live-Ansicht maximieren" aria-label="Live-Ansicht maximieren">[]</button>
           </div>
         </div>
+        <div data-comment-avatar-control="preview" data-comment-avatar-id="ec-preview"></div>
         <div class="comment-live-preview" id="ec-preview" data-comment-bubble-surface data-animated-bubbles="false"></div>
       </aside>
 

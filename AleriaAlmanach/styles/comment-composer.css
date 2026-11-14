@@ -721,9 +721,3 @@
   #comment-form-overlay .cf-char-picker { grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr)); }
   #comment-form-overlay .comment-compose-section-hint { text-align: left; }
 }
-
-@container (max-width: 540px) {
-  #comment-form-overlay .comment-compose-preview .comment-entry { gap: 0.85rem; }
-  #comment-form-overlay .comment-compose-preview .comment-combat-profile-shell { --comment-combat-profile-size: 72px; }
-  #comment-form-overlay .comment-compose-preview :is(.comment-portrait, .comment-portrait-placeholder) { width: 72px; height: 72px; }
-}

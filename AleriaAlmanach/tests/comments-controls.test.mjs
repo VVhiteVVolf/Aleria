@@ -167,3 +167,60 @@ test('turn controls expose selected state without changing their existing action
   assert.match(pagination, /aria-current="page">1/);
   assert.match(pagination, />Weiter<\/button>/);
 });
+
+function avatarAppearanceFixture(initial, { storageUnavailable = false } = {}) {
+  const key = 'aleria-comment-editor-avatar-sizes-v1', store = new Map(initial == null ? [] : [[key, initial]]);
+  const handlers = {}, roots = [0, 1].map(() => {
+    const properties = new Map(), listeners = {}, inputs = {}, outputs = {};
+    for (const kind of ['preview', 'segments']) {
+      inputs[kind] = { dataset: { commentAvatarSize: kind }, value: '', setAttribute() {}, matches: () => true };
+      outputs[kind] = { textContent: '' };
+    }
+    return { properties, listeners, inputs, outputs, style: { setProperty: (name, value) => properties.set(name, value) },
+      querySelectorAll(selector) {
+        if (selector === '[data-comment-avatar-control]') return [];
+        const kind = selector.includes('"preview"') ? 'preview' : 'segments';
+        return [selector.includes('data-comment-avatar-value') ? outputs[kind] : inputs[kind]];
+      }, addEventListener: (name, listener) => { listeners[name] = listener; } };
+  });
+  const context = vm.createContext({ document: { querySelectorAll: () => roots },
+    localStorage: {
+      getItem(name) { if (storageUnavailable) throw Error('Unavailable'); return store.get(name) ?? null; },
+      setItem(name, value) { if (storageUnavailable) throw Error('Unavailable'); store.set(name, value); }
+    }, window: { addEventListener: (name, listener) => { handlers[name] = listener; } } });
+  vm.runInContext(source('comment-editor-appearance'), context);
+  const setSize = (kind, value) => { const input = roots[0].inputs[kind]; input.value = String(value); roots[0].listeners.input({ target: input }); };
+  return { roots, store, key, handlers, setSize };
+}
+
+test('editor avatar sizes start larger and sync independently across compose and edit without modifying content', () => {
+  const { roots, setSize, store, key } = avatarAppearanceFixture();
+  for (const root of roots) {
+    assert.equal(root.inputs.preview.value, '120'); assert.equal(root.inputs.segments.value, '80');
+  }
+  setSize('preview', 168);
+  for (const root of roots) {
+    assert.equal(root.properties.get('--comment-editor-preview-avatar-size'), '168px');
+    assert.equal(root.inputs.segments.value, '80'); assert.equal(root.outputs.preview.textContent, '168 px');
+  }
+  setSize('segments', 112);
+  assert.deepEqual(JSON.parse(store.get(key)), { preview: 168, segments: 112 });
+});
+
+test('editor avatar preferences validate persisted sizes and reset across tabs', () => {
+  const { roots, store, key, handlers } = avatarAppearanceFixture('{"preview":999,"segments":-10}');
+  assert.equal(roots[0].inputs.preview.value, '184'); assert.equal(roots[0].inputs.segments.value, '48');
+  store.set(key, '{"preview":88,"segments":104}'); handlers.storage({ key });
+  assert.equal(roots[1].inputs.preview.value, '88'); assert.equal(roots[1].inputs.segments.value, '104');
+  store.clear(); handlers.storage({ key: null });
+  assert.equal(roots[1].inputs.preview.value, '120'); assert.equal(roots[1].inputs.segments.value, '80');
+});
+
+test('editor avatar controls survive invalid or unavailable browser storage', () => {
+  for (const initial of ['broken', '{"preview":"176","segments":null}']) {
+    const { roots } = avatarAppearanceFixture(initial);
+    assert.equal(roots[0].inputs.preview.value, '120'); assert.equal(roots[0].inputs.segments.value, '80');
+  }
+  const { roots, setSize } = avatarAppearanceFixture(null, { storageUnavailable: true });
+  assert.doesNotThrow(() => setSize('preview', 160)); assert.equal(roots[1].inputs.preview.value, '160');
+});
