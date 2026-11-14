@@ -6,52 +6,6 @@
   "assignedTab": "Gwynthor",
   "sourcePath": "Charakter Archiv Exporte/Gwniwr-Maerllys/gwniwr/person-e847aa96.json",
   "character": {
-    "bio": "Hywel Craigddu wurde 1708 geboren und dient als Waffenknecht in Gwynthor. Er ist der Sohn Iestyn Craigddu’s und Mareds, Catrins Bruder und Llywelyn Coeddus Freund. Seine Ehe mit Eleri verbindet die Craigddu mit der Schneiderfamilie Gwniwr.\n\nEleri ist die Tochter Emyrs und Gwenllians, die Nadel & Faden führen. Sie hilft mit ihren Kindern im Laden. Für Hywel führt die familiäre Verbindung damit aus dem eigenen Dienstalltag in ein anderes Handwerk: In der Schneiderstube seiner Schwiegereltern zählen gute Tuche, brauchbare Schnitte und verlässliche Absprachen.\n\nDas Paar hat die sieben Töchter Lowri, Carys, Nerys, Ffion, Anwen, Eirlys und Mali. Hywels großer Haushalt steht neben den Familien seiner Schwester und seiner Vettern im weitverzweigten Craigddu-Kreis. Eleris fortdauernde Mithilfe bei ihren Eltern hält zugleich die Nähe zu den Gwniwr lebendig.",
-    "biography": {
-      "schema": "aleria.biography-module",
-      "schemaVersion": 1,
-      "stats": [
-        {
-          "label": "Vollständiger Name",
-          "value": "Hywel Craigddu"
-        },
-        {
-          "label": "Geboren",
-          "value": "1708"
-        },
-        {
-          "label": "Alter",
-          "value": "32 Jahre"
-        },
-        {
-          "label": "Tätigkeit",
-          "value": "Waffenknecht in Gwynthor"
-        },
-        {
-          "label": "Familie",
-          "value": "Haus Craigddu"
-        }
-      ],
-      "biography": {
-        "portrait": "https://i.imgur.com/8Y1N3SA.png",
-        "biographyTitle": "Biografie",
-        "biographyText": "Hywel Craigddu wurde 1708 geboren und dient als Waffenknecht in Gwynthor. Er ist der Sohn Iestyn Craigddu’s und Mareds, Catrins Bruder und Llywelyn Coeddus Freund. Seine Ehe mit Eleri verbindet die Craigddu mit der Schneiderfamilie Gwniwr.",
-        "extraSections": [
-          {
-            "position": "afterIntro",
-            "mode": "text",
-            "title": "Arbeit und Alltag",
-            "text": "Eleri ist die Tochter Emyrs und Gwenllians, die Nadel & Faden führen. Sie hilft mit ihren Kindern im Laden. Für Hywel führt die familiäre Verbindung damit aus dem eigenen Dienstalltag in ein anderes Handwerk: In der Schneiderstube seiner Schwiegereltern zählen gute Tuche, brauchbare Schnitte und verlässliche Absprachen."
-          },
-          {
-            "position": "afterIntro",
-            "mode": "text",
-            "title": "Familie und Verbindungen",
-            "text": "Das Paar hat die sieben Töchter Lowri, Carys, Nerys, Ffion, Anwen, Eirlys und Mali. Hywels großer Haushalt steht neben den Familien seiner Schwester und seiner Vettern im weitverzweigten Craigddu-Kreis. Eleris fortdauernde Mithilfe bei ihren Eltern hält zugleich die Nähe zu den Gwniwr lebendig."
-          }
-        ]
-      }
-    },
     "genealogy": {
       "worldPersonId": "person--craigddu--person-28b0e0a3",
       "sex": "male",
