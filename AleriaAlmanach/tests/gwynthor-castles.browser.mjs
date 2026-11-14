@@ -76,7 +76,7 @@ try {
           if (!initiallyVisible) await toggle.press('Enter');
         }
         if (!structureOnly && (layout !== 'small-mobile' || /thronsaal|esssaal|burghafen|zugbruecke/.test(model.commentThreadKey))) {
-          await page.locator('.modal-page-tab.active').first().scrollIntoViewIfNeeded();
+          await page.locator(entry.pages.length > 1 ? '.modal-page-tab.active' : '.session-stage-title').first().scrollIntoViewIfNeeded();
           await capture(`${layout}-${entry.id}-${model.commentThreadKey}`);
         }
         checks.push({ layout, entry: entry.id, page: index + 1, thread: model.commentThreadKey, ...bounds });
