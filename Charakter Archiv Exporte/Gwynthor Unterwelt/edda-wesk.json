@@ -1,0 +1,70 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-14T10:00:00Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthor Unterwelt/edda-wesk.json",
+  "character": {
+    "id": "person--gwynthor-reine-ratte--edda-wesk",
+    "name": "Edda Wesk",
+    "title": "Magd · Wasser, Feuer und Vorräte",
+    "role": "Magd · Wasser, Feuer und Vorräte",
+    "age": 32,
+    "birth": "1708",
+    "gender": "female",
+    "race": "Mensch",
+    "origin": "Aldrimar",
+    "identity": {
+      "worldPersonId": "person--gwynthor-reine-ratte--edda-wesk"
+    },
+    "genealogy": {
+      "worldPersonId": "person--gwynthor-reine-ratte--edda-wesk",
+      "sources": []
+    },
+    "fraktion": "Die Reine Ratte",
+    "portrait": "./assets/gwynthor-underworld/portraits/edda-wesk-v1.png",
+    "bio": "Edda versorgt das Holzfeuer, trägt Frischwasser und rechnet die Eimer genauer als Cadwren die Münzen. Der offene Kessel steht unter ihrer Aufsicht; Wasser wird von Hand weitergetragen. Sie weiß, wann Vorräte fehlen, und schickt dann Iorven mit einer knappen Liste los.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Edda Wesk",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Edda Wesk"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "32 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Aldrimar"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Magd · Wasser, Feuer und Vorräte"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwynthor-underworld/portraits/edda-wesk-v1.png",
+        "biographyTitle": "Magd · Wasser, Feuer und Vorräte",
+        "biographyText": "<p>Edda versorgt das Holzfeuer, trägt Frischwasser und rechnet die Eimer genauer als Cadwren die Münzen. Der offene Kessel steht unter ihrer Aufsicht; Wasser wird von Hand weitergetragen. Sie weiß, wann Vorräte fehlen, und schickt dann Iorven mit einer knappen Liste los.</p>",
+        "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+        "historyTitle": "Die Reine Ratte am Hafen",
+        "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+        "documentsTitle": "Arbeitsort",
+        "documents": [
+          {
+            "title": "Die Reine Ratte",
+            "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+    "archived": false
+  }
+}

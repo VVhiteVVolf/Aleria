@@ -1,0 +1,70 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-14T10:00:00Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthor Unterwelt/neria-veyr.json",
+  "character": {
+    "id": "person--gwynthor-reine-ratte--neria-veyr",
+    "name": "Neria Veyr",
+    "title": "Zuberdirne · Bad und Leinen",
+    "role": "Zuberdirne · Bad und Leinen",
+    "age": 23,
+    "birth": "1717",
+    "gender": "female",
+    "race": "Mensch",
+    "origin": "Gwynthor · Hafenviertel",
+    "identity": {
+      "worldPersonId": "person--gwynthor-reine-ratte--neria-veyr"
+    },
+    "genealogy": {
+      "worldPersonId": "person--gwynthor-reine-ratte--neria-veyr",
+      "sources": []
+    },
+    "fraktion": "Die Reine Ratte",
+    "portrait": "./assets/gwynthor-underworld/portraits/neria-veyr-v1.png",
+    "bio": "Neria ist die jüngste der sechs Zuberdirnen, doch im Haus lässt sie sich nicht herumschieben. Sie richtet Leinen und Stuben her, handelt knapp und besitzt ein ansteckendes Lachen. Bei ungebetenen Händen ist ihre Geduld sofort zu Ende.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Neria Veyr",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Neria Veyr"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "23 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor · Hafenviertel"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Zuberdirne · Bad und Leinen"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwynthor-underworld/portraits/neria-veyr-v1.png",
+        "biographyTitle": "Zuberdirne · Bad und Leinen",
+        "biographyText": "<p>Neria ist die jüngste der sechs Zuberdirnen, doch im Haus lässt sie sich nicht herumschieben. Sie richtet Leinen und Stuben her, handelt knapp und besitzt ein ansteckendes Lachen. Bei ungebetenen Händen ist ihre Geduld sofort zu Ende.</p>",
+        "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+        "historyTitle": "Die Reine Ratte am Hafen",
+        "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+        "documentsTitle": "Arbeitsort",
+        "documents": [
+          {
+            "title": "Die Reine Ratte",
+            "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+    "archived": false
+  }
+}

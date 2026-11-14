@@ -1,0 +1,70 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-14T10:00:00Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthor Unterwelt/caerlan-ruadh.json",
+  "character": {
+    "id": "person--gwynthor-reine-ratte--caerlan-ruadh",
+    "name": "Caerlan Ruadh",
+    "title": "Aufpasser · Keller und Nachtdienst",
+    "role": "Aufpasser · Keller und Nachtdienst",
+    "age": 44,
+    "birth": "1696",
+    "gender": "male",
+    "race": "Albe",
+    "origin": "Albe · untergegangenes Ceitheach",
+    "identity": {
+      "worldPersonId": "person--gwynthor-reine-ratte--caerlan-ruadh"
+    },
+    "genealogy": {
+      "worldPersonId": "person--gwynthor-reine-ratte--caerlan-ruadh",
+      "sources": []
+    },
+    "fraktion": "Die Reine Ratte",
+    "portrait": "./assets/gwynthor-underworld/portraits/caerlan-ruadh-v2.png",
+    "bio": "Caerlan stammt aus dem untergegangenen Ceitheach und hält Fragen nach seiner alten Heimat kurz. Sein kalter, missgelaunter Blick und die alte Narbe am Kinn passen zum Ruf eines Haudegens. Über einem dunklen Steppwams trägt er einen angeschlagenen Lederharnisch mit wenigen eisernen Verstärkungen und einem schlichten eisernen Armschutz. Die zusammengekaufte Rüstung wirkt gebraucht, aber diensttauglich. Er übernimmt den späten Dienst und bewacht den Vorratskeller. Ohne das vereinbarte private Erkennungszeichen lässt er niemanden weiter; dessen Wortlaut bleibt unausgesprochen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Caerlan Ruadh",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Caerlan Ruadh"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "44 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Albe · untergegangenes Ceitheach"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Aufpasser · Keller und Nachtdienst"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwynthor-underworld/portraits/caerlan-ruadh-v2.png",
+        "biographyTitle": "Aufpasser · Keller und Nachtdienst",
+        "biographyText": "<p>Caerlan stammt aus dem untergegangenen Ceitheach und hält Fragen nach seiner alten Heimat kurz. Sein kalter, missgelaunter Blick und die alte Narbe am Kinn passen zum Ruf eines Haudegens. Über einem dunklen Steppwams trägt er einen angeschlagenen Lederharnisch mit wenigen eisernen Verstärkungen und einem schlichten eisernen Armschutz. Die zusammengekaufte Rüstung wirkt gebraucht, aber diensttauglich. Er übernimmt den späten Dienst und bewacht den Vorratskeller. Ohne das vereinbarte private Erkennungszeichen lässt er niemanden weiter; dessen Wortlaut bleibt unausgesprochen.</p>",
+        "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+        "historyTitle": "Die Reine Ratte am Hafen",
+        "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+        "documentsTitle": "Arbeitsort",
+        "documents": [
+          {
+            "title": "Die Reine Ratte",
+            "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+    "archived": false
+  }
+}

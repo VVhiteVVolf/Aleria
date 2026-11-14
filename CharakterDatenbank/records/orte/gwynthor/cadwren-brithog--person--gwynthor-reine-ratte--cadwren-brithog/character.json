@@ -1,0 +1,216 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--gwynthor-reine-ratte--cadwren-brithog",
+  "slug": "cadwren-brithog",
+  "identity": {
+    "name": "Cadwren Brithog",
+    "aliases": [],
+    "worldPersonId": "person--gwynthor-reine-ratte--cadwren-brithog"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--gwynthor-reine-ratte--cadwren-brithog",
+      "documentIds": [
+        "person--gwynthor-reine-ratte--cadwren-brithog"
+      ],
+      "documents": [
+        {
+          "documentId": "person--gwynthor-reine-ratte--cadwren-brithog",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthor Unterwelt/cadwren-brithog.json",
+    "sourceExportedAt": "2026-11-14T10:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--gwynthor-reine-ratte--cadwren-brithog"
+    ],
+    "contentHash": "b9580e1960be6bf569f35b9b24af0f6aaee45eba30cc7d7a554771b0148bb565"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-underworld-20261114"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--gwynthor-reine-ratte--cadwren-brithog",
+        "name": "Cadwren Brithog",
+        "title": "Inhaber der Reinen Ratte",
+        "role": "Inhaber der Reinen Ratte",
+        "age": 48,
+        "birth": "1692",
+        "gender": "male",
+        "race": "Mensch",
+        "origin": "Cenyri · Gwynthor",
+        "identity": {
+          "worldPersonId": "person--gwynthor-reine-ratte--cadwren-brithog"
+        },
+        "genealogy": {
+          "worldPersonId": "person--gwynthor-reine-ratte--cadwren-brithog",
+          "sources": []
+        },
+        "fraktion": "Die Reine Ratte",
+        "portrait": "./assets/gwynthor-underworld/portraits/cadwren-brithog-v5.png",
+        "bio": "Hochgewachsen und kräftig, breiter herabhängender Schnauzer, dichter kupferroter Mullet mit vollem Oberhaar und kurz geschorenen Seiten: Cadwren ist schon an der Tür unverkennbar. Eine alte Verbrennung überzieht seine rechte Gesichtshälfte bis zur Schläfe und hat das rechte Ohr stark verformt. In seinem fiesen, selbstgefälligen Grinsen blitzen drei Silberzähne und ein Goldzahn. Sein gepflegtes flaschengrünes Wams mit schlichten Knebelverschlüssen ist deutlich besser als der Ruf seines Hauses. Mit verschränkten Armen taxiert er jeden neuen Gast. Er führt Kasse und Haus, vermittelt diskrete Absprachen und entscheidet, wann die Aufpasser eingreifen. Über die Herkunft seiner Narben erzählt er widersprüchliche Geschichten.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Cadwren Brithog",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Cadwren Brithog"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "48 Jahre"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Cenyri · Gwynthor"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Inhaber der Reinen Ratte"
+            }
+          ],
+          "biography": {
+            "portrait": "./assets/gwynthor-underworld/portraits/cadwren-brithog-v5.png",
+            "biographyTitle": "Inhaber der Reinen Ratte",
+            "biographyText": "<p>Hochgewachsen und kräftig, breiter herabhängender Schnauzer, dichter kupferroter Mullet mit vollem Oberhaar und kurz geschorenen Seiten: Cadwren ist schon an der Tür unverkennbar. Eine alte Verbrennung überzieht seine rechte Gesichtshälfte bis zur Schläfe und hat das rechte Ohr stark verformt. In seinem fiesen, selbstgefälligen Grinsen blitzen drei Silberzähne und ein Goldzahn. Sein gepflegtes flaschengrünes Wams mit schlichten Knebelverschlüssen ist deutlich besser als der Ruf seines Hauses. Mit verschränkten Armen taxiert er jeden neuen Gast. Er führt Kasse und Haus, vermittelt diskrete Absprachen und entscheidet, wann die Aufpasser eingreifen. Über die Herkunft seiner Narben erzählt er widersprüchliche Geschichten.</p>",
+            "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+            "historyTitle": "Die Reine Ratte am Hafen",
+            "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+            "documentsTitle": "Arbeitsort",
+            "documents": [
+              {
+                "title": "Die Reine Ratte",
+                "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--gwynthor-reine-ratte--cadwren-brithog",
+    "name": "Cadwren Brithog",
+    "title": "Inhaber der Reinen Ratte",
+    "role": "Inhaber der Reinen Ratte",
+    "age": 48,
+    "birth": "1692",
+    "gender": "male",
+    "race": "Mensch",
+    "origin": "Cenyri · Gwynthor",
+    "identity": {
+      "worldPersonId": "person--gwynthor-reine-ratte--cadwren-brithog"
+    },
+    "genealogy": {
+      "worldPersonId": "person--gwynthor-reine-ratte--cadwren-brithog",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Die Reine Ratte",
+    "portrait": "./assets/gwynthor-underworld/portraits/cadwren-brithog-v5.png",
+    "bio": "Hochgewachsen und kräftig, breiter herabhängender Schnauzer, dichter kupferroter Mullet mit vollem Oberhaar und kurz geschorenen Seiten: Cadwren ist schon an der Tür unverkennbar. Eine alte Verbrennung überzieht seine rechte Gesichtshälfte bis zur Schläfe und hat das rechte Ohr stark verformt. In seinem fiesen, selbstgefälligen Grinsen blitzen drei Silberzähne und ein Goldzahn. Sein gepflegtes flaschengrünes Wams mit schlichten Knebelverschlüssen ist deutlich besser als der Ruf seines Hauses. Mit verschränkten Armen taxiert er jeden neuen Gast. Er führt Kasse und Haus, vermittelt diskrete Absprachen und entscheidet, wann die Aufpasser eingreifen. Über die Herkunft seiner Narben erzählt er widersprüchliche Geschichten.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Cadwren Brithog",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Cadwren Brithog"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "48 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Cenyri · Gwynthor"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Inhaber der Reinen Ratte"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwynthor-underworld/portraits/cadwren-brithog-v5.png",
+        "biographyTitle": "Inhaber der Reinen Ratte",
+        "biographyText": "<p>Hochgewachsen und kräftig, breiter herabhängender Schnauzer, dichter kupferroter Mullet mit vollem Oberhaar und kurz geschorenen Seiten: Cadwren ist schon an der Tür unverkennbar. Eine alte Verbrennung überzieht seine rechte Gesichtshälfte bis zur Schläfe und hat das rechte Ohr stark verformt. In seinem fiesen, selbstgefälligen Grinsen blitzen drei Silberzähne und ein Goldzahn. Sein gepflegtes flaschengrünes Wams mit schlichten Knebelverschlüssen ist deutlich besser als der Ruf seines Hauses. Mit verschränkten Armen taxiert er jeden neuen Gast. Er führt Kasse und Haus, vermittelt diskrete Absprachen und entscheidet, wann die Aufpasser eingreifen. Über die Herkunft seiner Narben erzählt er widersprüchliche Geschichten.</p>",
+        "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+        "historyTitle": "Die Reine Ratte am Hafen",
+        "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+        "documentsTitle": "Arbeitsort",
+        "documents": [
+          {
+            "title": "Die Reine Ratte",
+            "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+    "archived": false,
+    "aliases": []
+  }
+}

@@ -68,6 +68,19 @@
     "Charakter Archiv Exporte/Gwynthor Sieben/rhosyn-awenydd.json",
     "Charakter Archiv Exporte/Gwynthor Sieben/rianna-wyrm.json",
     "Charakter Archiv Exporte/Gwynthor Sieben/saerwyn-gwyllach.json",
+    "Charakter Archiv Exporte/Gwynthor Unterwelt/belessa-dorn.json",
+    "Charakter Archiv Exporte/Gwynthor Unterwelt/cadwren-brithog.json",
+    "Charakter Archiv Exporte/Gwynthor Unterwelt/caerlan-ruadh.json",
+    "Charakter Archiv Exporte/Gwynthor Unterwelt/dornan-falbh.json",
+    "Charakter Archiv Exporte/Gwynthor Unterwelt/edda-wesk.json",
+    "Charakter Archiv Exporte/Gwynthor Unterwelt/edrith-voss.json",
+    "Charakter Archiv Exporte/Gwynthor Unterwelt/hilva-berent.json",
+    "Charakter Archiv Exporte/Gwynthor Unterwelt/iorven-pell.json",
+    "Charakter Archiv Exporte/Gwynthor Unterwelt/marlena-tann.json",
+    "Charakter Archiv Exporte/Gwynthor Unterwelt/morwenna-plann.json",
+    "Charakter Archiv Exporte/Gwynthor Unterwelt/neria-veyr.json",
+    "Charakter Archiv Exporte/Gwynthor Unterwelt/runa-vell.json",
+    "Charakter Archiv Exporte/Gwynthor Unterwelt/sveja-lind.json",
     "Charakter Archiv Exporte/Gwynthorer Landfamilien/helfaen/cadwgan-helfaen.json",
     "Charakter Archiv Exporte/Gwynthorer Landfamilien/helfaen/cerys-helfaen.json",
     "Charakter Archiv Exporte/Gwynthorer Landfamilien/helfaen/dilys-spouse-helfaen.json",
@@ -418,7 +431,7 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-11-08T16:10:00.000Z",
+  "sourceExportedAt": "2026-11-14T10:00:00Z",
   "characters": [
     {
       "id": "kCmUm4WvMZDYetqrSWQ0",
@@ -247459,6 +247472,1371 @@
         },
         "authoredFeature": "gwniwr-maerllys-20261108"
       }
+    },
+    {
+      "id": "person--gwynthor-reine-ratte--cadwren-brithog",
+      "name": "Cadwren Brithog",
+      "title": "Inhaber der Reinen Ratte",
+      "role": "Inhaber der Reinen Ratte",
+      "age": 48,
+      "birth": "1692",
+      "gender": "male",
+      "race": "Mensch",
+      "origin": "Cenyri · Gwynthor",
+      "identity": {
+        "worldPersonId": "person--gwynthor-reine-ratte--cadwren-brithog"
+      },
+      "genealogy": {
+        "worldPersonId": "person--gwynthor-reine-ratte--cadwren-brithog",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Die Reine Ratte",
+      "portrait": "./assets/gwynthor-underworld/portraits/cadwren-brithog-v5.png",
+      "bio": "Hochgewachsen und kräftig, breiter herabhängender Schnauzer, dichter kupferroter Mullet mit vollem Oberhaar und kurz geschorenen Seiten: Cadwren ist schon an der Tür unverkennbar. Eine alte Verbrennung überzieht seine rechte Gesichtshälfte bis zur Schläfe und hat das rechte Ohr stark verformt. In seinem fiesen, selbstgefälligen Grinsen blitzen drei Silberzähne und ein Goldzahn. Sein gepflegtes flaschengrünes Wams mit schlichten Knebelverschlüssen ist deutlich besser als der Ruf seines Hauses. Mit verschränkten Armen taxiert er jeden neuen Gast. Er führt Kasse und Haus, vermittelt diskrete Absprachen und entscheidet, wann die Aufpasser eingreifen. Über die Herkunft seiner Narben erzählt er widersprüchliche Geschichten.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Cadwren Brithog",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Cadwren Brithog"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "48 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Cenyri · Gwynthor"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Inhaber der Reinen Ratte"
+          }
+        ],
+        "biography": {
+          "portrait": "./assets/gwynthor-underworld/portraits/cadwren-brithog-v5.png",
+          "biographyTitle": "Inhaber der Reinen Ratte",
+          "biographyText": "<p>Hochgewachsen und kräftig, breiter herabhängender Schnauzer, dichter kupferroter Mullet mit vollem Oberhaar und kurz geschorenen Seiten: Cadwren ist schon an der Tür unverkennbar. Eine alte Verbrennung überzieht seine rechte Gesichtshälfte bis zur Schläfe und hat das rechte Ohr stark verformt. In seinem fiesen, selbstgefälligen Grinsen blitzen drei Silberzähne und ein Goldzahn. Sein gepflegtes flaschengrünes Wams mit schlichten Knebelverschlüssen ist deutlich besser als der Ruf seines Hauses. Mit verschränkten Armen taxiert er jeden neuen Gast. Er führt Kasse und Haus, vermittelt diskrete Absprachen und entscheidet, wann die Aufpasser eingreifen. Über die Herkunft seiner Narben erzählt er widersprüchliche Geschichten.</p>",
+          "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+          "historyTitle": "Die Reine Ratte am Hafen",
+          "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+          "documentsTitle": "Arbeitsort",
+          "documents": [
+            {
+              "title": "Die Reine Ratte",
+              "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--gwynthor-reine-ratte--cadwren-brithog",
+        "path": "records/orte/gwynthor/cadwren-brithog--person--gwynthor-reine-ratte--cadwren-brithog/character.json",
+        "schemaVersion": 1,
+        "contentHash": "b9580e1960be6bf569f35b9b24af0f6aaee45eba30cc7d7a554771b0148bb565",
+        "firestoreDocumentIds": [
+          "person--gwynthor-reine-ratte--cadwren-brithog"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-underworld-20261114"
+      }
+    },
+    {
+      "id": "person--gwynthor-reine-ratte--hilva-berent",
+      "name": "Hilva Berent",
+      "title": "Zuberdirne · Empfang und Gästebegleitung",
+      "role": "Zuberdirne · Empfang und Gästebegleitung",
+      "age": 24,
+      "birth": "1716",
+      "gender": "female",
+      "race": "Mensch",
+      "origin": "Aldrimar",
+      "identity": {
+        "worldPersonId": "person--gwynthor-reine-ratte--hilva-berent"
+      },
+      "genealogy": {
+        "worldPersonId": "person--gwynthor-reine-ratte--hilva-berent",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Die Reine Ratte",
+      "portrait": "./assets/gwynthor-underworld/portraits/hilva-berent-v1.png",
+      "bio": "Hilva erkennt einen Landgang meist noch vor dem ersten Wort. Sie begrüßt Gäste, verteilt Waschplätze und behält im Kopf, welche Stube wirklich frei ist. Ihr heller, trockener Spott gehört zum Haus wie das schiefe Schild. Zusätzliche Gesellschaft vereinbart sie selbst mit dem jeweiligen Gast.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Hilva Berent",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Hilva Berent"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "24 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Aldrimar"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Zuberdirne · Empfang und Gästebegleitung"
+          }
+        ],
+        "biography": {
+          "portrait": "./assets/gwynthor-underworld/portraits/hilva-berent-v1.png",
+          "biographyTitle": "Zuberdirne · Empfang und Gästebegleitung",
+          "biographyText": "<p>Hilva erkennt einen Landgang meist noch vor dem ersten Wort. Sie begrüßt Gäste, verteilt Waschplätze und behält im Kopf, welche Stube wirklich frei ist. Ihr heller, trockener Spott gehört zum Haus wie das schiefe Schild. Zusätzliche Gesellschaft vereinbart sie selbst mit dem jeweiligen Gast.</p>",
+          "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+          "historyTitle": "Die Reine Ratte am Hafen",
+          "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+          "documentsTitle": "Arbeitsort",
+          "documents": [
+            {
+              "title": "Die Reine Ratte",
+              "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--gwynthor-reine-ratte--hilva-berent",
+        "path": "records/orte/gwynthor/hilva-berent--person--gwynthor-reine-ratte--hilva-berent/character.json",
+        "schemaVersion": 1,
+        "contentHash": "77970af37acaf9eead3aaf7464a759c3434af7b7c0ae9118df43c8cd3effc0f4",
+        "firestoreDocumentIds": [
+          "person--gwynthor-reine-ratte--hilva-berent"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-underworld-20261114"
+      }
+    },
+    {
+      "id": "person--gwynthor-reine-ratte--marlena-tann",
+      "name": "Marlena Tann",
+      "title": "Zuberdirne · Waschdienst",
+      "role": "Zuberdirne · Waschdienst",
+      "age": 26,
+      "birth": "1714",
+      "gender": "female",
+      "race": "Mensch",
+      "origin": "Aldrimar",
+      "identity": {
+        "worldPersonId": "person--gwynthor-reine-ratte--marlena-tann"
+      },
+      "genealogy": {
+        "worldPersonId": "person--gwynthor-reine-ratte--marlena-tann",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Die Reine Ratte",
+      "portrait": "./assets/gwynthor-underworld/portraits/marlena-tann-v1.png",
+      "bio": "Marlena trägt die Eimer so selbstverständlich wie andere einen leeren Krug. Sie bereitet Zuber, prüft die Wärme und unterhält sich lieber mit einem müden Ruderer als mit einem Aufschneider. Wer ihr ungefragt Befehle gibt, bekommt eine bemerkenswert gründliche Erklärung der Hauspreise.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Marlena Tann",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Marlena Tann"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "26 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Aldrimar"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Zuberdirne · Waschdienst"
+          }
+        ],
+        "biography": {
+          "portrait": "./assets/gwynthor-underworld/portraits/marlena-tann-v1.png",
+          "biographyTitle": "Zuberdirne · Waschdienst",
+          "biographyText": "<p>Marlena trägt die Eimer so selbstverständlich wie andere einen leeren Krug. Sie bereitet Zuber, prüft die Wärme und unterhält sich lieber mit einem müden Ruderer als mit einem Aufschneider. Wer ihr ungefragt Befehle gibt, bekommt eine bemerkenswert gründliche Erklärung der Hauspreise.</p>",
+          "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+          "historyTitle": "Die Reine Ratte am Hafen",
+          "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+          "documentsTitle": "Arbeitsort",
+          "documents": [
+            {
+              "title": "Die Reine Ratte",
+              "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--gwynthor-reine-ratte--marlena-tann",
+        "path": "records/orte/gwynthor/marlena-tann--person--gwynthor-reine-ratte--marlena-tann/character.json",
+        "schemaVersion": 1,
+        "contentHash": "1862e15105ec134bbbb9973b848e025ae23cce8dfdb125e7b3a85bb13a82aebf",
+        "firestoreDocumentIds": [
+          "person--gwynthor-reine-ratte--marlena-tann"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-underworld-20261114"
+      }
+    },
+    {
+      "id": "person--gwynthor-reine-ratte--sveja-lind",
+      "name": "Sveja Lind",
+      "title": "Zuberdirne · Stuben und Absprachen",
+      "role": "Zuberdirne · Stuben und Absprachen",
+      "age": 28,
+      "birth": "1712",
+      "gender": "female",
+      "race": "Mensch",
+      "origin": "Aldrimar",
+      "identity": {
+        "worldPersonId": "person--gwynthor-reine-ratte--sveja-lind"
+      },
+      "genealogy": {
+        "worldPersonId": "person--gwynthor-reine-ratte--sveja-lind",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Die Reine Ratte",
+      "portrait": "./assets/gwynthor-underworld/portraits/sveja-lind-v1.png",
+      "bio": "Sveja spricht leise und lässt sich selten unterbrechen. Sie stimmt Stubenstunden unter den Frauen ab, ohne ihnen die eigenen Vereinbarungen abzunehmen. Im Streit genügt ihr oft ein Blick zur Tür; sie kennt die Grenzen der drei Aufpasser genauer, als Cadwren zugibt.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Sveja Lind",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Sveja Lind"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "28 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Aldrimar"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Zuberdirne · Stuben und Absprachen"
+          }
+        ],
+        "biography": {
+          "portrait": "./assets/gwynthor-underworld/portraits/sveja-lind-v1.png",
+          "biographyTitle": "Zuberdirne · Stuben und Absprachen",
+          "biographyText": "<p>Sveja spricht leise und lässt sich selten unterbrechen. Sie stimmt Stubenstunden unter den Frauen ab, ohne ihnen die eigenen Vereinbarungen abzunehmen. Im Streit genügt ihr oft ein Blick zur Tür; sie kennt die Grenzen der drei Aufpasser genauer, als Cadwren zugibt.</p>",
+          "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+          "historyTitle": "Die Reine Ratte am Hafen",
+          "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+          "documentsTitle": "Arbeitsort",
+          "documents": [
+            {
+              "title": "Die Reine Ratte",
+              "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--gwynthor-reine-ratte--sveja-lind",
+        "path": "records/orte/gwynthor/sveja-lind--person--gwynthor-reine-ratte--sveja-lind/character.json",
+        "schemaVersion": 1,
+        "contentHash": "177b3631fa64088a846f266063b8acbae8d81c6b8d971aec4a2fc1970b604fa2",
+        "firestoreDocumentIds": [
+          "person--gwynthor-reine-ratte--sveja-lind"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-underworld-20261114"
+      }
+    },
+    {
+      "id": "person--gwynthor-reine-ratte--runa-vell",
+      "name": "Runa Vell",
+      "title": "Zuberdirne · Zuberdienst",
+      "role": "Zuberdirne · Zuberdienst",
+      "age": 30,
+      "birth": "1710",
+      "gender": "female",
+      "race": "Mensch",
+      "origin": "Aldrimar",
+      "identity": {
+        "worldPersonId": "person--gwynthor-reine-ratte--runa-vell"
+      },
+      "genealogy": {
+        "worldPersonId": "person--gwynthor-reine-ratte--runa-vell",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Die Reine Ratte",
+      "portrait": "./assets/gwynthor-underworld/portraits/runa-vell-v1.png",
+      "bio": "Runa ist die älteste der sechs Frauen und die wenigste Geduld hat sie für Angeberei. Sie scheuert einen Rücken kräftig, lacht rau und merkt sich zuverlässig, wer nach dem letzten Besuch noch ein Tuch schuldet. Ihre freundlichen Augen ändern nichts an ihrem scharfen Mundwerk.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Runa Vell",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Runa Vell"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "30 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Aldrimar"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Zuberdirne · Zuberdienst"
+          }
+        ],
+        "biography": {
+          "portrait": "./assets/gwynthor-underworld/portraits/runa-vell-v1.png",
+          "biographyTitle": "Zuberdirne · Zuberdienst",
+          "biographyText": "<p>Runa ist die älteste der sechs Frauen und die wenigste Geduld hat sie für Angeberei. Sie scheuert einen Rücken kräftig, lacht rau und merkt sich zuverlässig, wer nach dem letzten Besuch noch ein Tuch schuldet. Ihre freundlichen Augen ändern nichts an ihrem scharfen Mundwerk.</p>",
+          "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+          "historyTitle": "Die Reine Ratte am Hafen",
+          "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+          "documentsTitle": "Arbeitsort",
+          "documents": [
+            {
+              "title": "Die Reine Ratte",
+              "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--gwynthor-reine-ratte--runa-vell",
+        "path": "records/orte/gwynthor/runa-vell--person--gwynthor-reine-ratte--runa-vell/character.json",
+        "schemaVersion": 1,
+        "contentHash": "14faf5f44512c1ee321820d675856107c755f958033e5c8d7b7c2e6ded6b4b82",
+        "firestoreDocumentIds": [
+          "person--gwynthor-reine-ratte--runa-vell"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-underworld-20261114"
+      }
+    },
+    {
+      "id": "person--gwynthor-reine-ratte--belessa-dorn",
+      "name": "Belessa Dorn",
+      "title": "Zuberdirne · Gästebegleitung",
+      "role": "Zuberdirne · Gästebegleitung",
+      "age": 25,
+      "birth": "1715",
+      "gender": "female",
+      "race": "Mensch",
+      "origin": "Gwynthor · Hafenviertel",
+      "identity": {
+        "worldPersonId": "person--gwynthor-reine-ratte--belessa-dorn"
+      },
+      "genealogy": {
+        "worldPersonId": "person--gwynthor-reine-ratte--belessa-dorn",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Die Reine Ratte",
+      "portrait": "./assets/gwynthor-underworld/portraits/belessa-dorn-v1.png",
+      "bio": "Belessa hört gern zu und wird dabei leicht unterschätzt. Sie kennt die wechselnden Besatzungen der Hafenlieger, plaudert über Wind und Lohn und wird bei Fragen nach fremden Gästen plötzlich sehr ungenau. Welche Gesellschaft sie anbietet, spricht sie hinter einem geschlossenen Vorhang ab.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Belessa Dorn",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Belessa Dorn"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "25 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Gwynthor · Hafenviertel"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Zuberdirne · Gästebegleitung"
+          }
+        ],
+        "biography": {
+          "portrait": "./assets/gwynthor-underworld/portraits/belessa-dorn-v1.png",
+          "biographyTitle": "Zuberdirne · Gästebegleitung",
+          "biographyText": "<p>Belessa hört gern zu und wird dabei leicht unterschätzt. Sie kennt die wechselnden Besatzungen der Hafenlieger, plaudert über Wind und Lohn und wird bei Fragen nach fremden Gästen plötzlich sehr ungenau. Welche Gesellschaft sie anbietet, spricht sie hinter einem geschlossenen Vorhang ab.</p>",
+          "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+          "historyTitle": "Die Reine Ratte am Hafen",
+          "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+          "documentsTitle": "Arbeitsort",
+          "documents": [
+            {
+              "title": "Die Reine Ratte",
+              "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--gwynthor-reine-ratte--belessa-dorn",
+        "path": "records/orte/gwynthor/belessa-dorn--person--gwynthor-reine-ratte--belessa-dorn/character.json",
+        "schemaVersion": 1,
+        "contentHash": "f5a3741b4c4acf6179a8726bdc4f25d2fefe1ecc371934816d8a159251fafc18",
+        "firestoreDocumentIds": [
+          "person--gwynthor-reine-ratte--belessa-dorn"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-underworld-20261114"
+      }
+    },
+    {
+      "id": "person--gwynthor-reine-ratte--neria-veyr",
+      "name": "Neria Veyr",
+      "title": "Zuberdirne · Bad und Leinen",
+      "role": "Zuberdirne · Bad und Leinen",
+      "age": 23,
+      "birth": "1717",
+      "gender": "female",
+      "race": "Mensch",
+      "origin": "Gwynthor · Hafenviertel",
+      "identity": {
+        "worldPersonId": "person--gwynthor-reine-ratte--neria-veyr"
+      },
+      "genealogy": {
+        "worldPersonId": "person--gwynthor-reine-ratte--neria-veyr",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Die Reine Ratte",
+      "portrait": "./assets/gwynthor-underworld/portraits/neria-veyr-v1.png",
+      "bio": "Neria ist die jüngste der sechs Zuberdirnen, doch im Haus lässt sie sich nicht herumschieben. Sie richtet Leinen und Stuben her, handelt knapp und besitzt ein ansteckendes Lachen. Bei ungebetenen Händen ist ihre Geduld sofort zu Ende.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Neria Veyr",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Neria Veyr"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "23 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Gwynthor · Hafenviertel"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Zuberdirne · Bad und Leinen"
+          }
+        ],
+        "biography": {
+          "portrait": "./assets/gwynthor-underworld/portraits/neria-veyr-v1.png",
+          "biographyTitle": "Zuberdirne · Bad und Leinen",
+          "biographyText": "<p>Neria ist die jüngste der sechs Zuberdirnen, doch im Haus lässt sie sich nicht herumschieben. Sie richtet Leinen und Stuben her, handelt knapp und besitzt ein ansteckendes Lachen. Bei ungebetenen Händen ist ihre Geduld sofort zu Ende.</p>",
+          "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+          "historyTitle": "Die Reine Ratte am Hafen",
+          "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+          "documentsTitle": "Arbeitsort",
+          "documents": [
+            {
+              "title": "Die Reine Ratte",
+              "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--gwynthor-reine-ratte--neria-veyr",
+        "path": "records/orte/gwynthor/neria-veyr--person--gwynthor-reine-ratte--neria-veyr/character.json",
+        "schemaVersion": 1,
+        "contentHash": "c20039fd47794702ed35c2b37eebed71ffa69dbf78ae749db9f41f49a226a9ba",
+        "firestoreDocumentIds": [
+          "person--gwynthor-reine-ratte--neria-veyr"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-underworld-20261114"
+      }
+    },
+    {
+      "id": "person--gwynthor-reine-ratte--morwenna-plann",
+      "name": "Morwenna Plann",
+      "title": "Magd · Wäsche und Reinigung",
+      "role": "Magd · Wäsche und Reinigung",
+      "age": 39,
+      "birth": "1701",
+      "gender": "female",
+      "race": "Mensch",
+      "origin": "Cenyri · Gwynthor",
+      "identity": {
+        "worldPersonId": "person--gwynthor-reine-ratte--morwenna-plann"
+      },
+      "genealogy": {
+        "worldPersonId": "person--gwynthor-reine-ratte--morwenna-plann",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Die Reine Ratte",
+      "portrait": "./assets/gwynthor-underworld/portraits/morwenna-plann-v1.png",
+      "bio": "Morwenna wäscht Leinen, schrubbt die Bohlen und hütet den Seifenvorrat gegen allzu großzügige Hände. Sie schimpft über den Dreck der Seeleute und kennt trotzdem für jede Fleckenart ein erprobtes Mittel. Über Cadwrens Geschäfte schweigt sie aus Gewohnheit, nicht aus Ehrfurcht.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Morwenna Plann",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Morwenna Plann"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "39 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Cenyri · Gwynthor"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Magd · Wäsche und Reinigung"
+          }
+        ],
+        "biography": {
+          "portrait": "./assets/gwynthor-underworld/portraits/morwenna-plann-v1.png",
+          "biographyTitle": "Magd · Wäsche und Reinigung",
+          "biographyText": "<p>Morwenna wäscht Leinen, schrubbt die Bohlen und hütet den Seifenvorrat gegen allzu großzügige Hände. Sie schimpft über den Dreck der Seeleute und kennt trotzdem für jede Fleckenart ein erprobtes Mittel. Über Cadwrens Geschäfte schweigt sie aus Gewohnheit, nicht aus Ehrfurcht.</p>",
+          "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+          "historyTitle": "Die Reine Ratte am Hafen",
+          "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+          "documentsTitle": "Arbeitsort",
+          "documents": [
+            {
+              "title": "Die Reine Ratte",
+              "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--gwynthor-reine-ratte--morwenna-plann",
+        "path": "records/orte/gwynthor/morwenna-plann--person--gwynthor-reine-ratte--morwenna-plann/character.json",
+        "schemaVersion": 1,
+        "contentHash": "e84ce342a593577eebf15786be1c19709f5189513bb45f7b390e963472ca9b81",
+        "firestoreDocumentIds": [
+          "person--gwynthor-reine-ratte--morwenna-plann"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-underworld-20261114"
+      }
+    },
+    {
+      "id": "person--gwynthor-reine-ratte--edda-wesk",
+      "name": "Edda Wesk",
+      "title": "Magd · Wasser, Feuer und Vorräte",
+      "role": "Magd · Wasser, Feuer und Vorräte",
+      "age": 32,
+      "birth": "1708",
+      "gender": "female",
+      "race": "Mensch",
+      "origin": "Aldrimar",
+      "identity": {
+        "worldPersonId": "person--gwynthor-reine-ratte--edda-wesk"
+      },
+      "genealogy": {
+        "worldPersonId": "person--gwynthor-reine-ratte--edda-wesk",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Die Reine Ratte",
+      "portrait": "./assets/gwynthor-underworld/portraits/edda-wesk-v1.png",
+      "bio": "Edda versorgt das Holzfeuer, trägt Frischwasser und rechnet die Eimer genauer als Cadwren die Münzen. Der offene Kessel steht unter ihrer Aufsicht; Wasser wird von Hand weitergetragen. Sie weiß, wann Vorräte fehlen, und schickt dann Iorven mit einer knappen Liste los.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Edda Wesk",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Edda Wesk"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "32 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Aldrimar"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Magd · Wasser, Feuer und Vorräte"
+          }
+        ],
+        "biography": {
+          "portrait": "./assets/gwynthor-underworld/portraits/edda-wesk-v1.png",
+          "biographyTitle": "Magd · Wasser, Feuer und Vorräte",
+          "biographyText": "<p>Edda versorgt das Holzfeuer, trägt Frischwasser und rechnet die Eimer genauer als Cadwren die Münzen. Der offene Kessel steht unter ihrer Aufsicht; Wasser wird von Hand weitergetragen. Sie weiß, wann Vorräte fehlen, und schickt dann Iorven mit einer knappen Liste los.</p>",
+          "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+          "historyTitle": "Die Reine Ratte am Hafen",
+          "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+          "documentsTitle": "Arbeitsort",
+          "documents": [
+            {
+              "title": "Die Reine Ratte",
+              "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--gwynthor-reine-ratte--edda-wesk",
+        "path": "records/orte/gwynthor/edda-wesk--person--gwynthor-reine-ratte--edda-wesk/character.json",
+        "schemaVersion": 1,
+        "contentHash": "b91839e938dddab5c0c4848ffd50dca266d18ed8b4df9507d2809646ccf1b605",
+        "firestoreDocumentIds": [
+          "person--gwynthor-reine-ratte--edda-wesk"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-underworld-20261114"
+      }
+    },
+    {
+      "id": "person--gwynthor-reine-ratte--iorven-pell",
+      "name": "Iorven Pell",
+      "title": "Laufbursche · Einkäufe und Botengänge",
+      "role": "Laufbursche · Einkäufe und Botengänge",
+      "age": 20,
+      "birth": "1720",
+      "gender": "male",
+      "race": "Mensch",
+      "origin": "Cenyri · Gwynthor",
+      "identity": {
+        "worldPersonId": "person--gwynthor-reine-ratte--iorven-pell"
+      },
+      "genealogy": {
+        "worldPersonId": "person--gwynthor-reine-ratte--iorven-pell",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Die Reine Ratte",
+      "portrait": "./assets/gwynthor-underworld/portraits/iorven-pell-v1.png",
+      "bio": "Iorven ist zwanzig, schmal und ständig in Bewegung. Er holt Holz, Seife und Brot, hilft beim Wasserschleppen und kennt die Hafengassen besser als die Häuser hinter dem Markt. Nachrichten trägt er nur an ausdrücklich benannte Empfänger; aus der geheimen Chiffre wird dadurch kein allgemein bekanntes Hauswort.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Iorven Pell",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Iorven Pell"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "20 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Cenyri · Gwynthor"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Laufbursche · Einkäufe und Botengänge"
+          }
+        ],
+        "biography": {
+          "portrait": "./assets/gwynthor-underworld/portraits/iorven-pell-v1.png",
+          "biographyTitle": "Laufbursche · Einkäufe und Botengänge",
+          "biographyText": "<p>Iorven ist zwanzig, schmal und ständig in Bewegung. Er holt Holz, Seife und Brot, hilft beim Wasserschleppen und kennt die Hafengassen besser als die Häuser hinter dem Markt. Nachrichten trägt er nur an ausdrücklich benannte Empfänger; aus der geheimen Chiffre wird dadurch kein allgemein bekanntes Hauswort.</p>",
+          "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+          "historyTitle": "Die Reine Ratte am Hafen",
+          "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+          "documentsTitle": "Arbeitsort",
+          "documents": [
+            {
+              "title": "Die Reine Ratte",
+              "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--gwynthor-reine-ratte--iorven-pell",
+        "path": "records/orte/gwynthor/iorven-pell--person--gwynthor-reine-ratte--iorven-pell/character.json",
+        "schemaVersion": 1,
+        "contentHash": "d602b311a457ef237cc7db594fc11fa09d970c1aaf71e3b6c68df98985221795",
+        "firestoreDocumentIds": [
+          "person--gwynthor-reine-ratte--iorven-pell"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-underworld-20261114"
+      }
+    },
+    {
+      "id": "person--gwynthor-reine-ratte--edrith-voss",
+      "name": "Edrith Voss",
+      "title": "Aufpasser · Eingang und Waschraum",
+      "role": "Aufpasser · Eingang und Waschraum",
+      "age": 42,
+      "birth": "1698",
+      "gender": "male",
+      "race": "Mensch",
+      "origin": "Aldrimar",
+      "identity": {
+        "worldPersonId": "person--gwynthor-reine-ratte--edrith-voss"
+      },
+      "genealogy": {
+        "worldPersonId": "person--gwynthor-reine-ratte--edrith-voss",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Die Reine Ratte",
+      "portrait": "./assets/gwynthor-underworld/portraits/edrith-voss-v2.png",
+      "bio": "Edrith ist ein breitschultriger Aldrimarer mit kurzer Zündschnur und dem Lachen eines Fassrollens. Unter seinem finsteren Blick liegen eine gebrochene Nase und alte Schrammen. Eine gebrauchte Lederrüstung über gestepptem Wams, eine schlichte eiserne Schulterkappe und ein verstärkter Armschutz geben ihm das Aussehen eines rauen Söldners. Er hält Betrunkene vom Eingang fern, trennt Raufende und stellt unbezahlte Gäste zur Rede. Für feine Worte ist er selten der richtige Mann; für eine blockierte Tür sehr wohl.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Edrith Voss",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Edrith Voss"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "42 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Aldrimar"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Aufpasser · Eingang und Waschraum"
+          }
+        ],
+        "biography": {
+          "portrait": "./assets/gwynthor-underworld/portraits/edrith-voss-v2.png",
+          "biographyTitle": "Aufpasser · Eingang und Waschraum",
+          "biographyText": "<p>Edrith ist ein breitschultriger Aldrimarer mit kurzer Zündschnur und dem Lachen eines Fassrollens. Unter seinem finsteren Blick liegen eine gebrochene Nase und alte Schrammen. Eine gebrauchte Lederrüstung über gestepptem Wams, eine schlichte eiserne Schulterkappe und ein verstärkter Armschutz geben ihm das Aussehen eines rauen Söldners. Er hält Betrunkene vom Eingang fern, trennt Raufende und stellt unbezahlte Gäste zur Rede. Für feine Worte ist er selten der richtige Mann; für eine blockierte Tür sehr wohl.</p>",
+          "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+          "historyTitle": "Die Reine Ratte am Hafen",
+          "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+          "documentsTitle": "Arbeitsort",
+          "documents": [
+            {
+              "title": "Die Reine Ratte",
+              "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--gwynthor-reine-ratte--edrith-voss",
+        "path": "records/orte/gwynthor/edrith-voss--person--gwynthor-reine-ratte--edrith-voss/character.json",
+        "schemaVersion": 1,
+        "contentHash": "ca7991d56f3afdb7f93c5af5fedffae25b30a204202b6d33f91cfa9313d268ae",
+        "firestoreDocumentIds": [
+          "person--gwynthor-reine-ratte--edrith-voss"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-underworld-20261114"
+      }
+    },
+    {
+      "id": "person--gwynthor-reine-ratte--dornan-falbh",
+      "name": "Dornan Falbh",
+      "title": "Aufpasser · Stuben und Hinterhof",
+      "role": "Aufpasser · Stuben und Hinterhof",
+      "age": 38,
+      "birth": "1702",
+      "gender": "male",
+      "race": "Albe",
+      "origin": "Albe · Leitheach",
+      "identity": {
+        "worldPersonId": "person--gwynthor-reine-ratte--dornan-falbh"
+      },
+      "genealogy": {
+        "worldPersonId": "person--gwynthor-reine-ratte--dornan-falbh",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Die Reine Ratte",
+      "portrait": "./assets/gwynthor-underworld/portraits/dornan-falbh-v2.png",
+      "bio": "Dornan kam aus Leitheach und verdiente sein Geld an wechselnden Kais und Toren, bevor er bei Cadwren blieb. Er redet laut, drängelt grob und hält jeden Streit zunächst für einen Wettbewerb. Sein herausforderndes Grinsen ist eher ein Zähnefletschen. Ein abgewetzter Lederpanzer, etwas Kettengeflecht an Hals und Ärmeln und einfache Armschienen passen zu seinem groben Söldnerauftritt. Sein Rundgang führt von den Stubentüren zum kleinen Hinterhof.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Dornan Falbh",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Dornan Falbh"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "38 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Albe · Leitheach"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Aufpasser · Stuben und Hinterhof"
+          }
+        ],
+        "biography": {
+          "portrait": "./assets/gwynthor-underworld/portraits/dornan-falbh-v2.png",
+          "biographyTitle": "Aufpasser · Stuben und Hinterhof",
+          "biographyText": "<p>Dornan kam aus Leitheach und verdiente sein Geld an wechselnden Kais und Toren, bevor er bei Cadwren blieb. Er redet laut, drängelt grob und hält jeden Streit zunächst für einen Wettbewerb. Sein herausforderndes Grinsen ist eher ein Zähnefletschen. Ein abgewetzter Lederpanzer, etwas Kettengeflecht an Hals und Ärmeln und einfache Armschienen passen zu seinem groben Söldnerauftritt. Sein Rundgang führt von den Stubentüren zum kleinen Hinterhof.</p>",
+          "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+          "historyTitle": "Die Reine Ratte am Hafen",
+          "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+          "documentsTitle": "Arbeitsort",
+          "documents": [
+            {
+              "title": "Die Reine Ratte",
+              "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--gwynthor-reine-ratte--dornan-falbh",
+        "path": "records/orte/gwynthor/dornan-falbh--person--gwynthor-reine-ratte--dornan-falbh/character.json",
+        "schemaVersion": 1,
+        "contentHash": "1607fb3d4ccc49e740297d353fe73dead0f49b533736ad0b33e4e1cdddfb5934",
+        "firestoreDocumentIds": [
+          "person--gwynthor-reine-ratte--dornan-falbh"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-underworld-20261114"
+      }
+    },
+    {
+      "id": "person--gwynthor-reine-ratte--caerlan-ruadh",
+      "name": "Caerlan Ruadh",
+      "title": "Aufpasser · Keller und Nachtdienst",
+      "role": "Aufpasser · Keller und Nachtdienst",
+      "age": 44,
+      "birth": "1696",
+      "gender": "male",
+      "race": "Albe",
+      "origin": "Albe · untergegangenes Ceitheach",
+      "identity": {
+        "worldPersonId": "person--gwynthor-reine-ratte--caerlan-ruadh"
+      },
+      "genealogy": {
+        "worldPersonId": "person--gwynthor-reine-ratte--caerlan-ruadh",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Die Reine Ratte",
+      "portrait": "./assets/gwynthor-underworld/portraits/caerlan-ruadh-v2.png",
+      "bio": "Caerlan stammt aus dem untergegangenen Ceitheach und hält Fragen nach seiner alten Heimat kurz. Sein kalter, missgelaunter Blick und die alte Narbe am Kinn passen zum Ruf eines Haudegens. Über einem dunklen Steppwams trägt er einen angeschlagenen Lederharnisch mit wenigen eisernen Verstärkungen und einem schlichten eisernen Armschutz. Die zusammengekaufte Rüstung wirkt gebraucht, aber diensttauglich. Er übernimmt den späten Dienst und bewacht den Vorratskeller. Ohne das vereinbarte private Erkennungszeichen lässt er niemanden weiter; dessen Wortlaut bleibt unausgesprochen.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Caerlan Ruadh",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Caerlan Ruadh"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "44 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Albe · untergegangenes Ceitheach"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Aufpasser · Keller und Nachtdienst"
+          }
+        ],
+        "biography": {
+          "portrait": "./assets/gwynthor-underworld/portraits/caerlan-ruadh-v2.png",
+          "biographyTitle": "Aufpasser · Keller und Nachtdienst",
+          "biographyText": "<p>Caerlan stammt aus dem untergegangenen Ceitheach und hält Fragen nach seiner alten Heimat kurz. Sein kalter, missgelaunter Blick und die alte Narbe am Kinn passen zum Ruf eines Haudegens. Über einem dunklen Steppwams trägt er einen angeschlagenen Lederharnisch mit wenigen eisernen Verstärkungen und einem schlichten eisernen Armschutz. Die zusammengekaufte Rüstung wirkt gebraucht, aber diensttauglich. Er übernimmt den späten Dienst und bewacht den Vorratskeller. Ohne das vereinbarte private Erkennungszeichen lässt er niemanden weiter; dessen Wortlaut bleibt unausgesprochen.</p>",
+          "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+          "historyTitle": "Die Reine Ratte am Hafen",
+          "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+          "documentsTitle": "Arbeitsort",
+          "documents": [
+            {
+              "title": "Die Reine Ratte",
+              "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--gwynthor-reine-ratte--caerlan-ruadh",
+        "path": "records/orte/gwynthor/caerlan-ruadh--person--gwynthor-reine-ratte--caerlan-ruadh/character.json",
+        "schemaVersion": 1,
+        "contentHash": "6000de68aad5ba1d5c389358c14a4a45c38dbacd2c40a268dd2eea2d9587597c",
+        "firestoreDocumentIds": [
+          "person--gwynthor-reine-ratte--caerlan-ruadh"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "gwynthor-underworld-20261114"
+      }
     }
   ],
   "charTabs": {
@@ -247765,7 +249143,20 @@
         "person--gwniwr-staff--iwan-trevor",
         "person--gwniwr-staff--briallen-wym",
         "person--gwniwr-staff--nesta-ferchwyn",
-        "person--gwniwr-staff--osian"
+        "person--gwniwr-staff--osian",
+        "person--gwynthor-reine-ratte--cadwren-brithog",
+        "person--gwynthor-reine-ratte--hilva-berent",
+        "person--gwynthor-reine-ratte--marlena-tann",
+        "person--gwynthor-reine-ratte--sveja-lind",
+        "person--gwynthor-reine-ratte--runa-vell",
+        "person--gwynthor-reine-ratte--belessa-dorn",
+        "person--gwynthor-reine-ratte--neria-veyr",
+        "person--gwynthor-reine-ratte--morwenna-plann",
+        "person--gwynthor-reine-ratte--edda-wesk",
+        "person--gwynthor-reine-ratte--iorven-pell",
+        "person--gwynthor-reine-ratte--edrith-voss",
+        "person--gwynthor-reine-ratte--dornan-falbh",
+        "person--gwynthor-reine-ratte--caerlan-ruadh"
       ],
       "Dun Athar": [
         "2bCru7S3YGrzjFnYpnN9",

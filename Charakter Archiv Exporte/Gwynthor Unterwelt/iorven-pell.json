@@ -1,0 +1,70 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-14T10:00:00Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthor Unterwelt/iorven-pell.json",
+  "character": {
+    "id": "person--gwynthor-reine-ratte--iorven-pell",
+    "name": "Iorven Pell",
+    "title": "Laufbursche · Einkäufe und Botengänge",
+    "role": "Laufbursche · Einkäufe und Botengänge",
+    "age": 20,
+    "birth": "1720",
+    "gender": "male",
+    "race": "Mensch",
+    "origin": "Cenyri · Gwynthor",
+    "identity": {
+      "worldPersonId": "person--gwynthor-reine-ratte--iorven-pell"
+    },
+    "genealogy": {
+      "worldPersonId": "person--gwynthor-reine-ratte--iorven-pell",
+      "sources": []
+    },
+    "fraktion": "Die Reine Ratte",
+    "portrait": "./assets/gwynthor-underworld/portraits/iorven-pell-v1.png",
+    "bio": "Iorven ist zwanzig, schmal und ständig in Bewegung. Er holt Holz, Seife und Brot, hilft beim Wasserschleppen und kennt die Hafengassen besser als die Häuser hinter dem Markt. Nachrichten trägt er nur an ausdrücklich benannte Empfänger; aus der geheimen Chiffre wird dadurch kein allgemein bekanntes Hauswort.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Iorven Pell",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Iorven Pell"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "20 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Cenyri · Gwynthor"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Laufbursche · Einkäufe und Botengänge"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwynthor-underworld/portraits/iorven-pell-v1.png",
+        "biographyTitle": "Laufbursche · Einkäufe und Botengänge",
+        "biographyText": "<p>Iorven ist zwanzig, schmal und ständig in Bewegung. Er holt Holz, Seife und Brot, hilft beim Wasserschleppen und kennt die Hafengassen besser als die Häuser hinter dem Markt. Nachrichten trägt er nur an ausdrücklich benannte Empfänger; aus der geheimen Chiffre wird dadurch kein allgemein bekanntes Hauswort.</p>",
+        "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+        "historyTitle": "Die Reine Ratte am Hafen",
+        "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+        "documentsTitle": "Arbeitsort",
+        "documents": [
+          {
+            "title": "Die Reine Ratte",
+            "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+    "archived": false
+  }
+}

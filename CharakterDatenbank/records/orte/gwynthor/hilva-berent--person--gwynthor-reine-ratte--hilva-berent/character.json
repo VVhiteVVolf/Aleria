@@ -1,0 +1,216 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--gwynthor-reine-ratte--hilva-berent",
+  "slug": "hilva-berent",
+  "identity": {
+    "name": "Hilva Berent",
+    "aliases": [],
+    "worldPersonId": "person--gwynthor-reine-ratte--hilva-berent"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--gwynthor-reine-ratte--hilva-berent",
+      "documentIds": [
+        "person--gwynthor-reine-ratte--hilva-berent"
+      ],
+      "documents": [
+        {
+          "documentId": "person--gwynthor-reine-ratte--hilva-berent",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthor Unterwelt/hilva-berent.json",
+    "sourceExportedAt": "2026-11-14T10:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--gwynthor-reine-ratte--hilva-berent"
+    ],
+    "contentHash": "77970af37acaf9eead3aaf7464a759c3434af7b7c0ae9118df43c8cd3effc0f4"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-underworld-20261114"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--gwynthor-reine-ratte--hilva-berent",
+        "name": "Hilva Berent",
+        "title": "Zuberdirne · Empfang und Gästebegleitung",
+        "role": "Zuberdirne · Empfang und Gästebegleitung",
+        "age": 24,
+        "birth": "1716",
+        "gender": "female",
+        "race": "Mensch",
+        "origin": "Aldrimar",
+        "identity": {
+          "worldPersonId": "person--gwynthor-reine-ratte--hilva-berent"
+        },
+        "genealogy": {
+          "worldPersonId": "person--gwynthor-reine-ratte--hilva-berent",
+          "sources": []
+        },
+        "fraktion": "Die Reine Ratte",
+        "portrait": "./assets/gwynthor-underworld/portraits/hilva-berent-v1.png",
+        "bio": "Hilva erkennt einen Landgang meist noch vor dem ersten Wort. Sie begrüßt Gäste, verteilt Waschplätze und behält im Kopf, welche Stube wirklich frei ist. Ihr heller, trockener Spott gehört zum Haus wie das schiefe Schild. Zusätzliche Gesellschaft vereinbart sie selbst mit dem jeweiligen Gast.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Hilva Berent",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Hilva Berent"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "24 Jahre"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Aldrimar"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Zuberdirne · Empfang und Gästebegleitung"
+            }
+          ],
+          "biography": {
+            "portrait": "./assets/gwynthor-underworld/portraits/hilva-berent-v1.png",
+            "biographyTitle": "Zuberdirne · Empfang und Gästebegleitung",
+            "biographyText": "<p>Hilva erkennt einen Landgang meist noch vor dem ersten Wort. Sie begrüßt Gäste, verteilt Waschplätze und behält im Kopf, welche Stube wirklich frei ist. Ihr heller, trockener Spott gehört zum Haus wie das schiefe Schild. Zusätzliche Gesellschaft vereinbart sie selbst mit dem jeweiligen Gast.</p>",
+            "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+            "historyTitle": "Die Reine Ratte am Hafen",
+            "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+            "documentsTitle": "Arbeitsort",
+            "documents": [
+              {
+                "title": "Die Reine Ratte",
+                "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--gwynthor-reine-ratte--hilva-berent",
+    "name": "Hilva Berent",
+    "title": "Zuberdirne · Empfang und Gästebegleitung",
+    "role": "Zuberdirne · Empfang und Gästebegleitung",
+    "age": 24,
+    "birth": "1716",
+    "gender": "female",
+    "race": "Mensch",
+    "origin": "Aldrimar",
+    "identity": {
+      "worldPersonId": "person--gwynthor-reine-ratte--hilva-berent"
+    },
+    "genealogy": {
+      "worldPersonId": "person--gwynthor-reine-ratte--hilva-berent",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Die Reine Ratte",
+    "portrait": "./assets/gwynthor-underworld/portraits/hilva-berent-v1.png",
+    "bio": "Hilva erkennt einen Landgang meist noch vor dem ersten Wort. Sie begrüßt Gäste, verteilt Waschplätze und behält im Kopf, welche Stube wirklich frei ist. Ihr heller, trockener Spott gehört zum Haus wie das schiefe Schild. Zusätzliche Gesellschaft vereinbart sie selbst mit dem jeweiligen Gast.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Hilva Berent",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Hilva Berent"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "24 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Aldrimar"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Zuberdirne · Empfang und Gästebegleitung"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwynthor-underworld/portraits/hilva-berent-v1.png",
+        "biographyTitle": "Zuberdirne · Empfang und Gästebegleitung",
+        "biographyText": "<p>Hilva erkennt einen Landgang meist noch vor dem ersten Wort. Sie begrüßt Gäste, verteilt Waschplätze und behält im Kopf, welche Stube wirklich frei ist. Ihr heller, trockener Spott gehört zum Haus wie das schiefe Schild. Zusätzliche Gesellschaft vereinbart sie selbst mit dem jeweiligen Gast.</p>",
+        "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+        "historyTitle": "Die Reine Ratte am Hafen",
+        "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+        "documentsTitle": "Arbeitsort",
+        "documents": [
+          {
+            "title": "Die Reine Ratte",
+            "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+    "archived": false,
+    "aliases": []
+  }
+}

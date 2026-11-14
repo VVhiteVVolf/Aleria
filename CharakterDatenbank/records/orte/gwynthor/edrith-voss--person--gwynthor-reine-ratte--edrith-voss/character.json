@@ -1,0 +1,216 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--gwynthor-reine-ratte--edrith-voss",
+  "slug": "edrith-voss",
+  "identity": {
+    "name": "Edrith Voss",
+    "aliases": [],
+    "worldPersonId": "person--gwynthor-reine-ratte--edrith-voss"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--gwynthor-reine-ratte--edrith-voss",
+      "documentIds": [
+        "person--gwynthor-reine-ratte--edrith-voss"
+      ],
+      "documents": [
+        {
+          "documentId": "person--gwynthor-reine-ratte--edrith-voss",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthor Unterwelt/edrith-voss.json",
+    "sourceExportedAt": "2026-11-14T10:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--gwynthor-reine-ratte--edrith-voss"
+    ],
+    "contentHash": "ca7991d56f3afdb7f93c5af5fedffae25b30a204202b6d33f91cfa9313d268ae"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-underworld-20261114"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--gwynthor-reine-ratte--edrith-voss",
+        "name": "Edrith Voss",
+        "title": "Aufpasser · Eingang und Waschraum",
+        "role": "Aufpasser · Eingang und Waschraum",
+        "age": 42,
+        "birth": "1698",
+        "gender": "male",
+        "race": "Mensch",
+        "origin": "Aldrimar",
+        "identity": {
+          "worldPersonId": "person--gwynthor-reine-ratte--edrith-voss"
+        },
+        "genealogy": {
+          "worldPersonId": "person--gwynthor-reine-ratte--edrith-voss",
+          "sources": []
+        },
+        "fraktion": "Die Reine Ratte",
+        "portrait": "./assets/gwynthor-underworld/portraits/edrith-voss-v2.png",
+        "bio": "Edrith ist ein breitschultriger Aldrimarer mit kurzer Zündschnur und dem Lachen eines Fassrollens. Unter seinem finsteren Blick liegen eine gebrochene Nase und alte Schrammen. Eine gebrauchte Lederrüstung über gestepptem Wams, eine schlichte eiserne Schulterkappe und ein verstärkter Armschutz geben ihm das Aussehen eines rauen Söldners. Er hält Betrunkene vom Eingang fern, trennt Raufende und stellt unbezahlte Gäste zur Rede. Für feine Worte ist er selten der richtige Mann; für eine blockierte Tür sehr wohl.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Edrith Voss",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Edrith Voss"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "42 Jahre"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Aldrimar"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Aufpasser · Eingang und Waschraum"
+            }
+          ],
+          "biography": {
+            "portrait": "./assets/gwynthor-underworld/portraits/edrith-voss-v2.png",
+            "biographyTitle": "Aufpasser · Eingang und Waschraum",
+            "biographyText": "<p>Edrith ist ein breitschultriger Aldrimarer mit kurzer Zündschnur und dem Lachen eines Fassrollens. Unter seinem finsteren Blick liegen eine gebrochene Nase und alte Schrammen. Eine gebrauchte Lederrüstung über gestepptem Wams, eine schlichte eiserne Schulterkappe und ein verstärkter Armschutz geben ihm das Aussehen eines rauen Söldners. Er hält Betrunkene vom Eingang fern, trennt Raufende und stellt unbezahlte Gäste zur Rede. Für feine Worte ist er selten der richtige Mann; für eine blockierte Tür sehr wohl.</p>",
+            "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+            "historyTitle": "Die Reine Ratte am Hafen",
+            "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+            "documentsTitle": "Arbeitsort",
+            "documents": [
+              {
+                "title": "Die Reine Ratte",
+                "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--gwynthor-reine-ratte--edrith-voss",
+    "name": "Edrith Voss",
+    "title": "Aufpasser · Eingang und Waschraum",
+    "role": "Aufpasser · Eingang und Waschraum",
+    "age": 42,
+    "birth": "1698",
+    "gender": "male",
+    "race": "Mensch",
+    "origin": "Aldrimar",
+    "identity": {
+      "worldPersonId": "person--gwynthor-reine-ratte--edrith-voss"
+    },
+    "genealogy": {
+      "worldPersonId": "person--gwynthor-reine-ratte--edrith-voss",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Die Reine Ratte",
+    "portrait": "./assets/gwynthor-underworld/portraits/edrith-voss-v2.png",
+    "bio": "Edrith ist ein breitschultriger Aldrimarer mit kurzer Zündschnur und dem Lachen eines Fassrollens. Unter seinem finsteren Blick liegen eine gebrochene Nase und alte Schrammen. Eine gebrauchte Lederrüstung über gestepptem Wams, eine schlichte eiserne Schulterkappe und ein verstärkter Armschutz geben ihm das Aussehen eines rauen Söldners. Er hält Betrunkene vom Eingang fern, trennt Raufende und stellt unbezahlte Gäste zur Rede. Für feine Worte ist er selten der richtige Mann; für eine blockierte Tür sehr wohl.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Edrith Voss",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Edrith Voss"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "42 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Aldrimar"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Aufpasser · Eingang und Waschraum"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwynthor-underworld/portraits/edrith-voss-v2.png",
+        "biographyTitle": "Aufpasser · Eingang und Waschraum",
+        "biographyText": "<p>Edrith ist ein breitschultriger Aldrimarer mit kurzer Zündschnur und dem Lachen eines Fassrollens. Unter seinem finsteren Blick liegen eine gebrochene Nase und alte Schrammen. Eine gebrauchte Lederrüstung über gestepptem Wams, eine schlichte eiserne Schulterkappe und ein verstärkter Armschutz geben ihm das Aussehen eines rauen Söldners. Er hält Betrunkene vom Eingang fern, trennt Raufende und stellt unbezahlte Gäste zur Rede. Für feine Worte ist er selten der richtige Mann; für eine blockierte Tür sehr wohl.</p>",
+        "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+        "historyTitle": "Die Reine Ratte am Hafen",
+        "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+        "documentsTitle": "Arbeitsort",
+        "documents": [
+          {
+            "title": "Die Reine Ratte",
+            "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+    "archived": false,
+    "aliases": []
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--gwynthor-reine-ratte--belessa-dorn",
+  "slug": "belessa-dorn",
+  "identity": {
+    "name": "Belessa Dorn",
+    "aliases": [],
+    "worldPersonId": "person--gwynthor-reine-ratte--belessa-dorn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--gwynthor-reine-ratte--belessa-dorn",
+      "documentIds": [
+        "person--gwynthor-reine-ratte--belessa-dorn"
+      ],
+      "documents": [
+        {
+          "documentId": "person--gwynthor-reine-ratte--belessa-dorn",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthor Unterwelt/belessa-dorn.json",
+    "sourceExportedAt": "2026-11-14T10:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--gwynthor-reine-ratte--belessa-dorn"
+    ],
+    "contentHash": "f5a3741b4c4acf6179a8726bdc4f25d2fefe1ecc371934816d8a159251fafc18"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-underworld-20261114"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--gwynthor-reine-ratte--belessa-dorn",
+        "name": "Belessa Dorn",
+        "title": "Zuberdirne · Gästebegleitung",
+        "role": "Zuberdirne · Gästebegleitung",
+        "age": 25,
+        "birth": "1715",
+        "gender": "female",
+        "race": "Mensch",
+        "origin": "Gwynthor · Hafenviertel",
+        "identity": {
+          "worldPersonId": "person--gwynthor-reine-ratte--belessa-dorn"
+        },
+        "genealogy": {
+          "worldPersonId": "person--gwynthor-reine-ratte--belessa-dorn",
+          "sources": []
+        },
+        "fraktion": "Die Reine Ratte",
+        "portrait": "./assets/gwynthor-underworld/portraits/belessa-dorn-v1.png",
+        "bio": "Belessa hört gern zu und wird dabei leicht unterschätzt. Sie kennt die wechselnden Besatzungen der Hafenlieger, plaudert über Wind und Lohn und wird bei Fragen nach fremden Gästen plötzlich sehr ungenau. Welche Gesellschaft sie anbietet, spricht sie hinter einem geschlossenen Vorhang ab.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Belessa Dorn",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Belessa Dorn"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "25 Jahre"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Gwynthor · Hafenviertel"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Zuberdirne · Gästebegleitung"
+            }
+          ],
+          "biography": {
+            "portrait": "./assets/gwynthor-underworld/portraits/belessa-dorn-v1.png",
+            "biographyTitle": "Zuberdirne · Gästebegleitung",
+            "biographyText": "<p>Belessa hört gern zu und wird dabei leicht unterschätzt. Sie kennt die wechselnden Besatzungen der Hafenlieger, plaudert über Wind und Lohn und wird bei Fragen nach fremden Gästen plötzlich sehr ungenau. Welche Gesellschaft sie anbietet, spricht sie hinter einem geschlossenen Vorhang ab.</p>",
+            "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+            "historyTitle": "Die Reine Ratte am Hafen",
+            "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+            "documentsTitle": "Arbeitsort",
+            "documents": [
+              {
+                "title": "Die Reine Ratte",
+                "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--gwynthor-reine-ratte--belessa-dorn",
+    "name": "Belessa Dorn",
+    "title": "Zuberdirne · Gästebegleitung",
+    "role": "Zuberdirne · Gästebegleitung",
+    "age": 25,
+    "birth": "1715",
+    "gender": "female",
+    "race": "Mensch",
+    "origin": "Gwynthor · Hafenviertel",
+    "identity": {
+      "worldPersonId": "person--gwynthor-reine-ratte--belessa-dorn"
+    },
+    "genealogy": {
+      "worldPersonId": "person--gwynthor-reine-ratte--belessa-dorn",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Die Reine Ratte",
+    "portrait": "./assets/gwynthor-underworld/portraits/belessa-dorn-v1.png",
+    "bio": "Belessa hört gern zu und wird dabei leicht unterschätzt. Sie kennt die wechselnden Besatzungen der Hafenlieger, plaudert über Wind und Lohn und wird bei Fragen nach fremden Gästen plötzlich sehr ungenau. Welche Gesellschaft sie anbietet, spricht sie hinter einem geschlossenen Vorhang ab.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Belessa Dorn",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Belessa Dorn"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "25 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Gwynthor · Hafenviertel"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Zuberdirne · Gästebegleitung"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwynthor-underworld/portraits/belessa-dorn-v1.png",
+        "biographyTitle": "Zuberdirne · Gästebegleitung",
+        "biographyText": "<p>Belessa hört gern zu und wird dabei leicht unterschätzt. Sie kennt die wechselnden Besatzungen der Hafenlieger, plaudert über Wind und Lohn und wird bei Fragen nach fremden Gästen plötzlich sehr ungenau. Welche Gesellschaft sie anbietet, spricht sie hinter einem geschlossenen Vorhang ab.</p>",
+        "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+        "historyTitle": "Die Reine Ratte am Hafen",
+        "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+        "documentsTitle": "Arbeitsort",
+        "documents": [
+          {
+            "title": "Die Reine Ratte",
+            "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+    "archived": false,
+    "aliases": []
+  }
+}

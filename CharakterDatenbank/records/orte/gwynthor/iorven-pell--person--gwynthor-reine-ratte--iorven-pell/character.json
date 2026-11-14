@@ -1,0 +1,216 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--gwynthor-reine-ratte--iorven-pell",
+  "slug": "iorven-pell",
+  "identity": {
+    "name": "Iorven Pell",
+    "aliases": [],
+    "worldPersonId": "person--gwynthor-reine-ratte--iorven-pell"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--gwynthor-reine-ratte--iorven-pell",
+      "documentIds": [
+        "person--gwynthor-reine-ratte--iorven-pell"
+      ],
+      "documents": [
+        {
+          "documentId": "person--gwynthor-reine-ratte--iorven-pell",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthor Unterwelt/iorven-pell.json",
+    "sourceExportedAt": "2026-11-14T10:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--gwynthor-reine-ratte--iorven-pell"
+    ],
+    "contentHash": "d602b311a457ef237cc7db594fc11fa09d970c1aaf71e3b6c68df98985221795"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-underworld-20261114"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--gwynthor-reine-ratte--iorven-pell",
+        "name": "Iorven Pell",
+        "title": "Laufbursche · Einkäufe und Botengänge",
+        "role": "Laufbursche · Einkäufe und Botengänge",
+        "age": 20,
+        "birth": "1720",
+        "gender": "male",
+        "race": "Mensch",
+        "origin": "Cenyri · Gwynthor",
+        "identity": {
+          "worldPersonId": "person--gwynthor-reine-ratte--iorven-pell"
+        },
+        "genealogy": {
+          "worldPersonId": "person--gwynthor-reine-ratte--iorven-pell",
+          "sources": []
+        },
+        "fraktion": "Die Reine Ratte",
+        "portrait": "./assets/gwynthor-underworld/portraits/iorven-pell-v1.png",
+        "bio": "Iorven ist zwanzig, schmal und ständig in Bewegung. Er holt Holz, Seife und Brot, hilft beim Wasserschleppen und kennt die Hafengassen besser als die Häuser hinter dem Markt. Nachrichten trägt er nur an ausdrücklich benannte Empfänger; aus der geheimen Chiffre wird dadurch kein allgemein bekanntes Hauswort.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Iorven Pell",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Iorven Pell"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "20 Jahre"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Cenyri · Gwynthor"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Laufbursche · Einkäufe und Botengänge"
+            }
+          ],
+          "biography": {
+            "portrait": "./assets/gwynthor-underworld/portraits/iorven-pell-v1.png",
+            "biographyTitle": "Laufbursche · Einkäufe und Botengänge",
+            "biographyText": "<p>Iorven ist zwanzig, schmal und ständig in Bewegung. Er holt Holz, Seife und Brot, hilft beim Wasserschleppen und kennt die Hafengassen besser als die Häuser hinter dem Markt. Nachrichten trägt er nur an ausdrücklich benannte Empfänger; aus der geheimen Chiffre wird dadurch kein allgemein bekanntes Hauswort.</p>",
+            "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+            "historyTitle": "Die Reine Ratte am Hafen",
+            "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+            "documentsTitle": "Arbeitsort",
+            "documents": [
+              {
+                "title": "Die Reine Ratte",
+                "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--gwynthor-reine-ratte--iorven-pell",
+    "name": "Iorven Pell",
+    "title": "Laufbursche · Einkäufe und Botengänge",
+    "role": "Laufbursche · Einkäufe und Botengänge",
+    "age": 20,
+    "birth": "1720",
+    "gender": "male",
+    "race": "Mensch",
+    "origin": "Cenyri · Gwynthor",
+    "identity": {
+      "worldPersonId": "person--gwynthor-reine-ratte--iorven-pell"
+    },
+    "genealogy": {
+      "worldPersonId": "person--gwynthor-reine-ratte--iorven-pell",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Die Reine Ratte",
+    "portrait": "./assets/gwynthor-underworld/portraits/iorven-pell-v1.png",
+    "bio": "Iorven ist zwanzig, schmal und ständig in Bewegung. Er holt Holz, Seife und Brot, hilft beim Wasserschleppen und kennt die Hafengassen besser als die Häuser hinter dem Markt. Nachrichten trägt er nur an ausdrücklich benannte Empfänger; aus der geheimen Chiffre wird dadurch kein allgemein bekanntes Hauswort.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Iorven Pell",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Iorven Pell"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "20 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Cenyri · Gwynthor"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Laufbursche · Einkäufe und Botengänge"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwynthor-underworld/portraits/iorven-pell-v1.png",
+        "biographyTitle": "Laufbursche · Einkäufe und Botengänge",
+        "biographyText": "<p>Iorven ist zwanzig, schmal und ständig in Bewegung. Er holt Holz, Seife und Brot, hilft beim Wasserschleppen und kennt die Hafengassen besser als die Häuser hinter dem Markt. Nachrichten trägt er nur an ausdrücklich benannte Empfänger; aus der geheimen Chiffre wird dadurch kein allgemein bekanntes Hauswort.</p>",
+        "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+        "historyTitle": "Die Reine Ratte am Hafen",
+        "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+        "documentsTitle": "Arbeitsort",
+        "documents": [
+          {
+            "title": "Die Reine Ratte",
+            "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+    "archived": false,
+    "aliases": []
+  }
+}

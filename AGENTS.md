@@ -1,3 +1,13 @@
+# Reine Ratte und Rattenweg: öffentliche Vorbereitung vom 14. November 2026
+
+Auf ausdrücklichen Veröffentlichungsauftrag zwei Module unter Gwynthor-Unterwelt
+innerhalb Gwynthor-Stadt. 13 erwachsene Figuren, 13 Inhaltsseiten, neun Szenen
+und 30 ausgewählte Bilder. Cadwren entspricht unverändert dem gewählten zweiten
+Neuentwurf (v5); drei Aufpasser v2 mit schlichter Söldnerrüstung. Chiffre nur
+innerhalb der Spielwelt, unbestimmt und geheim. Autorenoriginale, Prompts,
+verworfene Fassungen und Vergleichsbilder bleiben lokal. Begrenzte neue
+Figurenprojektion erhält übrige öffentliche Profile. Keine Spielwerte geändert.
+
 # Gwynthorer Pferdehändler: Releasevorbereitung vom 13. November 2026
 
 Drei beauftragte Betriebe direkt unter Gwynthor-Stadt: Zum Silberhalm,

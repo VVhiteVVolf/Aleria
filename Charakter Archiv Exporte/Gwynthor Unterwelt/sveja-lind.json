@@ -1,0 +1,70 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-14T10:00:00Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthor Unterwelt/sveja-lind.json",
+  "character": {
+    "id": "person--gwynthor-reine-ratte--sveja-lind",
+    "name": "Sveja Lind",
+    "title": "Zuberdirne · Stuben und Absprachen",
+    "role": "Zuberdirne · Stuben und Absprachen",
+    "age": 28,
+    "birth": "1712",
+    "gender": "female",
+    "race": "Mensch",
+    "origin": "Aldrimar",
+    "identity": {
+      "worldPersonId": "person--gwynthor-reine-ratte--sveja-lind"
+    },
+    "genealogy": {
+      "worldPersonId": "person--gwynthor-reine-ratte--sveja-lind",
+      "sources": []
+    },
+    "fraktion": "Die Reine Ratte",
+    "portrait": "./assets/gwynthor-underworld/portraits/sveja-lind-v1.png",
+    "bio": "Sveja spricht leise und lässt sich selten unterbrechen. Sie stimmt Stubenstunden unter den Frauen ab, ohne ihnen die eigenen Vereinbarungen abzunehmen. Im Streit genügt ihr oft ein Blick zur Tür; sie kennt die Grenzen der drei Aufpasser genauer, als Cadwren zugibt.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Sveja Lind",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Sveja Lind"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "28 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Aldrimar"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Zuberdirne · Stuben und Absprachen"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwynthor-underworld/portraits/sveja-lind-v1.png",
+        "biographyTitle": "Zuberdirne · Stuben und Absprachen",
+        "biographyText": "<p>Sveja spricht leise und lässt sich selten unterbrechen. Sie stimmt Stubenstunden unter den Frauen ab, ohne ihnen die eigenen Vereinbarungen abzunehmen. Im Streit genügt ihr oft ein Blick zur Tür; sie kennt die Grenzen der drei Aufpasser genauer, als Cadwren zugibt.</p>",
+        "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+        "historyTitle": "Die Reine Ratte am Hafen",
+        "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+        "documentsTitle": "Arbeitsort",
+        "documents": [
+          {
+            "title": "Die Reine Ratte",
+            "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+    "archived": false
+  }
+}

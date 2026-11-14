@@ -2,17 +2,17 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-11-08T16:10:00.000Z",
+  "sourceExportedAt": "2026-11-14T10:00:00Z",
   "summary": {
-    "sourceDocuments": 649,
-    "total": 395,
+    "sourceDocuments": 662,
+    "total": 408,
     "mergedSameNameGroups": 45,
     "familyLinked": 296,
     "familyAmbiguous": 0,
-    "familyPending": 99,
+    "familyPending": 112,
     "primaryFamily": 294,
     "primaryGroup": 31,
-    "primaryPlace": 36,
+    "primaryPlace": 49,
     "primaryUnassigned": 34,
     "duplicateWorldPeople": 0
   },
@@ -1162,6 +1162,162 @@
     {
       "recordId": "character--person--gwniwr-staff--osian",
       "name": "Osian",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-reine-ratte--cadwren-brithog",
+      "name": "Cadwren Brithog",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-reine-ratte--hilva-berent",
+      "name": "Hilva Berent",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-reine-ratte--marlena-tann",
+      "name": "Marlena Tann",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-reine-ratte--sveja-lind",
+      "name": "Sveja Lind",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-reine-ratte--runa-vell",
+      "name": "Runa Vell",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-reine-ratte--belessa-dorn",
+      "name": "Belessa Dorn",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-reine-ratte--neria-veyr",
+      "name": "Neria Veyr",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-reine-ratte--morwenna-plann",
+      "name": "Morwenna Plann",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-reine-ratte--edda-wesk",
+      "name": "Edda Wesk",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-reine-ratte--iorven-pell",
+      "name": "Iorven Pell",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-reine-ratte--edrith-voss",
+      "name": "Edrith Voss",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-reine-ratte--dornan-falbh",
+      "name": "Dornan Falbh",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--gwynthor-reine-ratte--caerlan-ruadh",
+      "name": "Caerlan Ruadh",
       "status": "pending",
       "primary": {
         "kind": "place",

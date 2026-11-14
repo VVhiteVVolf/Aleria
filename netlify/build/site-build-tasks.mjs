@@ -742,6 +742,23 @@ export const SITE_BUILD_TASKS = [
       testCommand(almanach('gwynthor-landfamilien'), almanach('gwynthor-landfamilien-integration'), almanach('gwynthor-landfamilien-characters'), 'Stammbäume/tests/gwynthor-landfamilien.test.mjs')]
   },
   {
+    id: 'gwynthor-underworld', label: 'Harbor bathhouse, thirteen staff portraits and four Ratway scenes',
+    inputs: ['AleriaAlmanach/modules/gwynthor-underworld/', 'AleriaAlmanach/assets/gwynthor-underworld/',
+      'AleriaAlmanach/scripts/build-gwynthor-underworld.mjs', 'AleriaAlmanach/scripts/build-underworld-character-exports.mjs',
+      'AleriaAlmanach/scripts/check-underworld-characters.mjs',
+      'AleriaAlmanach/modules/archive/archive-section-registration.mjs', 'AleriaAlmanach/modules/gwynthor-geography/',
+      'AleriaAlmanach/modules/characters/character-save-guard.js', 'CharakterDatenbank/lib/',
+      'CharakterDatenbank/scripts/import-authored-characters.mjs', 'CharakterDatenbank/registry.json',
+      'CharakterDatenbank/generated/characters.snapshot.json', 'CharakterDatenbank/generated/sync-report.json',
+      'Charakter Archiv Exporte/Gwynthor Unterwelt/', 'Charakter Archiv Exporte/Module/Gwynthor Unterwelt/',
+      'CharakterDatenbank/records/orte/gwynthor/',
+      'AleriaAlmanach/AleriaAlmanach.html', almanach('gwynthor-underworld'), 'AleriaAlmanach/tests/gwynthor-underworld.browser.mjs'],
+    commands: [['AleriaAlmanach/scripts/build-gwynthor-underworld.mjs', '--check'],
+      ['AleriaAlmanach/scripts/build-underworld-character-exports.mjs', '--check'],
+      ['AleriaAlmanach/scripts/check-underworld-characters.mjs'],
+      testCommand(almanach('gwynthor-underworld'))]
+  },
+  {
     id: 'gwynthor-horse-studs', label: 'Three Gwynthor horse dealers, pedigrees, unique horses and saddlery',
     inputs: ['AleriaAlmanach/modules/gwynthor-horse-studs/', 'AleriaAlmanach/assets/gwynthor-horse-studs/',
       'AleriaAlmanach/modules/gwynthor-horse-resale/', 'AleriaAlmanach/assets/gwynthor-horse-resale/',

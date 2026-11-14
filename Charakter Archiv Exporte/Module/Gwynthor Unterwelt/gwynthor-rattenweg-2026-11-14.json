@@ -1,0 +1,127 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-14T10:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Gwynthor-Unterwelt"
+      ],
+      "description": "Hinter den Türen des Hafens und unter den Straßen Gwynthors.",
+      "icon": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png"
+    },
+    "entry": {
+      "id": "gwynthor-rattenweg",
+      "title": "Rattenweg",
+      "subtitle": "Abgeschottete Kanalgewölbe unter Gwynthor",
+      "type": "Unterwelt",
+      "category": "Gwynthor-Unterwelt",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "icon": "⌁",
+      "symbol": "./assets/gwynthor-underworld/scenes/kanaleingang-v1.png",
+      "stamp": "RATTENWEG · UNTER GWYNTHOR",
+      "image": "./assets/gwynthor-underworld/scenes/schlickmarkt-v2.png",
+      "previewImage": "./assets/gwynthor-underworld/scenes/schlickmarkt-v2.png",
+      "sessionCast": [
+        "person--gwynthor-reine-ratte--caerlan-ruadh"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Kanaleingang",
+          "commentThreadKey": "rattenweg-kanaleingang",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-underworld/scenes/kanaleingang-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionIntro": "<p>Ein niedriger Steinbogen mündet in einen vom Hauptabfluss abgetrennten Kanalarm. Das Wasser läuft in einer schmalen Rinne; an der Seite bleiben Trittsteine und ein ausgebesserter Bohlensteg trocken. Die rückwärtige Tür ist von hier aus verriegelt. Wer auf diesem Weg vom Zuberhaus kommt, hat sich mit der privaten Chiffre bereits zu erkennen gegeben. Weiter vorn flackert Marktlicht zwischen den Bögen. Hinter einem Seitengitter verliert sich ein dunkler Gang.</p>",
+          "sessionLocation": "Rattenweg · Kanaleingang",
+          "sessionHint": "Nur wer die privat vereinbarte Chiffre kennt, erhält Zugang. Ihr Wortlaut bleibt geheim.",
+          "sessionEmptyTitle": "Kanaleingang",
+          "sessionEmptyText": "Hier beginnt die nächste Begegnung.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Schlickmarkt",
+          "commentThreadKey": "rattenweg-schlickmarkt",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-underworld/scenes/schlickmarkt-v2.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionIntro": "<p>Unter einem gedrungenen Gewölbe drängt sich der Schlickmarkt um ein schwarzes Wasserbecken. Schiefe Bretterstände kauern zwischen mächtigen Pfeilern; zerfressene Tücher schirmen Waren und Gesichter ab. Schmale Holzstege verbinden die erhöhten Plattformen, auf denen ein paar alte Tische für leise Geschäfte bereitstehen. In vereinzelten warmen Lichtinseln wechseln gebrauchte Werkzeuge, unbeschriftete Bündel und Waren ohne bereitwillig erzählte Herkunft die Hände. Wer fragt, wem etwas zuvor gehörte, erntet selten eine Antwort. Hinter den Ständen führen bewachte Gitter und schwere Türen tiefer ins Kanallabyrinth.</p>",
+          "sessionLocation": "Rattenweg · Schlickmarkt",
+          "sessionHint": "Nur wer die privat vereinbarte Chiffre kennt, erhält Zugang. Ihr Wortlaut bleibt geheim.",
+          "sessionEmptyTitle": "Schlickmarkt",
+          "sessionEmptyText": "Hier beginnt die nächste Begegnung.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Der Blinde Arm",
+          "commentThreadKey": "rattenweg-blinder-arm",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-underworld/scenes/blinder-arm-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionIntro": "<p>Ein verlassener Seitenarm liegt jenseits eines beschädigten Stegs. Kalk läuft weiß über das Mauerwerk; im flachen Wasser liegen ein zerbrochener Karren und verrottete Kisten. Nur eine ferne Lampe hält die Schwärze aus dem vorderen Bogen. Zugemauerte Nischen und ein verriegelter Wartungsdurchlass deuten weitere Wege an. Hinter dem Gitter antwortet Wasserrauschen aus der Tiefe.</p>",
+          "sessionLocation": "Rattenweg · Der Blinde Arm",
+          "sessionHint": "Nur wer die privat vereinbarte Chiffre kennt, erhält Zugang. Ihr Wortlaut bleibt geheim.",
+          "sessionEmptyTitle": "Der Blinde Arm",
+          "sessionEmptyText": "Hier beginnt die nächste Begegnung.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Der Dochtwinkel",
+          "commentThreadKey": "rattenweg-dochtwinkel",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-underworld/scenes/dochtwinkel-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionIntro": "<p>Im Dochtwinkel wurden trockene Wartungsnischen mit Decken und Brettern zu Schlafplätzen gemacht. Verarmte Hafenleute, Ausgestoßene und einige von Rauschmitteln Abhängige teilen den wenigen Platz. Eine Frau hält ihre Schale mit beiden Händen, ein Mann schläft unter einem geflickten Mantel; daneben glimmt ein kleiner Docht. Zwischen den Verschlägen murmeln Stimmen. Weitere Türen und Kanalbögen bleiben verschlossen, doch aus einem fernen Schacht fällt ein schmaler Luftzug.</p>",
+          "sessionLocation": "Rattenweg · Der Dochtwinkel",
+          "sessionHint": "Nur wer die privat vereinbarte Chiffre kennt, erhält Zugang. Ihr Wortlaut bleibt geheim.",
+          "sessionEmptyTitle": "Der Dochtwinkel",
+          "sessionEmptyText": "Hier beginnt die nächste Begegnung.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

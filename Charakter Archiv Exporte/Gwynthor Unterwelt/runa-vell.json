@@ -1,0 +1,70 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-14T10:00:00Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Gwynthor Unterwelt/runa-vell.json",
+  "character": {
+    "id": "person--gwynthor-reine-ratte--runa-vell",
+    "name": "Runa Vell",
+    "title": "Zuberdirne · Zuberdienst",
+    "role": "Zuberdirne · Zuberdienst",
+    "age": 30,
+    "birth": "1710",
+    "gender": "female",
+    "race": "Mensch",
+    "origin": "Aldrimar",
+    "identity": {
+      "worldPersonId": "person--gwynthor-reine-ratte--runa-vell"
+    },
+    "genealogy": {
+      "worldPersonId": "person--gwynthor-reine-ratte--runa-vell",
+      "sources": []
+    },
+    "fraktion": "Die Reine Ratte",
+    "portrait": "./assets/gwynthor-underworld/portraits/runa-vell-v1.png",
+    "bio": "Runa ist die älteste der sechs Frauen und die wenigste Geduld hat sie für Angeberei. Sie scheuert einen Rücken kräftig, lacht rau und merkt sich zuverlässig, wer nach dem letzten Besuch noch ein Tuch schuldet. Ihre freundlichen Augen ändern nichts an ihrem scharfen Mundwerk.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Runa Vell",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Runa Vell"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "30 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Aldrimar"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Zuberdirne · Zuberdienst"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwynthor-underworld/portraits/runa-vell-v1.png",
+        "biographyTitle": "Zuberdirne · Zuberdienst",
+        "biographyText": "<p>Runa ist die älteste der sechs Frauen und die wenigste Geduld hat sie für Angeberei. Sie scheuert einen Rücken kräftig, lacht rau und merkt sich zuverlässig, wer nach dem letzten Besuch noch ein Tuch schuldet. Ihre freundlichen Augen ändern nichts an ihrem scharfen Mundwerk.</p>",
+        "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+        "historyTitle": "Die Reine Ratte am Hafen",
+        "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+        "documentsTitle": "Arbeitsort",
+        "documents": [
+          {
+            "title": "Die Reine Ratte",
+            "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+    "archived": false
+  }
+}

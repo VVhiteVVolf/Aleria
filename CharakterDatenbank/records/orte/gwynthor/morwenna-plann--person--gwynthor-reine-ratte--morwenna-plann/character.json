@@ -1,0 +1,216 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--gwynthor-reine-ratte--morwenna-plann",
+  "slug": "morwenna-plann",
+  "identity": {
+    "name": "Morwenna Plann",
+    "aliases": [],
+    "worldPersonId": "person--gwynthor-reine-ratte--morwenna-plann"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--gwynthor-reine-ratte--morwenna-plann",
+      "documentIds": [
+        "person--gwynthor-reine-ratte--morwenna-plann"
+      ],
+      "documents": [
+        {
+          "documentId": "person--gwynthor-reine-ratte--morwenna-plann",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthor Unterwelt/morwenna-plann.json",
+    "sourceExportedAt": "2026-11-14T10:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--gwynthor-reine-ratte--morwenna-plann"
+    ],
+    "contentHash": "e84ce342a593577eebf15786be1c19709f5189513bb45f7b390e963472ca9b81"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-underworld-20261114"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--gwynthor-reine-ratte--morwenna-plann",
+        "name": "Morwenna Plann",
+        "title": "Magd · Wäsche und Reinigung",
+        "role": "Magd · Wäsche und Reinigung",
+        "age": 39,
+        "birth": "1701",
+        "gender": "female",
+        "race": "Mensch",
+        "origin": "Cenyri · Gwynthor",
+        "identity": {
+          "worldPersonId": "person--gwynthor-reine-ratte--morwenna-plann"
+        },
+        "genealogy": {
+          "worldPersonId": "person--gwynthor-reine-ratte--morwenna-plann",
+          "sources": []
+        },
+        "fraktion": "Die Reine Ratte",
+        "portrait": "./assets/gwynthor-underworld/portraits/morwenna-plann-v1.png",
+        "bio": "Morwenna wäscht Leinen, schrubbt die Bohlen und hütet den Seifenvorrat gegen allzu großzügige Hände. Sie schimpft über den Dreck der Seeleute und kennt trotzdem für jede Fleckenart ein erprobtes Mittel. Über Cadwrens Geschäfte schweigt sie aus Gewohnheit, nicht aus Ehrfurcht.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Morwenna Plann",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Morwenna Plann"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "39 Jahre"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Cenyri · Gwynthor"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Magd · Wäsche und Reinigung"
+            }
+          ],
+          "biography": {
+            "portrait": "./assets/gwynthor-underworld/portraits/morwenna-plann-v1.png",
+            "biographyTitle": "Magd · Wäsche und Reinigung",
+            "biographyText": "<p>Morwenna wäscht Leinen, schrubbt die Bohlen und hütet den Seifenvorrat gegen allzu großzügige Hände. Sie schimpft über den Dreck der Seeleute und kennt trotzdem für jede Fleckenart ein erprobtes Mittel. Über Cadwrens Geschäfte schweigt sie aus Gewohnheit, nicht aus Ehrfurcht.</p>",
+            "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+            "historyTitle": "Die Reine Ratte am Hafen",
+            "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+            "documentsTitle": "Arbeitsort",
+            "documents": [
+              {
+                "title": "Die Reine Ratte",
+                "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--gwynthor-reine-ratte--morwenna-plann",
+    "name": "Morwenna Plann",
+    "title": "Magd · Wäsche und Reinigung",
+    "role": "Magd · Wäsche und Reinigung",
+    "age": 39,
+    "birth": "1701",
+    "gender": "female",
+    "race": "Mensch",
+    "origin": "Cenyri · Gwynthor",
+    "identity": {
+      "worldPersonId": "person--gwynthor-reine-ratte--morwenna-plann"
+    },
+    "genealogy": {
+      "worldPersonId": "person--gwynthor-reine-ratte--morwenna-plann",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Die Reine Ratte",
+    "portrait": "./assets/gwynthor-underworld/portraits/morwenna-plann-v1.png",
+    "bio": "Morwenna wäscht Leinen, schrubbt die Bohlen und hütet den Seifenvorrat gegen allzu großzügige Hände. Sie schimpft über den Dreck der Seeleute und kennt trotzdem für jede Fleckenart ein erprobtes Mittel. Über Cadwrens Geschäfte schweigt sie aus Gewohnheit, nicht aus Ehrfurcht.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Morwenna Plann",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Morwenna Plann"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "39 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Cenyri · Gwynthor"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Magd · Wäsche und Reinigung"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwynthor-underworld/portraits/morwenna-plann-v1.png",
+        "biographyTitle": "Magd · Wäsche und Reinigung",
+        "biographyText": "<p>Morwenna wäscht Leinen, schrubbt die Bohlen und hütet den Seifenvorrat gegen allzu großzügige Hände. Sie schimpft über den Dreck der Seeleute und kennt trotzdem für jede Fleckenart ein erprobtes Mittel. Über Cadwrens Geschäfte schweigt sie aus Gewohnheit, nicht aus Ehrfurcht.</p>",
+        "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+        "historyTitle": "Die Reine Ratte am Hafen",
+        "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+        "documentsTitle": "Arbeitsort",
+        "documents": [
+          {
+            "title": "Die Reine Ratte",
+            "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+    "archived": false,
+    "aliases": []
+  }
+}

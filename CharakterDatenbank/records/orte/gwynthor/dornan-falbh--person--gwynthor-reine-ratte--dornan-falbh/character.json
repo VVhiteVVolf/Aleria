@@ -1,0 +1,216 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--gwynthor-reine-ratte--dornan-falbh",
+  "slug": "dornan-falbh",
+  "identity": {
+    "name": "Dornan Falbh",
+    "aliases": [],
+    "worldPersonId": "person--gwynthor-reine-ratte--dornan-falbh"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--gwynthor-reine-ratte--dornan-falbh",
+      "documentIds": [
+        "person--gwynthor-reine-ratte--dornan-falbh"
+      ],
+      "documents": [
+        {
+          "documentId": "person--gwynthor-reine-ratte--dornan-falbh",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Gwynthor Unterwelt/dornan-falbh.json",
+    "sourceExportedAt": "2026-11-14T10:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--gwynthor-reine-ratte--dornan-falbh"
+    ],
+    "contentHash": "1607fb3d4ccc49e740297d353fe73dead0f49b533736ad0b33e4e1cdddfb5934"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "gwynthor-underworld-20261114"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--gwynthor-reine-ratte--dornan-falbh",
+        "name": "Dornan Falbh",
+        "title": "Aufpasser · Stuben und Hinterhof",
+        "role": "Aufpasser · Stuben und Hinterhof",
+        "age": 38,
+        "birth": "1702",
+        "gender": "male",
+        "race": "Albe",
+        "origin": "Albe · Leitheach",
+        "identity": {
+          "worldPersonId": "person--gwynthor-reine-ratte--dornan-falbh"
+        },
+        "genealogy": {
+          "worldPersonId": "person--gwynthor-reine-ratte--dornan-falbh",
+          "sources": []
+        },
+        "fraktion": "Die Reine Ratte",
+        "portrait": "./assets/gwynthor-underworld/portraits/dornan-falbh-v2.png",
+        "bio": "Dornan kam aus Leitheach und verdiente sein Geld an wechselnden Kais und Toren, bevor er bei Cadwren blieb. Er redet laut, drängelt grob und hält jeden Streit zunächst für einen Wettbewerb. Sein herausforderndes Grinsen ist eher ein Zähnefletschen. Ein abgewetzter Lederpanzer, etwas Kettengeflecht an Hals und Ärmeln und einfache Armschienen passen zu seinem groben Söldnerauftritt. Sein Rundgang führt von den Stubentüren zum kleinen Hinterhof.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Dornan Falbh",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Dornan Falbh"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "38 Jahre"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Albe · Leitheach"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Aufpasser · Stuben und Hinterhof"
+            }
+          ],
+          "biography": {
+            "portrait": "./assets/gwynthor-underworld/portraits/dornan-falbh-v2.png",
+            "biographyTitle": "Aufpasser · Stuben und Hinterhof",
+            "biographyText": "<p>Dornan kam aus Leitheach und verdiente sein Geld an wechselnden Kais und Toren, bevor er bei Cadwren blieb. Er redet laut, drängelt grob und hält jeden Streit zunächst für einen Wettbewerb. Sein herausforderndes Grinsen ist eher ein Zähnefletschen. Ein abgewetzter Lederpanzer, etwas Kettengeflecht an Hals und Ärmeln und einfache Armschienen passen zu seinem groben Söldnerauftritt. Sein Rundgang führt von den Stubentüren zum kleinen Hinterhof.</p>",
+            "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+            "historyTitle": "Die Reine Ratte am Hafen",
+            "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+            "documentsTitle": "Arbeitsort",
+            "documents": [
+              {
+                "title": "Die Reine Ratte",
+                "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--gwynthor-reine-ratte--dornan-falbh",
+    "name": "Dornan Falbh",
+    "title": "Aufpasser · Stuben und Hinterhof",
+    "role": "Aufpasser · Stuben und Hinterhof",
+    "age": 38,
+    "birth": "1702",
+    "gender": "male",
+    "race": "Albe",
+    "origin": "Albe · Leitheach",
+    "identity": {
+      "worldPersonId": "person--gwynthor-reine-ratte--dornan-falbh"
+    },
+    "genealogy": {
+      "worldPersonId": "person--gwynthor-reine-ratte--dornan-falbh",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Die Reine Ratte",
+    "portrait": "./assets/gwynthor-underworld/portraits/dornan-falbh-v2.png",
+    "bio": "Dornan kam aus Leitheach und verdiente sein Geld an wechselnden Kais und Toren, bevor er bei Cadwren blieb. Er redet laut, drängelt grob und hält jeden Streit zunächst für einen Wettbewerb. Sein herausforderndes Grinsen ist eher ein Zähnefletschen. Ein abgewetzter Lederpanzer, etwas Kettengeflecht an Hals und Ärmeln und einfache Armschienen passen zu seinem groben Söldnerauftritt. Sein Rundgang führt von den Stubentüren zum kleinen Hinterhof.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Dornan Falbh",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Dornan Falbh"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "38 Jahre"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Albe · Leitheach"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Aufpasser · Stuben und Hinterhof"
+        }
+      ],
+      "biography": {
+        "portrait": "./assets/gwynthor-underworld/portraits/dornan-falbh-v2.png",
+        "biographyTitle": "Aufpasser · Stuben und Hinterhof",
+        "biographyText": "<p>Dornan kam aus Leitheach und verdiente sein Geld an wechselnden Kais und Toren, bevor er bei Cadwren blieb. Er redet laut, drängelt grob und hält jeden Streit zunächst für einen Wettbewerb. Sein herausforderndes Grinsen ist eher ein Zähnefletschen. Ein abgewetzter Lederpanzer, etwas Kettengeflecht an Hals und Ärmeln und einfache Armschienen passen zu seinem groben Söldnerauftritt. Sein Rundgang führt von den Stubentüren zum kleinen Hinterhof.</p>",
+        "crestImage": "./assets/gwynthor-underworld/signs/reine-ratte-v1.png",
+        "historyTitle": "Die Reine Ratte am Hafen",
+        "historyText": "<p>Das schlichte Zuberhaus dient Seeleuten, Matrosen und Hafenleuten. Die Waschplätze sind günstig, die drei privaten Stuben einfach und der Hausdienst überschaubar. Zwischen Landgang und Abendbetrieb gehen hier Wasser, Leinen und Neuigkeiten von Hand zu Hand.</p>",
+        "documentsTitle": "Arbeitsort",
+        "documents": [
+          {
+            "title": "Die Reine Ratte",
+            "text": "Haus, Personal, Preise und fünf getrennte Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-zuberhaus-reine-ratte"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Die Reine Ratte · Hafen · Gwynthor-Stadt",
+    "archived": false,
+    "aliases": []
+  }
+}
