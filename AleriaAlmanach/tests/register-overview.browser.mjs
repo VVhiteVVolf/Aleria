@@ -208,6 +208,13 @@ try {
   await page.locator('.archive-browser-content .entry-card').first().waitFor();
   await page.locator('.archive-browser-content').evaluate(element => { element.scrollIntoView({ block: 'start' }); window.scrollBy(0, -80); });
   const compact = await page.locator('.archive-browser-content .entry-card').first().boundingBox();
+  if (compact.height >= 300) {
+    await capture('desktop-module-height-diagnostic');
+    report.moduleHeightDiagnostic = await page.locator('.archive-browser-content .entry-card').first().evaluate(card =>
+      [card, ...card.querySelectorAll('*')].map(element => ({ tag: element.tagName, class: element.className,
+        width: element.getBoundingClientRect().width, height: element.getBoundingClientRect().height,
+        font: getComputedStyle(element).font, padding: getComputedStyle(element).padding, minHeight: getComputedStyle(element).minHeight })));
+  }
   assert.ok(compact.height < 300, `module preview is still too large: ${compact.height}`);
   assert.ok(await page.locator('.archive-hierarchy-row-mark').count() === 0);
   await checkLayout('desktop-modules'); await capture('desktop-modules');

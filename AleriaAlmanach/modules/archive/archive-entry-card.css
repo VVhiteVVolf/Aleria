@@ -33,7 +33,7 @@
 .entry-card-emblem .card-image-wrap { background: radial-gradient(ellipse, #fbf8ef, #ede3ce); }
 .entry-card-emblem .card-image-wrap img { object-fit: contain; padding: 1rem; }
 .entry-card-lock { position: absolute; top: 0.65rem; right: 0.65rem; padding: 0.35rem 0.5rem; background: #f5f0e2; color: var(--almanach-ink); border: 1px solid var(--almanach-line); font: 600 0.64rem/1.3 'Cinzel', serif; }
-.entry-card-copy { display: grid; align-content: start; gap: .3rem; flex: 1; width: 100%; padding: .65rem .75rem; }
+.entry-card-copy { display: grid; align-content: start; gap: .3rem; flex: 1; width: 100%; padding: .5rem .75rem; }
 .entry-card-category { color: var(--almanach-muted); font: 600 .64rem/1.4 'Cinzel', serif; letter-spacing: .025em; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .entry-card-title { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: var(--almanach-ink); font: 600 .9rem/1.35 'Cinzel', serif; overflow-wrap: break-word; }
 .entry-card-subtitle { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: var(--almanach-muted); font: italic .88rem/1.35 'EB Garamond', serif; overflow-wrap: break-word; }
