@@ -1,5 +1,6 @@
 import '../scene-regeneration/scene-regeneration-policy.js';
 import './comments-foreign-voice.js';
+import { isPublicSceneElementComment } from '../scene-elements/scene-element-visibility.js';
 
 const isSilentSceneRegeneration = globalThis.AleriaSceneRegenerationPolicy.isComment;
 
@@ -35,7 +36,7 @@ export function createCommentActivityPreview(comment) {
 }
 
 export function buildCommentThreadActivity(threadId, comments) {
-  const visibleComments = comments.filter(comment => !isSilentSceneRegeneration(comment));
+  const visibleComments = comments.filter(comment => !isSilentSceneRegeneration(comment) && isPublicSceneElementComment(comment));
   const recentComments = visibleComments.map(createCommentActivityPreview).sort((a, b) => b.activityAtClient - a.activityAtClient || b.id.localeCompare(a.id)).slice(0, COMMENT_ACTIVITY_RECENT_LIMIT);
   return { version: 1, threadId, commentCount: visibleComments.length, recentComments };
 }
