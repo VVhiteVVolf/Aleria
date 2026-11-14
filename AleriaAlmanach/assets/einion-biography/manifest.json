@@ -1,0 +1,50 @@
+{
+  "schema": "aleria.source-artwork",
+  "version": 1,
+  "assets": [
+    {
+      "name": "Greif",
+      "url": "https://i.imgur.com/A9Fa6dz.jpeg",
+      "path": "AleriaAlmanach/assets/einion-biography/greif-v1.jpeg",
+      "publicPath": "/AleriaAlmanach/assets/einion-biography/greif-v1.jpeg",
+      "sha256": "bc86c12cd2787bcb5b78b7dc0b2c382996041c43a5ba7ff5f712f825156d4b6d",
+      "bytes": 225637,
+      "original": "diagnostics/einion-biography-20261114/greif.original.jpeg",
+      "prompt": null,
+      "generated": false
+    },
+    {
+      "name": "Ollphéist von Blubberfels",
+      "url": "https://i.imgur.com/mGXo0C7.jpeg",
+      "path": "AleriaAlmanach/assets/einion-biography/ollpheist-v1.jpeg",
+      "publicPath": "/AleriaAlmanach/assets/einion-biography/ollpheist-v1.jpeg",
+      "sha256": "388b1cce37b0ac8e8ecb6c626b7f655163ad3413554d322a6a2f337bd1a332b3",
+      "bytes": 309881,
+      "original": "diagnostics/einion-biography-20261114/ollpheist.original.jpeg",
+      "prompt": null,
+      "generated": false
+    },
+    {
+      "name": "Sir Eichenbein",
+      "url": "https://i.imgur.com/oI1xgqc.jpeg",
+      "path": "AleriaAlmanach/assets/einion-biography/sir-eichenbein-v1.jpeg",
+      "publicPath": "/AleriaAlmanach/assets/einion-biography/sir-eichenbein-v1.jpeg",
+      "sha256": "f5149a01e3939ec1b7ab217b64044c425306391dfaa6b92284ae308de7cae4db",
+      "bytes": 227467,
+      "original": "diagnostics/einion-biography-20261114/sir-eichenbein.original.jpeg",
+      "prompt": null,
+      "generated": false
+    },
+    {
+      "name": "Lord Schmusedecke",
+      "url": "https://i.imgur.com/zoFGHHx.jpeg",
+      "path": "AleriaAlmanach/assets/einion-biography/lord-schmusedecke-v1.jpeg",
+      "publicPath": "/AleriaAlmanach/assets/einion-biography/lord-schmusedecke-v1.jpeg",
+      "sha256": "a7807391bab957ee9af8ae119126a3576d64897d32775b71f271ea1790129dd5",
+      "bytes": 276733,
+      "original": "diagnostics/einion-biography-20261114/lord-schmusedecke.original.jpeg",
+      "prompt": null,
+      "generated": false
+    }
+  ]
+}

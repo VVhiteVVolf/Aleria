@@ -1,6 +1,6 @@
 import { HOUSE_ARWYDD_FAMILY } from './data/house-arwydd-family.js';
 import { configureFamilyEmbedView } from './modules/family-embed/family-embed-view.js';
-import { RETIRED_FAMILY_IDS } from './data/families.registry.js?v=20261104-content-lore-v1';
+import { RETIRED_FAMILY_IDS } from './data/families.registry.js?v=20261114-einion-v1';
 import { createFirebaseClient } from './modules/firebase-platform/firebase-client.js';
 import { createLocalImageDraftRepository } from './modules/family-assets/local-image-draft-repository.js';
 import { createGitHubFamilyRepository } from './modules/github-publication/github-family-repository.js';

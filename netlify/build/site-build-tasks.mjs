@@ -968,6 +968,8 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'family-charts', label: 'Family chart release and browser geometry',
     inputs: ['Stammbäume/assets/js/', 'Stammbäume/assets/css/', 'Stammbäume/assets/data/',
+      'AleriaAlmanach/modules/einion-biography/', 'AleriaAlmanach/assets/einion-biography/',
+      'AleriaAlmanach/tests/einion-biography.test.mjs',
       'AleriaAlmanach/modules/fleischsammler-argall/household.mjs',
       'AleriaAlmanach/modules/patrick-biographies/', 'AleriaAlmanach/modules/character-genealogy/',
       'AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs',
@@ -984,7 +986,8 @@ export const SITE_BUILD_TASKS = [
     excludes: ['Stammbäume/assets/data/published-families/backups/'],
     commands: [['netlify/build/verify-task-inputs.mjs', 'family-charts'],
       ['Stammbäume/tools/check-release.mjs', '--prepare-browser'],
-      testCommand('Familien Häuser und Clans/tests/aehrental-house-pages.test.mjs',
+      testCommand('AleriaAlmanach/tests/einion-biography.test.mjs',
+        'Familien Häuser und Clans/tests/aehrental-house-pages.test.mjs',
         'Familien Häuser und Clans/tests/weidebucht-house-pages.test.mjs',
         'Familien Häuser und Clans/tests/graue-weite-house-pages.test.mjs',
         'Familien Häuser und Clans/tests/house-content-scope.test.mjs',

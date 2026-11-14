@@ -2,7 +2,7 @@ import {
   FAMILY_REGISTRY,
   getRegisteredFamily,
   RETIRED_FAMILY_IDS
-} from '../data/families.registry.js?v=20261104-content-lore-v1';
+} from '../data/families.registry.js?v=20261114-einion-v1';
 import { normalizeFamily } from '../domain/family-schema.js';
 import { createHouseProfileFromFolderPath } from '../domain/house-profile.js';
 import {
