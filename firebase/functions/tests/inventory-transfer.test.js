@@ -221,14 +221,58 @@ test('money sink rejects a recipient, unknown targets and invalid character iden
   }
 });
 
-test('item handoffs keep their existing ownership restriction and create their existing scene receipt', async () => {
+test('signed-in authors can hand over existing items without ownership or a moderator role, exactly once', async () => {
+  for (const session of [{ uid: 'other-player', token: {} }, { uid: 'editor-author', token: { aleriaRole: 'editor' } }]) {
+    for (const owned of [true, false]) {
+      const db = store();
+      if (!owned) delete db.data.get('characters/giver').ownerUid;
+      db.data.get('characters/giver').createdBy = 'legacy-creator';
+      db.data.get('characters/giver').inventory.items.push({ id: 'keepsake', instanceId: 'physical-book', name: 'Andenken', quantity: '1', documentRef: { id: 'test-book' } });
+      const request = input({ kind: 'item', itemId: 'keepsake', quantity: 1 }), before = ['giver', 'receiver'].map(id => structuredClone(db.data.get('characters/' + id)));
+      request.sceneEvent.transfer.flavour = 'Lefraye überreicht Oweta das Notizbuch.';
+      const result = await commitInventoryTransferOperation(db, session, request);
+      assert.ok(result.id); assert.equal(result.silent, undefined);
+      assert.equal(db.data.get('characters/giver').inventory.items.length, 0);
+      assert.equal(result.receiverInventory.items[0].instanceId, 'physical-book');
+      assert.deepEqual(result.receiverInventory.items[0].documentRef, { id: 'test-book' });
+      for (const [index, id] of ['giver', 'receiver'].entries()) {
+        const after = db.data.get('characters/' + id);
+        for (const field of ['ownerUid', 'createdBy', 'combatProfile']) assert.deepEqual(after[field], before[index][field]);
+        assert.deepEqual(after.inventory.moneyState, before[index].inventory.moneyState);
+      }
+      const snapshot = structuredClone([...db.data]);
+      const replay = await commitInventoryTransferOperation(db, session, request);
+      assert.equal(replay.id, result.id); assert.deepEqual([...db.data], snapshot);
+      const comments = rows(db, 'comments'); assert.equal(comments.length, 1);
+      assert.equal(comments[0][1].createdBy, session.uid);
+      assert.equal(comments[0][1].sceneInventoryTransfer.flavour, request.sceneEvent.transfer.flavour);
+    }
+  }
+});
+
+test('item handoffs still reject missing authentication and active combat without any writes', async () => {
+  const request = input({ kind: 'item', itemId: 'keepsake', quantity: 1 });
+  for (const session of [null, {}]) {
+    const db = store(), before = structuredClone([...db.data]);
+    await assert.rejects(commitInventoryTransferOperation(db, session, request), { code: 'unauthenticated' });
+    assert.deepEqual([...db.data], before);
+  }
   const db = store();
   db.data.get('characters/giver').inventory.items.push({ id: 'keepsake', name: 'Andenken', quantity: '1' });
-  const request = input({ kind: 'item', itemId: 'keepsake', quantity: 1 }), before = structuredClone([...db.data]);
-  await assert.rejects(commitInventoryTransferOperation(db, { uid: 'other-player', token: {} }, request), /Besitzer/);
+  db.data.set('combat_profile_locks/characters/records/receiver', { activeEncounterKeys: ['ongoing-fight'] });
+  const before = structuredClone([...db.data]);
+  await assert.rejects(commitInventoryTransferOperation(db, { uid: 'scene-author', token: {} }, request), /Kampf/);
   assert.deepEqual([...db.data], before);
-  const result = await commitInventoryTransferOperation(db, auth, request);
-  assert.ok(result.id); assert.equal(result.silent, undefined); assert.equal(rows(db, 'comments').length, 1);
+});
+
+test('opening existing-item handoffs does not unlock free catalog grants for ordinary players', async () => {
+  const db = store(), request = input({ kind: 'register-item', itemDbKey: 'standard:waffen-rustungen:langschwert', quantity: 1 });
+  const before = structuredClone([...db.data]);
+  await assert.rejects(commitInventoryTransferOperation(db, { uid: 'scene-author', token: {} }, request), { code: 'permission-denied' });
+  assert.deepEqual([...db.data], before);
+  await commitInventoryTransferOperation(db, { uid: 'editor-author', token: { aleriaRole: 'editor' } }, request);
+  assert.equal(db.data.get('characters/giver').ownerUid, 'owner');
+  assert.equal(db.data.get('characters/receiver').inventory.items.length, 1);
 });
 
 test('free register grants use server mechanics and identity, without inventing a paid purchase', async () => {

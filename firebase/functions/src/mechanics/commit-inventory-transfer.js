@@ -3,7 +3,6 @@ import { FieldValue, getFirestore } from 'firebase-admin/firestore';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { applySceneInventoryTransfer } from '../generated/scene-inventory/scene-inventory-transfer-model.js';
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
-import { canManageCharacter } from '../generated/item-register/item-register-model.js';
 import { resolveRegisterItemTemplate } from './item-register-template.js';
 import { productWithItemDefinition, prepareTemplateDefinition, prepareUniqueItemClaims, readItemDefinitionIndex } from '../items/item-definition-repository.js';
 import { transferredEquipmentProfile } from '../items/item-transfer-equipment.js';
@@ -18,7 +17,7 @@ function clean(value, maximum = 250000) {
 }
 
 export async function commitInventoryTransferOperation(database, auth, data) {
-  if (!auth) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
+  if (!auth?.uid) fail('unauthenticated', 'Eine Firebase-Anmeldung ist erforderlich.');
   const input = JSON.parse(JSON.stringify(data || {}));
   const giverId = clean(input.giverId, 240);
   const receiverId = clean(input.receiverId, 240);
@@ -51,7 +50,9 @@ export async function commitInventoryTransferOperation(database, auth, data) {
     let giver = { ...(giverSnapshot.data() || {}), id: giverId };
     let receiver = { ...(receiverSnapshot.data() || {}), id: receiverId };
     const role = String(auth.token?.aleriaRole || 'player');
-    if (!canManageCharacter(giver, { uid: auth.uid, authenticated: true, canModerate: ['admin', 'moderator'].includes(role) })) fail('permission-denied', 'Nur der Besitzer oder die Spielleitung kann Gegenstände dieser Figur übergeben.');
+    // Existing possessions can be handed over by any signed-in scene author,
+    // matching gifts in scene trade. Creating goods from the register retains
+    // its separate editorial check below; all inventory and combat guards stay.
     if (prior.exists) return { id: prior.data().commentId, giverInventory: giver.inventory, receiverInventory: receiver.inventory };
     if (submittedObject.kind === 'register-item' && !['admin', 'moderator', 'editor'].includes(role)) fail('permission-denied', 'Bitte Waren über das Güterregister kaufen. Freie Zuteilungen erstellt die Spielleitung.');
     let registerTemplate = submittedObject.kind === 'register-item'

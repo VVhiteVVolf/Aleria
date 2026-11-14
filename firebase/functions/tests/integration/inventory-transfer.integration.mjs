@@ -20,6 +20,30 @@ beforeEach(async () => {
 });
 after(() => database.terminate());
 
+test('real item handoffs accept a signed-in scene author without ownership and preserve a single receipt on retry', async () => {
+  const giver = character('giver'), receiver = character('receiver');
+  giver.inventory.items = [{ id: 'notebook', instanceId: 'one-notebook', name: 'Ermittlungsbuch', quantity: '1', documentRef: { id: 'test-book' } }];
+  await database.doc('characters/giver').set(giver);
+  const author = { uid: 'different-scene-author', token: { aleriaRole: 'player' } };
+  const request = input({ kind: 'item', itemId: 'notebook', quantity: 1 });
+  request.sceneEvent.transfer.flavour = 'Lefraye reicht Oweta das Notizbuch.';
+  const [first, replay] = await Promise.all([commitInventoryTransferOperation(database, author, request), commitInventoryTransferOperation(database, author, request)]);
+  assert.equal(first.id, replay.id);
+  const savedGiver = (await database.doc('characters/giver').get()).data(), savedReceiver = (await database.doc('characters/receiver').get()).data();
+  assert.equal(savedGiver.inventory.items.length, 0);
+  assert.equal(savedReceiver.inventory.items.length, 1);
+  assert.equal(savedReceiver.inventory.items[0].instanceId, 'one-notebook');
+  for (const [saved, original] of [[savedGiver, giver], [savedReceiver, receiver]]) {
+    assert.equal(saved.ownerUid, original.ownerUid);
+    assert.deepEqual(saved.inventory.moneyState, original.inventory.moneyState);
+    assert.deepEqual(saved.combatProfile, original.combatProfile);
+  }
+  assert.equal((await database.collection('inventory_transfer_transactions').get()).size, 1);
+  const comments = (await database.collection('comments').get()).docs;
+  assert.equal(comments.length, 1); assert.equal(comments[0].data().createdBy, author.uid);
+  assert.equal(comments[0].data().sceneInventoryTransfer.flavour, request.sceneEvent.transfer.flavour);
+});
+
 test('real Firestore money transactions commit concurrent retries once without a scene event', async () => {
   const request = { ...input({ kind: 'money', currency: 'pfennig', quantity: 29 }), expectedRevisions: { 'character:giver': 1, 'character:receiver': 1 } };
   const [first, second] = await Promise.all([commitInventoryTransferOperation(database, auth, request), commitInventoryTransferOperation(database, auth, request)]);

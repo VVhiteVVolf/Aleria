@@ -27,6 +27,13 @@ kein Charakterkonto und besitzt keinen Bestand.
 
 ## Buchungsregeln
 
+Vorhandene Gegenstände kann jede angemeldete Person zwischen den gewählten
+Figuren übergeben, ebenso wie beim Schenken im Szenenhandel. Besitzer- und
+Erstellerzuordnungen werden dadurch nicht umgeschrieben. Der Server prüft den
+echten Bestand, Mengen, Ausrüstungsbindung, Kampfsperren und die einmalige
+Buchung samt Szenenbeleg. Das Erzeugen neuer Waren aus dem Register behält
+seine gesonderte Redaktions-/Spielleiterprüfung.
+
 Geldbeträge bestehen aus positiven ganzen Münzmengen und werden intern in
 ganzen Eisenpfennigen geprüft. Die Vorschau verwendet dieselbe Rechnung
 wie der Server. Gespeicherte Geldformate bleiben lesbar; Teilpfennige,

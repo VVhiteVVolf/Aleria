@@ -86,7 +86,7 @@ async function configure(context, db, uid) {
   await context.route('**/*', route => new URL(route.request().url()).origin === server.origin && route.request().method() === 'GET' ? route.continue() : route.abort());
   await context.route('**/qa-book-state', route => route.fulfill({ contentType: 'application/json', body: JSON.stringify({ characters: [giverId, receiverId].map(id => db.data.get(`characters/${id}`)), comments: [...db.data].filter(([path]) => path.startsWith('comments/')).map(([id, value]) => ({ id, ...value })) }) }));
   await context.route('**/qa-book-transfer', async route => {
-    try { const value = await commitInventoryTransferOperation(db, { uid, token: { aleriaRole: 'player' } }, route.request().postDataJSON()); await route.fulfill({ contentType: 'application/json', body: JSON.stringify(value) }); }
+    try { const value = await commitInventoryTransferOperation(db, { uid: 'fixture-scene-author-without-ownership', token: { aleriaRole: 'player' } }, route.request().postDataJSON()); await route.fulfill({ contentType: 'application/json', body: JSON.stringify(value) }); }
     catch (error) { await route.fulfill({ status: 409, contentType: 'application/json', body: JSON.stringify({ message: error.message }) }); }
   });
   await context.route('**/document-notes-firebase.js', route => route.fulfill({ contentType: 'text/javascript', body: `export async function connectDocumentNotes(context){const request=async input=>{const response=await fetch('/qa-book-notes',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...context,...input})});const value=await response.json();if(!response.ok)throw Error(value.message);return value.notes;};return{mode:'Lokale Prüfung am konkreten Inventarbuch.',load:()=>request({action:'load'}),save:input=>request({action:'save',...input})};}` }));
@@ -134,6 +134,7 @@ try {
     const snapshot = structuredClone([...state.db.data]);
     await page.evaluate(() => handoverFixture.retry()); assert.deepEqual([...state.db.data], snapshot);
     assert.equal([...state.db.data.keys()].filter(path => path.startsWith('comments/')).length, 1);
+    assert.equal([...state.db.data].find(([path]) => path.startsWith('comments/'))[1].createdBy, 'fixture-scene-author-without-ownership');
     await shot(page, `handover-completed-${width}`);
     const newContext = { ...notesContext, holderId: receiverId };
     await assert.rejects(documentItemNotesOperation({ auth: { uid: state.giver.ownerUid, token: {} }, data: { ...notesContext, action: 'load' } }, { db: state.db }), /nicht mehr/);
