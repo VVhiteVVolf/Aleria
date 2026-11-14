@@ -157,7 +157,7 @@
           "importedAt": "2026-11-07T00:00:00.000Z",
           "lastSyncedAt": "2026-11-07T00:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view&person=mared-spouse-marchwern",
-          "fingerprint": "{\"name\":\"Mared\",\"title\":\"Züchterin und Verantwortliche für Stallroutinen\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mared-spouse-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"44 Jahre\"],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwrgi-marchwern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--gwrgi-marchwern\",\"name\":\"Gwrgi Marchwern\"}],\"children\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"eluned-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--eluned-marchwern\",\"name\":\"Eluned Marchwern\"},{\"personId\":\"rhunedd-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhunedd-marchwern\",\"name\":\"Rhunedd Marchwern\"}]}}"
+          "fingerprint": "{\"name\":\"Mared\",\"title\":\"Züchterin und Verantwortliche für Stallroutinen\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mared-spouse-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"44 Jahre\"],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwrgi-marchwern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--gwrgi-marchwern\",\"name\":\"Gwrgi Marchwern\"}],\"children\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"eluned-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--eluned-marchwern\",\"name\":\"Eluned Marchwern\"},{\"personId\":\"rhunedd-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhunedd-marchwern\",\"name\":\"Rhunedd Marchwern\"},{\"personId\":\"ffraid-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--ffraid-marchwern\",\"name\":\"Ffraid Marchwern\"}]}}"
         }
       ],
       "relationships": {
@@ -196,6 +196,14 @@
             "certainty": "confirmed",
             "worldPersonId": "person--haus-marchwern--rhunedd-marchwern",
             "name": "Rhunedd Marchwern"
+          },
+          {
+            "personId": "ffraid-marchwern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-marchwern--ffraid-marchwern",
+            "name": "Ffraid Marchwern"
           }
         ]
       }

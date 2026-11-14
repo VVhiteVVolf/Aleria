@@ -238868,7 +238868,7 @@
             "importedAt": "2026-11-07T00:00:00.000Z",
             "lastSyncedAt": "2026-11-07T00:00:00.000Z",
             "url": "../Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view&person=gwrgi-marchwern",
-            "fingerprint": "{\"name\":\"Gwrgi Marchwern\",\"title\":\"Gestütsvorsteher im Dienst des Hauses Wyrm\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"48 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"haus-marchwern-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-marchwern-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"mared-spouse-marchwern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mared-spouse-marchwern\",\"name\":\"Mared\"}],\"children\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"eluned-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--eluned-marchwern\",\"name\":\"Eluned Marchwern\"},{\"personId\":\"rhunedd-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhunedd-marchwern\",\"name\":\"Rhunedd Marchwern\"}]}}"
+            "fingerprint": "{\"name\":\"Gwrgi Marchwern\",\"title\":\"Gestütsvorsteher im Dienst des Hauses Wyrm\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"48 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"haus-marchwern-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-marchwern-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"mared-spouse-marchwern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mared-spouse-marchwern\",\"name\":\"Mared\"}],\"children\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"eluned-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--eluned-marchwern\",\"name\":\"Eluned Marchwern\"},{\"personId\":\"rhunedd-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhunedd-marchwern\",\"name\":\"Rhunedd Marchwern\"},{\"personId\":\"ffraid-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--ffraid-marchwern\",\"name\":\"Ffraid Marchwern\"}]}}"
           }
         ],
         "relationships": {
@@ -238924,6 +238924,14 @@
               "certainty": "confirmed",
               "worldPersonId": "person--haus-marchwern--rhunedd-marchwern",
               "name": "Rhunedd Marchwern"
+            },
+            {
+              "personId": "ffraid-marchwern",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-marchwern--ffraid-marchwern",
+              "name": "Ffraid Marchwern"
             }
           ]
         }
@@ -238935,7 +238943,7 @@
         "recordId": "character--person--haus-marchwern--gwrgi-marchwern",
         "path": "records/familien/haus-marchwern/gwrgi-marchwern--person--haus-marchwern--gwrgi-marchwern/character.json",
         "schemaVersion": 1,
-        "contentHash": "09b10848cde7d1430da62e22bc41a3e99f36c7cc7d7888be07864c45f49592e1",
+        "contentHash": "74e925c28b66289f3295138575f355f772ad1744499e1a2a68f44e79a46e4d11",
         "firestoreDocumentIds": [
           "person--haus-marchwern--gwrgi-marchwern"
         ],
@@ -238963,7 +238971,7 @@
                 "Gwynthor"
               ],
               "url": "",
-              "fingerprint": "{\"name\":\"Gwrgi Marchwern\",\"title\":\"Gestütsvorsteher im Dienst des Hauses Wyrm\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"48 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"haus-marchwern-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-marchwern-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"mared-spouse-marchwern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mared-spouse-marchwern\",\"name\":\"Mared\"}],\"children\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"eluned-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--eluned-marchwern\",\"name\":\"Eluned Marchwern\"},{\"personId\":\"rhunedd-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhunedd-marchwern\",\"name\":\"Rhunedd Marchwern\"}]}}",
+              "fingerprint": "{\"name\":\"Gwrgi Marchwern\",\"title\":\"Gestütsvorsteher im Dienst des Hauses Wyrm\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"48 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"haus-marchwern-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-marchwern-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"mared-spouse-marchwern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mared-spouse-marchwern\",\"name\":\"Mared\"}],\"children\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"eluned-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--eluned-marchwern\",\"name\":\"Eluned Marchwern\"},{\"personId\":\"rhunedd-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhunedd-marchwern\",\"name\":\"Rhunedd Marchwern\"},{\"personId\":\"ffraid-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--ffraid-marchwern\",\"name\":\"Ffraid Marchwern\"}]}}",
               "score": 1000
             }
           ],
@@ -239131,7 +239139,7 @@
             "importedAt": "2026-11-07T00:00:00.000Z",
             "lastSyncedAt": "2026-11-07T00:00:00.000Z",
             "url": "../Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view&person=mared-spouse-marchwern",
-            "fingerprint": "{\"name\":\"Mared\",\"title\":\"Züchterin und Verantwortliche für Stallroutinen\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mared-spouse-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"44 Jahre\"],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwrgi-marchwern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--gwrgi-marchwern\",\"name\":\"Gwrgi Marchwern\"}],\"children\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"eluned-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--eluned-marchwern\",\"name\":\"Eluned Marchwern\"},{\"personId\":\"rhunedd-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhunedd-marchwern\",\"name\":\"Rhunedd Marchwern\"}]}}"
+            "fingerprint": "{\"name\":\"Mared\",\"title\":\"Züchterin und Verantwortliche für Stallroutinen\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mared-spouse-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"44 Jahre\"],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwrgi-marchwern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--gwrgi-marchwern\",\"name\":\"Gwrgi Marchwern\"}],\"children\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"eluned-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--eluned-marchwern\",\"name\":\"Eluned Marchwern\"},{\"personId\":\"rhunedd-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhunedd-marchwern\",\"name\":\"Rhunedd Marchwern\"},{\"personId\":\"ffraid-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--ffraid-marchwern\",\"name\":\"Ffraid Marchwern\"}]}}"
           }
         ],
         "relationships": {
@@ -239170,6 +239178,14 @@
               "certainty": "confirmed",
               "worldPersonId": "person--haus-marchwern--rhunedd-marchwern",
               "name": "Rhunedd Marchwern"
+            },
+            {
+              "personId": "ffraid-marchwern",
+              "type": "biological",
+              "legitimacy": "legitimate",
+              "certainty": "confirmed",
+              "worldPersonId": "person--haus-marchwern--ffraid-marchwern",
+              "name": "Ffraid Marchwern"
             }
           ]
         }
@@ -239181,7 +239197,7 @@
         "recordId": "character--person--family-tree--mared-spouse-marchwern",
         "path": "records/familien/haus-marchwern/mared--person--family-tree--mared-spouse-marchwern/character.json",
         "schemaVersion": 1,
-        "contentHash": "f577f1231aee51c7e2af614275aabf9c0c69cc1817761bb613b43050006e37a7",
+        "contentHash": "088638fa2d93264e68f12f441068bf1394d8084bfeaa69b2fc4913884a68073b",
         "firestoreDocumentIds": [
           "person--family-tree--mared-spouse-marchwern"
         ],
@@ -239209,7 +239225,7 @@
                 "Gwynthor"
               ],
               "url": "",
-              "fingerprint": "{\"name\":\"Mared\",\"title\":\"Züchterin und Verantwortliche für Stallroutinen\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mared-spouse-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"44 Jahre\"],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwrgi-marchwern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--gwrgi-marchwern\",\"name\":\"Gwrgi Marchwern\"}],\"children\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"eluned-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--eluned-marchwern\",\"name\":\"Eluned Marchwern\"},{\"personId\":\"rhunedd-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhunedd-marchwern\",\"name\":\"Rhunedd Marchwern\"}]}}",
+              "fingerprint": "{\"name\":\"Mared\",\"title\":\"Züchterin und Verantwortliche für Stallroutinen\",\"birth\":\"1696\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/mared-spouse-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"44 Jahre\"],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"gwrgi-marchwern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--gwrgi-marchwern\",\"name\":\"Gwrgi Marchwern\"}],\"children\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"eluned-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--eluned-marchwern\",\"name\":\"Eluned Marchwern\"},{\"personId\":\"rhunedd-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhunedd-marchwern\",\"name\":\"Rhunedd Marchwern\"},{\"personId\":\"ffraid-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--ffraid-marchwern\",\"name\":\"Ffraid Marchwern\"}]}}",
               "score": 1000
             }
           ],

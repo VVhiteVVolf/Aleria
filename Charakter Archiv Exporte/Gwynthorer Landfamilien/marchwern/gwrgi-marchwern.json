@@ -164,7 +164,7 @@
           "importedAt": "2026-11-07T00:00:00.000Z",
           "lastSyncedAt": "2026-11-07T00:00:00.000Z",
           "url": "../Stammbäume/Stammbaum.html?family=haus-marchwern&mode=view&person=gwrgi-marchwern",
-          "fingerprint": "{\"name\":\"Gwrgi Marchwern\",\"title\":\"Gestütsvorsteher im Dienst des Hauses Wyrm\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"48 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"haus-marchwern-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-marchwern-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"mared-spouse-marchwern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mared-spouse-marchwern\",\"name\":\"Mared\"}],\"children\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"eluned-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--eluned-marchwern\",\"name\":\"Eluned Marchwern\"},{\"personId\":\"rhunedd-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhunedd-marchwern\",\"name\":\"Rhunedd Marchwern\"}]}}"
+          "fingerprint": "{\"name\":\"Gwrgi Marchwern\",\"title\":\"Gestütsvorsteher im Dienst des Hauses Wyrm\",\"birth\":\"1692\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-marchwern\",\"portrait\":\"/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/gwrgi-marchwern.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"48 Jahre\"],\"relationships\":{\"parents\":[{\"personId\":\"haus-marchwern-gruender\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruender\",\"name\":\"Unbekannter Gründer\"},{\"personId\":\"haus-marchwern-gruenderin\",\"type\":\"claimed\",\"legitimacy\":\"unknown\",\"certainty\":\"unknown\",\"worldPersonId\":\"person--haus-marchwern--haus-marchwern-gruenderin\",\"name\":\"Unbekannte Gründerin\"}],\"partners\":[{\"personId\":\"mared-spouse-marchwern\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--family-tree--mared-spouse-marchwern\",\"name\":\"Mared\"}],\"children\":[{\"personId\":\"rhun-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhun-marchwern\",\"name\":\"Rhun Marchwern\"},{\"personId\":\"eluned-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--eluned-marchwern\",\"name\":\"Eluned Marchwern\"},{\"personId\":\"rhunedd-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--rhunedd-marchwern\",\"name\":\"Rhunedd Marchwern\"},{\"personId\":\"ffraid-marchwern\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-marchwern--ffraid-marchwern\",\"name\":\"Ffraid Marchwern\"}]}}"
         }
       ],
       "relationships": {
@@ -220,6 +220,14 @@
             "certainty": "confirmed",
             "worldPersonId": "person--haus-marchwern--rhunedd-marchwern",
             "name": "Rhunedd Marchwern"
+          },
+          {
+            "personId": "ffraid-marchwern",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-marchwern--ffraid-marchwern",
+            "name": "Ffraid Marchwern"
           }
         ]
       }
