@@ -6,7 +6,7 @@ import { EINION_BIOGRAPHY, EINION_CHARACTER_ID } from '../modules/einion-biograp
 import { planEinionBiography } from '../modules/einion-biography/einion-biography-plan.mjs';
 import { HOUSE_DRAIG_FAMILY } from '../../Stammbäume/assets/js/data/house-draig-family.js';
 import { assertValidFamily } from '../../Stammbäume/assets/js/domain/family-schema.js';
-import { resolveRegisteredFamilyUpgrade } from '../../Stammbäume/assets/js/services/family-registry-upgrade.js';
+import { getPersonBiographyModule } from '../../Stammbäume/assets/js/modules/person-biography/person-biography-model.js';
 
 const owner = () => ({ id: EINION_CHARACTER_ID, name: 'Einion Draig',
   biography: null, inventory: { moneyState: { totalCopper: 735 }, revision: 3,
@@ -21,7 +21,7 @@ test('Einions vollständige Bio teilt die bestehende Weltperson und ändert kein
   assert.equal(people.length, 1);
   assert.equal(people[0].worldPersonId, 'person--haus-draig--einion-draig');
   assert.equal(people[0].birth, '1723');
-  assert.deepEqual(people[0].extensions.biographyModule, EINION_BIOGRAPHY);
+  assert.deepEqual(getPersonBiographyModule(people[0]), EINION_BIOGRAPHY);
   assert.equal(EINION_BIOGRAPHY.biography.abilities.length, 14);
   assert.deepEqual(EINION_BIOGRAPHY.biography.extraSections.map(section => section.title), ['Geschichte & Vergangenheit', 'Geschichte & Wirkung']);
   assert.equal(EINION_BIOGRAPHY.biography.works.length, 13);
@@ -54,20 +54,15 @@ test('Fehlende oder widersprüchliche Greif-Bindungen werden vor einem Write abg
   assert.throws(() => planEinionBiography(current), /Greif/);
 });
 
-test('Revision 15 ergänzt alte lokale Biografien und erhält lokale Notizen und sämtliche Beziehungen', () => {
-  const previous = structuredClone(HOUSE_DRAIG_FAMILY);
-  previous.extensions.sourceRevision = 14;
-  const person = previous.persons.find(person => person.id === 'einion-draig');
-  delete person.extensions.biographyModule;
-  person.title = 'Persönlicher lokaler Titel';
+test('Der Katalog ergänzt ältere Akten ohne eine Familienmigration und respektiert bewusste Bioentfernungen', () => {
+  const person = structuredClone(HOUSE_DRAIG_FAMILY.persons.find(person => person.id === 'einion-draig'));
+  assert(!Object.hasOwn(person.extensions, 'biographyModule'));
   person.notes = 'Unabhängige lokale Chronik';
-  const result = resolveRegisteredFamilyUpgrade(HOUSE_DRAIG_FAMILY, previous);
-  const updated = result.persons.find(person => person.id === 'einion-draig');
-  assert.deepEqual(updated.extensions.biographyModule, EINION_BIOGRAPHY);
-  assert.equal(updated.notes, person.notes);
-  assert.equal(updated.title, person.title);
-  assert.deepEqual(result.partnerships, previous.partnerships);
-  assert.deepEqual(result.parentages, previous.parentages);
+  const before = structuredClone(person);
+  assert.deepEqual(getPersonBiographyModule(person), EINION_BIOGRAPHY);
+  assert.deepEqual(person, before);
+  person.extensions.biographyModule = null;
+  assert.equal(getPersonBiographyModule(person), null);
 });
 
 test('Der öffentliche Almanachkatalog verwendet dieselbe Bio nur für Einions eindeutige Identität', () => {

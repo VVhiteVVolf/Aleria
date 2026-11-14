@@ -13,5 +13,7 @@ Bioeintrag. Die Persönlichkeitssymbole ändern keine spielmechanischen Traits.
 Der vorhandene feldbegrenzte Biografiepublisher schreibt mit Zeitstandsschutz,
 Kampfsperrenprüfung und verschlüsselter Vorhersicherung. Er erzeugt keine Tiere.
 Caralyn bleibt Verlobte; die widersprüchliche Einzelwendung „angetraute Verlobte“
-wird zu „Verlobte“ korrigiert. Familiengraph, Geburtsdaten und Identitäten bleiben
-erhalten. Draig-Quellrevision 15 verwaltet ausschließlich Einions Bioerweiterung.
+wird zu „Verlobte“ korrigiert. Familiengraph, Geburtsdaten, Identitäten und
+Quellrevisionen bleiben erhalten. Die vorhandene gemeinsame Katalogauflösung
+ergänzt auch ältere Familienakten ohne Datenmigration und erhält bewusste
+persönliche Bioänderungen oder -entfernungen.

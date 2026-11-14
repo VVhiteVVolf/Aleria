@@ -1,7 +1,7 @@
 import { HOUSE_AURDDEN_FAMILY } from './house-aurdden-family.js?v=20261109-aurdden-v1';
 import { HOUSE_FFALS_FAMILY } from './house-ffals-family.js?v=20261109-ffals-real-v1';
 import { HOUSE_GWNIWR_FAMILY } from './house-gwniwr-family.js';
-import { HOUSE_DRAIG_FAMILY } from './house-draig-family.js?v=20261114-einion-v1';
+import { HOUSE_DRAIG_FAMILY } from './house-draig-family.js?v=20261104-lore-fixes-v1';
 import { HOUSE_HALENRHYD_FAMILY, HOUSE_CAEFFYN_FAMILY } from './gwynthor-horse-studs/stud-families.mjs';
 import { HOUSE_RUDDGRAEN_FAMILY } from './gwynthor-horse-resale/resale-family.mjs';
 import { HOUSE_GARRAEL_FAMILY } from './house-garrael-family.js';

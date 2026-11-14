@@ -15,7 +15,6 @@ import { HOUSE_DRAIG_PORTRAITS } from './house-draig-portraits.js';
 import { OWETA_DRAIG_BIOGRAPHY } from './person-biographies/oweta-draig.js';
 import { TRAHERN_DRAIG_BIOGRAPHY } from './person-biographies/trahern-draig.js';
 import { MYRIAD_DRAIG_BIOGRAPHY } from './person-biographies/myriad-draig.js';
-import { EINION_BIOGRAPHY } from '../../../../AleriaAlmanach/modules/einion-biography/einion-biography.js?v=20261114-einion-v1';
 import { GAWAIN_PUBLIC_BIOGRAPHY, GAWAIN_PUBLIC_SUMMARY } from '../../../../AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs';
 import { HOUSE_BIOGRAPHY } from '../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Haus_Draig/haus.biography.mjs?v=20261104-lore-fixes-v1';
 
@@ -438,10 +437,7 @@ export const HOUSE_DRAIG_FAMILY = withFaelaornSourceCounterUpgrade(withAislearne
     }),
     person('gethin-1722-draig', 'Gethin', 'male', '1722', ''),
     person('tegan-draig', 'Tegan', 'female', '1725', ''),
-    person('einion-draig', 'Einion', 'male', '1723', '', DRAIG_HOUSE_ID, {
-      extensions: { biographyModule: EINION_BIOGRAPHY, registryManagedSourceRevision: 15,
-        registryManagedFields: [], registryManagedExtensionFields: ['biographyModule'] }
-    }),
+    person('einion-draig', 'Einion', 'male', '1723', ''),
     person('carys-draig', 'Carys', 'female', '1726', ''),
     person('skalli-varulv', 'Skalli Varulv', 'female', '1716', '', 'house-varulv'),
     person('unknown-idwal-betrothed', 'Unbekannte Verlobte', 'female', '????', '', '', {
@@ -742,7 +738,7 @@ export const HOUSE_DRAIG_FAMILY = withFaelaornSourceCounterUpgrade(withAislearne
   extensions: {
     sourceNote: 'Personen, Lebensdaten und Beziehungsstruktur nach der bereitgestellten Draig-Tabelle und den vier ergänzenden Stammbaumgrafiken. Namens- und jahresgleiche Personen aus Arwydd, Gafyr, Saethwyr und Wyrm verwenden dieselben Weltpersonen-IDs und Portraitdateien.',
     blankFamily: false,
-    sourceRevision: 15,
+    sourceRevision: 14,
     registryManagedEntitySourceRevision: 11,
     houseBiographyModule: HOUSE_BIOGRAPHY
   }
