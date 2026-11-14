@@ -222,3 +222,13 @@ Cast-Reihenfolge, Namens-/ID-Abgrenzung, Kreaturen und aktualisierte/archivierte
 Figuren. Der Fall ist in der bestehenden nativen Gruppe `scene-presentation`
 enthalten. Messung und echte Browserprüfung mit synthetischen Daten:
 `diagnostics/scene-performance-20261113/`.
+
+## Persönliche Avatargrößen im Editor
+
+`comment-editor-appearance.js` kapselt zwei lokale Größenregler für Vorschau und
+Abschnittsauswahl. Beide Dialoge verwenden dieselben Browserpräferenzen; Standard
+sind 120 px und 80 px. Die Wahl wird unter
+`aleria-comment-editor-avatar-sizes-v1` gespeichert und zwischen Tabs abgeglichen.
+Die Vorschau behält die Porträt-/Textanordnung der Szenen; schmale Spalten begrenzen
+das Porträt auf 40 % ihrer Breite. Maximieren gibt großen Porträts mehr Raum.
+Größen bleiben außerhalb von Entwürfen, Kommentaren und Modulakten.

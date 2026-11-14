@@ -615,6 +615,7 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/styles/comment-bubble-art.css', 'AleriaAlmanach/styles/session-controls-compact.css',
       'AleriaAlmanach/styles/comment-page-bundles.css',
         'AleriaAlmanach/styles/comments.css', 'AleriaAlmanach/styles/comments-foreign-voice.css',
+        'AleriaAlmanach/styles/comment-editor-appearance.css', 'AleriaAlmanach/styles/comment-composer.css',
       'AleriaAlmanach/assets/speech-frame-lab/', 'AleriaAlmanach/AleriaAlmanach.html',
       almanach('fazit-block-editor'), almanach('scene-presentation'), almanach('comments-controls'), almanach('comment-page-bundles'), almanach('comment-render-performance')],
     commands: [testCommand(almanach('fazit-block-editor'), almanach('scene-presentation'), almanach('comments-controls'), almanach('comment-page-bundles'), almanach('comment-render-performance'))]

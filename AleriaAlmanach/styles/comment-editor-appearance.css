@@ -1,0 +1,74 @@
+/* Avatar controls belong to the two comment editors, independent of content. */
+[data-comment-editor-appearance] .comment-avatar-size-control {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(5rem, 9rem) 3.4rem;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  color: var(--ink-faded);
+  font-size: 0.75rem;
+}
+
+[data-comment-editor-appearance] .comment-avatar-size-control input {
+  width: 100%;
+  min-width: 0;
+  accent-color: var(--gold);
+  cursor: pointer;
+}
+
+[data-comment-editor-appearance] .comment-avatar-size-control output {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+[data-comment-editor-appearance] .comment-live-preview {
+  container-type: inline-size;
+}
+
+/* Preserve the scene's portrait-and-copy layout, including left/right sides. */
+[data-comment-editor-appearance] .comment-live-preview .comment-entry {
+  --editor-preview-avatar-size: min(var(--comment-editor-preview-avatar-size, 120px), 40cqi);
+  max-width: 100%;
+  gap: 0.8rem;
+  padding: 1.25rem 0.25rem;
+}
+
+[data-comment-editor-appearance] .comment-live-preview .comment-content {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+[data-comment-editor-appearance] .comment-live-preview .comment-combat-profile-shell {
+  --comment-combat-profile-size: var(--editor-preview-avatar-size);
+}
+
+[data-comment-editor-appearance] .comment-live-preview :is(.comment-portrait, .comment-portrait-placeholder) {
+  width: var(--editor-preview-avatar-size);
+  height: var(--editor-preview-avatar-size);
+}
+
+[data-comment-editor-appearance] .comment-live-preview :is(.comment-live-preview-avatar, .comment-live-preview-avatar-ph) {
+  width: min(var(--comment-editor-preview-avatar-size, 120px), 40cqi);
+  height: min(var(--comment-editor-preview-avatar-size, 120px), 40cqi);
+}
+
+[data-comment-editor-appearance] .comment-segment-avatar-row {
+  --comment-segment-avatar-size: var(--comment-editor-segments-avatar-size, 80px);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, calc(var(--comment-segment-avatar-size) + 1.5rem)), 1fr));
+}
+
+/* Match the composer's scoped selector without changing other avatar pickers. */
+#comment-form-overlay .comment-segment-avatar-row {
+  --comment-segment-avatar-size: var(--comment-editor-segments-avatar-size, 80px);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, calc(var(--comment-segment-avatar-size) + 1.5rem)), 1fr));
+}
+
+@media (max-width: 480px) {
+  [data-comment-editor-appearance] .comment-avatar-size-control {
+    grid-template-columns: minmax(0, 1fr) 3.4rem;
+  }
+  [data-comment-editor-appearance] .comment-avatar-size-control label {
+    grid-column: 1 / -1;
+  }
+}
