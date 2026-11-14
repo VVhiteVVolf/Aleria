@@ -2619,6 +2619,14 @@
       "title": "Die fünf Interessenbünde"
     },
     {
+      "id": "gwynthor-zuberhaus-reine-ratte",
+      "title": "Die Reine Ratte"
+    },
+    {
+      "id": "gwynthor-rattenweg",
+      "title": "Rattenweg"
+    },
+    {
       "id": "gwynthorer-theater",
       "title": "Gwynthorer Theater"
     },
@@ -4302,6 +4310,76 @@
       "id": "gwynthor-klingende-muenze-interessenbuende::page:muenze-familie-aurdden-loer",
       "title": "Die fünf Interessenbünde · Aurdden & Loer · Stein, Gold und Münze",
       "moduleId": "gwynthor-klingende-muenze-interessenbuende"
+    },
+    {
+      "id": "gwynthor-zuberhaus-reine-ratte",
+      "title": "Die Reine Ratte",
+      "moduleId": "gwynthor-zuberhaus-reine-ratte"
+    },
+    {
+      "id": "gwynthor-zuberhaus-reine-ratte::page:reine-ratte-einleitung",
+      "title": "Die Reine Ratte · Die Reine Ratte",
+      "moduleId": "gwynthor-zuberhaus-reine-ratte"
+    },
+    {
+      "id": "gwynthor-zuberhaus-reine-ratte::page:reine-ratte-hierarchie",
+      "title": "Die Reine Ratte · Hierarchie · Leute der Reinen Ratte",
+      "moduleId": "gwynthor-zuberhaus-reine-ratte"
+    },
+    {
+      "id": "gwynthor-zuberhaus-reine-ratte::page:reine-ratte-dienste",
+      "title": "Die Reine Ratte · Dienstleistungen und Preise",
+      "moduleId": "gwynthor-zuberhaus-reine-ratte"
+    },
+    {
+      "id": "gwynthor-zuberhaus-reine-ratte::session:reine-ratte-waschsalon",
+      "title": "Die Reine Ratte · Waschsalon",
+      "moduleId": "gwynthor-zuberhaus-reine-ratte"
+    },
+    {
+      "id": "gwynthor-zuberhaus-reine-ratte::session:reine-ratte-stube-treibholz",
+      "title": "Die Reine Ratte · Private Stube · Treibholz",
+      "moduleId": "gwynthor-zuberhaus-reine-ratte"
+    },
+    {
+      "id": "gwynthor-zuberhaus-reine-ratte::session:reine-ratte-stube-seifenschaum",
+      "title": "Die Reine Ratte · Private Stube · Seifenschaum",
+      "moduleId": "gwynthor-zuberhaus-reine-ratte"
+    },
+    {
+      "id": "gwynthor-zuberhaus-reine-ratte::session:reine-ratte-stube-letzter-tropfen",
+      "title": "Die Reine Ratte · Private Stube · Letzter Tropfen",
+      "moduleId": "gwynthor-zuberhaus-reine-ratte"
+    },
+    {
+      "id": "gwynthor-zuberhaus-reine-ratte::session:reine-ratte-keller",
+      "title": "Die Reine Ratte · Vorratskeller",
+      "moduleId": "gwynthor-zuberhaus-reine-ratte"
+    },
+    {
+      "id": "gwynthor-rattenweg",
+      "title": "Rattenweg",
+      "moduleId": "gwynthor-rattenweg"
+    },
+    {
+      "id": "gwynthor-rattenweg::session:rattenweg-kanaleingang",
+      "title": "Rattenweg · Kanaleingang",
+      "moduleId": "gwynthor-rattenweg"
+    },
+    {
+      "id": "gwynthor-rattenweg::session:rattenweg-schlickmarkt",
+      "title": "Rattenweg · Schlickmarkt",
+      "moduleId": "gwynthor-rattenweg"
+    },
+    {
+      "id": "gwynthor-rattenweg::session:rattenweg-blinder-arm",
+      "title": "Rattenweg · Der Blinde Arm",
+      "moduleId": "gwynthor-rattenweg"
+    },
+    {
+      "id": "gwynthor-rattenweg::session:rattenweg-dochtwinkel",
+      "title": "Rattenweg · Der Dochtwinkel",
+      "moduleId": "gwynthor-rattenweg"
     },
     {
       "id": "gwynthorer-theater",
@@ -6726,6 +6804,7 @@
     "AleriaAlmanach/modules/gwynthor-landfamilien/landfamilien-data.js",
     "AleriaAlmanach/modules/gwynthor-marktplatz/marketplace-data.js",
     "AleriaAlmanach/modules/gwynthor-theater/theater-data.js",
+    "AleriaAlmanach/modules/gwynthor-underworld/underworld-data.js",
     "AleriaAlmanach/modules/house-retinues/house-retinues-data.js",
     "AleriaAlmanach/modules/house-warriors/house-warriors-data.js",
     "AleriaAlmanach/modules/kleiner-durst/durst-data.js",

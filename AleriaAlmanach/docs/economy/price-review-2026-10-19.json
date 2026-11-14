@@ -4,9 +4,9 @@
   "moneyUnit": "Kupfertaler",
   "method": "Interne Konsistenzprüfung einer fiktiven Wirtschaft. Vergleichsskala: 24 KT sparsamer Vierpersonenbedarf + 3 KT freie Mittel; 27 KT Hafenlohn bei sechs Diensttagen. Keine historische Preisstatistik.",
   "summary": {
-    "rows": 1607,
+    "rows": 1613,
     "adjusted": 148,
-    "retained": 1252,
+    "retained": 1258,
     "notOffered": 205,
     "unavailable": 2,
     "eligibleVenues": 23,
@@ -303,6 +303,36 @@
       ],
       "eligible": false,
       "reason": "Kalkulation für diesen Ort ausdrücklich zurückgestellt."
+    },
+    {
+      "id": "gwynthor-zuberhaus-reine-ratte",
+      "title": "Die Reine Ratte",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Gwynthor-Unterwelt"
+      ],
+      "eligible": false,
+      "reason": "Kein konkret erwerbbares Güter- oder Badeangebot."
+    },
+    {
+      "id": "gwynthor-rattenweg",
+      "title": "Rattenweg",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Gwynthor-Unterwelt"
+      ],
+      "eligible": false,
+      "reason": "Kein konkret erwerbbares Güter- oder Badeangebot."
     },
     {
       "id": "gwynthor-badehaus-fontani",
@@ -26155,6 +26185,144 @@
       "after": [
         2,
         2
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Reine Ratte",
+      "moduleId": "gwynthor-zuberhaus-reine-ratte",
+      "id": "service-0",
+      "name": "Schnelle Hafenwäsche",
+      "unit": "Eine Person · ein Waschgang",
+      "price": {
+        "minCopper": 0.5,
+        "maxCopper": 0.5
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        0.5,
+        0.5
+      ],
+      "after": [
+        0.5,
+        0.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Reine Ratte",
+      "moduleId": "gwynthor-zuberhaus-reine-ratte",
+      "id": "service-1",
+      "name": "Ein Platz im Zuber",
+      "unit": "Eine Person · bis zu einer halben Stunde",
+      "price": {
+        "minCopper": 1.5,
+        "maxCopper": 1.5
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        1.5,
+        1.5
+      ],
+      "after": [
+        1.5,
+        1.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Reine Ratte",
+      "moduleId": "gwynthor-zuberhaus-reine-ratte",
+      "id": "service-2",
+      "name": "Rücken schrubben",
+      "unit": "Eine Person · kurze Abreibung",
+      "price": {
+        "minCopper": 0.5,
+        "maxCopper": 0.5
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        0.5,
+        0.5
+      ],
+      "after": [
+        0.5,
+        0.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Reine Ratte",
+      "moduleId": "gwynthor-zuberhaus-reine-ratte",
+      "id": "service-3",
+      "name": "Ein frisches Leinentuch",
+      "unit": "Ein Tuch · leihweise",
+      "price": {
+        "minCopper": 0.5,
+        "maxCopper": 0.5
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        0.5,
+        0.5
+      ],
+      "after": [
+        0.5,
+        0.5
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Reine Ratte",
+      "moduleId": "gwynthor-zuberhaus-reine-ratte",
+      "id": "service-4",
+      "name": "Eine Stube für sich",
+      "unit": "Eine Person · eine Stunde · nach Verfügbarkeit",
+      "price": {
+        "minCopper": 3,
+        "maxCopper": 3
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        3,
+        3
+      ],
+      "after": [
+        3,
+        3
+      ],
+      "decision": "beibehalten",
+      "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
+    },
+    {
+      "source": "Die Reine Ratte",
+      "moduleId": "gwynthor-zuberhaus-reine-ratte",
+      "id": "service-5",
+      "name": "Gesellschaft hinter dem Vorhang",
+      "unit": "Nach persönlicher Vereinbarung · Stube gesondert",
+      "price": {
+        "minCopper": 4,
+        "maxCopper": 4
+      },
+      "category": "Dienstleistung",
+      "unchangedService": true,
+      "before": [
+        4,
+        4
+      ],
+      "after": [
+        4,
+        4
       ],
       "decision": "beibehalten",
       "reason": "Dienstleistung bleibt erhalten; Umfang, enthaltene Kammer, Zeit und mögliche Anrechnung werden in der Betriebskalkulation getrennt behandelt."
