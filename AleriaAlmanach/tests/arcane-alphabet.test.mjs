@@ -15,6 +15,7 @@ function loadArcane() {
   });
   context.window = context;
   for (const path of [
+    '../modules/core/content-safety.js',
     '../../Fonts/Arkanes-Alphabet/arcane.js',
     '../modules/language/language-script-display.js',
     '../modules/language/language-script-registry.js',
