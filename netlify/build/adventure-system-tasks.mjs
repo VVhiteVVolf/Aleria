@@ -23,6 +23,7 @@ const groupTests = ['group-adventure-content', 'group-community', 'group-roster-
   'group-section-migration', 'gawain-duncan', 'gawain-content-source-projection', 'gawain-character-database', 'gawain-family-snapshot',
   'landing-folio-view', 'landing-presentation', 'landing-quest-journal', 'currency-art'];
 const itemTests = ['item-definitions', 'item-system-readiness', 'item-system-checkup', 'item-register', 'item-register-text',
+  'scene-elements', 'scene-element-art', 'scene-element-ai-guide',
   'item-register-integration', 'item-register-modules', 'item-register-providers', 'item-register-template-search',
   'item-use-definitions', 'inventory-use-model', 'scene-inventory-transfer', 'scene-item-authoring',
   'character-inventory-itemization', 'character-equipment-sync', 'equipment-standards-2026-11', 'inventory-equipment-effects',
@@ -56,6 +57,10 @@ export const ADVENTURE_SYSTEM_TASKS = [
   {
     id: 'item-mechanics', label: 'Versioned item standards, transfers, equipment, use and authoritative transaction regressions',
     inputs: [...mechanicalFeatures, ...mechanicalSourceInputs, ...goodsModuleInputs, ...BUILTIN_TRADE_SOURCE_FILES, ...currencyArtInputs, 'AleriaAlmanach/modules/regional-equipment/',
+      'AleriaAlmanach/modules/scene-elements/', 'AleriaAlmanach/modules/herausforderung/', 'AleriaAlmanach/modules/skill-checks/',
+      'AleriaAlmanach/styles/scene-elements.css', 'AleriaAlmanach/styles/herausforderung.css', 'AleriaAlmanach/assets/scene-elements/',
+      'AleriaAlmanach/styles/combat-encounter.css',
+      'AleriaAlmanach/scripts/admit-gwynthor-seven-art.py',
       'AleriaAlmanach/AleriaAlmanach.html', 'AleriaAlmanach/modules/economy-calculator/',
       'AleriaAlmanach/modules/economy-pricing/', 'AleriaAlmanach/modules/gwynthor-geography/',
       'AleriaAlmanach/styles/scene-trade.css', 'AleriaAlmanach/styles/scene-trade-notification.css',

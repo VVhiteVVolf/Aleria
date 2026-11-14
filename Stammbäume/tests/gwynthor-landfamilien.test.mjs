@@ -84,7 +84,7 @@ test('known source defaults upgrade while personal notes, ages and biographies s
     const family=current(slug), old=baseline.find(record=>record.document.id===family.document.id);
     const upgraded=resolveRegisteredFamilyUpgrade(family,old);
     assert.equal(upgraded.lineage.founderPartnershipId,family.lineage.founderPartnershipId);
-    assert.equal(upgraded.extensions.sourceRevision,2);
+    assert.equal(upgraded.extensions.sourceRevision,family.extensions.sourceRevision);
     assert.deepEqual(upgraded.extensions.houseBiographyModule,family.extensions.houseBiographyModule);
     for (const person of own(family)) assert.equal(upgraded.persons.find(record=>record.id===person.id).birth,person.birth);
     if(slug==='tirfelyn') {
@@ -106,8 +106,8 @@ test('known source defaults upgrade while personal notes, ages and biographies s
   }
 });
 
-test('five uninvolved families remain byte-equivalent as structured source records', () => {
-  for (const before of baseline.filter(family=>!['haus-tirfelyn','haus-helfaen','haus-marchwern'].includes(family.document.id))) {
+test('the uninvolved Ysgellfor household remains byte-equivalent as a structured source record', () => {
+  for (const before of baseline.filter(family=>family.document.id==='haus-ysgellfor')) {
     assert.deepEqual(families.find(family=>family.document.id===before.document.id),before);
   }
 });

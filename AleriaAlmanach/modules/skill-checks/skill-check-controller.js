@@ -9,7 +9,7 @@ import { getCheckDescription } from './skill-check-guidance.js?v=20261015-check-
 import { describeCheckModifierSource } from './attribute-check-model.js?v=20261015-check-options-v1';
 import { getSkillActionPermissionBlock, renderSkillActionPermissionBlock } from './skill-action-permission-view.js';
 import { previewChallengeCombatBenefits, collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js?v=20261015-graded-challenges-v1';
-import { getChallengeAttemptSettings } from './skill-challenge-attempt.js?v=20261016-check-policy-v1';
+import { getChallengeAttemptSettings } from './skill-challenge-attempt.js?v=20261113-scene-elements-v1';
 import { getChallengeCombatBindingError } from '../herausforderung/herausforderung-combat-context.js?v=20261015-check-options-v1';
 import { getActiveCombatPartyMap, getEncounterRelationship, getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20261013-performance-v1';
@@ -36,8 +36,8 @@ import {
   resolveSkillModifier
 } from './skill-check-model.js?v=20261016-guided-checks-v1';
 import { narrateSkillResolution } from './skill-check-narration.js?v=20261015-graded-challenges-v1';
-import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20261016-check-policy-v1';
-import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20260928-equipment-art-v4';
+import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20261113-scene-elements-v1';
+import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20261113-scene-elements-v1';
 import { renderAutomaticRollMode } from '../combat/ui/combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
 import { renderSkillIcon, renderSkillChoiceGroup, renderPreferredSkillHints, skillTooltipAttributes, bindSkillIconTooltips } from './skill-icon-view.js?v=20261016-check-policy-v1';
 
@@ -348,14 +348,15 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
   if (actor && segment.skillId) {
     const actorProfile = sceneResolver.resolve(actor);
     const ruleContext = buildClientSkillRuleContext(segment, actor, actorProfile, target, actors, sceneResolver);
-    const rollContext = getSkillRollContext({ actor, settings }, { actorProfile, ruleSources: ruleContext.sources, targetProfile: ruleContext.targetProfile });
+    const rollContext = getSkillRollContext({ actor, settings, challenge: target }, { actorProfile, ruleSources: ruleContext.sources, targetProfile: ruleContext.targetProfile });
+    settings.saveContext = rollContext.settings.saveContext;
     const skill = rollContext.skill;
     permissionBlock = getSkillActionPermissionBlock(actorProfile, skill.definition);
     profileModifier = skill.modifier;
     ruleModifier = Number(rollContext.preEffects[rollContext.modifierKey] || 0);
     automaticModifier = profileModifier + ruleModifier + checkRule.modifier;
     for (const check of CHECK_DEFINITIONS) checkValues[check.id] = resolveSkillModifier(actorProfile, check.id, settings.saveContext).modifier;
-    rollModes = [...rollContext.profileRollModes, ...rollContext.preApplications.map(application => application.effects?.rollMode)];
+    rollModes = [...rollContext.profileRollModes, ...rollContext.preApplications.map(application => application.effects?.rollMode), rollContext.challengeRollMode];
     const sign = skill.modifier >= 0 ? '+' : '';
     profileDetail = `${sign}${skill.modifier} aus ${describeCheckModifierSource(skill.source)}`;
   }
@@ -386,7 +387,7 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
           <small>${target ? 'Wird von der Herausforderung vorgegeben' : 'SG 10 ist ein einfacher Standardversuch'}</small>
         </label>
         ${renderAutomaticRollMode(rollModes)}
-        ${getCheckDefinition(settings.skillId)?.checkType === 'saving-throw' ? renderSkillSaveContext(settings) : ''}
+        ${getCheckDefinition(settings.skillId)?.checkType === 'saving-throw' ? `<fieldset class="scene-element-save-context"${target?.reaction ? ' disabled' : ''}>${renderSkillSaveContext(settings)}</fieldset>` : ''}
         ${['perception', 'investigation'].includes(settings.skillId) ? `<label>Wahrnehmungsweg<select data-skill-input="requiredSense">${Object.entries({ '': 'Gemischt / passende Alternative', vision: 'Sehen erforderlich', hearing: 'Hören erforderlich', smell: 'Riechen erforderlich', taste: 'Schmecken erforderlich', touch: 'Tasten erforderlich' }).map(([id, name]) => `<option value="${id}"${settings.requiredSense === id ? ' selected' : ''}>${name}</option>`).join('')}</select></label>` : ''}
       </div>
       ${target ? `<div class="skill-check-target-note"><b>${target.source === 'herausforderung' ? 'Freigegebene Proben' : `${escapeHtml(target.authorName)} · ${escapeHtml(getContributionRankLabel(target.contributionRank))}`}</b>${renderPreferredSkillHints(target)}</div>` : ''}

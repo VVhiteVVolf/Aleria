@@ -56,6 +56,7 @@ export const BESTIARY_PROFILES = Object.freeze([
   Object.freeze({"id":"tiere/raubtiere/baeren/draugrbjorn","name":"Draugrbjorn","genus":"Bären"}),
   Object.freeze({"id":"tiere/raubtiere/baeren/dubharr","name":"Dubharr","genus":"Bären"}),
   Object.freeze({"id":"tiere/raubtiere/baeren/gramh","name":"Grámh","genus":"Bären"}),
+  Object.freeze({"id":"tiere/raubtiere/baeren/madruach","name":"Madrúach","genus":"Bären"}),
   Object.freeze({"id":"tiere/raubtiere/baeren/muine","name":"Muine","genus":"Bären"}),
   Object.freeze({"id":"tiere/raubtiere/woelfe/brychgi","name":"Brychgi","genus":"Wölfe"}),
   Object.freeze({"id":"tiere/raubtiere/woelfe/faerog","name":"Faerog","genus":"Wölfe"}),

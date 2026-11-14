@@ -171,7 +171,7 @@ export function buildTailoringCharacterExports(registry, existingCharacters=[]){
   if(alreadyOnline){
    // Existing biographies, jobs, portraits and complete avatar libraries survive.
    character={id:runtimeId,name:candidate.displayName,identity:imported.identity,genealogy:imported.genealogy,updatedAt:TAILORING_AUTHORED_AT};
-   if(['nia-maerllys','person-e847aa96'].includes(candidate.personId)){
+   if(candidate.personId==='nia-maerllys'){
     const paragraphs=TAILORING_LIFE[candidate.personId],portrait=prior?.portrait||candidate.portrait;
     character.bio=paragraphs.join('\n\n');
     character.biography=biography(candidate.displayName,paragraphs,portrait,[['Vollständiger Name',candidate.displayName],['Geboren',candidate.birth],['Alter',`${1740-Number(candidate.birth)} Jahre`],['Tätigkeit',candidate.title],['Familie',candidate.houseName]]);

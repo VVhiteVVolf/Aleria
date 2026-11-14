@@ -19,6 +19,14 @@ function isSafeHttpUrl(value) {
   }
 }
 
+// Shared by page import and image rendering. Accept a centered vertical
+// percentage for scene landmarks, never arbitrary object-position CSS.
+function sanitizeModulePageImagePosition(input) {
+  const value = String(input || '').trim();
+  if (['top', 'center', 'bottom', 'left', 'right'].includes(value)) return value;
+  return /^center (?:100|[1-9]?\d)%$/.test(value) ? value : '';
+}
+
 function sanitizeImageSrc(src) {
   const value = String(src ?? '').trim();
   if (!value) return '';

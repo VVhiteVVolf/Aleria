@@ -5,9 +5,10 @@ import { normalizeChallengeAudience, validateChallengeAudience } from './herausf
 import { normalizeChallengeSceneImage, validateChallengeSceneImage } from './herausforderung-scene-image-model.js';
 import { normalizeChallengeCheckPenalties, validateChallengeCheckPenalties } from './herausforderung-check-policy.js?v=20261016-check-policy-v1';
 import { normalizeChallengeTarget, validateChallengeTarget } from './herausforderung-target.js?v=20261016-check-policy-v1';
+import { getSceneElementType, normalizeSceneElementActivation, normalizeSceneElementReaction, validateSceneElementConfiguration } from '../scene-elements/scene-element-model.js';
 
 export const HERAUSFORDERUNG_EVENT_KIND = 'herausforderung-event';
-export const HERAUSFORDERUNG_SCHEMA_VERSION = 9;
+export const HERAUSFORDERUNG_SCHEMA_VERSION = 10;
 export const MIN_HERAUSFORDERUNG_APPROACHES = 1;
 export const MAX_HERAUSFORDERUNG_APPROACHES = 6;
 export const HERAUSFORDERUNG_NARROW_FAILURE_MARGIN = 3;
@@ -17,7 +18,7 @@ export const HERAUSFORDERUNG_ALTERNATIVE_MODIFIER = 0;
 // Used by both the authoring dialog and the server before normalization.
 export function getHerausforderungValidationIssues(event = {}) {
   event = event && typeof event === 'object' ? event : {};
-  const issues = [];
+  const issues = validateSceneElementConfiguration(event);
   const targetError = validateChallengeTarget(event.targetActor);
   if (targetError) issues.push({ field: 'targetActor', message: targetError });
   const imageError = validateChallengeSceneImage(event.sceneImage);
@@ -26,7 +27,7 @@ export function getHerausforderungValidationIssues(event = {}) {
   if (audienceError) issues.push({ field: 'audience', message: audienceError });
   if (!String(event.publicDescription || '').trim()) issues.push({ field: 'publicDescription', message: 'Eine öffentliche Beschreibung ist erforderlich.' });
   const approaches = Array.isArray(event.approaches) ? event.approaches : [];
-  if (!approaches.length) issues.push({ field: 'approaches', message: 'Mindestens ein Ansatz ist erforderlich.' });
+  if (!approaches.length && event.elementType !== 'narration') issues.push({ field: 'approaches', message: 'Mindestens ein Ansatz ist erforderlich.' });
   if (approaches.length > MAX_HERAUSFORDERUNG_APPROACHES) issues.push({ field: 'approaches', message: 'Höchstens sechs Ansätze sind erlaubt.' });
   const ids = new Set();
   approaches.forEach((approach, index) => {
@@ -109,6 +110,11 @@ export function normalizeHerausforderungEvent(value = {}) {
   return {
     kind: HERAUSFORDERUNG_EVENT_KIND,
     schemaVersion: HERAUSFORDERUNG_SCHEMA_VERSION,
+    elementType: getSceneElementType(source.elementType).id,
+    completionMode: source.completionMode === 'any' || (source.elementType === 'puzzle' && source.completionMode !== 'all') ? 'any' : 'all',
+    activation: normalizeSceneElementActivation(source.activation, source.elementType),
+    ...(source.reaction ? { reaction: normalizeSceneElementReaction(source.reaction) } : {}),
+    ...(source.sceneElementId ? { sceneElementId: text(source.sceneElementId, 240) } : {}),
     title: text(source.title, 180) || 'Herausforderung',
     publicDescription: text(source.publicDescription, 4000),
     targetActor: normalizeChallengeTarget(source.targetActor),
@@ -116,7 +122,7 @@ export function normalizeHerausforderungEvent(value = {}) {
     audience: normalizeChallengeAudience(source.audience),
     combatBound: source.combatBound === true || source.audience?.mode === 'combatants',
     combatContext: { encounterId: text(source.combatContext?.encounterId, 180) },
-    approaches
+    approaches: source.elementType === 'narration' ? [] : approaches
   };
 }
 
@@ -136,16 +142,23 @@ export function parseHerausforderungApproachTargetId(targetId = '') {
 
 export function collectHerausforderungApproaches(comments = []) {
   const approaches = [];
+  const solvedIds = new Set(comments.flatMap(comment => (comment.commentSegments || []).map(segment => segment?.skillResolution))
+    .filter(resolution => resolution && (resolution.herausforderungSolved ?? ['success', 'critical-success'].includes(resolution.outcome))).map(resolution => resolution.targetChallengeId));
+  const attemptedIds = new Set(comments.flatMap(comment => (comment.commentSegments || []).map(segment => segment?.skillResolution?.targetChallengeId)).filter(Boolean));
   (Array.isArray(comments) ? comments : []).forEach(comment => {
     if (!isHerausforderungComment(comment)) return;
     const event = normalizeHerausforderungEvent(comment.herausforderung || comment);
     const commentId = text(comment?.id, 200);
     if (!commentId) return;
     const authorKey = `herausforderung:${commentId}`;
+    if (event.completionMode === 'any' && event.approaches.some(approach => solvedIds.has(getHerausforderungApproachTargetId(commentId, approach.approachId)))) return;
+    if (event.reaction && event.approaches.some(approach => attemptedIds.has(getHerausforderungApproachTargetId(commentId, approach.approachId)))) return;
     event.approaches.forEach((approach, index) => {
       approaches.push({
         schemaVersion: HERAUSFORDERUNG_SCHEMA_VERSION,
         source: 'herausforderung',
+        completionMode: event.completionMode,
+        ...(event.reaction ? { reaction: event.reaction } : {}),
         audience: event.audience, combatBound: event.combatBound, combatContext: event.combatContext,
         id: getHerausforderungApproachTargetId(commentId, approach.approachId),
         commentId,

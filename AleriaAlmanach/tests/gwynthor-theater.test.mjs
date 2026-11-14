@@ -73,10 +73,10 @@ test('Rhianna reuses her canonical identity and portrait, and import plans prese
   assert.equal(plan.entries.filter(p=>p.create).length,16);
 });
 
-test('repertoire retains four vacancies and the specified historical story facts',()=>{
+test('repertoire uses one vacancy for Glannadeor and preserves the previous historical story facts',()=>{
   const works=entry.pages[4].theatreProgram.items;
-  assert.equal(works.filter(p=>p.title).length,4);
-  assert.equal(works.filter(p=>!p.title).length,4);
+  assert.equal(works.filter(p=>p.title).length,5);
+  assert.equal(works.filter(p=>!p.title).length,3);
   const text=works.map(p=>JSON.stringify(p));
   assert.match(text[0],/Lehrling/);assert.match(text[0],/rotes Haar/);
   assert.match(text[1],/Sigrun.*Freydis Frostauge/);assert.match(text[1],/Sabjorn.*Sigurd Vaeren/);
@@ -103,10 +103,10 @@ test('repertoire sanitation handles null input, is idempotent and does not cap e
   assert.ok(!('unknown' in data.items[2]));assert.deepEqual(sanitize(data),data);
 });
 
-test('all twenty-nine active project assets and reused portraits exist and match the saved generation records',async()=>{
+test('all thirty active project assets and reused portraits match their saved generation records',async()=>{
   const manifest=await json('../assets/gwynthor-theater/image-prompts.json');
   const results=await json('../assets/gwynthor-theater/image-results.json');
-  assert.equal(manifest.entries.length,29);assert.equal(results.images.length,29);
+  assert.equal(manifest.entries.length,30);assert.equal(results.images.length,30);
   for(const job of manifest.entries){
     const bytes=await readFile(new URL(`../../${job.destination}`,import.meta.url));
     assert.equal(createHash('sha256').update(bytes).digest('hex'),results.images.find(r=>r.id===job.id)?.sha256,job.id);

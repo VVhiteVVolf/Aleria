@@ -53,6 +53,7 @@ function documentFiles(record, updatedAt) {
     owner[field] = images.get(data);
   };
   Object.entries(document.media).forEach(([key, slot]) => materialize(slot, 'image', key));
+  materialize(document, 'bookBackCover', 'back-cover');
   materialize(document, 'texture', 'texture'); document.image = document.media.main.image;
   const saved = { schemaVersion: 2, id: record.id, revision, updatedAt, document };
   const content = JSON.stringify(saved, null, 2) + '\n';
@@ -72,6 +73,7 @@ export async function publish(records, config, fetchRef = fetch) {
   for (const record of records) {
     const current = decodeContent(await github.readContent(`${ROOT}/data/${record.id}.json`, head), null);
     const actual = current?.revision || 0;
+    if (current?.document?.schemaVersion >= 3 && record.document.schemaVersion < 3) throw Object.assign(new Error('Dieses Buch enthält Seitenpositionen, einen Rückdeckel oder speicherbare Notizen. Bitte die aktuelle Dokumentenwerkstatt neu laden, damit diese Felder erhalten bleiben.'), { status: 409 });
     if (actual !== record.expectedRevision) throw Object.assign(new Error(`„${record.document.title}“ hat online Revision ${actual}. Bitte die Online-Fassung laden, Änderungen abgleichen und erneut vormerken.`), { status: 409 });
   }
   const updatedAt = new Date().toISOString();

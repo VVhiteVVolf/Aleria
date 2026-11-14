@@ -1,6 +1,6 @@
 import { itemBuilderDraft, definitionFromBuilderDraft } from './item-builder-model.js';
 import { itemBuilderMarkup } from './item-builder-view.js';
-import { normalizeItemCombatDefinition, definitionTemplate } from '../item-definitions/item-definition-model.js';
+import { normalizeItemCombatDefinition, normalizeItemDocumentRef, definitionTemplate } from '../item-definitions/item-definition-model.js';
 import { itemDefinitionRegistry } from '../item-definitions/item-definition-registry.js';
 import { itemDefinitionStore } from '../item-definitions/item-definition-store.js';
 import { connectItemDefinitionClient } from '../item-definitions/item-definition-client.js';
@@ -24,6 +24,11 @@ function collect() {
   if (draft.intent === 'existing') return;
   const values = Object.fromEntries(new FormData(dialog.querySelector('form')));
   for (const key of ['title', 'type', 'image', 'description', 'mechanicsStatus']) draft[key] = values[key] ?? draft[key];
+  const documentId = String(values.documentId || '').trim();
+  const documentRef = normalizeItemDocumentRef({ id: documentId });
+  if (documentId && !documentRef) throw Error('Bitte die Dokument-ID aus dem Werkstatt-Leserlink eintragen.');
+  if (documentRef) draft.documentRef = documentRef;
+  else delete draft.documentRef;
   draft.weight = values.weight === '' ? null : Number(values.weight);
   if (draft.combatDefinition) {
     for (const key of ['damageFormula', 'versatileDamageFormula', 'damageType', 'weaponType', 'weaponProfileId', 'training', 'attackAttribute', 'range', 'requirements', 'properties', 'notes', 'aiInstructions', 'armorKind', 'armorCategory', 'dexterityMode']) {

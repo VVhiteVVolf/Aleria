@@ -13,7 +13,9 @@ const canonical = value => {
 };
 
 export function developmentTraitEffectSignature(entry) {
-  const normalized = sanitizeCharacterCombatProfile({ quirks: [{ ...entry, active: true }] }).quirks[0];
+  // Compare authored historical mechanics, without applying later catalog revisions.
+  const normalized = sanitizeCharacterCombatProfile({ quirks: [{ ...entry, id: 'test-effect-signature',
+    developmentTraitId: '', tags: '', icon: '', active: true }] }).quirks[0];
   const mechanics = { ...normalized.mechanics };
   for (const key of ['skillModifiers', 'skillProficiencies']) if (mechanics[key]) mechanics[key] = mechanics[key].map(modifier => ({
     ...modifier, name: getSkillIdentity(modifier.name) || modifier.name.toLocaleLowerCase('de')

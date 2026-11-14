@@ -311,10 +311,12 @@ function renderCommentsToScroll(scroll, comments) {
   const sortedHistory = typeof dedupeSceneTransitionComments === 'function'
     ? dedupeSceneTransitionComments(sortCommentsByTimeline(comments))
     : sortCommentsByTimeline(comments);
-  const sortedComments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(sortedHistory) || sortedHistory;
+  const publicHistory = globalThis.AleriaSceneElements?.filterTimeline?.(sortedHistory) || sortedHistory.filter(comment => !comment.sceneElementSignal);
+  const sortedComments = globalThis.AleriaSceneRegenerationPolicy?.filterVisible(publicHistory) || publicHistory;
   window.AleriaSkillChecks?.setRenderContext?.(sortedHistory);
   window.AleriaHerausforderung?.setRenderContext?.(sortedHistory);
   const threadId = getCommentPaginationThreadId(scroll);
+  globalThis.AleriaSceneElements?.sync?.(sortedHistory, { threadId, host: scroll.parentElement, scroll });
   const pageInfo = getCommentPaginationWindow(sortedComments, threadId);
   const visibleComments = pageInfo.comments;
   const sceneTimeline = typeof buildSceneTimeline === 'function' ? buildSceneTimeline(sortedComments) : [];

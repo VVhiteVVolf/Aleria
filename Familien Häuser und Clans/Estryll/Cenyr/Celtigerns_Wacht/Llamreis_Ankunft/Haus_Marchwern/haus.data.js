@@ -94,7 +94,7 @@ window.HAEUSER_DATA = {
   "showMotto": false,
   "sections": {
     "overview": "Das Marchwern-Gestüt ist ein wichtiger Zuchtbetrieb im östlichen Bannkreis von Gwynthor. Die Familie steht unmittelbar im Dienst des Hauses Wyrm und stellt gute Reitpferde bereit. Gwrgi Marchwern leitet den Betrieb mit Unterstützung seines Bruders Gwynog und seiner Frau Mared. Vierzehn lebende Angehörige gehören zum gemeinsamen Gestütshaushalt. Braunes Haar und grüne Augen prägen das Familienbild.\n\nZum Bestand gehören vielseitige Rhyfel, einige seltene reine Ceffyl und weitere geeignete Reitpferde. Verlässliche Bezugspersonen und feste Stallroutinen sind besonders für die anspruchsvollen Ceffyl wichtig. Der Dienst für Haus Wyrm begründet keinen anderen Wohnort: Die Familie lebt und arbeitet an ihrem Gestüt bei Gwynthor.",
-    "history": "Die Namen der älteren Gründer und der Generationen zwischen ihnen und der heutigen Familie sind nicht überliefert. Die näher bekannte Familie beginnt mit den Brüdern Gwrgi und Gwynog und führt über deren Kinder bis zu den kleinen Enkeln.\n\nGwrgi und Mared sind die Eltern Rhuns, Eluneds und Rhunedds. Rhun und seine Frau Gwenlliw haben die Söhne Gwyndaf und Euron. Gwynog und Cynwen sind die Eltern Cynogs, Dwynwens, Eilfyws und Llywelas. Die Herkunftsfamilien der angeheirateten Frauen sind nicht benannt. Die Familie lebt und arbeitet im von der ungelösten Mordserie betroffenen Umland.",
+    "history": "Die Namen der älteren Gründer und der Generationen zwischen ihnen und der heutigen Familie sind nicht überliefert. Die näher bekannte Familie beginnt mit den Brüdern Gwrgi und Gwynog und führt über deren Kinder bis zu den kleinen Enkeln.\n\nGwrgi und Mared sind die Eltern Ffraids, Rhuns, Eluneds und Rhunedds. Ffraid wurde 1740 mit fünfundzwanzig Jahren Opfer des Fleischsammlers. Ihre lebenden Geschwister tragen ihre bisherigen Aufgaben weiter. Rhun und seine Frau Gwenlliw haben die Söhne Gwyndaf und Euron. Gwynog und Cynwen sind die Eltern Cynogs, Dwynwens, Eilfyws und Llywelas. Die Herkunftsfamilien der angeheirateten Frauen sind nicht benannt. Die Familie lebt und arbeitet im von der ungelösten Mordserie betroffenen Umland.",
     "values": "Die Marchwern schätzen ruhigen, verlässlichen Umgang mit ihren Pferden. Pflege, Aufzucht und Vorbereitung gehören zusammen. Die tägliche Fürsorge soll weder wegen einer eiligen Lieferung noch wegen eines besonders wertvollen Tiers bei den übrigen Pferden vernachlässigt werden.",
     "holdings": "Die Lebensgrundlage ist das bestehende Marchwern-Gestüt bei Gwynthor. Zucht, Aufzucht und Pflege geeigneter Reitpferde dienen dem unmittelbaren Dienst für Haus Wyrm. Exakte Bestandszahlen, Weideflächen und weitere Güter sind nicht festgelegt.",
     "traditions": "Gwrgi koordiniert den Gesamtbetrieb, Mared Zucht und feste Stallroutinen, Gwynog Aufzucht und Stallarbeit. Rhun und Cynog helfen als Bereiter. Eluned arbeitet in der Aufzucht, Rhunedd und Dwynwen bei Pflege und Fütterung. Cynwen hält Futtervorräte und Hofhaushalt zusammen, Gwenlliw unterstützt Pferdepflege und Hausarbeit. Eilfyw und Llywela übernehmen altersgemäße Handgriffe. Die kleinen Kinder Gwyndaf und Euron haben keine Arbeitspflichten.",
@@ -103,8 +103,8 @@ window.HAEUSER_DATA = {
     "cultureReligion": "Die Familie gehört zu den Rheunwaith im Gwynthorer Bannkreis. Besondere religiöse Familienbräuche sind nicht überliefert.",
     "conflictsAlliances": "Die unmittelbare Dienstbindung an Haus Wyrm und die Versorgung Gwynthors mit guten Reitpferden bleiben bestehen. Sie begründen weder eine neue Herrschaftsebene noch einen anderen Familienwohnsitz. Verwandtschaften zu bestehenden Namensgleichen sind nicht ergänzt.",
     "court": "Gwrgi koordiniert den Gesamtbetrieb, Mared Zucht und feste Stallroutinen, Gwynog Aufzucht und Stallarbeit. Rhun und Cynog helfen als Bereiter. Eluned arbeitet in der Aufzucht, Rhunedd und Dwynwen bei Pflege und Fütterung. Cynwen hält Futtervorräte und Hofhaushalt zusammen, Gwenlliw unterstützt Pferdepflege und Hausarbeit. Eilfyw und Llywela übernehmen altersgemäße Handgriffe. Die kleinen Kinder Gwyndaf und Euron haben keine Arbeitspflichten.",
-    "familyTree": "Die Namen der älteren Gründer und der Generationen zwischen ihnen und der heutigen Familie sind nicht überliefert. Die näher bekannte Familie beginnt mit den Brüdern Gwrgi und Gwynog und führt über deren Kinder bis zu den kleinen Enkeln.\n\nGwrgi und Mared sind die Eltern Rhuns, Eluneds und Rhunedds. Rhun und seine Frau Gwenlliw haben die Söhne Gwyndaf und Euron. Gwynog und Cynwen sind die Eltern Cynogs, Dwynwens, Eilfyws und Llywelas. Die Herkunftsfamilien der angeheirateten Frauen sind nicht benannt. Die Familie lebt und arbeitet im von der ungelösten Mordserie betroffenen Umland.",
-    "historicalFigures": "14 Angehörige sind namentlich bekannt; davon leben 14. Die Namen der älteren Gründer und der dazwischenliegenden Generationen sind nicht überliefert."
+    "familyTree": "Die Namen der älteren Gründer und der Generationen zwischen ihnen und der heutigen Familie sind nicht überliefert. Die näher bekannte Familie beginnt mit den Brüdern Gwrgi und Gwynog und führt über deren Kinder bis zu den kleinen Enkeln.\n\nGwrgi und Mared sind die Eltern Ffraids, Rhuns, Eluneds und Rhunedds. Ffraid wurde 1740 mit fünfundzwanzig Jahren Opfer des Fleischsammlers. Ihre lebenden Geschwister tragen ihre bisherigen Aufgaben weiter. Rhun und seine Frau Gwenlliw haben die Söhne Gwyndaf und Euron. Gwynog und Cynwen sind die Eltern Cynogs, Dwynwens, Eilfyws und Llywelas. Die Herkunftsfamilien der angeheirateten Frauen sind nicht benannt. Die Familie lebt und arbeitet im von der ungelösten Mordserie betroffenen Umland.",
+    "historicalFigures": "15 Angehörige sind namentlich bekannt; davon leben 14. Die Namen der älteren Gründer und der dazwischenliegenden Generationen sind nicht überliefert."
   },
   "sectionTitles": {
     "knighthood": "4. Beruf und Hausleben",
@@ -271,6 +271,12 @@ window.HAEUSER_DATA = {
       "src": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/marchwern/euron-marchwern.png",
       "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&person=euron-marchwern",
       "alt": "Euron Marchwern",
+      "format": "portrait"
+    },
+    "haus-figur-15": {
+      "src": "../Stammbäume/assets/images/placeholders/female.png",
+      "href": "../Stammb%C3%A4ume/Stammbaum.html?family=haus-marchwern&mode=view&person=ffraid-marchwern",
+      "alt": "Ffraid Marchwern",
       "format": "portrait"
     }
   },
@@ -463,6 +469,13 @@ window.HAEUSER_DATA = {
         "name": "Euron Marchwern",
         "description": "1 Jahre. Euron ist Rhuns und Gwenlliws jüngstes Kind. Die Familie versorgt ihn im gemeinsamen Haushalt.",
         "imageKey": "haus-figur-14"
+      },
+      {
+        "group": "Familie Marchwern",
+        "role": "Verstorbene Pferdepflegerin",
+        "name": "Ffraid Marchwern",
+        "description": "25 Jahre bei ihrem Tod. Tochter Gwrgi Marchwerns und Mareds, Schwester Rhuns, Eluneds und Rhunedds. Arbeitete in der Pferdepflege am Familiengestüt und wurde Opfer des Fleischsammlers.",
+        "imageKey": "haus-figur-15"
       }
     ],
     "mobileLayout": "stacked"

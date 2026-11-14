@@ -1,0 +1,113 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-14T12:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Castell Wyrm"
+      ],
+      "description": "Am Südufer des Flusses durch Gwynthor, über eine Zugbrücke erreichbar · Flussburg · Reitkunst und höfische Rittertradition",
+      "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-wyrm.png"
+    },
+    "entry": {
+      "id": "castell-wyrm-bergfried",
+      "title": "Castell Wyrm – Bergfried",
+      "subtitle": "Wachhalle, Thronsaal und gemeinsamer Esssaal",
+      "type": "Interaktive Szene",
+      "category": "Castell Wyrm",
+      "image": "./assets/gwynthor-castles/2026-11-14/wyrm/wachhalle-v1.png",
+      "previewImage": "./assets/gwynthor-castles/2026-11-14/wyrm/wachhalle-v1.png",
+      "symbol": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-wyrm.png",
+      "icon": "",
+      "stamp": "Celtigerns Wacht · Gwynthor · Aleria",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Wachhalle des Bergfrieds",
+          "commentThreadKey": "wyrm-wachhalle",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/wyrm/wachhalle-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Die Wachhalle nimmt den Eintritt in den Bergfried auf. Unter dem Gewölbe stehen ein schlichter Tisch und eine Bank; Schilde und Speere sind im seitlichen Gestell geordnet. Der Weg zum Thronsaal bleibt breit und gut zu überblicken.</p><p>Rot-goldene Wandbehänge mit schwarzem Wyrm hängen zwischen den Türen. Aus einem schmalen Fenster fällt bewegtes Flusslicht auf die Stufen. Hier können Besucher empfangen werden, bevor sie weiter in die Herrschaftsräume treten.</p>",
+          "sessionLocation": "Castell Wyrm · Wachhalle des Bergfrieds",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Wachhalle des Bergfrieds",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Thronsaal der Wyrm",
+          "commentThreadKey": "wyrm-thronsaal",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/wyrm/thronsaal-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Der Thronsaal verbindet hohe Fenster mit dunklem, sorgfältig geschnitztem Holz. Auf einer niedrigen Stufe steht der Herrschaftssitz der Wyrm. Der schwarze geflügelte Drache liegt im goldenen Mittelfeld des Behanges, zu beiden Seiten von Rot gefasst.</p><p>Vor dem Sitz zieht sich ein roter Läufer über die Steinplatten. Seitliche Bänke bieten Platz für Gäste und den Haushalt. Durch die Flussfenster sieht man das Wasser und die Dächer am anderen Ufer; der Saal bleibt Teil einer Stadtburg.</p>",
+          "sessionLocation": "Castell Wyrm · Thronsaal der Wyrm",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Thronsaal der Wyrm",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Gemeinsamer Esssaal",
+          "commentThreadKey": "wyrm-esssaal",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/wyrm/esssaal-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Der gemeinsame Esssaal liegt nahe bei Küche und Bergfriedhalle. Lange Tische und Bänke geben dem Haushalt und seinen Gästen Platz. Ein breiter Kamin, rote Läufer und goldgesäumte Wandtücher machen die Halle warm; das schwarze Hauszeichen wacht über der Anrichte.</p><p>Brot, Obst, ein gedeckter Bratenteller und irdene Krüge stehen bereit. Über den Tageslärm hinweg lässt sich hier gemeinsam essen, eine Rückkehr feiern oder ein ruhiger Abend verbringen. Durch die Fenster fällt der letzte Schimmer vom Fluss.</p>",
+          "sessionLocation": "Castell Wyrm · Gemeinsamer Esssaal",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Gemeinsamer Esssaal",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

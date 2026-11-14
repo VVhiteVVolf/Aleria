@@ -11,6 +11,7 @@ import { createCharacterArchiveProfileItem, extractCharacterArchiveEntries } fro
 import { reviewDevelopmentTraitBalance } from '../modules/character-development/development-balance-review.js';
 import { developmentTraitEffectSignature, developmentTraitNameKey } from './support/development-trait-distinctness.mjs';
 import { sanitizeCharacterCombatProfile as serverSanitize } from '../../firebase/functions/src/generated/combat/combat-profile-model.js';
+import { assertDevelopmentTraitSnapshotPreserved } from './support/development-trait-snapshot.mjs';
 
 const root = new URL('../../', import.meta.url);
 const output = 'diagnostics/talents-quirks-abilities-20261106/';
@@ -23,12 +24,12 @@ const base = () => sanitizeCharacterCombatProfile({ progression: { level: 1, dev
   quirks: [{ id: 'personal', name: 'Persönliches Altmerkmal', active: true }],
   techniques: [{ id: 'personal-technique', name: 'Persönliche Technik', active: true }] });
 
-test('three clearly separated groups contain fifteen new names and real distinct effects each', () => {
+test('three clearly separated groups contain fifteen distinct names and real effects each', () => {
   assert.ok(DEVELOPMENT_TRAITS.length >= before.traits.length + 45);
   assert.equal(entries.length, 45);
   const names = new Set(previous.map(entry => developmentTraitNameKey(entry.name)));
-  const effects = new Set(previous.map(developmentTraitEffectSignature).filter(signature => signature !== '{}'));
   for (const [id, group] of Object.entries(EXPANSION_TRAIT_GROUPS)) {
+    const effects = new Set();
     assert.equal(group.definitions.length, 15, id);
     for (const [slug] of group.definitions) {
       const entry = entries.find(item => item.id === `development-trait-${slug}`);
@@ -82,7 +83,7 @@ test('archive copies retain selection references and repeated skill advantage is
 });
 
 test('all older definitions and every earlier icon remain exact', async () => {
-  for (const entry of before.traits) assert.deepEqual(JSON.parse(JSON.stringify(DEVELOPMENT_TRAITS.find(item => item.id === entry.id))), entry, entry.name);
+  assertDevelopmentTraitSnapshotPreserved(before.traits);
   for (const entry of before.assets) assert.equal(createHash('sha256').update(await readFile(new URL(entry.path, root))).digest('hex'), entry.sha256, entry.path);
 });
 

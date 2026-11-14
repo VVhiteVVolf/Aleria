@@ -23,8 +23,17 @@ Der Bootstrap besitzt ausschließlich den delegierten Einstieg
 und ruft dessen exportierte `openImportDialog()` auf. Der Controller besitzt
 seine internen Dialogaktionen, DOM-Verwaltung und Abbruchkennungen. Er darf den
 Einstieg nicht zusätzlich behandeln oder die Bootstrap-Schnittstelle ersetzen.
-Die vorhandenen Figuren werden vor dem Dublettenabgleich geladen; fehlende Daten
-dürfen nicht als Beleg für eine neue Person behandelt werden.
+Der vollständige leichte Figuren-Suchbestand wird vor dem Dublettenabgleich
+geladen, einschließlich lokal ergänzter Akten. Fehlende Daten dürfen nicht als
+Beleg für eine neue Person behandelt werden. Vor einer Verknüpfung mit einem
+bestehenden Profil wird gezielt dessen vollständige Akte geladen.
+
+Der Import startet mit einer durchsuchbaren Baumauswahl. Nur der gewählte Baum
+wird auf Personen abgebildet; die Gesamtsuche wird ausdrücklich angefordert.
+Ergebniswechsel ersetzen die maximal 40 Personenzeilen, statt die Liste stetig
+zu vergrößern. Die Auswahl für Sammelübernahmen bleibt separat. Mobil besitzen
+Liste und Detailvorschau eigene Ansichten mit Rücksprung; Escape schließt den
+Import über seinen eigenen Lebenszyklus und erhält den Fokus im Register.
 
 Prüfungen: `genealogy-bootstrap.test.mjs`, `actor-demand-lifecycle.test.mjs`,
 `character-register-views.test.mjs` und `character-family-memberships.test.mjs`.

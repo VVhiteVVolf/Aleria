@@ -16,6 +16,7 @@ import { getFamilyTraitOrigin, FAMILY_TRAIT_NOTE } from './development-family-tr
 import { selectFamilyTrait } from './development-family-policy.js';
 import { EXPANSION_TRAIT_GROUPS } from './development-expansion-categories.js';
 import { getRetiredDevelopmentTrait, getOwnedRetiredDevelopmentTraits } from './development-retired-traits.js';
+import { getSpiritualTraitOrigin, selectSpiritualTrait, SPIRITUAL_TRAIT_NOTE } from './development-spiritual-traits.js';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const sign = n => n > 0 ? `+${n}` : n;
 export function renderDevelopmentAttacks(profile, preview) {
@@ -53,6 +54,7 @@ function renderRetiredDevelopmentTraits(plan, profile) {
 function renderTraitCategoryNote(group) {
   if (EXPANSION_TRAIT_GROUPS[group]) return `<p class="development-advice">${escape(EXPANSION_TRAIT_GROUPS[group].note)}</p>`;
   const notes = {
+    spiritual: SPIRITUAL_TRAIT_NOTE,
     family: FAMILY_TRAIT_NOTE,
     general: 'Allgemeine Eigenschaften mit kleinen, dauerhaft geltenden Boni und Mali. Fertigkeitsmodifikatoren vergeben keine Ausbildung.',
     bloodline: 'Blutträger sind Menschen mit einem infernalen oder celestialen Vorfahren. Diese angeborene Anlage wird hier dokumentiert oder nachgetragen. Die Punkte bewerten ihre Wirkung; Abstammung wird nicht durch Training erworben. Zauber und weitere Fähigkeiten werden individuell ausgearbeitet.',
@@ -79,6 +81,7 @@ function renderDevelopmentTraitOrigin(trait) {
 function matchesTraitGroup(trait, plan) {
   if (EXPANSION_TRAIT_GROUPS[plan.traitGroup]) return trait.tags.split(' · ').includes(EXPANSION_TRAIT_GROUPS[plan.traitGroup].tag);
   switch (plan.traitGroup) {
+    case 'spiritual': return Boolean(getSpiritualTraitOrigin(trait));
     case 'selected': return plan.traitIds.includes(trait.id);
     case 'body': return trait.tags.includes('Körper');
     case 'normal': return !trait.tags.includes('Körper');
@@ -114,7 +117,7 @@ export function renderDevelopmentShop(profile, preview) {
     ${!getDevelopmentAttackCatalog().some(entry=>isOwnDevelopmentClass(profile,entry))?'<p class="development-advice">Für die eigene Klasse ist noch kein freigegebener Kaufkatalog hinterlegt. Fremde Klassen kannst du über „Alle Klassen“ ansehen. Entwurfstechniken werden durch einen Kauf nicht freigeschaltet.</p>':''}
     <p>Der Kauf bildet eine individuelle Einzelausbildung ab. Waffen-, Schild-, Reit- und Aktionsvoraussetzungen gelten beim Einsatz weiterhin; fremde Klassenpassiven werden nicht mitgekauft.</p>
     <h4>${DEVELOPMENT_TRAITS.length} wählbare Traits</h4><p>Positive und negative Kosten zählen zur Balance. Traits können hier auch später geändert werden. Familienblut hat alternative Stufen; je Linie wirkt nur die höchste aktive. Zahlenboni verschiedener Merkmale können sich addieren; mehrfacher Vorteil, Expertise oder dieselbe Resistenz werden nicht vervielfacht.</p>
-    <div class="cp-level-up-fields"><label><span>Traits filtern</span><select data-level-up-path="traitGroup">${Object.entries({all:'Alle Traits',selected:'Gewählte Traits',normal:'Normale Traits',body:'Körpermerkmale',unique:'Besondere Eigenheiten',aptitude:'Begabungen',bloodline:'Blutträger · angeboren',family:'Familienblut · Nuadat und Arth',general:'Allgemeine Eigenschaften',...Object.fromEntries(Object.entries(EXPANSION_TRAIT_GROUPS).map(([id,group])=>[id,group.label])),therianthropy:'Zatracher Theriantrophie',symbiosis:'Silvanische Symbiose',...HEALTH_TRAIT_FILTERS,psychological:'Psychologische Prägungen',positive:'Positive Balancekosten',negative:'Negative Balancekosten'}).map(([id,label])=>`<option value="${id}"${p.traitGroup===id?' selected':''}>${label}</option>`).join('')}</select></label><label><span>Trait suchen</span><input type="search" data-level-up-path="traitSearch" value="${escape(p.traitSearch)}" placeholder="Name oder Wirkung"></label></div>
+    <div class="cp-level-up-fields"><label><span>Traits filtern</span><select data-level-up-path="traitGroup">${Object.entries({all:'Alle Traits',selected:'Gewählte Traits',normal:'Normale Traits',body:'Körpermerkmale',unique:'Besondere Eigenheiten',aptitude:'Begabungen',bloodline:'Blutträger · angeboren',family:'Familienblut · Nuadat und Arth',general:'Allgemeine Eigenschaften',spiritual:'Geistliche Zustände · Dissonanz und Eidbruch',...Object.fromEntries(Object.entries(EXPANSION_TRAIT_GROUPS).map(([id,group])=>[id,group.label])),therianthropy:'Zatracher Theriantrophie',symbiosis:'Silvanische Symbiose',...HEALTH_TRAIT_FILTERS,psychological:'Psychologische Prägungen',positive:'Positive Balancekosten',negative:'Negative Balancekosten'}).map(([id,label])=>`<option value="${id}"${p.traitGroup===id?' selected':''}>${label}</option>`).join('')}</select></label><label><span>Trait suchen</span><input type="search" data-level-up-path="traitSearch" value="${escape(p.traitSearch)}" placeholder="Name oder Wirkung"></label></div>
     <div class="development-traits" data-development-role="traits">${renderDevelopmentTraits(p,profile)}</div>
   </section>`;
 }
@@ -122,7 +125,7 @@ export function updateDevelopmentSelection(plan, target) {
   const id = target.dataset.developmentPurchase || target.dataset.developmentTrait;
   if (!id) return false;
   const key = target.dataset.developmentPurchase ? 'purchaseIds' : 'traitIds';
-  plan[key] = target.dataset.developmentTrait && target.checked ? selectFamilyTrait(selectPsychologicalTrait(selectHealthTrait(plan[key] || [], id), id), id)
+  plan[key] = target.dataset.developmentTrait && target.checked ? selectSpiritualTrait(selectFamilyTrait(selectPsychologicalTrait(selectHealthTrait(plan[key] || [], id), id), id), id)
     : [...new Set([...(plan[key] || []).filter(value => value !== id), ...(target.checked ? [id] : [])])];
   return true;
 }
@@ -138,5 +141,5 @@ export function refreshDevelopmentShop(root, profile, preview, changedTarget = n
   const selected=root?.querySelector('[data-level-up-path="purchaseClass"] option[value="selected"]');
   if(selected)selected.textContent=`Gewählte Käufe (${preview.plan.purchaseIds.length})`;
   const traits=root?.querySelector('[data-development-role="traits"]');
-  if(traits&&(!changedTarget||['traitSearch','traitGroup'].includes(changedTarget.dataset.levelUpPath)||preview.plan.traitGroup==='selected'||getRetiredDevelopmentTrait(changedTarget?.dataset?.developmentTrait)||getHealthTraitOrigin(changedTarget?.dataset?.developmentTrait)||getPsychologicalTraitOrigin(changedTarget?.dataset?.developmentTrait)||getFamilyTraitOrigin(changedTarget?.dataset?.developmentTrait)||['development-trait-gross','development-trait-huenenhaft','development-trait-riesenblut'].includes(changedTarget?.dataset?.developmentTrait)))traits.innerHTML=renderDevelopmentTraits(preview.plan,profile);
+  if(traits&&(!changedTarget||['traitSearch','traitGroup'].includes(changedTarget.dataset.levelUpPath)||preview.plan.traitGroup==='selected'||getRetiredDevelopmentTrait(changedTarget?.dataset?.developmentTrait)||getHealthTraitOrigin(changedTarget?.dataset?.developmentTrait)||getPsychologicalTraitOrigin(changedTarget?.dataset?.developmentTrait)||getFamilyTraitOrigin(changedTarget?.dataset?.developmentTrait)||getSpiritualTraitOrigin(changedTarget?.dataset?.developmentTrait)||['development-trait-gross','development-trait-huenenhaft','development-trait-riesenblut'].includes(changedTarget?.dataset?.developmentTrait)))traits.innerHTML=renderDevelopmentTraits(preview.plan,profile);
 }

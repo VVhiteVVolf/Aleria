@@ -1,0 +1,102 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-12T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gwynthor-Stadt",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "description": "Bespielbare Orte in Gwynthor-Stadt."
+    },
+    "entry": {
+      "id": "gwynthor-westtor",
+      "title": "Gwynthor Westtor",
+      "subtitle": "Torbrücke, Häuser vor der Mauer und ein innerer Ankunftsplatz",
+      "type": "Interaktive Szene",
+      "category": "Gwynthor-Stadt · Schauplätze",
+      "icon": "❧",
+      "stamp": "GWYNTHOR · WESTTOR",
+      "image": "./public/assets/gwynthor-stadtorte/westtor-torbruecke-v2.webp",
+      "previewImage": "./public/assets/gwynthor-stadtorte/westtor-torbruecke-v2.webp",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": false,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Westtor · Zwischen Brücke und Mauern",
+          "commentThreadKey": "gwynthor-westtor-torbruecke",
+          "image": "./public/assets/gwynthor-stadtorte/westtor-torbruecke-v2.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 75%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Die Brücke am Westtor führt über den Wasserlauf an die alte Stadtmauer. Zwischen den runden Türmen sind die hohen Torflügel geschlossen. Davor halten Cochllamwyr mit roten Mänteln und den Schilden der Stadt Wache. Oberhalb der Mauer zeichnet sich der befestigte westliche Stadtkern ab.</p><p>Neben der Brüstung bleibt eine kleine Stelle zum Warten. Reisende können ihr Gepäck abstellen und sich an die Stadtwachen wenden. Wer eine Begleitung erwartet, behält von hier die Zufahrt im Blick; der Weg endet vorerst vor dem bewachten Tor.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Westtor · Zwischen Brücke und Mauern",
+          "sessionHint": "Ein Treffen auf der Westtorbrücke vor den geschlossenen Torflügeln.",
+          "sessionEmptyTitle": "Warten vor dem Westtor",
+          "sessionEmptyText": "Vor den geschlossenen Toren stehen die Cochllamwyr.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Vor dem Westtor · An der Zufahrt",
+          "commentThreadKey": "gwynthor-westtor-vorort",
+          "image": "./public/assets/gwynthor-stadtorte/westtor-vorort-v2.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 75%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Vor der westlichen Mauer liegen ein paar niedrige Häuser mit kleinen Höfen an der Zufahrt. Unter einem vorspringenden Holzdach steht ein Wagen im Schatten. Der Weg führt weiter zur Brücke; darüber sind die Türme des Westtors zu sehen, hinter ihnen die Dächer der Stadt und die höheren westlichen Hänge.</p><p>Hier werden Riemen nachgezogen und Reisebündel umgepackt. Das Westtor ist geschlossen, Cochllamwyr bewachen die Torflügel. Wer jemanden außerhalb der Stadt treffen möchte, findet am Rand des Wegs einen gut sichtbaren Warteplatz.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Vor dem Westtor · An der Zufahrt",
+          "sessionHint": "Ein Aufbruch oder eine Begegnung außerhalb des Westtors.",
+          "sessionEmptyTitle": "Die Stadt liegt hinter der Brücke",
+          "sessionEmptyText": "Unter dem Vordach lässt sich auf die Reisebegleitung warten.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hinter dem Westtor · Am Ankunftsplatz",
+          "commentThreadKey": "gwynthor-westtor-ankunftsplatz",
+          "image": "./public/assets/gwynthor-stadtorte/westtor-ankunftsplatz-v2.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 75%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Gleich hinter dem Westtor gibt die Straße einen kleinen gepflasterten Platz frei. Ein länglicher Brunnen steht an der Seite, gegenüber ein offener Hof, in dem Wagen kurz aus dem Durchgang gezogen werden können. Höhere Häuser und schmale weiterführende Gassen schließen den Platz ein.</p><p>Ein Träger stellt seine Last am Brunnen ab. Am geschlossenen Tor halten Cochllamwyr Wache; ihre roten Mäntel sind vom Platz aus zu erkennen. Am Rand des Hofs kann sich eine Gruppe sammeln. Zwischen Brunnen und Hauseingängen bleibt Raum für Wegauskünfte und Verabredungen.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Hinter dem Westtor · Am Ankunftsplatz",
+          "sessionHint": "Eine Pause hinter dem Tor, eine Wegfrage oder ein gemeinsamer Aufbruch.",
+          "sessionEmptyTitle": "Ein freier Platz neben dem Verkehr",
+          "sessionEmptyText": "Vom Brunnen aus lassen sich Torbogen und weiterführende Gassen überblicken.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

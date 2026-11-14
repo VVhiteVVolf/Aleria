@@ -1,12 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { access, readFile } from 'node:fs/promises';
-import { PREDATOR_GROUPS, PREDATOR_PROFILE_IDS, predatorGroupFor } from '../modules/predator-profile/predator-registry.mjs';
+import { PREDATOR_GROUPS, PREDATOR_PROFILE_IDS, PREDATOR_SUBGROUPS, predatorGroupFor } from '../modules/predator-profile/predator-registry.mjs';
 import { renderPredatorOverview } from '../modules/predator-profile/predator-overview-template.mjs';
 import { renderPredatorProfile } from '../modules/predator-profile/predator-profile-template.mjs';
 
 const metricLabels = ['Gefahr', 'Zähmbarkeit', 'Intelligenz', 'Körperkraft', 'Sozialverhalten', 'Ausdauer'];
-const expectedProfileIds = ['gramnir', 'faerog', 'brychgi', 'lughar', 'ulfr', 'ruadhr', 'rhewddann', 'brannoc', 'arth', 'draugrbjorn', 'dubharr', 'gramh', 'broan', 'muine', 'banmor-isbjorn'];
+const expectedProfileIds = ['gramnir', 'faerog', 'brychgi', 'lughar', 'ulfr', 'ruadhr', 'rhewddann', 'brannoc', 'arth', 'draugrbjorn', 'dubharr', 'gramh', 'broan', 'muine', 'banmor-isbjorn', 'madruach'];
 
 async function readOverview(groupId) {
   const directory = new URL(`../tiere/raubtiere/${groupId}/`, import.meta.url);
@@ -27,7 +27,7 @@ for (const group of PREDATOR_GROUPS) {
 test('predator registry preserves the requested hierarchy and all completed dossiers', () => {
   assert.deepEqual(PREDATOR_GROUPS.map(group => group.id), ['raubkatzen', 'woelfe', 'baeren']);
   assert.deepEqual(PREDATOR_PROFILE_IDS, expectedProfileIds);
-  assert.equal(new Set(PREDATOR_PROFILE_IDS).size, 15);
+  assert.equal(new Set(PREDATOR_PROFILE_IDS).size, 16);
   assert.equal(predatorGroupFor('ulfr')?.id, 'woelfe');
   assert.equal(predatorGroupFor('brannoc')?.id, 'baeren');
   assert.equal(predatorGroupFor('llewroth'), null);
@@ -61,9 +61,11 @@ for (const group of PREDATOR_GROUPS) {
     test(`${group.id}/${profile.id}: generated dossier preserves text, image and field values`, async () => {
       const directory = new URL(`../tiere/raubtiere/${group.id}/${profile.id}/`, import.meta.url);
       const html = (await readFile(new URL('index.html', directory), 'utf8')).replace(/\r\n/g, '\n');
+      const siblings = profiles.filter(candidate => candidate.subgroup?.id === profile.subgroup?.id);
+      const siblingIndex = siblings.indexOf(profile);
       const navigation = {
-        previous: index > 0 ? profiles[index - 1] : null,
-        next: index < profiles.length - 1 ? profiles[index + 1] : null
+        previous: siblingIndex > 0 ? siblings[siblingIndex - 1] : null,
+        next: siblingIndex < siblings.length - 1 ? siblings[siblingIndex + 1] : null
       };
 
       assert.equal(html, renderPredatorProfile(profile, navigation));
@@ -96,12 +98,13 @@ test('text-derived danger profiles preserve representative distinctions', () => 
   assert.deepEqual(profiles['banmor-isbjorn'].metrics.values, [10, 1, 8, 10, 1, 10]);
 });
 
-test('overview cards expose 15 dossiers and preserve seven explicit placeholders', () => {
-  const entries = overviews.flatMap(overview => overview.atlas.groups.flatMap(group => group.entries));
-  const available = entries.filter(entry => entry.href);
+test('overview cards expose 16 dossiers through Urgren and preserve seven explicit placeholders', async () => {
+  const subgroupOverviews = await Promise.all(PREDATOR_SUBGROUPS.map(group => readOverview(group.directory)));
+  const entries = [...overviews, ...subgroupOverviews].flatMap(overview => overview.atlas.groups.flatMap(group => group.entries));
+  const available = entries.filter(entry => entry.href && entry.status === 'Dossier verfügbar');
   const pending = entries.filter(entry => !entry.href);
 
-  assert.equal(available.length, 15);
+  assert.equal(available.length, 16);
   assert.deepEqual(available.map(entry => entry.id), expectedProfileIds);
   assert(available.every(entry => entry.status === 'Dossier verfügbar'));
   assert.equal(pending.length, 7);
@@ -119,10 +122,11 @@ test('the parent predator page links all three group overviews', async () => {
   await Promise.all(entries.map(entry => access(new URL(entry.href, directory))));
 });
 
-test('all 38 inherited and user-provided predator images are archived locally', async () => {
+test('38 inherited predator images and two new Urgren images are archived locally', async () => {
   const manifest = JSON.parse(await readFile(new URL('../assets/predator-sources.json', import.meta.url), 'utf8'));
   const userImages = manifest.items.filter(item => item.sourceType === 'user-provided');
-  assert.equal(manifest.items.length, 38);
+  assert.equal(manifest.items.length, 40);
+  assert.equal(manifest.items.filter(item => item.sourceType !== 'imagegen').length, 38);
   assert.deepEqual(userImages.map(item => item.sourceUrl), [
     'https://i.imgur.com/J4IU88Z.png',
     'https://i.imgur.com/dSPnaAB.png',

@@ -1,0 +1,66 @@
+/* Character register controls and shortcuts. Profile/editor styles stay in characters.css. */
+#char-grid { --register-accent: #365d50; --register-soft: #e8efea; }
+#char-grid [data-tone="plum"] { --register-accent: #79526e; --register-soft: #f1e8ef; }
+#char-grid [data-tone="blue"] { --register-accent: #426680; --register-soft: #e7eef4; }
+#char-grid [data-tone="clay"] { --register-accent: #985d41; --register-soft: #f5eae0; }
+#char-grid [data-tone="gold"] { --register-accent: #80611d; --register-soft: #f4eedc; }
+.char-register-icon { display: block; width: 2rem; height: 2rem; object-fit: contain; flex-shrink: 0; }
+.char-register-view-toolbar { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .7rem 1rem; padding: 1rem; border: 1px solid #c4d0c5; border-top: 3px solid #456956; background: #fbfaf4; }
+.char-register-find-row { grid-column: 1 / -1; display: flex; align-items: end; gap: .65rem; }
+.char-register-find-control { display: grid; gap: .4rem; flex: 1; min-width: 0; }
+.char-register-find-control > span { color: #294b3e; font: 600 1rem 'Cinzel', serif; }
+.char-register-find-control input { width: 100%; min-height: 3rem; padding: .65rem .85rem; border: 1px solid #9bab9c; border-radius: 4px; color: #302b25; background: #fffef9; font: 1.08rem 'EB Garamond', serif; }
+.char-register-find-control input:focus { outline: 2px solid #456956; outline-offset: 2px; }
+.char-register-search-hint { grid-column: 1 / -1; color: #625e54; font-size: .82rem; }
+.char-register-view-options { display: flex; flex-wrap: wrap; align-items: end; gap: .4rem; min-width: 0; }
+.char-register-view-options button { display: inline-flex; align-items: center; gap: .4rem; padding: .4rem .65rem; min-height: 2.8rem; border: 1px solid #d6d1c3; border-radius: 4px; background: #fffef9; color: #48463e; font: .76rem 'Cinzel', serif; cursor: pointer; }
+.char-register-view-options .char-register-icon { width: 1.7rem; height: 1.7rem; }
+.char-register-view-options button.active, .char-register-view-options button:hover:not(:disabled) { border-color: var(--register-accent); color: var(--register-accent); background: var(--register-soft); }
+.char-register-view-options button.active { box-shadow: inset 0 -3px var(--register-accent); }
+.char-register-view-options button:disabled { opacity: .45; cursor: default; }
+.char-register-sort-control { display: grid; align-content: end; gap: .3rem; color: #625e54; font-size: .78rem; }
+.char-register-sort-control select { max-width: 100%; min-height: 2.8rem; border: 1px solid #c9c5b8; border-radius: 4px; background: #fffef9; color: #393b31; padding: .5rem; font: .86rem 'EB Garamond', serif; }
+.char-register-view-copy { grid-column: 1 / -1; color: #625e54; font-size: .9rem; }
+.char-register-group-controls { display: flex; flex-wrap: wrap; gap: .4rem; }
+.char-register-group-controls button, .char-register-search-clear, .char-directory-status button { min-height: 2.75rem; padding: .5rem .7rem; border: 1px solid #b4c3b6; border-radius: 4px; color: #355d4a; background: #fbfaf4; font: .85rem 'EB Garamond', serif; cursor: pointer; }
+.char-archive-actions { gap: .5rem; }
+.char-archive-actions > button { display: inline-flex; align-items: center; justify-content: center; gap: .45rem; min-height: 2.75rem; font-size: .76rem; letter-spacing: .02em; }
+.char-archive-actions .char-genealogy-import-action { margin-right: auto; border-color: #ad91a6; color: #64394f; background: #f1e8ef; }
+.char-directory-status { grid-column: 1 / -1; border-left: 3px solid #60816c; padding: .6rem .8rem; color: #4d5d4d; background: #edf2eb; font-size: .9rem; }
+.char-dashboard { grid-column: 1 / -1; display: grid; gap: .65rem; padding: .45rem 0; }
+.char-dashboard-head { display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
+.char-dashboard-kicker { display: none; }
+.char-dashboard-title { font-size: .95rem; color: #4e5549; }
+.char-dashboard-clear { border: 0; border-bottom: 1px solid #879a84; color: #355c48; background: transparent; font: .85rem 'EB Garamond', serif; cursor: pointer; padding: .4rem; }
+.char-dashboard-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .5rem; }
+.char-dashboard-metric { display: grid; grid-template-columns: 2rem minmax(0, 1fr) auto; align-items: center; gap: .6rem; min-width: 0; min-height: 3.6rem; padding: .5rem .7rem; border: 1px solid #d4d5c9; border-left: 3px solid var(--register-accent); border-radius: 4px; color: #383d33; background: #fbfaf4; text-align: left; cursor: pointer; }
+.char-dashboard-metric:hover, .char-dashboard-metric.active { border-color: var(--register-accent); background: var(--register-soft); }
+.char-dashboard-metric > span { font: .79rem/1.35 'EB Garamond', serif; }
+.char-dashboard-metric > strong { font: 600 1.15rem 'EB Garamond', serif; color: var(--register-accent); }
+.char-dashboard-maintenance > summary, .char-dashboard-preview > summary { padding: .5rem 0; color: #635b48; cursor: pointer; font: .8rem 'EB Garamond', serif; }
+.char-dashboard-maintenance[open] > summary { margin-bottom: .4rem; }
+.char-dashboard-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; }
+.char-dashboard-panel { min-width: 0; display: grid; align-content: start; gap: .4rem; padding: .7rem; border: 1px solid #d6d1c3; background: #fbfaf4; }
+.char-dashboard-panel-head { color: #47614f; font: .76rem 'Cinzel', serif; }
+.char-dashboard-character, .char-dashboard-group { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem; min-width: 0; padding: .5rem; border: 1px solid #dcd8cb; color: #373b32; background: #fffef9; text-align: left; font: .88rem 'EB Garamond', serif; cursor: pointer; }
+.char-dashboard-character-meta { max-width: 8rem; color: #6a6456; font-size: .72rem; }
+.char-dashboard-character-name, .char-dashboard-character-meta, .char-dashboard-group span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.char-dashboard-empty { color: #766d59; font-size: .85rem; }
+@media (max-width: 1100px) {
+  .char-register-view-toolbar { grid-template-columns: 1fr; }
+  .char-register-sort-control { grid-template-columns: auto minmax(0, 1fr); align-items: center; }
+  .char-dashboard-columns { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .char-dashboard-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .char-dashboard-metric { grid-template-columns: 1.6rem minmax(0, 1fr) auto; gap: .35rem; padding: .45rem; }
+  .char-dashboard-metric .char-register-icon { width: 1.6rem; height: 1.6rem; }
+  .char-register-view-toolbar { padding: .75rem; gap: .6rem; }
+  .char-register-view-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .char-register-view-options button { min-width: 0; font-size: .72rem; }
+  .char-register-find-row { flex-wrap: wrap; }
+  .char-register-find-control { flex-basis: 100%; }
+  .char-archive-actions { justify-content: flex-start; }
+  .char-archive-actions .char-genealogy-import-action { flex-basis: 100%; margin: 0; }
+  .char-dashboard-head { align-items: flex-start; flex-direction: column; }
+}

@@ -1,3 +1,5 @@
+import { renderPredatorReadingLinks } from './predator-reading-links.mjs';
+
 const VERSION = '20260907-predator-overview-v1';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
 const roman = number => ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'][number - 1] || String(number);
@@ -42,7 +44,12 @@ function renderAtlasGroup(group, index) {
   </section>`;
 }
 
-export function renderPredatorOverview(record) {
+export function renderPredatorOverview(record, navigation = {}) {
+  const rootHref = navigation.rootHref || '../../../';
+  const parentHref = navigation.parentHref || '../index.html';
+  const parentLabel = navigation.parentLabel || 'Raubtierkunde';
+  const ancestors = navigation.ancestors || [{ title: 'Raubtiere', href: '../index.html' }];
+  const ancestorLinks = ancestors.map(link => `<a href="${escape(link.href)}">${escape(link.title)}</a><span aria-hidden="true">/</span>`).join('');
   const comparisonIndex = record.sections.length;
   const atlasIndex = comparisonIndex + (record.comparison ? 1 : 0);
   const firstAnchor = record.sections[0]?.id || (record.comparison ? 'vergleich' : 'artenregister');
@@ -52,31 +59,31 @@ export function renderPredatorOverview(record) {
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#eee5ce">
   <title>${escape(record.title)} · Raubtiere · Bestiarium von Aleria</title><meta name="description" content="${escape(record.lead)}">
-  <link rel="icon" href="../../../../IconOrdner/ReiterIcons/Bestiarium-register.webp" type="image/webp">
-  <link rel="stylesheet" href="../../../modules/book-shell/book-shell.css?v=${VERSION}">
-  <link rel="stylesheet" href="../../../modules/predator-profile/predator-overview.css?v=${VERSION}">
+  <link rel="icon" href="${rootHref}../IconOrdner/ReiterIcons/Bestiarium-register.webp" type="image/webp">
+  <link rel="stylesheet" href="${rootHref}modules/book-shell/book-shell.css?v=${VERSION}">
+  <link rel="stylesheet" href="${rootHref}modules/predator-profile/predator-overview.css?v=${VERSION}">${record.furtherReading?.length ? `\n  <link rel="stylesheet" href="${rootHref}modules/predator-profile/predator-reading-links.css?v=20261114">` : ''}
 </head>
 <body>
   <a class="skip-link" href="#${escape(firstAnchor)}">Zur Raubtierkunde</a>
   <div class="bestiary-page predator-overview" data-predator-overview data-group-id="${escape(record.id)}">
-    <header class="masthead" id="anfang"><a class="almanach-link" href="../../../index.html#tiere"><span aria-hidden="true">←</span> Aleria <span class="masthead-divider">/</span> Bestiarium</a><span class="masthead-edition">Thalenorische Akademie · Archiv der Raubtiere</span><span class="masthead-mark" aria-hidden="true">A</span></header>
+    <header class="masthead" id="anfang"><a class="almanach-link" href="${rootHref}index.html#tiere"><span aria-hidden="true">←</span> Aleria <span class="masthead-divider">/</span> Bestiarium</a><span class="masthead-edition">Thalenorische Akademie · Archiv der Raubtiere</span><span class="masthead-mark" aria-hidden="true">A</span></header>
     <main>
-      <nav class="predator-breadcrumb" aria-label="Brotkrumennavigation"><a href="../../../index.html">Bestiarium</a><span aria-hidden="true">/</span><a href="../index.html">Raubtiere</a><span aria-hidden="true">/</span><span aria-current="page">${escape(record.title)}</span></nav>
+      <nav class="predator-breadcrumb" aria-label="Brotkrumennavigation"><a href="${rootHref}index.html">Bestiarium</a><span aria-hidden="true">/</span>${ancestorLinks}<span aria-current="page">${escape(record.title)}</span></nav>
       <section class="predator-overview-hero" aria-labelledby="predator-overview-title">
-        <div class="predator-overview-hero-copy"><div class="predator-overview-seal">${picture(record.icon, { className: 'predator-overview-icon', eager: true })}<span>Raubtierarchiv</span></div><p class="eyebrow">${escape(record.classification)} · Archivblatt ${escape(record.folio)}</p><h1 id="predator-overview-title">${escape(record.title)}</h1><p class="predator-overview-subtitle">${escape(record.subtitle)}</p><p class="predator-overview-lead">${escape(record.lead)}</p><div class="predator-overview-actions"><a class="ink-button" href="#artenregister">Arten aufschlagen <span aria-hidden="true">↓</span></a><a href="../index.html">Zur Raubtierkunde ↗</a></div></div>
+        <div class="predator-overview-hero-copy"><div class="predator-overview-seal">${picture(record.icon, { className: 'predator-overview-icon', eager: true })}<span>Raubtierarchiv</span></div><p class="eyebrow">${escape(record.classification)} · Archivblatt ${escape(record.folio)}</p><h1 id="predator-overview-title">${escape(record.title)}</h1><p class="predator-overview-subtitle">${escape(record.subtitle)}</p><p class="predator-overview-lead">${escape(record.lead)}</p><div class="predator-overview-actions"><a class="ink-button" href="#artenregister">Arten aufschlagen <span aria-hidden="true">↓</span></a><a href="${escape(parentHref)}">Zur ${escape(parentLabel)} ↗</a></div></div>
         <figure class="predator-overview-hero-figure">${picture(record.hero, { className: 'predator-overview-hero-image', eager: true })}<figcaption>${escape(record.hero.caption)}</figcaption></figure>
       </section>
       <blockquote class="predator-overview-quote"><span aria-hidden="true">❧</span><p>„${escape(record.quote)}“${record.quoteAttribution ? `<cite>${escape(record.quoteAttribution)}</cite>` : ''}</p><span aria-hidden="true">❧</span></blockquote>
       <div class="predator-overview-book">
-        <aside class="predator-overview-register"><div><p class="eyebrow">In diesem Archivblatt</p><nav aria-label="Kapitel der Raubtierkunde">${record.sections.map((section, index) => `<a href="#${escape(section.id)}"><span>${roman(index + 1)}</span>${escape(section.title)}</a>`).join('\n')}${record.comparison ? `<a href="#vergleich"><span>${roman(comparisonIndex + 1)}</span>${escape(record.comparison.title)}</a>` : ''}<a class="predator-register-extra" href="#artenregister"><span>${roman(atlasIndex + 1)}</span>Artenregister</a></nav><a class="predator-register-back" href="../index.html">← Alle Raubtiere</a></div></aside>
+        <aside class="predator-overview-register"><div><p class="eyebrow">In diesem Archivblatt</p><nav aria-label="Kapitel der Raubtierkunde">${record.sections.map((section, index) => `<a href="#${escape(section.id)}"><span>${roman(index + 1)}</span>${escape(section.title)}</a>`).join('\n')}${record.comparison ? `<a href="#vergleich"><span>${roman(comparisonIndex + 1)}</span>${escape(record.comparison.title)}</a>` : ''}<a class="predator-register-extra" href="#artenregister"><span>${roman(atlasIndex + 1)}</span>Artenregister</a></nav><a class="predator-register-back" href="${escape(parentHref)}">← ${navigation.parentLabel ? escape(parentLabel) : 'Alle Raubtiere'}</a></div></aside>
         <div class="predator-overview-content">
-          <article class="predator-overview-lore" aria-label="Naturkunde zu ${escape(record.title)}">${record.sections.map(renderLoreSection).join('\n')}</article>
+          <article class="predator-overview-lore" aria-label="Naturkunde zu ${escape(record.title)}">${record.sections.map(renderLoreSection).join('\n')}</article>${renderPredatorReadingLinks(record.furtherReading)}
           ${renderComparison(record.comparison, comparisonIndex)}
           <section class="predator-atlas" id="artenregister" aria-labelledby="predator-atlas-title"><header class="predator-atlas-heading"><p class="eyebrow">${roman(atlasIndex + 1)} · Systematik & Einzeldossiers</p><h2 id="predator-atlas-title">${escape(record.atlas.title)}</h2><p>${escape(record.atlas.intro)}</p></header>${record.atlas.groups.map(renderAtlasGroup).join('\n')}</section>
         </div>
       </div>
     </main>
-    <footer class="bestiary-footer"><span class="footer-monogram" aria-hidden="true">A</span><p>Aus den Archiven der Thalenorischen Akademie<small>${escape(record.title)} · Raubtiere Alerias</small></p><a href="../index.html">Zurück zur Raubtierkunde ↗</a></footer>
+    <footer class="bestiary-footer"><span class="footer-monogram" aria-hidden="true">A</span><p>Aus den Archiven der Thalenorischen Akademie<small>${escape(record.title)} · Raubtiere Alerias</small></p><a href="${escape(parentHref)}">Zurück zur ${escape(parentLabel)} ↗</a></footer>
   </div>
 </body>
 </html>

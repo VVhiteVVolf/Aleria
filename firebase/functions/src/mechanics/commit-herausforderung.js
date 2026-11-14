@@ -5,6 +5,8 @@ import { getHerausforderungValidationIssues, normalizeHerausforderungEvent } fro
 import { bindHerausforderungCombatContext } from './herausforderung-combat-effects.js';
 import { assertHerausforderungRewardAuthority, prepareHerausforderungRewards } from './herausforderung-rewards.js';
 import { bindHerausforderungTarget } from './herausforderung-target.js';
+import { commitArmedSceneElement } from '../scene-elements/scene-element-authoring.js';
+import { evaluateSceneElements } from '../scene-elements/scene-element-evaluation.js';
 
 const MAX_COMMENT_BYTES = 700_000;
 
@@ -47,6 +49,14 @@ async function updateHerausforderung({ database, request, metadata, event, entry
       && original.herausforderungLastEdit?.uid === request.auth.uid
       && original.herausforderungFingerprint === fingerprint) return;
     if (revision !== expectedRevision) fail('aborted', 'Die Herausforderung wurde inzwischen geändert. Bitte erneut öffnen.');
+    if (event.activation.enabled) fail('failed-precondition', 'Eine veröffentlichte Karte kann nicht nachträglich verborgen werden. Lege dafür ein neues Element an.');
+    // Reactions are server-owned. Authored edits cannot change the chosen victim,
+    // discovery receipt or the resulting advantage/disadvantage.
+    if (original.herausforderung.reaction) event.reaction = original.herausforderung.reaction;
+    else delete event.reaction;
+    if (original.herausforderung.sceneElementId) event.sceneElementId = original.herausforderung.sceneElementId;
+    else delete event.sceneElementId;
+    if (event.reaction) event.audience = { mode: 'selected', actorIds: [event.reaction.actorId] };
     // Existing attempts, rolls, claims and effects are immutable records. Editing
     // the authored challenge only changes what future attempts will resolve.
     await bindHerausforderungCombatContext(database, transaction, event, entryId, {
@@ -78,6 +88,12 @@ export async function commitHerausforderungOperation(request, { database = getFi
   const operationId = clean(metadata.operationId, 80);
   if (operationId && !/^[a-zA-Z0-9-]{8,80}$/.test(operationId)) fail('invalid-argument', 'Die Vorgangskennung ist ungültig.');
   const fingerprint = createHash('sha256').update(JSON.stringify({ entryId, event: metadata.herausforderung })).digest('hex');
+  if (!metadata.commentId && (event.reaction || event.sceneElementId)) fail('invalid-argument', 'Entdeckungsbelege und Zielfigur werden ausschließlich vom Server festgelegt.');
+  if (metadata.sceneElementId || (!metadata.commentId && event.activation.enabled)) {
+    const result = await commitArmedSceneElement({ database, request, metadata, event, entryId, fingerprint, now });
+    await evaluateSceneElements(database, entryId, { now });
+    return result;
+  }
   if (metadata.commentId) return updateHerausforderung({ database, request, metadata, event, entryId, text, fingerprint, now });
   const operationKey = operationId ? 'challenge-' + createHash('sha256').update(request.auth.uid + '\u0000' + operationId).digest('hex') : '';
   const ref = operationKey ? database.collection('comments').doc(operationKey) : database.collection('comments').doc();

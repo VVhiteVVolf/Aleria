@@ -1,0 +1,102 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-12T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gwynthor-Stadt",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "description": "Bespielbare Orte in Gwynthor-Stadt."
+    },
+    "entry": {
+      "id": "gwynthor-hafen",
+      "title": "Gwynthor Hafen",
+      "subtitle": "Westhafen, Zentraler Hafen und Südtor-Hafen im Südosten",
+      "type": "Interaktive Szene",
+      "category": "Gwynthor-Stadt · Schauplätze",
+      "icon": "❧",
+      "stamp": "GWYNTHOR · HAFEN",
+      "image": "./public/assets/gwynthor-stadtorte/hafen-zentral-v1.webp",
+      "previewImage": "./public/assets/gwynthor-stadtorte/hafen-zentral-v1.webp",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": false,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Westhafen · Am alten Kai",
+          "commentThreadKey": "gwynthor-hafen-west",
+          "image": "./public/assets/gwynthor-stadtorte/hafen-west-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 75%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Am Westhafen liegt ein ruhigerer Abschnitt des alten Kais. Breite Steinstufen führen ans Wasser; Taue laufen von den Pollern zu einem vertäuten Segler. Hinter dem Kai stehen schlichte Speicherfassaden. Über ihnen verlieren sich die Dächer Gwynthors in mehreren Reihen.</p><p>Ein paar Säcke warten neben einer geschlossenen Tür auf ihren Weitertransport. Vom Wasser kommen das Knarren eines Rumpfs und Stimmen aus einem Boot. Hier lässt sich auf eine Ankunft warten oder ein Gespräch abseits des lauteren Umschlags führen, während der Hafenbetrieb weitergeht.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Westhafen · Am alten Kai",
+          "sessionHint": "Eine Begegnung am alten Kai des Westhafens.",
+          "sessionEmptyTitle": "Taue knarren am Poller",
+          "sessionEmptyText": "Zwischen Steinstufen und Speicherwand ist Platz zum Warten.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Zentraler Hafen · Zwischen den Anlegern",
+          "commentThreadKey": "gwynthor-hafen-zentral",
+          "image": "./public/assets/gwynthor-stadtorte/hafen-zentral-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 75%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Im zentralen Hafen öffnet sich der Blick zwischen den Anlegern auf das Wasser. Ein breiter Kai verbindet die Zugänge zu den Schiffen; dahinter folgen Speicher und die Dächer der Metropole. Über den vertäuten Rümpfen stehen Masten, und vom nächsten Anleger schlägt eine Stimme durch das Rufen der Träger.</p><p>Ein Karren wartet am Rand der freien Durchfahrt. Menschen gehen mit Bündeln zum Steg oder halten Ausschau nach einem erwarteten Schiff. Am Kai kann eine Überfahrt beginnen, eine Mannschaft zusammentreffen oder jemand nach langer Reise wieder Boden unter die Füße bekommen.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Zentraler Hafen · Zwischen den Anlegern",
+          "sessionHint": "Ankunft, Aufbruch oder ein Treffen zwischen den zentralen Anlegern.",
+          "sessionEmptyTitle": "Zwischen Stadt und Wasser",
+          "sessionEmptyText": "Der breite Kai führt zu den nächsten Anlegern.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Südtor-Hafen · Die südöstlichen Stege",
+          "commentThreadKey": "gwynthor-hafen-suedtor",
+          "image": "./public/assets/gwynthor-stadtorte/hafen-suedtor-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 75%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Im Südosten Gwynthors liegen die Stege des Südtor-Hafens nahe dem Weg zum Tor. Eine steinerne Uferkante geht in hölzerne Anleger über. Hinter einem niedrigen Lagerdach ragt ein Turm der Stadtmauer auf; zwischen den Häusern bleibt der Zugang zur Stadt sichtbar.</p><p>Ein kleines Boot liegt an den Stufen, weiter draußen bewegt sich ein Segel über das Wasser. Hier können Ankommende ihr Gepäck sammeln oder sich am Ufer verabreden, bevor es durch die Gassen weitergeht. Wasser schlägt leise gegen die Pfähle, während vom Tor her Wagenräder zu hören sind.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Südtor-Hafen · Die südöstlichen Stege",
+          "sessionHint": "Eine Szene an den südöstlichen Stegen nahe dem Südtor.",
+          "sessionEmptyTitle": "Am südöstlichen Ufer",
+          "sessionEmptyText": "Vom Steg führt der Weg zum Südtor und zurück in die Stadt.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

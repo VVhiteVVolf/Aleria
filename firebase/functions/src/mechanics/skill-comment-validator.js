@@ -332,6 +332,16 @@ export async function validateSkillCommentSegments({
         : (tier === 'knapp' ? challenge.partialHint : challenge.failureConsequence);
       if (revealText) resolution.revealedText = clean(revealText, 5000);
       applyChallengeOutcome(challenge, resolution);
+      if (challenge.completionMode === 'any' || challenge.reaction) {
+        const completionId = 'complete-' + createHash('sha256').update(challenge.commentId).digest('hex');
+        const ref = database.collection('herausforderung_completion_claims').doc(completionId);
+        const snapshot = await transaction.get(ref);
+        if (snapshot.exists || locallyClaimed.has(completionId)) fail('already-exists', 'Dieses Szenenelement wurde bereits gelöst.');
+        if ((resolution.herausforderungSolved ?? isSuccessfulSkillOutcome(resolution.outcome)) || challenge.reaction) {
+          locallyClaimed.add(completionId);
+          pendingClaims.push({ ref, challenge, resolution });
+        }
+      }
       if (challenge.attemptLimit === 1) {
         const attemptId = 'attempt-' + herausforderungClaimId(challenge);
         const ref = database.collection('herausforderung_attempt_claims').doc(attemptId);

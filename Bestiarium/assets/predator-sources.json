@@ -303,6 +303,28 @@
       "height": 1024,
       "sourceType": "legacy-profile",
       "sourceUrl": "https://i.imgur.com/7SLmNSa.png"
+    },
+    {
+      "id": "urgren-mythos-v1",
+      "file": "./predators/urgren/urgren-mythos-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "sourceType": "imagegen",
+      "sourceDate": "2026-11-14",
+      "sha256": "8f8f2a4d13b7f405d3d2015b925e3732e9d05c3ff254ec53aacd39f3ae8d4d64",
+      "promptRecord": "diagnostics/urgren-madruach-20261114/image-prompts.json",
+      "originalRecord": "diagnostics/urgren-madruach-20261114/art/originals/urgren-mythos-v1.png"
+    },
+    {
+      "id": "madruach-v1",
+      "file": "./predators/urgren/madruach-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "sourceType": "imagegen",
+      "sourceDate": "2026-11-14",
+      "sha256": "334ef348e5cbc5e07c149ad0f3bbb8a1a1f4b1b93e8b52608419390e0d2cdc46",
+      "promptRecord": "diagnostics/urgren-madruach-20261114/image-prompts.json",
+      "originalRecord": "diagnostics/urgren-madruach-20261114/art/originals/madruach-v1.png"
     }
   ]
 }

@@ -5,6 +5,12 @@ import { normalizeEquipmentPreparationCosts } from '../character-equipment/equip
 import { normalizeSubstanceExposure } from '../character-health/substance-profiles.js';
 import { normalizeEquipmentPassiveEffects } from '../character-equipment/equipment-passive-effects.js';
 export const ITEM_CATEGORIES = Object.freeze(['waffen', 'ruestungen', 'speisen', 'getraenke', 'alchemie', 'arkanes', 'werkzeuge', 'sonstiges', 'pferde', 'vieh']);
+// A document is referenced by its workshop identity, never by executable markup
+// or a caller-supplied destination. Reading does not consume the possession.
+export function normalizeItemDocumentRef(value) {
+  return value && typeof value === 'object' && typeof value.id === 'string' && /^[a-z0-9][a-z0-9-]{0,79}$/.test(value.id)
+    ? { id: value.id } : null;
+}
 const clean = (value, limit = 180) => String(value ?? '').trim().slice(0, limit);
 const copy = value => value == null ? value : JSON.parse(JSON.stringify(value));
 
@@ -131,6 +137,7 @@ export function normalizeItemDefinition(input = {}, { id = input.id, revision = 
   const kind = input.kind === 'unique' ? 'unique' : 'shared';
   const passiveEffects = normalizeEquipmentPassiveEffects(input.passiveEffects);
   return { schemaVersion: ITEM_DEFINITION_SCHEMA, ...ref, kind,
+    ...(normalizeItemDocumentRef(input.documentRef) ? { documentRef: normalizeItemDocumentRef(input.documentRef) } : {}),
     baseRef: normalizeItemDefinitionRef(input.baseRef), title, category,
     type: clean(input.type), image: imagePath(input.image), description: clean(input.description, 12000),
     mechanicsStatus: ['provisional', 'defined', 'narrative'].includes(input.mechanicsStatus) ? input.mechanicsStatus : 'provisional',

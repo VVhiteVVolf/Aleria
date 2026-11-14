@@ -1,5 +1,7 @@
 import { initializeApp } from 'firebase-admin/app';
 export { commitCommentPageBundle } from './comments/commit-comment-page-bundle.js';
+export { documentItemNotes } from './document-notes/document-item-notes.js';
+export { commitSceneElement, evaluateSceneElementComment } from './scene-elements/commit-scene-element.js';
 import { publishFamily } from './publishing/publish-family.js';
 import { setFamilyMemberRole } from './access/set-family-member-role.js';
 import { setAleriaRole } from './access/set-aleria-role.js';

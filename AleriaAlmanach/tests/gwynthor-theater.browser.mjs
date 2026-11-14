@@ -59,8 +59,8 @@ try {
       }
     }
     if(index===4){
-      assert.equal(await page.locator('[data-theatre-slot="production"]').count(),4);
-      assert.equal(await page.locator('[data-theatre-slot="vacant"]').count(),4);
+      assert.equal(await page.locator('[data-theatre-slot="production"]').count(),5);
+      assert.equal(await page.locator('[data-theatre-slot="vacant"]').count(),3);
       const metrics=await page.locator('#modal-overlay .theatre-program-scroll').evaluate(el=>({height:el.clientHeight,scroll:el.scrollHeight,columns:getComputedStyle(el.querySelector('.theatre-program-grid')).gridTemplateColumns.split(' ').length}));
       assert.ok(metrics.height>200&&metrics.scroll>metrics.height);assert.equal(metrics.columns,2);
       await page.screenshot({path:resolve(output,'repertoire-desktop-top.png')});
@@ -83,7 +83,7 @@ try {
   await programCard.locator('.module-theatre-production').last().locator('.me-theatre-title').fill('Gastspiel zur Probe');
   let collected=await page.evaluate(()=>collectModuleEditorPayload().entry.pages[4]);
   assert.equal(collected.theatreProgram.items.length,9);assert.equal(collected.theatreProgram.items[8].title,'Gastspiel zur Probe');
-  assert.equal(collected.theatreProgram.items.filter(p=>!p.title).length,4);
+  assert.equal(collected.theatreProgram.items.filter(p=>!p.title).length,3);
   await programCard.locator('.module-theatre-production').last().locator('[data-module-editor-action="schema-remove-row"]').click();
   assert.equal(await programCard.locator('.module-theatre-production').count(),8);
   await page.evaluate(()=>closeModuleEditor());
@@ -135,6 +135,6 @@ try {
   await page.goto(`${server.origin}/Fraktionen/index.html#fraktion-bewahrer-von-avallorn`);
   await page.locator('[data-faction-id="bewahrer-von-avallorn"]').waitFor({state:'visible'});
   assert.deepEqual(errors,[]);
-  await writeFile(resolve(output,'report.json'),JSON.stringify({passed:true,pages:11,commentPage:true,departments:4,productions:4,vacancies:4,extendedRows:9,modalEditor:true,inlineEditor:true,desktopAndMobileScroll:true,profiles:15,cityAndInstituteLinks:true,externalWritesBlocked:true},null,2));
+  await writeFile(resolve(output,'report.json'),JSON.stringify({passed:true,pages:11,commentPage:true,departments:4,productions:5,vacancies:3,extendedRows:9,modalEditor:true,inlineEditor:true,desktopAndMobileScroll:true,profiles:15,cityAndInstituteLinks:true,externalWritesBlocked:true},null,2));
   console.log(`PASS: ${output}`);
 } finally {await browser?.close();await server.close();}

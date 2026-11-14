@@ -436,7 +436,9 @@ export function deriveCombatRuleFrequencyKeys(comments = []) {
       }
       return;
     }
-    for (const root of getCommentCombatResolutionGroups(comment).flat()) for (const { resolution } of getCombatResolutionTree(root)) {
+    const roots = [...getCommentCombatResolutionGroups(comment).flat(),
+      ...(comment.commentSegments || []).map(segment => segment?.skillResolution), comment.sceneElementDetection].filter(Boolean);
+    for (const root of roots) for (const { resolution } of getCombatResolutionTree(root)) {
       for (const application of resolution.ruleApplications || []) {
         const storedKey = text(application.usedKey, 500);
         if (!storedKey) continue;

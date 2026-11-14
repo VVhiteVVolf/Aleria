@@ -6,6 +6,7 @@ import { preparePaperAssets } from './paper/paper-generator.js';
 import { ensureDocumentFont } from './fonts/document-fonts.js';
 import { exportPng } from './export/document-export.js';
 import { createWorkshopBookMount, readBookPosition } from './book/workshop-book.js';
+import { mountReaderDocumentNotes } from './notes/document-notes-reader.js';
 
 const root = document.querySelector('[data-role="document-reader"]');
 const status = root.querySelector('[data-role="reader-status"]');
@@ -24,6 +25,7 @@ try {
   output.classList.add(`template-${meta.template}`);
   output.innerHTML = buildDocumentHtml(meta);
   await bookMount.update(meta);
+  void mountReaderDocumentNotes(root, meta);
   root.querySelector('[data-reader-action="png"]').disabled = false;
 } catch (error) { status.textContent = error.message; root.querySelector('[data-role="reader-title"]').textContent = 'Dokument nicht verfügbar'; }
 

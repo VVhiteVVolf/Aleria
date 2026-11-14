@@ -51,7 +51,7 @@ export function projectTailoringCharacterDatabase(basis, families){
   const next=structuredClone(existing),person=structuredClone(previous),character=structuredClone(existing.character);
   const own=existing.local?.authoredFeature===TAILORING_CHARACTER_FEATURE;
   const fields=own?Object.keys(entry.character).filter(k=>!['id','name'].includes(k))
-   : ['identity','genealogy','updatedAt',...(['qN5et9e7KaWlIPTSrsXt','XVeiNvgFfsmtomLuIjcA'].includes(entry.character.id)?['bio','biography']:[])];
+   : ['identity','genealogy','updatedAt',...(entry.character.id==='qN5et9e7KaWlIPTSrsXt'?['bio','biography']:[])];
   for(const field of fields){
    const value=field==='identity'?{...character.identity,...entry.character.identity}
     :field==='updatedAt'?[character.updatedAt,entry.character.updatedAt].filter(Boolean).sort().at(-1):entry.character[field];
@@ -70,7 +70,8 @@ export function projectTailoringCharacterDatabase(basis, families){
   // Reuse that exact receipt when its values match; do not append a new source
   // or duplicate document ID solely because object keys were reordered.
   const authoredExport=Object.fromEntries(Object.keys(entry.character).filter(k=>['id','name',...fields].includes(k)).map(k=>[k,entry.character[k]]));
-  const existingReceipt=existing.sources.firestoreExports.find(source=>isDeepStrictEqual(source,authoredExport));
+  const existingReceipt=existing.sources.firestoreExports.find(source=>Object.entries(authoredExport)
+   .every(([field,value])=>isDeepStrictEqual(source[field],value)));
   return confirmCharacterRecordProjection({record:next,snapshotCharacter:previous,path:row.path,character,person,
    exportedCharacter:existingReceipt||authoredExport,sourcePath:entry.sourcePath,now:entry.exportedAt}).projection;
  });

@@ -1,0 +1,159 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-14T12:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Castell Wyrm"
+      ],
+      "description": "Am Südufer des Flusses durch Gwynthor, über eine Zugbrücke erreichbar · Flussburg · Reitkunst und höfische Rittertradition",
+      "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-wyrm.png"
+    },
+    "entry": {
+      "id": "castell-wyrm-innenhof",
+      "title": "Castell Wyrm – Innenhof & Anlagen",
+      "subtitle": "Burghof, Stallungen, Garten und Übungsplatz",
+      "type": "Interaktive Szene",
+      "category": "Castell Wyrm",
+      "image": "./assets/gwynthor-castles/2026-11-14/wyrm/zugbruecke-v1.png",
+      "previewImage": "./assets/gwynthor-castles/2026-11-14/wyrm/zugbruecke-v1.png",
+      "symbol": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-wyrm.png",
+      "icon": "",
+      "stamp": "Celtigerns Wacht · Gwynthor · Aleria",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Zugbrücke am Fluss",
+          "commentThreadKey": "wyrm-zugbruecke",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/wyrm/zugbruecke-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Der Fluss zieht zwischen der Stadt und Castell Wyrm vorbei. Vom nördlichen Stadtufer führt eine steinerne Brücke zum südlichen Ufer. Ihr letztes Stück vor dem Burgtor ist eine schwere hölzerne Zugbrücke, deren Ketten zu den Hebebalken über dem Tor laufen.</p><p>Rot-goldene Banner mit schwarzem Wyrm hängen an den Torpfeilern. Unter den Bohlen schimmert das Flusswasser; dahinter öffnet sich der Durchgang zum Burghof. Hier können Reisende ankommen, Boten warten und Besucher Einlass erbitten.</p>",
+          "sessionLocation": "Castell Wyrm · Zugbrücke am Fluss",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Zugbrücke am Fluss",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Burghof am Fluss",
+          "commentThreadKey": "wyrm-burghof",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/wyrm/burghof-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Hinter dem Tor liegt der helle Burghof der Wyrm. Der Weg von der Zugbrücke führt geradewegs zwischen Stallflügel und gedeckter Galerie zum Bergfried. An der Flussseite steht eine niedrige innere Mauer; dahinter hört man das Wasser gegen die Ufersteine schlagen.</p><p>Rot und Gold bestimmen die Wimpel, in ihrer Mitte der schwarze geflügelte Wyrm. Ein Brunnen, eine Tränke und geordnete Abstellplätze halten den Hof alltagstauglich. Seitliche Wege führen zum Garten und zum Übungsplatz.</p>",
+          "sessionLocation": "Castell Wyrm · Burghof am Fluss",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Burghof am Fluss",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Ritterstallungen",
+          "commentThreadKey": "wyrm-stallungen",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/wyrm/stallungen-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Die Ritterstallungen nehmen einen langen Flügel am Hof ein. Geräumige Boxen, ein sauberer Mittelgang und der eigene Sattelbereich zeigen den Stellenwert der Reitkunst im Haus. Zwei Pferde wenden die Köpfe zum Licht des geöffneten Tores.</p><p>An den Decken und Sattelunterlagen erscheinen Rot, Gold und das schwarze Hauszeichen. Pflegezeug liegt auf einer Bank, Futter und Einstreu warten im hinteren Arbeitsbereich. Der Weg zum Übungsplatz bleibt frei.</p>",
+          "sessionLocation": "Castell Wyrm · Ritterstallungen",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Ritterstallungen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Ufergarten",
+          "commentThreadKey": "wyrm-burggarten",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/wyrm/burggarten-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Der Ufergarten liegt geschützt innerhalb der Burgmauer, unmittelbar am Fluss. Ein schmaler Weg führt zwischen Rosen, Küchenkräutern und einem kleinen Obstbaum zu einer steinernen Sitzbank. Hinter der Brüstung gleitet das Wasser vorbei; am gegenüberliegenden Ufer stehen die Häuser Gwynthors.</p><p>Ein rot-goldenes Sonnentuch spannt sich über die ruhige Sitzecke. Der Garten ist klein genug, um zum Burgalltag zu gehören, und still genug für ein vertrautes Gespräch oder das Warten auf eine Nachricht.</p>",
+          "sessionLocation": "Castell Wyrm · Ufergarten",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Ufergarten",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Übungsplatz der Ritter",
+          "commentThreadKey": "wyrm-uebungsplatz",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/wyrm/uebungsplatz-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Neben den Stallungen liegt ein rechteckiger Sandplatz. Eine niedrige Schranke fasst den Übungsbereich ein; am Rand warten ein drehbarer Quintain, gepolsterte Pfähle und ein Gestell für stumpfe Übungswaffen. Ein breiter Streifen bleibt für Reitübungen frei.</p><p>Vom Vordach aus lässt sich das Training verfolgen. Die roten und goldenen Wimpel tragen den schwarzen Wyrm. Der Platz dient dem täglichen Üben von Reitkunst, Waffenführung und Zweikämpfen, ohne ein eigenes Turniergelände zu beanspruchen.</p>",
+          "sessionLocation": "Castell Wyrm · Übungsplatz der Ritter",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Übungsplatz der Ritter",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

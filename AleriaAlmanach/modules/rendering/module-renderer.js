@@ -41,7 +41,7 @@ function getModulePageImageFit(page, fallback = 'cover') {
 }
 
 function getModulePageImagePosition(page, fallback = 'center top') {
-  const value = String(page?.imagePosition || '').trim();
+  const value = sanitizeModulePageImagePosition(page?.imagePosition);
   const positions = {
     top: 'center top',
     center: 'center center',
@@ -49,7 +49,7 @@ function getModulePageImagePosition(page, fallback = 'center top') {
     left: 'left center',
     right: 'right center'
   };
-  return positions[value] || fallback;
+  return positions[value] || value || fallback;
 }
 
 function buildModuleImageElementAttrs(page, fallbackFit = 'cover', fallbackPosition = 'center top', includeWidth = false) {

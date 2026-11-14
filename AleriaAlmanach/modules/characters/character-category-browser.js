@@ -3,6 +3,7 @@
 const AleriaCharacterCategoryBrowser = (() => {
   let selected = null;
   let directoryKind = '';
+  let directoryLimit = 24;
 
   function reset() { selected = null; }
   function hasSelection() { return !!selected; }
@@ -15,14 +16,15 @@ const AleriaCharacterCategoryBrowser = (() => {
   }
 
   function filterEntries(chars) {
-    if (!selected || _activeCharTab !== 'Alle') return chars;
+    if (!selected?.key || _activeCharTab !== 'Alle') return chars;
     const matches = bucketsFor(chars).find(bucket => bucket.key === selected.key)?.chars || [];
     const ids = new Set(matches.map(char => char.id));
     return chars.filter(char => ids.has(char.id));
   }
 
   function select(key) {
-    const bucket = bucketsFor(getVisibleCharacterRecords()).find(item => item.key === key);
+    const records = typeof AleriaCharacterDirectory !== 'undefined' ? AleriaCharacterDirectory.getVisible() : getVisibleCharacterRecords();
+    const bucket = bucketsFor(records).find(item => item.key === key);
     if (!bucket) return;
     if ((bucket.kind === 'collection' || bucket.kind === 'collections') && _charTabs.includes(bucket.label)) {
       selectCharacterTab(bucket.label);
@@ -43,11 +45,12 @@ const AleriaCharacterCategoryBrowser = (() => {
   function renderTile(bucket) {
     const emblem = sanitizeImageSrc(bucket.emblem);
     const preview = bucket.chars.slice(0, 3).map(char => char.name || 'Unbenannt').join(', ');
-    return `<button type="button" class="char-category-tile" data-character-category-action="select"
+    const iconKey = bucket.kind === 'relevance' ? 'relevance' : bucket.kind;
+    return `<button type="button" class="char-category-tile" data-tone="${AleriaCharacterRegisterIcons.tone(iconKey)}" data-character-category-action="select"
       data-category-key="${escapeHtml(bucket.key)}" aria-label="${escapeHtml(bucket.label)}: ${bucket.chars.length} Figuren anzeigen">
       <span class="char-category-emblem" aria-hidden="true">${emblem
         ? `<img src="${escapeHtml(emblem)}" alt="" loading="lazy">`
-        : escapeHtml(bucket.label.charAt(0))}</span>
+        : AleriaCharacterRegisterIcons.render(iconKey)}</span>
       <span class="char-category-copy"><strong>${escapeHtml(bucket.label)}</strong><small>${escapeHtml(preview)}</small></span>
       <span class="char-category-count">${bucket.chars.length}<span aria-hidden="true"> →</span></span>
     </button>`;
@@ -72,7 +75,7 @@ const AleriaCharacterCategoryBrowser = (() => {
         AleriaCharacterResultPages.renderNavigation(section, page);
         const cards = document.createElement('div');
         cards.className = 'char-category-characters';
-        page.entries.forEach(char => cards.appendChild(createCharacterCard(char)));
+        page.entries.forEach(char => cards.appendChild(createCharacterCard(char, { compact: true })));
         section.appendChild(cards);
       } else {
         const empty = document.createElement('p');
@@ -86,7 +89,7 @@ const AleriaCharacterCategoryBrowser = (() => {
         ? chars.filter(char => AleriaCharacterCategories.classify(char).automatic).length : 0;
       section.innerHTML = `<div class="char-category-heading"><div><span class="char-category-eyebrow">Kategorien entdecken</span>
         <h3>${buckets.length} Kategorien · ${chars.length} Figuren</h3></div>
-        ${automatic ? `<p>${automatic} Figuren automatisch eingeordnet<br><small>Aus Haus, Stammbaum, Fraktion oder Ort</small></p>` : ''}</div>`;
+        <button class="char-category-show-all" type="button" data-character-category-action="all">Alle Figuren anzeigen →</button></div>`;
       const kinds = new Map();
       buckets.forEach(bucket => {
         if (!kinds.has(bucket.kind)) kinds.set(bucket.kind, []);
@@ -100,19 +103,30 @@ const AleriaCharacterCategoryBrowser = (() => {
         navigation.setAttribute('aria-label', 'Kategorien eingrenzen');
         navigation.innerHTML = [['', 'Alle Kategorien', buckets.length], ...[...kinds].map(([kind, entries]) =>
           [kind, AleriaCharacterCategories.kinds[kind], entries.length])].map(([kind, label, count]) =>
-          `<button type="button" data-character-category-action="kind" data-category-kind="${escapeHtml(kind)}"
-            aria-pressed="${directoryKind === kind}">${escapeHtml(label)} <span>${count}</span></button>`).join('');
+          `<button type="button" data-character-category-action="kind" data-category-kind="${escapeHtml(kind)}" data-tone="${AleriaCharacterRegisterIcons.tone(kind)}"
+            aria-pressed="${directoryKind === kind}">${AleriaCharacterRegisterIcons.render(kind)}${escapeHtml(label)} <span>${count}</span></button>`).join('');
         section.appendChild(navigation);
       }
+      const filteredBuckets = directoryKind ? buckets.filter(bucket => bucket.kind === directoryKind) : buckets;
+      const shownKeys = new Set(filteredBuckets.slice(0, directoryLimit).map(bucket => bucket.key));
       for (const [kind, entries] of kinds) {
         if (directoryKind && directoryKind !== kind) continue;
+        const shown = entries.filter(bucket => shownKeys.has(bucket.key));
+        if (!shown.length) continue;
         const group = document.createElement('div');
         group.className = 'char-category-section';
         const heading = AleriaCharacterCategories.kinds[kind]
           || CHARACTER_REGISTER_VIEW_OPTIONS.find(option => option.value === kind)?.label || 'Kategorien';
         group.innerHTML = `<h4>${escapeHtml(heading)} <span>${entries.length}${entries[0].automatic ? ' · automatisch' : ''}</span></h4>
-          <div class="char-category-tiles">${entries.map(renderTile).join('')}</div>`;
+          <div class="char-category-tiles">${shown.map(renderTile).join('')}</div>`;
         section.appendChild(group);
+      }
+      if (filteredBuckets.length > directoryLimit) {
+        const more = document.createElement('button');
+        more.className = 'char-category-more'; more.type = 'button';
+        more.dataset.characterCategoryAction = 'more';
+        more.textContent = `Weitere Kategorien · ${directoryLimit} von ${filteredBuckets.length} sichtbar`;
+        section.appendChild(more);
       }
     }
     grid.appendChild(section);
@@ -125,8 +139,19 @@ const AleriaCharacterCategoryBrowser = (() => {
     event.preventDefault();
     if (trigger.dataset.characterCategoryAction === 'kind') {
       directoryKind = trigger.dataset.categoryKind || '';
+      directoryLimit = 24;
       renderCharGrid();
       document.querySelector('#char-grid .char-category-kinds [aria-pressed="true"]')?.focus({ preventScroll: true });
+    }
+    if (trigger.dataset.characterCategoryAction === 'more') {
+      directoryLimit += 24;
+      renderCharGrid();
+      document.querySelector('#char-grid .char-category-more')?.focus({ preventScroll: true });
+    }
+    if (trigger.dataset.characterCategoryAction === 'all') {
+      selected = { key: '', label: 'Alle Figuren' };
+      _characterDashboardFilter = '';
+      renderCharGrid(); focusResults();
     }
     if (trigger.dataset.characterCategoryAction === 'select') select(trigger.dataset.categoryKey);
     if (trigger.dataset.characterCategoryAction === 'reset') {

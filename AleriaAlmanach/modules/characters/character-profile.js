@@ -75,6 +75,10 @@ function populateCharacterProfileForm(c = {}) {
 }
 
 function openCharProfile(id) {
+  if (typeof AleriaCharacterDirectory !== 'undefined') {
+    if (AleriaCharacterDirectory.needsRecord(id)) { AleriaCharacterDirectory.openProfile(id); return; }
+    AleriaCharacterDirectory.cancelOpening();
+  }
   _pendingCharacterImport = null;
   const c = id ? (getCharacterById(id) || {}) : {};
   _editingChar = c.id || id;
@@ -721,6 +725,7 @@ async function deleteCharacter() {
     await window.AleriaCharacterImageLibraryAutosave?.flush?.(_editingChar);
     await window._fb.deleteCharacter(_editingChar);
     _characters = _characters.filter(x => x.id !== _editingChar);
+    if (typeof AleriaCharacterDirectory !== 'undefined') AleriaCharacterDirectory.remove(_editingChar);
     Object.keys(_charTabMap).forEach(tab => {
       _charTabMap[tab] = (_charTabMap[tab] || []).filter(id => id !== _editingChar);
     });

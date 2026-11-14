@@ -1,0 +1,136 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-14T12:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Castell Gafyr"
+      ],
+      "description": "Ebener Stadtgrund in Gwynthor, mit dem Rücken zum Gebirge · Bodenständige Stadtburg · Treue, Wald und Erz",
+      "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gafyr.png"
+    },
+    "entry": {
+      "id": "castell-gafyr-innenhof",
+      "title": "Castell Gafyr – Innenhof & Anlagen",
+      "subtitle": "Burghof, Stallungen, Garten und Übungsplatz",
+      "type": "Interaktive Szene",
+      "category": "Castell Gafyr",
+      "image": "./assets/gwynthor-castles/2026-11-14/gafyr/burghof-v1.png",
+      "previewImage": "./assets/gwynthor-castles/2026-11-14/gafyr/burghof-v1.png",
+      "symbol": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gafyr.png",
+      "icon": "",
+      "stamp": "Celtigerns Wacht · Gwynthor · Aleria",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Burghof",
+          "commentThreadKey": "gafyr-burghof",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/gafyr/burghof-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Castell Gafyr breitet sich auf ebenem Stadtgrund aus. Hinter den rückwärtigen Mauern erhebt sich das Gebirge; vor dem Tor gehen die Straßen Gwynthors weiter. Der breite Hof verbindet Stallungen, Wirtschaftsflügel und den gedrungenen Bergfried. Schwarze Banner mit zwei goldenen Ziegen hängen über den Durchgängen.</p><p>Am Brunnen stehen Tröge für ankommende Pferde. Ein Karren wartet neben gestapeltem Brennholz, während unter dem gedeckten Gang Platz für Besucher bleibt. Von hier führt ein kurzer Weg zum Garten, ein anderer zum Übungsplatz.</p>",
+          "sessionLocation": "Castell Gafyr · Burghof",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Burghof",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Stallungen",
+          "commentThreadKey": "gafyr-stallungen",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/gafyr/stallungen-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Die Stallungen liegen im niedrigen Seitenflügel des Hofes. Breite Boxen, trockene Einstreu und ein freier Mittelgang geben Reit- und Dienstpferden Raum. An der Wand hängen schlichte Halfter; Sättel und Decken liegen im abgetrennten Sattelbereich.</p><p>Licht fällt durch offene Läden auf den Futtertrog. Hinter dem großen Tor ist der ebene Burghof zu sehen. Das leise Scharren eines Pferdes und der Geruch nach Heu gehören hier zum täglichen Burgbetrieb.</p>",
+          "sessionLocation": "Castell Gafyr · Stallungen",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Stallungen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Burggarten",
+          "commentThreadKey": "gafyr-burggarten",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/gafyr/burggarten-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Hinter dem Wirtschaftsflügel liegt ein ummauerter Garten mit niedrigen Kräuterbeeten, Beerensträuchern und einem kleinen Obstbaum. Zwischen den Beeten führen feste Kieswege zu einer steinernen Bank. Die rückwärtige Mauer hält den Stadtlärm fern; darüber bleiben die Bergkämme sichtbar.</p><p>Ein schlichter Wasserstein versorgt die Beete. Der Garten bietet dem Haushalt einen ruhigen Ort für Gespräche, ohne weit vom Hofgeschehen entfernt zu sein. Ein schwarzes Tuch mit goldener Borte schützt die Bank vor der stärksten Sonne.</p>",
+          "sessionLocation": "Castell Gafyr · Burggarten",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Burggarten",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Übungsplatz",
+          "commentThreadKey": "gafyr-uebungsplatz",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/gafyr/uebungsplatz-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Eine niedrige Holzschranke trennt den festgetretenen Übungsboden vom Fahrweg des Hofes. Gepolsterte Pfähle, ein hölzerner Gegner und ein Gestell für Übungswaffen stehen an der Mauer. Schwarze Wimpel mit goldenen Ziegen markieren den Zugang.</p><p>Hier lassen sich Schritte, Schildarbeit und Zweikämpfe üben. Zuschauer finden unter einem schmalen Vordach Platz. Aus dem Hof führt ein breiter Durchgang zu den Stallungen; die Übungen versperren den täglichen Burgverkehr nicht.</p>",
+          "sessionLocation": "Castell Gafyr · Übungsplatz",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Übungsplatz",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

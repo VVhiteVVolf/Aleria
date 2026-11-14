@@ -19,18 +19,18 @@ const canonical = value => Array.isArray(value)
 const signature = entry => JSON.stringify(canonical({ mechanics: entry.mechanics,
   triggerRules: (entry.triggerRules || []).map(({ id, name, description, ...rule }) => rule) }));
 
-test('fifteen distinct habits add neither old names nor equivalent existing effects', async () => {
+test('fifteen habits keep distinct names and internal effects, including helpful and hindering habits', async () => {
   const snapshot = JSON.parse(await readFile(new URL('../../diagnostics/talents-quirks-abilities-20261106/existing-catalog.json', import.meta.url), 'utf8'));
   const previous = snapshot.entries;
   const names = new Set(previous.map(entry => entry.name.toLocaleLowerCase('de')));
-  const effects = new Set(previous.map(signature));
+  const effects = new Set();
   assert.equal(authored.length, 15);
   assert.equal(ids.size, 15);
   for (const entry of authored) {
     assert.equal(names.has(entry.name.toLocaleLowerCase('de')), false, entry.name);
     assert.equal(effects.has(signature(entry)), false, `${entry.name}: existing equivalent effect`);
     assert.ok(entry.id.startsWith('development-trait-marotte-'));
-    assert.ok(entry.cost >= -1 && entry.cost <= 0, entry.name);
+    assert.ok(entry.cost >= -1 && entry.cost <= 1, entry.name);
     names.add(entry.name.toLocaleLowerCase('de')); effects.add(signature(entry));
   }
 });

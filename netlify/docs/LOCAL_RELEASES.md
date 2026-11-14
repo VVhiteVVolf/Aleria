@@ -6,6 +6,45 @@ seinen eigenen Releaseprozess. Keine neuen Backup-Branches oder ZIP-Uploads.
 
 ## Standardablauf
 
+Vor einem Sammelauftrag mit gemischten Main-/Public-Quellen zuerst die lokale
+Änderungsübersicht ausführen:
+
+```text
+node netlify/release/local-changes.mjs
+node netlify/release/local-changes.mjs --json
+```
+
+Sie liest `.release-state/published-local-inputs.json` und die getrennte lokale
+Umfangsdatei `.release-state/local-change-scope.json`. Der Beleg wird gegen seine
+Git-Blobs geprüft. Verglichen wird mit dem letzten nativ verifizierten Release
+der angegebenen öffentlichen Quelle, auch wenn deren HEAD bereits weiter ist.
+`reviewedMainCommit` im Eingabebeleg oder, für den bestehenden Altbeleg, in der
+Umfangsdatei bindet die bereits geprüfte Main-Basis. Damit werden auch neue,
+in Main inzwischen committete Dateien erkannt, deren Arbeitsbaum sauber ist.
+Es erfolgen weder Netzwerkabrufe noch Änderungen an Git, Dateien oder Belegen.
+
+Die Übersicht unterscheidet neue Dateien, geänderte lokale Eingaben, manuelle
+Abgleichfälle, lokale Löschungen, gesperrte Pfade und Ausschlüsse. Bereits
+abgeglichene Eingaben werden auch dann erkannt, wenn ihre öffentlichen Bytes
+gezielt verbessert wurden. Unbekannte abweichende öffentliche Dateien gelten
+als manuelle Abgleichfälle; Löschungen werden lediglich angezeigt. Gleichheit
+nur der CRLF-/LF-Zeilenenden wird für Textdateien bis 10 MiB gesondert erkannt.
+Diagnosen und Werkzeugdateien werden vor dem Inhaltslesen ausgespart und nur
+gezählt. Vier Leser begrenzen den Speicher- und I/O-Bedarf.
+
+Fehlende oder widersprüchliche Metadaten stoppen die Übersicht, statt Dateien
+als ungeprüfte Neuheiten einzustufen. Die Umfangsdatei bewahrt die bisherigen
+ausdrücklichen Ausschlüsse einschließlich Fleischsammler. Bei einem neuen
+Nutzerauftrag die passenden Regeln gezielt anpassen; sie sind keine dauerhafte
+Sperre gegen neu erteilte Freigaben. `--receipt PFAD`, `--scope PFAD` und
+`--public-root PFAD` erlauben ausdrücklich andere lokale Belege und Quellen.
+Mit `--limit=30` wird die Anzahl angezeigter Prüffälle begrenzt; `--json` enthält
+die vollständigen Falllisten ohne einzelne technische Diagnosepfade.
+
+Diese Bestandsaufnahme ist keine Übernahmefreigabe und kein Build-Prüfbeleg.
+Nur die angezeigten neuen oder geänderten Fälle abgleichen; anschließend gelten
+weiterhin der folgende native Releaseweg und seine Datenschutz-/Byteprüfungen.
+
 1. Änderungen prüfen und gezielt committen. Der letzte Commit des lokalen
    Release-Pushs enthält **`[skip netlify]`**. Beispiel:
    `git commit -m "Improve country pages [skip netlify]"`.
@@ -190,6 +229,7 @@ lädt nur dort fehlende Inhalte hoch; Git-Pushs bleiben ebenfalls inkrementell.
 ```text
 node --test --experimental-test-isolation=none netlify/tests/site-build.test.mjs netlify/tests/local-release.test.mjs netlify/tests/prepared-release.test.mjs netlify/tests/release-flow.test.mjs netlify/tests/release-timings.test.mjs netlify/tests/build-checkpoints.test.mjs netlify/tests/site-build-fingerprints.test.mjs
 node --test --experimental-test-isolation=none netlify/tests/build-preflight.test.mjs netlify/tests/build-validation-scheduler.test.mjs netlify/tests/validation-commands.test.mjs
+node --test --experimental-test-isolation=none netlify/tests/local-changes.test.mjs
 node --test --experimental-test-isolation=none Stammbäume/tests/release-dependencies.test.js
 python netlify/tests/temporary-cleanup.test.py
 ```
@@ -197,35 +237,3 @@ python netlify/tests/temporary-cleanup.test.py
 Geprüft werden unter anderem parallele Bearbeitungen, private Functions,
 Katalog-Overlays, Archivfilter, Verzeichniseigentum, Verknüpfungen und die
 selektive Skip-Markierung.
-
-## Kanonische ?ffentliche Bin?rquelle
-
-Die optional markierte ?ffentliche Arbeitskopie liegt direkt unter der
-.release-state des getrennten Hauptworkspaces. Nach allen Checks wird sie
-eingefroren. Nur gro?e, regul?re Bin?rassets mit genau einem Link werden
-gegen ihren vollst?ndigen Git-Blob gepr?ft und im Stage hardgelinkt. Main,
-Code, JSON und erzeugte Overlays bleiben ausgeschlossen. Ohne g?ltigen
-Eigentumsmarker gilt der bisherige Git-Blob-Pfad. Overlays werden weiterhin
-vor dem Schreiben entkoppelt. Bei verwendeten Bin?rlinks verlangt der
-Publisher vor Push/Upload die vollst?ndige native Byte-/Git-/Ownerpr?fung.
-
-Der Marker .release-state/public-source.json enth?lt owner
-aleria-canonical-public-source-v1, checkout (?ffentliche Arbeitskopie),
-sourceWorkspace (separater Hauptworkspace) und den endg?ltigen Commit.
-Er wird erst nach dem finalen Commit erstellt. Ver?nderte oder bereits
-fremd verlinkte Assets werden aus Git kopiert, nicht aus Main ?bernommen.
-Die Quelle bleibt bis zum best?tigten Produktionsabschluss unver?ndert.
-
-Vorbereitete Pakete d?rfen nur nach vollst?ndiger nativer Pr?fung
-wiederverwendet werden; Commit, Runtime, Inputfingerprints und alle
-urspr?nglichen Pr?fzeiten bleiben gebunden. Ung?ltige oder fehlende Pakete
-autorisieren keine generierten Arbeits?nderungen. Im normalen Ablauf wird
-einmal --publish --push nach komplettem Source-/Test-/Input-Freeze verwendet.
-
-Gemeinsam genutzte node_modules werden bei passendem Lock/Modulstand nur
-wiederverwendet. Ein Mismatch darf niemals npm ci durch eine Junction
-ausl?sen; die Runtime- und Stammbaum-Preparer stoppen dann ausdr?cklich.
-Vor dem Lauf kann prepare-runtime-checks.mjs --check installationsfrei
-pr?fen. Nach Bin?rlinks aktualisiert der Publisher einmal den Statcache
-der eigenen ?ffentlichen Quelle mit update-index --refresh; echte
-Arbeits?nderungen bleiben durch den normalen Workspaceguard gesch?tzt.

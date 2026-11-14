@@ -19,7 +19,7 @@ export function buildShellStyle(meta) {
 
 export function buildDocumentHtml(input, options = {}) {
   const meta = normalizeDocument(input);
-  if (meta.template === 'book') return `<div class="doc-shell workshop-book-shell" style="${escapeHtml(buildShellStyle(meta))}">${buildWorkshopBook(meta)}</div>`;
+  if (meta.template === 'book') return `<div class="doc-shell workshop-book-shell" style="${escapeHtml(buildShellStyle(meta))}">${buildWorkshopBook(meta, options)}</div>`;
   const paperStyle = escapeHtml(`background-image:${paperBackground(meta)};background-size:100% 100%`);
   const body = buildDocumentBody(meta, options).replace('class="document', `style="${paperStyle}" class="document`);
   return `<div class="doc-shell paper-shell" style="${escapeHtml(buildShellStyle(meta))}">${body}</div>`;

@@ -1,4 +1,4 @@
-import { createHerausforderungAiTemplate, createHerausforderungExport, parseHerausforderungImport, MAX_HERAUSFORDERUNG_IMPORT_BYTES } from './herausforderung-exchange.js?v=20261016-check-policy-v1';
+import { createHerausforderungAiTemplate, createHerausforderungAiStarter, createHerausforderungExport, parseHerausforderungImport, MAX_HERAUSFORDERUNG_IMPORT_BYTES } from './herausforderung-exchange.js?v=20261113-scene-elements-v1';
 import { STANDARD_ITEMS } from '../item-register/item-register-standard.js';
 
 const bindings = new WeakMap();
@@ -20,7 +20,8 @@ export function mountHerausforderungExchange(root, binding) {
     if (!trigger || root.getAttribute('aria-busy') === 'true') return;
     const current = bindings.get(root);
     const action = trigger.dataset.herausforderungExchange;
-    if (action === 'ai-template') { download(createHerausforderungAiTemplate(catalog(), current.getCombatContext?.() || {}), 'aleria-herausforderung-ki-vorlage.json'); current.onStatus('KI-Vorlage mit leerer Herausforderung, Anleitung und aktuellen Register-IDs exportiert.'); }
+    if (action === 'ai-template') { download(createHerausforderungAiStarter(catalog(), current.getCombatContext?.() || {}, current.getDraft()), 'aleria-szenenelement-ki-startpaket.json'); current.onStatus('Kompaktes KI-Startpaket mit Aleria-Kontext, Szenensituation, Anleitung, Beispielen und aktuellem Entwurf exportiert.'); }
+    if (action === 'ai-reference') { download(createHerausforderungAiTemplate(catalog(), current.getCombatContext?.() || {}), 'aleria-szenenelement-ki-referenz.json'); current.onStatus('Vollständige KI-Referenz mit allen geladenen Register-IDs und detaillierter Wirkungssyntax exportiert.'); }
     if (action === 'draft') { download(createHerausforderungExport(current.getDraft()), 'aleria-herausforderung-entwurf.json'); current.onStatus('Der aktuelle Entwurf wurde als JSON exportiert.'); }
     if (action === 'import') root.querySelector('[data-herausforderung-import-file]').click();
   });

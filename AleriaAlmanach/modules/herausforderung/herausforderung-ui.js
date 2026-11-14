@@ -3,16 +3,20 @@ import { renderChallengeCheckOption, refreshChallengeCheckPolicyEditor } from '.
 import { getCheckDescription } from '../skill-checks/skill-check-guidance.js?v=20261015-check-options-v1';
 import { getOutcomeSuccessDifficulty } from './herausforderung-outcomes.js?v=20261015-graded-challenges-v1';
 import { renderChallengeOutcomesEditor } from './herausforderung-outcomes-ui.js?v=20261015-check-options-v1';
-import { normalizeHerausforderungEvent, MAX_HERAUSFORDERUNG_APPROACHES, getHerausforderungValidationIssues } from './herausforderung-model.js?v=20261016-check-policy-v1';
+import { normalizeHerausforderungEvent, MAX_HERAUSFORDERUNG_APPROACHES, getHerausforderungValidationIssues } from './herausforderung-model.js?v=20261113-scene-elements-v1';
 import { getApproachProgress } from './herausforderung-progress.js?v=20261015-graded-challenges-v1';
 import { getChallengeCombatBindingError } from './herausforderung-combat-context.js?v=20261015-check-options-v1';
 import { CHECK_DEFINITIONS, ATTRIBUTE_CHECK_DEFINITIONS, SAVING_THROW_DEFINITIONS } from '../skill-checks/skill-check-model.js?v=20261015-check-options-v1';
 import { renderSkillIcon, renderSkillHint, skillTooltipAttributes, describeSkillChoice, bindSkillIconTooltips } from '../skill-checks/skill-icon-view.js?v=20261016-check-policy-v1';
 import { renderHerausforderungRewardEditor, rewardSummary } from './herausforderung-rewards-ui.js?v=20261015-check-options-v1';
 import { renderChallengeSceneImageEditor, renderChallengeSceneImage, refreshChallengeSceneImageEditor } from './herausforderung-scene-image-ui.js';
+import { renderSceneElementTypeEditor } from '../scene-elements/scene-element-authoring-ui.js';
+import { getSceneElementType } from '../scene-elements/scene-element-model.js';
+import { getSceneElementCompletion, renderSceneElementReaction } from '../scene-elements/scene-element-view.js';
+import { getSceneElementIconUrl, renderSceneElementIcon } from '../scene-elements/scene-element-icon-view.js';
 
 const ASSET_ROOT = './public/assets/herausforderung/';
-export const HERAUSFORDERUNG_ICON_URL = '../IconOrdner/Buttom Icons/Herausforderung.png';
+export const HERAUSFORDERUNG_ICON_URL = getSceneElementIconUrl('challenge');
 const ICONS = { challenge: HERAUSFORDERUNG_ICON_URL, approach: `${ASSET_ROOT}challenge-v1.png`, insight: `${ASSET_ROOT}insight-v1.png`, attempt: `${ASSET_ROOT}attempt-v1.png` };
 const DIFFICULTIES = [{ value: 5, label: 'Leicht' }, { value: 10, label: 'Normal' }, { value: 15, label: 'Anspruchsvoll' }, { value: 20, label: 'Schwer' }, { value: 25, label: 'Sehr schwer' }];
 const SKILL_GROUPS = [{ label: 'Gesellschaft', ids: ['persuasion', 'intimidation', 'deception', 'performance', 'insight', 'seduction'] }, { label: 'Wissen & Wildnis', ids: ['perception', 'investigation', 'religion', 'arcane-kunde', 'history', 'nature', 'survival', 'animal-handling', 'medicine'] }, { label: 'Geschick & Körper', ids: ['sleight-of-hand', 'acrobatics', 'stealth', 'athletics', 'body-control'] }, { label: 'Attributswürfe · ohne Übungsbonus', ids: ATTRIBUTE_CHECK_DEFINITIONS.map(check => check.id) }, { label: 'Rettungswürfe · eigene Ausbildung', ids: SAVING_THROW_DEFINITIONS.map(check => check.id) }];
@@ -40,7 +44,8 @@ export function ensureHerausforderungDialog() {
         <div><small>Erzählerwerkstatt</small><h2 id="herausforderung-dialog-title">Eine Herausforderung gestalten</h2><p>Eine Situation. Mehrere Wege. Verborgene Erkenntnisse.</p></div>
         <button class="herausforderung-close" type="button" data-herausforderung-action="close" aria-label="Schließen">×</button>
       </header>
-      <nav class="herausforderung-exchange" aria-label="Herausforderung importieren und exportieren"><button type="button" data-herausforderung-exchange="ai-template">↓ KI-Vorlage + Anleitung</button><button type="button" data-herausforderung-exchange="draft">↓ Entwurf exportieren</button><button type="button" data-herausforderung-exchange="import">↑ JSON importieren</button><input type="file" accept=".json,application/json" data-herausforderung-import-file hidden></nav>
+      <nav class="herausforderung-exchange" aria-label="Herausforderung importieren und exportieren"><button type="button" data-herausforderung-exchange="ai-template" title="Kompaktes Startpaket für eine fremde KI: Systemkontext, aktuelle Szene, Beispiele und Entwurf">↓ KI-Vorlage + Anleitung</button><button type="button" data-herausforderung-exchange="draft">↓ Entwurf exportieren</button><button type="button" data-herausforderung-exchange="import">↑ JSON importieren</button><details class="herausforderung-ai-reference"><summary>Mehr KI-Details</summary><button type="button" data-herausforderung-exchange="ai-reference">↓ Vollständige KI-Referenz</button></details><input type="file" accept=".json,application/json" data-herausforderung-import-file hidden></nav>
+      ${renderSceneElementTypeEditor()}
       <div class="herausforderung-body">
         <div class="herausforderung-editor">
           <section class="herausforderung-public herausforderung-fields" aria-labelledby="herausforderung-public-title">
@@ -51,9 +56,13 @@ export function ensureHerausforderungDialog() {
             <div class="herausforderung-target-editor" data-herausforderung-target></div>
           </section>
           <section class="herausforderung-fields herausforderung-audience" data-herausforderung-audience></section>
+          <div class="scene-element-reactions-editor" data-se-reactions>
           <div class="herausforderung-section-title"><h3>02 <span>Wege zur Erkenntnis</span></h3><span data-herausforderung-count></span></div>
+          <label data-se-completion><span>Wann ist das Element gelöst?</span><select data-se-field="completionMode"><option value="all">Alle Lösungswege abschließen</option><option value="any">Ein erfolgreicher Lösungsweg genügt</option></select></label>
           <div class="herausforderung-approaches" data-herausforderung-approaches></div>
           <button type="button" class="herausforderung-button herausforderung-add-approach" data-herausforderung-action="add-approach"><span aria-hidden="true">＋</span> Weiteren Ansatz hinzufügen</button>
+          </div>
+          <section class="herausforderung-fields scene-element-activation" data-scene-element-activation></section>
         </div>
         <aside class="herausforderung-sidebar">
           <section class="herausforderung-rules"><h3>${icon('attempt')} So wird geprüft</h3><p><strong>W20 + Probenwert aus dem Charakterbogen</strong> gegen die Schwierigkeit.</p><p>Fertigkeit mit Übung, Attributswurf ohne Übung oder Rettungswurf mit eigener Ausbildung. Nur freigegebene Proben sind möglich. Ein festgelegter Proben-Malus wird zusätzlich zum Bogenwert berücksichtigt.</p><ul><li><b>Erfolg:</b> Erkenntnis aufdecken, Ansatz abschließen.</li><li><b>1–3 Punkte darunter:</b> Teilhinweis, Ansatz bleibt offen.</li><li><b>Mehr als 3 darunter:</b> Konsequenz, Ansatz bleibt offen.</li><li><b>Natürliche 20 / 1:</b> kritischer Erfolg / deutlicher Fehlschlag.</li></ul><p>Figurenboni und aktive Regeln werden beim Eintragen berücksichtigt.</p></section>
@@ -103,6 +112,12 @@ function preferredSkillHints(approach) {
 export function updateHerausforderungDraft(event, { actors = [] } = {}) {
   const root = dialogRoot();
   if (!root) return;
+  const narrative = event.elementType === 'narration';
+  const delayed = event.activation?.enabled === true;
+  root.querySelector('.herausforderung-public h3 small').textContent = delayed ? 'Erst bei Auslösung sichtbar' : 'Für alle sichtbar';
+  root.querySelector('[data-herausforderung-field="publicDescription"]').closest('label').querySelector('span').textContent = delayed ? 'Beschreibung bei Auslösung' : 'Öffentliche Beschreibung';
+  root.querySelector('.herausforderung-preview > p').textContent = narrative ? 'So erscheint dein Moment im Szenenverlauf.'
+    : delayed ? 'Vorschau der späteren Freigabe. Bis zur Auslösung bleibt dieser Inhalt verborgen.' : 'Verdeckte Texte erscheinen hier erst nach einem gewürfelten Ergebnis.';
   refreshChallengeSceneImageEditor(root);
   refreshChallengeCheckPolicyEditor(root, event.approaches);
   bindSkillIconTooltips(root.ownerDocument).hide();
@@ -120,7 +135,10 @@ export function updateHerausforderungDraft(event, { actors = [] } = {}) {
   const issues = getHerausforderungValidationIssues(event);
   if (!issues.some(issue => issue.field === 'audience')) root.querySelector('[data-ha-field="mode"]')?.removeAttribute('aria-invalid');
   if (!issues.length) root.querySelectorAll('[aria-invalid="true"]').forEach(field => field.removeAttribute('aria-invalid'));
-  setHerausforderungStatus(issues.length ? 'Situation, passende Fertigkeiten und Erkenntnisse vorbereiten.' : root.dataset.editing === 'true' ? 'Änderungen können gespeichert werden. Bisherige Würfe und Folgen bleiben erhalten.' : 'Bereit zur Veröffentlichung. Verdeckte Ergebnisse werden erst nach der Probe angezeigt.');
+  setHerausforderungStatus(issues.length ? narrative ? 'Titel und Beschreibung für den erzählerischen Moment vorbereiten.' : 'Situation, passende Proben und verdeckte Ergebnisse vorbereiten.'
+    : root.dataset.editing === 'true' ? 'Änderungen können gespeichert werden. Bisherige Würfe und Folgen bleiben erhalten.'
+      : narrative ? 'Bereit. Dieses Element verlangt keine Reaktion.' : delayed ? 'Bereit zum Scharfschalten. Neue Figurenbeiträge zählen ab jetzt.'
+        : 'Bereit zur Veröffentlichung. Verdeckte Ergebnisse werden erst nach der Probe angezeigt.');
 }
 
 export function showHerausforderungValidation(issues) {
@@ -159,17 +177,20 @@ export function setHerausforderungSubmitting(submitting) {
 
 export function renderHerausforderungComment(comment = {}, index = 0, { preview = false, progress = new Map(), encounter = null, actors = [] } = {}) {
   const event = normalizeHerausforderungEvent(comment.herausforderung || comment);
+  const elementType = getSceneElementType(event.elementType);
+  const completion = getSceneElementCompletion(event, comment.id, progress);
   const divider = index > 0 ? '<div class="comment-divider"><span class="comment-divider-icon">*</span></div>' : '';
   let solvedCount = 0;
   const unavailable = !preview && getChallengeCombatBindingError(event, encounter);
   const audienceLabel = event.audience.mode === 'all' ? 'Alle Szenenteilnehmer' : event.audience.mode === 'combatants' ? 'Nur aktive Kampfteilnehmer' : `Für: ${event.audience.actorIds.map(id => actors.find(actor => actor.id === id)?.name || id).join(', ')}`;
   const approaches = event.approaches.map((approach, approachIndex) => {
     const state = getApproachProgress(progress, comment.id, approach.approachId);
-    const closed = approach.attemptLimit && state.attempts >= approach.attemptLimit;
+    const closed = completion.closed || (approach.attemptLimit && state.attempts >= approach.attemptLimit);
     if (state.solved) solvedCount++;
     return `<li class="${state.solved ? 'is-solved' : ''}"><div class="herausforderung-path"><span class="herausforderung-path-number">${approachIndex + 1}</span><div><strong>${escapeMarkup(approach.label)}</strong><div class="herausforderung-path-skills">${preferredSkillHints(approach)}${state.attempts ? `<small>${state.attempts} ${state.attempts === 1 ? 'Versuch' : 'Versuche'}</small>` : ''}</div></div></div>${preview ? '<span class="herausforderung-preview-badge">Offen</span>' : closed && !state.solved ? '<span class="herausforderung-solved">Versuch abgeschlossen</span>' : state.solved ? `<span class="herausforderung-solved">${icon('insight')}Aufgedeckt</span>` : unavailable ? `<span class="herausforderung-solved">${escapeMarkup(unavailable)}</span>` : `<button type="button" class="herausforderung-button herausforderung-attempt-btn" data-herausforderung-action="attempt" data-comment-id="${escapeMarkup(comment.id || '')}" data-approach-id="${escapeMarkup(approach.approachId)}" aria-label="${escapeMarkup(approach.label)} versuchen">${icon('attempt')}<span>Versuchen</span></button>`}${rewardSummary(approach.rewards) ? `<div class="herausforderung-reward-teaser">Belohnung: ${escapeMarkup(rewardSummary(approach.rewards))}</div>` : ''}${!preview ? renderChallengeProgressResult(state, { closed }) : ''}</li>`;
   }).join('');
-  return `${divider}<section class="herausforderung-event"><header>${icon('challenge')}<div><small>Herausforderung</small><strong>${escapeMarkup(event.title)}</strong></div><span class="herausforderung-event-progress">${solvedCount}/${event.approaches.length} aufgedeckt</span>${!preview && comment.id ? `<button type="button" class="herausforderung-button herausforderung-edit-btn" data-herausforderung-action="edit" data-comment-id="${escapeMarkup(comment.id)}" aria-label="Herausforderung bearbeiten">Bearbeiten</button>` : ''}</header><p class="herausforderung-scope">${escapeMarkup(audienceLabel)}${event.combatBound ? " · An diesen Kampf gebunden" : ""}</p>${renderChallengeSceneImage(event.sceneImage, event.title)}${event.publicDescription ? `<p class="herausforderung-description">${escapeMarkup(event.publicDescription)}</p>` : ''}${event.approaches.some(approach => approach.outcomeTable?.length) ? '<p class="herausforderung-outcome-note">Eine Probe, eine Ergebnisstufe. Wähle eine der angebotenen Proben.</p>' : ''}${approaches ? `<ul class="herausforderung-approach-list">${approaches}</ul>` : ''}</section>`;
+  const narrative = event.elementType === 'narration';
+  return `${divider}<section class="herausforderung-event" data-scene-element-type="${event.elementType}"><header>${renderSceneElementIcon(event.elementType)}<div><small>${elementType.label}</small><strong>${escapeMarkup(event.title)}</strong></div>${narrative ? '<span class="herausforderung-event-progress">Zum Betrachten</span>' : `<span class="herausforderung-event-progress">${completion.closed ? completion.solved ? 'Abgeschlossen' : 'Reaktion abgeschlossen' : `${solvedCount}/${event.approaches.length} aufgedeckt`}</span>`}${!preview && comment.id ? `<button type="button" class="herausforderung-button herausforderung-edit-btn" data-herausforderung-action="edit" data-comment-id="${escapeMarkup(comment.id)}" aria-label="${elementType.label} bearbeiten">Bearbeiten</button>` : ''}</header>${narrative ? '' : `<p class="herausforderung-scope">${escapeMarkup(audienceLabel)}${event.combatBound ? " · An diesen Kampf gebunden" : ""}</p>`}${renderChallengeSceneImage(event.sceneImage, event.title)}${event.publicDescription ? `<p class="herausforderung-description">${escapeMarkup(event.publicDescription)}</p>` : ''}${renderSceneElementReaction(event.reaction)}${narrative ? '<p class="scene-element-narrative-note">Ein Moment der Geschichte. Keine Reaktion erforderlich.</p>' : ''}${event.approaches.some(approach => approach.outcomeTable?.length) ? '<p class="herausforderung-outcome-note">Eine Probe, eine Ergebnisstufe. Wähle eine der angebotenen Proben.</p>' : ''}${approaches ? `<ul class="herausforderung-approach-list">${approaches}</ul>` : ''}${event.elementType === 'item' && !preview && !completion.closed ? `<button type="button" class="herausforderung-button scene-element-touch" data-scene-element-action="open" data-scene-element-id="${escapeMarkup(comment.id)}">Mit dem Gegenstand interagieren</button>` : ''}</section>`;
 }
 
 export const herausforderungUiInternals = Object.freeze({ escapeMarkup });

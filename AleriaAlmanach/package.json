@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Aleria Almanach mit szenengebundenem 3D-Würfelsystem",
   "scripts": {
-    "test:startup": "node --test --experimental-test-isolation=none tests/loading-screen.test.mjs tests/archive-initial-render.test.mjs tests/dashboard-rendering.test.mjs tests/dashboard-scene-activity.test.mjs tests/comment-activity-repository.test.mjs tests/module-store-server-loader.test.mjs tests/module-store-online-source.test.mjs tests/module-store-revision.test.mjs tests/firebase-module-storage.test.mjs tests/item-register-startup.test.mjs tests/item-register-demand.test.mjs tests/startup-demand.test.mjs tests/actor-demand-lifecycle.test.mjs tests/comment-form-performance.test.mjs tests/skill-challenge-attempt.test.mjs tests/genealogy-bootstrap.test.mjs tests/character-register-views.test.mjs tests/character-categories.test.mjs tests/character-family-memberships.test.mjs",
+    "test:startup": "node --test --experimental-test-isolation=none tests/loading-screen.test.mjs tests/archive-initial-render.test.mjs tests/dashboard-rendering.test.mjs tests/dashboard-scene-activity.test.mjs tests/comment-activity-repository.test.mjs tests/module-store-server-loader.test.mjs tests/module-store-online-source.test.mjs tests/module-store-revision.test.mjs tests/firebase-module-storage.test.mjs tests/item-register-startup.test.mjs tests/item-register-demand.test.mjs tests/startup-demand.test.mjs tests/actor-demand-lifecycle.test.mjs tests/comment-form-performance.test.mjs tests/skill-challenge-attempt.test.mjs tests/genealogy-bootstrap.test.mjs tests/character-register-views.test.mjs tests/character-directory.test.mjs tests/character-categories.test.mjs tests/character-family-memberships.test.mjs",
     "build:biographies": "node ../js/biography/build-public-biographies.mjs",
     "check:biographies": "node ../js/biography/build-public-biographies.mjs --check",
     "test:biographies": "node --test --experimental-test-isolation=none tests/biography-editions.test.mjs tests/biography-transfer.test.mjs tests/biography-rich-text-compatibility.test.mjs tests/biography-portrait-captions.test.mjs tests/biography-cards.test.mjs",
@@ -31,6 +31,9 @@
     "build:gwynthor-heime": "node scripts/build-gwynthor-heime.mjs",
     "check:gwynthor-heime": "node scripts/build-gwynthor-heime.mjs --check",
     "test:gwynthor-heime": "node --test --experimental-test-isolation=none tests/gwynthor-heime.test.mjs",
+    "build:gwynthor-landfamilien": "node scripts/build-gwynthor-landfamilien.mjs",
+    "check:gwynthor-landfamilien": "node scripts/build-gwynthor-landfamilien.mjs --check && node scripts/build-gwynthor-landfamilien-characters.mjs --check",
+    "test:gwynthor-landfamilien": "node --test --experimental-test-isolation=none tests/gwynthor-landfamilien.test.mjs tests/gwynthor-landfamilien-integration.test.mjs ../Stammbäume/tests/gwynthor-landfamilien.test.mjs",
     "build:arkaneum": "node scripts/build-arkaneum.mjs",
     "check:arkaneum": "node scripts/build-arkaneum.mjs --check",
     "test:arkaneum": "node --test --experimental-test-isolation=none tests/arkaneum.test.mjs",
@@ -41,6 +44,9 @@
     "build:economy": "node scripts/build-economy-calculator.mjs",
     "build:gwynthor-geography": "node scripts/build-gwynthor-geography.mjs",
     "build:gwynthor-marktplatz": "node scripts/build-gwynthor-marktplatz.mjs",
+    "build:gwynthor-stadtorte": "node scripts/build-gwynthor-stadtorte.mjs",
+    "check:gwynthor-stadtorte": "node scripts/build-gwynthor-stadtorte.mjs --check",
+    "test:gwynthor-stadtorte": "node --test --experimental-test-isolation=none tests/gwynthor-stadtorte.test.mjs",
     "build:honigtoertchen": "node scripts/build-honigtoertchen.mjs",
     "check:honigtoertchen": "node scripts/build-honigtoertchen.mjs --check && node scripts/build-melog-characters.mjs --check",
     "test:honigtoertchen": "node --test --experimental-test-isolation=none tests/honigtoertchen.test.mjs",
@@ -154,10 +160,7 @@
     "check:group-section-migration": "node scripts/build-group-section-migration.mjs --check",
     "build:coastal-history": "node ../Ereignisse/scripts/build-coastal-history.mjs && node ../Ereignisse/scripts/build-events.mjs && node ../Fraktionen/scripts/build-factions.mjs",
     "check:coastal-history": "node ../Ereignisse/scripts/build-coastal-history.mjs --check",
-    "test:coastal-history": "node --test --experimental-test-isolation=none ../Ereignisse/tests/coastal-history.test.mjs",
-    "build:gwynthor-landfamilien": "node scripts/build-gwynthor-landfamilien.mjs",
-    "check:gwynthor-landfamilien": "node scripts/build-gwynthor-landfamilien.mjs --check && node scripts/build-gwynthor-landfamilien-characters.mjs --check",
-    "test:gwynthor-landfamilien": "node --test --experimental-test-isolation=none tests/gwynthor-landfamilien.test.mjs tests/gwynthor-landfamilien-integration.test.mjs ../Stammbäume/tests/gwynthor-landfamilien.test.mjs"
+    "test:coastal-history": "node --test --experimental-test-isolation=none ../Ereignisse/tests/coastal-history.test.mjs"
   },
   "dependencies": {
     "@3d-dice/dice-box": "1.1.4",

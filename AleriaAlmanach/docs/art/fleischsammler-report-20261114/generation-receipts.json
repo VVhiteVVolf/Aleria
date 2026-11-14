@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "tool": "image_gen",
+  "createdAt": "2026-11-14",
+  "images": [
+    {
+      "key": "taeterstudie",
+      "version": 1,
+      "source": "Retained admitted original beside this receipt",
+      "original": "AleriaAlmanach/docs/art/fleischsammler-report-20261114/originals/taeterstudie-r1.png",
+      "active": "Dokumente aus der Werkstatt/assets/meredydd-fleischsammler-ermittlungsbuch/taeterstudie-r1.png",
+      "prompt": "Use case: illustration-story. Asset type: an ink investigation sketch inserted into a medieval fantasy casebook by the investigator Meredydd Gwyllach. Primary request: a tentative reconstruction of an UNKNOWN murder suspect, based only on circumstantial traces suggesting a tall or strong adult man, NOT a witness portrait. Show a single anonymous adult male figure from the back, three-quarter full-length, ordinary unmarked medieval rural shirt and trousers, unadorned boots, head an unresolved few pencil strokes with NO identifiable facial features, natural human anatomy and round human ears. Medium: sparse dark brown pen and charcoal lines, lively searching strokes, crosshatching, unfinished contours and faint construction lines, drawn by a practical investigator in a field notebook. Hand-drawn medieval investigative study, monochrome sepia ink, not painted fantasy character art, not photorealistic. Composition: portrait 2:3, centered complete silhouette with generous transparent margin. NO hood, NO axe, NO insignia, NO specific weapon, NO victim, NO blood, NO gore, NO jewelry, NO text, NO signature, NO page or background. Clothing is merely schematic and must not suggest a known uniform or occupation. Genuine transparent PNG background outside the ink marks.",
+      "references": [],
+      "role": "in-world-investigator-sketch",
+      "secretIdentityReferenceUsed": false
+    },
+    {
+      "key": "staturvergleich",
+      "version": 1,
+      "source": "Retained admitted original beside this receipt",
+      "original": "AleriaAlmanach/docs/art/fleischsammler-report-20261114/originals/staturvergleich-r1.png",
+      "active": "Dokumente aus der Werkstatt/assets/meredydd-fleischsammler-ermittlungsbuch/staturvergleich-r1.png",
+      "prompt": "Use case: illustration-story. Asset type: a second ink study in the same medieval fantasy investigative casebook by Meredydd Gwyllach. Primary request: two small anonymous silhouette studies of possible UNKNOWN adult male suspect builds, one tall lean man and one broad-shouldered sturdy man, side by side, each in an unmarked ordinary medieval rural shirt and trousers, shown from side/back with faces completely undefined. They are alternative working hypotheses inferred from physical traces, not eyewitness identifications and not two actual suspects. Natural serious human proportions, rounded human ears. Practical notebook draftsmanship in loose dark brown quill and charcoal, faint construction marks and restrained crosshatching, unfinished contours, monochrome sepia, matching a field investigator's tentative hand sketches. Portrait 2:3 composition, complete figures and generous clear margin. NO hood, NO axe, NO uniform insignia, NO weapons, NO scene of violence, NO victims, NO blood or gore, NO labels or writing, NO signature, NO page background. Genuine transparent PNG background outside the ink marks.",
+      "references": [],
+      "role": "in-world-investigator-sketch",
+      "secretIdentityReferenceUsed": false
+    },
+    {
+      "key": "duennes-notizbuch",
+      "version": 1,
+      "source": "Retained admitted original beside this receipt",
+      "original": "AleriaAlmanach/docs/art/fleischsammler-report-20261114/originals/duennes-notizbuch-r1.png",
+      "active": "Dokumente aus der Werkstatt/assets/meredydd-fleischsammler-ermittlungsbuch/duennes-notizbuch-r1.png",
+      "prompt": "Use case: stylized-concept. Create ONE square 1:1 fantasy RPG inventory item illustration: a THIN, modest medieval investigator's notebook, closed, only about 35 to 50 parchment leaves, visibly slim page block (no thick tome), soft worn dark chestnut brown leather cover with simple sewn spine and a narrow leather tie, very restrained embossed corner lines, one small unmarked dark red wax seal on the tie. It is Meredydd Gwyllach's practical portable field notebook containing a murder inquiry, not a magical book. The attached reference defines only the ITEM ART STYLE: hand-painted illustrated fantasy inventory art, painterly textured leather and parchment, crisp dark outlines, soft simplified shading, muted warm colors, gentle illustrated highlights, readable details and a clear silhouette at small thumbnail size. Do not copy the thick rings or thick page block of the reference. Not photorealistic, not CGI or glossy 3D. Show the entire isolated thin object, centered and large within the square with about 10% clear margin, slight three-quarter view so the thin spine and thin page block are obvious. TRUE transparent PNG alpha background; no surrounding haze, no paper backdrop, no outer glow, no floor, no stand. No person, hands, weapon, skull, blood, scenery, frame, letters, title, watermark or painted checkerboard. One single thin notebook.",
+      "references": [
+        "AleriaAlmanach/public/assets/inventory-ui/icons/notizbuch-v1.webp"
+      ],
+      "role": "inventory-item",
+      "secretIdentityReferenceUsed": false
+    }
+  ]
+}

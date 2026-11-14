@@ -604,6 +604,7 @@ function renderAll() {
 
   const toolbar = document.createElement('div');
   toolbar.className = 'archive-toolbar';
+  toolbar.hidden = _activeTab === 'Charaktere' && !_archiveSearchNeedle;
   toolbar.innerHTML = `
     <label class="archive-toolbar-label" for="archive-search-input">Was suchst du in Aleria?</label>
     <div class="archive-search-wrap">
@@ -755,7 +756,10 @@ function renderAll() {
       }
     }
   }
-  if (showCharacters) loadCharacters();
+  if (showCharacters) {
+    if (typeof AleriaCharacterDirectory !== 'undefined') void AleriaCharacterDirectory.load().catch(() => {});
+    else loadCharacters();
+  }
   if (showCreatures) window.AleriaCreatures?.mount?.();
   AleriaArchiveNavigation.mount({ activeTab: _activeTab, focusActiveTab: refocusArchiveTab });
 }

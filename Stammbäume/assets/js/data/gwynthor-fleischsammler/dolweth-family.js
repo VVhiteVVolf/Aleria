@@ -1,5 +1,6 @@
 import { createFamilyPerson, createMarriage, createParentages } from '../family-record-builders.js';
 import { createGwynthorRuralFamily } from './family-foundation.js';
+import { RURAL_HOUSEHOLD_EXTENSIONS } from './rural-household-extensions.js';
 
 const houseId = 'house-dolweth';
 const parents = ['aled-dolweth', 'sioned-spouse-dolweth'];
@@ -7,7 +8,7 @@ const marriage = createMarriage('marriage-aled-sioned-dolweth', ...parents);
 const children = ['lleian-dolweth', 'peredur-dolweth'];
 
 export const DOLWETH_FAMILY = createGwynthorRuralFamily({
-  slug: 'dolweth', householdMarriageId: marriage.id, focusPersonId: parents[0],
+  slug: 'dolweth', householdMarriageId: marriage.id, focusPersonId: parents[0], continuation: RURAL_HOUSEHOLD_EXTENSIONS.dolweth,
   description: 'Kleine Rheunwaith-Familie auf der Dolweth-Kate mit bescheidenem Viehbestand. Sie trauert um ihre achtzehnjährige Tochter Lleian, die vor wenigen Tagen ermordet wurde.',
   people: [
     createFamilyPerson({ id: parents[0], name: 'Aled Dolweth', sex: 'male', birth: '1699', houseId,
@@ -15,7 +16,7 @@ export const DOLWETH_FAMILY = createGwynthorRuralFamily({
     createFamilyPerson({ id: parents[1], name: 'Sioned', sex: 'female', birth: '1701', houseId: '', familyRole: 'married',
       title: 'Kleinbäuerin', notes: '39 Jahre. Mutter Lleians und Peredurs. Der Verlust der Tochter ist noch frisch; Herkunftsfamilie nicht festgelegt.' }),
     createFamilyPerson({ id: children[0], name: 'Lleian Dolweth', sex: 'female', birth: '1722', death: '1740', houseId,
-      title: 'Verstorbene Tochter', notes: '18 Jahre. Wurde vor wenigen Tagen Opfer des Fleischsammlers. Ein genauer Tattag, Fundort, Tatablauf und eigene Hinweise auf den Täter sind nicht festgelegt.' }),
+      title: 'Verstorbene Tochter', notes: '18 Jahre. Wurde vor wenigen Tagen Opfer des Fleischsammlers. Fundbefunde stehen im Ermittlungsbuch Meredydd Gwyllachs. Genauer Tattag und eigene Täterbeobachtungen sind nicht gesichert.' }),
     createFamilyPerson({ id: children[1], name: 'Peredur Dolweth', sex: 'male', birth: '1729', houseId,
       title: 'Kind auf der Kate', notes: '11 Jahre. Lleians jüngerer Bruder; lebt im trauernden Haushalt.' })
   ],

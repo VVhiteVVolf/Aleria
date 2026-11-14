@@ -14,11 +14,11 @@ export const BODY_TRAIT_DEFINITIONS = [
  ['breitschultrig','Breitschultrig','Breite Schultern und kräftiger Oberkörper; +1 auf Athletik. Schulterbreite beeinträchtigt nicht automatisch die Feinmotorik.',{skillModifiers:[skill('Athletik',1)]},1],
  ['sehnig','Sehnig','Drahtiger Körper mit kräftigen Sehnen; +1 auf Athletik und Akrobatik.',{skillModifiers:[skill('Athletik',1),skill('Akrobatik',1)]},1],
  ['gelenkig','Gelenkig','Große Beweglichkeit; +2 auf Akrobatik und +1 auf Fingerfertigkeit.',{skillModifiers:[skill('Akrobatik',2),skill('Fingerfertigkeit',1)]},2],
- ['steife-gelenke','Steife Gelenke','Eingeschränkte Gelenkbeweglichkeit; −2 auf Akrobatik und −1 m Bewegung.',{movement:-1,skillModifiers:[skill('Akrobatik',-2)]},-2],
+ ['steife-gelenke','Steife Gelenke','Eingeschränkte Gelenkbeweglichkeit erschwert flinke Manöver und rasches Reagieren: −2 auf Akrobatik und −1 Initiative.',{initiative:-1,skillModifiers:[skill('Akrobatik',-2)]},-2],
  ['scharfe-augen','Scharfe Augen','+2 auf Wahrnehmung und zusätzlich +1 passive Wahrnehmung. Die passive Wahrnehmung steigt dadurch insgesamt um 3.',{skillModifiers:[skill('Wahrnehmung',2)],passivePerception:1},2],
  ['schwerhoerig','Schwerhörig','Eingeschränktes Hörvermögen; −2 auf Wahrnehmung. Der gespeicherte Abzug ist ein allgemeiner Probenabzug.',{skillModifiers:[skill('Wahrnehmung',-2)]},-1],
  ['eiserne-lunge','Eiserne Lunge','Kräftige Lunge und große Ausdauer; +1 auf KON-Rettungswürfe und +1 auf Athletik.',{saveAttributeModifiers:[{attributeKey:'constitution',bonus:1}],skillModifiers:[skill('Athletik',1)]},2],
- ['schneller-stoffwechsel','Schneller Stoffwechsel','Leichter, rasch ermüdender Körper; +1 m Bewegung und −2 maximale TP.',{movement:1,maximumHitPoints:-2},0],
+ ['schneller-stoffwechsel','Schneller Stoffwechsel','Du wirst rasch wieder hungrig und brauchst regelmäßig Nahrung. Beschreibendes Körpermerkmal ohne pauschalen Kampfbonus oder TP-Abzug.',{},0],
  ['schwere-knochen','Schwere Knochen','Dichter, schwerer Knochenbau; +3 maximale TP und −1 Initiative.',{maximumHitPoints:3,initiative:-1},1],
- ['robuste-haut','Robuste Haut','Widerstandsfähige, vernarbte Haut; +1 RK und −1 auf Auftreten.',{armorClass:1,skillModifiers:[skill('Auftreten',-1)]},2]
+ ['robuste-haut','Robuste Haut','Besonders widerstandsfähige Haut als körperliche Eigenheit: +1 RK. Narben oder Hautbeschaffenheit schmälern nicht automatisch die Ausdrucksfähigkeit.',{armorClass:1},3]
 ];

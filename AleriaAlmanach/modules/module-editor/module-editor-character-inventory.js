@@ -268,6 +268,7 @@ function sanitizeCharacterInventoryItems(items = []) {
     .map((item, index) => ({
       id: String(item?.id || '').trim() || makeCharacterInventoryId('item', index),
       instanceId: String(item?.instanceId || item?.id || '').trim(),
+      ...(item?.documentRef && /^[a-z0-9][a-z0-9-]{0,79}$/.test(item.documentRef.id || '') ? { documentRef: { id: item.documentRef.id } } : {}),
       ...(item?.itemState && typeof item.itemState === 'object' && JSON.stringify(item.itemState).length <= 2000 ? { itemState: JSON.parse(JSON.stringify(item.itemState)) } : {}),
       templateId: String(item?.templateId || item?.originItemDbKey || item?.itemDbKey || '').trim(),
       ...(item?.definitionRef && /^[\w:.-]{1,220}$/.test(item.definitionRef.id || '') && /^[\w.-]{1,64}$/.test(item.definitionRef.revision || '')

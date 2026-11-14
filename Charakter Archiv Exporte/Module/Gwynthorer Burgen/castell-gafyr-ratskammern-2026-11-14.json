@@ -1,0 +1,90 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-14T12:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Castell Gafyr"
+      ],
+      "description": "Ebener Stadtgrund in Gwynthor, mit dem Rücken zum Gebirge · Bodenständige Stadtburg · Treue, Wald und Erz",
+      "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gafyr.png"
+    },
+    "entry": {
+      "id": "castell-gafyr-ratskammern",
+      "title": "Castell Gafyr – Ratskammern",
+      "subtitle": "Gemeinsamer Ratssaal und Amtskammer",
+      "type": "Interaktive Szene",
+      "category": "Castell Gafyr",
+      "image": "./assets/gwynthor-castles/2026-11-14/gafyr/ratssaal-v1.png",
+      "previewImage": "./assets/gwynthor-castles/2026-11-14/gafyr/ratssaal-v1.png",
+      "symbol": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gafyr.png",
+      "icon": "",
+      "stamp": "Celtigerns Wacht · Gwynthor · Aleria",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Ratssaal",
+          "commentThreadKey": "gafyr-ratssaal",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/gafyr/ratssaal-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Um einen schweren Eichentisch stehen die Stühle für die Beratungen des Hauses. Tageslicht fällt durch hohe Fenster auf verschnürte Schriftstücke, eine ausgerollte Gebietskarte und einen unbenutzten Siegelstock. Die goldenen Ziegen des Hauses heben sich von schwarzen Wandbehängen ab.</p><p>Der Raum dient gemeinsamen Besprechungen über die nördlichen Besitzungen, Vorräte und eingehende Anliegen. Eine Seitentür führt zur Amtskammer. Wer hier zusammentritt und welchen Anlass die Beratung hat, ergibt sich aus der jeweiligen Szene.</p>",
+          "sessionLocation": "Castell Gafyr · Ratssaal",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Ratssaal",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Amtskammer",
+          "commentThreadKey": "gafyr-amtskammer",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/gafyr/amtskammer-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Die kleinere Amtskammer ist ein gemeinsamer Arbeitsraum für Schriftverkehr, Rechnungen und Besucheranliegen. Ein breiter Schreibtisch steht vor den Regalen; zwei Besucherstühle und ein kleiner Besprechungstisch lassen Platz für vertrauliche Absprachen.</p><p>Gebundene Bücher, hölzerne Ablagen und verschnürte Rollen sind nach Arbeitsgebieten geordnet. Über der Tür hängt das Hauszeichen. Die Kammer liegt nahe beim Ratssaal und bleibt über den gedeckten Hofgang erreichbar.</p>",
+          "sessionLocation": "Castell Gafyr · Amtskammer",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Amtskammer",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

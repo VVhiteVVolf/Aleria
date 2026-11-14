@@ -81,11 +81,19 @@ Alle Pferdebilder werden lokal als WebP aus `assets/horse-profiles/` geladen und
 
 ## Raubtierdossiers
 
-Die Raubtierkunde besitzt eigene Übersichten für Raubkatzen, Wölfe und Warge sowie Bären unter `tiere/raubtiere/`. Sieben Wolf- und Wargarten und acht Bärenarten führen zu vollständigen Dossiers. Die drei Raubkatzen, der Gnoll und drei unbenannte Bären Lothirs bleiben sichtbar als vorgemerkte Einträge erhalten.
+Die Raubtierkunde besitzt eigene Übersichten für Raubkatzen, Wölfe und Warge sowie Bären unter `tiere/raubtiere/`. Sieben Wolf- und Wargarten und acht natürliche Bärenarten führen zu vollständigen Dossiers; hinzu kommt Madrúach als erste Urgrenlinie. Die drei Raubkatzen, der Gnoll und drei unbenannte Bären Lothirs bleiben sichtbar als vorgemerkte Einträge erhalten.
 
 Jedes vollständige Dossier zeigt sechs aus dem überlieferten Arttext abgeleitete Feldwerte: Gefahr, Zähmbarkeit, Intelligenz, Körperkraft, Sozialverhalten und Ausdauer. Die Seite kennzeichnet diese Einordnung als vergleichende Archivbewertung und nicht als exakte Messung. Die alten Kreaturenbilder und die drei vom Nutzer gelieferten Raubkatzenbilder werden lokal aus `assets/predators/` geladen; Herkunft und Maße stehen in `assets/predator-sources.json`.
 
 Die Seiten entstehen mit `node Bestiarium/scripts/build-predator-profiles.mjs`; `--check` prüft Übersichten und Einzeldossiers. Neue Dossiers benötigen ein `profil.json` und einen Eintrag in `modules/predator-profile/predator-registry.mjs`. Der jeweilige Übersichtseintrag erhält anschließend sein lokales `href`.
+
+### Urgren und Glannadeor
+
+Unter Bären führt **Urgren** zum Hauptartikel der verfluchten Bären; **Madrúach** ist dessen erste ausgearbeitete Linie. Die vollständige Ursprungssage, der frühantike Cormac als eigener Namensvetter, das originale Klagelied und die fünfaktige Theaterfassung haben ihre gemeinsame Autorenquelle in `shared/urgren/`. Bestehende Familienakten und Spielmechaniken werden daraus nicht migriert.
+
+`node Bestiarium/scripts/build-urgren-content.mjs` projiziert Bärenregister, Urgren-Übersicht, Madrúach-Profil sowie HTML-/Textfassung des Liedes. Anschließend erzeugt `node Bestiarium/scripts/build-predator-profiles.mjs --group=baeren` die Artikel. Beide unterstützen `--check`. Untergruppen stehen separat in `PREDATOR_SUBGROUPS`; die vorhandenen natürlichen Dossiers behalten ihre Geschwisternavigation. `AleriaAlmanach/scripts/build-creature-bestiary-index.mjs` nimmt allein das tatsächliche Madrúach-Artprofil in die Figurenreferenzen auf.
+
+Die zwei neuen Bestiariumsbilder liegen unter `assets/predators/urgren/` und sind im bestehenden `assets/predator-sources.json` verzeichnet. Generatororiginale, tatsächliche Prompts, Quellenabgrenzung und Sichtprüfungen: `diagnostics/urgren-madruach-20261114/`.
 
 ## Viehregister
 

@@ -1,10 +1,10 @@
 {
   "id": "baeren",
-  "title": "Bären",
-  "subtitle": "Uralte Kraft zwischen Geduld und jäher Gewalt",
+  "title": "Bären & Urgren",
+  "subtitle": "Uralte Kraft und die Schatten ihrer Verderbnis",
   "classification": "Ursine Raubtiere der bekannten Welt",
   "folio": "R-03",
-  "lead": "Die Bären Alerias reichen vom sanften Brannoc bis zu den kompromisslosen Jägern des Packeises. Bau, Lebensraum und Nähe zum Menschen unterscheiden ihre Linien stärker als bloße Fellfarbe.",
+  "lead": "Die Bären Alerias reichen vom sanften Brannoc bis zu den Jägern des Packeises. Neben ihren natürlichen Linien stehen die Urgren: verfluchte Bärenformen, deren erste beschriebene Linie Madrúach in den Bergen Celtigerns Wachts gefürchtet wird.",
   "quote": "Man erkennt die Stärke eines Bären selten an seinem Angriff – meist an allem, was ihm ausweicht.",
   "quoteAttribution": "Randnotiz eines Akademiekundlers",
   "icon": {
@@ -48,6 +48,16 @@
           "text": "Bären sind großgewachsene, massiv gebaute Säugetiere mit kräftigem Schultergürtel, breitem Brustkorb und starken Gliedmaßen. Ihr Gang wirkt oft schwerfällig, doch täuscht dieser Eindruck über ihre tatsächliche Geschwindigkeit und Kraft hinweg. Das Fell ist dicht und wetterfest, angepasst an regionale Bedingungen – von dunklen Waldtönen über erdige Farben bis hin zu hellem Eisfell. Kopf und Kiefer sind auf Vielseitigkeit ausgelegt: Bären sind weder reine Jäger noch reine Pflanzenfresser, sondern Opportunisten."
         }
       ]
+    },
+    {
+      "id": "urgren",
+      "title": "Urgren – die verfluchten Bären",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Was die Warge für die Wölfe sind, sind die Urgren für die Bären: durch uralte Verderbnis gezeichnete Linien, deren Feindseligkeit über Hunger und Revier hinausgehen kann. Madrúach ist die erste erschlossene Urgrenlinie. Ihre Geschichte führt in das alte Tír na nDoirí und zu Fear Doirichs Eid von Glannadeor."
+        }
+      ]
     }
   ],
   "comparison": {
@@ -86,7 +96,7 @@
   },
   "atlas": {
     "title": "Register der bekannten Bären",
-    "intro": "Acht benannte Arten besitzen ein vollständiges Dossier. Drei erhaltene Bildtafeln aus Lothir bleiben als unbestimmte Arten verzeichnet.",
+    "intro": "Acht natürliche Bärenarten besitzen ein vollständiges Dossier. Die Urgren führen zu einem eigenen Hauptartikel und ihrer ersten beschriebenen Linie Madrúach. Drei erhaltene Bildtafeln aus Lothir bleiben als unbestimmte Arten verzeichnet.",
     "groups": [
       {
         "id": "stammlinie",
@@ -212,6 +222,28 @@
               "width": 408,
               "height": 397,
               "alt": "Bildtafel: Bànmòr / Ísbjörn"
+            }
+          }
+        ]
+      },
+      {
+        "id": "urgren",
+        "title": "Urgren",
+        "kicker": "Verfluchte Bärenlinien",
+        "description": "Ein eigener Hauptartikel trennt die Verderbnis der Urgren von den natürlichen Bären. Madrúach steht am Anfang ihres Registers.",
+        "entries": [
+          {
+            "id": "urgren",
+            "title": "Urgren – die verfluchten Bären",
+            "region": "Uralte albische Überlieferungen · Estryll",
+            "description": "Hauptartikel mit der Sage von Glannadeor, Klagelied und dem ersten Dossier Madrúach.",
+            "status": "Übersicht verfügbar",
+            "href": "./urgren/index.html",
+            "image": {
+              "src": "../../../assets/predators/urgren/urgren-mythos-v1.png",
+              "width": 1024,
+              "height": 1536,
+              "alt": "Mythisches Bild der Urgren und des Ahnenbaums von Glannadeor"
             }
           }
         ]

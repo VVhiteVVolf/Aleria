@@ -1,8 +1,9 @@
 import { DEVELOPMENT_TRAITS } from './development-traits.js';
 import { PREVIOUS_DEVELOPMENT_TRAITS } from './development-trait-revision-source.js';
+import { PREVIOUS_MAPLESS_DEVELOPMENT_TRAITS } from './development-trait-revision-20261112.js';
 
 const current = new Map(DEVELOPMENT_TRAITS.map(trait => [trait.id, trait]));
-export const DEVELOPMENT_TRAIT_BIOGRAPHY_REVISIONS = Object.freeze(PREVIOUS_DEVELOPMENT_TRAITS.flatMap(previous => {
+export const DEVELOPMENT_TRAIT_BIOGRAPHY_REVISIONS = Object.freeze([...PREVIOUS_DEVELOPMENT_TRAITS, ...PREVIOUS_MAPLESS_DEVELOPMENT_TRAITS].flatMap(previous => {
   const revised = current.get(previous.id);
   return revised && revised.name === previous.name && revised.icon === previous.icon && revised.description !== previous.description
     ? [{ title: previous.name, detail: previous.description, icon: previous.icon, revisedDetail: revised.description }]

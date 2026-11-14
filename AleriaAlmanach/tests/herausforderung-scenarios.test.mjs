@@ -110,7 +110,7 @@ test('the comment form owns challenge handover and preserves an existing restore
     SCENE_TIME_DEFAULT_SEGMENT_SECONDS: 30, COMMENT_LANGUAGE_DEFAULT: 'common', setCommentMode() {}, persistCommentDraft() {},
     makeCommentSegment: (kind, text, emote, side, time, language, color, supplied) => ({ kind, text, ...supplied }) });
   runInContext(await readFile(new URL('../modules/comments/comments-form.js', import.meta.url), 'utf8'), context);
-  runInContext('openCommentForm = () => {}; openCommentFormForSkillChallenge({});', context);
+  runInContext('openCommentForm = options => options?.afterReady?.(); openCommentFormForSkillChallenge({});', context);
   assert.equal(context._commentSegments.length, 2);
   assert.equal(context._commentSegments[0].text, 'Vorhandener Entwurf');
   assert.equal(context._commentSegments[1].skillTargetChallengeId, settings.skillTargetChallengeId);
@@ -118,4 +118,15 @@ test('the comment form owns challenge handover and preserves an existing restore
   runInContext('openCommentFormForSkillChallenge({});', context);
   assert.equal(context._commentSegments.length, 1, 'An empty default segment is replaced');
   assert.equal(context._commentSegments[0].mechanicMode, 'skill');
+  settings.actorId = 'selected-victim';
+  context.selections = [];
+  context.selectCharForComment = id => context.selections.push(id);
+  context._commentSegments = [{ kind: 'speech', text: 'Anderer Figurenentwurf', mechanicMode: 'normal', actorId: 'draft-actor' }];
+  runInContext('openCommentFormForSkillChallenge({});', context);
+  assert.deepEqual(context.selections, [], 'A trap reaction must not change an existing draft actor');
+  assert.equal(context._commentSegments[0].actorId, 'draft-actor');
+  assert.equal(context._commentSegments[1].actorId, 'selected-victim');
+  context._commentSegments = [{ text: '', mechanicMode: 'normal' }];
+  runInContext('openCommentFormForSkillChallenge({});', context);
+  assert.deepEqual(context.selections, ['selected-victim']);
 });

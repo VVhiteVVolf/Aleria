@@ -15,7 +15,7 @@ function renderArchiveEntryCard(entry, section, { priorityImage = false, manageM
         ${entry.locked ? '<span class="entry-card-lock">Geschützt</span>' : ''}
       </span>
       <span class="entry-card-copy">
-        <span class="entry-card-category">${escapeHtml(category)}</span>
+        <span class="entry-card-category" title="${escapeHtml(category)}">${escapeHtml(getSectionPathParts(section).slice(-2).join(' › ') || category)}</span>
         <span class="entry-card-title">${escapeHtml(title)}</span>
         ${showSubtitle ? `<span class="entry-card-subtitle">${escapeHtml(subtitle)}</span>` : ''}
       </span>

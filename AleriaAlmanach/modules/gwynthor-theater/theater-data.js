@@ -680,8 +680,8 @@
       "pageTitle": "Auf der Bühne · Das Repertoire",
       "theatreProgramPage": true,
       "theatreProgram": {
-        "title": "Vier Geschichten auf Gwynthors Bühne",
-        "introduction": "Magische Abenteuer, nordische Werbung, Komödie und Trauerspiel gehören zum bekannten Repertoire des Hauses. Die freien Plätze darunter lassen Raum für kommende Inszenierungen.",
+        "title": "Geschichten auf Gwynthors Bühne",
+        "introduction": "Magische Abenteuer, nordische Werbung, Komödie und Trauerspiel gehören zum Repertoire des Hauses. Die albische Sage von Glannadeor tritt als Trauerspiel mit eigenem Klagelied hinzu. Freie Plätze lassen Raum für kommende Inszenierungen.",
         "footer": "Elenid betreut Regie und dramatische Arbeit. Weitere Stücke können im Hausbuch ergänzt werden.",
         "items": [
           {
@@ -721,7 +721,13 @@
             "image": "./assets/gwynthor-theater/productions/garith-aurnia.png"
           },
           {
-            "title": ""
+            "title": "Der Eid von Glannadeor",
+            "genre": "Albisches Trauerspiel · fünf Aufzüge mit Klagelied",
+            "setting": "Tír na nDoirí im alten Oseneach · Dún Áinmardh und Glannadeor · viele Jahrtausende vor Celtigern",
+            "synopsis": "<p>Fürst Cormac Ui Talamh regiert ein blühendes Land und hat sieben Söhne und eine Tochter. Als der Púca Monat um Monat die Dörfer und selbst Dún Áinmardhs Mauern angreift, verspricht er seine Tochter dem Bezwinger. Kein ausgezogener Krieger kehrt zurück.</p><p>Madra Rua handelt mit dem Unhold um einen vorgetäuschten Sieg, die Braut und Glannadeor. Untertanen und selbst die sieben Fürstensöhne genügen dem Bären nicht: Er verlangt den Ratsdruiden Fear Doirich. Mit der Aussicht, einen von Zatrach verdorbenen Brannoc-Fürsten zu erlösen, lockt Madra ihn in die Berge.</p><p>Von den Tieren gewarnt, lenkt Fear Doirich den Handel durch Madras freiwilligen Eid um. Er befreit den Brannoc und überträgt die Verderbnis auf den habgierigen Krieger. Der Druide kehrt auf dem Bären heim, heiratet die Fürstentochter und erzieht ihren Sohn zum Druidenkrieger.</p><p>Jahrhunderte später sucht der Sohn gegen den Wunsch des Vaters seine Feuerprobe. In Glannadeors Ruinen bezwingt und frisst ihn Madras Bärengestalt. Am bronzenen Reif erkennt Fear Doirich die eigene frühere Tat. Er verflucht sich selbst und stirbt; aus seinem Leib wächst der Ahnenbaum, dessen Äste die unterirdischen Mauern umschließen und nie das Tageslicht erreichen. Der Epilog erzählt von den seltenen Madrúach-Urgren in Celtigerns Bergen.</p><p><a href=\"./assets/gwynthor-theater/productions/der-eid-von-glannadeor/rollenheft.html\" target=\"_blank\" rel=\"noopener\">Vollständiges Rollenheft mit Dialogen und Besetzung</a> · <a href=\"../Bestiarium/tiere/raubtiere/baeren/urgren/klagelied.html\" target=\"_blank\" rel=\"noopener\">Klagelied: Unter Eichen, unter Stein</a> · <a href=\"../Bestiarium/tiere/raubtiere/baeren/urgren/index.html#sage\" target=\"_blank\" rel=\"noopener\">Die Ursprungssage im Bestiarium</a></p>",
+            "cast": "Aelir als Fear Doirich · Roderich als Madra Rua und seine verfluchte Bärengestalt · Florian als Púca / der befreite Brannoc · Rhoswen als Cormacs Tochter · Geraint als Der Sohn Fear Doirichs · Cadfan als Fürst Cormac Ui Talamh · Nuala als Chorführerin und Klagestimme · Faelan als Kriegsherr, Bote und Rabenstimme · Eleri, Rosalie, Samira, Sigrun und Sabjorn als Hof- und Dorfchor",
+            "staging": "Elenids Inszenierung verbindet sieben Eichenmasken, eine wandelbare Bärenpuppe, rote Seide für den Fluch und Schattenkampf. Ein bronzener Reif führt durch beide Zeitebenen. Im Schlussbild entfaltet das Ensemble einen Ahnenbaum unter der Gewölbedecke; kein Zweig erreicht die Oberwelt. Tod und Gewalt werden durch Chor, Schatten und zurückgelassene Requisiten vermittelt.",
+            "image": "./assets/gwynthor-theater/productions/der-eid-von-glannadeor.png"
           },
           {
             "title": ""

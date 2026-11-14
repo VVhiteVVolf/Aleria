@@ -6,14 +6,18 @@ Inhalte und keine zusätzlichen Backend-Schreibzugriffe.
 
 ## Zuständigkeiten
 
-- `archive-entry-card.js` und `.css`: gemeinsame Vorschau für Bereichsseiten und
-  Suchergebnisse. Titel stehen unter dem Bild; Seitenzahl und tatsächlich verfügbare
+- `archive-entry-card.js` und `.css`: gemeinsame kompakte Vorschau für Bereichsseiten und
+  Suchergebnisse. Desktopbilder sind 112 Pixel hoch; mobil steht ein 88 Pixel breites
+  Bild neben Titel und Kurztext. Seitenzahl und tatsächlich verfügbare
   Kommentarmöglichkeiten bilden eine kompakte Fußzeile. Gildenwappen werden über
   `archive-card-meta.js` priorisiert und vollständig dargestellt.
 - `archive-hierarchy-browser.js` und `archive-hierarchy.css`: Baummodell,
   Verzeichnis, Pfadnavigation und kompakter Bereichskopf. Ordnernamen wählen Inhalte,
   Pfeile klappen den Baum auf oder zu. Übergeordnete Bereiche enthalten ihre
   untergeordneten Module; die bestehende Begrenzung auf zunächst 24 Karten bleibt.
+- `archive-section-icons.js`: vorhandene Bereichswappen, das eigene Gwynthor-Banner
+  und kontextbezogene Ortspins für fehlende Zwischenknoten und Moduleinträge.
+  Bildfehler erhalten einen sichtbaren Ersatz über einen delegierten Listener.
 - `archive-hierarchy-controller.js`: besitzt den an die aktuelle Verzeichnisansicht
   gebundenen Datenstand in einer `WeakMap`. Aufklappen ersetzt nur den Baum;
   Ordnerauswahl ersetzt Baum und zugehörigen Inhaltsbereich. Dashboard, Suche,

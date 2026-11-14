@@ -1,5 +1,7 @@
 import { indexInventoryTemplates, resolveInventoryItem, inventoryCompanionViews, isInventoryCompanion } from './character-inventory-identity.js?v=20260928-equipment-art-v4';
 import { inventoryCardModel } from './character-inventory-card-model.js';
+import { inventoryDocument } from '../inventory-documents/document-item-model.js';
+import { normalizeItemDocumentRef } from '../item-definitions/item-definition-model.js';
 
 function context(data) {
   const snapshot = globalThis.AleriaItemRegister?.store.snapshot();
@@ -20,7 +22,9 @@ globalThis.AleriaCharacterInventory = Object.freeze({
   },
   companions: data => inventoryCompanionViews(data, context(data).creatures),
   isCompanion: isInventoryCompanion,
-  card: inventoryCardModel
+  card: inventoryCardModel,
+  document: inventoryDocument,
+  documentRef: normalizeItemDocumentRef
 });
 
 let refreshQueued = false;

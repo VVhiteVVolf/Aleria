@@ -46,7 +46,7 @@ var AleriaGwynthorGeography = (() => {
     Cenyr: `${iconRoot}K\xF6nigreich Cenyr.png`,
     "Celtigerns Wacht": `${iconRoot}Celtigerns Wacht Grafschaft.png`,
     "Llamreis Ankunft": `${iconRoot}Llamreis Ankunft.png`,
-    "Bannkreis Gwynthor": "../IconOrdner/Welt Pins/Bauernsiedlung.png",
+    "Bannkreis Gwynthor": `${iconRoot}Gwynthor-Bannkreis-Banner-v1.webp`,
     "Gwynthor-Stadt": `${iconRoot}Gwynthor.png`,
     "Owains Anwesen & Gest\xFCt": "../IconOrdner/Welt Pins/Gest\xFCt.png",
     "Zum Roten Tor": "../IconOrdner/Welt Pins/Gasthof.png",

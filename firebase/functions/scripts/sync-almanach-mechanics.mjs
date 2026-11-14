@@ -14,6 +14,7 @@ for (let index = 2; index < process.argv.length; index += 2) {
   selectedFiles.push(process.argv[index + 1]);
 }
 const files = [
+  'inventory-documents/document-notes-model.js',
   'character-development/development-state.js',
   'item-definitions/authored-item-catalog.js',
   'landing/group-landing-roster.js',
@@ -131,6 +132,7 @@ const files = [
   'combat/combat-ward-resolution.js',
   'combat/rules/combat-mvp-rules.js',
   'herausforderung/herausforderung-model.js',
+  'scene-elements/scene-element-conditions.js',
   'herausforderung/herausforderung-weapon-maneuver.js',
   'inventory-use/inventory-use-model.js',
   'inventory-use/zornkappe-effects.js',

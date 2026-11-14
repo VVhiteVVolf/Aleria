@@ -52,7 +52,7 @@ export const HOUSE_BIOGRAPHY = {
     "abilitiesTitle": "Einfluss und Aufgaben",
     "abilities": [],
     "historyTitle": "Überlieferung und heutige Generationen",
-    "historyText": "Die Namen der älteren Gründer und der Generationen zwischen ihnen und der heutigen Familie sind nicht überliefert. Die näher bekannte Familie beginnt mit den Brüdern Gwrgi und Gwynog und führt über deren Kinder bis zu den kleinen Enkeln.\n\nGwrgi und Mared sind die Eltern Rhuns, Eluneds und Rhunedds. Rhun und seine Frau Gwenlliw haben die Söhne Gwyndaf und Euron. Gwynog und Cynwen sind die Eltern Cynogs, Dwynwens, Eilfyws und Llywelas. Die Herkunftsfamilien der angeheirateten Frauen sind nicht benannt. Die Familie lebt und arbeitet im von der ungelösten Mordserie betroffenen Umland.",
+    "historyText": "Die Namen der älteren Gründer und der Generationen zwischen ihnen und der heutigen Familie sind nicht überliefert. Die näher bekannte Familie beginnt mit den Brüdern Gwrgi und Gwynog und führt über deren Kinder bis zu den kleinen Enkeln.\n\nGwrgi und Mared sind die Eltern Ffraids, Rhuns, Eluneds und Rhunedds. Ffraid wurde 1740 mit fünfundzwanzig Jahren Opfer des Fleischsammlers. Ihre lebenden Geschwister tragen ihre bisherigen Aufgaben weiter. Rhun und seine Frau Gwenlliw haben die Söhne Gwyndaf und Euron. Gwynog und Cynwen sind die Eltern Cynogs, Dwynwens, Eilfyws und Llywelas. Die Herkunftsfamilien der angeheirateten Frauen sind nicht benannt. Die Familie lebt und arbeitet im von der ungelösten Mordserie betroffenen Umland.",
     "worksTitle": "Prägende Ereignisse",
     "works": [],
     "extraSections": [

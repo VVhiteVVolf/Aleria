@@ -222,6 +222,8 @@ function splitCommentByEmoteMarkers(c) {
 }
 
 function renderCommentBubble(c, idx) {
+  if (c.sceneElementSignal) return globalThis.AleriaSceneElements?.renderSignal?.(c) || '';
+  if (c.sceneElementInteraction) return `<aside class="scene-element-interaction-receipt" role="note">${escapeHtml(c.text || '')}</aside>`;
   if (globalThis.AleriaSceneRegenerationPolicy?.isComment(c)) return '';
   if (Array.isArray(c.criticalLifecycle) && c.criticalLifecycle.length) {
     const rows = c.criticalLifecycle.map(event => {

@@ -24,7 +24,7 @@ function getInlinePageImageFit(page) {
 
 function getInlinePageImagePosition(page) {
   const position = String(page?.imagePosition || '').trim();
-  return ['top', 'center', 'bottom', 'left', 'right'].includes(position) ? position : getInlinePageDefaultImagePosition(page);
+  return sanitizeModulePageImagePosition(position) || getInlinePageDefaultImagePosition(page);
 }
 
 function buildInlineImageFitOptions(page) {
@@ -37,6 +37,7 @@ function buildInlineImageFitOptions(page) {
 function buildInlineImagePositionOptions(page) {
   const value = getInlinePageImagePosition(page);
   return `
+          ${value.startsWith('center ') ? `<option value="${escapeHtml(value)}" selected>Vertikal ${escapeHtml(value.slice(7))}</option>` : ''}
           <option value="top"${value === 'top' ? ' selected' : ''}>Oben</option>
           <option value="center"${value === 'center' ? ' selected' : ''}>Mitte</option>
           <option value="bottom"${value === 'bottom' ? ' selected' : ''}>Unten</option>

@@ -201,7 +201,7 @@ import { HOUSE_BIOGRAPHY as haus_helfaen } from "../../../../Familien Häuser un
 import { HOUSE_BIOGRAPHY as haus_llythfor } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Llythfor/haus.biography.mjs?v=20261103-cenyr-editorial-v2";
 import { HOUSE_BIOGRAPHY as haus_loer } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Loer/haus.biography.mjs?v=20261109-aurdden-loer-v1";
 import { HOUSE_BIOGRAPHY as haus_maerllys } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Maerllys/haus.biography.mjs?v=20261108-tailoring-v4";
-import { HOUSE_BIOGRAPHY as haus_marchwern } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Marchwern/haus.biography.mjs?v=20261107-landfamilien-v1";
+import { HOUSE_BIOGRAPHY as haus_marchwern } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Marchwern/haus.biography.mjs?v=20261114-fleischsammler-v1";
 import { HOUSE_BIOGRAPHY as haus_myrgath } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Myrgath/haus.biography.mjs?v=20261112-draig-garde-v1";
 import { HOUSE_BIOGRAPHY as haus_pendrwn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Pendrwn/haus.biography.mjs?v=20261024-housebio-v1";
 import { HOUSE_BIOGRAPHY as haus_penrudd } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Penrudd/haus.biography.mjs?v=20261024-housebio-v1";
@@ -865,7 +865,7 @@ export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-llythfor": Object.freeze({ sourceRevision: 8, biography: haus_llythfor, replacedDefaultFingerprints: Object.freeze(["2483:3012c5dc:4215020a"]) }),
   "haus-loer": Object.freeze({ sourceRevision: 4, biography: haus_loer, replacedDefaultFingerprints: Object.freeze(["2412:7d5646a3:56e86079","5096:eb86cfe:eea034ac"]) }),
   "haus-maerllys": Object.freeze({ sourceRevision: 13, biography: haus_maerllys, replacedDefaultFingerprints: Object.freeze(["1741:ce940b97:2291e4d9","2459:f04827ea:91600d9c"]) }),
-  "haus-marchwern": Object.freeze({ sourceRevision: 2, biography: haus_marchwern, replacedDefaultFingerprints: Object.freeze(["3169:2201d0d8:b25303c6"]) }),
+  "haus-marchwern": Object.freeze({ sourceRevision: 3, biography: haus_marchwern, replacedDefaultFingerprints: Object.freeze(["3169:2201d0d8:b25303c6","6115:e9ddf66f:db4493c1"]) }),
   "haus-myrgath": Object.freeze({ sourceRevision: 1, biography: haus_myrgath, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-pendrwn": Object.freeze({ sourceRevision: 4, biography: haus_pendrwn, replacedDefaultFingerprints: Object.freeze(["1733:31ecdfef:c2a2641"]) }),
   "haus-penrudd": Object.freeze({ sourceRevision: 3, biography: haus_penrudd, replacedDefaultFingerprints: Object.freeze([]) }),

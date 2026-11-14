@@ -61,6 +61,7 @@ export function itemBuilderMarkup(draft, templates) {
       ${input('title', 'Name der Definition', draft.title, 'text', 'required maxlength="180"')}${select('category', 'Gegenstandsart', draft.category, categories)}
       ${input('type', 'Unterart / Ausführung', draft.type)}${input('image', 'Bildicon · URL oder Projektpfad', draft.image, 'text', 'maxlength="4000"')}
       ${area('description', 'Beschreibung', draft.description, 'maxlength="12000"')}${input('weight', 'Gewicht in kg (leer = unbekannt)', draft.weight ?? '', 'number', 'min="0" max="100000" step="0.01"')}
+      ${input('documentId', 'Lesbares Werkstatt-Dokument (optional)', draft.documentRef?.id || '', 'text', 'maxlength="80" placeholder="Dokument-ID aus dem Leserlink"')}<p class="ib-help">Die Dokument-ID steht im Werkstatt-Link hinter „id=“. Das Dokument muss in der Werkstatt veröffentlicht sein, damit andere es lesen können.</p>
       ${select('mechanicsStatus', 'Ausarbeitungsstand', draft.mechanicsStatus, { provisional: 'Vorläufige Grundwerte', defined: 'Ausgearbeitet', narrative: 'Erzählerische Wirkung' })}
       ${draft.category === 'waffen' ? weaponFields(draft.combatDefinition) : draft.category === 'ruestungen' ? armorFields(draft.combatDefinition) : ''}
       ${['waffen', 'ruestungen'].includes(draft.category) ? area('properties', 'Handhabung & Eigenschaften', draft.combatDefinition?.properties) + area('notes', 'Regelhinweise', draft.combatDefinition?.notes) : ''}

@@ -4,7 +4,7 @@ import { normalizeCharacterGenealogy, normalizeCharacterIdentity, findBestCharac
 // family registry and import dialog belong to explicit genealogy requests.
 export function createGenealogyBootstrap({ host = globalThis, events = host.document,
   loadMemberships = () => import('./family-membership-index.js?v=20261104-startup-v1'),
-  loadImporter = () => import('./genealogy-import-controller.js?v=20261104-startup-v1') } = {}) {
+  loadImporter = () => import('./genealogy-import-controller.js?v=20261113-register-v2') } = {}) {
   let active = true, memberships = null, membershipRequest = null, importer = null, importerRequest = null, opening = null, launchIsCurrent = () => true;
   const report = error => { if (active) host.showAppStatus?.(error?.message || 'Die Stammbaum-Funktion konnte nicht geladen werden. Bitte erneut versuchen.', 'error'); };
   function publish() {

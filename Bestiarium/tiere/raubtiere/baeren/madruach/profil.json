@@ -1,0 +1,230 @@
+{
+  "id": "madruach",
+  "name": "Madrúach",
+  "classification": "Urgr · Verfluchte Bärenlinie des Madra Rua",
+  "continent": "Estryll",
+  "region": "Berge Celtigerns Wachts",
+  "folio": "R-U01",
+  "quote": "Was ich hier gewinne, soll an mir bleiben.",
+  "quoteAttribution": "Madra Ruas Eid in der Sage von Glannadeor",
+  "summary": "Madrúach sind gewaltige Urgren der Berge Celtigerns Wachts. Ihre schmutzig verfilzten Bärenleiber tragen eine verstörend menschliche Visage. Seltene Berichte erzählen von Hinterhalten auf Wanderer; ihre Ursprungssage führt die Linie auf den verfluchten Krieger Madra Rua zurück.",
+  "icon": {
+    "src": "../../../../assets/predators/urgren/madruach-v1.png",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Madrúach-Urgr"
+  },
+  "hero": {
+    "src": "../../../../assets/predators/urgren/madruach-v1.png",
+    "width": 1024,
+    "height": 1536,
+    "alt": "Ein massiger Madrúach mit menschlicher Stirn und Nase, verfilztem Bartfell und vier kräftigen Bärenpranken",
+    "caption": "Neue Kreaturentafel · Madrúach, erste beschriebene Urgrenlinie"
+  },
+  "group": {
+    "id": "baeren",
+    "title": "Bären",
+    "subgroupId": "urgren"
+  },
+  "subgroup": {
+    "id": "urgren",
+    "title": "Urgren"
+  },
+  "facts": [
+    {
+      "label": "Gattung",
+      "value": "Urgr · Mehrzahl Urgren"
+    },
+    {
+      "label": "Linie",
+      "value": "Madrúach · nach Madra Rua"
+    },
+    {
+      "label": "Vorkommen",
+      "value": "Berge Celtigerns Wachts; seltene Sichtungen"
+    },
+    {
+      "label": "Gestalt",
+      "value": "Gewaltiger Bärenleib mit menschlicher Visage"
+    },
+    {
+      "label": "Verhalten",
+      "value": "Arglistig, böswillig und gefährlich für Wanderer"
+    },
+    {
+      "label": "Ursprungssage",
+      "value": "Der Eid von Glannadeor"
+    },
+    {
+      "label": "Nahrung",
+      "value": "Gerissene Tiere; auch Menschen als Opfer überliefert"
+    },
+    {
+      "label": "Zähmung",
+      "value": "Keine verlässliche Bindung überliefert"
+    }
+  ],
+  "metrics": {
+    "labels": [
+      "Gefahr",
+      "Zähmbarkeit",
+      "Intelligenz",
+      "Körperkraft",
+      "Sozialverhalten",
+      "Ausdauer"
+    ],
+    "values": [
+      10,
+      1,
+      8,
+      10,
+      1,
+      8
+    ],
+    "source": "Aus dem Arttext abgeleitete Feldbewertung"
+  },
+  "sections": [
+    {
+      "id": "einfuehrung",
+      "title": "Die Menschenbären der Berge",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Madrúach bezeichnet diese besondere Linie innerhalb der Urgren. Ein Tier ist ein Madrúach-Urgr; gemeinsam werden sie Madrúach-Urgren genannt. Der Name ist eine albische Verschleifung von Madra Rua."
+        },
+        {
+          "type": "paragraph",
+          "text": "Heute gibt es kaum noch Sichtungen. Die Berichte verorten die Wesen in den Bergen Celtigerns Wachts, wo sie Reisende beobachten und arglosen Wanderern auflauern."
+        }
+      ]
+    },
+    {
+      "id": "erscheinung",
+      "title": "Ein Gesicht, das sich erinnert",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Der Körper bleibt bärenartig: gewaltige Schultern, schwerer Rumpf, kräftige lange Vorderläufe und vier mit großen Krallen bewehrte Pranken. Das ungepflegte graubraune Fell hängt in dichten, schmutzigen und verfilzten Strähnen am Leib."
+        },
+        {
+          "type": "paragraph",
+          "text": "Stirn, Brauen und Nase wirken erschreckend menschlich. Das zottige Haar um Kiefer und Maul erinnert an einen verwilderten Bart. Hinter der tierischen Schnauze liegt der Eindruck eines verzerrten Menschengesichts."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Bildtafel zeigt knorrige, geweihartige Knochenauswüchse. Schädel, Lederbänder und zerbrochene Schildreste sind als Trophäen eines alten Exemplars dargestellt; sie sind keine angeborenen Körperteile und keine vorgeschriebene Ausstattung jedes Madrúach."
+        }
+      ]
+    },
+    {
+      "id": "ursprung",
+      "title": "Madra Rua und Fear Doirich",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Nach der albischen Sage wollte Madra Rua durch einen Handel mit dem Púca die Tochter Cormac Ui Talamhs und Glannadeor gewinnen. Er war bereit, Untertanen und sogar die sieben Fürstensöhne zu opfern. Der Unhold verlangte stattdessen den Ratsdruiden Fear Doirich."
+        },
+        {
+          "type": "paragraph",
+          "text": "Der von Tieren gewarnte Druide brachte Madra dazu, die Macht des verdorbenen Brannoc freiwillig zu beanspruchen. Er löste Zatrachs Korruption aus dem Bären und übertrug sie entlang dieses Eides auf den Krieger. Der erste Madrúach floh in die Berge."
+        }
+      ]
+    },
+    {
+      "id": "glannadeor",
+      "title": "Der Preis des Sieges",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Jahrhunderte später fraß Madras Bärengestalt den erwachsenen Druidenkrieger, den Fear Doirich mit Cormacs Tochter gezeugt und erzogen hatte. Der Sohn war gegen den Wunsch seines Vaters zur Feuerprobe ausgezogen."
+        },
+        {
+          "type": "paragraph",
+          "text": "Am bronzenen Reif zwischen Blut und zerrissener Kleidung erkannte Fear Doirich die Bestie. Er verfluchte sich selbst und starb in Glannadeors unterirdischen Hallen. Aus seinem Leib erwuchs der Ahnenbaum, der die Ruinenmauern umschließt und niemals das Tageslicht erreicht."
+        }
+      ]
+    },
+    {
+      "id": "nachkommen",
+      "title": "Die Weitergabe der Verderbnis",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Sage führt die Madrúach-Urgren auf Nachkommen Madra Ruas mit Brannoc-Bärinnen und Bärinnen anderer Linien zurück. Sie spricht ausdrücklich von gewaltsam erzwungenen Paarungen. Seine Verderbnis ging an diese Nachkommen weiter."
+        },
+        {
+          "type": "paragraph",
+          "text": "Die Erzählung unterscheidet den verwandelten Stammvater von seiner Linie. Sie macht weder jeden Madrúach zu einem ehemals menschlichen Wesen noch jeden gefährlichen Bären zum Urgr. Über Madras späteres Ende und die heutige Zahl seiner Nachfahren ist nichts Sicheres überliefert."
+        }
+      ]
+    },
+    {
+      "id": "jagd",
+      "title": "Jagd und Verhalten",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Die Madrúach der jüngeren Berichte lauern auf Menschen und reißen Tiere. Ihre Gefahr liegt in der Verbindung gewaltiger Kraft mit gezieltem, feindseligem Verhalten. Die menschlich wirkende Visage darf nicht als Einladung zur Annäherung verstanden werden."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eine feste Rudelordnung oder verlässliche Bindung an Menschen ist nicht überliefert. Madras Verhandlung mit dem Púca gehört zur Ursprungssage und beweist keine allgemeine menschliche Sprachfähigkeit seiner Nachkommen."
+        }
+      ]
+    },
+    {
+      "id": "lebensraum",
+      "title": "Berge und verlassene Wege",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Als heutiges Vorkommen werden die Berge Celtigerns Wachts genannt. Die Ruinen Glannadeors bilden den Mittelpunkt der Sage. Konkrete Reviere, Bestandszahlen und weitere Ansiedlungen sind nicht gesichert."
+        },
+        {
+          "type": "paragraph",
+          "text": "Seltene Sichtungen und das Motiv des arglosen Wanderers haben die Linie zum Gegenstand von Warnungen an Bergwegen gemacht."
+        }
+      ]
+    },
+    {
+      "id": "feldhinweise",
+      "title": "Stärken und Grenzen der Überlieferung",
+      "blocks": [
+        {
+          "type": "list",
+          "items": [
+            "Gewaltige Körperkraft und schwere Bärengestalt.",
+            "Böswillige Absicht und die Wahl menschlicher Opfer.",
+            "Keine verlässlich überlieferte Zähmung.",
+            "Keine belegte allgemeine Unsterblichkeit, besondere Waffenempfindlichkeit oder feste Zauberkraft.",
+            "Die Archivwerte vergleichen den Arttext; sie sind keine Kampfwerte oder exakten Messungen."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lied-und-buehne",
+      "title": "Klage und Theater",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "„Unter Eichen, unter Stein“ bewahrt den Weg von Cormacs blühendem Land bis zum Baum ohne Morgen als Klagelied. Das Gwynthorer Theater erzählt dieselbe Sage als „Der Eid von Glannadeor“ in fünf Aufzügen."
+        }
+      ]
+    }
+  ],
+  "furtherReading": [
+    {
+      "title": "Urgren und die vollständige Ursprungssage",
+      "href": "../urgren/index.html#sage"
+    },
+    {
+      "title": "Unter Eichen, unter Stein · Klagelied",
+      "href": "../urgren/klagelied.html"
+    },
+    {
+      "title": "Der Eid von Glannadeor · Theaterstück",
+      "href": "/AleriaAlmanach/assets/gwynthor-theater/productions/der-eid-von-glannadeor/rollenheft.html"
+    }
+  ]
+}

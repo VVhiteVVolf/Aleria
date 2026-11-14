@@ -16,7 +16,7 @@ const magicalSaveRules = (id, bonus) => ['pre-roll', 'pre-secondary-save'].map(p
 
 export const UNIQUE_TRAIT_DEFINITIONS = [
   ['ordnungszwang', 'Ordnungszwang', 'Dein Blick für Abweichungen hilft ein wenig, Einzelheiten kosten Zeit: +1 auf Nachforschungen, −1 Initiative.', { skillModifiers: [skill('Nachforschungen', 1)], initiative: -1 }, 0],
-  ['namenhueter', 'Namenhüter', 'Namen und gehörte Lebensgeschichten bleiben dir im Gedächtnis: +1 auf Geschichte und Überzeugen, −1 auf Wahrnehmung.', { skillModifiers: [skill('Geschichte', 1), skill('Überzeugen', 1), skill('Wahrnehmung', -1)] }, 1],
+  ['namenhueter', 'Namenhüter', 'Namen und gehörte Lebensgeschichten bleiben dir im Gedächtnis und helfen bei der persönlichen Ansprache: +1 auf Geschichte und Überzeugen.', { skillModifiers: [skill('Geschichte', 1), skill('Überzeugen', 1)] }, 1],
   ['unverbesserlicher-optimist', 'Unverbesserlicher Optimist', 'Du erwartest stets das Beste: +1 auf Rettungswürfe gegen Furcht und Überzeugen, −1 auf Motiv erkennen.', { saveModifiers: [{ kind: 'fear', bonus: 1 }], skillModifiers: [skill('Überzeugen', 1), skill('Motiv erkennen', -1)] }, 1],
   ['schwarzseher', 'Schwarzseher', 'Du rechnest mit Schwierigkeiten und wirkst entsprechend düster: +1 Initiative und +1 auf Motiv erkennen, −1 auf Überzeugen.', { initiative: 1, skillModifiers: [skill('Motiv erkennen', 1), skill('Überzeugen', -1)] }, 1],
   ['schweigegeluebde', 'Schweigegelübde', 'Du hörst eher zu und verzichtest auf deine Stimme: +1 auf Motiv erkennen, −1 auf Überzeugen und Auftreten. Die kleinen Abzüge bilden die eingeschränkte Ausdrucksweise allgemein ab; Schrift und Gebärden bleiben möglich.', { skillModifiers: [skill('Motiv erkennen', 1), skill('Überzeugen', -1), skill('Auftreten', -1)] }, -1],
@@ -24,7 +24,7 @@ export const UNIQUE_TRAIT_DEFINITIONS = [
   ['ritualgebunden', 'Ritualgebunden', 'Du kennst deine wiederkehrenden Riten, reagierst aber zögerlich auf Neues: +1 auf Religion, −1 Initiative.', { skillModifiers: [skill('Religion', 1)], initiative: -1 }, 0],
   ['neugier-vor-vorsicht', 'Neugier vor Vorsicht', 'Du schaust genauer hin, gehst dabei aber eher ein Risiko ein: +1 auf Nachforschungen, −1 auf GES-Rettungswürfe. Neugier ersetzt keine Ermittlerausbildung.', { skillModifiers: [skill('Nachforschungen', 1)], saveAttributeModifiers: [save('dexterity', -1)] }, 0],
   ['uebervorsichtig', 'Übervorsichtig', 'Du suchst zuerst einen sicheren Ausweg und zögerst dadurch: +1 auf GES-Rettungswürfe, −1 Initiative.', { saveAttributeModifiers: [save('dexterity', 1)], initiative: -1 }, 0],
-  ['wanderlust', 'Wanderlust', 'Du bleibst lieber unterwegs, als dich lange an einer Stelle aufzuhalten: +1 m Bewegung und +1 auf Überleben, −1 auf Nachforschungen.', { movement: 1, skillModifiers: [skill('Überleben', 1), skill('Nachforschungen', -1)] }, 1],
+  ['wanderlust', 'Wanderlust', 'Viele Wege und Aufenthalte im Freien haben dich ausdauernd und wildniserfahren gemacht: +1 auf Athletik und Überleben.', { skillModifiers: [skill('Athletik', 1), skill('Überleben', 1)] }, 1],
   ['totengraeberhumor', 'Totengräberhumor', 'Mit Bestattungsbräuchen vertraut begegnest du dem Unheimlichen mit unpassenden Scherzen: +1 auf Religion und Rettungswürfe gegen Furcht, −1 auf Auftreten.', { skillModifiers: [skill('Religion', 1), skill('Auftreten', -1)], saveModifiers: [{ kind: 'fear', bonus: 1 }] }, 1],
   ['stille-zeugin', 'Stille Zeugin', 'Du beobachtest lieber vom Rand aus: +1 passive Wahrnehmung, −1 auf Auftreten. Der Bonus verändert keine aktiven Wahrnehmungsproben.', { passivePerception: 1, skillModifiers: [skill('Auftreten', -1)] }, 0],
   ['fremde-erinnerungen', 'Fremde Erinnerungen', 'Bruchstücke fremder Geschichten und Runen drängen sich in deinen Geist: +1 auf Geschichte und Arkane Kunde, −1 auf WEI-Rettungswürfe.', { skillModifiers: [skill('Geschichte', 1), skill('Arkane Kunde', 1)], saveAttributeModifiers: [save('wisdom', -1)] }, 1],
@@ -35,7 +35,7 @@ export const UNIQUE_TRAIT_DEFINITIONS = [
     weaponRule('zweikampf-nah', 'pre-roll', 'actor', 'melee', { attackModifier: 1 }),
     weaponRule('zweikampf-fern', 'pre-roll', 'actor', 'ranged', { attackModifier: -1 })
   ] }],
-  ['deckungssucher', 'Deckungssucher', 'Du bewegst dich bedächtig und schützt dich vor Beschuss: −1 m Bewegung; eingehender Fernkampf-Waffenschaden wird um 1 reduziert. Keine Wirkung gegen Nahkampf oder Zauber.', { movement: -1 }, 1, { triggerRules: [
+  ['deckungssucher', 'Deckungssucher', 'Du suchst zuerst Schutz und handelst dadurch später: −1 Initiative; eingehender Fernkampf-Waffenschaden wird um 1 reduziert. Keine Wirkung gegen Nahkampf oder Zauber.', { initiative: -1 }, 1, { triggerRules: [
     weaponRule('deckung-beschuss', 'pre-damage', 'target', 'ranged', { damageReduction: 1 })
   ] }],
   ['magische-wetterfuehligkeit', 'Magische Wetterfühligkeit', 'Magische Spannungen machen dich unruhig: +1 auf Rettungswürfe gegen Zauber, Gebete und magische Lieder, −1 Initiative.', { initiative: -1 }, 1, { triggerRules: magicalSaveRules('wetterfuehlig', 1) }],

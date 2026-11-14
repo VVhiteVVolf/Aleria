@@ -128,7 +128,8 @@
             </div>
           </div>
 
-          <div class="upload-strip"><label for="image-upload-target">Bild einfügen als</label><select id="image-upload-target"><option value="doc-image">Hauptbild</option><option value="doc-signature-image">Signatur</option><option value="doc-emblem-image">Siegel / Emblem</option><option value="doc-watermark-image">Wasserzeichen</option></select><label class="btn" for="local-image">Bilddatei einfügen</label><input id="local-image" type="file" accept="image/png,image/jpeg,image/webp" data-enhance-file="image" hidden><p class="hint">Bis 2 MB. PNG-Transparenz bleibt erhalten.</p></div>
+          <div class="field" data-field-key="book-covers"><label for="doc-book-back-cover">Rückdeckel · optional</label><input id="doc-book-back-cover" type="text" placeholder="Bildadresse des Rückdeckels"><button class="btn" type="button" data-enhance-action="clear-book-back-cover">Rückdeckel entfernen</button></div>
+          <div class="upload-strip"><label for="image-upload-target">Bild einfügen als</label><select id="image-upload-target"><option value="doc-image">Hauptbild</option><option value="doc-signature-image">Signatur</option><option value="doc-emblem-image">Siegel / Emblem</option><option value="doc-watermark-image">Wasserzeichen</option><option value="doc-book-back-cover">Rückdeckel</option></select><label class="btn" for="local-image">Bilddatei einfügen</label><input id="local-image" type="file" accept="image/png,image/jpeg,image/webp" data-enhance-file="image" hidden><p class="hint">Bis 2 MB. PNG-Transparenz bleibt erhalten.</p></div>
           <div class="media-slots" data-field-key="media">
             <div class="media-slot" data-media-slot="signature">
               <div class="media-slot-head">
@@ -252,6 +253,7 @@
           <div class="grid">
             <div class="field"><label for="doc-ink">Tintenfarbe</label><input id="doc-ink" type="color" value="#302315"></div>
             <div class="field"><label for="doc-line-height">Zeilenabstand</label><input id="doc-line-height" type="range" min="1.1" max="2.5" step="0.05" value="1.75"></div>
+            <div class="field"><label for="doc-paragraph-spacing">Absatzabstand im Buch</label><input id="doc-paragraph-spacing" type="range" min="0" max="32" step="1" value="15"></div>
             <div class="field wide"><label for="doc-letter-spacing">Zeichenabstand</label><input id="doc-letter-spacing" type="range" min="0" max="5" step="0.1" value="0"></div>
           </div>
           <p class="hint">Schreibe mit normalen Buchstaben: Die Schrift setzt sie in ihre Zeichen um. „Übersetzen“ zeigt deinen ursprünglichen Text. Für eingefügte Sonderzeichen kannst du eine eigene Lesefassung hinterlegen.</p>

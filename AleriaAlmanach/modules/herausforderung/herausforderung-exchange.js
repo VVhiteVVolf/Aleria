@@ -1,12 +1,14 @@
 import { getCheckDescription } from '../skill-checks/skill-check-guidance.js?v=20261015-check-options-v1';
 import { challengeBenefitBundles } from './herausforderung-outcomes.js?v=20261015-graded-challenges-v1';
-import { normalizeHerausforderungEvent, normalizeHerausforderungApproach, getHerausforderungValidationIssues, MAX_HERAUSFORDERUNG_APPROACHES } from './herausforderung-model.js?v=20261016-check-policy-v1';
+import { normalizeHerausforderungEvent, normalizeHerausforderungApproach, getHerausforderungValidationIssues, MAX_HERAUSFORDERUNG_APPROACHES } from './herausforderung-model.js?v=20261113-scene-elements-v1';
 import { SKILL_DEFINITIONS, ATTRIBUTE_CHECK_DEFINITIONS, SAVING_THROW_DEFINITIONS, getCheckDefinition } from '../skill-checks/skill-check-model.js?v=20261015-check-options-v1';
 import { COMBAT_STATUS_PRESETS, STATUS_MODIFIERS, STATUS_ROLL_MODES } from '../combat-status/combat-status-catalog.js';
 import { STATUS_DURATIONS } from '../combat-status/combat-status-model.js?v=20261015-graded-challenges-v1';
 import { CHALLENGE_COMBAT_EFFECT_TYPES } from './herausforderung-combat-effects.js?v=20261015-graded-challenges-v1';
 import { collectRegisterTemplates } from '../item-register/item-register-templates.js';
 import { CHALLENGE_IMAGE_FORMATS, CHALLENGE_IMAGE_FITS, EMPTY_CHALLENGE_SCENE_IMAGE } from './herausforderung-scene-image-model.js';
+import { SCENE_ELEMENT_TYPES } from '../scene-elements/scene-element-model.js';
+import { createSceneElementAiGuide, createSceneElementAiExamples } from '../scene-elements/scene-element-ai-guide.js';
 
 export const HERAUSFORDERUNG_EXPORT_FORMAT = 'aleria.herausforderung';
 export const HERAUSFORDERUNG_EXPORT_VERSION = 1;
@@ -15,6 +17,9 @@ const copy = value => JSON.parse(JSON.stringify(value));
 
 function authoringEvent(source) {
   const event = normalizeHerausforderungEvent(source);
+  if (event.sceneElementId) event.activation.enabled = true;
+  delete event.sceneElementId;
+  delete event.reaction;
   event.combatContext = { encounterId: '' };
   for (const approach of event.approaches) for (const bundle of challengeBenefitBundles(approach)) {
     // Inventory instances and server-resolved product snapshots are never an
@@ -35,15 +40,19 @@ export function createHerausforderungAiTemplate(registerSnapshot = {}, combatCon
     moduleId: item.moduleId || '', sourceRevision: item.sourceRevision || '', priceRange: item.priceRange || null }));
   return {
     format: HERAUSFORDERUNG_EXPORT_FORMAT, version: HERAUSFORDERUNG_EXPORT_VERSION, kind: 'ai-template',
+    guide: createSceneElementAiGuide(), scene: combatContext.scene || null,
     instructions: {
-      task: 'Arbeite die Idee des Nutzers als Aleria-Herausforderung aus. Fülle ausschließlich challenge mit gültigen Daten. Gib ein JSON-Objekt mit format, version und challenge zurück, ohne Begleittext oder neue Felder.',
-      workflow: ['Die leere challenge ist eine Vorlage und noch nicht veröffentlichbar.', 'Beschreibe öffentlich nur die wahrnehmbare Situation. Jeder Ansatz benennt einen öffentlich sichtbaren Lösungsweg.', 'Fülle jeden Ansatz mit mindestens einer erlaubten Fertigkeits-ID, einer Schwierigkeit und einer verdeckten Erkenntnis. Verwende unterschiedliche approachId-Werte.', 'Der Nutzer importiert das Ergebnis als Entwurf, prüft es und veröffentlicht es ausdrücklich.'],
-      rules: ['Ein bis sechs Ansätze; difficulty als ganze Zahl von 1 bis 40.', 'W20 + tatsächlicher Probenwert der Figur gegen difficulty. Keine pauschalen Ansatzboni. preferredSkills ist die verbindliche Freigabeliste; alle anderen Proben sind gesperrt. checkPenalties legt optional begründete Mali ausschließlich für erlaubte Proben fest. Fertigkeiten enthalten ihre Übung; Attributswürfe erhalten keine Übung; Rettungswürfe verwenden ihre eigene Ausbildung. Geltende Effekte werden automatisch berücksichtigt. Figurenwerte und persönliche Passiven nicht im Entwurf nachbauen.', 'Erfolg: insight aufdecken und Ansatz abschließen. Natürliche 20: kritischer Erfolg, auch unterhalb der Schwierigkeit. Natürliche 1: deutliches Scheitern; vorhandene Figurenregeln können Ergebnisse beeinflussen.', 'Bei 1–3 fehlenden Punkten: partialHint und partialEffects; bei mehr als 3 fehlenden Punkten: failureConsequence und failureEffects. Diese Ansätze bleiben offen.', 'rewards werden einmalig an die erfolgreiche Figur vergeben; ein kritischer Erfolg verdoppelt die Belohnung nicht automatisch. Andere Ansätze werden unabhängig ausgewertet.', 'Fehlschlagsfolgen werden pro Figur, Ansatz und Ergebnisstufe einmal angewendet. Wiederholungen stapeln dieselbe Folge nicht.', 'Gegenstände und Kupfertaler landen direkt im vorhandenen Inventar. Ein volles Inventar blockiert den gesamten Speichervorgang.', 'Belohnungen sind öffentlich sichtbar; verdeckte Erkenntnisse, Teilhinweise und Fehlschlagsfolgen erscheinen erst beim passenden Ergebnis.', 'Nur Spielleitung oder Redaktion darf Belohnungen und mechanische Folgen veröffentlichen.'],
+      task: 'Arbeite die Idee als Aleria-Szenenelement aus. In der Ideenphase knapp gemeinsam entwickeln; sobald der Nutzer Import-JSON verlangt, ausschließlich ein JSON-Objekt mit format, version und challenge zurückgeben, ohne Begleittext. Keine neuen Mechanikfelder oder IDs erfinden.',
+      workflow: ['Die leere challenge ist eine Vorlage und noch nicht veröffentlichbar.', 'Beschreibe öffentlich nur die wahrnehmbare Situation. Jeder Ansatz benennt einen öffentlich sichtbaren Lösungsweg.', 'Erzählelement: keine Ansätze. Sonst jeden Ansatz mit mindestens einer erlaubten Proben-ID, einer Schwierigkeit und einer verdeckten Erkenntnis füllen. Unterschiedliche approachId-Werte verwenden.', 'Der Nutzer importiert das Ergebnis als Entwurf, prüft es und veröffentlicht es ausdrücklich.'],
+      rules: ['Ein bis sechs Ansätze; Erzählelemente verwenden approaches:[]. difficulty als ganze Zahl von 1 bis 40.', 'W20 + tatsächlicher Probenwert der Figur gegen difficulty. Keine pauschalen Ansatzboni. preferredSkills ist die verbindliche Freigabeliste; alle anderen Proben sind gesperrt. checkPenalties legt optional begründete Mali ausschließlich für erlaubte Proben fest. Fertigkeiten enthalten ihre Übung; Attributswürfe erhalten keine Übung; Rettungswürfe verwenden ihre eigene Ausbildung. Geltende Effekte werden automatisch berücksichtigt. Figurenwerte und persönliche Passiven nicht im Entwurf nachbauen.', 'Erfolg: insight aufdecken und Ansatz abschließen. Natürliche 20: kritischer Erfolg, auch unterhalb der Schwierigkeit. Natürliche 1: deutliches Scheitern; vorhandene Figurenregeln können Ergebnisse beeinflussen.', 'Bei 1–3 fehlenden Punkten: partialHint und partialEffects; bei mehr als 3 fehlenden Punkten: failureConsequence und failureEffects. Diese Ansätze bleiben offen, sofern keine einmalige Reaktion/Versuchsgrenze gilt.', 'rewards werden einmalig an die erfolgreiche Figur vergeben; ein kritischer Erfolg verdoppelt die Belohnung nicht automatisch. Bei completionMode:any schließt ein Erfolg das ganze Element, sonst werden Ansätze unabhängig ausgewertet.', 'Fehlschlagsfolgen werden pro Figur, Ansatz und Ergebnisstufe einmal angewendet. Wiederholungen stapeln dieselbe Folge nicht.', 'Gegenstände und Kupfertaler landen direkt im vorhandenen Inventar. Ein volles Inventar blockiert den gesamten Speichervorgang.', 'Belohnungen sind öffentlich sichtbar; verdeckte Erkenntnisse, Teilhinweise und Fehlschlagsfolgen erscheinen erst beim passenden Ergebnis.', 'Nur Spielleitung oder Redaktion darf Belohnungen und mechanische Folgen veröffentlichen.'],
       syntax: {
+        elementType: 'challenge | narration | item | puzzle | danger. narration verwendet approaches: [] und activation.enabled: false; keine Proben oder Folgen. item präsentiert einen Gegenstand; Präsentation überträgt keinen Besitz. puzzle bietet ein Fragezeichen und mehrere Lösungsproben. danger bleibt bis zur Auslösung verborgen.',
+        completionMode: 'all | any. all: alle Ansätze unabhängig abschließen. any: ein erfolgreicher Ansatz löst das ganze Element; Standard bei Rätseln. Ausgelöste Gefahren verlangen genau eine Reaktion, auch bei Fehlschlag.',
+        activation: 'Optional { enabled: boolean, showSignal: boolean, mode: any | all, conditions: [], target: { mode: random | fixed, actorId }, detection: { enabled, skillId, difficulty, requiredSense, detectedText, missedText }, saveContext: { actionKind, damageType, saveTags } }. Gefahr: enabled:true. Bedingungen: {type:comments,minimum:1..999}, {type:passive,skillId,minimum:-99..99,requiredSense} oder {type:interaction,sourceId}. Passive Schwellen sind inklusive, also 21 für über 20. Wahrnehmung nutzt den eigenen passiven Bogenwert; andere passive Fertigkeiten 10 + Fertigkeitswert. any=ODER, all=UND. sourceId leer bedeutet dieses Element; sonst echte Kommentar-/Element-ID eines vorhandenen Gegenstands. Neue Figurenbeiträge zählen ab Scharfschalten; Bearbeitungen/Systemkarten zählen nicht. requiredSense ist leer/vision/hearing/smell/touch/taste. Eine feste Figur muss vor Auslösung selbst kommentiert haben. Erfüllte passive Bedingung entdeckt bereits; andernfalls verdeckte Entdeckungsprobe. Erkannt: Vorteil auf Reaktion, unbemerkt: Nachteil; geltende Figurenregeln werden verrechnet. Die Reaktion und ihre Folgen gehören in approaches. Definitionen sind vor Auslösung serverseitig getrennt gespeichert. Keine sceneElementId, reaction oder Würfelbelege erfinden.',
         targetActor: 'Optional { mode: auto | none | selected, actorId, name, persistence: { kind: character | creature | scene-creature, recordId oder sourceCreatureId } }. Nur echte IDs aus dem Figuren-/Kampfkatalog verwenden. Die Zielperson ist der Gegner oder Ansprechpartner, nicht die würfelnde Figur und nicht die Zielgruppe. mode: none für Situationen ohne Person, mode: selected mit einer festen ID, mode: auto ohne ID für automatische Zuordnung; bei eindeutigem gebundenem Duell wird der einzige Gegner automatisch zugeordnet. Mehrere Gegner nicht erraten.',
         audience: 'Objekt { mode: all | combatants | selected, actorIds: [] }. all: alle Szenenteilnehmer; combatants: nur aktive Teilnehmer des gebundenen Kampfes; selected: eine bis 40 reale Figuren-IDs aus dem Figurenkatalog. Diese Zielgruppe bestimmt, wer würfeln darf.',
         combatBound: 'Boolean. true bindet die Herausforderung an den aktuellen Kampf. Die echte encounterId wird ausschließlich vom Server gesetzt. Bei Kampfteilnehmer-Zielgruppe, fremden Empfängern oder einer Dauer bis Kampfende zwingend.',
-        outcomeTable: 'Optional pro Ansatz: Array mit 3–10 Stufen { id, label, natural, minimumTotal, text, success, benefits }. natural ist 20/1 für Krit oder 0 für Gesamtwert-Schwellen. Bei Krit ist minimumTotal null. Genau eine natürliche 20, eine natürliche 1 und eine nichtkritische Auffangstufe mit minimumTotal null sind erforderlich. Sonst gilt nur die höchste erreichte Schwelle. benefits verwendet die reguläre Belohnungssyntax; bei success:false sind Geld und Gegenstände verboten. attemptLimit:1 erlaubt nur einen Versuch pro Lösungsweg. text ist ausschlie?lich eine immersive Szenenbeschreibung ohne SG, RK, W?rfel, Aktionskosten oder Boni. Alle Regeln ausschlie?lich strukturiert in benefits angeben; Treffer eines Folgeangriffs nicht vorwegnehmen. Ohne outcomeTable gelten die bisherigen drei Ergebnisgruppen.',
+        outcomeTable: 'Optional pro Ansatz: Array mit 3–10 Stufen { id, label, natural, minimumTotal, text, success, benefits }. natural ist 20/1 für Krit oder 0 für Gesamtwert-Schwellen. Bei Krit ist minimumTotal null. Genau eine natürliche 20, eine natürliche 1 und eine nichtkritische Auffangstufe mit minimumTotal null sind erforderlich. Sonst gilt nur die höchste erreichte Schwelle. benefits verwendet die reguläre Belohnungssyntax; bei success:false sind Geld und Gegenstände verboten. attemptLimit:1 erlaubt nur einen Versuch pro Lösungsweg. text ist ausschließlich eine immersive Szenenbeschreibung ohne SG, RK, Würfel, Aktionskosten oder Boni. Alle Regeln ausschließlich strukturiert in benefits angeben; Treffer eines Folgeangriffs nicht vorwegnehmen. Ohne outcomeTable gelten die bisherigen drei Ergebnisgruppen.',
         title: 'Öffentlich, maximal 180 Zeichen.', publicDescription: 'Öffentlich, erforderlich, maximal 4.000 Zeichen.',
         sceneImage: { optional: 'Optionales öffentliches Stimmungsbild; null oder url leer bedeutet ohne Bild. Keine Lösung im Bild oder Begleittext verraten. Keine Bildlinks erfinden; nur vom Nutzer bereitgestellte Bilder verwenden.', url: 'Direkter HTTP(S)-Bildlink oder vorhandener Projektpfad, maximal 2.048 Zeichen. PNG, JPG, WebP, GIF und AVIF je nach Browser. Keine lokalen Laufwerkspfade, Uploads, base64- oder data-URLs.', alt: 'Bildbeschreibung für Screenreader, maximal 240 Zeichen.', caption: 'Optionale öffentliche Bildunterschrift, maximal 500 Zeichen.', format: 'Eine imageFormats.id. original bewahrt die Bildproportionen.', fit: 'Eine imageFits.id. contain zeigt das vollständige Bild; cover schneidet auf das gewählte Format zu. Bei original bleibt das Originalformat erhalten.' },
         approach: { approachId: 'Eindeutig, maximal 40 Zeichen.', label: 'Öffentlich, maximal 160 Zeichen.', preferredSkills: 'Array erlaubter IDs aus skills, attributeChecks oder savingThrows. Nur diese Proben sind erlaubt; alle anderen werden ausgegraut und serverseitig gesperrt. Ohne checkPenalties gilt kein zusätzlicher Malus. attribute:strength ist ein Kraftwurf ohne Übung, save:strength ein Kraft-Rettungswurf mit seiner Rettungswurf-Ausbildung. Die Figur wählt genau eine Probe.', checkPenalties: 'Optional Array { checkId, modifier, reason }. checkId muss in preferredSkills stehen; je ID höchstens ein Eintrag; modifier ganze JSON-Zahl −30 bis 0; reason optional, maximal 240 Zeichen, beim Versuch sichtbar. Eine natürliche 20 bleibt kritisch. Unmögliche Proben stattdessen aus preferredSkills entfernen.', difficulty: 'Ganze Zahl 1–40.', insight: 'Verdeckte Erkenntnis, erforderlich, maximal 2.000 Zeichen.', partialHint: 'Optional, maximal 2.000 Zeichen.', failureConsequence: 'Optional, maximal 2.000 Zeichen.' },
@@ -57,12 +66,14 @@ export function createHerausforderungAiTemplate(registerSnapshot = {}, combatCon
         duration: 'Neue Effekte verlieren im Vergabebeitrag keine Laufzeit. Eigene Beiträge, Szenenbeiträge, Rast und Kampfende nutzen die bestehenden Zustandsuhren.'
       },
       examples: {
+        sceneElements: createSceneElementAiExamples(),
         itemReference: itemTemplates[0] ? { template: itemTemplates[0].template, moduleId: itemTemplates[0].moduleId, sourceRevision: itemTemplates[0].sourceRevision, title: itemTemplates[0].title, quantity: 1 } : null,
         buff: { effectId: 'buff-1', presetId: 'blessed', name: 'Ermutigt', description: '+1 auf Fertigkeitsproben für zwei eigene Beiträge.', kind: 'buff', durationKind: 'actor-comments', durationAmount: 2, mechanics: { skill: 1 } },
         debuff: { effectId: 'debuff-1', presetId: 'disadvantage', name: 'Verunsichert', description: 'Nachteil auf Angriffe und Fertigkeitsproben für einen eigenen Beitrag.', kind: 'debuff', durationKind: 'actor-comments', durationAmount: 1, mechanics: { attackRollMode: 'disadvantage', skillRollMode: 'disadvantage' } }
       }
     },
     catalog: {
+      elementTypes: SCENE_ELEMENT_TYPES,
       combat: { encounterId: combatContext.encounterId || '', participants: combatContext.participants || [] },
       actors: combatContext.actors || combatContext.participants || [],
       combatEffectTypes: CHALLENGE_COMBAT_EFFECT_TYPES.map(([id, label]) => ({ id, label })),
@@ -76,6 +87,46 @@ export function createHerausforderungAiTemplate(registerSnapshot = {}, combatCon
   };
 }
 
+export function createHerausforderungAiStarter(registerSnapshot = {}, context = {}, draft = {}) {
+  const reference = createHerausforderungAiTemplate(registerSnapshot, context);
+  const syntax = reference.instructions.syntax;
+  const current = authoringEvent(draft);
+  const hasDraft = !!current.publicDescription;
+  const ids = new Set([...(context.participantIds || []), ...(context.participants?.map(actor => actor.actorId) || []),
+    ...current.audience.actorIds, current.activation.target.actorId, current.targetActor.actorId].filter(Boolean));
+  const actors = reference.catalog.actors.filter(actor => ids.has(actor.actorId || actor.id));
+  const usedItems = new Set(current.approaches.flatMap(approach => challengeBenefitBundles(approach).flatMap(bundle => bundle.items.map(item => item.template))));
+  return {
+    format: reference.format, version: reference.version, kind: 'ai-starter', guide: reference.guide,
+    scene: reference.scene ? { ...reference.scene, interactionSources: reference.scene.interactionSources?.slice(0, 30),
+      interactionSourcesTotal: reference.scene.interactionSources?.length || 0 } : null,
+    instructions: {
+      task: reference.instructions.task,
+      response: '{ "format": "aleria.herausforderung", "version": 1, "challenge": { ... } }',
+      syntax: {
+        challenge: 'elementType, title (max.180), publicDescription (max.4000), sceneImage (optional), completionMode:any/all, approaches (1–6; narration:[]), activation (optional), audience (optional), targetActor (optional), combatBound (optional). Keine sceneElementId, reaction, encounterId oder Würfelbelege erzeugen.',
+        approach: syntax.approach,
+        activation: syntax.activation,
+        bundles: '{ copper: Zahl in Kupfertalern, items: Registerreferenzen[], effects: Effekte[], combatEffects: direkte Wirkungen[] }. Bei partialEffects/failureEffects nur effects/combatEffects, keine Geld-/Gegenstandsbelohnung.',
+        effect: syntax.effect, combatEffect: syntax.combatEffect,
+        outcomeTable: syntax.outcomeTable,
+        audience: syntax.audience, targetActor: syntax.targetActor, combatBound: syntax.combatBound,
+        itemReference: 'Nur echte catalog.itemTemplates-Referenzen {template,moduleId,sourceRevision,title,quantity} verwenden. Fehlende Referenzen anfordern, nicht erfinden. Neue Waren müssen zuerst im Handelsregister angelegt werden.',
+        advanced: 'Die vollständige KI-Referenz enthält den gesamten geladenen Warenkatalog, alle Effektvorlagen und die genaue Syntax für einmalige Angriffs-/Aktionswirkungen sowie Waffenmanöver. Nur bei Bedarf nachreichen.'
+      }
+    },
+    examples: createSceneElementAiExamples(),
+    catalog: {
+      checks: [...reference.catalog.skills, ...reference.catalog.attributeChecks, ...reference.catalog.savingThrows].map(({ id, label }) => ({ id, label })),
+      actors, combat: reference.catalog.combat,
+      itemTemplates: reference.catalog.itemTemplates.filter(item => usedItems.has(item.template)),
+      durations: reference.catalog.durations, modifierKeys: reference.catalog.modifierKeys, rollModeKeys: reference.catalog.rollModeKeys,
+      contextNote: `Begrenzter Kontext: ${actors.length} relevante Figuren, ${usedItems.size} verwendete Warenreferenzen. Keine vollständigen Bögen, Biografien oder Kommentarverläufe. Nicht aufgeführte IDs bleiben unbekannt.`
+    },
+    challenge: hasDraft ? current : reference.challenge
+  };
+}
+
 export function parseHerausforderungImport(input, registerSnapshot = {}, combatContext = {}) {
   if (typeof input !== 'string' || new TextEncoder().encode(input).length > MAX_HERAUSFORDERUNG_IMPORT_BYTES) throw Error('Die JSON-Datei darf höchstens 2 MB groß sein.');
   const text = input.trim().replace(/^```(?:json)?\s*([\s\S]*?)\s*```$/i, '$1');
@@ -84,8 +135,10 @@ export function parseHerausforderungImport(input, registerSnapshot = {}, combatC
   if (!document || typeof document !== 'object' || Array.isArray(document)) throw Error('Eine Herausforderung muss als JSON-Objekt vorliegen.');
   if (document.format && (document.format !== HERAUSFORDERUNG_EXPORT_FORMAT || document.version !== HERAUSFORDERUNG_EXPORT_VERSION)) throw Error('Dieses Exportformat oder diese Version wird nicht unterstützt.');
   const source = copy(document.challenge || document);
+  delete source.reaction;
+  delete source.sceneElementId;
   for (const field of ['title', 'publicDescription']) if (source[field] != null && typeof source[field] !== 'string') throw Error(`${field} muss ein Text sein.`);
-  if (!Array.isArray(source.approaches) || !source.approaches.length || source.approaches.length > MAX_HERAUSFORDERUNG_APPROACHES) throw Error('Die JSON-Datei braucht ein bis sechs Ansätze unter challenge.approaches.');
+  if (!Array.isArray(source.approaches) || (!source.approaches.length && source.elementType !== 'narration') || source.approaches.length > MAX_HERAUSFORDERUNG_APPROACHES) throw Error('Die JSON-Datei braucht ein bis sechs Ansätze; ein Erzählelement verwendet approaches: [].');
   if (source.combatBound != null && typeof source.combatBound !== 'boolean') throw Error('combatBound muss true oder false sein.');
   delete source.combatContext;
   const targetIds = combatContext.actors || combatContext.participants || [];

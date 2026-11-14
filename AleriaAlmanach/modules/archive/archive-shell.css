@@ -1,4 +1,5 @@
 /* Archive shell only. Shared modal/editor theme tokens remain independent. */
+.archive-toolbar[hidden] { display: none; }
 .almanach-app {
   --almanach-paper: #f5f0e2;
   --almanach-background: #e6d8ba;

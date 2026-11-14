@@ -130,6 +130,7 @@ function openCommentFormForSkillChallenge(challenge, skillId = '') {
     setCommentMode('charakter', { render: false, persist: false });
     const segment = makeCommentSegment(settings.kind, '', null, 'left', SCENE_TIME_DEFAULT_SEGMENT_SECONDS, COMMENT_LANGUAGE_DEFAULT, '', settings);
     const emptyDefault = _commentSegments.length === 1 && !_commentSegments[0].text.trim() && _commentSegments[0].mechanicMode === 'normal';
+    if (settings.actorId && emptyDefault) selectCharForComment(settings.actorId, { render: false, persist: false, preserveSegmentImageSets: true });
     if (emptyDefault) _commentSegments = [segment];
     else _commentSegments.push(segment);
     _commentKind = settings.kind;

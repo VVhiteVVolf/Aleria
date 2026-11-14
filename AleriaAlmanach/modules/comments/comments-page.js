@@ -9,7 +9,7 @@ const COMMENT_ACTION_ICONS = {
   rest: '../IconOrdner/Buttom Icons/Rasten.png',
   encounter: '../IconOrdner/Buttom Icons/Kampfstarter.png',
   poll: 'https://i.imgur.com/jeMqIr7.png',
-  herausforderung: '../IconOrdner/Buttom Icons/Herausforderung.png',
+  herausforderung: './assets/scene-elements/icons/web/challenge-v1.webp',
   fazit: '../IconOrdner/Buttom Icons/Fazit.png'
 };
 
@@ -35,7 +35,7 @@ function buildCommentActionBar(hintText, options = {}) {
     ? `<button class="comments-add-btn comments-action-icon-btn comments-poll-event-btn" type="button" data-scene-poll-action="open-dialog" title="Abstimmung anlegen" aria-label="Abstimmung anlegen">${buildCommentActionIcon('poll')}</button>`
     : '';
   const herausforderungButton = options.allowSceneTime
-    ? `<button class="comments-add-btn comments-action-icon-btn comments-herausforderung-btn" type="button" data-herausforderung-action="open" title="Herausforderung anlegen" aria-label="Herausforderung anlegen">${buildCommentActionIcon('herausforderung')}</button>`
+    ? `<button class="comments-add-btn comments-action-icon-btn comments-herausforderung-btn" type="button" data-herausforderung-action="open" title="Herausforderung, Rätsel, Gefahr oder Erzählelement gestalten" aria-label="Herausforderung gestalten">${buildCommentActionIcon('herausforderung')}</button>`
     : '';
   const moduleInsertButton = options.allowSceneTime
     ? `<button class="comments-add-btn comments-action-icon-btn comments-module-insert-add-btn" type="button" data-action="open-module-insert-form" title="Modul einfuegen" aria-label="Modul einfuegen">${buildCommentActionIcon('module')}</button>`
@@ -110,11 +110,13 @@ function buildSessionPage(page, entry, pageIndex, total) {
     : 'clamp(380px, 36vw, 560px)';
   const threadId = getSessionThreadId(entry.id, getPageCommentThreadKey(page, pageIndex));
   const bubblePreference = window.AleriaCommentBubbles;
+  const imageSettings = page.imageFit || page.imagePosition
+    ? buildModuleImageElementAttrs(page, 'cover', 'center center') : '';
   return `
     ${nav}
     <div class="session-page${focusMode ? ' session-focus-mode' : ''}" data-animated-bubbles="${bubblePreference?.isEnabled() === true}">
       <div class="session-art-col" id="modal-img-col-el" style="width:${imgW};">
-        <img src="${sanitizeImageSrc(page.image || 'https://i.imgur.com/pEuJo6v.png')}" alt="${escapeHtml(entry.title)}" loading="eager" decoding="async" fetchpriority="high">
+        <img src="${sanitizeImageSrc(page.image || 'https://i.imgur.com/pEuJo6v.png')}" alt="${escapeHtml(entry.title)}" loading="eager" decoding="async" fetchpriority="high"${imageSettings}>
         <div class="session-art-overlay"></div>
         <div class="session-art-stamp">${escapeHtml(entry.stamp)}</div>
       </div>
@@ -142,7 +144,10 @@ function buildSessionPage(page, entry, pageIndex, total) {
             </div>
           </div>
           ${buildCommentViewControls()}
-          ${intro}
+          <div class="scene-element-stage-access">
+            ${intro}
+            <div data-scene-elements-dock></div>
+          </div>
         </div>
         <div
           class="comments-scroll"

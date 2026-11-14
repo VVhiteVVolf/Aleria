@@ -97,6 +97,8 @@
 .combat-encounter-card button:disabled { opacity: .55; cursor: wait; }
 .combat-encounter-party li[data-status=surrendered] { opacity: .65; }
 @media (max-width: 760px) {
+  .combat-encounter-event header { grid-template-columns: 2rem minmax(0, 1fr) auto auto; }
+  .combat-encounter-event header strong { grid-column: 1 / -1; grid-row: 2; min-width: 0; text-align: left; overflow-wrap: break-word; word-break: normal; }
   .combat-encounter-list-head { flex-wrap: wrap; }
   .combat-encounter-list-head input { flex-basis: 100%; }
   .combat-encounter-card footer { flex-wrap: wrap; }

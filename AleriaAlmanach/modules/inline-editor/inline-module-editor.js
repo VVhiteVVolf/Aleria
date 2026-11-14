@@ -76,8 +76,8 @@ function syncInlinePageField(input) {
   }
 
   if (field === 'imagePosition') {
-    const position = String(input.value || '').trim();
-    if (['top', 'center', 'bottom', 'left', 'right'].includes(position) && position !== getInlinePageDefaultImagePositionForSync(page)) page.imagePosition = position;
+    const position = sanitizeModulePageImagePosition(input.value);
+    if (position && position !== getInlinePageDefaultImagePositionForSync(page)) page.imagePosition = position;
     else delete page.imagePosition;
     renderPage(currentPage, 0);
     return;

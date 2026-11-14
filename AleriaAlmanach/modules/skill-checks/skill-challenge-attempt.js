@@ -18,5 +18,6 @@ export function getChallengeAttemptSettings(challenge, selectedSkillId = '') {
   const selected = selectedSkillId ? choices.find(skill => skill.id === selectedSkillId) : choices[0];
   if (!selected) return null;
   return { kind: selected.kind, mechanicMode: 'skill', skillId: selected.id,
-    skillTargetActorKey: challenge.authorKey, skillTargetChallengeId: challenge.id, skillDifficulty: challenge.difficulty };
+    skillTargetActorKey: challenge.authorKey, skillTargetChallengeId: challenge.id, skillDifficulty: challenge.difficulty,
+    ...(challenge.reaction ? { actorId: challenge.reaction.actorId, skillSaveContext: challenge.reaction.saveContext } : {}) };
 }

@@ -1,5 +1,32 @@
 # Individuelle Charakterentwicklung
 
+## Balance ohne Karte und geistliche Zustände vom 12. November 2026
+
+Alle 272 bisherigen Einträge erneut geprüft: 46 überarbeitet, 226 beibehalten.
+Kein aktiver Katalogtrait verwendet mehr Meterboni oder Meterabzüge. Je nach
+Motiv wirken Beweglichkeit und eingeschränkte Beinarbeit über Abwehr, Initiative
+oder Körperproben. Flinke Füße gibt +1 RK und +1 Akrobatik für 4 Punkte.
+Stärken dürfen rein positiv und Einschränkungen rein negativ bleiben;
+sachfremde Ausgleichsregeln entfallen. Kleine gleiche Wirkungen in verschiedenen
+Kategorien sind möglich; zur künstlichen Unterscheidung wird kein Malus erfunden.
+[Aktuelle Werte und vollständiger Abgleich](../../docs/combat/TRAIT_BALANCE_2026-11-12.md).
+
+`development-spiritual-traits.js` besitzt Spirituelle Dissonanz I–VI für Kleriker
+und den gemeinsamen Eidbruch-Eintrag für Eiferer, Paladine und Schwurritter.
+Alle sieben besitzen eigene neue Comicicons, kosten 0 und haben ausdrücklich
+keine Mechanik oder Kraftsperren. Der Filter „Geistliche Zustände“ steht in beiden
+Assistenten bereit. Eine manuelle Dissonanzwahl ersetzt die vorige Stufe;
+mehrdeutige Pläne werden auf die höchste reduziert. Buße und Taten ermöglichen
+erzählerisch den Abbau, Rast verändert die Stufe nicht. Noch keine automatische
+Vergabe oder Verlaufsmechanik. Jetzt insgesamt 279 Traits.
+
+Der vorhandene Revisionsabgleich kennt mehrere vollständige historische
+Katalogfassungen, einschließlich `development-trait-revision-20261112.js`.
+Nur exakte frühere Regeln werden normalisiert. Persönliche Beschreibungen,
+Mechaniken und Trigger, Instanzkennungen, Icons und Aktivstatus bleiben erhalten.
+Keine produktive Datenmigration. Originale und vollständige Prompts:
+`diagnostics/trait-balance-spiritual-20261112/`.
+
 ## Allgemeine RPG-Talente und passive Fähigkeiten vom 6. November 2026
 
 Auf Korrekturauftrag ersetzen 15 breite RPG-Talente und 15 allgemein nutzbare

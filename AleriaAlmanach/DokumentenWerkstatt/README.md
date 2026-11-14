@@ -121,3 +121,24 @@ Technische Referenzen: [GitHub-Branch-Update](https://docs.github.com/en/rest/gi
 [html2canvas-Konfiguration](https://html2canvas.hertzen.com/configuration).
 
 Bildherkunft und vollständige Erzeugungsprompts: `assets/parchments/README.md`.
+
+## Inventarbücher und Notizseiten
+
+Buchabschnitte können in der Seitenverwaltung auf die linke oder rechte Buchseite
+gelegt werden. Die Engine fügt dafür nötigenfalls ein leeres Blatt ein; eine Skizze
+kann so allein rechts stehen. Absatzabstand ist getrennt von der Zeilenhöhe einstellbar.
+Diese optionalen Positionsangaben und die markierte Notizseite verwenden Schema 3.
+Ältere Dokumente bleiben kompatibel; ältere Publisher-Clients dürfen ein bereits
+erweitertes Buch nicht ohne seine neuen Metadaten überschreiben.
+
+Ein Item kann die Werkstatt-Dokument-ID als `documentRef` führen. Im besessenen
+Inventarbuch wird die letzte Notizseite über einen authentifizierten Backendaufruf
+an der Besitzinstanz gespeichert und beim erneuten Öffnen geräteübergreifend geladen.
+Besitzer und berechtigte Spielleitung teilen den gespeicherten Stand. Konflikte
+erhalten den Entwurf und zeigen den aktuellen gespeicherten Text zum Vergleich.
+Die Werkstatt stellt diese Seite nur als Vorschau dar.
+
+Ein direkter Leserlink ohne Besitzkontext oder eine eigenständige HTML-Datei speichert
+dagegen ausschließlich persönliche Browsernotizen. Diese Kopie ist kein gemeinsam
+gespeichertes Inventarbuch. Die Zuständigkeiten und Prüfwege stehen in
+`../modules/inventory-documents/README.md`.

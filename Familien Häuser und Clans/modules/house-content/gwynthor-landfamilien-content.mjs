@@ -4,10 +4,11 @@ import { fleischsammlerFamilyLocality } from '../../../Stammbäume/assets/js/dat
 
 // Shared presentation contract for these three related rural-house revisions.
 // Editorial texts stay in each house's own source; people have one roster owner.
-export function createLandfamilienHouseContent(slug, text) {
+export function createLandfamilienHouseContent(slug, text, { additionalPersons = [], sourceRevision = 2, previousDefaultFingerprints = [], contentVersion = '20261107-landfamilien-v1' } = {}) {
   const family = LAND_FAMILIEN_ROSTER.families.find(entry => entry.slug === slug);
   const locality = fleischsammlerFamilyLocality(slug);
   const name = `Familie ${locality.surname}`;
+  const persons = [...family.persons, ...additionalPersons];
   const card = person => ({ id: person.id, familyId: family.familyId, name: person.name,
     role: person.role, image: person.portrait, silhouette: person.sex,
     detail: `${person.birth}${person.death ? `–${person.death}` : ` · ${person.age} Jahre`}`,
@@ -20,8 +21,8 @@ export function createLandfamilienHouseContent(slug, text) {
     territoryId: 'grafschaft-celtigerns-wacht', territoryName: 'Celtigerns Wacht',
     territoryHref: '../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html',
     extinct: false, showMotto: false, registerPage: true, prepared: false,
-    contentVersion: '20261107-landfamilien-v1', biographySourceRevision: 2,
-    biographyPreviousDefaultFingerprints: [LAND_FAMILIEN_PREVIOUS_DEFAULTS[family.familyId].biographyFingerprint],
+    contentVersion, biographySourceRevision: sourceRevision,
+    biographyPreviousDefaultFingerprints: [LAND_FAMILIEN_PREVIOUS_DEFAULTS[family.familyId].biographyFingerprint, ...previousDefaultFingerprints],
     biographyIntroTitle: 'Familie und Lebensgrundlage', biographyHistoryTitle: 'Überlieferung und heutige Generationen',
     biographySummary: { overview: text.overview, history: text.history, character: text.values,
       customs: text.household, holdings: text.holdings, relations: text.relations },
@@ -45,7 +46,7 @@ export function createLandfamilienHouseContent(slug, text) {
       knighthood: text.tradeDescription, succession: text.succession,
       cultureReligion: 'Die Familie gehört zu den Rheunwaith im Gwynthorer Bannkreis. Besondere religiöse Familienbräuche sind nicht überliefert.',
       conflictsAlliances: text.relations, court: text.household,
-      familyTree: text.history, historicalFigures: `${family.persons.length} Angehörige sind namentlich bekannt; davon leben ${family.livingCount}. Die Namen der älteren Gründer und der dazwischenliegenden Generationen sind nicht überliefert.` },
+      familyTree: text.history, historicalFigures: `${persons.length} Angehörige sind namentlich bekannt; davon leben ${family.livingCount}. Die Namen der älteren Gründer und der dazwischenliegenden Generationen sind nicht überliefert.` },
     images: { crest: `../Stammbäume/${locality.emblem}`, scene: `..${leaders[0].portrait}`,
       sceneAlt: `${leaders[0].name} · ${leaders[0].role}`,
       banner: '../Stammbäume/assets/images/regions/celtigerns-wacht.png' },
@@ -56,7 +57,7 @@ export function createLandfamilienHouseContent(slug, text) {
     offices: living.filter(person => !leaders.includes(person) && person.age >= 16).map(card),
     currentHead: leaders.map(person => person.name).join(' und '), firstHeir: '', cadets: [], allies: [],
     figuresTitle: name, figuresMobileLayout: 'stacked',
-    figures: family.persons.map(person => ({ ...card(person), description: `${person.age} Jahre${person.status === 'dead' ? ' bei ihrem Tod' : ''}. ${person.bio}` })),
+    figures: persons.map(person => ({ ...card(person), description: `${person.age} Jahre${person.status === 'dead' ? ' bei ihrem Tod' : ''}. ${person.bio}` })),
     relatedRecords: [{ title: family.placeName, text: locality.description,
       link: `../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=${locality.pinId}`,
       icon: `../Stammbäume/${locality.emblem}` }, ...(text.relatedRecords || []).map(record => ({

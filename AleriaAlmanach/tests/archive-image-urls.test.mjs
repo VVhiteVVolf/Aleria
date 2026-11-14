@@ -5,7 +5,7 @@ import vm from 'node:vm';
 
 const root = new URL('../', import.meta.url);
 const files = ['core/content-safety.js', 'archive/archive-card-meta.js', 'archive/archive-entry-card.js',
-  'archive/archive-hierarchy-browser.js', 'archive/archive-dashboard.js'];
+  'archive/archive-section-icons.js', 'archive/archive-hierarchy-browser.js', 'archive/archive-dashboard.js'];
 const sources = await Promise.all(files.map(file => readFile(new URL('modules/' + file, root), 'utf8')));
 
 function createContext() {
@@ -36,7 +36,7 @@ test('Firebase image query parameters survive every archive preview renderer', (
     const entry = { id, title: 'Interaktive Szene', image: url,
       pages: [{ image: url, sessionPage: true, description: 'Eine ausführliche Ortsbeschreibung für das Archiv und seine täglichen Fundstücke.' }] };
     const section = { tab: 'Kultur', entries: [entry] };
-    const node = { label: 'Szenen', path: ['Szenen'], entries: [entry], children: [], section };
+    const node = { label: 'Szenen', path: ['Szenen'], entries: [entry], children: [], section: { ...section, iconUrl: url } };
     const renderings = [
       context.renderArchiveEntryCard(entry, section),
       context.buildArchiveDashboardSceneCards([section]),

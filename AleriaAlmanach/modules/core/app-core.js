@@ -269,8 +269,8 @@ function sanitizeModulePage(page, fallbackTitle = '') {
   }
   const imageFit = String(page.imageFit || '').trim();
   if (['cover', 'contain'].includes(imageFit)) next.imageFit = imageFit;
-  const imagePosition = String(page.imagePosition || '').trim();
-  if (['top', 'center', 'bottom', 'left', 'right'].includes(imagePosition)) next.imagePosition = imagePosition;
+  const imagePosition = sanitizeModulePageImagePosition(page.imagePosition);
+  if (imagePosition) next.imagePosition = imagePosition;
   if (page.pageTitle != null || fallbackTitle) next.pageTitle = String(page.pageTitle || fallbackTitle || '').trim();
   if (page.description != null) next.description = String(page.description || '').trim();
   if (page.quote != null) next.quote = String(page.quote || '').trim();

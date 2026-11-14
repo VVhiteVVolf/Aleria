@@ -3,12 +3,19 @@ import { mountBookReader } from '../../../../Bestiarium/modules/book-reader/book
 import { sanitizeContent } from '../document-content.js';
 import { paperBackground } from '../paper/paper-generator.js';
 import { ensureDocumentFont } from '../fonts/document-fonts.js';
+import { documentNotesMarkup } from '../notes/document-notes-markup.js';
 
-export function buildWorkshopBook(meta) {
+export function buildWorkshopBook(meta, { notesPreview = false } = {}) {
+  const sections = meta.pages.map((html, index) => {
+    const section = document.createElement('template'); section.innerHTML = sanitizeContent(html);
+    const title = section.content.firstElementChild?.matches('h2, h3') ? section.content.firstElementChild.textContent.trim() : '';
+    return { id: `werkstatt-abschnitt-${index + 1}`, title: title || (index === 0 ? meta.title : `Aufzeichnung ${index + 1}`), html: section.innerHTML, side: meta.bookPageSides?.[index] || 'any' };
+  });
   const topic = {
     title: meta.title, classification: meta.category || 'Aufzeichnungen aus Aleria',
-    book: { author: meta.author, edition: meta.subtitle || 'Abschrift aus der Dokumentenwerkstatt' },
-    sections: meta.pages.map((unused, index) => ({ id: `werkstatt-abschnitt-${index + 1}`, title: `Aufzeichnung ${index + 1}`, blocks: [] }))
+    book: { author: meta.author, edition: meta.subtitle || 'Abschrift aus der Dokumentenwerkstatt',
+      ...(meta.bookBackCover ? { backCoverImage: { src: meta.bookBackCover, alt: `Rückdeckel · ${meta.title}`, width: 1024, height: 1536 } } : {}) },
+    sections: sections.map(({ id, title }) => ({ id, title, blocks: [] }))
   };
   const template = document.createElement('template');
   template.innerHTML = renderBookReader(topic);
@@ -17,19 +24,23 @@ export function buildWorkshopBook(meta) {
   // Mounted explicitly by the workshop. Standalone HTML uses the same reader's auto-mount.
   root.removeAttribute('data-book-reader');
   root.dataset.workshopBook = '';
+  root.dataset.documentId = meta.slug;
   root.style.setProperty('--preview-font', meta.font);
   root.style.setProperty('--preview-size', `${meta.fontSize}px`);
   root.style.setProperty('--doc-line-height', meta.lineHeight);
+  root.style.setProperty('--doc-paragraph-spacing', `${meta.paragraphSpacing ?? 15}px`);
   root.style.setProperty('--doc-letter-spacing', `${meta.letterSpacing}px`);
   root.style.setProperty('--ink', meta.ink);
   const source = root.querySelector('[data-role="source"]');
   source.replaceChildren();
-  meta.pages.forEach((html, pageIndex) => {
+  sections.forEach(({ id, title, html, side }, pageIndex) => {
     const heading = document.createElement('h2');
-    heading.id = `werkstatt-abschnitt-${pageIndex + 1}`; heading.dataset.bookAnchor = heading.id;
-    heading.textContent = pageIndex === 0 ? meta.title : `Aufzeichnung ${pageIndex + 1}`;
+    heading.id = id; heading.dataset.bookAnchor = heading.id;
+    heading.textContent = title;
+    if (side !== 'any') heading.dataset.bookSide = side;
     source.append(heading);
     const section = document.createElement('template'); section.innerHTML = sanitizeContent(html);
+    if (section.content.firstElementChild?.matches('h2, h3')) section.content.firstElementChild.remove();
     [...section.content.childNodes].forEach((node, index) => {
       if (node.nodeType === Node.TEXT_NODE) {
         if (!node.textContent.trim()) return;
@@ -39,6 +50,11 @@ export function buildWorkshopBook(meta) {
       node.dataset.bookAnchor = `${heading.id}-block-${index + 1}`;
       source.append(node);
     });
+    if (meta.notesPage === pageIndex) {
+      const notes = document.createElement('template'); notes.innerHTML = documentNotesMarkup({ preview: notesPreview });
+      notes.content.firstElementChild.dataset.bookAnchor = `${heading.id}-notes`;
+      source.append(notes.content);
+    }
   });
   for (const part of [root, root.querySelector('[data-role="front-cover"]').content, root.querySelector('[data-role="back-cover"]').content]) {
     part.querySelectorAll('.book-cover-imprint').forEach(node => { node.textContent = 'Skriptorium · Aleria'; });

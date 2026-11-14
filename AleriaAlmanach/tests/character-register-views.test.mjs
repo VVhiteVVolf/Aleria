@@ -171,6 +171,8 @@ test('family-derived register views wait for the real resolver and preserve a ch
   context.document.createElement = () => ({ setAttribute() {} });
   const grid = { appendChild: status => statuses.push(status) };
   assert.equal(loads, 0, 'importing view code must not load family records');
+  assert.equal(context.renderCharacterRegisterGenealogyReadiness(grid), false, 'the overview uses explicit profile metadata without loading every tree');
+  context.setCharacterRegisterViewMode('families', { render: false });
   assert.equal(context.renderCharacterRegisterGenealogyReadiness(grid), true);
   assert.match(statuses[0].innerHTML, /werden geladen/);
   await new Promise(done => setImmediate(done));
@@ -193,6 +195,7 @@ test('family loading errors offer retry and do not repaint a closed register', a
   const grid = { appendChild: status => statuses.push(status), contains: () => true };
   context.document.getElementById = () => mounted ? grid : null;
   context.renderCharGrid = () => { repaints++; };
+  context.setCharacterRegisterViewMode('families', { render: false });
   context.renderCharacterRegisterGenealogyReadiness(grid);
   await new Promise(done => setImmediate(done));
   reject(new Error('offline')); await new Promise(done => setImmediate(done));

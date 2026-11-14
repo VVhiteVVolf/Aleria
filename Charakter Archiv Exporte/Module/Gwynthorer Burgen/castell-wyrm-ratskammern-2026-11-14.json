@@ -1,0 +1,90 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-14T12:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Castell Wyrm"
+      ],
+      "description": "Am Südufer des Flusses durch Gwynthor, über eine Zugbrücke erreichbar · Flussburg · Reitkunst und höfische Rittertradition",
+      "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-wyrm.png"
+    },
+    "entry": {
+      "id": "castell-wyrm-ratskammern",
+      "title": "Castell Wyrm – Ratskammern",
+      "subtitle": "Gemeinsamer Ratssaal und Amtskammer",
+      "type": "Interaktive Szene",
+      "category": "Castell Wyrm",
+      "image": "./assets/gwynthor-castles/2026-11-14/wyrm/ratssaal-v1.png",
+      "previewImage": "./assets/gwynthor-castles/2026-11-14/wyrm/ratssaal-v1.png",
+      "symbol": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-wyrm.png",
+      "icon": "",
+      "stamp": "Celtigerns Wacht · Gwynthor · Aleria",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Ratssaal am Fluss",
+          "commentThreadKey": "wyrm-ratssaal",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/wyrm/ratssaal-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Der Ratssaal liegt zum Fluss hin. Um den langen Tisch stehen hohe Eichenstühle; auf der Tischmitte sind eine Gebietskarte und verschnürte Eingaben ausgelegt. Hinter dem Hauptplatz hängt der schwarze Wyrm auf Gold zwischen roten Bahnen.</p><p>Hier berät das Haus über seine Besitzungen, Verpflichtungen und Anliegen. Das Licht des Wassers bewegt sich an der Decke. Ein Durchgang führt zur kleineren Amtskammer, während die schwere Hoftür Geräusche aus dem Saal zurückhält.</p>",
+          "sessionLocation": "Castell Wyrm · Ratssaal am Fluss",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Ratssaal am Fluss",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Amtskammer",
+          "commentThreadKey": "wyrm-amtskammer",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/wyrm/amtskammer-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Die Amtskammer verbindet Schreibstube und kleinen Besprechungsraum. Ein breiter Schreibtisch, zwei Besucherstühle und geordnete Regale geben Briefen, Abrechnungen und Auskünften ihren Platz. An der Fensterseite steht ein Tisch für das gemeinsame Durchsehen von Unterlagen.</p><p>Rote Sitzpolster und goldgesäumte Vorhänge nehmen die Hausfarben auf; das schwarze Wyrmzeichen hängt über dem Aktenschrank. Die Tür zum Ratssaal liegt in Griffweite.</p>",
+          "sessionLocation": "Castell Wyrm · Amtskammer",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Amtskammer",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

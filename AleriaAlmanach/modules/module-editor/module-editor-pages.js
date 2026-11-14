@@ -46,8 +46,7 @@ function normalizeModulePageImageFit(value, fallback = 'cover') {
 }
 
 function normalizeModulePageImagePosition(value, fallback = 'top') {
-  const position = String(value || '').trim();
-  return ['top', 'center', 'bottom', 'left', 'right'].includes(position) ? position : fallback;
+  return sanitizeModulePageImagePosition(value) || fallback;
 }
 
 function buildModuleImageFitOptions(selected, fallback = 'cover') {
@@ -60,6 +59,7 @@ function buildModuleImageFitOptions(selected, fallback = 'cover') {
 function buildModuleImagePositionOptions(selected, fallback = 'top') {
   const value = normalizeModulePageImagePosition(selected, fallback);
   return `
+    ${value.startsWith('center ') ? `<option value="${escapeHtml(value)}" selected>Vertikal ${escapeHtml(value.slice(7))}</option>` : ''}
     <option value="top"${value === 'top' ? ' selected' : ''}>Oben zentriert</option>
     <option value="center"${value === 'center' ? ' selected' : ''}>Mittig</option>
     <option value="bottom"${value === 'bottom' ? ' selected' : ''}>Unten zentriert</option>

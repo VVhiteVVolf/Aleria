@@ -1,0 +1,102 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-12T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gwynthor-Stadt",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "description": "Bespielbare Orte in Gwynthor-Stadt."
+    },
+    "entry": {
+      "id": "gwynthor-osttor",
+      "title": "Gwynthor Osttor",
+      "subtitle": "Torbrücke, kleiner Vorort und Brunnenplatz am Gestüt",
+      "type": "Interaktive Szene",
+      "category": "Gwynthor-Stadt · Schauplätze",
+      "icon": "❧",
+      "stamp": "GWYNTHOR · OSTTOR",
+      "image": "./public/assets/gwynthor-stadtorte/osttor-torbruecke-v2.webp",
+      "previewImage": "./public/assets/gwynthor-stadtorte/osttor-torbruecke-v2.webp",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": false,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Osttor · An der Torbrücke",
+          "commentThreadKey": "gwynthor-osttor-torbruecke",
+          "image": "./public/assets/gwynthor-stadtorte/osttor-torbruecke-v2.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 75%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Vor dem Osttor führt die steinerne Brücke an die geschlossenen Torflügel. Davor stehen Cochllamwyr in ihren roten Mänteln und bewachen den Zugang. Hinter der hohen Mauer steigen die Dächer Gwynthors auf; unter der Brüstung zieht das Wasser vorbei.</p><p>Am Brückenrand lässt sich das Gepäck absetzen. Wer Einlass sucht oder jemanden erwartet, kann hier warten und die Stadtwachen ansprechen. Zwischen dem leisen Wasser und den massigen Tortürmen beginnt die Begegnung vor den geschlossenen Toren.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Osttor · An der Torbrücke",
+          "sessionHint": "Vor dem geschlossenen Osttor warten oder die Cochllamwyr ansprechen.",
+          "sessionEmptyTitle": "Vor den geschlossenen Torflügeln",
+          "sessionEmptyText": "Die Cochllamwyr bewachen den Zugang zur Stadt.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Vor dem Osttor · Der kleine Vorort",
+          "commentThreadKey": "gwynthor-osttor-vorort",
+          "image": "./public/assets/gwynthor-stadtorte/osttor-vorort-v2.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 75%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Noch außerhalb der Stadtmauer säumen niedrige Häuser und kleine Höfe die Zufahrt zum Osttor. Zwischen einem hölzernen Vordach und einer Hauswand bleibt ein breiter Streifen Weg frei. Über den Dächern des kleinen Vororts stehen die Tortürme; dahinter beginnt die viel größere Stadt.</p><p>Jemand zieht einen Wagen unter das Vordach, während Reisende ihre Bündel ordnen. Das Osttor bleibt geschlossen; Cochllamwyr stehen davor Wache. Hier kann eine Reisegesellschaft zusammenfinden oder auf Nachricht vom Tor warten. Das Stimmengewirr der Stadt kommt nur als fernes Rauschen herüber.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Vor dem Osttor · Der kleine Vorort",
+          "sessionHint": "Eine Begegnung im kleinen Vorort außerhalb der östlichen Stadtmauer.",
+          "sessionEmptyTitle": "Noch vor den Mauern",
+          "sessionEmptyText": "Die Zufahrt führt zwischen den niedrigen Häusern zur Torbrücke.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hinter dem Osttor · Brunnenplatz am Gestüt",
+          "commentThreadKey": "gwynthor-osttor-brunnenplatz",
+          "image": "./public/assets/gwynthor-stadtorte/osttor-brunnenplatz-v2.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 65%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Innerhalb der Mauern weitet sich die Straße nahe dem Osttor zu einem Brunnenplatz. Am steinernen Becken stehen Eimer; daneben führt ein offenes Hoftor zu Stallungen und dem nahen Gestüt. Ein Pferd wird zur Tränke geführt. Zwischen den höheren Stadthäusern laufen Gassen tiefer nach Gwynthor hinein.</p><p>Am Brunnen lässt sich Wasser holen, Gepäck neu ordnen oder auf eine Begleitung warten. Vom Hof sind Hufschritte zu hören. Die Torflügel im Hintergrund sind geschlossen; davor halten Cochllamwyr Wache. Der Platz lässt Raum für ein Gespräch nahe dem bewachten Zugang.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Hinter dem Osttor · Brunnenplatz am Gestüt",
+          "sessionHint": "Eine Rast am Brunnen oder eine Begegnung vor dem Gestüt.",
+          "sessionEmptyTitle": "Wasser und Hufschritte",
+          "sessionEmptyText": "Am Brunnen bleibt ein freies Stück Rand zum Warten.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

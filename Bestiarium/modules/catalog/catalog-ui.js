@@ -1,4 +1,4 @@
-import { BESTIARY_CHAPTERS, BESTIARY_ENTRIES, BESTIARY_FILTERS } from './catalog-data.js?v=20260912-infernal-corrections-v2';
+import { BESTIARY_CHAPTERS, BESTIARY_ENTRIES, BESTIARY_FILTERS } from './catalog-data.js?v=20261114-urgren';
 import { filterEntries } from './catalog-model.js?v=20260912-infernal-corrections-v2';
 import { createEntryLink } from '../entry-preview/entry-link.js?v=20260907-bestiarium-v1';
 

@@ -7,9 +7,9 @@ import { blobDataUrl, canvasBlob, downloadBlob } from './export/document-downloa
 import { readBookPosition } from './book/workshop-book.js';
 
 const CONTROLS = {
-  lineHeight: 'doc-line-height', letterSpacing: 'doc-letter-spacing', padding: 'doc-padding', ink: 'doc-ink',
+  lineHeight: 'doc-line-height', paragraphSpacing: 'doc-paragraph-spacing', letterSpacing: 'doc-letter-spacing', padding: 'doc-padding', ink: 'doc-ink',
   paperColor: 'doc-paper-color', paperEdge: 'doc-paper-edge', paperAge: 'doc-paper-age', paperSeed: 'doc-paper-seed',
-  translation: 'doc-translation', category: 'doc-category'
+  translation: 'doc-translation', category: 'doc-category', bookBackCover: 'doc-book-back-cover'
 };
 
 export function createEnhancements(root, { getMeta, refresh, setStatus }) {
@@ -60,6 +60,7 @@ export function createEnhancements(root, { getMeta, refresh, setStatus }) {
     if (!button) return;
     try {
       switch (button.dataset.enhanceAction) {
+        case 'clear-book-back-cover': controls.bookBackCover.value = ''; refresh(); break;
         case 'paper-color': controls.paperColor.value = button.dataset.color; field('doc-background').value = 'generated'; refresh(); break;
         case 'generate-paper': controls.paperSeed.value = String(1 + crypto.getRandomValues(new Uint32Array(1))[0] % 999999); field('doc-background').value = 'generated'; refresh(); setStatus('Neues Pergament erzeugt. Die Variante bleibt im Dokument gespeichert.'); break;
         case 'download-paper': downloadBlob('aleria-pergament.png', await canvasBlob(createPaperCanvas(getMeta(), 2048, 3072))); setStatus('Pergament als PNG mit 2048 × 3072 Pixeln exportiert.'); break;
@@ -91,7 +92,7 @@ export function createEnhancements(root, { getMeta, refresh, setStatus }) {
     getMeta: () => ({ ...Object.fromEntries(Object.entries(controls).map(([key, control]) => [key, control.value])), customFont }),
     setMeta: input => {
       const meta = normalizeDocument(input); customFont = meta.customFont;
-      for (const [key, control] of Object.entries(controls)) control.value = meta[key];
+      for (const [key, control] of Object.entries(controls)) control.value = meta[key] ?? (key === 'paragraphSpacing' ? 15 : '');
       field('custom-font-name').textContent = customFont?.name || 'WOFF2, WOFF, TTF oder OTF · bis 1,4 MB';
     },
     render: meta => {

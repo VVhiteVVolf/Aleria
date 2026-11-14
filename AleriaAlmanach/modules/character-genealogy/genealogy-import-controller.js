@@ -16,10 +16,14 @@ import {
 } from './genealogy-import-catalog.js?v=20260903-character-register-v2';
 
 const DIALOG_ID = 'genealogy-import-overlay';
-const RESULT_PAGE_SIZE = 80;
+const RESULT_PAGE_SIZE = 40;
 const state = {
   families: [],
   activeFamily: null,
+  allFamilies: false,
+  familySearch: '',
+  mobilePreview: false,
+  resultOffset: 0,
   candidatesByFamily: new Map(),
   characterSnapshot: [],
   matchResolver: null,
@@ -75,6 +79,7 @@ function ensureDialog() {
   overlay.innerHTML = `
     <div class="genealogy-import-card">
       <header class="genealogy-import-header">
+        <img class="genealogy-import-brand" src="../IconOrdner/ReiterIcons/Charakterregister/genealogy-v1.webp" alt="" width="44" height="44">
         <div>
           <div class="genealogy-import-kicker">Stammbaum-Verbindung</div>
           <h2 id="genealogy-import-title">Charaktere aus Stammbäumen anlegen</h2>
@@ -84,6 +89,7 @@ function ensureDialog() {
       <div class="genealogy-import-toolbar">
         <label>
           <span>Stammbaum</span>
+          <input type="search" data-character-genealogy-role="family-search" placeholder="Haus oder Region eingrenzen …" aria-label="Stammbäume eingrenzen">
           <select data-character-genealogy-role="family-select"></select>
         </label>
         <label>
@@ -161,7 +167,7 @@ function getVisibleCandidates() {
 }
 
 function getRenderedCandidates() {
-  return getVisibleCandidates().slice(0, state.resultLimit);
+  return getVisibleCandidates().slice(state.resultOffset, state.resultOffset + RESULT_PAGE_SIZE);
 }
 
 function matchLabel(match) {
@@ -178,8 +184,12 @@ function formatLife(candidate) {
 
 function renderFamilyOptions() {
   const select = getDialogRole('family-select');
-  const allOption = `<option value=""${state.activeFamily ? '' : ' selected'}>Alle Stammbäume (${state.families.length})</option>`;
-  select.innerHTML = allOption + state.families.map(record => {
+  const allOption = `<option value=""${!state.activeFamily && !state.allFamilies ? ' selected' : ''}>Stammbaum wählen …</option>
+    <option value="__all__"${state.allFamilies ? ' selected' : ''}>Alle ${state.families.length} Stammbäume durchsuchen</option>`;
+  const words = state.familySearch.toLocaleLowerCase('de').trim().split(/\s+/).filter(Boolean);
+  const families = state.families.filter(record => record.id === state.activeFamily?.id || words.every(word =>
+    [...(record.folderPath || []), record.title || record.id].join(' ').toLocaleLowerCase('de').includes(word)));
+  select.innerHTML = allOption + families.map(record => {
     const path = [...(record.folderPath || []), record.title || record.id].join(' > ');
     return `<option value="${escapeMarkup(record.id)}"${record.id === state.activeFamily?.id ? ' selected' : ''}>${escapeMarkup(path)}</option>`;
   }).join('');
@@ -198,7 +208,7 @@ function pruneCandidateSelection() {
 function renderBatchToolbar(candidates) {
   const selectable = candidates.filter(candidate => !matchFor(candidate));
   const selectedCount = state.selectedCandidateKeys.size;
-  return `
+  return `<details class="genealogy-import-selection"${selectedCount ? ' open' : ''}><summary>Mehrere übernehmen · ${selectedCount} ausgewählt</summary>
     <div class="genealogy-import-batch-toolbar">
       <div>
         <strong>${selectedCount} ausgewählt</strong>
@@ -209,7 +219,7 @@ function renderBatchToolbar(candidates) {
         <button type="button" data-character-genealogy-action="clear-selection"${selectedCount && !state.batchSaving ? '' : ' disabled'}>Auswahl leeren</button>
         <button type="button" class="genealogy-import-primary" data-character-genealogy-action="import-selected"${selectedCount && !state.batchSaving ? '' : ' disabled'}>${state.batchSaving ? 'Übernahme läuft…' : `${selectedCount} gesammelt anlegen`}</button>
       </div>
-    </div>`;
+    </div></details>`;
 }
 
 function renderPersonList() {
@@ -218,13 +228,21 @@ function renderPersonList() {
     list.innerHTML = '<div class="genealogy-import-empty">Stammbaumdaten werden geladen…</div>';
     return;
   }
+  if (!state.activeFamily && !state.allFamilies && !state.error) {
+    list.innerHTML = `<div class="genealogy-import-empty genealogy-import-start">
+      <img src="../IconOrdner/ReiterIcons/Charakterregister/genealogy-v1.webp" alt="" width="64" height="64">
+      <strong>Zuerst einen Stammbaum wählen</strong><p>Grenze oben Haus oder Region ein. Nur die Personen des gewählten Stammbaums werden vorbereitet.</p>
+      <button type="button" data-character-genealogy-action="search-all">Alle Stammbäume durchsuchen</button></div>`;
+    return;
+  }
   if (state.error) {
     list.innerHTML = `<div class="genealogy-import-empty is-error">${escapeMarkup(state.error)}</div>`;
     return;
   }
   pruneCandidateSelection();
   const visible = getVisibleCandidates();
-  const candidates = visible.slice(0, state.resultLimit);
+  state.resultOffset = Math.min(state.resultOffset, Math.max(0, Math.ceil(visible.length / RESULT_PAGE_SIZE) - 1) * RESULT_PAGE_SIZE);
+  const candidates = visible.slice(state.resultOffset, state.resultOffset + RESULT_PAGE_SIZE);
   const rows = candidates.map(candidate => {
     const key = getGenealogyCandidateKey(candidate);
     const match = matchFor(candidate);
@@ -256,9 +274,9 @@ function renderPersonList() {
         </button>
       </div>`;
   }).join('');
-  const more = visible.length > candidates.length
-    ? `<button type="button" class="genealogy-import-more" data-character-genealogy-action="show-more">Weitere ${Math.min(RESULT_PAGE_SIZE, visible.length - candidates.length)} anzeigen</button>`
-    : '';
+  const more = `<nav class="genealogy-import-pages" aria-label="Personen-Ergebnisseiten">
+    ${state.resultOffset ? '<button type="button" data-character-genealogy-action="previous-page">← Zurück</button>' : ''}
+    ${state.resultOffset + RESULT_PAGE_SIZE < visible.length ? '<button type="button" data-character-genealogy-action="show-more">Weitere 40 →</button>' : ''}</nav>`;
   list.innerHTML = renderBatchToolbar(candidates) + (rows || '<div class="genealogy-import-empty">Keine passende Person gefunden.</div>') + more;
 }
 
@@ -311,12 +329,13 @@ function renderPreview() {
     ? `<div><dt>Stammbäume</dt><dd>${escapeMarkup(candidate.membershipTitles.join(' · '))}</dd></div>`
     : '';
   preview.innerHTML = `
+    <button type="button" class="genealogy-preview-back" data-character-genealogy-action="back-to-list">← Zur Personenliste</button>
     <div class="genealogy-preview-portrait">${portrait
       ? `<img src="${escapeMarkup(portrait)}" alt="Portrait von ${escapeMarkup(candidate.displayName)}">`
       : `<span>${escapeMarkup(candidate.displayName.slice(0, 1) || '?')}</span>`}</div>
     <div class="genealogy-preview-heading">
       <div class="genealogy-match-badge ${label.className}">${escapeMarkup(label.text)}</div>
-      <h3>${escapeMarkup(candidate.displayName)}</h3>
+      <h3 tabindex="-1">${escapeMarkup(candidate.displayName)}</h3>
       <p>${escapeMarkup(candidate.title || candidate.houseName || candidate.familyTitle)}</p>
     </div>
     <dl class="genealogy-preview-data">
@@ -341,15 +360,16 @@ function renderStatus() {
     return;
   }
   const visibleCount = getVisibleCandidates().length;
-  const shownCount = Math.min(visibleCount, state.resultLimit);
+  const shownCount = Math.min(visibleCount, state.resultOffset + RESULT_PAGE_SIZE);
   const scope = state.activeFamily ? state.activeFamily.title : `${state.families.length} Stammbäume`;
-  const parts = [`${shownCount} von ${visibleCount} Treffern`, scope];
+  const parts = [`${visibleCount ? state.resultOffset + 1 : 0}–${shownCount} von ${visibleCount} Treffern`, scope];
   if (state.syncing) parts.push('veröffentlichte Fassung wird abgeglichen…');
   if (state.batchSaving) parts.push('Sammelübernahme läuft…');
   status.textContent = parts.join(' · ');
 }
 
 function render() {
+  ensureDialog().querySelector('.genealogy-import-card').dataset.mobilePane = state.mobilePreview ? 'preview' : 'list';
   renderFamilyOptions();
   renderPersonList();
   renderPreview();
@@ -366,11 +386,11 @@ function ensureVisibleSelection() {
 function rebuildCandidates() {
   if (state.activeFamily) {
     state.candidates = state.candidatesByFamily.get(state.activeFamily.id) || [];
-  } else {
+  } else if (state.allFamilies) {
     state.candidates = deduplicateGenealogyCandidates(
       Array.from(state.candidatesByFamily.values()).flat()
     );
-  }
+  } else state.candidates = [];
   ensureVisibleSelection();
 }
 
@@ -438,16 +458,23 @@ function refreshSelectedCandidateFamily() {
   });
 }
 
-function selectFamily(familyId) {
+async function selectFamily(familyId) {
   const token = ++state.loadToken;
   state.error = '';
   state.selectedCandidateKeys = new Set();
   state.selectedCandidateKey = '';
   state.resultLimit = RESULT_PAGE_SIZE;
+  state.resultOffset = 0;
+  state.mobilePreview = false;
+  state.allFamilies = familyId === '__all__';
   state.syncing = state.pendingPublishedFamilyIds.size > 0;
 
-  if (!familyId) {
+  if (!familyId || state.allFamilies) {
     state.activeFamily = null;
+    if (state.allFamilies) {
+      state.loading = true; render();
+      if (!await initializeProjectCandidates(token)) return;
+    }
     state.loading = false;
     rebuildCandidates();
     render();
@@ -505,6 +532,8 @@ export async function openImportDialog() {
   ensureDialog();
   state.characterSnapshot = [];
   state.candidates = []; state.candidatesByFamily = new Map(); state.activeFamily = null;
+  state.allFamilies = false; state.familySearch = ''; state.resultOffset = 0;
+  state.mobilePreview = false;
   state.matchResolver = null;
   state.matchCache.clear();
   state.loading = false;
@@ -518,11 +547,12 @@ export async function openImportDialog() {
   state.selectedCandidateKeys = new Set();
   state.batchSaving = false;
   getDialogRole('search').value = '';
+  getDialogRole('family-search').value = '';
   getDialogRole('match-filter').value = 'available';
   getDialogRole('show-dead').checked = false;
   getDialogRole('show-unknown').checked = false;
   if (typeof window.activateDialog === 'function') {
-    window.activateDialog(DIALOG_ID, { initialFocus: '[data-character-genealogy-role="search"]' });
+    window.activateDialog(DIALOG_ID, { initialFocus: '[data-character-genealogy-role="family-search"]' });
   } else {
     ensureDialog().classList.add('active');
     ensureDialog().setAttribute('aria-hidden', 'false');
@@ -536,12 +566,12 @@ export async function openImportDialog() {
   state.loading = true;
   render();
   try {
-    await Promise.all([waitForDialogPaint(), typeof window.loadSceneActorData === 'function'
-      ? window.loadSceneActorData() : window.AleriaCharacters?.reload?.()]);
+    await Promise.all([waitForDialogPaint(), window.AleriaCharacters?.ensureDirectory
+      ? window.AleriaCharacters.ensureDirectory()
+      : typeof window.loadSceneActorData === 'function' ? window.loadSceneActorData() : window.AleriaCharacters?.reload?.()]);
     if (token !== state.loadToken) return;
-    state.characterSnapshot = getCharacters();
+    state.characterSnapshot = window.AleriaCharacters?.getRegisterRecords?.() || getCharacters();
     rebuildCharacterMatchResolver();
-    if (!await initializeProjectCandidates(token)) return;
   } catch (error) {
     if (token !== state.loadToken) return;
     state.loading = false; state.error = error.message || 'Die vorhandenen Figuren konnten nicht geprüft werden. Bitte erneut öffnen.';
@@ -554,10 +584,6 @@ export async function openImportDialog() {
   void refreshGenealogyRegistry(state.families).then(merged => {
     if (!merged || registryToken !== state.loadToken) return;
     state.families = merged;
-    merged.forEach(record => {
-      if (!record.family || state.candidatesByFamily.has(record.id)) return;
-      state.candidatesByFamily.set(record.id, createFamilyCandidates(record));
-    });
     renderFamilyOptions();
   });
 }
@@ -570,7 +596,17 @@ function closeImportDialog() {
     ensureDialog().classList.remove('active');
     ensureDialog().setAttribute('aria-hidden', 'true');
   }
+  if (document.activeElement?.closest?.(`#${DIALOG_ID}`)) {
+    document.querySelector('#char-grid [data-character-genealogy-action="open-import"]')?.focus({ preventScroll: true });
+  }
 }
+
+document.addEventListener('keydown', event => {
+  if (event.key !== 'Escape' || !document.getElementById(DIALOG_ID)?.classList.contains('active')) return;
+  if (typeof window.getTopActiveDialog === 'function' && window.getTopActiveDialog()?.id !== DIALOG_ID) return;
+  event.preventDefault(); event.stopImmediatePropagation();
+  closeImportDialog();
+}, true);
 
 function publishSavedCharacter(id, data) {
   const savedId = String(id || '');
@@ -650,13 +686,21 @@ async function importSelectedCandidates() {
 
 async function handleAction(trigger) {
   const action = trigger.dataset.characterGenealogyAction;
+  if (action === 'search-all') { await selectFamily('__all__'); return; }
+  if (action === 'back-to-list') {
+    state.mobilePreview = false; render();
+    getDialogRole('person-list').querySelector('.genealogy-person-row.active .genealogy-person-select')?.focus({ preventScroll: true });
+    return;
+  }
   if (action === 'close') {
     closeImportDialog();
     return;
   }
   if (action === 'select-person') {
     state.selectedCandidateKey = trigger.dataset.candidateKey || '';
+    state.mobilePreview = true;
     render();
+    getDialogRole('preview').querySelector('h3')?.focus({ preventScroll: true });
     refreshSelectedCandidateFamily();
     return;
   }
@@ -672,9 +716,18 @@ async function handleAction(trigger) {
     return;
   }
   if (action === 'show-more') {
-    state.resultLimit += RESULT_PAGE_SIZE;
+    state.resultOffset += RESULT_PAGE_SIZE;
     renderPersonList();
     renderStatus();
+    getDialogRole('person-list').scrollTop = 0;
+    getDialogRole('person-list').querySelector('.genealogy-person-select')?.focus({ preventScroll: true });
+    return;
+  }
+  if (action === 'previous-page') {
+    state.resultOffset = Math.max(0, state.resultOffset - RESULT_PAGE_SIZE);
+    renderPersonList(); renderStatus();
+    getDialogRole('person-list').scrollTop = 0;
+    getDialogRole('person-list').querySelector('.genealogy-person-select')?.focus({ preventScroll: true });
     return;
   }
   if (action === 'import-selected') {
@@ -687,7 +740,9 @@ async function handleAction(trigger) {
     return;
   }
   if (action === 'link-existing' || action === 'attach-source') {
-    const existing = getCharacters().find(character => String(character.id || '') === trigger.dataset.characterId);
+    const existing = window.AleriaCharacters?.ensureRecord
+      ? await window.AleriaCharacters.ensureRecord(trigger.dataset.characterId)
+      : getCharacters().find(character => String(character.id || '') === trigger.dataset.characterId);
     if (!existing) throw new Error('Das bestehende Almanachprofil wurde nicht gefunden.');
     await saveCurrentCandidate({ existing });
     return;
@@ -712,9 +767,15 @@ document.addEventListener('click', event => {
 });
 
 document.addEventListener('input', event => {
+  if (event.target.matches?.('[data-character-genealogy-role="family-search"]')) {
+    state.familySearch = event.target.value || '';
+    renderFamilyOptions();
+    return;
+  }
   if (!event.target.matches?.('[data-character-genealogy-role="search"]')) return;
   state.search = event.target.value || '';
   state.resultLimit = RESULT_PAGE_SIZE;
+  state.resultOffset = 0;
   ensureVisibleSelection();
   renderPersonList();
   renderPreview();
@@ -730,6 +791,7 @@ document.addEventListener('change', event => {
   if (event.target.matches?.('[data-character-genealogy-role="match-filter"]')) {
     state.matchFilter = event.target.value || 'available';
     state.resultLimit = RESULT_PAGE_SIZE;
+    state.resultOffset = 0;
     ensureVisibleSelection();
     render();
     return;
@@ -748,6 +810,7 @@ document.addEventListener('change', event => {
   if (isDeadToggle) state.showDead = event.target.checked;
   if (isUnknownToggle) state.showUnknown = event.target.checked;
   state.resultLimit = RESULT_PAGE_SIZE;
+  state.resultOffset = 0;
   ensureVisibleSelection();
   render();
 });

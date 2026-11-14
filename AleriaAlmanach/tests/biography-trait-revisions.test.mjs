@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { DEVELOPMENT_TRAITS } from '../modules/character-development/development-traits.js';
 import { PREVIOUS_DEVELOPMENT_TRAITS } from '../modules/character-development/development-trait-revision-source.js';
+import { PREVIOUS_MAPLESS_DEVELOPMENT_TRAITS } from '../modules/character-development/development-trait-revision-20261112.js';
 import { DEVELOPMENT_TRAIT_BIOGRAPHY_REVISIONS, reviseDevelopmentTraitBiographyCards, reviseDevelopmentTraitBiography } from '../modules/character-development/development-trait-biography-revisions.js';
 import '../modules/biography/biography-card-rendering.js';
 import '../../js/biography/public-biographies.generated.js';
@@ -11,6 +12,22 @@ const oldCuriosity = PREVIOUS_DEVELOPMENT_TRAITS.find(trait => trait.id === 'dev
 const curiosity = DEVELOPMENT_TRAITS.find(trait => trait.id === oldCuriosity.id);
 const oldCard = () => ({ title: oldCuriosity.name, detail: oldCuriosity.description, icon: oldCuriosity.icon });
 const catalog = globalThis.AleriaBiographyCatalog;
+
+test('mapless catalog cards project through the classic biography runtime while every prose field stays exact', () => {
+  for (const previous of PREVIOUS_MAPLESS_DEVELOPMENT_TRAITS) {
+    const current = DEVELOPMENT_TRAITS.find(entry => entry.id === previous.id);
+    const card = { title: previous.name, detail: previous.description, icon: previous.icon };
+    const stored = { biography: { abilities: [card], biographyText: '<p>Vollständige Originalbiografie.</p>',
+      historyText: '<p>Unveränderte Geschichte.</p>', extraSections: [{ title: 'Eigenes', text: 'Erhalten.' }] } };
+    const before = structuredClone(stored);
+    const revised = catalog.resolve(stored, { characterId: 'local-personal-fixture' });
+    assert.equal(revised.biography.abilities[0].detail, current.description, previous.name);
+    assert.deepEqual({ ...revised.biography, abilities: [] }, { ...stored.biography, abilities: [] });
+    assert.deepEqual(stored, before);
+    const personal = { ...stored, biography: { ...stored.biography, abilities: [{ ...card, detail: `${card.detail} Persönliche Absprache.` }] } };
+    assert.equal(catalog.resolve(personal, { characterId: 'local-personal-fixture' }), personal);
+  }
+});
 
 test('exact old trait biography cards receive the current description through a pure revision', () => {
   const cards = [oldCard()], before = structuredClone(cards);

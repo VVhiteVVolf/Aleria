@@ -1,0 +1,90 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-14T12:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Castell Saethwyr"
+      ],
+      "description": "Unmittelbar am Hafen Gwynthors, mit eigenem Burghafen · Hafenburg · Seefahrt, Werften und Küstenschutz",
+      "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png"
+    },
+    "entry": {
+      "id": "castell-saethwyr-ratskammern",
+      "title": "Castell Saethwyr – Ratskammern",
+      "subtitle": "Gemeinsamer Ratssaal und Amtskammer",
+      "type": "Interaktive Szene",
+      "category": "Castell Saethwyr",
+      "image": "./assets/gwynthor-castles/2026-11-14/saethwyr/ratssaal-v1.png",
+      "previewImage": "./assets/gwynthor-castles/2026-11-14/saethwyr/ratssaal-v1.png",
+      "symbol": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+      "icon": "",
+      "stamp": "Celtigerns Wacht · Gwynthor · Aleria",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Ratssaal am Hafen",
+          "commentThreadKey": "saethwyr-ratssaal",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/saethwyr/ratssaal-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Ein langer Tisch steht quer vor den Fenstern zum Hafen. Auf ihm liegen eine Küstenkarte, hölzerne Schiffsmodelle und verschnürte Schriftrollen. Die gelb-schwarzen Behänge zeigen den Drachen über Wellen; vom geöffneten Fenster kommt Salzluft herein.</p><p>Hier können Angelegenheiten des Hauses, der Küstenorte und der eigenen Schiffe beraten werden. Der Blick geht zu Kais und Masten, ohne dass aus diesem Hausrat eine neue Hafenbehörde wird. Eine Tür verbindet den Saal mit der Amtskammer.</p>",
+          "sessionLocation": "Castell Saethwyr · Ratssaal am Hafen",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Ratssaal am Hafen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Amtskammer und Kartenstube",
+          "commentThreadKey": "saethwyr-amtskammer",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/saethwyr/amtskammer-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>An der Wand der Amtskammer hängen eingerollte Karten und schmale Regalbretter mit gebundenen Büchern. Ein Schreibtisch, zwei Besucherstühle und ein kleiner Kartentisch reichen für Schriftverkehr, Abrechnungen und kurze Besprechungen.</p><p>Ein beschlagenes Kästchen verwahrt Siegel und Bänder. Im Licht des Hafenfensters liegen Schiffslisten und Briefe bereit, deren Inhalt erst eine konkrete Szene bestimmt. Der Ratssaal liegt gleich nebenan.</p>",
+          "sessionLocation": "Castell Saethwyr · Amtskammer und Kartenstube",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Amtskammer und Kartenstube",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

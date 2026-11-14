@@ -1,5 +1,6 @@
 import { createFamilyPerson, createMarriage, createParentages } from '../family-record-builders.js';
 import { createGwynthorRuralFamily } from './family-foundation.js';
+import { RURAL_HOUSEHOLD_EXTENSIONS } from './rural-household-extensions.js';
 import { fleischsammlerFamilyLocality } from './localities.mjs';
 import { IESTYN_BRAGWEN, RHIAIN_EIDDFER, BREWERY_MARRIAGE } from './brewery-kinship.js';
 
@@ -10,7 +11,7 @@ const children = [IESTYN_BRAGWEN.id, 'catrin-bragwen'];
 const other = fleischsammlerFamilyLocality('eiddfer');
 
 export const BRAGWEN_FAMILY = createGwynthorRuralFamily({
-  slug: 'bragwen', householdMarriageId: marriage.id, focusPersonId: parents[0],
+  slug: 'bragwen', householdMarriageId: marriage.id, focusPersonId: parents[0], continuation: RURAL_HOUSEHOLD_EXTENSIONS.bragwen,
   description: 'Rheunwaith-Brauerfamilie am gemeinsam mit den Eiddfer geführten Brauerhof. Die verschwägerten Betreiber arbeiten mit der Teyrngarch Brauerzunft zusammen und beliefern Gwynthor.',
   people: [
     createFamilyPerson({ id: parents[0], name: 'Owain Bragwen', sex: 'male', birth: '1690', houseId,
@@ -19,11 +20,11 @@ export const BRAGWEN_FAMILY = createGwynthorRuralFamily({
       title: 'Brauerin und Vorratsverwalterin', notes: '47 Jahre. Mutter Iestyns und Catrins; Herkunftsfamilie noch nicht festgelegt.' }),
     IESTYN_BRAGWEN, { ...RHIAIN_EIDDFER, familyRole: 'married' },
     createFamilyPerson({ id: 'catrin-bragwen', name: 'Catrin Bragwen', sex: 'female', birth: '1720', death: '1740', houseId,
-      title: 'Verstorbene Tochter', notes: '20 Jahre. Kam eines Tages nicht nach Hause und gehört zu den Opfern des Fleischsammlers. Keine bestimmte Reise, Tätigkeit, Fundstelle oder Täterbeobachtung ergänzen.' }),
+      title: 'Verstorbene Tochter', notes: '20 Jahre. Kam eines Tages nicht nach Hause und gehört zu den Opfern des Fleischsammlers. Fundbefunde stehen im Ermittlungsbuch Meredydd Gwyllachs. Keine eigene Täterbeobachtung ist gesichert.' }),
     createFamilyPerson({ id: 'nerys-bragwen', name: 'Nerys Bragwen', sex: 'female', birth: '1738', houseId,
       title: 'Kind auf dem Brauerhof', notes: '2 Jahre. Tochter Iestyns und Rhiains; nur in der Bragwen-Akte fortgeführt.' })
   ],
-  partnerships: [marriage, BREWERY_MARRIAGE],
+  partnerships: [marriage, { ...BREWERY_MARRIAGE, extensions: { ...BREWERY_MARRIAGE.extensions, chartAlignParentPairOverChildPersonId: 'nerys-bragwen' } }],
   parentages: [...createParentages(children, parents, marriage.id), ...createParentages(['nerys-bragwen'], BREWERY_MARRIAGE.participantIds, BREWERY_MARRIAGE.id)],
   extraHouses: [{ id: 'house-eiddfer', name: 'Familie Eiddfer', emblem: other.emblem, status: 'active' }],
   biographyText: '<p>Der Brauerhof Bragwen &amp; Eiddfer wird von zwei Familien gemeinsam betrieben. Die Ehe Iestyn Bragwens mit Rhiain Eiddfer hat ihre Haushalte auch verwandtschaftlich verbunden. Der Hof arbeitet mit der Teyrngarch Brauerzunft zusammen und versorgt Gwynthor mit Bier aus deren Produktion.</p>',

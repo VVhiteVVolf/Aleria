@@ -62,7 +62,7 @@
   grid-template-rows: auto auto minmax(0, 1fr) auto;
   overflow: hidden;
   border: 2px solid var(--gold);
-  background: var(--parchment-dark);
+  background: #fbfaf4;
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.72);
 }
 
@@ -77,8 +77,8 @@
 .genealogy-import-header {
   padding: 1rem 1.15rem;
   border-bottom: 1px solid rgba(212, 180, 100, 0.48);
-  background: var(--ink);
-  color: var(--gold-light);
+  background: #493544;
+  color: #fff7e9;
 }
 
 .genealogy-import-header h2 {
@@ -87,11 +87,18 @@
   font-size: 1rem;
   letter-spacing: 0.08em;
 }
+.genealogy-import-brand { flex: 0 0 auto; object-fit: contain; }
+.genealogy-import-header > div { flex: 1; }
+.genealogy-import-start { display: grid; justify-items: center; gap: .7rem; align-content: start; }
+.genealogy-import-start strong { color: #714660; font: 600 1.1rem 'EB Garamond', serif; }
+.genealogy-import-start p { max-width: 28rem; font: .96rem/1.5 'EB Garamond', serif; margin: 0; }
+.genealogy-import-start button, .genealogy-import-pages button { min-height: 2.75rem; padding: .5rem .8rem; border: 1px solid #a6889f; color: #714660; background: #f6eff2; font: .9rem 'EB Garamond', serif; cursor: pointer; }
+.genealogy-import-pages { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; }
 
 .genealogy-import-kicker {
   color: var(--gold);
   font-family: 'Cinzel', serif;
-  font-size: 0.52rem;
+  font-size: 0.7rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -110,7 +117,7 @@
   gap: 0.8rem;
   padding: 0.8rem 1rem;
   border-bottom: 1px solid rgba(139, 105, 20, 0.25);
-  background: rgba(255, 255, 255, 0.18);
+  background: #f1eaf0;
 }
 
 .genealogy-import-filters {
@@ -118,7 +125,7 @@
   gap: 0.28rem;
   color: var(--ink-faded);
   font-family: 'Cinzel', serif;
-  font-size: 0.52rem;
+  font-size: 0.7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -157,9 +164,8 @@
   gap: 0.28rem;
   color: var(--ink-faded);
   font-family: 'Cinzel', serif;
-  font-size: 0.52rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
 }
 
 .genealogy-import-toolbar select,
@@ -170,7 +176,7 @@
   border: 1px solid rgba(139, 105, 20, 0.34);
   background: rgba(255, 252, 238, 0.68);
   color: var(--ink);
-  font: inherit;
+  font: .95rem 'EB Garamond', serif;
   letter-spacing: 0.02em;
   text-transform: none;
 }
@@ -196,7 +202,7 @@
 }
 
 .genealogy-import-batch-toolbar {
-  position: sticky;
+  position: relative;
   z-index: 3;
   top: -0.85rem;
   display: flex;
@@ -205,9 +211,13 @@
   gap: 0.65rem;
   padding: 0.65rem;
   border: 1px solid rgba(139, 105, 20, 0.34);
-  background: color-mix(in srgb, var(--parchment-dark) 92%, white 8%);
+  background: #f1eaf0;
   box-shadow: 0 6px 16px rgba(66, 43, 14, 0.12);
 }
+.genealogy-import-selection { position: sticky; top: -.85rem; z-index: 3; background: #f1eaf0; border: 1px solid #c5b1bf; }
+.genealogy-import-selection > summary { min-height: 2.75rem; padding: .75rem; color: #714660; font: .9rem 'EB Garamond', serif; cursor: pointer; }
+.genealogy-import-selection .genealogy-import-batch-toolbar { top: 0; border: 0; }
+.genealogy-preview-back { display: none; grid-column: 1 / -1; min-height: 2.75rem; border: 1px solid #ac8ea3; border-radius: 3px; color: #714660; background: #f1eaf0; font: .9rem 'EB Garamond', serif; cursor: pointer; }
 
 .genealogy-import-batch-toolbar > div:first-child {
   min-width: 0;
@@ -225,7 +235,7 @@
 
 .genealogy-import-batch-toolbar span {
   color: var(--ink-faded);
-  font-size: 0.62rem;
+  font-size: 0.8rem;
 }
 
 .genealogy-import-batch-actions {
@@ -237,13 +247,13 @@
 
 .genealogy-import-batch-actions button,
 .genealogy-import-more {
-  min-height: 1.85rem;
+  min-height: 2.75rem;
   padding: 0.35rem 0.52rem;
   border: 1px solid rgba(139, 105, 20, 0.35);
   background: rgba(255, 255, 255, 0.25);
   color: var(--ink-faded);
   font-family: 'Cinzel', serif;
-  font-size: 0.48rem;
+  font-size: 0.7rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   cursor: pointer;
@@ -358,7 +368,7 @@
 .genealogy-person-main strong {
   overflow: hidden;
   font-family: 'Cinzel', serif;
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -366,7 +376,7 @@
 .genealogy-person-main small {
   overflow: hidden;
   color: var(--ink-faded);
-  font-size: 0.66rem;
+  font-size: 0.8rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -384,7 +394,7 @@
   border: 1px solid currentColor;
   color: #6f5318;
   font-family: 'Cinzel', serif;
-  font-size: 0.46rem;
+  font-size: 0.65rem;
   letter-spacing: 0.05em;
   line-height: 1.3;
   text-align: center;
@@ -539,16 +549,25 @@
   }
 
   .genealogy-import-body {
-    overflow-y: auto;
+    display: block;
+    overflow: hidden;
   }
+  .genealogy-import-toolbar { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .55rem; padding: .65rem; }
+  .genealogy-import-toolbar > label:first-child, .genealogy-import-filters { grid-column: 1 / -1; }
+  .genealogy-import-header { padding: .65rem; gap: .6rem; }
+  .genealogy-import-header h2 { font-size: .84rem; letter-spacing: .02em; }
+  .genealogy-import-toolbar input, .genealogy-import-toolbar select { font-size: .76rem; }
+  .genealogy-import-footer { flex-wrap: wrap; gap: .3rem; padding: .5rem .65rem; }
+  .genealogy-import-filters { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
 
   .genealogy-import-list,
   .genealogy-import-preview {
-    overflow: visible;
+    height: 100%;
+    overflow-y: auto;
   }
 
   .genealogy-import-list {
-    max-height: 42dvh;
+    max-height: none;
     overflow-y: auto;
     border-right: 0;
     border-bottom: 1px solid rgba(139, 105, 20, 0.25);
@@ -579,4 +598,7 @@
   .genealogy-import-batch-actions {
     justify-content: flex-start;
   }
+  .genealogy-preview-back { display: block; }
+  .genealogy-import-card[data-mobile-pane="list"] .genealogy-import-preview,
+  .genealogy-import-card[data-mobile-pane="preview"] .genealogy-import-list { display: none; }
 }

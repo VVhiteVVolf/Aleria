@@ -16,6 +16,25 @@ const albicTerritoryInputs = ['Stammbäume/assets/js/modules/albic-territories/'
 // and family-chart geometry checks remain in site-build-tasks.mjs.
 export const WORLD_CONTENT_TASKS = [
   {
+    id: 'urgren-glannadeor', label: 'Urgren, Madrúach, Glannadeor lament and Gwynthor theatre production',
+    inputs: ['shared/urgren/', 'Bestiarium/modules/urgren/', 'Bestiarium/modules/predator-profile/',
+      'Bestiarium/modules/catalog/catalog-data.js', 'Bestiarium/scripts/build-urgren-content.mjs',
+      'Bestiarium/scripts/build-predator-profiles.mjs', 'Bestiarium/tiere/raubtiere/baeren/',
+      'Bestiarium/assets/predators/urgren/', 'Bestiarium/assets/predator-sources.json',
+      'Bestiarium/tests/urgren.test.mjs', 'Bestiarium/tests/predator-profiles.test.mjs',
+      'AleriaAlmanach/modules/gwynthor-theater/', 'AleriaAlmanach/assets/gwynthor-theater/',
+      'AleriaAlmanach/scripts/build-gwynthor-theater.mjs', 'AleriaAlmanach/tests/gwynthor-theater.test.mjs',
+      'AleriaAlmanach/modules/creatures/catalog/bestiary-profile-index.js',
+      'Charakter Archiv Exporte/Module/Gwynthorer Theater/'],
+    commands: [['Bestiarium/scripts/build-urgren-content.mjs', '--check'],
+      ['Bestiarium/scripts/build-predator-profiles.mjs', '--check', '--group=baeren'],
+      ['AleriaAlmanach/scripts/build-gwynthor-theater.mjs', '--check'],
+      ['AleriaAlmanach/scripts/build-creature-bestiary-index.mjs', '--check'],
+      ['--test', '--experimental-test-isolation=none', 'Bestiarium/tests/urgren.test.mjs',
+        'Bestiarium/tests/predator-profiles.test.mjs', 'Bestiarium/tests/catalog.test.mjs',
+        'AleriaAlmanach/tests/gwynthor-theater.test.mjs', 'AleriaAlmanach/tests/creature-bestiary.test.mjs']]
+  },
+  {
     id: 'rianna-lefraye-biographies', label: 'Rianna and Lefraye biographies, companions and Farnschritt breeding',
     inputs: ['AleriaAlmanach/modules/gwynthor-seven/', 'AleriaAlmanach/assets/biographies/rianna-lefraye/',
       'AleriaAlmanach/scripts/build-gwynthor-seven.mjs', 'AleriaAlmanach/tests/rianna-lefraye-biographies.test.mjs',
@@ -168,7 +187,7 @@ export const WORLD_CONTENT_TASKS = [
     id: 'uathneach-preview', label: 'Isolated regional proposals and complete preview assets',
     inputs: ['Vorschau/'],
     commands: [tests('Vorschau/tests'),tests('Vorschau/Solestia/tests'),tests('Vorschau/Phalantia/tests'),
-      tests('Vorschau/Klythesia/scripts'), tests('Vorschau/Mathringen/tests'), tests('Vorschau/Kemetara/tests'),
+      tests('Vorschau/Mathringen/tests'),
       tests('Vorschau/Calidaria/tests'),tests('Vorschau/Sylvarant/tests'),
       ['--test','--experimental-test-isolation=none','Vorschau/Adharath/tests/adharath.test.mjs'],
       ['--test','--experimental-test-isolation=none',
@@ -177,7 +196,6 @@ export const WORLD_CONTENT_TASKS = [
         'netlify/tests/calidaria-source-publication.test.mjs',
         'netlify/tests/sylvarant-source-publication.test.mjs',
         'netlify/tests/solestia-source-publication.test.mjs',
-        'netlify/tests/phalantia-source-publication.test.mjs',
-        'netlify/tests/klythesia-source-publication.test.mjs']]
+        'netlify/tests/phalantia-source-publication.test.mjs']]
   }
 ];

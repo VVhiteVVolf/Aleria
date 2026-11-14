@@ -7,7 +7,14 @@ function setCharacterSubgroupFromSelect(selectEl, charId) {
   assignCharToSubtab(charId, parentTab, selectEl.value || 'Alle');
 }
 
-function toggleCharacterOrganizeMode() {
+async function toggleCharacterOrganizeMode() {
+  if (!_charOrganizeMode && !_charactersLoaded) {
+    const source = document.getElementById('char-grid');
+    try { await loadCharacters(); }
+    catch (error) { showAppStatus(error.message || 'Die Figuren konnten nicht für die Verwaltung geladen werden.', 'error'); return; }
+    if (_charOrganizeMode) return; // A second click shared the same pending read.
+    if (source !== document.getElementById('char-grid')) return;
+  }
   _charOrganizeMode = !_charOrganizeMode;
   if (typeof AleriaCharacterCategoryBrowser !== 'undefined') AleriaCharacterCategoryBrowser.reset();
   if (_charOrganizeMode && typeof setCharacterRegisterViewMode === 'function') {
@@ -76,18 +83,20 @@ function restoreHiddenBuiltinCharacters() {
 }
 
 function getCharsForActiveTab() {
+  const records = typeof AleriaCharacterDirectory !== 'undefined' ? AleriaCharacterDirectory.getRecords() : getAllCharacterRecords();
+  const byId = new Map(records.map(record => [String(record.id), record]));
   if (_activeCharTab === CHARACTER_ARCHIVE_TAB) {
-    return getAllCharacterRecords().filter(char => char.archived);
+    return records.filter(char => char.archived);
   }
   if (_activeCharTab === 'Alle') {
-    return getVisibleCharacterRecords();
+    return records.filter(char => !char.archived && char.mergeIdentity?.status !== 'merged');
   }
   if (_activeCharSubtab && _activeCharSubtab !== 'Alle') {
     const ids = ((_charSubtabMap[_activeCharTab] || {})[_activeCharSubtab] || []);
-    return ids.map(id => getCharacterById(id)).filter(char => char && !char.archived);
+    return ids.map(id => byId.get(String(id))).filter(char => char && !char.archived);
   }
   const ids = _charTabMap[_activeCharTab] || [];
-  return ids.map(id => getCharacterById(id)).filter(char => char && !char.archived);
+  return ids.map(id => byId.get(String(id))).filter(char => char && !char.archived);
 }
 
 function getCharacterGroupLabel(char) {
@@ -180,6 +189,18 @@ function createCharacterCard(c, options = {}) {
   card.dataset.characterGridAction = 'open-character';
   card.setAttribute('tabindex', '0');
   card.setAttribute('aria-label', `${c.name || 'Charakter'} öffnen`);
+  if (options.compact && !showGroupSelect) {
+    const status = getCharacterStatusValue(c.status);
+    card.classList.add('char-card-compact');
+    card.innerHTML = `<span class="char-compact-portrait">${portraitSrc
+      ? `<img src="${portraitSrc}" alt="" width="56" height="64" loading="lazy" decoding="async">`
+      : AleriaCharacterRegisterIcons.render('categories')}</span>
+      <span class="char-compact-copy"><strong>${safeName}</strong>
+        <span>${escapeHtml(c.role || c.title || groupLabel)}</span>
+        <small>${escapeHtml(c.currentLocation || groupLabel)}</small></span>
+      ${status ? `<span class="char-compact-status" data-status="${status}">${escapeHtml(getCharacterStatusLabel(status))}</span>` : ''}`;
+    return card;
+  }
   card.innerHTML = `
     ${showBulkSelect ? `
       <label class="char-card-bulk-select" title="Für Massenaktion auswählen" data-character-grid-action="toggle-bulk-character" data-char-id="${escapeHtml(c.id)}">
@@ -308,17 +329,19 @@ function renderCharGrid() {
   const actions = document.createElement('div');
   actions.className = 'char-archive-actions';
   actions.innerHTML = `
-    <button type="button" class="${_charOrganizeMode ? 'active' : ''}" data-character-grid-action="toggle-organize">${_charOrganizeMode ? 'Ordnen beenden' : 'Mehrere einordnen'}</button>
+    <button type="button" class="char-genealogy-import-action" data-character-genealogy-action="open-import">${AleriaCharacterRegisterIcons.render('families')}<span>Aus Stammbaum übernehmen</span></button>
+    <button type="button" data-character-grid-action="open-new-character">${AleriaCharacterRegisterIcons.render('new')}<span>Neue Figur</span></button>
+    <button type="button" class="${_charOrganizeMode ? 'active' : ''}" data-character-grid-action="toggle-organize">${AleriaCharacterRegisterIcons.render('collections')}<span>${_charOrganizeMode ? 'Ordnen beenden' : 'Mehrere einordnen'}</span></button>
     <details class="char-register-management"><summary>Import & Export</summary><div>
     <button type="button" data-character-grid-action="export-archive">Charakterarchiv exportieren</button>
     <button type="button" data-character-grid-action="open-import-file">Charaktere importieren</button>
-    <button type="button" class="char-genealogy-import-action" data-character-genealogy-action="open-import">Aus Stammbaum übernehmen</button>
     </div></details>`;
   grid.appendChild(actions);
 
   if (typeof renderCharacterRegisterViewToolbar === 'function') {
     renderCharacterRegisterViewToolbar(grid);
   }
+  if (typeof AleriaCharacterDirectory !== 'undefined') AleriaCharacterDirectory.renderStatus(grid);
   if (typeof renderCharacterRegisterGenealogyReadiness === 'function'
     && renderCharacterRegisterGenealogyReadiness(grid)) return;
 
@@ -349,7 +372,8 @@ function renderCharGrid() {
   const unfilteredChars = typeof filterCharacterRegisterEntries === 'function'
     ? filterCharacterRegisterEntries(archiveFilteredChars)
     : archiveFilteredChars;
-  if (typeof renderCharacterDashboard === 'function') renderCharacterDashboard(grid, getVisibleCharacterRecords());
+  if (typeof renderCharacterDashboard === 'function') renderCharacterDashboard(grid,
+    typeof AleriaCharacterDirectory !== 'undefined' ? AleriaCharacterDirectory.getVisible() : getVisibleCharacterRecords());
   const filteredChars = typeof filterCharactersForDashboard === 'function'
     ? filterCharactersForDashboard(unfilteredChars, _activeCharTab)
     : unfilteredChars;
@@ -447,15 +471,6 @@ function renderCharGrid() {
     _archiveCharMatchCount = chars.length + (_activeCharTab === 'Alle' && narratorMatches ? 1 : 0);
     _archiveSectionMatchCount = _archiveEntrySectionMatchCount + (hasMatches ? 1 : 0);
   }
-
-  const addCard = document.createElement('div');
-  addCard.className = 'char-add-card';
-  addCard.setAttribute('role', 'button');
-  addCard.setAttribute('tabindex', '0');
-  addCard.setAttribute('aria-label', 'Charakter anlegen');
-  addCard.dataset.characterGridAction = 'open-new-character';
-  addCard.innerHTML = `<div class="char-add-icon">+</div><div class="char-add-label">Charakter anlegen</div>`;
-  grid.appendChild(addCard);
 
   switchTab(_activeTab);
 }

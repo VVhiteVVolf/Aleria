@@ -11,6 +11,7 @@ export function materializeInventoryItem(item = {}, definitions) {
   const definition = resolveItemDefinition(item, definitions);
   if (!definition) return item;
   return { ...item, combatDefinition: structuredClone(definition.combatDefinition),
+    ...(definition.documentRef ? { documentRef: structuredClone(definition.documentRef) } : {}),
     ...(definition.category === 'waffen' && definition.weight != null && (item.weight == null || item.weight === '')
       ? { weight: String(definition.weight) } : {}),
     passiveEffects: structuredClone(definition.passiveEffects || []),

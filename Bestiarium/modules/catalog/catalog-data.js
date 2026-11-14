@@ -21,7 +21,7 @@ export const BESTIARY_CHAPTERS = [
     description: 'Die Tiere Alerias stammen aus natürlichen Ursprüngen – teils gezähmt, teils wild. Ein Verzeichnis der Geschöpfe, die Wälder, Weiden, Himmel und Gewässer mit uns teilen.',
     groups: [{ id: 'tiergruppen', title: 'Die natürlichen Arten', entries: [
       entry('pferde', 'Pferde', 'Reitkunst und 32 Rassenlinien, geordnet nach Kontinent, Land und jeweiligem Urpferd.', '', './tiere/pferde/index.html'),
-      entry('raubtiere', 'Raubtiere', 'Raubkatzen, Wölfe und Bären: Jagdweisen, Lebensräume und Spuren der großen Landjäger.', '', './tiere/raubtiere/index.html'),
+      entry('raubtiere', 'Raubtiere', 'Raubkatzen, Wölfe, Warge und Bären; dazu Urgren mit Madrúach: Jagdweisen, Lebensräume und die Sage von Glannadeor.', '', './tiere/raubtiere/index.html'),
       entry('flugwesen', 'Flugwesen', 'Gefiederte Bewohner der Lüfte, hohen Wälder und Klippen samt ihren Wanderwegen.', '', './tiere/flugwesen/index.html'),
       entry('wild', 'Wild', 'Scheue und wehrhafte Bewohner von Wald, Steppe und Gebirge, gegliedert nach Größe und Lebensweise.', '', './tiere/wild/index.html'),
       entry('meerestiere', 'Meerestiere', 'Lebensgemeinschaften der Küsten, Riffe, offenen See und verborgenen Tiefen.', '', './tiere/meerestiere/index.html'),

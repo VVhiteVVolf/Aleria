@@ -1,5 +1,6 @@
 import { createFamilyPerson, createMarriage, createParentages, createMarriedAwayBranch } from '../family-record-builders.js';
 import { createGwynthorRuralFamily } from './family-foundation.js';
+import { RURAL_HOUSEHOLD_EXTENSIONS } from './rural-household-extensions.js';
 import { fleischsammlerFamilyLocality } from './localities.mjs';
 import { IESTYN_BRAGWEN, RHIAIN_EIDDFER, BREWERY_MARRIAGE } from './brewery-kinship.js';
 
@@ -10,7 +11,7 @@ const children = [RHIAIN_EIDDFER.id, 'tegid-eiddfer'];
 const other = fleischsammlerFamilyLocality('bragwen');
 
 export const EIDDFER_FAMILY = createGwynthorRuralFamily({
-  slug: 'eiddfer', householdMarriageId: marriage.id, focusPersonId: parents[0],
+  slug: 'eiddfer', householdMarriageId: marriage.id, focusPersonId: parents[0], continuation: RURAL_HOUSEHOLD_EXTENSIONS.eiddfer,
   description: 'Rheunwaith-Brauerfamilie, die gemeinsam mit den verschwägerten Bragwen den Brauerhof bei Gwynthor betreibt. Partner der Teyrngarch Brauerzunft.',
   people: [
     createFamilyPerson({ id: parents[0], name: 'Cadell Eiddfer', sex: 'male', birth: '1691', houseId,
@@ -25,9 +26,9 @@ export const EIDDFER_FAMILY = createGwynthorRuralFamily({
   extraHouses: [{ id: 'house-bragwen', name: 'Familie Bragwen', emblem: other.emblem, status: 'active' }],
   cadetBranches: [createMarriedAwayBranch({ id: 'married-rhiain-eiddfer-bragwen', name: 'Rhiain · Familie Bragwen',
     parentPartnershipId: BREWERY_MARRIAGE.id, houseId: 'house-bragwen', targetFamilyId: other.familyId,
-    emblem: other.emblem, crestFrame: 'iron', notes: 'Dieselbe Ehe und dieselben Personen wie bei Bragwen. Nerys und weitere Nachkommen werden ausschließlich dort fortgeführt.' })],
+    emblem: other.emblem, crestFrame: 'iron', extensions: { chartAlignBelowPartnership: true }, notes: 'Dieselbe Ehe und dieselben Personen wie bei Bragwen. Nerys und weitere Nachkommen werden ausschließlich dort fortgeführt.' })],
   biographyText: '<p>Die Eiddfer betreiben den Brauerhof gemeinsam mit Familie Bragwen. Beide Familien teilen Arbeit und Lieferungen und sind durch Rhiains Ehe mit Iestyn Bragwen verschwägert. Ihre Kooperation mit der Teyrngarch Brauerzunft dient der Versorgung Gwynthors mit Bier.</p>',
-  historyText: '<p>Cadell und Ffion arbeiten mit ihrem Sohn Tegid und der jüngeren, mit den Bragwen verbundenen Generation. Der Tod Catrin Bragwens belastet auch diesen Haushalt. Durch die gemeinsame Arbeit und die Ehe ihrer Kinder sind die beiden Familien eng miteinander verbunden.</p>',
+  historyText: '<p>Cadell und Ffion haben ihre dreiundzwanzigjährige Tochter Morwen an den Fleischsammler verloren. Ihr Sohn Tegid und der Arbeitszweig um Cadells Bruder Gwyndor helfen, die Brauarbeit weiterzuführen. Rhiain ist mit Iestyn Bragwen verheiratet. Damit trifft auch Catrin Bragwens Tod den verschwägerten Haushalt; Morwen und Catrin bleiben zwei verschiedene Opfer.</p>',
   works: ['Gemeinsame Produktion und Hofarbeit mit Familie Bragwen.', 'Vorbereitung und Weiterleitung der Lieferungen nach Gwynthor.', 'Kooperation mit der Teyrngarch Brauerzunft.'],
   connections: [{ name: 'Familie Bragwen', detail: 'Verschwägerte Mitbetreiber desselben Brauerhofes.' },
     { name: 'Teyrngarch Brauerzunft', detail: 'Kooperationspartner des Brauerhofes.' }]

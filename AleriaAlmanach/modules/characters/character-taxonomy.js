@@ -63,7 +63,7 @@ function buildCharacterGroupTaxonomyTree() {
     const parts = splitCharacterTaxonomyPath(tab);
     const labels = parts.length ? parts : [tab];
     const count = (_charTabMap[tab] || []).filter(id => {
-      const char = getCharacterById(id);
+      const char = typeof AleriaCharacterDirectory !== 'undefined' ? AleriaCharacterDirectory.getById(id) : getCharacterById(id);
       return char && (_showArchivedCharacters || !char.archived);
     }).length;
     let children = root;
@@ -156,7 +156,7 @@ function appendCharacterTaxonomyNodes(parent, nodes, depth = 0) {
       node.subtabs.forEach(subtab => {
         const ids = ((_charSubtabMap[node.tab] || {})[subtab] || []);
         const count = ids.filter(id => {
-          const char = getCharacterById(id);
+          const char = typeof AleriaCharacterDirectory !== 'undefined' ? AleriaCharacterDirectory.getById(id) : getCharacterById(id);
           return char && (_showArchivedCharacters || !char.archived);
         }).length;
         const subtabButton = document.createElement('button');
@@ -185,7 +185,7 @@ function createCharacterTaxonomyNavigator() {
   tools.className = 'char-taxonomy-tools';
   tools.appendChild(createCharacterTabButton('Alle'));
 
-  const unsortedCount = getVisibleCharacterRecords()
+  const unsortedCount = (typeof AleriaCharacterDirectory !== 'undefined' ? AleriaCharacterDirectory.getVisible() : getVisibleCharacterRecords())
     .filter(char => !characterHasGroup(char)).length;
   const unsorted = document.createElement('button');
   unsorted.className = 'char-subtab-btn' + (_characterDashboardFilter === 'missing-group' ? ' active' : '');

@@ -1,0 +1,4 @@
+export function documentNotesMarkup({ preview = false } = {}) {
+  if (preview) return '<section class="document-notes"><label>Ermittlungsnotizen<textarea disabled aria-label="Vorschau der Notizseite"></textarea></label><p>Die Notizseite wird beim Öffnen des Inventarbuchs bearbeitet und gespeichert.</p></section>';
+  return `<section class="document-notes" data-role="document-notes"><label>Eigene Ermittlungsnotizen<textarea data-role="document-notes-text" maxlength="10000" aria-label="Notizen im Buch" spellcheck="true"></textarea></label><div class="document-notes-actions"><button type="button" data-notes-action="save">Notizen speichern</button><button type="button" data-notes-action="reload">Neu laden</button></div><p data-role="document-notes-status" role="status">Notizen werden geladen …</p><details data-role="document-notes-current" hidden><summary>Gespeicherten Stand ansehen</summary><pre data-role="document-notes-saved"></pre></details></section>`;
+}

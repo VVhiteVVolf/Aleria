@@ -10,6 +10,7 @@ import { reviewDevelopmentTraitBalance } from './development-balance-review.js';
 import { getCharacterClassIds } from './character-training-state.js';
 import { getDevelopmentTraitId, getDevelopmentTechniqueId } from './development-entry-reference.js';
 import { getRetiredDevelopmentTrait, getOwnedRetiredDevelopmentTraits } from './development-retired-traits.js';
+import { normalizeSpiritualTraitSelection } from './development-spiritual-traits.js';
 
 let catalog;
 export function getDevelopmentAttackCatalog() {
@@ -69,7 +70,7 @@ export function applyDevelopmentChoices(profile, plan) {
     known.add(entry.technique.id);
     changes.push({ key: `purchase-${entry.technique.id}`, label: `Attackenkauf · ${entry.className}`, before: '—', after: `${entry.technique.name} (${cost} Punkte)` });
   }
-  const selected = new Set(plan.traitIds || []);
+  const selected = new Set(normalizeSpiritualTraitSelection(plan.traitIds || []));
   const managed = new Set(DEVELOPMENT_TRAITS.map(t => t.id));
   const ownedRetired = new Set(getOwnedRetiredDevelopmentTraits(profile).map(trait=>trait.id));
   for(const id of selected)if(!managed.has(id)&&!ownedRetired.has(id))errors.push(`Unbekannter Trait: ${id}`);

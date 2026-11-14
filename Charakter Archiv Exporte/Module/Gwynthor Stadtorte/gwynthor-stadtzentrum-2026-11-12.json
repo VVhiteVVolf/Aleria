@@ -1,0 +1,102 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-12T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gwynthor-Stadt",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "description": "Bespielbare Orte in Gwynthor-Stadt."
+    },
+    "entry": {
+      "id": "gwynthor-stadtzentrum",
+      "title": "Gwynthor Stadtzentrum",
+      "subtitle": "Die Plaza am großen Park, grüne Wege und der Kathedralbrunnen",
+      "type": "Interaktive Szene",
+      "category": "Gwynthor-Stadt · Schauplätze",
+      "icon": "❧",
+      "stamp": "GWYNTHOR · STADTZENTRUM",
+      "image": "./public/assets/gwynthor-stadtorte/zentrum-park-v2.webp",
+      "previewImage": "./public/assets/gwynthor-stadtorte/zentrum-park-v2.webp",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": false,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Plaza · Am großen Stadtpark",
+          "commentThreadKey": "gwynthor-zentrum-plaza",
+          "image": "./public/assets/gwynthor-stadtorte/zentrum-plaza-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 75%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Eine weite gepflasterte Plaza bildet den offenen Übergang zum großen Stadtpark. Hohe Stadthäuser rahmen den Platz; zwischen ihren Fassaden laufen Straßen weiter ins Zentrum. An der Parkseite stehen Bänke unter den ersten Bäumen. Über den Dächern sind die Türme der Großen Kathedrale der Neun zu erkennen.</p><p>Die freie Mitte bleibt den Menschen, die den Platz kreuzen. Am Rand warten Spaziergänger und stellen ihre Körbe ab. Wer ein gut sichtbares Treffen im Herzen Gwynthors sucht, kann hier zwischen Stadtwegen und Parkeingang zusammenkommen.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Die Plaza · Am großen Stadtpark",
+          "sessionHint": "Ein Treffen auf der offenen Plaza am großen Stadtpark.",
+          "sessionEmptyTitle": "Wo Stadtwege zusammenlaufen",
+          "sessionEmptyText": "Unter den ersten Parkbäumen stehen die Bänke im Schatten.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Der große Stadtpark · Unter den Baumkronen",
+          "commentThreadKey": "gwynthor-zentrum-park",
+          "image": "./public/assets/gwynthor-stadtorte/zentrum-park-v2.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 75%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Breite Wege führen unter den Baumkronen durch den großen Park im Stadtzentrum. Zwischen den Stämmen liegen offene Rasenflächen; auf einer Bank ist noch Platz. Durch Lücken im Grün bleiben die höheren Dächer Gwynthors sichtbar. Das Rauschen der Blätter mischt sich mit dem fernen Klang der Straßen.</p><p>Spaziergänger lassen einander auf dem Weg Raum. Hier kann man ein Gespräch fortsetzen, ohne bei jedem Schritt ausweichen zu müssen, oder einfach auf jemanden warten. Wer zur Plaza oder zum Brunnenplatz vor der Kathedrale möchte, findet von den Parkwegen wieder ins offene Stadtleben.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Der große Stadtpark · Unter den Baumkronen",
+          "sessionHint": "Ein Spaziergang oder eine ruhige Begegnung im großen Stadtpark.",
+          "sessionEmptyTitle": "Ein freier Platz unter den Bäumen",
+          "sessionEmptyText": "Zwischen den Stämmen bleibt die große Stadt sichtbar.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Vor der Kathedrale · Der große Brunnenplatz",
+          "commentThreadKey": "gwynthor-zentrum-kathedralbrunnen",
+          "image": "./public/assets/gwynthor-stadtorte/zentrum-kathedralbrunnen-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 75%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Vor der Großen Kathedrale der Neun liegt ein offener Brunnenplatz. Ein breites steinernes Wasserbecken mit schlichter Mittelsäule bildet seinen Mittelpunkt. Dahinter steigt die Fassade der Kathedrale auf; seitlich führt ein Weg an den Bäumen des großen Stadtparks entlang.</p><p>Am Brunnenrand warten Menschen aufeinander, während andere die Stufen zu den Portalen hinaufgehen. Das Wasser übertönt die leiseren Worte, bis eine Glocke über den Platz klingt. Zwischen Parkweg, Brunnen und Kathedralstufen lässt sich eine Verabredung beginnen oder nach dem Gottesdienst noch verweilen.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Vor der Kathedrale · Der große Brunnenplatz",
+          "sessionHint": "Ein Treffen am öffentlichen Brunnen vor der Großen Kathedrale der Neun.",
+          "sessionEmptyTitle": "Wasser vor den Kathedralstufen",
+          "sessionEmptyText": "Am breiten Brunnenrand bleibt Platz für eine Begegnung.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

@@ -64,7 +64,7 @@ test('every catalogue trait survives a profile roundtrip; conditional penalties 
  for (const batch of getDevelopmentTraitTestBatches()) {
   const result=previewCharacterLevelUp(base(),{targetLevel:1,traitIds:batch.map(t=>t.id)});
   assert.equal(result.ready,true,result.errors.join(' '));
-  assert.equal(sanitizeCharacterCombatProfile(result.profile).quirks.length,batch.length);
+  assert.equal(sanitizeCharacterCombatProfile(result.profile).quirks.length,result.plan.traitIds.length);
  }
  const afraid=previewCharacterLevelUp(base(),{targetLevel:1,traitIds:['development-trait-aengstlich']}).profile;
  assert.equal(getSavingThrowTotal(afraid,'wisdom',{saveTags:['fear']}),-2);

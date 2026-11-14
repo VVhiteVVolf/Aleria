@@ -12,10 +12,18 @@ test('31 named figures keep distinct IDs; unknown ancestors and vacancies stay o
  assert.ok(exports.every(e=>!e.character.name.includes('?')&&!e.character.name.startsWith('Unbekannt')));
  for(const[world,id]of Object.entries(TAILORING_EXISTING_RUNTIME_IDS))assert.equal(exports.find(e=>e.character.identity.worldPersonId===world).character.id,id);
 });
-test('all new people plus Nia and Hywel have individual structured three-paragraph bios',()=>{
+test('all new people plus Nia have individual structured three-paragraph bios',()=>{
  const reviewed=exports.filter(e=>e.character.bio);
- assert.equal(reviewed.length,28);assert.equal(new Set(reviewed.map(e=>e.character.bio)).size,28);
+ assert.equal(reviewed.length,27);assert.equal(new Set(reviewed.map(e=>e.character.bio)).size,27);
  for(const{character:c}of reviewed){assert.ok(c.bio.length>600,c.name);assert.equal(c.bio.split('\n\n').length,3);assert.equal(c.biography.schema,'aleria.biography-module');assert.doesNotMatch(c.bio,/Weltidentit|Repository|Gegenakte|JSON|Porträt.*erhalten|zweites Mal/);}
+});
+test('Hywels existing authored biography stays outside the tailoring write fields',()=>{
+ const hywel=exports.find(e=>e.character.id==='XVeiNvgFfsmtomLuIjcA').character;
+ assert.equal(Object.hasOwn(hywel,'bio'),false);
+ assert.equal(Object.hasOwn(hywel,'biography'),false);
+ const original=REVIEWED_EXISTING_CHARACTERS.find(c=>c.id===hywel.id);
+ assert.ok(original.biography.biography.biographyText.length>3000);
+ assert.equal(original.biography.biography.extraSections.length,3);
 });
 test('existing profiles receive metadata only while Hywel retains seven children and founders retain Raves children',()=>{
  for(const e of exports.filter(e=>Object.values(TAILORING_EXISTING_RUNTIME_IDS).includes(e.character.id))){for(const key of['portrait','imageSets','activeImageSetId','emotes','inventory','combatProfile','role','title','fraktion'])assert.equal(Object.hasOwn(e.character,key),false,`${e.character.name}/${key}`);}
@@ -74,6 +82,8 @@ test('a genuinely fresh bounded import is immediately idempotent without adding 
  const basis={registry:{...registry,records:registry.records.filter(r=>!ids.has(r.firestoreDocumentId))},snapshot:{...snapshot,characters:snapshot.characters.filter(c=>!ids.has(c.id))},report,existingRecords:[]};
  const first=projectTailoringCharacterDatabase(basis,FAMILY_REGISTRY);
  assert.equal(first.newCount,31);
+ const hywel=first.records.find(item=>item.record.character.id==='XVeiNvgFfsmtomLuIjcA').record.character;
+ assert.deepEqual(hywel.biography,REVIEWED_EXISTING_CHARACTERS.find(c=>c.id===hywel.id).biography);
  for(const[id,expectedFamily,expectedPerson]of[
   ['XVeiNvgFfsmtomLuIjcA','craigddu','person-28b0e0a3'],
   ['person--haus-maerllys--gwenora-maerllys','haus-raves','gwenora-maerllys'],

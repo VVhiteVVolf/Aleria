@@ -226,6 +226,9 @@ function getLocalCommentBackend() {
     async addCombatEncounter() {
       throw new Error('Kampfankündigungen verändern verbindlichen Szenenzustand und benötigen eine Online-Verbindung.');
     },
+    async sceneElements() {
+      throw new Error('Szenenelemente benötigen den Online-Speicher. Bitte die Verbindung wiederherstellen.');
+    },
     async addHerausforderung() {
       throw new Error('Herausforderungen benötigen eine serverseitige Prüfung und eine Online-Verbindung.');
     },

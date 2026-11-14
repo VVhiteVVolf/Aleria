@@ -168,7 +168,13 @@ export function paginateBook(source, mount, { width, height, title }) {
       const node = removeDuplicateIds(original.cloneNode(true));
       node.dataset.bookOffset = '0';
       // Authored headings begin a new leaf, independently of viewport or font metrics.
-      if (/^H[1-6]$/.test(node.tagName)) flush();
+      if (/^H[1-6]$/.test(node.tagName)) {
+        flush();
+        // Optional authored facing-page placement. Existing books have no side
+        // directive and retain their previous pagination exactly.
+        const nextSide = pages.length % 2 === 0 ? 'left' : 'right';
+        if (['left', 'right'].includes(node.dataset.bookSide) && node.dataset.bookSide !== nextSide) pages.push([]);
+      }
       if (add(node)) { keep(node); continue; }
       node.remove();
       if (node.matches('p, blockquote') && !node.querySelector('img, input, button, select, textarea')) splitText(original);

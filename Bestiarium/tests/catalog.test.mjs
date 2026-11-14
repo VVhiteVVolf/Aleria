@@ -26,6 +26,7 @@ test('search combines words and categories and accepts German umlaut translitera
   assert.equal(filterEntries(BESTIARY_ENTRIES, { query: '  ' }).length, 55);
   assert.equal(filterEntries(BESTIARY_ENTRIES, { query: 'nirgendwo-gefunden' }).length, 0);
   assert(BESTIARY_TOPICS.some(entry => matchesEntry(entry, 'Hoellenpakte')));
+  assert.deepEqual(filterEntries(BESTIARY_ENTRIES, { query: 'madruach urgren' }).map(entry => entry.id), ['raubtiere']);
 });
 
 test('each illustrated entry has its own local asset and no obsolete external link', async () => {

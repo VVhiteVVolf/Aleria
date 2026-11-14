@@ -5,7 +5,9 @@ import { isTrustedSceneTimeComment } from './scene-recovery-day.js';
 import { getSceneConditionAnchor } from './scene-condition-anchor.js';
 export const SCENE_CONTRIBUTION_SECONDS = 5;
 export function isConditionClockContribution(comment = {}) {
-  return !isSilentSceneRegeneration(comment) && comment.importedHistoricalMechanics !== true && (comment.serverValidatedMechanics === true || comment.serverCommitted === true);
+  return !comment.sceneElementSignal && !comment.sceneElementInteraction && !comment.sceneElementDetection
+    && !(comment.herausforderung?.elementType && comment.herausforderung.elementType !== 'challenge')
+    && !isSilentSceneRegeneration(comment) && comment.importedHistoricalMechanics !== true && (comment.serverValidatedMechanics === true || comment.serverCommitted === true);
 }
 export function sceneSegmentSeconds(segment = {}) {
   const supplied = segment.durationSeconds;

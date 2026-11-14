@@ -16,7 +16,7 @@ export const GWYNTHOR_AREA_ICONS = Object.freeze({
   Cenyr: `${iconRoot}Königreich Cenyr.png`,
   'Celtigerns Wacht': `${iconRoot}Celtigerns Wacht Grafschaft.png`,
   'Llamreis Ankunft': `${iconRoot}Llamreis Ankunft.png`,
-  'Bannkreis Gwynthor': '../IconOrdner/Welt Pins/Bauernsiedlung.png',
+  'Bannkreis Gwynthor': `${iconRoot}Gwynthor-Bannkreis-Banner-v1.webp`,
   'Gwynthor-Stadt': `${iconRoot}Gwynthor.png`,
   'Owains Anwesen & Gestüt': '../IconOrdner/Welt Pins/Gestüt.png',
   'Zum Roten Tor': '../IconOrdner/Welt Pins/Gasthof.png',

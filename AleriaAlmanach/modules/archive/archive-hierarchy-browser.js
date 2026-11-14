@@ -120,19 +120,21 @@ function getArchiveHierarchySection(node, tab = '') {
   };
 }
 
-function renderArchiveHierarchyRowIcon(node, className = 'archive-hierarchy-row-icon') {
-  const icon = sanitizeImageSrc(node?.section?.iconUrl || '');
-  if (icon) return `<span class="${className}"><img src="${icon}" alt="" loading="lazy" decoding="async"></span>`;
+function renderArchiveHierarchyRowIcon(node, className = 'archive-hierarchy-row-icon', tab = '') {
+  const icon = typeof AleriaArchiveSectionIcons !== 'undefined'
+    ? AleriaArchiveSectionIcons.source(node, tab) : sanitizeImageSrc(node?.section?.iconUrl || '');
+  if (icon) return `<span class="${className}"><img src="${icon}" data-archive-icon-fallback="../IconOrdner/ReiterIcons/Weltpfade/werke.png" alt="" loading="lazy" decoding="async"></span>`;
   return `<span class="${className} archive-hierarchy-row-mark" aria-hidden="true">✦</span>`;
 }
 
 function renderArchiveHierarchyEntry(entry) {
-  const image = getArchiveEntryPreviewImage(entry);
+  const image = typeof AleriaArchiveSectionIcons !== 'undefined'
+    ? AleriaArchiveSectionIcons.entrySource(entry) : getArchiveEntryPreviewImage(entry);
   const pageCount = getArchiveEntryPageCount(entry);
   return `
     <button class="archive-hierarchy-entry" type="button" data-archive-action="open-entry" data-entry-id="${escapeHtml(entry?.id || '')}">
       ${image
-        ? `<span class="archive-hierarchy-entry-icon"><img src="${image}" alt="" loading="lazy" decoding="async"></span>`
+        ? `<span class="archive-hierarchy-entry-icon"><img src="${image}" data-archive-icon-fallback="../IconOrdner/ReiterIcons/Weltpfade/werke.png" alt="" loading="lazy" decoding="async"></span>`
         : `<span class="archive-hierarchy-entry-icon archive-hierarchy-entry-mark" aria-hidden="true">${escapeHtml(entry?.icon || '✦')}</span>`}
       <span class="archive-hierarchy-entry-title">${escapeHtml(entry?.title || 'Unbenanntes Modul')}</span>
       <span class="archive-hierarchy-entry-meta">${pageCount} S.</span>
@@ -152,7 +154,7 @@ function renderArchiveHierarchyNode(node, model, selectedPath = []) {
           <span aria-hidden="true">${expanded ? '⌄' : '›'}</span>
         </button>
         <button class="archive-hierarchy-select" type="button" data-archive-action="select-hierarchy-node" data-section-path="${escapeHtml(encodeArchivePathData(node.path))}"${selected ? ' aria-current="true"' : ''}>
-          ${renderArchiveHierarchyRowIcon(node)}
+          ${renderArchiveHierarchyRowIcon(node, 'archive-hierarchy-row-icon', model.tab)}
           <span class="archive-hierarchy-row-title">${escapeHtml(node.label)}</span>
           <span class="archive-hierarchy-row-meta" title="${stats.moduleCount} Module">${stats.moduleCount}</span>
         </button>
@@ -198,7 +200,8 @@ function renderArchiveHierarchyContentHeading(node, model) {
   const section = getArchiveHierarchySection(node, model.tab);
   const icon = !node.path.length
     ? getArchiveDashboardTabIcon(model.tab, section.iconUrl)
-    : sanitizeImageSrc(section.iconUrl || '');
+    : typeof AleriaArchiveSectionIcons !== 'undefined'
+      ? AleriaArchiveSectionIcons.source(node, model.tab) : sanitizeImageSrc(section.iconUrl || '');
   const image = icon || getArchiveHierarchyNodeImage(node);
   const description = String(section.desc || (!node.path.length ? getThemeMetaForTab(model.tab, model.sections).note : '') || '').trim();
   return `

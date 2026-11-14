@@ -2122,5 +2122,55 @@ export const AUTHORED_ITEMS = [
       "id": "house-signet:haus-wyrm",
       "revision": "58432cfafcaaf0b123379522"
     }
+  },
+  {
+    "id": "fleischsammler:meredydds-ermittlungsbuch",
+    "canonicalKey": "fleischsammler:meredydds-ermittlungsbuch",
+    "title": "Meredydds Ermittlungsbuch · Der Fleischsammler",
+    "category": "sonstiges",
+    "type": "Dünnes Notizbuch · Ermittlungsbericht",
+    "documentRef": {
+      "id": "meredydd-fleischsammler-ermittlungsbuch"
+    },
+    "image": "/Dokumente%20aus%20der%20Werkstatt/assets/meredydd-fleischsammler-ermittlungsbuch/duennes-notizbuch-r1.png",
+    "mechanicsStatus": "narrative",
+    "inventoryUseMode": "use",
+    "stackable": false,
+    "description": "Ein dünnes ledergebundenes Ermittlungsbuch von Meredydd Gwyllach an Sir Brenric Coeddu. Enthält den bekannten Fallstand, sechzehn Falleinträge, Familienberichte, zwei ausdrücklich vorläufige Ermittlerskizzen, Unterschrift, Verwaltungssiegel und eine freie Notizseite.",
+    "section": "definition",
+    "aliases": [],
+    "tags": [
+      "Dokument",
+      "Gwynthor",
+      "Fleischsammler"
+    ],
+    "priceRange": null,
+    "stock": null,
+    "attributes": [],
+    "infoRows": [
+      {
+        "label": "Verfasser",
+        "value": "Meredydd Gwyllach"
+      },
+      {
+        "label": "Adressat",
+        "value": "Sir Brenric Coeddu"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "kind": "workshop-document",
+        "documentId": "meredydd-fleischsammler-ermittlungsbuch"
+      }
+    ],
+    "hiddenMeta": {
+      "origin": "Nutzerauftrag 14.11.2026"
+    },
+    "combatDefinition": null,
+    "definitionKind": "shared",
+    "definitionRef": {
+      "id": "fleischsammler:meredydds-ermittlungsbuch",
+      "revision": "49e5016b38a9f213f485e15a"
+    }
   }
 ];

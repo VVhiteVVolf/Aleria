@@ -6,6 +6,8 @@ import { DEVELOPMENT_TRAITS } from '../modules/character-development/development
 import { EXPANSION_TALENT_DEFINITIONS } from '../modules/character-development/development-expansion-talents.js';
 import { EXPANSION_ABILITY_DEFINITIONS } from '../modules/character-development/development-expansion-abilities.js';
 import { developmentTraitEffectSignature, developmentTraitNameKey } from './support/development-trait-distinctness.mjs';
+import { assertDevelopmentTraitSnapshotPreserved } from './support/development-trait-snapshot.mjs';
+import { SPIRITUAL_TRAIT_DEFINITIONS } from '../modules/character-development/development-spiritual-traits.js';
 
 const root = new URL('../../', import.meta.url);
 const before = JSON.parse(await readFile(new URL('diagnostics/standard-talents-abilities-20261106/before.json', root), 'utf8'));
@@ -17,11 +19,9 @@ test('thirty rejected choices are replaced by thirty new choices while all other
   assert.equal(retired.size, 30);
   assert.equal(replacements.length, 30);
   assert.ok(replacements.every(Boolean));
-  assert.equal(DEVELOPMENT_TRAITS.length, before.traits.length);
+  assert.equal(DEVELOPMENT_TRAITS.length, before.traits.length + SPIRITUAL_TRAIT_DEFINITIONS.length);
   for (const id of retired) assert.equal(DEVELOPMENT_TRAITS.some(entry => entry.id === id), false, id);
-  for (const entry of before.traits.filter(entry => !retired.has(entry.id))) {
-    assert.deepEqual(JSON.parse(JSON.stringify(DEVELOPMENT_TRAITS.find(current => current.id === entry.id))), entry, entry.name);
-  }
+  assertDevelopmentTraitSnapshotPreserved(before.traits.filter(entry => !retired.has(entry.id)));
 });
 
 test('replacement names and actual effects are new against all prior choices and the retained archive', async () => {

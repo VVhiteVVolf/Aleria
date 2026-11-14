@@ -4,10 +4,11 @@ import { createHash } from 'node:crypto';
 import { buildGwynthorSevenItems } from '../modules/gwynthor-seven/equipment.mjs';
 import { buildKnightStartingItems } from '../modules/gwynthor-seven/starting-possessions.mjs';
 import { buildHouseSignetItems } from '../modules/house-knight-rings/house-ring-catalog.mjs';
+import { buildFleischsammlerReportItems } from '../modules/fleischsammler-report/report-item.mjs';
 import { normalizeItemDefinition, itemDefinitionContent, itemDefinitionFromTemplate, itemDefinitionKey } from '../modules/item-definitions/item-definition-model.js';
 import { withRegisterGameplayDefaults } from '../modules/item-register/item-register-gameplay-defaults.js';
 const target=new URL('../modules/item-definitions/authored-item-catalog.js',import.meta.url);
-const items=[...buildGwynthorSevenItems(),...buildKnightStartingItems(),...buildHouseSignetItems()].map(withRegisterGameplayDefaults).map(item=>{
+const items=[...buildGwynthorSevenItems(),...buildKnightStartingItems(),...buildHouseSignetItems(),...buildFleischsammlerReportItems()].map(withRegisterGameplayDefaults).map(item=>{
  const definition=normalizeItemDefinition({...item,kind:'shared',weight:null},{id:item.id,revision:'draft'});
  return {...item,section:'definition',definitionKind:'shared',definitionRef:{id:item.id,revision:createHash('sha256').update(itemDefinitionContent(definition)).digest('hex').slice(0,24)}};
 });

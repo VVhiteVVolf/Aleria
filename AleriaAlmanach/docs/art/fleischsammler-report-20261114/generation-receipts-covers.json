@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "tool": "image_gen",
+  "createdAt": "2026-11-14",
+  "images": [
+    {
+      "key": "front-cover",
+      "version": 1,
+      "source": "Retained admitted original beside this receipt",
+      "original": "AleriaAlmanach/docs/art/fleischsammler-report-20261114/originals/vorderdeckel-r1.png",
+      "active": "Dokumente aus der Werkstatt/assets/meredydd-fleischsammler-ermittlungsbuch/vorderdeckel-r1.png",
+      "prompt": "Use case: illustration-story. Create a finished front-cover illustration for a thin, practical medieval fantasy investigator's field notebook, to be used as the entire FRONT cover face in a digital page-turning book. Strictly flat orthographic front elevation, a single tall rectangular cover filling the full frame edge to edge, portrait 2:3. No surrounding table, no background scene, no perspective, no visible page block or second book. Warm worn reddish-brown calf leather, scuffed natural grain, simple blind-tooled double border with modest curved corners, hand stitching at the LEFT binding edge. Match a humble thin leather inventory notebook rather than a lavish grimoire: restrained craftsmanship, lightly rubbed edges, no metal corner plates. A narrow leather closing strap crosses the lower third, with a small plain dark-red wax seal near its right end, no invented heraldic crest. In the upper half put clearly readable hand-lettered warm pale-gold text exactly: \"Der Fleischsammler\". Beneath it, smaller, exactly: \"Meredydd Gwyllach\". The writing is an understated investigator's title, with generous space around it, not a modern paperback design. No other writing. Painterly realistic game-asset finish, subtle quill-era character, quiet and serious. No portrait, no skull, no blood, no body, no knife, no magical symbols. The cover face itself is opaque leather across the whole rectangular image. It will be paired with a matching back cover.",
+      "references": [],
+      "role": "front-cover",
+      "secretIdentityReferenceUsed": false
+    },
+    {
+      "key": "back-cover",
+      "version": 1,
+      "source": "Retained admitted original beside this receipt",
+      "original": "AleriaAlmanach/docs/art/fleischsammler-report-20261114/originals/rueckdeckel-r1.png",
+      "active": "Dokumente aus der Werkstatt/assets/meredydd-fleischsammler-ermittlungsbuch/rueckdeckel-r1.png",
+      "prompt": "Use case: illustration-story. Create a finished BACK-cover illustration for the same kind of thin practical medieval fantasy investigator's field notebook: worn warm reddish-brown calf leather, a simple blind-tooled double rectangular border with modest curved corners, softly rubbed edges and a few natural use scratches. Strictly flat orthographic back elevation, a single tall rectangular cover filling the full frame edge to edge, portrait 2:3. The hand-stitched binding is along the RIGHT edge, as seen on a book's back. A narrow worn leather closing strap is visibly attached near the LEFT edge at the lower third, consistent with a matching front cover where the strap fastens across the lower third. Keep the central back mostly plain leather, slightly darker at the edges, with subtle irregular wear. Match a humble thin reddish-brown leather notebook with a small red wax-seal closure on its front; no visible wax seal is needed on the back. Painterly realistic game-asset finish, restrained hand craftsmanship, quiet and serious. No table, no scene background, no perspective, no page block, no second book. No text whatsoever, no lettering, no author name, no portrait, no skull, no blood, no body, no weapon, no magical symbols, no metal corner plates. The full rectangular image is opaque leather, designed as the complete rear cover of a digital page-turning notebook.",
+      "references": [],
+      "role": "back-cover",
+      "secretIdentityReferenceUsed": false
+    }
+  ]
+}

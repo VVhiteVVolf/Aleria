@@ -1,4 +1,5 @@
 import { THEATER_ART } from './theater-people.mjs';
+import { GLANNADEOR_PRODUCTION } from './theater-glannadeor.mjs';
 const p=(...texts)=>texts.map(text=>`<p>${text}</p>`).join('');
 export const THEATER_PRODUCTIONS=Object.freeze([
   {id:'myrddin-vampir',title:'Myrddin Draig und der Vampir',genre:'Magisches Abenteuer',setting:'Aus Myrddins frühen Lehrjahren',
@@ -24,9 +25,10 @@ export const THEATER_PRODUCTIONS=Object.freeze([
       'Garith bleibt mit einer Hochzeit zurück, die nie stattfinden wird. Ein Jahr nach Aurnias Tod nimmt er sich das Leben. Das Drama erzählt von Erwartung, Verlust und dem Jahr zwischen beiden Todesfällen. Aurnias Reise und Gariths Warten stehen auf getrennten Teilen derselben Bühne; die letzte Szene gehört den Zurückgebliebenen.'),
     cast:'Geraint als Garith · Rhoswen als Aurnia · Nuala als Stimme des Meeres · Faelan als Überbringer der Nachricht',
     staging:'Ein angedeuteter Schiffsbug, bewegte Wellenbahnen und ein Schleier zwischen Reise und Erinnerung. Gariths Tod wird durch einen leeren Platz und das Schlusswort vermittelt.',actors:['geraint','rhoswen','nuala'],
-    visual:'An emotional tragic tableau on a wooden theater stage. Young red-haired actor Geraint plays Garith, standing alone beside an empty wedding chair in the foreground, grief in his expression. Red-haired actress Rhoswen plays Aurnia in a modest ivory medieval bridal travel gown behind a translucent gauze curtain on a simple wooden ship-bow set. Brunette human actress Nuala of Albic origin with ordinary rounded human ears at the side moves a dark blue cloth wave. Painted storm clouds, a restrained mast silhouette and visible burgundy curtains establish an actual stage. Aurnia is a remembered living presence, no bodies, no self-harm act or method. A quiet devastating dramatic scene.'}
+    visual:'An emotional tragic tableau on a wooden theater stage. Young red-haired actor Geraint plays Garith, standing alone beside an empty wedding chair in the foreground, grief in his expression. Red-haired actress Rhoswen plays Aurnia in a modest ivory medieval bridal travel gown behind a translucent gauze curtain on a simple wooden ship-bow set. Brunette human actress Nuala of Albic origin with ordinary rounded human ears at the side moves a dark blue cloth wave. Painted storm clouds, a restrained mast silhouette and visible burgundy curtains establish an actual stage. Aurnia is a remembered living presence, no bodies, no self-harm act or method. A quiet devastating dramatic scene.'},
+  GLANNADEOR_PRODUCTION
 ]);
 export function buildTheaterProgram() {
-  const data={title:'Vier Geschichten auf Gwynthors Bühne',introduction:'Magische Abenteuer, nordische Werbung, Komödie und Trauerspiel gehören zum bekannten Repertoire des Hauses. Die freien Plätze darunter lassen Raum für kommende Inszenierungen.',footer:'Elenid betreut Regie und dramatische Arbeit. Weitere Stücke können im Hausbuch ergänzt werden.'};
-  return {...data,items:[...THEATER_PRODUCTIONS.map(({actors,visual,id,...item})=>({...item,image:`${THEATER_ART}/productions/${id}.png`})),...Array.from({length:4},()=>({title:''}))]};
+  const data={title:'Geschichten auf Gwynthors Bühne',introduction:'Magische Abenteuer, nordische Werbung, Komödie und Trauerspiel gehören zum Repertoire des Hauses. Die albische Sage von Glannadeor tritt als Trauerspiel mit eigenem Klagelied hinzu. Freie Plätze lassen Raum für kommende Inszenierungen.',footer:'Elenid betreut Regie und dramatische Arbeit. Weitere Stücke können im Hausbuch ergänzt werden.'};
+  return {...data,items:[...THEATER_PRODUCTIONS.map(({actors,visual,id,...item})=>({...item,image:`${THEATER_ART}/productions/${id}.png`})),...Array.from({length:Math.max(0,8-THEATER_PRODUCTIONS.length)},()=>({title:''}))]};
 }

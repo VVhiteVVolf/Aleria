@@ -11,6 +11,7 @@ export class ServerCombatDiceAdapter {
     return { id: randomUUID(), natural, dice, keptDice: [natural], total: natural + modifier, visualMode: 'server-rolled' };
   }
   async rollAttack(options) { return this.d20(options); }
+  async rollSkill(options) { return this.d20(options); }
   async rollSavingThrow(options) { return this.d20(options); }
   async rollWardDeflection() { return this.d20(); }
   forCounter() { return this; }

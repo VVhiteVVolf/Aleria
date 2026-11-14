@@ -7,6 +7,7 @@ import { GENERAL_TRAIT_DEFINITIONS } from '../modules/character-development/deve
 import { FAMILY_TRAIT_DEFINITIONS } from '../modules/character-development/development-family-traits.js';
 import { ORDINARY_BACKGROUND_TEMPLATES } from '../modules/character-development/creation-background-templates.js';
 import { CHARACTER_BACKGROUND_TEMPLATES } from '../modules/combat/character-creation-templates.js';
+import { assertDevelopmentTraitSnapshotPreserved } from './support/development-trait-snapshot.mjs';
 
 const root = new URL('../../', import.meta.url);
 const folder = 'diagnostics/creation-icons-20261106/';
@@ -49,9 +50,9 @@ test('new art references preserve every rule, choice identity and background sug
   assert.equal(CHARACTER_BACKGROUND_TEMPLATES.length, before.backgrounds.length);
   // Compare the same JSON representation as the retained baseline (-0 becomes 0).
   const omitIcon = ({ icon, ...entry }) => JSON.parse(JSON.stringify(entry));
+  assertDevelopmentTraitSnapshotPreserved(before.traits, omitIcon);
   for (const previous of before.traits) {
     const current = DEVELOPMENT_TRAITS.find(entry => entry.id === previous.id);
-    assert.deepEqual(omitIcon(current), omitIcon(previous), previous.name);
     if (!traitIds.includes(previous.id.replace('development-trait-', ''))) assert.equal(current.icon, previous.icon, previous.name);
   }
   for (const previous of before.backgrounds) assert.deepEqual(omitIcon(CHARACTER_BACKGROUND_TEMPLATES.find(entry => entry.id === previous.id)), omitIcon(previous), previous.label);

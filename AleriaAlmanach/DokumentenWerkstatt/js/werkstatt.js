@@ -20,6 +20,8 @@ const state = {
   autosaveTimer: null,
   hydrated: false,
   pages: [DEFAULT_TEXT],
+  pageLayout: [{ side: 'any', notes: false }],
+  schemaVersion: 2,
 };
 
 const $ = id => document.getElementById(id);
@@ -109,6 +111,7 @@ function normalizeMediaFromData(data = {}) {
 
 function getMeta() {
   return normalizeDocument({
+    schemaVersion: state.schemaVersion,
     ...enhancements.getMeta(),
     template: $("doc-template").value,
     slug: slugify($("doc-slug").value || $("doc-title").value),
@@ -137,6 +140,8 @@ function getMeta() {
     width: clampNumber($("doc-width").value, 820, 520, 1200),
     height: clampNumber($("doc-height").value, 1060, 360, 1800),
     pages: state.pages.map(sanitizeContent),
+    ...(state.pageLayout.some(page => page.side !== 'any') ? { bookPageSides: state.pageLayout.map(page => page.side) } : {}),
+    notesPage: state.pageLayout.findIndex(page => page.notes),
     currentPage: state.currentPage
   });
 }
@@ -144,6 +149,7 @@ function getMeta() {
 function setMeta(data) {
   const explicitSlug = data.slug;
   data = normalizeDocument(data);
+  state.schemaVersion = data.schemaVersion;
   enhancements.setMeta(data);
   const template = ["letter", "book", "note", "wanted"].includes(data.template) ? data.template : "letter";
   const media = normalizeMediaFromData(data);
@@ -185,6 +191,7 @@ function setMeta(data) {
   $("doc-height").value = data.height || 780;
   state.template = $("doc-template").value;
   state.pages = Array.isArray(data.pages) && data.pages.length ? data.pages.map(sanitizeContent) : [DEFAULT_TEXT];
+  state.pageLayout = state.pages.map((page, index) => ({ side: data.bookPageSides?.[index] || 'any', notes: data.notesPage === index }));
   state.currentPage = Math.max(0, Math.min(Number(data.currentPage) || 0, state.pages.length - 1));
   loadCurrentPageIntoEditor();
   renderAll();
@@ -345,6 +352,16 @@ function handleWorkshopChange(event) {
     case "format-block":
       formatBlock(control.value);
       break;
+    case 'set-book-page-side': {
+      const index = Number(control.dataset.pageIndex);
+      if (state.pageLayout[index]) state.pageLayout[index].side = ['left', 'right'].includes(control.value) ? control.value : 'any';
+      renderPreview(); scheduleAutoSave(); break;
+    }
+    case 'set-book-notes-page': {
+      const index = Number(control.dataset.pageIndex);
+      state.pageLayout.forEach((page, pageIndex) => { page.notes = control.checked && pageIndex === index; });
+      renderAll(); scheduleAutoSave(); break;
+    }
   }
 }
 
@@ -418,18 +435,18 @@ function updateTemplateControls() {
   const template = $("doc-template").value;
   const visibleByTemplate = {
     letter: new Set(["template", "preset", "slug", "title", "subtitle", "author", "recipient", "date", "location", "image", "image-options", "media"]),
-    book: new Set(["template", "preset", "slug", "title", "subtitle", "author", "date", "location", "image", "image-options"]),
+    book: new Set(["template", "preset", "slug", "title", "subtitle", "author", "date", "location", "image", "image-options", "book-covers"]),
     note: new Set(["template", "preset", "slug", "title"]),
     wanted: new Set(["template", "preset", "slug", "title", "subtitle", "author", "date", "location", "image", "image-options", "media"])
   };
   const visible = visibleByTemplate[template] || visibleByTemplate.letter;
-  document.querySelector('label[for="doc-image"]').textContent = template === 'wanted' ? 'Skizze oben rechts · optional' : template === 'book' ? 'Eigener Bucheinband · optional' : 'Bild / Signatur / Siegel';
+  document.querySelector('label[for="doc-image"]').textContent = template === 'wanted' ? 'Skizze oben rechts · optional' : template === 'book' ? 'Vorderdeckel · optional' : 'Bild / Signatur / Siegel';
   $('doc-image-position').closest('.field').hidden = template === 'wanted' || template === 'book';
   $('doc-image-frame').closest('.field').hidden = template === 'wanted' || template === 'book';
   const imageTarget = $('image-upload-target');
   imageTarget.options[0].textContent = template === 'book' ? 'Bucheinband' : template === 'wanted' ? 'Skizze oben rechts' : 'Hauptbild';
-  [...imageTarget.options].forEach((option, index) => { option.disabled = template === 'book' && index > 0; });
-  if (template === 'book') imageTarget.value = 'doc-image';
+  [...imageTarget.options].forEach(option => { option.disabled = template === 'book' ? !['doc-image', 'doc-book-back-cover'].includes(option.value) : option.value === 'doc-book-back-cover'; });
+  if (imageTarget.selectedOptions[0]?.disabled) imageTarget.value = 'doc-image';
   document.querySelectorAll('.preview-zoom button').forEach(button => { button.disabled = template === 'book'; });
   document.querySelectorAll("[data-field-key]").forEach(field => {
     field.classList.toggle("hidden-control", !visible.has(field.dataset.fieldKey));
@@ -481,6 +498,7 @@ function addBookPage() {
   if (state.pages.length >= 100) { setStatus('Ein Buch kann höchstens 100 Seiten enthalten.'); return; }
   syncEditorToPage();
   state.pages.splice(state.currentPage + 1, 0, "<p>Neue Buchseite.</p>");
+  state.pageLayout.splice(state.currentPage + 1, 0, { side: 'any', notes: false });
   state.currentPage += 1;
   loadCurrentPageIntoEditor();
   renderAll();
@@ -496,6 +514,7 @@ function removeBookPage(index = state.currentPage) {
   if (!confirm(`Seite ${pageNumber} löschen?`)) return;
   const target = Math.max(0, Math.min(index, state.pages.length - 1));
   state.pages.splice(target, 1);
+  state.pageLayout.splice(target, 1);
   state.currentPage = Math.max(0, Math.min(state.currentPage, state.pages.length - 1));
   loadCurrentPageIntoEditor();
   renderAll();
@@ -507,6 +526,7 @@ function duplicateBookPage(index = state.currentPage) {
   syncEditorToPage();
   const source = Math.max(0, Math.min(index, state.pages.length - 1));
   state.pages.splice(source + 1, 0, state.pages[source] || "<p>Neue Buchseite.</p>");
+  state.pageLayout.splice(source + 1, 0, { ...state.pageLayout[source], notes: false });
   state.currentPage = source + 1;
   loadCurrentPageIntoEditor();
   renderAll();
@@ -519,7 +539,9 @@ function moveBookPage(index, direction) {
   const to = from + direction;
   if (to < 0 || to >= state.pages.length) return;
   const [page] = state.pages.splice(from, 1);
+  const [layout] = state.pageLayout.splice(from, 1);
   state.pages.splice(to, 0, page);
+  state.pageLayout.splice(to, 0, layout);
   state.currentPage = to;
   loadCurrentPageIntoEditor();
   renderAll();
@@ -560,6 +582,8 @@ function renderBookManager() {
           <span class="book-page-row-preview">${escapeHtml(preview)}</span>
         </button>
         <div class="book-page-actions">
+          <label>Beginn <select data-workshop-action="set-book-page-side" data-page-index="${index}" aria-label="Seite ${index + 1} beginnt"><option value="any" ${state.pageLayout[index]?.side === 'any' ? 'selected' : ''}>Automatisch</option><option value="left" ${state.pageLayout[index]?.side === 'left' ? 'selected' : ''}>Links</option><option value="right" ${state.pageLayout[index]?.side === 'right' ? 'selected' : ''}>Rechts</option></select></label>
+          <label><input type="checkbox" data-workshop-action="set-book-notes-page" data-page-index="${index}" ${state.pageLayout[index]?.notes ? 'checked' : ''}> Speicherbare Notizseite</label>
           <button class="icon-btn" type="button" title="Nach oben" data-workshop-action="move-book-page" data-page-index="${index}" data-direction="-1" ${index === 0 ? "disabled" : ""}>↑</button>
           <button class="icon-btn" type="button" title="Nach unten" data-workshop-action="move-book-page" data-page-index="${index}" data-direction="1" ${index === state.pages.length - 1 ? "disabled" : ""}>↓</button>
           <button class="icon-btn" type="button" title="Duplizieren" data-workshop-action="duplicate-book-page" data-page-index="${index}">⧉</button>
@@ -587,7 +611,7 @@ function renderPreview() {
   $("emblem-size-label").textContent = `${meta.media.emblem.size}px`;
   $("watermark-size-label").textContent = `${meta.media.watermark.size}px`;
   $("preview").className = `template-${meta.template}`;
-  $("preview").innerHTML = buildDocumentHtml(meta, { standalone: false });
+  $("preview").innerHTML = buildDocumentHtml(meta, { standalone: false, notesPreview: true });
   bookMount.update(meta).catch(error => setStatus(error.message));
   renderMediaPreviews(meta);
   renderSnippet(meta);

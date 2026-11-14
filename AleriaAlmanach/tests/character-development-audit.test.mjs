@@ -86,7 +86,7 @@ test('fire phobia recognizes typed damage effects on primary and secondary saves
 test('nonstacking weakness, resistance, expertise and advantage receive only one balance valuation',()=>{
  const cold=choose(['frost-phobie','frostempfindlich']);
  assert.equal(cold.balance.nominalCost,-4);assert.equal(cold.balance.traitCost,-4);
- const fire=choose(['feueraffinitaet','glutgewoehnt']);assert.equal(fire.balance.traitCost,3);
+ const fire=choose(['feueraffinitaet','glutgewoehnt']);assert.equal(fire.balance.traitCost,4);
  const duplicate=choose(['feueraffinitaet','bluttraeger-flammenspross']);assert.equal(duplicate.balance.traitCost,5);assert.ok(duplicate.balance.warnings.length);
  const cancelled=choose(['eisaffinitaet','frostempfindlich']);assert.equal(cancelled.balance.traitCost,0);
  const contradictory=choose(['klein','gross','haesslich','gutaussehend']);assert.equal(contradictory.ready,true);assert.ok(contradictory.balance.warnings.length>=2);

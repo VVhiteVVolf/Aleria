@@ -3,12 +3,14 @@ import { inventoryValuation, formatInventoryPrice } from './character-inventory-
 import { describeEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
 import { balanceArmorInventoryItem } from '../character-equipment/equipment-armor-rules.js';
 import { materializeInventoryItem } from '../item-definitions/item-definition-resolver.js';
+import { inventoryDocument } from '../inventory-documents/document-item-model.js';
 
 const signed = value => Number(value) ? `${Number(value) > 0 ? '+' : '−'}${Math.abs(Number(value))}` : '';
 const dice = value => String(value || '').replace(/d/gi, 'W');
 
 export function inventoryCardKind(item = {}) {
   item = materializeInventoryItem(item);
+  if (inventoryDocument(item)) return 'document';
   if (item.creatureId || ['pferde', 'vieh'].includes(item.registerCategory)) return 'companion';
   if (item.combatDefinition?.kind === 'weapon' || item.category === 'weapon') return 'weapon';
   if (item.combatDefinition?.kind === 'armor' || item.category === 'armor') return 'armor';
@@ -39,6 +41,8 @@ export function inventoryCardModel(item = {}) {
     else if (definition.armorCategory === 'heavy') rules.push({ label: 'Rüstungsroutine', value: 'Kein GES-Bonus' });
     else if (definition.dexterityUnlockLevel) rules.push({ label: 'Rüstungsroutine', value: `Geschicklichkeit ab Stufe ${definition.dexterityUnlockLevel}` });
     actions.push({ name: 'Anlegen', description: definition.properties || 'Schutz wirkt, solange die Rüstung getragen wird.' });
+  } else if (kind === 'document' && inventoryDocument(item)) {
+    actions.push({ name: 'Dokument lesen', description: 'Öffnet das Dokument aus der Werkstatt. Das Exemplar bleibt im Inventar.' });
   } else {
     actions.push({ name: kind === 'consumable' ? 'Verbrauchen' : 'Benutzen', description: kind === 'consumable'
       ? 'Im Abschnitt „Konsumieren“ einsetzen. Der Bestand wird beim Eintragen abgezogen.'

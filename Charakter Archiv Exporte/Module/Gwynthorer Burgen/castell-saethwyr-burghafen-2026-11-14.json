@@ -1,0 +1,67 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-14T12:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Castell Saethwyr"
+      ],
+      "description": "Unmittelbar am Hafen Gwynthors, mit eigenem Burghafen · Hafenburg · Seefahrt, Werften und Küstenschutz",
+      "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png"
+    },
+    "entry": {
+      "id": "castell-saethwyr-burghafen",
+      "title": "Castell Saethwyr – Eigener Burghafen",
+      "subtitle": "Wassertor, Kai und geschütztes Hafenbecken",
+      "type": "Interaktive Szene",
+      "category": "Castell Saethwyr",
+      "image": "./assets/gwynthor-castles/2026-11-14/saethwyr/burghafen-v1.png",
+      "previewImage": "./assets/gwynthor-castles/2026-11-14/saethwyr/burghafen-v1.png",
+      "symbol": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+      "icon": "",
+      "stamp": "Celtigerns Wacht · Gwynthor · Aleria",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Eigener Port · Burghafen",
+          "commentThreadKey": "saethwyr-burghafen",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/saethwyr/burghafen-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Hinter dem Wassertor öffnet sich der eigene Port von Castell Saethwyr: ein kleines, geschütztes Hafenbecken direkt an der Burgmauer. Eine niedrige Kaimauer trennt die Liegeplätze vom größeren Hafen Gwynthors. Über dem Durchgang weht das goldgelbe Banner mit schwarzem Drachen und hellen Wellen.</p><p>Am Steinkai liegen ein gedecktes Arbeitsboot und ein schlankes Segelschiff. Poller, Taue und eine einfache hölzerne Ladehilfe gehören zum täglichen Betrieb. Eine Treppe führt vom Kai hinauf in den Hof. Hier können Schiffe anlegen, Gäste an Land kommen oder Gespräche vor einer Abfahrt stattfinden.</p>",
+          "sessionLocation": "Castell Saethwyr · Eigener Port · Burghafen",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Eigener Port · Burghafen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

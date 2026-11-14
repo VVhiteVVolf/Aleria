@@ -355,6 +355,12 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
   const stopCommentId = String(position.commentId || '');
   const stopSegmentIndex = Number.isInteger(position.segmentIndex) ? position.segmentIndex : null;
   for (const comment of (Array.isArray(comments) ? comments : [])) {
+    if (comment.sceneElementSignal || comment.sceneElementInteraction
+      || (comment.herausforderung?.elementType && comment.herausforderung.elementType !== 'challenge') || comment.sceneElementDetection) {
+      if (stopCommentId && String(comment.id || '') === stopCommentId) break;
+      if (comment.sceneElementDetection) applyCombatResolutionState(states, comment.sceneElementDetection, sceneItems);
+      continue;
+    }
     if (isSilentSceneRegeneration(comment)) {
       if (stopCommentId && String(comment.id || '') === stopCommentId) break;
       applySceneRegenerationToStateMap(states, comment);

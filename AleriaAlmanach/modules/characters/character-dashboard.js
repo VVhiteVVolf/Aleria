@@ -77,7 +77,7 @@ function buildCharacterDashboardSummary(chars) {
   return {
     total: visible.length,
     missingPortrait: visible.filter(char => !sanitizeImageSrc(char.portrait)),
-    missingBio: visible.filter(char => !characterHasDescription(char)),
+    missingBio: visible.some(char => char._directorySummary) ? null : visible.filter(char => !characterHasDescription(char)),
     unsorted: visible.filter(char => !characterHasGroup(char)),
     important: visible.filter(isCharacterImportant),
     inactive: visible.filter(isCharacterInactiveOrGone),
@@ -97,11 +97,10 @@ function buildCharacterDashboardGroups(chars) {
 function renderCharacterDashboardMetric(label, count, filter, hint = 'Figuren anzeigen') {
   const active = _characterDashboardFilter === filter;
   return `
-    <button class="char-dashboard-metric${active ? ' active' : ''}" type="button"
+    <button class="char-dashboard-metric${active ? ' active' : ''}" type="button" data-tone="${AleriaCharacterRegisterIcons.tone(filter)}"
       data-character-dashboard-action="set-filter" data-filter="${escapeHtml(filter)}" aria-pressed="${active}">
-      <span>${escapeHtml(label)}</span>
+      ${AleriaCharacterRegisterIcons.render(filter)}<span>${escapeHtml(label)}</span>
       <strong>${count}</strong>
-      <small>${escapeHtml(hint)} <span aria-hidden="true">→</span></small>
     </button>`;
 }
 
@@ -126,7 +125,8 @@ function renderCharacterDashboardGroups(groups) {
 }
 
 function renderCharacterDashboard(grid, chars) {
-  if (!grid || _activeCharTab !== 'Alle' || _archiveSearchNeedle || _charOrganizeMode) return;
+  if (!grid || _activeCharTab !== 'Alle' || _archiveSearchNeedle || _charOrganizeMode || hasCharacterRegisterSearch()
+    || AleriaCharacterCategoryBrowser.hasSelection()) return;
   const summary = buildCharacterDashboardSummary(chars);
   const activeFilterLabel = CHARACTER_DASHBOARD_FILTER_LABELS[_characterDashboardFilter] || '';
   const dashboard = document.createElement('section');
@@ -145,13 +145,15 @@ function renderCharacterDashboard(grid, chars) {
     <div class="char-dashboard-metrics">
       ${renderCharacterDashboardMetric('Zuletzt bearbeitet', '↻', 'recent', 'Nach letzter Änderung')}
       ${renderCharacterDashboardMetric('Neue Charaktere', '+', 'new', 'Neueste zuerst')}
-      ${renderCharacterDashboardMetric('Noch zuordnen', summary.unsorted.length, 'missing-group')}
       ${renderCharacterDashboardMetric('Wichtig aktiv', summary.important.length, 'important')}
-      ${renderCharacterDashboardMetric('Kein Portrait', summary.missingPortrait.length, 'missing-portrait')}
-      ${renderCharacterDashboardMetric('Keine Beschreibung', summary.missingBio.length, 'missing-bio')}
-      ${renderCharacterDashboardMetric('Tot / verschollen', summary.inactive.length, 'inactive')}
       ${renderCharacterDashboardMetric('Plot-Knoten', summary.plot.length, 'plot')}
     </div>
+    <details class="char-dashboard-maintenance"><summary>Register pflegen & weitere Filter</summary><div class="char-dashboard-metrics">
+      ${renderCharacterDashboardMetric('Noch zuordnen', summary.unsorted.length, 'missing-group')}
+      ${renderCharacterDashboardMetric('Kein Portrait', summary.missingPortrait.length, 'missing-portrait')}
+      ${renderCharacterDashboardMetric('Keine Beschreibung', summary.missingBio === null ? 'Prüfen' : summary.missingBio.length, 'missing-bio')}
+      ${renderCharacterDashboardMetric('Tot / verschollen', summary.inactive.length, 'inactive')}
+    </div></details>
     <details class="char-dashboard-preview"><summary>Letzte Figuren & häufige Kategorien</summary>
     <div class="char-dashboard-columns">
       <div class="char-dashboard-panel">
@@ -170,7 +172,7 @@ function renderCharacterDashboard(grid, chars) {
   grid.appendChild(dashboard);
 }
 
-function handleCharacterDashboardClick(event) {
+async function handleCharacterDashboardClick(event) {
   const trigger = event.target?.closest?.('[data-character-dashboard-action]');
   const grid = document.getElementById('char-grid');
   if (!trigger || !grid || !grid.contains(trigger)) return;
@@ -181,6 +183,13 @@ function handleCharacterDashboardClick(event) {
 
   if (action === 'set-filter') {
     const next = trigger.dataset.filter || '';
+    if (next === 'missing-bio' && !_charactersLoaded) {
+      trigger.disabled = true;
+      showAppStatus('Beschreibungen werden für diesen Filter geladen …', 'info');
+      try { await loadCharacters(); }
+      catch (error) { showAppStatus(error.message || 'Beschreibungen konnten nicht geprüft werden.', 'error'); trigger.disabled = false; return; }
+      if (document.getElementById('char-grid') !== grid) return;
+    }
     const previous = _characterDashboardFilter;
     resetCharacterRegisterFilters();
     _characterDashboardFilter = previous === next ? '' : next;

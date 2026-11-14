@@ -23,8 +23,13 @@ function buildInventoryCardContent(item, { compact = false, status = '' } = {}) 
 
 function buildCharacterInventoryLivePreview(item) {
   return `<div class="ci-live-head">${buildCharacterInventoryUiIcon('open')}<span>Gegenstand im Fokus</span></div>${item
-    ? `${buildInventoryCardContent(item, { compact: true })}<button class="ci-card-open" type="button" data-ci-action="show-item" data-ci-item-id="${escapeHtml(item.id)}">${buildCharacterInventoryUiIcon('open')}Itemkarte öffnen</button>`
+    ? `${buildInventoryCardContent(item, { compact: true })}${buildCharacterInventoryDocumentLink(item)}<button class="ci-card-open" type="button" data-ci-action="show-item" data-ci-item-id="${escapeHtml(item.id)}">${buildCharacterInventoryUiIcon('open')}Itemkarte öffnen</button>`
     : `<div class="ci-live-empty">${buildCharacterInventoryUiIcon('all')}<h3>Deine Ausrüstung</h3><p>Wähle einen Gegenstand aus dem Verzeichnis.</p></div>`}`;
+}
+
+function buildCharacterInventoryDocumentLink(item) {
+  const reference = window.AleriaCharacterInventory?.document?.(item);
+  return reference ? `<a class="ci-card-open" href="${escapeHtml(reference.href)}" target="_blank" rel="noopener noreferrer" data-role="inventory-document">${buildCharacterInventoryUiIcon('document')}Dokument lesen</a>` : '';
 }
 
 function buildCharacterInventoryItemModal(item, options = {}) {
@@ -32,6 +37,7 @@ function buildCharacterInventoryItemModal(item, options = {}) {
     <button class="ci-modal-close" type="button" data-ci-action="close-profile" aria-label="Itemkarte schließen">×</button>
     ${buildInventoryCardContent(item)}
     <footer class="ci-card-footer">
+      ${buildCharacterInventoryDocumentLink(item)}
       ${item.ownerCharacterId ? `<button type="button" data-ci-action="open-item-sheet" data-ci-item-id="${escapeHtml(item.id)}">${buildCharacterInventoryUiIcon(item.combatDefinition ? 'weapon' : 'open')}${item.combatDefinition ? 'Im Kampfbogen öffnen' : 'Im Charakterbogen öffnen'}</button>` : ''}
       <button type="button" data-ci-action="open-item-register" data-ci-item-id="${escapeHtml(item.id)}">${buildCharacterInventoryUiIcon('register')}Im Handelsregister</button>
       ${options.readOnly ? '' : `<button type="button" data-ci-action="edit-item">${buildCharacterInventoryUiIcon('edit')}Bearbeiten</button>`}

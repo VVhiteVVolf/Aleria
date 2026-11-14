@@ -1,0 +1,113 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-14T12:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Castell Gafyr"
+      ],
+      "description": "Ebener Stadtgrund in Gwynthor, mit dem Rücken zum Gebirge · Bodenständige Stadtburg · Treue, Wald und Erz",
+      "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gafyr.png"
+    },
+    "entry": {
+      "id": "castell-gafyr-bergfried",
+      "title": "Castell Gafyr – Bergfried",
+      "subtitle": "Wachhalle, Thronsaal und gemeinsamer Esssaal",
+      "type": "Interaktive Szene",
+      "category": "Castell Gafyr",
+      "image": "./assets/gwynthor-castles/2026-11-14/gafyr/wachhalle-v1.png",
+      "previewImage": "./assets/gwynthor-castles/2026-11-14/gafyr/wachhalle-v1.png",
+      "symbol": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gafyr.png",
+      "icon": "",
+      "stamp": "Celtigerns Wacht · Gwynthor · Aleria",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Wachhalle des Bergfrieds",
+          "commentThreadKey": "gafyr-wachhalle",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/gafyr/wachhalle-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Hinter der schweren Tür des Bergfrieds öffnet sich eine niedrige, steingewölbte Halle. Eine Bank, ein Tisch und ein ordentliches Waffengestell gehören zum Wachbereich. Der breite Durchgang führt zum Thronsaal; seitlich steigt eine Treppe weiter in den Turm.</p><p>Schwarze Wandtücher mit goldenen Ziegen und die warmen Lichtinseln der Kerzen lösen die Halle aus dem grauen Stein. Wer den Bergfried betritt, kann hier empfangen werden oder warten, bis sein Anliegen weitergetragen wird.</p>",
+          "sessionLocation": "Castell Gafyr · Wachhalle des Bergfrieds",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Wachhalle des Bergfrieds",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Thronsaal",
+          "commentThreadKey": "gafyr-thronsaal",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/gafyr/thronsaal-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Der Thronsaal der Gafyr ist eine breite, würdige Halle. Auf einer niedrigen Stufe steht der geschnitzte Herrschaftssitz; dahinter tragen schwarze Behänge die beiden goldenen Ziegen. Hörnerformen im Holz erinnern an Garyms Überlieferung, ohne das Hauswappen zu ersetzen.</p><p>Vor dem Sitz bleibt der Boden frei für Bittsteller, Gesandte und den Haushalt. Seitliche Bänke und der große Kamin machen den Saal auch für längere Zusammenkünfte nutzbar. Durch die Fenster liegen die Dächer Gwynthors im Licht.</p>",
+          "sessionLocation": "Castell Gafyr · Thronsaal",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Thronsaal",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Gemeinsamer Esssaal",
+          "commentThreadKey": "gafyr-esssaal",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/gafyr/esssaal-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Im gemeinsamen Esssaal stehen lange Eichentische unter kräftigen Deckenbalken. Der Haushalt kommt hier mit seinen Gästen zu Mahlzeiten zusammen. Brot, ein Laib Käse, eine Schale Äpfel und irdene Krüge stehen auf der Anrichte; das Feuer im Kamin hält die Halle warm.</p><p>Schwarze Läufer mit goldenen Säumen und kleine Ziegenzeichen verbinden den Raum mit dem übrigen Castell. An den Bänken ist Platz für ein Gespräch über den Tag, eine Begrüßung oder einen gemeinsam verbrachten Abend.</p>",
+          "sessionLocation": "Castell Gafyr · Gemeinsamer Esssaal",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Gemeinsamer Esssaal",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

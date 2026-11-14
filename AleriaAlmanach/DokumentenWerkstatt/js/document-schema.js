@@ -57,15 +57,17 @@ export function normalizeDocument(input = {}) {
     };
   }
   const font = text('font', "'Eagle Lake'", 100);
+  const bookBackCover = safeImageUrl(input.bookBackCover);
   const customFont = input.customFont && FONT_DATA.test(input.customFont.data) && input.customFont.data.length < 2000000
     ? { name: String(input.customFont.name || 'Eigene Schrift').slice(0, 80), data: input.customFont.data } : null;
   const result = {
-    schemaVersion: 2, slug: slugify(input.slug || input.title),
+    schemaVersion: input.schemaVersion === 3 || Array.isArray(input.bookPageSides) || bookBackCover || Number.isInteger(input.notesPage) && input.notesPage >= 0 ? 3 : 2, slug: slugify(input.slug || input.title),
     template: choice('template', ['letter', 'book', 'note', 'wanted'], 'letter'),
     title: text('title', 'Unbenanntes Dokument'), subtitle: text('subtitle'), author: text('author'),
     recipient: text('recipient'), date: text('date'), location: text('location'), preset: text('preset'),
     font: /^[a-zA-Z0-9 '\-]+$/.test(font) ? font : "'Eagle Lake'", customFont,
     fontSize: clampNumber(input.fontSize, 20, 12, 48), lineHeight: clampNumber(input.lineHeight, 1.75, 1.1, 2.5),
+    ...(input.paragraphSpacing != null ? { paragraphSpacing: clampNumber(input.paragraphSpacing, 15, 0, 32) } : {}),
     letterSpacing: clampNumber(input.letterSpacing, 0, 0, 5), padding: clampNumber(input.padding, 64, 32, 140),
     ink: /^#[a-f0-9]{6}$/i.test(input.ink) ? input.ink : '#302315',
     background: choice('background', ['parchment', 'aged', 'fibers', 'plain', 'dark', 'custom', 'generated'], 'parchment'),
@@ -75,6 +77,9 @@ export function normalizeDocument(input = {}) {
     border: choice('border', ['thin', 'none', 'double', 'heavy', 'ornate'], 'thin'), texture: safeImageUrl(input.texture),
     width: Math.round(clampNumber(input.width, 820, 520, 1200)), height: Math.round(clampNumber(input.height, 1060, 360, 1800)),
     pages: [...pages], currentPage: Math.floor(clampNumber(input.currentPage, 0, 0, pages.length - 1)),
+    ...(Array.isArray(input.bookPageSides) ? { bookPageSides: pages.map((page, index) => ['left', 'right'].includes(input.bookPageSides[index]) ? input.bookPageSides[index] : 'any') } : {}),
+    ...(Number.isInteger(input.notesPage) && input.notesPage >= 0 && input.notesPage < pages.length ? { notesPage: input.notesPage } : {}),
+    ...(bookBackCover ? { bookBackCover } : {}),
     translation: text('translation', '', 100000), category: text('category', '', 100), media,
     image: media.main.image, imagePosition: media.main.position, imageSize: media.main.size, imageFrame: media.main.frame
   };

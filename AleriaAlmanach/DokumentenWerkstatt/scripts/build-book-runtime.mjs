@@ -17,3 +17,12 @@ if (process.argv.includes('--check')) {
   await mkdir(new URL('../assets/', import.meta.url), { recursive: true });
   await writeFile(target, content); console.log('Built the shared Bestiarium book runtime for standalone exports.');
 }
+const notesTarget = new URL('../assets/document-notes.bundle.js', import.meta.url);
+const notesBuild = await build({
+  entryPoints: [fileURLToPath(new URL('../js/notes/document-notes-standalone.js', import.meta.url))],
+  bundle: true, write: false, format: 'iife', minify: true, legalComments: 'inline', target: ['es2022']
+});
+const notesContent = notesBuild.outputFiles[0].text;
+if (process.argv.includes('--check')) {
+  if (await readFile(notesTarget, 'utf8') !== notesContent) throw Error('Notizseiten-Export veraltet: build-book-runtime.mjs ausführen.');
+} else await writeFile(notesTarget, notesContent);

@@ -1,0 +1,113 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-14T12:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Castell Saethwyr"
+      ],
+      "description": "Unmittelbar am Hafen Gwynthors, mit eigenem Burghafen · Hafenburg · Seefahrt, Werften und Küstenschutz",
+      "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png"
+    },
+    "entry": {
+      "id": "castell-saethwyr-bergfried",
+      "title": "Castell Saethwyr – Bergfried",
+      "subtitle": "Wachhalle, Thronsaal und gemeinsamer Esssaal",
+      "type": "Interaktive Szene",
+      "category": "Castell Saethwyr",
+      "image": "./assets/gwynthor-castles/2026-11-14/saethwyr/wachhalle-v1.png",
+      "previewImage": "./assets/gwynthor-castles/2026-11-14/saethwyr/wachhalle-v1.png",
+      "symbol": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+      "icon": "",
+      "stamp": "Celtigerns Wacht · Gwynthor · Aleria",
+      "moduleWidth": 100,
+      "moduleHeight": 100,
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "sessionCastDetails": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Wachhalle des Bergfrieds",
+          "commentThreadKey": "saethwyr-wachhalle",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/saethwyr/wachhalle-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Die Wachhalle des Bergfrieds ist ein heller, steingewölbter Vorraum. Ein Tisch, eine Bank und das Waffengestell stehen seitlich des Durchgangs. Durch die offene Außentür fällt das Licht des Hofes, dahinter liegt der breite Zugang zum Thronsaal.</p><p>Auf goldgelben Wandtüchern steigt der schwarze Drache über hellen Wellen auf. Vom Seitengang gelangt man in Richtung Wassertor. Hier finden Empfang, Wachgespräch und das Warten vor einer Audienz ihren Platz.</p>",
+          "sessionLocation": "Castell Saethwyr · Wachhalle des Bergfrieds",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Wachhalle des Bergfrieds",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Thronsaal über dem Hafen",
+          "commentThreadKey": "saethwyr-thronsaal",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/saethwyr/thronsaal-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Im Thronsaal liegt helles Hafenlicht auf den Steinplatten. Der geschnitzte Herrschaftssitz steht auf einer niedrigen Stufe vor einem goldgelben Behang: Ein schwarzer Drache erhebt sich über hellen Wellen. Dunkles Holz und sparsame Wellenornamente prägen die Einrichtung.</p><p>Zwischen den seitlichen Bänken bleibt Raum für Gäste, Bittsteller und Gesandte. Durch die hohen Fenster sind Masten und Wasser zu sehen. Die Halle verbindet die Würde des Hauses mit dem geschäftigen Hafen direkt vor seinen Mauern.</p>",
+          "sessionLocation": "Castell Saethwyr · Thronsaal über dem Hafen",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Thronsaal über dem Hafen",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Gemeinsamer Esssaal",
+          "commentThreadKey": "saethwyr-esssaal",
+          "sessionPage": true,
+          "image": "./assets/gwynthor-castles/2026-11-14/saethwyr/esssaal-v1.png",
+          "imageWidth": 28,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center top",
+          "sessionIntro": "<p>Lange Tische und feste Bänke füllen den gemeinsamen Esssaal des Hauses. Der Kamin wärmt den Raum, während die Hafenfenster kühles Tageslicht hereinlassen. Brot, ein gedeckter Topf, eine Fischplatte und Krüge stehen auf der Anrichte bereit.</p><p>Gelb-schwarze Läufer und der Drache über Wellen kennzeichnen die Halle. Angehörige des Haushalts und ihre Gäste können hier gemeinsam essen, Neuigkeiten austauschen oder nach einem Tag am Hafen zur Ruhe kommen.</p>",
+          "sessionLocation": "Castell Saethwyr · Gemeinsamer Esssaal",
+          "sessionStatus": "active",
+          "sessionParticipants": [],
+          "sessionHint": "Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.",
+          "sessionEmptyTitle": "Gemeinsamer Esssaal",
+          "sessionEmptyText": "Hier kann eine neue Szene beginnen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

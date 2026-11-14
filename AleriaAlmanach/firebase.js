@@ -19,6 +19,7 @@
       from "./modules/characters/character-save-guard.js?v=20261006-regional-equipment-v2";
 
     import { createCalendarRepository } from './modules/calendar/calendar-repository.mjs';
+    import { createCharacterDirectoryReader } from './modules/characters/character-directory-firebase.mjs';
     import { createItemRegisterFirebase } from './modules/item-register/item-register-firebase.js';
     import { createItemDefinitionsFirebase } from './modules/item-definitions/item-definition-firebase.js';
     import { createQuestBackupClient } from './modules/quests/quest-backup-client.js';
@@ -38,6 +39,8 @@
       notifyAppStatus(getFirebaseErrorMessage(error, 'Firebase-Anmeldung fehlgeschlagen. Änderungen können noch nicht online gespeichert werden.'));
     });
     const db  = getFirestore(app);
+    const loadCharacterDirectoryPage = createCharacterDirectoryReader({ projectId: firebasePublicConfig.projectId,
+      getIdToken: () => authSession.getIdToken() });
     const worldDateReadRepository = createWorldDateReadRepository({ db, sdk: { doc, getDoc, onSnapshot } });
     const commentActivity = createCommentActivityRepository({
       readState: async () => (await getDoc(doc(db, 'comment_activity_meta', 'state'))).data(),
@@ -61,6 +64,7 @@
     const commitCombatStatusCallable = httpsCallable(functions, 'commitCombatStatus', { timeout: 30000 });
     const commitEditCombatEncounterTextCallable = httpsCallable(functions, 'commitEditCombatEncounterText', { timeout: 30000 });
     const commitHerausforderungCallable = httpsCallable(functions, 'commitHerausforderung', { timeout: 30000 });
+    const commitSceneElementCallable = httpsCallable(functions, 'commitSceneElement', { timeout: 60000 });
     const commitInventoryTransferCallable = httpsCallable(functions, 'commitInventoryTransfer', { timeout: 30000 });
     const commitItemRecordCallable = httpsCallable(functions, 'commitItemRecord', { timeout: 30000 });
     const commitLootClaimCallable = httpsCallable(functions, 'commitLootClaim', { timeout: 30000 });
@@ -693,6 +697,11 @@
         });
         return result.data;
       },
+      async sceneElements(payload) {
+        await requireFirebaseUser();
+        const result = await commitSceneElementCallable(cloneSerializableValue(payload));
+        return result.data;
+      },
       async addHerausforderung(entryId, text, deleteCode, metadata = {}) {
         await requireFirebaseUser();
         const deleteCodeHash = await hashDeleteCode(deleteCode);
@@ -850,6 +859,7 @@
         assertCommentMutable(snap.data(), 'gelöscht');
         return deleteDoc(ref);
       },
+      loadCharacterDirectoryPage,
       async loadCharacters(options = {}) {
         try {
           if (Array.isArray(options.ids)) {

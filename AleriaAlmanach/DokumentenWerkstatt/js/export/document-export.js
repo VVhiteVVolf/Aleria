@@ -18,7 +18,7 @@ function loadCanvasLibrary() {
   return canvasLibrary;
 }
 
-async function embedImages(meta) {
+function createImageEmbedder() {
   const images = new Map();
   const embed = async url => {
     if (!url || url.startsWith('data:')) return url;
@@ -30,6 +30,11 @@ async function embedImages(meta) {
     try { return await images.get(url); }
     catch { throw new Error('Ein Bild erlaubt keinen Export. Bitte das Bild herunterladen und über „Bilddatei einfügen“ lokal einbinden.'); }
   };
+  return embed;
+}
+
+async function embedImages(meta) {
+  const embed = createImageEmbedder();
   for (const slot of Object.values(meta.media)) slot.image = await embed(slot.image);
   if (meta.background === 'custom') meta.texture = await embed(meta.texture);
   return meta;
@@ -101,10 +106,20 @@ export async function exportStandalone(input) {
     if (!bookCss.ok || !runtime.ok) throw new Error('Die Bestiarium-Buchdateien für den Export konnten nicht geladen werden.');
     css.splice(1, 0, await bookCss.text());
     bookScript = `<script>${(await runtime.text()).replace(/<\/script/gi, '<\\/script')}</script>`;
+    if (Number.isInteger(meta.notesPage)) {
+      const notesRuntime = await fetch(new URL('../../assets/document-notes.bundle.js', import.meta.url));
+      if (!notesRuntime.ok) throw Error('Die Notizseite für den HTML-Export konnte nicht geladen werden.');
+      bookScript += `<script>${(await notesRuntime.text()).replace(/<\/script/gi, '<\\/script')}</script>`;
+    }
   }
+  const rendered = document.createElement('template'); rendered.innerHTML = buildDocumentHtml(meta);
+  const embed = createImageEmbedder();
+  await Promise.all([...rendered.content.querySelectorAll('img')].map(async image => { image.src = await embed(image.getAttribute('src')); }));
+  // Cover images also live inside template elements, outside querySelectorAll.
+  for (const cover of rendered.content.querySelectorAll('template')) await Promise.all([...cover.content.querySelectorAll('img')].map(async image => { image.src = await embed(image.getAttribute('src')); }));
   const html = `<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${escapeHtml(meta.title)}</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Eagle+Lake&family=EB+Garamond&family=Uncial+Antiqua&family=MedievalSharp&family=IM+Fell+English+SC&family=Pirata+One&family=Macondo&family=UnifrakturMaguntia&family=Special+Elite&family=Homemade+Apple&family=Shadows+Into+Light&family=Rock+Salt&family=Fredericka+the+Great&family=Creepster&display=swap">
   <style>${css.join('\n')}${fontCss}</style></head><body class="document-reader"><main class="reader-main"><details class="reading-panel"><summary>Übersetzen · lesbare Fassung</summary><h1>${escapeHtml(meta.title)}</h1><div class="reading-text">${escapeHtml(readableText(meta))}</div></details>
-  <div class="template-${meta.template}">${buildDocumentHtml(meta).replace('data-workshop-book=""', 'data-book-reader')}</div></main>${bookScript}</body></html>`;
+  <div class="template-${meta.template}">${rendered.innerHTML.replace('data-workshop-book=""', 'data-book-reader')}</div></main>${bookScript}</body></html>`;
   downloadBlob(`${meta.slug}.html`, new Blob([html], { type: 'text/html;charset=utf-8' }));
 }

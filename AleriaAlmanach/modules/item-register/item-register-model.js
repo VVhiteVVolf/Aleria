@@ -95,6 +95,7 @@ export function toLegacyItem(item) {
 export function createGrantedItem(template, { id, characterId, characterName, quantity = 1, now }) {
   template = balanceArmorInventoryItem(template);
   return storeInventoryItem({ id, instanceId: id, templateId: template.templateId || template.id, templateName: template.title,
+    ...(template.documentRef ? { documentRef: structuredClone(template.documentRef) } : {}),
     ...(template.definitionRef ? { definitionRef: { ...template.definitionRef } } : {}),
     offerId: template.section === 'offer' ? template.id : '', registerCategory: template.category,
     itemDbKey: '', originItemDbKey: template.templateId || template.id, itemStorageMode: 'character',

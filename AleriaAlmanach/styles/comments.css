@@ -1290,6 +1290,7 @@
   }
   .comments-scroll:not(.comment-tools-visible) .comment-insert-control,
   .comments-scroll:not(.comment-tools-visible) .comment-delete-btn,
+  .comments-scroll:not(.comment-tools-visible) .comment-pagination [data-comment-page-action],
   .comments-scroll:not(.comment-tools-visible) .comment-narrator-actions {
     display: none;
   }

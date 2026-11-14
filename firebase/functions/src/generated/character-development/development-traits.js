@@ -13,13 +13,14 @@ import { PSYCHOLOGICAL_TRAIT_DEFINITIONS, getPsychologicalTraitOrigin } from './
 import { FAMILY_TRAIT_DEFINITIONS, getFamilyTraitOrigin } from './development-family-traits.js';
 import { GENERAL_TRAIT_DEFINITIONS, GENERAL_TRAIT_ICONS } from './development-general-traits.js';
 import { EXPANSION_TRAIT_DEFINITIONS, getExpansionTraitCategory } from './development-expansion-categories.js';
+import { SPIRITUAL_TRAIT_DEFINITIONS } from './development-spiritual-traits.js';
 const skill = (name, bonus) => ({ name, bonus });
 const definitions = [
   ['feuer-phobie', 'Feuer Phobie', 'Nachteil bei Rettungswürfen gegen feuerbasierte Angriffe. Die Angst erhöht nicht den erlittenen Feuerschaden.', {}, -2,
     { triggerRules: traitSaveDisadvantage('feuerangst',{damageTypes:['feuer','fire']}) }],
   ['naturkind', 'In der Natur aufgewachsen', 'Vertrautheit mit der Wildnis: +1 auf Naturkunde und Mit Tieren umgehen. Keine automatische Expertise.', { skillModifiers: [skill('Naturkunde', 1), skill('Mit Tieren umgehen', 1)] }, 2],
-  ['flink', 'Flinke Füße', '+2 m Bewegung, −1 RK.', { movement: 2, armorClass: -1 }, 0],
-  ['standfest', 'Standfest', '+1 RK, −1 m Bewegung.', { armorClass: 1, movement: -1 }, 2],
+  ['flink', 'Flinke Füße', 'Schnelle, sichere Schritte erleichtern das Ausweichen: +1 RK und +1 auf Akrobatik. Der Bonus bildet bewegliche Abwehr ohne Entfernungszählung ab.', { armorClass: 1, skillModifiers: [skill('Akrobatik', 1)] }, 4],
+  ['standfest', 'Standfest', 'Ein fester, defensiver Stand erleichtert das Abfangen von Angriffen, erschwert aber wendige Manöver: +1 RK, −1 auf Akrobatik.', { armorClass: 1, skillModifiers: [skill('Akrobatik', -1)] }, 2],
   ['wachsam', 'Wachsamer Blick', '+2 passive Wahrnehmung und +1 Initiative.', { passivePerception: 2, initiative: 1 }, 2],
   ['vertraeumt', 'Verträumt', 'Abschweifende Aufmerksamkeit: −1 Initiative und −1 passive Wahrnehmung. Tagträume verleihen kein arkanes Fachwissen.', { initiative: -1, passivePerception: -1 }, -1],
   ['zaeh', 'Zäh wie Leder', '+4 maximale TP; aktuelle TP werden nicht aufgefüllt.', { maximumHitPoints: 4 }, 2],
@@ -28,24 +29,24 @@ const definitions = [
   ['aengstlich', 'Leicht zu erschrecken', '−2 auf Rettungswürfe gegen Furcht. Schreckhaftigkeit verleiht keine zusätzliche Schleichfertigkeit.', { saveModifiers: [{ kind: 'fear', bonus: -2 }] }, -1],
   ['giftfest', 'Giftfeste Konstitution', 'Resistenz gegen Giftschaden; +1 auf Rettungswürfe gegen Gift.', { saveModifiers: [{ kind: 'poison', bonus: 1 }] }, 4, { damageAffinities: [{ damageType: 'gift', response: 'resistant' }] }],
   ['frostempfindlich', 'Frostempfindlich', 'Doppelter Kälteschaden.', {}, -2, { damageAffinities: [{ damageType: 'kälte', response: 'vulnerable' }] }],
-  ['glutgewoehnt', 'An Glut gewöhnt', 'Ruhe beim Umgang mit Feuer: +1 auf Rettungswürfe gegen feuerbasierte Angriffe; −1 Initiative. Gewöhnung halbiert keinen Feuerschaden.', { initiative: -1 }, 0, { triggerRules: traitSaveModifier('glutgewoehnung', 1, { damageTypes: ['feuer', 'fire'] }) }],
-  ['gelehrt', 'Bücherwurm', 'Expertise in Geschichte; −1 auf Athletik.', { skillProficiencies: [{ name: 'Geschichte', proficiency: 'expertise' }], skillModifiers: [skill('Athletik', -1)] }, 2],
+  ['glutgewoehnt', 'An Glut gewöhnt', 'Ruhe beim Umgang mit Feuer: +1 auf Rettungswürfe gegen feuerbasierte Angriffe. Gewöhnung halbiert keinen Feuerschaden.', {}, 1, { triggerRules: traitSaveModifier('glutgewoehnung', 1, { damageTypes: ['feuer', 'fire'] }) }],
+  ['gelehrt', 'Bücherwurm', 'Ausdauernde Beschäftigung mit Überlieferungen: Expertise in Geschichte. Lesen beeinträchtigt nicht automatisch die körperliche Fitness.', { skillProficiencies: [{ name: 'Geschichte', proficiency: 'expertise' }] }, 3],
   ['empathisch', 'Menschenkenner', '+1 auf Motiv erkennen und Überzeugen. Einfühlung unterstützt den Umgang mit Menschen, ersetzt aber keine Ausbildung.', { skillModifiers: [skill('Motiv erkennen', 1), skill('Überzeugen', 1)] }, 1],
   ['schroff', 'Schroffe Ehrlichkeit', '+1 auf Einschüchtern, −1 auf Täuschen.', { skillModifiers: [skill('Einschüchtern', 1), skill('Täuschen', -1)] }, 0],
-  ['silberzunge', 'Silberzunge', 'Expertise in Überzeugen; −1 auf Motiv erkennen.', { skillProficiencies: [{ name: 'Überzeugen', proficiency: 'expertise' }], skillModifiers: [skill('Motiv erkennen', -1)] }, 2],
+  ['silberzunge', 'Silberzunge', 'Überzeugende Wortwahl und sicheres Argumentieren: Expertise in Überzeugen. Andere behalten ihren eigenen Willen.', { skillProficiencies: [{ name: 'Überzeugen', proficiency: 'expertise' }] }, 3],
   ['ungeschickt', 'Zwei linke Hände', '−2 auf Fingerfertigkeit. Ungeschicklichkeit verändert die körperliche Widerstandskraft nicht.', { skillModifiers: [skill('Fingerfertigkeit', -2)] }, -1],
   ['scharfschuetze', 'Ruhige Sehne', '+1 Angriff mit Bögen und Armbrüsten; −1 Initiative.', { weaponModifiers: [{ weaponTypes: ['bow', 'crossbow'], attack: 1 }], initiative: -1 }, 1],
   ['klingenmut', 'Klingenmut', '+1 Schaden mit Schwertern und Dolchen; −1 RK.', { weaponModifiers: [{ weaponTypes: ['sword', 'dagger'], damage: 1 }], armorClass: -1 }, 0],
   ['arkaner-fokus', 'Arkaner Fokus', '+1 Zauberangriff, −1 Waffenangriff.', { spellAttack: 1, attack: -1, attackScope: 'weapon' }, 2],
-  ['zaehe-magie', 'Zähe Magie', '+1 Zauber-SG; −1 m Bewegung.', { spellSaveDc: 1, movement: -1 }, 2],
+  ['zaehe-magie', 'Zähe Magie', 'Deine Magie lässt sich schwer abschütteln, braucht aber einen bedächtigen Aufbau: +1 Zauber-SG, −1 Initiative.', { spellSaveDc: 1, initiative: -1 }, 2],
   ['magiescheu', 'Magiescheu', '−1 Zauberangriff und −1 Zauber-SG.', { spellAttack: -1, spellSaveDc: -1 }, -2],
   ['glueckspilz', 'Glückspilz', 'Bei Angriffen, Proben und Attributsrettungswürfen wird jede natürliche 1 einmal automatisch neu gewürfelt; das zweite Ergebnis gilt. Auch bei Vorteil oder Nachteil wird jeder betroffene W20 genau einmal neu gewürfelt. Zusätzlich +1 auf alle Attributsrettungswürfe.', { savingThrow: 1, naturalOneReroll: true }, 5],
   ['pechvogel', 'Pechvogel', 'Bei Angriffen, Proben und Attributsrettungswürfen gelten natürliche 1, 2 und 3 als kritischer Fehlschlag. Zusätzlich −1 auf alle Attributsrettungswürfe.', { savingThrow: -1, criticalFailureMaximum: 3 }, -5],
-  ['kampfbereit', 'Immer kampfbereit', 'Zu Kampfbeginn 3 temporäre TP; −1 passive Wahrnehmung.', { combatStartTemporaryHitPoints: 3, passivePerception: -1 }, 1],
-  ['konzentriert', 'Eiserne Konzentration', 'Vorteil auf KON-Rettungswürfe zum Aufrechterhalten einer Konzentration; −1 Initiative. Andere KON-Rettungswürfe bleiben unverändert.', { initiative: -1 }, 2, { triggerRules: [
+  ['kampfbereit', 'Immer kampfbereit', 'Entschlossenheit beim Eintritt in einen Kampf: zu Kampfbeginn 3 temporäre TP. Der bestehende Kampfstartbeleg verhindert erneutes Auffüllen durch Wiederbeitritt.', { combatStartTemporaryHitPoints: 3 }, 2],
+  ['konzentriert', 'Eiserne Konzentration', 'Vorteil auf KON-Rettungswürfe zum Aufrechterhalten einer Konzentration. Andere KON-Rettungswürfe bleiben unverändert.', {}, 3, { triggerRules: [
     { id: 'eiserne-konzentration', phase: 'on-concentration-check', recipient: 'target', sourceRelation: 'self', activation: 'passive', frequency: 'always', condition: 'always', effects: { rollMode: 'advantage' } }
   ] }],
-  ['lebhafter-geist', 'Lebhafter Geist', '+1 auf alle Fertigkeitsproben; −1 RK.', { skill: 1, armorClass: -1 }, 3],
+  ['lebhafter-geist', 'Lebhafter Geist', 'Du erfasst neue Situationen und gedankliche Zusammenhänge rasch: +1 Initiative und +1 auf Nachforschungen. Das verleiht keine allgemeine Fachausbildung.', { initiative: 1, skillModifiers: [skill('Nachforschungen', 1)] }, 2],
   ['kraftpaket', 'Kraftpaket', '+2 auf Athletik und +1 Schaden mit Äxten und Keulen; −1 auf Heimlichkeit.', { skillModifiers: [skill('Athletik', 2), skill('Heimlichkeit', -1)], weaponModifiers: [{ weaponTypes: ['axe', 'mace'], damage: 1 }] }, 2],
   ['duennhaeutig', 'Dünnhäutig', '−1 auf CHA-Rettungswürfe. Empfindlichkeit verleiht keine zusätzliche Bühnenfertigkeit.', { saveAttributeModifiers: [{ attributeKey: 'charisma', bonus: -1 }] }, -1]
 ];
@@ -68,11 +69,11 @@ const traitTags = id => ['Charakterentwicklung', bodyIds.has(id) ? 'Körper' : '
 export const DEVELOPMENT_TRAITS = Object.freeze([...definitions, ...BODY_TRAIT_DEFINITIONS, ...EXTRA_TRAIT_DEFINITIONS, ...INSPIRED_TRAIT_DEFINITIONS,
   ...UNIQUE_TRAIT_DEFINITIONS, ...APTITUDE_TRAIT_DEFINITIONS, ...BLOODLINE_TRAIT_DEFINITIONS,
   ...THERIANTHROPY_TRAIT_DEFINITIONS, ...SYMBIOSIS_TRAIT_DEFINITIONS, ...PSYCHOLOGICAL_TRAIT_DEFINITIONS,
-  ...FAMILY_TRAIT_DEFINITIONS, ...GENERAL_TRAIT_DEFINITIONS, ...EXPANSION_TRAIT_DEFINITIONS].map(([id, name, description, mechanics, cost, extra = {}]) => ({
+  ...FAMILY_TRAIT_DEFINITIONS, ...GENERAL_TRAIT_DEFINITIONS, ...EXPANSION_TRAIT_DEFINITIONS, ...SPIRITUAL_TRAIT_DEFINITIONS].map(([id, name, description, mechanics, cost, extra = {}]) => ({
   id: `development-trait-${id}`, name, description, cost,
   icon: extra.icon || `/AleriaAlmanach/assets/development-traits/web/${GENERAL_TRAIT_ICONS[id] || id}.webp`,
-  type: 'trait', active: true, target: 'Selbst', duration: 'Dauerhaft', appliesWhen: getFamilyTraitOrigin(`development-trait-${id}`) ? 'Angeborenes Familienerbe; nur die höchste aktive Stufe je Linie wirkt' : getBloodlineTraitOrigin(`development-trait-${id}`) ? 'Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren' : 'Solange ausgewählt und aktiv',
-  tags: traitTags(id), mechanics: { ...mechanics, ...(extra.damageAffinities ? { damageAffinities: traitDamageAffinities(extra.damageAffinities) } : {}) },
+  type: 'trait', active: true, target: 'Selbst', duration: 'Dauerhaft', appliesWhen: extra.appliesWhen || (getFamilyTraitOrigin(`development-trait-${id}`) ? 'Angeborenes Familienerbe; nur die höchste aktive Stufe je Linie wirkt' : getBloodlineTraitOrigin(`development-trait-${id}`) ? 'Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren' : 'Solange ausgewählt und aktiv'),
+  tags: [traitTags(id), extra.tags].filter(Boolean).join(' · '), mechanics: { ...mechanics, ...(extra.damageAffinities ? { damageAffinities: traitDamageAffinities(extra.damageAffinities) } : {}) },
   triggerRules: extra.triggerRules || []
 })).concat(HEALTH_TRAIT_DEFINITIONS.map(trait => ({
   id: trait.id, name: trait.name, description: trait.description, cost: trait.cost, icon: trait.icon,

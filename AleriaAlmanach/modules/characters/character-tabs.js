@@ -44,6 +44,11 @@ function loadLocalCharacterDatabaseState() {
   return _localCharacterDatabaseRequest;
 }
 
+async function loadLocalCharacterDirectoryState() {
+  const module = await import('./character-directory-local.mjs?v=20261113-register-v2');
+  return module.createLocalCharacterDirectory();
+}
+
 function loadCharacters() {
   if (_charactersLoaded && _charTabsLoaded && !getMissingCanonicalCharacterIds(_characters).length) {
     // Archive navigation recreates the host even when records remain cached.
@@ -104,6 +109,23 @@ async function completeCanonicalCharacterRecords(records, previousRecords) {
   return result;
 }
 
+async function loadCharacterTabData() {
+  if (_charTabsLoaded) return;
+  const onlineSaved = window._fb?.loadCharTabs ? await window._fb.loadCharTabs() : null;
+  const saved = onlineSaved?.tabs ? onlineSaved : (await loadLocalCharacterDatabaseState()).database?.charTabs;
+  if (saved?.tabs) {
+    _charTabs = saved.tabs;
+    _charTabMap = saved.map || {};
+    _charSubtabs = saved.subtabs && typeof saved.subtabs === 'object' ? saved.subtabs : {};
+    _charSubtabMap = saved.subtabMap && typeof saved.subtabMap === 'object' ? saved.subtabMap : {};
+    _hiddenBuiltinCharacterIds = new Set(Array.isArray(saved.hiddenBuiltins) ? saved.hiddenBuiltins : []);
+  }
+  if (!_charTabs.includes('Alle')) _charTabs.unshift('Alle');
+  _charTabs = _charTabs.filter(tab => tab !== CHARACTER_ARCHIVE_TAB);
+  _charTabsLoaded = true;
+  normalizeCharTabState();
+}
+
 async function loadCharacterRegisterData() {
   const initialCharacters = [..._characters];
   const previousRecords = new Map(initialCharacters.map(record => [String(record?.id || '').trim(), record]));
@@ -154,28 +176,7 @@ async function loadCharacterRegisterData() {
   _characters = preserveCharacterUpdatesDuringLoad(completedCharacters, previousRecords);
   _charactersLoaded = true;
 
-  if (!_charTabsLoaded) {
-    const onlineSaved = window._fb?.loadCharTabs ? await window._fb.loadCharTabs() : null;
-    const saved = onlineSaved?.tabs ? onlineSaved : localState.database?.charTabs;
-    if (saved && saved.tabs) {
-      _charTabs = saved.tabs;
-      _charTabMap = saved.map || {};
-      _charSubtabs = saved.subtabs && typeof saved.subtabs === 'object' ? saved.subtabs : {};
-      _charSubtabMap = saved.subtabMap && typeof saved.subtabMap === 'object' ? saved.subtabMap : {};
-      _hiddenBuiltinCharacterIds = new Set(Array.isArray(saved.hiddenBuiltins) ? saved.hiddenBuiltins : []);
-    } else {
-      _charTabs = ['Alle'];
-      _charTabMap = {};
-      _charSubtabs = {};
-      _charSubtabMap = {};
-      _hiddenBuiltinCharacterIds = new Set();
-    }
-    _charTabsLoaded = true;
-  }
-
-  if (!_charTabs.includes('Alle')) _charTabs.unshift('Alle');
-  _charTabs = _charTabs.filter(tab => tab !== CHARACTER_ARCHIVE_TAB);
-  normalizeCharTabState();
+  await loadCharacterTabData();
 
   renderCharSubtabs();
   renderCharGrid();
@@ -545,7 +546,7 @@ function createCharacterTabButton(tab) {
   }
 
   const count = (_charTabMap[tab] || []).filter(id => {
-    const char = getCharacterById(id);
+    const char = typeof AleriaCharacterDirectory !== 'undefined' ? AleriaCharacterDirectory.getById(id) : getCharacterById(id);
     return char && (_showArchivedCharacters || !char.archived);
   }).length;
   const label = document.createElement('span');
@@ -585,7 +586,7 @@ function createCharacterTabButton(tab) {
 }
 
 function createCharacterArchiveTabButton() {
-  const archivedCount = getAllCharacterRecords().filter(char => char.archived).length;
+  const archivedCount = (typeof AleriaCharacterDirectory !== 'undefined' ? AleriaCharacterDirectory.getRecords() : getAllCharacterRecords()).filter(char => char.archived).length;
   const btn = document.createElement('button');
   btn.className = 'char-subtab-btn' + (_activeCharTab === CHARACTER_ARCHIVE_TAB ? ' active' : '');
   btn.type = 'button';
@@ -614,7 +615,7 @@ function renderCharacterSubtabRow(parent) {
       ? (_charTabMap[parent] || [])
       : ((_charSubtabMap[parent] || {})[subtab] || []);
     const count = ids.filter(id => {
-      const char = getCharacterById(id);
+      const char = typeof AleriaCharacterDirectory !== 'undefined' ? AleriaCharacterDirectory.getById(id) : getCharacterById(id);
       return char && (_showArchivedCharacters || !char.archived);
     }).length;
 
@@ -749,7 +750,10 @@ document.addEventListener('click', handleCharacterSubtabClick);
 window.AleriaCharacters = Object.freeze({
   getAll: () => getAllCharacterRecords().map(cloneCharacterRecord),
   getById: id => cloneCharacterRecord(getCharacterById(id)),
-  reload: loadCharacters
+  reload: loadCharacters,
+  ensureDirectory: () => AleriaCharacterDirectory.load(),
+  getRegisterRecords: () => AleriaCharacterDirectory.getRecords(),
+  ensureRecord: id => AleriaCharacterDirectory.ensureRecord(id)
 });
 
 function assignCharToTab(charId, tab, options = {}) {

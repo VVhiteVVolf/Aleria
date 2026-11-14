@@ -28,6 +28,7 @@ let _characterRegisterSearchTimer = null;
 let _characterRegisterFamilyLoadState = 'idle';
 
 function renderCharacterRegisterGenealogyReadiness(grid) {
+  if (_characterRegisterViewMode !== 'families') return false;
   const genealogy = window.AleriaCharacterGenealogy;
   if (typeof genealogy?.getFamilyMemberships === 'function'
     || typeof genealogy?.ensureFamilyMemberships !== 'function') return false;
@@ -160,10 +161,12 @@ function hasCharacterRegisterSearch() {
 }
 
 function filterCharacterRegisterEntries(chars) {
-  const needle = _characterRegisterSearch.trim().toLocaleLowerCase('de');
+  const normalize = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('de');
+  const needle = normalize(_characterRegisterSearch.trim());
   if (!needle) return Array.isArray(chars) ? chars : [];
+  const words = needle.split(/\s+/).filter(Boolean);
   return (Array.isArray(chars) ? chars : [])
-    .filter(char => getCharacterRegisterSearchText(char).includes(needle));
+    .filter(char => { const text = normalize(getCharacterRegisterSearchText(char)); return words.every(word => text.includes(word)); });
 }
 
 function getCharacterRegisterManualGroupLabel(char) {
@@ -290,36 +293,33 @@ function renderCharacterRegisterViewToolbar(grid) {
   toolbar.className = 'char-register-view-toolbar';
   toolbar.setAttribute('aria-label', 'Charakteransicht und Sortierung');
   toolbar.innerHTML = `
-    <div class="char-register-view-copy">
-      <span>Registeransicht</span>
-      <small>${getCharacterRegisterViewDescription()}</small>
-    </div>
-    <div class="char-register-view-options" role="group" aria-label="Charaktere gruppieren nach">
-      ${CHARACTER_REGISTER_VIEW_OPTIONS.map(option => `
-        <button type="button"
-          class="${option.value === _characterRegisterViewMode ? 'active' : ''}"
-          data-character-register-action="set-view"
-          data-view-mode="${option.value}"
-          aria-pressed="${option.value === _characterRegisterViewMode ? 'true' : 'false'}"
-          ${_charOrganizeMode && option.value !== 'collections' ? 'disabled' : ''}>${option.label}</button>`).join('')}
-    </div>
-    <label class="char-register-sort-control">
-      <span>Sortierung</span>
-      <select data-character-register-action="set-sort" aria-label="Charaktere sortieren">
-        ${CHARACTER_REGISTER_SORT_OPTIONS.map(option => `
-          <option value="${option.value}"${option.value === _characterRegisterSortMode ? ' selected' : ''}>${option.label}</option>`).join('')}
-      </select>
-    </label>
     <div class="char-register-find-row">
       <label class="char-register-find-control">
-        <span>Figur finden</span>
-        <input type="search" data-character-register-action="search" value="${escapeCharacterRegisterMarkup(_characterRegisterSearch)}" placeholder="Name, Haus, Rolle, Ort oder Alias">
+        <span>Wen suchst du?</span>
+        <input type="search" data-character-register-action="search" value="${escapeCharacterRegisterMarkup(_characterRegisterSearch)}" placeholder="Name, Haus, Rolle, Ort oder Alias …" aria-describedby="char-register-search-hint">
       </label>
+      ${hasCharacterRegisterSearch() ? '<button class="char-register-search-clear" type="button" data-character-register-action="clear-search">Suche leeren</button>' : ''}
       ${_charOrganizeMode ? `<div class="char-register-group-controls" aria-label="Gruppen ein- oder ausklappen">
         <button type="button" data-character-grid-action="collapse-all-groups">Alle einklappen</button>
         <button type="button" data-character-grid-action="expand-all-groups">Alle aufklappen</button>
       </div>` : ''}
-    </div>`;
+    </div>
+    <small class="char-register-search-hint" id="char-register-search-hint">Mehrere Suchwörter kombinieren, zum Beispiel Name und Ort.</small>
+    <div class="char-register-view-options" role="group" aria-label="Charaktere gruppieren nach">
+      ${CHARACTER_REGISTER_VIEW_OPTIONS.map(option => `
+        <button type="button" data-tone="${AleriaCharacterRegisterIcons.tone(option.value)}"
+          class="${option.value === _characterRegisterViewMode ? 'active' : ''}"
+          data-character-register-action="set-view" data-view-mode="${option.value}"
+          aria-pressed="${option.value === _characterRegisterViewMode}"
+          ${_charOrganizeMode && option.value !== 'collections' ? 'disabled' : ''}>${AleriaCharacterRegisterIcons.render(option.value)}<span>${option.label}</span></button>`).join('')}
+    </div>
+    <label class="char-register-sort-control">
+      <span>Sortierung</span>
+      <select data-character-register-action="set-sort" aria-label="Charaktere sortieren">
+        ${CHARACTER_REGISTER_SORT_OPTIONS.map(option => `<option value="${option.value}"${option.value === _characterRegisterSortMode ? ' selected' : ''}>${option.label}</option>`).join('')}
+      </select>
+    </label>
+    <div class="char-register-view-copy"><small>${getCharacterRegisterViewDescription()}</small></div>`;
   grid.appendChild(toolbar);
 }
 
@@ -331,6 +331,13 @@ function handleCharacterRegisterViewClick(event) {
     event.preventDefault();
     _characterRegisterFamilyLoadState = 'idle';
     if (typeof renderCharGrid === 'function') renderCharGrid();
+    return;
+  }
+  if (trigger.dataset.characterRegisterAction === 'clear-search') {
+    event.preventDefault();
+    _characterRegisterSearch = '';
+    renderCharGrid();
+    document.querySelector('#char-grid [data-character-register-action="search"]')?.focus();
     return;
   }
   if (trigger.dataset.characterRegisterAction !== 'set-view') return;

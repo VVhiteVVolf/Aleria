@@ -10,7 +10,8 @@ parser=argparse.ArgumentParser()
 parser.add_argument('--diagnostics',default='diagnostics/gwynthor-seven-20261102')
 diagnostics=(root/parser.parse_args().diagnostics).resolve()
 assert diagnostics.is_relative_to(root), 'Diagnostics must stay inside the workspace'
-destinations={'items':'AleriaAlmanach/assets/gwynthor-seven/items'}
+destinations={'items':'AleriaAlmanach/assets/gwynthor-seven/items',
+              'scene-elements':'AleriaAlmanach/assets/scene-elements/icons'}
 trait_kinds=('traits','body-traits','extra-traits','inspired-traits','unique-traits','bloodline-traits','theriantrophie-traits','health-traits','psychological-traits')
 destinations.update({kind:'AleriaAlmanach/assets/development-traits' for kind in trait_kinds})
 for kind,destination in destinations.items():

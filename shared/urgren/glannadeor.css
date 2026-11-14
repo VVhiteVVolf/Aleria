@@ -1,0 +1,39 @@
+:root { color-scheme: light; font-family: Georgia, 'Times New Roman', serif; color: #332b23; background: #ded4bc; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 24px; }
+a { color: #694225; text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid #86672f; outline-offset: 4px; }
+.glannadeor-skip { position: absolute; left: 12px; top: -100px; padding: 12px; background: #fff6dd; }
+.glannadeor-skip:focus { top: 12px; }
+.glannadeor-document { max-width: 1040px; margin: auto; padding: clamp(24px, 5vw, 64px); background: #f4ebd4; border: 1px solid #ad9570; line-height: 1.75; overflow-wrap: anywhere; }
+.glannadeor-document header { margin: 32px 0; border-bottom: 1px solid #bda77e; padding-bottom: 24px; }
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.15; font-weight: normal; }
+h2 { font-size: 1.65rem; line-height: 1.35; margin-top: 36px; }
+h3 { font-size: 1.15rem; margin-bottom: 8px; }
+.glannadeor-eyebrow { font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; }
+.glannadeor-note { background: #e9dec2; padding: 16px 24px; border-left: 3px solid #8e6d3d; }
+.glannadeor-cover { float: right; width: 35%; margin: 0 0 24px 28px; }
+.glannadeor-cover img { display: block; width: 100%; height: auto; }
+.glannadeor-cast { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 24px; }
+.glannadeor-cast div { border-bottom: 1px solid #c8b997; padding-bottom: 12px; }
+.glannadeor-cast dt { font-weight: bold; }
+.glannadeor-cast dd { margin: 0; }
+.glannadeor-acts { clear: both; display: flex; flex-wrap: wrap; gap: 10px 24px; padding: 20px 0; border-block: 1px solid #bda77e; }
+.glannadeor-act { clear: both; padding-top: 12px; }
+.glannadeor-direction { font-style: italic; color: #695a46; border-left: 2px solid #c1ad88; padding-left: 16px; }
+.glannadeor-verse { margin-block: 30px; break-inside: avoid; }
+.glannadeor-verse h3 { color: #76613e; font-size: .85rem; letter-spacing: .08em; }
+.glannadeor-verse p { margin-top: 0; font-size: 1.1rem; }
+footer { clear: both; margin-top: 36px; border-top: 1px solid #bda77e; padding-top: 20px; }
+@media (max-width: 600px) {
+  body { padding: 8px; }
+  .glannadeor-cover { float: none; width: min(80%, 300px); margin: 0 auto 24px; }
+  .glannadeor-cast { grid-template-columns: 1fr; }
+  .glannadeor-note { padding: 12px 16px; }
+}
+@media print {
+  body { padding: 0; background: white; }
+  .glannadeor-document { max-width: none; border: 0; padding: 0; background: white; }
+  .glannadeor-document > nav, .glannadeor-skip, .glannadeor-acts, footer { display: none; }
+  .glannadeor-act { break-before: page; }
+}

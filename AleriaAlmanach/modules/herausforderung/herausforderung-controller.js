@@ -9,7 +9,7 @@ import {
   getHerausforderungValidationIssues,
   normalizeHerausforderungApproach,
   normalizeHerausforderungEvent
-} from './herausforderung-model.js?v=20261016-check-policy-v1';
+} from './herausforderung-model.js?v=20261113-scene-elements-v1';
 import { collectHerausforderungProgress } from './herausforderung-progress.js?v=20261015-graded-challenges-v1';
 import {
   ensureHerausforderungDialog,
@@ -19,7 +19,7 @@ import {
   setHerausforderungSubmitting,
   updateHerausforderungDraft,
   showHerausforderungValidation
-} from './herausforderung-ui.js?v=20261016-check-policy-v1';
+} from './herausforderung-ui.js?v=20261113-scene-elements-v1';
 import { bindSkillIconTooltips } from '../skill-checks/skill-icon-view.js?v=20261016-check-policy-v1';
 import { mountHerausforderungRewardEditor, refreshHerausforderungRewardTemplates } from './herausforderung-rewards-ui.js?v=20261104-startup-v1';
 import { requestItemRegister } from '../item-register/item-register-demand.js?v=20261104-startup-v1';
@@ -28,9 +28,14 @@ import { mountChallengeAudience, refreshChallengeAudience } from './herausforder
 import { resolveCombatProfile } from '../combat/combat-profile-resolver.js';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../combat/combat-state-model.js';
 import { getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
-import { mountHerausforderungExchange } from './herausforderung-exchange-ui.js?v=20261016-check-policy-v1';
+import { mountHerausforderungExchange } from './herausforderung-exchange-ui.js?v=20261113-scene-elements-v1';
 import { createHerausforderungAttemptPicker } from './herausforderung-attempt-dialog.js?v=20261016-check-policy-v1';
 import { bindChallengeSceneImageEvents, readChallengeSceneImage, setChallengeSceneImage } from './herausforderung-scene-image-ui.js';
+import { createSceneElementAuthoringEditor } from '../scene-elements/scene-element-authoring-ui.js';
+import { SCENE_ELEMENT_TYPES } from '../scene-elements/scene-element-model.js';
+import { createSceneElementsController } from '../scene-elements/scene-elements-controller.js';
+import { createSceneElementAiScene } from '../scene-elements/scene-element-ai-guide.js';
+import { collectSceneElementParticipants } from '../scene-elements/scene-element-conditions.js';
 
 bindSkillIconTooltips(document);
 bindChallengeSceneImageEvents(document);
@@ -47,7 +52,32 @@ let draftAudience = normalizeChallengeAudience();
 let draftCombatBound = false;
 let dialogCombatContext = { encounterId: '', participants: [] };
 let renderEncounter = null;
+let authoringEditor = null;
+let preparedElementId = '';
 const attemptPicker = createHerausforderungAttemptPicker();
+const sceneElements = createSceneElementsController({
+  renderChallenge: comment => renderHerausforderungComment(comment, 0, { progress: renderProgress, encounter: renderEncounter,
+    actors: globalThis.getAvailableCommentCharacters?.() || [] })
+});
+
+function ensureElementEditor(root) {
+  if (authoringEditor) return authoringEditor;
+  authoringEditor = createSceneElementAuthoringEditor(root, {
+    getActors: () => globalThis.getAvailableCommentCharacters?.() || [],
+    getSources: () => (globalThis.getCachedCommentsForThread?.(activeThreadId) || []).flatMap(comment =>
+      ['item', 'puzzle'].includes(comment.herausforderung?.elementType) ? [{ id: comment.id, title: comment.herausforderung.title }]
+        : comment.sceneElementSignal?.visible
+          ? [{ id: comment.sceneElementSignal.id, title: comment.sceneElementSignal.title }] : []),
+    onChange({ typeChanged, elementType }) {
+      if (typeChanged) {
+        const title = root.querySelector('[data-herausforderung-field="title"]');
+        if (SCENE_ELEMENT_TYPES.some(type => type.label === title.value)) title.value = SCENE_ELEMENT_TYPES.find(type => type.id === elementType).label;
+      }
+      updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] });
+    }
+  });
+  return authoringEditor;
+}
 
 function defaultApproaches() {
   return [normalizeHerausforderungApproach({}, 0)];
@@ -78,6 +108,7 @@ function importDraft(event, issues) {
   draftAudience = normalizeChallengeAudience(event.audience);
   draftTargetActor = normalizeChallengeTarget(event.targetActor);
   draftCombatBound = event.combatBound;
+  ensureElementEditor(root).set(event, { prepared: !!preparedElementId });
   operationId = crypto.randomUUID();
   submittedDraft = '';
   renderDialog();
@@ -95,6 +126,7 @@ function openDialog(comment = null) {
   activeThreadId = String(globalThis.getCurrentCommentThreadId?.() || '');
   if (!activeThreadId) return;
   editingComment = comment?.herausforderung ? comment : null;
+  preparedElementId = editingComment?._sceneElementId || '';
   draftApproaches = defaultApproaches();
   draftAudience = normalizeChallengeAudience();
   draftTargetActor = normalizeChallengeTarget();
@@ -102,10 +134,13 @@ function openDialog(comment = null) {
   const states = deriveCombatStateFromComments(comments);
   const profiles = (globalThis.getAvailableCommentCharacters?.() || []).map(actor => overlayCombatHitPointState(resolveCombatProfile(actor), states.get(actor.id)));
   dialogCombatContext = { ...createChallengeCombatContext(comments, profiles, { encounterId: editingComment?.herausforderung?.combatBound ? editingComment.herausforderung.combatContext?.encounterId : '' }), actors: (globalThis.getAvailableCommentCharacters?.() || []).map(actor => ({ actorId: actor.id, name: actor.name, persistence: resolveCombatProfile(actor).persistence })) };
+  dialogCombatContext.scene = createSceneElementAiScene(thread, comments);
+  dialogCombatContext.participantIds = collectSceneElementParticipants(comments).map(actor => actor.actorId);
   draftCombatBound = !!dialogCombatContext.encounterId;
   operationId = crypto.randomUUID();
   submittedDraft = '';
   const root = ensureHerausforderungDialog();
+  ensureElementEditor(root).set(editingComment?.herausforderung || {}, { prepared: !!preparedElementId });
   const registerOperationId = operationId;
   requestItemRegister().then(() => {
     if (activeThreadId && operationId === registerOperationId && !submitting) refreshHerausforderungRewardTemplates(root);
@@ -137,6 +172,7 @@ function closeDialog() {
   globalThis.deactivateDialog?.('herausforderung-overlay');
   activeThreadId = '';
   editingComment = null;
+  preparedElementId = '';
   draftApproaches = [];
   operationId = '';
   submittedDraft = '';
@@ -177,18 +213,27 @@ function togglePreferredSkill(index, skillId, checked) {
 
 function buildDraft() {
   const root = document.getElementById('herausforderung-overlay');
+  const element = authoringEditor?.read() || { elementType: 'challenge' };
+  const narrative = element.elementType === 'narration';
   return {
+    ...element,
+    ...(editingComment?.herausforderung?.reaction ? { reaction: editingComment.herausforderung.reaction } : {}),
     title: root?.querySelector('[data-herausforderung-field="title"]')?.value || 'Herausforderung',
     publicDescription: root?.querySelector('[data-herausforderung-field="publicDescription"]')?.value || '',
     sceneImage: readChallengeSceneImage(root),
-    targetActor: draftTargetActor,
-    audience: draftAudience, combatBound: draftCombatBound || draftAudience.mode === 'combatants' || challengeRequiresCombat(draftApproaches),
-    approaches: draftApproaches
+    targetActor: narrative ? { mode: 'none' } : draftTargetActor,
+    audience: narrative ? { mode: 'all', actorIds: [] } : draftAudience,
+    combatBound: !narrative && (draftCombatBound || draftAudience.mode === 'combatants' || challengeRequiresCombat(draftApproaches)),
+    approaches: narrative ? [] : draftApproaches
   };
 }
 
 async function submitEvent() {
   if (submitting || !activeThreadId) return;
+  if (String(globalThis.getCurrentCommentThreadId?.() || '') !== activeThreadId) {
+    setHerausforderungStatus('Die Szene wurde gewechselt. Öffne die Vorbereitung in der gewünschten Szene erneut.', 'error');
+    return;
+  }
   const draft = buildDraft();
   if (draft.combatBound && !dialogCombatContext.encounterId) {
     setHerausforderungStatus('Für diese Zielgruppe oder Wirkung ist ein aktiver Kampf erforderlich.', 'error');
@@ -216,7 +261,8 @@ async function submitEvent() {
       commentKind: 'herausforderung-event',
       herausforderung: event,
       operationId,
-      ...(editingComment ? { commentId: editingComment.id, expectedRevision: editingComment.herausforderungRevision || 0 } : {}),
+      ...(preparedElementId ? { sceneElementId: preparedElementId, expectedRevision: editingComment.herausforderungRevision || 0 }
+        : editingComment ? { commentId: editingComment.id, expectedRevision: editingComment.herausforderungRevision || 0 } : {}),
       orderKey: globalThis.getNextCommentOrderKey?.(threadId, null) ?? Date.now()
     });
     published = true;
@@ -262,6 +308,7 @@ function attemptApproach(trigger) {
     commentId: trigger.dataset.commentId, approachId: trigger.dataset.approachId };
   const target = getAvailableAttemptTarget(request);
   if (!target) return;
+  sceneElements.close();
   const opened = attemptPicker.open(target, skillId => {
     const latest = getAvailableAttemptTarget(request);
     if (!latest) return;
@@ -281,6 +328,7 @@ document.addEventListener('click', event => {
   if (submitting) return;
   if (action === 'open') openDialog();
   if (action === 'edit') {
+    sceneElements.close();
     const comments = globalThis.getCachedCommentsForThread?.(globalThis.getCurrentCommentThreadId?.() || '') || [];
     const comment = comments.find(comment => comment.id === trigger.dataset.commentId && isHerausforderungComment(comment));
     if (comment) openDialog(comment);
@@ -340,6 +388,7 @@ document.addEventListener('keydown', event => {
 
 globalThis.AleriaHerausforderung = Object.freeze({
   open: openDialog,
+  openPrepared: ({ id, event, revision }) => openDialog({ id: 'signal-' + id, herausforderung: event, herausforderungRevision: revision, _sceneElementId: id }),
   setRenderContext(comments = []) { renderProgress = collectHerausforderungProgress(comments); renderEncounter = getActiveCombatEncounter(comments); },
   isComment: comment => isHerausforderungComment(comment),
   renderComment: (comment, index) => {

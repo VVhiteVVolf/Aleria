@@ -53,7 +53,19 @@
 .workshop-book-reader .book-toolbar > button { color: #dacdaf; }
 .workshop-book-reader .book-prose { font-family: var(--preview-font), Georgia, serif; font-size: var(--preview-size); line-height: var(--doc-line-height); letter-spacing: var(--doc-letter-spacing, 0px); color: var(--ink); }
 .workshop-book-reader .book-prose h2, .workshop-book-reader .book-prose h3 { color: var(--ink); }
+.workshop-book-reader .book-prose p { margin-bottom: var(--doc-paragraph-spacing, 15px); }
 .workshop-book-reader .book-article-source { background: #f2e7cf; padding: 26px; }
+.workshop-book-reader .book-prose img, .paper-shell .doc-content img { display: block; max-width: 100%; height: auto; object-fit: contain; margin-inline: auto; }
+.workshop-book-reader .book-prose figure img { max-height: calc(var(--book-height) - 360px); }
+.workshop-book-reader .book-prose figcaption { color: var(--ink); }
+.document-notes { display: grid; gap: 10px; font: inherit; }
+.document-notes label { display: grid; gap: 8px; }
+.document-notes textarea { display: block; width: 100%; min-width: 0; height: clamp(120px, calc(var(--book-height, 650px) - 410px), 270px); resize: none; box-sizing: border-box; border: 1px solid #856b47; padding: 10px; background: #fffaf04d; color: #302315; font: inherit; line-height: 1.5; }
+.document-notes-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.document-notes-actions button { min-height: 40px; padding: 6px 10px; color: #302315; background: #e4d3ae; border: 1px solid #856b47; font: inherit; cursor: pointer; }
+.document-notes-actions button:disabled { opacity: .6; cursor: default; }
+.document-notes [role="status"] { margin: 0; font-size: 12px; line-height: 1.4; }
+.document-notes pre { max-height: 90px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; font-size: 12px; }
 .workshop-book-reader .book-controls p, .workshop-book-reader .book-help { color: #c0af8e; }
 .workshop-book-export .book-leaf { position: relative; flex-shrink: 0; }
 .workshop-book-export .book-mount { display: flex; flex-direction: column; gap: 20px; }

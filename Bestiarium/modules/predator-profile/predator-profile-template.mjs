@@ -1,4 +1,5 @@
 import { renderProfileMetrics } from '../profile-metrics/profile-metrics-template.mjs';
+import { renderPredatorReadingLinks } from './predator-reading-links.mjs';
 
 const VERSION = '20260907-predator-profile-v1';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
@@ -32,6 +33,8 @@ function renderSibling(link, direction) {
 }
 
 export function renderPredatorProfile(record, navigation = {}) {
+  const subgroupLink = record.subgroup ? `<a href="../${escape(record.subgroup.id)}/index.html">${escape(record.subgroup.title)}</a><span aria-hidden="true">/</span>` : '';
+  const overviewHref = record.subgroup ? `../${record.subgroup.id}/index.html` : `../index.html#gruppe-${record.group.subgroupId}`;
   return `<!doctype html>
 <!-- Generated from profil.json by Bestiarium/scripts/build-predator-profiles.mjs. -->
 <html lang="de">
@@ -41,16 +44,16 @@ export function renderPredatorProfile(record, navigation = {}) {
   <link rel="icon" href="../../../../../IconOrdner/ReiterIcons/Bestiarium-register.webp" type="image/webp">
   <link rel="stylesheet" href="../../../../modules/book-shell/book-shell.css?v=${VERSION}">
   <link rel="stylesheet" href="../../../../modules/profile-metrics/profile-metrics.css?v=${VERSION}">
-  <link rel="stylesheet" href="../../../../modules/predator-profile/predator-profile.css?v=${VERSION}">
+  <link rel="stylesheet" href="../../../../modules/predator-profile/predator-profile.css?v=${VERSION}">${record.furtherReading?.length ? '\n  <link rel="stylesheet" href="../../../../modules/predator-profile/predator-reading-links.css?v=20261114">' : ''}
 </head>
 <body>
   <a class="skip-link" href="#feldbewertung">Zum Raubtierdossier</a>
   <div class="bestiary-page predator-profile" data-predator-profile data-profile-id="${escape(record.id)}">
     <header class="masthead" id="anfang"><a class="almanach-link" href="../../../../index.html#tiere"><span aria-hidden="true">←</span> Aleria <span class="masthead-divider">/</span> Bestiarium</a><span class="masthead-edition">Thalenorische Akademie · Feldarchiv der Raubtiere</span><span class="masthead-mark" aria-hidden="true">A</span></header>
     <main>
-      <nav class="predator-profile-breadcrumb" aria-label="Brotkrumennavigation"><a href="../../../../index.html">Bestiarium</a><span aria-hidden="true">/</span><a href="../../index.html">Raubtiere</a><span aria-hidden="true">/</span><a href="../index.html">${escape(record.group.title)}</a><span aria-hidden="true">/</span><span aria-current="page">${escape(record.name)}</span></nav>
+      <nav class="predator-profile-breadcrumb" aria-label="Brotkrumennavigation"><a href="../../../../index.html">Bestiarium</a><span aria-hidden="true">/</span><a href="../../index.html">Raubtiere</a><span aria-hidden="true">/</span><a href="../index.html">${escape(record.group.title)}</a><span aria-hidden="true">/</span>${subgroupLink}<span aria-current="page">${escape(record.name)}</span></nav>
       <section class="predator-profile-hero" aria-labelledby="predator-title">
-        <div class="predator-profile-hero-copy"><div class="predator-profile-seal">${picture(record.icon, { className: 'predator-profile-icon', eager: true })}<span>Feldarchiv</span></div><p class="eyebrow">${escape(record.continent)} · ${escape(record.region)} · Archivblatt ${escape(record.folio)}</p><h1 id="predator-title">${escape(record.name)}</h1><p class="predator-profile-classification">${escape(record.classification)}</p><p class="predator-profile-lead">${escape(record.summary)}</p><div class="predator-profile-actions"><a class="ink-button" href="#feldbewertung">Das Dossier lesen <span aria-hidden="true">↓</span></a><a href="../index.html#gruppe-${escape(record.group.subgroupId)}">Zur Artenübersicht ↗</a></div></div>
+        <div class="predator-profile-hero-copy"><div class="predator-profile-seal">${picture(record.icon, { className: 'predator-profile-icon', eager: true })}<span>Feldarchiv</span></div><p class="eyebrow">${escape(record.continent)} · ${escape(record.region)} · Archivblatt ${escape(record.folio)}</p><h1 id="predator-title">${escape(record.name)}</h1><p class="predator-profile-classification">${escape(record.classification)}</p><p class="predator-profile-lead">${escape(record.summary)}</p><div class="predator-profile-actions"><a class="ink-button" href="#feldbewertung">Das Dossier lesen <span aria-hidden="true">↓</span></a><a href="${escape(overviewHref)}">Zur Artenübersicht ↗</a></div></div>
         <figure class="predator-profile-portrait">${picture(record.hero, { className: 'predator-profile-portrait-image', eager: true })}<figcaption>${escape(record.hero.caption)}</figcaption></figure>
       </section>
       <blockquote class="predator-profile-quote"><span aria-hidden="true">❧</span><p>„${escape(record.quote)}“${record.quoteAttribution ? `<cite>${escape(record.quoteAttribution)}</cite>` : ''}</p><span aria-hidden="true">❧</span></blockquote>
@@ -58,7 +61,7 @@ export function renderPredatorProfile(record, navigation = {}) {
         <aside class="predator-profile-register"><div><p class="eyebrow">In diesem Dossier</p><nav aria-label="Kapitel des Raubtierdossiers"><a href="#feldbewertung"><span>I</span>Feldbewertung</a>${record.sections.map((section, index) => `<a href="#${escape(section.id)}"><span>${roman(index + 2)}</span>${escape(section.title)}</a>`).join('\n')}</nav><a class="predator-profile-register-back" href="../index.html">← Alle ${escape(record.group.title)}</a></div></aside>
         <div class="predator-profile-content">
           <section class="predator-profile-metrics" id="feldbewertung" aria-labelledby="metrics-title"><header class="predator-profile-feature-heading"><span aria-hidden="true">I</span><div><p class="eyebrow">Sechs Merkmale · Skala 1–10</p><h2 id="metrics-title">Feldbewertung</h2></div></header><p class="predator-profile-metrics-intro">Diese Werte wurden aus den überlieferten Beschreibungen abgeleitet. Sie dienen dem Vergleich innerhalb des Raubtierarchivs und sind keine exakten Messwerte.</p>${renderProfileMetrics(record.metrics, { chartTitle: `Feldbewertung für ${record.name}` })}<p class="predator-profile-metrics-source">Quelle der Einordnung: ${escape(record.metrics.source)}</p></section>
-          <div class="predator-profile-reading"><article class="predator-profile-narrative" aria-label="Überlieferung zu ${escape(record.name)}">${record.sections.map(renderSection).join('\n')}</article>${renderFacts(record.facts)}</div>
+          <div class="predator-profile-reading"><article class="predator-profile-narrative" aria-label="Überlieferung zu ${escape(record.name)}">${record.sections.map(renderSection).join('\n')}${renderPredatorReadingLinks(record.furtherReading)}</article>${renderFacts(record.facts)}</div>
           <nav class="predator-profile-navigation" aria-label="Weitere Raubtierdossiers">${renderSibling(navigation.previous, 'previous')}<a class="predator-profile-all" href="../index.html">Alle ${escape(record.group.title)}</a>${renderSibling(navigation.next, 'next')}</nav>
         </div>
       </div>

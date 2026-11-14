@@ -1,0 +1,34 @@
+{
+  "schema": "aleria.speech-frame-lab-generation",
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-12",
+  "tool": "built-in image_gen.imagegen",
+  "purpose": "Isolated experimental speech-frame preview; no live speech-style replacement",
+  "references": "User-supplied conversation screenshots used as visual direction; generated assets are newly described empty frames.",
+  "images": [
+    {
+      "key": "flirt",
+      "version": 1,
+      "generatorOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1d146-bfb7-7190-9c52-78b2dce31a9e\\exec-6ac15869-cb81-4d50-8d1d-a29adf3195d3.png",
+      "localPath": "AleriaAlmanach/assets/speech-frame-lab/sources/2026-11-12/flirt-frame-v1.png",
+      "prompt": "Create one production-quality empty decorative speech-panel frame for a fantasy roleplaying web interface. Wide horizontal rectangular asset, approximately 3:1 aspect ratio, all ornament fully inside the canvas with generous transparent outer padding. True transparent background AND true transparent empty interior. Only the painted border and small ornaments are opaque. No text, no letters, no symbols resembling writing, no people, no portraits, no screenshot, no checkerboard pattern. Delicate matte hand-drawn anime fantasy game UI, elegant fine linework, restrained dimensional highlights, not photoreal. Keep the entire center clear for live selectable HTML dialogue. Border designed for CSS nine-slice scaling: decorative motifs concentrated in the four corners, long central portions of all four edges simple thin continuous lines, no central emblems. The final result must be a single frame, straight-on and perfectly legible at small sizes. Theme: affectionate and flirty dialogue. Blush pink and muted rose-red double border, tiny clustered hearts and rose vine flourishes concentrated at the corners, a few soft pink luminous specks near the outer corners. Graceful, tasteful and warm. No solid pink rectangle filling the center.",
+      "transparentBackgroundRequested": true
+    },
+    {
+      "key": "prayer",
+      "version": 1,
+      "generatorOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1d146-bfb7-7190-9c52-78b2dce31a9e\\exec-f0ed579e-6ff3-4f4b-8739-a08422a27964.png",
+      "localPath": "AleriaAlmanach/assets/speech-frame-lab/sources/2026-11-12/prayer-frame-v1.png",
+      "prompt": "Create one production-quality empty decorative speech-panel frame for a fantasy roleplaying web interface. Wide horizontal rectangular asset, approximately 3:1 aspect ratio, all ornament fully inside the canvas with generous transparent outer padding. True transparent background AND true transparent empty interior. Only the painted border and small ornaments are opaque. No text, no letters, no symbols resembling writing, no people, no portraits, no screenshot, no checkerboard pattern. Delicate matte hand-drawn anime fantasy game UI, elegant fine linework, restrained dimensional highlights, not photoreal. Keep the entire center clear for live selectable HTML dialogue. Border designed for CSS nine-slice scaling: decorative motifs concentrated in the four corners, long central portions of all four edges simple thin continuous lines, no central emblems. The final result must be a single frame, straight-on and perfectly legible at small sizes. Theme: sacred prayer. Antique pale gold and ivory border, tiny starburst ornaments and fine interwoven celestial filigree concentrated at the corners, extremely restrained warm golden glow. Serene and dignified, inspired by illuminated fantasy manuscripts. No religious writing and no solid color filling the center.",
+      "transparentBackgroundRequested": true
+    },
+    {
+      "key": "telepathy",
+      "version": 1,
+      "generatorOriginal": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1d146-bfb7-7190-9c52-78b2dce31a9e\\exec-94a7b7e8-d205-43bb-9315-0dd7c319a834.png",
+      "localPath": "AleriaAlmanach/assets/speech-frame-lab/sources/2026-11-12/telepathy-frame-v1.png",
+      "prompt": "Create one production-quality empty decorative speech-panel frame for a fantasy roleplaying web interface. Wide horizontal rectangular asset, approximately 3:1 aspect ratio, all ornament fully inside the canvas with generous transparent outer padding. True transparent background AND true transparent empty interior. Only the painted border and small ornaments are opaque. No text, no letters, no symbols resembling writing, no people, no portraits, no screenshot, no checkerboard pattern. Delicate matte hand-drawn anime fantasy game UI, elegant fine linework, restrained dimensional highlights, not photoreal. Keep the entire center clear for live selectable HTML dialogue. Border designed for CSS nine-slice scaling: decorative motifs concentrated in the four corners, long central portions of all four edges simple thin continuous lines, no central emblems. The final result must be a single frame, straight-on and perfectly legible at small sizes. Theme: telepathy and magical thought. Fine luminous turquoise and mint-green double border, small geometric crystalline and ethereal wisps concentrated at the corners, restrained emerald magical light. Enchanted but refined. No runic lettering and no dark solid rectangle filling the center.",
+      "transparentBackgroundRequested": true
+    }
+  ]
+}

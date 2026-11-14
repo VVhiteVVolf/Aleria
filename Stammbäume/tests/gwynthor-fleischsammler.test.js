@@ -23,7 +23,7 @@ test('eight rural families have valid contemporary household graphs and one Gwyn
     assert.equal(entry.type, 'commoner');
     assert.equal(f.lineage.crestFrame, 'iron');
     const expanded = ['haus-tirfelyn', 'haus-helfaen', 'haus-marchwern'].includes(f.document.id);
-    assert.equal(f.timeJumps.length, expanded ? 1 : 0);
+    assert.equal(f.timeJumps.length, f.document.id === 'haus-ysgellfor' ? 0 : 1);
     assert.ok(f.persons.every(p => p.name !== '???'));
     assert.equal(f.extensions.courtDecisionPending, undefined);
     assert.equal(f.extensions.houseBiographyModule.schema, 'aleria.house-module');
@@ -64,9 +64,9 @@ test('neutral source cards identify seven real places and eight resident familie
   }
 });
 
-test('the four local victims remain distinct women and cross-family cards do not add victims', () => {
+test('the six local victims remain distinct women and cross-family cards do not add victims', () => {
   const victims = [...new Map(families.flatMap(f => f.persons.filter(p => p.status === 'dead' && p.death === '1740')).map(p => [p.worldPersonId, p])).values()];
-  assert.deepEqual(victims.map(p => p.id).sort(), ['catrin-bragwen', 'ceridwen-tirfelyn', 'gwenith-spouse-brynial', 'lleian-dolweth']);
+  assert.deepEqual(victims.map(p => p.id).sort(), ['catrin-bragwen', 'ceridwen-tirfelyn', 'ffraid-marchwern', 'gwenith-spouse-brynial', 'lleian-dolweth', 'morwen-eiddfer']);
   assert.ok(victims.every(p => p.sex === 'female' && p.death === '1740'));
   assert.equal(1740 - Number(person('dolweth', 'lleian-dolweth').birth), 18);
   assert.equal(1740 - Number(person('brynial', 'gwenith-spouse-brynial').birth), 32);
@@ -81,8 +81,8 @@ test('the brewery marriage shares identities while descendants continue in one f
     assert.equal(person('bragwen', id).worldPersonId, person('eiddfer', id).worldPersonId);
   }
   const bragwen = family('bragwen'), eiddfer = family('eiddfer');
-  assert.deepEqual(bragwen.partnerships.find(p => p.id === 'marriage-iestyn-bragwen-rhiain-eiddfer'),
-    eiddfer.partnerships.find(p => p.id === 'marriage-iestyn-bragwen-rhiain-eiddfer'));
+  const semanticMarriage = f => { const { extensions, ...relationship } = f.partnerships.find(p => p.id === 'marriage-iestyn-bragwen-rhiain-eiddfer'); return relationship; };
+  assert.deepEqual(semanticMarriage(bragwen), semanticMarriage(eiddfer));
   assert.ok(bragwen.parentages.some(p => p.childId === 'nerys-bragwen'));
   assert.ok(!eiddfer.persons.some(p => p.id === 'nerys-bragwen'));
   assert.equal(eiddfer.cadetBranches[0].targetFamilyId, 'haus-bragwen');

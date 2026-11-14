@@ -4,7 +4,7 @@ import { normalizeDocument, validateRecord, safeImageUrl, documentLink } from '.
 import { createPngArchive } from '../js/export/png-archive.js';
 import { parseRecords, publish, handler, __testables } from '../../../netlify/functions/document-publisher.mjs';
 import { __testables as cards } from '../../../netlify/functions/karten-publisher.mjs';
-import { createGitHubClient } from '../../../netlify/functions/shared/github-publishing.mjs';
+import { createGitHubClient, secureEqual } from '../../../netlify/functions/shared/github-publishing.mjs';
 
 const document = normalizeDocument({ title: 'Brief der Königin', slug: 'brief', pages: ['<p>Bewahrt dieses Blatt.</p>'], paperColor: 'sage', paperEdge: 'torn' });
 const record = { id: 'brief', expectedRevision: 0, document };
@@ -35,7 +35,7 @@ test('batch validation rejects traversal, duplicates, mismatched IDs and invalid
   assert.equal(parseRecords(JSON.stringify({ records: [record] }))[0].document.title, document.title);
 });
 
-function githubFixture({ revision = 0, race = false } = {}) {
+function githubFixture({ revision = 0, race = false, currentDocument = document } = {}) {
   const requests = [];
   const encode = value => ({ content: Buffer.from(JSON.stringify(value)).toString('base64') });
   const fetchRef = async (url, options = {}) => {
@@ -46,7 +46,7 @@ function githubFixture({ revision = 0, race = false } = {}) {
     if (path === '/git/ref/heads/master') value = { object: { sha: 'head-a' } };
     else if (path === '/git/commits/head-a') value = { tree: { sha: 'tree-a' } };
     else if (path.endsWith('/registry.json')) value = encode({ documents: [{ id: 'existing', title: 'Vorhanden', revision: 4 }] });
-    else if (path.includes('/contents/')) { if (revision) value = encode({ revision, document }); else { status = 404; value = {}; } }
+    else if (path.includes('/contents/')) { if (revision) value = encode({ revision, document: currentDocument }); else { status = 404; value = {}; } }
     else if (path === '/git/blobs') value = { sha: `blob-${requests.length}` };
     else if (path === '/git/trees') value = { sha: 'tree-b' };
     else if (path === '/git/commits') value = { sha: 'commit-b' };
@@ -80,11 +80,21 @@ test('concurrent GitHub branch changes reject publication', async () => {
   await assert.rejects(publish([record], config, fixture.fetchRef), error => error.status === 422);
 });
 
+test('older clients cannot silently discard a books facing pages and editable notes', async () => {
+  const currentDocument = normalizeDocument({ ...document, template: 'book', notesPage: 0, bookPageSides: ['right'] });
+  assert.equal(currentDocument.schemaVersion, 3);
+  const fixture = githubFixture({ revision: 1, currentDocument });
+  await assert.rejects(publish([{ ...record, expectedRevision: 1 }], config, fixture.fetchRef), error => error.status === 409);
+  assert.ok(fixture.requests.every(request => request.method === 'GET'));
+});
+
 test('image assets are validated, materialized and referenced from the published document', () => {
   const png = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIHWP4z8DwHwAFgAI/ScLttAAAAABJRU5ErkJggg==';
-  const { saved, files } = __testables.documentFiles({ ...record, document: normalizeDocument({ ...document, media: { main: { image: png }, signature: { image: png } } }) }, 'today');
+  const { saved, files } = __testables.documentFiles({ ...record, document: normalizeDocument({ ...document, bookBackCover: png, media: { main: { image: png }, signature: { image: png } } }) }, 'today');
   assert.equal(files.length, 2); assert.match(saved.document.media.main.image, /^\/Dokumente%20aus%20der%20Werkstatt\/assets\/brief\//);
   assert.equal(saved.document.media.main.image, saved.document.media.signature.image);
+  assert.equal(saved.document.bookBackCover, saved.document.media.main.image);
+  assert.equal(saved.document.schemaVersion, 3);
   assert.throws(() => __testables.validateAsset('data:image/png;base64,YmFk', 'image'));
   assert.throws(() => __testables.validateAsset('data:font/woff2;base64,YmFk', 'font'));
 });
@@ -95,7 +105,7 @@ test('publisher rejects unauthenticated writes before contacting GitHub', async 
 });
 
 test('shared transport preserves Karten key comparison and validation', () => {
-  assert.equal(cards.secureEqual('key', 'key'), true); assert.equal(cards.secureEqual('key', 'other'), false);
+  assert.equal(secureEqual('key', 'key'), true); assert.equal(secureEqual('key', 'other'), false);
   assert.equal(cards.validateDataPath('Cenyr/test/data.json'), 'Cenyr/test/data.json');
   assert.throws(() => cards.validateDataPath('../data.json'));
 });

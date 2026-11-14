@@ -12,7 +12,7 @@ function createContext(initial = {}, extra = {}) {
   const context = vm.createContext({
     console, escapeHtml, sanitizeImageSrc: value => value, sanitizeContentHtml: value => value,
     localStorage: { getItem: key => storage.get(key) || null, setItem: (key, value) => storage.set(key, value) },
-    document: { querySelectorAll: () => [], querySelector: () => null, getElementById: () => null, dispatchEvent() {} },
+    document: { querySelectorAll: () => [], querySelector: () => null, getElementById: () => null, dispatchEvent() {}, addEventListener() {} },
     CustomEvent: class { constructor(type, options) { Object.assign(this, { type }, options); } },
     ...extra,
   });
@@ -40,6 +40,28 @@ test('visibility controls sit below scene clock actions and remain outside both 
   assert.match(footer, /data-comment-quick-tools hidden/);
   assert.match(markup, /data-comment-quick-tools-toggle aria-pressed="false">Leiste anzeigen/);
   assert.equal((markup.match(/data-comment-tools-toggle/g) || []).length, 1);
+});
+
+test('scene artwork uses validated page positioning while unconfigured scenes retain stylesheet defaults', () => {
+  const { context } = createContext({}, {
+    buildNav: () => '', isSessionFocusModeEnabled: () => false,
+    getSessionThreadId: () => 'scene::session:0', getPageCommentThreadKey: () => '0',
+    buildSceneClockControl: () => '', buildSceneInventoryControl: () => '',
+    buildSceneDiceControl: () => '', buildSessionStatusControl: () => '',
+  });
+  for (const path of ['core/content-safety', 'rendering/module-renderer', 'comments/comments-page']) {
+    vm.runInContext(fs.readFileSync(new URL(`../modules/${path}.js`, import.meta.url), 'utf8'), context);
+  }
+  const entry = { id: 'scene', title: 'Szene' };
+  const artwork = page => context.buildSessionPage(page, entry, 0, 1).match(/<img[^>]*fetchpriority="high"[^>]*>/)[0];
+  assert.match(artwork({ imagePosition: 'center 75%', imageFit: 'cover' }), /object-position:center 75%/);
+  assert.match(artwork({ imagePosition: 'bottom', imageFit: 'contain' }), /object-fit:contain;object-position:center bottom/);
+  assert.doesNotMatch(artwork({}), /style=/);
+  for (const invalid of ['center 101%', 'center -1%', 'center 50%;color:red', 'url(https://example.test)']) {
+    assert.equal(context.sanitizeModulePageImagePosition(invalid), '');
+    assert.doesNotMatch(artwork({ imagePosition: invalid }), /101%|-1%|color:red|example\.test/);
+  }
+  assert.equal(context.sanitizeModulePageImagePosition('center 75%'), 'center 75%');
 });
 
 test('persisted visibility states render accurately and toggles remain usable with both rows hidden', () => {

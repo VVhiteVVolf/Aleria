@@ -133,7 +133,8 @@ test('Alleskoenner improves all twenty skills and Kundschafter keeps its full ex
     assert.equal(context(allrounder, `attribute:${attribute}`).skill.modifier, context(plain, `attribute:${attribute}`).skill.modifier + 1);
     assert.equal(context(allrounder, `save:${attribute}`).skill.modifier, context(plain, `save:${attribute}`).skill.modifier);
   }
-  assert.equal(getCombatMovement(scout), getCombatMovement(plain) + 1);
+  assert.equal(getCombatMovement(scout), getCombatMovement(plain));
+  assert.equal(getCombatInitiative(scout), getCombatInitiative(plain) + 1);
 });
 
 test('Magiebegabt improves only existing spell values and never grants access, resources or actions', () => {
