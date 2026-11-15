@@ -9,7 +9,8 @@ Quelle ist der gelieferte Export `rheinallt-gafyr.json` vom 15. November 2026.
 Original, SHA-256, Identitätsabgleich und Schreibbelege bleiben unter
 `diagnostics/rheinallt-gafyr-20261115/`. „Ferdynand“ wird im Text entsprechend
 der gelieferten Genealogie und kanonischen Vateridentität zu „Ferydnand“
-vereinheitlicht; „Cefyll“ wird zu „Ceffyl“. Das als Einzelstring exportierte
+vereinheitlicht; „Robyert“ bezeichnet Ffions kanonischen Vater Robyrt Gwefrydd
+(1666–1720) und wird entsprechend berichtigt. „Cefyll“ wird zu „Ceffyl“. Das als Einzelstring exportierte
 Zitat bleibt als echte Zitatliste erhalten.
 
 13 Persönlichkeitssymbole verwenden vorhandene Traitbilder. Hauptporträt und

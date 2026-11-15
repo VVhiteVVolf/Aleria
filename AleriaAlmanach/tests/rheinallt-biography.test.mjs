@@ -36,6 +36,10 @@ test('Rheinallts beide Familienprojektionen lösen dieselbe vollständige Biogra
   assert.deepEqual(bio.extraSections.map(section => section.title), ['Geschichte & Vergangenheit', 'Geschichte & Wirkung']);
   assert.equal(bio.quotes.length, 1); assert(bio.quotes[0].includes('seiner Ehre treu'));
   assert(bio.extraSections[0].text.includes('Ferydnand')); assert(!JSON.stringify(bio).includes('Ferdynand'));
+  assert(bio.extraSections[0].text.includes('Robyrt Gwefrydd')); assert(!JSON.stringify(bio).includes('Robyert'));
+  const wifeParents = HOUSE_GWEFRYDD_FAMILY.parentages.find(parentage => parentage.childId === 'ffion-gwefrydd');
+  assert(wifeParents.parentIds.includes('robyrt-gwefrydd'));
+  assert.equal(HOUSE_GWEFRYDD_FAMILY.persons.find(person => person.id === 'robyrt-gwefrydd').death, '1720');
   assert.deepEqual(bio.knightMentors.map(mentor => mentor.name), ['Sir Eiddon Wyrm']);
 });
 
