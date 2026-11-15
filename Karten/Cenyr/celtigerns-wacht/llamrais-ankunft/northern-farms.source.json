@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "source": "Neutrale Hofbezeichnungen und geografische Zuordnung, 15. November 2026",
+  "maps": {
+    "gwynthor": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
+    "bronhir": "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/bronhir-bannkreis/data.json"
+  },
+  "publicProjection": {
+    "baseCommit": "7d402694fc7d47b187692ea9050a2e991557debf",
+    "originalPins": [
+      {
+        "id": "gwynthor-marking-042",
+        "x": 0.61669921875,
+        "y": 0.18553650793650794,
+        "title": "Bauernhof",
+        "cat": "muosqiyl9n1p",
+        "kind": "place",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": ""
+          },
+          {
+            "k": "Typ",
+            "v": ""
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Bewirtschaftung",
+            "v": ""
+          },
+          {
+            "k": "Anbau",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": ""
+          },
+          {
+            "k": "Fläche",
+            "v": ""
+          },
+          {
+            "k": "Arbeitskräfte",
+            "v": ""
+          },
+          {
+            "k": "Versorgung / Abnehmer",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "",
+        "secret": false,
+        "templateId": "landwirtschaft"
+      }
+    ],
+    "admittedPins": [
+      {
+        "id": "gwynthor-marking-042",
+        "x": 0.61669921875,
+        "y": 0.18553650793650794,
+        "title": "Hof Caehelyg",
+        "cat": "muosqiyl9n1p",
+        "kind": "place",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/gwynthor.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Hof Caehelyg"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernhof"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Bewirtschaftung",
+            "v": "Familie Caehelyg"
+          },
+          {
+            "k": "Anbau",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": ""
+          },
+          {
+            "k": "Fläche",
+            "v": ""
+          },
+          {
+            "k": "Arbeitskräfte",
+            "v": ""
+          },
+          {
+            "k": "Versorgung / Abnehmer",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "Hof Caehelyg liegt im nördlichen Bannkreis Gwynthors. Die Bauernfamilie Caehelyg bewirtschaftet den Hof und seine umliegenden Felder.",
+        "secret": false,
+        "templateId": "landwirtschaft"
+      }
+    ],
+    "untouchedGwynthorPinsSHA256": "330411706419ac5d194b798a045bad1403b95c4a7665714f6ebb42e4526ce917",
+    "originalBronhir": {
+      "schemaVersion": 1,
+      "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/bronhir-bannkreis/data.json",
+      "revision": 0,
+      "updatedAt": "2026-09-02T00:00:00.000Z",
+      "state": {
+        "pins": [],
+        "dotSize": 18,
+        "lblSize": 13,
+        "regionIcon": "",
+        "regionTitle": "Bronhir – Bannkreis",
+        "layerNames": {
+          "normal": "Normal",
+          "regions": "Regionen",
+          "pins": "Markierungen"
+        },
+        "dm": {
+          "sessions": [],
+          "notes": "",
+          "groupStatus": {}
+        },
+        "markerCatalog": []
+      }
+    },
+    "admittedBronhirPins": [
+      {
+        "id": "bronhir-maesrudd-hof",
+        "x": 0.60693359375,
+        "y": 0.06031746031746032,
+        "title": "Maesrudd-Hof",
+        "cat": "muosqiyl9n1p",
+        "kind": "place",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/Cenyr/Celtigerns Wacht/Llamreis Ankunft/Bronhir.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "Bronhir",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Maesrudd-Hof"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernhof"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Bewirtschaftung",
+            "v": "Familie Maesrudd"
+          },
+          {
+            "k": "Anbau",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": ""
+          },
+          {
+            "k": "Fläche",
+            "v": ""
+          },
+          {
+            "k": "Arbeitskräfte",
+            "v": ""
+          },
+          {
+            "k": "Versorgung / Abnehmer",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "Der Maesrudd-Hof liegt nördlich von Bronhir. Die Bauernfamilie Maesrudd bewirtschaftet den Hof mit seinen Feldern.",
+        "secret": false,
+        "templateId": "landwirtschaft"
+      }
+    ],
+    "category": {
+      "id": "muosqiyl9n1p",
+      "label": "Einfacher Hof",
+      "color": "#3a8a3a"
+    },
+    "originalMapSHA256": {
+      "gwynthor": "7500f9161336ef5843c32868c2360f03ccaf82b2c565b5d033d8590ec1d352cc",
+      "bronhir": "0694669d5dda3e2941715d6a060c52dce00f6c8f8e4e03f8c758f21a26b5b52f"
+    }
+  },
+  "coordinateSource": "Freie nördliche Markierung im vorhandenen Bronhir-Kartenbild"
+}

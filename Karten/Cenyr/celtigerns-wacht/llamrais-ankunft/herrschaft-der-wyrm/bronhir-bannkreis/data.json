@@ -1,10 +1,81 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/bronhir-bannkreis/data.json",
-  "revision": 0,
-  "updatedAt": "2026-09-02T00:00:00.000Z",
+  "revision": 1,
+  "updatedAt": "2026-11-15T02:48:48.047Z",
   "state": {
-    "pins": [],
+    "pins": [
+      {
+        "id": "bronhir-maesrudd-hof",
+        "x": 0.60693359375,
+        "y": 0.06031746031746032,
+        "title": "Maesrudd-Hof",
+        "cat": "muosqiyl9n1p",
+        "kind": "place",
+        "img": "",
+        "imgLink": "",
+        "crest": "/Stammbäume/assets/images/regions/Cenyr/Celtigerns Wacht/Llamreis Ankunft/Bronhir.png",
+        "crestLink": "",
+        "banner": "/Stammbäume/assets/images/regions/llamreis-ankunft.png",
+        "bannerLink": "",
+        "region": "Bronhir",
+        "house": "",
+        "faction": "",
+        "table": [
+          {
+            "k": "Name",
+            "v": "Maesrudd-Hof"
+          },
+          {
+            "k": "Typ",
+            "v": "Bauernhof"
+          },
+          {
+            "k": "Besitzer",
+            "v": ""
+          },
+          {
+            "k": "Bewirtschaftung",
+            "v": "Familie Maesrudd"
+          },
+          {
+            "k": "Anbau",
+            "v": ""
+          },
+          {
+            "k": "Erzeugnisse",
+            "v": ""
+          },
+          {
+            "k": "Fläche",
+            "v": ""
+          },
+          {
+            "k": "Arbeitskräfte",
+            "v": ""
+          },
+          {
+            "k": "Versorgung / Abnehmer",
+            "v": ""
+          },
+          {
+            "k": "Zustand",
+            "v": ""
+          },
+          {
+            "k": "Gefahren",
+            "v": ""
+          },
+          {
+            "k": "Besonderheiten",
+            "v": ""
+          }
+        ],
+        "text": "Der Maesrudd-Hof liegt nördlich von Bronhir. Die Bauernfamilie Maesrudd bewirtschaftet den Hof mit seinen Feldern.",
+        "secret": false,
+        "templateId": "landwirtschaft"
+      }
+    ],
     "dotSize": 18,
     "lblSize": 13,
     "regionIcon": "",
@@ -14,7 +85,18 @@
       "regions": "Regionen",
       "pins": "Markierungen"
     },
-    "dm": { "sessions": [], "notes": "", "groupStatus": {} },
-    "markerCatalog": []
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    },
+    "markerCatalog": [],
+    "cats": [
+      {
+        "id": "muosqiyl9n1p",
+        "label": "Einfacher Hof",
+        "color": "#3a8a3a"
+      }
+    ]
   }
 }

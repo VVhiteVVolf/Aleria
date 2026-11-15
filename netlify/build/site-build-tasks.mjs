@@ -521,6 +521,8 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'gwynthor-map', label: 'Gwynthor marker positions and existing house affiliations',
     inputs: ['Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/',
+      'Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/northern-farms.source.json',
+      'Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/herrschaft-der-wyrm/bronhir-bannkreis/data.json',
       'Karten/assets/js/pins/', 'Karten/assets/js/map/', 'Karten/assets/js/karto-app.js',
       'Karten/assets/css/karto-map.css', 'Karten/karte.html', 'Karten/_template/KartenTemplate.html',
       'Karten/tools/reconcile-gwynthor-affiliations.mjs', 'Karten/tests/',
@@ -530,7 +532,8 @@ export const SITE_BUILD_TASKS = [
     commands: [['Karten/tools/reconcile-gwynthor-affiliations.mjs', '--check'],
       testCommand('Karten/tests/gwynthor-map-review.test.mjs', 'Karten/tests/category-catalog.test.mjs',
         'Karten/tests/pin-tools.test.mjs', 'Karten/tests/interactive-marker-layer.test.mjs',
-        'Karten/tests/pin-navigation.test.mjs', 'Karten/tests/pert-maesglas.test.mjs')]
+        'Karten/tests/pin-navigation.test.mjs', 'Karten/tests/pert-maesglas.test.mjs',
+        'Karten/tests/northern-farms.test.mjs')]
   },
   {
     id: 'scene-presentation', label: 'Fazit reports, optional painted speech and compact scene controls',

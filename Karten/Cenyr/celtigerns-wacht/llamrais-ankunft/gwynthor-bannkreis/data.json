@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/data.json",
-  "revision": 24,
-  "updatedAt": "2026-11-13T14:21:27.749Z",
+  "revision": 25,
+  "updatedAt": "2026-11-15T02:48:48.047Z",
   "state": {
     "pins": [
       {
@@ -3566,7 +3566,7 @@
         "id": "gwynthor-marking-042",
         "x": 0.61669921875,
         "y": 0.18553650793650794,
-        "title": "Bauernhof",
+        "title": "Hof Caehelyg",
         "cat": "muosqiyl9n1p",
         "kind": "place",
         "img": "",
@@ -3581,11 +3581,11 @@
         "table": [
           {
             "k": "Name",
-            "v": ""
+            "v": "Hof Caehelyg"
           },
           {
             "k": "Typ",
-            "v": ""
+            "v": "Bauernhof"
           },
           {
             "k": "Besitzer",
@@ -3593,7 +3593,7 @@
           },
           {
             "k": "Bewirtschaftung",
-            "v": ""
+            "v": "Familie Caehelyg"
           },
           {
             "k": "Anbau",
@@ -3628,7 +3628,7 @@
             "v": ""
           }
         ],
-        "text": "",
+        "text": "Hof Caehelyg liegt im nördlichen Bannkreis Gwynthors. Die Bauernfamilie Caehelyg bewirtschaftet den Hof und seine umliegenden Felder.",
         "secret": false,
         "templateId": "landwirtschaft"
       },
