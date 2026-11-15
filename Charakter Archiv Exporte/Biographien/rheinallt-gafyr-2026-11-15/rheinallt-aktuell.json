@@ -1,0 +1,587 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "mergeStrategy": "replace-exported-fields",
+  "exportedAt": "2026-11-15T18:05:42.808Z",
+  "assignedTab": "",
+  "character": {
+    "id": "person--haus-gafyr--rheinallt-gafyr",
+    "name": "Rheinallt Gafyr",
+    "title": "Sir",
+    "fraktion": "Haus Gafyr",
+    "role": "Marschall des Hauses Gafyr",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Castell Gafyr, Gwynthor",
+    "origin": "Gwynthor",
+    "plotNode": "",
+    "profileLink": "",
+    "playerOwner": "",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "identity": {
+      "worldPersonId": "person--haus-gafyr--rheinallt-gafyr"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-gafyr--rheinallt-gafyr",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1694",
+      "death": "",
+      "houseId": "house-gafyr",
+      "houseName": "Haus Gafyr",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-gafyr",
+          "personId": "rheinallt-gafyr",
+          "releaseId": "github-r3",
+          "publishedAt": "2026-09-12T11:58:42.936Z",
+          "importedAt": "2026-09-23T21:30:50.985Z",
+          "lastSyncedAt": "2026-09-23T21:30:50.985Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-gafyr&mode=view&person=rheinallt-gafyr",
+          "fingerprint": "{\"name\":\"Rheinallt Gafyr\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-gafyr\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-gafyr/rheinallt-gafyr.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"ferydnand-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--ferydnand-gafyr\",\"name\":\"Ferydnand Gafyr\"},{\"personId\":\"niniel-mwyalchen\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-mwyalchen--niniel-mwyalchen\",\"name\":\"Niniel Mwyalchen\"}],\"partners\":[{\"personId\":\"ffion-gwefrydd\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gwefrydd--ffion-gwefrydd\",\"name\":\"Ffion Gwefrydd\"}],\"children\":[{\"personId\":\"slevin-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--slevin-gafyr\",\"name\":\"Slevin Gafyr\"},{\"personId\":\"lefraye-gafyr\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-gafyr--lefraye-gafyr\",\"name\":\"Lefraye Gafyr\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "name": "Ferydnand Gafyr",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-gafyr--ferydnand-gafyr",
+            "personId": "ferydnand-gafyr",
+            "legitimacy": "legitimate",
+            "type": "biological"
+          },
+          {
+            "worldPersonId": "person--haus-mwyalchen--niniel-mwyalchen",
+            "certainty": "confirmed",
+            "name": "Niniel Mwyalchen",
+            "personId": "niniel-mwyalchen",
+            "type": "biological",
+            "legitimacy": "legitimate"
+          }
+        ],
+        "partners": [
+          {
+            "worldPersonId": "person--haus-gwefrydd--ffion-gwefrydd",
+            "status": "active",
+            "type": "marriage",
+            "personId": "ffion-gwefrydd",
+            "certainty": "confirmed",
+            "name": "Ffion Gwefrydd"
+          }
+        ],
+        "children": [
+          {
+            "legitimacy": "legitimate",
+            "name": "Slevin Gafyr",
+            "worldPersonId": "person--haus-gafyr--slevin-gafyr",
+            "type": "biological",
+            "personId": "slevin-gafyr",
+            "certainty": "confirmed"
+          },
+          {
+            "type": "biological",
+            "personId": "lefraye-gafyr",
+            "legitimacy": "legitimate",
+            "worldPersonId": "person--haus-gafyr--lefraye-gafyr",
+            "name": "Lefraye Gafyr",
+            "certainty": "confirmed"
+          }
+        ]
+      }
+    },
+    "createdAt": "2026-09-23T21:30:50.985Z",
+    "updatedAt": "2026-11-15T18:05:42.808Z",
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/rheinallt-gafyr.jpg",
+        "emotes": [
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-01-v1.png",
+            "label": "LCpc6Qm"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-02-v1.png",
+            "label": "Drrvam7"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-03-v1.png",
+            "label": "q9yvbeF"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-04-v1.png",
+            "label": "zM7gdxJ"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-05-v1.png",
+            "label": "aNFNRSx"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-06-v1.png",
+            "label": "sFh7iI1"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-07-v1.png",
+            "label": "cZuLl4V"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-08-v1.png",
+            "label": "F9WoJj8"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-09-v1.png",
+            "label": "gloGeup"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-10-v1.png",
+            "label": "3hafv5d"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-11-v1.png",
+            "label": "vnlWD4m"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-12-v1.png",
+            "label": "n0Lw7eh"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-13-v1.png",
+            "label": "8qxuwbk"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-14-v1.png",
+            "label": "qSvVtY3"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-15-v1.png",
+            "label": "zYZjyYl"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-16-v1.png",
+            "label": "u0IG6w2"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-17-v1.png",
+            "label": "QPIDpVe"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-18-v1.png",
+            "label": "oltqUP6"
+          }
+        ],
+        "createdAt": "2026-11-15T17:26:37.203Z",
+        "updatedAt": "2026-11-15T17:27:44.833Z"
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-gafyr/rheinallt-gafyr.jpg",
+    "emotes": [
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-01-v1.png",
+        "label": "LCpc6Qm"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-02-v1.png",
+        "label": "Drrvam7"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-03-v1.png",
+        "label": "q9yvbeF"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-04-v1.png",
+        "label": "zM7gdxJ"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-05-v1.png",
+        "label": "aNFNRSx"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-06-v1.png",
+        "label": "sFh7iI1"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-07-v1.png",
+        "label": "cZuLl4V"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-08-v1.png",
+        "label": "F9WoJj8"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-09-v1.png",
+        "label": "gloGeup"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-10-v1.png",
+        "label": "3hafv5d"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-11-v1.png",
+        "label": "vnlWD4m"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-12-v1.png",
+        "label": "n0Lw7eh"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-13-v1.png",
+        "label": "8qxuwbk"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-14-v1.png",
+        "label": "qSvVtY3"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-15-v1.png",
+        "label": "zYZjyYl"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-16-v1.png",
+        "label": "u0IG6w2"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-17-v1.png",
+        "label": "QPIDpVe"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/rheinallt-biography/emote-18-v1.png",
+        "label": "oltqUP6"
+      }
+    ],
+    "emotesOverride": true,
+    "imageSetsOverride": true,
+    "inventory": {
+      "companions": [
+        {
+          "id": "card-rheinallt-cadarn",
+          "name": "Cadarn",
+          "species": "Ceffyl-Pferd",
+          "image": "/AleriaAlmanach/assets/rheinallt-biography/cadarn-v1.jpeg",
+          "description": "Cadarn ist Rheinallt Gafyrs persönliches Ceffyl. Alter, Geschlecht und besondere Ausbildung sind nicht festgelegt.",
+          "summary": "Cadarn ist Rheinallt Gafyrs persönliches Ceffyl. Alter, Geschlecht und besondere Ausbildung sind nicht festgelegt.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-rheinallt-cadarn",
+          "inventoryItemId": "rheinallt-cadarn"
+        },
+        {
+          "id": "card-rheinallt-cawg",
+          "name": "Cawg",
+          "species": "Hund",
+          "image": "/AleriaAlmanach/assets/rheinallt-biography/cawg-v1.jpeg",
+          "description": "Cawg ist Rheinallt Gafyrs Hund. Rasse, Alter, Geschlecht und besondere Ausbildung sind nicht festgelegt.",
+          "summary": "Cawg ist Rheinallt Gafyrs Hund. Rasse, Alter, Geschlecht und besondere Ausbildung sind nicht festgelegt.",
+          "role": "Gefährte",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-rheinallt-cawg",
+          "inventoryItemId": "rheinallt-cawg"
+        }
+      ],
+      "items": [
+        {
+          "id": "rheinallt-cadarn",
+          "instanceId": "rheinallt-cadarn",
+          "creatureId": "companion-rheinallt-cadarn",
+          "name": "Cadarn",
+          "image": "/AleriaAlmanach/assets/rheinallt-biography/cadarn-v1.jpeg",
+          "description": "Cadarn ist Rheinallt Gafyrs persönliches Ceffyl. Alter, Geschlecht und besondere Ausbildung sind nicht festgelegt.",
+          "type": "Ceffyl-Pferd",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Ceffyl-Pferd",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--haus-gafyr--rheinallt-gafyr",
+          "ownerCharacterName": "Rheinallt Gafyr",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-11-15T18:05:42.808Z"
+        },
+        {
+          "id": "rheinallt-cawg",
+          "instanceId": "rheinallt-cawg",
+          "creatureId": "companion-rheinallt-cawg",
+          "name": "Cawg",
+          "image": "/AleriaAlmanach/assets/rheinallt-biography/cawg-v1.jpeg",
+          "description": "Cawg ist Rheinallt Gafyrs Hund. Rasse, Alter, Geschlecht und besondere Ausbildung sind nicht festgelegt.",
+          "type": "Hund",
+          "category": "companion",
+          "registerCategory": "vieh",
+          "templateId": "",
+          "templateName": "Hund",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--haus-gafyr--rheinallt-gafyr",
+          "ownerCharacterName": "Rheinallt Gafyr",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-11-15T18:05:42.808Z"
+        }
+      ],
+      "revision": 1794765942808
+    },
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Rheinallt Gafyr"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Gafyr"
+        },
+        {
+          "label": "Titel / Anrede",
+          "value": "Sir"
+        },
+        {
+          "label": "Geboren",
+          "value": "1694"
+        },
+        {
+          "label": "Geburtsort",
+          "value": "Gwynthor"
+        },
+        {
+          "label": "Gestorben",
+          "value": "Lebend"
+        },
+        {
+          "label": "Geschlecht",
+          "value": "Männlich"
+        },
+        {
+          "label": "Familienstand",
+          "value": "verheiratet"
+        },
+        {
+          "label": "Rang / Stand",
+          "value": "Ritter"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Marschall des Ritterfürsten des Hauses Gafyr"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": "Gwynthor - Castell Gafyr"
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "portrait": "/Stammbäume/assets/images/portraits/haus-gafyr/rheinallt-gafyr.jpg",
+        "knightMentors": [
+          {
+            "name": "Sir Eiddon Wyrm",
+            "role": "Rittervater",
+            "detail": "Rheinallts Ausbildung während seiner Knappenzeit; Vater von Sir Padrig Wyrm.",
+            "image": "/Stammbäume/assets/images/portraits/haus-wyrm/eiddon-wyrm.jpg"
+          }
+        ],
+        "portraitStages": [
+          "/AleriaAlmanach/assets/rheinallt-biography/civil-v1.png",
+          "/AleriaAlmanach/assets/rheinallt-biography/young-knight-v1.png",
+          "/AleriaAlmanach/assets/rheinallt-biography/squire-v1.png",
+          "/AleriaAlmanach/assets/rheinallt-biography/child-v1.png"
+        ],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "biographyTitle": "Hintergrund – Wer ist er?",
+        "biographyText": "<p>Sir Rheinallt Gafyr ist der Marschall des Hauses Gafyr und einer jener Ritter, für die Ehre, Pflichtbewusstsein und persönliche Integrität weit mehr als bloße Worte darstellen. Seit fünf Jahren trägt er die Verantwortung für die militärischen Angelegenheiten seines Hauses, nachdem sein Vater Ferydnand ihm das Amt aus eigenem Entschluss übertragen hatte. Für Rheinallt war diese<br>Entscheidung nicht nur eine große Auszeichnung, sondern auch die Bestätigung eines Lebens, das er seit frühester Jugend dem Rittertum gewidmet hat.</p><br><p>Rheinallt ist ein Mann von unbeugsamem Willen, ausgeprägtem Stolz und nahezu unerschütterlichen Überzeugungen. Er verlangt von sich selbst nicht weniger als von anderen und betrachtet die Einhaltung ritterlicher Ideale als selbstverständliche Verpflichtung jedes Ritters.</p><br><p>Seine Strenge ist weithin bekannt. Wer unter seinem Befehl dient, weiß, dass Rheinallt weder Nachlässigkeit noch Disziplinlosigkeit schätzt. Dennoch ist er kein ungerechter Befehlshaber. Er unterscheidet durchaus zwischen mangelnder Erfahrung, einem ehrlichen Fehler und bewusstem Fehlverhalten. Wo andere vielleicht vorschnell urteilen würden, ist Rheinallt bereit, die Umstände zu berücksichtigen – solange dabei die grundlegenden Prinzipien der Ritterlichkeit gewahrt bleiben.</p><br><p>Besonders schwer wiegt für ihn die Ehrlosigkeit. Feigheit, Verrat, Grausamkeit und bewusste Täuschung aus niederen Beweggründen verachtet er zutiefst. Einen Ritter, der seine Ehre beschmutzt hat, wird er nicht ohne Weiteres wieder in<br>seine Reihen aufnehmen. Erst durch ernsthafte Bewährung kann dieser sich Rheinallts Vertrauen zurückverdienen.</p><br><p>Sein Vorbild ist nicht der umherziehende Abenteurer, sondern der Ritter, der seine Pflicht erfüllt, selbst wenn niemand davon singt.</p><br><p>Obwohl er als Marschall eine hohe Stellung bekleidet, betrachtet Rheinallt sich in erster Linie als Diener seines Hauses und seines Ritterfürsten Sir Duncan Gafyr. Diesen bewundert er seit seiner Jugend und begegnet ihm mit aufrichtiger Loyalität und tiefem Respekt.</p>",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [
+          {
+            "title": "Ehrenhaft",
+            "detail": "Rheinallt hält unbeirrbar an seinen ritterlichen Idealen fest. Ehre und Gewissen sind für ihn untrennbar miteinander verbunden.",
+            "icon": "/IconOrdner/Traits%20Icon/Honest.png"
+          },
+          {
+            "title": "Pflichtbewusst",
+            "detail": "Seine Aufgaben stehen für ihn an erster Stelle. Er erwartet von sich und seinen Untergebenen, dass Verpflichtungen zuverlässig erfüllt werden.",
+            "icon": "/IconOrdner/Traits%20Icon/Diligent.png"
+          },
+          {
+            "title": "Stolz",
+            "detail": "Er ist sich seiner Fähigkeiten, Leistungen und Stellung bewusst. Dieser Stolz kann ihn jedoch daran hindern, Fehler sofort einzugestehen.",
+            "icon": "/IconOrdner/Traits%20Icon/Proud.png"
+          },
+          {
+            "title": "Unbeugsam",
+            "detail": "Hat Rheinallt eine Überzeugung gewonnen, lässt er sich nur schwer davon abbringen.",
+            "icon": "/IconOrdner/Traits%20Icon/Stubborn.png"
+          },
+          {
+            "title": "Streng",
+            "detail": "Er stellt hohe Anforderungen an Disziplin, Ausbildung und Verhalten. Nachlässigkeit duldet er nur ungern.",
+            "icon": "/IconOrdner/Traits%20Icon/Rulership_focus.png"
+          },
+          {
+            "title": "Beherrscht",
+            "detail": "Selbst unter Druck bewahrt er gewöhnlich seine Ruhe. Im Vergleich zu seiner Jugend hat er gelernt, sein Temperament zu zügeln.",
+            "icon": "/IconOrdner/Traits%20Icon/Temperate.png"
+          },
+          {
+            "title": "Führungsstark",
+            "detail": "Rheinallt übernimmt selbstverständlich Verantwortung und scheut sich nicht davor, schwierige Entscheidungen zu treffen.",
+            "icon": "/IconOrdner/Traits%20Icon/Organizer.png"
+          },
+          {
+            "title": "Gerechtigkeitsbewusst",
+            "detail": "Trotz seiner Strenge bemüht er sich um angemessene Urteile und unterscheidet zwischen verschiedenen Arten von Verfehlungen.",
+            "icon": "/IconOrdner/Traits%20Icon/Just.png"
+          },
+          {
+            "title": "Selbstbewusst",
+            "detail": "Er kennt seinen Wert und benötigt nur selten die Bestätigung anderer.",
+            "icon": "/IconOrdner/Traits%20Icon/Brave.png"
+          },
+          {
+            "title": "Unnachgiebig",
+            "detail": "Besonders bei Fragen der Ehre fällt es ihm schwer, Kompromisse zu akzeptieren.",
+            "icon": "/IconOrdner/Traits%20Icon/Unyielding_leader.png"
+          },
+          {
+            "title": "Zurückhaltend",
+            "detail": "Persönliche Gefühle zeigt er nur selten offen. Menschen, die ihm nahestehen, erleben jedoch eine wärmere Seite.",
+            "icon": "/IconOrdner/Traits%20Icon/Shy.png"
+          },
+          {
+            "title": "Humorarm",
+            "detail": "Rheinallt nimmt das Leben überwiegend ernst. Ein Witz aus seinem Mund ist ein so seltenes Ereignis, dass man ihn beinahe im Kalender vermerken könnte.",
+            "icon": "/IconOrdner/Traits%20Icon/Patient.png"
+          },
+          {
+            "title": "Schlechter Verlierer",
+            "detail": "Bei strategischen Brettspielen kann seine sonst so bewundernswerte Selbstbeherrschung überraschend schnell schwinden.",
+            "icon": "/IconOrdner/Traits%20Icon/Wroth.png"
+          }
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Geschichte & Vergangenheit",
+            "text": "Rheinallt wurde als ältester Sohn von Ferydnand und Niniel Gafyr geboren und wuchs in einem Umfeld auf, das stark von den Traditionen des Rittertums geprägt war.\n\nSeine Kindheit war streng, aber keineswegs unglücklich. Er erhielt eine sorgfältige Erziehung und lernte früh, welche Verantwortung mit seiner Herkunft verbunden war.\n\nSchon als Junge zeigte Rheinallt ein ausgeprägtes Pflichtbewusstsein und den Wunsch, anderen voranzugehen. Allerdings war er zugleich außerordentlich stolz. Er wollte sich beweisen und betrachtete es nur ungern als Möglichkeit, dass andere ihm überlegen sein könnten.\n\nBesonders eng war seine Freundschaft mit seinem gleichaltrigen Vetter Egon Gafyr. Die beiden verstanden sich hervorragend und verbrachten viel Zeit miteinander. Diese Verbindung blieb auch im Erwachsenenalter bestehen.\n\nWährend Rheinallt seinen jüngeren Geschwistern gegenüber häufig den Ton angab, fand er in Egon einen Gefährten, der ihm auf Augenhöhe begegnete.\n\nSeine Mutter Niniel wirkte bereits früh auf seinen übermäßigen Stolz ein. Sie versuchte ihm zu vermitteln, dass Selbstbewusstsein und Überheblichkeit nicht dasselbe sind.\nAls Knappe wurde Rheinallt schließlich Sir Eiddon Wyrm anvertraut, dem Vater des späteren Sir Padrig Wyrm.\n\nDiese Ausbildungszeit war für seine Entwicklung von besonderer Bedeutung.\n\nRheinallt war zweifellos talentiert, verfügte jedoch nicht über dieselbe außergewöhnliche natürliche Begabung wie sein Vetter Egon. Viele seiner Fähigkeiten musste er sich durch ausdauerndes Training und große Disziplin erarbeiten.\n\nGerade dadurch entwickelte er ein tiefes Verständnis dafür, dass ein Ritter seine Stellung nicht allein seinem Talent verdanken darf.\n\nWährend seiner Knappenzeit festigte sich auch sein Ehrbegriff. Aus dem stolzen Jungen wurde allmählich ein Mann, der seine persönliche Eitelkeit zunehmend den Idealen des Rittertums unterordnete.\n\nZu seinen großen Vorbildern gehörten der frühere Graf Sir Rhodri Draig und sein Onkel Sir Duncan Gafyr. Ebenso bewunderte er den früheren König und später König Tristan Pendrag. Sein Vater Ferydnand war für ihn insbesondere ein Vorbild an Pflichtbewusstsein.\n\nIm Laufe seiner ritterlichen Laufbahn nahm Rheinallt am Krieg gegen Ceitheach teil und erlebte die Schlacht am Roten Berg.\n\nDiese Auseinandersetzungen hinterließen tiefe Spuren.\n\nEr verlor zahlreiche Kampfgefährten und erlebte unmittelbar, welche Opfer ein Krieg fordert. Unter den Gefallenen befand sich auch sein Schwiegervater, der frühere Baron Robyert Gwefrydd.\n\nDie Erfahrungen des Krieges stellten Rheinallts Vorstellungen von Ehre und Ritterlichkeit zweifellos auf die Probe. Welche einzelnen Entscheidungen ihn dabei besonders prägten, bleibt Teil seiner persönlichen Geschichte, die noch näher ausgearbeitet werden kann.\n\nSeine militärischen Fähigkeiten und sein Pflichtbewusstsein führten schließlich dazu, dass sein Vater Ferydnand ihm vor fünf Jahren das Marschallamt übertrug.\n\nFerydnand war überzeugt, dass sein Sohn für diese Verantwortung bereit und ihm ebenbürtig geworden war.\n\nRheinallt nahm die Ernennung mit außerordentlichem Stolz entgegen.\n\nSeither widmet er sich mit großer Ernsthaftigkeit der militärischen Führung des Hauses Gafyr. Sein Ziel ist es nicht, durch außergewöhnliche Abenteuer berühmt zu werden, sondern die ihm anvertraute Verantwortung so gut wie möglich zu erfüllen."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Geschichte & Wirkung",
+            "text": "Sir Rheinallt Gafyr steht für eine Vorstellung des Rittertums, die sich weniger durch glanzvolle Heldentaten als durch Beständigkeit, Disziplin und unerschütterliche Prinzipien auszeichnet.\n\nAls Marschall ist er ein verlässlicher Befehlshaber, dessen Entscheidungen von einem ausgeprägten Pflichtgefühl bestimmt werden.\n\nSeine Ritter wissen, dass er hohe Anforderungen stellt. Zugleich können sie darauf vertrauen, dass er sich selbst denselben Maßstäben unterwirft.\n\nRheinallt führt nicht durch besondere Herzlichkeit oder kameradschaftliche Vertraulichkeit. Er führt durch Autorität, Kompetenz und das persönliche Beispiel.\n\nSeine Loyalität gegenüber Sir Duncan Gafyr ist tief verwurzelt. Obwohl Rheinallt grundsätzlich bereit wäre, selbst einen Befehl seines Ritterfürsten zu verweigern, wenn dieser gegen seine Ehre verstieße, kann er sich eine solche Situation unter Duncans Führung kaum vorstellen.\n\nIn seiner Familie nimmt Rheinallt eine ebenso bedeutende, wenn auch bisweilen schwierige Rolle ein.\n\nSein Vater betrachtet ihn mit Stolz, seine Mutter kennt die Schattenseiten seines Ehrgeizes, und seine Geschwister erleben sehr unterschiedliche Seiten seines Wesens.\n\nWährend Roderic häufig unter Rheinallts hohen Erwartungen leidet, genießt Heledd dessen uneingeschränktes Vertrauen.\n\nSein Vetter Egon gehört zu den wenigen Menschen, die Rheinallt auch dann noch mit einem Lächeln begegnen können, wenn dieser gerade ausgesprochen schlechter Laune ist.\n\nFür seine Gemahlin Ffion und seine Kinder ist Rheinallt vor allem ein verlässlicher Ehemann und Vater. Seine Liebe zeigt sich weniger in Worten als in seinem beständigen Bemühen, für sie da zu sein und ihnen eine sichere Zukunft zu ermöglichen.\n\nSeine größte Stärke ist zugleich seine größte Schwäche.\n\nRheinallt würde seine Ehre nur unter äußerstem Zwang preisgeben. Selbst die Möglichkeit, durch seine Prinzipientreue einen geliebten Menschen zu verletzen, könnte ihn vor eine Entscheidung stellen, bei der er kaum bereit wäre, von seinen Überzeugungen abzuweichen.\n\nEr ist ein Mann, der gelernt hat, seinen Stolz zu beherrschen, ohne ihn jemals vollständig abzulegen.\n\nSolange er gebraucht wird und die Kraft dazu besitzt, beabsichtigt Rheinallt, seinem Haus weiterhin als Marschall zu dienen.\n\nFür geheime Sehnsüchte oder große Zukunftsträume hat er nach eigener Auffassung ohnehin keine Zeit.\n\nSeine Pflicht wartet schließlich nicht."
+          }
+        ],
+        "historyTitle": "Hintergrund",
+        "historyText": "<p>Rheinallt Gafyr besitzt das Selbstverständnis eines Mannes, der schon früh gelernt hat, dass ein Ritter nicht nur für sich selbst, sondern auch für andere Verantwortung trägt.</p><br><p>Als Kind war er stolz wie ein junger Löwe. Er wollte vorangehen, sich beweisen und von anderen anerkannt werden. Sein Pflichtgefühl war bereits damals stark ausgeprägt, doch sein persönlicher Stolz stand seinem Verständnis von Ritterlichkeit gelegentlich im Weg.</p><br><p>Erst während seiner Ausbildung lernte Rheinallt, dass wahre Ehre nicht darin besteht, stets der Beste sein zu wollen, sondern darin, auch dann das Richtige zu tun, wenn es dem eigenen Stolz widerspricht.</p><br><p>Diese Erkenntnis hat ihn geprägt, ohne seine ursprüngliche Natur vollständig zu verändern.</p><br><p>Noch heute ist Rheinallt ausgesprochen stolz. Er weiß, dass er ein fähiger Ritter und Befehlshaber ist, und empfindet seine Ernennung zum Marschall als größte persönliche Leistung. Gleichzeitig betrachtet er das Amt als Verpflichtung, der er unter allen Umständen gerecht werden muss.</p><br><p>Seine Überzeugungen sind tief verwurzelt. Wer versucht, ihm seinen Ehrbegriff auszureden oder ihn als überholt darzustellen, wird bei ihm wenig erreichen. Rheinallt misst solchen Ansichten kaum Bedeutung bei. Er ist überzeugt, dass ein Ritter seine Prinzipien nicht nach den Erwartungen anderer auszurichten hat.</p><br><p>Allerdings ist er keineswegs unfähig, moralische Unterschiede zu erkennen. Er versteht, dass eine Kriegslist nicht zwangsläufig Verrat bedeutet und dass selbst eine Lüge gerechtfertigt sein kann, wenn dadurch ein Unschuldiger geschützt wird. Solche Ausnahmen bereiten ihm jedoch Unbehagen.</p><p><br></p><p>Seine größte Schwierigkeit liegt darin, dass er nur ungern von einer einmal gefassten Meinung abrückt. Selbst wenn er erkennt, dass er falschgelegen hat, benötigt er gewöhnlich einige Zeit, um dies einzugestehen.</p><br><p>Zu den wenigen Menschen, die ihn in solchen Momenten erreichen können, gehören sein  Ritterfürst Sir Duncan Gafyr, sein Vetter und enger Freund Sir Egon Gafyr sowie seine jüngere Schwester Heledd.</p><br><p>Gerade Heledd genießt ein bemerkenswertes Maß an Vertrauen. Bei schwierigen Problemen sucht Rheinallt häufig ihren Rat oder überträgt ihr die Angelegenheit gleich vollständig. Während er seinen jüngeren Bruder Roderic noch immer gelegentlich wie einen unzuverlässigen Knappen behandelt, betrachtet er Heledd längst als eine Person, auf deren Urteil er sich verlassen kann.</p><br><p>Das Verhältnis zu Roderic ist dagegen nicht immer einfach. Rheinallt liebt seinen Bruder, doch dessen lockere, bequeme Art widerspricht nahezu allem, was er selbst für erstrebenswert hält. Seine mangelnde Begeisterung für Roderics Lebensweise führt dazu, dass er ihm selbst als Marschall nur widerwillig Aufgaben anvertraut.</p><br><p>Im Kreise seiner eigenen Familie zeigt Rheinallt hingegen eine weichere Seite.</p><br><p>Seine Ehe mit Lady Ffion begann als politische Verbindung, entwickelte sich jedoch zu  einer aufrichtigen Liebesbeziehung. Rheinallt ist kein Mann großer romantischer Gesten. Seine Zuneigung drückt sich eher durch Beständigkeit, Verlässlichkeit<br>und Fürsorge aus.</p><br><p>Seinen Kindern Slevin und Lefraye begegnet er mit derselben Strenge, die auch sein übriges Leben bestimmt. Er legt großen Wert auf ihre Ausbildung und ihr Verhalten. Zugleich sind sie diejenigen, denen gegenüber er seine Gefühle am<br>deutlichsten zeigt.</p><br><p>Rheinallt ist kein gefühlloser Mann. Er ist lediglich einer, der seine Gefühle nur selten vor anderen ausbreitet.</p>",
+        "worksTitle": "Können & Fähigkeiten",
+        "works": [
+          "Langschwertkampf - Als Teulu ist Rheinallt ein hervorragend ausgebildeter Schwertkämpfer. Seine größten Stärken liegen in seiner ausgefeilten Technik und seiner beträchtlichen Körperkraft.",
+          "Fliegender Drache - Diese offensive Form des Drachentanzes gehört zu seinen besonderen Stärken. Rheinallt verbindet kontrollierte Bewegungen mit entschlossenem Angriffsdruck.",
+          "Ausgeglichener Drache - Die vielseitige Form ergänzt seinen bevorzugten Kampfstil und ermöglicht ihm, sich auf unterschiedliche Gegner und Situationen einzustellen.",
+          "Zweikampf - Rheinallt kämpft ruhig, methodisch und mit beständigem offensivem Druck. Selbst unehrenhaftes Verhalten seines Gegners bringt ihn gewöhnlich nicht dazu, seine Vorgehensweise unbedacht zu verändern.",
+          "Körperkraft - Seine Stärke erlaubt es ihm, Angriffe mit erheblicher Wucht auszuführen, ohne dabei seine technische Präzision aufzugeben.",
+          "Militärische Führung - Als Marschall verfügt er über Erfahrung in der Planung, Organisation und Koordination militärischer Einsätze.",
+          "Truppenführung -Während des Krieges gegen Ceitheach führte er bereits einen eigenen Trupp. Zieht das Haus Gafyr geschlossen in den Kampf, nimmt er seinen Platz an vorderster Stelle ein.",
+          "Disziplin und Ausbildung - Rheinallt legt großen Wert auf eine gründliche militärische Ausbildung. Ritter, die ihren Anforderungen nicht gerecht werden, müssen mit zusätzlichen Übungen und einer erneuten Bewährungszeit rechnen.",
+          "Taktisches Verständnis - Seine Fähigkeit zur Planung und seine Freude an strategischen Brettspielen zeugen von seinem Interesse an durchdachten Entscheidungen und klaren Vorgehensweisen.",
+          "Urteilsvermögen - Er unterscheidet zwischen ehrlichen Fehlern, Nachlässigkeit und bewusstem Fehlverhalten, auch wenn er grundsätzlich hohe Maßstäbe anlegt.",
+          "Kampf zu Pferd - Trotz seiner allgemeinen Fähigkeiten als Ritter liegt ihm der berittene Kampf ausgesprochen wenig. Er bevorzugt es, seine Gegner zu Fuß zu stellen."
+        ],
+        "triviaTitle": "Trivia",
+        "trivia": [
+          "Rheinallt war bereits als Kind ausgesprochen stolz und wollte stets vorangehen. Sein früheres Wesen lässt sich am besten mit dem eines jungen Löwen vergleichen.",
+          "Sein gleichaltriger Vetter Sir Egon Gafyr gehört seit Kindertagen zu seinen engsten Freunden.",
+          "Während Rheinallt seinen jüngeren Bruder Roderic noch heute gelegentlich herumkommandiert, würde er dies bei seiner Schwester Heledd kaum wagen.",
+          "Heledd ist eine seiner wichtigsten Vertrauenspersonen. Bei schwierigen Problemen zieht Rheinallt sie häufig zurate oder überträgt ihr gleich die Angelegenheit.",
+          "Seine größten ritterlichen Vorbilder sind Sir Rhodri Draig und Sir Duncan Gafyr. Auch König Tristan und dessen Vorgänger bewundert er.",
+          "Rheinallt betrachtet die Übernahme des Marschallamtes als seine größte persönliche Leistung.",
+          "Obwohl er ein hervorragender Schwertkämpfer ist, liegt ihm der Kampf zu Pferd überhaupt nicht.",
+          "Rheinallt liebt strategische Brettspiele und nimmt sie ausgesprochen ernst.",
+          "Er ist ein miserabler Verlierer. Verliert er eine Partie, kann es vorkommen, dass er minutenlang schmollt, die Regeln infrage stellt oder im äußersten Fall sogar das gesamte Spielbrett umwirft.",
+          "Sein Vetter Egon kennt diese Eigenart vermutlich besser als jeder andere und dürfte sich gelegentlich einen Spaß daraus machen, Rheinallt gezielt herauszufordern.",
+          "Ein Witz aus Rheinallts Mund ist so selten, dass seine Familie darüber vermutlich noch Tage später spricht.",
+          "Bei seinen Kindern Slevin und Lefraye zeigt Rheinallt deutlich mehr Herzlichkeit als gegenüber den meisten anderen Menschen.",
+          "Seine Ehe mit Lady Ffion begann als politische Verbindung, entwickelte sich jedoch zu einer aufrichtigen und liebevollen Partnerschaft.",
+          "Rheinallt interessiert sich kaum für Abenteuerreisen. Er ist überzeugt, dass es in seinem eigenen Verantwortungsbereich stets genügend zu tun gibt.",
+          "Er kann Fehler eingestehen, benötigt dafür jedoch manchmal einen deutlichen Anstoß durch Egon, Heledd oder Sir Duncan.",
+          "Wer Rheinallt erklärt, seine Vorstellungen von Ehre seien überholt, darf nicht damit rechnen, dass ihn diese Meinung besonders beeindruckt.",
+          "Trotz seines kompromisslosen Ehrbegriffs ist Rheinallt in der Lage, zwischen einer zulässigen Kriegslist und einem wirklichen Verrat zu unterscheiden.",
+          "Wenn einer seiner Ritter unehrenhaft handelt, muss dieser sich zunächst erneut beim Waffenmeister bewähren. Wiederholtes oder schwerwiegendes Fehlverhalten kann zum Ausschluss führen.",
+          "Rheinallt möchte das Marschallamt so lange ausüben, wie er dazu fähig ist und sein Haus seine Dienste benötigt.",
+          "Die Vorstellung, einfach einmal nichts tun zu müssen, besitzt für ihn wenig Reiz. Selbst in seiner Freizeit sucht er gewöhnlich nach einer Beschäftigung, die seine Fähigkeiten fordert."
+        ],
+        "quotesTitle": "Zitate",
+        "quotes": [
+          "„Ein Ritter hat nicht die Pflicht, stets zu siegen. Er hat die Pflicht, seiner Ehre treu zu bleiben.“"
+        ],
+        "connectionsTitle": "Verbindungen",
+        "connections": [
+          {
+            "type": "heading",
+            "title": "Tierische Begleiter",
+            "detail": ""
+          },
+          {
+            "type": "connection",
+            "name": "Cadarn",
+            "detail": "Sein Ceffyl",
+            "image": "/AleriaAlmanach/assets/rheinallt-biography/cadarn-v1.jpeg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Cawg",
+            "detail": "Sein Hund",
+            "image": "/AleriaAlmanach/assets/rheinallt-biography/cawg-v1.jpeg",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Eigentum & Besitz",
+        "documents": [],
+        "footer": "Personenakte · Rheinallt Gafyr",
+        "portraitCaptions": [
+          "Sir Rheinallt Gafyr · 1740.",
+          "In Zivilkleidung · 1740.",
+          "Als junger Ritter · bildliche Rekonstruktion.",
+          "Als Knappe · bildliche Rekonstruktion.",
+          "Als Kind · bildliche Rekonstruktion."
+        ]
+      },
+      "revision": 1794765942808
+    }
+  }
+}

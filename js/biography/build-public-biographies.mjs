@@ -1,4 +1,5 @@
 import { EINION_BIOGRAPHY_CATALOG_ENTRY } from '../../AleriaAlmanach/modules/einion-biography/einion-biography.js';
+import { RHEINALLT_BIOGRAPHY_CATALOG_ENTRY } from '../../AleriaAlmanach/modules/rheinallt-biography/rheinallt-biography.js';
 import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
@@ -7,7 +8,7 @@ import { buildPatrickBiographyCatalogEntries, applyPatrickBiographyStatCorrectio
 import { DEVELOPMENT_TRAIT_BIOGRAPHY_REVISIONS, reviseDevelopmentTraitBiographyCards, reviseDevelopmentTraitBiography } from '../../AleriaAlmanach/modules/character-development/development-trait-biography-revisions.js';
 const directory = new URL('./', import.meta.url);
 const { entries: authoredEntries } = JSON.parse(await readFile(new URL('sources/public-biographies.json', directory), 'utf8'));
-const sharedEntries=[...buildPatrickBiographyCatalogEntries(), structuredClone(EINION_BIOGRAPHY_CATALOG_ENTRY)];
+const sharedEntries=[...buildPatrickBiographyCatalogEntries(), structuredClone(EINION_BIOGRAPHY_CATALOG_ENTRY), structuredClone(RHEINALLT_BIOGRAPHY_CATALOG_ENTRY)];
 for(const row of sharedEntries){
   const previous=authoredEntries.find(entry=>entry.key===row.key);
   row.replacedFingerprints=[...new Set([...(previous?.replacedFingerprints||[]),...row.replacedFingerprints])];

@@ -161,7 +161,8 @@ export const SITE_BUILD_TASKS = [
   },
   {
     id: 'biography-layout', label: 'Shared biography layout, editorial defaults, training portraits and transfer', parallelValidation: true,
-    inputs: ['js/biography/', 'AleriaAlmanach/modules/biography/', 'AleriaAlmanach/modules/characters/character-biography-tab.js',
+    inputs: ['js/biography/', 'AleriaAlmanach/modules/rheinallt-biography/', 'AleriaAlmanach/assets/rheinallt-biography/',
+      'AleriaAlmanach/tests/rheinallt-biography.test.mjs', 'AleriaAlmanach/modules/biography/', 'AleriaAlmanach/modules/characters/character-biography-tab.js',
       'AleriaAlmanach/modules/rendering/module-renderer.js', 'AleriaAlmanach/modules/module-editor/module-editor-biography.js',
       'AleriaAlmanach/modules/module-editor/module-editor-pages.js', 'AleriaAlmanach/modules/module-editor/module-editor-templates.js',
       'AleriaAlmanach/modules/module-editor/module-editor-events.js', 'AleriaAlmanach/modules/module-editor/module-editor-data.js',
@@ -172,7 +173,7 @@ export const SITE_BUILD_TASKS = [
       'Stammbäume/assets/js/modules/biography-page/', 'Stammbäume/assets/js/modules/person-biography/',
       'firebase/functions/src/families/person-biography-publication.js', almanach('biography-editions')],
     commands: [['js/biography/build-public-biographies.mjs', '--check'],
-      testCommand(almanach('biography-editions'), almanach('biography-transfer'), almanach('biography-portrait-captions'), almanach('biography-rich-text-compatibility'))]
+      testCommand(almanach('rheinallt-biography'), almanach('biography-editions'), almanach('biography-transfer'), almanach('biography-portrait-captions'), almanach('biography-rich-text-compatibility'))]
   },
   {
     id: 'character-health', label: 'Permanent afflictions, arcane fever, dependencies and scene-timed intoxication', parallelValidation: true,
@@ -752,7 +753,7 @@ export const SITE_BUILD_TASKS = [
     // These feature boundaries are checked against actual Node imports by the
     // dependency audit, including dynamically loaded editorial modules.
     inputs: ['Gameplay Guide/', 'CharakterDatenbank/generated/characters.snapshot.json',
-      'AleriaAlmanach/modules/einion-biography/',
+      'AleriaAlmanach/modules/einion-biography/', 'AleriaAlmanach/modules/rheinallt-biography/',
       'AleriaAlmanach/modules/patrick-biographies/', 'AleriaAlmanach/modules/character-genealogy/',
       'AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs',
       'AleriaAlmanach/modules/fleischsammler-argall/household.mjs',
@@ -904,8 +905,8 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'family-charts', label: 'Family chart release and browser geometry',
     inputs: ['Stammbäume/assets/js/', 'Stammbäume/assets/css/', 'Stammbäume/assets/data/',
-      'AleriaAlmanach/modules/einion-biography/', 'AleriaAlmanach/assets/einion-biography/',
-      'AleriaAlmanach/tests/einion-biography.test.mjs',
+      'AleriaAlmanach/modules/einion-biography/', 'AleriaAlmanach/modules/rheinallt-biography/', 'AleriaAlmanach/assets/einion-biography/',
+      'AleriaAlmanach/tests/einion-biography.test.mjs', 'AleriaAlmanach/tests/rheinallt-biography.test.mjs', 'AleriaAlmanach/assets/rheinallt-biography/',
       'AleriaAlmanach/modules/fleischsammler-argall/household.mjs',
       'AleriaAlmanach/modules/patrick-biographies/', 'AleriaAlmanach/modules/character-genealogy/',
       'AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs',
@@ -922,7 +923,7 @@ export const SITE_BUILD_TASKS = [
     excludes: ['Stammbäume/assets/data/published-families/backups/'],
     commands: [['netlify/build/verify-task-inputs.mjs', 'family-charts'],
       ['Stammbäume/tools/check-release.mjs', '--prepare-browser'],
-      testCommand('AleriaAlmanach/tests/einion-biography.test.mjs',
+      testCommand('AleriaAlmanach/tests/einion-biography.test.mjs', 'AleriaAlmanach/tests/rheinallt-biography.test.mjs',
         'Familien Häuser und Clans/tests/aehrental-house-pages.test.mjs',
         'Familien Häuser und Clans/tests/weidebucht-house-pages.test.mjs',
         'Familien Häuser und Clans/tests/graue-weite-house-pages.test.mjs',

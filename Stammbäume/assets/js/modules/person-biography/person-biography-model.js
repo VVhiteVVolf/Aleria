@@ -1,6 +1,6 @@
 import { formatAge } from '../../domain/person-presentation.js';
 import '../../../../../AleriaAlmanach/modules/biography/biography-card-rendering.js';
-import '../../../../../js/biography/public-biographies.generated.js?v=20261114-einion-v1';
+import '../../../../../js/biography/public-biographies.generated.js?v=20261115-rheinallt-v1';
 
 export const PERSON_BIOGRAPHY_EXTENSION_ID = 'biographyModule';
 export const PERSON_BIOGRAPHY_SCHEMA = 'aleria.biography-module';

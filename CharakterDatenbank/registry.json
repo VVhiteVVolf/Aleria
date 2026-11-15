@@ -22,6 +22,7 @@
     "Charakter Archiv Exporte/Bestätigte Bogenrevisionen 2026-11-02/y7MBxDiAaesbWHBtmw5Q.json",
     "Charakter Archiv Exporte/Biographien/branwen-draig-2026-10-15/branwen-charakter.json",
     "Charakter Archiv Exporte/Biographien/caralyn-chwedonol-2026-11-02/caralyn-lokaler-abgleich.json",
+    "Charakter Archiv Exporte/Biographien/rheinallt-gafyr-2026-11-15/rheinallt-aktuell.json",
     "Charakter Archiv Exporte/E8HXkgi2kdkXaqkxrnRo-tierbegleiter-2026-10-11.json",
     "Charakter Archiv Exporte/Fleischsammler Argall/gwenella-spouse-rhydric-argall.json",
     "Charakter Archiv Exporte/Fleischsammler Argall/maelor-ffionydd.json",
@@ -431,8 +432,8 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-11-14T10:00:00Z",
-  "count": 408,
+  "sourceExportedAt": "2026-11-15T18:05:42.808Z",
+  "count": 409,
   "records": [
     {
       "recordId": "character--kCmUm4WvMZDYetqrSWQ0",
@@ -8134,6 +8135,24 @@
       "familyStatus": "pending",
       "path": "records/orte/gwynthor/caerlan-ruadh--person--gwynthor-reine-ratte--caerlan-ruadh/character.json",
       "contentHash": "6000de68aad5ba1d5c389358c14a4a45c38dbacd2c40a268dd2eea2d9587597c"
+    },
+    {
+      "recordId": "character--person--haus-gafyr--rheinallt-gafyr",
+      "name": "Rheinallt Gafyr",
+      "aliases": [],
+      "worldPersonId": "person--haus-gafyr--rheinallt-gafyr",
+      "firestoreDocumentId": "person--haus-gafyr--rheinallt-gafyr",
+      "firestoreDocumentIds": [
+        "person--haus-gafyr--rheinallt-gafyr"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-gafyr",
+        "label": "Haus Gafyr"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-gafyr/rheinallt-gafyr--person--haus-gafyr--rheinallt-gafyr/character.json",
+      "contentHash": "beb16966973c926d26aecce607098afa729ddc9256a323837e0e1887326e2ef4"
     }
   ]
 }
