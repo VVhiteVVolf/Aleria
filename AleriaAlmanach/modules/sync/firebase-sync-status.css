@@ -1,5 +1,7 @@
 /* Online status remains compact until the user opens its details. */
 .firebase-sync-status {
+  /* The global status stays beneath modal dialogs and their action buttons. */
+  z-index: 900;
   display: flex;
   flex-direction: column;
   align-items: stretch;

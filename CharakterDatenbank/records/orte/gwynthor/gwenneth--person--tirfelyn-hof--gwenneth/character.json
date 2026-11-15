@@ -1,0 +1,214 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--tirfelyn-hof--gwenneth",
+  "slug": "gwenneth",
+  "identity": {
+    "name": "Gwenneth",
+    "aliases": [],
+    "worldPersonId": "person--tirfelyn-hof--gwenneth"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--tirfelyn-hof--gwenneth",
+      "documentIds": [
+        "person--tirfelyn-hof--gwenneth"
+      ],
+      "documents": [
+        {
+          "documentId": "person--tirfelyn-hof--gwenneth",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Tirfelyn Hof/gwenneth.json",
+    "sourceExportedAt": "2026-11-15T20:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--tirfelyn-hof--gwenneth"
+    ],
+    "contentHash": "11846498a8654132ef3f5197cc21d570ae83a4d3b7f9fd446e620ed0e4b01882"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "tirfelyn-hof-20261115"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--tirfelyn-hof--gwenneth",
+        "name": "Gwenneth",
+        "title": "Meirigs Ehefrau, Hausfrau im eigenen Haushalt",
+        "role": "Meirigs Ehefrau, Hausfrau im eigenen Haushalt",
+        "age": 39,
+        "birth": "1701",
+        "gender": "weiblich",
+        "race": "Mensch",
+        "origin": "Cenyr",
+        "identity": {
+          "worldPersonId": "person--tirfelyn-hof--gwenneth"
+        },
+        "genealogy": {
+          "worldPersonId": "person--tirfelyn-hof--gwenneth",
+          "sources": []
+        },
+        "fraktion": "Tirfelyn-Hof",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/gwenneth-v1.png",
+        "bio": "Die 39-jährige Gwenneth führt den Haushalt der Müllerfamilie. Mit Meirig und ihren beiden Söhnen Iorfin und Eifor bewohnt sie die vierte Bedienstetenhütte. Sie ist eine schlichte, kräftige Frau, die sich um Mahlzeiten, Wäsche und den Alltag ihrer Familie kümmert.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Gwenneth",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Gwenneth"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "39 Jahre"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Meirigs Ehefrau, Hausfrau im eigenen Haushalt"
+            },
+            {
+              "label": "Wohnort",
+              "value": "Hütte 4, größere östliche Hütte der mittleren Gruppe"
+            }
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/gwenneth-v1.png",
+            "biographyTitle": "Meirigs Ehefrau, Hausfrau im eigenen Haushalt",
+            "biographyText": "<p>Die 39-jährige Gwenneth führt den Haushalt der Müllerfamilie. Mit Meirig und ihren beiden Söhnen Iorfin und Eifor bewohnt sie die vierte Bedienstetenhütte. Sie ist eine schlichte, kräftige Frau, die sich um Mahlzeiten, Wäsche und den Alltag ihrer Familie kümmert.</p>",
+            "historyTitle": "Am Tirfelyn-Hof",
+            "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+            "documentsTitle": "Hof und Arbeitsort",
+            "documents": [
+              {
+                "title": "Tirfelyn-Hof",
+                "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Hütte 4, größere östliche Hütte der mittleren Gruppe · Tirfelyn-Hof · Gwynthor",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--tirfelyn-hof--gwenneth",
+    "name": "Gwenneth",
+    "title": "Meirigs Ehefrau, Hausfrau im eigenen Haushalt",
+    "role": "Meirigs Ehefrau, Hausfrau im eigenen Haushalt",
+    "age": 39,
+    "birth": "1701",
+    "gender": "weiblich",
+    "race": "Mensch",
+    "origin": "Cenyr",
+    "identity": {
+      "worldPersonId": "person--tirfelyn-hof--gwenneth"
+    },
+    "genealogy": {
+      "worldPersonId": "person--tirfelyn-hof--gwenneth",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Tirfelyn-Hof",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/gwenneth-v1.png",
+    "bio": "Die 39-jährige Gwenneth führt den Haushalt der Müllerfamilie. Mit Meirig und ihren beiden Söhnen Iorfin und Eifor bewohnt sie die vierte Bedienstetenhütte. Sie ist eine schlichte, kräftige Frau, die sich um Mahlzeiten, Wäsche und den Alltag ihrer Familie kümmert.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Gwenneth",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Gwenneth"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "39 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Meirigs Ehefrau, Hausfrau im eigenen Haushalt"
+        },
+        {
+          "label": "Wohnort",
+          "value": "Hütte 4, größere östliche Hütte der mittleren Gruppe"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/gwenneth-v1.png",
+        "biographyTitle": "Meirigs Ehefrau, Hausfrau im eigenen Haushalt",
+        "biographyText": "<p>Die 39-jährige Gwenneth führt den Haushalt der Müllerfamilie. Mit Meirig und ihren beiden Söhnen Iorfin und Eifor bewohnt sie die vierte Bedienstetenhütte. Sie ist eine schlichte, kräftige Frau, die sich um Mahlzeiten, Wäsche und den Alltag ihrer Familie kümmert.</p>",
+        "historyTitle": "Am Tirfelyn-Hof",
+        "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+        "documentsTitle": "Hof und Arbeitsort",
+        "documents": [
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Hütte 4, größere östliche Hütte der mittleren Gruppe · Tirfelyn-Hof · Gwynthor",
+    "archived": false,
+    "aliases": []
+  }
+}

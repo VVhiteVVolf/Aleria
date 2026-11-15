@@ -10,6 +10,13 @@
   let dragMoved = false;
   let dragClientStart = null;
   let tooltipHideTimer = null;
+  const openPopovers = new Set();
+  window.addEventListener('aleria:karto:popover-visibility', event => {
+    const { id, open } = event.detail || {};
+    if (!id) return;
+    if (open) openPopovers.add(id); else openPopovers.delete(id);
+    if (open) hideTooltip({ immediate: true });
+  });
   // Ctrl/Cmd+click toggles pin membership here - session-only, not saved.
   // Bulk actions (Kategorie ändern / Löschen) act on whatever's in here,
   // see bulkSetCategory()/bulkDeleteSelected() below.
@@ -298,6 +305,7 @@
   }
 
   function showTooltip(pin, clientX, clientY){
+    if (openPopovers.size || document.getElementById('scroll-mo')?.classList.contains('open')) return;
     clearTimeout(tooltipHideTimer);
     const tooltip = document.getElementById('pin-tooltip');
     const category = runtime.categoryForPin(pin);
@@ -336,7 +344,9 @@
     tooltip.style.top = y + 'px';
   }
 
-  function hideTooltip(){
+  function hideTooltip({ immediate = false } = {}){
+    clearTimeout(tooltipHideTimer);
+    if (immediate) { document.getElementById('pin-tooltip').classList.remove('show'); return; }
     tooltipHideTimer = setTimeout(() => {
       document.getElementById('pin-tooltip').classList.remove('show');
     }, 80);

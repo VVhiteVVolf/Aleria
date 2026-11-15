@@ -5,7 +5,7 @@ import { readFile } from 'node:fs/promises';
 import { parseFragment } from 'parse5';
 import { buildModuleOffers } from '../modules/item-register/item-register-module-catalog.js';
 import { matchCatalogPurchaseOffers } from '../modules/catalog-purchase/catalog-purchase-model.js';
-import { renderCatalogPurchaseSummary } from '../modules/catalog-purchase/catalog-purchase-view.js';
+import { renderCatalogPurchaseSummary, renderCatalogPurchaseDialog } from '../modules/catalog-purchase/catalog-purchase-view.js';
 import { escape } from '../modules/item-register/item-register-markup.js';
 
 async function renderers() {
@@ -63,4 +63,21 @@ test('Nach bestätigtem Uniquekauf zeigt die Finanzvorschau den Istbetrag, ohne 
   const result = renderCatalogPurchaseSummary({ product: { available: false }, totalMinor: 100, payer: { minor: 9720 }, errors: ['Gekauft'] }, { ready: true });
   assert.match(result, /Geldbeutel jetzt/); assert.match(result, /97 Kupfer, 20 Eisenpfennig/);
   assert.doesNotMatch(result, /96 Kupfer/);
+});
+
+test('Auch nach gewöhnlichem Kauf steht die bestätigte Abbuchung neben dem tatsächlichen Restgeld', () => {
+  const result = renderCatalogPurchaseSummary({ product: { available: true }, totalMinor: 425000,
+    payer: { minor: 815000 }, errors: [] }, { ready: true, completed: { totalMinor: 425000 } });
+  assert.match(result, /Abgebucht.*4 Gold, 2 Silber, 50 Kupfer/);
+  assert.match(result, /Geldbeutel jetzt.*8 Gold, 1 Silber, 50 Kupfer/);
+  assert.doesNotMatch(result, /nach dem Kauf|3 Gold, 9 Silber/);
+  assert.match(result, /Noch einmal kaufen/);
+});
+
+test('Schnellkauf zeigt ohne ausdrücklichen Fremdkauf keinen zusätzlichen Figurenwähler', () => {
+  const input = { data: {}, selection: { payerKey: 'character:rhiannon' }, preview: { recipient: { name: 'Rhiannon' }, errors: [] } };
+  const result = renderCatalogPurchaseDialog(input);
+  assert.doesNotMatch(result, /data-picker-field="recipientId"/);
+  assert.match(result, /Die Ware erhält <strong>Rhiannon<\/strong>/);
+  assert.match(renderCatalogPurchaseDialog({ ...input, selection: { ...input.selection, buyForOther: true } }), /Diese Figur erhält die Ware/);
 });

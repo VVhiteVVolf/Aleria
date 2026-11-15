@@ -62,3 +62,11 @@ test('status details escape stored text and green motion honors reduced-motion p
   assert.match(css, /prefers-reduced-motion: reduce/);
   assert.match(css, /width: 2\.5rem/);
 });
+
+test('the compact status stays below the entry dialog so mobile comment buttons remain reachable', () => {
+  const statusCss = readFileSync(new URL('../modules/sync/firebase-sync-status.css', import.meta.url), 'utf8');
+  const modalCss = readFileSync(new URL('../styles/modal.css', import.meta.url), 'utf8');
+  const statusLevel = Number(statusCss.match(/\.firebase-sync-status\s*\{[\s\S]*?z-index:\s*(\d+)/)[1]);
+  const modalLevel = Number(modalCss.match(/#modal-overlay\s*\{[\s\S]*?z-index:\s*(\d+)/)[1]);
+  assert.ok(statusLevel < modalLevel);
+});

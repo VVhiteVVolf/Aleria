@@ -19,7 +19,11 @@
 .catalog-purchase-product img { flex: none; width: 66px; height: 74px; object-fit: contain; }
 .catalog-purchase-product strong, .catalog-purchase-product span { display: block; overflow-wrap: anywhere; }
 .catalog-purchase-product span { color: #77654d; font-size: .8rem; margin-top: .25rem; }
-.catalog-purchase-people { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .8rem; align-items: start; }
+.catalog-purchase-people { display: grid; grid-template-columns: minmax(0, 1fr); }
+.catalog-purchase-destination { display: grid; gap: .6rem; }
+.catalog-purchase-dialog .catalog-purchase-gift { display: flex; align-items: center; gap: .5rem; font-size: .85rem; cursor: pointer; }
+.catalog-purchase-dialog .catalog-purchase-gift input { width: 18px; height: 18px; min-height: 18px; flex: none; accent-color: #533a1e; }
+.catalog-purchase-destination p { margin: 0; font-size: .85rem; line-height: 1.5; overflow-wrap: anywhere; }
 .catalog-purchase-dialog .scene-trade-actor-picker { min-width: 0; }
 .catalog-purchase-dialog .scene-trade-actor-trigger { width: 100%; min-height: 48px; }
 .catalog-purchase-dialog .scene-trade-actor-name { overflow-wrap: anywhere; }
@@ -39,7 +43,6 @@
 .catalog-purchase-loading { padding: 1.25rem; line-height: 1.5; }
 @media (max-width: 540px) {
   .catalog-purchase-content, .catalog-purchase-header { padding: .85rem; }
-  .catalog-purchase-people { grid-template-columns: minmax(0, 1fr); }
   .catalog-purchase-totals > div { display: grid; gap: .25rem; }
   .catalog-purchase-totals strong { text-align: left; }
 }

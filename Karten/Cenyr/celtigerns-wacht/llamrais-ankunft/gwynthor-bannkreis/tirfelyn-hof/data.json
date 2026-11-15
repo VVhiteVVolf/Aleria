@@ -1,0 +1,608 @@
+{
+  "schemaVersion": 1,
+  "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/data.json",
+  "revision": 0,
+  "updatedAt": "2026-11-15T20:00:00Z",
+  "generatedStateHash": "7f06e74e45a08ac39b88a72043cbf681bb8961c4e8f386d93b9b4eb56d05e6b1",
+  "state": {
+    "pins": [
+      {
+        "id": "tirfelyn-holzfaellerlager",
+        "title": "Holzfällerlager",
+        "x": 0.188,
+        "y": 0.1,
+        "cat": "hof-arbeit",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/holzfaeller-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/holzfaellerlager-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Zuständig",
+            "v": "Hallvard, Torleif"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Die aldrimarischen Brüder Hallvard und Torleif schlagen Nutz- und Brennholz für den Hof"
+          }
+        ],
+        "text": "Die aldrimarischen Brüder Hallvard und Torleif schlagen Nutz- und Brennholz für den Hof. Sie entasten die Stämme, bereiten Bauholz vor und halten den Brennholzvorrat für Haus, Mühle und Räucherhaus bereit.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-holzfaellerlager]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      },
+      {
+        "id": "tirfelyn-holzfaellerhaus-ost",
+        "title": "Hallvards und Rannveigs Haus",
+        "x": 0.244,
+        "y": 0.113,
+        "cat": "hof-wohnhaus",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/wohnhaus-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/holzfaellerhaus-ost-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Bewohner",
+            "v": "Hallvard, Rannveig"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Wohnhaus"
+          }
+        ],
+        "text": "Hier wohnen Hallvard und seine Frau Rannveig. Während Hallvard im Holzfällerlager arbeitet, sammelt Rannveig Beeren und Kräuter in den nahen Wäldern und bringt sie in die Vorratshaltung des Hofes ein.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-holzfaellerhaus-ost]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      },
+      {
+        "id": "tirfelyn-holzfaellerhaus-sued",
+        "title": "Torleifs Haus",
+        "x": 0.187,
+        "y": 0.178,
+        "cat": "hof-wohnhaus",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/wohnhaus-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/holzfaellerhaus-sued-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Bewohner",
+            "v": "Torleif"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Wohnhaus"
+          }
+        ],
+        "text": "Torleif wohnt nahe beim Arbeitsplatz und dem Haushalt seines Bruders. Sein Haus ist schlicht eingerichtet; Arbeitskleidung und Werkzeug werden trocken beim Eingang verwahrt.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-holzfaellerhaus-sued]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      },
+      {
+        "id": "tirfelyn-bedienstetenhuette-01",
+        "title": "Nefydds Hütte",
+        "x": 0.387,
+        "y": 0.105,
+        "cat": "hof-wohnhaus",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/wohnhaus-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-01-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Bewohner",
+            "v": "Nefydd"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Wohnhaus"
+          }
+        ],
+        "text": "Der Feldknecht Nefydd wohnt in der nördlichsten Hütte. Er unterstützt Gwallog beim Bestellen der Äcker und bei der Ernte.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-01]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      },
+      {
+        "id": "tirfelyn-bedienstetenhuette-02",
+        "title": "Rhufons Hütte",
+        "x": 0.369,
+        "y": 0.157,
+        "cat": "hof-wohnhaus",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/wohnhaus-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-02-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Bewohner",
+            "v": "Rhufon"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Wohnhaus"
+          }
+        ],
+        "text": "Rhufon hilft auf den Feldern und bei den täglich wechselnden Hofarbeiten. Bei Lieferungen unterstützt er die Familie mit Wagen, Säcken und Kisten.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-02]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      },
+      {
+        "id": "tirfelyn-bedienstetenhuette-03",
+        "title": "Maldwyns Hütte",
+        "x": 0.398,
+        "y": 0.183,
+        "cat": "hof-wohnhaus",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/wohnhaus-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-03-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Bewohner",
+            "v": "Maldwyn"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Wohnhaus"
+          }
+        ],
+        "text": "Der Viehknecht Maldwyn wohnt zwischen Hütten und Weidewegen. Unter Eudafs Leitung hilft er bei Fütterung, Viehtrieb und der Pflege der Einfriedungen.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-03]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      },
+      {
+        "id": "tirfelyn-bedienstetenhuette-04",
+        "title": "Haus der Müllerfamilie",
+        "x": 0.47,
+        "y": 0.192,
+        "cat": "hof-wohnhaus",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/wohnhaus-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-04-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Bewohner",
+            "v": "Meirig, Gwenneth, Iorfin, Eifor"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Wohnhaus"
+          }
+        ],
+        "text": "Hier wohnen Meirig, seine Frau Gwenneth und ihre Söhne Iorfin und Eifor. Gwenneth führt den eigenen Haushalt; Meirig arbeitet in der Hofmühle.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-04]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      },
+      {
+        "id": "tirfelyn-bedienstetenhuette-05",
+        "title": "Cynfarchs Hütte",
+        "x": 0.454,
+        "y": 0.259,
+        "cat": "hof-wohnhaus",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/wohnhaus-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-05-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Bewohner",
+            "v": "Cynfarch"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Wohnhaus"
+          }
+        ],
+        "text": "Cynfarch aus Bronhir bewohnt diese Hütte. Von hier geht er zur Schmiede, wo er die Hofpferde beschlägt und eiserne Gerätschaften instand hält.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-05]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      },
+      {
+        "id": "tirfelyn-bedienstetenhuette-06",
+        "title": "Eiluneds Hütte",
+        "x": 0.509,
+        "y": 0.243,
+        "cat": "hof-wohnhaus",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/wohnhaus-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-06-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Bewohner",
+            "v": "Eiluned"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Wohnhaus"
+          }
+        ],
+        "text": "Eiluned unterstützt Enid und Madrun im gemeinsamen Hofhaushalt. Wäsche, Reinigung und Wasserholen gehören zu ihren wechselnden Aufgaben.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-06]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      },
+      {
+        "id": "tirfelyn-muehle",
+        "title": "Hofmühle",
+        "x": 0.5,
+        "y": 0.372,
+        "cat": "hof-arbeit",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/muehle-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/muehle-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Zuständig",
+            "v": "Meirig"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Meirig mahlt das Getreide des Tirfelyn-Hofs zu Mehl und Schrot"
+          }
+        ],
+        "text": "Meirig mahlt das Getreide des Tirfelyn-Hofs zu Mehl und Schrot. Iorfin lernt die Abläufe unter seiner Aufsicht kennen; die beiden Söhne übernehmen keine selbständige Verantwortung an der Mühlentechnik.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-muehle]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      },
+      {
+        "id": "tirfelyn-gerberhaus",
+        "title": "Gerberhaus",
+        "x": 0.718,
+        "y": 0.445,
+        "cat": "hof-arbeit",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/gerberei-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/gerberhaus-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Zuständig",
+            "v": "Cynddylan Tirfelyn"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Cynddylan übernimmt hier die Häuteaufbereitung und einfache Lederarbeiten für den Hof"
+          }
+        ],
+        "text": "Cynddylan übernimmt hier die Häuteaufbereitung und einfache Lederarbeiten für den Hof. Nutzbares Material wird für Riemen und die Instandhaltung der Hofausstattung vorbereitet.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-gerberhaus]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      },
+      {
+        "id": "tirfelyn-bauernherrenhaus",
+        "title": "Bauernherrenhaus Tirfelyn",
+        "x": 0.69,
+        "y": 0.567,
+        "cat": "hof-wohnhaus",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/herrenhaus-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bauernherrenhaus-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Bewohner",
+            "v": "Caradog Tirfelyn, Enid, Gareth Tirfelyn, Bedwyr Tirfelyn, Eudaf Tirfelyn, Madrun, Gwallog Tirfelyn, Cynddylan Tirfelyn, Eiliwedd Tirfelyn, Tegfedd Tirfelyn, Gwynllyw Tirfelyn, Gwenfyl, Eiliwen Tirfelyn, Clydog Tirfelyn, Gwenfron, Cynwal Tirfelyn"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Wohnhaus"
+          }
+        ],
+        "text": "Caradog und Eudaf führen den Hof gemeinsam. Hier wohnen die beiden Familienzweige mit insgesamt sechzehn lebenden Angehörigen; am Familientisch werden Arbeit, Vorräte und Lieferungen abgestimmt.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-bauernherrenhaus]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      },
+      {
+        "id": "tirfelyn-hufschmiede",
+        "title": "Hufschmiede",
+        "x": 0.839,
+        "y": 0.362,
+        "cat": "hof-arbeit",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/schmiede-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hufschmiede-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Zuständig",
+            "v": "Cynfarch"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Der junge Cynfarch aus Bronhir beschlägt die Hofpferde"
+          }
+        ],
+        "text": "Der junge Cynfarch aus Bronhir beschlägt die Hofpferde. Außerdem kümmert er sich um eiserne Beschläge und kleine Reparaturen an den landwirtschaftlichen Geräten.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-hufschmiede]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      },
+      {
+        "id": "tirfelyn-imkerei",
+        "title": "Imkerei",
+        "x": 0.923,
+        "y": 0.188,
+        "cat": "hof-arbeit",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/imkerei-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/imkerei-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Zuständig",
+            "v": "Enid"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Enid betreut die Bienen des Hofes"
+          }
+        ],
+        "text": "Enid betreut die Bienen des Hofes. Honig ergänzt die Vorräte der Familie; Wachs wird gesammelt und im Haushalt weiterverwendet.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-imkerei]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      },
+      {
+        "id": "tirfelyn-gestuet",
+        "title": "Hofgestüt",
+        "x": 0.963,
+        "y": 0.565,
+        "cat": "hof-arbeit",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/gestuet-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/gestuet-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Zuständig",
+            "v": "Gareth Tirfelyn, Cynddylan Tirfelyn"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Gareth und Cynddylan versorgen die Hofpferde, halten Stall und Auslauf sauber und stellen Futter bereit"
+          }
+        ],
+        "text": "Gareth und Cynddylan versorgen die Hofpferde, halten Stall und Auslauf sauber und stellen Futter bereit. Den nötigen Hufbeschlag übernimmt Cynfarch.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-gestuet]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      },
+      {
+        "id": "tirfelyn-raeucherhaus",
+        "title": "Räucherhaus",
+        "x": 0.696,
+        "y": 0.372,
+        "cat": "hof-arbeit",
+        "kind": "place",
+        "pinMarker": "/Karten/assets/icons/hoforte/raeucherhaus-pin-v1.png",
+        "pinMarkerScale": 0.75,
+        "img": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/raeucherhaus-v1.png",
+        "imgLink": "",
+        "crest": "",
+        "crestLink": "",
+        "banner": "",
+        "bannerLink": "",
+        "region": "Tirfelyn-Hof · Bannkreis Gwynthor",
+        "house": "Familie Tirfelyn",
+        "faction": "",
+        "table": [
+          {
+            "k": "Zuständig",
+            "v": "Madrun, Gwenfyl"
+          },
+          {
+            "k": "Nutzung",
+            "v": "Madrun und Gwenfyl machen hier einen Teil der Erzeugnisse haltbar"
+          }
+        ],
+        "text": "Madrun und Gwenfyl machen hier einen Teil der Erzeugnisse haltbar. Salz, Rauch und sorgfältige Lagerung helfen, die Vorräte über arbeitsreiche und kalte Wochen zu bewahren.\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=tirfelyn-hof%3A%3Asession%3Atirfelyn-hof-poi-raeucherhaus]Interaktive Szene im Almanach öffnen[/URL]",
+        "secret": false
+      }
+    ],
+    "cats": [
+      {
+        "id": "hof-wohnhaus",
+        "label": "Wohnhäuser",
+        "color": "#886b45"
+      },
+      {
+        "id": "hof-arbeit",
+        "label": "Arbeitsstätten",
+        "color": "#8c532f"
+      },
+      {
+        "id": "hof-land",
+        "label": "Felder und Weiden",
+        "color": "#53734c"
+      },
+      {
+        "id": "hof-vorrat",
+        "label": "Vorräte und Wasser",
+        "color": "#496e7c"
+      }
+    ],
+    "dotSize": 22,
+    "lblSize": 13,
+    "showMarkers": true,
+    "showPinLabels": false,
+    "markerPresentation": "symbols",
+    "pinVisibilityVersion": 1,
+    "regionTitle": "Tirfelyn-Hof",
+    "regionIcon": "",
+    "mapImages": {
+      "normal": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png",
+      "pins": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png"
+    },
+    "layerNames": {
+      "normal": "Normal",
+      "pins": "Markierungen"
+    },
+    "extraLayers": [],
+    "dominions": [],
+    "dm": {
+      "sessions": [],
+      "notes": "",
+      "groupStatus": {}
+    },
+    "markerCatalog": [
+      {
+        "id": "icon-hoforte-herrenhaus",
+        "url": "assets/icons/hoforte/herrenhaus-pin-v1.png",
+        "name": "Kleines Bauernherrenhaus",
+        "group": "Kleine Hoforte"
+      },
+      {
+        "id": "icon-hoforte-wohnhaus",
+        "url": "assets/icons/hoforte/wohnhaus-pin-v1.png",
+        "name": "Wohnhütte",
+        "group": "Kleine Hoforte"
+      },
+      {
+        "id": "icon-hoforte-holzfaeller",
+        "url": "assets/icons/hoforte/holzfaeller-pin-v1.png",
+        "name": "Kleiner Holzfällerplatz",
+        "group": "Kleine Hoforte"
+      },
+      {
+        "id": "icon-hoforte-muehle",
+        "url": "assets/icons/hoforte/muehle-pin-v1.png",
+        "name": "Kleine Hofmühle",
+        "group": "Kleine Hoforte"
+      },
+      {
+        "id": "icon-hoforte-gerberei",
+        "url": "assets/icons/hoforte/gerberei-pin-v1.png",
+        "name": "Kleine Gerberei",
+        "group": "Kleine Hoforte"
+      },
+      {
+        "id": "icon-hoforte-schmiede",
+        "url": "assets/icons/hoforte/schmiede-pin-v1.png",
+        "name": "Kleine Hofschmiede",
+        "group": "Kleine Hoforte"
+      },
+      {
+        "id": "icon-hoforte-imkerei",
+        "url": "assets/icons/hoforte/imkerei-pin-v1.png",
+        "name": "Kleine Imkerei",
+        "group": "Kleine Hoforte"
+      },
+      {
+        "id": "icon-hoforte-gestuet",
+        "url": "assets/icons/hoforte/gestuet-pin-v1.png",
+        "name": "Kleines Gestüt",
+        "group": "Kleine Hoforte"
+      },
+      {
+        "id": "icon-hoforte-raeucherhaus",
+        "url": "assets/icons/hoforte/raeucherhaus-pin-v1.png",
+        "name": "Kleines Räucherhaus",
+        "group": "Kleine Hoforte"
+      }
+    ]
+  }
+}

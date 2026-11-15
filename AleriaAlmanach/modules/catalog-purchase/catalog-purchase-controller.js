@@ -49,7 +49,9 @@ export function createCatalogPurchaseController({ document: doc = globalThis.doc
     if (!alive(view)) return;
     const target = view.dialog.querySelector('[data-catalog-purchase-summary]');
     if (target) target.innerHTML = renderCatalogPurchaseSummary(preview(view), {
-      busy: view.busy, pending: !!view.session.submission.pending(), ready: view.ready });
+      busy: view.busy, pending: !!view.session.submission.pending(), ready: view.ready, completed: view.completed });
+    const status = view.dialog.querySelector('.catalog-purchase-status');
+    if (status) { status.textContent = view.status; status.classList.toggle('is-error', view.error); }
   }
   async function prepareAccounts(view) {
     const token = ++view.accountsToken;
@@ -68,19 +70,13 @@ export function createCatalogPurchaseController({ document: doc = globalThis.doc
   }
   function select(view, { field, value }) {
     if (!alive(view) || view.busy || view.session.submission.pending()) return;
-    const options = catalogPurchasePayerOptions(view.data), oldPayer = view.selection.payerKey;
+    const options = catalogPurchasePayerOptions(view.data);
     if (field === 'payerKey') {
       const payer = options.find(option => option.key === value && option.canDebit);
       if (!payer) return;
-      view.selection.payerKey = value;
-      if (payer.kind === 'character') {
-        if (!view.selection.recipientKey || view.selection.recipientKey === oldPayer) view.selection.recipientKey = payer.key;
-        view.selection.actorCharacterId = payer.id;
-      } else {
-        const actor = payer.members.find(member => `character:${member.id}` === view.selection.recipientKey) || payer.members[0];
-        view.selection.actorCharacterId = actor.id;
-        view.selection.recipientKey ||= `character:${actor.id}`;
-      }
+      const selected = resolveCatalogPurchaseSelection(view.data, { ...view.selection, payerKey: value });
+      view.selection = { ...view.selection, ...selected,
+        recipientKey: view.selection.buyForOther ? view.selection.recipientKey : selected.recipientKey };
     } else if (field === 'recipientId') {
       if (!options.some(option => option.kind === 'character' && option.id === value)) return;
       view.selection.recipientKey = `character:${value}`;
@@ -88,14 +84,15 @@ export function createCatalogPurchaseController({ document: doc = globalThis.doc
       const group = view.data.groups.find(record => `group:${record.id}` === view.selection.payerKey);
       if (!catalogPurchaseGroupMembers(view.data, group).some(member => member.id === value)) return;
       view.selection.actorCharacterId = value;
+      if (!view.selection.buyForOther) view.selection.recipientKey = `character:${value}`;
     } else return;
     view.preferences.save(view.selection);
-    view.status = ''; view.error = false;
+    view.status = ''; view.error = false; view.completed = null;
     render(view, field); void prepareAccounts(view);
   }
   async function confirm(view, retry = false) {
     if (!alive(view) || view.busy || (!retry && !view.ready)) return;
-    view.busy = true; view.error = false; view.status = 'Kauf wird bestätigt …'; render(view);
+    view.busy = true; view.error = false; view.completed = null; view.status = 'Kauf wird bestätigt …'; render(view);
     try {
       const result = retry ? await view.session.submission.retry()
         : await view.session.submission.submit(buildCatalogPurchaseCheckout(view.selection, view.data));
@@ -115,7 +112,9 @@ export function createCatalogPurchaseController({ document: doc = globalThis.doc
       void Promise.all(visibleRoots.map(root => decorate(root, true)));
       if (!alive(view)) return;
       view.products = view.products.map(product => view.data.offers.find(item => item.id === product.id) || product);
-      view.status = `${line?.quantity || view.selection.quantity} × ${line?.name || bought?.title || 'Ware'} gekauft und ins Inventar übertragen.`;
+      const recipient = view.data.characters.find(record => `character:${record.id}` === line?.recipientKey);
+      view.completed = { totalMinor: line?.totalMinor };
+      view.status = `${line?.quantity || view.selection.quantity} × ${line?.name || bought?.title || 'Ware'} gekauft und ins Inventar übertragen.${recipient ? ` Ware für ${recipient.name}.` : ''}`;
       view.ready = true;
     } catch (error) {
       if (!alive(view)) return;
@@ -176,7 +175,7 @@ export function createCatalogPurchaseController({ document: doc = globalThis.doc
     dialog.setAttribute('aria-labelledby', 'catalog-purchase-title'); dialog.innerHTML = renderCatalogPurchaseLoading();
     doc.body.append(dialog);
     const view = { options, dialog, session, lifetime: new AbortController(), accountsToken: 0, data: {}, selection: {}, products: [],
-      ready: false, busy: true, status: '', error: false };
+      ready: false, busy: true, status: '', error: false, completed: null };
     current = view;
     dialog.addEventListener('cancel', event => { event.preventDefault(); if (!view.pickers?.close()) close(); }, { signal: view.lifetime.signal });
     dialog.addEventListener('keydown', event => event.stopPropagation(), { signal: view.lifetime.signal });
@@ -189,11 +188,20 @@ export function createCatalogPurchaseController({ document: doc = globalThis.doc
     }, { signal: view.lifetime.signal });
     dialog.addEventListener('input', event => {
       if (event.target.dataset.catalogField !== 'quantity' || view.busy || session.submission.pending()) return;
-      view.selection.quantity = event.target.value; summary(view);
+      view.selection.quantity = event.target.value; view.completed = null; view.status = ''; summary(view);
     }, { signal: view.lifetime.signal });
     dialog.addEventListener('change', event => {
-      if (event.target.dataset.catalogField !== 'productId' || view.busy || session.submission.pending()) return;
-      view.selection.productId = event.target.value; view.selection.quantity = 1; render(view);
+      if (view.busy || session.submission.pending()) return;
+      if (event.target.dataset.catalogField === 'buyForOther') {
+        view.selection.buyForOther = event.target.checked;
+        view.selection.recipientKey = event.target.checked ? ''
+          : resolveCatalogPurchaseSelection(view.data, view.selection).recipientKey;
+        view.completed = null; view.status = ''; view.error = false;
+        render(view); void prepareAccounts(view);
+      } else if (event.target.dataset.catalogField === 'productId') {
+        view.selection.productId = event.target.value; view.selection.quantity = 1;
+        view.completed = null; view.status = ''; render(view);
+      }
     }, { signal: view.lifetime.signal });
     dialog.showModal();
     try {
@@ -214,7 +222,8 @@ export function createCatalogPurchaseController({ document: doc = globalThis.doc
       if (pending) {
         const line = pending.lines[0];
         view.selection = { actorCharacterId: pending.actorCharacterId, payerKey: line.payerKey, recipientKey: line.recipientKey,
-          productId: line.productId, quantity: line.quantity };
+          productId: line.productId, quantity: line.quantity,
+          buyForOther: line.recipientKey !== `character:${pending.actorCharacterId}` };
         view.products = view.data.offers.filter(product => product.id === line.productId);
       } else view.selection.productId = view.products[0]?.id || '';
       if (!view.products.length && !pending) throw Error('Diese Ware wurde im aktuellen Register nicht eindeutig gefunden. Bitte das Modul neu laden.');

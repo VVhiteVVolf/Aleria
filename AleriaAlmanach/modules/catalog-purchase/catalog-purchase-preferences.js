@@ -9,7 +9,6 @@ export function createCatalogPurchasePreferences(storage, uid, moduleId) {
         const value = JSON.parse(storage?.getItem(key) || 'null');
         return value?.schemaVersion === 1 ? {
           payerKey: account(value.payerKey) ? value.payerKey : '',
-          recipientKey: account(value.recipientKey) && value.recipientKey.startsWith('character:') ? value.recipientKey : '',
           actorCharacterId: person(value.actorCharacterId) ? value.actorCharacterId : ''
         } : {};
       } catch { return {}; }
@@ -17,7 +16,7 @@ export function createCatalogPurchasePreferences(storage, uid, moduleId) {
     save(selection) {
       try {
         storage?.setItem(key, JSON.stringify({ schemaVersion: 1, payerKey: selection.payerKey,
-          recipientKey: selection.recipientKey, actorCharacterId: selection.actorCharacterId }));
+          actorCharacterId: selection.actorCharacterId }));
       } catch { /* A disabled preference store never changes the purchase itself. */ }
     }
   };

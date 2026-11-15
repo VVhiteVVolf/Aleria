@@ -1,0 +1,214 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--tirfelyn-hof--torleif",
+  "slug": "torleif",
+  "identity": {
+    "name": "Torleif",
+    "aliases": [],
+    "worldPersonId": "person--tirfelyn-hof--torleif"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--tirfelyn-hof--torleif",
+      "documentIds": [
+        "person--tirfelyn-hof--torleif"
+      ],
+      "documents": [
+        {
+          "documentId": "person--tirfelyn-hof--torleif",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Tirfelyn Hof/torleif.json",
+    "sourceExportedAt": "2026-11-15T20:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--tirfelyn-hof--torleif"
+    ],
+    "contentHash": "9bf3c2465177d3884c5b696b04b02fbdf775daf07a3700ab21b4817e32d933f2"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "tirfelyn-hof-20261115"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--tirfelyn-hof--torleif",
+        "name": "Torleif",
+        "title": "Holzfäller, Hallvards jüngerer Bruder",
+        "role": "Holzfäller, Hallvards jüngerer Bruder",
+        "age": 33,
+        "birth": "1707",
+        "gender": "männlich",
+        "race": "Mensch",
+        "origin": "Aldrimar",
+        "identity": {
+          "worldPersonId": "person--tirfelyn-hof--torleif"
+        },
+        "genealogy": {
+          "worldPersonId": "person--tirfelyn-hof--torleif",
+          "sources": []
+        },
+        "fraktion": "Tirfelyn-Hof",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/torleif-v1.png",
+        "bio": "Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und wohnt im südlich anschließenden Haus. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Torleif",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Torleif"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "33 Jahre"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Holzfäller, Hallvards jüngerer Bruder"
+            },
+            {
+              "label": "Wohnort",
+              "value": "Haus südlich des Holzfällerarbeitsplatzes"
+            }
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/torleif-v1.png",
+            "biographyTitle": "Holzfäller, Hallvards jüngerer Bruder",
+            "biographyText": "<p>Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und wohnt im südlich anschließenden Haus. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.</p>",
+            "historyTitle": "Am Tirfelyn-Hof",
+            "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+            "documentsTitle": "Hof und Arbeitsort",
+            "documents": [
+              {
+                "title": "Tirfelyn-Hof",
+                "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Haus südlich des Holzfällerarbeitsplatzes · Tirfelyn-Hof · Gwynthor",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--tirfelyn-hof--torleif",
+    "name": "Torleif",
+    "title": "Holzfäller, Hallvards jüngerer Bruder",
+    "role": "Holzfäller, Hallvards jüngerer Bruder",
+    "age": 33,
+    "birth": "1707",
+    "gender": "männlich",
+    "race": "Mensch",
+    "origin": "Aldrimar",
+    "identity": {
+      "worldPersonId": "person--tirfelyn-hof--torleif"
+    },
+    "genealogy": {
+      "worldPersonId": "person--tirfelyn-hof--torleif",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Tirfelyn-Hof",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/torleif-v1.png",
+    "bio": "Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und wohnt im südlich anschließenden Haus. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Torleif",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Torleif"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "33 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Holzfäller, Hallvards jüngerer Bruder"
+        },
+        {
+          "label": "Wohnort",
+          "value": "Haus südlich des Holzfällerarbeitsplatzes"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/torleif-v1.png",
+        "biographyTitle": "Holzfäller, Hallvards jüngerer Bruder",
+        "biographyText": "<p>Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und wohnt im südlich anschließenden Haus. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.</p>",
+        "historyTitle": "Am Tirfelyn-Hof",
+        "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+        "documentsTitle": "Hof und Arbeitsort",
+        "documents": [
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Haus südlich des Holzfällerarbeitsplatzes · Tirfelyn-Hof · Gwynthor",
+    "archived": false,
+    "aliases": []
+  }
+}

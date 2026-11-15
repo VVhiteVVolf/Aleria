@@ -1,0 +1,214 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--tirfelyn-hof--nefydd",
+  "slug": "nefydd",
+  "identity": {
+    "name": "Nefydd",
+    "aliases": [],
+    "worldPersonId": "person--tirfelyn-hof--nefydd"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--tirfelyn-hof--nefydd",
+      "documentIds": [
+        "person--tirfelyn-hof--nefydd"
+      ],
+      "documents": [
+        {
+          "documentId": "person--tirfelyn-hof--nefydd",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Tirfelyn Hof/nefydd.json",
+    "sourceExportedAt": "2026-11-15T20:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--tirfelyn-hof--nefydd"
+    ],
+    "contentHash": "c9938c41198303756b0d9b3476ffbc824262aba6eae843bf37981987ca0b99ed"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "tirfelyn-hof-20261115"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--tirfelyn-hof--nefydd",
+        "name": "Nefydd",
+        "title": "Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte",
+        "role": "Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte",
+        "age": 35,
+        "birth": "1705",
+        "gender": "männlich",
+        "race": "Mensch",
+        "origin": "Cenyr",
+        "identity": {
+          "worldPersonId": "person--tirfelyn-hof--nefydd"
+        },
+        "genealogy": {
+          "worldPersonId": "person--tirfelyn-hof--nefydd",
+          "sources": []
+        },
+        "fraktion": "Tirfelyn-Hof",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/nefydd-v1.png",
+        "bio": "Nefydd ist ein stiller Feldknecht von 35 Jahren und bewohnt die nördlichste Bedienstetenhütte. Er unterstützt Gwallog bei Feldarbeit und Ernte. Sein braunes Haar steht unordentlich ab, sein Blick wirkt oft abwesend und gleichförmig. Er hatte Zuneigung für die verstorbene Ceridwen Tirfelyn; ihr Tod beschäftigt ihn.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Nefydd",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Nefydd"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "35 Jahre"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte"
+            },
+            {
+              "label": "Wohnort",
+              "value": "Hütte 1, nördlichste Hütte"
+            }
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/nefydd-v1.png",
+            "biographyTitle": "Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte",
+            "biographyText": "<p>Nefydd ist ein stiller Feldknecht von 35 Jahren und bewohnt die nördlichste Bedienstetenhütte. Er unterstützt Gwallog bei Feldarbeit und Ernte. Sein braunes Haar steht unordentlich ab, sein Blick wirkt oft abwesend und gleichförmig. Er hatte Zuneigung für die verstorbene Ceridwen Tirfelyn; ihr Tod beschäftigt ihn.</p>",
+            "historyTitle": "Am Tirfelyn-Hof",
+            "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+            "documentsTitle": "Hof und Arbeitsort",
+            "documents": [
+              {
+                "title": "Tirfelyn-Hof",
+                "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Hütte 1, nördlichste Hütte · Tirfelyn-Hof · Gwynthor",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--tirfelyn-hof--nefydd",
+    "name": "Nefydd",
+    "title": "Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte",
+    "role": "Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte",
+    "age": 35,
+    "birth": "1705",
+    "gender": "männlich",
+    "race": "Mensch",
+    "origin": "Cenyr",
+    "identity": {
+      "worldPersonId": "person--tirfelyn-hof--nefydd"
+    },
+    "genealogy": {
+      "worldPersonId": "person--tirfelyn-hof--nefydd",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Tirfelyn-Hof",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/nefydd-v1.png",
+    "bio": "Nefydd ist ein stiller Feldknecht von 35 Jahren und bewohnt die nördlichste Bedienstetenhütte. Er unterstützt Gwallog bei Feldarbeit und Ernte. Sein braunes Haar steht unordentlich ab, sein Blick wirkt oft abwesend und gleichförmig. Er hatte Zuneigung für die verstorbene Ceridwen Tirfelyn; ihr Tod beschäftigt ihn.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Nefydd",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Nefydd"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "35 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte"
+        },
+        {
+          "label": "Wohnort",
+          "value": "Hütte 1, nördlichste Hütte"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/nefydd-v1.png",
+        "biographyTitle": "Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte",
+        "biographyText": "<p>Nefydd ist ein stiller Feldknecht von 35 Jahren und bewohnt die nördlichste Bedienstetenhütte. Er unterstützt Gwallog bei Feldarbeit und Ernte. Sein braunes Haar steht unordentlich ab, sein Blick wirkt oft abwesend und gleichförmig. Er hatte Zuneigung für die verstorbene Ceridwen Tirfelyn; ihr Tod beschäftigt ihn.</p>",
+        "historyTitle": "Am Tirfelyn-Hof",
+        "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+        "documentsTitle": "Hof und Arbeitsort",
+        "documents": [
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Hütte 1, nördlichste Hütte · Tirfelyn-Hof · Gwynthor",
+    "archived": false,
+    "aliases": []
+  }
+}

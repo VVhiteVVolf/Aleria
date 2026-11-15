@@ -1,0 +1,214 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--tirfelyn-hof--iorfin",
+  "slug": "iorfin",
+  "identity": {
+    "name": "Iorfin",
+    "aliases": [],
+    "worldPersonId": "person--tirfelyn-hof--iorfin"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--tirfelyn-hof--iorfin",
+      "documentIds": [
+        "person--tirfelyn-hof--iorfin"
+      ],
+      "documents": [
+        {
+          "documentId": "person--tirfelyn-hof--iorfin",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Tirfelyn Hof/iorfin.json",
+    "sourceExportedAt": "2026-11-15T20:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--tirfelyn-hof--iorfin"
+    ],
+    "contentHash": "2f488ad6473e8ce6198d2d491c981afb505b453d5318db30787182519abc7052"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "tirfelyn-hof-20261115"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--tirfelyn-hof--iorfin",
+        "name": "Iorfin",
+        "title": "Älterer Sohn des Müllers, lernt unter Aufsicht",
+        "role": "Älterer Sohn des Müllers, lernt unter Aufsicht",
+        "age": 12,
+        "birth": "1728",
+        "gender": "männlich",
+        "race": "Mensch",
+        "origin": "Cenyr",
+        "identity": {
+          "worldPersonId": "person--tirfelyn-hof--iorfin"
+        },
+        "genealogy": {
+          "worldPersonId": "person--tirfelyn-hof--iorfin",
+          "sources": []
+        },
+        "fraktion": "Tirfelyn-Hof",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/iorfin-v1.png",
+        "bio": "Iorfin ist zwölf Jahre alt und der ältere Sohn von Meirig und Gwenneth. Der braunhaarige Junge hilft seinem Vater mit leichten Handgriffen in der Hofmühle und lernt die Arbeit unter Aufsicht kennen. Er wohnt mit seinen Eltern und seinem jüngeren Bruder Eifor in der vierten Bedienstetenhütte.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Iorfin",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Iorfin"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "12 Jahre"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Älterer Sohn des Müllers, lernt unter Aufsicht"
+            },
+            {
+              "label": "Wohnort",
+              "value": "Hütte 4, größere östliche Hütte der mittleren Gruppe"
+            }
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/iorfin-v1.png",
+            "biographyTitle": "Älterer Sohn des Müllers, lernt unter Aufsicht",
+            "biographyText": "<p>Iorfin ist zwölf Jahre alt und der ältere Sohn von Meirig und Gwenneth. Der braunhaarige Junge hilft seinem Vater mit leichten Handgriffen in der Hofmühle und lernt die Arbeit unter Aufsicht kennen. Er wohnt mit seinen Eltern und seinem jüngeren Bruder Eifor in der vierten Bedienstetenhütte.</p>",
+            "historyTitle": "Am Tirfelyn-Hof",
+            "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+            "documentsTitle": "Hof und Arbeitsort",
+            "documents": [
+              {
+                "title": "Tirfelyn-Hof",
+                "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Hütte 4, größere östliche Hütte der mittleren Gruppe · Tirfelyn-Hof · Gwynthor",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--tirfelyn-hof--iorfin",
+    "name": "Iorfin",
+    "title": "Älterer Sohn des Müllers, lernt unter Aufsicht",
+    "role": "Älterer Sohn des Müllers, lernt unter Aufsicht",
+    "age": 12,
+    "birth": "1728",
+    "gender": "männlich",
+    "race": "Mensch",
+    "origin": "Cenyr",
+    "identity": {
+      "worldPersonId": "person--tirfelyn-hof--iorfin"
+    },
+    "genealogy": {
+      "worldPersonId": "person--tirfelyn-hof--iorfin",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Tirfelyn-Hof",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/iorfin-v1.png",
+    "bio": "Iorfin ist zwölf Jahre alt und der ältere Sohn von Meirig und Gwenneth. Der braunhaarige Junge hilft seinem Vater mit leichten Handgriffen in der Hofmühle und lernt die Arbeit unter Aufsicht kennen. Er wohnt mit seinen Eltern und seinem jüngeren Bruder Eifor in der vierten Bedienstetenhütte.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Iorfin",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Iorfin"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "12 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Älterer Sohn des Müllers, lernt unter Aufsicht"
+        },
+        {
+          "label": "Wohnort",
+          "value": "Hütte 4, größere östliche Hütte der mittleren Gruppe"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/iorfin-v1.png",
+        "biographyTitle": "Älterer Sohn des Müllers, lernt unter Aufsicht",
+        "biographyText": "<p>Iorfin ist zwölf Jahre alt und der ältere Sohn von Meirig und Gwenneth. Der braunhaarige Junge hilft seinem Vater mit leichten Handgriffen in der Hofmühle und lernt die Arbeit unter Aufsicht kennen. Er wohnt mit seinen Eltern und seinem jüngeren Bruder Eifor in der vierten Bedienstetenhütte.</p>",
+        "historyTitle": "Am Tirfelyn-Hof",
+        "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+        "documentsTitle": "Hof und Arbeitsort",
+        "documents": [
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Hütte 4, größere östliche Hütte der mittleren Gruppe · Tirfelyn-Hof · Gwynthor",
+    "archived": false,
+    "aliases": []
+  }
+}

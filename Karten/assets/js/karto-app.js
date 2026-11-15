@@ -306,6 +306,7 @@ function persistDraftNow(){
 }
 
 window.KartoRuntime = {
+  config: () => KARTO_CONFIG,
   state: () => S,
   isEditMode: () => editMode,
   isAddingPin: () => addingPin,

@@ -1,6 +1,7 @@
 // Authoring sources remain in the source repository. Their public counterparts
 // (crests, previews, production images and explicit original downloads) stay live.
 const SOURCE_ARCHIVE_ROOTS = [
+  'AleriaAlmanach/docs/art/tirfelyn-hof-20261115/',
   'AleriaAlmanach/docs/art/rheinallt-20261115/',
   'AleriaAlmanach/docs/art/register-navigation-20261113/',
   'AleriaAlmanach/docs/art/speech-frame-lab/',

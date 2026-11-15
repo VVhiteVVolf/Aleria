@@ -9,6 +9,8 @@ import { undoMechanicalCommentOperation } from '../../src/mechanics/commit-undo-
 import { STANDARD_ITEMS } from '../../src/generated/item-register/item-register-standard.js';
 import { commitItemRecordOperation } from '../../src/items/commit-item-record.js';
 import { catalogEntry, catalogRequest, catalogGroup } from '../fixtures/catalog-trade.js';
+import { buildModuleOffers } from '../../src/generated/item-register/item-register-module-catalog.js';
+import { findBuiltinTradeModule } from '../../src/generated/scene-trade/scene-trade-builtins.js';
 
 const projectId = 'demo-aleria-scene-trade';
 if (process.env.FIRESTORE_EMULATOR_HOST !== '127.0.0.1:8187') throw Error('Only the isolated local Firestore emulator at 127.0.0.1:8187 is allowed.');
@@ -62,6 +64,36 @@ test('real catalog purchase gifts exact gold change once without any scene, NPC 
   assert.equal(after.receipts, 1); assert.equal(after.comments, 0);
   assert.deepEqual(await read('module_store_entries/catalog'), { entryJson: JSON.stringify(source) });
   assert.equal((await readMerchantAvailabilityOperation(db, player, { merchantId: 'module:catalog' })).products[0].available, true);
+});
+
+test('real Göttliche Eleganz self purchase atomically stores Rosenquarz and 8 Gold 1 Silber 50 Kupfer, even after retry', async () => {
+  const source = findBuiltinTradeModule('goettliche-eleganz').entry;
+  await db.doc('module_store_entries/goettliche-eleganz').set({ entryJson: JSON.stringify(source) });
+  const config = await read('char_tabs/config');
+  config.moduleStoreManifest.customSections[0].entryIds.push(source.id);
+  await db.doc('char_tabs/config').set(config);
+  await db.doc('characters/gawain').update({ 'inventory.moneyState': { gold: 12, silver: 4 } });
+  const product = buildModuleOffers([source], STANDARD_ITEMS).find(offer => offer.title === 'Rosenquarz');
+  assert.equal(product.priceRange.minCopper, 4250);
+  const before = await state(), input = catalogRequest(source, { expectedRevisions: { 'character:gawain': 1 } });
+  input.lines[0] = { ...input.lines[0], productId: product.id, sourceRevision: product.sourceRevision,
+    recipientKey: 'character:gawain', expectedTotalMinor: 425000 };
+  const first = await commitSceneTradeOperation(db, player, input);
+  const retry = await commitSceneTradeOperation(db, player, input);
+  const after = await state();
+  assert.deepEqual(after.gawain.inventory.moneyState, { gold: 8, silver: 1, copper: 50, pfennig: 0, totalCopper: 8150 });
+  assert.equal(after.gawain.inventory.items.length, 1);
+  assert.equal(after.gawain.inventory.items[0].name, 'Rosenquarz');
+  assert.equal(after.gawain.inventory.items[0].ownerCharacterId, 'gawain');
+  assert.deepEqual(after.gawain.combatProfile, before.gawain.combatProfile);
+  assert.deepEqual(after.ylva, before.ylva);
+  assert.deepEqual(first.receipt, retry.receipt);
+  assert.deepEqual(first.characters[0].inventory, after.gawain.inventory);
+  assert.equal(after.receipts, 1); assert.equal(after.comments, 0);
+  const poor = catalogRequest(source, { operationId: 'too-expensive', expectedRevisions: { 'character:ylva': 1 }, actorCharacterId: 'ylva' });
+  poor.lines[0] = { ...input.lines[0], payerKey: 'character:ylva', recipientKey: 'character:ylva' };
+  await assert.rejects(commitSceneTradeOperation(db, player, poor), /genug Geld/);
+  assert.deepEqual(await state(), after);
 });
 
 test('real catalog group spending requires membership but does not require a scene link, and failed spending remains atomic', async () => {

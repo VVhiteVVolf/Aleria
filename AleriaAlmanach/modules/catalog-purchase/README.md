@@ -1,15 +1,19 @@
 # Schnellkauf direkt im Güterregister
 
-Lokale Umsetzung vom 8. November 2026. Die bestehenden Modul-Warentabellen
+Die bestehenden Modul-Warentabellen
 und Güterkarten besitzen einen direkten Kaufen-Button. Der kompakte native
-Dialog bietet suchbare Avatarwähler für Zahler und Empfänger, eine Mengenwahl,
-Preis und Geldbeutelvorschau. Die Auswahl wird pro Anmeldung und Modul gemerkt.
+Dialog bietet eine suchbare Käuferwahl, Mengenwahl, Preis und Geldbeutelvorschau.
+Die kaufende Figur erhält die Ware automatisch. Nur die ausdrückliche Option
+„Für eine andere Figur kaufen“ öffnet eine zusätzliche Warenempfängerwahl.
+Käufer und bestellendes Gruppenmitglied werden pro Anmeldung und Modul gemerkt;
+Warenempfänger werden bei neuen Käufen nie aus alten Einstellungen übernommen.
 Die Erstöffnung wählt keinen fremden Geldbeutel automatisch aus.
 
 Eine Gruppenkasse ist als Zahler auswählbar, wenn ihre gespeicherte Besetzung
 mit tatsächlichen Figuren verknüpft ist. Dann wird zusätzlich die bestellende
 Gruppenfigur angezeigt und ist auf bestätigte Mitglieder begrenzt. Der
-Empfänger kann eine andere Figur außerhalb der Gruppe sein. Der Server prüft
+Warenempfänger ist zunächst das bestellende Mitglied; ein ausdrücklicher
+Fremdkauf kann eine andere Figur außerhalb der Gruppe begünstigen. Der Server prüft
 die Mitgliedschaft; die bisherige Szenenverknüpfung bleibt nur im Szenenhandel
 erforderlich.
 
@@ -48,6 +52,16 @@ Währungslogik wechselt die Münzen automatisch und speichert den Restbetrag
 kanonisch. Beispiel: 1 Gold minus 1,01 KT ergibt 9 Silber, 98 Kupfer und
 99 Eisenpfennig. Der Händler benötigt kein persönliches Konto oder Startgeld;
 das vorhandene unbegrenzte Handelsjournal bleibt als Buchungsbeleg erhalten.
+Vor dem Kauf stehen Istbetrag und geplanter Rest nebeneinander. Nach bestätigtem
+Kauf zeigt der Dialog die Abbuchung und den tatsächlichen Geldbeutel; bei
+nachlieferbarer Ware heißt eine weitere Bestellung ausdrücklich „Noch einmal
+kaufen“. Die Bestätigung nennt auch die Figur, die die Ware erhalten hat.
+
+Der gemeinsame Charakterregister-Listener aktualisiert einen bereits geöffneten
+Inventarleser sofort beim bestätigten `aleria:character-saved`-Ergebnis. Er wartet
+nicht auf einen späteren identischen Registersnapshot. Offene Inventarentwürfe
+bleiben erhalten und erhalten die bestehende Konfliktwarnung. Beide Ereigniswege
+verwenden dafür denselben begrenzten Aktualisierungshelfer in `character-tabs.js`.
 
 Gewöhnliche Waren bleiben unabhängig von alten endlichen Bestandswerten
 nachlieferbar. Nur ausdrücklich kanonisch als `unique` markierte Gegenstände
@@ -76,9 +90,10 @@ Der vorhandene Backend-Integrationstest bleibt strikt auf das lokale Projekt
 sind kein Testmaterial. Prüfmethoden und tatsächliche Ergebnisse stehen unter
 `diagnostics/catalog-purchase-20261108/`.
 
-Diese Umsetzung ist noch nicht veröffentlicht. Für den später freigegebenen
-Release gehören Frontend und der aktualisierte `commitItemTrade` zusammen.
-Rules, Indizes, Storagekonfiguration und sonstige Funktionen brauchen hierfür
-keine Änderung. Die neuen Tests, Styles und Modulquellen sind im bestehenden
-Release-Prüfweg für Itemmechanik registriert. Unabhängige Main-Arbeiten und
-private Quellen bleiben außerhalb eines isolierten öffentlichen Releases.
+Die Überarbeitung vom 15. November 2026 ist lokal geprüft, noch nicht
+veröffentlicht. Sie ändert keine Backend-Laufzeitdatei: Geld und Ware wurden
+bereits gemeinsam atomar gebucht. Neue gezielte Tests decken den Eigenkauf von
+Rosenquarz aus Göttliche Eleganz mit 12 Gold / 4 Silber Startgeld und genau
+8 Gold / 1 Silber / 50 Kupfer Restgeld einschließlich Wiederholungsschutz ab.
+Aktuelle Belege: `diagnostics/catalog-checkout-20261115/`. Historische Belege und
+unabhängige Main-Arbeiten bleiben erhalten.

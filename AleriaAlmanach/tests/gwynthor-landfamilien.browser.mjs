@@ -4,6 +4,7 @@ import { resolve } from 'node:path';
 import { openVenueBrowserPreview } from './support/venue-browser-preview.mjs';
 import { buildLandfamilienRegistrations } from '../modules/gwynthor-landfamilien/landfamilien-module.mjs';
 import { LAND_FAMILIEN_ROSTER } from '../../Stammbäume/assets/js/data/gwynthor-fleischsammler/landfamilien-roster.mjs';
+import { HOF_ANIMALS } from '../../shared/tirfelyn-hof/hof-animals.mjs';
 
 const registrations = buildLandfamilienRegistrations();
 const visualReviewOnly = process.env.LANDFAMILIEN_BROWSER_REVIEW_ONLY === 'visual';
@@ -50,8 +51,8 @@ try {
         return { first, second };
       }, entry);
       assert.deepEqual(roundtrip.second, roundtrip.first);
-      assert.equal(roundtrip.first.pages.length, 6);
-      assert.equal(roundtrip.first.pages.filter(model => model.sessionPage).length, 2);
+      assert.equal(roundtrip.first.pages.length, familyIndex === 0 ? 43 : 6);
+      assert.equal(roundtrip.first.pages.filter(model => model.sessionPage).length, familyIndex === 0 ? 37 : 2);
       assert.equal(roundtrip.first.pages[3].familyTree.familyId, household.familyId);
       assert.deepEqual(roundtrip.first.pages.filter(model => model.sessionPage).map(model => model.commentThreadKey),
         entry.pages.filter(model => model.sessionPage).map(model => model.commentThreadKey));
@@ -106,16 +107,18 @@ try {
           await preview.decodeImages('#modal-overlay .comments-action-icon');
           const before = await page.evaluate(() => getCurrentCommentThreadId());
           assert.ok(before);
+          const introWasOpen = await page.locator('#modal-overlay .session-intro').evaluate(details => details.open);
           await page.locator('#modal-overlay .session-intro-toggle').click();
-          assert.equal(await page.locator('#modal-overlay .session-stage-copy').isVisible(), false);
+          assert.equal(await page.locator('#modal-overlay .session-stage-copy').isVisible(), !introWasOpen);
           assert.equal(await page.evaluate(() => getCurrentCommentThreadId()), before);
           await page.locator('#modal-overlay .session-intro-toggle').click();
-          assert.equal(await page.locator('#modal-overlay .session-stage-copy').isVisible(), true);
+          assert.equal(await page.locator('#modal-overlay .session-stage-copy').isVisible(), introWasOpen);
           if (index === 4 && !visualReviewOnly) {
             await page.locator('#modal-overlay [data-action="open-comment-form"]').click();
             await page.waitForFunction(() => isCommentFormActorsReady() && document.querySelector('#cf-char-picker .cf-char-option'));
-            const prioritized = await page.evaluate(count => getAvailableCommentCharacters().slice(0, count).map(character => character.id), entry.sessionCast.length);
-            assert.deepEqual(prioritized, entry.sessionCast);
+            const humanCast = entry.sessionCast.filter(id => !HOF_ANIMALS.some(animal => animal.id === id));
+            const prioritized = await page.evaluate(count => getCommentCharactersInCastOrder().slice(0, count).map(character => character.id), humanCast.length);
+            assert.deepEqual(prioritized, humanCast);
             for (const person of household.persons.filter(person => person.status === 'alive')) {
               const id = entry.sessionCast.find(id => id.endsWith(`--${person.id}`));
               assert.ok(id, person.id);

@@ -1,0 +1,69 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-15T20:00:00Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Tirfelyn Hof/rannveig.json",
+  "character": {
+    "id": "person--tirfelyn-hof--rannveig",
+    "name": "Rannveig",
+    "title": "Hallvards Ehefrau, Beeren- und Kräutersammlerin",
+    "role": "Hallvards Ehefrau, Beeren- und Kräutersammlerin",
+    "age": 35,
+    "birth": "1705",
+    "gender": "weiblich",
+    "race": "Mensch",
+    "origin": "Aldrimar",
+    "identity": {
+      "worldPersonId": "person--tirfelyn-hof--rannveig"
+    },
+    "genealogy": {
+      "worldPersonId": "person--tirfelyn-hof--rannveig",
+      "sources": []
+    },
+    "fraktion": "Tirfelyn-Hof",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/rannveig-v1.png",
+    "bio": "Rannveig ist 35 Jahre alt und mit Hallvard verheiratet. Sie sammelt Beeren und Kräuter in den Wäldern um den Tirfelyn-Hof und bringt ihre Funde in die Vorratshaltung der Familie ein. Die blonde, sommersprossige Frau wohnt mit ihrem Mann beim Holzfällerlager.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Rannveig",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Rannveig"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "35 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Hallvards Ehefrau, Beeren- und Kräutersammlerin"
+        },
+        {
+          "label": "Wohnort",
+          "value": "Haus östlich des Holzfällerarbeitsplatzes"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/rannveig-v1.png",
+        "biographyTitle": "Hallvards Ehefrau, Beeren- und Kräutersammlerin",
+        "biographyText": "<p>Rannveig ist 35 Jahre alt und mit Hallvard verheiratet. Sie sammelt Beeren und Kräuter in den Wäldern um den Tirfelyn-Hof und bringt ihre Funde in die Vorratshaltung der Familie ein. Die blonde, sommersprossige Frau wohnt mit ihrem Mann beim Holzfällerlager.</p>",
+        "historyTitle": "Am Tirfelyn-Hof",
+        "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+        "documentsTitle": "Hof und Arbeitsort",
+        "documents": [
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Haus östlich des Holzfällerarbeitsplatzes · Tirfelyn-Hof · Gwynthor",
+    "archived": false
+  }
+}

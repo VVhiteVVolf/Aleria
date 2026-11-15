@@ -10,14 +10,14 @@ const root = new URL('../../', import.meta.url);
 const read = path => readFileSync(new URL(path, root), 'utf8');
 const mapRoot = 'Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/';
 
-test('all 36 individual portraits and six active anime scenes exist in 2:3 and are distinct', () => {
+test('all family portraits and original plus expanded farm scenes exist in 2:3 and are distinct', () => {
   const entries = buildLandfamilienEntries();
   const paths = [
     ...LAND_FAMILIEN_ROSTER.families.flatMap(family => family.persons.map(person => person.portrait)),
     ...entries.flatMap(entry => entry.pages.filter(page => page.sessionPage).map(page => page.image))
   ];
-  assert.equal(paths.length, 42);
-  assert.equal(new Set(paths).size, 42);
+  assert.equal(paths.length, 77);
+  assert.equal(new Set(paths).size, 77);
   const hashes = new Set();
   for (const path of paths) {
     const bytes = readFileSync(new URL(path.replace(/^\//, ''), root));
@@ -27,7 +27,7 @@ test('all 36 individual portraits and six active anime scenes exist in 2:3 and a
     assert.ok(width >= 1024 && height >= 1536, path);
     hashes.add(createHash('sha256').update(bytes).digest('hex'));
   }
-  assert.equal(hashes.size, 42, 'Each person and scene needs its own image');
+  assert.equal(hashes.size, 77, 'Each person and scene needs its own image');
 });
 
 test('the Almanach loads the three modules and the normal build checks their actual sources', () => {

@@ -1,0 +1,214 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--tirfelyn-hof--maldwyn",
+  "slug": "maldwyn",
+  "identity": {
+    "name": "Maldwyn",
+    "aliases": [],
+    "worldPersonId": "person--tirfelyn-hof--maldwyn"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--tirfelyn-hof--maldwyn",
+      "documentIds": [
+        "person--tirfelyn-hof--maldwyn"
+      ],
+      "documents": [
+        {
+          "documentId": "person--tirfelyn-hof--maldwyn",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Tirfelyn Hof/maldwyn.json",
+    "sourceExportedAt": "2026-11-15T20:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--tirfelyn-hof--maldwyn"
+    ],
+    "contentHash": "b4a4b531051ee0c9a20332543dffb7e611a8d00cb02869d9294ac6151c16226a"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "tirfelyn-hof-20261115"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--tirfelyn-hof--maldwyn",
+        "name": "Maldwyn",
+        "title": "Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen",
+        "role": "Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen",
+        "age": 46,
+        "birth": "1694",
+        "gender": "männlich",
+        "race": "Mensch",
+        "origin": "Cenyr",
+        "identity": {
+          "worldPersonId": "person--tirfelyn-hof--maldwyn"
+        },
+        "genealogy": {
+          "worldPersonId": "person--tirfelyn-hof--maldwyn",
+          "sources": []
+        },
+        "fraktion": "Tirfelyn-Hof",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/maldwyn-v1.png",
+        "bio": "Der 46-jährige Maldwyn hilft Eudaf bei Fütterung, Viehtrieb und der Pflege der Weidezäune. Der kräftige braunhaarige Mann gilt als gütig und hilfsbereit. Er wohnt in der dritten Bedienstetenhütte und arbeitet auch mit den beiden Herdenhunden des Hofes.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Maldwyn",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Maldwyn"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "46 Jahre"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen"
+            },
+            {
+              "label": "Wohnort",
+              "value": "Hütte 3, kleine mittlere Hütte"
+            }
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/maldwyn-v1.png",
+            "biographyTitle": "Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen",
+            "biographyText": "<p>Der 46-jährige Maldwyn hilft Eudaf bei Fütterung, Viehtrieb und der Pflege der Weidezäune. Der kräftige braunhaarige Mann gilt als gütig und hilfsbereit. Er wohnt in der dritten Bedienstetenhütte und arbeitet auch mit den beiden Herdenhunden des Hofes.</p>",
+            "historyTitle": "Am Tirfelyn-Hof",
+            "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+            "documentsTitle": "Hof und Arbeitsort",
+            "documents": [
+              {
+                "title": "Tirfelyn-Hof",
+                "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Hütte 3, kleine mittlere Hütte · Tirfelyn-Hof · Gwynthor",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--tirfelyn-hof--maldwyn",
+    "name": "Maldwyn",
+    "title": "Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen",
+    "role": "Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen",
+    "age": 46,
+    "birth": "1694",
+    "gender": "männlich",
+    "race": "Mensch",
+    "origin": "Cenyr",
+    "identity": {
+      "worldPersonId": "person--tirfelyn-hof--maldwyn"
+    },
+    "genealogy": {
+      "worldPersonId": "person--tirfelyn-hof--maldwyn",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Tirfelyn-Hof",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/maldwyn-v1.png",
+    "bio": "Der 46-jährige Maldwyn hilft Eudaf bei Fütterung, Viehtrieb und der Pflege der Weidezäune. Der kräftige braunhaarige Mann gilt als gütig und hilfsbereit. Er wohnt in der dritten Bedienstetenhütte und arbeitet auch mit den beiden Herdenhunden des Hofes.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Maldwyn",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Maldwyn"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "46 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen"
+        },
+        {
+          "label": "Wohnort",
+          "value": "Hütte 3, kleine mittlere Hütte"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/maldwyn-v1.png",
+        "biographyTitle": "Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen",
+        "biographyText": "<p>Der 46-jährige Maldwyn hilft Eudaf bei Fütterung, Viehtrieb und der Pflege der Weidezäune. Der kräftige braunhaarige Mann gilt als gütig und hilfsbereit. Er wohnt in der dritten Bedienstetenhütte und arbeitet auch mit den beiden Herdenhunden des Hofes.</p>",
+        "historyTitle": "Am Tirfelyn-Hof",
+        "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+        "documentsTitle": "Hof und Arbeitsort",
+        "documents": [
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Hütte 3, kleine mittlere Hütte · Tirfelyn-Hof · Gwynthor",
+    "archived": false,
+    "aliases": []
+  }
+}

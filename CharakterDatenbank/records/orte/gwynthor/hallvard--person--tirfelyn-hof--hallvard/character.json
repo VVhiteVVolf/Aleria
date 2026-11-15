@@ -1,0 +1,214 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--tirfelyn-hof--hallvard",
+  "slug": "hallvard",
+  "identity": {
+    "name": "Hallvard",
+    "aliases": [],
+    "worldPersonId": "person--tirfelyn-hof--hallvard"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--tirfelyn-hof--hallvard",
+      "documentIds": [
+        "person--tirfelyn-hof--hallvard"
+      ],
+      "documents": [
+        {
+          "documentId": "person--tirfelyn-hof--hallvard",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Tirfelyn Hof/hallvard.json",
+    "sourceExportedAt": "2026-11-15T20:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--tirfelyn-hof--hallvard"
+    ],
+    "contentHash": "c206c43528304c2216f837ad3d3fdf84262866c8ffb2bf3bb31ac2b6ad525aa0"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "tirfelyn-hof-20261115"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--tirfelyn-hof--hallvard",
+        "name": "Hallvard",
+        "title": "Holzfäller",
+        "role": "Holzfäller",
+        "age": 38,
+        "birth": "1702",
+        "gender": "männlich",
+        "race": "Mensch",
+        "origin": "Aldrimar",
+        "identity": {
+          "worldPersonId": "person--tirfelyn-hof--hallvard"
+        },
+        "genealogy": {
+          "worldPersonId": "person--tirfelyn-hof--hallvard",
+          "sources": []
+        },
+        "fraktion": "Tirfelyn-Hof",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/hallvard-v1.png",
+        "bio": "Hallvard ist ein kräftiger aldrimarischer Holzfäller von 38 Jahren. Gemeinsam mit seinem jüngeren Bruder Torleif bereitet er Bau- und Brennholz für den Tirfelyn-Hof auf. Mit seiner Frau Rannveig wohnt er im Haus östlich des Holzfällerlagers. Sein einzelner blonder Zopf, der Kotlettenbart und alte Narben machen ihn leicht erkennbar.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Hallvard",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Hallvard"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "38 Jahre"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Holzfäller"
+            },
+            {
+              "label": "Wohnort",
+              "value": "Haus östlich des Holzfällerarbeitsplatzes"
+            }
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/hallvard-v1.png",
+            "biographyTitle": "Holzfäller",
+            "biographyText": "<p>Hallvard ist ein kräftiger aldrimarischer Holzfäller von 38 Jahren. Gemeinsam mit seinem jüngeren Bruder Torleif bereitet er Bau- und Brennholz für den Tirfelyn-Hof auf. Mit seiner Frau Rannveig wohnt er im Haus östlich des Holzfällerlagers. Sein einzelner blonder Zopf, der Kotlettenbart und alte Narben machen ihn leicht erkennbar.</p>",
+            "historyTitle": "Am Tirfelyn-Hof",
+            "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+            "documentsTitle": "Hof und Arbeitsort",
+            "documents": [
+              {
+                "title": "Tirfelyn-Hof",
+                "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Haus östlich des Holzfällerarbeitsplatzes · Tirfelyn-Hof · Gwynthor",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--tirfelyn-hof--hallvard",
+    "name": "Hallvard",
+    "title": "Holzfäller",
+    "role": "Holzfäller",
+    "age": 38,
+    "birth": "1702",
+    "gender": "männlich",
+    "race": "Mensch",
+    "origin": "Aldrimar",
+    "identity": {
+      "worldPersonId": "person--tirfelyn-hof--hallvard"
+    },
+    "genealogy": {
+      "worldPersonId": "person--tirfelyn-hof--hallvard",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Tirfelyn-Hof",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/hallvard-v1.png",
+    "bio": "Hallvard ist ein kräftiger aldrimarischer Holzfäller von 38 Jahren. Gemeinsam mit seinem jüngeren Bruder Torleif bereitet er Bau- und Brennholz für den Tirfelyn-Hof auf. Mit seiner Frau Rannveig wohnt er im Haus östlich des Holzfällerlagers. Sein einzelner blonder Zopf, der Kotlettenbart und alte Narben machen ihn leicht erkennbar.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Hallvard",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Hallvard"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "38 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Holzfäller"
+        },
+        {
+          "label": "Wohnort",
+          "value": "Haus östlich des Holzfällerarbeitsplatzes"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/hallvard-v1.png",
+        "biographyTitle": "Holzfäller",
+        "biographyText": "<p>Hallvard ist ein kräftiger aldrimarischer Holzfäller von 38 Jahren. Gemeinsam mit seinem jüngeren Bruder Torleif bereitet er Bau- und Brennholz für den Tirfelyn-Hof auf. Mit seiner Frau Rannveig wohnt er im Haus östlich des Holzfällerlagers. Sein einzelner blonder Zopf, der Kotlettenbart und alte Narben machen ihn leicht erkennbar.</p>",
+        "historyTitle": "Am Tirfelyn-Hof",
+        "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+        "documentsTitle": "Hof und Arbeitsort",
+        "documents": [
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Haus östlich des Holzfällerarbeitsplatzes · Tirfelyn-Hof · Gwynthor",
+    "archived": false,
+    "aliases": []
+  }
+}

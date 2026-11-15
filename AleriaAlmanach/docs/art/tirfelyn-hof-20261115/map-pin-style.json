@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-15",
+  "style": "fantasy-map-pin",
+  "referenceApproval": "Nutzerkorrektur: So sehen unsere mappins aus",
+  "references": [
+    "Karten/assets/icons/welt/b-uerliches-heim.png",
+    "Karten/assets/icons/welt/schmiede.png",
+    "Karten/assets/icons/welt/weide.png",
+    "Karten/assets/icons/orte/obstplantage.png"
+  ],
+  "rules": [
+    "Tropfenförmiger Kartenpin mit klarer unterer Spitze und kräftigem dunklem Außenrand.",
+    "Warme goldene bis cremefarbene Pergamentfläche, innerhalb der Tropfenkontur vollständig deckend.",
+    "Gemalte kleine Ortsillustration mit dunkler Tuschekontur und zurückhaltender Aquarellschattierung im Pin.",
+    "Außerhalb des Pins echter transparenter Alphakanal, keine Schatten oder Halos.",
+    "Dies sind Kartenpins; der rahmenlose Worldmap-Stamp-Stil gilt dafür nicht.",
+    "Für diesen Hof nur neun Symboltypen für sechzehn Wohnhäuser und wesentliche Arbeitsorte. Keine Brunnen-, Feld- oder Kleinkrampins."
+  ],
+  "rejected": {
+    "file": "originals/markers/herrenhaus-v1.png",
+    "receipt": "marker-receipts/herrenhaus.json",
+    "reason": "Rahmenloser Stamp statt gewünschtem tropfenförmigem Kartenpin. Vom Nutzer ausdrücklich verworfen; nicht aktiv verwenden."
+  }
+}

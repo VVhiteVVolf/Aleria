@@ -52,10 +52,13 @@ test('Fehlender Sitzungsspeicher blockiert den Kauf vor dem Netzaufruf; Anmeldun
   assert.equal(otherShop.pending(), null);
 });
 
-test('Gemerkte Zahler/Empfänger enthalten nur Identitäten und gelten pro Anmeldung und Modul', () => {
+test('Gemerkte Käufer enthalten nur Identitäten; andere Warenempfänger werden nicht wiederhergestellt', () => {
   const cache = storage(), preferences = createCatalogPurchasePreferences(cache, 'user', 'shop');
   preferences.save({ payerKey: 'group:party', recipientKey: 'character:ylva', actorCharacterId: 'gawain', money: 'secret balance' });
-  assert.deepEqual(preferences.read(), { payerKey: 'group:party', recipientKey: 'character:ylva', actorCharacterId: 'gawain' });
+  assert.deepEqual(preferences.read(), { payerKey: 'group:party', actorCharacterId: 'gawain' });
+  cache.setItem('aleria:catalog-purchase:people:v1:user:shop', JSON.stringify({ schemaVersion: 1,
+    payerKey: 'character:gawain', recipientKey: 'character:old-shopkeeper', actorCharacterId: 'gawain' }));
+  assert.deepEqual(preferences.read(), { payerKey: 'character:gawain', actorCharacterId: 'gawain' });
   assert.deepEqual(createCatalogPurchasePreferences(cache, 'other', 'shop').read(), {});
   assert.deepEqual(createCatalogPurchasePreferences(cache, 'user', 'other').read(), {});
   const unavailable = createCatalogPurchasePreferences(null, 'user', 'shop');

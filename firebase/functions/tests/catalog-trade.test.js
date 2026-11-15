@@ -43,6 +43,31 @@ test('catalog gift converts gold change exactly, preserves all profiles and merc
   assert.equal(rows(db, 'item_vendor_wallets')[0][1].mode, 'unlimited');
 });
 
+test('Göttliche Eleganz self purchase puts Rosenquarz and exact gold change into the same inventory once', async () => {
+  const entry = findBuiltinTradeModule('goettliche-eleganz').entry, db = seed(entry);
+  const product = buildModuleOffers([entry], STANDARD_ITEMS).find(offer => offer.title === 'Rosenquarz');
+  assert.equal(product.priceRange.minCopper, 4250);
+  db.data.get('characters/gawain').inventory.moneyState = { gold: 12, silver: 4 };
+  const before = structuredClone([...db.data]);
+  const input = catalogRequest(entry, { expectedRevisions: { 'character:gawain': 1 } });
+  input.lines[0] = { ...input.lines[0], productId: product.id, sourceRevision: product.sourceRevision,
+    recipientKey: 'character:gawain', expectedTotalMinor: 425000 };
+  const [response, retry] = await Promise.all([commitSceneTradeOperation(db, auth, input), commitSceneTradeOperation(db, auth, input)]);
+  const buyer = db.data.get('characters/gawain');
+  assert.deepEqual(buyer.inventory.moneyState, { gold: 8, silver: 1, copper: 50, pfennig: 0, totalCopper: 8150 });
+  assert.equal(buyer.inventory.items.length, 1);
+  assert.equal(buyer.inventory.items[0].name, 'Rosenquarz');
+  assert.equal(buyer.inventory.items[0].ownerCharacterId, 'gawain');
+  assert.deepEqual(buyer.combatProfile, new Map(before).get('characters/gawain').combatProfile);
+  assert.deepEqual(db.data.get('characters/merchant'), new Map(before).get('characters/merchant'));
+  assert.deepEqual(db.data.get('characters/ylva'), new Map(before).get('characters/ylva'));
+  assert.deepEqual(response.characters.find(record => record.id === 'gawain').inventory, buyer.inventory);
+  assert.deepEqual(response.receipt, retry.receipt);
+  assert.deepEqual(response.receipt.accounts, [{ key: 'character:gawain', debitMinor: 425000, creditMinor: 0, netMinor: -425000 }]);
+  assert.equal(rows(db, 'scene_trade_transactions').length, 1);
+  assert.equal(rows(db, 'comments').length, 0);
+});
+
 test('catalog response-loss retries return the current inventory without duplicate charge or possession', async () => {
   const db = seed(), input = catalogRequest();
   const [first, retry] = await Promise.all([commitSceneTradeOperation(db, auth, input), commitSceneTradeOperation(db, auth, input)]);

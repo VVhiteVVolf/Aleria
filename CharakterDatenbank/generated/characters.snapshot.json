@@ -251,6 +251,18 @@
     "Charakter Archiv Exporte/Tierbegleiter Abgleich 2026-11-02/person--haus-balchder--kamber-balchder.json",
     "Charakter Archiv Exporte/Tierbegleiter Abgleich 2026-11-02/person--haus-wylan--neala-wylan.json",
     "Charakter Archiv Exporte/Tierbegleiter Abgleich 2026-11-02/person--haus-wyrm--gais-wyrm.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/cynfarch.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/eifor.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/eiluned.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/gwenneth.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/hallvard.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/iorfin.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/maldwyn.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/meirig.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/nefydd.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/rannveig.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/rhufon.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/torleif.json",
     "Charakter Archiv Exporte/Traitabgleich 2026-11-02/6atOllMA637Z2VNAZAxf.json",
     "Charakter Archiv Exporte/Traitabgleich 2026-11-02/FKiXsSWVoV74rTgmpPip.json",
     "Charakter Archiv Exporte/Traitabgleich 2026-11-02/HjDXMMexahez1G0rJrBE.json",
@@ -432,7 +444,7 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-11-15T18:05:42.808Z",
+  "sourceExportedAt": "2026-11-15T20:00:00Z",
   "characters": [
     {
       "id": "kCmUm4WvMZDYetqrSWQ0",
@@ -249504,6 +249516,1254 @@
         },
         "authoredFeature": "rheinallt-biography-20261115"
       }
+    },
+    {
+      "id": "person--tirfelyn-hof--hallvard",
+      "name": "Hallvard",
+      "title": "Holzfäller",
+      "role": "Holzfäller",
+      "age": 38,
+      "birth": "1702",
+      "gender": "männlich",
+      "race": "Mensch",
+      "origin": "Aldrimar",
+      "identity": {
+        "worldPersonId": "person--tirfelyn-hof--hallvard"
+      },
+      "genealogy": {
+        "worldPersonId": "person--tirfelyn-hof--hallvard",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Tirfelyn-Hof",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/hallvard-v1.png",
+      "bio": "Hallvard ist ein kräftiger aldrimarischer Holzfäller von 38 Jahren. Gemeinsam mit seinem jüngeren Bruder Torleif bereitet er Bau- und Brennholz für den Tirfelyn-Hof auf. Mit seiner Frau Rannveig wohnt er im Haus östlich des Holzfällerlagers. Sein einzelner blonder Zopf, der Kotlettenbart und alte Narben machen ihn leicht erkennbar.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Hallvard",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Hallvard"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "38 Jahre"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Holzfäller"
+          },
+          {
+            "label": "Wohnort",
+            "value": "Haus östlich des Holzfällerarbeitsplatzes"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/hallvard-v1.png",
+          "biographyTitle": "Holzfäller",
+          "biographyText": "<p>Hallvard ist ein kräftiger aldrimarischer Holzfäller von 38 Jahren. Gemeinsam mit seinem jüngeren Bruder Torleif bereitet er Bau- und Brennholz für den Tirfelyn-Hof auf. Mit seiner Frau Rannveig wohnt er im Haus östlich des Holzfällerlagers. Sein einzelner blonder Zopf, der Kotlettenbart und alte Narben machen ihn leicht erkennbar.</p>",
+          "historyTitle": "Am Tirfelyn-Hof",
+          "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+          "documentsTitle": "Hof und Arbeitsort",
+          "documents": [
+            {
+              "title": "Tirfelyn-Hof",
+              "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Haus östlich des Holzfällerarbeitsplatzes · Tirfelyn-Hof · Gwynthor",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--tirfelyn-hof--hallvard",
+        "path": "records/orte/gwynthor/hallvard--person--tirfelyn-hof--hallvard/character.json",
+        "schemaVersion": 1,
+        "contentHash": "c206c43528304c2216f837ad3d3fdf84262866c8ffb2bf3bb31ac2b6ad525aa0",
+        "firestoreDocumentIds": [
+          "person--tirfelyn-hof--hallvard"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "tirfelyn-hof-20261115"
+      }
+    },
+    {
+      "id": "person--tirfelyn-hof--torleif",
+      "name": "Torleif",
+      "title": "Holzfäller, Hallvards jüngerer Bruder",
+      "role": "Holzfäller, Hallvards jüngerer Bruder",
+      "age": 33,
+      "birth": "1707",
+      "gender": "männlich",
+      "race": "Mensch",
+      "origin": "Aldrimar",
+      "identity": {
+        "worldPersonId": "person--tirfelyn-hof--torleif"
+      },
+      "genealogy": {
+        "worldPersonId": "person--tirfelyn-hof--torleif",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Tirfelyn-Hof",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/torleif-v1.png",
+      "bio": "Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und wohnt im südlich anschließenden Haus. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Torleif",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Torleif"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "33 Jahre"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Holzfäller, Hallvards jüngerer Bruder"
+          },
+          {
+            "label": "Wohnort",
+            "value": "Haus südlich des Holzfällerarbeitsplatzes"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/torleif-v1.png",
+          "biographyTitle": "Holzfäller, Hallvards jüngerer Bruder",
+          "biographyText": "<p>Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und wohnt im südlich anschließenden Haus. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.</p>",
+          "historyTitle": "Am Tirfelyn-Hof",
+          "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+          "documentsTitle": "Hof und Arbeitsort",
+          "documents": [
+            {
+              "title": "Tirfelyn-Hof",
+              "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Haus südlich des Holzfällerarbeitsplatzes · Tirfelyn-Hof · Gwynthor",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--tirfelyn-hof--torleif",
+        "path": "records/orte/gwynthor/torleif--person--tirfelyn-hof--torleif/character.json",
+        "schemaVersion": 1,
+        "contentHash": "9bf3c2465177d3884c5b696b04b02fbdf775daf07a3700ab21b4817e32d933f2",
+        "firestoreDocumentIds": [
+          "person--tirfelyn-hof--torleif"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "tirfelyn-hof-20261115"
+      }
+    },
+    {
+      "id": "person--tirfelyn-hof--rannveig",
+      "name": "Rannveig",
+      "title": "Hallvards Ehefrau, Beeren- und Kräutersammlerin",
+      "role": "Hallvards Ehefrau, Beeren- und Kräutersammlerin",
+      "age": 35,
+      "birth": "1705",
+      "gender": "weiblich",
+      "race": "Mensch",
+      "origin": "Aldrimar",
+      "identity": {
+        "worldPersonId": "person--tirfelyn-hof--rannveig"
+      },
+      "genealogy": {
+        "worldPersonId": "person--tirfelyn-hof--rannveig",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Tirfelyn-Hof",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/rannveig-v1.png",
+      "bio": "Rannveig ist 35 Jahre alt und mit Hallvard verheiratet. Sie sammelt Beeren und Kräuter in den Wäldern um den Tirfelyn-Hof und bringt ihre Funde in die Vorratshaltung der Familie ein. Die blonde, sommersprossige Frau wohnt mit ihrem Mann beim Holzfällerlager.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Rannveig",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Rannveig"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "35 Jahre"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Hallvards Ehefrau, Beeren- und Kräutersammlerin"
+          },
+          {
+            "label": "Wohnort",
+            "value": "Haus östlich des Holzfällerarbeitsplatzes"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/rannveig-v1.png",
+          "biographyTitle": "Hallvards Ehefrau, Beeren- und Kräutersammlerin",
+          "biographyText": "<p>Rannveig ist 35 Jahre alt und mit Hallvard verheiratet. Sie sammelt Beeren und Kräuter in den Wäldern um den Tirfelyn-Hof und bringt ihre Funde in die Vorratshaltung der Familie ein. Die blonde, sommersprossige Frau wohnt mit ihrem Mann beim Holzfällerlager.</p>",
+          "historyTitle": "Am Tirfelyn-Hof",
+          "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+          "documentsTitle": "Hof und Arbeitsort",
+          "documents": [
+            {
+              "title": "Tirfelyn-Hof",
+              "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Haus östlich des Holzfällerarbeitsplatzes · Tirfelyn-Hof · Gwynthor",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--tirfelyn-hof--rannveig",
+        "path": "records/orte/gwynthor/rannveig--person--tirfelyn-hof--rannveig/character.json",
+        "schemaVersion": 1,
+        "contentHash": "47ffdad59b3ef1cb5987c3bd4b45fdc0ca308a6a439686d9a52bf63e4e1c3f6e",
+        "firestoreDocumentIds": [
+          "person--tirfelyn-hof--rannveig"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "tirfelyn-hof-20261115"
+      }
+    },
+    {
+      "id": "person--tirfelyn-hof--meirig",
+      "name": "Meirig",
+      "title": "Müller",
+      "role": "Müller",
+      "age": 43,
+      "birth": "1697",
+      "gender": "männlich",
+      "race": "Mensch",
+      "origin": "Cenyr",
+      "identity": {
+        "worldPersonId": "person--tirfelyn-hof--meirig"
+      },
+      "genealogy": {
+        "worldPersonId": "person--tirfelyn-hof--meirig",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Tirfelyn-Hof",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/meirig-v1.png",
+      "bio": "Meirig ist der 43-jährige Müller des Tirfelyn-Hofs. Der freundliche, etwas beleibte Mann mit braunem Haar und Halbglatze verarbeitet das Getreide der Familie zu Mehl und Schrot. Er wohnt mit seiner Frau Gwenneth und den Söhnen Iorfin und Eifor in der größeren vierten Bedienstetenhütte.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Meirig",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Meirig"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "43 Jahre"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Müller"
+          },
+          {
+            "label": "Wohnort",
+            "value": "Hütte 4, größere östliche Hütte der mittleren Gruppe"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/meirig-v1.png",
+          "biographyTitle": "Müller",
+          "biographyText": "<p>Meirig ist der 43-jährige Müller des Tirfelyn-Hofs. Der freundliche, etwas beleibte Mann mit braunem Haar und Halbglatze verarbeitet das Getreide der Familie zu Mehl und Schrot. Er wohnt mit seiner Frau Gwenneth und den Söhnen Iorfin und Eifor in der größeren vierten Bedienstetenhütte.</p>",
+          "historyTitle": "Am Tirfelyn-Hof",
+          "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+          "documentsTitle": "Hof und Arbeitsort",
+          "documents": [
+            {
+              "title": "Tirfelyn-Hof",
+              "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Hütte 4, größere östliche Hütte der mittleren Gruppe · Tirfelyn-Hof · Gwynthor",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--tirfelyn-hof--meirig",
+        "path": "records/orte/gwynthor/meirig--person--tirfelyn-hof--meirig/character.json",
+        "schemaVersion": 1,
+        "contentHash": "56ad514b0c69ebbdf23a01358d722fcacb5bd2ec29b66725ab6b9ad9336e516f",
+        "firestoreDocumentIds": [
+          "person--tirfelyn-hof--meirig"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "tirfelyn-hof-20261115"
+      }
+    },
+    {
+      "id": "person--tirfelyn-hof--gwenneth",
+      "name": "Gwenneth",
+      "title": "Meirigs Ehefrau, Hausfrau im eigenen Haushalt",
+      "role": "Meirigs Ehefrau, Hausfrau im eigenen Haushalt",
+      "age": 39,
+      "birth": "1701",
+      "gender": "weiblich",
+      "race": "Mensch",
+      "origin": "Cenyr",
+      "identity": {
+        "worldPersonId": "person--tirfelyn-hof--gwenneth"
+      },
+      "genealogy": {
+        "worldPersonId": "person--tirfelyn-hof--gwenneth",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Tirfelyn-Hof",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/gwenneth-v1.png",
+      "bio": "Die 39-jährige Gwenneth führt den Haushalt der Müllerfamilie. Mit Meirig und ihren beiden Söhnen Iorfin und Eifor bewohnt sie die vierte Bedienstetenhütte. Sie ist eine schlichte, kräftige Frau, die sich um Mahlzeiten, Wäsche und den Alltag ihrer Familie kümmert.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Gwenneth",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Gwenneth"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "39 Jahre"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Meirigs Ehefrau, Hausfrau im eigenen Haushalt"
+          },
+          {
+            "label": "Wohnort",
+            "value": "Hütte 4, größere östliche Hütte der mittleren Gruppe"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/gwenneth-v1.png",
+          "biographyTitle": "Meirigs Ehefrau, Hausfrau im eigenen Haushalt",
+          "biographyText": "<p>Die 39-jährige Gwenneth führt den Haushalt der Müllerfamilie. Mit Meirig und ihren beiden Söhnen Iorfin und Eifor bewohnt sie die vierte Bedienstetenhütte. Sie ist eine schlichte, kräftige Frau, die sich um Mahlzeiten, Wäsche und den Alltag ihrer Familie kümmert.</p>",
+          "historyTitle": "Am Tirfelyn-Hof",
+          "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+          "documentsTitle": "Hof und Arbeitsort",
+          "documents": [
+            {
+              "title": "Tirfelyn-Hof",
+              "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Hütte 4, größere östliche Hütte der mittleren Gruppe · Tirfelyn-Hof · Gwynthor",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--tirfelyn-hof--gwenneth",
+        "path": "records/orte/gwynthor/gwenneth--person--tirfelyn-hof--gwenneth/character.json",
+        "schemaVersion": 1,
+        "contentHash": "11846498a8654132ef3f5197cc21d570ae83a4d3b7f9fd446e620ed0e4b01882",
+        "firestoreDocumentIds": [
+          "person--tirfelyn-hof--gwenneth"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "tirfelyn-hof-20261115"
+      }
+    },
+    {
+      "id": "person--tirfelyn-hof--iorfin",
+      "name": "Iorfin",
+      "title": "Älterer Sohn des Müllers, lernt unter Aufsicht",
+      "role": "Älterer Sohn des Müllers, lernt unter Aufsicht",
+      "age": 12,
+      "birth": "1728",
+      "gender": "männlich",
+      "race": "Mensch",
+      "origin": "Cenyr",
+      "identity": {
+        "worldPersonId": "person--tirfelyn-hof--iorfin"
+      },
+      "genealogy": {
+        "worldPersonId": "person--tirfelyn-hof--iorfin",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Tirfelyn-Hof",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/iorfin-v1.png",
+      "bio": "Iorfin ist zwölf Jahre alt und der ältere Sohn von Meirig und Gwenneth. Der braunhaarige Junge hilft seinem Vater mit leichten Handgriffen in der Hofmühle und lernt die Arbeit unter Aufsicht kennen. Er wohnt mit seinen Eltern und seinem jüngeren Bruder Eifor in der vierten Bedienstetenhütte.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Iorfin",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Iorfin"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "12 Jahre"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Älterer Sohn des Müllers, lernt unter Aufsicht"
+          },
+          {
+            "label": "Wohnort",
+            "value": "Hütte 4, größere östliche Hütte der mittleren Gruppe"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/iorfin-v1.png",
+          "biographyTitle": "Älterer Sohn des Müllers, lernt unter Aufsicht",
+          "biographyText": "<p>Iorfin ist zwölf Jahre alt und der ältere Sohn von Meirig und Gwenneth. Der braunhaarige Junge hilft seinem Vater mit leichten Handgriffen in der Hofmühle und lernt die Arbeit unter Aufsicht kennen. Er wohnt mit seinen Eltern und seinem jüngeren Bruder Eifor in der vierten Bedienstetenhütte.</p>",
+          "historyTitle": "Am Tirfelyn-Hof",
+          "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+          "documentsTitle": "Hof und Arbeitsort",
+          "documents": [
+            {
+              "title": "Tirfelyn-Hof",
+              "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Hütte 4, größere östliche Hütte der mittleren Gruppe · Tirfelyn-Hof · Gwynthor",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--tirfelyn-hof--iorfin",
+        "path": "records/orte/gwynthor/iorfin--person--tirfelyn-hof--iorfin/character.json",
+        "schemaVersion": 1,
+        "contentHash": "2f488ad6473e8ce6198d2d491c981afb505b453d5318db30787182519abc7052",
+        "firestoreDocumentIds": [
+          "person--tirfelyn-hof--iorfin"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "tirfelyn-hof-20261115"
+      }
+    },
+    {
+      "id": "person--tirfelyn-hof--eifor",
+      "name": "Eifor",
+      "title": "Jüngerer Sohn des Müllers",
+      "role": "Jüngerer Sohn des Müllers",
+      "age": 9,
+      "birth": "1731",
+      "gender": "männlich",
+      "race": "Mensch",
+      "origin": "Cenyr",
+      "identity": {
+        "worldPersonId": "person--tirfelyn-hof--eifor"
+      },
+      "genealogy": {
+        "worldPersonId": "person--tirfelyn-hof--eifor",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Tirfelyn-Hof",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/eifor-v1.png",
+      "bio": "Der neunjährige Eifor ist Meirigs und Gwenneths jüngerer Sohn. Er hat braunes Haar und begleitet seinen älteren Bruder Iorfin zu kleinen Hilfsarbeiten an der Mühle. Gefährliche Arbeiten und die Bedienung der Mühlentechnik bleiben Sache der Erwachsenen.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Eifor",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Eifor"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "9 Jahre"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Jüngerer Sohn des Müllers"
+          },
+          {
+            "label": "Wohnort",
+            "value": "Hütte 4, größere östliche Hütte der mittleren Gruppe"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/eifor-v1.png",
+          "biographyTitle": "Jüngerer Sohn des Müllers",
+          "biographyText": "<p>Der neunjährige Eifor ist Meirigs und Gwenneths jüngerer Sohn. Er hat braunes Haar und begleitet seinen älteren Bruder Iorfin zu kleinen Hilfsarbeiten an der Mühle. Gefährliche Arbeiten und die Bedienung der Mühlentechnik bleiben Sache der Erwachsenen.</p>",
+          "historyTitle": "Am Tirfelyn-Hof",
+          "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+          "documentsTitle": "Hof und Arbeitsort",
+          "documents": [
+            {
+              "title": "Tirfelyn-Hof",
+              "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Hütte 4, größere östliche Hütte der mittleren Gruppe · Tirfelyn-Hof · Gwynthor",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--tirfelyn-hof--eifor",
+        "path": "records/orte/gwynthor/eifor--person--tirfelyn-hof--eifor/character.json",
+        "schemaVersion": 1,
+        "contentHash": "4cd3688bcffaeceb6f40a4e219c3322fa1d14cf14a0b3c45bcc967e2f160bd8e",
+        "firestoreDocumentIds": [
+          "person--tirfelyn-hof--eifor"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "tirfelyn-hof-20261115"
+      }
+    },
+    {
+      "id": "person--tirfelyn-hof--cynfarch",
+      "name": "Cynfarch",
+      "title": "Junger Hufschmied, Beschläge und Reparaturen für den Hof",
+      "role": "Junger Hufschmied, Beschläge und Reparaturen für den Hof",
+      "age": 24,
+      "birth": "1716",
+      "gender": "männlich",
+      "race": "Mensch",
+      "origin": "Bronhir · Cenyr",
+      "identity": {
+        "worldPersonId": "person--tirfelyn-hof--cynfarch"
+      },
+      "genealogy": {
+        "worldPersonId": "person--tirfelyn-hof--cynfarch",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Tirfelyn-Hof",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/cynfarch-v1.png",
+      "bio": "Cynfarch ist ein 24-jähriger Hufschmied aus Bronhir. Der freundliche, kräftige junge Mann mit dunkelrotem Haar beschlägt die Hofpferde und repariert eiserne Beschläge und kleinere Gerätschaften. Er arbeitet in der offenen Hofschmiede und wohnt in der fünften Bedienstetenhütte.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Cynfarch",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Cynfarch"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "24 Jahre"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Junger Hufschmied, Beschläge und Reparaturen für den Hof"
+          },
+          {
+            "label": "Wohnort",
+            "value": "Hütte 5, südliche Hütte"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/cynfarch-v1.png",
+          "biographyTitle": "Junger Hufschmied, Beschläge und Reparaturen für den Hof",
+          "biographyText": "<p>Cynfarch ist ein 24-jähriger Hufschmied aus Bronhir. Der freundliche, kräftige junge Mann mit dunkelrotem Haar beschlägt die Hofpferde und repariert eiserne Beschläge und kleinere Gerätschaften. Er arbeitet in der offenen Hofschmiede und wohnt in der fünften Bedienstetenhütte.</p>",
+          "historyTitle": "Am Tirfelyn-Hof",
+          "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+          "documentsTitle": "Hof und Arbeitsort",
+          "documents": [
+            {
+              "title": "Tirfelyn-Hof",
+              "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Hütte 5, südliche Hütte · Tirfelyn-Hof · Gwynthor",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--tirfelyn-hof--cynfarch",
+        "path": "records/orte/gwynthor/cynfarch--person--tirfelyn-hof--cynfarch/character.json",
+        "schemaVersion": 1,
+        "contentHash": "ee4eb18df486ca6c7603910a01a9d205cd696c3e589902e339aff9c3adf2e5a0",
+        "firestoreDocumentIds": [
+          "person--tirfelyn-hof--cynfarch"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "tirfelyn-hof-20261115"
+      }
+    },
+    {
+      "id": "person--tirfelyn-hof--nefydd",
+      "name": "Nefydd",
+      "title": "Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte",
+      "role": "Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte",
+      "age": 35,
+      "birth": "1705",
+      "gender": "männlich",
+      "race": "Mensch",
+      "origin": "Cenyr",
+      "identity": {
+        "worldPersonId": "person--tirfelyn-hof--nefydd"
+      },
+      "genealogy": {
+        "worldPersonId": "person--tirfelyn-hof--nefydd",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Tirfelyn-Hof",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/nefydd-v1.png",
+      "bio": "Nefydd ist ein stiller Feldknecht von 35 Jahren und bewohnt die nördlichste Bedienstetenhütte. Er unterstützt Gwallog bei Feldarbeit und Ernte. Sein braunes Haar steht unordentlich ab, sein Blick wirkt oft abwesend und gleichförmig. Er hatte Zuneigung für die verstorbene Ceridwen Tirfelyn; ihr Tod beschäftigt ihn.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Nefydd",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Nefydd"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "35 Jahre"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte"
+          },
+          {
+            "label": "Wohnort",
+            "value": "Hütte 1, nördlichste Hütte"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/nefydd-v1.png",
+          "biographyTitle": "Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte",
+          "biographyText": "<p>Nefydd ist ein stiller Feldknecht von 35 Jahren und bewohnt die nördlichste Bedienstetenhütte. Er unterstützt Gwallog bei Feldarbeit und Ernte. Sein braunes Haar steht unordentlich ab, sein Blick wirkt oft abwesend und gleichförmig. Er hatte Zuneigung für die verstorbene Ceridwen Tirfelyn; ihr Tod beschäftigt ihn.</p>",
+          "historyTitle": "Am Tirfelyn-Hof",
+          "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+          "documentsTitle": "Hof und Arbeitsort",
+          "documents": [
+            {
+              "title": "Tirfelyn-Hof",
+              "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Hütte 1, nördlichste Hütte · Tirfelyn-Hof · Gwynthor",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--tirfelyn-hof--nefydd",
+        "path": "records/orte/gwynthor/nefydd--person--tirfelyn-hof--nefydd/character.json",
+        "schemaVersion": 1,
+        "contentHash": "c9938c41198303756b0d9b3476ffbc824262aba6eae843bf37981987ca0b99ed",
+        "firestoreDocumentIds": [
+          "person--tirfelyn-hof--nefydd"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "tirfelyn-hof-20261115"
+      }
+    },
+    {
+      "id": "person--tirfelyn-hof--rhufon",
+      "name": "Rhufon",
+      "title": "Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen",
+      "role": "Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen",
+      "age": 27,
+      "birth": "1713",
+      "gender": "männlich",
+      "race": "Mensch",
+      "origin": "Cenyr",
+      "identity": {
+        "worldPersonId": "person--tirfelyn-hof--rhufon"
+      },
+      "genealogy": {
+        "worldPersonId": "person--tirfelyn-hof--rhufon",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Tirfelyn-Hof",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/rhufon-v1.png",
+      "bio": "Rhufon ist ein freundlicher 27-jähriger Feld- und Hofhelfer mit kurzem rotem Haar. Er hilft bei den Feldarbeiten, beim Beladen der Wagen und bei Lieferungen nach Gwynthor. Auf dem Tirfelyn-Hof bewohnt er die zweite Bedienstetenhütte.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Rhufon",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Rhufon"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "27 Jahre"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen"
+          },
+          {
+            "label": "Wohnort",
+            "value": "Hütte 2, westliche Hütte der mittleren Gruppe"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/rhufon-v1.png",
+          "biographyTitle": "Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen",
+          "biographyText": "<p>Rhufon ist ein freundlicher 27-jähriger Feld- und Hofhelfer mit kurzem rotem Haar. Er hilft bei den Feldarbeiten, beim Beladen der Wagen und bei Lieferungen nach Gwynthor. Auf dem Tirfelyn-Hof bewohnt er die zweite Bedienstetenhütte.</p>",
+          "historyTitle": "Am Tirfelyn-Hof",
+          "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+          "documentsTitle": "Hof und Arbeitsort",
+          "documents": [
+            {
+              "title": "Tirfelyn-Hof",
+              "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Hütte 2, westliche Hütte der mittleren Gruppe · Tirfelyn-Hof · Gwynthor",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--tirfelyn-hof--rhufon",
+        "path": "records/orte/gwynthor/rhufon--person--tirfelyn-hof--rhufon/character.json",
+        "schemaVersion": 1,
+        "contentHash": "78fcd26d956f8cf43b6949aa707ebc17ffe73340b8d88b08b3b8148bd3c2979d",
+        "firestoreDocumentIds": [
+          "person--tirfelyn-hof--rhufon"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "tirfelyn-hof-20261115"
+      }
+    },
+    {
+      "id": "person--tirfelyn-hof--maldwyn",
+      "name": "Maldwyn",
+      "title": "Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen",
+      "role": "Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen",
+      "age": 46,
+      "birth": "1694",
+      "gender": "männlich",
+      "race": "Mensch",
+      "origin": "Cenyr",
+      "identity": {
+        "worldPersonId": "person--tirfelyn-hof--maldwyn"
+      },
+      "genealogy": {
+        "worldPersonId": "person--tirfelyn-hof--maldwyn",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Tirfelyn-Hof",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/maldwyn-v1.png",
+      "bio": "Der 46-jährige Maldwyn hilft Eudaf bei Fütterung, Viehtrieb und der Pflege der Weidezäune. Der kräftige braunhaarige Mann gilt als gütig und hilfsbereit. Er wohnt in der dritten Bedienstetenhütte und arbeitet auch mit den beiden Herdenhunden des Hofes.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Maldwyn",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Maldwyn"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "46 Jahre"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen"
+          },
+          {
+            "label": "Wohnort",
+            "value": "Hütte 3, kleine mittlere Hütte"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/maldwyn-v1.png",
+          "biographyTitle": "Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen",
+          "biographyText": "<p>Der 46-jährige Maldwyn hilft Eudaf bei Fütterung, Viehtrieb und der Pflege der Weidezäune. Der kräftige braunhaarige Mann gilt als gütig und hilfsbereit. Er wohnt in der dritten Bedienstetenhütte und arbeitet auch mit den beiden Herdenhunden des Hofes.</p>",
+          "historyTitle": "Am Tirfelyn-Hof",
+          "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+          "documentsTitle": "Hof und Arbeitsort",
+          "documents": [
+            {
+              "title": "Tirfelyn-Hof",
+              "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Hütte 3, kleine mittlere Hütte · Tirfelyn-Hof · Gwynthor",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--tirfelyn-hof--maldwyn",
+        "path": "records/orte/gwynthor/maldwyn--person--tirfelyn-hof--maldwyn/character.json",
+        "schemaVersion": 1,
+        "contentHash": "b4a4b531051ee0c9a20332543dffb7e611a8d00cb02869d9294ac6151c16226a",
+        "firestoreDocumentIds": [
+          "person--tirfelyn-hof--maldwyn"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "tirfelyn-hof-20261115"
+      }
+    },
+    {
+      "id": "person--tirfelyn-hof--eiluned",
+      "name": "Eiluned",
+      "title": "Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen",
+      "role": "Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen",
+      "age": 41,
+      "birth": "1699",
+      "gender": "weiblich",
+      "race": "Mensch",
+      "origin": "Cenyr",
+      "identity": {
+        "worldPersonId": "person--tirfelyn-hof--eiluned"
+      },
+      "genealogy": {
+        "worldPersonId": "person--tirfelyn-hof--eiluned",
+        "sources": [],
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "fraktion": "Tirfelyn-Hof",
+      "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/eiluned-v1.png",
+      "bio": "Eiluned ist 41 Jahre alt und unterstützt Enid und Madrun bei Wäsche, Reinigung und der täglichen Hausarbeit. Die rothaarige Hofmagd wirkt abgekämpft und müde, begegnet anderen aber freundlich. Sie bewohnt die kleine sechste Bedienstetenhütte.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Eiluned",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Eiluned"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "41 Jahre"
+          },
+          {
+            "label": "Aufgabe",
+            "value": "Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen"
+          },
+          {
+            "label": "Wohnort",
+            "value": "Hütte 6, kleine südöstliche Hütte"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/eiluned-v1.png",
+          "biographyTitle": "Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen",
+          "biographyText": "<p>Eiluned ist 41 Jahre alt und unterstützt Enid und Madrun bei Wäsche, Reinigung und der täglichen Hausarbeit. Die rothaarige Hofmagd wirkt abgekämpft und müde, begegnet anderen aber freundlich. Sie bewohnt die kleine sechste Bedienstetenhütte.</p>",
+          "historyTitle": "Am Tirfelyn-Hof",
+          "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+          "documentsTitle": "Hof und Arbeitsort",
+          "documents": [
+            {
+              "title": "Tirfelyn-Hof",
+              "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+              "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Hütte 6, kleine südöstliche Hütte · Tirfelyn-Hof · Gwynthor",
+      "archived": false,
+      "aliases": [],
+      "localRecord": {
+        "recordId": "character--person--tirfelyn-hof--eiluned",
+        "path": "records/orte/gwynthor/eiluned--person--tirfelyn-hof--eiluned/character.json",
+        "schemaVersion": 1,
+        "contentHash": "ed1486949f24f1e89bdf66bfda504962800967d6d53f5a447848c4dc53c3c0e3",
+        "firestoreDocumentIds": [
+          "person--tirfelyn-hof--eiluned"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "place",
+            "id": "gwynthor",
+            "label": "Gwynthor",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [],
+          "places": [
+            {
+              "id": "gwynthor",
+              "label": "Gwynthor",
+              "source": "archive-tab"
+            }
+          ]
+        },
+        "authoredFeature": "tirfelyn-hof-20261115"
+      }
     }
   ],
   "charTabs": {
@@ -249823,7 +251083,19 @@
         "person--gwynthor-reine-ratte--iorven-pell",
         "person--gwynthor-reine-ratte--edrith-voss",
         "person--gwynthor-reine-ratte--dornan-falbh",
-        "person--gwynthor-reine-ratte--caerlan-ruadh"
+        "person--gwynthor-reine-ratte--caerlan-ruadh",
+        "person--tirfelyn-hof--hallvard",
+        "person--tirfelyn-hof--torleif",
+        "person--tirfelyn-hof--rannveig",
+        "person--tirfelyn-hof--meirig",
+        "person--tirfelyn-hof--gwenneth",
+        "person--tirfelyn-hof--iorfin",
+        "person--tirfelyn-hof--eifor",
+        "person--tirfelyn-hof--cynfarch",
+        "person--tirfelyn-hof--nefydd",
+        "person--tirfelyn-hof--rhufon",
+        "person--tirfelyn-hof--maldwyn",
+        "person--tirfelyn-hof--eiluned"
       ],
       "Dun Athar": [
         "2bCru7S3YGrzjFnYpnN9",

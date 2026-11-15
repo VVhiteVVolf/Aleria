@@ -1,0 +1,214 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--tirfelyn-hof--cynfarch",
+  "slug": "cynfarch",
+  "identity": {
+    "name": "Cynfarch",
+    "aliases": [],
+    "worldPersonId": "person--tirfelyn-hof--cynfarch"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--tirfelyn-hof--cynfarch",
+      "documentIds": [
+        "person--tirfelyn-hof--cynfarch"
+      ],
+      "documents": [
+        {
+          "documentId": "person--tirfelyn-hof--cynfarch",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Tirfelyn Hof/cynfarch.json",
+    "sourceExportedAt": "2026-11-15T20:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--tirfelyn-hof--cynfarch"
+    ],
+    "contentHash": "ee4eb18df486ca6c7603910a01a9d205cd696c3e589902e339aff9c3adf2e5a0"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "tirfelyn-hof-20261115"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--tirfelyn-hof--cynfarch",
+        "name": "Cynfarch",
+        "title": "Junger Hufschmied, Beschläge und Reparaturen für den Hof",
+        "role": "Junger Hufschmied, Beschläge und Reparaturen für den Hof",
+        "age": 24,
+        "birth": "1716",
+        "gender": "männlich",
+        "race": "Mensch",
+        "origin": "Bronhir · Cenyr",
+        "identity": {
+          "worldPersonId": "person--tirfelyn-hof--cynfarch"
+        },
+        "genealogy": {
+          "worldPersonId": "person--tirfelyn-hof--cynfarch",
+          "sources": []
+        },
+        "fraktion": "Tirfelyn-Hof",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/cynfarch-v1.png",
+        "bio": "Cynfarch ist ein 24-jähriger Hufschmied aus Bronhir. Der freundliche, kräftige junge Mann mit dunkelrotem Haar beschlägt die Hofpferde und repariert eiserne Beschläge und kleinere Gerätschaften. Er arbeitet in der offenen Hofschmiede und wohnt in der fünften Bedienstetenhütte.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Cynfarch",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Cynfarch"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "24 Jahre"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Junger Hufschmied, Beschläge und Reparaturen für den Hof"
+            },
+            {
+              "label": "Wohnort",
+              "value": "Hütte 5, südliche Hütte"
+            }
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/cynfarch-v1.png",
+            "biographyTitle": "Junger Hufschmied, Beschläge und Reparaturen für den Hof",
+            "biographyText": "<p>Cynfarch ist ein 24-jähriger Hufschmied aus Bronhir. Der freundliche, kräftige junge Mann mit dunkelrotem Haar beschlägt die Hofpferde und repariert eiserne Beschläge und kleinere Gerätschaften. Er arbeitet in der offenen Hofschmiede und wohnt in der fünften Bedienstetenhütte.</p>",
+            "historyTitle": "Am Tirfelyn-Hof",
+            "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+            "documentsTitle": "Hof und Arbeitsort",
+            "documents": [
+              {
+                "title": "Tirfelyn-Hof",
+                "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Hütte 5, südliche Hütte · Tirfelyn-Hof · Gwynthor",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--tirfelyn-hof--cynfarch",
+    "name": "Cynfarch",
+    "title": "Junger Hufschmied, Beschläge und Reparaturen für den Hof",
+    "role": "Junger Hufschmied, Beschläge und Reparaturen für den Hof",
+    "age": 24,
+    "birth": "1716",
+    "gender": "männlich",
+    "race": "Mensch",
+    "origin": "Bronhir · Cenyr",
+    "identity": {
+      "worldPersonId": "person--tirfelyn-hof--cynfarch"
+    },
+    "genealogy": {
+      "worldPersonId": "person--tirfelyn-hof--cynfarch",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Tirfelyn-Hof",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/cynfarch-v1.png",
+    "bio": "Cynfarch ist ein 24-jähriger Hufschmied aus Bronhir. Der freundliche, kräftige junge Mann mit dunkelrotem Haar beschlägt die Hofpferde und repariert eiserne Beschläge und kleinere Gerätschaften. Er arbeitet in der offenen Hofschmiede und wohnt in der fünften Bedienstetenhütte.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Cynfarch",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Cynfarch"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "24 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Junger Hufschmied, Beschläge und Reparaturen für den Hof"
+        },
+        {
+          "label": "Wohnort",
+          "value": "Hütte 5, südliche Hütte"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/cynfarch-v1.png",
+        "biographyTitle": "Junger Hufschmied, Beschläge und Reparaturen für den Hof",
+        "biographyText": "<p>Cynfarch ist ein 24-jähriger Hufschmied aus Bronhir. Der freundliche, kräftige junge Mann mit dunkelrotem Haar beschlägt die Hofpferde und repariert eiserne Beschläge und kleinere Gerätschaften. Er arbeitet in der offenen Hofschmiede und wohnt in der fünften Bedienstetenhütte.</p>",
+        "historyTitle": "Am Tirfelyn-Hof",
+        "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+        "documentsTitle": "Hof und Arbeitsort",
+        "documents": [
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Hütte 5, südliche Hütte · Tirfelyn-Hof · Gwynthor",
+    "archived": false,
+    "aliases": []
+  }
+}

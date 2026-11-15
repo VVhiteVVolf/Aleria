@@ -12,10 +12,13 @@
     if(!bar) return;
     const s = state();
     const activeFilter = runtime.activeFilter();
+    const usedCategories = new Set(s.pins.filter(pin => !pin.secret).map(pin => pin.cat));
+    const categories = runtime.config?.().categoryBarMode === 'used' && !runtime.isEditMode()
+      ? s.cats.filter(category => usedCategories.has(category.id)) : s.cats;
     const esc = runtime.esc;
     bar.innerHTML =
       `<button class="cbt${activeFilter==='all'?' on':''}" data-action="set-category-filter" data-category-id="all">Alle</button>` +
-      s.cats.map(c => `
+      categories.map(c => `
         <button class="cbt${activeFilter===c.id?' on':''}" data-action="set-category-filter" data-category-id="${esc(c.id)}">
           <span class="cdot" style="width:8px;height:8px;border-radius:50%;background:${c.color};flex-shrink:0;border:1.5px solid rgba(0,0,0,.18);display:inline-block;"></span>${esc(c.label)}
         </button>`).join('');

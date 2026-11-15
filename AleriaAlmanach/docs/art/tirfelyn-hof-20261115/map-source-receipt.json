@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-15",
+  "source": "C:/Users/fhg_r/Downloads/Tirfelyn Hof/Tirfelyn - Hof.png",
+  "active": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png",
+  "sha256": "6a36e7b71cbd4d0152b1aeca834a6e836f14ca0a9150bf90492c99a52530fc80",
+  "width": 4096,
+  "height": 4096,
+  "sourceBytesPreserved": true,
+  "sharedByLayers": [
+    "normal",
+    "pins"
+  ],
+  "labelledReference": {
+    "source": "C:/Users/fhg_r/Downloads/Tirfelyn Hof/Tirfelyn - Hof (Beschriftet).png",
+    "runtimeEligible": false
+  },
+  "displayDerivatives": [
+    {
+      "path": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/display/tirfelyn-2048-q90.jpg",
+      "width": 2048,
+      "height": 2048,
+      "method": ".NET System.Drawing, proportional resize, JPEG quality 90; no content editing"
+    },
+    {
+      "path": "Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/display/tirfelyn-4096-q90.jpg",
+      "width": 4096,
+      "height": 4096,
+      "method": ".NET System.Drawing, proportional resize, JPEG quality 90; no content editing"
+    }
+  ],
+  "peopleLayer": {
+    "kind": "independent portrait overlay",
+    "households": 9,
+    "people": 28,
+    "underlyingImage": "normal"
+  }
+}

@@ -72,13 +72,11 @@ export function resolveCatalogPurchaseSelection(data, saved = {}) {
   const options = catalogPurchasePayerOptions(data), payer = options.find(option => option.key === saved.payerKey && option.canDebit);
   if (!payer) return { payerKey: '', recipientKey: '', actorCharacterId: '' };
   const characters = options.filter(option => option.kind === 'character');
-  const recipient = characters.find(option => option.key === saved.recipientKey);
   let actor = characters.find(option => option.id === saved.actorCharacterId);
   if (payer.kind === 'group') {
-    actor = payer.members.find(member => member.id === actor?.id)
-      || payer.members.find(member => member.id === recipient?.id) || payer.members[0];
+    actor = payer.members.find(member => member.id === actor?.id) || payer.members[0];
   } else actor = payer.record;
-  return { payerKey: payer.key, recipientKey: recipient?.key || `character:${payer.kind === 'character' ? payer.id : actor.id}`,
+  return { payerKey: payer.key, recipientKey: `character:${actor.id}`,
     actorCharacterId: actor.id };
 }
 
@@ -86,14 +84,18 @@ export function catalogPurchasePreview(input = {}, data = {}) {
   const errors = [], quantity = Number(input.quantity ?? 1), merchantId = `module:${data.moduleId || ''}`;
   const product = catalogPurchaseOffers(data.offers, data).find(offer => offer.id === input.productId && offer.listId === merchantId);
   const accounts = catalogPurchaseAccounts(data, input.actorCharacterId), payer = accounts.find(option => option.key === input.payerKey && option.canDebit);
-  const recipient = accounts.find(option => option.kind === 'character' && option.key === input.recipientKey);
   const actor = accounts.find(option => option.kind === 'character' && option.id === input.actorCharacterId && option.canDebit);
+  // An item destination is internal checkout data. Only an explicit gift asks
+  // for another figure; old remembered recipients must never redirect a buy.
+  const recipientKey = input.buyForOther === true ? input.recipientKey
+    : payer?.kind === 'character' ? payer.key : actor?.key;
+  const recipient = accounts.find(option => option.kind === 'character' && option.key === recipientKey);
   if (!product || product.available === false || ['planned', 'unavailable'].includes(product.status)
     || ['unknown', 'checking', 'owned', 'sold', 'unavailable'].includes(product.availabilityStatus)) errors.push('Diese Ware ist nicht zum Direktkauf verfügbar.');
   if (uniqueProduct(product) && product.availabilityStatus !== 'available') errors.push('Die Verfügbarkeit dieses Einzelstücks ist noch nicht bestätigt.');
   if (!actor) errors.push('Bitte eine bestellende Figur wählen.');
   if (!payer) errors.push('Bitte einen verfügbaren Geldbeutel wählen.');
-  if (!recipient) errors.push('Bitte eine Empfängerfigur wählen.');
+  if (!recipient && input.buyForOther === true) errors.push('Bitte die Figur wählen, die die Ware erhalten soll.');
   if (!Number.isSafeInteger(quantity) || quantity < 1 || quantity > 9999) errors.push('Die Menge muss zwischen 1 und 9.999 liegen.');
   if (uniqueProduct(product) && quantity !== 1) errors.push('Ein Einzelstück kann nur einmal gekauft werden.');
   let unitMinor = null, totalMinor = null;

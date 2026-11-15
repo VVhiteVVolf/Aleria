@@ -1,20 +1,9 @@
-export function familyCrest(family) {
-  const image = document.createElement('img');
-  image.src = family.crest; image.alt = family.name; image.draggable = false;
-  image.addEventListener('error', () => { image.hidden = true; }, { once: true });
-  return image;
-}
+import { createRosterPortrait, createRosterList } from '../place-roster/place-roster-members.mjs';
 
+export function familyCrest(family) { return createRosterPortrait({ ...family, portrait: family.crest }); }
 export function createFamilyList(families) {
-  const list = document.createElement('ul'); list.className = 'household-family-list';
-  for (const family of families) {
-    const item = document.createElement('li'), link = document.createElement('a');
-    link.href = family.href; link.target = '_blank'; link.rel = 'noopener';
-    const caption = document.createElement('span');
-    const name = document.createElement('strong'); name.textContent = family.name;
-    const role = document.createElement('small'); role.textContent = family.role;
-    caption.append(name, role); link.append(familyCrest(family), caption); item.append(link); list.append(item);
-  }
+  const list = createRosterList(families.map(family => ({ ...family, portrait: family.crest })));
+  list.classList.add('household-family-list');
   return list;
 }
 

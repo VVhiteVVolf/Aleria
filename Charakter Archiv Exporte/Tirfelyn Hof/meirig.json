@@ -1,0 +1,69 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-15T20:00:00Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Tirfelyn Hof/meirig.json",
+  "character": {
+    "id": "person--tirfelyn-hof--meirig",
+    "name": "Meirig",
+    "title": "Müller",
+    "role": "Müller",
+    "age": 43,
+    "birth": "1697",
+    "gender": "männlich",
+    "race": "Mensch",
+    "origin": "Cenyr",
+    "identity": {
+      "worldPersonId": "person--tirfelyn-hof--meirig"
+    },
+    "genealogy": {
+      "worldPersonId": "person--tirfelyn-hof--meirig",
+      "sources": []
+    },
+    "fraktion": "Tirfelyn-Hof",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/meirig-v1.png",
+    "bio": "Meirig ist der 43-jährige Müller des Tirfelyn-Hofs. Der freundliche, etwas beleibte Mann mit braunem Haar und Halbglatze verarbeitet das Getreide der Familie zu Mehl und Schrot. Er wohnt mit seiner Frau Gwenneth und den Söhnen Iorfin und Eifor in der größeren vierten Bedienstetenhütte.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Meirig",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Meirig"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "43 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Müller"
+        },
+        {
+          "label": "Wohnort",
+          "value": "Hütte 4, größere östliche Hütte der mittleren Gruppe"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/meirig-v1.png",
+        "biographyTitle": "Müller",
+        "biographyText": "<p>Meirig ist der 43-jährige Müller des Tirfelyn-Hofs. Der freundliche, etwas beleibte Mann mit braunem Haar und Halbglatze verarbeitet das Getreide der Familie zu Mehl und Schrot. Er wohnt mit seiner Frau Gwenneth und den Söhnen Iorfin und Eifor in der größeren vierten Bedienstetenhütte.</p>",
+        "historyTitle": "Am Tirfelyn-Hof",
+        "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+        "documentsTitle": "Hof und Arbeitsort",
+        "documents": [
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Hütte 4, größere östliche Hütte der mittleren Gruppe · Tirfelyn-Hof · Gwynthor",
+    "archived": false
+  }
+}

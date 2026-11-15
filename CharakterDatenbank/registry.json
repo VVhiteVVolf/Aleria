@@ -251,6 +251,18 @@
     "Charakter Archiv Exporte/Tierbegleiter Abgleich 2026-11-02/person--haus-balchder--kamber-balchder.json",
     "Charakter Archiv Exporte/Tierbegleiter Abgleich 2026-11-02/person--haus-wylan--neala-wylan.json",
     "Charakter Archiv Exporte/Tierbegleiter Abgleich 2026-11-02/person--haus-wyrm--gais-wyrm.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/cynfarch.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/eifor.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/eiluned.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/gwenneth.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/hallvard.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/iorfin.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/maldwyn.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/meirig.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/nefydd.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/rannveig.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/rhufon.json",
+    "Charakter Archiv Exporte/Tirfelyn Hof/torleif.json",
     "Charakter Archiv Exporte/Traitabgleich 2026-11-02/6atOllMA637Z2VNAZAxf.json",
     "Charakter Archiv Exporte/Traitabgleich 2026-11-02/FKiXsSWVoV74rTgmpPip.json",
     "Charakter Archiv Exporte/Traitabgleich 2026-11-02/HjDXMMexahez1G0rJrBE.json",
@@ -432,8 +444,8 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-11-15T18:05:42.808Z",
-  "count": 409,
+  "sourceExportedAt": "2026-11-15T20:00:00Z",
+  "count": 421,
   "records": [
     {
       "recordId": "character--kCmUm4WvMZDYetqrSWQ0",
@@ -8153,6 +8165,234 @@
       "familyStatus": "linked",
       "path": "records/familien/haus-gafyr/rheinallt-gafyr--person--haus-gafyr--rheinallt-gafyr/character.json",
       "contentHash": "d4053628f5b516e35290db19dc8734c175fab59d14994f5ab516893a61b20d4d"
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--hallvard",
+      "name": "Hallvard",
+      "aliases": [],
+      "worldPersonId": "person--tirfelyn-hof--hallvard",
+      "firestoreDocumentId": "person--tirfelyn-hof--hallvard",
+      "firestoreDocumentIds": [
+        "person--tirfelyn-hof--hallvard"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/hallvard--person--tirfelyn-hof--hallvard/character.json",
+      "contentHash": "c206c43528304c2216f837ad3d3fdf84262866c8ffb2bf3bb31ac2b6ad525aa0"
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--torleif",
+      "name": "Torleif",
+      "aliases": [],
+      "worldPersonId": "person--tirfelyn-hof--torleif",
+      "firestoreDocumentId": "person--tirfelyn-hof--torleif",
+      "firestoreDocumentIds": [
+        "person--tirfelyn-hof--torleif"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/torleif--person--tirfelyn-hof--torleif/character.json",
+      "contentHash": "9bf3c2465177d3884c5b696b04b02fbdf775daf07a3700ab21b4817e32d933f2"
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--rannveig",
+      "name": "Rannveig",
+      "aliases": [],
+      "worldPersonId": "person--tirfelyn-hof--rannveig",
+      "firestoreDocumentId": "person--tirfelyn-hof--rannveig",
+      "firestoreDocumentIds": [
+        "person--tirfelyn-hof--rannveig"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/rannveig--person--tirfelyn-hof--rannveig/character.json",
+      "contentHash": "47ffdad59b3ef1cb5987c3bd4b45fdc0ca308a6a439686d9a52bf63e4e1c3f6e"
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--meirig",
+      "name": "Meirig",
+      "aliases": [],
+      "worldPersonId": "person--tirfelyn-hof--meirig",
+      "firestoreDocumentId": "person--tirfelyn-hof--meirig",
+      "firestoreDocumentIds": [
+        "person--tirfelyn-hof--meirig"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/meirig--person--tirfelyn-hof--meirig/character.json",
+      "contentHash": "56ad514b0c69ebbdf23a01358d722fcacb5bd2ec29b66725ab6b9ad9336e516f"
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--gwenneth",
+      "name": "Gwenneth",
+      "aliases": [],
+      "worldPersonId": "person--tirfelyn-hof--gwenneth",
+      "firestoreDocumentId": "person--tirfelyn-hof--gwenneth",
+      "firestoreDocumentIds": [
+        "person--tirfelyn-hof--gwenneth"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/gwenneth--person--tirfelyn-hof--gwenneth/character.json",
+      "contentHash": "11846498a8654132ef3f5197cc21d570ae83a4d3b7f9fd446e620ed0e4b01882"
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--iorfin",
+      "name": "Iorfin",
+      "aliases": [],
+      "worldPersonId": "person--tirfelyn-hof--iorfin",
+      "firestoreDocumentId": "person--tirfelyn-hof--iorfin",
+      "firestoreDocumentIds": [
+        "person--tirfelyn-hof--iorfin"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/iorfin--person--tirfelyn-hof--iorfin/character.json",
+      "contentHash": "2f488ad6473e8ce6198d2d491c981afb505b453d5318db30787182519abc7052"
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--eifor",
+      "name": "Eifor",
+      "aliases": [],
+      "worldPersonId": "person--tirfelyn-hof--eifor",
+      "firestoreDocumentId": "person--tirfelyn-hof--eifor",
+      "firestoreDocumentIds": [
+        "person--tirfelyn-hof--eifor"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/eifor--person--tirfelyn-hof--eifor/character.json",
+      "contentHash": "4cd3688bcffaeceb6f40a4e219c3322fa1d14cf14a0b3c45bcc967e2f160bd8e"
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--cynfarch",
+      "name": "Cynfarch",
+      "aliases": [],
+      "worldPersonId": "person--tirfelyn-hof--cynfarch",
+      "firestoreDocumentId": "person--tirfelyn-hof--cynfarch",
+      "firestoreDocumentIds": [
+        "person--tirfelyn-hof--cynfarch"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/cynfarch--person--tirfelyn-hof--cynfarch/character.json",
+      "contentHash": "ee4eb18df486ca6c7603910a01a9d205cd696c3e589902e339aff9c3adf2e5a0"
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--nefydd",
+      "name": "Nefydd",
+      "aliases": [],
+      "worldPersonId": "person--tirfelyn-hof--nefydd",
+      "firestoreDocumentId": "person--tirfelyn-hof--nefydd",
+      "firestoreDocumentIds": [
+        "person--tirfelyn-hof--nefydd"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/nefydd--person--tirfelyn-hof--nefydd/character.json",
+      "contentHash": "c9938c41198303756b0d9b3476ffbc824262aba6eae843bf37981987ca0b99ed"
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--rhufon",
+      "name": "Rhufon",
+      "aliases": [],
+      "worldPersonId": "person--tirfelyn-hof--rhufon",
+      "firestoreDocumentId": "person--tirfelyn-hof--rhufon",
+      "firestoreDocumentIds": [
+        "person--tirfelyn-hof--rhufon"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/rhufon--person--tirfelyn-hof--rhufon/character.json",
+      "contentHash": "78fcd26d956f8cf43b6949aa707ebc17ffe73340b8d88b08b3b8148bd3c2979d"
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--maldwyn",
+      "name": "Maldwyn",
+      "aliases": [],
+      "worldPersonId": "person--tirfelyn-hof--maldwyn",
+      "firestoreDocumentId": "person--tirfelyn-hof--maldwyn",
+      "firestoreDocumentIds": [
+        "person--tirfelyn-hof--maldwyn"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/maldwyn--person--tirfelyn-hof--maldwyn/character.json",
+      "contentHash": "b4a4b531051ee0c9a20332543dffb7e611a8d00cb02869d9294ac6151c16226a"
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--eiluned",
+      "name": "Eiluned",
+      "aliases": [],
+      "worldPersonId": "person--tirfelyn-hof--eiluned",
+      "firestoreDocumentId": "person--tirfelyn-hof--eiluned",
+      "firestoreDocumentIds": [
+        "person--tirfelyn-hof--eiluned"
+      ],
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/orte/gwynthor/eiluned--person--tirfelyn-hof--eiluned/character.json",
+      "contentHash": "ed1486949f24f1e89bdf66bfda504962800967d6d53f5a447848c4dc53c3c0e3"
     }
   ]
 }

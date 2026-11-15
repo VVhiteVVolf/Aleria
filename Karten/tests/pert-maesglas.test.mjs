@@ -1,3 +1,4 @@
+import { projectTirfelynOriginalPinImages } from './support/tirfelyn-hof-pin-history.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
@@ -77,7 +78,7 @@ test('every unrelated pin and map setting remains byte-equivalent in its JSON mo
     ['gwynthor-marking-092', 'gwynthor-marking-107', 'gwynthor-marking-115']);
   const profilesById = new Map(priorProfiles.pins.map(item => [item.id, item]));
   const reviewedLocalities = read('fleischsammler-localities.source.json');
-  const historicalPins = projectStilleEinkehrOriginalPins(projectHalenrhydOriginalPins(projectNorthernFarmOriginalPins(pins))).map(item => {
+  const historicalPins = projectStilleEinkehrOriginalPins(projectTirfelynOriginalPinImages(projectHalenrhydOriginalPins(projectNorthernFarmOriginalPins(pins)))).map(item => {
     const prior = profilesById.get(item.id);
     if (!prior) return item;
     const approved = reviewedLocalities.locations.find(location => location.pinId === item.id)?.patch;

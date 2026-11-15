@@ -8,7 +8,7 @@
   function open(pinId){
     const pin = state().pins.find(item => item.id === pinId);
     if(!pin) return;
-    window.KartoPinRenderer?.hideTooltip();
+    window.KartoPinRenderer?.hideTooltip({ immediate: true });
     renderScrollView(pin);
     document.getElementById('scroll-mo').classList.add('open');
   }

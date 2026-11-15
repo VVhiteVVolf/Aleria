@@ -2024,5 +2024,61 @@ window.KARTO_DEFAULT_MARKER_CATALOG = [
     "url": "assets/icons/gottheiten/zephyr.png",
     "name": "zephyr",
     "group": "Gottheiten"
+  },
+  // BEGIN TIRFELYN_HOF_MARKERS
+  {
+    "id": "icon-hoforte-herrenhaus",
+    "url": "assets/icons/hoforte/herrenhaus-pin-v1.png",
+    "name": "Kleines Bauernherrenhaus",
+    "group": "Kleine Hoforte"
+  },
+  {
+    "id": "icon-hoforte-wohnhaus",
+    "url": "assets/icons/hoforte/wohnhaus-pin-v1.png",
+    "name": "Wohnhütte",
+    "group": "Kleine Hoforte"
+  },
+  {
+    "id": "icon-hoforte-holzfaeller",
+    "url": "assets/icons/hoforte/holzfaeller-pin-v1.png",
+    "name": "Kleiner Holzfällerplatz",
+    "group": "Kleine Hoforte"
+  },
+  {
+    "id": "icon-hoforte-muehle",
+    "url": "assets/icons/hoforte/muehle-pin-v1.png",
+    "name": "Kleine Hofmühle",
+    "group": "Kleine Hoforte"
+  },
+  {
+    "id": "icon-hoforte-gerberei",
+    "url": "assets/icons/hoforte/gerberei-pin-v1.png",
+    "name": "Kleine Gerberei",
+    "group": "Kleine Hoforte"
+  },
+  {
+    "id": "icon-hoforte-schmiede",
+    "url": "assets/icons/hoforte/schmiede-pin-v1.png",
+    "name": "Kleine Hofschmiede",
+    "group": "Kleine Hoforte"
+  },
+  {
+    "id": "icon-hoforte-imkerei",
+    "url": "assets/icons/hoforte/imkerei-pin-v1.png",
+    "name": "Kleine Imkerei",
+    "group": "Kleine Hoforte"
+  },
+  {
+    "id": "icon-hoforte-gestuet",
+    "url": "assets/icons/hoforte/gestuet-pin-v1.png",
+    "name": "Kleines Gestüt",
+    "group": "Kleine Hoforte"
+  },
+  {
+    "id": "icon-hoforte-raeucherhaus",
+    "url": "assets/icons/hoforte/raeucherhaus-pin-v1.png",
+    "name": "Kleines Räucherhaus",
+    "group": "Kleine Hoforte"
   }
+  // END TIRFELYN_HOF_MARKERS
 ];

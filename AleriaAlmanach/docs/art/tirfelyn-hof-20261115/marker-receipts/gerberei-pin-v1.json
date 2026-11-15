@@ -1,0 +1,17 @@
+{
+  "key": "gerberei",
+  "name": "Kleine Gerberei",
+  "generator": "built-in image_gen",
+  "version": 1,
+  "prompt": "Use case: stylized-concept. Create ONE NEW illustrated map PIN for a small farm location.\n\nAll four input images are the USER'S APPROVED MAP-PIN STYLE REFERENCES. Match their actual teardrop-shaped map-pin format: rounded broad top, tapering sides, a single clear pointed bottom, thick dark brown/charcoal outline, softly painted warm golden parchment field inside. Match their hand-painted medieval fantasy illustration, dark ink outlines, restrained muted watercolor shading and readable miniature scene. The first reference establishes the exact pin silhouette, border weight and warm golden parchment. The others show suitable illustration detail. Create a new subject, do not copy their existing pictures.\n\nSUBJECT inside this pin: A little rural tannery: low timber workshop with a blue-grey lean-to roof and one pale brown hide clearly stretched on a simple wooden frame beside the doorway. One small tub inside the pin; the hide is the main distinguishing feature.\n\nOne complete centered pin, viewed frontally with an elevated three-quarter view ONLY for the little illustrated scene inside. Keep the same coherent pin shape and drawing language as the references. Simple large identifiable forms, clear even at 32–48 pixels; a farm-scale place rather than a city or large estate. Everything belonging to the scene stays INSIDE the teardrop border. No lettering, labels, numbers, banners, logos or watermarks. No standalone frameless map stamp.\n\nSquare 1:1 PNG canvas, the complete pin takes about 85–90% of the height with a comfortable transparent margin and its bottom point fully visible. TRUE transparent background strictly OUTSIDE the pin; the entire parchment and scene INSIDE the pin remain completely opaque, with no holes or transparent interior gaps. No drop shadow, white halo, external scene or background rectangle.",
+  "referenced_image_paths": [
+    "E:/Aleria/Karten/assets/icons/welt/b-uerliches-heim.png",
+    "E:/Aleria/Karten/assets/icons/welt/schmiede.png",
+    "E:/Aleria/Karten/assets/icons/welt/weide.png",
+    "E:/Aleria/Karten/assets/icons/orte/obstplantage.png"
+  ],
+  "transparent_background": true,
+  "original": "AleriaAlmanach/docs/art/tirfelyn-hof-20261115/originals/markers/gerberei-pin-v1.png",
+  "active": "Karten/assets/icons/hoforte/gerberei-pin-v1.png",
+  "source": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e060-906a-77c0-b109-c77c5a80ce0f\\exec-ac89105d-0ba9-4efe-816d-7a822e2f3aab.png"
+}

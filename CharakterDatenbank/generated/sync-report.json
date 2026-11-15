@@ -2,17 +2,17 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-11-15T18:05:42.808Z",
+  "sourceExportedAt": "2026-11-15T20:00:00Z",
   "summary": {
-    "sourceDocuments": 663,
-    "total": 409,
+    "sourceDocuments": 675,
+    "total": 421,
     "mergedSameNameGroups": 45,
     "familyLinked": 297,
     "familyAmbiguous": 0,
-    "familyPending": 112,
+    "familyPending": 124,
     "primaryFamily": 295,
     "primaryGroup": 31,
-    "primaryPlace": 49,
+    "primaryPlace": 61,
     "primaryUnassigned": 34,
     "duplicateWorldPeople": 0
   },
@@ -1318,6 +1318,150 @@
     {
       "recordId": "character--person--gwynthor-reine-ratte--caerlan-ruadh",
       "name": "Caerlan Ruadh",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--hallvard",
+      "name": "Hallvard",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--torleif",
+      "name": "Torleif",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--rannveig",
+      "name": "Rannveig",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--meirig",
+      "name": "Meirig",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--gwenneth",
+      "name": "Gwenneth",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--iorfin",
+      "name": "Iorfin",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--eifor",
+      "name": "Eifor",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--cynfarch",
+      "name": "Cynfarch",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--nefydd",
+      "name": "Nefydd",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--rhufon",
+      "name": "Rhufon",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--maldwyn",
+      "name": "Maldwyn",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--person--tirfelyn-hof--eiluned",
+      "name": "Eiluned",
       "status": "pending",
       "primary": {
         "kind": "place",

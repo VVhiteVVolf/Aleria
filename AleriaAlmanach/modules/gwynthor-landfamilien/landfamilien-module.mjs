@@ -5,6 +5,7 @@ import { MARCHWERN_FAMILY } from '../../../Stammbäume/assets/js/data/gwynthor-f
 import { LANDFAMILIEN_PLACES, landfamilienSceneImage, landfamilienSection } from './landfamilien-places.mjs';
 import { buildLandfamilienHierarchy } from './landfamilien-hierarchy.mjs';
 import { buildLandfamilienBiography } from './landfamilien-biography.mjs';
+import { extendTirfelynHof } from '../tirfelyn-hof/hof-module.mjs';
 
 const familyBySlug = { tirfelyn: TIRFELYN_FAMILY, helfaen: HELFAEN_FAMILY, marchwern: MARCHWERN_FAMILY };
 const paragraphs = texts => texts.map(text => `<p>${text}</p>`).join('');
@@ -28,7 +29,7 @@ export function buildLandfamilienModule(place) {
   const living = household.persons.filter(person => person.status === 'alive');
   const familySource = `../Stammb%C3%A4ume/Stammbaum.html?family=${household.familyId}&mode=view`;
   const symbol = `/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/fleischsammler/haus-${place.slug}.png`;
-  return {
+  return extendTirfelynHof({
     id: place.id, title: place.title, subtitle: place.summary, type: place.type, category: 'Bannkreis Gwynthor',
     symbol, icon: '⌂', stamp: place.title,
     image: landfamilienSceneImage(place.slug, 'aussen'), previewImage: landfamilienSceneImage(place.slug, 'aussen'),
@@ -50,7 +51,7 @@ export function buildLandfamilienModule(place) {
       buildHouseholdScene(place, 'aussen', `${place.title} · Draußen`, place.exterior),
       buildHouseholdScene(place, 'wohnstube', 'Die Wohnstube', place.room)
     ]
-  };
+  });
 }
 
 export function buildLandfamilienEntries() {

@@ -1,0 +1,69 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-15T20:00:00Z",
+  "assignedTab": "Gwynthor",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Tirfelyn Hof/eifor.json",
+  "character": {
+    "id": "person--tirfelyn-hof--eifor",
+    "name": "Eifor",
+    "title": "Jüngerer Sohn des Müllers",
+    "role": "Jüngerer Sohn des Müllers",
+    "age": 9,
+    "birth": "1731",
+    "gender": "männlich",
+    "race": "Mensch",
+    "origin": "Cenyr",
+    "identity": {
+      "worldPersonId": "person--tirfelyn-hof--eifor"
+    },
+    "genealogy": {
+      "worldPersonId": "person--tirfelyn-hof--eifor",
+      "sources": []
+    },
+    "fraktion": "Tirfelyn-Hof",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/eifor-v1.png",
+    "bio": "Der neunjährige Eifor ist Meirigs und Gwenneths jüngerer Sohn. Er hat braunes Haar und begleitet seinen älteren Bruder Iorfin zu kleinen Hilfsarbeiten an der Mühle. Gefährliche Arbeiten und die Bedienung der Mühlentechnik bleiben Sache der Erwachsenen.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Eifor",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Eifor"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "9 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Jüngerer Sohn des Müllers"
+        },
+        {
+          "label": "Wohnort",
+          "value": "Hütte 4, größere östliche Hütte der mittleren Gruppe"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/eifor-v1.png",
+        "biographyTitle": "Jüngerer Sohn des Müllers",
+        "biographyText": "<p>Der neunjährige Eifor ist Meirigs und Gwenneths jüngerer Sohn. Er hat braunes Haar und begleitet seinen älteren Bruder Iorfin zu kleinen Hilfsarbeiten an der Mühle. Gefährliche Arbeiten und die Bedienung der Mühlentechnik bleiben Sache der Erwachsenen.</p>",
+        "historyTitle": "Am Tirfelyn-Hof",
+        "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+        "documentsTitle": "Hof und Arbeitsort",
+        "documents": [
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Hütte 4, größere östliche Hütte der mittleren Gruppe · Tirfelyn-Hof · Gwynthor",
+    "archived": false
+  }
+}

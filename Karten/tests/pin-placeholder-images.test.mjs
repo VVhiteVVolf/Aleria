@@ -1,3 +1,4 @@
+import { projectTirfelynOriginalPinImages } from './support/tirfelyn-hof-pin-history.mjs';
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
@@ -146,7 +147,7 @@ test('every imported Gwynthor pin uses its reviewed location motif without chang
   assert.equal(new Set(source.locations.map(location => location.pinId)).size, 7);
   assert.deepEqual(source.locations.map(location => location.pinId).sort(), FLEISCHSAMMLER_LOCALITIES.map(location => location.pinId).sort());
   const original = structuredClone(state);
-  const imported = projectHalenrhydOriginalPins(projectNorthernFarmOriginalPins(state.pins)).filter(pin => pin.id.startsWith('gwynthor-marking-'));
+  const imported = projectTirfelynOriginalPinImages(projectHalenrhydOriginalPins(projectNorthernFarmOriginalPins(state.pins))).filter(pin => pin.id.startsWith('gwynthor-marking-'));
   assert.equal(imported.length,158);
   let unchangedMotifs = 0;
   for(const pin of imported){

@@ -1,6 +1,6 @@
 import { createCatalogLoader } from './household-catalog.mjs';
 import { householdGroups } from './household-model.mjs';
-import { createHouseholdLayer } from './household-layer.mjs?v=20261029-performance-v1';
+import { createHouseholdLayer } from './household-layer.mjs?v=20261115-rosters-v1';
 import { mountHouseholdField } from './household-editor.mjs';
 import { attachHouseholdRegions } from './household-regions.mjs';
 
@@ -14,7 +14,7 @@ export function mountHouseholdOverlay(runtime, root = document) {
   const loadCatalog = createCatalogLoader();
   const layer = createHouseholdLayer(map, runtime);
   const toggle = document.createElement('button');
-  toggle.type = 'button'; toggle.className = 'tbtn household-toggle'; toggle.textContent = 'Wappen';
+  toggle.type = 'button'; toggle.className = 'tbtn household-toggle place-roster-toggle'; toggle.textContent = 'Wappen';
   toggle.id = 'toggle-household-crests'; toggle.setAttribute('aria-pressed', 'false');
   toggle.title = 'Familienwappen an ihren zugeordneten Orten ein-/ausblenden';
   controls.after(toggle);

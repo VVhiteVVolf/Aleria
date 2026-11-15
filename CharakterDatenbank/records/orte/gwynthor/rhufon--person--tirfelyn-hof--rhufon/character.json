@@ -1,0 +1,214 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--tirfelyn-hof--rhufon",
+  "slug": "rhufon",
+  "identity": {
+    "name": "Rhufon",
+    "aliases": [],
+    "worldPersonId": "person--tirfelyn-hof--rhufon"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--tirfelyn-hof--rhufon",
+      "documentIds": [
+        "person--tirfelyn-hof--rhufon"
+      ],
+      "documents": [
+        {
+          "documentId": "person--tirfelyn-hof--rhufon",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Tirfelyn Hof/rhufon.json",
+    "sourceExportedAt": "2026-11-15T20:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--tirfelyn-hof--rhufon"
+    ],
+    "contentHash": "78fcd26d956f8cf43b6949aa707ebc17ffe73340b8d88b08b3b8148bd3c2979d"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "tirfelyn-hof-20261115"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--tirfelyn-hof--rhufon",
+        "name": "Rhufon",
+        "title": "Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen",
+        "role": "Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen",
+        "age": 27,
+        "birth": "1713",
+        "gender": "männlich",
+        "race": "Mensch",
+        "origin": "Cenyr",
+        "identity": {
+          "worldPersonId": "person--tirfelyn-hof--rhufon"
+        },
+        "genealogy": {
+          "worldPersonId": "person--tirfelyn-hof--rhufon",
+          "sources": []
+        },
+        "fraktion": "Tirfelyn-Hof",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/rhufon-v1.png",
+        "bio": "Rhufon ist ein freundlicher 27-jähriger Feld- und Hofhelfer mit kurzem rotem Haar. Er hilft bei den Feldarbeiten, beim Beladen der Wagen und bei Lieferungen nach Gwynthor. Auf dem Tirfelyn-Hof bewohnt er die zweite Bedienstetenhütte.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Rhufon",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Rhufon"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "27 Jahre"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen"
+            },
+            {
+              "label": "Wohnort",
+              "value": "Hütte 2, westliche Hütte der mittleren Gruppe"
+            }
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/rhufon-v1.png",
+            "biographyTitle": "Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen",
+            "biographyText": "<p>Rhufon ist ein freundlicher 27-jähriger Feld- und Hofhelfer mit kurzem rotem Haar. Er hilft bei den Feldarbeiten, beim Beladen der Wagen und bei Lieferungen nach Gwynthor. Auf dem Tirfelyn-Hof bewohnt er die zweite Bedienstetenhütte.</p>",
+            "historyTitle": "Am Tirfelyn-Hof",
+            "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+            "documentsTitle": "Hof und Arbeitsort",
+            "documents": [
+              {
+                "title": "Tirfelyn-Hof",
+                "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Hütte 2, westliche Hütte der mittleren Gruppe · Tirfelyn-Hof · Gwynthor",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--tirfelyn-hof--rhufon",
+    "name": "Rhufon",
+    "title": "Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen",
+    "role": "Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen",
+    "age": 27,
+    "birth": "1713",
+    "gender": "männlich",
+    "race": "Mensch",
+    "origin": "Cenyr",
+    "identity": {
+      "worldPersonId": "person--tirfelyn-hof--rhufon"
+    },
+    "genealogy": {
+      "worldPersonId": "person--tirfelyn-hof--rhufon",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Tirfelyn-Hof",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/rhufon-v1.png",
+    "bio": "Rhufon ist ein freundlicher 27-jähriger Feld- und Hofhelfer mit kurzem rotem Haar. Er hilft bei den Feldarbeiten, beim Beladen der Wagen und bei Lieferungen nach Gwynthor. Auf dem Tirfelyn-Hof bewohnt er die zweite Bedienstetenhütte.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Rhufon",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Rhufon"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "27 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen"
+        },
+        {
+          "label": "Wohnort",
+          "value": "Hütte 2, westliche Hütte der mittleren Gruppe"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/rhufon-v1.png",
+        "biographyTitle": "Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen",
+        "biographyText": "<p>Rhufon ist ein freundlicher 27-jähriger Feld- und Hofhelfer mit kurzem rotem Haar. Er hilft bei den Feldarbeiten, beim Beladen der Wagen und bei Lieferungen nach Gwynthor. Auf dem Tirfelyn-Hof bewohnt er die zweite Bedienstetenhütte.</p>",
+        "historyTitle": "Am Tirfelyn-Hof",
+        "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+        "documentsTitle": "Hof und Arbeitsort",
+        "documents": [
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Hütte 2, westliche Hütte der mittleren Gruppe · Tirfelyn-Hof · Gwynthor",
+    "archived": false,
+    "aliases": []
+  }
+}

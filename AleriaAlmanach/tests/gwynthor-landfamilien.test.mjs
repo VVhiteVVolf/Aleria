@@ -6,20 +6,22 @@ import { LAND_FAMILIEN_ROSTER } from '../../Stammbäume/assets/js/data/gwynthor-
 import { buildLandfamilienEntries, buildLandfamilienRegistrations } from '../modules/gwynthor-landfamilien/landfamilien-module.mjs';
 import { LANDFAMILIEN_PLACES, landfamilienSection } from '../modules/gwynthor-landfamilien/landfamilien-places.mjs';
 import { GWYNTHOR_BANNKREIS_PATH } from '../modules/gwynthor-geography/gwynthor-section-layout.mjs';
+import { HOF_STAFF } from '../../shared/tirfelyn-hof/hof-residents.mjs';
+import { HOF_ANIMALS } from '../../shared/tirfelyn-hof/hof-animals.mjs';
 
-test('three separate rural categories retain six native pages and two isolated scene threads', () => {
+test('three rural categories retain their original scenes while Tirfelyn adds its farm places', () => {
   const entries = buildLandfamilienEntries();
   assert.deepEqual(entries.map(entry => entry.id), ['tirfelyn-hof', 'jagdhaus-helfaen', 'marchwern-gestuet']);
   for (const [index, entry] of entries.entries()) {
     const place = LANDFAMILIEN_PLACES[index], section = landfamilienSection(place);
     assert.deepEqual(section.path, [...GWYNTHOR_BANNKREIS_PATH, place.title]);
     assert.equal(section.tab, 'Völker & Kulturen');
-    assert.equal(entry.pages.length, 6);
-    assert.equal(new Set(entry.pages.map(page => page.commentThreadKey)).size, 6);
+    assert.equal(entry.pages.length, index === 0 ? 43 : 6);
+    assert.equal(new Set(entry.pages.map(page => page.commentThreadKey)).size, entry.pages.length);
     assert.equal(entry.pages[1].hierarchyPage, true);
     assert.equal(entry.pages[2].biographyPage, true);
     assert.equal(entry.pages[3].familyTreePage, true);
-    assert.deepEqual(entry.pages.filter(page => page.sessionPage).map(page => page.commentThreadKey),
+    assert.deepEqual(entry.pages.slice(0, 6).filter(page => page.sessionPage).map(page => page.commentThreadKey),
       [`${place.slug}-szene-aussen`, `${place.slug}-szene-wohnstube`]);
     assert.equal(entry.appendCommentsPage, false);
     assert.ok(!entry.pages.some(page => page.tradeCatalogPage || page.guildServicesPage || page.economyCalculationPage));
@@ -32,14 +34,15 @@ test('the hierarchy lists each living person once, preserves three biography por
   for (const [index, entry] of entries.entries()) {
     const household = LAND_FAMILIEN_ROSTER.families[index], living = household.persons.filter(person => person.status === 'alive');
     const nodes = entry.pages[1].hierarchy.trees.flatMap(tree => tree.levels.flatMap(level => level.nodes));
-    assert.deepEqual(nodes.map(node => node.title).sort(), living.map(person => person.name).sort());
-    assert.equal(new Set(nodes.map(node => node.portrait)).size, living.length);
+    const names = [...living.map(person => person.name), ...(index === 0 ? [...HOF_STAFF, ...HOF_ANIMALS].map(person => person.name) : [])];
+    assert.deepEqual(nodes.map(node => node.title).sort(), names.sort());
+    assert.equal(new Set(nodes.map(node => node.portrait)).size, names.length);
     assert.equal(entry.pages[2].biography.connections.length, 3);
     for (const person of household.persons) {
       assert.ok(entry.pages[2].biography.extraSections[0].text.includes(person.name));
       if (person.status === 'dead') assert.ok(!nodes.some(node => node.title === person.name));
     }
-    assert.equal(entry.sessionCast.length, living.filter(person => person.resident).length);
+    assert.equal(entry.sessionCast.length, living.filter(person => person.resident).length + (index === 0 ? 15 : 0));
   }
 });
 

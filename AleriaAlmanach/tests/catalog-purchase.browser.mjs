@@ -15,6 +15,9 @@ const sourceFiles = ['modules/catalog-purchase/catalog-purchase-controller.js', 
   'modules/scene-trade/scene-trade-actor-picker.js', 'modules/item-register/item-register-markup.js',
   'modules/goods/goods-renderer.js', 'modules/trade-catalog/trade-catalog-renderer.js',
   'modules/core/content-safety.js', 'modules/module-editor/module-editor-data.js', 'modules/module-editor/module-preview.css',
+  'modules/characters/character-tabs.js', 'modules/characters/character-inventory-profile.js',
+  'modules/module-editor/module-editor-character-inventory.js', 'modules/character-inventory/character-inventory-renderer.js',
+  'styles/module-page-character-inventory.css', 'styles/character-inventory-cards.css',
   'styles.css', 'styles/modal.css', 'styles/scene-trade.css', 'styles/module-page-trade-catalog.css', 'styles/module-page-goods.css',
   'styles/catalog-purchase.css', 'tests/fixtures/catalog-purchase-fixture.mjs', 'tests/catalog-purchase.browser.mjs'];
 async function hashSources() {
@@ -43,25 +46,39 @@ globalThis.catalogPurchaseFixture = fixture;
 document.addEventListener('aleria:character-saved', event => fixture.published.push(event.detail.record.id));
 document.querySelector('#trade-catalog').innerHTML = buildTradeCatalogPage(fixture.entry.pages[0], fixture.entry, 0, 2);
 document.querySelector('#goods-register').innerHTML = buildGoodsTablePage(fixture.entry.pages[1], fixture.entry, 1, 2);
+_characters = structuredClone(fixture.snapshot().characters);
+setCharacterInventoryProfileData(_characters[0].inventory, { render: true });
 globalThis.catalogPurchaseFixtureReady = true;
 ` }, plugins: [{ name: 'local-only-trade-adapter', setup(plugin) {
     plugin.onResolve({ filter: /scene-trade-service\.js(?:\?.*)?$/ }, () => ({ path: 'local-commerce', namespace: 'catalog-fixture' }));
     plugin.onLoad({ filter: /.*/, namespace: 'catalog-fixture' }, () => ({ contents:
       'export function createSceneTradeService(){return globalThis.catalogPurchaseFixture.trade;}', loader: 'js' }));
   } }] });
-await writeFile(resolve(output, 'fixture.html'), `<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+await writeFile(resolve(output, 'fixture.html'), `<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/AleriaAlmanach/">
 <title>Isolierte Schnellkaufprüfung</title>
 <link rel="stylesheet" href="/AleriaAlmanach/styles.css"><link rel="stylesheet" href="/AleriaAlmanach/styles/modal.css">
 <link rel="stylesheet" href="/AleriaAlmanach/styles/module-page-trade-catalog.css"><link rel="stylesheet" href="/AleriaAlmanach/styles/module-page-goods.css">
 <link rel="stylesheet" href="/AleriaAlmanach/modules/module-editor/module-preview.css">
 <link rel="stylesheet" href="/AleriaAlmanach/styles/trade-item-card.css"><link rel="stylesheet" href="/AleriaAlmanach/styles/scene-trade.css">
 <link rel="stylesheet" href="/AleriaAlmanach/styles/catalog-purchase.css">
+<link rel="stylesheet" href="/AleriaAlmanach/styles/module-page-character-inventory.css">
+<link rel="stylesheet" href="/AleriaAlmanach/styles/character-inventory-cards.css">
 <style>body{margin:0;padding:12px;overflow:auto}#fixture-pages{max-width:1400px;margin:auto}#unchanged-scene{padding:8px}dialog{color:inherit}</style>
-<main id="fixture-pages" class="comment-module-preview-frame"><p id="unchanged-scene">Die laufende Szene bleibt unverändert.</p><section id="trade-catalog"></section><section id="goods-register"></section></main>
+<main id="fixture-pages" class="comment-module-preview-frame"><p id="unchanged-scene">Die laufende Szene bleibt unverändert.</p><section id="trade-catalog"></section><section id="goods-register"></section><section id="cp-inventory-editor"></section><p id="cp-save-status"></p></main>
 <script src="/AleriaAlmanach/modules/core/content-safety.js"></script>
 <script>${slugify}\nfunction deepClone(value){return structuredClone(value)}\nfunction buildNav(){return ''}\nfunction getInlineCommentThreadForPage(){return null}</script>
 <script src="/AleriaAlmanach/modules/module-editor/module-editor-data.js"></script><script src="/AleriaAlmanach/modules/goods/goods-renderer.js"></script>
-<script src="./controller.js"></script></html>`);
+<script src="/AleriaAlmanach/modules/module-editor/module-editor-character-inventory.js"></script>
+<script src="/AleriaAlmanach/modules/character-inventory/character-inventory-renderer.js"></script>
+<script src="/AleriaAlmanach/modules/characters/character-inventory-profile.js"></script>
+<script src="/AleriaAlmanach/modules/characters/character-tabs.js"></script>
+<script>let _editingChar = 'gawain-fixture';
+function cloneCharacterRecord(record){return structuredClone(record)}
+function getAllCharacterRecords(){return _characters}
+function getCharacterById(id){return _characters.find(record=>record.id===id)}
+renderCharSubtabs=()=>{};renderCharGrid=()=>{};renderCharPickerInForm=()=>{};
+function refreshAllModuleCastPickers(){}</script>
+<script src="/${outputRelative.split(sep).join('/')}/controller.js"></script></html>`);
 
 const server = await startChartQualityServer(root);
 let browser;
@@ -94,8 +111,9 @@ try {
     await ready(page);
     assert(await confirmButton(page).isDisabled(), 'An opening must not automatically choose a payer');
     await choose(page, 'payerKey', 'Gawain', 'character:gawain-fixture', true);
-    assert.equal(await picker(page, 'recipientId').getAttribute('data-picker-value'), 'gawain-fixture');
-    assert.match(await dialog(page).locator('.catalog-purchase-totals').textContent(), /Geldbeutel danach\s*(?:0 Gold, 0 Silber, 0 Kupfer, )?10 Eisenpfennig/,
+    assert.equal(await picker(page, 'recipientId').count(), 0, 'A self purchase has no required recipient picker');
+    assert.match(await dialog(page).locator('[data-role="catalog-purchase-destination"]').textContent(), /Gawain/);
+    assert.match(await dialog(page).locator('.catalog-purchase-totals').textContent(), /Geldbeutel nach dem Kauf\s*10 Eisenpfennig/,
       'One Kupfer less 90 Pfennig previews exactly 10 Pfennig');
     const quantity = dialog(page).locator('[data-catalog-field="quantity"]');
     await quantity.fill('0');
@@ -107,13 +125,23 @@ try {
     await buy(page);
     assert.equal((await snapshot(page)).characters[0].inventory.moneyState.totalCopper, 0.1);
     assert.equal((await snapshot(page)).characters[0].inventory.items.length, 1);
+    assert.match(await dialog(page).locator('.catalog-purchase-totals').textContent(), /Abgebucht\s*90 Eisenpfennig\s*Geldbeutel jetzt\s*10 Eisenpfennig/);
+    assert.doesNotMatch(await dialog(page).locator('.catalog-purchase-totals').textContent(), /nach dem Kauf/);
+    await page.waitForFunction(() => JSON.parse(document.querySelector('#cp-inventory-editor [data-ci-data]').dataset.ciData).moneyState.totalCopper === 0.1);
+    assert.equal(await page.locator('#cp-inventory-editor .ci-item-row').count(), 1, 'The real open profile renders the received item immediately');
     assert.deepEqual(await page.evaluate(() => catalogPurchaseFixture.published), ['gawain-fixture'], 'A confirmed result is published only once');
     await close(page, normal);
+    await page.locator('#cp-inventory-editor .ci-money-panel').scrollIntoViewIfNeeded();
+    await shot(page, label, 'open-profile-updated');
     assert(await normal.isEnabled(), 'Ordinary stock remains available after purchase');
     cases.push({ label, name: 'payer-search-keyboard-and-coin-change', passed: true });
 
     await normal.click(); await ready(page);
     await choose(page, 'payerKey', 'Reisekasse', 'group:companions-fixture');
+    assert.equal(await picker(page, 'recipientId').count(), 0);
+    assert.match(await dialog(page).locator('[data-role="catalog-purchase-destination"]').textContent(), /Gawain/);
+    await dialog(page).locator('[data-catalog-field="buyForOther"]').check();
+    assert(await confirmButton(page).isDisabled(), 'An explicit gift waits for its item destination');
     await choose(page, 'recipientId', 'Ylva', 'ylva-fixture');
     const operator = picker(page, 'actorCharacterId');
     assert.equal(await operator.getAttribute('data-picker-value'), 'gawain-fixture');
@@ -138,6 +166,8 @@ try {
     cases.push({ label, name: 'group-funded-gift-and-repeatable-normal-stock', passed: true });
 
     await unique.click(); await ready(page);
+    assert.equal(await picker(page, 'recipientId').count(), 0, 'Reopening never restores a previous gift recipient');
+    assert.match(await dialog(page).locator('[data-role="catalog-purchase-destination"]').textContent(), /Gawain/);
     assert(await dialog(page).locator('[data-catalog-field="quantity"]').isDisabled());
     await buy(page);
     assert.match(await dialog(page).locator('.catalog-purchase-totals').textContent(), /Geldbeutel jetzt\s*97 Kupfer, 20 Eisenpfennig/,
@@ -164,6 +194,8 @@ try {
     cases.push({ label, name: 'goods-table-source-purchase-and-busy-double-click', passed: true });
 
     await other.click(); await ready(page);
+    await dialog(page).locator('[data-catalog-field="buyForOther"]').check();
+    await choose(page, 'recipientId', 'Ylva', 'ylva-fixture');
     await dialog(page).locator('[data-catalog-field="quantity"]').fill('2');
     const before = await snapshot(page);
     await page.evaluate(() => catalogPurchaseFixture.loseNextReply());
@@ -185,6 +217,8 @@ try {
     await page.waitForFunction(() => globalThis.catalogPurchaseFixtureReady === true);
     await goods.click(); await ready(page);
     assert.match(await dialog(page).locator('h2').textContent(), /Messingring/);
+    assert.equal(await picker(page, 'recipientId').getAttribute('data-picker-value'), 'ylva-fixture', 'A pending gift retains the exact original destination');
+    assert(await dialog(page).locator('[data-catalog-field="buyForOther"]').isDisabled());
     await dialog(page).locator('[data-action="retry-catalog-purchase"]').click();
     await successful(page);
     saved = await snapshot(page);
@@ -196,6 +230,16 @@ try {
     cases.push({ label, name: 'uncertain-result-restored-and-exact-idempotent-retry', passed: true });
 
     await other.focus(); await page.keyboard.press('Enter'); await ready(page);
+    await choose(page, 'payerKey', 'Ylva', 'character:ylva-fixture');
+    assert.equal(await picker(page, 'recipientId').count(), 0);
+    assert.match(await dialog(page).locator('[data-role="catalog-purchase-destination"]').textContent(), /Ylva/);
+    await page.evaluate(() => localStorage.setItem('aleria:catalog-purchase:people:v1:fixture-player:quickbuy-fixture',
+      JSON.stringify({ schemaVersion: 1, payerKey: 'character:gawain-fixture', actorCharacterId: 'gawain-fixture', recipientKey: 'character:ylva-fixture' })));
+    await close(page, other);
+    await other.click(); await ready(page);
+    assert.equal(await picker(page, 'recipientId').count(), 0, 'Old stored shopkeeper/gift choices are discarded for new purchases');
+    assert.match(await dialog(page).locator('[data-role="catalog-purchase-destination"]').textContent(), /Gawain/);
+    cases.push({ label, name: 'self-destination-follows-buyer-and-ignores-legacy-recipient', passed: true });
     const selected = picker(page, 'payerKey');
     await selected.locator('summary').click();
     await page.waitForFunction(() => document.querySelector('[data-picker-field="payerKey"][open]'));

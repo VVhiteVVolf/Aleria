@@ -201,6 +201,7 @@ function handleExternallySavedCharacter(event) {
   });
   if (index >= 0) _characters[index] = normalized;
   else _characters.push(normalized);
+  refreshExternallyChangedCharacterInventory(record);
   // A single feature save does not mean that the complete register was loaded.
   renderCharSubtabs();
   renderCharGrid();
@@ -210,6 +211,16 @@ function handleExternallySavedCharacter(event) {
 }
 
 document.addEventListener('aleria:character-saved', handleExternallySavedCharacter);
+
+function refreshExternallyChangedCharacterInventory(record) {
+  if (typeof _editingChar === 'undefined' || _editingChar !== record.id || !record.inventory) return;
+  if (typeof _characterInventoryEditMode !== 'undefined' && !_characterInventoryEditMode) {
+    setCharacterInventoryProfileData(record.inventory, { render: true });
+  } else {
+    const status = document.getElementById('cp-save-status');
+    if (status) status.textContent = 'Das Inventar wurde anderswo geändert. Bitte den Bogen vor dem Speichern neu öffnen.';
+  }
+}
 
 // Register snapshots carry authoritative inventories; updating this feature's
 // records also refreshes the character picker and the archive's live projections.
@@ -224,14 +235,7 @@ document.addEventListener('aleria:item-register-records', event => {
     if (index >= 0) _characters[index] = normalized;
     else _characters.push(normalized);
     changed = true;
-    if (typeof _editingChar !== 'undefined' && _editingChar === record.id && record.inventory) {
-      if (typeof _characterInventoryEditMode !== 'undefined' && !_characterInventoryEditMode) {
-        setCharacterInventoryProfileData(record.inventory, { render: true });
-      } else {
-        const status = document.getElementById('cp-save-status');
-        if (status) status.textContent = 'Das Inventar wurde anderswo geändert. Bitte den Bogen vor dem Speichern neu öffnen.';
-      }
-    }
+    refreshExternallyChangedCharacterInventory(record);
   }
   if (!changed) return;
   renderCharGrid(); renderCharPickerInForm(); dispatchCharactersChanged();

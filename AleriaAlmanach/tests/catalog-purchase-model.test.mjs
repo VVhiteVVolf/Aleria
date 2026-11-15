@@ -28,7 +28,7 @@ function fixture() {
     { id: 'ghost-roster', tradeContext: { memberCharacterIds: ['missing'] }, inventory: { moneyState: { totalCopper: 900 } } }] };
 }
 const selection = data => ({ productId: data.offers.find(offer => offer.title === 'mantel').id, quantity: 2,
-  actorCharacterId: 'gawain', payerKey: 'character:gawain', recipientKey: 'character:ylva' });
+  actorCharacterId: 'gawain', payerKey: 'character:gawain', recipientKey: 'character:ylva', buyForOther: true });
 
 test('source identities select exact page rows, keep all price options, and preserve deduplicated references', () => {
   const page = catalogPurchaseOffers(offers, { moduleId: 'eleganz', pageIndex: 0 });
@@ -67,7 +67,7 @@ test('wallet options read money only and require an existing confirmed group mem
   assert.ok(catalogPurchasePayerOptions(data).every(option => !option.canDebit));
 });
 
-test('empty selection stays blank; valid personal gifts and group operator are restored deterministically', () => {
+test('opening restores a payer and group operator but always sends the next purchase to its buyer', () => {
   const data = fixture(), empty = { payerKey: '', recipientKey: '', actorCharacterId: '' };
   assert.deepEqual(resolveCatalogPurchaseSelection(data), empty);
   assert.deepEqual(resolveCatalogPurchaseSelection(data, { payerKey: 'character:gone' }), empty);
@@ -75,9 +75,31 @@ test('empty selection stays blank; valid personal gifts and group operator are r
     { payerKey: 'character:gawain', recipientKey: 'character:gawain', actorCharacterId: 'gawain' });
   assert.equal(resolveCatalogPurchaseSelection(data, { payerKey: 'character:gawain', actorCharacterId: 'ylva' }).actorCharacterId, 'gawain');
   const gift = { payerKey: 'character:gawain', recipientKey: 'character:ylva', actorCharacterId: 'gawain' };
-  assert.deepEqual(resolveCatalogPurchaseSelection(data, gift), gift);
+  assert.deepEqual(resolveCatalogPurchaseSelection(data, gift), { ...gift, recipientKey: 'character:gawain' });
   assert.deepEqual(resolveCatalogPurchaseSelection(data, { ...gift, payerKey: 'group:companions', actorCharacterId: 'ylva' }),
-    { ...gift, payerKey: 'group:companions' });
+    { ...gift, payerKey: 'group:companions', recipientKey: 'character:gawain' });
+});
+
+test('self purchase needs no recipient, ignores a stale seller selection and captures only one inventory revision', () => {
+  const data = fixture(), input = { ...selection(data), buyForOther: false };
+  for (const recipientKey of [undefined, '', 'character:ylva', 'character:old-shopkeeper']) {
+    const preview = catalogPurchasePreview({ ...input, recipientKey }, data);
+    assert.deepEqual(preview.errors, []);
+    assert.equal(preview.recipient.key, 'character:gawain');
+    const request = buildCatalogPurchaseCheckout({ ...input, recipientKey }, data);
+    assert.equal(request.lines[0].recipientKey, 'character:gawain');
+    assert.deepEqual(request.expectedRevisions, { 'character:gawain': 2 });
+  }
+  assert.throws(() => buildCatalogPurchaseCheckout({ ...input, buyForOther: true, recipientKey: '' }, data), /Ware erhalten/);
+});
+
+test('group purchases default to the selected confirmed ordering member instead of a previous gift', () => {
+  const data = fixture();
+  data.groups[0].tradeContext.memberCharacterIds.push('ylva');
+  const input = { ...selection(data), buyForOther: false, payerKey: 'group:companions', actorCharacterId: 'ylva', recipientKey: 'character:gawain' };
+  const request = buildCatalogPurchaseCheckout(input, data);
+  assert.equal(request.lines[0].recipientKey, 'character:ylva');
+  assert.deepEqual(request.expectedRevisions, { 'group:companions': 7, 'character:ylva': 5 });
 });
 
 test('one direct purchase captures gift wallets, minor total and source/revision guards without a scene', () => {

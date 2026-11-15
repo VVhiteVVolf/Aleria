@@ -48,10 +48,11 @@ Familienliste öffnen; ihre Links führen zu vorhandenen Familienakten.
 ## Verantwortlichkeiten
 
 - `household-model.mjs`: Quellenvertrag, Sitze und Markerzuordnung; keine DOM-Zugriffe.
-- `household-layout.mjs`: kollisionsarme Positionen in sichtbaren Bildschirmpixeln.
+- `household-layout.mjs`: Familienadapter für die gemeinsame Platzierung in `../place-roster/`.
 - `household-regions.mjs`: vollständige regionale Übersicht am belegten Verwaltungssitz.
 - `household-family-list.mjs`: Familienlisten mit aktuellem Orts- und Rechtsstatus.
-- `household-layer.mjs`: Wappen, Verbindungslinien und zugängliche Ortsliste.
+- `household-layer.mjs`: Familienadapter für Wappen, Verbindungslinien und zugängliche Ortsliste;
+  die DOM-Darstellung wird mit der getrennten optionalen Personenebene geteilt.
 - `household-editor.mjs`: gekapseltes Zuordnungsfeld, Änderungen per Callback an den Pin-Editor.
 - `household-catalog.mjs`: gemeinsamer verzögerter Ladevorgang mit Wiederholungsmöglichkeit.
 - `household-overlay.mjs`: Schalter, Ansichtseinstellung und Kartenereignisse.

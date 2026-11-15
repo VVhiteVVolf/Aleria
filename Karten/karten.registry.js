@@ -200,6 +200,50 @@
   }
 
   const MAPS = [
+    // BEGIN TIRFELYN_HOF_GENERATED
+    {
+      "id": "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof",
+      "title": "Tirfelyn-Hof",
+      "status": "active",
+      "type": "local",
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "cenyr",
+          "title": "Cenyr"
+        },
+        {
+          "level": "county",
+          "slug": "celtigerns-wacht",
+          "title": "Celtigerns Wacht"
+        },
+        {
+          "level": "barony",
+          "slug": "llamrais-ankunft",
+          "title": "Llamreis Ankunft"
+        },
+        {
+          "level": "region",
+          "slug": "gwynthor-bannkreis",
+          "title": "Gwynthors Bannkreis"
+        },
+        {
+          "level": "local",
+          "slug": "tirfelyn-hof",
+          "title": "Tirfelyn-Hof"
+        }
+      ],
+      "folder": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof",
+      "config": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/template.config.js",
+      "images": {
+        "normal": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png",
+        "pins": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png"
+      },
+      "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/data.json",
+      "link": "karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof",
+      "rulingHouse": "Familie Tirfelyn"
+    },
+    // END TIRFELYN_HOF_GENERATED
     // BEGIN ACCEPTED_BREVANOR_GENERATED
     {
       "id": "brevanor",

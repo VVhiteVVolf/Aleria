@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "stylePreset": "fantasy-map-pin",
+  "scope": "Only the nine pin types needed for sixteen houses and principal workplaces; no minor details",
+  "jobs": [
+    {
+      "key": "herrenhaus",
+      "name": "Kleines Bauernherrenhaus",
+      "generator": "built-in image_gen",
+      "version": 1,
+      "prompt": "Use case: stylized-concept. Create ONE NEW illustrated map PIN for a small farm location.\n\nAll four input images are the USER'S APPROVED MAP-PIN STYLE REFERENCES. Match their actual teardrop-shaped map-pin format: rounded broad top, tapering sides, a single clear pointed bottom, thick dark brown/charcoal outline, softly painted warm golden parchment field inside. Match their hand-painted medieval fantasy illustration, dark ink outlines, restrained muted watercolor shading and readable miniature scene. The first reference establishes the exact pin silhouette, border weight and warm golden parchment. The others show suitable illustration detail. Create a new subject, do not copy their existing pictures.\n\nSUBJECT inside this pin: A modest rural family manor: one cream-plastered L-shaped farmhouse, a broad blue-grey roof, a wooden doorway and three small windows, a short fence and a few restrained garden plants inside the pin.\n\nOne complete centered pin, viewed frontally with an elevated three-quarter view ONLY for the little illustrated scene inside. Keep the same coherent pin shape and drawing language as the references. Simple large identifiable forms, clear even at 32–48 pixels; a farm-scale place rather than a city or large estate. Everything belonging to the scene stays INSIDE the teardrop border. No lettering, labels, numbers, banners, logos or watermarks. No standalone frameless map stamp.\n\nSquare 1:1 PNG canvas, the complete pin takes about 85–90% of the height with a comfortable transparent margin and its bottom point fully visible. TRUE transparent background strictly OUTSIDE the pin; the entire parchment and scene INSIDE the pin remain completely opaque, with no holes or transparent interior gaps. No drop shadow, white halo, external scene or background rectangle.",
+      "referenced_image_paths": [
+        "E:/Aleria/Karten/assets/icons/welt/b-uerliches-heim.png",
+        "E:/Aleria/Karten/assets/icons/welt/schmiede.png",
+        "E:/Aleria/Karten/assets/icons/welt/weide.png",
+        "E:/Aleria/Karten/assets/icons/orte/obstplantage.png"
+      ],
+      "transparent_background": true,
+      "original": "AleriaAlmanach/docs/art/tirfelyn-hof-20261115/originals/markers/herrenhaus-pin-v1.png",
+      "active": "Karten/assets/icons/hoforte/herrenhaus-pin-v1.png"
+    },
+    {
+      "key": "wohnhaus",
+      "name": "Wohnhütte",
+      "generator": "built-in image_gen",
+      "version": 1,
+      "prompt": "Use case: stylized-concept. Create ONE NEW illustrated map PIN for a small farm location.\n\nAll four input images are the USER'S APPROVED MAP-PIN STYLE REFERENCES. Match their actual teardrop-shaped map-pin format: rounded broad top, tapering sides, a single clear pointed bottom, thick dark brown/charcoal outline, softly painted warm golden parchment field inside. Match their hand-painted medieval fantasy illustration, dark ink outlines, restrained muted watercolor shading and readable miniature scene. The first reference establishes the exact pin silhouette, border weight and warm golden parchment. The others show suitable illustration detail. Create a new subject, do not copy their existing pictures.\n\nSUBJECT inside this pin: One modest little farm cottage, cream plaster and brown timber, a broad simple blue-grey pitched roof, a wooden door and one small window. A short fence and a little garden within the pin. Clearly smaller and simpler than a manor.\n\nOne complete centered pin, viewed frontally with an elevated three-quarter view ONLY for the little illustrated scene inside. Keep the same coherent pin shape and drawing language as the references. Simple large identifiable forms, clear even at 32–48 pixels; a farm-scale place rather than a city or large estate. Everything belonging to the scene stays INSIDE the teardrop border. No lettering, labels, numbers, banners, logos or watermarks. No standalone frameless map stamp.\n\nSquare 1:1 PNG canvas, the complete pin takes about 85–90% of the height with a comfortable transparent margin and its bottom point fully visible. TRUE transparent background strictly OUTSIDE the pin; the entire parchment and scene INSIDE the pin remain completely opaque, with no holes or transparent interior gaps. No drop shadow, white halo, external scene or background rectangle.",
+      "referenced_image_paths": [
+        "E:/Aleria/Karten/assets/icons/welt/b-uerliches-heim.png",
+        "E:/Aleria/Karten/assets/icons/welt/schmiede.png",
+        "E:/Aleria/Karten/assets/icons/welt/weide.png",
+        "E:/Aleria/Karten/assets/icons/orte/obstplantage.png"
+      ],
+      "transparent_background": true,
+      "original": "AleriaAlmanach/docs/art/tirfelyn-hof-20261115/originals/markers/wohnhaus-pin-v1.png",
+      "active": "Karten/assets/icons/hoforte/wohnhaus-pin-v1.png"
+    },
+    {
+      "key": "holzfaeller",
+      "name": "Kleiner Holzfällerplatz",
+      "generator": "built-in image_gen",
+      "version": 1,
+      "prompt": "Use case: stylized-concept. Create ONE NEW illustrated map PIN for a small farm location.\n\nAll four input images are the USER'S APPROVED MAP-PIN STYLE REFERENCES. Match their actual teardrop-shaped map-pin format: rounded broad top, tapering sides, a single clear pointed bottom, thick dark brown/charcoal outline, softly painted warm golden parchment field inside. Match their hand-painted medieval fantasy illustration, dark ink outlines, restrained muted watercolor shading and readable miniature scene. The first reference establishes the exact pin silhouette, border weight and warm golden parchment. The others show suitable illustration detail. Create a new subject, do not copy their existing pictures.\n\nSUBJECT inside this pin: A small woodcutters workplace: a low open timber shelter, a stack of three freshly cut logs and a chopping block with one axe. A couple of pine-tree silhouettes behind the shelter, all inside the pin.\n\nOne complete centered pin, viewed frontally with an elevated three-quarter view ONLY for the little illustrated scene inside. Keep the same coherent pin shape and drawing language as the references. Simple large identifiable forms, clear even at 32–48 pixels; a farm-scale place rather than a city or large estate. Everything belonging to the scene stays INSIDE the teardrop border. No lettering, labels, numbers, banners, logos or watermarks. No standalone frameless map stamp.\n\nSquare 1:1 PNG canvas, the complete pin takes about 85–90% of the height with a comfortable transparent margin and its bottom point fully visible. TRUE transparent background strictly OUTSIDE the pin; the entire parchment and scene INSIDE the pin remain completely opaque, with no holes or transparent interior gaps. No drop shadow, white halo, external scene or background rectangle.",
+      "referenced_image_paths": [
+        "E:/Aleria/Karten/assets/icons/welt/b-uerliches-heim.png",
+        "E:/Aleria/Karten/assets/icons/welt/schmiede.png",
+        "E:/Aleria/Karten/assets/icons/welt/weide.png",
+        "E:/Aleria/Karten/assets/icons/orte/obstplantage.png"
+      ],
+      "transparent_background": true,
+      "original": "AleriaAlmanach/docs/art/tirfelyn-hof-20261115/originals/markers/holzfaeller-pin-v1.png",
+      "active": "Karten/assets/icons/hoforte/holzfaeller-pin-v1.png"
+    },
+    {
+      "key": "muehle",
+      "name": "Kleine Hofmühle",
+      "generator": "built-in image_gen",
+      "version": 1,
+      "prompt": "Use case: stylized-concept. Create ONE NEW illustrated map PIN for a small farm location.\n\nAll four input images are the USER'S APPROVED MAP-PIN STYLE REFERENCES. Match their actual teardrop-shaped map-pin format: rounded broad top, tapering sides, a single clear pointed bottom, thick dark brown/charcoal outline, softly painted warm golden parchment field inside. Match their hand-painted medieval fantasy illustration, dark ink outlines, restrained muted watercolor shading and readable miniature scene. The first reference establishes the exact pin silhouette, border weight and warm golden parchment. The others show suitable illustration detail. Create a new subject, do not copy their existing pictures.\n\nSUBJECT inside this pin: One small rural windmill, a squat cream tower with a blue-grey cap roof, one dark doorway and four large clearly separated wooden sails. A few golden grain stalks inside the lower part of the pin.\n\nOne complete centered pin, viewed frontally with an elevated three-quarter view ONLY for the little illustrated scene inside. Keep the same coherent pin shape and drawing language as the references. Simple large identifiable forms, clear even at 32–48 pixels; a farm-scale place rather than a city or large estate. Everything belonging to the scene stays INSIDE the teardrop border. No lettering, labels, numbers, banners, logos or watermarks. No standalone frameless map stamp.\n\nSquare 1:1 PNG canvas, the complete pin takes about 85–90% of the height with a comfortable transparent margin and its bottom point fully visible. TRUE transparent background strictly OUTSIDE the pin; the entire parchment and scene INSIDE the pin remain completely opaque, with no holes or transparent interior gaps. No drop shadow, white halo, external scene or background rectangle.",
+      "referenced_image_paths": [
+        "E:/Aleria/Karten/assets/icons/welt/b-uerliches-heim.png",
+        "E:/Aleria/Karten/assets/icons/welt/schmiede.png",
+        "E:/Aleria/Karten/assets/icons/welt/weide.png",
+        "E:/Aleria/Karten/assets/icons/orte/obstplantage.png"
+      ],
+      "transparent_background": true,
+      "original": "AleriaAlmanach/docs/art/tirfelyn-hof-20261115/originals/markers/muehle-pin-v1.png",
+      "active": "Karten/assets/icons/hoforte/muehle-pin-v1.png"
+    },
+    {
+      "key": "gerberei",
+      "name": "Kleine Gerberei",
+      "generator": "built-in image_gen",
+      "version": 1,
+      "prompt": "Use case: stylized-concept. Create ONE NEW illustrated map PIN for a small farm location.\n\nAll four input images are the USER'S APPROVED MAP-PIN STYLE REFERENCES. Match their actual teardrop-shaped map-pin format: rounded broad top, tapering sides, a single clear pointed bottom, thick dark brown/charcoal outline, softly painted warm golden parchment field inside. Match their hand-painted medieval fantasy illustration, dark ink outlines, restrained muted watercolor shading and readable miniature scene. The first reference establishes the exact pin silhouette, border weight and warm golden parchment. The others show suitable illustration detail. Create a new subject, do not copy their existing pictures.\n\nSUBJECT inside this pin: A little rural tannery: low timber workshop with a blue-grey lean-to roof and one pale brown hide clearly stretched on a simple wooden frame beside the doorway. One small tub inside the pin; the hide is the main distinguishing feature.\n\nOne complete centered pin, viewed frontally with an elevated three-quarter view ONLY for the little illustrated scene inside. Keep the same coherent pin shape and drawing language as the references. Simple large identifiable forms, clear even at 32–48 pixels; a farm-scale place rather than a city or large estate. Everything belonging to the scene stays INSIDE the teardrop border. No lettering, labels, numbers, banners, logos or watermarks. No standalone frameless map stamp.\n\nSquare 1:1 PNG canvas, the complete pin takes about 85–90% of the height with a comfortable transparent margin and its bottom point fully visible. TRUE transparent background strictly OUTSIDE the pin; the entire parchment and scene INSIDE the pin remain completely opaque, with no holes or transparent interior gaps. No drop shadow, white halo, external scene or background rectangle.",
+      "referenced_image_paths": [
+        "E:/Aleria/Karten/assets/icons/welt/b-uerliches-heim.png",
+        "E:/Aleria/Karten/assets/icons/welt/schmiede.png",
+        "E:/Aleria/Karten/assets/icons/welt/weide.png",
+        "E:/Aleria/Karten/assets/icons/orte/obstplantage.png"
+      ],
+      "transparent_background": true,
+      "original": "AleriaAlmanach/docs/art/tirfelyn-hof-20261115/originals/markers/gerberei-pin-v1.png",
+      "active": "Karten/assets/icons/hoforte/gerberei-pin-v1.png"
+    },
+    {
+      "key": "schmiede",
+      "name": "Kleine Hofschmiede",
+      "generator": "built-in image_gen",
+      "version": 1,
+      "prompt": "Use case: stylized-concept. Create ONE NEW illustrated map PIN for a small farm location.\n\nAll four input images are the USER'S APPROVED MAP-PIN STYLE REFERENCES. Match their actual teardrop-shaped map-pin format: rounded broad top, tapering sides, a single clear pointed bottom, thick dark brown/charcoal outline, softly painted warm golden parchment field inside. Match their hand-painted medieval fantasy illustration, dark ink outlines, restrained muted watercolor shading and readable miniature scene. The first reference establishes the exact pin silhouette, border weight and warm golden parchment. The others show suitable illustration detail. Create a new subject, do not copy their existing pictures.\n\nSUBJECT inside this pin: A small open timber farm smithy beneath a blue-grey lean-to roof, a squat stone hearth with warm orange fire, a clear broad dark anvil and one hammer. Follow the blacksmith reference but simplify to a small farm workshop.\n\nOne complete centered pin, viewed frontally with an elevated three-quarter view ONLY for the little illustrated scene inside. Keep the same coherent pin shape and drawing language as the references. Simple large identifiable forms, clear even at 32–48 pixels; a farm-scale place rather than a city or large estate. Everything belonging to the scene stays INSIDE the teardrop border. No lettering, labels, numbers, banners, logos or watermarks. No standalone frameless map stamp.\n\nSquare 1:1 PNG canvas, the complete pin takes about 85–90% of the height with a comfortable transparent margin and its bottom point fully visible. TRUE transparent background strictly OUTSIDE the pin; the entire parchment and scene INSIDE the pin remain completely opaque, with no holes or transparent interior gaps. No drop shadow, white halo, external scene or background rectangle.",
+      "referenced_image_paths": [
+        "E:/Aleria/Karten/assets/icons/welt/b-uerliches-heim.png",
+        "E:/Aleria/Karten/assets/icons/welt/schmiede.png",
+        "E:/Aleria/Karten/assets/icons/welt/weide.png",
+        "E:/Aleria/Karten/assets/icons/orte/obstplantage.png"
+      ],
+      "transparent_background": true,
+      "original": "AleriaAlmanach/docs/art/tirfelyn-hof-20261115/originals/markers/schmiede-pin-v1.png",
+      "active": "Karten/assets/icons/hoforte/schmiede-pin-v1.png"
+    },
+    {
+      "key": "imkerei",
+      "name": "Kleine Imkerei",
+      "generator": "built-in image_gen",
+      "version": 1,
+      "prompt": "Use case: stylized-concept. Create ONE NEW illustrated map PIN for a small farm location.\n\nAll four input images are the USER'S APPROVED MAP-PIN STYLE REFERENCES. Match their actual teardrop-shaped map-pin format: rounded broad top, tapering sides, a single clear pointed bottom, thick dark brown/charcoal outline, softly painted warm golden parchment field inside. Match their hand-painted medieval fantasy illustration, dark ink outlines, restrained muted watercolor shading and readable miniature scene. The first reference establishes the exact pin silhouette, border weight and warm golden parchment. The others show suitable illustration detail. Create a new subject, do not copy their existing pictures.\n\nSUBJECT inside this pin: A small farm apiary: three golden straw beehive skeps on a low wooden stand next to a tiny open-sided shelter. A few small flowers, all inside the pin. The three rounded hives are the main distinguishing shapes.\n\nOne complete centered pin, viewed frontally with an elevated three-quarter view ONLY for the little illustrated scene inside. Keep the same coherent pin shape and drawing language as the references. Simple large identifiable forms, clear even at 32–48 pixels; a farm-scale place rather than a city or large estate. Everything belonging to the scene stays INSIDE the teardrop border. No lettering, labels, numbers, banners, logos or watermarks. No standalone frameless map stamp.\n\nSquare 1:1 PNG canvas, the complete pin takes about 85–90% of the height with a comfortable transparent margin and its bottom point fully visible. TRUE transparent background strictly OUTSIDE the pin; the entire parchment and scene INSIDE the pin remain completely opaque, with no holes or transparent interior gaps. No drop shadow, white halo, external scene or background rectangle.",
+      "referenced_image_paths": [
+        "E:/Aleria/Karten/assets/icons/welt/b-uerliches-heim.png",
+        "E:/Aleria/Karten/assets/icons/welt/schmiede.png",
+        "E:/Aleria/Karten/assets/icons/welt/weide.png",
+        "E:/Aleria/Karten/assets/icons/orte/obstplantage.png"
+      ],
+      "transparent_background": true,
+      "original": "AleriaAlmanach/docs/art/tirfelyn-hof-20261115/originals/markers/imkerei-pin-v1.png",
+      "active": "Karten/assets/icons/hoforte/imkerei-pin-v1.png"
+    },
+    {
+      "key": "gestuet",
+      "name": "Kleines Gestüt",
+      "generator": "built-in image_gen",
+      "version": 1,
+      "prompt": "Use case: stylized-concept. Create ONE NEW illustrated map PIN for a small farm location.\n\nAll four input images are the USER'S APPROVED MAP-PIN STYLE REFERENCES. Match their actual teardrop-shaped map-pin format: rounded broad top, tapering sides, a single clear pointed bottom, thick dark brown/charcoal outline, softly painted warm golden parchment field inside. Match their hand-painted medieval fantasy illustration, dark ink outlines, restrained muted watercolor shading and readable miniature scene. The first reference establishes the exact pin silhouette, border weight and warm golden parchment. The others show suitable illustration detail. Create a new subject, do not copy their existing pictures.\n\nSUBJECT inside this pin: A small brown timber horse stable with a broad blue-grey roof and a single brown horse looking over the half-open stable door. A short wooden fence inside the pin. Clearly a small rural stable, not a horseshoe symbol.\n\nOne complete centered pin, viewed frontally with an elevated three-quarter view ONLY for the little illustrated scene inside. Keep the same coherent pin shape and drawing language as the references. Simple large identifiable forms, clear even at 32–48 pixels; a farm-scale place rather than a city or large estate. Everything belonging to the scene stays INSIDE the teardrop border. No lettering, labels, numbers, banners, logos or watermarks. No standalone frameless map stamp.\n\nSquare 1:1 PNG canvas, the complete pin takes about 85–90% of the height with a comfortable transparent margin and its bottom point fully visible. TRUE transparent background strictly OUTSIDE the pin; the entire parchment and scene INSIDE the pin remain completely opaque, with no holes or transparent interior gaps. No drop shadow, white halo, external scene or background rectangle.",
+      "referenced_image_paths": [
+        "E:/Aleria/Karten/assets/icons/welt/b-uerliches-heim.png",
+        "E:/Aleria/Karten/assets/icons/welt/schmiede.png",
+        "E:/Aleria/Karten/assets/icons/welt/weide.png",
+        "E:/Aleria/Karten/assets/icons/orte/obstplantage.png"
+      ],
+      "transparent_background": true,
+      "original": "AleriaAlmanach/docs/art/tirfelyn-hof-20261115/originals/markers/gestuet-pin-v1.png",
+      "active": "Karten/assets/icons/hoforte/gestuet-pin-v1.png"
+    },
+    {
+      "key": "raeucherhaus",
+      "name": "Kleines Räucherhaus",
+      "generator": "built-in image_gen",
+      "version": 1,
+      "prompt": "Use case: stylized-concept. Create ONE NEW illustrated map PIN for a small farm location.\n\nAll four input images are the USER'S APPROVED MAP-PIN STYLE REFERENCES. Match their actual teardrop-shaped map-pin format: rounded broad top, tapering sides, a single clear pointed bottom, thick dark brown/charcoal outline, softly painted warm golden parchment field inside. Match their hand-painted medieval fantasy illustration, dark ink outlines, restrained muted watercolor shading and readable miniature scene. The first reference establishes the exact pin silhouette, border weight and warm golden parchment. The others show suitable illustration detail. Create a new subject, do not copy their existing pictures.\n\nSUBJECT inside this pin: A tiny dark timber smokehouse with a blue-grey roof, a closed plank door and one chunky chimney emitting a small grey curl of smoke. A few split logs beside the wall, all inside the pin. Distinct from the open glowing smithy.\n\nOne complete centered pin, viewed frontally with an elevated three-quarter view ONLY for the little illustrated scene inside. Keep the same coherent pin shape and drawing language as the references. Simple large identifiable forms, clear even at 32–48 pixels; a farm-scale place rather than a city or large estate. Everything belonging to the scene stays INSIDE the teardrop border. No lettering, labels, numbers, banners, logos or watermarks. No standalone frameless map stamp.\n\nSquare 1:1 PNG canvas, the complete pin takes about 85–90% of the height with a comfortable transparent margin and its bottom point fully visible. TRUE transparent background strictly OUTSIDE the pin; the entire parchment and scene INSIDE the pin remain completely opaque, with no holes or transparent interior gaps. No drop shadow, white halo, external scene or background rectangle.",
+      "referenced_image_paths": [
+        "E:/Aleria/Karten/assets/icons/welt/b-uerliches-heim.png",
+        "E:/Aleria/Karten/assets/icons/welt/schmiede.png",
+        "E:/Aleria/Karten/assets/icons/welt/weide.png",
+        "E:/Aleria/Karten/assets/icons/orte/obstplantage.png"
+      ],
+      "transparent_background": true,
+      "original": "AleriaAlmanach/docs/art/tirfelyn-hof-20261115/originals/markers/raeucherhaus-pin-v1.png",
+      "active": "Karten/assets/icons/hoforte/raeucherhaus-pin-v1.png"
+    }
+  ]
+}

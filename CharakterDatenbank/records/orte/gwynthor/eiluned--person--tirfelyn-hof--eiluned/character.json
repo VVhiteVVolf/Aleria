@@ -1,0 +1,214 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--tirfelyn-hof--eiluned",
+  "slug": "eiluned",
+  "identity": {
+    "name": "Eiluned",
+    "aliases": [],
+    "worldPersonId": "person--tirfelyn-hof--eiluned"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--tirfelyn-hof--eiluned",
+      "documentIds": [
+        "person--tirfelyn-hof--eiluned"
+      ],
+      "documents": [
+        {
+          "documentId": "person--tirfelyn-hof--eiluned",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Tirfelyn Hof/eiluned.json",
+    "sourceExportedAt": "2026-11-15T20:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--tirfelyn-hof--eiluned"
+    ],
+    "contentHash": "ed1486949f24f1e89bdf66bfda504962800967d6d53f5a447848c4dc53c3c0e3"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "tirfelyn-hof-20261115"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--tirfelyn-hof--eiluned",
+        "name": "Eiluned",
+        "title": "Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen",
+        "role": "Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen",
+        "age": 41,
+        "birth": "1699",
+        "gender": "weiblich",
+        "race": "Mensch",
+        "origin": "Cenyr",
+        "identity": {
+          "worldPersonId": "person--tirfelyn-hof--eiluned"
+        },
+        "genealogy": {
+          "worldPersonId": "person--tirfelyn-hof--eiluned",
+          "sources": []
+        },
+        "fraktion": "Tirfelyn-Hof",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/eiluned-v1.png",
+        "bio": "Eiluned ist 41 Jahre alt und unterstützt Enid und Madrun bei Wäsche, Reinigung und der täglichen Hausarbeit. Die rothaarige Hofmagd wirkt abgekämpft und müde, begegnet anderen aber freundlich. Sie bewohnt die kleine sechste Bedienstetenhütte.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Eiluned",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Eiluned"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "41 Jahre"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen"
+            },
+            {
+              "label": "Wohnort",
+              "value": "Hütte 6, kleine südöstliche Hütte"
+            }
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/eiluned-v1.png",
+            "biographyTitle": "Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen",
+            "biographyText": "<p>Eiluned ist 41 Jahre alt und unterstützt Enid und Madrun bei Wäsche, Reinigung und der täglichen Hausarbeit. Die rothaarige Hofmagd wirkt abgekämpft und müde, begegnet anderen aber freundlich. Sie bewohnt die kleine sechste Bedienstetenhütte.</p>",
+            "historyTitle": "Am Tirfelyn-Hof",
+            "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+            "documentsTitle": "Hof und Arbeitsort",
+            "documents": [
+              {
+                "title": "Tirfelyn-Hof",
+                "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Hütte 6, kleine südöstliche Hütte · Tirfelyn-Hof · Gwynthor",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--tirfelyn-hof--eiluned",
+    "name": "Eiluned",
+    "title": "Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen",
+    "role": "Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen",
+    "age": 41,
+    "birth": "1699",
+    "gender": "weiblich",
+    "race": "Mensch",
+    "origin": "Cenyr",
+    "identity": {
+      "worldPersonId": "person--tirfelyn-hof--eiluned"
+    },
+    "genealogy": {
+      "worldPersonId": "person--tirfelyn-hof--eiluned",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Tirfelyn-Hof",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/eiluned-v1.png",
+    "bio": "Eiluned ist 41 Jahre alt und unterstützt Enid und Madrun bei Wäsche, Reinigung und der täglichen Hausarbeit. Die rothaarige Hofmagd wirkt abgekämpft und müde, begegnet anderen aber freundlich. Sie bewohnt die kleine sechste Bedienstetenhütte.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Eiluned",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Eiluned"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "41 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen"
+        },
+        {
+          "label": "Wohnort",
+          "value": "Hütte 6, kleine südöstliche Hütte"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/eiluned-v1.png",
+        "biographyTitle": "Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen",
+        "biographyText": "<p>Eiluned ist 41 Jahre alt und unterstützt Enid und Madrun bei Wäsche, Reinigung und der täglichen Hausarbeit. Die rothaarige Hofmagd wirkt abgekämpft und müde, begegnet anderen aber freundlich. Sie bewohnt die kleine sechste Bedienstetenhütte.</p>",
+        "historyTitle": "Am Tirfelyn-Hof",
+        "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+        "documentsTitle": "Hof und Arbeitsort",
+        "documents": [
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Hütte 6, kleine südöstliche Hütte · Tirfelyn-Hof · Gwynthor",
+    "archived": false,
+    "aliases": []
+  }
+}

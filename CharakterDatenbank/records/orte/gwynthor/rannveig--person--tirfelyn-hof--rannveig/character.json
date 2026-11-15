@@ -1,0 +1,214 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--tirfelyn-hof--rannveig",
+  "slug": "rannveig",
+  "identity": {
+    "name": "Rannveig",
+    "aliases": [],
+    "worldPersonId": "person--tirfelyn-hof--rannveig"
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--tirfelyn-hof--rannveig",
+      "documentIds": [
+        "person--tirfelyn-hof--rannveig"
+      ],
+      "documents": [
+        {
+          "documentId": "person--tirfelyn-hof--rannveig",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Tirfelyn Hof/rannveig.json",
+    "sourceExportedAt": "2026-11-15T20:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--tirfelyn-hof--rannveig"
+    ],
+    "contentHash": "47ffdad59b3ef1cb5987c3bd4b45fdc0ca308a6a439686d9a52bf63e4e1c3f6e"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "tirfelyn-hof-20261115"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--tirfelyn-hof--rannveig",
+        "name": "Rannveig",
+        "title": "Hallvards Ehefrau, Beeren- und Kräutersammlerin",
+        "role": "Hallvards Ehefrau, Beeren- und Kräutersammlerin",
+        "age": 35,
+        "birth": "1705",
+        "gender": "weiblich",
+        "race": "Mensch",
+        "origin": "Aldrimar",
+        "identity": {
+          "worldPersonId": "person--tirfelyn-hof--rannveig"
+        },
+        "genealogy": {
+          "worldPersonId": "person--tirfelyn-hof--rannveig",
+          "sources": []
+        },
+        "fraktion": "Tirfelyn-Hof",
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/rannveig-v1.png",
+        "bio": "Rannveig ist 35 Jahre alt und mit Hallvard verheiratet. Sie sammelt Beeren und Kräuter in den Wäldern um den Tirfelyn-Hof und bringt ihre Funde in die Vorratshaltung der Familie ein. Die blonde, sommersprossige Frau wohnt mit ihrem Mann beim Holzfällerlager.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Rannveig",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Rannveig"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "35 Jahre"
+            },
+            {
+              "label": "Aufgabe",
+              "value": "Hallvards Ehefrau, Beeren- und Kräutersammlerin"
+            },
+            {
+              "label": "Wohnort",
+              "value": "Haus östlich des Holzfällerarbeitsplatzes"
+            }
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/rannveig-v1.png",
+            "biographyTitle": "Hallvards Ehefrau, Beeren- und Kräutersammlerin",
+            "biographyText": "<p>Rannveig ist 35 Jahre alt und mit Hallvard verheiratet. Sie sammelt Beeren und Kräuter in den Wäldern um den Tirfelyn-Hof und bringt ihre Funde in die Vorratshaltung der Familie ein. Die blonde, sommersprossige Frau wohnt mit ihrem Mann beim Holzfällerlager.</p>",
+            "historyTitle": "Am Tirfelyn-Hof",
+            "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+            "documentsTitle": "Hof und Arbeitsort",
+            "documents": [
+              {
+                "title": "Tirfelyn-Hof",
+                "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+                "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+              }
+            ]
+          }
+        },
+        "currentLocation": "Haus östlich des Holzfällerarbeitsplatzes · Tirfelyn-Hof · Gwynthor",
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "person--tirfelyn-hof--rannveig",
+    "name": "Rannveig",
+    "title": "Hallvards Ehefrau, Beeren- und Kräutersammlerin",
+    "role": "Hallvards Ehefrau, Beeren- und Kräutersammlerin",
+    "age": 35,
+    "birth": "1705",
+    "gender": "weiblich",
+    "race": "Mensch",
+    "origin": "Aldrimar",
+    "identity": {
+      "worldPersonId": "person--tirfelyn-hof--rannveig"
+    },
+    "genealogy": {
+      "worldPersonId": "person--tirfelyn-hof--rannveig",
+      "sources": [],
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    },
+    "fraktion": "Tirfelyn-Hof",
+    "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/rannveig-v1.png",
+    "bio": "Rannveig ist 35 Jahre alt und mit Hallvard verheiratet. Sie sammelt Beeren und Kräuter in den Wäldern um den Tirfelyn-Hof und bringt ihre Funde in die Vorratshaltung der Familie ein. Die blonde, sommersprossige Frau wohnt mit ihrem Mann beim Holzfällerlager.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Rannveig",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Rannveig"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "35 Jahre"
+        },
+        {
+          "label": "Aufgabe",
+          "value": "Hallvards Ehefrau, Beeren- und Kräutersammlerin"
+        },
+        {
+          "label": "Wohnort",
+          "value": "Haus östlich des Holzfällerarbeitsplatzes"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/rannveig-v1.png",
+        "biographyTitle": "Hallvards Ehefrau, Beeren- und Kräutersammlerin",
+        "biographyText": "<p>Rannveig ist 35 Jahre alt und mit Hallvard verheiratet. Sie sammelt Beeren und Kräuter in den Wäldern um den Tirfelyn-Hof und bringt ihre Funde in die Vorratshaltung der Familie ein. Die blonde, sommersprossige Frau wohnt mit ihrem Mann beim Holzfällerlager.</p>",
+        "historyTitle": "Am Tirfelyn-Hof",
+        "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
+        "documentsTitle": "Hof und Arbeitsort",
+        "documents": [
+          {
+            "title": "Tirfelyn-Hof",
+            "text": "Bewohner, Arbeitsbereiche und getrennte interaktive Szenen.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof"
+          }
+        ]
+      }
+    },
+    "currentLocation": "Haus östlich des Holzfällerarbeitsplatzes · Tirfelyn-Hof · Gwynthor",
+    "archived": false,
+    "aliases": []
+  }
+}
