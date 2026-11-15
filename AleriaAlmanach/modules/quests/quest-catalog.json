@@ -136,6 +136,48 @@
   ],
   "maps": [
     {
+      "id": "cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof",
+      "title": "Tirfelyn-Hof",
+      "status": "active",
+      "type": "local",
+      "hierarchy": [
+        {
+          "level": "kingdom",
+          "slug": "cenyr",
+          "title": "Cenyr"
+        },
+        {
+          "level": "county",
+          "slug": "celtigerns-wacht",
+          "title": "Celtigerns Wacht"
+        },
+        {
+          "level": "barony",
+          "slug": "llamrais-ankunft",
+          "title": "Llamreis Ankunft"
+        },
+        {
+          "level": "region",
+          "slug": "gwynthor-bannkreis",
+          "title": "Gwynthors Bannkreis"
+        },
+        {
+          "level": "local",
+          "slug": "tirfelyn-hof",
+          "title": "Tirfelyn-Hof"
+        }
+      ],
+      "folder": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof",
+      "config": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/template.config.js",
+      "images": {
+        "normal": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png",
+        "pins": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png"
+      },
+      "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/data.json",
+      "link": "karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof",
+      "rulingHouse": "Familie Tirfelyn"
+    },
+    {
       "id": "brevanor",
       "title": "Königreich Brevanor",
       "status": "active",
@@ -5125,6 +5167,191 @@
     {
       "id": "tirfelyn-hof::session:tirfelyn-szene-wohnstube",
       "title": "Tirfelyn-Hof · Die Wohnstube",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::page:tirfelyn-hof-bedienstete",
+      "title": "Tirfelyn-Hof · Die Bediensteten und ihre Haushalte",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::page:tirfelyn-hof-hoftiere",
+      "title": "Tirfelyn-Hof · Wachhund und Herdenhunde",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-holzfaellerlager",
+      "title": "Tirfelyn-Hof · Holzfällerlager",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-holzfaellerhaus-ost",
+      "title": "Tirfelyn-Hof · Hallvards und Rannveigs Haus",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-holzfaellerhaus-sued",
+      "title": "Tirfelyn-Hof · Torleifs Haus",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-01",
+      "title": "Tirfelyn-Hof · Nefydds Hütte",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-02",
+      "title": "Tirfelyn-Hof · Rhufons Hütte",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-03",
+      "title": "Tirfelyn-Hof · Maldwyns Hütte",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-04",
+      "title": "Tirfelyn-Hof · Haus der Müllerfamilie",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-05",
+      "title": "Tirfelyn-Hof · Cynfarchs Hütte",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-06",
+      "title": "Tirfelyn-Hof · Eiluneds Hütte",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-muehle",
+      "title": "Tirfelyn-Hof · Hofmühle",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-gerberhaus",
+      "title": "Tirfelyn-Hof · Gerberhaus",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-bauernherrenhaus",
+      "title": "Tirfelyn-Hof · Bauernherrenhaus Tirfelyn",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-hufschmiede",
+      "title": "Tirfelyn-Hof · Hufschmiede",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-imkerei",
+      "title": "Tirfelyn-Hof · Imkerei",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-gestuet",
+      "title": "Tirfelyn-Hof · Hofgestüt",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-raeucherhaus",
+      "title": "Tirfelyn-Hof · Räucherhaus",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-kornspeicher",
+      "title": "Tirfelyn-Hof · Kornspeicher",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-lager-west",
+      "title": "Tirfelyn-Hof · Westliches Hoflager",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-geraeteschuppen",
+      "title": "Tirfelyn-Hof · Geräteschuppen am Herrenhaus",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-lager-sued",
+      "title": "Tirfelyn-Hof · Südliches Vorratslager",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-lager-ost",
+      "title": "Tirfelyn-Hof · Lager beim Gestüt",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-hausgarten",
+      "title": "Tirfelyn-Hof · Hausgärten",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-obstgarten",
+      "title": "Tirfelyn-Hof · Obstbäume",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-acker-mitte",
+      "title": "Tirfelyn-Hof · Großer Acker bei der Mühle",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-acker-west",
+      "title": "Tirfelyn-Hof · Westliche Anbaufläche",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-getreide-suedwest",
+      "title": "Tirfelyn-Hof · Südwestliches Getreidefeld",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-acker-sued",
+      "title": "Tirfelyn-Hof · Südliche Anbaufläche",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-schafweide",
+      "title": "Tirfelyn-Hof · Schafweide",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-rinderweide-west",
+      "title": "Tirfelyn-Hof · Westliche Rinderweide",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-rinderweide-suedost",
+      "title": "Tirfelyn-Hof · Südöstliche Rinderweide",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-bullenweide",
+      "title": "Tirfelyn-Hof · Bullenweide",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-weide-nordost",
+      "title": "Tirfelyn-Hof · Nordöstliche Weide",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-schweinegehege",
+      "title": "Tirfelyn-Hof · Schweinegehege",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-hofbrunnen",
+      "title": "Tirfelyn-Hof · Brunnen am Herrenhaus",
+      "moduleId": "tirfelyn-hof"
+    },
+    {
+      "id": "tirfelyn-hof::session:tirfelyn-hof-poi-wirtschaftsbrunnen",
+      "title": "Tirfelyn-Hof · Brunnen bei den Wirtschaftsgebäuden",
       "moduleId": "tirfelyn-hof"
     },
     {
