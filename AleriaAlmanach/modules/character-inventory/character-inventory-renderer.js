@@ -360,7 +360,7 @@ function buildCharacterInventoryItems(data, activeCategory = '', options = {}) {
     ${buildCharacterInventoryCategories({ ...data, items }, activeCategory)}
     <div class="ci-item-table"><div class="ci-item-head"><span>Gegenstand</span><span>Handelspreis</span><span>Zustand</span><span>Anzahl</span></div>
       <div class="ci-item-list">${items.map(item => `<div class="ci-item-row" data-ci-item-id="${escapeHtml(item.id)}" data-ci-category="${escapeHtml(item.category)}"${!activeCategory || item.category === activeCategory ? '' : ' hidden'}>
-        <button class="ci-item-select" type="button" data-ci-action="select-item" data-ci-item-id="${escapeHtml(item.id)}" aria-pressed="false">
+        <button class="ci-item-select" type="button" data-ci-action="select-item" data-ci-item-id="${escapeHtml(item.id)}" aria-pressed="false" title="Doppelklick zum Öffnen">
           ${buildCharacterInventoryImage(item.image || getCharacterInventoryUiIconSource(item.category), item.name, 'ci-item-icon', '◈', { format: 'square', fit: 'contain' })}
           <span><strong>${escapeHtml(item.name)}</strong><small>${escapeHtml(item.type || 'Gegenstand')}${item.weight && item.weight !== 'Noch festlegen' ? ' · ' + escapeHtml(item.weight) : ''}</small></span>
         </button>

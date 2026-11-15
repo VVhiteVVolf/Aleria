@@ -22,6 +22,20 @@ function selectCharacterInventoryItem(page, itemId) {
   if (preview) preview.innerHTML = buildCharacterInventoryLivePreview(item);
 }
 
+document.addEventListener('dblclick', event => {
+  if (event.button !== 0 || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+  const row = event.target?.closest?.('.ci-item-row');
+  const page = row?.closest('.character-inventory-page');
+  if (!page || row.hidden) return;
+  const control = event.target.closest('a, button, input, select, textarea, summary, [contenteditable]');
+  if (control && control.dataset.ciAction !== 'select-item') return;
+  event.preventDefault();
+  selectCharacterInventoryItem(page, row.dataset.ciItemId);
+  // Reuse the instance-aware reading link and the existing card controller.
+  const readingLink = page.querySelector('.ci-live-preview [data-role="inventory-document"]');
+  (readingLink || row.querySelector('[data-ci-action="show-item"]'))?.click();
+});
+
 function filterCharacterInventoryItems(page) {
   const category = page.querySelector('[data-ci-action="filter-items"].active')?.dataset.ciCategory || '';
   const search = normalizeCharacterInventoryText(page.querySelector('[data-ci-search]')?.value);

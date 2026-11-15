@@ -8,15 +8,20 @@
   <link rel="stylesheet" href="../Bestiarium/modules/book-reader/book-reader.css">
   <link rel="stylesheet" href="../AleriaAlmanach/DokumentenWerkstatt/css/document.css">
   <link rel="stylesheet" href="../AleriaAlmanach/styles/account.css">
+  <link rel="stylesheet" href="../AleriaAlmanach/DokumentenWerkstatt/css/document-reader.css?v=20261115-reading-desk">
 </head>
 <body class="document-reader">
   <main class="reader-main" data-role="document-reader">
     <div data-role="almanach-account"></div>
-    <nav class="reader-toolbar" aria-label="Dokumentaktionen"><h1 data-role="reader-title">Dokument wird geladen …</h1><a class="btn" href="../AleriaAlmanach/DokumentenWerkstatt.html" data-role="reader-edit">In der Werkstatt öffnen</a><button class="btn" data-reader-action="png" disabled>PNG exportieren</button></nav>
+    <header class="reader-header">
+      <a class="reader-home" href="../AleriaAlmanach/AleriaAlmanach.html">← Aleria</a>
+      <div class="reader-heading"><p class="reader-eyebrow">Schriften &amp; Aufzeichnungen</p><h1 data-role="reader-title">Dokument wird geladen …</h1><p class="reader-metadata" data-role="reader-metadata" hidden></p></div>
+      <nav class="reader-toolbar" aria-label="Dokumentaktionen"><a class="btn" href="../AleriaAlmanach/DokumentenWerkstatt.html" data-role="reader-edit">In der Werkstatt öffnen</a><button class="btn" data-reader-action="png" disabled>PNG exportieren</button></nav>
+    </header>
     <p class="reader-error" data-role="reader-status" role="status"></p>
+    <section class="reader-surface" aria-label="Lesepult"><div class="reader-document" data-role="reader-document"></div></section>
     <details class="reading-panel"><summary>Übersetzen · lesbare Fassung</summary><div class="reading-text" data-role="reader-text"></div></details>
-    <div class="reader-document" data-role="reader-document"></div>
   </main>
-  <script type="module" src="../AleriaAlmanach/DokumentenWerkstatt/js/document-reader.js"></script>
+  <script type="module" src="../AleriaAlmanach/DokumentenWerkstatt/js/document-reader.js?v=20261115-reading-desk"></script>
 </body>
 </html>

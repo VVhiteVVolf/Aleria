@@ -20,6 +20,11 @@ try {
   await preparePaperAssets(); await ensureDocumentFont(meta);
   document.title = `${meta.title} · Aleria`;
   root.querySelector('[data-role="reader-title"]').textContent = meta.title;
+  const metadata = root.querySelector('[data-role="reader-metadata"]');
+  if (metadata) {
+    metadata.textContent = [meta.author, meta.recipient && `An ${meta.recipient}`, meta.date, meta.location].filter(Boolean).join(' · ');
+    metadata.hidden = !metadata.textContent;
+  }
   root.querySelector('[data-role="reader-text"]').textContent = readableText(meta);
   root.querySelector('[data-role="reader-edit"]').href += `?document=${encodeURIComponent(id)}`;
   output.classList.add(`template-${meta.template}`);
