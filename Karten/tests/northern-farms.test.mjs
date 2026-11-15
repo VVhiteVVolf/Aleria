@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {projectNorthernFarmOriginalPins} from './support/northern-farms-pin-history.mjs';
+import {projectTirfelynOriginalPins} from './support/tirfelyn-hof-pin-history.mjs';
 const read=path=>JSON.parse(readFileSync(new URL('../'+path,import.meta.url),'utf8'));
 const source=read('Cenyr/celtigerns-wacht/llamrais-ankunft/northern-farms.source.json');
 const gwynthor=read(source.maps.gwynthor),bronhir=read(source.maps.bronhir);
@@ -17,7 +18,7 @@ test('Caehelyg replaces one unnamed farm while the other 169 entries remain inta
  assert.deepEqual({...farm,title:original.title,text:original.text,table:original.table},original);
  const changed=farm.table.filter((field,index)=>field.v!==original.table[index].v);
  assert.deepEqual(changed.map(field=>field.k),['Name','Typ','Bewirtschaftung']);
- assert.equal(hash(gwynthor.state.pins.filter(pin=>pin.id!==original.id)),source.publicProjection.untouchedGwynthorPinsSHA256);
+ assert.equal(hash(projectTirfelynOriginalPins(gwynthor.state.pins).filter(pin=>pin.id!==original.id)),source.publicProjection.untouchedGwynthorPinsSHA256);
 });
 
 test('Maesrudd occupies a northern Bronhir location without changing previous regional data',()=>{

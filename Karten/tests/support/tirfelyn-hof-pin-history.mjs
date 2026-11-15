@@ -18,3 +18,7 @@ export function projectTirfelynOriginalPinImages(pins) {
     text: original.text + `\n\n[URL=${HOF_MAP_LINK}]Ortskarte des Tirfelyn-Hofs öffnen[/URL]` });
   return pins.map(pin => pin.id === original.id ? { ...pin, img: original.img, imgLink: original.imgLink } : pin);
 }
+
+export function projectTirfelynOriginalPins(pins) {
+  return projectTirfelynOriginalPinImages(pins).map(pin => pin.id === history.originalPin.id ? structuredClone(history.originalPin) : pin);
+}

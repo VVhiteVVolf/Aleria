@@ -8,7 +8,7 @@ import { HOF_MAP_ID, HOF_MAP_FOLDER, HOF_POIS, HOF_MAPPED_POIS } from '../../sha
 import { hofMapMarker, HOF_MARKER_DEFINITIONS } from '../modules/tirfelyn-hof/hof-markers.mjs';
 import { peopleGroups } from '../modules/people/people-model.mjs';
 import { layoutRosterPopup } from '../modules/place-roster/place-roster-layout.mjs';
-import { projectTirfelynOriginalPinImages } from './support/tirfelyn-hof-pin-history.mjs';
+import { projectTirfelynOriginalPinImages, projectTirfelynOriginalPins } from './support/tirfelyn-hof-pin-history.mjs';
 
 const root = new URL('../../', import.meta.url);
 test('older map-image guards project only the reviewed Tirfelyn change and reject unrelated edits', async () => {
@@ -17,6 +17,9 @@ test('older map-image guards project only the reviewed Tirfelyn change and rejec
   const untouched = data.state.pins.filter(pin => pin.id !== 'gwynthor-marking-107');
   assert.deepEqual(projected.filter(pin => pin.id !== 'gwynthor-marking-107'), untouched);
   assert.equal(projected.find(pin => pin.id === 'gwynthor-marking-107').text, data.state.pins.find(pin => pin.id === 'gwynthor-marking-107').text);
+  const full = projectTirfelynOriginalPins(data.state.pins);
+  assert.deepEqual(full.filter(pin => pin.id !== 'gwynthor-marking-107'), untouched);
+  assert(!full.find(pin => pin.id === 'gwynthor-marking-107').text.includes('Ortskarte des Tirfelyn-Hofs öffnen'));
   for (const patch of [{ x: 0 }, { title: 'Anderer Hof' }, { img: '/unreviewed.png' }, { imgLink: '/unreviewed' }, { text: 'Anderer Inhalt' }]) {
     assert.throws(() => projectTirfelynOriginalPinImages(data.state.pins.map(pin => pin.id === 'gwynthor-marking-107' ? { ...pin, ...patch } : pin)));
   }
