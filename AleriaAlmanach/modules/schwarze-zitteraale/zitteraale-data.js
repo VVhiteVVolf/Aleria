@@ -1063,6 +1063,9 @@ function migrateZitteraaleEntry(entry) { return (function upgradeZitteraaleEntry
     // This commissioned reorganisation refreshes authored pages once. The
     // existing headquarters scene keeps its edited content and thread identity.
     if (page.sessionPage && existing) return { ...structuredClone(page), ...structuredClone(existing) };
+    if (page.commentThreadKey === 'zitteraale-uebersicht' && typeof existing?.description === 'string') {
+      return { ...structuredClone(existing), ...structuredClone(page), description: existing.description };
+    }
     return { ...structuredClone(existing || {}), ...structuredClone(page) };
   });
   if (regrouped && entry.zitteraaleRevision === '20261021-arvel-v3') {
