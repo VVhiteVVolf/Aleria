@@ -90,7 +90,7 @@ const AleriaCharacterDirectory = (() => {
     patches.set(key, {});
     const pending = (async () => {
       if (!_fbReady) await waitForFirebaseReady();
-      const local = localSource?.getFull(key);
+      const local = await localSource?.loadFull(key);
       if (!window._fb?.loadCharacters && !local) throw new Error('Das vollständige Charakterprofil ist derzeit nicht erreichbar.');
       const records = window._fb?.loadCharacters ? await window._fb.loadCharacters({ ids: [key], fromServer: true, throwOnError: true }) : [];
       const online = records.find(item => String(item.id) === key);

@@ -21,10 +21,25 @@ export function projectLocalDirectoryRecord(record) {
 
 export function createLocalCharacterDirectory({ fetch: read = globalThis.fetch } = {}) {
   const full = new Map();
+  const entriesById = new Map();
   async function readJson(url) {
     const response = await read(url, { method: 'GET', cache: 'no-cache' });
     if (!response.ok) throw new Error('Der lokale Figurenbestand konnte nicht vollständig abgeglichen werden.');
     return response.json();
+  }
+  async function loadEntry(entry) {
+    const id = String(entry.firestoreDocumentId || '');
+    if (full.has(id)) return full.get(id);
+    if (!/^records\/(?:[a-zA-Z0-9_ -]+\/)*character\.json$/.test(entry.path || '')) throw new Error('Die lokale Figurenakte besitzt keinen gültigen Quellpfad.');
+    const payload = await readJson(new URL(entry.path, root));
+    if (payload.schema !== 'aleria.character-record' || !payload.character || payload.recordId !== entry.recordId) throw new Error('Die lokale Figurenakte stimmt nicht mit dem Index überein.');
+    const recordId = id || String(payload.character.id || '');
+    if (!recordId) throw new Error('Eine lokale Figur besitzt keine stabile Kennung.');
+    const record = { ...payload.character, id: recordId, localRecord: { ...(payload.character.localRecord || {}),
+      recordId: entry.recordId, path: entry.path, schemaVersion: payload.schemaVersion, contentHash: entry.contentHash,
+      classification: payload.classification, firestoreDocumentIds: [...new Set(entry.firestoreDocumentIds || [])] } };
+    full.set(recordId, record);
+    return record;
   }
   async function loadMissing(online, onRecord = () => {}) {
     const registry = await readJson(new URL('registry.json', root));
@@ -34,28 +49,26 @@ export function createLocalCharacterDirectory({ fetch: read = globalThis.fetch }
     const byId = new Map(online.map(record => [String(record.id), record]));
     const byPerson = new Map(online.filter(worldId).map(record => [worldId(record), record]));
     for (const entry of registry.records) {
+      for (const id of [entry.firestoreDocumentId, ...(entry.firestoreDocumentIds || []), entry.worldPersonId].filter(Boolean)) {
+        entriesById.set(String(id), entry);
+      }
       const matches = [...new Set([entry.firestoreDocumentId, ...(entry.firestoreDocumentIds || [])].map(id => byId.get(String(id))).filter(Boolean))];
       if (!matches.length && entry.worldPersonId && byPerson.has(entry.worldPersonId)) matches.push(byPerson.get(entry.worldPersonId));
-      for (const record of matches) onRecord({ ...record,
-        identity: { ...record.identity, worldPersonId: worldId(record) || entry.worldPersonId || '' },
-        genealogy: { ...record.genealogy, houseName: record.genealogy?.houseName || (entry.primary?.kind === 'family' ? entry.primary.label : '') },
-        aliases: [...new Set([...(Array.isArray(record.aliases) ? record.aliases : []), ...(entry.aliases || [])])],
-        localRecord: { ...record.localRecord, firestoreDocumentIds: [...new Set(entry.firestoreDocumentIds || [])] }, _directorySummary: true
-      });
+      for (const record of matches) {
+        entriesById.set(String(record.id), entry);
+        onRecord({ ...record,
+          identity: { ...record.identity, worldPersonId: worldId(record) || entry.worldPersonId || '' },
+          genealogy: { ...record.genealogy, houseName: record.genealogy?.houseName || (entry.primary?.kind === 'family' ? entry.primary.label : '') },
+          aliases: [...new Set([...(Array.isArray(record.aliases) ? record.aliases : []), ...(entry.aliases || [])])],
+          localRecord: { ...record.localRecord, firestoreDocumentIds: [...new Set(entry.firestoreDocumentIds || [])] }, _directorySummary: true
+        });
+      }
     }
     const missing = registry.records.filter(entry => ![entry.firestoreDocumentId, ...(entry.firestoreDocumentIds || [])].some(id => onlineIds.has(String(id)))
       && !(entry.worldPersonId && onlinePeople.has(entry.worldPersonId)));
     for (let offset = 0; offset < missing.length; offset += 4) {
       await Promise.all(missing.slice(offset, offset + 4).map(async entry => {
-        if (!/^records\/(?:[a-zA-Z0-9_ -]+\/)*character\.json$/.test(entry.path || '')) throw new Error('Die lokale Figurenakte besitzt keinen gültigen Quellpfad.');
-        const payload = await readJson(new URL(entry.path, root));
-        if (payload.schema !== 'aleria.character-record' || !payload.character || payload.recordId !== entry.recordId) throw new Error('Die lokale Figurenakte stimmt nicht mit dem Index überein.');
-        const id = String(entry.firestoreDocumentId || payload.character.id || '');
-        if (!id) throw new Error('Eine lokale Figur besitzt keine stabile Kennung.');
-        const record = { ...payload.character, id, localRecord: { ...(payload.character.localRecord || {}),
-          recordId: entry.recordId, path: entry.path, schemaVersion: payload.schemaVersion, contentHash: entry.contentHash,
-          classification: payload.classification, firestoreDocumentIds: [...new Set(entry.firestoreDocumentIds || [])] } };
-        full.set(id, record);
+        const record = await loadEntry(entry);
         onRecord(projectLocalDirectoryRecord(record));
       }));
     }
@@ -64,5 +77,10 @@ export function createLocalCharacterDirectory({ fetch: read = globalThis.fetch }
     const repository = await import('../../../CharakterDatenbank/assets/js/character-database-client.mjs');
     return repository.mergeOnlineAndLocalCharacter(online, local);
   }
-  return Object.freeze({ loadMissing, getFull: id => full.get(String(id)), mergeRecord });
+  return Object.freeze({ loadMissing, getFull: id => full.get(String(id)), mergeRecord,
+    async loadFull(id) {
+      const entry = entriesById.get(String(id));
+      return entry ? loadEntry(entry) : full.get(String(id));
+    }
+  });
 }

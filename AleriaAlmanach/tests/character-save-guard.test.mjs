@@ -13,6 +13,41 @@ import {
   selectChangedSections
 } from '../modules/characters/character-save-guard.js';
 import { sanitizeCharacterCombatProfile } from '../modules/combat/combat-profile-model.js';
+import { saveCharacterContent } from '../modules/characters/character-content-firebase.js';
+
+test('existing content saves keep the ordinary merge queue and existing owner fields', async () => {
+  const calls = [];
+  const data = { portrait: '/portrait.png' };
+  const result = await saveCharacterContent({ reference: 'existing', userId: 'another-player', data,
+    getDoc: async () => ({ exists: () => true }),
+    setDoc: async (...args) => calls.push(args),
+    runTransaction: () => { throw Error('Existing content needs no transaction'); }
+  });
+  assert.equal(result, data);
+  assert.deepEqual(calls, [['existing', data, { merge: true }]]);
+});
+
+test('first content saves recheck existence atomically and preserve a concurrent creator', async () => {
+  for (const createdConcurrently of [false, true]) {
+    const writes = [];
+    const data = { portrait: '/portrait.png' };
+    const persisted = await saveCharacterContent({ db: 'db', reference: 'local', userId: 'player', data,
+      source: { name: 'Local figure', identity: { worldPersonId: 'world' }, inventory: { revision: 0 } },
+      getDoc: async () => ({ exists: () => false }),
+      setDoc: () => { throw Error('Creation must use a transaction'); },
+      runTransaction: async (db, callback) => {
+        assert.equal(db, 'db');
+        return callback({ get: async () => ({ exists: () => createdConcurrently }),
+          set: (reference, write, options) => writes.push({ reference, write, options }) });
+      }
+    });
+    assert.deepEqual(writes, [{ reference: 'local', write: persisted, options: { merge: true } }]);
+    assert.deepEqual(persisted, createdConcurrently ? data : {
+      name: 'Local figure', identity: { worldPersonId: 'world' }, ...data, ownerUid: 'player', createdBy: 'player'
+    });
+    assert.equal(persisted.inventory, undefined);
+  }
+});
 
 test('sanitizeCharacterBiographyForFirestore wandelt [label, wert]-Paare in {label, value}-Objekte, damit Firestore keine verschachtelten Arrays sieht', () => {
   const input = { name: 'Ifor', biography: { stats: [['Titel', 'Ritter'], ['Alter', '28']], quote: 'x' } };

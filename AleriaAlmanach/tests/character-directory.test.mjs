@@ -36,7 +36,7 @@ function harness(backend) {
     characterWorldIdentitiesConflict: () => false,
     getCharacterWorldIdentity: record => record.identity?.worldPersonId || '',
     loadCharacterTabData: async () => {},
-    loadLocalCharacterDirectoryState: async () => ({ loadMissing: async () => {}, getFull: () => null }),
+    loadLocalCharacterDirectoryState: async () => ({ loadMissing: async () => {}, loadFull: async () => null }),
     loadCharacters: () => { throw Error('The register must not load the entire character collection'); },
     getAllCharacterRecords: () => context.records,
     getCharacterById: id => context.records.find(record => record.id === id) || null,
@@ -155,4 +155,34 @@ test('the existing local index supplements online metadata and reads only missin
   for (const heavy of ['inventory', 'bio', 'imageSets']) assert.equal(projected[heavy], undefined);
   assert.equal(repository.getFull('local-id').inventory.revision, 9);
   assert.equal(registry.records[0].name, undefined, 'source index is not modified');
+});
+
+test('an online avatar override still hydrates its complete local profile on demand', async () => {
+  const calls = [];
+  const registry = { schema: 'aleria.character-registry', records: [{
+    recordId: 'local-person', firestoreDocumentId: 'person-local', firestoreDocumentIds: ['person-local'],
+    worldPersonId: 'world-local', path: 'records/familien/test/local/character.json'
+  }] };
+  const local = { schema: 'aleria.character-record', recordId: 'local-person', character: {
+    id: 'person-local', name: 'Local person', bio: 'Complete biography',
+    inventory: { revision: 7, items: [{ id: 'existing-item' }] },
+    combatProfile: { revision: 9, hitPoints: { current: 3 } }, identity: { worldPersonId: 'world-local' }
+  } };
+  const repository = createLocalCharacterDirectory({ fetch: async url => {
+    calls.push(url.pathname);
+    return { ok: true, json: async () => url.pathname.endsWith('registry.json') ? registry : local };
+  } });
+  const online = { id: 'online-alias', name: 'Local person', identity: { worldPersonId: 'world-local' }, portrait: '/new.png' };
+  await repository.loadMissing([online]);
+  assert.equal(calls.length, 1, 'a matching register summary needs no full profile read');
+  const complete = await repository.loadFull('online-alias');
+  const merged = await repository.mergeRecord(online, complete);
+  assert.equal(calls.length, 2);
+  assert.equal(merged.id, 'online-alias');
+  assert.equal(merged.portrait, '/new.png');
+  assert.equal(merged.bio, 'Complete biography');
+  assert.equal(merged.inventory.revision, 7);
+  assert.equal(merged.combatProfile.hitPoints.current, 3);
+  await repository.loadFull('online-alias');
+  assert.equal(calls.length, 2, 'the full local record is reused');
 });

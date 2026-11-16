@@ -56,6 +56,13 @@ service cloud.firestore {
         || (isModerator() && request.resource.data.get('itemOrigin', null) == resource.data.get('itemOrigin', null));
     }
 
+    function changesOnlyCreatureImages() {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+        'imageSetSchemaVersion', 'imageSets', 'activeImageSetId', 'portrait', 'portraitCaption',
+        'avatars', 'emotes', 'emotesOverride', 'imageSetsOverride', 'updatedAt'
+      ]);
+    }
+
     function pureTimeMarker(data) {
       return data.get('sceneTimeEvent', null) is map
         && data.get('sceneRest', null) == null
@@ -131,7 +138,7 @@ service cloud.firestore {
       allow create: if signedIn() && request.resource.data.ownerUid == request.auth.uid && !canonicalInventory(request.resource.data)
         && !merchantOwnedCreature(request.resource.data);
       allow update: if signedIn()
-        && preservesMerchantCreatureBinding()
+        && (changesOnlyCreatureImages() || preservesMerchantCreatureBinding())
         && (!(canonicalInventory(resource.data) || canonicalInventory(request.resource.data)) || !changesCombatRelevantProfile())
         && (!changesCombatRelevantProfile() || !combatProfileLocked('creatures', recordId));
       allow delete: if signedIn() && !combatProfileLocked('creatures', recordId)

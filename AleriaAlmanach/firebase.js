@@ -20,6 +20,7 @@
 
     import { createCalendarRepository } from './modules/calendar/calendar-repository.mjs';
     import { createCharacterDirectoryReader } from './modules/characters/character-directory-firebase.mjs';
+    import { saveCharacterContent } from './modules/characters/character-content-firebase.js';
     import { createItemRegisterFirebase } from './modules/item-register/item-register-firebase.js';
     import { createItemDefinitionsFirebase } from './modules/item-definitions/item-definition-firebase.js';
     import { createQuestBackupClient } from './modules/quests/quest-backup-client.js';
@@ -1093,13 +1094,12 @@
             || Object.prototype.hasOwnProperty.call(safeData, 'inventory')
             || Object.prototype.hasOwnProperty.call(safeData, 'genealogy');
 
-          // Reine Profil-, Archiv- und Avatar-Patches verändern keine
-          // revisionsgeschützten Mechanikfelder. Sie bleiben normale Merge-Writes, damit die
-          // Firestore-Warteschlange sie auch bei einer kurzen Verbindungsunterbrechung annehmen
-          // kann. Atomare Transaktionen sind den konfliktkritischen Pfaden vorbehalten.
+          // Auch veröffentlichte lokale Figuren können noch ohne Onlineakte sein.
+          // Die erste Inhaltsspeicherung ergänzt Ersteller und Identität atomar.
           if (!needsProtectedTransaction) {
-            await setDoc(ref, safeData, { merge: true });
-            return options.returnWriteResult === true ? { id, data: safeData } : id;
+            const persisted = await saveCharacterContent({ db, reference: ref, getDoc, setDoc, runTransaction,
+              data: safeData, source: known || {}, userId: user.uid });
+            return options.returnWriteResult === true ? { id, data: persisted } : id;
           }
           // Manche Aufrufer (z. B. der Stammbaum-Import) vergeben für eine NEUE Figur bewusst eine
           // vorbestimmte ID (worldPersonId), damit Dokument-ID und Stammbaum-Identität übereinstimmen,
@@ -1273,6 +1273,12 @@
       async saveCreature(id, data, options = {}) {
         const user = await requireFirebaseUser();
         const known = id && globalThis.AleriaCreatures?.getAll?.().find(creature => creature.id === id);
+        const imageFields = ['imageSetSchemaVersion', 'imageSets', 'activeImageSetId', 'portrait', 'portraitCaption', 'avatars', 'emotes', 'emotesOverride', 'imageSetsOverride', 'updatedAt'];
+        if (id && Object.keys(data || {}).every(field => imageFields.includes(field))) {
+          const persisted = await saveCharacterContent({ db, reference: doc(db, 'creatures', id), getDoc, setDoc, runTransaction,
+            data: data || {}, source: known || {}, userId: user.uid });
+          return options.returnRecord ? { ...known, ...persisted, id } : id;
+        }
         if ((data?.inventory || data?.combatProfile || options.replaceExisting) &&
           (data?.inventory?.definitionSchemaVersion === 1 || data?.inventory?.items?.some(item => item.definitionRef) || known?.inventory?.definitionSchemaVersion === 1
           || known?.inventory?.items?.some(item => item.definitionRef))) {

@@ -5,7 +5,9 @@ import {
   assertSucceeds,
   initializeTestEnvironment
 } from '@firebase/rules-unit-testing';
-import { deleteDoc, doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
+import assert from 'node:assert/strict';
+import { deleteDoc, doc, getDoc, setDoc, updateDoc, runTransaction } from 'firebase/firestore';
+import { saveCharacterContent } from '../../AleriaAlmanach/modules/characters/character-content-firebase.js';
 
 const PROJECT_ID = process.env.ALERIA_RULES_TEST_PROJECT || 'aleria-default-rules-test';
 if (process.env.ALERIA_RULES_TEST_PROJECT && !PROJECT_ID.startsWith('demo-')) throw Error('An isolated rules project must use a demo- project ID.');
@@ -35,6 +37,84 @@ before(async () => {
 
 after(async () => environment?.cleanup());
 test.beforeEach(async () => environment.clearFirestore());
+
+test('first avatar and editorial saves create a local figure online with its original identity', async () => {
+  const player = environment.authenticatedContext('ordinary-player').firestore();
+  for (const data of [
+    { portrait: '/portrait.png', emotes: [{ img: '/avatar.png', label: 'Freude' }], imageSets: [{ id: 'standard' }], updatedAt: 'now' },
+    { bio: 'An edited description', updatedAt: 'now' },
+    { archived: true, updatedAt: 'now' }
+  ]) {
+    const reference = doc(player, 'characters', `local-${Object.keys(data)[0]}`);
+    await assertSucceeds(saveCharacterContent({ db: player, reference, getDoc, setDoc, runTransaction, data,
+      source: { name: 'Local test figure', identity: { worldPersonId: 'world-test' }, inventory: { items: [{ id: 'ignored' }] } },
+      userId: 'ordinary-player' }));
+    const stored = (await getDoc(reference)).data();
+    assert.equal(stored.name, 'Local test figure');
+    assert.equal(stored.ownerUid, 'ordinary-player');
+    assert.equal(stored.identity.worldPersonId, 'world-test');
+    assert.equal(stored.inventory, undefined);
+    assert.equal(stored.combatProfile, undefined);
+    for (const field of Object.keys(data)) assert.deepEqual(stored[field], data[field]);
+  }
+});
+
+test('ordinary players can save images on existing locked figures without copying other profile sections', async () => {
+  await environment.withSecurityRulesDisabled(async context => {
+    await setDoc(doc(context.firestore(), 'characters/existing'), { name: 'Existing', ownerUid: 'original-owner',
+      createdBy: 'original-creator', inventory: { definitionSchemaVersion: 1, items: [{ id: 'real-item' }], revision: 19 },
+      combatProfile: { revision: 23, hitPoints: { current: 1 } }, biography: { text: 'Keep this' } });
+    await setDoc(doc(context.firestore(), 'combat_profile_locks/characters/records/existing'), { activeEncounterKeys: ['encounter'] });
+  });
+  const player = environment.authenticatedContext('ordinary-player').firestore();
+  const reference = doc(player, 'characters/existing');
+  const before = (await getDoc(reference)).data();
+  await assertSucceeds(saveCharacterContent({ db: player, reference, getDoc, setDoc, runTransaction,
+    userId: 'ordinary-player', source: { name: 'Stale name', inventory: {} }, data: { portrait: '/new.png' } }));
+  assert.deepEqual((await getDoc(reference)).data(), { ...before, portrait: '/new.png' });
+});
+
+test('two first editorial saves preserve both changes and the initial creator', async () => {
+  const first = environment.authenticatedContext('first-player').firestore();
+  const second = environment.authenticatedContext('second-player').firestore();
+  await Promise.all([
+    saveCharacterContent({ db: first, reference: doc(first, 'characters/concurrent'), getDoc, setDoc, runTransaction,
+      userId: 'first-player', source: { name: 'Concurrent figure' }, data: { portrait: '/portrait.png' } }),
+    saveCharacterContent({ db: second, reference: doc(second, 'characters/concurrent'), getDoc, setDoc, runTransaction,
+      userId: 'second-player', source: { name: 'Concurrent figure' }, data: { bio: 'Concurrent description' } })
+  ]);
+  const stored = (await getDoc(doc(first, 'characters/concurrent'))).data();
+  assert.equal(stored.portrait, '/portrait.png');
+  assert.equal(stored.bio, 'Concurrent description');
+  assert.equal(stored.name, 'Concurrent figure');
+  assert(['first-player', 'second-player'].includes(stored.ownerUid));
+  assert.equal(stored.createdBy, stored.ownerUid);
+});
+
+test('creature image edits work during encounters and merchant binding with an ordinary login', async () => {
+  const player = environment.authenticatedContext('ordinary-player').firestore();
+  const reader = environment.unauthenticatedContext().firestore();
+  for (const sold of [false, true]) {
+    const id = sold ? 'sold-creature' : 'owned-creature';
+    const source = { name: 'Creature', ownerUid: 'original-owner', inventory: { definitionSchemaVersion: 1, items: [], revision: 7 },
+      combatProfile: { revision: 9, hitPoints: { current: 2 } }, loot: { items: [] },
+      itemOrigin: sold ? { disposition: 'sold', ownerMerchantId: 'merchant' } : { ownerCharacterId: 'original-character' } };
+    await environment.withSecurityRulesDisabled(async context => {
+      await setDoc(doc(context.firestore(), 'creatures', id), source);
+      await setDoc(doc(context.firestore(), 'combat_profile_locks/creatures/records', id), { activeEncounterKeys: ['encounter'] });
+    });
+    const reference = doc(player, 'creatures', id);
+    await assertSucceeds(updateDoc(reference, { portrait: '/new.png', avatars: [{ img: '/avatar.png', label: 'Neugierig' }] }));
+    const stored = (await getDoc(reference)).data();
+    assert.deepEqual(stored.inventory, source.inventory);
+    assert.deepEqual(stored.combatProfile, source.combatProfile);
+    assert.deepEqual(stored.itemOrigin, source.itemOrigin);
+    await assertFails(updateDoc(doc(reader, 'creatures', id), { portrait: '/anonymous.png' }));
+    await assertFails(updateDoc(reference, { portrait: '/newer.png', combatProfile: { revision: 10 } }));
+    await assertFails(updateDoc(reference, { inventory: { definitionSchemaVersion: 1, items: [] } }));
+    if (sold) await assertFails(updateDoc(reference, { portrait: '/newer.png', itemOrigin: { disposition: 'owned' } }));
+  }
+});
 
 test('Gruppenbuchungsbelege sind nur für Akteur und Spielleitung lesbar und für alle Browser schreibgeschützt', async () => {
   const actor = environment.authenticatedContext('owner').firestore(), stranger = environment.authenticatedContext('other').firestore();
