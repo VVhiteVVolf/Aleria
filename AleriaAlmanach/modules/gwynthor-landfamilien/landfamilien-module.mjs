@@ -6,6 +6,7 @@ import { LANDFAMILIEN_PLACES, landfamilienSceneImage, landfamilienSection } from
 import { buildLandfamilienHierarchy } from './landfamilien-hierarchy.mjs';
 import { buildLandfamilienBiography } from './landfamilien-biography.mjs';
 import { extendTirfelynHof } from '../tirfelyn-hof/hof-module.mjs';
+import { buildHofAreaModules } from '../tirfelyn-hof/hof-area-modules.mjs';
 
 const familyBySlug = { tirfelyn: TIRFELYN_FAMILY, helfaen: HELFAEN_FAMILY, marchwern: MARCHWERN_FAMILY };
 const paragraphs = texts => texts.map(text => `<p>${text}</p>`).join('');
@@ -55,12 +56,15 @@ export function buildLandfamilienModule(place) {
 }
 
 export function buildLandfamilienEntries() {
-  return LANDFAMILIEN_PLACES.map(buildLandfamilienModule);
+  return [...LANDFAMILIEN_PLACES.map(buildLandfamilienModule), ...buildHofAreaModules()];
 }
 
 export function buildLandfamilienRegistrations() {
-  return LANDFAMILIEN_PLACES.map(place => {
+  const registrations = LANDFAMILIEN_PLACES.map(place => {
     const section = landfamilienSection(place);
     return { tab: section.tab, path: section.path, description: section.desc, icon: section.icon, entry: buildLandfamilienModule(place) };
   });
+  const farm = landfamilienSection(LANDFAMILIEN_PLACES[0]);
+  return [...registrations, ...buildHofAreaModules().map(entry => ({ tab: farm.tab, path: [...farm.path, entry.title],
+    description: entry.subtitle, icon: entry.previewImage, entry }))];
 }

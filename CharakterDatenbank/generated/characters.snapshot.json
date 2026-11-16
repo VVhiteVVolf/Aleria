@@ -249654,7 +249654,7 @@
       },
       "fraktion": "Tirfelyn-Hof",
       "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/torleif-v1.png",
-      "bio": "Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und wohnt im südlich anschließenden Haus. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.",
+      "bio": "Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und bewohnt einen eigenen Wohnteil, der direkt an Hallvards und Rannveigs Haus angebaut ist. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.",
       "biography": {
         "schema": "aleria.biography-module",
         "schemaVersion": 1,
@@ -249674,13 +249674,13 @@
           },
           {
             "label": "Wohnort",
-            "value": "Haus südlich des Holzfällerarbeitsplatzes"
+            "value": "Torleifs Wohnteil, direkt an Hallvards und Rannveigs Haus angebaut"
           }
         ],
         "biography": {
           "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/torleif-v1.png",
           "biographyTitle": "Holzfäller, Hallvards jüngerer Bruder",
-          "biographyText": "<p>Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und wohnt im südlich anschließenden Haus. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.</p>",
+          "biographyText": "<p>Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und bewohnt einen eigenen Wohnteil, der direkt an Hallvards und Rannveigs Haus angebaut ist. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.</p>",
           "historyTitle": "Am Tirfelyn-Hof",
           "historyText": "<p>Der Familienhof versorgt Gwynthor mit Vieh, Getreide und Gemüse. Caradog und Eudaf Tirfelyn führen ihn gemeinsam; die Bediensteten ergänzen die Arbeit der Familie.</p>",
           "documentsTitle": "Hof und Arbeitsort",
@@ -249693,14 +249693,14 @@
           ]
         }
       },
-      "currentLocation": "Haus südlich des Holzfällerarbeitsplatzes · Tirfelyn-Hof · Gwynthor",
+      "currentLocation": "Torleifs Wohnteil, direkt an Hallvards und Rannveigs Haus angebaut · Tirfelyn-Hof · Gwynthor",
       "archived": false,
       "aliases": [],
       "localRecord": {
         "recordId": "character--person--tirfelyn-hof--torleif",
         "path": "records/orte/gwynthor/torleif--person--tirfelyn-hof--torleif/character.json",
         "schemaVersion": 1,
-        "contentHash": "9bf3c2465177d3884c5b696b04b02fbdf775daf07a3700ab21b4817e32d933f2",
+        "contentHash": "90060c0d51fd347d9bae04da741625eb2735e841f104e36583b53fe94a9b40b1",
         "firestoreDocumentIds": [
           "person--tirfelyn-hof--torleif"
         ],

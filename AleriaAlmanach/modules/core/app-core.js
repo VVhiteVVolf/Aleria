@@ -491,6 +491,11 @@ function normalizeEntryForEditor(entry) {
     ? migrateModuleEntryContent(entry || {})
     : (entry || {});
   const clone = deepClone(source);
+  const threadPattern = /^[\w.-]{1,160}::(?:session|page):[a-z0-9-]{1,64}$/i;
+  const threadAliases = (Array.isArray(clone.commentThreadAliases) ? clone.commentThreadAliases : [])
+    .filter(alias => typeof alias?.from === 'string' && typeof alias?.to === 'string'
+      && threadPattern.test(alias.from) && threadPattern.test(alias.to))
+    .slice(0, 100).map(alias => ({ from: alias.from, to: alias.to }));
   const pages = clone.multipage
     ? (clone.pages || []).filter(page => page && !page._commentsPage).map(page => sanitizeModulePage(page)).filter(Boolean)
     : [sanitizeModulePage({
@@ -527,6 +532,7 @@ function normalizeEntryForEditor(entry) {
     enablePageComments: !!clone.enablePageComments,
     sessionCast: getModuleCastIdsFromSource(clone),
     sessionCastDetails: getModuleCastDetailsFromSource(clone),
+    ...(threadAliases.length ? { commentThreadAliases: threadAliases } : {}),
     pages: pages.length ? pages : [sanitizeModulePage({ pageTitle: 'I. — Neue Seite', description: '' })],
   };
 }

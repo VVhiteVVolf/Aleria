@@ -9,6 +9,7 @@ import { hofMapMarker, HOF_MARKER_DEFINITIONS } from '../modules/tirfelyn-hof/ho
 import { peopleGroups } from '../modules/people/people-model.mjs';
 import { layoutRosterPopup } from '../modules/place-roster/place-roster-layout.mjs';
 import { projectTirfelynOriginalPinImages, projectTirfelynOriginalPins } from './support/tirfelyn-hof-pin-history.mjs';
+import { hofSceneDestination } from '../../shared/tirfelyn-hof/hof-areas.mjs';
 
 const root = new URL('../../', import.meta.url);
 test('older map-image guards project only the reviewed Tirfelyn change and reject unrelated edits', async () => {
@@ -94,7 +95,7 @@ test('the registered local farm map uses one supplied image for normal and marke
   assert.ok(!JSON.stringify(config).includes('Beschriftet'));
 });
 
-test('all sixteen mapped places have a small pictured table and link to their own native scene', async () => {
+test('all sixteen mapped places have seven meaningful facts and link to the correct area scene', async () => {
   const source = await readFile(new URL('../assets/js/karto-app.js', import.meta.url), 'utf8');
   const context = vm.createContext({ esc: text => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') });
   vm.runInContext(source.match(/function fmtText\(t\)\{[\s\S]*?\n\}/)[0], context);
@@ -106,11 +107,27 @@ test('all sixteen mapped places have a small pictured table and link to their ow
     const pin = map.state.pins.find(pin => pin.id === `tirfelyn-${poi.key}`);
     assert.deepEqual([pin.x, pin.y], poi.position);
     assert.equal(pin.img, poi.image);
-    assert.equal(pin.table.length, 2);
-    assert.ok(pin.table[0].v.length > 0);
-    assert.ok(pin.text.includes(encodeURIComponent(`tirfelyn-hof::session:tirfelyn-hof-poi-${poi.key}`)));
-    assert.match(context.fmtText(pin.text), /<a href="\/AleriaAlmanach\/AleriaAlmanach\.html\?entry=tirfelyn-hof&amp;thread=/);
+    assert.equal(pin.table.length, 7);
+    assert.ok(pin.table.every(row => row.k && row.v.trim()));
+    assert.equal(new Set(pin.table.map(row => row.k)).size, 7);
+    assert.equal(pin.table.find(row => row.k === 'Eigentümer').v, 'Familie Tirfelyn');
+    const target = hofSceneDestination(poi);
+    assert.ok(pin.text.includes(encodeURIComponent(target.threadId)));
+    assert.ok(context.fmtText(pin.text).includes(`?entry=${target.entryId}&amp;thread=`));
   }
+});
+
+test('only farm icons double in scale and the attached woodcutters homes keep their stable identities', () => {
+  const map = buildHofMap();
+  assert(map.state.pins.every(pin => pin.pinMarkerScale === 0.75 * 2));
+  assert.equal(map.state.dotSize, 22);
+  const hallvard = map.state.pins.find(pin => pin.id === 'tirfelyn-holzfaellerhaus-ost');
+  const torleif = map.state.pins.find(pin => pin.id === 'tirfelyn-holzfaellerhaus-sued');
+  assert(torleif.x > hallvard.x);
+  assert(Math.hypot(hallvard.x - torleif.x, hallvard.y - torleif.y) < 0.025);
+  assert(torleif.y < 0.14, 'Torleif must not be placed on the separate southern shed');
+  assert.match(torleif.table.find(row => row.k === 'Lage').v, /angebaut/);
+  assert.equal(torleif.table.find(row => row.k === 'Bewohner').v, 'Torleif');
 });
 
 test('the independent people layer assigns all twenty-eight living humans to their actual nine homes', async () => {

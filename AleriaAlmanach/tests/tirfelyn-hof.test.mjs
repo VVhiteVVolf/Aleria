@@ -5,6 +5,7 @@ import vm from 'node:vm';
 import { HOF_STAFF, HOF_HOUSING } from '../../shared/tirfelyn-hof/hof-residents.mjs';
 import { HOF_POIS, HOF_MAPPED_POIS } from '../../shared/tirfelyn-hof/hof-pois.mjs';
 import { HOF_ANIMALS } from '../../shared/tirfelyn-hof/hof-animals.mjs';
+import { HOF_AREAS, HOF_SCENE_RELOCATIONS, hofAreaFor } from '../../shared/tirfelyn-hof/hof-areas.mjs';
 import { buildLandfamilienEntries } from '../modules/gwynthor-landfamilien/landfamilien-module.mjs';
 import { buildHofCharacterExports } from '../modules/tirfelyn-hof/hof-characters.mjs';
 import { getBuiltinCreatureTemplates } from '../modules/creatures/creature-catalog.js';
@@ -15,12 +16,17 @@ const readJson = async path => JSON.parse(await readFile(new URL(path, root), 'u
 
 test('every farm place is an independently addressable scene and the two original threads survive', () => {
   const [entry, helfaen, marchwern] = buildLandfamilienEntries();
-  assert.equal(entry.pages.length, 43);
-  assert.equal(entry.pages.filter(page => page.sessionPage).length, 37);
+  const farmEntries = buildLandfamilienEntries().filter(entry => entry.id.startsWith('tirfelyn-hof'));
+  assert.equal(farmEntries.length, 7);
+  assert.equal(entry.pages.length, 15);
+  assert.equal(farmEntries.flatMap(entry => entry.pages.filter(page => page.sessionPage)).length, 37);
   assert.deepEqual(entry.pages.slice(4, 6).map(page => page.commentThreadKey), ['tirfelyn-szene-aussen', 'tirfelyn-szene-wohnstube']);
-  assert.equal(new Set(entry.pages.map(page => page.commentThreadKey)).size, 43);
+  assert.equal(new Set(farmEntries.flatMap(entry => entry.pages.map(page => page.commentThreadKey))).size, 49);
+  assert.deepEqual(HOF_AREAS.flatMap(area => area.poiKeys).sort(), HOF_POIS.map(poi => poi.key).sort());
+  assert.deepEqual(farmEntries.map(entry => entry.pages.length), [15, 4, 3, 3, 5, 10, 9]);
   for (const poi of HOF_POIS) {
-    const page = entry.pages.find(page => page.commentThreadKey === `tirfelyn-hof-poi-${poi.key}`);
+    const owner = farmEntries.find(entry => entry.id === hofAreaFor(poi).id);
+    const page = owner.pages.find(page => page.commentThreadKey === `tirfelyn-hof-poi-${poi.key}`);
     assert.equal(page.sessionPage, true, poi.title);
     assert.equal(page.image, poi.image);
     assert.match(page.sessionIntro, /karte.html\?map=/);
@@ -104,17 +110,40 @@ test('every selected scene, dog and staff portrait has an actual separate 2:3 PN
 test('real thread routing makes each map scene link resolve to its intended page', async () => {
   const context = vm.createContext({});
   vm.runInContext(await readFile(new URL('../modules/comments/comments-routing.js', import.meta.url), 'utf8'), context);
-  const entry = buildLandfamilienEntries()[0];
-  for (const page of entry.pages.filter(page => page.sessionPage)) {
+  for (const entry of buildLandfamilienEntries()) for (const page of entry.pages.filter(page => page.sessionPage)) {
     const thread = context.getSessionThreadId(entry.id, context.getPageCommentThreadKey(page, entry.pages.indexOf(page)));
     assert.equal(context.parseCommentThreadLocation(thread).pageKey, page.commentThreadKey);
   }
 });
 
+test('old scene links resolve only to their unique relocated page and current pages take precedence', async () => {
+  const entries = buildLandfamilienEntries(), sections = [{ entries }];
+  const context = vm.createContext({ getPages: entry => entry.pages });
+  vm.runInContext(await readFile(new URL('../modules/comments/comments-routing.js', import.meta.url), 'utf8'), context);
+  assert.equal(HOF_SCENE_RELOCATIONS.length, 28);
+  for (const relocation of HOF_SCENE_RELOCATIONS) {
+    const target = context.findCommentThreadDestination(relocation.oldThreadId, sections);
+    assert.equal(target.entry.id, relocation.entryId);
+    assert.equal(target.threadId, relocation.threadId);
+    assert.equal(context.getCommentThreadForPage(target.entry.pages[target.pageIndex], target.entry, target.pageIndex).threadId, relocation.threadId);
+  }
+  const oldId = HOF_SCENE_RELOCATIONS[0].oldThreadId;
+  const duplicate = structuredClone(entries.find(entry => entry.id === HOF_SCENE_RELOCATIONS[0].entryId));
+  duplicate.id = 'unrelated-copy';
+  assert.equal(context.findCommentThreadDestination(oldId, [...sections, { entries: [duplicate] }]).entry.id, HOF_SCENE_RELOCATIONS[0].entryId,
+    'Cloning a module cannot claim the original destination aliases');
+  duplicate.commentThreadAliases = duplicate.commentThreadAliases.map(alias => ({ ...alias, to: alias.to.replace(HOF_SCENE_RELOCATIONS[0].entryId, duplicate.id) }));
+  assert.equal(context.findCommentThreadDestination(oldId, [...sections, { entries: [duplicate] }]), null);
+  const legacy = { id: 'tirfelyn-hof', pages: [{ sessionPage: true, commentThreadKey: 'tirfelyn-hof-poi-holzfaellerlager' }] };
+  assert.equal(context.findCommentThreadDestination(oldId, [...sections, { entries: [legacy] }]).entry, legacy);
+  assert.equal(context.findCommentThreadDestination('unrelated::session:tirfelyn-hof-poi-holzfaellerlager', sections), null);
+});
+
 test('the existing server projection retains every expanded scene without manufacturing merchant offers', () => {
-  const entry = buildLandfamilienEntries()[0];
+  for (const entry of buildLandfamilienEntries()) {
   const projection = projectBuiltinTradeModule(entry, { tab: 'Völker & Kulturen', path: ['Tirfelyn-Hof'] });
   assert.deepEqual(projection.entry.pages.filter(page => page.sessionPage).map(page => page.commentThreadKey),
     entry.pages.filter(page => page.sessionPage).map(page => page.commentThreadKey));
   assert.ok(!projection.entry.pages.some(page => page.tradeCatalogPage || page.goodsTablePage));
+  }
 });

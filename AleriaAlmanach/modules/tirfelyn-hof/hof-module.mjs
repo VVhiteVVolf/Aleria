@@ -4,6 +4,7 @@ import { HOF_MAP_ID } from '../../../shared/tirfelyn-hof/hof-pois.mjs';
 import { HOF_FAMILY_RESIDENTS } from '../../../shared/tirfelyn-hof/hof-household.mjs';
 import { hofStaffGroups } from './hof-people.mjs';
 import { buildHofScenes } from './hof-scenes.mjs';
+import { hofAreaDirectory } from './hof-area-modules.mjs';
 
 function extendHierarchy(original) {
   const hierarchy = structuredClone(original);
@@ -40,6 +41,7 @@ export function extendTirfelynHof(entry) {
   const pages = structuredClone(entry.pages);
   pages[0].description += `<p>Zwölf weitere Bewohner unterstützen den Familienbetrieb. Die sechs Bedienstetenhütten und die beiden Holzfällerhäuser sind festen Haushalten zugeordnet. Ein Wachhund und zwei Herdenhunde gehören zum Hof.</p><p><a href="../Karten/karte.html?map=${HOF_MAP_ID}" target="_blank" rel="noopener">Die Ortskarte des Tirfelyn-Hofs öffnen</a></p>`;
   pages[0].stats.push(['Weitere Bewohner', '12'], ['Hoftiere', 'Bryn · Rhos · Cwm']);
+  pages[0].description += hofAreaDirectory();
   pages[1].hierarchy = extendHierarchy(pages[1].hierarchy);
   pages.push({ schemaVersion: 1, pageTitle: 'Die Bediensteten und ihre Haushalte', commentThreadKey: 'tirfelyn-hof-bedienstete',
     image: HOF_STAFF[0].portrait, imageWidth: 30, imageTall: true, imageFit: 'cover',
@@ -49,6 +51,6 @@ export function extendTirfelynHof(entry) {
     image: HOF_ANIMALS[0].portrait, imageWidth: 34, imageTall: true, imageFit: 'cover',
     description: HOF_ANIMALS.map(animal => `<p><strong>${animal.name} · ${animal.species} · ${animal.age} Jahre.</strong> ${animal.bio}</p><p><a href="../Bestiarium/tiere/vieh/haustiere/hunde/${animal.bestiaryId}/index.html" target="_blank" rel="noopener">Zum Rasseprofil</a></p>`).join(''),
     stats: [['Besitz', 'Familie Tirfelyn'], ['Betreuung', 'Eudaf Tirfelyn; bei den Herden auch Maldwyn']] });
-  pages.push(...buildHofScenes());
+  pages.push(...buildHofScenes(entry.id));
   return { ...entry, pages, sessionCast: [...entry.sessionCast, ...HOF_STAFF.map(person => person.id), ...HOF_ANIMALS.map(animal => animal.id)] };
 }

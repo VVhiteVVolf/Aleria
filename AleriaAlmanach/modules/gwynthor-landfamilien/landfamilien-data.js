@@ -70,7 +70,7 @@
           "imageTall": true,
           "imageFit": "cover",
           "imagePosition": "center",
-          "description": "<p>Der Tirfelyn-Hof liegt unmittelbar vor Gwynthor. Hier gehören Viehhaltung, Getreidefelder und Gemüsewirtschaft zu einem gemeinsamen Familienbetrieb. Die Arbeit reicht vom Futter am Morgen bis zur Vorbereitung der nächsten Lieferung in die Stadt.</p><p>Zwei Brüder führen den Hof miteinander. Ihre Angehörigen übernehmen eigene Aufgaben in Stall, Feld, Garten, Vorratshaltung und Hauswirtschaft. Die jüngeren Kinder helfen bei überschaubaren Handgriffen und lernen den Betrieb an der Seite der Erwachsenen kennen.</p><p>Seit wenigen Wochen fehlt eine der Töchter am Familientisch. Die zweiundzwanzigjährige Ceridwen wollte ihren Verlobten bei den Helfaen besuchen und kam am nächsten Morgen nicht zurück. Sie wurde 1740 Opfer des Fleischsammlers. Der Verlust begleitet die Familie auch während der nötigen täglichen Arbeit.</p><p>Zwölf weitere Bewohner unterstützen den Familienbetrieb. Die sechs Bedienstetenhütten und die beiden Holzfällerhäuser sind festen Haushalten zugeordnet. Ein Wachhund und zwei Herdenhunde gehören zum Hof.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Die Ortskarte des Tirfelyn-Hofs öffnen</a></p>",
+          "description": "<p>Der Tirfelyn-Hof liegt unmittelbar vor Gwynthor. Hier gehören Viehhaltung, Getreidefelder und Gemüsewirtschaft zu einem gemeinsamen Familienbetrieb. Die Arbeit reicht vom Futter am Morgen bis zur Vorbereitung der nächsten Lieferung in die Stadt.</p><p>Zwei Brüder führen den Hof miteinander. Ihre Angehörigen übernehmen eigene Aufgaben in Stall, Feld, Garten, Vorratshaltung und Hauswirtschaft. Die jüngeren Kinder helfen bei überschaubaren Handgriffen und lernen den Betrieb an der Seite der Erwachsenen kennen.</p><p>Seit wenigen Wochen fehlt eine der Töchter am Familientisch. Die zweiundzwanzigjährige Ceridwen wollte ihren Verlobten bei den Helfaen besuchen und kam am nächsten Morgen nicht zurück. Sie wurde 1740 Opfer des Fleischsammlers. Der Verlust begleitet die Familie auch während der nötigen täglichen Arbeit.</p><p>Zwölf weitere Bewohner unterstützen den Familienbetrieb. Die sechs Bedienstetenhütten und die beiden Holzfällerhäuser sind festen Haushalten zugeordnet. Ein Wachhund und zwei Herdenhunde gehören zum Hof.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Die Ortskarte des Tirfelyn-Hofs öffnen</a></p><p>Die Orte des Hofes sind nach Haushalten und Arbeitsbereichen zusammengefasst.</p><ul><li><a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof\">Familie Tirfelyn</a> · Die Familie, ihre Geschichte und ihre eigenen Wohn- und Arbeitsorte.</li><li><a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-holzfaeller\">Holzfäller und Waldhäuser</a> · Hallvard, Rannveig und Torleif am Holzfällerlager und in den beiden aneinandergebauten Wohnhäusern.</li><li><a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-muehle\">Mühle und Müllerhaus</a> · Meirigs Hofmühle und der gemeinsame Haushalt mit Gwenneth, Iorfin und Eifor.</li><li><a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-hufschmiede\">Hufschmiede und Schmiedehaus</a> · Cynfarchs Arbeitsplatz und seine Wohnhütte auf dem Hof.</li><li><a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-hofhelfer\">Hofhelfer und Hütten</a> · Die Wohnhütten von Nefydd, Rhufon, Maldwyn und Eiluned und ihre Aufgaben im Hofalltag.</li><li><a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden\">Felder und Weiden</a> · Die gemeinsam bewirtschafteten Äcker und Weiden des Tirfelyn-Hofs.</li><li><a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof\">Wirtschaftsgebäude und Vorräte</a> · Gemeinsame Speicher, Lager, Brunnen und das Schweinegehege rund um die Wirtschaftsgebäude.</li></ul>",
           "stats": [
             [
               "Ort",
@@ -355,7 +355,7 @@
                         "title": "Torleif",
                         "subtitle": "Holzfäller, Hallvards jüngerer Bruder · 33 Jahre",
                         "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/torleif-v1.png",
-                        "text": "<p>Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und wohnt im südlich anschließenden Haus. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.</p><p><strong>Wohnort:</strong> Haus südlich des Holzfällerarbeitsplatzes.</p><p><a href=\"../AleriaAlmanach/AleriaAlmanach.html?character=person--tirfelyn-hof--torleif\" target=\"_blank\" rel=\"noopener\">Figurenakte öffnen</a></p>"
+                        "text": "<p>Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und bewohnt einen eigenen Wohnteil, der direkt an Hallvards und Rannveigs Haus angebaut ist. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.</p><p><strong>Wohnort:</strong> Torleifs Wohnteil, direkt an Hallvards und Rannveigs Haus angebaut.</p><p><a href=\"../AleriaAlmanach/AleriaAlmanach.html?character=person--tirfelyn-hof--torleif\" target=\"_blank\" rel=\"noopener\">Figurenakte öffnen</a></p>"
                       }
                     ]
                   }
@@ -595,7 +595,7 @@
           "imageWidth": 30,
           "imageTall": true,
           "imageFit": "cover",
-          "description": "<p><strong>Hallvard, 38 Jahre.</strong> Hallvard ist ein kräftiger aldrimarischer Holzfäller von 38 Jahren. Gemeinsam mit seinem jüngeren Bruder Torleif bereitet er Bau- und Brennholz für den Tirfelyn-Hof auf. Mit seiner Frau Rannveig wohnt er im Haus östlich des Holzfällerlagers. Sein einzelner blonder Zopf, der Kotlettenbart und alte Narben machen ihn leicht erkennbar.</p><p><strong>Torleif, 33 Jahre.</strong> Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und wohnt im südlich anschließenden Haus. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.</p><p><strong>Rannveig, 35 Jahre.</strong> Rannveig ist 35 Jahre alt und mit Hallvard verheiratet. Sie sammelt Beeren und Kräuter in den Wäldern um den Tirfelyn-Hof und bringt ihre Funde in die Vorratshaltung der Familie ein. Die blonde, sommersprossige Frau wohnt mit ihrem Mann beim Holzfällerlager.</p><p><strong>Meirig, 43 Jahre.</strong> Meirig ist der 43-jährige Müller des Tirfelyn-Hofs. Der freundliche, etwas beleibte Mann mit braunem Haar und Halbglatze verarbeitet das Getreide der Familie zu Mehl und Schrot. Er wohnt mit seiner Frau Gwenneth und den Söhnen Iorfin und Eifor in der größeren vierten Bedienstetenhütte.</p><p><strong>Gwenneth, 39 Jahre.</strong> Die 39-jährige Gwenneth führt den Haushalt der Müllerfamilie. Mit Meirig und ihren beiden Söhnen Iorfin und Eifor bewohnt sie die vierte Bedienstetenhütte. Sie ist eine schlichte, kräftige Frau, die sich um Mahlzeiten, Wäsche und den Alltag ihrer Familie kümmert.</p><p><strong>Iorfin, 12 Jahre.</strong> Iorfin ist zwölf Jahre alt und der ältere Sohn von Meirig und Gwenneth. Der braunhaarige Junge hilft seinem Vater mit leichten Handgriffen in der Hofmühle und lernt die Arbeit unter Aufsicht kennen. Er wohnt mit seinen Eltern und seinem jüngeren Bruder Eifor in der vierten Bedienstetenhütte.</p><p><strong>Eifor, 9 Jahre.</strong> Der neunjährige Eifor ist Meirigs und Gwenneths jüngerer Sohn. Er hat braunes Haar und begleitet seinen älteren Bruder Iorfin zu kleinen Hilfsarbeiten an der Mühle. Gefährliche Arbeiten und die Bedienung der Mühlentechnik bleiben Sache der Erwachsenen.</p><p><strong>Cynfarch, 24 Jahre.</strong> Cynfarch ist ein 24-jähriger Hufschmied aus Bronhir. Der freundliche, kräftige junge Mann mit dunkelrotem Haar beschlägt die Hofpferde und repariert eiserne Beschläge und kleinere Gerätschaften. Er arbeitet in der offenen Hofschmiede und wohnt in der fünften Bedienstetenhütte.</p><p><strong>Nefydd, 35 Jahre.</strong> Nefydd ist ein stiller Feldknecht von 35 Jahren und bewohnt die nördlichste Bedienstetenhütte. Er unterstützt Gwallog bei Feldarbeit und Ernte. Sein braunes Haar steht unordentlich ab, sein Blick wirkt oft abwesend und gleichförmig. Er hatte Zuneigung für die verstorbene Ceridwen Tirfelyn; ihr Tod beschäftigt ihn.</p><p><strong>Rhufon, 27 Jahre.</strong> Rhufon ist ein freundlicher 27-jähriger Feld- und Hofhelfer mit kurzem rotem Haar. Er hilft bei den Feldarbeiten, beim Beladen der Wagen und bei Lieferungen nach Gwynthor. Auf dem Tirfelyn-Hof bewohnt er die zweite Bedienstetenhütte.</p><p><strong>Maldwyn, 46 Jahre.</strong> Der 46-jährige Maldwyn hilft Eudaf bei Fütterung, Viehtrieb und der Pflege der Weidezäune. Der kräftige braunhaarige Mann gilt als gütig und hilfsbereit. Er wohnt in der dritten Bedienstetenhütte und arbeitet auch mit den beiden Herdenhunden des Hofes.</p><p><strong>Eiluned, 41 Jahre.</strong> Eiluned ist 41 Jahre alt und unterstützt Enid und Madrun bei Wäsche, Reinigung und der täglichen Hausarbeit. Die rothaarige Hofmagd wirkt abgekämpft und müde, begegnet anderen aber freundlich. Sie bewohnt die kleine sechste Bedienstetenhütte.</p>",
+          "description": "<p><strong>Hallvard, 38 Jahre.</strong> Hallvard ist ein kräftiger aldrimarischer Holzfäller von 38 Jahren. Gemeinsam mit seinem jüngeren Bruder Torleif bereitet er Bau- und Brennholz für den Tirfelyn-Hof auf. Mit seiner Frau Rannveig wohnt er im Haus östlich des Holzfällerlagers. Sein einzelner blonder Zopf, der Kotlettenbart und alte Narben machen ihn leicht erkennbar.</p><p><strong>Torleif, 33 Jahre.</strong> Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und bewohnt einen eigenen Wohnteil, der direkt an Hallvards und Rannveigs Haus angebaut ist. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.</p><p><strong>Rannveig, 35 Jahre.</strong> Rannveig ist 35 Jahre alt und mit Hallvard verheiratet. Sie sammelt Beeren und Kräuter in den Wäldern um den Tirfelyn-Hof und bringt ihre Funde in die Vorratshaltung der Familie ein. Die blonde, sommersprossige Frau wohnt mit ihrem Mann beim Holzfällerlager.</p><p><strong>Meirig, 43 Jahre.</strong> Meirig ist der 43-jährige Müller des Tirfelyn-Hofs. Der freundliche, etwas beleibte Mann mit braunem Haar und Halbglatze verarbeitet das Getreide der Familie zu Mehl und Schrot. Er wohnt mit seiner Frau Gwenneth und den Söhnen Iorfin und Eifor in der größeren vierten Bedienstetenhütte.</p><p><strong>Gwenneth, 39 Jahre.</strong> Die 39-jährige Gwenneth führt den Haushalt der Müllerfamilie. Mit Meirig und ihren beiden Söhnen Iorfin und Eifor bewohnt sie die vierte Bedienstetenhütte. Sie ist eine schlichte, kräftige Frau, die sich um Mahlzeiten, Wäsche und den Alltag ihrer Familie kümmert.</p><p><strong>Iorfin, 12 Jahre.</strong> Iorfin ist zwölf Jahre alt und der ältere Sohn von Meirig und Gwenneth. Der braunhaarige Junge hilft seinem Vater mit leichten Handgriffen in der Hofmühle und lernt die Arbeit unter Aufsicht kennen. Er wohnt mit seinen Eltern und seinem jüngeren Bruder Eifor in der vierten Bedienstetenhütte.</p><p><strong>Eifor, 9 Jahre.</strong> Der neunjährige Eifor ist Meirigs und Gwenneths jüngerer Sohn. Er hat braunes Haar und begleitet seinen älteren Bruder Iorfin zu kleinen Hilfsarbeiten an der Mühle. Gefährliche Arbeiten und die Bedienung der Mühlentechnik bleiben Sache der Erwachsenen.</p><p><strong>Cynfarch, 24 Jahre.</strong> Cynfarch ist ein 24-jähriger Hufschmied aus Bronhir. Der freundliche, kräftige junge Mann mit dunkelrotem Haar beschlägt die Hofpferde und repariert eiserne Beschläge und kleinere Gerätschaften. Er arbeitet in der offenen Hofschmiede und wohnt in der fünften Bedienstetenhütte.</p><p><strong>Nefydd, 35 Jahre.</strong> Nefydd ist ein stiller Feldknecht von 35 Jahren und bewohnt die nördlichste Bedienstetenhütte. Er unterstützt Gwallog bei Feldarbeit und Ernte. Sein braunes Haar steht unordentlich ab, sein Blick wirkt oft abwesend und gleichförmig. Er hatte Zuneigung für die verstorbene Ceridwen Tirfelyn; ihr Tod beschäftigt ihn.</p><p><strong>Rhufon, 27 Jahre.</strong> Rhufon ist ein freundlicher 27-jähriger Feld- und Hofhelfer mit kurzem rotem Haar. Er hilft bei den Feldarbeiten, beim Beladen der Wagen und bei Lieferungen nach Gwynthor. Auf dem Tirfelyn-Hof bewohnt er die zweite Bedienstetenhütte.</p><p><strong>Maldwyn, 46 Jahre.</strong> Der 46-jährige Maldwyn hilft Eudaf bei Fütterung, Viehtrieb und der Pflege der Weidezäune. Der kräftige braunhaarige Mann gilt als gütig und hilfsbereit. Er wohnt in der dritten Bedienstetenhütte und arbeitet auch mit den beiden Herdenhunden des Hofes.</p><p><strong>Eiluned, 41 Jahre.</strong> Eiluned ist 41 Jahre alt und unterstützt Enid und Madrun bei Wäsche, Reinigung und der täglichen Hausarbeit. Die rothaarige Hofmagd wirkt abgekämpft und müde, begegnet anderen aber freundlich. Sie bewohnt die kleine sechste Bedienstetenhütte.</p>",
           "stats": [
             [
               "Hof",
@@ -633,206 +633,6 @@
         },
         {
           "schemaVersion": 1,
-          "pageTitle": "Holzfällerlager",
-          "commentThreadKey": "tirfelyn-hof-poi-holzfaellerlager",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/holzfaellerlager-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Die aldrimarischen Brüder Hallvard und Torleif schlagen Nutz- und Brennholz für den Hof. Sie entasten die Stämme, bereiten Bauholz vor und halten den Brennholzvorrat für Haus, Mühle und Räucherhaus bereit.</p><p><strong>Zuständig:</strong> Hallvard, Torleif.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-holzfaellerlager\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
-          "sessionHint": "Holzfällerlager · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Hallvards und Rannveigs Haus",
-          "commentThreadKey": "tirfelyn-hof-poi-holzfaellerhaus-ost",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/holzfaellerhaus-ost-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Hier wohnen Hallvard und seine Frau Rannveig. Während Hallvard im Holzfällerlager arbeitet, sammelt Rannveig Beeren und Kräuter in den nahen Wäldern und bringt sie in die Vorratshaltung des Hofes ein.</p><p><strong>Bewohner:</strong> Hallvard, Rannveig.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-holzfaellerhaus-ost\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
-          "sessionHint": "Hallvards und Rannveigs Haus · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Torleifs Haus",
-          "commentThreadKey": "tirfelyn-hof-poi-holzfaellerhaus-sued",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/holzfaellerhaus-sued-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Torleif wohnt nahe beim Arbeitsplatz und dem Haushalt seines Bruders. Sein Haus ist schlicht eingerichtet; Arbeitskleidung und Werkzeug werden trocken beim Eingang verwahrt.</p><p><strong>Bewohner:</strong> Torleif.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-holzfaellerhaus-sued\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
-          "sessionHint": "Torleifs Haus · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Nefydds Hütte",
-          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-01",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-01-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Der Feldknecht Nefydd wohnt in der nördlichsten Hütte. Er unterstützt Gwallog beim Bestellen der Äcker und bei der Ernte.</p><p><strong>Bewohner:</strong> Nefydd.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-01\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
-          "sessionHint": "Nefydds Hütte · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Rhufons Hütte",
-          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-02",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-02-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Rhufon hilft auf den Feldern und bei den täglich wechselnden Hofarbeiten. Bei Lieferungen unterstützt er die Familie mit Wagen, Säcken und Kisten.</p><p><strong>Bewohner:</strong> Rhufon.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-02\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
-          "sessionHint": "Rhufons Hütte · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Maldwyns Hütte",
-          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-03",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-03-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Der Viehknecht Maldwyn wohnt zwischen Hütten und Weidewegen. Unter Eudafs Leitung hilft er bei Fütterung, Viehtrieb und der Pflege der Einfriedungen.</p><p><strong>Bewohner:</strong> Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-03\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
-          "sessionHint": "Maldwyns Hütte · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Haus der Müllerfamilie",
-          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-04",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-04-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Hier wohnen Meirig, seine Frau Gwenneth und ihre Söhne Iorfin und Eifor. Gwenneth führt den eigenen Haushalt; Meirig arbeitet in der Hofmühle.</p><p><strong>Bewohner:</strong> Meirig, Gwenneth, Iorfin, Eifor.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-04\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
-          "sessionHint": "Haus der Müllerfamilie · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Cynfarchs Hütte",
-          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-05",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-05-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Cynfarch aus Bronhir bewohnt diese Hütte. Von hier geht er zur Schmiede, wo er die Hofpferde beschlägt und eiserne Gerätschaften instand hält.</p><p><strong>Bewohner:</strong> Cynfarch.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-05\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
-          "sessionHint": "Cynfarchs Hütte · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Eiluneds Hütte",
-          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-06",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-06-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Eiluned unterstützt Enid und Madrun im gemeinsamen Hofhaushalt. Wäsche, Reinigung und Wasserholen gehören zu ihren wechselnden Aufgaben.</p><p><strong>Bewohner:</strong> Eiluned.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-06\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
-          "sessionHint": "Eiluneds Hütte · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Hofmühle",
-          "commentThreadKey": "tirfelyn-hof-poi-muehle",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/muehle-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Meirig mahlt das Getreide des Tirfelyn-Hofs zu Mehl und Schrot. Iorfin lernt die Abläufe unter seiner Aufsicht kennen; die beiden Söhne übernehmen keine selbständige Verantwortung an der Mühlentechnik.</p><p><strong>Zuständig:</strong> Meirig.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-muehle\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
-          "sessionHint": "Hofmühle · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
           "pageTitle": "Gerberhaus",
           "commentThreadKey": "tirfelyn-hof-poi-gerberhaus",
           "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/gerberhaus-v1.png",
@@ -863,26 +663,6 @@
           "sessionPage": true,
           "sessionIntro": "<p>Caradog und Eudaf führen den Hof gemeinsam. Hier wohnen die beiden Familienzweige mit insgesamt sechzehn lebenden Angehörigen; am Familientisch werden Arbeit, Vorräte und Lieferungen abgestimmt.</p><p><strong>Bewohner:</strong> Caradog Tirfelyn, Enid, Gareth Tirfelyn, Bedwyr Tirfelyn, Eudaf Tirfelyn, Madrun, Gwallog Tirfelyn, Cynddylan Tirfelyn, Eiliwedd Tirfelyn, Tegfedd Tirfelyn, Gwynllyw Tirfelyn, Gwenfyl, Eiliwen Tirfelyn, Clydog Tirfelyn, Gwenfron, Cynwal Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bauernherrenhaus\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
           "sessionHint": "Bauernherrenhaus Tirfelyn · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Hufschmiede",
-          "commentThreadKey": "tirfelyn-hof-poi-hufschmiede",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hufschmiede-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Der junge Cynfarch aus Bronhir beschlägt die Hofpferde. Außerdem kümmert er sich um eiserne Beschläge und kleine Reparaturen an den landwirtschaftlichen Geräten.</p><p><strong>Zuständig:</strong> Cynfarch.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-hufschmiede\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
-          "sessionHint": "Hufschmiede · Tirfelyn-Hof",
           "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
           "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
           "sessionDateAleria": {
@@ -953,106 +733,6 @@
         },
         {
           "schemaVersion": 1,
-          "pageTitle": "Kornspeicher",
-          "commentThreadKey": "tirfelyn-hof-poi-kornspeicher",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/kornspeicher-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Gwallog verwahrt hier das eingebrachte Getreide. Saatgut, Mahlgetreide und Futtervorräte werden getrennt und trocken gelagert.</p><p><strong>Zuständig:</strong> Gwallog Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Kornspeicher · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Westliches Hoflager",
-          "commentThreadKey": "tirfelyn-hof-poi-lager-west",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/lager-west-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Werkzeug und Vorräte für Feldarbeit und Lieferungen werden hier untergebracht. Gwallog behält den Überblick über den täglichen Bedarf.</p><p><strong>Zuständig:</strong> Gwallog Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Westliches Hoflager · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Geräteschuppen am Herrenhaus",
-          "commentThreadKey": "tirfelyn-hof-poi-geraeteschuppen",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/geraeteschuppen-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Ein möglicher Platz für Handwerkzeug, Eimer und kleinere Hofgeräte nahe dem Wohnhaus.</p><p><strong>Zuständig:</strong> Eudaf Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Geräteschuppen am Herrenhaus · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Südliches Vorratslager",
-          "commentThreadKey": "tirfelyn-hof-poi-lager-sued",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/lager-sued-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Madrun bewahrt hier länger haltbare Vorräte und leere Behälter auf. Der kurze Weg zum Herrenhaus erleichtert die Versorgung des großen Haushalts.</p><p><strong>Zuständig:</strong> Madrun.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Südliches Vorratslager · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Lager beim Gestüt",
-          "commentThreadKey": "tirfelyn-hof-poi-lager-ost",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/lager-ost-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Futter und Gerätschaften für Pferde und die nahen Weiden liegen hier griffbereit. Gareth stimmt die Vorräte mit Eudaf ab.</p><p><strong>Zuständig:</strong> Gareth Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Lager beim Gestüt · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
           "pageTitle": "Hausgärten",
           "commentThreadKey": "tirfelyn-hof-poi-hausgarten",
           "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hausgarten-v1.png",
@@ -1083,246 +763,6 @@
           "sessionPage": true,
           "sessionIntro": "<p>Gwenfron kümmert sich um die Obsternte. Frisches Obst kommt auf den Tisch; ein Teil wird getrocknet oder für den Winter eingelagert.</p><p><strong>Zuständig:</strong> Gwenfron.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
           "sessionHint": "Obstbäume · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Großer Acker bei der Mühle",
-          "commentThreadKey": "tirfelyn-hof-poi-acker-mitte",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-mitte-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Caradog und Gwallog planen die Feldarbeit. Nefydd hilft bei Bodenbearbeitung, Aussaat und Ernte.</p><p><strong>Zuständig:</strong> Caradog Tirfelyn, Gwallog Tirfelyn, Nefydd.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Großer Acker bei der Mühle · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Westliche Anbaufläche",
-          "commentThreadKey": "tirfelyn-hof-poi-acker-west",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-west-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Eiliwedd betreut hier einen Teil des Gemüseanbaus. Rhufon hilft bei Pflege, Ernte und dem Abtransport zum Hof.</p><p><strong>Zuständig:</strong> Eiliwedd Tirfelyn, Rhufon.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Westliche Anbaufläche · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Südwestliches Getreidefeld",
-          "commentThreadKey": "tirfelyn-hof-poi-getreide-suedwest",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/getreide-suedwest-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Das Getreide gelangt nach der Ernte in die Hofspeicher. Gwallog und Nefydd unterstützen die Familie bei Schnitt und Einbringen.</p><p><strong>Zuständig:</strong> Gwallog Tirfelyn, Nefydd.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Südwestliches Getreidefeld · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Südliche Anbaufläche",
-          "commentThreadKey": "tirfelyn-hof-poi-acker-sued",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-sued-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Diese Fläche gehört zur gemeinsamen Feldwirtschaft. Welche Kulturen hier stehen, richtet sich nach Caradogs Anbauplanung und der jeweiligen Saison.</p><p><strong>Zuständig:</strong> Caradog Tirfelyn, Rhufon.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Südliche Anbaufläche · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Schafweide",
-          "commentThreadKey": "tirfelyn-hof-poi-schafweide",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/schafweide-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Eudaf und Maldwyn kümmern sich um die Schafe und kontrollieren Wasser, Futter und Einfriedung. Die Familie übernimmt die anfallenden Arbeiten gemeinsam.</p><p><strong>Zuständig:</strong> Eudaf Tirfelyn, Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Schafweide · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Westliche Rinderweide",
-          "commentThreadKey": "tirfelyn-hof-poi-rinderweide-west",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/rinderweide-west-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Gareth versorgt das Rindvieh. Maldwyn hilft bei Viehtrieb und Weidepflege; Milch und weitere Erzeugnisse werden von der Familie verarbeitet.</p><p><strong>Zuständig:</strong> Gareth Tirfelyn, Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Westliche Rinderweide · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Südöstliche Rinderweide",
-          "commentThreadKey": "tirfelyn-hof-poi-rinderweide-suedost",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/rinderweide-suedost-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Auch diese Weide gehört zur Viehwirtschaft des Familienhofs. Gareth und Maldwyn sehen täglich nach Tieren und Zäunen.</p><p><strong>Zuständig:</strong> Gareth Tirfelyn, Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Südöstliche Rinderweide · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Bullenweide",
-          "commentThreadKey": "tirfelyn-hof-poi-bullenweide",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bullenweide-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Die Bullen stehen in einer eigenen Einfriedung. Den Umgang mit den kräftigen Tieren übernehmen erfahrene Erwachsene unter Eudafs Verantwortung.</p><p><strong>Zuständig:</strong> Eudaf Tirfelyn, Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Bullenweide · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Nordöstliche Weide",
-          "commentThreadKey": "tirfelyn-hof-poi-weide-nordost",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/weide-nordost-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Die zusätzliche Weide gibt der Familie Spielraum bei der Einteilung des Viehs. Ihre Nutzung richtet sich nach Futterstand und Bedarf.</p><p><strong>Zuständig:</strong> Eudaf Tirfelyn, Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Nordöstliche Weide · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Schweinegehege",
-          "commentThreadKey": "tirfelyn-hof-poi-schweinegehege",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/schweinegehege-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Eudaf und Cynddylan versorgen die Schweine nahe den Wirtschaftsgebäuden. Regelmäßige Fütterung und Reinigung gehören zur täglichen Hofarbeit.</p><p><strong>Zuständig:</strong> Eudaf Tirfelyn, Cynddylan Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Schweinegehege · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Brunnen am Herrenhaus",
-          "commentThreadKey": "tirfelyn-hof-poi-hofbrunnen",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hofbrunnen-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Hier holt die Familie Wasser für den gemeinsamen Haushalt. Eiluned unterstützt sie bei den täglichen Wegen mit Eimern und Gefäßen.</p><p><strong>Zuständig:</strong> Eiluned.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Brunnen am Herrenhaus · Tirfelyn-Hof",
-          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
-          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
-          "sessionDateAleria": {
-            "year": null,
-            "month": null,
-            "day": null
-          }
-        },
-        {
-          "schemaVersion": 1,
-          "pageTitle": "Brunnen bei den Wirtschaftsgebäuden",
-          "commentThreadKey": "tirfelyn-hof-poi-wirtschaftsbrunnen",
-          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/wirtschaftsbrunnen-v1.png",
-          "imageWidth": 34,
-          "imageTall": true,
-          "imageFit": "cover",
-          "imagePosition": "center",
-          "sessionPage": true,
-          "sessionIntro": "<p>Der Brunnen versorgt die nahen Arbeitsbereiche mit Wasser. Cynddylan nutzt ihn bei den alltäglichen Stall- und Hofarbeiten.</p><p><strong>Zuständig:</strong> Cynddylan Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
-          "sessionHint": "Brunnen bei den Wirtschaftsgebäuden · Tirfelyn-Hof",
           "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
           "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
           "sessionDateAleria": {
@@ -2078,6 +1518,1052 @@
           "sessionHint": "Ein Besuch bei der Familie am Marchwern-Gestüt.",
           "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
           "sessionEmptyText": "Eine Ankunft, eine Frage oder ein Gespräch im gemeinsamen Alltag.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tab": "Völker & Kulturen",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bannkreis Gwynthor",
+      "Tirfelyn-Hof",
+      "Holzfäller und Waldhäuser"
+    ],
+    "description": "Holz und Wald · Tirfelyn-Hof",
+    "icon": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/holzfaellerlager-v1.png",
+    "entry": {
+      "id": "tirfelyn-hof-holzfaeller",
+      "title": "Holzfäller und Waldhäuser",
+      "subtitle": "Holz und Wald · Tirfelyn-Hof",
+      "type": "Hofbereich",
+      "category": "Tirfelyn-Hof",
+      "stamp": "Tirfelyn-Hof",
+      "icon": "⌂",
+      "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/holzfaellerlager-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/holzfaellerlager-v1.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--tirfelyn-hof--hallvard",
+        "person--tirfelyn-hof--torleif",
+        "person--tirfelyn-hof--rannveig"
+      ],
+      "commentThreadAliases": [
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-holzfaellerlager",
+          "to": "tirfelyn-hof-holzfaeller::session:tirfelyn-hof-poi-holzfaellerlager"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-holzfaellerhaus-ost",
+          "to": "tirfelyn-hof-holzfaeller::session:tirfelyn-hof-poi-holzfaellerhaus-ost"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-holzfaellerhaus-sued",
+          "to": "tirfelyn-hof-holzfaeller::session:tirfelyn-hof-poi-holzfaellerhaus-sued"
+        }
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Holzfäller und Waldhäuser",
+          "commentThreadKey": "tirfelyn-hof-holzfaeller-ueberblick",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/holzfaellerlager-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "description": "<p>Hallvard, Rannveig und Torleif am Holzfällerlager und in den beiden aneinandergebauten Wohnhäusern.</p><p><strong>Hallvard</strong> · Holzfäller.</p><p><strong>Torleif</strong> · Holzfäller, Hallvards jüngerer Bruder.</p><p><strong>Rannveig</strong> · Hallvards Ehefrau, Beeren- und Kräutersammlerin.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a> · <a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof\">Zur Familie Tirfelyn</a></p><ul><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-holzfaeller&thread=tirfelyn-hof-holzfaeller%3A%3Asession%3Atirfelyn-hof-poi-holzfaellerlager\">Holzfällerlager</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-holzfaeller&thread=tirfelyn-hof-holzfaeller%3A%3Asession%3Atirfelyn-hof-poi-holzfaellerhaus-ost\">Hallvards und Rannveigs Haus</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-holzfaeller&thread=tirfelyn-hof-holzfaeller%3A%3Asession%3Atirfelyn-hof-poi-holzfaellerhaus-sued\">Torleifs Haus</a></li></ul>",
+          "stats": [
+            [
+              "Hof",
+              "Tirfelyn-Hof"
+            ],
+            [
+              "Eigentümer",
+              "Familie Tirfelyn"
+            ],
+            [
+              "Orte",
+              "3"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Holzfällerlager",
+          "commentThreadKey": "tirfelyn-hof-poi-holzfaellerlager",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/holzfaellerlager-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Die aldrimarischen Brüder Hallvard und Torleif schlagen Nutz- und Brennholz für den Hof. Sie entasten die Stämme, bereiten Bauholz vor und halten den Brennholzvorrat für Haus, Mühle und Räucherhaus bereit.</p><p><strong>Zuständig:</strong> Hallvard, Torleif.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-holzfaellerlager\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Holzfällerlager · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hallvards und Rannveigs Haus",
+          "commentThreadKey": "tirfelyn-hof-poi-holzfaellerhaus-ost",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/holzfaellerhaus-ost-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Hier wohnen Hallvard und seine Frau Rannveig. Torleifs eigener Wohnteil ist direkt an ihr Haus angebaut. Während Hallvard im Holzfällerlager arbeitet, sammelt Rannveig Beeren und Kräuter in den nahen Wäldern und bringt sie in die Vorratshaltung des Hofes ein.</p><p><strong>Bewohner:</strong> Hallvard, Rannveig.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-holzfaellerhaus-ost\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Hallvards und Rannveigs Haus · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Torleifs Haus",
+          "commentThreadKey": "tirfelyn-hof-poi-holzfaellerhaus-sued",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/holzfaellerhaus-sued-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Torleifs eigener Wohnteil ist unmittelbar an das Haus seines Bruders Hallvard und dessen Frau Rannveig angebaut. Er wohnt mit ihnen am Holzfällerlager; der weiter südlich stehende Schuppen gehört nicht zu seinem Wohnhaus. Sein Wohnteil ist schlicht eingerichtet; Arbeitskleidung und Werkzeug werden trocken beim Eingang verwahrt.</p><p><strong>Bewohner:</strong> Torleif.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-holzfaellerhaus-sued\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Torleifs Haus · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tab": "Völker & Kulturen",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bannkreis Gwynthor",
+      "Tirfelyn-Hof",
+      "Mühle und Müllerhaus"
+    ],
+    "description": "Die Müllerfamilie · Tirfelyn-Hof",
+    "icon": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/muehle-v1.png",
+    "entry": {
+      "id": "tirfelyn-hof-muehle",
+      "title": "Mühle und Müllerhaus",
+      "subtitle": "Die Müllerfamilie · Tirfelyn-Hof",
+      "type": "Hofbereich",
+      "category": "Tirfelyn-Hof",
+      "stamp": "Tirfelyn-Hof",
+      "icon": "⌂",
+      "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/muehle-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/muehle-v1.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--tirfelyn-hof--meirig",
+        "person--tirfelyn-hof--gwenneth",
+        "person--tirfelyn-hof--iorfin",
+        "person--tirfelyn-hof--eifor"
+      ],
+      "commentThreadAliases": [
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-muehle",
+          "to": "tirfelyn-hof-muehle::session:tirfelyn-hof-poi-muehle"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-04",
+          "to": "tirfelyn-hof-muehle::session:tirfelyn-hof-poi-bedienstetenhuette-04"
+        }
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Mühle und Müllerhaus",
+          "commentThreadKey": "tirfelyn-hof-muehle-ueberblick",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/muehle-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "description": "<p>Meirigs Hofmühle und der gemeinsame Haushalt mit Gwenneth, Iorfin und Eifor.</p><p><strong>Meirig</strong> · Müller.</p><p><strong>Gwenneth</strong> · Meirigs Ehefrau, Hausfrau im eigenen Haushalt.</p><p><strong>Iorfin</strong> · Älterer Sohn des Müllers, lernt unter Aufsicht.</p><p><strong>Eifor</strong> · Jüngerer Sohn des Müllers.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a> · <a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof\">Zur Familie Tirfelyn</a></p><ul><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-muehle&thread=tirfelyn-hof-muehle%3A%3Asession%3Atirfelyn-hof-poi-muehle\">Hofmühle</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-muehle&thread=tirfelyn-hof-muehle%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-04\">Haus der Müllerfamilie</a></li></ul>",
+          "stats": [
+            [
+              "Hof",
+              "Tirfelyn-Hof"
+            ],
+            [
+              "Eigentümer",
+              "Familie Tirfelyn"
+            ],
+            [
+              "Orte",
+              "2"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hofmühle",
+          "commentThreadKey": "tirfelyn-hof-poi-muehle",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/muehle-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Meirig mahlt das Getreide des Tirfelyn-Hofs zu Mehl und Schrot. Iorfin lernt die Abläufe unter seiner Aufsicht kennen; die beiden Söhne übernehmen keine selbständige Verantwortung an der Mühlentechnik.</p><p><strong>Zuständig:</strong> Meirig.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-muehle\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Hofmühle · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Haus der Müllerfamilie",
+          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-04",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-04-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Hier wohnen Meirig, seine Frau Gwenneth und ihre Söhne Iorfin und Eifor. Gwenneth führt den eigenen Haushalt; Meirig arbeitet in der Hofmühle.</p><p><strong>Bewohner:</strong> Meirig, Gwenneth, Iorfin, Eifor.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-04\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Haus der Müllerfamilie · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tab": "Völker & Kulturen",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bannkreis Gwynthor",
+      "Tirfelyn-Hof",
+      "Hufschmiede und Schmiedehaus"
+    ],
+    "description": "Die Hufschmiede · Tirfelyn-Hof",
+    "icon": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hufschmiede-v1.png",
+    "entry": {
+      "id": "tirfelyn-hof-hufschmiede",
+      "title": "Hufschmiede und Schmiedehaus",
+      "subtitle": "Die Hufschmiede · Tirfelyn-Hof",
+      "type": "Hofbereich",
+      "category": "Tirfelyn-Hof",
+      "stamp": "Tirfelyn-Hof",
+      "icon": "⌂",
+      "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hufschmiede-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hufschmiede-v1.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--tirfelyn-hof--cynfarch"
+      ],
+      "commentThreadAliases": [
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-hufschmiede",
+          "to": "tirfelyn-hof-hufschmiede::session:tirfelyn-hof-poi-hufschmiede"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-05",
+          "to": "tirfelyn-hof-hufschmiede::session:tirfelyn-hof-poi-bedienstetenhuette-05"
+        }
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hufschmiede und Schmiedehaus",
+          "commentThreadKey": "tirfelyn-hof-hufschmiede-ueberblick",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hufschmiede-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "description": "<p>Cynfarchs Arbeitsplatz und seine Wohnhütte auf dem Hof.</p><p><strong>Cynfarch</strong> · Junger Hufschmied, Beschläge und Reparaturen für den Hof.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a> · <a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof\">Zur Familie Tirfelyn</a></p><ul><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-hufschmiede&thread=tirfelyn-hof-hufschmiede%3A%3Asession%3Atirfelyn-hof-poi-hufschmiede\">Hufschmiede</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-hufschmiede&thread=tirfelyn-hof-hufschmiede%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-05\">Cynfarchs Hütte</a></li></ul>",
+          "stats": [
+            [
+              "Hof",
+              "Tirfelyn-Hof"
+            ],
+            [
+              "Eigentümer",
+              "Familie Tirfelyn"
+            ],
+            [
+              "Orte",
+              "2"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hufschmiede",
+          "commentThreadKey": "tirfelyn-hof-poi-hufschmiede",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hufschmiede-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der junge Cynfarch aus Bronhir beschlägt die Hofpferde. Außerdem kümmert er sich um eiserne Beschläge und kleine Reparaturen an den landwirtschaftlichen Geräten.</p><p><strong>Zuständig:</strong> Cynfarch.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-hufschmiede\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Hufschmiede · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Cynfarchs Hütte",
+          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-05",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-05-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Cynfarch aus Bronhir bewohnt diese Hütte. Von hier geht er zur Schmiede, wo er die Hofpferde beschlägt und eiserne Gerätschaften instand hält.</p><p><strong>Bewohner:</strong> Cynfarch.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-05\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Cynfarchs Hütte · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tab": "Völker & Kulturen",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bannkreis Gwynthor",
+      "Tirfelyn-Hof",
+      "Hofhelfer und Hütten"
+    ],
+    "description": "Die Hofhelfer · Tirfelyn-Hof",
+    "icon": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-01-v1.png",
+    "entry": {
+      "id": "tirfelyn-hof-hofhelfer",
+      "title": "Hofhelfer und Hütten",
+      "subtitle": "Die Hofhelfer · Tirfelyn-Hof",
+      "type": "Hofbereich",
+      "category": "Tirfelyn-Hof",
+      "stamp": "Tirfelyn-Hof",
+      "icon": "⌂",
+      "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-01-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-01-v1.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--tirfelyn-hof--nefydd",
+        "person--tirfelyn-hof--rhufon",
+        "person--tirfelyn-hof--maldwyn",
+        "person--tirfelyn-hof--eiluned"
+      ],
+      "commentThreadAliases": [
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-01",
+          "to": "tirfelyn-hof-hofhelfer::session:tirfelyn-hof-poi-bedienstetenhuette-01"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-02",
+          "to": "tirfelyn-hof-hofhelfer::session:tirfelyn-hof-poi-bedienstetenhuette-02"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-03",
+          "to": "tirfelyn-hof-hofhelfer::session:tirfelyn-hof-poi-bedienstetenhuette-03"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-06",
+          "to": "tirfelyn-hof-hofhelfer::session:tirfelyn-hof-poi-bedienstetenhuette-06"
+        }
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hofhelfer und Hütten",
+          "commentThreadKey": "tirfelyn-hof-hofhelfer-ueberblick",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-01-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "description": "<p>Die Wohnhütten von Nefydd, Rhufon, Maldwyn und Eiluned und ihre Aufgaben im Hofalltag.</p><p><strong>Nefydd</strong> · Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte.</p><p><strong>Rhufon</strong> · Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen.</p><p><strong>Maldwyn</strong> · Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen.</p><p><strong>Eiluned</strong> · Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a> · <a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof\">Zur Familie Tirfelyn</a></p><ul><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-hofhelfer&thread=tirfelyn-hof-hofhelfer%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-01\">Nefydds Hütte</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-hofhelfer&thread=tirfelyn-hof-hofhelfer%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-02\">Rhufons Hütte</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-hofhelfer&thread=tirfelyn-hof-hofhelfer%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-03\">Maldwyns Hütte</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-hofhelfer&thread=tirfelyn-hof-hofhelfer%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-06\">Eiluneds Hütte</a></li></ul>",
+          "stats": [
+            [
+              "Hof",
+              "Tirfelyn-Hof"
+            ],
+            [
+              "Eigentümer",
+              "Familie Tirfelyn"
+            ],
+            [
+              "Orte",
+              "4"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Nefydds Hütte",
+          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-01",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-01-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der Feldknecht Nefydd wohnt in der nördlichsten Hütte. Er unterstützt Gwallog beim Bestellen der Äcker und bei der Ernte.</p><p><strong>Bewohner:</strong> Nefydd.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-01\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Nefydds Hütte · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Rhufons Hütte",
+          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-02",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-02-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Rhufon hilft auf den Feldern und bei den täglich wechselnden Hofarbeiten. Bei Lieferungen unterstützt er die Familie mit Wagen, Säcken und Kisten.</p><p><strong>Bewohner:</strong> Rhufon.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-02\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Rhufons Hütte · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Maldwyns Hütte",
+          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-03",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-03-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der Viehknecht Maldwyn wohnt zwischen Hütten und Weidewegen. Unter Eudafs Leitung hilft er bei Fütterung, Viehtrieb und der Pflege der Einfriedungen.</p><p><strong>Bewohner:</strong> Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-03\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Maldwyns Hütte · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Eiluneds Hütte",
+          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-06",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-06-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Eiluned unterstützt Enid und Madrun im gemeinsamen Hofhaushalt. Wäsche, Reinigung und Wasserholen gehören zu ihren wechselnden Aufgaben.</p><p><strong>Bewohner:</strong> Eiluned.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-06\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Eiluneds Hütte · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tab": "Völker & Kulturen",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bannkreis Gwynthor",
+      "Tirfelyn-Hof",
+      "Felder und Weiden"
+    ],
+    "description": "Feld- und Viehwirtschaft · Tirfelyn-Hof",
+    "icon": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-mitte-v1.png",
+    "entry": {
+      "id": "tirfelyn-hof-felder-weiden",
+      "title": "Felder und Weiden",
+      "subtitle": "Feld- und Viehwirtschaft · Tirfelyn-Hof",
+      "type": "Hofbereich",
+      "category": "Tirfelyn-Hof",
+      "stamp": "Tirfelyn-Hof",
+      "icon": "⌂",
+      "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-mitte-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-mitte-v1.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--haus-tirfelyn--caradog-tirfelyn",
+        "person--haus-tirfelyn--cadfan-tirfelyn",
+        "person--tirfelyn-hof--nefydd",
+        "person--haus-tirfelyn--meleri-tirfelyn",
+        "person--tirfelyn-hof--rhufon",
+        "person--haus-tirfelyn--eudaf-tirfelyn",
+        "person--tirfelyn-hof--maldwyn",
+        "person--haus-tirfelyn--gareth-tirfelyn"
+      ],
+      "commentThreadAliases": [
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-acker-mitte",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-acker-mitte"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-acker-west",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-acker-west"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-getreide-suedwest",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-getreide-suedwest"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-acker-sued",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-acker-sued"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-schafweide",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-schafweide"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-rinderweide-west",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-rinderweide-west"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-rinderweide-suedost",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-rinderweide-suedost"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-bullenweide",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-bullenweide"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-weide-nordost",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-weide-nordost"
+        }
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Felder und Weiden",
+          "commentThreadKey": "tirfelyn-hof-felder-weiden-ueberblick",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-mitte-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "description": "<p>Die gemeinsam bewirtschafteten Äcker und Weiden des Tirfelyn-Hofs.</p><p><strong>Caradog Tirfelyn</strong> · Gesamtleitung, Feldbau und Lieferplanung.</p><p><strong>Gwallog Tirfelyn</strong> · Ackerbau, Fuhrwerk und Kornspeicher.</p><p><strong>Nefydd</strong> · Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte.</p><p><strong>Eiliwedd Tirfelyn</strong> · Gemüsefelder und Zusammenstellen der Lieferungen.</p><p><strong>Rhufon</strong> · Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen.</p><p><strong>Eudaf Tirfelyn</strong> · Gesamtleitung, Viehhaltung und Futterwirtschaft.</p><p><strong>Maldwyn</strong> · Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen.</p><p><strong>Gareth Tirfelyn</strong> · Rinderhaltung und zusätzlich Betreuung der Hofpferde am Gestüt.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a> · <a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof\">Zur Familie Tirfelyn</a></p><ul><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-acker-mitte\">Großer Acker bei der Mühle</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-acker-west\">Westliche Anbaufläche</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-getreide-suedwest\">Südwestliches Getreidefeld</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-acker-sued\">Südliche Anbaufläche</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-schafweide\">Schafweide</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-rinderweide-west\">Westliche Rinderweide</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-rinderweide-suedost\">Südöstliche Rinderweide</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-bullenweide\">Bullenweide</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-weide-nordost\">Nordöstliche Weide</a></li></ul>",
+          "stats": [
+            [
+              "Hof",
+              "Tirfelyn-Hof"
+            ],
+            [
+              "Eigentümer",
+              "Familie Tirfelyn"
+            ],
+            [
+              "Orte",
+              "9"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Großer Acker bei der Mühle",
+          "commentThreadKey": "tirfelyn-hof-poi-acker-mitte",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-mitte-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Caradog und Gwallog planen die Feldarbeit. Nefydd hilft bei Bodenbearbeitung, Aussaat und Ernte.</p><p><strong>Zuständig:</strong> Caradog Tirfelyn, Gwallog Tirfelyn, Nefydd.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Großer Acker bei der Mühle · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Westliche Anbaufläche",
+          "commentThreadKey": "tirfelyn-hof-poi-acker-west",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-west-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Eiliwedd betreut hier einen Teil des Gemüseanbaus. Rhufon hilft bei Pflege, Ernte und dem Abtransport zum Hof.</p><p><strong>Zuständig:</strong> Eiliwedd Tirfelyn, Rhufon.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Westliche Anbaufläche · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Südwestliches Getreidefeld",
+          "commentThreadKey": "tirfelyn-hof-poi-getreide-suedwest",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/getreide-suedwest-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Das Getreide gelangt nach der Ernte in die Hofspeicher. Gwallog und Nefydd unterstützen die Familie bei Schnitt und Einbringen.</p><p><strong>Zuständig:</strong> Gwallog Tirfelyn, Nefydd.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Südwestliches Getreidefeld · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Südliche Anbaufläche",
+          "commentThreadKey": "tirfelyn-hof-poi-acker-sued",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-sued-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Diese Fläche gehört zur gemeinsamen Feldwirtschaft. Welche Kulturen hier stehen, richtet sich nach Caradogs Anbauplanung und der jeweiligen Saison.</p><p><strong>Zuständig:</strong> Caradog Tirfelyn, Rhufon.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Südliche Anbaufläche · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Schafweide",
+          "commentThreadKey": "tirfelyn-hof-poi-schafweide",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/schafweide-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Eudaf und Maldwyn kümmern sich um die Schafe und kontrollieren Wasser, Futter und Einfriedung. Die Familie übernimmt die anfallenden Arbeiten gemeinsam.</p><p><strong>Zuständig:</strong> Eudaf Tirfelyn, Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Schafweide · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Westliche Rinderweide",
+          "commentThreadKey": "tirfelyn-hof-poi-rinderweide-west",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/rinderweide-west-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Gareth versorgt das Rindvieh. Maldwyn hilft bei Viehtrieb und Weidepflege; Milch und weitere Erzeugnisse werden von der Familie verarbeitet.</p><p><strong>Zuständig:</strong> Gareth Tirfelyn, Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Westliche Rinderweide · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Südöstliche Rinderweide",
+          "commentThreadKey": "tirfelyn-hof-poi-rinderweide-suedost",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/rinderweide-suedost-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Auch diese Weide gehört zur Viehwirtschaft des Familienhofs. Gareth und Maldwyn sehen täglich nach Tieren und Zäunen.</p><p><strong>Zuständig:</strong> Gareth Tirfelyn, Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Südöstliche Rinderweide · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Bullenweide",
+          "commentThreadKey": "tirfelyn-hof-poi-bullenweide",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bullenweide-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Die Bullen stehen in einer eigenen Einfriedung. Den Umgang mit den kräftigen Tieren übernehmen erfahrene Erwachsene unter Eudafs Verantwortung.</p><p><strong>Zuständig:</strong> Eudaf Tirfelyn, Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Bullenweide · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Nordöstliche Weide",
+          "commentThreadKey": "tirfelyn-hof-poi-weide-nordost",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/weide-nordost-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Die zusätzliche Weide gibt der Familie Spielraum bei der Einteilung des Viehs. Ihre Nutzung richtet sich nach Futterstand und Bedarf.</p><p><strong>Zuständig:</strong> Eudaf Tirfelyn, Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Nordöstliche Weide · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tab": "Völker & Kulturen",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bannkreis Gwynthor",
+      "Tirfelyn-Hof",
+      "Wirtschaftsgebäude und Vorräte"
+    ],
+    "description": "Der Wirtschaftshof · Tirfelyn-Hof",
+    "icon": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/kornspeicher-v1.png",
+    "entry": {
+      "id": "tirfelyn-hof-wirtschaftshof",
+      "title": "Wirtschaftsgebäude und Vorräte",
+      "subtitle": "Der Wirtschaftshof · Tirfelyn-Hof",
+      "type": "Hofbereich",
+      "category": "Tirfelyn-Hof",
+      "stamp": "Tirfelyn-Hof",
+      "icon": "⌂",
+      "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/kornspeicher-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/kornspeicher-v1.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--haus-tirfelyn--cadfan-tirfelyn",
+        "person--haus-tirfelyn--eudaf-tirfelyn",
+        "person--family-tree--glesni-spouse-tirfelyn",
+        "person--haus-tirfelyn--gareth-tirfelyn",
+        "person--haus-tirfelyn--gwion-tirfelyn",
+        "person--tirfelyn-hof--eiluned"
+      ],
+      "commentThreadAliases": [
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-kornspeicher",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-kornspeicher"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-lager-west",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-lager-west"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-geraeteschuppen",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-geraeteschuppen"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-lager-sued",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-lager-sued"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-lager-ost",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-lager-ost"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-schweinegehege",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-schweinegehege"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-hofbrunnen",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-hofbrunnen"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-wirtschaftsbrunnen",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-wirtschaftsbrunnen"
+        }
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Wirtschaftsgebäude und Vorräte",
+          "commentThreadKey": "tirfelyn-hof-wirtschaftshof-ueberblick",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/kornspeicher-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "description": "<p>Gemeinsame Speicher, Lager, Brunnen und das Schweinegehege rund um die Wirtschaftsgebäude.</p><p><strong>Gwallog Tirfelyn</strong> · Ackerbau, Fuhrwerk und Kornspeicher.</p><p><strong>Eudaf Tirfelyn</strong> · Gesamtleitung, Viehhaltung und Futterwirtschaft.</p><p><strong>Madrun</strong> · Gemeinsamer Haushalt, Räucherhaus und Haltbarmachung.</p><p><strong>Gareth Tirfelyn</strong> · Rinderhaltung und zusätzlich Betreuung der Hofpferde am Gestüt.</p><p><strong>Cynddylan Tirfelyn</strong> · Stallarbeit sowie zusätzlich Häuteaufbereitung und einfache Lederarbeiten im Gerberhaus.</p><p><strong>Eiluned</strong> · Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a> · <a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof\">Zur Familie Tirfelyn</a></p><ul><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-kornspeicher\">Kornspeicher</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-lager-west\">Westliches Hoflager</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-geraeteschuppen\">Geräteschuppen am Herrenhaus</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-lager-sued\">Südliches Vorratslager</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-lager-ost\">Lager beim Gestüt</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-schweinegehege\">Schweinegehege</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-hofbrunnen\">Brunnen am Herrenhaus</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-wirtschaftsbrunnen\">Brunnen bei den Wirtschaftsgebäuden</a></li></ul>",
+          "stats": [
+            [
+              "Hof",
+              "Tirfelyn-Hof"
+            ],
+            [
+              "Eigentümer",
+              "Familie Tirfelyn"
+            ],
+            [
+              "Orte",
+              "8"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Kornspeicher",
+          "commentThreadKey": "tirfelyn-hof-poi-kornspeicher",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/kornspeicher-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Gwallog verwahrt hier das eingebrachte Getreide. Saatgut, Mahlgetreide und Futtervorräte werden getrennt und trocken gelagert.</p><p><strong>Zuständig:</strong> Gwallog Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Kornspeicher · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Westliches Hoflager",
+          "commentThreadKey": "tirfelyn-hof-poi-lager-west",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/lager-west-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Werkzeug und Vorräte für Feldarbeit und Lieferungen werden hier untergebracht. Gwallog behält den Überblick über den täglichen Bedarf.</p><p><strong>Zuständig:</strong> Gwallog Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Westliches Hoflager · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Geräteschuppen am Herrenhaus",
+          "commentThreadKey": "tirfelyn-hof-poi-geraeteschuppen",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/geraeteschuppen-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Ein möglicher Platz für Handwerkzeug, Eimer und kleinere Hofgeräte nahe dem Wohnhaus.</p><p><strong>Zuständig:</strong> Eudaf Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Geräteschuppen am Herrenhaus · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Südliches Vorratslager",
+          "commentThreadKey": "tirfelyn-hof-poi-lager-sued",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/lager-sued-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Madrun bewahrt hier länger haltbare Vorräte und leere Behälter auf. Der kurze Weg zum Herrenhaus erleichtert die Versorgung des großen Haushalts.</p><p><strong>Zuständig:</strong> Madrun.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Südliches Vorratslager · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Lager beim Gestüt",
+          "commentThreadKey": "tirfelyn-hof-poi-lager-ost",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/lager-ost-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Futter und Gerätschaften für Pferde und die nahen Weiden liegen hier griffbereit. Gareth stimmt die Vorräte mit Eudaf ab.</p><p><strong>Zuständig:</strong> Gareth Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Lager beim Gestüt · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Schweinegehege",
+          "commentThreadKey": "tirfelyn-hof-poi-schweinegehege",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/schweinegehege-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Eudaf und Cynddylan versorgen die Schweine nahe den Wirtschaftsgebäuden. Regelmäßige Fütterung und Reinigung gehören zur täglichen Hofarbeit.</p><p><strong>Zuständig:</strong> Eudaf Tirfelyn, Cynddylan Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Schweinegehege · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Brunnen am Herrenhaus",
+          "commentThreadKey": "tirfelyn-hof-poi-hofbrunnen",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hofbrunnen-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Hier holt die Familie Wasser für den gemeinsamen Haushalt. Eiluned unterstützt sie bei den täglichen Wegen mit Eimern und Gefäßen.</p><p><strong>Zuständig:</strong> Eiluned.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Brunnen am Herrenhaus · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Brunnen bei den Wirtschaftsgebäuden",
+          "commentThreadKey": "tirfelyn-hof-poi-wirtschaftsbrunnen",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/wirtschaftsbrunnen-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der Brunnen versorgt die nahen Arbeitsbereiche mit Wasser. Cynddylan nutzt ihn bei den alltäglichen Stall- und Hofarbeiten.</p><p><strong>Zuständig:</strong> Cynddylan Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Brunnen bei den Wirtschaftsgebäuden · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
           "sessionDateAleria": {
             "year": null,
             "month": null,

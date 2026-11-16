@@ -23,7 +23,7 @@ const others = snapshot.characters.filter(character => !ids.has(character.id));
 assert.deepEqual(projected.snapshot.characters.filter(character => !ids.has(character.id)), others);
 const hash = value => createHash('sha256').update(value).digest('hex');
 const fingerprints = Object.fromEntries(paths.map((path, index) => [path, hash(bytes[index])]));
-const proofPath = new URL('diagnostics/tirfelyn-hof-20261115/characters-plan.json', root);
+const proofPath = new URL(process.env.TIRFELYN_CHARACTER_PLAN_PATH || 'diagnostics/tirfelyn-hof-20261115/characters-plan.json', root);
 
 if (mode === '--plan') {
   await mkdir(new URL('.', proofPath), { recursive: true });

@@ -25,7 +25,7 @@ export const HOF_STAFF = [
     "role": "Holzfäller, Hallvards jüngerer Bruder",
     "residenceId": "holzfaellerhaus-sued",
     "portrait": "/AleriaAlmanach/assets/gwynthor-landfamilien/portraits/bedienstete/torleif-v1.png",
-    "bio": "Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und wohnt im südlich anschließenden Haus. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.",
+    "bio": "Der 33-jährige Torleif stammt wie sein älterer Bruder Hallvard aus Aldrimar. Er arbeitet mit ihm im Holzfällerlager des Tirfelyn-Hofs und bewohnt einen eigenen Wohnteil, der direkt an Hallvards und Rannveigs Haus angebaut ist. Der kräftige blonde Mann ist weniger muskulös als Hallvard und trägt bei der Arbeit eine Latzhose über einem ärmellosen Hemd.",
     "visualBrief": "Blond; weniger muskulös als der ältere Bruder, aber kräftig; schultert eine Axt, Latzhose und ärmelloses Hemd."
   },
   {
@@ -187,11 +187,11 @@ export const HOF_HOUSING = [
   },
   {
     "id": "holzfaellerhaus-sued",
-    "label": "Haus südlich des Holzfällerarbeitsplatzes",
+    "label": "Torleifs Wohnteil, direkt an Hallvards und Rannveigs Haus angebaut",
     "residents": [
       "torleif"
     ],
-    "identification": "Wohnnutzung nach Nutzerangabe, genaue Hausgrenzen beim Setzen der Pins prüfen"
+    "identification": "Nutzerkorrektur vom 16. November 2026: direkt angebauter Wohnteil; der südliche Bau ist ein Schuppen. Stabile Wohnortkennung erhalten."
   },
   {
     "id": "bedienstetenhuette-01",

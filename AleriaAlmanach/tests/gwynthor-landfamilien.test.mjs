@@ -10,13 +10,13 @@ import { HOF_STAFF } from '../../shared/tirfelyn-hof/hof-residents.mjs';
 import { HOF_ANIMALS } from '../../shared/tirfelyn-hof/hof-animals.mjs';
 
 test('three rural categories retain their original scenes while Tirfelyn adds its farm places', () => {
-  const entries = buildLandfamilienEntries();
+  const entries = buildLandfamilienEntries().slice(0, 3);
   assert.deepEqual(entries.map(entry => entry.id), ['tirfelyn-hof', 'jagdhaus-helfaen', 'marchwern-gestuet']);
   for (const [index, entry] of entries.entries()) {
     const place = LANDFAMILIEN_PLACES[index], section = landfamilienSection(place);
     assert.deepEqual(section.path, [...GWYNTHOR_BANNKREIS_PATH, place.title]);
     assert.equal(section.tab, 'Völker & Kulturen');
-    assert.equal(entry.pages.length, index === 0 ? 43 : 6);
+    assert.equal(entry.pages.length, index === 0 ? 15 : 6);
     assert.equal(new Set(entry.pages.map(page => page.commentThreadKey)).size, entry.pages.length);
     assert.equal(entry.pages[1].hierarchyPage, true);
     assert.equal(entry.pages[2].biographyPage, true);
@@ -29,7 +29,7 @@ test('three rural categories retain their original scenes while Tirfelyn adds it
 });
 
 test('the hierarchy lists each living person once, preserves three biography portraits and excludes the dead from play', () => {
-  const entries = buildLandfamilienEntries();
+  const entries = buildLandfamilienEntries().slice(0, 3);
   assert.deepEqual(LAND_FAMILIEN_ROSTER.families.map(family => family.persons.filter(person => person.status === 'alive').length), [16, 5, 14]);
   for (const [index, entry] of entries.entries()) {
     const household = LAND_FAMILIEN_ROSTER.families[index], living = household.persons.filter(person => person.status === 'alive');
@@ -47,7 +47,7 @@ test('the hierarchy lists each living person once, preserves three biography por
 });
 
 test('iframe source and case context remain tied to the existing family identities', () => {
-  for (const [index, entry] of buildLandfamilienEntries().entries()) {
+  for (const [index, entry] of buildLandfamilienEntries().slice(0, 3).entries()) {
     const household = LAND_FAMILIEN_ROSTER.families[index], tree = entry.pages[3].familyTree;
     assert.equal(tree.familyId, household.familyId);
     assert.equal(tree.source, `../Stammb%C3%A4ume/Stammbaum.html?family=${household.familyId}&mode=view`);
@@ -64,7 +64,7 @@ test('iframe source and case context remain tied to the existing family identiti
 test('the real hierarchy sanitizer retains every group and every portrait across JSON round trips', async () => {
   const context = vm.createContext({ document: { addEventListener() {} } });
   vm.runInContext(await readFile(new URL('../modules/module-editor/module-editor-data.js', import.meta.url), 'utf8'), context);
-  for (const entry of buildLandfamilienEntries()) {
+  for (const entry of buildLandfamilienEntries().slice(0, 3)) {
     const original = entry.pages[1].hierarchy;
     const first = JSON.parse(JSON.stringify(context.sanitizeHierarchyData(original)));
     const second = JSON.parse(JSON.stringify(context.sanitizeHierarchyData(JSON.parse(JSON.stringify(first)))));
@@ -82,7 +82,7 @@ test('generated archive registration is idempotent and preserves an existing loc
   const source = await readFile(new URL('../modules/gwynthor-landfamilien/landfamilien-data.js', import.meta.url), 'utf8');
   vm.runInContext(source, context); vm.runInContext(source, context);
   const found = context.SECTIONS.flatMap(section => section.entries);
-  assert.equal(found.length, 3);
+  assert.equal(found.length, 9);
   assert.strictEqual(found.find(entry => entry.id === saved.id), saved);
   assert.equal(saved.title, 'Eigener Hoftitel');
 });

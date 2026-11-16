@@ -23,27 +23,27 @@ export const HOF_POIS = [
     "key": "holzfaellerhaus-ost",
     "title": "Hallvards und Rannveigs Haus",
     "position": [
-      0.244,
-      0.113
+      0.235,
+      0.112
     ],
     "responsibleIds": [],
     "residenceId": "holzfaellerhaus-ost",
     "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/holzfaellerhaus-ost-v1.png",
     "imageBrief": "Einfaches Wohnhaus am Waldrand",
-    "text": "Hier wohnen Hallvard und seine Frau Rannveig. Während Hallvard im Holzfällerlager arbeitet, sammelt Rannveig Beeren und Kräuter in den nahen Wäldern und bringt sie in die Vorratshaltung des Hofes ein."
+    "text": "Hier wohnen Hallvard und seine Frau Rannveig. Torleifs eigener Wohnteil ist direkt an ihr Haus angebaut. Während Hallvard im Holzfällerlager arbeitet, sammelt Rannveig Beeren und Kräuter in den nahen Wäldern und bringt sie in die Vorratshaltung des Hofes ein."
   },
   {
     "key": "holzfaellerhaus-sued",
     "title": "Torleifs Haus",
     "position": [
-      0.187,
-      0.178
+      0.253,
+      0.122
     ],
     "responsibleIds": [],
     "residenceId": "holzfaellerhaus-sued",
     "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/holzfaellerhaus-sued-v1.png",
     "imageBrief": "Kleines schlichtes Wohnhaus beim Holzlager",
-    "text": "Torleif wohnt nahe beim Arbeitsplatz und dem Haushalt seines Bruders. Sein Haus ist schlicht eingerichtet; Arbeitskleidung und Werkzeug werden trocken beim Eingang verwahrt."
+    "text": "Torleifs eigener Wohnteil ist unmittelbar an das Haus seines Bruders Hallvard und dessen Frau Rannveig angebaut. Er wohnt mit ihnen am Holzfällerlager; der weiter südlich stehende Schuppen gehört nicht zu seinem Wohnhaus. Sein Wohnteil ist schlicht eingerichtet; Arbeitskleidung und Werkzeug werden trocken beim Eingang verwahrt."
   },
   {
     "key": "bedienstetenhuette-01",

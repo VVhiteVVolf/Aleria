@@ -1,0 +1,266 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-16T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Wirtschaftsgebäude und Vorräte",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Tirfelyn-Hof",
+        "Wirtschaftsgebäude und Vorräte"
+      ],
+      "desc": "Der Wirtschaftshof · Tirfelyn-Hof",
+      "iconUrl": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/kornspeicher-v1.png"
+    },
+    "entry": {
+      "id": "tirfelyn-hof-wirtschaftshof",
+      "title": "Wirtschaftsgebäude und Vorräte",
+      "subtitle": "Der Wirtschaftshof · Tirfelyn-Hof",
+      "type": "Hofbereich",
+      "category": "Tirfelyn-Hof",
+      "stamp": "Tirfelyn-Hof",
+      "icon": "⌂",
+      "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/kornspeicher-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/kornspeicher-v1.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--haus-tirfelyn--cadfan-tirfelyn",
+        "person--haus-tirfelyn--eudaf-tirfelyn",
+        "person--family-tree--glesni-spouse-tirfelyn",
+        "person--haus-tirfelyn--gareth-tirfelyn",
+        "person--haus-tirfelyn--gwion-tirfelyn",
+        "person--tirfelyn-hof--eiluned"
+      ],
+      "commentThreadAliases": [
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-kornspeicher",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-kornspeicher"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-lager-west",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-lager-west"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-geraeteschuppen",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-geraeteschuppen"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-lager-sued",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-lager-sued"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-lager-ost",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-lager-ost"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-schweinegehege",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-schweinegehege"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-hofbrunnen",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-hofbrunnen"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-wirtschaftsbrunnen",
+          "to": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-wirtschaftsbrunnen"
+        }
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Wirtschaftsgebäude und Vorräte",
+          "commentThreadKey": "tirfelyn-hof-wirtschaftshof-ueberblick",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/kornspeicher-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "description": "<p>Gemeinsame Speicher, Lager, Brunnen und das Schweinegehege rund um die Wirtschaftsgebäude.</p><p><strong>Gwallog Tirfelyn</strong> · Ackerbau, Fuhrwerk und Kornspeicher.</p><p><strong>Eudaf Tirfelyn</strong> · Gesamtleitung, Viehhaltung und Futterwirtschaft.</p><p><strong>Madrun</strong> · Gemeinsamer Haushalt, Räucherhaus und Haltbarmachung.</p><p><strong>Gareth Tirfelyn</strong> · Rinderhaltung und zusätzlich Betreuung der Hofpferde am Gestüt.</p><p><strong>Cynddylan Tirfelyn</strong> · Stallarbeit sowie zusätzlich Häuteaufbereitung und einfache Lederarbeiten im Gerberhaus.</p><p><strong>Eiluned</strong> · Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a> · <a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof\">Zur Familie Tirfelyn</a></p><ul><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-kornspeicher\">Kornspeicher</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-lager-west\">Westliches Hoflager</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-geraeteschuppen\">Geräteschuppen am Herrenhaus</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-lager-sued\">Südliches Vorratslager</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-lager-ost\">Lager beim Gestüt</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-schweinegehege\">Schweinegehege</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-hofbrunnen\">Brunnen am Herrenhaus</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-wirtschaftshof&thread=tirfelyn-hof-wirtschaftshof%3A%3Asession%3Atirfelyn-hof-poi-wirtschaftsbrunnen\">Brunnen bei den Wirtschaftsgebäuden</a></li></ul>",
+          "stats": [
+            [
+              "Hof",
+              "Tirfelyn-Hof"
+            ],
+            [
+              "Eigentümer",
+              "Familie Tirfelyn"
+            ],
+            [
+              "Orte",
+              "8"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Kornspeicher",
+          "commentThreadKey": "tirfelyn-hof-poi-kornspeicher",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/kornspeicher-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Gwallog verwahrt hier das eingebrachte Getreide. Saatgut, Mahlgetreide und Futtervorräte werden getrennt und trocken gelagert.</p><p><strong>Zuständig:</strong> Gwallog Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Kornspeicher · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Westliches Hoflager",
+          "commentThreadKey": "tirfelyn-hof-poi-lager-west",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/lager-west-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Werkzeug und Vorräte für Feldarbeit und Lieferungen werden hier untergebracht. Gwallog behält den Überblick über den täglichen Bedarf.</p><p><strong>Zuständig:</strong> Gwallog Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Westliches Hoflager · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Geräteschuppen am Herrenhaus",
+          "commentThreadKey": "tirfelyn-hof-poi-geraeteschuppen",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/geraeteschuppen-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Ein möglicher Platz für Handwerkzeug, Eimer und kleinere Hofgeräte nahe dem Wohnhaus.</p><p><strong>Zuständig:</strong> Eudaf Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Geräteschuppen am Herrenhaus · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Südliches Vorratslager",
+          "commentThreadKey": "tirfelyn-hof-poi-lager-sued",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/lager-sued-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Madrun bewahrt hier länger haltbare Vorräte und leere Behälter auf. Der kurze Weg zum Herrenhaus erleichtert die Versorgung des großen Haushalts.</p><p><strong>Zuständig:</strong> Madrun.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Südliches Vorratslager · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Lager beim Gestüt",
+          "commentThreadKey": "tirfelyn-hof-poi-lager-ost",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/lager-ost-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Futter und Gerätschaften für Pferde und die nahen Weiden liegen hier griffbereit. Gareth stimmt die Vorräte mit Eudaf ab.</p><p><strong>Zuständig:</strong> Gareth Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Lager beim Gestüt · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Schweinegehege",
+          "commentThreadKey": "tirfelyn-hof-poi-schweinegehege",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/schweinegehege-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Eudaf und Cynddylan versorgen die Schweine nahe den Wirtschaftsgebäuden. Regelmäßige Fütterung und Reinigung gehören zur täglichen Hofarbeit.</p><p><strong>Zuständig:</strong> Eudaf Tirfelyn, Cynddylan Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Schweinegehege · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Brunnen am Herrenhaus",
+          "commentThreadKey": "tirfelyn-hof-poi-hofbrunnen",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hofbrunnen-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Hier holt die Familie Wasser für den gemeinsamen Haushalt. Eiluned unterstützt sie bei den täglichen Wegen mit Eimern und Gefäßen.</p><p><strong>Zuständig:</strong> Eiluned.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Brunnen am Herrenhaus · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Brunnen bei den Wirtschaftsgebäuden",
+          "commentThreadKey": "tirfelyn-hof-poi-wirtschaftsbrunnen",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/wirtschaftsbrunnen-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der Brunnen versorgt die nahen Arbeitsbereiche mit Wasser. Cynddylan nutzt ihn bei den alltäglichen Stall- und Hofarbeiten.</p><p><strong>Zuständig:</strong> Cynddylan Tirfelyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Brunnen bei den Wirtschaftsgebäuden · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

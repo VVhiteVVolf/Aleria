@@ -6,12 +6,14 @@ import { buildLandfamilienEntries } from '../modules/gwynthor-landfamilien/landf
 import { HOF_STAFF } from '../../shared/tirfelyn-hof/hof-residents.mjs';
 import { HOF_ANIMALS } from '../../shared/tirfelyn-hof/hof-animals.mjs';
 import { HOF_POIS, HOF_MAPPED_POIS, HOF_MAP_ID } from '../../shared/tirfelyn-hof/hof-pois.mjs';
+import { HOF_SCENE_RELOCATIONS, hofSceneDestination } from '../../shared/tirfelyn-hof/hof-areas.mjs';
 import { hofMapMarker } from '../../Karten/modules/tirfelyn-hof/hof-markers.mjs';
 
 const entry = buildLandfamilienEntries()[0];
+const farmEntries = buildLandfamilienEntries().filter(entry => entry.id.startsWith('tirfelyn-hof'));
 const navigationOnly = process.env.TIRFELYN_BROWSER_MODE === 'navigation';
 const mapOnly = process.env.TIRFELYN_BROWSER_MODE === 'map';
-const output = resolve(process.env.TIRFELYN_BROWSER_OUTPUT || `diagnostics/tirfelyn-hof-20261115/browser-${Date.now()}`);
+const output = resolve(process.env.TIRFELYN_BROWSER_OUTPUT || `diagnostics/tirfelyn-hof-reorganisation-20261116/browser-${Date.now()}`);
 await mkdir(output, { recursive: true });
 const preview = await openVenueBrowserPreview('tirfelyn-hof');
 const { page } = preview, checks = [], actorChecks = [], screenshots = [], navigationChecks = [], peopleChecks = [], mapErrors = [];
@@ -31,17 +33,28 @@ try {
     await loadCharacters();
   });
   const actualEntry = await page.evaluate(() => findCurrentSectionByEntryId('tirfelyn-hof')?.entry);
-  assert.equal(actualEntry.pages.length, 43, 'Die tatsächlich registrierte Anwendung muss den erweiterten Hof laden.');
+  assert.equal(actualEntry.pages.length, 15, 'Die tatsächlich registrierte Anwendung muss die neue Hofaufteilung laden.');
   const roundtrip = await page.evaluate(entry => sanitizeModuleEntry(JSON.parse(JSON.stringify(sanitizeModuleEntry(entry)))), entry);
-  assert.equal(roundtrip.pages.length, 43);
+  assert.equal(roundtrip.pages.length, 15);
   assert.deepEqual(roundtrip.pages.map(page => page.commentThreadKey), entry.pages.map(page => page.commentThreadKey));
+  for (const model of farmEntries) {
+    const registered = await page.evaluate(id => findCurrentSectionByEntryId(id)?.entry, model.id);
+    assert.equal(registered.pages.length, model.pages.length);
+    const normalized = await page.evaluate(entry => sanitizeModuleEntry(JSON.parse(JSON.stringify(sanitizeModuleEntry(entry)))), model);
+    assert.deepEqual(normalized.commentThreadAliases, model.commentThreadAliases);
+  }
+  for (const relocation of HOF_SCENE_RELOCATIONS) {
+    const target = await page.evaluate(thread => findCommentThreadDestination(thread, getValidSections()), relocation.oldThreadId);
+    assert.equal(target.entry.id, relocation.entryId);
+    assert.equal(target.threadId, relocation.threadId);
+  }
 
   const layouts = navigationOnly ? [] : [['desktop', { width: 1440, height: 1000 }], ['mobile', { width: 390, height: 844 }], ['narrow', { width: 320, height: 780 }]];
   for (const [layout, viewport] of layouts) {
     await page.setViewportSize(viewport);
     if (!mapOnly) {
-    for (const [index, model] of entry.pages.entries()) {
-      await preview.openPage(entry, index);
+    for (const moduleEntry of farmEntries) for (const [index, model] of moduleEntry.pages.entries()) {
+      await preview.openPage(moduleEntry, index);
       await preview.decodeImages('#modal-overlay img[src*="tirfelyn-hof"], #modal-overlay img[src*="gwynthor-landfamilien"]');
       if (model.hierarchyPage) {
         for (const [treeIndex, tree] of model.hierarchy.trees.entries()) {
@@ -52,15 +65,16 @@ try {
         }
       }
       if (model.sessionPage) {
-        assert.equal(await page.evaluate(() => getCurrentCommentThreadId()), `${entry.id}::session:${model.commentThreadKey}`);
+        assert.equal(await page.evaluate(() => getCurrentCommentThreadId()), `${moduleEntry.id}::session:${model.commentThreadKey}`);
         const toggle = page.locator('#modal-overlay .session-intro-toggle');
         const initiallyOpen = await page.locator('#modal-overlay .session-intro').evaluate(details => details.open);
         await toggle.click(); assert.equal(await page.locator('#modal-overlay .session-stage-copy').isVisible(), !initiallyOpen);
         await toggle.click(); assert.equal(await page.locator('#modal-overlay .session-stage-copy').isVisible(), initiallyOpen);
       }
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 2), `${layout}: ${model.pageTitle}`);
-      checks.push({ layout, page: index, title: model.pageTitle, thread: model.commentThreadKey });
-      if ([0, 6, 7, 8, 14, 20, 42].includes(index)) await capture(`${layout}-page-${index}`);
+      checks.push({ layout, module: moduleEntry.id, page: index, title: model.pageTitle, thread: model.commentThreadKey });
+      if ((moduleEntry.id === entry.id && [0, 6, 7, 14].includes(index)) || (moduleEntry.id !== entry.id && index === 0))
+        await capture(`${layout}-${moduleEntry.id}-page-${index}`);
     }
 
     await preview.openPage(entry, 8);
@@ -102,6 +116,8 @@ try {
     });
     for (const poi of HOF_MAPPED_POIS) {
       assert.equal(await mapPage.locator(`#pl [data-id="tirfelyn-${poi.key}"] img`).getAttribute('src'), hofMapMarker(poi).url);
+      const markerSize = await mapPage.evaluate(() => Math.round(KartoRuntime.pinDisplayOptions().dotSize * 2.2 * 1.5));
+      assert.equal(Number(await mapPage.locator(`#pl [data-id="tirfelyn-${poi.key}"] img`).getAttribute('width')), markerSize);
     }
     assert.equal(await mapPage.locator('#lb-regions').isVisible(), false);
     assert.equal(await mapPage.evaluate(() => window.KARTO_CONFIG.images.normal === window.KARTO_CONFIG.images.pins), true);
@@ -126,7 +142,7 @@ try {
       assert.ok(await popup.evaluate(node => { const rect = node.getBoundingClientRect(); return rect.top >= 0 && rect.bottom <= innerHeight && rect.width > 0; }));
       for (const person of home.members) assert.ok((await popup.innerText()).includes(person.name));
       peopleChecks.push({ layout, home: home.pinId, residents: home.members.length });
-      if (['tirfelyn-bauernherrenhaus', 'tirfelyn-bedienstetenhuette-04'].includes(home.pinId)) await capture(`${layout}-personen-${home.pinId}`, mapPage);
+      if (['tirfelyn-holzfaellerhaus-ost', 'tirfelyn-holzfaellerhaus-sued', 'tirfelyn-bedienstetenhuette-04'].includes(home.pinId)) await capture(`${layout}-personen-${home.pinId}`, mapPage);
       await mapPage.keyboard.press('Escape'); await popup.waitFor({ state: 'hidden' });
     }
     await capture(`${layout}-personen`, mapPage);
@@ -143,9 +159,23 @@ try {
       await mapPage.waitForFunction(() => !document.getElementById('pin-tooltip').classList.contains('show'));
       assert.equal(await mapPage.locator('#pin-detail-title').innerText(), poi.title);
       await mapPage.locator('#scroll-content .sv-location-image').evaluate(image => image.decode());
-      assert.equal(await mapPage.locator('#scroll-content .sv-table tr').count(), 2);
+      assert.equal(await mapPage.locator('#scroll-content .sv-table tr').count(), 7);
+      assert.equal(await mapPage.evaluate(() => Number(getComputedStyle(document.getElementById('scroll-mo')).zIndex)
+        > Number(getComputedStyle(document.getElementById('lsb-toggle')).zIndex)), true, 'Der Kartenknopf darf die Infotabelle nicht überlagern');
+      const geometry = await mapPage.locator('#scroll-content .sv-body').evaluate(body => {
+        const image = body.querySelector('.sv-img-wrap').getBoundingClientRect();
+        const table = body.querySelector('.sv-table').getBoundingClientRect();
+        return { image: { x: image.x, y: image.y, right: image.right, bottom: image.bottom },
+          table: { x: table.x, y: table.y, bottom: table.bottom }, width: body.clientWidth, scrollWidth: body.scrollWidth };
+      });
+      assert(geometry.scrollWidth <= geometry.width + 1);
+      if (layout === 'desktop') {
+        assert(Math.abs(geometry.image.y - geometry.table.y) <= 1, 'Bild und Tabelle beginnen bündig');
+        assert(Math.abs(geometry.image.bottom - geometry.table.bottom) <= 1, 'Bild und Tabelle enden bündig');
+        assert(geometry.image.right <= geometry.table.x + 1, 'Bild links, Tabelle rechts');
+      } else assert(geometry.table.y >= geometry.image.bottom - 1, 'Mobil bleibt die Tabelle unter dem Bild lesbar');
       mapCards++;
-      if (['holzfaellerlager', 'bedienstetenhuette-04', 'hufschmiede'].includes(poi.key)) await capture(`${layout}-pin-${poi.key}`, mapPage);
+      if (['holzfaellerlager', 'holzfaellerhaus-sued', 'bedienstetenhuette-04', 'hufschmiede'].includes(poi.key)) await capture(`${layout}-pin-${poi.key}`, mapPage);
       await mapPage.locator('#scroll-actions [data-action="close-scroll"]').click();
     }
   }
@@ -199,14 +229,30 @@ try {
   await sceneLink.click();
   const sceneTarget = await scenePopup || mapPage;
   if (sceneTarget !== mapPage) openedPages.push(sceneTarget);
-  await sceneTarget.waitForURL(url => url.pathname.endsWith('/AleriaAlmanach.html') && url.searchParams.get('entry') === 'tirfelyn-hof');
+  const smithTarget = hofSceneDestination('hufschmiede');
+  await sceneTarget.waitForURL(url => url.pathname.endsWith('/AleriaAlmanach.html') && url.searchParams.get('entry') === smithTarget.entryId);
   await sceneTarget.waitForFunction(() => typeof openModal === 'function' && ['ready', 'slow'].includes(document.querySelector('[data-loading-screen]')?.dataset.state));
   const enter = sceneTarget.locator('[data-loading-action="enter"]');
   await (await enter.isEnabled() ? enter : sceneTarget.locator('[data-loading-action="continue"]')).click();
-  await sceneTarget.waitForFunction(() => typeof getCurrentCommentThreadId === 'function'
-    && getCurrentCommentThreadId() === 'tirfelyn-hof::session:tirfelyn-hof-poi-hufschmiede');
+  await sceneTarget.waitForFunction(threadId => typeof getCurrentCommentThreadId === 'function'
+    && getCurrentCommentThreadId() === threadId, smithTarget.threadId);
+  await sceneTarget.locator('#modal-overlay img[src*="tirfelyn-hof/scenes/hufschmiede"]').first().waitFor({ state: 'visible' });
+  await sceneTarget.locator('#modal-overlay img[src*="tirfelyn-hof/scenes/hufschmiede"]').evaluateAll(async images => { for (const image of images) await image.decode(); });
   await capture('navigation-hofpin-zur-schmiedeszene', sceneTarget);
   navigationChecks.push('Hofpin → richtige interaktive Schmiedeszene');
+  await sceneTarget.evaluate(() => openEntryById('tirfelyn-hof::session:tirfelyn-hof-poi-hufschmiede'));
+  assert.equal(await sceneTarget.evaluate(() => getCurrentCommentThreadId()), smithTarget.threadId);
+  await capture('navigation-alter-szenenlink-zur-neuen-schmiede', sceneTarget);
+  navigationChecks.push('Alter Szenenlink → ausgelagertes Schmiedemodul');
+  await sceneTarget.goto(`${preview.origin}/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=${encodeURIComponent('tirfelyn-hof::session:tirfelyn-hof-poi-hufschmiede')}`);
+  await sceneTarget.waitForFunction(() => typeof openModal === 'function' && ['ready', 'slow'].includes(document.querySelector('[data-loading-screen]')?.dataset.state));
+  const legacyEnter = sceneTarget.locator('[data-loading-action="enter"]');
+  await (await legacyEnter.isEnabled() ? legacyEnter : sceneTarget.locator('[data-loading-action="continue"]')).click();
+  await sceneTarget.waitForFunction(thread => typeof getCurrentCommentThreadId === 'function' && getCurrentCommentThreadId() === thread, smithTarget.threadId);
+  await sceneTarget.locator('#modal-overlay img[src*="tirfelyn-hof/scenes/hufschmiede"]').first().waitFor({ state: 'visible' });
+  await sceneTarget.locator('#modal-overlay img[src*="tirfelyn-hof/scenes/hufschmiede"]').evaluateAll(async images => { for (const image of images) await image.decode(); });
+  await capture('navigation-alte-url-zur-neuen-schmiede', sceneTarget);
+  navigationChecks.push('Alte vollständige URL → ausgelagertes Schmiedemodul');
   assert.equal(actorChecks.length, navigationOnly || mapOnly ? 0 : 45);
   assert.deepEqual(preview.errors, []);
   assert.deepEqual(mapErrors, []);
@@ -217,6 +263,6 @@ try {
 } catch (error) {
   await capture('failure').catch(() => {});
   if (mapPage && !mapPage.isClosed()) await capture('failure-map', mapPage).catch(() => {});
-  await writeFile(resolve(output, 'report.json'), JSON.stringify({ passed: false, error: error.message, checks, actorChecks, screenshots }, null, 2));
+  await writeFile(resolve(output, 'report.json'), JSON.stringify({ passed: false, error: error.message, checks, actorChecks, screenshots, mapCards, navigationChecks, peopleChecks, mapErrors, errors: preview.errors }, null, 2));
   throw error;
 } finally { for (const opened of openedPages) await opened.close().catch(() => {}); await mapPage?.close().catch(() => {}); await preview.close(); }

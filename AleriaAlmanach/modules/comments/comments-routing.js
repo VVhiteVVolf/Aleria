@@ -12,6 +12,27 @@ function getPageCommentThreadId(entryId, pageKey) {
   return `${entryId}::page:${pageKey}`;
 }
 
+// A moved, previously empty page can retain its old navigation links. The
+// destination still uses its own normal thread; aliases never merge histories.
+function findCommentThreadDestination(threadId, sections) {
+  const location = parseCommentThreadLocation(threadId);
+  if (!['session', 'page'].includes(location.kind)) return null;
+  const previous = [];
+  for (const section of sections || []) for (const entry of section.entries || []) {
+    const pages = getPages(entry);
+    for (const [pageIndex, page] of pages.entries()) {
+      const thread = getCommentThreadForPage(page, entry, pageIndex);
+      if (thread?.threadId === threadId) return { section, entry, pageIndex, threadId };
+      if (thread?.kind === location.kind && Array.isArray(entry.commentThreadAliases)
+        && entry.commentThreadAliases.some(alias => alias.from === threadId && alias.to === thread.threadId)) {
+        previous.push({ section, entry, pageIndex, threadId: thread.threadId });
+      }
+    }
+  }
+  // Ambiguous editorial aliases must not open an arbitrary scene.
+  return previous.length === 1 ? previous[0] : null;
+}
+
 function parseCommentThreadLocation(threadId) {
   const raw = String(threadId || '');
   const sessionMatch = raw.match(/^(.*)::session:([^:]+)$/);

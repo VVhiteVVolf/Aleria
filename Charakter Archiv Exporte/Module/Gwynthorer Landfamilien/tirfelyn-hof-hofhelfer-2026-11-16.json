@@ -1,0 +1,168 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-16T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Hofhelfer und Hütten",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Tirfelyn-Hof",
+        "Hofhelfer und Hütten"
+      ],
+      "desc": "Die Hofhelfer · Tirfelyn-Hof",
+      "iconUrl": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-01-v1.png"
+    },
+    "entry": {
+      "id": "tirfelyn-hof-hofhelfer",
+      "title": "Hofhelfer und Hütten",
+      "subtitle": "Die Hofhelfer · Tirfelyn-Hof",
+      "type": "Hofbereich",
+      "category": "Tirfelyn-Hof",
+      "stamp": "Tirfelyn-Hof",
+      "icon": "⌂",
+      "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-01-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-01-v1.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--tirfelyn-hof--nefydd",
+        "person--tirfelyn-hof--rhufon",
+        "person--tirfelyn-hof--maldwyn",
+        "person--tirfelyn-hof--eiluned"
+      ],
+      "commentThreadAliases": [
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-01",
+          "to": "tirfelyn-hof-hofhelfer::session:tirfelyn-hof-poi-bedienstetenhuette-01"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-02",
+          "to": "tirfelyn-hof-hofhelfer::session:tirfelyn-hof-poi-bedienstetenhuette-02"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-03",
+          "to": "tirfelyn-hof-hofhelfer::session:tirfelyn-hof-poi-bedienstetenhuette-03"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-06",
+          "to": "tirfelyn-hof-hofhelfer::session:tirfelyn-hof-poi-bedienstetenhuette-06"
+        }
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hofhelfer und Hütten",
+          "commentThreadKey": "tirfelyn-hof-hofhelfer-ueberblick",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-01-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "description": "<p>Die Wohnhütten von Nefydd, Rhufon, Maldwyn und Eiluned und ihre Aufgaben im Hofalltag.</p><p><strong>Nefydd</strong> · Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte.</p><p><strong>Rhufon</strong> · Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen.</p><p><strong>Maldwyn</strong> · Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen.</p><p><strong>Eiluned</strong> · Allgemeine Hofmagd, unterstützt Enid und Madrun bei Wäsche, Reinigung und Wasserholen.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a> · <a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof\">Zur Familie Tirfelyn</a></p><ul><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-hofhelfer&thread=tirfelyn-hof-hofhelfer%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-01\">Nefydds Hütte</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-hofhelfer&thread=tirfelyn-hof-hofhelfer%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-02\">Rhufons Hütte</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-hofhelfer&thread=tirfelyn-hof-hofhelfer%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-03\">Maldwyns Hütte</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-hofhelfer&thread=tirfelyn-hof-hofhelfer%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-06\">Eiluneds Hütte</a></li></ul>",
+          "stats": [
+            [
+              "Hof",
+              "Tirfelyn-Hof"
+            ],
+            [
+              "Eigentümer",
+              "Familie Tirfelyn"
+            ],
+            [
+              "Orte",
+              "4"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Nefydds Hütte",
+          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-01",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-01-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der Feldknecht Nefydd wohnt in der nördlichsten Hütte. Er unterstützt Gwallog beim Bestellen der Äcker und bei der Ernte.</p><p><strong>Bewohner:</strong> Nefydd.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-01\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Nefydds Hütte · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Rhufons Hütte",
+          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-02",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-02-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Rhufon hilft auf den Feldern und bei den täglich wechselnden Hofarbeiten. Bei Lieferungen unterstützt er die Familie mit Wagen, Säcken und Kisten.</p><p><strong>Bewohner:</strong> Rhufon.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-02\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Rhufons Hütte · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Maldwyns Hütte",
+          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-03",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-03-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der Viehknecht Maldwyn wohnt zwischen Hütten und Weidewegen. Unter Eudafs Leitung hilft er bei Fütterung, Viehtrieb und der Pflege der Einfriedungen.</p><p><strong>Bewohner:</strong> Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-03\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Maldwyns Hütte · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Eiluneds Hütte",
+          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-06",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-06-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Eiluned unterstützt Enid und Madrun im gemeinsamen Hofhaushalt. Wäsche, Reinigung und Wasserholen gehören zu ihren wechselnden Aufgaben.</p><p><strong>Bewohner:</strong> Eiluned.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-06\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Eiluneds Hütte · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

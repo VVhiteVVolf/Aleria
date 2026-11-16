@@ -1,8 +1,9 @@
 import { HOF_MAP_ID, HOF_MAP_FOLDER, HOF_MAPPED_POIS } from '../../../shared/tirfelyn-hof/hof-pois.mjs';
-import { hofResidentsAt } from '../../../shared/tirfelyn-hof/hof-household.mjs';
 import { stateHash } from '../../tools/generated-map-output.mjs';
 import { hofMapMarker, HOF_MARKER_DEFINITIONS } from './hof-markers.mjs';
 import { buildHofPeopleLayer } from './hof-people.mjs';
+import { hofPinTable } from './hof-pin-details.mjs';
+import { hofSceneLink } from '../../../shared/tirfelyn-hof/hof-areas.mjs';
 
 export const HOF_MAP_IMAGE = `${HOF_MAP_FOLDER}/Kartenbilder/Tirfelyn - Hof.png`;
 export const HOF_MAP_LINK = `/Karten/karte.html?map=${HOF_MAP_ID}`;
@@ -33,17 +34,15 @@ export function buildHofMap() {
   const cats = [{ id: 'hof-wohnhaus', label: 'Wohnhäuser', color: '#886b45' }, { id: 'hof-arbeit', label: 'Arbeitsstätten', color: '#8c532f' },
     { id: 'hof-land', label: 'Felder und Weiden', color: '#53734c' }, { id: 'hof-vorrat', label: 'Vorräte und Wasser', color: '#496e7c' }];
   const pins = HOF_MAPPED_POIS.map(poi => {
-    const people = hofResidentsAt(poi);
     const marker = hofMapMarker(poi);
     const cat = poi.residenceId ? 'hof-wohnhaus' : /acker|getreide|weide|garten|gehege/.test(poi.key) ? 'hof-land'
       : /lager|speicher|schuppen|brunnen/.test(poi.key) && poi.key !== 'holzfaellerlager' ? 'hof-vorrat' : 'hof-arbeit';
     return { id: `tirfelyn-${poi.key}`, title: poi.title, x: poi.position[0], y: poi.position[1], cat, kind: 'place',
-      pinMarker: marker?.url || '', pinMarkerScale: 0.75,
+      pinMarker: marker?.url || '', pinMarkerScale: 1.5,
       img: poi.image, imgLink: '', crest: '', crestLink: '', banner: '', bannerLink: '',
       region: 'Tirfelyn-Hof · Bannkreis Gwynthor', house: 'Familie Tirfelyn', faction: '',
-      table: [{ k: poi.residenceId ? 'Bewohner' : 'Zuständig', v: people.map(person => person.name).join(', ') || 'Familie Tirfelyn' },
-        { k: 'Nutzung', v: poi.residenceId ? 'Wohnhaus' : poi.text.split('. ')[0].replace(/\.$/, '') }],
-      text: `${poi.text}\n\n[URL=/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof&thread=${encodeURIComponent(`tirfelyn-hof::session:tirfelyn-hof-poi-${poi.key}`)}]Interaktive Szene im Almanach öffnen[/URL]`, secret: false };
+      table: hofPinTable(poi),
+      text: `${poi.text}\n\n[URL=${hofSceneLink(poi)}]Interaktive Szene im Almanach öffnen[/URL]`, secret: false };
   });
   const state = { pins, cats, dotSize: 22, lblSize: 13, showMarkers: true, showPinLabels: false,
     markerPresentation: 'symbols', pinVisibilityVersion: 1, regionTitle: 'Tirfelyn-Hof', regionIcon: '',

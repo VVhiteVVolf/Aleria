@@ -1,4 +1,7 @@
 /* Location card: shared by the reading dialog and editor preview. */
+/* A modal reading card covers the map sidebars and their fixed toggles. */
+#scroll-mo { z-index: 850; }
+
 #scroll-card {
   position: relative;
   width: min(1180px, calc(100vw - 32px));

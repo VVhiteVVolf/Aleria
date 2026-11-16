@@ -6,7 +6,14 @@
     const parameters = new URLSearchParams(window.location.search);
     const id = String(parameters.get('entry') || '').trim();
     if (id && id.length <= 160) {
-      const threadId = parameters.get('thread'), found = threadId ? findCurrentSectionByEntryId(id) : null;
+      const threadId = parameters.get('thread');
+      const destination = threadId && parseCommentThreadLocation(threadId).baseEntryId === id
+        ? findCommentThreadDestination(threadId, getValidSections()) : null;
+      if (destination) {
+        openArchiveEntryById(destination.entry.id, { pageIndex: destination.pageIndex });
+        return;
+      }
+      const found = threadId ? findCurrentSectionByEntryId(id) : null;
       const pageIndex = threadId && found?.entry ? getPages(found.entry).findIndex((page, index) =>
         (getCommentThreadForPage(page, found.entry, index) || getInlineCommentThreadForPage(page, found.entry, index))?.threadId === threadId) : -1;
       openArchiveEntryById(id, pageIndex >= 0 ? { pageIndex } : {});

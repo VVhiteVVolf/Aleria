@@ -1,0 +1,117 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-16T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Hufschmiede und Schmiedehaus",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Tirfelyn-Hof",
+        "Hufschmiede und Schmiedehaus"
+      ],
+      "desc": "Die Hufschmiede · Tirfelyn-Hof",
+      "iconUrl": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hufschmiede-v1.png"
+    },
+    "entry": {
+      "id": "tirfelyn-hof-hufschmiede",
+      "title": "Hufschmiede und Schmiedehaus",
+      "subtitle": "Die Hufschmiede · Tirfelyn-Hof",
+      "type": "Hofbereich",
+      "category": "Tirfelyn-Hof",
+      "stamp": "Tirfelyn-Hof",
+      "icon": "⌂",
+      "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hufschmiede-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hufschmiede-v1.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--tirfelyn-hof--cynfarch"
+      ],
+      "commentThreadAliases": [
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-hufschmiede",
+          "to": "tirfelyn-hof-hufschmiede::session:tirfelyn-hof-poi-hufschmiede"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-bedienstetenhuette-05",
+          "to": "tirfelyn-hof-hufschmiede::session:tirfelyn-hof-poi-bedienstetenhuette-05"
+        }
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hufschmiede und Schmiedehaus",
+          "commentThreadKey": "tirfelyn-hof-hufschmiede-ueberblick",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hufschmiede-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "description": "<p>Cynfarchs Arbeitsplatz und seine Wohnhütte auf dem Hof.</p><p><strong>Cynfarch</strong> · Junger Hufschmied, Beschläge und Reparaturen für den Hof.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a> · <a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof\">Zur Familie Tirfelyn</a></p><ul><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-hufschmiede&thread=tirfelyn-hof-hufschmiede%3A%3Asession%3Atirfelyn-hof-poi-hufschmiede\">Hufschmiede</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-hufschmiede&thread=tirfelyn-hof-hufschmiede%3A%3Asession%3Atirfelyn-hof-poi-bedienstetenhuette-05\">Cynfarchs Hütte</a></li></ul>",
+          "stats": [
+            [
+              "Hof",
+              "Tirfelyn-Hof"
+            ],
+            [
+              "Eigentümer",
+              "Familie Tirfelyn"
+            ],
+            [
+              "Orte",
+              "2"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hufschmiede",
+          "commentThreadKey": "tirfelyn-hof-poi-hufschmiede",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/hufschmiede-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der junge Cynfarch aus Bronhir beschlägt die Hofpferde. Außerdem kümmert er sich um eiserne Beschläge und kleine Reparaturen an den landwirtschaftlichen Geräten.</p><p><strong>Zuständig:</strong> Cynfarch.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-hufschmiede\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Hufschmiede · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Cynfarchs Hütte",
+          "commentThreadKey": "tirfelyn-hof-poi-bedienstetenhuette-05",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bedienstetenhuette-05-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Cynfarch aus Bronhir bewohnt diese Hütte. Von hier geht er zur Schmiede, wo er die Hofpferde beschlägt und eiserne Gerätschaften instand hält.</p><p><strong>Bewohner:</strong> Cynfarch.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof&amp;pin=tirfelyn-bedienstetenhuette-05\" target=\"_blank\" rel=\"noopener\">Diesen Ort auf der Hofkarte öffnen</a></p>",
+          "sessionHint": "Cynfarchs Hütte · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

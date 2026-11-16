@@ -1,0 +1,292 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-16T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Felder und Weiden",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Tirfelyn-Hof",
+        "Felder und Weiden"
+      ],
+      "desc": "Feld- und Viehwirtschaft · Tirfelyn-Hof",
+      "iconUrl": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-mitte-v1.png"
+    },
+    "entry": {
+      "id": "tirfelyn-hof-felder-weiden",
+      "title": "Felder und Weiden",
+      "subtitle": "Feld- und Viehwirtschaft · Tirfelyn-Hof",
+      "type": "Hofbereich",
+      "category": "Tirfelyn-Hof",
+      "stamp": "Tirfelyn-Hof",
+      "icon": "⌂",
+      "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-mitte-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-mitte-v1.png",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "person--haus-tirfelyn--caradog-tirfelyn",
+        "person--haus-tirfelyn--cadfan-tirfelyn",
+        "person--tirfelyn-hof--nefydd",
+        "person--haus-tirfelyn--meleri-tirfelyn",
+        "person--tirfelyn-hof--rhufon",
+        "person--haus-tirfelyn--eudaf-tirfelyn",
+        "person--tirfelyn-hof--maldwyn",
+        "person--haus-tirfelyn--gareth-tirfelyn"
+      ],
+      "commentThreadAliases": [
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-acker-mitte",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-acker-mitte"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-acker-west",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-acker-west"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-getreide-suedwest",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-getreide-suedwest"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-acker-sued",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-acker-sued"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-schafweide",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-schafweide"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-rinderweide-west",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-rinderweide-west"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-rinderweide-suedost",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-rinderweide-suedost"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-bullenweide",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-bullenweide"
+        },
+        {
+          "from": "tirfelyn-hof::session:tirfelyn-hof-poi-weide-nordost",
+          "to": "tirfelyn-hof-felder-weiden::session:tirfelyn-hof-poi-weide-nordost"
+        }
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Felder und Weiden",
+          "commentThreadKey": "tirfelyn-hof-felder-weiden-ueberblick",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-mitte-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "description": "<p>Die gemeinsam bewirtschafteten Äcker und Weiden des Tirfelyn-Hofs.</p><p><strong>Caradog Tirfelyn</strong> · Gesamtleitung, Feldbau und Lieferplanung.</p><p><strong>Gwallog Tirfelyn</strong> · Ackerbau, Fuhrwerk und Kornspeicher.</p><p><strong>Nefydd</strong> · Feldknecht, unterstützt Gwallog bei Bodenarbeit und Ernte.</p><p><strong>Eiliwedd Tirfelyn</strong> · Gemüsefelder und Zusammenstellen der Lieferungen.</p><p><strong>Rhufon</strong> · Feld- und Hofhelfer, hilft auch bei Fuhrwerk und Lieferungen.</p><p><strong>Eudaf Tirfelyn</strong> · Gesamtleitung, Viehhaltung und Futterwirtschaft.</p><p><strong>Maldwyn</strong> · Viehknecht, unterstützt Eudaf bei Fütterung, Weiden und Zäunen.</p><p><strong>Gareth Tirfelyn</strong> · Rinderhaltung und zusätzlich Betreuung der Hofpferde am Gestüt.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a> · <a href=\"../AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof\">Zur Familie Tirfelyn</a></p><ul><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-acker-mitte\">Großer Acker bei der Mühle</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-acker-west\">Westliche Anbaufläche</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-getreide-suedwest\">Südwestliches Getreidefeld</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-acker-sued\">Südliche Anbaufläche</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-schafweide\">Schafweide</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-rinderweide-west\">Westliche Rinderweide</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-rinderweide-suedost\">Südöstliche Rinderweide</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-bullenweide\">Bullenweide</a></li><li><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=tirfelyn-hof-felder-weiden&thread=tirfelyn-hof-felder-weiden%3A%3Asession%3Atirfelyn-hof-poi-weide-nordost\">Nordöstliche Weide</a></li></ul>",
+          "stats": [
+            [
+              "Hof",
+              "Tirfelyn-Hof"
+            ],
+            [
+              "Eigentümer",
+              "Familie Tirfelyn"
+            ],
+            [
+              "Orte",
+              "9"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Großer Acker bei der Mühle",
+          "commentThreadKey": "tirfelyn-hof-poi-acker-mitte",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-mitte-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Caradog und Gwallog planen die Feldarbeit. Nefydd hilft bei Bodenbearbeitung, Aussaat und Ernte.</p><p><strong>Zuständig:</strong> Caradog Tirfelyn, Gwallog Tirfelyn, Nefydd.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Großer Acker bei der Mühle · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Westliche Anbaufläche",
+          "commentThreadKey": "tirfelyn-hof-poi-acker-west",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-west-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Eiliwedd betreut hier einen Teil des Gemüseanbaus. Rhufon hilft bei Pflege, Ernte und dem Abtransport zum Hof.</p><p><strong>Zuständig:</strong> Eiliwedd Tirfelyn, Rhufon.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Westliche Anbaufläche · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Südwestliches Getreidefeld",
+          "commentThreadKey": "tirfelyn-hof-poi-getreide-suedwest",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/getreide-suedwest-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Das Getreide gelangt nach der Ernte in die Hofspeicher. Gwallog und Nefydd unterstützen die Familie bei Schnitt und Einbringen.</p><p><strong>Zuständig:</strong> Gwallog Tirfelyn, Nefydd.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Südwestliches Getreidefeld · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Südliche Anbaufläche",
+          "commentThreadKey": "tirfelyn-hof-poi-acker-sued",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/acker-sued-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Diese Fläche gehört zur gemeinsamen Feldwirtschaft. Welche Kulturen hier stehen, richtet sich nach Caradogs Anbauplanung und der jeweiligen Saison.</p><p><strong>Zuständig:</strong> Caradog Tirfelyn, Rhufon.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Südliche Anbaufläche · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Schafweide",
+          "commentThreadKey": "tirfelyn-hof-poi-schafweide",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/schafweide-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Eudaf und Maldwyn kümmern sich um die Schafe und kontrollieren Wasser, Futter und Einfriedung. Die Familie übernimmt die anfallenden Arbeiten gemeinsam.</p><p><strong>Zuständig:</strong> Eudaf Tirfelyn, Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Schafweide · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Westliche Rinderweide",
+          "commentThreadKey": "tirfelyn-hof-poi-rinderweide-west",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/rinderweide-west-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Gareth versorgt das Rindvieh. Maldwyn hilft bei Viehtrieb und Weidepflege; Milch und weitere Erzeugnisse werden von der Familie verarbeitet.</p><p><strong>Zuständig:</strong> Gareth Tirfelyn, Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Westliche Rinderweide · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Südöstliche Rinderweide",
+          "commentThreadKey": "tirfelyn-hof-poi-rinderweide-suedost",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/rinderweide-suedost-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Auch diese Weide gehört zur Viehwirtschaft des Familienhofs. Gareth und Maldwyn sehen täglich nach Tieren und Zäunen.</p><p><strong>Zuständig:</strong> Gareth Tirfelyn, Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Südöstliche Rinderweide · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Bullenweide",
+          "commentThreadKey": "tirfelyn-hof-poi-bullenweide",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/bullenweide-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Die Bullen stehen in einer eigenen Einfriedung. Den Umgang mit den kräftigen Tieren übernehmen erfahrene Erwachsene unter Eudafs Verantwortung.</p><p><strong>Zuständig:</strong> Eudaf Tirfelyn, Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Bullenweide · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Nordöstliche Weide",
+          "commentThreadKey": "tirfelyn-hof-poi-weide-nordost",
+          "image": "/AleriaAlmanach/assets/tirfelyn-hof/scenes/weide-nordost-v1.png",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Die zusätzliche Weide gibt der Familie Spielraum bei der Einteilung des Viehs. Ihre Nutzung richtet sich nach Futterstand und Bedarf.</p><p><strong>Zuständig:</strong> Eudaf Tirfelyn, Maldwyn.</p><p><a href=\"../Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof\" target=\"_blank\" rel=\"noopener\">Zur Hofkarte</a></p>",
+          "sessionHint": "Nordöstliche Weide · Tirfelyn-Hof",
+          "sessionEmptyTitle": "Hier kann eine Begegnung beginnen",
+          "sessionEmptyText": "Eine Ankunft, eine Arbeitspause oder ein Gespräch im Alltag des Hofes.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

@@ -13,8 +13,9 @@ const outputs = new Map([
 ]);
 for (const registration of registrations) {
   const { tab, path, description: desc, icon: iconUrl, entry } = registration;
-  outputs.set(new URL(`../../Charakter Archiv Exporte/Module/Gwynthorer Landfamilien/${entry.id}-2026-11-07.json`, import.meta.url),
-    JSON.stringify({ type: 'aleria-module-package', version: 1, exportedAt: '2026-11-07T00:00:00Z',
+  const exportDate = entry.id.startsWith('tirfelyn-hof-') ? '2026-11-16' : '2026-11-07';
+  outputs.set(new URL(`../../Charakter Archiv Exporte/Module/Gwynthorer Landfamilien/${entry.id}-${exportDate}.json`, import.meta.url),
+    JSON.stringify({ type: 'aleria-module-package', version: 1, exportedAt: `${exportDate}T00:00:00Z`,
       module: { type: 'aleria-module', version: 1, section: { key: path.at(-1), tab, path, desc, iconUrl }, entry } }, null, 2) + '\n');
 }
 for (const [url, content] of outputs) {

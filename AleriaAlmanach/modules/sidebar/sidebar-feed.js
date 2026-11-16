@@ -193,8 +193,10 @@ document.addEventListener('aleria:comment-backend-reconnect', event => {
 
 function openEntryById(entryId) {
   const location = parseCommentThreadLocation(entryId);
-  for (const section of getValidSections()) {
-    const found = section.entries.find(entry => entry.id === location.baseEntryId);
+  const sections = getValidSections();
+  const destination = findCommentThreadDestination(entryId, sections);
+  for (const section of sections) {
+    const found = section.entries.find(entry => entry.id === (destination?.entry.id || location.baseEntryId));
     if (found) {
       const tab = section.tab || section.key;
       switchTab(tab);
@@ -205,7 +207,7 @@ function openEntryById(entryId) {
       const matchingPageIndex = location.pageKey
         ? entryPages.findIndex((page, index) => getPageCommentThreadKey(page, index) === location.pageKey)
         : -1;
-      currentPage = matchingPageIndex >= 0
+      currentPage = destination ? destination.pageIndex : matchingPageIndex >= 0
         ? matchingPageIndex
         : location.pageIndex !== null
           ? Math.max(0, Math.min(location.pageIndex, totalPages - 1))
