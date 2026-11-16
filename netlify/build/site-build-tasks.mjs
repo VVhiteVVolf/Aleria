@@ -455,7 +455,7 @@ export const SITE_BUILD_TASKS = [
   },
   {
     id: 'notice-boards', label: 'Notice templates, typography, stacks, bounded text and goods rewards',
-    inputs: ['Anzeigetafeln/', 'AleriaAlmanach/modules/archive/archive-entry-links.js', 'Orte/assets/js/orte-notice-board.js', 'Orte/tests/poi-bridges.test.mjs',
+    inputs: ['Anzeigetafeln/', 'AleriaAlmanach/modules/archive/archive-entry-links.js', 'AleriaAlmanach/modules/comments/comments-routing.js', 'Orte/assets/js/orte-notice-board.js', 'Orte/tests/poi-bridges.test.mjs',
       'AleriaAlmanach/modules/core/aleria-calendar.js', 'AleriaAlmanach/modules/world-date/', 'AleriaAlmanach/modules/calendar/calendar-date-picker.mjs',
       'IconOrdner/Steckis/', 'netlify/functions/world-content-publisher.mjs',
       'Fonts/', 'AleriaAlmanach/modules/language/', 'AleriaAlmanach/DokumentenWerkstatt/js/fonts/',

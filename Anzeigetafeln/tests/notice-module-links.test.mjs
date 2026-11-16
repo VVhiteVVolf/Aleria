@@ -49,13 +49,16 @@ test('archive entry links open only after startup, through existing navigation, 
 });
 test('quest links select actual session pages and open only existing saved character or creature sheets', async () => {
   const source=readFileSync(new URL('../../AleriaAlmanach/modules/archive/archive-entry-links.js',import.meta.url),'utf8');
-  for(const search of ['?entry=inn&thread=inn%3A%3Asession%3Atwo','?character=mara','?creature=hanno']){
+  const routing=readFileSync(new URL('../../AleriaAlmanach/modules/comments/comments-routing.js',import.meta.url),'utf8');
+  const entry={id:'inn',pages:[{sessionPage:true,commentThreadKey:'one'},{sessionPage:true,commentThreadKey:'two'}],
+    commentThreadAliases:[{from:'old-inn::session:two',to:'inn::session:two'}]};
+  for(const search of ['?entry=inn&thread=inn%3A%3Asession%3Atwo','?entry=old-inn&thread=old-inn%3A%3Asession%3Atwo','?character=mara','?creature=hanno']){
     let ready;const calls=[];
     const context={URLSearchParams,window:{location:{search},addEventListener:(_name,fn)=>{ready=fn;},AleriaCreatures:{reload:async()=>{},getById:id=>({id}),open:id=>calls.push(['creature',id])}},
-      findCurrentSectionByEntryId:()=>({entry:{id:'inn'}}),getPages:()=>[{key:'one'},{key:'two'}],getCommentThreadForPage:page=>({threadId:`inn::session:${page.key}`}),
-      getInlineCommentThreadForPage:()=>null,openArchiveEntryById:(id,options)=>calls.push(['module',id,options.pageIndex]),
+      findCurrentSectionByEntryId:()=>({entry}),getValidSections:()=>[{entries:[entry]}],getPages:entry=>entry.pages,
+      openArchiveEntryById:(id,options)=>calls.push(['module',id,options.pageIndex]),
       loadCharacters:async()=>{},getCharacterById:id=>({id}),openCharProfile:id=>calls.push(['character',id]),showAppStatus:message=>{throw Error(message);}};
-    vm.runInNewContext(source,context);await ready();
+    vm.runInNewContext(routing+'\n'+source,context);await ready();
     assert.deepEqual(calls,[search.includes('thread=')?['module','inn',1]:search.includes('character=')?['character','mara']:['creature','hanno']]);
   }
 });
