@@ -4,7 +4,7 @@
   "recordId": "character--zitteraale-nachtkieme",
   "slug": "nachtkieme",
   "identity": {
-    "name": "Nachtkieme",
+    "name": "Llineth",
     "aliases": [],
     "worldPersonId": ""
   },
@@ -40,6 +40,7 @@
       "collection": "characters",
       "documentId": "zitteraale-nachtkieme",
       "documentIds": [
+        "zitteraale-nachtkieme",
         "zitteraale-nachtkieme"
       ],
       "documents": [
@@ -47,6 +48,11 @@
           "documentId": "zitteraale-nachtkieme",
           "createdAt": "2026-10-21T00:00:00Z",
           "updatedAt": "2026-10-21T00:00:00Z"
+        },
+        {
+          "documentId": "zitteraale-nachtkieme",
+          "createdAt": "",
+          "updatedAt": "2026-11-16T18:00:00Z"
         }
       ]
     },
@@ -55,13 +61,14 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/zitteraale-nachtkieme-2026-10-21.json",
-    "sourceExportedAt": "2026-10-21T00:00:00Z",
-    "sourceUpdatedAt": "2026-10-21T00:00:00Z",
+    "sourceArchive": "Charakter Archiv Exporte/Schwarze Zitteraale/zitteraale-nachtkieme-2026-11-16.json",
+    "sourceExportedAt": "2026-11-16T18:00:00Z",
+    "sourceUpdatedAt": "2026-11-16T18:00:00Z",
     "sourceDocumentIds": [
+      "zitteraale-nachtkieme",
       "zitteraale-nachtkieme"
     ],
-    "contentHash": "cd92eb8aff888190d6033d5523312b77dd818330a93abdde2256192a0ce9d847"
+    "contentHash": "f1ed8da47578d03b6420c4ebff3b601e0e3a1dcf3f37e5f05a2d953c61684c2d"
   },
   "local": {
     "notes": "",
@@ -104,20 +111,28 @@
         ],
         "activeImageSetId": "standard",
         "imageSetSchemaVersion": 1
+      },
+      {
+        "id": "zitteraale-nachtkieme",
+        "name": "Llineth",
+        "aliases": [],
+        "title": "Verbindungen · Kundschaft und Abnehmer",
+        "bio": "Llineth kannte die Straßen der Grafschaft bereits, bevor die Bande ihre Wege nutzte. Aus kleinen Botengängen wurden bezahlte Hinweise und schließlich die Planung von Hinterhalten. Sie hält Kontakte zu Kundschaftern, Boten und Abnehmern der Beute.\n\nAufmerksam, misstrauisch und wortkarg. Merkt sich Stimmen und kleine Unstimmigkeiten; antwortet selten auf die eigentliche Frage.\n\nBeobachtet Reisegewohnheiten, stellt Kontakte zu Abnehmern her und prüft fremde Nachrichten. Nur wenige erfahren von ihr mehr als ihren nächsten Treffpunkt.",
+        "updatedAt": "2026-11-16T18:00:00Z"
       }
     ]
   },
   "character": {
     "id": "zitteraale-nachtkieme",
-    "name": "Nachtkieme",
+    "name": "Llineth",
     "aliases": [],
-    "title": "Linke Hand · Kundschaft und Verbindungen",
+    "title": "Verbindungen · Kundschaft und Abnehmer",
     "fraktion": "Schwarze Zitteraale",
     "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/nachtkieme.png",
-    "bio": "Sie kannte die Straßen der Grafschaft bereits, bevor die Bande ihre Wege nutzte. Aus kleinen Botengängen wurden bezahlte Hinweise und schließlich die Planung von Hinterhalten. Niemand in der Bande verwendet einen anderen Namen für sie.\n\nAufmerksam, misstrauisch und wortkarg. Merkt sich Stimmen und kleine Unstimmigkeiten; antwortet selten auf die eigentliche Frage.\n\nBeobachtet Reisegewohnheiten, stellt Kontakte zu Abnehmern her und prüft fremde Nachrichten. Nur wenige erfahren von ihr mehr als ihren nächsten Treffpunkt.",
+    "bio": "Llineth kannte die Straßen der Grafschaft bereits, bevor die Bande ihre Wege nutzte. Aus kleinen Botengängen wurden bezahlte Hinweise und schließlich die Planung von Hinterhalten. Sie hält Kontakte zu Kundschaftern, Boten und Abnehmern der Beute.\n\nAufmerksam, misstrauisch und wortkarg. Merkt sich Stimmen und kleine Unstimmigkeiten; antwortet selten auf die eigentliche Frage.\n\nBeobachtet Reisegewohnheiten, stellt Kontakte zu Abnehmern her und prüft fremde Nachrichten. Nur wenige erfahren von ihr mehr als ihren nächsten Treffpunkt.",
     "status": "Gesucht",
     "createdAt": "2026-10-21T00:00:00Z",
-    "updatedAt": "2026-10-21T00:00:00Z",
+    "updatedAt": "2026-11-16T18:00:00Z",
     "archived": false,
     "genealogy": {
       "sex": "female",

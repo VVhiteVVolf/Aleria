@@ -151,7 +151,8 @@ function updateInlineHierarchyLevelField(input) {
   const data = getInlineHierarchyDataForEdit(page);
   const tree = getInlineHierarchyTree(data, treeIndex);
   tree.levels[index] = tree.levels[index] || { label: '', nodes: [] };
-  tree.levels[index].label = String(input.value || '').trim();
+  const field = input.dataset.hierarchyLevelField || 'label';
+  tree.levels[index][field] = input.type === 'checkbox' ? input.checked : String(input.value || '').trim();
   page.hierarchy = sanitizeHierarchyData(data);
   scheduleInlineModuleLivePreviewRefresh();
 }
@@ -259,6 +260,19 @@ function buildInlineHierarchyLevelRows(levels = [], treeIndex = 0) {
       <div class="inline-edit-field">
         <span class="inline-edit-label">Ebenenlabel</span>
         <input class="inline-edit-input" type="text" data-inline-action="update-hierarchy-level-field" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}" value="${escapeHtml(level.label || '')}">
+      </div>
+      <div class="inline-edit-field">
+        <span class="inline-edit-label">Gruppenwappen</span>
+        <input class="inline-edit-input" type="text" data-inline-action="update-hierarchy-level-field" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}" data-hierarchy-level-field="emblem" value="${escapeHtml(level.emblem || '')}">
+      </div>
+      <div class="inline-edit-field">
+        <label>Spalten pro Reihe
+          <select class="inline-edit-select" data-inline-action="update-hierarchy-level-field" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}" data-hierarchy-level-field="columns">
+            <option value="">Automatisch</option>
+            ${[1, 2, 3, 4, 5, 6].map(columns => `<option value="${columns}"${Number(level.columns) === columns ? ' selected' : ''}>${columns}</option>`).join('')}
+          </select>
+        </label>
+        <label><input type="checkbox" data-inline-action="update-hierarchy-level-field" data-hierarchy-tree-index="${treeIndex}" data-hierarchy-level-index="${levelIndex}" data-hierarchy-level-field="startsGroup"${level.startsGroup ? ' checked' : ''}> Neue eigenständige Gruppe</label>
       </div>
       <div class="hierarchy-inline-node-list">
         ${buildInlineHierarchyNodeRows(level, treeIndex, levelIndex)}

@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-16",
+  "scope": "Lokale Neugliederung der Schwarzen Zitteraale mit acht Unterbanden",
+  "authority": "Auftrag und anschließende Korrekturen des Nutzers in dieser Sitzung",
+  "currentGroupName": "Die Untoten Aale",
+  "currentGroupAge": "Eine der ältesten Unterbanden der Schwarzen Zitteraale",
+  "supersededUserWording": [
+    "Brackwasser Aale",
+    "Die Untoten Aele",
+    "Dieser Branch sei recht neu beziehungsweise eine relativ junge Bande"
+  ],
+  "sources": [
+    { "path": "module-online-20261116.json", "kind": "read-only module_store_entries read", "role": "Bestehende Kennungen, Seiten und Hauptquartiersszene" },
+    { "path": "former-members-online-20261116.json", "kind": "read-only masked character reads", "role": "Identitätsabgleich und vorhandene Porträts von Brychan, Tegid und Rhodri" },
+    { "path": "new-identities-read-20261116.json", "kind": "read-only exact document reads", "role": "Acht neue Modulkennungen und Medrawd-Kennung zum Lesezeitpunkt nicht vorhanden" },
+    { "path": "wanted-people-20261021.json", "kind": "retained historical authored people", "role": "Bereits ausgestellte Fahndungsblätter bleiben beim damaligen Stand" },
+    { "path": "../source-notes.json", "kind": "retained October evidence", "role": "Historischer Stand; die heutige Mitgliedschaft folgt der ausdrücklichen neuen Nutzervorgabe" }
+  ],
+  "decisions": [
+    "Das Hauptmodul und sein bisheriger Hauptquartiersthread behalten ihre Kennungen. Netznadels Modulseite und Szenenbesetzung entfallen; seine bestehende eigenständige Akte und historische Fahndung werden nicht gelöscht.",
+    "Die beiden Stellvertreter heißen redaktionell Der Schinder und Der Eidlose. Nachtkieme erhält den gewählten Namen Llineth und bleibt als Verbindungsperson erhalten. Die alten technischen Figurenkennungen bleiben stabil.",
+    "Die neue Nutzerkorrektur hat Vorrang: Die Untoten Aale gehören zu den ältesten Unterbanden. Es wird kein unbelegtes genaues Gründungsjahr ergänzt.",
+    "Die Nutzerquelle nennt Rodhri und Bradrith; vorhandene Figuren- und Ortsquellen werden unter Rhodri und Bradrhith wiederverwendet, ohne neue Doppelidentitäten anzulegen.",
+    "Brychan und Tegid werden gemäß aktuellem Auftrag als verstorben geführt, Rhodri als Ex-Mitglied und früherer zweiter Leutnant. Die ältere Gerichtsquelle hatte die Vollstreckung noch nicht belegt und bleibt unverändert als damaliger Stand erhalten.",
+    "Der damalige erste Leutnant fiel gegen Sir Rhys Draig, während Medrawd abwesend war. Der neue ehemalige Ritter und die neue Zauberwirkerin sind heutige Nachbesetzungen mit noch offenen Namen.",
+    "Medrawds mechanische Hand ist in den angenommenen Porträtfassungen links dargestellt. Haarverlust und fehlender Ohrteil betreffen die verbrannte rechte Kopfseite. Sichtbares Alter etwa 34, tatsächliches Alter etwa 50; kein Geburtstag wird erfunden.",
+    "Die Gruppen II. bis VIII. bleiben Platzhalter mit blanken schwarzen Bannern. Die unabhängigen Hauptquartiersszenen legen weder Datum noch Ort fest. Tŵr Rhewgorn ist für Gruppe I nur eine Vermutung; der Porträtturm ist kein bestätigter Standort.",
+    "Technische Bild- und Quellnamen mit aele bleiben Versionskennungen. Die aktuelle sichtbare Schreibweise lautet überall Die Untoten Aale.",
+    "Alle neuen Bilder wurden mit dem eingebauten image_gen erzeugt. Tatsächliche Prompts, angenommene und verworfene Versionen, verfügbare Referenzoriginale sowie Hashes sind im Kunstmanifest erhalten. Das hochgeladene blonde Vorbild hatte keinen zugänglichen lokalen Originalpfad; seine Verwendung ist als Gesprächsbild dokumentiert.",
+    "Nur drei bestehende lokale Figuren erhalten Name, Aliasliste, Titel, öffentliche Kurzbiografie und Zeitstempel. Medrawd ist eine neue lokale Figur. Die übrigen 513 bisherigen Snapshotprofile bleiben exakt erhalten; produktive Daten werden nicht geschrieben."
+  ],
+  "publication": { "requested": false, "productionWrites": false, "commit": false, "push": false, "deploy": false }
+}

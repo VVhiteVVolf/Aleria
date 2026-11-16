@@ -2,16 +2,16 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-11-15T20:00:00Z",
+  "sourceExportedAt": "2026-11-16T18:00:00Z",
   "summary": {
-    "sourceDocuments": 675,
-    "total": 421,
+    "sourceDocuments": 680,
+    "total": 423,
     "mergedSameNameGroups": 45,
     "familyLinked": 297,
     "familyAmbiguous": 0,
-    "familyPending": 124,
+    "familyPending": 126,
     "primaryFamily": 295,
-    "primaryGroup": 31,
+    "primaryGroup": 33,
     "primaryPlace": 61,
     "primaryUnassigned": 34,
     "duplicateWorldPeople": 0
@@ -921,7 +921,7 @@
     },
     {
       "recordId": "character--zitteraale-schlickzahn",
-      "name": "Schlickzahn",
+      "name": "Der Schinder",
       "status": "pending",
       "primary": {
         "kind": "group",
@@ -933,7 +933,7 @@
     },
     {
       "recordId": "character--zitteraale-nachtkieme",
-      "name": "Nachtkieme",
+      "name": "Llineth",
       "status": "pending",
       "primary": {
         "kind": "group",
@@ -945,7 +945,7 @@
     },
     {
       "recordId": "character--zitteraale-donnerkiefer",
-      "name": "Donnerkiefer",
+      "name": "Der Eidlose",
       "status": "pending",
       "primary": {
         "kind": "group",
@@ -1467,6 +1467,30 @@
         "kind": "place",
         "id": "gwynthor",
         "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--schwarzfische-grenn-seolfor",
+      "name": "Grenn Coelret",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--zitteraale-medrawd-angau",
+      "name": "Medrawd Angau",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
         "source": "archive-tab"
       },
       "familyAlternatives": []

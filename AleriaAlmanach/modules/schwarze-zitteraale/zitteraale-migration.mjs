@@ -1,11 +1,22 @@
-// Explicitly retire every pre-overhaul page, including the legacy pages that
-// v1 appended by mistake. Keep edits to the nine new, stably keyed pages.
-// After this one-time cleanup the editor owns later changes again.
+// Feature-owned upgrades keep scene identities and later editor changes.
+// The November regrouping refreshes its authored pages once and retires the
+// removed dossier. The original v1 cleanup still drops its legacy pages.
 export function upgradeZitteraaleEntry(entry, canonical) {
   if (entry?.id !== canonical.id || entry.zitteraaleRevision === canonical.zitteraaleRevision) return entry;
-  const pages = canonical.pages.map(page => structuredClone(
-    (entry.pages || []).find(existing => existing.commentThreadKey === page.commentThreadKey) || page
-  ));
+  const regrouped = canonical.zitteraaleRevision === '20261116-unterbanden-v4';
+  const pages = canonical.pages.map(page => {
+    const existing = (entry.pages || []).find(existing => existing.commentThreadKey === page.commentThreadKey);
+    if (!regrouped) return structuredClone(existing || page);
+    // This commissioned reorganisation refreshes authored pages once. The
+    // existing headquarters scene keeps its edited content and thread identity.
+    if (page.sessionPage && existing) return { ...structuredClone(page), ...structuredClone(existing) };
+    return { ...structuredClone(existing || {}), ...structuredClone(page) };
+  });
+  if (regrouped && entry.zitteraaleRevision === '20261021-arvel-v3') {
+    const keys = new Set(canonical.pages.map(page => page.commentThreadKey));
+    pages.push(...structuredClone((entry.pages || []).filter(page =>
+      !keys.has(page.commentThreadKey) && page.commentThreadKey !== 'zitteraale-akte-netznadel')));
+  }
   // Correct only known authored wording. Preserve later editor additions and
   // scene identities; no comments, character resources or past posts are touched.
   const overview = pages.find(page => page.commentThreadKey === 'zitteraale-uebersicht');

@@ -5,7 +5,7 @@ import { buildHofPeopleLayer } from './hof-people.mjs';
 import { hofPinTable } from './hof-pin-details.mjs';
 import { hofSceneLink } from '../../../shared/tirfelyn-hof/hof-areas.mjs';
 
-export const HOF_MAP_IMAGE = `${HOF_MAP_FOLDER}/Kartenbilder/Tirfelyn - Hof.png`;
+export const HOF_MAP_IMAGE = `${HOF_MAP_FOLDER}/Kartenbilder/Tirfelyn - Hof.png?v=20261116-map-v2`;
 export const HOF_MAP_LINK = `/Karten/karte.html?map=${HOF_MAP_ID}`;
 
 export function hofMapRegistryEntry() {
@@ -22,7 +22,7 @@ export function hofMapRegistryEntry() {
 }
 
 export function hofMapConfig() {
-  const levels = [2048, 4096].map(width => ({ width, src: `${HOF_MAP_FOLDER}/Kartenbilder/display/tirfelyn-${width}-q90.jpg` }));
+  const levels = [2048, 4096].map(width => ({ width, src: `${HOF_MAP_FOLDER}/Kartenbilder/display/tirfelyn-${width}-q90.jpg?v=20261116-map-v2` }));
   const raster = { source: HOF_MAP_IMAGE, width: 4096, height: 4096, levels };
   return { mapId: HOF_MAP_ID, title: 'Tirfelyn-Hof', documentTitle: 'Tirfelyn-Hof – Aleria',
     categoryBarMode: 'used',

@@ -236,6 +236,11 @@
     "Charakter Archiv Exporte/Pert/person-dcc5c8f4.json",
     "Charakter Archiv Exporte/Pert/person-e6511832.json",
     "Charakter Archiv Exporte/Pert/person-f61ee33a.json",
+    "Charakter Archiv Exporte/Schwarze Zitteraale/medrawd-angau-2026-11-16.json",
+    "Charakter Archiv Exporte/Schwarze Zitteraale/zitteraale-donnerkiefer-2026-11-16.json",
+    "Charakter Archiv Exporte/Schwarze Zitteraale/zitteraale-nachtkieme-2026-11-16.json",
+    "Charakter Archiv Exporte/Schwarze Zitteraale/zitteraale-schlickzahn-2026-11-16.json",
+    "Charakter Archiv Exporte/Schwarzfische/grenn-seolfor.json",
     "Charakter Archiv Exporte/Silberhirsch Eigentum 2026-11-02/person--haus-wyrm--rianna-wyrm.json",
     "Charakter Archiv Exporte/Silberhirsch Eigentum 2026-11-02/vk0xAa3ZcEhVvGC1CzNq.json",
     "Charakter Archiv Exporte/Startbesitz 2026-11-02/caralyn-chwedlonol.json",
@@ -444,8 +449,8 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-11-15T20:00:00Z",
-  "count": 421,
+  "sourceExportedAt": "2026-11-16T18:00:00Z",
+  "count": 423,
   "records": [
     {
       "recordId": "character--kCmUm4WvMZDYetqrSWQ0",
@@ -5050,11 +5055,12 @@
     },
     {
       "recordId": "character--zitteraale-schlickzahn",
-      "name": "Schlickzahn",
+      "name": "Der Schinder",
       "aliases": [],
       "worldPersonId": "",
       "firestoreDocumentId": "zitteraale-schlickzahn",
       "firestoreDocumentIds": [
+        "zitteraale-schlickzahn",
         "zitteraale-schlickzahn"
       ],
       "primary": {
@@ -5065,15 +5071,16 @@
       },
       "familyStatus": "pending",
       "path": "records/gruppen/schwarze-zitteraale/schlickzahn--zitteraale-schlickzahn/character.json",
-      "contentHash": "a92907049451f1f5dc3b8977142b61bd81ac9ecb3cfa891c23154afab0caba35"
+      "contentHash": "fba80094f6c44b8739d88ea07631cd42024de4e8ec48592d6cedd294c6295ff3"
     },
     {
       "recordId": "character--zitteraale-nachtkieme",
-      "name": "Nachtkieme",
+      "name": "Llineth",
       "aliases": [],
       "worldPersonId": "",
       "firestoreDocumentId": "zitteraale-nachtkieme",
       "firestoreDocumentIds": [
+        "zitteraale-nachtkieme",
         "zitteraale-nachtkieme"
       ],
       "primary": {
@@ -5084,15 +5091,16 @@
       },
       "familyStatus": "pending",
       "path": "records/gruppen/schwarze-zitteraale/nachtkieme--zitteraale-nachtkieme/character.json",
-      "contentHash": "cd92eb8aff888190d6033d5523312b77dd818330a93abdde2256192a0ce9d847"
+      "contentHash": "f1ed8da47578d03b6420c4ebff3b601e0e3a1dcf3f37e5f05a2d953c61684c2d"
     },
     {
       "recordId": "character--zitteraale-donnerkiefer",
-      "name": "Donnerkiefer",
+      "name": "Der Eidlose",
       "aliases": [],
       "worldPersonId": "",
       "firestoreDocumentId": "zitteraale-donnerkiefer",
       "firestoreDocumentIds": [
+        "zitteraale-donnerkiefer",
         "zitteraale-donnerkiefer"
       ],
       "primary": {
@@ -5103,7 +5111,7 @@
       },
       "familyStatus": "pending",
       "path": "records/gruppen/schwarze-zitteraale/donnerkiefer--zitteraale-donnerkiefer/character.json",
-      "contentHash": "e1820be460219dba602bc1b323f0dd1615a1f578b87261bb847dac6632ef231c"
+      "contentHash": "dafa0a52157189c129a5c7672d0bc4de29219eb7266568db416e42a6de154326"
     },
     {
       "recordId": "character--zitteraale-netznadel",
@@ -8393,6 +8401,48 @@
       "familyStatus": "pending",
       "path": "records/orte/gwynthor/eiluned--person--tirfelyn-hof--eiluned/character.json",
       "contentHash": "ed1486949f24f1e89bdf66bfda504962800967d6d53f5a447848c4dc53c3c0e3"
+    },
+    {
+      "recordId": "character--schwarzfische-grenn-seolfor",
+      "name": "Grenn Coelret",
+      "aliases": [
+        "Grenn"
+      ],
+      "worldPersonId": "",
+      "firestoreDocumentId": "schwarzfische-grenn-seolfor",
+      "firestoreDocumentIds": [
+        "schwarzfische-grenn-seolfor"
+      ],
+      "primary": {
+        "kind": "group",
+        "id": "schwarzfische",
+        "label": "Schwarzfische",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/gruppen/schwarzfische/grenn-coelret--schwarzfische-grenn-seolfor/character.json",
+      "contentHash": "71da7357d582824ae758b5681c06cdd2dd29521312a940d7d62093ef2b4742d0"
+    },
+    {
+      "recordId": "character--zitteraale-medrawd-angau",
+      "name": "Medrawd Angau",
+      "aliases": [
+        "Untoter Aal"
+      ],
+      "worldPersonId": "",
+      "firestoreDocumentId": "zitteraale-medrawd-angau",
+      "firestoreDocumentIds": [
+        "zitteraale-medrawd-angau"
+      ],
+      "primary": {
+        "kind": "group",
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
+      },
+      "familyStatus": "pending",
+      "path": "records/gruppen/schwarze-zitteraale/medrawd-angau--zitteraale-medrawd-angau/character.json",
+      "contentHash": "58633af4f42b66d5ed2a4566f48b809ee42436de1826aea1d74b86deae0678b5"
     }
   ]
 }

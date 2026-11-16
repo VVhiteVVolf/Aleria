@@ -63,6 +63,19 @@ function buildHierarchyLevelEditorMarkup(level = {}, levelIndex = 0) {
         <label>Ebenenlabel</label>
         <input class="me-hierarchy-level-label" type="text" value="${escapeHtml(level.label || '')}" placeholder="optional">
       </div>
+      <div class="module-editor-field">
+        <label>Gruppenwappen</label>
+        <input class="me-hierarchy-level-emblem" type="text" value="${escapeHtml(level.emblem || '')}" placeholder="Bildpfad oder URL · optional">
+      </div>
+      <div class="module-editor-inline">
+        <label>Spalten pro Reihe
+          <select class="me-hierarchy-level-columns">
+            <option value="">Automatisch</option>
+            ${[1, 2, 3, 4, 5, 6].map(columns => `<option value="${columns}"${Number(level.columns) === columns ? ' selected' : ''}>${columns}</option>`).join('')}
+          </select>
+        </label>
+        <label><input class="me-hierarchy-level-starts-group" type="checkbox"${level.startsGroup ? ' checked' : ''}> Neue eigenständige Gruppe</label>
+      </div>
       <div class="hierarchy-editor-node-list">
         ${nodes.map((node, nodeIndex) => buildHierarchyNodeEditorMarkup(node, levelIndex, nodeIndex)).join('')}
       </div>
@@ -80,6 +93,10 @@ function collectHierarchyDetailsFromEditor(block) {
 function collectHierarchyLevelsFromEditor(block) {
   return Array.from(block.querySelectorAll('.hierarchy-editor-level-row')).map(levelRow => ({
     label: getTrimmedFormValue(levelRow, '.me-hierarchy-level-label'),
+    ...(getTrimmedFormValue(levelRow, '.me-hierarchy-level-emblem') ? { emblem: getTrimmedFormValue(levelRow, '.me-hierarchy-level-emblem') } : {}),
+    ...(sanitizeHierarchyLevelColumns(getTrimmedFormValue(levelRow, '.me-hierarchy-level-columns'))
+      ? { columns: sanitizeHierarchyLevelColumns(getTrimmedFormValue(levelRow, '.me-hierarchy-level-columns')) } : {}),
+    ...(levelRow.querySelector('.me-hierarchy-level-starts-group')?.checked ? { startsGroup: true } : {}),
     nodes: Array.from(levelRow.querySelectorAll('.hierarchy-editor-node-row')).map(nodeRow => ({
       portrait: getTrimmedFormValue(nodeRow, '.me-hierarchy-node-portrait'),
       title: getTrimmedFormValue(nodeRow, '.me-hierarchy-node-title'),

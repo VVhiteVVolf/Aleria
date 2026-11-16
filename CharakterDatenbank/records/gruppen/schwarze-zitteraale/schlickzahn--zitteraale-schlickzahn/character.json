@@ -4,7 +4,7 @@
   "recordId": "character--zitteraale-schlickzahn",
   "slug": "schlickzahn",
   "identity": {
-    "name": "Schlickzahn",
+    "name": "Der Schinder",
     "aliases": [],
     "worldPersonId": ""
   },
@@ -40,6 +40,7 @@
       "collection": "characters",
       "documentId": "zitteraale-schlickzahn",
       "documentIds": [
+        "zitteraale-schlickzahn",
         "zitteraale-schlickzahn"
       ],
       "documents": [
@@ -47,6 +48,11 @@
           "documentId": "zitteraale-schlickzahn",
           "createdAt": "2026-10-21T00:00:00Z",
           "updatedAt": "2026-10-21T00:00:00Z"
+        },
+        {
+          "documentId": "zitteraale-schlickzahn",
+          "createdAt": "",
+          "updatedAt": "2026-11-16T18:00:00Z"
         }
       ]
     },
@@ -55,13 +61,14 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
-    "sourceExportedAt": "2026-10-21T00:00:00Z",
-    "sourceUpdatedAt": "2026-10-21T00:00:00Z",
+    "sourceArchive": "Charakter Archiv Exporte/Schwarze Zitteraale/zitteraale-schlickzahn-2026-11-16.json",
+    "sourceExportedAt": "2026-11-16T18:00:00Z",
+    "sourceUpdatedAt": "2026-11-16T18:00:00Z",
     "sourceDocumentIds": [
+      "zitteraale-schlickzahn",
       "zitteraale-schlickzahn"
     ],
-    "contentHash": "a92907049451f1f5dc3b8977142b61bd81ac9ecb3cfa891c23154afab0caba35"
+    "contentHash": "fba80094f6c44b8739d88ea07631cd42024de4e8ec48592d6cedd294c6295ff3"
   },
   "local": {
     "notes": "",
@@ -104,20 +111,28 @@
         ],
         "activeImageSetId": "standard",
         "imageSetSchemaVersion": 1
+      },
+      {
+        "id": "zitteraale-schlickzahn",
+        "name": "Der Schinder",
+        "aliases": [],
+        "title": "Rechte Hand · Überfälle und Einschüchterung",
+        "bio": "Unter wechselnden Feldzeichen lernte er, dass bewaffnete Männer von den Vorräten anderer leben können. Beim Zitteraal fand er einen Herrn, der diese Gewohnheit belohnt. Als dessen rechte Hand treibt er Forderungen ein und bereitet größere Überfälle vor.\n\nReizbar, besitzergreifend und geduldig, wenn Angst ihm nützt. Lacht über kleine Demütigungen und merkt sich jeden Widerspruch.\n\nFührt den ersten Zugriff, schüchtert Gehöfte ein und treibt Forderungen ein. Er bindet Opfer im Gespräch, bis Komplizen die Ausgänge besetzt haben.",
+        "updatedAt": "2026-11-16T18:00:00Z"
       }
     ]
   },
   "character": {
     "id": "zitteraale-schlickzahn",
-    "name": "Schlickzahn",
+    "name": "Der Schinder",
     "aliases": [],
     "title": "Rechte Hand · Überfälle und Einschüchterung",
     "fraktion": "Schwarze Zitteraale",
     "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/schlickzahn.png",
-    "bio": "Unter wechselnden Feldzeichen lernte er, dass bewaffnete Männer von den Vorräten anderer leben können. Beim Zitteraal fand er einen Herrn, der diese Gewohnheit belohnt. Seinen Beinamen verdankt er der Zahnlücke und den schlammigen Hohlwegen seiner Überfälle.\n\nReizbar, besitzergreifend und geduldig, wenn Angst ihm nützt. Lacht über kleine Demütigungen und merkt sich jeden Widerspruch.\n\nFührt den ersten Zugriff, schüchtert Gehöfte ein und treibt Forderungen ein. Er bindet Opfer im Gespräch, bis Komplizen die Ausgänge besetzt haben.",
+    "bio": "Unter wechselnden Feldzeichen lernte er, dass bewaffnete Männer von den Vorräten anderer leben können. Beim Zitteraal fand er einen Herrn, der diese Gewohnheit belohnt. Als dessen rechte Hand treibt er Forderungen ein und bereitet größere Überfälle vor.\n\nReizbar, besitzergreifend und geduldig, wenn Angst ihm nützt. Lacht über kleine Demütigungen und merkt sich jeden Widerspruch.\n\nFührt den ersten Zugriff, schüchtert Gehöfte ein und treibt Forderungen ein. Er bindet Opfer im Gespräch, bis Komplizen die Ausgänge besetzt haben.",
     "status": "Gesucht",
     "createdAt": "2026-10-21T00:00:00Z",
-    "updatedAt": "2026-10-21T00:00:00Z",
+    "updatedAt": "2026-11-16T18:00:00Z",
     "archived": false,
     "genealogy": {
       "sex": "male",

@@ -8,7 +8,7 @@ export function buildZitteraaleDossier(person) {
   return { schemaVersion: 1, commentThreadKey: `zitteraale-akte-${person.id}`, pageTitle: `Krimi-Bio · ${person.name}`, bountyFilePage: true,
     image: person.sketch, description: `<p>${person.background}</p><p><strong>Persönlichkeit:</strong> ${person.character}</p><p><strong>Vorgehen:</strong> ${person.method}</p>`,
     bountyFile: { archiveTitle: person.name, archiveSubtitle: 'Marschallamt · Grafschaft Celtigerns Wacht', targetName: person.name,
-      aliases: 'Bandenbeiname · wirklicher Name unbekannt', regionalBanner: '/IconOrdner/Fazit%20Icons/Krone.png', portraitImage: person.sketch, portraitScale: 100, portraitX: 50, portraitY: 30,
+      aliases: person.id === 'nachtkieme' ? 'Unter dem Namen Llineth bekannt' : 'Bandenbeiname · wirklicher Name unbekannt', regionalBanner: '/IconOrdner/Fazit%20Icons/Krone.png', portraitImage: person.sketch, portraitScale: 100, portraitX: 50, portraitY: 30,
       status: 'Gesucht', statusNote: person.status, threatLevel: chief ? 5 : Math.max(3, 5 - ZITTERAALE_LEADERS.indexOf(person) % 3), threatText: 'Bewaffnet · nicht allein stellen',
       bountyAmount: person.bountyGold.toLocaleString('de-DE'), bountyCurrency: 'Goldtaler', coinImage: ZITTERAALE_GOLD_ICON,
       descriptionTitle: 'Personenbeschreibung', descriptionRows: [{ label: 'Alter', value: `Etwa ${person.age} Jahre` }, { label: 'Größe', value: person.height }, { label: 'Erkennungszeichen', value: person.appearance }],

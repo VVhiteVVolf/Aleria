@@ -236,6 +236,11 @@
     "Charakter Archiv Exporte/Pert/person-dcc5c8f4.json",
     "Charakter Archiv Exporte/Pert/person-e6511832.json",
     "Charakter Archiv Exporte/Pert/person-f61ee33a.json",
+    "Charakter Archiv Exporte/Schwarze Zitteraale/medrawd-angau-2026-11-16.json",
+    "Charakter Archiv Exporte/Schwarze Zitteraale/zitteraale-donnerkiefer-2026-11-16.json",
+    "Charakter Archiv Exporte/Schwarze Zitteraale/zitteraale-nachtkieme-2026-11-16.json",
+    "Charakter Archiv Exporte/Schwarze Zitteraale/zitteraale-schlickzahn-2026-11-16.json",
+    "Charakter Archiv Exporte/Schwarzfische/grenn-seolfor.json",
     "Charakter Archiv Exporte/Silberhirsch Eigentum 2026-11-02/person--haus-wyrm--rianna-wyrm.json",
     "Charakter Archiv Exporte/Silberhirsch Eigentum 2026-11-02/vk0xAa3ZcEhVvGC1CzNq.json",
     "Charakter Archiv Exporte/Startbesitz 2026-11-02/caralyn-chwedlonol.json",
@@ -444,7 +449,7 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-11-15T20:00:00Z",
+  "sourceExportedAt": "2026-11-16T18:00:00Z",
   "characters": [
     {
       "id": "kCmUm4WvMZDYetqrSWQ0",
@@ -207877,15 +207882,15 @@
     },
     {
       "id": "zitteraale-schlickzahn",
-      "name": "Schlickzahn",
+      "name": "Der Schinder",
       "aliases": [],
       "title": "Rechte Hand · Überfälle und Einschüchterung",
       "fraktion": "Schwarze Zitteraale",
       "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/schlickzahn.png",
-      "bio": "Unter wechselnden Feldzeichen lernte er, dass bewaffnete Männer von den Vorräten anderer leben können. Beim Zitteraal fand er einen Herrn, der diese Gewohnheit belohnt. Seinen Beinamen verdankt er der Zahnlücke und den schlammigen Hohlwegen seiner Überfälle.\n\nReizbar, besitzergreifend und geduldig, wenn Angst ihm nützt. Lacht über kleine Demütigungen und merkt sich jeden Widerspruch.\n\nFührt den ersten Zugriff, schüchtert Gehöfte ein und treibt Forderungen ein. Er bindet Opfer im Gespräch, bis Komplizen die Ausgänge besetzt haben.",
+      "bio": "Unter wechselnden Feldzeichen lernte er, dass bewaffnete Männer von den Vorräten anderer leben können. Beim Zitteraal fand er einen Herrn, der diese Gewohnheit belohnt. Als dessen rechte Hand treibt er Forderungen ein und bereitet größere Überfälle vor.\n\nReizbar, besitzergreifend und geduldig, wenn Angst ihm nützt. Lacht über kleine Demütigungen und merkt sich jeden Widerspruch.\n\nFührt den ersten Zugriff, schüchtert Gehöfte ein und treibt Forderungen ein. Er bindet Opfer im Gespräch, bis Komplizen die Ausgänge besetzt haben.",
       "status": "Gesucht",
       "createdAt": "2026-10-21T00:00:00Z",
-      "updatedAt": "2026-10-21T00:00:00Z",
+      "updatedAt": "2026-11-16T18:00:00Z",
       "archived": false,
       "genealogy": {
         "sex": "male",
@@ -207922,8 +207927,9 @@
         "recordId": "character--zitteraale-schlickzahn",
         "path": "records/gruppen/schwarze-zitteraale/schlickzahn--zitteraale-schlickzahn/character.json",
         "schemaVersion": 1,
-        "contentHash": "a92907049451f1f5dc3b8977142b61bd81ac9ecb3cfa891c23154afab0caba35",
+        "contentHash": "fba80094f6c44b8739d88ea07631cd42024de4e8ec48592d6cedd294c6295ff3",
         "firestoreDocumentIds": [
+          "zitteraale-schlickzahn",
           "zitteraale-schlickzahn"
         ],
         "classification": {
@@ -207949,15 +207955,15 @@
     },
     {
       "id": "zitteraale-nachtkieme",
-      "name": "Nachtkieme",
+      "name": "Llineth",
       "aliases": [],
-      "title": "Linke Hand · Kundschaft und Verbindungen",
+      "title": "Verbindungen · Kundschaft und Abnehmer",
       "fraktion": "Schwarze Zitteraale",
       "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/nachtkieme.png",
-      "bio": "Sie kannte die Straßen der Grafschaft bereits, bevor die Bande ihre Wege nutzte. Aus kleinen Botengängen wurden bezahlte Hinweise und schließlich die Planung von Hinterhalten. Niemand in der Bande verwendet einen anderen Namen für sie.\n\nAufmerksam, misstrauisch und wortkarg. Merkt sich Stimmen und kleine Unstimmigkeiten; antwortet selten auf die eigentliche Frage.\n\nBeobachtet Reisegewohnheiten, stellt Kontakte zu Abnehmern her und prüft fremde Nachrichten. Nur wenige erfahren von ihr mehr als ihren nächsten Treffpunkt.",
+      "bio": "Llineth kannte die Straßen der Grafschaft bereits, bevor die Bande ihre Wege nutzte. Aus kleinen Botengängen wurden bezahlte Hinweise und schließlich die Planung von Hinterhalten. Sie hält Kontakte zu Kundschaftern, Boten und Abnehmern der Beute.\n\nAufmerksam, misstrauisch und wortkarg. Merkt sich Stimmen und kleine Unstimmigkeiten; antwortet selten auf die eigentliche Frage.\n\nBeobachtet Reisegewohnheiten, stellt Kontakte zu Abnehmern her und prüft fremde Nachrichten. Nur wenige erfahren von ihr mehr als ihren nächsten Treffpunkt.",
       "status": "Gesucht",
       "createdAt": "2026-10-21T00:00:00Z",
-      "updatedAt": "2026-10-21T00:00:00Z",
+      "updatedAt": "2026-11-16T18:00:00Z",
       "archived": false,
       "genealogy": {
         "sex": "female",
@@ -207994,8 +208000,9 @@
         "recordId": "character--zitteraale-nachtkieme",
         "path": "records/gruppen/schwarze-zitteraale/nachtkieme--zitteraale-nachtkieme/character.json",
         "schemaVersion": 1,
-        "contentHash": "cd92eb8aff888190d6033d5523312b77dd818330a93abdde2256192a0ce9d847",
+        "contentHash": "f1ed8da47578d03b6420c4ebff3b601e0e3a1dcf3f37e5f05a2d953c61684c2d",
         "firestoreDocumentIds": [
+          "zitteraale-nachtkieme",
           "zitteraale-nachtkieme"
         ],
         "classification": {
@@ -208021,15 +208028,15 @@
     },
     {
       "id": "zitteraale-donnerkiefer",
-      "name": "Donnerkiefer",
+      "name": "Der Eidlose",
       "aliases": [],
-      "title": "Innerer Kreis · Waffen und Rudeldisziplin",
+      "title": "Linke Hand · Waffen und Bandenordnung",
       "fraktion": "Schwarze Zitteraale",
       "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/donnerkiefer.png",
-      "bio": "Ein ehemaliger Kriegsknecht, der nach Jahren wechselnder Dienste bei den Zitteraalen blieb. Er ordnet das erbeutete Gerät und übt mit den Komplizen, bis aus einem Überfall ein eingeübter Griff wird.\n\nDiszipliniert, nachtragend und stolz auf seine Härte. Hält Furcht für eine zuverlässigere Bindung als Freundschaft.\n\nÜberwacht Waffen und Wachen, setzt Befehle im Lager durch und übernimmt die Nachhut bei Rückzügen. Sein Beiname meint die donnernde Stimme hinter dem vernarbten Kiefer.",
+      "bio": "Ein ehemaliger Kriegsknecht, der nach Jahren wechselnder Dienste bei den Zitteraalen blieb. Er ordnet das erbeutete Gerät und übt mit den Komplizen, bis aus einem Überfall ein eingeübter Griff wird.\n\nDiszipliniert, nachtragend und stolz auf seine Härte. Hält Furcht für eine zuverlässigere Bindung als Freundschaft.\n\nÜberwacht Waffen und Wachen, setzt Befehle im Lager durch und stimmt Verstärkungen aus dem Hauptquartier mit den Gruppenführern ab.",
       "status": "Gesucht",
       "createdAt": "2026-10-21T00:00:00Z",
-      "updatedAt": "2026-10-21T00:00:00Z",
+      "updatedAt": "2026-11-16T18:00:00Z",
       "archived": false,
       "genealogy": {
         "sex": "male",
@@ -208066,8 +208073,9 @@
         "recordId": "character--zitteraale-donnerkiefer",
         "path": "records/gruppen/schwarze-zitteraale/donnerkiefer--zitteraale-donnerkiefer/character.json",
         "schemaVersion": 1,
-        "contentHash": "e1820be460219dba602bc1b323f0dd1615a1f578b87261bb847dac6632ef231c",
+        "contentHash": "dafa0a52157189c129a5c7672d0bc4de29219eb7266568db416e42a6de154326",
         "firestoreDocumentIds": [
+          "zitteraale-donnerkiefer",
           "zitteraale-donnerkiefer"
         ],
         "classification": {
@@ -250764,6 +250772,404 @@
         },
         "authoredFeature": "tirfelyn-hof-20261115"
       }
+    },
+    {
+      "id": "schwarzfische-grenn-seolfor",
+      "name": "Grenn Coelret",
+      "aliases": [
+        "Grenn"
+      ],
+      "age": 33,
+      "gender": "male",
+      "race": "Mensch",
+      "title": "Schwarzfisch · Speerträger",
+      "role": "Speerträger im Kernaufgebot der Schwarzfische",
+      "origin": "Aeldrunmar · Haus Coelret · Aeldros",
+      "fraktion": "Schwarzfische",
+      "portrait": "/AleriaAlmanach/assets/schwarzfische/grenn-coelret-v2.png",
+      "bio": "Grenn Coelret ist ein dreiunddreißigjähriger Söldner aus dem kleinen aeldrunmarischen Vasallenhaus Coelret im Umkreis der Beran. Das steigende braune Pferd auf grün-gelbem Feld verweist auf sein Herkunftshaus. Bei den Schwarzfischen dient Grenn mit dem Speer im engeren Aufgebot. Sein kurzes braunes Haar steht trotz des roten Stirnbands eigensinnig ab. Ein freches Grinsen, ein rascher Spruch und ein gewinnendes Auftreten machen ihn im Lager leicht wiedererkennbar.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Grenn Coelret",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Grenn Coelret"
+          },
+          {
+            "label": "Rufname",
+            "value": "Grenn"
+          },
+          {
+            "label": "Alter 1740",
+            "value": "33 Jahre"
+          },
+          {
+            "label": "Herkunft",
+            "value": "Aeldrunmar · Aldervan"
+          },
+          {
+            "label": "Haus",
+            "value": "Coelret · kleines Vasallenhaus der Beran"
+          },
+          {
+            "label": "Dienst",
+            "value": "Schwarzfische · Kernaufgebot"
+          },
+          {
+            "label": "Waffe",
+            "value": "Speer"
+          }
+        ],
+        "biography": {
+          "portrait": "./assets/schwarzfische/grenn-coelret-v2.png",
+          "crestImage": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp",
+          "biographyTitle": "Ein freches Grinsen unter dem roten Stirnband",
+          "biographyText": "<p>Grenn Coelret ist ein dreiunddreißigjähriger Söldner aus dem kleinen aeldrunmarischen Vasallenhaus Coelret im Umkreis der Beran. Das steigende braune Pferd auf grün-gelbem Feld verweist auf sein Herkunftshaus. Bei den Schwarzfischen dient Grenn mit dem Speer im engeren Aufgebot. Sein kurzes braunes Haar steht trotz des roten Stirnbands eigensinnig ab. Ein freches Grinsen, ein rascher Spruch und ein gewinnendes Auftreten machen ihn im Lager leicht wiedererkennbar.</p>",
+          "abilitiesTitle": "Auftreten und Eigenschaften",
+          "abilities": [
+            {
+              "title": "Frech",
+              "icon": "/IconOrdner/Traits%20Icon/Quick.png",
+              "detail": "Ein schiefer Blick und eine schnelle Antwort gehören zu Grenns Auftreten."
+            },
+            {
+              "title": "Charismatisch",
+              "icon": "/IconOrdner/Traits%20Icon/Gregarious.png",
+              "detail": "Er findet leicht ins Gespräch und trägt seine Selbstsicherheit mit einem gewinnenden Lächeln."
+            },
+            {
+              "title": "Selbstbewusst",
+              "icon": "/IconOrdner/Traits%20Icon/Brave.png",
+              "detail": "Seine Haltung ist gelassen, sein Blick wach und herausfordernd."
+            }
+          ],
+          "historyTitle": "Aus einem aeldrunmarischen Reiterhaus",
+          "historyText": "<p>Haus Coelret gehört zum Vasallenkreis der Beran in Aeldrunmar und ist dem Umfeld von Aeldros zugeordnet. Das steigende braune Pferd auf grün-gelbem Feld und die zugehörige Hyld-Darstellung passen zu Grenns Herkunft aus einem kleinen Reiterhaus. Sein gegenwärtiger Dienst gehört dem Schwarzfischbanner auf Estryll.</p>",
+          "worksTitle": "Erkennungsmerkmale",
+          "works": [
+            "Kurzes braunes Haar mit abstehenden Strähnen",
+            "Rotes Stirnband",
+            "Speer und dunkler Schwarzfischharnisch"
+          ],
+          "connectionsTitle": "Haus und Banner",
+          "connections": [
+            {
+              "name": "Haus Coelret",
+              "detail": "Herkunftshaus · Beran · Aeldrunmar",
+              "image": "/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp",
+              "imageFormat": "square"
+            },
+            {
+              "name": "Die Schwarzfische",
+              "detail": "Söldner im Kernaufgebot",
+              "image": "./public/assets/windreiter/references/xYZyjk3.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Zugehörige Akten",
+          "documents": [
+            {
+              "title": "Schwarzfischbanner",
+              "text": "Kerntruppe, Verwaltung, örtliche Führungen und Achterschaften.",
+              "link": "./AleriaAlmanach.html?entry=modul-1781961958641"
+            },
+            {
+              "title": "Haus Coelret",
+              "text": "Bestehende Familienakte des Herkunftshauses.",
+              "link": "../Stammbäume/Stammbaum.html?family=haus-coelret&mode=view"
+            }
+          ]
+        }
+      },
+      "currentLocation": "Im Dienst der Schwarzfische auf Estryll",
+      "archived": false,
+      "identity": {
+        "worldPersonId": ""
+      },
+      "genealogy": {
+        "worldPersonId": "",
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "sources": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "localRecord": {
+        "recordId": "character--schwarzfische-grenn-seolfor",
+        "path": "records/gruppen/schwarzfische/grenn-coelret--schwarzfische-grenn-seolfor/character.json",
+        "schemaVersion": 1,
+        "contentHash": "71da7357d582824ae758b5681c06cdd2dd29521312a940d7d62093ef2b4742d0",
+        "firestoreDocumentIds": [
+          "schwarzfische-grenn-seolfor"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "group",
+            "id": "schwarzfische",
+            "label": "Schwarzfische",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [
+            {
+              "id": "schwarzfische",
+              "label": "Schwarzfische",
+              "source": "archive-tab"
+            }
+          ],
+          "places": []
+        },
+        "authoredFeature": "schwarzfische"
+      }
+    },
+    {
+      "id": "zitteraale-medrawd-angau",
+      "name": "Medrawd Angau",
+      "aliases": [
+        "Untoter Aal"
+      ],
+      "age": 50,
+      "ageNote": "Etwa 50 Jahre, sichtbares Alter etwa 34",
+      "gender": "male",
+      "race": "Mensch",
+      "title": "Untoter Aal · eidbrüchiger Schwurträger",
+      "role": "Anführer der Untoten Aale",
+      "fraktion": "Schwarze Zitteraale",
+      "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/medrawd-angau-v3.png",
+      "bio": "Medrawd Angau, der Untote Aal, führt die Unterbande Die Untoten Aale innerhalb der Schwarzen Zitteraale. Der frühere Gwynthorer Kleriker und Schwurritter gehörte zum engsten Dienstkreis des Patriarchen. Seine Beschäftigung mit Verstorbenen wurde zur krankhaften Obsession mit dem Untod. Nach dem Bruch mit der Kirche wandte sich der einst Kharon verpflichtete Schwurträger nekromantischen und infernalen Praktiken und schließlich Hela, der Schicksalsweberin, zu. Er ist etwa fünfzig Jahre alt und wirkt durch diese Praktiken wie ein Mann von vierunddreißig Jahren.\n\nIm Dienst des Patriarchen\nMedrawd war Kleriker und Schwurritter in Gwynthor. Er diente unter dem Patriarchen und zählte zu dessen engsten Vertrauten. Seinen Treueeid hatte er Kharon geschworen. Hinter der Würde dieses Amtes entwickelte sich eine wachsende Faszination für den Zustand zwischen Tod und fortgesetztem Dasein.\n\nDie Beschäftigung mit den Toten\nZunächst meldete er sich freiwillig für die Pflege Verstorbener und für Leichenöffnungen. Was als besonderer Eifer erscheinen konnte, wurde zu einer immer krankhafteren Obsession. Als der Patriarch von seinen Neigungen erfuhr und ihn zur Rede stellte, eskalierte die Auseinandersetzung zum offenen Streit. Medrawd verließ die Kirche.\n\nDer gebrochene Schwur\nIn den folgenden Jahren radikalisierte er sich. Er vertiefte sich in nekromantische Praktiken, verfluchte Kharon und wurde zum eidbrüchigen Schwurträger des Gottes, dem er einst Treue geschworen hatte. Seine heutige Hingabe gilt der finsteren Schicksalsweberin Hela. Die Beschäftigung mit Magie und dem Infernalen hat ihn verjüngt beziehungsweise sein sichtbares Altern aufgehalten.\n\nHuw Saethwyr und das gescheiterte Attentat\nBei einem Versuch, den Patriarchen zu töten, kreuzte Medrawd die Klingen mit Huw Saethwyr. Huw schlug ihm eine Hand ab und glaubte, ihn getötet zu haben. Medrawds Schergen konnten den Schwerverletzten jedoch retten und mit ihm entkommen. Die verlorene Hand ließ er später durch eine mechanische silberne Hand mit einem gelben Edelstein auf dem Handrücken ersetzen.\n\nDer Untote Aal\nHeute führt Medrawd Die Untoten Aale, eine der ältesten Unterbanden der Schwarzen Zitteraale. Sie erpresst Höfe und Geschäfte und übernimmt krumme Geschäfte für Menschen, die den Kontakt zu ihr suchen. Schutzgelder, Raub, Überfälle, Terror und gezielte Anschläge finanzieren die Gruppe. Ihr Wirkungsraum umfasst das Umland von Bronhir, Llysfaen, Craithglyn, Mwyncreig, Tŵr Rhewgorn und den Bannkreis von Gwynthor.\n\nDie Verluste gegen Sir Rhys Draig\nDie Unterbande war für den Angriff auf Llysfaen und den Überfall auf das Bradrhith-Gestüt verantwortlich. Sir Rhys Draig kam ihr zuvor, tötete den damaligen ersten Leutnant und fügte der Schar schwere Verluste zu. Medrawd war bei diesem Gefecht abwesend. Rhodri, der damalige zweite Leutnant, sowie Brychan und Tegid, zwei einfache Mitglieder, wurden festgenommen.Brychan und Tegid werden heute unter den Verstorbenen geführt, Rhodri unter den Ex-Mitgliedern. Die geschwächte Gruppe konnte ihre Reihen durch Rekruten und Mitglieder aus dem Hauptquartier der Schwarzen Zitteraale auffüllen. Die heutigen Leutnants sind ein grober ehemaliger Ritter und eine Zauberwirkerin. Ihre Namen sind noch offen.\n\nEin unbestimmter Rückzugsort\nWo die Unterbande ihr Hauptquartier unterhält, ist unklar. Ein Versteck in den Bergen von Tŵr Rhewgorn wird vermutet. Der ruinierte Bergturm auf Medrawds Porträt bildet eine stimmige Kulisse, belegt aber keinen bestimmten Standort.",
+      "biography": {
+        "schema": "aleria.biography-module",
+        "schemaVersion": 1,
+        "pageTitle": "Medrawd Angau · Untoter Aal",
+        "stats": [
+          {
+            "label": "Name",
+            "value": "Medrawd Angau"
+          },
+          {
+            "label": "Beiname",
+            "value": "Untoter Aal"
+          },
+          {
+            "label": "Tatsächliches Alter",
+            "value": "Etwa 50 Jahre"
+          },
+          {
+            "label": "Erscheinung",
+            "value": "Etwa 34 Jahre"
+          },
+          {
+            "label": "Früherer Stand",
+            "value": "Kleriker und Schwurritter in Gwynthor"
+          },
+          {
+            "label": "Früherer Eid",
+            "value": "Kharon · gebrochen"
+          },
+          {
+            "label": "Heutiger Dienst",
+            "value": "Hela · Schicksalsweberin"
+          },
+          {
+            "label": "Bande",
+            "value": "Die Untoten Aale · Gruppe I."
+          },
+          {
+            "label": "Farben",
+            "value": "Gelb · Schwarz · Silber"
+          }
+        ],
+        "biography": {
+          "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/medrawd-angau-v3.png",
+          "crestImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+          "biographyTitle": "Der eidbrüchige Schwurträger",
+          "biographyText": "<p>Medrawd Angau, der Untote Aal, führt die Unterbande Die Untoten Aale innerhalb der Schwarzen Zitteraale. Der frühere Gwynthorer Kleriker und Schwurritter gehörte zum engsten Dienstkreis des Patriarchen. Seine Beschäftigung mit Verstorbenen wurde zur krankhaften Obsession mit dem Untod. Nach dem Bruch mit der Kirche wandte sich der einst Kharon verpflichtete Schwurträger nekromantischen und infernalen Praktiken und schließlich Hela, der Schicksalsweberin, zu. Er ist etwa fünfzig Jahre alt und wirkt durch diese Praktiken wie ein Mann von vierunddreißig Jahren.</p>",
+          "abilitiesTitle": "Wesen und Praktiken",
+          "abilities": [
+            {
+              "title": "Unheimliche Obsession",
+              "icon": "/IconOrdner/Traits%20Icon/Zealous.png",
+              "detail": "Seine Beschäftigung mit dem Untod hat den früheren Dienst an den Verstorbenen vollständig vereinnahmt."
+            },
+            {
+              "title": "Arroganz",
+              "icon": "/IconOrdner/Traits%20Icon/Proud.png",
+              "detail": "Begegnet dem Rittertum mit Verachtung und trägt seinen Anspruch mit kalter Selbstgewissheit."
+            },
+            {
+              "title": "Nekromantie und infernale Praktiken",
+              "icon": "/IconOrdner/Traits%20Icon/Scholar.png",
+              "detail": "Vertiefte sich nach seinem Kirchenaustritt in verbotene Praktiken, die sein sichtbares Altern aufgehalten haben."
+            }
+          ],
+          "historyTitle": "Das gezeichnete Gesicht",
+          "historyText": "<p>Das einst rote Haar ist silbrig, dünn und glatt und fällt ihm bis zur Brust. Auf der verbrannten rechten Gesichtshälfte ist der Haarwuchs an der Schläfe lückenhaft und das Ohr teilweise zerstört und vernarbt. Das dort erblindete Auge wurde durch einen schwarz leuchtenden Edelstein ersetzt. Schwarze Adern ziehen sich über diese Seite bis zum Nacken. Sein gesundes Auge ist hellblau, seine Haut blass. Die einst attraktiven Gesichtszüge wirken hart, ernst und unheimlich hochmütig.</p>",
+          "worksTitle": "Harnisch, Hand und Schwert",
+          "works": [
+            "Schwarze Plattenrüstung mit gelben und silbernen Akzenten.",
+            "Auf dem Harnisch ein toter schwarzer Wyvern, der von Maden zerfressen wird.",
+            "Mechanische silberne Ersatzhand mit gelbem Edelstein im Handrücken. Mit ihr wirkt er Magie.",
+            "Ein imposantes, verziertes und verzaubertes Schwert in der anderen Hand."
+          ],
+          "extraSections": [
+            {
+              "title": "Im Dienst des Patriarchen",
+              "text": "<p>Medrawd war Kleriker und Schwurritter in Gwynthor. Er diente unter dem Patriarchen und zählte zu dessen engsten Vertrauten. Seinen Treueeid hatte er Kharon geschworen. Hinter der Würde dieses Amtes entwickelte sich eine wachsende Faszination für den Zustand zwischen Tod und fortgesetztem Dasein.</p>",
+              "position": "afterWorks",
+              "mode": "text"
+            },
+            {
+              "title": "Die Beschäftigung mit den Toten",
+              "text": "<p>Zunächst meldete er sich freiwillig für die Pflege Verstorbener und für Leichenöffnungen. Was als besonderer Eifer erscheinen konnte, wurde zu einer immer krankhafteren Obsession. Als der Patriarch von seinen Neigungen erfuhr und ihn zur Rede stellte, eskalierte die Auseinandersetzung zum offenen Streit. Medrawd verließ die Kirche.</p>",
+              "position": "afterWorks",
+              "mode": "text"
+            },
+            {
+              "title": "Der gebrochene Schwur",
+              "text": "<p>In den folgenden Jahren radikalisierte er sich. Er vertiefte sich in nekromantische Praktiken, verfluchte Kharon und wurde zum eidbrüchigen Schwurträger des Gottes, dem er einst Treue geschworen hatte. Seine heutige Hingabe gilt der finsteren Schicksalsweberin Hela. Die Beschäftigung mit Magie und dem Infernalen hat ihn verjüngt beziehungsweise sein sichtbares Altern aufgehalten.</p>",
+              "position": "afterWorks",
+              "mode": "text"
+            },
+            {
+              "title": "Huw Saethwyr und das gescheiterte Attentat",
+              "text": "<p>Bei einem Versuch, den Patriarchen zu töten, kreuzte Medrawd die Klingen mit Huw Saethwyr. Huw schlug ihm eine Hand ab und glaubte, ihn getötet zu haben. Medrawds Schergen konnten den Schwerverletzten jedoch retten und mit ihm entkommen. Die verlorene Hand ließ er später durch eine mechanische silberne Hand mit einem gelben Edelstein auf dem Handrücken ersetzen.</p>",
+              "position": "afterWorks",
+              "mode": "text"
+            },
+            {
+              "title": "Der Untote Aal",
+              "text": "<p>Heute führt Medrawd Die Untoten Aale, eine der ältesten Unterbanden der Schwarzen Zitteraale. Sie erpresst Höfe und Geschäfte und übernimmt krumme Geschäfte für Menschen, die den Kontakt zu ihr suchen. Schutzgelder, Raub, Überfälle, Terror und gezielte Anschläge finanzieren die Gruppe. Ihr Wirkungsraum umfasst das Umland von Bronhir, Llysfaen, Craithglyn, Mwyncreig, Tŵr Rhewgorn und den Bannkreis von Gwynthor.</p>",
+              "position": "afterWorks",
+              "mode": "text"
+            },
+            {
+              "title": "Die Verluste gegen Sir Rhys Draig",
+              "text": "<p>Die Unterbande war für den Angriff auf Llysfaen und den Überfall auf das Bradrhith-Gestüt verantwortlich. Sir Rhys Draig kam ihr zuvor, tötete den damaligen ersten Leutnant und fügte der Schar schwere Verluste zu. Medrawd war bei diesem Gefecht abwesend. Rhodri, der damalige zweite Leutnant, sowie Brychan und Tegid, zwei einfache Mitglieder, wurden festgenommen.</p><p>Brychan und Tegid werden heute unter den Verstorbenen geführt, Rhodri unter den Ex-Mitgliedern. Die geschwächte Gruppe konnte ihre Reihen durch Rekruten und Mitglieder aus dem Hauptquartier der Schwarzen Zitteraale auffüllen. Die heutigen Leutnants sind ein grober ehemaliger Ritter und eine Zauberwirkerin. Ihre Namen sind noch offen.</p>",
+              "position": "afterWorks",
+              "mode": "text"
+            },
+            {
+              "title": "Ein unbestimmter Rückzugsort",
+              "text": "<p>Wo die Unterbande ihr Hauptquartier unterhält, ist unklar. Ein Versteck in den Bergen von Tŵr Rhewgorn wird vermutet. Der ruinierte Bergturm auf Medrawds Porträt bildet eine stimmige Kulisse, belegt aber keinen bestimmten Standort.</p>",
+              "position": "afterWorks",
+              "mode": "text"
+            }
+          ],
+          "connectionsTitle": "Gefolgschaft und Feindschaften",
+          "connections": [
+            {
+              "name": "Erster Leutnant · Name offen",
+              "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/untote-aele-leutnant-1-v2.png",
+              "imageFormat": "portrait",
+              "detail": "Hünenhafter, kantiger Ex-Ritter mit kahlem, vernarbtem Kopf, blauen Augen und roten Augenbrauen. Er trägt geschwärzte stählerne Plattenrüstung, stützt beide Hände auf den Schwertknauf und schaut unter tief gezogenen Brauen grimmig und bösartig hervor."
+            },
+            {
+              "name": "Zweite Leutnantin · Name offen",
+              "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/untote-aele-leutnant-2-v3.png",
+              "imageFormat": "portrait",
+              "detail": "Wunderschöne, arrogant auftretende Frau mit langen blonden Wellen, grünen Augen, Sommersprossen und grünen geometrischen Gesichtszeichen. Eine dunkel eingefasste Kapuze mit goldenen Borten rahmt ihr Gesicht. Sie verbindet Magierrobe und stählerne Rüstung, führt einen Zauberstab und wirkt mit der freien Hand Magie."
+            },
+            {
+              "name": "Die Untoten Aale",
+              "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+              "imageFormat": "portrait",
+              "detail": "Anführer der ersten Unterbande der Schwarzen Zitteraale."
+            },
+            {
+              "name": "Die Schwarzen Zitteraale",
+              "image": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+              "detail": "Übergeordnete Bande. Aus ihrem Hauptquartier erhielt seine geschwächte Gruppe Verstärkung."
+            },
+            {
+              "name": "Huw Saethwyr",
+              "image": "/Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+              "detail": "Vereitelte den Mordversuch am Patriarchen und schlug Medrawd eine Hand ab."
+            },
+            {
+              "name": "Sir Rhys Draig",
+              "image": "/Stammbäume/assets/images/houses/Llamreis Ankunft/haus-draig.png",
+              "detail": "Tötete Medrawds ersten Leutnant und brachte den zweiten Leutnant mit zwei einfachen Mitgliedern in Gefangenschaft."
+            }
+          ],
+          "documentsTitle": "Bandenakten",
+          "documents": [
+            {
+              "title": "Die Untoten Aale",
+              "text": "Gruppenbio, Anführerbio, Hierarchie und Hauptquartiersszene.",
+              "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-i"
+            },
+            {
+              "title": "Die Schwarzen Zitteraale",
+              "text": "Führung und acht Unterbanden.",
+              "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=schwarze-zitteraale"
+            }
+          ],
+          "footer": "Medrawd Angau · Untoter Aal · Celtigerns Wacht"
+        }
+      },
+      "archived": false,
+      "identity": {
+        "worldPersonId": ""
+      },
+      "genealogy": {
+        "worldPersonId": "",
+        "sex": "",
+        "status": "",
+        "birth": "",
+        "death": "",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "",
+        "portraitPlaceholder": "",
+        "tags": [],
+        "sources": [],
+        "relationships": {
+          "parents": [],
+          "partners": [],
+          "children": []
+        }
+      },
+      "localRecord": {
+        "recordId": "character--zitteraale-medrawd-angau",
+        "path": "records/gruppen/schwarze-zitteraale/medrawd-angau--zitteraale-medrawd-angau/character.json",
+        "schemaVersion": 1,
+        "contentHash": "58633af4f42b66d5ed2a4566f48b809ee42436de1826aea1d74b86deae0678b5",
+        "firestoreDocumentIds": [
+          "zitteraale-medrawd-angau"
+        ],
+        "classification": {
+          "primary": {
+            "kind": "group",
+            "id": "schwarze-zitteraale",
+            "label": "Schwarze Zitteraale",
+            "source": "archive-tab"
+          },
+          "familyStatus": "pending",
+          "families": [],
+          "groups": [
+            {
+              "id": "schwarze-zitteraale",
+              "label": "Schwarze Zitteraale",
+              "source": "archive-tab"
+            }
+          ],
+          "places": []
+        },
+        "authoredFeature": "schwarze-zitteraale"
+      }
     }
   ],
   "charTabs": {
@@ -250840,7 +251246,8 @@
         "JAoyCqABsUSdEiZSRNjK",
         "EPwTMvE8J0vG76aXt2NK",
         "qoEKhiI091TI7Lauk2yA",
-        "HwrrZFjUCd0mMJgtYyx7"
+        "HwrrZFjUCd0mMJgtYyx7",
+        "schwarzfische-grenn-seolfor"
       ],
       "Der Schatten von Talyndor": [
         "yg7RonBDX5ctbr7icLWe"
@@ -251192,7 +251599,8 @@
         "zitteraale-schlickzahn",
         "zitteraale-nachtkieme",
         "zitteraale-donnerkiefer",
-        "zitteraale-netznadel"
+        "zitteraale-netznadel",
+        "zitteraale-medrawd-angau"
       ],
       "Der Ritter der fernen Küster": [
         "Dud4fyF7ds8veV555aq3"

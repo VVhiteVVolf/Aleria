@@ -170,8 +170,8 @@
       "folder": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof",
       "config": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/template.config.js",
       "images": {
-        "normal": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png",
-        "pins": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png"
+        "normal": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png?v=20261116-map-v2",
+        "pins": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png?v=20261116-map-v2"
       },
       "dataPath": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/data.json",
       "link": "karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis-tirfelyn-hof",
@@ -2345,10 +2345,6 @@
       "title": "Theriantrophie & Silvanische Symbiose"
     },
     {
-      "id": "schwarze-zitteraale",
-      "title": "Die Schwarzen Zitteraale"
-    },
-    {
       "id": "ruinenpforte-merent-trevyrn",
       "title": "Ruinenpforte — Ausgrabungsteam Merent & Trevyrn"
     },
@@ -2761,6 +2757,42 @@
       "title": "Zum Roten Tor"
     },
     {
+      "id": "schwarze-zitteraale",
+      "title": "Die Schwarzen Zitteraale"
+    },
+    {
+      "id": "zitteraale-gruppe-i",
+      "title": "Die Untoten Aale"
+    },
+    {
+      "id": "zitteraale-gruppe-ii",
+      "title": "Gruppe II."
+    },
+    {
+      "id": "zitteraale-gruppe-iii",
+      "title": "Gruppe III."
+    },
+    {
+      "id": "zitteraale-gruppe-iv",
+      "title": "Gruppe IV."
+    },
+    {
+      "id": "zitteraale-gruppe-v",
+      "title": "Gruppe V."
+    },
+    {
+      "id": "zitteraale-gruppe-vi",
+      "title": "Gruppe VI."
+    },
+    {
+      "id": "zitteraale-gruppe-vii",
+      "title": "Gruppe VII."
+    },
+    {
+      "id": "zitteraale-gruppe-viii",
+      "title": "Gruppe VIII."
+    },
+    {
       "id": "tirfelyn-hof",
       "title": "Tirfelyn-Hof"
     },
@@ -2817,6 +2849,10 @@
       "title": "Die Schwarzen Fische"
     },
     {
+      "id": "modul-1781961958641",
+      "title": "Die Schwarzfische · Banner und Organisation"
+    },
+    {
       "id": "albische-gastfreundschaft",
       "title": "Albische Gastfreundschaft & das Gesetz der Götter"
     },
@@ -2852,31 +2888,6 @@
       "id": "theriantrophie",
       "title": "Theriantrophie & Silvanische Symbiose · V. — Der Silvanische Fluch: Celestiales Urteil",
       "moduleId": "theriantrophie"
-    },
-    {
-      "id": "schwarze-zitteraale",
-      "title": "Die Schwarzen Zitteraale",
-      "moduleId": "schwarze-zitteraale"
-    },
-    {
-      "id": "schwarze-zitteraale::page:zitteraale-uebersicht",
-      "title": "Die Schwarzen Zitteraale · Die Schwarzen Zitteraale",
-      "moduleId": "schwarze-zitteraale"
-    },
-    {
-      "id": "schwarze-zitteraale::page:zitteraale-vorgehen",
-      "title": "Die Schwarzen Zitteraale · Machenschaften · Druck und Beute",
-      "moduleId": "schwarze-zitteraale"
-    },
-    {
-      "id": "schwarze-zitteraale::page:zitteraale-hierarchie",
-      "title": "Die Schwarzen Zitteraale · Bandenordnung · Führung und Gruppen",
-      "moduleId": "schwarze-zitteraale"
-    },
-    {
-      "id": "schwarze-zitteraale::session:zitteraale-hauptquartier",
-      "title": "Die Schwarzen Zitteraale · Hauptquartier · Die versunkene Stadt",
-      "moduleId": "schwarze-zitteraale"
     },
     {
       "id": "ruinenpforte-merent-trevyrn",
@@ -5164,6 +5175,191 @@
       "moduleId": "zum-roten-tor"
     },
     {
+      "id": "schwarze-zitteraale",
+      "title": "Die Schwarzen Zitteraale",
+      "moduleId": "schwarze-zitteraale"
+    },
+    {
+      "id": "schwarze-zitteraale::page:zitteraale-uebersicht",
+      "title": "Die Schwarzen Zitteraale · Die Schwarzen Zitteraale",
+      "moduleId": "schwarze-zitteraale"
+    },
+    {
+      "id": "schwarze-zitteraale::page:zitteraale-vorgehen",
+      "title": "Die Schwarzen Zitteraale · Machenschaften · Druck und Beute",
+      "moduleId": "schwarze-zitteraale"
+    },
+    {
+      "id": "schwarze-zitteraale::page:zitteraale-hierarchie",
+      "title": "Die Schwarzen Zitteraale · Bandenordnung · Führung und Gruppen",
+      "moduleId": "schwarze-zitteraale"
+    },
+    {
+      "id": "schwarze-zitteraale::session:zitteraale-hauptquartier",
+      "title": "Die Schwarzen Zitteraale · Hauptquartier · Die versunkene Stadt",
+      "moduleId": "schwarze-zitteraale"
+    },
+    {
+      "id": "zitteraale-gruppe-i",
+      "title": "Die Untoten Aale",
+      "moduleId": "zitteraale-gruppe-i"
+    },
+    {
+      "id": "zitteraale-gruppe-i::page:zitteraale-gruppe-i-uebersicht",
+      "title": "Die Untoten Aale · Die Untoten Aale",
+      "moduleId": "zitteraale-gruppe-i"
+    },
+    {
+      "id": "zitteraale-gruppe-i::page:zitteraale-gruppe-i-hierarchie",
+      "title": "Die Untoten Aale · Hierarchie",
+      "moduleId": "zitteraale-gruppe-i"
+    },
+    {
+      "id": "zitteraale-gruppe-i::session:zitteraale-gruppe-i-hauptquartier",
+      "title": "Die Untoten Aale · Hauptquartier · Ort unbekannt",
+      "moduleId": "zitteraale-gruppe-i"
+    },
+    {
+      "id": "zitteraale-gruppe-ii",
+      "title": "Gruppe II.",
+      "moduleId": "zitteraale-gruppe-ii"
+    },
+    {
+      "id": "zitteraale-gruppe-ii::page:zitteraale-gruppe-ii-uebersicht",
+      "title": "Gruppe II. · Gruppe II.",
+      "moduleId": "zitteraale-gruppe-ii"
+    },
+    {
+      "id": "zitteraale-gruppe-ii::page:zitteraale-gruppe-ii-hierarchie",
+      "title": "Gruppe II. · Hierarchie",
+      "moduleId": "zitteraale-gruppe-ii"
+    },
+    {
+      "id": "zitteraale-gruppe-ii::session:zitteraale-gruppe-ii-hauptquartier",
+      "title": "Gruppe II. · Hauptquartier · Ort unbekannt",
+      "moduleId": "zitteraale-gruppe-ii"
+    },
+    {
+      "id": "zitteraale-gruppe-iii",
+      "title": "Gruppe III.",
+      "moduleId": "zitteraale-gruppe-iii"
+    },
+    {
+      "id": "zitteraale-gruppe-iii::page:zitteraale-gruppe-iii-uebersicht",
+      "title": "Gruppe III. · Gruppe III.",
+      "moduleId": "zitteraale-gruppe-iii"
+    },
+    {
+      "id": "zitteraale-gruppe-iii::page:zitteraale-gruppe-iii-hierarchie",
+      "title": "Gruppe III. · Hierarchie",
+      "moduleId": "zitteraale-gruppe-iii"
+    },
+    {
+      "id": "zitteraale-gruppe-iii::session:zitteraale-gruppe-iii-hauptquartier",
+      "title": "Gruppe III. · Hauptquartier · Ort unbekannt",
+      "moduleId": "zitteraale-gruppe-iii"
+    },
+    {
+      "id": "zitteraale-gruppe-iv",
+      "title": "Gruppe IV.",
+      "moduleId": "zitteraale-gruppe-iv"
+    },
+    {
+      "id": "zitteraale-gruppe-iv::page:zitteraale-gruppe-iv-uebersicht",
+      "title": "Gruppe IV. · Gruppe IV.",
+      "moduleId": "zitteraale-gruppe-iv"
+    },
+    {
+      "id": "zitteraale-gruppe-iv::page:zitteraale-gruppe-iv-hierarchie",
+      "title": "Gruppe IV. · Hierarchie",
+      "moduleId": "zitteraale-gruppe-iv"
+    },
+    {
+      "id": "zitteraale-gruppe-iv::session:zitteraale-gruppe-iv-hauptquartier",
+      "title": "Gruppe IV. · Hauptquartier · Ort unbekannt",
+      "moduleId": "zitteraale-gruppe-iv"
+    },
+    {
+      "id": "zitteraale-gruppe-v",
+      "title": "Gruppe V.",
+      "moduleId": "zitteraale-gruppe-v"
+    },
+    {
+      "id": "zitteraale-gruppe-v::page:zitteraale-gruppe-v-uebersicht",
+      "title": "Gruppe V. · Gruppe V.",
+      "moduleId": "zitteraale-gruppe-v"
+    },
+    {
+      "id": "zitteraale-gruppe-v::page:zitteraale-gruppe-v-hierarchie",
+      "title": "Gruppe V. · Hierarchie",
+      "moduleId": "zitteraale-gruppe-v"
+    },
+    {
+      "id": "zitteraale-gruppe-v::session:zitteraale-gruppe-v-hauptquartier",
+      "title": "Gruppe V. · Hauptquartier · Ort unbekannt",
+      "moduleId": "zitteraale-gruppe-v"
+    },
+    {
+      "id": "zitteraale-gruppe-vi",
+      "title": "Gruppe VI.",
+      "moduleId": "zitteraale-gruppe-vi"
+    },
+    {
+      "id": "zitteraale-gruppe-vi::page:zitteraale-gruppe-vi-uebersicht",
+      "title": "Gruppe VI. · Gruppe VI.",
+      "moduleId": "zitteraale-gruppe-vi"
+    },
+    {
+      "id": "zitteraale-gruppe-vi::page:zitteraale-gruppe-vi-hierarchie",
+      "title": "Gruppe VI. · Hierarchie",
+      "moduleId": "zitteraale-gruppe-vi"
+    },
+    {
+      "id": "zitteraale-gruppe-vi::session:zitteraale-gruppe-vi-hauptquartier",
+      "title": "Gruppe VI. · Hauptquartier · Ort unbekannt",
+      "moduleId": "zitteraale-gruppe-vi"
+    },
+    {
+      "id": "zitteraale-gruppe-vii",
+      "title": "Gruppe VII.",
+      "moduleId": "zitteraale-gruppe-vii"
+    },
+    {
+      "id": "zitteraale-gruppe-vii::page:zitteraale-gruppe-vii-uebersicht",
+      "title": "Gruppe VII. · Gruppe VII.",
+      "moduleId": "zitteraale-gruppe-vii"
+    },
+    {
+      "id": "zitteraale-gruppe-vii::page:zitteraale-gruppe-vii-hierarchie",
+      "title": "Gruppe VII. · Hierarchie",
+      "moduleId": "zitteraale-gruppe-vii"
+    },
+    {
+      "id": "zitteraale-gruppe-vii::session:zitteraale-gruppe-vii-hauptquartier",
+      "title": "Gruppe VII. · Hauptquartier · Ort unbekannt",
+      "moduleId": "zitteraale-gruppe-vii"
+    },
+    {
+      "id": "zitteraale-gruppe-viii",
+      "title": "Gruppe VIII.",
+      "moduleId": "zitteraale-gruppe-viii"
+    },
+    {
+      "id": "zitteraale-gruppe-viii::page:zitteraale-gruppe-viii-uebersicht",
+      "title": "Gruppe VIII. · Gruppe VIII.",
+      "moduleId": "zitteraale-gruppe-viii"
+    },
+    {
+      "id": "zitteraale-gruppe-viii::page:zitteraale-gruppe-viii-hierarchie",
+      "title": "Gruppe VIII. · Hierarchie",
+      "moduleId": "zitteraale-gruppe-viii"
+    },
+    {
+      "id": "zitteraale-gruppe-viii::session:zitteraale-gruppe-viii-hauptquartier",
+      "title": "Gruppe VIII. · Hauptquartier · Ort unbekannt",
+      "moduleId": "zitteraale-gruppe-viii"
+    },
+    {
       "id": "tirfelyn-hof",
       "title": "Tirfelyn-Hof",
       "moduleId": "tirfelyn-hof"
@@ -5697,6 +5893,16 @@
       "id": "schwarzfische-windreiter",
       "title": "Die Schwarzen Fische · IV. — Standorte",
       "moduleId": "schwarzfische-windreiter"
+    },
+    {
+      "id": "modul-1781961958641",
+      "title": "Die Schwarzfische · Banner und Organisation",
+      "moduleId": "modul-1781961958641"
+    },
+    {
+      "id": "modul-1781961958641::session:p-mqmf7btq-b7xfg",
+      "title": "Die Schwarzfische · Banner und Organisation · I. — Szene - Lager (Auf der Reise)",
+      "moduleId": "modul-1781961958641"
     },
     {
       "id": "albische-gastfreundschaft",
@@ -7486,6 +7692,7 @@
     "AleriaAlmanach/modules/rote-klaue/klaue-data.js",
     "AleriaAlmanach/modules/rotes-tor/tor-data.js",
     "AleriaAlmanach/modules/schwarze-zitteraale/zitteraale-data.js",
+    "AleriaAlmanach/modules/schwarzfische/schwarzfische-data.js",
     "AleriaAlmanach/modules/script-table/script-table-data.js",
     "AleriaAlmanach/modules/skalli-retinue/retinue-data.js",
     "AleriaAlmanach/modules/theatre-program/theatre-program-data.js",

@@ -1,4 +1,7 @@
-import { ZITTERAALE_ART, ZITTERAALE_LEADERS } from '../../../AleriaAlmanach/modules/schwarze-zitteraale/zitteraale-people.mjs';
+import { ZITTERAALE_ART } from '../../../AleriaAlmanach/modules/schwarze-zitteraale/zitteraale-people.mjs';
+// These already issued sheets have their own dated source. Revising the module
+// hierarchy does not implicitly rewrite historical notices or their rewards.
+import ZITTERAALE_LEADERS from '../../../AleriaAlmanach/modules/schwarze-zitteraale/sources/wanted-people-20261021.json' with { type: 'json' };
 import { ZITTERAALE_KNIGHT_ICON } from '../../../AleriaAlmanach/modules/schwarze-zitteraale/zitteraale-dossiers.mjs';
 import { buildEgonNoticeIdentity } from '../issuers/egon-gafyr.mjs';
 export const ZITTERAALE_NOTICE_ID = 'gwynthor-egon-schwarze-zitteraale-gesucht';

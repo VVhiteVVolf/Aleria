@@ -83,7 +83,13 @@ test('the registered local farm map uses one supplied image for normal and marke
   assert.deepEqual(Object.keys(entry.images), ['normal', 'pins']);
   assert.equal(entry.images.normal, entry.images.pins);
   const original = await readFile(new URL(`Karten/${HOF_MAP_IMAGE}`, root));
-  assert.equal(createHash('sha256').update(original).digest('hex'), '6a36e7b71cbd4d0152b1aeca834a6e836f14ca0a9150bf90492c99a52530fc80');
+  const receipt = JSON.parse(await readFile(new URL('AleriaAlmanach/docs/art/tirfelyn-hof-20261116/map-source-receipt.json', root), 'utf8'));
+  const previousOriginal = await readFile(new URL(receipt.previousOriginal, root));
+  assert.equal(createHash('sha256').update(previousOriginal).digest('hex'), '6a36e7b71cbd4d0152b1aeca834a6e836f14ca0a9150bf90492c99a52530fc80');
+  assert.equal(createHash('sha256').update(original).digest('hex'), receipt.sha256);
+  assert.equal(createHash('sha256').update(await readFile(new URL(receipt.original, root))).digest('hex'), receipt.sha256);
+  assert.equal(receipt.sourceBytesPreserved, true);
+  assert.match(HOF_MAP_IMAGE, /\?v=20261116-map-v2$/);
   assert.equal(original.readUInt32BE(16), 4096);
   assert.equal(original.readUInt32BE(20), 4096);
   const config = hofMapConfig();

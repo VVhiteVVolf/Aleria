@@ -611,6 +611,12 @@ function sanitizeCourtData(data = {}) {
 // Shared bound for sanitation, rendering and both editors. Columns may wrap
 // without promoting equal-ranking members to a separate hierarchy level.
 const HIERARCHY_MAX_LEVEL_NODES = 12;
+const HIERARCHY_MAX_LEVELS = 32;
+
+function sanitizeHierarchyLevelColumns(value) {
+  const columns = Number(value);
+  return Number.isInteger(columns) && columns >= 1 && columns <= 6 ? columns : 0;
+}
 
 function sanitizeHierarchyDetailRows(items = []) {
   return (Array.isArray(items) ? items : [])
@@ -639,6 +645,9 @@ function sanitizeHierarchyLevel(level = {}, index = 0) {
     .slice(0, HIERARCHY_MAX_LEVEL_NODES);
   return {
     label: String(level?.label || '').trim(),
+    ...(String(level?.emblem || '').trim() ? { emblem: String(level.emblem).trim() } : {}),
+    ...(sanitizeHierarchyLevelColumns(level?.columns) ? { columns: sanitizeHierarchyLevelColumns(level.columns) } : {}),
+    ...(level?.startsGroup === true ? { startsGroup: true } : {}),
     nodes
   };
 }
@@ -647,7 +656,7 @@ function sanitizeHierarchyLevels(levels = []) {
   return (Array.isArray(levels) ? levels : [])
     .map((level, index) => sanitizeHierarchyLevel(level, index))
     .filter(level => level.label || level.nodes.length)
-    .slice(0, 12);
+    .slice(0, HIERARCHY_MAX_LEVELS);
 }
 
 function makeHierarchyTreeId(value, fallback = 'baum') {

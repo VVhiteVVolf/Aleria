@@ -4,7 +4,7 @@
   "recordId": "character--zitteraale-donnerkiefer",
   "slug": "donnerkiefer",
   "identity": {
-    "name": "Donnerkiefer",
+    "name": "Der Eidlose",
     "aliases": [],
     "worldPersonId": ""
   },
@@ -40,6 +40,7 @@
       "collection": "characters",
       "documentId": "zitteraale-donnerkiefer",
       "documentIds": [
+        "zitteraale-donnerkiefer",
         "zitteraale-donnerkiefer"
       ],
       "documents": [
@@ -47,6 +48,11 @@
           "documentId": "zitteraale-donnerkiefer",
           "createdAt": "2026-10-21T00:00:00Z",
           "updatedAt": "2026-10-21T00:00:00Z"
+        },
+        {
+          "documentId": "zitteraale-donnerkiefer",
+          "createdAt": "",
+          "updatedAt": "2026-11-16T18:00:00Z"
         }
       ]
     },
@@ -55,13 +61,14 @@
   },
   "sync": {
     "strategy": "online-wins-runtime-local-wins-identity",
-    "sourceArchive": "Charakter Archiv Exporte/zitteraale-donnerkiefer-2026-10-21.json",
-    "sourceExportedAt": "2026-10-21T00:00:00Z",
-    "sourceUpdatedAt": "2026-10-21T00:00:00Z",
+    "sourceArchive": "Charakter Archiv Exporte/Schwarze Zitteraale/zitteraale-donnerkiefer-2026-11-16.json",
+    "sourceExportedAt": "2026-11-16T18:00:00Z",
+    "sourceUpdatedAt": "2026-11-16T18:00:00Z",
     "sourceDocumentIds": [
+      "zitteraale-donnerkiefer",
       "zitteraale-donnerkiefer"
     ],
-    "contentHash": "e1820be460219dba602bc1b323f0dd1615a1f578b87261bb847dac6632ef231c"
+    "contentHash": "dafa0a52157189c129a5c7672d0bc4de29219eb7266568db416e42a6de154326"
   },
   "local": {
     "notes": "",
@@ -104,20 +111,28 @@
         ],
         "activeImageSetId": "standard",
         "imageSetSchemaVersion": 1
+      },
+      {
+        "id": "zitteraale-donnerkiefer",
+        "name": "Der Eidlose",
+        "aliases": [],
+        "title": "Linke Hand · Waffen und Bandenordnung",
+        "bio": "Ein ehemaliger Kriegsknecht, der nach Jahren wechselnder Dienste bei den Zitteraalen blieb. Er ordnet das erbeutete Gerät und übt mit den Komplizen, bis aus einem Überfall ein eingeübter Griff wird.\n\nDiszipliniert, nachtragend und stolz auf seine Härte. Hält Furcht für eine zuverlässigere Bindung als Freundschaft.\n\nÜberwacht Waffen und Wachen, setzt Befehle im Lager durch und stimmt Verstärkungen aus dem Hauptquartier mit den Gruppenführern ab.",
+        "updatedAt": "2026-11-16T18:00:00Z"
       }
     ]
   },
   "character": {
     "id": "zitteraale-donnerkiefer",
-    "name": "Donnerkiefer",
+    "name": "Der Eidlose",
     "aliases": [],
-    "title": "Innerer Kreis · Waffen und Rudeldisziplin",
+    "title": "Linke Hand · Waffen und Bandenordnung",
     "fraktion": "Schwarze Zitteraale",
     "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/donnerkiefer.png",
-    "bio": "Ein ehemaliger Kriegsknecht, der nach Jahren wechselnder Dienste bei den Zitteraalen blieb. Er ordnet das erbeutete Gerät und übt mit den Komplizen, bis aus einem Überfall ein eingeübter Griff wird.\n\nDiszipliniert, nachtragend und stolz auf seine Härte. Hält Furcht für eine zuverlässigere Bindung als Freundschaft.\n\nÜberwacht Waffen und Wachen, setzt Befehle im Lager durch und übernimmt die Nachhut bei Rückzügen. Sein Beiname meint die donnernde Stimme hinter dem vernarbten Kiefer.",
+    "bio": "Ein ehemaliger Kriegsknecht, der nach Jahren wechselnder Dienste bei den Zitteraalen blieb. Er ordnet das erbeutete Gerät und übt mit den Komplizen, bis aus einem Überfall ein eingeübter Griff wird.\n\nDiszipliniert, nachtragend und stolz auf seine Härte. Hält Furcht für eine zuverlässigere Bindung als Freundschaft.\n\nÜberwacht Waffen und Wachen, setzt Befehle im Lager durch und stimmt Verstärkungen aus dem Hauptquartier mit den Gruppenführern ab.",
     "status": "Gesucht",
     "createdAt": "2026-10-21T00:00:00Z",
-    "updatedAt": "2026-10-21T00:00:00Z",
+    "updatedAt": "2026-11-16T18:00:00Z",
     "archived": false,
     "genealogy": {
       "sex": "male",

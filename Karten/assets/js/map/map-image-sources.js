@@ -29,7 +29,20 @@
   }
 
   function select(savedSource, configuredSource, baseUrl) {
-    return toPublicUrl(savedSource, baseUrl) || toPublicUrl(configuredSource, baseUrl);
+    const saved = toPublicUrl(savedSource, baseUrl);
+    const configuredImage = toPublicUrl(configuredSource, baseUrl);
+    if (!saved || !configuredImage) return saved || configuredImage;
+    try {
+      const savedUrl = new URL(saved, baseUrl || document.baseURI);
+      const configuredUrl = new URL(configuredImage, baseUrl || document.baseURI);
+      if (!configuredUrl.searchParams.has('v')) return saved;
+      savedUrl.searchParams.delete('v');
+      configuredUrl.searchParams.delete('v');
+      if (savedUrl.href === configuredUrl.href) return configuredImage;
+    } catch {
+      return saved;
+    }
+    return saved;
   }
 
   function configured(layer, baseUrl) {

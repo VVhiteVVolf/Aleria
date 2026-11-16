@@ -5,8 +5,8 @@ window.KARTO_CONFIG = {
   "documentTitle": "Tirfelyn-Hof – Aleria",
   "categoryBarMode": "used",
   "images": {
-    "normal": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png",
-    "pins": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png"
+    "normal": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png?v=20261116-map-v2",
+    "pins": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png?v=20261116-map-v2"
   },
   "layerNames": {
     "normal": "Normal",
@@ -15,32 +15,32 @@ window.KARTO_CONFIG = {
   "markerPresentation": "symbols",
   "rasterImages": {
     "normal": {
-      "source": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png",
+      "source": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png?v=20261116-map-v2",
       "width": 4096,
       "height": 4096,
       "levels": [
         {
           "width": 2048,
-          "src": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/display/tirfelyn-2048-q90.jpg"
+          "src": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/display/tirfelyn-2048-q90.jpg?v=20261116-map-v2"
         },
         {
           "width": 4096,
-          "src": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/display/tirfelyn-4096-q90.jpg"
+          "src": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/display/tirfelyn-4096-q90.jpg?v=20261116-map-v2"
         }
       ]
     },
     "pins": {
-      "source": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png",
+      "source": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/Tirfelyn - Hof.png?v=20261116-map-v2",
       "width": 4096,
       "height": 4096,
       "levels": [
         {
           "width": 2048,
-          "src": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/display/tirfelyn-2048-q90.jpg"
+          "src": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/display/tirfelyn-2048-q90.jpg?v=20261116-map-v2"
         },
         {
           "width": 4096,
-          "src": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/display/tirfelyn-4096-q90.jpg"
+          "src": "Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/tirfelyn-hof/Kartenbilder/display/tirfelyn-4096-q90.jpg?v=20261116-map-v2"
         }
       ]
     }

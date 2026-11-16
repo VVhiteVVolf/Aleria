@@ -2,7 +2,7 @@
 const ZITTERAALE_CANONICAL_ENTRY = {
   "id": "schwarze-zitteraale",
   "title": "Die Schwarzen Zitteraale",
-  "subtitle": "Raubritter und Rudel · Celtigerns Wacht",
+  "subtitle": "Raubritter und acht Unterbanden · Celtigerns Wacht",
   "type": "Raubritterbande",
   "category": "Kriminalität · Celtigerns Wacht",
   "icon": "⚔",
@@ -14,13 +14,12 @@ const ZITTERAALE_CANONICAL_ENTRY = {
   "multipage": true,
   "appendCommentsPage": false,
   "enablePageComments": true,
-  "zitteraaleRevision": "20261021-arvel-v3",
+  "zitteraaleRevision": "20261116-unterbanden-v4",
   "sessionCast": [
     "zitteraale-schwarzer-zitteraal",
     "zitteraale-schlickzahn",
     "zitteraale-nachtkieme",
-    "zitteraale-donnerkiefer",
-    "zitteraale-netznadel"
+    "zitteraale-donnerkiefer"
   ],
   "pages": [
     {
@@ -48,11 +47,11 @@ const ZITTERAALE_CANONICAL_ENTRY = {
         ],
         [
           "Führung",
-          "Der Schwarze Zitteraal und vier Vertraute"
+          "Der Schwarze Zitteraal und zwei Stellvertreter"
         ],
         [
-          "Namen",
-          "Öffentlich vorwiegend Bandenbeinamen"
+          "Unterbanden",
+          "Acht Gruppen mit eigenen Führern und Gruppenakten"
         ],
         [
           "Fahndung",
@@ -69,23 +68,23 @@ const ZITTERAALE_CANONICAL_ENTRY = {
       "imageTall": true,
       "imageFit": "cover",
       "imagePosition": "center",
-      "description": "<p>Die Rudel beobachten Wege und Gewohnheiten, bevor sie zugreifen. Sie überfallen Frachtzüge, erpressen Gehöfte und treiben gestohlenes Vieh über Nebenwege fort. Einzelne treten als Reisende oder Kriegsknechte auf. Erst beim Zugriff werden aus unauffälligen Männern eine gemeinsame Schar.</p><p>Beute allein hält die Bande nicht am Leben. Nahrung, Futter, brauchbare Waffen und Menschen, die eine Übergabe nicht hinterfragen, sind ebenso wichtig. Die Führung verteilt diese Mittel und damit auch die Abhängigkeit ihrer Leute. Verbindungen zu Hehlern und Schmugglern bleiben absichtlich in einzelne Wege und Treffen aufgeteilt.</p><p>Der Überfall auf den <strong>Bradrhith-Hof</strong> brachte einen Teil dieses Geflechts vor das gräfliche Gericht. Acht Angreifer fielen bei der Verfolgung durch Sir Rhys Draig; drei ergaben sich. Ihre frühere Schar ist beim Hohlwegrudel vermerkt. Aussagen über Auftraggeber und mögliche Kontakte zu den Gwregysdu bleiben vom bloßen Verdacht gegen das ganze Haus getrennt.</p>",
+      "description": "<p>Die Unterbanden beobachten Wege und Gewohnheiten, bevor sie zugreifen. Sie überfallen Frachtzüge, erpressen Gehöfte und treiben gestohlenes Vieh über Nebenwege fort. Einzelne treten als Reisende oder Kriegsknechte auf. Erst beim Zugriff werden aus unauffälligen Männern eine gemeinsame Schar.</p><p>Beute allein hält die Bande nicht am Leben. Nahrung, Futter, brauchbare Waffen und Menschen, die eine Übergabe nicht hinterfragen, sind ebenso wichtig. Die Führung verteilt diese Mittel und damit auch die Abhängigkeit ihrer Leute. Verbindungen zu Hehlern und Schmugglern bleiben absichtlich in einzelne Wege und Treffen aufgeteilt.</p><p><strong>Die Untoten Aale</strong>, die erste Unterbande unter <strong>Medrawd Angau</strong>, verantworten den Angriff auf Llysfaen und den Überfall auf das <strong>Bradrhith-Gestüt</strong>. Sir Rhys Draig fügte der Schar schwere Verluste zu und tötete ihren damaligen ersten Leutnant. Medrawd war abwesend. Der zweite Leutnant Rhodri und die einfachen Mitglieder Brychan und Tegid wurden festgenommen. Die Gruppe erhielt später Rekruten und Verstärkung aus dem Bandenhauptquartier.</p>",
       "stats": [
         [
           "Ziele",
-          "Reisende, Karawanen, abgelegene Höfe"
+          "Reisende, Karawanen, Höfe und Geschäfte"
         ],
         [
           "Vorgehen",
-          "Kundschaft · Hinterhalt · Erpressung · Hehlerei"
+          "Schutzgelder · Raub · Terror · Anschläge"
         ],
         [
           "Beutewege",
           "Getrennte Übergaben und eingeweihte Mittelsleute"
         ],
         [
-          "Bradrhith-Hof",
-          "Acht Angreifer gefallen · drei gefangen"
+          "Llysfaen und Bradrhith",
+          "Die Untoten Aale · Gruppe I."
         ],
         [
           "Öffentlicher Stand",
@@ -100,37 +99,41 @@ const ZITTERAALE_CANONICAL_ENTRY = {
       "hierarchyPage": true,
       "hierarchy": {
         "organizationTitle": "Die Schwarzen Zitteraale",
-        "eyebrow": "Bande · Befehle und Abhängigkeiten",
-        "subtitle": "Ein Bandenhaupt · vier Köpfe des inneren Kreises · sechs Rudel",
+        "eyebrow": "Raubritter · Führung und Unterbanden",
+        "subtitle": "Ein Bandenführer · zwei Stellvertreter · acht Unterbanden",
         "centerLabel": "Der Schwarze Zitteraal",
         "emblem": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
         "sideImage": "/AleriaAlmanach/assets/schwarze-zitteraale/scenes/hauptquartier.png",
         "motto": "Im trüben Wasser bleibt kein Name.",
-        "description": "<p>Der Schwarze Zitteraal entscheidet über Ziele, Beuteanteile und Strafen. Unter ihm stehen seine beiden Hände; zwei weitere Vertraute verwalten Waffen und Vorräte. Die Rudelführer empfangen begrenzte Aufträge. Kein Komplize soll mehr Wege und Kontakte kennen, als er für seinen nächsten Gang braucht.</p>",
-        "detailsTitle": "Zusammensetzung",
+        "description": "<p>Der Schwarze Zitteraal steht an der Spitze. Seine beiden Stellvertreter stimmen die Aufträge und Verstärkungen der acht großen Unterbanden ab. Jede Gruppe besitzt einen eigenen Führer und eine eigene Gruppenakte.</p>",
+        "detailsTitle": "Bandenordnung",
         "details": [
           {
-            "label": "Führung",
-            "value": "Fünf Rädelsführer, pyramidenartig geordnet"
+            "icon": "⚑",
+            "label": "Bandenhaupt",
+            "value": "Der Schwarze Zitteraal"
           },
           {
-            "label": "Rudel",
-            "value": "Sechs Rudelführer mit jeweils zwölf aktiven Komplizen"
+            "icon": "⚔",
+            "label": "Stellvertretung",
+            "value": "Der Schinder und der Eidlose"
           },
           {
-            "label": "Dargestellte aktive Stärke",
-            "value": "83 Köpfe · Führung und sechs vollständige Rudel"
+            "icon": "⚑",
+            "label": "Unterbanden",
+            "value": "Acht Gruppen mit eigener Führung"
           },
           {
-            "label": "Frühere Hofschar",
-            "value": "Elf Ausgeschiedene gesondert beim Hohlwegrudel; nicht Teil der aktiven Stärke"
+            "icon": "✉",
+            "label": "Verbindungen",
+            "value": "Llineth · Kundschaft und Abnehmer"
           }
         ],
         "chartTitle": "Führung und Gruppen",
         "treeDisplayMode": "tabs",
-        "portraitScale": 78,
-        "cardFontScale": 88,
-        "chartIntro": "Die Führungsriege steht über allen Rudeln. Jedes Rudel zeigt seinen Führer und darunter drei Reihen zu vier Komplizen. Ausgeschiedene gehören in eine eigene letzte Reihe.",
+        "portraitScale": 100,
+        "cardFontScale": 92,
+        "chartIntro": "Der Reiter Gruppen zeigt die acht Banner und führt zu den jeweiligen Gruppenakten.",
         "trees": [
           {
             "id": "fuehrung",
@@ -138,52 +141,96 @@ const ZITTERAALE_CANONICAL_ENTRY = {
             "parentTreeId": "",
             "levels": [
               {
-                "label": "Bandenhaupt",
+                "label": "Bandenführer",
                 "nodes": [
                   {
                     "id": "zitteraale-schwarzer-zitteraal",
                     "title": "Der Schwarze Zitteraal",
                     "subtitle": "Bandenhaupt · letzter Befehl",
                     "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/schwarzer-zitteraal.png",
-                    "text": "Beherrscht, charismatisch und berechnend. Spricht leise und lässt andere auf seine Antwort warten. Abmachungen gelten ihm, solange sie seinem Anspruch dienen."
+                    "text": "Bestimmt die gemeinsamen Ziele, bestätigt größere Vorhaben und entscheidet über Beuteverteilung und Gefolgschaft."
                   }
                 ]
               },
               {
-                "label": "Rechte und linke Hand",
+                "label": "Stellvertreter",
+                "columns": 2,
                 "nodes": [
                   {
                     "id": "zitteraale-schlickzahn",
-                    "title": "Schlickzahn",
+                    "title": "Der Schinder",
                     "subtitle": "Rechte Hand · Überfälle und Einschüchterung",
                     "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/schlickzahn.png",
-                    "text": "Reizbar, besitzergreifend und geduldig, wenn Angst ihm nützt. Lacht über kleine Demütigungen und merkt sich jeden Widerspruch."
+                    "text": "Vertritt das Bandenhaupt bei der Koordination der Unterbanden. Gibt Aufträge weiter und stimmt bewaffnete Einsätze und Verstärkungen ab."
                   },
                   {
-                    "id": "zitteraale-nachtkieme",
-                    "title": "Nachtkieme",
-                    "subtitle": "Linke Hand · Kundschaft und Verbindungen",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/nachtkieme.png",
-                    "text": "Aufmerksam, misstrauisch und wortkarg. Merkt sich Stimmen und kleine Unstimmigkeiten; antwortet selten auf die eigentliche Frage."
+                    "id": "zitteraale-donnerkiefer",
+                    "title": "Der Eidlose",
+                    "subtitle": "Linke Hand · Waffen und Bandenordnung",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/donnerkiefer.png",
+                    "text": "Vertritt das Bandenhaupt bei der Koordination der Unterbanden. Gibt Aufträge weiter und stimmt bewaffnete Einsätze und Verstärkungen ab."
                   }
                 ]
               },
               {
-                "label": "Innerer Kreis",
+                "label": "Rädelsführer der acht Unterbanden",
+                "columns": 4,
                 "nodes": [
                   {
-                    "id": "zitteraale-donnerkiefer",
-                    "title": "Donnerkiefer",
-                    "subtitle": "Innerer Kreis · Waffen und Rudeldisziplin",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/donnerkiefer.png",
-                    "text": "Diszipliniert, nachtragend und stolz auf seine Härte. Hält Furcht für eine zuverlässigere Bindung als Freundschaft."
+                    "id": "zitteraale-medrawd-angau",
+                    "title": "Medrawd Angau",
+                    "subtitle": "⚑ Gruppenführer · Gruppe I.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/medrawd-angau-v3.png",
+                    "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
                   },
                   {
-                    "id": "zitteraale-netznadel",
-                    "title": "Netznadel",
-                    "subtitle": "Innerer Kreis · Beute, Vorräte und Schleusung",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/netznadel.png",
-                    "text": "Geschäftig, habgierig und ausweichend. Zählt selbst beim Reden mit und macht aus jeder Gefälligkeit eine offene Schuld."
+                    "id": "zitteraale-gruppe-ii-fuehrer",
+                    "title": "Gruppenführer · unbenannt",
+                    "subtitle": "⚑ Gruppenführer · Gruppe II.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-ii-v1.png",
+                    "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                  },
+                  {
+                    "id": "zitteraale-gruppe-iii-fuehrer",
+                    "title": "Gruppenführer · unbenannt",
+                    "subtitle": "⚑ Gruppenführer · Gruppe III.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-iii-v1.png",
+                    "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                  },
+                  {
+                    "id": "zitteraale-gruppe-iv-fuehrer",
+                    "title": "Gruppenführer · unbenannt",
+                    "subtitle": "⚑ Gruppenführer · Gruppe IV.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-iv-v1.png",
+                    "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                  },
+                  {
+                    "id": "zitteraale-gruppe-v-fuehrer",
+                    "title": "Gruppenführer · unbenannt",
+                    "subtitle": "⚑ Gruppenführer · Gruppe V.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-v-v1.png",
+                    "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                  },
+                  {
+                    "id": "zitteraale-gruppe-vi-fuehrer",
+                    "title": "Gruppenführer · unbenannt",
+                    "subtitle": "⚑ Gruppenführer · Gruppe VI.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-vi-v1.png",
+                    "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                  },
+                  {
+                    "id": "zitteraale-gruppe-vii-fuehrer",
+                    "title": "Gruppenführer · unbenannt",
+                    "subtitle": "⚑ Gruppenführer · Gruppe VII.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-vii-v1.png",
+                    "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                  },
+                  {
+                    "id": "zitteraale-gruppe-viii-fuehrer",
+                    "title": "Gruppenführer · unbenannt",
+                    "subtitle": "⚑ Gruppenführer · Gruppe VIII.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-viii-v1.png",
+                    "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
                   }
                 ]
               }
@@ -195,839 +242,83 @@ const ZITTERAALE_CANONICAL_ENTRY = {
             "parentTreeId": "fuehrung",
             "levels": [
               {
-                "label": "Sechs Rudel unter der Führungsriege",
+                "label": "Acht Gruppen · zwei Viererreihen",
+                "columns": 4,
                 "nodes": [
                   {
-                    "id": "zitteraale-gruppe-hohlweg",
-                    "title": "Hohlwegrudel",
-                    "subtitle": "Überfälle auf Straßen und Gehöfte",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
-                    "text": "Ein Rudelführer und zwölf Komplizen; die Mitglieder kennen einander unter Beinamen."
+                    "id": "zitteraale-gruppe-i",
+                    "title": "Die Untoten Aale",
+                    "subtitle": "⚑ Gruppe I.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+                    "text": "<p>Eine der ältesten Unterbanden der Schwarzen Zitteraale, geführt von Medrawd Angau.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-i\">Gruppenakte öffnen</a></p>"
                   },
                   {
-                    "id": "zitteraale-gruppe-ufer",
-                    "title": "Uferschatten",
-                    "subtitle": "Anlegeplätze und Übergaben",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
-                    "text": "Ein Rudelführer und zwölf Komplizen; die Mitglieder kennen einander unter Beinamen."
+                    "id": "zitteraale-gruppe-ii",
+                    "title": "Gruppe II.",
+                    "subtitle": "⚑ Gruppe II.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+                    "text": "<p>Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-ii\">Gruppenakte öffnen</a></p>"
                   },
                   {
-                    "id": "zitteraale-gruppe-schilf",
-                    "title": "Schilfmesser",
-                    "subtitle": "Kundschaft und heimliche Wege",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
-                    "text": "Ein Rudelführer und zwölf Komplizen; die Mitglieder kennen einander unter Beinamen."
+                    "id": "zitteraale-gruppe-iii",
+                    "title": "Gruppe III.",
+                    "subtitle": "⚑ Gruppe III.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+                    "text": "<p>Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-iii\">Gruppenakte öffnen</a></p>"
                   },
                   {
-                    "id": "zitteraale-gruppe-fracht",
-                    "title": "Nachtfracht",
-                    "subtitle": "Beute und Vorratstransporte",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
-                    "text": "Ein Rudelführer und zwölf Komplizen; die Mitglieder kennen einander unter Beinamen."
+                    "id": "zitteraale-gruppe-iv",
+                    "title": "Gruppe IV.",
+                    "subtitle": "⚑ Gruppe IV.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+                    "text": "<p>Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-iv\">Gruppenakte öffnen</a></p>"
                   },
                   {
-                    "id": "zitteraale-gruppe-bruch",
-                    "title": "Bruchzähne",
-                    "subtitle": "Gewaltsamer Zugriff und Rückendeckung",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
-                    "text": "Ein Rudelführer und zwölf Komplizen; die Mitglieder kennen einander unter Beinamen."
+                    "id": "zitteraale-gruppe-v",
+                    "title": "Gruppe V.",
+                    "subtitle": "⚑ Gruppe V.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+                    "text": "<p>Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-v\">Gruppenakte öffnen</a></p>"
                   },
                   {
-                    "id": "zitteraale-gruppe-ruine",
-                    "title": "Grundwache",
-                    "subtitle": "Wachen und Laufwege in der Ruinenstadt",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
-                    "text": "Ein Rudelführer und zwölf Komplizen; die Mitglieder kennen einander unter Beinamen."
+                    "id": "zitteraale-gruppe-vi",
+                    "title": "Gruppe VI.",
+                    "subtitle": "⚑ Gruppe VI.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+                    "text": "<p>Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-vi\">Gruppenakte öffnen</a></p>"
+                  },
+                  {
+                    "id": "zitteraale-gruppe-vii",
+                    "title": "Gruppe VII.",
+                    "subtitle": "⚑ Gruppe VII.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+                    "text": "<p>Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-vii\">Gruppenakte öffnen</a></p>"
+                  },
+                  {
+                    "id": "zitteraale-gruppe-viii",
+                    "title": "Gruppe VIII.",
+                    "subtitle": "⚑ Gruppe VIII.",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+                    "text": "<p>Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-viii\">Gruppenakte öffnen</a></p>"
                   }
                 ]
               }
             ]
           },
           {
-            "id": "hohlweg",
-            "label": "Hohlwegrudel",
-            "parentTreeId": "gruppen",
+            "id": "verbindungen",
+            "label": "Verbindungen",
+            "parentTreeId": "fuehrung",
             "levels": [
               {
-                "label": "Rudelführer",
+                "label": "Kundschaft und Kontakte",
                 "nodes": [
                   {
-                    "id": "zitteraale-hohlweg-rudelfuehrer",
-                    "title": "Rudelführer",
-                    "subtitle": "Überfälle auf Straßen und Gehöfte",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 1",
-                "nodes": [
-                  {
-                    "id": "zitteraale-hohlweg-1-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Hohlwegrudel",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-hohlweg-1-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Hohlwegrudel",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-hohlweg-1-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Hohlwegrudel",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-hohlweg-1-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Hohlwegrudel",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 2",
-                "nodes": [
-                  {
-                    "id": "zitteraale-hohlweg-2-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Hohlwegrudel",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-hohlweg-2-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Hohlwegrudel",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-hohlweg-2-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Hohlwegrudel",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-hohlweg-2-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Hohlwegrudel",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 3",
-                "nodes": [
-                  {
-                    "id": "zitteraale-hohlweg-3-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Hohlwegrudel",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-hohlweg-3-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Hohlwegrudel",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-hohlweg-3-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Hohlwegrudel",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-hohlweg-3-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Hohlwegrudel",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Ehemalige / Tote · Schar vom Bradrhith-Hof",
-                "nodes": [
-                  {
-                    "id": "zitteraale-hoffuehrer-gefallen",
-                    "title": "Alter Rudelführer",
-                    "subtitle": "Im Zweikampf gegen Sir Rhys Draig gefallen",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
-                    "text": "Führte die frühere Hofschar; im Gefecht getötet. Der heutige Rudelführer ist sein Nachfolger."
-                  },
-                  {
-                    "id": "01OfFXeScnCoL2eNMPAM",
-                    "title": "Jungaal",
-                    "subtitle": "Gefangen · zum Tod verurteilt",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Überlebte den Überfall auf das Gestüt und wurde vor den gräflichen Hof gebracht. Gehört nicht zu den aktiven Reihen."
-                  },
-                  {
-                    "id": "2UgcQTdEEpSJDTNKxx0U",
-                    "title": "Riffbrecher",
-                    "subtitle": "Gefangen · für Verhöre zurückgehalten",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Überlebte den Überfall auf das Gestüt und wurde vor den gräflichen Hof gebracht. Gehört nicht zu den aktiven Reihen."
-                  },
-                  {
-                    "id": "ax26chmgvtaURnzC0n0l",
-                    "title": "Grubenschlick",
-                    "subtitle": "Gefangen · zum Tod verurteilt",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Überlebte den Überfall auf das Gestüt und wurde vor den gräflichen Hof gebracht. Gehört nicht zu den aktiven Reihen."
-                  },
-                  {
-                    "id": "zitteraale-hofschar-gefallen-1",
-                    "title": "Gefallener Komplize",
-                    "subtitle": "Bei der Verfolgung durch Sir Rhys Draig gefallen",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Einer der sieben weiteren gefallenen Komplizen. Mit dem Truppführer starben acht Angreifer; drei ergaben sich."
-                  },
-                  {
-                    "id": "zitteraale-hofschar-gefallen-2",
-                    "title": "Gefallener Komplize",
-                    "subtitle": "Bei der Verfolgung durch Sir Rhys Draig gefallen",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Einer der sieben weiteren gefallenen Komplizen. Mit dem Truppführer starben acht Angreifer; drei ergaben sich."
-                  },
-                  {
-                    "id": "zitteraale-hofschar-gefallen-3",
-                    "title": "Gefallener Komplize",
-                    "subtitle": "Bei der Verfolgung durch Sir Rhys Draig gefallen",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Einer der sieben weiteren gefallenen Komplizen. Mit dem Truppführer starben acht Angreifer; drei ergaben sich."
-                  },
-                  {
-                    "id": "zitteraale-hofschar-gefallen-4",
-                    "title": "Gefallener Komplize",
-                    "subtitle": "Bei der Verfolgung durch Sir Rhys Draig gefallen",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Einer der sieben weiteren gefallenen Komplizen. Mit dem Truppführer starben acht Angreifer; drei ergaben sich."
-                  },
-                  {
-                    "id": "zitteraale-hofschar-gefallen-5",
-                    "title": "Gefallener Komplize",
-                    "subtitle": "Bei der Verfolgung durch Sir Rhys Draig gefallen",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Einer der sieben weiteren gefallenen Komplizen. Mit dem Truppführer starben acht Angreifer; drei ergaben sich."
-                  },
-                  {
-                    "id": "zitteraale-hofschar-gefallen-6",
-                    "title": "Gefallener Komplize",
-                    "subtitle": "Bei der Verfolgung durch Sir Rhys Draig gefallen",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Einer der sieben weiteren gefallenen Komplizen. Mit dem Truppführer starben acht Angreifer; drei ergaben sich."
-                  },
-                  {
-                    "id": "zitteraale-hofschar-gefallen-7",
-                    "title": "Gefallener Komplize",
-                    "subtitle": "Bei der Verfolgung durch Sir Rhys Draig gefallen",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Einer der sieben weiteren gefallenen Komplizen. Mit dem Truppführer starben acht Angreifer; drei ergaben sich."
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "ufer",
-            "label": "Uferschatten",
-            "parentTreeId": "gruppen",
-            "levels": [
-              {
-                "label": "Rudelführer",
-                "nodes": [
-                  {
-                    "id": "zitteraale-ufer-rudelfuehrer",
-                    "title": "Rudelführer",
-                    "subtitle": "Anlegeplätze und Übergaben",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 1",
-                "nodes": [
-                  {
-                    "id": "zitteraale-ufer-1-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Uferschatten",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ufer-1-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Uferschatten",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ufer-1-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Uferschatten",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ufer-1-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Uferschatten",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 2",
-                "nodes": [
-                  {
-                    "id": "zitteraale-ufer-2-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Uferschatten",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ufer-2-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Uferschatten",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ufer-2-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Uferschatten",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ufer-2-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Uferschatten",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 3",
-                "nodes": [
-                  {
-                    "id": "zitteraale-ufer-3-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Uferschatten",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ufer-3-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Uferschatten",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ufer-3-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Uferschatten",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ufer-3-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Uferschatten",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "schilf",
-            "label": "Schilfmesser",
-            "parentTreeId": "gruppen",
-            "levels": [
-              {
-                "label": "Rudelführer",
-                "nodes": [
-                  {
-                    "id": "zitteraale-schilf-rudelfuehrer",
-                    "title": "Rudelführer",
-                    "subtitle": "Kundschaft und heimliche Wege",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 1",
-                "nodes": [
-                  {
-                    "id": "zitteraale-schilf-1-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Schilfmesser",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-schilf-1-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Schilfmesser",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-schilf-1-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Schilfmesser",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-schilf-1-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Schilfmesser",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 2",
-                "nodes": [
-                  {
-                    "id": "zitteraale-schilf-2-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Schilfmesser",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-schilf-2-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Schilfmesser",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-schilf-2-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Schilfmesser",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-schilf-2-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Schilfmesser",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 3",
-                "nodes": [
-                  {
-                    "id": "zitteraale-schilf-3-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Schilfmesser",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-schilf-3-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Schilfmesser",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-schilf-3-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Schilfmesser",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-schilf-3-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Schilfmesser",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "fracht",
-            "label": "Nachtfracht",
-            "parentTreeId": "gruppen",
-            "levels": [
-              {
-                "label": "Rudelführer",
-                "nodes": [
-                  {
-                    "id": "zitteraale-fracht-rudelfuehrer",
-                    "title": "Rudelführer",
-                    "subtitle": "Beute und Vorratstransporte",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 1",
-                "nodes": [
-                  {
-                    "id": "zitteraale-fracht-1-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Nachtfracht",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-fracht-1-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Nachtfracht",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-fracht-1-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Nachtfracht",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-fracht-1-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Nachtfracht",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 2",
-                "nodes": [
-                  {
-                    "id": "zitteraale-fracht-2-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Nachtfracht",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-fracht-2-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Nachtfracht",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-fracht-2-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Nachtfracht",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-fracht-2-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Nachtfracht",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 3",
-                "nodes": [
-                  {
-                    "id": "zitteraale-fracht-3-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Nachtfracht",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-fracht-3-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Nachtfracht",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-fracht-3-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Nachtfracht",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-fracht-3-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Nachtfracht",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "bruch",
-            "label": "Bruchzähne",
-            "parentTreeId": "gruppen",
-            "levels": [
-              {
-                "label": "Rudelführer",
-                "nodes": [
-                  {
-                    "id": "zitteraale-bruch-rudelfuehrer",
-                    "title": "Rudelführer",
-                    "subtitle": "Gewaltsamer Zugriff und Rückendeckung",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 1",
-                "nodes": [
-                  {
-                    "id": "zitteraale-bruch-1-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Bruchzähne",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-bruch-1-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Bruchzähne",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-bruch-1-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Bruchzähne",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-bruch-1-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Bruchzähne",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 2",
-                "nodes": [
-                  {
-                    "id": "zitteraale-bruch-2-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Bruchzähne",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-bruch-2-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Bruchzähne",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-bruch-2-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Bruchzähne",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-bruch-2-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Bruchzähne",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 3",
-                "nodes": [
-                  {
-                    "id": "zitteraale-bruch-3-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Bruchzähne",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-bruch-3-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Bruchzähne",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-bruch-3-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Bruchzähne",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-bruch-3-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Bruchzähne",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "ruine",
-            "label": "Grundwache",
-            "parentTreeId": "gruppen",
-            "levels": [
-              {
-                "label": "Rudelführer",
-                "nodes": [
-                  {
-                    "id": "zitteraale-ruine-rudelfuehrer",
-                    "title": "Rudelführer",
-                    "subtitle": "Wachen und Laufwege in der Ruinenstadt",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 1",
-                "nodes": [
-                  {
-                    "id": "zitteraale-ruine-1-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Grundwache",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ruine-1-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Grundwache",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ruine-1-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Grundwache",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ruine-1-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Grundwache",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 2",
-                "nodes": [
-                  {
-                    "id": "zitteraale-ruine-2-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Grundwache",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ruine-2-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Grundwache",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ruine-2-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Grundwache",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ruine-2-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Grundwache",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  }
-                ]
-              },
-              {
-                "label": "Komplizen · Reihe 3",
-                "nodes": [
-                  {
-                    "id": "zitteraale-ruine-3-1",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Grundwache",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ruine-3-2",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Grundwache",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ruine-3-3",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Grundwache",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
-                  },
-                  {
-                    "id": "zitteraale-ruine-3-4",
-                    "title": "Komplize",
-                    "subtitle": "Rudel Grundwache",
-                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
-                    "text": "Bandenbeiname und Person noch unbekannt. Dunkle Kleidung und verbergende Kopfbedeckung; keine Angehörigen einer einheitlichen Truppe."
+                    "id": "zitteraale-nachtkieme",
+                    "title": "Llineth",
+                    "subtitle": "Verbindungen · Kundschaft und Abnehmer",
+                    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/nachtkieme.png",
+                    "text": "Pflegt Verbindungen zu Kundschaftern, Boten und Abnehmern. Bündelt eingehende Hinweise und bereitet deren Weitergabe an die Führung vor."
                   }
                 ]
               }
@@ -1035,7 +326,7 @@ const ZITTERAALE_CANONICAL_ENTRY = {
           }
         ],
         "levels": [],
-        "footerNote": "Die amtliche Fahndung kennt weder die vollständige Stärke noch den Standort der Ruinenstadt. Diese Übersicht zeigt die tatsächliche Bandenordnung. Die drei Gefangenen sind nicht als bereits hingerichtet geführt."
+        "footerNote": "Die einzelnen Gruppenakten enthalten Führung, Räuber, Verstorbene, Ex-Mitglieder und eine eigene Hauptquartiersszene."
       }
     },
     {
@@ -1155,27 +446,21 @@ const ZITTERAALE_CANONICAL_ENTRY = {
         "alliesTitle": "Gesuchte Mitbeschuldigte",
         "allies": [
           {
-            "title": "Schlickzahn",
+            "title": "Der Schinder",
             "subtitle": "Rechte Hand · Überfälle und Einschüchterung",
             "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
             "text": ""
           },
           {
-            "title": "Nachtkieme",
-            "subtitle": "Linke Hand · Kundschaft und Verbindungen",
+            "title": "Llineth",
+            "subtitle": "Verbindungen · Kundschaft und Abnehmer",
             "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
             "text": ""
           },
           {
-            "title": "Donnerkiefer",
-            "subtitle": "Innerer Kreis · Waffen und Rudeldisziplin",
+            "title": "Der Eidlose",
+            "subtitle": "Linke Hand · Waffen und Bandenordnung",
             "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
-            "text": ""
-          },
-          {
-            "title": "Netznadel",
-            "subtitle": "Innerer Kreis · Beute, Vorräte und Schleusung",
-            "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/netznadel.png",
             "text": ""
           }
         ],
@@ -1231,14 +516,14 @@ const ZITTERAALE_CANONICAL_ENTRY = {
     {
       "schemaVersion": 1,
       "commentThreadKey": "zitteraale-akte-schlickzahn",
-      "pageTitle": "Krimi-Bio · Schlickzahn",
+      "pageTitle": "Krimi-Bio · Der Schinder",
       "bountyFilePage": true,
       "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
-      "description": "<p>Unter wechselnden Feldzeichen lernte er, dass bewaffnete Männer von den Vorräten anderer leben können. Beim Zitteraal fand er einen Herrn, der diese Gewohnheit belohnt. Seinen Beinamen verdankt er der Zahnlücke und den schlammigen Hohlwegen seiner Überfälle.</p><p><strong>Persönlichkeit:</strong> Reizbar, besitzergreifend und geduldig, wenn Angst ihm nützt. Lacht über kleine Demütigungen und merkt sich jeden Widerspruch.</p><p><strong>Vorgehen:</strong> Führt den ersten Zugriff, schüchtert Gehöfte ein und treibt Forderungen ein. Er bindet Opfer im Gespräch, bis Komplizen die Ausgänge besetzt haben.</p>",
+      "description": "<p>Unter wechselnden Feldzeichen lernte er, dass bewaffnete Männer von den Vorräten anderer leben können. Beim Zitteraal fand er einen Herrn, der diese Gewohnheit belohnt. Als dessen rechte Hand treibt er Forderungen ein und bereitet größere Überfälle vor.</p><p><strong>Persönlichkeit:</strong> Reizbar, besitzergreifend und geduldig, wenn Angst ihm nützt. Lacht über kleine Demütigungen und merkt sich jeden Widerspruch.</p><p><strong>Vorgehen:</strong> Führt den ersten Zugriff, schüchtert Gehöfte ein und treibt Forderungen ein. Er bindet Opfer im Gespräch, bis Komplizen die Ausgänge besetzt haben.</p>",
       "bountyFile": {
-        "archiveTitle": "Schlickzahn",
+        "archiveTitle": "Der Schinder",
         "archiveSubtitle": "Marschallamt · Grafschaft Celtigerns Wacht",
-        "targetName": "Schlickzahn",
+        "targetName": "Der Schinder",
         "aliases": "Bandenbeiname · wirklicher Name unbekannt",
         "regionalBanner": "/IconOrdner/Fazit%20Icons/Krone.png",
         "portraitImage": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
@@ -1340,21 +625,15 @@ const ZITTERAALE_CANONICAL_ENTRY = {
             "text": ""
           },
           {
-            "title": "Nachtkieme",
-            "subtitle": "Linke Hand · Kundschaft und Verbindungen",
+            "title": "Llineth",
+            "subtitle": "Verbindungen · Kundschaft und Abnehmer",
             "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
             "text": ""
           },
           {
-            "title": "Donnerkiefer",
-            "subtitle": "Innerer Kreis · Waffen und Rudeldisziplin",
+            "title": "Der Eidlose",
+            "subtitle": "Linke Hand · Waffen und Bandenordnung",
             "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
-            "text": ""
-          },
-          {
-            "title": "Netznadel",
-            "subtitle": "Innerer Kreis · Beute, Vorräte und Schleusung",
-            "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/netznadel.png",
             "text": ""
           }
         ],
@@ -1410,15 +689,15 @@ const ZITTERAALE_CANONICAL_ENTRY = {
     {
       "schemaVersion": 1,
       "commentThreadKey": "zitteraale-akte-nachtkieme",
-      "pageTitle": "Krimi-Bio · Nachtkieme",
+      "pageTitle": "Krimi-Bio · Llineth",
       "bountyFilePage": true,
       "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
-      "description": "<p>Sie kannte die Straßen der Grafschaft bereits, bevor die Bande ihre Wege nutzte. Aus kleinen Botengängen wurden bezahlte Hinweise und schließlich die Planung von Hinterhalten. Niemand in der Bande verwendet einen anderen Namen für sie.</p><p><strong>Persönlichkeit:</strong> Aufmerksam, misstrauisch und wortkarg. Merkt sich Stimmen und kleine Unstimmigkeiten; antwortet selten auf die eigentliche Frage.</p><p><strong>Vorgehen:</strong> Beobachtet Reisegewohnheiten, stellt Kontakte zu Abnehmern her und prüft fremde Nachrichten. Nur wenige erfahren von ihr mehr als ihren nächsten Treffpunkt.</p>",
+      "description": "<p>Llineth kannte die Straßen der Grafschaft bereits, bevor die Bande ihre Wege nutzte. Aus kleinen Botengängen wurden bezahlte Hinweise und schließlich die Planung von Hinterhalten. Sie hält Kontakte zu Kundschaftern, Boten und Abnehmern der Beute.</p><p><strong>Persönlichkeit:</strong> Aufmerksam, misstrauisch und wortkarg. Merkt sich Stimmen und kleine Unstimmigkeiten; antwortet selten auf die eigentliche Frage.</p><p><strong>Vorgehen:</strong> Beobachtet Reisegewohnheiten, stellt Kontakte zu Abnehmern her und prüft fremde Nachrichten. Nur wenige erfahren von ihr mehr als ihren nächsten Treffpunkt.</p>",
       "bountyFile": {
-        "archiveTitle": "Nachtkieme",
+        "archiveTitle": "Llineth",
         "archiveSubtitle": "Marschallamt · Grafschaft Celtigerns Wacht",
-        "targetName": "Nachtkieme",
-        "aliases": "Bandenbeiname · wirklicher Name unbekannt",
+        "targetName": "Llineth",
+        "aliases": "Unter dem Namen Llineth bekannt",
         "regionalBanner": "/IconOrdner/Fazit%20Icons/Krone.png",
         "portraitImage": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
         "portraitScale": 100,
@@ -1509,7 +788,7 @@ const ZITTERAALE_CANONICAL_ENTRY = {
         "factionTitle": "Bande",
         "factionBanner": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
         "factionName": "Die Schwarzen Zitteraale",
-        "factionText": "Linke Hand · Kundschaft und Verbindungen",
+        "factionText": "Verbindungen · Kundschaft und Abnehmer",
         "alliesTitle": "Gesuchte Mitbeschuldigte",
         "allies": [
           {
@@ -1519,21 +798,15 @@ const ZITTERAALE_CANONICAL_ENTRY = {
             "text": ""
           },
           {
-            "title": "Schlickzahn",
+            "title": "Der Schinder",
             "subtitle": "Rechte Hand · Überfälle und Einschüchterung",
             "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
             "text": ""
           },
           {
-            "title": "Donnerkiefer",
-            "subtitle": "Innerer Kreis · Waffen und Rudeldisziplin",
+            "title": "Der Eidlose",
+            "subtitle": "Linke Hand · Waffen und Bandenordnung",
             "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
-            "text": ""
-          },
-          {
-            "title": "Netznadel",
-            "subtitle": "Innerer Kreis · Beute, Vorräte und Schleusung",
-            "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/netznadel.png",
             "text": ""
           }
         ],
@@ -1589,14 +862,14 @@ const ZITTERAALE_CANONICAL_ENTRY = {
     {
       "schemaVersion": 1,
       "commentThreadKey": "zitteraale-akte-donnerkiefer",
-      "pageTitle": "Krimi-Bio · Donnerkiefer",
+      "pageTitle": "Krimi-Bio · Der Eidlose",
       "bountyFilePage": true,
       "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
-      "description": "<p>Ein ehemaliger Kriegsknecht, der nach Jahren wechselnder Dienste bei den Zitteraalen blieb. Er ordnet das erbeutete Gerät und übt mit den Komplizen, bis aus einem Überfall ein eingeübter Griff wird.</p><p><strong>Persönlichkeit:</strong> Diszipliniert, nachtragend und stolz auf seine Härte. Hält Furcht für eine zuverlässigere Bindung als Freundschaft.</p><p><strong>Vorgehen:</strong> Überwacht Waffen und Wachen, setzt Befehle im Lager durch und übernimmt die Nachhut bei Rückzügen. Sein Beiname meint die donnernde Stimme hinter dem vernarbten Kiefer.</p>",
+      "description": "<p>Ein ehemaliger Kriegsknecht, der nach Jahren wechselnder Dienste bei den Zitteraalen blieb. Er ordnet das erbeutete Gerät und übt mit den Komplizen, bis aus einem Überfall ein eingeübter Griff wird.</p><p><strong>Persönlichkeit:</strong> Diszipliniert, nachtragend und stolz auf seine Härte. Hält Furcht für eine zuverlässigere Bindung als Freundschaft.</p><p><strong>Vorgehen:</strong> Überwacht Waffen und Wachen, setzt Befehle im Lager durch und stimmt Verstärkungen aus dem Hauptquartier mit den Gruppenführern ab.</p>",
       "bountyFile": {
-        "archiveTitle": "Donnerkiefer",
+        "archiveTitle": "Der Eidlose",
         "archiveSubtitle": "Marschallamt · Grafschaft Celtigerns Wacht",
-        "targetName": "Donnerkiefer",
+        "targetName": "Der Eidlose",
         "aliases": "Bandenbeiname · wirklicher Name unbekannt",
         "regionalBanner": "/IconOrdner/Fazit%20Icons/Krone.png",
         "portraitImage": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
@@ -1688,7 +961,7 @@ const ZITTERAALE_CANONICAL_ENTRY = {
         "factionTitle": "Bande",
         "factionBanner": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
         "factionName": "Die Schwarzen Zitteraale",
-        "factionText": "Innerer Kreis · Waffen und Rudeldisziplin",
+        "factionText": "Linke Hand · Waffen und Bandenordnung",
         "alliesTitle": "Gesuchte Mitbeschuldigte",
         "allies": [
           {
@@ -1698,21 +971,15 @@ const ZITTERAALE_CANONICAL_ENTRY = {
             "text": ""
           },
           {
-            "title": "Schlickzahn",
+            "title": "Der Schinder",
             "subtitle": "Rechte Hand · Überfälle und Einschüchterung",
             "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
             "text": ""
           },
           {
-            "title": "Nachtkieme",
-            "subtitle": "Linke Hand · Kundschaft und Verbindungen",
+            "title": "Llineth",
+            "subtitle": "Verbindungen · Kundschaft und Abnehmer",
             "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
-            "text": ""
-          },
-          {
-            "title": "Netznadel",
-            "subtitle": "Innerer Kreis · Beute, Vorräte und Schleusung",
-            "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/netznadel.png",
             "text": ""
           }
         ],
@@ -1753,185 +1020,6 @@ const ZITTERAALE_CANONICAL_ENTRY = {
           {
             "label": "Gefolgschaft",
             "value": 3,
-            "icon": ""
-          },
-          {
-            "label": "Fluchtgefahr",
-            "value": 4,
-            "icon": ""
-          }
-        ],
-        "handoverNote": "Lebendige Übergabe an die zuständige Obrigkeit bevorzugt. Identität und Tatbeteiligung werden vor Auszahlung geprüft.",
-        "footer": "Marschallamt · Fahndungsakten · Kein bestätigter Aufenthaltsort"
-      }
-    },
-    {
-      "schemaVersion": 1,
-      "commentThreadKey": "zitteraale-akte-netznadel",
-      "pageTitle": "Krimi-Bio · Netznadel",
-      "bountyFilePage": true,
-      "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/netznadel.png",
-      "description": "<p>Er begann als Gelegenheitshehler an wechselnden Anlegeplätzen. Im inneren Kreis der Bande zählt sein Gedächtnis für Gebinde, Schulden und brauchbare Namen mehr als ein sauberer Hieb.</p><p><strong>Persönlichkeit:</strong> Geschäftig, habgierig und ausweichend. Zählt selbst beim Reden mit und macht aus jeder Gefälligkeit eine offene Schuld.</p><p><strong>Vorgehen:</strong> Verteilt Vorräte, trennt auffällige Beute von gewöhnlicher Fracht und organisiert Übergaben. Er kennt die Vorratswege, aber seine Abnehmer erhalten nur einzelne Lieferungen zu sehen.</p>",
-      "bountyFile": {
-        "archiveTitle": "Netznadel",
-        "archiveSubtitle": "Marschallamt · Grafschaft Celtigerns Wacht",
-        "targetName": "Netznadel",
-        "aliases": "Bandenbeiname · wirklicher Name unbekannt",
-        "regionalBanner": "/IconOrdner/Fazit%20Icons/Krone.png",
-        "portraitImage": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/netznadel.png",
-        "portraitScale": 100,
-        "portraitX": 50,
-        "portraitY": 30,
-        "status": "Gesucht",
-        "statusNote": "Lebendig bevorzugt",
-        "threatLevel": 4,
-        "threatText": "Bewaffnet · nicht allein stellen",
-        "bountyAmount": "3,4",
-        "bountyCurrency": "Goldtaler",
-        "coinImage": "/AleriaAlmanach/public/assets/inventory/coins/goldtaler.png",
-        "descriptionTitle": "Personenbeschreibung",
-        "descriptionRows": [
-          {
-            "label": "Alter",
-            "value": "Etwa 34 Jahre"
-          },
-          {
-            "label": "Größe",
-            "value": "1,79 Schritt"
-          },
-          {
-            "label": "Erkennungszeichen",
-            "value": "Dünner rothaariger Cenyri mit grünen Augen, ungleichmäßig kurzem Pony, schmalem Schnurrbart und schiefer dunkler Kappe. Brauner Arbeitsrock, geflickte schwarze Schulterdecke, drahtige Hände."
-          }
-        ],
-        "descriptionNote": "Zeichnung nach Personenbeschreibungen. Kleidung und Auftreten können abweichen.",
-        "chargesTitle": "Tatvorwürfe",
-        "charges": [
-          {
-            "title": "Hehlerei",
-            "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
-            "text": ""
-          },
-          {
-            "title": "Schmuggel",
-            "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
-            "text": ""
-          },
-          {
-            "title": "Beihilfe zu Raub und Erpressung",
-            "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
-            "text": ""
-          },
-          {
-            "title": "Versorgung einer Raubritterbande",
-            "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
-            "text": ""
-          }
-        ],
-        "traitsTitle": "Verhalten",
-        "traits": [
-          {
-            "title": "Habgierig",
-            "icon": "",
-            "text": ""
-          },
-          {
-            "title": "Gewieft",
-            "icon": "",
-            "text": ""
-          },
-          {
-            "title": "Feige",
-            "icon": "",
-            "text": ""
-          }
-        ],
-        "companionsTitle": "Weitere gesuchte Köpfe",
-        "companions": [
-          {
-            "title": "Der Schwarze Zitteraal",
-            "subtitle": "Bandenhaupt",
-            "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
-            "text": "Die übrigen Köpfe sind in eigenen Akten verzeichnet."
-          }
-        ],
-        "sightingsTitle": "Bekannter Fahndungsraum",
-        "sightings": [
-          {
-            "place": "Celtigerns Wacht",
-            "date": "Gegenwärtiger Aufenthaltsort unbekannt",
-            "observer": "Marschallamt"
-          }
-        ],
-        "connectionsTitle": "Verbindungen und Zugehörigkeit",
-        "factionTitle": "Bande",
-        "factionBanner": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
-        "factionName": "Die Schwarzen Zitteraale",
-        "factionText": "Innerer Kreis · Beute, Vorräte und Schleusung",
-        "alliesTitle": "Gesuchte Mitbeschuldigte",
-        "allies": [
-          {
-            "title": "Der Schwarze Zitteraal",
-            "subtitle": "Bandenhaupt · letzter Befehl",
-            "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
-            "text": ""
-          },
-          {
-            "title": "Schlickzahn",
-            "subtitle": "Rechte Hand · Überfälle und Einschüchterung",
-            "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
-            "text": ""
-          },
-          {
-            "title": "Nachtkieme",
-            "subtitle": "Linke Hand · Kundschaft und Verbindungen",
-            "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
-            "text": ""
-          },
-          {
-            "title": "Donnerkiefer",
-            "subtitle": "Innerer Kreis · Waffen und Rudeldisziplin",
-            "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
-            "text": ""
-          }
-        ],
-        "enemiesTitle": "Verfolgende Obrigkeit",
-        "enemies": [
-          {
-            "title": "Sir Egon Gafyr",
-            "subtitle": "Marschall der Grafschaft",
-            "image": "/IconOrdner/Fazit%20Icons/Ritter.png",
-            "text": "Entgegennahme und Prüfung beim Marschallamt."
-          }
-        ],
-        "supportersTitle": "Ermittlungsstand",
-        "supporters": [
-          {
-            "title": "Verdacht ist kein Nachweis",
-            "image": "/IconOrdner/ReiterIcons/Weltpfade/kriminalitaet.png",
-            "text": "Die Anhörung zum Bradrhith-Hof berührt Kontakte zur Familie Gwregysdu. Daraus folgt keine festgestellte Beteiligung aller Familienangehörigen."
-          }
-        ],
-        "dangerTitle": "Gefährdungsprofil",
-        "dangerProfiles": [
-          {
-            "label": "Kampfkraft",
-            "value": 2,
-            "icon": ""
-          },
-          {
-            "label": "Planung",
-            "value": 4,
-            "icon": ""
-          },
-          {
-            "label": "Tarnung",
-            "value": 4,
-            "icon": ""
-          },
-          {
-            "label": "Gefolgschaft",
-            "value": 5,
             "icon": ""
           },
           {
@@ -1968,9 +1056,20 @@ const ZITTERAALE_CANONICAL_ENTRY = {
 };
 function migrateZitteraaleEntry(entry) { return (function upgradeZitteraaleEntry(entry, canonical) {
   if (entry?.id !== canonical.id || entry.zitteraaleRevision === canonical.zitteraaleRevision) return entry;
-  const pages = canonical.pages.map(page => structuredClone(
-    (entry.pages || []).find(existing => existing.commentThreadKey === page.commentThreadKey) || page
-  ));
+  const regrouped = canonical.zitteraaleRevision === '20261116-unterbanden-v4';
+  const pages = canonical.pages.map(page => {
+    const existing = (entry.pages || []).find(existing => existing.commentThreadKey === page.commentThreadKey);
+    if (!regrouped) return structuredClone(existing || page);
+    // This commissioned reorganisation refreshes authored pages once. The
+    // existing headquarters scene keeps its edited content and thread identity.
+    if (page.sessionPage && existing) return { ...structuredClone(page), ...structuredClone(existing) };
+    return { ...structuredClone(existing || {}), ...structuredClone(page) };
+  });
+  if (regrouped && entry.zitteraaleRevision === '20261021-arvel-v3') {
+    const keys = new Set(canonical.pages.map(page => page.commentThreadKey));
+    pages.push(...structuredClone((entry.pages || []).filter(page =>
+      !keys.has(page.commentThreadKey) && page.commentThreadKey !== 'zitteraale-akte-netznadel')));
+  }
   // Correct only known authored wording. Preserve later editor additions and
   // scene identities; no comments, character resources or past posts are touched.
   const overview = pages.find(page => page.commentThreadKey === 'zitteraale-uebersicht');
@@ -1987,9 +1086,3954 @@ function migrateZitteraaleEntry(entry) { return (function upgradeZitteraaleEntry
   return { ...entry, ...structuredClone(canonical), pages };
 })(entry, ZITTERAALE_CANONICAL_ENTRY); }
 (function registerZitteraaleModule() {
-  const section = SECTIONS.find(section => section.key === 'Kriminalität');
+  const section = SECTIONS.find(section => section.entries?.some(entry => entry.id === ZITTERAALE_CANONICAL_ENTRY.id))
+    || SECTIONS.find(section => section.key === 'Kriminalität');
   if (!section) throw new Error('Kriminalitätsbereich fehlt.');
   const index = section.entries.findIndex(entry => entry.id === ZITTERAALE_CANONICAL_ENTRY.id);
   if (index < 0) section.entries.push(structuredClone(ZITTERAALE_CANONICAL_ENTRY));
   else section.entries[index] = migrateZitteraaleEntry(section.entries[index]);
+})();
+// Generated by scripts/build-schwarze-zitteraale.mjs. Edit the feature models.
+(function registerZitteraaleSections() {
+  const modules = [
+  {
+    "tab": "Kriminalität",
+    "path": [
+      "Schwarze Zitteraale"
+    ],
+    "entryId": "schwarze-zitteraale"
+  },
+  {
+    "tab": "Kriminalität",
+    "path": [
+      "Schwarze Zitteraale",
+      "Schwarze Zitteraale - Gruppen"
+    ],
+    "entry": {
+      "id": "zitteraale-gruppe-i",
+      "title": "Die Untoten Aale",
+      "subtitle": "Schwarze Zitteraale · Gruppe I.",
+      "type": "Unterbande",
+      "category": "Kriminalität · Schwarze Zitteraale",
+      "icon": "⚑",
+      "symbol": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+      "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+      "stamp": "SCHWARZE ZITTERAALE · GRUPPE I.",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "zitteraale-medrawd-angau"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Untoten Aale",
+          "commentThreadKey": "zitteraale-gruppe-i-uebersicht",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "description": "<p><strong>Die Untoten Aale</strong> sind eine der ältesten Unterbanden der Schwarzen Zitteraale. Ihr Anführer ist <strong>Medrawd Angau</strong>, der Untote Aal. Sie setzen Bauernhöfe und Geschäfte unter Druck und lassen sich auf krumme Geschäfte mit Menschen ein, die ihre Dienste oder Verbindungen suchen.</p><p>Schutzgelderpressung, Raub, Überfälle, Terror und gezielte Anschläge bilden ihre Einnahmequellen. Ihr Wirkungsraum umfasst das Umland von <strong>Bronhir, Llysfaen, Craithglyn, Mwyncreig und Tŵr Rhewgorn</strong> sowie <strong>Gwynthors Bannkreis</strong>.</p><p>Die Gruppe war für den <strong>Angriff auf Llysfaen</strong> und den <strong>Überfall auf das Bradrhith-Gestüt</strong> verantwortlich. Sir Rhys Draig kam der Schar zuvor und fügte ihr schwere Verluste zu. Der damalige erste Leutnant fiel, während Medrawd selbst abwesend war. <strong>Rhodri</strong>, der zweite Leutnant, und die einfachen Mitglieder <strong>Brychan und Tegid</strong> gerieten in Gefangenschaft.</p><p>Die Unterbande blieb geschwächt, füllte ihre Reihen jedoch mit Rekruten und Mitgliedern aus dem Hauptquartier auf. Brychan und Tegid werden heute unter den Verstorbenen geführt, Rhodri als Ex-Mitglied. Wo Medrawd sein eigenes Hauptquartier unterhält, ist unklar. Ein Versteck in den Bergen von Tŵr Rhewgorn wird vermutet.</p><p>Ihr Banner zeigt einen untoten Aal, dessen verfallender Leib von Maden zerfressen wird. Es verbindet schwarzes Tuch mit gelben und silbernen Akzenten.</p>",
+          "stats": [
+            [
+              "Zugehörigkeit",
+              "Die Schwarzen Zitteraale"
+            ],
+            [
+              "Gruppenkennung",
+              "Gruppe I."
+            ],
+            [
+              "Anführer",
+              "Medrawd Angau · Untoter Aal"
+            ],
+            [
+              "Führung",
+              "Ein Gruppenführer · zwei Leutnants"
+            ],
+            [
+              "Aufgebot",
+              "Sechzehn Räuberplätze"
+            ],
+            [
+              "Territorium",
+              "Bronhir · Llysfaen · Craithglyn · Mwyncreig · Tŵr Rhewgorn · Gwynthors Bannkreis"
+            ],
+            [
+              "Hauptquartier",
+              "Unklar · Berge von Tŵr Rhewgorn vermutet"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Medrawd Angau · Untoter Aal",
+          "commentThreadKey": "zitteraale-gruppe-i-anfuehrer",
+          "biographyPage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/medrawd-angau-v3.png",
+          "imageWidth": 38,
+          "imageTall": true,
+          "description": "Untoter Aal · ehemaliger Kleriker und Schwurritter · Anführer der Untoten Aale",
+          "stats": [
+            [
+              "Name",
+              "Medrawd Angau"
+            ],
+            [
+              "Beiname",
+              "Untoter Aal"
+            ],
+            [
+              "Tatsächliches Alter",
+              "Etwa 50 Jahre"
+            ],
+            [
+              "Erscheinung",
+              "Etwa 34 Jahre"
+            ],
+            [
+              "Früherer Stand",
+              "Kleriker und Schwurritter in Gwynthor"
+            ],
+            [
+              "Früherer Eid",
+              "Kharon · gebrochen"
+            ],
+            [
+              "Heutiger Dienst",
+              "Hela · Schicksalsweberin"
+            ],
+            [
+              "Bande",
+              "Die Untoten Aale · Gruppe I."
+            ],
+            [
+              "Farben",
+              "Gelb · Schwarz · Silber"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/medrawd-angau-v3.png",
+            "crestImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+            "biographyTitle": "Der eidbrüchige Schwurträger",
+            "biographyText": "<p>Medrawd Angau, der Untote Aal, führt die Unterbande Die Untoten Aale innerhalb der Schwarzen Zitteraale. Der frühere Gwynthorer Kleriker und Schwurritter gehörte zum engsten Dienstkreis des Patriarchen. Seine Beschäftigung mit Verstorbenen wurde zur krankhaften Obsession mit dem Untod. Nach dem Bruch mit der Kirche wandte sich der einst Kharon verpflichtete Schwurträger nekromantischen und infernalen Praktiken und schließlich Hela, der Schicksalsweberin, zu. Er ist etwa fünfzig Jahre alt und wirkt durch diese Praktiken wie ein Mann von vierunddreißig Jahren.</p>",
+            "abilitiesTitle": "Wesen und Praktiken",
+            "abilities": [
+              {
+                "title": "Unheimliche Obsession",
+                "icon": "/IconOrdner/Traits%20Icon/Zealous.png",
+                "detail": "Seine Beschäftigung mit dem Untod hat den früheren Dienst an den Verstorbenen vollständig vereinnahmt."
+              },
+              {
+                "title": "Arroganz",
+                "icon": "/IconOrdner/Traits%20Icon/Proud.png",
+                "detail": "Begegnet dem Rittertum mit Verachtung und trägt seinen Anspruch mit kalter Selbstgewissheit."
+              },
+              {
+                "title": "Nekromantie und infernale Praktiken",
+                "icon": "/IconOrdner/Traits%20Icon/Scholar.png",
+                "detail": "Vertiefte sich nach seinem Kirchenaustritt in verbotene Praktiken, die sein sichtbares Altern aufgehalten haben."
+              }
+            ],
+            "historyTitle": "Das gezeichnete Gesicht",
+            "historyText": "<p>Das einst rote Haar ist silbrig, dünn und glatt und fällt ihm bis zur Brust. Auf der verbrannten rechten Gesichtshälfte ist der Haarwuchs an der Schläfe lückenhaft und das Ohr teilweise zerstört und vernarbt. Das dort erblindete Auge wurde durch einen schwarz leuchtenden Edelstein ersetzt. Schwarze Adern ziehen sich über diese Seite bis zum Nacken. Sein gesundes Auge ist hellblau, seine Haut blass. Die einst attraktiven Gesichtszüge wirken hart, ernst und unheimlich hochmütig.</p>",
+            "worksTitle": "Harnisch, Hand und Schwert",
+            "works": [
+              "Schwarze Plattenrüstung mit gelben und silbernen Akzenten.",
+              "Auf dem Harnisch ein toter schwarzer Wyvern, der von Maden zerfressen wird.",
+              "Mechanische silberne Ersatzhand mit gelbem Edelstein im Handrücken. Mit ihr wirkt er Magie.",
+              "Ein imposantes, verziertes und verzaubertes Schwert in der anderen Hand."
+            ],
+            "extraSections": [
+              {
+                "title": "Im Dienst des Patriarchen",
+                "text": "<p>Medrawd war Kleriker und Schwurritter in Gwynthor. Er diente unter dem Patriarchen und zählte zu dessen engsten Vertrauten. Seinen Treueeid hatte er Kharon geschworen. Hinter der Würde dieses Amtes entwickelte sich eine wachsende Faszination für den Zustand zwischen Tod und fortgesetztem Dasein.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Die Beschäftigung mit den Toten",
+                "text": "<p>Zunächst meldete er sich freiwillig für die Pflege Verstorbener und für Leichenöffnungen. Was als besonderer Eifer erscheinen konnte, wurde zu einer immer krankhafteren Obsession. Als der Patriarch von seinen Neigungen erfuhr und ihn zur Rede stellte, eskalierte die Auseinandersetzung zum offenen Streit. Medrawd verließ die Kirche.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Der gebrochene Schwur",
+                "text": "<p>In den folgenden Jahren radikalisierte er sich. Er vertiefte sich in nekromantische Praktiken, verfluchte Kharon und wurde zum eidbrüchigen Schwurträger des Gottes, dem er einst Treue geschworen hatte. Seine heutige Hingabe gilt der finsteren Schicksalsweberin Hela. Die Beschäftigung mit Magie und dem Infernalen hat ihn verjüngt beziehungsweise sein sichtbares Altern aufgehalten.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Huw Saethwyr und das gescheiterte Attentat",
+                "text": "<p>Bei einem Versuch, den Patriarchen zu töten, kreuzte Medrawd die Klingen mit Huw Saethwyr. Huw schlug ihm eine Hand ab und glaubte, ihn getötet zu haben. Medrawds Schergen konnten den Schwerverletzten jedoch retten und mit ihm entkommen. Die verlorene Hand ließ er später durch eine mechanische silberne Hand mit einem gelben Edelstein auf dem Handrücken ersetzen.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Der Untote Aal",
+                "text": "<p>Heute führt Medrawd Die Untoten Aale, eine der ältesten Unterbanden der Schwarzen Zitteraale. Sie erpresst Höfe und Geschäfte und übernimmt krumme Geschäfte für Menschen, die den Kontakt zu ihr suchen. Schutzgelder, Raub, Überfälle, Terror und gezielte Anschläge finanzieren die Gruppe. Ihr Wirkungsraum umfasst das Umland von Bronhir, Llysfaen, Craithglyn, Mwyncreig, Tŵr Rhewgorn und den Bannkreis von Gwynthor.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Die Verluste gegen Sir Rhys Draig",
+                "text": "<p>Die Unterbande war für den Angriff auf Llysfaen und den Überfall auf das Bradrhith-Gestüt verantwortlich. Sir Rhys Draig kam ihr zuvor, tötete den damaligen ersten Leutnant und fügte der Schar schwere Verluste zu. Medrawd war bei diesem Gefecht abwesend. Rhodri, der damalige zweite Leutnant, sowie Brychan und Tegid, zwei einfache Mitglieder, wurden festgenommen.</p><p>Brychan und Tegid werden heute unter den Verstorbenen geführt, Rhodri unter den Ex-Mitgliedern. Die geschwächte Gruppe konnte ihre Reihen durch Rekruten und Mitglieder aus dem Hauptquartier der Schwarzen Zitteraale auffüllen. Die heutigen Leutnants sind ein grober ehemaliger Ritter und eine Zauberwirkerin. Ihre Namen sind noch offen.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Ein unbestimmter Rückzugsort",
+                "text": "<p>Wo die Unterbande ihr Hauptquartier unterhält, ist unklar. Ein Versteck in den Bergen von Tŵr Rhewgorn wird vermutet. Der ruinierte Bergturm auf Medrawds Porträt bildet eine stimmige Kulisse, belegt aber keinen bestimmten Standort.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              }
+            ],
+            "connectionsTitle": "Gefolgschaft und Feindschaften",
+            "connections": [
+              {
+                "name": "Erster Leutnant · Name offen",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/untote-aele-leutnant-1-v2.png",
+                "imageFormat": "portrait",
+                "detail": "Hünenhafter, kantiger Ex-Ritter mit kahlem, vernarbtem Kopf, blauen Augen und roten Augenbrauen. Er trägt geschwärzte stählerne Plattenrüstung, stützt beide Hände auf den Schwertknauf und schaut unter tief gezogenen Brauen grimmig und bösartig hervor."
+              },
+              {
+                "name": "Zweite Leutnantin · Name offen",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/untote-aele-leutnant-2-v3.png",
+                "imageFormat": "portrait",
+                "detail": "Wunderschöne, arrogant auftretende Frau mit langen blonden Wellen, grünen Augen, Sommersprossen und grünen geometrischen Gesichtszeichen. Eine dunkel eingefasste Kapuze mit goldenen Borten rahmt ihr Gesicht. Sie verbindet Magierrobe und stählerne Rüstung, führt einen Zauberstab und wirkt mit der freien Hand Magie."
+              },
+              {
+                "name": "Die Untoten Aale",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+                "imageFormat": "portrait",
+                "detail": "Anführer der ersten Unterbande der Schwarzen Zitteraale."
+              },
+              {
+                "name": "Die Schwarzen Zitteraale",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+                "detail": "Übergeordnete Bande. Aus ihrem Hauptquartier erhielt seine geschwächte Gruppe Verstärkung."
+              },
+              {
+                "name": "Huw Saethwyr",
+                "image": "/Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+                "detail": "Vereitelte den Mordversuch am Patriarchen und schlug Medrawd eine Hand ab."
+              },
+              {
+                "name": "Sir Rhys Draig",
+                "image": "/Stammbäume/assets/images/houses/Llamreis Ankunft/haus-draig.png",
+                "detail": "Tötete Medrawds ersten Leutnant und brachte den zweiten Leutnant mit zwei einfachen Mitgliedern in Gefangenschaft."
+              }
+            ],
+            "documentsTitle": "Bandenakten",
+            "documents": [
+              {
+                "title": "Die Untoten Aale",
+                "text": "Gruppenbio, Anführerbio, Hierarchie und Hauptquartiersszene.",
+                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-i"
+              },
+              {
+                "title": "Die Schwarzen Zitteraale",
+                "text": "Führung und acht Unterbanden.",
+                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=schwarze-zitteraale"
+              }
+            ],
+            "footer": "Medrawd Angau · Untoter Aal · Celtigerns Wacht"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hierarchie",
+          "commentThreadKey": "zitteraale-gruppe-i-hierarchie",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die Untoten Aale",
+            "eyebrow": "Schwarze Zitteraale · Gruppe I.",
+            "subtitle": "Führung, Räuber und frühere Mitglieder",
+            "centerLabel": "Die Untoten Aale",
+            "emblem": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+            "sideImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+            "motto": "Ein Zeichen für den Verfall.",
+            "description": "<p>Ein Gruppenführer und zwei Leutnants führen das aktive Aufgebot. Nach den schweren Verlusten gegen Sir Rhys Draig wurden die Reihen mit Rekruten und Mitgliedern aus dem Bandenhauptquartier aufgefüllt.</p>",
+            "detailsTitle": "Aufbau",
+            "details": [
+              {
+                "icon": "⚑",
+                "label": "Führung",
+                "value": "Ein Gruppenführer und zwei Leutnants"
+              },
+              {
+                "icon": "⚔",
+                "label": "Räuber",
+                "value": "Sechzehn Plätze in vier Viererreihen"
+              },
+              {
+                "icon": "†",
+                "label": "Verstorbene",
+                "value": "Acht Plätze in zwei Viererreihen"
+              },
+              {
+                "icon": "↗",
+                "label": "Ex-Mitglieder",
+                "value": "Vier Plätze in einer Reihe"
+              }
+            ],
+            "chartTitle": "Gruppenordnung",
+            "chartIntro": "Die aktuellen Leutnantstellen stehen unter dem Gruppenführer. Verstorbene und Ex-Mitglieder besitzen eigene Reiter.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 92,
+            "trees": [
+              {
+                "id": "fuehrung",
+                "label": "Führung und Räuber",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Gruppenführung",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-medrawd-angau",
+                        "title": "Medrawd Angau",
+                        "subtitle": "⚑ Gruppenführer · Gruppe I.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/medrawd-angau-v3.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Leutnants",
+                    "columns": 2,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-i-leutnant-1",
+                        "title": "Erster Leutnant · Name offen",
+                        "subtitle": "⚑ Ehemaliger Ritter",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/untote-aele-leutnant-1-v2.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-leutnant-2",
+                        "title": "Zweite Leutnantin · Name offen",
+                        "subtitle": "⚑ Zauberwirkerin",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/untote-aele-leutnant-2-v3.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 1",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-1",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-2",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-3",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-4",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 2",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-5",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-6",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-7",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-8",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 3",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-9",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-09-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-10",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-10-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-11",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-11-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-12",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-12-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 4",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-13",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-13-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-14",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-14-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-15",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-15-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-16",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-16-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "verstorbene",
+                "label": "Verstorbene",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Verstorbene · zwei Viererreihen",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-i-erster-leutnant-gefallen",
+                        "title": "Erster Leutnant · Name unbekannt",
+                        "subtitle": "† Im Gefecht gegen Sir Rhys Draig gefallen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Die erste Leutnantstelle koordiniert einen Teil der Räuber und vertritt die Gruppenführung bei zugewiesenen Aufträgen."
+                      },
+                      {
+                        "id": "ax26chmgvtaURnzC0n0l",
+                        "title": "Brychan",
+                        "subtitle": "† Verstorben · früheres einfaches Mitglied",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/references/brychan.png",
+                        "text": "Ein einfacher Räuber übernimmt Überfälle, Wachdienste und das Eintreiben der Forderungen."
+                      },
+                      {
+                        "id": "01OfFXeScnCoL2eNMPAM",
+                        "title": "Tegid",
+                        "subtitle": "† Verstorben · früheres einfaches Mitglied",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/references/tegid.png",
+                        "text": "Ein einfacher Räuber übernimmt Überfälle, Wachdienste und das Eintreiben der Forderungen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-verstorben-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-verstorben-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-verstorben-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-verstorben-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-verstorben-5",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ex-mitglieder",
+                "label": "Ex-Mitglieder",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Ex-Mitglieder · eine Viererreihe",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "2UgcQTdEEpSJDTNKxx0U",
+                        "title": "Rhodri",
+                        "subtitle": "↗ Ex-Mitglied · früherer zweiter Leutnant",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/references/rhodri.png",
+                        "text": "Die zweite Leutnantstelle führt den zugewiesenen Teil der Räuber und übernimmt die Befehlsweitergabe bei getrennten Einsätzen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-ehemalig-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-ehemalig-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-ehemalig-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Unbesetzte Karten sind freie Plätze für die weitere Ausarbeitung."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hauptquartier · Ort unbekannt",
+          "commentThreadKey": "zitteraale-gruppe-i-hauptquartier",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der Rückzugsort der Untoten Aale ist bislang unbekannt. Gerüchte weisen in die Berge von Tŵr Rhewgorn. Weder ein bestimmter Turm noch ein Zugang oder eine Raumfolge sind bestätigt.</p><p>Die Gruppe hat schwere Verluste erlitten und Verstärkung aus dem Hauptquartier der Schwarzen Zitteraale erhalten. Was Reisende über einen möglichen Unterschlupf erfahren, entscheidet sich auf ihren Wegen durch das Gebiet.</p>",
+          "sessionLocation": "",
+          "sessionHint": "Lage unklar · Berge von Tŵr Rhewgorn vermutet",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Ein Schauplatz im Rückzugsraum dieser Unterbande.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tab": "Kriminalität",
+    "path": [
+      "Schwarze Zitteraale",
+      "Schwarze Zitteraale - Gruppen"
+    ],
+    "entry": {
+      "id": "zitteraale-gruppe-ii",
+      "title": "Gruppe II.",
+      "subtitle": "Schwarze Zitteraale · Gruppe II.",
+      "type": "Unterbande",
+      "category": "Kriminalität · Schwarze Zitteraale",
+      "icon": "⚑",
+      "symbol": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "stamp": "SCHWARZE ZITTERAALE · GRUPPE II.",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Gruppe II.",
+          "commentThreadKey": "zitteraale-gruppe-ii-uebersicht",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "description": "<p><strong>Gruppe II.</strong> ist eine der acht Unterbanden der Schwarzen Zitteraale. Sie besitzt eine eigene Gruppenführung, zwei Leutnantstellen und ein vorbereitetes Aufgebot von sechzehn Räubern.</p><p>Gruppenname, Geschichte, Territorium und persönliche Besetzung sind noch offen. Das blanke schwarze Banner kennzeichnet die noch unbenannte Unterbande. Die Anführerbio und die Hauptquartiersszene sind für ihre spätere Ausarbeitung vorbereitet.</p>",
+          "stats": [
+            [
+              "Zugehörigkeit",
+              "Die Schwarzen Zitteraale"
+            ],
+            [
+              "Gruppenkennung",
+              "Gruppe II."
+            ],
+            [
+              "Anführer",
+              "Noch unbenannt"
+            ],
+            [
+              "Führung",
+              "Ein Gruppenführer · zwei Leutnants"
+            ],
+            [
+              "Aufgebot",
+              "Sechzehn Räuberplätze"
+            ],
+            [
+              "Territorium",
+              "Noch unbestimmt"
+            ],
+            [
+              "Hauptquartier",
+              "Noch unbestimmt"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Anführer · unbenannt",
+          "commentThreadKey": "zitteraale-gruppe-ii-anfuehrer",
+          "biographyPage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-ii-v1.png",
+          "imageWidth": 38,
+          "imageTall": true,
+          "stats": [
+            [
+              "Name",
+              "Noch unbenannt"
+            ],
+            [
+              "Amt",
+              "Gruppenführer"
+            ],
+            [
+              "Unterbande",
+              "Gruppe II."
+            ],
+            [
+              "Herkunft",
+              "Noch offen"
+            ],
+            [
+              "Alter",
+              "Noch offen"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-ii-v1.png",
+            "crestImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "biographyTitle": "Die Führung von Gruppe II.",
+            "biographyText": "<p>Diese Führungsstelle besitzt noch keine namentliche Besetzung.</p>",
+            "historyTitle": "Aufgabe innerhalb der Bande",
+            "historyText": "<p>Die Gruppenführung nimmt Aufträge der übergeordneten Führung entgegen, verteilt sie auf ihre beiden Leutnants und verantwortet das eigene Aufgebot. Sie stimmt Beuteanteile, Versorgung und Verstärkungen mit den Schwarzen Zitteraalen ab.</p>",
+            "worksTitle": "Noch offene Angaben",
+            "works": [
+              "Name und persönliches Porträt",
+              "Herkunft und Vorgeschichte",
+              "Wesen und persönliche Verbindungen"
+            ],
+            "documentsTitle": "Bandenakten",
+            "documents": [
+              {
+                "title": "Die Schwarzen Zitteraale",
+                "text": "Bandenführung und Gruppenübersicht.",
+                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=schwarze-zitteraale"
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hierarchie",
+          "commentThreadKey": "zitteraale-gruppe-ii-hierarchie",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Gruppe II.",
+            "eyebrow": "Schwarze Zitteraale · Gruppe II.",
+            "subtitle": "Führung, Räuber und frühere Mitglieder",
+            "centerLabel": "Gruppe II.",
+            "emblem": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "sideImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "motto": "Gruppenname noch offen",
+            "description": "<p>Die Unterbande besitzt eigene Führung und ein vorbereitetes Aufgebot. Persönliche Besetzungen, Zuständigkeiten und Wirkungsgebiet sind noch offen.</p>",
+            "detailsTitle": "Aufbau",
+            "details": [
+              {
+                "icon": "⚑",
+                "label": "Führung",
+                "value": "Ein Gruppenführer und zwei Leutnants"
+              },
+              {
+                "icon": "⚔",
+                "label": "Räuber",
+                "value": "Sechzehn Plätze in vier Viererreihen"
+              },
+              {
+                "icon": "†",
+                "label": "Verstorbene",
+                "value": "Acht Plätze in zwei Viererreihen"
+              },
+              {
+                "icon": "↗",
+                "label": "Ex-Mitglieder",
+                "value": "Vier Plätze in einer Reihe"
+              }
+            ],
+            "chartTitle": "Gruppenordnung",
+            "chartIntro": "Die aktuellen Leutnantstellen stehen unter dem Gruppenführer. Verstorbene und Ex-Mitglieder besitzen eigene Reiter.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 92,
+            "trees": [
+              {
+                "id": "fuehrung",
+                "label": "Führung und Räuber",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Gruppenführung",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-ii-fuehrer",
+                        "title": "Gruppenführer · unbenannt",
+                        "subtitle": "⚑ Gruppenführer · Gruppe II.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-ii-v1.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Leutnants",
+                    "columns": 2,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-ii-leutnant-1",
+                        "title": "Erster Leutnant",
+                        "subtitle": "⚑ Aktuelle Besetzung offen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-leutnant-2",
+                        "title": "Zweiter Leutnant",
+                        "subtitle": "⚑ Aktuelle Besetzung offen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 1",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-1",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-2",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-3",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-4",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 2",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-5",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-6",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-7",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-8",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 3",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-9",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-09-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-10",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-10-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-11",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-11-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-12",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-12-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 4",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-13",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-13-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-14",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-14-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-15",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-15-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-raeuber-16",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-16-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "verstorbene",
+                "label": "Verstorbene",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Verstorbene · zwei Viererreihen",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-ii-verstorben-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-verstorben-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-verstorben-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-verstorben-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-verstorben-5",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-verstorben-6",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-verstorben-7",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-verstorben-8",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ex-mitglieder",
+                "label": "Ex-Mitglieder",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Ex-Mitglieder · eine Viererreihe",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-ii-ehemalig-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-ehemalig-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-ehemalig-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-ehemalig-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Unbesetzte Karten sind freie Plätze für die weitere Ausarbeitung."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hauptquartier · Ort unbekannt",
+          "commentThreadKey": "zitteraale-gruppe-ii-hauptquartier",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der Hauptquartiersort von Gruppe II. ist noch unbestimmt. Der Schauplatz, sein Zugang und seine Räume stehen für die spätere Ausarbeitung offen.</p>",
+          "sessionLocation": "",
+          "sessionHint": "Hauptquartiersort noch unbestimmt",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Ein Schauplatz im Rückzugsraum dieser Unterbande.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tab": "Kriminalität",
+    "path": [
+      "Schwarze Zitteraale",
+      "Schwarze Zitteraale - Gruppen"
+    ],
+    "entry": {
+      "id": "zitteraale-gruppe-iii",
+      "title": "Gruppe III.",
+      "subtitle": "Schwarze Zitteraale · Gruppe III.",
+      "type": "Unterbande",
+      "category": "Kriminalität · Schwarze Zitteraale",
+      "icon": "⚑",
+      "symbol": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "stamp": "SCHWARZE ZITTERAALE · GRUPPE III.",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Gruppe III.",
+          "commentThreadKey": "zitteraale-gruppe-iii-uebersicht",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "description": "<p><strong>Gruppe III.</strong> ist eine der acht Unterbanden der Schwarzen Zitteraale. Sie besitzt eine eigene Gruppenführung, zwei Leutnantstellen und ein vorbereitetes Aufgebot von sechzehn Räubern.</p><p>Gruppenname, Geschichte, Territorium und persönliche Besetzung sind noch offen. Das blanke schwarze Banner kennzeichnet die noch unbenannte Unterbande. Die Anführerbio und die Hauptquartiersszene sind für ihre spätere Ausarbeitung vorbereitet.</p>",
+          "stats": [
+            [
+              "Zugehörigkeit",
+              "Die Schwarzen Zitteraale"
+            ],
+            [
+              "Gruppenkennung",
+              "Gruppe III."
+            ],
+            [
+              "Anführer",
+              "Noch unbenannt"
+            ],
+            [
+              "Führung",
+              "Ein Gruppenführer · zwei Leutnants"
+            ],
+            [
+              "Aufgebot",
+              "Sechzehn Räuberplätze"
+            ],
+            [
+              "Territorium",
+              "Noch unbestimmt"
+            ],
+            [
+              "Hauptquartier",
+              "Noch unbestimmt"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Anführer · unbenannt",
+          "commentThreadKey": "zitteraale-gruppe-iii-anfuehrer",
+          "biographyPage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-iii-v1.png",
+          "imageWidth": 38,
+          "imageTall": true,
+          "stats": [
+            [
+              "Name",
+              "Noch unbenannt"
+            ],
+            [
+              "Amt",
+              "Gruppenführer"
+            ],
+            [
+              "Unterbande",
+              "Gruppe III."
+            ],
+            [
+              "Herkunft",
+              "Noch offen"
+            ],
+            [
+              "Alter",
+              "Noch offen"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-iii-v1.png",
+            "crestImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "biographyTitle": "Die Führung von Gruppe III.",
+            "biographyText": "<p>Diese Führungsstelle besitzt noch keine namentliche Besetzung.</p>",
+            "historyTitle": "Aufgabe innerhalb der Bande",
+            "historyText": "<p>Die Gruppenführung nimmt Aufträge der übergeordneten Führung entgegen, verteilt sie auf ihre beiden Leutnants und verantwortet das eigene Aufgebot. Sie stimmt Beuteanteile, Versorgung und Verstärkungen mit den Schwarzen Zitteraalen ab.</p>",
+            "worksTitle": "Noch offene Angaben",
+            "works": [
+              "Name und persönliches Porträt",
+              "Herkunft und Vorgeschichte",
+              "Wesen und persönliche Verbindungen"
+            ],
+            "documentsTitle": "Bandenakten",
+            "documents": [
+              {
+                "title": "Die Schwarzen Zitteraale",
+                "text": "Bandenführung und Gruppenübersicht.",
+                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=schwarze-zitteraale"
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hierarchie",
+          "commentThreadKey": "zitteraale-gruppe-iii-hierarchie",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Gruppe III.",
+            "eyebrow": "Schwarze Zitteraale · Gruppe III.",
+            "subtitle": "Führung, Räuber und frühere Mitglieder",
+            "centerLabel": "Gruppe III.",
+            "emblem": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "sideImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "motto": "Gruppenname noch offen",
+            "description": "<p>Die Unterbande besitzt eigene Führung und ein vorbereitetes Aufgebot. Persönliche Besetzungen, Zuständigkeiten und Wirkungsgebiet sind noch offen.</p>",
+            "detailsTitle": "Aufbau",
+            "details": [
+              {
+                "icon": "⚑",
+                "label": "Führung",
+                "value": "Ein Gruppenführer und zwei Leutnants"
+              },
+              {
+                "icon": "⚔",
+                "label": "Räuber",
+                "value": "Sechzehn Plätze in vier Viererreihen"
+              },
+              {
+                "icon": "†",
+                "label": "Verstorbene",
+                "value": "Acht Plätze in zwei Viererreihen"
+              },
+              {
+                "icon": "↗",
+                "label": "Ex-Mitglieder",
+                "value": "Vier Plätze in einer Reihe"
+              }
+            ],
+            "chartTitle": "Gruppenordnung",
+            "chartIntro": "Die aktuellen Leutnantstellen stehen unter dem Gruppenführer. Verstorbene und Ex-Mitglieder besitzen eigene Reiter.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 92,
+            "trees": [
+              {
+                "id": "fuehrung",
+                "label": "Führung und Räuber",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Gruppenführung",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iii-fuehrer",
+                        "title": "Gruppenführer · unbenannt",
+                        "subtitle": "⚑ Gruppenführer · Gruppe III.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-iii-v1.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Leutnants",
+                    "columns": 2,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iii-leutnant-1",
+                        "title": "Erster Leutnant",
+                        "subtitle": "⚑ Aktuelle Besetzung offen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-leutnant-2",
+                        "title": "Zweiter Leutnant",
+                        "subtitle": "⚑ Aktuelle Besetzung offen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 1",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-1",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-2",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-3",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-4",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 2",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-5",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-6",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-7",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-8",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 3",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-9",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-09-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-10",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-10-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-11",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-11-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-12",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-12-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 4",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-13",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-13-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-14",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-14-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-15",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-15-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-raeuber-16",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-16-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "verstorbene",
+                "label": "Verstorbene",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Verstorbene · zwei Viererreihen",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iii-verstorben-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-verstorben-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-verstorben-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-verstorben-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-verstorben-5",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-verstorben-6",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-verstorben-7",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-verstorben-8",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ex-mitglieder",
+                "label": "Ex-Mitglieder",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Ex-Mitglieder · eine Viererreihe",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iii-ehemalig-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-ehemalig-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-ehemalig-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-ehemalig-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Unbesetzte Karten sind freie Plätze für die weitere Ausarbeitung."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hauptquartier · Ort unbekannt",
+          "commentThreadKey": "zitteraale-gruppe-iii-hauptquartier",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der Hauptquartiersort von Gruppe III. ist noch unbestimmt. Der Schauplatz, sein Zugang und seine Räume stehen für die spätere Ausarbeitung offen.</p>",
+          "sessionLocation": "",
+          "sessionHint": "Hauptquartiersort noch unbestimmt",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Ein Schauplatz im Rückzugsraum dieser Unterbande.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tab": "Kriminalität",
+    "path": [
+      "Schwarze Zitteraale",
+      "Schwarze Zitteraale - Gruppen"
+    ],
+    "entry": {
+      "id": "zitteraale-gruppe-iv",
+      "title": "Gruppe IV.",
+      "subtitle": "Schwarze Zitteraale · Gruppe IV.",
+      "type": "Unterbande",
+      "category": "Kriminalität · Schwarze Zitteraale",
+      "icon": "⚑",
+      "symbol": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "stamp": "SCHWARZE ZITTERAALE · GRUPPE IV.",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Gruppe IV.",
+          "commentThreadKey": "zitteraale-gruppe-iv-uebersicht",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "description": "<p><strong>Gruppe IV.</strong> ist eine der acht Unterbanden der Schwarzen Zitteraale. Sie besitzt eine eigene Gruppenführung, zwei Leutnantstellen und ein vorbereitetes Aufgebot von sechzehn Räubern.</p><p>Gruppenname, Geschichte, Territorium und persönliche Besetzung sind noch offen. Das blanke schwarze Banner kennzeichnet die noch unbenannte Unterbande. Die Anführerbio und die Hauptquartiersszene sind für ihre spätere Ausarbeitung vorbereitet.</p>",
+          "stats": [
+            [
+              "Zugehörigkeit",
+              "Die Schwarzen Zitteraale"
+            ],
+            [
+              "Gruppenkennung",
+              "Gruppe IV."
+            ],
+            [
+              "Anführer",
+              "Noch unbenannt"
+            ],
+            [
+              "Führung",
+              "Ein Gruppenführer · zwei Leutnants"
+            ],
+            [
+              "Aufgebot",
+              "Sechzehn Räuberplätze"
+            ],
+            [
+              "Territorium",
+              "Noch unbestimmt"
+            ],
+            [
+              "Hauptquartier",
+              "Noch unbestimmt"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Anführer · unbenannt",
+          "commentThreadKey": "zitteraale-gruppe-iv-anfuehrer",
+          "biographyPage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-iv-v1.png",
+          "imageWidth": 38,
+          "imageTall": true,
+          "stats": [
+            [
+              "Name",
+              "Noch unbenannt"
+            ],
+            [
+              "Amt",
+              "Gruppenführer"
+            ],
+            [
+              "Unterbande",
+              "Gruppe IV."
+            ],
+            [
+              "Herkunft",
+              "Noch offen"
+            ],
+            [
+              "Alter",
+              "Noch offen"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-iv-v1.png",
+            "crestImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "biographyTitle": "Die Führung von Gruppe IV.",
+            "biographyText": "<p>Diese Führungsstelle besitzt noch keine namentliche Besetzung.</p>",
+            "historyTitle": "Aufgabe innerhalb der Bande",
+            "historyText": "<p>Die Gruppenführung nimmt Aufträge der übergeordneten Führung entgegen, verteilt sie auf ihre beiden Leutnants und verantwortet das eigene Aufgebot. Sie stimmt Beuteanteile, Versorgung und Verstärkungen mit den Schwarzen Zitteraalen ab.</p>",
+            "worksTitle": "Noch offene Angaben",
+            "works": [
+              "Name und persönliches Porträt",
+              "Herkunft und Vorgeschichte",
+              "Wesen und persönliche Verbindungen"
+            ],
+            "documentsTitle": "Bandenakten",
+            "documents": [
+              {
+                "title": "Die Schwarzen Zitteraale",
+                "text": "Bandenführung und Gruppenübersicht.",
+                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=schwarze-zitteraale"
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hierarchie",
+          "commentThreadKey": "zitteraale-gruppe-iv-hierarchie",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Gruppe IV.",
+            "eyebrow": "Schwarze Zitteraale · Gruppe IV.",
+            "subtitle": "Führung, Räuber und frühere Mitglieder",
+            "centerLabel": "Gruppe IV.",
+            "emblem": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "sideImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "motto": "Gruppenname noch offen",
+            "description": "<p>Die Unterbande besitzt eigene Führung und ein vorbereitetes Aufgebot. Persönliche Besetzungen, Zuständigkeiten und Wirkungsgebiet sind noch offen.</p>",
+            "detailsTitle": "Aufbau",
+            "details": [
+              {
+                "icon": "⚑",
+                "label": "Führung",
+                "value": "Ein Gruppenführer und zwei Leutnants"
+              },
+              {
+                "icon": "⚔",
+                "label": "Räuber",
+                "value": "Sechzehn Plätze in vier Viererreihen"
+              },
+              {
+                "icon": "†",
+                "label": "Verstorbene",
+                "value": "Acht Plätze in zwei Viererreihen"
+              },
+              {
+                "icon": "↗",
+                "label": "Ex-Mitglieder",
+                "value": "Vier Plätze in einer Reihe"
+              }
+            ],
+            "chartTitle": "Gruppenordnung",
+            "chartIntro": "Die aktuellen Leutnantstellen stehen unter dem Gruppenführer. Verstorbene und Ex-Mitglieder besitzen eigene Reiter.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 92,
+            "trees": [
+              {
+                "id": "fuehrung",
+                "label": "Führung und Räuber",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Gruppenführung",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iv-fuehrer",
+                        "title": "Gruppenführer · unbenannt",
+                        "subtitle": "⚑ Gruppenführer · Gruppe IV.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-iv-v1.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Leutnants",
+                    "columns": 2,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iv-leutnant-1",
+                        "title": "Erster Leutnant",
+                        "subtitle": "⚑ Aktuelle Besetzung offen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-leutnant-2",
+                        "title": "Zweiter Leutnant",
+                        "subtitle": "⚑ Aktuelle Besetzung offen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 1",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-1",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-2",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-3",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-4",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 2",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-5",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-6",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-7",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-8",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 3",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-9",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-09-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-10",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-10-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-11",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-11-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-12",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-12-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 4",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-13",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-13-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-14",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-14-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-15",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-15-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-raeuber-16",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-16-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "verstorbene",
+                "label": "Verstorbene",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Verstorbene · zwei Viererreihen",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iv-verstorben-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-verstorben-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-verstorben-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-verstorben-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-verstorben-5",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-verstorben-6",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-verstorben-7",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-verstorben-8",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ex-mitglieder",
+                "label": "Ex-Mitglieder",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Ex-Mitglieder · eine Viererreihe",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-iv-ehemalig-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-ehemalig-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-ehemalig-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-ehemalig-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Unbesetzte Karten sind freie Plätze für die weitere Ausarbeitung."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hauptquartier · Ort unbekannt",
+          "commentThreadKey": "zitteraale-gruppe-iv-hauptquartier",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der Hauptquartiersort von Gruppe IV. ist noch unbestimmt. Der Schauplatz, sein Zugang und seine Räume stehen für die spätere Ausarbeitung offen.</p>",
+          "sessionLocation": "",
+          "sessionHint": "Hauptquartiersort noch unbestimmt",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Ein Schauplatz im Rückzugsraum dieser Unterbande.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tab": "Kriminalität",
+    "path": [
+      "Schwarze Zitteraale",
+      "Schwarze Zitteraale - Gruppen"
+    ],
+    "entry": {
+      "id": "zitteraale-gruppe-v",
+      "title": "Gruppe V.",
+      "subtitle": "Schwarze Zitteraale · Gruppe V.",
+      "type": "Unterbande",
+      "category": "Kriminalität · Schwarze Zitteraale",
+      "icon": "⚑",
+      "symbol": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "stamp": "SCHWARZE ZITTERAALE · GRUPPE V.",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Gruppe V.",
+          "commentThreadKey": "zitteraale-gruppe-v-uebersicht",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "description": "<p><strong>Gruppe V.</strong> ist eine der acht Unterbanden der Schwarzen Zitteraale. Sie besitzt eine eigene Gruppenführung, zwei Leutnantstellen und ein vorbereitetes Aufgebot von sechzehn Räubern.</p><p>Gruppenname, Geschichte, Territorium und persönliche Besetzung sind noch offen. Das blanke schwarze Banner kennzeichnet die noch unbenannte Unterbande. Die Anführerbio und die Hauptquartiersszene sind für ihre spätere Ausarbeitung vorbereitet.</p>",
+          "stats": [
+            [
+              "Zugehörigkeit",
+              "Die Schwarzen Zitteraale"
+            ],
+            [
+              "Gruppenkennung",
+              "Gruppe V."
+            ],
+            [
+              "Anführer",
+              "Noch unbenannt"
+            ],
+            [
+              "Führung",
+              "Ein Gruppenführer · zwei Leutnants"
+            ],
+            [
+              "Aufgebot",
+              "Sechzehn Räuberplätze"
+            ],
+            [
+              "Territorium",
+              "Noch unbestimmt"
+            ],
+            [
+              "Hauptquartier",
+              "Noch unbestimmt"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Anführer · unbenannt",
+          "commentThreadKey": "zitteraale-gruppe-v-anfuehrer",
+          "biographyPage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-v-v1.png",
+          "imageWidth": 38,
+          "imageTall": true,
+          "stats": [
+            [
+              "Name",
+              "Noch unbenannt"
+            ],
+            [
+              "Amt",
+              "Gruppenführer"
+            ],
+            [
+              "Unterbande",
+              "Gruppe V."
+            ],
+            [
+              "Herkunft",
+              "Noch offen"
+            ],
+            [
+              "Alter",
+              "Noch offen"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-v-v1.png",
+            "crestImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "biographyTitle": "Die Führung von Gruppe V.",
+            "biographyText": "<p>Diese Führungsstelle besitzt noch keine namentliche Besetzung.</p>",
+            "historyTitle": "Aufgabe innerhalb der Bande",
+            "historyText": "<p>Die Gruppenführung nimmt Aufträge der übergeordneten Führung entgegen, verteilt sie auf ihre beiden Leutnants und verantwortet das eigene Aufgebot. Sie stimmt Beuteanteile, Versorgung und Verstärkungen mit den Schwarzen Zitteraalen ab.</p>",
+            "worksTitle": "Noch offene Angaben",
+            "works": [
+              "Name und persönliches Porträt",
+              "Herkunft und Vorgeschichte",
+              "Wesen und persönliche Verbindungen"
+            ],
+            "documentsTitle": "Bandenakten",
+            "documents": [
+              {
+                "title": "Die Schwarzen Zitteraale",
+                "text": "Bandenführung und Gruppenübersicht.",
+                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=schwarze-zitteraale"
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hierarchie",
+          "commentThreadKey": "zitteraale-gruppe-v-hierarchie",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Gruppe V.",
+            "eyebrow": "Schwarze Zitteraale · Gruppe V.",
+            "subtitle": "Führung, Räuber und frühere Mitglieder",
+            "centerLabel": "Gruppe V.",
+            "emblem": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "sideImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "motto": "Gruppenname noch offen",
+            "description": "<p>Die Unterbande besitzt eigene Führung und ein vorbereitetes Aufgebot. Persönliche Besetzungen, Zuständigkeiten und Wirkungsgebiet sind noch offen.</p>",
+            "detailsTitle": "Aufbau",
+            "details": [
+              {
+                "icon": "⚑",
+                "label": "Führung",
+                "value": "Ein Gruppenführer und zwei Leutnants"
+              },
+              {
+                "icon": "⚔",
+                "label": "Räuber",
+                "value": "Sechzehn Plätze in vier Viererreihen"
+              },
+              {
+                "icon": "†",
+                "label": "Verstorbene",
+                "value": "Acht Plätze in zwei Viererreihen"
+              },
+              {
+                "icon": "↗",
+                "label": "Ex-Mitglieder",
+                "value": "Vier Plätze in einer Reihe"
+              }
+            ],
+            "chartTitle": "Gruppenordnung",
+            "chartIntro": "Die aktuellen Leutnantstellen stehen unter dem Gruppenführer. Verstorbene und Ex-Mitglieder besitzen eigene Reiter.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 92,
+            "trees": [
+              {
+                "id": "fuehrung",
+                "label": "Führung und Räuber",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Gruppenführung",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-v-fuehrer",
+                        "title": "Gruppenführer · unbenannt",
+                        "subtitle": "⚑ Gruppenführer · Gruppe V.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-v-v1.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Leutnants",
+                    "columns": 2,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-v-leutnant-1",
+                        "title": "Erster Leutnant",
+                        "subtitle": "⚑ Aktuelle Besetzung offen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-leutnant-2",
+                        "title": "Zweiter Leutnant",
+                        "subtitle": "⚑ Aktuelle Besetzung offen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 1",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-1",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-2",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-3",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-4",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 2",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-5",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-6",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-7",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-8",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 3",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-9",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-09-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-10",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-10-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-11",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-11-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-12",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-12-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 4",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-13",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-13-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-14",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-14-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-15",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-15-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-raeuber-16",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-16-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "verstorbene",
+                "label": "Verstorbene",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Verstorbene · zwei Viererreihen",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-v-verstorben-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-verstorben-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-verstorben-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-verstorben-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-verstorben-5",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-verstorben-6",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-verstorben-7",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-verstorben-8",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ex-mitglieder",
+                "label": "Ex-Mitglieder",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Ex-Mitglieder · eine Viererreihe",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-v-ehemalig-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-ehemalig-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-ehemalig-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-ehemalig-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Unbesetzte Karten sind freie Plätze für die weitere Ausarbeitung."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hauptquartier · Ort unbekannt",
+          "commentThreadKey": "zitteraale-gruppe-v-hauptquartier",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der Hauptquartiersort von Gruppe V. ist noch unbestimmt. Der Schauplatz, sein Zugang und seine Räume stehen für die spätere Ausarbeitung offen.</p>",
+          "sessionLocation": "",
+          "sessionHint": "Hauptquartiersort noch unbestimmt",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Ein Schauplatz im Rückzugsraum dieser Unterbande.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tab": "Kriminalität",
+    "path": [
+      "Schwarze Zitteraale",
+      "Schwarze Zitteraale - Gruppen"
+    ],
+    "entry": {
+      "id": "zitteraale-gruppe-vi",
+      "title": "Gruppe VI.",
+      "subtitle": "Schwarze Zitteraale · Gruppe VI.",
+      "type": "Unterbande",
+      "category": "Kriminalität · Schwarze Zitteraale",
+      "icon": "⚑",
+      "symbol": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "stamp": "SCHWARZE ZITTERAALE · GRUPPE VI.",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Gruppe VI.",
+          "commentThreadKey": "zitteraale-gruppe-vi-uebersicht",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "description": "<p><strong>Gruppe VI.</strong> ist eine der acht Unterbanden der Schwarzen Zitteraale. Sie besitzt eine eigene Gruppenführung, zwei Leutnantstellen und ein vorbereitetes Aufgebot von sechzehn Räubern.</p><p>Gruppenname, Geschichte, Territorium und persönliche Besetzung sind noch offen. Das blanke schwarze Banner kennzeichnet die noch unbenannte Unterbande. Die Anführerbio und die Hauptquartiersszene sind für ihre spätere Ausarbeitung vorbereitet.</p>",
+          "stats": [
+            [
+              "Zugehörigkeit",
+              "Die Schwarzen Zitteraale"
+            ],
+            [
+              "Gruppenkennung",
+              "Gruppe VI."
+            ],
+            [
+              "Anführer",
+              "Noch unbenannt"
+            ],
+            [
+              "Führung",
+              "Ein Gruppenführer · zwei Leutnants"
+            ],
+            [
+              "Aufgebot",
+              "Sechzehn Räuberplätze"
+            ],
+            [
+              "Territorium",
+              "Noch unbestimmt"
+            ],
+            [
+              "Hauptquartier",
+              "Noch unbestimmt"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Anführer · unbenannt",
+          "commentThreadKey": "zitteraale-gruppe-vi-anfuehrer",
+          "biographyPage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-vi-v1.png",
+          "imageWidth": 38,
+          "imageTall": true,
+          "stats": [
+            [
+              "Name",
+              "Noch unbenannt"
+            ],
+            [
+              "Amt",
+              "Gruppenführer"
+            ],
+            [
+              "Unterbande",
+              "Gruppe VI."
+            ],
+            [
+              "Herkunft",
+              "Noch offen"
+            ],
+            [
+              "Alter",
+              "Noch offen"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-vi-v1.png",
+            "crestImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "biographyTitle": "Die Führung von Gruppe VI.",
+            "biographyText": "<p>Diese Führungsstelle besitzt noch keine namentliche Besetzung.</p>",
+            "historyTitle": "Aufgabe innerhalb der Bande",
+            "historyText": "<p>Die Gruppenführung nimmt Aufträge der übergeordneten Führung entgegen, verteilt sie auf ihre beiden Leutnants und verantwortet das eigene Aufgebot. Sie stimmt Beuteanteile, Versorgung und Verstärkungen mit den Schwarzen Zitteraalen ab.</p>",
+            "worksTitle": "Noch offene Angaben",
+            "works": [
+              "Name und persönliches Porträt",
+              "Herkunft und Vorgeschichte",
+              "Wesen und persönliche Verbindungen"
+            ],
+            "documentsTitle": "Bandenakten",
+            "documents": [
+              {
+                "title": "Die Schwarzen Zitteraale",
+                "text": "Bandenführung und Gruppenübersicht.",
+                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=schwarze-zitteraale"
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hierarchie",
+          "commentThreadKey": "zitteraale-gruppe-vi-hierarchie",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Gruppe VI.",
+            "eyebrow": "Schwarze Zitteraale · Gruppe VI.",
+            "subtitle": "Führung, Räuber und frühere Mitglieder",
+            "centerLabel": "Gruppe VI.",
+            "emblem": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "sideImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "motto": "Gruppenname noch offen",
+            "description": "<p>Die Unterbande besitzt eigene Führung und ein vorbereitetes Aufgebot. Persönliche Besetzungen, Zuständigkeiten und Wirkungsgebiet sind noch offen.</p>",
+            "detailsTitle": "Aufbau",
+            "details": [
+              {
+                "icon": "⚑",
+                "label": "Führung",
+                "value": "Ein Gruppenführer und zwei Leutnants"
+              },
+              {
+                "icon": "⚔",
+                "label": "Räuber",
+                "value": "Sechzehn Plätze in vier Viererreihen"
+              },
+              {
+                "icon": "†",
+                "label": "Verstorbene",
+                "value": "Acht Plätze in zwei Viererreihen"
+              },
+              {
+                "icon": "↗",
+                "label": "Ex-Mitglieder",
+                "value": "Vier Plätze in einer Reihe"
+              }
+            ],
+            "chartTitle": "Gruppenordnung",
+            "chartIntro": "Die aktuellen Leutnantstellen stehen unter dem Gruppenführer. Verstorbene und Ex-Mitglieder besitzen eigene Reiter.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 92,
+            "trees": [
+              {
+                "id": "fuehrung",
+                "label": "Führung und Räuber",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Gruppenführung",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vi-fuehrer",
+                        "title": "Gruppenführer · unbenannt",
+                        "subtitle": "⚑ Gruppenführer · Gruppe VI.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-vi-v1.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Leutnants",
+                    "columns": 2,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vi-leutnant-1",
+                        "title": "Erster Leutnant",
+                        "subtitle": "⚑ Aktuelle Besetzung offen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-leutnant-2",
+                        "title": "Zweiter Leutnant",
+                        "subtitle": "⚑ Aktuelle Besetzung offen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 1",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-1",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-2",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-3",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-4",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 2",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-5",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-6",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-7",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-8",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 3",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-9",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-09-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-10",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-10-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-11",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-11-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-12",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-12-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 4",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-13",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-13-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-14",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-14-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-15",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-15-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-raeuber-16",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-16-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "verstorbene",
+                "label": "Verstorbene",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Verstorbene · zwei Viererreihen",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vi-verstorben-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-verstorben-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-verstorben-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-verstorben-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-verstorben-5",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-verstorben-6",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-verstorben-7",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-verstorben-8",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ex-mitglieder",
+                "label": "Ex-Mitglieder",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Ex-Mitglieder · eine Viererreihe",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vi-ehemalig-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-ehemalig-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-ehemalig-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-ehemalig-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Unbesetzte Karten sind freie Plätze für die weitere Ausarbeitung."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hauptquartier · Ort unbekannt",
+          "commentThreadKey": "zitteraale-gruppe-vi-hauptquartier",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der Hauptquartiersort von Gruppe VI. ist noch unbestimmt. Der Schauplatz, sein Zugang und seine Räume stehen für die spätere Ausarbeitung offen.</p>",
+          "sessionLocation": "",
+          "sessionHint": "Hauptquartiersort noch unbestimmt",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Ein Schauplatz im Rückzugsraum dieser Unterbande.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tab": "Kriminalität",
+    "path": [
+      "Schwarze Zitteraale",
+      "Schwarze Zitteraale - Gruppen"
+    ],
+    "entry": {
+      "id": "zitteraale-gruppe-vii",
+      "title": "Gruppe VII.",
+      "subtitle": "Schwarze Zitteraale · Gruppe VII.",
+      "type": "Unterbande",
+      "category": "Kriminalität · Schwarze Zitteraale",
+      "icon": "⚑",
+      "symbol": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "stamp": "SCHWARZE ZITTERAALE · GRUPPE VII.",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Gruppe VII.",
+          "commentThreadKey": "zitteraale-gruppe-vii-uebersicht",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "description": "<p><strong>Gruppe VII.</strong> ist eine der acht Unterbanden der Schwarzen Zitteraale. Sie besitzt eine eigene Gruppenführung, zwei Leutnantstellen und ein vorbereitetes Aufgebot von sechzehn Räubern.</p><p>Gruppenname, Geschichte, Territorium und persönliche Besetzung sind noch offen. Das blanke schwarze Banner kennzeichnet die noch unbenannte Unterbande. Die Anführerbio und die Hauptquartiersszene sind für ihre spätere Ausarbeitung vorbereitet.</p>",
+          "stats": [
+            [
+              "Zugehörigkeit",
+              "Die Schwarzen Zitteraale"
+            ],
+            [
+              "Gruppenkennung",
+              "Gruppe VII."
+            ],
+            [
+              "Anführer",
+              "Noch unbenannt"
+            ],
+            [
+              "Führung",
+              "Ein Gruppenführer · zwei Leutnants"
+            ],
+            [
+              "Aufgebot",
+              "Sechzehn Räuberplätze"
+            ],
+            [
+              "Territorium",
+              "Noch unbestimmt"
+            ],
+            [
+              "Hauptquartier",
+              "Noch unbestimmt"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Anführer · unbenannt",
+          "commentThreadKey": "zitteraale-gruppe-vii-anfuehrer",
+          "biographyPage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-vii-v1.png",
+          "imageWidth": 38,
+          "imageTall": true,
+          "stats": [
+            [
+              "Name",
+              "Noch unbenannt"
+            ],
+            [
+              "Amt",
+              "Gruppenführer"
+            ],
+            [
+              "Unterbande",
+              "Gruppe VII."
+            ],
+            [
+              "Herkunft",
+              "Noch offen"
+            ],
+            [
+              "Alter",
+              "Noch offen"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-vii-v1.png",
+            "crestImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "biographyTitle": "Die Führung von Gruppe VII.",
+            "biographyText": "<p>Diese Führungsstelle besitzt noch keine namentliche Besetzung.</p>",
+            "historyTitle": "Aufgabe innerhalb der Bande",
+            "historyText": "<p>Die Gruppenführung nimmt Aufträge der übergeordneten Führung entgegen, verteilt sie auf ihre beiden Leutnants und verantwortet das eigene Aufgebot. Sie stimmt Beuteanteile, Versorgung und Verstärkungen mit den Schwarzen Zitteraalen ab.</p>",
+            "worksTitle": "Noch offene Angaben",
+            "works": [
+              "Name und persönliches Porträt",
+              "Herkunft und Vorgeschichte",
+              "Wesen und persönliche Verbindungen"
+            ],
+            "documentsTitle": "Bandenakten",
+            "documents": [
+              {
+                "title": "Die Schwarzen Zitteraale",
+                "text": "Bandenführung und Gruppenübersicht.",
+                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=schwarze-zitteraale"
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hierarchie",
+          "commentThreadKey": "zitteraale-gruppe-vii-hierarchie",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Gruppe VII.",
+            "eyebrow": "Schwarze Zitteraale · Gruppe VII.",
+            "subtitle": "Führung, Räuber und frühere Mitglieder",
+            "centerLabel": "Gruppe VII.",
+            "emblem": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "sideImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "motto": "Gruppenname noch offen",
+            "description": "<p>Die Unterbande besitzt eigene Führung und ein vorbereitetes Aufgebot. Persönliche Besetzungen, Zuständigkeiten und Wirkungsgebiet sind noch offen.</p>",
+            "detailsTitle": "Aufbau",
+            "details": [
+              {
+                "icon": "⚑",
+                "label": "Führung",
+                "value": "Ein Gruppenführer und zwei Leutnants"
+              },
+              {
+                "icon": "⚔",
+                "label": "Räuber",
+                "value": "Sechzehn Plätze in vier Viererreihen"
+              },
+              {
+                "icon": "†",
+                "label": "Verstorbene",
+                "value": "Acht Plätze in zwei Viererreihen"
+              },
+              {
+                "icon": "↗",
+                "label": "Ex-Mitglieder",
+                "value": "Vier Plätze in einer Reihe"
+              }
+            ],
+            "chartTitle": "Gruppenordnung",
+            "chartIntro": "Die aktuellen Leutnantstellen stehen unter dem Gruppenführer. Verstorbene und Ex-Mitglieder besitzen eigene Reiter.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 92,
+            "trees": [
+              {
+                "id": "fuehrung",
+                "label": "Führung und Räuber",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Gruppenführung",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vii-fuehrer",
+                        "title": "Gruppenführer · unbenannt",
+                        "subtitle": "⚑ Gruppenführer · Gruppe VII.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-vii-v1.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Leutnants",
+                    "columns": 2,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vii-leutnant-1",
+                        "title": "Erster Leutnant",
+                        "subtitle": "⚑ Aktuelle Besetzung offen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-leutnant-2",
+                        "title": "Zweiter Leutnant",
+                        "subtitle": "⚑ Aktuelle Besetzung offen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 1",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-1",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-2",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-3",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-4",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 2",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-5",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-6",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-7",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-8",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 3",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-9",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-09-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-10",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-10-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-11",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-11-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-12",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-12-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 4",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-13",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-13-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-14",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-14-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-15",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-15-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-raeuber-16",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-16-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "verstorbene",
+                "label": "Verstorbene",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Verstorbene · zwei Viererreihen",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vii-verstorben-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-verstorben-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-verstorben-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-verstorben-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-verstorben-5",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-verstorben-6",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-verstorben-7",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-verstorben-8",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ex-mitglieder",
+                "label": "Ex-Mitglieder",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Ex-Mitglieder · eine Viererreihe",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-vii-ehemalig-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-ehemalig-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-ehemalig-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-ehemalig-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Unbesetzte Karten sind freie Plätze für die weitere Ausarbeitung."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hauptquartier · Ort unbekannt",
+          "commentThreadKey": "zitteraale-gruppe-vii-hauptquartier",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der Hauptquartiersort von Gruppe VII. ist noch unbestimmt. Der Schauplatz, sein Zugang und seine Räume stehen für die spätere Ausarbeitung offen.</p>",
+          "sessionLocation": "",
+          "sessionHint": "Hauptquartiersort noch unbestimmt",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Ein Schauplatz im Rückzugsraum dieser Unterbande.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "tab": "Kriminalität",
+    "path": [
+      "Schwarze Zitteraale",
+      "Schwarze Zitteraale - Gruppen"
+    ],
+    "entry": {
+      "id": "zitteraale-gruppe-viii",
+      "title": "Gruppe VIII.",
+      "subtitle": "Schwarze Zitteraale · Gruppe VIII.",
+      "type": "Unterbande",
+      "category": "Kriminalität · Schwarze Zitteraale",
+      "icon": "⚑",
+      "symbol": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "stamp": "SCHWARZE ZITTERAALE · GRUPPE VIII.",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Gruppe VIII.",
+          "commentThreadKey": "zitteraale-gruppe-viii-uebersicht",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "description": "<p><strong>Gruppe VIII.</strong> ist eine der acht Unterbanden der Schwarzen Zitteraale. Sie besitzt eine eigene Gruppenführung, zwei Leutnantstellen und ein vorbereitetes Aufgebot von sechzehn Räubern.</p><p>Gruppenname, Geschichte, Territorium und persönliche Besetzung sind noch offen. Das blanke schwarze Banner kennzeichnet die noch unbenannte Unterbande. Die Anführerbio und die Hauptquartiersszene sind für ihre spätere Ausarbeitung vorbereitet.</p>",
+          "stats": [
+            [
+              "Zugehörigkeit",
+              "Die Schwarzen Zitteraale"
+            ],
+            [
+              "Gruppenkennung",
+              "Gruppe VIII."
+            ],
+            [
+              "Anführer",
+              "Noch unbenannt"
+            ],
+            [
+              "Führung",
+              "Ein Gruppenführer · zwei Leutnants"
+            ],
+            [
+              "Aufgebot",
+              "Sechzehn Räuberplätze"
+            ],
+            [
+              "Territorium",
+              "Noch unbestimmt"
+            ],
+            [
+              "Hauptquartier",
+              "Noch unbestimmt"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Anführer · unbenannt",
+          "commentThreadKey": "zitteraale-gruppe-viii-anfuehrer",
+          "biographyPage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-viii-v1.png",
+          "imageWidth": 38,
+          "imageTall": true,
+          "stats": [
+            [
+              "Name",
+              "Noch unbenannt"
+            ],
+            [
+              "Amt",
+              "Gruppenführer"
+            ],
+            [
+              "Unterbande",
+              "Gruppe VIII."
+            ],
+            [
+              "Herkunft",
+              "Noch offen"
+            ],
+            [
+              "Alter",
+              "Noch offen"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-viii-v1.png",
+            "crestImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "biographyTitle": "Die Führung von Gruppe VIII.",
+            "biographyText": "<p>Diese Führungsstelle besitzt noch keine namentliche Besetzung.</p>",
+            "historyTitle": "Aufgabe innerhalb der Bande",
+            "historyText": "<p>Die Gruppenführung nimmt Aufträge der übergeordneten Führung entgegen, verteilt sie auf ihre beiden Leutnants und verantwortet das eigene Aufgebot. Sie stimmt Beuteanteile, Versorgung und Verstärkungen mit den Schwarzen Zitteraalen ab.</p>",
+            "worksTitle": "Noch offene Angaben",
+            "works": [
+              "Name und persönliches Porträt",
+              "Herkunft und Vorgeschichte",
+              "Wesen und persönliche Verbindungen"
+            ],
+            "documentsTitle": "Bandenakten",
+            "documents": [
+              {
+                "title": "Die Schwarzen Zitteraale",
+                "text": "Bandenführung und Gruppenübersicht.",
+                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=schwarze-zitteraale"
+              }
+            ]
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hierarchie",
+          "commentThreadKey": "zitteraale-gruppe-viii-hierarchie",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Gruppe VIII.",
+            "eyebrow": "Schwarze Zitteraale · Gruppe VIII.",
+            "subtitle": "Führung, Räuber und frühere Mitglieder",
+            "centerLabel": "Gruppe VIII.",
+            "emblem": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "sideImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+            "motto": "Gruppenname noch offen",
+            "description": "<p>Die Unterbande besitzt eigene Führung und ein vorbereitetes Aufgebot. Persönliche Besetzungen, Zuständigkeiten und Wirkungsgebiet sind noch offen.</p>",
+            "detailsTitle": "Aufbau",
+            "details": [
+              {
+                "icon": "⚑",
+                "label": "Führung",
+                "value": "Ein Gruppenführer und zwei Leutnants"
+              },
+              {
+                "icon": "⚔",
+                "label": "Räuber",
+                "value": "Sechzehn Plätze in vier Viererreihen"
+              },
+              {
+                "icon": "†",
+                "label": "Verstorbene",
+                "value": "Acht Plätze in zwei Viererreihen"
+              },
+              {
+                "icon": "↗",
+                "label": "Ex-Mitglieder",
+                "value": "Vier Plätze in einer Reihe"
+              }
+            ],
+            "chartTitle": "Gruppenordnung",
+            "chartIntro": "Die aktuellen Leutnantstellen stehen unter dem Gruppenführer. Verstorbene und Ex-Mitglieder besitzen eigene Reiter.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 92,
+            "trees": [
+              {
+                "id": "fuehrung",
+                "label": "Führung und Räuber",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Gruppenführung",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-viii-fuehrer",
+                        "title": "Gruppenführer · unbenannt",
+                        "subtitle": "⚑ Gruppenführer · Gruppe VIII.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-viii-v1.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Leutnants",
+                    "columns": 2,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-viii-leutnant-1",
+                        "title": "Erster Leutnant",
+                        "subtitle": "⚑ Aktuelle Besetzung offen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-leutnant-2",
+                        "title": "Zweiter Leutnant",
+                        "subtitle": "⚑ Aktuelle Besetzung offen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 1",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-1",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-2",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-3",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-4",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 2",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-5",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-6",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-7",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-8",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 3",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-9",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-09-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-10",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-10-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-11",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-11-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-12",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-12-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 4",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-13",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-13-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-14",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-14-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-15",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-15-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-raeuber-16",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-16-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "verstorbene",
+                "label": "Verstorbene",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Verstorbene · zwei Viererreihen",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-viii-verstorben-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-verstorben-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-verstorben-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-verstorben-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-verstorben-5",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-verstorben-6",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-verstorben-7",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-verstorben-8",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ex-mitglieder",
+                "label": "Ex-Mitglieder",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Ex-Mitglieder · eine Viererreihe",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-viii-ehemalig-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-ehemalig-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-ehemalig-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-ehemalig-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Unbesetzte Karten sind freie Plätze für die weitere Ausarbeitung."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hauptquartier · Ort unbekannt",
+          "commentThreadKey": "zitteraale-gruppe-viii-hauptquartier",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der Hauptquartiersort von Gruppe VIII. ist noch unbestimmt. Der Schauplatz, sein Zugang und seine Räume stehen für die spätere Ausarbeitung offen.</p>",
+          "sessionLocation": "",
+          "sessionHint": "Hauptquartiersort noch unbestimmt",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Ein Schauplatz im Rückzugsraum dieser Unterbande.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+];
+  for (const module of modules) {
+    const path = module.path || [];
+    const entryId = module.entry?.id || module.entryId;
+    const previous = entryId ? SECTIONS.find(candidate => candidate.entries?.some(entry => entry.id === entryId)) : undefined;
+    const entry = previous?.entries.find(entry => entry.id === entryId) || module.entry;
+    if (!entry && !module.sectionOnly) continue;
+    let section = SECTIONS.find(candidate => candidate.tab === module.tab && JSON.stringify(candidate.path || []) === JSON.stringify(path));
+    if (!section) {
+      section = { key: path.at(-1) || module.tab, tab: module.tab, path, desc: module.description || '', ...(module.icon ? { iconUrl: module.icon } : {}), entries: [] };
+      SECTIONS.push(section);
+    }
+    if (module.sectionOnly) continue;
+    if (previous === section) continue;
+    if (previous) previous.entries = previous.entries.filter(candidate => candidate.id !== entryId);
+    section.entries.push(entry);
+  }
 })();

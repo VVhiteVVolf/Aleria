@@ -1,0 +1,577 @@
+{
+  "mode": "built-in image_gen",
+  "date": "2026-11-16",
+  "jobs": [
+    {
+      "id": "kleriker-v1",
+      "prompt": "Create ONE 2:3 vertical upper-body anonymous ROLE PLACEHOLDER portrait of a medieval Schwarzfisch mercenary company CLERIC. Reference 1 gives the approved fine matte anime illustration style. Reference 2 gives company clothing colors and the small three-fish badge only. Standing calmly, whole head and shoulders through waist, large upper body. Plain sober dark navy wool clerical robe over ivory linen, a simple short charcoal shoulder mantle and a modest belt carrying ONE closed prayer book. A small red-and-blue Schwarzfisch three-fish emblem on mantle clasp. This is pastoral support and spiritual counsel in a traveling company. NO armor, no weapon, no crown, no mitre, no real-world religious cross or specific deity symbol, no magic effect. CRITICAL the ENTIRE HEAD including scalp, ears, neck and face is pitch-black shaded anonymous SILHOUETTE, slight charcoal rim only, no facial features, eyes, nose, mouth, skin or hair detail. Hands may be naturally colored. Quiet medieval camp tent backdrop. Fine varying dark anime linework, matte harmonious colors, clean softly balanced cel shading, almost no grain. No text, no frame, no watermark.",
+      "refs": [
+        "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Kampfmagier.png"
+      ],
+      "transparent_background": false,
+      "target": "AleriaAlmanach/assets/schwarzfische/kleriker-v1.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-2b649f5f-686a-4182-8495-8f25c04a4b8c.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/kleriker-v1.png",
+      "sha256": "3f5949187f22ab2f9aa6779c285eb33f5e471281ede0d23343952f55853c05c7",
+      "width": 1024,
+      "height": 1536,
+      "references": [
+        {
+          "file": "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        },
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Kampfmagier.png",
+          "sha256": "daac17926b99905ee7acb70d0e1d5735e9007a6ac5bf8d7d6ba31bc5c2bd1838"
+        }
+      ],
+      "activeSize": [
+        1024,
+        1536
+      ],
+      "activeSha256": "3f5949187f22ab2f9aa6779c285eb33f5e471281ede0d23343952f55853c05c7"
+    },
+    {
+      "id": "trupp-hechte-v1",
+      "name": "Schwarze Hechte",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Schwarze Hechte\n\n**Zentrales Symbol:** Ein einzelner großer SCHWARZER HECHT mit deutlich langem schlankem Körper, flachem entenartigem spitzem Maul und weit hinten sitzender Rückenflosse, kraftvoll diagonal nach rechts aufsteigend. Das Fischmotiv bleibt heraldisch flach gezeichnet mit einer schmalen warmen hellen Kontur zur guten Lesbarkeit auf dem Feld. Dahinter ein waagerecht in gedämpftes Rot, einen schmalen elfenbeinfarbenen Mittelstreifen und tiefes Blau geteiltes Holzfeld wie im Schwarzfisch-Gruppenwappen. Ein einzelner Fisch, keine drei Fische.\n\n**Farbpalette:** Rußschwarz · Gedämpftes Rot und Elfenbein · Tiefes Blau\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus dunklem vernieteten Eisen mit schmalen warmen Kupferkanten mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nEin zurückhaltendes umlaufendes keltisches Knotenband im geschlossenen Eisenring, keine Runen oder Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nReferenz 1 liefert die Verbandsfarben und die handgezeichnete Heraldik. Referenz 2 liefert nur die exakte KREISFORM und die Art der Holz-/Metallgestaltung. Niemals ein Pferd oder einen Reiter übernehmen. Dies ist ein eigenständiges Truppwappen der Schwarzfische. Kein Text oder Wappenname im Bild.",
+      "refs": [
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp"
+      ],
+      "transparent_background": true,
+      "target": "AleriaAlmanach/assets/schwarzfische/crests/trupp-hechte-v1.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-a653714c-aed2-41f9-af2c-fcbc2c006670.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/trupp-hechte-v1.png",
+      "sha256": "2aa1e89515cd76f85010692ff7bb13afaf2940b510642f8cfb985c0b065c26b1",
+      "width": 1254,
+      "height": 1254,
+      "references": [
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+          "sha256": "b1edd9fe13c526a2d294b86231796fdcc963414d4cf2e70c247af365224e6dae"
+        },
+        {
+          "file": "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp",
+          "sha256": "944cb614ac0b6ad4893313ff9101de4594e95a72611c2cc8052a535c7a6c540f"
+        }
+      ],
+      "processing": {
+        "size": [
+          1358,
+          1358
+        ],
+        "padding": {
+          "left": 57,
+          "top": 58
+        },
+        "circle": {
+          "centre": [
+            679,
+            679
+          ],
+          "radius": 597
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      },
+      "activeSize": [
+        1358,
+        1358
+      ],
+      "activeSha256": "fcd0d82b01bea26cee4f48aea25841751499251e1937e3b49e8f789523710d99"
+    },
+    {
+      "id": "trupp-lachse-v1",
+      "name": "Schwarze Lachse",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Schwarze Lachse\n\n**Zentrales Symbol:** Ein einzelner großer SCHWARZER LACHS mit stromlinienförmigem kräftigem Körper, gegabelter Schwanzflosse und kleiner Fettflosse, in einem klaren aufwärts gerichteten Sprung nach links. Das Fischmotiv bleibt heraldisch flach gezeichnet mit einer schmalen warmen hellen Kontur zur guten Lesbarkeit auf dem Feld. Dahinter ein waagerecht in gedämpftes Rot, einen schmalen elfenbeinfarbenen Mittelstreifen und tiefes Blau geteiltes Holzfeld wie im Schwarzfisch-Gruppenwappen. Ein einzelner Fisch, keine drei Fische.\n\n**Farbpalette:** Rußschwarz · Gedämpftes Rot und Elfenbein · Tiefes Blau\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus dunklem vernieteten Eisen mit schmalen warmen Kupferkanten mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nEin zurückhaltendes umlaufendes keltisches Knotenband im geschlossenen Eisenring, keine Runen oder Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nReferenz 1 liefert die Verbandsfarben und die handgezeichnete Heraldik. Referenz 2 liefert nur die exakte KREISFORM und die Art der Holz-/Metallgestaltung. Niemals ein Pferd oder einen Reiter übernehmen. Dies ist ein eigenständiges Truppwappen der Schwarzfische. Kein Text oder Wappenname im Bild.",
+      "refs": [
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp"
+      ],
+      "transparent_background": true,
+      "target": "AleriaAlmanach/assets/schwarzfische/crests/trupp-lachse-v1.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-b966a9e5-fb3f-4419-b647-133bed6d6815.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/trupp-lachse-v1.png",
+      "sha256": "9b46cb729c503628e16bf8c09de6fc1093a8eabec2a010f3cf84e05730fe752b",
+      "width": 1254,
+      "height": 1254,
+      "references": [
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+          "sha256": "b1edd9fe13c526a2d294b86231796fdcc963414d4cf2e70c247af365224e6dae"
+        },
+        {
+          "file": "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp",
+          "sha256": "944cb614ac0b6ad4893313ff9101de4594e95a72611c2cc8052a535c7a6c540f"
+        }
+      ],
+      "processing": {
+        "size": [
+          1374,
+          1374
+        ],
+        "padding": {
+          "left": 66,
+          "top": 61
+        },
+        "circle": {
+          "centre": [
+            687,
+            687
+          ],
+          "radius": 604
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      },
+      "activeSize": [
+        1374,
+        1374
+      ],
+      "activeSha256": "a1dfe8bd226279bcde1684ab91b57f2bb1832836dfafd4c5256a3063e69193b0"
+    },
+    {
+      "id": "trupp-aale-v1",
+      "name": "Schwarze Aale",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Schwarze Aale\n\n**Zentrales Symbol:** Ein einzelner großer SCHWARZER AAL mit langem schlangenförmigem Fischkörper, kleinem Fischkopf und durchgehendem Flossensaum, als starke S-förmige senkrechte Silhouette. Das Fischmotiv bleibt heraldisch flach gezeichnet mit einer schmalen warmen hellen Kontur zur guten Lesbarkeit auf dem Feld. Dahinter ein waagerecht in gedämpftes Rot, einen schmalen elfenbeinfarbenen Mittelstreifen und tiefes Blau geteiltes Holzfeld wie im Schwarzfisch-Gruppenwappen. Ein einzelner Fisch, keine drei Fische.\n\n**Farbpalette:** Rußschwarz · Gedämpftes Rot und Elfenbein · Tiefes Blau\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus dunklem vernieteten Eisen mit schmalen warmen Kupferkanten mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nEin zurückhaltendes umlaufendes keltisches Knotenband im geschlossenen Eisenring, keine Runen oder Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nReferenz 1 liefert die Verbandsfarben und die handgezeichnete Heraldik. Referenz 2 liefert nur die exakte KREISFORM und die Art der Holz-/Metallgestaltung. Niemals ein Pferd oder einen Reiter übernehmen. Dies ist ein eigenständiges Truppwappen der Schwarzfische. Kein Text oder Wappenname im Bild.",
+      "refs": [
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp"
+      ],
+      "transparent_background": true,
+      "target": "AleriaAlmanach/assets/schwarzfische/crests/trupp-aale-v1.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-455f8700-c50f-4416-8b64-c64f4bcf8278.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/trupp-aale-v1.png",
+      "sha256": "5b6076729e4ab580b487ddf8a6ed8db4abd411b1b75554204688ad71922ce294",
+      "width": 1254,
+      "height": 1254,
+      "references": [
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+          "sha256": "b1edd9fe13c526a2d294b86231796fdcc963414d4cf2e70c247af365224e6dae"
+        },
+        {
+          "file": "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp",
+          "sha256": "944cb614ac0b6ad4893313ff9101de4594e95a72611c2cc8052a535c7a6c540f"
+        }
+      ],
+      "processing": {
+        "size": [
+          1370,
+          1370
+        ],
+        "padding": {
+          "left": 63,
+          "top": 59
+        },
+        "circle": {
+          "centre": [
+            685,
+            685
+          ],
+          "radius": 602
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      },
+      "activeSize": [
+        1370,
+        1370
+      ],
+      "activeSha256": "6be0e0e42f43e7fb90c741ca416991345850829ec993378f2db359063a5126bb"
+    },
+    {
+      "id": "trupp-barsche-v1",
+      "name": "Schwarze Barsche",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Schwarze Barsche\n\n**Zentrales Symbol:** Ein einzelner großer SCHWARZER BARSCH mit hohem seitlich zusammengedrücktem Körper, markanter stacheliger aufgestellter Rückenflosse und deutlichen dezent hell abgesetzten senkrechten Streifen, waagerecht nach rechts. Das Fischmotiv bleibt heraldisch flach gezeichnet mit einer schmalen warmen hellen Kontur zur guten Lesbarkeit auf dem Feld. Dahinter ein waagerecht in gedämpftes Rot, einen schmalen elfenbeinfarbenen Mittelstreifen und tiefes Blau geteiltes Holzfeld wie im Schwarzfisch-Gruppenwappen. Ein einzelner Fisch, keine drei Fische.\n\n**Farbpalette:** Rußschwarz · Gedämpftes Rot und Elfenbein · Tiefes Blau\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus dunklem vernieteten Eisen mit schmalen warmen Kupferkanten mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nEin zurückhaltendes umlaufendes keltisches Knotenband im geschlossenen Eisenring, keine Runen oder Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nReferenz 1 liefert die Verbandsfarben und die handgezeichnete Heraldik. Referenz 2 liefert nur die exakte KREISFORM und die Art der Holz-/Metallgestaltung. Niemals ein Pferd oder einen Reiter übernehmen. Dies ist ein eigenständiges Truppwappen der Schwarzfische. Kein Text oder Wappenname im Bild.",
+      "refs": [
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp"
+      ],
+      "transparent_background": true,
+      "target": "AleriaAlmanach/assets/schwarzfische/crests/trupp-barsche-v1.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-9a1d7c59-4ce8-4ff7-9488-0d186d6d16f7.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/trupp-barsche-v1.png",
+      "sha256": "c7e14ed7e285ca5fbead5e90118a7819d8354a6b657314e28da8376481d469bf",
+      "width": 1254,
+      "height": 1254,
+      "references": [
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+          "sha256": "b1edd9fe13c526a2d294b86231796fdcc963414d4cf2e70c247af365224e6dae"
+        },
+        {
+          "file": "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp",
+          "sha256": "944cb614ac0b6ad4893313ff9101de4594e95a72611c2cc8052a535c7a6c540f"
+        }
+      ],
+      "processing": {
+        "size": [
+          1376,
+          1376
+        ],
+        "padding": {
+          "left": 65,
+          "top": 62
+        },
+        "circle": {
+          "centre": [
+            688,
+            688
+          ],
+          "radius": 605
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      },
+      "activeSize": [
+        1376,
+        1376
+      ],
+      "activeSha256": "282bb867c5a5c13971b7e37310ad78fbcd1bd9a26655f617da6a70da91514746"
+    },
+    {
+      "id": "trupp-welse-v1",
+      "name": "Schwarze Welse",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Schwarze Welse\n\n**Zentrales Symbol:** Ein einzelner großer SCHWARZER WELS mit breitem flachem Fischkopf, deutlich langen paarigen Barteln und kräftigem hinten schlanker werdendem Körper, leicht gebogen nach links. Das Fischmotiv bleibt heraldisch flach gezeichnet mit einer schmalen warmen hellen Kontur zur guten Lesbarkeit auf dem Feld. Dahinter ein waagerecht in gedämpftes Rot, einen schmalen elfenbeinfarbenen Mittelstreifen und tiefes Blau geteiltes Holzfeld wie im Schwarzfisch-Gruppenwappen. Ein einzelner Fisch, keine drei Fische.\n\n**Farbpalette:** Rußschwarz · Gedämpftes Rot und Elfenbein · Tiefes Blau\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus dunklem vernieteten Eisen mit schmalen warmen Kupferkanten mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nEin zurückhaltendes umlaufendes keltisches Knotenband im geschlossenen Eisenring, keine Runen oder Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nReferenz 1 liefert die Verbandsfarben und die handgezeichnete Heraldik. Referenz 2 liefert nur die exakte KREISFORM und die Art der Holz-/Metallgestaltung. Niemals ein Pferd oder einen Reiter übernehmen. Dies ist ein eigenständiges Truppwappen der Schwarzfische. Kein Text oder Wappenname im Bild.",
+      "refs": [
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp"
+      ],
+      "transparent_background": true,
+      "target": "AleriaAlmanach/assets/schwarzfische/crests/trupp-welse-v1.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-f5ffe48a-e7d1-42bd-875b-9662af5c1b15.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/trupp-welse-v1.png",
+      "sha256": "6d53d8d2a04243e06d0a96fdd17006b4ae7db62c971d9f7f7f779fd2a15635f4",
+      "width": 1254,
+      "height": 1254,
+      "references": [
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+          "sha256": "b1edd9fe13c526a2d294b86231796fdcc963414d4cf2e70c247af365224e6dae"
+        },
+        {
+          "file": "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp",
+          "sha256": "944cb614ac0b6ad4893313ff9101de4594e95a72611c2cc8052a535c7a6c540f"
+        }
+      ],
+      "processing": {
+        "size": [
+          1376,
+          1376
+        ],
+        "padding": {
+          "left": 67,
+          "top": 64
+        },
+        "circle": {
+          "centre": [
+            688,
+            688
+          ],
+          "radius": 605
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      },
+      "activeSize": [
+        1376,
+        1376
+      ],
+      "activeSha256": "9223bb7b8a262ff54cf94189da1af792fd3523bffe094d291df57c77749a8cf9"
+    },
+    {
+      "id": "trupp-zander-v1",
+      "name": "Schwarze Zander",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Schwarze Zander\n\n**Zentrales Symbol:** Ein einzelner großer SCHWARZER ZANDER mit langem kräftigem Körper, spitzem Fischkopf, deutlich zwei getrennten Rückenflossen mit hohen stacheligen Strahlen vorn, diagonal nach rechts. Das Fischmotiv bleibt heraldisch flach gezeichnet mit einer schmalen warmen hellen Kontur zur guten Lesbarkeit auf dem Feld. Dahinter ein waagerecht in gedämpftes Rot, einen schmalen elfenbeinfarbenen Mittelstreifen und tiefes Blau geteiltes Holzfeld wie im Schwarzfisch-Gruppenwappen. Ein einzelner Fisch, keine drei Fische.\n\n**Farbpalette:** Rußschwarz · Gedämpftes Rot und Elfenbein · Tiefes Blau\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus dunklem vernieteten Eisen mit schmalen warmen Kupferkanten mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nEin zurückhaltendes umlaufendes keltisches Knotenband im geschlossenen Eisenring, keine Runen oder Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nReferenz 1 liefert die Verbandsfarben und die handgezeichnete Heraldik. Referenz 2 liefert nur die exakte KREISFORM und die Art der Holz-/Metallgestaltung. Niemals ein Pferd oder einen Reiter übernehmen. Dies ist ein eigenständiges Truppwappen der Schwarzfische. Kein Text oder Wappenname im Bild.",
+      "refs": [
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp"
+      ],
+      "transparent_background": true,
+      "target": "AleriaAlmanach/assets/schwarzfische/crests/trupp-zander-v1.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-559435d3-da2d-408e-881e-8fb27bcc9d77.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/trupp-zander-v1.png",
+      "sha256": "fbb87572a1f40f0c9698a420def8c93b4d73910f6a9308e2c54d805a49e895df",
+      "width": 1254,
+      "height": 1254,
+      "references": [
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+          "sha256": "b1edd9fe13c526a2d294b86231796fdcc963414d4cf2e70c247af365224e6dae"
+        },
+        {
+          "file": "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp",
+          "sha256": "944cb614ac0b6ad4893313ff9101de4594e95a72611c2cc8052a535c7a6c540f"
+        }
+      ],
+      "processing": {
+        "size": [
+          1372,
+          1372
+        ],
+        "padding": {
+          "left": 63,
+          "top": 60
+        },
+        "circle": {
+          "centre": [
+            686,
+            686
+          ],
+          "radius": 603
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      },
+      "activeSize": [
+        1372,
+        1372
+      ],
+      "activeSha256": "2731ff2aa09b37e96d27a7d54e1bb57e3bde89a4e18e942b65163a0a2dbbb3b3"
+    },
+    {
+      "id": "trupp-forellen-v1",
+      "name": "Schwarze Forellen",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Schwarze Forellen\n\n**Zentrales Symbol:** Ein einzelner großer SCHWARZER FORELLENFISCH mit harmonisch schlankem Körper, kleiner Fettflosse und wenigen hellen heraldischen Punktmarkierungen auf der Flanke, nach links schwimmend. Das Fischmotiv bleibt heraldisch flach gezeichnet mit einer schmalen warmen hellen Kontur zur guten Lesbarkeit auf dem Feld. Dahinter ein waagerecht in gedämpftes Rot, einen schmalen elfenbeinfarbenen Mittelstreifen und tiefes Blau geteiltes Holzfeld wie im Schwarzfisch-Gruppenwappen. Ein einzelner Fisch, keine drei Fische.\n\n**Farbpalette:** Rußschwarz · Gedämpftes Rot und Elfenbein · Tiefes Blau\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus dunklem vernieteten Eisen mit schmalen warmen Kupferkanten mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nEin zurückhaltendes umlaufendes keltisches Knotenband im geschlossenen Eisenring, keine Runen oder Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nReferenz 1 liefert die Verbandsfarben und die handgezeichnete Heraldik. Referenz 2 liefert nur die exakte KREISFORM und die Art der Holz-/Metallgestaltung. Niemals ein Pferd oder einen Reiter übernehmen. Dies ist ein eigenständiges Truppwappen der Schwarzfische. Kein Text oder Wappenname im Bild.",
+      "refs": [
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp"
+      ],
+      "transparent_background": true,
+      "target": "AleriaAlmanach/assets/schwarzfische/crests/trupp-forellen-v1.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-f6a3ef77-489d-4494-a3f2-31c0a0af3bbf.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/trupp-forellen-v1.png",
+      "sha256": "3625bcd2d3f6eea3c1f66d5f393cd8d1d1c3fa55246e14a4071b4df90b8cb9e3",
+      "width": 1254,
+      "height": 1254,
+      "references": [
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+          "sha256": "b1edd9fe13c526a2d294b86231796fdcc963414d4cf2e70c247af365224e6dae"
+        },
+        {
+          "file": "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp",
+          "sha256": "944cb614ac0b6ad4893313ff9101de4594e95a72611c2cc8052a535c7a6c540f"
+        }
+      ],
+      "processing": {
+        "size": [
+          1374,
+          1374
+        ],
+        "padding": {
+          "left": 65,
+          "top": 59
+        },
+        "circle": {
+          "centre": [
+            687,
+            687
+          ],
+          "radius": 604
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      },
+      "activeSize": [
+        1374,
+        1374
+      ],
+      "activeSha256": "e5c51e42fd91dba5bc2ecd6d3c3089ad71674a3bab883426f2bd25169215f220"
+    },
+    {
+      "id": "trupp-rochen-v1",
+      "name": "Schwarze Rochen",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Schwarze Rochen\n\n**Zentrales Symbol:** Ein einzelner großer SCHWARZER ROCHEN frontal von oben mit sehr breiten rautenförmigen Flügeln, leicht vorgezogenem Kopf und langem dünnem geschwungenem Schwanz, kraftvolle klare Symmetrie. Das Fischmotiv bleibt heraldisch flach gezeichnet mit einer schmalen warmen hellen Kontur zur guten Lesbarkeit auf dem Feld. Dahinter ein waagerecht in gedämpftes Rot, einen schmalen elfenbeinfarbenen Mittelstreifen und tiefes Blau geteiltes Holzfeld wie im Schwarzfisch-Gruppenwappen. Ein einzelner Fisch, keine drei Fische.\n\n**Farbpalette:** Rußschwarz · Gedämpftes Rot und Elfenbein · Tiefes Blau\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus dunklem vernieteten Eisen mit schmalen warmen Kupferkanten mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nEin zurückhaltendes umlaufendes keltisches Knotenband im geschlossenen Eisenring, keine Runen oder Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nReferenz 1 liefert die Verbandsfarben und die handgezeichnete Heraldik. Referenz 2 liefert nur die exakte KREISFORM und die Art der Holz-/Metallgestaltung. Niemals ein Pferd oder einen Reiter übernehmen. Dies ist ein eigenständiges Truppwappen der Schwarzfische. Kein Text oder Wappenname im Bild.",
+      "refs": [
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp"
+      ],
+      "transparent_background": true,
+      "target": "AleriaAlmanach/assets/schwarzfische/crests/trupp-rochen-v1.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-9a97574d-fa48-45c0-aff9-5861d8a6fea8.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/trupp-rochen-v1.png",
+      "sha256": "2f4467a2ee9dcbb282236f90fb0de2d5a7c00e0d5938319fd145f08427f898d9",
+      "width": 1254,
+      "height": 1254,
+      "references": [
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+          "sha256": "b1edd9fe13c526a2d294b86231796fdcc963414d4cf2e70c247af365224e6dae"
+        },
+        {
+          "file": "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp",
+          "sha256": "944cb614ac0b6ad4893313ff9101de4594e95a72611c2cc8052a535c7a6c540f"
+        }
+      ],
+      "processing": {
+        "size": [
+          1366,
+          1366
+        ],
+        "padding": {
+          "left": 62,
+          "top": 56
+        },
+        "circle": {
+          "centre": [
+            683,
+            683
+          ],
+          "radius": 601
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      },
+      "activeSize": [
+        1366,
+        1366
+      ],
+      "activeSha256": "6112676c82127e6d5e00efe5edf6e1a6749bd7165af6a2928de6a19303fbf14d"
+    },
+    {
+      "id": "trupp-karpfen-v1",
+      "name": "Schwarze Karpfen",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Schwarze Karpfen\n\n**Zentrales Symbol:** Ein einzelner großer SCHWARZER KARPFEN mit hohem rundlichem Rücken, tiefem Körper, großem Schuppenmuster, kurzen kleinen Maulbarteln und kräftiger Schwanzflosse, nach rechts schwimmend. Das Fischmotiv bleibt heraldisch flach gezeichnet mit einer schmalen warmen hellen Kontur zur guten Lesbarkeit auf dem Feld. Dahinter ein waagerecht in gedämpftes Rot, einen schmalen elfenbeinfarbenen Mittelstreifen und tiefes Blau geteiltes Holzfeld wie im Schwarzfisch-Gruppenwappen. Ein einzelner Fisch, keine drei Fische.\n\n**Farbpalette:** Rußschwarz · Gedämpftes Rot und Elfenbein · Tiefes Blau\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus dunklem vernieteten Eisen mit schmalen warmen Kupferkanten mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nEin zurückhaltendes umlaufendes keltisches Knotenband im geschlossenen Eisenring, keine Runen oder Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nReferenz 1 liefert die Verbandsfarben und die handgezeichnete Heraldik. Referenz 2 liefert nur die exakte KREISFORM und die Art der Holz-/Metallgestaltung. Niemals ein Pferd oder einen Reiter übernehmen. Dies ist ein eigenständiges Truppwappen der Schwarzfische. Kein Text oder Wappenname im Bild.",
+      "refs": [
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp"
+      ],
+      "transparent_background": true,
+      "target": "AleriaAlmanach/assets/schwarzfische/crests/trupp-karpfen-v1.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-2ff5ffe6-f41c-493f-8e1f-b019c3c9cdbb.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/trupp-karpfen-v1.png",
+      "sha256": "705c53c292e21a06c6abfc51436ed5c6931729d6dfc935fab2e30b0c82808558",
+      "width": 1254,
+      "height": 1254,
+      "references": [
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+          "sha256": "b1edd9fe13c526a2d294b86231796fdcc963414d4cf2e70c247af365224e6dae"
+        },
+        {
+          "file": "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp",
+          "sha256": "944cb614ac0b6ad4893313ff9101de4594e95a72611c2cc8052a535c7a6c540f"
+        }
+      ],
+      "processing": {
+        "size": [
+          1376,
+          1376
+        ],
+        "padding": {
+          "left": 65,
+          "top": 62
+        },
+        "circle": {
+          "centre": [
+            688,
+            688
+          ],
+          "radius": 605
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      },
+      "activeSize": [
+        1376,
+        1376
+      ],
+      "activeSha256": "6c87b127b9511606cd3e19d6e53fb1a7e075316827e2820a4ec9fbd6a49130fd"
+    },
+    {
+      "id": "trupp-stoere-v1",
+      "name": "Schwarze Störe",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Schwarze Störe\n\n**Zentrales Symbol:** Ein einzelner großer SCHWARZER STÖR mit langem zugespitztem Schnauzenkopf, Reihen markanter knöcherner Rückenschilde und asymmetrischer oberer Schwanzflosse, leicht gebogen diagonal nach links. Das Fischmotiv bleibt heraldisch flach gezeichnet mit einer schmalen warmen hellen Kontur zur guten Lesbarkeit auf dem Feld. Dahinter ein waagerecht in gedämpftes Rot, einen schmalen elfenbeinfarbenen Mittelstreifen und tiefes Blau geteiltes Holzfeld wie im Schwarzfisch-Gruppenwappen. Ein einzelner Fisch, keine drei Fische.\n\n**Farbpalette:** Rußschwarz · Gedämpftes Rot und Elfenbein · Tiefes Blau\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus dunklem vernieteten Eisen mit schmalen warmen Kupferkanten mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nEin zurückhaltendes umlaufendes keltisches Knotenband im geschlossenen Eisenring, keine Runen oder Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nReferenz 1 liefert die Verbandsfarben und die handgezeichnete Heraldik. Referenz 2 liefert nur die exakte KREISFORM und die Art der Holz-/Metallgestaltung. Niemals ein Pferd oder einen Reiter übernehmen. Dies ist ein eigenständiges Truppwappen der Schwarzfische. Kein Text oder Wappenname im Bild.",
+      "refs": [
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+        "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp"
+      ],
+      "transparent_background": true,
+      "target": "AleriaAlmanach/assets/schwarzfische/crests/trupp-stoere-v1.png",
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-44cd5177-81a2-47be-b89d-4bb3a982dc41.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/trupp-stoere-v1.png",
+      "sha256": "6634dcc94284f966edf00eb9d0c78787a687908cd465d28ae7064bfb3a8e1465",
+      "width": 1254,
+      "height": 1254,
+      "references": [
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Wappen.png",
+          "sha256": "b1edd9fe13c526a2d294b86231796fdcc963414d4cf2e70c247af365224e6dae"
+        },
+        {
+          "file": "E:/Aleria/Stammbäume/assets/images/houses/accepted-realms/aeldrunmar/coelret.webp",
+          "sha256": "944cb614ac0b6ad4893313ff9101de4594e95a72611c2cc8052a535c7a6c540f"
+        }
+      ],
+      "processing": {
+        "size": [
+          1360,
+          1360
+        ],
+        "padding": {
+          "left": 54,
+          "top": 54
+        },
+        "circle": {
+          "centre": [
+            680,
+            680
+          ],
+          "radius": 598
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      },
+      "activeSize": [
+        1360,
+        1360
+      ],
+      "activeSha256": "07ed059b837ea4de1641de2e688b5bde5a5dd214efde528f951bf654f5eda3b9"
+    }
+  ]
+}

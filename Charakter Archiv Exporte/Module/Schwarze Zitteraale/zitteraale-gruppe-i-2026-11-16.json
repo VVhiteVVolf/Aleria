@@ -1,0 +1,608 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-16T18:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Schwarze Zitteraale - Gruppen",
+      "tab": "Kriminalität",
+      "path": [
+        "Schwarze Zitteraale",
+        "Schwarze Zitteraale - Gruppen"
+      ]
+    },
+    "entry": {
+      "id": "zitteraale-gruppe-i",
+      "title": "Die Untoten Aale",
+      "subtitle": "Schwarze Zitteraale · Gruppe I.",
+      "type": "Unterbande",
+      "category": "Kriminalität · Schwarze Zitteraale",
+      "icon": "⚑",
+      "symbol": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+      "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+      "stamp": "SCHWARZE ZITTERAALE · GRUPPE I.",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [
+        "zitteraale-medrawd-angau"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Untoten Aale",
+          "commentThreadKey": "zitteraale-gruppe-i-uebersicht",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "description": "<p><strong>Die Untoten Aale</strong> sind eine der ältesten Unterbanden der Schwarzen Zitteraale. Ihr Anführer ist <strong>Medrawd Angau</strong>, der Untote Aal. Sie setzen Bauernhöfe und Geschäfte unter Druck und lassen sich auf krumme Geschäfte mit Menschen ein, die ihre Dienste oder Verbindungen suchen.</p><p>Schutzgelderpressung, Raub, Überfälle, Terror und gezielte Anschläge bilden ihre Einnahmequellen. Ihr Wirkungsraum umfasst das Umland von <strong>Bronhir, Llysfaen, Craithglyn, Mwyncreig und Tŵr Rhewgorn</strong> sowie <strong>Gwynthors Bannkreis</strong>.</p><p>Die Gruppe war für den <strong>Angriff auf Llysfaen</strong> und den <strong>Überfall auf das Bradrhith-Gestüt</strong> verantwortlich. Sir Rhys Draig kam der Schar zuvor und fügte ihr schwere Verluste zu. Der damalige erste Leutnant fiel, während Medrawd selbst abwesend war. <strong>Rhodri</strong>, der zweite Leutnant, und die einfachen Mitglieder <strong>Brychan und Tegid</strong> gerieten in Gefangenschaft.</p><p>Die Unterbande blieb geschwächt, füllte ihre Reihen jedoch mit Rekruten und Mitgliedern aus dem Hauptquartier auf. Brychan und Tegid werden heute unter den Verstorbenen geführt, Rhodri als Ex-Mitglied. Wo Medrawd sein eigenes Hauptquartier unterhält, ist unklar. Ein Versteck in den Bergen von Tŵr Rhewgorn wird vermutet.</p><p>Ihr Banner zeigt einen untoten Aal, dessen verfallender Leib von Maden zerfressen wird. Es verbindet schwarzes Tuch mit gelben und silbernen Akzenten.</p>",
+          "stats": [
+            [
+              "Zugehörigkeit",
+              "Die Schwarzen Zitteraale"
+            ],
+            [
+              "Gruppenkennung",
+              "Gruppe I."
+            ],
+            [
+              "Anführer",
+              "Medrawd Angau · Untoter Aal"
+            ],
+            [
+              "Führung",
+              "Ein Gruppenführer · zwei Leutnants"
+            ],
+            [
+              "Aufgebot",
+              "Sechzehn Räuberplätze"
+            ],
+            [
+              "Territorium",
+              "Bronhir · Llysfaen · Craithglyn · Mwyncreig · Tŵr Rhewgorn · Gwynthors Bannkreis"
+            ],
+            [
+              "Hauptquartier",
+              "Unklar · Berge von Tŵr Rhewgorn vermutet"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Medrawd Angau · Untoter Aal",
+          "commentThreadKey": "zitteraale-gruppe-i-anfuehrer",
+          "biographyPage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/medrawd-angau-v3.png",
+          "imageWidth": 38,
+          "imageTall": true,
+          "description": "Untoter Aal · ehemaliger Kleriker und Schwurritter · Anführer der Untoten Aale",
+          "stats": [
+            [
+              "Name",
+              "Medrawd Angau"
+            ],
+            [
+              "Beiname",
+              "Untoter Aal"
+            ],
+            [
+              "Tatsächliches Alter",
+              "Etwa 50 Jahre"
+            ],
+            [
+              "Erscheinung",
+              "Etwa 34 Jahre"
+            ],
+            [
+              "Früherer Stand",
+              "Kleriker und Schwurritter in Gwynthor"
+            ],
+            [
+              "Früherer Eid",
+              "Kharon · gebrochen"
+            ],
+            [
+              "Heutiger Dienst",
+              "Hela · Schicksalsweberin"
+            ],
+            [
+              "Bande",
+              "Die Untoten Aale · Gruppe I."
+            ],
+            [
+              "Farben",
+              "Gelb · Schwarz · Silber"
+            ]
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/medrawd-angau-v3.png",
+            "crestImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+            "biographyTitle": "Der eidbrüchige Schwurträger",
+            "biographyText": "<p>Medrawd Angau, der Untote Aal, führt die Unterbande Die Untoten Aale innerhalb der Schwarzen Zitteraale. Der frühere Gwynthorer Kleriker und Schwurritter gehörte zum engsten Dienstkreis des Patriarchen. Seine Beschäftigung mit Verstorbenen wurde zur krankhaften Obsession mit dem Untod. Nach dem Bruch mit der Kirche wandte sich der einst Kharon verpflichtete Schwurträger nekromantischen und infernalen Praktiken und schließlich Hela, der Schicksalsweberin, zu. Er ist etwa fünfzig Jahre alt und wirkt durch diese Praktiken wie ein Mann von vierunddreißig Jahren.</p>",
+            "abilitiesTitle": "Wesen und Praktiken",
+            "abilities": [
+              {
+                "title": "Unheimliche Obsession",
+                "icon": "/IconOrdner/Traits%20Icon/Zealous.png",
+                "detail": "Seine Beschäftigung mit dem Untod hat den früheren Dienst an den Verstorbenen vollständig vereinnahmt."
+              },
+              {
+                "title": "Arroganz",
+                "icon": "/IconOrdner/Traits%20Icon/Proud.png",
+                "detail": "Begegnet dem Rittertum mit Verachtung und trägt seinen Anspruch mit kalter Selbstgewissheit."
+              },
+              {
+                "title": "Nekromantie und infernale Praktiken",
+                "icon": "/IconOrdner/Traits%20Icon/Scholar.png",
+                "detail": "Vertiefte sich nach seinem Kirchenaustritt in verbotene Praktiken, die sein sichtbares Altern aufgehalten haben."
+              }
+            ],
+            "historyTitle": "Das gezeichnete Gesicht",
+            "historyText": "<p>Das einst rote Haar ist silbrig, dünn und glatt und fällt ihm bis zur Brust. Auf der verbrannten rechten Gesichtshälfte ist der Haarwuchs an der Schläfe lückenhaft und das Ohr teilweise zerstört und vernarbt. Das dort erblindete Auge wurde durch einen schwarz leuchtenden Edelstein ersetzt. Schwarze Adern ziehen sich über diese Seite bis zum Nacken. Sein gesundes Auge ist hellblau, seine Haut blass. Die einst attraktiven Gesichtszüge wirken hart, ernst und unheimlich hochmütig.</p>",
+            "worksTitle": "Harnisch, Hand und Schwert",
+            "works": [
+              "Schwarze Plattenrüstung mit gelben und silbernen Akzenten.",
+              "Auf dem Harnisch ein toter schwarzer Wyvern, der von Maden zerfressen wird.",
+              "Mechanische silberne Ersatzhand mit gelbem Edelstein im Handrücken. Mit ihr wirkt er Magie.",
+              "Ein imposantes, verziertes und verzaubertes Schwert in der anderen Hand."
+            ],
+            "extraSections": [
+              {
+                "title": "Im Dienst des Patriarchen",
+                "text": "<p>Medrawd war Kleriker und Schwurritter in Gwynthor. Er diente unter dem Patriarchen und zählte zu dessen engsten Vertrauten. Seinen Treueeid hatte er Kharon geschworen. Hinter der Würde dieses Amtes entwickelte sich eine wachsende Faszination für den Zustand zwischen Tod und fortgesetztem Dasein.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Die Beschäftigung mit den Toten",
+                "text": "<p>Zunächst meldete er sich freiwillig für die Pflege Verstorbener und für Leichenöffnungen. Was als besonderer Eifer erscheinen konnte, wurde zu einer immer krankhafteren Obsession. Als der Patriarch von seinen Neigungen erfuhr und ihn zur Rede stellte, eskalierte die Auseinandersetzung zum offenen Streit. Medrawd verließ die Kirche.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Der gebrochene Schwur",
+                "text": "<p>In den folgenden Jahren radikalisierte er sich. Er vertiefte sich in nekromantische Praktiken, verfluchte Kharon und wurde zum eidbrüchigen Schwurträger des Gottes, dem er einst Treue geschworen hatte. Seine heutige Hingabe gilt der finsteren Schicksalsweberin Hela. Die Beschäftigung mit Magie und dem Infernalen hat ihn verjüngt beziehungsweise sein sichtbares Altern aufgehalten.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Huw Saethwyr und das gescheiterte Attentat",
+                "text": "<p>Bei einem Versuch, den Patriarchen zu töten, kreuzte Medrawd die Klingen mit Huw Saethwyr. Huw schlug ihm eine Hand ab und glaubte, ihn getötet zu haben. Medrawds Schergen konnten den Schwerverletzten jedoch retten und mit ihm entkommen. Die verlorene Hand ließ er später durch eine mechanische silberne Hand mit einem gelben Edelstein auf dem Handrücken ersetzen.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Der Untote Aal",
+                "text": "<p>Heute führt Medrawd Die Untoten Aale, eine der ältesten Unterbanden der Schwarzen Zitteraale. Sie erpresst Höfe und Geschäfte und übernimmt krumme Geschäfte für Menschen, die den Kontakt zu ihr suchen. Schutzgelder, Raub, Überfälle, Terror und gezielte Anschläge finanzieren die Gruppe. Ihr Wirkungsraum umfasst das Umland von Bronhir, Llysfaen, Craithglyn, Mwyncreig, Tŵr Rhewgorn und den Bannkreis von Gwynthor.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Die Verluste gegen Sir Rhys Draig",
+                "text": "<p>Die Unterbande war für den Angriff auf Llysfaen und den Überfall auf das Bradrhith-Gestüt verantwortlich. Sir Rhys Draig kam ihr zuvor, tötete den damaligen ersten Leutnant und fügte der Schar schwere Verluste zu. Medrawd war bei diesem Gefecht abwesend. Rhodri, der damalige zweite Leutnant, sowie Brychan und Tegid, zwei einfache Mitglieder, wurden festgenommen.</p><p>Brychan und Tegid werden heute unter den Verstorbenen geführt, Rhodri unter den Ex-Mitgliedern. Die geschwächte Gruppe konnte ihre Reihen durch Rekruten und Mitglieder aus dem Hauptquartier der Schwarzen Zitteraale auffüllen. Die heutigen Leutnants sind ein grober ehemaliger Ritter und eine Zauberwirkerin. Ihre Namen sind noch offen.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Ein unbestimmter Rückzugsort",
+                "text": "<p>Wo die Unterbande ihr Hauptquartier unterhält, ist unklar. Ein Versteck in den Bergen von Tŵr Rhewgorn wird vermutet. Der ruinierte Bergturm auf Medrawds Porträt bildet eine stimmige Kulisse, belegt aber keinen bestimmten Standort.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              }
+            ],
+            "connectionsTitle": "Gefolgschaft und Feindschaften",
+            "connections": [
+              {
+                "name": "Erster Leutnant · Name offen",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/untote-aele-leutnant-1-v2.png",
+                "imageFormat": "portrait",
+                "detail": "Hünenhafter, kantiger Ex-Ritter mit kahlem, vernarbtem Kopf, blauen Augen und roten Augenbrauen. Er trägt geschwärzte stählerne Plattenrüstung, stützt beide Hände auf den Schwertknauf und schaut unter tief gezogenen Brauen grimmig und bösartig hervor."
+              },
+              {
+                "name": "Zweite Leutnantin · Name offen",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/untote-aele-leutnant-2-v3.png",
+                "imageFormat": "portrait",
+                "detail": "Wunderschöne, arrogant auftretende Frau mit langen blonden Wellen, grünen Augen, Sommersprossen und grünen geometrischen Gesichtszeichen. Eine dunkel eingefasste Kapuze mit goldenen Borten rahmt ihr Gesicht. Sie verbindet Magierrobe und stählerne Rüstung, führt einen Zauberstab und wirkt mit der freien Hand Magie."
+              },
+              {
+                "name": "Die Untoten Aale",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+                "imageFormat": "portrait",
+                "detail": "Anführer der ersten Unterbande der Schwarzen Zitteraale."
+              },
+              {
+                "name": "Die Schwarzen Zitteraale",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+                "detail": "Übergeordnete Bande. Aus ihrem Hauptquartier erhielt seine geschwächte Gruppe Verstärkung."
+              },
+              {
+                "name": "Huw Saethwyr",
+                "image": "/Stammbäume/assets/images/houses/Llamreis Ankunft/haus-saethwyr.png",
+                "detail": "Vereitelte den Mordversuch am Patriarchen und schlug Medrawd eine Hand ab."
+              },
+              {
+                "name": "Sir Rhys Draig",
+                "image": "/Stammbäume/assets/images/houses/Llamreis Ankunft/haus-draig.png",
+                "detail": "Tötete Medrawds ersten Leutnant und brachte den zweiten Leutnant mit zwei einfachen Mitgliedern in Gefangenschaft."
+              }
+            ],
+            "documentsTitle": "Bandenakten",
+            "documents": [
+              {
+                "title": "Die Untoten Aale",
+                "text": "Gruppenbio, Anführerbio, Hierarchie und Hauptquartiersszene.",
+                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-i"
+              },
+              {
+                "title": "Die Schwarzen Zitteraale",
+                "text": "Führung und acht Unterbanden.",
+                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=schwarze-zitteraale"
+              }
+            ],
+            "footer": "Medrawd Angau · Untoter Aal · Celtigerns Wacht"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hierarchie",
+          "commentThreadKey": "zitteraale-gruppe-i-hierarchie",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die Untoten Aale",
+            "eyebrow": "Schwarze Zitteraale · Gruppe I.",
+            "subtitle": "Führung, Räuber und frühere Mitglieder",
+            "centerLabel": "Die Untoten Aale",
+            "emblem": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+            "sideImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+            "motto": "Ein Zeichen für den Verfall.",
+            "description": "<p>Ein Gruppenführer und zwei Leutnants führen das aktive Aufgebot. Nach den schweren Verlusten gegen Sir Rhys Draig wurden die Reihen mit Rekruten und Mitgliedern aus dem Bandenhauptquartier aufgefüllt.</p>",
+            "detailsTitle": "Aufbau",
+            "details": [
+              {
+                "icon": "⚑",
+                "label": "Führung",
+                "value": "Ein Gruppenführer und zwei Leutnants"
+              },
+              {
+                "icon": "⚔",
+                "label": "Räuber",
+                "value": "Sechzehn Plätze in vier Viererreihen"
+              },
+              {
+                "icon": "†",
+                "label": "Verstorbene",
+                "value": "Acht Plätze in zwei Viererreihen"
+              },
+              {
+                "icon": "↗",
+                "label": "Ex-Mitglieder",
+                "value": "Vier Plätze in einer Reihe"
+              }
+            ],
+            "chartTitle": "Gruppenordnung",
+            "chartIntro": "Die aktuellen Leutnantstellen stehen unter dem Gruppenführer. Verstorbene und Ex-Mitglieder besitzen eigene Reiter.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 92,
+            "trees": [
+              {
+                "id": "fuehrung",
+                "label": "Führung und Räuber",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Gruppenführung",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-medrawd-angau",
+                        "title": "Medrawd Angau",
+                        "subtitle": "⚑ Gruppenführer · Gruppe I.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/medrawd-angau-v3.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Leutnants",
+                    "columns": 2,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-i-leutnant-1",
+                        "title": "Erster Leutnant · Name offen",
+                        "subtitle": "⚑ Ehemaliger Ritter",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/untote-aele-leutnant-1-v2.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-leutnant-2",
+                        "title": "Zweite Leutnantin · Name offen",
+                        "subtitle": "⚑ Zauberwirkerin",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/untote-aele-leutnant-2-v3.png",
+                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 1",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-1",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-2",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-3",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-4",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 2",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-5",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-6",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-06-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-7",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-07-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-8",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-08-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 3",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-9",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-09-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-10",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-10-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-11",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-11-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-12",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-12-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Räuber · Reihe 4",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-13",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-13-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-14",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-14-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-15",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-15-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-raeuber-16",
+                        "title": "Schwarzer Zitteraal · Räuber",
+                        "subtitle": "⚔ Unbenannt",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-16-v1.png",
+                        "text": "Übernimmt bewaffnete Überfälle, Wachdienste und das Eintreiben von Forderungen innerhalb der zugewiesenen Schar."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "verstorbene",
+                "label": "Verstorbene",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Verstorbene · zwei Viererreihen",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-i-erster-leutnant-gefallen",
+                        "title": "Erster Leutnant · Name unbekannt",
+                        "subtitle": "† Im Gefecht gegen Sir Rhys Draig gefallen",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
+                        "text": "Die erste Leutnantstelle koordiniert einen Teil der Räuber und vertritt die Gruppenführung bei zugewiesenen Aufträgen."
+                      },
+                      {
+                        "id": "ax26chmgvtaURnzC0n0l",
+                        "title": "Brychan",
+                        "subtitle": "† Verstorben · früheres einfaches Mitglied",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/references/brychan.png",
+                        "text": "Ein einfacher Räuber übernimmt Überfälle, Wachdienste und das Eintreiben der Forderungen."
+                      },
+                      {
+                        "id": "01OfFXeScnCoL2eNMPAM",
+                        "title": "Tegid",
+                        "subtitle": "† Verstorben · früheres einfaches Mitglied",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/references/tegid.png",
+                        "text": "Ein einfacher Räuber übernimmt Überfälle, Wachdienste und das Eintreiben der Forderungen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-verstorben-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-verstorben-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-verstorben-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-verstorben-4",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-04-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-verstorben-5",
+                        "title": "Unbesetzt",
+                        "subtitle": "† Freier Erinnerungsplatz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-05-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ex-mitglieder",
+                "label": "Ex-Mitglieder",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Ex-Mitglieder · eine Viererreihe",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "2UgcQTdEEpSJDTNKxx0U",
+                        "title": "Rhodri",
+                        "subtitle": "↗ Ex-Mitglied · früherer zweiter Leutnant",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/references/rhodri.png",
+                        "text": "Die zweite Leutnantstelle führt den zugewiesenen Teil der Räuber und übernimmt die Befehlsweitergabe bei getrennten Einsätzen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-ehemalig-1",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/komplize.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-ehemalig-2",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-02-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-i-ehemalig-3",
+                        "title": "Unbesetzt",
+                        "subtitle": "↗ Freier ehemaliger Platz",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/raider-03-v1.png",
+                        "text": "Für eine spätere namentliche Zuordnung vorgesehen."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Unbesetzte Karten sind freie Plätze für die weitere Ausarbeitung."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hauptquartier · Ort unbekannt",
+          "commentThreadKey": "zitteraale-gruppe-i-hauptquartier",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Der Rückzugsort der Untoten Aale ist bislang unbekannt. Gerüchte weisen in die Berge von Tŵr Rhewgorn. Weder ein bestimmter Turm noch ein Zugang oder eine Raumfolge sind bestätigt.</p><p>Die Gruppe hat schwere Verluste erlitten und Verstärkung aus dem Hauptquartier der Schwarzen Zitteraale erhalten. Was Reisende über einen möglichen Unterschlupf erfahren, entscheidet sich auf ihren Wegen durch das Gebiet.</p>",
+          "sessionLocation": "",
+          "sessionHint": "Lage unklar · Berge von Tŵr Rhewgorn vermutet",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Ein Schauplatz im Rückzugsraum dieser Unterbande.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

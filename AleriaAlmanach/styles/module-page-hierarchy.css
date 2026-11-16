@@ -723,6 +723,16 @@
   border-top: 1px solid rgba(113, 80, 36, 0.58);
 }
 
+.hierarchy-chart-level.hierarchy-group-start {
+  margin-top: calc(1.4rem * var(--hierarchy-chart-scale, 1));
+  border-top: 1px solid var(--hierarchy-line);
+}
+
+.hierarchy-chart-level.hierarchy-group-start::before,
+.hierarchy-chart-level.hierarchy-group-start::after {
+  display: none;
+}
+
 .hierarchy-chart-level.cols-1 {
   --hierarchy-branch-left: 50%;
   --hierarchy-branch-right: 50%;
@@ -756,6 +766,21 @@
 .hierarchy-level-label {
   text-align: center;
   opacity: 0.76;
+}
+
+.hierarchy-level-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-bottom: 0.35rem;
+}
+
+.hierarchy-level-emblem {
+  width: calc(4.5rem * var(--hierarchy-chart-scale, 1));
+  aspect-ratio: 1;
+  object-fit: contain;
+  flex: none;
 }
 
 .hierarchy-level-nodes {
@@ -1027,12 +1052,12 @@
     width: 100%;
   }
 
-  .hierarchy-tree-mode-tabs .hierarchy-chart-level .hierarchy-level-nodes {
+  .hierarchy-tree-mode-tabs .hierarchy-chart-level:not([data-hierarchy-columns]) .hierarchy-level-nodes {
     grid-template-columns: minmax(0, 1fr);
     min-width: 0;
   }
 
-  .hierarchy-page.fullscreen-active .hierarchy-tree-mode-tabs .hierarchy-level-nodes {
+  .hierarchy-page.fullscreen-active .hierarchy-tree-mode-tabs .hierarchy-chart-level:not([data-hierarchy-columns]) .hierarchy-level-nodes {
     min-width: 0;
   }
 

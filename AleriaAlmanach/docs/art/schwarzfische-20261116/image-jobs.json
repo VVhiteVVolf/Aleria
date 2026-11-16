@@ -1,0 +1,313 @@
+{
+  "mode": "built-in image_gen",
+  "date": "2026-11-16",
+  "jobs": [
+    {
+      "id": "grenn-seolfor-v1",
+      "prompt": "Create ONE NEW 2:3 vertical character portrait for the Aleria fantasy almanac. The first image is the approved STYLE reference only, the other images are Schwarzfisch mercenary ARMOR references. Use the fine matte Tales of Xillia / Frieren anime illustration style of the first reference, confident fine varied dark linework, harmonious matte colors, clean softly balanced cel shading and almost no grain. Subject: Grenn Seolfor, an attractive but characterful adult man age 33 from a lesser Aeldrunmar cavalry house, now a Schwarzfisch mercenary. Short tousled BROWN hair with outward sticking locks, a RED cloth headband tied around the forehead to keep the hair in place, full hair visible. Lively cheeky grin, slightly raised eyebrow, warm alert eyes, clean shaven. Standing relaxed, focus on his FACE and UPPER BODY down to waist, NOT full body. He holds ONE straight practical medieval SPEAR upright beside his shoulder, a visible hand gripping the shaft below the spearhead. Dark blackened scale-and-mail armor with restrained plate shoulder pieces and dark-blue undercloth matching the Schwarzfisch references. A small red-over-blue shield badge bearing three armed black fish on the chest, appropriate to the reference group. Quiet medieval mercenary-camp background, soft tents and wood shapes, daytime. Natural rounded human ears. No horse, no crown, no extra people, no text, no frame, no watermark.",
+      "refs": [
+        "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png",
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Mariner.png"
+      ],
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-81cc266b-2215-41d4-a3e8-cbc2b1690c0e.png",
+      "target": "AleriaAlmanach/assets/schwarzfische/grenn-seolfor-v1.png",
+      "active": false,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/grenn-seolfor-v1.png",
+      "sha256": "1c8e846fa16a395ac03892f60329843bc666d33270b1ed1c9eee496a201b7aaf",
+      "width": 1024,
+      "height": 1536,
+      "references": [
+        {
+          "file": "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        },
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png",
+          "sha256": "964a399c1c8a9662cdc6ee48394c3311bcc78b17d128a0795be506a24fa6d3eb"
+        },
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Mariner.png",
+          "sha256": "0c59a49cb0840899cc41df737da2c84d4b611d395f0b61429c0c37c664844e03"
+        }
+      ]
+    },
+    {
+      "id": "soldat-v1",
+      "prompt": "Create ONE 2:3 vertical upper-body PORTRAIT PLACEHOLDER of an anonymous Schwarzfisch mercenary. First reference gives fine matte anime linework and cel shading, second and third give the mercenary ARMOR. Standing, entire head and shoulders through waist visible, LARGE upper body. Clothing rendered in color: blackened overlapping scale cuirass over dark mail, layered practical steel shoulder plates, dark blue cloth, small red-and-blue three-black-fish badge like reference. Holding one plain upright spear beside shoulder. CRITICAL the ENTIRE HEAD including scalp, ears, neck and face is an anonymous pitch-black shaded SILHOUETTE, softly rimmed charcoal contour, absolutely NO eyes, nose, mouth, skin, hair or facial features. This is a clearly unfilled role, not a real named person. Face is black even in light. Quiet soft grey-beige medieval camp backdrop. Fine drawn dark linework, matte harmonious colors, calm cel shading, subtle depth, no realistic texture, no paper grain, no text, frame or watermark.",
+      "refs": [
+        "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png",
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Kämpfer.png"
+      ],
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-4836e5c0-0a04-45e9-8d70-f86f82383c3d.png",
+      "target": "AleriaAlmanach/assets/schwarzfische/soldat-v1.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/soldat-v1.png",
+      "sha256": "33494c804e3b223fd02a0c765656fc3a04f49e002e97956f0b5412eae61b2cfd",
+      "width": 1024,
+      "height": 1536,
+      "references": [
+        {
+          "file": "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        },
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png",
+          "sha256": "964a399c1c8a9662cdc6ee48394c3311bcc78b17d128a0795be506a24fa6d3eb"
+        },
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Kämpfer.png",
+          "sha256": "fbcc8f87f14cfccf3c32d5faf165484bf0d91da00404443d7b5f031af152d7c5"
+        }
+      ]
+    },
+    {
+      "id": "schreiber-v1",
+      "prompt": "Create ONE 2:3 vertical upper-body PORTRAIT PLACEHOLDER for an anonymous treasury officer / contract scribe in the Schwarzfisch mercenary company. First reference is the approved fine matte ANIME style. Second is the Schwarzfisch group heraldry and colors only. Standing, entire head, shoulders and upper body down to waist, large silhouette. Clothing appropriate to medieval administration: sober dark navy wool robe over muted linen collar, charcoal sleeveless short surcoat with restrained ochre piping, leather belt and one small closed ledger at waist, quill held simply in one hand. Small red-over-blue badge of three armed black fish on upper chest matching the group. CRITICAL ENTIRE HEAD and neck, including scalp and ears, must be pitch-black shaded anonymous SILHOUETTE with slight charcoal rim, absolutely NO eyes, nose, mouth, skin or hair. An unfilled ROLE. Quiet softly drawn medieval stone writing-office backdrop. Fine confident varying dark anime outlines, matte harmonious colors, softly balanced clean cel shading, almost no grain. No armor helmet, crown, modern office items, printed words, text, frame or watermark.",
+      "refs": [
+        "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png"
+      ],
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-794b4517-a661-4b7f-b0ae-7236b4431b80.png",
+      "target": "AleriaAlmanach/assets/schwarzfische/schreiber-v1.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/schreiber-v1.png",
+      "sha256": "cc310d739aaf7f581139156286a2d89f56004971914259776be513509d933def",
+      "width": 1024,
+      "height": 1536,
+      "references": [
+        {
+          "file": "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        },
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png",
+          "sha256": "964a399c1c8a9662cdc6ee48394c3311bcc78b17d128a0795be506a24fa6d3eb"
+        }
+      ]
+    },
+    {
+      "id": "offizier-v1",
+      "prompt": "Create ONE 2:3 vertical upper-body PORTRAIT PLACEHOLDER for an anonymous Schwarzfisch mercenary company role. Input image 1 defines the approved fine matte Tales of Xillia / Frieren anime style, input image 2 defines Schwarzfisch group colors, emblem and equipment. Standing calmly, LARGE head and shoulders through waist, complete head visible. CRITICAL: entire head, scalp, ears, face and neck are a pitch-black shaded anonymous SILHOUETTE, subtle charcoal rim only, absolutely NO skin, eyes, nose, mouth or readable facial features. Clothing is rendered in color with fine confident varying dark anime outlines, matte harmonious colors, clean softly balanced cel shading and almost no grain. A small red-over-blue badge with three armed black fish matching reference. Quiet subdued medieval backdrop with simple softly drawn shapes. No text, no frame, no watermark, no modern objects. Role: company officer / troop sergeant. Fine blackened scale-and-mail armor with articulated dark steel shoulder plates, deep navy short command cloak, modest old-brass clasp, one empty gloved hand resting on belt. No crown, no visible weapon. Medieval camp backdrop.",
+      "refs": [
+        "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png"
+      ],
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-901da1e6-04ef-4776-822e-1c381dedcbcb.png",
+      "target": "AleriaAlmanach/assets/schwarzfische/offizier-v1.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/offizier-v1.png",
+      "sha256": "4600c73d9d8873efe9e4346d70cb0c02488ef64eddef617132fc1a4c74287087",
+      "width": 1024,
+      "height": 1536,
+      "references": [
+        {
+          "file": "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        },
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png",
+          "sha256": "964a399c1c8a9662cdc6ee48394c3311bcc78b17d128a0795be506a24fa6d3eb"
+        }
+      ]
+    },
+    {
+      "id": "kundschafter-v1",
+      "prompt": "Create ONE 2:3 vertical upper-body PORTRAIT PLACEHOLDER for an anonymous Schwarzfisch mercenary company role. Input image 1 defines the approved fine matte Tales of Xillia / Frieren anime style, input image 2 defines Schwarzfisch group colors, emblem and equipment. Standing calmly, LARGE head and shoulders through waist, complete head visible. CRITICAL: entire head, scalp, ears, face and neck are a pitch-black shaded anonymous SILHOUETTE, subtle charcoal rim only, absolutely NO skin, eyes, nose, mouth or readable facial features. Clothing is rendered in color with fine confident varying dark anime outlines, matte harmonious colors, clean softly balanced cel shading and almost no grain. A small red-over-blue badge with three armed black fish matching reference. Quiet subdued medieval backdrop with simple softly drawn shapes. No text, no frame, no watermark, no modern objects. Role: scout and dispatch rider. Practical brown hooded cloak over flexible dark mail and leather scale vest, small back quiver with visible arrow fletchings and leather dispatch satchel. Hood surrounds a wholly black anonymous head. No bow in hand. Simple woodland/camp backdrop.",
+      "refs": [
+        "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Ranger.png"
+      ],
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-1ffab3f9-7255-48e7-b35c-d1d46da5bb66.png",
+      "target": "AleriaAlmanach/assets/schwarzfische/kundschafter-v1.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/kundschafter-v1.png",
+      "sha256": "1fd40bd370d7ec7f56722d3abc767f7720b0ef32f4a5f11b15117e2b2db0cd08",
+      "width": 1024,
+      "height": 1536,
+      "references": [
+        {
+          "file": "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        },
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Ranger.png",
+          "sha256": "58c40f1cf6d053f69da30809a671b545281ed5e1a2cfd49ad1cc97094dad36cf"
+        }
+      ]
+    },
+    {
+      "id": "mariner-v1",
+      "prompt": "Create ONE 2:3 vertical upper-body PORTRAIT PLACEHOLDER for an anonymous Schwarzfisch mercenary company role. Input image 1 defines the approved fine matte Tales of Xillia / Frieren anime style, input image 2 defines Schwarzfisch group colors, emblem and equipment. Standing calmly, LARGE head and shoulders through waist, complete head visible. CRITICAL: entire head, scalp, ears, face and neck are a pitch-black shaded anonymous SILHOUETTE, subtle charcoal rim only, absolutely NO skin, eyes, nose, mouth or readable facial features. Clothing is rendered in color with fine confident varying dark anime outlines, matte harmonious colors, clean softly balanced cel shading and almost no grain. A small red-over-blue badge with three armed black fish matching reference. Quiet subdued medieval backdrop with simple softly drawn shapes. No text, no frame, no watermark, no modern objects. Role: naval mercenary and boatswain. Dark navy wool tunic over a linen sleeve, flexible dark scale vest and leather shoulder pieces, plain black headscarf around the completely black anonymous head, one simple coil of rope at belt. No pirate hat, no firearm. Quiet harbor and mast shapes behind.",
+      "refs": [
+        "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Mariner.png"
+      ],
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-06ebda8b-734c-4a62-b1cf-1d652c606c04.png",
+      "target": "AleriaAlmanach/assets/schwarzfische/mariner-v1.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/mariner-v1.png",
+      "sha256": "29c1b76c85ab23d6b6856c38af8cba515262ea9dbb2dd4a64c3521a9d21f85c1",
+      "width": 1024,
+      "height": 1536,
+      "references": [
+        {
+          "file": "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        },
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Schwarzfisch Mariner.png",
+          "sha256": "0c59a49cb0840899cc41df737da2c84d4b611d395f0b61429c0c37c664844e03"
+        }
+      ]
+    },
+    {
+      "id": "kampfmagier-v1",
+      "prompt": "Create ONE 2:3 vertical upper-body PORTRAIT PLACEHOLDER for an anonymous Schwarzfisch mercenary company role. Input image 1 defines the approved fine matte Tales of Xillia / Frieren anime style, input image 2 defines Schwarzfisch group colors, emblem and equipment. Standing calmly, LARGE head and shoulders through waist, complete head visible. CRITICAL: entire head, scalp, ears, face and neck are a pitch-black shaded anonymous SILHOUETTE, subtle charcoal rim only, absolutely NO skin, eyes, nose, mouth or readable facial features. Clothing is rendered in color with fine confident varying dark anime outlines, matte harmonious colors, clean softly balanced cel shading and almost no grain. A small red-over-blue badge with three armed black fish matching reference. Quiet subdued medieval backdrop with simple softly drawn shapes. No text, no frame, no watermark, no modern objects. Role: company battle mage. Deep navy hooded traveling robe, modest antique-gold edging, small dark scale shoulder panels and leather belt pouches based closely on supplied mage clothing. Whole hood opening contains a pure black anonymous head. Hands relaxed, no magical light or spell effects. Quiet medieval stone chamber.",
+      "refs": [
+        "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Kampfmagier.png"
+      ],
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-77c886c5-94ac-43db-bec6-29f615104472.png",
+      "target": "AleriaAlmanach/assets/schwarzfische/kampfmagier-v1.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/kampfmagier-v1.png",
+      "sha256": "977b7a6df3bacffd58ee3b72087fb81b4ffde848fa00ffeaa8105dff2c31a3ba",
+      "width": 1024,
+      "height": 1536,
+      "references": [
+        {
+          "file": "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        },
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Kampfmagier.png",
+          "sha256": "daac17926b99905ee7acb70d0e1d5735e9007a6ac5bf8d7d6ba31bc5c2bd1838"
+        }
+      ]
+    },
+    {
+      "id": "hofmeister-v1",
+      "prompt": "Create ONE 2:3 vertical upper-body PORTRAIT PLACEHOLDER for an anonymous Schwarzfisch mercenary company role. Input image 1 defines the approved fine matte Tales of Xillia / Frieren anime style, input image 2 defines Schwarzfisch group colors, emblem and equipment. Standing calmly, LARGE head and shoulders through waist, complete head visible. CRITICAL: entire head, scalp, ears, face and neck are a pitch-black shaded anonymous SILHOUETTE, subtle charcoal rim only, absolutely NO skin, eyes, nose, mouth or readable facial features. Clothing is rendered in color with fine confident varying dark anime outlines, matte harmonious colors, clean softly balanced cel shading and almost no grain. A small red-over-blue badge with three armed black fish matching reference. Quiet subdued medieval backdrop with simple softly drawn shapes. No text, no frame, no watermark, no modern objects. Role: seneschal, quartermaster and supply steward. Practical dark navy wool surcoat over charcoal linen, broad functional brown leather belt with a modest key ring, rolled supply tally in one hand. Small fish badge on the surcoat. Plain wool shoulder mantle, civilian clothes, no armor helmet. Quiet medieval storeroom backdrop.",
+      "refs": [
+        "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png"
+      ],
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-a9a7ba14-bfc2-4647-988f-eedf143aea17.png",
+      "target": "AleriaAlmanach/assets/schwarzfische/hofmeister-v1.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/hofmeister-v1.png",
+      "sha256": "74d0c7006ca946e46fb44aff2e18c1dd69d76c3f96a59f4602ac6e60de9406d7",
+      "width": 1024,
+      "height": 1536,
+      "references": [
+        {
+          "file": "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        },
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png",
+          "sha256": "964a399c1c8a9662cdc6ee48394c3311bcc78b17d128a0795be506a24fa6d3eb"
+        }
+      ]
+    },
+    {
+      "id": "herold-v1",
+      "prompt": "Create ONE 2:3 vertical upper-body PORTRAIT PLACEHOLDER for an anonymous Schwarzfisch mercenary company role. Input image 1 defines the approved fine matte Tales of Xillia / Frieren anime style, input image 2 defines Schwarzfisch group colors, emblem and equipment. Standing calmly, LARGE head and shoulders through waist, complete head visible. CRITICAL: entire head, scalp, ears, face and neck are a pitch-black shaded anonymous SILHOUETTE, subtle charcoal rim only, absolutely NO skin, eyes, nose, mouth or readable facial features. Clothing is rendered in color with fine confident varying dark anime outlines, matte harmonious colors, clean softly balanced cel shading and almost no grain. A small red-over-blue badge with three armed black fish matching reference. Quiet subdued medieval backdrop with simple softly drawn shapes. No text, no frame, no watermark, no modern objects. Role: GILDENHEROLD, a herald of the Schwarzfische mercenary guild. Distinctive formal medieval herald's tabard in deep blue and muted red panels, three armed black fish badge prominently on chest, over dark navy clothing with narrow ochre trim. Holds one simple short wooden herald's staff vertically, spare hand relaxed. Entire bare head is black silhouette. No crown, no feathered hat, no trumpet. Quiet camp/stone courtyard backdrop.",
+      "refs": [
+        "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png"
+      ],
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-7689f1e8-7d9c-4995-a3c3-eeb90bdd9e69.png",
+      "target": "AleriaAlmanach/assets/schwarzfische/herold-v1.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/herold-v1.png",
+      "sha256": "6162288ebfcdb72b7e21b44ad073831b862e9aa059240df978d5d2d13bcf17b8",
+      "width": 1024,
+      "height": 1536,
+      "references": [
+        {
+          "file": "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        },
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png",
+          "sha256": "964a399c1c8a9662cdc6ee48394c3311bcc78b17d128a0795be506a24fa6d3eb"
+        }
+      ]
+    },
+    {
+      "id": "feldscher-v1",
+      "prompt": "Create ONE 2:3 vertical upper-body PORTRAIT PLACEHOLDER for an anonymous Schwarzfisch mercenary company role. Input image 1 defines the approved fine matte Tales of Xillia / Frieren anime style, input image 2 defines Schwarzfisch group colors, emblem and equipment. Standing calmly, LARGE head and shoulders through waist, complete head visible. CRITICAL: entire head, scalp, ears, face and neck are a pitch-black shaded anonymous SILHOUETTE, subtle charcoal rim only, absolutely NO skin, eyes, nose, mouth or readable facial features. Clothing is rendered in color with fine confident varying dark anime outlines, matte harmonious colors, clean softly balanced cel shading and almost no grain. A small red-over-blue badge with three armed black fish matching reference. Quiet subdued medieval backdrop with simple softly drawn shapes. No text, no frame, no watermark, no modern objects. Role: field surgeon and wound dresser. Charcoal wool clothing with plain linen apron and dark navy shoulder shawl, compact brown medicine satchel, holding a clean rolled cloth bandage with one hand at waist. Small group fish badge on shoulder clasp. No blood, no surgery, no modern instruments, no religious cross. Entire head black silhouette. Quiet medieval camp healing tent backdrop.",
+      "refs": [
+        "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png"
+      ],
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-f7e090c6-638b-400a-b3e7-e8710c862cbb.png",
+      "target": "AleriaAlmanach/assets/schwarzfische/feldscher-v1.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/feldscher-v1.png",
+      "sha256": "d8d0a072fd4425322a3a5853d93fae5a5d86221ccec7db68413829709291b83d",
+      "width": 1024,
+      "height": 1536,
+      "references": [
+        {
+          "file": "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        },
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png",
+          "sha256": "964a399c1c8a9662cdc6ee48394c3311bcc78b17d128a0795be506a24fa6d3eb"
+        }
+      ]
+    },
+    {
+      "id": "ruestmeister-v1",
+      "prompt": "Create ONE 2:3 vertical upper-body PORTRAIT PLACEHOLDER for an anonymous Schwarzfisch mercenary company role. Input image 1 defines the approved fine matte Tales of Xillia / Frieren anime style, input image 2 defines Schwarzfisch group colors, emblem and equipment. Standing calmly, LARGE head and shoulders through waist, complete head visible. CRITICAL: entire head, scalp, ears, face and neck are a pitch-black shaded anonymous SILHOUETTE, subtle charcoal rim only, absolutely NO skin, eyes, nose, mouth or readable facial features. Clothing is rendered in color with fine confident varying dark anime outlines, matte harmonious colors, clean softly balanced cel shading and almost no grain. A small red-over-blue badge with three armed black fish matching reference. Quiet subdued medieval backdrop with simple softly drawn shapes. No text, no frame, no watermark, no modern objects. Role: company armorer and equipment keeper. Rolled charcoal wool sleeves, sturdy worn brown leather craftsman's apron over dark navy tunic, practical work belt, one small blackened-metal armor shoulder piece held at waist for inspection. Small group fish badge on chest above the apron. No armor helmet. Entire bare head black silhouette. Quiet medieval armory backdrop.",
+      "refs": [
+        "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png"
+      ],
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-98a335cf-849f-4f4e-9f4a-2b64b3caf43e.png",
+      "target": "AleriaAlmanach/assets/schwarzfische/ruestmeister-v1.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/ruestmeister-v1.png",
+      "sha256": "634766b982840605fac46ee856b3d7ecebc76054e06e9cba85a03044dfa201c3",
+      "width": 1024,
+      "height": 1536,
+      "references": [
+        {
+          "file": "E:/Aleria/AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        },
+        {
+          "file": "D:/0-KI Generierte/01 Bilder/Charaktere/Schwarzfische/Standard Rüstung.png",
+          "sha256": "964a399c1c8a9662cdc6ee48394c3311bcc78b17d128a0795be506a24fa6d3eb"
+        }
+      ]
+    },
+    {
+      "id": "grenn-seolfor-v2",
+      "prompt": "Edit the supplied Grenn portrait. Preserve the same character identity, exact 2:3 upper-body framing, BROWN short spiky tousled hair, RED forehead band, upright spear and hand, Schwarzfisch dark scale armor and three-fish chest badge, camp background, fine matte anime drawing and colors. Change ONLY the face, expression and a little head pose. Make this 33-year-old man visibly MORE YOUTHFUL, more HANDSOME, more roguishly CHARISMATIC and CHEEKY. Smooth youthful cheeks with no drawn wrinkles, more harmonious handsome masculine anime facial features, a slightly more defined but elegant jaw, lively bright alert eyes with a playful sideways glance, expressive asymmetric brows, and a confident mischievous crooked grin with less exaggerated bared teeth. Subtle attractive natural face, relaxed self-assured charm. Retain adult appearance. Keep hair, headband, outfit and spear unmistakably identical. No text, frame, watermark or extra props.",
+      "refs": [
+        "C:/Users/fhg_r/.codex/generated_images/01a1e467-36f6-7ce1-b9d9-9605f7e25b16/exec-81cc266b-2215-41d4-a3e8-cbc2b1690c0e.png"
+      ],
+      "generatedPath": "C:\\Users\\fhg_r\\.codex\\generated_images\\01a1e467-36f6-7ce1-b9d9-9605f7e25b16\\exec-f1f19fe9-02c4-4ce5-b290-ff21fc5dbf66.png",
+      "target": "AleriaAlmanach/assets/schwarzfische/grenn-coelret-v2.png",
+      "active": true,
+      "original": "AleriaAlmanach/docs/art/schwarzfische-20261116/originals/grenn-seolfor-v2.png",
+      "sha256": "b2b2c588a7a4b03be204792545734be5b2dbe24c812f4f3da9809b139678090d",
+      "width": 1024,
+      "height": 1536,
+      "references": [
+        {
+          "file": "C:/Users/fhg_r/.codex/generated_images/01a1e467-36f6-7ce1-b9d9-9605f7e25b16/exec-81cc266b-2215-41d4-a3e8-cbc2b1690c0e.png",
+          "sha256": "1c8e846fa16a395ac03892f60329843bc666d33270b1ed1c9eee496a201b7aaf"
+        }
+      ],
+      "selectedCharacterName": "Grenn Coelret",
+      "editorialCorrection": "User rejected Seolfor and requested a less important house. Portrait identity and armor remain suitable."
+    }
+  ]
+}

@@ -18,6 +18,21 @@ const context = {
 vm.runInNewContext(source, context);
 const imageSources = context.window.KartoMapImageSources;
 
+test('a configured revision refreshes the same saved map asset', () => {
+  const image = 'Cenyr/tirfelyn-hof/Kartenbilder/Tirfelyn.png';
+  for (const saved of [image, `${image}?v=old`, `https://dieweltvonaleria.netlify.app/Karten/${image}`]) {
+    assert.equal(imageSources.select(saved, `${image}?v=20261116-map-v2`), `/Karten/${image}?v=20261116-map-v2`);
+  }
+});
+
+test('custom images and image transformation queries retain their saved meaning', () => {
+  const image = 'Cenyr/tirfelyn-hof/Kartenbilder/Tirfelyn.png';
+  for (const saved of ['https://bilder.example/custom.png', `${image}?crop=1`, `${image}?v=custom&crop=1`, 'data:image/png;base64,AAAA']) {
+    assert.equal(imageSources.select(saved, `${image}?v=20261116-map-v2`), imageSources.toPublicUrl(saved));
+  }
+  assert.equal(imageSources.select(`${image}?v=saved`, image), `/Karten/${image}?v=saved`);
+});
+
 test("registry-relative Kartenpfade werden stabil unter /Karten ausgeliefert", () => {
   assert.equal(
     imageSources.toPublicUrl("Cenyr/celtigerns-wacht/Kartenbilder/CeltigernsWacht.png"),

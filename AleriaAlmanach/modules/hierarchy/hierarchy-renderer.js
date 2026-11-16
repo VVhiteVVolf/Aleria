@@ -38,9 +38,12 @@ function buildHierarchyNodeCard(node) {
 function buildHierarchyLevel(level, index) {
   const nodes = Array.isArray(level.nodes) ? level.nodes.slice(0, HIERARCHY_MAX_LEVEL_NODES) : [];
   if (!nodes.length) return '';
+  const columns = sanitizeHierarchyLevelColumns(level.columns) || Math.max(1, Math.min(6, nodes.length));
+  const emblem = sanitizeImageSrc(level.emblem || '');
   return `
-    <section class="hierarchy-chart-level cols-${Math.max(1, Math.min(6, nodes.length))}" data-hierarchy-level="${index}">
-      ${level.label ? `<div class="hierarchy-level-label">${escapeHtml(level.label)}</div>` : ''}
+    <section class="hierarchy-chart-level cols-${columns}${level.startsGroup === true ? ' hierarchy-group-start' : ''}" data-hierarchy-level="${index}"${sanitizeHierarchyLevelColumns(level.columns) ? ` data-hierarchy-columns="${columns}"` : ''}>
+      ${emblem ? `<div class="hierarchy-level-heading"><img class="hierarchy-level-emblem" src="${emblem}" alt="Wappen · ${escapeHtml(level.label || 'Gruppe')}" loading="lazy" decoding="async">${level.label ? `<div class="hierarchy-level-label">${escapeHtml(level.label)}</div>` : ''}</div>`
+        : level.label ? `<div class="hierarchy-level-label">${escapeHtml(level.label)}</div>` : ''}
       <div class="hierarchy-level-nodes">
         ${nodes.map(buildHierarchyNodeCard).join('')}
       </div>

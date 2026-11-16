@@ -1,0 +1,1071 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-16T18:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Schwarze Zitteraale",
+      "tab": "Kriminalität",
+      "path": [
+        "Schwarze Zitteraale"
+      ]
+    },
+    "entry": {
+      "id": "schwarze-zitteraale",
+      "title": "Die Schwarzen Zitteraale",
+      "subtitle": "Raubritter und acht Unterbanden · Celtigerns Wacht",
+      "type": "Raubritterbande",
+      "category": "Kriminalität · Celtigerns Wacht",
+      "icon": "⚔",
+      "symbol": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+      "image": "/AleriaAlmanach/assets/schwarze-zitteraale/scenes/hohlweg.png",
+      "previewImage": "/AleriaAlmanach/assets/schwarze-zitteraale/scenes/hohlweg.png",
+      "stamp": "CELTIGERNS WACHT",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "zitteraaleRevision": "20261116-unterbanden-v4",
+      "sessionCast": [
+        "zitteraale-schwarzer-zitteraal",
+        "zitteraale-schlickzahn",
+        "zitteraale-nachtkieme",
+        "zitteraale-donnerkiefer"
+      ],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Schwarzen Zitteraale",
+          "commentThreadKey": "zitteraale-uebersicht",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/scenes/hohlweg.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Wo der Weg zwischen Böschung und Wasser eng wird, genügt eine umgestürzte Karre. Dann lösen sich Gestalten aus dem Schilf, und ein schwarzer Aal blitzt auf dunklem Tuch. Den Namen der Männer erfährt der Reisende selten. Ihre Forderung versteht er sofort.</p><p>Die <strong>Schwarzen Zitteraale</strong> sind eine Raubritterbande in <strong>Celtigerns Wacht</strong>. Ihre ältesten Gefolgsleute entstammen den versprengten Dienern des Hauses <strong>Illysywen</strong>, das im Krieg von 1720 auf der Seite Ceitheachs stand und unterging. Seit 1720 sammelte ihr Anführer Überlebende, Deserteure und ehemalige Bannerkrieger um sich. Seit beinahe zwanzig Jahren terrorisiert die Bande die Grafschaft.</p><p>Der Schwarze Zitteraal hält sie unter einem Zeichen zusammen, das an die Illysywen erinnert. Was er als fortgesetzte Fehde gegen die Sieger darstellt, bezahlen Bauern, Reisende und Händler mit Vorräten, Besitz und Leben.</p>",
+          "stats": [
+            [
+              "Art",
+              "Raubritterbande"
+            ],
+            [
+              "Gebiet",
+              "Celtigerns Wacht · Straßen, Küstenwege und Umland"
+            ],
+            [
+              "Ursprung",
+              "Untergang der Illysywen 1720 · Bandenbildung seit 1720"
+            ],
+            [
+              "Führung",
+              "Der Schwarze Zitteraal und zwei Stellvertreter"
+            ],
+            [
+              "Unterbanden",
+              "Acht Gruppen mit eigenen Führern und Gruppenakten"
+            ],
+            [
+              "Fahndung",
+              "35 Goldtaler auf das Bandenhaupt"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Machenschaften · Druck und Beute",
+          "commentThreadKey": "zitteraale-vorgehen",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/scenes/hohlweg.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Die Unterbanden beobachten Wege und Gewohnheiten, bevor sie zugreifen. Sie überfallen Frachtzüge, erpressen Gehöfte und treiben gestohlenes Vieh über Nebenwege fort. Einzelne treten als Reisende oder Kriegsknechte auf. Erst beim Zugriff werden aus unauffälligen Männern eine gemeinsame Schar.</p><p>Beute allein hält die Bande nicht am Leben. Nahrung, Futter, brauchbare Waffen und Menschen, die eine Übergabe nicht hinterfragen, sind ebenso wichtig. Die Führung verteilt diese Mittel und damit auch die Abhängigkeit ihrer Leute. Verbindungen zu Hehlern und Schmugglern bleiben absichtlich in einzelne Wege und Treffen aufgeteilt.</p><p><strong>Die Untoten Aale</strong>, die erste Unterbande unter <strong>Medrawd Angau</strong>, verantworten den Angriff auf Llysfaen und den Überfall auf das <strong>Bradrhith-Gestüt</strong>. Sir Rhys Draig fügte der Schar schwere Verluste zu und tötete ihren damaligen ersten Leutnant. Medrawd war abwesend. Der zweite Leutnant Rhodri und die einfachen Mitglieder Brychan und Tegid wurden festgenommen. Die Gruppe erhielt später Rekruten und Verstärkung aus dem Bandenhauptquartier.</p>",
+          "stats": [
+            [
+              "Ziele",
+              "Reisende, Karawanen, Höfe und Geschäfte"
+            ],
+            [
+              "Vorgehen",
+              "Schutzgelder · Raub · Terror · Anschläge"
+            ],
+            [
+              "Beutewege",
+              "Getrennte Übergaben und eingeweihte Mittelsleute"
+            ],
+            [
+              "Llysfaen und Bradrhith",
+              "Die Untoten Aale · Gruppe I."
+            ],
+            [
+              "Öffentlicher Stand",
+              "Bandenhauptquartier nicht lokalisiert"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Bandenordnung · Führung und Gruppen",
+          "commentThreadKey": "zitteraale-hierarchie",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die Schwarzen Zitteraale",
+            "eyebrow": "Raubritter · Führung und Unterbanden",
+            "subtitle": "Ein Bandenführer · zwei Stellvertreter · acht Unterbanden",
+            "centerLabel": "Der Schwarze Zitteraal",
+            "emblem": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+            "sideImage": "/AleriaAlmanach/assets/schwarze-zitteraale/scenes/hauptquartier.png",
+            "motto": "Im trüben Wasser bleibt kein Name.",
+            "description": "<p>Der Schwarze Zitteraal steht an der Spitze. Seine beiden Stellvertreter stimmen die Aufträge und Verstärkungen der acht großen Unterbanden ab. Jede Gruppe besitzt einen eigenen Führer und eine eigene Gruppenakte.</p>",
+            "detailsTitle": "Bandenordnung",
+            "details": [
+              {
+                "icon": "⚑",
+                "label": "Bandenhaupt",
+                "value": "Der Schwarze Zitteraal"
+              },
+              {
+                "icon": "⚔",
+                "label": "Stellvertretung",
+                "value": "Der Schinder und der Eidlose"
+              },
+              {
+                "icon": "⚑",
+                "label": "Unterbanden",
+                "value": "Acht Gruppen mit eigener Führung"
+              },
+              {
+                "icon": "✉",
+                "label": "Verbindungen",
+                "value": "Llineth · Kundschaft und Abnehmer"
+              }
+            ],
+            "chartTitle": "Führung und Gruppen",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 100,
+            "cardFontScale": 92,
+            "chartIntro": "Der Reiter Gruppen zeigt die acht Banner und führt zu den jeweiligen Gruppenakten.",
+            "trees": [
+              {
+                "id": "fuehrung",
+                "label": "Führung",
+                "parentTreeId": "",
+                "levels": [
+                  {
+                    "label": "Bandenführer",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-schwarzer-zitteraal",
+                        "title": "Der Schwarze Zitteraal",
+                        "subtitle": "Bandenhaupt · letzter Befehl",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/schwarzer-zitteraal.png",
+                        "text": "Bestimmt die gemeinsamen Ziele, bestätigt größere Vorhaben und entscheidet über Beuteverteilung und Gefolgschaft."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Stellvertreter",
+                    "columns": 2,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-schlickzahn",
+                        "title": "Der Schinder",
+                        "subtitle": "Rechte Hand · Überfälle und Einschüchterung",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/schlickzahn.png",
+                        "text": "Vertritt das Bandenhaupt bei der Koordination der Unterbanden. Gibt Aufträge weiter und stimmt bewaffnete Einsätze und Verstärkungen ab."
+                      },
+                      {
+                        "id": "zitteraale-donnerkiefer",
+                        "title": "Der Eidlose",
+                        "subtitle": "Linke Hand · Waffen und Bandenordnung",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/donnerkiefer.png",
+                        "text": "Vertritt das Bandenhaupt bei der Koordination der Unterbanden. Gibt Aufträge weiter und stimmt bewaffnete Einsätze und Verstärkungen ab."
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Rädelsführer der acht Unterbanden",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-medrawd-angau",
+                        "title": "Medrawd Angau",
+                        "subtitle": "⚑ Gruppenführer · Gruppe I.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/medrawd-angau-v3.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii-fuehrer",
+                        "title": "Gruppenführer · unbenannt",
+                        "subtitle": "⚑ Gruppenführer · Gruppe II.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-ii-v1.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii-fuehrer",
+                        "title": "Gruppenführer · unbenannt",
+                        "subtitle": "⚑ Gruppenführer · Gruppe III.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-iii-v1.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv-fuehrer",
+                        "title": "Gruppenführer · unbenannt",
+                        "subtitle": "⚑ Gruppenführer · Gruppe IV.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-iv-v1.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v-fuehrer",
+                        "title": "Gruppenführer · unbenannt",
+                        "subtitle": "⚑ Gruppenführer · Gruppe V.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-v-v1.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi-fuehrer",
+                        "title": "Gruppenführer · unbenannt",
+                        "subtitle": "⚑ Gruppenführer · Gruppe VI.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-vi-v1.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii-fuehrer",
+                        "title": "Gruppenführer · unbenannt",
+                        "subtitle": "⚑ Gruppenführer · Gruppe VII.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-vii-v1.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii-fuehrer",
+                        "title": "Gruppenführer · unbenannt",
+                        "subtitle": "⚑ Gruppenführer · Gruppe VIII.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-viii-v1.png",
+                        "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "gruppen",
+                "label": "Gruppen",
+                "parentTreeId": "fuehrung",
+                "levels": [
+                  {
+                    "label": "Acht Gruppen · zwei Viererreihen",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "id": "zitteraale-gruppe-i",
+                        "title": "Die Untoten Aale",
+                        "subtitle": "⚑ Gruppe I.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-untote-aele-v1.png",
+                        "text": "<p>Eine der ältesten Unterbanden der Schwarzen Zitteraale, geführt von Medrawd Angau.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-i\">Gruppenakte öffnen</a></p>"
+                      },
+                      {
+                        "id": "zitteraale-gruppe-ii",
+                        "title": "Gruppe II.",
+                        "subtitle": "⚑ Gruppe II.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+                        "text": "<p>Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-ii\">Gruppenakte öffnen</a></p>"
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iii",
+                        "title": "Gruppe III.",
+                        "subtitle": "⚑ Gruppe III.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+                        "text": "<p>Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-iii\">Gruppenakte öffnen</a></p>"
+                      },
+                      {
+                        "id": "zitteraale-gruppe-iv",
+                        "title": "Gruppe IV.",
+                        "subtitle": "⚑ Gruppe IV.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+                        "text": "<p>Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-iv\">Gruppenakte öffnen</a></p>"
+                      },
+                      {
+                        "id": "zitteraale-gruppe-v",
+                        "title": "Gruppe V.",
+                        "subtitle": "⚑ Gruppe V.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+                        "text": "<p>Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-v\">Gruppenakte öffnen</a></p>"
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vi",
+                        "title": "Gruppe VI.",
+                        "subtitle": "⚑ Gruppe VI.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+                        "text": "<p>Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-vi\">Gruppenakte öffnen</a></p>"
+                      },
+                      {
+                        "id": "zitteraale-gruppe-vii",
+                        "title": "Gruppe VII.",
+                        "subtitle": "⚑ Gruppe VII.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+                        "text": "<p>Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-vii\">Gruppenakte öffnen</a></p>"
+                      },
+                      {
+                        "id": "zitteraale-gruppe-viii",
+                        "title": "Gruppe VIII.",
+                        "subtitle": "⚑ Gruppe VIII.",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+                        "text": "<p>Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.</p><p><a href=\"/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-viii\">Gruppenakte öffnen</a></p>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "verbindungen",
+                "label": "Verbindungen",
+                "parentTreeId": "fuehrung",
+                "levels": [
+                  {
+                    "label": "Kundschaft und Kontakte",
+                    "nodes": [
+                      {
+                        "id": "zitteraale-nachtkieme",
+                        "title": "Llineth",
+                        "subtitle": "Verbindungen · Kundschaft und Abnehmer",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/nachtkieme.png",
+                        "text": "Pflegt Verbindungen zu Kundschaftern, Boten und Abnehmern. Bündelt eingehende Hinweise und bereitet deren Weitergabe an die Führung vor."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "levels": [],
+            "footerNote": "Die einzelnen Gruppenakten enthalten Führung, Räuber, Verstorbene, Ex-Mitglieder und eine eigene Hauptquartiersszene."
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "zitteraale-akte-schwarzer-zitteraal",
+          "pageTitle": "Krimi-Bio · Der Schwarze Zitteraal",
+          "bountyFilePage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+          "description": "<p>Einst ein Krieger im Dienst der Illysywen. Er überlebte deren Untergang im Krieg von 1720 und sammelte später Versprengte und Deserteure. Aus der verlorenen Gefolgschaft formte er eine Bande, deren Beutezüge seinen eigenen Machtanspruch nähren.</p><p><strong>Persönlichkeit:</strong> Beherrscht, charismatisch und berechnend. Spricht leise und lässt andere auf seine Antwort warten. Abmachungen gelten ihm, solange sie seinem Anspruch dienen.</p><p><strong>Vorgehen:</strong> Wählt Ziele und Rückzugswege, verteilt Beute und hält die Rudelführer durch Abhängigkeit und Furcht zusammen. Sein Morgenstern Donnergrollen und der Hengst Zunder machen ihn im offenen Gefecht erkennbar.</p>",
+          "bountyFile": {
+            "archiveTitle": "Der Schwarze Zitteraal",
+            "archiveSubtitle": "Marschallamt · Grafschaft Celtigerns Wacht",
+            "targetName": "Der Schwarze Zitteraal",
+            "aliases": "Bandenbeiname · wirklicher Name unbekannt",
+            "regionalBanner": "/IconOrdner/Fazit%20Icons/Krone.png",
+            "portraitImage": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+            "portraitScale": 100,
+            "portraitX": 50,
+            "portraitY": 30,
+            "status": "Gesucht",
+            "statusNote": "Tot oder lebendig",
+            "threatLevel": 5,
+            "threatText": "Bewaffnet · nicht allein stellen",
+            "bountyAmount": "35",
+            "bountyCurrency": "Goldtaler",
+            "coinImage": "/AleriaAlmanach/public/assets/inventory/coins/goldtaler.png",
+            "descriptionTitle": "Personenbeschreibung",
+            "descriptionRows": [
+              {
+                "label": "Alter",
+                "value": "Etwa 41 Jahre"
+              },
+              {
+                "label": "Größe",
+                "value": "1,86 Schritt"
+              },
+              {
+                "label": "Erkennungszeichen",
+                "value": "Dunkelbraunes Haar unter schwarzer Kapuze, graugrüne Augen, gepflegter kurzer Bart; hochgewachsen und sehnig. Dunkler Panzer mit goldenen Kanten und Aalzeichen."
+              }
+            ],
+            "descriptionNote": "Zeichnung nach Personenbeschreibungen. Kleidung und Auftreten können abweichen.",
+            "chargesTitle": "Tatvorwürfe",
+            "charges": [
+              {
+                "title": "Mord und Plünderung",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Raub und Erpressung",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Brandstiftung",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Anführung einer Raubritterbande",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Schändung und Gewalt gegen Schutzlose",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              }
+            ],
+            "traitsTitle": "Verhalten",
+            "traits": [
+              {
+                "title": "Berechnend",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Charismatisch",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Grausam",
+                "icon": "",
+                "text": ""
+              }
+            ],
+            "companionsTitle": "Erkennbare Gefährten und Ausrüstung",
+            "companions": [
+              {
+                "title": "Zunder",
+                "subtitle": "Rhyfel-Hengst",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/zunder.png",
+                "text": "Breitschultriger dunkelbrauner Hengst mit schwarzer Mähne und dichtem Fesselbehang."
+              },
+              {
+                "title": "Donnergrollen",
+                "subtitle": "Starrer Morgenstern",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/items/donnergrollen.png",
+                "text": "Dunkler Stachelkopf auf langem starren Schaft; kein Kettenflegel. Berichte über Funken sind unbestätigt."
+              }
+            ],
+            "sightingsTitle": "Bekannter Fahndungsraum",
+            "sightings": [
+              {
+                "place": "Lysfaen",
+                "date": "1739 · letzter überlieferter Stand",
+                "observer": "Ältere Fahndungsakte"
+              }
+            ],
+            "connectionsTitle": "Verbindungen und Zugehörigkeit",
+            "factionTitle": "Bande",
+            "factionBanner": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+            "factionName": "Die Schwarzen Zitteraale",
+            "factionText": "Bandenhaupt · letzter Befehl",
+            "alliesTitle": "Gesuchte Mitbeschuldigte",
+            "allies": [
+              {
+                "title": "Der Schinder",
+                "subtitle": "Rechte Hand · Überfälle und Einschüchterung",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
+                "text": ""
+              },
+              {
+                "title": "Llineth",
+                "subtitle": "Verbindungen · Kundschaft und Abnehmer",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
+                "text": ""
+              },
+              {
+                "title": "Der Eidlose",
+                "subtitle": "Linke Hand · Waffen und Bandenordnung",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
+                "text": ""
+              }
+            ],
+            "enemiesTitle": "Verfolgende Obrigkeit",
+            "enemies": [
+              {
+                "title": "Sir Egon Gafyr",
+                "subtitle": "Marschall der Grafschaft",
+                "image": "/IconOrdner/Fazit%20Icons/Ritter.png",
+                "text": "Entgegennahme und Prüfung beim Marschallamt."
+              }
+            ],
+            "supportersTitle": "Ermittlungsstand",
+            "supporters": [
+              {
+                "title": "Verdacht ist kein Nachweis",
+                "image": "/IconOrdner/ReiterIcons/Weltpfade/kriminalitaet.png",
+                "text": "Die Anhörung zum Bradrhith-Hof berührt Kontakte zur Familie Gwregysdu. Daraus folgt keine festgestellte Beteiligung aller Familienangehörigen."
+              }
+            ],
+            "dangerTitle": "Gefährdungsprofil",
+            "dangerProfiles": [
+              {
+                "label": "Kampfkraft",
+                "value": 5,
+                "icon": ""
+              },
+              {
+                "label": "Planung",
+                "value": 5,
+                "icon": ""
+              },
+              {
+                "label": "Tarnung",
+                "value": 4,
+                "icon": ""
+              },
+              {
+                "label": "Gefolgschaft",
+                "value": 4,
+                "icon": ""
+              },
+              {
+                "label": "Fluchtgefahr",
+                "value": 5,
+                "icon": ""
+              }
+            ],
+            "handoverNote": "35 Goldtaler nach bestätigter Ergreifung oder zweifelsfreiem Todesnachweis. Als weitere Belohnung ist ein Ritterschlag ausgeschrieben; Verleihung durch die zuständige Herrschaft.",
+            "footer": "Marschallamt · Fahndungsakten · Kein bestätigter Aufenthaltsort"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "zitteraale-akte-schlickzahn",
+          "pageTitle": "Krimi-Bio · Der Schinder",
+          "bountyFilePage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
+          "description": "<p>Unter wechselnden Feldzeichen lernte er, dass bewaffnete Männer von den Vorräten anderer leben können. Beim Zitteraal fand er einen Herrn, der diese Gewohnheit belohnt. Als dessen rechte Hand treibt er Forderungen ein und bereitet größere Überfälle vor.</p><p><strong>Persönlichkeit:</strong> Reizbar, besitzergreifend und geduldig, wenn Angst ihm nützt. Lacht über kleine Demütigungen und merkt sich jeden Widerspruch.</p><p><strong>Vorgehen:</strong> Führt den ersten Zugriff, schüchtert Gehöfte ein und treibt Forderungen ein. Er bindet Opfer im Gespräch, bis Komplizen die Ausgänge besetzt haben.</p>",
+          "bountyFile": {
+            "archiveTitle": "Der Schinder",
+            "archiveSubtitle": "Marschallamt · Grafschaft Celtigerns Wacht",
+            "targetName": "Der Schinder",
+            "aliases": "Bandenbeiname · wirklicher Name unbekannt",
+            "regionalBanner": "/IconOrdner/Fazit%20Icons/Krone.png",
+            "portraitImage": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
+            "portraitScale": 100,
+            "portraitX": 50,
+            "portraitY": 30,
+            "status": "Gesucht",
+            "statusNote": "Lebendig bevorzugt",
+            "threatLevel": 4,
+            "threatText": "Bewaffnet · nicht allein stellen",
+            "bountyAmount": "13",
+            "bountyCurrency": "Goldtaler",
+            "coinImage": "/AleriaAlmanach/public/assets/inventory/coins/goldtaler.png",
+            "descriptionTitle": "Personenbeschreibung",
+            "descriptionRows": [
+              {
+                "label": "Alter",
+                "value": "Etwa 46 Jahre"
+              },
+              {
+                "label": "Größe",
+                "value": "1,93 Schritt"
+              },
+              {
+                "label": "Erkennungszeichen",
+                "value": "Breiter Cenyri mit kahl rasiertem Kopf, kurzem rostbraunem Kinnbart und einer Lücke zwischen den oberen Schneidezähnen. Gebrochene Nase, schwere dunkle Lederweste über Kettenzeug."
+              }
+            ],
+            "descriptionNote": "Zeichnung nach Personenbeschreibungen. Kleidung und Auftreten können abweichen.",
+            "chargesTitle": "Tatvorwürfe",
+            "charges": [
+              {
+                "title": "Bewaffneter Raub",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Schwere Körperverletzung und Mord",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Erpressung",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Brandstiftung",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              }
+            ],
+            "traitsTitle": "Verhalten",
+            "traits": [
+              {
+                "title": "Jähzornig",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Grausam",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Beharrlich",
+                "icon": "",
+                "text": ""
+              }
+            ],
+            "companionsTitle": "Weitere gesuchte Köpfe",
+            "companions": [
+              {
+                "title": "Der Schwarze Zitteraal",
+                "subtitle": "Bandenhaupt",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+                "text": "Die übrigen Köpfe sind in eigenen Akten verzeichnet."
+              }
+            ],
+            "sightingsTitle": "Bekannter Fahndungsraum",
+            "sightings": [
+              {
+                "place": "Celtigerns Wacht",
+                "date": "Gegenwärtiger Aufenthaltsort unbekannt",
+                "observer": "Marschallamt"
+              }
+            ],
+            "connectionsTitle": "Verbindungen und Zugehörigkeit",
+            "factionTitle": "Bande",
+            "factionBanner": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+            "factionName": "Die Schwarzen Zitteraale",
+            "factionText": "Rechte Hand · Überfälle und Einschüchterung",
+            "alliesTitle": "Gesuchte Mitbeschuldigte",
+            "allies": [
+              {
+                "title": "Der Schwarze Zitteraal",
+                "subtitle": "Bandenhaupt · letzter Befehl",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+                "text": ""
+              },
+              {
+                "title": "Llineth",
+                "subtitle": "Verbindungen · Kundschaft und Abnehmer",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
+                "text": ""
+              },
+              {
+                "title": "Der Eidlose",
+                "subtitle": "Linke Hand · Waffen und Bandenordnung",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
+                "text": ""
+              }
+            ],
+            "enemiesTitle": "Verfolgende Obrigkeit",
+            "enemies": [
+              {
+                "title": "Sir Egon Gafyr",
+                "subtitle": "Marschall der Grafschaft",
+                "image": "/IconOrdner/Fazit%20Icons/Ritter.png",
+                "text": "Entgegennahme und Prüfung beim Marschallamt."
+              }
+            ],
+            "supportersTitle": "Ermittlungsstand",
+            "supporters": [
+              {
+                "title": "Verdacht ist kein Nachweis",
+                "image": "/IconOrdner/ReiterIcons/Weltpfade/kriminalitaet.png",
+                "text": "Die Anhörung zum Bradrhith-Hof berührt Kontakte zur Familie Gwregysdu. Daraus folgt keine festgestellte Beteiligung aller Familienangehörigen."
+              }
+            ],
+            "dangerTitle": "Gefährdungsprofil",
+            "dangerProfiles": [
+              {
+                "label": "Kampfkraft",
+                "value": 5,
+                "icon": ""
+              },
+              {
+                "label": "Planung",
+                "value": 3,
+                "icon": ""
+              },
+              {
+                "label": "Tarnung",
+                "value": 2,
+                "icon": ""
+              },
+              {
+                "label": "Gefolgschaft",
+                "value": 4,
+                "icon": ""
+              },
+              {
+                "label": "Fluchtgefahr",
+                "value": 4,
+                "icon": ""
+              }
+            ],
+            "handoverNote": "Lebendige Übergabe an die zuständige Obrigkeit bevorzugt. Identität und Tatbeteiligung werden vor Auszahlung geprüft.",
+            "footer": "Marschallamt · Fahndungsakten · Kein bestätigter Aufenthaltsort"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "zitteraale-akte-nachtkieme",
+          "pageTitle": "Krimi-Bio · Llineth",
+          "bountyFilePage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
+          "description": "<p>Llineth kannte die Straßen der Grafschaft bereits, bevor die Bande ihre Wege nutzte. Aus kleinen Botengängen wurden bezahlte Hinweise und schließlich die Planung von Hinterhalten. Sie hält Kontakte zu Kundschaftern, Boten und Abnehmern der Beute.</p><p><strong>Persönlichkeit:</strong> Aufmerksam, misstrauisch und wortkarg. Merkt sich Stimmen und kleine Unstimmigkeiten; antwortet selten auf die eigentliche Frage.</p><p><strong>Vorgehen:</strong> Beobachtet Reisegewohnheiten, stellt Kontakte zu Abnehmern her und prüft fremde Nachrichten. Nur wenige erfahren von ihr mehr als ihren nächsten Treffpunkt.</p>",
+          "bountyFile": {
+            "archiveTitle": "Llineth",
+            "archiveSubtitle": "Marschallamt · Grafschaft Celtigerns Wacht",
+            "targetName": "Llineth",
+            "aliases": "Unter dem Namen Llineth bekannt",
+            "regionalBanner": "/IconOrdner/Fazit%20Icons/Krone.png",
+            "portraitImage": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
+            "portraitScale": 100,
+            "portraitX": 50,
+            "portraitY": 30,
+            "status": "Gesucht",
+            "statusNote": "Lebendig bevorzugt",
+            "threatLevel": 3,
+            "threatText": "Bewaffnet · nicht allein stellen",
+            "bountyAmount": "11",
+            "bountyCurrency": "Goldtaler",
+            "coinImage": "/AleriaAlmanach/public/assets/inventory/coins/goldtaler.png",
+            "descriptionTitle": "Personenbeschreibung",
+            "descriptionRows": [
+              {
+                "label": "Alter",
+                "value": "Etwa 37 Jahre"
+              },
+              {
+                "label": "Größe",
+                "value": "1,71 Schritt"
+              },
+              {
+                "label": "Erkennungszeichen",
+                "value": "Schmale braunhaarige Frau mit graubraunen Augen, tiefem seitlichem Zopf und kurz geschnittener rechter Schläfe. Dunkler Reisemantel, schmales Gesicht, Kerbe in der linken Braue."
+              }
+            ],
+            "descriptionNote": "Zeichnung nach Personenbeschreibungen. Kleidung und Auftreten können abweichen.",
+            "chargesTitle": "Tatvorwürfe",
+            "charges": [
+              {
+                "title": "Vorbereitung bewaffneter Überfälle",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Beihilfe zu Mord und Raub",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Erpressung",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Hehlerei",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              }
+            ],
+            "traitsTitle": "Verhalten",
+            "traits": [
+              {
+                "title": "Geduldig",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Misstrauisch",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Verschwiegen",
+                "icon": "",
+                "text": ""
+              }
+            ],
+            "companionsTitle": "Weitere gesuchte Köpfe",
+            "companions": [
+              {
+                "title": "Der Schwarze Zitteraal",
+                "subtitle": "Bandenhaupt",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+                "text": "Die übrigen Köpfe sind in eigenen Akten verzeichnet."
+              }
+            ],
+            "sightingsTitle": "Bekannter Fahndungsraum",
+            "sightings": [
+              {
+                "place": "Celtigerns Wacht",
+                "date": "Gegenwärtiger Aufenthaltsort unbekannt",
+                "observer": "Marschallamt"
+              }
+            ],
+            "connectionsTitle": "Verbindungen und Zugehörigkeit",
+            "factionTitle": "Bande",
+            "factionBanner": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+            "factionName": "Die Schwarzen Zitteraale",
+            "factionText": "Verbindungen · Kundschaft und Abnehmer",
+            "alliesTitle": "Gesuchte Mitbeschuldigte",
+            "allies": [
+              {
+                "title": "Der Schwarze Zitteraal",
+                "subtitle": "Bandenhaupt · letzter Befehl",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+                "text": ""
+              },
+              {
+                "title": "Der Schinder",
+                "subtitle": "Rechte Hand · Überfälle und Einschüchterung",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
+                "text": ""
+              },
+              {
+                "title": "Der Eidlose",
+                "subtitle": "Linke Hand · Waffen und Bandenordnung",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
+                "text": ""
+              }
+            ],
+            "enemiesTitle": "Verfolgende Obrigkeit",
+            "enemies": [
+              {
+                "title": "Sir Egon Gafyr",
+                "subtitle": "Marschall der Grafschaft",
+                "image": "/IconOrdner/Fazit%20Icons/Ritter.png",
+                "text": "Entgegennahme und Prüfung beim Marschallamt."
+              }
+            ],
+            "supportersTitle": "Ermittlungsstand",
+            "supporters": [
+              {
+                "title": "Verdacht ist kein Nachweis",
+                "image": "/IconOrdner/ReiterIcons/Weltpfade/kriminalitaet.png",
+                "text": "Die Anhörung zum Bradrhith-Hof berührt Kontakte zur Familie Gwregysdu. Daraus folgt keine festgestellte Beteiligung aller Familienangehörigen."
+              }
+            ],
+            "dangerTitle": "Gefährdungsprofil",
+            "dangerProfiles": [
+              {
+                "label": "Kampfkraft",
+                "value": 3,
+                "icon": ""
+              },
+              {
+                "label": "Planung",
+                "value": 5,
+                "icon": ""
+              },
+              {
+                "label": "Tarnung",
+                "value": 5,
+                "icon": ""
+              },
+              {
+                "label": "Gefolgschaft",
+                "value": 4,
+                "icon": ""
+              },
+              {
+                "label": "Fluchtgefahr",
+                "value": 5,
+                "icon": ""
+              }
+            ],
+            "handoverNote": "Lebendige Übergabe an die zuständige Obrigkeit bevorzugt. Identität und Tatbeteiligung werden vor Auszahlung geprüft.",
+            "footer": "Marschallamt · Fahndungsakten · Kein bestätigter Aufenthaltsort"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "commentThreadKey": "zitteraale-akte-donnerkiefer",
+          "pageTitle": "Krimi-Bio · Der Eidlose",
+          "bountyFilePage": true,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
+          "description": "<p>Ein ehemaliger Kriegsknecht, der nach Jahren wechselnder Dienste bei den Zitteraalen blieb. Er ordnet das erbeutete Gerät und übt mit den Komplizen, bis aus einem Überfall ein eingeübter Griff wird.</p><p><strong>Persönlichkeit:</strong> Diszipliniert, nachtragend und stolz auf seine Härte. Hält Furcht für eine zuverlässigere Bindung als Freundschaft.</p><p><strong>Vorgehen:</strong> Überwacht Waffen und Wachen, setzt Befehle im Lager durch und stimmt Verstärkungen aus dem Hauptquartier mit den Gruppenführern ab.</p>",
+          "bountyFile": {
+            "archiveTitle": "Der Eidlose",
+            "archiveSubtitle": "Marschallamt · Grafschaft Celtigerns Wacht",
+            "targetName": "Der Eidlose",
+            "aliases": "Bandenbeiname · wirklicher Name unbekannt",
+            "regionalBanner": "/IconOrdner/Fazit%20Icons/Krone.png",
+            "portraitImage": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/donnerkiefer.png",
+            "portraitScale": 100,
+            "portraitX": 50,
+            "portraitY": 30,
+            "status": "Gesucht",
+            "statusNote": "Lebendig bevorzugt",
+            "threatLevel": 5,
+            "threatText": "Bewaffnet · nicht allein stellen",
+            "bountyAmount": "5",
+            "bountyCurrency": "Goldtaler",
+            "coinImage": "/AleriaAlmanach/public/assets/inventory/coins/goldtaler.png",
+            "descriptionTitle": "Personenbeschreibung",
+            "descriptionRows": [
+              {
+                "label": "Alter",
+                "value": "Etwa 43 Jahre"
+              },
+              {
+                "label": "Größe",
+                "value": "1,90 Schritt"
+              },
+              {
+                "label": "Erkennungszeichen",
+                "value": "Kräftiger Aldrimarer mit langem strohblondem Haar, einem straffen Nackenzopf und breitem geflochtenem Bart. Alte helle Narbe vom rechten Mundwinkel zum Kiefer; dunkles Eisen und grauer Wollkragen."
+              }
+            ],
+            "descriptionNote": "Zeichnung nach Personenbeschreibungen. Kleidung und Auftreten können abweichen.",
+            "chargesTitle": "Tatvorwürfe",
+            "charges": [
+              {
+                "title": "Bewaffneter Raub",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Beihilfe zu Mord",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Gewaltsame Einschüchterung",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              },
+              {
+                "title": "Beteiligung an Plünderungen",
+                "icon": "/IconOrdner/Fazit%20Icons/Schwert.png",
+                "text": ""
+              }
+            ],
+            "traitsTitle": "Verhalten",
+            "traits": [
+              {
+                "title": "Diszipliniert",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Rachsüchtig",
+                "icon": "",
+                "text": ""
+              },
+              {
+                "title": "Hochmütig",
+                "icon": "",
+                "text": ""
+              }
+            ],
+            "companionsTitle": "Weitere gesuchte Köpfe",
+            "companions": [
+              {
+                "title": "Der Schwarze Zitteraal",
+                "subtitle": "Bandenhaupt",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+                "text": "Die übrigen Köpfe sind in eigenen Akten verzeichnet."
+              }
+            ],
+            "sightingsTitle": "Bekannter Fahndungsraum",
+            "sightings": [
+              {
+                "place": "Celtigerns Wacht",
+                "date": "Gegenwärtiger Aufenthaltsort unbekannt",
+                "observer": "Marschallamt"
+              }
+            ],
+            "connectionsTitle": "Verbindungen und Zugehörigkeit",
+            "factionTitle": "Bande",
+            "factionBanner": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+            "factionName": "Die Schwarzen Zitteraale",
+            "factionText": "Linke Hand · Waffen und Bandenordnung",
+            "alliesTitle": "Gesuchte Mitbeschuldigte",
+            "allies": [
+              {
+                "title": "Der Schwarze Zitteraal",
+                "subtitle": "Bandenhaupt · letzter Befehl",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schwarzer-zitteraal.png",
+                "text": ""
+              },
+              {
+                "title": "Der Schinder",
+                "subtitle": "Rechte Hand · Überfälle und Einschüchterung",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/schlickzahn.png",
+                "text": ""
+              },
+              {
+                "title": "Llineth",
+                "subtitle": "Verbindungen · Kundschaft und Abnehmer",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/sketches/nachtkieme.png",
+                "text": ""
+              }
+            ],
+            "enemiesTitle": "Verfolgende Obrigkeit",
+            "enemies": [
+              {
+                "title": "Sir Egon Gafyr",
+                "subtitle": "Marschall der Grafschaft",
+                "image": "/IconOrdner/Fazit%20Icons/Ritter.png",
+                "text": "Entgegennahme und Prüfung beim Marschallamt."
+              }
+            ],
+            "supportersTitle": "Ermittlungsstand",
+            "supporters": [
+              {
+                "title": "Verdacht ist kein Nachweis",
+                "image": "/IconOrdner/ReiterIcons/Weltpfade/kriminalitaet.png",
+                "text": "Die Anhörung zum Bradrhith-Hof berührt Kontakte zur Familie Gwregysdu. Daraus folgt keine festgestellte Beteiligung aller Familienangehörigen."
+              }
+            ],
+            "dangerTitle": "Gefährdungsprofil",
+            "dangerProfiles": [
+              {
+                "label": "Kampfkraft",
+                "value": 5,
+                "icon": ""
+              },
+              {
+                "label": "Planung",
+                "value": 3,
+                "icon": ""
+              },
+              {
+                "label": "Tarnung",
+                "value": 2,
+                "icon": ""
+              },
+              {
+                "label": "Gefolgschaft",
+                "value": 3,
+                "icon": ""
+              },
+              {
+                "label": "Fluchtgefahr",
+                "value": 4,
+                "icon": ""
+              }
+            ],
+            "handoverNote": "Lebendige Übergabe an die zuständige Obrigkeit bevorzugt. Identität und Tatbeteiligung werden vor Auszahlung geprüft.",
+            "footer": "Marschallamt · Fahndungsakten · Kein bestätigter Aufenthaltsort"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hauptquartier · Die versunkene Stadt",
+          "commentThreadKey": "zitteraale-hauptquartier",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/scenes/hauptquartier.png",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Hoch in den Bergen Celtigerns Wacht, zwischen den Resten einer antiken <strong>albischen Ruinenstadt</strong>, brennt Licht unter einem halb erhaltenen Gewölbe. Die alten Straßen sind von Wurzeln aufgebrochen; vermauerte Türen, eingestürzte Höfe und Wasserläufe teilen das Gelände in kleine, schlecht einsehbare Winkel.</p><p>Die Zitteraale haben die trockenen Teile besetzt. Unter einem offenen Bogen liegt ihr Versammlungsplatz. Dahinter führen kurze Gänge zu Schlafstellen, Vorratsnischen und einem notdürftig gesicherten Waffenraum. Zunders Anbindestelle liegt im windgeschützten Hof.</p><p>Wer hierher gelangt, ist im inneren Rückzugsraum der Bande. Die Wachen kennen die festen Tritte zwischen den Trümmern; Fremde hören ihre eigenen Schritte lange, bevor sie die erste Stimme zuordnen können.</p>",
+          "sessionHint": "Verborgener Bandenstützpunkt · Standort erst durch das Spiel entdecken.",
+          "sessionEmptyTitle": "Zwischen den alten Mauern",
+          "sessionEmptyText": "Eine Szene im Hauptquartier der Schwarzen Zitteraale.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}
