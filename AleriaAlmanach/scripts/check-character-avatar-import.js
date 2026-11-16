@@ -22,16 +22,19 @@ const context = vm.createContext({
     return /^https:\/\//.test(raw) ? raw : null;
   }
 });
+for (const name of ['image-library-model', 'image-library-import']) {
+  vm.runInContext(fs.readFileSync(path.join(root, 'modules', 'image-library', `${name}.js`), 'utf8'), context);
+}
 vm.runInContext(source, context, { filename: 'character-avatar-import.js' });
 
 async function run() {
-  assert.equal(vm.runInContext('CHARACTER_AVATAR_LIMIT', context), 80);
+  assert.equal(vm.runInContext('CHARACTER_AVATAR_LIMIT', context), 160);
   assert.match(profileSource, /const MAX_EMOTES = CHARACTER_AVATAR_LIMIT;/);
-  assert.match(html, /id="cp-avatar-limit">80<\/span>/);
+  assert.match(html, /id="cp-avatar-limit">160<\/span>/);
   assert.match(html, /data-char-profile-action="import-avatar-links"/);
   assert.match(html, /data-char-profile-action="paste-avatar-links"/);
 
-  context.testSlots = Array.from({ length: 80 }, () => null);
+  context.testSlots = Array.from({ length: 160 }, () => null);
   context.testSlots[0] = { img: 'https://img.example/already.png', label: 'Schon da' };
   context.testRaw = [
     'https://img.example/already.png',
@@ -48,7 +51,7 @@ async function run() {
   assert.equal(result.slots[1].img, 'https://img.example/happy-face.png');
   assert.equal(result.slots[1].label, 'happy face');
 
-  context.fullSlots = Array.from({ length: 80 }, (_, index) => ({
+  context.fullSlots = Array.from({ length: 160 }, (_, index) => ({
     img: `https://img.example/${index}.png`,
     label: String(index)
   }));
@@ -58,9 +61,9 @@ async function run() {
   })`, context);
   assert.equal(fullResult.addedCount, 0);
   assert.equal(fullResult.skippedCapacityCount, 1);
-  assert.equal(fullResult.slots.length, 80);
+  assert.equal(fullResult.slots.length, 160);
 
-  console.log('Character-Avatar-Import: 80er-Limit, Mehrfachimport, Duplikate und Kapazität geprüft.');
+  console.log('Character-Avatar-Import: 160er-Limit, Mehrfachimport, Duplikate und Kapazität geprüft.');
 }
 
 run().catch(error => {

@@ -1,7 +1,8 @@
 import { ImgurEmbedError, requestEmbeddedAlbumImages } from '../lib/imgur-albums/embed-source.mjs';
+import '../../AleriaAlmanach/modules/image-library/image-library-model.js';
 
 const IMGUR_API_ROOT = 'https://api.imgur.com/3';
-const MAX_ALBUM_IMAGES = 80;
+const MAX_ALBUM_IMAGES = globalThis.AleriaCharacterImageSets.avatarLimit;
 
 function json(statusCode, body) {
   return {

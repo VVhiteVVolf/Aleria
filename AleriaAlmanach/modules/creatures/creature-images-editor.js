@@ -1,5 +1,5 @@
-import '../image-library/image-library-import.js?v=20260919-creature-pages-v1';
 import { CREATURE_IMAGE_LIBRARY, getCreatureImageSet, updateCreatureImageSet } from './creature-images-model.js?v=20260919-creature-pages-v1';
+import '../image-library/image-library-import.js?v=20261116-avatar-capacity-v1';
 
 const imports = globalThis.AleriaAvatarImport;
 

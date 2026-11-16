@@ -1,12 +1,13 @@
+import '../image-library/image-library-model.js?v=20261116-avatar-capacity-v1';
+
 // Verlustschutz fuer Medienbibliotheken bei einem vollstaendigen Charakterimport.
 // Profildaten und Mechanik werden durch den Import ersetzt; Bilder und Emotes werden dagegen
 // vereinigt, weil eine aeltere Exportdatei keine spaeter angelegten Sets stillschweigend loeschen
 // darf. Bewusste Loeschungen bleiben Aufgabe des Bildset-Editors und normaler Speichervorgaenge.
 
-// Muss dem Editor-Limit in character-image-sets.js entsprechen. Ein niedrigeres Importlimit
-// würde beim Vollimport trotz Verlustschutz die hinteren, bereits gespeicherten Sets abschneiden.
-const CHARACTER_IMPORT_IMAGE_SET_LIMIT = 20;
-const CHARACTER_IMPORT_EMOTE_LIMIT = 80;
+// Der Vollimport verwendet dieselben Grenzen wie der Bildset-Editor.
+const CHARACTER_IMPORT_IMAGE_SET_LIMIT = globalThis.AleriaCharacterImageSets.limit;
+const CHARACTER_IMPORT_EMOTE_LIMIT = globalThis.AleriaCharacterImageSets.avatarLimit;
 
 function cloneImportValue(value) {
   if (value == null || typeof value !== 'object') return value;

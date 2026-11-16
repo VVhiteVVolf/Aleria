@@ -34,6 +34,26 @@ test('alte Portrait- und Emotedaten werden als kompatibles Standard-Set gelesen'
   assert.equal(sets[0].emotes[0].label, 'Lächeln');
 });
 
+test('160 Avatare je Standard- und benanntem Set bleiben beim Speichern und Laden erhalten', () => {
+  const model = loadImageSetModel();
+  const emotes = Array.from({ length: 161 }, (_, index) => ({
+    img: `https://example.com/avatar-${index}.png`, label: `Avatar ${index}`
+  }));
+  const stored = model.prepareStorage({
+    emotes,
+    imageSets: [{ id: 'kampf', name: 'Kampf', emotes }],
+    activeImageSetId: 'kampf'
+  });
+  assert.equal(model.avatarLimit, 160);
+  assert.equal(stored.emotes.length, 160);
+  assert.equal(stored.emotes[159].img, emotes[159].img);
+  for (const set of model.normalize(stored)) {
+    assert.equal(set.emotes.length, 160);
+    assert.equal(set.emotes[159].img, emotes[159].img);
+  }
+  assert.equal(emotes.length, 161);
+});
+
 test('benannte Sets bleiben getrennt und können leer beginnen', () => {
   const model = loadImageSetModel();
   const character = {
@@ -159,7 +179,7 @@ test('Imgur-Proxy liest ohne Client-ID die öffentliche Einbettung und bewahrt R
   delete process.env.ALERIA_IMGUR_CLIENT_ID;
   const images = [
     { hash: 'Video01', ext: '.mp4' },
-    ...Array.from({ length: 82 }, (_, index) => ({ hash: `Image${index}`, ext: '.png', title: `Bild ${index}` }))
+    ...Array.from({ length: 162 }, (_, index) => ({ hash: `Image${index}`, ext: '.png', title: `Bild ${index}` }))
   ];
   globalThis.fetch = async (url, options) => {
     assert.equal(url, 'https://imgur.com/a/AbC123/embed?pub=true');
@@ -174,9 +194,9 @@ test('Imgur-Proxy liest ohne Client-ID die öffentliche Einbettung und bewahrt R
     const response = await imgurAlbumHandler({ httpMethod: 'GET', queryStringParameters: { album: 'AbC123' } });
     assert.equal(response.statusCode, 200);
     const body = JSON.parse(response.body);
-    assert.equal(body.images.length, 80);
+    assert.equal(body.images.length, 160);
     assert.deepEqual(body.images[0], { url: 'https://i.imgur.com/Image0.png', title: 'Bild 0', description: '' });
-    assert.equal(body.images.at(-1).url, 'https://i.imgur.com/Image79.png');
+    assert.equal(body.images.at(-1).url, 'https://i.imgur.com/Image159.png');
     assert.equal(response.headers['Cache-Control'], 'public, max-age=300');
   } finally {
     globalThis.fetch = previousFetch;

@@ -10,7 +10,7 @@ const CHARACTER_IMAGE_SET_SCHEMA_VERSION = 1;
 const CHARACTER_IMAGE_SET_DEFAULT_ID = 'standard';
 const CHARACTER_IMAGE_SET_LIMIT = 20;
 const CHARACTER_IMAGE_SET_NAME_LIMIT = 60;
-const CHARACTER_IMAGE_SET_EMOTE_LIMIT = 80;
+const CHARACTER_IMAGE_SET_EMOTE_LIMIT = 160;
 
 function normalizeCharacterImageSetText(value, maximum = CHARACTER_IMAGE_SET_NAME_LIMIT) {
   return String(value || '').replace(/\s+/g, ' ').trim().slice(0, maximum);

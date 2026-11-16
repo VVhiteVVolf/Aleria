@@ -12,7 +12,7 @@ function loadEditor() {
   let nextTimerId = 0;
   const context = vm.createContext({
     URL, Date, AbortController,
-    _charPortraitUrl: null, _emoteSlots: [], MAX_EMOTES: 80,
+    _charPortraitUrl: null, _emoteSlots: [],
     window: {},
     document: { getElementById: id => nodes.get(id) || null },
     setTimeout(callback) { const id = ++nextTimerId; timers.set(id, callback); return id; },
@@ -31,6 +31,7 @@ function loadEditor() {
     'characters/character-image-set-editor', 'characters/character-media-editor']) {
     vm.runInContext(fs.readFileSync(new URL(`../modules/${file}.js`, import.meta.url), 'utf8'), context);
   }
+  context.MAX_EMOTES = context.AleriaCharacterImageSets.avatarLimit;
   context.normalizeImageUrlForStorage = context.normalizeCharacterImageSetImageUrl;
   context.scheduleCharacterImageLibraryPersistence = reason => saves.push(reason);
   return {

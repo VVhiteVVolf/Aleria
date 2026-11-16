@@ -1,4 +1,4 @@
-const CHARACTER_AVATAR_LIMIT = 80;
+const CHARACTER_AVATAR_LIMIT = globalThis.AleriaCharacterImageSets.avatarLimit;
 function extractCharacterAvatarUrls(rawValue, normalizeUrl = normalizeImageUrlForStorage) { return globalThis.AleriaAvatarImport.extractUrls(rawValue, normalizeUrl); }
 function deriveCharacterAvatarLabel(...args) { return globalThis.AleriaAvatarImport.deriveLabel(...args); }
 function buildCharacterAvatarImport(options) { return globalThis.AleriaAvatarImport.merge({ normalizeUrl: normalizeImageUrlForStorage, ...options }); }

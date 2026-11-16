@@ -1,4 +1,4 @@
-import '../image-library/image-library-model.js?v=20261102-set-order-v1';
+import '../image-library/image-library-model.js?v=20261116-avatar-capacity-v1';
 
 export const CREATURE_IMAGE_LIBRARY = globalThis.AleriaCharacterImageSets;
 export const MAX_CREATURE_AVATARS = CREATURE_IMAGE_LIBRARY.avatarLimit;

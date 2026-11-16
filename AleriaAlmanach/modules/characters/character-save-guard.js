@@ -1,4 +1,4 @@
-import { mergeCharacterImageLibrary } from './character-import-policy.js?v=20260808-character-storage-audit-v1';
+import { mergeCharacterImageLibrary } from './character-import-policy.js?v=20261116-avatar-capacity-v1';
 import { prepareHouseArmorWrite } from '../house-armor/house-armor-assignment.js?v=20261006-regional-equipment-v2';
 
 // Reine Entscheidungslogik hinter dem Zurücküberschreiben-Schutz aus firebase.js#saveCharacter.

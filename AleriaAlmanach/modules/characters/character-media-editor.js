@@ -87,7 +87,7 @@ const characterMediaEditor = (() => {
     const grid = document.getElementById('cp-emote-grid');
     if (!grid) return;
     // Render occupied slots plus one add tile, retaining the original indices.
-    // Empty capacity remains in state, without 80 empty cards in the DOM.
+    // Empty capacity stays in state without adding vacant cards to the DOM.
     const visibleIndices = _emoteSlots.flatMap((slot, index) => slot?.img ? [index] : []);
     const freeIndex = _emoteSlots.findIndex(slot => !slot?.img);
     if (freeIndex >= 0) visibleIndices.push(freeIndex);

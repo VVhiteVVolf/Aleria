@@ -273,6 +273,32 @@ test('ein Vollimport bewahrt vorhandene Bildsets und vereinigt Emotes desselben 
   assert.equal(prepared.data.combatProfile.weapons[0].id, 'greataxe');
 });
 
+test('ein Vollimport bewahrt 160 Avatare pro Set und begrenzt erst den weiteren Zuwachs', () => {
+  const currentEmotes = Array.from({ length: 99 }, (_, index) => ({
+    img: `/avatar-${index}.png`, label: `Alt ${index}`
+  }));
+  const importedEmotes = Array.from({ length: 63 }, (_, index) => ({
+    img: `/avatar-${index + 98}.png`, label: `Neu ${index + 98}`
+  }));
+  const makeSets = emotes => ['standard', 'kampf'].map(id => ({ id, name: id, emotes }));
+  const current = { ownerUid: 'owner', imageSets: makeSets(currentEmotes), activeImageSetId: 'kampf' };
+  const incoming = { name: 'Avatarimport', imageSets: makeSets(importedEmotes) };
+  const before = structuredClone({ current, incoming });
+  const prepared = prepareCharacterDocumentWrite(current, incoming,
+    { userId: 'owner', replaceExisting: true, now: 999 });
+
+  for (const set of prepared.data.imageSets) {
+    assert.equal(set.emotes.length, 160);
+    assert.equal(set.emotes[0].label, 'Alt 0');
+    assert.equal(set.emotes[98].label, 'Neu 98', 'Import aktualisiert vorhandene Beschriftungen');
+    assert.equal(set.emotes.at(-1).img, '/avatar-159.png');
+    assert.equal(set.emotes.some(emote => emote.img === '/avatar-160.png'), false);
+  }
+  assert.deepEqual(prepared.data.emotes, prepared.data.imageSets[0].emotes);
+  assert.equal(prepared.data.activeImageSetId, 'kampf');
+  assert.deepEqual({ current, incoming }, before, 'Eingaben bleiben unveraendert');
+});
+
 test('nur eine ausdrueckliche Medienersetzung darf serverseitige Bildsets entfernen', () => {
   const prepared = prepareCharacterDocumentWrite(
     {

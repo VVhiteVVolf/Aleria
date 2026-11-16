@@ -14,7 +14,7 @@ function normalizeAvatarUrl(value) {
   } catch { /* Safe project-relative path. */ }
   return raw;
 }
-const CHARACTER_AVATAR_LIMIT = 80;
+const CHARACTER_AVATAR_LIMIT = global.AleriaCharacterImageSets.avatarLimit;
 
 function extractCharacterAvatarUrls(rawValue, normalizeUrl = normalizeAvatarUrl) {
   const raw = String(rawValue || '').trim();

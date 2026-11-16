@@ -20,15 +20,15 @@ test('alte Kreaturen behalten Avatar-IDs, lange Beschriftungen und Kommentar-Ind
   assert.equal(makeCreatureSceneActor(creature).emotes[1].label, avatars[1].label);
 });
 
-test('80 Avatare und zusätzliche Bildersets überstehen Export, Import und Duplizieren', () => {
-  const emotes = Array.from({ length: 80 }, (_, i) => ({ img: `https://example.com/${i}.png`, label: `Ausdruck ${i}` }));
+test('160 Avatare und zusätzliche Bildersets überstehen Export, Import und Duplizieren', () => {
+  const emotes = Array.from({ length: 160 }, (_, i) => ({ img: `https://example.com/${i}.png`, label: `Ausdruck ${i}` }));
   const creature = sanitizeCreature({ id: 'owl', avatars: emotes, imageSets: [{ id: 'winter', name: 'Winterfell', portrait: 'https://example.com/winter.png', emotes }], activeImageSetId: 'winter' });
   const [restored] = normalizeCreatureImportPayload(makeCreatureExportPayload(creature));
-  assert.equal(restored.avatars.length, 80);
+  assert.equal(restored.avatars.length, 160);
   assert.deepEqual(restored.imageSets, creature.imageSets);
   assert.equal(restored.activeImageSetId, 'winter');
   assert.deepEqual(createCreatureDuplicate(restored, []).imageSets, creature.imageSets);
-  assert.equal(CREATURE_IMAGE_LIBRARY.applyPresentation(makeCreatureSceneActor(restored), 'winter').emotes.length, 80);
+  assert.equal(CREATURE_IMAGE_LIBRARY.applyPresentation(makeCreatureSceneActor(restored), 'winter').emotes.length, 160);
 });
 
 test('geleerte Standard-Sets werden nicht aus veralteten Legacy-Feldern wieder befüllt', () => {
@@ -60,7 +60,7 @@ test('Imgur-Einzelbildseiten werden direkt übernommen und vorhandene Links nich
 });
 
 test('volle Galerien melden Kapazität und ersetzen keinen bestehenden Avatar', () => {
-  const slots = Array.from({ length: 80 }, (_, i) => ({ img: `https://example.com/${i}.png`, label: `Bild ${i}` }));
+  const slots = Array.from({ length: 160 }, (_, i) => ({ img: `https://example.com/${i}.png`, label: `Bild ${i}` }));
   const result = imports.merge({ rawValue: 'https://example.com/additional.png', slots });
   assert.equal(result.addedCount, 0);
   assert.equal(result.skippedCapacityCount, 1);

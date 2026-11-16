@@ -3,7 +3,7 @@ const CHARACTER_IMAGE_SET_SCHEMA_VERSION = 1;
 const CHARACTER_IMAGE_SET_DEFAULT_ID = 'standard';
 const CHARACTER_IMAGE_SET_LIMIT = 20;
 const CHARACTER_IMAGE_SET_NAME_LIMIT = 60;
-const CHARACTER_IMAGE_SET_EMOTE_LIMIT = 80;
+const CHARACTER_IMAGE_SET_EMOTE_LIMIT = globalThis.AleriaCharacterImageSets.avatarLimit;
 
 function normalizeCharacterImageSetText(...args) { return globalThis.AleriaCharacterImageSets.normalizeText(...args); }
 function normalizeCharacterImageSetImageUrl(...args) { return globalThis.AleriaCharacterImageSets.normalizeImageUrl(...args); }

@@ -59,6 +59,14 @@ test('links are stored synchronously with no image request; limits and existing 
   assert.equal(result.slots[0].label, 'Eigener Name');
   assert.equal(result.slots[1].img, 'https://i.imgur.com/slow.png');
   assert.equal(slots[1], null);
+  const fullImport = context.buildCharacterAvatarImport({
+    slots: [],
+    rawValue: Array.from({ length: 161 }, (_, index) => `https://example.com/${index}.png`).join('\n')
+  });
+  assert.equal(fullImport.slots.length, 160);
+  assert.equal(fullImport.addedCount, 160);
+  assert.equal(fullImport.skippedCapacityCount, 1);
+  assert.equal(fullImport.slots[159].img, 'https://example.com/159.png');
 });
 
 test('consecutive drops update slots and queue persistence before either promise is awaited', async () => {
@@ -269,13 +277,13 @@ test('empty capacity creates one add tile, sparse avatars retain their original 
   assert.equal(vm.runInContext('_emoteSlots[79].label', context), 'Letzter');
 });
 
-test('a full gallery has 80 occupied cards and no add tile; deleting reuses the freed slot', () => {
+test('a full gallery has 160 occupied cards and no add tile; deleting reuses the freed slot', () => {
   const { context, grid } = loadEmoteGrid();
-  context.initEmoteSlots(Array.from({ length: 80 }, (_, i) => ({ img: `https://example.com/${i}.png` })));
-  assert.equal(grid.children.length, 80);
+  context.initEmoteSlots(Array.from({ length: 160 }, (_, i) => ({ img: `https://example.com/${i}.png` })));
+  assert.equal(grid.children.length, 160);
   assert.ok(grid.children.every(tile => tile.image));
   context.removeEmote(12);
-  assert.equal(grid.children.length, 80);
+  assert.equal(grid.children.length, 160);
   assert.equal(grid.children.at(-1).dataset.emoteIndex, '12');
   assert.equal(grid.children.at(-1).image, null);
 });
