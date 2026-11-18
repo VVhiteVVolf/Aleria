@@ -690,6 +690,18 @@ var AleriaGroupAdventures = (() => {
     ["robuste-haut", "Robuste Haut", "Besonders widerstandsf\xE4hige Haut als k\xF6rperliche Eigenheit: +1 RK. Narben oder Hautbeschaffenheit schm\xE4lern nicht automatisch die Ausdrucksf\xE4higkeit.", { armorClass: 1 }, 3]
   ];
 
+  // modules/character-development/development-animal-speech.js
+  var ANIMAL_SPEECH_TRAIT_DEFINITIONS = Object.freeze([
+    [
+      "kann-mit-tieren-sprechen",
+      "Kann mit Tieren sprechen",
+      "Du kannst dich mit Tieren in Tiersprache verst\xE4ndigen. Die Tiersprache-Blase gibt dir Vorteil auf Mit Tieren umgehen. Bei Rede, Fl\xFCstern und Rufen bleibt die Probe regul\xE4r. Ob ein Tier sich beruhigen oder \xFCberzeugen l\xE4sst, entscheidet weiterhin die Probe.",
+      {},
+      3,
+      { tags: "Begabung \xB7 Sprache \xB7 Tierverbundenheit" }
+    ]
+  ]);
+
   // modules/character-development/development-trait-rules.js
   var damageNames = {
     feuer: ["feuer", "fire"],
@@ -1726,7 +1738,8 @@ var AleriaGroupAdventures = (() => {
     ...FAMILY_TRAIT_DEFINITIONS,
     ...GENERAL_TRAIT_DEFINITIONS,
     ...EXPANSION_TRAIT_DEFINITIONS,
-    ...SPIRITUAL_TRAIT_DEFINITIONS
+    ...SPIRITUAL_TRAIT_DEFINITIONS,
+    ...ANIMAL_SPEECH_TRAIT_DEFINITIONS
   ].map(([id, name, description, mechanics, cost, extra = {}]) => ({
     id: `development-trait-${id}`,
     name,
