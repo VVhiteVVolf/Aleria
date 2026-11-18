@@ -5,6 +5,7 @@ const section = (id, title, ...texts) => ({ id, title, blocks: texts.map(paragra
 const image = (src, alt, caption) => ({ src, width: 1024, height: 1536, alt, ...(caption ? { caption } : {}) });
 const plate = 'assets/predators/urgren/madruach-v1.png';
 const myth = 'assets/predators/urgren/urgren-mythos-v1.png';
+const generalUrgr = 'assets/predators/urgren/urgr-general-v1.png';
 
 export function buildUrgrenOverview() {
   return {
@@ -75,7 +76,7 @@ export function addUrgrenToBearOverview(overview) {
   result.sections.push(section('urgren', 'Urgren – die verfluchten Bären', 'Was die Warge für die Wölfe sind, sind die Urgren für die Bären: durch uralte Verderbnis gezeichnete Linien, deren Feindseligkeit über Hunger und Revier hinausgehen kann. Madrúach ist die erste erschlossene Urgrenlinie. Ihre Geschichte führt in das alte Tír na nDoirí und zu Fear Doirichs Eid von Glannadeor.'));
   result.atlas.intro = 'Acht natürliche Bärenarten besitzen ein vollständiges Dossier. Die Urgren führen zu einem eigenen Hauptartikel und ihrer ersten beschriebenen Linie Madrúach. Drei erhaltene Bildtafeln aus Lothir bleiben als unbestimmte Arten verzeichnet.';
   result.atlas.groups = result.atlas.groups.filter(group => group.id !== 'urgren');
-  const group = { id: 'urgren', title: 'Urgren', kicker: 'Verfluchte Bärenlinien', description: 'Ein eigener Hauptartikel trennt die Verderbnis der Urgren von den natürlichen Bären. Madrúach steht am Anfang ihres Registers.', entries: [{ id: 'urgren', title: 'Urgren – die verfluchten Bären', region: 'Uralte albische Überlieferungen · Estryll', description: 'Hauptartikel mit der Sage von Glannadeor, Klagelied und dem ersten Dossier Madrúach.', status: 'Übersicht verfügbar', href: './urgren/index.html', image: image('../../../' + myth, 'Mythisches Bild der Urgren und des Ahnenbaums von Glannadeor') }] };
+  const group = { id: 'urgren', title: 'Urgren', kicker: 'Verfluchte Bärenlinien', description: 'Ein eigener Hauptartikel trennt die Verderbnis der Urgren von den natürlichen Bären. Madrúach steht am Anfang ihres Registers.', entries: [{ id: 'urgren', title: 'Urgren – die verfluchten Bären', region: 'Uralte albische Überlieferungen · Estryll', description: 'Hauptartikel mit der Sage von Glannadeor, Klagelied und dem ersten Dossier Madrúach.', status: 'Übersicht verfügbar', href: './urgren/index.html', image: image('../../../' + generalUrgr, 'Freigestellter Urgr: gewaltiger zottiger Bär mit finsterem Blick und großen Krallen') }] };
   const lothir = result.atlas.groups.findIndex(item => item.id === 'lothir');
   result.atlas.groups.splice(lothir < 0 ? result.atlas.groups.length : lothir, 0, group);
   return result;

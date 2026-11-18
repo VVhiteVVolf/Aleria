@@ -67,6 +67,24 @@ test('exhausted ability uses are not offered', () => {
   assert.equal(optionsFor([current]).length, 0);
 });
 
+test('Fertigkeitsbeleg und Folgeprobe verwenden denselben begrenzten Reaktionsvorrat', async () => {
+  const helper = source([]);
+  helper.profile.abilities = [{ id: 'aid', name: 'Beistand', active: true, usesMaximum: 1, usesCurrent: 1,
+    triggerRules: [reaction('aid', { skillModifier: 2 }, { actionScope: 'global', radiusMeters: 3 })] }];
+  helper.selectedRuleIds = ['aid'];
+  helper.ruleSelections = [{ ruleId: 'aid', distanceMeters: 3 }];
+  const service = new SkillResolutionService({ rollSkill: async ({ modifier }) => ({ natural: 10, total: 10 + modifier }) });
+  const resolve = () => service.resolve({ actor, settings }, { actorProfile: resolveCombatProfile(actor), ruleSources: [helper] });
+  const receipt = await resolve();
+  const [snapshot] = receipt.ruleAbilitySnapshots;
+  assert.deepEqual([snapshot.sourceActorId, snapshot.change.before, snapshot.change.after], [helper.actorId, 1, 0]);
+  helper.profile = { ...helper.profile, abilities: snapshot.after };
+  await assert.rejects(resolve, /keine Nutzung/);
+  helper.ruleSelections[0].distanceMeters = null;
+  const outOfRange = await resolve();
+  assert.equal(outOfRange.ruleApplications.length, 0);
+});
+
 test('new rolls ignore positive and negative free bonuses while preserving sheet and rule effects', async () => {
   const snapshot = { customModifier: 7, total: 24 };
   const history = structuredClone(snapshot);

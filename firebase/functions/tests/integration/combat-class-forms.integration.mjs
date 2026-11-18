@@ -5,6 +5,7 @@ import { CLASS_FORM_CASES, COMPLETE_FIGHT_CASES, createClassFormActor, createFor
 import { createCombatParty } from './combat-party-context.mjs';
 import { simulateCombatParty } from './combat-party-simulation.mjs';
 import { database, undo, active, encounter, history } from './combat-test-context.mjs';
+import { DRACHENTANZ_FORM_IDS } from '../../../../AleriaAlmanach/modules/combat-styles/drachentanz/drachentanz-ids.js';
 
 const report = { environment: { project: 'demo-aleria-combat-checkup', host: '127.0.0.1:8180', productionWrites: false },
   matrix: [], fights: [], guards: [] };
@@ -18,6 +19,28 @@ function partyDefinitions(fixture) {
     { key: 'opponent', actor: createFormOpponent(), team: 'Gegner' }];
 }
 const resultOf = committed => committed.mechanics.commentSegments.at(-1).combatResolution;
+
+test('Schwertdrache verwendet im Serverbeleg nur gegen einen aktiven Gegner den Duellbonus', async () => {
+  const fixture = createClassFormActor(CLASS_FORM_CASES.find(entry => entry.classId === 'teulu' && entry.formId === DRACHENTANZ_FORM_IDS.schwertdrache));
+  const party = await createCombatParty([...partyDefinitions(fixture), { key: 'second', actor: createFormOpponent('second-opponent'), team: 'Gegner', hitPoints: 1 }]);
+  const attack = (priorSegments = []) => party.prepare({ actor: 'fighter', targets: ['opponent'], actionId: fixture.actionId, weaponGrip: fixture.weaponGrip, priorSegments });
+  const groupAttack = await attack();
+  const groupResult = resultOf(await party.commit(groupAttack));
+  assert.equal(groupResult.attack.modifier, groupAttack.segment.combatResolution.attack.modifier);
+  assert.equal(groupResult.attack.targetDefense, groupAttack.segment.combatResolution.attack.targetDefense);
+
+  const opening = await party.prepare({ actor: 'fighter', targets: ['second'], actionId: `weapon:${fixture.weapon.id}` });
+  assert.equal(opening.segment.combatResolution.targetSnapshot.hitPointsAfter, 0);
+  const duelAttack = await attack([opening.segment]);
+  const committed = await party.commit(duelAttack);
+  const duelResult = resultOf(committed);
+  assert.equal((await active()).participants.get('second-opponent').status, 'defeated');
+  assert.equal(duelResult.attack.modifier, duelAttack.segment.combatResolution.attack.modifier);
+  assert.equal(duelResult.attack.modifier, groupResult.attack.modifier + 3);
+  assert.equal(duelResult.attack.targetDefense, groupResult.attack.targetDefense - 1);
+  await undo(committed.id);
+  assert.equal((await active()).participants.get('second-opponent').status, 'active');
+});
 
 for (const entry of CLASS_FORM_CASES) test(`Formprüfung mit Speicherung und Rücknahme: ${entry.title}`, async () => {
   const fixture = createClassFormActor(entry);

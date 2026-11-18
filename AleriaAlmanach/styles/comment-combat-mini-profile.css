@@ -330,8 +330,16 @@
 .comment-combat-profile-panel .comment-combat-profile-section h4 { color: var(--mini-profile-gold); font-size: 0.82rem; letter-spacing: 0.035em; }
 .comment-combat-profile-panel .comment-combat-profile-section h4 span { color: var(--mini-profile-muted); }
 .comment-combat-profile-panel .comment-combat-profile-section { padding-top: 0.85rem; }
-.comment-combat-profile-panel .comment-combat-profile-resources { gap: 0.45rem; }
+.comment-combat-profile-panel .comment-combat-profile-resources {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 155px), 1fr));
+  gap: 0.45rem;
+}
+.comment-combat-profile-panel .comment-combat-profile-resources-wide { grid-template-columns: 1fr; }
 .comment-combat-profile-panel .comment-combat-profile-resources li { padding: 0.55rem 0.45rem; border-color: var(--mini-profile-line); background: var(--mini-profile-inset); }
+.comment-combat-profile-panel .comment-combat-profile-resources li > span {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
 .comment-combat-profile-panel .comment-combat-profile-resources .is-depleted { color: #d6b3a5; border-color: #6d5448; background: #3c3029; }
 .comment-combat-profile-panel .comment-combat-profile-note { font-size: 0.75rem; line-height: 1.5; margin: 0.65rem 0; }
 .comment-combat-profile-panel .comment-combat-profile-section details { font-size: 0.82rem; }

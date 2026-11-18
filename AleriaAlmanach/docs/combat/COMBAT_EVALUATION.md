@@ -1,6 +1,26 @@
 # Kampf-, Magie- und Fertigkeitsauswertung
 
-Stand: 4. August 2026
+Stand 18. November 2026
+
+## Auswahl und Buchung in der Szene
+
+Der Beitragsentwurf speichert Ziel, Griff, Zahlungsweg und ausgewählte Unterstützungen. Der Zielabstand gilt zwischen handelnder Figur und Ziel. Eine weitere Figur kann für jede ihrer Unterstützungen die Entfernung zum jeweiligen Empfänger angeben. Ein leeres Feld lässt den Abstand offen. Ein numerischer Radius wirkt bis einschließlich seiner Grenze und erfordert einen bekannten Abstand.
+
+Eine beim Kampfstart übernommene Szenenpräsenz ist bereits im Figurenwert enthalten. Hat dieselbe Quelle zusätzlich eine Aura mit Radius, wird deren Wirkung bei passender Entfernung ergänzend berechnet. Eine ausgewählte Schadensaura wirkt auf die einzelnen Treffer einer Angriffsfolge.
+
+Begrenzte Hauptfähigkeiten und ausgelöste Reaktionen verbrauchen ihren Vorrat in der Reihenfolge des Beitrags. Die gemeinsame Auswertung liefert die Zwischenstände für den nächsten Abschnitt und die Rücknahme. Die aktuellen Belege tragen im Kampf `combat-evaluation-16` und bei Proben `skill-evaluation-10`.
+
+## Entwaffnen, Zusatzrettungen und Reitsitz
+
+Eine erfolgreiche Entwaffnung legt eine tatsächlich geführte Waffe in die Szene. Die rechte Hand kommt zuerst, anschließend die linke. Ein weiterer Erfolg kann die zweite Waffe lösen. Ein als einzelner Gegenstand geführtes Waffenpaar fällt zusammen. Bei einer eigenen kritischen Fehlbewegung ist die verwendete Waffe maßgeblich. Reserven, Schilde und natürliche Angriffe bleiben an ihrem Platz. Findet die Technik keine ablegbare Waffe, erhält das Ziel „Griff gestört“ mit −1 auf Angriffe im nächsten eigenen Beitrag. Aufheben verwendet die vorhandene Gegenstandsinteraktion.
+
+Eine Technik kann einen Treffer landen und trotzdem mit ihrer Zusatzwirkung scheitern. Die Rettung gegen Entwaffnen, Niederwerfen oder eine blutende Wunde berücksichtigt die passenden strukturierten Passiva vor dem Wurf und nach seinem vorläufigen Ergebnis. Ein ausdrücklich erzwungener Erfolg kann einen rechnerischen Fehlschlag abwenden. Kosten und Nutzungsgrenzen gelten über den gesamten Beitrag. Für „Blutend“ bestimmen die auslösende Fähigkeit oder der kritische Effekt Dauer und Folgeschaden.
+
+Bei jedem gegnerischen Treffer mit tatsächlichem Verlust an temporären oder regulären TP wird der **passive Reitsitz** geprüft. Der Reitsitz beträgt **10 + Mit Tieren umgehen**. Der SG beträgt **mindestens 10**, darüber gilt **die Hälfte des erlittenen Schadens, abgerundet**. Bei Gleichstand bleibt der Reiter im Sattel. Mehrere Schadensarten desselben Treffers ergeben zusammen eine Prüfung. Jeder eigenständige Folgetreffer erhält eine neue Prüfung, solange die Figur noch reitet. Vollständig abgefangene Treffer und periodischer Zustandsschaden lösen keine Sitzprüfung aus.
+
+Wird der Reiter abgeworfen, würfelt er für die Landung gegen denselben SG. Zum W20 kommt der bessere Wert aus **GES-Rettung** und **Akrobatik**. Passende situative Schutzwirkungen gegen erzwungene Bewegung oder Niederwerfen gelten auch hier. Bei Erfolg landet der Reiter auf den Füßen, bei Fehlschlag erhält er **Liegend** und verliert die Bonusaktion seines nächsten eigenen Beitrags. Eine bereits handlungsunfähige Figur stürzt direkt. Hat der Treffer mit einer eigenen Wirkung bereits erfolgreich niedergeworfen, bleibt diese Wirkung maßgeblich.
+
+Der Kampfbeleg zeigt Schaden, SG, Reitsitz und gegebenenfalls den Landungswurf. Der Sturz ändert die Ausrüstung in der Szene. Das Tier bleibt im Inventar. Erneutes Aufsitzen kostet eine Bonusaktion. Die Szenenhistorie trägt diesen Zustand über das Neuladen und die Rücknahme eines Beitrags.
 
 ## Verbindliches Prinzip
 
@@ -59,7 +79,11 @@ Selbstheilung und unterstützende Magie verwenden dieselbe Engine wie Angriffe. 
 
 ## Kampfliste und Fortschritt
 
-Der Kampf-Announcer verwaltet Beginn, Beitritt, Austritt und Ende ohne Initiative. Er speichert Parteien und konkrete Kreatureninstanzen. Die laufende Liste zeigt TP, Zustände, Konzentration und Kanalisierung. Bei 0 TP gilt eine Figur als kampfunfähig, nicht automatisch als tot; Heilung kann sie wieder aktivieren.
+Der Kampf-Announcer verwaltet Beginn, Beitritt, Austritt und Ende ohne Initiative. Er speichert Parteien und konkrete Kreatureninstanzen. Die laufende Liste zeigt TP, Zustände, Konzentration und Kanalisierung. Bei 0 TP gilt eine Figur als kampfunfähig. Der Tod bleibt eine erzählerische Entscheidung. Eigenschaden und andere bestätigte TP-Änderungen aktualisieren die Kampfliste ebenso wie gegnerische Treffer. Heilung über 0 TP kann besiegte Figuren wieder aktivieren. Die ausdrücklich gesetzte Sonderregel für Handlungen bei 0 TP gilt auch im erklärten Kampf.
+
+Beim Schwertdrachen setzt der Ehrenzweikampf genau einen aktiven Feind auf einer anderen Kampfseite voraus. Die Prüfung erfolgt vor jeder Handlung und gilt für alle Ziele dieser Handlung. Klingenbindung senkt die Verteidigung um einen Punkt bis zum ersten Treffer des Pfades im selben Beitrag. Ein Fehlschlag verbraucht die Wirkung nicht.
+
+Fähigkeiten mit täglicher Erholung werden im aktuellen Szenenprofil für den bestätigten Szenentag angezeigt. Rastfähigkeiten folgen ihrer eigenen Rastregel. Gespeicherte Auswertungen behalten ihre Nutzungsstände.
 
 Beim Kampfende werden reine Kampfzustände und Konzentrationen beendet. Besiegte oder geflohene Gegner liefern anhand ihrer Stufe EP, die gleichmäßig auf berechtigte Mitglieder der siegreichen Partei verteilt werden. Die D&D-5e-Schwellen bis Stufe 20 schalten die bestehende Level-up-Werkstatt frei; Attributs-, Trefferpunkt- und Klassenentscheidungen werden nicht still automatisch angewendet.
 

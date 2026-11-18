@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { applySceneTradeOrder, sceneTradeLinePrice } from '../modules/scene-trade/scene-trade-model.js';
+import { prepareCombatEquipment } from '../modules/combat/combat-equipment-preparation.js';
+import { resolveCombatProfile } from '../modules/combat/combat-profile-resolver.js';
 
 const merchant = { id: 'arkaneum', name: 'Arkanist von Gwynthor' };
 const potion = { id: 'healing', title: 'Heiltrank', category: 'alchemie', priceRange: { minCopper: 10, maxCopper: 20 } };
@@ -16,6 +18,19 @@ const sale = (id, itemId, overrides = {}) => ({ id, direction: 'sell', itemId, q
   priceMode: 'standard', product: {}, ...overrides });
 const order = (records, lines) => applySceneTradeOrder({ records, lines, merchant, operationId: 'shopping', now: '1740-03-09' });
 const record = (result, key) => result.records.find(entry => entry.key === key);
+
+test('a purchased first weapon stays stowed until explicitly selected in the scene', () => {
+  const result = order([character('gawain', 200)], [buy('first-weapon', { product: weapon, definition: weapon })]);
+  const buyer = record(result, 'character:gawain');
+  const weaponId = buyer.combatProfile.weapons[0].id;
+  const before = resolveCombatProfile(buyer, { actionId: `weapon:${weaponId}` });
+  assert.equal(before.weaponLoadout.right.weaponType, 'unarmed');
+  assert.equal(before.selectedAction.compatible, false);
+  const prepared = prepareCombatEquipment(buyer, { rightWeaponId: weaponId });
+  const after = resolveCombatProfile(prepared.character, { actionId: `weapon:${weaponId}` });
+  assert.equal(after.selectedAction.compatible, true);
+  assert.equal(after.weapon.damageFormula, '1d8');
+});
 
 test('one order supports separate payers, gifts and group funds without mutating inputs', () => {
   const records = [character('gawain'), character('ylva'), group()];

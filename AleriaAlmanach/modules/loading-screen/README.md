@@ -1,115 +1,70 @@
 # Reise-Ladebildschirm
 
-Der Almanach zeigt beim Öffnen eine Chibi-Reise mit Gawain rechts an der Spitze,
-danach Freya und Guinevere, mit Abstand Fenrir. Gaul wurde auf Nutzerwunsch entfernt.
-Landschaft und Himmel laufen unabhängig vom tatsächlichen Ladefortschritt.
-Nach Abschluss bleibt der Bildschirm bis zum Klick oder Enter stehen.
+Gawain führt die Reisegruppe auf einer Hochlandstraße an. Freya, Guinevere und
+Fenrir folgen. Die Figuren bewegen sich unabhängig vom Ladefortschritt.
+Der Eintritt erfolgt per Klick oder Enter.
 
-## Verantwortung und Startsignale
+## Start und Freigabe
 
-`loading-screen.js` startet vor den Anwendungsskripten, verwaltet ausschließlich
-den eigenen Dialog, die Startschritte, Fokus, Pause und Freigabe. Der bestehende
-Almanach liegt in einem `display: contents`-Container und bleibt währenddessen
-`inert`. Beim Verlassen werden Sichtbarkeit, ARIA-Attribute und Fokus wiederhergestellt.
-Ohne das Ladeskript bleibt der Almanach zugänglich; die Ladeszene ist initial verborgen.
+`loading-screen.js` startet vor den Anwendungsskripten. Es verwaltet den Dialog,
+die Startschritte, den Fokus und die Pausenwahl. Der Almanach liegt in einem
+`display: contents`-Container mit `inert` während der Ladeanzeige. Beim
+Verlassen stellt der Dialog Sichtbarkeit, ARIA-Attribute und Fokus wieder her.
+Ohne das Ladeskript bleibt der zunächst verborgene Dialog geschlossen.
 
-Die zwei erforderlichen Schritte sind `almanach:app-ready` nach dem lokalen
-Rendern und `almanach:initial-modules-settled` nach dem ersten Modulabgleich.
-Der Balken zählt diese beiden Startschritte, keine geschätzten Downloadprozente.
-Der erste Modulabgleich bleibt erforderlich; eine Offline-Ausweichfassung wird
-ausdrücklich als verfügbarer Stand bezeichnet, ohne einen erfolgreichen
-Online-Abruf vorzutäuschen. `window.load`, Figuren-/Kreaturen-Ereignisse und
-dekorative Grafiken sind keine Eintrittssperren. Weitere Inhalte können nach der
-Freigabe im Hintergrund nachladen. Auch ein dauerhaft offener Bildabruf kann die
-Freigabe des bereitstehenden Archivs nicht verhindern. Nach 15 Sekunden
-erscheint eine ausdrückliche Weiter-Option, sobald das lokale Archiv bereit ist;
-Startfehler bieten stattdessen Neuladen. Keine künstliche Mindestwartezeit.
+Der Fortschritt zählt zwei bestätigte Schritte. `almanach:app-ready` meldet das
+gerenderte Archiv. `almanach:initial-modules-settled` meldet den ersten
+Modulabgleich oder die verfügbare Offline-Fassung. Bestätigte Bootstrap-Fehler
+und ein bekannter Offlinezustand beenden die Verbindungswartefrist sofort.
+Bestätigte Online-Daten gehen bei ihrer Ankunft durch den regulären Abgleich.
+Die lokale Fassung ist ausdrücklich gekennzeichnet. Nach 15 Sekunden können
+Leser das bereits gerenderte Archiv per Weiter-Schaltfläche betreten.
+Bei einem Startfehler ist Neuladen möglich.
 
-Das HTML verwendet `progress max="2"` und die beiden
-`data-loading-step`-Kennungen `shell` und `modules`. Die Anzeige beschreibt die
-Startbereitschaft des Almanachs. Eine zusätzliche `data-loading-images`-Liste
-ist nicht erforderlich; CSS lädt Landschaft und statische Ersatzposen.
+`window.load`, Bilder, Sprechblasen, Musik und die Figurenregister haben
+keinen Einfluss auf die Eintrittsfreigabe. Die Anzeige hat keine künstliche
+Mindestwartezeit.
 
-Die neuen Signale greifen nicht auf Firebase zu und ändern keine Spielstände,
-Online-IDs, Ressourcen, Würfe oder Kampfverläufe.
+## Illustration und Bewegung
 
-## Animation und Grafiken
+Die Hochlandstraße hat AVIF-Fassungen für Desktop und Mobilgeräte sowie einen
+WebP-Fallback. Eine transparente WebP-Datei enthält je vier vollständige
+Laufposen von Gawain, Freya, Guinevere und Fenrir. CSS schaltet die Posen in
+unterschiedlichem Takt um. Dadurch genügt ein gemeinsamer Abruf der Figuren.
 
-`loading-screen-walk.js` setzt vollständige, geschlossene Körper- und Beinbilder
-zusammen. Beide Beine schwingen kontinuierlich in Gegenphase durch dieselbe
-Mittelposition und wechseln dabei ihre vordere/hintere Stellung. Ein Bein wird beim
-Vorführen angehoben. Die Reihenfolge der SVG-Gruppen hält das hintere Bein hinter
-dem vorderen. Jede Figur behält ihre vollständige statische Ersatzpose, bis ihre
-eigenen drei Puppenteile geladen sind. Scheitert ein Teil, bleibt diese Ersatzpose
-erhalten; andere Figuren können ihre fertigen Puppen bereits verwenden. Beim
-Verlassen werden offene Bildanforderungen abgebrochen und verspätete
-DOM-Ersetzungen verhindert. Kopf, Torso, Kleidung und Ausrüstung wechseln niemals zwischen
-unterschiedlichen generierten Einzelbildern.
-Es gibt keine Masken durch Waffen, Umhänge oder Gelenke.
+`loading-screen-banter.js` zeigt gelegentlich eine Sprechblase zu einer Figur.
+Die Zeilen orientieren sich an den Figurenquellen. Pausieren, ein unsichtbarer
+Tab und der Eintritt beenden den laufenden Sprechblasen-Timer. Bei reduzierter
+Bewegung bleibt die Reise zunächst statisch. Die manuelle Pausenwahl gilt
+auch nach einem Tabwechsel.
 
-Bei `prefers-reduced-motion` wird das Puppenmodul zunächst nicht importiert;
-die statischen Posen bleiben sichtbar. Ein ausdrückliches Einschalten der
-Animation lädt die Puppen nach. Unsichtbare Dokumente pausieren die Bewegung
-über `data-visibility` unabhängig von der manuellen Pausenwahl. Beim Zurückkehren
-bleibt eine vom Nutzer pausierte Animation pausiert. Tag und Nacht verwenden
-eine gemeinsame Überlagerung mit animierter Deckkraft statt fortlaufender
-Filterberechnungen auf sämtlichen Landschaftsebenen und Figuren.
-
-Die endgültigen Teile wurden mit dem eingebauten ImageGen erzeugt. Originale und
-vollständige Prompts stehen unter `assets/loading-screen/`, insbesondere
-`puppet-v4-prompts.json` und `image-prompts.json` für die Landschaft. Die
-früheren Sequenzentwürfe sind keine aktiven Webgrafiken.
-
-`python modules/loading-screen/prepare-assets.py` benötigt Pillow, isoliert die
-vollständigen Teile anhand der gemessenen Atlasbereiche, entfernt abgetrennte
-Nachbarfragmente, skaliert ohne Verzerrung und erzeugt transparente WebP-Dateien,
-statische Ersatzposen sowie `loading-screen-puppet-data.js`. Originale bleiben erhalten.
-Die finalen Webgrafiken liegen in `public/assets/loading-screen/`.
+Die mit dem eingebauten ImageGen erzeugten Originale liegen unter
+`assets/loading-screen/source/`. Tatsächliche Prompts und Referenzpfade stehen
+in `assets/loading-screen/journey-v5-prompts.json`.
+`python modules/loading-screen/prepare-assets.py --journey-v5` benötigt Pillow
+mit WebP- und AVIF-Unterstützung. Es erzeugt die aktiven Dateien unter
+`public/assets/loading-screen/`, ein separates Vorschau-GIF und das Manifest
+mit Maßen und SHA-256-Prüfsummen. Die früheren Landschaften und Puppenfassungen
+sind als Quellen für ältere Versionen erhalten.
 
 ## Musik und Bedienung
 
-`loading-screen-sound.js` besitzt ein eigenes Audioelement. Quelle ist die vom
-Nutzer bereitgestellte `Downloads/Ladebild musik.mpeg` (MP3, 219 Sekunden), als
-`ladebild-musik-v1.mp3` für das Web ohne Coverbild aufbereitet. Das Tonmodul wird
-im Kopf der Seite vorgeladen; sobald der Dialog existiert, wird Autoplay versucht.
-Das Audioelement entsteht ohne Quelle und mit `preload="none"`. Die Musikquelle
-wird erst beim Wiedergabeversuch zugewiesen. Meldet die optionale
-Autoplay-Policy des Browsers eine Sperre, wird ohne aktive Nutzerinteraktion
-keine Quelle angefordert. Browser ohne diese Policy-Schnittstelle versuchen
-weiterhin die erlaubte automatische Wiedergabe; ein abgewiesener Versuch gibt
-die Quelle sofort wieder frei. Damit wird der vollständige Titel bei einer
-Autoplay-Sperre nicht vorsorglich über `preload="auto"` angefordert.
-Bei einer Browsersperre wird der Start bei einer passenden Interaktion im
-Ladebildschirm erneut versucht; zusätzlich bleibt der Musikschalter verfügbar.
-Manuelles Ausschalten wird bei weiteren Interaktionen respektiert.
-Der Ton blendet beim Start aus vollständiger Stille über sechs Sekunden ein.
-Beim Betreten blendet er automatisch über 1800 ms aus und pausiert. Der Musikschalter
-ist ein eigenes SVG-Lautsprecher-Icon mit Schallwellen bzw. Stummsymbol. Die runde
-44-Pixel-Trefffläche hat einen eigenen Platz ganz rechts in der festen Kopfzeile
-des Ladedialogs. Nur der Bereich darunter scrollt; die Kopfzeile bleibt stehen.
-Beim Betreten verschwindet der Schalter mit dem Ladebildschirm. Nach dem Ausblenden
-werden Audioquelle und Listener freigegeben. Listener und Audioelement gehören
-weiterhin ausschließlich dem Tonmodul. Manuelles Aus- und Einschalten bleibt während
-des Ladebildschirms möglich. Ein eigener Timer beendet das Ausblenden auch bei angehaltenen
-Animationsframes in Hintergrundtabs. `pagehide` stoppt sofort und gibt Quelle,
-Listener und die Steuerung vollständig frei. Musik blockiert keinen
-Ladefortschritt. Ein verspätetes Tonmodul wird nach dem Eintritt sofort freigegeben
-und startet keine Musik mehr; nach `pagehide` wird es verworfen.
+`loading-screen-sound.js` lädt erst beim Öffnen des Dialogs. Es besitzt ein
+eigenes Audioelement ohne vorgeladene Quelle. Der nutzerseitig bereitgestellte
+Titel läuft als `ladebild-musik-v1.mp3` mit 219 Sekunden Spielzeit.
+Bei erlaubtem Autoplay startet er automatisch. Andernfalls kann eine
+Interaktion im Ladebildschirm die Wiedergabe starten. Der Musikschalter ist
+auch per Tastatur erreichbar.
 
-Animationen sind pausierbar und starten bei `prefers-reduced-motion` pausiert.
-Tab bleibt im Ladedialog. Das Freigeben selbst startet keine Firebase-Schreiboperation.
+Der Ton blendet beim Start über sechs Sekunden und beim Betreten über
+1800 Millisekunden. Nach dem Ausblenden werden Quelle und Listener freigegeben.
+Ein Timer beendet das Ausblenden auch in Hintergrundtabs. `pagehide` gibt die
+Wiedergabe sofort frei. Ein verspätetes Tonmodul startet außerhalb des
+Ladebildschirms keine Musik. Tab und Umschalt-Tab bleiben im geöffneten Dialog.
 
 ## Prüfung
 
-`node --test --experimental-test-isolation=none tests/loading-screen.test.mjs tests/module-store-revision.test.mjs`
-
-Die 33 Ladebildschirmtests prüfen echte Ladefreigabe vor `window.load`, frühe
-Ereignisse, hängende dekorative Abrufe, expliziten Eintritt, Offline-/Fehlerpfade,
-statische Posen bei reduzierter Bewegung, unabhängige Hintergrundtab-Pause,
-quellenloses Audio bis zum Wiedergabeversuch, erlaubtes und gesperrtes Autoplay,
-manuelles Stummschalten, Tonstart und Ausblenden, verspätete Wiedergabeantworten,
-Beenden in Hintergrundtabs, vollständige Ersatzposen bei fehlenden Puppenteilen,
-Abbruch offener Puppenabrufe und das Überkreuzen der Beine. Sie laufen auch im Netlify-Build.
-Die Puppen wurden zusätzlich in mehreren Phasen als Rastervorschau kontrolliert.
-Eine vollständige Browser-Layoutprüfung war in der Codex-Sitzung ohne verfügbaren
-Browser nicht möglich.
+`npm --prefix AleriaAlmanach run test:startup` prüft Startsignale, Zeitüberschreitung,
+Offlinebetrieb, Bedienung, Sprechblasen, Ton, Assets und den Modulabgleich.
+Die Messungen und Browseraufnahmen stehen unter
+`diagnostics/startup-journey-20261118/`.

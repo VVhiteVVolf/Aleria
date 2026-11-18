@@ -96,6 +96,8 @@ async function openCommentForm(options = {}) {
     if (typeof loadSceneActorData === 'function') await loadSceneActorData();
     if (initialRenderToken !== _commentFormInitialRenderToken || !isCommentFormOpen() || threadId !== currentThreadId()) return false;
     restoreCommentDraft({ render: false });
+    // A normal opening explicitly opts out of challenge reply placement.
+    _commentSegments.forEach(segment => { segment.challengeReplyToCommentId = ''; });
     setCommentFormActorsLoading(false);
     options.afterReady?.();
     scheduleCommentFormInitialRender(initialRenderToken);
@@ -134,6 +136,12 @@ function openCommentFormForSkillChallenge(challenge, skillId = '') {
     if (emptyDefault) _commentSegments = [segment];
     else _commentSegments.push(segment);
     _commentKind = settings.kind;
+    segment.challengeReplyToCommentId = window.AleriaSkillChecks?.getChallengeReactionInsertAfterId?.(
+      challenge, getCachedCommentsForThread(getCurrentCommentThreadId())
+    ) || '';
+    showCommentDraftNote(segment.challengeReplyToCommentId
+      ? 'Reaktion wird bei den bisherigen Antworten auf diese Herausforderung eingefügt.'
+      : 'Erste Reaktion auf diese Herausforderung.');
     persistCommentDraft();
   } });
 }

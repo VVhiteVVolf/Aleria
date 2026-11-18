@@ -2,6 +2,7 @@
 // in the character sheet alone does not put a disarmed weapon back in hand.
 export function getDroppedCombatWeapon(profile = {}, weapon = {}) {
   return (profile.droppedWeapons || []).find(drop => drop.weaponId === weapon.id
+    || weapon.heldWeaponIds?.includes(drop.weaponId)
     || weapon.pairedWeaponIds?.includes(drop.weaponId)
     || (weapon.inventoryItemId && drop.item?.id === weapon.inventoryItemId)) || null;
 }

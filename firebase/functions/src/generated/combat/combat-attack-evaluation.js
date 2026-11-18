@@ -2,7 +2,29 @@
 import { evaluateAttackRoll } from './rules/combat-mvp-rules.js';
 import { getSavingThrowTotal, getNaturalRollPolicy } from './combat-profile-model.js?v=20260928-equipment-art-v4';
 import { succeedsProfileSavingThrow } from './combat-natural-roll-policy.js';
-import { collectApplicableCombatRules, markCombatRuleApplications, mergeCombatRuleEffects } from './combat-trigger-rules.js?v=20260928-equipment-art-v4';
+import { collectApplicableCombatRules, getCombatRuleApplicationKey, markCombatRuleApplications, mergeCombatRuleEffects } from './combat-trigger-rules.js?v=20260928-equipment-art-v4';
+
+export function getFirstHitDefenseRule(actor, periods, usedFrequencyKeys) {
+  const feature = actor.selectedAction?.firstHitDefense;
+  if (!feature) return null;
+  const sourceActorId = String(actor.characterId || '');
+  const entryKind = 'class-path';
+  const applicationKey = getCombatRuleApplicationKey({ actorId: sourceActorId }, { entryKind, entryId: feature.id, id: feature.id });
+  const usedKey = `${applicationKey}@comment:${String(periods.comment || '').trim().slice(0, 240)}`;
+  if (usedFrequencyKeys.has(usedKey)) return null;
+  return {
+    applicationKey, usedKey, sourceActorId, sourceActorName: actor.name || '', sourceRole: 'actor',
+    entryKind, entryId: feature.id, entryName: feature.name, ruleId: feature.id, ruleName: feature.name,
+    phase: 'pre-roll', activation: 'passive', frequency: 'comment', effects: { defenseModifier: feature.modifier }
+  };
+}
+
+export function resolveFirstHitDefenseUse(rule, hit, usedFrequencyKeys) {
+  if (!rule) return;
+  // Record the defense for every affected roll and keep the benefit on a miss.
+  if (hit) markCombatRuleApplications([rule], usedFrequencyKeys);
+  else rule.usedKey = '';
+}
 
 export function evaluateSavingThrowRoll(roll, targetDefense) {
   const naturalRoll = Number(roll?.natural);
@@ -85,6 +107,7 @@ export function evaluateCombatAttackRoll(actor, target, attackRoll, context, num
       criticalFailure: cheatEnabled || automaticMode ? false : evaluatedRoll.criticalFailure,
       saveSucceeded: null
     };
+    if (savingThrowMode && !cheatEnabled) attack = applyOutcome(attack, context.preRollEffects.outcome, true);
     const baseAttackState = { ...attack };
     const postRollApplications = collectApplicableCombatRules({
       phase: 'post-roll', actionKind, profileActionId, sources: ruleSources, periods: rulePeriods,
@@ -92,9 +115,11 @@ export function evaluateCombatAttackRoll(actor, target, attackRoll, context, num
     });
     markCombatRuleApplications(postRollApplications, usedRuleFrequencyKeys);
     const postRollEffects = mergeCombatRuleEffects(postRollApplications);
+    const outcomeEffects = savingThrowMode
+      ? mergeCombatRuleEffects([...context.preRollApplications, ...postRollApplications]) : postRollEffects;
     const postAttackModifier = savingThrowMode ? postRollEffects.savingThrowModifier : postRollEffects.attackModifier;
     const postDefenseModifier = savingThrowMode ? postRollEffects.spellSaveDcModifier : postRollEffects.defenseModifier;
-    if (!cheatEnabled && !automaticMode && (postAttackModifier || postDefenseModifier)) {
+    if (!cheatEnabled && !automaticMode && (savingThrowMode || postAttackModifier || postDefenseModifier)) {
       const reevaluated = (savingThrowMode ? evaluateSavingThrowRoll : evaluateAttackRoll)({
         ...attackRoll,
         total: Number(attackRoll.total) + postAttackModifier
@@ -108,7 +133,7 @@ export function evaluateCombatAttackRoll(actor, target, attackRoll, context, num
         saveSucceeded: reevaluated.hit
       } : { ...attack, ...reevaluated };
     }
-    if (!cheatEnabled && !automaticMode) attack = applyOutcome(attack, postRollEffects.outcome, savingThrowMode);
+    if (!cheatEnabled && !automaticMode) attack = applyOutcome(attack, outcomeEffects.outcome, savingThrowMode);
     const postRollAttackState = { ...attack };
     const postHitApplications = collectApplicableCombatRules({
       phase: 'post-hit', actionKind, profileActionId, sources: ruleSources, periods: rulePeriods,
@@ -137,5 +162,5 @@ export function evaluateCombatAttackRoll(actor, target, attackRoll, context, num
     const preDamageAttackState = { ...attack };
   return { attack, cheatEnabled, baseAttackState, postRollAttackState, postHitAttackState, preDamageAttackState,
     postRollApplications, postHitApplications, preDamageApplications, postRollEffects, postHitEffects, preDamageEffects,
-    postAttackModifier, postDefenseModifier };
+    postAttackModifier, postDefenseModifier, postRollConflicts: outcomeEffects.conflicts };
 }

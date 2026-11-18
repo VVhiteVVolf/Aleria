@@ -1,6 +1,7 @@
 import { CREATURE_SHEET_PAGES, renderCreaturePages, renderCreaturePageTabs, creaturePageFromKey } from './creature-sheet-pages.js?v=20260925-creature-biography-v1';
 import { renderCreatureInventory, grantCreatureInventoryItem } from './creature-inventory.js';
-import { itemDefinitionStore } from '../item-definitions/item-definition-store.js';
+import { loadInventoryItemVersions } from '../item-definitions/item-definition-client.js';
+import { applyCombatRecordUpdate } from '../combat/combat-record-update.js';
 import { createCreatureBiographyEditor, collectCreatureBiography } from './creature-biography-editor.js?v=20260925-creature-biography-v2';
 import { renderCreatureImages } from './creature-images-view.js?v=20260919-creature-pages-v1';
 import { createCreatureImagesEditor, collectCreatureImages } from './creature-images-editor.js?v=20260919-creature-pages-v1';
@@ -15,7 +16,6 @@ import {
   getEffectiveSkillProficiency,
   resolveCharacterCombatProfile,
   getMaximumHitPoints,
-  getPassivePerception,
   getProficiencyBonus,
   getSavingThrowTotal,
   getSkillTotal,
@@ -393,7 +393,7 @@ function renderSheet() {
   const maximumHp = getMaximumHitPoints(profile);
   const armorClass = getArmorClass(profile);
   const proficiency = getProficiencyBonus(profile);
-  const passivePerception = getPassivePerception(profile);
+  const passivePerception = resolved.passivePerception;
   const scrollTop = root.scrollTop;
   const contents = {
     overview: renderCreatureDossier(creature),
@@ -423,14 +423,14 @@ function renderSheet() {
     combat: `<div class="creature-sheet-columns">        <section class="creature-sheet-section">
           <div class="creature-section-title"><span>3</span> Abgeleitete Kampfwerte</div>
           <div class="creature-derived-grid">
-            <label><span>TP aktuell</span><input type="number" min="0" max="9999" data-combat-field="hp-current" value="${escapeHtml(profile.hitPoints.current ?? maximumHp)}"><b>♥ ${escapeHtml(profile.hitPoints.current ?? maximumHp)} / ${maximumHp}</b></label>
-            <label><span>TP maximal</span><input type="number" min="1" max="9999" data-combat-field="hp-maximum" value="${maximumHp}"><b>${maximumHp}</b></label>
+            <label><span>TP aktuell</span><input type="number" min="0" max="9999" data-combat-field="hp-current" value="${escapeHtml(profile.hitPoints.current ?? maximumHp)}"><b>♥ ${resolved.currentHitPoints} / ${resolved.maximumHitPoints}</b></label>
+            <label><span>TP maximal</span><input type="number" min="1" max="9999" data-combat-field="hp-maximum" value="${maximumHp}"><b>${resolved.maximumHitPoints}</b></label>
             <label><span>Temporäre LP</span><input type="number" min="0" max="9999" data-creature-profile-path="hitPoints.temporary" value="${profile.hitPoints.temporary || 0}"><b>${profile.hitPoints.temporary || 0}</b></label>
             <label><span>Trefferwürfel</span><select data-creature-profile-path="hitPoints.hitDie">${[4, 6, 8, 10, 12, 20].map(die => `<option value="${die}"${profile.hitPoints.hitDie === die ? ' selected' : ''}>W${die}</option>`).join('')}</select></label>
-            <label><span>Rüstungsklasse</span><input type="number" min="0" max="999" data-combat-field="armor-class" value="${armorClass}"><b>◈ ${armorClass}</b></label>
+            <label><span>Rüstungsklasse</span><input type="number" min="0" max="999" data-combat-field="armor-class" value="${armorClass}"><b>◈ ${resolved.totalDefense}</b></label>
             <label><span>Bewegung · Grundwert (m)</span><input type="number" min="0" max="999" data-combat-field="movement" value="${profile.combat.movement}"><b>Wirksam ${resolved.movement} m</b></label>
-            <label><span>Kompetenzbonus</span><input type="number" min="-20" max="30" data-combat-field="proficiency" value="${proficiency}"><b>+${proficiency}</b></label>
-            <label><span>Passiv-Bonus</span><input type="number" min="-99" max="99" data-combat-field="passive-perception" value="${profile.combat.passivePerceptionBonus}"><b>${passivePerception}</b></label>
+            <label><span>Kompetenzbonus</span><input type="number" min="-20" max="30" data-combat-field="proficiency" value="${proficiency}"><b>${resolved.proficiencyBonus >= 0 ? '+' : ''}${resolved.proficiencyBonus}</b></label>
+            <label><span>Passiv-Bonus</span><input type="number" min="-99" max="99" data-combat-field="passive-perception" value="${profile.combat.passivePerceptionBonus}"><b>${resolved.passivePerception}</b></label>
             <label><span>0-TP-Sonderregel</span><input type="checkbox" data-creature-profile-path="combat.canActAtZeroHitPoints"${profile.combat.canActAtZeroHitPoints ? ' checked' : ''}><b>${profile.combat.canActAtZeroHitPoints ? 'Handlungsfähig' : 'Handlungsunfähig'}</b></label>
           </div>
         </section>
@@ -487,7 +487,7 @@ function renderAttacks(profile) {
         <select data-attack-field="attackAttribute">${ATTRIBUTE_OPTIONS.replace(`value="${weapon.attackAttribute}"`, `value="${weapon.attackAttribute}" selected`)}</select>
         <input data-attack-field="damageFormula" value="${escapeHtml(weapon.damageFormula)}" placeholder="1d8+2">
         <div class="creature-stacked-inputs"><input data-attack-field="damageType" value="${escapeHtml(weapon.damageType)}" placeholder="Stich"><input data-attack-field="range" value="${escapeHtml(weapon.range)}" placeholder="Nahkampf"></div>
-        <textarea rows="2" data-attack-field="notes" placeholder="Effekt / Besonderheit">${escapeHtml(weapon.notes || weapon.properties)}</textarea>
+        <textarea rows="2" data-attack-field="notes" placeholder="${escapeHtml(weapon.properties || 'Effekt / Besonderheit')}">${escapeHtml(weapon.notes)}</textarea>
         <div class="creature-attack-actions"><button type="button" data-creature-action="edit-detail" data-collection="weapons" data-entry-kind="weapon" data-item-id="${escapeHtml(weapon.id)}">Regeln</button><button type="button" class="creature-row-remove" data-creature-action="remove-attack" data-index="${index}" aria-label="Angriff entfernen">×</button></div>
       </div>`).join('') || '<div class="creature-table-empty">Noch kein Angriff. Füge natürliche Angriffe, Waffen oder Zauberangriffe hinzu.</div>'}
     </div>
@@ -666,7 +666,7 @@ function collectDraftFromForm() {
   if (abilityRows.length) profile.abilities = abilityRows.map((row, index) => ({
     ...(profile.abilities[index] || {}), id: profile.abilities[index]?.id || makeId('ability'),
     name: row.querySelector('[data-ability-field="name"]')?.value || '',
-    description: row.querySelector('[data-ability-field="description"]')?.value || '', active: true
+    description: row.querySelector('[data-ability-field="description"]')?.value || '', active: profile.abilities[index]?.active !== false
   }));
   const spellRows = Array.from(root.querySelectorAll('[data-spell-index]'));
   profile.magic.spells = spellRows.map((row, index) => {
@@ -684,7 +684,7 @@ function collectDraftFromForm() {
       presentationKind: row.querySelector('[data-spell-field="presentationKind"]')?.value || 'spell',
       resolutionType: row.querySelector('[data-spell-field="resolutionType"]')?.value || 'spell-attack',
       description: row.querySelector('[data-spell-field="description"]')?.value || '',
-      prepared: true
+      prepared: existing.prepared !== false
     };
   });
   profile.skills = Array.from(root.querySelectorAll('[data-skill-index]')).map((row, index) => ({
@@ -723,7 +723,7 @@ function openSheet(id = '') {
   state.draft = source ? clone(source) : createCreatureDraft();
   // Schnappschuss des beim Öffnen geladenen Kampfprofils/Loots - siehe Speichersystem-Checkup bei
   // Charakteren. Ohne Baseline (neue Kreatur) gilt beim Speichern automatisch alles als geändert.
-  state.draftLoadedSnapshot = source ? { combatProfile: clone(source).combatProfile, loot: clone(source).loot, biography: clone(source).biography } : null;
+  state.draftLoadedSnapshot = source ? clone(source) : null;
   renderSheet();
   setStatus(isBuiltinCreatureId(state.editingId)
     ? 'Versionierte Grundvorlage. Duplizieren erzeugt eine eigene Online-Instanz; Speichern legt eine Online-Fassung dieser Vorlage an.'
@@ -792,11 +792,11 @@ async function saveCurrent() {
       state.editingId = id;
       state.draft.id = id;
       state.draft.createdAt = saved.createdAt;
-      for (const field of ['combatProfile', 'loot', 'biography']) {
+      for (const field of ['combatProfile', 'inventory', 'loot', 'biography']) {
         if (JSON.stringify(state.draft[field]) === JSON.stringify(creature[field])) state.draft[field] = clone(saved[field]);
         else if (Object.hasOwn(data, field)) state.draft[field].revision = saved[field].revision;
       }
-      state.draftLoadedSnapshot = { combatProfile: clone(saved.combatProfile), loot: clone(saved.loot), biography: clone(saved.biography) };
+      state.draftLoadedSnapshot = clone(saved);
       setStatus('Online gespeichert.', 'success');
       renderSheet();
     }
@@ -1110,24 +1110,22 @@ function handleCommittedCreatureCombatProfile(event) {
   updates.filter(update => update?.kind === 'creature').forEach(update => {
     const index = state.creatures.findIndex(creature => String(creature.id || '') === String(update.recordId || ''));
     if (index < 0) return;
-    const currentCombatProfile = state.creatures[index].combatProfile || {};
-    state.creatures[index] = sanitizeCreature({
-      ...state.creatures[index],
-      combatProfile: {
-        ...currentCombatProfile,
-        hitPoints: update.hitPoints ? {
-          ...(currentCombatProfile.hitPoints || {}),
-          current: Math.max(0, Number(update.hitPoints?.current) || 0),
-          temporary: Math.max(0, Number(update.hitPoints?.temporary) || 0)
-        } : currentCombatProfile.hitPoints,
-        resources: Array.isArray(update.resources)
-          ? update.resources.map(resource => ({ ...resource }))
-          : (currentCombatProfile.resources || []),
-        abilities: Array.isArray(update.abilities)
-          ? update.abilities.map(ability => ({ ...ability }))
-          : (currentCombatProfile.abilities || [])
+    const previous = state.creatures[index];
+    const updated = applyCombatRecordUpdate(previous, update);
+    if (updated === previous) return;
+    const record = { ...sanitizeCreature(updated), _builtin: previous._builtin };
+    state.creatures[index] = record;
+    if (state.editingId === record.id && state.draftLoadedSnapshot) {
+      const draft = collectDraftFromForm();
+      const sections = ['inventory', 'combatProfile'];
+      const dirty = selectChangedSections(draft, state.draftLoadedSnapshot, sections);
+      for (const field of sections) if (!dirty.includes(field)) {
+        state.draft[field] = clone(record[field]);
+        state.draftLoadedSnapshot[field] = clone(record[field]);
       }
-    });
+      renderSheet();
+      if (dirty.length) setStatus('Kampfdaten wurden in der Szene geändert. Prüfe den aktuellen Stand vor dem Speichern.', 'error');
+    }
     changed = true;
   });
   if (!changed) return;
@@ -1152,7 +1150,7 @@ async function loadCreatureRecords() {
   try {
     const backend = await ensureBackend();
     state.creatures = mergeCreatureCatalog(await backend.loadCreatures());
-    await itemDefinitionStore.ensureVersions(state.creatures);
+    await loadInventoryItemVersions(state.creatures).catch(error => console.warn('Kreaturen-Itemregeln konnten nicht geladen werden:', error));
     state.loaded = true;
     dispatchChanged();
   } catch (error) {

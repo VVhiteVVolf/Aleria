@@ -25,7 +25,8 @@ function character(classId, attack, weaponType = 'spear', weaponProfileId = weap
 class Dice {
   attacks = [];
   damage = [];
-  async rollAttack(request) { this.attacks.push(request); return { natural: 15, dice: [15], keptDice: [15], total: 15 + request.modifier }; }
+  constructor(natural = 15) { this.natural = natural; }
+  async rollAttack(request) { this.attacks.push(request); return { natural: this.natural, dice: [this.natural], keptDice: [this.natural], total: this.natural + request.modifier }; }
   async rollDamage(request) { this.damage.push(request); return { total: 3, keptDice: [3], notation: request.damageFormula }; }
 }
 
@@ -83,6 +84,44 @@ test('Hinterhaltsschuss grants its bonus only against an actively surprised targ
   Object.assign(wrongWeapon.combatProfile.weapons[0], { weaponType: 'sword', weaponProfileId: 'sword', range: 'Nahkampf' });
   const wrongActor = resolveCombatProfile(wrongWeapon, { actionId: `technique:${shot.id}` });
   assert.equal(wrongActor.selectedAction.compatible, false);
+});
+
+test('Ehrenzweikampf requires exactly one active enemy in a declared encounter', () => {
+  const attack = getAttack('schwertdrache-eroeffnung-des-einen');
+  const source = character('teulu', attack, 'sword');
+  const actionId = `technique:${attack.id}`;
+  const baseline = resolveCombatProfile(source, { actionId, hostileOpponentCount: 2 });
+  assert.equal(baseline.selectedAction.compatible, true);
+  for (const [hostileOpponentCount, bonus] of [[undefined, 0], [null, 0], [0, 0], [1, 2], [2, 0]]) {
+    const profile = resolveCombatProfile(source, { actionId, hostileOpponentCount });
+    assert.equal(profile.attackModifier, baseline.attackModifier + bonus, String(hostileOpponentCount));
+  }
+});
+
+test('Klingenbindung senkt die Verteidigung bis zum ersten Treffer und erneuert sich pro Beitrag', async () => {
+  const technique = getAttack('schwertdrache-eroeffnung-des-einen');
+  const source = character('teulu', technique, 'sword');
+  source.combatProfile.progression.level = 15;
+  const actor = resolveCombatProfile(source, { actionId: `technique:${technique.id}`, hostileOpponentCount: 1 });
+  const totalDefense = 18 + actor.attackModifier;
+  const target = { characterId: 'defender', name: 'Gegner', totalDefense, currentHitPoints: 40, maximumHitPoints: 40 };
+  const attack = (natural, comment, prior) => new CombatResolutionService(new Dice(natural)).resolveAttack({ actor, target },
+    { rulePeriods: { comment }, usedRuleFrequencyKeys: new Set(prior?.usedRuleFrequencyKeys) });
+
+  const miss = await attack(2, 'turn');
+  assert.equal(miss.attack.hit, false);
+  assert.equal(miss.attack.targetDefense, totalDefense - 1);
+  assert.equal(miss.ruleApplications.find(rule => rule.ruleName === 'Klingenbindung').usedKey, '');
+  const first = await attack(17, 'turn', miss);
+  assert.equal(first.attack.hit, true);
+  assert.equal(first.attack.targetDefense, totalDefense - 1);
+  assert.ok(first.ruleApplications.find(rule => rule.ruleName === 'Klingenbindung').usedKey);
+  const second = await attack(17, 'turn', first);
+  assert.equal(second.attack.hit, false);
+  assert.equal(second.attack.targetDefense, totalDefense);
+  const nextTurn = await attack(17, 'next-turn', second);
+  assert.equal(nextTurn.attack.hit, true);
+  assert.equal(nextTurn.attack.targetDefense, totalDefense - 1);
 });
 
 test('Gedeckter Wechsel resolves the movement allowance and defence without automatically granting concealment', async () => {

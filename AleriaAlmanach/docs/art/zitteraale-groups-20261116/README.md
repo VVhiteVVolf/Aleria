@@ -3,7 +3,7 @@
 Bildaufnahme vom 16. November 2026 mit dem eingebauten `image_gen`.
 [generation.json](generation.json) enthält die tatsächlichen Prompts,
 Generatorpfade, Referenzen, Originalpfade, SHA-256-Prüfsummen, Bildmaße und die
-aktive Auswahl. 33 Generatororiginale bleiben erhalten; 27 sind aktuell aktiv.
+aktive Auswahl. 34 Generatororiginale bleiben erhalten; 28 sind aktuell aktiv.
 Alle neuen Bilder haben unveränderte 1024 × 1536 Pixel im Format 2:3.
 
 Die aktive Auswahl umfasst sieben silhouettenhafte Gruppenführer, fünfzehn
@@ -52,3 +52,15 @@ stabile Versionskennungen. Weitere Belege:
 [Sichtprüfung](../../../../diagnostics/zitteraale-groups-20261116/visual-review.json),
 [Bestandsabgleich](../../../../diagnostics/zitteraale-groups-20261116/preservation-audit.json).
 Keine Veröffentlichung oder produktive Bildänderung dieses Auftrags.
+
+## Lagerstillleben für die Hauptseite
+
+Am 16. November ergänzt wurde `untote-aale-lager-v1.png`. Das menschenleere
+provisorische Waldlager zeigt dunkle Zelte, Kochfeuer, Vorräte und das vorhandene
+Untotenbanner. Die genaue Lage des Hauptquartiers bleibt offen.
+Die erste Übersichtsseite der Untoten Aale verwendet diese Szene.
+
+Das eingebaute Bildwerkzeug hat die 1024 × 1536 Pixel große PNG erzeugt.
+Original und aktive Datei sind bytegleich. Der tatsächliche Prompt sowie beide
+angesehenen Referenzen stehen im neuen Manifestjob `untote-aale-lager-v1`.
+Die Szene wurde direkt betrachtet.

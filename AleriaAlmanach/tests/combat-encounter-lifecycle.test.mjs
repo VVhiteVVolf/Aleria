@@ -27,6 +27,23 @@ test('ein vorbereiteter Angriff bleibt an seinen laufenden Kampf gebunden', () =
   assert.match(getEncounterActionValidationError(action, removed), /nicht aktiv/);
 });
 
+test('Eigenschaden beendet die aktive Teilnahme, Heilung stellt sie in Belegreihenfolge wieder her', () => {
+  const action = { encounterId: 'duel', actorId: 'Gildas' };
+  const snapshot = (before, after) => ({ before: { current: before }, after: { current: after } });
+  const shout = { combatResolution: { actorId: 'Gildas', targetId: 'Gawain',
+    actorHitPointSnapshot: snapshot(2, 0), targetSnapshot: { hitPointsBefore: 30, hitPointsAfter: 24 } } };
+  const potion = { inventoryUse: { actorId: 'Gildas', hitPointSnapshot: snapshot(0, 5) } };
+  const history = [start(), { id: 'shout', commentSegments: [shout] }];
+  assert.equal(current(history).participants.get('Gildas').status, 'defeated');
+  assert.equal(current(history).participants.get('Gawain').status, 'active');
+  assert.match(getEncounterActionValidationError(action, current(history)), /nicht aktiv/);
+  assert.equal(getEncounterActionValidationError(action, current([...history, { commentSegments: [potion] }])), '');
+  assert.equal(current([start(), { commentSegments: [shout, potion] }]).participants.get('Gildas').status, 'active');
+
+  const withdrawn = start([member('Gildas', 'Gafyr', { status: 'surrendered' }), roster[1]]);
+  assert.equal(current([withdrawn, ...history.slice(1), { commentSegments: [potion] }]).participants.get('Gildas').status, 'surrendered');
+});
+
 test('Abschlussformular kann fehlende oder manipulierte EP und Profilquellen nicht übernehmen', () => {
   const active = current([start()]);
   for (const experienceValue of [undefined, 0, 999999]) {
@@ -44,6 +61,21 @@ test('Beginn erfasst EP und TP aus dem aufgelösten Profil und Szenenstand', () 
   const prepared = prepareEncounterParticipants(event, null, profiles, new Map([['Gildas', { current: 19, maximum: 30 }]]));
   assert.equal(prepared.get('Gildas').entrySnapshot.current, 19);
   assert.equal(prepared.get('Gawain').experienceValue, 75);
+});
+
+test('Teilnahme bei 0 TP folgt der Sonderregel aus dem bestätigten Profil', () => {
+  const event = normalize({ encounterId: 'duel', operation: 'start',
+    participants: [member('Gildas', 'Gafyr', { canActAtZeroHitPoints: true }), roster[1], member('Dritter', 'Gafyr')] });
+  const profiles = new Map([
+    ['Gildas', { currentHitPoints: 0, maximumHitPoints: 30 }],
+    ['Gawain', { currentHitPoints: 30, maximumHitPoints: 30, combat: { canActAtZeroHitPoints: true } }],
+    ['Dritter', { currentHitPoints: 0, maximumHitPoints: 30, combat: { canActAtZeroHitPoints: true } }]
+  ]);
+  const prepared = prepareEncounterParticipants(event, null, profiles);
+  assert.equal(prepared.get('Gildas').status, 'defeated');
+  assert.equal(prepared.get('Dritter').status, 'active');
+  const hit = { combatResolution: { actorId: 'Dritter', targetId: 'Gawain', targetSnapshot: { hitPointsBefore: 30, hitPointsAfter: 0 } } };
+  assert.equal(current([start([...prepared.values()]), hit]).participants.get('Gawain').status, 'active');
 });
 
 test('Sieger werden nur aus eindeutigen Kampfständen vorgeschlagen', () => {

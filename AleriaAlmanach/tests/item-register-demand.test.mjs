@@ -4,6 +4,8 @@ import vm from 'node:vm';
 import { readFileSync } from 'node:fs';
 import { requestItemRegister } from '../modules/item-register/item-register-demand.js';
 import { mountInventoryChooser } from '../modules/landing/group-landing-inventory-editor.js';
+import { createSceneElementAiScene } from '../modules/scene-elements/scene-element-ai-guide.js';
+import { collectSceneElementParticipants } from '../modules/scene-elements/scene-element-conditions.js';
 
 const tick = () => new Promise(resolve => setImmediate(resolve));
 const deferred = () => { let resolve, reject; const promise = new Promise((yes, no) => { resolve = yes; reject = no; }); return { promise, resolve, reject }; };
@@ -120,7 +122,8 @@ test('a challenge refreshes only the still-open reward picker after demand loadi
       draftAudience: {}, draftTargetActor: {}, dialogCombatContext: {}, draftCombatBound: false, operationId: '', submittedDraft: '',
       getCurrentCommentThread: () => ({ kind: 'session' }), getCurrentCommentThreadId: () => 'scene', getCachedCommentsForThread: () => [], getAvailableCommentCharacters: () => [],
       defaultApproaches: () => [{}], normalizeChallengeAudience: () => ({}), normalizeChallengeTarget: () => ({}),
-      deriveCombatStateFromComments: () => new Map(), createChallengeCombatContext: () => ({ encounterId: '' }),
+      deriveCombatStateFromComments: () => new Map(), createChallengeCombatContext: () => ({ encounterId: '' }), createSceneElementAiScene, collectSceneElementParticipants,
+      preparedElementId: '', ensureElementEditor: () => ({ set() {} }),
       ensureHerausforderungDialog: () => root, setChallengeSceneImage() {}, renderDialog() {}, activateDialog() {}, deactivateDialog() {},
       requestItemRegister: () => wait.promise, refreshHerausforderungRewardTemplates: node => refreshed.push(node), setHerausforderungStatus: message => statuses.push(message) });
     vm.runInContext(source.slice(source.indexOf('function openDialog('), source.indexOf('function addApproach(')), context);

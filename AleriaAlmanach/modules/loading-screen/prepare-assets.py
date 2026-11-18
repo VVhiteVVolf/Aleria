@@ -4,6 +4,8 @@ Only crop, uniformly resize, align and encode. Original artwork is retained.
 The measured windows follow the actual drawings rather than an assumed grid.
 No polygon masks are cut through characters or equipment.
 """
+import argparse
+import hashlib
 import json
 from collections import deque
 from pathlib import Path
@@ -15,7 +17,7 @@ DESTINATION = ROOT / 'public/assets/loading-screen'
 MODULE = Path(__file__).resolve().parent
 
 
-def extract(sheet, box):
+def extract(sheet, box, *, crop=True):
     part = sheet.crop(box)
     # Keep the connected illustration, remove disconnected remnants of a
     # neighboring grid cell. Dilate by one pixel to retain antialiased edges.
@@ -49,7 +51,7 @@ def extract(sheet, box):
     bounds = part.getchannel('A').point(lambda alpha: 255 if alpha > 16 else 0).getbbox()
     if not bounds:
         raise ValueError(f'Empty puppet part: {box}')
-    return part.crop(bounds)
+    return part.crop(bounds) if crop else part
 
 
 def body(name, part):
@@ -101,5 +103,86 @@ def prepare():
     print('Prepared 4 closed bodies and 8 complete leg parts.')
 
 
+def asset_description(path):
+    with Image.open(path) as image:
+        return dict(file=path.relative_to(ROOT).as_posix(), size=list(image.size),
+                    frames=image.n_frames if hasattr(image, 'n_frames') else 1,
+                    bytes=path.stat().st_size, sha256=hashlib.sha256(path.read_bytes()).hexdigest())
+
+
+def prepare_journey():
+    DESTINATION.mkdir(parents=True, exist_ok=True)
+    illustrations = [SOURCE / 'highland-road-v5.png', SOURCE / 'travellers-stride-v5.png']
+    landscape = Image.open(illustrations[0]).convert('RGB')
+    atlas = Image.open(illustrations[1])
+    if atlas.mode != 'RGBA':
+        raise ValueError('The new walk atlas must have genuine alpha.')
+
+    art_files = []
+    for width, suffix, extension, quality, aspect in [
+        (1440, 'desktop', 'avif', 54, None),
+        (640, 'mobile', 'avif', 54, 1.25),
+        (1200, 'fallback', 'webp', 78, None),
+    ]:
+        source = landscape
+        if aspect is not None:
+            crop_width = round(landscape.height * aspect)
+            left = (landscape.width - crop_width) // 2
+            source = landscape.crop((left, 0, left + crop_width, landscape.height))
+        file = DESTINATION / f'highland-road-v5-{suffix}.{extension}'
+        scaled = source.resize((width, round(width * source.height / source.width)), Image.Resampling.LANCZOS)
+        scaled.save(file, quality=quality)
+        art_files.append(file)
+
+    cell_size = 152
+    packed = Image.new('RGBA', (4 * cell_size, 4 * cell_size))
+    frames = []
+    for row in range(4):
+        strip = []
+        for col in range(4):
+            bounds = (col * atlas.width // 4, row * atlas.height // 4,
+                      (col + 1) * atlas.width // 4, (row + 1) * atlas.height // 4)
+            frame = extract(atlas, bounds, crop=False)
+            if frame.getchannel('A').getbbox() is None:
+                raise ValueError(f'Empty frame at row {row}, column {col}')
+            frame = frame.resize((cell_size, cell_size), Image.Resampling.LANCZOS)
+            packed.alpha_composite(frame, (col * cell_size, row * cell_size))
+            strip.append(frame)
+        frames.append(strip)
+    file = DESTINATION / 'travellers-stride-v5.webp'
+    packed.save(file, quality=84, method=6, exact=True)
+    art_files.append(file)
+
+    # Standalone GIF preview with four staggered phases. A common palette lets
+    # the encoder store the unchanged landscape only once.
+    preview_dir = SOURCE.parent / 'preview'
+    preview_dir.mkdir(exist_ok=True)
+    preview = preview_dir / 'highland-journey-v5.gif'
+    background = landscape.resize((576, 240), Image.Resampling.LANCZOS).convert('RGBA')
+    preview_frames = []
+    for index in range(4):
+        image = background.copy()
+        for actor, row in enumerate([3, 2, 1, 0]):
+            phase = (index + actor) % 4
+            frame = frames[row][phase].resize((94, 94), Image.Resampling.LANCZOS)
+            image.alpha_composite(frame, (70 + actor * 107, 109))
+        preview_frames.append(image.convert('RGB'))
+    palette_source = Image.new('RGB', (background.width, background.height * len(preview_frames)))
+    for index, frame in enumerate(preview_frames):
+        palette_source.paste(frame, (0, index * background.height))
+    palette = palette_source.quantize(colors=192)
+    indexed = [frame.quantize(palette=palette, dither=Image.Dither.NONE) for frame in preview_frames]
+    indexed[0].save(preview, save_all=True, append_images=indexed[1:], duration=270, loop=0, optimize=True)
+
+    manifest = dict(version=5, sources=[asset_description(file) for file in illustrations],
+                    atlas=dict(order=['gawain', 'freya', 'guinevere', 'fenrir'], rows=4, columns=4, cell=cell_size),
+                    assets=[asset_description(file) for file in art_files], preview=asset_description(preview))
+    (DESTINATION / 'journey-v5-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
+    print('Prepared AVIF/WebP journey, transparent sprite atlas and loop preview.')
+
+
 if __name__ == '__main__':
-    prepare()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--journey-v5', action='store_true')
+    args = parser.parse_args()
+    prepare_journey() if args.journey_v5 else prepare()

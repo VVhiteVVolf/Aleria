@@ -1,11 +1,14 @@
 import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import { resolve, extname } from 'node:path';
+import { resolve, extname, relative, isAbsolute } from 'node:path';
 import { pathToFileURL, fileURLToPath } from 'node:url';
 import { fourStrikes, selfCounter } from '../fixtures/combat-evaluation-scenarios.mjs';
 const { chromium } = await import(process.argv[2] ? pathToFileURL(resolve(process.argv[2])).href : 'playwright');
-const root = fileURLToPath(new URL('../../../',import.meta.url)), output = resolve(root, '.codex-temp/arsenal-ui');
+const root = fileURLToPath(new URL('../../../',import.meta.url));
+const output = resolve(root, process.env.ALERIA_COMBAT_ARSENAL_OUTPUT || '.codex-temp/arsenal-ui');
+const localOutput = relative(root, output);
+assert.ok(localOutput && !localOutput.startsWith('..') && !isAbsolute(localOutput), 'Reports must stay in the workspace.');
 await mkdir(output, { recursive: true });
 const snapshot=JSON.parse(await readFile(resolve(root,'CharakterDatenbank/generated/characters.snapshot.json'),'utf8'));
 const characters=snapshot.characters.filter(c=>c.combatProfile?.progression?.level>2&&!/duncan/i.test(c.name));

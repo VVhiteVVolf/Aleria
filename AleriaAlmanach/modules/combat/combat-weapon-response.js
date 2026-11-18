@@ -7,9 +7,12 @@ import { combineDamageFormulas, parseDamageFormula } from './rules/combat-mvp-ru
 // Prepared counters and challenge responses use the same actual held weapon,
 // training and full weapon damage, independently of their already paid cost.
 export function resolvePreparedWeaponAttackProfile(profile, { weaponId = '', rollMode = 'normal', extraWeaponDice = 0, secondarySave = null } = {}) {
-  const held = getCombatWeaponLoadout(profile).right;
-  if (!held || (weaponId && held.id !== weaponId)) return null;
-  const values = getCombatWeaponAttackValues(profile, held), weapon = values.weapon;
+  const loadout = getCombatWeaponLoadout(profile);
+  const held = [loadout.right, loadout.left].find(entry => entry && (!weaponId || entry.id === weaponId)
+    && !getDroppedCombatWeapon(profile, entry));
+  if (!held) return null;
+  const values = getCombatWeaponAttackValues(profile, held);
+  const weapon = values.weapon;
   if (getDroppedCombatWeapon(profile, weapon)) return null;
   const baseAction = { id: `weapon:${weapon.id}`, kind: 'weapon', name: weapon.name, weapon,
     attackModifier: values.attackModifier, damageModifier: values.damageModifier,

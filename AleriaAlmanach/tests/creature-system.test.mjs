@@ -23,6 +23,15 @@ import {
   sanitizeCreature,
   toRomanNumeral
 } from '../modules/creatures/creature-model.js';
+
+test('the default or legacy creature type reaches both identity fields on the first read', () => {
+  for (const [identity, expected] of [[{}, 'Kreatur'], [{ archetype: 'Wächter' }, 'Wächter']]) {
+    const record = sanitizeCreature({ id: 'older-creature', name: 'Prüfkreatur', combatProfile: { identity } });
+    assert.equal(record.type, expected);
+    assert.equal(record.combatProfile.identity.archetype, expected);
+    assert.deepEqual(sanitizeCreature(record), record);
+  }
+});
 import {
   CREATURE_LEVEL_GUIDELINES,
   getBuiltinCreatureTemplates,

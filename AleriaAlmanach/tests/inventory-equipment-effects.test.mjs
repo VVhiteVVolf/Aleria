@@ -6,12 +6,44 @@ import { CombatResolutionService } from '../modules/combat/combat-resolution-ser
 import { collectApplicableCombatRules } from '../modules/combat/combat-trigger-rules.js';
 import { synchronizeEquipmentFromCombat, synchronizeEquipmentFromInventory } from '../modules/character-equipment/character-equipment-sync.js';
 import { inventoryCardModel } from '../modules/character-inventory/character-inventory-card-model.js';
+import { getCharacterCombatInventoryOptions } from '../modules/combat/combat-profile-model.js';
 
 const gawain = JSON.parse(await readFile(new URL('../../Charakter%20Archiv%20Exporte/gawain-draig.json', import.meta.url), 'utf8')).character;
 const opponent = { id: 'opponent', name: 'Gegner', combatProfile: {
   hitPoints: { current: 100, maximumOverride: 100 }, armorClass: { override: 10 },
   weapons: [{ id: 'club', name: 'Keule', equipped: true, damageFormula: '1d6' }]
 } };
+
+test('an unambiguous reverse link restores equipment identity without importing old card mechanics or duplicating possession', () => {
+  const weapon = { id: 'old-sword', name: 'Altes Schwert', weaponType: 'sword', damageFormula: '1d8+3', equipped: true };
+  const item = { id: 'stored-sword', quantity: '1', equipmentLink: { kind: 'weapon', combatEntryId: weapon.id },
+    combatDefinition: { kind: 'weapon', weaponType: 'sword', damageFormula: '1d4' } };
+  const record = { id: 'fixture', inventory: { items: [item] }, combatProfile: { weapons: [weapon] } };
+  const profile = resolveCombatProfile(record);
+  assert.equal(profile.weapon.inventoryItemId, item.id);
+  assert.equal(profile.weapon.damageFormula, weapon.damageFormula);
+  const edited = synchronizeEquipmentFromCombat(record);
+  assert.deepEqual(edited.inventory.items.map(item => item.id), [item.id]);
+  assert.equal(edited.combatProfile.weapons[0].inventoryItemId, item.id);
+  const collision = { ...record, inventory: { items: [item, { ...item, id: 'other-possession' }] } };
+  assert.equal(resolveCombatProfile(collision).weapon.inventoryItemId, '');
+  assert.equal(synchronizeEquipmentFromCombat(collision).inventory.items.length, 2);
+});
+
+test('an authored weapon carries action properties through the inventory card and back into an attack', () => {
+  const weapon = { id: 'bow', name: 'Bogen', weaponType: 'bow', damageFormula: '1d6', range: '20 m', equipped: true,
+    activationType: 'bonus-action', spendAllRegularActions: true, auraBypass: { allowed: false },
+    ammunition: { inventoryItemId: 'arrows', required: true, amountPerUse: 1, reloadAfter: 0 } };
+  const linked = synchronizeEquipmentFromCombat({ combatProfile: { weapons: [weapon] } });
+  const copied = getCharacterCombatInventoryOptions({ inventory: linked.inventory })[0];
+  assert.deepEqual(copied.ammunition, weapon.ammunition);
+  const restored = synchronizeEquipmentFromInventory({ ...linked, combatProfile: {}, addMissingEquipment: true });
+  const result = resolveCombatProfile({ id: 'bow-user', ...restored });
+  assert.equal(result.selectedAction.spendAllRegularActions, true);
+  assert.equal(result.selectedAction.activationType, 'bonus-action');
+  assert.deepEqual(result.selectedAction.ammunition, weapon.ammunition);
+  assert.equal(result.selectedAction.auraBypass.allowed, false);
+});
 
 async function attack(actor, target, natural = 20, options = {}) {
   let damageRequest;

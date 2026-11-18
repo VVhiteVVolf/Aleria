@@ -1,6 +1,6 @@
 import { collectApplicableCombatRules } from '../combat/combat-trigger-rules.js';
-import { consumeCombatRuleResources, getCombatRuleAbilityUseRequests } from '../combat/combat-rule-consumption.js';
-import { applyCombatAbilityUse } from '../combat/combat-ability-uses.js';
+import { consumeCombatRuleResources, consumeCombatRuleAbilityUses } from '../combat/combat-rule-consumption.js';
+import { getCombatRuleDistance } from '../combat/combat-rule-distance.js';
 import { getSkillRollContext } from './skill-resolution-service.js?v=20261016-check-policy-v1';
 
 export const skillSupportOptionKey = option => `${option.sourceActorId}:${option.ruleId}`;
@@ -43,12 +43,7 @@ export function canSelectSkillSupport(options, recoveryDayKey = '') {
   const sources = [...new Map(options.map(option => [option.source.actorId, option.source])).values()];
   try {
     consumeCombatRuleResources(options, sources);
-    const abilities = new Map(sources.map(source => [String(source.actorId), source.profile.abilities]));
-    for (const request of getCombatRuleAbilityUseRequests(options)) {
-      const use = applyCombatAbilityUse(abilities.get(request.sourceActorId), `ability:${request.abilityId}`, recoveryDayKey);
-      if (!use.sufficient) return false;
-      abilities.set(request.sourceActorId, use.abilities);
-    }
+    consumeCombatRuleAbilityUses(options, sources, { dayKey: recoveryDayKey });
     return true;
   } catch {
     return false;
@@ -69,7 +64,7 @@ export function selectSkillSupportDefaults(options, selections = [], seenKeys = 
   return selected.map(option => {
     const persistence = option.source.profile.persistence || option.source.persistence || {};
     return { sourceActorId: option.sourceActorId, ruleId: option.ruleId,
-      distanceMeters: option.source.distanceToActor ?? 0,
+      distanceMeters: getCombatRuleDistance(option.source, option.ruleId, 'actor'),
       sourcePersistence: { ...persistence } };
   });
 }

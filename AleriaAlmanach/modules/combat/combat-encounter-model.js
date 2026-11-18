@@ -5,10 +5,10 @@ import {
   applyCombatEncounterAuraApplicationsToStateMap,
   normalizeCombatEncounterAuraApplication
 } from './combat-encounter-aura.js?v=20260928-equipment-art-v4';
-import { normalizeEncounterSnapshot, normalizeCombatEncounterSummary, getEncounterResolutionGroups } from './combat-encounter-summary.js';
+import { normalizeEncounterSnapshot, normalizeCombatEncounterSummary } from './combat-encounter-summary.js';
 import { ENCOUNTER_TYPE_LABELS, ENCOUNTER_OUTCOME_LABELS, ENCOUNTER_REASON_LABELS } from './combat-encounter-outcome.js';
 import { getCombatRulesRelease } from './combat-rules-release.js';
-import { getCombatResolutionTree } from './combat-resolution-tree.js';
+import { getCombatResolutionTree, getSegmentCombatResolutions, getSegmentSkillCombatResolutions, getSegmentCombatStateReceipts } from './combat-resolution-tree.js';
 
 export const COMBAT_ENCOUNTER_EVENT_KIND = 'combat-encounter-event';
 export const COMBAT_ENCOUNTER_SCHEMA_VERSION = 2;
@@ -38,6 +38,7 @@ export function normalizeEncounterParticipant(value = {}, index = 0) {
     partyId: text(source.partyId || 'neutral', 100),
     partyName: text(source.partyName || source.partyId || 'Neutral', 140),
     status: STATUSES.has(status) ? status : 'active',
+    canActAtZeroHitPoints: source.canActAtZeroHitPoints === true,
     experienceValue: integer(source.experienceValue),
     entrySnapshot: normalizeEncounterSnapshot(source.entrySnapshot),
     eligibleForExperience: source.eligibleForExperience !== false,
@@ -90,10 +91,6 @@ export function isCombatEncounterComment(comment = {}) {
   return !!(comment.combatEncounter || comment.commentKind === COMBAT_ENCOUNTER_EVENT_KIND || comment.commentMode === 'combat-encounter');
 }
 
-function getCommentCombatResolutions(comment = {}) {
-  return getEncounterResolutionGroups(comment).flat();
-}
-
 // Existing membership and reward values are owned by the original encounter,
 // never by a status form. Normalized missing fields must not zero those values.
 export function mergeEncounterParticipantUpdates(previousParticipants = [], event = {}) {
@@ -103,28 +100,63 @@ export function mergeEncounterParticipantUpdates(previousParticipants = [], even
     const status = event.operation === 'remove' && participant.status === 'active' ? 'left' : participant.status;
     merged.set(participant.actorId, previous ? {
       ...previous, status,
-      ...(event.operation === 'add' ? { partyId: participant.partyId, partyName: participant.partyName } : {})
+      ...(event.operation === 'add' ? {
+        partyId: participant.partyId, partyName: participant.partyName, canActAtZeroHitPoints: participant.canActAtZeroHitPoints
+      } : {})
     } : { ...participant, status });
   }
   return merged;
 }
 
-function applyCombatResolutionToEncounters(encounters, resolution = {}) {
-  const targetId = text(resolution.targetId, 180);
-  if (!targetId) return;
-  const encounter = [...encounters.values()].reverse().find(candidate => candidate.active && candidate.participants.has(targetId));
-  if (!encounter) return;
-  const participant = encounter.participants.get(targetId);
-  const defeated = resolution.defeat?.occurred === true
-    || (Number(resolution.targetSnapshot?.hitPointsBefore) > 0 && Number(resolution.targetSnapshot?.hitPointsAfter) === 0);
-  const recovered = participant.status === 'defeated'
-    && Number(resolution.targetSnapshot?.hitPointsBefore) === 0
-    && Number(resolution.targetSnapshot?.hitPointsAfter) > 0;
-  if (!defeated && !recovered) return;
-  encounter.participants.set(targetId, {
-    ...participant,
-    status: defeated ? 'defeated' : 'active'
-  });
+function participantStatusAfterHitPoints(participant, before, after, explicitDefeat = false) {
+  if (participant.status === 'active' && !participant.canActAtZeroHitPoints
+    && (explicitDefeat || (Number(before) > 0 && after != null && after !== '' && Number(after) === 0))) {
+    return 'defeated';
+  }
+  if (participant.status === 'defeated' && before != null && before !== '' && Number(before) === 0 && Number(after) > 0) {
+    return 'active';
+  }
+  return participant.status;
+}
+
+function applyParticipantHitPoints(encounters, actorId, before, after, explicitDefeat = false) {
+  const id = text(actorId, 180);
+  if (!id) return;
+  const encounter = [...encounters.values()].reverse().find(candidate => candidate.active && candidate.participants.has(id));
+  const participant = encounter?.participants.get(id);
+  if (!participant) return;
+  const status = participantStatusAfterHitPoints(participant, before, after, explicitDefeat);
+  if (status !== participant.status) encounter.participants.set(id, { ...participant, status });
+}
+
+function applyCombatResolutionToEncounters(encounters, root) {
+  for (const { resolution } of getCombatResolutionTree(root)) {
+    const actorSnapshot = resolution.actorHitPointSnapshot;
+    const targetSnapshot = resolution.targetSnapshot;
+    // State replay gives the actor's final snapshot precedence on self-targets.
+    if (resolution.targetId !== resolution.actorId || actorSnapshot?.after?.current == null) {
+      applyParticipantHitPoints(encounters, resolution.targetId, targetSnapshot?.hitPointsBefore,
+        targetSnapshot?.hitPointsAfter, resolution.defeat?.occurred === true);
+    }
+    if (actorSnapshot) applyParticipantHitPoints(encounters, resolution.actorId, actorSnapshot.before?.current, actorSnapshot.after?.current);
+    for (const snapshot of resolution.herausforderungCombatSnapshots || []) {
+      applyParticipantHitPoints(encounters, snapshot.actorId, snapshot.before?.current, snapshot.after?.current);
+    }
+  }
+}
+
+function applyContributionToEncounters(encounters, comment) {
+  const segments = Array.isArray(comment.commentSegments) ? comment.commentSegments : [];
+  const hasSegmentCombat = segments.some(segment => getSegmentCombatResolutions(segment).length || getSegmentSkillCombatResolutions(segment).length);
+  const legacyResolution = hasSegmentCombat ? null : comment.combatResolution;
+  if (legacyResolution) applyCombatResolutionToEncounters(encounters, legacyResolution);
+  for (const segment of segments) {
+    for (const receipt of getSegmentCombatStateReceipts(segment)) applyCombatResolutionToEncounters(encounters, receipt);
+    if (!segment?.skillResolution?.herausforderungCombatSnapshots?.length) {
+      for (const receipt of getSegmentSkillCombatResolutions(segment)) applyCombatResolutionToEncounters(encounters, receipt);
+    }
+  }
+  return hasSegmentCombat || !!legacyResolution;
 }
 
 export function deriveCombatEncounterState(comments = []) {
@@ -132,10 +164,7 @@ export function deriveCombatEncounterState(comments = []) {
   (Array.isArray(comments) ? comments : []).forEach(comment => {
     if (isSilentSceneRegeneration(comment)) {
       for (const participant of comment.sceneRegeneration.participants) {
-        if (!(Number(participant.after?.current) > 0)) continue;
-        const encounter = [...encounters.values()].reverse().find(candidate => candidate.active && candidate.participants.has(participant.actorId));
-        const previous = encounter?.participants.get(participant.actorId);
-        if (previous?.status === 'defeated') encounter.participants.set(participant.actorId, { ...previous, status: 'active' });
+        applyParticipantHitPoints(encounters, participant.actorId, 0, participant.after?.current);
       }
       encounters.forEach(encounter => { if (encounter.active) encounter.revision = String(comment.id || encounter.revision); });
       return;
@@ -185,14 +214,12 @@ export function deriveCombatEncounterState(comments = []) {
     // Critical HP loss occurs before the first action; later healing may revive
     // the participant in the same contribution.
     for (const event of comment.criticalLifecycle || []) if (event.phase === 'start') {
-      applyCombatResolutionToEncounters(encounters, { targetId: event.actorId,
-        targetSnapshot: { hitPointsBefore: event.before?.current, hitPointsAfter: event.after?.current } });
+      applyParticipantHitPoints(encounters, event.actorId, event.before?.current, event.after?.current);
     }
-    getCommentCombatResolutions(comment).flatMap(getCombatResolutionTree)
-      .forEach(({ resolution }) => applyCombatResolutionToEncounters(encounters, resolution));
+    const hasCombatResolution = applyContributionToEncounters(encounters, comment);
     // Conservatively invalidate an open preview after any further mechanical
     // contribution in the scene, including rests and resource use.
-    if (!isCombatEncounterComment(comment) && !comment.importedHistoricalMechanics && (comment.serverValidatedMechanics || comment.serverCommitted || getCommentCombatResolutions(comment).length)) {
+    if (!isCombatEncounterComment(comment) && !comment.importedHistoricalMechanics && (comment.serverValidatedMechanics || comment.serverCommitted || hasCombatResolution)) {
       encounters.forEach(encounter => { if (encounter.active) encounter.revision = String(comment.id || encounter.revision); });
     }
   });
@@ -204,10 +231,21 @@ export function getActiveCombatEncounter(comments = []) {
 }
 
 export function getActiveCombatPartyMap(comments = []) {
-  const encounter = getActiveCombatEncounter(comments);
+  return getCombatEncounterPartyMap(getActiveCombatEncounter(comments));
+}
+
+export function getCombatEncounterParticipantStatus(encounter, actorId, { beforeStates, afterStates } = {}) {
+  const id = String(actorId || '');
+  const participant = encounter?.participants.get(id);
+  if (!participant) return '';
+  return participantStatusAfterHitPoints(participant, beforeStates?.get(id)?.current ?? participant.entrySnapshot?.current,
+    afterStates?.get(id)?.current);
+}
+
+export function getCombatEncounterPartyMap(encounter, runtime) {
   if (!encounter) return new Map();
   return new Map([...encounter.participants.entries()]
-    .filter(([, participant]) => participant.status === 'active')
+    .filter(([actorId]) => getCombatEncounterParticipantStatus(encounter, actorId, runtime) === 'active')
     .map(([actorId, participant]) => [String(actorId), String(participant.partyId || 'neutral')]));
 }
 
@@ -216,6 +254,11 @@ export function getEncounterRelationship(firstActorId = '', secondActorId = '', 
   const secondParty = partyMap instanceof Map ? String(partyMap.get(String(secondActorId)) || '') : '';
   if (!firstParty || !secondParty || firstParty === 'neutral' || secondParty === 'neutral') return '';
   return firstParty === secondParty ? 'ally' : 'enemy';
+}
+
+export function countActiveHostileOpponents(actorId, partyMap = new Map()) {
+  if (!partyMap.has(String(actorId))) return null;
+  return [...partyMap.keys()].filter(opponentId => getEncounterRelationship(actorId, opponentId, partyMap) === 'enemy').length;
 }
 
 export function buildEncounterExperienceAwards(encounter = {}, winningPartyId = '') {
@@ -291,6 +334,5 @@ export const combatEncounterInternals = Object.freeze({
   STATUSES,
   integer,
   text,
-  getCommentCombatResolutions,
   applyCombatResolutionToEncounters
 });

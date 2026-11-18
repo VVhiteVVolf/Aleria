@@ -1,0 +1,59 @@
+{
+  "revision": "2026-11-16-brustbild",
+  "sourceDocument": "Avatar_Prompts_23_Sets_Brustbild_20261116.docx",
+  "sourceSha256": "7300af24f4fc705aacee8b19910b0ce8ad6e4c05df11727cbd59195dc54716f3",
+  "catalogId": "avatar-prompts-23-sets-20261116-brustbild",
+  "sets": 23,
+  "panels": 207,
+  "framingPolicy": "Enges quadratisches Brustbild wie in den freigegebenen Rianna- und Lefraye-Beispielen. Die Kamera bleibt auf Gesichtshöhe. Kopf, Gesicht, Schultern und Brustpanzer füllen das Bild. Die untere Bildkante endet am Brustpanzer, oberhalb von Gürtel und Taille. Für die jeweilige Geste nötige Hände erscheinen kompakt in Brustnähe. Ellbogen und tiefer liegende Unterarme dürfen natürlich am Bildrand angeschnitten sein. Niedrige Gesten werden in den unteren sichtbaren Brustbereich verlegt. Der feste Brustbildausschnitt hat Vorrang vor der vollständigen Darstellung der Arme.",
+  "set4ExpressionPolicy": "Set 4 verwendet ruhige, kleine, natürliche Handgesten und zurückhaltende Mimik. Brauen, Mundwinkel, Blick und Kopfneigung verändern sich nur leicht. Die Hände bleiben nahe am Brustbereich. Die Körperhaltung bleibt entspannt und fast aufrecht.",
+  "original23DocumentPreserved": true,
+  "visualReview": {
+    "status": "passed",
+    "method": "Native Microsoft Word page EMF to PNG at 144dpi",
+    "allPagesActuallyViewed": true,
+    "pageCount": 38,
+    "documents": [
+      {
+        "document": "AleriaAlmanach/AvatarWerkstatt/Anleitungen/Avatar_Prompts_23_Sets_Brustbild_20261116.docx",
+        "sourceSha256": "7300af24f4fc705aacee8b19910b0ce8ad6e4c05df11727cbd59195dc54716f3",
+        "pages": 31,
+        "allPagesActuallyViewed": true,
+        "findings": []
+      },
+      {
+        "document": "AleriaAlmanach/AvatarWerkstatt/Anleitungen/Charakter-Emotionssheet Master Prompt.docx",
+        "sourceSha256": "857f8d62ffd33995be259ce24128ce30d24168aa84157288aab484509e213485",
+        "pages": 5,
+        "allPagesActuallyViewed": true,
+        "findings": []
+      },
+      {
+        "document": "AleriaAlmanach/AvatarWerkstatt/Anleitungen/Character_Expression_Sheet_Prompt.docx",
+        "sourceSha256": "573eecb7c46fa2a09f1e273f02eee1829d5f594603586b217d2c5015df6f47d3",
+        "pages": 2,
+        "allPagesActuallyViewed": true,
+        "findings": []
+      }
+    ]
+  },
+  "activeCatalogSha256": "494fba784720e82d3b5c807bb32f08cfd05eb7e1253458390aaf9ccefa3eb168",
+  "framingReferences": [
+    {
+      "path": "Charaktere/Einzelcharaktere/Rianna Wyrm/Output/rianna-2026-11-02-set-03_Bild6.png",
+      "sha256": "f8e771ec1720a1f203201dd447cde26ff36c0ab0cfa44b2d906156eceeada2f7"
+    },
+    {
+      "path": "Charaktere/Einzelcharaktere/Rianna Wyrm/Output/rianna-2026-11-02-set-03_Bild1.png",
+      "sha256": "f38385aab5c369fac38ad02d3d10f8ef50bd427bac2cfb8f408ba18f95837a76"
+    },
+    {
+      "path": "Charaktere/Einzelcharaktere/Lefraye Gafyr/Output/lefraye-2026-11-02-set-01_Bild1.png",
+      "sha256": "cb48fe435ed774d7a9fd0a16823b8eb72220a0eb66902596f61af05a248a28d8"
+    },
+    {
+      "path": "Charaktere/Einzelcharaktere/Lefraye Gafyr/Output/lefraye-2026-11-02-set-01_Bild5.png",
+      "sha256": "7d87b395678d4e085b98cce8efa5ba4c69d56c15b53d8005fc74ba093c79726f"
+    }
+  ]
+}

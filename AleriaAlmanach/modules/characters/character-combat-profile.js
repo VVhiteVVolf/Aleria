@@ -1242,11 +1242,11 @@ function equipWeapon(itemId) {
 }
 
 function init(character = {}, options = {}) {
-  sheetWorkspace.reset(character.id);
+  if (!options.preserveWorkspace || character.id !== activeCharacter?.id) sheetWorkspace.reset(character.id);
   activeCharacter = character;
   draftProfile = upgradeCharacterHitPoints(getAutofilledCenyrCombatProfile(character.combatProfile || {}));
   activeCharacter = { ...character, combatProfile: structuredClone(draftProfile) };
-  synchronizeDraftFromInventory(character.inventory || {}, { definitionRulesOnly: true, preserveLoadout: true });
+  synchronizeDraftFromInventory(character.inventory || {}, { addMissingEquipment: true, definitionRulesOnly: true, preserveLoadout: true });
   synchronizeDraftFromCombat({ inventory: character.inventory || {}, renderInventory: options.render !== false });
   levelUpState = null;
   levelUpNotice = '';

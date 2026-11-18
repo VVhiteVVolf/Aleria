@@ -39,7 +39,7 @@ test('the real composer bridge preserves the selected skill and restored text, w
   const context = createContext({ window: { AleriaSkillChecks: { getChallengeAttemptSettings: (target, id) => {
     lookups.push(id); return getChallengeAttemptSettings(target, id);
   } } }, challenge, _commentSegments: [{ kind: 'speech', text: 'Bestehender Entwurf', mechanicMode: 'normal' }],
-    SCENE_TIME_DEFAULT_SEGMENT_SECONDS: 30, COMMENT_LANGUAGE_DEFAULT: 'common', setCommentMode() {}, persistCommentDraft() { saves++; },
+    SCENE_TIME_DEFAULT_SEGMENT_SECONDS: 30, COMMENT_LANGUAGE_DEFAULT: 'common', setCommentMode() {}, persistCommentDraft() { saves++; }, showCommentDraftNote() {},
     makeCommentSegment: (kind, text, emote, side, time, language, color, settings) => ({ kind, text, ...settings }) });
   runInContext(await readFile(new URL('../modules/comments/comments-form.js', import.meta.url), 'utf8'), context);
   const opening = runInContext("openCommentForm = async options => { await Promise.resolve(); options.afterReady?.(); return true; }; openCommentFormForSkillChallenge(challenge, 'seduction');", context);

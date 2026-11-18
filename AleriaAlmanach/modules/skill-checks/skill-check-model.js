@@ -15,8 +15,9 @@ const CHECKS_BY_ID = new Map(CHECK_DEFINITIONS.map(check => [check.id, check]));
 const SKILLS_BY_ID = new Map(SKILL_DEFINITIONS.map(skill => [skill.id, skill]));
 
 export const COMMENT_KIND_SKILL_IDS = Object.freeze({
-  speech: ['persuasion'],
-  shout: ['intimidation'],
+  speech: ['persuasion', 'animal-handling'],
+  whisper: ['animal-handling'],
+  shout: ['intimidation', 'animal-handling'],
   performance: ['deception', 'performance'],
   thought: ['insight', 'investigation', 'religion', 'arcane-kunde', 'history', 'nature', 'perception'],
   animal: ['animal-handling'],

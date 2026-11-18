@@ -1,4 +1,5 @@
 import { applyCombatResourceCosts } from './combat-state-model.js?v=20260928-equipment-art-v4';
+import { applyCombatAbilityUse } from './combat-ability-uses.js?v=20260803-action-economy-v1';
 
 export function consumeCombatRuleResources(applications = [], sources = [], options = {}) {
   const relevant = (Array.isArray(applications) ? applications : [])
@@ -33,18 +34,35 @@ export function consumeCombatRuleResources(applications = [], sources = [], opti
   return snapshots;
 }
 
-export function getCombatRuleAbilityUseRequests(applications = []) {
+export function getCombatRuleAbilityUseRequests(applications = [], { perTrigger = false } = {}) {
   const seen = new Set();
   return (Array.isArray(applications) ? applications : []).flatMap(application => {
     if (!application?.consumesAbilityUse || application.entryKind !== 'ability') return [];
     const key = `${application.sourceActorId}:${application.entryId}:${application.applicationKey}`;
-    if (seen.has(key)) return [];
+    if (!perTrigger && seen.has(key)) return [];
     seen.add(key);
     return [{
       sourceActorId: String(application.sourceActorId || ''),
+      sourceActorName: String(application.sourceActorName || ''),
       abilityId: String(application.entryId || ''),
       applicationKey: String(application.applicationKey || ''),
       ruleName: String(application.ruleName || application.entryName || 'Reaktion')
     }];
+  });
+}
+
+export function consumeCombatRuleAbilityUses(applications, sources, { dayKey = '', states, perTrigger, onError } = {}) {
+  const abilitiesByActor = new Map();
+  const reject = onError || (message => { throw new Error(message); });
+  return getCombatRuleAbilityUseRequests(applications, { perTrigger }).flatMap(request => {
+    const source = sources.find(entry => String(entry.actorId) === request.sourceActorId);
+    if (!source) return reject('Die Fähigkeitsquelle einer Reaktion fehlt.');
+    const abilities = abilitiesByActor.get(request.sourceActorId) ?? states?.get(request.sourceActorId)?.abilities ?? source.profile.abilities;
+    const use = applyCombatAbilityUse(abilities, `ability:${request.abilityId}`, dayKey);
+    if (!use.sufficient) return reject(`${use.missing?.name || request.ruleName} hat keine Nutzung mehr übrig.`);
+    if (!use.changed) return [];
+    abilitiesByActor.set(request.sourceActorId, use.abilities);
+    return [{ sourceActorId: request.sourceActorId, sourceActorName: request.sourceActorName,
+      applicationKey: request.applicationKey, before: use.beforeAbilities, after: use.abilities, change: use.use }];
   });
 }

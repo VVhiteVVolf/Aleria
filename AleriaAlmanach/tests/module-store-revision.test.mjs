@@ -39,6 +39,9 @@ function syncContext() {
       if (!listeners.has(name)) listeners.set(name, []);
       listeners.get(name).push(handler);
     },
+    removeEventListener(name, handler) {
+      listeners.set(name, (listeners.get(name) || []).filter(callback => callback !== handler));
+    },
     MODULE_STORE_SCHEMA_VERSION: 1,
     MODULE_STORE_KEY: 'module-store', MODULE_STORE_SYNC_META_KEY: 'sync-meta',
     FIREBASE_READY_TIMEOUT_MS: 100,
@@ -68,6 +71,28 @@ function syncContext() {
   vm.runInContext(firebase.slice(firebase.indexOf('    function normalizeFirebaseModuleStore('), firebase.indexOf('    async function hashDeleteCode(')), context);
   return { context, saved, storage };
 }
+
+test('the initial module sync does not wait for a Firebase bootstrap that already failed', async () => {
+  const { context } = syncContext();
+  delete context._fb;
+  context._fbReady = false;
+  context.setTimeout = () => { throw Error('a confirmed failure must not start a timer'); };
+  const results = [];
+  context.addEventListener('almanach:initial-modules-settled', event => results.push(event.detail.offline));
+  await context.setupModuleStoreRemoteSync();
+  assert.deepEqual(results, [true]);
+});
+
+test('a Firebase bootstrap failure also settles an already waiting reader', async () => {
+  const { context } = syncContext();
+  delete context._fb;
+  delete context._fbReady;
+  const pending = context.waitForFirebaseReady(500);
+  context.dispatchEvent(new CustomEvent('fb-load-error'));
+  assert.equal(await pending, false);
+  context._fb = { loadModuleStore: async () => ({}) };
+  assert.equal(await context.waitForFirebaseReady(), true);
+});
 
 function store(revision, name) {
   return { updatedAtClient: revision, customSections: [{ key: 'Haus Arth', tab: 'Gruppen',

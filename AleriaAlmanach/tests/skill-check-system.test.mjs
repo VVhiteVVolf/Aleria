@@ -49,7 +49,9 @@ class FixedSkillDice {
 }
 
 test('ordnet jeder geforderten Sprechblase nur ihre passenden Fertigkeiten zu', () => {
-  assert.deepEqual(getSkillsForCommentKind('speech').map(skill => skill.id), ['persuasion']);
+  assert.deepEqual(getSkillsForCommentKind('speech').map(skill => skill.id), ['persuasion', 'animal-handling']);
+  assert.deepEqual(getSkillsForCommentKind('whisper').map(skill => skill.id), ['animal-handling']);
+  assert.deepEqual(getSkillsForCommentKind('shout').map(skill => skill.id), ['intimidation', 'animal-handling']);
   assert.deepEqual(getSkillsForCommentKind('performance').map(skill => skill.id), ['deception', 'performance']);
   assert.deepEqual(getSkillsForCommentKind('thought').map(skill => skill.id), ['insight', 'investigation', 'religion', 'arcane-kunde', 'history', 'nature', 'perception']);
   assert.deepEqual(getSkillsForCommentKind('interact').map(skill => skill.id), ['medicine', 'sleight-of-hand', 'acrobatics', 'athletics', 'body-control', 'survival', 'stealth']);

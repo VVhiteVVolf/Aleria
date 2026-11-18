@@ -43,7 +43,7 @@ test('spear requirement and weapon damage model survive normalization and mini v
   assert.equal(profile('ylva-schafthebel', 'ylva-saex').selectedAction.compatible, false);
   assert.match(renderPersonalTechniquesSummary(actor), /Schafthebel/);
   const empty = { ...actor, resources: actor.resources.map(r => ({ ...r, current: 0 })) };
-  assert.match(renderPersonalTechniquesSummary(empty), /Derzeit nicht verfügbar/);
+  assert.match(renderPersonalTechniquesSummary(empty), /Nicht genug Aktion \(0\/1\)/);
 });
 
 test('evade prepares without attack/damage, affects one incoming attack and expires after an own contribution', async () => {

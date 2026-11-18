@@ -8,6 +8,7 @@ import { EXPANSION_ABILITY_DEFINITIONS } from '../modules/character-development/
 import { developmentTraitEffectSignature, developmentTraitNameKey } from './support/development-trait-distinctness.mjs';
 import { assertDevelopmentTraitSnapshotPreserved } from './support/development-trait-snapshot.mjs';
 import { SPIRITUAL_TRAIT_DEFINITIONS } from '../modules/character-development/development-spiritual-traits.js';
+import { ANIMAL_SPEECH_TRAIT_DEFINITIONS } from '../modules/character-development/development-animal-speech.js';
 
 const root = new URL('../../', import.meta.url);
 const before = JSON.parse(await readFile(new URL('diagnostics/standard-talents-abilities-20261106/before.json', root), 'utf8'));
@@ -19,7 +20,7 @@ test('thirty rejected choices are replaced by thirty new choices while all other
   assert.equal(retired.size, 30);
   assert.equal(replacements.length, 30);
   assert.ok(replacements.every(Boolean));
-  assert.equal(DEVELOPMENT_TRAITS.length, before.traits.length + SPIRITUAL_TRAIT_DEFINITIONS.length);
+  assert.equal(DEVELOPMENT_TRAITS.length, before.traits.length + SPIRITUAL_TRAIT_DEFINITIONS.length + ANIMAL_SPEECH_TRAIT_DEFINITIONS.length);
   for (const id of retired) assert.equal(DEVELOPMENT_TRAITS.some(entry => entry.id === id), false, id);
   assertDevelopmentTraitSnapshotPreserved(before.traits.filter(entry => !retired.has(entry.id)));
 });

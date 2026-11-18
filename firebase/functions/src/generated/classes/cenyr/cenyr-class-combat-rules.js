@@ -32,9 +32,7 @@ function selectedPathIds(profile = {}) {
 
 function pathRequirementAllows(mechanics = {}, profile = {}, context = {}) {
   const weaponProfileId = getCenyrWeaponProfileId(context.weapon || {});
-  if (mechanics.maximumHostileOpponents != null
-    && Number.isFinite(Number(context.hostileOpponentCount))
-    && Number(context.hostileOpponentCount) > Number(mechanics.maximumHostileOpponents)) return false;
+  if (mechanics.requiredHostileOpponents != null && context.hostileOpponentCount !== mechanics.requiredHostileOpponents) return false;
   if (mechanics.requiresMounted && profile.combat?.mounted !== true) return false;
   if (mechanics.requiresDualWield && !/^dual-/.test(weaponProfileId)) return false;
   if (mechanics.requiresWeaponProfileId && weaponProfileId !== mechanics.requiresWeaponProfileId) return false;
@@ -57,7 +55,9 @@ function getActivePathFeatures(profile = {}, context = {}) {
 
 function getPathActionModifiers(profile = {}, context = {}) {
   const features = getActivePathFeatures(profile, context);
-  const latestValue = key => [...features].reverse().find(feature => feature.mechanics?.[key] != null)?.mechanics?.[key];
+  const latestFeature = key => features.findLast(feature => feature.mechanics?.[key] != null);
+  const latestValue = key => latestFeature(key)?.mechanics[key];
+  const firstHitDefense = latestFeature('firstHitDefenseModifier');
   const shieldTechnique = context.technique?.cenyrTraining?.requiresShield === true;
   let attackBonus = Number(latestValue('attackBonus')) || 0;
   if (shieldTechnique && latestValue('shieldIgnoresAttackPenalty') === true && attackBonus < 0) attackBonus = 0;
@@ -66,8 +66,11 @@ function getPathActionModifiers(profile = {}, context = {}) {
     damageBonus: Number(latestValue('damageBonus')) || 0,
     criticalThreshold: Number(latestValue('criticalThreshold')) || 20,
     targetDefenseModifier: Number(latestValue('targetDefenseModifier')) || 0,
+    firstHitDefense: firstHitDefense ? {
+      id: firstHitDefense.id, name: firstHitDefense.name, modifier: firstHitDefense.mechanics.firstHitDefenseModifier
+    } : null,
     sources: features
-      .filter(feature => ['attackBonus', 'damageBonus', 'criticalThreshold', 'targetDefenseModifier']
+      .filter(feature => ['attackBonus', 'damageBonus', 'criticalThreshold', 'targetDefenseModifier', 'firstHitDefenseModifier']
         .some(key => feature.mechanics?.[key] != null))
       .map(feature => ({ id: feature.id, name: feature.name }))
   };
@@ -116,6 +119,7 @@ export function getCenyrClassActionModifiers(profile = {}, context = {}) {
     sources: [...sources.map(feature => ({ id: feature.id, name: feature.name })), ...path.sources]
   };
   if (path.targetDefenseModifier) result.targetDefenseModifier = path.targetDefenseModifier;
+  if (path.firstHitDefense) result.firstHitDefense = path.firstHitDefense;
   return result;
 }
 

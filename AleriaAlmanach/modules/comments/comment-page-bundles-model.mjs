@@ -1,6 +1,6 @@
 // Shared, presentation-only page boundaries. No comment content or game state lives here.
 export const BUNDLE_SCHEMA = 'aleria.comment-page-bundles';
-export const DEFAULT_COMMENT_PAGE_SIZE = 75;
+export const DEFAULT_COMMENT_PAGE_SIZE = 100;
 
 export class CommentPageBundleError extends Error {
   constructor(code, message) { super(message); this.name = 'CommentPageBundleError'; this.code = code; }

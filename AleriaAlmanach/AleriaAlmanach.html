@@ -6,11 +6,11 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>Aleria Almanach</title>
-<link rel="modulepreload" href="./modules/loading-screen/loading-screen-sound.js?v=20261104-startup-v1">
-<script src="./modules/loading-screen/loading-screen.js?v=20261104-startup-v1"></script>
-<link rel="stylesheet" href="./modules/loading-screen/loading-screen.css?v=20261104-startup-v1">
-<link rel="preload" as="image" href="./public/assets/loading-screen/gawain-stand-v4.webp">
-<link rel="preload" as="image" href="./public/assets/loading-screen/freya-stand-v4.webp">
+<script src="./modules/loading-screen/loading-screen.js?v=20261118-journey-v5"></script>
+<script src="./modules/core/deferred-styles.js?v=20261118-startup-v1"></script>
+<link rel="stylesheet" href="./modules/loading-screen/loading-screen.css?v=20261118-journey-v5">
+<link rel="preload" as="image" type="image/avif" media="(max-width: 600px)" href="./public/assets/loading-screen/highland-road-v5-mobile.avif">
+<link rel="preload" as="image" type="image/avif" media="(width > 600px)" href="./public/assets/loading-screen/highland-road-v5-desktop.avif">
 <link rel="icon" type="image/png" href="../IconOrdner/ReiterIcons/Platzhalter.png">
 <link rel="preconnect" href="https://i.imgur.com">
 <link rel="dns-prefetch" href="//i.imgur.com">
@@ -31,29 +31,30 @@
 <link rel="stylesheet" href="./styles/modal.css?v=20261006-story-spacing-v2">
   <link rel="stylesheet" href="./styles/comments.css?v=20261114-preview-avatar-v1">
   <link rel="stylesheet" href="./styles/comments-foreign-voice.css?v=20261113-preview-frames-v1">
-  <link rel="stylesheet" href="./styles/scene-backup.css?v=20261012-scene-backup-v1">
+  <link rel="stylesheet" media="print" data-almanach-late-style href="./styles/scene-backup.css?v=20261012-scene-backup-v1">
   <link rel="stylesheet" href="./modules/comments/embedded-comments.css?v=20260909-newspaper-guilds-v1">
-  <link rel="stylesheet" href="./styles/comments-fazit.css?v=20261112-report-v1">
-  <link rel="stylesheet" href="./styles/comments-fazit-report.css?v=20261112-report-v1">
-  <link rel="stylesheet" href="./styles/comment-transactions.css?v=20260803-transaction-lock-v1">
+  <link rel="stylesheet" media="print" data-almanach-late-style href="./styles/comments-fazit.css?v=20261112-report-v1">
+  <link rel="stylesheet" media="print" data-almanach-late-style href="./styles/comments-fazit-report.css?v=20261112-report-v1">
+  <link rel="stylesheet" media="print" data-almanach-late-style href="./styles/comment-transactions.css?v=20260803-transaction-lock-v1">
 <link rel="stylesheet" href="../Fonts/Rheunwaith-Font-1.000/rheunwaith.css?v=2-gezeiten">
 <link rel="stylesheet" href="../Fonts/Karnrith-Font-2.000/karnrith.css?v=3">
 <link rel="stylesheet" href="./styles/comment-bubbles.css?v=20261103-tlapanui-ishtaran-v1">
 <link rel="stylesheet" href="./styles/comment-module-reveal.css?v=20260712-caste-dossier-v1">
-<link rel="stylesheet" href="./styles/scene-dice.css?v=20260802-dice-audio-v1">
-<link rel="stylesheet" href="./styles/combat.css?v=20261015-ledger-layout-v3">
-<link rel="stylesheet" href="./styles/combat-action-card.css?v=20261015-scenarios-v2">
-<link rel="stylesheet" href="./styles/combat-action-table.css?v=20260927-arsenal-grid-v1">
-<link rel="stylesheet" href="./styles/combat-payment-card.css?v=20260905-compact-action-card-v1">
-<link rel="stylesheet" href="./styles/skill-checks.css?v=20261017-immersive-outcomes-v1">
-<link rel="stylesheet" href="./styles/inventory-use.css?v=20260803-inventory-use-v1">
-<link rel="stylesheet" href="./styles/scene-items.css?v=20260922-scene-items-v2">
-<link rel="stylesheet" href="./styles/scene-inventory.css?v=20261105-scene-money-v1">
-<link rel="stylesheet" href="./styles/scene-trade.css?v=20261104-scene-trade-v1">
-<link rel="stylesheet" href="./styles/catalog-purchase.css?v=20261108-catalog-purchase-v1">
-<link rel="stylesheet" href="./styles/scene-trade-notification.css?v=20261104-scene-trade-v1">
-<link rel="stylesheet" href="./styles/comment-attachment.css?v=20260710-image-attachment-v1">
-<link rel="stylesheet" href="./styles/scene-time.css?v=20260919-play-days-v1">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./styles/scene-dice.css?v=20260802-dice-audio-v1">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./styles/combat.css?v=20261015-ledger-layout-v3">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./styles/combat-action-card.css?v=20261015-scenarios-v2">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./styles/combat-action-table.css?v=20260927-arsenal-grid-v1">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./styles/combat-payment-card.css?v=20260905-compact-action-card-v1">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./styles/skill-checks.css?v=20261017-immersive-outcomes-v1">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./styles/comment-action-icons.css?v=20261117-comment-actions-v1">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./styles/inventory-use.css?v=20260803-inventory-use-v1">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./styles/scene-items.css?v=20260922-scene-items-v2">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./styles/scene-inventory.css?v=20261105-scene-money-v1">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./styles/scene-trade.css?v=20261104-scene-trade-v1">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./styles/catalog-purchase.css?v=20261108-catalog-purchase-v1">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./styles/scene-trade-notification.css?v=20261104-scene-trade-v1">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./styles/comment-attachment.css?v=20260710-image-attachment-v1">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./styles/scene-time.css?v=20260919-play-days-v1">
 <link rel="stylesheet" href="./modules/calendar/calendar-date-picker.css?v=20260911-calendar-v2">
 <link rel="stylesheet" href="./modules/calendar/calendar-preview.css?v=20260911-calendar-v2">
 <link rel="stylesheet" href="./styles/scene-rest.css?v=20261103-scene-regeneration-v1">
@@ -101,7 +102,7 @@
 <link rel="stylesheet" href="./styles/module-page-character-inventory.css?v=20260922-itemization-v1">
 <link rel="stylesheet" href="./styles/character-inventory-cards.css?v=20261102-oldschool-inventory-v2">
 <link rel="stylesheet" href="./styles/module-page-hierarchy.css?v=20261116-hierarchy-layout-v1">
-<link rel="stylesheet" href="./vendor/family-chart/0.9.0/family-chart.css?v=20260715-family-chart-v1">
+<link rel="stylesheet" media="print" data-almanach-late-style href="./vendor/family-chart/0.9.0/family-chart.css?v=20260715-family-chart-v1">
 <link rel="stylesheet" href="./styles/module-page-family.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-family-tree.css?v=20260909-template-layout-v1">
 <link rel="stylesheet" href="./styles/module-page-caste.css?v=20260909-template-layout-v1">
@@ -144,7 +145,7 @@
 <link rel="stylesheet" href="./styles/comment-page-bundles.css?v=20261113-continuation-v2">
 <link rel="stylesheet" href="./styles/session-controls-compact.css?v=20261112-direct-toggle-v1">
 <link rel="stylesheet" href="./modules/sync/firebase-sync-status.css?v=20261115-dialog-layer-v2">
-<link rel="stylesheet" href="./styles/comment-combat-mini-profile.css?v=20261013-combat-checkup-v1">
+<link rel="stylesheet" href="./styles/comment-combat-mini-profile.css?v=20261118-combat-rules-v1">
 <link rel="stylesheet" href="./styles/combat-status.css?v=20260922-profile-design-v1">
 <link rel="stylesheet" href="./styles/comments-condition-tracker.css?v=20260906-effect-rolls-v1">
 <link rel="stylesheet" href="./styles/combat-roll-mode.css?v=20260906-effect-rolls-v1">
@@ -157,7 +158,7 @@
   <link rel="stylesheet" href="./modules/theatre-program/theatre-program.css?v=20261017-v1">
   <!-- Firebase -->
   <link rel="stylesheet" href="./styles/account.css?v=20261012-guild-v3">
-  <script type="module" src="./modules/auth/firebase-bootstrap.mjs?v=20261113-scene-elements-v1"></script>
+  <script type="module" src="./modules/auth/firebase-bootstrap.mjs?v=20261118-startup-v1"></script>
   <script type="module" src="./modules/character-genealogy/genealogy-bootstrap.js?v=20261113-register-v2"></script>
   <script src="../Fonts/Rheunwaith-Font-1.000/rheunwaith.js?v=2-gezeiten" defer></script>
   <script src="../Fonts/Karnrith-Font-2.000/karnrith.js?v=3" defer></script>
@@ -255,7 +256,7 @@
   <script src="./modules/theatre-program/theatre-program-data.js?v=20261017-v1" defer></script>
   <script src="./modules/language/language-data.js?v=20260712-language-template-v1" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-data.js?v=20260716-family-tree-registry-v1" defer></script>
-  <script src="./modules/family-tree-embed/family-tree-embed-catalog.js?v=20260716-family-tree-registry-v1" defer></script>
+  <script src="./modules/family-tree-embed/family-tree-embed-catalog.js?v=20261118-demand-v1" defer></script>
   <script src="./modules/core/app-core.js?v=20261116-hof-areas-v1" defer></script>
   <script src="./modules/core/content-safety.js?v=20261112-image-position-v1" defer></script>
   <script src="./modules/core/aleria-calendar.js?v=20260919-play-days-v1" defer></script>
@@ -269,7 +270,7 @@
   <script src="./modules/module-store/module-section-policy.js?v=20260826-section-policy-v1" defer></script>
   <script src="./modules/module-store/module-store-tree.js?v=20261019-bannkreis-v1" defer></script>
   <script src="./modules/module-store/module-store-local.js?v=20261107-tab-sync-v1" defer></script>
-  <script src="./modules/module-store/module-store-sync.js?v=20261107-tab-sync-v1" defer></script>
+  <script src="./modules/module-store/module-store-sync.js?v=20261118-startup-v1" defer></script>
   <script src="./modules/module-store/module-store-sections.js?v=20261019-bannkreis-v1" defer></script>
   <script src="./modules/module-store/module-entry-write.js?v=20261005-group-edit-access-v1" defer></script>
   <script src="./modules/world-date/world-date-model.js?v=20260826-world-date-v1" defer></script>
@@ -399,13 +400,11 @@
   <script type="module" src="./modules/character-inventory/character-inventory-integration.js?v=20260928-equipment-art-v4"></script>
   <script src="./modules/guest-register/guest-register-renderer.js?v=20260620-guest-register-scroll-size-v1" defer></script>
   <script src="./modules/hierarchy/hierarchy-renderer.js?v=20261116-hierarchy-layout-v1" defer></script>
-  <script src="./vendor/d3/7.9.0/d3.min.js?v=20260715-family-chart-v1" defer></script>
-  <script src="./vendor/family-chart/0.9.0/family-chart.min.js?v=20260715-family-chart-v1" defer></script>
   <script src="./modules/family/compatibility/family-legacy-bridge.js?v=20260715-family-chart-v1" defer></script>
   <script src="./modules/family/migration/family-migration-service.js?v=20260715-family-migration-v1" defer></script>
   <script src="./modules/family/adapters/family-chart-adapter.js?v=20260715-family-card-portrait-v1" defer></script>
   <script src="./modules/family/workbench/family-workbench-controller.js?v=20260715-family-workbench-v2" defer></script>
-  <script src="./modules/family/rendering/family-chart-controller.js?v=20260715-family-preview-mount-v1" defer></script>
+  <script src="./modules/family/rendering/family-chart-controller.js?v=20261118-demand-v1" defer></script>
   <script src="./modules/family/family-renderer.js?v=20260715-family-chart-v1" defer></script>
   <script src="./modules/family-tree-embed/family-tree-embed-renderer.js?v=20261020-heime-v1" defer></script>
   <script src="./modules/house-warriors/house-warriors-renderer.js?v=20260712-house-warriors-images-v2" defer></script>
@@ -422,10 +421,10 @@
   <script src="./modules/archive/archive-hierarchy-browser.js?v=20261113-register-v2" defer></script>
   <script src="./modules/archive/archive-hierarchy-controller.js?v=20261019-navigation-v2" defer></script>
   <script src="./modules/dashboard/dashboard-state.js?v=20261019-economy-v1" defer></script>
-  <script src="./modules/archive/archive-dashboard.js?v=20261104-startup-v1" defer></script>
+  <script src="./modules/archive/archive-dashboard.js?v=20261118-startup-v1" defer></script>
   <script src="./modules/archive/archive-module-stamp.js?v=20260616-module-stamp-v1" defer></script>
   <script src="./modules/archive/archive-navigation.js?v=20261019-navigation-v2" defer></script>
-  <script src="./modules/archive/archive-view.js?v=20261113-register-v2" defer></script>
+  <script src="./modules/archive/archive-view.js?v=20261118-startup-v1" defer></script>
   <script src="./modules/image-library/image-library-model.js?v=20261116-avatar-capacity-v1" defer></script>
 <script src="./modules/image-library/image-library-import.js?v=20261116-avatar-capacity-v1" defer></script>
 <script src="./modules/characters/character-image-sets.js?v=20261116-avatar-capacity-v1" defer></script>
@@ -466,9 +465,9 @@
   <script type="module" src="./modules/scene-dice/scene-dice-bridge.js?v=20261013-performance-v1"></script>
   <script type="module" src="./modules/scene-dice/scene-dice-participants.js?v=20260803-system-audit-v1"></script>
   <script type="module" src="./modules/scene-dice/scene-dice-narration.js?v=20260928-equipment-art-v4"></script>
-  <script type="module" src="./modules/skill-checks/skill-check-controller.js?v=20261113-scene-elements-v1"></script>
-  <script type="module" src="./modules/combat/combat-controller.js?v=20261015-check-options-v1"></script>
-  <script type="module" src="./modules/inventory-use/inventory-use-controller.js?v=20260928-equipment-art-v4"></script>
+  <script type="module" src="./modules/skill-checks/skill-check-controller.js?v=20261117-comment-actions-v1"></script>
+  <script type="module" src="./modules/combat/combat-controller.js?v=20261118-combat-rules-v1"></script>
+  <script type="module" src="./modules/inventory-use/inventory-use-controller.js?v=20261117-comment-actions-v1"></script>
   <script type="module" src="./modules/scene-items/scene-items-controller.js?v=20261017-scene-item-artwork-v1"></script>
   <script src="./modules/scene-dice/scene-dice-state.js?v=20260802-dice-default-simple-v1" defer></script>
   <script src="./modules/scene-dice/scene-dice-ui.js?v=20260802-dice-default-simple-v1" defer></script>
@@ -478,7 +477,7 @@
   <script type="module" src="./modules/scene-rest/scene-rest-controller.js?v=20261103-scene-regeneration-v1"></script>
   <script type="module" src="./modules/combat-encounter/combat-encounter-controller.js?v=20261014-herausforderung-combat-v1"></script>
   <script type="module" src="./modules/loot/loot-controller.js?v=20260807-loot-v1"></script>
-  <script type="module" src="./modules/herausforderung/herausforderung-controller.js?v=20261113-scene-elements-v1"></script>
+  <script type="module" src="./modules/herausforderung/herausforderung-controller.js?v=20261117-comment-actions-v1"></script>
   <script src="./modules/scene-transition/scene-transition-state.js?v=20261104-scene-transition-clarity-v1" defer></script>
   <script src="./modules/scene-transition/scene-transition-ui.js?v=20261104-scene-transition-clarity-v1" defer></script>
   <script src="./modules/scene-transition/scene-transition-target-picker.js?v=20261104-scene-transition-clarity-v1" defer></script>
@@ -488,7 +487,7 @@
   <script src="./modules/comments/comments-transaction-policy.js?v=20261104-scene-trade-v1" defer></script>
   <script type="module" src="./modules/comments/comments-combat-mini-profile.js?v=20261013-combat-checkup-v1"></script>
   <script src="./modules/comments/comments-foreign-voice.js?v=20261112-foreign-voice-roles-v1" defer></script>
-  <script src="./modules/comments/comments-render.js?v=20261113-scene-elements-v1" defer></script>
+  <script src="./modules/comments/comments-render.js?v=20261117-comment-actions-v1" defer></script>
   <script src="./modules/combat/combat-test-scene.js?v=20260802-brandhof-test-v1" defer></script>
   <script src="./modules/comments/comments-showcase-render.js?v=20260602-mojibake-fix-v1" defer></script>
   <script src="./modules/comments/comments-fazit-render.js?v=20261112-scene-report-v1" defer></script>
@@ -503,17 +502,17 @@
   <script src="./modules/comments/comments-backend.js?v=20261113-scene-elements-v1" defer></script>
   <script src="./modules/comments/comments-form-state.js?v=20260906-segment-avatars-v1" defer></script>
   <script src="./modules/comments/comments-scene-cast.js?v=20261108-foreign-voice-v1" defer></script>
-  <script src="./modules/comments/comments-form.js?v=20261113-scene-elements-v1" defer></script>
-  <script src="./modules/comments/comments-segment-base.js?v=20261108-foreign-voice-v3" defer></script>
+  <script src="./modules/comments/comments-form.js?v=20261117-comment-actions-v1" defer></script>
+  <script src="./modules/comments/comments-segment-base.js?v=20261117-comment-actions-v1" defer></script>
   <script src="./modules/comments/comments-foreign-voice-ui.js?v=20261108-foreign-voice-v1" defer></script>
-  <script src="./modules/comments/comments-segments.js?v=20261108-foreign-voice-v3" defer></script>
+  <script src="./modules/comments/comments-segments.js?v=20261117-comment-actions-v1" defer></script>
   <script src="./modules/comments/comments-preview.js?v=20261113-combat-prose-v1" defer></script>
   <script src="./modules/comments/comment-editor-appearance.js?v=20261114-v1" defer></script>
   <script src="./modules/comments/comments-richtext.js?v=20260804-preview-debounce-v1" defer></script>
-  <script src="./modules/comments/comments-draft.js?v=20261108-foreign-voice-v3" defer></script>
+  <script src="./modules/comments/comments-draft.js?v=20261117-comment-actions-v1" defer></script>
   <script src="./modules/backup/scene-backup-ui.js?v=20261012-scene-backup-v1" defer></script>
   <script src="./modules/comments/comments-turn.js?v=20261105-comment-recovery-v1" defer></script>
-  <script src="./modules/comments/comments-pagination.js?v=20261113-scene-performance-v1" defer></script>
+  <script src="./modules/comments/comments-pagination.js?v=20261117-comment-actions-v1" defer></script>
   <script src="./modules/comments/comments-thread.js?v=20261113-scene-elements-v1" defer></script>
   <script type="module" src="./modules/comments/comment-page-bundles-controller.mjs?v=20261113-continuation-v2"></script>
   <script src="./modules/dashboard/dashboard-scene-activity.js?v=20261104-startup-v1" defer></script>
@@ -540,11 +539,11 @@
   <script src="./modules/comments/comments-attachments.js?v=20260710-image-attachment-v1" defer></script>
   <script src="./modules/comments/comments-module-insert.js?v=20260709-scene-module-import-export-v1" defer></script>
   <script src="./modules/comments/comments-edit-state.js?v=20261108-foreign-voice-v5" defer></script>
-  <script src="./modules/comments/comments-edit-segments.js?v=20261108-foreign-voice-v5" defer></script>
+  <script src="./modules/comments/comments-edit-segments.js?v=20261117-comment-actions-v1" defer></script>
   <script src="./modules/comments/comments-edit-preview.js?v=20261108-foreign-voice-v3" defer></script>
-  <script src="./modules/comments/comments-edit.js?v=20261108-foreign-voice-v1" defer></script>
+  <script src="./modules/comments/comments-edit.js?v=20261117-comment-actions-v1" defer></script>
   <script src="./modules/comments/comments-edit-character-picker.js?v=20261108-foreign-voice-v1" defer></script>
-  <script src="./modules/comments/comments-edit-submit.js?v=20260922-critical-v1" defer></script>
+  <script src="./modules/comments/comments-edit-submit.js?v=20261117-comment-actions-v1" defer></script>
   <script src="./modules/comments/comments-delete.js?v=20260622-scene-transition-v1" defer></script>
   <script src="./modules/comments/comments-mechanical-undo.js?v=20260806-edit-text-v1" defer></script>
   <script src="./modules/comments/comments-markup.js?v=20260906-segment-avatars-v1" defer></script>
@@ -581,7 +580,7 @@
 
 <section class="almanach-loading" data-loading-screen data-state="loading" data-loading-sound="./public/assets/loading-screen/ladebild-musik-v1.mp3" role="dialog" aria-modal="true" aria-labelledby="almanach-loading-title" aria-describedby="almanach-loading-status" aria-busy="true" tabindex="-1" hidden>
   <div class="almanach-loading__topline">
-    <span class="almanach-loading__brand">✦ &nbsp; Geschichten aus Aleria</span>
+    <h2 class="almanach-loading__title" id="almanach-loading-title">Aleria Almanach</h2>
     <div class="almanach-loading__controls">
       <button class="almanach-loading__pause" type="button" data-loading-action="pause" aria-pressed="false">Ⅱ Animation pausieren</button>
       <div class="almanach-sound-control" data-loading-sound-control>
@@ -596,42 +595,41 @@
     </div>
   </div>
   <div class="almanach-loading__body">
-    <div class="almanach-loading__heading">
-      <p class="almanach-loading__eyebrow">Eine kleine Reise, bevor es losgeht</p>
-      <h2 class="almanach-loading__title" id="almanach-loading-title">Aleria Almanach</h2>
-      <p class="almanach-loading__subtitle">Jede Geschichte beginnt mit einem Schritt.</p>
-    </div>
-    <div class="almanach-loading__scene" role="img" aria-label="Gawain führt die wandernde Chibi-Gruppe nach rechts an, gefolgt von Freya mit ihrer Laute und Guinevere mit ihrem Bogen. Mit etwas Abstand folgt Fenrir. Hügel, ein Bauernhaus, eine Windmühle und eine Burg ziehen vorbei; der Tag wechselt zu einer sternklaren Nacht.">
-      <div class="almanach-loading__night" aria-hidden="true"></div>
-      <div class="almanach-loading__sunset" aria-hidden="true"></div>
-      <div class="almanach-loading__stars" aria-hidden="true"></div>
-      <div class="almanach-loading__sun" aria-hidden="true"></div>
-      <div class="almanach-loading__moon" aria-hidden="true"></div>
-      <div class="almanach-loading__cloud" aria-hidden="true"></div>
-      <div class="almanach-loading__cloud almanach-loading__cloud--second" aria-hidden="true"></div>
-      <div class="almanach-loading__hills" aria-hidden="true"></div>
-      <div class="almanach-loading__landscape" aria-hidden="true"></div>
-      <div class="almanach-loading__road" aria-hidden="true"></div>
-      <div class="almanach-loading__party" aria-hidden="true">
-        <div class="almanach-loading__traveller almanach-loading__traveller--fenrir" data-loading-traveller="fenrir"></div>
-        <div class="almanach-loading__traveller almanach-loading__traveller--guinevere" data-loading-traveller="guinevere"></div>
-        <div class="almanach-loading__traveller almanach-loading__traveller--freya" data-loading-traveller="freya"></div>
-        <div class="almanach-loading__traveller almanach-loading__traveller--gawain" data-loading-traveller="gawain"></div>
+    <div class="almanach-loading__scene">
+      <div class="almanach-loading__art" role="img" aria-label="Gawain, Freya, Guinevere und Fenrir wandern auf einer Hochlandstraße im Morgenlicht.">
+        <picture>
+          <source media="(max-width: 600px)" srcset="./public/assets/loading-screen/highland-road-v5-mobile.avif" type="image/avif">
+          <source srcset="./public/assets/loading-screen/highland-road-v5-desktop.avif" type="image/avif">
+          <img class="almanach-loading__landscape" src="./public/assets/loading-screen/highland-road-v5-fallback.webp" width="1440" height="600" alt="" decoding="async">
+        </picture>
+        <div class="almanach-loading__party" aria-hidden="true">
+          <span class="almanach-loading__traveller almanach-loading__traveller--fenrir" data-loading-traveller="fenrir"></span>
+          <span class="almanach-loading__traveller almanach-loading__traveller--guinevere" data-loading-traveller="guinevere"></span>
+          <span class="almanach-loading__traveller almanach-loading__traveller--freya" data-loading-traveller="freya"></span>
+          <span class="almanach-loading__traveller almanach-loading__traveller--gawain" data-loading-traveller="gawain"></span>
+        </div>
+      </div>
+      <div class="almanach-loading__banter" data-loading-banter aria-live="off" hidden>
+        <b data-banter-speaker></b>
+        <span data-banter-line></span>
       </div>
     </div>
-    <div class="almanach-loading__names" aria-hidden="true">Fenrir Varulv <span>· &nbsp; · &nbsp; ·</span> Guinevere Neidr <span>·</span> Freya Skald <span>·</span> Gawain Draig &nbsp; →</div>
     <div class="almanach-loading__footer">
-      <div role="status" aria-live="polite" aria-atomic="true">
-        <h3 class="almanach-loading__status" id="almanach-loading-status" data-loading-status>Aleria erwacht …</h3>
-        <p class="almanach-loading__detail" data-loading-detail>Die Welt wird vorbereitet …</p>
+      <div class="almanach-loading__state">
+        <div role="status" aria-live="polite" aria-atomic="true">
+          <h3 class="almanach-loading__status" id="almanach-loading-status" data-loading-status>Das Archiv wird geöffnet …</h3>
+          <p class="almanach-loading__detail" data-loading-detail></p>
+        </div>
+        <progress class="almanach-loading__progress" max="2" value="0" aria-label="Startbereitschaft des Almanachs"></progress>
+        <div class="almanach-loading__steps" aria-hidden="true">
+          <span data-loading-step="shell">Archiv</span>
+          <span data-loading-step="modules">Weltwissen</span>
+        </div>
       </div>
-      <progress class="almanach-loading__progress" max="2" value="0" aria-label="Startbereitschaft des Almanachs"></progress>
-      <div class="almanach-loading__steps" aria-hidden="true">
-        <span data-loading-step="shell">Archiv</span>
-        <span data-loading-step="modules">Weltwissen</span>
+      <div class="almanach-loading__entry">
+        <button class="almanach-loading__enter" type="button" data-loading-action="enter" disabled>Die Welt wird geladen …</button>
+        <p class="almanach-loading__hint" data-loading-hint></p>
       </div>
-      <button class="almanach-loading__enter" type="button" data-loading-action="enter" disabled>Die Welt wird geladen …</button>
-      <p class="almanach-loading__hint" data-loading-hint>Unsere kleine Reise begleitet dich, bis alles bereit ist.</p>
       <div class="almanach-loading__recovery" data-loading-recovery hidden>
         <button type="button" data-loading-action="continue" hidden>Mit aktuellem Stand öffnen</button>
         <button type="button" data-loading-action="reload">Neu laden</button>
@@ -696,7 +694,7 @@
       <div class="sidebar-title">✦ &nbsp; Themenvorschläge</div>
       <p class="topic-board-sidebar-copy">Was soll als Nächstes angespielt werden?</p>
       <button class="topic-board-sidebar-create" type="button" data-topic-board-action="open-board" aria-label="Themenwand öffnen" title="Themenwand öffnen">
-        <img src="./public/assets/topic-board/button-topic-board-v2.webp" alt="" width="360" height="120" loading="lazy" decoding="async">
+        <img src="./public/assets/topic-board/button-topic-board-v3.webp" alt="" width="360" height="120" loading="lazy" decoding="async">
       </button>
       <button class="topic-board-sidebar-open" type="button" data-topic-board-action="open-board">
         <span data-topic-board-sidebar-count>0 offene Fäden</span>

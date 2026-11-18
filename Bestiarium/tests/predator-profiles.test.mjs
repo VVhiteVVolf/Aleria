@@ -122,10 +122,10 @@ test('the parent predator page links all three group overviews', async () => {
   await Promise.all(entries.map(entry => access(new URL(entry.href, directory))));
 });
 
-test('38 inherited predator images and two new Urgren images are archived locally', async () => {
+test('38 inherited predator images and three new Urgren images are archived locally', async () => {
   const manifest = JSON.parse(await readFile(new URL('../assets/predator-sources.json', import.meta.url), 'utf8'));
   const userImages = manifest.items.filter(item => item.sourceType === 'user-provided');
-  assert.equal(manifest.items.length, 40);
+  assert.equal(manifest.items.length, 41);
   assert.equal(manifest.items.filter(item => item.sourceType !== 'imagegen').length, 38);
   assert.deepEqual(userImages.map(item => item.sourceUrl), [
     'https://i.imgur.com/J4IU88Z.png',

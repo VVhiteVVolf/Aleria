@@ -37,7 +37,8 @@ async function readParticipantProfiles(database, transaction, history) {
     const state = states.get(descriptor.actorId);
     const record = hydrateItemRecord(entry.record, definitions, { preserveLoadout: true });
     const actor = { ...record, id: descriptor.actorId, entityType: descriptor.kind };
-    const profile = overlayCombatHitPointState(resolveCombatProfile(withEquippedCombatWeapon(actor, state?.equippedWeaponId, state?.offHandWeaponId, state?.supportEquipment)), state);
+    const equipped = withEquippedCombatWeapon(actor, state?.equippedWeaponId, state?.offHandWeaponId, state?.supportEquipment);
+    const profile = overlayCombatHitPointState(resolveCombatProfile(equipped, { definitions }), state);
     profile.resources = recoverDailyCombatResources(profile.resources, day);
     const persistent = descriptor.actorId === descriptor.recordId;
     return [{ ...descriptor, ...entry, actor, profile, name: profile.name || actor.name || descriptor.actorId,

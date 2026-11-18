@@ -54,6 +54,7 @@ export const BRADHRITH_FORMER_MEMBERS = Object.freeze([
 export const ZITTERAALE_GROUPS = Object.freeze(['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'].map((numeral, index) => Object.freeze({
   id: `zitteraale-gruppe-${numeral.toLowerCase()}`, numeral, name: index === 0 ? 'Die Untoten Aale' : `Gruppe ${numeral}.`,
   banner: `${ZITTERAALE_ART}/groups/banners/${index === 0 ? 'banner-untote-aele-v1' : 'banner-blank-v1'}.png`,
+  overviewImage: index === 0 ? `${ZITTERAALE_ART}/groups/scenes/untote-aale-lager-v1.png` : '',
   leaderId: index === 0 ? 'zitteraale-medrawd-angau' : `zitteraale-gruppe-${numeral.toLowerCase()}-fuehrer`,
   leaderName: index === 0 ? 'Medrawd Angau' : 'Gruppenführer · unbenannt',
   leaderPortrait: `${ZITTERAALE_ART}/groups/portraits/${index === 0 ? 'medrawd-angau-v3' : `leader-${numeral.toLowerCase()}-v1`}.png`,

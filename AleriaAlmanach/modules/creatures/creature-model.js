@@ -89,6 +89,7 @@ export function sanitizeCreature(value = {}) {
   const combatSource = source.combatProfile && typeof source.combatProfile === 'object'
     ? source.combatProfile
     : createCreatureCombatDefaults();
+  const type = normalizeText(source.type || combatSource.identity?.archetype || 'Kreatur', 100) || 'Kreatur';
   const combatProfile = sanitizeCharacterCombatProfile({
     ...combatSource,
     progression: { ...combatSource.progression, level: Math.min(20, level), specialLevels: Math.max(0, level - 20) },
@@ -97,7 +98,7 @@ export function sanitizeCreature(value = {}) {
     notes: source.notes || combatSource.notes,
     identity: {
       ancestry: source.species || combatSource.identity?.ancestry,
-      archetype: source.type || combatSource.identity?.archetype,
+      archetype: type,
       background: source.habitat || combatSource.identity?.background
     }
   }, {
@@ -114,7 +115,7 @@ export function sanitizeCreature(value = {}) {
     itemOrigin: source.itemOrigin && typeof source.itemOrigin === 'object' ? { ...source.itemOrigin } : null,
     needsStatReview: source.needsStatReview === true,
     name: normalizeText(source.name || 'Unbenannte Kreatur', 140),
-    type: normalizeText(source.type || 'Kreatur', 100),
+    type,
     species: normalizeText(source.species, 120),
     bestiaryReference: resolveCreatureBestiaryReference(source),
     bestiaryAncestry: resolveCreatureBestiaryAncestry(source),

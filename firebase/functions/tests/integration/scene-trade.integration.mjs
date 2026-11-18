@@ -11,6 +11,9 @@ import { commitItemRecordOperation } from '../../src/items/commit-item-record.js
 import { catalogEntry, catalogRequest, catalogGroup } from '../fixtures/catalog-trade.js';
 import { buildModuleOffers } from '../../src/generated/item-register/item-register-module-catalog.js';
 import { findBuiltinTradeModule } from '../../src/generated/scene-trade/scene-trade-builtins.js';
+import { commitCombatCommentOperation } from '../../src/mechanics/commit-combat-comment.js';
+import { sortSceneHistory } from '../../src/mechanics/trusted-scene-history.js';
+import { prepareTestAction } from './combat-test-actions.mjs';
 
 const projectId = 'demo-aleria-scene-trade';
 if (process.env.FIRESTORE_EMULATOR_HOST !== '127.0.0.1:8187') throw Error('Only the isolated local Firestore emulator at 127.0.0.1:8187 is allowed.');
@@ -235,6 +238,36 @@ test('real duplicate item lines prepare and create one new definition version on
   await commitSceneTradeOperation(db, owner, request({ lines: [line({ quantity: 1 }), line({ id: 'two', quantity: 1, recipientKey: 'character:gawain' })] }));
   assert.equal((await db.collection('item_definition_versions').get()).size, 1);
   assert.equal((await state()).receipts, 1);
+});
+
+test('a new purchase survives a later ranged attack in a scene with an older ammunition receipt', async () => {
+  const { entryId } = request();
+  const arrows = { id: 'arrows', name: 'Pfeile', quantity: '3' };
+  const bow = { id: 'bow', name: 'Bogen', weaponType: 'bow', damageFormula: '1d6', range: '20 m', equipped: true,
+    ammunition: { required: true, inventoryItemId: arrows.id, amountPerUse: 1 } };
+  await db.doc('characters/gawain').update({ 'inventory.items': [arrows], 'combatProfile.weapons': [bow] });
+  const shoot = async () => {
+    const comments = sortSceneHistory((await db.collection('comments').where('entryId', '==', entryId).get()).docs
+      .map(doc => ({ id: doc.id, ...doc.data() })));
+    const { payload } = await prepareTestAction({ entryId, actorRecord: await read('characters/gawain'),
+      targetRecords: [await read('characters/ylva')], comments, actionId: 'weapon:bow', natural: 5 });
+    return commitCombatCommentOperation({ auth: owner, data: payload }, { database: db });
+  };
+  await shoot();
+  const beforeTrade = (await read('characters/gawain')).inventory;
+  assert.equal(beforeTrade.items[0].quantity, '2');
+  const purchased = await commitSceneTradeOperation(db, owner, request({
+    expectedRevisions: { 'character:gawain': beforeTrade.revision },
+    lines: [line({ quantity: 1, recipientKey: 'character:gawain' })]
+  }));
+  const paid = purchased.characters.find(character => character.id === 'gawain').inventory;
+  const possession = paid.items.find(item => item.id !== arrows.id);
+  assert.ok(possession.definitionRef);
+  const result = await shoot();
+  const after = (await read('characters/gawain')).inventory;
+  assert.deepEqual(after.moneyState, paid.moneyState);
+  assert.deepEqual(after.items, [{ ...arrows, quantity: '1' }, possession]);
+  assert.deepEqual(result.profileUpdates.find(update => update.recordId === 'gawain').inventory, after);
 });
 
 test('real sold-pile pagination orders equal timestamps by document identity without skipping old items', async () => {

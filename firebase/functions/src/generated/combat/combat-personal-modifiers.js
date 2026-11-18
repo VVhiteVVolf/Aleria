@@ -37,12 +37,13 @@ function passiveSources(profile) {
 }
 export function conditionalSaveModifier(profile, context = {}) {
   const effects = context.effects || [];
-  const names = [context.name, context.failureCondition?.name, ...effects.map(e => e.condition?.name)].join(' ').toLowerCase();
+  const conditions = [context.failureCondition, ...effects.map(effect => effect.condition)].filter(Boolean);
+  const names = [context.name, ...conditions.flatMap(condition => [condition.name, condition.presetId, condition.tags])].join(' ').toLowerCase();
   const kinds = new Set(context.saveTags || []);
   if (/furcht|angst|furchtsam|verängstigt/.test(names)) kinds.add('fear');
   if (/gift|vergift/.test(names) || effects.some(e => /gift|poison/i.test(e.damageType || ''))) kinds.add('poison');
   if (/blutung|blutend|bleeding/.test(names)) kinds.add('bleeding');
-  if (/niederwerf|liegend|zu boden/.test(names)) kinds.add('prone');
+  if (/niederwerf|liegend|zu boden|\bprone\b/.test(names)) kinds.add('prone');
   if (effects.some(e => e.type === 'move' && ['push', 'pull'].includes(e.movementKind))) kinds.add('forced-movement');
   const sources = [...passiveSources(profile),
     ...(profile.armorItems || []).filter(a => a.equipped)];

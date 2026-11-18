@@ -745,7 +745,6 @@ function renderAll() {
   main.dataset.archiveRenderedTab = _activeTab;
   main.dataset.archiveRenderedSearch = _archiveSearchNeedle;
   switchTab(_activeTab, { sections });
-  updateArchiveSearchUI();
 
   if (refocusSearch) {
     const nextInput = document.getElementById('archive-search-input');
@@ -779,7 +778,6 @@ async function initPage() {
   clearArchiveSearchOnStartup();
   clearTransientSearchInputsAfterBrowserRestore();
   setupModuleStoreRemoteSync();
-  applyArchiveTheme(_activeTab);
   loadSidebarFeed();
 }
 

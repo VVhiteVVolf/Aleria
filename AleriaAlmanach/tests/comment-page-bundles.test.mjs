@@ -20,17 +20,17 @@ function pagination(metadata) {
   return context;
 }
 
-test('ordinary pages retain their 75-comment boundaries',()=>{
-  const list=items(152),context=pagination(emptyBundleMetadata());
+test('ordinary pages use 100-comment boundaries',()=>{
+  const list=items(201),context=pagination(emptyBundleMetadata());
   const pages=context.buildCommentTimelinePages(list.map(item=>item.comment),'scene::session:one');
-  assert.deepEqual(Array.from(pages,page=>page.items.length),[75,75,2]);
+  assert.deepEqual(Array.from(pages,page=>page.items.length),[100,100,1]);
 });
-test('a named megapage has no 75-comment cap and does not duplicate or mutate comments',()=>{
+test('a named megapage has no ordinary-page cap and does not duplicate or mutate comments',()=>{
   const list=items(7501),before=JSON.stringify(list),metadata=create(emptyBundleMetadata(),list,7000,'Ankunft');
   const groups=partitionBundleItems(list,metadata.pages).groups;
   assert.equal(groups[0].type,'bundle');assert.equal(groups[0].items.length,7000);
   const context=pagination(metadata),pages=context.buildCommentTimelinePages(list.map(item=>item.comment),'scene::session:one');
-  assert.equal(pages.length,8);assert.equal(pages[0].items.length,7000);assert.equal(pages[0].label,'Ankunft');
+  assert.equal(pages.length,7);assert.equal(pages[0].items.length,7000);assert.equal(pages[0].label,'Ankunft');
   assert.equal(new Set(pages.flatMap(page=>page.items.map(item=>item.comment.id))).size,list.length);
   assert.equal(JSON.stringify(list),before);
 });
@@ -84,7 +84,7 @@ test('renaming and unbundling affect presentation metadata only; titles are esca
   const html=context.renderCommentPaginationControls('scene::session:one',info);
   assert.match(html,/Abend &lt;img src=x&gt;/);assert.doesNotMatch(html,/<img src=x>/);
   metadata=applyBundleMutation(metadata,{kind:'remove',pageId:'Am Tor'},'remove-one');
-  assert.equal(metadata.pages.length,0);assert.equal(pagination(metadata).buildCommentTimelinePages(list.map(item=>item.comment)).length,3);
+  assert.equal(metadata.pages.length,0);assert.equal(pagination(metadata).buildCommentTimelinePages(list.map(item=>item.comment)).length,2);
 });
 test('overlapping or malformed operations fail without modifying the existing metadata',()=>{
   const list=items(30),metadata=create(emptyBundleMetadata(),list,10,'Erste'),before=JSON.stringify(metadata);
@@ -164,5 +164,5 @@ test('version-one metadata upgrades without losing bundles; normalization keeps 
   const list=items(3),metadata=create(emptyBundleMetadata(),list,2,'Alt');
   const old={schema:metadata.schema,version:1,revision:metadata.revision,pages:metadata.pages,lastMutationId:'original',lastMutationHash:'original-hash'};
   const upgraded=normalizeBundleMetadata(old);
-  assert.equal(upgraded.version,2);assert.equal(upgraded.pageSize,75);assert.deepEqual(upgraded.regularPages,[]);assert.deepEqual(upgraded.pages,metadata.pages);
+  assert.equal(upgraded.version,2);assert.equal(upgraded.pageSize,100);assert.deepEqual(upgraded.regularPages,[]);assert.deepEqual(upgraded.pages,metadata.pages);
 });

@@ -201,7 +201,9 @@ function handleExternallySavedCharacter(event) {
   });
   if (index >= 0) _characters[index] = normalized;
   else _characters.push(normalized);
-  refreshExternallyChangedCharacterInventory(record);
+  if ((record.inventory || record.combatProfile) && typeof refreshCharacterEquipmentAfterCommit === 'function') {
+    refreshCharacterEquipmentAfterCommit(normalized);
+  } else refreshExternallyChangedCharacterInventory(record);
   // A single feature save does not mean that the complete register was loaded.
   renderCharSubtabs();
   renderCharGrid();
@@ -241,37 +243,21 @@ document.addEventListener('aleria:item-register-records', event => {
   renderCharGrid(); renderCharPickerInForm(); dispatchCharactersChanged();
 });
 
-function applyCommittedCharacterCombatProfile(event) {
+async function applyCommittedCharacterCombatProfile(event) {
   const updates = Array.isArray(event?.detail?.updates) ? event.detail.updates : [];
+  const characterUpdates = updates.filter(update => update?.kind === 'character');
+  if (!characterUpdates.length) return;
+  const { applyCombatRecordUpdate } = await import('../combat/combat-record-update.js');
   let changed = false;
-  updates.filter(update => update?.kind === 'character').forEach(update => {
+  characterUpdates.forEach(update => {
     const index = _characters.findIndex(character => String(character.id || '') === String(update.recordId || ''));
     if (index < 0) return;
-    const hitPoints = update.hitPoints;
-    const currentCombatProfile = _characters[index].combatProfile || {};
-    _characters[index] = {
-      ..._characters[index],
-      inventory: update.inventory && typeof update.inventory === 'object'
-        ? (typeof sanitizeCharacterInventoryData === 'function'
-            ? sanitizeCharacterInventoryData(update.inventory)
-            : update.inventory)
-        : _characters[index].inventory,
-      combatProfile: {
-        ...currentCombatProfile,
-        ...(update.equipment ? { weapons: update.equipment.weapons, armorItems: update.equipment.armorItems } : {}),
-        hitPoints: hitPoints ? {
-          ...(currentCombatProfile.hitPoints || {}),
-          current: Math.max(0, Number(hitPoints.current) || 0),
-          temporary: Math.max(0, Number(hitPoints.temporary) || 0)
-        } : currentCombatProfile.hitPoints,
-        resources: Array.isArray(update.resources)
-          ? update.resources.map(resource => ({ ...resource }))
-          : (currentCombatProfile.resources || []),
-        abilities: Array.isArray(update.abilities)
-          ? update.abilities.map(ability => ({ ...ability }))
-          : (currentCombatProfile.abilities || [])
-      }
-    };
+    const previous = _characters[index];
+    const record = applyCombatRecordUpdate(previous, update);
+    if (record === previous) return;
+    _characters[index] = record;
+    rememberCharacterUpdateDuringLoad(record);
+    if (typeof refreshCharacterEquipmentAfterCommit === 'function') refreshCharacterEquipmentAfterCommit(record);
     changed = true;
   });
   if (!changed) return;

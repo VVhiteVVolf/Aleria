@@ -27,7 +27,9 @@ import { resolveEquipmentImage, projectEquipmentArtwork } from '../character-equ
 import { sanitizeRegeneration, getBurningArmorPenalty } from './combat-creature-traits.js';
 import { getArmorRoutine, isArmorDexterityUnlocked } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
 import { applyArmorBalance, getArmorDexterityRules } from '../character-equipment/equipment-armor-rules.js';
-import { synchronizeEquipmentFromInventory } from '../character-equipment/character-equipment-sync.js';
+import { projectCombatEquipmentFromInventory } from '../character-equipment/character-equipment-sync.js';
+import { DEFAULT_MELEE_WEAPON } from './combat-equipment-state.js';
+import { materializeInventoryItem } from '../item-definitions/item-definition-resolver.js';
 import { normalizeItemDefinitionRef } from '../item-definitions/item-definition-model.js';
 import { normalizeEquipmentPreparationCosts } from '../character-equipment/equipment-preparation-costs.js';
 import { getArmorStanceExcess } from './combat-armor-stances.js';
@@ -115,21 +117,6 @@ const DEFAULT_RESOURCES = Object.freeze([
   { id: 'infernal-points', name: 'Infernale Punkte', current: 0, maximum: 0, recovery: 'day', scope: 'persistent', category: 'infernal' },
   { id: 'pact-points', name: 'Paktpunkte', current: 0, maximum: 0, recovery: 'day', scope: 'persistent', category: 'pact' }
 ]);
-const DEFAULT_MELEE_WEAPON = Object.freeze({
-  id: 'default-unarmed-melee',
-  name: 'Nahkampf',
-  weaponType: 'unarmed',
-  training: 'simple',
-  damageFormula: '1d4',
-  damageType: 'Wucht',
-  attackAttribute: 'strength',
-  proficient: true,
-  range: 'Nahkampf',
-  properties: 'Schlicht · simpel · immer verfügbar',
-  notes: 'Grundlegender waffenloser Nahkampfangriff.',
-  equipped: true
-});
-
 function normalizeText(value, maximumLength = 160) {
   return String(value || '').trim().slice(0, maximumLength);
 }
@@ -342,15 +329,19 @@ function sanitizeWeapon(value = {}, index = 0) {
   };
 }
 
-function sanitizeWeaponsWithDefault(value = []) {
-  const weapons = sanitizeList(value, sanitizeWeapon);
+export function normalizeCombatProfileWeapons(profile = {}) {
+  const weapons = sanitizeList(getLegacyWeapons(profile), sanitizeWeapon);
+  const hasEquippedWeapon = weapons.some(weapon => weapon.equipped);
   const existingDefault = weapons.find(weapon => weapon.id === DEFAULT_MELEE_WEAPON.id)
     || weapons.find(weapon => weapon.weaponType === 'unarmed' && weapon.name.toLocaleLowerCase('de') === 'nahkampf');
-  if (existingDefault) return weapons;
+  if (existingDefault) {
+    if (!hasEquippedWeapon) existingDefault.equipped = true;
+    return weapons;
+  }
   if (weapons.length >= 60) weapons.length = 59;
   weapons.push(sanitizeWeapon({
     ...DEFAULT_MELEE_WEAPON,
-    equipped: weapons.length === 0
+    equipped: !hasEquippedWeapon
   }, weapons.length));
   return weapons;
 }
@@ -665,6 +656,7 @@ function sanitizeTechniqueSecondarySave(value = {}) {
     addProficiency: normalizeBoolean(source.addProficiency, true),
     ...(source.timing === 'after-sequence' ? { timing: 'after-sequence' } : {}),
     ...(source.requiresHit === false ? { requiresHit: false } : {}),
+    ...(Array.isArray(source.saveTags) ? { saveTags: source.saveTags.map(tag => normalizeText(tag, 40)).filter(Boolean).slice(0, 12) } : {}),
     failureCondition: sanitizeTechniqueSaveCondition(failure),
     ...(source.actorFailureCondition ? { actorFailureCondition: sanitizeTechniqueSaveCondition(source.actorFailureCondition) } : {})
   };
@@ -672,6 +664,8 @@ function sanitizeTechniqueSecondarySave(value = {}) {
 
 function sanitizeTechniqueSaveCondition(failure = {}) {
   return {
+    ...(failure.presetId ? { presetId: normalizeText(failure.presetId, 100) } : {}),
+    ...(failure.tags ? { tags: normalizeText(failure.tags, 500) } : {}),
     ...(failure.stanceGroup ? { stanceGroup: normalizeText(failure.stanceGroup, 120) } : {}),
     ...(failure.armorStance ? { armorStance: true } : {}),
     ...(failure.triggerRules?.length ? { triggerRules: sanitizeCombatTriggerRules(failure.triggerRules) } : {}),
@@ -1084,7 +1078,7 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
     skills: sanitizeList(options.ensureRequiredSkills === false
       ? (Array.isArray(source.skills) ? source.skills : [])
       : ensureRequiredSkills(Array.isArray(source.skills) ? source.skills : DEFAULT_SKILLS), sanitizeSkill),
-    weapons: sanitizeWeaponsWithDefault(getLegacyWeapons(source)),
+    weapons: normalizeCombatProfileWeapons(source),
     armorItems: sanitizeList(getLegacyArmor(source), sanitizeArmor),
     resources: sanitizedResources,
     // Complete learned form arsenals exceed the default 60-entry list limit.
@@ -1259,6 +1253,11 @@ function auraTargetAllowsRelation(target, relation) {
 export function getAuraTargetMechanics(profile = {}, context = {}) {
   const normalized = getCalculationProfile(profile);
   if (!normalized.aura.enabled) return sanitizeMechanicalModifiers();
+  const recipient = context.recipientProfile;
+  const sourceId = String(context.sourceActorId || profile.characterId || '');
+  if (sourceId && recipient?.characterId === sourceId) return sanitizeMechanicalModifiers();
+  const scenePresenceApplied = sourceId && recipient?.conditions?.some(condition =>
+    condition.active !== false && condition.encounterAura === true && condition.auraSourceActorId === sourceId);
   const relation = ['self', 'ally', 'enemy'].includes(context.relation) ? context.relation : 'enemy';
   const distance = context.distanceMeters == null || context.distanceMeters === '' ? null : Number(context.distanceMeters);
   const sources = [normalized.aura.latentPresence, normalized.aura.activeForm]
@@ -1266,7 +1265,10 @@ export function getAuraTargetMechanics(profile = {}, context = {}) {
     .filter(component => auraTargetAllowsRelation(component.target, relation))
     .filter(component => {
       const radius = parseAuraRadiusMeters(component.radius);
-      if (radius == null || context.ignoreRange === true) return true;
+      // Encounter start already projected the scene-wide components into this
+      // recipient's stats. A second component may still have a measured radius.
+      if (radius == null) return !scenePresenceApplied;
+      if (context.ignoreRange === true) return true;
       return Number.isFinite(distance) && distance >= 0 && distance <= radius;
     })
     .map(component => relation === 'self'
@@ -1528,57 +1530,42 @@ function readNamedAttribute(item = {}, pattern) {
 
 export function getCharacterCombatInventoryOptions(character = {}, kind = 'weapon') {
   return getInventoryItems(character)
-    .filter(item => matchesEquipmentKind(item, kind))
+    .map(source => {
+      if (!source.definitionRef) return matchesEquipmentKind(source, kind) ? source : null;
+      const item = materializeInventoryItem(source);
+      return item !== source && item.combatDefinition?.kind === kind ? item : null;
+    }).filter(Boolean)
     .map((item, index) => {
       const combat = item.combatDefinition || item.combat || {};
       if (kind === 'weapon') {
         return sanitizeWeapon({
+          ...combat,
           id: `inventory-weapon-${index + 1}`,
           inventoryItemId: item.id,
           name: item.name,
           image: resolveEquipmentImage(item, { characterId: character.id }),
-          damageFormula: combat.damageFormula,
-          versatileDamageFormula: combat.versatileDamageFormula,
-          weaponType: combat.weaponType,
-          training: combat.training,
-          attackAttribute: combat.attackAttribute,
-          proficient: combat.proficient,
-          attackBonus: combat.attackBonus,
-          damageBonus: combat.damageBonus,
-          damageType: combat.damageType,
-          range: combat.range,
-          rangeType: combat.rangeType,
-          properties: combat.properties,
+          ...(item.definitionRef && combat.ammunition ? { ammunition: { ...combat.ammunition, inventoryItemId: item.itemState?.ammunitionItemId || '' } } : {}),
           notes: combat.notes || item.description,
           equipped: false
         }, index);
       }
       return sanitizeArmor({
+        ...combat,
         id: `inventory-armor-${index + 1}`,
         inventoryItemId: item.id,
         name: item.name,
         image: resolveEquipmentImage(item, { characterId: character.id }),
-        kind: combat.kind,
-        damageProtection: combat.damageProtection,
-          baseArmorClass: combat.baseArmorClass,
-          armorClassBonus: combat.armorClassBonus ?? combat.defenseBonus ?? readNamedAttribute(item, /schutz|verteidigung|r[uü]stung/i),
-          dexterityMode: combat.dexterityMode,
-          dexterityCap: combat.dexterityCap,
-          dexterityUnlockLevel: combat.dexterityUnlockLevel,
-        properties: combat.properties,
+        kind: combat.armorKind || combat.kind,
+        ...(item.definitionRef ? { definitionRef: item.definitionRef, definitionTitle: item.definitionTitle } : {}),
+        armorClassBonus: combat.armorClassBonus ?? combat.defenseBonus ?? readNamedAttribute(item, /schutz|verteidigung|r[uü]stung/i),
         notes: combat.notes || item.description,
         equipped: false
       }, index);
     });
 }
 
-export function resolveCharacterCombatProfile(character = {}) {
-  if (character.inventory && (character.inventory.items?.some(item => item.definitionRef)
-    || character.combatProfile?.equipmentPassiveEffects)) {
-    const { combatProfile } = synchronizeEquipmentFromInventory({ inventory: character.inventory,
-      combatProfile: character.combatProfile || {}, preserveLoadout: true, definitionRulesOnly: true });
-    character = { ...character, combatProfile };
-  }
+export function resolveCharacterCombatProfile(character = {}, { definitions } = {}) {
+  character = projectCombatEquipmentFromInventory(character, definitions);
   const sanitized = sanitizeCharacterCombatProfile(character.combatProfile, {
     ensureRequiredSkills: character.entityType !== 'creature',
     ensureSpellSlots: character.entityType !== 'creature'

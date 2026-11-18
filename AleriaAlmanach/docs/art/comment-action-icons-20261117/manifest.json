@@ -1,0 +1,414 @@
+{
+  "version": 1,
+  "technicalExport": "RGBA LANCZOS 256 PNG; originals unchanged",
+  "assets": [
+    {
+      "id": "eat",
+      "label": "Essen",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/eat.png",
+      "originalSha256": "d269c7c806a3319e5ddbd526a1aab99175b93c8529f1304cb1a9b06ba3740957",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/eat.png",
+      "activeSha256": "8f514dd2be88fd63312116888eec3e0cecb3f9ae4464aa78a84af6828d95b0c5",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "persuasion",
+      "label": "Überzeugen",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/persuasion.png",
+      "originalSha256": "6c2b81b2be0e6607a96092e7eec537153944ec7841bfa24c3fd040cb282aebe3",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/persuasion.png",
+      "activeSha256": "b19014a5ff8b09cd48cbcaad9cb8230ba5999b8fbe5bbe848350d8eacd904309",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "perception",
+      "label": "Wahrnehmung",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/perception.png",
+      "originalSha256": "ccb3d7caca659545d3b2e6305fc45e9738611d4498092dec872a6d5ebfc15ecf",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/perception.png",
+      "activeSha256": "86eeafe1290e1ef5260642f6b3d8726f6521c4c31ff636d1137337cb5fd1540b",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "intimidation",
+      "label": "Einschüchtern",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/intimidation.png",
+      "originalSha256": "1a07ac9dbf5fad1b6bc8492cb64d20a337beeb2ecc1d1c456d84399bbf800c60",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/intimidation.png",
+      "activeSha256": "d99768e4a88dada5af2c13c10bf53d4fcf35ded8316e8c1236130828afe7a24c",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "performance",
+      "label": "Auftreten",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/performance.png",
+      "originalSha256": "9f757b9860fbb0a4108eab41cb3f51835707792cff0e4701464531b2d58691fc",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/performance.png",
+      "activeSha256": "0ea24387d9e3bcaba5217b9fc6bb37711a7290e9114ad085573beadf3c7d2899",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "animal-handling",
+      "label": "Mit Tieren umgehen",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/animal-handling.png",
+      "originalSha256": "f71aae258775e948d6cf311a84c113d1a407b43e07147e1cb8b32666d35c7f0a",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/animal-handling.png",
+      "activeSha256": "a18b9a4858521567667aa9ecc331536c829bd9205c283b082a54ec64521bd132",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "insight",
+      "label": "Motiv erkennen",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/insight.png",
+      "originalSha256": "4b0e30237c5d6088a677857a87ace7b1d3e6e6049f2fd55a2b884a356fe574ce",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/insight.png",
+      "activeSha256": "3ca32aabf1ba033117dc20ca1f8663c1826881d70e6c9f9299b1ddba14231b7d",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "deception",
+      "label": "Täuschen",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/deception.png",
+      "originalSha256": "f862366dc34a30ba7bf7f947d4041e5b02cfb0f4c6837a2da0788ac1498c4271",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/deception.png",
+      "activeSha256": "4dd74e762b106a54cd05d23caa18ba6394efde0d4acb9cf7851f4c733ccdbd04",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "medicine",
+      "label": "Heilkunde",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/medicine.png",
+      "originalSha256": "cfdefd0130ed27fac9c1b62f8d345fafb913de9fc8cd367209c4ea04fc894e4b",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/medicine.png",
+      "activeSha256": "e101594db6deb9f8ed439655a8c3428b4a983ec2684d5bd9402592fdd73fe9d5",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "investigation",
+      "label": "Nachforschungen",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/investigation.png",
+      "originalSha256": "d484f1bcd708b6d628b3a2464b929cba327ff95557882ba36beafb2743d4c6e9",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/investigation.png",
+      "activeSha256": "729a96e0acd60739d7073e15f0c14a8e34a86a9f458f60d41bfd60cccff3245b",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "nature",
+      "label": "Naturkunde",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/nature.png",
+      "originalSha256": "6baf6fb15c0b24567a6496781a62cf163a286dc18f76b184a2fa43096314c685",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/nature.png",
+      "activeSha256": "85d124e4b0a60f5f80caed5315612124807a1f28931a2c19e4eb77a5ccd3f485",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "religion",
+      "label": "Religion",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/religion.png",
+      "originalSha256": "56dbd20afb6caa4ba23a79af5c86c9fd70b7915a2f12b61b6412989981a4c09a",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/religion.png",
+      "activeSha256": "d065d6da4df41220bbaa8cb1b899c6d019356c3c769cb1c8fc84f6a0434423dc",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "survival",
+      "label": "Überleben",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/survival.png",
+      "originalSha256": "77b9f4d1c47c0534d63fe86afe2cd49226e42c1da9744fa53f58e0e081c75f83",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/survival.png",
+      "activeSha256": "58e5b184942ba46dfdf7d65290e360e2600ef384b1c8ca1f64fc838026d08da1",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "arcane-kunde",
+      "label": "Arkane Kunde",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/arcane-kunde.png",
+      "originalSha256": "be0cfbf1c9c9d308bbd0d064c01f5c12a5bcaaa96a8a69fb1dca1b2f9b2bac20",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/arcane-kunde.png",
+      "activeSha256": "0bb96e509ed444f101b8834f08b5b70ab05e66abc5869d36a04dadb9d06f53aa",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "sleight-of-hand",
+      "label": "Fingerfertigkeit",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/sleight-of-hand.png",
+      "originalSha256": "3289111e8c3f9a492e5a2be46cc117303f3f7fc952b0390d8b86865b939fdf55",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/sleight-of-hand.png",
+      "activeSha256": "1137d7cc4803e95cebdec93fd957c70b7c0a083c161435e021b1b1c95d76fa8d",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "history",
+      "label": "Geschichte",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/history.png",
+      "originalSha256": "12dbadb375a7c149a47c6fd95e43f0b3355e36eca95eee5eb00391f9631b2d5c",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/history.png",
+      "activeSha256": "6bcd681dd33624042f3bdee6917eb12a694e0391ec5191e1e6404395f107380c",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "acrobatics",
+      "label": "Akrobatik",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/acrobatics.png",
+      "originalSha256": "d8c5cd1a7dd59ad93567cd17a3e781e7ead881967a2400bd91eff857cfbf06ef",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/acrobatics.png",
+      "activeSha256": "ac02223a22e9c7064adf2f6719bd88b0b38c0a459b43bae7241f23cd8df09eee",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "body-control",
+      "label": "Körperbeherrschung",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/body-control.png",
+      "originalSha256": "b47997617f41fef0ed0350303be614176cc5d0f0b170e5b862f7c9be3ab2e767",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/body-control.png",
+      "activeSha256": "413cc57e76449e278f86e475285ee102023d11bb2b42767fb196b03ea40aa6c7",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "stealth",
+      "label": "Heimlichkeit",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/stealth.png",
+      "originalSha256": "feac6952531875db330de807de92160a0035332be81824aa468c643b97acdb42",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/stealth.png",
+      "activeSha256": "4807ba7cbb2e79db8c30ab6a66d463ee9da4519102b1b86f23ad4fdcc139ad1e",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "drink",
+      "label": "Trinken",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/drink.png",
+      "originalSha256": "249b62004c213e3cd5f1eff93568079e9a62076a92a1113dcb20364858900efc",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/drink.png",
+      "activeSha256": "5ac4445c7933504672f939f73d421a6b6027b92bd53e02272b32534078f0729e",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "athletics",
+      "label": "Athletik",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/athletics.png",
+      "originalSha256": "93a7aab3b89222d9b683426cae0b4fa8e879e79b3f4e039f31d531f3ccb268a1",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/athletics.png",
+      "activeSha256": "db0d5b9f1ad105e802e69d4f6ca25939fb24dd3d0280d250a48a05fb375e6ae0",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "take",
+      "label": "Einnehmen",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/take.png",
+      "originalSha256": "0a7f815b7e2ee73a1e3b9312e802ee5086a00238d442e9d2840118f5608eea24",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/take.png",
+      "activeSha256": "ef43b24bdfcfd74e6f16e13d0e708c1d15452853dc71fff2a6af93977e0177f0",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "seduction",
+      "label": "Flirten",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/seduction.png",
+      "originalSha256": "1c8dfb41204c47f1deafdb6135d914abf92e02f4aa92547fed8a17249537779a",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/seduction.png",
+      "activeSha256": "3e631e2c5cb413c2373a8db73f2165e68c269f2470c71a145c900e7bfdfa4cda",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    },
+    {
+      "id": "use",
+      "label": "Benutzen",
+      "original": "AleriaAlmanach/docs/art/comment-action-icons-20261117/originals/use.png",
+      "originalSha256": "850b3e363782dae114f06b5ea99b7118fb300bf4ad8ffe7217f261430cc0babc",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "active": "AleriaAlmanach/public/assets/comment-icons/actions/use.png",
+      "activeSha256": "549a50faba85a3a8a8338f3c1a43e3e398bb8f13b3b1822de2f03cc870991a10",
+      "activeDimensions": [
+        256,
+        256
+      ],
+      "alpha": true
+    }
+  ]
+}

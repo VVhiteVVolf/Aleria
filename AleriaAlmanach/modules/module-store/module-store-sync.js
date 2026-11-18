@@ -465,12 +465,19 @@ async function cleanupLocalAlmanachStorage() {
 }
 
 async function waitForFirebaseReady(timeoutMs = FIREBASE_READY_TIMEOUT_MS) {
-  if (_fbReady && window._fb) return true;
-  await Promise.race([
-    new Promise(resolve => window.addEventListener('fb-ready', resolve, { once: true })),
-    new Promise(resolve => window.setTimeout(resolve, timeoutMs))
-  ]);
-  return !!window._fb;
+  if (window._fb) return true;
+  if (window._fbReady === false || window.navigator?.onLine === false) return false;
+  return new Promise(resolve => {
+    const finish = () => {
+      window.clearTimeout(timer);
+      window.removeEventListener('fb-ready', finish);
+      window.removeEventListener('fb-load-error', finish);
+      window.removeEventListener('offline', finish);
+      resolve(!!window._fb);
+    };
+    const timer = window.setTimeout(finish, timeoutMs);
+    for (const event of ['fb-ready', 'fb-load-error', 'offline']) window.addEventListener(event, finish);
+  });
 }
 
 async function pushModuleStoreToFirebase(payload, shouldSave = () => true) {
@@ -642,6 +649,7 @@ async function setupModuleStoreRemoteSync() {
     subscribeToModuleStoreUpdates();
   } catch (error) {
     if (error?.code === 'module-store-awaiting-server') {
+      startupOffline = true;
       updateFirebaseSyncStatus('syncing', 'Warte auf den bestätigten Online-Stand...');
       subscribeToModuleStoreUpdates();
       return;

@@ -18,7 +18,8 @@
   let contentAriaHidden = null;
   let previousFocus = null;
   let sound = null;
-  let walkRequest = null;
+  let banter = null;
+  let banterRequest = null;
 
   html.dataset.almanachLoading = '';
   const slowTimer = window.setTimeout(() => { slow = true; render(); }, 15000);
@@ -49,14 +50,14 @@
     view.progress.max = milestones.size;
     view.progress.setAttribute('aria-valuetext', `${finished} von ${items.length} Startschritten abgeschlossen`);
     view.status.textContent = failed ? 'Der Almanach konnte nicht vollständig starten.'
-      : ready ? 'Dein Abenteuer kann beginnen.'
-      : slow ? 'Die Reise dauert heute etwas länger …' : 'Aleria erwacht …';
+      : ready ? 'Der Almanach ist bereit.'
+      : slow ? 'Der Abgleich dauert etwas länger …' : 'Das Archiv wird geöffnet …';
     view.detail.textContent = failed ? 'Bitte lade die Seite noch einmal.'
       : ready ? offline ? 'Der verfügbare Stand ist bereit. Online-Daten laden bei Verbindung nach.' : 'Das Archiv ist bereit. Weitere Inhalte können im Hintergrund nachladen.'
       : `Wird geladen: ${items.filter(item => !item.done).map(item => item.label).join(' · ')}`;
     view.enter.disabled = !ready;
     view.enter.textContent = ready ? 'Aleria betreten' : 'Die Welt wird geladen …';
-    view.hint.textContent = ready ? 'Klicke irgendwo oder drücke Enter.' : 'Unsere kleine Reise begleitet dich, bis alles bereit ist.';
+    view.hint.textContent = ready ? 'Klicke in die Szene oder drücke Enter.' : '';
     view.recovery.hidden = !(slow || failed) || ready;
     view.continue.hidden = failed || !milestones.get('shell').done;
     view.pause.textContent = animationPaused ? '▷ Animation abspielen' : 'Ⅱ Animation pausieren';
@@ -92,12 +93,12 @@
         target.focus({ preventScroll: true });
       }
       view = null;
-    }, animationPaused ? 0 : 380);
+    }, animationPaused ? 0 : 220);
   }
 
   function handleClick(event) {
     const action = event.target.closest('[data-loading-action]')?.dataset.loadingAction;
-    if (action === 'pause') { void sound?.tryAutoplay(); animationPaused = !animationPaused; render(); loadWalk(); return; }
+    if (action === 'pause') { void sound?.tryAutoplay(); animationPaused = !animationPaused; render(); updateBanter(); return; }
     if (action === 'sound') { sound?.toggle(); return; }
     if (action === 'reload') { window.location.reload(); return; }
     if (!isReady() && action !== 'continue') void sound?.tryAutoplay();
@@ -143,13 +144,15 @@
     });
   }
 
-  function loadWalk() {
-    if (leaving || !view || animationPaused || document.hidden || !view.root.querySelector('[data-loading-traveller]')) return;
-    const root = view.root;
-    return walkRequest ||= import('./loading-screen-walk.js?v=20261104-startup-v1').then(({ mountLoadingScreenWalk }) => {
-      if (!leaving && view && !lifetime.signal.aborted && !animationPaused && !document.hidden) return mountLoadingScreenWalk(root, { signal: lifetime.signal });
-      if (view && !leaving) walkRequest = null;
-    }).catch(error => console.warn('Die ruhige Laufanimation konnte nicht vorbereitet werden:', error));
+  function updateBanter() {
+    const active = !!view && !leaving && !animationPaused && !document.hidden && !lifetime.signal.aborted;
+    if (banter) { banter.setActive(active); return; }
+    if (!active || banterRequest || !view.root.querySelector('[data-loading-banter]')) return;
+    banterRequest = import('./loading-screen-banter.js?v=20261118-journey-v5').then(({ mountLoadingScreenBanter }) => {
+      if (!view || lifetime.signal.aborted) return;
+      banter = mountLoadingScreenBanter(view.root, { signal: lifetime.signal });
+      banter?.setActive(!animationPaused && !document.hidden);
+    }).catch(error => console.warn('Die Reisegespräche konnten nicht geladen werden:', error));
   }
 
   function mount() {
@@ -189,9 +192,7 @@
       render();
       root.focus({ preventScroll: true });
       if (root.dataset.loadingSound) loadSound();
-      // CSS supplies the static scenery immediately. Optional limb animation
-      // must never stand between a rendered archive and its readers.
-      loadWalk();
+      updateBanter();
     } catch (error) {
       sound?.destroy();
       restoreContent();
@@ -207,7 +208,7 @@
     offline = event.detail?.offline === true;
     complete('modules');
   }, { once: true });
-  listen(document, 'visibilitychange', () => { render(); loadWalk(); });
+  listen(document, 'visibilitychange', () => { render(); updateBanter(); });
   listen(window, 'pagehide', () => { window.clearTimeout(slowTimer); lifetime.abort(); }, { once: true });
   listen(window, 'almanach:startup-error', () => { failed = true; render(); }, { once: true });
   listen(document, 'readystatechange', mount);

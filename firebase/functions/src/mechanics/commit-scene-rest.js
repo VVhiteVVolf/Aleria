@@ -132,7 +132,7 @@ export async function commitSceneRestOperation(request, { database = getFirestor
         ...record,
         id: actorId,
         entityType: descriptor.kind === 'creature' ? 'creature' : 'character'
-      });
+      }, { definitions });
       const profile = {
         ...overlayCombatHitPointState(base, combatStates.get(actorId) || null),
         // Scene receipts describe earlier possessions. Purchases and transfers may
@@ -169,7 +169,7 @@ export async function commitSceneRestOperation(request, { database = getFirestor
       const key = `${descriptor.kind}:${descriptor.recordId}`;
       const target = unique.get(key);
       const record = records.get(key) || {};
-      transaction.update(target.ref, withProtectedRecordRevisions(record, {
+      const committedFields = withProtectedRecordRevisions(record, {
         ...(committed.inventorySnapshot ? { inventory: committed.inventorySnapshot.after } : {}),
         'combatProfile.hitPoints.current': committed.after.hitPoints.current,
         'combatProfile.hitPoints.temporary': committed.after.hitPoints.temporary,
@@ -177,7 +177,8 @@ export async function commitSceneRestOperation(request, { database = getFirestor
         'combatProfile.abilities': committed.after.abilities,
         'combatProfile.lastMechanicalCommentId': commentRef.id,
         updatedAt: new Date(nowClient).toISOString()
-      }, committed.inventorySnapshot ? ['combatProfile', 'inventory'] : ['combatProfile'], nowClient));
+      }, committed.inventorySnapshot ? ['combatProfile', 'inventory'] : ['combatProfile'], nowClient);
+      transaction.update(target.ref, committedFields);
       mechanicalUndo[key] = {
         kind: descriptor.kind,
         recordId: descriptor.recordId,
@@ -193,6 +194,8 @@ export async function commitSceneRestOperation(request, { database = getFirestor
       return [{
         kind: descriptor.kind,
         recordId: descriptor.recordId,
+        combatProfileRevision: committedFields['combatProfile.revision'],
+        ...(committedFields.inventory ? { inventory: committedFields.inventory } : {}),
         hitPoints: committed.after.hitPoints,
         resources: committed.after.resources,
         abilities: committed.after.abilities

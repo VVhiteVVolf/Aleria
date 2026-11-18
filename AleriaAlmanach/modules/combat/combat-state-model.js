@@ -1,8 +1,10 @@
 import { beginCombatContribution } from './combat-contribution-start.js';
+import { getSegmentCombatStateReceipts } from './combat-resolution-tree.js';
 import { applySceneRegenerationToStateMap, isSilentSceneRegeneration } from '../scene-regeneration/scene-regeneration-model.js';
 import { advanceSceneConditionClock, sceneClockBeforeSegment } from '../scene-time/scene-condition-clock.js';
 import { advanceSubstanceStateMap } from '../character-health/substance-state.js';
 import { getDroppedCombatWeapon } from './combat-weapon-availability.js';
+import { applyDismountSnapshots } from './combat-support-equipment.js';
 // Pure combat-state helpers.
 import { getLightAttackDamageModifier } from './combat-technique-damage.js';
 // This module is the single source of truth for damage application and for
@@ -287,6 +289,7 @@ export function applyCombatResolutionState(states, resolution, sceneItems = new 
     });
   }
   const targetResources = getResolutionTargetResourceState(resolution);
+  applyDismountSnapshots(states, resolution);
   if (targetResources) {
     const targetId = String(resolution.targetId || '');
     const previous = states.get(targetId) || {};
@@ -390,21 +393,7 @@ export function deriveCombatStateFromComments(comments = [], position = {}) {
     beginCriticalContribution(states, comment);
     const segments = Array.isArray(comment?.commentSegments) ? comment.commentSegments : [];
     const entries = segments.length
-      ? segments.flatMap((segment, index) => {
-          const resolutions = Array.isArray(segment?.combatResolutions) && segment.combatResolutions.length
-            ? segment.combatResolutions
-            : [segment?.combatResolution];
-          const inventoryCondition = segment?.inventoryUse ? {
-            actorId: segment.inventoryUse.actorId, actorConditionSnapshot: segment.inventoryUse.conditionSnapshot,
-            actorResourceSnapshot: segment.inventoryUse.resourceSnapshot,
-            actorHitPointSnapshot: segment.inventoryUse.hitPointSnapshot,
-            actorInventorySnapshot: segment.inventoryUse.inventorySnapshot,
-            sceneItemEvent: segment.inventoryUse.sceneItemEvent
-          } : null;
-          return resolutions.concat(segment?.skillResolution || [], inventoryCondition || [])
-            .filter(Boolean)
-            .map(resolution => ({ index, resolution }));
-        })
+      ? segments.flatMap((segment, index) => getSegmentCombatStateReceipts(segment).map(resolution => ({ index, resolution })))
       : getStoredResolutions(comment).map(resolution => ({ index: 0, resolution }));
     for (const entry of entries) {
       if (isStopComment && stopSegmentIndex != null && entry.index >= stopSegmentIndex) break;
@@ -545,6 +534,8 @@ export function overlayCombatHitPointState(profile = {}, state = null) {
   return {
     ...profile,
     droppedWeapons: state.droppedWeapons || [],
+    ...(state.supportEquipment?.mountId === '' && profile.combat?.mounted
+      ? { combat: { ...profile.combat, mountId: '', mounted: false } } : {}),
     weaponUnavailable: ['weapon', 'technique'].includes(profile.profileActionKind)
       && !!getDroppedCombatWeapon({ droppedWeapons: state.droppedWeapons || [] }, profile.weapon || {}),
     currentHitPoints: normalized.current,

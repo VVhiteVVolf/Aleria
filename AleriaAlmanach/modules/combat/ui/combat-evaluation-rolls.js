@@ -37,9 +37,23 @@ export function renderEvaluationDamageInstances(resolution = {}) {
   }).join('')}</tbody></table></div>`;
 }
 
+const ridingOutcomes = { seated: 'bleibt im Sattel', landed: 'landet auf den Füßen', prone: 'stürzt und liegt am Boden' };
+
 export function renderEvaluationSaveRecords(resolution = {}) {
-  const saves = resolution.secondarySaves || [];
-  if (!saves.length) return '';
+  const seats = (resolution.mountedHitChecks || []).map(check => {
+    if (check.outcome === 'knocked-down') return `<li><b>Aus dem Sattel geworfen</b><span>${escape(resolution.targetName)} liegt am Boden.</span><small>${escape(check.reason)}</small></li>`;
+    const hit = check.hitIndex ? `Folgetreffer ${check.hitIndex}` : 'Erster Treffer';
+    return `<li><b>Passiver Reitsitz ${escape(check.passive)} gegen SG ${escape(check.dc)}</b><span>${escape(resolution.targetName)} ${escape(ridingOutcomes[check.outcome])}</span><small>${hit} · ${escape(check.damage)} Schaden${check.reason ? ` · ${escape(check.reason)}` : ''}</small></li>`;
+  });
   const attributes = {strength:'KRF',dexterity:'GES',constitution:'KON',intelligence:'INT',wisdom:'WEI',charisma:'CHA'};
-  return `<ul class="combat-evaluation-record-list">${saves.map(save => `<li><b>${save.type === 'concentration' ? 'Konzentration · ' : ''}${escape(attributes[save.attributeKey] || 'Rettung')}-Rettung ${escape(save.total)} gegen SG ${escape(save.dc)}</b><span>${save.succeeded ? 'gelungen' : 'misslungen'} · ${save.timing === 'before-maneuver' ? 'vor dem Gegenangriff' : save.timing === 'after-sequence' ? 'nach der gesamten Angriffsfolge' : 'nach dem auslösenden Treffer'}</span>${save.diceResults?.length ? `<small>W20 [${escape(save.diceResults.join(', '))}] ${Number(save.modifier) >= 0 ? '+' : ''}${escape(save.modifier ?? 0)}</small>` : ''}${describeNaturalRollReceipt(save) ? `<small>${escape(describeNaturalRollReceipt(save))}</small>` : ''}</li>`).join('')}</ul>`;
+  const saves = (resolution.secondarySaves || []).map(save => {
+    const label = save.type === 'concentration' ? 'Konzentration · ' : save.type === 'mount-landing' ? 'Landung · ' : '';
+    const timing = save.type === 'mount-landing' ? (save.base === 'acrobatics' ? 'mit Akrobatik' : 'mit Geschick')
+      : save.timing === 'before-maneuver' ? 'vor dem Gegenangriff' : save.timing === 'after-sequence' ? 'nach der gesamten Angriffsfolge' : 'nach dem auslösenden Treffer';
+    const forced = save.outcome === 'force-save-success' || save.outcome === 'force-save-failure' ? ' · durch Regelwirkung' : '';
+    const natural = describeNaturalRollReceipt(save);
+    return `<li><b>${label}${escape(attributes[save.attributeKey] || 'Attribut')}-Rettung ${escape(save.total)} gegen SG ${escape(save.dc)}</b><span>${save.succeeded ? 'gelungen' : 'misslungen'}${forced} · ${timing}</span>${save.diceResults?.length ? `<small>W20 [${escape(save.diceResults.join(', '))}] ${Number(save.modifier) >= 0 ? '+' : ''}${escape(save.modifier ?? 0)}</small>` : ''}${natural ? `<small>${escape(natural)}</small>` : ''}</li>`;
+  });
+  const records = [...seats, ...saves];
+  return records.length ? `<ul class="combat-evaluation-record-list">${records.join('')}</ul>` : '';
 }

@@ -1,4 +1,6 @@
 import { mountChallengeCheckPolicyEditor } from './herausforderung-check-policy-ui.js?v=20261016-check-policy-v1';
+import { normalizeActionIconId } from '../comment-actions/comment-action-icons.js';
+import { refreshActionIconPicker } from '../comment-actions/comment-action-icons-ui.js';
 import { mountChallengeTargetEditor } from './herausforderung-target-ui.js?v=20261016-check-policy-v1';
 import { normalizeChallengeTarget } from './herausforderung-target.js?v=20261016-check-policy-v1';
 import { mountChallengeOutcomesEditor } from './herausforderung-outcomes-ui.js?v=20261015-check-options-v1';
@@ -322,6 +324,17 @@ function attemptApproach(trigger) {
 }
 
 document.addEventListener('click', event => {
+  const iconChoice = event.target?.closest?.('#herausforderung-overlay [data-herausforderung-action-icon]');
+  if (iconChoice && !submitting) {
+    const index = Number(iconChoice.closest('[data-herausforderung-approach-row]')?.dataset.approachIndex);
+    const approach = draftApproaches[index];
+    if (approach) {
+      approach.actionIconId = normalizeActionIconId(iconChoice.dataset.herausforderungActionIcon);
+      refreshActionIconPicker(iconChoice.closest('[data-comment-action-picker]'), approach, { fieldAttribute: 'data-herausforderung-action-icon' });
+      updateHerausforderungDraft(buildDraft(), { actors: globalThis.getAvailableCommentCharacters?.() || [] });
+    }
+    return;
+  }
   const trigger = event.target?.closest?.('[data-herausforderung-action]');
   if (!trigger) return;
   const action = trigger.dataset.herausforderungAction;

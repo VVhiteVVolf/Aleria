@@ -11,6 +11,13 @@ function getAbilityId(profileActionId = '') {
   return actionId.startsWith('ability:') ? actionId.slice('ability:'.length) : '';
 }
 
+export function getCombatAbilityAtDay(ability, recoveryDayKey = '') {
+  const dayKey = String(recoveryDayKey || '').trim().slice(0, 160);
+  const maximum = Math.max(0, Number(ability?.usesMaximum) || 0);
+  if (ability?.recovery !== 'day' || !dayKey || !maximum || String(ability.recoveryDayKey || '') === dayKey) return ability;
+  return { ...ability, usesCurrent: maximum, recoveryDayKey: dayKey };
+}
+
 export function applyCombatAbilityUse(sourceAbilities = [], profileActionId = '', recoveryDayKey = '') {
   const abilities = cloneAbilities(sourceAbilities);
   const abilityId = getAbilityId(profileActionId);
@@ -18,19 +25,14 @@ export function applyCombatAbilityUse(sourceAbilities = [], profileActionId = ''
     return { sufficient: true, changed: false, abilities, beforeAbilities: cloneAbilities(abilities), use: null, missing: null };
   }
 
-  const ability = abilities.find(candidate => String(candidate?.id || '') === abilityId);
+  const index = abilities.findIndex(candidate => String(candidate?.id || '') === abilityId);
+  const ability = getCombatAbilityAtDay(abilities[index], recoveryDayKey);
   const maximum = Math.max(0, Number(ability?.usesMaximum) || 0);
   if (!ability || maximum <= 0) {
     return { sufficient: true, changed: false, abilities, beforeAbilities: cloneAbilities(abilities), use: null, missing: null };
   }
 
-  const dayKey = String(recoveryDayKey || '').trim().slice(0, 160);
-  if (ability.recovery === 'day' && dayKey) {
-    const previousDayKey = String(ability.recoveryDayKey || '');
-    if (!previousDayKey || previousDayKey !== dayKey) ability.usesCurrent = maximum;
-    ability.recoveryDayKey = dayKey;
-  }
-
+  abilities[index] = ability;
   const beforeAbilities = cloneAbilities(abilities);
   const before = Math.max(0, Number(ability.usesCurrent) || 0);
   if (before < 1) {

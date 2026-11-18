@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import vm from 'node:vm';
+import { loadInventoryItemVersions } from '../modules/item-definitions/item-definition-client.js';
 
 const read = name => readFileSync(new URL(`../modules/${name}`, import.meta.url), 'utf8');
 const deferred = () => { let resolve, reject; const promise = new Promise((yes, no) => { resolve = yes; reject = no; }); return { promise, resolve, reject }; };
@@ -227,7 +228,7 @@ test('creature demand joins pending reads, remains cached and mounts fresh hosts
   const context = vm.createContext({ console, Promise, state: { loaded: false, creatures: [{ id: 'builtin' }] },
     renderLibrary() { calls.renders++; },
     async ensureBackend() { return { loadCreatures() { calls.reads++; return remote.promise; } }; },
-    mergeCreatureCatalog: value => value, itemDefinitionStore: { async ensureVersions() {} },
+    mergeCreatureCatalog: value => value, loadInventoryItemVersions,
     dispatchChanged() { calls.changed++; }, notify() {}, makeCreatureSceneActor: value => value });
   vm.runInContext(source.slice(start, end).replaceAll('export ', ''), context);
   assert.equal(calls.reads, 0);

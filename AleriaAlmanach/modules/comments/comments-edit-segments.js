@@ -97,7 +97,8 @@ function setEditCommentSegmentKind(id, kind) {
     segment.combatLoadout = null;
     segment.combatCastLevel = 0;
     segment.combatRollMode = 'normal';
-    segment.combatDistanceMeters = 0;
+    segment.combatDistanceMeters = null;
+    segment.combatRuleSelections = [];
     segment.combatPaymentMode = 'standard';
     segment.combatPaymentConfirmed = false;
   }
@@ -275,6 +276,8 @@ function buildEditCommentSegmentsForSave() {
       return {
         clientSegmentId: segment.id,
         kind: segment.kind,
+        actionIconId: String(segment.actionIconId || '').slice(0, 40),
+        challengeReplyToCommentId: String(segment.challengeReplyToCommentId || '').slice(0, 200),
         commentKind: segment.kind,
         text: segment.text,
         narrator: false,
@@ -320,15 +323,7 @@ function buildEditCommentSegmentsForSave() {
         inventoryUseMode: ['consume', 'interact'].includes(segment.kind) && ['consume', 'use'].includes(segment.inventoryUseMode) ? segment.inventoryUseMode : 'auto',
         storedInventoryUse: segment.storedInventoryUse || null,
         ...(commentSegmentUsesCombatResolution(segment) ? {
-          combatTargetId: String(segment.combatTargetId || ''),
-          combatTargetIds: [...new Set((segment.combatTargetIds || [segment.combatTargetId]).map(String).filter(Boolean))],
-          combatLoadout: segment.combatLoadout || null,
-          combatActionId: String(segment.combatActionId || ''),
-          combatCastLevel: Math.max(0, Math.min(10, Number(segment.combatCastLevel) || 0)),
-          combatRollMode: ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal',
-          combatDistanceMeters: Math.max(0, Number(segment.combatDistanceMeters) || 0),
-          combatPaymentMode: ['aura', 'cheat'].includes(segment.combatPaymentMode) ? segment.combatPaymentMode : 'standard',
-          combatPaymentConfirmed: !!segment.combatPaymentConfirmed,
+          ...getCommentCombatSelection(segment),
           storedCombatAction: segment.storedCombatAction || null,
           storedCombatResolution: segment.storedCombatResolution || null
         } : {}),

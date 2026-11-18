@@ -10,7 +10,7 @@ export const ACCOUNT_AVATARS = Object.freeze([
 ].map(avatar => Object.freeze({ ...avatar, path: `${PUBLIC_ASSET_PATH}${avatar.id}-v1.webp`, src: assetUrl(`${avatar.id}-v1.webp`) })));
 
 export const ACCOUNT_ART = Object.freeze({ key: assetUrl('key-v1.webp'), myrddin: assetUrl('myrddin-v1.webp') });
-export const ACCOUNT_BUTTON_ART = Object.freeze({ login: assetUrl('button-login-v1.webp'), register: assetUrl('button-register-v1.webp'), pass: assetUrl('button-pass-v1.webp') });
+export const ACCOUNT_BUTTON_ART = Object.freeze({ login: assetUrl('button-login-v2.webp'), register: assetUrl('button-register-v2.webp'), pass: assetUrl('button-pass-v2.webp') });
 
 export function accountAvatar(id) {
   return ACCOUNT_AVATARS.find(avatar => avatar.id === id) || null;

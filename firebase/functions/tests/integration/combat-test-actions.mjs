@@ -7,7 +7,7 @@ import { resolveCombatProfile } from '../../../../AleriaAlmanach/modules/combat/
 import { CombatResolutionService } from '../../../../AleriaAlmanach/modules/combat/combat-resolution-service.js';
 import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../../../../AleriaAlmanach/modules/combat/combat-state-model.js';
 import { withEquippedCombatWeapon } from '../../../../AleriaAlmanach/modules/combat/combat-equipment-state.js';
-import { getActiveCombatEncounter } from '../../../../AleriaAlmanach/modules/combat/combat-encounter-model.js';
+import { countActiveHostileOpponents, getCombatEncounterPartyMap, getActiveCombatEncounter } from '../../../../AleriaAlmanach/modules/combat/combat-encounter-model.js';
 import { deriveCombatRuleFrequencyKeys } from '../../../../AleriaAlmanach/modules/combat/combat-trigger-rules.js';
 import { buildDamageRollPlan } from '../../../../AleriaAlmanach/modules/combat/rules/combat-mvp-rules.js';
 
@@ -38,25 +38,31 @@ export class CheckupDice {
 export async function prepareTestAction({ entryId, actorRecord, targetRecords, comments, actionId = '', kind = 'speech', natural = 15,
   dice = new CheckupDice(natural), priorSegments = [], orderKey, paymentMode = 'standard', weaponGrip = 'one-handed', castLevel = 0,
   distanceMeters = 1, loadout = null, text = 'Prüfangriff' }) {
+  const encounter = getActiveCombatEncounter(comments);
+  const beforeStates = encounter ? deriveCombatStateFromComments(comments) : null;
   const selected = resolveCombatProfile(actorRecord, { actionId }).selectedAction;
   const segmentKind = selected?.segmentKinds?.[0] || 'combataction';
   const magic = ['spell', 'prayer', 'song'].includes(segmentKind);
   const bubbleKind = ['song', 'prayer'].includes(segmentKind) ? segmentKind : kind;
   const segment = { kind: bubbleKind, commentKind: bubbleKind, mechanicMode: magic ? 'magic' : 'combat', actorId: actorRecord.id, characterId: actorRecord.id,
     charName: actorRecord.name, sceneActorSourceId: actorRecord.sourceCreatureId || '', text, combatDistanceMeters: distanceMeters,
-    combatAction: { encounterId: getActiveCombatEncounter(comments)?.encounterId || '', profileActionId: actionId, rollMode: 'normal', paymentMode, weaponGrip, castLevel, loadout } };
+    combatAction: { encounterId: encounter?.encounterId || '', profileActionId: actionId, rollMode: 'normal', paymentMode, weaponGrip, castLevel, loadout } };
   const resolutions = [];
   const rulePeriods = { comment: 'pending', scene: entryId, day: getSceneRecoveryDayKey(entryId, comments) };
   let usedRuleFrequencyKeys = deriveCombatRuleFrequencyKeys([...comments, { commentSegments: priorSegments }]);
+  let hostileOpponentCount = null;
   for (const [index, targetRecord] of targetRecords.entries()) {
     const partial = { ...segment, combatResolution: resolutions[0], combatResolutions: resolutions };
     const draft = { id: 'pending', commentSegments: [...priorSegments, partial] };
     const states = deriveCombatStateFromComments([...comments, draft], { commentId: 'pending', segmentIndex: priorSegments.length + 1 });
+    if (index === 0) hostileOpponentCount = countActiveHostileOpponents(actorRecord.id,
+      getCombatEncounterPartyMap(encounter, { beforeStates, afterStates: states }));
     const actorState = states.get(actorRecord.id);
     const prepared = prepareCombatEquipment(withEquippedCombatWeapon(actorRecord, actorState?.equippedWeaponId, actorState?.offHandWeaponId, actorState?.supportEquipment), index === 0 ? loadout : null, { free: !getActorsWithCombatPosts(comments).has(String(actorRecord.id)) });
-    const actorBase = resolveCombatProfile(prepared.character, { actionId, segmentKind, paymentMode, weaponGrip, castLevel });
+    const actorBase = resolveCombatProfile(prepared.character, { actionId, segmentKind, paymentMode, weaponGrip, castLevel, hostileOpponentCount });
     if (actionId && actorBase.profileActionId !== actionId) throw Error(`Die Testattacke ${actionId} ist nicht im Bogen von ${actorRecord.name} vorhanden.`);
     let actor = overlayCombatHitPointState(actorBase, { ...(actorState || {}),
+      ...(prepared.preparation?.after ? { supportEquipment: prepared.preparation.after } : {}),
       resources: combatCommentInternals.getEffectiveCommentResources(actorBase.resources, actorState?.resources, rulePeriods.day) });
     actor = reserveCombatEquipment(actor, prepared.preparation);
     const targetState = states.get(targetRecord.id);

@@ -30,6 +30,56 @@ function commentSegmentUsesCombatResolution(segment = {}) {
   return mode === 'combat' || mode === 'magic';
 }
 
+// One transport shape for the editors, draft storage and the combat controller.
+// Old comments can supply the selection from their confirmed action and receipt.
+function getCommentCombatSelection(settings = {}) {
+  const action = settings.storedCombatAction || settings.combatAction || {};
+  const receipt = settings.storedCombatResolution || settings.combatResolution || {};
+  const target = settings.targetId ?? settings.combatTargetId ?? action.targetId ?? '';
+  const targets = settings.targetIds ?? settings.combatTargetIds ?? action.targetIds;
+  const payment = settings.paymentMode ?? settings.combatPaymentMode ?? action.paymentMode;
+  const rollMode = settings.rollMode ?? settings.combatRollMode ?? action.rollMode;
+  const selections = settings.combatRuleSelections ?? action.ruleSelections;
+  const distance = settings.distanceMeters ?? settings.combatDistanceMeters ?? receipt.auraContext?.distanceMeters;
+  return {
+    combatTargetId: String(target),
+    combatTargetIds: [...new Set((Array.isArray(targets) ? targets : [target]).filter(Boolean).map(String))],
+    combatActionId: String(settings.actionId ?? settings.combatActionId ?? action.profileActionId ?? ''),
+    combatLoadout: settings.loadout ?? settings.combatLoadout ?? action.loadout ?? null,
+    combatRollMode: ['advantage', 'disadvantage'].includes(rollMode) ? rollMode : 'normal',
+    combatWeaponGrip: (settings.weaponGrip ?? settings.combatWeaponGrip ?? action.weaponGrip ?? receipt.weaponGrip) === 'two-handed'
+      ? 'two-handed' : 'one-handed',
+    combatCastLevel: Math.max(0, Math.min(10, Number(settings.castLevel ?? settings.combatCastLevel ?? action.castLevel) || 0)),
+    combatDistanceMeters: distance ?? null,
+    combatPaymentMode: ['aura', 'mana-substitute', 'cheat'].includes(payment) ? payment : 'standard',
+    combatPaymentConfirmed: Boolean(settings.paymentConfirmed ?? settings.combatPaymentConfirmed),
+    combatRuleSelections: Array.isArray(selections) ? selections.filter(selection => selection && typeof selection === 'object').map(selection => ({
+      ...selection, ...(selection.sourcePersistence ? { sourcePersistence: { ...selection.sourcePersistence } } : {})
+    })) : []
+  };
+}
+
+function getStoredCommentCombatSelection(segment) {
+  const action = segment.combatAction || {};
+  const receipt = segment.combatResolution || {};
+  const distance = receipt.auraContext && 'distanceMeters' in receipt.auraContext
+    ? receipt.auraContext.distanceMeters : segment.combatDistanceMeters;
+  return getCommentCombatSelection({
+    ...segment,
+    targetId: action.targetId,
+    targetIds: action.targetIds ?? (action.targetId ? [action.targetId] : segment.combatTargetIds),
+    actionId: action.profileActionId,
+    weaponGrip: action.weaponGrip ?? receipt.weaponGrip,
+    loadout: action.loadout,
+    castLevel: action.castLevel,
+    paymentMode: action.paymentMode,
+    combatRuleSelections: action.ruleSelections ?? segment.combatRuleSelections,
+    combatDistanceMeters: distance,
+    distanceMeters: distance,
+    paymentConfirmed: true
+  });
+}
+
 // A detached, bounded transport value shared by compose, edit and local drafts.
 function normalizeCommentSkillSaveContext(value = {}) {
   const actionKind = ['spell', 'prayer', 'song', 'weapon', 'technique'].includes(value?.actionKind) ? value.actionKind : '';
@@ -49,6 +99,8 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
   return {
     id: `seg-${Date.now().toString(36)}-${_commentSegmentSeq}`,
     kind: normalizedKind,
+    actionIconId: String(combatSettings?.actionIconId || '').slice(0, 40),
+    challengeReplyToCommentId: String(combatSettings?.challengeReplyToCommentId || '').slice(0, 200),
     ...(normalizedKind === 'foreignvoice' ? AleriaCommentForeignVoice.normalize(combatSettings) : {}),
     text: String(text || ''),
     sceneItemDraft: combatSettings.sceneItemDraft ? JSON.parse(JSON.stringify(combatSettings.sceneItemDraft)) : null,
@@ -83,35 +135,7 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     skillRuleSelections: Array.isArray(combatSettings?.skillRuleSelections) ? combatSettings.skillRuleSelections.map(selection => ({ ...selection })) : [],
     storedSkillResolution: combatSettings?.storedSkillResolution || null,
     storedSkillChallenge: combatSettings?.storedSkillChallenge || null,
-    combatTargetId: usesCombatResolution ? String(combatSettings?.targetId || combatSettings?.combatTargetId || '') : '',
-    combatTargetIds: usesCombatResolution
-      ? [...new Set((Array.isArray(combatSettings?.targetIds || combatSettings?.combatTargetIds)
-        ? (combatSettings.targetIds || combatSettings.combatTargetIds)
-        : [combatSettings?.targetId || combatSettings?.combatTargetId]).map(String).filter(Boolean))]
-      : [],
-    combatActionId: usesCombatResolution ? String(combatSettings?.actionId || combatSettings?.combatActionId || '') : '',
-    combatRollMode: usesCombatResolution && ['advantage', 'disadvantage'].includes(combatSettings?.rollMode || combatSettings?.combatRollMode)
-      ? String(combatSettings.rollMode || combatSettings.combatRollMode)
-      : 'normal',
-    combatLoadout: usesCombatResolution ? (combatSettings?.loadout || combatSettings?.combatLoadout || combatSettings?.storedCombatAction?.loadout || null) : null,
-    combatWeaponGrip: usesCombatResolution && String(
-      combatSettings?.weaponGrip
-      || combatSettings?.combatWeaponGrip
-      || combatSettings?.storedCombatAction?.weaponGrip
-      || combatSettings?.combatAction?.weaponGrip
-    ) === 'two-handed'
-      ? 'two-handed'
-      : 'one-handed',
-    combatCastLevel: usesCombatResolution
-      ? Math.max(0, Math.min(10, Number(combatSettings?.castLevel ?? combatSettings?.combatCastLevel ?? combatSettings?.storedCombatAction?.castLevel) || 0))
-      : 0,
-    combatDistanceMeters: usesCombatResolution
-      ? Math.max(0, Math.min(9999, Number(combatSettings?.distanceMeters ?? combatSettings?.combatDistanceMeters) || 0))
-      : 0,
-    combatPaymentMode: ['aura', 'cheat'].includes(combatSettings?.paymentMode || combatSettings?.combatPaymentMode)
-      ? String(combatSettings.paymentMode || combatSettings.combatPaymentMode)
-      : 'standard',
-    combatPaymentConfirmed: usesCombatResolution && Boolean(combatSettings?.paymentConfirmed ?? combatSettings?.combatPaymentConfirmed),
+    ...getCommentCombatSelection(usesCombatResolution ? combatSettings : {}),
     actorId: normalizedKind === 'foreignvoice' ? '' : String(combatSettings?.actorId || combatSettings?.sceneActorId || ''),
     storedCombatAction: usesCombatResolution && combatSettings?.storedCombatAction
       ? combatSettings.storedCombatAction
@@ -163,7 +187,7 @@ function getAllowedCommentSegmentKinds(edit = false) {
 }
 
 const COMMENT_SEGMENT_MODE_KINDS = Object.freeze({
-  skill: Object.freeze(['speech', 'shout', 'performance', 'thought', 'animal', 'interact', 'flirt']),
+  skill: Object.freeze(['speech', 'whisper', 'shout', 'performance', 'thought', 'animal', 'interact', 'flirt']),
   combat: Object.freeze(['combataction']),
   magic: Object.freeze(['spell', 'prayer', 'song'])
 });
@@ -244,11 +268,15 @@ const COMMENT_SEGMENT_COMPACT_LABELS = Object.freeze({
   combataction: 'Kampf\u00ADbeschreibung'
 });
 
-function buildCommentSegmentKindButton(kind, { action, segmentId = '', active = false, add = false, disabled = false } = {}) {
+function buildCommentSegmentKindButton(kind, { action, segmentId = '', active = false, add = false, disabled = false, actor } = {}) {
+  const speechError = kind === 'animal' && window.AleriaSkillChecks?.getAnimalSpeechError
+    ? window.AleriaSkillChecks.getAnimalSpeechError(actor || getCommentSegmentActor({ kind: 'animal' }, String(action || '').includes('edit')))
+    : '';
+  disabled ||= !!speechError;
   const segmentAttr = segmentId ? ` data-segment-id="${segmentId}"` : '';
   const label = COMMENT_SEGMENT_COMPACT_LABELS[kind] || getCommentKindLabel(kind);
   return `
-    <button type="button" class="${add ? 'comment-segment-add' : 'comment-segment-type'}${active ? ' active' : ''}" data-action="${action}"${segmentAttr} data-kind="${kind}" title="${escapeHtml(getCommentKindLabel(kind))}"${disabled ? ' disabled aria-disabled="true"' : ''}>
+    <button type="button" class="${add ? 'comment-segment-add' : 'comment-segment-type'}${active ? ' active' : ''}" data-action="${action}"${segmentAttr} data-kind="${kind}" title="${escapeHtml(speechError || getCommentKindLabel(kind))}"${disabled ? ' disabled aria-disabled="true"' : ''}>
       ${getCommentKindButtonIconMarkup(kind, 'comment-segment-type-icon')}
       <span>${add ? '+ ' : ''}${escapeHtml(label)}</span>
     </button>`;
@@ -273,6 +301,7 @@ function getSegmentTypeButtons(segment, edit = false) {
   return getAllowedCommentSegmentKinds(edit).map(kind => buildCommentSegmentKindButton(kind, {
     action,
     segmentId,
+    actor: getCommentSegmentActor(segment, edit),
     active: challengeDisguised ? kind === 'speech' : segment.kind === kind,
     disabled: challengeDisguised || !isCommentSegmentKindAllowedForMechanicMode(segment, kind, edit)
   })).join('');

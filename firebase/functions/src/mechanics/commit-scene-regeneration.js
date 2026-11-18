@@ -94,7 +94,7 @@ export async function commitSceneRegenerationOperation(request, { database = get
     const regenerated = participants.map(participant => {
       const { actorId, recordId, kind, persistent } = participant;
       const record = records.get(`${kind}:${recordId}`);
-      const base = resolveCombatProfile({ ...record, id: actorId, entityType: kind });
+      const base = resolveCombatProfile({ ...record, id: actorId, entityType: kind }, { definitions });
       const profile = {
         ...overlayCombatHitPointState(base, combatStates.get(actorId) || null),
         // Recovery uses today's sheet limits, not maxima embedded in old receipts.
@@ -116,14 +116,16 @@ export async function commitSceneRegenerationOperation(request, { database = get
       const record = records.get(key);
       const after = regenerated[index].after;
       const hitPoints = { ...(record.combatProfile?.hitPoints || {}), current: after.current, temporary: 0 };
-      transaction.update(target.ref, withProtectedRecordRevisions(record, {
+      const committed = withProtectedRecordRevisions(record, {
         'combatProfile.hitPoints': hitPoints,
         'combatProfile.resources': after.resources,
         'combatProfile.abilities': after.abilities,
         'combatProfile.lastMechanicalCommentId': receiptRef.id,
         updatedAt: new Date(nowClient).toISOString()
-      }, ['combatProfile'], nowClient));
-      return [{ kind: participant.kind, recordId: participant.recordId, hitPoints, resources: after.resources, abilities: after.abilities }];
+      }, ['combatProfile'], nowClient);
+      transaction.update(target.ref, committed);
+      return [{ kind: participant.kind, recordId: participant.recordId, hitPoints, resources: after.resources, abilities: after.abilities,
+        combatProfileRevision: committed['combatProfile.revision'] }];
     });
     const sceneRegeneration = { schemaVersion: 1, participants: regenerated };
     // This ordered receipt is a replay boundary, not scene activity. No text,

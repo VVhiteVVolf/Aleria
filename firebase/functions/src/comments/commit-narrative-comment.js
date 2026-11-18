@@ -6,6 +6,7 @@ import { nextMechanicalCommentOrderKey } from '../mechanics/mechanical-comment-o
 import { prepareCriticalCommentLifecycle, persistCriticalHitPointUpdates } from '../mechanics/critical-comment-lifecycle.js';
 import { containsPersistentMechanics, containsImmutableAuditMechanics } from '../mechanics/mechanical-comment-payload.js';
 import { normalizeCommentSceneStartDate } from './comment-scene-date.js';
+import { assertCommentAnimalSpeech } from './comment-animal-speech.js';
 
 const MAX_COMMENT_BYTES = 700_000;
 
@@ -93,6 +94,7 @@ export async function commitNarrativeCommentOperation(request, { database = getF
 
   const refs = uniqueEntryIds.map(() => database.collection('comments').doc());
   const committed = await database.runTransaction(async transaction => {
+    await assertCommentAnimalSpeech({ database, transaction, metadata: payload.metadata });
     const pending = [];
     // Read all scene copies before writing; retain the previous all-or-nothing save.
     for (const [index, entryId] of uniqueEntryIds.entries()) {

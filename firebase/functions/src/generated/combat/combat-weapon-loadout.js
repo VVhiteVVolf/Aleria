@@ -1,6 +1,7 @@
 // Occupied hands describe equipment. Training decides joint damage; holding
 // two weapons alone never grants an extra attack.
-import { canCarryCombatShield } from './combat-support-equipment.js';
+import { applyDismountSnapshots, canCarryCombatShield } from './combat-support-equipment.js';
+import { getCommentCombatResolutionGroups, getStoredCriticalConsequences } from './combat-resolution-tree.js';
 
 export function canUseEquippedCombatShield(profile = {}) {
   const loadout = getCombatWeaponLoadout(profile);
@@ -71,11 +72,10 @@ export function getActorsWithCombatPosts(comments = []) {
   const actors = new Set();
   for (const comment of comments) {
     if (comment.combatEncounter?.operation === 'start') actors.clear();
-    const segments = Array.isArray(comment.commentSegments) ? comment.commentSegments : [comment];
-    for (const segment of segments) {
-      for (const resolution of segment.combatResolutions || [segment.combatResolution]) {
-        if (resolution?.actorId) actors.add(String(resolution.actorId));
-      }
+    for (const resolution of getCommentCombatResolutionGroups(comment).flat()) {
+      if (resolution.actorId) actors.add(String(resolution.actorId));
+      applyDismountSnapshots(null, resolution, actors);
+      for (const consequence of getStoredCriticalConsequences(resolution)) if (consequence.dismount) actors.add(consequence.actorId);
     }
   }
   return actors;

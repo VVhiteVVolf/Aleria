@@ -49,7 +49,8 @@ export async function createCombatParty(definitions, title = 'Gemischte Kampfgru
     for (const actor of actors) {
       const stored = await record(actor.testKey);
       const state = states.get(actor.id);
-      profiles.set(actor.testKey, overlayCombatHitPointState(resolveCombatProfile(withEquippedCombatWeapon(stored, state?.equippedWeaponId, state?.offHandWeaponId)), state));
+      profiles.set(actor.testKey, overlayCombatHitPointState(resolveCombatProfile(withEquippedCombatWeapon(stored,
+        state?.equippedWeaponId, state?.offHandWeaponId, state?.supportEquipment)), state));
     }
     return { comments, states, profiles };
   }

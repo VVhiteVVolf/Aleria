@@ -1,5 +1,6 @@
 // Deliberately uses the combat model's existing numerical modifiers and rules.
 import { BODY_TRAIT_DEFINITIONS } from './development-body-traits.js';
+import { ANIMAL_SPEECH_TRAIT_DEFINITIONS } from './development-animal-speech.js';
 import { EXTRA_TRAIT_DEFINITIONS } from './development-extra-traits.js';
 import { INSPIRED_TRAIT_DEFINITIONS } from './development-inspired-traits.js';
 import { UNIQUE_TRAIT_DEFINITIONS } from './development-unique-traits.js';
@@ -69,7 +70,7 @@ const traitTags = id => ['Charakterentwicklung', bodyIds.has(id) ? 'Körper' : '
 export const DEVELOPMENT_TRAITS = Object.freeze([...definitions, ...BODY_TRAIT_DEFINITIONS, ...EXTRA_TRAIT_DEFINITIONS, ...INSPIRED_TRAIT_DEFINITIONS,
   ...UNIQUE_TRAIT_DEFINITIONS, ...APTITUDE_TRAIT_DEFINITIONS, ...BLOODLINE_TRAIT_DEFINITIONS,
   ...THERIANTHROPY_TRAIT_DEFINITIONS, ...SYMBIOSIS_TRAIT_DEFINITIONS, ...PSYCHOLOGICAL_TRAIT_DEFINITIONS,
-  ...FAMILY_TRAIT_DEFINITIONS, ...GENERAL_TRAIT_DEFINITIONS, ...EXPANSION_TRAIT_DEFINITIONS, ...SPIRITUAL_TRAIT_DEFINITIONS].map(([id, name, description, mechanics, cost, extra = {}]) => ({
+  ...FAMILY_TRAIT_DEFINITIONS, ...GENERAL_TRAIT_DEFINITIONS, ...EXPANSION_TRAIT_DEFINITIONS, ...SPIRITUAL_TRAIT_DEFINITIONS, ...ANIMAL_SPEECH_TRAIT_DEFINITIONS].map(([id, name, description, mechanics, cost, extra = {}]) => ({
   id: `development-trait-${id}`, name, description, cost,
   icon: extra.icon || `/AleriaAlmanach/assets/development-traits/web/${GENERAL_TRAIT_ICONS[id] || id}.webp`,
   type: 'trait', active: true, target: 'Selbst', duration: 'Dauerhaft', appliesWhen: extra.appliesWhen || (getFamilyTraitOrigin(`development-trait-${id}`) ? 'Angeborenes Familienerbe; nur die höchste aktive Stufe je Linie wirkt' : getBloodlineTraitOrigin(`development-trait-${id}`) ? 'Angeborenes menschliches Erbe eines infernalen oder celestialen Vorfahren' : 'Solange ausgewählt und aktiv'),

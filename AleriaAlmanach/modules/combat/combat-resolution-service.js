@@ -1,11 +1,15 @@
 import { getConditionUsageBenefits, consumeConditionUsage } from './combat-condition-usage.js?v=20261015-graded-challenges-v1';
 import { resolveTechniqueSecondarySave } from './combat-technique-secondary-save.js';
+import { resolveMountedHits } from './combat-mounted-hit.js';
 import { resolveFollowUpAttacks } from './combat-follow-up-resolution.js?v=20261015-graded-challenges-v1';
 import { attachPreparedCounter } from './combat-counter-resolution.js';
 import { attachTechniqueDisarm } from './combat-technique-disarm.js';
 import { releaseCriticalTemporaryOwnership } from '../combat-critical/combat-critical-lifecycle.js';
 import { getActionPaymentCosts } from './combat-action-economy.js';
-import { getCombatAttackNumbers, evaluateCombatAttackRoll, evaluateSavingThrowRoll, applyOutcome } from './combat-attack-evaluation.js?v=20261015-graded-challenges-v1';
+import {
+  getCombatAttackNumbers, evaluateCombatAttackRoll, evaluateSavingThrowRoll, applyOutcome,
+  getFirstHitDefenseRule, resolveFirstHitDefenseUse
+} from './combat-attack-evaluation.js?v=20261015-graded-challenges-v1';
 import { validateSpellCatalogTarget } from '../spell-catalog/spell-catalog-targets.js';
 import { buildAttackNotation, buildDamageNotation, combineDamageFormulas, evaluateAttackRoll } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
 import { rollProfileD20, naturalRollReceipt } from './combat-natural-roll-policy.js';
@@ -50,16 +54,17 @@ import { resolveCombatConcentration } from './combat-concentration-resolution.js
 import {
   collectApplicableCombatRules,
   markCombatRuleApplications,
-  mergeCombatRuleEffects,
-  sanitizeCombatRuleEffects
+  mergeCombatRuleEffects
 } from './combat-trigger-rules.js?v=20260928-equipment-art-v4';
 
 import { attachCombatEquipmentPreparation } from './combat-equipment-preparation.js?v=20260928-equipment-art-v4';
 import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { prepareCombatTurnStart, attachCombatTurnStart } from './combat-turn-start.js?v=20260928-equipment-art-v4';
 import { withCurrentCombatPermissionState } from './combat-action-permission.js';
+import { normalizeCombatDistance } from './combat-rule-distance.js';
+import { buildSupportAuraApplications } from './combat-support-aura.js';
 
-export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-13';
+export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-16';
 
 function normalizeRollMode(value) {
   return ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
@@ -69,39 +74,37 @@ function createResolutionId() {
   return globalThis.crypto?.randomUUID?.() || `combat-evaluation-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
 }
 
-function buildDefaultRuleSources(actor, target, relationship) {
-  return [{
+function normalizeRuleSources(actor, target, relationship, distanceMeters, supplied = []) {
+  const selfTarget = Boolean(actor.characterId) && actor.characterId === target.characterId;
+  const sources = [{
     actorId: actor.characterId,
     actorName: actor.name,
     profile: actor,
     sourceRole: 'actor',
     relationToActor: 'self',
-    relationToTarget: relationship,
+    relationToTarget: selfTarget ? 'self' : relationship,
     distanceToActor: 0,
-    distanceToTarget: null,
+    distanceToTarget: selfTarget ? 0 : distanceMeters,
     selectedRuleIds: []
-  }, {
+  }];
+  if (!selfTarget) sources.push({
     actorId: target.characterId,
     actorName: target.name,
     profile: target,
     sourceRole: 'target',
     relationToActor: relationship,
     relationToTarget: 'self',
-    distanceToActor: null,
+    distanceToActor: distanceMeters,
     distanceToTarget: 0,
     selectedRuleIds: []
-  }];
-}
-
-function normalizeRuleSources(actor, target, relationship, distanceMeters, supplied = []) {
-  const sources = buildDefaultRuleSources(actor, target, relationship);
-  sources[0].distanceToTarget = distanceMeters;
-  sources[1].distanceToActor = distanceMeters;
+  });
   (Array.isArray(supplied) ? supplied : []).forEach(source => {
     const actorId = String(source?.actorId || '');
     const existing = sources.find(item => String(item.actorId) === actorId);
-    if (existing) Object.assign(existing, source, { profile: source.profile || existing.profile });
-    else if (source?.profile && actorId) sources.push({ passiveRulesAllowed: false, ...source });
+    if (existing) {
+      existing.selectedRuleIds = source.selectedRuleIds || [];
+      existing.ruleSelections = source.ruleSelections;
+    } else if (source?.profile && actorId) sources.push({ passiveRulesAllowed: false, ...source });
   });
   return sources;
 }
@@ -114,49 +117,6 @@ function createRuleLedger(applications = [], phaseBefore = {}, phaseAfter = {}) 
   }));
 }
 
-function buildSupportAuraApplications(sources, actionKind) {
-  const applications = [];
-  sources.filter(source => source.sourceRole === 'support').forEach(source => {
-    const selected = new Set(Array.isArray(source.selectedRuleIds) ? source.selectedRuleIds : []);
-    [['@aura:actor', 'actor'], ['@aura:target', 'target']].forEach(([selectionId, recipient]) => {
-      if (!selected.has(selectionId)) return;
-      const relation = recipient === 'actor' ? source.relationToActor : source.relationToTarget;
-      const distanceMeters = recipient === 'actor' ? source.distanceToActor : source.distanceToTarget;
-      const mechanics = getAuraTargetMechanics(source.profile, { relation, distanceMeters });
-      const effects = sanitizeCombatRuleEffects(recipient === 'actor' ? {
-        attackModifier: Number(mechanics.attack || 0) + (['spell', 'prayer', 'song'].includes(actionKind) ? Number(mechanics.spellAttack || 0) : 0),
-        spellSaveDcModifier: mechanics.spellSaveDc,
-        damageModifier: mechanics.damage,
-        rollMode: mechanics.attackRollMode
-      } : {
-        defenseModifier: mechanics.armorClass,
-        savingThrowModifier: mechanics.savingThrow,
-        rollMode: mechanics.attackRollMode
-      });
-      const hasEffect = Object.entries(effects).some(([key, value]) => key === 'rollMode'
-        ? value !== 'normal'
-        : (key === 'outcome' ? value !== 'none' : Number(value) !== 0));
-      if (!hasEffect) return;
-      applications.push({
-        applicationKey: `${source.actorId}:aura:${recipient}`,
-        usedKey: '',
-        sourceActorId: String(source.actorId || ''),
-        sourceActorName: String(source.actorName || ''),
-        sourceRole: 'support',
-        relationToActor: source.relationToActor,
-        relationToTarget: source.relationToTarget,
-        entryKind: 'aura',
-        entryId: 'aura',
-        entryName: source.profile?.aura?.name || 'Aura & Pr\u00e4senz',
-        ruleId: selectionId,
-        ruleName: `${source.profile?.aura?.name || 'Aura'} auf ${recipient === 'actor' ? 'handelnde Figur' : 'Ziel'}`,
-        phase: 'pre-roll', activation: 'passive', frequency: 'always', condition: 'always',
-        recipient, priority: -10, effects, costs: [], consumesAbilityUse: false
-      });
-    });
-  });
-  return applications;
-}
 
 function effectApplies(effect, attack, savingThrowMode, halfDamageOnSave = false) {
   if (effect.on === 'always') return true;
@@ -265,11 +225,10 @@ export function getCombatRollContext(actor, target = {}, options = {}) {
   // Freie Wurfart-Vorgaben sind keine Regelquelle; die aufgelöste Technik darf eine vorgeben.
   const requestedRollMode = normalizeRollMode(actor.forcedRollMode);
   const relationship = options.relationship === 'ally' ? 'ally' : 'enemy';
-  const distanceMeters = options.distanceMeters != null && options.distanceMeters !== '' && Number.isFinite(Number(options.distanceMeters))
-    ? Number(options.distanceMeters) : null;
-  const auraContext = { relation: relationship, distanceMeters: options.distanceMeters };
-  const actorAuraOnTarget = getAuraTargetMechanics(actor, auraContext);
-  const targetAuraOnActor = getAuraTargetMechanics(target, auraContext);
+  const distanceMeters = actor.characterId && actor.characterId === target.characterId ? 0 : normalizeCombatDistance(options.distanceMeters);
+  const auraContext = { relation: relationship, distanceMeters };
+  const actorAuraOnTarget = getAuraTargetMechanics(actor, { ...auraContext, recipientProfile: target });
+  const targetAuraOnActor = getAuraTargetMechanics(target, { ...auraContext, recipientProfile: actor });
   const resolutionMode = actor.actionResolutionMode || 'weapon-attack';
   const savingThrowMode = resolutionMode === 'saving-throw';
   const automaticMode = resolutionMode === 'automatic';
@@ -282,11 +241,14 @@ export function getCombatRollContext(actor, target = {}, options = {}) {
   const profileActionId = actor.profileActionId || '';
   const ruleProfileState = { actorProfile: actor, targetProfile: target };
   const ruleCache = new WeakMap();
+  const supportAuras = buildSupportAuraApplications(ruleSources, actionKind, actor, target);
   const preRollApplications = collectApplicableCombatRules({
     phase: 'pre-roll', actionKind, profileActionId, sources: ruleSources, periods: rulePeriods,
     usedFrequencyKeys: usedRuleFrequencyKeys, state: ruleProfileState, ruleCache
-  }).concat(buildSupportAuraApplications(ruleSources, actionKind));
+  }).concat(supportAuras);
   markCombatRuleApplications(preRollApplications, usedRuleFrequencyKeys);
+  const firstHitDefenseRule = savingThrowMode || automaticMode ? null : getFirstHitDefenseRule(actor, rulePeriods, usedRuleFrequencyKeys);
+  if (firstHitDefenseRule) preRollApplications.push(firstHitDefenseRule);
   const preRollEffects = mergeCombatRuleEffects(preRollApplications);
   const conditionUsage = getConditionUsageBenefits(actor, target, { enabled: !savingThrowMode && !automaticMode, startedAction: options.startedAction });
   const profileRollModes = [requestedRollMode, ...(savingThrowMode
@@ -299,7 +261,7 @@ export function getCombatRollContext(actor, target = {}, options = {}) {
   return { relationship, distanceMeters, auraContext, actorAuraOnTarget, targetAuraOnActor,
     resolutionMode, savingThrowMode, automaticMode, ruleSources, usedRuleFrequencyKeys, rulePeriods,
     actionKind, profileActionId, ruleProfileState, preRollApplications, preRollEffects,
-    profileRollModes, profileRollMode, auraRollMode, safeRollMode, ruleCache, conditionUsage };
+    profileRollModes, profileRollMode, auraRollMode, safeRollMode, ruleCache, conditionUsage, firstHitDefenseRule, supportAuras };
 }
 
 
@@ -404,7 +366,7 @@ export class CombatResolutionService {
     const { relationship, distanceMeters, auraContext, actorAuraOnTarget, targetAuraOnActor,
     resolutionMode, savingThrowMode, automaticMode, ruleSources, usedRuleFrequencyKeys, rulePeriods,
     actionKind, profileActionId, ruleProfileState, preRollApplications, preRollEffects,
-    profileRollModes, profileRollMode, auraRollMode, safeRollMode } = rollContext;
+    profileRollModes, profileRollMode, auraRollMode, safeRollMode, firstHitDefenseRule, supportAuras } = rollContext;
     const { attackModifier, targetDefense } = getCombatAttackNumbers(actor, target, rollContext);
     const attackNotation = buildAttackNotation(attackModifier, safeRollMode);
 
@@ -427,12 +389,12 @@ export class CombatResolutionService {
     const evaluated = evaluateCombatAttackRoll(actor, target, attackRoll, rollContext, { attackModifier, targetDefense });
     let { attack } = evaluated;
     const { cheatEnabled, baseAttackState, postRollAttackState, postHitAttackState, preDamageAttackState,
-      postRollApplications, postHitApplications, preDamageApplications, postRollEffects, postHitEffects, preDamageEffects,
+      postRollApplications, postHitApplications, preDamageApplications, postHitEffects, preDamageEffects,
       postAttackModifier, postDefenseModifier } = evaluated;
     let allRuleApplications = [preRollApplications, postRollApplications, postHitApplications, preDamageApplications].flat();
     const followRuleConflicts = [];
     let damageBonus = Number(actor.damageModifier || 0) + Number(targetAuraOnActor.damage || 0)
-      + postHitEffects.damageModifier + preDamageEffects.damageModifier;
+      + preRollEffects.damageModifier + postHitEffects.damageModifier + preDamageEffects.damageModifier;
     let damageRoll = null;
     let reductionBypass = Math.max(0, postHitEffects.damageReductionBypass + preDamageEffects.damageReductionBypass);
     const secondarySaves = [];
@@ -448,6 +410,7 @@ export class CombatResolutionService {
         && hasHostileEffects(effectiveEffects.filter(effect => effect.target !== 'self'))
     });
     attack = primaryWard.attack;
+    resolveFirstHitDefenseUse(firstHitDefenseRule, attack.hit, usedRuleFrequencyKeys);
     const hitDamageApplications = collectApplicableCombatRules({ phase: 'pre-hit-damage', actionKind, profileActionId,
       sources: ruleSources, periods: rulePeriods, usedFrequencyKeys: usedRuleFrequencyKeys,
       state: { ...ruleProfileState, ...attack } });
@@ -516,14 +479,16 @@ export class CombatResolutionService {
       }
     }
     const saveContext = { dice: this.dice, actor, target, ruleSources, ruleProfileState, actionKind,
-      profileActionId, rulePeriods, usedRuleFrequencyKeys, options };
+      profileActionId, rulePeriods, usedRuleFrequencyKeys, options,
+      savingThrowAuraModifier: Number(actorAuraOnTarget.savingThrow || 0) + supportAuras.reduce((sum, aura) =>
+        sum + Number(aura.effects.savingThrowModifier || 0), 0) };
     const primarySave = await resolveTechniqueSecondarySave({ ...saveContext, attack, timing: 'after-hit' });
     if (primarySave.save) secondarySaves.push(primarySave.save);
     allRuleApplications.push(...primarySave.applications);
     appliedTemporaryCondition = primarySave.targetCondition;
     const followResult = await resolveFollowUpAttacks({ dice: this.dice, actor, target, weapon, attack, secondarySaves,
       ruleSources, ruleProfileState, actionKind, profileActionId, rulePeriods, usedRuleFrequencyKeys,
-      profileRollModes, auraRollMode, targetAuraOnActor, actorAuraOnTarget, targetConditions: preWardTargetConditions, options });
+      profileRollModes, auraRollMode, targetAuraOnActor, actorAuraOnTarget, supportAuras, targetConditions: preWardTargetConditions, options });
     followUpAttacks.push(...followResult.attacks);
     followRuleConflicts.push(...followResult.conflicts);
     allRuleApplications.push(...followResult.applications);
@@ -682,6 +647,11 @@ export class CombatResolutionService {
     // Structured consequences from the attack phases share the same result
     // pipeline as late rules and are each applied once.
     await applyEffectList(allRuleApplications.flatMap(application => normalizeCombatEffects(application.resultEffects || [])));
+    const mountedHits = [];
+    if (target.combat?.mounted && (attack.hit || (savingThrowMode && actor.actionHalfDamageOnSave))) {
+      mountedHits.push({ index: 0, damage: effectResults.filter(entry => entry.effect.type === 'damage'
+        && entry.recipient === 'target' && entry.effect.target !== 'self').map(entry => entry.applied) });
+    }
     followUpAttacks.forEach((followUpResult, index) => {
       if (!followUpResult.damage || !followUpResult.attack?.hit) return;
       const effect = normalizeCombatEffect({
@@ -700,6 +670,7 @@ export class CombatResolutionService {
       targetHitPoints = applied.after;
       targetConditions = applied.conditions;
       effectResults.push({ effect, amount: followUpResult.damage.total, roll: followUpResult.damage, applied });
+      if (target.combat?.mounted) mountedHits.push({ index: index + 1, damage: [applied] });
     });
     if (appliedTemporaryCondition) {
       const prevented = getActionLockPrevention(targetConditions, appliedTemporaryCondition);
@@ -708,13 +679,21 @@ export class CombatResolutionService {
         appliedTemporaryCondition = null;
       } else targetConditions = refreshRuntimeCondition(targetConditions, normalizeRuntimeCondition(appliedTemporaryCondition));
     }
+    const riding = await resolveMountedHits(saveContext, mountedHits, targetConditions);
+    targetConditions = riding.conditions;
+    secondarySaves.push(...riding.saves);
+    allRuleApplications.push(...riding.applications);
+    if (riding.condition) effectResults.push({ effect: { type: 'apply-condition', target: 'target' },
+      condition: riding.condition, applied: true, recipient: 'target' });
+    await applyEffectList(riding.applications.flatMap(rule => normalizeCombatEffects(rule.resultEffects || [])));
     let damageEffectResults = effectResults.filter(result => result.effect?.type === 'damage' && result.applied && result.recipient !== 'actor');
     let totalDamageApplied = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.incoming || 0), 0);
     let rawDamageRolled = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.rawIncoming ?? result.amount ?? 0), 0);
     const healed = effectResults.reduce((sum, result) => sum + Number(result.applied?.restored || 0), 0);
     const conditionsApplied = effectResults.filter(result => result.condition).length + (appliedTemporaryCondition ? 1 : 0);
     const conditionsRemoved = effectResults.reduce((sum, result) => sum + (Array.isArray(result.removed) ? result.removed.length : 0), 0);
-    let defeated = Number(target.currentHitPoints) > 0 && targetHitPoints.current === 0;
+    const targetCanBeDefeated = target.combat?.canActAtZeroHitPoints !== true && Number(target.currentHitPoints) > 0;
+    let defeated = targetCanBeDefeated && targetHitPoints.current === 0;
     let nonlethalDefeat = defeated && damageEffectResults.some(result => result.effect?.nonlethal === true);
     let targetConcentrationSnapshot = null;
     let actorConcentrationSnapshot = sustainsConcentration && !options.skipSelfEffects ? {
@@ -809,7 +788,7 @@ export class CombatResolutionService {
     damageEffectResults = effectResults.filter(result => result.effect?.type === 'damage' && result.applied && result.recipient !== 'actor');
     totalDamageApplied = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.incoming || 0), 0);
     rawDamageRolled = damageEffectResults.reduce((sum, result) => sum + Number(result.applied.rawIncoming ?? result.amount ?? 0), 0);
-    defeated = Number(target.currentHitPoints) > 0 && targetHitPoints.current === 0;
+    defeated = targetCanBeDefeated && targetHitPoints.current === 0;
     nonlethalDefeat = defeated && effectResults
       .filter(result => result.effect?.type === 'damage' && result.recipient !== 'actor')
       .some(result => result.effect?.nonlethal === true);
@@ -861,6 +840,8 @@ export class CombatResolutionService {
       ...(actor.selectedAction?.nonDamaging ? { nonDamaging: true } : {}),
       mechanicNotes: Array.isArray(actor.selectedAction?.mechanicNotes) ? actor.selectedAction.mechanicNotes.slice(0, 8) : [],
       secondarySaves,
+      ...(riding.checks.length ? { mountedHitChecks: riding.checks } : {}),
+      ...(riding.snapshot ? { targetSupportEquipmentSnapshot: riding.snapshot } : {}),
       followUpAttacks,
       wardResolution,
       targetConditionSnapshot: JSON.stringify(targetConditions) !== JSON.stringify(existingTemporaryConditions) ? {
@@ -918,13 +899,14 @@ export class CombatResolutionService {
       ruleApplications: [...preRollLedger, ...postRollLedger, ...postHitLedger, ...preDamageLedger, ...allRuleApplications.filter(application => ![...preRollApplications, ...postRollApplications, ...postHitApplications, ...preDamageApplications].includes(application))],
       ruleConflicts: [
         ['pre-roll', preRollEffects.conflicts],
-        ['post-roll', postRollEffects.conflicts],
+        ['post-roll', evaluated.postRollConflicts],
         ['post-hit', postHitEffects.conflicts],
         ['pre-damage', preDamageEffects.conflicts]
       ].filter(([, conflicts]) => Array.isArray(conflicts) && conflicts.length).map(([phase, conflicts]) => ({
         phase,
         applications: conflicts
-      })).concat(followRuleConflicts),
+      })).concat(followRuleConflicts, secondarySaves.filter(save => save.conflicts?.length)
+        .map(save => ({ phase: 'post-secondary-save', applications: save.conflicts }))),
       ruleResourceSnapshots,
       usedRuleFrequencyKeys: [...usedRuleFrequencyKeys],
       actorCombatProfile: actor.aiSnapshot || null,
@@ -995,7 +977,7 @@ export class CombatResolutionService {
     if (rollContext.conditionUsage.targetIds.length) {
       const before = baseResolution.targetConditionSnapshot?.before || target.temporaryConditions || [];
       const after = baseResolution.targetConditionSnapshot?.after || targetConditions;
-      baseResolution.targetConditionSnapshot = { before, after: consumeConditionUsage(after, rollContext.conditionUsage.targetIds) };
+      baseResolution.targetConditionSnapshot = { ...baseResolution.targetConditionSnapshot, before, after: consumeConditionUsage(after, rollContext.conditionUsage.targetIds) };
     }
     if (rollContext.conditionUsage.actorIds.length || rollContext.conditionUsage.targetIds.length) baseResolution.conditionUsage = { actorConditionIds: rollContext.conditionUsage.actorIds, targetConditionIds: rollContext.conditionUsage.targetIds };
     attachTechniqueDisarm(baseResolution, target);

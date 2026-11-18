@@ -90,6 +90,16 @@
       ],
       "provenance": "Der allgemeine Item-Prompt fasst die belegten Stil- und Freistellungsvorgaben der Haus- und Ausrüstungsbilder zusammen. houseTorsoPrompt übernimmt den verwendeten Wortlaut für Haus Draig und Haus Saethwyr aus dem Celtigerns-Wacht-Manifest; nur der konkrete Hausname wird durch [HAUSNAME] ersetzt."
     },
+    "fantasy-map-pin": {
+      "name": "Illustrierte tropfenförmige Kartenpins",
+      "establishedAt": "2026-11-15",
+      "useFor": ["Mappins im Kartenkatalog", "Kleine Hoforte und Wohnhäuser"],
+      "transparentBackground": true,
+      "referenceManifest": "AleriaAlmanach/docs/art/tirfelyn-hof-20261115/map-pin-style.json",
+      "styleReferences": ["Karten/assets/icons/welt/b-uerliches-heim.png", "Karten/assets/icons/welt/schmiede.png", "Karten/assets/icons/welt/weide.png", "Karten/assets/icons/orte/obstplantage.png"],
+      "prompt": "Create ONE new illustrated teardrop-shaped map pin for [MOTIF], matching the attached approved map-pin references. Rounded broad top, tapering sides, single clear pointed bottom, thick dark brown outline, warm golden parchment interior. Paint the requested little place INSIDE the pin in dark ink and restrained muted watercolor shading, with clear readable miniature shapes. Keep the complete pin visible. True transparent PNG outside the pin; the parchment and scene inside remain opaque without holes. No text, labels, numbers, watermark, outer shadow or halo.",
+      "promptUsage": "Nutzerkorrektur vom 15. November 2026: Für Kartenpins diese Tropfenform und die vier tatsächlichen Bildreferenzen verwenden. Der rahmenlose Worldmap-Stamp-Stil ist für diese Pins ausdrücklich falsch. Nur tatsächlich benötigte Motive erstellen."
+    },
     "fantasy-worldmap-stamp": {
       "name": "Freigegebene verspielte Fantasy-Map-Stamps: einfache Tusche und flache Aquarellfarben",
       "establishedAt": "2026-10-09",

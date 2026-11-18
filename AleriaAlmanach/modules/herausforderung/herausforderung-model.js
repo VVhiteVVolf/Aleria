@@ -3,6 +3,7 @@ import { getCheckDefinition } from '../skill-checks/skill-check-model.js?v=20261
 import { normalizeHerausforderungBenefits, validateHerausforderungBenefits } from './herausforderung-rewards.js?v=20261015-graded-challenges-v1';
 import { normalizeChallengeAudience, validateChallengeAudience } from './herausforderung-combat-context.js?v=20261015-check-options-v1';
 import { normalizeChallengeSceneImage, validateChallengeSceneImage } from './herausforderung-scene-image-model.js';
+import { normalizeActionIconId } from '../comment-actions/comment-action-icons.js';
 import { normalizeChallengeCheckPenalties, validateChallengeCheckPenalties } from './herausforderung-check-policy.js?v=20261016-check-policy-v1';
 import { normalizeChallengeTarget, validateChallengeTarget } from './herausforderung-target.js?v=20261016-check-policy-v1';
 import { getSceneElementType, normalizeSceneElementActivation, normalizeSceneElementReaction, validateSceneElementConfiguration } from '../scene-elements/scene-element-model.js';
@@ -76,6 +77,7 @@ export function normalizeHerausforderungApproach(value = {}, index = 0) {
   return {
     approachId: text(source.approachId, 40) || makeApproachId(),
     label: text(source.label, 160) || `Ansatz ${index + 1}`,
+    actionIconId: normalizeActionIconId(source.actionIconId),
     preferredSkills,
     checkPenalties: normalizeChallengeCheckPenalties(source.checkPenalties),
     difficulty: integer(getOutcomeSuccessDifficulty(source.outcomeTable, source.difficulty), 10, 1, 40),
@@ -170,6 +172,7 @@ export function collectHerausforderungApproaches(comments = []) {
         targetActor: event.targetActor,
         title: event.title,
         approachLabel: approach.label,
+        actionIconId: approach.actionIconId,
         preferredModifier: HERAUSFORDERUNG_PREFERRED_MODIFIER,
         alternativeModifier: HERAUSFORDERUNG_ALTERNATIVE_MODIFIER,
         defenseMode: 'fixed',

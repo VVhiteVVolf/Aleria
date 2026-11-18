@@ -95,6 +95,8 @@ Unter Bären führt **Urgren** zum Hauptartikel der verfluchten Bären; **Madrú
 
 Die zwei neuen Bestiariumsbilder liegen unter `assets/predators/urgren/` und sind im bestehenden `assets/predator-sources.json` verzeichnet. Generatororiginale, tatsächliche Prompts, Quellenabgrenzung und Sichtprüfungen: `diagnostics/urgren-madruach-20261114/`.
 
+Die Urgren-Karte im Bärenregister verwendet seit der Nutzerkorrektur vom 15. November 2026 eine eigene transparente allgemeine Urgr-Figur (`urgr-general-v1.png`). Das Mythenbild bleibt ausschließlich als Hauptartikelmotiv erhalten. Quelle, Original und Sichtprüfung: `diagnostics/urgr-card-20261115/`.
+
 ## Viehregister
 
 Die Viehseite führt zu sechs eigenen Unterregistern: Rinder, Schafe & Ziegen, Schweine & Wildschweine, Hühner & Geflügel, Haustiere sowie Last- & Nutztiere. Ein gemeinsames Register auf jeder Unterseite erlaubt den direkten Wechsel zwischen diesen Bereichen. Einführung, Lebensräume und Haltung sind als allgemeine alerische Viehkunde ausgearbeitet.

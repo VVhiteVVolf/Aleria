@@ -32,17 +32,17 @@ function escapeHtml(value) {
     .replace(/'/g, '&#39;');
 }
 
-function renderRuleOption(option = {}) {
+function renderRuleOption(option, segmentId) {
   const selected = option.selected === true;
+  const checkboxId = 'combat-rule-' + encodeURIComponent(JSON.stringify([segmentId, option.sourceActorId, option.ruleId]));
   const costs = (Array.isArray(option.costs) ? option.costs : [])
     .map(cost => `${escapeHtml(cost.name || cost.resourceId)} −${escapeHtml(cost.amount || 0)}`)
     .join(' \u00b7 ');
-  return `<label class="combat-rule-option${selected ? ' selected' : ''}">
-    <input type="checkbox" data-combat-rule-toggle data-source-actor-id="${escapeHtml(option.sourceActorId)}" data-rule-id="${escapeHtml(option.ruleId)}" data-persistence-kind="${escapeHtml(option.persistence?.kind)}" data-record-id="${escapeHtml(option.persistence?.recordId)}" data-source-creature-id="${escapeHtml(option.persistence?.sourceCreatureId)}"${selected ? ' checked' : ''}>
-    <span><strong>${escapeHtml(option.sourceActorName)}</strong><b>${escapeHtml(option.ruleName)}</b><small>${escapeHtml(option.phaseLabel)}${costs ? ` \u00b7 ${costs}` : ''}</small></span>
-    <input type="number" min="0" max="9999" step="0.5" value="${escapeHtml(option.distanceMeters ?? 0)}" data-combat-rule-distance data-source-actor-id="${escapeHtml(option.sourceActorId)}" data-rule-id="${escapeHtml(option.ruleId)}" aria-label="Entfernung zur betroffenen Figur in Metern"${selected ? '' : ' disabled'}>
-    <i>m</i>
-  </label>`;
+  return `<div class="combat-rule-option${selected ? ' selected' : ''}">
+    <input type="checkbox" id="${checkboxId}" data-combat-rule-toggle data-source-actor-id="${escapeHtml(option.sourceActorId)}" data-rule-id="${escapeHtml(option.ruleId)}" data-persistence-kind="${escapeHtml(option.persistence?.kind)}" data-record-id="${escapeHtml(option.persistence?.recordId)}" data-source-creature-id="${escapeHtml(option.persistence?.sourceCreatureId)}"${selected ? ' checked' : ''}>
+    <label for="${checkboxId}"><strong>${escapeHtml(option.sourceActorName)}</strong><b>${escapeHtml(option.ruleName)}</b><small>${escapeHtml(option.phaseLabel)}${costs ? ` \u00b7 ${costs}` : ''}</small></label>
+    ${option.supportDistance ? `<input type="number" min="0" max="9999" step="any" value="${escapeHtml(option.distanceMeters ?? '')}" placeholder="offen" data-combat-rule-distance data-source-actor-id="${escapeHtml(option.sourceActorId)}" data-rule-id="${escapeHtml(option.ruleId)}" aria-label="Entfernung zur betroffenen Figur in Metern"${selected ? '' : ' disabled'}><i>m</i>` : ''}
+  </div>`;
 }
 
 export function mountCombatComposer({ card, segment, actor, freeEquipment = false, rollModes = null, targets = [], ruleOptions = [], actorReady = false, actorProblem = '', payment = null, paymentOptions = [], paymentConfirmed = false, auraPaymentAvailable = false } = {}) {
@@ -143,6 +143,7 @@ export function mountCombatComposer({ card, segment, actor, freeEquipment = fals
       <div class="combat-action-controls">
       ${magic && spellAction ? `<label>Wirkungsgrad<select data-combat-input="castLevel">${castLevelOptions}</select></label>` : ''}
       ${equipmentSwitch ? '' : renderAutomaticRollMode(rollModes || [...getActiveRollModes(actor), actor.forcedRollMode], { resolutionMode: actor.actionResolutionMode })}
+      ${isSelfTargetAction(actor.selectedAction) ? '' : `<label>Zielabstand (m)<input type="number" min="0" max="9999" step="any" placeholder="Unbekannt" data-combat-input="distanceMeters" value="${escapeHtml(segment.combatDistanceMeters ?? '')}"></label>`}
       ${!magic && !equipmentSwitch ? renderCombatWeaponGrip(actor) : ''}
       </div>
     </div>
@@ -153,7 +154,7 @@ export function mountCombatComposer({ card, segment, actor, freeEquipment = fals
     ${ruleOptions.length ? `<div class="combat-rule-selection">
       <div class="combat-rule-heading"><span>Reaktionen & Eingriffe</span><small>Optional</small></div>
       <p>Aktiviere nur Regeln, deren Besitzer du steuern darfst. Die Entfernung wird gegen den Regelradius gepr\u00fcft.</p>
-      <div class="combat-rule-options">${ruleOptions.map(renderRuleOption).join('')}</div>
+      <div class="combat-rule-options">${ruleOptions.map(option => renderRuleOption(option, segment.id)).join('')}</div>
     </div>` : ''}`;
   card.appendChild(composer);
   bindActionPicker(composer, actor);

@@ -8,20 +8,16 @@ import {
   getEffectiveSkillProficiency,
   getWeaponAttackModifier,
   getWeaponDamageModifier,
-  resolveCharacterCombatProfile,
-  sanitizeCharacterCombatProfile
+  resolveCharacterCombatProfile
 } from './combat-profile-model.js?v=20260928-equipment-art-v4';
 import { getOrderedSpellSlotResources, getSpellLevelLabel } from './combat-spell-slots.js?v=20260803-character-creation-v1';
 import { getSpellManaCost } from './combat-resource-progression.js?v=20260905-resource-balance-v2';
 
 const ACTION_ECONOMY_RESOURCE_IDS = new Set(['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus']);
 
-export function buildCombatProfileAiSnapshot(character = {}) {
-  const profile = sanitizeCharacterCombatProfile(character.combatProfile || character, {
-    ensureRequiredSkills: character.entityType !== 'creature',
-    ensureSpellSlots: character.entityType !== 'creature'
-  });
-  const resolved = resolveCharacterCombatProfile({ ...character, combatProfile: profile });
+export function buildCombatProfileAiSnapshot(character = {}, profile = resolveCharacterCombatProfile({
+  ...character, combatProfile: character.combatProfile || character
+})) {
   const calculation = createCombatProfileReadModel(profile);
   return {
     schemaVersion: profile.schemaVersion,
@@ -34,8 +30,8 @@ export function buildCombatProfileAiSnapshot(character = {}) {
       classTraining: profile.classTraining,
       progression: {
         ...profile.progression,
-        effectiveLevel: resolved.effectiveLevel,
-        proficiencyBonus: resolved.proficiencyBonus,
+        effectiveLevel: profile.effectiveLevel,
+        proficiencyBonus: profile.proficiencyBonus,
         advancementRules: {
           normalAttributeIncreaseLevels: [4, 8, 12, 16, 20],
           normalAttributePoints: 2,
@@ -57,19 +53,19 @@ export function buildCombatProfileAiSnapshot(character = {}) {
     }; }),
     proficiencies: profile.proficiencies,
     derivedCombatValues: {
-      currentHitPoints: resolved.currentHitPoints,
-      maximumHitPoints: resolved.maximumHitPoints,
-      temporaryHitPoints: resolved.temporaryHitPoints,
-      armorClass: resolved.totalDefense,
-      initiative: resolved.initiative,
-      movementMeters: resolved.movement,
-      proficiencyBonus: resolved.proficiencyBonus,
-      passivePerception: resolved.passivePerception,
-      spellAttackModifier: resolved.spellAttackModifier,
-      spellSaveDc: resolved.spellSaveDc
+      currentHitPoints: profile.currentHitPoints,
+      maximumHitPoints: profile.maximumHitPoints,
+      temporaryHitPoints: profile.temporaryHitPoints,
+      armorClass: profile.totalDefense,
+      initiative: profile.initiative,
+      movementMeters: profile.movement,
+      proficiencyBonus: profile.proficiencyBonus,
+      passivePerception: profile.passivePerception,
+      spellAttackModifier: profile.spellAttackModifier,
+      spellSaveDc: profile.spellSaveDc
     },
     hitPointRules: profile.hitPoints,
-    armorClassRules: { ...profile.armorClass, armorRoutine: resolved.armorRoutine },
+    armorClassRules: { ...profile.armorClass, armorRoutine: profile.armorRoutine },
     combatModifiers: profile.combat,
     naturalRollPolicy: getNaturalRollPolicy(calculation),
     savingThrows: profile.savingThrows.map(save => ({
@@ -83,6 +79,7 @@ export function buildCombatProfileAiSnapshot(character = {}) {
       totalDamageModifier: getWeaponDamageModifier(calculation, weapon)
     })),
     armor: profile.armorItems,
+    ...(profile.equipmentPassiveEffects?.length ? { equipmentPassiveEffects: profile.equipmentPassiveEffects } : {}),
     coreResources: profile.resources,
     actionEconomy: profile.resources.filter(resource => ACTION_ECONOMY_RESOURCE_IDS.has(resource.id)),
     actionEconomyRules: {

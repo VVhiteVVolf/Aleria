@@ -1,9 +1,29 @@
+export function getSegmentCombatResolutions(segment = {}) {
+  return (Array.isArray(segment?.combatResolutions) && segment.combatResolutions.length
+    ? segment.combatResolutions : [segment?.combatResolution]).filter(Boolean);
+}
+
+export function getSegmentSkillCombatResolutions(segment = {}) {
+  return (segment?.skillResolution?.herausforderungCombatResults || [])
+    .filter(result => result?.type === 'weapon-maneuver' && result.resolution)
+    .map(result => result.resolution);
+}
+
+export function getSegmentCombatStateReceipts(segment = {}) {
+  const use = segment?.inventoryUse;
+  const inventoryReceipt = use ? {
+    actorId: use.actorId, actorConditionSnapshot: use.conditionSnapshot,
+    actorResourceSnapshot: use.resourceSnapshot, actorHitPointSnapshot: use.hitPointSnapshot,
+    actorInventorySnapshot: use.inventorySnapshot, sceneItemEvent: use.sceneItemEvent
+  } : null;
+  return getSegmentCombatResolutions(segment).concat(segment?.skillResolution || [], inventoryReceipt || []).filter(Boolean);
+}
+
 // Stored counters are independent resolutions. Follow-up attacks remain part
 // of their parent's already aggregated damage and must not be counted twice.
 export function getCommentCombatResolutionGroups(comment = {}) {
   const segments = Array.isArray(comment.commentSegments) ? comment.commentSegments : [];
-  const groups = segments.map(segment => [...(segment.combatResolutions?.length ? segment.combatResolutions : [segment.combatResolution]),
-    ...(segment.skillResolution?.herausforderungCombatResults || []).map(result => result.type === 'weapon-maneuver' ? result.resolution : null)].filter(Boolean));
+  const groups = segments.map(segment => [...getSegmentCombatResolutions(segment), ...getSegmentSkillCombatResolutions(segment)]);
   if (groups.some(group => group.length)) return groups.filter(group => group.length);
   return comment.combatResolution ? [[comment.combatResolution]] : [];
 }

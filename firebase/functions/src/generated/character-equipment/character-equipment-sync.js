@@ -9,6 +9,7 @@ import { materializeInventoryItem, storeInventoryItem, storeDefinitionInventory,
 import { projectEquipmentPassiveEffects } from './equipment-passive-effects.js';
 
 const EQUIPMENT_KINDS = Object.freeze({ weapon: 'weapons', armor: 'armorItems' });
+const WEAPON_ACTION_FIELDS = ['effects', 'activationType', 'costs', 'auraBypass', 'spendAllRegularActions', 'ammunition'];
 
 function clone(value) {
   if (value == null || typeof value !== 'object') return value;
@@ -45,9 +46,25 @@ function equipmentKindFromInventoryItem(item = {}) {
   return '';
 }
 
+function inventoryEquipmentLinks(items) {
+  const links = new Map();
+  for (const item of items) {
+    const { kind, combatEntryId } = item.equipmentLink || {};
+    if (!item.id || !Object.hasOwn(EQUIPMENT_KINDS, kind) || !combatEntryId) continue;
+    const key = `${kind}:${combatEntryId}`;
+    links.set(key, links.has(key) ? null : item);
+  }
+  return links;
+}
+
+function copyWeaponActionFields(source) {
+  return Object.fromEntries(WEAPON_ACTION_FIELDS.filter(key => Object.hasOwn(source, key)).map(key => [key, clone(source[key])]));
+}
+
 function weaponCombatDefinition(entry = {}) {
   return {
     kind: 'weapon',
+    ...copyWeaponActionFields(entry),
     triggerRules: clone(entry.triggerRules || []),
     weaponType: text(entry.weaponType, 'other'),
     weaponProfileId: text(entry.weaponProfileId),
@@ -156,6 +173,7 @@ function combatEntryFromInventory(item, entry, kind) {
   if (kind === 'weapon') {
     return {
       ...entry,
+      ...copyWeaponActionFields(definition),
       ...(item.definitionRef ? {
         effects: clone(definition.effects || []), activationType: definition.activationType || 'action',
         costs: clone(definition.costs || []), auraBypass: clone(definition.auraBypass || { allowed: true, resourceId: '', cost: 1 }),
@@ -217,21 +235,22 @@ export function synchronizeEquipmentFromCombat({ inventory = {}, combatProfile =
   const nextProfile = clone(combatProfile && typeof combatProfile === 'object' ? combatProfile : {});
   nextInventory.items = Array.isArray(nextInventory.items) ? nextInventory.items.map(balanceArmorInventoryItem) : [];
   const usedIds = new Set(nextInventory.items.map(item => text(item?.id)).filter(Boolean));
+  const links = inventoryEquipmentLinks(nextInventory.items);
   const context = { characterId, characterName, now };
 
   Object.entries(EQUIPMENT_KINDS).forEach(([kind, collectionName]) => {
     const entries = Array.isArray(nextProfile[collectionName]) ? nextProfile[collectionName] : [];
     entries.forEach(entry => {
       if (kind === 'weapon' && entry.id === 'default-unarmed-melee' && !entry.inventoryItemId) return;
-      let inventoryItemId = text(entry.inventoryItemId);
+      const key = `${kind}:${entry.id}`;
+      if (!entry.inventoryItemId && links.has(key) && !links.get(key)) return;
+      let inventoryItemId = text(entry.inventoryItemId || links.get(key)?.id);
       let itemIndex = nextInventory.items.findIndex(item => text(item?.id) === inventoryItemId);
       if (itemIndex < 0) {
         const item = inventoryItemFromCombat(entry, kind, context, usedIds);
         inventoryItemId = item.id;
         nextInventory.items.push(item);
         itemIndex = nextInventory.items.length - 1;
-      } else {
-        nextInventory.items[itemIndex] = mergeInventoryItemFromCombat(nextInventory.items[itemIndex], entry, kind);
       }
       entry.inventoryItemId = inventoryItemId;
       nextInventory.items[itemIndex] = mergeInventoryItemFromCombat(nextInventory.items[itemIndex], entry, kind);
@@ -246,13 +265,15 @@ export function synchronizeEquipmentFromInventory({ inventory = {}, combatProfil
   const nextProfile = clone(combatProfile && typeof combatProfile === 'object' ? combatProfile : {});
   nextInventory.items = Array.isArray(nextInventory.items) ? nextInventory.items.map(balanceArmorInventoryItem) : [];
   const itemsById = new Map(nextInventory.items.map(item => [text(item?.id), item]));
+  const links = inventoryEquipmentLinks(nextInventory.items);
 
   Object.entries(EQUIPMENT_KINDS).forEach(([kind, collectionName]) => {
     const entries = Array.isArray(nextProfile[collectionName]) ? nextProfile[collectionName] : [];
     nextProfile[collectionName] = entries
       .filter(entry => !entry.inventoryItemId || itemsById.has(text(entry.inventoryItemId)))
       .map(entry => {
-        const source = itemsById.get(text(entry.inventoryItemId));
+        const source = itemsById.get(text(entry.inventoryItemId)) || links.get(`${kind}:${entry.id}`);
+        if (source && !entry.inventoryItemId) entry = { ...entry, inventoryItemId: source.id };
         // A read-time rule refresh must not import unrelated legacy card values
         // into a freely authored profile merely because it also owns a bound item.
         if (definitionRulesOnly && !source?.definitionRef) return entry;
@@ -267,7 +288,7 @@ export function synchronizeEquipmentFromInventory({ inventory = {}, combatProfil
       for (const source of nextInventory.items) {
         if (definitionRulesOnly && !source.definitionRef) continue;
         const item = materializeInventoryItem(source, definitions);
-        if (!item.combatDefinition || equipmentKindFromInventoryItem(item) !== kind) continue;
+        if ((source.definitionRef && item === source) || !item.combatDefinition || equipmentKindFromInventoryItem(item) !== kind) continue;
         if (nextProfile[collectionName].some(entry => text(entry.inventoryItemId) === text(item.id))) continue;
         const id = text(item.equipmentLink?.combatEntryId || item.id);
         if (!id || nextProfile[collectionName].some(entry => entry.id === id)) continue;
@@ -276,12 +297,32 @@ export function synchronizeEquipmentFromInventory({ inventory = {}, combatProfil
     }
   });
 
-  const passiveItems = nextInventory.items.filter(item => resolveItemDefinition(item, definitions))
-    .map(item => materializeInventoryItem(item, definitions));
+  const equippedById = new Map(Object.values(EQUIPMENT_KINDS).flatMap(collection => nextProfile[collection])
+    .filter(entry => entry.inventoryItemId).map(entry => [entry.inventoryItemId,
+      entry.equipped === true || entry.id === nextProfile.combat?.offHandWeaponId]));
+  const passiveItems = nextInventory.items.map(item => materializeInventoryItem(item, definitions))
+    .filter((item, index) => item !== nextInventory.items[index])
+    .map(item => equippedById.has(item.id) ? { ...item, equipped: equippedById.get(item.id) } : item);
   const passiveEffects = projectEquipmentPassiveEffects(passiveItems);
   if (passiveEffects.length) nextProfile.equipmentPassiveEffects = passiveEffects;
   else delete nextProfile.equipmentPassiveEffects;
   return { inventory: storeDefinitionInventory(nextInventory), combatProfile: nextProfile };
+}
+
+export function projectCombatEquipmentFromInventory(character, definitions) {
+  const { inventory, combatProfile } = character;
+  if (!inventory) return character;
+  const hasRulesOrReverseLinks = Array.isArray(inventory.items) && inventory.items.some(item => {
+    if (item.definitionRef) return true;
+    const { kind, combatEntryId } = item.equipmentLink || {};
+    if (!combatEntryId || !Object.hasOwn(EQUIPMENT_KINDS, kind)) return false;
+    const entries = combatProfile?.[EQUIPMENT_KINDS[kind]];
+    return Array.isArray(entries) && entries.some(entry => entry.id === combatEntryId && !entry.inventoryItemId);
+  });
+  if (!hasRulesOrReverseLinks && !combatProfile?.equipmentPassiveEffects) return character;
+  const projected = synchronizeEquipmentFromInventory({ inventory, combatProfile, definitions,
+    addMissingEquipment: true, preserveLoadout: true, definitionRulesOnly: true });
+  return { ...character, combatProfile: projected.combatProfile };
 }
 
 export function getInventoryEquipmentKind(item = {}) {

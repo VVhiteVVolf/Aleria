@@ -89,7 +89,3 @@ globalThis.AleriaFamilyTreeEmbedCatalog = Object.freeze({
   getSnapshot: getFamilyTreeEmbedCatalogSnapshot,
   load: loadFamilyTreeEmbedCatalog
 });
-
-if (typeof queueMicrotask === 'function') {
-  queueMicrotask(() => void loadFamilyTreeEmbedCatalog());
-}

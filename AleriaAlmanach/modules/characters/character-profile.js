@@ -47,8 +47,9 @@ function populateCharacterProfileForm(c = {}) {
     equipment: {
       initialValue: { inventory: c.inventory || {}, combatProfile: c.combatProfile || {} },
       initialize() {
-        initCharacterInventoryProfile(c, { render: false });
-        window.AleriaCharacterCombatProfile?.init?.(c, { render: false });
+        const record = c.id ? getCharacterById(c.id) || c : c;
+        initCharacterInventoryProfile(record, { render: false });
+        window.AleriaCharacterCombatProfile?.init?.(record, { render: false });
       },
       collect: () => collectInitializedCharacterEquipmentProfileData(c)
     },
@@ -88,6 +89,12 @@ function openCharProfile(id) {
   document.getElementById('cp-delete-btn').textContent = isBuiltin ? 'Ausblenden' : 'Löschen';
   switchCharTab('info');
   activateDialog('char-profile-overlay', { initialFocus: '#cp-name' });
+  if (c.inventory?.items?.some(item => item.definitionRef)) {
+    import('../item-definitions/item-definition-client.js')
+      .then(module => module.loadInventoryItemVersions([c]))
+      .then(loaded => { if (loaded) refreshCharacterEquipmentAfterCommit(getCharacterById(c.id) || c); })
+      .catch(error => console.warn('Itemregeln für den Charakterbogen konnten nicht geladen werden:', error));
+  }
 }
 
 function syncPortraitDisplay(src, name) {
@@ -331,6 +338,21 @@ window.AleriaCharacterProfileMediaPersistence = Object.freeze({
 function collectCharacterEquipmentProfileData(existing = {}) {
   return _charProfileSections?.collect('equipment')
     || collectInitializedCharacterEquipmentProfileData(existing);
+}
+
+function refreshCharacterEquipmentAfterCommit(record) {
+  if (_editingChar !== record.id || !_charProfileSections?.isInitialized('equipment') || !window.AleriaCharacterSaveGuard) return;
+  const current = collectCharacterEquipmentProfileData(record);
+  const changed = window.AleriaCharacterSaveGuard.selectChangedSections(current, _charProfileLoadedSnapshot, ['inventory', 'combatProfile']);
+  if (_characterInventoryEditMode || changed.length) {
+    document.getElementById('cp-save-status').textContent = 'Inventar oder Kampfdaten wurden geändert. Prüfe den aktuellen Stand vor dem Speichern.';
+    return;
+  }
+  const combatVisible = document.getElementById('cp-tab-combat')?.classList.contains('active');
+  initCharacterInventoryProfile(record, { render: false });
+  window.AleriaCharacterCombatProfile?.init?.(record, { render: combatVisible, preserveWorkspace: true });
+  Object.assign(_charProfileLoadedSnapshot, collectInitializedCharacterEquipmentProfileData(record));
+  if (document.getElementById('cp-tab-inventory')?.classList.contains('active')) renderCharacterInventoryProfileEditor();
 }
 
 function collectCharacterProfileBiographyData() {

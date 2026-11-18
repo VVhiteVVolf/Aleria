@@ -49,26 +49,27 @@ function isArchiveDashboardPlaceholderText(value) {
 }
 
 function getArchiveDashboardEntryExcerpt(entry) {
-  const candidates = [];
-  if (entry?.subtitle) candidates.push(entry.subtitle);
-  (entry?.pages || []).forEach(page => {
-    if (page?.quote) candidates.push(page.quote);
-    if (page?.description) candidates.push(page.description);
-    if (page?.commentText) candidates.push(page.commentText);
-    (page?.sceneBlocks || []).forEach(block => {
-      if (block?.text) candidates.push(block.text);
-    });
-  });
-  return candidates
-    .map(stripArchiveDashboardText)
-    .find(text => text.length >= 55 && !isArchiveDashboardPlaceholderText(text)) || '';
+  function* candidates() {
+    yield entry?.subtitle;
+    for (const page of entry?.pages || []) {
+      yield page?.quote;
+      yield page?.description;
+      yield page?.commentText;
+      for (const block of page?.sceneBlocks || []) yield block?.text;
+    }
+  }
+  for (const value of candidates()) {
+    const text = stripArchiveDashboardText(value);
+    if (text.length >= 55 && !isArchiveDashboardPlaceholderText(text)) return text;
+  }
+  return '';
 }
 
 function getArchiveDashboardDailyDiscovery(sections = [], date = new Date()) {
   const candidates = getArchiveDashboardEntries(sections)
+    .filter(item => item.entry?.id && item.entry?.title && !(item.entry.pages || []).some(page => page?.sessionPage))
     .map(item => ({ ...item, excerpt: getArchiveDashboardEntryExcerpt(item.entry) }))
-    .filter(item => item.entry?.id && item.entry?.title && item.excerpt
-      && !(item.entry.pages || []).some(page => page?.sessionPage))
+    .filter(item => item.excerpt)
     .sort((left, right) => String(left.entry.id).localeCompare(String(right.entry.id), 'de'));
   if (!candidates.length) return null;
 

@@ -31,6 +31,12 @@ export function getCombatSupportEquipment(profile = {}) {
   return { shieldId: shield?.id || '', mountId: profile.combat?.mounted ? String(profile.combat?.mountId || '') : '' };
 }
 
+export function getDismountSnapshot(profile) {
+  if (!profile.combat?.mounted) return null;
+  const before = getCombatSupportEquipment(profile);
+  return { before, after: { ...before, mountId: '' } };
+}
+
 export function withCombatSupportEquipment(character, selection = {}) {
   const profile = character.combatProfile || {};
   const combat = { ...profile.combat };
@@ -42,4 +48,16 @@ export function withCombatSupportEquipment(character, selection = {}) {
   return { ...character, combatProfile: { ...profile, combat,
     armorItems: (profile.armorItems || []).map(item => item.kind === 'shield' && selection.shieldId != null
       ? { ...item, equipped: item.id === selection.shieldId } : item) } };
+}
+
+// Voluntary changes and forced dismounts use the scene's loadout. The
+// inventory continues to own the animal and the sheet keeps its starting kit.
+export function applyDismountSnapshots(states, resolution, actorsWithPosts) {
+  for (const role of ['target', 'actor']) {
+    const after = resolution[`${role}SupportEquipmentSnapshot`]?.after;
+    if (after?.mountId !== '') continue;
+    const id = String(resolution[`${role}Id`]);
+    if (states) states.set(id, { ...states.get(id), supportEquipment: { ...after } });
+    actorsWithPosts?.add(id);
+  }
 }

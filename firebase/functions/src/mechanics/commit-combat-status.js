@@ -54,7 +54,7 @@ export const commitCombatStatus = onCall({ region: 'europe-west1', maxInstances:
       fail('failed-precondition', 'Die Figur ist in einer anderen Szene im Kampf. Verwalte ihre Zustände dort.');
     }
     const state = deriveCombatStateFromComments(history).get(actorId) || {};
-    const profile = overlayCombatHitPointState(resolveCombatProfile({ ...record, id: actorId, entityType: kind }), state);
+    const profile = overlayCombatHitPointState(resolveCombatProfile({ ...record, id: actorId, entityType: kind }, { definitions }), state);
     let condition;
     let after;
     try {
@@ -72,15 +72,17 @@ export const commitCombatStatus = onCall({ region: 'europe-west1', maxInstances:
     let mechanicalUndo = null;
     if (operation === 'reset' && persistent) {
       const hitPoints = { ...(record.combatProfile?.hitPoints || {}), current: after.current, temporary: 0 };
-      transaction.update(recordRef, withProtectedRecordRevisions(record, {
+      const committed = withProtectedRecordRevisions(record, {
         'combatProfile.hitPoints': hitPoints, 'combatProfile.resources': after.resources,
         'combatProfile.abilities': after.abilities, 'combatProfile.lastMechanicalCommentId': commentRef.id,
         updatedAt: FieldValue.serverTimestamp()
-      }, ['combatProfile']));
+      }, ['combatProfile']);
+      transaction.update(recordRef, committed);
       mechanicalUndo = { [`${kind}:${recordId}`]: { kind, recordId,
         before: { hitPoints: record.combatProfile?.hitPoints || {}, resources: record.combatProfile?.resources || [], abilities: record.combatProfile?.abilities || [] },
         previousMechanicalCommentId: record.combatProfile?.lastMechanicalCommentId || null } };
-      profileUpdates.push({ kind, recordId, hitPoints, resources: after.resources, abilities: after.abilities });
+      profileUpdates.push({ kind, recordId, hitPoints, resources: after.resources, abilities: after.abilities,
+        combatProfileRevision: committed['combatProfile.revision'] });
     }
     const now = Date.now();
     transaction.create(commentRef, {

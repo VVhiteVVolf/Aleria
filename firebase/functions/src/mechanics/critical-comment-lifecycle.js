@@ -58,11 +58,12 @@ export function persistCriticalHitPointUpdates(transaction, updates, commentId, 
     mechanicalUndo[key] = { kind: entry.kind, recordId: entry.recordId,
       previousMechanicalCommentId: record.combatProfile?.lastMechanicalCommentId || null,
       ...mechanicalUndo[key], before: { ...mechanicalUndo[key]?.before, hitPoints: record.combatProfile?.hitPoints || null } };
-    transaction.update(entry.ref, withProtectedRecordRevisions(record, {
+    const committed = withProtectedRecordRevisions(record, {
       'combatProfile.hitPoints.current': hitPoints.current, 'combatProfile.hitPoints.temporary': hitPoints.temporary,
       'combatProfile.lastMechanicalCommentId': commentId, updatedAt: new Date(now).toISOString()
-    }, ['combatProfile'], now));
-    profileUpdates.push({ kind: entry.kind, recordId: entry.recordId, hitPoints });
+    }, ['combatProfile'], now);
+    transaction.update(entry.ref, committed);
+    profileUpdates.push({ kind: entry.kind, recordId: entry.recordId, hitPoints, combatProfileRevision: committed['combatProfile.revision'] });
   }
   return profileUpdates;
 }

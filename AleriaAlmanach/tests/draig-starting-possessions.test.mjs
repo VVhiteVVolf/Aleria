@@ -7,6 +7,18 @@ import { buildRefriSignetItem } from '../modules/draig-starting-possessions/refr
 import { STANDARD_ITEMS } from '../modules/item-register/item-register-standard.js';
 import { normalizeItemDefinition, itemDefinitionContent } from '../modules/item-definitions/item-definition-model.js';
 import { moneyState } from '../modules/item-register/item-register-money.js';
+import { createItemDefinitionRegistry } from '../modules/item-definitions/item-definition-registry.js';
+
+test('Refris vergebenes Unikat ist offline über seine veröffentlichte Originalversion lesbar', () => {
+  const reference = { id: 'personal-signet:refri-thornwick', revision: '101c0ffd9f3590a3403ac395' };
+  const registry = createItemDefinitionRegistry();
+  const saved = registry.get(reference);
+  assert.ok(saved);
+  assert.equal(saved.kind, 'unique');
+  assert.equal(saved.title, 'Refris alter Thornwick-Siegelring');
+  assert.equal(createHash('sha256').update(itemDefinitionContent(saved)).digest('hex').slice(0, 24), reference.revision);
+  assert.equal(registry.current(reference.id), null);
+});
 
 const now = '2026-11-05T00:00:00.000Z';
 const templateIds = new Set(DRAIG_STARTING_POSSESSIONS.flatMap(spec => spec.items.map(item => item.templateId)));

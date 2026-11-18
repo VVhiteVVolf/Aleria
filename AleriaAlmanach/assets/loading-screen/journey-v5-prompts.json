@@ -1,0 +1,28 @@
+{
+  "createdAt": "2026-11-18",
+  "tool": "built-in image_gen",
+  "loadingScreenVersion": 5,
+  "artwork": [
+    {
+      "source": "source/highland-road-v5.png",
+      "role": "active landscape",
+      "generatorOutput": "exec-1a368bdd-4065-4dad-b594-0f6d62acc838.png",
+      "references": [
+        "public/assets/loading-screen/freya-stand-v4.webp"
+      ],
+      "prompt": "Use case: illustration-story. Asset type: wide illustrated background for the Aleria Almanach fantasy travel loading screen. Create a wide 2.4:1 panoramic side-on landscape, with no people or characters. A quiet old highland road in a hand-painted Celtic fantasy valley at early golden morning. Pale cream amber light breaks through teal-blue morning mist in the upper center. Layered heather and sage mountains, a little stone bridge over a winding silver creek in the middle-left distance, a warm-windowed little slate-roofed roadside inn surrounded by ash trees at the right edge, a weathered standing stone and red rowan leaves at left. The central third should remain an inviting uncluttered valley, still work as the crop on a narrow phone. The last quarter at the bottom is a wide horizontal level tan road crossing the entire frame from side to side, in side elevation with gentle shallow foreground perspective; four separately composited chibi travellers will walk on that path with their boots around 86 percent of the frame height. Rounded natural forms, painterly gouache on subtly textured warm paper, understated fine ink contours, cel-like graphic read, deep spruce and copper highlights, layered soft distant values. Charming and atmospheric, sophisticated illustrated fantasy book endpaper matching the supplied cute anime chibi in palette. Road clearly reads as one continuous path. No typesetting, letters, text, frame, interface, bubbles, human silhouettes or watermark. Opaque illustration with comfortable empty sky overhead, hold enough contrast on phone crop."
+    },
+    {
+      "source": "source/travellers-stride-v5.png",
+      "role": "active walk frames",
+      "generatorOutput": "exec-68681fb7-589f-4fa9-ac1d-7cbc0a13d3d0.png",
+      "references": [
+        "public/assets/loading-screen/gawain-stand-v4.webp",
+        "public/assets/loading-screen/freya-stand-v4.webp",
+        "public/assets/loading-screen/guinevere-stand-v4.webp",
+        "public/assets/loading-screen/fenrir-stand-v4.webp"
+      ],
+      "prompt": "Use case: illustration-story. Asset type: transparent 4-by-4 chibi walking sprite atlas for Aleria Almanach. Exactly 16 cells in four equal rows and four equal columns, a square 2048 x 2048 canvas if possible. Each row keeps the same one character, scaled exactly the same in all four poses, same face and costume, right-facing in all four. Input 1 Gawain red hair, red scarf and dark dragon armour in top row. Input 2 Freya, blond hair and navy coat, gold armour, playing the same lute, second row. Input 3 Guinevere, chin-length auburn bob, teal eyes, pale little cloak and dark snake armor, small quiver on back, third row. Input 4 Fenrir, short pale gold hair, pale fur collar and red wolf armour, axe holstered at hip, bottom row. The references are exact identity, scale and style references. Keep cheerful bold inked anime chibis with gorgeous color and clear boot anatomy. Every single sprite is fully inside its cell with empty transparent padding, heads line up vertically and the lowest foot lines up across a row. Column 1 right foot forward and left back, recognizable long leg stride. Column 2 legs under body with left back foot lifting and bending with a clear heel lift, stance narrow. Column 3 left foot forward and right back (opposite leg comes forward, shift arms for Gawain, Guinevere and Fenrir). Column 4 legs under body with the right back foot bending and lifting. Keep Freya's lute visible in both hands in every pose. The legs are not all the same; a walk cycle needs two visibly narrower passing poses. Subtle scarf and cape overlap movement, avoid face drift. Keep no shadows, no ground or outlines of cells. Authentic alpha outside silhouettes with no checkerboard, no panels, no text, no watermark. Cute hand-drawn hand-inked anime sprites, clean edges and true transparent background."
+    }
+  ]
+}

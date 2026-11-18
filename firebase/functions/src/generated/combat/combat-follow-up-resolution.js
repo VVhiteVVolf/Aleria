@@ -5,14 +5,14 @@ import { getCombatWeaponLoadout } from './combat-weapon-loadout.js';
 import { getCombatAttackRange } from './combat-attack-range.js';
 import { mergeRestrictedRollModes } from './combat-roll-mode.js';
 import { combineDamageFormulas, evaluateAttackRoll } from './rules/combat-mvp-rules.js';
-import { applyOutcome } from './combat-attack-evaluation.js?v=20261015-graded-challenges-v1';
+import { applyOutcome, getFirstHitDefenseRule, resolveFirstHitDefenseUse } from './combat-attack-evaluation.js?v=20261015-graded-challenges-v1';
 import { resolveCombatWard } from './combat-ward-resolution.js';
 import { rollProfileD20, naturalRollReceipt } from './combat-natural-roll-policy.js';
 
 // Each follow-up has its own attack, damage, defenses and per-attack equipment rules.
 export async function resolveFollowUpAttacks({ dice, actor, target, weapon, attack, secondarySaves,
   ruleSources, ruleProfileState, actionKind, profileActionId, rulePeriods, usedRuleFrequencyKeys,
-  profileRollModes, auraRollMode, targetAuraOnActor, actorAuraOnTarget, targetConditions, options }) {
+  profileRollModes, auraRollMode, targetAuraOnActor, actorAuraOnTarget, supportAuras = [], targetConditions, options }) {
     const sequence = actor.selectedAction?.followUpAttack;
     let followUp = sequence;
     const followUpAttacks = [];
@@ -49,7 +49,9 @@ export async function resolveFollowUpAttacks({ dice, actor, target, weapon, atta
         markCombatRuleApplications(applications, usedRuleFrequencyKeys);
         return applications;
       };
-      const followPreApplications = collectFollowRules('pre-roll');
+      const followPreApplications = collectFollowRules('pre-roll').concat(supportAuras);
+      const firstHitDefenseRule = getFirstHitDefenseRule(followActor, rulePeriods, usedRuleFrequencyKeys);
+      if (firstHitDefenseRule) followPreApplications.push(firstHitDefenseRule);
       const followPreEffects = mergeCombatRuleEffects(followPreApplications);
       const usage = getConditionUsageBenefits(actor, target, { attackIndex: followUpIndex + 1, startedAction: options.startedAction });
       const initialUsage = getConditionUsageBenefits(actor, target, { startedAction: options.startedAction });
@@ -96,6 +98,7 @@ export async function resolveFollowUpAttacks({ dice, actor, target, weapon, atta
         actor, target, container: options.container
       });
       followAttack = followWard.attack;
+      resolveFirstHitDefenseUse(firstHitDefenseRule, followAttack.hit, usedRuleFrequencyKeys);
       preWardTargetConditions = followWard.conditions;
       const hitDamageApplications = collectFollowRules('pre-hit-damage', followAttack);
       const hitDamageEffects = mergeCombatRuleEffects(hitDamageApplications);
@@ -107,7 +110,7 @@ export async function resolveFollowUpAttacks({ dice, actor, target, weapon, atta
           damageFormula: combineDamageFormulas([followFormula, ...(extraDie ? [`1d${extraDie}`] : []), ...followBonusDamageFormulas]),
           bonus: (followUp.inheritDamageModifier === false ? (sequence.steps?.length ? 0 : getUniversalDamageBonus(actor)) : Number(actor.damageModifier || 0) + (actor.selectedAction?.inheritDamageModifier === false ? Number(actor.unscaledDamageModifier ?? actor.selectedAction.unscaledDamageModifier ?? 0) : 0) + damageDelta) + Number(followUp.damageBonus || 0)
             + Number(targetAuraOnActor.damage || 0)
-            + followPostHitEffects.damageModifier + followPreDamageEffects.damageModifier + hitDamageEffects.damageModifier,
+            + followPreEffects.damageModifier + followPostHitEffects.damageModifier + followPreDamageEffects.damageModifier + hitDamageEffects.damageModifier,
           critical: followAttack.criticalSuccess,
           actorName: actor.name,
           targetName: target.name,

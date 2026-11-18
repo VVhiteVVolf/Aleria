@@ -90,13 +90,14 @@
 .combat-rule-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
 .combat-rule-option { display: grid; grid-template-columns: auto minmax(0, 1fr) 74px auto; align-items: center; gap: 8px; padding: 7px 8px; border: 1px solid rgba(132, 102, 48, .25); background: rgba(255,255,255,.2); }
 .combat-rule-option.selected { border-color: #8c343c; background: rgba(140, 52, 60, .08); }
-.combat-rule-option > span { display: grid; min-width: 0; }
-.combat-rule-option > span strong, .combat-rule-option > span b, .combat-rule-option > span small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.combat-rule-option > span strong { color: #73444a; font: 10px/1.2 Cinzel, Georgia, serif; letter-spacing: .08em; text-transform: uppercase; }
-.combat-rule-option > span b { color: #443426; font: 13px/1.35 Georgia, serif; }
-.combat-rule-option > span small { color: #87745d; font-size: 10px; }
+.combat-rule-option > label { display: grid; min-width: 0; }
+.combat-rule-option > label strong, .combat-rule-option > label b, .combat-rule-option > label small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.combat-rule-option > label strong { color: #73444a; font: 10px/1.2 Cinzel, Georgia, serif; letter-spacing: .08em; text-transform: uppercase; }
+.combat-rule-option > label b { color: #443426; font: 13px/1.35 Georgia, serif; }
+.combat-rule-option > label small { color: #87745d; font-size: 10px; }
 .combat-rule-option input[type="number"] { min-width: 0; width: 100%; }
 .combat-rule-option > i { color: #8b7556; font-size: 11px; }
+.combat-rule-option > label:last-child { grid-column: 2 / -1; }
 
 .combat-resolution-overlay {
   position: fixed;

@@ -1,5 +1,7 @@
 import { getResolutionSceneItemEvents, getCommentCombatResolutionGroups } from '../combat/combat-resolution-tree.js';
 import { resolveEquipmentImage } from '../character-equipment/equipment-artwork.js?v=20260928-equipment-art-v4';
+import { getCombatWeaponLoadout } from '../combat/combat-weapon-loadout.js';
+import { getDroppedCombatWeapon } from '../combat/combat-weapon-availability.js';
 // Scene circulation is an append-only projection, never a second stock ledger.
 export const PICKUP_RESOURCES = Object.freeze(['bonus-action', 'action', 'reaction', 'special-action', 'aura-focus']);
 const copy = value => JSON.parse(JSON.stringify(value));
@@ -54,12 +56,24 @@ export function disarmNarration(actorName, weapon = {}, reason = 'hit') {
   return reason === 'failure' ? `${actorName}s Griff rutscht ab. ${name} fällt zu Boden und kommt in Reichweite zum Liegen.`
     : `${name} wird ${actorName} aus dem Griff geschlagen. Die Waffe fällt klirrend zu Boden und bleibt in Reichweite liegen.`;
 }
-export function createWeaponDrop(profile, { id, encounterId, reason }) {
-  const weapon = profile.weapon;
-  if (!weapon || ['unarmed', 'natural'].includes(weapon.weaponType)
-    || /unbewaffnet|faust|fäuste|klauen|biss|nahkampf$/i.test(weapon.name || '')) return null;
-  const canonical = (profile.weapons || []).find(entry => entry.inventoryItemId && entry.inventoryItemId === weapon.inventoryItemId)
-    || (profile.weapons || []).find(entry => entry.id === weapon.id) || weapon;
+function isDroppableWeapon(weapon) {
+  return !!weapon?.id && !['unarmed', 'natural', 'shield', 'spell'].includes(weapon.weaponType)
+    && !/^(?:unbewaffnet|faust|fäuste|klauen|biss|nahkampf)$/i.test(weapon.name || '');
+}
+
+export function createWeaponDrop(profile, { id, encounterId, reason, usedWeaponId }) {
+  const { right, left } = getCombatWeaponLoadout(profile);
+  // An action may project a spell or a combined pair as its weapon. Only
+  // physical entries in the occupied hands can circulate in the scene.
+  const held = right ? [right, left].filter(Boolean) : [profile.weapon].filter(Boolean);
+  const used = usedWeaponId ? (profile.weapons || []).find(weapon => weapon.id === usedWeaponId) : profile.weapon;
+  if (reason === 'failure' && !isDroppableWeapon(used)) return null;
+  const hands = reason === 'failure' ? [held.find(weapon => weapon.id === used.id
+    || (used.inventoryItemId && used.inventoryItemId === weapon.inventoryItemId)) || held[0]] : held;
+  const canonical = hands.find(weapon => isDroppableWeapon(weapon)
+    && !getDroppedCombatWeapon(profile, weapon)
+    && !(profile.weaponUnavailable && !profile.droppedWeapons?.length && weapon === hands[0]));
+  if (!canonical) return null;
   const item = (profile.inventory?.items || []).find(item => item.id === canonical.inventoryItemId)
     || { id: canonical.inventoryItemId || `weapon:${canonical.id}`, name: canonical.name, image: canonical.image || '',
       category: 'weapon', quantity: '1', combatDefinition: { ...canonical, kind: 'weapon' }, equipmentLink: { kind: 'weapon', combatEntryId: canonical.id } };

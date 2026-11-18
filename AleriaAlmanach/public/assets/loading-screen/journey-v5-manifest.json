@@ -1,0 +1,88 @@
+{
+  "version": 5,
+  "sources": [
+    {
+      "file": "assets/loading-screen/source/highland-road-v5.png",
+      "size": [
+        1942,
+        809
+      ],
+      "frames": 1,
+      "bytes": 3746856,
+      "sha256": "8d19f0d7b76adb68cbb327f1bc2d79b094e845a11831676eb32226a4ec7fe000"
+    },
+    {
+      "file": "assets/loading-screen/source/travellers-stride-v5.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "frames": 1,
+      "bytes": 1825424,
+      "sha256": "6aad0986b1505cf35640f049d734fa4cff9164eab5a53a6b8fbb0048740e1081"
+    }
+  ],
+  "atlas": {
+    "order": [
+      "gawain",
+      "freya",
+      "guinevere",
+      "fenrir"
+    ],
+    "rows": 4,
+    "columns": 4,
+    "cell": 152
+  },
+  "assets": [
+    {
+      "file": "public/assets/loading-screen/highland-road-v5-desktop.avif",
+      "size": [
+        1440,
+        600
+      ],
+      "frames": 1,
+      "bytes": 200774,
+      "sha256": "094b64eb01a0ef24cc6efd48633c4fede7e89626a30ba6aa6d8aa6756bfe8c53"
+    },
+    {
+      "file": "public/assets/loading-screen/highland-road-v5-mobile.avif",
+      "size": [
+        640,
+        512
+      ],
+      "frames": 1,
+      "bytes": 63667,
+      "sha256": "8c0e3a79e5775f50ce82b815cc4184d49c0ea29911e2d206aa8590a579d96046"
+    },
+    {
+      "file": "public/assets/loading-screen/highland-road-v5-fallback.webp",
+      "size": [
+        1200,
+        500
+      ],
+      "frames": 1,
+      "bytes": 191486,
+      "sha256": "d3bb9ab5d464e04cab0961a9709a90e0b38098ee4b0084eb81ac09a64f95b9f8"
+    },
+    {
+      "file": "public/assets/loading-screen/travellers-stride-v5.webp",
+      "size": [
+        608,
+        608
+      ],
+      "frames": 1,
+      "bytes": 126050,
+      "sha256": "63b7fd99e4595ac93e1ced641148a3395c3f48356a2efa5a404a1b387689ef8f"
+    }
+  ],
+  "preview": {
+    "file": "assets/loading-screen/preview/highland-journey-v5.gif",
+    "size": [
+      576,
+      240
+    ],
+    "frames": 4,
+    "bytes": 159663,
+    "sha256": "50fad030c4188128fc73fa512b9ca7bb911b355abc60616ad3b77bae9322d5e6"
+  }
+}

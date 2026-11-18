@@ -105,10 +105,11 @@ test('pacifist damage penalty affects weapons, not spells, and new group filters
   const original = base(), pacifist = choose('pazifistische-ader').profile, weapon = { weaponType: 'sword', attackAttribute: 'strength' };
   assert.equal(getWeaponDamageModifier(pacifist, weapon), getWeaponDamageModifier(original, weapon) - 1);
   assert.equal(getUniversalDamageBonus(pacifist), 0);
-  for (const [group, count] of [['unique', 20], ['aptitude', 10]]) {
+  for (const [group, count] of [['unique', 20], ['aptitude', 11]]) {
     const preview = previewCharacterLevelUp(original, { targetLevel: 1, traitGroup: group, traitIds: ['development-trait-zahlenintuition'] });
     assert.equal(preview.plan.traitGroup, group);
     assert.equal((renderDevelopmentTraits(preview.plan).match(/data-development-trait=/g) || []).length, count);
+    if (group === 'aptitude') assert.match(renderDevelopmentTraits(preview.plan), /development-trait-kann-mit-tieren-sprechen/);
     assert.deepEqual(preview.plan.traitIds, ['development-trait-zahlenintuition']);
   }
 });

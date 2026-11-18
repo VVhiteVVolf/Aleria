@@ -1,4 +1,6 @@
 import { prepareCombatEquipment, reserveCombatEquipment } from '../generated/combat/combat-equipment-preparation.js';
+import { normalizeCombatDistance } from '../generated/combat/combat-rule-distance.js';
+import { assertCommentAnimalSpeech } from '../comments/comment-animal-speech.js';
 import { getSceneConditionClock, sceneClockBeforeSegment } from '../generated/scene-time/scene-condition-clock.js';
 import { advanceSubstanceStateMap } from '../generated/character-health/substance-state.js';
 import { readItemDefinitionIndex, hydrateItemRecord, prepareUniqueItemClaims } from '../items/item-definition-repository.js';
@@ -7,6 +9,7 @@ import { removeTransferredSceneEquipment } from '../generated/scene-items/scene-
 import { materializeInventoryItem } from '../generated/item-definitions/item-definition-resolver.js';
 import { prepareCriticalCommentLifecycle } from './critical-comment-lifecycle.js';
 import { getActorsWithCombatPosts } from '../generated/combat/combat-weapon-loadout.js';
+import { applyDismountSnapshots } from '../generated/combat/combat-support-equipment.js';
 import { randomUUID, randomInt, createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
 import { attachCriticalConsequences } from '../generated/combat-critical/combat-critical-resolution.js';
@@ -18,13 +21,14 @@ import { withProtectedRecordRevisions } from './protected-record-revisions.js';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { getPersistentCombatResources, recoverDailyCombatResources, resetCommentScopedResources } from '../generated/combat/combat-action-economy.js';
 import { applyCombatAbilityUse } from '../generated/combat/combat-ability-uses.js';
+import { consumeCombatRuleAbilityUses } from '../generated/combat/combat-rule-consumption.js';
 import { reconcileConcentrationConditions } from '../generated/combat/combat-condition-lifecycle.js';
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
 import { withEquippedCombatWeapon } from '../generated/combat/combat-equipment-state.js';
 import { CombatResolutionService } from '../generated/combat/combat-resolution-service.js';
 import { deriveCombatStateFromComments, getResolutionActorChannelingState, getResolutionActorConcentrationState, getResolutionActorConditionState, getResolutionActorEquippedWeaponState, getResolutionActorLoadoutState, getResolutionActorHitPointState, getResolutionActorInventoryState, getResolutionTargetInventoryState, getResolutionActorResourceState, getResolutionHitPointState, getResolutionTargetChannelingState, getResolutionTargetConditionState, getResolutionTargetConcentrationState, getResolutionTargetResourceState, overlayCombatHitPointState } from '../generated/combat/combat-state-model.js';
 import { deriveCombatRuleFrequencyKeys } from '../generated/combat/combat-trigger-rules.js';
-import { getActiveCombatPartyMap, getActiveCombatEncounter } from '../generated/combat/combat-encounter-model.js';
+import { countActiveHostileOpponents, getCombatEncounterPartyMap, getActiveCombatEncounter } from '../generated/combat/combat-encounter-model.js';
 import { getEncounterActionValidationError } from '../generated/combat/combat-encounter-lifecycle.js';
 import { nextMechanicalCommentOrderKey } from './mechanical-comment-order.js';
 import { getEffectiveCombatSegmentKind } from '../generated/combat/combat-segment-model.js';
@@ -86,7 +90,7 @@ function ruleSelectionDescriptors(entry) {
     role: 'rule-source',
     actorId: cleanText(selection?.sourceActorId, 240),
     ruleId: cleanText(selection?.ruleId, 160),
-    distanceMeters: Math.max(0, Math.min(9999, Number(selection?.distanceMeters) || 0)),
+    distanceMeters: normalizeCombatDistance(selection?.distanceMeters),
     persistence: normalizePersistence(selection?.sourcePersistence, selection?.sourceActorId)
   }));
 }
@@ -159,14 +163,21 @@ function makeCharacterWithCombatState(record, persistence, actorId, state = null
   return withEquippedCombatWeapon(makeCharacter(record, persistence, actorId), state?.equippedWeaponId, state?.offHandWeaponId, state?.supportEquipment);
 }
 
+function currentCombatInventory(record, persistence, state, workingInventories) {
+  const current = persistence.persistent
+    ? workingInventories.get(`${persistence.kind}:${persistence.recordId}`)
+    : state?.inventory;
+  return current || record?.inventory || {};
+}
+
 function relationshipBetween(first = {}, second = {}) {
   const firstTeam = String(first.combatTeam || first.fraktion || first.faction || '').trim().toLocaleLowerCase('de');
   const secondTeam = String(second.combatTeam || second.fraktion || second.faction || '').trim().toLocaleLowerCase('de');
   return firstTeam && secondTeam && firstTeam === secondTeam ? 'ally' : 'enemy';
 }
 
-function collectSceneActorTeams(comments = [], currentSegments = []) {
-  const teams = getActiveCombatPartyMap(comments);
+function collectSceneActorTeams(comments, currentSegments, encounterParties) {
+  const teams = new Map(encounterParties);
   const remember = segment => {
     const actorId = cleanText(segment?.sceneActorId || segment?.actorId, 240);
     const team = cleanText(segment?.combatTeam, 80);
@@ -186,7 +197,7 @@ function relationshipForActors(firstRecord, secondRecord, firstActorId, secondAc
 
 function applyStoredState(profile, state) {
   if (!state) return profile;
-  return overlayCombatHitPointState(profile, state);
+  return overlayCombatHitPointState(profile, { ...state, inventory: profile.inventory });
 }
 
 function getEffectiveCommentResources(profileResources = [], stateResources = null, recoveryDayKey = '') {
@@ -202,15 +213,6 @@ function consumeAbilityUse(sourceAbilities, resolution, recoveryDayKey = '') {
     fail('failed-precondition', `${applied.missing?.name || 'Diese Fähigkeit'} hat keine Nutzung mehr übrig.`);
   }
   return applied;
-}
-
-function consumeRuleAbilityUse(sourceAbilities, application, recoveryDayKey = '') {
-  if (!application?.consumesAbilityUse || application.entryKind !== 'ability') {
-    return { changed: false, abilities: sourceAbilities || [], beforeAbilities: sourceAbilities || [], use: null };
-  }
-  return consumeAbilityUse(sourceAbilities, {
-    profileActionId: `ability:${application.entryId}`
-  }, recoveryDayKey);
 }
 
 export async function commitCombatCommentOperation(request, {
@@ -252,18 +254,16 @@ export async function commitCombatCommentOperation(request, {
         return;
       }
     }
+    await assertCommentAnimalSpeech({ database, transaction, metadata });
     const threadSnapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
     const allHistory = sortSceneHistory(threadSnapshot.docs.map(snapshot => ({ id: snapshot.id, ...snapshot.data() })));
     const trustedHistory = allHistory.filter(isTrustedMechanicalComment);
     const encounter = getActiveCombatEncounter(trustedHistory);
+    const encounterParties = getCombatEncounterPartyMap(encounter);
     const sceneItems = deriveSceneItems(trustedHistory);
     const actorsWithPosts = getActorsWithCombatPosts(trustedHistory);
-    for (const { segment, submitted } of entries) {
-      const error = getEncounterActionValidationError({ ...segment.combatAction, actorId: submitted.actorId }, encounter);
-      if (error) fail('failed-precondition', error);
-    }
     const historyStates = deriveCombatStateFromComments(allHistory.filter(isTrustedSceneContributionComment));
-    const sceneActorTeams = collectSceneActorTeams(trustedHistory, metadata.commentSegments);
+    const sceneActorTeams = collectSceneActorTeams(trustedHistory, metadata.commentSegments, encounterParties);
     const sceneDay = getTrustedSceneDay(allHistory);
     const recoveryDayKey = `scene:${entryId}:day-${sceneDay}`;
     const rulePeriods = { comment: commentRef.id, scene: entryId, day: recoveryDayKey };
@@ -349,12 +349,11 @@ export async function commitCombatCommentOperation(request, {
           ? { kind: descriptor.persistence.kind, recordId: descriptor.persistence.recordId }
           : { kind: 'scene-actor', actorId: descriptor.actorId }
       });
-      const currentInventory = workingInventories.get(recordKey) || record?.inventory || {};
       const actorState = workingStates.get(String(descriptor.actorId));
-      const actorBase = resolveCombatProfile(makeCharacterWithCombatState({ ...record, inventory: currentInventory }, descriptor.persistence, descriptor.actorId, actorState));
+      const currentInventory = currentCombatInventory(record, descriptor.persistence, actorState, workingInventories);
+      const actorBase = resolveCombatProfile(makeCharacterWithCombatState({ ...record, inventory: currentInventory }, descriptor.persistence, descriptor.actorId, actorState), { definitions: itemDefinitions });
       const actorResources = getEffectiveCommentResources(actorBase.resources, actorState?.resources, recoveryDayKey);
       const actorProfile = applyStoredState(actorBase, { ...(actorState || {}), resources: actorResources });
-      actorProfile.inventory = currentInventory;
       const sceneItem = submittedUse.source === 'scene' ? sceneItems.get(submittedUse.sceneItemId) : null;
       const sourceDescriptor = sceneItem?.sourceActorId ? descriptors.find(candidate => candidate.role === 'item-source' && candidate.actorId === sceneItem.sourceActorId) : null;
       const sourceKey = sourceDescriptor ? `${sourceDescriptor.persistence.kind}:${sourceDescriptor.persistence.recordId}` : '';
@@ -366,13 +365,14 @@ export async function commitCombatCommentOperation(request, {
         if (submittedUse.operation === 'consume' && kind !== 'consume') fail('invalid-argument', 'Verbrauchsgüter gehören in die Konsumieren-Blase.');
         if (submittedUse.operation !== 'consume' && kind !== 'interact') fail('invalid-argument', 'Benutzen und Aufheben gehören in die Interagieren-Blase.');
         applied = applySceneItemInteraction({ entry: sceneItem, actor: actorProfile,
-          sourceActor: sourceRecord ? { ...sourceRecord, id: sceneItem.sourceActorId, inventory: workingInventories.get(sourceKey) || sourceRecord.inventory } : null,
+          sourceActor: sourceRecord ? { ...sourceRecord, id: sceneItem.sourceActorId,
+            inventory: currentCombatInventory(sourceRecord, sourceDescriptor.persistence, workingStates.get(sceneItem.sourceActorId), workingInventories) } : null,
           operation: submittedUse.operation, paymentResource: submittedUse.paymentResource, usageId: submittedUse.usageId, definitions: itemDefinitions, recoveryDayKey });
         applySceneItemEvent(sceneItems, applied.inventoryUse.sceneItemEvent);
         applyDroppedWeaponsToStates(workingStates, sceneItems);
         actorProfile.resources = applied.resources;
         if (applied.sourceInventory) {
-          workingInventories.set(sourceKey, applied.sourceInventory);
+          if (sourceDescriptor.persistence.persistent) workingInventories.set(sourceKey, applied.sourceInventory);
           const sourceUpdate = persistentUpdates.get(sourceKey) || { entry: uniqueRecords.get(sourceKey), record: sourceRecord };
           sourceUpdate.inventory = applied.sourceInventory;
           const movedBinding = sourceRecord.combatProfile?.weapons?.find(weapon => weapon.id === sceneItem.weaponId)?.inventoryItemId || sceneItem.item.id;
@@ -399,7 +399,7 @@ export async function commitCombatCommentOperation(request, {
         if (kind === 'consume') submittedUse.mode = submittedUse.requestedMode = 'consume';
         applied = applyInventoryUseToInventory(currentInventory, submittedUse, { definitions: itemDefinitions, recoveryDayKey });
       }
-      workingInventories.set(recordKey, applied.inventory);
+      if (descriptor.persistence.persistent) workingInventories.set(recordKey, applied.inventory);
       const usedItem = submittedUse.source === 'scene' ? sceneItem?.item : (currentInventory.items || []).find(item => item.id === submittedUse.item.id);
       const usedDefinition = usedItem?.definitionRef ? itemDefinitions.get(`${usedItem.definitionRef.id}@${usedItem.definitionRef.revision}`) : null;
       if (usedDefinition?.kind === 'unique' && (submittedUse.operation === 'pickup' || applied.inventoryUse.mode === 'consume')) {
@@ -416,7 +416,7 @@ export async function commitCombatCommentOperation(request, {
       const triggered = applyInventoryUseAbilityEffects(actorProfile, applied.inventoryUse, recoveryDayKey, { definitions: itemDefinitions,
         sceneClockSeconds: sceneClockBeforeSegment(conditionClock, metadata.commentSegments, entry.index), sceneId: entryId });
       enhancedSegments[entry.index] = { ...enhancedSegments[entry.index], inventoryUse: triggered.inventoryUse };
-      if (triggered.changed || applied.resources) {
+      if (triggered.changed || applied.resources || applied.inventoryChanged) {
         workingStates.set(String(descriptor.actorId), {
           ...(workingStates.get(String(descriptor.actorId)) || actorState || {}),
           resources: triggered.resources,
@@ -447,17 +447,25 @@ export async function commitCombatCommentOperation(request, {
     };
 
     const startedAreaActions = new Map();
-    const pendingWeaponDrops = new Set();
-    const dropKey = profile => `${profile.characterId}:${profile.weapon?.inventoryItemId || `weapon:${profile.weapon?.id}`}`;
+    const pendingWeaponDrops = new Map();
+    const withPendingDrops = profile => ({ ...profile, droppedWeapons: [
+      ...(profile.droppedWeapons || []), ...(pendingWeaponDrops.get(profile.characterId) || [])] });
     const precedingEntries = [...inventoryEntries.map(entry => ({ ...entry, mechanic: 'inventory' })),
       ...skillEntries.map(entry => ({ ...entry, mechanic: 'skill' }))].sort((a, b) => a.index - b.index);
     let nextPrecedingEntry = 0;
+    let hostileOpponentCount = null;
     const resolvePreceding = async entry => entry.mechanic === 'skill' ? resolveSkillEntry(entry) : resolveInventoryEntry(entry);
     for (const { index, segment, submitted, targetIndex, targetCount, primary } of entries) {
       while (nextPrecedingEntry < precedingEntries.length && precedingEntries[nextPrecedingEntry].index <= index) {
         await resolvePreceding(precedingEntries[nextPrecedingEntry++]);
       }
       advanceSubstancesToSegment(index);
+      if (primary) {
+        const runtime = { beforeStates: historyStates, afterStates: workingStates };
+        const error = getEncounterActionValidationError({ ...segment.combatAction, actorId: submitted.actorId }, encounter, runtime);
+        if (error) fail('failed-precondition', error);
+        hostileOpponentCount = countActiveHostileOpponents(submitted.actorId, getCombatEncounterPartyMap(encounter, runtime));
+      }
       const actorPersistence = normalizePersistence(submitted.actorPersistence, submitted.actorId);
       const targetPersistence = normalizePersistence(submitted.targetPersistence, submitted.targetId);
       const actorRecordKey = `${actorPersistence.kind}:${actorPersistence.recordId}`;
@@ -468,20 +476,30 @@ export async function commitCombatCommentOperation(request, {
       const paymentMode = String(segment.combatAction?.paymentMode || 'standard');
       const actorState = workingStates.get(String(submitted.actorId));
       const targetState = workingStates.get(String(submitted.targetId));
-      const equippedCharacter = makeCharacterWithCombatState(actorRecord, actorPersistence, submitted.actorId, actorState);
+      const actorInventory = currentCombatInventory(actorRecord, actorPersistence, actorState, workingInventories);
+      const targetInventoryBefore = currentCombatInventory(targetRecord, targetPersistence, targetState, workingInventories);
+      const equippedCharacter = makeCharacterWithCombatState({ ...actorRecord, inventory: actorInventory }, actorPersistence, submitted.actorId, actorState);
       const prepared = prepareCombatEquipment(equippedCharacter, primary ? segment.combatAction?.loadout : null, { free: !actorsWithPosts.has(String(submitted.actorId)) });
       if (prepared.preparation?.error) fail('failed-precondition', prepared.preparation.error);
+      const actionId = String(segment.combatAction?.profileActionId || submitted.profileActionId || '');
       const actorBase = resolveCombatProfile(prepared.character, {
-        actionId: String(segment.combatAction?.profileActionId || submitted.profileActionId || ''),
+        definitions: itemDefinitions,
+        actionId,
         segmentKind: getEffectiveCombatSegmentKind(segment),
         paymentMode,
+        hostileOpponentCount,
         weaponGrip: String(segment.combatAction?.weaponGrip || '') === 'two-handed' ? 'two-handed' : 'one-handed',
         castLevel: Math.max(0, Math.min(10, Number(segment.combatAction?.castLevel) || 0))
       });
-      const targetBase = resolveCombatProfile(makeCharacterWithCombatState(targetRecord, targetPersistence, submitted.targetId, targetState));
+      if (actionId && actorBase.profileActionId !== actionId) {
+        fail('failed-precondition', 'Die gewählte Kampfhandlung ist im aktuellen Bogen nicht mehr verfügbar. Bitte wähle sie erneut.');
+      }
+      const targetCharacter = makeCharacterWithCombatState({ ...targetRecord, inventory: targetInventoryBefore }, targetPersistence, submitted.targetId, targetState);
+      const targetBase = resolveCombatProfile(targetCharacter, { definitions: itemDefinitions });
       const actorResources = getEffectiveCommentResources(actorBase.resources, actorState?.resources, recoveryDayKey);
       const actor = reserveCombatEquipment(applyStoredState(actorBase, {
         ...(actorState || {}),
+        ...(prepared.preparation?.after ? { supportEquipment: prepared.preparation.after } : {}),
         resources: actorResources
       }), prepared.preparation);
       if (actor.equipmentPreparation?.error) fail('failed-precondition', actor.equipmentPreparation.error);
@@ -492,21 +510,29 @@ export async function commitCombatCommentOperation(request, {
         fail('failed-precondition', `${actor.selectedAction?.name || 'Diese Technik'} erlaubt höchstens ${maximumTargets} Ziele.`);
       }
       const selectedRuleDescriptors = ruleSelectionDescriptors({ segment });
-      const ruleSources = selectedRuleDescriptors.map(descriptor => {
+      const rulesBySource = Map.groupBy(selectedRuleDescriptors, descriptor => descriptor.actorId);
+      const ruleSources = Array.from(rulesBySource.values(), selections => {
+        const descriptor = selections[0];
+        if (selections.some(selection => selection.persistence.kind !== descriptor.persistence.kind
+          || selection.persistence.recordId !== descriptor.persistence.recordId)) {
+          fail('invalid-argument', 'Die ausgewählten Reaktionen derselben Figur müssen aus derselben Figurenakte stammen.');
+        }
         const recordKey = `${descriptor.persistence.kind}:${descriptor.persistence.recordId}`;
         const record = records.get(recordKey);
         if (!record) fail('not-found', 'Eine ausgew\u00e4hlte Reaktionsquelle wurde nicht gefunden.');
         const sourceState = workingStates.get(String(descriptor.actorId));
-        const sourceBase = resolveCombatProfile(makeCharacterWithCombatState(record, descriptor.persistence, descriptor.actorId, sourceState));
+        const inventory = currentCombatInventory(record, descriptor.persistence, sourceState, workingInventories);
+        const source = makeCharacterWithCombatState({ ...record, inventory }, descriptor.persistence, descriptor.actorId, sourceState);
+        const sourceBase = resolveCombatProfile(source, { definitions: itemDefinitions });
         const sourceResources = getEffectiveCommentResources(sourceBase.resources, sourceState?.resources, recoveryDayKey);
-        const source = applyStoredState(sourceBase, {
+        const sourceProfile = applyStoredState(sourceBase, {
           ...(sourceState || {}),
           resources: sourceResources
         });
         return {
           actorId: descriptor.actorId,
-          actorName: source.name,
-          profile: source,
+          actorName: sourceProfile.name,
+          profile: sourceProfile,
           sourceRole: String(descriptor.actorId) === String(submitted.actorId)
             ? 'actor'
             : (String(descriptor.actorId) === String(submitted.targetId) ? 'target' : 'support'),
@@ -516,17 +542,14 @@ export async function commitCombatCommentOperation(request, {
           relationToTarget: String(descriptor.actorId) === String(submitted.targetId)
             ? 'self'
             : relationshipForActors(record, targetRecord, descriptor.actorId, submitted.targetId, sceneActorTeams),
-          distanceToActor: String(descriptor.actorId) === String(submitted.actorId) ? 0 : descriptor.distanceMeters,
-          distanceToTarget: String(descriptor.actorId) === String(submitted.targetId) ? 0 : descriptor.distanceMeters,
           passiveRulesAllowed: [String(submitted.actorId), String(submitted.targetId)].includes(String(descriptor.actorId)),
-          selectedRuleIds: selectedRuleDescriptors
-            .filter(item => String(item.actorId) === String(descriptor.actorId))
-            .map(item => item.ruleId),
+          selectedRuleIds: selections.map(selection => selection.ruleId),
+          ruleSelections: selections,
           persistence: descriptor.persistence
         };
       });
       const service = new CombatResolutionService(new ProvidedDiceAdapter(submitted));
-      const distanceMeters = Math.max(0, Math.min(9999, Number(segment.combatDistanceMeters) || 0));
+      const distanceMeters = normalizeCombatDistance(segment.combatDistanceMeters);
       const resolution = await service.resolveAttack({
         actor,
         target,
@@ -555,10 +578,10 @@ export async function commitCombatCommentOperation(request, {
           if (!criticalRolls.has(key)) criticalRolls.set(key, rollCritical());
           return criticalRolls.get(key);
         }, id: `${commentRef.id}:${index}:${targetIndex}`,
-        actor: { ...actor, weaponUnavailable: actor.weaponUnavailable || pendingWeaponDrops.has(dropKey(actor)) },
-        target: { ...target, weaponUnavailable: target.weaponUnavailable || pendingWeaponDrops.has(dropKey(target)) } });
+        actor: withPendingDrops(actor), target: withPendingDrops(target) });
       for (const consequence of consequences) if (consequence.sceneItemEvent) {
-        pendingWeaponDrops.add(`${consequence.sceneItemEvent.sourceActorId}:${consequence.sceneItemEvent.item.id}`);
+        const event = consequence.sceneItemEvent;
+        pendingWeaponDrops.set(event.sourceActorId, [...(pendingWeaponDrops.get(event.sourceActorId) || []), event]);
       }
       resolution.serverValidated = true;
       resolution.validatedAt = new Date(nowClient).toISOString();
@@ -611,37 +634,26 @@ export async function commitCombatCommentOperation(request, {
         ...(actorConcentration !== undefined ? { concentration: actorConcentration } : {})
       });
 
+      applyDismountSnapshots(workingStates, resolution, actorsWithPosts);
       for (const event of resolution.sceneItemEvents || []) applySceneItemEvent(sceneItems, event);
       if (resolution.sceneItemEvents?.length) applyDroppedWeaponsToStates(workingStates, sceneItems);
       reconcileConcentrationConditions(workingStates);
-      const ruleAbilitySnapshots = [];
-      (Array.isArray(resolution.ruleApplications) ? resolution.ruleApplications : [])
-        .filter(application => application.consumesAbilityUse)
-        .forEach(application => {
-          const sourceId = String(application.sourceActorId || '');
-          const source = ruleSources.find(item => String(item.actorId) === sourceId);
-          if (!source) fail('failed-precondition', 'Die F\u00e4higkeitsquelle einer Reaktion fehlt.');
-          const currentState = workingStates.get(sourceId) || {};
-          const currentAbilities = Array.isArray(currentState.abilities) ? currentState.abilities : source.profile.abilities;
-          const consumed = consumeRuleAbilityUse(currentAbilities, application, recoveryDayKey);
-          if (!consumed.changed) return;
-          workingStates.set(sourceId, { ...currentState, abilities: consumed.abilities });
-          ruleAbilitySnapshots.push({
-            sourceActorId: sourceId,
-            sourceActorName: application.sourceActorName,
-            applicationKey: application.applicationKey,
-            before: consumed.beforeAbilities,
-            after: consumed.abilities,
-            change: consumed.use
-          });
-          if (source.persistence?.persistent) {
-            const recordKey = `${source.persistence.kind}:${source.persistence.recordId}`;
-            const sourceRecord = records.get(recordKey);
-            const existing = persistentUpdates.get(recordKey) || { entry: uniqueRecords.get(recordKey), record: sourceRecord };
-            existing.abilities = consumed.abilities;
-            persistentUpdates.set(recordKey, existing);
-          }
-        });
+      const ruleAbilitySnapshots = consumeCombatRuleAbilityUses(resolution.ruleApplications, ruleSources, {
+        dayKey: recoveryDayKey, states: workingStates, perTrigger: true, onError: message => fail('failed-precondition', message)
+      });
+      for (const snapshot of ruleAbilitySnapshots) {
+        const sourceId = snapshot.sourceActorId;
+        const source = ruleSources.find(item => String(item.actorId) === sourceId);
+        const currentState = workingStates.get(sourceId) || {};
+        workingStates.set(sourceId, { ...currentState, abilities: snapshot.after });
+        if (source.persistence?.persistent) {
+          const recordKey = `${source.persistence.kind}:${source.persistence.recordId}`;
+          const sourceRecord = records.get(recordKey);
+          const existing = persistentUpdates.get(recordKey) || { entry: uniqueRecords.get(recordKey), record: sourceRecord };
+          existing.abilities = snapshot.after;
+          persistentUpdates.set(recordKey, existing);
+        }
+      }
       if (ruleAbilitySnapshots.length) resolution.ruleAbilitySnapshots = ruleAbilitySnapshots;
 
       (Array.isArray(resolution.ruleResourceSnapshots) ? resolution.ruleResourceSnapshots : []).forEach(snapshot => {
@@ -680,7 +692,7 @@ export async function commitCombatCommentOperation(request, {
         const existing = persistentUpdates.get(actorRecordKey) || { entry: uniqueRecords.get(actorRecordKey), record: actorRecord };
         const actorFinalResources = workingStates.get(String(submitted.actorId))?.resources || actorNextResources || actorBase.resources;
         existing.resources = getPersistentCombatResources(actorBase.resources, actorFinalResources);
-        if (abilityUse.changed) existing.abilities = abilityUse.abilities;
+        if (abilityUse.changed) existing.abilities = workingStates.get(String(submitted.actorId)).abilities;
         if (actorNextInventory) { existing.inventory = actorNextInventory; workingInventories.set(actorRecordKey, actorNextInventory); }
         if (actorNextHitPoints) existing.hitPoints = actorNextHitPoints;
         persistentUpdates.set(actorRecordKey, existing);
@@ -710,7 +722,7 @@ export async function commitCombatCommentOperation(request, {
         values['combatProfile.abilities'] = update.abilities;
       }
       if (update.inventory) {
-        before.inventory = update.record?.inventory || null;
+        before.inventory = rawRecords.get(update.entry.key)?.inventory || null;
         values.inventory = update.inventory;
       }
       if (update.equipment) {
@@ -729,19 +741,21 @@ export async function commitCombatCommentOperation(request, {
         ...(update.inventory ? { afterInventoryFingerprint: undoInventoryFingerprint(update.inventory) } : {}),
         previousMechanicalCommentId: update.record?.combatProfile?.lastMechanicalCommentId || null
       };
-      transaction.update(update.entry.ref, withProtectedRecordRevisions(
+      const committed = withProtectedRecordRevisions(
         update.record || {},
         values,
         update.inventory ? ['combatProfile', 'inventory'] : ['combatProfile'],
         nowClient
-      ));
+      );
+      transaction.update(update.entry.ref, committed);
       return {
         kind: update.entry.kind,
         recordId: update.entry.recordId,
+        combatProfileRevision: committed['combatProfile.revision'],
         hitPoints: update.hitPoints || null,
         resources: update.resources || null,
         abilities: update.abilities || null,
-        inventory: update.inventory || null,
+        inventory: committed.inventory || null,
         equipment: update.equipment ? { weapons: update.equipment.weapons || [], armorItems: update.equipment.armorItems || [] } : null
       };
     });

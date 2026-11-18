@@ -107,7 +107,7 @@ test('the comment form owns challenge handover and preserves an existing restore
   const settings = { kind: 'thought', mechanicMode: 'skill', skillId: 'investigation', skillTargetActorKey: 'herausforderung:x', skillTargetChallengeId: 'herausforderung:x:a' };
   const context = createContext({ window: { AleriaSkillChecks: { getChallengeAttemptSettings: () => settings } },
     _commentSegments: [{ kind: 'speech', text: 'Vorhandener Entwurf', mechanicMode: 'normal' }], _commentKind: 'speech',
-    SCENE_TIME_DEFAULT_SEGMENT_SECONDS: 30, COMMENT_LANGUAGE_DEFAULT: 'common', setCommentMode() {}, persistCommentDraft() {},
+    SCENE_TIME_DEFAULT_SEGMENT_SECONDS: 30, COMMENT_LANGUAGE_DEFAULT: 'common', setCommentMode() {}, persistCommentDraft() {}, showCommentDraftNote() {},
     makeCommentSegment: (kind, text, emote, side, time, language, color, supplied) => ({ kind, text, ...supplied }) });
   runInContext(await readFile(new URL('../modules/comments/comments-form.js', import.meta.url), 'utf8'), context);
   runInContext('openCommentForm = options => options?.afterReady?.(); openCommentFormForSkillChallenge({});', context);

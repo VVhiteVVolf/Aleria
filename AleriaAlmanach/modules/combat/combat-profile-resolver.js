@@ -97,6 +97,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
       damageModifier: values.damageModifier,
       activationType: weapon.activationType,
       costs: normalizeCombatResourceCosts(weapon.costs),
+      spendAllRegularActions: weapon.spendAllRegularActions === true,
       effects: weapon.effects || [],
       ammunition: weapon.ammunition || null,
       auraBypass: weapon.auraBypass,
@@ -154,6 +155,8 @@ function buildCombatProfileActions(character, profile, options = {}) {
           ...damageWeapon,
           id: technique.id,
           name: technique.name,
+          heldWeaponIds: requiresPairedCombatWeapons(technique) ? [loadout.rightWeaponId, loadout.leftWeaponId].filter(Boolean)
+            : [loadout.rightWeaponId].filter(Boolean),
           damageFormula: formula,
           versatileDamageFormula: versatileFormula,
           damageType: technique.damageType || activeWeapon?.damageType || 'physisch',
@@ -168,6 +171,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
         inheritBonusDamage: technique.damageModel?.inheritBonusDamage !== false,
         criticalThreshold: Math.min(Number(technique.criticalThreshold) || 20, classModifiers.criticalThreshold || 20, weaponRules.criticalThreshold || 20),
         targetDefenseModifier: weaponRules.targetDefenseModifier + Number(classModifiers.targetDefenseModifier || 0),
+        ...(classModifiers.firstHitDefense ? { firstHitDefense: classModifiers.firstHitDefense } : {}),
         maximumTargets: weaponRules.maximumTargets,
         mechanicNotes: [...new Set([...(technique.mechanicNotes || []), ...weaponRules.mechanicNotes,
           ...(getPairedAttackWeapon(activeWeapon || {}, profile, technique).pairedAttack ? ['Gemeinsamer Angriff: beide Waffenwürfel, feste Boni einmal; Schadensart der führenden Waffe.'] : []),
@@ -222,6 +226,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
         activationType: ability.activationType,
         requiresVoice: ability.requiresVoice === true,
         costs: normalizeCombatResourceCosts(ability.costs),
+        spendAllRegularActions: ability.spendAllRegularActions === true,
         auraBypass: ability.auraBypass,
         resolutionMode: ability.resolutionType
           || (ability.rollFormula ? (isSpell ? 'spell-attack' : 'weapon-attack') : 'automatic'),
@@ -277,6 +282,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
       activationType: spell.activationType,
       requiresVoice: spell.requiresVoice === true,
       costs: normalizeCombatResourceCosts([...additionalCosts, manaCost].filter(Boolean)),
+      spendAllRegularActions: spell.spendAllRegularActions === true,
       auraBypass: spell.auraBypass,
       resolutionMode: spell.resolutionType || 'spell-attack',
       saveAttribute: spell.saveAttribute,
@@ -417,7 +423,7 @@ function applySpellCastLevel(action, profile, requestedLevel) {
 
 export function resolveCombatProfile(character = {}, options = {}) {
   const effectiveCharacter = withAutofilledCenyrProfile(character);
-  const profile = resolveCharacterCombatProfile(effectiveCharacter);
+  const profile = resolveCharacterCombatProfile(effectiveCharacter, { definitions: options.definitions });
   const segmentKind = String(options.segmentKind || '');
   const allActions = buildCombatProfileActions(effectiveCharacter, profile, options);
   const actions = segmentKind ? allActions.filter(action => action.segmentKinds.includes(segmentKind)) : allActions;
@@ -458,7 +464,7 @@ export function resolveCombatProfile(character = {}, options = {}) {
     forcedRollMode: selectedAction?.forcedRollMode || 'normal',
     actions: actions.map(action => action.id === selectedAction?.id ? selectedAction : action),
     persistence: resolveCombatPersistence(effectiveCharacter),
-    aiSnapshot: options.includeAiSnapshot === false ? null : buildCombatProfileAiSnapshot(effectiveCharacter)
+    aiSnapshot: options.includeAiSnapshot === false ? null : buildCombatProfileAiSnapshot(effectiveCharacter, profile)
   };
 }
 
@@ -471,7 +477,7 @@ export function resolveCombatTargetProfile(character = {}) {
   const effectiveCharacter = withAutofilledCenyrProfile(character);
   const creature = effectiveCharacter.entityType === 'creature';
   let profile;
-  if (hasStoredCombatProfile(effectiveCharacter.combatProfile)) {
+  if (hasStoredCombatProfile(effectiveCharacter.combatProfile) || effectiveCharacter.inventory?.items?.some(item => item.definitionRef)) {
     profile = resolveCharacterCombatProfile(effectiveCharacter);
   } else if (creature) {
     emptyCreatureTargetProfile ||= resolveCharacterCombatProfile({ entityType: 'creature', combatProfile: {} });

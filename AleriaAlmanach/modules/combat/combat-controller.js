@@ -1,4 +1,6 @@
 import { getCommentActorIds } from './combat-condition-duration.js';
+import { normalizeCombatDistance } from './combat-rule-distance.js';
+import { getCombatSupportAuraOptions } from './combat-support-aura.js';
 import { bindCombatTooltips } from './ui/combat-tooltips.js?v=20261015-skill-challenges-v2';
 import { beginCombatContribution, conditionsAtContributionStart } from './combat-contribution-start.js';
 import { applySkillRuntimeSnapshots } from '../skill-checks/skill-runtime-state.js';
@@ -7,7 +9,8 @@ import { prepareCombatEquipment, reserveCombatEquipment } from './combat-equipme
 import { beginCriticalContribution } from '../combat-critical/combat-critical-lifecycle.js';
 import { estimateCombatHitChance } from './combat-action-estimates.js?v=20260928-equipment-art-v4';
 import { getActorsWithCombatPosts, normalizeCombatLoadout, isPairedCombatWeapon, canUseCombatOffHand } from './combat-weapon-loadout.js';
-import { canCarryCombatShield } from './combat-support-equipment.js';
+import { applyDismountSnapshots, canCarryCombatShield } from './combat-support-equipment.js';
+import { combatRulePhaseLabels } from './ui/combat-rule-presentation.js';
 import { CombatDiceAdapter } from './combat-dice-adapter.js?v=20260905-party-combat-v1';
 import { mountCommentConditionTracker, releaseCommentConditionTracker } from '../comments/comments-condition-tracker.js?v=20260928-equipment-art-v4';
 import { prioritizeCombatTargets } from './ui/combat-target-picker.js?v=20260928-equipment-art-v4';
@@ -47,7 +50,8 @@ import {
   recoverDailyCombatResources,
   resetCommentScopedResources
 } from './combat-action-economy.js?v=20260905-resource-balance-v2';
-import { applyCombatAbilityUse } from './combat-ability-uses.js?v=20260803-action-economy-v1';
+import { applyCombatAbilityUse, getCombatAbilityAtDay } from './combat-ability-uses.js?v=20260803-action-economy-v1';
+import { consumeCombatRuleAbilityUses } from './combat-rule-consumption.js?v=20260928-equipment-art-v4';
 import { getSceneRecoveryDayKey } from '../scene-time/scene-recovery-day.js';
 import { previewZornkappeSegment } from '../inventory-use/zornkappe-effects.js';
 import { previewSubstanceItem } from '../character-health/substance-preview.js';
@@ -66,12 +70,16 @@ import {
   collectCombatTriggerRules,
   deriveCombatRuleFrequencyKeys
 } from './combat-trigger-rules.js?v=20260928-equipment-art-v4';
-import { getActiveCombatPartyMap, getActiveCombatEncounter } from './combat-encounter-model.js?v=20260928-equipment-art-v4';
+import { countActiveHostileOpponents, getCombatEncounterPartyMap, getActiveCombatPartyMap, getActiveCombatEncounter } from './combat-encounter-model.js?v=20260928-equipment-art-v4';
+import { getEncounterActionValidationError } from './combat-encounter-lifecycle.js';
 import { getCombatSegmentMode, isCombatSegment, getEffectiveCombatSegmentKind } from './combat-segment-model.js';
 import { createCombatProfileCache } from './combat-profile-cache.js';
 import { getCombatPreviewActorIds, createCombatTargetSummary } from './combat-composer-roster.js?v=20260928-equipment-art-v4';
 import { actionAllowsSelfTarget, getCombatTargetSelection, isSelfTargetAction } from './combat-action-targeting.js';
 import { getSceneCombatDocumentation } from '../combat-status/combat-scene-documentation.js';
+import { projectCombatEquipmentFromInventory } from '../character-equipment/character-equipment-sync.js';
+import { projectSceneCreatureActors, resolveSceneCreatureSource } from '../creatures/creature-scene-source.js';
+import { loadInventoryItemVersions } from '../item-definitions/item-definition-client.js';
 
 const profileResolver = new CombatProfileResolver();
 const resolutionService = new CombatResolutionService(new CombatDiceAdapter());
@@ -145,12 +153,11 @@ function mergeCombatActors(characters = [], sceneActors = []) {
   characters
     .filter(actor => !(actor.entityType === 'creature' && sourceIds.has(String(actor.id || ''))))
     .forEach(actor => merged.set(String(actor.id || ''), actor));
-  sceneActors.forEach(actor => merged.set(String(actor.id || ''), actor));
+  projectSceneCreatureActors(sceneActors, characters).forEach(actor => merged.set(String(actor.id || ''), actor));
   return [...merged.values()];
 }
 
-function applyEncounterParties(characters = [], comments = []) {
-  const partyMap = getActiveCombatPartyMap(comments);
+function applyEncounterParties(characters, partyMap) {
   if (!partyMap.size) return characters;
   return characters.map(character => partyMap.has(String(character.id || ''))
     ? { ...character, combatTeam: partyMap.get(String(character.id || '')) }
@@ -161,16 +168,6 @@ function getCombatRelationship(first = {}, second = {}) {
   const firstTeam = String(first.combatTeam || first.fraktion || first.faction || '').trim().toLocaleLowerCase('de');
   const secondTeam = String(second.combatTeam || second.fraktion || second.faction || '').trim().toLocaleLowerCase('de');
   return firstTeam && secondTeam && firstTeam === secondTeam ? 'ally' : 'enemy';
-}
-
-function countActiveHostileOpponents(actor = {}, characters = [], partyMap = new Map()) {
-  if (!(partyMap instanceof Map) || !partyMap.size) return null;
-  const actorId = String(actor.id || '');
-  const actorParty = partyMap.get(actorId);
-  if (!actorParty) return null;
-  return new Set(characters
-    .map(character => String(character.id || ''))
-    .filter(id => id && id !== actorId && partyMap.has(id) && partyMap.get(id) !== actorParty)).size;
 }
 
 function getStoredCombatStates(threadId = '', position = {}) {
@@ -222,11 +219,16 @@ function buildCombatRuleOptions({ characters, actorCharacter, actor, targetChara
           ruleName: rule.name || rule.entryName,
           costs: rule.costs,
           selected: !!selected,
-          distanceMeters: selected?.distanceMeters ?? 0,
-          phaseLabel: rule.phase === 'pre-roll' ? 'vor Wurf' : (rule.phase === 'post-roll' ? 'nach Wurf' : (rule.phase === 'post-hit' ? 'nach Trefferpr\u00fcfung' : 'vor Schaden'))
+          supportDistance: rule.radiusMeters != null && source.characterId !== actorCharacter.id && source.characterId !== targetCharacter.id,
+          distanceMeters: normalizeCombatDistance(selected?.distanceMeters),
+          phaseLabel: combatRulePhaseLabels[rule.phase] || ''
         };
       });
-    return reactionOptions;
+    const auraOptions = getCombatSupportAuraOptions({
+      actorId: source.characterId, actorName: source.name, profile: source, sourceRole: 'support', relationToActor, relationToTarget,
+      ruleSelections: selections.filter(selection => selection.sourceActorId === source.characterId)
+    }, actionKind, actor, profileOverrides?.get(String(targetCharacter.id)));
+    return reactionOptions.concat(auraOptions);
   });
 }
 
@@ -236,7 +238,7 @@ function buildCombatRuleSources({ characters, actorCharacter, targetCharacter, s
   selections.forEach(selection => {
     const actorId = String(selection.sourceActorId || '');
     if (!selectedByActor.has(actorId)) selectedByActor.set(actorId, []);
-    selectedByActor.get(actorId).push(String(selection.ruleId || ''));
+    selectedByActor.get(actorId).push(selection);
   });
   return characters
     .filter(character => selectedByActor.has(String(character.id || ''))
@@ -250,8 +252,7 @@ function buildCombatRuleSources({ characters, actorCharacter, targetCharacter, s
         resetCommentResources: false,
         recoveryDayKey: stateContext.recoveryDayKey
       });
-      const selection = selections.find(item => String(item.sourceActorId) === String(character.id));
-      const distance = Math.max(0, Math.min(9999, Number(selection?.distanceMeters) || 0));
+      const ruleSelections = selectedByActor.get(String(character.id)) || [];
       return {
         actorId: source.characterId,
         actorName: source.name,
@@ -261,21 +262,38 @@ function buildCombatRuleSources({ characters, actorCharacter, targetCharacter, s
           : (String(character.id) === String(targetCharacter.id) ? 'target' : 'support'),
         relationToActor: String(character.id) === String(actorCharacter.id) ? 'self' : getCombatRelationship(character, actorCharacter),
         relationToTarget: String(character.id) === String(targetCharacter.id) ? 'self' : getCombatRelationship(character, targetCharacter),
-        distanceToActor: String(character.id) === String(actorCharacter.id) ? 0 : distance,
-        distanceToTarget: String(character.id) === String(targetCharacter.id) ? 0 : distance,
         passiveRulesAllowed: [String(actorCharacter.id), String(targetCharacter.id)].includes(String(character.id)),
-        selectedRuleIds: selectedByActor.get(String(character.id)) || []
+        selectedRuleIds: ruleSelections.map(selection => selection.ruleId),
+        ruleSelections
       };
     });
 }
 
+function sceneProfileInput(character, options) {
+  const actorId = String(options.actorId || character.id || '');
+  const stored = options.storedStates?.get(actorId);
+  const state = options.workingStates?.get(actorId) || stored;
+  // A live character's current stock comes from its record. Historical and
+  // temporary scene actors can still use the inventory captured in the scene.
+  const inventory = options.historical || character.sourceCreatureId || state?.inventory !== stored?.inventory
+    ? state?.inventory : null;
+  const current = inventory ? { ...character, inventory } : character;
+  const equipped = state?.equippedWeaponId || state?.supportEquipment || options.loadout
+    ? projectCombatEquipmentFromInventory(current) : current;
+  return { actorId, state: state ? { ...state, inventory } : null,
+    character: withEquippedCombatWeapon(equipped, state?.equippedWeaponId, state?.offHandWeaponId, state?.supportEquipment) };
+}
+
+function getSceneContextActor(context, actorId) {
+  const actor = context?.sceneActors?.find(candidate => String(candidate.id) === actorId);
+  return actor ? resolveSceneCreatureSource(actor, getCharacterById(actor.sourceCreatureId)) : getCharacterById(actorId);
+}
+
 function resolveActorProfile(character, options = {}) {
-  const actorId = String(options.actorId || character?.id || '');
-  const state = options.workingStates?.get(actorId) || options.storedStates?.get(actorId) || null;
   // Ein späterer "Ausrüstung wechseln"-Kommentar bestimmt, welche Waffe/welches Instrument
   // ab jetzt als aktiv gilt - muss vor der Profilauflösung angewendet werden, weil aktiveWeapon
   // und Technik-Kompatibilität bereits innerhalb von profileResolver.resolve entschieden werden.
-  const equippedCharacter = withEquippedCombatWeapon(character, state?.equippedWeaponId, state?.offHandWeaponId, state?.supportEquipment);
+  const { actorId, state, character: equippedCharacter } = sceneProfileInput(character, options);
   const prepared = prepareCombatEquipment(equippedCharacter, options.loadout, { free: options.freeEquipment });
   const effectiveCharacter = prepared.character;
   const profile = resolveCachedCombatProfile(effectiveCharacter, {
@@ -295,15 +313,14 @@ function resolveActorProfile(character, options = {}) {
   effectiveResources = recoverDailyCombatResources(effectiveResources, options.recoveryDayKey);
   const effectiveState = state || shouldResetCommentResources || options.recoveryDayKey
     ? { ...(state || {}), resources: effectiveResources,
+      ...(prepared.preparation?.after ? { supportEquipment: prepared.preparation.after } : {}),
       ...(shouldResetCommentResources && state?.temporaryConditions ? { temporaryConditions: conditionsAtContributionStart(state.temporaryConditions) } : {}) }
     : null;
   return reserveCombatEquipment(overlayCombatHitPointState(profile, effectiveState), prepared.preparation);
 }
 
 function resolveTargetPickerProfile(character, options = {}) {
-  const actorId = String(options.actorId || character?.id || '');
-  const state = options.workingStates?.get(actorId) || options.storedStates?.get(actorId) || null;
-  const equippedCharacter = withEquippedCombatWeapon(character, state?.equippedWeaponId, state?.offHandWeaponId, state?.supportEquipment);
+  const { state, character: equippedCharacter } = sceneProfileInput(character, options);
   return overlayCombatHitPointState(resolveCachedCombatTarget(equippedCharacter), state);
 }
 
@@ -312,7 +329,6 @@ function synchronizeSegmentTargets(segment, actor) {
   segment.combatTargetIds = getCombatTargetSelection(actor.selectedAction, actor.characterId,
     segment.combatTargetIds?.length ? segment.combatTargetIds : [segment.combatTargetId]);
   segment.combatTargetId = segment.combatTargetIds[0] || '';
-  if (isSelfTargetAction(actor.selectedAction)) segment.combatDistanceMeters = 0;
 }
 
 function activateResolutionDialog() {
@@ -369,13 +385,14 @@ function mountComposers(context = {}) {
   latestComposerContext = context;
   const segments = Array.isArray(context.segments) ? context.segments : [];
   mountCommentConditionTracker(context, actorId => {
-    const character = (context.sceneActors || []).find(actor => String(actor.id) === actorId) || getCharacterById(actorId);
+    const character = getSceneContextActor(context, actorId);
     return character ? resolveActorProfile(character, { actorId, storedStates: getStoredCombatStates(context.threadId || ''), includeAiSnapshot: false }) : null;
   });
   if (!segments.some(isCombatSegment)) return;
   const cachedComments = globalThis.getCachedCommentsForThread?.(context.threadId || '') || [];
-  const activeEncounterPartyMap = getActiveCombatPartyMap(cachedComments);
-  const characters = applyEncounterParties(mergeCombatActors(getCharacters(), context.sceneActors || []), cachedComments);
+  const encounter = getActiveCombatEncounter(cachedComments);
+  const activeEncounterPartyMap = getCombatEncounterPartyMap(encounter);
+  const characters = applyEncounterParties(mergeCombatActors(getCharacters(), context.sceneActors || []), activeEncounterPartyMap);
   const storedStates = getStoredCombatStates(context.threadId || '');
   const recoveryDayKey = getCombatRecoveryDayKey(context.threadId || '');
   const composerStates = new Map(storedStates);
@@ -403,6 +420,9 @@ function mountComposers(context = {}) {
     segment.combatRollMode = 'normal';
     const actorId = String(segment.actorId || context.selectedCharacterId || '');
     const actorCharacter = characters.find(character => String(character.id || '') === actorId) || null;
+    const runtime = { beforeStates: storedStates, afterStates: composerStates };
+    const encounterError = actorCharacter
+      ? getEncounterActionValidationError({ actorId, encounterId: encounter?.encounterId || '' }, encounter, runtime) : '';
     const actor = actorCharacter ? resolveActorProfile(actorCharacter, {
       actionId: segment.combatActionId,
       loadout: segment.combatLoadout,
@@ -416,7 +436,8 @@ function mountComposers(context = {}) {
       paymentMode: segment.combatPaymentMode,
       weaponGrip: segment.combatWeaponGrip,
       castLevel: segment.combatCastLevel,
-      hostileOpponentCount: countActiveHostileOpponents(actorCharacter, characters, activeEncounterPartyMap),
+      hostileOpponentCount: countActiveHostileOpponents(actorId,
+        getCombatEncounterPartyMap(encounter, runtime)),
       includeAiSnapshot: false,
       recoveryDayKey
     }) : null;
@@ -430,10 +451,10 @@ function mountComposers(context = {}) {
     const abilityReservation = actor
       ? applyCombatAbilityUse(actor.abilities, actor.profileActionId, recoveryDayKey)
       : { sufficient: true, changed: false, abilities: [] };
-    const actorReady = actorValidation.ready && abilityReservation.sufficient;
-    const actorProblem = !abilityReservation.sufficient
+    const actorReady = actorValidation.ready && abilityReservation.sufficient && !encounterError;
+    const actorProblem = encounterError || (!abilityReservation.sufficient
       ? `${actor?.name || 'Die handelnde Figur'} hat keine Nutzung von ${abilityReservation.missing?.name || 'dieser Fähigkeit'} mehr übrig.`
-      : (actor ? getCombatActorValidationMessage(actor, actorValidation) : '');
+      : (actor ? getCombatActorValidationMessage(actor, actorValidation) : ''));
     const auraPaymentAvailable = actor ? canUseAuraPayment(actor.selectedAction, actor) : false;
     const manaSubstitutePaymentAvailable = actor ? canUseManaSubstitutePayment(actor.selectedAction, actor) : false;
     const paymentOptions = actor ? [
@@ -452,7 +473,7 @@ function mountComposers(context = {}) {
       segment.combatPaymentConfirmed = false;
       paymentConfirmed = false;
     }
-    if (actor && paymentConfirmed && payment?.sufficient && abilityReservation.sufficient) {
+    if (actor && actorReady && paymentConfirmed && payment?.sufficient) {
       const previous = composerStates.get(actorId) || storedStates.get(actorId) || {};
       const equippedWeaponId = getReservedEquipmentSwitchWeaponId(actor, paymentConfirmed);
       composerStates.set(actorId, {
@@ -481,7 +502,7 @@ function mountComposers(context = {}) {
           stateContext: { storedStates, workingStates: composerStates, recoveryDayKey }, profileOverrides: previewProfiles }) : [];
         return target ? { ...target, hitChance: estimateCombatHitChance(actor, target, {
           relationship: actorCharacter ? getCombatRelationship(actorCharacter, character) : 'enemy',
-          distanceMeters: Number(segment.combatDistanceMeters) || 0, ruleSources: sources,
+          distanceMeters: segment.combatDistanceMeters, ruleSources: sources,
           rulePeriods: previewRulePeriods, usedRuleFrequencyKeys: previewFrequencyKeys
         }) } : null;
       })
@@ -503,7 +524,7 @@ function mountComposers(context = {}) {
       stateContext: { storedStates, workingStates: composerStates, recoveryDayKey }, profileOverrides: previewProfiles }) : undefined;
     const rollPreview = actor ? getCombatRollContext(actor, previewTarget, {
       relationship: targetCharacter ? getCombatRelationship(actorCharacter, targetCharacter) : 'enemy',
-      distanceMeters: Number(segment.combatDistanceMeters) || 0, ruleSources: previewRules,
+      distanceMeters: segment.combatDistanceMeters, ruleSources: previewRules,
       usedRuleFrequencyKeys: previewFrequencyKeys, rulePeriods: previewRulePeriods
     }) : null;
     mountCombatComposer({
@@ -529,7 +550,7 @@ function updateEquipmentSelection(segmentId, field, value, composer) {
   const segment = latestComposerContext?.segments?.find(item => String(item.id) === String(segmentId));
   if (!segment) return;
   const actorId = String(segment.actorId || latestComposerContext.selectedCharacterId || '');
-  const character = (latestComposerContext.sceneActors || []).find(item => String(item.id) === actorId) || getCharacterById(actorId);
+  const character = getSceneContextActor(latestComposerContext, actorId);
   if (!character) return;
   const weapons = character.combatProfile?.weapons || [];
   const view = composer.querySelector('[data-current-right]');
@@ -585,7 +606,7 @@ function updateSegmentSetting(segmentId, field, value) {
     segment.combatCastLevel = Math.max(0, Math.min(10, Number(value) || 0));
     segment.combatPaymentConfirmed = false;
   }
-  if (field === 'distanceMeters') segment.combatDistanceMeters = Math.max(0, Math.min(9999, Number(value) || 0));
+  if (field === 'distanceMeters') segment.combatDistanceMeters = normalizeCombatDistance(value);
   if (field === 'paymentMode') {
     segment.combatPaymentMode = ['aura', 'mana-substitute', 'cheat'].includes(value) ? value : 'standard';
     segment.combatPaymentConfirmed = false;
@@ -626,7 +647,7 @@ function updateRuleSelection(segmentId, field, checked = null) {
       segment.combatRuleSelections.push({
         sourceActorId,
         ruleId,
-        distanceMeters: 0,
+        distanceMeters: null,
         sourcePersistence: kind === 'scene-creature'
           ? { kind, sourceCreatureId: String(field.dataset.sourceCreatureId || '') }
           : { kind, recordId: String(field.dataset.recordId || '') }
@@ -634,7 +655,7 @@ function updateRuleSelection(segmentId, field, checked = null) {
     }
     if (!checked && index >= 0) segment.combatRuleSelections.splice(index, 1);
   } else if (index >= 0) {
-    segment.combatRuleSelections[index].distanceMeters = Math.max(0, Math.min(9999, Number(field.value) || 0));
+    segment.combatRuleSelections[index].distanceMeters = normalizeCombatDistance(field.value);
   }
   globalThis.persistCommentDraft?.();
   mountComposers(latestComposerContext || {});
@@ -665,6 +686,7 @@ function buildNarrationFacts(resolution) {
     ruleResourceSnapshots: resolution.ruleResourceSnapshots || [],
     ruleAbilitySnapshots: resolution.ruleAbilitySnapshots || [],
     secondarySaves: resolution.secondarySaves || [],
+    mountedHitChecks: resolution.mountedHitChecks || [],
     followUpAttacks: resolution.followUpAttacks || [],
     counterAttacks: resolution.counterAttacks || [],
     sceneItemEvents: resolution.sceneItemEvents || [],
@@ -717,7 +739,7 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
     paymentMode: segment.combatPaymentMode,
     weaponGrip: segment.combatWeaponGrip,
     castLevel: segment.combatCastLevel,
-    hostileOpponentCount: countActiveHostileOpponents(actorCharacter, characters, stateContext.activeEncounterPartyMap),
+    hostileOpponentCount: resolutionOptions.hostileOpponentCount,
     recoveryDayKey: stateContext.recoveryDayKey
   });
   const broadTargetEffect = (actor.selectedAction?.effects || []).some(effect => ['selected', 'allies', 'enemies', 'all'].includes(String(effect?.target || '')));
@@ -759,7 +781,7 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
     container: stage,
     encounter: stateContext.encounter,
     relationship: getCombatRelationship(actorCharacter, targetCharacter),
-    distanceMeters: Number(segment.combatDistanceMeters) || 0,
+    distanceMeters: segment.combatDistanceMeters,
     ruleSources,
     rulePeriods: stateContext.rulePeriods,
     usedRuleFrequencyKeys: stateContext.usedRuleFrequencyKeys,
@@ -831,6 +853,15 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
       ...(nextActorConcentration !== undefined ? { concentration: nextActorConcentration } : {})
     });
   }
+  applyDismountSnapshots(stateContext.workingStates, resolution, stateContext.actorsWithPosts);
+  const reactionUses = consumeCombatRuleAbilityUses(resolution.ruleApplications, ruleSources, {
+    dayKey: stateContext.recoveryDayKey, states: stateContext.workingStates, perTrigger: true
+  });
+  if (reactionUses.length) resolution.ruleAbilitySnapshots = reactionUses;
+  for (const snapshot of reactionUses) {
+    const previous = stateContext.workingStates?.get(snapshot.sourceActorId) || stateContext.storedStates?.get(snapshot.sourceActorId) || {};
+    stateContext.workingStates?.set(snapshot.sourceActorId, { ...previous, abilities: snapshot.after });
+  }
   (Array.isArray(resolution.ruleResourceSnapshots) ? resolution.ruleResourceSnapshots : []).forEach(snapshot => {
     const previous = stateContext.workingStates?.get(String(snapshot.sourceActorId)) || stateContext.storedStates?.get(String(snapshot.sourceActorId)) || {};
     stateContext.workingStates?.set(String(snapshot.sourceActorId), { ...previous, resources: snapshot.after });
@@ -845,6 +876,11 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
 
 async function resolveCombatSegment(segment, characters, index, total, fallbackActorId = '', stateContext = {}) {
   const actorId = String(segment.sceneActorId || segment.actorId || segment.characterId || fallbackActorId || '');
+  const { encounter, storedStates, workingStates } = stateContext;
+  const runtime = { beforeStates: storedStates, afterStates: workingStates };
+  const error = getEncounterActionValidationError({ actorId, encounterId: encounter?.encounterId || '' }, encounter, runtime);
+  if (error) throw new Error(error);
+  const hostileOpponentCount = countActiveHostileOpponents(actorId, getCombatEncounterPartyMap(encounter, runtime));
   const character = characters.find(entry => String(entry.id || '') === actorId);
   if (character) synchronizeSegmentTargets(segment, resolveActorProfile(character, {
     actionId: segment.combatActionId, actorId, segmentKind: getEffectiveCombatSegmentKind(segment),
@@ -864,7 +900,8 @@ async function resolveCombatSegment(segment, characters, index, total, fallbackA
       total,
       fallbackActorId,
       stateContext,
-      { targetId: targetIds[targetIndex], targetIndex, targetCount: targetIds.length, primary: targetIndex === 0, startedAction: resolutions[0] }
+      { targetId: targetIds[targetIndex], targetIndex, targetCount: targetIds.length, primary: targetIndex === 0,
+        startedAction: resolutions[0], hostileOpponentCount }
     );
     resolutions.push(resolution);
     if (resolution.actionType === 'channeling') break;
@@ -877,20 +914,20 @@ async function handleSubmission(submission = {}) {
   const combatSegments = segments.filter(isCombatSegment);
   if (!combatSegments.length) return { handled: false, published: false };
   const cachedComments = globalThis.getCachedCommentsForThread?.(submission.threadId || '') || [];
-  const encounterId = getActiveCombatEncounter(cachedComments)?.encounterId || '';
+  const encounter = getActiveCombatEncounter(cachedComments);
+  const encounterId = encounter?.encounterId || '';
   const characters = applyEncounterParties(
     mergeCombatActors(getCharacters(), latestComposerContext?.sceneActors || []),
-    cachedComments
+    getCombatEncounterPartyMap(encounter)
   );
   const stateContext = {
-    encounter: getActiveCombatEncounter(cachedComments),
+    encounter,
     sceneItems: deriveSceneItems(cachedComments),
     storedStates: getStoredCombatStates(submission.threadId || ''),
     workingStates: new Map(),
     commentResourceResetActors: new Set(),
     recoveryDayKey: getCombatRecoveryDayKey(submission.threadId || ''),
     actorsWithPosts: getActorsWithCombatPosts(globalThis.getCachedCommentsForThread?.(submission.threadId || submission.entryId || '') || []),
-    activeEncounterPartyMap: getActiveCombatPartyMap(cachedComments),
     rulePeriods: {
       comment: `draft:${String(submission.threadId || '')}:${Date.now()}`,
       scene: String(submission.threadId || ''),
@@ -1047,8 +1084,9 @@ document.addEventListener('input', event => {
 });
 
 let composerRefreshQueued = false;
-for (const name of ['aleria:comments-updated', 'aleria:combat-profile-committed', 'aleria:characters-changed', 'aleria:creatures-changed', 'aleria:inventory-use-selection-changed']) document.addEventListener(name, () => {
-  if (['aleria:combat-profile-committed', 'aleria:characters-changed', 'aleria:creatures-changed'].includes(name)) {
+const profileInputEvents = ['aleria:combat-profile-committed', 'aleria:characters-changed', 'aleria:creatures-changed', 'aleria:item-definitions-changed'];
+for (const name of [...profileInputEvents, 'aleria:comments-updated', 'aleria:inventory-use-selection-changed']) document.addEventListener(name, () => {
+  if (profileInputEvents.includes(name)) {
     resolvedCombatProfileCache.clear();
     resolvedCombatTargetCache = new WeakMap();
   }
@@ -1064,13 +1102,22 @@ globalThis.AleriaCombat = Object.freeze({
   getProfile(characterId, options = {}) {
     const character = getCharacterById(characterId);
     if (!character) return null;
+    void loadInventoryItemVersions([character]).catch(error => console.warn('Itemregeln konnten nicht geladen werden:', error));
     const actorId = String(options.actorId || characterId || '');
+    const threadId = options.threadId || '';
+    const historical = !!options.timelineCommentId;
+    const comments = globalThis.getCachedCommentsForThread?.(threadId) || [];
+    const liveScene = threadId && !historical;
+    const recoveryDayKey = liveScene ? getSceneRecoveryDayKey(threadId, comments) : '';
     const profile = resolveActorProfile(character, {
-      actorId, storedStates: getStoredCombatStates(options.threadId || '', options),
-      recoveryDayKey: options.threadId && !options.timelineCommentId ? getCombatRecoveryDayKey(options.threadId) : ''
+      actorId, storedStates: getStoredCombatStates(threadId, options), historical, recoveryDayKey,
+      hostileOpponentCount: liveScene ? countActiveHostileOpponents(actorId, getActiveCombatPartyMap(comments)) : null
     });
-    return { ...profile, sceneDocumentation: getSceneCombatDocumentation(profile,
-      globalThis.getCachedCommentsForThread?.(options.threadId || '') || [], options.threadId || '') };
+    return {
+      ...profile,
+      ...(recoveryDayKey ? { abilities: profile.abilities.map(ability => getCombatAbilityAtDay(ability, recoveryDayKey)) } : {}),
+      sceneDocumentation: getSceneCombatDocumentation(profile, comments, threadId)
+    };
   },
   mountComposer(list, context = {}) {
     mountComposers({

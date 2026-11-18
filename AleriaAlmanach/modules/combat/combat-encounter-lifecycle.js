@@ -1,14 +1,19 @@
-import { mergeEncounterParticipantUpdates } from './combat-encounter-model.js?v=20260928-equipment-art-v4';
+import { getCombatEncounterParticipantStatus, mergeEncounterParticipantUpdates } from './combat-encounter-model.js?v=20260928-equipment-art-v4';
 import { captureEncounterSnapshot } from './combat-encounter-summary.js';
 import { getDefeatExperienceReward } from './combat-progression.js';
 
-export function getEncounterActionValidationError(action = {}, current = null) {
+export function getEncounterActionValidationError(action = {}, current = null, runtime) {
   if (Object.hasOwn(action, 'encounterId') && String(action.encounterId || '') !== String(current?.encounterId || '')) {
     return 'Der Kampf wurde inzwischen beendet oder verändert. Lade die Szene neu und bereite die Handlung erneut vor.';
   }
   if (current && Object.hasOwn(action, 'encounterId')) {
-    const participant = current.participants.get(String(action.actorId || ''));
-    if (!participant || participant.status !== 'active') return 'Die handelnde Figur ist im laufenden Kampf nicht aktiv. Prüfe zuerst die Kampfliste.';
+    const status = getCombatEncounterParticipantStatus(current, action.actorId, runtime);
+    if (status === 'defeated' && runtime?.afterStates?.get(String(action.actorId || ''))?.current === 0) {
+      return 'Die handelnde Figur ist bei 0 Trefferpunkten kampfunfähig und im laufenden Kampf nicht aktiv.';
+    }
+    if (status !== 'active') {
+      return 'Die handelnde Figur ist im laufenden Kampf nicht aktiv. Prüfe zuerst die Kampfliste.';
+    }
   }
   return '';
 }
@@ -54,10 +59,14 @@ export function prepareEncounterParticipants(event, current, profiles = new Map(
       const participant = merged.get(incoming.actorId);
       const profile = profiles.get(incoming.actorId) || {};
       const existing = current?.participants?.get(incoming.actorId);
+      const snapshot = captureEncounterSnapshot(profile, states.get(incoming.actorId));
+      const canActAtZeroHitPoints = profile.combat?.canActAtZeroHitPoints === true;
       merged.set(incoming.actorId, { ...participant,
         level: profile.progression?.level ?? participant.level,
         experienceValue: existing?.experienceValue ?? getDefeatExperienceReward(profile.progression?.level, profile.progression?.experienceReward),
-        entrySnapshot: existing?.entrySnapshot || captureEncounterSnapshot(profile, states.get(incoming.actorId)),
+        entrySnapshot: existing?.entrySnapshot || snapshot,
+        canActAtZeroHitPoints,
+        status: participant.status === 'active' && snapshot.current === 0 && !canActAtZeroHitPoints ? 'defeated' : participant.status,
         eligibleForExperience: participant.persistence?.kind === 'character' && participant.eligibleForExperience !== false
       });
     }

@@ -1,6 +1,7 @@
 import { inferInventoryUseMode } from '../inventory-use/inventory-use-model.js';
 import { inventoryValuation, formatInventoryPrice } from './character-inventory-valuation.js';
 import { describeEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
+import { normalizeEquipmentPassiveEffects } from '../character-equipment/equipment-passive-effects.js';
 import { balanceArmorInventoryItem } from '../character-equipment/equipment-armor-rules.js';
 import { materializeInventoryItem } from '../item-definitions/item-definition-resolver.js';
 import { inventoryDocument } from '../inventory-documents/document-item-model.js';
@@ -60,6 +61,8 @@ export function inventoryCardModel(item = {}) {
     { label: 'Bestand', value: `${item.quantity ?? 1} Stück` }
   ];
   const effects = (item.infoRows || []).filter(row => /effekt|wirkung|qualität|verbesserung/i.test(row.label));
+  effects.push(...normalizeEquipmentPassiveEffects(item.passiveEffects).map(effect => ({ label: effect.name,
+    value: `${effect.amount} weniger magischer Schaden ${effect.activation === 'equipped' ? 'bei angelegtem Gegenstand' : 'solange im Besitz'}.` })));
   const protection = describeEquipmentDamageProtection(definition.damageProtection);
   if (protection) effects.push({ label: definition.damageProtection.name || 'Rüstungsschutz', value: protection });
   const saveLabels = { poison: 'Gift', fear: 'Furcht', prone: 'Niederwerfen', 'forced-movement': 'erzwungene Bewegung' };

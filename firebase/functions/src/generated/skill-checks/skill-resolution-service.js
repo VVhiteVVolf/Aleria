@@ -1,3 +1,4 @@
+import { getAnimalSpeechError, isAnimalSpeechSegment } from '../character-development/development-animal-speech.js';
 import {
   buildSkillRollNotation,
   classifySkillCheck,
@@ -13,14 +14,15 @@ import {
   markCombatRuleApplications,
   mergeCombatRuleEffects
 } from '../combat/combat-trigger-rules.js?v=20261113-scene-elements-v1';
-import { consumeCombatRuleResources } from '../combat/combat-rule-consumption.js?v=20260928-equipment-art-v4';
+import { consumeCombatRuleResources, consumeCombatRuleAbilityUses } from '../combat/combat-rule-consumption.js?v=20260928-equipment-art-v4';
 import { getCheckProfileRollModes } from './attribute-check-model.js?v=20261015-check-options-v1';
 import { getChallengeCheckRule } from '../herausforderung/herausforderung-check-policy.js?v=20261016-check-policy-v1';
 import { getHealthTaskError } from '../character-health/health-trait-policy.js';
 import { getVoluntaryCombatActionBlock } from '../combat/combat-action-permission.js';
 import { rollProfileD20, naturalRollReceipt } from '../combat/combat-natural-roll-policy.js';
+import { getCombatRuleDistance } from '../combat/combat-rule-distance.js';
 
-export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-7';
+export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-10';
 
 function createResolutionId() {
   return globalThis.crypto?.randomUUID?.() || `skill-evaluation-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
@@ -45,14 +47,13 @@ function buildSkillAuraApplications(sources = [], checkType = 'skill', actorProf
   return sources.flatMap(source => {
     // Self aura mechanics and ongoing encounter auras already belong to the
     // sheet total. Selecting support must not apply that same aura twice.
-    if (source.sourceRole === 'actor' || (actorProfile.conditions || []).some(condition =>
-      condition.active !== false && condition.encounterAura === true
-      && String(condition.auraSourceActorId) === String(source.actorId))) return [];
+    if (source.sourceRole === 'actor') return [];
     const selected = new Set(Array.isArray(source.selectedRuleIds) ? source.selectedRuleIds : []);
     if (source.sourceRole === 'support' && !selected.has('@aura:actor')) return [];
     const mechanics = getAuraTargetMechanics(source.profile, {
       relation: source.relationToActor,
-      distanceMeters: source.distanceToActor
+      distanceMeters: getCombatRuleDistance(source, '@aura:actor', 'actor'),
+      sourceActorId: source.actorId, recipientProfile: actorProfile
     });
     const savingThrow = checkType === 'saving-throw';
     const skillModifier = Number(mechanics[savingThrow ? 'savingThrow' : 'skill'] || 0);
@@ -107,10 +108,17 @@ export function getSkillRollContext({ actor, settings: sourceSettings, challenge
   }).concat(buildSkillAuraApplications(sources, checkType, skill.profile));
   markCombatRuleApplications(preApplications, usedRuleFrequencyKeys);
   const preEffects = mergeCombatRuleEffects(preApplications);
-  const profileRollModes = getCheckProfileRollModes(skill.profile, skill.definition, getActiveRollModes(skill.profile, 'skillRollMode'));
+  const animalSpeech = isAnimalSpeechSegment({ commentKind: options.commentKind });
+  if (animalSpeech) {
+    const error = getAnimalSpeechError(skill.profile);
+    if (error) throw new Error(error);
+  }
+  const animalSpeechAdvantage = animalSpeech && settings.skillId === 'animal-handling';
+  const profileRollModes = getCheckProfileRollModes(skill.profile, skill.definition, getActiveRollModes(skill.profile, 'skillRollMode'))
+    .concat(animalSpeechAdvantage ? ['advantage'] : []);
   const challengeRollMode = reaction?.rollMode || 'normal';
   const rollMode = mergeRollModes(profileRollModes, preApplications.map(application => application.effects?.rollMode), [challengeRollMode]);
-  return { settings, skill, sources, periods, usedRuleFrequencyKeys, skillRuleState, preApplications, preEffects, profileRollModes, challengeRollMode, rollMode, checkType, actionKind, modifierKey };
+  return { settings, skill, sources, periods, usedRuleFrequencyKeys, skillRuleState, preApplications, preEffects, profileRollModes, challengeRollMode, rollMode, checkType, actionKind, modifierKey, animalSpeechAdvantage };
 }
 
 export class SkillResolutionService {
@@ -119,7 +127,7 @@ export class SkillResolutionService {
   }
 
   async resolve({ actor, settings: sourceSettings, challenge = null, actorPersistence = null } = {}, options = {}) {
-    const { settings, skill, sources, periods, usedRuleFrequencyKeys, skillRuleState, preApplications, preEffects, profileRollModes, rollMode, checkType, actionKind, modifierKey }
+    const { settings, skill, sources, periods, usedRuleFrequencyKeys, skillRuleState, preApplications, preEffects, profileRollModes, rollMode, checkType, actionKind, modifierKey, animalSpeechAdvantage }
       = getSkillRollContext({ actor, settings: sourceSettings, challenge }, options);
     const healthError = getHealthTaskError(skill.profile, { sense: settings.requiredSense });
     if (healthError) throw Error(healthError);
@@ -151,6 +159,7 @@ export class SkillResolutionService {
       phase: 'post-roll', actionKind, sources, periods, usedFrequencyKeys: usedRuleFrequencyKeys,
       state: {
         ...skillRuleState,
+        ...(checkType === 'saving-throw' ? { saveSucceeded: isSuccessfulSkillOutcome(firstOutcome) } : {}),
         hit: isSuccessfulSkillOutcome(firstOutcome),
         criticalSuccess: firstOutcome === 'critical-success',
         criticalFailure: firstOutcome === 'critical-failure'
@@ -168,6 +177,9 @@ export class SkillResolutionService {
     ];
     const ruleResourceSnapshots = consumeCombatRuleResources(ruleApplications, sources, {
       actorId: String(actor.id || '')
+    });
+    const ruleAbilitySnapshots = consumeCombatRuleAbilityUses(ruleApplications, sources, {
+      dayKey: options.rulePeriods?.day, onError: options.onRuleAbilityError
     });
     return {
       schemaVersion: 2,
@@ -202,6 +214,7 @@ export class SkillResolutionService {
       rollId: String(roll.id || ''),
       total,
       outcome,
+      ...(animalSpeechAdvantage ? { animalSpeechAdvantage: true } : {}),
       targetChallengeId: challenge?.id || '',
       targetActorId: challenge?.authorId || '',
       targetChallengeAuthor: challenge?.authorName || '',
@@ -210,6 +223,7 @@ export class SkillResolutionService {
       targetContributionRank: challenge?.contributionRank ?? null,
       ruleApplications,
       ruleResourceSnapshots,
+      ...(ruleAbilitySnapshots.length ? { ruleAbilitySnapshots } : {}),
       ruleConflicts: [
         ['pre-roll', preEffects.conflicts],
         ['post-roll', combinedEffects.conflicts]

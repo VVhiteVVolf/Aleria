@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { after, test } from 'node:test';
-import { database, undo, commitAction } from './combat-test-context.mjs';
+import { database, undo, commitAction, active } from './combat-test-context.mjs';
 import { createCombatParty } from './combat-party-context.mjs';
 import { CheckupDice } from './combat-test-actions.mjs';
 import { getDevelopmentAttackCatalog } from '../../../../AleriaAlmanach/modules/character-development/development-purchases.js';
@@ -151,9 +151,12 @@ test('Freyas bereits ausgelöster Flächenschrei trifft alle Ziele auch wenn der
   assert.equal(resolutions.length, 2);
   assert.ok(resolutions.every(resolution => (resolution.damage?.total || 0) > 0));
   assert.equal((await party.snapshot()).profiles.get('freya').currentHitPoints, 0);
+  const freyaId = party.byKey.get('freya').id;
+  assert.equal((await active()).participants.get(freyaId).status, 'defeated');
   await assert.rejects(() => party.prepare({ actor: 'freya', targets: ['eins'], actionId: 'ability:freya-arkaner-schrei' }), /handlungsunfähig/);
-  await assert.rejects(() => commitAction(prepared.payload), /handlungsunfähig/);
+  await assert.rejects(() => commitAction(prepared.payload), /nicht aktiv/);
   await undo(result.id);
+  assert.equal((await active()).participants.get(freyaId).status, 'active');
   const restored = await party.assertConsistent();
   assert.equal(restored.profiles.get('freya').currentHitPoints, 2);
   assert.equal(restored.profiles.get('eins').currentHitPoints, 67);

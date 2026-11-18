@@ -120,6 +120,7 @@ document.addEventListener('aleria:comments-updated', event => {
 document.addEventListener('aleria:combat-profile-committed', scheduleRefresh);
 document.addEventListener('aleria:characters-changed', scheduleRefresh);
 document.addEventListener('aleria:creatures-changed', scheduleRefresh);
+document.addEventListener('aleria:item-definitions-changed', scheduleRefresh);
 document.addEventListener('error', event => {
   const image = event.target;
   if (!image?.matches?.('img[data-combat-image-fallback]') || !image.closest(`${ROOT_SELECTOR}, .combat-status-dialog`)) return;

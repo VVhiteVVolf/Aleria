@@ -8,13 +8,13 @@ const FEATURES = Object.freeze({
   [F.schwertdrache]: Object.freeze([
     feature('schwertdrache-ehrenzweikampf', 'Ehrenzweikampf', 9,
       'Solange im erklärten Kampf genau ein feindlicher Gegner steht, erhalten Angriffe dieses Pfades +2 auf den Trefferwurf. Der Bonus endet sofort, sobald eine weitere feindliche Figur am Kampf teilnimmt.',
-      { attackBonus: 2, maximumHostileOpponents: 1 }),
+      { attackBonus: 2, requiredHostileOpponents: 1 }),
     feature('schwertdrache-klingenbindung', 'Klingenbindung', 15,
       'Im Ehrenzweikampf behandelt der erste Treffer dieses Pfades pro eigenem Beitrag die Zielverteidigung als 1 Punkt niedriger.',
-      { targetDefenseModifier: -1, maximumHostileOpponents: 1 }),
+      { firstHitDefenseModifier: -1, requiredHostileOpponents: 1 }),
     feature('schwertdrache-vollendetes-duell', 'Vollendetes Duell', 20,
       'Im Ehrenzweikampf steigt der Trefferbonus auf +3 und ersetzt den bisherigen Bonus.',
-      { attackBonus: 3, maximumHostileOpponents: 1 })
+      { attackBonus: 3, requiredHostileOpponents: 1 })
   ]),
   [F.abwartender]: Object.freeze([
     feature('abwartender-feste-schuppe', 'Feste Schuppe', 9,

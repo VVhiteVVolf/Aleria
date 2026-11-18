@@ -269,7 +269,7 @@ body.creature-profile-open { overflow: hidden; }
 
 .creature-table { overflow-x: auto; }
 .creature-table-head,
-.creature-table-row { display: grid; grid-template-columns: 1.05fr 0.82fr 0.82fr 1.1fr 1.7fr 2rem; gap: 0.35rem; align-items: center; }
+.creature-table-row { display: grid; grid-template-columns: 1.05fr 0.82fr 0.82fr 1.1fr 1.7fr 5rem; gap: 0.35rem; align-items: center; }
 .creature-table-head { padding: 0.25rem 0.3rem 0.45rem; color: var(--creature-ink); font-size: 0.59rem; letter-spacing: 0.07em; text-transform: uppercase; }
 .creature-table-row { padding: 0.38rem 0; border-top: 1px solid rgba(125, 85, 43, 0.27); }
 .creature-stacked-inputs { display: grid; gap: 0.28rem; }
@@ -395,8 +395,10 @@ body.creature-profile-open { overflow: hidden; }
   .creature-portrait-frame { max-height: 460px; }
   .creature-sheet-columns { grid-template-columns: 1fr; }
   .creature-table-head { display: none; }
-  .creature-table-row { grid-template-columns: repeat(2, 1fr) 2rem; }
-  .creature-table-row textarea { grid-column: 1 / 3; }
+  .creature-table-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .creature-table-row > :is(.creature-stacked-inputs, textarea, .creature-attack-actions) { grid-column: 1 / -1; }
+  .creature-table-row > .creature-stacked-inputs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .creature-table-row [data-attack-field="name"] { grid-column: 1 / -1; }
 }
 
 @media (max-width: 640px) {

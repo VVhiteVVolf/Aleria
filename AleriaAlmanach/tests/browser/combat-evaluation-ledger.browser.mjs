@@ -1,12 +1,14 @@
 import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import { resolve, extname } from 'node:path';
+import { resolve, extname, relative, isAbsolute } from 'node:path';
 import { pathToFileURL, fileURLToPath } from 'node:url';
 
 const { chromium } = await import(process.argv[2] ? pathToFileURL(resolve(process.argv[2])).href : 'playwright');
 const root = fileURLToPath(new URL('../../../', import.meta.url));
-const output = resolve(root, '.codex-temp/evaluation-ledger');
+const output = resolve(root, process.env.ALERIA_COMBAT_LEDGER_OUTPUT || '.codex-temp/evaluation-ledger');
+const localOutput = relative(root, output);
+assert.ok(localOutput && !localOutput.startsWith('..') && !isAbsolute(localOutput), 'Reports must stay in the workspace.');
 await mkdir(output, { recursive: true });
 
 // Reproduce the long expired-counter entry in a half-width ledger panel.

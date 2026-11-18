@@ -3,6 +3,7 @@ import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
 import { buildSceneRestParticipant } from '../generated/scene-rest/scene-rest-model.js';
 import { withProtectedRecordRevisions } from './protected-record-revisions.js';
+import { readItemDefinitionIndex } from '../items/item-definition-repository.js';
 
 const RECORD_KINDS = new Set(['character', 'creature']);
 
@@ -52,11 +53,14 @@ export const commitResetCombatParticipants = onCall({
       fail('failed-precondition', 'Zurücksetzen ist während einer angekündigten oder laufenden Kampfphase gesperrt.');
     }
 
+    const records = snapshots.map((snapshot, index) => snapshot.exists
+      ? { ...snapshot.data(), id: descriptors[index].recordId, entityType: descriptors[index].kind }
+      : null);
+    const definitions = await readItemDefinitionIndex(database, transaction, records.filter(Boolean));
     descriptors.forEach((descriptor, index) => {
-      const snapshot = snapshots[index];
-      if (!snapshot.exists) return;
-      const record = snapshot.data() || {};
-      const profile = resolveCombatProfile({ ...record, id: descriptor.recordId, entityType: descriptor.kind });
+      const record = records[index];
+      if (!record) return;
+      const profile = resolveCombatProfile(record, { definitions, includeAiSnapshot: false });
       const participant = buildSceneRestParticipant(profile, 'long', {
         actorId: descriptor.recordId,
         dayChanged: true,

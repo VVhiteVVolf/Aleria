@@ -3,7 +3,7 @@ import { createWeaponDrop } from '../scene-items/scene-items-model.js';
 export function attachTechniqueDisarm(resolution, target) {
   const applied = resolution.targetConditionSnapshot?.applied;
   if (!applied?.disarm) return resolution;
-  const event = target.weaponUnavailable ? null : createWeaponDrop(target, {
+  const event = createWeaponDrop(target, {
     id: resolution.resolutionId, encounterId: '', reason: 'hit'
   });
   if (event) {
@@ -12,8 +12,12 @@ export function attachTechniqueDisarm(resolution, target) {
     resolution.targetConditionSnapshot.after = resolution.targetConditionSnapshot.after.filter(condition => condition.id !== applied.id);
     resolution.targetConditionSnapshot.applied = null;
   } else {
-    applied.name = 'Griff gestört'; applied.description = 'Körperwaffen bleiben erhalten; −1 Angriff im nächsten eigenen Beitrag.';
-    applied.mechanics = { attack: -1 }; delete applied.disarm;
+    const { disarm, ...condition } = applied;
+    const fallback = { ...condition, name: 'Griff gestört',
+      description: 'Der unsichere Stand gibt −1 auf Angriffe im nächsten eigenen Beitrag.', mechanics: { attack: -1 } };
+    resolution.targetConditionSnapshot.applied = fallback;
+    resolution.targetConditionSnapshot.after = resolution.targetConditionSnapshot.after.map(entry => entry.id === applied.id
+      ? { ...entry, ...fallback, disarm: false } : entry);
   }
   return resolution;
 }

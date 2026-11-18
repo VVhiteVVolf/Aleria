@@ -190,7 +190,7 @@ export const commitCombatEncounter = onCall({
         ...record,
         id: participant.actorId,
         entityType: descriptor.kind === 'creature' ? 'creature' : 'character'
-      })];
+      }, { definitions: itemDefinitions })];
     }));
 
     const sceneStates = deriveCombatStateFromComments(history);
@@ -268,11 +268,12 @@ export const commitCombatEncounter = onCall({
         const progression = record.combatProfile?.progression || {};
         const change = applyExperienceAward(progression, award.experience);
         const target = recordsToLoad.find(entry => entry.key === recordKey(descriptor));
-        transaction.update(target.ref, withProtectedRecordRevisions(record, {
+        const committed = withProtectedRecordRevisions(record, {
           'combatProfile.progression': change.after,
           'combatProfile.lastMechanicalCommentId': commentRef.id,
           updatedAt: new Date(now).toISOString()
-        }, ['combatProfile'], now));
+        }, ['combatProfile'], now);
+        transaction.update(target.ref, committed);
         mechanicalUndo[recordKey(descriptor)] = {
           kind: descriptor.kind,
           recordId: descriptor.recordId,
@@ -291,6 +292,7 @@ export const commitCombatEncounter = onCall({
         profileUpdates.push({
           kind: descriptor.kind,
           recordId: descriptor.recordId,
+          combatProfileRevision: committed['combatProfile.revision'],
           progression: change.after,
           levelUpAvailable: committedAward.levelUpAvailable,
           availableLevel

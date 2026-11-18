@@ -5,11 +5,12 @@ import { getCombatResolutionTree, getCommentCombatResolutionGroups } from './com
 import { getCombatAttackRange } from './combat-attack-range.js';
 import { getCombatSupportEquipment } from './combat-support-equipment.js';
 import { getCombatReactionBlock } from './combat-action-permission.js';
+import { getCombatRuleDistance } from './combat-rule-distance.js';
 import { getCombatStoredConditions } from './combat-runtime-condition-projection.js';
 import '../scene-regeneration/scene-regeneration-policy.js';
 
 export const COMBAT_RULE_PHASES = Object.freeze([
-  'pre-roll', 'pre-secondary-save', 'post-roll', 'post-hit', 'pre-damage', 'pre-hit-damage', 'on-damaged', 'post-damage',
+  'pre-roll', 'pre-secondary-save', 'post-secondary-save', 'post-roll', 'post-hit', 'pre-damage', 'pre-hit-damage', 'on-damaged', 'post-damage',
   'on-heal', 'on-condition-applied', 'on-condition-removed', 'on-resource-spent',
   'on-defeat', 'on-concentration-check', 'on-channel-progress', 'on-combat-start', 'on-combat-end'
 ]);
@@ -18,7 +19,7 @@ const RULE_RECIPIENTS = new Set(['actor', 'target']);
 const RULE_RELATIONS = new Set(['self', 'ally', 'enemy', 'any']);
 const RULE_ACTIVATIONS = new Set(['passive', 'reaction']);
 const RULE_FREQUENCIES = new Set(['always', 'comment', 'scene', 'day']);
-const RULE_CONDITIONS = new Set(['always', 'would-hit', 'would-miss', 'critical-hit', 'critical-failure']);
+const RULE_CONDITIONS = new Set(['always', 'would-hit', 'would-miss', 'critical-hit', 'critical-failure', 'save-failed', 'save-succeeded']);
 const RULE_OUTCOMES = new Set([
   'none', 'force-hit', 'force-miss', 'force-critical-hit',
   'force-save-success', 'force-save-failure', 'force-skill-success', 'force-skill-failure'
@@ -240,16 +241,27 @@ function relationAllows(rule, source = {}) {
 
 function distanceAllows(rule, source = {}) {
   if (rule.radiusMeters == null) return true;
-  const value = rule.recipient === 'actor' ? source.distanceToActor : source.distanceToTarget;
-  return value != null && value !== '' && Number.isFinite(Number(value)) && Number(value) >= 0 && Number(value) <= rule.radiusMeters;
+  const distance = getCombatRuleDistance(source, rule.id, rule.recipient, `${rule.entryKind}:${rule.entryId}:${rule.id}`);
+  return distance != null && distance <= rule.radiusMeters;
 }
 
 function conditionAllows(rule, state = {}) {
+  if (rule.condition === 'save-failed') return state.saveSucceeded === false;
+  if (rule.condition === 'save-succeeded') return state.saveSucceeded === true;
   if (rule.condition === 'would-hit') return state.hit === true;
   if (rule.condition === 'would-miss') return state.hit === false;
   if (rule.condition === 'critical-hit') return state.criticalSuccess === true;
   if (rule.condition === 'critical-failure') return state.criticalFailure === true;
   return true;
+}
+
+function phaseAllows(rule, phase, state) {
+  const saveOutcome = rule.effects.outcome.startsWith('force-save-');
+  const explicitSave = saveOutcome || rule.condition === 'save-failed' || rule.condition === 'save-succeeded';
+  if (phase === 'post-secondary-save' && rule.phase === 'post-roll') return explicitSave || !!rule.saveAttributes?.length;
+  if (rule.phase !== phase) return false;
+  return !saveOutcome || !!state.saveAttribute || state.saveSucceeded != null
+    || state.actorProfile?.actionResolutionMode === 'saving-throw' || phase === 'on-concentration-check';
 }
 
 function actionAllows(rule, actionKind, profileActionId = '', state = {}) {
@@ -334,7 +346,7 @@ export function collectApplicableCombatRules({
       .find(profile => profile && String(profile.characterId || '') === sourceActorId)) || source.profile;
     const reactionBlocked = getCombatReactionBlock(currentPermissionProfile);
     rules.forEach(rule => {
-      if (rule.phase !== phase || !actionAllows(rule, actionKind, profileActionId, state) || !targetTagsAllow(rule, state)) return;
+      if (!phaseAllows(rule, phase, state) || !actionAllows(rule, actionKind, profileActionId, state) || !targetTagsAllow(rule, state)) return;
       if (!relationAllows(rule, source) || !distanceAllows(rule, source) || !conditionAllows(rule, state)) return;
       if (rule.activation === 'reaction' && (reactionBlocked || !selectedRule(source, rule))) return;
       if (rule.activation === 'passive' && source.passiveRulesAllowed === false) return;
@@ -436,8 +448,10 @@ export function deriveCombatRuleFrequencyKeys(comments = []) {
       }
       return;
     }
-    const roots = [...getCommentCombatResolutionGroups(comment).flat(),
-      ...(comment.commentSegments || []).map(segment => segment?.skillResolution), comment.sceneElementDetection].filter(Boolean);
+    const skills = (comment.commentSegments || []).map(segment => segment?.skillResolution).filter(Boolean);
+    const maneuverSaves = skills.flatMap(skill => (skill.herausforderungCombatResults || [])
+      .filter(result => result?.type === 'weapon-maneuver' && result.save).map(result => result.save));
+    const roots = [...getCommentCombatResolutionGroups(comment).flat(), ...skills, ...maneuverSaves, comment.sceneElementDetection].filter(Boolean);
     for (const root of roots) for (const { resolution } of getCombatResolutionTree(root)) {
       for (const application of resolution.ruleApplications || []) {
         const storedKey = text(application.usedKey, 500);

@@ -1,5 +1,8 @@
 import { beginCombatContribution } from '../combat/combat-contribution-start.js';
+import { projectSceneCreatureActors } from '../creatures/creature-scene-source.js';
 import { renderInventoryUseComposer, inventoryUseSelection } from './inventory-use-composer.js';
+import { getActionIcon, normalizeActionIconId } from '../comment-actions/comment-action-icons.js';
+import { renderActionIconBadge, renderActionIconPicker, refreshActionIconPicker } from '../comment-actions/comment-action-icons-ui.js';
 import { deriveSceneItems, applySceneItemEvent } from '../scene-items/scene-items-model.js';
 import { applySceneItemInteraction } from '../scene-items/scene-item-interaction.js?v=20260928-equipment-art-v4';
 import { resolveCombatProfile } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v4';
@@ -28,7 +31,7 @@ function mergeActors(sceneActors = []) {
     : [];
   const merged = new Map();
   available.forEach(actor => merged.set(String(actor?.id || ''), actor));
-  sceneActors.forEach(actor => merged.set(String(actor?.id || ''), actor));
+  projectSceneCreatureActors(sceneActors, available).forEach(actor => merged.set(String(actor?.id || ''), actor));
   return [...merged.values()];
 }
 
@@ -51,6 +54,10 @@ function mountComposers(context = {}) {
   segments.forEach(segment => {
     const card = context.list?.querySelector?.(`[data-segment-id="${CSS.escape(String(segment.id || ''))}"]`);
     card?.querySelector?.('[data-inventory-use-composer]')?.remove();
+    card?.querySelector?.('[data-comment-action-picker]')?.remove();
+    if (card && (['consume', 'interact'].includes(String(segment.kind || '')) || segment.skillTargetChallengeId)) {
+      card.insertAdjacentHTML('beforeend', renderActionIconPicker(segment));
+    }
     if (!card || !['consume', 'interact'].includes(String(segment.kind || ''))) return;
     const actor = getActorForSegment(segment, context.selectedCharacterId, actors);
     card.insertAdjacentHTML('beforeend', renderInventoryUseComposer(segment, actor, deriveSceneItems(globalThis.getCachedCommentsForThread?.(context.threadId) || []), context.edit === true));
@@ -175,6 +182,19 @@ document.addEventListener('change', event => {
 });
 document.addEventListener('aleria:item-definitions-changed', () => { if (latestComposerContext) remount(); });
 
+document.addEventListener('click', event => {
+  const trigger = event.target?.closest?.('[data-comment-action-icon]');
+  if (!trigger) return;
+  const segment = findComposerSegment(trigger);
+  const picker = trigger.closest('[data-comment-action-picker]');
+  if (!segment || !picker) return;
+  segment.actionIconId = normalizeActionIconId(trigger.dataset.commentActionIcon);
+  refreshActionIconPicker(picker, segment);
+  globalThis.persistCommentDraft?.();
+  globalThis.updateCommentFormPreview?.();
+  globalThis.updateEditFormPreview?.();
+});
+
 globalThis.AleriaInventoryUse = Object.freeze({
   mountComposer(list, context = {}) {
     mountComposers({
@@ -187,6 +207,8 @@ globalThis.AleriaInventoryUse = Object.freeze({
     });
   },
   serializeSelection: inventoryUseSelection,
+  getActionIcon,
+  renderActionIconBadge,
   handleSubmission,
   renderUsage
 });

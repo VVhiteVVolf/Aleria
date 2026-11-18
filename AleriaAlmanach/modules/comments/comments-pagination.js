@@ -1,5 +1,5 @@
 // Per-thread render pagination for long comment lists.
-const COMMENT_PAGE_SIZE = 75;
+const COMMENT_PAGE_SIZE = 100;
 const _commentPaginationState = new Map();
 
 function getCommentPaginationThreadId(scroll) {
@@ -55,7 +55,11 @@ function buildCommentTimelinePages(comments, threadId = '') {
   let firstPage = null;
   const pageSize = window.AleriaCommentPageBundles?.pageSize?.(threadId) || COMMENT_PAGE_SIZE;
   const flush = () => {
-    pushCommentTimelineCommentPages(pages, segmentItems, { pageSize, firstPage });
+    const ordered = window.AleriaSkillChecks?.orderChallengeRepliesForDisplay?.(segmentItems.map(item => item.comment));
+    const itemsByComment = new Map(segmentItems.map(item => [item.comment, item]));
+    const firstIndex = segmentItems[0]?.index || 0;
+    const displayItems = ordered ? ordered.map((comment, index) => ({ ...itemsByComment.get(comment), index: firstIndex + index })) : segmentItems;
+    pushCommentTimelineCommentPages(pages, displayItems, { pageSize, firstPage });
     if (segmentItems.length) firstPage = null;
     segmentItems = [];
   };

@@ -55,6 +55,11 @@ test('the main hierarchy presents two deputies, eight group leaders and eight li
 test('every subgroup has its own four-page module and independent headquarters thread', () => {
   assert.equal(groups.length, 8);
   assert.equal(groups[0].title, 'Die Untoten Aale');
+  assert.equal(groups[0].pages[0].image, '/AleriaAlmanach/assets/schwarze-zitteraale/groups/scenes/untote-aale-lager-v1.png');
+  assert.equal(groups[0].pages[0].imageFit, 'cover');
+  assert.equal(groups[0].symbol, ZITTERAALE_GROUPS[0].banner);
+  assert.equal(groups[0].pages[3].image, ZITTERAALE_GROUPS[0].banner);
+  groups.slice(1).forEach((group, index) => assert.equal(group.pages[0].image, ZITTERAALE_GROUPS[index + 1].banner));
   assert.deepEqual(groups.slice(1).map(group => group.title), ['Gruppe II.', 'Gruppe III.', 'Gruppe IV.', 'Gruppe V.', 'Gruppe VI.', 'Gruppe VII.', 'Gruppe VIII.']);
   const threads = [];
   for (const module of groups) {
@@ -186,7 +191,7 @@ test('every active illustration exists and retains the generator bytes and 2:3 f
   for (const path of paths) await access(new URL(`../../${path}`, import.meta.url));
   const art = JSON.parse(await read('../docs/art/zitteraale-groups-20261116/generation.json'));
   assert.equal(art.mode, 'built-in image_gen');
-  assert.equal(art.jobs.filter(job => job.active).length, 27);
+  assert.equal(art.jobs.filter(job => job.active).length, 28);
   for (const job of art.jobs) {
     const original = await readFile(new URL(`../../${job.original}`, import.meta.url));
     assert.equal(createHash('sha256').update(original).digest('hex'), job.sha256);

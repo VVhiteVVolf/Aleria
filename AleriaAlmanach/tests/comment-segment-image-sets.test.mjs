@@ -228,3 +228,45 @@ test('die klassische Kontext-Transportgrenze stimmt mit der Regelvalidierung üb
     assert.deepEqual(result, normalized);
   }
 });
+
+test('Kampfauswahl bleibt in Beitrag, Überarbeitung und Entwurf vollständig und unabhängig', () => {
+  const context = loadSegmentEditors();
+  Object.assign(context, {
+    normalizeSceneTimeDurationSeconds: Number, normalizeCommentLanguage: String,
+    commentKindUsesLanguage: () => false, getSceneTimeSegmentDuration: () => 5, getCommentLanguage: () => 'common'
+  });
+  vm.runInContext(fs.readFileSync(new URL('../modules/comments/comments-draft.js', import.meta.url), 'utf8'), context);
+  vm.runInContext(`
+    const _commentKind = 'speech', _selectedEmoteIdx = null, _manualMode = false, _portraitUrl = '';
+    const casterSettings = { mechanicMode: 'magic', paymentMode: 'mana-substitute', paymentConfirmed: true, targetId: 'ward' };
+    const source = { kind: 'scene-creature', sourceCreatureId: 'owl' };
+    const reaction = { sourceActorId: 'owl-2', ruleId: 'watch', distanceMeters: 1.5, sourcePersistence: source };
+    const martialSettings = { mechanicMode: 'combat', weaponGrip: 'two-handed', distanceMeters: 0, targetId: 'ward',
+      combatRuleSelections: [reaction] };
+    _commentSegments = [casterSettings, martialSettings].map(settings => makeCommentSegment('speech', 'Probe', null, 'left', 5, 'common', '', settings));
+    _editCommentSegments = _commentSegments;
+    source.sourceCreatureId = 'changed';
+  `, context);
+  for (const expression of ['buildCommentSegmentsForSave()', 'buildEditCommentSegmentsForSave()', 'getCommentDraftPayload().segments']) {
+    const [caster, martial] = JSON.parse(JSON.stringify(vm.runInContext(expression, context)));
+    assert.equal(caster.combatPaymentMode, 'mana-substitute', expression);
+    assert.equal(caster.combatPaymentConfirmed, true);
+    assert.equal(caster.combatDistanceMeters, null);
+    assert.equal(martial.combatWeaponGrip, 'two-handed');
+    assert.equal(martial.combatDistanceMeters, 0);
+    assert.deepEqual(martial.combatRuleSelections, [{ sourceActorId: 'owl-2', ruleId: 'watch', distanceMeters: 1.5,
+      sourcePersistence: { kind: 'scene-creature', sourceCreatureId: 'owl' } }]);
+  }
+});
+
+test('ältere Kampfbeiträge öffnen mit dem bestätigten Griff, Abstand und Zahlungsweg', () => {
+  const context = loadSegmentEditors();
+  context.oldPost = { combatWeaponGrip: 'one-handed', combatPaymentMode: 'standard', combatDistanceMeters: 0,
+    combatRuleSelections: [], combatTargetId: 'veraltet', combatAction: { targetId: 'ziel',
+      paymentMode: 'mana-substitute', ruleSelections: [{ sourceActorId: 'helfer', ruleId: 'deckung' }] },
+    combatResolution: { weaponGrip: 'two-handed', auraContext: { distanceMeters: null } } };
+  const fields = JSON.parse(JSON.stringify(vm.runInContext('getStoredCommentCombatSelection(oldPost)', context)));
+  assert.deepEqual([fields.combatTargetId, fields.combatWeaponGrip, fields.combatPaymentMode,
+    fields.combatDistanceMeters, fields.combatPaymentConfirmed], ['ziel', 'two-handed', 'mana-substitute', null, true]);
+  assert.deepEqual(fields.combatRuleSelections, [{ sourceActorId: 'helfer', ruleId: 'deckung' }]);
+});

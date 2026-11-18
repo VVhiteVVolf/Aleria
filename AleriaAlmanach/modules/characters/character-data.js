@@ -478,6 +478,9 @@ async function loadSceneActorData() {
   ]);
   const failed = results.find(result => result.status === 'rejected');
   if (failed) throw failed.reason;
+  const { loadInventoryItemVersions } = await import('../item-definitions/item-definition-client.js');
+  await loadInventoryItemVersions(getVisibleCharacterRecords())
+    .catch(error => console.warn('Itemregeln für die Szene konnten nicht geladen werden:', error));
 }
 
 // Cast ordering belongs to character records. Creature projections are appended

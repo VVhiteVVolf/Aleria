@@ -2,7 +2,10 @@ import { getCombatResourceIconPresentation } from '../combat/combat-resource-ico
 import { renderCombatArsenalSummary } from './combat-profile-actions-view.js';
 import { renderCombatProfileAttributes, renderCombatProfileTraits } from './combat-profile-details-view.js';
 import { getCombatWeaponLoadout } from '../combat/combat-weapon-loadout.js';
-import { getCombatSupportEquipment } from '../combat/combat-support-equipment.js';
+import { getDroppedCombatWeapon } from '../combat/combat-weapon-availability.js';
+import { getCombatWeaponAttackValues } from '../combat/combat-weapon-attack-values.js';
+import { getCombatMounts, getCombatSupportEquipment } from '../combat/combat-support-equipment.js';
+import { getEquipmentPassiveDamageProtection } from '../character-equipment/equipment-passive-effects.js';
 import { summarizeRuleEffects } from '../combat/ui/combat-rule-presentation.js';
 import { getCombatConditionGroups } from './combat-status-model.js?v=20260906-effect-rolls-v1';
 import { escapeCombatMarkup as e, formatCombatModifier as modifier, renderCombatIcon as image, renderCombatCondition as renderMiniProfileCondition } from '../combat-status/combat-status-view.js?v=20260906-effect-rolls-v1';
@@ -18,6 +21,7 @@ export function renderMiniCombatProfile(profile, displayName, options = {}) {
   const maximum = Math.max(0, Number(profile.maximumHitPoints) || 0);
   const current = Math.max(0, Number(profile.currentHitPoints ?? maximum) || 0);
   const temporary = Math.max(0, Number(profile.temporaryHitPoints) || 0);
+  const incapacitated = current === 0 && profile.combat?.canActAtZeroHitPoints !== true;
   const slotIds = new Set(profile.magic?.slotResourceIds || []);
   const resources = (profile.resources || []).filter(resource => !slotIds.has(resource.id) && !/^spell-slot-/.test(resource.id) && (resource.maximum > 0 || resource.current > 0));
   const mainResourceIds = new Set(['action', 'bonus-action', 'reaction', 'special-action', 'aura-focus', 'inspiration', 'mana-focus', 'mana', 'focus', 'pact-points', 'celestial-points', 'infernal-points']);
@@ -26,18 +30,32 @@ export function renderMiniCombatProfile(profile, displayName, options = {}) {
   const { temporary: temporaryConditions, permanent: permanentConditions } = getCombatConditionGroups(profile);
   const abilities = (profile.abilities || []).filter(ability => ability.active !== false && ability.usesMaximum > 0);
   const canManage = options.canManage && !options.historical;
-  const weapon = profile.weapon || {};
   const loadout = getCombatWeaponLoadout(profile);
+  const right = loadout.right || profile.weapon;
+  const held = [right, loadout.left].filter(entry => entry && !getDroppedCombatWeapon(profile, entry));
+  const main = held[0];
+  const selectedWeapon = main && profile.weapon?.id === main.id && !getDroppedCombatWeapon(profile, profile.weapon);
+  const handValues = main && !selectedWeapon ? getCombatWeaponAttackValues(profile, main) : null;
+  const weapon = selectedWeapon ? profile.weapon : main || {};
+  const attackModifier = handValues?.attackModifier ?? profile.attackModifier;
+  const damageModifier = main ? handValues?.damageModifier ?? profile.damageModifier : 0;
   const support = getCombatSupportEquipment(profile);
+  const mounts = getCombatMounts(profile);
+  const mount = mounts.find(item => item.id === support.mountId);
+  const mountLabel = profile.combat?.mounted ? ['Beritten', mount?.name].filter(Boolean).join(' · ') : mounts.length ? 'Zu Fuß' : '';
   const shield = (profile.armorItems || []).find(item => item.id === support.shieldId);
   const documentation = profile.sceneDocumentation || {};
+  const magicProtection = getEquipmentPassiveDamageProtection(profile, { magical: true });
+  const activeProtection = Math.max(0, ...magicProtection.map(effect => effect.amount));
+  const protectionSources = magicProtection.filter(effect => effect.amount === activeProtection).map(effect => effect.itemName || effect.name);
   return `<header class="comment-combat-profile-head"><strong>${e(displayName || profile.name)}</strong><span>Stufe ${e(profile.effectiveLevel || 1)}</span></header>
-    <div class="comment-combat-profile-context" role="status" aria-live="polite"><span>${e(options.contextLabel || (options.historical ? 'Vor diesem Beitrag' : 'Aktueller Szenenstand'))}${current === 0 ? ' · Kampfunfähig' : ''}</span></div>
+    <div class="comment-combat-profile-context" role="status" aria-live="polite"><span>${e(options.contextLabel || (options.historical ? 'Vor diesem Beitrag' : 'Aktueller Szenenstand'))}${incapacitated ? ' · Kampfunfähig' : ''}</span></div>
     <div class="comment-combat-profile-vitals"><span><small>Lebenspunkte</small><b>${e(current)}/${e(maximum)}${temporary ? ` <em>+${e(temporary)} temporär</em>` : ''}</b><meter min="0" max="${e(maximum || 1)}" value="${e(current)}" aria-label="Lebenspunkte"></meter></span><span><small>RK</small><b>${e(profile.totalDefense ?? 10)}</b></span></div>
-    <div class="comment-combat-profile-stats"><span><small>Angriff</small><b>${e(modifier(profile.attackModifier))}</b></span><span><small>Initiative</small><b>${e(modifier(profile.initiative))}</b></span><span><small>Bewegung</small><b>${e(profile.movement ?? profile.combat?.movement ?? 0)} m</b></span></div>
-    <div class="comment-combat-profile-weapon">${image(weapon.icon || weapon.image, '⚔')}<span><small>Geführte Waffe</small>${e(weapon.name || 'Keine Waffe')}</span><b>${e(weapon.damageFormula || '')}${profile.damageModifier ? ` ${e(modifier(profile.damageModifier))}` : ''}</b></div>
-    ${loadout.left ? `<p class="comment-combat-profile-note">Zweite Hand: ${e(loadout.left.name)}</p>` : ''}
-    ${shield || support.mountId ? `<p class="comment-combat-profile-note">${shield ? `Schild: ${e(shield.name)}` : ''}${support.mountId ? `${shield ? ' · ' : ''}Beritten` : ''}</p>` : ''}
+    <div class="comment-combat-profile-stats"><span><small>Angriff</small><b>${e(modifier(attackModifier))}</b></span><span><small>Initiative</small><b>${e(modifier(profile.initiative))}</b></span><span><small>Bewegung</small><b>${e(profile.movement ?? profile.combat?.movement ?? 0)} m</b></span></div>
+    <div class="comment-combat-profile-weapon">${image(weapon.icon || weapon.image, '⚔')}<span><small>Geführte Waffe</small>${e(weapon.name || 'Keine Waffe')}</span><b>${e(weapon.damageFormula || '')}${damageModifier ? ` ${e(modifier(damageModifier))}` : ''}</b></div>
+    ${held[1] ? `<p class="comment-combat-profile-note">Zweite Hand: ${e(held[1].name)}</p>` : ''}
+    ${shield || mountLabel ? `<p class="comment-combat-profile-note">${[shield && 'Schild · ' + shield.name, mountLabel].filter(Boolean).map(e).join(' · ')}</p>` : ''}
+    ${activeProtection ? `<p class="comment-combat-profile-note">${e(protectionSources.join(' · '))} · ${activeProtection} weniger magischer Schaden</p>` : ''}
     ${profile.droppedWeapons?.length ? `<p class="comment-combat-profile-note">Nicht im Griff: ${profile.droppedWeapons.map(entry => e(entry.item?.name || entry.weaponName || 'Entwaffnete Waffe')).join(' · ')}</p>` : ''}
     <section class="comment-combat-profile-section"><h4>Ressourcen</h4><ul class="comment-combat-profile-resources">${mainResources.map(renderResource).join('')}</ul>
       <p class="comment-combat-profile-note">Aktion, Bonusaktion und Reaktion erneuern sich beim nächsten regulären Beitrag. Die übrigen Vorräte folgen ihrer Erholungsregel.</p>

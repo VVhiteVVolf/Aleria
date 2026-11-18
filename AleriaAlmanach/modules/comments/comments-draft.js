@@ -14,6 +14,8 @@ function getCommentDraftPayload() {
     text: document.getElementById('cf-text')?.value || '',
     segments: _commentSegments.map(segment => ({
       kind: segment.kind,
+      actionIconId: String(segment.actionIconId || '').slice(0, 40),
+      challengeReplyToCommentId: String(segment.challengeReplyToCommentId || '').slice(0, 200),
       ...(segment.kind === 'foreignvoice' ? AleriaCommentForeignVoice.normalize(segment) : {}),
       text: segment.text,
       sceneItemDraft: segment.sceneItemDraft || null,
@@ -48,15 +50,7 @@ function getCommentDraftPayload() {
       ...(window.AleriaInventoryUse?.serializeSelection?.(segment) || {}),
       inventoryItemId: ['consume', 'interact'].includes(segment.kind) ? String(segment.inventoryItemId || '') : '',
       inventoryUseMode: ['consume', 'interact'].includes(segment.kind) && ['consume', 'use'].includes(segment.inventoryUseMode) ? segment.inventoryUseMode : 'auto',
-      combatTargetId: commentSegmentUsesCombatResolution(segment) ? String(segment.combatTargetId || '') : '',
-      combatTargetIds: commentSegmentUsesCombatResolution(segment) ? [...new Set((segment.combatTargetIds || [segment.combatTargetId]).map(String).filter(Boolean))] : [],
-      combatLoadout: commentSegmentUsesCombatResolution(segment) ? segment.combatLoadout || null : null,
-      combatActionId: commentSegmentUsesCombatResolution(segment) ? String(segment.combatActionId || '') : '',
-      combatRollMode: commentSegmentUsesCombatResolution(segment) && ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal',
-      combatCastLevel: commentSegmentUsesCombatResolution(segment) ? Math.max(0, Math.min(10, Number(segment.combatCastLevel) || 0)) : 0,
-      combatDistanceMeters: commentSegmentUsesCombatResolution(segment) ? Math.max(0, Number(segment.combatDistanceMeters) || 0) : 0,
-      combatPaymentMode: commentSegmentUsesCombatResolution(segment) && ['aura', 'cheat'].includes(segment.combatPaymentMode) ? segment.combatPaymentMode : 'standard',
-      combatPaymentConfirmed: commentSegmentUsesCombatResolution(segment) && !!segment.combatPaymentConfirmed
+      ...getCommentCombatSelection(commentSegmentUsesCombatResolution(segment) ? segment : {})
     })),
     sceneActors: window.AleriaCommentSceneCast?.serializeCreate?.() || [],
     portraitUrl: _portraitUrl || '',
@@ -98,6 +92,7 @@ function persistCommentDraft(immediate = false) {
 }
 
 function clearCommentDraft(threadId = getCurrentCommentThreadId()) {
+  clearTimeout(_commentDraftTimer);
   try {
     const key = getCommentDraftKey(threadId);
     if (key) localStorage.removeItem(key);
@@ -159,6 +154,8 @@ function restoreCommentDraft(options = {}) {
           sceneItemDraft: segment.sceneItemDraft,
           sceneItemOperationId: segment.sceneItemOperationId,
           imageSetId: segment.imageSetId,
+          actionIconId: segment.actionIconId,
+          challengeReplyToCommentId: segment.challengeReplyToCommentId,
           skillId: segment.skillId,
           skillCustomModifier: segment.skillCustomModifier,
           skillDifficulty: segment.skillDifficulty,
@@ -175,19 +172,14 @@ function restoreCommentDraft(options = {}) {
           skillChallengePreferredSkills: segment.skillChallengePreferredSkills,
           skillChallengePreferredModifier: segment.skillChallengePreferredModifier,
           skillChallengeAlternativeModifier: segment.skillChallengeAlternativeModifier,
+          skillChallengeDefenseMode: segment.skillChallengeDefenseMode,
+          skillChallengeDefenseSkillId: segment.skillChallengeDefenseSkillId,
+          skillRuleSelections: segment.skillRuleSelections,
           ...(window.AleriaInventoryUse?.serializeSelection?.(segment) || {}),
           inventoryItemId: segment.inventoryItemId,
           inventoryUseMode: segment.inventoryUseMode,
-          targetId: segment.combatTargetId,
-          targetIds: segment.combatTargetIds,
-          actionId: segment.combatActionId,
-          loadout: segment.combatLoadout,
-          castLevel: segment.combatCastLevel,
-          rollMode: segment.combatRollMode,
-          distanceMeters: segment.combatDistanceMeters,
-          actorId: segment.actorId,
-          paymentMode: segment.combatPaymentMode,
-          paymentConfirmed: segment.combatPaymentConfirmed
+          ...getCommentCombatSelection(segment),
+          actorId: segment.actorId
         }
       ));
     } else {

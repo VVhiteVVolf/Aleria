@@ -4,6 +4,29 @@
   'use strict';
 
   const records = new WeakMap();
+  const scriptUrl = global.document?.currentScript?.src;
+  let libraryRequest = null;
+
+  function loadVendorScript(relativePath) {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = new URL(relativePath, scriptUrl).href;
+      script.addEventListener('load', resolve, { once: true });
+      script.addEventListener('error', () => {
+        script.remove();
+        reject(new Error('Stammbaum-Bibliothek konnte nicht geladen werden.'));
+      }, { once: true });
+      document.head.appendChild(script);
+    });
+  }
+
+  function ensureLibraries() {
+    return libraryRequest ||= (async () => {
+      if (!global.d3) await loadVendorScript('../../../vendor/d3/7.9.0/d3.min.js?v=20260715-family-chart-v1');
+      if (!global.f3) await loadVendorScript('../../../vendor/family-chart/0.9.0/family-chart.min.js?v=20260715-family-chart-v1');
+      if (!global.d3 || !global.f3?.createChart) throw new Error('Stammbaum-Bibliothek ist nicht verfügbar.');
+    })().catch(error => { libraryRequest = null; throw error; });
+  }
 
   function isRecord(value) {
     return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
@@ -156,11 +179,19 @@
       };
       record.mountFrame = requestAnimationFrame(() => {
         record.mountFrame = 0;
-        mountPageElement(pageElement, {
+        const render = () => mountPageElement(pageElement, {
           ...context,
           preview: Boolean(global._moduleRenderPreviewContext?.entry)
             || Boolean(pageElement.closest('.module-editor-preview-frame, .inline-module-preview-frame'))
         }, record);
+        if (global.d3 && global.f3?.createChart) {
+          render();
+          return;
+        }
+        setStatus(pageElement, 'Stammbaum wird geladen …', 'loading');
+        void ensureLibraries().then(render, error => {
+          if (records.get(pageElement) === record && pageElement.isConnected) setStatus(pageElement, error.message, 'error');
+        });
       });
       records.set(pageElement, record);
     });

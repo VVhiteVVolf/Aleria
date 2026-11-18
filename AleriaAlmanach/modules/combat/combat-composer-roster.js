@@ -17,7 +17,7 @@ export function getCombatPreviewActorIds({ segments = [], selectedCharacterId = 
   // scene rules. The cheap rule inspection precedes full profile resolution.
   if (hasTarget) for (const character of characters) {
     const state = states.get(String(character.id));
-    if (collectCombatTriggerRules({ ...character.combatProfile,
+    if (character.combatProfile?.aura?.enabled || collectCombatTriggerRules({ ...character.combatProfile,
       conditions: [...(character.combatProfile?.conditions || []), ...(state?.temporaryConditions || [])]
     }).some(rule => rule.activation === 'reaction')) ids.add(String(character.id));
   }

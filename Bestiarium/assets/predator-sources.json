@@ -325,6 +325,18 @@
       "sha256": "334ef348e5cbc5e07c149ad0f3bbb8a1a1f4b1b93e8b52608419390e0d2cdc46",
       "promptRecord": "diagnostics/urgren-madruach-20261114/image-prompts.json",
       "originalRecord": "diagnostics/urgren-madruach-20261114/art/originals/madruach-v1.png"
+    },
+    {
+      "id": "urgr-general-v1",
+      "file": "./predators/urgren/urgr-general-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "sourceType": "imagegen",
+      "sourceDate": "2026-11-15",
+      "transparent": true,
+      "sha256": "7614c2934d177fafbfada831516440a7b35dfd46e57b0f91bf7c5441950b08df",
+      "promptRecord": "diagnostics/urgr-card-20261115/image-prompts.json",
+      "originalRecord": "diagnostics/urgr-card-20261115/art/originals/urgr-general-v1.png"
     }
   ]
 }

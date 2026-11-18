@@ -9,6 +9,10 @@ async function submitEditComment() {
   if (text.length > COMMENT_MAX_LENGTH) { errEl.textContent = `Bitte bei maximal ${COMMENT_MAX_LENGTH} Zeichen bleiben.`; errEl.style.display='block'; return; }
 
   let charName, charTitle, portrait, narrator;
+  for (const segment of _editCommentSegments.filter(item => item.kind === 'animal')) {
+    const speechError = window.AleriaSkillChecks?.getAnimalSpeechError?.(getCommentSegmentActor(segment, true));
+    if (speechError) { errEl.textContent = speechError; errEl.style.display = 'block'; return; }
+  }
   let commentMetadata = {};
   if (_editMode === 'narrator') {
     charName = 'Erzähler'; charTitle = ''; portrait = null; narrator = true;
@@ -67,12 +71,16 @@ async function submitEditComment() {
     if (!commentSegmentUsesCombatResolution(segment)) return segment;
     const stored = storedCombatSegments[combatIndex++];
     const storedAction = stored?.combatAction;
+    const confirmed = storedAction && getStoredCommentCombatSelection(stored);
     const actorId = String(segment.sceneActorId || segment.characterId || '');
     const sameMechanics = storedAction
       && String(storedAction.actorId || '') === actorId
       && String(storedAction.targetId || '') === String(segment.combatTargetId || '')
       && JSON.stringify(storedAction.targetIds || [storedAction.targetId].filter(Boolean)) === JSON.stringify(segment.combatTargetIds || [segment.combatTargetId].filter(Boolean))
-      && JSON.stringify(storedAction.loadout || null) === JSON.stringify(segment.combatLoadout || null)
+      && JSON.stringify(confirmed.combatLoadout) === JSON.stringify(segment.combatLoadout || null)
+      && confirmed.combatWeaponGrip === segment.combatWeaponGrip
+      && confirmed.combatDistanceMeters === segment.combatDistanceMeters
+      && JSON.stringify(confirmed.combatRuleSelections) === JSON.stringify(segment.combatRuleSelections)
       && String(storedAction.profileActionId || '') === String(segment.combatActionId || '')
       && Number(storedAction.castLevel || 0) === Number(segment.combatCastLevel || 0)
       && String(storedAction.paymentMode || 'standard') === String(segment.combatPaymentMode || 'standard');

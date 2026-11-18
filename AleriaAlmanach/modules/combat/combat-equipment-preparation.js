@@ -1,6 +1,7 @@
 import { applyCombatResourceCosts } from './combat-state-model.js?v=20260928-equipment-art-v4';
 import { getCombatWeaponLoadout, normalizeCombatLoadout, validateCombatLoadout, usesCharacterWeaponLoadout } from './combat-weapon-loadout.js';
-import { withEquippedCombatWeapon } from './combat-equipment-state.js';
+import { DEFAULT_MELEE_WEAPON, withEquippedCombatWeapon } from './combat-equipment-state.js';
+import { normalizeCombatProfileWeapons } from './combat-profile-model.js';
 import { getCombatMounts, getCombatSupportEquipment, canCarryCombatShield, withCombatSupportEquipment } from './combat-support-equipment.js';
 import { hasPairedCombatTraining } from './combat-paired-weapons.js';
 import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js';
@@ -13,7 +14,12 @@ export function prepareCombatEquipment(character, requested, { free = false } = 
   if (!usesCharacterWeaponLoadout(character)) return { character, preparation: null };
   const loadout = normalizeCombatLoadout(requested);
   if (!loadout) return { character, preparation: null };
-  const profile = character.combatProfile || {};
+  const stored = character.combatProfile || {};
+  const storedWeapons = Array.isArray(stored.weapons) ? stored.weapons : [];
+  const needsDefault = !storedWeapons.some(weapon => weapon.equipped)
+    || loadout.rightWeaponId === DEFAULT_MELEE_WEAPON.id && !storedWeapons.some(weapon => weapon.id === DEFAULT_MELEE_WEAPON.id);
+  const profile = needsDefault ? { ...stored, weapons: normalizeCombatProfileWeapons(stored) } : stored;
+  if (needsDefault) character = { ...character, combatProfile: profile };
   const before = getCombatWeaponLoadout(profile);
   const support = getCombatSupportEquipment(profile);
   const right = (profile.weapons || []).find(weapon => weapon.id === loadout.rightWeaponId);

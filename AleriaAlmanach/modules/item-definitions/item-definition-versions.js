@@ -2461,6 +2461,43 @@ export const ARCHIVED_ITEM_DEFINITIONS = [
   },
   {
     "schemaVersion": 1,
+    "id": "personal-signet:refri-thornwick",
+    "revision": "101c0ffd9f3590a3403ac395",
+    "kind": "unique",
+    "baseRef": null,
+    "title": "Refris alter Thornwick-Siegelring",
+    "category": "sonstiges",
+    "type": "Ritterlicher Siegelring",
+    "image": "https://firebasestorage.googleapis.com/v0/b/aleriaprojekt.firebasestorage.app/o/family-assets%2Fhaus-thornwick%2Frefri-signet-dd23886ad9c811f7%2Foriginal.png?alt=media",
+    "description": "Refris persönlicher, alter eiserner Ritterring mit dem Emblem des Hauses Thornwick: eine helle Eule mit ausgebreiteten Schwingen auf olivgrünem Grund. Das Metall ist zerkratzt, an den Kanten abgerieben und in den Vertiefungen stellenweise rostig; die farbige Einlage ist verblasst. Ein schlichter, deutlich gebrauchter Siegelring ohne Edelstein und ohne magische Wirkung.",
+    "mechanicsStatus": "narrative",
+    "combatDefinition": null,
+    "inventoryUseMode": "use",
+    "useDefinition": {
+      "mode": "use",
+      "quantity": 1,
+      "target": "self",
+      "effects": [],
+      "chargesMaximum": 0,
+      "chargesPerUse": 0,
+      "costs": [],
+      "recovery": "none",
+      "narrative": ""
+    },
+    "stackable": false,
+    "weight": null,
+    "weightUnit": "kg",
+    "sourceRefs": [
+      {
+        "kind": "personal-signet",
+        "familyId": "haus-thornwick",
+        "sourcePage": "Stammbäume/Stammbaum.html?family=haus-thornwick",
+        "worldPersonId": "person--haus-thornwick--refri-thornwick"
+      }
+    ]
+  },
+  {
+    "schemaVersion": 1,
     "id": "standard:alchemist:aderpilz",
     "revision": "e32c2b4d316925da214c04ed",
     "kind": "shared",

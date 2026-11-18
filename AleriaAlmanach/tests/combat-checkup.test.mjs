@@ -193,7 +193,34 @@ test('Radiusregeln unterscheiden unbekannte Entfernung von ausdrücklich null Me
     lateRule([], 'pre-roll', { recipient: 'actor', sourceRelation: 'enemy', radiusMeters: 2, effects: { attackModifier: -4 } })
   ] }] });
   for (const [distanceMeters, bonus] of [[undefined, 0], [null, 0], ['', 0], [0, -4], [2, -4], [3, 0]]) {
-    const result = await resolve(actor, target, { distanceMeters });
+    const result = await resolve(actor, target, { distanceMeters, ruleSources: [{
+      actorId: target.characterId, distanceToActor: 0, selectedRuleIds: []
+    }] });
     assert.equal(result.attack.modifier, actor.attackModifier + bonus, `Entfernung ${String(distanceMeters)}`);
+  }
+});
+
+test('eine Selbsthandlung löst jede eigene passive Regel einmal aus', async () => {
+  const actor = action([{ type: 'healing', target: 'self', amount: 2, on: 'always' }], { abilities: [{ id: 'focus', active: true, triggerRules: [
+    lateRule([], 'pre-roll', { recipient: 'actor', sourceRelation: 'any', effects: { attackModifier: 2 } })
+  ] }] });
+  const result = await resolve(actor, actor);
+  assert.equal(result.ruleApplications.filter(entry => entry.ruleId === 'audit-rule').length, 1);
+  assert.equal(result.auraContext.distanceMeters, 0);
+});
+
+test('zwei Unterstützungsregeln derselben Figur verwenden jeweils ihren eingegebenen Abstand', async () => {
+  const rules = ['nah', 'fern'].map(id => lateRule([], 'pre-roll', { id, recipient: 'actor',
+    sourceRelation: 'ally', activation: 'reaction', radiusMeters: 3, effects: { attackModifier: 1 } }));
+  const support = profile('helper', { abilities: [{ id: 'help', name: 'Hilfe', active: true, triggerRules: rules }] });
+  const actor = profile('actor');
+  const target = profile('target');
+  for (const reverse of [true, false]) {
+    const ruleSelections = [{ ruleId: 'ability:help:nah', distanceMeters: 3 }, { ruleId: 'fern', distanceMeters: 4 }];
+    if (reverse) ruleSelections.reverse();
+    const result = await resolve(actor, target, { ruleSources: [{ actorId: support.characterId, profile: support,
+      sourceRole: 'support', relationToActor: 'ally', relationToTarget: 'enemy',
+      selectedRuleIds: ruleSelections.map(selection => selection.ruleId), ruleSelections }] });
+    assert.deepEqual(result.ruleApplications.map(entry => entry.ruleId), ['nah']);
   }
 });

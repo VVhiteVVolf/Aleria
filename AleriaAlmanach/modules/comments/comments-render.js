@@ -391,7 +391,8 @@ function renderCommentBubble(c, idx) {
   const side = ['left', 'right'].includes(String(c.side || '')) ? String(c.side) : (idx % 2 === 0 ? 'left' : 'right');
   const isSecretAction = commentKind === 'secretaction';
   const isFusedAction = isSecretAction || commentKind === 'combataction';
-  const isCompactUsage = commentKind === 'interact' || commentKind === 'consume';
+  const isCompactUsage = commentKind === 'interact' || commentKind === 'consume'
+    || String(c.skillResolution?.targetChallengeId || '').startsWith('herausforderung:');
   const displayCharName = isSecretAction ? 'Unbekannte Gestalt' : charName;
   const safeDisplayCharName = escapeHtml(displayCharName);
   const parts = splitCommentByEmoteMarkers(c);
@@ -432,10 +433,10 @@ function renderCommentBubble(c, idx) {
     if (isCompactUsage) {
       return `
         <div class="comment-entry comment-entry-compact ${partIdx ? 'comment-subentry' : ''}" data-comment-id="${commentId}">
-          <div class="comment-compact-portrait">${portrait}</div>
+          <div class="comment-compact-portrait comment-action-portrait">${portrait}${window.AleriaInventoryUse?.renderActionIconBadge?.(c) || getCommentKindIconMarkup(commentKind, 'comment-action-badge')}</div>
           <div class="comment-compact-bubble comment-body comment-kind-${commentKind}">
             <div class="comment-compact-head">
-              <span class="comment-kind-badge">${getCommentKindIconMarkup(commentKind)}<span>${kindLabel}</span></span>
+              <span class="comment-kind-badge"><span>${kindLabel}</span></span>
               <button type="button" class="comment-compact-name" ${speakerProfileAttrs}>${safeDisplayCharName}</button>
             </div>
             ${textMarkup}

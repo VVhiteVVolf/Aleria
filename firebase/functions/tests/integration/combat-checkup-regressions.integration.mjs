@@ -23,6 +23,151 @@ const partyWith = (actorAbilities, targetAbilities = []) => createCombatParty([
 ]);
 const pool = record => record.combatProfile.resources.find(resource => resource.id === 'test-pool').current;
 
+test('Entwaffnen verbraucht den einmaligen Schutz, bucht danach jede Hand einzeln und lässt die Reserve im Inventar', async () => {
+  const attacker = sample('fechter');
+  attacker.combatProfile.techniques = [{ id: 'entwaffnen', name: 'Entwaffnen', active: true, activationType: 'action',
+    damageModel: { mode: 'none' }, secondarySave: { enabled: true, attributeKey: 'dexterity', fixedDc: 25,
+      failureCondition: { id: 'griff', name: 'Entwaffnet', disarm: true } } }];
+  const target = sample('duellant', [{ id: 'schutz', name: 'Sicherer Griff', active: true, activationType: 'passive',
+    triggerRules: [{ id: 'halten', phase: 'post-secondary-save', recipient: 'target', sourceRelation: 'self',
+      condition: 'save-failed', frequency: 'scene', actionScope: 'global', effects: { outcome: 'force-save-success' } }] }]);
+  target.combatProfile.weapons = ['rechts', 'links', 'reserve'].map((id, index) => ({ id, inventoryItemId: id, name: id,
+    weaponType: 'dagger', equipped: index === 0, damageFormula: '1d4' }));
+  target.combatProfile.combat = { offHandWeaponId: 'links' };
+  target.inventory = { items: target.combatProfile.weapons.map(({ id, name }) => ({ id, name, category: 'weapon', quantity: '1' })) };
+  const party = await createCombatParty([{ key: 'a', team: 'a', actor: attacker }, { key: 'b', team: 'b', actor: target }]);
+  const original = (await party.record('b')).inventory;
+  const savedIds = [];
+  for (const [index, expectedDrop] of [null, 'rechts', 'links', null].entries()) {
+    const saved = await party.commit(await party.prepare({ actor: 'a', targets: ['b'], actionId: 'technique:entwaffnen' }));
+    savedIds.push(saved.id);
+    const resolution = saved.mechanics.commentSegments[0].combatResolution;
+    assert.equal(resolution.secondarySaves[0].succeeded, index === 0);
+    assert.equal(resolution.sceneItemEvents?.[0]?.weaponId ?? null, expectedDrop);
+    const replay = (await party.snapshot()).profiles.get('b');
+    assert.deepEqual(replay.droppedWeapons.map(drop => drop.weaponId).sort(), ['rechts', 'links'].slice(0, index).sort());
+    assert.equal(replay.temporaryConditions.some(condition => condition.name === 'Griff gestört'), index === 3);
+  }
+  assert.deepEqual((await party.record('b')).inventory, original);
+  for (const id of savedIds.reverse()) await undo(id);
+  const restored = (await party.snapshot()).profiles.get('b');
+  assert.equal(restored.droppedWeapons?.length || 0, 0);
+  assert.deepEqual((await party.record('b')).inventory, original);
+});
+
+for (const [acrobatics, expected] of [[0, 'prone'], [8, 'landed']]) {
+  test(`Reitsturz mit Landung ${expected} wird serverseitig berechnet, erneut gelesen und zurückgenommen`, async () => {
+    const attacker = sample('angreifer', [ability('impuls', [{ type: 'damage', target: 'target', amount: 30, on: 'always' }])]);
+    const rider = sample('reiter');
+    rider.inventory = { items: [{ id: 'pony', name: 'Pony', category: 'horse', quantity: '1' }] };
+    rider.combatProfile.combat = { mountId: 'pony', mounted: true };
+    rider.combatProfile.skills = [{ name: 'Akrobatik', attributeKey: 'dexterity', bonus: acrobatics }];
+    const party = await createCombatParty([{ key: 'a', team: 'a', actor: attacker }, { key: 'b', team: 'b', actor: rider }]);
+    const before = await party.record('b');
+    const prepare = () => party.prepare({ actor: 'a', targets: ['b'], actionId: 'ability:impuls' });
+    const missing = await prepare();
+    missing.segment.combatResolution.secondarySaves = [];
+    await assert.rejects(party.commit(missing), /W20|Würfel/);
+    assert.equal((await party.record('b')).combatProfile.hitPoints.current, before.combatProfile.hitPoints.current);
+    const prepared = await prepare();
+    const submitted = prepared.segment.combatResolution;
+    assert.equal(submitted.mountedHitChecks[0].outcome, expected);
+    submitted.mountedHitChecks[0].outcome = 'seated';
+    submitted.targetSupportEquipmentSnapshot.after.mountId = 'unbekannt';
+    submitted.secondarySaves[0].succeeded = !submitted.secondarySaves[0].succeeded;
+    const saved = await party.commit(prepared);
+    const result = saved.mechanics.commentSegments[0].combatResolution;
+    assert.equal(result.mountedHitChecks[0].outcome, expected);
+    assert.equal(result.targetSupportEquipmentSnapshot.after.mountId, '');
+    assert.equal(result.secondarySaves[0].succeeded, expected === 'landed');
+    const state = (await party.snapshot()).profiles.get('b');
+    assert.equal(state.combat.mounted, false);
+    assert.equal(state.resources.find(r => r.id === 'bonus-action').current === 0, expected === 'prone');
+    assert.deepEqual((await party.record('b')).inventory, before.inventory);
+    const remount = () => party.prepare({ actor: 'b', targets: ['b'], actionId: 'combat:wait',
+      loadout: { rightWeaponId: 'blade', leftWeaponId: '', mountId: 'pony' } });
+    if (expected === 'prone') await assert.rejects(remount(), /Bonusaktion|Ausrüstung|Ausr.stung/);
+    else {
+      const mounted = await party.commit(await remount());
+      const equipment = mounted.mechanics.commentSegments[0].combatResolution.equipmentPreparation;
+      assert.equal(equipment.free, false);
+      assert.deepEqual(equipment.costs.map(cost => [cost.resourceId, cost.amount]), [['bonus-action', 1]]);
+      assert.equal((await party.snapshot()).profiles.get('b').combat.mounted, true);
+      await undo(mounted.id);
+      assert.equal((await party.snapshot()).profiles.get('b').combat.mounted, false);
+    }
+    await undo(saved.id);
+    const restored = (await party.snapshot()).profiles.get('b');
+    assert.equal(restored.combat.mounted, true);
+    assert.equal(restored.currentHitPoints, before.combatProfile.hitPoints.current);
+    assert.deepEqual((await party.record('b')).inventory, before.inventory);
+  });
+}
+
+test('der Server prüft zwei Reichweiten desselben Unterstützers getrennt und lässt offene Entfernungen offen', async () => {
+  const supporter = sample('support', [ability('hilfe', [], { combatUsable: false, usesCurrent: 2, usesMaximum: 2,
+    triggerRules: ['eins', 'zwei'].map(id => ({ id, name: id, phase: 'post-roll', recipient: 'actor', sourceRelation: 'ally',
+      radiusMeters: 3, activation: 'reaction', frequency: 'comment', actionScope: 'global', effects: {} })) })]);
+  const party = await createCombatParty([{ key: 'a', actor: sample('a'), team: 'a' }, { key: 'b', actor: sample('b'), team: 'b' },
+    { key: 'support', actor: supporter, team: 'a' }]);
+  const helper = (await party.snapshot()).profiles.get('support');
+  for (const [one, two, expected] of [[4, 3, ['zwei']], [0, null, ['eins']], [null, null, []]]) {
+    const prepared = await party.prepare({ actor: 'a', targets: ['b'] });
+    prepared.segment.combatAction.ruleSelections = [{ ruleId: 'eins', distanceMeters: one }, { ruleId: 'zwei', distanceMeters: two }]
+      .map(selection => ({ ...selection, sourceActorId: helper.characterId, sourcePersistence: helper.persistence }));
+    const saved = await party.commit(prepared);
+    const receipt = saved.mechanics.commentSegments[0].combatResolution;
+    assert.deepEqual(receipt.ruleApplications.filter(entry => entry.sourceActorId === helper.characterId).map(entry => entry.ruleId), expected);
+    const remaining = async () => (await party.record('support')).combatProfile.abilities.find(entry => entry.id === 'hilfe').usesCurrent;
+    assert.equal(await remaining(), 2 - expected.length);
+    await undo(saved.id);
+    assert.equal(await remaining(), 2);
+  }
+});
+
+test('bestätigte Mana-Ersatzzahlung bucht die gewählte Ressource und nimmt genau diese zurück', async () => {
+  const caster = sample('cleric', [ability('segen', [{ type: 'healing', amount: 1, on: 'always' }],
+    { delivery: 'spell', costs: [{ resourceId: 'mana-focus', amount: 2 }] })]);
+  caster.combatProfile.progression.level = 10;
+  caster.combatProfile.magic = { enabled: true, casterTier: 'full', bypassResourceId: 'celestial-points' };
+  const party = await createCombatParty([{ key: 'a', actor: caster, team: 'a' }, { key: 'b', actor: sample('target'), team: 'b' }]);
+  const funds = async () => {
+    const resources = (await party.snapshot()).profiles.get('a').resources;
+    return ['mana-focus', 'celestial-points'].map(id => resources.find(entry => entry.id === id).current);
+  };
+  const before = await funds();
+  const saved = await party.commit(await party.prepare({ actor: 'a', targets: ['b'], actionId: 'ability:segen', paymentMode: 'mana-substitute' }));
+  const { combatAction, combatResolution } = saved.mechanics.commentSegments[0];
+  assert.equal(combatAction.paymentMode, 'mana-substitute');
+  assert.deepEqual(combatResolution.resourceCosts.map(cost => [cost.resourceId, cost.amount]), [['celestial-points', 2]]);
+  assert.deepEqual(await funds(), [before[0], before[1] - 2]);
+  await undo(saved.id);
+  assert.deepEqual(await funds(), before);
+});
+
+test('begrenzte Hauptfähigkeit und eigene Reaktion bleiben nach Speichern, Neuladen und Rücknahme konsistent', async () => {
+  const party = await partyWith([
+    ability('haupt', [{ type: 'damage', target: 'target', amount: 4, on: 'always' }], { usesCurrent: 2, usesMaximum: 2 }),
+    ability('antwort', [], { combatUsable: false, usesCurrent: 2, usesMaximum: 2, triggerRules: [{
+      id: 'antwortregel', phase: 'post-roll', recipient: 'actor', sourceRelation: 'self', activation: 'reaction',
+      frequency: 'comment', condition: 'always', effects: {}
+    }] })
+  ]);
+  const prepared = await party.prepare({ actor: 'a', targets: ['b'], actionId: 'ability:haupt' });
+  const actor = (await party.snapshot()).profiles.get('a');
+  prepared.segment.combatAction.ruleSelections = [{ sourceActorId: actor.characterId, sourcePersistence: actor.persistence, ruleId: 'antwortregel' }];
+  const uses = entries => entries.filter(entry => ['haupt', 'antwort'].includes(entry.id)).map(entry => [entry.id, entry.usesCurrent]).sort();
+  const saved = await party.commit(prepared);
+  const result = saved.mechanics.commentSegments[0].combatResolution;
+  assert.equal(result.ruleAbilitySnapshots.length, 1);
+  const spent = [['antwort', 1], ['haupt', 1]];
+  assert.deepEqual(uses(result.ruleAbilitySnapshots[0].after), spent);
+  assert.deepEqual(uses((await party.record('a')).combatProfile.abilities), spent);
+  assert.deepEqual(uses((await party.snapshot()).profiles.get('a').abilities), spent);
+  await undo(saved.id);
+  assert.deepEqual(uses((await party.record('a')).combatProfile.abilities), [['antwort', 2], ['haupt', 2]]);
+});
+
 for (const [mode, natural, expectedDamage] of [['saving-throw', 20, 2], ['saving-throw', 1, 5], ['spell-attack', 20, 15]]) {
   test(`Schadensvertrag mit Speicherung: ${mode}, W20=${natural}, Eigenschaden bleibt unabhängig`, async () => {
     const party = await partyWith([

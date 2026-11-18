@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 import { HttpsError } from 'firebase-functions/v2/https';
 import { itemDefinitionRegistry } from '../generated/item-definitions/item-definition-registry.js';
 import { normalizeItemDefinition, normalizeItemDefinitionRef, itemDefinitionKey, itemDefinitionContent, itemDefinitionFromTemplate } from '../generated/item-definitions/item-definition-model.js';
-import { synchronizeEquipmentFromInventory } from '../generated/character-equipment/character-equipment-sync.js';
+import { projectCombatEquipmentFromInventory, synchronizeEquipmentFromInventory } from '../generated/character-equipment/character-equipment-sync.js';
 
 export const definitionRevision = definition => createHash('sha256').update(itemDefinitionContent(definition)).digest('hex').slice(0, 24);
 export const definitionVersionRef = (database, reference) => database.collection('item_definition_versions').doc(itemDefinitionKey(reference));
@@ -60,15 +60,16 @@ export async function readItemDefinitionIndex(database, transaction, records = [
 }
 
 export function hydrateItemRecord(record, definitions, { requireEquipped = false, preserveLoadout = false } = {}) {
-  if (!(record.inventory?.items || []).some(item => item.definitionRef)) return record;
+  if (!(record.inventory?.items || []).some(item => item.definitionRef)) return projectCombatEquipmentFromInventory(record, definitions);
   if (requireEquipped) {
     const equippedIds = new Set([...(record.combatProfile?.weapons || []), ...(record.combatProfile?.armorItems || [])]
       .filter(entry => entry.equipped).map(entry => entry.inventoryItemId));
     for (const item of record.inventory.items) if (item.definitionRef && (item.equipped || equippedIds.has(item.id))
       && !definitions.has(itemDefinitionKey(item.definitionRef))) throw new HttpsError('failed-precondition', `Die Regelversion von ${item.name || 'der angelegten Ausrüstung'} fehlt.`);
   }
+  if (preserveLoadout) return projectCombatEquipmentFromInventory(record, definitions);
   return { ...record, combatProfile: synchronizeEquipmentFromInventory({ inventory: record.inventory,
-    combatProfile: record.combatProfile || {}, definitions, addMissingEquipment: true, preserveLoadout, definitionRulesOnly: true }).combatProfile };
+    combatProfile: record.combatProfile || {}, definitions, addMissingEquipment: true, definitionRulesOnly: true }).combatProfile };
 }
 
 // All reads happen while preparing. The caller writes only after its remaining

@@ -97,7 +97,8 @@ function setCommentSegmentKind(id, kind) {
     segment.combatCastLevel = 0;
     segment.combatRollMode = 'normal';
     segment.combatWeaponGrip = 'one-handed';
-    segment.combatDistanceMeters = 0;
+    segment.combatDistanceMeters = null;
+    segment.combatRuleSelections = [];
     segment.combatPaymentMode = 'standard';
     segment.combatPaymentConfirmed = false;
   }
@@ -287,6 +288,8 @@ function buildCommentSegmentsForSave() {
       return {
         clientSegmentId: segment.id,
         kind: segment.kind,
+        actionIconId: String(segment.actionIconId || '').slice(0, 40),
+        challengeReplyToCommentId: String(segment.challengeReplyToCommentId || '').slice(0, 200),
         commentKind: segment.kind,
         text: segment.text,
         narrator: false,
@@ -328,18 +331,7 @@ function buildCommentSegmentsForSave() {
         ...(window.AleriaInventoryUse?.serializeSelection?.(segment) || {}),
         inventoryItemId: ['consume', 'interact'].includes(segment.kind) ? String(segment.inventoryItemId || '') : '',
         inventoryUseMode: ['consume', 'interact'].includes(segment.kind) && ['consume', 'use'].includes(segment.inventoryUseMode) ? segment.inventoryUseMode : 'auto',
-        ...(commentSegmentUsesCombatResolution(segment) ? {
-          combatTargetId: String(segment.combatTargetId || ''),
-          combatTargetIds: [...new Set((segment.combatTargetIds || [segment.combatTargetId]).map(String).filter(Boolean))],
-          combatLoadout: segment.combatLoadout || null,
-          combatActionId: String(segment.combatActionId || ''),
-          combatCastLevel: Math.max(0, Math.min(10, Number(segment.combatCastLevel) || 0)),
-          combatRollMode: ['advantage', 'disadvantage'].includes(segment.combatRollMode) ? segment.combatRollMode : 'normal',
-          combatWeaponGrip: String(segment.combatWeaponGrip || '') === 'two-handed' ? 'two-handed' : 'one-handed',
-          combatDistanceMeters: Math.max(0, Number(segment.combatDistanceMeters) || 0),
-          combatPaymentMode: ['aura', 'cheat'].includes(segment.combatPaymentMode) ? segment.combatPaymentMode : 'standard',
-          combatPaymentConfirmed: !!segment.combatPaymentConfirmed
-        } : {}),
+        ...(commentSegmentUsesCombatResolution(segment) ? getCommentCombatSelection(segment) : {}),
         ...(commentKindUsesLanguage(segment.kind) ? {
           language: getCommentLanguage(segment),
           languageColor: getCommentLanguageColor(segment, segment.kind)

@@ -9,11 +9,13 @@ import { getCheckDescription } from './skill-check-guidance.js?v=20261015-check-
 import { describeCheckModifierSource } from './attribute-check-model.js?v=20261015-check-options-v1';
 import { getSkillActionPermissionBlock, renderSkillActionPermissionBlock } from './skill-action-permission-view.js';
 import { previewChallengeCombatBenefits, collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js?v=20261015-graded-challenges-v1';
-import { getChallengeAttemptSettings } from './skill-challenge-attempt.js?v=20261113-scene-elements-v1';
+import { getChallengeAttemptSettings, getChallengeReactionInsertAfterId, orderChallengeRepliesForDisplay } from './skill-challenge-attempt.js?v=20261117-comment-actions-v1';
+import { getAnimalSpeechError, isAnimalSpeechSegment } from '../character-development/development-animal-speech.js';
 import { getChallengeCombatBindingError } from '../herausforderung/herausforderung-combat-context.js?v=20261015-check-options-v1';
 import { getActiveCombatPartyMap, getEncounterRelationship, getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20261013-performance-v1';
 import { CombatProfileResolver } from '../combat/combat-profile-resolver.js?v=20260928-equipment-art-v4';
+import { projectSceneCreatureActors } from '../creatures/creature-scene-source.js';
 import { createSceneSkillProfileResolver } from './skill-scene-profile.js?v=20260928-equipment-art-v4';
 import { getSceneRecoveryDayKey } from '../scene-time/scene-recovery-day.js';
 import {
@@ -57,7 +59,7 @@ const skillResolutionService = new SkillResolutionService({
 const supportDefaults = new WeakMap();
 let latestComposerContext = null;
 let composerRefreshQueued = false;
-for (const name of ['aleria:comments-updated', 'aleria:combat-profile-committed', 'aleria:characters-changed']) document.addEventListener(name, () => {
+for (const name of ['aleria:comments-updated', 'aleria:combat-profile-committed', 'aleria:characters-changed', 'aleria:creatures-changed', 'aleria:item-definitions-changed']) document.addEventListener(name, () => {
   if (composerRefreshQueued || !latestComposerContext?.list?.isConnected || latestComposerContext.list.closest('[aria-hidden="true"]')) return;
   composerRefreshQueued = true;
   requestAnimationFrame(() => {
@@ -99,10 +101,11 @@ function getCharacters() {
 function mergeActors(sceneActors = []) {
   const sourceIds = new Set(sceneActors.map(actor => String(actor?.sourceCreatureId || '')).filter(Boolean));
   const merged = new Map();
-  getCharacters()
+  const characters = getCharacters();
+  characters
     .filter(actor => !(actor?.entityType === 'creature' && sourceIds.has(String(actor?.id || ''))))
     .forEach(actor => merged.set(String(actor?.id || ''), actor));
-  sceneActors.forEach(actor => merged.set(String(actor?.id || ''), actor));
+  projectSceneCreatureActors(sceneActors, characters).forEach(actor => merged.set(String(actor?.id || ''), actor));
   return [...merged.values()];
 }
 
@@ -152,8 +155,8 @@ function buildClientSkillRuleContext(segment, actor, actorProfile, targetChallen
   (Array.isArray(selections) ? selections : []).forEach(selection => {
     const actorId = String(selection?.sourceActorId || '');
     if (!actorId) return;
-    const distanceMeters = selection?.distanceMeters == null ? null : Number(selection.distanceMeters);
-    const current = groupedSelections.get(actorId) || { actorId, ruleIds: [], distanceMeters };
+    const current = groupedSelections.get(actorId) || { actorId, ruleIds: [], ruleSelections: [] };
+    current.ruleSelections.push(selection);
     current.ruleIds.push(String(selection?.ruleId || ''));
     groupedSelections.set(actorId, current);
   });
@@ -173,8 +176,7 @@ function buildClientSkillRuleContext(segment, actor, actorProfile, targetChallen
       sourceRole: 'support',
       relationToActor: relationshipBetweenActors(supportActor, actor),
       relationToTarget: targetActor ? relationshipBetweenActors(supportActor, targetActor) : 'enemy',
-      distanceToActor: selection.distanceMeters,
-      distanceToTarget: selection.distanceMeters,
+      ruleSelections: selection.ruleSelections,
       selectedRuleIds: [...new Set(selection.ruleIds)]
     };
     sources.push(source);
@@ -263,7 +265,8 @@ function prepareSkillSupport(segment, actor, settings, target, actors, resolver)
     const profile = resolver.resolve(candidate);
     const rules = collectCombatTriggerRules(profile).filter(rule => rule.activation === 'reaction');
     return [...rules.map(rule => rule.id), ...(profile.aura?.enabled ? ['@aura:actor'] : [])]
-      .map(ruleId => ({ sourceActorId: candidate.id, ruleId, distanceMeters: candidate.id === actor.id ? 0 : null }));
+      .map(ruleId => (segment.skillRuleSelections || []).find(entry => entry.sourceActorId === candidate.id && entry.ruleId === ruleId)
+        || { sourceActorId: candidate.id, ruleId, distanceMeters: candidate.id === actor.id ? 0 : null });
   });
   const context = buildClientSkillRuleContext(segment, actor, resolver.resolve(actor), target, actors, resolver, selections);
   const day = getSceneRecoveryDayKey(latestComposerContext?.threadId, comments);
@@ -308,7 +311,8 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
     rollMode: segment.skillRollMode,
     targetChallengeId: segment.skillTargetChallengeId
   });
-  segment.skillId = settings.skillId || kindSkills[0]?.id || '';
+  segment.skillId = kindSkills.some(skill => skill.id === settings.skillId) ? settings.skillId : kindSkills[0]?.id || '';
+  settings.skillId = segment.skillId;
   segment.skillCustomModifier = settings.customModifier;
   segment.skillDifficulty = settings.difficulty;
   segment.skillRollMode = 'normal';
@@ -348,7 +352,7 @@ function renderSkillComposer(segment, actor, challenges, actors = [], sceneResol
   if (actor && segment.skillId) {
     const actorProfile = sceneResolver.resolve(actor);
     const ruleContext = buildClientSkillRuleContext(segment, actor, actorProfile, target, actors, sceneResolver);
-    const rollContext = getSkillRollContext({ actor, settings, challenge: target }, { actorProfile, ruleSources: ruleContext.sources, targetProfile: ruleContext.targetProfile });
+    const rollContext = getSkillRollContext({ actor, settings, challenge: target }, { actorProfile, commentKind: segment.commentKind || segment.kind, ruleSources: ruleContext.sources, targetProfile: ruleContext.targetProfile });
     settings.saveContext = rollContext.settings.saveContext;
     const skill = rollContext.skill;
     permissionBlock = getSkillActionPermissionBlock(actorProfile, skill.definition);
@@ -540,7 +544,7 @@ function updateSkillRuleSelection(segment, field) {
     segment.skillRuleSelections.push({
       sourceActorId,
       ruleId,
-      distanceMeters: 0,
+      distanceMeters: null,
       sourcePersistence: kind === 'scene-creature'
         ? { kind, sourceCreatureId: String(field.dataset.sourceCreatureId || '') }
         : { kind, recordId: String(field.dataset.recordId || '') }
@@ -622,6 +626,7 @@ async function resolveSegment(segment, submission, actors, challenges, index, to
     actorPersistence: profile.persistence || null
   }, {
     container: stage,
+    commentKind: segment.commentKind || segment.kind,
     actorProfile: profile,
     ruleSources: ruleContext.sources,
     targetProfile: ruleContext.targetProfile,
@@ -656,6 +661,14 @@ function buildStoredChallenge(segment) {
 
 async function handleSubmission(submission = {}) {
   const segments = Array.isArray(submission.commentSegments) ? submission.commentSegments : [];
+  const animalSpeech = segments.filter(isAnimalSpeechSegment);
+  if (animalSpeech.length) {
+    const available = mergeActors(latestComposerContext?.sceneActors || []);
+    for (const segment of animalSpeech) {
+      const error = getAnimalSpeechError(getActorForSegment(segment, submission.characterId, available));
+      if (error) throw new Error(error);
+    }
+  }
   const skillSegments = submission.deferToCombat ? [] : segments.filter(segment => normalizeMechanicMode(segment?.mechanicMode, segment) === 'skill');
   const hasChallenges = segments.some(segment => segment?.skillChallengeEnabled
     && String(segment.kind || segment.commentKind || '') === 'performance');
@@ -774,6 +787,7 @@ function renderEvaluation(source = {}) {
   return `
     <aside class="skill-evaluation${challenge ? ' is-challenge' : ''}" data-state="${escapeHtml(resolution.herausforderungTier || resolution.outcome || 'failure')}" aria-label="Fertigkeitsauswertung">
       <div class="skill-evaluation-heading"><span>Probenauswertung</span><strong>${escapeHtml(outcomeLabel)}</strong></div>
+      ${resolution.animalSpeechAdvantage ? '<div class="skill-animal-speech-note">Tiersprache · Vorteil auf Mit Tieren umgehen</div>' : ''}
       <p>${escapeHtml(narrative)}</p>
       ${challenge ? '<details class="skill-evaluation-details"><summary>Wurf &amp; Auswirkungen ansehen</summary>' : ''}
       <div class="skill-evaluation-mechanics">
@@ -851,6 +865,9 @@ document.addEventListener('input', event => {
 
 globalThis.AleriaSkillChecks = Object.freeze({
   getChallengeAttemptSettings,
+  getChallengeReactionInsertAfterId,
+  orderChallengeRepliesForDisplay,
+  getAnimalSpeechError,
   mountComposer(list, context = {}) {
     mountComposers({
       list,

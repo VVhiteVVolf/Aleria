@@ -16,6 +16,9 @@ function afterProfile(profile, result, role) {
   const hp = role === 'target' ? { current: result.targetSnapshot.hitPointsAfter, temporary: result.targetSnapshot.temporaryHitPointsAfter }
     : result.actorHitPointSnapshot?.after;
   return { ...profile, currentHitPoints: hp?.current ?? profile.currentHitPoints, temporaryHitPoints: hp?.temporary ?? profile.temporaryHitPoints,
+    droppedWeapons: [...(profile.droppedWeapons || []), ...(result.sceneItemEvents || [])
+      .filter(event => event.operation === 'drop' && event.sourceActorId === profile.characterId)],
+    ...(result[`${role}SupportEquipmentSnapshot`]?.after?.mountId === '' ? { combat: { ...profile.combat, mounted: false, mountId: '' } } : {}),
     conditions: combinedConditions, temporaryConditions: conditions,
     totalDefense: profile.totalDefense - beforeArmor + afterArmor,
     resources: result[`${role}ResourceSnapshot`]?.after || profile.resources,
@@ -45,7 +48,7 @@ function mergeCounterResult(result, counter, originalActor) {
     result.targetSnapshot.temporaryHitPointsAfter = counter.actorHitPointSnapshot.after.temporary;
   }
   for (const [outer, inner] of [['actor', 'target'], ['target', 'actor']]) {
-    for (const kind of ['Condition', 'Resource', 'Inventory', 'Concentration', 'Channeling']) {
+    for (const kind of ['Condition', 'Resource', 'Inventory', 'Concentration', 'Channeling', 'SupportEquipment']) {
       const snapshot = counter[`${inner}${kind}Snapshot`];
       if (!snapshot) continue;
       const key = `${outer}${kind}Snapshot`;

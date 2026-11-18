@@ -4,13 +4,12 @@ import { getSceneConditionClock, sceneClockBeforeSegment } from '../generated/sc
 import { advanceSubstanceStateMap } from '../generated/character-health/substance-state.js';
 import { HttpsError } from 'firebase-functions/v2/https';
 import { getPersistentCombatResources, recoverDailyCombatResources } from '../generated/combat/combat-action-economy.js';
-import { applyCombatAbilityUse } from '../generated/combat/combat-ability-uses.js';
+import { normalizeCombatDistance } from '../generated/combat/combat-rule-distance.js';
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
 import { readItemDefinitionIndex, hydrateItemRecord } from '../items/item-definition-repository.js';
 import { productWithItemDefinition, prepareTemplateDefinition, prepareUniqueItemClaims } from '../items/item-definition-repository.js';
 import { itemDefinitionFromTemplate } from '../generated/item-definitions/item-definition-model.js';
 import { overlayCombatHitPointState } from '../generated/combat/combat-state-model.js';
-import { getCombatRuleAbilityUseRequests } from '../generated/combat/combat-rule-consumption.js';
 import { getActiveCombatPartyMap, getEncounterRelationship } from '../generated/combat/combat-encounter-model.js';
 import { SkillResolutionService } from '../generated/skill-checks/skill-resolution-service.js';
 import {
@@ -98,7 +97,7 @@ function ruleSelectionDescriptors(entry = {}) {
   return selections.map(selection => ({
     actorId: clean(selection.sourceActorId, 240),
     ruleId: clean(selection.ruleId, 160),
-    distanceMeters: Math.max(0, Math.min(9999, Number(selection.distanceMeters) || 0)),
+    distanceMeters: normalizeCombatDistance(selection.distanceMeters),
     persistence: normalizePersistence(selection.sourcePersistence, selection.sourceActorId)
   }));
 }
@@ -220,7 +219,7 @@ export async function validateSkillCommentSegments({
 
     const actor = makeActor(actorRecord, actorDescriptor.persistence, actorDescriptor.actorId);
     const profile = applySkillRuntimeState(
-      resolveCombatProfile(actor),
+      resolveCombatProfile(actor, { definitions: itemDefinitions }),
       workingStates.get(String(actorDescriptor.actorId)) || null,
       rulePeriods.day || ''
     );
@@ -232,7 +231,7 @@ export async function validateSkillCommentSegments({
       ? makeActor(targetRecord, targetDescriptor.persistence, targetDescriptor.actorId)
       : null;
     const targetProfile = targetActor
-      ? applySkillRuntimeState(resolveCombatProfile(targetActor), workingStates.get(String(targetDescriptor.actorId)) || null, rulePeriods.day || '')
+      ? applySkillRuntimeState(resolveCombatProfile(targetActor, { definitions: itemDefinitions }), workingStates.get(String(targetDescriptor.actorId)) || null, rulePeriods.day || '')
       : null;
     const opposedSkill = challenge && targetActor && challenge.defenseMode !== 'fixed'
       ? resolveSkillModifier(targetProfile, challenge.defenseSkillId || 'deception')
@@ -267,7 +266,7 @@ export async function validateSkillCommentSegments({
       const supportRecord = records.get(recordKey(selection.persistence));
       if (!supportRecord) fail('not-found', 'Eine ausgewählte Unterstützungsfigur wurde nicht gefunden.');
       const supportProfile = applySkillRuntimeState(
-        resolveCombatProfile(makeActor(supportRecord, selection.persistence, selection.actorId)),
+        resolveCombatProfile(makeActor(supportRecord, selection.persistence, selection.actorId), { definitions: itemDefinitions }),
         workingStates.get(String(selection.actorId)) || null,
         rulePeriods.day || ''
       );
@@ -280,14 +279,14 @@ export async function validateSkillCommentSegments({
           sourceRole: 'support',
           relationToActor: relationshipForActors(supportRecord, actorRecord, selection.actorId, actorDescriptor.actorId, encounterParties),
           relationToTarget: targetRecord ? relationshipForActors(supportRecord, targetRecord, selection.actorId, targetDescriptor.actorId, encounterParties) : 'enemy',
-          distanceToActor: selection.distanceMeters,
-          distanceToTarget: selection.distanceMeters,
+          ruleSelections: [],
           selectedRuleIds: [],
           persistence: selection.persistence
         };
         sources.push(source);
       }
       source.selectedRuleIds.push(selection.ruleId);
+      if (source.sourceRole === 'support') source.ruleSelections.push(selection);
     });
 
     if (challenge?.source === 'herausforderung' && challengeBenefitBundles(challenge).some(bundle => bundle.combatEffects?.some(effect => effect.type === 'weapon-maneuver'))
@@ -300,6 +299,7 @@ export async function validateSkillCommentSegments({
       actorPersistence: entry.submitted.actorPersistence
     }, {
       actorProfile: profile,
+      commentKind: entry.segment.commentKind || entry.segment.kind,
       ruleSources: sources,
       targetProfile,
       opposedDifficulty,
@@ -312,7 +312,8 @@ export async function validateSkillCommentSegments({
         passiveTotal: opposedDifficulty
       } : null,
       rulePeriods,
-      usedRuleFrequencyKeys: usedKeys
+      usedRuleFrequencyKeys: usedKeys,
+      onRuleAbilityError: message => fail('failed-precondition', message)
     });
     usedKeys = new Set(resolution.usedRuleFrequencyKeys || []);
     resolution.resolutionId = randomUUID();
@@ -370,35 +371,21 @@ export async function validateSkillCommentSegments({
       }
     });
 
-    const abilitySnapshots = [];
-    getCombatRuleAbilityUseRequests(resolution.ruleApplications).forEach(requested => {
-      const source = sources.find(item => String(item.actorId) === requested.sourceActorId);
-      if (!source) fail('failed-precondition', 'Die Fähigkeitsquelle einer Fertigkeitsreaktion fehlt.');
-      const sourceId = requested.sourceActorId;
+    for (const snapshot of resolution.ruleAbilitySnapshots || []) {
+      const sourceId = snapshot.sourceActorId;
+      const source = sources.find(item => String(item.actorId) === sourceId);
       const currentState = workingStates.get(sourceId) || {};
-      const currentAbilities = Array.isArray(currentState.abilities) ? currentState.abilities : source.profile.abilities;
-      const consumed = applyCombatAbilityUse(currentAbilities, `ability:${requested.abilityId}`, rulePeriods.day || '');
-      if (!consumed.sufficient) fail('failed-precondition', `${consumed.missing?.name || requested.ruleName} hat keine Nutzung mehr übrig.`);
-      if (!consumed.changed) return;
-      workingStates.set(sourceId, { ...currentState, abilities: consumed.abilities });
-      abilitySnapshots.push({
-        sourceActorId: sourceId,
-        applicationKey: requested.applicationKey,
-        before: consumed.beforeAbilities,
-        after: consumed.abilities,
-        change: consumed.use
-      });
+      workingStates.set(sourceId, { ...currentState, abilities: snapshot.after });
       if (source.persistence?.persistent) {
         const key = recordKey(source.persistence);
         const existing = persistentUpdates.get(key) || {
           entry: recordEntries.find(item => item.key === key),
           record: records.get(key)
         };
-        existing.abilities = consumed.abilities;
+        existing.abilities = snapshot.after;
         persistentUpdates.set(key, existing);
       }
-    });
-    if (abilitySnapshots.length) resolution.ruleAbilitySnapshots = abilitySnapshots;
+    }
 
     if (challenge && isSuccessfulSkillOutcome(resolution.outcome)) {
       const isHerausforderungApproach = challenge.source === 'herausforderung';
@@ -445,8 +432,8 @@ export async function validateSkillCommentSegments({
             holder: { kind: actorDescriptor.persistence.kind === 'creature' ? 'creatures' : 'characters', recordId: actorDescriptor.persistence.recordId, itemId: `reward:${claimId}:${index}` } })), { actorUid: request.auth.uid });
           pendingClaims.push(...rewardVersions.map(version => ({ write: () => version.write() })), { write: claimUnique });
           const combat = await stageHerausforderungCombatBenefits({ challenge, actorId: actorDescriptor.actorId, benefits, identity: claimId,
-            encounter, submitted: entry.submitted, descriptors, records, recordEntries, workingStates, persistentUpdates, recoveryDayKey: rulePeriods.day,
-            history, rulePeriods, usedRuleFrequencyKeys: usedKeys, usedConsequenceKeys, maneuverDice });
+            encounter, submitted: entry.submitted, descriptors, records, recordEntries, workingStates, persistentUpdates, workingInventories, recoveryDayKey: rulePeriods.day,
+            history, rulePeriods, usedRuleFrequencyKeys: usedKeys, usedConsequenceKeys, maneuverDice, itemDefinitions });
           resolution.usedRuleFrequencyKeys = [...usedKeys];
           resolution.herausforderungCombatResults = combat.results;
           resolution.herausforderungCombatSnapshots = combat.snapshots;

@@ -35,8 +35,8 @@ function scheduleRefresh() {
   queued = true;
   requestAnimationFrame(() => {
     queued = false;
-    const latest = globalThis.AleriaCharacters?.getAll?.()?.find(record => record.id === character?.id);
-    if (latest) character = latest;
+    const latest = character?.id && globalThis.AleriaCharacters?.getById?.(character.id);
+    if (latest?.id) character = latest;
     refresh();
   });
 }
@@ -48,4 +48,4 @@ document.addEventListener('click', event => {
   const operation = operations[trigger.dataset.action];
   if (operation && context().threadId) openCombatStatusDialog(context(), { operation, conditionId: trigger.dataset.conditionId, trigger });
 });
-['aleria:comments-updated', 'aleria:combat-profile-committed', 'aleria:characters-changed'].forEach(name => document.addEventListener(name, scheduleRefresh));
+['aleria:comments-updated', 'aleria:combat-profile-committed', 'aleria:characters-changed', 'aleria:item-definitions-changed'].forEach(name => document.addEventListener(name, scheduleRefresh));

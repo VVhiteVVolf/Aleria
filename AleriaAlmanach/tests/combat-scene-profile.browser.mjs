@@ -3,18 +3,25 @@
 import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import { resolve, extname, sep } from 'node:path';
+import { resolve, extname, relative, isAbsolute, sep } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { resolveCombatProfile } from '../modules/combat/combat-profile-resolver.js';
 import { collectCombatTriggerRules, getCombatRuleApplicationKey } from '../modules/combat/combat-trigger-rules.js';
 const { chromium } = await import(process.argv[2] ? pathToFileURL(resolve(process.argv[2])).href : 'playwright');
-const root = resolve(fileURLToPath(new URL('../../', import.meta.url))), out = resolve(root, '.codex-temp/combat-checkup');
+const root = resolve(fileURLToPath(new URL('../../', import.meta.url)));
+const out = resolve(root, process.env.ALERIA_COMBAT_PROFILE_OUTPUT || '.codex-temp/combat-checkup');
+const localOutput = relative(root, out);
+assert.ok(localOutput && !localOutput.startsWith('..') && !isAbsolute(localOutput), 'Reports must stay in the workspace.');
 await mkdir(out, { recursive: true });
 const snapshot = JSON.parse(await readFile(resolve(root, 'CharakterDatenbank/generated/characters.snapshot.json'), 'utf8'));
 const record = snapshot.characters.find(c => c.name === 'Nudd Saethwyr');
 assert.ok(record);
-const base = resolveCombatProfile(record);
 const actorId = record.id, threadId = 'local-checkup';
+const abilityToday = { id: 'test-daily', name: 'Tagesfähigkeit', usesCurrent: 0, usesMaximum: 1, recovery: 'day',
+  recoveryDayKey: `scene:${threadId}:day-1`, activationType: 'bonus-action', combatUsable: true, target: 'Selbst' };
+record.combatProfile.abilities = [...(record.combatProfile.abilities || []), abilityToday,
+  { ...abilityToday, id: 'test-rest', name: 'Rastfähigkeit', recovery: 'long-rest' }];
+const base = resolveCombatProfile(record);
 const condition = { id: 'prepared', name: 'Vorbereitete Gegenwehr', active: true,
   durationModel: { kind: 'actor-comments', remainingActorComments: 2 },
   damageGuard: { charges: 1, reduction: 2 }, counterAttack: { enabled: true },
@@ -43,6 +50,20 @@ function render(index=0){document.getElementById('entry').innerHTML=window.Aleri
 window.updateScene=(next,event='aleria:comments-updated',rerender=false)=>{history=next;if(rerender)render(17);document.dispatchEvent(new CustomEvent(event,{detail:{threadId,comments:history}}));};
 window.setAvailable=available=>{records=available?${JSON.stringify([record])}:[];document.dispatchEvent(new CustomEvent('aleria:characters-changed'));};
 window.mutateProfile=()=>{records[0].combatProfile.combat.movement=12;document.dispatchEvent(new CustomEvent('aleria:characters-changed'));};
+window.setInventory=(current,previous)=>{
+  records[0].inventory={items:[current]};
+  history.push({id:'old-inventory',serverValidatedMechanics:true,characterId:actorId,commentSegments:[{inventoryUse:{actorId,mode:'consume',inventorySnapshot:{after:{items:[previous]}}}}]});
+  document.dispatchEvent(new CustomEvent('aleria:characters-changed'));
+  return {live:window.AleriaCombat.getProfile(actorId,{threadId}).inventory.items.map(item=>item.id),
+    historic:window.AleriaCombat.getProfile(actorId,{threadId,timelineCommentId:'old-inventory',timelineSegmentIndex:1}).inventory.items.map(item=>item.id)};
+};
+window.queueWard=()=>{
+  const version=new Promise(resolve=>{window.deliverWard=()=>resolve([{id:'test:local-ward',revision:'v1',title:'Prüfamulett',
+    passiveEffects:[{type:'damage-reduction',magicScope:'magical',amount:3}]}]);});
+  window._fb={itemDefinitions:{subscribe:()=>()=>{},loadVersions:()=>{window.wardRequested=true;return version;}}};
+  records[0].inventory.items.push({id:'ward',name:'Prüfamulett',quantity:'1',definitionRef:{id:'test:local-ward',revision:'v1'}});
+  document.dispatchEvent(new CustomEvent('aleria:characters-changed'));
+};
 window.testHistory=()=>history;
 render();window.testReady=true;
 </script></html>`;
@@ -112,8 +133,53 @@ try {
   await panel.getByText('Keine temporären Effekte',{exact:true}).waitFor();
   await page.evaluate(()=>window.mutateProfile());
   await panel.getByText('12 m',{exact:true}).waitFor();
+  const inventory = await page.evaluate(() => window.setInventory({ id: 'purchase', name: 'Neuer Kauf' }, { id: 'old', name: 'Alter Besitz' }));
+  assert.deepEqual(inventory, { live: ['purchase'], historic: ['old'] });
+  await page.evaluate(() => window.queueWard());
+  await page.waitForFunction(() => window.wardRequested);
+  assert.equal(await panel.getByText('Prüfamulett · 3 weniger magischer Schaden').count(), 0);
+  await page.evaluate(() => window.deliverWard());
+  await panel.getByText('Prüfamulett · 3 weniger magischer Schaden', { exact: true }).waitFor();
+  await panel.evaluate(element => { element.scrollTop = 0; });
+  await page.screenshot({ path: resolve(out, 'mobile-loaded-item-effect.png') });
+  const limitedAbilities = panel.locator('[data-profile-details-key="abilities"]');
+  await limitedAbilities.locator('summary').click();
+  const daily = limitedAbilities.getByRole('listitem').filter({ hasText: 'Tagesfähigkeit' });
+  const restAbility = limitedAbilities.getByRole('listitem').filter({ hasText: 'Rastfähigkeit' });
+  await daily.getByText('0/1', { exact: true }).waitFor();
+  await restAbility.getByText('0/1', { exact: true }).waitFor();
+  const newDay = { id: 'next-day', sceneTimeEvent: { anchorDay: 2 }, serverCommitted: true, mechanicalAudit: true };
+  await page.evaluate(nextDay => window.updateScene([...window.testHistory(), nextDay]), { ...newDay, importedHistoricalMechanics: true });
+  await daily.getByText('0/1', { exact: true }).waitFor();
+  await page.evaluate(nextDay => window.updateScene([...window.testHistory().slice(0, -1), nextDay]), newDay);
+  await daily.getByText('1/1', { exact: true }).waitFor();
+  await restAbility.getByText('0/1', { exact: true }).waitFor();
+  const historicalUses = await page.evaluate(({ actorId, threadId }) => window.AleriaCombat.getProfile(actorId, {
+    threadId, timelineCommentId: 'next-day'
+  }).abilities.find(ability => ability.id === 'test-daily').usesCurrent, { actorId, threadId });
+  assert.equal(historicalUses, 0);
+  for (const width of [1280, 390, 320]) {
+    await page.setViewportSize({ width, height: 900 });
+    await daily.evaluate(element => element.scrollIntoView({ block: 'center' }));
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    const collisions = await panel.locator('.comment-combat-profile-resources li:visible').evaluateAll(items => items.flatMap(item => {
+      const label = item.children[1];
+      const count = item.querySelector('b').getBoundingClientRect();
+      const text = document.createRange();
+      text.selectNodeContents(label);
+      return [...text.getClientRects()].some(line => line.right > count.left) ? [label.textContent] : [];
+    }));
+    assert.deepEqual(collisions, [], `Ressourcenbeschriftungen bei ${width}px`);
+    const labelLines = await daily.locator('span:nth-child(2)').evaluate(label => {
+      const text = document.createRange();
+      text.selectNodeContents(label);
+      return text.getClientRects().length;
+    });
+    assert.equal(labelLines, 1, `Tagesfähigkeit bei ${width}px`);
+    await page.screenshot({ path: resolve(out, `daily-recovery-${width}.png`) });
+  }
   assert.deepEqual(errors,[]);assert.deepEqual(missing,[]);
-  const result={actualController:true,actualNuddData:true,desktop:true,mobile:true,remoteUpdate:true,rerenderIndexChange:true,scrollAndDetailsPreserved:true,limitedItemUsage:true,counterDocumentation:true,loadingRecovery:true,creatureRefresh:true,profileCacheInvalidation:true,errors,missing};
+  const result={actualController:true,actualNuddData:true,desktop:true,mobile:true,remoteUpdate:true,rerenderIndexChange:true,scrollAndDetailsPreserved:true,limitedItemUsage:true,counterDocumentation:true,loadingRecovery:true,creatureRefresh:true,profileCacheInvalidation:true,liveAndHistoricalInventory:inventory,lateItemDefinitionRefresh:true,dailyRecovery:{restAbilityUnchanged:true,historicalUses,viewports:[1280,390,320]},errors,missing};
   await writeFile(resolve(out,'browser.json'),JSON.stringify(result,null,2));
   console.log(JSON.stringify(result,null,2));
 } finally {await browser?.close();await new Promise(done=>server.close(done));}

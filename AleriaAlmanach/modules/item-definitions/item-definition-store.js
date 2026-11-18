@@ -49,6 +49,7 @@ export const itemDefinitionStore = Object.freeze({
     const fresh = [...missing].filter(([key]) => !pending.has(key));
     if (fresh.length) {
       const loading = api.loadVersions(fresh.map(([, ref]) => ref)).then(definitions => {
+        if (!definitions.length) return;
         itemDefinitionRegistry.add(definitions, { current: false }); changed();
       }).finally(() => { for (const [key] of fresh) pending.delete(key); });
       for (const [key] of fresh) pending.set(key, loading);

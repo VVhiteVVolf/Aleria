@@ -47,7 +47,7 @@ export function challengeCombatDescriptors(challenge, encounter) {
 }
 
 export async function stageHerausforderungCombatBenefits({ challenge, actorId, benefits, identity, encounter, submitted, descriptors,
-  records, recordEntries, workingStates, persistentUpdates, recoveryDayKey, history = [], rulePeriods = {}, usedRuleFrequencyKeys = new Set(), usedConsequenceKeys = new Set(), maneuverDice }) {
+  records, recordEntries, workingStates, persistentUpdates, workingInventories, recoveryDayKey, history = [], rulePeriods = {}, usedRuleFrequencyKeys = new Set(), usedConsequenceKeys = new Set(), maneuverDice, itemDefinitions }) {
   const error = getChallengeCombatBindingError(challenge, encounter, actorId);
   if (error) throw new HttpsError('failed-precondition', error);
   const recipients = new Map();
@@ -57,7 +57,10 @@ export async function stageHerausforderungCombatBenefits({ challenge, actorId, b
     const key = `${descriptor.persistence.kind}:${descriptor.persistence.recordId}`;
     const record = records.get(key);
     const state = workingStates.get(id) || {};
-    const profile = overlayCombatHitPointState(resolveCombatProfile(withEquippedCombatWeapon({ ...record, id }, state.equippedWeaponId, state.offHandWeaponId, state.supportEquipment)), state);
+    const inventory = (descriptor.persistence.persistent ? workingInventories?.get(key) : state.inventory) || record.inventory;
+    const actor = withEquippedCombatWeapon({ ...record, inventory, id, entityType: descriptor.persistence.kind },
+      state.equippedWeaponId, state.offHandWeaponId, state.supportEquipment);
+    const profile = overlayCombatHitPointState(resolveCombatProfile(actor, { definitions: itemDefinitions }), { ...state, inventory });
     profile.resources = recoverDailyCombatResources(profile.resources, recoveryDayKey);
     recipients.set(id, { profile, state: { ...state, resources: profile.resources }, descriptor, key, record });
   }
@@ -80,7 +83,10 @@ export async function stageHerausforderungCombatBenefits({ challenge, actorId, b
     const hp = value => JSON.stringify([value.current, value.maximum, value.temporary]);
     if (hp(snapshot.before) !== hp(snapshot.after)) update.hitPoints = { current: snapshot.after.current, maximum: snapshot.after.maximum, temporary: snapshot.after.temporary };
     if (JSON.stringify(snapshot.before.resources) !== JSON.stringify(snapshot.after.resources)) update.resources = getPersistentCombatResources(recipient.profile.resources, snapshot.after.resources);
-    if (JSON.stringify(snapshot.before.inventory) !== JSON.stringify(snapshot.after.inventory) && snapshot.after.inventory) update.inventory = snapshot.after.inventory;
+    if (JSON.stringify(snapshot.before.inventory) !== JSON.stringify(snapshot.after.inventory) && snapshot.after.inventory) {
+      update.inventory = snapshot.after.inventory;
+      workingInventories?.set(recipient.key, update.inventory);
+    }
     if (update.hitPoints || update.resources || update.inventory) persistentUpdates.set(recipient.key, update);
   }
   return combat;

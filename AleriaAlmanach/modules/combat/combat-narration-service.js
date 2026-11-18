@@ -76,6 +76,7 @@ function enrichCombatNarrationRetrieval(retrieval = {}, facts = {}) {
         ruleResourceSnapshots: facts.ruleResourceSnapshots || [],
         ruleAbilitySnapshots: facts.ruleAbilitySnapshots || [],
         secondarySaves: facts.secondarySaves || [],
+        mountedHitChecks: facts.mountedHitChecks || [],
         followUpAttacks: facts.followUpAttacks || [],
         counterAttacks: facts.counterAttacks || [],
         sceneItemEvents: facts.sceneItemEvents || [],
@@ -126,6 +127,8 @@ function buildCombatNarrationQuery(facts = {}) {
     damage: facts.damage,
     resolutionMode: facts.attack?.resolutionMode || 'weapon-attack',
     saveSucceeded: facts.attack?.saveSucceeded ?? null,
+    ...(facts.mountedHitChecks?.length ? { mountedHitChecks: facts.mountedHitChecks.map(({ hitIndex, passive, dc, outcome }) =>
+      ({ hitIndex, passive, dc, outcome })) } : {}),
     targetHitPointsAfter: facts.targetSnapshot?.hitPointsAfter ?? null,
     targetMaximumHitPoints: facts.targetSnapshot?.maximumHitPoints ?? null,
     temporaryHitPointsBefore: facts.targetSnapshot?.temporaryHitPointsBefore ?? 0,

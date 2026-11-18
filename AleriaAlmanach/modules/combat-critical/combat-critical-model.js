@@ -4,9 +4,10 @@ import { grantCriticalTemporaryHitPoints } from './combat-critical-lifecycle.js'
 import { createWeaponDrop } from '../scene-items/scene-items-model.js';
 import { createPositionCondition } from '../combat-styles/martial-position-effects.js';
 import { refreshRuntimeCondition } from '../combat/combat-condition-lifecycle.js';
+import { getDismountSnapshot } from '../combat/combat-support-equipment.js';
 import { getStoredCriticalConsequences, getCommentCombatResolutionGroups } from '../combat/combat-resolution-tree.js';
 
-export function createCriticalConsequence(resolution, { encounter, roll, id, actor, target, usedConsequenceKeys, attack: selectedAttack } = {}) {
+export function createCriticalConsequence(resolution, { encounter, roll, id, actor, target, usedConsequenceKeys, attack: selectedAttack, usedWeaponId } = {}) {
   const criticalAttack = selectedAttack || getCriticalWeaponAttack(resolution);
   if (encounter?.criticalEffectsVersion !== 1 || !criticalAttack) return null;
   const failure = criticalAttack.criticalFailure === true;
@@ -24,7 +25,7 @@ export function createCriticalConsequence(resolution, { encounter, roll, id, act
   const result = { id, roll, version: CRITICAL_CONSEQUENCE_VERSION, dieSides: CRITICAL_CONSEQUENCE_DIE, kind: failure ? 'failure' : 'hit', name: effect.name,
     description: effect.description, actorId: affected.characterId, actorName: affected.name, encounterId: encounter.encounterId };
   if (effect.disarm) {
-    result.sceneItemEvent = affected.weaponUnavailable ? null : createWeaponDrop(affected, { id, encounterId: encounter.encounterId, reason: result.kind });
+    result.sceneItemEvent = createWeaponDrop(affected, { id, encounterId: encounter.encounterId, reason: result.kind, usedWeaponId });
     if (result.sceneItemEvent) return result;
     result.name = 'Gleichgewicht verloren';
     result.description = `${affected.weaponUnavailable ? 'Die Waffe liegt bereits außerhalb des Griffs.' : 'Körperwaffen bleiben erhalten.'} Im nächsten eigenen Beitrag: −1 auf Waffenangriffe und Kampftechniken.`;
@@ -45,6 +46,10 @@ export function createCriticalConsequence(resolution, { encounter, roll, id, act
     name: result.name, criticalConsequence: true,
     durationModel: { kind: 'actor-comments', remainingActorComments: 1, encounterId: encounter.encounterId } };
   if (roll > 10) result.condition = extendCriticalCondition(result.condition, effect, { actor, target, affected, kind: result.kind, roll });
+  if (effect.prone && affected.combat?.mounted) {
+    result.dismount = getDismountSnapshot(affected);
+    result.description += ' Die Figur fällt vom Reittier.';
+  }
   if (effect.temporaryHitPoints || effect.periodicHitPointLoss) result.hitPointBase = { current: affected.currentHitPoints,
     maximum: affected.maximumHitPoints, temporary: affected.temporaryHitPoints || 0 };
   if (roll > 10) result.condition.criticalPersistence = affected.persistence || null;
@@ -63,8 +68,12 @@ export function applyCriticalConsequencesForComment(states, comment) {
         const state = granted.state;
         if (granted.event) events.push(granted.event);
         const conditions = state.temporaryConditions || [];
+        const dismount = consequence.dismount;
+        const mountStillHeld = dismount && (!state.supportEquipment || state.supportEquipment.mountId === dismount.before.mountId);
         // Same named consequences refresh, rather than accumulating penalties.
-        states.set(consequence.actorId, { ...state, temporaryConditions: granted.condition.stanceGroup
+        states.set(consequence.actorId, { ...state,
+          ...(mountStillHeld ? { supportEquipment: { ...(state.supportEquipment || dismount.after), mountId: '' } } : {}),
+          temporaryConditions: granted.condition.stanceGroup
           ? refreshRuntimeCondition(conditions, granted.condition) : conditions
           .filter(condition => !condition.criticalConsequence || condition.name !== consequence.condition.name)
           .concat(granted.condition) });
