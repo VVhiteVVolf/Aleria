@@ -209,11 +209,13 @@ test('selected path passives apply only in their declared context and replace lo
   const duel = getCenyrClassActionModifiers(teulu, { technique: schwertdrache, weapon: { weaponType: 'sword' }, hostileOpponentCount: 1 });
   assert.equal(duel.attackBonus, 3);
   assert.equal(duel.damageBonus, 2);
-  assert.equal(duel.targetDefenseModifier, -1);
+  assert.deepEqual(duel.firstHitDefense, { id: 'schwertdrache-klingenbindung', name: 'Klingenbindung', modifier: -1 });
+  assert.equal(duel.targetDefenseModifier, undefined);
   const groupFight = getCenyrClassActionModifiers(teulu, { technique: schwertdrache, weapon: { weaponType: 'sword' }, hostileOpponentCount: 2 });
   assert.equal(groupFight.attackBonus, 0);
   assert.equal(groupFight.damageBonus, 2);
   assert.equal(groupFight.targetDefenseModifier, undefined);
+  assert.equal(groupFight.firstHitDefense, undefined);
 
   const risingTechnique = getCenyrClassProgression('teulu', 20).attackCatalog.find(technique => technique.combatStyleFormId === FORM_IDS.aufsteigender);
   const risingProfile = {
@@ -322,15 +324,17 @@ test('confirmed class bonuses remain conditional on class, level, style and weap
     attackBonus: -2, damageBonus: 2, criticalThreshold: 20, sources: [{ id: 'arthwyr-brutal-style', name: 'Brachialer Drachentanz' }]
   });
 
-  const teuluWeapon = getCharacterCreationTemplate('class', 'teulu').weapons[0];
+  const teuluWeapon = { ...getCharacterCreationTemplate('class', 'teulu').weapons[0], equipped: true };
   const teuluProfile = sanitizeCharacterCombatProfile({ templateSelections: { classId: 'teulu' }, progression: { level: 6 },
     weapons: [teuluWeapon], techniques: [technique] });
   const teuluAction = resolveCombatProfile({ id: 'teulu-test', name: 'Teulu', combatProfile: teuluProfile }, { actionId: `technique:${technique.id}` });
+  assert.equal(teuluAction.selectedAction.compatible, true);
   assert.equal(teuluAction.damageModifier, Math.floor((getWeaponDamageModifier(teuluProfile, teuluProfile.weapons[0]) + 2) / 2));
 
-  const helwyrWeapon = getCharacterCreationTemplate('class', 'helwyr').weapons[0];
+  const helwyrWeapon = { ...getCharacterCreationTemplate('class', 'helwyr').weapons[0], equipped: true };
   const helwyrProfile = sanitizeCharacterCombatProfile({ templateSelections: { classId: 'helwyr' }, progression: { level: 1 }, weapons: [helwyrWeapon] });
   const helwyrAction = resolveCombatProfile({ id: 'helwyr-test', name: 'Helwyr', combatProfile: helwyrProfile }, { actionId: `weapon:${helwyrWeapon.id}` });
+  assert.equal(helwyrAction.selectedAction.compatible, true);
   assert.equal(helwyrAction.attackModifier, getWeaponAttackModifier(helwyrProfile, helwyrProfile.weapons[0]) + 2);
 });
 

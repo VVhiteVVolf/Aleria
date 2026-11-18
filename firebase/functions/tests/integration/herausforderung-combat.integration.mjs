@@ -1,6 +1,8 @@
 import test, { after } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, writeFile } from 'node:fs/promises';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { randomUUID, createHash } from 'node:crypto';
 import { initializeApp } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
@@ -21,8 +23,10 @@ import { moneyTotal } from '../../src/generated/item-register/item-register-mone
 if (process.env.FIRESTORE_EMULATOR_HOST !== '127.0.0.1:8186') throw Error('Only the dedicated local demo Firestore emulator is allowed.');
 initializeApp({ projectId: 'demo-aleria-herausforderung' });
 const db = getFirestore(), run = randomUUID().slice(0, 8), admin = { uid: 'challenge-combat-narrator', token: { aleriaRole: 'admin' } };
-const source = JSON.parse(await readFile(new URL('../../../../.codex-temp/herausforderung/active-duel-readonly.json', import.meta.url), 'utf8'));
-const actors = JSON.parse(await readFile(new URL('../../../../.codex-temp/herausforderung/duel-profiles-readonly.json', import.meta.url), 'utf8'));
+const fixtureDirectory = process.env.ALERIA_DUEL_FIXTURES || fileURLToPath(new URL('../../../../.codex-temp/herausforderung/', import.meta.url));
+const resultFile = process.env.ALERIA_DUEL_TEST_RESULT || join(fixtureDirectory, 'combat-integration-result.json');
+const source = JSON.parse(await readFile(join(fixtureDirectory, 'active-duel-readonly.json'), 'utf8'));
+const actors = JSON.parse(await readFile(join(fixtureDirectory, 'duel-profiles-readonly.json'), 'utf8'));
 const ylva = actors.find(actor => actor.name === 'Ylva Wolfshorn'), gais = actors.find(actor => actor.name === 'Gais Wyrm'), observer = actors.find(actor => actor.name === 'Gawain Draig');
 assert.ok(ylva && gais && observer);
 assert.ok(getActiveCombatEncounter(source.comments)?.participants.has(ylva.id));
@@ -235,7 +239,7 @@ test('challenge damage validates concentration saves and breaks linked effects o
 });
 
 after(async () => {
-  await writeFile(new URL('../../../../.codex-temp/herausforderung/combat-integration-result.json', import.meta.url), JSON.stringify({ passed: passed.length === 13,
+  await writeFile(resultFile, JSON.stringify({ passed: passed.length === 13,
     environment: 'isolated Firestore emulator at 127.0.0.1:8186', project: 'demo-aleria-herausforderung', sourceSceneReadAt: source.readAt,
     sourceCommentCount: source.comments.length, liveSceneWrites: 0, checks: passed }, null, 2));
   await db.terminate();

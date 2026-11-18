@@ -2,8 +2,10 @@
 // (crests, previews, production images and explicit original downloads) stay live.
 const SOURCE_ARCHIVE_ROOTS = [
   'AleriaAlmanach/docs/art/comment-action-icons-20261117/',
-  'AleriaAlmanach/assets/loading-screen/source/',
+  'AleriaAlmanach/assets/loading-screen/source/highland-road-v5.png',
+  'AleriaAlmanach/assets/loading-screen/source/travellers-stride-v5.png',
   'AleriaAlmanach/assets/loading-screen/journey-v5-prompts.json',
+  'AleriaAlmanach/docs/combat/WAFFENGATTUNGEN_SPIELTEST.md',
   'AleriaAlmanach/docs/art/tirfelyn-hof-20261115/',
   'AleriaAlmanach/docs/art/rheinallt-20261115/',
   'AleriaAlmanach/docs/art/register-navigation-20261113/',
