@@ -1,4 +1,4 @@
-﻿// Comment submit flow.
+// Comment submit flow.
 // Keeps save, fallback, and post-save reload behavior separate from form rendering.
 
 async function submitComment() {
@@ -8,6 +8,7 @@ async function submitComment() {
   const errEl = document.getElementById('cf-error');
   const btn   = document.getElementById('cf-submit');
   const threadId = getCurrentCommentThreadId();
+  const insertAfterId = _commentInsertAfterId;
 
   let isNarrator = _commentMode === 'narrator';
   let name, title, portrait;
@@ -56,12 +57,14 @@ async function submitComment() {
   }
   commentMetadata.commentKind = normalizeCommentKind(_commentKind, isNarrator);
   commentMetadata.commentSegments = commentSegments.map(({ clientSegmentId, ...segment }) => segment);
-  commentMetadata.orderKey = getNextCommentOrderKey(threadId, _commentInsertAfterId);
+  commentMetadata.orderKey = getNextCommentOrderKey(threadId, insertAfterId);
 
   if (!text) { errEl.textContent = 'Bitte einen Text schreiben.'; errEl.style.display='block'; return; }
   if (text.length > COMMENT_MAX_LENGTH) { errEl.textContent = `Bitte bei maximal ${COMMENT_MAX_LENGTH} Zeichen bleiben.`; errEl.style.display='block'; return; }
   if (!threadId) { errEl.textContent = 'Der Kommentar konnte keinem Eintrag zugeordnet werden.'; errEl.style.display='block'; return; }
   if (_commentSubmitInFlight) return;
+  const draftId = getCommentDraftId();
+  persistCommentDraft(true);
   const automaticSceneDate = globalThis.AleriaSceneDateDefaults?.ensureForCurrentThread?.();
   if (automaticSceneDate && globalThis.AleriaWorldDateModel?.isValid?.(automaticSceneDate)) {
     commentMetadata.sceneStartDateAleria = globalThis.AleriaWorldDateModel.normalize(automaticSceneDate);
@@ -75,9 +78,12 @@ async function submitComment() {
   let backend = null;
   let saveConfirmed = false;
 
+  let requestModule;
   try {
-    const requestModule = await import('./comments-mechanical-request.js');
-    const requestState = requestModule.mechanicalCommentRequest(threadId, JSON.stringify({ name, title, portrait, text, commentSegments, actor: commentMetadata.characterId }));
+    requestModule = await import('./comments-mechanical-request.js?v=20261119-drafts-v1');
+    const signature = JSON.stringify({ name, title, portrait, text, actor: commentMetadata.characterId,
+      segments: commentMetadata.commentSegments, insertAfterId });
+    const requestState = requestModule.mechanicalCommentRequest(threadId, signature, draftId);
     if (requestState.metadata) {
       commentMetadata = structuredClone(requestState.metadata); commentSegments = commentMetadata.commentSegments || [];
     } else {
@@ -135,9 +141,9 @@ async function submitComment() {
         }
         if (combatResult.published) {
           saveConfirmed = true;
-          requestModule.completeMechanicalCommentRequest(threadId);
-          clearCommentDraft(threadId);
-          closeCommentForm();
+          requestModule.completeMechanicalCommentRequest(threadId, draftId);
+          clearCommentDraft(threadId, draftId);
+          closeCommentForm({ preserveDraft: false });
           requestCommentAutoScroll(threadId);
           await loadCommentsIntoPage(threadId, true, { page: 'last' });
           if (typeof refreshCurrentModuleCommenterHighlights === 'function') refreshCurrentModuleCommenterHighlights();
@@ -159,6 +165,9 @@ async function submitComment() {
       .some(segment => segment?.skillResolution?.resolutionId);
     const hasSceneItems = commentSegments.some(segment => segment.kind === 'sceneitem');
     if (hasSceneItems && (!backend?.placeSceneItem || backend._localFallback)) throw new Error('Gegenstände können nur mit der gemeinsamen Online-Szene gespeichert werden. Bitte Verbindung und Veröffentlichung prüfen.');
+    if (hasProfileTransaction || hasSkillTransaction || hasSceneItems) {
+      requestModule.rememberMechanicalCommentRequest(threadId, draftId, requestState);
+    }
     const saveResult = hasSceneItems
       ? await backend.placeSceneItem(threadId, { operationId: commentSegments.find(segment => segment.kind === 'sceneitem').sceneItemOperationId,
         commentSegments: commentMetadata.commentSegments, sceneStartDateAleria: commentMetadata.sceneStartDateAleria })
@@ -168,15 +177,15 @@ async function submitComment() {
         ? await backend.addSkillComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata)
         : await backend.addComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata));
     saveConfirmed = true;
-    requestModule.completeMechanicalCommentRequest(threadId);
+    requestModule.completeMechanicalCommentRequest(threadId, draftId);
     if (Array.isArray(saveResult?.profileUpdates) && saveResult.profileUpdates.length) {
       document.dispatchEvent(new CustomEvent('aleria:combat-profile-committed', {
         detail: { updates: saveResult.profileUpdates }
       }));
     }
-    clearCommentDraft(threadId);
-    closeCommentForm();
-    await loadCommentsIntoPage(threadId, true, _commentInsertAfterId ? {} : { page: 'last' });
+    clearCommentDraft(threadId, draftId);
+    closeCommentForm({ preserveDraft: false });
+    await loadCommentsIntoPage(threadId, true, insertAfterId ? {} : { page: 'last' });
     if (typeof refreshCurrentModuleCommenterHighlights === 'function') refreshCurrentModuleCommenterHighlights();
     loadSidebarFeed(); // refresh activity feed
     btn.textContent = 'Eintragen';
@@ -185,8 +194,8 @@ async function submitComment() {
     if (saveConfirmed) {
       // Rendering and feed refresh happen after the authoritative write. They
       // must never turn that success into a retry or a second local write.
-      clearCommentDraft(threadId);
-      closeCommentForm();
+      clearCommentDraft(threadId, draftId);
+      closeCommentForm({ preserveDraft: false });
       btn.disabled = false;
       btn.textContent = 'Eintragen';
       _commentSubmitInFlight = false;
@@ -219,9 +228,10 @@ async function submitComment() {
           await localBackend.addComment(threadId, name, title, portrait, text, deleteCode, isNarrator, commentMetadata);
         }
         showCommentFallbackNotice();
-        clearCommentDraft(threadId);
-        closeCommentForm();
-        await loadCommentsIntoPage(threadId, true, _commentInsertAfterId ? {} : { page: 'last' });
+        requestModule?.completeMechanicalCommentRequest(threadId, draftId);
+        clearCommentDraft(threadId, draftId);
+        closeCommentForm({ preserveDraft: false });
+        await loadCommentsIntoPage(threadId, true, insertAfterId ? {} : { page: 'last' });
         btn.disabled = false;
         btn.textContent = 'Eintragen';
         _commentSubmitInFlight = false;

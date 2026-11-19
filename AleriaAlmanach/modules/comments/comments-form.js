@@ -1,4 +1,4 @@
-﻿// Comment form dialog lifecycle.
+// Comment form dialog lifecycle.
 let _commentFormInitialRenderToken = 0;
 
 function isCommentFormActorsReady() {
@@ -37,11 +37,15 @@ function scheduleCommentFormInitialRender(token) {
 }
 
 async function openCommentForm(options = {}) {
+  if (_commentSubmitInFlight) return false;
   const initialRenderToken = ++_commentFormInitialRenderToken;
   const thread = getCurrentCommentThread();
   const currentThreadId = () => typeof getCurrentCommentThreadId === 'function'
     ? getCurrentCommentThreadId() : String(getCurrentCommentThread()?.threadId || '');
   const threadId = currentThreadId();
+  if (typeof resetCommentDraftIdentity === 'function') resetCommentDraftIdentity();
+  if (typeof commentSectionEditor !== 'undefined') commentSectionEditor.reset();
+  if (typeof commentDraftLibrary !== 'undefined') commentDraftLibrary.reset();
   if (typeof setCommentPreviewPanelState === 'function') setCommentPreviewPanelState('split');
   _commentInsertAfterId = null;
   _portraitUrl = null;
@@ -89,17 +93,18 @@ async function openCommentForm(options = {}) {
   document.getElementById('cf-preview')?.replaceChildren();
   setCommentFormCounter();
   setCommentFormActorsLoading(true);
-  activateDialog('comment-form-overlay', { initialFocus: '[data-action="close-comment-form"]' });
+  if (!isCommentFormOpen()) activateDialog('comment-form-overlay', { initialFocus: '[data-action="close-comment-form"]' });
   if (typeof initCommentPreviewSplitter === 'function') initCommentPreviewSplitter();
   if (typeof applyCommentPreviewLayout === 'function') applyCommentPreviewLayout();
   try {
     if (typeof loadSceneActorData === 'function') await loadSceneActorData();
     if (initialRenderToken !== _commentFormInitialRenderToken || !isCommentFormOpen() || threadId !== currentThreadId()) return false;
-    restoreCommentDraft({ render: false });
+    restoreCommentDraft({ render: false, ...(options.draft ? { draft: options.draft } : {}) });
     // A normal opening explicitly opts out of challenge reply placement.
     _commentSegments.forEach(segment => { segment.challengeReplyToCommentId = ''; });
     setCommentFormActorsLoading(false);
     options.afterReady?.();
+    if (options.draft) persistCommentDraft(true);
     scheduleCommentFormInitialRender(initialRenderToken);
     return true;
   } catch (error) {
@@ -114,8 +119,8 @@ async function openCommentForm(options = {}) {
   }
 }
 
-function openCommentFormAfter(commentId) {
-  return openCommentForm({ afterReady() {
+function openCommentFormAfter(commentId, options = {}) {
+  return openCommentForm({ ...options, afterReady() {
     _commentInsertAfterId = String(commentId || '');
     const title = document.getElementById('comment-form-title');
     if (title) title.textContent = '*  Nachträglich antworten  *';
@@ -146,7 +151,9 @@ function openCommentFormForSkillChallenge(challenge, skillId = '') {
   } });
 }
 
-function closeCommentForm() {
+function closeCommentForm({ preserveDraft = true } = {}) {
+  if (preserveDraft && _commentSubmitInFlight) return;
+  if (preserveDraft) persistCommentDraft(true);
   _commentFormInitialRenderToken += 1;
   window.AleriaCombat?.releaseComposer?.(document.getElementById('cf-segment-list'));
   deactivateDialog('comment-form-overlay');

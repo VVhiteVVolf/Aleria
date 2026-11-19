@@ -26,6 +26,7 @@ function composeFixture() {
   layout.before = node => { loadingNode = node; };
   const context = vm.createContext({ ...dom, console, CHARACTER_IMAGE_SET_DEFAULT_ID: 'default',
     SCENE_TIME_DEFAULT_SEGMENT_SECONDS: 20, COMMENT_LANGUAGE_DEFAULT: 'common',
+    _commentSubmitInFlight: false,
     requestAnimationFrame: callback => callback(), setTimeout: callback => callback(),
     getCurrentCommentThread: () => ({ formTitle: 'Scene' }), getCurrentCommentThreadId: () => threadId,
     loadSceneActorData() { const demand = deferred(); demands.push(demand); return demand.promise.then(() => { context.actorsReady = true; }); },
@@ -87,7 +88,7 @@ test('scheduled draft persistence does not erase the saved draft while actors ar
   let ready = true, storageCalls = 0, scheduled;
   const context = vm.createContext({ console, isCommentFormOpen: () => true, isCommentFormActorsReady: () => ready,
     setTimeout: callback => { scheduled = callback; return 1; }, clearTimeout() {}, _commentDraftTimer: null,
-    getCommentDraftKey: () => { storageCalls++; return 'key'; },
+    getCommentDraftKey: () => 'key',
     localStorage: { removeItem() { storageCalls++; }, setItem() { storageCalls++; } } }); context.window = context;
   vm.runInContext(source('comments/comments-draft.js'), context);
   context.persistCommentDraft(); ready = false; scheduled(); context.persistCommentDraft(true);

@@ -1,4 +1,4 @@
-import { getAnimalSpeechError, isAnimalSpeechSegment } from '../character-development/development-animal-speech.js';
+import { hasAnimalSpeechTrait, isAnimalSpeechSegment } from '../character-development/development-animal-speech.js?v=20261119-animal-speech-v1';
 import {
   buildSkillRollNotation,
   classifySkillCheck,
@@ -22,7 +22,7 @@ import { getVoluntaryCombatActionBlock } from '../combat/combat-action-permissio
 import { rollProfileD20, naturalRollReceipt } from '../combat/combat-natural-roll-policy.js';
 import { getCombatRuleDistance } from '../combat/combat-rule-distance.js';
 
-export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-10';
+export const SKILL_EVALUATION_RULES_VERSION = 'skill-evaluation-11';
 
 function createResolutionId() {
   return globalThis.crypto?.randomUUID?.() || `skill-evaluation-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
@@ -108,12 +108,8 @@ export function getSkillRollContext({ actor, settings: sourceSettings, challenge
   }).concat(buildSkillAuraApplications(sources, checkType, skill.profile));
   markCombatRuleApplications(preApplications, usedRuleFrequencyKeys);
   const preEffects = mergeCombatRuleEffects(preApplications);
-  const animalSpeech = isAnimalSpeechSegment({ commentKind: options.commentKind });
-  if (animalSpeech) {
-    const error = getAnimalSpeechError(skill.profile);
-    if (error) throw new Error(error);
-  }
-  const animalSpeechAdvantage = animalSpeech && settings.skillId === 'animal-handling';
+  const animalSpeechAdvantage = settings.skillId === 'animal-handling'
+    && isAnimalSpeechSegment({ commentKind: options.commentKind }) && hasAnimalSpeechTrait(skill.profile);
   const profileRollModes = getCheckProfileRollModes(skill.profile, skill.definition, getActiveRollModes(skill.profile, 'skillRollMode'))
     .concat(animalSpeechAdvantage ? ['advantage'] : []);
   const challengeRollMode = reaction?.rollMode || 'normal';

@@ -690,12 +690,12 @@ var AleriaGroupAdventures = (() => {
     ["robuste-haut", "Robuste Haut", "Besonders widerstandsf\xE4hige Haut als k\xF6rperliche Eigenheit: +1 RK. Narben oder Hautbeschaffenheit schm\xE4lern nicht automatisch die Ausdrucksf\xE4higkeit.", { armorClass: 1 }, 3]
   ];
 
-  // modules/character-development/development-animal-speech.js
+  // modules/character-development/development-animal-speech.js?v=20261119-animal-speech-v1
   var ANIMAL_SPEECH_TRAIT_DEFINITIONS = Object.freeze([
     [
       "kann-mit-tieren-sprechen",
       "Kann mit Tieren sprechen",
-      "Du kannst dich mit Tieren in Tiersprache verst\xE4ndigen. Die Tiersprache-Blase gibt dir Vorteil auf Mit Tieren umgehen. Bei Rede, Fl\xFCstern und Rufen bleibt die Probe regul\xE4r. Ob ein Tier sich beruhigen oder \xFCberzeugen l\xE4sst, entscheidet weiterhin die Probe.",
+      "Wenn du in Tiersprache mit einem Tier sprichst, erh\xE4ltst du Vorteil auf Mit Tieren umgehen. Ob sich das Tier beruhigen oder \xFCberzeugen l\xE4sst, entscheidet die Probe.",
       {},
       3,
       { tags: "Begabung \xB7 Sprache \xB7 Tierverbundenheit" }

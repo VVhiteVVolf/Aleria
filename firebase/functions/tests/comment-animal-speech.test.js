@@ -5,7 +5,6 @@ import { commitNarrativeCommentOperation } from '../src/comments/commit-narrativ
 import { commitSkillCommentOperation } from '../src/mechanics/commit-skill-comment.js';
 import { commitHerausforderungOperation } from '../src/mechanics/commit-herausforderung.js';
 import { person, actorId } from '../../../AleriaAlmanach/tests/fixtures/graded-challenge-fixtures.mjs';
-import { assertCommentAnimalSpeech } from '../src/comments/comment-animal-speech.js';
 import { DEVELOPMENT_TRAITS } from '../src/generated/character-development/development-traits.js';
 import { ANIMAL_SPEECH_TRAIT_ID } from '../src/generated/character-development/development-animal-speech.js';
 
@@ -23,20 +22,25 @@ test('ordinary speech does not require the animal speech trait', async () => {
   assert(db.data.has(`comments/${result.id}`));
 });
 
-test('narrative Tiersprache rejects a missing or inactive trait without any writes', async () => {
+test('narrative Tiersprache supports characters and creatures without an active trait', async () => {
   for (const quirks of [[], [{ ...trait, active: false }]]) {
-    const db = dbFor(quirks), before = structuredClone([...db.data]);
-    await assert.rejects(commitNarrativeCommentOperation(request(), { database: db, now: 100 }), /Merkmal/);
-    assert.deepEqual([...db.data], before);
+    for (const type of ['character', 'creature']) {
+      const collection = type === 'creature' ? 'creatures' : 'characters';
+      const record = { name: 'Lokale Testfigur', combatProfile: { quirks } };
+      const db = database({ [`${collection}/speaker`]: record });
+      const input = request(type === 'creature' ? 'tiersprache' : 'animal');
+      if (type === 'creature') {
+        const creature = { actorType: type, creatureId: 'speaker' };
+        Object.assign(input.data.metadata, creature);
+        Object.assign(input.data.metadata.commentSegments[0], creature);
+      }
+      const result = await commitNarrativeCommentOperation(input, { database: db, now: 100 });
+      const comment = db.data.get(`comments/${result.id}`);
+      assert.equal(comment.actorType, type === 'creature' ? type : '');
+      assert.equal(comment.commentKind, input.data.metadata.commentKind);
+      assert.deepEqual(db.data.get(`${collection}/speaker`), record);
+    }
   }
-});
-
-test('the server reads the actual speaker and ignores a forged trait in the request', async () => {
-  const db = dbFor([]), input = request();
-  input.data.metadata.commentSegments[0].combatProfile = { quirks: [trait] };
-  await assert.rejects(commitNarrativeCommentOperation(input, { database: db, now: 100 }), /Merkmal/);
-  const alias = request('tiersprache');
-  await assert.rejects(commitNarrativeCommentOperation(alias, { database: db, now: 100 }), /Merkmal/);
 });
 
 test('a valid animal speech comment retains its text and leaves the speaker profile unchanged', async () => {
@@ -44,22 +48,6 @@ test('a valid animal speech comment retains its text and leaves the speaker prof
   const result = await commitNarrativeCommentOperation(request(), { database: db, now: 100 });
   assert.equal(db.data.get(`comments/${result.id}`).commentKind, 'animal');
   assert.deepEqual(db.data.get('characters/speaker'), before);
-  assert.equal(db.data.size, 2);
-});
-
-test('the mechanical skill endpoint also rejects Tiersprache without its actual trait', async () => {
-  const db = dbFor([]), input = request();
-  input.data.metadata.commentSegments[0].skillResolution = { resolutionId: 'local-skill', actorId: 'speaker', skillId: 'animal-handling' };
-  await assert.rejects(commitSkillCommentOperation(input, { database: db, now: 100 }), /Merkmal/);
-  assert.equal(db.data.size, 1);
-});
-
-test('mixed speakers are checked separately and repeated valid references are read only once', async () => {
-  const db = dbFor([trait]);
-  db.data.set('characters/other', { combatProfile: { quirks: [] } });
-  await assert.rejects(db.runTransaction(transaction => assertCommentAnimalSpeech({ database: db, transaction, metadata: {
-    commentSegments: [{ kind: 'animal', characterId: 'speaker' }, { kind: 'animal', characterId: 'other' }]
-  } })), /Merkmal/);
   assert.equal(db.data.size, 2);
 });
 
@@ -102,7 +90,7 @@ test('a failed challenge remains open and the server verifies Tiersprache advant
   assert.deepEqual(db.data.get(`characters/${actorId}`), original);
 });
 
-for (const kind of ['speech', 'whisper', 'shout']) test(`server accepts ordinary animal handling with ${kind} without the speech trait`, async () => {
+for (const kind of ['speech', 'whisper', 'shout', 'animal']) test(`server accepts ordinary animal handling with ${kind} without the speech trait`, async () => {
   const figure = person(actorId); figure.combatProfile.quirks = [];
   figure.combatProfile.skills = [{ name:'Mit Tieren umgehen', attributeKey:'wisdom', proficiency:'trained' }];
   const db = database({ [`characters/${actorId}`]:figure });
@@ -115,10 +103,12 @@ for (const kind of ['speech', 'whisper', 'shout']) test(`server accepts ordinary
   const response = await commitSkillCommentOperation({ auth:{ uid:'player', token:{} }, data:{
     entryId:'local-scene', charName:figure.name, text:'Eine ruhige Stimme.', metadata:{ characterId:actorId,
       commentSegments:[{ kind, commentKind:kind, characterId:actorId, mechanicMode:'skill', skillId:'animal-handling', text:'Eine ruhige Stimme.',
+        combatProfile: { quirks: [trait] },
         skillTargetChallengeId:`herausforderung:${created.id}:calm`,
-        skillResolution:{ resolutionId:'local-roll', actorId, actorPersistence:{ kind:'character', recordId:actorId }, natural:10, diceResults:[10] }
+        skillResolution:{ resolutionId:'local-roll', actorId, actorPersistence:{ kind:'character', recordId:actorId }, natural:10, diceResults:[10], animalSpeechAdvantage: true }
       }]
     }
   } }, { database:db, now:200 });
   assert.equal(response.mechanics.commentSegments[0].skillResolution.rollMode, 'normal');
+  assert.equal(response.mechanics.commentSegments[0].skillResolution.animalSpeechAdvantage, undefined);
 });

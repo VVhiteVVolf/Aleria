@@ -44,18 +44,15 @@ ohne Mutation der Kommentare. Fehlende Anker verlieren keine Beiträge.
 „Mit Tieren umgehen“ ist bei Rede, Flüstern und Rufen eine reguläre Probe.
 Der Standardzugang einer entsprechenden Herausforderung ist Rede.
 
-Das neue Merkmal `development-trait-kann-mit-tieren-sprechen` heißt
-„Kann mit Tieren sprechen“, kostet 3 Entwicklungspunkte und wird durch die
-bestehende Charakterentwicklung ausgewählt. Es wird niemandem automatisch
-zugewiesen. Nur ein aktives Merkmal mit dieser gespeicherten Identität erlaubt
-Tiersprache. In der Tiersprache-Blase gibt es Vorteil auf „Mit Tieren umgehen“;
-die übrigen Blasen erhalten diesen Vorteil nicht.
+Charaktere und Kreaturen können die Tiersprache-Blase verwenden. Das aktive
+Merkmal `development-trait-kann-mit-tieren-sprechen` gibt in dieser Blase
+Vorteil auf „Mit Tieren umgehen“. Es kostet 3 Entwicklungspunkte und ist über
+die Charakterentwicklung auswählbar.
 
-Die gemeinsame Auflösung (`skill-evaluation-8`) verrechnet diesen Vorteil mit
-den bestehenden Vor-/Nachteilen. Der Server liest die tatsächliche Figurenakte
-für normale, Fertigkeits- und Kampfbeiträge. Mitgesandte Traitkopien ersetzen
-diese Prüfung nicht. Die Würfelauswertung wird serverseitig erneut geprüft;
-die tatsächliche Tiersprache-Wirkung steht im gespeicherten Beleg.
+Die gemeinsame Auflösung (`skill-evaluation-11`) verrechnet diesen Vorteil mit
+den bestehenden Vor- und Nachteilen. Die serverseitige Probenauswertung
+ermittelt den Bonus aus der tatsächlichen Figuren- oder Kreaturenakte und
+speichert den wirksamen Vorteil im Beleg.
 
 ## Prüfung und begrenzte Onlinekorrekturen
 

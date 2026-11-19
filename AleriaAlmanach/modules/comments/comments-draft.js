@@ -1,8 +1,25 @@
-﻿// Comment draft persistence.
-// Owns local draft serialization, restore, cleanup, and clearing.
+// Comment draft persistence.
+// Owns the editor snapshot used for automatic and explicitly saved drafts.
+let _commentDraftId = '';
+
+function resetCommentDraftIdentity() {
+  clearTimeout(_commentDraftTimer);
+  _commentDraftId = '';
+}
+
+function getCommentDraftId() {
+  _commentDraftId ||= globalThis.crypto?.randomUUID?.() || `draft-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  return _commentDraftId;
+}
+
+function commentDraftHasContent(draft) {
+  return !!(draft.text.trim() || draft.name.trim() || draft.title.trim() || draft.segments.length > 1
+    || draft.segments.some(segment => segment.sceneItemDraft || segment.text.trim() || segment.kind !== 'speech'));
+}
 
 function getCommentDraftPayload() {
   return {
+    draftId: getCommentDraftId(),
     mode: _commentMode,
     commentKind: _commentKind,
     selectedCharId: _selectedCharId,
@@ -14,6 +31,7 @@ function getCommentDraftPayload() {
     text: document.getElementById('cf-text')?.value || '',
     segments: _commentSegments.map(segment => ({
       kind: segment.kind,
+      ...(segment.templateVoiceChoice ? { templateVoiceChoice: true } : {}),
       actionIconId: String(segment.actionIconId || '').slice(0, 40),
       challengeReplyToCommentId: String(segment.challengeReplyToCommentId || '').slice(0, 200),
       ...(segment.kind === 'foreignvoice' ? AleriaCommentForeignVoice.normalize(segment) : {}),
@@ -62,14 +80,16 @@ function getCommentDraftPayload() {
 function persistCommentDraft(immediate = false) {
   if (!isCommentFormOpen()) return;
   if (typeof isCommentFormActorsReady === 'function' && !isCommentFormActorsReady()) return;
+  const key = getCommentDraftKey();
+  if (!key) return;
 
   const run = () => {
+    if (!isCommentFormOpen()) return;
     if (typeof isCommentFormActorsReady === 'function' && !isCommentFormActorsReady()) return;
+    if (key !== getCommentDraftKey()) return;
     try {
-      const key = getCommentDraftKey();
-      if (!key) return;
       const payload = getCommentDraftPayload();
-      if (!payload.text && !payload.name && !payload.title && !payload.selectedCharId && !payload.manualMode && !payload.segments.some(segment => segment.sceneItemDraft)) {
+      if (!commentDraftHasContent(payload) && !payload.selectedCharId && !payload.manualMode) {
         localStorage.removeItem(key);
         showCommentDraftNote('');
         return;
@@ -91,11 +111,14 @@ function persistCommentDraft(immediate = false) {
   _commentDraftTimer = setTimeout(run, 180);
 }
 
-function clearCommentDraft(threadId = getCurrentCommentThreadId()) {
+function clearCommentDraft(threadId = getCurrentCommentThreadId(), draftId = '') {
   clearTimeout(_commentDraftTimer);
   try {
     const key = getCommentDraftKey(threadId);
-    if (key) localStorage.removeItem(key);
+    if (key) {
+      const savedId = draftId && JSON.parse(localStorage.getItem(key))?.draftId;
+      if (!savedId || savedId === draftId) localStorage.removeItem(key);
+    }
   } catch (e) {
     console.warn('comment draft clear failed:', e);
   }
@@ -131,11 +154,9 @@ function cleanupOldCommentDrafts(maxAgeDays = 30) {
 function restoreCommentDraft(options = {}) {
   try {
     const key = getCommentDraftKey();
-    if (!key) return false;
-    const raw = localStorage.getItem(key);
-    if (!raw) return false;
-    const draft = JSON.parse(raw);
+    const draft = options.draft || (key ? JSON.parse(localStorage.getItem(key)) : null);
     if (!draft || typeof draft !== 'object') return false;
+    if (typeof draft.draftId === 'string' && /^[\w-]{1,80}$/.test(draft.draftId)) _commentDraftId = draft.draftId;
 
     setRichEditorContent('cf-text', String(draft.text || ''));
     const hasSegmentDraft = Array.isArray(draft.segments) && draft.segments.length > 0;
@@ -154,6 +175,7 @@ function restoreCommentDraft(options = {}) {
           sceneItemDraft: segment.sceneItemDraft,
           sceneItemOperationId: segment.sceneItemOperationId,
           imageSetId: segment.imageSetId,
+          templateVoiceChoice: segment.templateVoiceChoice,
           actionIconId: segment.actionIconId,
           challengeReplyToCommentId: segment.challengeReplyToCommentId,
           skillId: segment.skillId,

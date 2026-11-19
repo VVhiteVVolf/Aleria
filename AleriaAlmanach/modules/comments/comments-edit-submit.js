@@ -9,10 +9,6 @@ async function submitEditComment() {
   if (text.length > COMMENT_MAX_LENGTH) { errEl.textContent = `Bitte bei maximal ${COMMENT_MAX_LENGTH} Zeichen bleiben.`; errEl.style.display='block'; return; }
 
   let charName, charTitle, portrait, narrator;
-  for (const segment of _editCommentSegments.filter(item => item.kind === 'animal')) {
-    const speechError = window.AleriaSkillChecks?.getAnimalSpeechError?.(getCommentSegmentActor(segment, true));
-    if (speechError) { errEl.textContent = speechError; errEl.style.display = 'block'; return; }
-  }
   let commentMetadata = {};
   if (_editMode === 'narrator') {
     charName = 'Erzähler'; charTitle = ''; portrait = null; narrator = true;

@@ -20,9 +20,12 @@ const scripts = [
   'comments/comments-form-state.js',
   'comments/comments-toolbar.js',
   'comments/comments-segment-base.js',
+  'comments/comment-editor-appearance.js',
   'comments/comments-foreign-voice-ui.js',
+  'comments/comments-section-editor.js',
   'comments/comments-segments.js',
   'comments/comments-draft.js',
+  'comments/comments-draft-library.js',
   'comments/comments-preview.js',
   'comments/comments-richtext.js',
   'comments/comments-form.js',
@@ -42,7 +45,7 @@ const scripts = [
 export const FOREIGN_VOICE_FIXTURE_SOURCES = [
   'AleriaAlmanach.html', 'styles.css', 'styles/modal.css', 'styles/comments.css',
   'styles/comment-bubbles.css', 'styles/comment-character-picker.css',
-  'styles/comment-composer.css', 'styles/comments-foreign-voice.css',
+  'styles/comment-composer.css', 'styles/comment-section-editor.css', 'styles/comment-editor-appearance.css', 'styles/comments-foreign-voice.css',
   'modules/comments/comments-mechanical-request.js',
   ...scripts.map(path => `modules/${path}`)
 ];
@@ -71,6 +74,7 @@ export async function buildForeignVoiceFixture() {
     <link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./styles/modal.css">
     <link rel="stylesheet" href="./styles/comments.css"><link rel="stylesheet" href="./styles/comment-bubbles.css">
     <link rel="stylesheet" href="./styles/comment-character-picker.css"><link rel="stylesheet" href="./styles/comment-composer.css">
+    <link rel="stylesheet" href="./styles/comment-section-editor.css"><link rel="stylesheet" href="./styles/comment-editor-appearance.css">
     ${foreignStyles.join('\n')}
     <style>body{margin:0;background:#f4eedf}#fixture-controls,#fixture-feed{max-width:1080px;margin:20px auto;padding:16px}#fixture-feed{background:#f8f4e9}#fixture-controls button{padding:10px 16px}</style>
     </head><body><div id="fixture-controls"><button data-action="open-comment-form">Beitrag verfassen</button></div><main id="fixture-feed"></main>
@@ -89,16 +93,18 @@ export async function buildForeignVoiceFixture() {
           emotes:[{label:'Winken',img:'./public/assets/comment-icons/performance-button.png'}]}],
         activeImageSetId:'standard'
       };
+      const fixtureCreature = { ...fixtureCharacter, id: 'comment-editor-test-creature', name: 'Bryn · Testkreatur', entityType: 'creature' };
       window.fixtureSaved=JSON.parse(localStorage.getItem('foreign-voice-fixture-saved')||'[]');
       window.fixtureStatuses=[];
-      function getAvailableCommentCharacters(){return [fixtureCharacter]}
-      function getAvailableCommentCharacterById(id){return id===fixtureCharacter.id?fixtureCharacter:null}
+      window.fixtureThreadId = 'isolated-foreign-voice-browser';
+      function getAvailableCommentCharacters(){return [fixtureCharacter,fixtureCreature]}
+      function getAvailableCommentCharacterById(id){return getAvailableCommentCharacters().find(actor=>actor.id===id)||null}
       function getAvailableCommentCharacterByName(name){return name===fixtureCharacter.name?fixtureCharacter:null}
       function normalizeCharacterPlayerOwner(){return ''}
       function getCharacterPlayerOwnerLabel(){return ''}
       function isCharacterCommentedInCurrentModule(){return false}
-      function getCurrentCommentThreadId(){return 'isolated-foreign-voice-browser'}
-      function getCurrentCommentThread(){return {threadId:getCurrentCommentThreadId(),formTitle:'Fremde Stimme · Szenenbeitrag'}}
+      function getCurrentCommentThreadId(){return window.fixtureThreadId}
+      function getCurrentCommentThread(){return {threadId:getCurrentCommentThreadId(),formTitle:'Szenenbeitrag'}}
       async function loadSceneActorData(){}
       function getNextCommentOrderKey(){return fixtureSaved.length+1}
       function getCommentShowcaseItem(){return null}

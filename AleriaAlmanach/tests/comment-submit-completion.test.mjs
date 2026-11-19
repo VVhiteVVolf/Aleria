@@ -12,6 +12,7 @@ function harness({ refreshFails = false, saveFails = false, published = false } 
   const context = vm.createContext({
     console: { warn() {} }, document: { getElementById: element, dispatchEvent() {} }, structuredClone, fixtureRequestModule: requestModule,
     window: { AleriaCombat: { handleSubmission: async () => ({ handled: published, published }) } },
+    getCommentDraftId: () => 'fixture-draft', persistCommentDraft() {},
     _commentMode: 'narrator', _commentKind: 'speech', _selectedCharId: '', _manualMode: false,
     _commentInsertAfterId: null, _commentSubmitInFlight: false, COMMENT_MAX_LENGTH: 20000, COMMENT_DELETE_CODE: 'test',
     syncCommentSegmentsToLegacyText() {}, buildCommentSegmentsForSave: () => [{ text: 'Beitrag', kind: 'speech' }],
@@ -23,7 +24,7 @@ function harness({ refreshFails = false, saveFails = false, published = false } 
     showCommentFallbackNotice() {}, showAppStatus(message) { calls.push(['status', message]); }, requestCommentAutoScroll() {},
     globalThis: {}
   });
-  vm.runInContext(source.replace("await import('./comments-mechanical-request.js')", 'fixtureRequestModule'), context);
+  vm.runInContext(source.replace(/await import\('\.\/comments-mechanical-request\.js[^']*'\)/, 'fixtureRequestModule'), context);
   return { context, calls, elements, run: () => vm.runInContext('submitComment()', context) };
 }
 
@@ -52,6 +53,52 @@ test('an unchanged mechanical retry retains the exact request and does not prepa
   h.context.getCommentBackend = async () => ({ addCombatComment: async (...args) => { sent.push(structuredClone(args[7])); if (sent.length === 1) throw Error('Antwort verloren'); return { id: 'saved' }; } });
   await h.run(); await h.run();
   assert.equal(prepared, 1); assert.equal(sent.length, 2); assert.deepEqual(sent[0], sent[1]); assert.ok(sent[0].operationId);
+});
+
+test('publishing another draft in the same scene leaves the first mechanical save retry intact', async () => {
+  const h = harness();
+  let draftId = 'first-draft', prepared = 0;
+  const sent = [];
+  h.context.getCommentDraftId = () => draftId;
+  h.context.buildCommentSegmentsForSave = () => [{ clientSegmentId: `client-${prepared}`, kind: 'interact', text: 'Ich verwende den Gegenstand.' }];
+  h.context.window.AleriaInventoryUse = { handleSubmission: async () => ({ handled: true, commentMetadata: { commentSegments: [
+    { kind: 'interact', inventoryUse: { usageId: `attempt-${++prepared}` } }
+  ] } }) };
+  h.context.getCommentBackend = async () => ({ addCombatComment: async (...args) => {
+    sent.push(structuredClone(args[7]));
+    if (sent.length === 1) throw Error('Antwort verloren');
+    return { id: 'saved' };
+  } });
+  await h.run();
+  draftId = 'second-draft'; await h.run();
+  draftId = 'first-draft'; await h.run();
+  assert.equal(prepared, 2);
+  assert.equal(sent.length, 3);
+  assert.notEqual(sent[0].operationId, sent[1].operationId);
+  assert.deepEqual(sent[0], sent[2]);
+});
+
+test('a prepared mechanical save can be read again after reloading its module in the same tab', async () => {
+  const storage = new Map();
+  const original = Object.getOwnPropertyDescriptor(globalThis, 'sessionStorage');
+  Object.defineProperty(globalThis, 'sessionStorage', { configurable: true, value: {
+    getItem: key => storage.get(key) || null,
+    setItem: (key, value) => storage.set(key, value),
+    removeItem: key => storage.delete(key)
+  } });
+  try {
+    const request = requestModule.mechanicalCommentRequest('restored-scene', 'same-content', 'restored-draft');
+    request.metadata = { operationId: request.operationId, commentSegments: [{ skillResolution: { resolutionId: 'one-roll' } }] };
+    requestModule.rememberMechanicalCommentRequest('restored-scene', 'restored-draft', request);
+    const reloaded = await import('../modules/comments/comments-mechanical-request.js?reload-test');
+    assert.deepEqual(reloaded.mechanicalCommentRequest('restored-scene', 'same-content', 'restored-draft'), request);
+    assert.notEqual(reloaded.mechanicalCommentRequest('other-scene', 'same-content', 'restored-draft').operationId, request.operationId);
+    reloaded.completeMechanicalCommentRequest('restored-scene', 'restored-draft');
+    assert.equal(storage.size, 0);
+  } finally {
+    if (original) Object.defineProperty(globalThis, 'sessionStorage', original);
+    else delete globalThis.sessionStorage;
+  }
 });
 
 test('scene-item submissions carry the resolved scene date without a module save or a second comment', async () => {

@@ -1,10 +1,10 @@
-﻿function renderCommentSegmentList() {
+function renderCommentSegmentList() {
   const list = document.getElementById('cf-segment-list');
   if (!list) return;
   if (!_commentSegments.length) _commentSegments = [makeCommentSegment('speech')];
   coerceCommentSegmentsForMode(false);
   renderCommentSegmentActions(false);
-  list.innerHTML = _commentSegments.map((segment, idx) => {
+  list.innerHTML = commentSectionEditor.renderGap(0) + _commentSegments.map((segment, idx) => {
     const canUseEmote = segment.kind !== 'action' && _commentMode !== 'narrator' && !!getCommentSegmentActor(segment, false)?.emotes?.length;
     const canRemove = _commentSegments.length > 1;
     const textareaId = getCommentSegmentTextareaId(segment, false);
@@ -29,8 +29,10 @@
         ${buildCommentSegmentFormatToolbar(textareaId)}
         <textarea id="${textareaId}" class="comment-segment-textarea" rows="3" placeholder="${getCommentSegmentPlaceholder(segment.kind)}" data-action="set-comment-segment-text" data-segment-id="${escapeHtml(segment.id)}">${escapeHtml(segment.text)}</textarea>
         `}
-      </div>`;
+        ${commentSectionEditor.renderControls(segment, idx)}
+      </div>${commentSectionEditor.renderGap(idx + 1)}`;
   }).join('') + renderCommentDurationTotal(false);
+  commentSectionEditor.refresh();
   window.AleriaSceneItems?.mountComposer?.(list, { segments: _commentSegments, onRender: renderCommentSegmentList,
     onChange() { syncCommentSegmentsToLegacyText(); scheduleCommentFormPreviewUpdate(); persistCommentDraft(); } });
   window.AleriaSkillChecks?.mountComposer?.(list, {
@@ -67,6 +69,8 @@ function syncCommentSegmentsToLegacyText() {
   const text = _commentSegments.map(segment => String(segment.text || '').trim()).filter(Boolean).join('\n\n');
   const textarea = document.getElementById('cf-text');
   if (textarea) textarea.value = text;
+  const duration = document.getElementById('cf-segment-list')?.querySelector?.('.comment-duration-total strong');
+  if (duration) duration.textContent = `${getCommentDurationTotal()} Sek.`;
   setCommentFormCounter();
 }
 
@@ -181,30 +185,11 @@ function setCommentSegmentImageSet(id, setId) {
 }
 
 function addCommentSegment(kind = 'speech') {
-  if (!getAllowedCommentSegmentKinds(false).includes(kind)) kind = 'action';
-  _commentSegments.push(makeCommentSegment(kind, '', null, 'left', SCENE_TIME_DEFAULT_SEGMENT_SECONDS, COMMENT_LANGUAGE_DEFAULT, '', {
-    imageSetId: kind === 'action' ? '' : _selectedImageSetId
-  }));
-  renderCommentSegmentList();
-  updateCommentFormPreview();
-  persistCommentDraft();
-  setTimeout(() => {
-    const last = document.querySelector('#cf-segment-list .comment-segment-card:last-child textarea');
-    last?.focus?.();
-  }, 0);
+  commentSectionEditor.append(kind);
 }
 
 function removeCommentSegment(id) {
-  _commentSegments = _commentSegments.filter(segment => segment.id !== id);
-  if (!_commentSegments.length) {
-    const fallbackKind = _commentMode === 'narrator' ? 'action' : 'speech';
-    _commentSegments = [makeCommentSegment(fallbackKind, '', null, 'left', SCENE_TIME_DEFAULT_SEGMENT_SECONDS, COMMENT_LANGUAGE_DEFAULT, '', {
-      imageSetId: fallbackKind === 'action' ? '' : _selectedImageSetId
-    })];
-  }
-  renderCommentSegmentList();
-  updateCommentFormPreview();
-  persistCommentDraft();
+  commentSectionEditor.remove(id);
 }
 
 function getBaseCommentActorState() {
@@ -260,7 +245,7 @@ function buildCommentSegmentsForSave() {
   const base = getBaseCommentActorState();
   return _commentSegments
     .map(segment => ({ ...segment, text: String(segment.text || '').trim() }))
-    .filter(segment => segment.text || segment.kind === 'sceneitem')
+    .filter(commentSegmentHasContent)
     .map(segment => {
       if (_commentMode === 'narrator' && segment.kind === 'sceneitem') return window.AleriaSceneItems.serializeSegment(segment);
       if (segment.kind === 'foreignvoice') return buildCommentForeignVoiceSegment(segment);

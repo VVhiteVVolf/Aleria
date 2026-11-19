@@ -29,6 +29,8 @@ function createHarness() {
   };
   const context = vm.createContext({
     console,
+    _commentSubmitInFlight: false,
+    persistCommentDraft() {},
     CHARACTER_IMAGE_SET_DEFAULT_ID: 'default',
     getCurrentCommentThread: () => null,
     loadSceneActorData: async () => { calls.push('actors'); },

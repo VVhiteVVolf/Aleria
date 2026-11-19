@@ -1,5 +1,4 @@
 import { FieldValue, getFirestore } from 'firebase-admin/firestore';
-import { assertCommentAnimalSpeech } from '../comments/comment-animal-speech.js';
 import { getSceneConditionClock } from '../generated/scene-time/scene-condition-clock.js';
 import { prepareCriticalCommentLifecycle, persistCriticalHitPointUpdates } from './critical-comment-lifecycle.js';
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
@@ -53,7 +52,6 @@ export async function commitSkillCommentOperation(request, { database = getFires
   let responseSegments = [];
   let criticalLifecycle = [];
   await database.runTransaction(async transaction => {
-    await assertCommentAnimalSpeech({ database, transaction, metadata: payload.metadata });
     const snapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
     const allHistory = sortSceneHistory(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
     const trustedHistory = allHistory.filter(isTrustedMechanicalComment);

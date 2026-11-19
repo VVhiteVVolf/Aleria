@@ -1,6 +1,5 @@
 import { prepareCombatEquipment, reserveCombatEquipment } from '../generated/combat/combat-equipment-preparation.js';
 import { normalizeCombatDistance } from '../generated/combat/combat-rule-distance.js';
-import { assertCommentAnimalSpeech } from '../comments/comment-animal-speech.js';
 import { getSceneConditionClock, sceneClockBeforeSegment } from '../generated/scene-time/scene-condition-clock.js';
 import { advanceSubstanceStateMap } from '../generated/character-health/substance-state.js';
 import { readItemDefinitionIndex, hydrateItemRecord, prepareUniqueItemClaims } from '../items/item-definition-repository.js';
@@ -254,7 +253,6 @@ export async function commitCombatCommentOperation(request, {
         return;
       }
     }
-    await assertCommentAnimalSpeech({ database, transaction, metadata });
     const threadSnapshot = await transaction.get(database.collection('comments').where('entryId', '==', entryId));
     const allHistory = sortSceneHistory(threadSnapshot.docs.map(snapshot => ({ id: snapshot.id, ...snapshot.data() })));
     const trustedHistory = allHistory.filter(isTrustedMechanicalComment);

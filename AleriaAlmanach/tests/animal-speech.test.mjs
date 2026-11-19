@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { ANIMAL_SPEECH_TRAIT_ID, canSpeakWithAnimals } from '../modules/character-development/development-animal-speech.js';
+import { ANIMAL_SPEECH_TRAIT_ID, hasAnimalSpeechTrait } from '../modules/character-development/development-animal-speech.js';
 import { DEVELOPMENT_TRAITS } from '../modules/character-development/development-traits.js';
 import { getChecksForCommentKind, getCheckCommentKind } from '../modules/skill-checks/skill-check-model.js';
 import { getSkillRollContext, SkillResolutionService } from '../modules/skill-checks/skill-resolution-service.js';
@@ -12,13 +12,13 @@ const actor = (quirks = []) => ({ id: 'local-speaker', name: 'Lokale Testfigur',
   attributes: [{ key: 'wisdom', score: 14 }], skills: [{ name: 'Mit Tieren umgehen', attributeKey: 'wisdom', proficiency: 'trained' }], quirks
 } });
 
-test('the catalog trait is selectable and only an active matching identity grants animal speech', () => {
+test('the catalog trait is selectable and its active identity determines the bonus', () => {
   assert(trait); assert.equal(trait.name, 'Kann mit Tieren sprechen');
   assert.match(trait.icon, /kann-mit-tieren-sprechen\.webp$/);
-  assert.equal(canSpeakWithAnimals(actor([trait])), true);
-  assert.equal(canSpeakWithAnimals(actor([{ ...trait, active: false }])), false);
-  assert.equal(canSpeakWithAnimals(actor([{ name: trait.name, id: 'a-different-trait' }])), false);
-  assert.equal(canSpeakWithAnimals(null), false);
+  assert.equal(hasAnimalSpeechTrait(actor([trait])), true);
+  assert.equal(hasAnimalSpeechTrait(actor([{ ...trait, active: false }])), false);
+  assert.equal(hasAnimalSpeechTrait(actor([{ name: trait.name, id: 'a-different-trait' }])), false);
+  assert.equal(hasAnimalSpeechTrait(null), false);
 });
 
 test('speech, whisper and shout permit ordinary animal handling without the speech trait', () => {
@@ -36,14 +36,20 @@ test('the character sheet can select, save, reload and remove the new trait thro
   const selected = previewCharacterLevelUp(original, { targetLevel:1, traitIds:[ANIMAL_SPEECH_TRAIT_ID] });
   assert.equal(selected.ready, true);
   const restored = sanitizeCharacterCombatProfile(JSON.parse(JSON.stringify(selected.profile)));
-  assert.equal(canSpeakWithAnimals(restored), true);
+  assert.equal(hasAnimalSpeechTrait(restored), true);
   const removed = previewCharacterLevelUp(restored, { targetLevel:1, traitIds:[] });
-  assert.equal(removed.ready, true); assert.equal(canSpeakWithAnimals(removed.profile), false);
+  assert.equal(removed.ready, true); assert.equal(hasAnimalSpeechTrait(removed.profile), false);
   assert.deepEqual(original, before);
 });
 
-test('Tiersprache requires the trait and grants advantage only to its animal handling check', () => {
-  assert.throws(() => getSkillRollContext({ actor: actor(), settings: { skillId: 'animal-handling' } }, { commentKind: 'animal' }), /Merkmal/);
+test('Tiersprache supports characters and creatures, and only the active trait gives advantage', () => {
+  for (const entityType of ['character', 'creature']) {
+    for (const quirks of [[], [{ ...trait, active: false }]]) {
+      const ordinary = getSkillRollContext({ actor: { ...actor(quirks), entityType }, settings: { skillId: 'animal-handling' } }, { commentKind: 'animal' });
+      assert.equal(ordinary.rollMode, 'normal');
+      assert.equal(ordinary.animalSpeechAdvantage, false);
+    }
+  }
   const speaker = actor([trait]);
   const context = getSkillRollContext({ actor: speaker, settings: { skillId: 'animal-handling' } }, { commentKind: 'animal' });
   assert.equal(context.rollMode, 'advantage');

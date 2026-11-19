@@ -1,4 +1,4 @@
-﻿// Comment segment editor.
+// Comment segment editor.
 // Shared by compose and edit flows for segmented speech/action/thought content.
 
 function normalizeCommentSegmentSide(side) {
@@ -99,6 +99,7 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
   return {
     id: `seg-${Date.now().toString(36)}-${_commentSegmentSeq}`,
     kind: normalizedKind,
+    ...(combatSettings.templateVoiceChoice ? { templateVoiceChoice: true } : {}),
     actionIconId: String(combatSettings?.actionIconId || '').slice(0, 40),
     challengeReplyToCommentId: String(combatSettings?.challengeReplyToCommentId || '').slice(0, 200),
     ...(normalizedKind === 'foreignvoice' ? AleriaCommentForeignVoice.normalize(combatSettings) : {}),
@@ -173,10 +174,18 @@ function buildCommentNarratorSecretActionSegment(segment) {
   };
 }
 
-function renderCommentDurationTotal(edit = false) {
+function getCommentDurationTotal(edit = false) {
   const segments = edit ? _editCommentSegments : _commentSegments;
-  const total = segments.reduce((sum, segment) => sum + getSceneTimeSegmentDuration(segment), 0);
-  return `<div class="comment-duration-total">Beitragsdauer: <strong>${total} Sek.</strong></div>`;
+  const filled = edit ? segments : segments.filter(commentSegmentHasContent);
+  return filled.reduce((sum, segment) => sum + getSceneTimeSegmentDuration(segment), 0);
+}
+
+function commentSegmentHasContent(segment) {
+  return segment.kind === 'sceneitem' || !!String(segment.text || '').trim();
+}
+
+function renderCommentDurationTotal(edit = false) {
+  return `<div class="comment-duration-total">Beitragsdauer: <strong>${getCommentDurationTotal(edit)} Sek.</strong></div>`;
 }
 
 function getAllowedCommentSegmentKinds(edit = false) {
@@ -268,15 +277,11 @@ const COMMENT_SEGMENT_COMPACT_LABELS = Object.freeze({
   combataction: 'Kampf\u00ADbeschreibung'
 });
 
-function buildCommentSegmentKindButton(kind, { action, segmentId = '', active = false, add = false, disabled = false, actor } = {}) {
-  const speechError = kind === 'animal' && window.AleriaSkillChecks?.getAnimalSpeechError
-    ? window.AleriaSkillChecks.getAnimalSpeechError(actor || getCommentSegmentActor({ kind: 'animal' }, String(action || '').includes('edit')))
-    : '';
-  disabled ||= !!speechError;
+function buildCommentSegmentKindButton(kind, { action, segmentId = '', active = false, add = false, disabled = false } = {}) {
   const segmentAttr = segmentId ? ` data-segment-id="${segmentId}"` : '';
   const label = COMMENT_SEGMENT_COMPACT_LABELS[kind] || getCommentKindLabel(kind);
   return `
-    <button type="button" class="${add ? 'comment-segment-add' : 'comment-segment-type'}${active ? ' active' : ''}" data-action="${action}"${segmentAttr} data-kind="${kind}" title="${escapeHtml(speechError || getCommentKindLabel(kind))}"${disabled ? ' disabled aria-disabled="true"' : ''}>
+    <button type="button" class="${add ? 'comment-segment-add' : 'comment-segment-type'}${active ? ' active' : ''}" data-action="${action}"${segmentAttr} data-kind="${kind}" title="${escapeHtml(getCommentKindLabel(kind))}"${disabled ? ' disabled aria-disabled="true"' : ''}>
       ${getCommentKindButtonIconMarkup(kind, 'comment-segment-type-icon')}
       <span>${add ? '+ ' : ''}${escapeHtml(label)}</span>
     </button>`;
@@ -301,7 +306,6 @@ function getSegmentTypeButtons(segment, edit = false) {
   return getAllowedCommentSegmentKinds(edit).map(kind => buildCommentSegmentKindButton(kind, {
     action,
     segmentId,
-    actor: getCommentSegmentActor(segment, edit),
     active: challengeDisguised ? kind === 'speech' : segment.kind === kind,
     disabled: challengeDisguised || !isCommentSegmentKindAllowedForMechanicMode(segment, kind, edit)
   })).join('');

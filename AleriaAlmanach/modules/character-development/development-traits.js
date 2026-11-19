@@ -1,6 +1,6 @@
 // Deliberately uses the combat model's existing numerical modifiers and rules.
 import { BODY_TRAIT_DEFINITIONS } from './development-body-traits.js';
-import { ANIMAL_SPEECH_TRAIT_DEFINITIONS } from './development-animal-speech.js';
+import { ANIMAL_SPEECH_TRAIT_DEFINITIONS } from './development-animal-speech.js?v=20261119-animal-speech-v1';
 import { EXTRA_TRAIT_DEFINITIONS } from './development-extra-traits.js';
 import { INSPIRED_TRAIT_DEFINITIONS } from './development-inspired-traits.js';
 import { UNIQUE_TRAIT_DEFINITIONS } from './development-unique-traits.js';

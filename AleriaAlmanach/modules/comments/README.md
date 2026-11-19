@@ -232,3 +232,69 @@ sind 120 px und 80 px. Die Wahl wird unter
 Die Vorschau behält die Porträt-/Textanordnung der Szenen; schmale Spalten begrenzen
 das Porträt auf 40 % ihrer Breite. Maximieren gibt großen Porträts mehr Raum.
 Größen bleiben außerhalb von Entwürfen, Kommentaren und Modulakten.
+
+## Kommentiereditor und Pergamentansicht am 19. November 2026
+
+Abschnitte lassen sich an jeder Lücke einfügen, am Cursor teilen, verschieben
+und nach dem Entfernen im offenen Editor zurückholen. Der Ziehgriff und die
+Pfeiltasten verwenden dieselbe Reihenfolge. Beim Teilen bleiben Dauer und
+Auswertung am ersten Teil. Der zweite Teil übernimmt den übrigen Text.
+
+**+ Handlung und Rede** fügt das Paar auch mitten im Entwurf ein. Mehrere
+markierte Abschnitte lassen sich gemeinsam in ihrer bisherigen Reihenfolge
+verschieben.
+
+Drei Schaltflächen fügen leere Abschnitte ein. Eine Vorlage ersetzt den leeren
+Startabschnitt oder wird an vorhandene Abschnitte angehängt.
+
+- **Kurze Antwort** enthält genau vier Paare `Handlung → Rede`.
+- **Lange Antwort** beginnt mit acht Paaren `Handlung → Rede`. Weitere Paare
+  lassen sich an jeder Lücke ergänzen.
+- **Kampf Template** verwendet genau diese Reihenfolge:
+
+  ```text
+  Handlung
+  Rede
+  Handlung
+  Kampfbeschreibung
+  Handlung
+  Rede
+  Handlung
+  Kampfbeschreibung
+  Handlung
+  Rede/Gedanke
+  Handlung
+  Kampfbeschreibung
+  Handlung
+  Rede/Gedanke
+  ```
+
+**Entwurf im Browser speichern** legt eine eigene Kopie an. Gespeicherte
+Entwürfe lassen sich einzeln laden und löschen. Der beim Öffnen gewählte
+Antwortpunkt bestimmt die Einfügestelle. Beim Szenenwechsel gehen Text,
+Figur und Aufbau mit. Ziele, Szeneninstanzen und Bodenfunde werden im neuen
+Kontext gewählt. Beim Laden wird ein bereits beschriebener aktueller Entwurf
+bei Bedarf ebenfalls abgelegt. Der automatische Entwurf gehört zur Szene.
+
+`comments-section-editor.js` besitzt Reihenfolge, Auswahl und Vorlagen.
+`comments-draft-library.js` verwendet die reguläre Entwurfsserialisierung.
+Mechanische Speicherversuche werden pro Entwurf und Szene gehalten. In
+derselben Browser-Registerkarte kann ein vorbereiteter Versuch nach einem
+Neuladen mit denselben Daten fortgesetzt werden. Beim Eintragen gelten die
+serverseitigen Prüfungen der aktiven Szene.
+
+Vorlagen stehen im Schreibdialog oberhalb der Abschnittsliste. Die Werkzeuge
+zum Verschieben, Markieren und Teilen stehen unter dem jeweiligen Schreibfeld.
+Die Entwurfsablage sitzt bei der Entwurfsanzeige am Ende des Editors. Szene,
+Schreibdialog und Bearbeitungsdialog verwenden ihre bisherige Anordnung der
+Schaltflächen und Optionen. Im Schreibdialog verwenden aktive Schaltflächen
+einen warmbraunen Akzent, die zusätzlichen Bedienelemente die vorhandenen
+Pergamentfarben.
+
+**Verschiedene Charaktere in einem Beitrag** sind vorerst zurückgestellt.
+Die Abschnittsauswahl für Sprecher oder Instanzen existiert bereits im
+Kreaturenmodus. Bei einem späteren Ausbau ist die Kampfzuordnung gesondert
+zu klären. Als beitragend erfasste Figuren können auch durch Textabschnitte
+beitragsgebundene Ressourcen und Zustände weiterschalten. Die Prüfung liegt in
+`../combat/combat-contribution-start.js` und
+`../combat/combat-condition-duration.js`.

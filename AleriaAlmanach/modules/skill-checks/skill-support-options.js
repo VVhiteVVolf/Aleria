@@ -1,7 +1,7 @@
 import { collectApplicableCombatRules } from '../combat/combat-trigger-rules.js';
 import { consumeCombatRuleResources, consumeCombatRuleAbilityUses } from '../combat/combat-rule-consumption.js';
 import { getCombatRuleDistance } from '../combat/combat-rule-distance.js';
-import { getSkillRollContext } from './skill-resolution-service.js?v=20261016-check-policy-v1';
+import { getSkillRollContext } from './skill-resolution-service.js?v=20261119-animal-speech-v1';
 
 export const skillSupportOptionKey = option => `${option.sourceActorId}:${option.ruleId}`;
 

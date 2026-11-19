@@ -4,13 +4,12 @@ import { renderChallengeManeuverReceipts, formatChallengeStandaloneRewards } fro
 import { getChallengeNarration, isChallengeResolution } from '../herausforderung/herausforderung-narration.js';
 import { renderSkillAttemptHeader, renderSkillAttemptBreakdown, renderSkillRecordedRoll } from './skill-attempt-view.js?v=20261016-check-policy-v1';
 import { renderSkillSaveContext, describeSkillSaveContext } from './skill-save-context-view.js';
-import { collectSkillSupportOptions, selectSkillSupportDefaults, skillSupportOptionKey } from './skill-support-options.js?v=20261016-check-policy-v1';
+import { collectSkillSupportOptions, selectSkillSupportDefaults, skillSupportOptionKey } from './skill-support-options.js?v=20261119-animal-speech-v1';
 import { getCheckDescription } from './skill-check-guidance.js?v=20261015-check-options-v1';
 import { describeCheckModifierSource } from './attribute-check-model.js?v=20261015-check-options-v1';
 import { getSkillActionPermissionBlock, renderSkillActionPermissionBlock } from './skill-action-permission-view.js';
 import { previewChallengeCombatBenefits, collectChallengeGrantKeys } from '../herausforderung/herausforderung-combat-preview.js?v=20261015-graded-challenges-v1';
 import { getChallengeAttemptSettings, getChallengeReactionInsertAfterId, orderChallengeRepliesForDisplay } from './skill-challenge-attempt.js?v=20261117-comment-actions-v1';
-import { getAnimalSpeechError, isAnimalSpeechSegment } from '../character-development/development-animal-speech.js';
 import { getChallengeCombatBindingError } from '../herausforderung/herausforderung-combat-context.js?v=20261015-check-options-v1';
 import { getActiveCombatPartyMap, getEncounterRelationship, getActiveCombatEncounter } from '../combat/combat-encounter-model.js';
 import { sceneDiceService } from '../scene-dice/dice-service.js?v=20261013-performance-v1';
@@ -38,7 +37,7 @@ import {
   resolveSkillModifier
 } from './skill-check-model.js?v=20261016-guided-checks-v1';
 import { narrateSkillResolution } from './skill-check-narration.js?v=20261015-graded-challenges-v1';
-import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20261113-scene-elements-v1';
+import { SkillResolutionService, getSkillRollContext } from './skill-resolution-service.js?v=20261119-animal-speech-v1';
 import { collectCombatTriggerRules, deriveCombatRuleFrequencyKeys } from '../combat/combat-trigger-rules.js?v=20261113-scene-elements-v1';
 import { renderAutomaticRollMode } from '../combat/ui/combat-roll-mode-view.js?v=20260906-effect-rolls-v1';
 import { renderSkillIcon, renderSkillChoiceGroup, renderPreferredSkillHints, skillTooltipAttributes, bindSkillIconTooltips } from './skill-icon-view.js?v=20261016-check-policy-v1';
@@ -661,14 +660,6 @@ function buildStoredChallenge(segment) {
 
 async function handleSubmission(submission = {}) {
   const segments = Array.isArray(submission.commentSegments) ? submission.commentSegments : [];
-  const animalSpeech = segments.filter(isAnimalSpeechSegment);
-  if (animalSpeech.length) {
-    const available = mergeActors(latestComposerContext?.sceneActors || []);
-    for (const segment of animalSpeech) {
-      const error = getAnimalSpeechError(getActorForSegment(segment, submission.characterId, available));
-      if (error) throw new Error(error);
-    }
-  }
   const skillSegments = submission.deferToCombat ? [] : segments.filter(segment => normalizeMechanicMode(segment?.mechanicMode, segment) === 'skill');
   const hasChallenges = segments.some(segment => segment?.skillChallengeEnabled
     && String(segment.kind || segment.commentKind || '') === 'performance');
@@ -867,7 +858,6 @@ globalThis.AleriaSkillChecks = Object.freeze({
   getChallengeAttemptSettings,
   getChallengeReactionInsertAfterId,
   orderChallengeRepliesForDisplay,
-  getAnimalSpeechError,
   mountComposer(list, context = {}) {
     mountComposers({
       list,
