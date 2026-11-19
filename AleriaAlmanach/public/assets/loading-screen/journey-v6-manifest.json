@@ -1,0 +1,385 @@
+{
+  "version": 6,
+  "groups": {
+    "owetas-quartett": {
+      "panorama": {
+        "source": {
+          "file": "assets/loading-screen/source/owetas-quartett-panorama-v6.png",
+          "size": [
+            2172,
+            724
+          ],
+          "frames": 1,
+          "bytes": 3860055,
+          "sha256": "2f60df5f7d713f668e20d5ca923449836935488929464afed5ad674cdb3b09dc"
+        },
+        "groundY": 583,
+        "assets": [
+          {
+            "file": "public/assets/loading-screen/owetas-quartett-panorama-v6-desktop.avif",
+            "size": [
+              1800,
+              450
+            ],
+            "frames": 1,
+            "bytes": 209291,
+            "sha256": "8ce34c5d9c988959a8903c6a740524c88ece81769c050f6bd96ce7817c6e85d8"
+          },
+          {
+            "file": "public/assets/loading-screen/owetas-quartett-panorama-v6-mobile.avif",
+            "size": [
+              1160,
+              290
+            ],
+            "frames": 1,
+            "bytes": 97177,
+            "sha256": "2c02858cc5006e3f73f315756b8c9a3ddcdb8e3675488c90cfc93c7acaa8bc4c"
+          },
+          {
+            "file": "public/assets/loading-screen/owetas-quartett-panorama-v6-fallback.webp",
+            "size": [
+              1440,
+              360
+            ],
+            "frames": 1,
+            "bytes": 190318,
+            "sha256": "037dc08ff680c2e0fa0c5b841df41837dd25070a7f943d05d4df201f322d2176"
+          }
+        ]
+      },
+      "atlas": {
+        "order": [
+          "oweta",
+          "lefraye",
+          "rianna",
+          "caralyn"
+        ],
+        "rows": 4,
+        "columns": 4,
+        "cell": 160,
+        "sources": [
+          {
+            "file": "assets/loading-screen/source/oweta-lefraye-stride-v6.png",
+            "size": [
+              1774,
+              887
+            ],
+            "frames": 1,
+            "bytes": 1296666,
+            "sha256": "52779856e508dde4333e64783b8fb684a5b6ea4d388dd0f4d36de6494ec56ca2"
+          },
+          {
+            "file": "assets/loading-screen/source/rianna-caralyn-stride-v6.png",
+            "size": [
+              1774,
+              887
+            ],
+            "frames": 1,
+            "bytes": 1327848,
+            "sha256": "0f083e41c1bca34de18ec09f67b780ef1331a1355d87ec8b338f2263df3bb2bd"
+          }
+        ],
+        "asset": {
+          "file": "public/assets/loading-screen/owetas-quartett-stride-v6.webp",
+          "size": [
+            640,
+            640
+          ],
+          "frames": 1,
+          "bytes": 116034,
+          "sha256": "53663515776ec7f14ae0ed0c66e12a5c9bb7921aa8364c4631ab854bb4f4041a"
+        }
+      }
+    },
+    "wolfshorn": {
+      "panorama": {
+        "source": {
+          "file": "assets/loading-screen/source/wolfshorn-panorama-v6.png",
+          "size": [
+            2172,
+            724
+          ],
+          "frames": 1,
+          "bytes": 3901470,
+          "sha256": "de30568b0f8e0860e832b6567302c9a50c242b3b280904362d1f5c67424b8df9"
+        },
+        "groundY": 550,
+        "assets": [
+          {
+            "file": "public/assets/loading-screen/wolfshorn-panorama-v6-desktop.avif",
+            "size": [
+              1800,
+              450
+            ],
+            "frames": 1,
+            "bytes": 198420,
+            "sha256": "567195a6cb23ce25d81bf2771fcdab8b6b089a1595443f03428176c0440817df"
+          },
+          {
+            "file": "public/assets/loading-screen/wolfshorn-panorama-v6-mobile.avif",
+            "size": [
+              1160,
+              290
+            ],
+            "frames": 1,
+            "bytes": 93411,
+            "sha256": "1ca255d622b354c7368d5360a48927d3e019066f320694fe2acf06ad82a2f003"
+          },
+          {
+            "file": "public/assets/loading-screen/wolfshorn-panorama-v6-fallback.webp",
+            "size": [
+              1440,
+              360
+            ],
+            "frames": 1,
+            "bytes": 180918,
+            "sha256": "8b924443f14e51defe9fd72251e097e3c47ec6183e16c01648012846154672b0"
+          }
+        ]
+      },
+      "atlas": {
+        "order": [
+          "duncan",
+          "gawain",
+          "ylva",
+          "freki"
+        ],
+        "rows": 4,
+        "columns": 4,
+        "cell": 160,
+        "sources": [
+          {
+            "file": "assets/loading-screen/source/duncan-gawain-stride-v6.png",
+            "size": [
+              1774,
+              887
+            ],
+            "frames": 1,
+            "bytes": 1615994,
+            "sha256": "6efdfd8eeafe819a78ba2e2f753a159f4c1eca62ef1f4537708bc4f6e6c262ff"
+          },
+          {
+            "file": "assets/loading-screen/source/ylva-freki-stride-v6.png",
+            "size": [
+              1774,
+              887
+            ],
+            "frames": 1,
+            "bytes": 1736200,
+            "sha256": "0dd423b5583c81fc2fd0dcccaee6a6c4dc362d440a5f79a829f7c8b34a62d05b"
+          }
+        ],
+        "asset": {
+          "file": "public/assets/loading-screen/wolfshorn-stride-v6.webp",
+          "size": [
+            640,
+            640
+          ],
+          "frames": 1,
+          "bytes": 122528,
+          "sha256": "18c049177018599ea5e377b0b004a4a3d09bdd92857976d69bcb6ff8429b283c"
+        }
+      }
+    },
+    "tiefenwyrm": {
+      "panorama": {
+        "source": {
+          "file": "assets/loading-screen/source/tiefenwyrm-panorama-v6.png",
+          "size": [
+            2172,
+            724
+          ],
+          "frames": 1,
+          "bytes": 3417468,
+          "sha256": "f8c686bb10bae495b8427ba34b4046aef3894381dd378d86de060f060b57a5b5"
+        },
+        "groundY": 595,
+        "assets": [
+          {
+            "file": "public/assets/loading-screen/tiefenwyrm-panorama-v6-desktop.avif",
+            "size": [
+              1800,
+              450
+            ],
+            "frames": 1,
+            "bytes": 151729,
+            "sha256": "7eb0eb4765a2bca5f8f500fd6a4c4cd6a3e0bf5f8bc7079e81ee115ddfd01887"
+          },
+          {
+            "file": "public/assets/loading-screen/tiefenwyrm-panorama-v6-mobile.avif",
+            "size": [
+              1160,
+              290
+            ],
+            "frames": 1,
+            "bytes": 68471,
+            "sha256": "0cb5abea1457ea6d06f0498150f34033d7bbf8432ac7fe53d568f611fad9363c"
+          },
+          {
+            "file": "public/assets/loading-screen/tiefenwyrm-panorama-v6-fallback.webp",
+            "size": [
+              1440,
+              360
+            ],
+            "frames": 1,
+            "bytes": 142934,
+            "sha256": "a3c02041cc1c1476074b76cb5c99507bd4a986c4ff120466c1337ca6b9cb3952"
+          }
+        ]
+      },
+      "atlas": {
+        "order": [
+          "idwal",
+          "trevor"
+        ],
+        "rows": 2,
+        "columns": 4,
+        "cell": 160,
+        "sources": [
+          {
+            "file": "assets/loading-screen/source/idwal-trevor-stride-v6.png",
+            "size": [
+              1774,
+              887
+            ],
+            "frames": 1,
+            "bytes": 1450609,
+            "sha256": "c031f4b62f85ceecd53d242f256dc10c674f0cff63d72a384448325a695f8f8b"
+          }
+        ],
+        "asset": {
+          "file": "public/assets/loading-screen/tiefenwyrm-stride-v6.webp",
+          "size": [
+            640,
+            320
+          ],
+          "frames": 1,
+          "bytes": 56126,
+          "sha256": "46a2f63cfb3e9ee40e8b135f626f5ea1a2c7f4570aa2e933736a383fbfaeb3f5"
+        }
+      }
+    }
+  },
+  "council": {
+    "room": {
+      "source": {
+        "file": "assets/loading-screen/source/heroldsrat-kammer-v6.png",
+        "size": [
+          1448,
+          1086
+        ],
+        "frames": 1,
+        "bytes": 2795941,
+        "sha256": "be59d7819e8bba61c947199fe89c092285ccd0f57a281dc9ef81d2ae99194d59"
+      },
+      "assets": [
+        {
+          "file": "public/assets/loading-screen/heroldsrat-kammer-v6-desktop.avif",
+          "size": [
+            1440,
+            1080
+          ],
+          "frames": 1,
+          "bytes": 132616,
+          "sha256": "e2158fc110fe8dcbcdbb7b8d790e5176f14ae43c2a6e15fdd2d66b590683d666"
+        },
+        {
+          "file": "public/assets/loading-screen/heroldsrat-kammer-v6-mobile.avif",
+          "size": [
+            720,
+            540
+          ],
+          "frames": 1,
+          "bytes": 42492,
+          "sha256": "03e6419dbcbcd1b2168d02457f5f8f66e590138d25f221c22bc8ede693f3f159"
+        },
+        {
+          "file": "public/assets/loading-screen/heroldsrat-kammer-v6-fallback.webp",
+          "size": [
+            1120,
+            840
+          ],
+          "frames": 1,
+          "bytes": 144958,
+          "sha256": "af32558c99e6e1463ebafc316f020c8b05efd0070449e671820b8312f7fc2c8d"
+        }
+      ]
+    },
+    "atlas": {
+      "order": [
+        "iestyn",
+        "gareth",
+        "trahern",
+        "cadogan",
+        "cadfan",
+        "neala",
+        "branwen"
+      ],
+      "rows": 7,
+      "columns": 4,
+      "cell": 160,
+      "sources": [
+        {
+          "file": "assets/loading-screen/source/iestyn-gareth-gesten-v6.png",
+          "size": [
+            1774,
+            887
+          ],
+          "frames": 1,
+          "bytes": 1860785,
+          "sha256": "c3e65a40572728057f7d37d22ee9b45f0abe5bd51b8e69f2a2251a8fb8ba1d8b"
+        },
+        {
+          "file": "assets/loading-screen/source/trahern-cadogan-gesten-v6.png",
+          "size": [
+            1774,
+            887
+          ],
+          "frames": 1,
+          "bytes": 2056729,
+          "sha256": "35ab146bceffad50a31a2da28c0af312aaa9f1418ce0f5575295104a0b731bce"
+        },
+        {
+          "file": "assets/loading-screen/source/cadogan-hut-gesten-v6.png",
+          "size": [
+            2172,
+            724
+          ],
+          "frames": 1,
+          "bytes": 1997319,
+          "sha256": "48f4851aa8670c9579ae9217d172cd052e5b41912f3bf3cf493de803d6c06265"
+        },
+        {
+          "file": "assets/loading-screen/source/cadfan-gesten-v6.png",
+          "size": [
+            2172,
+            724
+          ],
+          "frames": 1,
+          "bytes": 1742595,
+          "sha256": "095c8ae54e2cff46c3bf112efcea51c980efb874ed6e802241d36e2d7f4651a3"
+        },
+        {
+          "file": "assets/loading-screen/source/neala-branwen-gesten-v6.png",
+          "size": [
+            1774,
+            887
+          ],
+          "frames": 1,
+          "bytes": 1979458,
+          "sha256": "8b5108ed120eb946c19482e4568f5468d2e269e72591be45ca0717fb48df9d89"
+        }
+      ],
+      "asset": {
+        "file": "public/assets/loading-screen/heroldsrat-gesten-v6.webp",
+        "size": [
+          640,
+          1120
+        ],
+        "frames": 1,
+        "bytes": 226752,
+        "sha256": "a0a8165e1192ef67645d52afdb1a5feec50c586d0d1480c3971c85570d9659dc"
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.almanach-loading__scene[data-scene-kind="council"] {
+  --council-room-height: 75cqw;
+  --council-seat-size: 17cqw;
+  aspect-ratio: 16 / 9;
+  background: #473325;
+}
+
+.almanach-loading__council-room {
+  position: absolute;
+  inset: auto 0 0;
+  height: var(--council-room-height);
+  isolation: isolate;
+}
+
+.almanach-loading__council-room picture,
+.almanach-loading__council-room img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.almanach-loading__council-seat {
+  position: absolute;
+  left: var(--seat-x);
+  bottom: var(--seat-bottom);
+  width: var(--council-seat-size);
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  background: var(--council-atlas) 0 var(--council-row) / 400% var(--council-atlas-height) no-repeat;
+  z-index: 1;
+  filter: drop-shadow(0 2px 2px #301d2677);
+}
+.almanach-loading__council-seat[data-council-seat="cadfan"] { transform: translateX(-50%) scaleX(-1); }
+
+.almanach-loading__council-seat[data-speaking] {
+  z-index: 2;
+  animation: council-speech .92s steps(3, jump-none) infinite;
+  animation-play-state: var(--journey-play-state, running);
+}
+
+@keyframes council-speech {
+  from { background-position-x: 33.3333%; }
+  to { background-position-x: 100%; }
+}
+
+.almanach-loading__council-table {
+  z-index: 3;
+  clip-path: polygon(0% 73%, 3% 69%, 8% 65.5%, 13% 63.5%, 21% 61.9%, 30% 60.5%, 40% 59.8%,
+    50% 59.6%, 60% 59.8%, 70% 60.5%, 79% 61.8%, 87% 63.7%, 92% 65.5%, 97% 69%, 100% 73%, 100% 100%, 0% 100%);
+}
+
+.almanach-loading__scene[data-scene-kind="council"] .almanach-loading__banter {
+  --bubble-anchor: var(--council-speaker-x);
+  --bubble-width: min(340px, 84cqw);
+  z-index: 5;
+  bottom: calc(var(--council-room-height) * .392 + var(--council-seat-size));
+}
+.almanach-loading__scene[data-scene-kind="council"] .almanach-loading__banter q {
+  font-size: clamp(13px, 1.25vw, 15px);
+}
+
+@media (600px < width <= 1240px) {
+  .almanach-loading__scene[data-scene-kind="council"] { aspect-ratio: 3 / 2; }
+}
+
+@media (max-width: 600px) {
+  .almanach-loading__scene[data-scene-kind="council"] {
+    --council-room-height: 90cqw;
+    aspect-ratio: 10 / 9;
+  }
+}

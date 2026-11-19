@@ -7,13 +7,17 @@ import vm from 'node:vm';
 import { createLoadingScreenSound } from '../modules/loading-screen/loading-screen-sound.js';
 import { LOADING_SCREEN_RIGS, mountLoadingScreenWalk } from '../modules/loading-screen/loading-screen-walk.js';
 import { mountLoadingScreenBanter } from '../modules/loading-screen/loading-screen-banter.js';
+import { LOADING_SCREEN_JOURNEYS } from '../modules/loading-screen/loading-screen-journey.js';
+import { HEROLDS_COUNCIL } from '../modules/loading-screen/loading-screen-council.js';
+import { chooseLoadingScreenScene, LOADING_SCREEN_SCENES } from '../modules/loading-screen/loading-screen-scenes.js';
+import { LOADING_SCREEN_QUOTES } from '../modules/loading-screen/loading-screen-quotes.js';
 
 const source = readFileSync(new URL('../modules/loading-screen/loading-screen.js', import.meta.url), 'utf8');
 const settle = () => new Promise(resolve => setImmediate(resolve));
 class Controller extends AbortController { constructor() { super(); setMaxListeners(30, this.signal); } }
 
 function screen({ reducedMotion = false, withSound = false, deferSound = false,
-  withTravellers = false, hungBanter = false, hidden = false } = {}) {
+  withTravellers = false, deferJourney = false, hidden = false } = {}) {
   const window = new EventTarget();
   const document = new EventTarget();
   const timers = new Map();
@@ -42,7 +46,7 @@ function screen({ reducedMotion = false, withSound = false, deferSound = false,
   const fields = Object.fromEntries(names.map(name => [name, node(['enter', 'pause', 'continue', 'sound'].includes(name) ? { loadingAction: name } : {})]));
   const steps = ['shell', 'modules'].map(name => node({ loadingStep: name }));
   for (const field of [...Object.values(fields), ...steps]) field.parent = root;
-  root.querySelector = selector => selector === '[data-loading-banter]' ? withTravellers ? {} : null : selector === 'progress' ? fields.progress
+  root.querySelector = selector => selector === '[data-loading-scene]' ? withTravellers ? {} : null : selector === 'progress' ? fields.progress
     : fields[selector.match(/data-loading-(?:action="([^"]+)"|([^\]]+))/)?.slice(1).find(Boolean)] ?? null;
   root.querySelectorAll = selector => selector === 'button' ? [fields.pause, fields.sound, fields.enter, fields.continue] : steps;
   document.readyState = 'loading';
@@ -65,15 +69,18 @@ function screen({ reducedMotion = false, withSound = false, deferSound = false,
     } });
     if (!deferSound) finishSound();
   });
-  let banterImports = 0, banterMounts = 0;
-  const loadBanterModule = async () => {
-    banterImports++;
-    if (hungBanter) return new Promise(() => {});
-    return { mountLoadingScreenBanter() { banterMounts++; return { setActive() {} }; } };
-  };
-  const context = vm.createContext({ window, document, AbortController: Controller, console, loadSoundModule, loadBanterModule });
+  let journeyImports = 0, journeyMounts = 0, journeyActive, finishJourney;
+  const loadJourneyModule = () => new Promise(resolve => {
+    journeyImports++;
+    finishJourney = () => resolve({ mountLoadingScreenScene() {
+      journeyMounts++;
+      return { setActive(active) { journeyActive = active; } };
+    } });
+    if (!deferJourney) finishJourney();
+  });
+  const context = vm.createContext({ window, document, AbortController: Controller, console, loadSoundModule, loadJourneyModule });
   let runnable = withSound ? source.replace(/import\('\.\/loading-screen-sound\.js\?[^']+'\)/, 'loadSoundModule()') : source;
-  runnable = runnable.replace(/import\('\.\/loading-screen-banter\.js\?[^']+'\)/, 'loadBanterModule()');
+  runnable = runnable.replace(/import\('\.\/loading-screen-scenes\.js\?[^']+'\)/, 'loadJourneyModule()');
   vm.runInContext(runnable, context);
   function emit(where, type, detail) { where.dispatchEvent(new CustomEvent(type, { detail })); }
   function mount() { document.readyState = 'interactive'; emit(document, 'readystatechange'); }
@@ -86,7 +93,8 @@ function screen({ reducedMotion = false, withSound = false, deferSound = false,
     emit(document, 'aleria:characters-changed'); emit(document, 'aleria:creatures-changed');
   }
   return { window, document, root, content, fields, target, emit, mount, click, tick, ready, timers, soundtrack,
-    banterImports: () => banterImports, banterMounts: () => banterMounts, finishSound: () => finishSound() };
+    journeyImports: () => journeyImports, journeyMounts: () => journeyMounts, journeyActive: () => journeyActive,
+    finishJourney: () => finishJourney(), finishSound: () => finishSound() };
 }
 
 test('the loading screen waits for archive and first module settlement and only exits on user input', async () => {
@@ -160,55 +168,95 @@ test('entry is ready before window.load and optional figure or creature events',
   ui.click(); ui.tick(220); assert.equal(ui.content.inert, false);
 });
 
-test('a decorative banter request that never finishes cannot block a ready archive', async () => {
-  const ui = screen({ withTravellers: true, hungBanter: true }); ui.mount(); await settle();
-  assert.equal(ui.banterImports(), 1);
+test('a pending journey cannot block entry or mount after the dialog has closed', async () => {
+  const ui = screen({ withTravellers: true, deferJourney: true }); ui.mount(); await settle();
+  assert.equal(ui.journeyImports(), 1);
   ui.emit(ui.window, 'almanach:app-ready'); ui.emit(ui.window, 'almanach:initial-modules-settled');
   assert.equal(ui.root.dataset.state, 'ready'); assert.equal(ui.fields.enter.disabled, false);
   ui.click(); ui.tick(220); assert.equal(ui.root.removed, true);
+  ui.finishJourney(); await settle(); assert.equal(ui.journeyMounts(), 0);
 });
 
-test('reduced motion keeps the scene still and defers rotating speech until explicitly resumed', async () => {
+test('reduced motion mounts the scene paused until explicitly resumed', async () => {
   const ui = screen({ reducedMotion: true, withTravellers: true }); ui.mount(); await settle();
-  assert.equal(ui.banterImports(), 0); assert.equal(ui.root.dataset.motion, 'paused');
+  assert.equal(ui.journeyMounts(), 1); assert.equal(ui.journeyActive(), false);
+  assert.equal(ui.root.dataset.motion, 'paused');
   ui.click(ui.fields.pause); await settle();
-  assert.equal(ui.banterImports(), 1); assert.equal(ui.banterMounts(), 1); assert.equal(ui.root.dataset.motion, 'playing');
+  assert.equal(ui.journeyMounts(), 1); assert.equal(ui.journeyActive(), true);
+  assert.equal(ui.root.dataset.motion, 'playing');
 });
 
 test('hidden tabs pause movement without changing the users animation choice', async () => {
   const ui = screen({ hidden: true, withTravellers: true }); ui.mount(); await settle();
-  assert.equal(ui.banterImports(), 0); assert.equal(ui.root.dataset.visibility, 'hidden'); assert.equal(ui.root.dataset.motion, 'playing');
+  assert.equal(ui.journeyActive(), false); assert.equal(ui.root.dataset.visibility, 'hidden'); assert.equal(ui.root.dataset.motion, 'playing');
   ui.document.hidden = false; ui.emit(ui.document, 'visibilitychange'); await settle();
-  assert.equal(ui.banterImports(), 1); assert.equal(ui.root.dataset.visibility, 'visible');
+  assert.equal(ui.journeyActive(), true); assert.equal(ui.root.dataset.visibility, 'visible');
   ui.click(ui.fields.pause); ui.document.hidden = true; ui.emit(ui.document, 'visibilitychange');
   ui.document.hidden = false; ui.emit(ui.document, 'visibilitychange');
+  assert.equal(ui.journeyActive(), false);
   assert.equal(ui.root.dataset.motion, 'paused');
 });
 
-test('each traveller speaks in turn, with quiet gaps, and the timers stop on pause and exit', () => {
-  const { window, tick, timers } = screen();
-  const controller = new AbortController();
-  const speaker = {}, line = {};
-  const bubble = { hidden: true, dataset: {}, querySelector(selector) {
-    return selector === '[data-banter-speaker]' ? speaker : line;
-  } };
-  const chatter = mountLoadingScreenBanter({ querySelector: () => bubble }, { signal: controller.signal, environment: window });
-  chatter.setActive(true);
-  for (const name of ['gawain', 'guinevere', 'freya', 'fenrir']) {
-    tick(name === 'gawain' ? 1250 : 1400);
+test('each scene uses only its own cast and sourced quotes, with quiet gaps and cancellable gestures', () => {
+  for (const variant of LOADING_SCREEN_SCENES) {
+    const { window, tick, timers } = screen();
+    const controller = new AbortController();
+    const speaker = {}, line = {};
+    const bubble = { hidden: true, dataset: {}, style: new Map(), querySelector(selector) {
+      return selector === '[data-banter-speaker]' ? speaker : line;
+    } };
+    bubble.style.setProperty = bubble.style.set.bind(bubble.style);
+    let animatedSpeaker;
+    const chatter = mountLoadingScreenBanter({ querySelector: () => bubble },
+      { variant, signal: controller.signal, environment: window, showSpeaker: quote => { animatedSpeaker = quote?.speaker; } });
+    const quotes = LOADING_SCREEN_QUOTES[variant.id];
+    const names = new Map(variant.cast);
+    assert.deepEqual(new Set(quotes.map(quote => quote.speaker)), new Set(names.keys()));
+    assert.equal(new Set(quotes.map(quote => quote.source.thread)).size, 1);
+    if (variant.kind === 'council') {
+      assert(quotes.every(quote => quote.source.thread === 'castell-draig-ratsfluegel::session:ratsfluegel-herold'));
+    }
+    chatter.setActive(true);
+    for (const [index, quote] of quotes.entries()) {
+      assert.match(quote.source.comment, /^\w[\w-]+$/);
+      assert.ok(quote.source.thread);
+      if (quote.speaker === 'freki') assert.equal(quote.source.kind, 'animal');
+      tick(index === 0 ? 1250 : 1400);
+      assert.equal(bubble.hidden, false);
+      assert.equal(bubble.dataset.speaker, quote.speaker);
+      assert.equal(animatedSpeaker, quote.speaker);
+      assert.equal(speaker.textContent, names.get(quote.speaker));
+      assert.equal(line.textContent, quote.text);
+      const timer = [...timers.values()].find(({ delay }) => delay !== 15000);
+      assert.ok(timer.delay >= 4400);
+      tick(timer.delay);
+      assert.equal(bubble.hidden, true);
+      assert.equal(animatedSpeaker, undefined);
+    }
+    chatter.setActive(false);
+    assert.ok([...timers.values()].every(timer => timer.delay === 15000));
+    chatter.setActive(true); tick(1250);
     assert.equal(bubble.hidden, false);
-    assert.equal(bubble.dataset.speaker, name);
-    assert.ok(speaker.textContent && line.textContent);
-    tick(4400);
+    assert.equal(line.textContent, quotes[0].text);
+    chatter.setActive(false);
+    chatter.setActive(true); tick(1250);
+    assert.equal(line.textContent, quotes[0].text, 'resuming repeats the interrupted line');
+    controller.abort();
     assert.equal(bubble.hidden, true);
+    assert.equal(animatedSpeaker, undefined);
+    assert.ok([...timers.values()].every(timer => timer.delay === 15000));
   }
-  chatter.setActive(false);
-  assert.ok([...timers.values()].every(timer => timer.delay === 15000));
-  chatter.setActive(true); tick(1250);
-  assert.equal(bubble.hidden, false);
-  controller.abort();
-  assert.equal(bubble.hidden, true);
-  assert.ok([...timers.values()].every(timer => timer.delay === 15000));
+});
+
+test('all four scenes can be chosen, and a reload in the same tab avoids an immediate repeat', () => {
+  const ids = ['owetas-quartett', 'wolfshorn', 'tiefenwyrm', 'heroldsrat'];
+  assert.deepEqual([0, .25, .5, .999].map(value => chooseLoadingScreenScene({ random: () => value }).id), ids);
+  let previous;
+  const storage = { getItem: () => previous, setItem: (_, id) => { previous = id; } };
+  const draw = value => chooseLoadingScreenScene({ storage, random: () => value }).id;
+  assert.deepEqual([draw(.5), draw(.99), draw(0), draw(.99)], ['tiefenwyrm', 'heroldsrat', 'owetas-quartett', 'heroldsrat']);
+  const unavailable = { getItem() { throw Error('blocked'); }, setItem() { throw Error('blocked'); } };
+  assert.equal(chooseLoadingScreenScene({ storage: unavailable, random: () => 0 }).id, ids[0]);
 });
 
 test('sound starts on mounting, retries on loading interactions, and receives the entry stop without restarting', async () => {
@@ -490,17 +538,28 @@ test('every live graphic and soundtrack exists, and rejected frame atlases are n
   const css = readFileSync(new URL('../modules/loading-screen/loading-screen.css', import.meta.url), 'utf8');
   const files = new Set(html.match(/\.\/public\/assets\/loading-screen\/[^" ]+/g));
   for (const path of files) assert.ok(existsSync(new URL(`../${path}`, import.meta.url)), path);
-  const manifest = JSON.parse(readFileSync(new URL('../public/assets/loading-screen/journey-v5-manifest.json', import.meta.url), 'utf8'));
-  assert.deepEqual(manifest.atlas.order, ['gawain', 'freya', 'guinevere', 'fenrir']);
-  assert.equal(manifest.atlas.columns, 4);
-  assert.match(css, /travellers-stride-v5\.webp/);
+  const manifest = JSON.parse(readFileSync(new URL('../public/assets/loading-screen/journey-v6-manifest.json', import.meta.url), 'utf8'));
+  assert.deepEqual(LOADING_SCREEN_JOURNEYS.map(({ cast }) => cast.map(([id]) => id)),
+    [['oweta', 'lefraye', 'rianna', 'caralyn'], ['duncan', 'gawain', 'ylva', 'freki'], ['idwal', 'trevor']]);
   assert.match(css, /steps\(4, jump-none\)/);
   assert.doesNotMatch(source, /loading-screen-walk/);
-  for (const asset of [...manifest.sources, ...manifest.assets, manifest.preview]) {
-    const bytes = readFileSync(new URL(`../${asset.file}`, import.meta.url));
-    assert.equal(bytes.length, asset.bytes);
-    assert.equal(createHash('sha256').update(bytes).digest('hex'), asset.sha256);
+  for (const { id, cast } of LOADING_SCREEN_JOURNEYS) {
+    const { panorama, atlas } = manifest.groups[id];
+    assert.deepEqual(atlas.order, cast.map(([id]) => id));
+    assert.equal(atlas.columns, 4);
+    assert.deepEqual(atlas.asset.size, [atlas.columns * atlas.cell, atlas.rows * atlas.cell]);
+    for (const asset of panorama.assets) assert.equal(asset.size[0], asset.size[1] * 4);
+    verifyAssets([panorama.source, ...panorama.assets, ...atlas.sources, atlas.asset]);
   }
+  const { room, atlas } = manifest.council;
+  assert.deepEqual(atlas.order, HEROLDS_COUNCIL.cast.map(([person]) => person));
+  assert.equal(atlas.rows, atlas.order.length);
+  assert(atlas.sources.some(item => item.file.endsWith('/cadogan-hut-gesten-v6.png')));
+  assert.equal(atlas.columns, 4);
+  assert.deepEqual(atlas.asset.size, [atlas.columns * atlas.cell, atlas.rows * atlas.cell]);
+  for (const asset of room.assets) assert.equal(asset.size[0] * 3, asset.size[1] * 4);
+  verifyAssets([room.source, ...room.assets, ...atlas.sources, atlas.asset]);
+  assert.doesNotMatch(html + css, /highland-road-v5|travellers-stride-v5/);
   assert.doesNotMatch(html + css, /(?:travellers|gawain|freya|guinevere|fenrir|gaul)-walk-v[12]\.webp/);
   assert.doesNotMatch(css, /journey-body|steps\(1/);
   assert.deepEqual(Object.keys(LOADING_SCREEN_RIGS).sort(), ['fenrir', 'freya', 'gawain', 'guinevere']);
@@ -513,6 +572,14 @@ test('every live graphic and soundtrack exists, and rejected frame atlases are n
   const walk = readFileSync(new URL('../modules/loading-screen/loading-screen-walk.js', import.meta.url), 'utf8');
   assert.doesNotMatch(walk, /clipPath|<mask|createElementNS\([^)]*mask/);
 });
+
+function verifyAssets(assets) {
+  for (const asset of assets) {
+    const bytes = readFileSync(new URL(`../${asset.file}`, import.meta.url));
+    assert.equal(bytes.length, asset.bytes);
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), asset.sha256);
+  }
+}
 
 test('each human leg crosses from behind the other leg to in front during a full stride', () => {
   function footX(part, degrees) {

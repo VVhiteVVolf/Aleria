@@ -18,8 +18,7 @@
   let contentAriaHidden = null;
   let previousFocus = null;
   let sound = null;
-  let banter = null;
-  let banterRequest = null;
+  let scene = null;
 
   html.dataset.almanachLoading = '';
   const slowTimer = window.setTimeout(() => { slow = true; render(); }, 15000);
@@ -65,6 +64,7 @@
     for (const step of view.steps) {
       step.dataset.complete = String(milestones.get(step.dataset.loadingStep)?.done === true);
     }
+    updateSceneMotion();
     if (ready) window.clearTimeout(slowTimer);
   }
 
@@ -98,7 +98,7 @@
 
   function handleClick(event) {
     const action = event.target.closest('[data-loading-action]')?.dataset.loadingAction;
-    if (action === 'pause') { void sound?.tryAutoplay(); animationPaused = !animationPaused; render(); updateBanter(); return; }
+    if (action === 'pause') { void sound?.tryAutoplay(); animationPaused = !animationPaused; render(); return; }
     if (action === 'sound') { sound?.toggle(); return; }
     if (action === 'reload') { window.location.reload(); return; }
     if (!isReady() && action !== 'continue') void sound?.tryAutoplay();
@@ -144,15 +144,18 @@
     });
   }
 
-  function updateBanter() {
-    const active = !!view && !leaving && !animationPaused && !document.hidden && !lifetime.signal.aborted;
-    if (banter) { banter.setActive(active); return; }
-    if (!active || banterRequest || !view.root.querySelector('[data-loading-banter]')) return;
-    banterRequest = import('./loading-screen-banter.js?v=20261118-journey-v5').then(({ mountLoadingScreenBanter }) => {
-      if (!view || lifetime.signal.aborted) return;
-      banter = mountLoadingScreenBanter(view.root, { signal: lifetime.signal });
-      banter?.setActive(!animationPaused && !document.hidden);
-    }).catch(error => console.warn('Die Reisegespräche konnten nicht geladen werden:', error));
+  function updateSceneMotion() {
+    scene?.setActive(!animationPaused && !document.hidden && !lifetime.signal.aborted);
+  }
+
+  function loadScene(root) {
+    const target = root.querySelector('[data-loading-scene]');
+    if (!target) return;
+    import('./loading-screen-scenes.js?v=20261119-journey-v6').then(({ mountLoadingScreenScene }) => {
+      if (lifetime.signal.aborted) return;
+      scene = mountLoadingScreenScene(target, { signal: lifetime.signal });
+      updateSceneMotion();
+    }).catch(error => console.warn('Die Szene des Ladebildschirms konnte nicht geladen werden:', error));
   }
 
   function mount() {
@@ -192,7 +195,7 @@
       render();
       root.focus({ preventScroll: true });
       if (root.dataset.loadingSound) loadSound();
-      updateBanter();
+      loadScene(root);
     } catch (error) {
       sound?.destroy();
       restoreContent();
@@ -208,7 +211,7 @@
     offline = event.detail?.offline === true;
     complete('modules');
   }, { once: true });
-  listen(document, 'visibilitychange', () => { render(); updateBanter(); });
+  listen(document, 'visibilitychange', render);
   listen(window, 'pagehide', () => { window.clearTimeout(slowTimer); lifetime.abort(); }, { once: true });
   listen(window, 'almanach:startup-error', () => { failed = true; render(); }, { once: true });
   listen(document, 'readystatechange', mount);

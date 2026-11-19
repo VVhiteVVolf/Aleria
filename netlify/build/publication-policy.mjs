@@ -5,6 +5,7 @@ const SOURCE_ARCHIVE_ROOTS = [
   'AleriaAlmanach/assets/loading-screen/source/highland-road-v5.png',
   'AleriaAlmanach/assets/loading-screen/source/travellers-stride-v5.png',
   'AleriaAlmanach/assets/loading-screen/journey-v5-prompts.json',
+  'AleriaAlmanach/assets/loading-screen/journey-v6-prompts.json',
   'AleriaAlmanach/docs/combat/WAFFENGATTUNGEN_SPIELTEST.md',
   'AleriaAlmanach/docs/art/tirfelyn-hof-20261115/',
   'AleriaAlmanach/docs/art/rheinallt-20261115/',
@@ -105,6 +106,7 @@ export function isAuthoringArchive(file) {
     || isHouseSourceArchive(file)
     || isLanguagePackageArchive(file)
     || isLanguageSceneSource(file)
+    || /^AleriaAlmanach\/assets\/loading-screen\/source\/[^/]+-v6\.png$/.test(file)
     || file === 'AleriaAlmanach/modules/language/package-language-build.mjs'
     || (file.startsWith('Fonts/Ishtaran-Web-1.001/')
       && file !== 'Fonts/Ishtaran-Web-1.001/AyluunMondbogen-Regular.woff')

@@ -1,8 +1,16 @@
-# Reise-Ladebildschirm
+# Almanach-Ladebildschirm
 
-Gawain führt die Reisegruppe auf einer Hochlandstraße an. Freya, Guinevere und
-Fenrir folgen. Die Figuren bewegen sich unabhängig vom Ladefortschritt.
-Der Eintritt erfolgt per Klick oder Enter.
+Beim Öffnen des Almanachs wird eine von vier Szenen ausgelost. Im selben Tab
+wechselt die Szene beim nächsten Laden. Ohne verfügbaren Sitzungsspeicher bleibt
+die normale Zufallsauswahl aktiv.
+
+- Oweta, Lefraye, Rianna und Caralyn ziehen an Obstgärten, Flusswiesen und einem Dorf bei Gwynthor vorbei.
+- Sir Duncan, Gawain, Ylva und Freki wandern durch Nadelwald und Gebirge am Wasserfall entlang.
+- Idwal und Trevor gehen von den Küstenklippen zum Hafen.
+- Iestyn, Gareth, Trahern, Cadogan, Cadfan, Neala und Branwen beraten in der Kammer des Herolds über Cadogans Hut.
+
+Der Eintritt erfolgt per Klick oder Enter. Die Animation läuft unabhängig vom
+Ladefortschritt.
 
 ## Start und Freigabe
 
@@ -27,25 +35,31 @@ Mindestwartezeit.
 
 ## Illustration und Bewegung
 
-Die Hochlandstraße hat AVIF-Fassungen für Desktop und Mobilgeräte sowie einen
-WebP-Fallback. Eine transparente WebP-Datei enthält je vier vollständige
-Laufposen von Gawain, Freya, Guinevere und Fenrir. CSS schaltet die Posen in
-unterschiedlichem Takt um. Dadurch genügt ein gemeinsamer Abruf der Figuren.
+`loading-screen-scenes.js` wählt die Szene und lädt ihr Hintergrundbild und
+ihren Bilderbogen. Die drei Reisen verwenden je vier Laufposen pro Figur und
+ein Panorama, dessen Ränder beim Durchlaufen weich ineinander übergehen.
+In der Heroldskammer bleibt die Kamera fest. Beim Sprechen wechselt die aktive
+Figur zwischen drei Mund- und Handgesten. Cadogan hält den Hut in allen vier
+Posen in der Hand.
 
-`loading-screen-banter.js` zeigt gelegentlich eine Sprechblase zu einer Figur.
-Die Zeilen orientieren sich an den Figurenquellen. Pausieren, ein unsichtbarer
-Tab und der Eintritt beenden den laufenden Sprechblasen-Timer. Bei reduzierter
-Bewegung bleibt die Reise zunächst statisch. Die manuelle Pausenwahl gilt
-auch nach einem Tabwechsel.
+`loading-screen-quotes.js` enthält vier Gesprächsauszüge in ihrer ursprünglichen
+Reihenfolge. Owetas Quartett plant den Aufbruch zum Tirfelyn-Hof. Gawain,
+Duncan, Ylva und Freki sprechen nach dem Übungskampf. Idwal und Trevor
+besprechen den Verlust ihres Navigators. In der Kammer des Herolds geht es um
+Cadogans Hut. Zu jeder Zeile sind der Quellkommentar, der Szenenthread und der
+zugehörige Abschnitt verzeichnet.
+`loading-screen-banter.js` zeigt die Sprechblasen in Reihenfolge über der
+zugehörigen Figur. Pausieren, ein unsichtbarer Tab und der Eintritt halten
+Animation und Sprechblasen an. Bei reduzierter Bewegung startet jede Szene
+statisch. Die manuelle Pausenwahl gilt auch nach einem Tabwechsel.
 
-Die mit dem eingebauten ImageGen erzeugten Originale liegen unter
-`assets/loading-screen/source/`. Tatsächliche Prompts und Referenzpfade stehen
-in `assets/loading-screen/journey-v5-prompts.json`.
-`python modules/loading-screen/prepare-assets.py --journey-v5` benötigt Pillow
-mit WebP- und AVIF-Unterstützung. Es erzeugt die aktiven Dateien unter
-`public/assets/loading-screen/`, ein separates Vorschau-GIF und das Manifest
-mit Maßen und SHA-256-Prüfsummen. Die früheren Landschaften und Puppenfassungen
-sind als Quellen für ältere Versionen erhalten.
+Die mit ImageGen erzeugten Originale liegen unter `assets/loading-screen/source/`.
+Prompts und Referenzpfade stehen in `assets/loading-screen/journey-v6-prompts.json`.
+`python AleriaAlmanach/modules/loading-screen/prepare-assets.py --journey-v6`
+benötigt Pillow mit WebP- und AVIF-Unterstützung. Es erzeugt die aktiven Dateien
+unter `public/assets/loading-screen/` und das Manifest mit Maßen und
+SHA-256-Prüfsummen. Die Hintergründe haben AVIF-Fassungen für Desktop und
+Mobilgeräte sowie einen WebP-Fallback.
 
 ## Musik und Bedienung
 
@@ -65,6 +79,6 @@ Ladebildschirms keine Musik. Tab und Umschalt-Tab bleiben im geöffneten Dialog.
 ## Prüfung
 
 `npm --prefix AleriaAlmanach run test:startup` prüft Startsignale, Zeitüberschreitung,
-Offlinebetrieb, Bedienung, Sprechblasen, Ton, Assets und den Modulabgleich.
-Die Messungen und Browseraufnahmen stehen unter
-`diagnostics/startup-journey-20261118/`.
+Offlinebetrieb, Szenenauswahl, Bedienung, Sprechblasen, Ton, Assets und
+Modulabgleich. Quellabgleich und Browseraufnahmen der aktuellen Fassung stehen
+unter `diagnostics/startup-journeys-20261119/`.

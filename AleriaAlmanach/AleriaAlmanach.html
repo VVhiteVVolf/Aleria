@@ -6,11 +6,11 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>Aleria Almanach</title>
-<script src="./modules/loading-screen/loading-screen.js?v=20261118-journey-v5"></script>
+<script src="./modules/loading-screen/loading-screen.js?v=20261119-journey-v6"></script>
 <script src="./modules/core/deferred-styles.js?v=20261118-startup-v1"></script>
-<link rel="stylesheet" href="./modules/loading-screen/loading-screen.css?v=20261118-journey-v5">
-<link rel="preload" as="image" type="image/avif" media="(max-width: 600px)" href="./public/assets/loading-screen/highland-road-v5-mobile.avif">
-<link rel="preload" as="image" type="image/avif" media="(width > 600px)" href="./public/assets/loading-screen/highland-road-v5-desktop.avif">
+<link rel="stylesheet" href="./modules/loading-screen/loading-screen.css?v=20261119-journey-v6">
+<link rel="stylesheet" href="./modules/loading-screen/loading-screen-council.css?v=20261119-journey-v6">
+<link rel="modulepreload" href="./modules/loading-screen/loading-screen-scenes.js?v=20261119-journey-v6">
 <link rel="icon" type="image/png" href="../IconOrdner/ReiterIcons/Platzhalter.png">
 <link rel="preconnect" href="https://i.imgur.com">
 <link rel="dns-prefetch" href="//i.imgur.com">
@@ -598,23 +598,11 @@
     </div>
   </div>
   <div class="almanach-loading__body">
-    <div class="almanach-loading__scene">
-      <div class="almanach-loading__art" role="img" aria-label="Gawain, Freya, Guinevere und Fenrir wandern auf einer Hochlandstraße im Morgenlicht.">
-        <picture>
-          <source media="(max-width: 600px)" srcset="./public/assets/loading-screen/highland-road-v5-mobile.avif" type="image/avif">
-          <source srcset="./public/assets/loading-screen/highland-road-v5-desktop.avif" type="image/avif">
-          <img class="almanach-loading__landscape" src="./public/assets/loading-screen/highland-road-v5-fallback.webp" width="1440" height="600" alt="" decoding="async">
-        </picture>
-        <div class="almanach-loading__party" aria-hidden="true">
-          <span class="almanach-loading__traveller almanach-loading__traveller--fenrir" data-loading-traveller="fenrir"></span>
-          <span class="almanach-loading__traveller almanach-loading__traveller--guinevere" data-loading-traveller="guinevere"></span>
-          <span class="almanach-loading__traveller almanach-loading__traveller--freya" data-loading-traveller="freya"></span>
-          <span class="almanach-loading__traveller almanach-loading__traveller--gawain" data-loading-traveller="gawain"></span>
-        </div>
-      </div>
+    <div class="almanach-loading__scene" data-loading-scene>
+      <div class="almanach-loading__art" data-loading-scene-art role="img" aria-label="Eine Szene aus Aleria."></div>
       <div class="almanach-loading__banter" data-loading-banter aria-live="off" hidden>
         <b data-banter-speaker></b>
-        <span data-banter-line></span>
+        <q data-banter-line></q>
       </div>
     </div>
     <div class="almanach-loading__footer">

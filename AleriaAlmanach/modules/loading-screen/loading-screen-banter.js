@@ -1,45 +1,34 @@
-const travellers = Object.freeze({
-  gawain: 'Gawain',
-  guinevere: 'Guinevere',
-  freya: 'Freya',
-  fenrir: 'Fenrir'
-});
+import { LOADING_SCREEN_QUOTES } from './loading-screen-quotes.js?v=20261119-journey-v6';
 
-const banter = Object.freeze([
-  ['gawain', 'Das ist kein Umweg. Das ist ein würdigerer Auftritt.'],
-  ['guinevere', 'Ich sehe die Herberge. Du darfst sie gleich entdecken.'],
-  ['freya', 'Wartet! Der Bach ist verstimmt. Oder meine Laute.'],
-  ['fenrir', 'Der Bach schafft es auch ohne Probe bis zur Herberge.'],
-  ['gawain', 'Ritterliche Voraussicht. Ich habe ein zweites Halstuch dabei.'],
-  ['guinevere', 'Ich habe die Karte. Dein Halstuch darf trotzdem mitkommen.'],
-  ['freya', 'Fenrir, klapper noch mal mit dem Gürtel. Ich brauche den Takt.'],
-  ['fenrir', 'Das war mein Magen.'],
-  ['gawain', 'Der Schlamm reicht bis zum Knöchel. Das ist ein Hinterhalt.'],
-  ['guinevere', 'Links ist es trocken. Ich wollte nur hören, wie du das nennst.'],
-  ['freya', 'Die Ballade ist fast fertig. Könnt ihr euch auf ein Versmaß einigen?'],
-  ['fenrir', 'Ich hab Brot. Das ist mein Beitrag zur Ballade.']
-]);
-
-export function mountLoadingScreenBanter(root, { signal, environment = window } = {}) {
+export function mountLoadingScreenBanter(root, { variant, signal, showSpeaker, environment = window }) {
   const bubble = root.querySelector('[data-loading-banter]');
   const speaker = bubble?.querySelector('[data-banter-speaker]');
   const line = bubble?.querySelector('[data-banter-line]');
-  if (!speaker || !line || signal?.aborted) return null;
+  const quotes = LOADING_SCREEN_QUOTES[variant.id];
+  if (!speaker || !line || !quotes?.length || signal?.aborted) return null;
+  const positions = new Map(variant.cast.map(([id, name], index) => [
+    id, { name, offset: (index + .5) / variant.cast.length - .5 }
+  ]));
   let timer;
   let index = 0;
   let active = false;
 
   function showNext() {
-    const [traveller, text] = banter[index];
-    index = (index + 1) % banter.length;
-    bubble.dataset.speaker = traveller;
-    speaker.textContent = travellers[traveller];
+    const quote = quotes[index];
+    const { speaker: person, text } = quote;
+    const { name, offset } = positions.get(person);
+    bubble.dataset.speaker = person;
+    bubble.style.setProperty('--speaker-offset', offset);
+    speaker.textContent = name;
     line.textContent = text;
+    showSpeaker?.(quote, bubble);
     bubble.hidden = false;
     timer = environment.setTimeout(() => {
       bubble.hidden = true;
+      showSpeaker?.(null, bubble);
+      index = (index + 1) % quotes.length;
       timer = environment.setTimeout(showNext, 1400);
-    }, 4400);
+    }, Math.max(4400, text.length * 52));
   }
 
   function setActive(enabled) {
@@ -48,6 +37,7 @@ export function mountLoadingScreenBanter(root, { signal, environment = window } 
     active = next;
     environment.clearTimeout(timer);
     bubble.hidden = true;
+    showSpeaker?.(null, bubble);
     if (active) timer = environment.setTimeout(showNext, 1250);
   }
 

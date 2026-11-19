@@ -72,3 +72,16 @@ test('the reviewed live group projection has no dependency on the excluded JSON 
     assert.doesNotMatch(source,/fetch\s*\(\s*["'][^"']*(?:backups\/scenes|\/source\/)/,path);
   }
 });
+
+test('the loading screen publishes its active graphics and retains the authoring originals in Git', async () => {
+  const promptsPath = 'AleriaAlmanach/assets/loading-screen/journey-v6-prompts.json';
+  const manifestPath = 'AleriaAlmanach/public/assets/loading-screen/journey-v6-manifest.json';
+  const load = file => readFile(new URL(`../../${file}`, import.meta.url), 'utf8').then(JSON.parse);
+  const [prompts, manifest] = await Promise.all([load(promptsPath), load(manifestPath)]);
+  const originals = [promptsPath, ...prompts.artwork.map(item => 'AleriaAlmanach/assets/loading-screen/' + item.source)];
+  const graphics = Object.values(manifest.groups).flatMap(({ panorama, atlas }) => [...panorama.assets, atlas.asset]);
+  graphics.push(...manifest.council.room.assets, manifest.council.atlas.asset);
+  for (const file of originals) assert.equal(shouldPublish(file), false, file);
+  for (const { file } of graphics) assert.equal(shouldPublish('AleriaAlmanach/' + file), true, file);
+  assert.equal(shouldPublish(manifestPath), true);
+});

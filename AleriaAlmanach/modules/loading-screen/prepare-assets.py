@@ -181,8 +181,152 @@ def prepare_journey():
     print('Prepared AVIF/WebP journey, transparent sprite atlas and loop preview.')
 
 
+def encode_scene_background(name, image, widths):
+    assets = []
+    encodings = [('desktop', 'avif', 55), ('mobile', 'avif', 54), ('fallback', 'webp', 79)]
+    for (size, extension, quality), width in zip(encodings, widths, strict=True):
+        file = DESTINATION / f'{name}-{size}.{extension}'
+        scaled = image.resize((width, round(width * image.height / image.width)), Image.Resampling.LANCZOS)
+        scaled.save(file, quality=quality)
+        assets.append(asset_description(file))
+    return assets
+
+
+def prepare_panorama(journey, ground_y):
+    name = f'{journey}-panorama-v6'
+    original = SOURCE / f'{name}.png'
+    with Image.open(original) as landscape:
+        height = round(landscape.width / 4)
+        # Put all three paths on the same baseline as the walking figures.
+        top = ground_y - round(height * .86)
+        panorama = landscape.crop((0, top, landscape.width, top + height)).convert('RGB')
+    assets = encode_scene_background(name, panorama, (1800, 1160, 1440))
+    return dict(source=asset_description(original), groundY=ground_y, assets=assets)
+
+
+def pack_journey_stride(journey, sheets):
+    cell = 160
+    actor_count = sum(len(actors) for _, actors, _ in sheets)
+    atlas = Image.new('RGBA', (4 * cell, actor_count * cell))
+    sources = []
+    order = []
+    for source_name, actors, row_split in sheets:
+        source = SOURCE / f'{source_name}-stride-v6.png'
+        sources.append(asset_description(source))
+        with Image.open(source) as drawing:
+            if drawing.mode != 'RGBA' or drawing.getchannel('A').getextrema() != (0, 255):
+                raise ValueError(f'Walk source must have genuine alpha: {source.name}')
+            for (actor, height), top, bottom in zip(actors, (0, row_split), (row_split, drawing.height), strict=True):
+                frames = [
+                    extract(drawing, (col * drawing.width // 4, top, (col + 1) * drawing.width // 4, bottom))
+                    for col in range(4)
+                ]
+                scale = min(146 / max(frame.width for frame in frames), height / max(frame.height for frame in frames))
+                for col, frame in enumerate(frames):
+                    resized = frame.resize((round(frame.width * scale), round(frame.height * scale)), Image.Resampling.LANCZOS)
+                    x = col * cell + (cell - resized.width) // 2
+                    y = len(order) * cell + 155 - resized.height
+                    atlas.alpha_composite(resized, (x, y))
+                order.append(actor)
+    file = DESTINATION / f'{journey}-stride-v6.webp'
+    atlas.save(file, quality=84, method=6, exact=True)
+    return dict(order=order, rows=actor_count, columns=4, cell=cell, sources=sources,
+                asset=asset_description(file))
+
+
+def pack_council_row(atlas, drawing, person, row, row_count, atlas_row, cell):
+    top = row * drawing.height // row_count
+    bottom = (row + 1) * drawing.height // row_count
+    cell_width = drawing.width // 4
+    # Cadfan's and Cadogan's raised hands reach across a nominal cell edge.
+    overlap = 12 if person in {'cadfan', 'cadogan'} else 0
+    frames = [
+        extract(drawing, (col * cell_width - overlap, top, (col + 1) * cell_width + overlap, bottom), crop=False)
+        for col in range(4)
+    ]
+    bounds = [frame.getchannel('A').getbbox() for frame in frames]
+    left = min(box[0] for box in bounds)
+    upper = min(box[1] for box in bounds)
+    right = max(box[2] for box in bounds)
+    lower = max(box[3] for box in bounds)
+    # Use one crop for the whole row so heads, shoulders and the held hat stay aligned.
+    scale = min(146 / (right - left), 148 / (lower - upper))
+    size = (round((right - left) * scale), round((lower - upper) * scale))
+    for col, frame in enumerate(frames):
+        resized = frame.crop((left, upper, right, lower)).resize(size, Image.Resampling.LANCZOS)
+        atlas.alpha_composite(resized, (col * cell + (cell - size[0]) // 2, atlas_row * cell + 155 - size[1]))
+
+
+def prepare_council():
+    name = 'heroldsrat-kammer-v6'
+    original = SOURCE / f'{name}.png'
+    with Image.open(original) as room:
+        backgrounds = encode_scene_background(name, room.convert('RGB'), (1440, 720, 1120))
+    sheets = [
+        ('iestyn-gareth', ['iestyn', 'gareth']),
+        ('trahern-cadogan', ['trahern', None]),
+        ('cadogan-hut', ['cadogan']),
+        ('cadfan', ['cadfan']),
+        ('neala-branwen', ['neala', 'branwen']),
+    ]
+    cell = 160
+    rows = sum(person is not None for _, people in sheets for person in people)
+    atlas = Image.new('RGBA', (4 * cell, rows * cell))
+    sources = []
+    order = []
+    for sheet_name, names in sheets:
+        source = SOURCE / f'{sheet_name}-gesten-v6.png'
+        sources.append(asset_description(source))
+        with Image.open(source) as drawing:
+            if drawing.mode != 'RGBA' or drawing.getchannel('A').getextrema() != (0, 255):
+                raise ValueError(f'Council source must have genuine alpha: {source.name}')
+            for row, person in enumerate(names):
+                if person is None:
+                    continue
+                pack_council_row(atlas, drawing, person, row, len(names), len(order), cell)
+                order.append(person)
+
+    file = DESTINATION / 'heroldsrat-gesten-v6.webp'
+    atlas.save(file, quality=84, method=6, exact=True)
+    return dict(
+        room=dict(source=asset_description(original), assets=backgrounds),
+        atlas=dict(order=order, rows=rows, columns=4, cell=cell, sources=sources,
+                   asset=asset_description(file))
+    )
+
+
+def prepare_journeys():
+    DESTINATION.mkdir(parents=True, exist_ok=True)
+    groups = [
+        ('owetas-quartett', 583, [
+            ('oweta-lefraye', [('oweta', 145), ('lefraye', 145)], 443),
+            ('rianna-caralyn', [('rianna', 143), ('caralyn', 143)], 443),
+        ]),
+        ('wolfshorn', 550, [
+            ('duncan-gawain', [('duncan', 146), ('gawain', 145)], 443),
+            ('ylva-freki', [('ylva', 145), ('freki', 106)], 478),
+        ]),
+        ('tiefenwyrm', 595, [
+            ('idwal-trevor', [('idwal', 146), ('trevor', 143)], 443),
+        ]),
+    ]
+    manifest = dict(version=6, groups={
+        journey: dict(panorama=prepare_panorama(journey, ground_y), atlas=pack_journey_stride(journey, sheets))
+        for journey, ground_y, sheets in groups
+    }, council=prepare_council())
+    (DESTINATION / 'journey-v6-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8', newline='\n')
+    print('Prepared 3 scrolling panoramas, 40 walk frames and the council with 28 gesture frames.')
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--journey-v5', action='store_true')
+    versions = parser.add_mutually_exclusive_group()
+    versions.add_argument('--journey-v5', action='store_true')
+    versions.add_argument('--journey-v6', action='store_true')
     args = parser.parse_args()
-    prepare_journey() if args.journey_v5 else prepare()
+    if args.journey_v6:
+        prepare_journeys()
+    elif args.journey_v5:
+        prepare_journey()
+    else:
+        prepare()

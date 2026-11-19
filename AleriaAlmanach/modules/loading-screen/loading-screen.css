@@ -26,6 +26,9 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
 .almanach-loading *, .almanach-loading *::before, .almanach-loading *::after { box-sizing: border-box; }
 .almanach-loading:focus { outline: none; }
 .almanach-loading[data-state="leaving"] { opacity: 0; pointer-events: none; }
+.almanach-loading:is([data-motion="paused"], [data-visibility="hidden"]) {
+  --journey-play-state: paused;
+}
 .almanach-loading__topline, .almanach-loading__body {
   width: min(100%, 1120px);
   margin-inline: auto;
@@ -84,7 +87,10 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
 
 .almanach-loading__scene {
   --party-width: min(68cqw, 640px);
-  --road-bottom: 14%;
+  --road-bottom: 13%;
+  --panorama-width: 166.667%;
+  --panorama-blend: .08;
+  --panorama-overlap: calc(var(--panorama-width) * var(--panorama-blend));
   position: relative;
   aspect-ratio: 12 / 5;
   width: 100%;
@@ -96,21 +102,45 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
   contain: layout paint;
   container-type: inline-size;
 }
-.almanach-loading__art, .almanach-loading__landscape {
+.almanach-loading__scene[data-party-size="2"] { --party-width: min(42cqw, 360px); }
+.almanach-loading__art,
+.almanach-loading__panorama {
   position: absolute;
   inset: 0;
+}
+.almanach-loading__panorama {
+  animation: journey-panorama 28s linear infinite;
+  animation-play-state: var(--journey-play-state, running);
+}
+.almanach-loading__landscape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: var(--panorama-width);
+  height: 100%;
+}
+.almanach-loading__landscape + .almanach-loading__landscape {
+  left: calc(var(--panorama-width) - var(--panorama-overlap));
+  mask-image: linear-gradient(to right, transparent, #000 calc(100% * var(--panorama-blend)));
+}
+.almanach-loading__landscape img {
   display: block;
   width: 100%;
   height: 100%;
 }
-.almanach-loading__landscape { object-fit: cover; object-position: center bottom; }
+@keyframes journey-panorama {
+  from { transform: translateX(calc(-1 * var(--panorama-overlap))); }
+  to { transform: translateX(calc(-1 * var(--panorama-width))); }
+}
 .almanach-loading__party {
   position: absolute;
   bottom: var(--road-bottom);
   left: 50%;
   display: grid;
   width: var(--party-width);
-  grid-template-columns: 1fr .93fr .93fr .96fr;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
   align-items: end;
   transform: translateX(-50%);
 }
@@ -131,24 +161,22 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
   content: '';
   position: absolute;
   inset: 0;
-  background: url('../../public/assets/loading-screen/travellers-stride-v5.webp') 0 var(--journey-row) / 400% 400% no-repeat;
+  background: var(--journey-atlas) 0 var(--journey-row) / 400% var(--atlas-height) no-repeat;
   animation: journey-walk var(--journey-cadence) steps(4, jump-none) var(--journey-phase) infinite;
+  animation-play-state: var(--journey-play-state, running);
 }
-.almanach-loading__traveller--fenrir { --journey-row: 100%; --journey-cadence: 1.12s; --journey-phase: -.6s; }
-.almanach-loading__traveller--guinevere { --journey-row: 66.6667%; --journey-cadence: .98s; --journey-phase: -.27s; }
-.almanach-loading__traveller--freya { --journey-row: 33.3333%; --journey-cadence: 1.04s; --journey-phase: -.76s; }
-.almanach-loading__traveller--gawain { --journey-row: 0%; --journey-cadence: .92s; --journey-phase: 0s; }
 @keyframes journey-walk { from { background-position-x: 0%; } to { background-position-x: 100%; } }
 
 .almanach-loading__banter {
-  --bubble-width: min(215px, 72%);
+  --bubble-width: min(236px, 78cqw);
   --bubble-half: calc(var(--bubble-width) / 2);
   --speaker-offset: 0;
-  --bubble-accent: #9d6541;
+  --bubble-anchor: calc(50cqw + var(--party-width) * var(--speaker-offset));
+  --bubble-center: clamp(calc(var(--bubble-half) + 10px), var(--bubble-anchor), calc(100cqw - var(--bubble-half) - 10px));
   position: absolute;
   width: var(--bubble-width);
-  bottom: calc(var(--road-bottom) + var(--party-width) / 4.1 + 9px);
-  left: clamp(calc(var(--bubble-half) + 10px), calc(50% + var(--party-width) * var(--speaker-offset)), calc(100% - var(--bubble-half) - 10px));
+  bottom: calc(var(--road-bottom) + var(--party-width) / var(--party-size) + 5px);
+  left: var(--bubble-center);
   transform: translateX(-50%);
   padding: 9px 12px 10px;
   border: 1px solid #745638;
@@ -164,7 +192,7 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
 .almanach-loading__banter::after {
   content: '';
   position: absolute;
-  left: var(--bubble-tail, 50%);
+  left: clamp(10px, calc(var(--bubble-half) + var(--bubble-anchor) - var(--bubble-center) - 4px), calc(100% - 18px));
   bottom: -5px;
   width: 9px;
   height: 9px;
@@ -176,16 +204,18 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
 .almanach-loading__banter b {
   display: block;
   margin-bottom: 3px;
-  color: var(--bubble-accent);
+  color: #824528;
   font: 700 10px/1.2 system-ui, sans-serif;
   letter-spacing: .09em;
   text-transform: uppercase;
 }
-.almanach-loading__banter span { display: block; font-size: clamp(12px, 1.4vw, 15px); line-height: 1.25; }
-.almanach-loading__banter[data-speaker="fenrir"] { --speaker-offset: -.37; --bubble-accent: #87472c; }
-.almanach-loading__banter[data-speaker="guinevere"] { --speaker-offset: -.11; --bubble-accent: #22685d; }
-.almanach-loading__banter[data-speaker="freya"] { --speaker-offset: .13; --bubble-accent: #395982; }
-.almanach-loading__banter[data-speaker="gawain"] { --speaker-offset: .38; --bubble-accent: #993d36; }
+.almanach-loading__banter q {
+  display: block;
+  font-size: clamp(13px, 1.4vw, 16px);
+  line-height: 1.28;
+  overflow-wrap: anywhere;
+  quotes: "„" "“" "‚" "‘";
+}
 @keyframes journey-bubble-in { from { translate: 0 5px; opacity: 0; } to { translate: 0 0; opacity: 1; } }
 
 .almanach-loading__footer {
@@ -253,17 +283,17 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
   cursor: pointer;
 }
 .almanach-loading__recovery p { margin: 8px 0 0; color: var(--journey-muted); font: 11px/1.4 system-ui, sans-serif; }
-.almanach-loading:is([data-motion="paused"], [data-visibility="hidden"]) .almanach-loading__traveller::after {
-  animation-play-state: paused;
-}
-
 @media (max-width: 600px) {
   .almanach-loading__topline { flex-wrap: wrap; }
   .almanach-loading__controls { gap: 6px; }
   .almanach-loading__pause { padding-inline: 8px; font-size: 11px; }
-  .almanach-loading__scene { --party-width: 95cqw; aspect-ratio: 5 / 4; }
-  .almanach-loading__banter[data-speaker="fenrir"] { --bubble-tail: 15%; }
-  .almanach-loading__banter[data-speaker="gawain"] { --bubble-tail: 82%; }
+  .almanach-loading__scene {
+    --party-width: 95cqw;
+    --panorama-width: 320%;
+    aspect-ratio: 5 / 4;
+  }
+  .almanach-loading__scene[data-party-size="2"] { --party-width: 60cqw; }
+  .almanach-loading__banter { --bubble-width: min(280px, 84cqw); }
   .almanach-loading__footer { grid-template-columns: 1fr; gap: 12px; }
   .almanach-loading__enter { width: 100%; }
 }
