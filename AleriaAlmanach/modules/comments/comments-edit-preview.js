@@ -66,7 +66,8 @@ function updateEditFormPreview() {
   const preview = document.getElementById('ec-preview');
   if (!preview) return;
 
-  const segments = buildEditCommentSegmentsForSave();
+  const proseEditor = window.AleriaCommentProseEditor;
+  const segments = proseEditor?.isActive() ? proseEditor.previewSegments() : buildEditCommentSegmentsForSave();
   if (!segments.length && _editCommentSegments[0]?.kind === 'foreignvoice') segments.push(buildCommentForeignVoiceSegment(_editCommentSegments[0]));
   if (!segments.length && _editMode === 'narrator' && _editCommentSegments[0]?.kind === 'secretaction') {
     segments.push(buildCommentNarratorSecretActionSegment(_editCommentSegments[0]));

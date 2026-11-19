@@ -70,6 +70,7 @@
     const commitItemRecordCallable = httpsCallable(functions, 'commitItemRecord', { timeout: 30000 });
     const commitLootClaimCallable = httpsCallable(functions, 'commitLootClaim', { timeout: 30000 });
     const commitNarrativeCommentCallable = httpsCallable(functions, 'commitNarrativeComment', { timeout: 20000 });
+    const commitCommentProseEditCallable = httpsCallable(functions, 'commitCommentProseEdit', { timeout: 20000 });
     const finalizeCombatNarrationCallable = httpsCallable(functions, 'finalizeCombatNarration', { timeout: 15000 });
     const importBackupRecordsCallable = httpsCallable(functions, 'importBackupRecords', { timeout: 60000 });
     const endSceneSessionCallable = httpsCallable(functions, 'endSceneSession', { timeout: 60000 });
@@ -1180,13 +1181,15 @@
           return null;
         }
       },
-      async verifyCommentCode(docId, code) {
-        // Returns the comment data if code matches, throws otherwise
-        const { getDoc, doc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
+      async loadComment(docId) {
         const snap = await getDoc(doc(db, 'comments', docId));
         if (!snap.exists()) throw new Error('Nicht gefunden');
-        if (!(await isMatchingDeleteCode(snap.data(), code))) throw new Error('Falscher Code');
         return { id: snap.id, ...snap.data() };
+      },
+      async verifyCommentCode(docId, code) {
+        const data = await this.loadComment(docId);
+        if (!(await isMatchingDeleteCode(data, code))) throw new Error('Falscher Code');
+        return data;
       },
       async updateComment(docId, updates) {
         await requireFirebaseUser();
@@ -1205,6 +1208,10 @@
             activityAt: serverTimestamp()
           }, { merge: true });
         });
+      },
+      async editCommentProse(commentId, entryId, edits) {
+        await requireFirebaseUser();
+        return (await commitCommentProseEditCallable({ commentId, entryId, edits })).data;
       },
       async loadRecentComments(n, options = {}) {
         try {

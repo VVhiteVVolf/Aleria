@@ -83,14 +83,6 @@ function handleCommentFormActionKeydown(event) {
     handleCommentJumpSearchKey(event);
     return;
   }
-  if (event.key === 'Enter' && event.target?.dataset?.action === 'verify-edit-code-on-enter') {
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    if (event._commentActionHandled) return;
-    event._commentActionHandled = true;
-    verifyEditCode();
-    return;
-  }
   if (event.key === 'Enter' && event.target?.id === 'fz-chat-input' && !event.shiftKey) {
     event.preventDefault();
     void sendFazitChatMessage();

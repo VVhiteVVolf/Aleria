@@ -14,6 +14,7 @@ function getCommentDraftId() {
 
 function commentDraftHasContent(draft) {
   return !!(draft.text.trim() || draft.name.trim() || draft.title.trim() || draft.segments.length > 1
+    || draft.twinPair?.enabled
     || draft.segments.some(segment => segment.sceneItemDraft || segment.text.trim() || segment.kind !== 'speech'));
 }
 
@@ -26,6 +27,7 @@ function getCommentDraftPayload() {
     selectedEmoteIdx: _selectedEmoteIdx,
     selectedImageSetId: _selectedImageSetId,
     manualMode: _manualMode,
+    ...window.AleriaCommentTwins?.snapshot(),
     name: document.getElementById('cf-name')?.value || '',
     title: document.getElementById('cf-title')?.value || '',
     text: document.getElementById('cf-text')?.value || '',
@@ -35,6 +37,7 @@ function getCommentDraftPayload() {
       actionIconId: String(segment.actionIconId || '').slice(0, 40),
       challengeReplyToCommentId: String(segment.challengeReplyToCommentId || '').slice(0, 200),
       ...(segment.kind === 'foreignvoice' ? AleriaCommentForeignVoice.normalize(segment) : {}),
+      ...(segment.kind === 'twins' ? { twin: AleriaTwinDialogue.normalize(segment.twin) } : {}),
       text: segment.text,
       sceneItemDraft: segment.sceneItemDraft || null,
       sceneItemOperationId: segment.sceneItemOperationId || '',
@@ -156,6 +159,7 @@ function restoreCommentDraft(options = {}) {
     const key = getCommentDraftKey();
     const draft = options.draft || (key ? JSON.parse(localStorage.getItem(key)) : null);
     if (!draft || typeof draft !== 'object') return false;
+    window.AleriaCommentTwins?.restore(draft.twinPair);
     if (typeof draft.draftId === 'string' && /^[\w-]{1,80}$/.test(draft.draftId)) _commentDraftId = draft.draftId;
 
     setRichEditorContent('cf-text', String(draft.text || ''));
@@ -171,6 +175,7 @@ function restoreCommentDraft(options = {}) {
         segment.languageColor,
         {
           ...(segment.kind === 'foreignvoice' ? AleriaCommentForeignVoice.normalize(segment) : {}),
+          twin: segment.twin,
           mechanicMode: segment.mechanicMode,
           sceneItemDraft: segment.sceneItemDraft,
           sceneItemOperationId: segment.sceneItemOperationId,

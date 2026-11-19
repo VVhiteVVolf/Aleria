@@ -88,7 +88,6 @@ document.addEventListener('keydown', event => {
     if (editOpen) {
       event.preventDefault();
       if (document.getElementById('edit-step-form')?.classList.contains('visible')) submitEditComment();
-      else verifyEditCode();
     }
   }
 

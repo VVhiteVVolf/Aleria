@@ -2,7 +2,7 @@
 // bedienbar, wenn die Firebase-SDK-Dateien vorübergehend nicht erreichbar sind.
 import { mountAccountUi } from './account-ui.js';
 mountAccountUi(document.querySelector('[data-role="almanach-account"]'));
-import('../../firebase.js?v=20261113-scene-elements-v1').catch(error => {
+import('../../firebase.js?v=20261119-comment-edit-v1').catch(error => {
   console.warn('Die Online-Anbindung konnte noch nicht geladen werden:', error);
   if (!globalThis._fb) globalThis._fbReady = false;
   globalThis.dispatchEvent(new CustomEvent('fb-load-error', { detail: { message: String(error?.message || error) } }));

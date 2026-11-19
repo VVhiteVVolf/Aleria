@@ -18,6 +18,14 @@ test('normale Kommentare bleiben bearbeitbar und löschbar', () => {
   assert.doesNotThrow(() => policy.assertMutable(comment, 'gelöscht'));
 });
 
+test('alte Online-Kommentare ohne Verfasserfeld und ausgewertete Beiträge verwenden die Textbearbeitung', () => {
+  const policy = loadPolicy();
+  assert.equal(policy.usesProseEditor({ createdBy: 'original', text: 'Hallo' }), false);
+  assert.equal(policy.usesProseEditor({ text: 'Hallo' }), true);
+  assert.equal(policy.usesProseEditor({ localOnly: true, text: 'Hallo' }), false);
+  assert.equal(policy.usesProseEditor({ createdBy: 'original', serverValidatedMechanics: true }), true);
+});
+
 test('Profiltransaktionen werden als unveränderlicher Szenenverlauf erkannt', () => {
   const policy = loadPolicy();
   const samples = [

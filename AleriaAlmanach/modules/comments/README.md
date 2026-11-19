@@ -291,10 +291,34 @@ Schaltflächen und Optionen. Im Schreibdialog verwenden aktive Schaltflächen
 einen warmbraunen Akzent, die zusätzlichen Bedienelemente die vorhandenen
 Pergamentfarben.
 
-**Verschiedene Charaktere in einem Beitrag** sind vorerst zurückgestellt.
-Die Abschnittsauswahl für Sprecher oder Instanzen existiert bereits im
-Kreaturenmodus. Bei einem späteren Ausbau ist die Kampfzuordnung gesondert
-zu klären. Als beitragend erfasste Figuren können auch durch Textabschnitte
-beitragsgebundene Ressourcen und Zustände weiterschalten. Die Prüfung liegt in
-`../combat/combat-contribution-start.js` und
-`../combat/combat-condition-duration.js`.
+## Zwillingsmodus
+
+Im Charaktermodus ergänzt ein Haken die reguläre Figurenwahl um die rechte
+Figur. Ein Zwillingsdialog hat pro Seite einen eigenen Ausdruck und Text.
+Ein leeres Feld ist eine Pause. Ein Handlungsabschnitt dazwischen gilt beiden.
+Vorlagen und **+ Handlung und Rede** fügen bei einer vollständigen Paarung
+Zwillingsdialoge für ihre Redepositionen ein. Fertige Dialoge bleiben beim
+Abschalten in der Abschnittsliste und lassen sich gemeinsam verschieben.
+
+`comments-twins-editor.js` verwaltet Auswahl und Eingaben. Die Figurenauswahl
+und beide Stimmen gelangen in die bestehende lokale Entwurfsablage.
+`comments-twin-dialogue.js` verpackt eine Dialogzeile als neutralen Textabschnitt
+mit Zeitdauer und optionalem Darstellungsfeld `twinDialogue`. Der zusammengefügte
+Abschnittstext bleibt lesbar. Die Vorschau und der Verlauf verwenden denselben
+Renderer. Beim Bearbeiten eines gespeicherten Beitrags werden beide Stimmen
+wieder getrennt geladen. Als Beitragsfigur zählt die regulär gewählte Figur.
+Kampfhandlungen verwenden ihre bestehende Zuordnung und eigene Abschnitte.
+
+## Gemeinsame Kommentarbearbeitung
+
+**Bearbeiten** öffnet den Beitrag direkt. Die reguläre Kommentarbearbeitung
+verwendet die vorhandene Anmeldung und lässt Beiträge anderer Verfasser zu.
+Die Autorenschaft bleibt beim Speichern erhalten.
+
+Bei ausgewerteten Rollenspielbeiträgen zeigt der Dialog die Textfelder,
+einschließlich beider Stimmen eines Zwillingsdialogs. Für diese Texte prüft
+`commitCommentProseEdit` die ursprüngliche Fassung jedes geänderten Abschnitts
+in einer Transaktion. Er übernimmt Text, die Trennposition eines Zwillingsdialogs
+und die Aktivitätszeit. Zuordnung, Dauer, Auswertungen und Spielzustand bleiben
+in den bestehenden Daten. Der gleiche Textabgleich unterstützt ältere
+Online-Beiträge ohne Verfasserfeld.

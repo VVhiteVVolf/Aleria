@@ -14,12 +14,15 @@ const scripts = [
   'language/language-script-registry.js',
   'scene-time/scene-time-state.js',
   'comments/comments-foreign-voice.js',
+  'comments/comments-transaction-policy.js',
   'comments/comments-render.js',
+  'comments/comments-twin-dialogue.js',
   'comments/comments-markup.js',
   'comments/comments-spell-fonts.js',
   'comments/comments-form-state.js',
   'comments/comments-toolbar.js',
   'comments/comments-segment-base.js',
+  'comments/comments-twins-editor.js',
   'comments/comment-editor-appearance.js',
   'comments/comments-foreign-voice-ui.js',
   'comments/comments-section-editor.js',
@@ -32,6 +35,7 @@ const scripts = [
   'comments/comments-submit.js',
   'comments/comments-edit-state.js',
   'comments/comments-edit-segments.js',
+  'comments/comments-prose-editor.js',
   'comments/comments-edit-preview.js',
   'comments/comments-edit.js',
   'comments/comments-edit-character-picker.js',
@@ -46,7 +50,9 @@ export const FOREIGN_VOICE_FIXTURE_SOURCES = [
   'AleriaAlmanach.html', 'styles.css', 'styles/modal.css', 'styles/comments.css',
   'styles/comment-bubbles.css', 'styles/comment-character-picker.css',
   'styles/comment-composer.css', 'styles/comment-section-editor.css', 'styles/comment-editor-appearance.css', 'styles/comments-foreign-voice.css',
+  'styles/comment-twins.css', 'styles/speaker-profile.css', 'styles/scene-time.css',
   'modules/comments/comments-mechanical-request.js',
+  'modules/comments/comment-prose-edit-model.mjs',
   ...scripts.map(path => `modules/${path}`)
 ];
 
@@ -59,7 +65,7 @@ function findById(node, id) {
   return null;
 }
 
-export async function buildForeignVoiceFixture() {
+export async function buildForeignVoiceFixture({ additionalCharacters = [] } = {}) {
   const source = await readFile(new URL('../../AleriaAlmanach.html', import.meta.url), 'utf8');
   const document = parse(source);
   const overlays = ['comment-form-overlay', 'edit-comment-overlay'].map(id => {
@@ -73,8 +79,10 @@ export async function buildForeignVoiceFixture() {
     <title>Fremde Stimme · isolierte Browserprüfung</title>
     <link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./styles/modal.css">
     <link rel="stylesheet" href="./styles/comments.css"><link rel="stylesheet" href="./styles/comment-bubbles.css">
+    <link rel="stylesheet" href="./styles/speaker-profile.css"><link rel="stylesheet" href="./styles/scene-time.css">
     <link rel="stylesheet" href="./styles/comment-character-picker.css"><link rel="stylesheet" href="./styles/comment-composer.css">
     <link rel="stylesheet" href="./styles/comment-section-editor.css"><link rel="stylesheet" href="./styles/comment-editor-appearance.css">
+    <link rel="stylesheet" href="./styles/comment-twins.css">
     ${foreignStyles.join('\n')}
     <style>body{margin:0;background:#f4eedf}#fixture-controls,#fixture-feed{max-width:1080px;margin:20px auto;padding:16px}#fixture-feed{background:#f8f4e9}#fixture-controls button{padding:10px 16px}</style>
     </head><body><div id="fixture-controls"><button data-action="open-comment-form">Beitrag verfassen</button></div><main id="fixture-feed"></main>
@@ -94,12 +102,14 @@ export async function buildForeignVoiceFixture() {
         activeImageSetId:'standard'
       };
       const fixtureCreature = { ...fixtureCharacter, id: 'comment-editor-test-creature', name: 'Bryn · Testkreatur', entityType: 'creature' };
+      const additionalCharacters = ${JSON.stringify(additionalCharacters).replaceAll('<', '\\u003c')};
       window.fixtureSaved=JSON.parse(localStorage.getItem('foreign-voice-fixture-saved')||'[]');
       window.fixtureStatuses=[];
+      window.fixtureUserId='fixture-erdi';
       window.fixtureThreadId = 'isolated-foreign-voice-browser';
-      function getAvailableCommentCharacters(){return [fixtureCharacter,fixtureCreature]}
+      function getAvailableCommentCharacters(){return [fixtureCharacter,fixtureCreature,...additionalCharacters]}
       function getAvailableCommentCharacterById(id){return getAvailableCommentCharacters().find(actor=>actor.id===id)||null}
-      function getAvailableCommentCharacterByName(name){return name===fixtureCharacter.name?fixtureCharacter:null}
+      function getAvailableCommentCharacterByName(name){return getAvailableCommentCharacters().find(actor=>actor.name===name)||null}
       function normalizeCharacterPlayerOwner(){return ''}
       function getCharacterPlayerOwnerLabel(){return ''}
       function isCharacterCommentedInCurrentModule(){return false}
@@ -119,11 +129,25 @@ export async function buildForeignVoiceFixture() {
       async function loadCommentsIntoPage(){document.getElementById('fixture-feed').innerHTML=fixtureSaved.map((comment,index)=>renderCommentBubble(comment,index)).join('')}
       async function getCommentBackend(){return {
         async addComment(entryId,charName,charTitle,portrait,text,code,narrator,metadata){
-          const record=structuredClone({id:'fixture-comment-'+(fixtureSaved.length+1),entryId,charName,charTitle,portrait,text,narrator,...metadata});
+          const record=structuredClone({id:'fixture-comment-'+(fixtureSaved.length+1),entryId,charName,charTitle,portrait,text,narrator,createdBy:fixtureUserId,...metadata});
           fixtureSaved.push(record);fixturePersist();return {id:record.id};
         },
-        async verifyCommentCode(id,code){if(code!=='7777')throw Error('Falscher Code');const record=fixtureSaved.find(value=>value.id===id);if(!record)throw Error('Nicht gefunden');return structuredClone(record)},
-        async updateComment(id,updates){const index=fixtureSaved.findIndex(value=>value.id===id);if(index<0)throw Error('Nicht gefunden');fixtureSaved[index]={...fixtureSaved[index],...structuredClone(updates)};fixturePersist()}
+        async loadComment(id){const record=fixtureSaved.find(value=>value.id===id);if(!record)throw Error('Nicht gefunden');return structuredClone(record)},
+        async updateComment(id,updates){
+          const index=fixtureSaved.findIndex(value=>value.id===id);
+          if(index<0)throw Error('Nicht gefunden');
+          AleriaCommentTransactions.assertMutable(fixtureSaved[index]);
+          fixtureSaved[index]={...fixtureSaved[index],...structuredClone(updates)};
+          window.fixtureLastEditor=fixtureUserId;fixturePersist();
+        },
+        async editCommentProse(id,entryId,edits){
+          const {buildCommentProsePatch}=await import('./modules/comments/comment-prose-edit-model.mjs');
+          const index=fixtureSaved.findIndex(value=>value.id===id && value.entryId===entryId);
+          if(index<0)throw Error('Nicht gefunden');
+          const patch=buildCommentProsePatch(fixtureSaved[index],edits);
+          if(patch)fixtureSaved[index]={...fixtureSaved[index],...patch};
+          window.fixtureLastEditor=fixtureUserId;fixturePersist();
+        }
       }}
     </script>
     ${scripts.map(path => `<script src="./modules/${path}"></script>`).join('\n')}

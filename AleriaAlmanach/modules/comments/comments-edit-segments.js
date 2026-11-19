@@ -9,17 +9,19 @@ function renderEditCommentSegmentList() {
   coerceCommentSegmentsForMode(true);
   renderCommentSegmentActions(true);
   list.innerHTML = _editCommentSegments.map((segment, idx) => {
-    const canUseEmote = segment.kind !== 'action' && _editMode !== 'narrator' && !!getCommentSegmentActor(segment, true)?.emotes?.length;
+    const twins = segment.kind === 'twins';
+    const canUseEmote = !twins && segment.kind !== 'action' && _editMode !== 'narrator' && !!getCommentSegmentActor(segment, true)?.emotes?.length;
     const canRemove = _editCommentSegments.length > 1;
     const textareaId = getCommentSegmentTextareaId(segment, true);
     return `
       <div class="comment-segment-card comment-segment-${segment.kind}" data-segment-id="${segment.id}">
         <div class="comment-segment-head${canRemove ? ' has-remove' : ''}">
-          <div class="comment-segment-title">Abschnitt ${idx + 1}</div>
+          <div class="comment-segment-title">Abschnitt ${idx + 1}${twins ? ' · Zwillingsdialog' : ''}</div>
           ${getCommentSegmentDurationControl(segment, true)}
-          <div class="comment-segment-types">${getSegmentTypeButtons(segment, true)}</div>
+          ${twins ? '' : `<div class="comment-segment-types">${getSegmentTypeButtons(segment, true)}</div>`}
           ${canRemove ? `<button type="button" class="comment-segment-remove" data-action="remove-edit-comment-segment" data-segment-id="${escapeHtml(segment.id)}" title="Abschnitt entfernen">&times;</button>` : ''}
         </div>
+        ${twins ? AleriaCommentTwins.renderEditor(segment, true) : `
         ${getCommentSegmentActorControl(segment, true)}
         ${getSegmentSideControl(segment, true)}
         ${getCommentLanguageControls(segment, true)}
@@ -31,6 +33,7 @@ function renderEditCommentSegmentList() {
         <div class="comment-segment-mechanics-host" data-segment-mechanics-host></div>
         ${buildCommentSegmentFormatToolbar(textareaId)}
         <textarea id="${textareaId}" class="comment-segment-textarea" rows="3" placeholder="${getCommentSegmentPlaceholder(segment.kind)}" data-action="set-edit-comment-segment-text" data-segment-id="${escapeHtml(segment.id)}">${escapeHtml(segment.text)}</textarea>
+        `}
       </div>`;
   }).join('') + renderCommentDurationTotal(true);
   window.AleriaSkillChecks?.mountComposer?.(list, {
@@ -65,7 +68,7 @@ function setEditCommentSegmentDuration(id, value) {
 }
 
 function syncEditCommentSegmentsToLegacyText() {
-  const text = _editCommentSegments.map(segment => String(segment.text || '').trim()).filter(Boolean).join('\n\n');
+  const text = _editCommentSegments.map(getCommentSegmentText).filter(Boolean).join('\n\n');
   const textarea = document.getElementById('ec-text');
   if (textarea) textarea.value = text;
   setEditFormCounter();
@@ -250,8 +253,9 @@ function buildEditCommentSegmentsForSave() {
   const base = getEditBaseCommentActorState();
   return _editCommentSegments
     .map(segment => ({ ...segment, text: String(segment.text || '').trim() }))
-    .filter(segment => segment.text)
+    .filter(getCommentSegmentText)
     .map(segment => {
+      if (segment.kind === 'twins') return AleriaTwinDialogue.serialize(segment);
       if (segment.kind === 'foreignvoice') return buildCommentForeignVoiceSegment(segment);
       if (_editMode === 'narrator' && segment.kind === 'secretaction') return buildCommentNarratorSecretActionSegment(segment);
       if (_editMode === 'narrator' || segment.kind === 'action') {

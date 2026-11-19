@@ -46,6 +46,7 @@ async function openCommentForm(options = {}) {
   if (typeof resetCommentDraftIdentity === 'function') resetCommentDraftIdentity();
   if (typeof commentSectionEditor !== 'undefined') commentSectionEditor.reset();
   if (typeof commentDraftLibrary !== 'undefined') commentDraftLibrary.reset();
+  window.AleriaCommentTwins?.restore();
   if (typeof setCommentPreviewPanelState === 'function') setCommentPreviewPanelState('split');
   _commentInsertAfterId = null;
   _portraitUrl = null;
@@ -136,7 +137,7 @@ function openCommentFormForSkillChallenge(challenge, skillId = '') {
   return openCommentForm({ afterReady() {
     setCommentMode('charakter', { render: false, persist: false });
     const segment = makeCommentSegment(settings.kind, '', null, 'left', SCENE_TIME_DEFAULT_SEGMENT_SECONDS, COMMENT_LANGUAGE_DEFAULT, '', settings);
-    const emptyDefault = _commentSegments.length === 1 && !_commentSegments[0].text.trim() && _commentSegments[0].mechanicMode === 'normal';
+    const emptyDefault = _commentSegments.length === 1 && !commentSegmentHasContent(_commentSegments[0]) && _commentSegments[0].mechanicMode === 'normal';
     if (settings.actorId && emptyDefault) selectCharForComment(settings.actorId, { render: false, persist: false, preserveSegmentImageSets: true });
     if (emptyDefault) _commentSegments = [segment];
     else _commentSegments.push(segment);

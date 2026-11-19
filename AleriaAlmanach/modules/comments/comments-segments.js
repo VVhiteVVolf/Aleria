@@ -2,21 +2,23 @@ function renderCommentSegmentList() {
   const list = document.getElementById('cf-segment-list');
   if (!list) return;
   if (!_commentSegments.length) _commentSegments = [makeCommentSegment('speech')];
+  window.AleriaCommentTwins?.refresh(_commentSegments);
   coerceCommentSegmentsForMode(false);
   renderCommentSegmentActions(false);
   list.innerHTML = commentSectionEditor.renderGap(0) + _commentSegments.map((segment, idx) => {
-    const canUseEmote = segment.kind !== 'action' && _commentMode !== 'narrator' && !!getCommentSegmentActor(segment, false)?.emotes?.length;
+    const twins = segment.kind === 'twins';
+    const canUseEmote = !twins && segment.kind !== 'action' && _commentMode !== 'narrator' && !!getCommentSegmentActor(segment, false)?.emotes?.length;
     const canRemove = _commentSegments.length > 1;
     const textareaId = getCommentSegmentTextareaId(segment, false);
     return `
       <div class="comment-segment-card comment-segment-${segment.kind}" data-segment-id="${segment.id}">
         <div class="comment-segment-head${canRemove ? ' has-remove' : ''}">
-          <div class="comment-segment-title">Abschnitt ${idx + 1}</div>
+          <div class="comment-segment-title">Abschnitt ${idx + 1}${twins ? ' · Zwillingsdialog' : ''}</div>
           ${getCommentSegmentDurationControl(segment, false)}
-          <div class="comment-segment-types">${getSegmentTypeButtons(segment)}</div>
+          ${twins ? '' : `<div class="comment-segment-types">${getSegmentTypeButtons(segment)}</div>`}
           ${canRemove ? `<button type="button" class="comment-segment-remove" data-action="remove-comment-segment" data-segment-id="${escapeHtml(segment.id)}" title="Abschnitt entfernen">x</button>` : ''}
         </div>
-        ${segment.kind === 'sceneitem' ? window.AleriaSceneItems?.renderComposer?.(segment) || '' : `
+        ${twins ? AleriaCommentTwins.renderEditor(segment) : segment.kind === 'sceneitem' ? window.AleriaSceneItems?.renderComposer?.(segment) || '' : `
         ${getCommentSegmentActorControl(segment, false)}
         ${getSegmentSideControl(segment, false)}
         ${getCommentLanguageControls(segment, false)}
@@ -66,7 +68,7 @@ function setCommentSegmentDuration(id, value) {
 }
 
 function syncCommentSegmentsToLegacyText() {
-  const text = _commentSegments.map(segment => String(segment.text || '').trim()).filter(Boolean).join('\n\n');
+  const text = _commentSegments.map(getCommentSegmentText).filter(Boolean).join('\n\n');
   const textarea = document.getElementById('cf-text');
   if (textarea) textarea.value = text;
   const duration = document.getElementById('cf-segment-list')?.querySelector?.('.comment-duration-total strong');
@@ -247,6 +249,7 @@ function buildCommentSegmentsForSave() {
     .map(segment => ({ ...segment, text: String(segment.text || '').trim() }))
     .filter(commentSegmentHasContent)
     .map(segment => {
+      if (segment.kind === 'twins') return AleriaTwinDialogue.serialize(segment);
       if (_commentMode === 'narrator' && segment.kind === 'sceneitem') return window.AleriaSceneItems.serializeSegment(segment);
       if (segment.kind === 'foreignvoice') return buildCommentForeignVoiceSegment(segment);
       if (_commentMode === 'narrator' && segment.kind === 'secretaction') return buildCommentNarratorSecretActionSegment(segment);

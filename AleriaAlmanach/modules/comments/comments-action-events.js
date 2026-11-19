@@ -61,7 +61,6 @@ const COMMENT_FORM_CLICK_ACTIONS = new Set([
   'set-edit-mode',
   'set-edit-comment-kind',
   'toggle-edit-manual-mode',
-  'verify-edit-code',
   'add-showcase-info-row',
   'remove-showcase-info-row',
   'select-edit-character',
@@ -352,10 +351,6 @@ function handleCommentFormActionClick(event) {
   }
   if (action === 'toggle-edit-manual-mode') {
     toggleEditManualMode();
-    return;
-  }
-  if (action === 'verify-edit-code') {
-    verifyEditCode();
     return;
   }
   if (action === 'add-showcase-info-row') {

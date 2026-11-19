@@ -1,8 +1,9 @@
-﻿// Edit existing comments: dialog lifecycle and code verification.
+﻿// Edit existing comments: dialog lifecycle and hydration.
 // ── KOMMENTAR BEARBEITEN ─────────────────────────────────────────────────────
 let _editCommentOpenRequest = 0;
-function openEditComment(commentId) {
-  _editCommentOpenRequest += 1;
+async function openEditComment(commentId) {
+  const request = ++_editCommentOpenRequest;
+  const current = () => request === _editCommentOpenRequest && commentId === _editTargetId;
   if (typeof setCommentPreviewPanelState === 'function') setCommentPreviewPanelState('split');
   _editTargetId = commentId;
   _editCommentData = null;
@@ -16,13 +17,13 @@ function openEditComment(commentId) {
   _editPortraitUrl = null;
   _editCommentSegments = [makeCommentSegment('speech')];
   window.AleriaCommentSceneCast?.setEditActorsFromSegments?.([]);
-  // Reset to code step
-  document.getElementById('ec-code').value = '';
-  document.getElementById('ec-code-error').style.display = 'none';
-  document.getElementById('ec-verify-btn').disabled = false;
-  document.getElementById('ec-verify-btn').textContent = 'Weiter ->';
-  document.getElementById('edit-step-code').style.display = 'flex';
-  document.getElementById('edit-step-form').classList.remove('visible');
+  const form = document.getElementById('edit-step-form');
+  const loading = document.getElementById('edit-comment-loading');
+  const status = document.getElementById('edit-comment-status');
+  form.classList.remove('visible');
+  delete form.dataset.editScope;
+  loading.hidden = false;
+  status.textContent = 'Beitrag wird geladen …';
   document.getElementById('ec-form-error').style.display = 'none';
   document.getElementById('ec-char-search').value = '';
   document.getElementById('ec-selected-name').textContent = '';
@@ -33,13 +34,38 @@ function openEditComment(commentId) {
   document.getElementById('ec-manual-toggle').textContent = '+ Manuell';
   document.getElementById('ec-portrait-preview').removeAttribute('src');
   document.getElementById('ec-portrait-preview').style.display = 'none';
+  document.getElementById('ec-submit').disabled = false;
+  document.getElementById('ec-submit').textContent = 'Speichern';
   setRichEditorContent('ec-text', '');
-  renderEditCommentSegmentList();
-  setEditMode('charakter');
-  setEditCommentKind('speech');
-  setEditFormCounter();
-  updateEditFormPreview();
-  activateDialog('edit-comment-overlay', { initialFocus: '#ec-code' });
+  activateDialog('edit-comment-overlay', { initialFocus: '#edit-comment-loading button' });
+  try {
+    const backend = await getCommentBackend({ timeoutMs: 1200 });
+    if (!current()) return false;
+    const data = await backend.loadComment(commentId);
+    if (!current()) return false;
+    if (window.AleriaCommentTransactions?.usesProseEditor(data)) {
+      const segments = await AleriaCommentProseEditor.loadSegments(data);
+      if (!current()) return false;
+      _editCommentData = data;
+      _editCommentSegments = segments;
+      AleriaCommentProseEditor.render();
+    } else {
+      status.textContent = 'Figuren werden geladen …';
+      if (typeof loadSceneActorData === 'function') await loadSceneActorData();
+      if (!current()) return false;
+      populateEditCommentForm(data);
+    }
+    loading.hidden = true;
+    form.classList.add('visible');
+    if (typeof applyCommentPreviewLayout === 'function') applyCommentPreviewLayout();
+    setEditFormCounter();
+    updateEditFormPreview();
+    document.querySelector('#ec-segment-list textarea')?.focus({ preventScroll: true });
+    return true;
+  } catch (error) {
+    if (current()) status.textContent = getFriendlyErrorMessage(error, 'Der Beitrag konnte nicht geladen werden.');
+    return false;
+  }
 }
 
 function closeEditComment() {
@@ -50,146 +76,110 @@ function closeEditComment() {
   _editCommentData = null;
 }
 
-async function verifyEditCode() {
-  const request = ++_editCommentOpenRequest, targetId = _editTargetId;
-  const current = () => request === _editCommentOpenRequest && targetId === _editTargetId;
-  const code = document.getElementById('ec-code').value.trim().toUpperCase();
-  const errEl = document.getElementById('ec-code-error');
-  const btn = document.getElementById('ec-verify-btn');
-  if (!code) { errEl.textContent = 'Bitte Code eingeben.'; errEl.style.display='block'; return; }
-  errEl.style.display = 'none';
-  btn.disabled = true;
-  btn.textContent = 'Prüfe...';
-  try {
-    const backend = await getCommentBackend({ timeoutMs: 1200 });
-    if (!current()) return;
-    const data = await backend.verifyCommentCode(targetId, code);
-    if (!current()) return;
-    const transactionPolicy = window.AleriaCommentTransactions;
-    if (transactionPolicy?.isImmutable?.(data)) {
-      throw new Error(transactionPolicy.getLockMessage(data, 'bearbeitet'));
-    }
-    btn.textContent = 'Figuren werden geladen …';
-    if (typeof loadSceneActorData === 'function') await loadSceneActorData();
-    if (!current()) return;
-    _editCommentData = data;
-    _editSelectedEmoteIdx = null;
-    _editSelectedImageSetId = String(data.imageSetId || data.commentSegments?.[0]?.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
-    _editImageSetChangedByUser = false;
-    _editPortraitUrl = normalizeImageUrlForStorage(data.portrait || '');
-    setEditCommentKind(data.commentKind || 'speech');
-    // Populate edit form
-    setRichEditorContent('ec-text', data.text || '');
-    if (Array.isArray(data.commentSegments) && data.commentSegments.length) {
-      window.AleriaCommentSceneCast?.setEditActorsFromSegments?.(data.commentSegments);
-      _editCommentSegments = data.commentSegments.map(segment => makeCommentSegment(
-        segment.commentKind || segment.kind || (segment.narrator ? 'action' : 'speech'),
-        segment.text || '',
-        Number.isInteger(segment.emoteIndex) ? segment.emoteIndex : null,
-        segment.side || 'left',
-        segment.durationSeconds,
-        segment.language || segment.spellFont,
-        segment.languageColor,
-        {
-          ...((segment.commentKind || segment.kind) === 'foreignvoice' ? AleriaCommentForeignVoice.normalize(segment) : {}),
-          imageSetId: segment.imageSetId || data.imageSetId || '',
-          actionIconId: segment.actionIconId || '',
-          challengeReplyToCommentId: segment.challengeReplyToCommentId || '',
-          mechanicMode: segment.mechanicMode,
-          skillId: segment.skillId || segment.skillResolution?.skillId,
-          skillCustomModifier: segment.skillCustomModifier ?? segment.skillResolution?.customModifier,
-          skillDifficulty: segment.skillDifficulty ?? segment.skillResolution?.difficulty,
-          ...((segment?.skillSaveContext || segment?.skillResolution?.saveContext) ? { skillSaveContext: normalizeCommentSkillSaveContext(segment.skillSaveContext || segment.skillResolution.saveContext) } : {}),
-          ...(segment?.skillRequiredSense ? { skillRequiredSense: String(segment.skillRequiredSense).slice(0, 20) } : {}),
-          skillRollMode: segment.skillRollMode || segment.skillResolution?.rollMode,
-          skillTargetActorKey: segment.skillTargetActorKey || '',
-          skillTargetChallengeId: segment.skillTargetChallengeId || segment.skillResolution?.targetChallengeId,
-          skillChallengeId: segment.skillChallenge?.id,
-          skillChallengeEnabled: !!segment.skillChallenge,
-          skillChallengeTitle: segment.skillChallenge?.title,
-          skillChallengeRevealedText: segment.skillChallenge?.revealedText,
-          skillChallengeDifficulty: segment.skillChallenge?.difficulty,
-          skillChallengePreferredSkills: segment.skillChallenge?.preferredSkills,
-          skillChallengePreferredModifier: segment.skillChallenge?.preferredModifier,
-          skillChallengeAlternativeModifier: segment.skillChallenge?.alternativeModifier,
-          skillChallengeDefenseMode: segment.skillChallenge?.defenseMode || segment.skillChallengeDefenseMode,
-          skillChallengeDefenseSkillId: segment.skillChallenge?.defenseSkillId || segment.skillChallengeDefenseSkillId,
-          skillRuleSelections: segment.skillRuleSelections,
-          storedSkillResolution: segment.skillResolution || null,
-          storedSkillChallenge: segment.skillChallenge || null,
-          ...getStoredCommentCombatSelection(segment),
-          paymentConfirmed: true,
-          actorId: segment.sceneActorId || segment.actorId || '',
-          storedCombatAction: segment.combatAction || null,
-          storedCombatResolution: segment.combatResolution || null,
-          inventoryItemId: segment.inventoryUse?.item?.id || '',
-          inventoryUseMode: segment.inventoryUse?.requestedMode || segment.inventoryUse?.mode || 'auto',
-          storedInventoryUse: segment.inventoryUse || null
-        }
-      ));
-    } else {
-      _editCommentSegments = [makeCommentSegment(data.commentKind || 'speech', data.text || '', Number.isInteger(data.emoteIndex) ? data.emoteIndex : null,
-        data.side || 'left', data.durationSeconds, data.language, data.languageColor,
-        data.commentKind === 'foreignvoice' ? AleriaCommentForeignVoice.normalize(data) : {})];
-    }
-    // Set mode. Creature metadata is persisted independently from the display name,
-    // so duplicated or renamed instances still reopen in the correct picker.
-    const creatureComment = !data.narrator && (
-      data.actorType === 'creature' || !!data.creatureId || data.commentMode === 'creature'
-    );
-    const actorMode = data.narrator ? 'narrator' : (creatureComment ? 'creature' : 'charakter');
-    setEditMode(actorMode);
-    // Pre-select char if it exists
-    _editSelectedCharId = null;
-    if (!data.narrator) {
-      const preferredId = creatureComment ? (data.creatureId || data.characterId) : data.characterId;
-      const directMatch = preferredId ? getAvailableCommentCharacterById(preferredId) : null;
-      const match = directMatch || getAvailableCommentCharacterByName(data.charName);
-      if (match && commentActorMatchesComposerMode(match, actorMode)) {
-        _editSelectedCharId = match.id;
-        const presentation = applyCharacterImageSetPresentation(match, _editSelectedImageSetId);
-        _editSelectedImageSetId = presentation?.selectedImageSetId || '';
-        if (data.portrait && Array.isArray(presentation?.emotes)) {
-          const emoteIdx = presentation.emotes.findIndex(emote => String(emote?.img || '') === String(data.portrait || ''));
-          _editSelectedEmoteIdx = emoteIdx >= 0 ? emoteIdx : null;
-        }
-      } else {
-        _editManualMode = true;
+function populateEditCommentForm(data) {
+  _editCommentData = data;
+  _editSelectedEmoteIdx = null;
+  _editSelectedImageSetId = String(data.imageSetId || data.commentSegments?.[0]?.imageSetId || CHARACTER_IMAGE_SET_DEFAULT_ID);
+  _editImageSetChangedByUser = false;
+  _editPortraitUrl = normalizeImageUrlForStorage(data.portrait || '');
+  setEditCommentKind(data.commentKind || 'speech');
+  // Populate edit form
+  setRichEditorContent('ec-text', data.text || '');
+  if (Array.isArray(data.commentSegments) && data.commentSegments.length) {
+    window.AleriaCommentSceneCast?.setEditActorsFromSegments?.(data.commentSegments);
+    _editCommentSegments = data.commentSegments.map(segment => window.AleriaCommentTwins?.restoreStoredSegment(segment) || makeCommentSegment(
+      segment.commentKind || segment.kind || (segment.narrator ? 'action' : 'speech'),
+      segment.text || '',
+      Number.isInteger(segment.emoteIndex) ? segment.emoteIndex : null,
+      segment.side || 'left',
+      segment.durationSeconds,
+      segment.language || segment.spellFont,
+      segment.languageColor,
+      {
+        ...((segment.commentKind || segment.kind) === 'foreignvoice' ? AleriaCommentForeignVoice.normalize(segment) : {}),
+        imageSetId: segment.imageSetId || data.imageSetId || '',
+        actionIconId: segment.actionIconId || '',
+        challengeReplyToCommentId: segment.challengeReplyToCommentId || '',
+        mechanicMode: segment.mechanicMode,
+        skillId: segment.skillId || segment.skillResolution?.skillId,
+        skillCustomModifier: segment.skillCustomModifier ?? segment.skillResolution?.customModifier,
+        skillDifficulty: segment.skillDifficulty ?? segment.skillResolution?.difficulty,
+        ...((segment?.skillSaveContext || segment?.skillResolution?.saveContext) ? { skillSaveContext: normalizeCommentSkillSaveContext(segment.skillSaveContext || segment.skillResolution.saveContext) } : {}),
+        ...(segment?.skillRequiredSense ? { skillRequiredSense: String(segment.skillRequiredSense).slice(0, 20) } : {}),
+        skillRollMode: segment.skillRollMode || segment.skillResolution?.rollMode,
+        skillTargetActorKey: segment.skillTargetActorKey || '',
+        skillTargetChallengeId: segment.skillTargetChallengeId || segment.skillResolution?.targetChallengeId,
+        skillChallengeId: segment.skillChallenge?.id,
+        skillChallengeEnabled: !!segment.skillChallenge,
+        skillChallengeTitle: segment.skillChallenge?.title,
+        skillChallengeRevealedText: segment.skillChallenge?.revealedText,
+        skillChallengeDifficulty: segment.skillChallenge?.difficulty,
+        skillChallengePreferredSkills: segment.skillChallenge?.preferredSkills,
+        skillChallengePreferredModifier: segment.skillChallenge?.preferredModifier,
+        skillChallengeAlternativeModifier: segment.skillChallenge?.alternativeModifier,
+        skillChallengeDefenseMode: segment.skillChallenge?.defenseMode || segment.skillChallengeDefenseMode,
+        skillChallengeDefenseSkillId: segment.skillChallenge?.defenseSkillId || segment.skillChallengeDefenseSkillId,
+        skillRuleSelections: segment.skillRuleSelections,
+        storedSkillResolution: segment.skillResolution || null,
+        storedSkillChallenge: segment.skillChallenge || null,
+        ...getStoredCommentCombatSelection(segment),
+        paymentConfirmed: true,
+        actorId: segment.sceneActorId || segment.actorId || '',
+        storedCombatAction: segment.combatAction || null,
+        storedCombatResolution: segment.combatResolution || null,
+        inventoryItemId: segment.inventoryUse?.item?.id || '',
+        inventoryUseMode: segment.inventoryUse?.requestedMode || segment.inventoryUse?.mode || 'auto',
+        storedInventoryUse: segment.inventoryUse || null
       }
-    }
-    renderEditCharPicker();
-    renderEditCommentSegmentList();
-    document.getElementById('ec-char-search').value = '';
-    document.getElementById('ec-manual-name').value = data.charName || '';
-    document.getElementById('ec-manual-title').value = data.charTitle || '';
-    document.getElementById('ec-portrait-url').value = _editPortraitUrl || '';
-    const portraitPreview = document.getElementById('ec-portrait-preview');
-    if (portraitPreview && _editPortraitUrl) {
-      portraitPreview.src = _editPortraitUrl;
-      portraitPreview.style.display = 'block';
-    } else if (portraitPreview) {
-      portraitPreview.style.display = 'none';
-    }
-    if (_editSelectedCharId) {
-      const char = getAvailableCommentCharacterById(_editSelectedCharId);
-      document.getElementById('ec-selected-name').textContent = char ? `Als ${char.name} bearbeiten` : '';
-    } else {
-      document.getElementById('ec-selected-name').textContent = '';
-    }
-    document.getElementById('edit-step-code').style.display = 'none';
-    document.getElementById('edit-step-form').classList.add('visible');
-    if (typeof applyCommentPreviewLayout === 'function') applyCommentPreviewLayout();
-    applyEditCharacterFilter();
-    setEditFormCounter();
-    updateEditFormPreview();
-    setTimeout(() => { if (current()) focusRichEditor('ec-text'); }, 30);
-  } catch(e) {
-    if (!current()) return;
-    errEl.textContent = e.message === 'Falscher Code'
-      ? 'Falscher Code.'
-      : getFriendlyErrorMessage(e, 'Fehler beim Prüfen.');
-    errEl.style.display = 'block';
-    btn.disabled = false;
-    btn.textContent = 'Weiter ->';
+    ));
+  } else {
+    _editCommentSegments = [makeCommentSegment(data.commentKind || 'speech', data.text || '', Number.isInteger(data.emoteIndex) ? data.emoteIndex : null,
+      data.side || 'left', data.durationSeconds, data.language, data.languageColor,
+      data.commentKind === 'foreignvoice' ? AleriaCommentForeignVoice.normalize(data) : {})];
   }
+  // Set mode. Creature metadata is persisted independently from the display name,
+  // so duplicated or renamed instances still reopen in the correct picker.
+  const creatureComment = !data.narrator && (
+    data.actorType === 'creature' || !!data.creatureId || data.commentMode === 'creature'
+  );
+  const actorMode = data.narrator ? 'narrator' : (creatureComment ? 'creature' : 'charakter');
+  setEditMode(actorMode);
+  // Pre-select char if it exists
+  _editSelectedCharId = null;
+  if (!data.narrator) {
+    const preferredId = creatureComment ? (data.creatureId || data.characterId) : data.characterId;
+    const directMatch = preferredId ? getAvailableCommentCharacterById(preferredId) : null;
+    const match = directMatch || getAvailableCommentCharacterByName(data.charName);
+    if (match && commentActorMatchesComposerMode(match, actorMode)) {
+      _editSelectedCharId = match.id;
+      const presentation = applyCharacterImageSetPresentation(match, _editSelectedImageSetId);
+      _editSelectedImageSetId = presentation?.selectedImageSetId || '';
+      if (data.portrait && Array.isArray(presentation?.emotes)) {
+        const emoteIdx = presentation.emotes.findIndex(emote => String(emote?.img || '') === String(data.portrait || ''));
+        _editSelectedEmoteIdx = emoteIdx >= 0 ? emoteIdx : null;
+      }
+    } else {
+      _editManualMode = true;
+    }
+  }
+  renderEditCharPicker();
+  renderEditCommentSegmentList();
+  document.getElementById('ec-char-search').value = '';
+  document.getElementById('ec-manual-name').value = data.charName || '';
+  document.getElementById('ec-manual-title').value = data.charTitle || '';
+  document.getElementById('ec-portrait-url').value = _editPortraitUrl || '';
+  const portraitPreview = document.getElementById('ec-portrait-preview');
+  if (portraitPreview && _editPortraitUrl) {
+    portraitPreview.src = _editPortraitUrl;
+    portraitPreview.style.display = 'block';
+  } else if (portraitPreview) {
+    portraitPreview.style.display = 'none';
+  }
+  if (_editSelectedCharId) {
+    const char = getAvailableCommentCharacterById(_editSelectedCharId);
+    document.getElementById('ec-selected-name').textContent = char ? `Als ${char.name} bearbeiten` : '';
+  } else {
+    document.getElementById('ec-selected-name').textContent = '';
+  }
+  applyEditCharacterFilter();
 }

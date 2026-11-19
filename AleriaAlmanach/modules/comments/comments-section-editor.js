@@ -56,16 +56,18 @@ const commentSectionEditor = (() => {
     field?.setSelectionRange(position, position);
   }
 
-  function insert(types, index, { fromTemplate = false, useEmpty = false } = {}) {
+  function insert(types, index, { fromTemplate = false, useEmpty = false, useTwins = false } = {}) {
     const allowed = getAllowedCommentSegmentKinds();
     if (!Number.isInteger(index) || index < 0 || index > _commentSegments.length
       || !types.every(type => allowed.includes(type === 'speech-or-thought' ? 'speech' : type))) return;
-    const inserted = types.map(type => createSegment(type, { fromTemplate }));
+    const twinVoices = useTwins && allowed.includes('twins');
+    const inserted = types.map(type => createSegment(
+      twinVoices && ['speech', 'speech-or-thought'].includes(type) ? 'twins' : type, { fromTemplate }
+    ));
     const first = _commentSegments[0];
-    const untouched = _commentSegments.length === 1 && first.kind === 'speech' && !first.text
-      && first.mechanicMode === 'normal' && !first.skillChallengeEnabled && !first.inventoryItemId
-      && first.emoteIndex === null && first.side === 'left'
-      && getSceneTimeSegmentDuration(first) === SCENE_TIME_DEFAULT_SEGMENT_SECONDS;
+    const untouched = _commentSegments.length === 1 && (isUntouchedCommentSpeech(first)
+      || twinVoices && window.AleriaCommentTwins.isEmptyTwin(first)
+        && getSceneTimeSegmentDuration(first) === SCENE_TIME_DEFAULT_SEGMENT_SECONDS);
     const next = _commentSegments.slice();
     if (useEmpty && untouched) next.splice(0, 1, ...inserted);
     else next.splice(index, 0, ...inserted);
@@ -108,7 +110,7 @@ const commentSectionEditor = (() => {
     const index = _commentSegments.findIndex(segment => segment.id === id);
     const original = _commentSegments[index];
     const field = original && document.getElementById(getCommentSegmentTextareaId(original, false));
-    if (!field) return;
+    if (!field || original.kind === 'twins') return;
     const { start } = getCommentTextareaSelection(field);
     const head = field.value.slice(0, start);
     const tail = field.value.slice(start);
@@ -195,7 +197,7 @@ const commentSectionEditor = (() => {
       <input type="checkbox" data-action="mark-comment-section" data-segment-id="${id}" aria-label="${label} markieren"${selected.has(segment.id) ? ' checked' : ''}>
       <button type="button" data-action="move-comment-section" data-comment-section-step="up" aria-label="${label} nach oben verschieben" title="Nach oben verschieben">↑</button>
       <button type="button" data-action="move-comment-section" data-comment-section-step="down" aria-label="${label} nach unten verschieben" title="Nach unten verschieben">↓</button>
-      ${segment.kind === 'sceneitem' ? '' : '<button type="button" data-action="split-comment-section" title="Text am Cursor teilen">Teilen</button>'}
+      ${['sceneitem', 'twins'].includes(segment.kind) ? '' : '<button type="button" data-action="split-comment-section" title="Text am Cursor teilen">Teilen</button>'}
       ${segment.templateVoiceChoice && ['speech', 'thought'].includes(segment.kind) ? `<select data-action="choose-comment-section-voice" aria-label="${label} · Rede oder Gedanke">
         <option value="speech"${segment.kind === 'speech' ? ' selected' : ''}>Rede</option>
         <option value="thought"${segment.kind === 'thought' ? ' selected' : ''}>Gedanke</option>
@@ -222,11 +224,11 @@ const commentSectionEditor = (() => {
     const id = button.closest('.comment-segment-card')?.dataset.segmentId;
     switch (button.dataset.action) {
       case 'insert-comment-pair':
-        insert(pair, Number(button.parentElement.dataset.commentSectionGap), { useEmpty: true });
+        insert(pair, Number(button.parentElement.dataset.commentSectionGap), { useEmpty: true, useTwins: true });
         break;
       case 'apply-comment-template': {
         const template = templates[button.dataset.template];
-        if (Array.isArray(template)) insert(template, _commentSegments.length, { fromTemplate: true, useEmpty: true });
+        if (Array.isArray(template)) insert(template, _commentSegments.length, { fromTemplate: true, useEmpty: true, useTwins: true });
         break;
       }
       case 'restore-comment-section': restoreRemoval(); break;

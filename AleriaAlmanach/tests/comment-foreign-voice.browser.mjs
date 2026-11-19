@@ -138,8 +138,6 @@ async function reviewNarratorEditLayout(page, caseReport, layout) {
     await loadCommentsIntoPage();
   });
   await page.locator('#fixture-feed').getByRole('button',{name:'Bearbeiten',exact:true}).click();
-  await page.locator('#ec-code').fill('7777');
-  await page.locator('#ec-code').press('Enter');
   await page.waitForFunction(()=>document.getElementById('edit-step-form').classList.contains('visible')&&_editMode==='narrator');
   const row=page.locator('#ec-segment-list .comment-segment-card').nth(1);
   await row.locator('.comment-foreign-voice-controls').scrollIntoViewIfNeeded();
@@ -301,8 +299,6 @@ try {
     await feed.screenshot({ path: resolve(output, `${layout}-saved.png`) });
 
     await feed.getByRole('button', { name: 'Bearbeiten', exact: true }).click();
-    await page.locator('#ec-code').fill('7777');
-    await page.locator('#ec-code').press('Enter');
     await page.waitForFunction(() => document.getElementById('edit-step-form').classList.contains('visible'));
     assert.equal(await page.evaluate(() => _editSelectedCharId), 'foreign-voice-test-main');
     assert.deepEqual(await page.evaluate(() => buildEditCommentSegmentsForSave().slice(1).map(segment => [segment.foreignVoiceAvatarId, segment.foreignVoiceName])), voices.map(voice => [voice.id, voice.name]));
@@ -314,8 +310,6 @@ try {
     assert.equal(await page.locator('#ec-preview img.comment-portrait').getAttribute('src'), './public/assets/comment-foreign-voice/person.png');
     await page.evaluate(() => closeEditComment());
     await feed.getByRole('button', { name: 'Bearbeiten', exact: true }).click();
-    await page.locator('#ec-code').fill('7777');
-    await page.locator('#ec-code').press('Enter');
     await page.waitForFunction(() => document.getElementById('edit-step-form').classList.contains('visible'));
     const editRow = page.locator('#ec-segment-list .comment-segment-card').nth(1);
     assert.equal(await editRow.locator('.comment-foreign-voice-avatar').count(), avatarIds.length);
@@ -425,8 +419,6 @@ try {
     await assertNoOverflow(page.locator('#fixture-feed'), `${layout}: narrator saved feed`);
     await page.locator('#fixture-feed').screenshot({ path: resolve(output, `${layout}-narrator-saved.png`) });
     await narratorFeed.getByRole('button', { name: 'Bearbeiten', exact: true }).click();
-    await page.locator('#ec-code').fill('7777');
-    await page.locator('#ec-code').press('Enter');
     await page.waitForFunction(() => document.getElementById('edit-step-form').classList.contains('visible') && _editMode === 'narrator');
     assert.equal(await page.locator('#ec-segment-list + .comment-segment-actions [data-kind="foreignvoice"]').count(), 1);
     assert.equal(await page.locator('#ec-segment-list + .comment-segment-actions [data-kind="secretaction"]').count(), 1);

@@ -20,6 +20,7 @@ const COMMENT_KIND_LABELS = {
   flirt: 'Flirt',
   secretaction: 'Geheimaktion',
   foreignvoice: 'Fremde Stimme',
+  twins: 'Zwillingsdialog',
   combataction: 'Kampfbeschreibung',
   narrator: 'Erzähler',
   'scene-time-event': 'Szenenzeit',
@@ -197,7 +198,23 @@ function renderCommentTransactionLock(comment = {}) {
   if (!policy?.isImmutable?.(comment)) return '';
   const label = policy.getLabel?.(comment, { exclude: ['combat'] }) || '';
   if (!label) return '';
-  return `<span class="comment-transaction-lock" title="Dieser Beitrag ist Teil des unveränderlichen Szenenverlaufs.">${escapeHtml(label)} geschützt</span>`;
+  return `<span class="comment-transaction-lock" title="Diese Spielauswertung ist Teil des Szenenverlaufs.">${escapeHtml(label)} geschützt</span>`;
+}
+
+function renderCommentDivider(index) {
+  return index > 0 ? '<div class="comment-divider"><span class="comment-divider-icon">*</span></div>' : '';
+}
+
+function renderCommentEntryActions(comment, narrator = false) {
+  const id = escapeHtml(comment.id);
+  const buttonClass = narrator ? 'comment-narrator-del' : 'comment-delete-btn';
+  const spacing = narrator ? '' : ' style="margin-right:0.3rem;"';
+  const edit = `<button type="button" class="${buttonClass}" data-action="open-edit-comment" data-comment-id="${id}"${spacing}>Bearbeiten</button>`;
+  if (!narrator && comment._mechanicalUndoEligible) return edit + renderMechanicalUndoButton(comment.id);
+  if (comment._mechanicalLocked || window.AleriaCommentTransactions?.isImmutable?.(comment)) {
+    return edit + renderCommentTransactionLock(comment);
+  }
+  return edit + `<button type="button" class="${buttonClass}" data-action="open-delete-confirm" data-comment-id="${id}">Löschen</button>`;
 }
 
 function splitCommentByEmoteMarkers(c) {
@@ -345,6 +362,11 @@ function renderCommentBubble(c, idx) {
     }).join('');
   }
 
+  if (c.twinDialogue) {
+    const twinDialogue = window.AleriaTwinDialogue?.render(c, idx);
+    if (twinDialogue) return twinDialogue;
+  }
+
   const isForeignVoice = (c.commentKind || c.kind) === 'foreignvoice';
   const isNarratorSecretAction = (c.commentKind || c.kind) === 'secretaction' && c.commentMode === 'narrator';
   const hasAnonymousPresentation = isForeignVoice || isNarratorSecretAction;
@@ -367,18 +389,10 @@ function renderCommentBubble(c, idx) {
   ].join(' ');
   const commentKind = normalizeCommentKind(c.commentKind, c.narrator);
   const kindLabel = getCommentKindLabel(commentKind);
-  const divider = idx > 0
-    ? `<div class="comment-divider"><span class="comment-divider-icon">*</span></div>`
-    : '';
+  const divider = c._twinLane ? '' : renderCommentDivider(idx);
 
   if (c.narrator) {
-    const narratorActions = c._hideActions ? '' : (c._mechanicalLocked || window.AleriaCommentTransactions?.isImmutable?.(c))
-      ? `<div class="comment-narrator-actions">${renderCommentTransactionLock(c)}</div>`
-      : `
-        <div class="comment-narrator-actions">
-          <button type="button" class="comment-narrator-del" data-action="open-edit-comment" data-comment-id="${commentId}" title="Bearbeiten">Bearbeiten</button>
-          <button type="button" class="comment-narrator-del" data-action="open-delete-confirm" data-comment-id="${commentId}" title="Löschen">Löschen</button>
-        </div>`;
+    const narratorActions = c._hideActions ? '' : `<div class="comment-narrator-actions">${renderCommentEntryActions(c, true)}</div>`;
     return `
       ${divider}
       <div class="comment-narrator comment-kind-${commentKind}" data-comment-id="${commentId}">
@@ -395,7 +409,9 @@ function renderCommentBubble(c, idx) {
     || String(c.skillResolution?.targetChallengeId || '').startsWith('herausforderung:');
   const displayCharName = isSecretAction ? 'Unbekannte Gestalt' : charName;
   const safeDisplayCharName = escapeHtml(displayCharName);
-  const parts = splitCommentByEmoteMarkers(c);
+  const parts = c._twinLane
+    ? [{ text: c.text, portrait: sanitizeImageSrc(c.portrait) }]
+    : splitCommentByEmoteMarkers(c);
   const entries = parts.map((part, partIdx) => {
     const portraitMarkup = part.portrait
       ? `<img class="comment-portrait${isSecretAction ? ' comment-portrait-silhouette' : ''}" src="${part.portrait}" alt="${safeDisplayCharName}" loading="lazy" decoding="async" ${speakerProfileAttrs}>`
@@ -404,7 +420,7 @@ function renderCommentBubble(c, idx) {
         : `<button type="button" class="comment-portrait-placeholder${isSecretAction ? ' comment-portrait-silhouette' : ''}" ${speakerProfileAttrs}>${isSecretAction ? '?' : getInitialChar(charName)}</button>`;
     const combatProfileCharacterId = String(c.sceneActorSourceId || c.creatureId || c.characterId || '').trim();
     const combatActorId = String(c.sceneActorId || c.characterId || combatProfileCharacterId).trim();
-    const portrait = isCompactUsage || hasAnonymousPresentation ? portraitMarkup : (window.AleriaCommentCombatMiniProfile?.renderPortrait?.({
+    const portrait = isCompactUsage || hasAnonymousPresentation || c._twinLane ? portraitMarkup : (window.AleriaCommentCombatMiniProfile?.renderPortrait?.({
       portraitMarkup,
       characterId: combatProfileCharacterId,
       actorId: combatActorId,
@@ -417,17 +433,12 @@ function renderCommentBubble(c, idx) {
       displayName: displayCharName,
       secret: isSecretAction
     }) || portraitMarkup);
-    const actions = !c._hideActions && partIdx === parts.length - 1
-      ? c._mechanicalUndoEligible
-        ? renderMechanicalUndoButton(c.id)
-        : (c._mechanicalLocked || window.AleriaCommentTransactions?.isImmutable?.(c))
-          ? renderCommentTransactionLock(c)
-          : `<button class="comment-delete-btn" data-action="open-edit-comment" data-comment-id="${commentId}" style="margin-right:0.3rem;">Bearbeiten</button><button class="comment-delete-btn" data-action="open-delete-confirm" data-comment-id="${commentId}">Löschen</button>`
-      : '';
+    const actions = !c._hideActions && partIdx === parts.length - 1 ? renderCommentEntryActions(c) : '';
+    const translationId = c._twinLane ? `${commentId}-${idx}-${c._twinLane}` : commentId;
     const textMarkup = commentKind === 'animal'
-      ? buildAnimalCommentTextMarkup(part.text, commentId, partIdx)
+      ? buildAnimalCommentTextMarkup(part.text, translationId, partIdx)
       : commentKindUsesLanguage(commentKind)
-        ? buildCommentLanguageTextMarkup(part.text, c, commentKind, commentId, partIdx)
+        ? buildCommentLanguageTextMarkup(part.text, c, commentKind, translationId, partIdx)
         : `<span class="comment-text">${buildCommentKindTextMarkup(part.text, commentKind)}</span>`;
 
     if (isCompactUsage) {

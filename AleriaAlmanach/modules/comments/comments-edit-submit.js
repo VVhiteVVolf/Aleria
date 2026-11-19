@@ -1,10 +1,15 @@
 // Save flow for editing an existing comment.
 async function submitEditComment() {
+  if (!_editCommentData || document.getElementById('ec-submit').disabled) return;
   syncEditCommentSegmentsToLegacyText();
+  if (window.AleriaCommentProseEditor?.isActive()) {
+    const entryId = _editCommentData.entryId;
+    const edits = AleriaCommentProseEditor.getEdits(_editCommentSegments);
+    return saveEditedComment((backend, id) => backend.editCommentProse(id, entryId, edits));
+  }
   const editSegments = buildEditCommentSegmentsForSave();
   const text = editSegments.map(segment => segment.text).join('\n\n').trim();
   const errEl = document.getElementById('ec-form-error');
-  const btn = document.getElementById('ec-submit');
   if (!text) { errEl.textContent = 'Bitte Text eingeben.'; errEl.style.display='block'; return; }
   if (text.length > COMMENT_MAX_LENGTH) { errEl.textContent = `Bitte bei maximal ${COMMENT_MAX_LENGTH} Zeichen bleiben.`; errEl.style.display='block'; return; }
 
@@ -159,20 +164,33 @@ async function submitEditComment() {
   commentMetadata.combatResolution = preservedCombat.length === 1 ? preservedCombat[0].combatResolution : null;
   commentMetadata.inventoryTransaction = _editCommentData?.inventoryTransaction || null;
 
+  return saveEditedComment((backend, id) =>
+    backend.updateComment(id, { text, charName, charTitle, portrait, narrator, ...commentMetadata }));
+}
+
+async function saveEditedComment(save) {
+  const id = _editTargetId;
+  const request = _editCommentOpenRequest;
+  const threadId = getCurrentCommentThreadId();
+  const current = () => _editCommentOpenRequest === request && _editTargetId === id;
+  const errEl = document.getElementById('ec-form-error');
+  const btn = document.getElementById('ec-submit');
   errEl.style.display = 'none';
   btn.disabled = true;
   btn.textContent = 'Speichere…';
   try {
     const backend = await getCommentBackend({ timeoutMs: 1200 });
-    await backend.updateComment(_editTargetId, { text, charName, charTitle, portrait, narrator, ...commentMetadata });
-    closeEditComment();
-    await loadCommentsIntoPage(getCurrentCommentThreadId(), true);
+    if (!current()) return;
+    await save(backend, id);
+    if (current()) closeEditComment();
+    if (threadId === getCurrentCommentThreadId()) await loadCommentsIntoPage(threadId, true);
     if (typeof refreshCurrentModuleCommenterHighlights === 'function') refreshCurrentModuleCommenterHighlights();
   } catch(e) {
     const message = getFriendlyErrorMessage(e, 'Fehler beim Speichern.');
+    if (typeof showAppStatus === 'function') showAppStatus(message, 'error');
+    if (!current()) return;
     errEl.textContent = message;
     errEl.style.display = 'block';
-    if (typeof showAppStatus === 'function') showAppStatus(message, 'error');
     btn.disabled = false;
     btn.textContent = 'Speichern';
   }

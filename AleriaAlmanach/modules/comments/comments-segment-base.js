@@ -16,7 +16,7 @@ function commentSegmentUsesSide(kind, edit = false) {
 const COMMENT_SEGMENT_MECHANIC_MODES = new Set(['normal', 'skill', 'combat', 'magic']);
 
 function normalizeCommentSegmentMechanicMode(value, kind = 'speech', settings = {}) {
-  if (kind === 'foreignvoice') return 'normal';
+  if (kind === 'foreignvoice' || kind === 'twins') return 'normal';
   const mode = String(value || '').trim().toLowerCase();
   if (COMMENT_SEGMENT_MECHANIC_MODES.has(mode)) return mode;
   if (settings?.storedCombatResolution || settings?.storedCombatAction || settings?.combatResolution || settings?.combatAction) {
@@ -100,6 +100,7 @@ function makeCommentSegment(kind = 'speech', text = '', emoteIndex = null, side 
     id: `seg-${Date.now().toString(36)}-${_commentSegmentSeq}`,
     kind: normalizedKind,
     ...(combatSettings.templateVoiceChoice ? { templateVoiceChoice: true } : {}),
+    ...(normalizedKind === 'twins' ? { twin: AleriaTwinDialogue.normalize(combatSettings.twin) } : {}),
     actionIconId: String(combatSettings?.actionIconId || '').slice(0, 40),
     challengeReplyToCommentId: String(combatSettings?.challengeReplyToCommentId || '').slice(0, 200),
     ...(normalizedKind === 'foreignvoice' ? AleriaCommentForeignVoice.normalize(combatSettings) : {}),
@@ -181,7 +182,18 @@ function getCommentDurationTotal(edit = false) {
 }
 
 function commentSegmentHasContent(segment) {
-  return segment.kind === 'sceneitem' || !!String(segment.text || '').trim();
+  return segment.kind === 'sceneitem' || !!getCommentSegmentText(segment);
+}
+
+function getCommentSegmentText(segment) {
+  return segment.kind === 'twins' ? AleriaTwinDialogue.readText(segment) : String(segment.text || '').trim();
+}
+
+function isUntouchedCommentSpeech(segment) {
+  return segment.kind === 'speech' && !segment.text && segment.mechanicMode === 'normal'
+    && !segment.skillChallengeEnabled && !segment.inventoryItemId && !segment.challengeReplyToCommentId && !segment.actorId
+    && segment.emoteIndex === null && segment.side === 'left'
+    && getSceneTimeSegmentDuration(segment) === SCENE_TIME_DEFAULT_SEGMENT_SECONDS;
 }
 
 function renderCommentDurationTotal(edit = false) {
@@ -192,7 +204,8 @@ function getAllowedCommentSegmentKinds(edit = false) {
   const mode = edit ? _editMode : _commentMode;
   return mode === 'narrator'
     ? (edit ? ['action', 'foreignvoice', 'secretaction'] : ['action', 'sceneitem', 'foreignvoice', 'secretaction'])
-    : ['speech', 'action', 'interact', 'consume', 'thought', 'whisper', 'shout', 'performance', 'combataction', 'foreign', 'song', 'telepathy', 'animal', 'spell', 'prayer', 'flirt', 'madness', 'secretaction', 'foreignvoice'];
+    : ['speech', 'action', 'interact', 'consume', 'thought', 'whisper', 'shout', 'performance', 'combataction', 'foreign', 'song', 'telepathy', 'animal', 'spell', 'prayer', 'flirt', 'madness', 'secretaction', 'foreignvoice',
+      ...(!edit && mode === 'charakter' && window.AleriaCommentTwins?.canAdd() ? ['twins'] : [])];
 }
 
 const COMMENT_SEGMENT_MODE_KINDS = Object.freeze({
@@ -248,6 +261,7 @@ function coerceCommentSegmentsForMode(edit = false) {
   const segments = edit ? _editCommentSegments : _commentSegments;
   const allowed = getAllowedCommentSegmentKinds(edit);
   segments.forEach(segment => {
+    if (segment.kind === 'twins') return;
     if ((edit ? _editMode : _commentMode) === 'narrator' && ['foreignvoice', 'secretaction'].includes(segment.kind)) {
       segment.mechanicMode = 'normal';
       segment.skillChallengeEnabled = false;
@@ -303,7 +317,7 @@ function getSegmentTypeButtons(segment, edit = false) {
   const action = edit ? 'set-edit-comment-segment-kind' : 'set-comment-segment-kind';
   const segmentId = escapeHtml(segment.id);
   const challengeDisguised = !!segment.skillChallengeEnabled;
-  return getAllowedCommentSegmentKinds(edit).map(kind => buildCommentSegmentKindButton(kind, {
+  return getAllowedCommentSegmentKinds(edit).filter(kind => kind !== 'twins').map(kind => buildCommentSegmentKindButton(kind, {
     action,
     segmentId,
     active: challengeDisguised ? kind === 'speech' : segment.kind === kind,

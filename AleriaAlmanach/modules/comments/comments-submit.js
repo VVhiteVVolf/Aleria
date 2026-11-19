@@ -9,6 +9,11 @@ async function submitComment() {
   const btn   = document.getElementById('cf-submit');
   const threadId = getCurrentCommentThreadId();
   const insertAfterId = _commentInsertAfterId;
+  if (window.AleriaCommentTwins?.hasIncompletePair(_commentSegments)) {
+    errEl.textContent = 'Bitte zwei verschiedene Figuren für den Zwillingsdialog auswählen.';
+    errEl.style.display = 'block';
+    return;
+  }
 
   let isNarrator = _commentMode === 'narrator';
   let name, title, portrait;

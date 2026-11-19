@@ -27,6 +27,7 @@ const files = [
   'item-register/item-register-companion-firebase.js',
   'comments/comment-activity-preview.js',
   'comments/comment-page-bundles-model.mjs',
+  'comments/comment-prose-edit-model.mjs',
   'combat-critical/combat-critical-conditions.js',
   'combat-critical/combat-critical-lifecycle.js',
   'combat-critical/combat-critical-resolution.js',

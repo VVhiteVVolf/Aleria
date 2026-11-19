@@ -58,6 +58,7 @@ function setCommentPlayerFilter(player, options = {}) {
     }
   }
   if (options.render !== false && typeof renderCharPickerInForm === 'function') renderCharPickerInForm();
+  if (options.render !== false && window.AleriaCommentTwins?.snapshot().twinPair?.enabled) renderCommentSegmentList();
   if (options.render !== false) updateCommentFormPreview();
   if (options.persist !== false) persistCommentDraft();
 }

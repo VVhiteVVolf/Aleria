@@ -32,6 +32,7 @@ function composeFixture() {
     loadSceneActorData() { const demand = deferred(); demands.push(demand); return demand.promise.then(() => { context.actorsReady = true; }); },
     isCommentFormOpen: () => open, activateDialog() { open = true; }, deactivateDialog() { open = false; },
     makeCommentSegment: (kind, text = '', ...rest) => ({ kind, text, mechanicMode: rest.at(-1)?.mechanicMode || 'normal' }),
+    commentSegmentHasContent: segment => Boolean(segment.text),
     setRichEditorContent(id, value) { dom.get(id).value = value; }, setCommentPlayerFilter() {},
     showCommentDraftNote(message) { dom.get('cf-draft-note').textContent = message; },
     setCommentMode(mode) { context._commentMode = mode; }, setCommentKind() {}, setCommentFormCounter() {},
@@ -100,7 +101,7 @@ function editFixture() {
   const actor = { id: 'stored', name: 'Stored actor', entityType: 'character', portrait: 'portrait' };
   const context = vm.createContext({ ...dom, console, _editTargetId: 'comment:one', _editManualMode: false,
     CHARACTER_IMAGE_SET_DEFAULT_ID: 'default', setTimeout: callback => callback(),
-    getCommentBackend: async () => ({ verifyCommentCode: async id => ({ id, characterId: actor.id, charName: actor.name, text: 'Text' }) }),
+    getCommentBackend: async () => ({ loadComment: async id => ({ id, characterId: actor.id, charName: actor.name, text: 'Text' }) }),
     loadSceneActorData() { const demand = deferred(); demands.push(demand); return demand.promise.then(() => { context.actorsReady = true; }); },
     getAvailableCommentCharacterById: () => context.actorsReady ? actor : null,
     getAvailableCommentCharacterByName: () => context.actorsReady ? actor : null,
@@ -111,12 +112,12 @@ function editFixture() {
     applyEditCharacterFilter() {}, setEditFormCounter() {}, updateEditFormPreview() {}, focusRichEditor() {},
     getFriendlyErrorMessage: error => error.message, activateDialog() {}, deactivateDialog() {},
     AleriaCommentSceneCast: { setEditActorsFromSegments() {} } }); context.window = context;
-  dom.get('ec-code').value = 'CODE'; vm.runInContext(source('comments/comments-edit.js'), context);
+  vm.runInContext(source('comments/comments-edit.js'), context);
   return { context, dom, demands, picks };
 }
-test('edit code preselection waits for actors instead of turning a stored actor into manual text', async () => {
+test('direct edit waits for actors instead of turning a stored actor into manual text', async () => {
   const { context, demands, picks } = editFixture();
-  const pending = context.verifyEditCode(); await settle();
+  const pending = context.openEditComment('comment:one'); await settle();
   assert.equal(demands.length, 1); assert.equal(picks.length, 0);
   demands[0].resolve(); await pending;
   assert.equal(context._editSelectedCharId, 'stored'); assert.equal(context._editManualMode, false); assert.deepEqual(picks, ['stored']);
@@ -124,11 +125,15 @@ test('edit code preselection waits for actors instead of turning a stored actor 
 
 test('edit close/reopen and late failures cannot populate or show errors in a different comment', async () => {
   const { context, demands, picks, dom } = editFixture();
-  const pending = context.verifyEditCode(); await settle(); context.closeEditComment(); context.openEditComment('comment:two');
+  const pending = context.openEditComment('comment:one'); await settle();
+  context.closeEditComment();
+  const newer = context.openEditComment('comment:two');
   demands[0].reject(Error('late failure')); await pending;
+  await settle();
   assert.equal(context._editTargetId, 'comment:two'); assert.equal(context._editSelectedCharId, null);
   assert.equal(picks.length, 0, 'an obsolete request cannot render the edit picker');
-  assert.equal(dom.get('ec-code-error').style.display, 'none');
+  assert.equal(dom.get('edit-comment-status').textContent, 'Figuren werden geladen …');
+  demands[1].resolve(); assert.equal(await newer, true);
 });
 
 function inlineFixture() {

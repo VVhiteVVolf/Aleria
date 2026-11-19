@@ -72,6 +72,12 @@
     return getCommentTransactionKinds(comment).some(kind => !MUTABLE_TRANSACTION_KINDS.has(kind));
   }
 
+  function usesProseEditor(comment) {
+    return isImmutableMechanicalComment(comment) || comment.mechanicalAudit === true
+      || comment.serverValidatedMechanics === true || comment.importedHistoricalMechanics === true
+      || Boolean(comment.skillResolution) || (!comment.localOnly && !Object.hasOwn(comment, 'createdBy'));
+  }
+
   function getMechanicalCommentLabel(comment = {}, options = {}) {
     const exclude = new Set(options.exclude || []);
     const kinds = getCommentTransactionKinds(comment);
@@ -99,6 +105,7 @@
   global.AleriaCommentTransactions = Object.freeze({
     getKinds: getCommentTransactionKinds,
     isImmutable: isImmutableMechanicalComment,
+    usesProseEditor,
     getLabel: getMechanicalCommentLabel,
     getLockMessage: getMechanicalCommentLockMessage,
     assertMutable: assertMechanicalCommentMutable

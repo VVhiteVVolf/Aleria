@@ -116,6 +116,28 @@ function assertLocalCommentMutable(comment, operation) {
   return policy.assertMutable(comment, operation);
 }
 
+function updateLocalCommentRecord(docId, getUpdates) {
+  const store = readLocalCommentStore();
+  for (const comments of Object.values(store)) {
+    const index = (comments || []).findIndex(comment => comment.id === docId);
+    if (index < 0) continue;
+    const updates = getUpdates(comments[index]);
+    if (!updates) return;
+    const nowClient = Date.now();
+    comments[index] = {
+      ...comments[index],
+      ...updates,
+      editedAt: makeLocalTimestamp(),
+      updatedAtClient: nowClient,
+      activityAtClient: nowClient,
+      localOnly: true
+    };
+    writeLocalCommentStore(store);
+    return;
+  }
+  throw new Error('Nicht gefunden');
+}
+
 function normalizeCommentModuleInsertForStorage(source = {}) {
   if (!Object.hasOwn(source || {}, 'moduleInsert') && !Object.hasOwn(source || {}, 'moduleInsertJson')) return { ...(source || {}) };
   const next = { ...(source || {}) };
@@ -270,40 +292,32 @@ function getLocalCommentBackend() {
       turns[key] = { ...(turns[key] || {}), threadId: key, current: value, updatedAt: makeLocalTimestamp(), localOnly: true };
       writeLocalCommentTurnStore(turns);
     },
-    async verifyCommentCode(docId, code) {
-      const normalized = String(code || '').trim().toUpperCase();
+    async loadComment(docId) {
       const store = readLocalCommentStore();
       for (const comments of Object.values(store)) {
         const found = (comments || []).find(comment => comment.id === docId);
-        if (!found) continue;
-        if (normalized === COMMENT_DELETE_CODE) return { ...found };
-        if (String(found.deleteCode || '').toUpperCase() !== normalized) throw new Error('Falscher Code');
-        return { ...found };
+        if (found) return { ...found };
       }
       throw new Error('Nicht gefunden');
     },
+    async verifyCommentCode(docId, code) {
+      const normalized = String(code || '').trim().toUpperCase();
+      const found = await this.loadComment(docId);
+      if (normalized !== COMMENT_DELETE_CODE && String(found.deleteCode || '').toUpperCase() !== normalized) throw new Error('Falscher Code');
+      return found;
+    },
     async updateComment(docId, updates) {
-      const store = readLocalCommentStore();
-      const safeUpdates = normalizeCommentModuleInsertForStorage(updates);
-      let updated = false;
-      Object.keys(store).forEach(key => {
-        store[key] = (store[key] || []).map(comment => {
-          if (comment.id !== docId) return comment;
-          assertLocalCommentMutable(comment, 'bearbeitet');
-          updated = true;
-          const nowClient = Date.now();
-          return {
-            ...comment,
-            ...safeUpdates,
-            editedAt: makeLocalTimestamp(),
-            updatedAtClient: nowClient,
-            activityAtClient: nowClient,
-            localOnly: true
-          };
-        });
+      updateLocalCommentRecord(docId, comment => {
+        assertLocalCommentMutable(comment, 'bearbeitet');
+        return normalizeCommentModuleInsertForStorage(updates);
       });
-      if (!updated) throw new Error('Nicht gefunden');
-      writeLocalCommentStore(store);
+    },
+    async editCommentProse(docId, entryId, edits) {
+      const { buildCommentProsePatch } = await import('./comment-prose-edit-model.mjs');
+      updateLocalCommentRecord(docId, comment => {
+        if (comment.entryId !== entryId) throw new Error('Der Beitrag gehört zu einer anderen Szene.');
+        return buildCommentProsePatch(comment, edits);
+      });
     },
     async deleteComment(docId, deleteCode) {
       const comment = await this.verifyCommentCode(docId, deleteCode);

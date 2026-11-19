@@ -2534,8 +2534,7 @@
     padding-bottom: 0.6rem;
     border-bottom: 1px solid rgba(212,180,100,0.2);
   }
-  /* Code-Schritt */
-  .edit-step-code { display: flex; flex-direction: column; gap: 0.8rem; }
+  .edit-comment-loading:not([hidden]) { display: flex; flex-direction: column; gap: 0.8rem; }
   .edit-step-form { display: none; flex-direction: column; gap: 0.9rem; }
   .edit-step-form.visible { display: flex; }
 
@@ -5032,7 +5031,7 @@
   flex: 0 0 auto;
 }
 
-#edit-comment-overlay .edit-step-code {
+#edit-comment-overlay .edit-comment-loading {
   width: min(520px, 100%);
   margin: auto;
 }
@@ -5066,6 +5065,28 @@
   overflow-y: auto;
   padding-right: 0.25rem;
 }
+
+#edit-comment-overlay .comment-edit-prose-note {
+  display: none;
+}
+
+#edit-comment-overlay [data-edit-scope="prose"] .edit-comment-text-panel {
+  grid-column: 1 / 3;
+}
+
+#edit-comment-overlay [data-edit-scope="prose"] .comment-edit-prose-note {
+  display: block;
+  color: var(--ink-faded);
+  font-size: 0.82rem;
+  margin: 0.35rem 0 0.7rem;
+}
+
+#edit-comment-overlay [data-edit-scope="prose"] :is(.cf-mode-toggle, .comment-segment-actions) {
+  display: none;
+}
+
+#edit-comment-overlay [data-edit-scope="prose"] > #ec-form-error { grid-row: 3; }
+#edit-comment-overlay [data-edit-scope="prose"] > .delete-confirm-actions { grid-row: 4; }
 
 #edit-comment-overlay .edit-comment-preview-panel {
   grid-column: 3;

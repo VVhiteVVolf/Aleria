@@ -10,7 +10,7 @@ const DIALOG_CONFIGS = {
   'fazit-form-overlay': { label: 'Fazit eintragen', initialFocus: '#fz-title, button, input, textarea, select' },
   'attachment-form-overlay': { label: 'Anhang pr\u00e4sentieren', initialFocus: '#af-title, button, input, textarea' },
   'showcase-profile-overlay': { label: 'Vorstellung', initialFocus: '.showcase-profile-close, button' },
-  'edit-comment-overlay': { label: 'Kommentar bearbeiten', initialFocus: '#ec-code, #ec-editor, button, input, textarea, select' },
+  'edit-comment-overlay': { label: 'Kommentar bearbeiten', initialFocus: '#edit-comment-loading button, #ec-segment-list textarea' },
   'delete-confirm-overlay': { label: 'Kommentar l\u00f6schen', initialFocus: '#dc-code, button, input' },
   'char-profile-overlay': { label: 'Charakterprofil', initialFocus: '#cp-name, button, input, textarea, select' },
   'module-editor-overlay': { label: 'Modul-Editor', initialFocus: '#me-code, #me-title, button, input, textarea, select' },
