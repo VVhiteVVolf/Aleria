@@ -314,8 +314,100 @@ def prepare_journeys():
         journey: dict(panorama=prepare_panorama(journey, ground_y), atlas=pack_journey_stride(journey, sheets))
         for journey, ground_y, sheets in groups
     }, council=prepare_council())
-    (DESTINATION / 'journey-v6-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8', newline='\n')
+    (DESTINATION / 'journey-v6-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
     print('Prepared 3 scrolling panoramas, 40 walk frames and the council with 28 gesture frames.')
+
+
+def prepare_oweta_courtyard():
+    name = 'owetas-quartett-innenhof-chibi-v8'
+    original = SOURCE / f'{name}.png'
+    DESTINATION.mkdir(parents=True, exist_ok=True)
+    with Image.open(original) as drawing:
+        if drawing.size != (1536, 1024):
+            raise ValueError('Oweta courtyard requires a 1536 × 1024 composition.')
+        assets = encode_scene_background(name, drawing.convert('RGB'), (1536, 768, 1200))
+    manifest = dict(version=8, source=asset_description(original), assets=assets)
+    (DESTINATION / 'oweta-courtyard-v8-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8', newline='\n')
+    print('Prepared the fixed Castell Draig courtyard as AVIF and WebP.')
+
+
+def prepare_scene_poses(name, order, *, columns=3, cell=192, register=False):
+    original = SOURCE / f'{name}.png'
+    foot_padding = round(cell / 48)
+    atlas = Image.new('RGBA', (columns * cell, len(order) * cell))
+    with Image.open(original) as drawing:
+        if drawing.mode != 'RGBA' or drawing.getchannel('A').getextrema() != (0, 255):
+            raise ValueError(f'Pose source must have genuine alpha: {original.name}')
+        for row, actors in enumerate(order):
+            top = row * drawing.height // len(order)
+            bottom = (row + 1) * drawing.height // len(order)
+            frames = [
+                extract(drawing, (col * drawing.width // columns, top, (col + 1) * drawing.width // columns, bottom),
+                        crop=not register)
+                for col in range(len(actors))
+            ]
+            if register:
+                # Keep the pivot unchanged across speaking poses.
+                bounds = [frame.getchannel('A').getbbox() for frame in frames]
+                union = (min(b[0] for b in bounds), min(b[1] for b in bounds),
+                         max(b[2] for b in bounds), max(b[3] for b in bounds))
+                frames = [frame.crop(union) for frame in frames]
+            scale = min(cell * .948 / max(frame.width for frame in frames),
+                        cell * .953 / max(frame.height for frame in frames))
+            for col, frame in enumerate(frames):
+                resized = frame.resize((round(frame.width * scale), round(frame.height * scale)),
+                                       Image.Resampling.LANCZOS)
+                atlas.alpha_composite(resized, (col * cell + (cell - resized.width) // 2,
+                                                (row + 1) * cell - foot_padding - resized.height))
+    file = DESTINATION / f'{name}.webp'
+    atlas.save(file, quality=85, method=6, exact=True)
+    return dict(source=asset_description(original), asset=asset_description(file),
+                cell=cell, columns=columns, order=order)
+
+
+def prepare_rose_chase():
+    DESTINATION.mkdir(parents=True, exist_ok=True)
+    paintings = {}
+    for name in ('oweta-courtyard-plate-v10', 'rosenflucht-vorspiel-v10', 'rosenflucht-vorspiel-ausholen-v10'):
+        original = SOURCE / f'{name}.png'
+        with Image.open(original) as drawing:
+            if drawing.size != (1536, 1024):
+                raise ValueError(f'{name} requires the registered 1536 by 1024 framing.')
+            paintings[name] = dict(source=asset_description(original),
+                                   assets=encode_scene_background(name, drawing.convert('RGB'), (1440, 768, 1120)))
+
+    garden_name = 'rosenflucht-gartenbezirk-v10'
+    garden_original = SOURCE / f'{garden_name}.png'
+    garden = DESTINATION / f'{garden_name}.webp'
+    with Image.open(garden_original) as drawing:
+        drawing.thumbnail((1660, 560), Image.Resampling.LANCZOS)
+        drawing.convert('RGB').save(garden, quality=83, method=6)
+
+    running = ['run-stride', 'run-pass', 'run-reach', 'run-lift']
+    actors = {
+        name: prepare_scene_poses(f'rosenflucht-{name}-posen-v11',
+                                  [running, ['jump-rise', 'jump-tuck', 'trip', 'cover']], columns=4)
+        for name in ('idwal', 'trevor')
+    }
+    actors['pyderi'] = prepare_scene_poses('rosenflucht-pyderi-posen-v11',
+                                         [running, ['windup', 'lunge', 'peck', 'recoil']], columns=4)
+    hedge = DESTINATION / 'rosenflucht-rosenhecke-v10.webp'
+    hedge_source = SOURCE / 'rosenflucht-chibi-posen-v10.png'
+    with Image.open(hedge_source) as drawing:
+        part = extract(drawing, (drawing.width * 2 // 3, drawing.height * 2 // 3,
+                                 drawing.width, drawing.height))
+        part.thumbnail((208, 176), Image.Resampling.LANCZOS)
+        part.save(hedge, quality=86, method=6, exact=True)
+
+    courtyard = prepare_scene_poses('oweta-courtyard-gestures-v10',
+                                    [[f'{name}-{pose}' for pose in ('idle', 'gesture', 'speaking')]
+                                     for name in ('oweta', 'lefraye', 'rianna', 'caralyn')], cell=340, register=True)
+    manifest = dict(version=11, paintings=paintings, courtyard=courtyard,
+                    chase=dict(actors=actors, hedge=dict(source=asset_description(hedge_source),
+                                                        asset=asset_description(hedge)),
+                               garden=dict(source=asset_description(garden_original), asset=asset_description(garden))))
+    (DESTINATION / 'rosenflucht-v11-manifest.json').write_text(
+        json.dumps(manifest, indent=2) + '\n', encoding='utf-8', newline='\n')
 
 
 if __name__ == '__main__':
@@ -323,8 +415,14 @@ if __name__ == '__main__':
     versions = parser.add_mutually_exclusive_group()
     versions.add_argument('--journey-v5', action='store_true')
     versions.add_argument('--journey-v6', action='store_true')
+    versions.add_argument('--oweta-courtyard', action='store_true')
+    versions.add_argument('--rose-chase', action='store_true')
     args = parser.parse_args()
-    if args.journey_v6:
+    if args.rose_chase:
+        prepare_rose_chase()
+    elif args.oweta_courtyard:
+        prepare_oweta_courtyard()
+    elif args.journey_v6:
         prepare_journeys()
     elif args.journey_v5:
         prepare_journey()

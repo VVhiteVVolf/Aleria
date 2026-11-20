@@ -9,9 +9,10 @@ export const castleImage = (houseId, roomId) => `${CASTLE_ASSET_ROOT}/${houseId}
 const paragraphs = lines => lines.map(line => `<p>${line}</p>`).join('');
 
 function scenePage(house, room) {
+  // Inherit the scene renderer's responsive cover and focal point.
   return { schemaVersion: 1, pageTitle: room.title, commentThreadKey: `${house.id}-${room.id}`,
     sessionPage: true, image: castleImage(house.id, room.id), imageWidth: 28, imageTall: true,
-    imageFit: 'contain', imagePosition: 'center top', sessionIntro: paragraphs(room.intro),
+    sessionIntro: paragraphs(room.intro),
     sessionLocation: `${house.title} · ${room.title}`, sessionStatus: 'active', sessionParticipants: [],
     sessionHint: 'Beginne eine Begegnung oder setze das gemeinsame Spiel an diesem Ort fort.',
     sessionEmptyTitle: room.title, sessionEmptyText: 'Hier kann eine neue Szene beginnen.',

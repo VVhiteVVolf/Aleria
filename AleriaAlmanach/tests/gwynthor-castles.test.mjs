@@ -46,6 +46,19 @@ test('29 independent scene threads retain empty dates and do not assign characte
   assert.deepEqual(buildCastleRegistrations(), registrations);
 });
 
+test('registered castle scenes inherit responsive cover at the published column width', async () => {
+  const source = await readFile(new URL('../modules/gwynthor-castles/castle-data.js', import.meta.url), 'utf8');
+  const context = { SECTIONS: [] };
+  vm.runInNewContext(source, context);
+  const pages = context.SECTIONS.flatMap(section => section.entries.flatMap(entry => entry.pages));
+  assert.equal(pages.length, 29);
+  for (const page of pages) {
+    assert.equal(page.imageWidth, 28, page.commentThreadKey);
+    assert.equal(page.imageFit, undefined, page.commentThreadKey);
+    assert.equal(page.imagePosition, undefined, page.commentThreadKey);
+  }
+});
+
 test('archive registration preserves existing edited modules, neighboring scenes and stable identities on repeated registration', () => {
   const edited = { ...registrations[0].entry, subtitle: 'Persönliche Redaktion', pages: [{ commentThreadKey: 'bestehende-szene', sessionDateAleria: { year: 1740, month: 3, day: 2 } }] };
   const neighbor = { id: 'castell-draig-existing', pages: [{ commentThreadKey: 'unveraendert' }] };

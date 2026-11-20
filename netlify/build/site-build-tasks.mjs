@@ -566,7 +566,7 @@ export const SITE_BUILD_TASKS = [
       'comment-foreign-voice',
       'scene-regeneration', 'scene-regeneration-service', 'scene-regeneration-visibility', 'scene-regeneration-rule-usage',
       'archive-image-urls', 'archive-preview-navigation', 'gwynthor-geography', 'dashboard-rendering', 'rotes-tor-menu',
-      'firebase-module-storage', 'module-store-revision', 'loading-screen',
+      'firebase-module-storage', 'module-store-revision', 'loading-screen', 'loading-screen-rose-chase',
       'character-performance', 'character-directory', 'character-categories', 'character-section-integration', 'character-save-guard',
       'character-register-views', 'character-equipment-sync', 'modal-navigation'
     ].map(almanach), 'firebase/tests/publisher-access.test.mjs')]

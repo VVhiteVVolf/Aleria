@@ -13,6 +13,7 @@ export function createLoadingScreenSound({ button, control, src }, environment =
   let stopping = false;
   let destroyed = false;
   let manuallyStopped = false;
+  let suspended = false;
   let operation = 0;
   let frame = null;
   let stopTimer = null;
@@ -75,7 +76,7 @@ export function createLoadingScreenSound({ button, control, src }, environment =
   }
 
   async function start() {
-    if (destroyed || entered || unavailable || manuallyStopped || pending) return false;
+    if (destroyed || entered || unavailable || manuallyStopped || suspended || pending) return false;
     if (playing && !stopping) return true;
     if (!autoplayAllowed()) { render(); return false; }
     const current = ++operation;
@@ -132,6 +133,20 @@ export function createLoadingScreenSound({ button, control, src }, environment =
     destroy();
   }
 
+  function setSuspended(active) {
+    if (destroyed || entered || active === suspended) return;
+    suspended = active;
+    if (!active) { void start(); return; }
+    operation += 1;
+    cancelFade();
+    playing = false;
+    pending = false;
+    stopping = false;
+    audio.pause();
+    audio.volume = 0;
+    render();
+  }
+
   function destroy() {
     if (destroyed) return;
     destroyed = true;
@@ -164,5 +179,6 @@ export function createLoadingScreenSound({ button, control, src }, environment =
   }, { signal: lifetime.signal });
   environment.addEventListener('pagehide', destroy, { once: true, signal: lifetime.signal });
   render();
-  return Object.freeze({ tryAutoplay: start, toggle, enterAlmanach, destroy });
+  return Object.freeze({ tryAutoplay: start, toggle, setSuspended, isMuted: () => manuallyStopped,
+    enterAlmanach, destroy });
 }

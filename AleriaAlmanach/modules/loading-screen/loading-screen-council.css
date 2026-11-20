@@ -60,6 +60,14 @@
   font-size: clamp(13px, 1.25vw, 15px);
 }
 
+.almanach-loading__scene[data-scene-kind="council"] .almanach-loading__banter[data-banter-context] {
+  --bubble-anchor: 50cqw;
+  text-align: center;
+}
+.almanach-loading__banter[data-banter-context] b,
+.almanach-loading__banter[data-banter-context]::after { display: none; }
+.almanach-loading__banter[data-banter-context] q { quotes: none; font-style: italic; }
+
 @media (600px < width <= 1240px) {
   .almanach-loading__scene[data-scene-kind="council"] { aspect-ratio: 3 / 2; }
 }

@@ -1,0 +1,35 @@
+{
+  "version": 11,
+  "images": [
+    {
+      "source": "source/rosenflucht-idwal-posen-v11.png",
+      "generatedFile": "exec-13139013-7663-4b71-b7f5-d4a498e2cf63.png",
+      "tool": "Built-in ImageGen",
+      "transparency": true,
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/rosenflucht-chibi-posen-v10.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset: eight-frame game sprite sheet with exact transparent RGBA. Use only Idwal, top row reference 1. Adult red-haired man, scared large blue eyes, short red goatee, fur shoulder mantle, silver skull clasp, dark costume and flowing red cloak. No Trevor or birds. Image 1 is an identity and painting style reference, not the layout. Four equal columns by two equal rows, eight individually centered complete full-body Chibi anime cutouts, same relative scale, same broad side view with head turned right. Wide generous alpha gutters around each cell, especially above hair and below boots. Stable anatomy and costume. TOP ROW four visibly different consecutive fast panic-run poses all facing right, eyes wide and mouth alarmed: 1 right boot reaches forward and left boot flings back, right forearm swung BACK; 2 low passing pose, right boot planted under hip and other knee tucked, arms crossing at waist; 3 left boot extends in front and right boot back, left forearm swung BACK; 4 high passing pose, a knee lifted with trailing boot tucked. Strong forward lean and hair swept back. BOTTOM ROW exactly: 1 launch into a jump, knees lifting, elbows forward; 2 airborne apex, both boots tightly tucked, soles visible; 3 trips and pitches head and upper body sharply FORWARD, arms reaching for ground, legs trailing high, preserves same identity and startled expression; 4 defensive crouch very low on both heels, hands cover head from a pecking bird, eyes squeezed shut. No spear, no subtitles, no grid lines, no checkerboard or matte, no smoke, no environment, no shadow. Match the fantasy chibi game colors, clear solid shapes and crisp painted contours. Output landscape with aspect about 2:1, true transparent exterior."
+    },
+    {
+      "source": "source/rosenflucht-trevor-posen-v11.png",
+      "generatedFile": "exec-e4390539-fbe3-4e19-b966-e76d413ea2c1.png",
+      "tool": "Built-in ImageGen",
+      "transparency": true,
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/rosenflucht-chibi-posen-v10.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset: eight-frame game sprite sheet with exact transparent RGBA. Use only Trevor, middle row reference 1. Young adult red-haired man, orange-brown eyes, clean shaven, fitted black and gold plates, gold dragon breast emblem, no fur and no cape. No Idwal or birds. Image 1 is an identity and painting style reference, not the layout. Four equal columns by two equal rows, eight individually centered complete full-body Chibi anime cutouts, same relative scale, same broad side view with head turned right. Wide generous alpha gutters around each cell, especially above hair and below boots. Stable anatomy and costume. TOP ROW four visibly different consecutive fast panic-run poses all facing right, eyes wide and mouth alarmed: 1 right boot reaches forward and left boot flings back, right forearm swung BACK; 2 low passing pose, right boot planted under hip and other knee tucked, arms crossing at waist; 3 left boot extends in front and right boot back, left forearm swung BACK; 4 high passing pose, a knee lifted with trailing boot tucked. Strong forward lean and hair swept back. BOTTOM ROW exactly: 1 launch into a jump, knees lifting, elbows forward; 2 airborne apex, both boots tightly tucked, soles visible; 3 trips and pitches head and upper body sharply FORWARD, arms reaching for ground, legs trailing high, preserves same identity and startled expression; 4 defensive crouch very low on both heels, hands cover head from a pecking bird, eyes squeezed shut. No spear, no subtitles, no grid lines, no checkerboard or matte, no smoke, no environment, no shadow. Match the fantasy chibi game colors, clear solid shapes and crisp painted contours. Output landscape with aspect about 2:1, true transparent exterior."
+    },
+    {
+      "source": "source/rosenflucht-pyderi-posen-v11.png",
+      "generatedFile": "exec-4eb467c9-4917-4127-b292-e7d314842ce5.png",
+      "tool": "Built-in ImageGen",
+      "transparency": true,
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/rosenflucht-chibi-posen-v10.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset: eight-frame 2D chase sprite sheet. Image 1 bottom left and middle cells are the only identity references: Pyderi, a blue and turquoise adult male peacock with emerald eye-spots on the long tail, black brow and surprised angry expression, small crown. No humans, no hedge. Four columns exactly by two rows exactly, eight whole birds, isolated with real alpha, consistent head size and length, same side-on facing right, all feet align along each row baseline, generous clear gutters. TOP ROW 4 visibly different swift peacock run frames, closed folded tail trailing left: 1 right foot forward left back, head held upright; 2 body dips as weight shifts to right foot and left foot is passing; 3 left foot far forward and right foot extended back, head thrust; 4 both feet momentarily tucked with feathers bouncing. BOTTOM ROW 4 matching close-up action stages from same side perspective and same scale—1 about to peck, stretching neck upward, fan partly raised; 2 lunging forward, neck stretched and downward; 3 peck contact very low and far out to the right, tail fanned partly and raised (do not clip); 4 recoiling and raising neck again, feathers shaking. Warm polished painted anime Chibi fantasy style, recognizable peacock in all cells. Transparent background, no scene, no shadows, no captions, no labels, no lines or visible grid and no checkerboard. Wide 2:1 canvas."
+    }
+  ]
+}

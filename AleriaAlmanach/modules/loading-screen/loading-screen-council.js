@@ -1,7 +1,11 @@
 export const HEROLDS_COUNCIL = {
   id: 'heroldsrat',
   kind: 'council',
-  description: 'sitzen in der Kammer des Herolds am runden Tisch und beraten über Cadogans Hut',
+  description: 'sitzen in der Kammer des Herolds am runden Tisch, als es zu einem Zwischenfall mit Cadogans Hut kommt',
+  opening: {
+    text: 'Trahern hat Cadogan gerade den Hut vom Kopf geschlagen.',
+    source: { comment: 'JRkJWN9JasprYfASjVO9', thread: 'castell-draig-ratsfluegel::session:ratsfluegel-herold', segment: 10 }
+  },
   cast: [
     ['iestyn', 'Iestyn'],
     ['gareth', 'Gareth'],

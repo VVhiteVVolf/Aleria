@@ -1,0 +1,23 @@
+{
+  "createdAt": "2026-11-20",
+  "tool": "built-in image_gen",
+  "loadingScreenVersion": 8,
+  "artwork": [
+    {
+      "source": "source/owetas-quartett-innenhof-chibi-v8.png",
+      "role": "Chibi characters standing and talking in Castell Draig's courtyard",
+      "generatorOutput": "exec-424590b6-23fc-4c4e-9bab-74d4ca0043bc.png",
+      "sha256": "4530d22f40004de71b5b75ab206675c284f7b0e9e55cc67a70310758a0b970b1",
+      "size": [
+        1536,
+        1024
+      ],
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/owetas-quartett-innenhof-v7.png",
+        "AleriaAlmanach/assets/loading-screen/source/oweta-lefraye-stride-v6.png",
+        "AleriaAlmanach/assets/loading-screen/source/rianna-caralyn-stride-v6.png"
+      ],
+      "prompt": "Edit the first attached 3:2 illustration into the Aleria Almanach CHIBI loading screen. Keep the exact recognizable Castell Draig courtyard, pale stone towers and muscular wooden gate, burgundy and gold heraldic pennants, cobblestones, mountains, and daylight. Replace the four human-proportion figures with four clearly super-deformed chibi figures, faithfully matching the visual style, costumes and caricature proportions in reference sheets 2 and 3. The reference sheets supply the character designs and style, not the walking poses. This is ONE continuous full-color landscape painting, not a sprite grid, with one of each of the four women, exactly, chatting while they stand on the courtyard paving.\n\nUse the same left-to-right order and distinct faces, hair, armor and heraldry as the first image: Oweta at x~20% with short low red ties, blue eyes and charcoal/oxblood dragon armor; Lefraye at x~38% with one dramatic high red ponytail, amber eyes and two golden goats on black-and-gold plate; Rianna at x~62% with TWO high red pigtails, amber eyes, yellow breastplate with black winged wyrm; Caralyn at x~81% with loose long red waves, blue-green eyes and green/teal plate with the mermaid. Keep the four readable at a phone's width. Use LARGE round heads, large expressive anime eyes, compact arms and legs, and bodies only about 2.5 to 2.8 head-heights tall in total. Do not render adult realistic body proportions or create human-sized bust portraits. These are fantasy adventurers drawn in cute game-chibi proportions.\n\nShow all four FULL-BODY with their boots plainly visible, each standing at ease, roughly on the same ground line at 93% of the canvas height. Oweta explains calmly with one open hand, Lefraye and Rianna listen, Caralyn turns thoughtfully to the others. Subtle signs of talking/listening, comfortably facing one another, anatomically neat stylized hands, no walking poses or weapons held. Place the tops of ALL hairstyles no higher than the lower edge of the top 41% of the image. Leave a generous uninterrupted area of painted architecture and sky ABOVE all four heads for later HTML speech bubbles. Let them fill the bottom half without becoming tiny. Soft grounded shadows on the paving, no graphic labels, cutout outlines, borders, drawn speech bubbles, extra people, props, horses or text. Same fine dark hand-drawn contours and warm matte color palette as the loading sprites. Return a single horizontal 1536 × 1024 composition."
+    }
+  ]
+}

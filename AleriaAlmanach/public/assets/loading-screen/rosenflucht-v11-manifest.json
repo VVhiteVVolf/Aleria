@@ -1,0 +1,345 @@
+{
+  "version": 11,
+  "paintings": {
+    "oweta-courtyard-plate-v10": {
+      "source": {
+        "file": "assets/loading-screen/source/oweta-courtyard-plate-v10.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "frames": 1,
+        "bytes": 2703006,
+        "sha256": "d790db2e694836f27c85971ff6946a221d61505ac0c85029c51be4c66fc3ef70"
+      },
+      "assets": [
+        {
+          "file": "public/assets/loading-screen/oweta-courtyard-plate-v10-desktop.avif",
+          "size": [
+            1440,
+            960
+          ],
+          "frames": 1,
+          "bytes": 157200,
+          "sha256": "382734b1c85e51a1c79607fcddd1d015c4e492826d3bdec69a40d870256f9960"
+        },
+        {
+          "file": "public/assets/loading-screen/oweta-courtyard-plate-v10-mobile.avif",
+          "size": [
+            768,
+            512
+          ],
+          "frames": 1,
+          "bytes": 57321,
+          "sha256": "c1d6a70806b747c3ae0f7805ac9ba5d24b2e609201875ec8b139f493eddc966c"
+        },
+        {
+          "file": "public/assets/loading-screen/oweta-courtyard-plate-v10-fallback.webp",
+          "size": [
+            1120,
+            747
+          ],
+          "frames": 1,
+          "bytes": 155694,
+          "sha256": "0afd28fed490232ecc9d5547fc8a5dc8ee8b5f98aad05f0c3f780ee2314e2a29"
+        }
+      ]
+    },
+    "rosenflucht-vorspiel-v10": {
+      "source": {
+        "file": "assets/loading-screen/source/rosenflucht-vorspiel-v10.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "frames": 1,
+        "bytes": 2926529,
+        "sha256": "2d56a566678fce945c7d48308c8d44b6dbd52d2d57fd54852af4ae948cb195b8"
+      },
+      "assets": [
+        {
+          "file": "public/assets/loading-screen/rosenflucht-vorspiel-v10-desktop.avif",
+          "size": [
+            1440,
+            960
+          ],
+          "frames": 1,
+          "bytes": 192000,
+          "sha256": "8b59cd1a0a1f80364594f4ce6f42aef66fa064f9ab9bea632cbbf8fb66cc2dd1"
+        },
+        {
+          "file": "public/assets/loading-screen/rosenflucht-vorspiel-v10-mobile.avif",
+          "size": [
+            768,
+            512
+          ],
+          "frames": 1,
+          "bytes": 79626,
+          "sha256": "ddcab9a025e83731625c56cf94c4c971d3049c623511bdbba7da9080fdb80a62"
+        },
+        {
+          "file": "public/assets/loading-screen/rosenflucht-vorspiel-v10-fallback.webp",
+          "size": [
+            1120,
+            747
+          ],
+          "frames": 1,
+          "bytes": 184006,
+          "sha256": "1e079da837f8059c2b3231085da5576bfc2b1e858bba9692e6647bfb281de0a6"
+        }
+      ]
+    },
+    "rosenflucht-vorspiel-ausholen-v10": {
+      "source": {
+        "file": "assets/loading-screen/source/rosenflucht-vorspiel-ausholen-v10.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "frames": 1,
+        "bytes": 2757795,
+        "sha256": "054784dd96efa628bc3f90182fe3a065a42685e886b1def7d64183925c7a7c2f"
+      },
+      "assets": [
+        {
+          "file": "public/assets/loading-screen/rosenflucht-vorspiel-ausholen-v10-desktop.avif",
+          "size": [
+            1440,
+            960
+          ],
+          "frames": 1,
+          "bytes": 179426,
+          "sha256": "16216eab334a6665dba472a86e7a5f579fa6d4d217e3be8c4247c2038f09afa1"
+        },
+        {
+          "file": "public/assets/loading-screen/rosenflucht-vorspiel-ausholen-v10-mobile.avif",
+          "size": [
+            768,
+            512
+          ],
+          "frames": 1,
+          "bytes": 77702,
+          "sha256": "b11e859a6c806b0ca2f35003a7569eeea433820c21c4784ad700354d5401f863"
+        },
+        {
+          "file": "public/assets/loading-screen/rosenflucht-vorspiel-ausholen-v10-fallback.webp",
+          "size": [
+            1120,
+            747
+          ],
+          "frames": 1,
+          "bytes": 176024,
+          "sha256": "42d4b2f428c2226080747cbd3f17b47629502fc0dfe366d94d037518c3412e51"
+        }
+      ]
+    }
+  },
+  "courtyard": {
+    "source": {
+      "file": "assets/loading-screen/source/oweta-courtyard-gestures-v10.png",
+      "size": [
+        1086,
+        1448
+      ],
+      "frames": 1,
+      "bytes": 1571958,
+      "sha256": "c76ca5129507abcf42be5b448b9fc7f1f9e7a844a85d9893099d353fd40fb299"
+    },
+    "asset": {
+      "file": "public/assets/loading-screen/oweta-courtyard-gestures-v10.webp",
+      "size": [
+        1020,
+        1360
+      ],
+      "frames": 1,
+      "bytes": 317406,
+      "sha256": "5509148e92734545bb54f8c4d361a3536f64fa2633fe84b817fc06195f0eca28"
+    },
+    "cell": 340,
+    "columns": 3,
+    "order": [
+      [
+        "oweta-idle",
+        "oweta-gesture",
+        "oweta-speaking"
+      ],
+      [
+        "lefraye-idle",
+        "lefraye-gesture",
+        "lefraye-speaking"
+      ],
+      [
+        "rianna-idle",
+        "rianna-gesture",
+        "rianna-speaking"
+      ],
+      [
+        "caralyn-idle",
+        "caralyn-gesture",
+        "caralyn-speaking"
+      ]
+    ]
+  },
+  "chase": {
+    "actors": {
+      "idwal": {
+        "source": {
+          "file": "assets/loading-screen/source/rosenflucht-idwal-posen-v11.png",
+          "size": [
+            1774,
+            887
+          ],
+          "frames": 1,
+          "bytes": 1732883,
+          "sha256": "5e7fa6aafb9b5e9034e6d109ee30a59feefe0a3005c59c26443a61c1c5debc6e"
+        },
+        "asset": {
+          "file": "public/assets/loading-screen/rosenflucht-idwal-posen-v11.webp",
+          "size": [
+            768,
+            384
+          ],
+          "frames": 1,
+          "bytes": 90320,
+          "sha256": "b0ee1dcc9c3b54441a46e72a93c82f5a7c80e446540c36f8d3c53ec98f8cdf07"
+        },
+        "cell": 192,
+        "columns": 4,
+        "order": [
+          [
+            "run-stride",
+            "run-pass",
+            "run-reach",
+            "run-lift"
+          ],
+          [
+            "jump-rise",
+            "jump-tuck",
+            "trip",
+            "cover"
+          ]
+        ]
+      },
+      "trevor": {
+        "source": {
+          "file": "assets/loading-screen/source/rosenflucht-trevor-posen-v11.png",
+          "size": [
+            1774,
+            887
+          ],
+          "frames": 1,
+          "bytes": 1532983,
+          "sha256": "79a9ac7487a3a82ff96666a418397df4e87b6486919d9b0d3cfd4a499aa298e6"
+        },
+        "asset": {
+          "file": "public/assets/loading-screen/rosenflucht-trevor-posen-v11.webp",
+          "size": [
+            768,
+            384
+          ],
+          "frames": 1,
+          "bytes": 86576,
+          "sha256": "f2bfa1e40650d003f88d924470e4b37b26a3364c84d6675e133c6b51a81b9583"
+        },
+        "cell": 192,
+        "columns": 4,
+        "order": [
+          [
+            "run-stride",
+            "run-pass",
+            "run-reach",
+            "run-lift"
+          ],
+          [
+            "jump-rise",
+            "jump-tuck",
+            "trip",
+            "cover"
+          ]
+        ]
+      },
+      "pyderi": {
+        "source": {
+          "file": "assets/loading-screen/source/rosenflucht-pyderi-posen-v11.png",
+          "size": [
+            1774,
+            887
+          ],
+          "frames": 1,
+          "bytes": 1603957,
+          "sha256": "810efc0f6b97a48ce5c80b9105b41f2f1f593a886bb2c15699c0b86599390033"
+        },
+        "asset": {
+          "file": "public/assets/loading-screen/rosenflucht-pyderi-posen-v11.webp",
+          "size": [
+            768,
+            384
+          ],
+          "frames": 1,
+          "bytes": 85938,
+          "sha256": "65539ec90652d0a8cbb93ffd15154febc5e56045bd7f39459aed4ae3682d52ad"
+        },
+        "cell": 192,
+        "columns": 4,
+        "order": [
+          [
+            "run-stride",
+            "run-pass",
+            "run-reach",
+            "run-lift"
+          ],
+          [
+            "windup",
+            "lunge",
+            "peck",
+            "recoil"
+          ]
+        ]
+      }
+    },
+    "hedge": {
+      "source": {
+        "file": "assets/loading-screen/source/rosenflucht-chibi-posen-v10.png",
+        "size": [
+          1254,
+          1254
+        ],
+        "frames": 1,
+        "bytes": 1861656,
+        "sha256": "f5258b72585514652e20b0773d2f226264fc3bb9c4d0d0a81699043663823d07"
+      },
+      "asset": {
+        "file": "public/assets/loading-screen/rosenflucht-rosenhecke-v10.webp",
+        "size": [
+          208,
+          106
+        ],
+        "frames": 1,
+        "bytes": 15082,
+        "sha256": "f8f31f5d5666bddabc7aee365565265c7146b21ab82b56b67c933f6be336f2a1"
+      }
+    },
+    "garden": {
+      "source": {
+        "file": "assets/loading-screen/source/rosenflucht-gartenbezirk-v10.png",
+        "size": [
+          2172,
+          724
+        ],
+        "frames": 1,
+        "bytes": 3243522,
+        "sha256": "1a97742742b02d4c7e9c1169a6884f3b5c581f379b9c462afee0927933de281f"
+      },
+      "asset": {
+        "file": "public/assets/loading-screen/rosenflucht-gartenbezirk-v10.webp",
+        "size": [
+          1660,
+          553
+        ],
+        "frames": 1,
+        "bytes": 268498,
+        "sha256": "0a5fb9c647ea20f24ac522d538037ba22c22ddf1dbcb0bcf26069ebd5a9a7dd4"
+      }
+    }
+  }
+}

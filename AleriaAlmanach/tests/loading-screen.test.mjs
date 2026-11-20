@@ -7,6 +7,7 @@ import vm from 'node:vm';
 import { createLoadingScreenSound } from '../modules/loading-screen/loading-screen-sound.js';
 import { LOADING_SCREEN_RIGS, mountLoadingScreenWalk } from '../modules/loading-screen/loading-screen-walk.js';
 import { mountLoadingScreenBanter } from '../modules/loading-screen/loading-screen-banter.js';
+import { OWETAS_COURTYARD, mountLoadingScreenCourtyard } from '../modules/loading-screen/loading-screen-courtyard.js';
 import { LOADING_SCREEN_JOURNEYS } from '../modules/loading-screen/loading-screen-journey.js';
 import { HEROLDS_COUNCIL } from '../modules/loading-screen/loading-screen-council.js';
 import { chooseLoadingScreenScene, LOADING_SCREEN_SCENES } from '../modules/loading-screen/loading-screen-scenes.js';
@@ -197,7 +198,7 @@ test('hidden tabs pause movement without changing the users animation choice', a
   assert.equal(ui.root.dataset.motion, 'paused');
 });
 
-test('each scene uses only its own cast and sourced quotes, with quiet gaps and cancellable gestures', () => {
+test('each scene uses its own cast and dialogue, with quiet gaps and cancellable gestures', () => {
   for (const variant of LOADING_SCREEN_SCENES) {
     const { window, tick, timers } = screen();
     const controller = new AbortController();
@@ -210,22 +211,42 @@ test('each scene uses only its own cast and sourced quotes, with quiet gaps and 
     const chatter = mountLoadingScreenBanter({ querySelector: () => bubble },
       { variant, signal: controller.signal, environment: window, showSpeaker: quote => { animatedSpeaker = quote?.speaker; } });
     const quotes = LOADING_SCREEN_QUOTES[variant.id];
+    const dialogue = variant.opening ? [variant.opening, ...quotes] : quotes;
     const names = new Map(variant.cast);
     assert.deepEqual(new Set(quotes.map(quote => quote.speaker)), new Set(names.keys()));
-    assert.equal(new Set(quotes.map(quote => quote.source.thread)).size, 1);
+    const scripted = variant.dialogueOrigin === 'scripted';
+    if (scripted) {
+      assert(quotes.every(quote => !quote.source));
+      if (variant.id === 'wolfshorn') {
+        assert.deepEqual(quotes.map(quote => quote.speaker), ['duncan', 'gawain', 'freki', 'ylva']);
+        assert.equal(quotes[2].lookAt, 'ylva');
+      } else {
+        assert.equal(variant.id, 'tiefenwyrm');
+        assert.deepEqual(quotes.map(quote => quote.speaker), ['idwal', 'talon', 'trevor']);
+        assert.match(quotes[0].text, /verbrüht/);
+      }
+    } else {
+      assert.equal(new Set(quotes.map(quote => quote.source.thread)).size, 1);
+    }
     if (variant.kind === 'council') {
       assert(quotes.every(quote => quote.source.thread === 'castell-draig-ratsfluegel::session:ratsfluegel-herold'));
+      assert.match(variant.opening.text, /Trahern hat Cadogan gerade den Hut vom Kopf geschlagen/);
+      assert.equal(variant.opening.source.thread, quotes[0].source.thread);
+      assert.match(quotes[1].text, /Amtsenthebung/);
+      assert.match(quotes.at(-1).text, /Mittagessen/);
     }
     chatter.setActive(true);
-    for (const [index, quote] of quotes.entries()) {
-      assert.match(quote.source.comment, /^\w[\w-]+$/);
-      assert.ok(quote.source.thread);
-      if (quote.speaker === 'freki') assert.equal(quote.source.kind, 'animal');
+    for (const [index, quote] of dialogue.entries()) {
+      if (!scripted) {
+        assert.match(quote.source.comment, /^\w[\w-]+$/);
+        assert.ok(quote.source.thread);
+      }
       tick(index === 0 ? 1250 : 1400);
       assert.equal(bubble.hidden, false);
       assert.equal(bubble.dataset.speaker, quote.speaker);
       assert.equal(animatedSpeaker, quote.speaker);
-      assert.equal(speaker.textContent, names.get(quote.speaker));
+      assert.equal(Object.hasOwn(bubble.dataset, 'banterContext'), quote === variant.opening);
+      assert.equal(speaker.textContent, names.get(quote.speaker) ?? '');
       assert.equal(line.textContent, quote.text);
       const timer = [...timers.values()].find(({ delay }) => delay !== 15000);
       assert.ok(timer.delay >= 4400);
@@ -237,10 +258,10 @@ test('each scene uses only its own cast and sourced quotes, with quiet gaps and 
     assert.ok([...timers.values()].every(timer => timer.delay === 15000));
     chatter.setActive(true); tick(1250);
     assert.equal(bubble.hidden, false);
-    assert.equal(line.textContent, quotes[0].text);
+    assert.equal(line.textContent, dialogue[0].text);
     chatter.setActive(false);
     chatter.setActive(true); tick(1250);
-    assert.equal(line.textContent, quotes[0].text, 'resuming repeats the interrupted line');
+    assert.equal(line.textContent, dialogue[0].text, 'resuming repeats the interrupted line');
     controller.abort();
     assert.equal(bubble.hidden, true);
     assert.equal(animatedSpeaker, undefined);
@@ -257,6 +278,44 @@ test('all four scenes can be chosen, and a reload in the same tab avoids an imme
   assert.deepEqual([draw(.5), draw(.99), draw(0), draw(.99)], ['tiefenwyrm', 'heroldsrat', 'owetas-quartett', 'heroldsrat']);
   const unavailable = { getItem() { throw Error('blocked'); }, setItem() { throw Error('blocked'); } };
   assert.equal(chooseLoadingScreenScene({ storage: unavailable, random: () => 0 }).id, ids[0]);
+});
+
+test('Owetas Quartett keeps the stage still while a single speaker gestures', () => {
+  const picture = {};
+  const figures = [];
+  const style = { setProperty() {} };
+  const art = {
+    ownerDocument: { createElement: () => ({
+      dataset: {}, style, removeAttribute() { delete this.dataset.speaking; }
+    }) },
+    style,
+    append(figure) { figures.push(figure); },
+    replaceChildren(...children) { assert.deepEqual(children, [picture]); }
+  };
+  const showSpeaker = mountLoadingScreenCourtyard({}, art, OWETAS_COURTYARD, {
+    createPicture(name, width, height) {
+      assert.equal(name, 'oweta-courtyard-plate-v10');
+      assert.deepEqual([width, height], [1536, 1024]);
+      return picture;
+    },
+    assetUrl: name => name
+  });
+  assert.deepEqual(LOADING_SCREEN_SCENES[0], OWETAS_COURTYARD);
+  assert.equal(picture.className, 'almanach-loading__courtyard');
+  const positions = new Map();
+  const bubble = { style: { setProperty(key, value) { positions.set(key, value); } } };
+  const anchors = OWETAS_COURTYARD.cast.map(([speaker]) => {
+    showSpeaker({ speaker }, bubble);
+    assert.deepEqual(figures.filter(figure => Object.hasOwn(figure.dataset, 'speaking'))
+      .map(figure => figure.dataset.courtyardPerson), [speaker]);
+    return Number.parseFloat(positions.get('--courtyard-speaker-x'));
+  });
+  showSpeaker(null, bubble);
+  assert(figures.every(figure => !Object.hasOwn(figure.dataset, 'speaking')));
+  assert(anchors.every((position, index) => position > (anchors[index - 1] ?? 0) && position < 100));
+  const ending = LOADING_SCREEN_QUOTES[OWETAS_COURTYARD.id].slice(-3);
+  assert(ending.every(({ speaker, source }) => speaker === 'oweta' && source.segment === 7));
+  assert.match(ending.map(({ text }) => text).join(' '), /kurze Rast.+Unterlagen gemeinsam.+welche Fragen/);
 });
 
 test('sound starts on mounting, retries on loading interactions, and receives the entry stop without restarting', async () => {
@@ -540,7 +599,7 @@ test('every live graphic and soundtrack exists, and rejected frame atlases are n
   for (const path of files) assert.ok(existsSync(new URL(`../${path}`, import.meta.url)), path);
   const manifest = JSON.parse(readFileSync(new URL('../public/assets/loading-screen/journey-v6-manifest.json', import.meta.url), 'utf8'));
   assert.deepEqual(LOADING_SCREEN_JOURNEYS.map(({ cast }) => cast.map(([id]) => id)),
-    [['oweta', 'lefraye', 'rianna', 'caralyn'], ['duncan', 'gawain', 'ylva', 'freki'], ['idwal', 'trevor']]);
+    [['duncan', 'gawain', 'ylva', 'freki']]);
   assert.match(css, /steps\(4, jump-none\)/);
   assert.doesNotMatch(source, /loading-screen-walk/);
   for (const { id, cast } of LOADING_SCREEN_JOURNEYS) {
@@ -559,9 +618,20 @@ test('every live graphic and soundtrack exists, and rejected frame atlases are n
   assert.deepEqual(atlas.asset.size, [atlas.columns * atlas.cell, atlas.rows * atlas.cell]);
   for (const asset of room.assets) assert.equal(asset.size[0] * 3, asset.size[1] * 4);
   verifyAssets([room.source, ...room.assets, ...atlas.sources, atlas.asset]);
+  const chase = JSON.parse(readFileSync(new URL('../public/assets/loading-screen/rosenflucht-v11-manifest.json', import.meta.url), 'utf8'));
+  assert.deepEqual(Object.keys(chase.chase.actors), ['idwal', 'trevor', 'pyderi']);
+  for (const atlas of Object.values(chase.chase.actors)) {
+    assert.equal(atlas.columns, 4);
+    assert.equal(atlas.order.flat().length, 8);
+    assert.deepEqual(atlas.asset.size, [atlas.cell * 4, atlas.cell * 2]);
+  }
+  for (const pair of [chase.courtyard, chase.chase.garden, chase.chase.hedge, ...Object.values(chase.chase.actors)]) {
+    verifyAssets([pair.source, pair.asset]);
+  }
+  for (const painting of Object.values(chase.paintings)) verifyAssets([painting.source, ...painting.assets]);
   assert.doesNotMatch(html + css, /highland-road-v5|travellers-stride-v5/);
   assert.doesNotMatch(html + css, /(?:travellers|gawain|freya|guinevere|fenrir|gaul)-walk-v[12]\.webp/);
-  assert.doesNotMatch(css, /journey-body|steps\(1/);
+  assert.doesNotMatch(css, /journey-body/);
   assert.deepEqual(Object.keys(LOADING_SCREEN_RIGS).sort(), ['fenrir', 'freya', 'gawain', 'guinevere']);
   assert.doesNotMatch(html + css, /gaul/i);
   for (const rig of Object.values(LOADING_SCREEN_RIGS)) {

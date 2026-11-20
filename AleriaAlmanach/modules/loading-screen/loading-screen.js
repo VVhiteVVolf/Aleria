@@ -56,7 +56,8 @@
       : `Wird geladen: ${items.filter(item => !item.done).map(item => item.label).join(' · ')}`;
     view.enter.disabled = !ready;
     view.enter.textContent = ready ? 'Aleria betreten' : 'Die Welt wird geladen …';
-    view.hint.textContent = ready ? 'Klicke in die Szene oder drücke Enter.' : '';
+    view.hint.textContent = !ready ? '' : view.root.dataset.playingMinigame !== undefined
+      ? '„Aleria betreten“ beendet die Jagd.' : 'Klicke in die Szene oder drücke Enter.';
     view.recovery.hidden = !(slow || failed) || ready;
     view.continue.hidden = failed || !milestones.get('shell').done;
     view.pause.textContent = animationPaused ? '▷ Animation abspielen' : 'Ⅱ Animation pausieren';
@@ -97,6 +98,7 @@
   }
 
   function handleClick(event) {
+    if (event.target.closest('[data-loading-interactive]')) return;
     const action = event.target.closest('[data-loading-action]')?.dataset.loadingAction;
     if (action === 'pause') { void sound?.tryAutoplay(); animationPaused = !animationPaused; render(); return; }
     if (action === 'sound') { sound?.toggle(); return; }
@@ -116,7 +118,8 @@
       } else if (!event.shiftKey && (document.activeElement === last || document.activeElement === view.root)) {
         event.preventDefault(); first?.focus();
       }
-    } else if ((event.key === 'Enter' || event.key === ' ') && !event.target.closest('button')) {
+    } else if ((event.key === 'Enter' || event.key === ' ') && !event.target.closest('button')
+      && !event.target.closest('[data-loading-interactive]')) {
       event.preventDefault(); dismiss();
     }
   }
@@ -127,12 +130,13 @@
     const src = view.root.dataset.loadingSound;
     const pendingLoad = new AbortController();
     window.addEventListener('pagehide', () => pendingLoad.abort(), { once: true, signal: pendingLoad.signal });
-    import('./loading-screen-sound.js?v=20261104-startup-v1').then(({ createLoadingScreenSound }) => {
+    import('./loading-screen-sound.js?v=20261120-rosenflucht-v11').then(({ createLoadingScreenSound }) => {
       const cancelled = pendingLoad.signal.aborted || (!leaving && (!view || view.root.hidden));
       pendingLoad.abort();
       if (cancelled) return;
       sound = createLoadingScreenSound({ button, control, src });
       if (leaving) void sound.enterAlmanach();
+      else if (view.root.dataset.playingMinigame !== undefined) sound.setSuspended(true);
       else void sound.tryAutoplay();
     }).catch(error => {
       pendingLoad.abort();
@@ -151,9 +155,18 @@
   function loadScene(root) {
     const target = root.querySelector('[data-loading-scene]');
     if (!target) return;
-    import('./loading-screen-scenes.js?v=20261119-journey-v6').then(({ mountLoadingScreenScene }) => {
+    import('./loading-screen-scenes.js?v=20261120-rosenflucht-v11').then(({ mountLoadingScreenScene }) => {
       if (lifetime.signal.aborted) return;
-      scene = mountLoadingScreenScene(target, { signal: lifetime.signal });
+      scene = mountLoadingScreenScene(target, {
+        signal: lifetime.signal,
+        isMusicMuted: () => sound?.isMuted() ?? false,
+        onGameActivity(active) {
+          root.toggleAttribute('data-playing-minigame', active);
+          root.querySelector('.almanach-loading__controls').hidden = active;
+          sound?.setSuspended(active);
+          render();
+        }
+      });
       updateSceneMotion();
     }).catch(error => console.warn('Die Szene des Ladebildschirms konnte nicht geladen werden:', error));
   }

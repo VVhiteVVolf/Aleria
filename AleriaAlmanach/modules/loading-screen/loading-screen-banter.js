@@ -1,4 +1,4 @@
-import { LOADING_SCREEN_QUOTES } from './loading-screen-quotes.js?v=20261119-journey-v6';
+import { LOADING_SCREEN_QUOTES } from './loading-screen-quotes.js?v=20261120-rosenflucht-v11';
 
 export function mountLoadingScreenBanter(root, { variant, signal, showSpeaker, environment = window }) {
   const bubble = root.querySelector('[data-loading-banter]');
@@ -6,6 +6,7 @@ export function mountLoadingScreenBanter(root, { variant, signal, showSpeaker, e
   const line = bubble?.querySelector('[data-banter-line]');
   const quotes = LOADING_SCREEN_QUOTES[variant.id];
   if (!speaker || !line || !quotes?.length || signal?.aborted) return null;
+  const dialogue = variant.opening ? [variant.opening, ...quotes] : quotes;
   const positions = new Map(variant.cast.map(([id, name], index) => [
     id, { name, offset: (index + .5) / variant.cast.length - .5 }
   ]));
@@ -14,21 +15,26 @@ export function mountLoadingScreenBanter(root, { variant, signal, showSpeaker, e
   let active = false;
 
   function showNext() {
-    const quote = quotes[index];
-    const { speaker: person, text } = quote;
-    const { name, offset } = positions.get(person);
-    bubble.dataset.speaker = person;
-    bubble.style.setProperty('--speaker-offset', offset);
-    speaker.textContent = name;
-    line.textContent = text;
-    showSpeaker?.(quote, bubble);
+    const turn = dialogue[index];
+    const actor = positions.get(turn.speaker);
+    if (turn === variant.opening) {
+      delete bubble.dataset.speaker;
+      bubble.dataset.banterContext = '';
+    } else {
+      bubble.dataset.speaker = turn.speaker;
+      delete bubble.dataset.banterContext;
+    }
+    bubble.style.setProperty('--speaker-offset', actor?.offset ?? 0);
+    speaker.textContent = actor?.name ?? '';
+    line.textContent = turn.text;
+    showSpeaker?.(actor ? turn : null, bubble);
     bubble.hidden = false;
     timer = environment.setTimeout(() => {
       bubble.hidden = true;
       showSpeaker?.(null, bubble);
-      index = (index + 1) % quotes.length;
+      index = (index + 1) % dialogue.length;
       timer = environment.setTimeout(showNext, 1400);
-    }, Math.max(4400, text.length * 52));
+    }, Math.max(4400, turn.text.length * 52));
   }
 
   function setActive(enabled) {

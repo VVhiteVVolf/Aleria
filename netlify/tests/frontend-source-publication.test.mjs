@@ -85,3 +85,22 @@ test('the loading screen publishes its active graphics and retains the authoring
   for (const { file } of graphics) assert.equal(shouldPublish('AleriaAlmanach/' + file), true, file);
   assert.equal(shouldPublish(manifestPath), true);
 });
+
+test('the rose chase packages the opt-in game, its compact assets and no authoring sources', async () => {
+  const manifestPath = 'AleriaAlmanach/public/assets/loading-screen/rosenflucht-v11-manifest.json';
+  const manifest = JSON.parse(await readFile(new URL(`../../${manifestPath}`, import.meta.url), 'utf8'));
+  const paths = [manifest.courtyard, manifest.chase.garden, manifest.chase.hedge,
+    ...Object.values(manifest.chase.actors)].flatMap(({ source, asset }) => [source, asset]);
+  paths.push(...Object.values(manifest.paintings).flatMap(({ source, assets }) => [source, ...assets]));
+  for (const { file } of paths) {
+    const path = `AleriaAlmanach/${file}`;
+    await access(new URL(`../../${path}`, import.meta.url));
+    assert.equal(shouldPublish(path), file.startsWith('public/'), path);
+  }
+  for (const path of ['AleriaAlmanach/modules/loading-screen/loading-screen-tiefenwyrm.js',
+    'AleriaAlmanach/modules/loading-screen/rose-chase/chase-game.js',
+    'AleriaAlmanach/modules/loading-screen/rose-chase/chase-game.css', manifestPath]) {
+    await access(new URL(`../../${path}`, import.meta.url));
+    assert.equal(shouldPublish(path), true, path);
+  }
+});

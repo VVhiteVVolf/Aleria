@@ -1,9 +1,13 @@
-import { LOADING_SCREEN_JOURNEYS, mountLoadingScreenJourney } from './loading-screen-journey.js?v=20261119-journey-v6';
-import { HEROLDS_COUNCIL, mountLoadingScreenCouncil } from './loading-screen-council.js?v=20261119-journey-v6';
+import { LOADING_SCREEN_JOURNEYS, mountLoadingScreenJourney } from './loading-screen-journey.js?v=20261120-rosenflucht-v11';
+import { HEROLDS_COUNCIL, mountLoadingScreenCouncil } from './loading-screen-council.js?v=20261120-chibi-courtyard-v8';
+import { OWETAS_COURTYARD, mountLoadingScreenCourtyard } from './loading-screen-courtyard.js?v=20261120-rosenflucht-v11';
+import { TIEFENWYRM_CHASE, mountLoadingScreenTiefenwyrm } from './loading-screen-tiefenwyrm.js?v=20261120-rosenflucht-v11';
 
 const assetRoot = new URL('../../public/assets/loading-screen/', import.meta.url);
 const lastSceneKey = 'almanach.loadingScene';
-export const LOADING_SCREEN_SCENES = [...LOADING_SCREEN_JOURNEYS, HEROLDS_COUNCIL];
+export const LOADING_SCREEN_SCENES = [OWETAS_COURTYARD, ...LOADING_SCREEN_JOURNEYS, TIEFENWYRM_CHASE, HEROLDS_COUNCIL];
+const sceneMounts = { journey: mountLoadingScreenJourney, council: mountLoadingScreenCouncil,
+  courtyard: mountLoadingScreenCourtyard, 'rose-chase': mountLoadingScreenTiefenwyrm };
 
 export function chooseLoadingScreenScene({ random = Math.random, storage } = {}) {
   let lastScene;
@@ -38,7 +42,7 @@ function createPicture(document, name, width, height) {
   return picture;
 }
 
-export function mountLoadingScreenScene(scene, { signal } = {}) {
+export function mountLoadingScreenScene(scene, { signal, onGameActivity, isMusicMuted } = {}) {
   const art = scene.querySelector('[data-loading-scene-art]');
   if (!art || signal?.aborted) return null;
   let storage;
@@ -48,28 +52,33 @@ export function mountLoadingScreenScene(scene, { signal } = {}) {
   art.setAttribute('aria-label', `${people} ${variant.description}.`);
   scene.dataset.loadingVariant = variant.id;
   scene.dataset.sceneKind = variant.kind || 'journey';
-  const mountArt = variant.kind === 'council' ? mountLoadingScreenCouncil : mountLoadingScreenJourney;
-  const showSpeaker = mountArt(scene, art, variant, {
-    assetUrl,
-    createPicture: (name, width, height) => createPicture(art.ownerDocument, name, width, height)
-  });
-
+  const mountArt = sceneMounts[scene.dataset.sceneKind];
   let playing = false;
+  let gameActive = false;
   let banter;
   let banterRequest;
+  const showSpeaker = mountArt(scene, art, variant, {
+    assetUrl, signal, isMusicMuted,
+    createPicture: (name, width, height) => createPicture(art.ownerDocument, name, width, height),
+    onGameActivity(active) {
+      gameActive = active;
+      updateBanter();
+      onGameActivity?.(active);
+    }
+  });
 
-  function setActive(active) {
-    playing = active && !signal?.aborted;
-    if (banter) { banter.setActive(playing); return; }
-    if (!playing || banterRequest) return;
-    banterRequest = import('./loading-screen-banter.js?v=20261119-journey-v6')
+  function updateBanter() {
+    const active = playing && !gameActive && !signal?.aborted;
+    if (banter) { banter.setActive(active); return; }
+    if (!active || banterRequest) return;
+    banterRequest = import('./loading-screen-banter.js?v=20261120-rosenflucht-v11')
       .then(({ mountLoadingScreenBanter }) => {
         if (signal?.aborted) return;
         banter = mountLoadingScreenBanter(scene, { variant, signal, showSpeaker });
-        banter?.setActive(playing);
+        banter?.setActive(playing && !gameActive);
       })
       .catch(error => console.warn('Die Zitate des Ladebildschirms konnten nicht geladen werden:', error));
   }
 
-  return Object.freeze({ setActive });
+  return Object.freeze({ setActive(active) { playing = active; updateBanter(); } });
 }

@@ -1,0 +1,64 @@
+{
+  "version": 10,
+  "images": [
+    {
+      "source": "source/oweta-courtyard-plate-v10.png",
+      "generatedFile": "exec-fa8d7d3d-23c2-4783-b072-6ea64db6b070.png",
+      "tool": "Built-in ImageGen",
+      "transparency": false,
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/owetas-quartett-innenhof-chibi-v8.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Asset: empty background plate for the very same fixed chibi courtyard shot in a medieval fantasy Almanach. Image 1 is the exact edit target. Remove only the four chibi women from the foreground, and all four of their shadows. Restore the stone pavement and any covered part of gate, stables and stairs logically beneath them. Keep pixel composition, ground plane, 3:2 landscape framing, sunlit mountains, ornate gate, arch framing, red and gold dragon banners and shaded cobbles of the supplied illustration. Absolutely empty foreground. This will receive separately animated character layers. Crisp painterly anime background, no new objects, no people, no captions, no watermarks. Same dimensions and framing as source."
+    },
+    {
+      "source": "source/oweta-courtyard-gestures-v10.png",
+      "generatedFile": "exec-023d9b0a-e316-4fb5-925f-cb38fcaa391d.png",
+      "tool": "Built-in ImageGen",
+      "transparency": true,
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/owetas-quartett-innenhof-chibi-v8.png"
+      ],
+      "prompt": "Use case: style-transfer and identity-preserve. Asset: production sprite sheet, FOUR ROWS by THREE COLUMNS with exactly twelve separate full-body transparent chibi cutouts. Image 1 is the exact designs, eye color, heraldry and outfits reference. Only isolated people throughout, real alpha, no backdrop or ground shadows. Same static eye-level stage camera and full-body standing scale for each row. Each row repeats its one character three times, all at identical head size, feet position and hip position. Each pose centered within its own equal cell; generous invisible gutter; absolutely no overlap or cropping. Top row Oweta (leftmost in reference; red short tied hair, blue eyes, dark red and charcoal dragon armor, red cape) facing right: relaxed hand down, small open palm as she begins speaking, same open palm raised slightly and small mouth open. Second row Lefraye (second from left, red high ponytail, amber eyes, black and gold horse crest and round pauldrons) facing left: calm hand by belt, fingers move up in a small deliberate gesture, palm half-up while speaking. Third row Rianna (third in reference, red twin tails, amber eyes, yellow bib with black dragon) facing left: hands held loosely, one index finger raised a little, a small questioning open-handed gesture and mouth open. Bottom row Caralyn (rightmost reference, long copper hair, blue eyes, teal heraldry with gold mermaid and gold cross buckle) facing left: relaxed hand down, hand at chin with mouth open, small gesture outward at chest. Full body always, feet planted, charming existing chibi proportions, same warm painterly cel shading. No text, tags, panel outlines, dividers, checkerboard, frames or grey tone. Image itself is a transparent sprite atlas. Equal three columns, equal four rows."
+    },
+    {
+      "source": "source/rosenflucht-vorspiel-v10.png",
+      "generatedFile": "exec-db62267e-bd59-4f59-a93c-7a4240adb019.png",
+      "tool": "Built-in ImageGen",
+      "transparency": false,
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/idwal-trevor-stride-v6.png",
+        "Stammbäume/assets/images/portraits/haus-trydar/talon-trydar.png"
+      ],
+      "prompt": "Use case: illustration-story. Asset: warm cinematic 3:2 landscape chibi illustration for fantasy Almanach loading scene. Reference 1 provides exact identities and costume. Idwal is the top row (adult red-haired man, blue eyes, short red goatee, wolf-fur mantle with little silver skull clasp and red cape). Trevor is bottom row (younger adult long vivid red hair, burnt amber eyes, black and gold dragon armor). Reference 2 provides exact Talon Trydar identity, convert him to chibi, golden orange short hair, freckles, yellow scarf/cape, red tunic with gold bird crest. Comedic garden in a medieval castle in bright day, low wall and rose trellises behind. In middle-left Idwal enraged and scolding, grasps a long spear with both hands, striking down at the already shattered glazed blue teapot on the cobbles; spear tip is clearly beside its broken pieces and a small puff of steam. Trevor to the right laughs out loud, hand on stomach. On the far left Talon faces Idwal with both open palms raised at chest height in a calming defensive gesture, looking worried. Center-right behind them a damaged clipping of rose hedge with clearly missing brambly section, scattered rose heads and stems beside where Idwal also hit it. Deliberate comedy, PG, full-body super-deformed chibi proportion. Trio and teapot between 10 and 90 percent of the frame width, top 22 percent largely calm for a separately drawn speech bubble. No figure is physically hurt. Painterly anime line art and light, consistent with reference. No text, no speech bubble, no typography, no UI."
+    },
+    {
+      "source": "source/rosenflucht-vorspiel-ausholen-v10.png",
+      "generatedFile": "exec-80e574d0-319d-4f9e-b9fb-303fd706e3ad.png",
+      "tool": "Built-in ImageGen",
+      "transparency": false,
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/rosenflucht-vorspiel-v10.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Asset: the preparation frame for a two-frame fixed-camera chibi loading vignette. Image 1 is the exact edit target. Edit only Idwal (the red-haired man in the middle-left with the fur collar, silver skull clasp and red cape) and the one spear already in his hands. He draws the spear UP a small distance while keeping the same angle and two-handed grip, preparing a downward whack at the broken blue teapot. Lift his hands by roughly one hand's breadth, straighten his upper body just a little, keep his boots in the exact same position. The lower spear point should now clearly hover above the same cobbles and shattered kettle. Match his blue eyes, goatee, silhouette, warm anime chibi style and angry expression exactly. Preserve every other pixel where possible: absolutely fixed camera, same dimensions and composition, identical colors, roses and damaged hedge, armored laughing Trevor on the right, Talon on the left holding the exact same worried open-palmed pose, same teapot shards and background. No text. Single image, no panels, no added motion lines and no second spear."
+    },
+    {
+      "source": "source/rosenflucht-gartenbezirk-v10.png",
+      "generatedFile": "exec-36f954bb-cca8-4201-9644-e4ee85eb3b1e.png",
+      "tool": "Built-in ImageGen",
+      "transparency": false,
+      "references": [],
+      "prompt": "Use case: stylized-concept. Asset: wide panoramic side-scrolling 2D game background, empty medieval castle rose garden quarter in a painterly light anime fantasy style suitable behind detailed chibi sprites. Warm late afternoon, neat red and blush roses on trellises, low rose beds in the middle distance, mossy stone posts, a warm fortress wall and rooftops beyond, flowering trees and distant arches. At 78% from top and all the way from left to right a single uninterrupted horizontal wide pale honey-colored gravel and cobblestone path, flat orthographic side-on ground plane, no perspective convergence, usable game action path. No foreground bushes across the path; obstacles are separate sprites. Less contrast in the upper areas for caption readability. The far left and far right show similar straight garden walls, garden colors and lighting so the vista can repeat as it scrolls. Clean crisp brushwork, sunny and comedic. No figures, no peacock, no characters or objects on the path, no letters, no title, no interface. Widest landscape aspect, uninterrupted panorama."
+    },
+    {
+      "source": "source/rosenflucht-chibi-posen-v10.png",
+      "generatedFile": "exec-41ca0969-14c6-43f2-b284-d076140efd97.png",
+      "tool": "Built-in ImageGen",
+      "transparency": true,
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/idwal-trevor-stride-v6.png"
+      ],
+      "prompt": "Use case: identity-preserve. Asset: true-alpha 3 by 3 game pose sprite atlas, exactly nine isolated game cutouts in an evenly spaced 3 column x 3 row grid with invisible gutters. Image 1 is reference for Idwal (top row, blue-eyed redhead with small goatee, dark fur mantle, skull clasp and red cape) and Trevor (bottom row, shorter-looking redhead with black-and-gold dragon armor, NO fur, no skull, no beard). Match those designs and proportions. All cutouts face right, fully visible, each entirely within its own cell, no panel lines, no ground, no scenery, no shadow, no labels. TOP row only Idwal: column 1 faces right, terrified wide eyes and open mouth, sprint, near leg reaches forward; column 2 same size startled sprint with opposite leg forward; column 3 a low defensive crouch with hands protecting his hair and head from a bird. MIDDLE row only Trevor: column 1 sprint panicked wide eyes and open mouth, near leg reaches forward; column 2 same size startled sprint with opposite leg forward; column 3 low defensive crouch covering his head with both hands. BOTTOM row left: Pyderi the angry adult male blue and teal peacock running right, expressive, trailing closed train with emerald eye spots, genuine recognizable peacock bird proportions. BOTTOM row middle: the same Pyderi with same scale and colors, feathers partly raised, bending forward to peck sharply to the right, whole body in cell. BOTTOM row right: a trimmed boxy rose hedge obstacle with dark green depth and many red and blush roses; narrow rectangular low shrub, thin dirt base only, no rest of the garden. Crisp chibi anime painting, consistent face shape, pose silhouettes fully separated, genuine transparent background. No checkerboard pattern or neutral matte. Square overall image."
+    }
+  ]
+}

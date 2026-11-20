@@ -59,6 +59,9 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
   line-height: 1.12;
 }
 .almanach-loading__controls { display: flex; align-items: center; gap: 10px; }
+.almanach-loading__controls[hidden],
+.almanach-loading__scene[hidden],
+.almanach-loading__chase-dock[hidden] { display: none; }
 .almanach-loading__pause,
 .almanach-sound-control__button {
   min-height: 44px;
@@ -165,6 +168,11 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
   animation: journey-walk var(--journey-cadence) steps(4, jump-none) var(--journey-phase) infinite;
   animation-play-state: var(--journey-play-state, running);
 }
+.almanach-loading__traveller[data-looking-back]::after {
+  animation: none;
+  background-position-x: 33.3333%;
+  transform: scaleX(-1);
+}
 @keyframes journey-walk { from { background-position-x: 0%; } to { background-position-x: 100%; } }
 
 .almanach-loading__banter {
@@ -218,6 +226,110 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
 }
 @keyframes journey-bubble-in { from { translate: 0 5px; opacity: 0; } to { translate: 0 0; opacity: 1; } }
 
+.almanach-loading__scene[data-scene-kind="courtyard"] {
+  aspect-ratio: 16 / 9;
+  background: #5f5144;
+}
+.almanach-loading__courtyard,
+.almanach-loading__courtyard img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.almanach-loading__courtyard img {
+  object-fit: cover;
+  object-position: center bottom;
+}
+.almanach-loading__courtyard-person {
+  position: absolute;
+  bottom: 2.6%;
+  left: var(--courtyard-x);
+  width: 34cqw;
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+}
+.almanach-loading__courtyard-person::before {
+  content: '';
+  position: absolute;
+  inset: auto 27% 1% 28%;
+  height: 6%;
+  border-radius: 50%;
+  background: #57403157;
+}
+.almanach-loading__courtyard-person::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--courtyard-atlas) 0 var(--courtyard-row) / 300% 400% no-repeat;
+}
+.almanach-loading__courtyard-person[data-speaking]::after {
+  animation: courtyard-gesture 1.46s steps(1, end) infinite;
+  animation-play-state: var(--journey-play-state, running);
+}
+@keyframes courtyard-gesture {
+  0%, 64% { background-position-x: 50%; }
+  24%, 81% { background-position-x: 100%; }
+}
+.almanach-loading__scene[data-scene-kind="courtyard"] .almanach-loading__banter {
+  --bubble-anchor: var(--courtyard-speaker-x);
+  --bubble-width: min(340px, calc(100cqw - 20px));
+  /* The painting is bottom-aligned, so the heads stay at a fixed distance from the bottom. */
+  bottom: calc(36cqw + 8px);
+  padding: 6px 10px 7px;
+}
+.almanach-loading__scene[data-scene-kind="rose-chase"] {
+  aspect-ratio: 16 / 9;
+  background: #a9b6bd;
+}
+.almanach-loading__chase-picture,
+.almanach-loading__chase-picture img {
+  position: absolute;
+  display: block;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.almanach-loading__chase-picture img { object-fit: cover; object-position: center bottom; }
+.almanach-loading__chase-windup {
+  animation: kettle-windup 2.05s steps(1, end) infinite;
+  animation-play-state: var(--journey-play-state, running);
+}
+@keyframes kettle-windup {
+  0%, 65%, 100% { opacity: 0; }
+  38% { opacity: 1; }
+}
+.almanach-loading__scene[data-scene-kind="rose-chase"] .almanach-loading__banter {
+  --bubble-anchor: var(--chase-speaker-x, 43cqw);
+  --bubble-width: min(330px, 85cqw);
+  top: min(2.2cqw, 15px);
+  bottom: auto;
+  padding: 6px 9px 7px;
+}
+.almanach-loading__chase-dock {
+  display: flex;
+  flex: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 9px 12px;
+  border: 1px solid var(--journey-border);
+  border-radius: 8px;
+  background: #372a22;
+  color: var(--journey-paper);
+}
+.almanach-loading__chase-dock strong { font-size: 17px; }
+.almanach-loading__chase-dock p { margin: 3px 0 0; font: 12px/1.4 system-ui, sans-serif; }
+.almanach-loading__chase-play {
+  min-height: 44px;
+  padding: 8px 21px;
+  border: 1px solid #ad824b;
+  border-radius: 6px;
+  background: #efd19a;
+  color: #322419;
+  font: 700 14px/1.2 system-ui, sans-serif;
+  cursor: pointer;
+}
+.almanach-loading__chase-play:disabled { opacity: .6; cursor: wait; }
 .almanach-loading__footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -293,6 +405,10 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
     aspect-ratio: 5 / 4;
   }
   .almanach-loading__scene[data-party-size="2"] { --party-width: 60cqw; }
+  .almanach-loading__scene[data-scene-kind="courtyard"] { aspect-ratio: 3 / 2; }
+  .almanach-loading__scene[data-scene-kind="rose-chase"] { aspect-ratio: 3 / 2; }
+  .almanach-loading__chase-dock { flex-wrap: wrap; }
+  .almanach-loading__chase-play { width: 100%; }
   .almanach-loading__banter { --bubble-width: min(280px, 84cqw); }
   .almanach-loading__footer { grid-template-columns: 1fr; gap: 12px; }
   .almanach-loading__enter { width: 100%; }

@@ -1,30 +1,13 @@
 export const LOADING_SCREEN_JOURNEYS = [
   {
-    id: 'owetas-quartett',
-    description: 'wandern zwischen Obstgärten, Flusswiesen und einem Dorf bei Gwynthor',
-    cast: [
-      ['oweta', 'Oweta'],
-      ['lefraye', 'Lefraye'],
-      ['rianna', 'Rianna'],
-      ['caralyn', 'Caralyn']
-    ]
-  },
-  {
     id: 'wolfshorn',
+    dialogueOrigin: 'scripted',
     description: 'wandern durch einen Nadelwald und ein Bergtal, vorbei an einem Wasserfall',
     cast: [
       ['duncan', 'Sir Duncan'],
       ['gawain', 'Gawain'],
       ['ylva', 'Ylva'],
       ['freki', 'Freki']
-    ]
-  },
-  {
-    id: 'tiefenwyrm',
-    description: 'wandern an der Küste zwischen Klippen und Hafen',
-    cast: [
-      ['idwal', 'Idwal'],
-      ['trevor', 'Trevor']
     ]
   }
 ];
@@ -64,5 +47,18 @@ export function mountLoadingScreenJourney(scene, art, { id, cast }, { createPict
   scene.style.setProperty('--atlas-height', `${count * 100}%`);
   scene.style.setProperty('--journey-atlas', `url("${assetUrl(`${id}-stride-v6.webp`)}")`);
   const picture = createPicture(`${id}-panorama-v6`, 1800, 450);
-  art.replaceChildren(createPanorama(art.ownerDocument, picture), createParty(art.ownerDocument, cast));
+  const party = createParty(art.ownerDocument, cast);
+  art.replaceChildren(createPanorama(art.ownerDocument, picture), party);
+
+  let turnedTraveller;
+  return turn => {
+    turnedTraveller?.removeAttribute('data-looking-back');
+    turnedTraveller = undefined;
+    if (!turn?.lookAt) return;
+    const speakerIndex = cast.findIndex(([person]) => person === turn.speaker);
+    const targetIndex = cast.findIndex(([person]) => person === turn.lookAt);
+    if (targetIndex < 0 || targetIndex >= speakerIndex) return;
+    turnedTraveller = party.children[speakerIndex];
+    turnedTraveller.dataset.lookingBack = '';
+  };
 }
