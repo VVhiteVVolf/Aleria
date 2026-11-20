@@ -10,11 +10,14 @@ globalThis.AleriaTwinDialogue = (() => {
   }
 
   function actor(value) {
+    const imageSetId = String(value?.imageSetId || '').trim().slice(0, 48);
+    const emoteIndex = value?.emoteIndex;
     return {
       characterId: String(value?.characterId || '').trim().slice(0, 160),
       charName: String(value?.charName || '').trim().slice(0, 160),
       charTitle: String(value?.charTitle || '').trim().slice(0, 160),
-      portrait: String(value?.portrait || '').trim().slice(0, 2000)
+      portrait: String(value?.portrait || '').trim().slice(0, 2000),
+      ...(imageSetId ? { imageSetId, emoteIndex: Number.isSafeInteger(emoteIndex) && emoteIndex >= 0 ? emoteIndex : null } : {})
     };
   }
 

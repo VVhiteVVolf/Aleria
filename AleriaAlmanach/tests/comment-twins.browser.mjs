@@ -12,16 +12,29 @@ import { buildForeignVoiceFixture } from './fixtures/comment-foreign-voice-fixtu
 import { person } from './fixtures/graded-challenge-fixtures.mjs';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
-const { values } = parseArgs({ options: { output: { type: 'string' } } });
+const { values } = parseArgs({ options: { output: { type: 'string' }, 'avatar-images': { type: 'string' } } });
 const output = resolve(root, values.output || `diagnostics/comment-twins-20261119/browser-${Date.now()}`);
+const avatarFolder = values['avatar-images'] && resolve(root, values['avatar-images']);
+const sampleAvatars = ['woman', 'girl', 'woman-2', 'servant'];
 const speakers = await Promise.all(['morwella', 'meirawen'].map(async shortName => {
   const slug = `${shortName}-gwyllach`;
   const id = `person--haus-gwyllach--${slug}`;
   const path = resolve(root, 'CharakterDatenbank/records/familien/haus-gwyllach', `${slug}--${id}/character.json`);
-  const { character: { name, portrait } } = JSON.parse(await readFile(path, 'utf8'));
-  return { id, name, portrait, entityType: 'character' };
+  const { character: { name, portrait, emotes } } = JSON.parse(await readFile(path, 'utf8'));
+  const fixtureAvatars = emotes.slice(0, 4).map(({ img, label }, index) => {
+    const localImage = avatarFolder
+      ? `/${relative(root, resolve(avatarFolder, new URL(img).pathname.split('/').at(-1))).replaceAll('\\', '/')}`
+      : `./public/assets/comment-foreign-voice/${sampleAvatars[index]}.png`;
+    return { img: localImage, label };
+  });
+  return { id, name, portrait, entityType: 'character', imageSets: [
+    { id: 'standard', name: 'Standard', portrait, emotes: fixtureAvatars },
+    { id: 'alternativ', name: 'Weitere Ausdrücke', portrait, emotes: fixtureAvatars.slice(2) }
+  ] };
 }));
 const [left, right] = speakers;
+const leftPortrait = left.imageSets[0].emotes[0].img;
+const rightPortrait = right.imageSets[1].emotes[0].img;
 const texts = [
   'Hörst du das Wasser hinter der Mauer?',
   'Bei Flut kommen wir auf diesem Weg zurück.',
@@ -45,6 +58,32 @@ const rightChoice = () => composer().locator('#cf-twin-right');
 const voice = (index, side) => cards().nth(index).locator(`textarea[data-comment-twin-side="${side}"]`);
 const kind = (index, side) => cards().nth(index).locator(`[data-comment-twin-kind="${side}"]`);
 const preview = () => composer().locator('#cf-preview');
+const avatarPicker = (card, side) => card.locator(`[data-comment-twin-avatar="${side}"]`);
+const avatarChoice = (picker, index) => picker.locator(`button[data-emote-index="${index}"]`);
+const writerPortrait = (card, side) => card.locator(`.comment-twin-write-lane--${side} .comment-twin-writer img`);
+
+async function assertWriterPortraits(card, expected = [leftPortrait, rightPortrait]) {
+  assert.deepEqual(await Promise.all(['left', 'right'].map(side => writerPortrait(card, side).getAttribute('src'))), expected);
+}
+
+async function chooseAvatars(card) {
+  const leftPicker = avatarPicker(card, 'left');
+  const rightPicker = avatarPicker(card, 'right');
+  assert.equal(await card.locator('[data-comment-twin-avatar-palette]').count(), 0);
+  await leftPicker.locator('summary').click();
+  assert.equal(await avatarChoice(leftPicker, '').getAttribute('aria-pressed'), 'true');
+  await avatarChoice(leftPicker, 0).click();
+  assert.equal(await avatarChoice(leftPicker, 0).getAttribute('aria-pressed'), 'true');
+  await assertWriterPortraits(card, [leftPortrait, right.portrait]);
+  await rightPicker.locator('summary').click();
+  const rightSet = rightPicker.getByRole('combobox', { name: `${right.name} · Avatar-Set` });
+  await rightSet.selectOption('alternativ');
+  assert.equal(await rightPicker.locator('[data-emote-index]').count(), 3);
+  await avatarChoice(rightPicker, 0).click();
+  assert.equal(await avatarChoice(rightPicker, 0).getAttribute('aria-pressed'), 'true');
+  assert.equal(await rightPicker.locator('button[aria-pressed="true"]').count(), 1);
+  await assertWriterPortraits(card);
+}
 
 async function open(threadId) {
   await page.evaluate(id => {
@@ -64,7 +103,7 @@ async function choosePair() {
 }
 
 async function decodeImages(element) {
-  await element.locator('img.comment-portrait, .comment-twin-writer img').evaluateAll(async images => {
+  await element.locator('img.comment-portrait, .comment-twin-writer img, .comment-twin-avatar-picker[open] .comment-segment-avatar img').evaluateAll(async images => {
     await Promise.all(images.map(async img => { img.loading = 'eager'; await img.decode(); }));
   });
 }
@@ -73,6 +112,7 @@ async function screenshot(run, name, anchor, imageRoot) {
   await decodeImages(imageRoot);
   await page.evaluate(() => document.fonts.ready);
   await anchor.evaluate(node => node.scrollIntoView({ block: 'start' }));
+  await page.mouse.move(0, 0);
   const file = `${run.width}-${name}.png`;
   await page.screenshot({ path: resolve(output, file) });
   run.screenshots.push(file);
@@ -97,13 +137,15 @@ async function checkBubbles(container) {
     };
   });
   const [leftBubble, rightBubble] = geometry.bubbles;
-  const [leftPortrait, rightPortrait] = geometry.portraits;
+  const [leftPortraitRect, rightPortraitRect] = geometry.portraits;
   assert.ok(Math.abs(leftBubble.top - rightBubble.top) <= 1, JSON.stringify(geometry));
   assert.ok(leftBubble.right < rightBubble.left);
-  assert.ok(leftPortrait.left <= leftBubble.left + 1 && rightPortrait.right >= rightBubble.right - 1);
+  assert.ok(leftPortraitRect.left <= leftBubble.left + 1 && rightPortraitRect.right >= rightBubble.right - 1);
   assert.ok(geometry.overflow <= 2, JSON.stringify(geometry));
-  assert.equal(await first.locator('.comment-kind-speech .comment-text').textContent(), texts[0]);
+  assert.equal(await first.locator('.comment-kind-whisper .comment-text').textContent(), texts[0]);
   assert.equal(await first.locator('.comment-kind-thought .comment-text').textContent(), texts[1]);
+  assert.deepEqual(await first.locator('.comment-portrait').evaluateAll(images => images.map(image => image.getAttribute('src'))),
+    [leftPortrait, rightPortrait]);
   assert.equal(await rows.nth(1).locator('.comment-twin-lane--right .comment-body').count(), 0);
   assert.equal(await rows.nth(2).locator('.comment-twin-lane--left .comment-body').count(), 0);
   return geometry;
@@ -117,6 +159,8 @@ async function checkCombat() {
   await open('twin-combat');
   await choosePair();
   await composer().getByRole('button', { name: 'Kampf Template', exact: true }).click();
+  await chooseAvatars(cards().nth(1));
+  await kind(1, 'right').selectOption('shout');
   await voice(1, 'right').fill('Vorsicht!');
   await cards().nth(3).locator('[data-combat-input="targetId"]').selectOption('comment-editor-test-creature');
   await cards().nth(3).locator('textarea').fill('Morwella hebt die Übungsklinge.');
@@ -124,6 +168,8 @@ async function checkCombat() {
   assert.equal(segments.length, 2);
   const [dialogue, combat] = segments;
   assert.equal(dialogue.twinDialogue.right.characterId, right.id);
+  assert.equal(dialogue.twinDialogue.right.portrait, rightPortrait);
+  assert.equal(dialogue.twinDialogue.right.kind, 'shout');
   assert.equal(dialogue.mechanicMode, undefined);
   assert.equal(dialogue.characterId, undefined);
   assert.equal(combat.mechanicMode, 'combat');
@@ -149,6 +195,7 @@ async function checkSharedProseEdit(run) {
   await edit.locator('[data-edit-scope="prose"]').waitFor();
   assert.equal(await edit.locator('.cf-mode-toggle').isVisible(), false);
   assert.equal(await edit.locator('[data-comment-twin-kind]').count(), 0);
+  assert.equal(await edit.locator('[data-comment-twin-avatar]').count(), 0);
   const correction = 'Warte hier. Ich prüfe zuerst die Mauer.';
   await edit.locator('textarea[data-comment-twin-side="left"]').first().fill(correction);
   await edit.locator('#ec-preview').getByText(correction, { exact: false }).waitFor();
@@ -192,7 +239,22 @@ try {
     if (width === 1440) await screenshot(run, 'figurenwahl', composer().locator('#cf-actor-heading'), cards().first());
     await voice(0, 'left').fill(texts[0]);
     await voice(0, 'right').fill(texts[1]);
-    await kind(0, 'right').selectOption('thought');
+    const first = cards().first();
+    const leftKind = first.getByRole('combobox', { name: `${left.name} · Blasentyp` });
+    const rightKind = first.getByRole('combobox', { name: `${right.name} · Blasentyp` });
+    assert.deepEqual(await leftKind.locator('option').evaluateAll(options => options.map(option => option.value)),
+      ['speech', 'thought', 'whisper', 'shout', 'performance', 'animal', 'foreign', 'song', 'telepathy', 'spell', 'prayer', 'flirt', 'madness']);
+    await leftKind.selectOption({ label: 'Flüstern' });
+    await rightKind.selectOption({ label: 'Gedanke' });
+    await chooseAvatars(first);
+    await preview().locator('.comment-twin-lane--left .comment-kind-whisper').waitFor({ state: 'attached' });
+    await preview().locator('.comment-twin-lane--right .comment-kind-thought').waitFor({ state: 'attached' });
+    await preview().locator(`.comment-twin-lane--right img[src="${rightPortrait}"]`).waitFor({ state: 'attached' });
+    const editorHeights = await first.locator('textarea[data-comment-twin-side]').evaluateAll(fields => fields.map(field => field.offsetHeight));
+    assert.equal(editorHeights[0], editorHeights[1]);
+    await screenshot(run, 'avatarauswahl', first, first);
+    await avatarPicker(first, 'left').locator('summary').click();
+    await avatarPicker(first, 'right').locator('summary').click();
     await gap(1).getByRole('button', { name: '+ Handlung und Rede', exact: true }).click();
     await cards().nth(1).locator('textarea').fill(texts[2]);
     await voice(2, 'left').fill(texts[3]);
@@ -203,7 +265,9 @@ try {
     await gap(4).locator('[data-action="insert-comment-section"]').selectOption('twins');
     assert.equal(await page.evaluate(() => buildCommentSegmentsForSave().length), 4);
     await cards().nth(4).locator('[data-action="remove-comment-segment"]').click();
-    run.checks.push('Figurenbindung, unabhängige Ausdrücke, Handlung, beide Pausenseiten und leere Dialogzeile');
+    await assertWriterPortraits(first);
+    await assertWriterPortraits(cards().nth(2), [left.portrait, right.portrait]);
+    run.checks.push('Figurenbindung, unabhängige Blasentypen und Avatare pro Zeile, Set-Wechsel, Handlung und beide Pausenseiten');
 
     await screenshot(run, 'kommentieren', cards().first(), cards().first());
     await composer().locator('[data-comment-preview-maximize]').click();
@@ -220,10 +284,15 @@ try {
     await open('twin-origin');
     assert.equal(await rightChoice().inputValue(), right.id);
     assert.equal(await voice(3, 'right').inputValue(), texts[4]);
+    await assertWriterPortraits(first);
     await open('twin-destination');
     await composer().getByText('Gespeicherte Entwürfe', { exact: true }).click();
     await composer().getByRole('button', { name: `Entwurf von ${left.name} laden` }).click();
     await composer().getByText('Gespeicherter Entwurf geladen.', { exact: true }).waitFor();
+    await assertWriterPortraits(first);
+    await avatarPicker(first, 'right').locator('summary').click();
+    assert.equal(await avatarPicker(first, 'right').getByRole('combobox').inputValue(), 'alternativ');
+    assert.equal(await avatarChoice(avatarPicker(first, 'right'), 0).getAttribute('aria-pressed'), 'true');
     assert.equal(await kind(0, 'right').inputValue(), 'thought');
     assert.equal(await kind(3, 'right').inputValue(), 'whisper');
     assert.equal(await voice(3, 'right').inputValue(), texts[4]);
@@ -247,6 +316,9 @@ try {
       { auth: { uid: 'twin-fixture' } }, 1);
     assert.deepEqual(commentSegments, stored.commentSegments);
     assert.equal(stored.commentSegments[3].twinDialogue.leftLength, 0);
+    assert.deepEqual([stored.commentSegments[0].twinDialogue.left.imageSetId, stored.commentSegments[0].twinDialogue.right.imageSetId],
+      ['standard', 'alternativ']);
+    assert.equal(stored.commentSegments[3].twinDialogue.right.imageSetId, undefined);
     assert.deepEqual([...getCommentActorIds(stored)], [left.id]);
     const feed = page.locator('#fixture-feed');
     await checkBubbles(feed);
@@ -257,12 +329,22 @@ try {
     const rightField = edit.locator('textarea[data-comment-twin-side="right"]').first();
     await rightField.waitFor();
     assert.equal(await rightField.inputValue(), texts[1]);
+    const editedCard = edit.locator('#ec-segment-list .comment-segment-card').first();
+    await assertWriterPortraits(editedCard);
+    const editedAvatar = avatarPicker(editedCard, 'left');
+    await editedAvatar.locator('summary').click();
+    await avatarChoice(editedAvatar, '').click();
+    await editedCard.getByRole('combobox', { name: `${left.name} · Blasentyp` }).selectOption({ label: 'Rufen' });
+    await assertWriterPortraits(editedCard, [left.portrait, rightPortrait]);
     const revised = 'Morgen bei Flut untersuchen wir den Riegel.';
     await rightField.fill(revised);
     await edit.locator('#ec-preview .comment-kind-thought').getByText(revised, { exact: false }).waitFor();
     await edit.locator('#ec-submit').click();
     await edit.waitFor({ state: 'hidden' });
     await feed.getByText(revised, { exact: false }).waitFor();
+    assert.equal(await feed.locator('.comment-twin-lane--left').first().locator('img.comment-portrait').getAttribute('src'), left.portrait);
+    assert.equal(await feed.locator('.comment-twin-lane--right').first().locator('img.comment-portrait').getAttribute('src'), rightPortrait);
+    assert.equal(await feed.locator('.comment-twin-lane--left .comment-kind-shout').first().locator('.comment-text').textContent(), texts[0]);
     assert.equal(await page.evaluate(() => fixtureSaved[0].commentSegments[3].twinDialogue.leftLength), 0);
     assert.deepEqual(await page.evaluate(() => [fixtureSaved[0].createdBy, window.fixtureLastEditor]), ['fixture-erdi', 'fixture-patrick']);
     run.checks.push('Unvollständige Bindung, Speichern, Leser, Backend-Dokumentform, Dauer und Fremdbearbeitung ohne Code');

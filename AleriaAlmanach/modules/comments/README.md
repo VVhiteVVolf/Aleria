@@ -294,7 +294,11 @@ Pergamentfarben.
 ## Zwillingsmodus
 
 Im Charaktermodus ergänzt ein Haken die reguläre Figurenwahl um die rechte
-Figur. Ein Zwillingsdialog hat pro Seite einen eigenen Ausdruck und Text.
+Figur. Für jede Seite lässt sich der **Blasentyp** unabhängig einstellen.
+Über **Avatar wählen** stehen die Avatare und Bildersets der jeweiligen Figur
+im Schreibdialog und beim regulären Bearbeiten zur Auswahl. Die Wahl gilt
+für die jeweilige Dialogzeile und bleibt im Entwurf, in der Vorschau und
+im gespeicherten Beitrag erhalten.
 Ein leeres Feld ist eine Pause. Ein Handlungsabschnitt dazwischen gilt beiden.
 Vorlagen und **+ Handlung und Rede** fügen bei einer vollständigen Paarung
 Zwillingsdialoge für ihre Redepositionen ein. Fertige Dialoge bleiben beim

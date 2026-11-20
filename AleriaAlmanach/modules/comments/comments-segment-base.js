@@ -1,4 +1,4 @@
-// Comment segment editor.
+﻿// Comment segment editor.
 // Shared by compose and edit flows for segmented speech/action/thought content.
 
 function normalizeCommentSegmentSide(side) {
@@ -418,28 +418,25 @@ function getSegmentEmotePalette(segment, edit = false) {
   const char = getCommentSegmentActor(segment, edit);
   if (!char) return '';
 
-  const emotes = Array.isArray(char.emotes) ? char.emotes : [];
   const action = edit ? 'set-edit-comment-segment-emote' : 'set-comment-segment-emote';
-  const segmentId = escapeHtml(segment.id);
-  const selected = Number.isInteger(segment.emoteIndex) ? String(segment.emoteIndex) : '';
-  const standardActive = selected === '';
-  const standard = `
-    <button type="button" class="comment-segment-avatar ${standardActive ? 'active' : ''}" data-action="${action}" data-segment-id="${segmentId}" data-emote-index="" title="Standardportrait">
-      ${renderSegmentAvatarThumb(char.portrait, char.name, 'Standardportrait')}
-      <span>Standard</span>
-    </button>`;
-  const avatars = emotes.map((emote, idx) => {
-    const label = emote.label || `Ausdruck ${idx + 1}`;
+  return renderCommentAvatarPalette(char, segment.emoteIndex, { action, segmentId: segment.id });
+}
+
+function renderCommentAvatarPalette(char, emoteIndex, { action, segmentId, label = 'Ausdruck wählen' }) {
+  const selected = Number.isInteger(emoteIndex) ? String(emoteIndex) : '';
+  const emotes = Array.isArray(char.emotes) ? char.emotes : [];
+  const avatars = [{ img: char.portrait, label: 'Standard' }, ...emotes].map((avatar, offset) => {
+    const index = offset === 0 ? '' : String(offset - 1);
+    const title = offset === 0 ? 'Standardportrait' : avatar.label || `Ausdruck ${offset}`;
+    const active = index === selected;
     return `
-      <button type="button" class="comment-segment-avatar ${selected === String(idx) ? 'active' : ''}" data-action="${action}" data-segment-id="${segmentId}" data-emote-index="${idx}" title="${escapeHtml(label)}">
-        ${renderSegmentAvatarThumb(emote.img, char.name, label)}
-        <span>${escapeHtml(emote.label || String(idx + 1))}</span>
+      <button type="button" class="comment-segment-avatar${active ? ' active' : ''}" data-action="${escapeHtml(action)}"
+        data-segment-id="${escapeHtml(segmentId)}" data-emote-index="${index}" aria-pressed="${active}" title="${escapeHtml(title)}">
+        ${renderSegmentAvatarThumb(avatar.img, char.name, title)}
+        <span>${escapeHtml(avatar.label || String(offset))}</span>
       </button>`;
   }).join('');
-  return `
-    <div class="comment-segment-avatar-row" aria-label="Ausdruck wählen">
-      ${standard}${avatars}
-    </div>`;
+  return `<div class="comment-segment-avatar-row" aria-label="${escapeHtml(label)}">${avatars}</div>`;
 }
 
 function getCommentSegmentTextareaId(segment, edit = false) {

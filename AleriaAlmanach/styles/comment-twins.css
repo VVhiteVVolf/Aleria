@@ -142,7 +142,39 @@
   font-size: 0.83rem;
 }
 
-.comment-twin-write-lane textarea { flex: 1; min-width: 0; }
+:is(#comment-form-overlay, #edit-comment-overlay) .comment-twin-select {
+  display: grid;
+  gap: 0.18rem;
+  min-width: 0;
+  margin: 0;
+  color: var(--twin-ink);
+  font-weight: 600;
+  font-size: 0.74rem;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.comment-twin-write-lane textarea { min-width: 0; }
+.comment-twin-avatar-picker { min-width: 0; font-size: 0.78rem; }
+.comment-twin-avatar-picker > summary {
+  padding: 0.44rem 0.4rem;
+  border: 1px solid var(--twin-line);
+  border-radius: 0.25rem;
+  background: #fffaf1;
+  font-weight: 600;
+  cursor: pointer;
+}
+.comment-twin-avatar-picker[open] > summary { margin-bottom: 0.35rem; }
+
+:is(#comment-form-overlay, #edit-comment-overlay) .comment-twin-avatar-picker .comment-segment-avatar-row {
+  --comment-segment-avatar-size: 2.35rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 3.35rem), 1fr));
+  gap: 0.28rem;
+  margin: 0.32rem 0 0;
+  padding: 0.32rem;
+  max-height: 12rem;
+}
+
 .comment-twin-format { font-size: 0.74rem; }
 .comment-twin-format summary { padding: 0.23rem 0; cursor: pointer; }
 .comment-twin-visually-hidden {
