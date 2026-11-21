@@ -19,7 +19,7 @@ export async function rollCombatSecondarySave(context, config) {
     const rules = collectApplicableCombatRules({ phase, actionKind, profileActionId, sources: ruleSources,
       periods: rulePeriods, usedFrequencyKeys: usedRuleFrequencyKeys,
       state: { ...ruleProfileState, actorProfile: actor, targetProfile: target, saveAttribute: attributeKey,
-        saveContext: { ...config, actionKind, damageType: actor.weapon?.damageType }, ...state } });
+        saveContext: { ...config, actionKind }, ...state } });
     markCombatRuleApplications(rules, usedRuleFrequencyKeys);
     return rules;
   };

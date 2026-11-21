@@ -18,8 +18,11 @@ export function reconcileFenrirWeaponTechnique(entry) {
     'fenrir-twin-axe-flurry': 'Ein gemeinsamer Angriff mit beiden Einhandäxten: beide Waffenwürfel (gewöhnlich 2W6) plus erreichter Ausbildungswürfel. Ein Trefferwurf, feste Boni einmal.',
     'fenrir-spinning-throw': 'Ein verstärkter Wurf mit der geführten Wurfaxt: Waffenbasis plus ein Waffenwürfel für die Besondere Aktion und erreichter Ausbildungswürfel.'
   };
+  const damage = createWeaponTechniqueDamageProfile({ minimumLevel: entry.minimumLevel, allowedClassIds: ['skjaldr'] }, costs);
+  // Keep the saved correction limited to ordinary training. Combat derives special ranks from progression.
+  damage.damageModel.scalingSteps = damage.damageModel.scalingSteps.filter(step => step.level <= 20);
   return { ...entry, costs, ...(throwing ? { activationType: 'reaction' } : {}),
-    ...createWeaponTechniqueDamageProfile({ minimumLevel: entry.minimumLevel, allowedClassIds: ['skjaldr'] }, costs),
+    ...damage,
     ...(twin ? { requiresDualWield: true, followUpAttack: { enabled: false } } : {}),
     description: descriptions[entry.id], effect: descriptions[entry.id], aiInstructions: descriptions[entry.id] };
 }

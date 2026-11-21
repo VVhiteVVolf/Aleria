@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
+import { reconcileFenrirWeaponTechnique } from '../modules/classes/aldrimar/fenrir-weapon-techniques.js';
 import { getCombatPassiveClassId, getEarnedClassPassiveFeatures } from '../modules/classes/combat-passives/class-passive-curriculum.js';
 import { withClassPassivePeriods } from '../modules/classes/combat-passives/class-passive-periods.js';
 import { DRACHENTANZ_FORM_IDS as D } from '../modules/combat-styles/drachentanz/drachentanz-ids.js';
@@ -50,6 +51,17 @@ test('all classes, old fixed damage and Gawain’s existing weapon use the total
     assert.equal(preview.selectedAction.compatible, true);
   }
   assert.deepEqual(character, snapshot);
+});
+
+test('Fenrir’s persisted weapon correction keeps normal training and resolves special ranks at runtime', () => {
+  const technique = reconcileFenrirWeaponTechnique({ id: 'fenrir-crushing-blow', minimumLevel: 1 });
+  assert.deepEqual(technique.damageModel.scalingSteps, [
+    { level: 7, formula: '1d4' }, { level: 9, formula: '1d6' },
+    { level: 13, formula: '1d8' }, { level: 17, formula: '1d10' }
+  ]);
+  for (const [specialLevels, formula] of [[5, '1d10+1'], [10, '1d10+1d6']]) {
+    assert.equal(getTechniqueDamageScaling(technique, { progression: { level: 20, specialLevels } }).formula, formula);
+  }
 });
 
 test('die vier Jungdrachen-Kontrollen verwenden ihre kleine Sonderstufenstaffel auch in älteren Kopien', () => {
