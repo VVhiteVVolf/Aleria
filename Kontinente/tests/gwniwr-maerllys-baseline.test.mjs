@@ -11,8 +11,8 @@ const current=id=>structuredClone(FAMILY_REGISTRY.find(record=>record.id===id));
 const afterDynamic=id=>{const record=current(id),provenance=getRegisteredSourceMetadataProvenance(id);if(provenance.fields.length)applyFamilyMetadataReview(record,{familyId:id,...provenance});return record;};
 const at=(object,segments)=>segments.reduce((value,key)=>key.startsWith('@')?value.find(row=>row.id===key.slice(1)):value[key],object);
 
-test('four later family revisions preserve exact predecessors and reject unrelated prose, edges and migration metadata',()=>{
- for(const id of ['craigddu','haus-coeddu','haus-bronnor','haus-loer']) {
+test('later family revisions preserve exact predecessors and reject unrelated prose, edges and migration metadata',()=>{
+ for(const id of ['craigddu','haus-coeddu','haus-bronnor','haus-brandyddyn','haus-loer']) {
   const record=afterDynamic(id),before=structuredClone(record);
   assert.equal(projectReviewedFamilyRevisions(record).id,id);
   assert.deepEqual(record,before);

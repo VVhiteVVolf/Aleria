@@ -1,0 +1,470 @@
+{
+  "baselineCommit": "dc3cd23fcfbd8ff77f3ffa3942e3f083abdeda94",
+  "cause": "Ysabel Bronnors bestätigte Biografie vom 21. November 2026",
+  "reviews": [
+    {
+      "familyId": "haus-bronnor",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "persons",
+            "@ysabel-bronnor",
+            "birth"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "afterSha256": "f5124adc6bcd489a7fe0361e26d7463030a4f2c0ec4dd636759b4be44d0e3ad0"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@ysabel-bronnor",
+            "notes"
+          ],
+          "beforePresent": true,
+          "before": "Mitglied des Ritterhauses Bronnor aus dem Tal der Milane. Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Mutter Eurgains. Alterserscheinung: etwa 35–45 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+          "afterPresent": true,
+          "afterSha256": "ab8677ce41f418d75227da3e54865e773af8c285ef2dccf42daf8f827ec054be"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@ysabel-bronnor",
+            "extensions"
+          ],
+          "beforePresent": true,
+          "before": {
+            "authoredSource": "draig-garde-20261112",
+            "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen. Eine Ehe mit Pellinard ist nicht belegt; der Herkunftsname Bronnor bleibt ausdrücklich erhalten.",
+            "ageEstimate": "etwa 35–45 Jahre"
+          },
+          "afterPresent": true,
+          "afterSha256": "48b2eb22e9d779f525959d3c5cf93bf5c40b048cc9d5e250ed4c205c632c4be0"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@pellinard-brandyddyn",
+            "notes"
+          ],
+          "beforePresent": true,
+          "before": "Vater Eurgains. Alterserscheinung: etwa 45–55 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+          "afterPresent": true,
+          "afterSha256": "f17b998346e31ac2fe475be155af7fdab5fe67f09444251d0adc9a0f7ae2a83c"
+        },
+        {
+          "path": [
+            "family",
+            "extensions"
+          ],
+          "beforePresent": true,
+          "before": {
+            "blankFamily": false,
+            "preparedTimeJump": true,
+            "pendingDescendantReview": false,
+            "sourceRevision": 2,
+            "chartLayoutPolicy": "strict-v1",
+            "authoredOn": "2026-11-12",
+            "chartAlignLineageOriginOverPersonId": "ysabel-bronnor",
+            "sourceNote": "Nutzerauftrag Draig-Garde vom 12. November 2026. Unbekanntes Gründerpaar, Hauswappen und genau ein serieller Zeitsprung. Die ersten bekannten Mitglieder besitzen keine erfundenen Eltern. Namensgleiche Angehörige werden ohne belegte nähere Beziehung nicht zu Geschwistern oder Eltern und Kindern erklärt. Altersschätzungen sind ausschließlich textlich; keine Geburtsjahre daraus errechnet. Bestätigte Elternschaft Pellinard und Ysabel zu Eurgain wird in beiden Gegenakten geteilt; Ehe, Verlobung und Familienstand bleiben unbekannt.",
+            "registryManagedEntitySourceRevision": 2,
+            "houseBiographyModule": {
+              "schema": "aleria.house-module",
+              "schemaVersion": 1,
+              "pageTitle": "Haus Bronnor",
+              "housePage": true,
+              "image": "../Familien Häuser und Clans/Estryll/Cenyr/Tal_der_Milane/Yvains_Klamm/Haus_Bronnor/assets/hausdarstellung-2026-11-03.png",
+              "imageWidth": 38,
+              "imageSquare": false,
+              "imageTall": true,
+              "description": "Haus Bronnor ist als niederes Ritterhaus in Penbryn verzeichnet. Der Registerort liegt in Yvains Klamm, einer Baronie im Tal der Milane innerhalb des Königreichs Cenyr. Die Lehenszuordnung nennt Haus Aderyn O'Penbryn.",
+              "quote": "",
+              "quoteBy": "",
+              "commentSequence": [],
+              "stats": [
+                [
+                  "Voller Name",
+                  "Haus Bronnor"
+                ],
+                [
+                  "Rang",
+                  "Ritterherr"
+                ],
+                [
+                  "Stammsitz",
+                  "Penbryn"
+                ],
+                [
+                  "Grafschaft",
+                  "Tal der Milane"
+                ],
+                [
+                  "Lehnsherr",
+                  "Haus Aderyn O'Penbryn"
+                ]
+              ],
+              "house": {
+                "crestImage": "../Stammbäume/assets/images/houses/Tal der Milane/Yvains Klamm/haus-bronnor.png",
+                "sideWidth": 100,
+                "connectionPortraitHeight": 80,
+                "connectionTextOffset": 0,
+                "biographyTitle": "Über das Haus",
+                "biographyText": "Haus Bronnor ist als niederes Ritterhaus in Penbryn verzeichnet. Der Registerort liegt in Yvains Klamm, einer Baronie im Tal der Milane innerhalb des Königreichs Cenyr. Die Lehenszuordnung nennt Haus Aderyn O'Penbryn.",
+                "abilitiesTitle": "Einfluss und Aufgaben",
+                "abilities": [],
+                "historyTitle": "Bisherige Überlieferung",
+                "historyText": "Eine ausgearbeitete Hauschronik, ein Gründungsjahr und eine namentlich belegte Gründerfolge liegen bislang nicht vor.",
+                "worksTitle": "Prägende Ereignisse",
+                "works": [],
+                "extraSections": [
+                  {
+                    "position": "afterWorks",
+                    "mode": "text",
+                    "title": "Werte und Stellung",
+                    "text": "Auf dem vorhandenen Hauszeichen ist ein roter Adler mit ausgebreiteten Schwingen über einem roten Fels auf dunklem Grund dargestellt. Darüber hinaus sind besondere Hausbräuche, Werte und ein verbindlicher Leitspruch noch nicht ausgearbeitet."
+                  },
+                  {
+                    "position": "afterWorks",
+                    "mode": "text",
+                    "title": "Verbindungen",
+                    "text": "Ysabel Bronnor gehört diesem Ritterhaus aus dem Tal der Milane an und ist Leutnant der Draig-Leibgarde. Sie ist eine Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Ysabel und Pellinard Brândyddyn sind die Eltern Eurgain Brândyddyns; Ehe, Verlobung und heutiger Beziehungsstatus der Eltern sind nicht belegt. Ysabel bleibt unter ihrer Herkunftsidentität Bronnor verzeichnet."
+                  }
+                ],
+                "triviaTitle": "Besonderheiten",
+                "trivia": [],
+                "quotesTitle": "Hausmotto",
+                "quotes": [],
+                "connectionsTitle": "Verbündete und Kadettenhäuser",
+                "connections": [],
+                "documentsTitle": "Mehr über das Haus",
+                "documents": [
+                  {
+                    "icon": "../Stammbäume/assets/images/houses/Tal der Milane/Yvains Klamm/haus-bronnor.png",
+                    "title": "Haus Bronnor · vollständige Hausseite",
+                    "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+                    "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bronnor"
+                  },
+                  {
+                    "title": "Haus Brândyddyn",
+                    "text": "Eurgain ist die Tochter Ysabel Bronnors und Pellinard Brândyddyns.",
+                    "link": "kleinehaeuser.html?haus=haus-brandyddyn",
+                    "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Brândyddyn/brandyddyn-emblem.png"
+                  }
+                ],
+                "footer": ""
+              }
+            }
+          },
+          "afterPresent": true,
+          "afterSha256": "9b99a3e3602a9159b9d23b9f44fdd76e6db63083c96cbd37ae79f514debdce39"
+        },
+        {
+          "path": [
+            "family",
+            "partnerships"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "marriage-haus-bronnor-founders",
+              "participantIds": [
+                "haus-bronnor-gruender",
+                "haus-bronnor-gruenderin"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "unknown",
+              "visibility": "public",
+              "notes": "Platzhalter des unbekannten Gründerpaares; keine Ehejahre oder Namen sind belegt."
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "c126b27bfb4fae52459da4ed7e29a2168a8a1c0dc552e0e91d5aeabe998374f8"
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-eurgain-brandyddyn",
+            "notes"
+          ],
+          "beforePresent": true,
+          "before": "Ausdrücklich bestätigte Elternschaft; Ehe, Verlobung und heutiger Beziehungsstatus der Eltern bleiben offen.",
+          "afterPresent": true,
+          "afterSha256": "809507772c4626dfa248d69c7c6f230969a17cf20628ee2aac490e9a27a94c7e"
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-eurgain-brandyddyn",
+            "partnershipId"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "afterSha256": "b05e8611fcf42cbee35a4b88158498961b865111210a699781e7912bc8841340"
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-eurgain-brandyddyn",
+            "extensions"
+          ],
+          "beforePresent": true,
+          "before": {
+            "chartPairParentsWithoutPartnership": true
+          },
+          "afterPresent": true,
+          "afterSha256": "e61e11d9fdbfd7cd7d6502fb38e99d7684da9f7b450847d64b80d6ff2b1d8b69"
+        }
+      ],
+      "proof": {
+        "expectedCurrentSha256": "f8490f4cd8b39912776d60dcaf745e78e3c800e7425671e7ef3ab748d57b554c",
+        "expectedHistoricalSha256": "b4f2574f8dbaa13cebe6ed4a765395a3a037d754b90af6284ea31aeb6387404e"
+      }
+    },
+    {
+      "familyId": "haus-brandyddyn",
+      "fields": [
+        {
+          "path": [
+            "family",
+            "persons",
+            "@ysabel-bronnor",
+            "birth"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "afterSha256": "f5124adc6bcd489a7fe0361e26d7463030a4f2c0ec4dd636759b4be44d0e3ad0"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@ysabel-bronnor",
+            "notes"
+          ],
+          "beforePresent": true,
+          "before": "Mitglied des Ritterhauses Bronnor aus dem Tal der Milane. Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Mutter Eurgains. Alterserscheinung: etwa 35–45 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+          "afterPresent": true,
+          "afterSha256": "ab8677ce41f418d75227da3e54865e773af8c285ef2dccf42daf8f827ec054be"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@ysabel-bronnor",
+            "extensions"
+          ],
+          "beforePresent": true,
+          "before": {
+            "authoredSource": "draig-garde-20261112",
+            "sourceNote": "Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen. Eine Ehe mit Pellinard ist nicht belegt; der Herkunftsname Bronnor bleibt ausdrücklich erhalten.",
+            "ageEstimate": "etwa 35–45 Jahre"
+          },
+          "afterPresent": true,
+          "afterSha256": "48b2eb22e9d779f525959d3c5cf93bf5c40b048cc9d5e250ed4c205c632c4be0"
+        },
+        {
+          "path": [
+            "family",
+            "persons",
+            "@pellinard-brandyddyn",
+            "notes"
+          ],
+          "beforePresent": true,
+          "before": "Vater Eurgains. Alterserscheinung: etwa 45–55 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+          "afterPresent": true,
+          "afterSha256": "f17b998346e31ac2fe475be155af7fdab5fe67f09444251d0adc9a0f7ae2a83c"
+        },
+        {
+          "path": [
+            "family",
+            "extensions"
+          ],
+          "beforePresent": true,
+          "before": {
+            "blankFamily": false,
+            "preparedTimeJump": true,
+            "pendingDescendantReview": false,
+            "sourceRevision": 1,
+            "chartLayoutPolicy": "strict-v1",
+            "authoredOn": "2026-11-12",
+            "chartAlignLineageOriginOverPersonId": "pellinard-brandyddyn",
+            "sourceNote": "Nutzerauftrag Draig-Garde vom 12. November 2026. Unbekanntes Gründerpaar, Hauswappen und genau ein serieller Zeitsprung. Die ersten bekannten Mitglieder besitzen keine erfundenen Eltern. Namensgleiche Angehörige werden ohne belegte nähere Beziehung nicht zu Geschwistern oder Eltern und Kindern erklärt. Altersschätzungen sind ausschließlich textlich; keine Geburtsjahre daraus errechnet. Bestätigte Elternschaft Pellinard und Ysabel zu Eurgain wird in beiden Gegenakten geteilt; Ehe, Verlobung und Familienstand bleiben unbekannt.",
+            "registryManagedEntitySourceRevision": 1,
+            "houseBiographyModule": {
+              "schema": "aleria.house-module",
+              "schemaVersion": 1,
+              "pageTitle": "Haus Brândyddyn",
+              "housePage": true,
+              "image": "../Stammbäume/assets/images/portraits/haus-brandyddyn/pellinard-brandyddyn.png",
+              "imageWidth": 38,
+              "imageSquare": false,
+              "imageTall": true,
+              "description": "Haus Brândyddyn ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Pellinard Brândyddyn, Eurgain Brândyddyn. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+              "quote": "",
+              "quoteBy": "",
+              "commentSequence": [],
+              "stats": [
+                [
+                  "Voller Name",
+                  "Haus Brândyddyn"
+                ],
+                [
+                  "Rang",
+                  "Bürgerlich"
+                ],
+                [
+                  "Stammsitz",
+                  "Gwynthor"
+                ],
+                [
+                  "Grafschaft",
+                  "Celtigerns Wacht"
+                ],
+                [
+                  "Lehnsherr",
+                  "Haus Draig"
+                ],
+                [
+                  "Ursprung",
+                  "Gwynthor"
+                ]
+              ],
+              "house": {
+                "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Brândyddyn/brandyddyn-emblem.png",
+                "sideWidth": 100,
+                "connectionPortraitHeight": 80,
+                "connectionTextOffset": 0,
+                "biographyTitle": "Über das Haus",
+                "biographyText": "Haus Brândyddyn ist ein bürgerliches Haus aus Gwynthor. Namentlich bekannt sind Pellinard Brândyddyn, Eurgain Brândyddyn. Ihre Ämter sind in der Leibgarde des Hauses Draig verzeichnet. Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
+                "abilitiesTitle": "Einfluss und Aufgaben",
+                "abilities": [],
+                "historyTitle": "Vorbereitete Familienakte",
+                "historyText": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten.",
+                "worksTitle": "Prägende Ereignisse",
+                "works": [],
+                "extraSections": [
+                  {
+                    "position": "afterWorks",
+                    "mode": "text",
+                    "title": "Werte und Stellung",
+                    "text": "Zwei gekreuzte silberne Schwerter vor einer kupferroten Flamme auf nachtblauem Grund. Der geschlossene Eisenring trägt ein keltisches Knotenmuster. Die Symbolik ist ein neu gestaltetes Hauszeichen; aus ihr werden keine zusätzlichen Berufe, Besitzungen oder historischen Ereignisse abgeleitet."
+                  },
+                  {
+                    "position": "afterWorks",
+                    "mode": "text",
+                    "title": "Verbindungen",
+                    "text": "Pellinard Brândyddyn und Ysabel Bronnor sind Eurgains Eltern. Ysabel bleibt als Angehörige des Ritterhauses Bronnor aus dem Tal der Milane verzeichnet. Eine Ehe oder Verlobung der Eltern ist nicht belegt."
+                  }
+                ],
+                "triviaTitle": "Besonderheiten",
+                "trivia": [],
+                "quotesTitle": "Hausmotto",
+                "quotes": [],
+                "connectionsTitle": "Verbündete und Kadettenhäuser",
+                "connections": [],
+                "documentsTitle": "Mehr über das Haus",
+                "documents": [
+                  {
+                    "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Brândyddyn/brandyddyn-emblem.png",
+                    "title": "Haus Brândyddyn · vollständige Hausseite",
+                    "text": "Wappen und bisher bekannte Angaben. Weitere Inhalte folgen.",
+                    "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-brandyddyn"
+                  },
+                  {
+                    "title": "Draig Leibgarde",
+                    "text": "Die belegten Gardeämter der Angehörigen.",
+                    "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=draig-leibgarde",
+                    "icon": "../AleriaAlmanach/public/assets/draig-leibgarde/drachengarde-wappen-elfenbein-v1.png"
+                  }
+                ],
+                "footer": ""
+              }
+            }
+          },
+          "afterPresent": true,
+          "afterSha256": "12519e0cefdb9c218193f508f745d895614c1af2a56f4c3be72b4006af40c8c0"
+        },
+        {
+          "path": [
+            "family",
+            "partnerships"
+          ],
+          "beforePresent": true,
+          "before": [
+            {
+              "id": "marriage-haus-brandyddyn-founders",
+              "participantIds": [
+                "haus-brandyddyn-gruender",
+                "haus-brandyddyn-gruenderin"
+              ],
+              "type": "marriage",
+              "status": "active",
+              "start": "",
+              "end": "",
+              "certainty": "unknown",
+              "visibility": "public",
+              "notes": "Platzhalter des unbekannten Gründerpaares; keine Ehejahre oder Namen sind belegt."
+            }
+          ],
+          "afterPresent": true,
+          "afterSha256": "9e87ed7dfe57f08af50f7db3f4c9f7122f9fd1be29ed94a9b56a7bec142728f4"
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-eurgain-brandyddyn",
+            "notes"
+          ],
+          "beforePresent": true,
+          "before": "Ausdrücklich bestätigte Elternschaft; Ehe, Verlobung und heutiger Beziehungsstatus der Eltern bleiben offen.",
+          "afterPresent": true,
+          "afterSha256": "809507772c4626dfa248d69c7c6f230969a17cf20628ee2aac490e9a27a94c7e"
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-eurgain-brandyddyn",
+            "partnershipId"
+          ],
+          "beforePresent": true,
+          "before": "",
+          "afterPresent": true,
+          "afterSha256": "b05e8611fcf42cbee35a4b88158498961b865111210a699781e7912bc8841340"
+        },
+        {
+          "path": [
+            "family",
+            "parentages",
+            "@parentage-eurgain-brandyddyn",
+            "extensions"
+          ],
+          "beforePresent": true,
+          "before": {
+            "chartPairParentsWithoutPartnership": true
+          },
+          "afterPresent": true,
+          "afterSha256": "e61e11d9fdbfd7cd7d6502fb38e99d7684da9f7b450847d64b80d6ff2b1d8b69"
+        }
+      ],
+      "proof": {
+        "expectedCurrentSha256": "17c11dcde80c9f0bef041d526eed6bd3f304d33601fe55329b8a4d649b35e704",
+        "expectedHistoricalSha256": "52502588d1a9a8c87b5fe770559f22c5ba2c443ef2f4593f3a13618d618de7c1"
+      }
+    }
+  ]
+}

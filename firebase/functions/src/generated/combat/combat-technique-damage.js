@@ -59,9 +59,9 @@ function getTrainingSteps(technique, profile) {
   if (shared) return shared;
   if (isSharedJungdracheControlTechniqueId(getDevelopmentTechniqueId(technique))) return authored.concat(controlTrainingSteps);
   if (authored.length) return authored.concat(SPECIAL_RANK_TECHNIQUE_STEPS);
-  // Some established control techniques use their whole ordinary budget for
-  // the rider effect. Their original base still receives the special-rank steps.
-  if (technique.secondarySave?.enabled) return SPECIAL_RANK_TECHNIQUE_STEPS;
+  // Authored weapon models without steps and established control techniques
+  // keep their ordinary damage budget. Special-rank steps still apply.
+  if (technique.damageModel?.mode === 'weapon-dice' || technique.secondarySave?.enabled) return SPECIAL_RANK_TECHNIQUE_STEPS;
   return ordinaryTrainingSteps;
 }
 

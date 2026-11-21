@@ -64,6 +64,16 @@ test('Fenrir’s persisted weapon correction keeps normal training and resolves 
   }
 });
 
+test('authored weapon models with zero regular additions earn special ranks only for the primary hit', () => {
+  const technique = { id: 'custom-weapon-technique', minimumLevel: 7,
+    damageModel: { mode: 'weapon-dice', scalingSteps: [] } };
+  const weapon = { damageFormula: '1d8' };
+  assert.equal(resolveTechniqueDamageFormula(technique, weapon, { progression: { level: 7 } }), '1d8');
+  const veteran = { progression: { level: 20, specialLevels: 10 } };
+  assert.equal(resolveTechniqueDamageFormula(technique, weapon, veteran), '1d8+1d10+1d6');
+  assert.equal(resolveTechniqueDamageFormula(technique, weapon, veteran, { maximumTrainingLevel: 20 }), '1d8');
+});
+
 test('die vier Jungdrachen-Kontrollen verwenden ihre kleine Sonderstufenstaffel auch in älteren Kopien', () => {
   const controls = ['staubende-schwinge', 'gebundene-klaue', 'unruhiger-griff', 'drachenklammer'];
   for (const slug of controls) {
