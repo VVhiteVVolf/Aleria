@@ -25,10 +25,15 @@ Waffenflexible Milizausbildung. Die cenyrische Drachling-Ausbildung und die venn
 
 ### Klassenmerkmale
 
-- **Stufe 1 · Stand der Küstenwache:** +1 auf manuell ausgewertete Balanceproben auf nassem oder schwankendem Untergrund.
 - **Stufe 1 · Rüstungsroutine:** Leichte Rüstung: voller GES-Bonus ab Stufe 1. Mittlere Rüstung: Basis-RK 14 und GES bis +2; ab Stufe 10 bis +4, ab Stufe 16 ohne Begrenzung. Jungritterplatte: Basis-RK 15 ohne GES; Gegenstandsschutz ersetzt den Grundschutz. Schild und stärkste RK-Haltung zählen zusätzlich.
-- **Stufe 6 · Schulter an Schulter:** Schadenslose Deckungstechniken dürfen einen benachbarten Verbündeten schützen; Reichweite 2 m, unveränderte Kosten.
-- **Stufe 15 · Erfahrene Wache:** Der Balancebonus steigt auf +2. Die Waffenausbildung endet auf Stufe 15; Stufen 16–20 bringen weiterhin die allgemeinen Klassenressourcen.
+- **Stufe 5 · Stand der Küstenwache:** In belegter Reihe nach bezahlter Deckung einmal +1 gegen Niederwerfen.
+- **Stufe 7 · Schulter an Schulter:** Der Schutz gilt auch bei einem tatsächlichen erzwungenen Stellungswechsel.
+- **Stufe 8 · Stand auf der Planke:** Eine erfolgreiche Küstenwachen-Technik mit eigener Deckung kann den Schutz vorbereiten.
+- **Stufe 10 · Deckung der Nachbarn:** Der vorbereitete Schutz kann bei belegter Nachbarschaft einen Gefährten stützen.
+- **Stufe 14 · Erfahrene Wache:** Im eigenen Stand steigt der Rettungsbonus auf +2.
+- **Stufe 16 · Geordneter Wachtwechsel:** Der erste passende physische Nahkampftreffer auf den Gefährten wird um 1 gemindert.
+- **Stufe 18 · Eingespielte Wache:** Ein geeigneter Nachbar mit geführter Nahwaffe kann die Reihe stützen.
+- **Stufe 20 · Die gehaltene Wache:** Die eigene Rettung und die Stütze des Gefährten sind je einmal verfügbar.
 
 ### Tanz der jungen Welle · 1–6
 
@@ -75,11 +80,15 @@ Stangenwaffe für Distanz, Axt für Gedränge, Harpune für den Auftakt. Ziehen 
 
 ### Klassenmerkmale
 
-- **Stufe 1 · Seebeine:** +2 auf Balanceproben an Deck; der Situationsbonus wird manuell berücksichtigt und ist kein allgemeiner RK-Bonus.
 - **Stufe 1 · Rüstungsroutine:** Leichte Rüstung: voller GES-Bonus ab Stufe 1. Mittlere Rüstung: Basis-RK 14 und GES bis +2; ab Stufe 10 bis +4, ab Stufe 16 ohne Begrenzung. Jungritterplatte: Basis-RK 15 ohne GES; Gegenstandsschutz ersetzt den Grundschutz. Schild und stärkste RK-Haltung zählen zusätzlich.
-- **Stufe 6 · Sicherer Entergriff:** +1 auf den Angriffswurf mit Wyrmtanz-Harpunentechniken; keine zusätzliche Attacke.
-- **Stufe 15 · Leinenmeister:** Ein im Manöver ausdrücklich erlaubtes Heranziehen darf bis 3 m statt 2 m reichen. Rettungswurf und Leinenbedingung bleiben bestehen.
-- **Stufe 20 · Meister des Decks:** Einmal pro Beitrag +1 Schaden auf einen Partisanen- oder Enteraxttreffer nach einem eigenen gelungenen Wyrmtanz-Verschiebemanöver.
+- **Stufe 5 · Seebeine:** Einmal +2 auf eine ausgewiesene Akrobatikprobe zum Halten der Balance an Deck.
+- **Stufe 7 · Fester Decktritt:** Eigene bezahlte Stangenwaffen- oder Axtdeckung bereitet das nächste Manöver in enger Lage vor.
+- **Stufe 8 · Kehrende Reling:** Eine gelungene Stellungs- oder Deckungstechnik mit Partisane oder Enteraxt bereitet es ebenfalls vor.
+- **Stufe 10 · Bindung im Gedränge:** Nach der Vorbereitung +1 auf den bestehenden Stör-SG mit Partisane oder Enteraxt bei belegter enger Distanz.
+- **Stufe 14 · Stand beim Ausweichen:** In vorbereiteter Stellung einmal +1 auf die Rettung gegen erzwungene Verschiebung.
+- **Stufe 16 · Leinenmeister:** Reichweitenverbesserung von 2 auf 3 m beim ausdrücklich ausgewerteten Ziehen mit intakter Leine und freiem Zugweg.
+- **Stufe 18 · Fester Griff nach der Wende:** Die Rettung gegen Verschiebung steigt in vorbereiteter Stellung auf +2.
+- **Stufe 20 · Meister des Decks:** Nach gelungener gebundener Störung einmal +1 auf den nächsten bezahlten Partisanen- oder Enteraxttreffer.
 
 ### Tanz der jungen Welle · 1–6
 
@@ -190,11 +199,15 @@ Dieselben schweren Folgen passen zu Axt, Hammer, Morgenstern und Kolben. Schwert
 
 ### Klassenmerkmale
 
-- **Stufe 1 · Stand gegen den Sturm:** +1 auf Rettungswürfe gegen Furcht und Umwerfen; nur bei einem tatsächlich geforderten passenden Wurf.
 - **Stufe 1 · Rüstungsroutine:** Leichte Rüstung: voller GES-Bonus ab Stufe 1. Mittlere Rüstung: Basis-RK 14 und GES bis +2; ab Stufe 10 bis +4, ab Stufe 16 ohne Begrenzung. Jungritterplatte: Basis-RK 15 ohne GES; Gegenstandsschutz ersetzt den Grundschutz. Schild und stärkste RK-Haltung zählen zusätzlich.
-- **Stufe 6 · Kontrollierte Wucht:** Bei Wyrmtanz-Angriffen mit schwerer Axt, Hammer, Flegel oder Kolben: −1 Angriff und +1 Schaden. Kein Bonus auf Schwertangriffe.
-- **Stufe 15 · Fassung unter Druck:** Stand gegen den Sturm steigt auf +2 und ersetzt den bisherigen Bonus; keine Immunität gegen Zustände.
-- **Stufe 20 · Unerschütterliche Front:** Nach einer schadenslosen Tiefwasser-Schutztechnik erhält der Anwender einmal pro Beitrag 3 temporäre LP bis zum Ende seines nächsten Beitrags. Temporäre LP werden nicht addiert.
+- **Stufe 5 · Stand gegen den Sturm:** Einmal +1 auf eine Rettung gegen Furcht oder Niederwerfen.
+- **Stufe 7 · Geschlossene Kante:** Bezahlte Deckung mit erlernter schwerer Waffe bereitet die kontrollierte Antwort vor.
+- **Stufe 8 · Eisenatem:** Bezahlte Vorbereitung mit schwerer Waffe bereitet die Antwort ebenfalls vor.
+- **Stufe 10 · Gegen den Rausch:** Nach eigener Deckung +1 auf den bestehenden Stör-SG einer schweren Antwort gegen ein Ziel mit geöffneter Deckung.
+- **Stufe 14 · Fassung unter Druck:** Der Rettungsbonus gegen Furcht und Niederwerfen steigt auf +2.
+- **Stufe 16 · Gesetzter Durchbruch:** Auch eine bereits laufende eigene Brandungsfolge kann die schwere Antwort vorbereiten.
+- **Stufe 18 · Sicherer Grund:** Nach schadensloser Tiefwasser-Deckung einmal 2 temporäre TP bis zum nächsten eigenen Beitrag.
+- **Stufe 20 · Unerschütterliche Front:** Die Tiefwasser-Deckung gewährt 3 temporäre TP.
 
 ### Tanz der jungen Welle · 1–6
 
@@ -303,11 +316,15 @@ Fern- und Nahkampf teilen sich die Slots. Bereits die Grundform enthält zwei ec
 
 ### Klassenmerkmale
 
-- **Stufe 1 · Seeblick:** +1 Angriff mit Kurzbogen oder Armbrust. Der Bonus gilt einmal und nicht für Säbel oder Dreizack.
 - **Stufe 1 · Rüstungsroutine:** Leichte Rüstung: voller GES-Bonus ab Stufe 1. Mittlere Rüstung: Basis-RK 14 und GES bis +2; ab Stufe 10 bis +4, ab Stufe 16 ohne Begrenzung. Jungritterplatte: Basis-RK 15 ohne GES; Gegenstandsschutz ersetzt den Grundschutz. Schild und stärkste RK-Haltung zählen zusätzlich.
-- **Stufe 6 · Verteidiger der Reling:** Die vier Grundslots sollen mindestens eine Fernkampf- und eine Nahkampftechnik enthalten. Die Empfehlung vergibt Säbel und Dreizack, bevor weitere Schüsse gewählt werden.
-- **Stufe 15 · Wachsamer Ausguck:** +2 auf manuell ausgewertete Wahrnehmungsproben über freier See; Vögel handeln nicht automatisch mit.
-- **Stufe 20 · Meister beider Distanzen:** Nach einem bezahlten Wechsel zwischen Fern- und Nahwaffe erhält der erste passende Wyrmtanz-Angriff im selben Beitrag +1 Angriff. Waffenwechsel bleibt kostenpflichtig.
+- **Stufe 5 · Seeblick:** Einmal +1 auf den ersten passenden Schuss von nachweislich bewegtem Deck aus.
+- **Stufe 7 · Wende zur Seitenwaffe:** Nach bezahltem Wechsel zur Nahwaffe mindert deren erster gedeckter Treffer den nächsten passenden Nahkampftreffer um 1.
+- **Stufe 8 · Wechsel zur Schusswaffe:** Der erste Schuss nach bezahltem Wechsel gleicht einen vorhandenen einpunktigen Stellungsabzug aus.
+- **Stufe 10 · Beide Distanzen:** Der Wechselbonus gilt auch beim Wechsel aus einer bezahlten Deckung innerhalb desselben Beitragsablaufs.
+- **Stufe 14 · Halt an der Reling:** Gelingt die erste bezahlte Dreizackbindung nach dem Wechsel, erhält ihr bestehender Rettungs-SG +1.
+- **Stufe 16 · Geschlossene Seitenwaffe:** Nach einer passenden Strömungs- oder Tiefwassertechnik steigt der einstellige Nahkampfschutz auf 2.
+- **Stufe 18 · Wechsel im Gedränge:** Eine vorhandene bezahlte Strömungsdeckung kann den Übergang bis zum nächsten eigenen Beitrag vorbereiten.
+- **Stufe 20 · Meister beider Distanzen:** Der erste vollwertige Techniktreffer nach bezahltem Fern-Nah-Wechsel erhält zusätzlich +1 auf den Trefferwurf, einmal pro Beitrag.
 
 ### Tanz der jungen Welle · 1–6
 
@@ -418,11 +435,15 @@ Sattelangriffe erfordern ein tatsächlich geführtes Reittier und den Status ber
 
 ### Klassenmerkmale
 
-- **Stufe 1 · Trittsicherer Reisender:** +2 auf manuell ausgewertete Reitproben in Hügeln und Küstenpfaden; keine zusätzlichen Aktionen des Rosses.
 - **Stufe 1 · Rüstungsroutine:** Leichte Rüstung: voller GES-Bonus ab Stufe 1. Mittlere Rüstung: Basis-RK 14 und GES bis +2; ab Stufe 10 bis +4, ab Stufe 16 ohne Begrenzung. Jungritterplatte: Basis-RK 15 ohne GES; Gegenstandsschutz ersetzt den Grundschutz. Schild und stärkste RK-Haltung zählen zusätzlich.
-- **Stufe 6 · Sicher im Sattel:** +1 Angriff bei ausdrücklich berittenen Wyrmtanz-Techniken. Zu Fuß entfällt dieser Bonus.
-- **Stufe 15 · Hut des Reisenden:** Eine schadenslose Schutztechnik darf auch das eigene Ross in 2 m Reichweite wählen. Kosten und Dauer bleiben gleich.
-- **Stufe 20 · Meister der Wende:** Eine Eigenbewegung einer berittenen Strömungstechnik darf einmal pro Beitrag 2 m weiter reichen. Sie addiert sich nicht zu Weiter Bogen.
+- **Stufe 5 · Trittsicherer Reisender:** Einmal +1 auf die tatsächliche Landungsrettung nach dem Abwurf.
+- **Stufe 7 · Rückkehr in den Stand:** Die gelungene Landung bereitet kurzzeitig die erste bezahlte Fußtechnik vor.
+- **Stufe 8 · Abgesessene Ruhe:** Die erste Fußtechnik nach dem Abwurf kann einen einpunktigen Stellungsabzug ausgleichen.
+- **Stufe 10 · Geschlossene Wende:** Nach einem gelungenen berittenen Wyrmtanz-Angriff mit eigener Deckung wird der nächste Nahkampftreffer einmal um 1 gemindert.
+- **Stufe 14 · Fester Tritt:** Der Bonus auf die Landung steigt auf +2.
+- **Stufe 16 · Hut des Reisenden:** Eine bezahlte Schutztechnik am eigenen Ross kann dessen nächsten physischen Nahkampftreffer um 1 mindern.
+- **Stufe 18 · Wende der Strömung:** Eine passende Strömungstechnik erhöht den vorbereiteten Sattelschutz auf 2.
+- **Stufe 20 · Zwischen Sattel und Boden:** Die vorbereitete erste Fußtechnik kann auch aus einem bestätigten freiwilligen Absitzen folgen.
 
 ### Tanz der jungen Welle · 1–6
 
@@ -535,6 +556,14 @@ Jede Wyrmform hat eine feste Waffenführung. Ein Zauberstab muss als Nahkampfwaf
 ### Klassenmerkmale
 
 - **Stufe 1 · Rüstungsroutine:** Leichte Rüstung: voller GES-Bonus ab Stufe 1. Mittlere Rüstung: Basis-RK 14 und GES bis +2; ab Stufe 10 bis +4, ab Stufe 16 ohne Begrenzung. Jungritterplatte: Basis-RK 15 ohne GES; Gegenstandsschutz ersetzt den Grundschutz. Schild und stärkste RK-Haltung zählen zusätzlich.
+- **Stufe 5 · Stand am Kanalisator:** Einmal +1 auf eine Konzentrationsrettung beim aufrechterhaltenen passenden Zauber mit zugeordnetem und weiter geführtem Stab oder Dreizack.
+- **Stufe 7 · Freie Wyrmführung:** Bezahlte Stab- oder Dreizackdeckung bereitet den geführten Fokus vor.
+- **Stufe 8 · Geführter Schutz:** Der Konzentrationsbonus steigt nach passender Fokusdeckung auf +2.
+- **Stufe 10 · Gelehrte Wyrmform:** Fließende Schwertantwort, brandende Bindung, steigende Stabwacht und peitschende Rückführung erhalten ihren eigenen passiven Vorteil.
+- **Stufe 14 · Sicherer Wyrmgriff:** Einmal +1 auf die Rettung gegen Entwaffnen während der bezahlten Deckung einer erlernten Wyrmform.
+- **Stufe 16 · Druck und Rückfluss:** Der Vorteil der gelernten Waffenform wird für eine passende vorbereitete Folge stärker.
+- **Stufe 18 · Festigkeit am Fokus:** Die vorbereitete Führung mindert den ersten physischen Nahkampftreffer während der gehaltenen Konzentration um 1.
+- **Stufe 20 · Meisterschaft der erlernten Form:** Der Spitzenwert des gewählten Waffenwegs gilt einmal für die vorbereitete Folge. Die Fokusführung vertieft den Konzentrationsbonus auf +3.
 
 ### Drachentanz Form · Tanz des Jungdrachens · 1–6
 
@@ -548,7 +577,7 @@ Jede Wyrmform hat eine feste Waffenführung. Ein Zauberstab muss als Nahkampfwaf
 | 2 | Geschuppte Deckung |  | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | +2 RK bis zum Ende des nächsten eigenen Beitrags. Ersetzt andere Jungdrachen-Schutzhaltungen. Waffe: Beliebig. Geführte Waffe, ihre Reichweite und gegebenenfalls Munition beachten. |
 | 2 | Verwurzelte Schuppe |  | 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Der nächste schädigende Treffer verursacht 4 Schaden weniger. Einmalig; ersetzt andere Jungdrachen-Schutzhaltungen. Waffe: Beliebig. Geführte Waffe, ihre Reichweite und gegebenenfalls Munition beachten. |
 | 2 | Gesammelter Blick |  | 1 Bonusaktion | Kein Schaden | Kein Schaden | — | +2 auf den nächsten Waffen- oder Technikangriff; auch ein Fehlschlag verbraucht die Vorbereitung. Waffe: Beliebig. Geführte Waffe, ihre Reichweite und gegebenenfalls Munition beachten. |
-| 2 | Täuschende Klaue |  | 1 Aktion + 1 Bonusaktion | 1W10 | 1W10 | — | Normaler Waffenschaden. Bei Treffer erhält der eigene nächste Waffen- oder Technikangriff Vorteil; einmalig. Waffe: Beliebig. Geführte Waffe, ihre Reichweite und gegebenenfalls Munition beachten. |
+| 2 | Täuschende Klaue |  | 1 Aktion + 1 Bonusaktion | 1W10 | 2W10 | — | Normaler Waffenschaden. Bei Treffer erhält der eigene nächste Waffen- oder Technikangriff Vorteil; einmalig. Waffe: Beliebig. Geführte Waffe, ihre Reichweite und gegebenenfalls Munition beachten. |
 | 3 | Stäubende Schwinge |  | 1 Aktion + 1 Reaktion | 1W10 | 1W10 | GES SG 10 + Waffenattribut + Kompetenz | Normaler Waffenschaden; GES-Rettung SG 10 + Waffenattribut + Kompetenz, bei Scheitern Liegend: keine Bonusaktion im nächsten eigenen Beitrag. Waffe: Beliebig. Geführte Waffe, ihre Reichweite und gegebenenfalls Munition beachten. |
 | 3 | Gebundene Klaue |  | 1 Aktion + 1 Bonusaktion | 1W10 | 1W10 | KRF SG 10 + Waffenattribut + Kompetenz | Normaler Waffenschaden; KRF-Rettung SG 10 + Waffenattribut + Kompetenz, bei Scheitern keine Reaktion im nächsten eigenen Beitrag. Waffe: Beliebig. Geführte Waffe, ihre Reichweite und gegebenenfalls Munition beachten. |
 | 4 | Unruhiger Griff |  | 1 Aktion + 1 Reaktion | 1W10 | 1W10 | KRF SG 10 + Waffenattribut + Kompetenz | Normaler Waffenschaden; KRF-Rettung SG 10 + Waffenattribut + Kompetenz, bei Scheitern keine Bonusaktion im nächsten eigenen Beitrag. Waffe: Beliebig. Geführte Waffe, ihre Reichweite und gegebenenfalls Munition beachten. |
@@ -576,12 +605,12 @@ Stand, kurzer Waffenweg und kontrollierte Kraft. Die Grundausbildung wird an der
 | ---: | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Leiser Stab | Kampfstab oder nahkampftauglicher Zauberstab | 1 Bonusaktion | 1W4 | 1W4 | — | Ein schwacher physischer Bonusangriff mit höchstens W4 je Waffenwürfel; keine Magie. Kampfstab oder nahkampftauglicher Zauberstab |
 | 2 | Erste Spitze | Dreizack | 1 Aktion | 1W10 | 2W10 | — | Ein regulärer Treffer mit Waffenwürfeln und begrenztem Technikbonus. Dreizack |
-| 3 | Erster Morgenstern | Morgenstern | 1 Aktion | 1W10 | 2W10 | — | Ein regulärer physischer Treffer; kein pauschales Umgehen von Rüstung. Morgenstern |
+| 3 | Erster Morgenstern | Morgenstern oder Flegel | 1 Aktion | 1W10 | 2W10 | — | Ein regulärer physischer Treffer; kein pauschales Umgehen von Rüstung. Morgenstern oder Flegel |
 | 4 | Stab der Schwelle | Kampfstab oder nahkampftauglicher Zauberstab | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 RK bis zum Ende des nächsten eigenen Beitrags. Kampfstab oder nahkampftauglicher Zauberstab |
 | 5 | Gebundene Spitze | Dreizack | 1 Aktion + 1 Reaktion | 1W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; nach misslungenem KRF-Rettungswurf −1 Angriff für einen eigenen Beitrag. Dreizack |
 | 6 | Erste Klingenwelle | Schwert | 1 Aktion + 1 Bonusaktion | 1W10 | 2W10 | — | Ein Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. Schwert |
 | 1 | Erste ruhige Klinge | Schwert | 1 Aktion | 1W10 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Schwert |
-| 3 | Sternhut des Schülers | Morgenstern | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Morgenstern |
+| 3 | Sternhut des Schülers | Morgenstern oder Flegel | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Morgenstern oder Flegel |
 | 4 | Schwellenstoß | Kampfstab oder nahkampftauglicher Zauberstab | 1 Aktion | 1W10 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Kampfstab oder nahkampftauglicher Zauberstab |
 | 6 | Ruhe der drei Spitzen | Dreizack | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Dreizack |
 
@@ -595,10 +624,10 @@ Eigene Übergänge, Waffenwechsel und Übungen vertiefen das gewählte Fundament
 | 7 | Kehrender Saphir | Kampfstab oder nahkampftauglicher Zauberstab | 1 Aktion + 1 Bonusaktion | 1W10+1W4 | 2W10 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Kampfstab oder nahkampftauglicher Zauberstab |
 | 7 | Kehrende Zinken | Dreizack | 1 Aktion | 1W10+1W4 | 2W10 | — | Ein regulärer Techniktreffer mit Aufbau-Technikbonus. Dreizack |
 | 8 | Freie Klingenlinie | Schwert | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden; +1 RK und +1 Angriff für einen eigenen Beitrag. Schwert |
-| 8 | Freie Morgensternwende | Morgenstern | 1 Aktion + 1 Bonusaktion | 1W10+1W4 | 2W10 | — | Ein Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. Morgenstern |
+| 8 | Freie Morgensternwende | Morgenstern oder Flegel | 1 Aktion + 1 Bonusaktion | 1W10+1W4 | 2W10 | — | Ein Techniktreffer; auf Treffer +1 RK für einen eigenen Beitrag. Morgenstern oder Flegel |
 | 7 | Freie Stabwacht | Kampfstab oder nahkampftauglicher Zauberstab | 1 Reaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. Kampfstab oder nahkampftauglicher Zauberstab |
 | 7 | Freie Schwertwende | Schwert | 1 Aktion + 1 Bonusaktion | 1W10+2W4-1 | 2W10+1W4-1 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Der nächste gegnerische Waffen-/Technikangriff gegen die Figur erhält −1 Angriff; auch ein Fehlschlag verbraucht den Schutz. Verfällt spätestens am Ende des nächsten eigenen Beitrags. Schwert |
-| 8 | Freier Sternhieb | Morgenstern | 1 Aktion + 1 Reaktion | 1W10+1W4 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Morgenstern |
+| 8 | Freier Sternhieb | Morgenstern oder Flegel | 1 Aktion + 1 Reaktion | 1W10+1W4 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Morgenstern oder Flegel |
 | 8 | Freie Zinkenwacht | Dreizack | 1 Reaktion + 1 Bonusaktion | Kein Schaden | Kein Schaden | — | Kein Schaden. +1 RK für einen eigenen Beitrag; gleichartige Deckung wird ersetzt. +1 Angriff für einen eigenen Beitrag; Vorbereitungen werden nicht addiert. Dreizack |
 
 ### Wyrmtanz Pfad · Tanz des fließenden Wyrms · 9–20
@@ -668,15 +697,15 @@ Morgensternform mit beschleunigten, eng zurückgenommenen Hieben. Offensiver Dru
 
 | Stufe | Attacke | Waffe | Kosten | 1W10-Waffe bei Freigabe | 1W10-Waffe auf Stufe 20 | Zusatzrettung | Wirkung / Voraussetzung |
 | ---: | --- | --- | --- | --- | --- | --- | --- |
-| 9 | Peitschender Auftakt | Morgenstern | 1 Aktion + 1 Reaktion | 1W10+2W6 | 2W10+1W6 | — | Technikschaden; −1 eigener Angriff und −1 Zielverteidigung nur für diesen Wurf. Morgenstern |
-| 10 | Kurzer Sternhieb | Morgenstern | 1 Aktion | 1W10+1W6 | 2W10 | — | Ein regulärer physischer Techniktreffer. Morgenstern |
-| 11 | Stern gegen Stahl | Morgenstern | 1 Aktion + 1 Reaktion | 1W10+1W6 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Morgenstern |
-| 12 | Geschlossene Sternwende | Morgenstern | 1 Aktion + 1 Bonusaktion | 1W10+1W6 | 2W10 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Morgenstern |
-| 13 | Offener Sternbogen | Morgenstern | 1 Aktion + 1 Besondere Aktion | 2W10+1W8 | 3W10 | — | Technikschaden gegen −1 Zielverteidigung; danach eigene RK −1 für einen Beitrag. Morgenstern |
-| 15 | Drang des Morgensterns | Morgenstern | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −2 Angriff für einen eigenen Beitrag. Morgenstern |
-| 17 | Peitschenruf | Morgenstern | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1W6 | 3W10+1W6 | — | Ein starker Techniktreffer; −1 eigener Angriff und −1 Zielverteidigung nur für diesen Wurf. Morgenstern |
-| 20 | Meister des Sternbogens | Morgenstern | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6+1W4 | 5W10+1W6+1W4 | — | Ein Meistertreffer; −1 eigener Angriff, −1 Zielverteidigung und danach eigene RK −1 für einen Beitrag. Morgenstern |
-| 14 | Stern im Rücklauf | Morgenstern | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Morgenstern |
-| 16 | Stiller Sternring | Morgenstern | 1 Aktion + 1 Besondere Aktion | 2W10+1W8 | 3W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Morgenstern |
-| 18 | Gebundene Sternlinie | Morgenstern | 1 Aktion + 1 Reaktion | 2W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Morgenstern |
-| 19 | Ruhender Meisterstern | Morgenstern | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1W6 | 3W10+1W6 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Morgenstern |
+| 9 | Peitschender Auftakt | Morgenstern oder Flegel | 1 Aktion + 1 Reaktion | 1W10+2W6 | 2W10+1W6 | — | Technikschaden; −1 eigener Angriff und −1 Zielverteidigung nur für diesen Wurf. Morgenstern oder Flegel |
+| 10 | Kurzer Sternhieb | Morgenstern oder Flegel | 1 Aktion | 1W10+1W6 | 2W10 | — | Ein regulärer physischer Techniktreffer. Morgenstern oder Flegel |
+| 11 | Stern gegen Stahl | Morgenstern oder Flegel | 1 Aktion + 1 Reaktion | 1W10+1W6 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −1 Angriff für einen eigenen Beitrag. Morgenstern oder Flegel |
+| 12 | Geschlossene Sternwende | Morgenstern oder Flegel | 1 Aktion + 1 Bonusaktion | 1W10+1W6 | 2W10 | — | Technikschaden; auf Treffer +1 RK für einen eigenen Beitrag. Morgenstern oder Flegel |
+| 13 | Offener Sternbogen | Morgenstern oder Flegel | 1 Aktion + 1 Besondere Aktion | 2W10+1W8 | 3W10 | — | Technikschaden gegen −1 Zielverteidigung; danach eigene RK −1 für einen Beitrag. Morgenstern oder Flegel |
+| 15 | Drang des Morgensterns | Morgenstern oder Flegel | 1 Aktion + 1 Reaktion | 1W10+1W8 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Technikschaden; KRF-Rettungswurf oder −2 Angriff für einen eigenen Beitrag. Morgenstern oder Flegel |
+| 17 | Peitschenruf | Morgenstern oder Flegel | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1W6 | 3W10+1W6 | — | Ein starker Techniktreffer; −1 eigener Angriff und −1 Zielverteidigung nur für diesen Wurf. Morgenstern oder Flegel |
+| 20 | Meister des Sternbogens | Morgenstern oder Flegel | 1 Aktion + 1 Bonusaktion + 1 Reaktion + 1 Besondere Aktion + 1 Aura-Fokuspunkt | 5W10+1W6+1W4 | 5W10+1W6+1W4 | — | Ein Meistertreffer; −1 eigener Angriff, −1 Zielverteidigung und danach eigene RK −1 für einen Beitrag. Morgenstern oder Flegel |
+| 14 | Stern im Rücklauf | Morgenstern oder Flegel | 1 Aktion | 1W10+1W8 | 2W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Morgenstern oder Flegel |
+| 16 | Stiller Sternring | Morgenstern oder Flegel | 1 Aktion + 1 Besondere Aktion | 2W10+1W8 | 3W10 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Morgenstern oder Flegel |
+| 18 | Gebundene Sternlinie | Morgenstern oder Flegel | 1 Aktion + 1 Reaktion | 2W10 | 2W10 | KRF SG 10 + Waffenattribut + Kompetenz | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. KRF-Rettungswurf gegen den gemeinsamen Waffen-SG oder −1 Angriff für einen eigenen Beitrag; nicht additiv. Morgenstern oder Flegel |
+| 19 | Ruhender Meisterstern | Morgenstern oder Flegel | 1 Aktion + 1 Reaktion + 1 Besondere Aktion | 3W10+1W6 | 3W10+1W6 | — | Ein einzelner Techniktreffer mit der tatsächlich geführten Waffe und den aufgeführten Kosten. Morgenstern oder Flegel |

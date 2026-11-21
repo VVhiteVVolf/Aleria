@@ -1,6 +1,6 @@
 import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
 import { getAuraTargetMechanics } from './combat-profile-model.js?v=20260928-equipment-art-v4';
-import { reconcileCriticalTemporaryOwnership } from '../combat-critical/combat-critical-lifecycle.js';
+import { ownsExpiringTemporaryHitPoints, reconcileCriticalTemporaryOwnership } from '../combat-critical/combat-critical-lifecycle.js';
 
 const NUMERIC_MECHANIC_KEYS = Object.freeze([
   'attack', 'damage', 'armorClass', 'initiative', 'skill', 'savingThrow',
@@ -185,7 +185,7 @@ function reconcileAuraTemporaryHitPoints(state = {}, applications = [], encounte
   const nextPeak = Math.max(0, ...nextSources.map(entry => entry.maximum));
   const baseline = previousTracker?.baseline ?? previousTemporary;
   const baselineCriticalConditionIds = previousTracker?.baselineCriticalConditionIds
-    || (previousTracker ? [] : (state.temporaryConditions || []).filter(condition => condition.active !== false && condition.criticalTemporaryOwned).map(condition => condition.id));
+    || (previousTracker ? [] : (state.temporaryConditions || []).filter(condition => condition.active !== false && ownsExpiringTemporaryHitPoints(condition)).map(condition => condition.id));
   const adjustedTemporary = previousTracker
     ? (previousTemporary > previousPeak
       ? previousTemporary

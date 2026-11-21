@@ -6,7 +6,10 @@ export function sanitizeRegeneration(value) {
     resourceId: String(value.resourceId).slice(0, 120),
     constitutionMultiplier: Math.max(0, Math.min(4, Math.trunc(Number(value.constitutionMultiplier) || 0))),
     blockedByBurning: value.blockedByBurning === true,
-    burningArmorPenalty: Math.max(0, Math.min(10, Number(value.burningArmorPenalty) || 0))
+    burningArmorPenalty: Math.max(0, Math.min(10, Number(value.burningArmorPenalty) || 0)),
+    ...(value.timing === 'end' ? { timing: 'end' } : {}),
+    ...(value.burningDamage === '1d4' ? { burningDamage: '1d4' } : {}),
+    ...(value.incomingBurningBonus === '1d4' ? { incomingBurningBonus: '1d4' } : {})
   };
 }
 
@@ -21,6 +24,10 @@ export function isBurning(conditions = []) {
   ));
 }
 
+export function isActivelyBurning(conditions = []) {
+  return conditions.some(condition => condition.active !== false && /^(brennend|burning)$/i.test(String(condition.name || '')));
+}
+
 export function getBurningArmorPenalty(profile = {}) {
   const trait = getRegenerationTrait(profile);
   return trait && isBurning([...(profile.conditions || []), ...(profile.temporaryConditions || [])])
@@ -33,11 +40,19 @@ export function applyRegenerationFireExposure(conditions, profile, damageType, i
     || !trait?.regeneration.blockedByBurning) return conditions;
   const burn = {
     id: 'regeneration-fire-exposure', sourceConditionId: 'regeneration-fire-exposure',
-    presetId: 'burning', name: 'Verbrannt', active: true, source: 'Feuerschaden',
-    description: `Trollblut setzt aus; Rüstungsklasse −${trait.regeneration.burningArmorPenalty}. Erneutes Feuer erneuert die Dauer.`,
+    presetId: trait.regeneration.timing === 'end' ? 'burned' : 'burning', name: 'Verbrannt', active: true, source: 'Feuerschaden',
+    description: `Trollblut setzt aus.${trait.regeneration.burningArmorPenalty ? ` Rüstungsklasse −${trait.regeneration.burningArmorPenalty}.` : ''} Erneutes Feuer erneuert die Dauer.`,
     duration: 'Bis zum Ende des nächsten eigenen Kampfposts',
     durationModel: { kind: 'actor-comments', remainingActorComments: 1 },
     remainingActorComments: 1, mechanics: {}
   };
   return [...conditions.filter(condition => condition.id !== burn.id), burn];
+}
+
+export function applyTenebriumExposure(conditions, profile, damageKinds, incoming) {
+  if (incoming <= 0 || !damageKinds.includes('tenebrium') || !profile.encounterTags?.includes('tenebrium-empfindlich')) return conditions;
+  const id = 'tenebrium-gehemmt';
+  return [...conditions.filter(condition => condition.id !== id), { id, name: 'Durch Tenebrium gehemmt', active: true,
+    source: 'Tenebrium', description: '−3 m Bewegung. Magische Kampfhandlungen sind gesperrt.', blocksMagic: true,
+    durationModel: { kind: 'actor-comments', remainingActorComments: 1 }, mechanics: { movement: -3 } }];
 }

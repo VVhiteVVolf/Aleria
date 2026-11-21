@@ -22,7 +22,11 @@ function renderStateRecords(resolution) {
 
 export function renderEvaluationLedger(resolution = {}, { renderEffectResult = () => '', summarizeRuleEffects = () => '' } = {}) {
   const effects = (resolution.effectResults || []).map(renderEffectResult).filter(Boolean);
-  const rules = (resolution.ruleApplications || []).map(rule=>`<b>${escape(rule.sourceActorName || 'Regelquelle')} · ${escape(rule.ruleName)}</b><span>${escape(summarizeRuleEffects(rule.effects))}</span>`);
+  const rules = (resolution.ruleApplications || []).map(rule => {
+    const narrative = (rule.resultEffects || []).filter(effect => effect.type === 'narrative').map(effect => effect.notes).filter(Boolean);
+    const description = [summarizeRuleEffects(rule.effects), ...narrative].filter(Boolean).join(' · ');
+    return `<b>${escape(rule.sourceActorName || 'Regelquelle')} · ${escape(rule.ruleName)}</b><span>${escape(description)}</span>`;
+  });
   const conflicts = (resolution.ruleConflicts || []).map(conflict=>`<b>Regelkonflikt</b><span>${escape((conflict.applications || []).map(a=>a.ruleName).join(' ↔ ') || conflict.message || 'Entscheidung durch Beteiligte oder Erzähler')}</span>`);
   const notes = (resolution.mechanicNotes || []).map(note=>`<b>Waffenregel</b><span>${escape(note)}</span>`);
   if (resolution.turnStart) notes.push(`<b>${escape(resolution.turnStart.name)} · Zugbeginn</b><span>${resolution.turnStart.suppressed ? 'durch Feuer unterdrückt' : `+${Number(resolution.turnStart.restored)||0} LP${resolution.turnStart.roll?.notation ? ` (${escape(resolution.turnStart.roll.notation)})` : ''}`}</span>`);

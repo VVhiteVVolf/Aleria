@@ -21,7 +21,7 @@ import { buildCombatProfileAiSnapshot } from './combat-profile-context.js?v=2026
 import { parseDamageFormula, combineDamageFormulas } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
 import { getCenyrClassActionModifiers, getCenyrPathActionEffects } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260909-dragon-parent-v2';
 import { resolveCenyrTechniqueWeaponRules } from '../classes/cenyr/cenyr-technique-weapon-rules.js?v=20260909-dragon-parent-v2';
-import { getTechniqueDamageScaling, resolveTechniqueDamageFormula, getLightAttackDamageModifier } from './combat-technique-damage.js?v=20260905-party-combat-v1';
+import { getTechniqueDamageScaling, getTechniquePrimaryDamageIndex, resolveTechniqueDamageFormula, getLightAttackDamageModifier } from './combat-technique-damage.js?v=20261121-class-passives-v1';
 import { getAutofilledCenyrCombatProfile } from '../classes/cenyr/cenyr-combat-profile-autofill.js?v=20260928-equipment-art-v4';
 import { getActiveCombatWeapon } from './combat-equipment-state.js?v=20260905-combat-weapon-slots-v1';
 import { getCombatWeaponLoadout, getCombatTechniqueWeapon, usesCharacterWeaponLoadout, hasEquippedCombatShield } from './combat-weapon-loadout.js';
@@ -35,6 +35,7 @@ import { resolveTechniqueSaveDc } from './combat-technique-save-dc.js';
 import { getCombatWeaponAttackValues } from './combat-weapon-attack-values.js';
 import { getHealthTaskError } from '../character-health/health-trait-policy.js';
 import { getVoluntaryCombatActionBlock } from './combat-action-permission.js';
+import { getRuntimeCreatureAction } from './combat-creature-actions.js';
 
 let emptyCharacterTargetProfile = null;
 let emptyCreatureTargetProfile = null;
@@ -121,6 +122,8 @@ function buildCombatProfileActions(character, profile, options = {}) {
       const damageWeapon = getPairedAttackWeapon(activeWeapon || {}, profile, technique);
       const formula = resolveTechniqueDamageFormula(technique, activeWeapon || {}, profile, weaponRules);
       const scaling = getTechniqueDamageScaling(technique, profile, weaponRules);
+      const followUpWeaponFormula = scaling?.level > 20 && technique.followUpAttack?.enabled
+        ? resolveTechniqueDamageFormula(technique, activeWeapon || {}, profile, { ...weaponRules, maximumTrainingLevel: 20 }) : '';
       const versatileFormula = technique.damageModel?.mode === 'weapon-dice' && activeWeapon?.versatileDamageFormula
         ? resolveTechniqueDamageFormula(technique, { ...activeWeapon, damageFormula: activeWeapon.versatileDamageFormula }, profile, weaponRules) : '';
       const secondarySaveDc = resolveTechniqueSaveDc(technique.secondarySave, calculation, activeWeapon || {});
@@ -132,23 +135,38 @@ function buildCombatProfileActions(character, profile, options = {}) {
       });
       const pathAction = getCenyrPathActionEffects(profile, { technique, weapon: activeWeapon });
       const unscaledDamageModifier = getWeaponDamageModifier(calculation, activeWeapon || {}) + Number(technique.damageBonus || 0) + classModifiers.damageBonus + weaponRules.damageBonus;
-      const techniqueEffects = (technique.effects || []).map(effect => (
-        pathAction.movementBonus && effect.type === 'move' && effect.target === 'self'
-          ? { ...effect, movementMeters: Number(effect.movementMeters || 0) + pathAction.movementBonus }
-          : effect
-      ));
+      const primaryDamageIndex = getTechniquePrimaryDamageIndex(technique);
+      const primaryDamage = technique.effects?.[primaryDamageIndex];
+      const fixedDamageEffectId = primaryDamage?.amount > 0 && !primaryDamage.formula ? primaryDamage.id : '';
+      const techniqueEffects = (technique.effects || []).map((effect, index) => {
+        if (scaling && formula && index === primaryDamageIndex && (effect.formula || effect.amount > 0)) {
+          return /^\d+$/.test(formula) ? { ...effect, formula: '', amount: Number(formula) } : { ...effect, formula, amount: 0 };
+        }
+        if (pathAction.movementBonus && effect.type === 'move' && effect.target === 'self') {
+          return { ...effect, movementMeters: Number(effect.movementMeters || 0) + pathAction.movementBonus };
+        }
+        return effect;
+      });
       return {
         id: `technique:${technique.id}`,
         sourceId: technique.id,
         kind: 'technique',
-        nonDamaging: technique.damageModel?.mode === 'none',
+        combatStyleId: technique.combatStyleId,
+        combatStyleFormId: technique.combatStyleFormId,
+        requiresMounted: technique.cenyrTraining?.requiresMounted === true || technique.cultureTraining?.requiresMounted === true,
+        nonDamaging: technique.damageModel?.mode === 'none' || (!formula && primaryDamageIndex < 0),
         requiresTwoHands: !!(technique.requiresTwoHands || technique.cenyrTraining?.requiresTwoHands || getHuskarlTechniqueRequirements(technique).requiresTwoHands),
         requiresVoice: technique.requiresVoice === true,
         kindLabel: technique.activationType === 'reaction' ? 'Reaktion' : (technique.activationType === 'bonus-action' ? 'Bonusaktion' : 'Technik'),
         name: technique.name,
         formula,
+        ...(fixedDamageEffectId ? { fixedDamageEffectId } : {}),
         baseWeaponFormula: activeWeapon?.damageFormula,
         versatileWeaponFormula: activeWeapon?.versatileDamageFormula,
+        ...(followUpWeaponFormula ? { followUpWeaponFormula,
+          versatileFollowUpWeaponFormula: activeWeapon?.versatileDamageFormula
+            ? resolveTechniqueDamageFormula(technique, { ...activeWeapon, damageFormula: activeWeapon.versatileDamageFormula }, profile,
+              { ...weaponRules, maximumTrainingLevel: 20 }) : '' } : {}),
         lightAttack: !!technique.damageModel?.lightAttack,
         unscaledDamageModifier,
         weapon: {
@@ -211,6 +229,10 @@ function buildCombatProfileActions(character, profile, options = {}) {
         kindLabel: delivery === 'song' ? 'Gesang' : (delivery === 'prayer' ? 'Gebet' : (isSpell ? 'Magische Fähigkeit' : 'Fähigkeit')),
         name: ability.name,
         formula: ability.rollFormula,
+        ...(ability.maximumTargets ? { maximumTargets: ability.maximumTargets } : {}),
+        ...(ability.forcedRollMode ? { forcedRollMode: ability.forcedRollMode } : {}),
+        ...(ability.holdAction ? { holdAction: true } : {}),
+        ...(ability.requiresOwnHold ? { requiresOwnHold: true } : {}),
         weapon: {
           ...(delivery === 'weapon' ? (activeWeapon || {}) : {}),
           id: ability.id,
@@ -231,6 +253,7 @@ function buildCombatProfileActions(character, profile, options = {}) {
         resolutionMode: ability.resolutionType
           || (ability.rollFormula ? (isSpell ? 'spell-attack' : 'weapon-attack') : 'automatic'),
         saveAttribute: ability.saveAttribute || 'dexterity',
+        ...(ability.saveDc != null ? { spellSaveDc: ability.saveDc } : {}),
         halfDamageOnSave: !!ability.halfDamageOnSave,
         effects: ability.effects || [],
         concentration: !!ability.concentration,
@@ -290,6 +313,8 @@ function buildCombatProfileActions(character, profile, options = {}) {
       halfDamageOnSave: !!spell.halfDamageOnSave,
       effects: spell.effects || [],
       concentration: !!spell.concentration,
+      school: spell.school,
+      tags: spell.tags,
       channelComments: Number(spell.channelComments || 0),
       upcast: spell.upcast || null,
       spellLevel: spell.level,
@@ -426,6 +451,8 @@ export function resolveCombatProfile(character = {}, options = {}) {
   const profile = resolveCharacterCombatProfile(effectiveCharacter, { definitions: options.definitions });
   const segmentKind = String(options.segmentKind || '');
   const allActions = buildCombatProfileActions(effectiveCharacter, profile, options);
+  const runtimeAction = getRuntimeCreatureAction(options.actionId, profile);
+  if (runtimeAction) allActions.push(runtimeAction);
   const actions = segmentKind ? allActions.filter(action => action.segmentKinds.includes(segmentKind)) : allActions;
   const selectedActionBase = actions.find(action => action.id === String(options.actionId || ''))
     || actions.find(action => action.default)
@@ -436,6 +463,10 @@ export function resolveCombatProfile(character = {}, options = {}) {
   const empowered = empowerAuraAttack(selectedAction, selectedAction?.weapon || profile.weapon, options.paymentMode, profile);
   return {
     ...profile,
+    ...(effectiveCharacter.entityType === 'creature' || effectiveCharacter.sourceCreatureId ? {
+      creatureType: String(effectiveCharacter.type || ''), creatureSpecies: String(effectiveCharacter.species || ''),
+      creatureGenus: String(effectiveCharacter.classification?.genus || '')
+    } : {}),
     characterId: String(effectiveCharacter.id || ''),
     name: String(effectiveCharacter.name || 'Unbekannt'),
     portrait: combatPortrait(effectiveCharacter),
@@ -499,7 +530,7 @@ export function getCombatActorProblems(profile = {}) {
   const problems = [];
   if (profile.equipmentPreparation?.error) problems.push('equipmentPreparation');
   if (!profile.characterId) problems.push('characterId');
-  const waiting = profile.profileActionId === COMBAT_WAIT_ACTION.id;
+  const waiting = profile.selectedAction?.kind === 'wait' || profile.profileActionId === COMBAT_WAIT_ACTION.id;
   const permission = waiting ? null : getVoluntaryCombatActionBlock(profile);
   if (permission) problems.push(permission.code);
   if (profile.selectedAction?.compatible === false) problems.push('incompatibleAction');
@@ -533,7 +564,7 @@ export function validateCombatActorProfile(profile = {}, { startedAction = null 
     && startedAction.profileActionId === profile.profileActionId;
   const missingFields = getCombatActorProblems(profile)
     .filter(problem => !['incapacitated', 'conditionBlocksActions'].includes(problem) || !continuingAction);
-  if (profile.profileActionId !== COMBAT_WAIT_ACTION.id && profile.weaponUnavailable) missingFields.push('disarmed');
+  if (profile.selectedAction?.kind !== 'wait' && profile.profileActionId !== COMBAT_WAIT_ACTION.id && profile.weaponUnavailable) missingFields.push('disarmed');
   return { ready: missingFields.length === 0, missingFields };
 }
 

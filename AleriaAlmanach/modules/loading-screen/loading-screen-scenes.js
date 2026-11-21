@@ -2,12 +2,16 @@ import { LOADING_SCREEN_JOURNEYS, mountLoadingScreenJourney } from './loading-sc
 import { HEROLDS_COUNCIL, mountLoadingScreenCouncil } from './loading-screen-council.js?v=20261120-chibi-courtyard-v8';
 import { OWETAS_COURTYARD, mountLoadingScreenCourtyard } from './loading-screen-courtyard.js?v=20261120-rosenflucht-v11';
 import { TIEFENWYRM_CHASE, mountLoadingScreenTiefenwyrm } from './loading-screen-tiefenwyrm.js?v=20261120-rosenflucht-v11';
+import { LOADING_SCREEN_VIGNETTES, mountLoadingScreenVignette } from './loading-screen-vignettes.js?v=20261120-ruhige-szenen-v1';
 
 const assetRoot = new URL('../../public/assets/loading-screen/', import.meta.url);
 const lastSceneKey = 'almanach.loadingScene';
-export const LOADING_SCREEN_SCENES = [OWETAS_COURTYARD, ...LOADING_SCREEN_JOURNEYS, TIEFENWYRM_CHASE, HEROLDS_COUNCIL];
+export const LOADING_SCREEN_SCENES = [
+  OWETAS_COURTYARD, ...LOADING_SCREEN_JOURNEYS, TIEFENWYRM_CHASE, HEROLDS_COUNCIL, ...LOADING_SCREEN_VIGNETTES
+];
 const sceneMounts = { journey: mountLoadingScreenJourney, council: mountLoadingScreenCouncil,
-  courtyard: mountLoadingScreenCourtyard, 'rose-chase': mountLoadingScreenTiefenwyrm };
+  courtyard: mountLoadingScreenCourtyard, 'rose-chase': mountLoadingScreenTiefenwyrm,
+  vignette: mountLoadingScreenVignette };
 
 export function chooseLoadingScreenScene({ random = Math.random, storage } = {}) {
   let lastScene;
@@ -48,8 +52,10 @@ export function mountLoadingScreenScene(scene, { signal, onGameActivity, isMusic
   let storage;
   try { storage = scene.ownerDocument.defaultView.sessionStorage; } catch { /* Storage kann gesperrt sein. */ }
   const variant = chooseLoadingScreenScene({ storage });
-  const people = new Intl.ListFormat('de', { type: 'conjunction' }).format(variant.cast.map(([, name]) => name));
-  art.setAttribute('aria-label', `${people} ${variant.description}.`);
+  const description = variant.cast
+    ? `${new Intl.ListFormat('de', { type: 'conjunction' }).format(variant.cast.map(([, name]) => name))} ${variant.description}`
+    : variant.description;
+  art.setAttribute('aria-label', `${description}.`);
   scene.dataset.loadingVariant = variant.id;
   scene.dataset.sceneKind = variant.kind || 'journey';
   const mountArt = sceneMounts[scene.dataset.sceneKind];
@@ -66,6 +72,7 @@ export function mountLoadingScreenScene(scene, { signal, onGameActivity, isMusic
       onGameActivity?.(active);
     }
   });
+  if (!showSpeaker) return null;
 
   function updateBanter() {
     const active = playing && !gameActive && !signal?.aborted;

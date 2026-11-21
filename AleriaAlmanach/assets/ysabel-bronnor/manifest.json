@@ -1,0 +1,81 @@
+{
+  "schema": "aleria.source-artwork",
+  "version": 1,
+  "assets": [
+    {
+      "id": "child-v1",
+      "path": "AleriaAlmanach/assets/ysabel-bronnor/child-v1.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/child-v1.png",
+      "generated": true,
+      "publicPath": "/AleriaAlmanach/assets/ysabel-bronnor/child-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 2324115,
+      "sha256": "128404f86d775100d7d92e676c00b0ca48cde2ca67b05a384172d06896e57993"
+    },
+    {
+      "id": "squire-v1",
+      "path": "AleriaAlmanach/assets/ysabel-bronnor/squire-v1.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/squire-v1.png",
+      "generated": true,
+      "publicPath": "/AleriaAlmanach/assets/ysabel-bronnor/squire-v1.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 2626075,
+      "sha256": "8806264cd8738d51483cb9825eef9fcb50c1830853cf0089febe5ec81658618b"
+    },
+    {
+      "id": "gwaedor-v4",
+      "path": "AleriaAlmanach/assets/ysabel-bronnor/gwaedor-v4.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/gwaedor-v4.png",
+      "generated": true,
+      "publicPath": "/AleriaAlmanach/assets/ysabel-bronnor/gwaedor-v4.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 2494771,
+      "sha256": "43761cc4a29bcecbb3c8781e5cfdb3156de36dea29ada8144a72b6283549c075"
+    },
+    {
+      "id": "neddwyn-v4",
+      "path": "AleriaAlmanach/assets/ysabel-bronnor/neddwyn-v4.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/neddwyn-v4.png",
+      "generated": true,
+      "publicPath": "/AleriaAlmanach/assets/ysabel-bronnor/neddwyn-v4.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 2373436,
+      "sha256": "fa1a681c62900e74fb50531d03a31e3024550dac2f90d671c2d9c0ff4ed4b925"
+    },
+    {
+      "id": "gwendolyn-v2",
+      "path": "AleriaAlmanach/assets/ysabel-bronnor/gwendolyn-v2.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/gwendolyn-ysabel-chat-original.png",
+      "source": "Nutzeranhang vom 21. November 2026",
+      "generated": false,
+      "publicPath": "/AleriaAlmanach/assets/ysabel-bronnor/gwendolyn-v2.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 2724187,
+      "sha256": "aa597244c42fedc493eba1ca4cc6ed79aee7cd5662b5a8daad33620676e64146"
+    },
+    {
+      "id": "ysabel-bronnor",
+      "path": "Stammbäume/assets/images/portraits/haus-bronnor/ysabel-bronnor.png",
+      "original": "Stammbäume/assets/images/portraits/haus-bronnor/ysabel-bronnor.png",
+      "generated": false,
+      "publicPath": "/Stammbäume/assets/images/portraits/haus-bronnor/ysabel-bronnor.png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 2135652,
+      "sha256": "b056790a4b0fa64ee4deabc388daa30b5e66fd332a43acb433e044eaebce0ba5"
+    }
+  ],
+  "additionalSources": [
+    {
+      "url": "https://i.imgur.com/2fsaiqu.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/gwendolyn-ysabel-user-original.png",
+      "sha256": "7f1bb7e707b4629aa3a3f408d1f5babfb136bc5a98cfaa6594950a8dfcec3e24",
+      "use": "Alternativfassung des Paarbilds im Quellenarchiv"
+    }
+  ]
+}

@@ -26,6 +26,7 @@ export async function resolveCombatConcentration({ profile, counterpart, hitPoin
     const applications = collectApplicableCombatRules({ phase: 'on-concentration-check', actionKind, profileActionId,
       sources, periods: rulePeriods, usedFrequencyKeys: usedRuleFrequencyKeys,
       state: { actorProfile: counterpart, targetProfile: profile, ...attack, damage, concentration: before,
+        reactionBudget: context.reactionBudget,
         reactionProfiles: [withCurrentCombatPermissionState(profile, hitPoints, conditions), ...(context.reactionProfiles || [])] } });
     markCombatRuleApplications(applications, usedRuleFrequencyKeys);
     const effects = mergeCombatRuleEffects(applications);

@@ -4,6 +4,12 @@ export function getConditionConcentrationOwnerId(condition = {}) {
   return String(condition.concentrationOwnerId || condition.durationModel?.concentrationOwnerId || '');
 }
 
+export function conditionsAfterHealing(conditions, before, after) {
+  if (!(Number(after?.current) > Number(before?.current))) return conditions;
+  const remaining = conditions.filter(condition => !condition.endsOnHealing);
+  return remaining.length === conditions.length ? conditions : remaining;
+}
+
 export function replacesRuntimeCondition(condition = {}, incoming = {}) {
   return Boolean(incoming.stanceGroup && condition.stanceGroup === incoming.stanceGroup)
     || Boolean(incoming.sourceConditionId && condition.sourceConditionId === incoming.sourceConditionId

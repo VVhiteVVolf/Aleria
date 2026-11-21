@@ -155,7 +155,7 @@
   function loadScene(root) {
     const target = root.querySelector('[data-loading-scene]');
     if (!target) return;
-    import('./loading-screen-scenes.js?v=20261120-rosenflucht-v11').then(({ mountLoadingScreenScene }) => {
+    import('./loading-screen-scenes.js?v=20261120-ruhige-szenen-v1').then(({ mountLoadingScreenScene }) => {
       if (lifetime.signal.aborted) return;
       scene = mountLoadingScreenScene(target, {
         signal: lifetime.signal,

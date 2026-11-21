@@ -8,3 +8,11 @@ const trainingTechniqueIds = new Set([
 export function isSharedJungdracheTrainingTechniqueId(id) {
   return trainingTechniqueIds.has(String(id || ''));
 }
+
+const controlTechniqueIds = new Set([
+  'staubende-schwinge', 'gebundene-klaue', 'unruhiger-griff', 'drachenklammer'
+].map(slug => `combat-style-drachentanz-jungdrache-${slug}`));
+
+export function isSharedJungdracheControlTechniqueId(id) {
+  return controlTechniqueIds.has(String(id || ''));
+}

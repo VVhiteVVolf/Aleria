@@ -1,0 +1,45 @@
+{
+  "version": 8,
+  "source": {
+    "file": "assets/loading-screen/source/owetas-quartett-innenhof-chibi-v8.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "frames": 1,
+    "bytes": 2566166,
+    "sha256": "4530d22f40004de71b5b75ab206675c284f7b0e9e55cc67a70310758a0b970b1"
+  },
+  "assets": [
+    {
+      "file": "public/assets/loading-screen/owetas-quartett-innenhof-chibi-v8-desktop.avif",
+      "size": [
+        1536,
+        1024
+      ],
+      "frames": 1,
+      "bytes": 155206,
+      "sha256": "a244c1064ba00d767bb2f89964313f5f001c0b81a30eceb311f608c57dcd8881"
+    },
+    {
+      "file": "public/assets/loading-screen/owetas-quartett-innenhof-chibi-v8-mobile.avif",
+      "size": [
+        768,
+        512
+      ],
+      "frames": 1,
+      "bytes": 58679,
+      "sha256": "d206d185e2d1b0ffaa706e85e46beda3dbc9f3b12aa66e150f225a4d53f33ecf"
+    },
+    {
+      "file": "public/assets/loading-screen/owetas-quartett-innenhof-chibi-v8-fallback.webp",
+      "size": [
+        1200,
+        800
+      ],
+      "frames": 1,
+      "bytes": 160588,
+      "sha256": "adbf11f09d74d827cd04c0f54ed6eaaa3c87f293f796d9418f00fa6a313e9e84"
+    }
+  ]
+}

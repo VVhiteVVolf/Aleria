@@ -43,12 +43,12 @@ test('Ruhige Schwelle resolves without hit or damage roll and expires after the 
   assert.equal(result.damage, null);
   const comments = [{ id: 'guard', characterId: actor.characterId, commentSegments: [{ combatResolution: result }] }];
   let state = deriveCombatStateFromComments(comments).get(actor.characterId);
-  assert.equal(state.temporaryConditions.length, 2, 'Explicit defence and the learned path stance each apply once.');
+  assert.equal(state.temporaryConditions.length, 3, 'Explicit defence, the learned path stance and the class guard each apply once.');
   const protectedActor = overlayCombatHitPointState(actor, state);
   assert.equal(protectedActor.totalDefense, actor.totalDefense + 2, 'Nur die stärkste RK-Haltung gilt');
   assert.equal(protectedActor.currentHitPoints, actor.currentHitPoints);
   comments.push({ id: 'foreign', characterId: 'other-actor' });
-  assert.equal(deriveCombatStateFromComments(comments).get(actor.characterId).temporaryConditions.length, 2);
+  assert.equal(deriveCombatStateFromComments(comments).get(actor.characterId).temporaryConditions.length, 3);
   comments.push({ id: 'own', characterId: actor.characterId });
   state = deriveCombatStateFromComments(comments).get(actor.characterId);
   assert.equal(state.temporaryConditions.length, 0);

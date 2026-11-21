@@ -1,0 +1,45 @@
+{
+  "version": 7,
+  "source": {
+    "file": "assets/loading-screen/source/owetas-quartett-innenhof-v7.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "frames": 1,
+    "bytes": 2621538,
+    "sha256": "28571f8d4ebcbb48f8bb7bc2bbfefa5bbe914d3d84db86800cca8d1a659b7a5a"
+  },
+  "assets": [
+    {
+      "file": "public/assets/loading-screen/owetas-quartett-innenhof-v7-desktop.avif",
+      "size": [
+        1536,
+        1024
+      ],
+      "frames": 1,
+      "bytes": 159908,
+      "sha256": "a24035230b5761a9ded8458f25cdfceb3fb44c90ee1909e747045a871a230bfa"
+    },
+    {
+      "file": "public/assets/loading-screen/owetas-quartett-innenhof-v7-mobile.avif",
+      "size": [
+        768,
+        512
+      ],
+      "frames": 1,
+      "bytes": 57587,
+      "sha256": "f7a50e20f673eba3c0d16f12029ed31ca911fd579a5d791fa39fd3a52aba2318"
+    },
+    {
+      "file": "public/assets/loading-screen/owetas-quartett-innenhof-v7-fallback.webp",
+      "size": [
+        1200,
+        800
+      ],
+      "frames": 1,
+      "bytes": 163058,
+      "sha256": "008f1a9fa287ea544c655d59eac74381738c706abfdcf41e9add7d79a91864a0"
+    }
+  ]
+}

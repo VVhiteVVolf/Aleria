@@ -8,6 +8,7 @@ function buildBiographyPortraitStagesEditor(biography = {}) {
   return `
           <div class="module-editor-field wide">
             <label>Portraits und Altersstufen</label>
+            ${biography.portraitDefaultStage ? `<input type="hidden" class="me-biography-portrait-default-stage" value="${escapeHtml(biography.portraitDefaultStage)}">` : ''}
             <div class="module-editor-help">[1] verwendet immer das Hauptportrait der Biographie. In [2] bis [5] können weitere Portraits oder Altersstadien hinterlegt werden.</div>
             <label class="module-editor-field">Bilddarstellung
               <select class="me-biography-portrait-fit">
@@ -463,6 +464,7 @@ function collectBiographyModuleEditorPage(card, page) {
     knightMentors: Array.from(card.querySelectorAll('.module-biography-mentors .biography-mentor-edit-row')).map(row => Object.fromEntries(Array.from(row.querySelectorAll('[data-mentor-field]')).map(input => [input.dataset.mentorField, input.value.trim()]))),
     portraitStages: collectBiographyPortraitStages(card),
     portraitCaptions: collectBiographyPortraitCaptions(card),
+    portraitDefaultStage: Number(getFormValue(card, '.me-biography-portrait-default-stage')),
     portraitFit: getTrimmedFormValue(card, '.me-biography-portrait-fit'),
     biographyTitle: getTrimmedFormValue(card, '.me-biography-title'),
     biographyText: getTrimmedFormValue(card, '.me-biography-text'),

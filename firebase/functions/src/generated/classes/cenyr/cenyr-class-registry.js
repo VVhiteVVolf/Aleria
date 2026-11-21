@@ -7,6 +7,7 @@ import {
 import { CENYR_CLASS_IDS } from './cenyr-class-ids.js?v=20260905-cenyr-character-training-v1';
 import { ARMOR_ROUTINE } from '../armor-routine.js?v=20260906-armor-routine-v1';
 import { getVennyrClassDefinition } from '../vennyr/vennyr-class-registry.js?v=20260909-dragon-parent-v2';
+import { getClassPassiveFeatures } from '../combat-passives/class-passive-curriculum.js';
 import { WYRMTANZ_FORM_NAMES } from '../../combat-styles/sirenentanz/sirenentanz-forms.js?v=20260909-dragon-parent-v2';
 
 export { CENYR_FORM_LABELS };
@@ -65,7 +66,8 @@ function curriculum(config) {
     pathSelection: config.pathSelection, techniqueBudget: config.techniqueBudget,
     trainingBranches: config.trainingBranches || [], techniquePool: config.techniquePool,
     weaponTraining: config.weaponTraining, weaponVariants: config.weaponVariants || [],
-    classFeatures: [...config.classFeatures, ARMOR_ROUTINE], combatStyleGrants: config.combatStyleGrants,
+    classFeatures: [...config.classFeatures, ...getClassPassiveFeatures(isMilwr ? 'cenyr-milwr' : config.classId), ARMOR_ROUTINE],
+    combatStyleGrants: config.combatStyleGrants,
     pendingFeatures: config.pending.map(name => ({ name, minimumLevel: null, status: 'pending' }))
   };
 }
@@ -144,7 +146,7 @@ const DEFINITIONS = [
     classId: 'milwr', name: 'Milwr', focus: 'Schildwall, Formation und Dienst', trainingFocus: 'Begrenzte, flexible Drachentanz-Ausbildung',
     affiliation: 'Heer, Milizen und Stadtwachen Cenyrs',
     trainingPhases: [COMMON_PHASES[0], { id: 'drachling', name: 'Tanz des Drachlings', minimumLevel: 6, maximumLevel: 15, kind: 'path' },
-      { id: 'open-training', name: 'Freie Klassenentwicklung', minimumLevel: 16, maximumLevel: 20, kind: 'pending' }],
+      { id: 'veteran-training', name: 'Erfahrung in der Reihe', minimumLevel: 16, maximumLevel: 20, kind: 'class-features' }],
     formAccess: [access(FORM_IDS.jungdrache, 1, 6), access(FORM_IDS.drachling, 6, 15)],
     pathSelection: { minimumLevel: 6, maximumLevel: 15, multiplePathsAllowed: false, sharedTechniqueBudget: false,
       selectionCadence: 'fixed', rule: 'Milwr wechseln nach der Grundform ausschließlich in den Tanz des Drachlings.' },
@@ -155,7 +157,7 @@ const DEFINITIONS = [
     weaponTraining: { primary: ['flexible melee'], secondary: [], note: 'Weniger Grazie und Expertise; brachialer und für Söldner flexibler.' },
     classFeatures: [feature('milwr-drachling-path', 'Pfad des Drachlings', 6, 'Schwächere, direktere Drachentanz-Ausbildung für Nicht-Ritter und Söldner.', null, 'partial')],
     combatStyleGrants: [jungdracheGrant()],
-    pending: ['Weitere passive Formationsmerkmale']
+    pending: []
   }),
   curriculum({
     classId: 'teulu', name: 'Teulu', focus: 'Schwertkunst und Duell', trainingFocus: 'Tiefste Ausbildung und größter Technikpool',
@@ -165,7 +167,7 @@ const DEFINITIONS = [
     trainingBranches: [branch('teulu-sword', 'Schwertfolge der Teulu', 1, { status: 'confirmed', formIds: [FORM_IDS.jungdrache, FORM_IDS.vertiefung, ...PATH_ACCESS.teulu], weaponProfileIds: ['sword'] })],
     techniquePool: { rank: 1, totalSlots: 24, description: '24 Technikslots: zehn Grundtechniken, zwei freie Vertiefungen auf Stufe 7–8 und zwölf Expertenattacken.' },
     weaponTraining: { primary: ['sword'], secondary: [], note: 'Vollständige Schwertausbildung.' },
-    classFeatures: [feature('teulu-sword-damage', 'Meisterschaft der Klinge', 6, '+2 Schaden mit Drachentanz-Angriffen, wenn ein Schwert geführt wird.', { damageBonus: 2, styleId: 'drachentanz', weaponTypes: ['sword'] })],
+    classFeatures: [],
     combatStyleGrants: [jungdracheGrant([1, 2, 3, 4, 5, 6, 2, 3, 4, 6])],
     pending: []
   }),
@@ -209,7 +211,7 @@ const DEFINITIONS = [
     ],
     techniquePool: { ratioToTeulu: 0.5, totalSlots: 12, description: 'Zwölf Technikslots und damit genau halb so viele wie der Teulu. Fünf Grundtechniken halten Fern- und Nahkampf verfügbar.' },
     weaponTraining: { primary: ['Langbogen', 'Kurzbogen'], secondary: ['Beidhändige Schwerter oder Dolche', 'Schwert'], note: 'Alle vier Zweige teilen sich dasselbe Budget; die Waffe bestimmt Schadenswürfel und zulässige Attacken.' },
-    classFeatures: [feature('helwyr-ranged-accuracy', 'Auge des Helwyr', 1, '+2 auf Trefferwürfe mit Fernkampfangriffen.', { attackBonus: 2, range: 'ranged' })],
+    classFeatures: [feature('helwyr-ranged-accuracy', 'Auge des Helwyr', 1, '+2 auf Trefferwürfe mit geführtem Bogen.', { attackBonus: 2, range: 'ranged', weaponTypes: ['bow'] })],
     combatStyleGrants: [jungdracheGrant()],
     pending: ['Munitionsbesonderheiten der Spezialschüsse']
   }),

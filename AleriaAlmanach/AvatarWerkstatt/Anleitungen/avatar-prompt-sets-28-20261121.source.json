@@ -1,0 +1,24 @@
+{
+  "revision": "2026-11-21-zoomtoleranz",
+  "catalogId": "avatar-prompts-28-sets-20261121-zoomtoleranz",
+  "sourceDocument": "Avatar_Prompts_28_Sets_20261121.docx",
+  "sourceSha256": "637cb8b998be851d85b7f65fd9b926168969aa32232b89744e3ae93c5ab0055e",
+  "readingCopy": "Lesefassungen/Avatar_Prompts_28_Sets_20261121.txt",
+  "sets": 28,
+  "panels": 252,
+  "previous28": {
+    "catalogPath": "avatar-prompt-sets-28.json",
+    "catalogId": "avatar-prompts-28-sets-20261120-subtile-stehgesten",
+    "sourceDocument": "Avatar_Prompts_28_Sets_20261120.docx",
+    "sourceSha256": "3666b96832ebdc49080f0df365b3f35d5c79aefd0ae51b1f518e1c1e8882a721",
+    "readingCopy": "Lesefassungen/Avatar_Prompts_28_Sets_20261120.txt"
+  },
+  "all252PanelDefinitionsPreserved": true,
+  "previous28FilesPreserved": true,
+  "zoomOutPolicy": "Bei Bedarf darf die Kamera gegenüber dem bisherigen setbezogenen Referenzausschnitt 10–15 % weiter herauszoomen, damit Hände, Unterarme und Gesten mehr Platz haben. Gesicht und Oberkörper bleiben groß und klar erkennbar. Der gewählte Abstand bleibt in allen neun Panels gleich; Perspektive, Identität und die besonderen Ausschnittgrenzen des jeweiligen Sets bleiben erhalten.",
+  "visualReview": {
+    "status": "passed",
+    "receipt": "diagnostics/avatar-framing-zoom-20261121/visual-review.json"
+  },
+  "scope": "Reusable template sources only; no avatar images or historical commissions changed."
+}

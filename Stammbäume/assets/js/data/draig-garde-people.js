@@ -5,6 +5,7 @@ const person = (id, name, house, sex, role, options = {}) => Object.freeze({
   worldPersonId: `person--haus-${house}--${id}`,
   portrait: `assets/images/portraits/haus-${house}/${id}.png`,
   ageEstimate: options.ageEstimate || '',
+  ...(options.birth ? { birth: options.birth } : {}),
   aliases: Object.freeze(options.aliases || []),
   existingCharacterId: options.existingCharacterId || '',
   notes: options.notes || '',
@@ -16,14 +17,14 @@ export const DRAIG_GARDE_PEOPLE = Object.freeze([
   person('pellinard-brandyddyn', 'Pellinard Brândyddyn', 'brandyddyn', 'male', 'Leutnant der Leibgarde', {
     ageEstimate: 'etwa 45–55 Jahre',
     aliases: ['Pelinard Brandyddyn', 'Pellinard Brandyddyn'],
-    notes: 'Vater Eurgains.',
+    notes: 'Ehemann Ysabel Bronnors und Vater von drei Kindern. Eurgain ist ihre älteste Tochter.',
     sourceNote: 'Die Schreibweise Pellinard Brândyddyn folgt der beschrifteten Gardeübersicht; im Nutzertext auch Pelinard und Brandyddyn.'
   }),
   person('ysabel-bronnor', 'Ysabel Bronnor', 'bronnor', 'female', 'Leutnant der Leibgarde', {
-    ageEstimate: 'etwa 35–45 Jahre',
+    birth: '1695',
     aliases: ['Yabel Bronnor'],
-    notes: 'Mitglied des Ritterhauses Bronnor aus dem Tal der Milane. Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Mutter Eurgains.',
-    sourceNote: 'Eine Ehe mit Pellinard ist nicht belegt; der Herkunftsname Bronnor bleibt ausdrücklich erhalten.'
+    notes: 'Mitglied des Ritterhauses Bronnor aus dem Tal der Milane. Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Sie ist mit Pellinard Brândyddyn verheiratet und hat mit ihm drei Kinder. Eurgain ist ihre älteste Tochter.',
+    sourceNote: 'Ehe mit Pellinard und drei gemeinsame Kinder gemäß der Nutzerbiografie vom 21. November 2026. Ysabel führt ihren Herkunftsnamen Bronnor. Ihr Jahrgang entspricht dem belegten Geburtsjahr 1695 von Gwendolyn Aderyn.'
   }),
   person('eurgain-brandyddyn', 'Eurgain Brândyddyn', 'brandyddyn', 'female', 'Ritter der Leibgarde', {
     ageEstimate: 'etwa 20–30 Jahre',
@@ -46,10 +47,11 @@ export const DRAIG_GARDE_PEOPLE_BY_ID = Object.freeze(Object.fromEntries(
   DRAIG_GARDE_PEOPLE.map(record => [record.id, record])
 ));
 
-// Parenthood is confirmed. A marriage, engagement or present union is not.
+export const DRAIG_GARDE_BRANDYDDYN_RELATIONS = 'Ysabel Bronnor und Pellinard Brândyddyn sind verheiratet und haben drei Kinder. Ihre älteste Tochter Eurgain dient als Ritter der Draig-Leibgarde. Ysabel gehört weiterhin dem Ritterhaus Bronnor aus dem Tal der Milane an.';
+
 export const DRAIG_GARDE_EURGAIN_PARENTAGE = Object.freeze({
   childId: 'eurgain-brandyddyn',
   parentIds: Object.freeze(['pellinard-brandyddyn', 'ysabel-bronnor']),
   type: 'biological', legitimacy: 'unknown', certainty: 'confirmed',
-  notes: 'Ausdrücklich bestätigte Elternschaft; Ehe, Verlobung und heutiger Beziehungsstatus der Eltern bleiben offen.'
+  notes: 'Bestätigte biologische Elternschaft. Eurgain ist die älteste Tochter von Ysabel Bronnor und Pellinard Brândyddyn.'
 });

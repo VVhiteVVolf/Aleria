@@ -1,8 +1,8 @@
 // Redaktionelle Quelle: vorhandenes Register; weitere Hausgeschichte bleibt offen.
-import { DRAIG_GARDE_PEOPLE_BY_ID } from '../../../../../../Stammbäume/assets/js/data/draig-garde-people.js';
+import { DRAIG_GARDE_BRANDYDDYN_RELATIONS, DRAIG_GARDE_PEOPLE_BY_ID } from '../../../../../../Stammbäume/assets/js/data/draig-garde-people.js';
 
 const ysabel = DRAIG_GARDE_PEOPLE_BY_ID['ysabel-bronnor'];
-const guardRelations = 'Ysabel Bronnor gehört diesem Ritterhaus aus dem Tal der Milane an und ist Leutnant der Draig-Leibgarde. Sie ist eine Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Ysabel und Pellinard Brândyddyn sind die Eltern Eurgain Brândyddyns; Ehe, Verlobung und heutiger Beziehungsstatus der Eltern sind nicht belegt. Ysabel bleibt unter ihrer Herkunftsidentität Bronnor verzeichnet.';
+const guardRelations = `Ysabel ist eine Kindheitsfreundin der Gräfin Gwendolyn Aderyn und dient als Leutnant der Draig-Leibgarde. ${DRAIG_GARDE_BRANDYDDYN_RELATIONS}`;
 
 export const HOUSE_CONTENT = {
   "id": "haus-bronnor",
@@ -19,9 +19,9 @@ export const HOUSE_CONTENT = {
   "showMotto": false,
   "registerPage": true,
   "prepared": true,
-  "contentVersion": "20261112-draig-garde-v1",
-  "biographySourceRevision": 2,
-  "biographyPreviousDefaultFingerprints": [],
+  "contentVersion": "20261121-ysabel-bronnor-v1",
+  "biographySourceRevision": 3,
+  "biographyPreviousDefaultFingerprints": ["3023:a23f08e8:63671e62"],
   "biographyIntroTitle": "Über das Haus",
   "biographyHistoryTitle": "Bisherige Überlieferung",
   "biographySummary": {
@@ -107,8 +107,8 @@ export const HOUSE_CONTENT = {
     "values": "Auf dem vorhandenen Hauszeichen ist ein roter Adler mit ausgebreiteten Schwingen über einem roten Fels auf dunklem Grund dargestellt. Darüber hinaus sind besondere Hausbräuche, Werte und ein verbindlicher Leitspruch noch nicht ausgearbeitet.",
     "succession": "Eine namentlich gesicherte Erbfolge ist noch nicht überliefert.",
     "court": "Ein namentliches Oberhaupt und eigene Hausämter sind bisher nicht belegt. Ysabel Bronnor dient als Leutnant in der Leibgarde des Hauses Draig.",
-    "familyTree": "Das unbekannte historische Gründerpaar steht vor dem Hauswappen und einem seriellen Überlieferungssprung zu Ysabel. Die bestätigte biologische Elternschaft Ysabels und Pellinards zu Eurgain ist in beiden Gegenakten verzeichnet. Keine Ehe oder neue Hauszugehörigkeit wird daraus abgeleitet. Das Hauswappen im Stammbaum öffnet die Hausbiografie.",
-    "historicalFigures": "Ysabel Bronnor ist als Angehörige des Hauses namentlich bekannt. Die Altersangabe bleibt eine Schätzung nach ihrem aktuellen Portrait."
+    "familyTree": "Das unbekannte historische Gründerpaar steht vor dem Hauswappen und einem seriellen Überlieferungssprung zu Ysabel. Ihre Ehe mit Pellinard und die gemeinsame Tochter Eurgain sind in beiden Hausakten verzeichnet. Das Hauswappen im Stammbaum öffnet die Hausbiografie.",
+    "historicalFigures": `Ysabel Bronnor wurde ${ysabel.birth} geboren. Sie und Gwendolyn Aderyn sind im selben Jahrgang.`
   },
   "images": {
     "crest": "../Stammbäume/assets/images/houses/Tal der Milane/Yvains Klamm/haus-bronnor.png",
@@ -130,11 +130,11 @@ export const HOUSE_CONTENT = {
     "name": ysabel.name,
     "role": ysabel.role,
     "image": `../Stammbäume/${ysabel.portrait}`,
-    "description": `${ysabel.notes} Alterserscheinung: ${ysabel.ageEstimate}; reine Portraitschätzung, keine gesicherten Lebensdaten.`
+    "description": `${ysabel.notes} Geboren ${ysabel.birth}, im selben Jahr wie Gwendolyn Aderyn.`
   }],
   "relatedRecords": [{
     "title": "Haus Brândyddyn",
-    "text": "Eurgain ist die Tochter Ysabel Bronnors und Pellinard Brândyddyns.",
+    "text": "Pellinard Brândyddyn ist Ysabels Ehemann und Eurgains Vater.",
     "link": "kleinehaeuser.html?haus=haus-brandyddyn",
     "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Brândyddyn/brandyddyn-emblem.png"
   }],

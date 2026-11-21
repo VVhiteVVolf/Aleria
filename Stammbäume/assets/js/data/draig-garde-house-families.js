@@ -1,10 +1,14 @@
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
-import { createFamilyPerson, createParentages } from './family-record-builders.js';
+import { createFamilyPerson, createMarriage, createParentages } from './family-record-builders.js';
 import { GWYNTHOR_COMMONER_HOUSE_PROFILES } from './celtigerns-wacht-house-profiles.js';
 import { TAL_DER_MILANE_HOUSE_EMBLEMS, TAL_DER_MILANE_HOUSE_PROFILES } from './tal-der-milane-house-profiles.js';
 import { DRAIG_GARDE_PEOPLE_BY_ID as people, DRAIG_GARDE_EURGAIN_PARENTAGE } from './draig-garde-people.js';
 
 const EMBLEM_ROOT = 'assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor';
+const PELLINARD_YSABEL_MARRIAGE_ID = 'marriage-pellinard-brandyddyn-ysabel-bronnor';
+const YSABEL_SOURCE_REVISION = 3;
+const PREPARED_FAMILY_SOURCE = 'Nutzerauftrag Draig-Garde vom 12. November 2026. Unbekanntes Gründerpaar, Hauswappen und genau ein serieller Zeitsprung. Die ersten bekannten Mitglieder besitzen keine erfundenen Eltern. Namensgleiche Angehörige werden ohne belegte nähere Beziehung nicht zu Geschwistern oder Eltern und Kindern erklärt. Altersschätzungen sind ausschließlich textlich; keine Geburtsjahre daraus errechnet.';
+const YSABEL_FORMER_DEFAULT_NOTES = 'Mitglied des Ritterhauses Bronnor aus dem Tal der Milane. Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Mutter Eurgains. Alterserscheinung: etwa 35–45 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.';
 const definition = (slug, name, members, emblemDescription, martial = false) => Object.freeze({
   slug, name, title: name, members: Object.freeze(members), martial,
   file: `${name}/${slug}-emblem.png`, emblem: `${EMBLEM_ROOT}/${name}/${slug}-emblem.png`,
@@ -26,14 +30,25 @@ export const DRAIG_GARDE_COMMONER_HOUSE_DEFINITIONS = Object.freeze([
 
 function familyPerson(id) {
   const source = people[id];
+  const appearance = source.ageEstimate ? `Alterserscheinung: ${source.ageEstimate}; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.` : '';
   return createFamilyPerson({
-    ...source, title: source.role, birth: '', death: '', status: 'alive',
+    ...source, title: source.role, birth: source.birth || '', death: '', status: 'alive',
     familyRole: 'core', lineageRole: 'branch',
-    notes: [source.notes, `Alterserscheinung: ${source.ageEstimate}; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.`].filter(Boolean).join(' '),
+    notes: [source.notes, appearance].filter(Boolean).join(' '),
     extensions: {
       authoredSource: 'draig-garde-20261112',
-      sourceNote: ['Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen.', source.sourceNote].filter(Boolean).join(' '),
-      ageEstimate: source.ageEstimate,
+      sourceNote: [source.birth
+        ? 'Name und Gardeamt nach der gelieferten beschrifteten Übersicht.'
+        : 'Name und Gardeamt nach der gelieferten beschrifteten Übersicht; Lebensdaten bleiben offen.',
+      source.sourceNote].filter(Boolean).join(' '),
+      ...(source.ageEstimate ? { ageEstimate: source.ageEstimate } : {}),
+      ...(id === 'ysabel-bronnor' ? {
+        registryManagedFields: ['birth', 'notes'],
+        registryManagedFieldRevisions: { birth: YSABEL_SOURCE_REVISION, notes: YSABEL_SOURCE_REVISION },
+        registryManagedFieldPreviousValues: { birth: [''], notes: [YSABEL_FORMER_DEFAULT_NOTES] },
+        registryManagedExtensionFields: ['ageEstimate', 'sourceNote'],
+        registryManagedExtensionFieldRevisions: { ageEstimate: YSABEL_SOURCE_REVISION, sourceNote: YSABEL_SOURCE_REVISION }
+      } : {}),
       ...(source.existingCharacterId ? { almanachCharacterId: source.existingCharacterId } : {})
     }
   });
@@ -70,13 +85,35 @@ function buildFamily({ id, title, emblem, houseProfile, roots, members, martial 
       })),
       ...members.map(familyPerson)
     ],
-    partnerships: base.partnerships.map(pair => ({
-      ...pair, certainty: 'unknown',
-      notes: 'Platzhalter des unbekannten Gründerpaares; keine Ehejahre oder Namen sind belegt.'
-    })),
+    partnerships: [
+      ...base.partnerships.map(pair => ({
+        ...pair, certainty: 'unknown',
+        notes: 'Platzhalter des unbekannten Gründerpaares; keine Ehejahre oder Namen sind belegt.'
+      })),
+      ...(hasEurgain ? [createMarriage(PELLINARD_YSABEL_MARRIAGE_ID, ...DRAIG_GARDE_EURGAIN_PARENTAGE.parentIds, {
+        notes: 'Heirat vor der Hochzeit von Galahad Draig und Gwendolyn Aderyn.',
+        extensions: {
+          chartAlignParentPairOverChildPersonId: DRAIG_GARDE_EURGAIN_PARENTAGE.childId,
+          chartAutomaticSingleChildAlignment: true
+        }
+      })] : [])
+    ],
     parentages: hasEurgain ? createParentages(
-      [DRAIG_GARDE_EURGAIN_PARENTAGE.childId], DRAIG_GARDE_EURGAIN_PARENTAGE.parentIds, '',
-      { ...DRAIG_GARDE_EURGAIN_PARENTAGE, extensions: { chartPairParentsWithoutPartnership: true } }
+      [DRAIG_GARDE_EURGAIN_PARENTAGE.childId], DRAIG_GARDE_EURGAIN_PARENTAGE.parentIds, PELLINARD_YSABEL_MARRIAGE_ID,
+      {
+        ...DRAIG_GARDE_EURGAIN_PARENTAGE,
+        extensions: {
+          registryManagedFields: ['partnershipId', 'notes'],
+          registryManagedFieldRevisions: { partnershipId: YSABEL_SOURCE_REVISION, notes: YSABEL_SOURCE_REVISION },
+          registryManagedFieldPreviousValues: {
+            partnershipId: [''],
+            notes: ['Ausdrücklich bestätigte Elternschaft; Ehe, Verlobung und heutiger Beziehungsstatus der Eltern bleiben offen.']
+          },
+          chartPairParentsWithoutPartnership: false,
+          registryManagedExtensionFields: ['chartPairParentsWithoutPartnership'],
+          registryManagedExtensionFieldRevisions: { chartPairParentsWithoutPartnership: YSABEL_SOURCE_REVISION }
+        }
+      }
     ) : [],
     timeJumps: [jump],
     lineage: { ...base.lineage, crestSubtitle: martial
@@ -87,7 +124,9 @@ function buildFamily({ id, title, emblem, houseProfile, roots, members, martial 
       ...base.extensions, blankFamily: false, preparedTimeJump: true, sourceRevision,
       chartLayoutPolicy: 'strict-v1', authoredOn: '2026-11-12',
       ...(roots.length === 1 ? { chartAlignLineageOriginOverPersonId: roots[0] } : {}),
-      sourceNote: 'Nutzerauftrag Draig-Garde vom 12. November 2026. Unbekanntes Gründerpaar, Hauswappen und genau ein serieller Zeitsprung. Die ersten bekannten Mitglieder besitzen keine erfundenen Eltern. Namensgleiche Angehörige werden ohne belegte nähere Beziehung nicht zu Geschwistern oder Eltern und Kindern erklärt. Altersschätzungen sind ausschließlich textlich; keine Geburtsjahre daraus errechnet. Bestätigte Elternschaft Pellinard und Ysabel zu Eurgain wird in beiden Gegenakten geteilt; Ehe, Verlobung und Familienstand bleiben unbekannt.'
+      sourceNote: hasEurgain
+        ? `${PREPARED_FAMILY_SOURCE} Die Nutzerbiografie vom 21. November 2026 bestätigt die Ehe von Ysabel und Pellinard. Eurgain bleibt das einzige namentlich belegte ihrer drei Kinder.`
+        : PREPARED_FAMILY_SOURCE
     }
   });
 }
@@ -96,6 +135,7 @@ export const DRAIG_GARDE_COMMONER_HOUSE_FAMILIES = Object.freeze(
   DRAIG_GARDE_COMMONER_HOUSE_DEFINITIONS.map(record => buildFamily({
     id: `haus-${record.slug}`, title: `Haus ${record.name}`, emblem: record.emblem,
     houseProfile: GWYNTHOR_COMMONER_HOUSE_PROFILES[record.slug], martial: record.martial,
+    sourceRevision: record.slug === 'brandyddyn' ? YSABEL_SOURCE_REVISION : 1,
     roots: record.members.filter(id => id !== 'eurgain-brandyddyn'),
     members: record.slug === 'brandyddyn' ? [...record.members, 'ysabel-bronnor'] : record.members
   }))
@@ -104,7 +144,7 @@ export const DRAIG_GARDE_COMMONER_HOUSE_FAMILIES = Object.freeze(
 export const HOUSE_BRONNOR_FAMILY = buildFamily({
   id: 'haus-bronnor', title: 'Haus Bronnor',
   emblem: TAL_DER_MILANE_HOUSE_EMBLEMS.bronnor,
-  houseProfile: TAL_DER_MILANE_HOUSE_PROFILES.bronnor, sourceRevision: 2,
+  houseProfile: TAL_DER_MILANE_HOUSE_PROFILES.bronnor, sourceRevision: YSABEL_SOURCE_REVISION,
   roots: ['ysabel-bronnor'],
   members: ['ysabel-bronnor', 'pellinard-brandyddyn', 'eurgain-brandyddyn']
 });

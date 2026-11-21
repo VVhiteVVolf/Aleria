@@ -1,6 +1,7 @@
 // Editorial projection for the five newly recorded guard families.
 // The named people and all genealogy remain owned by the family data source.
 import { DRAIG_GARDE_COMMONER_HOUSE_DEFINITIONS, DRAIG_GARDE_COMMONER_HOUSE_FAMILIES } from '../../../Stammbäume/assets/js/data/draig-garde-house-families.js';
+import { DRAIG_GARDE_BRANDYDDYN_RELATIONS } from '../../../Stammbäume/assets/js/data/draig-garde-people.js';
 
 export function createDraigGardeHouseContent(slug) {
   const definition = DRAIG_GARDE_COMMONER_HOUSE_DEFINITIONS.find(record => record.slug === slug);
@@ -18,8 +19,9 @@ export function createDraigGardeHouseContent(slug) {
     ? 'Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.'
     : 'Das Haus gehört zu den bürgerlichen Häusern Gwynthors. Ein eigener Ritterhausrang ist nicht belegt.';
   const history = 'Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten.';
-  const relations = slug === 'brandyddyn'
-    ? 'Pellinard Brândyddyn und Ysabel Bronnor sind Eurgains Eltern. Ysabel bleibt als Angehörige des Ritterhauses Bronnor aus dem Tal der Milane verzeichnet. Eine Ehe oder Verlobung der Eltern ist nicht belegt.'
+  const isBrandyddyn = slug === 'brandyddyn';
+  const relations = isBrandyddyn
+    ? DRAIG_GARDE_BRANDYDDYN_RELATIONS
     : slug === 'curiad'
       ? 'Marared Curiad führt die Leibgarde als Hauptmann, Mathon Curiad dient unter den Rittern und Morcant Curiad als Leibgardist. Ihre genaueren Verwandtschaftsgrade sind nicht belegt.'
       : 'Belegt ist der Dienst des genannten Angehörigen in der Draig-Leibgarde. Weitere familiäre Verbindungen sind bislang nicht überliefert.';
@@ -31,7 +33,9 @@ export function createDraigGardeHouseContent(slug) {
     territoryId: 'grafschaft-celtigerns-wacht', territoryName: 'Celtigerns Wacht',
     territoryHref: '../Kontinente/Estryll/Königreich Cenyr/Grafschaft Celtigerns Wacht/Grafschaft Celtigerns Wacht.html',
     extinct: false, showMotto: false, registerPage: true, prepared: true,
-    contentVersion: '20261112-draig-garde-v1', biographySourceRevision: 1,
+    contentVersion: isBrandyddyn ? '20261121-ysabel-bronnor-v1' : '20261112-draig-garde-v1',
+    biographySourceRevision: family.extensions.sourceRevision,
+    ...(isBrandyddyn ? { biographyPreviousDefaultFingerprints: ['3396:bc6d84f5:38ca1fa3'] } : {}),
     biographyIntroTitle: 'Über das Haus', biographyHistoryTitle: 'Vorbereitete Familienakte',
     biographySummary: { overview: `${overview} ${rank}`, history, character: emblem, relations },
     hierarchy: [

@@ -47,6 +47,10 @@ export function renderEvaluationSaveRecords(resolution = {}) {
   });
   const attributes = {strength:'KRF',dexterity:'GES',constitution:'KON',intelligence:'INT',wisdom:'WEI',charisma:'CHA'};
   const saves = (resolution.secondarySaves || []).map(save => {
+    if (save.type === 'condition-escape') {
+      const method = { athletics: 'Athletik', strength: 'Stärke', dexterity: 'Geschicklichkeit' }[save.method] || 'Befreiung';
+      return `<li><b>Befreiung · ${escape(method)} ${escape(save.total)} gegen SG ${escape(save.dc)}</b><span>${save.succeeded ? 'gelungen' : 'misslungen'}${save.diceResults?.length === 2 ? ' · Nachteil' : ''}</span><small>W20 [${escape((save.diceResults || []).join(', '))}]</small></li>`;
+    }
     const label = save.type === 'concentration' ? 'Konzentration · ' : save.type === 'mount-landing' ? 'Landung · ' : '';
     const timing = save.type === 'mount-landing' ? (save.base === 'acrobatics' ? 'mit Akrobatik' : 'mit Geschick')
       : save.timing === 'before-maneuver' ? 'vor dem Gegenangriff' : save.timing === 'after-sequence' ? 'nach der gesamten Angriffsfolge' : 'nach dem auslösenden Treffer';

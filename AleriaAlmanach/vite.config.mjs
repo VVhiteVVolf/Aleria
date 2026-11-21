@@ -111,6 +111,7 @@ function preserveClassicAlmanachScripts() {
       await copyBattleSourceAssets({ workspaceRoot, buildRoot });
       await copyWarSourceAssets({ workspaceRoot, buildRoot });
       await copyCoastalAssets({ workspaceRoot, buildRoot });
+      await cp(resolve(workspaceRoot, 'Bestiarium/assets/kreaturenkarten'), resolve(buildRoot, 'Bestiarium/assets/kreaturenkarten'), { recursive: true, force: true });
       await cp(
         resolve(almanachRoot, 'public/assets'),
         resolve(buildAlmanachRoot, 'public/assets'),
@@ -175,6 +176,7 @@ export default defineConfig({
         ...getReligionPageInputs(),
         ...getClergyPageInputs(),
         bestiarium: resolve(workspaceRoot, 'Bestiarium/index.html'),
+        'bestiary-encounter-cards': resolve(workspaceRoot, 'Bestiarium/kreaturenkarten/index.html'),
         ...Object.fromEntries(CREATURE_PROFILE_IDS.map(id => [
           `bestiary-${id}`, resolve(workspaceRoot, 'Bestiarium/wesen', id, 'index.html')
         ])),

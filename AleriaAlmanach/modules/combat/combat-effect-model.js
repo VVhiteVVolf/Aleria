@@ -2,7 +2,7 @@ import { applyCombatDamage, normalizeCombatHitPointState } from './combat-state-
 import { applyBerserkSurvival } from './combat-berserk-state.js';
 import { consumeDamageGuard } from './combat-damage-guard.js';
 import { resolveEquipmentDamageProtection } from '../character-equipment/equipment-damage-protection.js';
-import { applyRegenerationFireExposure } from './combat-creature-traits.js';
+import { applyRegenerationFireExposure, applyTenebriumExposure } from './combat-creature-traits.js';
 import { normalizeConditionDuration, normalizeRuntimeCondition } from './combat-condition-duration.js?v=20260906-character-vitality-v1';
 
 export const COMBAT_EFFECT_TYPES = Object.freeze([
@@ -65,6 +65,7 @@ export function normalizeCombatEffect(value = {}, index = 0) {
     target: TARGETS.has(target) ? target : 'target',
     amount: number(source.amount, 0, 0),
     ...(source.scaling === 'hit-die-and-tenth-maximum' ? { scaling: source.scaling } : {}),
+    ...(type === 'temporary-hit-points' && source.temporaryUntilOwnContribution === true ? { temporaryUntilOwnContribution: true } : {}),
     ...(['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma'].includes(source.bonusAttribute) ? { bonusAttribute: source.bonusAttribute } : {}),
     formula: text(source.formula || source.amountFormula || source.damageFormula, 80),
     damageType: text(source.damageType || 'physisch', 100),
@@ -95,20 +96,32 @@ export function normalizeCombatEffects(values = []) {
   return (Array.isArray(values) ? values : []).slice(0, 30).map(normalizeCombatEffect);
 }
 
-function affinityMatches(affinity, damageType, magical) {
-  const requested = text(damageType || 'physisch', 100).toLocaleLowerCase('de');
-  if (affinity.damageType !== 'all' && affinity.damageType !== requested) return false;
+export function inferCombatEffectTargetLimit(effects = []) {
+  return effects.some(effect => ['selected', 'allies', 'enemies', 'all'].includes(effect.target)) ? 20 : 1;
+}
+
+const damageAliases = Object.freeze({ fire: 'feuer', lightning: 'blitz', elektrisch: 'blitz', elektrizität: 'blitz',
+  thunder: 'schall', donner: 'schall', sonic: 'schall' });
+
+function damageKind(value) {
+  const key = text(value || 'physisch', 100).toLocaleLowerCase('de');
+  return damageAliases[key] || key;
+}
+
+function affinityMatches(affinity, kinds, magical) {
+  const types = Array.isArray(kinds) ? kinds : [damageKind(kinds)];
+  if (affinity.damageType !== 'all' && !types.includes(damageKind(affinity.damageType))) return false;
   if (affinity.magicScope === 'magical' && !magical) return false;
   if (affinity.magicScope === 'nonmagical' && magical) return false;
   return true;
 }
 
-export function resolveDamageResponse(profile = {}, { damageType = 'physisch', magical = false } = {}) {
+export function resolveDamageResponse(profile = {}, { damageType = 'physisch', magical = false, weaponMaterial = '' } = {}) {
   const traitAffinities = (profile.quirks || []).filter(q => q.active !== false)
     .flatMap(q => (q.mechanics?.damageAffinities || []).map(a => ({ ...a, source: q.name })));
   const matches = [...(Array.isArray(profile.damageAffinities) ? profile.damageAffinities : []), ...traitAffinities]
     .map(normalizeDamageAffinity)
-    .filter(affinity => affinityMatches(affinity, damageType, magical));
+    .filter(affinity => affinityMatches(affinity, [damageKind(damageType), weaponMaterial].filter(Boolean), magical));
   const response = matches.some(item => item.response === 'immune') ? 'immune'
     : (matches.some(item => item.response === 'resistant') && matches.some(item => item.response === 'vulnerable') ? 'normal'
       : (matches.some(item => item.response === 'resistant') ? 'resistant'
@@ -129,9 +142,15 @@ export function applyTypedCombatDamage(state = {}, amount = 0, profile = {}, opt
   const bypassed = (guarded.bypassedReduction || 0) + (equipmentProtection.bypassedReduction || 0);
   const protectedAmount = Math.max(0, adjusted - guarded.reduction - equipmentProtection.reduction);
   const applied = applyBerserkSurvival(applyCombatDamage(state, protectedAmount), guarded.conditions);
+  const fireState = applyRegenerationFireExposure(applied.conditions, profile, damageKind(options.damageType), protectedAmount);
   return { ...applied, ...(bypassed ? { bypassedReduction: bypassed } : {}), ...(equipmentProtection.reduction > 0 ? { equipmentProtection } : {}),
-    conditions: applyRegenerationFireExposure(applied.conditions, profile, options.damageType, protectedAmount),
+    conditions: applyTenebriumExposure(fireState, profile, [damageKind(options.damageType), options.weaponMaterial], protectedAmount),
     ...(guarded.guard ? { damageGuard: guarded.guard } : {}), rawIncoming: Math.max(0, Number(amount) || 0), damageResponse };
+}
+
+export function applyCreatureBurnDamage(state, amount, conditions) {
+  return { ...applyCombatDamage(state, amount), conditions, rawIncoming: amount,
+    damageResponse: { response: 'normal', sources: [], multiplier: 1 } };
 }
 
 export function applyCombatHealing(state = {}, amount = 0) {

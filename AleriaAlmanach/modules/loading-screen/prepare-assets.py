@@ -410,6 +410,21 @@ def prepare_rose_chase():
         json.dumps(manifest, indent=2) + '\n', encoding='utf-8', newline='\n')
 
 
+def prepare_vignettes():
+    receipt = json.loads((SOURCE.parent / 'ruhige-szenen-v1-prompts.json').read_text(encoding='utf-8'))
+    DESTINATION.mkdir(parents=True, exist_ok=True)
+    scenes = {}
+    for entry in receipt['images']:
+        if not entry['active']:
+            continue
+        original = SOURCE.parent / entry['source']
+        with Image.open(original) as image:
+            assets = encode_scene_background(original.stem, image.convert('RGB'), (1440, 768, 1280))
+        scenes[entry['scene']] = dict(source=asset_description(original), assets=assets)
+    (DESTINATION / 'ruhige-szenen-v1-manifest.json').write_text(
+        json.dumps(dict(version=1, scenes=scenes), indent=2) + '\n', encoding='utf-8', newline='\n')
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     versions = parser.add_mutually_exclusive_group()
@@ -417,8 +432,11 @@ if __name__ == '__main__':
     versions.add_argument('--journey-v6', action='store_true')
     versions.add_argument('--oweta-courtyard', action='store_true')
     versions.add_argument('--rose-chase', action='store_true')
+    versions.add_argument('--vignettes', action='store_true')
     args = parser.parse_args()
-    if args.rose_chase:
+    if args.vignettes:
+        prepare_vignettes()
+    elif args.rose_chase:
         prepare_rose_chase()
     elif args.oweta_courtyard:
         prepare_oweta_courtyard()

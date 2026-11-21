@@ -73,7 +73,9 @@ function tagKey(value) {
 }
 
 function collectProfileTags(profile = {}) {
-  const values = [];
+  const values = [...(profile.encounterTags || [])];
+  const genus = [profile.creatureType, profile.creatureSpecies, profile.creatureGenus].join(' ');
+  if (/\b(?:tiere?|haustier|reittier|pferde?|hunde?|katzen?|vögel|vogel|wölfe|wolf|warg[e]?|bär(?:en)?|reptilien)\b/i.test(genus)) values.push('tier');
   const conditions = [...getCombatStoredConditions(profile), ...(Array.isArray(profile.temporaryConditions) ? profile.temporaryConditions : [])];
   [profile.quirks, conditions, profile.abilities].forEach(entries => {
     (Array.isArray(entries) ? entries : []).forEach(entry => {
@@ -139,6 +141,7 @@ export function sanitizeCombatTriggerRule(value = {}, index = 0) {
     skillIds: normalizedList(source.skillIds),
     ...(source.damageTypes ? { damageTypes: normalizedList(source.damageTypes) } : {}),
     requiredTargetTags: normalizedList(source.requiredTargetTags),
+    ...(source.requiredOtherMark ? { requiredOtherMark: tagKey(source.requiredOtherMark) } : {}),
     radiusMeters: optionalNumber(source.radiusMeters, 0, 9999),
     priority: number(source.priority, 0, -99, 99),
     authority: RULE_AUTHORITIES.has(authority)
@@ -279,7 +282,7 @@ function actionAllows(rule, actionKind, profileActionId = '', state = {}) {
     // Match the resolver: structured effects replace implicit weapon damage.
     // An empty legacy action retains its base unless explicitly non-damaging.
     const hasBaseDamage = effects.length === 0 && !actor.selectedAction?.nonDamaging;
-    const types = state.saveContext ? [state.saveContext.damageType]
+    const types = state.saveContext && Object.hasOwn(state.saveContext, 'damageType') ? [state.saveContext.damageType]
       : [...(hasBaseDamage ? [weapon.damageType] : []), ...effectTypes];
     const damageTypes = types.filter(Boolean).map(type => String(type).toLowerCase());
     if (!rule.damageTypes.some(type => damageTypes.includes(type))) return false;
@@ -298,6 +301,10 @@ function actionAllows(rule, actionKind, profileActionId = '', state = {}) {
 }
 
 function targetTagsAllow(rule, state = {}) {
+  if (rule.requiredOtherMark && !(state.targetProfile?.temporaryConditions || []).some(condition => condition.active !== false
+    && tagKey(condition.creatureMark) === rule.requiredOtherMark && condition.sourceActorId
+    && condition.sourceActorId !== state.actorProfile?.characterId
+    && (!condition.creatureMarkParty || !state.actorPartyId || condition.creatureMarkParty === state.actorPartyId))) return false;
   if (!rule.requiredTargetTags.length) return true;
   const available = state.targetTags instanceof Set
     ? new Set([...state.targetTags].map(tagKey).filter(Boolean))
@@ -310,6 +317,7 @@ export function getCombatRuleApplicationKey(source = {}, rule = {}) {
 }
 
 function frequencyKey(source, rule, periods = {}) {
+  if (rule.entryKind === 'class-passive') return rule.classUsedKey;
   if (rule.frequency === 'always') return '';
   const period = text(periods[rule.frequency], 240);
   return `${getCombatRuleApplicationKey(source, rule)}@${rule.frequency}:${period}`;
@@ -345,11 +353,18 @@ export function collectApplicableCombatRules({
     const currentPermissionProfile = (sourceActorId && [...(state.reactionProfiles || []), state.actorProfile, state.targetProfile]
       .find(profile => profile && String(profile.characterId || '') === sourceActorId)) || source.profile;
     const reactionBlocked = getCombatReactionBlock(currentPermissionProfile);
-    rules.forEach(rule => {
+    const derived = getClassCombatPassiveRules({
+      source, currentProfile: currentPermissionProfile, phase, state, periods, usedFrequencyKeys, sources
+    }).map(rule => ({
+      ...sanitizeCombatTriggerRule(rule), ...rule, effects: sanitizeCombatRuleEffects(rule.effects),
+      resultEffects: normalizeCombatEffects(rule.resultEffects), requiredActionId: ''
+    }));
+    rules.concat(derived).forEach(rule => {
       if (!phaseAllows(rule, phase, state) || !actionAllows(rule, actionKind, profileActionId, state) || !targetTagsAllow(rule, state)) return;
       if (!relationAllows(rule, source) || !distanceAllows(rule, source) || !conditionAllows(rule, state)) return;
       if (rule.activation === 'reaction' && (reactionBlocked || !selectedRule(source, rule))) return;
-      if (rule.activation === 'passive' && source.passiveRulesAllowed === false) return;
+      if (rule.supportEvidence && reactionBlocked) return;
+      if (rule.activation === 'passive' && source.passiveRulesAllowed === false && !rule.supportEvidence) return;
       if (usedInPeriod(source, rule, context)) return;
       const applicationKey = getCombatRuleApplicationKey(source, rule);
       const usedKey = frequencyKey(source, rule, periods);
@@ -382,7 +397,14 @@ export function collectApplicableCombatRules({
       });
     });
   });
-  return applications.sort((first, second) => first.priority - second.priority || first.ruleName.localeCompare(second.ruleName, 'de'));
+  const sorted = applications.sort((first, second) => first.priority - second.priority || first.ruleName.localeCompare(second.ruleName, 'de')
+    || first.sourceActorId.localeCompare(second.sourceActorId));
+  const classSupport = sorted.filter(rule => rule.entryKind === 'class-passive' && rule.sourceRole === 'support');
+  const strongest = classSupport.length > 1 ? classSupport.reduce((best, rule) =>
+    Math.max(rule.effects.damageReduction, rule.effects.savingThrowModifier) > Math.max(best.effects.damageReduction, best.effects.savingThrowModifier)
+      ? rule : best) : null;
+  const eligible = strongest ? sorted.filter(rule => !classSupport.includes(rule) || rule === strongest) : sorted;
+  return state.reactionBudget ? eligible.filter(rule => state.reactionBudget.tryReserve(rule)) : eligible;
 }
 
 export function mergeCombatRuleEffects(applications = []) {
@@ -476,3 +498,4 @@ export const combatTriggerRuleInternals = Object.freeze({
   relationAllows,
   RULE_AUTHORITY_RANK
 });
+import { getClassCombatPassiveRules } from '../classes/combat-passives/class-passive-rules.js';

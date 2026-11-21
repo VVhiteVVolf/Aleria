@@ -1,0 +1,300 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-21T21:17:55.035Z",
+  "mergeStrategy": "replace-exported-fields",
+  "sourcePath": "Charakter Archiv Exporte/Biographien/ysabel-bronnor-2026-11-21/ysabel-bronnor-aktuell.json",
+  "character": {
+    "id": "person--haus-bronnor--ysabel-bronnor",
+    "name": "Ysabel Bronnor",
+    "title": "Lady · Leutnant der Leibgarde",
+    "aliases": [
+      "Yabel Bronnor"
+    ],
+    "taxonomyPath": "Cenyr > Tal der Milane > Yvains Klamm > Penbryn",
+    "plotNode": "",
+    "relevance": "",
+    "role": "Leutnant der Leibgarde",
+    "fraktion": "Draig Leibgarde",
+    "currentLocation": "",
+    "identity": {
+      "worldPersonId": "person--haus-bronnor--ysabel-bronnor"
+    },
+    "archived": false,
+    "status": "active",
+    "portrait": "/Stammbäume/assets/images/portraits/haus-bronnor/ysabel-bronnor.png",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Ysabel Bronnor",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Lady Ysabel Bronnor"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Haus Bronnor · Penbryn, Tal der Milane"
+        },
+        {
+          "label": "Geburtsjahr",
+          "value": "1695"
+        },
+        {
+          "label": "Alter im Jahr 1740",
+          "value": "45 Jahre"
+        },
+        {
+          "label": "Dienst",
+          "value": "Leutnant der Draig-Leibgarde in Gwynthor"
+        },
+        {
+          "label": "Kriegerkunst",
+          "value": "Helwyr · kundig in der Kunst der Teulu"
+        },
+        {
+          "label": "Ehemann",
+          "value": "Pellinard Brândyddyn"
+        },
+        {
+          "label": "Kinder",
+          "value": "Drei, darunter Eurgain Brândyddyn als älteste Tochter"
+        },
+        {
+          "label": "Gefährte",
+          "value": "Gwaedor · Roter Habicht"
+        },
+        {
+          "label": "Reittier",
+          "value": "Neddwyn · Tirashan"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/ysabel-bronnor/child-v1.png",
+        "portraitStages": [
+          "/AleriaAlmanach/assets/ysabel-bronnor/squire-v1.png",
+          "/AleriaAlmanach/assets/ysabel-bronnor/gwendolyn-v2.png",
+          "/Stammbäume/assets/images/portraits/haus-bronnor/ysabel-bronnor.png"
+        ],
+        "portraitDefaultStage": 4,
+        "portraitFit": "contain",
+        "portraitCaptions": [
+          "Als Kind im Haus Bronnor.",
+          "Als junge Knappin im Bronnor-Wappenrock, mit Gwaedor auf der Schulter.",
+          "Gwendolyn Aderyn und Ysabel Bronnor in Gwynthor.",
+          "Lady Ysabel Bronnor in der Montur der Draig-Leibgarde."
+        ],
+        "biographyTitle": "Lady Ysabel Bronnor",
+        "biographyText": "<p>Wer Gwendolyn Draig im vertrauten Kreis erlebt, erkennt in Ysabel denselben trockenen Witz und dieselbe Entschlossenheit wieder. Wenn Gwendolyn schon auf dem Sprung ist, hört Ysabel noch zu und stellt die Frage, die beiden entgangen ist. Den Kindern der Draigs begegnet sie wie eine Tante. In ihrer Familie ist diese Nähe selbstverständlich geworden.</p><p>Im Dienst ist Ysabel eine verlässliche Strategin. Sie hält Besprechungen knapp, fragt nach den Folgen einer Entscheidung und will wissen, wer Verantwortung übernimmt. Wie Gwendolyn ist sie eine <strong>Helwyr</strong>. Sie beherrscht auch die Kunst der <strong>Teulu</strong> sehr gut und kann zwischen beiden Schulen wechseln.</p>",
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [
+          {
+            "title": "Besonnen",
+            "detail": "Unter Druck nimmt sie sich einen Augenblick zum Zuhören und trifft dann eine klare Entscheidung.",
+            "icon": "/IconOrdner/Traits%20Icon/Patient.png"
+          },
+          {
+            "title": "Treu",
+            "detail": "Sie hält zu den Menschen, denen sie sich verbunden fühlt, auch wenn es für sie etwas kostet.",
+            "icon": "/IconOrdner/Cktraits/Trait_devoted.png"
+          },
+          {
+            "title": "Strategisch",
+            "detail": "Sie denkt mehrere Schritte voraus und bemerkt, wo ein scheinbar solider Plan von einer einzigen Annahme abhängt.",
+            "icon": "/IconOrdner/Traits%20Icon/Strategist.png"
+          },
+          {
+            "title": "Pflichtbewusst",
+            "detail": "Sie nimmt ihren Dienst ernst und erwartet von sich selbst dieselbe Sorgfalt wie von ihrer Garde.",
+            "icon": "/IconOrdner/Traits%20Icon/Conscientious.png"
+          },
+          {
+            "title": "Familienverbunden",
+            "detail": "Ysabel nimmt regen Anteil am Leben ihrer Kinder und behandelt Gwendolyns Kinder mit derselben familiären Wärme.",
+            "icon": "/IconOrdner/Traits%20Icon/Family_focus.png"
+          },
+          {
+            "title": "Unnachgiebig",
+            "detail": "Wer sich in ihren Augen einmal als unzuverlässig erwiesen hat, muss lange um eine zweite Chance bitten.",
+            "icon": "/IconOrdner/Traits%20Icon/Stubborn.png"
+          },
+          {
+            "title": "Übergenau",
+            "detail": "Sie prüft mitunter selbst kleine Absprachen nach und lässt ihren Leuten damit weniger Spielraum, als ihnen guttut.",
+            "icon": "/IconOrdner/Traits%20Icon/Fussy.png"
+          }
+        ],
+        "historyTitle": "Vom Tal der Milane in die Leibgarde",
+        "historyText": "<p>Ysabel wurde 1695 geboren, im selben Jahr wie Gwendolyn Aderyn. Sie wuchs im Ritterhaus Bronnor im Tal der Milane als fröhlicher Frechdachs auf. Gwendolyn war schon damals ihre engste Freundin. In ihren Jahren als Knappin trug Ysabel den dunklen Wappenrock mit dem roten Adler ihres Hauses. Gwaedor, ihr roter Habicht, saß dabei auf ihrer Schulter.</p><p>Als Gwendolyn mit Galahad Draig verlobt wurde, zog sie nach Gwynthor und schloss sich dort den Rittern der Tafelrunde an. Ysabel ging ebenfalls nach Gwynthor und trat der Tafelrunde bei. Dort lernte sie Pellinard Brândyddyn kennen. Die beiden heirateten noch vor Galahad und Gwendolyn und traten als Ehepaar in die Leibgarde des Hauses Draig ein.</p><p>Als Gwendolyn schwanger wurde und die Tafelrunde schon früh nicht mehr auf ihren Auszügen begleiten konnte, blieb Ysabel bei ihr. Aus der vertrauten Freundin wurde für Gwendolyns Kinder mit der Zeit eine Tante im gelebten Sinn. Auch unter den erwachsenen Draigs bewegt sich Ysabel mit der Vertrautheit einer Angehörigen.</p><p>Im Großen Krieg vor zwanzig Jahren fiel Ysabels Vorgänger. In den Jahren danach wuchs sie Schritt für Schritt in die Verantwortung eines Leutnants hinein. Heute dienen sie und Pellinard beide als Leutnante unter Hauptmann Marared Curiad. Sie haben drei Kinder. Ihre älteste Tochter Eurgain dient als Ritter der Garde.</p>",
+        "connectionsTitle": "Familie und Gefährten",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Gwendolyn Draig, geborene Aderyn",
+            "detail": "Ihre Freundin seit Kindertagen.",
+            "image": "/Stammbäume/assets/images/portraits/haus-draig/gwendolyn-aderyn.jpg",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Pellinard Brândyddyn",
+            "detail": "Ihr Ehemann. Er dient mit ihr als Leutnant unter Marared Curiad.",
+            "image": "/Stammbäume/assets/images/portraits/haus-brandyddyn/pellinard-brandyddyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Eurgain Brândyddyn",
+            "detail": "Ihre älteste Tochter und Ritter der Leibgarde.",
+            "image": "/Stammbäume/assets/images/portraits/haus-brandyddyn/eurgain-brandyddyn.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Gwaedor",
+            "detail": "Ysabels roter Habicht. Schon als Knappin trug sie ihn auf der Schulter.",
+            "image": "/AleriaAlmanach/assets/ysabel-bronnor/gwaedor-v4.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Neddwyn",
+            "detail": "Ysabels brauner Tirashan-Hengst mit Sattelzeug des Hauses Bronnor.",
+            "image": "/AleriaAlmanach/assets/ysabel-bronnor/neddwyn-v4.png",
+            "imageFormat": "portrait"
+          }
+        ],
+        "footer": "Personenakte · Ysabel Bronnor"
+      },
+      "revision": 1795295875036
+    },
+    "inventory": {
+      "companions": [
+        {
+          "id": "card-ysabel-gwaedor",
+          "name": "Gwaedor",
+          "species": "Roter Habicht",
+          "image": "/AleriaAlmanach/assets/ysabel-bronnor/gwaedor-v4.png",
+          "description": "Ysabels roter Habicht. Schon als Knappin trug sie ihn auf der Schulter.",
+          "summary": "Ysabels roter Habicht. Schon als Knappin trug sie ihn auf der Schulter.",
+          "role": "Gefährte",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-ysabel-gwaedor",
+          "inventoryItemId": "ysabel-gwaedor"
+        },
+        {
+          "id": "card-ysabel-neddwyn",
+          "name": "Neddwyn",
+          "species": "Tirashan",
+          "image": "/AleriaAlmanach/assets/ysabel-bronnor/neddwyn-v4.png",
+          "description": "Ysabels brauner Tirashan-Hengst mit Sattelzeug des Hauses Bronnor.",
+          "summary": "Ysabels brauner Tirashan-Hengst mit Sattelzeug des Hauses Bronnor.",
+          "role": "Reittier",
+          "status": "Gesund",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "creatureId": "companion-ysabel-neddwyn",
+          "inventoryItemId": "ysabel-neddwyn"
+        }
+      ],
+      "items": [
+        {
+          "id": "ysabel-gwaedor",
+          "instanceId": "ysabel-gwaedor",
+          "creatureId": "companion-ysabel-gwaedor",
+          "name": "Gwaedor",
+          "image": "/AleriaAlmanach/assets/ysabel-bronnor/gwaedor-v4.png",
+          "description": "Ysabels roter Habicht. Schon als Knappin trug sie ihn auf der Schulter.",
+          "type": "Roter Habicht",
+          "category": "companion",
+          "registerCategory": "vieh",
+          "templateId": "",
+          "templateName": "Roter Habicht",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--haus-bronnor--ysabel-bronnor",
+          "ownerCharacterName": "Ysabel Bronnor",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-11-21T21:17:55.035Z"
+        },
+        {
+          "id": "ysabel-neddwyn",
+          "instanceId": "ysabel-neddwyn",
+          "creatureId": "companion-ysabel-neddwyn",
+          "name": "Neddwyn",
+          "image": "/AleriaAlmanach/assets/ysabel-bronnor/neddwyn-v4.png",
+          "description": "Ysabels brauner Tirashan-Hengst mit Sattelzeug des Hauses Bronnor.",
+          "type": "Tirashan",
+          "category": "companion",
+          "registerCategory": "pferde",
+          "templateId": "",
+          "templateName": "Tirashan",
+          "quantity": "1",
+          "itemStorageMode": "character",
+          "itemDbKey": "",
+          "originItemDbKey": "",
+          "ownerCharacterId": "person--haus-bronnor--ysabel-bronnor",
+          "ownerCharacterName": "Ysabel Bronnor",
+          "imageFormat": "portrait",
+          "imageFit": "contain",
+          "imagePosition": "center",
+          "attributes": [],
+          "infoRows": [],
+          "individualizedAt": "2026-11-21T21:17:55.035Z"
+        }
+      ],
+      "revision": 1795295875035
+    },
+    "genealogy": {
+      "birth": "1695",
+      "tags": [],
+      "status": "alive",
+      "worldPersonId": "person--haus-bronnor--ysabel-bronnor",
+      "houseId": "house-bronnor",
+      "portraitPlaceholder": "auto",
+      "death": "",
+      "relationships": {
+        "partners": [
+          {
+            "personId": "pellinard-brandyddyn",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-brandyddyn--pellinard-brandyddyn",
+            "name": "Pellinard Brândyddyn"
+          }
+        ],
+        "parents": [],
+        "children": [
+          {
+            "personId": "eurgain-brandyddyn",
+            "type": "biological",
+            "legitimacy": "unknown",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-brandyddyn--eurgain-brandyddyn",
+            "name": "Eurgain Brândyddyn"
+          }
+        ]
+      },
+      "sex": "female",
+      "familyRole": "core",
+      "houseName": "Haus Bronnor"
+    },
+    "updatedAt": "2026-11-21T21:17:55.035Z"
+  },
+  "assignedTab": "Gwynthor"
+}

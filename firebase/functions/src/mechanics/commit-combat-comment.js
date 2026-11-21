@@ -1,5 +1,6 @@
 import { prepareCombatEquipment, reserveCombatEquipment } from '../generated/combat/combat-equipment-preparation.js';
 import { normalizeCombatDistance } from '../generated/combat/combat-rule-distance.js';
+import { withClassPassivePeriods } from '../generated/classes/combat-passives/class-passive-periods.js';
 import { getSceneConditionClock, sceneClockBeforeSegment } from '../generated/scene-time/scene-condition-clock.js';
 import { advanceSubstanceStateMap } from '../generated/character-health/substance-state.js';
 import { readItemDefinitionIndex, hydrateItemRecord, prepareUniqueItemClaims } from '../items/item-definition-repository.js';
@@ -22,6 +23,7 @@ import { getPersistentCombatResources, recoverDailyCombatResources, resetComment
 import { applyCombatAbilityUse } from '../generated/combat/combat-ability-uses.js';
 import { consumeCombatRuleAbilityUses } from '../generated/combat/combat-rule-consumption.js';
 import { reconcileConcentrationConditions } from '../generated/combat/combat-condition-lifecycle.js';
+import { CREATURE_TURN_END_ID, hasCreatureTurnEnd } from '../generated/combat/combat-creature-actions.js';
 import { resolveCombatProfile } from '../generated/combat/combat-profile-resolver.js';
 import { withEquippedCombatWeapon } from '../generated/combat/combat-equipment-state.js';
 import { CombatResolutionService } from '../generated/combat/combat-resolution-service.js';
@@ -260,11 +262,12 @@ export async function commitCombatCommentOperation(request, {
     const encounterParties = getCombatEncounterPartyMap(encounter);
     const sceneItems = deriveSceneItems(trustedHistory);
     const actorsWithPosts = getActorsWithCombatPosts(trustedHistory);
-    const historyStates = deriveCombatStateFromComments(allHistory.filter(isTrustedSceneContributionComment));
+    const contributionHistory = allHistory.filter(isTrustedSceneContributionComment);
+    const historyStates = deriveCombatStateFromComments(contributionHistory);
     const sceneActorTeams = collectSceneActorTeams(trustedHistory, metadata.commentSegments, encounterParties);
     const sceneDay = getTrustedSceneDay(allHistory);
     const recoveryDayKey = `scene:${entryId}:day-${sceneDay}`;
-    const rulePeriods = { comment: commentRef.id, scene: entryId, day: recoveryDayKey };
+    const rulePeriods = withClassPassivePeriods({ comment: commentRef.id, scene: entryId, day: recoveryDayKey }, contributionHistory, metadata);
     let usedRuleFrequencyKeys = deriveCombatRuleFrequencyKeys(trustedHistory, rulePeriods);
     const usedConsequenceKeys = new Set();
 
@@ -452,6 +455,8 @@ export async function commitCombatCommentOperation(request, {
       ...skillEntries.map(entry => ({ ...entry, mechanic: 'skill' }))].sort((a, b) => a.index - b.index);
     let nextPrecedingEntry = 0;
     let hostileOpponentCount = null;
+    const creatureEndRequired = new Set();
+    const creatureEndResolved = new Set();
     const resolvePreceding = async entry => entry.mechanic === 'skill' ? resolveSkillEntry(entry) : resolveInventoryEntry(entry);
     for (const { index, segment, submitted, targetIndex, targetCount, primary } of entries) {
       while (nextPrecedingEntry < precedingEntries.length && precedingEntries[nextPrecedingEntry].index <= index) {
@@ -502,6 +507,14 @@ export async function commitCombatCommentOperation(request, {
       }), prepared.preparation);
       if (actor.equipmentPreparation?.error) fail('failed-precondition', actor.equipmentPreparation.error);
       const target = applyStoredState(targetBase, targetState);
+      if (primary && hasCreatureTurnEnd(actor)) {
+        if (actionId === CREATURE_TURN_END_ID) {
+          const actedLater = metadata.commentSegments.slice(index + 1).some(next =>
+            String(next.sceneActorId || next.actorId || next.characterId || metadata.characterId || '') === String(submitted.actorId));
+          if (actedLater || creatureEndResolved.has(submitted.actorId)) fail('failed-precondition', 'Trollblut wird einmal am Ende des eigenen Beitrags ausgewertet.');
+          creatureEndResolved.add(submitted.actorId);
+        } else creatureEndRequired.add(submitted.actorId);
+      }
       const broadTargetEffect = (actor.selectedAction?.effects || []).some(effect => ['selected', 'allies', 'enemies', 'all'].includes(String(effect?.target || '')));
       const maximumTargets = Math.max(1, Number(actor.selectedAction?.maximumTargets) || (broadTargetEffect ? 20 : 1));
       if (targetCount > maximumTargets) {
@@ -698,6 +711,11 @@ export async function commitCombatCommentOperation(request, {
     }
 
     while (nextPrecedingEntry < precedingEntries.length) await resolvePreceding(precedingEntries[nextPrecedingEntry++]);
+    for (const actorId of creatureEndRequired) {
+      if (!creatureEndResolved.has(actorId) && workingStates.get(String(actorId))?.current !== 0) {
+        fail('failed-precondition', 'Die Auswertung von Trollblut am Beitragsende fehlt. Bitte lade die Seite neu.');
+      }
+    }
     const commitUniqueMoves = await prepareUniqueItemClaims(database, transaction, uniqueItemMoves, { actorUid: request.auth.uid });
     criticalLifecycle = lifecycle.finish({ ...metadata, commentSegments: enhancedSegments });
     persistSkillChallengeClaims(transaction, skillClaimWrites);

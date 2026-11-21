@@ -26,8 +26,10 @@ export async function resolveFollowUpAttacks({ dice, actor, target, weapon, atta
       const loadout = getCombatWeaponLoadout(actor);
       const usedWeapon = followUp.alternateHands && followUpIndex % 2 === 0 ? loadout.left : loadout.right;
       const followWeapon = followUp.inheritWeapon ? (usedWeapon || weapon) : weapon;
+      const inheritedFormula = (actor.weaponGrip === 'two-handed' && actor.selectedAction?.versatileFollowUpWeaponFormula)
+        || actor.selectedAction?.followUpWeaponFormula || weapon.damageFormula;
       const followFormula = followUp.inheritWeapon
-        ? (followUp.alternateHands ? followWeapon.damageFormula : weapon.damageFormula) : followUp.damageFormula;
+        ? (followUp.alternateHands ? followWeapon.damageFormula : inheritedFormula) : followUp.damageFormula;
       const attackDelta = followUp.alternateHands ? getWeaponAttackModifier(actor, followWeapon) - getWeaponAttackModifier(actor, loadout.right) : 0;
       const damageDelta = followUp.alternateHands ? getWeaponDamageModifier(actor, followWeapon) - getWeaponDamageModifier(actor, loadout.right) : 0;
       const offBalance = followUp.saveFailureBonus && secondarySaves.some(save => !save.succeeded);

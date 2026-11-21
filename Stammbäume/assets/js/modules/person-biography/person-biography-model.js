@@ -1,6 +1,6 @@
 import { formatAge } from '../../domain/person-presentation.js';
-import '../../../../../AleriaAlmanach/modules/biography/biography-card-rendering.js';
-import '../../../../../js/biography/public-biographies.generated.js?v=20261115-rheinallt-v1';
+import '../../../../../AleriaAlmanach/modules/biography/biography-card-rendering.js?v=20261121-biography-portraits-v1';
+import '../../../../../js/biography/public-biographies.generated.js?v=20261121-ysabel-v1';
 
 export const PERSON_BIOGRAPHY_EXTENSION_ID = 'biographyModule';
 export const PERSON_BIOGRAPHY_SCHEMA = 'aleria.biography-module';
@@ -90,11 +90,13 @@ function normalizeDocuments(value) {
 }
 
 export function normalizeBiographyData(data = {}) {
+  const portraitDefaultStage = globalThis.AleriaBiographyCards.normalizePortraitDefaultStage(data.portraitDefaultStage);
   return {
     portrait: String(data.portrait || '').trim(),
     ...(Array.isArray(data.knightMentors) ? { knightMentors: globalThis.AleriaBiographyCards.normalizeKnightMentors(data.knightMentors) } : {}),
     portraitStages: normalizePortraitStages(data.portraitStages),
     ...(Array.isArray(data.portraitCaptions) ? { portraitCaptions: Array.from({length:5}, (_,index)=>String(data.portraitCaptions[index] || '').trim().slice(0,500)) } : {}),
+    ...(portraitDefaultStage ? { portraitDefaultStage } : {}),
     ...(['cover','contain'].includes(data.portraitFit) ? { portraitFit: data.portraitFit } : {}),
     sideWidth: clampNumber(data.sideWidth, 100, 35, 100),
     connectionPortraitHeight: clampNumber(data.connectionPortraitHeight, 68, 44, 140),

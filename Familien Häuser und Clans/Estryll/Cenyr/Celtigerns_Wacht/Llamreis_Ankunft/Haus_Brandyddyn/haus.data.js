@@ -99,11 +99,11 @@ window.HAEUSER_DATA = {
     "knighthood": "Das Haus ist kriegerisch geprägt und wartet noch auf seine Erhebung. Persönliche Rittertitel einzelner Angehöriger ändern den bisherigen bürgerlichen Hausrang nicht.",
     "holdings": "Eine genaue Wohnstätte, weitere Besitzungen und Einnahmequellen sind nicht belegt.",
     "cultureReligion": "Besondere religiöse Bindungen sind noch nicht überliefert.",
-    "conflictsAlliances": "Pellinard Brândyddyn und Ysabel Bronnor sind Eurgains Eltern. Ysabel bleibt als Angehörige des Ritterhauses Bronnor aus dem Tal der Milane verzeichnet. Eine Ehe oder Verlobung der Eltern ist nicht belegt.",
+    "conflictsAlliances": "Ysabel Bronnor und Pellinard Brândyddyn sind verheiratet und haben drei Kinder. Ihre älteste Tochter Eurgain dient als Ritter der Draig-Leibgarde. Ysabel gehört weiterhin dem Ritterhaus Bronnor aus dem Tal der Milane an.",
     "values": "Zwei gekreuzte silberne Schwerter vor einer kupferroten Flamme auf nachtblauem Grund. Der geschlossene Eisenring trägt ein keltisches Knotenmuster. Die Symbolik ist ein neu gestaltetes Hauszeichen; aus ihr werden keine zusätzlichen Berufe, Besitzungen oder historischen Ereignisse abgeleitet.",
     "succession": "Ein Oberhaupt und eine Erbfolge sind nicht festgelegt.",
     "court": "Pellinard Brândyddyn: Leutnant der Leibgarde. Eurgain Brândyddyn: Ritter der Leibgarde.",
-    "familyTree": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten. Pellinard Brândyddyn und Ysabel Bronnor sind Eurgains Eltern. Ysabel bleibt als Angehörige des Ritterhauses Bronnor aus dem Tal der Milane verzeichnet. Eine Ehe oder Verlobung der Eltern ist nicht belegt.",
+    "familyTree": "Die Namen des älteren Gründerpaares und die dazwischenliegenden Generationen sind nicht überliefert. Die vorbereitete Familienakte führt vom unbekannten Gründerpaar über das Hauswappen und eine Überlieferungslücke zu den ersten namentlich bekannten Angehörigen. Sie ergänzt keine unbekannten Verwandtschaftsgrade oder Lebensdaten. Ysabel Bronnor und Pellinard Brândyddyn sind verheiratet und haben drei Kinder. Ihre älteste Tochter Eurgain dient als Ritter der Draig-Leibgarde. Ysabel gehört weiterhin dem Ritterhaus Bronnor aus dem Tal der Milane an.",
     "historicalFigures": "Die folgenden Figuren sind namentlich bekannt. Altersangaben sind ausschließlich Schätzungen nach den aktuellen Portraits."
   },
   "sectionTitles": {
@@ -154,7 +154,7 @@ window.HAEUSER_DATA = {
         "group": "Namentlich bekannte Angehörige",
         "role": "Leutnant der Leibgarde",
         "name": "Pellinard Brândyddyn",
-        "description": "Vater Eurgains. Alterserscheinung: etwa 45–55 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
+        "description": "Ehemann Ysabel Bronnors und Vater von drei Kindern. Eurgain ist ihre älteste Tochter. Alterserscheinung: etwa 45–55 Jahre; reine Schätzung nach dem aktuellen Portrait, keine gesicherten Lebensdaten.",
         "imageKey": "haus-figur-1"
       },
       {

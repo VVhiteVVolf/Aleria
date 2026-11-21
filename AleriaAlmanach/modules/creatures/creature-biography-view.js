@@ -1,5 +1,5 @@
 import { CREATURE_BIOGRAPHY_FIELDS, normalizeCreatureBiography, hasCreatureBiography } from './creature-biography-model.js?v=20260925-creature-biography-v2';
-import '../biography/biography-card-rendering.js?v=20260925-creature-biography-v2';
+import '../biography/biography-card-rendering.js?v=20261121-biography-portraits-v1';
 import { renderCreatureBiographyCardEditor } from './creature-biography-card-editor.js?v=20260925-creature-biography-v2';
 
 export function renderCreatureBiographyDossier(creature, escape) {

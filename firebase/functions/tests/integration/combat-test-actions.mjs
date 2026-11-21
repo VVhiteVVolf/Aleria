@@ -9,6 +9,7 @@ import { deriveCombatStateFromComments, overlayCombatHitPointState } from '../..
 import { withEquippedCombatWeapon } from '../../../../AleriaAlmanach/modules/combat/combat-equipment-state.js';
 import { countActiveHostileOpponents, getCombatEncounterPartyMap, getActiveCombatEncounter } from '../../../../AleriaAlmanach/modules/combat/combat-encounter-model.js';
 import { deriveCombatRuleFrequencyKeys } from '../../../../AleriaAlmanach/modules/combat/combat-trigger-rules.js';
+import { withClassPassivePeriods } from '../../../../AleriaAlmanach/modules/classes/combat-passives/class-passive-periods.js';
 import { buildDamageRollPlan } from '../../../../AleriaAlmanach/modules/combat/rules/combat-mvp-rules.js';
 
 // Fixed receipts make regressions exact; a seeded PRNG makes complete fights
@@ -48,7 +49,8 @@ export async function prepareTestAction({ entryId, actorRecord, targetRecords, c
     charName: actorRecord.name, sceneActorSourceId: actorRecord.sourceCreatureId || '', text, combatDistanceMeters: distanceMeters,
     combatAction: { encounterId: encounter?.encounterId || '', profileActionId: actionId, rollMode: 'normal', paymentMode, weaponGrip, castLevel, loadout } };
   const resolutions = [];
-  const rulePeriods = { comment: 'pending', scene: entryId, day: getSceneRecoveryDayKey(entryId, comments) };
+  const rulePeriods = withClassPassivePeriods({ comment: 'pending', scene: entryId, day: getSceneRecoveryDayKey(entryId, comments) },
+    comments, { characterId: actorRecord.id, commentSegments: [...priorSegments, segment] });
   let usedRuleFrequencyKeys = deriveCombatRuleFrequencyKeys([...comments, { commentSegments: priorSegments }]);
   let hostileOpponentCount = null;
   for (const [index, targetRecord] of targetRecords.entries()) {

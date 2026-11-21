@@ -13,11 +13,19 @@ export function getVoluntaryCombatActionBlock(profile = {}) {
     code: 'incapacitated', message: `${profile.name || 'Die Figur'} ist bei 0 Trefferpunkten handlungsunfähig.`
   };
   const condition = getActionBlockingCondition(profile);
-  return condition ? { code: 'conditionBlocksActions', condition,
-    message: `${profile.name || 'Die Figur'} kann wegen „${condition.name || 'Aktiver Zustand'}“ keine selbstbestimmte Handlung ausführen. Der Zug kann mit „Abwarten / Zug aussetzen“ verstreichen.` } : null;
+  if (condition) return { code: 'conditionBlocksActions', condition,
+    message: `${profile.name || 'Die Figur'} kann wegen „${condition.name || 'Aktiver Zustand'}“ keine selbstbestimmte Handlung ausführen. Der Zug kann mit „Abwarten / Zug aussetzen“ verstreichen.` };
+  const magicLock = ['spell', 'prayer', 'song'].includes(profile.profileActionKind)
+    && (profile.temporaryConditions || []).find(entry => entry.active !== false && entry.blocksMagic === true);
+  return magicLock ? { code: 'conditionBlocksActions', condition: magicLock, message: `${magicLock.name} · Magische Kampfhandlungen sind gesperrt.` } : null;
 }
 
-export const getCombatReactionBlock = profile => getVoluntaryCombatActionBlock(profile);
+export function getCombatReactionBlock(profile = {}) {
+  const block = getVoluntaryCombatActionBlock({ ...profile, profileActionKind: '' });
+  if (block) return block;
+  const condition = (profile.conditions || []).find(entry => entry.active !== false && entry.blockedResource === 'reaction');
+  return condition ? { code: 'reactionBlocked', condition, message: `${condition.name} · Reaktionen sind gesperrt.` } : null;
+}
 export const canUseCombatReaction = profile => !getCombatReactionBlock(profile);
 
 // Only permission checks consume this transient view. Numeric rule sources

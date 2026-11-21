@@ -27,7 +27,9 @@ const itemTests = ['item-definitions', 'item-system-readiness', 'item-system-che
   'item-register-integration', 'item-register-modules', 'item-register-providers', 'item-register-template-search',
   'item-use-definitions', 'inventory-use-model', 'scene-inventory-transfer', 'scene-item-authoring',
   'character-inventory-itemization', 'character-equipment-sync', 'equipment-standards-2026-11', 'inventory-equipment-effects',
-  'combat-action-card', 'combat-support-equipment', 'combat-defense-balance', 'weapon-action-balancing', 'combat-critical-damage', 'standard-tool-artwork', 'trade-catalog-money', 'scene-item-equipment-preservation', 'item-register-trade-projection', ...sceneTradeTests];
+  'combat-action-card', 'combat-support-equipment', 'combat-defense-balance', 'weapon-action-balancing', 'combat-critical-damage',
+  'combat-checkup', 'combat-class-passives', 'creature-encounters', 'derwyn-wyrmtanz-runtime', 'drachentanz-class-runtime',
+  'standard-tool-artwork', 'trade-catalog-money', 'scene-item-equipment-preservation', 'item-register-trade-projection', ...sceneTradeTests];
 
 export const ADVENTURE_SYSTEM_TASKS = [
   {
@@ -69,12 +71,15 @@ export const ADVENTURE_SYSTEM_TASKS = [
       'AleriaAlmanach/scripts/build-item-register.mjs', 'AleriaAlmanach/scripts/source-pages/', 'AleriaAlmanach/docs/inventory/',
       'AleriaAlmanach/scripts/build-scene-trade-builtins.mjs', 'AleriaAlmanach/scripts/scene-trade/',
       'AleriaAlmanach/tests/fixtures/', 'CharakterDatenbank/generated/characters.snapshot.json',
+      'Bestiarium/assets/kreaturenkarten/', 'Bestiarium/wesen/', 'Bestiarium/kreaturenkarten/', 'Bestiarium/modules/encounter-cards/',
+      'Charakter Archiv Exporte/gawain-draig.json', 'Klassenordner/tests/cenyr-classes.test.mjs',
       'AleriaAlmanach/package.json', 'AleriaAlmanach/package-lock.json', 'Markt/', 'Stammbäume/assets/js/',
       'Familien Häuser und Clans/', 'firebase/functions/src/', 'firebase/functions/tests/', 'firebase/functions/scripts/sync-almanach-mechanics.mjs',
       'firebase/functions/package.json', 'firebase/functions/package-lock.json', 'firebase/firestore.rules', 'firebase/firestore.indexes.json',
       ...itemTests.map(frontend)],
     commands: [dependencyCheck, test('netlify/tests/scene-trade-build-inputs.test.mjs'), ['netlify/build/check-mechanics-projection.mjs'], ['AleriaAlmanach/scripts/build-item-register.mjs', '--check'],
-      ['Anzeigetafeln/tools/build-notice-reward-catalog.mjs', '--check'], test(...itemTests.map(frontend)),
+      ['Anzeigetafeln/tools/build-notice-reward-catalog.mjs', '--check'],
+      test(...itemTests.map(frontend), 'Klassenordner/tests/cenyr-classes.test.mjs'),
       test('firebase/functions/tests/*.test.js')]
   }
 ];

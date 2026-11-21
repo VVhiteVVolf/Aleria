@@ -17,7 +17,7 @@ export const formatCombatModifier = value => `${Number(value) >= 0 ? '+' : ''}${
 export const renderCombatIcon = (source, fallback = '✦') => safeCombatImage(source)
   ? `<img src="${e(source)}" data-combat-image-fallback="${e(fallback)}" alt="" loading="lazy" decoding="async">` : `<span class="combat-status-icon-fallback" aria-hidden="true">${e(fallback)}</span>`;
 
-export function renderCombatCondition(condition, { removable = false, temporary = false } = {}) {
+export function renderCombatCondition(condition, { removable = false, temporary = false, controls = '' } = {}) {
   const rules = (condition.triggerRules || []).filter(rule => rule.enabled !== false)
     .map(describeCombatTriggerRule);
   const preparation = [condition.blockedResource ? `${({ action: 'Aktion', reaction: 'Reaktion', 'bonus-action': 'Bonusaktion' })[condition.blockedResource] || condition.blockedResource} gesperrt` : '',
@@ -39,6 +39,6 @@ export function renderCombatCondition(condition, { removable = false, temporary 
       ${modifiers ? `<small class="comment-combat-condition-modifiers">${e(modifiers)}</small>` : ''}
       ${conditional ? `<small class="comment-combat-condition-modifiers">Nur beim passenden Auslöser: ${e(conditional)}</small>` : ''}
       ${preparation ? `<small class="comment-combat-condition-modifiers">${e(preparation)}</small>` : ''}
-      ${condition.description || condition.source ? `<details data-profile-details-key="condition:${e(condition.id)}"><summary>Wirkung & Quelle</summary><p>${e(condition.description || '')}</p>${condition.source ? `<p>${e(condition.source)}</p>` : ''}</details>` : ''}
+      ${condition.description || condition.source ? `<details data-profile-details-key="condition:${e(condition.id)}"><summary>Wirkung & Quelle</summary><p>${e(condition.description || '')}</p>${condition.source ? `<p>${e(condition.source)}</p>` : ''}</details>` : ''}${controls}
     </div>${removable ? `<button type="button" data-action="remove-comment-combat-condition" data-condition-id="${e(condition.id)}" aria-label="${e(condition.name)} entfernen" title="Effekt entfernen">×</button>` : ''}</li>`;
 }

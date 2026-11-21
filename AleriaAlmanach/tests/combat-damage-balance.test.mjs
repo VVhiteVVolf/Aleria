@@ -91,15 +91,15 @@ test('Gildas kann Gawain mit seinem stärksten einhändigen Jungritterangriff se
   assert.equal(target.currentHitPoints, 49);
   const actor = resolveCombatProfile(gildas, { actionId: 'technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb' });
   assert.equal(actor.weapon.damageFormula, '2d8+1d4');
-  assert.equal(actor.damageModifier, 6);
+  assert.equal(actor.damageModifier, 4);
   for (const critical of [false, true]) {
     const result = await new CombatResolutionService(new MaximumDice(critical)).resolveAttack({ actor, target });
-    assert.equal(result.damage.total, critical ? 44 : 24);
+    assert.equal(result.damage.total, critical ? 42 : 22);
     assert.ok(result.targetSnapshot.hitPointsAfter > 0);
   }
 });
 
-test('Gildas Abschluss plus Reaktionsangriff verbraucht gültige Kosten und lässt Gawain bei maximalem Normalschaden 13 TP', async () => {
+test('Gildas Abschluss plus Reaktionsangriff verbraucht gültige Kosten und lässt Gawain ohne vorbereitete Antwort 17 TP', async () => {
   const character = await load('gildas-gafyr');
   const target = resolveCombatProfile(await load('gawain-draig'));
   const first = resolveCombatProfile(character, { actionId: 'technique:combat-style-drachentanz-jungdrache-06-sechsfacher-lehrhieb' });
@@ -110,8 +110,8 @@ test('Gildas Abschluss plus Reaktionsangriff verbraucht gültige Kosten und läs
   const resolver = new CombatResolutionService(new MaximumDice());
   const result = await resolver.resolveAttack({ actor: first, target });
   const follow = await resolver.resolveAttack({ actor: response, target: { ...target, currentHitPoints: result.targetSnapshot.hitPointsAfter } });
-  assert.equal(result.damage.total + follow.damage.total, 36);
-  assert.equal(follow.targetSnapshot.hitPointsAfter, 13);
+  assert.equal(result.damage.total + follow.damage.total, 32);
+  assert.equal(follow.targetSnapshot.hitPointsAfter, 17);
 });
 
 test('zweihändige Waffenführung und manuelle Stufenwechsel berechnen die Technik neu ohne gespeicherte Zusatzwürfel zu stapeln', async () => {

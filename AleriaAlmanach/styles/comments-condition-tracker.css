@@ -16,6 +16,9 @@
 .comment-condition-tracker .comment-combat-condition strong { color: #493322; }
 .comment-condition-tracker .comment-combat-condition small { color: #5d4932; font-size: 0.8rem; }
 .comment-condition-tracker .comment-combat-condition summary { color: #793b35; }
+.comment-condition-escape { border-top: 1px solid #ceb68a; margin-top: .4rem; }
+.comment-condition-escape > div { display: flex; flex-wrap: wrap; gap: .34rem; margin: .35rem 0; }
+.comment-condition-escape button:disabled { opacity: .6; cursor: default; }
 @media (max-width: 480px) {
   .comment-condition-tracker [data-condition-tracker-content] { padding: 0 0.5rem 0.5rem; }
 }

@@ -1,6 +1,6 @@
 # Almanach-Ladebildschirm
 
-Beim Öffnen des Almanachs wird eine von vier Szenen ausgelost. Im selben Tab
+Beim Öffnen des Almanachs wird eine von neun Szenen ausgelost. Im selben Tab
 wechselt die Szene beim nächsten Laden. Ohne verfügbaren Sitzungsspeicher bleibt
 die normale Zufallsauswahl aktiv.
 
@@ -8,6 +8,11 @@ die normale Zufallsauswahl aktiv.
 - Sir Duncan, Gawain, Ylva und Freki wandern durch Nadelwald und Gebirge am Wasserfall entlang.
 - Idwal schlägt im Gartenbezirk auf die zerbrochene Teekanne. Talon versucht ihn zu beruhigen und Trevor lacht. Über „Spielen“ beginnt die Rosenflucht.
 - Iestyn, Gareth, Trahern, Cadogan, Cadfan, Neala und Branwen reagieren in der Kammer des Herolds auf den Zwischenfall mit Cadogans Hut.
+- Trahern malt ein Dorf im Tal. Das Licht unter dem Baum verändert sich leicht.
+- Zwei Versunkene knien am Strand über einem Kadaver. Die Augen des aufblickenden Versunkenen glimmen kurz auf.
+- Sir Steffan mustert die unbewaffneten Draig-Waffenknechte in Zweierreihen. Ein Lichtstreif wandert über das Banner.
+- Am halb abgebauten Weglager schimpft Fenrir über die Schulter mit Freya, die wegschaut und ihre Augen verdeckt. Über der Feuerstelle steigt ein Hauch Rauch auf.
+- Ein kleiner Junge bietet dem neugierigen Landtroll vor der Brücke einen Fisch an. Im Bach schimmert das Wasser.
 
 Der Eintritt erfolgt per Klick oder Enter. Die Animation läuft unabhängig vom
 Ladefortschritt.
@@ -45,7 +50,13 @@ In der Heroldskammer bleibt die Kamera fest. Beim Sprechen wechselt die aktive
 Figur zwischen drei Mund- und Handgesten. Cadogan hält den Hut in allen vier
 Posen in der Hand.
 
-`loading-screen-quotes.js` enthält die Dialoge der vier Szenen. Owetas Quartett
+`loading-screen-vignettes.js` setzt für jede der fünf ruhigen Szenen ein Bild
+ein. Die Animation liegt in `loading-screen-vignettes.css` und hält an, wenn die
+Leser pausieren, den Tab wechseln oder den Almanach betreten. Die Kreaturen
+folgen den Bildtafeln aus dem Bestiarium. [Versunkener](../../../Bestiarium/wesen/nekrophagen/versunkener/index.html), [Landtroll](../../../Bestiarium/wesen/trolle/landtroll/index.html).
+
+`loading-screen-quotes.js` enthält die Dialoge von Owetas Quartett, der Reise,
+der Rosenflucht und der Heroldskammer. Owetas Quartett
 verabredet sich am Osttor und bespricht die Rast vor dem Hof, die Unterlagen
 und die Fragen an die Familie Tirfelyn. In der eigens geschriebenen Szene am
 Wolfshorn warnt Sir Duncan vor den nächsten zwei Wochen. Freki dreht sich für
@@ -72,6 +83,11 @@ benötigt Pillow mit WebP- und AVIF-Unterstützung. Es erzeugt die aktiven Datei
 unter `public/assets/loading-screen/` und das Manifest mit Maßen und
 SHA-256-Prüfsummen. Die Hintergründe haben AVIF-Fassungen für Desktop und
 Mobilgeräte sowie einen WebP-Fallback.
+Für die ruhigen Szenen liest `prepare-assets.py --vignettes` die ausgewählten
+Fassungen aus `assets/loading-screen/ruhige-szenen-v1-prompts.json` und erstellt
+`public/assets/loading-screen/ruhige-szenen-v1-manifest.json` sowie die zugehörigen
+AVIF- und WebP-Dateien. Der Beleg enthält auch die Prompts und Referenzen der
+früheren Fassungen.
 
 ## Rosenflucht
 

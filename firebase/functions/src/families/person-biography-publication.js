@@ -49,6 +49,8 @@ function biographyData(value = {}) {
   return {
     portrait: image(value.portrait),
     ...(Array.isArray(value.portraitCaptions) ? { portraitCaptions: Array.from({length:5}, (_,index)=>text(value.portraitCaptions[index],500)) } : {}),
+    ...(Number.isInteger(value.portraitDefaultStage) && value.portraitDefaultStage > 1 && value.portraitDefaultStage <= 5
+      ? { portraitDefaultStage: value.portraitDefaultStage } : {}),
     ...(['cover','contain'].includes(value.portraitFit) ? { portraitFit: value.portraitFit } : {}),
     ...(Array.isArray(value.knightMentors) ? { knightMentors: value.knightMentors.map(item => ({
       name: text(item?.name, 300), role: text(item?.role, 100) || 'Rittervater',

@@ -1,4 +1,4 @@
-import '../../../../../AleriaAlmanach/modules/biography/biography-card-rendering.js';
+import '../../../../../AleriaAlmanach/modules/biography/biography-card-rendering.js?v=20261121-biography-portraits-v1';
 import { escapeHtml, initials } from '../../ui/dom.js';
 import {
   sanitizeBiographyHref,

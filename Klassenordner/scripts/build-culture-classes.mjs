@@ -20,6 +20,8 @@ import { writeClassPageOutput } from './class-page-output.mjs';
 
 const root = new URL('../', import.meta.url);
 const check = process.argv.includes('--check');
+const requestedCultures = process.argv.slice(2).flatMap((arg, index, args) =>
+  arg === '--culture' ? [String(args[index + 1] || '').toLowerCase()] : []);
 const volumes = await Promise.all([
   { folder: 'Cenyr', ids: CENYR_CLASS_IDS, progression: getCenyrClassProgression },
   { folder: 'Vennyr', ids: VENNYR_CLASS_IDS, progression: getVennyrClassProgression },
@@ -36,7 +38,12 @@ const volumes = await Promise.all([
   )));
   return { ...volume, culture, documents };
 }));
-for (const volume of volumes) {
+for (const requested of requestedCultures) {
+  assert(volumes.some(volume => volume.culture.id === requested), `Unbekannte Kultur: ${requested}`);
+}
+const selectedVolumes = requestedCultures.length
+  ? volumes.filter(volume => requestedCultures.includes(volume.culture.id)) : volumes;
+for (const volume of selectedVolumes) {
   const navigation = volume.folder === 'Cenyr'
     ? [...volume.documents, volumes.find(entry => entry.folder === 'Vennyr').documents.find(document => document.id === 'derwyn')]
     : volume.documents;
@@ -45,15 +52,17 @@ for (const volume of volumes) {
       renderCultureClassPage(document, navigation, volume.culture, volume.progression?.(document.id) || null), check);
   }
 }
-let catalog = await readFile(new URL('Klassenseite.html', root), 'utf8');
-for (const volume of volumes) {
-  for (const id of volume.ids) {
-    const pattern = new RegExp(`<a\\b[^>]*\\bid="klasse-${volume.culture.id}-${id}"[^>]*>`);
-    assert(pattern.test(catalog), `${volume.folder}-Registerkarte fehlt: ${id}`);
-    catalog = catalog.replace(pattern, tag => tag.replace(/href="[^"]*"/, `href="${volume.folder}/${id}/index.html"`)
-      .replace(/ (?:data-action|aria-haspopup|aria-controls)="[^"]*"/g, ''));
+if (!requestedCultures.length) {
+  let catalog = await readFile(new URL('Klassenseite.html', root), 'utf8');
+  for (const volume of volumes) {
+    for (const id of volume.ids) {
+      const pattern = new RegExp(`<a\\b[^>]*\\bid="klasse-${volume.culture.id}-${id}"[^>]*>`);
+      assert(pattern.test(catalog), `${volume.folder}-Registerkarte fehlt: ${id}`);
+      catalog = catalog.replace(pattern, tag => tag.replace(/href="[^"]*"/, `href="${volume.folder}/${id}/index.html"`)
+        .replace(/ (?:data-action|aria-haspopup|aria-controls)="[^"]*"/g, ''));
+    }
   }
+  await writeClassPageOutput(root, 'Klassenseite.html', catalog, check);
 }
-await writeClassPageOutput(root, 'Klassenseite.html', catalog, check);
-const summary = volumes.map(volume => `${volume.documents.length} ${volume.folder}-Klassen${volume.progression ? ' mit Ausbildung' : ' als Inhaltsseiten'}`).join(', ');
+const summary = selectedVolumes.map(volume => `${volume.documents.length} ${volume.folder}-Klassen${volume.progression ? ' mit Ausbildung' : ' als Inhaltsseiten'}`).join(', ');
 console.log(`${summary} ${check ? 'geprüft' : 'erstellt'}.`);

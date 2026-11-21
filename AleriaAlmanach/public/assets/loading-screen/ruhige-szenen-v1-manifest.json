@@ -1,0 +1,225 @@
+{
+  "version": 1,
+  "scenes": {
+    "trahern-tal": {
+      "source": {
+        "file": "assets/loading-screen/source/trahern-tal-v1.png",
+        "size": [
+          1672,
+          941
+        ],
+        "frames": 1,
+        "bytes": 2535851,
+        "sha256": "40e166544ffbd84cd1a992d5f3c6c1f27245ea3f1f62c423dffc0618d280f9a0"
+      },
+      "assets": [
+        {
+          "file": "public/assets/loading-screen/trahern-tal-v1-desktop.avif",
+          "size": [
+            1440,
+            810
+          ],
+          "frames": 1,
+          "bytes": 125339,
+          "sha256": "fc1ba42968b3d1626c296d8a4877e4ec068c83b80203ac512892f1a8fbce6543"
+        },
+        {
+          "file": "public/assets/loading-screen/trahern-tal-v1-mobile.avif",
+          "size": [
+            768,
+            432
+          ],
+          "frames": 1,
+          "bytes": 50472,
+          "sha256": "512269525893f0f5f50022536f1a7853a0e93cbe0612a92df3e936326ff20f0f"
+        },
+        {
+          "file": "public/assets/loading-screen/trahern-tal-v1-fallback.webp",
+          "size": [
+            1280,
+            720
+          ],
+          "frames": 1,
+          "bytes": 154452,
+          "sha256": "3d4d34750dfba64483926ad879d56b0cbcad2e1158d1d703917ab2b86da0d845"
+        }
+      ]
+    },
+    "versunkene-strand": {
+      "source": {
+        "file": "assets/loading-screen/source/versunkene-strand-v1.png",
+        "size": [
+          1672,
+          941
+        ],
+        "frames": 1,
+        "bytes": 2355766,
+        "sha256": "5ee1547047d1cc94563c69a6736f368236bc76334301fe89032c0dc8b74eacf4"
+      },
+      "assets": [
+        {
+          "file": "public/assets/loading-screen/versunkene-strand-v1-desktop.avif",
+          "size": [
+            1440,
+            810
+          ],
+          "frames": 1,
+          "bytes": 76174,
+          "sha256": "5aea7e02ea322a47b4e07f055d96fae395a305cef39c3aae1989e009842fd24d"
+        },
+        {
+          "file": "public/assets/loading-screen/versunkene-strand-v1-mobile.avif",
+          "size": [
+            768,
+            432
+          ],
+          "frames": 1,
+          "bytes": 27814,
+          "sha256": "5ce195f568dedb39a6341bdd64a009030dff97b2736148ce47be8ea013e9ae41"
+        },
+        {
+          "file": "public/assets/loading-screen/versunkene-strand-v1-fallback.webp",
+          "size": [
+            1280,
+            720
+          ],
+          "frames": 1,
+          "bytes": 91490,
+          "sha256": "a49a96892a4915305422801435b169655285ddad78b8a529f8eac78db8d4294f"
+        }
+      ]
+    },
+    "fenrir-freya-weglager": {
+      "source": {
+        "file": "assets/loading-screen/source/fenrir-freya-weglager-v2.png",
+        "size": [
+          1672,
+          941
+        ],
+        "frames": 1,
+        "bytes": 3295704,
+        "sha256": "e0c8d00443c1b54242d55af1a9597bbf595de19b1951b1a1a96bfd321850d65c"
+      },
+      "assets": [
+        {
+          "file": "public/assets/loading-screen/fenrir-freya-weglager-v2-desktop.avif",
+          "size": [
+            1440,
+            810
+          ],
+          "frames": 1,
+          "bytes": 207726,
+          "sha256": "13f9e32d84ca7c0861329f9ba89dfc6e26b229f31a715956204dfe7e7649a236"
+        },
+        {
+          "file": "public/assets/loading-screen/fenrir-freya-weglager-v2-mobile.avif",
+          "size": [
+            768,
+            432
+          ],
+          "frames": 1,
+          "bytes": 70359,
+          "sha256": "98364334fa0bfcd190f8a5f20680db425ffde655ec2476305ba26ffb4ca90be4"
+        },
+        {
+          "file": "public/assets/loading-screen/fenrir-freya-weglager-v2-fallback.webp",
+          "size": [
+            1280,
+            720
+          ],
+          "frames": 1,
+          "bytes": 239900,
+          "sha256": "b8a9437e8c05da229ae711bb8b7235dc0451490fb583693959c691617a26b20c"
+        }
+      ]
+    },
+    "steffan-musterung": {
+      "source": {
+        "file": "assets/loading-screen/source/steffan-musterung-v3.png",
+        "size": [
+          1672,
+          941
+        ],
+        "frames": 1,
+        "bytes": 2675113,
+        "sha256": "0672019d7c2dcdd3d1e04fceb0c458b5dc015c8c8180bd4deb382a0c05036c79"
+      },
+      "assets": [
+        {
+          "file": "public/assets/loading-screen/steffan-musterung-v3-desktop.avif",
+          "size": [
+            1440,
+            810
+          ],
+          "frames": 1,
+          "bytes": 154545,
+          "sha256": "baddb239db3aa5de6b44829fbdc6fd3fb0e14d34fc3876dcbce795a859ff826b"
+        },
+        {
+          "file": "public/assets/loading-screen/steffan-musterung-v3-mobile.avif",
+          "size": [
+            768,
+            432
+          ],
+          "frames": 1,
+          "bytes": 63431,
+          "sha256": "c139ec7a760480cd21710e1a24fc2e1611e544a9836520a4e4634ccec80b6d80"
+        },
+        {
+          "file": "public/assets/loading-screen/steffan-musterung-v3-fallback.webp",
+          "size": [
+            1280,
+            720
+          ],
+          "frames": 1,
+          "bytes": 184522,
+          "sha256": "6e43cbb0a92823623935dc9aec06771fea7499d1a2a2f25fd933ec474c5f9ae9"
+        }
+      ]
+    },
+    "landtroll-bruecke": {
+      "source": {
+        "file": "assets/loading-screen/source/landtroll-bruecke-v2.png",
+        "size": [
+          1672,
+          941
+        ],
+        "frames": 1,
+        "bytes": 3167363,
+        "sha256": "d70e12c2bf846000bd245d886e900e8dd38de46e12eaf7d587e0916680cf7428"
+      },
+      "assets": [
+        {
+          "file": "public/assets/loading-screen/landtroll-bruecke-v2-desktop.avif",
+          "size": [
+            1440,
+            810
+          ],
+          "frames": 1,
+          "bytes": 182535,
+          "sha256": "762fcb310a3fbb1de0c56c85b3a9ebb9c3472fa940ebf3fb1e415be03f399616"
+        },
+        {
+          "file": "public/assets/loading-screen/landtroll-bruecke-v2-mobile.avif",
+          "size": [
+            768,
+            432
+          ],
+          "frames": 1,
+          "bytes": 61165,
+          "sha256": "ffe72a3f86362a341b1a90a87d63e7b7ee051d031199cc6e6b9dfb2f877f0746"
+        },
+        {
+          "file": "public/assets/loading-screen/landtroll-bruecke-v2-fallback.webp",
+          "size": [
+            1280,
+            720
+          ],
+          "frames": 1,
+          "bytes": 211566,
+          "sha256": "878f9fdd4e3a0146c45309b09a4f2d613633c57249fe47320234075d9c3a4709"
+        }
+      ]
+    }
+  }
+}

@@ -51,7 +51,8 @@ import {
   CREATURE_LEVEL_GUIDELINES,
   getBuiltinCreatureTemplates,
   isBuiltinCreatureId
-} from './creature-catalog.js?v=20261031-troetzli-v1';
+} from './creature-catalog.js?v=20261121-ysabel-companions-v1';
+import { getBestiaryEncounterCard } from './catalog/bestiary-encounter-cards.js';
 import { getCreatureClassification } from './creature-classification.js?v=20261013-draig-breeds-v2';
 import { renderCreatureGroups } from './creature-library-view.js?v=20261011-creature-groups-v1';
 import { selectChangedSections } from '../characters/character-save-guard.js?v=20260808-character-storage-audit-v1';
@@ -713,14 +714,14 @@ function collectDraftFromForm() {
   return state.draft;
 }
 
-function openSheet(id = '') {
+function openSheet(id = '', { template = null } = {}) {
   biographyEditor.reset();
   state.session += 1;
-  state.activePage = id ? 'overview' : 'profile';
+  state.activePage = id || template ? 'overview' : 'profile';
   mediaEditor.reset();
   state.editingId = String(id || '');
   const source = state.editingId ? state.creatures.find(item => item.id === state.editingId) : null;
-  state.draft = source ? clone(source) : createCreatureDraft();
+  state.draft = source ? clone(source) : template ? createCreatureDuplicate(template, state.creatures) : createCreatureDraft();
   // Schnappschuss des beim Öffnen geladenen Kampfprofils/Loots - siehe Speichersystem-Checkup bei
   // Charakteren. Ohne Baseline (neue Kreatur) gilt beim Speichern automatisch alles als geändert.
   state.draftLoadedSnapshot = source ? clone(source) : null;
@@ -733,6 +734,15 @@ function openSheet(id = '') {
   overlay?.setAttribute('aria-hidden', 'false');
   overlay?.focus({ preventScroll: true });
   document.body.classList.add('creature-profile-open');
+}
+
+function openBestiaryTemplateFromUrl() {
+  const url = new URL(window.location.href);
+  const template = getBestiaryEncounterCard(url.searchParams.get('creatureTemplate'));
+  if (!template || !getOverlay()) return;
+  url.searchParams.delete('creatureTemplate');
+  window.history.replaceState(window.history.state, '', url);
+  openSheet('', { template });
 }
 
 function closeSheet() {
@@ -1203,3 +1213,6 @@ window.AleriaCreatures = Object.freeze({
   duplicate: duplicateCreature,
   materializeBuiltin: materializeBuiltinCreature
 });
+
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', openBestiaryTemplateFromUrl, { once: true });
+else openBestiaryTemplateFromUrl();

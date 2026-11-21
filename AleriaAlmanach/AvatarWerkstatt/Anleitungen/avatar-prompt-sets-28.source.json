@@ -1,0 +1,33 @@
+{
+  "revision": "2026-11-20-subtile-stehgesten",
+  "catalogId": "avatar-prompts-28-sets-20261120-subtile-stehgesten",
+  "sourceDocument": "Avatar_Prompts_28_Sets_20261120.docx",
+  "sourceSha256": "3666b96832ebdc49080f0df365b3f35d5c79aefd0ae51b1f518e1c1e8882a721",
+  "readingCopy": "Lesefassungen/Avatar_Prompts_28_Sets_20261120.txt",
+  "sets": 28,
+  "panels": 252,
+  "addedSetNumbers": [
+    26,
+    27,
+    28
+  ],
+  "previous25": {
+    "catalogPath": "avatar-prompt-sets-25.json",
+    "catalogId": "avatar-prompts-25-sets-20261120-sitzend-essen",
+    "sourceDocument": "Avatar_Prompts_25_Sets_20261120.docx",
+    "sourceSha256": "1f406dadedce3da5198fd06c53683e350156d7d4a3ebefc852c618f747944564",
+    "readingCopy": "Lesefassungen/Avatar_Prompts_25_Sets_20261120.txt"
+  },
+  "old25SetObjectsExactlyPreserved": true,
+  "previous25FilesPreserved": true,
+  "all252PanelLocatorsMatchWord": true,
+  "newSetsStandingSubtleNoProps": true,
+  "visualReview": {
+    "status": "passed",
+    "pages": 49,
+    "changedPagesActuallyViewed": 9,
+    "pixelIdenticalToPreviouslyViewedPages": 40,
+    "receipt": "diagnostics/avatar-sets-28-20261120/visual-review.json"
+  },
+  "scope": "Reusable templates only; previous character images and commissions remain untouched."
+}

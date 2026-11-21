@@ -1,4 +1,4 @@
-// Comment submit flow.
+﻿// Comment submit flow.
 // Keeps save, fallback, and post-save reload behavior separate from form rendering.
 
 async function submitComment() {
@@ -96,7 +96,7 @@ async function submitComment() {
     if (window.AleriaSkillChecks?.handleSubmission) {
       const skillResult = await window.AleriaSkillChecks.handleSubmission({
         threadId,
-        deferToCombat: window.AleriaCombat?.hasCombatSegments?.(commentSegments) === true,
+        deferToCombat: window.AleriaCombat?.hasCombatSegments?.(commentSegments, { threadId, characterId: commentMetadata.characterId }) === true,
         text,
         charName: name,
         charTitle: title,

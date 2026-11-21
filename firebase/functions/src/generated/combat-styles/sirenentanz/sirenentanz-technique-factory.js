@@ -38,7 +38,7 @@ export const SIRENENTANZ_WEAPONS = Object.freeze({
   staff: { name: 'Stab oder Saphirstab', types: ['staff'], profiles: ['staff'], twoHanded: true },
   derwynStaff: { name: 'Kampfstab oder nahkampftauglicher Zauberstab', types: ['staff'], profiles: ['staff', 'quarterstaff', 'magic-staff'], twoHanded: true },
   sword: { name: 'Schwert', types: ['sword'], profiles: ['sword'] },
-  morningstar: { name: 'Morgenstern', types: ['mace'], profiles: ['morningstar'] },
+  morningstar: { name: 'Morgenstern oder Flegel', types: ['mace'], profiles: ['morningstar', 'flail'] },
   mace: { name: 'Streitkolben', types: ['mace'], profiles: ['mace'] },
   rider: { name: 'Flegel, Rabenschnabel, Reiteraxt oder Streitkolben', types: ['axe', 'mace'], profiles: [] },
   riderPolearm: { name: 'Glefe oder Reiterspieß', types: ['polearm', 'spear'], profiles: ['glaive', 'rider-spear'] },

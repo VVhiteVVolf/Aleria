@@ -6,6 +6,7 @@ import { attachPreparedCounter } from './combat-counter-resolution.js';
 import { attachTechniqueDisarm } from './combat-technique-disarm.js';
 import { releaseCriticalTemporaryOwnership } from '../combat-critical/combat-critical-lifecycle.js';
 import { getActionPaymentCosts } from './combat-action-economy.js';
+import { applyCombatAbilityUse } from './combat-ability-uses.js';
 import {
   getCombatAttackNumbers, evaluateCombatAttackRoll, evaluateSavingThrowRoll, applyOutcome,
   getFirstHitDefenseRule, resolveFirstHitDefenseUse
@@ -32,9 +33,11 @@ import {
   validateCombatTargetProfile
 } from './combat-profile-resolver.js?v=20260928-equipment-art-v4';
 import {
+  applyCombatResourceCosts,
   patchResolutionResourceState
 } from './combat-state-model.js?v=20260928-equipment-art-v4';
 import {
+  applyCreatureBurnDamage,
   applyCombatHealing,
   applyTemporaryHitPoints,
   applyTypedCombatDamage,
@@ -46,9 +49,9 @@ import { normalizeRuntimeCondition } from './combat-condition-duration.js?v=2026
 import { hasActiveBerserk, markBerserkActivity } from './combat-berserk-state.js';
 import { isSkjaldrBerserkAbility } from '../classes/aldrimar/skjaldr-combat-profile.js';
 import { consumeCombatAmmunition } from './combat-ammunition.js?v=20260804-referee-v2';
-import { consumeCombatRuleResources } from './combat-rule-consumption.js?v=20260928-equipment-art-v4';
+import { consumeCombatRuleResources, createCombatReactionBudget } from './combat-rule-consumption.js?v=20260928-equipment-art-v4';
 import { resolveCombatWard } from './combat-ward-resolution.js?v=20260906-character-vitality-v1';
-import { refreshRuntimeCondition } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
+import { conditionsAfterHealing, refreshRuntimeCondition } from './combat-condition-lifecycle.js?v=20260906-character-vitality-v1';
 import { getActionLockPrevention } from './combat-action-lock-recovery.js';
 import { resolveCombatConcentration } from './combat-concentration-resolution.js?v=20260928-equipment-art-v4';
 import {
@@ -63,8 +66,13 @@ import { prepareCombatTurnStart, attachCombatTurnStart } from './combat-turn-sta
 import { withCurrentCombatPermissionState } from './combat-action-permission.js';
 import { normalizeCombatDistance } from './combat-rule-distance.js';
 import { buildSupportAuraApplications } from './combat-support-aura.js';
+import { getDerwynChannelingFocus } from '../classes/combat-passives/derwyn-passives.js';
+import { getCombatPassiveClassId } from '../classes/combat-passives/class-passive-curriculum.js';
+import { classEquipmentTransitionEffects } from '../classes/combat-passives/vennyr-weapon-passives.js';
+import { attachCreatureEscape, hasOwnHold, prepareCreatureTurnEnd } from './combat-creature-actions.js';
+import { getRegenerationTrait, isActivelyBurning } from './combat-creature-traits.js';
 
-export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-16';
+export const COMBAT_EVALUATION_RULES_VERSION = 'combat-evaluation-18';
 
 function normalizeRollMode(value) {
   return ['advantage', 'disadvantage'].includes(value) ? value : 'normal';
@@ -134,7 +142,7 @@ function hasHostileEffects(effects = []) {
   return effects.some(effect => ['damage', 'debuff'].includes(effect.type));
 }
 
-function updateResource(resources = [], resourceId = '', amount = 0, restore = false) {
+function updateResource(resources = [], resourceId = '', amount = 0, restore = false, reserved = 0) {
   const before = (Array.isArray(resources) ? resources : []).map(resource => ({ ...resource }));
   let changed = null;
   const after = before.map(resource => {
@@ -143,11 +151,17 @@ function updateResource(resources = [], resourceId = '', amount = 0, restore = f
     const maximum = Math.max(0, Number(resource.maximum) || 0);
     const nextCurrent = restore
       ? Math.min(maximum, current + Math.max(0, Number(amount) || 0))
-      : Math.max(0, current - Math.max(0, Number(amount) || 0));
+      : Math.max(reserved, current - Math.max(0, Number(amount) || 0));
     changed = { resourceId: resource.id, name: resource.name, before: current, after: nextCurrent, maximum };
     return { ...resource, current: nextCurrent };
   });
   return { before, after, changed };
+}
+
+function actionResourceCosts(actor, options) {
+  if (options.skipResourceCosts) return [];
+  if (actor.selectedAction?.spendAllRegularActions) return getActionPaymentCosts(actor.selectedAction, actor.paymentMode, actor);
+  return actor.resourceCosts || [];
 }
 
 function buildChannelingResolution(actor, target, description, rollMode, requiredComments, commentKey = '') {
@@ -239,7 +253,20 @@ export function getCombatRollContext(actor, target = {}, options = {}) {
   const rulePeriods = options.rulePeriods || {};
   const actionKind = actor.profileActionKind || 'weapon';
   const profileActionId = actor.profileActionId || '';
-  const ruleProfileState = { actorProfile: actor, targetProfile: target };
+  const actorPartyId = options.encounter?.participants?.get(actor.characterId)?.partyId || '';
+  const reactionBudget = ruleSources.some(source => source.selectedRuleIds?.length) ? createCombatReactionBudget(ruleSources, {
+    actorId: actor.characterId,
+    actorResources: options.actorResourcesAfter || applyCombatResourceCosts(actor.resources, actionResourceCosts(actor, options)).after,
+    actorAbilities: applyCombatAbilityUse(actor.abilities, options.skipResourceCosts ? '' : profileActionId, rulePeriods.day).abilities,
+    dayKey: rulePeriods.day
+  }) : null;
+  const primarySaveState = savingThrowMode ? {
+    saveAttribute: actor.actionSaveAttribute,
+    saveContext: { actionKind, effects: (actor.selectedAction?.effects || []).filter(effect => effect.target !== 'self'
+      && ['hit', 'save-failure'].includes(effect.on)) }
+  } : {};
+  const ruleProfileState = { actorProfile: actor, targetProfile: target, distanceMeters, actorPartyId,
+    continuingAction: !!options.startedAction, charge: options.charge === true, reactionBudget, ...primarySaveState };
   const ruleCache = new WeakMap();
   const supportAuras = buildSupportAuraApplications(ruleSources, actionKind, actor, target);
   const preRollApplications = collectApplicableCombatRules({
@@ -273,10 +300,19 @@ export class CombatResolutionService {
   async resolveAttack({ actor, target, description = '', rollMode = 'normal' } = {}, options = {}) {
     // Targets at 0 HP remain rollable in every encounter type. Damage receipts
     // retain the full result; the shared damage model clamps remaining HP at 0.
-    const prepared = await prepareCombatTurnStart(actor, this.dice, options);
+    if (actor.selectedAction?.kind === 'wait' && actor.characterId !== target.characterId) throw Error('Diese Handlung gilt für die eigene Figur.');
+    if (actor.selectedAction?.requiresOwnHold && !hasOwnHold(actor, target)) throw Error('Der Biss ist nur gegen das selbst festgehaltene Ziel möglich.');
+    const distance = normalizeCombatDistance(options.distanceMeters);
+    if ((actor.selectedAction?.holdAction || actor.selectedAction?.requiresOwnHold) && distance != null && distance > 1.5) {
+      throw Error('Für diese Handlung muss das Ziel höchstens 1,5 m entfernt sein.');
+    }
+    const ending = actor.selectedAction?.creatureTurnEnd ? prepareCreatureTurnEnd(actor) : null;
+    const prepared = ending || await prepareCombatTurnStart(actor, this.dice, options);
     const resolved = await this.resolvePreparedAttack({ actor: prepared.actor,
       target: actor.characterId === target.characterId ? prepared.actor : target, description, rollMode }, options);
-    const resolution = attachCombatTurnStart(resolved, actor, prepared.turnStart);
+    let resolution = attachCombatTurnStart(resolved, actor, prepared.turnStart);
+    if (ending) resolution = { ...resolution, turnEnd: ending.turnEnd };
+    else if (actor.selectedAction?.kind === 'wait') resolution = await attachCreatureEscape(resolution, actor, this.dice, options);
     return options.skipResourceCosts ? resolution : attachCombatEquipmentPreparation(resolution, actor);
   }
 
@@ -320,11 +356,12 @@ export class CombatResolutionService {
     }
 
     const weapon = actor.weapon;
+    const weaponMaterial = ['weapon', 'technique'].includes(actor.profileActionKind)
+      && /\btenebrium\b/i.test([weapon?.name, weapon?.properties].join(' ')) ? 'tenebrium' : '';
     const ammunition = options.skipAmmunition || actor.actionResolutionMode === 'automatic'
       ? { changed: false, before: actor.inventory || { items: [] }, after: actor.inventory || { items: [] }, use: null }
       : consumeCombatAmmunition(actor.inventory || { items: [] }, weapon?.ammunition || null);
-    const effectiveResourceCosts = options.skipResourceCosts ? [] : (actor.selectedAction?.spendAllRegularActions
-      ? getActionPaymentCosts(actor.selectedAction, actor.paymentMode, actor) : (actor.resourceCosts || []));
+    const effectiveResourceCosts = actionResourceCosts(actor, options);
     const resourceCheck = patchResolutionResourceState({ resourceCosts: effectiveResourceCosts }, actor.resources || []);
     if (!resourceCheck.applied.sufficient) {
       const missing = resourceCheck.applied.missing;
@@ -333,6 +370,11 @@ export class CombatResolutionService {
     if (actor.selectedAction?.kind === 'equipment-switch') {
       const targetWeaponId = String(actor.selectedAction.equipmentSwitchTargetId || '');
       const beforeWeaponId = String(actor.activeWeaponId || (Array.isArray(actor.weapons) ? actor.weapons : []).find(item => item.equipped)?.id || '');
+      const conditions = actor.temporaryConditions || [];
+      const transition = getCombatPassiveClassId(actor) === 'ceidwyn' && Number(actor.progression?.level) >= 7
+        ? classEquipmentTransitionEffects(actor, targetWeaponId)[0]?.condition : null;
+      const condition = transition ? normalizeRuntimeCondition({ ...transition, id: `${transition.id}-${createResolutionId()}`,
+        sourceConditionId: transition.id, sourceActorId: actor.characterId }) : null;
       return {
         schemaVersion: 4,
         rulesVersion: COMBAT_EVALUATION_RULES_VERSION,
@@ -353,6 +395,7 @@ export class CombatResolutionService {
         },
         secondarySaves: [],
         followUpAttacks: [],
+        ...(condition ? { actorConditionSnapshot: { before: conditions, after: refreshRuntimeCondition(conditions, condition) } } : {}),
         actorResourceSnapshot: { before: actor.resources || [], after: resourceCheck.applied.after },
         actorEquippedWeaponSnapshot: { before: beforeWeaponId, after: targetWeaponId,
           offHandBefore: getCombatWeaponLoadout(actor).leftWeaponId,
@@ -362,7 +405,7 @@ export class CombatResolutionService {
         ruleConflicts: []
       };
     }
-    const rollContext = getCombatRollContext(actor, target, options);
+    const rollContext = getCombatRollContext(actor, target, { ...options, actorResourcesAfter: resourceCheck.applied.after });
     const { relationship, distanceMeters, auraContext, actorAuraOnTarget, targetAuraOnActor,
     resolutionMode, savingThrowMode, automaticMode, ruleSources, usedRuleFrequencyKeys, rulePeriods,
     actionKind, profileActionId, ruleProfileState, preRollApplications, preRollEffects,
@@ -393,8 +436,6 @@ export class CombatResolutionService {
       postAttackModifier, postDefenseModifier } = evaluated;
     let allRuleApplications = [preRollApplications, postRollApplications, postHitApplications, preDamageApplications].flat();
     const followRuleConflicts = [];
-    let damageBonus = Number(actor.damageModifier || 0) + Number(targetAuraOnActor.damage || 0)
-      + preRollEffects.damageModifier + postHitEffects.damageModifier + preDamageEffects.damageModifier;
     let damageRoll = null;
     let reductionBypass = Math.max(0, postHitEffects.damageReductionBypass + preDamageEffects.damageReductionBypass);
     const secondarySaves = [];
@@ -413,11 +454,10 @@ export class CombatResolutionService {
     resolveFirstHitDefenseUse(firstHitDefenseRule, attack.hit, usedRuleFrequencyKeys);
     const hitDamageApplications = collectApplicableCombatRules({ phase: 'pre-hit-damage', actionKind, profileActionId,
       sources: ruleSources, periods: rulePeriods, usedFrequencyKeys: usedRuleFrequencyKeys,
-      state: { ...ruleProfileState, ...attack } });
+      state: { ...ruleProfileState, ...attack, naturalRoll: Number(attackRoll.natural) } });
     markCombatRuleApplications(hitDamageApplications, usedRuleFrequencyKeys);
     allRuleApplications.push(...hitDamageApplications);
     const hitDamageEffects = mergeCombatRuleEffects(hitDamageApplications);
-    damageBonus += hitDamageEffects.damageModifier;
     reductionBypass += hitDamageEffects.damageReductionBypass;
     let preWardTargetConditions = primaryWard.conditions;
     const wardResolution = primaryWard.wardResolution;
@@ -429,20 +469,25 @@ export class CombatResolutionService {
 
     if (primaryDamageEffect && (attack.hit || (savingThrowMode && actor.actionHalfDamageOnSave))) {
       const baseEffectFormula = primaryDamageEffect.formula || (primaryDamageEffect.amount > 0 ? '' : weapon.damageFormula);
+      const fixedTechniqueDamage = actor.selectedAction?.fixedDamageEffectId === primaryDamageEffect.id;
       // Aktive Boni wie Rage-Schaden hängen einen echten Extrawürfel an, statt einen festen
       // Zahlenbonus zu addieren - nur wenn es überhaupt eine Würfelformel zum Anhängen gibt.
-      const bonusDamageFormulas = (baseEffectFormula && primaryDamageEffect.target !== 'self' && actor.selectedAction?.inheritBonusDamage !== false) ? getBonusDamageFormulas(actor) : [];
+      const bonusDamageFormulas = (baseEffectFormula && !fixedTechniqueDamage && primaryDamageEffect.target !== 'self'
+        && actor.selectedAction?.inheritBonusDamage !== false) ? getBonusDamageFormulas(actor) : [];
       const effectFormula = combineDamageFormulas([baseEffectFormula, ...bonusDamageFormulas]);
-      const primaryDamageBonus = (primaryDamageEffect.target === 'self' ? 0 : damageBonus)
-        + getCombatEffectAttributeModifier(actor, primaryDamageEffect);
-      const fixedDamageBonus = getCombatEffectAttributeModifier(actor, primaryDamageEffect)
-        + (primaryDamageEffect.target === 'self' ? 0 : getUniversalDamageBonus(actor));
+      const ruleDamageBonus = preRollEffects.damageModifier + postHitEffects.damageModifier + preDamageEffects.damageModifier + hitDamageEffects.damageModifier;
+      const weaponDamageBonus = Number(actor.damageModifier || 0) + Number(targetAuraOnActor.damage || 0) + ruleDamageBonus;
+      const attributedDamage = getCombatEffectAttributeModifier(actor, primaryDamageEffect);
+      const fixedDamageBonus = attributedDamage + (primaryDamageEffect.target === 'self' ? 0
+        : getUniversalDamageBonus(actor) + (fixedTechniqueDamage ? ruleDamageBonus : 0));
+      const rolledDamageBonus = fixedTechniqueDamage ? fixedDamageBonus
+        : attributedDamage + (primaryDamageEffect.target === 'self' ? 0 : weaponDamageBonus);
       const criticalDamage = primaryDamageEffect.target !== 'self' && attack.criticalSuccess && options.damageMultiplier !== 2;
-      const damageNotation = effectFormula ? buildDamageNotation(effectFormula, primaryDamageBonus, criticalDamage) : '';
+      const damageNotation = effectFormula ? buildDamageNotation(effectFormula, rolledDamageBonus, criticalDamage) : '';
       options.onPhase?.({ phase: 'damage', notation: damageNotation, actor, target, weapon });
       damageRoll = effectFormula ? await this.dice.rollDamage({
         damageFormula: effectFormula,
-        bonus: primaryDamageBonus,
+        bonus: rolledDamageBonus,
         critical: criticalDamage,
         actorName: actor.name,
         targetName: target.name,
@@ -567,9 +612,11 @@ export class CombatResolutionService {
           if (roll) roll = { ...roll, rawTotal, total: amount, halvedBySave: true };
         }
         const damageType = resolveCombatEffectDamageType(effect, weapon);
-        const applied = applyTypedCombatDamage(recipientHitPoints, amount, appliesToActor ? actor : target, {
+        const applied = effect.id === 'creature-turn-fire' && actor.selectedAction?.creatureTurnEnd
+          ? applyCreatureBurnDamage(recipientHitPoints, amount, recipientConditions)
+          : applyTypedCombatDamage(recipientHitPoints, amount, appliesToActor ? actor : target, {
           damageType,
-          magical: effect.magical, conditions: recipientConditions,
+          magical: effect.magical, conditions: recipientConditions, weaponMaterial: appliesToActor || effect.magical ? '' : weaponMaterial,
           reductionBypass: !appliesToActor && roll === damageRoll ? reductionBypass : 0
         });
         if (appliesToActor) { actorHitPoints = applied.after; actorConditions = applied.conditions; }
@@ -579,14 +626,24 @@ export class CombatResolutionService {
       }
       if (effect.type === 'healing') {
         const applied = applyCombatHealing(recipientHitPoints, amount);
-        if (appliesToActor) actorHitPoints = applied.after;
-        else targetHitPoints = applied.after;
-        effectResults.push({ effect, amount, roll, applied, recipient });
+        const afterHealing = conditionsAfterHealing(recipientConditions, applied.before, applied.after);
+        const removed = afterHealing === recipientConditions ? [] : recipientConditions.filter(condition => condition.endsOnHealing);
+        recipientConditions = afterHealing;
+        if (appliesToActor) { actorHitPoints = applied.after; actorConditions = recipientConditions; }
+        else { targetHitPoints = applied.after; targetConditions = recipientConditions; }
+        effectResults.push({ effect, amount, roll, applied, recipient, ...(removed.length ? { removed } : {}) });
         continue;
       }
       if (effect.type === 'temporary-hit-points') {
         const applied = applyTemporaryHitPoints(recipientHitPoints, amount);
         recipientConditions = releaseCriticalTemporaryOwnership(recipientConditions, applied.before, applied.after);
+        if (effect.temporaryUntilOwnContribution && applied.after.temporary > applied.before.temporary) {
+          recipientConditions = refreshRuntimeCondition(recipientConditions, normalizeRuntimeCondition({
+            id: `${effect.id}-${createResolutionId()}`, sourceConditionId: effect.id, sourceActorId: actor.characterId,
+            name: 'Deckung des stillen Tiefwassers', temporaryHitPointsOwner: true,
+            durationModel: { kind: 'actor-comments', remainingActorComments: 1 }
+          }));
+        }
         if (appliesToActor) { actorHitPoints = applied.after; actorConditions = recipientConditions; }
         else { targetHitPoints = applied.after; targetConditions = recipientConditions; }
         effectResults.push({ effect, amount, roll, applied, recipient });
@@ -607,6 +664,7 @@ export class CombatResolutionService {
           id: `${effect.condition.id || effect.id}-${createResolutionId()}`,
           sourceConditionId: effect.condition.id || effect.id,
           sourceActorId: actor.characterId,
+          ...(effect.condition.creatureMark && ruleProfileState.actorPartyId ? { creatureMarkParty: ruleProfileState.actorPartyId } : {}),
           source: actor.selectedAction?.name || actor.weapon?.name || actor.name,
           active: true,
           ...(sustainsConcentration
@@ -634,9 +692,12 @@ export class CombatResolutionService {
         continue;
       }
       if (['restore-resource', 'spend-resource'].includes(effect.type) && effect.resourceId) {
-        const applied = updateResource(recipientResources, effect.resourceId, amount, effect.type === 'restore-resource');
+        const recipientId = appliesToActor ? actor.characterId : target.characterId;
+        const reserved = ruleProfileState.reactionBudget?.getReservedAmount(recipientId, effect.resourceId);
+        const applied = updateResource(recipientResources, effect.resourceId, amount, effect.type === 'restore-resource', reserved);
         if (appliesToActor) actorResources = applied.after;
         else targetResources = applied.after;
+        ruleProfileState.reactionBudget?.updateResources(recipientId, applied.after);
         effectResults.push({ effect, amount, applied, recipient });
         continue;
       }
@@ -664,7 +725,7 @@ export class CombatResolutionService {
         notes: 'Vollständig geprüfter Folgeangriff'
       });
       const applied = applyTypedCombatDamage(targetHitPoints, followUpResult.damage.total, target, {
-        damageType: effect.damageType,
+        damageType: effect.damageType, weaponMaterial,
         magical: effect.magical, conditions: targetConditions, reductionBypass: followUpResult.damage.reductionBypass || 0
       });
       targetHitPoints = applied.after;
@@ -672,6 +733,19 @@ export class CombatResolutionService {
       effectResults.push({ effect, amount: followUpResult.damage.total, roll: followUpResult.damage, applied });
       if (target.combat?.mounted) mountedHits.push({ index: index + 1, damage: [applied] });
     });
+    const burningBonus = getRegenerationTrait(target)?.regeneration.incomingBurningBonus;
+    if (burningBonus && actor.characterId !== target.characterId && isActivelyBurning(target.conditions || [])) {
+      const mainHit = attack.hit && effectResults.some(result => result.effect?.type === 'damage' && result.recipient === 'target' && result.applied);
+      const hits = Number(mainHit) + followUpAttacks.filter(result => result.attack?.hit && result.damage).length;
+      for (let index = 0; index < hits; index += 1) {
+        const roll = await this.dice.rollDamage({ damageFormula: burningBonus, actorName: actor.name, targetName: target.name, container: options.container });
+        const amount = Math.max(0, Number(roll.total) || 0);
+        const applied = applyCreatureBurnDamage(targetHitPoints, amount, targetConditions);
+        targetHitPoints = applied.after;
+        effectResults.push({ effect: { id: `creature-burning-hit-${index + 1}`, type: 'damage', target: 'target', damageType: 'Feuer',
+          notes: 'Zusatzschaden durch Brennend' }, amount, roll, applied, recipient: 'target' });
+      }
+    }
     if (appliedTemporaryCondition) {
       const prevented = getActionLockPrevention(targetConditions, appliedTemporaryCondition);
       if (prevented) {
@@ -696,11 +770,14 @@ export class CombatResolutionService {
     let defeated = targetCanBeDefeated && targetHitPoints.current === 0;
     let nonlethalDefeat = defeated && damageEffectResults.some(result => result.effect?.nonlethal === true);
     let targetConcentrationSnapshot = null;
-    let actorConcentrationSnapshot = sustainsConcentration && !options.skipSelfEffects ? {
+    const channelingFocus = sustainsConcentration ? getDerwynChannelingFocus(actor, actor.selectedAction) : '';
+    const establishedHold = !actor.selectedAction?.holdAction || effectResults.some(result => result.condition?.restraint && result.applied);
+    let actorConcentrationSnapshot = sustainsConcentration && establishedHold && !options.skipSelfEffects ? {
       before: actor.concentration || null,
       after: { actionId: actor.profileActionId || '',
         actionName: actor.selectedAction?.name || actor.weapon?.name || 'Wirkung',
         ownerActorId: actor.characterId, instanceId: concentrationInstanceId,
+        ...(channelingFocus ? { focusWeaponId: channelingFocus } : {}),
         tracksConditions: effectiveEffects.some(effect => effect.condition && ['apply-condition', 'buff', 'debuff'].includes(effect.type)),
         startedAtResolution: true },
       reason: actor.concentration ? 'replaced' : 'started'
@@ -735,7 +812,7 @@ export class CombatResolutionService {
           damage: affected.filter(entry => entry.effect?.type === 'damage').reduce((sum, entry) => sum + Number(entry.applied?.incoming || 0), 0),
           interrupted, dice: this.dice, container: options.container, allowResultEffects,
           context: { actorId: actor.characterId, actionKind, profileActionId, ruleSources, rulePeriods, usedRuleFrequencyKeys, attack,
-            reactionProfiles: currentPermissionProfiles() }
+            reactionBudget: ruleProfileState.reactionBudget, reactionProfiles: currentPermissionProfiles() }
         });
         if (result.snapshot) {
           const snapshot = { ...result.snapshot, before: previousSnapshot ? previousSnapshot.before : result.snapshot.before };

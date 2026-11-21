@@ -1,0 +1,120 @@
+{
+  "generator": "image_gen",
+  "assets": {
+    "child-v1.png": {
+      "status": "active",
+      "prompt": "Use case: illustration-story. Asset type: Aleria biography, vertical 2:3 portrait of Ysabel Bronnor as a child. The first reference is her adult identity only; the second supplies Aleria drawing style; the third supplies Bronnor colors only. Reimagine the same person as an unmistakably young, cheerful, mischievous girl from a low knightly household. Chestnut-brown long hair with the familiar side sweep and a simple half-tied arrangement, warm brown eyes, thick expressive eyebrows softened by age, her small characteristic beauty mark below her right eye, natural rounded human ears, round youthful cheeks and a genuine lopsided grin. Comfortable charcoal medieval wool tunic with muted red trim and a simple linen layer, child-appropriate and everyday. A warm quiet stone courtyard in Penbryn, soft daylight, a hint of trees and muted banners, no other figures. Natural standing posture, head to upper hip, whole hair silhouette within the frame, face stays large. No armor, bows, blades, or extra animals. Use the approved matte Aleria image as drawing-style reference only. Delicate varied dark-brown anime linework, clear shapes, harmonious matte colors, softly balanced cel shading, only a few chosen material details; restrained medieval fantasy. No text, border, signature, watermark, modern things, or 3D finish.",
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-bronnor/ysabel-bronnor.png",
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "Stammbäume/assets/images/houses/Tal der Milane/Yvains Klamm/haus-bronnor.png"
+      ],
+      "generatorFile": "exec-1750e5ab-3c66-4219-9381-7fbd06840722.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/child-v1.png",
+      "active": "AleriaAlmanach/assets/ysabel-bronnor/child-v1.png"
+    },
+    "squire-v1.png": {
+      "status": "active",
+      "prompt": "Use case: illustration-story. Asset type: vertical 2:3 biography portrait of Ysabel Bronnor as a young squire with her red goshawk. Ref 1 is adult Ysabel for facial identity alone, ref 2 the approved matte Aleria drawing technique, ref 3 the actual Bronnor crest for the tabard, ref 4 is the exact individual bird. Same woman as ref 1, visibly youthful as a late-teen squire, with chestnut-brown long hair swept to the side and tied loosely back, brown eyes, expressive dark brows, small beauty mark beneath her right eye, human rounded ears and a youthful, self-assured half-smile. Dark charcoal Bronnor tabard with muted red piping and a clearly visible heraldic RED EAGLE with spread wings above a red crag on black, patterned directly after reference 3. Simple open-faced outfit: fitted quilted layers, modest mail and practical leather, no officer ornament and no dragon or castle insignia; no weapons. One small, anatomically convincing red goshawk perched ON her padded shoulder, with folded wings, warm brick-red and russet plumage, golden eye and feet, thin pale eyebrow, cinnamon breast with thin red bars, long dark red barred tail as in ref 4. Keep the shoulder perch and her face in clear silhouette against separate parts of the background; the bird must not cover her eyes, face or the heraldry. Natural standing three-quarter posture framed from top of head through upper hip. Quiet medieval training courtyard with simple timber and stone softly behind her. Fine varied dark anime contours, matte colors, soft cel shading, few chosen details in the manner of the approved Kyrwyn portrait. No texts, borders, signature, or modern objects. One person and one hawk only.",
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-bronnor/ysabel-bronnor.png",
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "Stammbäume/assets/images/houses/Tal der Milane/Yvains Klamm/haus-bronnor.png",
+        "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/gwaedor-v1.png"
+      ],
+      "generatorFile": "exec-c32ab3a1-d247-49a1-a0c4-b5369c204542.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/squire-v1.png",
+      "active": "AleriaAlmanach/assets/ysabel-bronnor/squire-v1.png"
+    },
+    "gwaedor-v1.png": {
+      "status": "rejected",
+      "prompt": "Use case: illustration-story. Asset type: vertical 2:3 Aleria illustration of Ysabel Bronnor's red goshawk, sitting on a natural bare branch. One bird, full body, three-quarter profile, compact broad-winged goshawk body with folded wings, long barred tail, gold eyes and feet, a short dark hooked beak with pale gold cere, and a conspicuous narrow ivory brow. Distinctive naturalistic warm brick-red and russet plumage, darker reddish brown folded wings, cinnamon cream breast with very fine dark red bars. No literal flame effects, no metallic color; hawk, not an eagle or falcon. Both feet clearly grip a gently rising, weathered branch. Preserve margins around head, tail and body. Muted soft gray-green woods and filtered morning light behind the red bird, foliage kept spare. No falconry equipment, people or other animals. The reference establishes matte Aleria artwork style only. Use the approved matte Aleria image as drawing-style reference only. Delicate varied dark-brown anime linework, clear shapes, harmonious matte colors, softly balanced cel shading, only a few chosen material details; restrained medieval fantasy. No text, border, signature, watermark, modern things, or 3D finish.",
+      "references": [
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png"
+      ],
+      "generatorFile": "exec-6ef3291a-82a7-46de-ad69-90f9c6da223b.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/gwaedor-v1.png"
+    },
+    "neddwyn-v1.png": {
+      "status": "rejected",
+      "prompt": "Use case: illustration-story. Asset type: full-body stallion companion portrait in Aleria, vertical 2:3. Reference 1 is the Tirashan breed anatomy and subtle earthy equine colors only (omit the pictured rider and his equipment). Reference 2 is the actual Bronnor heraldry for the tack. Reference 3 is the approved drawing style. A sole Tirashan stallion, medium height, muscular and compact, thick legs and sturdy hooves, entirely visible from both ear tips to all four distinct hooves and the tip of its tail with intentional room around the silhouette. Broad three-quarter side view, a calm alert standing posture on the edge of a medieval stone stable court, quiet forest beyond. Rich warm brown coat with very sparse subtle tonal dapples over the hindquarters and shoulder, each leg darkening smoothly to deep blackened forest-green by the hooves; muted green undertone to natural coat, no bright green, no stripes. Mane tightly plaited into a short neat row of military braids; neatly shortened tail tightly braided with short bound end, nothing trailing down to the hock. Functional brown-black leather bridle and field saddle with fitted charcoal/dark near-black saddlecloth, red edging, muted brass fittings, and clear red heraldic eagle over a red crag embroidered on the visible side, matching the core of the Bronnor crest. No rider, weapons, armor plates or head ornament. Include ground and all four hooves. Use the approved matte Aleria image as drawing-style reference only. Delicate varied dark-brown anime linework, clear shapes, harmonious matte colors, softly balanced cel shading, only a few chosen material details; restrained medieval fantasy. No text, border, signature, watermark, modern things, or 3D finish.",
+      "references": [
+        "Bestiarium/assets/horse-profiles/tirashan.webp",
+        "Stammbäume/assets/images/houses/Tal der Milane/Yvains Klamm/haus-bronnor.png",
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png"
+      ],
+      "generatorFile": "exec-a16c6a30-4fb3-4f3b-8da6-1002e2c282b0.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/neddwyn-v1.png"
+    },
+    "gwaedor-v2.png": {
+      "status": "rejected",
+      "prompt": "Use case: style-transfer. First reference is the immutable composition and individual red goshawk to redraw; the second and third establish Aleria's actual anime cel artwork. Redraw this exact 2:3 portrait from scratch as a clearly drawn ANIME key visual, not a realistic ornithological illustration, using Aleria's matte Tales of Xillia / Frieren drawing style. A strong clean dark outer silhouette and confident tapered inner shapes, animation-ready simplified feather groups, smooth solid matte color blocks, and only two or three discrete cel-shadow values. The eye should be expressive and clearly illustrated with one clean highlight, sized convincingly for a hawk. Replace realistic feather-by-feather rendering with a few broad overlapping shapes and stylized horizontal breast marks; the rustic branch is drawn with no more than a few clean bark strokes. The background is spare softened drawn shapes of the medieval fantasy forest, no recognizable small leaves or realistic bokeh. Keep the same biologically recognizable goshawk body, perched on a branch facing right with both feet gripping it, all of the long barred tail inside frame; visually match the shoulder bird in ref 3 as to warm brick-red and russet plumage, golden eye and feet, cream eyebrow and barred cinnamon breast. Keep the bird large and clearly red. Absolutely no watercolor wash, no photographic shading, no rough material grain, no meticulous realistic detail, no texture overlay, no words, no border. The handling of clean anime shapes matters more than copying any background brush texture. One bird.",
+      "references": [
+        "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/gwaedor-v1.png",
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/squire-v1.png"
+      ],
+      "generatorFile": "exec-7a7bd9a7-f09e-49e9-8274-88187254c7d4.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/gwaedor-v2.png"
+    },
+    "neddwyn-v2.png": {
+      "status": "rejected",
+      "prompt": "Use case: style-transfer. Redraw reference 1, the same saddled brown Tirashan stallion, as an unmistakably clean hand-drawn 2D anime key visual in the Aleria example of reference 2. Keep exact 2:3 composition, full-body from upright ears to all four distinct visible hooves and short tail, a compact muscular stallion and natural horse anatomy, same three-quarter stance, practical saddle, dark Bronnor schabracke with an unmistakable red heraldic eagle over a red crag on dark cloth, matching red trim and quiet brass. Keep same short military braiding in mane AND tail. Keep brown coat and one gentle gradient to very dark forest green at lower legs and hooves with a few very subtle barely visible tonal spots on flanks. Transform the style drastically toward clean anime line art: refined slightly variable dark contours clearly drawn around the silhouette and around equipment, expressive anime horse eye with single clean light, broad flat matte brown areas with clearly bounded single shade shapes and a few highlights, minimal controlled transitions only for coat color down the legs. Simplify individual saddle stitches, cobbles, leaves and timber to quiet broad clean anime shapes; medieval stone yard as an understated backdrop, with warm drawn light. Reference 2 is technique only; no person or equipment from ref 2. This should look like a confident animation still, with no painterly patches on the coat or stone, no grain, no watercolor, no realistic fur or leather texture, no photorealistic gradients on skin, no rider, no words, no border. All four hooves visible.",
+      "references": [
+        "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/neddwyn-v1.png",
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png"
+      ],
+      "generatorFile": "exec-2c63c5bd-e482-4d8f-b0e7-620d3233f1e5.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/neddwyn-v2.png"
+    },
+    "gwaedor-v3.png": {
+      "status": "rejected",
+      "prompt": "Use case: style-transfer. Make the finished vertical 2:3 Aleria companion portrait of Gwaedor, Ysabel Bronnor's red goshawk. References 1 and 2 (Gwendolyn's Rotmilane Olwen and Alwen) are the user's definitive examples for visual finish, craft, linework, lighting and amount of detail. Aim for the same premium hand-drawn anime illustration, as if the three illustrations are from the same in-world companion album. Ref 3 supplies Gwaedor's individual reddish colors, profile and feather markings, and the open natural branch perch. Ref 4 shows the same individual on Ysabel's shoulder. The one bird is in a proud, relaxed three-quarter side pose with both yellow talons actually gripping an old tree branch and wings folded. Keep its head, wing, full banded tail and feet within frame. A genuinely red goshawk: richer copper-red and brick-red crown and shoulders, russet-brown wings deepening to dark red-brown outer feathers, pale thin brow only and a softly warm cinnamon barred breast. A distinct hooked beak and alert golden eye. Keep those Gwaedor markings; use the reference Milane for style, without giving him their white face, forked tail, colors, house banner or metal perch. Draw tapered contour work and layered, individually shaped mid-sized feather planes like Olwen and Alwen. Fine transitions between several carefully chosen reds in the wing and crown, clean large cel-shadow masses across the body but with ample secondary detailing around the head, wing tips, talons and feather overlaps. Draw form and natural anatomy at the same sophisticated level as those two references. Warm directional sunlight, crisp subtle highlights, cool cobalt sky and layers of softly drawn foothills and greenery beyond the branch, with a few glimpses of pale medieval stone in the distance. Same richly finished anime background depth and color clarity as the references. No heavy cartoon outlines, graphic poster flatness, harsh shadow shorthand, dull filter, muddy watercolor surface, photographic detail, text, or watermark.",
+      "references": [
+        "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/references/gwendolyn-olwen.png",
+        "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/references/gwendolyn-alwen.png",
+        "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/gwaedor-v1.png",
+        "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/squire-v1.png"
+      ],
+      "generatorFile": "exec-865a1d80-0159-4ed0-a940-604180c82234.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/gwaedor-v3.png"
+    },
+    "neddwyn-v3.png": {
+      "status": "rejected",
+      "prompt": "Use case: style-transfer. Paint the finished vertical 2:3 Aleria companion illustration of Neddwyn, Ysabel Bronnor's Tirashan stallion. Reference 1 is Gwendolyn's horse Flam, the primary model for the exact high-end hand-drawn anime finish and detail level. Reference 2 is Gwendolyn's Alwen, reinforcing the same tapered fine linework, rich warm daylight and confident nuanced cel shadows. Ref 3 shows Neddwyn's specific coat and tack design; reference 4 gives the exact Bronnor crest. Match Flam's quality, not Flam's identity, crest or mane. One handsome compact muscular cavalry stallion of the Tirashan breed in a strong three-quarter stance with all four distinct hooves and both ears fully in frame, alone, no rider. Warm chestnut-brown (clearly brown) with a naturally graduated shift through dark olive into almost black forest-green at the lower legs and hooves. No white socks. A few extremely subtle tonal speckles on the shoulder and flanks, delicate and integrated into the coat. Short compact military braids along the crest of the neck; short tightly braided tail with tidy bound end. Functional fitted dark leather military saddle and tack, with carefully drawn buckle details, stitching, muted warm brass, red edging and a fully legible red heraldic eagle above a red crag on a charcoal saddlecloth as in ref 4. No dragon or castle emblems and no large parade ornaments. Use Flam's excellent softly differentiated planes of light and deep cool shade over a convincingly drawn horse. Refined eye, detailed braided strands, fine contour changes at the back and muzzle, crisp clean folds and metal highlights with tight local details on the tack. A pale stone and timber stable court with believable dressed stones, late-afternoon blue shadows, warm golden sun, blue sky and foliage in the distance, as richly layered as Flam's scene. Polished animated-fantasy key art with equal care in animal and setting. Avoid cheap flat poster coloring, blocky or heavy outlines, simplification into generic cartoon, rough painterly mottling, and photographic fur. No rider, words, signature or border.",
+      "references": [
+        "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/references/gwendolyn-flam.jpeg",
+        "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/references/gwendolyn-alwen.png",
+        "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/neddwyn-v1.png",
+        "Stammbäume/assets/images/houses/Tal der Milane/Yvains Klamm/haus-bronnor.png"
+      ],
+      "generatorFile": "exec-9b748d1b-e459-46f1-b18b-7505ab63a333.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/neddwyn-v3.png"
+    },
+    "gwaedor-v4.png": {
+      "status": "active",
+      "prompt": "Create a new, finished vertical 2:3 Aleria Kreaturen companion portrait of Gwaedor, a red goshawk. Set the series style directly from references 1 and 2: Olwen is the visual benchmark for the clean controlled anime light, the elegant feather shape hierarchy, expressive amber eye and finely finished old-world setting; Skuggi gives the compact strong goshawk shape and confident intelligent gaze. Reference 3, Agravaine, guides the natural branch and the vividly drawn background depth. Use these as art direction for a different bird with his own pose, markings, and location. Show the whole bird, perched on a fork of a real woodland oak branch, toes wrapped firmly around the bark, folded wing at a slight angle to the viewer, broad breast turned three-quarter to the camera and head turned to look alertly past the camera to the left. In close-up, clear golden eye and thin pale eyebrow, dark sculpted hooked beak and yellow cere. Keep Gwaedor distinct with a strongly red brick-red head and shoulders, deep russet wings with dark red-brown tips, warm pale cinnamon breast broken by clean tapered curved red bands, dark rust-banded long tail, and yellow feet. Crown distinctly red except the pale eyebrows. His feather structure is drawn in elegant, layered larger points with dark overlapping accents as in Olwen, selective fine line around the eye and wing edges, bright matte color and three or four contrasted cel tones. Tail tip, head and claws all clear in the frame. He takes up most of the height. Behind is a sunlit wooded edge overlooking pale stone battlements and a soft blue-green hillside under a clear blue sky. Filtered daylight, crisp warm highlights, cool soft shade on the branch, believable but restrained background detail like the supplied plates, with a clearly drawn foreground leaf cluster. Editorial finish equal to these in-world folio paintings. Keep the controlled, human-drawn anime cel finish of the actual references: concentrated detail at the eye, talons and wing edges, calm intentionally untextured broad areas on the feathers, fine contours, no chunky outlines, no photorealistic bird plumage, no watercolor washes, no metallic equipment or person. One distinctive red goshawk only. No text, border or watermark.",
+      "references": [
+        "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/references/gwendolyn-olwen.png",
+        "AleriaAlmanach/assets/companions/haus-varulv/skuggi.png",
+        "AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/agravaine-vain.png"
+      ],
+      "generatorFile": "exec-19b5f590-ca77-4f85-a3e1-a5d0226a403f.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/gwaedor-v4.png",
+      "active": "AleriaAlmanach/assets/ysabel-bronnor/gwaedor-v4.png"
+    },
+    "neddwyn-v4.png": {
+      "status": "active",
+      "prompt": "A new original image for the same Aleria Kreaturen portrait series as the supplied artwork, vertical 2:3. The illustrated horse is NEDD WYN, a new individual Tirashan stallion of House Bronnor. Reference 1, Donn, is the exact benchmark for the animated medieval setting, the strong nearly frontal three-quarter composition, the shape design, the solid, clean cel-modeling of horse anatomy and the fine line of mouth and eye. Reference 2, Alaw, guides Tirashan conformation and the simpler working tack. Reference 3, Flam, guides the finish and genuinely drawn horse expression. Reference 4 is the Bronnor heraldic device. Draw anew in the style of images 1-3, using their mature proportion, art direction and finish. Use a proud alert stance, front shoulder and breast clearly facing the viewer obliquely and head turned gently three-quarter to camera; his body angles away naturally. Frame just like the catalog: ears near the top, hooves near the bottom, the whole horse plus all four separated hooves in view. Muscular but athletic, distinct actual joints and compact body, long enough legs for a riding horse. Temperament in his keen dark warm eyes, with elegant firm eyelids and a crisp dark muzzle. Warm clear brown coat, sparsely flecked on the croup, with a subtle gradient through muted olive into very dark pine green at all four ankles and hooves. Brown overall and extremely subtle small markings. Trim military braiding in the dark mane and forelock, a short bound plaited tail. A well fitted practical brown leather saddle, visible stirrup, slim breast straps, brass fittings and a deep-black charcoal saddlecloth with fine scarlet trim and a clearly embroidered red eagle over a red crag, exactly the device in reference 4. A convincing bright medieval cobbled stable courtyard behind, pale cream stone walls, dark timber, blue sky, one narrow matching charcoal-and-red Bronnor banner, deep cast shadows. Maintain the same finely drawn environment and colored shadow shapes as the catalog artwork. Flat but dimensional, deliberate midtone and shadow shapes on the main coat, a clearly drawn expressive face, sparse dark line details around joints and leather, rich clear palette. No realistic microtexture or visible surface grain on the horse; no painterly wash; no heavy simplistic cartoon contour; ordinary matte coat with strong cel turns of form focused on shoulder, chest, ribcage and jaw. One animal, no people, no writing, no frame.",
+      "references": [
+        "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/references/cadfan-donn.jpeg",
+        "AleriaAlmanach/assets/companions/haus-draig/alaw.png",
+        "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/references/gwendolyn-flam.jpeg",
+        "Stammbäume/assets/images/houses/Tal der Milane/Yvains Klamm/haus-bronnor.png"
+      ],
+      "generatorFile": "exec-7d5d57e3-5513-42e1-99a6-4883ee38fbbc.png",
+      "original": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/originals/neddwyn-v4.png",
+      "active": "AleriaAlmanach/assets/ysabel-bronnor/neddwyn-v4.png"
+    }
+  }
+}

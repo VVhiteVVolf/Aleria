@@ -4,6 +4,7 @@ import { prepareCriticalCommentLifecycle, persistCriticalHitPointUpdates } from 
 import { HttpsError, onCall } from 'firebase-functions/v2/https';
 import { buildNarrativeCommentDocument } from '../comments/commit-narrative-comment.js';
 import { deriveCombatRuleFrequencyKeys } from '../generated/combat/combat-trigger-rules.js';
+import { withClassPassivePeriods } from '../generated/classes/combat-passives/class-passive-periods.js';
 import { resetCommentScopedResources } from '../generated/combat/combat-action-economy.js';
 import { deriveCombatStateFromComments } from '../generated/combat/combat-state-model.js';
 import {
@@ -57,8 +58,9 @@ export async function commitSkillCommentOperation(request, { database = getFires
     const trustedHistory = allHistory.filter(isTrustedMechanicalComment);
     const challengeHistory = allHistory.filter(comment => isTrustedSkillChallengeComment(comment) || isTrustedHerausforderungComment(comment));
     const sceneDay = getTrustedSceneDay(allHistory);
-    const rulePeriods = { comment: ref.id, scene: entryId, day: `scene:${entryId}:day-${sceneDay}` };
-    const historyStates = deriveCombatStateFromComments(allHistory.filter(isTrustedSceneContributionComment));
+    const contributionHistory = allHistory.filter(isTrustedSceneContributionComment);
+    const rulePeriods = withClassPassivePeriods({ comment: ref.id, scene: entryId, day: `scene:${entryId}:day-${sceneDay}` }, contributionHistory, payload.metadata);
+    const historyStates = deriveCombatStateFromComments(contributionHistory);
     const workingStates = new Map(historyStates);
     const persistentUpdates = new Map();
     const lifecycle = await prepareCriticalCommentLifecycle({ database, transaction, states: workingStates,

@@ -1,4 +1,5 @@
 import { getChallengeCheckRule } from '../herausforderung/herausforderung-check-policy.js?v=20261016-check-policy-v1';
+import { withClassPassivePeriods } from '../classes/combat-passives/class-passive-periods.js';
 import { withResolvedChallengeTarget } from '../herausforderung/herausforderung-target.js?v=20261016-check-policy-v1';
 import { renderChallengeManeuverReceipts, formatChallengeStandaloneRewards } from '../herausforderung/herausforderung-maneuver-receipts-view.js';
 import { getChallengeNarration, isChallengeResolution } from '../herausforderung/herausforderung-narration.js';
@@ -271,7 +272,8 @@ function prepareSkillSupport(segment, actor, settings, target, actors, resolver)
   const day = getSceneRecoveryDayKey(latestComposerContext?.threadId, comments);
   const options = collectSkillSupportOptions({ actor, settings }, {
     actorProfile: resolver.resolve(actor), ruleSources: context.sources, targetProfile: context.targetProfile,
-    rulePeriods: { scene: latestComposerContext?.threadId || '', day, comment: 'skill-draft' },
+    rulePeriods: withClassPassivePeriods({ scene: latestComposerContext?.threadId || '', day, comment: 'skill-draft' },
+      comments, { characterId: actor.id }),
     usedRuleFrequencyKeys: deriveCombatRuleFrequencyKeys(comments)
   });
   const contextKey = `${actor.id}:${settings.skillId}:${target?.id || ''}`;
@@ -667,11 +669,11 @@ async function handleSubmission(submission = {}) {
   const actors = mergeActors(latestComposerContext?.sceneActors || []);
   const challenges = getComposerChallenges(submission.threadId || '');
   const comments = globalThis.getCachedCommentsForThread?.(submission.threadId || '') || [];
-  const rulePeriods = {
+  const rulePeriods = withClassPassivePeriods({
     comment: `draft:${String(submission.threadId || '')}:${Date.now()}`,
     scene: String(submission.threadId || ''),
     day: getSceneRecoveryDayKey(submission.threadId, comments)
-  };
+  }, comments, submission);
   const resolutionContext = {
     rulePeriods, comments, grantedKeys: collectChallengeGrantKeys(comments),
     profileResolver: createSceneSkillProfileResolver(comments, { commentId: rulePeriods.comment, recoveryDayKey: rulePeriods.day }),

@@ -58,7 +58,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Verbindungen",
-        "text": "Ysabel Bronnor gehört diesem Ritterhaus aus dem Tal der Milane an und ist Leutnant der Draig-Leibgarde. Sie ist eine Kindheitsfreundin der Gräfin Gwendolyn Aderyn. Ysabel und Pellinard Brândyddyn sind die Eltern Eurgain Brândyddyns; Ehe, Verlobung und heutiger Beziehungsstatus der Eltern sind nicht belegt. Ysabel bleibt unter ihrer Herkunftsidentität Bronnor verzeichnet."
+        "text": "Ysabel ist eine Kindheitsfreundin der Gräfin Gwendolyn Aderyn und dient als Leutnant der Draig-Leibgarde. Ysabel Bronnor und Pellinard Brândyddyn sind verheiratet und haben drei Kinder. Ihre älteste Tochter Eurgain dient als Ritter der Draig-Leibgarde. Ysabel gehört weiterhin dem Ritterhaus Bronnor aus dem Tal der Milane an."
       }
     ],
     "triviaTitle": "Besonderheiten",
@@ -77,7 +77,7 @@ export const HOUSE_BIOGRAPHY = {
       },
       {
         "title": "Haus Brândyddyn",
-        "text": "Eurgain ist die Tochter Ysabel Bronnors und Pellinard Brândyddyns.",
+        "text": "Pellinard Brândyddyn ist Ysabels Ehemann und Eurgains Vater.",
         "link": "kleinehaeuser.html?haus=haus-brandyddyn",
         "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Brândyddyn/brandyddyn-emblem.png"
       }

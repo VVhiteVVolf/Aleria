@@ -1,6 +1,8 @@
 import { getCommentActorIds } from './combat-condition-duration.js';
 import { normalizeCombatDistance } from './combat-rule-distance.js';
 import { getCombatSupportAuraOptions } from './combat-support-aura.js';
+import { withClassPassivePeriods } from '../classes/combat-passives/class-passive-periods.js';
+import { getClassPassiveSupportOption } from '../classes/combat-passives/class-passive-rules.js';
 import { bindCombatTooltips } from './ui/combat-tooltips.js?v=20261015-skill-challenges-v2';
 import { beginCombatContribution, conditionsAtContributionStart } from './combat-contribution-start.js';
 import { applySkillRuntimeSnapshots } from '../skill-checks/skill-runtime-state.js';
@@ -12,7 +14,11 @@ import { getActorsWithCombatPosts, normalizeCombatLoadout, isPairedCombatWeapon,
 import { applyDismountSnapshots, canCarryCombatShield } from './combat-support-equipment.js';
 import { combatRulePhaseLabels } from './ui/combat-rule-presentation.js';
 import { CombatDiceAdapter } from './combat-dice-adapter.js?v=20260905-party-combat-v1';
-import { mountCommentConditionTracker, releaseCommentConditionTracker } from '../comments/comments-condition-tracker.js?v=20260928-equipment-art-v4';
+import { getCommentCreatureEscapePreviews, mountCommentConditionTracker, releaseCommentConditionTracker } from '../comments/comments-condition-tracker.js?v=20261121-encounter-cards-v1';
+import { hasCreatureContribution, withCreatureContribution } from './combat-creature-contribution.js';
+import { CREATURE_TURN_END_ID, getEscapeActionId, getHeldCondition, rollCreatureEscape } from './combat-creature-actions.js';
+import { COMBAT_WAIT_ACTION } from './combat-wait-action.js';
+import { reconcileConcentrationConditions } from './combat-condition-lifecycle.js';
 import { prioritizeCombatTargets } from './ui/combat-target-picker.js?v=20260928-equipment-art-v4';
 import { narrateCombatResolution } from './combat-narration-service.js?v=20260806-agency-v1';
 import {
@@ -228,6 +234,13 @@ function buildCombatRuleOptions({ characters, actorCharacter, actor, targetChara
       actorId: source.characterId, actorName: source.name, profile: source, sourceRole: 'support', relationToActor, relationToTarget,
       ruleSelections: selections.filter(selection => selection.sourceActorId === source.characterId)
     }, actionKind, actor, profileOverrides?.get(String(targetCharacter.id)));
+    const cover = relationToActor === 'enemy' && getClassPassiveSupportOption(source, relationToTarget,
+      profileOverrides?.get(String(targetCharacter.id)) || targetCharacter);
+    if (cover) {
+      const selection = selections.find(item => item.sourceActorId === source.characterId && item.ruleId === cover.ruleId);
+      reactionOptions.push({ ...cover, sourceActorId: source.characterId, sourceActorName: source.name,
+        persistence: source.persistence || null, selected: Boolean(selection), distanceMeters: normalizeCombatDistance(selection?.distanceMeters) });
+    }
     return reactionOptions.concat(auraOptions);
   });
 }
@@ -387,7 +400,7 @@ function mountComposers(context = {}) {
   mountCommentConditionTracker(context, actorId => {
     const character = getSceneContextActor(context, actorId);
     return character ? resolveActorProfile(character, { actorId, storedStates: getStoredCombatStates(context.threadId || ''), includeAiSnapshot: false }) : null;
-  });
+  }, (profile, method) => rollCreatureEscape(profile, method, new CombatDiceAdapter().forCounter()));
   if (!segments.some(isCombatSegment)) return;
   const cachedComments = globalThis.getCachedCommentsForThread?.(context.threadId || '') || [];
   const encounter = getActiveCombatEncounter(cachedComments);
@@ -398,7 +411,9 @@ function mountComposers(context = {}) {
   const composerStates = new Map(storedStates);
   const conditionClock = getSceneConditionClock(cachedComments);
   const actorsWithPosts = getActorsWithCombatPosts(cachedComments);
-  const previewRulePeriods = { comment: `draft:${context.threadId || ''}`, scene: context.threadId || '', day: recoveryDayKey };
+  const previewRulePeriods = withClassPassivePeriods(
+    { comment: `draft:${context.threadId || ''}`, scene: context.threadId || '', day: recoveryDayKey }, cachedComments,
+    { characterId: context.selectedCharacterId, commentSegments: segments });
   const previewFrequencyKeys = deriveCombatRuleFrequencyKeys(cachedComments, previewRulePeriods);
   const composerResourceResets = new Set();
   const composerSceneItems = deriveSceneItems(cachedComments);
@@ -785,6 +800,7 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
     ruleSources,
     rulePeriods: stateContext.rulePeriods,
     usedRuleFrequencyKeys: stateContext.usedRuleFrequencyKeys,
+    escapePreview: stateContext.escapePreviews?.get(actorId),
     startedAction: resolutionOptions.startedAction,
     skipResourceCosts: resolutionOptions.primary === false,
     skipAmmunition: resolutionOptions.primary === false,
@@ -868,6 +884,7 @@ async function resolveCombatTarget(segment, characters, index, total, fallbackAc
   });
   for (const event of resolution.sceneItemEvents || []) applySceneItemEvent(stateContext.sceneItems, event);
   if (resolution.sceneItemEvents?.length) applyDroppedWeaponsToStates(stateContext.workingStates, stateContext.sceneItems);
+  reconcileConcentrationConditions(stateContext.workingStates);
   stateContext.usedRuleFrequencyKeys = new Set(resolution.usedRuleFrequencyKeys || []);
   resolution.multiTargetIndex = Math.max(0, Number(resolutionOptions.targetIndex) || 0);
   resolution.multiTargetCount = Math.max(1, Number(resolutionOptions.targetCount) || 1);
@@ -880,6 +897,12 @@ async function resolveCombatSegment(segment, characters, index, total, fallbackA
   const runtime = { beforeStates: storedStates, afterStates: workingStates };
   const error = getEncounterActionValidationError({ actorId, encounterId: encounter?.encounterId || '' }, encounter, runtime);
   if (error) throw new Error(error);
+  const held = getHeldCondition(workingStates?.get(actorId) || {});
+  const escapePreview = stateContext.escapePreviews?.get(actorId);
+  if (segment.combatActionId === COMBAT_WAIT_ACTION.id && held?.id && escapePreview?.conditionId === held.id
+    && held.restraint.lastAttempt !== stateContext.rulePeriods?.comment) {
+    segment.combatActionId = getEscapeActionId(escapePreview.method);
+  }
   const hostileOpponentCount = countActiveHostileOpponents(actorId, getCombatEncounterPartyMap(encounter, runtime));
   const character = characters.find(entry => String(entry.id || '') === actorId);
   if (character) synchronizeSegmentTargets(segment, resolveActorProfile(character, {
@@ -909,30 +932,59 @@ async function resolveCombatSegment(segment, characters, index, total, fallbackA
   return resolutions;
 }
 
+function creatureContributionContext(threadId) {
+  const cachedComments = globalThis.getCachedCommentsForThread?.(threadId || '') || [];
+  const encounter = getActiveCombatEncounter(cachedComments);
+  const partyMap = getCombatEncounterPartyMap(encounter);
+  const composer = latestComposerContext?.threadId === threadId ? latestComposerContext : null;
+  const characters = applyEncounterParties(
+    mergeCombatActors(getCharacters(), composer?.sceneActors || []), partyMap
+  );
+  const storedStates = getStoredCombatStates(threadId || '');
+  const profileFor = actorId => {
+    if (!partyMap.has(actorId)) return null;
+    const character = characters.find(entry => String(entry.id) === actorId);
+    return character ? resolveActorProfile(character, { actorId, storedStates, includeAiSnapshot: false }) : null;
+  };
+  return { cachedComments, encounter, characters, storedStates, profileFor, composer };
+}
+
+function hasCombatContribution(segments, { threadId = '', characterId = '' } = {}) {
+  if ((segments || []).some(isCombatSegment)) return true;
+  return Boolean(threadId && hasCreatureContribution(segments || [], characterId, creatureContributionContext(threadId).profileFor));
+}
+
+function skipAutomaticCreatureSegment(segment, { workingStates, rulePeriods }) {
+  if (!segment.creatureAutomatic) return false;
+  const state = workingStates.get(segment.actorId);
+  if (state?.current === 0) return true;
+  if (segment.combatActionId === CREATURE_TURN_END_ID) return false;
+  const held = getHeldCondition(state || {});
+  return !held || held.restraint.lastAttempt === rulePeriods.comment;
+}
+
 async function handleSubmission(submission = {}) {
-  const segments = Array.isArray(submission.commentSegments) ? submission.commentSegments : [];
+  const sourceSegments = Array.isArray(submission.commentSegments) ? submission.commentSegments : [];
+  const { cachedComments, encounter, characters, storedStates, profileFor, composer } = creatureContributionContext(submission.threadId || '');
+  const escapePreviews = await getCommentCreatureEscapePreviews(composer?.list);
+  const segments = withCreatureContribution(sourceSegments, submission.characterId, profileFor, escapePreviews);
   const combatSegments = segments.filter(isCombatSegment);
   if (!combatSegments.length) return { handled: false, published: false };
-  const cachedComments = globalThis.getCachedCommentsForThread?.(submission.threadId || '') || [];
-  const encounter = getActiveCombatEncounter(cachedComments);
   const encounterId = encounter?.encounterId || '';
-  const characters = applyEncounterParties(
-    mergeCombatActors(getCharacters(), latestComposerContext?.sceneActors || []),
-    getCombatEncounterPartyMap(encounter)
-  );
   const stateContext = {
     encounter,
     sceneItems: deriveSceneItems(cachedComments),
-    storedStates: getStoredCombatStates(submission.threadId || ''),
+    storedStates,
+    escapePreviews,
     workingStates: new Map(),
     commentResourceResetActors: new Set(),
     recoveryDayKey: getCombatRecoveryDayKey(submission.threadId || ''),
     actorsWithPosts: getActorsWithCombatPosts(globalThis.getCachedCommentsForThread?.(submission.threadId || submission.entryId || '') || []),
-    rulePeriods: {
+    rulePeriods: withClassPassivePeriods({
       comment: `draft:${String(submission.threadId || '')}:${Date.now()}`,
       scene: String(submission.threadId || ''),
       day: getCombatRecoveryDayKey(submission.threadId || '')
-    }
+    }, cachedComments, submission)
   };
   stateContext.usedRuleFrequencyKeys = deriveCombatRuleFrequencyKeys(
     cachedComments,
@@ -948,6 +1000,7 @@ async function handleSubmission(submission = {}) {
   activateResolutionDialog();
   try {
     const resolutionGroups = [];
+    const skippedCreatureSegments = new Set();
     const skillResolutions = new Map();
     const skillContext = {
       comments: cachedComments,
@@ -980,6 +1033,7 @@ async function handleSubmission(submission = {}) {
         stateContext.usedRuleFrequencyKeys = skillContext.usedRuleFrequencyKeys;
       }
       if (!isCombatSegment(segment)) continue;
+      if (skipAutomaticCreatureSegment(segment, stateContext)) { skippedCreatureSegments.add(segment); continue; }
       resolutionGroups.push(await resolveCombatSegment(
         segment,
         characters,
@@ -991,7 +1045,7 @@ async function handleSubmission(submission = {}) {
     }
 
     let resolutionIndex = 0;
-    const enhancedSegments = segments.map(segment => {
+    const enhancedSegments = segments.filter(segment => !skippedCreatureSegments.has(segment)).map(segment => {
       const { clientSegmentId, ...storedSegment } = segment;
       if (skillResolutions.has(segment)) return { ...storedSegment, skillResolution: skillResolutions.get(segment) };
       if (!isCombatSegment(storedSegment)) return storedSegment;
@@ -1137,7 +1191,7 @@ globalThis.AleriaCombat = Object.freeze({
     resolvedCombatTargetCache = new WeakMap();
   },
   handleSubmission,
-  hasCombatSegments: segments => (segments || []).some(isCombatSegment),
+  hasCombatSegments: hasCombatContribution,
   narrateCommittedMechanics,
   renderEvaluation: renderCombatEvaluation
 });

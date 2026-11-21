@@ -1,0 +1,25 @@
+{
+  "createdAt": "2026-11-20",
+  "tool": "built-in image_gen",
+  "loadingScreenVersion": 7,
+  "artwork": [
+    {
+      "source": "source/owetas-quartett-innenhof-v7.png",
+      "role": "Fixed conversation scene in Castell Draig's courtyard",
+      "generatorOutput": "exec-948c52b9-9ee4-418d-aab7-5513569bba27.png",
+      "sha256": "28571f8d4ebcbb48f8bb7bc2bbfefa5bbe914d3d84db86800cca8d1a659b7a5a",
+      "size": [
+        1536,
+        1024
+      ],
+      "references": [
+        "AleriaAlmanach/assets/groups/oweta-quartett/proposals-2026-11-03/01-bachufer.png",
+        "Stammbäume/assets/images/portraits/haus-draig/oweta-draig.jpg",
+        "Stammbäume/assets/images/portraits/haus-gafyr/lefraye-gafyr.jpg",
+        "AleriaAlmanach/public/assets/castell-draig/2026-10-15/aussenanlagen-innenhof.png",
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png"
+      ],
+      "prompt": "Create one original horizontal 3:2 hand-drawn fantasy anime illustration for the Aleria Almanach loading screen. Exactly FOUR women standing in the actual cobbled inner courtyard of Castell Draig, quietly discussing their planned visit to the Tirfelyn farm. A natural pause before departure, with restrained speaking and listening gestures. The website supplies the dialogue separately, so no drawn speech bubbles or writing.\n\nReference roles in order: image 1 is the canonical group identity reference. In that image Rianna is the far-left woman with gold breastplate and twin high ponytails, Oweta is the red-and-black woman second left, Caralyn is the green woman second right, Lefraye is at far right with black-and-gold goat armor and a single high ponytail. Use their designs from image 1, omitting every animal and camp object. Image 2 gives Oweta's exact face, blue eyes, two short low ties, and black-and-red armor. Image 3 gives Lefraye's exact face, amber eyes, single high ponytail, and black-and-gold goat armor. Image 4 is the ORT reference for Castell Draig's inner courtyard: pale ashlar walls, pointed closed wooden gate, slate roofs, burgundy Draig banners and distant mountains. Image 5 is STYLE ONLY: fine dark-brown contours, distinct sympathetic faces, clean matte cel shading, muted harmonious color, soft daylight; no trace of the man from that image.\n\nChange the group arrangement to this precise order left to right:\n1. Oweta Draig at about 17% of the width: short side-swept auburn bangs, two small LOW side ties, blue eyes, charcoal armor with oxblood edging and subtle black dragon. One low open-hand conversational gesture, face in a visible three-quarter view.\n2. Lefraye Gafyr at about 39%: SINGLE high copper-red ponytail with the reference bangs, amber eyes, black plate with antique gold shoulder plates and the paired gold goats. Listens with relaxed shoulders.\n3. Rianna Wyrm at about 61%: TWO high long deep-red pigtails, amber eyes, black shoulder armor over a yellow-gold breastplate with a black winged wyrm. Watches Oweta attentively, visible face, relaxed hands.\n4. Caralyn Chwedonol at about 83%: loose long wavy auburn hair, blue-green eyes, teal-green surcoat, dark and muted gold shoulder armor with authentic golden mermaid emblem. She turns inward with a thoughtful friendly expression.\n\nFixed eye-level composition, crop standing figures at the upper thigh, all heads and hairstyles fully in frame. Four distinct recognizable red-haired faces and silhouettes, small natural exchanges of gaze and pose. The group occupies the lower 54% of the composition; the upper 44% MUST be uninterrupted muted courtyard architecture and sky with nothing in the foreground, for readable HTML dialogue above their heads even on a phone. The top stays part of the painting, with no blank graphic band. Their shoulders and posture communicate standing conversation, never running or posing for a camera. Hands natural and relaxed, with no props or held weapons. No horses, extra people, animals, tables, text, frames or watermarks. Landscape aspect about 3:2."
+    }
+  ]
+}

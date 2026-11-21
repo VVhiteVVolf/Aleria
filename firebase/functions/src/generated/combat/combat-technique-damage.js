@@ -1,23 +1,29 @@
 import { parseDamageFormula, formatDamageFormula as formatFormula } from './rules/combat-mvp-rules.js?v=20260905-party-combat-v1';
 import { getPairedAttackWeapon, requiresPairedCombatWeapons } from './combat-paired-weapons.js';
-import { getWeaponTechniqueTrainingSteps } from '../combat-styles/weapon-technique-budget.js?v=20261103-curriculum-v1';
-import { isSharedJungdracheTrainingTechniqueId } from '../combat-styles/drachentanz/techniques/jungdrache-shared-identity.js';
+import { getWeaponTechniqueTrainingSteps, SPECIAL_RANK_TECHNIQUE_STEPS } from '../combat-styles/weapon-technique-budget.js?v=20261121-class-passives-v1';
+import { isSharedJungdracheControlTechniqueId, isSharedJungdracheTrainingTechniqueId } from '../combat-styles/drachentanz/techniques/jungdrache-shared-identity.js';
 import { getDevelopmentTechniqueId } from '../character-development/development-entry-reference.js';
+import { inferCombatEffectTargetLimit } from './combat-effect-model.js';
 
 const ordinaryTrainingSteps = getWeaponTechniqueTrainingSteps();
+const ordinaryBaseSteps = ordinaryTrainingSteps.filter(step => step.level <= 20);
+const controlTrainingSteps = Object.freeze([
+  Object.freeze({ level: 25, formula: '1' }),
+  Object.freeze({ level: 30, formula: '1d6' })
+]);
 
 function usesOrdinaryTrainingSteps(model = {}) {
-  const steps = model.scalingSteps || [];
-  return model.mode === 'weapon-dice' && !model.lightAttack && steps.length === ordinaryTrainingSteps.length
-    && steps.every((step, index) => Number(step.level) === ordinaryTrainingSteps[index].level
-      && String(step.formula).toLowerCase() === ordinaryTrainingSteps[index].formula);
+  const steps = (model.scalingSteps || []).filter(step => Number(step.level) <= 20);
+  return model.mode === 'weapon-dice' && !model.lightAttack && steps.length === ordinaryBaseSteps.length
+    && steps.every((step, index) => Number(step.level) === ordinaryBaseSteps[index].level
+      && String(step.formula).toLowerCase() === ordinaryBaseSteps[index].formula);
 }
 
 function getSharedFoundationTrainingSteps(technique, profile) {
   const id = getDevelopmentTechniqueId(technique);
   if (!isSharedJungdracheTrainingTechniqueId(id) || !usesOrdinaryTrainingSteps(technique.damageModel)) return null;
   const purchaseClass = profile.progression?.development?.purchases?.find(purchase => purchase.techniqueId === id)?.classId;
-  const classId = String(purchaseClass || profile.templateSelections?.classId || profile.identity?.archetype || '')
+  const classId = String(purchaseClass || profile.templateSelections?.classId || profile.classTraining?.curriculumId || profile.identity?.archetype || '')
     .trim().toLowerCase().replace(/^(?:cenyr|vennyr)-/, '');
   return classId === 'milwr' ? getWeaponTechniqueTrainingSteps({ allowedClassIds: ['milwr'] }) : null;
 }
@@ -27,23 +33,62 @@ export function getLightAttackDamageModifier(modifier, model = {}) {
 }
 
 function getFormulaParts(formula) {
-  if (!String(formula || '').trim()) return { terms: [], fixedModifier: 0 };
-  const parsed = parseDamageFormula(formula);
+  const notation = String(formula || '').trim();
+  if (!notation || /^[+-]?\d+$/.test(notation)) return { terms: [], fixedModifier: Number(notation) };
+  const parsed = parseDamageFormula(notation);
   return {
     terms: parsed.terms || [{ diceCount: parsed.diceCount, sides: parsed.sides }],
     fixedModifier: parsed.fixedModifier
   };
 }
 
-// Legacy techniques keep their authored formula. Only explicit scalingSteps add
-// training damage; the highest earned step replaces all earlier steps.
+export function getTechniquePrimaryDamageIndex(technique = {}) {
+  return (technique.effects || []).findIndex(effect => effect.type === 'damage' && effect.target !== 'self'
+    && !['miss', 'save-success'].includes(effect.on));
+}
+
+function hasPrimaryDamage(technique) {
+  return technique.damageModel?.mode !== 'none' && Boolean(technique.id || technique.name || technique.damageFormula)
+    && (!technique.effects?.length || getTechniquePrimaryDamageIndex(technique) >= 0);
+}
+
+function getTrainingSteps(technique, profile) {
+  const authored = technique.damageModel?.scalingSteps || [];
+  if (authored.some(step => Number(step.level) > 20)) return getSharedFoundationTrainingSteps(technique, profile) || authored;
+  const shared = getSharedFoundationTrainingSteps(technique, profile);
+  if (shared) return shared;
+  if (isSharedJungdracheControlTechniqueId(getDevelopmentTechniqueId(technique))) return authored.concat(controlTrainingSteps);
+  if (authored.length) return authored.concat(SPECIAL_RANK_TECHNIQUE_STEPS);
+  // Some established control techniques use their whole ordinary budget for
+  // the rider effect. Their original base still receives the special-rank steps.
+  if (technique.secondarySave?.enabled) return SPECIAL_RANK_TECHNIQUE_STEPS;
+  return ordinaryTrainingSteps;
+}
+
+export function getTechniqueTrainingLevel(profile = {}) {
+  const level = Math.max(1, Math.min(20, Math.trunc(Number(profile.progression?.level) || 1)));
+  return level + Math.max(0, Math.min(10, Math.trunc(Number(profile.progression?.specialLevels) || 0)));
+}
+
+// The highest earned step replaces all earlier steps. Fixed formulas and
+// old copies receive the same training without rewriting the stored entry.
 export function getTechniqueDamageScaling(technique = {}, profile = {}, context = {}) {
-  const level = Math.min(20, Number(profile.progression?.level) || 1);
-  if (level < Number(technique.minimumLevel || 1)) return null;
-  if (hasExpandedTargetBudget(technique, context)) return null;
-  const steps = getSharedFoundationTrainingSteps(technique, profile) || technique.damageModel?.scalingSteps || [];
+  const level = Math.min(getTechniqueTrainingLevel(profile), context.maximumTrainingLevel ?? 30);
+  if (level < Number(technique.minimumLevel || 1) || !hasPrimaryDamage(technique) || technique.damageModel?.lightAttack) return null;
+  const baseLimit = Number(technique.maximumTargets) || inferCombatEffectTargetLimit(technique.effects || []);
+  if (Math.max(baseLimit, Number(context.maximumTargets) || 1) > 1) return null;
+  const steps = getTrainingSteps(technique, profile);
   return steps.filter(step => Number(step.level) <= level)
     .sort((a, b) => b.level - a.level)[0] || null;
+}
+
+export function applyTechniqueTrainingToFormula(formula, scaling) {
+  if (!formula || !scaling?.formula) return formula;
+  const base = getFormulaParts(formula);
+  const extra = getFormulaParts(scaling.formula);
+  const terms = [...base.terms, ...extra.terms];
+  const modifier = base.fixedModifier + extra.fixedModifier;
+  return terms.length ? formatFormula(terms, modifier) : String(modifier);
 }
 
 function hasExpandedTargetBudget(technique, context) {
@@ -68,19 +113,24 @@ export function describeTechniqueDamage(technique = {}, profile = {}, context = 
     ? `${requiresPairedCombatWeapons(technique) ? 'Würfel beider Waffen' : `${model.weaponDiceMultiplier || 1}× Waffenwürfel`}${model.baseDieCap ? ` (je höchstens W${model.baseDieCap})` : ''}${model.bonusWeaponDice ? ` + ${model.bonusWeaponDice} Waffen-Zusatzwürfel (je höchstens W${model.bonusWeaponDieCap})` : ''}${(model.weaponBonuses || []).map(group => ` + ${group.diceCount} Waffen-Zusatzwürfel (je höchstens W${group.dieCap})`).join('')}${model.bonusFormula ? ` + ${model.bonusFormula}` : ''}`
     : technique.damageFormula || 'Kein direkter Schaden';
   const scaling = getTechniqueDamageScaling(technique, profile, context);
-  return `${base}${model.bonusModifier ? ` ${model.bonusModifier > 0 ? '+' : '−'} ${Math.abs(model.bonusModifier)} Technikmodifikator` : ''}${scaling ? ` + ${scaling.formula} Ausbildungsbonus` : ''}${model.lightAttack ? ' · halbe positive feste Schadensboni (abgerundet)' : ''}`.replace(/(\d)d(\d)/g, '$1W$2');
+  const smallBudget = getTechniqueTrainingLevel(profile) >= 30 && hasPrimaryDamage(technique)
+    && (model.lightAttack || Math.max(Number(context.maximumTargets) || 1,
+      Number(technique.maximumTargets) || inferCombatEffectTargetLimit(technique.effects || [])) > 1);
+  return `${base}${model.bonusModifier ? ` ${model.bonusModifier > 0 ? '+' : '−'} ${Math.abs(model.bonusModifier)} Technikmodifikator` : ''}${scaling ? ` + ${scaling.formula} Ausbildungsbonus` : ''}${model.lightAttack ? ' · halbe positive feste Schadensboni (abgerundet)' : ''}${smallBudget ? ' · auf Gesamtstufe 30 einmal +1 pro Beitrag für leichte und Flächentreffer zusammen' : ''}`.replace(/(\d)d(\d)/g, '$1W$2');
 }
 
 export function resolveTechniqueDamageFormula(technique = {}, weapon = {}, profile = {}, context = {}) {
   if (technique.damageModel?.mode === 'none') return '';
   if (technique.effects?.length && !technique.effects.some(effect => effect.type === 'damage') && !technique.damageFormula) return '';
   const model = getTechniqueDamageModel(technique, context);
-  const scaling = getFormulaParts(getTechniqueDamageScaling(technique, profile, context)?.formula);
+  const step = getTechniqueDamageScaling(technique, profile, context);
+  const primary = technique.effects?.[getTechniquePrimaryDamageIndex(technique)];
+  if (primary?.formula) return applyTechniqueTrainingToFormula(primary.formula, step);
+  if (primary?.amount > 0 && step) return applyTechniqueTrainingToFormula(String(primary.amount), step);
+  const scaling = getFormulaParts(step?.formula);
   if (model.mode !== 'weapon-dice') {
     const formula = String(technique.damageFormula || weapon.damageFormula || '').trim().toLowerCase();
-    if (!scaling.terms.length) return formula;
-    const base = getFormulaParts(formula);
-    return formatFormula([...base.terms, ...scaling.terms], base.fixedModifier + scaling.fixedModifier);
+    return applyTechniqueTrainingToFormula(formula, step);
   }
   const pairedWeapon = getPairedAttackWeapon(weapon, profile, technique);
   const base = getFormulaParts(pairedWeapon.damageFormula);

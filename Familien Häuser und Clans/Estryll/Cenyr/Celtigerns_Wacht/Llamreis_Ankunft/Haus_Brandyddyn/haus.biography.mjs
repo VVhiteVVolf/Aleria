@@ -62,7 +62,7 @@ export const HOUSE_BIOGRAPHY = {
         "position": "afterWorks",
         "mode": "text",
         "title": "Verbindungen",
-        "text": "Pellinard Brândyddyn und Ysabel Bronnor sind Eurgains Eltern. Ysabel bleibt als Angehörige des Ritterhauses Bronnor aus dem Tal der Milane verzeichnet. Eine Ehe oder Verlobung der Eltern ist nicht belegt."
+        "text": "Ysabel Bronnor und Pellinard Brândyddyn sind verheiratet und haben drei Kinder. Ihre älteste Tochter Eurgain dient als Ritter der Draig-Leibgarde. Ysabel gehört weiterhin dem Ritterhaus Bronnor aus dem Tal der Milane an."
       }
     ],
     "triviaTitle": "Besonderheiten",

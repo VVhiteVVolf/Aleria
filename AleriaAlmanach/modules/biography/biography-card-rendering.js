@@ -38,15 +38,37 @@
   }
 
   // Editorial-default recognition only; never used as a security hash.
-  function narrativeFingerprint(module) {
-    const b = module?.biography || {};
-    const text = JSON.stringify([b.biographyText || '', b.historyText || '', b.extraSections || []]);
+  function contentFingerprint(text) {
     let first = 2166136261, second = 2246822507;
     for (let index = 0; index < text.length; index++) {
       first = Math.imul(first ^ text.charCodeAt(index), 16777619);
       second = Math.imul(second ^ text.charCodeAt(index), 2246822507);
     }
     return `${text.length}:${(first >>> 0).toString(16)}:${(second >>> 0).toString(16)}`;
+  }
+
+  function narrativeFingerprint(module) {
+    const b = module?.biography || {};
+    return contentFingerprint(JSON.stringify([b.biographyText || '', b.historyText || '', b.extraSections || []]));
+  }
+
+  function biographyDefaultFingerprint(module) {
+    const stats = (Array.isArray(module?.stats) ? module.stats : []).map(row => Array.isArray(row)
+      ? row : [row?.label || '', row?.value || '']);
+    const content = [module?.biography || {}, stats, module?.quote || '', module?.quoteBy || ''];
+    return contentFingerprint(JSON.stringify(content, (_key, value) => {
+      if (!value || typeof value !== 'object' || Array.isArray(value)) return value;
+      return Object.fromEntries(Object.keys(value).sort().map(key => [key, value[key]]));
+    }));
+  }
+
+  function normalizePortraitDefaultStage(value) {
+    return Number.isInteger(value) && value > 1 && value <= 5 ? value : undefined;
+  }
+
+  function getDefaultPortraitTabIndex(tabs, stage) {
+    const defaultStage = normalizePortraitDefaultStage(stage);
+    return defaultStage ? Math.max(0, tabs.findIndex(tab => tab.label === `[${defaultStage}]`)) : 0;
   }
 
   // Receives sanitized HTML, never raw author input. Paragraphs from Word and older
@@ -144,5 +166,6 @@
   }
 
   root.AleriaBiographyCards = Object.freeze({ renderIcon, renderTrait, renderConnection,
-    normalizeKnightMentors, narrativeFingerprint, formatCopy, renderKnightMentors, renderPage, editorGroup });
+    normalizeKnightMentors, narrativeFingerprint, biographyDefaultFingerprint, normalizePortraitDefaultStage,
+    getDefaultPortraitTabIndex, formatCopy, renderKnightMentors, renderPage, editorGroup });
 })(globalThis);

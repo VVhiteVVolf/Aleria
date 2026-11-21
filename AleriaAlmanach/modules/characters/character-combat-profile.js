@@ -1,6 +1,8 @@
 import { renderAttributeIcon } from '../skill-checks/attribute-icon-registry.js?v=20261015-check-options-v1';
 import { renderCombatSheetHeader, renderCombatSheetPages } from '../combat-sheet/combat-sheet-pages.js';
 import { createCombatSheetWorkspace } from '../combat-sheet/combat-sheet-workspace.js';
+import { getEarnedClassPassiveFeatures } from '../classes/combat-passives/class-passive-curriculum.js';
+import { getDerwynFocusWeapons } from '../classes/combat-passives/derwyn-passives.js';
 const sheetWorkspace = createCombatSheetWorkspace();
 import { describeCombatAttributeValue } from '../combat/combat-attribute-effects.js';
 import { personalWeaponAttribute } from '../combat/combat-personal-modifiers.js';
@@ -265,6 +267,7 @@ function renderIdentityAndProgression(profile) {
   const portraitSource = typeof globalThis.sanitizeImageSrc === 'function' ? globalThis.sanitizeImageSrc(portrait) : portrait;
   const characterName = activeCharacter?.name || 'Unbenannte Figur';
   const classSummary = getCenyrCharacterClassSummary(profile);
+  const classPassives = getEarnedClassPassiveFeatures(profile);
   return `
     <section class="cp-sheet-card cp-sheet-identity" aria-label="Figur und Fortschritt">
       <div class="cp-sheet-portrait">
@@ -280,6 +283,7 @@ function renderIdentityAndProgression(profile) {
         <label><span>Hintergrund</span><input data-combat-path="identity.background" value="${escapeMarkup(profile.identity.background)}" maxlength="120" placeholder="z. B. Volksheld"></label>
         ${classSummary ? `<div class="wide"><a href="${escapeMarkup(classSummary.href)}" target="_blank" rel="noopener">${escapeMarkup(classSummary.name)} · ${escapeMarkup(classSummary.culture)} · Ausbildungsplan Stufe ${classSummary.level} ↗</a><p>${escapeMarkup(classSummary.trainingFocus)} · ${classSummary.learnedTechniqueCount} erlernte Formtechniken${profile.progression?.development?.mode === 'purchase' ? ' · Einzelkauf mit Balancepunkten' : ' · automatische Formvergabe'} · Formen: ${escapeMarkup(classSummary.learnedForms.join(', ') || 'noch keine')}</p></div>` : ''}
         ${classSummary?.foundationOptions.length ? `<label class="wide"><span>Grundausbildung des Derwyn</span><select data-combat-foundation-choice>${classSummary.foundationOptions.map(option => `<option value="${escapeMarkup(option.formId)}"${selected(classSummary.foundationFormId, option.formId)}>${escapeMarkup(option.name)}</option>`).join('')}</select><small>Beide Wege führen nach der freien kreativen Phase zu denselben vier Wyrmformen. Ein Wechsel gleicht die Grundtechniken an.</small></label>` : ''}
+        ${classPassives.length ? `<details class="wide cp-sheet-class-passives" data-combat-class-passives><summary>Passive Klassenmerkmale (${classPassives.length})</summary><ul>${classPassives.map(feature => `<li><strong>Stufe ${feature.minimumLevel} · ${escapeMarkup(feature.name)}</strong><p>${escapeMarkup(feature.description)}</p></li>`).join('')}</ul></details>` : ''}
       </div>
       <div class="cp-sheet-progression">
         <label><span>Stufe</span><input type="number" min="1" max="20" data-combat-manual-level value="${profile.progression.level}"><small>Manueller Schnellabgleich 1–20</small></label>
@@ -862,6 +866,8 @@ function renderSpellCard(spell, manaName, profile) {
 function renderMagic(profile) {
   const magic = profile.magic;
   const manaName = profile.resources.find(resource => resource.id === magic.manaResourceId)?.name || 'Mana';
+  const focusWeapons = getDerwynFocusWeapons(profile);
+  const unavailableFocus = magic.channelingFocusWeaponId && !focusWeapons.some(weapon => weapon.id === magic.channelingFocusWeaponId);
   return `<article class="cp-sheet-card cp-sheet-magic">
     <div class="cp-sheet-section-head"><div><span>Mana, Zauberwerte &amp; Repertoire</span><h4>Magie</h4></div><label class="cp-sheet-toggle"><input type="checkbox" data-combat-path="magic.enabled"${checked(magic.enabled)}> Magie aktiv</label></div>
     <div class="cp-sheet-fields compact">
@@ -869,6 +875,7 @@ function renderMagic(profile) {
       <label><span>Zauberangriff</span><input type="number" min="-99" max="99" data-combat-path="magic.spellAttackOverride" value="${magic.spellAttackOverride ?? ''}" placeholder="automatisch"><small>Aktuell <b data-combat-derived="spell-attack">+0</b></small></label>
       <label><span>Zauber-SG</span><input type="number" min="0" max="999" data-combat-path="magic.spellSaveDcOverride" value="${magic.spellSaveDcOverride ?? ''}" placeholder="automatisch"><small>Aktuell <b data-combat-derived="spell-save-dc">10</b></small></label>
       <label><span>Mana-Ressource</span><select data-combat-path="magic.manaResourceId"><option value="">Keine Verknüpfung</option>${profile.resources.map(resource => `<option value="${escapeMarkup(resource.id)}"${selected(magic.manaResourceId, resource.id)}>${escapeMarkup(resource.name)}</option>`).join('')}</select></label>
+      ${focusWeapons.length ? `<label><span>Kanalisator</span><select data-combat-path="magic.channelingFocusWeaponId"><option value="">Geführten Stab oder Dreizack verwenden</option>${unavailableFocus ? `<option value="${escapeMarkup(magic.channelingFocusWeaponId)}" selected>Gespeicherter Kanalisator fehlt</option>` : ''}${focusWeapons.map(weapon => `<option value="${escapeMarkup(weapon.id)}"${selected(magic.channelingFocusWeaponId, weapon.id)}>${escapeMarkup(weapon.name)}</option>`).join('')}</select></label>` : ''}
       <label class="wide"><span>Magische Regeln / Tradition</span><textarea data-combat-path="magic.notes" maxlength="1600" placeholder="Magiesystem, Grenzen, Fokus, Tradition …">${escapeMarkup(magic.notes)}</textarea></label>
     </div>
     ${renderSpellSlotProfile(profile)}

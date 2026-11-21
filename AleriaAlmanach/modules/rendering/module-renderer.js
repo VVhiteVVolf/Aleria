@@ -91,19 +91,20 @@ function getModulePortraitTabs(page) {
   return tabs.map((tab, index) => ({ ...tab, label: tab.label || `Bild ${index + 1}` }));
 }
 
-function buildModulePortraitTabBar(tabs) {
+function buildModulePortraitTabBar(tabs, activeIndex = 0) {
   return `
     <div class="module-portrait-tab-bar" role="tablist">
       ${tabs.map((tab, index) => `
-      <button class="module-portrait-tab${index === 0 ? ' active' : ''}" type="button" role="tab" aria-selected="${index === 0 ? 'true' : 'false'}" data-portrait-tab="${index}" title="${escapeHtml(tab.label)}">${escapeHtml(tab.label)}</button>`).join('')}
+      <button class="module-portrait-tab${index === activeIndex ? ' active' : ''}" type="button" role="tab" aria-selected="${index === activeIndex}" data-portrait-tab="${index}" title="${escapeHtml(tab.label)}">${escapeHtml(tab.label)}</button>`).join('')}
     </div>`;
 }
 
-function buildModulePortraitPaneImage(page, tab, index, extraClass = '') {
-  const loadingAttrs = index === 0
+function buildModulePortraitPaneImage(page, tab, index, extraClass = '', activeIndex = 0) {
+  const active = index === activeIndex;
+  const loadingAttrs = active
     ? 'loading="eager" decoding="async" fetchpriority="high"'
     : 'loading="lazy" decoding="async"';
-  return `<img class="${extraClass ? `${extraClass} ` : ''}module-portrait-pane${index === 0 ? ' active' : ''}" data-portrait-pane="${index}" src="${tab.image}" alt="${escapeHtml(tab.label)}" ${loadingAttrs}${buildModuleImageElementAttrs(page, 'cover', 'center top')}>`;
+  return `<img class="${extraClass ? `${extraClass} ` : ''}module-portrait-pane${active ? ' active' : ''}" data-portrait-pane="${index}" src="${tab.image}" alt="${escapeHtml(tab.label)}" ${loadingAttrs}${buildModuleImageElementAttrs(page, 'cover', 'center top')}>`;
 }
 
 function getBiographyPortraitStages(page) {
@@ -139,11 +140,13 @@ function buildBiographyPortrait(page, entry) {
       ? `<img class="biography-portrait" src="${image}" alt="${escapeHtml(entry.title || '')}" loading="eager" decoding="async" fetchpriority="high"${buildModuleImageElementAttrs(imagePage, 'cover', 'center top')}>${page.biography?.portraitCaptions?.[0] ? `<p class="biography-portrait-caption active">${escapeHtml(page.biography.portraitCaptions[0])}</p>` : ''}`
       : `<div class="biography-portrait placeholder">${getInitialChar(entry.title)}</div>`;
   }
+  const defaultStage = page.biography?.portraitDefaultStage;
+  const activeIndex = defaultStage ? AleriaBiographyCards.getDefaultPortraitTabIndex(tabs, defaultStage) : 0;
   return `
         <div class="module-portrait-tabs biography-portrait-tabs" data-portrait-tabs>
-          ${buildModulePortraitTabBar(tabs)}
-          ${tabs.map((tab, index) => buildModulePortraitPaneImage(imagePage, tab, index, 'biography-portrait')).join('')}
-          ${tabs.some(tab => tab.caption) ? `<div aria-live="polite">${tabs.map((tab, index) => `<p class="biography-portrait-caption${index === 0 ? ' active' : ''}" data-portrait-caption="${index}">${escapeHtml(tab.caption || '')}</p>`).join('')}</div>` : ''}
+          ${buildModulePortraitTabBar(tabs, activeIndex)}
+          ${tabs.map((tab, index) => buildModulePortraitPaneImage(imagePage, tab, index, 'biography-portrait', activeIndex)).join('')}
+          ${tabs.some(tab => tab.caption) ? `<div aria-live="polite">${tabs.map((tab, index) => `<p class="biography-portrait-caption${index === activeIndex ? ' active' : ''}" data-portrait-caption="${index}">${escapeHtml(tab.caption || '')}</p>`).join('')}</div>` : ''}
         </div>`;
 }
 

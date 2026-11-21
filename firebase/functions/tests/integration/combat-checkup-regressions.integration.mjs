@@ -168,6 +168,44 @@ test('begrenzte Hauptfähigkeit und eigene Reaktion bleiben nach Speichern, Neul
   assert.deepEqual(uses((await party.record('a')).combatProfile.abilities), [['antwort', 2], ['haupt', 2]]);
 });
 
+test('drei Angriffswürfe laufen mit einem Reaktionspunkt bei beiden Häufigkeiten vollständig durch', async () => {
+  for (const frequency of ['always', 'comment']) {
+    const attacker = sample('folge-angreifer');
+    attacker.combatProfile.techniques = [{ id: 'folge', name: 'Prüffolge', active: true, damageFormula: '1d6',
+      activationType: 'action', costs: [{ resourceId: 'action', amount: 1 }],
+      followUpAttack: { enabled: true, inheritWeapon: true, afterMiss: true, repeatCount: 2, triggerReactions: true } }];
+    const defender = sample('folge-ziel', [ability('parade', [], { combatUsable: false, triggerRules: [{
+      id: 'pruefparade', name: 'Prüfparade', activation: 'reaction', frequency, phase: 'pre-roll', recipient: 'target',
+      sourceRelation: 'self', effects: { defenseModifier: 1 }, costs: [{ resourceId: 'reaction', amount: 1 }]
+    }] })]);
+    const party = await createCombatParty([{ key: 'a', actor: attacker, team: 'a' }, { key: 'b', actor: defender, team: 'b' }]);
+    const before = await party.snapshot();
+    const target = before.profiles.get('b');
+    const beforeReactions = target.resources.find(resource => resource.id === 'reaction').current;
+    assert.equal(beforeReactions, 1);
+    const actionId = 'technique:folge';
+    const prepared = await party.prepare({ actor: 'a', targets: ['b'], actionId, natural: 18 });
+    prepared.segment.combatAction.ruleSelections = [{ sourceActorId: target.characterId, sourcePersistence: target.persistence, ruleId: 'pruefparade' }];
+    const actor = resolveCombatProfile(await party.record('a'), { actionId });
+    prepared.segment.combatResolution = await new CombatResolutionService(new CheckupDice(18)).resolveAttack({ actor, target }, {
+      rulePeriods: { comment: 'pending' }, ruleSources: [{ actorId: target.characterId, selectedRuleIds: ['pruefparade'] }]
+    });
+    const saved = await party.commit(prepared);
+    const receipt = saved.mechanics.commentSegments[0].combatResolution;
+    const defense = result => [result.attack, ...result.followUpAttacks.map(hit => hit.attack)].map(hit => hit.targetDefense);
+    assert.deepEqual(defense(receipt), [target.totalDefense + 1, target.totalDefense, target.totalDefense]);
+    assert.deepEqual(defense(receipt), defense(prepared.segment.combatResolution));
+    assert.equal(receipt.ruleResourceSnapshots.length, 1);
+    const after = (await party.assertConsistent()).profiles.get('b');
+    assert.equal(after.resources.find(resource => resource.id === 'reaction').current, 0);
+    assert.equal(after.currentHitPoints, target.currentHitPoints - receipt.damage.total);
+    await undo(saved.id);
+    const restored = (await party.assertConsistent()).profiles.get('b');
+    assert.equal(restored.resources.find(resource => resource.id === 'reaction').current, beforeReactions);
+    assert.equal(restored.currentHitPoints, target.currentHitPoints);
+  }
+});
+
 for (const [mode, natural, expectedDamage] of [['saving-throw', 20, 2], ['saving-throw', 1, 5], ['spell-attack', 20, 15]]) {
   test(`Schadensvertrag mit Speicherung: ${mode}, W20=${natural}, Eigenschaden bleibt unabhängig`, async () => {
     const party = await partyWith([

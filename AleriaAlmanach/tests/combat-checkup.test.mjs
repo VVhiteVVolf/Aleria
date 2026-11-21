@@ -18,6 +18,27 @@ function profile(id, additions = {}) {
   } });
 }
 
+test('fester Technikschaden kombiniert den Grundbetrag mit Ausbildungswürfeln und dem leichten Stufe-30-Bonus', async () => {
+  const technique = { id: 'fester-hieb', name: 'Fester Hieb', active: true, costs: [{ resourceId: 'action', amount: 1 }],
+    effects: [{ id: 'fester-schaden', type: 'damage', target: 'target', on: 'hit', amount: 4 }] };
+  for (const [level, specialLevels, lightAttack, expectedNotation] of [[6, 0, false, '4'], [7, 0, false, '1d4+4'],
+    [20, 5, false, '1d10+5'], [20, 10, false, '1d10+1d6+4'], [20, 10, true, '4+1']]) {
+    const record = { id: 'fest', name: 'Kämpfer', combatProfile: {
+      progression: { level, specialLevels }, attributes: [{ key: 'strength', score: 18 }],
+      hitPoints: { current: 40, maximumOverride: 100 }, armorClass: { override: 5 },
+      weapons: [{ id: 'blade', name: 'Klinge', weaponType: 'sword', attackAttribute: 'strength', damageAttribute: 'strength', equipped: true, damageFormula: '1d8' }],
+      techniques: [{ ...technique, damageModel: { mode: 'fixed', lightAttack } }]
+    } };
+    const actor = resolveCombatProfile(record, { actionId: 'technique:fester-hieb' });
+    assert(actor.damageModifier > 0);
+    const result = await resolve(actor, profile('ziel'), { rulePeriods: { comment: 'probe' } });
+    assert.equal(result.damage.notation, expectedNotation);
+    assert.equal(result.targetSnapshot.hitPointsBefore - result.targetSnapshot.hitPointsAfter, result.damage.total);
+    if (lightAttack) assert.equal(result.damage.total, 5);
+    else assert.equal(getCombatDamagePreview(actor).notation, expectedNotation);
+  }
+});
+
 function action(effects, additions = {}) {
   return { ...profile('actor', additions), resourceCosts: [], actionResolutionMode: 'automatic',
     selectedAction: { name: 'Prüfhandlung', effects } };
@@ -82,6 +103,26 @@ test('Ressourcenwirkung und Reaktionskosten bleiben gemeinsam im endgültigen St
   assert.equal(pool(result.targetResourceSnapshot.after), 6);
   assert.equal(pool(result.ruleResourceSnapshots[0].after), 3);
   assert.equal(pool(replay(result).get('target').resources), 3);
+});
+
+test('eine gewählte Reaktion schützt Folgeangriffe bis zum Ende von Punkten und Nutzungen', async () => {
+  const base = profile('actor');
+  const actor = { ...base, selectedAction: { ...base.selectedAction, followUpAttack: {
+    enabled: true, inheritWeapon: true, afterMiss: true, repeatCount: 2, triggerReactions: true
+  } } };
+  for (const [frequency, usesMaximum, limit] of [['always', 0, 2], ['comment', 0, 1], ['always', 1, 1]]) {
+    const defender = profile('defender', { abilities: [{ id: 'parade', name: 'Parade', active: true, usesMaximum, usesCurrent: usesMaximum,
+      triggerRules: [lateRule([], 'pre-roll', { activation: 'reaction', frequency,
+        costs: [{ resourceId: 'reaction', amount: 1 }], effects: { defenseModifier: 1 } })] }] });
+    defender.resources = defender.resources.map(resource => resource.id === 'reaction' ? { ...resource, current: 2, maximum: 2 } : resource);
+    const result = await resolve(actor, defender, { rulePeriods: { comment: 'probe' },
+      ruleSources: [{ actorId: defender.characterId, selectedRuleIds: ['audit-rule'] }] });
+    const attacks = [result.attack, ...result.followUpAttacks.map(follow => follow.attack)];
+    assert.equal(attacks.length, 3);
+    assert.deepEqual(attacks.map(attack => attack.targetDefense), attacks.map((_, index) => defender.totalDefense + Number(index < limit)));
+    assert.equal(result.ruleResourceSnapshots.length, limit);
+    assert.equal(result.ruleResourceSnapshots.at(-1).after.find(resource => resource.id === 'reaction').current, 2 - limit);
+  }
 });
 
 test('später Zusatzschaden ist in Schadenssumme und TP-Verlust enthalten', async () => {

@@ -2,6 +2,8 @@
 
 Die neue Hauptseite ist `index.html`. Das linke Almanach-Register verlinkt direkt dorthin. Sie funktioniert als eigenständige statische Seite ohne Firebase, Anmeldung, Build-Schritt oder Browser-Speicher und ist zusätzlich als Vite-Einstieg registriert.
 
+Unter **Kreaturenkarten** (`kreaturenkarten/index.html`) stehen die Wendekarten mit kompaktem Kreaturenbogen, Angriffen, Magie und Merkmalen. **Vorlage übernehmen** öffnet eine eigenständige Kreaturenakte als Entwurf im Almanach. Das Kartenregister in `AleriaAlmanach/modules/creatures/catalog/bestiary-encounter-cards.js` liefert dafür dieselben Werte und Bildreferenzen wie für die Anzeige im Bestiarium.
+
 ## Verantwortung und spätere Erweiterung
 
 - `modules/catalog`: die fünf Kapitel, 42 individuelle Bildtafeln, Suche, Filter und Darstellung der Wesen.

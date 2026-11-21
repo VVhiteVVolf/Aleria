@@ -58,7 +58,7 @@ test('Unbekannte Gründer, Hauswappen und genau ein serieller Zeitsprung gehen d
   }
 });
 
-test('Eurgains Elternschaft ist in beiden Gegenakten identisch, ohne eine Ehe oder Legitimität zu erfinden', () => {
+test('Eurgains Elternschaft und die bestätigte Ehe stimmen in beiden Hausakten überein', () => {
   const brandyddyn = families.find(family => family.document.id === 'haus-brandyddyn');
   for (const family of [brandyddyn, HOUSE_BRONNOR_FAMILY]) {
     assert.equal(family.parentages.length, 1);
@@ -67,8 +67,12 @@ test('Eurgains Elternschaft ist in beiden Gegenakten identisch, ohne eine Ehe od
     assert.deepEqual(parentage.parentIds, ['pellinard-brandyddyn', 'ysabel-bronnor']);
     assert.equal(parentage.type, 'biological');
     assert.equal(parentage.legitimacy, 'unknown');
-    assert.equal(parentage.partnershipId, '');
-    assert.equal(family.partnerships.length, 1);
+    const marriage = family.partnerships.find(partnership => partnership.id === parentage.partnershipId);
+    assert.equal(marriage.type, 'marriage');
+    assert.equal(marriage.certainty, 'confirmed');
+    assert.equal(marriage.start, '');
+    assert.deepEqual(marriage.participantIds, parentage.parentIds);
+    assert.equal(family.partnerships.length, 2);
     assert.equal(family.cadetBranches.length, 0);
     assert.equal(getPerson(family, 'ysabel-bronnor').houseId, 'house-bronnor');
     assert.equal(getPerson(family, 'eurgain-brandyddyn').houseId, 'house-brandyddyn');
@@ -79,6 +83,34 @@ test('Eurgains Elternschaft ist in beiden Gegenakten identisch, ohne eine Ehe od
   }
 });
 
+test('Frühere Hausentwürfe übernehmen die bestätigte Ehe und Ysabels Jahrgang und behalten redaktionelle Notizen', () => {
+  for (const family of families.filter(family => family.parentages.length)) {
+    const previous = structuredClone(family);
+    previous.extensions.sourceRevision = family.document.id === 'haus-bronnor' ? 2 : 1;
+    previous.partnerships.pop();
+    const [parentage] = previous.parentages;
+    parentage.partnershipId = '';
+    parentage.extensions = { chartPairParentsWithoutPartnership: true };
+    parentage.notes = 'Eigene Anmerkung zur Elternschaft';
+    const olderYsabel = getPerson(previous, 'ysabel-bronnor');
+    olderYsabel.birth = '';
+    olderYsabel.notes = 'Eigene Notiz zu Ysabel';
+    olderYsabel.extensions = { ageEstimate: 'etwa 35–45 Jahre' };
+
+    const upgraded = resolveRegisteredFamilyUpgrade(family, previous);
+    assert.equal(upgraded.partnerships.length, 2);
+    assert.equal(upgraded.parentages[0].partnershipId, family.parentages[0].partnershipId);
+    assert.equal(upgraded.parentages[0].extensions.chartPairParentsWithoutPartnership, false);
+    assert.equal(upgraded.parentages[0].notes, parentage.notes);
+    const ysabel = getPerson(upgraded, 'ysabel-bronnor');
+    assert.equal(ysabel.notes, olderYsabel.notes);
+    assert.equal(ysabel.birth, '1695');
+    assert.equal(ysabel.extensions.ageEstimate, undefined);
+    assert.deepEqual(toFamilyChartData(assertValidFamily(upgraded).family).diagnostics, []);
+    assert.deepEqual(resolveRegisteredFamilyUpgrade(family, upgraded), upgraded);
+  }
+});
+
 test('Die drei Curiad sind keine erfundenen Geschwister; Altersschätzungen erzeugen keine Lebensdaten', () => {
   const curiad = families.find(family => family.document.id === 'haus-curiad');
   assert.equal(curiad.persons.length, 5);
@@ -86,13 +118,20 @@ test('Die drei Curiad sind keine erfundenen Geschwister; Altersschätzungen erze
   assert.deepEqual(curiad.timeJumps[0].childIds, ['marared-curiad', 'mathon-curiad', 'morcant-curiad']);
   assert.equal(DRAIG_GARDE_PEOPLE.length, 9);
   assert.equal(new Set(DRAIG_GARDE_PEOPLE.map(person => person.worldPersonId)).size, 9);
+  const gwendolyn = FAMILY_REGISTRY.find(record => record.id === 'haus-aderyn').family.persons
+    .find(person => person.id === 'gwendolyn-aderyn');
   for (const source of DRAIG_GARDE_PEOPLE) {
-    assert.match(source.ageEstimate, /^etwa \d+–\d+ Jahre$/);
     for (const family of families.filter(family => getPerson(family, source.id))) {
       const person = getPerson(family, source.id);
-      assert.equal(person.birth, '');
+      if (source.id === 'ysabel-bronnor') {
+        assert.equal(person.birth, gwendolyn.birth);
+        assert.equal(person.extensions.ageEstimate, undefined);
+      } else {
+        assert.match(source.ageEstimate, /^etwa \d+–\d+ Jahre$/);
+        assert.equal(person.birth, '');
+        assert.equal(person.extensions.ageEstimate, source.ageEstimate);
+      }
       assert.equal(person.death, '');
-      assert.equal(person.extensions.ageEstimate, source.ageEstimate);
       assert.equal(person.worldPersonId, source.worldPersonId);
     }
   }

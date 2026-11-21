@@ -11,6 +11,7 @@ import {
   sanitizeCharacterCombatProfile
 } from './combat-profile-model.js?v=20260928-equipment-art-v4';
 import { preserveHitPointDeficit } from './combat-hit-point-progression.js?v=20260906-character-vitality-v1';
+import { getEarnedClassPassiveFeatures } from '../classes/combat-passives/class-passive-curriculum.js';
 import { getArmorRoutine } from '../classes/armor-routine.js?v=20260906-armor-routine-v1';
 import { applyCenyrClassLevelProgression } from '../classes/cenyr/cenyr-class-combat-rules.js?v=20260909-dragon-parent-v2';
 
@@ -315,6 +316,10 @@ function previewSingleCharacterLevelUp(profile = {}, planValue = {}) {
 
   const classTechniqueChoiceGroups = [];
   const classProgression = applyCenyrClassLevelProgression(interimProfile, nextProgression.level);
+  if (nextProgression.kind === 'normal') {
+    classProgression.unlockedFeatures.push(...getEarnedClassPassiveFeatures(classProgression.profile)
+      .filter(feature => feature.minimumLevel === nextProgression.level));
+  }
   classProgression.unlockedFeatures.forEach(feature => changes.push({
     key: `class-feature-${feature.id}`,
     label: 'Neues Klassenmerkmal',

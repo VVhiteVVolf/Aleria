@@ -287,6 +287,24 @@
   grid-column: 1 / -1;
 }
 
+.cp-sheet-class-passives {
+  border-top: 1px solid var(--sheet-gold-muted);
+  padding-top: 0.55rem;
+}
+
+.cp-sheet-class-passives summary {
+  color: var(--sheet-gold-bright);
+  cursor: pointer;
+}
+
+.cp-sheet-class-passives ul {
+  padding-inline-start: 1.15rem;
+}
+
+.cp-sheet-class-passives li + li {
+  margin-top: 0.55rem;
+}
+
 .cp-sheet-level-seal {
   grid-row: span 2;
   display: flex;

@@ -6,7 +6,7 @@ import { getRegenerationTrait, isBurning } from './combat-creature-traits.js';
 export async function prepareCombatTurnStart(actor, dice, options = {}) {
   const trait = getRegenerationTrait(actor);
   const resource = actor.resources?.find(item => item.id === trait?.regeneration.resourceId);
-  if (options.skipResourceCosts || !trait || !(resource?.current > 0) || !(actor.currentHitPoints > 0)) {
+  if (options.skipResourceCosts || !trait || trait.regeneration.timing === 'end' || !(resource?.current > 0) || !(actor.currentHitPoints > 0)) {
     return { actor, turnStart: null };
   }
   const before = { current: actor.currentHitPoints, maximum: actor.maximumHitPoints, temporary: actor.temporaryHitPoints || 0 };

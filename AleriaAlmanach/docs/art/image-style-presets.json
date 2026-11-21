@@ -1,9 +1,44 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-21",
   "description": "Dauerhafte Bildstil-Vorgaben des Nutzers für Aleria. Den passenden Stil ohne erneute Erinnerung verwenden; ausdrückliche Vorgaben des aktuellen Auftrags haben Vorrang.",
   "defaultPreset": "anime-scene-portrait",
   "presets": {
+    "anime-animal-portrait": {
+      "name": "Tierporträts im Stil des Kreaturenregisters",
+      "useFor": ["Persönliche Tiergefährten", "Reittiere", "Eigenständige Tierporträts im Kreaturenregister"],
+      "aspectRatio": "2:3",
+      "transparentBackground": false,
+      "styleRevision": "2026-11-21-creature-register",
+      "approvedAt": "2026-11-21",
+      "status": "approved",
+      "approvalQuote": "Diesmal war das gut mit den tieren, merk dir diesen Stilprompt für tierportraits!",
+      "referenceImages": [
+        "AleriaAlmanach/assets/ysabel-bronnor/neddwyn-v4.png",
+        "AleriaAlmanach/assets/ysabel-bronnor/gwaedor-v4.png"
+      ],
+      "referenceUsage": "Vor dem Prompt vorhandene Tierkarten der betreffenden Tierart ansehen und die passenden Originale als Bildreferenzen mitgeben. Die Bildsprache aus diesen Karten übernehmen. Tierart, Gesichtsausdruck, Färbung, Ausrüstung, Heraldik, Pose und Ort folgen dem Auftrag.",
+      "prompt": "Erzeuge ein ausgearbeitetes, handgezeichnet wirkendes Anime-Tierporträt im Hochformat 2:3 für Alerias Kreaturenregister. Das Tier steht groß und ausdrucksstark im Bild. Zeichne glaubwürdige, artspezifische Anatomie, feine variierende Konturen und bewusst geformte matte Cel-Schatten mit wenigen abgestuften Tonwerten. Konzentriere kleine gezeichnete Details an Augen, Schnabel oder Maul, Gelenken, Gefiederkonturen und Ausrüstung. Größere Fell- und Gefiederflächen bleiben ruhig und klar modelliert. Arbeite mit gerichteter Beleuchtung, farbigen Schlagschatten und einer räumlich gestaffelten, gezeichneten Umgebung, die Herkunft, Haltung und Funktion des Tiers trägt. Verwende natürliche Farben und klar gesetzte Akzente. Vermeide Fototexturen, Aquarellkörnung, schwere Comicumrisse, flache Posterästhetik, übergroße Cartoonaugen, Schrift und Rahmen.",
+      "speciesGuidance": {
+        "horses": {
+          "referenceImages": [
+            "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/references/cadfan-donn.jpeg",
+            "AleriaAlmanach/assets/companions/haus-draig/alaw.png",
+            "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/references/gwendolyn-flam.jpeg"
+          ],
+          "prompt": "Für Reittiere eine ruhige, aufrechte Dreiviertelansicht mit vollständig sichtbaren Ohren, Schweif und vier Hufen. Kopf, Brust und Vorderläufe geben der Haltung Gewicht. Zeichne Rasse, Fellzeichnung, Mähne, Sattelzeug und Wappen individuell. Wie bei Donn, Alaw und Flam erhalten Fell und Muskulatur klare Lichtflächen. Riemen, Steigbügel und Beschläge bleiben genau lesbar."
+        },
+        "birds": {
+          "referenceImages": [
+            "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/references/gwendolyn-olwen.png",
+            "AleriaAlmanach/assets/companions/haus-varulv/skuggi.png",
+            "AleriaAlmanach/assets/biographies/rianna-lefraye/2026-11-02/agravaine-vain.png"
+          ],
+          "prompt": "Für Vögel artspezifische Kopf- und Körperform, scharf gezeichnete Augen und ineinandergreifende Federgruppen wie bei Olwen und Skuggi. Auf einem natürlichen Sitzplatz greifen beide Füße sichtbar. Agravaine zeigt den passenden Ast und die räumlich gestaffelte Landschaft. Gefieder, Haltung, Standort und Flug- oder Sitzmotiv folgen der jeweiligen Figur."
+        }
+      },
+      "approvedTestPromptManifest": "AleriaAlmanach/docs/art/ysabel-bronnor-20261121/generation-prompts.json"
+    },
     "fantasy-class-icon": {
       "name": "Flache Comic-Klassenicons nach Morgorn",
       "useFor": [

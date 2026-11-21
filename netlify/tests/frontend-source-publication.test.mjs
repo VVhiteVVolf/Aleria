@@ -9,6 +9,64 @@ test('incidental-speaker generation originals stay out of the static package whi
   assert.equal(shouldPublish('AleriaAlmanach/public/assets/comment-foreign-voice/knight.png'), true);
 });
 
+test('the courtyard loader ships three renditions and keeps the generator source in the repository', async () => {
+  const manifestPath = 'AleriaAlmanach/public/assets/loading-screen/oweta-courtyard-v8-manifest.json';
+  const manifest = JSON.parse(await readFile(new URL(`../../${manifestPath}`, import.meta.url), 'utf8'));
+  const sourcePaths = [`AleriaAlmanach/${manifest.source.file}`, 'AleriaAlmanach/assets/loading-screen/oweta-courtyard-v8-prompts.json'];
+  for (const path of sourcePaths) {
+    await access(new URL(`../../${path}`, import.meta.url));
+    assert.equal(shouldPublish(path), false, path);
+  }
+  const runtimePaths = [manifestPath, 'AleriaAlmanach/modules/loading-screen/loading-screen-courtyard.js',
+    ...manifest.assets.map(({ file }) => `AleriaAlmanach/${file}`)];
+  for (const path of runtimePaths) {
+    await access(new URL(`../../${path}`, import.meta.url));
+    assert.equal(shouldPublish(path), true, path);
+  }
+  const earlierPath = 'AleriaAlmanach/public/assets/loading-screen/oweta-courtyard-v7-manifest.json';
+  const earlier = JSON.parse(await readFile(new URL(`../../${earlierPath}`, import.meta.url), 'utf8'));
+  for (const path of [earlierPath, ...earlier.assets.map(({ file }) => `AleriaAlmanach/${file}`)]) {
+    assert.equal(shouldPublish(path), false, path);
+  }
+});
+
+test('vignettes publish their encoded illustrations and keep all generator versions as sources', async () => {
+  const manifestPath = 'AleriaAlmanach/public/assets/loading-screen/ruhige-szenen-v1-manifest.json';
+  const receiptPath = 'AleriaAlmanach/assets/loading-screen/ruhige-szenen-v1-prompts.json';
+  const manifest = JSON.parse(await readFile(new URL(`../../${manifestPath}`, import.meta.url), 'utf8'));
+  const receipt = JSON.parse(await readFile(new URL(`../../${receiptPath}`, import.meta.url), 'utf8'));
+  assert.equal(shouldPublish(receiptPath), false);
+  for (const { source } of receipt.images) {
+    const path = `AleriaAlmanach/assets/loading-screen/${source}`;
+    await access(new URL(`../../${path}`, import.meta.url));
+    assert.equal(shouldPublish(path), false, path);
+  }
+  const runtimePaths = [
+    manifestPath,
+    'AleriaAlmanach/modules/loading-screen/loading-screen-vignettes.js',
+    'AleriaAlmanach/modules/loading-screen/loading-screen-vignettes.css',
+    ...Object.values(manifest.scenes).flatMap(({ assets }) => assets.map(({ file }) => `AleriaAlmanach/${file}`))
+  ];
+  for (const path of runtimePaths) {
+    await access(new URL(`../../${path}`, import.meta.url));
+    assert.equal(shouldPublish(path), true, path);
+  }
+});
+
+test('creature and biography illustrations publish through their reviewed runtime paths', async () => {
+  const assets = [
+    ['AleriaAlmanach/assets/ysabel-bronnor/gwaedor-v4.png', true],
+    ['AleriaAlmanach/assets/ysabel-bronnor/neddwyn-v4.png', true],
+    ['AleriaAlmanach/docs/art/ysabel-bronnor-20261121/generation-prompts.json', false],
+    ['Bestiarium/assets/kreaturenkarten/portraits/rhewddann-warg.webp', true],
+    ['AleriaAlmanach/docs/art/creature-card-scenes-20261121/', false]
+  ];
+  for (const [path, isPublic] of assets) {
+    await access(new URL(`../../${path}`, import.meta.url));
+    assert.equal(shouldPublish(path), isPublic, path);
+  }
+});
+
 test('world directory ships its runtime projection and keeps readers, builders and tests as sources',async()=>{
   for(const path of ['shared/world-directory/source-reader.mjs','shared/world-directory/build-house-directories.mjs',
     'shared/world-directory/house-placement.mjs','shared/world-directory/tests/catalog-coverage.test.mjs']) {

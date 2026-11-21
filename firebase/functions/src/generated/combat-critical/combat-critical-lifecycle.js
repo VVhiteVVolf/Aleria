@@ -10,6 +10,16 @@ function hitPoints(state = {}) {
     temporary: Math.max(0, Number(state.temporary) || 0) };
 }
 
+export function ownsExpiringTemporaryHitPoints(condition) {
+  return condition.criticalTemporaryOwned === true || condition.temporaryHitPointsOwner === true;
+}
+
+function releaseTemporaryOwner(condition) {
+  return { ...condition,
+    ...(condition.criticalTemporaryOwned ? { criticalTemporaryOwned: false } : {}),
+    ...(condition.temporaryHitPointsOwner ? { temporaryHitPointsOwner: false } : {}) };
+}
+
 function releaseAuraBaseline(state, expiredIds) {
   const tracker = state.encounterAuraTemporaryHitPoints;
   if (!tracker?.baselineCriticalConditionIds?.some(id => expiredIds.has(id))) return state;
@@ -23,12 +33,12 @@ function releaseAuraBaseline(state, expiredIds) {
 // critical grant must retain its own lifetime and its receipt remains untouched.
 export function reconcileCriticalTemporaryOwnership(previous = {}, next = {}) {
   const previousOwners = new Set((previous.temporaryConditions || [])
-    .filter(condition => condition.criticalTemporaryOwned).map(condition => condition.id));
+    .filter(ownsExpiringTemporaryHitPoints).map(condition => condition.id));
   let result = next;
   if (Number(next.temporary) > Number(previous.temporary || 0) && previousOwners.size) {
     result = { ...next, temporaryConditions: (next.temporaryConditions || []).map(condition =>
-      condition.criticalTemporaryOwned && previousOwners.has(condition.id)
-        ? { ...condition, criticalTemporaryOwned: false } : condition) };
+      ownsExpiringTemporaryHitPoints(condition) && previousOwners.has(condition.id)
+        ? releaseTemporaryOwner(condition) : condition) };
   }
   const activeIds = new Set((result.temporaryConditions || []).filter(condition => condition.active !== false).map(condition => condition.id));
   const removedBaselineIds = new Set((result.encounterAuraTemporaryHitPoints?.baselineCriticalConditionIds || []).filter(id => !activeIds.has(id)));
@@ -60,11 +70,11 @@ export function expireCriticalTemporaryHitPoints(states, comment, previousIds = 
     ? new Set() : getCommentActorIds(comment);
   for (const [id, state] of states) {
     const baselineOwners = new Set(state.encounterAuraTemporaryHitPoints?.baselineCriticalConditionIds || []);
-    const expiring = (state.temporaryConditions || []).filter(c => (c.criticalTemporaryOwned === true || baselineOwners.has(c.id))
+    const expiring = (state.temporaryConditions || []).filter(c => (ownsExpiringTemporaryHitPoints(c) || baselineOwners.has(c.id))
       && (comment.combatEncounter?.operation === 'end' && c.durationModel?.encounterId === comment.combatEncounter.encounterId
         || contributors.has(id) && previousIds.get(id)?.has(c.id) && c.durationModel?.remainingActorComments === 1));
     if (!expiring.length) continue;
-    const before = hitPoints(state), after = { ...before, temporary: expiring.some(c => c.criticalTemporaryOwned) ? 0 : before.temporary };
+    const before = hitPoints(state), after = { ...before, temporary: expiring.some(ownsExpiringTemporaryHitPoints) ? 0 : before.temporary };
     states.set(id, releaseAuraBaseline({ ...state, ...after }, new Set(expiring.map(c => c.id))));
     events.push({ actorId: id, phase: 'end', names: expiring.map(c => c.name), before, after, expiredTemporary: before.temporary - after.temporary });
   }
@@ -93,5 +103,5 @@ export function grantCriticalTemporaryHitPoints(state, consequence) {
 
 export function releaseCriticalTemporaryOwnership(conditions, before, after) {
   return after.temporary > before.temporary
-    ? conditions.map(c => c.criticalTemporaryOwned ? { ...c, criticalTemporaryOwned: false } : c) : conditions;
+    ? conditions.map(c => ownsExpiringTemporaryHitPoints(c) ? releaseTemporaryOwner(c) : c) : conditions;
 }

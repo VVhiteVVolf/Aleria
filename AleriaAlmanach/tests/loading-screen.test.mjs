@@ -198,8 +198,8 @@ test('hidden tabs pause movement without changing the users animation choice', a
   assert.equal(ui.root.dataset.motion, 'paused');
 });
 
-test('each scene uses its own cast and dialogue, with quiet gaps and cancellable gestures', () => {
-  for (const variant of LOADING_SCREEN_SCENES) {
+test('each dialogue scene uses its own cast, with quiet gaps and cancellable gestures', () => {
+  for (const variant of LOADING_SCREEN_SCENES.filter(({ cast }) => cast)) {
     const { window, tick, timers } = screen();
     const controller = new AbortController();
     const speaker = {}, line = {};
@@ -269,15 +269,37 @@ test('each scene uses its own cast and dialogue, with quiet gaps and cancellable
   }
 });
 
-test('all four scenes can be chosen, and a reload in the same tab avoids an immediate repeat', () => {
-  const ids = ['owetas-quartett', 'wolfshorn', 'tiefenwyrm', 'heroldsrat'];
-  assert.deepEqual([0, .25, .5, .999].map(value => chooseLoadingScreenScene({ random: () => value }).id), ids);
+test('all nine scenes can be chosen, and a reload in the same tab avoids an immediate repeat', () => {
+  const ids = ['owetas-quartett', 'wolfshorn', 'tiefenwyrm', 'heroldsrat',
+    'trahern-tal', 'versunkene-strand', 'steffan-musterung', 'fenrir-freya-weglager', 'landtroll-bruecke'];
+  const draws = ids.map((_, index) => (index + .5) / ids.length);
+  assert.deepEqual(draws.map(value => chooseLoadingScreenScene({ random: () => value }).id), ids);
   let previous;
   const storage = { getItem: () => previous, setItem: (_, id) => { previous = id; } };
   const draw = value => chooseLoadingScreenScene({ storage, random: () => value }).id;
-  assert.deepEqual([draw(.5), draw(.99), draw(0), draw(.99)], ['tiefenwyrm', 'heroldsrat', 'owetas-quartett', 'heroldsrat']);
+  assert.deepEqual([draw(0), draw(0), draw(.99), draw(.99)],
+    ['owetas-quartett', 'wolfshorn', 'landtroll-bruecke', 'fenrir-freya-weglager']);
   const unavailable = { getItem() { throw Error('blocked'); }, setItem() { throw Error('blocked'); } };
   assert.equal(chooseLoadingScreenScene({ storage: unavailable, random: () => 0 }).id, ids[0]);
+});
+
+test('each vignette uses a single illustration with matching renditions and no dialogue', () => {
+  const manifest = JSON.parse(readFileSync(new URL('../public/assets/loading-screen/ruhige-szenen-v1-manifest.json', import.meta.url), 'utf8'));
+  const variants = LOADING_SCREEN_SCENES.filter(({ kind }) => kind === 'vignette');
+  assert.deepEqual(new Set(Object.keys(manifest.scenes)), new Set(variants.map(({ id }) => id)));
+  for (const { id, picture, cast } of variants) {
+    const { source: original, assets } = manifest.scenes[id];
+    assert.equal(cast, undefined);
+    assert.equal(LOADING_SCREEN_QUOTES[id], undefined);
+    assert.deepEqual(original.size, [1672, 941]);
+    assert.deepEqual(assets.map(({ file }) => file.split('/').at(-1)), [
+      `${picture}-desktop.avif`, `${picture}-mobile.avif`, `${picture}-fallback.webp`
+    ]);
+    for (const { size: [width, height] } of assets) {
+      assert.ok(Math.abs(height - width * 9 / 16) <= 1);
+    }
+    verifyAssets([original, ...assets]);
+  }
 });
 
 test('Owetas Quartett keeps the stage still while a single speaker gestures', () => {
@@ -618,6 +640,11 @@ test('every live graphic and soundtrack exists, and rejected frame atlases are n
   assert.deepEqual(atlas.asset.size, [atlas.columns * atlas.cell, atlas.rows * atlas.cell]);
   for (const asset of room.assets) assert.equal(asset.size[0] * 3, asset.size[1] * 4);
   verifyAssets([room.source, ...room.assets, ...atlas.sources, atlas.asset]);
+  const courtyard = JSON.parse(readFileSync(new URL('../public/assets/loading-screen/oweta-courtyard-v8-manifest.json', import.meta.url), 'utf8'));
+  assert.deepEqual(courtyard.source.size, [1536, 1024]);
+  assert.equal(courtyard.assets.length, 3);
+  for (const asset of courtyard.assets) assert.equal(asset.size[0] * 2, asset.size[1] * 3);
+  verifyAssets([courtyard.source, ...courtyard.assets]);
   const chase = JSON.parse(readFileSync(new URL('../public/assets/loading-screen/rosenflucht-v11-manifest.json', import.meta.url), 'utf8'));
   assert.deepEqual(Object.keys(chase.chase.actors), ['idwal', 'trevor', 'pyderi']);
   for (const atlas of Object.values(chase.chase.actors)) {

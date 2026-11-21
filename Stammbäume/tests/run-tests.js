@@ -21474,7 +21474,7 @@ test('registriert 20 abhängige Häuser des Tals der Milane genau einmal neben A
     assert.equal(diagnostics.filter(item => item.severity === 'error').length, 0, family.document.id);
     if (family.document.id === 'haus-bronnor') {
       assert.equal(family.persons.length, 5);
-      assert.equal(family.partnerships.length, 1, 'Nur das unbekannte Gründerpaar ist als Partnerschaft angelegt.');
+      assert.equal(family.partnerships.length, 2, 'Gründerpaar und bestätigte Ehe von Ysabel und Pellinard.');
       assert.equal(family.timeJumps.length, 1);
       assert.deepEqual(family.timeJumps[0].childIds, ['ysabel-bronnor']);
       assert.equal(family.parentages[0].childId, 'eurgain-brandyddyn');

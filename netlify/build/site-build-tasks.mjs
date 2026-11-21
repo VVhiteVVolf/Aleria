@@ -162,6 +162,7 @@ export const SITE_BUILD_TASKS = [
   {
     id: 'biography-layout', label: 'Shared biography layout, editorial defaults, training portraits and transfer', parallelValidation: true,
     inputs: ['js/biography/', 'AleriaAlmanach/modules/rheinallt-biography/', 'AleriaAlmanach/assets/rheinallt-biography/',
+      'AleriaAlmanach/modules/ysabel-biography/', 'AleriaAlmanach/assets/ysabel-bronnor/',
       'AleriaAlmanach/tests/rheinallt-biography.test.mjs', 'AleriaAlmanach/modules/biography/', 'AleriaAlmanach/modules/characters/character-biography-tab.js',
       'AleriaAlmanach/modules/rendering/module-renderer.js', 'AleriaAlmanach/modules/module-editor/module-editor-biography.js',
       'AleriaAlmanach/modules/module-editor/module-editor-pages.js', 'AleriaAlmanach/modules/module-editor/module-editor-templates.js',
@@ -770,6 +771,7 @@ export const SITE_BUILD_TASKS = [
     // dependency audit, including dynamically loaded editorial modules.
     inputs: ['Gameplay Guide/', 'CharakterDatenbank/generated/characters.snapshot.json',
       'AleriaAlmanach/modules/einion-biography/', 'AleriaAlmanach/modules/rheinallt-biography/',
+      'AleriaAlmanach/modules/ysabel-biography/',
       'AleriaAlmanach/modules/patrick-biographies/', 'AleriaAlmanach/modules/character-genealogy/',
       'AleriaAlmanach/modules/gawain-duncan/gawain-public-biography.mjs',
       'AleriaAlmanach/modules/fleischsammler-argall/household.mjs',
@@ -922,6 +924,7 @@ export const SITE_BUILD_TASKS = [
     id: 'family-charts', label: 'Family chart release and browser geometry',
     inputs: ['Stammbäume/assets/js/', 'Stammbäume/assets/css/', 'Stammbäume/assets/data/',
       'AleriaAlmanach/modules/einion-biography/', 'AleriaAlmanach/modules/rheinallt-biography/', 'AleriaAlmanach/assets/einion-biography/',
+      'AleriaAlmanach/modules/ysabel-biography/', 'AleriaAlmanach/assets/ysabel-bronnor/',
       'AleriaAlmanach/tests/einion-biography.test.mjs', 'AleriaAlmanach/tests/rheinallt-biography.test.mjs', 'AleriaAlmanach/assets/rheinallt-biography/',
       'AleriaAlmanach/modules/fleischsammler-argall/household.mjs',
       'AleriaAlmanach/modules/patrick-biographies/', 'AleriaAlmanach/modules/character-genealogy/',

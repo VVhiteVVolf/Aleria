@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { chromium } from '../../../Stammbäume/node_modules/playwright-core/index.mjs';
 import { startChartQualityServer } from '../../../Stammbäume/tools/chart-quality-server.mjs';
 /** A local preview that blocks all external writes and uses no live account. */
-export async function openVenueBrowserPreview(name, { entryId, root: checkoutRoot } = {}) {
+export async function openVenueBrowserPreview(name, { entryId, root: checkoutRoot, localOnly = false } = {}) {
   const root = checkoutRoot ? resolve(checkoutRoot) : fileURLToPath(new URL('../../../', import.meta.url));
   const output = resolve(root, `.tmp/${name}/browser-${Date.now()}`);
   await mkdir(output, { recursive: true });
@@ -16,7 +16,8 @@ export async function openVenueBrowserPreview(name, { entryId, root: checkoutRoo
     const context = await browser.newContext({ reducedMotion: 'reduce' }), cache = new Map();
     await context.route('**/*', async route => {
       const request = route.request(), url = new URL(request.url());
-      if (url.origin === server.origin) return route.continue();
+      if (url.origin === server.origin && (!localOnly || request.method() === 'GET')) return route.continue();
+      if (localOnly) return route.abort();
       if (request.method() === 'GET' && ((url.origin === 'https://www.gstatic.com' && url.pathname.startsWith('/firebasejs/')) || ['https://i.imgur.com', 'https://64.media.tumblr.com'].includes(url.origin)
         || url.origin === 'https://firebasestorage.googleapis.com' && url.searchParams.get('alt') === 'media')) {
         if (!cache.has(request.url())) cache.set(request.url(), fetch(request.url(), { signal: AbortSignal.timeout(15000) }).then(async r => ({ status: r.status, contentType: r.headers.get('content-type'), headers: { 'access-control-allow-origin': '*' }, body: Buffer.from(await r.arrayBuffer()) })));

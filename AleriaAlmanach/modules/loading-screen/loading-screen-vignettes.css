@@ -1,0 +1,124 @@
+.almanach-loading__scene[data-scene-kind="vignette"] {
+  aspect-ratio: 16 / 9;
+  background: #282e2a;
+}
+
+/* Effects use coordinates in the illustration, including after the mobile crop. */
+.almanach-loading__vignette {
+  position: absolute;
+  inset-block: 0;
+  left: 50%;
+  width: 100%;
+  translate: -50% 0;
+}
+
+.almanach-loading__vignette picture,
+.almanach-loading__vignette img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.almanach-loading__vignette::before {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  animation-play-state: var(--journey-play-state, running);
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.almanach-loading[data-state="leaving"] .almanach-loading__vignette::before {
+  animation-play-state: paused;
+}
+
+[data-loading-variant="trahern-tal"] .almanach-loading__vignette::before {
+  content: '';
+  inset: 13% 48% auto auto;
+  width: 45%;
+  height: 50%;
+  background: radial-gradient(ellipse, #ffe3a236, transparent 68%);
+  animation-name: vignette-valley-light;
+  animation-duration: 11s;
+}
+
+@keyframes vignette-valley-light {
+  0%, 100% { opacity: .16; transform: translateX(-5%); }
+  52% { opacity: .58; transform: translateX(8%); }
+}
+
+[data-loading-variant="versunkene-strand"] .almanach-loading__vignette::before {
+  content: '';
+  inset: 0;
+  background:
+    radial-gradient(ellipse 1% 1.6% at 57.78% 34.96%, #edffff 0%, #a8fff2ba 25%, transparent 100%),
+    radial-gradient(ellipse 1% 1.6% at 60.95% 34.64%, #edffff 0%, #a8fff2ba 25%, transparent 100%);
+  animation-name: vignette-eye-glint;
+  animation-duration: 9s;
+}
+
+@keyframes vignette-eye-glint {
+  0%, 12%, 30%, 100% { opacity: 0; }
+  17% { opacity: .86; }
+}
+
+[data-loading-variant="steffan-musterung"] .almanach-loading__vignette::before {
+  content: '';
+  top: 2.65%;
+  left: 80.45%;
+  width: 6.9%;
+  height: 26.95%;
+  clip-path: polygon(0 13%, 100% 0, 100% 98%, 49% 77%, 0 100%);
+  background: linear-gradient(103deg, transparent 38%, #ffead157 51%, transparent 65%) 100% 0 / 205% 100%;
+  animation-name: vignette-banner-light;
+  animation-duration: 8s;
+}
+
+@keyframes vignette-banner-light {
+  0%, 100% { background-position-x: 100%; opacity: 0; }
+  50% { background-position-x: 0; opacity: .56; }
+}
+
+[data-loading-variant="fenrir-freya-weglager"] .almanach-loading__vignette::before {
+  content: '';
+  left: 41.3%;
+  bottom: 28.4%;
+  width: 3.15%;
+  height: 9.4%;
+  transform-origin: 50% 100%;
+  background:
+    radial-gradient(ellipse at 53% 80%, #e8ddc867, transparent 44%),
+    radial-gradient(ellipse at 49% 38%, #e8ddc83b, transparent 56%);
+  animation-name: vignette-camp-smoke;
+  animation-duration: 7s;
+}
+
+@keyframes vignette-camp-smoke {
+  0%, 100% { opacity: 0; transform: translateY(7%) scale(.72); }
+  43% { opacity: .64; }
+  77% { opacity: .27; transform: translate(14%, -21%) rotate(8deg) scale(1.15); }
+}
+
+[data-loading-variant="landtroll-bruecke"] .almanach-loading__vignette::before {
+  content: '';
+  top: 58.3%;
+  left: 77.4%;
+  width: 17.7%;
+  height: 17%;
+  background:
+    radial-gradient(ellipse 39% 5% at 46% 24%, #f4dbc586, transparent),
+    radial-gradient(ellipse 36% 7% at 68% 56%, #f4dbc57d, transparent),
+    radial-gradient(ellipse 33% 5% at 37% 78%, #f4dbc575, transparent);
+  animation-name: vignette-stream-light;
+  animation-duration: 8s;
+}
+
+@keyframes vignette-stream-light {
+  0%, 100% { opacity: .03; transform: translateX(-4%); }
+  48% { opacity: .57; transform: translate(6%, 2%); }
+}
+
+@media (max-width: 600px) {
+  .almanach-loading__scene[data-scene-kind="vignette"] { aspect-ratio: 8 / 5; }
+  .almanach-loading__vignette { width: calc(100% * 10 / 9); }
+}

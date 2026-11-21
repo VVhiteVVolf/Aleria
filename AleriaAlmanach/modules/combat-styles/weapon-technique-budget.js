@@ -20,13 +20,18 @@ export function hasWeaponTechniqueControl(spec = {}) {
   return getWeaponTechniqueControlTier(spec) !== 'none';
 }
 
+export const SPECIAL_RANK_TECHNIQUE_STEPS = Object.freeze([
+  Object.freeze({ level: 25, formula: '1d10+1' }),
+  Object.freeze({ level: 30, formula: '1d10+1d6' })
+]);
+
 export function getWeaponTechniqueTrainingSteps(spec = {}, light = false) {
   if (light || spec.maximumTargets > 1) return [];
   const milestones = spec.allowedClassIds?.includes('milwr')
     ? [[6, 4], [10, 6], [15, 8]] : [[7, 4], [9, 6], [13, 8], [17, 10]];
   // All techniques share their class's attained training. Unlocking a newer
   // technique must not silently lose the die already earned by an older one.
-  return milestones.map(([level, sides]) => ({ level, formula: `1d${sides}` }));
+  return milestones.map(([level, sides]) => ({ level, formula: `1d${sides}` })).concat(SPECIAL_RANK_TECHNIQUE_STEPS);
 }
 
 export function createWeaponTechniqueDamageProfile(spec = {}, costs = []) {

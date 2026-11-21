@@ -4,6 +4,7 @@ import { normalizeItemDefinition, itemDefinitionKey } from '../modules/item-defi
 import { applyInventoryUseToInventory, applyInventoryUseAbilityEffects, inferInventoryUseMode } from '../modules/inventory-use/inventory-use-model.js';
 import { recoverItemCharges } from '../modules/inventory-use/item-charge-recovery.js';
 import { deriveCombatStateFromComments } from '../modules/combat/combat-state-model.js';
+import { buildSceneRestParticipant } from '../modules/scene-rest/scene-rest-model.js';
 const definition = normalizeItemDefinition({ id: 'item:wand', title: 'Heilfokus', category: 'arkanes', useDefinition: { mode: 'use', chargesMaximum: 2, chargesPerUse: 1, recovery: 'short-rest',
   costs: [{ resourceId: 'bonus-action', amount: 1 }], effects: [{ type: 'healing', amount: 5 }, { type: 'restore-resource', resourceId: 'mana-focus', amount: 2 }] } });
 const definitions = new Map([[itemDefinitionKey(definition), definition]]);
@@ -23,6 +24,21 @@ test('depleted charges, unaffordable costs and unresolved references cannot perf
   assert.throws(() => applyInventoryUseToInventory({ items: [{ ...item, itemState: { chargesCurrent: 0 } }] }, { item }, { definitions }), /Ladungen/);
   assert.throws(() => applyInventoryUseToInventory({ items: [item] }, { item }, { definitions: new Map() }), /Regelversion/);
   assert.throws(() => applyInventoryUseAbilityEffects({ resources: [{ id: 'bonus-action', current: 0 }] }, { item }, '', { definitions }), /Verwendungskosten/);
+});
+test('Heilgegenstand und Rast beenden die Bissblutung bei wiederhergestellten Trefferpunkten', () => {
+  const profile = {
+    currentHitPoints: 7, maximumHitPoints: 10,
+    resources: [{ id: 'bonus-action', current: 1, maximum: 1 }, { id: 'mana-focus', current: 0, maximum: 10 }],
+    temporaryConditions: [{ id: 'bissblutung', name: 'Blutend', endsOnHealing: true, durationModel: { kind: 'combat' } },
+      { id: 'anderer-zustand', name: 'Anderer Zustand', durationModel: { kind: 'combat' } }]
+  };
+  const used = applyInventoryUseToInventory({ items: [item] }, { item }, { definitions });
+  const healed = applyInventoryUseAbilityEffects(profile, used.inventoryUse, '', { definitions });
+  assert.deepEqual(healed.inventoryUse.conditionSnapshot.after.map(condition => condition.id), ['anderer-zustand']);
+  assert.deepEqual(buildSceneRestParticipant(profile).after.conditions.map(condition => condition.id), ['anderer-zustand']);
+  const healthy = { ...profile, currentHitPoints: 10 };
+  assert.equal(applyInventoryUseAbilityEffects(healthy, used.inventoryUse, '', { definitions }).inventoryUse.conditionSnapshot, undefined);
+  assert.equal(buildSceneRestParticipant(healthy).after.conditions.length, 2);
 });
 test('rest recovery refills only the configured charge pool and does not refill on projection', () => {
   const inventory = { items: [{ ...item, itemState: { chargesCurrent: 0 } }], moneyState: { totalCopper: 5 } };

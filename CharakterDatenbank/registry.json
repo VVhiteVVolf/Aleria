@@ -23,6 +23,7 @@
     "Charakter Archiv Exporte/Biographien/branwen-draig-2026-10-15/branwen-charakter.json",
     "Charakter Archiv Exporte/Biographien/caralyn-chwedonol-2026-11-02/caralyn-lokaler-abgleich.json",
     "Charakter Archiv Exporte/Biographien/rheinallt-gafyr-2026-11-15/rheinallt-aktuell.json",
+    "Charakter Archiv Exporte/Biographien/ysabel-bronnor-2026-11-21/ysabel-bronnor-aktuell.json",
     "Charakter Archiv Exporte/E8HXkgi2kdkXaqkxrnRo-tierbegleiter-2026-10-11.json",
     "Charakter Archiv Exporte/Fleischsammler Argall/gwenella-spouse-rhydric-argall.json",
     "Charakter Archiv Exporte/Fleischsammler Argall/maelor-ffionydd.json",
@@ -449,8 +450,8 @@
     "Charakter Archiv Exporte/zitteraale-schlickzahn-2026-10-21.json",
     "Charakter Archiv Exporte/zitteraale-schwarzer-zitteraal-2026-10-21.json"
   ],
-  "sourceExportedAt": "2026-11-16T18:00:00Z",
-  "count": 423,
+  "sourceExportedAt": "2026-11-21T21:17:55.035Z",
+  "count": 424,
   "records": [
     {
       "recordId": "character--kCmUm4WvMZDYetqrSWQ0",
@@ -8443,6 +8444,26 @@
       "familyStatus": "pending",
       "path": "records/gruppen/schwarze-zitteraale/medrawd-angau--zitteraale-medrawd-angau/character.json",
       "contentHash": "58633af4f42b66d5ed2a4566f48b809ee42436de1826aea1d74b86deae0678b5"
+    },
+    {
+      "recordId": "character--person--haus-bronnor--ysabel-bronnor",
+      "name": "Ysabel Bronnor",
+      "aliases": [
+        "Yabel Bronnor"
+      ],
+      "worldPersonId": "person--haus-bronnor--ysabel-bronnor",
+      "firestoreDocumentId": "person--haus-bronnor--ysabel-bronnor",
+      "firestoreDocumentIds": [
+        "person--haus-bronnor--ysabel-bronnor"
+      ],
+      "primary": {
+        "kind": "family",
+        "id": "haus-brandyddyn",
+        "label": "Haus Brândyddyn"
+      },
+      "familyStatus": "linked",
+      "path": "records/familien/haus-brandyddyn/ysabel-bronnor--person--haus-bronnor--ysabel-bronnor/character.json",
+      "contentHash": "b6ef4c0416ed53efa77b6f8dc6ffc6dc614ab7b25b345823851a345341e7163e"
     }
   ]
 }

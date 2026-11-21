@@ -24,13 +24,18 @@ function biographyPortrait(person, data) {
   }
 
   const portraits = [{ label: '[1]', image: mainPortrait, caption: captions[0] || '' }, ...stages];
+  const activeIndex = globalThis.AleriaBiographyCards.getDefaultPortraitTabIndex(portraits, data.portraitDefaultStage);
   return `<div class="person-biography-portrait-tabs" data-biography-portrait-tabs>
     <div class="person-biography-portrait-tab-bar" role="tablist" aria-label="Portrait-Altersstufen">
-      ${portraits.map((portrait, index) => `<button class="person-biography-portrait-tab${index === 0 ? ' is-active' : ''}" type="button" role="tab" aria-selected="${index === 0 ? 'true' : 'false'}" data-biography-portrait-tab="${index}">${escapeHtml(portrait.label)}</button>`).join('')}
+      ${portraits.map((portrait, index) => `<button class="person-biography-portrait-tab${index === activeIndex ? ' is-active' : ''}" type="button" role="tab" aria-selected="${index === activeIndex}" data-biography-portrait-tab="${index}">${escapeHtml(portrait.label)}</button>`).join('')}
     </div>
-    ${portraits.map((portrait, index) => portrait.image
-      ? `<img class="biography-portrait person-biography-portrait-pane${index === 0 ? ' is-active' : ''}" style="object-fit:${fit}" data-biography-portrait-pane="${index}" src="${escapeHtml(portrait.image)}" alt="${escapeHtml(portrait.label)} · Portrait von ${escapeHtml(person.name)}" loading="${index === 0 ? 'eager' : 'lazy'}" decoding="async">${portrait.caption ? `<p class="biography-portrait-caption person-biography-portrait-pane${index === 0 ? ' is-active' : ''}" data-biography-portrait-pane="${index}">${escapeHtml(portrait.caption)}</p>` : ''}`
-      : `<div class="biography-portrait person-biography-portrait-pane placeholder${index === 0 ? ' is-active' : ''}" data-biography-portrait-pane="${index}" role="img" aria-label="Kein Portrait vorhanden">${escapeHtml(initials(person.name))}</div>`).join('')}
+    ${portraits.map((portrait, index) => {
+      const active = index === activeIndex;
+      const activeClass = active ? ' is-active' : '';
+      return portrait.image
+        ? `<img class="biography-portrait person-biography-portrait-pane${activeClass}" style="object-fit:${fit}" data-biography-portrait-pane="${index}" src="${escapeHtml(portrait.image)}" alt="${escapeHtml(portrait.label)} · Portrait von ${escapeHtml(person.name)}" loading="${active ? 'eager' : 'lazy'}" decoding="async">${portrait.caption ? `<p class="biography-portrait-caption person-biography-portrait-pane${activeClass}" data-biography-portrait-pane="${index}">${escapeHtml(portrait.caption)}</p>` : ''}`
+        : `<div class="biography-portrait person-biography-portrait-pane placeholder${activeClass}" data-biography-portrait-pane="${index}" role="img" aria-label="Kein Portrait vorhanden">${escapeHtml(initials(person.name))}</div>`;
+    }).join('')}
   </div>`;
 }
 

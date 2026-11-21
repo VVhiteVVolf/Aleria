@@ -5,6 +5,7 @@ import { normalizeRuntimeCondition } from './combat-condition-duration.js';
 import { refreshRuntimeCondition } from './combat-condition-lifecycle.js';
 import { rollCombatSecondarySave } from './combat-secondary-saving-throw.js';
 import { getDismountSnapshot } from './combat-support-equipment.js';
+import { collectApplicableCombatRules, markCombatRuleApplications, mergeCombatRuleEffects } from './combat-trigger-rules.js';
 
 const landingContext = { saveTags: ['prone', 'forced-movement'] };
 
@@ -22,6 +23,16 @@ export function getMountedHitScores(profile) {
 export async function resolveMountedHits(context, hits, conditions) {
   const { target, actor } = context;
   const result = { checks: [], saves: [], applications: [], conditions, condition: null, snapshot: null };
+  const classRules = (phase, current) => {
+    const rules = collectApplicableCombatRules({
+      phase, actionKind: context.actionKind, profileActionId: context.profileActionId,
+      periods: context.rulePeriods, sources: context.ruleSources, usedFrequencyKeys: context.usedRuleFrequencyKeys,
+      state: { ...context.ruleProfileState, actorProfile: actor, targetProfile: current }
+    });
+    markCombatRuleApplications(rules, context.usedRuleFrequencyKeys);
+    result.applications.push(...rules);
+    return rules;
+  };
   if (!target.combat?.mounted || actor.characterId === target.characterId) return result;
   const previousIds = new Set((target.temporaryConditions || []).map(condition => condition.id));
   const knockdown = conditions.find(condition => !previousIds.has(condition.id) && condition.active !== false
@@ -40,16 +51,21 @@ export async function resolveMountedHits(context, hits, conditions) {
     const scores = getMountedHitScores(current);
     const dc = Math.max(10, Math.floor(loss / 2));
     const unable = getVoluntaryCombatActionBlock(current);
-    const check = { hitIndex: index, damage: loss, dc, passive: scores.seat, outcome: 'seated' };
+    const seatBonus = unable ? 0 : mergeCombatRuleEffects(classRules('mount-seat', current)).savingThrowModifier;
+    const check = { hitIndex: index, damage: loss, dc, passive: scores.seat + seatBonus, outcome: 'seated' };
     result.checks.push(check);
-    if (!unable && scores.seat >= dc) continue;
+    if (!unable && check.passive >= dc) continue;
     result.snapshot = getDismountSnapshot(target);
     if (!unable) {
       const { save, applications } = await rollCombatSecondarySave({ ...context, target: current }, {
-        attributeKey: 'dexterity', modifier: scores.landing, dc, ...landingContext });
+        attributeKey: 'dexterity', modifier: scores.landing, dc, ...landingContext, mountLanding: true });
       result.saves.push({ ...save, type: 'mount-landing', actorId: target.characterId, hitIndex: index, base: scores.landingBase });
       result.applications.push(...applications);
-      if (save.succeeded) { check.outcome = 'landed'; break; }
+      if (save.succeeded) {
+        check.outcome = 'landed';
+        classRules('mount-landed', current);
+        break;
+      }
     } else check.reason = unable.message;
     check.outcome = 'prone';
     result.condition = normalizeRuntimeCondition({ id: `mount-fall-${globalThis.crypto.randomUUID()}`,

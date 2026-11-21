@@ -17,7 +17,8 @@ export function estimateCombatHitChance(actor, target, options = {}) {
   let probability = 0;
   const roller = context.savingThrowMode ? target : actor;
   for (const { natural, weight } of getNaturalRollDistribution(roller, context.safeRollMode)) {
-    const trial = { ...context, usedRuleFrequencyKeys: new Set(context.usedRuleFrequencyKeys) };
+    const trial = { ...context, usedRuleFrequencyKeys: new Set(context.usedRuleFrequencyKeys),
+      ruleProfileState: { ...context.ruleProfileState, reactionBudget: context.ruleProfileState.reactionBudget?.fork() } };
     const { attack } = evaluateCombatAttackRoll(actor, target, { natural, total: natural + attackModifier, naturalRollPolicy: getNaturalRollPolicy(roller) }, trial, numbers);
     if (attack.hit) probability += weight;
   }
@@ -55,8 +56,9 @@ function getPrimaryDamagePreview(actor = {}, selectedEffect = null, secondary = 
   }
   const formula = primary?.formula || actor.weapon?.damageFormula;
   if (!formula) return null;
-  const formulas = [formula, ...(secondary || actor.selectedAction?.inheritBonusDamage === false ? [] : getBonusDamageFormulas(actor))];
-  const modifier = (secondary ? getUniversalDamageBonus(actor) : (Number(actor.damageModifier) || 0)) + getCombatEffectAttributeModifier(actor, primary);
+  const fixedBase = primary && actor.selectedAction?.fixedDamageEffectId === primary.id;
+  const formulas = [formula, ...(secondary || fixedBase || actor.selectedAction?.inheritBonusDamage === false ? [] : getBonusDamageFormulas(actor))];
+  const modifier = (secondary || fixedBase ? getUniversalDamageBonus(actor) : (Number(actor.damageModifier) || 0)) + getCombatEffectAttributeModifier(actor, primary);
   try {
     const combined = combineDamageFormulas(formulas);
     return { notation: buildDamageNotation(combined, modifier), modifier, damageType, average: averageDamageFormula(combined, modifier) };

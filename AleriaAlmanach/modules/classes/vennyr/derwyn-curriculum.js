@@ -1,6 +1,7 @@
 import { DERWYN_FORM_IDS as F, DERWYN_EXPERT_PATH_IDS } from '../../combat-styles/sirenentanz/sirenentanz-forms.js?v=20260909-dragon-parent-v2';
 import { DRACHENTANZ_FORM_IDS as D } from '../../combat-styles/drachentanz/drachentanz-ids.js?v=20260909-dragon-parent-v2';
 import { ARMOR_ROUTINE } from '../armor-routine.js';
+import { getClassPassiveFeatures } from '../combat-passives/class-passive-curriculum.js';
 import { getDerwynCenyrFoundationTechniques } from '../../combat-styles/sirenentanz/derwyn-techniques.js?v=20260909-dragon-parent-v2';
 
 const bands = { foundation: [1, 3, 5], duelist: [7, 8], expert: [9, 12, 15, 17, 20] };
@@ -52,7 +53,7 @@ const definition = {
     { id: 'derwyn-sword', name: 'Fließender Wyrm · Schwert', minimumLevel: 9, status: 'confirmed', formIds: [F.flowing], weaponProfileIds: ['sword'] },
     { id: 'derwyn-trident', name: 'Brandender Wyrm · Dreizack', minimumLevel: 9, status: 'confirmed', formIds: [F.breaking], weaponProfileIds: ['trident'] },
     { id: 'derwyn-staff', name: 'Steigender Wyrm · Kampfstab / Zauberstab', minimumLevel: 9, status: 'confirmed', formIds: [F.rising], weaponProfileIds: ['staff', 'quarterstaff', 'magic-staff'] },
-    { id: 'derwyn-morningstar', name: 'Peitschender Wyrm · Morgenstern', minimumLevel: 9, status: 'confirmed', formIds: [F.whipping], weaponProfileIds: ['morningstar'] }
+    { id: 'derwyn-morningstar', name: 'Peitschender Wyrm · Morgenstern oder Flegel', minimumLevel: 9, status: 'confirmed', formIds: [F.whipping], weaponProfileIds: ['morningstar', 'flail'] }
   ],
   weaponTraining: { primary: ['Schwert', 'Dreizack', 'Kampfstab / Zauberstab', 'Morgenstern'], secondary: [],
     note: 'Jede Wyrmform hat eine feste Waffenführung. Ein Zauberstab muss als Nahkampfwaffe geeignet sein; Zauber benötigen weiterhin ihre eigene Fähigkeit und deren Kosten.' },
@@ -62,7 +63,7 @@ const definition = {
     { id: 'staff', name: 'Kampfstab / Zauberstab', rule: 'Steigender Wyrm: zweihändiger physischer Stabkampf. Keine automatisch mitgewirkte Magie.' },
     { id: 'morningstar', name: 'Morgenstern', rule: 'Peitschender Wyrm: offensive Hiebe mit engem Rückweg. Kein allgemeines Ignorieren von Rüstung.' }
   ],
-  classFeatures: [ARMOR_ROUTINE],
+  classFeatures: [...getClassPassiveFeatures('derwyn'), ARMOR_ROUTINE],
   pendingFeatures: [
     'Wassermagie: Strömung, Nebel und Flut',
     'Wiederherstellungsmagie: Heilen, Reinigen und Stärken',

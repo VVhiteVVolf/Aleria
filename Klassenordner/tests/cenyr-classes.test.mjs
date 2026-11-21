@@ -208,12 +208,12 @@ test('selected path passives apply only in their declared context and replace lo
   };
   const duel = getCenyrClassActionModifiers(teulu, { technique: schwertdrache, weapon: { weaponType: 'sword' }, hostileOpponentCount: 1 });
   assert.equal(duel.attackBonus, 3);
-  assert.equal(duel.damageBonus, 2);
+  assert.equal(duel.damageBonus, 0);
   assert.deepEqual(duel.firstHitDefense, { id: 'schwertdrache-klingenbindung', name: 'Klingenbindung', modifier: -1 });
   assert.equal(duel.targetDefenseModifier, undefined);
   const groupFight = getCenyrClassActionModifiers(teulu, { technique: schwertdrache, weapon: { weaponType: 'sword' }, hostileOpponentCount: 2 });
   assert.equal(groupFight.attackBonus, 0);
-  assert.equal(groupFight.damageBonus, 2);
+  assert.equal(groupFight.damageBonus, 0);
   assert.equal(groupFight.targetDefenseModifier, undefined);
   assert.equal(groupFight.firstHitDefense, undefined);
 
@@ -314,10 +314,10 @@ test('confirmed class bonuses remain conditional on class, level, style and weap
   const technique = getCombatStyle('drachentanz').forms[0].techniques[0];
   const profile = (classId, level) => ({ templateSelections: { classId }, progression: { level } });
   assert.equal(getCenyrClassActionModifiers(profile('teulu', 5), { technique, weapon: { weaponType: 'sword' } }).damageBonus, 0);
-  assert.equal(getCenyrClassActionModifiers(profile('teulu', 6), { technique, weapon: { weaponType: 'sword' } }).damageBonus, 2);
+  assert.equal(getCenyrClassActionModifiers(profile('teulu', 6), { technique, weapon: { weaponType: 'sword' } }).damageBonus, 0);
   assert.equal(getCenyrClassActionModifiers(profile('teulu', 6), { technique, weapon: { weaponType: 'axe' } }).damageBonus, 0);
   assert.equal(getCenyrClassActionModifiers(profile('helwyr', 1), { weapon: { weaponType: 'bow' } }).attackBonus, 2);
-  assert.equal(getCenyrClassActionModifiers(profile('helwyr', 1), { weapon: { weaponType: 'spear', range: 'Fernkampf' } }).attackBonus, 2);
+  assert.equal(getCenyrClassActionModifiers(profile('helwyr', 1), { weapon: { weaponType: 'spear', range: 'Fernkampf' } }).attackBonus, 0);
   assert.equal(getCenyrClassActionModifiers(profile('helwyr', 1), { weapon: { weaponType: 'sword' } }).attackBonus, 0);
   assert.equal(getCenyrClassActionModifiers({ identity: { archetype: 'Helwyr', ancestry: 'Cenyr' }, progression: { level: 1 } }, { weapon: { weaponType: 'bow' } }).attackBonus, 2);
   assert.deepEqual(getCenyrClassActionModifiers(profile('arthwyr', 1), { technique, weapon: { weaponType: 'axe' } }), {
@@ -326,10 +326,10 @@ test('confirmed class bonuses remain conditional on class, level, style and weap
 
   const teuluWeapon = { ...getCharacterCreationTemplate('class', 'teulu').weapons[0], equipped: true };
   const teuluProfile = sanitizeCharacterCombatProfile({ templateSelections: { classId: 'teulu' }, progression: { level: 6 },
-    weapons: [teuluWeapon], techniques: [technique] });
+    weapons: [{ ...teuluWeapon, equipped: true }], techniques: [technique] });
   const teuluAction = resolveCombatProfile({ id: 'teulu-test', name: 'Teulu', combatProfile: teuluProfile }, { actionId: `technique:${technique.id}` });
   assert.equal(teuluAction.selectedAction.compatible, true);
-  assert.equal(teuluAction.damageModifier, Math.floor((getWeaponDamageModifier(teuluProfile, teuluProfile.weapons[0]) + 2) / 2));
+  assert.equal(teuluAction.damageModifier, Math.floor(getWeaponDamageModifier(teuluProfile, teuluProfile.weapons[0]) / 2));
 
   const helwyrWeapon = { ...getCharacterCreationTemplate('class', 'helwyr').weapons[0], equipped: true };
   const helwyrProfile = sanitizeCharacterCombatProfile({ templateSelections: { classId: 'helwyr' }, progression: { level: 1 }, weapons: [helwyrWeapon] });

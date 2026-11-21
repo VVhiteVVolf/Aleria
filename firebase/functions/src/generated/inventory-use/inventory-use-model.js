@@ -5,6 +5,7 @@ import { applyDefinedItemEffects } from './item-use-effects.js';
 import { getConsumedSubstanceExposure } from '../character-health/substance-item-effects.js';
 import { applySubstanceExposure } from '../character-health/substance-state.js';
 import { releaseCriticalTemporaryOwnership } from '../combat-critical/combat-critical-lifecycle.js';
+import { conditionsAfterHealing } from '../combat/combat-condition-lifecycle.js';
 const INVENTORY_USE_MODES = new Set(['auto', 'consume', 'use']);
 const CONSUMABLE_CATEGORIES = new Set(['potions', 'consumable', 'consumables', 'food', 'ammunition']);
 const REUSABLE_CATEGORIES = new Set(['weapon', 'armor']);
@@ -166,9 +167,9 @@ export function applyInventoryUseAbilityEffects(combatProfile = {}, value = {}, 
   if (defined.hitPointSnapshot) inventoryUse.hitPointSnapshot = defined.hitPointSnapshot;
   if (defined.effects.length) inventoryUse.itemEffects = defined.effects;
   if (defined.hitPointSnapshot) {
-    const conditions = releaseCriticalTemporaryOwnership(conditionEffects.conditions,
-      defined.hitPointSnapshot.before, defined.hitPointSnapshot.after);
-    if (conditions.some((entry, index) => entry !== conditionEffects.conditions[index])) {
+    const { before, after } = defined.hitPointSnapshot;
+    const conditions = conditionsAfterHealing(releaseCriticalTemporaryOwnership(conditionEffects.conditions, before, after), before, after);
+    if (conditions.length !== conditionEffects.conditions.length || conditions.some((entry, index) => entry !== conditionEffects.conditions[index])) {
       conditionEffects = { ...conditionEffects, conditions, changed: true };
     }
   }

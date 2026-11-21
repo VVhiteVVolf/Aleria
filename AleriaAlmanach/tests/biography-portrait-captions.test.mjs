@@ -3,10 +3,11 @@ import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 import vm from 'node:vm';
 import { buildBiographyExportPayload, parseBiographyImportPayload } from '../../js/biography/biography-transfer.mjs';
+import { createPublicPersonExtensions } from '../../firebase/functions/src/families/person-biography-publication.js';
 
 async function context() {
   const scope = vm.createContext({ URL, window: { location: { href: 'https://aleria.example/' } }, document: { addEventListener() {} } });
-  for (const file of ['core/content-safety.js', 'module-editor/module-editor-data.js', 'rendering/module-renderer.js']) {
+  for (const file of ['biography/biography-card-rendering.js', 'core/content-safety.js', 'module-editor/module-editor-data.js', 'rendering/module-renderer.js']) {
     vm.runInContext(await readFile(new URL('../modules/' + file, import.meta.url), 'utf8'), scope);
   }
   return scope;
@@ -19,6 +20,22 @@ test('old biographies retain their data shape; five captions survive a biography
   assert.deepEqual(Array.from(biography.portraitCaptions), ['aktuell', 'Rüstung', '20', '14', '8']);
   const imported = parseBiographyImportPayload(buildBiographyExportPayload({ biographyModule: { biography } }));
   assert.deepEqual(imported.biography.portraitCaptions, ['aktuell', 'Rüstung', '20', '14', '8']);
+});
+
+test('a configured default portrait keeps its visible slot across missing stages and export', async () => {
+  const scope = await context();
+  const biography = scope.sanitizeBiographyData({
+    portrait: '/child.png', portraitStages: ['/squire.png', '', '/guard.png'],
+    portraitCaptions: ['Kind', 'Knappin', '', 'Leibgarde'], portraitDefaultStage: 4
+  });
+  const exported = buildBiographyExportPayload({ biographyModule: { biography } });
+  assert.equal(parseBiographyImportPayload(exported).biography.portraitDefaultStage, 4);
+  assert.equal(createPublicPersonExtensions({ biographyModule: exported.biographyModule }).biographyModule.biography.portraitDefaultStage, 4);
+  assert.match(scope.buildBiographyPortrait({ biography }, { title: 'Ysabel' }),
+    /aria-selected="true" data-portrait-tab="2" title="\[4\]"/);
+  assert.equal(Object.hasOwn(scope.sanitizeBiographyData({ portraitDefaultStage: 6 }), 'portraitDefaultStage'), false);
+  assert.match(scope.buildBiographyPortrait({ biography: { ...biography, portraitDefaultStage: 3 } }, { title: 'Ysabel' }),
+    /aria-selected="true" data-portrait-tab="0" title="\[1\]"/);
 });
 
 test('an empty portrait slot does not shift the caption of a later image', async () => {

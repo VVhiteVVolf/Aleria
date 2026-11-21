@@ -1108,10 +1108,12 @@ function sanitizeBiographyData(data = {}) {
     { length: 5 },
     (_, index) => String(Array.isArray(data.portraitCaptions) ? data.portraitCaptions[index] || '' : '').trim().slice(0, 500)
   );
+  const portraitDefaultStage = globalThis.AleriaBiographyCards?.normalizePortraitDefaultStage(data.portraitDefaultStage);
 
   return {
     portraitStages,
     ...(portraitCaptions.some(Boolean) ? { portraitCaptions } : {}),
+    ...(portraitDefaultStage ? { portraitDefaultStage } : {}),
     portrait: String(data.portrait || '').trim(),
     ...(Array.isArray(data.knightMentors) ? { knightMentors: AleriaBiographyCards.normalizeKnightMentors(data.knightMentors) } : {}),
     ...(['cover', 'contain'].includes(data.portraitFit) ? { portraitFit: data.portraitFit } : {}),

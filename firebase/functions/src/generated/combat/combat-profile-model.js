@@ -53,6 +53,7 @@ import {
   normalizeCombatEffects,
   normalizeDamageAffinity
 } from './combat-effect-model.js?v=20260928-equipment-art-v4';
+import { inferCombatEffectTargetLimit } from './combat-effect-model.js';
 import {
   CASTER_TIERS,
   MANA_BYPASS_RESOURCE_IDS,
@@ -557,6 +558,11 @@ function sanitizeAbility(value = {}, index = 0) {
     // Konstitution) statt nur automatischer oder angriffswurfbasierter Auflösung.
     resolutionType: SPELL_RESOLUTION_TYPES.has(resolutionType) ? resolutionType : '',
     saveAttribute: getAttributeKey(source.saveAttribute, 'dexterity'),
+    ...(source.saveDc != null ? { saveDc: normalizeNumber(source.saveDc, 10, 1, 99) } : {}),
+    ...(source.maximumTargets != null ? { maximumTargets: normalizeNumber(source.maximumTargets, 1, 1, 20) } : {}),
+    ...(ROLL_MODES.has(source.forcedRollMode) ? { forcedRollMode: source.forcedRollMode } : {}),
+    ...(source.holdAction === true ? { holdAction: true } : {}),
+    ...(source.requiresOwnHold === true ? { requiresOwnHold: true } : {}),
     halfDamageOnSave: normalizeBoolean(source.halfDamageOnSave),
     combatUsable: normalizeBoolean(source.combatUsable),
     target: normalizeText(source.target, 160),
@@ -726,7 +732,7 @@ function sanitizeTechniqueDamageModel(value = {}) {
       dieCap: [4, 6, 8, 10, 12].includes(Number(group?.dieCap)) ? Number(group.dieCap) : 12
     }), 5).filter(group => group.diceCount > 0) } : {}),
     scalingSteps: sanitizeList(source.scalingSteps, step => ({
-      level: normalizeNumber(step?.level, 1, 1, 20),
+      level: normalizeNumber(step?.level, 1, 1, 30),
       formula: normalizeCombatDamageFormula(step?.formula)
     }), 6).filter(step => step.formula)
   };
@@ -810,7 +816,7 @@ function sanitizeTechnique(value = {}, index = 0) {
     .map(item => normalizeText(item, 30))
     .filter(item => WEAPON_TYPES.has(item));
   const effects = normalizeCombatEffects(source.effects);
-  const inferredMaximumTargets = effects.some(effect => ['selected', 'allies', 'enemies', 'all'].includes(effect.target)) ? 20 : 1;
+  const inferredMaximumTargets = inferCombatEffectTargetLimit(effects);
   return {
     id: normalizeId(source.id, `technique-${index + 1}`),
     name: normalizeText(source.name, 140),
@@ -1025,6 +1031,7 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
       archetype: normalizeText(source.identity?.archetype || source.archetype, 120),
       background: normalizeText(source.identity?.background || source.background, 120)
     },
+    ...(Array.isArray(source.encounterTags) ? { encounterTags: [...new Set(source.encounterTags.map(tag => normalizeText(tag, 60).toLowerCase()).filter(Boolean))].slice(0, 12) } : {}),
     templateSelections: sanitizeTemplateSelections(source.templateSelections || source.templates),
     proficiencies: sanitizeProficiencies(source.proficiencies),
     progression: {
@@ -1097,6 +1104,7 @@ export function sanitizeCharacterCombatProfile(value = {}, options = {}) {
       bypassResourceId: normalizedBypassResourceId,
       focusEnabled: normalizedFocusEnabled,
       focusResourceId: normalizedFocusResourceId,
+      ...(magic.channelingFocusWeaponId ? { channelingFocusWeaponId: normalizeText(magic.channelingFocusWeaponId, 120) } : {}),
       castingAttribute: getAttributeKey(magic.castingAttribute, 'intelligence'),
       spellAttackOverride: normalizeOptionalNumber(magic.spellAttackOverride, -99, 99),
       spellSaveDcOverride: normalizeOptionalNumber(magic.spellSaveDcOverride, 0, 999),

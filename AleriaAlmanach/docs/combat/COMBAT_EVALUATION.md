@@ -1,6 +1,6 @@
 # Kampf-, Magie- und Fertigkeitsauswertung
 
-Stand 18. November 2026
+Stand 21. November 2026
 
 ## Auswahl und Buchung in der Szene
 
@@ -8,7 +8,19 @@ Der Beitragsentwurf speichert Ziel, Griff, Zahlungsweg und ausgewählte Unterst�
 
 Eine beim Kampfstart übernommene Szenenpräsenz ist bereits im Figurenwert enthalten. Hat dieselbe Quelle zusätzlich eine Aura mit Radius, wird deren Wirkung bei passender Entfernung ergänzend berechnet. Eine ausgewählte Schadensaura wirkt auf die einzelnen Treffer einer Angriffsfolge.
 
-Begrenzte Hauptfähigkeiten und ausgelöste Reaktionen verbrauchen ihren Vorrat in der Reihenfolge des Beitrags. Die gemeinsame Auswertung liefert die Zwischenstände für den nächsten Abschnitt und die Rücknahme. Die aktuellen Belege tragen im Kampf `combat-evaluation-16` und bei Proben `skill-evaluation-10`.
+Begrenzte Hauptfähigkeiten und ausgelöste Reaktionen verbrauchen ihren Vorrat in der Reihenfolge des Beitrags. Bei „Jedes Mal“ reserviert die Auswertung die Kosten für jeden berechtigten Wurf. Sobald der Vorrat erschöpft ist, läuft die Angriffsfolge mit den übrigen Regeln weiter. Die gemeinsame Auswertung liefert die Zwischenstände für den nächsten Abschnitt und die Rücknahme. Die aktuellen Belege tragen im Kampf `combat-evaluation-18` und bei Proben `skill-evaluation-10`.
+
+## Ausbildungsschaden und passive Klassenmerkmale
+
+Der Ausbildungsschaden richtet sich nach Normal- und Sonderstufen zusammen. Die höchste erreichte Stufe ersetzt die vorherige. Die gemeinsame Staffel für reguläre Einzelzieltechniken lautet 7 (+1W4), 9 (+1W6), 13 (+1W8), 17 (+1W10), 25 (+1W10+1) und 30 (+1W10+1W6). Eigene Technikmodelle behalten ihren vorhandenen Ansatz bis Stufe 20. Die Milwr-Grundstaffel verwendet 6, 10 und 15. Leichte Angriffe und Flächentechniken erhalten auf Gesamtstufe 30 stattdessen zusammen einmal +1 Schaden pro eigenem Beitrag. Bei Trefferfolgen gilt der neue Sonderstufenaufschlag für den Haupttreffer.
+
+Stäubende Schwinge, Gebundene Klaue, Unruhiger Griff und Drachenklammer erhalten auf Gesamtstufe 25 **+1 Schaden** und auf 30 **+1W6** zur Waffenbasis. Der W6 ersetzt den festen Punkt. Bei einem ausdrücklich festen Schadenseffekt basiert der Ausbildungsbonus auf dessen festem Betrag. Ein am Effekt hinterlegter Attributsbonus gilt weiterhin.
+
+Cenyr und Vennyr erhalten ihre passiven Klassenmerkmale auf Normalstufe 5, 7, 8, 10, 14, 16, 18 und 20. Klasse, Form, geführte Waffe und der Szenenzustand bestimmen den Bonus. Bestehende Figuren erhalten die Merkmale aus ihren bereits gespeicherten Daten. Ein neues Merkmal gewährt keinen Technikslot oder Aktionspunkt. Die Auswertung belegt Vorbereitung und Verbrauch in der Szenenhistorie.
+
+Einmalige Klassenmerkmale verwenden das Zeitfenster seit dem letzten eigenen Beitrag. Dessen Ende, der Beginn des Folgebeitrags und die Rücknahme richten sich nach der jeweiligen Wirkung. Für die Deckung eines Gefährten werden die erforderlichen Abstände im vorhandenen Unterstützungsfeld angegeben. Für Morwyr wird ein erfolgreicher Leinenwurf im Beleg ausgewiesen. Ob die Leine befestigt und der Zugweg frei ist, bleibt Teil der Szene.
+
+Für die Schwertantwort des Teulu und die Gehaltene Speerlinie des Cantref zählt das Trefferergebnis nach magischer Ablenkung. Die Saubere Rückführung des Teulu schließt die Hut ab Stufe 18 auch bei einem Fehlschlag. Die eigene RK-Wirkung der Nadelwehr gilt bei jedem Ergebnis. Rhyfelwyr erhalten ihren Rettungsbonus gegen Furcht oder Niederwerfen bei direkten Zauberrettungen und Zusatzrettungen aus demselben Vorrat.
 
 ## Entwaffnen, Zusatzrettungen und Reitsitz
 
@@ -39,8 +51,8 @@ Jeder Angriff, Zauber und jedes Gebet folgt derselben Pipeline:
 5. Gültige Prä-Wurf-Regeln nach Aktionsart, Beziehung, Empfänger, Radius, Häufigkeit und Ressourcen prüfen.
 6. Einzelwürfel validieren und die Summe serverseitig neu berechnen.
 7. Nach-Wurf-Regeln auswerten, etwa „wenn der Angriff treffen würde“, Reaktionsboni, Gegenwehr oder erzwungenes Verfehlen.
-8. Treffer beziehungsweise Rettung endgültig feststellen.
-9. Nach-Treffer- und Vor-Schaden-Regeln anwenden, strukturierte Effekte ausführen sowie Resistenz, Verwundbarkeit, Immunität und Schadensreduktion verrechnen.
+8. Nach-Treffer- und Vor-Schaden-Regeln anwenden, die den Wurfausgang verändern können. Magische Ablenkung auswerten und das Ergebnis feststellen.
+9. Die vom bestätigten Ergebnis abhängigen Trefferfolgen anwenden, strukturierte Effekte ausführen und Schadensschutz verrechnen.
 10. Späte Phasen wie `on-damaged`, `on-heal`, `on-condition-applied`, `on-resource-spent`, Konzentrationsprüfung und Niederlage auswerten; ihre Folgewirkungen werden genau einmal ausgeführt und nicht rekursiv erneut ausgelöst.
 11. Temporäre TP vor normalen TP verbrauchen und alle Kosten, Reaktionen, Munition und Nutzungen atomar buchen.
 12. Einen unveränderlichen Regelbeleg mit Vorher-/Nachherständen speichern.
