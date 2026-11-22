@@ -177,6 +177,7 @@ import { HOUSE_BIOGRAPHY as haus_brandyddyn } from "../../../../Familien Häuser
 import { HOUSE_BIOGRAPHY as haus_caeffyn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Caeffyn/haus.biography.mjs?v=20261113-horse-studs-v1";
 import { HOUSE_BIOGRAPHY as haus_caelrith } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Caelrith/haus.biography.mjs?v=20261112-draig-garde-v1";
 import { HOUSE_BIOGRAPHY as haus_celynfor } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Celynfor/haus.biography.mjs?v=20261024-housebio-v1";
+import { HOUSE_BIOGRAPHY as haus_chamois } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Chamois/haus.biography.mjs?v=20261122-chamois-v8";
 import { HOUSE_BIOGRAPHY as haus_chwedlonol } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Chwedonol/haus.biography.mjs?v=20261024-housebio-v1";
 import { HOUSE_BIOGRAPHY as haus_cludwyr } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Cludwyr/haus.biography.mjs?v=20261024-housebio-v1";
 import { HOUSE_BIOGRAPHY as haus_cochdon } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Cochdon/haus.biography.mjs?v=20261103-cenyr-completeness-v1";
@@ -842,6 +843,7 @@ export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-caeffyn": Object.freeze({ sourceRevision: 1, biography: haus_caeffyn, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-caelrith": Object.freeze({ sourceRevision: 1, biography: haus_caelrith, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-celynfor": Object.freeze({ sourceRevision: 3, biography: haus_celynfor, replacedDefaultFingerprints: Object.freeze([]) }),
+  "haus-chamois": Object.freeze({ sourceRevision: 8, biography: haus_chamois, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-chwedlonol": Object.freeze({ sourceRevision: 5, biography: haus_chwedlonol, replacedDefaultFingerprints: Object.freeze(["2513:380f10e0:5c58b5d6"]) }),
   "haus-cludwyr": Object.freeze({ sourceRevision: 5, biography: haus_cludwyr, replacedDefaultFingerprints: Object.freeze(["2404:c8d5ef31:fcf1959f"]) }),
   "haus-cochdon": Object.freeze({ sourceRevision: 2, biography: haus_cochdon, replacedDefaultFingerprints: Object.freeze([]) }),

@@ -1,0 +1,2655 @@
+{
+  "schemaVersion": 1,
+  "familyId": "haus-chamois",
+  "revision": 1,
+  "updatedAt": "2026-11-22T22:06:00.162Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "haus-chamois",
+      "title": "Haus Chamois",
+      "motto": "",
+      "description": "Die Chamois sind eine erst kürzlich in den Ritterstand erhobene Familie und Vasallen des Hauses Gafyr. Ihr Zuhause ist Castell Chamois innerhalb der Stadtmauern von Gwynthor.",
+      "emblem": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+      "houseProfile": {
+        "rankId": "knight-simple",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-gafyr",
+        "liegeHouseName": "Haus Gafyr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "haus-chamois-gruender",
+        "worldPersonId": "person--haus-chamois--haus-chamois-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Name und Lebensdaten der Gründerfigur sind nicht überliefert.",
+        "extensions": {}
+      },
+      {
+        "id": "haus-chamois-gruenderin",
+        "worldPersonId": "person--haus-chamois--haus-chamois-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "Name und Lebensdaten der Gründerfigur sind nicht überliefert.",
+        "extensions": {}
+      },
+      {
+        "id": "firena-chamois",
+        "worldPersonId": "person--haus-chamois--firena-chamois",
+        "name": "Firena Chamois",
+        "title": "",
+        "sex": "female",
+        "status": "dead",
+        "birth": "1641",
+        "death": "1718",
+        "portrait": "assets/images/portraits/haus-chamois/firena-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Thalrics ältere Schwester heiratete im Alter von 26 Jahren in ein anderes Haus. In ihrer Stube bewahrte sie ein Buch mit Liedern aus ihrer Kindheit auf.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "grau",
+            "clothing": "zivil"
+          }
+        }
+      },
+      {
+        "id": "thalric-chamois",
+        "worldPersonId": "person--haus-chamois--thalric-chamois",
+        "name": "Thalric Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1644",
+        "death": "1732",
+        "portrait": "assets/images/portraits/haus-chamois/thalric-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "weiß",
+            "clothing": "zivil"
+          }
+        }
+      },
+      {
+        "id": "ellan-chamois",
+        "worldPersonId": "person--haus-chamois--ellan-chamois",
+        "name": "Ellan Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1650",
+        "death": "1739",
+        "portrait": "assets/images/portraits/haus-chamois/ellan-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Thalrics jüngerer Bruder starb 1739 mit 89 Jahren. Zu Lebzeiten erkannte Ellan seine Verwandten oft schon am Schritt im Flur.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "weiß",
+            "clothing": "zivil"
+          },
+          "registryManagedFieldPreviousValues": {
+            "death": [
+              ""
+            ],
+            "status": [
+              "alive"
+            ],
+            "notes": [
+              "Thalrics jüngerer Bruder. Ellan erkennt seine Verwandten oft schon am Schritt im Flur."
+            ]
+          },
+          "registryManagedFields": [
+            "death",
+            "status",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "death": 8,
+            "status": 8,
+            "notes": 8
+          }
+        }
+      },
+      {
+        "id": "partner-firena-chamois",
+        "worldPersonId": "person--haus-chamois--partner-firena-chamois",
+        "name": "Unbekannter Partner",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "partner-thalric-chamois",
+        "worldPersonId": "person--haus-chamois--partner-thalric-chamois",
+        "name": "Unbekannter Partner",
+        "title": "",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "abaelor-chamois",
+        "worldPersonId": "person--haus-chamois--abaelor-chamois",
+        "name": "Abaelor Chamois",
+        "title": "Oberhaupt",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1670",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/abaelor-chamois-v1.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "grau",
+            "clothing": "Rüstung"
+          }
+        }
+      },
+      {
+        "id": "perwyn-chamois",
+        "worldPersonId": "person--haus-chamois--perwyn-chamois",
+        "name": "Perwyn Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1670",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/perwyn-chamois-v1.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "grau",
+            "clothing": "Rüstung"
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1673"
+            ]
+          },
+          "registryManagedFields": [
+            "birth"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 8
+          }
+        }
+      },
+      {
+        "id": "gwaedric-chamois",
+        "worldPersonId": "person--haus-chamois--gwaedric-chamois",
+        "name": "Gwaedric Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1675",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/gwaedric-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "grau",
+            "clothing": "zivil"
+          }
+        }
+      },
+      {
+        "id": "uwchyr-chamois",
+        "worldPersonId": "person--haus-chamois--uwchyr-chamois",
+        "name": "Uwchyr Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1676",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/uwchyr-chamois-v2.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "zivil"
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1677"
+            ]
+          },
+          "registryManagedFields": [
+            "birth"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 8
+          }
+        }
+      },
+      {
+        "id": "partner-ellan-chamois",
+        "worldPersonId": "person--haus-chamois--partner-ellan-chamois",
+        "name": "Unbekannter Partner",
+        "title": "",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "firen-chamois",
+        "worldPersonId": "person--haus-chamois--firen-chamois",
+        "name": "Firen Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1676",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/firen-chamois-v3.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Ellans Sohn zieht als fahrender Ritter von Hof zu Hof. Der Lebemann mag lange Abende am Wirtshaustisch und merkt sich jeden Wirt beim Namen. Über seinem eigenen Harnisch trägt er auf Reisen einen rostroten Mantel.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "grau",
+            "clothing": "Eigene Reiserüstung"
+          },
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "assets/images/portraits/haus-chamois/firen-chamois-v1.webp",
+              "assets/images/portraits/haus-chamois/firen-chamois-v2.webp"
+            ],
+            "notes": [
+              "Ellans Sohn gehört zur selben Generation wie Perwyn. Beim Brettspiel merkt er sich lieber die Züge seiner Gegner als den eigenen Gewinn."
+            ]
+          },
+          "registryManagedFields": [
+            "portrait",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "portrait": 8,
+            "notes": 8
+          },
+          "registryManagedExtensionFields": [
+            "appearance"
+          ],
+          "registryManagedExtensionFieldRevisions": {
+            "appearance": 8
+          }
+        }
+      },
+      {
+        "id": "partner-abaelor-chamois",
+        "worldPersonId": "person--haus-chamois--partner-abaelor-chamois",
+        "name": "Unbekannter Partner",
+        "title": "",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "helric-chamois",
+        "worldPersonId": "person--haus-chamois--helric-chamois",
+        "name": "Helric Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1695",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-chamois/helric-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Abaelors ältester Sohn verwahrte die Briefe seiner Brüder in einem Lederfutteral. Er fiel mit 25 Jahren im Großen Krieg.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Rüstung"
+          }
+        }
+      },
+      {
+        "id": "lleuen-chamois",
+        "worldPersonId": "person--haus-chamois--lleuen-chamois",
+        "name": "Lleuen Chamois",
+        "title": "Erbe",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/lleuen-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "zivil"
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1697"
+            ]
+          },
+          "registryManagedFields": [
+            "birth"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 8
+          }
+        }
+      },
+      {
+        "id": "dyreth-chamois",
+        "worldPersonId": "person--haus-chamois--dyreth-chamois",
+        "name": "Dyreth Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1699",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-chamois/dyreth-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Dyreth pfiff auf langen Märschen immer dieselbe Melodie. Er fiel mit 21 Jahren im Großen Krieg.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Rüstung"
+          },
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "assets/images/portraits/haus-chamois/dyreth-chamois-v2.webp"
+            ]
+          },
+          "registryManagedFields": [
+            "portrait"
+          ],
+          "registryManagedFieldRevisions": {
+            "portrait": 8
+          }
+        }
+      },
+      {
+        "id": "iwrban-chamois",
+        "worldPersonId": "person--haus-chamois--iwrban-chamois",
+        "name": "Iwrban Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/iwrban-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Abaelors jüngster Sohn ist ledig. Für die Kinder der Familie schnitzt er Tiere aus Obstholz, die er wirklichen Tieren aus dem Bannkreis nachempfindet.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "zivil"
+          }
+        }
+      },
+      {
+        "id": "partner-perwyn-chamois",
+        "worldPersonId": "person--haus-chamois--partner-perwyn-chamois",
+        "name": "Unbekannter Partner",
+        "title": "",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "brenae-chamois",
+        "worldPersonId": "person--haus-chamois--brenae-chamois",
+        "name": "Brenae Chamois",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/brenae-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Perwyns älteste Tochter ist Hofdame. Sie weiß, wann sich bei Tisch eine heikle Bitte vorbringen lässt, und bewahrt die Briefe ihrer Schwestern in einer eigenen Lade.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Hofkleidung"
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1702"
+            ],
+            "portrait": [
+              "assets/images/portraits/haus-chamois/brenae-chamois-v2.webp"
+            ]
+          },
+          "registryManagedFields": [
+            "birth",
+            "portrait"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 8,
+            "portrait": 8
+          }
+        }
+      },
+      {
+        "id": "rhewella-chamois",
+        "worldPersonId": "person--haus-chamois--rhewella-chamois",
+        "name": "Rhewella Chamois",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/rhewella-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Jannwens Zwillingsschwester begleitet ihre Herrin als Hofdame auf Reisen. Von jedem Aufenthalt bringt sie ein neues Muster für ihre Stickarbeiten mit.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Hofkleidung"
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1705"
+            ],
+            "portrait": [
+              "assets/images/portraits/haus-chamois/rhewella-chamois-v2.webp"
+            ],
+            "notes": [
+              "Als Hofdame begleitet Rhewella ihre Herrin auf Reisen. Von jedem Aufenthalt bringt sie ein neues Muster für ihre Stickarbeiten mit."
+            ]
+          },
+          "registryManagedFields": [
+            "birth",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 8,
+            "portrait": 8,
+            "notes": 8
+          }
+        }
+      },
+      {
+        "id": "jannwen-chamois",
+        "worldPersonId": "person--haus-chamois--jannwen-chamois",
+        "name": "Jannwen Chamois",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/jannwen-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Rhewellas Zwillingsschwester ist Hofdame. Bei Empfängen erinnert sie sich auch an die Namen der Gäste, die selten zu Wort kommen.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Hofkleidung"
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1710"
+            ],
+            "portrait": [
+              "assets/images/portraits/haus-chamois/jannwen-chamois-v2.webp"
+            ],
+            "notes": [
+              "Perwyns jüngste Tochter ist Hofdame. Bei Empfängen erinnert sie sich auch an die Namen der Gäste, die selten zu Wort kommen."
+            ]
+          },
+          "registryManagedFields": [
+            "birth",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 8,
+            "portrait": 8,
+            "notes": 8
+          }
+        }
+      },
+      {
+        "id": "saithan-chamois",
+        "worldPersonId": "person--haus-chamois--saithan-chamois",
+        "name": "Saithan Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1697",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/saithan-chamois-v2.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Rüstung"
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1699",
+              "1698"
+            ]
+          },
+          "registryManagedFields": [
+            "birth"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 8
+          }
+        }
+      },
+      {
+        "id": "partner-gwaedric-chamois",
+        "worldPersonId": "person--haus-chamois--partner-gwaedric-chamois",
+        "name": "Unbekannter Partner",
+        "title": "",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "kyrban-chamois",
+        "worldPersonId": "person--haus-chamois--kyrban-chamois",
+        "name": "Kyrban Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1701",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/kyrban-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "zivil"
+          }
+        }
+      },
+      {
+        "id": "rhydeth-chamois",
+        "worldPersonId": "person--haus-chamois--rhydeth-chamois",
+        "name": "Rhydeth Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/rhydeth-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Rhydeth ist Geistlicher der Alerischen Kirche. Im Winter liest er Kranken aus ihren Briefen vor. Seine kleine Leselupe trägt er dafür bei sich.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "geistliches Gewand"
+          }
+        }
+      },
+      {
+        "id": "lleirys-chamois",
+        "worldPersonId": "person--haus-chamois--lleirys-chamois",
+        "name": "Lleirys Chamois",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1707",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/lleirys-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Mit 33 ist Lleirys ledig und tritt am Hof der Gafyr als Bardin auf. Ihre Lieder sammelt sie in den Werkstätten und Küchen Gwynthors.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Hofkleidung"
+          }
+        }
+      },
+      {
+        "id": "partner-uwchyr-chamois",
+        "worldPersonId": "person--haus-chamois--partner-uwchyr-chamois",
+        "name": "Unbekannter Partner",
+        "title": "",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "thalyr-chamois",
+        "worldPersonId": "person--haus-chamois--thalyr-chamois",
+        "name": "Thalyr Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1701",
+        "death": "1720",
+        "portrait": "assets/images/portraits/haus-chamois/thalyr-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Von Uwchyrs Sohn blieb eine Gämse, die er in den Deckel seiner Reisekiste geritzt hatte. Er fiel mit 19 Jahren im Großen Krieg.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Rüstung"
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1700"
+            ],
+            "notes": [
+              "Uwchyrs Sohn kam vor der Heirat seiner Eltern zur Welt. Von ihm blieb eine Gämse, die er in den Deckel seiner Reisekiste geritzt hatte. Er fiel mit 20 Jahren im Großen Krieg."
+            ]
+          },
+          "registryManagedFields": [
+            "birth",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 8,
+            "notes": 8
+          }
+        }
+      },
+      {
+        "id": "uffyrena-chamois",
+        "worldPersonId": "person--haus-chamois--uffyrena-chamois",
+        "name": "Uffyrena Chamois",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1704",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/uffyrena-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "zivil"
+          }
+        }
+      },
+      {
+        "id": "helygys-chamois",
+        "worldPersonId": "person--haus-chamois--helygys-chamois",
+        "name": "Helygys Chamois",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1708",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/helygys-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "zivil"
+          }
+        }
+      },
+      {
+        "id": "partner-lleuen-chamois",
+        "worldPersonId": "person--haus-chamois--partner-lleuen-chamois",
+        "name": "Unbekannter Partner",
+        "title": "",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "avelwen-chamois",
+        "worldPersonId": "person--haus-chamois--avelwen-chamois",
+        "name": "Avelwen Chamois",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1721",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/avelwen-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Lleuens älteste Tochter ist Ritterin. Wegen ihrer Schönheit und ihres sicheren Auftretens nennt die Familie sie das Juwel der Chamois. Ihr entgeht selten, wer bei einer Gesellschaft übersehen wird.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Rüstung"
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1722"
+            ],
+            "portrait": [
+              "assets/images/portraits/haus-chamois/avelwen-chamois-v2.webp"
+            ]
+          },
+          "registryManagedFields": [
+            "birth",
+            "portrait"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 8,
+            "portrait": 8
+          }
+        }
+      },
+      {
+        "id": "neddor-chamois",
+        "worldPersonId": "person--haus-chamois--neddor-chamois",
+        "name": "Neddor Chamois",
+        "title": "Erbe nach Lleuen",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/neddor-chamois-v2.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Rüstung"
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1723"
+            ],
+            "portrait": [
+              "assets/images/portraits/haus-chamois/neddor-chamois-v3.webp"
+            ]
+          },
+          "registryManagedFields": [
+            "birth",
+            "portrait"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 8,
+            "portrait": 8
+          }
+        }
+      },
+      {
+        "id": "cyran-chamois",
+        "worldPersonId": "person--haus-chamois--cyran-chamois",
+        "name": "Cyran Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1728",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/cyran-chamois-v1.png",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Knappentracht"
+          }
+        }
+      },
+      {
+        "id": "partner-saithan-chamois",
+        "worldPersonId": "person--haus-chamois--partner-saithan-chamois",
+        "name": "Unbekannter Partner",
+        "title": "",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "cyrban-chamois",
+        "worldPersonId": "person--haus-chamois--cyrban-chamois",
+        "name": "Cyrban Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/cyrban-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Saithans ältester Sohn markiert sich mit Kreide die Schritte auf den Hofplatten, wenn er eine neue Übung lernen will.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Rüstung"
+          },
+          "registryManagedFieldPreviousValues": {
+            "birth": [
+              "1723"
+            ],
+            "portrait": [
+              "assets/images/portraits/haus-chamois/cyrban-chamois-v2.webp"
+            ],
+            "notes": [
+              "Saithans ältester Sohn markiert sich mit Kreide die Schritte auf den Hofplatten, wenn er eine neue Übung lernen will. Er kam im Jahr vor der Heirat seiner Eltern zur Welt."
+            ]
+          },
+          "registryManagedFields": [
+            "birth",
+            "portrait",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "birth": 8,
+            "portrait": 8,
+            "notes": 8
+          }
+        }
+      },
+      {
+        "id": "nerella-chamois",
+        "worldPersonId": "person--haus-chamois--nerella-chamois",
+        "name": "Nerella Chamois",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1724",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/nerella-chamois-v2.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Rüstung"
+          }
+        }
+      },
+      {
+        "id": "peran-chamois",
+        "worldPersonId": "person--haus-chamois--peran-chamois",
+        "name": "Peran Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1730",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/peran-chamois-v2.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Saithans jüngster Sohn trägt Pagentracht. Er merkt sich den Weg zu einem Zimmer anhand der Stufen, die dorthin führen.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Pagentracht"
+          },
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "assets/images/portraits/haus-chamois/peran-chamois-v1.webp"
+            ]
+          },
+          "registryManagedFields": [
+            "portrait"
+          ],
+          "registryManagedFieldRevisions": {
+            "portrait": 8
+          }
+        }
+      },
+      {
+        "id": "partner-kyrban-chamois",
+        "worldPersonId": "person--haus-chamois--partner-kyrban-chamois",
+        "name": "Unbekannter Partner",
+        "title": "",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "sairwen-chamois",
+        "worldPersonId": "person--haus-chamois--sairwen-chamois",
+        "name": "Sairwen Chamois",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1727",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/sairwen-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Knappentracht"
+          }
+        }
+      },
+      {
+        "id": "iwrwyn-chamois",
+        "worldPersonId": "person--haus-chamois--iwrwyn-chamois",
+        "name": "Iwrwyn Chamois",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1733",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/iwrwyn-chamois-v1.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-chamois",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Pagentracht"
+          }
+        }
+      },
+      {
+        "id": "partner-brenae-chamois",
+        "worldPersonId": "person--haus-chamois--partner-brenae-chamois",
+        "name": "Unbekannter Partner",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "partner-rhewella-chamois",
+        "worldPersonId": "person--haus-chamois--partner-rhewella-chamois",
+        "name": "Unbekannter Partner",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "partner-jannwen-chamois",
+        "worldPersonId": "person--haus-chamois--partner-jannwen-chamois",
+        "name": "Unbekannter Partner",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "partner-uffyrena-chamois",
+        "worldPersonId": "person--haus-chamois--partner-uffyrena-chamois",
+        "name": "Unbekannter Partner",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "partner-helygys-chamois",
+        "worldPersonId": "person--haus-chamois--partner-helygys-chamois",
+        "name": "Unbekannter Partner",
+        "title": "",
+        "sex": "male",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "partnerin-firen-chamois",
+        "worldPersonId": "person--haus-chamois--partnerin-firen-chamois",
+        "name": "Unbekannte Partnerin",
+        "title": "",
+        "sex": "female",
+        "status": "unknown",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "affair",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {
+          "portraitIntentionallyAbsent": true
+        }
+      },
+      {
+        "id": "dyror-chamois",
+        "worldPersonId": "person--haus-chamois--dyror-chamois",
+        "name": "Dyror",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1706",
+        "death": "",
+        "portrait": "assets/images/portraits/haus-chamois/dyror-chamois-v3.webp",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "bastard",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "Dyror ist Firens Sohn aus einer Affäre. Er dient den Gafyr als Waffenknecht und trägt ihre schlichte Rüstung ohne Emblem.",
+        "extensions": {
+          "appearance": {
+            "eyeColor": "grün",
+            "hairColor": "braun",
+            "clothing": "Schlichte Gafyr-Rüstung"
+          },
+          "registryManagedFieldPreviousValues": {
+            "portrait": [
+              "assets/images/portraits/haus-chamois/dyror-chamois-v1.webp",
+              "assets/images/portraits/haus-chamois/dyror-chamois-v2.webp"
+            ]
+          },
+          "registryManagedFields": [
+            "portrait"
+          ],
+          "registryManagedFieldRevisions": {
+            "portrait": 8
+          }
+        }
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-haus-chamois-founders",
+        "participantIds": [
+          "haus-chamois-gruender",
+          "haus-chamois-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "",
+        "end": "",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "marriage-firena-chamois",
+        "participantIds": [
+          "firena-chamois",
+          "partner-firena-chamois"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1667",
+        "end": "1718",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "minimumAgeAtMarriage": 25
+        }
+      },
+      {
+        "id": "marriage-thalric-chamois",
+        "participantIds": [
+          "thalric-chamois",
+          "partner-thalric-chamois"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1669",
+        "end": "1732",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "minimumAgeAtMarriage": 25
+        }
+      },
+      {
+        "id": "marriage-ellan-chamois",
+        "participantIds": [
+          "ellan-chamois",
+          "partner-ellan-chamois"
+        ],
+        "type": "marriage",
+        "status": "ended",
+        "start": "1675",
+        "end": "1739",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "minimumAgeAtMarriage": 25,
+          "chartAlignParentPairOverChildPersonId": "firen-chamois",
+          "chartPackLeafSiblingBranchesBesideAlignedChild": true,
+          "registryManagedFieldPreviousValues": {
+            "status": [
+              "active"
+            ],
+            "end": [
+              ""
+            ]
+          },
+          "registryManagedFields": [
+            "status",
+            "end"
+          ],
+          "registryManagedFieldRevisions": {
+            "status": 8,
+            "end": 8
+          }
+        }
+      },
+      {
+        "id": "marriage-abaelor-chamois",
+        "participantIds": [
+          "abaelor-chamois",
+          "partner-abaelor-chamois"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1695",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "minimumAgeAtMarriage": 25,
+          "chartAlignParentPairOverChildPersonId": "lleuen-chamois",
+          "chartPackLeafSiblingBranchesBesideAlignedChild": true
+        }
+      },
+      {
+        "id": "marriage-perwyn-chamois",
+        "participantIds": [
+          "perwyn-chamois",
+          "partner-perwyn-chamois"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1695",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "minimumAgeAtMarriage": 25,
+          "chartAlignParentPairOverChildPersonId": "saithan-chamois",
+          "chartPackLeafSiblingBranchesBesideAlignedChild": true,
+          "registryManagedFieldPreviousValues": {
+            "start": [
+              "1698"
+            ]
+          },
+          "registryManagedFields": [
+            "start"
+          ],
+          "registryManagedFieldRevisions": {
+            "start": 8
+          }
+        }
+      },
+      {
+        "id": "marriage-gwaedric-chamois",
+        "participantIds": [
+          "gwaedric-chamois",
+          "partner-gwaedric-chamois"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1700",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "minimumAgeAtMarriage": 25,
+          "chartAlignParentPairOverChildPersonId": "kyrban-chamois",
+          "chartPackLeafSiblingBranchesBesideAlignedChild": true
+        }
+      },
+      {
+        "id": "marriage-uwchyr-chamois",
+        "participantIds": [
+          "uwchyr-chamois",
+          "partner-uwchyr-chamois"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1701",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "minimumAgeAtMarriage": 25,
+          "chartAlignChildGroupBelowParentPair": true,
+          "registryManagedFieldPreviousValues": {
+            "start": [
+              "1703"
+            ]
+          },
+          "registryManagedFields": [
+            "start"
+          ],
+          "registryManagedFieldRevisions": {
+            "start": 8
+          }
+        }
+      },
+      {
+        "id": "marriage-lleuen-chamois",
+        "participantIds": [
+          "lleuen-chamois",
+          "partner-lleuen-chamois"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1721",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "minimumAgeAtMarriage": 25,
+          "chartAlignChildGroupBelowParentPair": true,
+          "registryManagedFieldPreviousValues": {
+            "start": [
+              "1722"
+            ]
+          },
+          "registryManagedFields": [
+            "start"
+          ],
+          "registryManagedFieldRevisions": {
+            "start": 8
+          }
+        }
+      },
+      {
+        "id": "marriage-saithan-chamois",
+        "participantIds": [
+          "saithan-chamois",
+          "partner-saithan-chamois"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1722",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "minimumAgeAtMarriage": 25,
+          "chartAlignChildGroupBelowParentPair": true,
+          "registryManagedExtensionFields": [
+            "chartAlignParentPairOverChildPersonId"
+          ],
+          "registryManagedExtensionFieldRevisions": {
+            "chartAlignParentPairOverChildPersonId": 8
+          },
+          "registryManagedFieldPreviousValues": {
+            "start": [
+              "1724",
+              "1723"
+            ]
+          },
+          "registryManagedFields": [
+            "start"
+          ],
+          "registryManagedFieldRevisions": {
+            "start": 8
+          }
+        }
+      },
+      {
+        "id": "marriage-kyrban-chamois",
+        "participantIds": [
+          "kyrban-chamois",
+          "partner-kyrban-chamois"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1726",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "minimumAgeAtMarriage": 25,
+          "chartAlignChildGroupBelowParentPair": true
+        }
+      },
+      {
+        "id": "marriage-brenae-chamois",
+        "participantIds": [
+          "brenae-chamois",
+          "partner-brenae-chamois"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1729",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "minimumAgeAtMarriage": 25
+        }
+      },
+      {
+        "id": "marriage-rhewella-chamois",
+        "participantIds": [
+          "rhewella-chamois",
+          "partner-rhewella-chamois"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1733",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "minimumAgeAtMarriage": 25
+        }
+      },
+      {
+        "id": "marriage-jannwen-chamois",
+        "participantIds": [
+          "jannwen-chamois",
+          "partner-jannwen-chamois"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1737",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "minimumAgeAtMarriage": 25
+        }
+      },
+      {
+        "id": "marriage-uffyrena-chamois",
+        "participantIds": [
+          "uffyrena-chamois",
+          "partner-uffyrena-chamois"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1731",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "minimumAgeAtMarriage": 25
+        }
+      },
+      {
+        "id": "marriage-helygys-chamois",
+        "participantIds": [
+          "helygys-chamois",
+          "partner-helygys-chamois"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "1736",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "minimumAgeAtMarriage": 25
+        }
+      },
+      {
+        "id": "affair-firen-chamois",
+        "participantIds": [
+          "firen-chamois",
+          "partnerin-firen-chamois"
+        ],
+        "type": "affair",
+        "status": "ended",
+        "start": "1705",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignParentPairOverChildPersonId": "dyror-chamois"
+        }
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-firena-chamois",
+        "childId": "firena-chamois",
+        "parentIds": [
+          "haus-chamois-gruender",
+          "haus-chamois-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-chamois-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Überlieferter Familienzusammenhang über mehrere nicht einzeln bekannte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-chamois-to-1644"
+        }
+      },
+      {
+        "id": "parentage-thalric-chamois",
+        "childId": "thalric-chamois",
+        "parentIds": [
+          "haus-chamois-gruender",
+          "haus-chamois-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-chamois-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Überlieferter Familienzusammenhang über mehrere nicht einzeln bekannte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-chamois-to-1644"
+        }
+      },
+      {
+        "id": "parentage-ellan-chamois",
+        "childId": "ellan-chamois",
+        "parentIds": [
+          "haus-chamois-gruender",
+          "haus-chamois-gruenderin"
+        ],
+        "partnershipId": "marriage-haus-chamois-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "unknown",
+        "visibility": "public",
+        "notes": "Überlieferter Familienzusammenhang über mehrere nicht einzeln bekannte Generationen.",
+        "extensions": {
+          "timeJumpId": "gap-chamois-to-1644"
+        }
+      },
+      {
+        "id": "parentage-abaelor-chamois",
+        "childId": "abaelor-chamois",
+        "parentIds": [
+          "thalric-chamois",
+          "partner-thalric-chamois"
+        ],
+        "partnershipId": "marriage-thalric-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-perwyn-chamois",
+        "childId": "perwyn-chamois",
+        "parentIds": [
+          "thalric-chamois",
+          "partner-thalric-chamois"
+        ],
+        "partnershipId": "marriage-thalric-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-gwaedric-chamois",
+        "childId": "gwaedric-chamois",
+        "parentIds": [
+          "thalric-chamois",
+          "partner-thalric-chamois"
+        ],
+        "partnershipId": "marriage-thalric-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-uwchyr-chamois",
+        "childId": "uwchyr-chamois",
+        "parentIds": [
+          "thalric-chamois",
+          "partner-thalric-chamois"
+        ],
+        "partnershipId": "marriage-thalric-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-firen-chamois",
+        "childId": "firen-chamois",
+        "parentIds": [
+          "ellan-chamois",
+          "partner-ellan-chamois"
+        ],
+        "partnershipId": "marriage-ellan-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-helric-chamois",
+        "childId": "helric-chamois",
+        "parentIds": [
+          "abaelor-chamois",
+          "partner-abaelor-chamois"
+        ],
+        "partnershipId": "marriage-abaelor-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-lleuen-chamois",
+        "childId": "lleuen-chamois",
+        "parentIds": [
+          "abaelor-chamois",
+          "partner-abaelor-chamois"
+        ],
+        "partnershipId": "marriage-abaelor-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-dyreth-chamois",
+        "childId": "dyreth-chamois",
+        "parentIds": [
+          "abaelor-chamois",
+          "partner-abaelor-chamois"
+        ],
+        "partnershipId": "marriage-abaelor-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-iwrban-chamois",
+        "childId": "iwrban-chamois",
+        "parentIds": [
+          "abaelor-chamois",
+          "partner-abaelor-chamois"
+        ],
+        "partnershipId": "marriage-abaelor-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-brenae-chamois",
+        "childId": "brenae-chamois",
+        "parentIds": [
+          "perwyn-chamois",
+          "partner-perwyn-chamois"
+        ],
+        "partnershipId": "marriage-perwyn-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhewella-chamois",
+        "childId": "rhewella-chamois",
+        "parentIds": [
+          "perwyn-chamois",
+          "partner-perwyn-chamois"
+        ],
+        "partnershipId": "marriage-perwyn-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-jannwen-chamois",
+        "childId": "jannwen-chamois",
+        "parentIds": [
+          "perwyn-chamois",
+          "partner-perwyn-chamois"
+        ],
+        "partnershipId": "marriage-perwyn-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-saithan-chamois",
+        "childId": "saithan-chamois",
+        "parentIds": [
+          "perwyn-chamois",
+          "partner-perwyn-chamois"
+        ],
+        "partnershipId": "marriage-perwyn-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-kyrban-chamois",
+        "childId": "kyrban-chamois",
+        "parentIds": [
+          "gwaedric-chamois",
+          "partner-gwaedric-chamois"
+        ],
+        "partnershipId": "marriage-gwaedric-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-rhydeth-chamois",
+        "childId": "rhydeth-chamois",
+        "parentIds": [
+          "gwaedric-chamois",
+          "partner-gwaedric-chamois"
+        ],
+        "partnershipId": "marriage-gwaedric-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-lleirys-chamois",
+        "childId": "lleirys-chamois",
+        "parentIds": [
+          "gwaedric-chamois",
+          "partner-gwaedric-chamois"
+        ],
+        "partnershipId": "marriage-gwaedric-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-thalyr-chamois",
+        "childId": "thalyr-chamois",
+        "parentIds": [
+          "uwchyr-chamois",
+          "partner-uwchyr-chamois"
+        ],
+        "partnershipId": "marriage-uwchyr-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFieldPreviousValues": {},
+          "registryManagedFields": [
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "legitimacy": 8,
+            "notes": 8
+          }
+        }
+      },
+      {
+        "id": "parentage-uffyrena-chamois",
+        "childId": "uffyrena-chamois",
+        "parentIds": [
+          "uwchyr-chamois",
+          "partner-uwchyr-chamois"
+        ],
+        "partnershipId": "marriage-uwchyr-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-helygys-chamois",
+        "childId": "helygys-chamois",
+        "parentIds": [
+          "uwchyr-chamois",
+          "partner-uwchyr-chamois"
+        ],
+        "partnershipId": "marriage-uwchyr-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-avelwen-chamois",
+        "childId": "avelwen-chamois",
+        "parentIds": [
+          "lleuen-chamois",
+          "partner-lleuen-chamois"
+        ],
+        "partnershipId": "marriage-lleuen-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-neddor-chamois",
+        "childId": "neddor-chamois",
+        "parentIds": [
+          "lleuen-chamois",
+          "partner-lleuen-chamois"
+        ],
+        "partnershipId": "marriage-lleuen-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-cyran-chamois",
+        "childId": "cyran-chamois",
+        "parentIds": [
+          "lleuen-chamois",
+          "partner-lleuen-chamois"
+        ],
+        "partnershipId": "marriage-lleuen-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-cyrban-chamois",
+        "childId": "cyrban-chamois",
+        "parentIds": [
+          "saithan-chamois",
+          "partner-saithan-chamois"
+        ],
+        "partnershipId": "marriage-saithan-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "registryManagedFieldPreviousValues": {},
+          "registryManagedFields": [
+            "legitimacy",
+            "notes"
+          ],
+          "registryManagedFieldRevisions": {
+            "legitimacy": 8,
+            "notes": 8
+          }
+        }
+      },
+      {
+        "id": "parentage-nerella-chamois",
+        "childId": "nerella-chamois",
+        "parentIds": [
+          "saithan-chamois",
+          "partner-saithan-chamois"
+        ],
+        "partnershipId": "marriage-saithan-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-peran-chamois",
+        "childId": "peran-chamois",
+        "parentIds": [
+          "saithan-chamois",
+          "partner-saithan-chamois"
+        ],
+        "partnershipId": "marriage-saithan-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-sairwen-chamois",
+        "childId": "sairwen-chamois",
+        "parentIds": [
+          "kyrban-chamois",
+          "partner-kyrban-chamois"
+        ],
+        "partnershipId": "marriage-kyrban-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-iwrwyn-chamois",
+        "childId": "iwrwyn-chamois",
+        "parentIds": [
+          "kyrban-chamois",
+          "partner-kyrban-chamois"
+        ],
+        "partnershipId": "marriage-kyrban-chamois",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-dyror-chamois",
+        "childId": "dyror-chamois",
+        "parentIds": [
+          "firen-chamois",
+          "partnerin-firen-chamois"
+        ],
+        "partnershipId": "affair-firen-chamois",
+        "type": "biological",
+        "legitimacy": "illegitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-chamois",
+        "name": "Haus Chamois",
+        "motto": "",
+        "emblem": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+        "status": "active"
+      },
+      {
+        "id": "house-unbekannt-firena-chamois",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-unbekannt-brenae-chamois",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-unbekannt-rhewella-chamois",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-unbekannt-jannwen-chamois",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-unbekannt-uffyrena-chamois",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      },
+      {
+        "id": "house-unbekannt-helygys-chamois",
+        "name": "Unbekanntes Haus",
+        "motto": "",
+        "emblem": "",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [
+      {
+        "id": "wegverheiratet-firena-chamois",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratet",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-firena-chamois",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-firena-chamois",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Diese Linie wird im Stammbaum der Chamois nach der Heirat nicht weitergeführt.",
+        "extensions": {
+          "chartAlignBelowPartnership": true
+        }
+      },
+      {
+        "id": "wegverheiratet-brenae-chamois",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratet",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-brenae-chamois",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-brenae-chamois",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Diese Linie wird im Stammbaum der Chamois nach der Heirat nicht weitergeführt.",
+        "extensions": {
+          "chartAlignBelowPartnership": true
+        }
+      },
+      {
+        "id": "wegverheiratet-rhewella-chamois",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratet",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-rhewella-chamois",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-rhewella-chamois",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Diese Linie wird im Stammbaum der Chamois nach der Heirat nicht weitergeführt.",
+        "extensions": {
+          "chartAlignBelowPartnership": true
+        }
+      },
+      {
+        "id": "wegverheiratet-jannwen-chamois",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratet",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-jannwen-chamois",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-jannwen-chamois",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Diese Linie wird im Stammbaum der Chamois nach der Heirat nicht weitergeführt.",
+        "extensions": {
+          "chartAlignBelowPartnership": true
+        }
+      },
+      {
+        "id": "wegverheiratet-uffyrena-chamois",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratet",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-uffyrena-chamois",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-uffyrena-chamois",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Diese Linie wird im Stammbaum der Chamois nach der Heirat nicht weitergeführt.",
+        "extensions": {
+          "chartAlignBelowPartnership": true
+        }
+      },
+      {
+        "id": "wegverheiratet-helygys-chamois",
+        "name": "Unbekanntes Haus",
+        "subtitle": "Wegverheiratet",
+        "linkType": "married-away",
+        "parentPartnershipId": "marriage-helygys-chamois",
+        "parentPersonId": "",
+        "childIds": [],
+        "houseId": "house-unbekannt-helygys-chamois",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "iron",
+        "frameScale": 1,
+        "founded": "",
+        "targetFamilyId": "haus-unbekannt",
+        "notes": "Diese Linie wird im Stammbaum der Chamois nach der Heirat nicht weitergeführt.",
+        "extensions": {
+          "chartAlignBelowPartnership": true
+        }
+      }
+    ],
+    "timeJumps": [
+      {
+        "id": "gap-chamois-to-1644",
+        "parentPartnershipId": "marriage-haus-chamois-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "firena-chamois",
+          "thalric-chamois",
+          "ellan-chamois"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "1641",
+        "label": "Nicht einzeln überlieferte Generationen bis zu Thalric und seinen Geschwistern",
+        "notes": "Der Zeitsprung ist der alleinige absolute Generationentrenner unter dem Hauswappen. Bekannte Nachkommen werden später ausschließlich hinter diesem Knoten ergänzt.",
+        "extensions": {
+          "preparedPlaceholder": false,
+          "registryManagedFieldPreviousValues": {
+            "childIds": [
+              [
+                "thalric-chamois"
+              ]
+            ],
+            "toYear": [
+              "1644"
+            ],
+            "label": [
+              "Nicht einzeln überlieferte Generationen bis Thalric"
+            ]
+          },
+          "registryManagedFields": [
+            "childIds",
+            "toYear",
+            "label"
+          ],
+          "registryManagedFieldRevisions": {
+            "childIds": 8,
+            "toYear": 8,
+            "label": 8
+          }
+        }
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-haus-chamois-founders",
+      "houseId": "house-chamois",
+      "crestSubtitle": "Ritterfamilie · Castell Chamois",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "silver",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "thalric-chamois",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "blankFamily": false,
+      "preparedTimeJump": true,
+      "pendingDescendantReview": false,
+      "sourceRevision": 8,
+      "chartLayoutPolicy": "strict-v1",
+      "chartAlignLineageOriginOverPersonId": "thalric-chamois",
+      "seatPinId": "gwynthor-marking-128",
+      "sourceNote": "Nutzerauftrag vom 22.11.2026. Ausbau der Geschwistergruppen, der Gefallenen von 1720 und der Wegheiraten. Thalrics Geschwister Firena und Ellan ergänzen die erste belegte Generation. Ellans Sohn Firen hat aus der ausdrücklich vorgegebenen Affäre den Sohn Dyror. Namen und Lebensjahre sind redaktionelle Ergänzungen nach dem Rheunwaith-Namensarchiv. Die gelieferten Porträts zeigen Abaelor, Cyran und Perwyn. Besitz und das künftige Lehen sind im Rollenspiel offen.",
+      "registryManagedDocumentFieldRevisions": {},
+      "registryManagedHouseProfileFieldRevisions": {},
+      "registryManagedExtensionFieldRevisions": {},
+      "registryManagedViewFieldRevisions": {},
+      "registryManagedLineageFieldRevisions": {},
+      "registryManagedEntitySourceRevision": 8,
+      "houseBiographyModule": {
+        "schema": "aleria.house-module",
+        "schemaVersion": 1,
+        "pageTitle": "Haus Chamois",
+        "housePage": true,
+        "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/castell-chamois-v1.webp",
+        "imageWidth": 38,
+        "imageSquare": false,
+        "imageTall": true,
+        "description": "Die Chamois sind eine erst kürzlich in den Ritterstand erhobene Familie und Vasallen des Hauses Gafyr. Ihr Zuhause ist Castell Chamois innerhalb der Stadtmauern von Gwynthor.",
+        "quote": "",
+        "quoteBy": "",
+        "commentSequence": [],
+        "stats": [
+          [
+            "Voller Name",
+            "Haus Chamois"
+          ],
+          [
+            "Rang",
+            "Einfache Ritterfamilie"
+          ],
+          [
+            "Stammsitz",
+            "Castell Chamois · Gwynthor-Stadt"
+          ],
+          [
+            "Grafschaft",
+            "Celtigerns Wacht"
+          ],
+          [
+            "Oberhaupt",
+            "Abaelor Chamois"
+          ],
+          [
+            "Erbe",
+            "Lleuen Chamois"
+          ],
+          [
+            "Lehnsherr",
+            "Haus Gafyr"
+          ],
+          [
+            "Ursprung",
+            "Ehemals bürgerlich, kürzlich in den Ritterstand erhoben"
+          ]
+        ],
+        "house": {
+          "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+          "sideWidth": 100,
+          "connectionPortraitHeight": 80,
+          "connectionTextOffset": 0,
+          "biographyTitle": "Eine junge Ritterfamilie",
+          "biographyText": "Die Chamois sind eine erst kürzlich in den Ritterstand erhobene Familie und Vasallen des Hauses Gafyr. Ihr Zuhause ist Castell Chamois innerhalb der Stadtmauern von Gwynthor.",
+          "abilitiesTitle": "Einfluss und Aufgaben",
+          "abilities": [],
+          "historyTitle": "Vom Waffendienst zum Ritterstand",
+          "historyText": "Thalric ist der gemeinsame Vorfahr der vier Hauptzweige. Zu seiner Generation gehören auch seine ältere Schwester Firena und sein jüngerer Bruder Ellan. Zu Thalrics Lebzeiten waren die Chamois noch Bürgerliche. Die Chamois stellten den Gafyr schon als Bürgerfamilie viele Waffenknechte und bewaffnete Gefolgsleute. Ein Teil der Familie dient den Gafyr auch in zivilen Ämtern. Die Chamois lassen ihre Kinder bei den Gafyr ausbilden.\n\nIm Großen Krieg von 1720 fielen Abaelors Söhne Helric und Dyreth sowie Thalyr, der Sohn Uwchyrs. Ihre Rüstungsporträts zeigen sie im jeweiligen Alter. Die Erhebung der Chamois zur Ritterfamilie liegt erst kurze Zeit zurück.",
+          "worksTitle": "Prägende Ereignisse",
+          "works": [],
+          "extraSections": [
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Werte und Stellung",
+              "text": "Haus Gafyr ist der Lehnsherr der Chamois. Es nimmt jüngere Chamois zur Ausbildung auf und empfängt das bewaffnete Aufgebot der Familie. Am Hof der Gafyr tritt Lleirys als Bardin auf. Ihr Bruder Rhydeth ist Geistlicher der Alerischen Kirche."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Traditionen und Hausleben",
+              "text": "Das runde Wappen zeigt eine braune Gämse mit hellen Abzeichen und dunklen Hörnern auf einem Felsvorsprung vor einem Gebirge. Waldgrün und Gold sind die Hausfarben. Goldene Eichenblätter und Flechtknoten fassen das Wappen ein."
+            },
+            {
+              "position": "afterWorks",
+              "mode": "text",
+              "title": "Besitz und Lebensgrundlage",
+              "text": "Im westlichen Stadtgebiet innerhalb der alten Mauern, zwischen Castell Rhyddid und dem Anwesen der Loer. Ein steinernes Wohnhaus mit kleinem Treppenturm, einem gepflasterten Innenhof und einem Brunnen. Durch den Torbogen gelangt man von der ansteigenden Gasse in den Hof. Am Tor hängt ein waldgrünes Banner mit goldener Gämse. Über dem Eichenportal sitzt das runde Hauszeichen. Eichenlaub und Flechtwerk aus dem Wappen kehren auf Beschlägen und an den Säumen der Hausfarben wieder. Hier lebt die Familie Chamois seit ihrer Erhebung. Im Hof versammelt sich ihr Gefolge vor dem Dienst bei den Gafyr. Die späteren Besitzungen und das künftige Lehen bleiben offen. Ein Lehen ist für die Chamois in Aussicht. Wo es liegt, welche Rechte ihm folgen und über welche Besitzungen die Familie verfügen wird, entscheidet sich im Rollenspiel."
+            }
+          ],
+          "triviaTitle": "Besonderheiten",
+          "trivia": [],
+          "quotesTitle": "Hausmotto",
+          "quotes": [],
+          "connectionsTitle": "Verbündete und Kadettenhäuser",
+          "connections": [
+            {
+              "name": "Haus Gafyr",
+              "detail": "Lehnsherr der Chamois",
+              "image": "../Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gafyr.png",
+              "imageFormat": "square"
+            }
+          ],
+          "documentsTitle": "Mehr über das Haus",
+          "documents": [
+            {
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+              "title": "Haus Chamois · vollständige Hausseite",
+              "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
+              "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-chamois"
+            },
+            {
+              "title": "Castell Chamois auf der Karte",
+              "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+              "text": "Im westlichen Stadtgebiet innerhalb der alten Mauern, zwischen Castell Rhyddid und dem Anwesen der Loer.",
+              "link": "/Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-128"
+            }
+          ],
+          "footer": ""
+        }
+      }
+    }
+  }
+}

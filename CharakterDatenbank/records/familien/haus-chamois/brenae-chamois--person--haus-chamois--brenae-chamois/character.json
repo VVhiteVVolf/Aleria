@@ -1,0 +1,576 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-chamois--brenae-chamois",
+  "slug": "brenae-chamois",
+  "identity": {
+    "name": "Brenae Chamois",
+    "aliases": [],
+    "worldPersonId": "person--haus-chamois--brenae-chamois"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-chamois",
+      "label": "Haus Chamois"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-chamois",
+        "familyTitle": "Haus Chamois",
+        "personId": "brenae-chamois",
+        "worldPersonId": "person--haus-chamois--brenae-chamois",
+        "houseId": "house-chamois",
+        "houseName": "Haus Chamois",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Brenae Chamois\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-chamois\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/brenae-chamois-v1.webp\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"perwyn-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--perwyn-chamois\",\"name\":\"Perwyn Chamois\"},{\"personId\":\"partner-perwyn-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-perwyn-chamois\",\"name\":\"Unbekannter Partner\"}],\"partners\":[{\"personId\":\"partner-brenae-chamois\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-brenae-chamois\",\"name\":\"Unbekannter Partner\"}],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-chamois--brenae-chamois",
+      "documentIds": [
+        "person--haus-chamois--brenae-chamois"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-chamois--brenae-chamois",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-chamois",
+        "personId": "brenae-chamois",
+        "worldPersonId": "person--haus-chamois--brenae-chamois",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Chamois/brenae-chamois.json",
+    "sourceExportedAt": "2026-11-22T21:00:00.000Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-chamois--brenae-chamois"
+    ],
+    "contentHash": "5e4c1346c2a6e5b71050d0f4151cd14edce23a09dec562db0c5829de815766d2"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "haus-chamois"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-chamois--brenae-chamois",
+        "name": "Brenae Chamois",
+        "title": "",
+        "age": 45,
+        "gender": "Weiblich",
+        "race": "Mensch",
+        "fraktion": "Haus Chamois",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "archived": false,
+        "identity": {
+          "worldPersonId": "person--haus-chamois--brenae-chamois"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-chamois--brenae-chamois",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1695",
+          "death": "",
+          "houseId": "house-chamois",
+          "houseName": "Haus Chamois",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-chamois",
+              "personId": "brenae-chamois",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-22T21:00:00.000Z",
+              "lastSyncedAt": "2026-11-22T21:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=brenae-chamois",
+              "fingerprint": "{\"name\":\"Brenae Chamois\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-chamois\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/brenae-chamois-v1.webp\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"perwyn-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--perwyn-chamois\",\"name\":\"Perwyn Chamois\"},{\"personId\":\"partner-perwyn-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-perwyn-chamois\",\"name\":\"Unbekannter Partner\"}],\"partners\":[{\"personId\":\"partner-brenae-chamois\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-brenae-chamois\",\"name\":\"Unbekannter Partner\"}],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "perwyn-chamois",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--perwyn-chamois",
+                "name": "Perwyn Chamois"
+              },
+              {
+                "personId": "partner-perwyn-chamois",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--partner-perwyn-chamois",
+                "name": "Unbekannter Partner"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "partner-brenae-chamois",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--partner-brenae-chamois",
+                "name": "Unbekannter Partner"
+              }
+            ],
+            "children": []
+          }
+        },
+        "bio": "Perwyns älteste Tochter ist Hofdame. Sie weiß, wann sich bei Tisch eine heikle Bitte vorbringen lässt, und bewahrt die Briefe ihrer Schwestern in einer eigenen Lade.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Brenae Chamois",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Brenae Chamois"
+            },
+            {
+              "label": "Geboren",
+              "value": "1695"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "45 Jahre"
+            },
+            {
+              "label": "Augen",
+              "value": "Grün"
+            },
+            {
+              "label": "Haare",
+              "value": "braun"
+            },
+            {
+              "label": "Herkunftsfamilie",
+              "value": "Haus Chamois"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/brenae-chamois-v1.webp",
+            "biographyTitle": "Brenae Chamois",
+            "biographyText": "<p>Perwyns älteste Tochter ist Hofdame. Sie weiß, wann sich bei Tisch eine heikle Bitte vorbringen lässt, und bewahrt die Briefe ihrer Schwestern in einer eigenen Lade.</p>",
+            "crestImage": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+            "connectionsTitle": "Familie und Verwandtschaft",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Perwyn Chamois",
+                "detail": "Elternteil",
+                "image": "../Stammbäume/assets/images/portraits/haus-chamois/perwyn-chamois-v1.png",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Unbekannter Partner",
+                "detail": "Elternteil",
+                "image": "",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Unbekannter Partner",
+                "detail": "Ehe",
+                "image": "",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Stammbaum und Haus",
+            "documents": [
+              {
+                "title": "Personenkarte im Stammbaum",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=brenae-chamois",
+                "text": "Familienzweig und Verwandtschaft."
+              },
+              {
+                "title": "Haus Chamois",
+                "link": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-chamois",
+                "text": "Geschichte, Wappen und Castell Chamois.",
+                "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png"
+              }
+            ]
+          }
+        },
+        "imageSetSchemaVersion": 1,
+        "imageSets": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/brenae-chamois-v1.webp",
+            "emotes": [
+              {
+                "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-01.png",
+                "label": "Redend"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-02.png",
+                "label": "Freundlich"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-03.png",
+                "label": "Nachdenklich"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-04.png",
+                "label": "Skeptisch"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-05.png",
+                "label": "Überrascht"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-06.png",
+                "label": "Missbilligend"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-07.png",
+                "label": "Entschlossen"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-08.png",
+                "label": "Verärgert"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-09.png",
+                "label": "Unsicher"
+              }
+            ],
+            "createdAt": "2026-11-22T21:00:00.000Z",
+            "updatedAt": "2026-11-22T21:00:00.000Z"
+          }
+        ],
+        "activeImageSetId": "standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/brenae-chamois-v1.webp",
+        "emotes": [
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-01.png",
+            "label": "Redend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-02.png",
+            "label": "Freundlich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-03.png",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-04.png",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-05.png",
+            "label": "Überrascht"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-06.png",
+            "label": "Missbilligend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-07.png",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-08.png",
+            "label": "Verärgert"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-09.png",
+            "label": "Unsicher"
+          }
+        ],
+        "emotesOverride": true,
+        "imageSetsOverride": true
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-chamois--brenae-chamois",
+    "name": "Brenae Chamois",
+    "title": "",
+    "age": 45,
+    "gender": "Weiblich",
+    "race": "Mensch",
+    "fraktion": "Haus Chamois",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "archived": false,
+    "identity": {
+      "worldPersonId": "person--haus-chamois--brenae-chamois"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-chamois--brenae-chamois",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1695",
+      "death": "",
+      "houseId": "house-chamois",
+      "houseName": "Haus Chamois",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-chamois",
+          "personId": "brenae-chamois",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T21:00:00.000Z",
+          "lastSyncedAt": "2026-11-22T21:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=brenae-chamois",
+          "fingerprint": "{\"name\":\"Brenae Chamois\",\"title\":\"\",\"birth\":\"1695\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-chamois\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/brenae-chamois-v1.webp\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"perwyn-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--perwyn-chamois\",\"name\":\"Perwyn Chamois\"},{\"personId\":\"partner-perwyn-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-perwyn-chamois\",\"name\":\"Unbekannter Partner\"}],\"partners\":[{\"personId\":\"partner-brenae-chamois\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-brenae-chamois\",\"name\":\"Unbekannter Partner\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "perwyn-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--perwyn-chamois",
+            "name": "Perwyn Chamois"
+          },
+          {
+            "personId": "partner-perwyn-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--partner-perwyn-chamois",
+            "name": "Unbekannter Partner"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "partner-brenae-chamois",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--partner-brenae-chamois",
+            "name": "Unbekannter Partner"
+          }
+        ],
+        "children": []
+      }
+    },
+    "bio": "Perwyns älteste Tochter ist Hofdame. Sie weiß, wann sich bei Tisch eine heikle Bitte vorbringen lässt, und bewahrt die Briefe ihrer Schwestern in einer eigenen Lade.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Brenae Chamois",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Brenae Chamois"
+        },
+        {
+          "label": "Geboren",
+          "value": "1695"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "45 Jahre"
+        },
+        {
+          "label": "Augen",
+          "value": "Grün"
+        },
+        {
+          "label": "Haare",
+          "value": "braun"
+        },
+        {
+          "label": "Herkunftsfamilie",
+          "value": "Haus Chamois"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/brenae-chamois-v1.webp",
+        "biographyTitle": "Brenae Chamois",
+        "biographyText": "<p>Perwyns älteste Tochter ist Hofdame. Sie weiß, wann sich bei Tisch eine heikle Bitte vorbringen lässt, und bewahrt die Briefe ihrer Schwestern in einer eigenen Lade.</p>",
+        "crestImage": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+        "connectionsTitle": "Familie und Verwandtschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Perwyn Chamois",
+            "detail": "Elternteil",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/perwyn-chamois-v1.png",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Unbekannter Partner",
+            "detail": "Elternteil",
+            "image": "",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Unbekannter Partner",
+            "detail": "Ehe",
+            "image": "",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Stammbaum und Haus",
+        "documents": [
+          {
+            "title": "Personenkarte im Stammbaum",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=brenae-chamois",
+            "text": "Familienzweig und Verwandtschaft."
+          },
+          {
+            "title": "Haus Chamois",
+            "link": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-chamois",
+            "text": "Geschichte, Wappen und Castell Chamois.",
+            "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png"
+          }
+        ]
+      }
+    },
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/brenae-chamois-v1.webp",
+        "emotes": [
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-01.png",
+            "label": "Redend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-02.png",
+            "label": "Freundlich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-03.png",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-04.png",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-05.png",
+            "label": "Überrascht"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-06.png",
+            "label": "Missbilligend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-07.png",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-08.png",
+            "label": "Verärgert"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-09.png",
+            "label": "Unsicher"
+          }
+        ],
+        "createdAt": "2026-11-22T21:00:00.000Z",
+        "updatedAt": "2026-11-22T21:00:00.000Z"
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/brenae-chamois-v1.webp",
+    "emotes": [
+      {
+        "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-01.png",
+        "label": "Redend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-02.png",
+        "label": "Freundlich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-03.png",
+        "label": "Nachdenklich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-04.png",
+        "label": "Skeptisch"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-05.png",
+        "label": "Überrascht"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-06.png",
+        "label": "Missbilligend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-07.png",
+        "label": "Entschlossen"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-08.png",
+        "label": "Verärgert"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/brenae-chamois/avatars/brenae-chamois-set-01-avatar-09.png",
+        "label": "Unsicher"
+      }
+    ],
+    "emotesOverride": true,
+    "imageSetsOverride": true,
+    "aliases": []
+  }
+}

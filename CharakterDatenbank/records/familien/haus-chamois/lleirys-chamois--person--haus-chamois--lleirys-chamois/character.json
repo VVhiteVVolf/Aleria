@@ -1,0 +1,544 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-chamois--lleirys-chamois",
+  "slug": "lleirys-chamois",
+  "identity": {
+    "name": "Lleirys Chamois",
+    "aliases": [],
+    "worldPersonId": "person--haus-chamois--lleirys-chamois"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-chamois",
+      "label": "Haus Chamois"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-chamois",
+        "familyTitle": "Haus Chamois",
+        "personId": "lleirys-chamois",
+        "worldPersonId": "person--haus-chamois--lleirys-chamois",
+        "houseId": "house-chamois",
+        "houseName": "Haus Chamois",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Lleirys Chamois\",\"title\":\"\",\"birth\":\"1707\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-chamois\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/lleirys-chamois-v1.webp\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gwaedric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--gwaedric-chamois\",\"name\":\"Gwaedric Chamois\"},{\"personId\":\"partner-gwaedric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-gwaedric-chamois\",\"name\":\"Unbekannter Partner\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-chamois--lleirys-chamois",
+      "documentIds": [
+        "person--haus-chamois--lleirys-chamois"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-chamois--lleirys-chamois",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-chamois",
+        "personId": "lleirys-chamois",
+        "worldPersonId": "person--haus-chamois--lleirys-chamois",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Chamois/lleirys-chamois.json",
+    "sourceExportedAt": "2026-11-22T21:00:00.000Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-chamois--lleirys-chamois"
+    ],
+    "contentHash": "59473f3f37f3b095a5d4b6fe66887fa3d2c57643df52a85d363b31fece774366"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "haus-chamois"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-chamois--lleirys-chamois",
+        "name": "Lleirys Chamois",
+        "title": "",
+        "age": 33,
+        "gender": "Weiblich",
+        "race": "Mensch",
+        "fraktion": "Haus Chamois",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "archived": false,
+        "identity": {
+          "worldPersonId": "person--haus-chamois--lleirys-chamois"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-chamois--lleirys-chamois",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1707",
+          "death": "",
+          "houseId": "house-chamois",
+          "houseName": "Haus Chamois",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-chamois",
+              "personId": "lleirys-chamois",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-22T21:00:00.000Z",
+              "lastSyncedAt": "2026-11-22T21:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=lleirys-chamois",
+              "fingerprint": "{\"name\":\"Lleirys Chamois\",\"title\":\"\",\"birth\":\"1707\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-chamois\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/lleirys-chamois-v1.webp\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gwaedric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--gwaedric-chamois\",\"name\":\"Gwaedric Chamois\"},{\"personId\":\"partner-gwaedric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-gwaedric-chamois\",\"name\":\"Unbekannter Partner\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "gwaedric-chamois",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--gwaedric-chamois",
+                "name": "Gwaedric Chamois"
+              },
+              {
+                "personId": "partner-gwaedric-chamois",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--partner-gwaedric-chamois",
+                "name": "Unbekannter Partner"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "bio": "Mit 33 ist Lleirys ledig und tritt am Hof der Gafyr als Bardin auf. Ihre Lieder sammelt sie in den Werkstätten und Küchen Gwynthors.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Lleirys Chamois",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Lleirys Chamois"
+            },
+            {
+              "label": "Geboren",
+              "value": "1707"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "33 Jahre"
+            },
+            {
+              "label": "Augen",
+              "value": "Grün"
+            },
+            {
+              "label": "Haare",
+              "value": "braun"
+            },
+            {
+              "label": "Herkunftsfamilie",
+              "value": "Haus Chamois"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/lleirys-chamois-v1.webp",
+            "biographyTitle": "Lleirys Chamois",
+            "biographyText": "<p>Mit 33 ist Lleirys ledig und tritt am Hof der Gafyr als Bardin auf. Ihre Lieder sammelt sie in den Werkstätten und Küchen Gwynthors.</p>",
+            "crestImage": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+            "connectionsTitle": "Familie und Verwandtschaft",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Gwaedric Chamois",
+                "detail": "Elternteil",
+                "image": "../Stammbäume/assets/images/portraits/haus-chamois/gwaedric-chamois-v1.webp",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Unbekannter Partner",
+                "detail": "Elternteil",
+                "image": "",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Stammbaum und Haus",
+            "documents": [
+              {
+                "title": "Personenkarte im Stammbaum",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=lleirys-chamois",
+                "text": "Familienzweig und Verwandtschaft."
+              },
+              {
+                "title": "Haus Chamois",
+                "link": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-chamois",
+                "text": "Geschichte, Wappen und Castell Chamois.",
+                "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png"
+              }
+            ]
+          }
+        },
+        "imageSetSchemaVersion": 1,
+        "imageSets": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/lleirys-chamois-v1.webp",
+            "emotes": [
+              {
+                "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-01.png",
+                "label": "Redend"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-02.png",
+                "label": "Freundlich"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-03.png",
+                "label": "Nachdenklich"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-04.png",
+                "label": "Skeptisch"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-05.png",
+                "label": "Überrascht"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-06.png",
+                "label": "Missbilligend"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-07.png",
+                "label": "Entschlossen"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-08.png",
+                "label": "Verärgert"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-09.png",
+                "label": "Unsicher"
+              }
+            ],
+            "createdAt": "2026-11-22T21:00:00.000Z",
+            "updatedAt": "2026-11-22T21:00:00.000Z"
+          }
+        ],
+        "activeImageSetId": "standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/lleirys-chamois-v1.webp",
+        "emotes": [
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-01.png",
+            "label": "Redend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-02.png",
+            "label": "Freundlich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-03.png",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-04.png",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-05.png",
+            "label": "Überrascht"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-06.png",
+            "label": "Missbilligend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-07.png",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-08.png",
+            "label": "Verärgert"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-09.png",
+            "label": "Unsicher"
+          }
+        ],
+        "emotesOverride": true,
+        "imageSetsOverride": true
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-chamois--lleirys-chamois",
+    "name": "Lleirys Chamois",
+    "title": "",
+    "age": 33,
+    "gender": "Weiblich",
+    "race": "Mensch",
+    "fraktion": "Haus Chamois",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "archived": false,
+    "identity": {
+      "worldPersonId": "person--haus-chamois--lleirys-chamois"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-chamois--lleirys-chamois",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1707",
+      "death": "",
+      "houseId": "house-chamois",
+      "houseName": "Haus Chamois",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-chamois",
+          "personId": "lleirys-chamois",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T21:00:00.000Z",
+          "lastSyncedAt": "2026-11-22T21:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=lleirys-chamois",
+          "fingerprint": "{\"name\":\"Lleirys Chamois\",\"title\":\"\",\"birth\":\"1707\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-chamois\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/lleirys-chamois-v1.webp\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gwaedric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--gwaedric-chamois\",\"name\":\"Gwaedric Chamois\"},{\"personId\":\"partner-gwaedric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-gwaedric-chamois\",\"name\":\"Unbekannter Partner\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "gwaedric-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--gwaedric-chamois",
+            "name": "Gwaedric Chamois"
+          },
+          {
+            "personId": "partner-gwaedric-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--partner-gwaedric-chamois",
+            "name": "Unbekannter Partner"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "bio": "Mit 33 ist Lleirys ledig und tritt am Hof der Gafyr als Bardin auf. Ihre Lieder sammelt sie in den Werkstätten und Küchen Gwynthors.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Lleirys Chamois",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Lleirys Chamois"
+        },
+        {
+          "label": "Geboren",
+          "value": "1707"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "33 Jahre"
+        },
+        {
+          "label": "Augen",
+          "value": "Grün"
+        },
+        {
+          "label": "Haare",
+          "value": "braun"
+        },
+        {
+          "label": "Herkunftsfamilie",
+          "value": "Haus Chamois"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/lleirys-chamois-v1.webp",
+        "biographyTitle": "Lleirys Chamois",
+        "biographyText": "<p>Mit 33 ist Lleirys ledig und tritt am Hof der Gafyr als Bardin auf. Ihre Lieder sammelt sie in den Werkstätten und Küchen Gwynthors.</p>",
+        "crestImage": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+        "connectionsTitle": "Familie und Verwandtschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Gwaedric Chamois",
+            "detail": "Elternteil",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/gwaedric-chamois-v1.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Unbekannter Partner",
+            "detail": "Elternteil",
+            "image": "",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Stammbaum und Haus",
+        "documents": [
+          {
+            "title": "Personenkarte im Stammbaum",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=lleirys-chamois",
+            "text": "Familienzweig und Verwandtschaft."
+          },
+          {
+            "title": "Haus Chamois",
+            "link": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-chamois",
+            "text": "Geschichte, Wappen und Castell Chamois.",
+            "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png"
+          }
+        ]
+      }
+    },
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/lleirys-chamois-v1.webp",
+        "emotes": [
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-01.png",
+            "label": "Redend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-02.png",
+            "label": "Freundlich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-03.png",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-04.png",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-05.png",
+            "label": "Überrascht"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-06.png",
+            "label": "Missbilligend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-07.png",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-08.png",
+            "label": "Verärgert"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-09.png",
+            "label": "Unsicher"
+          }
+        ],
+        "createdAt": "2026-11-22T21:00:00.000Z",
+        "updatedAt": "2026-11-22T21:00:00.000Z"
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/lleirys-chamois-v1.webp",
+    "emotes": [
+      {
+        "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-01.png",
+        "label": "Redend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-02.png",
+        "label": "Freundlich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-03.png",
+        "label": "Nachdenklich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-04.png",
+        "label": "Skeptisch"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-05.png",
+        "label": "Überrascht"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-06.png",
+        "label": "Missbilligend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-07.png",
+        "label": "Entschlossen"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-08.png",
+        "label": "Verärgert"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/lleirys-chamois/avatars/lleirys-chamois-set-01-avatar-09.png",
+        "label": "Unsicher"
+      }
+    ],
+    "emotesOverride": true,
+    "imageSetsOverride": true,
+    "aliases": []
+  }
+}

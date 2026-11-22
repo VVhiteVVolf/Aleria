@@ -3123,6 +3123,40 @@
       "updatedAt": "2026-08-12T11:03:00.281Z",
       "link": "Stammbaum.html?family=tharn&mode=view",
       "source": "github"
+    },
+    {
+      "id": "haus-chamois",
+      "familyId": "haus-chamois",
+      "title": "Haus Chamois",
+      "motto": "",
+      "emblem": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
+      "houseProfile": {
+        "rankId": "knight-simple",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
+        "secondarySeats": [],
+        "liegeHouseId": "house-gafyr",
+        "liegeHouseName": "Haus Gafyr",
+        "regionEmblems": {
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
+        }
+      },
+      "personCount": 49,
+      "revision": 1,
+      "updatedAt": "2026-11-22T22:06:00.162Z",
+      "link": "Stammbaum.html?family=haus-chamois&mode=view",
+      "source": "github"
     }
   ]
 }

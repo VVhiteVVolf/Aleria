@@ -33,7 +33,7 @@ for (const record of families) {
 }
 
 const newGuardHouseIds = new Set(['haus-brandyddyn', 'haus-curiad', 'haus-caelrith', 'haus-myrgath', 'haus-aelgorn']);
-const newReleaseHouseIds = new Set([...newGuardHouseIds, 'haus-aurdden', 'haus-halenrhyd', 'haus-caeffyn', 'haus-ruddgraen', 'glynmor']);
+const newReleaseHouseIds = new Set([...newGuardHouseIds, 'haus-aurdden', 'haus-halenrhyd', 'haus-caeffyn', 'haus-ruddgraen', 'glynmor', 'haus-chamois']);
 
 test('Die bisherigen Hausseiten samt historischer ID-Prüfsumme und die hinzugekommenen Häuser bleiben erreichbar', async () => {
   const completedPageIds = [

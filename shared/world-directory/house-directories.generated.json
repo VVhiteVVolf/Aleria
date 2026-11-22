@@ -328,6 +328,15 @@
             "liege": "Haus Draig",
             "emblem": "/Stammb%C3%A4ume/assets/images/houses/Llamreis%20Ankunft/haus-dubhan-gwynthor.png",
             "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-dubhan-gwynthor"
+          },
+          {
+            "name": "Haus Chamois",
+            "rank": "Einfache Ritterfamilie",
+            "seat": "Gwynthor",
+            "liege": "Haus Gafyr",
+            "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-chamois",
+            "familyId": "haus-chamois",
+            "emblem": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png"
           }
         ]
       },
@@ -6738,6 +6747,16 @@
             "rank": "",
             "featured": false,
             "featuredLabel": ""
+          },
+          {
+            "id": "haus-chamois",
+            "name": "Haus Chamois",
+            "rank": "Einfache Ritterfamilie",
+            "seat": "Gwynthor",
+            "liege": "Haus Gafyr",
+            "imageSrc": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+            "imageAlt": "Wappen Haus Chamois",
+            "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-chamois"
           }
         ]
       },

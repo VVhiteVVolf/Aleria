@@ -179,6 +179,7 @@ export const HOUSE_RANKS = Object.freeze({
   "haus-caeffyn": "Bürgerlich",
   "haus-caelrith": "Bürgerlich",
   "haus-celynfor": "Bürgerlich",
+  "haus-chamois": "Einfache Ritterfamilie",
   "haus-chwedlonol": "Ritterherr",
   "haus-cludwyr": "Ritterherr",
   "haus-cochdon": "Bürgerlich",

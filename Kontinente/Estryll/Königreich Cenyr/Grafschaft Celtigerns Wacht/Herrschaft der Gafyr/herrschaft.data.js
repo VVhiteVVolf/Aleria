@@ -32,6 +32,13 @@
         seat: "Gwynthor und Bronfelen",
         liege: "Gafyr",
       }),
+      data.family("Chamois", {
+        familyId: "haus-chamois", housePage: "kleinehaeuser.html",
+        imageSrc: `${houseRoot}/Ritterliche/Chamois/chamois-wappen-v1.png`,
+        seat: "Castell Chamois · Gwynthor-Stadt",
+        liege: "Gafyr",
+        rank: "Einfache Ritterfamilie",
+      }),
     ]),
   ]);
 

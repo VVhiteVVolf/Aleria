@@ -1,0 +1,292 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-22T21:00:00.000Z",
+  "assignedTab": "Gwynthor",
+  "source": {
+    "familyId": "haus-chamois",
+    "personId": "gwaedric-chamois"
+  },
+  "character": {
+    "id": "person--haus-chamois--gwaedric-chamois",
+    "name": "Gwaedric Chamois",
+    "title": "",
+    "age": 65,
+    "gender": "Männlich",
+    "race": "Mensch",
+    "fraktion": "Haus Chamois",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "archived": false,
+    "identity": {
+      "worldPersonId": "person--haus-chamois--gwaedric-chamois"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-chamois--gwaedric-chamois",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1675",
+      "death": "",
+      "houseId": "house-chamois",
+      "houseName": "Haus Chamois",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-chamois",
+          "personId": "gwaedric-chamois",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T21:00:00.000Z",
+          "lastSyncedAt": "2026-11-22T21:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=gwaedric-chamois",
+          "fingerprint": "{\"name\":\"Gwaedric Chamois\",\"title\":\"\",\"birth\":\"1675\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-chamois\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/gwaedric-chamois-v1.webp\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"thalric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--thalric-chamois\",\"name\":\"Thalric Chamois\"},{\"personId\":\"partner-thalric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-thalric-chamois\",\"name\":\"Unbekannter Partner\"}],\"partners\":[{\"personId\":\"partner-gwaedric-chamois\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-gwaedric-chamois\",\"name\":\"Unbekannter Partner\"}],\"children\":[{\"personId\":\"kyrban-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--kyrban-chamois\",\"name\":\"Kyrban Chamois\"},{\"personId\":\"rhydeth-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--rhydeth-chamois\",\"name\":\"Rhydeth Chamois\"},{\"personId\":\"lleirys-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--lleirys-chamois\",\"name\":\"Lleirys Chamois\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "thalric-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--thalric-chamois",
+            "name": "Thalric Chamois"
+          },
+          {
+            "personId": "partner-thalric-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--partner-thalric-chamois",
+            "name": "Unbekannter Partner"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "partner-gwaedric-chamois",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--partner-gwaedric-chamois",
+            "name": "Unbekannter Partner"
+          }
+        ],
+        "children": [
+          {
+            "personId": "kyrban-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--kyrban-chamois",
+            "name": "Kyrban Chamois"
+          },
+          {
+            "personId": "rhydeth-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--rhydeth-chamois",
+            "name": "Rhydeth Chamois"
+          },
+          {
+            "personId": "lleirys-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--lleirys-chamois",
+            "name": "Lleirys Chamois"
+          }
+        ]
+      }
+    },
+    "bio": "Gwaedric Chamois gehört zur Familie Chamois in Gwynthor.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Gwaedric Chamois",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Gwaedric Chamois"
+        },
+        {
+          "label": "Geboren",
+          "value": "1675"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "65 Jahre"
+        },
+        {
+          "label": "Augen",
+          "value": "Grün"
+        },
+        {
+          "label": "Haare",
+          "value": "grau"
+        },
+        {
+          "label": "Herkunftsfamilie",
+          "value": "Haus Chamois"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/gwaedric-chamois-v1.webp",
+        "biographyTitle": "Gwaedric Chamois",
+        "biographyText": "<p>Gwaedric Chamois gehört zur Familie Chamois in Gwynthor.</p>",
+        "crestImage": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+        "connectionsTitle": "Familie und Verwandtschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Thalric Chamois",
+            "detail": "Elternteil",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/thalric-chamois-v1.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Unbekannter Partner",
+            "detail": "Elternteil",
+            "image": "",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Unbekannter Partner",
+            "detail": "Ehe",
+            "image": "",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Kyrban Chamois",
+            "detail": "Kind",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/kyrban-chamois-v1.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Rhydeth Chamois",
+            "detail": "Kind",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/rhydeth-chamois-v1.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Lleirys Chamois",
+            "detail": "Kind",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/lleirys-chamois-v1.webp",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Stammbaum und Haus",
+        "documents": [
+          {
+            "title": "Personenkarte im Stammbaum",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=gwaedric-chamois",
+            "text": "Familienzweig und Verwandtschaft."
+          },
+          {
+            "title": "Haus Chamois",
+            "link": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-chamois",
+            "text": "Geschichte, Wappen und Castell Chamois.",
+            "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png"
+          }
+        ]
+      }
+    },
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/gwaedric-chamois-v1.webp",
+        "emotes": [
+          {
+            "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-01.png",
+            "label": "Redend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-02.png",
+            "label": "Freundlich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-03.png",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-04.png",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-05.png",
+            "label": "Überrascht"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-06.png",
+            "label": "Missbilligend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-07.png",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-08.png",
+            "label": "Verärgert"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-09.png",
+            "label": "Unsicher"
+          }
+        ],
+        "createdAt": "2026-11-22T21:00:00.000Z",
+        "updatedAt": "2026-11-22T21:00:00.000Z"
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/gwaedric-chamois-v1.webp",
+    "emotes": [
+      {
+        "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-01.png",
+        "label": "Redend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-02.png",
+        "label": "Freundlich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-03.png",
+        "label": "Nachdenklich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-04.png",
+        "label": "Skeptisch"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-05.png",
+        "label": "Überrascht"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-06.png",
+        "label": "Missbilligend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-07.png",
+        "label": "Entschlossen"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-08.png",
+        "label": "Verärgert"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/gwaedric-chamois/avatars/gwaedric-chamois-set-01-avatar-09.png",
+        "label": "Unsicher"
+      }
+    ],
+    "emotesOverride": true,
+    "imageSetsOverride": true
+  }
+}

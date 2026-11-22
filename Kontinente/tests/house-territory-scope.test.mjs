@@ -83,7 +83,7 @@ test('Unterherrschaften führen alle eigenen registrierten Häuser, ohne ihre kl
 
 test('Ritterfürsten zeigen ihre belegten Vasallen direkt auf der eigenen Herrschaftsseite', () => {
   for (const [key, expected] of [
-    ['gafyr', ['gafyr','gostyn','tlawd']],
+    ['gafyr', ['chamois','gafyr','gostyn','tlawd']],
     ['saethwyr', ['chwedlonol','eneiniog','saethwyr']],
     ['wyrm', ['argall','blevis','brogar','cludwyr','crewe','glyn','jernigan','loer','rhyddid','talfryn','tarw','tynged','wyrm']],
   ]) {

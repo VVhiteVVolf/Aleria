@@ -1,0 +1,307 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-22T21:00:00.000Z",
+  "assignedTab": "Gwynthor",
+  "source": {
+    "familyId": "haus-chamois",
+    "personId": "perwyn-chamois"
+  },
+  "character": {
+    "id": "person--haus-chamois--perwyn-chamois",
+    "name": "Perwyn Chamois",
+    "title": "",
+    "age": 70,
+    "gender": "Männlich",
+    "race": "Mensch",
+    "fraktion": "Haus Chamois",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "archived": false,
+    "identity": {
+      "worldPersonId": "person--haus-chamois--perwyn-chamois"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-chamois--perwyn-chamois",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1670",
+      "death": "",
+      "houseId": "house-chamois",
+      "houseName": "Haus Chamois",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-chamois",
+          "personId": "perwyn-chamois",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T21:00:00.000Z",
+          "lastSyncedAt": "2026-11-22T21:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=perwyn-chamois",
+          "fingerprint": "{\"name\":\"Perwyn Chamois\",\"title\":\"\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-chamois\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/perwyn-chamois-v1.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"thalric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--thalric-chamois\",\"name\":\"Thalric Chamois\"},{\"personId\":\"partner-thalric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-thalric-chamois\",\"name\":\"Unbekannter Partner\"}],\"partners\":[{\"personId\":\"partner-perwyn-chamois\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-perwyn-chamois\",\"name\":\"Unbekannter Partner\"}],\"children\":[{\"personId\":\"brenae-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--brenae-chamois\",\"name\":\"Brenae Chamois\"},{\"personId\":\"rhewella-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--rhewella-chamois\",\"name\":\"Rhewella Chamois\"},{\"personId\":\"jannwen-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--jannwen-chamois\",\"name\":\"Jannwen Chamois\"},{\"personId\":\"saithan-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--saithan-chamois\",\"name\":\"Saithan Chamois\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "thalric-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--thalric-chamois",
+            "name": "Thalric Chamois"
+          },
+          {
+            "personId": "partner-thalric-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--partner-thalric-chamois",
+            "name": "Unbekannter Partner"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "partner-perwyn-chamois",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--partner-perwyn-chamois",
+            "name": "Unbekannter Partner"
+          }
+        ],
+        "children": [
+          {
+            "personId": "brenae-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--brenae-chamois",
+            "name": "Brenae Chamois"
+          },
+          {
+            "personId": "rhewella-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--rhewella-chamois",
+            "name": "Rhewella Chamois"
+          },
+          {
+            "personId": "jannwen-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--jannwen-chamois",
+            "name": "Jannwen Chamois"
+          },
+          {
+            "personId": "saithan-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--saithan-chamois",
+            "name": "Saithan Chamois"
+          }
+        ]
+      }
+    },
+    "bio": "Perwyn Chamois gehört zur Familie Chamois in Gwynthor.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Perwyn Chamois",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Perwyn Chamois"
+        },
+        {
+          "label": "Geboren",
+          "value": "1670"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "70 Jahre"
+        },
+        {
+          "label": "Augen",
+          "value": "Grün"
+        },
+        {
+          "label": "Haare",
+          "value": "grau"
+        },
+        {
+          "label": "Herkunftsfamilie",
+          "value": "Haus Chamois"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/perwyn-chamois-v1.png",
+        "biographyTitle": "Perwyn Chamois",
+        "biographyText": "<p>Perwyn Chamois gehört zur Familie Chamois in Gwynthor.</p>",
+        "crestImage": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+        "connectionsTitle": "Familie und Verwandtschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Thalric Chamois",
+            "detail": "Elternteil",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/thalric-chamois-v1.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Unbekannter Partner",
+            "detail": "Elternteil",
+            "image": "",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Unbekannter Partner",
+            "detail": "Ehe",
+            "image": "",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Brenae Chamois",
+            "detail": "Kind",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/brenae-chamois-v1.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Rhewella Chamois",
+            "detail": "Kind",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/rhewella-chamois-v1.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Jannwen Chamois",
+            "detail": "Kind",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/jannwen-chamois-v1.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Saithan Chamois",
+            "detail": "Kind",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/saithan-chamois-v2.webp",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Stammbaum und Haus",
+        "documents": [
+          {
+            "title": "Personenkarte im Stammbaum",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=perwyn-chamois",
+            "text": "Familienzweig und Verwandtschaft."
+          },
+          {
+            "title": "Haus Chamois",
+            "link": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-chamois",
+            "text": "Geschichte, Wappen und Castell Chamois.",
+            "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png"
+          }
+        ]
+      }
+    },
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/perwyn-chamois-v1.png",
+        "emotes": [
+          {
+            "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-01.png",
+            "label": "Redend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-02.png",
+            "label": "Freundlich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-03.png",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-04.png",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-05.png",
+            "label": "Überrascht"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-06.png",
+            "label": "Missbilligend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-07.png",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-08.png",
+            "label": "Verärgert"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-09.png",
+            "label": "Unsicher"
+          }
+        ],
+        "createdAt": "2026-11-22T21:00:00.000Z",
+        "updatedAt": "2026-11-22T21:00:00.000Z"
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/perwyn-chamois-v1.png",
+    "emotes": [
+      {
+        "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-01.png",
+        "label": "Redend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-02.png",
+        "label": "Freundlich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-03.png",
+        "label": "Nachdenklich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-04.png",
+        "label": "Skeptisch"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-05.png",
+        "label": "Überrascht"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-06.png",
+        "label": "Missbilligend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-07.png",
+        "label": "Entschlossen"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-08.png",
+        "label": "Verärgert"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/perwyn-chamois/avatars/perwyn-chamois-set-01-avatar-09.png",
+        "label": "Unsicher"
+      }
+    ],
+    "emotesOverride": true,
+    "imageSetsOverride": true
+  }
+}

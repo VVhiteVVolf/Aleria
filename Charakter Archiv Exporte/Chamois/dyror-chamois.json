@@ -1,0 +1,225 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-22T21:00:00.000Z",
+  "assignedTab": "Gwynthor",
+  "source": {
+    "familyId": "haus-chamois",
+    "personId": "dyror-chamois"
+  },
+  "character": {
+    "id": "person--haus-chamois--dyror-chamois",
+    "name": "Dyror",
+    "title": "",
+    "age": 34,
+    "gender": "Männlich",
+    "race": "Mensch",
+    "fraktion": "Haus Gafyr",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "archived": false,
+    "identity": {
+      "worldPersonId": "person--haus-chamois--dyror-chamois"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-chamois--dyror-chamois",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1706",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "bastard",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-chamois",
+          "personId": "dyror-chamois",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T21:00:00.000Z",
+          "lastSyncedAt": "2026-11-22T21:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=dyror-chamois",
+          "fingerprint": "{\"name\":\"Dyror\",\"title\":\"\",\"birth\":\"1706\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/dyror-chamois-v3.webp\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"firen-chamois\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--firen-chamois\",\"name\":\"Firen Chamois\"},{\"personId\":\"partnerin-firen-chamois\",\"type\":\"biological\",\"legitimacy\":\"illegitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partnerin-firen-chamois\",\"name\":\"Unbekannte Partnerin\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "firen-chamois",
+            "type": "biological",
+            "legitimacy": "illegitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--firen-chamois",
+            "name": "Firen Chamois"
+          },
+          {
+            "personId": "partnerin-firen-chamois",
+            "type": "biological",
+            "legitimacy": "illegitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--partnerin-firen-chamois",
+            "name": "Unbekannte Partnerin"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "bio": "Dyror ist Firens Sohn aus einer Affäre. Er dient den Gafyr als Waffenknecht und trägt ihre schlichte Rüstung ohne Emblem.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Dyror",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Dyror"
+        },
+        {
+          "label": "Geboren",
+          "value": "1706"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "34 Jahre"
+        },
+        {
+          "label": "Augen",
+          "value": "Grün"
+        },
+        {
+          "label": "Haare",
+          "value": "braun"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/dyror-chamois-v3.webp",
+        "biographyTitle": "Dyror",
+        "biographyText": "<p>Dyror ist Firens Sohn aus einer Affäre. Er dient den Gafyr als Waffenknecht und trägt ihre schlichte Rüstung ohne Emblem.</p>",
+        "connectionsTitle": "Familie und Verwandtschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Firen Chamois",
+            "detail": "Elternteil",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/firen-chamois-v3.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Unbekannte Partnerin",
+            "detail": "Elternteil",
+            "image": "",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Stammbaum und Haus",
+        "documents": [
+          {
+            "title": "Personenkarte im Stammbaum",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=dyror-chamois",
+            "text": "Familienzweig und Verwandtschaft."
+          },
+          {
+            "title": "Haus Chamois",
+            "link": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-chamois",
+            "text": "Geschichte, Wappen und Castell Chamois.",
+            "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png"
+          }
+        ]
+      }
+    },
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/dyror-chamois-v3.webp",
+        "emotes": [
+          {
+            "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-01.png",
+            "label": "Redend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-02.png",
+            "label": "Freundlich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-03.png",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-04.png",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-05.png",
+            "label": "Überrascht"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-06.png",
+            "label": "Missbilligend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-07.png",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-08.png",
+            "label": "Verärgert"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-09.png",
+            "label": "Unsicher"
+          }
+        ],
+        "createdAt": "2026-11-22T21:00:00.000Z",
+        "updatedAt": "2026-11-22T21:00:00.000Z"
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/dyror-chamois-v3.webp",
+    "emotes": [
+      {
+        "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-01.png",
+        "label": "Redend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-02.png",
+        "label": "Freundlich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-03.png",
+        "label": "Nachdenklich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-04.png",
+        "label": "Skeptisch"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-05.png",
+        "label": "Überrascht"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-06.png",
+        "label": "Missbilligend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-07.png",
+        "label": "Entschlossen"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-08.png",
+        "label": "Verärgert"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/dyror-chamois/avatars/dyror-chamois-set-01-avatar-09.png",
+        "label": "Unsicher"
+      }
+    ],
+    "emotesOverride": true,
+    "imageSetsOverride": true
+  }
+}

@@ -15,6 +15,7 @@ import { HOUSE_ARWYDD_FAMILY } from './house-arwydd-family.js?v=hausbio-20260911
 import { HOUSE_ARD_CONBHRON_FAMILY } from './house-ard-conbhron-family.js';
 import { HOUSE_UI_TALAMH_FAMILY } from './house-ui-talamh-family.js';
 import { HOUSE_GAFYR_FAMILY } from './house-gafyr-family.js?v=hausbio-20260911c';
+import { HOUSE_CHAMOIS_FAMILY } from './house-chamois-family.js';
 import { HOUSE_WYRM_FAMILY } from './house-wyrm-family.js?v=gais-bio-20260912';
 import { HOUSE_SAETHWYR_FAMILY } from './house-saethwyr-family.js?v=anwyll-bio-20260912';
 import { HOUSE_DUBHAN_FAMILY } from './house-dubhan-family.js';
@@ -220,6 +221,7 @@ export const FAMILY_REGISTRY = Object.freeze([
     title: 'Haus Gafyr',
     family: HOUSE_GAFYR_FAMILY
   }),
+  familyRecord({ id: 'haus-chamois', title: 'Haus Chamois', family: HOUSE_CHAMOIS_FAMILY }),
   familyRecord({
     id: 'haus-gwefrydd',
     title: 'Haus Gwefrydd',

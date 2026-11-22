@@ -1,0 +1,638 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-chamois--kyrban-chamois",
+  "slug": "kyrban-chamois",
+  "identity": {
+    "name": "Kyrban Chamois",
+    "aliases": [],
+    "worldPersonId": "person--haus-chamois--kyrban-chamois"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-chamois",
+      "label": "Haus Chamois"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-chamois",
+        "familyTitle": "Haus Chamois",
+        "personId": "kyrban-chamois",
+        "worldPersonId": "person--haus-chamois--kyrban-chamois",
+        "houseId": "house-chamois",
+        "houseName": "Haus Chamois",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Kyrban Chamois\",\"title\":\"\",\"birth\":\"1701\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-chamois\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/kyrban-chamois-v1.webp\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gwaedric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--gwaedric-chamois\",\"name\":\"Gwaedric Chamois\"},{\"personId\":\"partner-gwaedric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-gwaedric-chamois\",\"name\":\"Unbekannter Partner\"}],\"partners\":[{\"personId\":\"partner-kyrban-chamois\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-kyrban-chamois\",\"name\":\"Unbekannter Partner\"}],\"children\":[{\"personId\":\"sairwen-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--sairwen-chamois\",\"name\":\"Sairwen Chamois\"},{\"personId\":\"iwrwyn-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--iwrwyn-chamois\",\"name\":\"Iwrwyn Chamois\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-chamois--kyrban-chamois",
+      "documentIds": [
+        "person--haus-chamois--kyrban-chamois"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-chamois--kyrban-chamois",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-chamois",
+        "personId": "kyrban-chamois",
+        "worldPersonId": "person--haus-chamois--kyrban-chamois",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Chamois/kyrban-chamois.json",
+    "sourceExportedAt": "2026-11-22T21:00:00.000Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-chamois--kyrban-chamois"
+    ],
+    "contentHash": "2e8324b808f448355e94a772ad28853649b5d030237b6540be2a6593438eae70"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "haus-chamois"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-chamois--kyrban-chamois",
+        "name": "Kyrban Chamois",
+        "title": "",
+        "age": 39,
+        "gender": "Männlich",
+        "race": "Mensch",
+        "fraktion": "Haus Chamois",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "archived": false,
+        "identity": {
+          "worldPersonId": "person--haus-chamois--kyrban-chamois"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-chamois--kyrban-chamois",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1701",
+          "death": "",
+          "houseId": "house-chamois",
+          "houseName": "Haus Chamois",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-chamois",
+              "personId": "kyrban-chamois",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-22T21:00:00.000Z",
+              "lastSyncedAt": "2026-11-22T21:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=kyrban-chamois",
+              "fingerprint": "{\"name\":\"Kyrban Chamois\",\"title\":\"\",\"birth\":\"1701\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-chamois\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/kyrban-chamois-v1.webp\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gwaedric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--gwaedric-chamois\",\"name\":\"Gwaedric Chamois\"},{\"personId\":\"partner-gwaedric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-gwaedric-chamois\",\"name\":\"Unbekannter Partner\"}],\"partners\":[{\"personId\":\"partner-kyrban-chamois\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-kyrban-chamois\",\"name\":\"Unbekannter Partner\"}],\"children\":[{\"personId\":\"sairwen-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--sairwen-chamois\",\"name\":\"Sairwen Chamois\"},{\"personId\":\"iwrwyn-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--iwrwyn-chamois\",\"name\":\"Iwrwyn Chamois\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "gwaedric-chamois",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--gwaedric-chamois",
+                "name": "Gwaedric Chamois"
+              },
+              {
+                "personId": "partner-gwaedric-chamois",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--partner-gwaedric-chamois",
+                "name": "Unbekannter Partner"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "partner-kyrban-chamois",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--partner-kyrban-chamois",
+                "name": "Unbekannter Partner"
+              }
+            ],
+            "children": [
+              {
+                "personId": "sairwen-chamois",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--sairwen-chamois",
+                "name": "Sairwen Chamois"
+              },
+              {
+                "personId": "iwrwyn-chamois",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--iwrwyn-chamois",
+                "name": "Iwrwyn Chamois"
+              }
+            ]
+          }
+        },
+        "bio": "Kyrban Chamois gehört zur Familie Chamois in Gwynthor.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Kyrban Chamois",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Kyrban Chamois"
+            },
+            {
+              "label": "Geboren",
+              "value": "1701"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "39 Jahre"
+            },
+            {
+              "label": "Augen",
+              "value": "Grün"
+            },
+            {
+              "label": "Haare",
+              "value": "braun"
+            },
+            {
+              "label": "Herkunftsfamilie",
+              "value": "Haus Chamois"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/kyrban-chamois-v1.webp",
+            "biographyTitle": "Kyrban Chamois",
+            "biographyText": "<p>Kyrban Chamois gehört zur Familie Chamois in Gwynthor.</p>",
+            "crestImage": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+            "connectionsTitle": "Familie und Verwandtschaft",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Gwaedric Chamois",
+                "detail": "Elternteil",
+                "image": "../Stammbäume/assets/images/portraits/haus-chamois/gwaedric-chamois-v1.webp",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Unbekannter Partner",
+                "detail": "Elternteil",
+                "image": "",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Unbekannter Partner",
+                "detail": "Ehe",
+                "image": "",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Sairwen Chamois",
+                "detail": "Kind",
+                "image": "../Stammbäume/assets/images/portraits/haus-chamois/sairwen-chamois-v1.webp",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Iwrwyn Chamois",
+                "detail": "Kind",
+                "image": "../Stammbäume/assets/images/portraits/haus-chamois/iwrwyn-chamois-v1.webp",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Stammbaum und Haus",
+            "documents": [
+              {
+                "title": "Personenkarte im Stammbaum",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=kyrban-chamois",
+                "text": "Familienzweig und Verwandtschaft."
+              },
+              {
+                "title": "Haus Chamois",
+                "link": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-chamois",
+                "text": "Geschichte, Wappen und Castell Chamois.",
+                "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png"
+              }
+            ]
+          }
+        },
+        "imageSetSchemaVersion": 1,
+        "imageSets": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/kyrban-chamois-v1.webp",
+            "emotes": [
+              {
+                "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-01.png",
+                "label": "Redend"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-02.png",
+                "label": "Freundlich"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-03.png",
+                "label": "Nachdenklich"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-04.png",
+                "label": "Skeptisch"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-05.png",
+                "label": "Überrascht"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-06.png",
+                "label": "Missbilligend"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-07.png",
+                "label": "Entschlossen"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-08.png",
+                "label": "Verärgert"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-09.png",
+                "label": "Unsicher"
+              }
+            ],
+            "createdAt": "2026-11-22T21:00:00.000Z",
+            "updatedAt": "2026-11-22T21:00:00.000Z"
+          }
+        ],
+        "activeImageSetId": "standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/kyrban-chamois-v1.webp",
+        "emotes": [
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-01.png",
+            "label": "Redend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-02.png",
+            "label": "Freundlich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-03.png",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-04.png",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-05.png",
+            "label": "Überrascht"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-06.png",
+            "label": "Missbilligend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-07.png",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-08.png",
+            "label": "Verärgert"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-09.png",
+            "label": "Unsicher"
+          }
+        ],
+        "emotesOverride": true,
+        "imageSetsOverride": true
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-chamois--kyrban-chamois",
+    "name": "Kyrban Chamois",
+    "title": "",
+    "age": 39,
+    "gender": "Männlich",
+    "race": "Mensch",
+    "fraktion": "Haus Chamois",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "archived": false,
+    "identity": {
+      "worldPersonId": "person--haus-chamois--kyrban-chamois"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-chamois--kyrban-chamois",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1701",
+      "death": "",
+      "houseId": "house-chamois",
+      "houseName": "Haus Chamois",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-chamois",
+          "personId": "kyrban-chamois",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T21:00:00.000Z",
+          "lastSyncedAt": "2026-11-22T21:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=kyrban-chamois",
+          "fingerprint": "{\"name\":\"Kyrban Chamois\",\"title\":\"\",\"birth\":\"1701\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-chamois\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/kyrban-chamois-v1.webp\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"gwaedric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--gwaedric-chamois\",\"name\":\"Gwaedric Chamois\"},{\"personId\":\"partner-gwaedric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-gwaedric-chamois\",\"name\":\"Unbekannter Partner\"}],\"partners\":[{\"personId\":\"partner-kyrban-chamois\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-kyrban-chamois\",\"name\":\"Unbekannter Partner\"}],\"children\":[{\"personId\":\"sairwen-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--sairwen-chamois\",\"name\":\"Sairwen Chamois\"},{\"personId\":\"iwrwyn-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--iwrwyn-chamois\",\"name\":\"Iwrwyn Chamois\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "gwaedric-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--gwaedric-chamois",
+            "name": "Gwaedric Chamois"
+          },
+          {
+            "personId": "partner-gwaedric-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--partner-gwaedric-chamois",
+            "name": "Unbekannter Partner"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "partner-kyrban-chamois",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--partner-kyrban-chamois",
+            "name": "Unbekannter Partner"
+          }
+        ],
+        "children": [
+          {
+            "personId": "sairwen-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--sairwen-chamois",
+            "name": "Sairwen Chamois"
+          },
+          {
+            "personId": "iwrwyn-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--iwrwyn-chamois",
+            "name": "Iwrwyn Chamois"
+          }
+        ]
+      }
+    },
+    "bio": "Kyrban Chamois gehört zur Familie Chamois in Gwynthor.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Kyrban Chamois",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Kyrban Chamois"
+        },
+        {
+          "label": "Geboren",
+          "value": "1701"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "39 Jahre"
+        },
+        {
+          "label": "Augen",
+          "value": "Grün"
+        },
+        {
+          "label": "Haare",
+          "value": "braun"
+        },
+        {
+          "label": "Herkunftsfamilie",
+          "value": "Haus Chamois"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/kyrban-chamois-v1.webp",
+        "biographyTitle": "Kyrban Chamois",
+        "biographyText": "<p>Kyrban Chamois gehört zur Familie Chamois in Gwynthor.</p>",
+        "crestImage": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+        "connectionsTitle": "Familie und Verwandtschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Gwaedric Chamois",
+            "detail": "Elternteil",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/gwaedric-chamois-v1.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Unbekannter Partner",
+            "detail": "Elternteil",
+            "image": "",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Unbekannter Partner",
+            "detail": "Ehe",
+            "image": "",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Sairwen Chamois",
+            "detail": "Kind",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/sairwen-chamois-v1.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Iwrwyn Chamois",
+            "detail": "Kind",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/iwrwyn-chamois-v1.webp",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Stammbaum und Haus",
+        "documents": [
+          {
+            "title": "Personenkarte im Stammbaum",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=kyrban-chamois",
+            "text": "Familienzweig und Verwandtschaft."
+          },
+          {
+            "title": "Haus Chamois",
+            "link": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-chamois",
+            "text": "Geschichte, Wappen und Castell Chamois.",
+            "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png"
+          }
+        ]
+      }
+    },
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/kyrban-chamois-v1.webp",
+        "emotes": [
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-01.png",
+            "label": "Redend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-02.png",
+            "label": "Freundlich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-03.png",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-04.png",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-05.png",
+            "label": "Überrascht"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-06.png",
+            "label": "Missbilligend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-07.png",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-08.png",
+            "label": "Verärgert"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-09.png",
+            "label": "Unsicher"
+          }
+        ],
+        "createdAt": "2026-11-22T21:00:00.000Z",
+        "updatedAt": "2026-11-22T21:00:00.000Z"
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/kyrban-chamois-v1.webp",
+    "emotes": [
+      {
+        "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-01.png",
+        "label": "Redend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-02.png",
+        "label": "Freundlich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-03.png",
+        "label": "Nachdenklich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-04.png",
+        "label": "Skeptisch"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-05.png",
+        "label": "Überrascht"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-06.png",
+        "label": "Missbilligend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-07.png",
+        "label": "Entschlossen"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-08.png",
+        "label": "Verärgert"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/kyrban-chamois/avatars/kyrban-chamois-set-01-avatar-09.png",
+        "label": "Unsicher"
+      }
+    ],
+    "emotesOverride": true,
+    "imageSetsOverride": true,
+    "aliases": []
+  }
+}

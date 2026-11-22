@@ -7,6 +7,7 @@ import { getRegisteredFamily } from '../../Stammbäume/assets/js/data/families.r
 import { projectStilleEinkehrOriginalPins } from './support/stille-einkehr-pin-history.mjs';
 import { projectHalenrhydOriginalPins } from './support/halenrhyd-pin-history.mjs';
 import { projectNorthernFarmOriginalPins } from './support/northern-farms-pin-history.mjs';
+import { projectChamoisOriginalPin } from './support/chamois-estate-pin-history.mjs';
 
 const root = new URL('../../', import.meta.url);
 const directory = new URL('../Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/', import.meta.url);
@@ -78,7 +79,8 @@ test('every unrelated pin and map setting remains byte-equivalent in its JSON mo
     ['gwynthor-marking-092', 'gwynthor-marking-107', 'gwynthor-marking-115']);
   const profilesById = new Map(priorProfiles.pins.map(item => [item.id, item]));
   const reviewedLocalities = read('fleischsammler-localities.source.json');
-  const historicalPins = projectStilleEinkehrOriginalPins(projectTirfelynOriginalPinImages(projectHalenrhydOriginalPins(projectNorthernFarmOriginalPins(pins)))).map(item => {
+  const priorToChamois = projectChamoisOriginalPin(pins);
+  const historicalPins = projectStilleEinkehrOriginalPins(projectTirfelynOriginalPinImages(projectHalenrhydOriginalPins(projectNorthernFarmOriginalPins(priorToChamois)))).map(item => {
     const prior = profilesById.get(item.id);
     if (!prior) return item;
     const approved = reviewedLocalities.locations.find(location => location.pinId === item.id)?.patch;

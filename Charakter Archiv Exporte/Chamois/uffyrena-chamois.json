@@ -1,0 +1,246 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-22T21:00:00.000Z",
+  "assignedTab": "Gwynthor",
+  "source": {
+    "familyId": "haus-chamois",
+    "personId": "uffyrena-chamois"
+  },
+  "character": {
+    "id": "person--haus-chamois--uffyrena-chamois",
+    "name": "Uffyrena Chamois",
+    "title": "",
+    "age": 36,
+    "gender": "Weiblich",
+    "race": "Mensch",
+    "fraktion": "Haus Chamois",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "archived": false,
+    "identity": {
+      "worldPersonId": "person--haus-chamois--uffyrena-chamois"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-chamois--uffyrena-chamois",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1704",
+      "death": "",
+      "houseId": "house-chamois",
+      "houseName": "Haus Chamois",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-chamois",
+          "personId": "uffyrena-chamois",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T21:00:00.000Z",
+          "lastSyncedAt": "2026-11-22T21:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=uffyrena-chamois",
+          "fingerprint": "{\"name\":\"Uffyrena Chamois\",\"title\":\"\",\"birth\":\"1704\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-chamois\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/uffyrena-chamois-v1.webp\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"uwchyr-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--uwchyr-chamois\",\"name\":\"Uwchyr Chamois\"},{\"personId\":\"partner-uwchyr-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-uwchyr-chamois\",\"name\":\"Unbekannter Partner\"}],\"partners\":[{\"personId\":\"partner-uffyrena-chamois\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-uffyrena-chamois\",\"name\":\"Unbekannter Partner\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "uwchyr-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--uwchyr-chamois",
+            "name": "Uwchyr Chamois"
+          },
+          {
+            "personId": "partner-uwchyr-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--partner-uwchyr-chamois",
+            "name": "Unbekannter Partner"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "partner-uffyrena-chamois",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--partner-uffyrena-chamois",
+            "name": "Unbekannter Partner"
+          }
+        ],
+        "children": []
+      }
+    },
+    "bio": "Uffyrena Chamois gehört zur Familie Chamois in Gwynthor.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Uffyrena Chamois",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Uffyrena Chamois"
+        },
+        {
+          "label": "Geboren",
+          "value": "1704"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "36 Jahre"
+        },
+        {
+          "label": "Augen",
+          "value": "Grün"
+        },
+        {
+          "label": "Haare",
+          "value": "braun"
+        },
+        {
+          "label": "Herkunftsfamilie",
+          "value": "Haus Chamois"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/uffyrena-chamois-v1.webp",
+        "biographyTitle": "Uffyrena Chamois",
+        "biographyText": "<p>Uffyrena Chamois gehört zur Familie Chamois in Gwynthor.</p>",
+        "crestImage": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+        "connectionsTitle": "Familie und Verwandtschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Uwchyr Chamois",
+            "detail": "Elternteil",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/uwchyr-chamois-v2.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Unbekannter Partner",
+            "detail": "Elternteil",
+            "image": "",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Unbekannter Partner",
+            "detail": "Ehe",
+            "image": "",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Stammbaum und Haus",
+        "documents": [
+          {
+            "title": "Personenkarte im Stammbaum",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=uffyrena-chamois",
+            "text": "Familienzweig und Verwandtschaft."
+          },
+          {
+            "title": "Haus Chamois",
+            "link": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-chamois",
+            "text": "Geschichte, Wappen und Castell Chamois.",
+            "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png"
+          }
+        ]
+      }
+    },
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/uffyrena-chamois-v1.webp",
+        "emotes": [
+          {
+            "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-01.png",
+            "label": "Redend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-02.png",
+            "label": "Freundlich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-03.png",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-04.png",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-05.png",
+            "label": "Überrascht"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-06.png",
+            "label": "Missbilligend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-07.png",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-08.png",
+            "label": "Verärgert"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-09.png",
+            "label": "Unsicher"
+          }
+        ],
+        "createdAt": "2026-11-22T21:00:00.000Z",
+        "updatedAt": "2026-11-22T21:00:00.000Z"
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/uffyrena-chamois-v1.webp",
+    "emotes": [
+      {
+        "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-01.png",
+        "label": "Redend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-02.png",
+        "label": "Freundlich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-03.png",
+        "label": "Nachdenklich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-04.png",
+        "label": "Skeptisch"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-05.png",
+        "label": "Überrascht"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-06.png",
+        "label": "Missbilligend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-07.png",
+        "label": "Entschlossen"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-08.png",
+        "label": "Verärgert"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/uffyrena-chamois/avatars/uffyrena-chamois-set-01-avatar-09.png",
+        "label": "Unsicher"
+      }
+    ],
+    "emotesOverride": true,
+    "imageSetsOverride": true
+  }
+}

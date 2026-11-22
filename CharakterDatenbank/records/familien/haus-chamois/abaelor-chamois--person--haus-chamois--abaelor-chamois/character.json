@@ -1,0 +1,706 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-chamois--abaelor-chamois",
+  "slug": "abaelor-chamois",
+  "identity": {
+    "name": "Abaelor Chamois",
+    "aliases": [],
+    "worldPersonId": "person--haus-chamois--abaelor-chamois"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-chamois",
+      "label": "Haus Chamois"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-chamois",
+        "familyTitle": "Haus Chamois",
+        "personId": "abaelor-chamois",
+        "worldPersonId": "person--haus-chamois--abaelor-chamois",
+        "houseId": "house-chamois",
+        "houseName": "Haus Chamois",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Abaelor Chamois\",\"title\":\"Oberhaupt\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-chamois\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/abaelor-chamois-v1.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"thalric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--thalric-chamois\",\"name\":\"Thalric Chamois\"},{\"personId\":\"partner-thalric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-thalric-chamois\",\"name\":\"Unbekannter Partner\"}],\"partners\":[{\"personId\":\"partner-abaelor-chamois\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-abaelor-chamois\",\"name\":\"Unbekannter Partner\"}],\"children\":[{\"personId\":\"helric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--helric-chamois\",\"name\":\"Helric Chamois\"},{\"personId\":\"lleuen-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--lleuen-chamois\",\"name\":\"Lleuen Chamois\"},{\"personId\":\"dyreth-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--dyreth-chamois\",\"name\":\"Dyreth Chamois\"},{\"personId\":\"iwrban-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--iwrban-chamois\",\"name\":\"Iwrban Chamois\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-chamois--abaelor-chamois",
+      "documentIds": [
+        "person--haus-chamois--abaelor-chamois"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-chamois--abaelor-chamois",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-chamois",
+        "personId": "abaelor-chamois",
+        "worldPersonId": "person--haus-chamois--abaelor-chamois",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Chamois/abaelor-chamois.json",
+    "sourceExportedAt": "2026-11-22T21:00:00.000Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-chamois--abaelor-chamois"
+    ],
+    "contentHash": "e6004d247cd6bace1c0cae8572b23bd3e4f80bd6ba8a0a6f5e02c67c78122b33"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "haus-chamois"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "person--haus-chamois--abaelor-chamois",
+        "name": "Abaelor Chamois",
+        "title": "Oberhaupt",
+        "age": 70,
+        "gender": "Männlich",
+        "race": "Mensch",
+        "fraktion": "Haus Chamois",
+        "status": "active",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "archived": false,
+        "identity": {
+          "worldPersonId": "person--haus-chamois--abaelor-chamois"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-chamois--abaelor-chamois",
+          "sex": "male",
+          "status": "alive",
+          "birth": "1670",
+          "death": "",
+          "houseId": "house-chamois",
+          "houseName": "Haus Chamois",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "haus-chamois",
+              "personId": "abaelor-chamois",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-22T21:00:00.000Z",
+              "lastSyncedAt": "2026-11-22T21:00:00.000Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=abaelor-chamois",
+              "fingerprint": "{\"name\":\"Abaelor Chamois\",\"title\":\"Oberhaupt\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-chamois\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/abaelor-chamois-v1.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"thalric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--thalric-chamois\",\"name\":\"Thalric Chamois\"},{\"personId\":\"partner-thalric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-thalric-chamois\",\"name\":\"Unbekannter Partner\"}],\"partners\":[{\"personId\":\"partner-abaelor-chamois\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-abaelor-chamois\",\"name\":\"Unbekannter Partner\"}],\"children\":[{\"personId\":\"helric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--helric-chamois\",\"name\":\"Helric Chamois\"},{\"personId\":\"lleuen-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--lleuen-chamois\",\"name\":\"Lleuen Chamois\"},{\"personId\":\"dyreth-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--dyreth-chamois\",\"name\":\"Dyreth Chamois\"},{\"personId\":\"iwrban-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--iwrban-chamois\",\"name\":\"Iwrban Chamois\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "thalric-chamois",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--thalric-chamois",
+                "name": "Thalric Chamois"
+              },
+              {
+                "personId": "partner-thalric-chamois",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--partner-thalric-chamois",
+                "name": "Unbekannter Partner"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "partner-abaelor-chamois",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--partner-abaelor-chamois",
+                "name": "Unbekannter Partner"
+              }
+            ],
+            "children": [
+              {
+                "personId": "helric-chamois",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--helric-chamois",
+                "name": "Helric Chamois"
+              },
+              {
+                "personId": "lleuen-chamois",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--lleuen-chamois",
+                "name": "Lleuen Chamois"
+              },
+              {
+                "personId": "dyreth-chamois",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--dyreth-chamois",
+                "name": "Dyreth Chamois"
+              },
+              {
+                "personId": "iwrban-chamois",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-chamois--iwrban-chamois",
+                "name": "Iwrban Chamois"
+              }
+            ]
+          }
+        },
+        "bio": "Abaelor Chamois gehört als Oberhaupt zur Familie Chamois in Gwynthor.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Abaelor Chamois",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Abaelor Chamois"
+            },
+            {
+              "label": "Geboren",
+              "value": "1670"
+            },
+            {
+              "label": "Alter 1740",
+              "value": "70 Jahre"
+            },
+            {
+              "label": "Augen",
+              "value": "Grün"
+            },
+            {
+              "label": "Haare",
+              "value": "grau"
+            },
+            {
+              "label": "Herkunftsfamilie",
+              "value": "Haus Chamois"
+            },
+            {
+              "label": "Stellung in der Familie",
+              "value": "Oberhaupt"
+            }
+          ],
+          "biography": {
+            "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/abaelor-chamois-v1.png",
+            "biographyTitle": "Abaelor Chamois",
+            "biographyText": "<p>Abaelor Chamois gehört als Oberhaupt zur Familie Chamois in Gwynthor.</p>",
+            "crestImage": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+            "connectionsTitle": "Familie und Verwandtschaft",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Thalric Chamois",
+                "detail": "Elternteil",
+                "image": "../Stammbäume/assets/images/portraits/haus-chamois/thalric-chamois-v1.webp",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Unbekannter Partner",
+                "detail": "Elternteil",
+                "image": "",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Unbekannter Partner",
+                "detail": "Ehe",
+                "image": "",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Helric Chamois",
+                "detail": "Kind",
+                "image": "../Stammbäume/assets/images/portraits/haus-chamois/helric-chamois-v1.webp",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Lleuen Chamois",
+                "detail": "Kind",
+                "image": "../Stammbäume/assets/images/portraits/haus-chamois/lleuen-chamois-v1.webp",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Dyreth Chamois",
+                "detail": "Kind",
+                "image": "../Stammbäume/assets/images/portraits/haus-chamois/dyreth-chamois-v1.webp",
+                "imageFormat": "portrait"
+              },
+              {
+                "type": "connection",
+                "name": "Iwrban Chamois",
+                "detail": "Kind",
+                "image": "../Stammbäume/assets/images/portraits/haus-chamois/iwrban-chamois-v1.webp",
+                "imageFormat": "portrait"
+              }
+            ],
+            "documentsTitle": "Stammbaum und Haus",
+            "documents": [
+              {
+                "title": "Personenkarte im Stammbaum",
+                "link": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=abaelor-chamois",
+                "text": "Familienzweig und Verwandtschaft."
+              },
+              {
+                "title": "Haus Chamois",
+                "link": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-chamois",
+                "text": "Geschichte, Wappen und Castell Chamois.",
+                "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png"
+              }
+            ]
+          }
+        },
+        "imageSetSchemaVersion": 1,
+        "imageSets": [
+          {
+            "id": "standard",
+            "name": "Standard",
+            "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/abaelor-chamois-v1.png",
+            "emotes": [
+              {
+                "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-01.png",
+                "label": "Redend"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-02.png",
+                "label": "Freundlich"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-03.png",
+                "label": "Nachdenklich"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-04.png",
+                "label": "Skeptisch"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-05.png",
+                "label": "Überrascht"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-06.png",
+                "label": "Missbilligend"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-07.png",
+                "label": "Entschlossen"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-08.png",
+                "label": "Verärgert"
+              },
+              {
+                "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-09.png",
+                "label": "Unsicher"
+              }
+            ],
+            "createdAt": "2026-11-22T21:00:00.000Z",
+            "updatedAt": "2026-11-22T21:00:00.000Z"
+          }
+        ],
+        "activeImageSetId": "standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/abaelor-chamois-v1.png",
+        "emotes": [
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-01.png",
+            "label": "Redend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-02.png",
+            "label": "Freundlich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-03.png",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-04.png",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-05.png",
+            "label": "Überrascht"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-06.png",
+            "label": "Missbilligend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-07.png",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-08.png",
+            "label": "Verärgert"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-09.png",
+            "label": "Unsicher"
+          }
+        ],
+        "emotesOverride": true,
+        "imageSetsOverride": true
+      }
+    ]
+  },
+  "character": {
+    "id": "person--haus-chamois--abaelor-chamois",
+    "name": "Abaelor Chamois",
+    "title": "Oberhaupt",
+    "age": 70,
+    "gender": "Männlich",
+    "race": "Mensch",
+    "fraktion": "Haus Chamois",
+    "status": "active",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "archived": false,
+    "identity": {
+      "worldPersonId": "person--haus-chamois--abaelor-chamois"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-chamois--abaelor-chamois",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1670",
+      "death": "",
+      "houseId": "house-chamois",
+      "houseName": "Haus Chamois",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-chamois",
+          "personId": "abaelor-chamois",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T21:00:00.000Z",
+          "lastSyncedAt": "2026-11-22T21:00:00.000Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=abaelor-chamois",
+          "fingerprint": "{\"name\":\"Abaelor Chamois\",\"title\":\"Oberhaupt\",\"birth\":\"1670\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-chamois\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-chamois/abaelor-chamois-v1.png\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"thalric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--thalric-chamois\",\"name\":\"Thalric Chamois\"},{\"personId\":\"partner-thalric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-thalric-chamois\",\"name\":\"Unbekannter Partner\"}],\"partners\":[{\"personId\":\"partner-abaelor-chamois\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--partner-abaelor-chamois\",\"name\":\"Unbekannter Partner\"}],\"children\":[{\"personId\":\"helric-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--helric-chamois\",\"name\":\"Helric Chamois\"},{\"personId\":\"lleuen-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--lleuen-chamois\",\"name\":\"Lleuen Chamois\"},{\"personId\":\"dyreth-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--dyreth-chamois\",\"name\":\"Dyreth Chamois\"},{\"personId\":\"iwrban-chamois\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-chamois--iwrban-chamois\",\"name\":\"Iwrban Chamois\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "thalric-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--thalric-chamois",
+            "name": "Thalric Chamois"
+          },
+          {
+            "personId": "partner-thalric-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--partner-thalric-chamois",
+            "name": "Unbekannter Partner"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "partner-abaelor-chamois",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--partner-abaelor-chamois",
+            "name": "Unbekannter Partner"
+          }
+        ],
+        "children": [
+          {
+            "personId": "helric-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--helric-chamois",
+            "name": "Helric Chamois"
+          },
+          {
+            "personId": "lleuen-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--lleuen-chamois",
+            "name": "Lleuen Chamois"
+          },
+          {
+            "personId": "dyreth-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--dyreth-chamois",
+            "name": "Dyreth Chamois"
+          },
+          {
+            "personId": "iwrban-chamois",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-chamois--iwrban-chamois",
+            "name": "Iwrban Chamois"
+          }
+        ]
+      }
+    },
+    "bio": "Abaelor Chamois gehört als Oberhaupt zur Familie Chamois in Gwynthor.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Abaelor Chamois",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Abaelor Chamois"
+        },
+        {
+          "label": "Geboren",
+          "value": "1670"
+        },
+        {
+          "label": "Alter 1740",
+          "value": "70 Jahre"
+        },
+        {
+          "label": "Augen",
+          "value": "Grün"
+        },
+        {
+          "label": "Haare",
+          "value": "grau"
+        },
+        {
+          "label": "Herkunftsfamilie",
+          "value": "Haus Chamois"
+        },
+        {
+          "label": "Stellung in der Familie",
+          "value": "Oberhaupt"
+        }
+      ],
+      "biography": {
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/abaelor-chamois-v1.png",
+        "biographyTitle": "Abaelor Chamois",
+        "biographyText": "<p>Abaelor Chamois gehört als Oberhaupt zur Familie Chamois in Gwynthor.</p>",
+        "crestImage": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png",
+        "connectionsTitle": "Familie und Verwandtschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Thalric Chamois",
+            "detail": "Elternteil",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/thalric-chamois-v1.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Unbekannter Partner",
+            "detail": "Elternteil",
+            "image": "",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Unbekannter Partner",
+            "detail": "Ehe",
+            "image": "",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Helric Chamois",
+            "detail": "Kind",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/helric-chamois-v1.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Lleuen Chamois",
+            "detail": "Kind",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/lleuen-chamois-v1.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Dyreth Chamois",
+            "detail": "Kind",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/dyreth-chamois-v1.webp",
+            "imageFormat": "portrait"
+          },
+          {
+            "type": "connection",
+            "name": "Iwrban Chamois",
+            "detail": "Kind",
+            "image": "../Stammbäume/assets/images/portraits/haus-chamois/iwrban-chamois-v1.webp",
+            "imageFormat": "portrait"
+          }
+        ],
+        "documentsTitle": "Stammbaum und Haus",
+        "documents": [
+          {
+            "title": "Personenkarte im Stammbaum",
+            "link": "../Stammbäume/Stammbaum.html?family=haus-chamois&mode=view&person=abaelor-chamois",
+            "text": "Familienzweig und Verwandtschaft."
+          },
+          {
+            "title": "Haus Chamois",
+            "link": "/Familien Häuser und Clans/kleinehaeuser.html?haus=haus-chamois",
+            "text": "Geschichte, Wappen und Castell Chamois.",
+            "icon": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Ritterliche/Chamois/chamois-wappen-v1.png"
+          }
+        ]
+      }
+    },
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/abaelor-chamois-v1.png",
+        "emotes": [
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-01.png",
+            "label": "Redend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-02.png",
+            "label": "Freundlich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-03.png",
+            "label": "Nachdenklich"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-04.png",
+            "label": "Skeptisch"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-05.png",
+            "label": "Überrascht"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-06.png",
+            "label": "Missbilligend"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-07.png",
+            "label": "Entschlossen"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-08.png",
+            "label": "Verärgert"
+          },
+          {
+            "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-09.png",
+            "label": "Unsicher"
+          }
+        ],
+        "createdAt": "2026-11-22T21:00:00.000Z",
+        "updatedAt": "2026-11-22T21:00:00.000Z"
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-chamois/abaelor-chamois-v1.png",
+    "emotes": [
+      {
+        "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-01.png",
+        "label": "Redend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-02.png",
+        "label": "Freundlich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-03.png",
+        "label": "Nachdenklich"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-04.png",
+        "label": "Skeptisch"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-05.png",
+        "label": "Überrascht"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-06.png",
+        "label": "Missbilligend"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-07.png",
+        "label": "Entschlossen"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-08.png",
+        "label": "Verärgert"
+      },
+      {
+        "img": "/AleriaAlmanach/assets/chamois/abaelor-chamois/avatars/abaelor-chamois-set-01-avatar-09.png",
+        "label": "Unsicher"
+      }
+    ],
+    "emotesOverride": true,
+    "imageSetsOverride": true,
+    "aliases": []
+  }
+}

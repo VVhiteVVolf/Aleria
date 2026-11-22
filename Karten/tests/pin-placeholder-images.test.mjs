@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import { projectHalenrhydOriginalPins } from './support/halenrhyd-pin-history.mjs';
 import { projectNorthernFarmOriginalPins } from './support/northern-farms-pin-history.mjs';
+import { projectChamoisOriginalPin } from './support/chamois-estate-pin-history.mjs';
 import vm from 'node:vm';
 import { FLEISCHSAMMLER_LOCALITIES, FLEISCHSAMMLER_MAP_ID } from '../../Stammbäume/assets/js/data/gwynthor-fleischsammler/localities.mjs';
 
@@ -147,7 +148,9 @@ test('every imported Gwynthor pin uses its reviewed location motif without chang
   assert.equal(new Set(source.locations.map(location => location.pinId)).size, 7);
   assert.deepEqual(source.locations.map(location => location.pinId).sort(), FLEISCHSAMMLER_LOCALITIES.map(location => location.pinId).sort());
   const original = structuredClone(state);
-  const imported = projectTirfelynOriginalPinImages(projectHalenrhydOriginalPins(projectNorthernFarmOriginalPins(state.pins))).filter(pin => pin.id.startsWith('gwynthor-marking-'));
+  const priorToChamois = projectChamoisOriginalPin(state.pins);
+  const imported = projectTirfelynOriginalPinImages(projectHalenrhydOriginalPins(projectNorthernFarmOriginalPins(priorToChamois)))
+    .filter(pin => pin.id.startsWith('gwynthor-marking-'));
   assert.equal(imported.length,158);
   let unchangedMotifs = 0;
   for(const pin of imported){
