@@ -2629,6 +2629,18 @@
       "title": "Gwynthor Stadtzentrum"
     },
     {
+      "id": "gwynthor-altstadt",
+      "title": "Gwynthor Altstadt"
+    },
+    {
+      "id": "gwynthor-nordtor",
+      "title": "Gwynthor Nordtorbezirk"
+    },
+    {
+      "id": "gwynthor-vorstadt",
+      "title": "Gwynthorer Vorstadt"
+    },
+    {
       "id": "lothaires-arkaneum",
       "title": "Lothaires Arkaneum"
     },
@@ -4131,6 +4143,61 @@
       "id": "gwynthor-stadtzentrum::session:gwynthor-zentrum-kathedralbrunnen",
       "title": "Gwynthor Stadtzentrum · Vor der Kathedrale · Der große Brunnenplatz",
       "moduleId": "gwynthor-stadtzentrum"
+    },
+    {
+      "id": "gwynthor-altstadt",
+      "title": "Gwynthor Altstadt",
+      "moduleId": "gwynthor-altstadt"
+    },
+    {
+      "id": "gwynthor-altstadt::session:gwynthor-altstadt-alte-kathedrale",
+      "title": "Gwynthor Altstadt · Die Alte Kathedrale",
+      "moduleId": "gwynthor-altstadt"
+    },
+    {
+      "id": "gwynthor-altstadt::session:gwynthor-altstadt-burgplatz",
+      "title": "Gwynthor Altstadt · Platz der Alten Burg",
+      "moduleId": "gwynthor-altstadt"
+    },
+    {
+      "id": "gwynthor-altstadt::session:gwynthor-altstadt-kleiner-hain",
+      "title": "Gwynthor Altstadt · Der kleine Hain",
+      "moduleId": "gwynthor-altstadt"
+    },
+    {
+      "id": "gwynthor-nordtor",
+      "title": "Gwynthor Nordtorbezirk",
+      "moduleId": "gwynthor-nordtor"
+    },
+    {
+      "id": "gwynthor-nordtor::session:gwynthor-nordtor-bruecke",
+      "title": "Gwynthor Nordtorbezirk · Am Nordtor",
+      "moduleId": "gwynthor-nordtor"
+    },
+    {
+      "id": "gwynthor-nordtor::session:gwynthor-nordtor-vorort",
+      "title": "Gwynthor Nordtorbezirk · Vor dem Nordtor",
+      "moduleId": "gwynthor-nordtor"
+    },
+    {
+      "id": "gwynthor-vorstadt",
+      "title": "Gwynthorer Vorstadt",
+      "moduleId": "gwynthor-vorstadt"
+    },
+    {
+      "id": "gwynthor-vorstadt::session:gwynthor-vorstadt-gassen",
+      "title": "Gwynthorer Vorstadt · Die offenen Gassen",
+      "moduleId": "gwynthor-vorstadt"
+    },
+    {
+      "id": "gwynthor-vorstadt::session:gwynthor-vorstadt-gwyllach-wagenplatz",
+      "title": "Gwynthorer Vorstadt · Wagenplatz der Gwyllach",
+      "moduleId": "gwynthor-vorstadt"
+    },
+    {
+      "id": "gwynthor-vorstadt::session:gwynthor-vorstadt-zirkuswiese",
+      "title": "Gwynthorer Vorstadt · Zirkuswiese vor Gwynthor",
+      "moduleId": "gwynthor-vorstadt"
     },
     {
       "id": "lothaires-arkaneum",

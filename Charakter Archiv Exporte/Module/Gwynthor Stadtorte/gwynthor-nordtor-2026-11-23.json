@@ -1,0 +1,81 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-23T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gwynthor-Stadt",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "description": "Bespielbare Orte in Gwynthor-Stadt."
+    },
+    "entry": {
+      "id": "gwynthor-nordtor",
+      "title": "Gwynthor Nordtorbezirk",
+      "subtitle": "Die nördliche Torbrücke und der kleine Vorort an der Landstraße",
+      "type": "Interaktive Szene",
+      "category": "Gwynthor-Stadt · Schauplätze",
+      "icon": "❧",
+      "stamp": "GWYNTHOR · NORDTORBEZIRK",
+      "image": "./public/assets/gwynthor-stadtorte/nordtor-bruecke-v1.webp",
+      "previewImage": "./public/assets/gwynthor-stadtorte/nordtor-bruecke-v1.webp",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": false,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Am Nordtor",
+          "commentThreadKey": "gwynthor-nordtor-bruecke",
+          "image": "./public/assets/gwynthor-stadtorte/nordtor-bruecke-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 68%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Die nördliche Landstraße endet an einer Steinbrücke. Zwei Cochllamwyr stehen zwischen ihrer Brüstung und den geschlossenen Torflügeln. Hinter den runden Mauertürmen sind bereits die höheren Dächer des Nordtorbezirks zu sehen.</p>\n<p>Wer Einlass braucht, spricht am Rand der Brücke vor. Ein Wagen wartet auf seinen Begleiter. Zwei Gruppen kommen gleichzeitig an, und die Wachen fragen, wer dringend in die Stadt muss.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Nordtorbezirk · Torbrücke",
+          "sessionHint": "Bei den Cochllamwyr Einlass erbitten oder einer anderen Reisegruppe begegnen.",
+          "sessionEmptyTitle": "Vor den geschlossenen Torflügeln",
+          "sessionEmptyText": "Von der Brücke aus sieht man die nächste Reisegruppe herankommen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Vor dem Nordtor",
+          "commentThreadKey": "gwynthor-nordtor-vorort",
+          "image": "./public/assets/gwynthor-stadtorte/nordtor-vorort-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 72%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Vor der Brücke stehen niedrige Häuser an der Landstraße. Unter einem Vordach warten Reisende auf ihre Begleitung. Wer sich nach dem Tor erkundigt, hört vielleicht die alte Geschichte von Penrudd, der es nach einer durchzechten Nacht rot gestrichen haben soll.</p>\n<p>Ein Reisender kennt die nächste Weggabelung und bietet an, sie zu beschreiben. Neben der Bank ist Platz, Waren umzuladen oder eine Reisegruppe zu sammeln, bevor alle zur Brücke zurückgehen.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Nordtorbezirk · Nördlicher Vorort",
+          "sessionHint": "Nach dem Weg fragen, am Vordach Gepäck umladen oder sich der Reisegruppe anschließen.",
+          "sessionEmptyTitle": "An der nördlichen Zufahrt",
+          "sessionEmptyText": "Zwischen Hof und Landstraße führen die Spuren der Wagen zur Torbrücke.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

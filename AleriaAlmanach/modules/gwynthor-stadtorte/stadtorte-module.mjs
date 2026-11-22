@@ -23,7 +23,7 @@ export function buildGwynthorCityPlaces() {
       image: artwork(scene.id, cityPlaceSceneVersion(place, scene)), imageWidth: 34, imageTall: true,
       imageFit: 'cover', imagePosition: scene.imagePosition || 'center 75%',
       sessionPage: true, sessionIntro: scene.intro,
-      sessionLocation: `Gwynthor-Stadt · ${scene.title}`,
+      sessionLocation: `Gwynthor-Stadt · ${scene.location || scene.title}`,
       sessionHint: scene.hint, sessionEmptyTitle: scene.emptyTitle,
       sessionEmptyText: scene.emptyText,
       sessionDateAleria: { year: null, month: null, day: null }

@@ -309,7 +309,7 @@ export const SITE_BUILD_TASKS = [
       testCommand(almanach('gwynthor-marktplatz'))]
   },
   {
-    id: 'gwynthor-stadtorte', label: 'Four Gwynthor city POIs, twelve stable scene threads and scene artwork',
+    id: 'gwynthor-stadtorte', label: 'Gwynthor city places, stable scene threads and scene artwork',
     inputs: ['AleriaAlmanach/modules/gwynthor-stadtorte/', 'AleriaAlmanach/modules/gwynthor-geography/',
       'AleriaAlmanach/modules/archive/archive-section-registration.mjs',
       'AleriaAlmanach/modules/core/app-core.js', 'AleriaAlmanach/modules/rendering/module-renderer.js',

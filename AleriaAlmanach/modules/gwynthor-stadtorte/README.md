@@ -1,14 +1,17 @@
 # Gwynthors wichtige Stadtorte
 
-Vier POI-Module auf der vorhandenen Ebene **Gwynthor-Stadt**, jeweils genau drei
-interaktive Seiten. Keine neuen Bezirke oder Navigationsunterkategorien.
+Sieben Ortsmodule mit 20 interaktiven Seiten auf der Ebene **Gwynthor-Stadt**.
 
 - Osttor: Torbrücke, kleiner Vorort außerhalb der Mauern, innerer Brunnenplatz am Gestüt.
 - Westtor: Torbrücke, kleiner Vorort, innerer Ankunftsplatz mit Brunnen und Wagenhof.
 - Hafen: Westhafen, Zentraler Hafen, Südtor-Hafen im Südosten.
 - Stadtzentrum: Plaza am großen Stadtpark, Parkwege, öffentlicher Brunnenplatz vor der Großen Kathedrale der Neun.
+- Zur Altstadt gehören die Alte Kathedrale, der Festplatz auf den Burgfundamenten und ein kleiner Hain.
+- Der Nordtorbezirk umfasst die Torbrücke mit den Cochllamwyr und den Vorort an der Landstraße.
+- In der Gwynthorer Vorstadt liegen die offenen Gassen und der Wagenplatz der Gwyllach. Neben der Siedlung liegt die Zirkuswiese.
 
-`stadtorte-scenes.mjs` verantwortet Inhalte und dauerhafte Szenenkennungen;
+`stadtorte-scenes.mjs` sammelt die Inhalte und dauerhaften Szenenkennungen.
+Die drei Ergänzungen vom 23. November stehen in `stadtorte-viertel.mjs`.
 `stadtorte-module.mjs` bildet sie auf das vorhandene Szenenmodell ab.
 Registrierung und Importpakete entstehen mit
 `node AleriaAlmanach/scripts/build-gwynthor-stadtorte.mjs` (`--check` prüft lesend).
@@ -21,6 +24,12 @@ aus dem Auftrag ist als „Südtor-Hafen“ mit der ausdrücklich genannten Lage
 Südosten übernommen. Bestehende Bezirksangaben, Kartenpins und Betriebe bleiben
 unverändert; der neue Ankunftshof ist kein benannter Handelsbetrieb. Neue Namen,
 Besitzer, Personalakten, Tarife oder Waren werden hier nicht festgelegt.
+
+Der kleine Hain liegt zwischen Altstadthäusern. Auf dem Platz der Alten Burg
+sind die niedrigen Fundamente Teil der heutigen Platzanlage. Die Geschichte
+über Penrudd am Nordtor folgt dem Kartenprofil. Der Wagenplatz greift die
+belegte Fuhrmannszunft der Gwyllach auf. Standplätze, Mitfahrten und Eintritt
+können in den jeweiligen Szenen ausgehandelt werden.
 
 Bildregie: wenige große Formen und ruhige Flächen, städtische Größe durch
 Dachstaffeln und Maßstab. Stilquelle und vollständige tatsächlich verwendete
@@ -40,6 +49,13 @@ Brunnen auch im mobilen Bildstreifen sichtbar bleiben. Der bestehende
 Szenenrenderer übernimmt dafür die validierten Bildoptionen des allgemeinen
 Seitenrenderers. Seiten ohne solche Angaben behalten ihre CSS-Voreinstellungen.
 
+Die acht zusätzlichen Ansichten verwenden dasselbe 2:3-Format und dieselbe
+WebP-Aufbereitung. Beide neuen Toransichten zeigen das geschlossene Tor und
+die Cochllamwyr. Beim Burgplatz ist v2 aktiv. Das erste Bild und sein Prompt
+liegen mit den anderen Originalen unter `assets/gwynthor-stadtorte/`.
+
 Prüfung: `node --test AleriaAlmanach/tests/gwynthor-stadtorte.test.mjs` und
 `node AleriaAlmanach/tests/gwynthor-stadtorte.browser.mjs`.
-Auftragsbelege: `diagnostics/gwynthor-stadtorte-20261112/`.
+Belege zum ursprünglichen Umfang liegen in `diagnostics/gwynthor-stadtorte-20261112/`.
+Die Browserprüfung der Erweiterung legt ihre Aufnahmen in
+`diagnostics/gwynthor-stadtviertel-20261123/` ab.

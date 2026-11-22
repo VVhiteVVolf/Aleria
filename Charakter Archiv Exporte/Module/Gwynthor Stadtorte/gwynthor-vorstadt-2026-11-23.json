@@ -1,0 +1,102 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-23T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gwynthor-Stadt",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "description": "Bespielbare Orte in Gwynthor-Stadt."
+    },
+    "entry": {
+      "id": "gwynthor-vorstadt",
+      "title": "Gwynthorer Vorstadt",
+      "subtitle": "Offene Siedlungen, Wagenplatz der Gwyllach und die Zirkuswiese",
+      "type": "Interaktive Szene",
+      "category": "Gwynthor-Stadt · Schauplätze",
+      "icon": "❧",
+      "stamp": "GWYNTHOR · GWYNTHORER VORSTADT",
+      "image": "./public/assets/gwynthor-stadtorte/vorstadt-gwyllach-wagenplatz-v1.webp",
+      "previewImage": "./public/assets/gwynthor-stadtorte/vorstadt-gwyllach-wagenplatz-v1.webp",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": false,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die offenen Gassen",
+          "commentThreadKey": "gwynthor-vorstadt-gassen",
+          "image": "./public/assets/gwynthor-stadtorte/vorstadt-gassen-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 68%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Westlich der Stadt gehen lose Häuserzeilen in Gärten, Weiden und Feldwege über. Zwischen niedrigen Holzzäunen bleibt genug Abstand, dass man die Nachbarn von Hof zu Hof rufen hört. Ein Weg führt zu den Kutschern, ein schmalerer weiter über die Wiese.</p>\n<p>Am hölzernen Steg hält jemand ein loses Brett fest. Wer mit anfasst oder am Zaun nach dem Weg fragt, lernt schnell jemanden kennen, der die Vorstadt besser kennt als jeder Stadtführer.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Vorstadt · Offene Siedlung",
+          "sessionHint": "Am Steg mithelfen, ins Gespräch mit den Nachbarn kommen oder den Weg zur Zirkuswiese erfragen.",
+          "sessionEmptyTitle": "Wo aus der Gasse ein Feldweg wird",
+          "sessionEmptyText": "Der Steg verbindet die letzten Hofwege mit der offenen Wiese.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Wagenplatz der Gwyllach",
+          "commentThreadKey": "gwynthor-vorstadt-gwyllach-wagenplatz",
+          "image": "./public/assets/gwynthor-stadtorte/vorstadt-gwyllach-wagenplatz-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 72%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Auf dem offenen Wagenplatz halten Fuhrleute und Kutscher der Gwyllach. Unter dem langen Schauer stehen ein Reisewagen und ein leichter Lastkarren. Neben den Trögen warten Pferde darauf, wieder angespannt zu werden.</p>\n<p>Wer mitfahren will, kann Ziel und Abfahrt erfragen. Fuhrleute bringen hier auch Nachrichten von draußen mit, während Reisende noch einen Platz für Gepäck suchen. Auf der Route zur Zirkuswiese ist genug Platz, dass zwei Wagen aneinander vorbeikommen.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Vorstadt · Wagenplatz der Gwyllach",
+          "sessionHint": "Eine Mitfahrt besprechen, die Abfahrtszeit erfragen oder bei einer Wagenmannschaft anheuern.",
+          "sessionEmptyTitle": "Zwischen Schauer und Trögen",
+          "sessionEmptyText": "Auf dem Wagenplatz sammeln sich Gepäck, Reisende und Neuigkeiten von der Straße.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Zirkuswiese vor Gwynthor",
+          "commentThreadKey": "gwynthor-vorstadt-zirkuswiese",
+          "image": "./public/assets/gwynthor-stadtorte/vorstadt-zirkuswiese-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 68%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Auf der Wiese neben den letzten Höfen hat ein Wanderzirkus sein Zelt aufgeschlagen. Unter der hochgebundenen Eingangsplane sieht man die ersten Holzbänke und einen mit Sägemehl bestreuten Ring. Hinter dem Zelt stehen die Wagen der Truppe im Halbkreis.</p>\n<p>Vor der Vorstellung proben Akrobaten einen Auftritt. Am Eingang werden Plätze ausgehandelt, und wer helfen möchte, kann beim Bänketragen oder beim Ankündigen der Nummern mitmachen. Von hier führt der Wiesenweg zurück zu den Kutschern.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Neben der Vorstadt · Zirkuswiese",
+          "sessionHint": "Einen Platz für die Vorstellung aushandeln, eine Probe beobachten oder hinter dem Zelt mithelfen.",
+          "sessionEmptyTitle": "Kurz vor der Vorstellung",
+          "sessionEmptyText": "Die Eingangsplane ist hochgebunden und die ersten Zuschauer treffen auf der Wiese ein.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

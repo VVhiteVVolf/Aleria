@@ -4,6 +4,7 @@ import vm from 'node:vm';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { buildGwynthorCityPlaces, CITY_PLACES_SECTION } from '../modules/gwynthor-stadtorte/stadtorte-module.mjs';
+import { GWYNTHOR_CITY_PLACES } from '../modules/gwynthor-stadtorte/stadtorte-scenes.mjs';
 import { CITY_PLACES_ART_BRIEFS } from '../modules/gwynthor-stadtorte/stadtorte-art.mjs';
 import { GWYNTHOR_CITY_PATH, projectGwynthorSections } from '../modules/gwynthor-geography/gwynthor-section-layout.mjs';
 import { buildGwynthorMarketplace } from '../modules/gwynthor-marktplatz/marketplace-module.mjs';
@@ -26,11 +27,13 @@ test('release validation owns both scene checks and their source/asset dependenc
   }
 });
 
-test('four city POIs have exactly three independently playable scenes without new district paths', () => {
-  assert.deepEqual(entries.map(entry => entry.id), ['gwynthor-osttor', 'gwynthor-westtor', 'gwynthor-hafen', 'gwynthor-stadtzentrum']);
+test('the four existing places and three new places offer twenty independent city scenes', () => {
+  assert.deepEqual(entries.map(entry => [entry.id, entry.pages.length]), [
+    ['gwynthor-osttor', 3], ['gwynthor-westtor', 3], ['gwynthor-hafen', 3], ['gwynthor-stadtzentrum', 3],
+    ['gwynthor-altstadt', 3], ['gwynthor-nordtor', 2], ['gwynthor-vorstadt', 3]
+  ]);
   assert.deepEqual(CITY_PLACES_SECTION.path, GWYNTHOR_CITY_PATH);
   for (const entry of entries) {
-    assert.equal(entry.pages.length, 3);
     assert.equal(entry.appendCommentsPage, false);
     for (const page of entry.pages) {
       assert.equal(page.sessionPage, true);
@@ -42,6 +45,11 @@ test('four city POIs have exactly three independently playable scenes without ne
   assert.match(entries[2].pages[2].pageTitle, /Südtor-Hafen/);
   assert.match(entries[2].pages[2].sessionIntro, /Südosten/);
   assert.match(entries[3].pages[2].sessionIntro, /vor|Vor|Kathedrale/);
+  assert.match(entries[4].pages[0].sessionIntro, /Bis zur Errichtung der Großen Kathedrale der Neun/);
+  assert.match(entries[4].pages[1].sessionIntro, /Fundament/);
+  assert.match(entries[5].pages[0].sessionIntro, /Cochllamwyr.*geschlossenen/s);
+  assert.match(entries[6].pages[1].sessionIntro, /Fuhrleute und Kutscher der Gwyllach/);
+  assert.match(entries[6].pages[2].sessionLocation, /Neben der Vorstadt/);
 });
 
 test('repeated registration preserves saved modules and the existing marketplace object', async () => {
@@ -72,7 +80,7 @@ test('repeated registration preserves saved modules and the existing marketplace
   }
 });
 
-test('twelve real scene routes remain stable when POIs and pages are reordered; marketplace threads stay separate', async () => {
+test('all twenty scene routes remain stable when places and pages are reordered; marketplace threads stay separate', async () => {
   const context = vm.createContext({
     getValidSections: () => [{ ...CITY_PLACES_SECTION, entries: [...entries, buildGwynthorMarketplace()] }],
     getRenderableEntry: value => value, getPages: value => value.pages
@@ -81,8 +89,8 @@ test('twelve real scene routes remain stable when POIs and pages are reordered; 
     vm.runInContext(await readFile(new URL(`../modules/${file}`, import.meta.url), 'utf8'), context);
   }
   const before = context.getSceneTransitionEndpoints();
-  assert.equal(before.length, 20);
-  assert.equal(new Set(before.map(endpoint => endpoint.threadId)).size, 20);
+  assert.equal(before.length, 28);
+  assert.equal(new Set(before.map(endpoint => endpoint.threadId)).size, 28);
   const changed = structuredClone(entries).reverse();
   changed.forEach(entry => entry.pages.reverse());
   context.getValidSections = () => [{ ...CITY_PLACES_SECTION, entries: [...changed, buildGwynthorMarketplace()] }];
@@ -95,17 +103,19 @@ test('twelve real scene routes remain stable when POIs and pages are reordered; 
   }
 });
 
-test('four importable packages match runtime entries and the canonical city section', async () => {
+test('all seven importable packages match runtime entries and the canonical city section', async () => {
   for (const entry of entries) {
-    const exported = JSON.parse(await readFile(new URL(`Charakter Archiv Exporte/Module/Gwynthor Stadtorte/${entry.id}-2026-11-12.json`, root), 'utf8'));
+    const date = GWYNTHOR_CITY_PLACES.find(place => place.id === entry.id).firstAuthoredOn || '2026-11-12';
+    const exported = JSON.parse(await readFile(new URL(`Charakter Archiv Exporte/Module/Gwynthor Stadtorte/${entry.id}-${date}.json`, root), 'utf8'));
     assert.deepEqual(exported.module.entry, entry);
     assert.deepEqual(exported.module.section.path, GWYNTHOR_CITY_PATH);
   }
 });
 
-test('active artwork is traced to twelve exact originals; superseded open gates remain source-only', async () => {
+test('twenty artworks have exact provenance and superseded versions stay in the source archive', async () => {
   const results = JSON.parse(await readFile(new URL('AleriaAlmanach/assets/gwynthor-stadtorte/image-results.json', root), 'utf8'));
-  assert.equal(results.images.length, 12);
+  assert.equal(results.images.length, 20);
+  assert.equal(new Set(results.images.map(item => item.id)).size, results.images.length);
   for (const brief of CITY_PLACES_ART_BRIEFS) {
     const original = await readFile(new URL(brief.original, root));
     const active = await readFile(new URL(brief.destination, root));
@@ -127,6 +137,15 @@ test('active artwork is traced to twelve exact originals; superseded open gates 
       assert.equal(shouldPublish(brief.references[0]), false);
       assert.ok((await readFile(new URL(brief.references[0], root))).length > 0);
       assert.match(entries.find(entry => entry.id === brief.moduleId).pages.find(page => page.commentThreadKey === `gwynthor-${brief.id}`).sessionIntro, /geschlossen/);
+    }
+    if (brief.id.startsWith('nordtor-')) {
+      assert.match(brief.prompt, /vollständig geschlossen/);
+      assert.match(brief.references.at(-1), /cochllamwyr-v1\.png$/);
+    }
+    if (brief.id === 'altstadt-burgplatz') {
+      assert.equal(brief.version, 2);
+      assert.equal(shouldPublish(brief.references[0]), false);
+      assert.ok((await readFile(new URL(brief.references[0], root))).length > 0);
     }
   }
   assert.equal(shouldPublish('AleriaAlmanach/assets/gwynthor-stadtorte/image-prompts.json'), false);

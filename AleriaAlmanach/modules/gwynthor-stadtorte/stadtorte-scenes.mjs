@@ -1,3 +1,5 @@
+import { GWYNTHOR_DISTRICT_PLACES } from './stadtorte-viertel.mjs';
+
 const paragraphs = (...texts) => texts.map(text => `<p>${text}</p>`).join('');
 
 // These IDs also own the permanent scene threads. Prose and order may change;
@@ -140,7 +142,8 @@ export const GWYNTHOR_CITY_PLACES = Object.freeze([
         subject: 'ÖFFENTLICHER BRUNNENPLATZ direkt VOR der Großen Kathedrale der Neun im Zentrum Gwynthors. Ein großer schlichter kreisrunder Steinbrunnen mit breitem Rand und einer einzelnen kurzen Mittelsäule ist das klare Hauptmotiv. Dahinter als große ruhige Form nur der untere Ausschnitt einer monumentalen hellgrauen gotischen Kathedralfassade mit hohem Spitzbogenportal und breiten Stufen; obere Türme dürfen aus dem Bild laufen. Seitlich ein Baum des großen Stadtparks, drei kleine anonyme Besucher, übrige Stadtdächer nur angedeutet. Kein Kreuz als neues Glaubenssymbol, keine Statuengruppe erfundener Gottheiten, keine feingliedrige Ornamentflut, kein innerer Kreuzgang und kein Marktbrunnen.'
       }
     ]
-  }
+  },
+  ...GWYNTHOR_DISTRICT_PLACES
 ]);
 
 export const cityPlaceSceneVersion = (place, scene) => scene.artVersion ?? place.artVersion;

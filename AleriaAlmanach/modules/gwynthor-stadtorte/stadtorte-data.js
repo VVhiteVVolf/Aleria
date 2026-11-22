@@ -372,6 +372,264 @@
         }
       ]
     }
+  },
+  {
+    "key": "Gwynthor-Stadt",
+    "tab": "Völker & Kulturen",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bannkreis Gwynthor",
+      "Gwynthor-Stadt"
+    ],
+    "description": "Bespielbare Orte in Gwynthor-Stadt.",
+    "entry": {
+      "id": "gwynthor-altstadt",
+      "title": "Gwynthor Altstadt",
+      "subtitle": "Alte Kathedrale, Festplatz auf den Burgfundamenten und ein kleiner Hain",
+      "type": "Interaktive Szene",
+      "category": "Gwynthor-Stadt · Schauplätze",
+      "icon": "❧",
+      "stamp": "GWYNTHOR · ALTSTADT",
+      "image": "./public/assets/gwynthor-stadtorte/altstadt-burgplatz-v2.webp",
+      "previewImage": "./public/assets/gwynthor-stadtorte/altstadt-burgplatz-v2.webp",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": false,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Alte Kathedrale",
+          "commentThreadKey": "gwynthor-altstadt-alte-kathedrale",
+          "image": "./public/assets/gwynthor-stadtorte/altstadt-alte-kathedrale-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 65%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Hinter den schmalen Gassen der Altstadt öffnet sich das niedrige Portal der Alten Kathedrale. Bis zur Errichtung der Großen Kathedrale der Neun war sie Gwynthors größter Kirchenbau. Im kühlen Schiff stehen Holzbänke zwischen schweren Pfeilern. Das Tageslicht fällt seitlich bis auf die alten Bodenplatten.</p>\n<p>Am Eingang sitzt jemand am Tisch mit den verwahrten Gedenkblättern. Hier kann man nach einem alten Namen fragen, eine Kerze anzünden oder jemanden zu einem Gespräch auf die hintere Bank bitten.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Altstadt · Alte Kathedrale",
+          "sessionHint": "Nach einem Gedenkblatt fragen, eine Kerze entzünden oder sich auf einer Bank verabreden.",
+          "sessionEmptyTitle": "Im alten Kirchenschiff",
+          "sessionEmptyText": "Zwischen den Bänken bleibt ein stiller Platz für die nächste Begegnung.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Platz der Alten Burg",
+          "commentThreadKey": "gwynthor-altstadt-burgplatz",
+          "image": "./public/assets/gwynthor-stadtorte/altstadt-burgplatz-v2.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 70%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Im Pflaster des großen Platzes zeichnet sich der alte Burghof ab. Niedrige Mauerzüge aus dem Fundament stehen an zwei Rändern und dienen heute als Sitzbänke. Am offenen Ende führen enge Altstadtgassen zwischen den Häusern hindurch.</p>\n<p>Hier finden Festtage, Basare und öffentliche Aufführungen statt. Wer eine Vorstellung vorbereitet, kann mit den Standleuten um Platz verhandeln. Wer zum Fest kommt, findet auf den alten Fundamentsteinen leicht einen Treffpunkt.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Altstadt · Platz der Alten Burg",
+          "sessionHint": "Einen Basarstand aufbauen, einen Auftritt vorbereiten oder sich am Fundament treffen.",
+          "sessionEmptyTitle": "Zwischen Fundamenten und Festplatz",
+          "sessionEmptyText": "Wo früher der Burghof lag, ist heute Platz für Stände und Begegnungen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Der kleine Hain",
+          "commentThreadKey": "gwynthor-altstadt-kleiner-hain",
+          "image": "./public/assets/gwynthor-stadtorte/altstadt-kleiner-hain-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 70%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Ein schmaler Durchgang zwischen zwei Altstadthäusern führt in einen kleinen Hain. Zwei alte Linden überschatten die niedrige Steinbank. Der Weg läuft einmal im Bogen um das Grün und endet an einer Mauer, hinter der man Geschirr aus einer Küche hört.</p>\n<p>Vom Festplatz dringen an belebten Tagen Stimmen herüber. Wer dort jemanden aus den Augen verloren hat, kann hier warten. Die beiden Zugänge lassen sich von der Bank aus überblicken.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Altstadt · Kleiner Hain",
+          "sessionHint": "Am ruhigen Treffpunkt warten, ein vertrauliches Gespräch führen oder nach jemandem Ausschau halten.",
+          "sessionEmptyTitle": "Schatten auf der Steinbank",
+          "sessionEmptyText": "Aus der Gasse hört man Schritte, bevor jemand in den Hain tritt.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "Gwynthor-Stadt",
+    "tab": "Völker & Kulturen",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bannkreis Gwynthor",
+      "Gwynthor-Stadt"
+    ],
+    "description": "Bespielbare Orte in Gwynthor-Stadt.",
+    "entry": {
+      "id": "gwynthor-nordtor",
+      "title": "Gwynthor Nordtorbezirk",
+      "subtitle": "Die nördliche Torbrücke und der kleine Vorort an der Landstraße",
+      "type": "Interaktive Szene",
+      "category": "Gwynthor-Stadt · Schauplätze",
+      "icon": "❧",
+      "stamp": "GWYNTHOR · NORDTORBEZIRK",
+      "image": "./public/assets/gwynthor-stadtorte/nordtor-bruecke-v1.webp",
+      "previewImage": "./public/assets/gwynthor-stadtorte/nordtor-bruecke-v1.webp",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": false,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Am Nordtor",
+          "commentThreadKey": "gwynthor-nordtor-bruecke",
+          "image": "./public/assets/gwynthor-stadtorte/nordtor-bruecke-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 68%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Die nördliche Landstraße endet an einer Steinbrücke. Zwei Cochllamwyr stehen zwischen ihrer Brüstung und den geschlossenen Torflügeln. Hinter den runden Mauertürmen sind bereits die höheren Dächer des Nordtorbezirks zu sehen.</p>\n<p>Wer Einlass braucht, spricht am Rand der Brücke vor. Ein Wagen wartet auf seinen Begleiter. Zwei Gruppen kommen gleichzeitig an, und die Wachen fragen, wer dringend in die Stadt muss.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Nordtorbezirk · Torbrücke",
+          "sessionHint": "Bei den Cochllamwyr Einlass erbitten oder einer anderen Reisegruppe begegnen.",
+          "sessionEmptyTitle": "Vor den geschlossenen Torflügeln",
+          "sessionEmptyText": "Von der Brücke aus sieht man die nächste Reisegruppe herankommen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Vor dem Nordtor",
+          "commentThreadKey": "gwynthor-nordtor-vorort",
+          "image": "./public/assets/gwynthor-stadtorte/nordtor-vorort-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 72%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Vor der Brücke stehen niedrige Häuser an der Landstraße. Unter einem Vordach warten Reisende auf ihre Begleitung. Wer sich nach dem Tor erkundigt, hört vielleicht die alte Geschichte von Penrudd, der es nach einer durchzechten Nacht rot gestrichen haben soll.</p>\n<p>Ein Reisender kennt die nächste Weggabelung und bietet an, sie zu beschreiben. Neben der Bank ist Platz, Waren umzuladen oder eine Reisegruppe zu sammeln, bevor alle zur Brücke zurückgehen.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Nordtorbezirk · Nördlicher Vorort",
+          "sessionHint": "Nach dem Weg fragen, am Vordach Gepäck umladen oder sich der Reisegruppe anschließen.",
+          "sessionEmptyTitle": "An der nördlichen Zufahrt",
+          "sessionEmptyText": "Zwischen Hof und Landstraße führen die Spuren der Wagen zur Torbrücke.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "key": "Gwynthor-Stadt",
+    "tab": "Völker & Kulturen",
+    "path": [
+      "Cenyr",
+      "Celtigerns Wacht",
+      "Llamreis Ankunft",
+      "Bannkreis Gwynthor",
+      "Gwynthor-Stadt"
+    ],
+    "description": "Bespielbare Orte in Gwynthor-Stadt.",
+    "entry": {
+      "id": "gwynthor-vorstadt",
+      "title": "Gwynthorer Vorstadt",
+      "subtitle": "Offene Siedlungen, Wagenplatz der Gwyllach und die Zirkuswiese",
+      "type": "Interaktive Szene",
+      "category": "Gwynthor-Stadt · Schauplätze",
+      "icon": "❧",
+      "stamp": "GWYNTHOR · GWYNTHORER VORSTADT",
+      "image": "./public/assets/gwynthor-stadtorte/vorstadt-gwyllach-wagenplatz-v1.webp",
+      "previewImage": "./public/assets/gwynthor-stadtorte/vorstadt-gwyllach-wagenplatz-v1.webp",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": false,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die offenen Gassen",
+          "commentThreadKey": "gwynthor-vorstadt-gassen",
+          "image": "./public/assets/gwynthor-stadtorte/vorstadt-gassen-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 68%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Westlich der Stadt gehen lose Häuserzeilen in Gärten, Weiden und Feldwege über. Zwischen niedrigen Holzzäunen bleibt genug Abstand, dass man die Nachbarn von Hof zu Hof rufen hört. Ein Weg führt zu den Kutschern, ein schmalerer weiter über die Wiese.</p>\n<p>Am hölzernen Steg hält jemand ein loses Brett fest. Wer mit anfasst oder am Zaun nach dem Weg fragt, lernt schnell jemanden kennen, der die Vorstadt besser kennt als jeder Stadtführer.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Vorstadt · Offene Siedlung",
+          "sessionHint": "Am Steg mithelfen, ins Gespräch mit den Nachbarn kommen oder den Weg zur Zirkuswiese erfragen.",
+          "sessionEmptyTitle": "Wo aus der Gasse ein Feldweg wird",
+          "sessionEmptyText": "Der Steg verbindet die letzten Hofwege mit der offenen Wiese.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Wagenplatz der Gwyllach",
+          "commentThreadKey": "gwynthor-vorstadt-gwyllach-wagenplatz",
+          "image": "./public/assets/gwynthor-stadtorte/vorstadt-gwyllach-wagenplatz-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 72%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Auf dem offenen Wagenplatz halten Fuhrleute und Kutscher der Gwyllach. Unter dem langen Schauer stehen ein Reisewagen und ein leichter Lastkarren. Neben den Trögen warten Pferde darauf, wieder angespannt zu werden.</p>\n<p>Wer mitfahren will, kann Ziel und Abfahrt erfragen. Fuhrleute bringen hier auch Nachrichten von draußen mit, während Reisende noch einen Platz für Gepäck suchen. Auf der Route zur Zirkuswiese ist genug Platz, dass zwei Wagen aneinander vorbeikommen.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Vorstadt · Wagenplatz der Gwyllach",
+          "sessionHint": "Eine Mitfahrt besprechen, die Abfahrtszeit erfragen oder bei einer Wagenmannschaft anheuern.",
+          "sessionEmptyTitle": "Zwischen Schauer und Trögen",
+          "sessionEmptyText": "Auf dem Wagenplatz sammeln sich Gepäck, Reisende und Neuigkeiten von der Straße.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Zirkuswiese vor Gwynthor",
+          "commentThreadKey": "gwynthor-vorstadt-zirkuswiese",
+          "image": "./public/assets/gwynthor-stadtorte/vorstadt-zirkuswiese-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 68%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Auf der Wiese neben den letzten Höfen hat ein Wanderzirkus sein Zelt aufgeschlagen. Unter der hochgebundenen Eingangsplane sieht man die ersten Holzbänke und einen mit Sägemehl bestreuten Ring. Hinter dem Zelt stehen die Wagen der Truppe im Halbkreis.</p>\n<p>Vor der Vorstellung proben Akrobaten einen Auftritt. Am Eingang werden Plätze ausgehandelt, und wer helfen möchte, kann beim Bänketragen oder beim Ankündigen der Nummern mitmachen. Von hier führt der Wiesenweg zurück zu den Kutschern.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Neben der Vorstadt · Zirkuswiese",
+          "sessionHint": "Einen Platz für die Vorstellung aushandeln, eine Probe beobachten oder hinter dem Zelt mithelfen.",
+          "sessionEmptyTitle": "Kurz vor der Vorstellung",
+          "sessionEmptyText": "Die Eingangsplane ist hochgebunden und die ersten Zuschauer treffen auf der Wiese ein.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
   }
 ];
   for (const module of modules) {

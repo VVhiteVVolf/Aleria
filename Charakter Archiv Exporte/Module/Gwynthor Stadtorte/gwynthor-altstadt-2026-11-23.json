@@ -1,0 +1,102 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-23T00:00:00Z",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gwynthor-Stadt",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt"
+      ],
+      "description": "Bespielbare Orte in Gwynthor-Stadt."
+    },
+    "entry": {
+      "id": "gwynthor-altstadt",
+      "title": "Gwynthor Altstadt",
+      "subtitle": "Alte Kathedrale, Festplatz auf den Burgfundamenten und ein kleiner Hain",
+      "type": "Interaktive Szene",
+      "category": "Gwynthor-Stadt · Schauplätze",
+      "icon": "❧",
+      "stamp": "GWYNTHOR · ALTSTADT",
+      "image": "./public/assets/gwynthor-stadtorte/altstadt-burgplatz-v2.webp",
+      "previewImage": "./public/assets/gwynthor-stadtorte/altstadt-burgplatz-v2.webp",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": false,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Alte Kathedrale",
+          "commentThreadKey": "gwynthor-altstadt-alte-kathedrale",
+          "image": "./public/assets/gwynthor-stadtorte/altstadt-alte-kathedrale-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 65%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Hinter den schmalen Gassen der Altstadt öffnet sich das niedrige Portal der Alten Kathedrale. Bis zur Errichtung der Großen Kathedrale der Neun war sie Gwynthors größter Kirchenbau. Im kühlen Schiff stehen Holzbänke zwischen schweren Pfeilern. Das Tageslicht fällt seitlich bis auf die alten Bodenplatten.</p>\n<p>Am Eingang sitzt jemand am Tisch mit den verwahrten Gedenkblättern. Hier kann man nach einem alten Namen fragen, eine Kerze anzünden oder jemanden zu einem Gespräch auf die hintere Bank bitten.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Altstadt · Alte Kathedrale",
+          "sessionHint": "Nach einem Gedenkblatt fragen, eine Kerze entzünden oder sich auf einer Bank verabreden.",
+          "sessionEmptyTitle": "Im alten Kirchenschiff",
+          "sessionEmptyText": "Zwischen den Bänken bleibt ein stiller Platz für die nächste Begegnung.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Platz der Alten Burg",
+          "commentThreadKey": "gwynthor-altstadt-burgplatz",
+          "image": "./public/assets/gwynthor-stadtorte/altstadt-burgplatz-v2.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 70%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Im Pflaster des großen Platzes zeichnet sich der alte Burghof ab. Niedrige Mauerzüge aus dem Fundament stehen an zwei Rändern und dienen heute als Sitzbänke. Am offenen Ende führen enge Altstadtgassen zwischen den Häusern hindurch.</p>\n<p>Hier finden Festtage, Basare und öffentliche Aufführungen statt. Wer eine Vorstellung vorbereitet, kann mit den Standleuten um Platz verhandeln. Wer zum Fest kommt, findet auf den alten Fundamentsteinen leicht einen Treffpunkt.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Altstadt · Platz der Alten Burg",
+          "sessionHint": "Einen Basarstand aufbauen, einen Auftritt vorbereiten oder sich am Fundament treffen.",
+          "sessionEmptyTitle": "Zwischen Fundamenten und Festplatz",
+          "sessionEmptyText": "Wo früher der Burghof lag, ist heute Platz für Stände und Begegnungen.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Der kleine Hain",
+          "commentThreadKey": "gwynthor-altstadt-kleiner-hain",
+          "image": "./public/assets/gwynthor-stadtorte/altstadt-kleiner-hain-v1.webp",
+          "imageWidth": 34,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 70%",
+          "sessionPage": true,
+          "sessionIntro": "<p>Ein schmaler Durchgang zwischen zwei Altstadthäusern führt in einen kleinen Hain. Zwei alte Linden überschatten die niedrige Steinbank. Der Weg läuft einmal im Bogen um das Grün und endet an einer Mauer, hinter der man Geschirr aus einer Küche hört.</p>\n<p>Vom Festplatz dringen an belebten Tagen Stimmen herüber. Wer dort jemanden aus den Augen verloren hat, kann hier warten. Die beiden Zugänge lassen sich von der Bank aus überblicken.</p>",
+          "sessionLocation": "Gwynthor-Stadt · Altstadt · Kleiner Hain",
+          "sessionHint": "Am ruhigen Treffpunkt warten, ein vertrauliches Gespräch führen oder nach jemandem Ausschau halten.",
+          "sessionEmptyTitle": "Schatten auf der Steinbank",
+          "sessionEmptyText": "Aus der Gasse hört man Schritte, bevor jemand in den Hain tritt.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}
