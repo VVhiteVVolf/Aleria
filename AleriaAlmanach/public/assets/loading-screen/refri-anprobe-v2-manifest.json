@@ -1,0 +1,134 @@
+{
+  "version": 2,
+  "scene": "refri-anprobe",
+  "frame": [
+    1672,
+    941
+  ],
+  "background": {
+    "source": {
+      "file": "assets/loading-screen/source/refri-anprobe-geschlossen-v2.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frames": 1,
+      "bytes": 1964089,
+      "sha256": "82c469495e0103cee84c08409f3ad07a17d2f7131959acb4fa3f4324c228201f"
+    },
+    "assets": [
+      {
+        "file": "public/assets/loading-screen/refri-anprobe-geschlossen-v2-desktop.avif",
+        "size": [
+          1440,
+          810
+        ],
+        "frames": 1,
+        "bytes": 43075,
+        "sha256": "42abf3917888bd31f6790b1f0a0c2587cb103bd10ecbfc7f6af69bd37826df2f"
+      },
+      {
+        "file": "public/assets/loading-screen/refri-anprobe-geschlossen-v2-mobile.avif",
+        "size": [
+          768,
+          432
+        ],
+        "frames": 1,
+        "bytes": 15596,
+        "sha256": "c3be12bb3d755f12f5726c31a45f4606269e3c25192a7a5a8b892e0e6c40453f"
+      },
+      {
+        "file": "public/assets/loading-screen/refri-anprobe-geschlossen-v2-fallback.webp",
+        "size": [
+          1280,
+          720
+        ],
+        "frames": 1,
+        "bytes": 60630,
+        "sha256": "3e2e24b4a285e55e9fd67b27c5784baeffb625a5c18fbb43d894a7f4887fc5fb"
+      }
+    ]
+  },
+  "door": {
+    "asset": {
+      "file": "public/assets/loading-screen/refri-anprobe-tuerblatt-v2.webp",
+      "size": [
+        345,
+        634
+      ],
+      "frames": 1,
+      "bytes": 19720,
+      "sha256": "da5a45367fb6c8650c85ccf07d54b7f9d1220344ab001afbe668e5d4d7ffe122"
+    },
+    "bounds": [
+      783,
+      121,
+      1128,
+      755
+    ]
+  },
+  "peeks": {
+    "protest": {
+      "source": {
+        "file": "assets/loading-screen/source/refri-anprobe-tuer-offen-v2.png",
+        "size": [
+          1671,
+          941
+        ],
+        "frames": 1,
+        "bytes": 1960215,
+        "sha256": "1844b6cdab06f7207a733d1364765cf7c63b145b47943aa7bbaa01016f3afe24"
+      },
+      "asset": {
+        "file": "public/assets/loading-screen/refri-anprobe-tuer-offen-v2.webp",
+        "size": [
+          383,
+          782
+        ],
+        "frames": 1,
+        "bytes": 29092,
+        "sha256": "b26a15b4fed55881f25f2e2cacc27ae6c1d61859c0dbf234321433f2751e4396"
+      },
+      "bounds": [
+        761,
+        69,
+        1144,
+        851
+      ]
+    },
+    "reassure": {
+      "source": {
+        "file": "assets/loading-screen/source/refri-anprobe-beruhigen-v2.png",
+        "size": [
+          1672,
+          941
+        ],
+        "frames": 1,
+        "bytes": 1860845,
+        "sha256": "34f5d8376abc24e322e63d44d19934a17d827100ea6e9b22e861630689c19278"
+      },
+      "asset": {
+        "file": "public/assets/loading-screen/refri-anprobe-beruhigen-v2.webp",
+        "size": [
+          383,
+          782
+        ],
+        "frames": 1,
+        "bytes": 28106,
+        "sha256": "35cea9bf7a95968d0b26420e4fc1cd3d8538022daa2ad4ba78f10d699ddb4bea"
+      },
+      "bounds": [
+        761,
+        69,
+        1144,
+        851
+      ]
+    }
+  },
+  "sound": {
+    "file": "public/assets/loading-screen/refri-anprobe-klappern-v2.wav",
+    "duration": 0.65,
+    "bytes": 28708,
+    "sha256": "6cec33aa0508213dcc38a83a23747053576577760755355deae61ace5f50841a"
+  }
+}

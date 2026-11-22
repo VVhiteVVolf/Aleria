@@ -1,0 +1,381 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--glynmor--person-317d5918",
+  "slug": "tegid-glynmor",
+  "identity": {
+    "name": "Tegid Glynmor",
+    "aliases": [],
+    "worldPersonId": "person--glynmor--person-317d5918"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "glynmor",
+      "label": "Familie Glynmor"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "glynmor",
+        "familyTitle": "Familie Glynmor",
+        "personId": "person-317d5918",
+        "worldPersonId": "person--glynmor--person-317d5918",
+        "houseId": "house-glynmor",
+        "houseName": "Glynmor",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Tegid Glynmor\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-glynmor\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-3ccbd57f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-3ccbd57f\",\"name\":\"Iorwerth Glynmor\"},{\"personId\":\"person-820804c4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-820804c4\",\"name\":\"?? Glynmor\"}],\"partners\":[{\"personId\":\"person-c0b38f3f\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-c0b38f3f\",\"name\":\"??\"}],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--glynmor--person-317d5918",
+      "documentIds": [
+        "person--glynmor--person-317d5918"
+      ],
+      "documents": [
+        {
+          "documentId": "person--glynmor--person-317d5918",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "glynmor",
+        "personId": "person-317d5918",
+        "worldPersonId": "person--glynmor--person-317d5918",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Glynmor/person--glynmor--person-317d5918.json",
+    "sourceExportedAt": "2026-11-22T15:23:31.739Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--glynmor--person-317d5918"
+    ],
+    "contentHash": "53f69d659319a1cdc022e2dc30041572817c1c261c324bf5c164db8a9c2ef630"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "glynmor"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Tegid Glynmor",
+        "title": "",
+        "fraktion": "Glynmor",
+        "role": "",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "",
+        "origin": "",
+        "bio": "",
+        "aliases": [],
+        "archived": false,
+        "portrait": null,
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Tegid Glynmor",
+          "stats": [
+            {
+              "label": "Haus",
+              "value": "Glynmor"
+            },
+            {
+              "label": "Stand",
+              "value": "Bürgerlich"
+            },
+            {
+              "label": "Lebensstatus",
+              "value": "Lebend"
+            }
+          ],
+          "biography": {
+            "biographyTitle": "Tegid Glynmor",
+            "biographyText": "<p>Tegid Glynmor gehört zur Gwynthorer Bürgerfamilie Glynmor.</p>",
+            "footer": "Personenakte · Tegid Glynmor",
+            "portrait": "",
+            "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+            "connectionsTitle": "Familie und Verwandtschaft",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Iorwerth Glynmor",
+                "image": "",
+                "imageFormat": "portrait",
+                "detail": "Elternteil"
+              },
+              {
+                "type": "connection",
+                "name": "Name nicht überliefert",
+                "image": "",
+                "imageFormat": "portrait",
+                "detail": "Elternteil"
+              },
+              {
+                "type": "connection",
+                "name": "Name nicht überliefert",
+                "image": "",
+                "imageFormat": "portrait",
+                "detail": "Ehe"
+              }
+            ],
+            "documentsTitle": "Familienakte",
+            "documents": [
+              {
+                "title": "Familie Glynmor",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+                "text": "Personenkarte und Verwandtschaft im Stammbaum.",
+                "link": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-317d5918"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--glynmor--person-317d5918"
+        },
+        "genealogy": {
+          "worldPersonId": "person--glynmor--person-317d5918",
+          "sex": "female",
+          "status": "alive",
+          "birth": "",
+          "death": "",
+          "houseId": "house-glynmor",
+          "houseName": "Glynmor",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "glynmor",
+              "personId": "person-317d5918",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-22T15:23:31.739Z",
+              "lastSyncedAt": "2026-11-22T15:23:31.739Z",
+              "url": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-317d5918",
+              "fingerprint": "{\"name\":\"Tegid Glynmor\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-glynmor\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-3ccbd57f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-3ccbd57f\",\"name\":\"Iorwerth Glynmor\"},{\"personId\":\"person-820804c4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-820804c4\",\"name\":\"?? Glynmor\"}],\"partners\":[{\"personId\":\"person-c0b38f3f\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-c0b38f3f\",\"name\":\"??\"}],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "person-3ccbd57f",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--glynmor--person-3ccbd57f",
+                "name": "Iorwerth Glynmor"
+              },
+              {
+                "personId": "person-820804c4",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--glynmor--person-820804c4",
+                "name": "?? Glynmor"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "person-c0b38f3f",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--glynmor--person-c0b38f3f",
+                "name": "??"
+              }
+            ],
+            "children": []
+          }
+        },
+        "id": "person--glynmor--person-317d5918"
+      }
+    ]
+  },
+  "character": {
+    "name": "Tegid Glynmor",
+    "title": "",
+    "fraktion": "Glynmor",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "portrait": null,
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Tegid Glynmor",
+      "stats": [
+        {
+          "label": "Haus",
+          "value": "Glynmor"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Lebensstatus",
+          "value": "Lebend"
+        }
+      ],
+      "biography": {
+        "biographyTitle": "Tegid Glynmor",
+        "biographyText": "<p>Tegid Glynmor gehört zur Gwynthorer Bürgerfamilie Glynmor.</p>",
+        "footer": "Personenakte · Tegid Glynmor",
+        "portrait": "",
+        "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+        "connectionsTitle": "Familie und Verwandtschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Iorwerth Glynmor",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "Name nicht überliefert",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "Name nicht überliefert",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Ehe"
+          }
+        ],
+        "documentsTitle": "Familienakte",
+        "documents": [
+          {
+            "title": "Familie Glynmor",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+            "text": "Personenkarte und Verwandtschaft im Stammbaum.",
+            "link": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-317d5918"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--glynmor--person-317d5918"
+    },
+    "genealogy": {
+      "worldPersonId": "person--glynmor--person-317d5918",
+      "sex": "female",
+      "status": "alive",
+      "birth": "",
+      "death": "",
+      "houseId": "house-glynmor",
+      "houseName": "Glynmor",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "glynmor",
+          "personId": "person-317d5918",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T15:23:31.739Z",
+          "lastSyncedAt": "2026-11-22T15:23:31.739Z",
+          "url": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-317d5918",
+          "fingerprint": "{\"name\":\"Tegid Glynmor\",\"title\":\"\",\"birth\":\"\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-glynmor\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-3ccbd57f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-3ccbd57f\",\"name\":\"Iorwerth Glynmor\"},{\"personId\":\"person-820804c4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-820804c4\",\"name\":\"?? Glynmor\"}],\"partners\":[{\"personId\":\"person-c0b38f3f\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-c0b38f3f\",\"name\":\"??\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-3ccbd57f",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-3ccbd57f",
+            "name": "Iorwerth Glynmor"
+          },
+          {
+            "personId": "person-820804c4",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-820804c4",
+            "name": "?? Glynmor"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "person-c0b38f3f",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-c0b38f3f",
+            "name": "??"
+          }
+        ],
+        "children": []
+      }
+    },
+    "id": "person--glynmor--person-317d5918"
+  }
+}

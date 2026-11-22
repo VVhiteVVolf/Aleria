@@ -1,0 +1,277 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--federkiel-gwynthor-oenyr",
+  "slug": "oenyr",
+  "identity": {
+    "name": "Oenyr",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "federkiel-gwynthor-oenyr",
+      "documentIds": [
+        "federkiel-gwynthor-oenyr"
+      ],
+      "documents": [
+        {
+          "documentId": "federkiel-gwynthor-oenyr",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Federkiel Gwynthor/federkiel-gwynthor-oenyr.json",
+    "sourceExportedAt": "2026-11-22T00:00:00+01:00",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "federkiel-gwynthor-oenyr"
+    ],
+    "contentHash": "d5f4c9921ce90e6dbce7e9929c779216016937a8d305fd675379847957937fc2"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "federkiel-couriers-20261122"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "federkiel-gwynthor-oenyr",
+        "name": "Oenyr",
+        "age": 22,
+        "gender": "male",
+        "title": "Postkurier",
+        "role": "Postkurier · Bannkreisstaffel",
+        "fraktion": "Gilde Federkiel",
+        "race": "Mensch",
+        "currentLocation": "Bannkreis Gwynthor",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor > Gwynthor-Stadt > Gilde Federkiel - Gwynthor",
+        "status": "active",
+        "portrait": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/portrait-v1.webp",
+        "emotes": [
+          {
+            "label": "Neutral",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-01.png"
+          },
+          {
+            "label": "Freundlich",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-02.png"
+          },
+          {
+            "label": "Nachdenklich",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-03.png"
+          },
+          {
+            "label": "Skeptisch",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-04.png"
+          },
+          {
+            "label": "Überrascht",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-05.png"
+          },
+          {
+            "label": "Genervt",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-06.png"
+          },
+          {
+            "label": "Entschlossen",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-07.png"
+          },
+          {
+            "label": "Verärgert",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-08.png"
+          },
+          {
+            "label": "Unsicher",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-09.png"
+          }
+        ],
+        "bio": "Oenyr lernte die Hofwege des Bannkreises kennen, als er noch Briefe für die Schreibstube einsammelte. Inzwischen reitet er für Federkiel und hilft am liebsten dort aus, wo ein schiefer Wegweiser oder eine unvollständige Anschrift die Zustellung erschwert.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Oenyr",
+          "stats": [
+            {
+              "label": "Alter",
+              "value": "22 Jahre"
+            },
+            {
+              "label": "Dienst",
+              "value": "Postkurier · Staffel II"
+            },
+            {
+              "label": "Einsatzgebiet",
+              "value": "Bannkreis Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/portrait-v1.webp",
+            "crestImage": "../Fraktionen/assets/emblems/gilden/federkiel-v2.webp",
+            "biographyTitle": "Oenyr · Postkurier der Gilde Federkiel",
+            "biographyText": "<p>Oenyr lernte die Hofwege des Bannkreises kennen, als er noch Briefe für die Schreibstube einsammelte. Inzwischen reitet er für Federkiel und hilft am liebsten dort aus, wo ein schiefer Wegweiser oder eine unvollständige Anschrift die Zustellung erschwert.</p>",
+            "historyTitle": "Erscheinung",
+            "historyText": "<p>Glattes kupferrotes Haar im tiefen Pferdeschwanz, grüne Augen und ein leichtes Grinsen. Eine Messingspange in Federform schließt seinen grünen Kapuzenmantel. Auf dem Porträt trägt er die Kapuze im Nacken und hält eine Schriftrolle.</p>",
+            "documentsTitle": "Dienststelle",
+            "documents": [
+              {
+                "title": "Die Kurierstation (Gestüt)",
+                "text": "Staffel II · Orte im Bannkreis",
+                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-federkiel-kurierstation"
+              }
+            ]
+          }
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "federkiel-gwynthor-oenyr",
+    "name": "Oenyr",
+    "age": 22,
+    "gender": "male",
+    "title": "Postkurier",
+    "role": "Postkurier · Bannkreisstaffel",
+    "fraktion": "Gilde Federkiel",
+    "race": "Mensch",
+    "currentLocation": "Bannkreis Gwynthor",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor > Gwynthor-Stadt > Gilde Federkiel - Gwynthor",
+    "status": "active",
+    "portrait": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/portrait-v1.webp",
+    "emotes": [
+      {
+        "label": "Neutral",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-01.png"
+      },
+      {
+        "label": "Freundlich",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-02.png"
+      },
+      {
+        "label": "Nachdenklich",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-03.png"
+      },
+      {
+        "label": "Skeptisch",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-04.png"
+      },
+      {
+        "label": "Überrascht",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-05.png"
+      },
+      {
+        "label": "Genervt",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-06.png"
+      },
+      {
+        "label": "Entschlossen",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-07.png"
+      },
+      {
+        "label": "Verärgert",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-08.png"
+      },
+      {
+        "label": "Unsicher",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-09.png"
+      }
+    ],
+    "bio": "Oenyr lernte die Hofwege des Bannkreises kennen, als er noch Briefe für die Schreibstube einsammelte. Inzwischen reitet er für Federkiel und hilft am liebsten dort aus, wo ein schiefer Wegweiser oder eine unvollständige Anschrift die Zustellung erschwert.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Oenyr",
+      "stats": [
+        {
+          "label": "Alter",
+          "value": "22 Jahre"
+        },
+        {
+          "label": "Dienst",
+          "value": "Postkurier · Staffel II"
+        },
+        {
+          "label": "Einsatzgebiet",
+          "value": "Bannkreis Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/portrait-v1.webp",
+        "crestImage": "../Fraktionen/assets/emblems/gilden/federkiel-v2.webp",
+        "biographyTitle": "Oenyr · Postkurier der Gilde Federkiel",
+        "biographyText": "<p>Oenyr lernte die Hofwege des Bannkreises kennen, als er noch Briefe für die Schreibstube einsammelte. Inzwischen reitet er für Federkiel und hilft am liebsten dort aus, wo ein schiefer Wegweiser oder eine unvollständige Anschrift die Zustellung erschwert.</p>",
+        "historyTitle": "Erscheinung",
+        "historyText": "<p>Glattes kupferrotes Haar im tiefen Pferdeschwanz, grüne Augen und ein leichtes Grinsen. Eine Messingspange in Federform schließt seinen grünen Kapuzenmantel. Auf dem Porträt trägt er die Kapuze im Nacken und hält eine Schriftrolle.</p>",
+        "documentsTitle": "Dienststelle",
+        "documents": [
+          {
+            "title": "Die Kurierstation (Gestüt)",
+            "text": "Staffel II · Orte im Bannkreis",
+            "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-federkiel-kurierstation"
+          }
+        ]
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

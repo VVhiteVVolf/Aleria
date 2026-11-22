@@ -596,6 +596,15 @@
             "emblem": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Perllan/perllan-emblem.png"
           },
           {
+            "name": "Familie Glynmor",
+            "rank": "Bürgerlich",
+            "seat": "Gwynthor",
+            "liege": "Haus Draig",
+            "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=glynmor",
+            "familyId": "glynmor",
+            "emblem": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png"
+          },
+          {
             "name": "Haus Brândyddyn",
             "rank": "Bürgerlich",
             "seat": "Gwynthor",
@@ -7471,6 +7480,16 @@
             "imageSrc": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Aurdden/aurdden-emblem.png",
             "imageAlt": "Wappen Familie Aurdden",
             "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-aurdden"
+          },
+          {
+            "id": "glynmor",
+            "name": "Familie Glynmor",
+            "rank": "Bürgerlich",
+            "seat": "Gwynthor",
+            "liege": "Haus Draig",
+            "imageSrc": "/Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+            "imageAlt": "Wappen Familie Glynmor",
+            "href": "/Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=glynmor"
           },
           {
             "id": "sept-cneacail",

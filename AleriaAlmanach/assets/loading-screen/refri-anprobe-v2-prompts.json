@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "version": 2,
+  "scene": "refri-anprobe",
+  "tool": "ImageGen (built-in)",
+  "date": "2026-11-22",
+  "coordinateSpace": [
+    1672,
+    941
+  ],
+  "images": [
+    {
+      "source": "source/refri-anprobe-geschlossen-v1.png",
+      "active": false,
+      "role": "reception-room draft replaced by the private anteroom",
+      "references": [
+        "AleriaAlmanach/assets/goettliche-eleganz/verkaufsraum.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Catrin Gwernant/Referenzen/catrin-gwernant-portrait.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Refri Thornwick/Referenzen/Tannengruenes Kleid/refri-tannengruenes-kleid-basis-20261121.png"
+      ],
+      "prompt": "Use case: illustration-story. Create ONE finished cinematic WIDE 16:9 landscape image, anime fantasy RPG story illustration for Aleria's loading screen, a fixed shot facing a fitting cabin inside the medieval tailor shop Göttliche Eleganz. Use input 1 for the actual shop's dark warm timber, ivory stone/plaster, leaded window, navy-and-gold fabric, purple fitting curtain and established illustrated style. Use input 2 for Catrin Gwernant's exact identity, auburn braided low bun, loose side locks, brown eyes, moss-green tailored overdress over ivory linen sleeves and leather belt. Use input 3 only for the unseen Refri and her fir-green dress with gold trim. The main image is the closed-door moment.\n\nCamera is straight on and fixed at approximately shoulder height with the fitting cabin and nearby Catrin clearly composed in the CENTRAL half of the frame so both survive a mobile crop. In the area just left of center (at roughly 38% of image width), show adult Catrin full length in lively three-quarter profile facing RIGHT into the door, tense raised eyebrows with an unmistakably concerned expression, lips slightly parted, one hand lifted as if debating whether to knock, her other hand gathered loosely at her waist. Keep her hands and hem well clear of the wooden door panel. Distinct from Catrin, at roughly 57–62% of the image width, show one clearly readable dark honey-brown wooden fitting-cabin swing door, nearly front-on, recessed in a freestanding squared timber frame trimmed by a deep purple/gold curtain tied back to the far RIGHT outside the jamb. The door is a SIMPLE single planar panel with vertical wooden boards, one brass handle on its LEFT edge, hinges on its RIGHT edge, well-defined consistent straight outer boundaries, a narrow dark seam to the jamb. The door is firmly shut in this still. Top of the door leaves a dark recessed transom beneath the cabin header. Bottom of the short wooden panel is lifted about 20 cm above the stone floor, so we see TWO distinct flat, slightly worn dark brown leather shoes belonging to Refri together UNDER the door, framed entirely inside the bottom opening with their soles on the floor, near the left/middle of that opening. A little dark fir-green cloth may just show in that shadow above the shoes. Refri's head and torso stay completely hidden by the closed door. Make this threshold and both shoes unambiguous at a glance; no floor mat or prop in front. No duplicate feet, humans or owl outside the door.\n\nShow the full vertical story in this same wide shot: breathing room above Catrin/door for separate speech bubbles rendered in HTML later, door and both pairs of feet fully in the picture, and readable room around them. Quiet upper wall or dark beams above the protagonists. On the sides use the reference shop's tall diamond-paned window with warm sunlight, orderly dark blue and ivory bolts of cloth, a fitting mirror away from the actors, timber and subtle tailoring details. Minor elements at the far edges may be cropped. Late-afternoon warm directional light with a restrained cool-violet cabin shadow. The two women’s comedic situation is conveyed with the concerned glance and the shifting shoes, an elegant scene with warm, finely drawn anime contours, controlled matte cel shading, layered architectural perspective and soft illustrative details, faithful to the provided paintings. Single image, no panels, absolutely no writing, no logo, no speech bubbles or sound effects painted into the art, no image border.",
+      "original": {
+        "size": [
+          1672,
+          941
+        ],
+        "bytes": 2180844,
+        "sha256": "76539ae066d11b720d886268db8a65d64f720a5d08137d5537b1d0ae9871178b"
+      }
+    },
+    {
+      "source": "source/refri-anprobe-tuer-offen-v1.png",
+      "active": false,
+      "role": "reception-room pose reference",
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/refri-anprobe-geschlossen-v1.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Refri Thornwick/Referenzen/Tannengruenes Kleid/refri-tannengruenes-kleid-basis-20261121.png"
+      ],
+      "prompt": "Use case: precise-object-edit, wide 16:9 hand-drawn scene. Image 1 is the EXACT master composition and edit target. Image 2 is Refri Thornwick’s identity plus costume. Create a single alternate frame for this exact shot, same perspective and image bounds. Outside the rectangular wooden door opening keep every pixel and alignment of image 1 as close as possible: Catrin at left in her existing concerned pose and attire, the jambs, wooden header, tied purple curtain, foreground, fabrics, mirror, daylight and floor do not move. Do NOT reframe/crop or recompose the master. Edit ONLY the dark interior and the smaller hinged wood door panel within the inner jambs at x=47 to 67.5 percent of the image, between the inside of the header and threshold.\n\nIn this frame the wood panel is open INWARDS, swinging on its existing RIGHT hinge and revealing a narrow vertical gap on its LEFT side, on the side closest to Catrin. The same door panel still visibly covers the right half of that opening, in correct mild perspective, with the same brass handle by its free edge. Refri is peeking through the gap, angling her lightly freckled face and expressive green eyes LEFT towards Catrin. At believable height roughly level with Catrin’s face, show her clearly recognizable narrow angular face, loose chestnut-brown hair and the top of her fir-green dress with subtle pale gold Celtic braid. One hand lightly grips the edge of the door at the height of her shoulder. She looks flustered, brows drawn and mouth just open as she insists that she can handle the laces herself. She is fully dressed and stays INSIDE the fitting cabin. Only her head, one hand and the upper part of her dress can be seen around the door’s free edge; the robe and legs remain hidden by the door and shadow. Barely seeing the small owl behind her is optional; never show the owl outside the opening. Preserve the same pair of Refri’s dark brown shoes and stone threshold in close alignment under the door. Keep detailed anime line art and warm shade colors identical to the master. Single landscape frame, no writing, speech bubbles, collage or painted motion marks.",
+      "original": {
+        "size": [
+          1672,
+          941
+        ],
+        "bytes": 2079124,
+        "sha256": "1d4511d7c4d1e5af575b675f3b928db18786a4cab986ee7f11750911f3483928"
+      }
+    },
+    {
+      "source": "source/refri-anprobe-beruhigen-v1.png",
+      "active": false,
+      "role": "reception-room pose reference",
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/refri-anprobe-tuer-offen-v1.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Refri Thornwick/Referenzen/Tannengruenes Kleid/refri-tannengruenes-kleid-basis-20261121.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Make ONE alternate expression frame for a fixed anime scene. Input 1 is the pixel-registered 16:9 image to edit. Input 2 is Refri Thornwick's character reference. Reproduce input 1 at the identical crop, scale, perspective, painting detail and lighting. Preserve the exact locations of Catrin, every hinge and edge of the open wooden door, her hand on the panel, the floor, both shoes and every other part of the illustration. Do not alter Catrin or move the camera or door.\n\nChange only Refri's face and nearest loose strands of hair in the narrow opening to the left of the door panel, around x=48–51 percent and y=20–31 percent. It is still the SAME recognizable adult, with the same chestnut hair, freckled face and forest-green eyes. Give Refri a small, distinctly forced and sheepish half-smile, one eyebrow slightly up, and a fleeting reassuring expression as she insists everything is perfectly fine. She glances sideways towards Catrin, never towards the camera. Her chin can tilt a few degrees higher in the same very small area so this pose is readable at loading-screen size. Keep her green dress with pale gold knotwork, her hand on the door, and her silhouette in the narrow slot as aligned as possible with input 1. Same theatrical frame, finely drawn outlines and matte shading, no legible writing, no speech bubble, no collage.",
+      "original": {
+        "size": [
+          1672,
+          941
+        ],
+        "bytes": 2022303,
+        "sha256": "0ccacb254ef397e7cc9a1ecc4e1f3fc483d488497f3a2f4b851d587d4eba92cc"
+      }
+    },
+    {
+      "source": "source/refri-anprobe-geschlossen-v2.png",
+      "active": true,
+      "role": "closed in the private anteroom",
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/refri-anprobe-geschlossen-v1.png"
+      ],
+      "prompt": "Use case: precise-object-edit. FIX THE ROOM in this single 16:9 illustrated frame. This cabin belongs in the boutique's PRIVATE changing annex BEHIND the heavy privacy curtain, NOT in the street-facing reception or retail room. The camera is already INSIDE that quiet enclosed anteroom, looking straight at its individual wooden changing booth. The sales floor is nowhere in view.\n\nKeep the exact canvas/camera, Catrin's full body, apple-brown braided bun, moss dress over ivory linen, posture and anxious face, and the closed wooden half-height cabin door, jambs, brass hinges and handle, 20 cm gap and both of Refri's dark leather shoes EXACTLY pixel-registered in their current places. Preserve their scale, wood/linen colors, shapes, floor position, and the contrast between Catrin's feet and the two feet beneath the cabin door. This fixed centerpiece will be used for a registered animation. Preserve the soft hand-drawn anime linework and matte shading. Keep a deep purple privacy drape as an architectural divider well to one side, with the fitting area itself clearly contained by walls.\n\nReplace EVERY sign of the public shop around them. Remove the large street-facing leaded window and view onto town, display shelves with cloth bolts, front counter, brass service bell, receptacle with quill, shop emblems or banner, fabric swatch displays. On left show intimate unbroken plaster walls with dark wooden wainscot, a discreet recessed privacy arch closed by a heavy purple curtain, and a narrow simple upholstered bench along the wall for waiting. On right show the nearby wall and a simple fitting mirror with a quiet reflection of the private interior, one or two hooks and a small indoor wall lantern, all outside the booth. Cozy softly lit windowless tailoring anteroom, historically plausible instead of a public shop. Use warm honey lantern light, muted blue-violet folds and substantial private timber architecture. All foreground furniture understated. No other customers, counters, merchandising, signage, logos, outside view, writing, panel border or painted speech bubbles. Camera and central action remain fixed; only the private surrounding room replaces the public frontage.",
+      "original": {
+        "size": [
+          1672,
+          941
+        ],
+        "bytes": 1964089,
+        "sha256": "82c469495e0103cee84c08409f3ad07a17d2f7131959acb4fa3f4324c228201f"
+      }
+    },
+    {
+      "source": "source/refri-anprobe-tuer-offen-v2.png",
+      "active": true,
+      "role": "indignant peek through the door",
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/refri-anprobe-tuer-offen-v1.png",
+        "AleriaAlmanach/assets/loading-screen/source/refri-anprobe-geschlossen-v2.png"
+      ],
+      "prompt": "Use case: precise-object-edit and compositing. Make one pixel-registered wide 16:9 alternate frame of the private changing annex. Image 1 is the exact pose/edit target for the OPEN fitting cabin, and image 2 is the exact approved PRIVATE ANTEROOM background and static Catrin. Compose the private room from image 2 with the small open-door area of image 1. Keep the same camera, frame edges, scale and character placement. Keep image 2 unchanged everywhere outside the inner opening of the wooden cabin. In that narrow opening only, register the open panel, hand, face, green dress, dimmer warm lantern color, door jamb and both shoes from image 1 back into exactly the same places. Refri has clearly irritated, brows drawn and lips parted as she insists she can do it herself. Same lightly freckled face, forest-green eyes, loose chestnut hair and fir-green dress with pale gold knotwork. She peeks toward Catrin, fully dressed and half-obscured by the door. Keep both dark leather shoes readable under the panel. Catrin remains concerned, with her fingers just about to knock and her feet clear of the cabin. The approved private room is windowless, with the drawn purple privacy curtain and purple bench on the left, subdued lanterns, and a discreet mirror and hooks on the right. Only that interior is visible. No counter, public floor, displays, exterior window, signage, other person, added text, speech bubble or motion marks. Preserve the hand-drawn anime style, soft linework, and alignment of the central action for a fixed-camera animated shot.",
+      "original": {
+        "size": [
+          1671,
+          941
+        ],
+        "bytes": 1960215,
+        "sha256": "1844b6cdab06f7207a733d1364765cf7c63b145b47943aa7bbaa01016f3afe24"
+      }
+    },
+    {
+      "source": "source/refri-anprobe-beruhigen-v2.png",
+      "active": true,
+      "role": "sheepish reassuring peek",
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/refri-anprobe-beruhigen-v1.png",
+        "AleriaAlmanach/assets/loading-screen/source/refri-anprobe-geschlossen-v2.png"
+      ],
+      "prompt": "Use case: precise-object-edit and compositing. Make one pixel-registered wide 16:9 alternate frame of the private changing annex. Image 1 is the exact pose/edit target for the OPEN fitting cabin, and image 2 is the exact approved PRIVATE ANTEROOM background and static Catrin. Compose the private room from image 2 with the small open-door area of image 1. Keep the same camera, frame edges, scale and character placement. Keep image 2 unchanged everywhere outside the inner opening of the wooden cabin. In that narrow opening only, register the open panel, hand, face, green dress, dimmer warm lantern color, door jamb and both shoes from image 1 back into exactly the same places. Refri has awkward reassuring half-smile and raised eyebrow as she claims everything is fine. Same lightly freckled face, forest-green eyes, loose chestnut hair and fir-green dress with pale gold knotwork. She peeks toward Catrin, fully dressed and half-obscured by the door. Keep both dark leather shoes readable under the panel. Catrin remains concerned, with her fingers just about to knock and her feet clear of the cabin. The approved private room is windowless, with the drawn purple privacy curtain and purple bench on the left, subdued lanterns, and a discreet mirror and hooks on the right. Only that interior is visible. No counter, public floor, displays, exterior window, signage, other person, added text, speech bubble or motion marks. Preserve the hand-drawn anime style, soft linework, and alignment of the central action for a fixed-camera animated shot.",
+      "original": {
+        "size": [
+          1672,
+          941
+        ],
+        "bytes": 1860845,
+        "sha256": "34f5d8376abc24e322e63d44d19934a17d827100ea6e9b22e861630689c19278"
+      }
+    }
+  ]
+}

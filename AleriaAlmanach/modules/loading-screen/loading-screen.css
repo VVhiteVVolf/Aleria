@@ -61,7 +61,7 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
 .almanach-loading__controls { display: flex; align-items: center; gap: 10px; }
 .almanach-loading__controls[hidden],
 .almanach-loading__scene[hidden],
-.almanach-loading__chase-dock[hidden] { display: none; }
+.almanach-loading__game-dock[hidden] { display: none; }
 .almanach-loading__pause,
 .almanach-sound-control__button {
   min-height: 44px;
@@ -305,7 +305,25 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
   bottom: auto;
   padding: 6px 9px 7px;
 }
-.almanach-loading__chase-dock {
+.almanach-loading__scene[data-scene-kind="blanket-archery"] {
+  aspect-ratio: 16 / 9;
+  background: #483029;
+}
+.almanach-loading__archery-picture,
+.almanach-loading__archery-picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.almanach-loading__archery-picture img { object-fit: cover; object-position: center bottom; }
+.almanach-loading__scene[data-scene-kind="blanket-archery"] .almanach-loading__banter {
+  --bubble-anchor: 54cqw;
+  --bubble-width: min(250px, 80cqw);
+  top: 8%;
+  bottom: auto;
+  padding: 6px 9px 7px;
+}
+.almanach-loading__game-dock {
   display: flex;
   flex: none;
   justify-content: space-between;
@@ -317,9 +335,9 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
   background: #372a22;
   color: var(--journey-paper);
 }
-.almanach-loading__chase-dock strong { font-size: 17px; }
-.almanach-loading__chase-dock p { margin: 3px 0 0; font: 12px/1.4 system-ui, sans-serif; }
-.almanach-loading__chase-play {
+.almanach-loading__game-dock strong { font-size: 17px; }
+.almanach-loading__game-dock p { margin: 3px 0 0; font: 12px/1.4 system-ui, sans-serif; }
+.almanach-loading__game-play {
   min-height: 44px;
   padding: 8px 21px;
   border: 1px solid #ad824b;
@@ -329,7 +347,7 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
   font: 700 14px/1.2 system-ui, sans-serif;
   cursor: pointer;
 }
-.almanach-loading__chase-play:disabled { opacity: .6; cursor: wait; }
+.almanach-loading__game-play:disabled { opacity: .6; cursor: wait; }
 .almanach-loading__footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -407,8 +425,8 @@ html[data-almanach-loading] [data-almanach-content] { visibility: hidden; }
   .almanach-loading__scene[data-party-size="2"] { --party-width: 60cqw; }
   .almanach-loading__scene[data-scene-kind="courtyard"] { aspect-ratio: 3 / 2; }
   .almanach-loading__scene[data-scene-kind="rose-chase"] { aspect-ratio: 3 / 2; }
-  .almanach-loading__chase-dock { flex-wrap: wrap; }
-  .almanach-loading__chase-play { width: 100%; }
+  .almanach-loading__game-dock { flex-wrap: wrap; }
+  .almanach-loading__game-play { width: 100%; }
   .almanach-loading__banter { --bubble-width: min(280px, 84cqw); }
   .almanach-loading__footer { grid-template-columns: 1fr; gap: 12px; }
   .almanach-loading__enter { width: 100%; }

@@ -1,4 +1,5 @@
 import { TRACK } from './chase-state.js?v=20261120-rosenflucht-v11';
+import { loadGameImages } from '../games/loading-game-assets.js?v=20261122-carys-archery-v1';
 
 const CELL = 192;
 const artFiles = {
@@ -9,19 +10,8 @@ const artFiles = {
   pyderi: 'rosenflucht-pyderi-posen-v11.webp'
 };
 
-export async function loadChaseArt(environment, assetUrl, signal) {
-  return Object.fromEntries(await Promise.all(Object.entries(artFiles).map(async ([name, file]) => {
-    const image = new environment.Image();
-    const cancel = () => image.removeAttribute('src');
-    signal.addEventListener('abort', cancel, { once: true });
-    try {
-      image.src = assetUrl(file);
-      await image.decode();
-      return [name, image];
-    } finally {
-      signal.removeEventListener('abort', cancel);
-    }
-  })));
+export function loadChaseArt(environment, assetUrl, signal) {
+  return loadGameImages(environment, assetUrl, artFiles, signal);
 }
 
 function drawGarden(context, garden, distance) {

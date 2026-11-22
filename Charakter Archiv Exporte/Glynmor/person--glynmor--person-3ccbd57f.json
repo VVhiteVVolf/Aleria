@@ -1,0 +1,200 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-22T15:23:31.739Z",
+  "assignedTab": "Gwynthor",
+  "source": {
+    "familyId": "glynmor",
+    "personId": "person-3ccbd57f"
+  },
+  "character": {
+    "name": "Iorwerth Glynmor",
+    "title": "",
+    "fraktion": "Glynmor",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "portrait": null,
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Iorwerth Glynmor",
+      "stats": [
+        {
+          "label": "Haus",
+          "value": "Glynmor"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Geboren",
+          "value": "1685"
+        },
+        {
+          "label": "Lebensstatus",
+          "value": "Lebend"
+        }
+      ],
+      "biography": {
+        "biographyTitle": "Iorwerth Glynmor",
+        "biographyText": "<p>Iorwerth Glynmor gehört zur Gwynthorer Bürgerfamilie Glynmor.</p>",
+        "footer": "Personenakte · Iorwerth Glynmor",
+        "portrait": "",
+        "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+        "connectionsTitle": "Familie und Verwandtschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Tudur Glynmor",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-c8d56880.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "Gwerfyl",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-d5104764.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "Name nicht überliefert",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Ehe"
+          },
+          {
+            "type": "connection",
+            "name": "Meilyr Glynmor",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Kind"
+          },
+          {
+            "type": "connection",
+            "name": "Gwyndaf Glynmor",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Kind"
+          },
+          {
+            "type": "connection",
+            "name": "Tegid Glynmor",
+            "image": "",
+            "imageFormat": "portrait",
+            "detail": "Kind"
+          }
+        ],
+        "documentsTitle": "Familienakte",
+        "documents": [
+          {
+            "title": "Familie Glynmor",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+            "text": "Personenkarte und Verwandtschaft im Stammbaum.",
+            "link": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-3ccbd57f"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--glynmor--person-3ccbd57f"
+    },
+    "genealogy": {
+      "worldPersonId": "person--glynmor--person-3ccbd57f",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1685",
+      "death": "",
+      "houseId": "house-glynmor",
+      "houseName": "Glynmor",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "glynmor",
+          "personId": "person-3ccbd57f",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T15:23:31.739Z",
+          "lastSyncedAt": "2026-11-22T15:23:31.739Z",
+          "url": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-3ccbd57f",
+          "fingerprint": "{\"name\":\"Iorwerth Glynmor\",\"title\":\"\",\"birth\":\"1685\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-glynmor\",\"portrait\":\"\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-c8d56880\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-c8d56880\",\"name\":\"Tudur Glynmor\"},{\"personId\":\"person-d5104764\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-d5104764\",\"name\":\"Gwerfyl\"}],\"partners\":[{\"personId\":\"person-820804c4\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-820804c4\",\"name\":\"?? Glynmor\"}],\"children\":[{\"personId\":\"person-0b1973c0\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-0b1973c0\",\"name\":\"Meilyr Glynmor\"},{\"personId\":\"person-6acfc5a4\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-6acfc5a4\",\"name\":\"Gwyndaf Glynmor\"},{\"personId\":\"person-317d5918\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-317d5918\",\"name\":\"Tegid Glynmor\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-c8d56880",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-c8d56880",
+            "name": "Tudur Glynmor"
+          },
+          {
+            "personId": "person-d5104764",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-d5104764",
+            "name": "Gwerfyl"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "person-820804c4",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-820804c4",
+            "name": "?? Glynmor"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-0b1973c0",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-0b1973c0",
+            "name": "Meilyr Glynmor"
+          },
+          {
+            "personId": "person-6acfc5a4",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-6acfc5a4",
+            "name": "Gwyndaf Glynmor"
+          },
+          {
+            "personId": "person-317d5918",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-317d5918",
+            "name": "Tegid Glynmor"
+          }
+        ]
+      }
+    },
+    "id": "person--glynmor--person-3ccbd57f",
+    "age": 55
+  }
+}

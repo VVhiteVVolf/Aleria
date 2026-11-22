@@ -1,0 +1,447 @@
+{
+  "mode": "built-in image_gen",
+  "date": "2026-11-22",
+  "purpose": "Three alternative visual concepts requested by the user; no active portrait chosen and no module/profile publication.",
+  "stylePreset": "anime-scene-portrait",
+  "styleRevision": "2026-11-09",
+  "references": [
+    {
+      "kind": "conversation-attachment",
+      "role": "Open steel serpent-mouth helmet design",
+      "localPath": null,
+      "sha256": null,
+      "note": "User attachment in current request. No local original supplied."
+    },
+    {
+      "kind": "local-image",
+      "role": "Primary approved drawing style",
+      "path": "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+      "viewed": true,
+      "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033",
+      "archivedPath": "AleriaAlmanach/docs/art/sumpfnattern-20261122/references/kyrwyn-experimental-v3.png"
+    },
+    {
+      "kind": "local-image",
+      "role": "Secondary intimidating composition and sword-pommel pose",
+      "path": "AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/untote-aele-leutnant-1-v2.png",
+      "viewed": true,
+      "sha256": "46415297a9e34da2758ddecb3b61d11a3d96a70b4798c3051eda7ba59f39295a",
+      "archivedPath": "AleriaAlmanach/docs/art/sumpfnattern-20261122/references/untote-aele-leutnant-1-v2.png"
+    }
+  ],
+  "integratedGroupId": "zitteraale-gruppe-ii",
+  "jobs": [
+    {
+      "id": "gruene-natter-konzept-03-v2",
+      "title": "Die lauernde Natter – Helm unter dem Arm",
+      "kind": "portrait-edit",
+      "parentId": "gruene-natter-konzept-03-v1",
+      "mode": "built-in image_gen",
+      "active": true,
+      "references": [
+        {
+          "role": "Edit target; selected identity, armor, fabric, setting and drawing",
+          "viewed": true,
+          "sha256": "24c49a321d8412cb094b70d9c425d9d09be8ba98385de9428765b9a3a3435294"
+        },
+        {
+          "role": "Approved Aleria anime style only",
+          "viewed": true,
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        }
+      ],
+      "prompt": "Use case: identity-preserve / precise-object-edit.\nEDIT THE FIRST REFERENCE, the selected slim Green Adder outlaw knight portrait. The second reference is the approved Aleria anime drawing-style reference ONLY. Produce one finished vertical 2:3 portrait, 1024x1536.\n\nPreserve the selected man's identity and lean, angular knight silhouette, his blackened steel articulated plate armor over dark forest-green steel scales, the half-open torn and visibly patched black/dark-green surcoat, its broad heraldic panel, the substantial long two-handed sword and the same ivy-covered Lycath ruins with subdued overcast light. Preserve the fine matte hand-drawn Aleria anime style: delicate confident charcoal lineart, controlled cel-shading, harmonious restrained color and sparse drawn material wear. Not photorealistic, not 3D, not thick painterly fantasy art. Keep the composition focused on face and upper body, helmet, hands and heraldry, from complete hair top to waist/upper hips; no legs.\n\nMake these three requested changes clearly:\n1. REMOVE THE HELMET FROM HIS HEAD. His naturally human head and ears are now visible with DARK RED / DEEP AUBURN hair, short-to-medium length, slightly rough swept-back locks, irregular loose strands, no neat modern undercut. Reveal a sharper, more villainous and intimidating version of the SAME face: strong angular jaw and cheekbones, tightened brows, cold narrow gray-green eyes, a scornful hard set mouth, menacing confident bearing, a dangerous outlaw knight. Do not make him friendly, smiling broadly, elderly, bald or a different body type. Keep natural adult anatomy, not monstrous caricature.\n2. CHANGE THE ARM POSE: he firmly tucks the existing STEEL OPEN-SNAKE-MOUTH HELMET under his RIGHT arm (VIEWER'S LEFT), at his lower ribs/waist. The bent right forearm cradles its base and his arm holds it securely against his side. The helmet retains the selected design: long low steel adder snout, layered scale-shaped steel crown, two visible fangs and open jaw/cheek guards, actual functional empty helmet with a dark interior and realistic head-sized proportions. Turn it enough for the serpent profile and open mouth to be recognizable. ONLY his OTHER, LEFT armored hand (VIEWER'S RIGHT) rests on the upright greatsword's pommel, visibly supporting some of his weight. Keep the blade vertical and continuing below the bottom edge. The hilt and broad crossguard remain imposing and properly proportioned. Both arms must join the correct shoulders; exactly two natural human arms and hands, plausible gauntlets; no extra hand still stacked on the pommel, no second helmet, no helmet worn on the head. Keep the chest emblem visible.\n3. REDRAW THE EMBROIDERED/PAINTED HERALDRY ON THE SURCOAT so the horned GOAT is actively fighting the green ADDER. The goat REARS UP sharply with both forelegs raised and bent, torso twisting, hindquarters braced, head thrown back and mouth open in distress or defiance, horns clearly visible. A single GREEN ADDER tightly coils around its twisting body and bites the BACK OF ITS NECK, the nape, in a legible dramatic heraldic struggle. Make the silhouette energetic and diagonal rather than a calmly standing goat. Keep it a believable simple cloth emblem with ONE goat with four correctly joined legs and ONE snake, no live animals, no blood, no additional badge, no lettering. It must read as an attacked goat resisting the snake, not a goat willingly standing still.\n\nUse the updated hand/helmet pose to make him appear relaxed in his own dangerous authority, grim and badass. Keep the same ruins and three-quarter body orientation. No text, border, watermark or decorative layout.",
+      "transparent_background": false,
+      "status": "visually-reviewed",
+      "originalPath": "AleriaAlmanach/docs/art/sumpfnattern-20261122/originals/gruene-natter-konzept-03-v2.png",
+      "toolArguments": {
+        "referenced_image_paths": [],
+        "transparent_background": false
+      },
+      "visualReview": {
+        "viewed": true,
+        "method": "Actual complete generator output inspected; active files checked separately in browser and art contact sheet."
+      },
+      "sha256": "481769c51d96c7979dbe639d9120b510e5b1c23e55d85c915bf41b139329558d",
+      "width": 1024,
+      "height": 1536,
+      "target": "AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-gruene-natter-v2.png",
+      "targetSha256": "481769c51d96c7979dbe639d9120b510e5b1c23e55d85c915bf41b139329558d",
+      "targetWidth": 1024,
+      "targetHeight": 1536
+    },
+    {
+      "id": "sumpfnattern-leutnant-1-v2",
+      "title": "Rechte Hand – dunkelrotes Haar und aufgestützter Waffenschaft",
+      "kind": "portrait-edit",
+      "mode": "built-in image_gen",
+      "parentId": "sumpfnattern-leutnant-1-v1",
+      "active": true,
+      "references": [
+        {
+          "role": "Edit target; preserve male identity, armor, insignia and Lycath setting.",
+          "viewed": true,
+          "sha256": "e670125bf6457629c4628353eef0b4978f0379ab11e371b6d52f158dcd171693"
+        },
+        {
+          "role": "Primary approved Aleria matte anime drawing style only.",
+          "viewed": true,
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        }
+      ],
+      "prompt": "Use case: identity-preserve / precise-object-edit.\nEDIT the FIRST reference portrait, the male Sumpfnattern watch-sergeant lieutenant, with exactly the following changes. The second reference is a DRAWING STYLE reference only, not a replacement face or hair brightness.\n\n1. Change his short-cropped BLACK scalp hair to DARK RED, deep natural AUBURN / burgundy chestnut, clearly reddish in the diffuse light but not bright orange. His eyebrows and the nongray parts of his coarse beard should harmonize in dark auburn. Preserve the existing GRAY in the chin beard and temples. Keep the SAME mature adult man in his early forties: broad shoulders, thick neck, broken nose, cheek scar, individual facial anatomy, calm cold assessing eyes and intimidating closed mouth.\n2. Completely REPLACE the shouldered-war-hammer pose with a relaxed but threatening upright leaning pose. His war hammer is now held VERTICALLY in front of his torso, with the HAMMER HEAD BELOW THE BOTTOM EDGE of the portrait, planted on the ground out of view. Only the long straight worn WOODEN SHAFT is visible, extending up from the bottom border to his lower chest. He rests BOTH heavy gauntleted hands naturally one over the other on the blunt upper butt end of this shaft, elbows bent and forearms lowered, leaning a little of his upper body weight onto it. Clearly draw the plain wooden shaft, a modest worn iron cap at its upper end if useful, and natural anatomically coherent hands, one on top of the other. It is a simple haft, NOT a sword, not a pommel, no crossguard, no spear tip and no curved handle. Remove the entire horizontal shaft and hammer head from his shoulder and behind his neck; there must be NO hammer head anywhere in the image and no remaining raised arm. Exactly two human arms/hands, plausible armored fingers and firm grounded weight.\nPreserve his worn black riveted brigandine, dark forest-green scale sections, heavy steel gauntlets and bracers, patched torn black/dark-green cloth, and the small upper-chest insignia of a green snake coiling around a rearing horned goat and biting its neck. Keep that insignia readable above/to the side of the resting hands. Preserve the same ivy-covered ruined walls of Lycath and the overcast quiet natural light.\nKeep the fine hand-drawn matte Aleria Tales of Xillia/Frieren anime look of the supplied references: confident fine charcoal contours, controlled cel-shading, quiet harmonious color, sparse drawn wear, natural adult human proportions. No photo texture, 3D or painterly grit.\nComposition remains 2:3, 1024x1536, complete head and short hair to waist/upper hips, face and upper body large, no legs and no camera zoom-out to show the hidden hammer head. No new props, people, text, border or watermark.",
+      "toolArguments": {
+        "referenced_image_paths": [],
+        "transparent_background": false
+      },
+      "status": "visually-reviewed",
+      "originalPath": "AleriaAlmanach/docs/art/sumpfnattern-20261122/originals/sumpfnattern-leutnant-1-v2.png",
+      "visualReview": {
+        "viewed": true,
+        "method": "Actual complete generator output inspected; active files checked separately in browser and art contact sheet."
+      },
+      "sha256": "524aeb013d0c5a9c13ccb72728ac553be33154922aa1a1c380692ce5b69faa3a",
+      "width": 1024,
+      "height": 1536,
+      "target": "AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-leutnant-1-v2.png",
+      "targetSha256": "524aeb013d0c5a9c13ccb72728ac553be33154922aa1a1c380692ce5b69faa3a",
+      "targetWidth": 1024,
+      "targetHeight": 1536
+    },
+    {
+      "id": "sumpfnattern-alchemist-v1",
+      "title": "Linke Hand – der abtrünnige Alchemist",
+      "kind": "lieutenant-portrait",
+      "mode": "built-in image_gen",
+      "active": true,
+      "replacesConceptId": "sumpfnattern-giftkundige-v1",
+      "references": [
+        {
+          "role": "Sumpfnattern palette, patched equipment, dynamic goat-and-adder insignia and Lycath ruins; not identity, hair or exact armor.",
+          "viewed": true,
+          "sha256": "481769c51d96c7979dbe639d9120b510e5b1c23e55d85c915bf41b139329558d"
+        },
+        {
+          "role": "Primary approved fine matte Aleria anime drawing style only.",
+          "viewed": true,
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        }
+      ],
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE new finished portrait of the MALE left-hand lieutenant of the Sumpfnattern: a renegade ALCHEMIST, eccentric and a little unhinged.\nCreate a single adult MAN, vertical 2:3, 1024x1536, no montage.\nInput reference 1 is the Green Adder knight: use ONLY the band's black and dark forest-green palette, worn repaired equipment, goat-and-adder badge and ivy-covered Lycath ruins. This is a DIFFERENT person with a noticeably different silhouette. Do not copy the knight's face, red hair, weapon, helmet or heavy plate armor. Input reference 2 is Kyrwyn v3: PRIMARY approved Aleria anime DRAWING STYLE only. Fine confident varied charcoal contours, naturally proportioned adult anime anatomy, attractive individual faces, expressive eyes, matte harmonious color, restrained clean cel-shading and sparse drawn material wear. No photographic textures, 3D, plastic shine, coarse gritty painting or chibi proportions.\n\nSUBJECT: A wiry, lean adult male alchemist in his late thirties, intelligent, disreputable and oddly charismatic. A narrow angular masculine face, defined jaw, slightly hooked nose, faint untidy stubble and light shadows under his eyes. Wild tousled ASH-BLOND hair with uneven locks and a few pale strands sticking up and out; uncombed rather than a modern styled undercut. AMBER eyes, keen and feverishly interested. Small old-fashioned ROUND brass-rimmed spectacles sit a little crooked on his nose; keep his expressive eyes clearly readable through the clear lenses. His smile is an unsettling lopsided, slightly tooth-showing GRIN of someone delighted by a dangerous idea, one eyebrow raised, head tilted subtly. Eccentric and somewhat mad, a menacingly enthusiastic fantasy alchemist rather than a friendly teacher, but not a grotesque cartoon, deformed face or monster.\n\nCLOTHING: a HIGH-COLLARED DARK FOREST-GREEN alchemist's traveling coat with uneven repaired hems and slightly mismatched fastenings, over a worn brown-black leather-reinforced apron-like surcoat/waistcoat. A few modest dark steel SCALE panels at the collar/shoulder joints link him to the band while keeping the silhouette leaner and more scholarly than a knight. Functional dark leather gloves and cuffs, subtle old stains and scorch marks on his work clothes, no modern laboratory coat or laboratory equipment. Only a FEW small corked bottles at his belt, not cluttered with dozens of props.\nA SMALL battered cloth badge on his upper chest shows ONE green ADDER coiling around ONE pale horned GOAT, biting the nape while the goat REARS UP to resist, head thrown back and forelegs lifted. Match the first reference's badge symbolism, not a live animal or bloody scene. Keep the badge small and visible.\n\nPOSE: standing in a relaxed slightly forward-leaning three-quarter posture, head and upper body large in the image. One gloved hand delicately raises ONE small cork-stoppered medieval glass vial to upper-chest height, between thumb and forefinger, containing a little nonluminous cloudy olive-green liquid. He regards the vial with an excited sidelong look while his face remains clearly seen in three-quarter view. His other gloved hand rests against his belt or forearm in a natural asymmetrical posture, no floating hands or unexplained gestures. Exactly two human arms/hands, five natural fingers each, believable grip. Vial below and beside his face, not hiding eyes, mouth or badge. No drinking, pouring, chemical recipes, fumes, explosions, magic effects or modern gadgets.\n\nCOMPOSITION/SETTING: eye-level portrait from complete tousled hairstyle to waist/upper hips. Face, grin, glasses, raised vial, hands and clothing readable, no legs, no full-body distance. Quiet overcast light among mossy ivy-covered medieval ruined arches and broken walls at Lycath, subdued mist and depth behind him, consistent with the existing band portraits. One person only. No text, watermark, border or decorative layout.",
+      "toolArguments": {
+        "referenced_image_paths": [],
+        "transparent_background": false
+      },
+      "status": "visually-reviewed",
+      "originalPath": "AleriaAlmanach/docs/art/sumpfnattern-20261122/originals/sumpfnattern-alchemist-v1.png",
+      "visualReview": {
+        "viewed": true,
+        "method": "Actual complete generator output inspected; active files checked separately in browser and art contact sheet."
+      },
+      "sha256": "fb05df46b03c5ddfe83962fd96124261f0eb3c011b0f4c62b1ba5458577d5abf",
+      "width": 1024,
+      "height": 1536,
+      "target": "AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-alchemist-v1.png",
+      "targetSha256": "fb05df46b03c5ddfe83962fd96124261f0eb3c011b0f4c62b1ba5458577d5abf",
+      "targetWidth": 1024,
+      "targetHeight": 1536
+    },
+    {
+      "id": "banner-sumpfnattern-v1",
+      "kind": "group-banner",
+      "prompt": "Use case: stylized-concept / heraldic banner. Create ONE complete hanging medieval BAND BANNER, portrait 2:3, 1024x1536, actual transparent exterior. Reference 1 supplies the USER-SELECTED emblem: a green adder wraps a pale horned male goat and BITES THE BACK OF ITS NECK, while the goat dynamically REARS UP, twists its torso, throws back its head and lifts both forelegs to resist. ONE snake and ONE goat, correctly joined four goat legs, distinct horns, clear silhouette, not a docile standing animal, no blood. Reference 2 provides regional goat heraldry only; do not copy its two-goat design or gold colors. Reference 3 provides weathered handcrafted heraldic painting only; do not copy its yellow eel.\nBlack and very dark forest-green fabric, restrained faded silver edging, repaired seams and slightly ragged split hem, broad front-facing cloth area with one large pale goat and green adder central symbol. Short simple dark wooden top rail with two suspension loops, complete silhouette entirely inside image. The emblem is painted/embroidered into the cloth, strong dark contours, few clear muted color areas, medieval Celtic fantasy look. Real cloth folds but image remains clear for a small module card, front-on, no dramatic twisting. No shield frame around the emblem, no text, lettering, runes, people, landscape, floor or pole. Only the banner and its small top rail, all surrounding space genuinely TRANSPARENT, including between suspension loops and outside the cloth. No outer shadow, glow or simulated checkerboard. Keep the whole top rail and entire ragged bottom hem inside the frame with generous free margin. This is an open hanging cloth banner, not the round icon.",
+      "mode": "built-in image_gen",
+      "active": true,
+      "references": [
+        {
+          "viewed": true,
+          "role": "Selected Sumpfnattern snake-and-goat motif and palette",
+          "sha256": "481769c51d96c7979dbe639d9120b510e5b1c23e55d85c915bf41b139329558d"
+        },
+        {
+          "viewed": true,
+          "role": "Gafyr goat heraldry and regional Celtic heraldic language, not a copied family emblem",
+          "sha256": "46ba6d9d244950e8e3da5350dc41223e811a3f0cb1ae4cf4b66110d344021700"
+        },
+        {
+          "viewed": true,
+          "role": "Parent-band round painted-wood heraldic rendering, not its eel symbol or yellow palette",
+          "sha256": "ef7924775ad16473c37c61a914c0b98f5f2e1b96c1ff6e5f8dc2157f86594eb9"
+        }
+      ],
+      "toolArguments": {
+        "referenced_image_paths": [],
+        "transparent_background": true
+      },
+      "status": "visually-reviewed",
+      "originalPath": "AleriaAlmanach/docs/art/sumpfnattern-20261122/originals/banner-sumpfnattern-v1.png",
+      "sha256": "02c542cc305f40915fb30ff7b651770e13d247bea64d047215adde9579f33c0d",
+      "width": 1024,
+      "height": 1536,
+      "target": "AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-sumpfnattern-v1.png",
+      "targetSha256": "02c542cc305f40915fb30ff7b651770e13d247bea64d047215adde9579f33c0d",
+      "targetWidth": 1024,
+      "targetHeight": 1536,
+      "visualReview": {
+        "viewed": true,
+        "method": "Actual complete generator output inspected; active files checked separately in browser and art contact sheet."
+      }
+    },
+    {
+      "id": "icon-sumpfnattern-v1",
+      "kind": "group-icon",
+      "prompt": "# Universeller Wappen-Prompt\n\n**Wappenname:** Die Sumpfnattern\n\n**Zentrales Symbol:** Eine grüne Natter umschlingt einen hellen gehörnten Geißbock und beißt ihm in den Nacken. Der Geißbock bäumt sich auf, wirft den Kopf zurück und wehrt sich mit erhobenen Vorderläufen. Ein klar erkennbarer dynamischer Kampf, eine Schlange und ein Geißbock.\n\n**Farbpalette:** Schwarz · Dunkelgrün · Silber und helles Elfenbein\n\n**Wappenform:** ZIRKULAR – IMMER ein exakter Kreis, damit das Wappen in die vorhandenen Frames passt. Keine Spitzschilde oder ovalen Außenkonturen.\n\n### Gestaltung\n\nEin hochwertiges mittelalterliches Wappen im nordisch-keltischen Fantasy-Heraldikstil. Inspiriert von historischen bemalten Holzschilden, nordischer Ornamentik und traditionellen Clanwappen.\n\nDas zentrale Symbol ist groß, ausdrucksstark und detailliert, gleichzeitig aber klar heraldisch stilisiert. Kräftige dunkle Konturen, sauber getrennte Farbflächen, markante Silhouetten und ausgewogene Proportionen.\n\nDas gesamte Motiv muss vollständig innerhalb des Wappens liegen. Keine abgeschnittenen Figuren, Waffen, Flügel, Hörner oder Ornamente.\n\n### Material und Oberflächen\n\nDie innere Wappenfläche besteht aus bemalten Holzbrettern mit dezenter, sichtbarer Holzmaserung. Die Farben wirken wie auf Holz aufgetragene mittelalterliche Pigmente.\n\nDer Außenrahmen besteht aus geschwärztem Eisen mit leichter Materialstruktur, kleinen Gebrauchsspuren und einer vollständig geschlossenen Außenkontur.\n\nDas Wappen soll handwerklich hochwertig, plastisch und historisch glaubwürdig wirken. Keine moderne, minimalistische Logoästhetik, keine Fotorealistik und keine übertriebenen 3D-Effekte.\n\n### Verzierungen\n\nZurückhaltende keltische Knoten im geschlossenen Eisenring; keine Schrift.\n\nBei zirkularen Wappen können die Verzierungen gleichmäßig im Außenring verlaufen. Sie dürfen das zentrale Motiv nicht überlagern.\n\n### Komposition\n\nQuadratisches Bildformat 1:1. Das vollständige Wappen steht mittig und wird frontal gezeigt.\n\nDas Wappen nimmt ungefähr 85–90 % der Bildbreite ein. Alle Elemente bleiben vollständig innerhalb seiner äußeren Begrenzung.\n\n### Transparenz – zwingend einhalten\n\n**Der gesamte Bereich außerhalb des äußersten Wappenrahmens muss vollständig transparent sein (Alpha-Kanal = 0).**\n\n- Keine Hintergrundfarbe, kein Weiß, Schwarz oder Magenta außerhalb des Wappens.\n- Kein Hintergrundbild, keine Landschaft, keine Wand und keine dekorativen Elemente außerhalb des Rahmens.\n- Keine Schlagschatten, Glows oder Lichtreflexe außerhalb der Wappenkontur.\n- Keine über den Rahmen hinausragenden Ornamente oder Symbole.\n- Die äußerste Wappenkante muss sauber und geschlossen sein.\n- **Die gesamte Wappenfläche innerhalb des Außenrahmens muss vollständig deckend bleiben (Alpha-Kanal = 255).**\n- Keine transparenten Löcher zwischen Symbolen, Ornamenten oder innerhalb der bemalten Holzfläche.\n- Die Innenfläche des Wappens muss ihre vorgesehene Farbe vollständig behalten.\n\n**WICHTIG:** Ausschließlich der Bereich außerhalb der äußeren Wappenkontur ist transparent. Das Wappen selbst, einschließlich Holzfläche, Rahmen, Symbolen und sämtlichen Zwischenräumen, bleibt vollständig sichtbar und deckend.\n\n### Ausgabe\n\nHochauflösendes PNG mit echtem transparentem Hintergrund (RGBA), quadratisches Format 1:1. Keine simulierte Transparenz und kein Schachbrettmuster als Bildhintergrund.\n\nREFERENCE ROLES: first image supplies the already selected dynamic adder-and-goat emblem on the leader's surcoat. Second image is Gafyr regional heraldry only; use one goat resisting the snake, NOT the two-goat family arms. Third image is the parent Black Electric Eels painted-wood round emblem as MATERIAL AND SHAPE reference; do not copy its yellow eel. The NEW circular Sumpfnattern emblem has a charcoal-black and deep-green painted wood field, one pale horned goat rearing with its head thrown back and front legs raised, wrapped by one vivid natural GREEN ADDER biting its nape. Highly readable at small icon size, closed blackened-iron ring, restrained silver knot accents. Exactly circular outer contour in a square 1024x1024 PNG. Every interior gap stays opaque dark painted wood. Only OUTSIDE the circle is transparent. No text, no words, no detached elements or shadows.",
+      "mode": "built-in image_gen",
+      "active": true,
+      "references": [
+        {
+          "viewed": true,
+          "role": "Selected Sumpfnattern snake-and-goat motif and palette",
+          "sha256": "481769c51d96c7979dbe639d9120b510e5b1c23e55d85c915bf41b139329558d"
+        },
+        {
+          "viewed": true,
+          "role": "Gafyr goat heraldry and regional Celtic heraldic language, not a copied family emblem",
+          "sha256": "46ba6d9d244950e8e3da5350dc41223e811a3f0cb1ae4cf4b66110d344021700"
+        },
+        {
+          "viewed": true,
+          "role": "Parent-band round painted-wood heraldic rendering, not its eel symbol or yellow palette",
+          "sha256": "ef7924775ad16473c37c61a914c0b98f5f2e1b96c1ff6e5f8dc2157f86594eb9"
+        }
+      ],
+      "toolArguments": {
+        "referenced_image_paths": [],
+        "transparent_background": true
+      },
+      "status": "visually-reviewed",
+      "originalPath": "AleriaAlmanach/docs/art/sumpfnattern-20261122/originals/icon-sumpfnattern-v1.png",
+      "sha256": "a92818410aaccda68335437e268dc4915778fdba1e92c8d7fbb95afcc3cf98d5",
+      "width": 1254,
+      "height": 1254,
+      "target": "AleriaAlmanach/assets/schwarze-zitteraale/groups/icons/icon-sumpfnattern-v1.png",
+      "targetSha256": "500ae3840daae3b892530c6dbbd5192746dfc99353b6fffd77b839bbc7d18b4a",
+      "targetWidth": 1366,
+      "targetHeight": 1366,
+      "processing": {
+        "pipeline": "heraldic_emblem_alpha.prepare_emblem_from_source",
+        "size": [
+          1366,
+          1366
+        ],
+        "padding": {
+          "left": 62,
+          "top": 55
+        },
+        "circle": {
+          "centre": [
+            683,
+            683
+          ],
+          "radius": 601
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      },
+      "visualReview": {
+        "viewed": true,
+        "method": "Actual complete generator output inspected; active files checked separately in browser and art contact sheet."
+      }
+    },
+    {
+      "id": "sumpfnattern-lycath-aussen-v1",
+      "kind": "overview-scene",
+      "prompt": "Use case: stylized-concept. Create ONE fully illustrated ENVIRONMENT SCENE for Aleria, vertical 2:3, 1024x1536, opaque background. No people, no portrait composition. Reference 1 (Kyrwyn) is DRAWING STYLE only: approved Tales of Xillia/Frieren Aleria anime, fine assured varying dark contours, matte harmonious colors and quietly coordinated clean cel-shading, sparse deliberate material detail. Apply that style to a spatially rich environment, not a character. No photograph, 3D render, coarse painterly grain or modern technology. Reference 2 is the Sumpfnattern band banner: use its black/dark-green fabric and small green adder coiling round and biting a pale REARING horned goat. Reproduce that motif on one modest banner inside the scene, not a huge foreground graphic. No lettering or frame.\nSETTING FACT: LYCATH is an ancient ruined Crannath fortress in Celtigerns Wacht whose surviving remains are OLD FOUNDATIONS, low stone courses and scattered fallen blocks. The Sumpfnattern built a bandit encampment among these foundations. Do NOT invent standing intact castle towers, grand halls, tall stone walls or a complete stone fortress. All substantial current shelters, fences and lookouts are visibly recent rough timber and patched canvas, supported by the low mossy ancient foundation stones. Damp woodland, ivy, ferns and ordinary forest undergrowth, muted black/dark green camp palette, silver metal fittings, no undead or eel symbols. No living or dead people, no blood or violence; a quiet explorable scene ready for roleplay.\nOVERVIEW SCENE: a somewhat distant exterior APPROACH to Lycath in cool overcast morning light. A narrow muddy woodland trail enters from the foreground, curves between bracken and weathered ancient foundation blocks and leads toward a partly hidden bandit refuge in the middle distance. Low crumbling stone footings under rough palisade panels, a simple timber entrance gap, dark green canvas shelters and the Sumpfnattern banner on a wooden crosspiece make the camp visible without revealing every internal detail. Trees frame the upper sides; layered mist and wooded hills beyond, restrained atmospheric depth. Make the low ruined footprint the dominant architectural feature, an old settlement scar in the woodland, not a castle on a towering mountaintop. A small supply cart inside the entrance is enough to suggest use, no clutter. Fully illustrated complete background, elegant eye-level environmental composition with clear foreground, middle and distance.",
+      "mode": "built-in image_gen",
+      "active": true,
+      "status": "visually-reviewed",
+      "references": [
+        {
+          "viewed": true,
+          "role": "Primary approved fine matte anime style",
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        },
+        {
+          "viewed": true,
+          "role": "Actual new group banner and palette",
+          "sha256": "02c542cc305f40915fb30ff7b651770e13d247bea64d047215adde9579f33c0d"
+        }
+      ],
+      "toolArguments": {
+        "referenced_image_paths": [],
+        "transparent_background": false
+      },
+      "originalPath": "AleriaAlmanach/docs/art/sumpfnattern-20261122/originals/sumpfnattern-lycath-aussen-v1.png",
+      "target": "AleriaAlmanach/assets/schwarze-zitteraale/groups/scenes/sumpfnattern-lycath-aussen-v1.png",
+      "sha256": "aed56c2abaeda8f5ddde28562a16320afc8aed5a5332ef2dca1736c6510930e3",
+      "targetSha256": "aed56c2abaeda8f5ddde28562a16320afc8aed5a5332ef2dca1736c6510930e3",
+      "width": 1024,
+      "height": 1536,
+      "targetWidth": 1024,
+      "targetHeight": 1536,
+      "visualReview": {
+        "viewed": true,
+        "method": "Actual complete generator output inspected; active files checked separately in browser and art contact sheet."
+      }
+    },
+    {
+      "id": "sumpfnattern-lycath-lager-v1",
+      "kind": "headquarters-scene",
+      "prompt": "Use case: stylized-concept. Create ONE fully illustrated ENVIRONMENT SCENE for Aleria, vertical 2:3, 1024x1536, opaque background. No people, no portrait composition. Reference 1 (Kyrwyn) is DRAWING STYLE only: approved Tales of Xillia/Frieren Aleria anime, fine assured varying dark contours, matte harmonious colors and quietly coordinated clean cel-shading, sparse deliberate material detail. Apply that style to a spatially rich environment, not a character. No photograph, 3D render, coarse painterly grain or modern technology. Reference 2 is the Sumpfnattern band banner: use its black/dark-green fabric and small green adder coiling round and biting a pale REARING horned goat. Reproduce that motif on one modest banner inside the scene, not a huge foreground graphic. No lettering or frame.\nSETTING FACT: LYCATH is an ancient ruined Crannath fortress in Celtigerns Wacht whose surviving remains are OLD FOUNDATIONS, low stone courses and scattered fallen blocks. The Sumpfnattern built a bandit encampment among these foundations. Do NOT invent standing intact castle towers, grand halls, tall stone walls or a complete stone fortress. All substantial current shelters, fences and lookouts are visibly recent rough timber and patched canvas, supported by the low mossy ancient foundation stones. Damp woodland, ivy, ferns and ordinary forest undergrowth, muted black/dark green camp palette, silver metal fittings, no undead or eel symbols. No living or dead people, no blood or violence; a quiet explorable scene ready for roleplay.\nINTERACTIVE HEADQUARTERS / CAMP INTERIOR SCENE: a separate closer view from INSIDE the encampment, eye-level three-quarter view across an open muddy yard enclosed by LOW ancient foundation courses and new timber screens. An extinguishing small cookfire and simple benches occupy the foreground off-center; stacked provisions and weapon racks under a rough lean-to sit to one side. A larger patched dark-green command tent with the single Sumpfnattern banner stands beyond the yard, and a sheltered workbench with a few corked flasks and a mortar discreetly suggests the male alchemist's work. No huge science laboratory, magical glow, runes or ingredients in detail. A narrow path between canvas shelters leads back out toward the trees. Damp stone, uneven rough planks, rain-dark canvas, a touch of smoke and soft diffused daylight create a lived-in bandit refuge. Distinct interior camp scene, not a duplicate of the distant approach, not a banner-only image. Every main camp structure is timber or cloth rising above the ancient low foundation stones. Full scene, no portrait or map layout.",
+      "mode": "built-in image_gen",
+      "active": true,
+      "status": "visually-reviewed",
+      "references": [
+        {
+          "viewed": true,
+          "role": "Primary approved fine matte anime style",
+          "sha256": "c15345d708f48cc106422e3bc2d53e67bead2baca8deefe4f25093f9e91b5033"
+        },
+        {
+          "viewed": true,
+          "role": "Actual new group banner and palette",
+          "sha256": "02c542cc305f40915fb30ff7b651770e13d247bea64d047215adde9579f33c0d"
+        }
+      ],
+      "toolArguments": {
+        "referenced_image_paths": [],
+        "transparent_background": false
+      },
+      "originalPath": "AleriaAlmanach/docs/art/sumpfnattern-20261122/originals/sumpfnattern-lycath-lager-v1.png",
+      "target": "AleriaAlmanach/assets/schwarze-zitteraale/groups/scenes/sumpfnattern-lycath-lager-v1.png",
+      "sha256": "1dcb29ae819d983bf30b6aa7f9112749eb251157cec3b98e5ad7ca92b6c6b6d0",
+      "targetSha256": "1dcb29ae819d983bf30b6aa7f9112749eb251157cec3b98e5ad7ca92b6c6b6d0",
+      "width": 1024,
+      "height": 1536,
+      "targetWidth": 1024,
+      "targetHeight": 1536,
+      "visualReview": {
+        "viewed": true,
+        "method": "Actual complete generator output inspected; active files checked separately in browser and art contact sheet."
+      }
+    },
+    {
+      "id": "familie-bwch-v3",
+      "kind": "family-emblem-edit",
+      "parentId": "familie-bwch-v2",
+      "mode": "built-in image_gen",
+      "active": true,
+      "status": "visually-reviewed",
+      "references": [
+        {
+          "role": "Motif and animal-pose edit target only; completely replace its dimensional rendering, palette and background.",
+          "viewed": true,
+          "sha256": "e9678a424624047ab900bd7c2533eb12a0e7561a7cbf3c100210dbc7bae590c3"
+        },
+        {
+          "role": "Actual flat Cenyri knight-house heraldic style: bold silhouette, flat pigments and narrow Celtic outline, not dragon motif or palette.",
+          "viewed": true,
+          "sha256": "adeb4ea42fed26a1eb9627d02aee957648ddca9063376089340f40f7da06ffcb"
+        }
+      ],
+      "prompt": "Redesign the FIRST reference as a MUCH SIMPLER, FLAT HERALDIC family emblem, using the SECOND reference's genuinely TWO-DIMENSIONAL CENYRI KNIGHT-HOUSE visual language. The family is Bwch FROM GWAULWYN. Preserve only the selected central motif and powerful animal poses, NOT the first reference's sculpted fur, metallic highlights, black field, gold or texture.\n\nEXACT THREE-COLOR PALETTE ONLY: WINE RED #7B273D, IVORY #EFE3C5, FOREST GREEN #1E513B. Use these three flat heraldic pigment colors throughout, including outlines, eyes, horns, hooves and border. No black, gold, brown, yellow, silver metallic shading or additional colors; transparent exterior is not a color.\n\nFIELD: a wine-red circular field with a broad, clearly divided IVORY BASE in its lower quarter (heraldic shield foot), fully opaque and deliberately composed, not an empty black background. The one GREEN snake lies mainly against the ivory base, so its silhouette is legible. The IVORY goat rises strongly against the wine-red upper field; dark-green outlines separate any overlap with the ivory base.\nMOTIF: ONE pale IVORY male GOAT rearing high, steep diagonal upright torso, both front legs lifted and bent, head raised, curved horns and short goatee. Its TWO hind hooves forcefully TRAMPLE the GREEN ADDER UNDER IT, one hoof clearly presses the snake's HEAD and the other its writhing body. Four correctly attached goat legs, clear recognizable goat silhouette. ONE continuous green adder buckles and WRITHES in energetic irregular S-curves beneath the hooves, tail curls upward. Snake stays UNDER the goat, no neck bite or coils around goat, no blood or gore. This family emblem is the goat overcoming the snake, opposite of the Sumpfnattern band emblem.\n\nSTYLE: elegant bold FLAT medieval heraldry, clean confident dark-green drawn outlines, large clean solid color shapes, a few minimal decorative inner lines for beard/hair and one simple eye. No modeled anatomy shading, no volumetric lighting, no 3D relief, no photorealistic fur, no individual hair strands, no scale rendering, no woodgrain or surface texture, no gradients, no plastic or metal material. Match the actual flat Cenyri example's readability at thumbnail size. Do not copy its dragon, waves, runes or yellow background.\nBORDER: a single SLIM forest-green circular ring with a restrained thin ivory Celtic knot line. No gold, no broad ornate heavy frame, no huge corner knots. The outer contour must be an EXACT CIRCLE on a square 1024x1024 canvas, frontal, fully visible at about 88 percent image width, with free outside margin. Every interior space within the circle stays fully opaque wine red/ivory/green, including between animals and knots. Only outside the outer circular edge is actually TRANSPARENT. No exterior shadow, haze, checkerboard, letters, words, place names, watermark or extra symbols.",
+      "toolArguments": {
+        "referenced_image_paths": [],
+        "transparent_background": true
+      },
+      "originalPath": "AleriaAlmanach/docs/art/sumpfnattern-20261122/originals/familie-bwch-v3.png",
+      "nameCorrection": "Latest user spelling is Bwach; origin Gwaulwyn. Technical artwork ID retained.",
+      "sha256": "f733912d859d30198452269b14e45562b147dfccf61a2edb5b9adb500fefc1f3",
+      "width": 1254,
+      "height": 1254,
+      "visualReview": {
+        "viewed": true,
+        "method": "Actual complete generator output inspected; active files checked separately in browser and art contact sheet."
+      },
+      "target": "AleriaAlmanach/assets/schwarze-zitteraale/groups/icons/familie-bwch-v3.png",
+      "targetSha256": "5ae303d3f906d901eea839a725f0df4c6674ce19d1ebf08c6e0105159acde7ff",
+      "targetWidth": 1314,
+      "targetHeight": 1314,
+      "processing": {
+        "pipeline": "heraldic_emblem_alpha.prepare_emblem_from_source",
+        "size": [
+          1314,
+          1314
+        ],
+        "padding": {
+          "left": 33,
+          "top": 23
+        },
+        "circle": {
+          "centre": [
+            657,
+            657
+          ],
+          "radius": 578
+        },
+        "rgbUnchanged": true,
+        "alphaValues": [
+          0,
+          255
+        ]
+      }
+    },
+    {
+      "id": "haus-bwach-ritter-v1",
+      "kind": "regular-house-warrior",
+      "mode": "built-in image_gen",
+      "active": true,
+      "status": "visually-reviewed",
+      "stylePreset": "fantasy-rpg-character",
+      "styleRevision": "2026-11-12",
+      "references": [
+        {
+          "kind": "conversation-attachment",
+          "role": "User's horned knight is a HELMET DESIGN reference only, not the old painterly style or brown/gold palette.",
+          "path": null,
+          "sha256": null
+        },
+        {
+          "role": "Mandatory current house-warrior drawing style and serious full-body proportions.",
+          "viewed": true,
+          "sha256": "7efa09a452ffd6b30aea872eb67f12a3b7db544b43fa88386e6e338881af1855"
+        },
+        {
+          "role": "Actual family heraldry and wine-red/ivory/forest-green tabard/shield palette.",
+          "viewed": true,
+          "sha256": "f733912d859d30198452269b14e45562b147dfccf61a2edb5b9adb500fefc1f3"
+        }
+      ],
+      "prompt": "Handillustrierte klassische Fantasy-Ganzkörperfigur im 2:3-Hochformat. Normale erwachsene menschliche Proportionen, natürliche Kopfgröße, glaubwürdig bemessene Hände, Füße, Kleidung, Rüstung und Waffen. Ruhige, ernsthafte Haltung und nachvollziehbar konstruierte Ausrüstung.\n\nDas Gesicht besitzt eine deutlichere Anime-/Comiczeichnung: klar gestaltete ausdrucksstarke Augen, präzise Lid- und Brauenlinien, vereinfachte gezeichnete Nase, eine klar gefasste Kieferform und wenige bewusst gesetzte Gesichtsschatten. Die Mimik bleibt konzentriert und würdevoll. Alter und individuelle Merkmale bleiben erkennbar. Keine kindlichen Züge, übergroßen Köpfe oder karikaturhaften Nasen und Schnurrbärte. Der stärkere Anime-/Comiceinfluss gilt vor allem dem Gesicht; Körperbau, Rüstung und Ausrüstung behalten ihre ernsthafte Gestaltung.\n\nFeine bis mittelstarke, organisch unregelmäßige dunkelbraune Tuschekonturen mit dezenten Graphitspuren. Die bestätigte matte Aquarellwirkung bleibt erhalten: fleckige Farblasuren, ungleichmäßige Pigmentverteilung, Wasserränder, Dry-Brush und sichtbare Papierkörnung innerhalb der bemalten Figur. Warme, erdige, leicht entsättigte Farben. Metall mit wenigen matten Lichtflächen, Stoff und Leder mit einfachen Falten und gezeichneten Farbunterschieden. Keine realistischen Hautporen, Metallkratzerfelder, Fototexturen oder digitale Hochglanzmodellierung.\n\nEchter transparenter PNG-Hintergrund. Die gesamte Figur einschließlich Gesicht, Kleidung und Ausrüstung bleibt deckend; Lasuren und Papierkörnung erscheinen ausschließlich als Farb- und Oberflächenwirkung innerhalb ihrer Formen. Außerhalb der klaren Silhouette und in offenen Zwischenräumen vollständige Transparenz. Keine Papierfläche, Hintergrundfarbe, Farbflecken außerhalb der Figur, Bodenfläche, Bodenschatten, Halos oder auslaufenden Nebelsäume. Vollständige Figur und Ausrüstung mit freiem Rand. Keine Schrift und kein Rahmen.\n\nUse case: stylized-concept. Create ONE REGULAR HOUSE KNIGHT of HAUS BWACH FROM GWAULWYN, not the outlaw leader Cadwgan and not a Sumpfnattern bandit. Finished full-body 2:3 PNG, 1024x1536, truly transparent.\nReference roles in the three supplied recent images: the user's horned knight is HELMET DESIGN inspiration only; do not copy its obsolete style, bronze/brown scheme, fur-heavy costume or incomplete plate. The approved oak-leaf house figure from 12 November is the primary mandatory DRAWING STYLE reference only; copy its fine organic ink, matte watercolor pigment and natural serious full-body human proportions, not its specific equipment or oak leaves. The new family coat of arms is HERALDRY and clothing palette only; its flat graphic design applies to the painted emblems, not a flat cartoon body.\n\nA single adult human male knight standing calmly and firmly, believable normal adult proportions, neither huge head nor chibi figure. Proper complete SILVER-STEEL PLATE ARMOR, articulated pauldrons, breastplate under a tabard, armored elbows/forearms, steel gauntlets, thigh plates, knee cops, greaves and sabatons, a little chainmail at joints. A CLOSED STEEL HELMET with restrained visor openings and a matched pair of sweeping curved GOAT/IBEX HORNS mounted to its sides, pale natural horn color. Horns curve up and backward like a male goat's, not tiny antlers, deer branches, gigantic ram spirals or an actual goat head. The helmet, both horns and all feet must fit entirely in the frame.\n\nA well-kept medieval SURCOAT/TABARD in the FAMILY'S THREE COLORS: WINE RED, IVORY and FOREST GREEN. Wine-red main field, ivory lower section, forest-green edging. On chest and SHIELD the FAMILY emblem is an IVORY GOAT REARING UP and TRAMPLING a writhing GREEN ADDER under its hind hooves, one hoof pressing the snake's HEAD. Match the supplied family arms, simplified painted/embroidered heraldry, not a snake biting a goat. No black-and-green bandit colors, no ragged outlaw surcoat. Knightly equipment may have ordinary restrained use wear but is functional and maintained.\n\nHis right steel gauntlet holds a LONG straight knightly SWORD low beside his body, point directed diagonally downward and outward, clearly gripped at the handle. Complete blade, crossguard, pommel and point visible, sensible full-sized sword, not a dagger or floating weapon. His left forearm supports a medieval HEATER SHIELD, held slightly forward so its family emblem is fully readable; a restrained steel rim and the wine/ivory/green field. A practical equipment shield, no oversized separate heraldic medallion pasted onto it. Quiet upright three-quarter stance with clear separated legs and natural weight.\nUse the approved HOUSE-WARRIOR style: serious anatomy and equipment, expressive drawing if any face visible (here visor closed), fine-to-medium organic ink lines, matte patchy watercolor inside the figure, deliberately restrained material rendering. Not the glossy anime PORTRAIT style and not a flat simplified class icon. No 3D, photo textures, hyper-real metal or ground shadows.\nEntire figure, helmet horns, sword point and shield inside the image with free margin on every side. Everything outside the silhouette and through open gaps between limbs, sword and shield is truly TRANSPARENT. No floor, scenery, background color, parchment, haze, outer glow, lettering, border or watermark.",
+      "toolArguments": {
+        "num_last_images_to_include": 3,
+        "transparent_background": true
+      },
+      "originalPath": "AleriaAlmanach/docs/art/sumpfnattern-20261122/originals/haus-bwach-ritter-v1.png",
+      "target": "AleriaAlmanach/assets/schwarze-zitteraale/groups/figures/haus-bwach-ritter-v1.png",
+      "sha256": "f7847e58695cad5b4d3cf1d84d84880b17bd4fdd8e6d31e31d807b6a31ef3d9a",
+      "targetSha256": "391dc7c43acb139fa4acdf904689239f707ecc3eb0e3600b142fe6d026e091be",
+      "width": 1024,
+      "height": 1536,
+      "targetWidth": 1024,
+      "targetHeight": 1536,
+      "processing": {
+        "pipeline": "shared/warrior-artifacts",
+        "version": 1,
+        "outsideThreshold": 160,
+        "coreThreshold": 240,
+        "edgeRadius": 2,
+        "proof": {
+          "rgbUnchanged": true,
+          "originalUnchanged": true,
+          "sourceTransparentPixelsExposed": 0,
+          "corePixelsNotOpaque": 0,
+          "originalTransparentGapsFilled": false,
+          "lowAlphaFloor": 160
+        }
+      },
+      "visualReview": {
+        "viewed": true,
+        "method": "Actual complete generator output inspected; active files checked separately in browser and art contact sheet."
+      }
+    }
+  ]
+}

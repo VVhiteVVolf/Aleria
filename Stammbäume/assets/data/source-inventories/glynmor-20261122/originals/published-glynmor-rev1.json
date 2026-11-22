@@ -1,0 +1,1263 @@
+{
+  "schemaVersion": 1,
+  "familyId": "glynmor",
+  "revision": 1,
+  "updatedAt": "2026-11-22T15:10:56.994Z",
+  "family": {
+    "schema": "aleria.family-tree",
+    "schemaVersion": 1,
+    "document": {
+      "id": "glynmor",
+      "title": "Glynmor",
+      "motto": "",
+      "description": "",
+      "emblem": "https://i.imgur.com/NrT4I6V.jpeg",
+      "houseProfile": {
+        "rankId": "commoner",
+        "seat": "",
+        "barony": "",
+        "county": "",
+        "kingdom": "",
+        "secondarySeats": [],
+        "liegeHouseId": "",
+        "liegeHouseName": "",
+        "regionEmblems": {
+          "seat": "",
+          "barony": "",
+          "county": "",
+          "kingdom": ""
+        }
+      }
+    },
+    "persons": [
+      {
+        "id": "glynmor-gruender",
+        "worldPersonId": "person--glynmor--glynmor-gruender",
+        "name": "Unbekannter Gründer",
+        "title": "Gründer des Hauses",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "glynmor-gruenderin",
+        "worldPersonId": "person--glynmor--glynmor-gruenderin",
+        "name": "Unbekannte Gründerin",
+        "title": "Gründerin des Hauses",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [
+          "Gründerfamilie"
+        ],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-c8d56880",
+        "worldPersonId": "person--glynmor--person-c8d56880",
+        "name": "Tudur",
+        "title": "Oberhaupt / Handwerksmeister",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1664",
+        "death": "",
+        "portrait": "https://i.imgur.com/gk38XH8.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "head",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-e9652261",
+        "worldPersonId": "person--glynmor--person-e9652261",
+        "name": "Iestyn",
+        "title": "",
+        "sex": "male",
+        "status": "dead",
+        "birth": "1670",
+        "death": "1732",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-d5104764",
+        "worldPersonId": "person--glynmor--person-d5104764",
+        "name": "Gwerfyl",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1666",
+        "death": "",
+        "portrait": "https://i.imgur.com/cDHq7dD.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-46a3c794",
+        "worldPersonId": "person--glynmor--person-46a3c794",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-3ccbd57f",
+        "worldPersonId": "person--glynmor--person-3ccbd57f",
+        "name": "Iorwerth",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1685",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-2a5e7890",
+        "worldPersonId": "person--glynmor--person-2a5e7890",
+        "name": "Emlyn",
+        "title": "Vogt von Haus Wyrm",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1688",
+        "death": "",
+        "portrait": "https://i.imgur.com/ARDoBXb.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-62ba96a8",
+        "worldPersonId": "person--glynmor--person-62ba96a8",
+        "name": "Llinos",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1695",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-587736d0",
+        "worldPersonId": "person--glynmor--person-587736d0",
+        "name": "Tewdwr",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1696",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-a8c037f7",
+        "worldPersonId": "person--glynmor--person-a8c037f7",
+        "name": "Eirlys",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1700",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-820804c4",
+        "worldPersonId": "person--glynmor--person-820804c4",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1690",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "married",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-80f3a0c9",
+        "worldPersonId": "person--glynmor--person-80f3a0c9",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-d313049f",
+        "worldPersonId": "person--glynmor--person-d313049f",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-8f77786a",
+        "worldPersonId": "person--glynmor--person-8f77786a",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-64064dfd",
+        "worldPersonId": "person--glynmor--person-64064dfd",
+        "name": "Eleri",
+        "title": "Küchenmeisterin Haus Wyrm",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1687",
+        "death": "",
+        "portrait": "https://i.imgur.com/EF64EEw.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-f1b4fd4f",
+        "worldPersonId": "person--glynmor--person-f1b4fd4f",
+        "name": "Ilar",
+        "title": "Stadtwache",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1709",
+        "death": "",
+        "portrait": "https://i.imgur.com/dXi60od.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-8615e1f2",
+        "worldPersonId": "person--glynmor--person-8615e1f2",
+        "name": "Ffraid",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1712",
+        "death": "",
+        "portrait": "https://i.imgur.com/uUuy28I.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-d665a54d",
+        "worldPersonId": "person--glynmor--person-d665a54d",
+        "name": "Meera",
+        "title": "Zofe von Rianna Wyrm",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1715",
+        "death": "",
+        "portrait": "https://i.imgur.com/LpXHFbH.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-a6d5aa55",
+        "worldPersonId": "person--glynmor--person-a6d5aa55",
+        "name": "Steffan",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1722",
+        "death": "",
+        "portrait": "https://i.imgur.com/jyvJCcj.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-0b1973c0",
+        "worldPersonId": "person--glynmor--person-0b1973c0",
+        "name": "Meilyr",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-6acfc5a4",
+        "worldPersonId": "person--glynmor--person-6acfc5a4",
+        "name": "Gwyndaf",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-317d5918",
+        "worldPersonId": "person--glynmor--person-317d5918",
+        "name": "Tegid",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-e6b5df1c",
+        "worldPersonId": "person--glynmor--person-e6b5df1c",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-fd713153",
+        "worldPersonId": "person--glynmor--person-fd713153",
+        "name": "Aled",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-0040586f",
+        "worldPersonId": "person--glynmor--person-0040586f",
+        "name": "Tesni",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-fa571002",
+        "worldPersonId": "person--glynmor--person-fa571002",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-c0b38f3f",
+        "worldPersonId": "person--glynmor--person-c0b38f3f",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-9176e0d0",
+        "worldPersonId": "person--glynmor--person-9176e0d0",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-f8371211",
+        "worldPersonId": "person--glynmor--person-f8371211",
+        "name": "Lleucu",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1712",
+        "death": "",
+        "portrait": "https://i.imgur.com/IIMghZQ.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "",
+        "familyRole": "married",
+        "lineageRole": "mainline",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-c33023ce",
+        "worldPersonId": "person--glynmor--person-c33023ce",
+        "name": "Bleddyn",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "1732",
+        "death": "",
+        "portrait": "https://i.imgur.com/5umPOML.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-c149f692",
+        "worldPersonId": "person--glynmor--person-c149f692",
+        "name": "Nefyn",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "1734",
+        "death": "",
+        "portrait": "https://i.imgur.com/yBzLfFN.jpeg",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-0289ab3e",
+        "worldPersonId": "person--glynmor--person-0289ab3e",
+        "name": "??",
+        "title": "",
+        "sex": "female",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "person-e2cc718f",
+        "worldPersonId": "person--glynmor--person-e2cc718f",
+        "name": "??",
+        "title": "",
+        "sex": "male",
+        "status": "alive",
+        "birth": "",
+        "death": "",
+        "portrait": "",
+        "portraitPlaceholder": "auto",
+        "houseId": "house-glynmor",
+        "familyRole": "core",
+        "lineageRole": "branch",
+        "tags": [],
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "partnerships": [
+      {
+        "id": "marriage-glynmor-founders",
+        "participantIds": [
+          "glynmor-gruender",
+          "glynmor-gruenderin"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "Gründerehe des Hauses.",
+        "extensions": {
+          "chartAlignParentPairOverChildPersonId": "person-e9652261",
+          "chartAutomaticSingleChildAlignment": true
+        }
+      },
+      {
+        "id": "partnership-e7073558",
+        "participantIds": [
+          "person-c8d56880",
+          "person-d5104764"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-a99a2fa6",
+        "participantIds": [
+          "person-e9652261",
+          "person-46a3c794"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-752beee0",
+        "participantIds": [
+          "person-3ccbd57f",
+          "person-820804c4"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-ee08986a",
+        "participantIds": [
+          "person-587736d0",
+          "person-80f3a0c9"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-eceff819",
+        "participantIds": [
+          "person-a8c037f7",
+          "person-d313049f"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-a9159be0",
+        "participantIds": [
+          "person-62ba96a8",
+          "person-8f77786a"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-2ae7dbeb",
+        "participantIds": [
+          "person-2a5e7890",
+          "person-64064dfd"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-5664a018",
+        "participantIds": [
+          "person-0b1973c0",
+          "person-e6b5df1c"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-4ecc8e54",
+        "participantIds": [
+          "person-6acfc5a4",
+          "person-fa571002"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {
+          "chartAlignParentPairOverChildPersonId": "person-9176e0d0",
+          "chartAutomaticSingleChildAlignment": true
+        }
+      },
+      {
+        "id": "partnership-e1ef7689",
+        "participantIds": [
+          "person-317d5918",
+          "person-c0b38f3f"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "partnership-1f5c9ebc",
+        "participantIds": [
+          "person-f1b4fd4f",
+          "person-f8371211"
+        ],
+        "type": "marriage",
+        "status": "active",
+        "start": "",
+        "end": "",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "parentages": [
+      {
+        "id": "parentage-e628815e",
+        "childId": "person-c8d56880",
+        "parentIds": [
+          "glynmor-gruender",
+          "glynmor-gruenderin"
+        ],
+        "partnershipId": "marriage-glynmor-founders",
+        "type": "claimed",
+        "legitimacy": "unknown",
+        "certainty": "probable",
+        "visibility": "public",
+        "notes": "Nach einem Zeitsprung wieder belegte Linie.",
+        "extensions": {
+          "timeJumpId": "time-jump-507dea4e",
+          "timeJumpCreated": true
+        }
+      },
+      {
+        "id": "parentage-7b5f77aa",
+        "childId": "person-e9652261",
+        "parentIds": [
+          "glynmor-gruender",
+          "glynmor-gruenderin"
+        ],
+        "partnershipId": "marriage-glynmor-founders",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-6e8075eb",
+        "childId": "person-3ccbd57f",
+        "parentIds": [
+          "person-c8d56880",
+          "person-d5104764"
+        ],
+        "partnershipId": "partnership-e7073558",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-743feebc",
+        "childId": "person-2a5e7890",
+        "parentIds": [
+          "person-c8d56880",
+          "person-d5104764"
+        ],
+        "partnershipId": "partnership-e7073558",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-3f847e5c",
+        "childId": "person-62ba96a8",
+        "parentIds": [
+          "person-c8d56880",
+          "person-d5104764"
+        ],
+        "partnershipId": "partnership-e7073558",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-5a126ab0",
+        "childId": "person-587736d0",
+        "parentIds": [
+          "person-e9652261",
+          "person-46a3c794"
+        ],
+        "partnershipId": "partnership-a99a2fa6",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-98a21ac6",
+        "childId": "person-a8c037f7",
+        "parentIds": [
+          "person-e9652261",
+          "person-46a3c794"
+        ],
+        "partnershipId": "partnership-a99a2fa6",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-7af868b1",
+        "childId": "person-f1b4fd4f",
+        "parentIds": [
+          "person-2a5e7890",
+          "person-64064dfd"
+        ],
+        "partnershipId": "partnership-2ae7dbeb",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-215db6c3",
+        "childId": "person-8615e1f2",
+        "parentIds": [
+          "person-2a5e7890",
+          "person-64064dfd"
+        ],
+        "partnershipId": "partnership-2ae7dbeb",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-aac2177d",
+        "childId": "person-d665a54d",
+        "parentIds": [
+          "person-2a5e7890",
+          "person-64064dfd"
+        ],
+        "partnershipId": "partnership-2ae7dbeb",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-46d16b49",
+        "childId": "person-a6d5aa55",
+        "parentIds": [
+          "person-2a5e7890",
+          "person-64064dfd"
+        ],
+        "partnershipId": "partnership-2ae7dbeb",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-8223fa27",
+        "childId": "person-0b1973c0",
+        "parentIds": [
+          "person-3ccbd57f",
+          "person-820804c4"
+        ],
+        "partnershipId": "partnership-752beee0",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-a7feb0cc",
+        "childId": "person-6acfc5a4",
+        "parentIds": [
+          "person-3ccbd57f",
+          "person-820804c4"
+        ],
+        "partnershipId": "partnership-752beee0",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-75f98954",
+        "childId": "person-317d5918",
+        "parentIds": [
+          "person-3ccbd57f",
+          "person-820804c4"
+        ],
+        "partnershipId": "partnership-752beee0",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-e652a89f",
+        "childId": "person-fd713153",
+        "parentIds": [
+          "person-0b1973c0",
+          "person-e6b5df1c"
+        ],
+        "partnershipId": "partnership-5664a018",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-399a2732",
+        "childId": "person-0040586f",
+        "parentIds": [
+          "person-0b1973c0",
+          "person-e6b5df1c"
+        ],
+        "partnershipId": "partnership-5664a018",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-731a3fc0",
+        "childId": "person-9176e0d0",
+        "parentIds": [
+          "person-6acfc5a4",
+          "person-fa571002"
+        ],
+        "partnershipId": "partnership-4ecc8e54",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-a2f6f689",
+        "childId": "person-c33023ce",
+        "parentIds": [
+          "person-f1b4fd4f",
+          "person-f8371211"
+        ],
+        "partnershipId": "partnership-1f5c9ebc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-d1978828",
+        "childId": "person-c149f692",
+        "parentIds": [
+          "person-f1b4fd4f",
+          "person-f8371211"
+        ],
+        "partnershipId": "partnership-1f5c9ebc",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-f4b272ac",
+        "childId": "person-0289ab3e",
+        "parentIds": [
+          "person-587736d0",
+          "person-80f3a0c9"
+        ],
+        "partnershipId": "partnership-ee08986a",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      },
+      {
+        "id": "parentage-12c27768",
+        "childId": "person-e2cc718f",
+        "parentIds": [
+          "person-587736d0",
+          "person-80f3a0c9"
+        ],
+        "partnershipId": "partnership-ee08986a",
+        "type": "biological",
+        "legitimacy": "legitimate",
+        "certainty": "confirmed",
+        "visibility": "public",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "houses": [
+      {
+        "id": "house-glynmor",
+        "name": "Glynmor",
+        "motto": "",
+        "emblem": "https://i.imgur.com/NrT4I6V.jpeg",
+        "status": "active"
+      }
+    ],
+    "cadetBranches": [],
+    "timeJumps": [
+      {
+        "id": "time-jump-507dea4e",
+        "parentPartnershipId": "marriage-glynmor-founders",
+        "sharedParentPartnershipIds": [],
+        "parentPersonId": "",
+        "childIds": [
+          "person-c8d56880"
+        ],
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": "",
+        "notes": "",
+        "extensions": {}
+      }
+    ],
+    "lineage": {
+      "founderPartnershipId": "marriage-glynmor-founders",
+      "houseId": "house-glynmor",
+      "crestSubtitle": "",
+      "crestEmblemScale": 0.86,
+      "crestFrame": "gold",
+      "crestFrameScale": 1,
+      "timeGap": {
+        "enabled": false,
+        "years": 0,
+        "fromYear": "",
+        "toYear": "",
+        "label": ""
+      },
+      "originHouse": {
+        "enabled": false,
+        "id": "lineage-origin-house",
+        "houseId": "",
+        "name": "Ursprungshaus",
+        "subtitle": "",
+        "emblem": "",
+        "emblemScale": 0.86,
+        "crestFrame": "gold",
+        "frameScale": 1,
+        "childIds": [],
+        "targetFamilyId": "",
+        "notes": "",
+        "timeGap": {
+          "enabled": false,
+          "years": 0,
+          "fromYear": "",
+          "toYear": "",
+          "label": ""
+        }
+      }
+    },
+    "presentation": {
+      "relationshipColors": {
+        "marriage": "#326c4a",
+        "engagement": "#b88b37",
+        "union": "#8e2724",
+        "affair": "#704485",
+        "concubinage": "#704485",
+        "political": "#9d7d48",
+        "forced": "#c7a974",
+        "biological": "#8e2724",
+        "adoptive": "#2f75a8",
+        "foster": "#2f75a8",
+        "step": "#7eb4d7",
+        "magical": "#704485",
+        "claimed": "#62615e"
+      }
+    },
+    "view": {
+      "focusPersonId": "glynmor-gruender",
+      "orientation": "vertical",
+      "ancestorDepth": 8,
+      "descendantDepth": 8,
+      "limitGenerations": false,
+      "showSiblings": true
+    },
+    "extensions": {
+      "registry": {
+        "folderPath": [],
+        "unclassified": true
+      },
+      "generatorProfile": {
+        "origin": "",
+        "culture": "",
+        "religion": "",
+        "governance": "",
+        "foundingYear": "",
+        "founderHouseName": "",
+        "houseColors": "",
+        "specialTraits": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,447 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--zitteraale-gruppe-ii-fuehrer",
+  "slug": "cadwgan-bwach",
+  "identity": {
+    "name": "Cadwgan Bwach",
+    "aliases": [
+      "Die Grüne Natter",
+      "Grüne Natter"
+    ],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "group",
+      "id": "schwarze-zitteraale",
+      "label": "Schwarze Zitteraale",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [
+      {
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
+      }
+    ],
+    "places": [],
+    "legacy": {
+      "tabs": [
+        "Schwarze Zitteraale"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "zitteraale-gruppe-ii-fuehrer",
+      "documentIds": [
+        "zitteraale-gruppe-ii-fuehrer"
+      ],
+      "documents": [
+        {
+          "documentId": "zitteraale-gruppe-ii-fuehrer",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Schwarze Zitteraale/cadwgan-bwch-2026-11-22.json",
+    "sourceExportedAt": "2026-11-22T12:00:00Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "zitteraale-gruppe-ii-fuehrer"
+    ],
+    "contentHash": "c8f7a222f56a9790889de81a91262d29fdf8cd2230c4a541b5822161c702c5f2"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "schwarze-zitteraale"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "zitteraale-gruppe-ii-fuehrer",
+        "name": "Cadwgan Bwach",
+        "aliases": [
+          "Die Grüne Natter",
+          "Grüne Natter"
+        ],
+        "gender": "male",
+        "race": "Mensch",
+        "title": "Die Grüne Natter · ehemaliger Ritter",
+        "role": "Anführer der Sumpfnattern",
+        "fraktion": "Schwarze Zitteraale",
+        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-gruene-natter-v2.png",
+        "bio": "Cadwgan Bwach aus dem Haus Bwach in Gwaulwyn, genannt die Grüne Natter, führt die Sumpfnattern als Unterbande der Schwarzen Zitteraale. Im Großen Krieg diente er als Ritter unter den Gafyr. Nach der Plünderung eines albischen Dorfes in Ceitheach verlor er seinen Ritterstand und floh vor dem vorgesehenen Gerichtsverfahren. Seine heutige Bande handelt weitgehend nach eigenen Interessen und richtet sich besonders gegen die Herrschaft und Ländereien des Hauses Gafyr.\n\nHaus Bwach aus Gwaulwyn\nCadwgan stammt aus dem Haus Bwach in Gwaulwyn. Dessen Familienwappen zeigt einen hellen Geißbock, der sich aufbäumt und eine sich windende grüne Natter unter seinen Hufen zertritt. Weinrot, Elfenbein und Dunkelgrün bestimmen das Wappen. Cadwgans heutiges Bandzeichen kehrt das Verhältnis der Tiere um: Dort beißt die Natter dem Bock in den Nacken.\n\nRitter im Großen Krieg\nVor rund zwanzig Jahren zog Cadwgan als Ritter unter den Gafyr in den Großen Krieg. Er führte einen eigenen Trupp und kannte den Dienst unter ihrem Banner, bevor er selbst zum Verfolgten wurde.\n\nDie Plünderung in Ceitheach\nWährend des Krieges plünderten Cadwgan und sein Trupp ein albisches Dorf in Ceitheach. Darüber hinaus standen schwere weitere Übergriffe auf die Dorfbevölkerung im Raum. Diese zusätzlichen Taten ließen sich ihnen jedoch nicht unmittelbar nachweisen. Der Name des Dorfes und die Einzelheiten dieser Vorwürfe sind nicht überliefert.\n\nVerlust der Ritterwürde und Flucht\nCadwgan wurde seines Ritterstandes enthoben und sollte sich wegen seiner Taten vor Gericht verantworten. Er floh, bevor es zu diesem Verfahren kam. Seine Flucht war keine Freisprechung; ebenso ist kein abgeschlossenes Urteil über die zusätzlichen Vorwürfe belegt.\n\nVon der Räuberbande zu den Sumpfnattern\nNach seiner Flucht sammelte er eine eigene Räuberbande um sich. Die Schwarzen Zitteraale gliederten diese Schar später in ihre Struktur ein. Seitdem dient Cadwgan ihrem Bandenhaupt und führt seine Leute als die Sumpfnattern, die zweite der acht Unterbanden.\n\nEine Fehde gegen die Gafyr\nDie Eingliederung hat seine eigenen Absichten nicht verdrängt. Die Sumpfnattern verfolgen ihre Geschäfte innerhalb des größeren Verbandes, kochen aber weitgehend ihr eigenes Süppchen. Cadwgan trägt den Gafyr den Verlust seines früheren Standes nach. Seine persönliche Vendetta richtet sich gegen das Haus und besonders gegen dessen Oberhaupt. Höfe, Wege und Besitzungen der Gafyr bekommen diese Fehde immer wieder zu spüren.\n\nZwischen den Fundamenten Lycaths\nSeinen Stützpunkt hat Cadwgan in den Ruinen Lycaths eingerichtet. Von der antiken Crannath-Festung sind alte Fundamente geblieben. Zwischen diesen Resten nutzen die Sumpfnattern behelfsmäßige Unterstände, Zelte und hölzerne Einfassungen als Lager.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Cadwgan Bwach · Grüne Natter",
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Cadwgan Bwach"
+            },
+            {
+              "label": "Beiname",
+              "value": "Die Grüne Natter"
+            },
+            {
+              "label": "Volk",
+              "value": "Rheunwaith"
+            },
+            {
+              "label": "Herkunft",
+              "value": "Haus Bwach · Gwaulwyn"
+            },
+            {
+              "label": "Früherer Stand",
+              "value": "Ritter unter den Gafyr · Ritterstand aberkannt"
+            },
+            {
+              "label": "Heutige Stellung",
+              "value": "Anführer der Sumpfnattern"
+            },
+            {
+              "label": "Zugehörigkeit",
+              "value": "Die Schwarzen Zitteraale · Gruppe II."
+            },
+            {
+              "label": "Stützpunkt",
+              "value": "Ruinen Lycaths"
+            },
+            {
+              "label": "Feindschaft",
+              "value": "Haus Gafyr · persönliche Vendetta"
+            }
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-gruene-natter-v2.png",
+            "biographyTitle": "Die Grüne Natter",
+            "biographyText": "<p>Cadwgan Bwach aus dem Haus Bwach in Gwaulwyn, genannt die Grüne Natter, führt die Sumpfnattern als Unterbande der Schwarzen Zitteraale. Im Großen Krieg diente er als Ritter unter den Gafyr. Nach der Plünderung eines albischen Dorfes in Ceitheach verlor er seinen Ritterstand und floh vor dem vorgesehenen Gerichtsverfahren. Seine heutige Bande handelt weitgehend nach eigenen Interessen und richtet sich besonders gegen die Herrschaft und Ländereien des Hauses Gafyr.</p>",
+            "abilitiesTitle": "Wesen und Antrieb",
+            "abilities": [
+              {
+                "title": "Nachtragend",
+                "icon": "/IconOrdner/Traits%20Icon/Proud.png",
+                "detail": "Trägt den Gafyr seinen verlorenen Stand nach und macht ihre Besitzungen zum Ziel seiner Fehde."
+              },
+              {
+                "title": "Ritterliche Kriegserfahrung",
+                "icon": "/IconOrdner/Traits%20Icon/Brave.png",
+                "detail": "Führte bereits im Großen Krieg einen Trupp im Dienst der Gafyr."
+              },
+              {
+                "title": "Eigene Interessen",
+                "icon": "/IconOrdner/Traits%20Icon/Ambitious.png",
+                "detail": "Dient den Schwarzen Zitteraalen, verfolgt mit seiner Unterbande zugleich eigene Geschäfte und Ziele."
+              }
+            ],
+            "historyTitle": "Erscheinung und Zeichen",
+            "historyText": "<p>Dunkelrotes Haar, ein kantiges Gesicht und ein grimmiger Blick kennzeichnen die Grüne Natter. Geschwärzte Platten schützen Schultern und Arme; dunkelgrüne Schuppenpanzerung liegt unter einem halb offenen, zerfledderten und grob geflickten Wappenrock. Sein stählerner Helm ist wie das geöffnete Maul einer Natter geformt. Er trägt ihn unter dem Arm und stützt sich mit der anderen Hand auf den Knauf seines Zweihänders.</p><p>Sein Zeichen zeigt eine grüne Natter, die einen hellen Geißbock umschlingt und ihm in den Nacken beißt. Der Bock bäumt sich gegen sie auf. Das Zeichen verhöhnt seine früheren Dienstherren und kennzeichnet heute seine eigene Schar.</p>",
+            "extraSections": [
+              {
+                "title": "Haus Bwach aus Gwaulwyn",
+                "text": "<p>Cadwgan stammt aus dem Haus Bwach in Gwaulwyn. Dessen Familienwappen zeigt einen hellen Geißbock, der sich aufbäumt und eine sich windende grüne Natter unter seinen Hufen zertritt. Weinrot, Elfenbein und Dunkelgrün bestimmen das Wappen. Cadwgans heutiges Bandzeichen kehrt das Verhältnis der Tiere um: Dort beißt die Natter dem Bock in den Nacken.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Ritter im Großen Krieg",
+                "text": "<p>Vor rund zwanzig Jahren zog Cadwgan als Ritter unter den Gafyr in den Großen Krieg. Er führte einen eigenen Trupp und kannte den Dienst unter ihrem Banner, bevor er selbst zum Verfolgten wurde.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Die Plünderung in Ceitheach",
+                "text": "<p>Während des Krieges plünderten Cadwgan und sein Trupp ein albisches Dorf in Ceitheach. Darüber hinaus standen schwere weitere Übergriffe auf die Dorfbevölkerung im Raum. Diese zusätzlichen Taten ließen sich ihnen jedoch nicht unmittelbar nachweisen. Der Name des Dorfes und die Einzelheiten dieser Vorwürfe sind nicht überliefert.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Verlust der Ritterwürde und Flucht",
+                "text": "<p>Cadwgan wurde seines Ritterstandes enthoben und sollte sich wegen seiner Taten vor Gericht verantworten. Er floh, bevor es zu diesem Verfahren kam. Seine Flucht war keine Freisprechung; ebenso ist kein abgeschlossenes Urteil über die zusätzlichen Vorwürfe belegt.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Von der Räuberbande zu den Sumpfnattern",
+                "text": "<p>Nach seiner Flucht sammelte er eine eigene Räuberbande um sich. Die Schwarzen Zitteraale gliederten diese Schar später in ihre Struktur ein. Seitdem dient Cadwgan ihrem Bandenhaupt und führt seine Leute als die Sumpfnattern, die zweite der acht Unterbanden.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Eine Fehde gegen die Gafyr",
+                "text": "<p>Die Eingliederung hat seine eigenen Absichten nicht verdrängt. Die Sumpfnattern verfolgen ihre Geschäfte innerhalb des größeren Verbandes, kochen aber weitgehend ihr eigenes Süppchen. Cadwgan trägt den Gafyr den Verlust seines früheren Standes nach. Seine persönliche Vendetta richtet sich gegen das Haus und besonders gegen dessen Oberhaupt. Höfe, Wege und Besitzungen der Gafyr bekommen diese Fehde immer wieder zu spüren.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Zwischen den Fundamenten Lycaths",
+                "text": "<p>Seinen Stützpunkt hat Cadwgan in den Ruinen Lycaths eingerichtet. Von der antiken Crannath-Festung sind alte Fundamente geblieben. Zwischen diesen Resten nutzen die Sumpfnattern behelfsmäßige Unterstände, Zelte und hölzerne Einfassungen als Lager.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              }
+            ],
+            "connectionsTitle": "Gefolgschaft und Feindschaft",
+            "connections": [
+              {
+                "name": "Haus Bwach · Gwaulwyn",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/icons/familie-bwch-v3.png",
+                "imageFormat": "square",
+                "detail": "Seine Herkunftsfamilie; ihr Bock zertritt die Natter, während sein heutiges Bandzeichen das umgekehrte Motiv zeigt."
+              },
+              {
+                "name": "Erster Leutnant · unbenannt",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-leutnant-1-v2.png",
+                "imageFormat": "portrait",
+                "detail": "Rechte Hand · Wachen und Überfälle. Ehemaliger Wachtmeister mit dunkelrotem Haar, ergrauendem Bart und gebrochener Nase. Schwarze Brigantine, grüne Schuppenpartien und schwere Panzerhandschuhe; auf den senkrechten Waffenschaft gestützt."
+              },
+              {
+                "name": "Zweiter Leutnant · unbenannt",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-alchemist-v1.png",
+                "imageFormat": "portrait",
+                "detail": "Linke Hand · Alchemie und Versorgung. Abtrünniger, exzentrischer Alchemist mit zerzaustem aschblondem Haar, bernsteinfarbenen Augen und runder Brille. Geflickter grüner Mantel, lederne Arbeitskleidung, kleine Fläschchen und ein beunruhigend begeistertes Grinsen."
+              },
+              {
+                "name": "Die Schwarzen Zitteraale",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+                "detail": "Übergeordneter Verband, der seine ursprüngliche Räuberbande eingliederte."
+              },
+              {
+                "name": "Haus Gafyr",
+                "image": "/Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gafyr.png",
+                "detail": "Frühere Dienstherren und heutiges Ziel seiner persönlichen Vendetta."
+              }
+            ],
+            "documentsTitle": "Bandenakte und Hausdarstellung",
+            "documents": [
+              {
+                "title": "Die Sumpfnattern",
+                "text": "Gruppenbio, Anführerbio, Hierarchie und interaktives Lager.",
+                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-ii"
+              },
+              {
+                "title": "Regulärer Ritter des Hauses Bwach",
+                "text": "Plattenrüstung mit Geißbock-Hornhelm, Schild, Schwert und Wappenrock in den Hausfarben.",
+                "link": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/figures/haus-bwach-ritter-v1.png"
+              }
+            ],
+            "footer": "Cadwgan Bwach · Die Grüne Natter · Lycath"
+          }
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "zitteraale-gruppe-ii-fuehrer",
+    "name": "Cadwgan Bwach",
+    "aliases": [
+      "Die Grüne Natter",
+      "Grüne Natter"
+    ],
+    "gender": "male",
+    "race": "Mensch",
+    "title": "Die Grüne Natter · ehemaliger Ritter",
+    "role": "Anführer der Sumpfnattern",
+    "fraktion": "Schwarze Zitteraale",
+    "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-gruene-natter-v2.png",
+    "bio": "Cadwgan Bwach aus dem Haus Bwach in Gwaulwyn, genannt die Grüne Natter, führt die Sumpfnattern als Unterbande der Schwarzen Zitteraale. Im Großen Krieg diente er als Ritter unter den Gafyr. Nach der Plünderung eines albischen Dorfes in Ceitheach verlor er seinen Ritterstand und floh vor dem vorgesehenen Gerichtsverfahren. Seine heutige Bande handelt weitgehend nach eigenen Interessen und richtet sich besonders gegen die Herrschaft und Ländereien des Hauses Gafyr.\n\nHaus Bwach aus Gwaulwyn\nCadwgan stammt aus dem Haus Bwach in Gwaulwyn. Dessen Familienwappen zeigt einen hellen Geißbock, der sich aufbäumt und eine sich windende grüne Natter unter seinen Hufen zertritt. Weinrot, Elfenbein und Dunkelgrün bestimmen das Wappen. Cadwgans heutiges Bandzeichen kehrt das Verhältnis der Tiere um: Dort beißt die Natter dem Bock in den Nacken.\n\nRitter im Großen Krieg\nVor rund zwanzig Jahren zog Cadwgan als Ritter unter den Gafyr in den Großen Krieg. Er führte einen eigenen Trupp und kannte den Dienst unter ihrem Banner, bevor er selbst zum Verfolgten wurde.\n\nDie Plünderung in Ceitheach\nWährend des Krieges plünderten Cadwgan und sein Trupp ein albisches Dorf in Ceitheach. Darüber hinaus standen schwere weitere Übergriffe auf die Dorfbevölkerung im Raum. Diese zusätzlichen Taten ließen sich ihnen jedoch nicht unmittelbar nachweisen. Der Name des Dorfes und die Einzelheiten dieser Vorwürfe sind nicht überliefert.\n\nVerlust der Ritterwürde und Flucht\nCadwgan wurde seines Ritterstandes enthoben und sollte sich wegen seiner Taten vor Gericht verantworten. Er floh, bevor es zu diesem Verfahren kam. Seine Flucht war keine Freisprechung; ebenso ist kein abgeschlossenes Urteil über die zusätzlichen Vorwürfe belegt.\n\nVon der Räuberbande zu den Sumpfnattern\nNach seiner Flucht sammelte er eine eigene Räuberbande um sich. Die Schwarzen Zitteraale gliederten diese Schar später in ihre Struktur ein. Seitdem dient Cadwgan ihrem Bandenhaupt und führt seine Leute als die Sumpfnattern, die zweite der acht Unterbanden.\n\nEine Fehde gegen die Gafyr\nDie Eingliederung hat seine eigenen Absichten nicht verdrängt. Die Sumpfnattern verfolgen ihre Geschäfte innerhalb des größeren Verbandes, kochen aber weitgehend ihr eigenes Süppchen. Cadwgan trägt den Gafyr den Verlust seines früheren Standes nach. Seine persönliche Vendetta richtet sich gegen das Haus und besonders gegen dessen Oberhaupt. Höfe, Wege und Besitzungen der Gafyr bekommen diese Fehde immer wieder zu spüren.\n\nZwischen den Fundamenten Lycaths\nSeinen Stützpunkt hat Cadwgan in den Ruinen Lycaths eingerichtet. Von der antiken Crannath-Festung sind alte Fundamente geblieben. Zwischen diesen Resten nutzen die Sumpfnattern behelfsmäßige Unterstände, Zelte und hölzerne Einfassungen als Lager.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Cadwgan Bwach · Grüne Natter",
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Cadwgan Bwach"
+        },
+        {
+          "label": "Beiname",
+          "value": "Die Grüne Natter"
+        },
+        {
+          "label": "Volk",
+          "value": "Rheunwaith"
+        },
+        {
+          "label": "Herkunft",
+          "value": "Haus Bwach · Gwaulwyn"
+        },
+        {
+          "label": "Früherer Stand",
+          "value": "Ritter unter den Gafyr · Ritterstand aberkannt"
+        },
+        {
+          "label": "Heutige Stellung",
+          "value": "Anführer der Sumpfnattern"
+        },
+        {
+          "label": "Zugehörigkeit",
+          "value": "Die Schwarzen Zitteraale · Gruppe II."
+        },
+        {
+          "label": "Stützpunkt",
+          "value": "Ruinen Lycaths"
+        },
+        {
+          "label": "Feindschaft",
+          "value": "Haus Gafyr · persönliche Vendetta"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-gruene-natter-v2.png",
+        "biographyTitle": "Die Grüne Natter",
+        "biographyText": "<p>Cadwgan Bwach aus dem Haus Bwach in Gwaulwyn, genannt die Grüne Natter, führt die Sumpfnattern als Unterbande der Schwarzen Zitteraale. Im Großen Krieg diente er als Ritter unter den Gafyr. Nach der Plünderung eines albischen Dorfes in Ceitheach verlor er seinen Ritterstand und floh vor dem vorgesehenen Gerichtsverfahren. Seine heutige Bande handelt weitgehend nach eigenen Interessen und richtet sich besonders gegen die Herrschaft und Ländereien des Hauses Gafyr.</p>",
+        "abilitiesTitle": "Wesen und Antrieb",
+        "abilities": [
+          {
+            "title": "Nachtragend",
+            "icon": "/IconOrdner/Traits%20Icon/Proud.png",
+            "detail": "Trägt den Gafyr seinen verlorenen Stand nach und macht ihre Besitzungen zum Ziel seiner Fehde."
+          },
+          {
+            "title": "Ritterliche Kriegserfahrung",
+            "icon": "/IconOrdner/Traits%20Icon/Brave.png",
+            "detail": "Führte bereits im Großen Krieg einen Trupp im Dienst der Gafyr."
+          },
+          {
+            "title": "Eigene Interessen",
+            "icon": "/IconOrdner/Traits%20Icon/Ambitious.png",
+            "detail": "Dient den Schwarzen Zitteraalen, verfolgt mit seiner Unterbande zugleich eigene Geschäfte und Ziele."
+          }
+        ],
+        "historyTitle": "Erscheinung und Zeichen",
+        "historyText": "<p>Dunkelrotes Haar, ein kantiges Gesicht und ein grimmiger Blick kennzeichnen die Grüne Natter. Geschwärzte Platten schützen Schultern und Arme; dunkelgrüne Schuppenpanzerung liegt unter einem halb offenen, zerfledderten und grob geflickten Wappenrock. Sein stählerner Helm ist wie das geöffnete Maul einer Natter geformt. Er trägt ihn unter dem Arm und stützt sich mit der anderen Hand auf den Knauf seines Zweihänders.</p><p>Sein Zeichen zeigt eine grüne Natter, die einen hellen Geißbock umschlingt und ihm in den Nacken beißt. Der Bock bäumt sich gegen sie auf. Das Zeichen verhöhnt seine früheren Dienstherren und kennzeichnet heute seine eigene Schar.</p>",
+        "extraSections": [
+          {
+            "title": "Haus Bwach aus Gwaulwyn",
+            "text": "<p>Cadwgan stammt aus dem Haus Bwach in Gwaulwyn. Dessen Familienwappen zeigt einen hellen Geißbock, der sich aufbäumt und eine sich windende grüne Natter unter seinen Hufen zertritt. Weinrot, Elfenbein und Dunkelgrün bestimmen das Wappen. Cadwgans heutiges Bandzeichen kehrt das Verhältnis der Tiere um: Dort beißt die Natter dem Bock in den Nacken.</p>",
+            "position": "afterWorks",
+            "mode": "text"
+          },
+          {
+            "title": "Ritter im Großen Krieg",
+            "text": "<p>Vor rund zwanzig Jahren zog Cadwgan als Ritter unter den Gafyr in den Großen Krieg. Er führte einen eigenen Trupp und kannte den Dienst unter ihrem Banner, bevor er selbst zum Verfolgten wurde.</p>",
+            "position": "afterWorks",
+            "mode": "text"
+          },
+          {
+            "title": "Die Plünderung in Ceitheach",
+            "text": "<p>Während des Krieges plünderten Cadwgan und sein Trupp ein albisches Dorf in Ceitheach. Darüber hinaus standen schwere weitere Übergriffe auf die Dorfbevölkerung im Raum. Diese zusätzlichen Taten ließen sich ihnen jedoch nicht unmittelbar nachweisen. Der Name des Dorfes und die Einzelheiten dieser Vorwürfe sind nicht überliefert.</p>",
+            "position": "afterWorks",
+            "mode": "text"
+          },
+          {
+            "title": "Verlust der Ritterwürde und Flucht",
+            "text": "<p>Cadwgan wurde seines Ritterstandes enthoben und sollte sich wegen seiner Taten vor Gericht verantworten. Er floh, bevor es zu diesem Verfahren kam. Seine Flucht war keine Freisprechung; ebenso ist kein abgeschlossenes Urteil über die zusätzlichen Vorwürfe belegt.</p>",
+            "position": "afterWorks",
+            "mode": "text"
+          },
+          {
+            "title": "Von der Räuberbande zu den Sumpfnattern",
+            "text": "<p>Nach seiner Flucht sammelte er eine eigene Räuberbande um sich. Die Schwarzen Zitteraale gliederten diese Schar später in ihre Struktur ein. Seitdem dient Cadwgan ihrem Bandenhaupt und führt seine Leute als die Sumpfnattern, die zweite der acht Unterbanden.</p>",
+            "position": "afterWorks",
+            "mode": "text"
+          },
+          {
+            "title": "Eine Fehde gegen die Gafyr",
+            "text": "<p>Die Eingliederung hat seine eigenen Absichten nicht verdrängt. Die Sumpfnattern verfolgen ihre Geschäfte innerhalb des größeren Verbandes, kochen aber weitgehend ihr eigenes Süppchen. Cadwgan trägt den Gafyr den Verlust seines früheren Standes nach. Seine persönliche Vendetta richtet sich gegen das Haus und besonders gegen dessen Oberhaupt. Höfe, Wege und Besitzungen der Gafyr bekommen diese Fehde immer wieder zu spüren.</p>",
+            "position": "afterWorks",
+            "mode": "text"
+          },
+          {
+            "title": "Zwischen den Fundamenten Lycaths",
+            "text": "<p>Seinen Stützpunkt hat Cadwgan in den Ruinen Lycaths eingerichtet. Von der antiken Crannath-Festung sind alte Fundamente geblieben. Zwischen diesen Resten nutzen die Sumpfnattern behelfsmäßige Unterstände, Zelte und hölzerne Einfassungen als Lager.</p>",
+            "position": "afterWorks",
+            "mode": "text"
+          }
+        ],
+        "connectionsTitle": "Gefolgschaft und Feindschaft",
+        "connections": [
+          {
+            "name": "Haus Bwach · Gwaulwyn",
+            "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/icons/familie-bwch-v3.png",
+            "imageFormat": "square",
+            "detail": "Seine Herkunftsfamilie; ihr Bock zertritt die Natter, während sein heutiges Bandzeichen das umgekehrte Motiv zeigt."
+          },
+          {
+            "name": "Erster Leutnant · unbenannt",
+            "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-leutnant-1-v2.png",
+            "imageFormat": "portrait",
+            "detail": "Rechte Hand · Wachen und Überfälle. Ehemaliger Wachtmeister mit dunkelrotem Haar, ergrauendem Bart und gebrochener Nase. Schwarze Brigantine, grüne Schuppenpartien und schwere Panzerhandschuhe; auf den senkrechten Waffenschaft gestützt."
+          },
+          {
+            "name": "Zweiter Leutnant · unbenannt",
+            "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-alchemist-v1.png",
+            "imageFormat": "portrait",
+            "detail": "Linke Hand · Alchemie und Versorgung. Abtrünniger, exzentrischer Alchemist mit zerzaustem aschblondem Haar, bernsteinfarbenen Augen und runder Brille. Geflickter grüner Mantel, lederne Arbeitskleidung, kleine Fläschchen und ein beunruhigend begeistertes Grinsen."
+          },
+          {
+            "name": "Die Schwarzen Zitteraale",
+            "image": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+            "detail": "Übergeordneter Verband, der seine ursprüngliche Räuberbande eingliederte."
+          },
+          {
+            "name": "Haus Gafyr",
+            "image": "/Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gafyr.png",
+            "detail": "Frühere Dienstherren und heutiges Ziel seiner persönlichen Vendetta."
+          }
+        ],
+        "documentsTitle": "Bandenakte und Hausdarstellung",
+        "documents": [
+          {
+            "title": "Die Sumpfnattern",
+            "text": "Gruppenbio, Anführerbio, Hierarchie und interaktives Lager.",
+            "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-ii"
+          },
+          {
+            "title": "Regulärer Ritter des Hauses Bwach",
+            "text": "Plattenrüstung mit Geißbock-Hornhelm, Schild, Schwert und Wappenrock in den Hausfarben.",
+            "link": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/figures/haus-bwach-ritter-v1.png"
+          }
+        ],
+        "footer": "Cadwgan Bwach · Die Grüne Natter · Lycath"
+      }
+    },
+    "archived": false,
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

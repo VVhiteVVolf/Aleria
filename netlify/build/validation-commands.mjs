@@ -1,6 +1,8 @@
 // Existing release checks have a validation-only contract. Keep explicit entry
 // points: an unknown script does not become checkpointable by taking --check.
 const VALIDATION_CHECKS = new Set([
+  "AleriaAlmanach/scripts/build-federkiel-gwynthor.mjs",
+  "AleriaAlmanach/scripts/build-federkiel-couriers.mjs",
   "AleriaAlmanach/scripts/build-tirfelyn-hof-characters.mjs",
   "Karten/tools/build-tirfelyn-hof-map.mjs",
   "AleriaAlmanach/scripts/admit-gwynthor-castle-art.mjs",

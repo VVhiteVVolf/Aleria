@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "version": 2,
+  "scene": "carys-schiessuebung",
+  "tool": "ImageGen (built-in)",
+  "date": "2026-11-22",
+  "earlierReceipt": "carys-schiessuebung-v1-prompts.json",
+  "retainedSourceImages": [
+    "source/carys-bogen-posen-v1.png",
+    "source/einion-block-posen-v1.png"
+  ],
+  "images": [
+    {
+      "source": "source/carys-schiesshalle-v2.png",
+      "active": true,
+      "role": "smaller playable blanket and deeper room",
+      "prompt": "Use case: precise-object-edit for a Chibi anime archery minigame environment. Image 1 is the existing EMPTY game background to revise. Keep the same Castell Draig chamber, warm sunset light from diamond-paned window on the far left, mauve stone blocks, right red dragon banner, fur-edged navy and gold plaid comfort blanket, line art and matte shaded color. KEEP WIDE 16:9. Changes are very specific: (1) shrink the blanket by ONE THIRD IN BOTH WIDTH AND HEIGHT. In the finished 16:9 image its total width is about 25% of the whole picture and its total height about 35%. Hang it against the back stone wall BOUNDED between roughly 47% and 72% horizontally and between 22% and 57% vertically, at the viewer's middle-right. Let a significant amount of bare stone show all around it so it reads as an ordinary small personal lap blanket. Retain the same gold grid, cream wool edge, gently sagging upper edge and wooden pegs. (2) Show MORE OPEN FLOOR, about the LOWER 35% of the frame, with the rear wall/floor horizon clearly around 65% from the top. Use lightly converging grout joints and warm window illumination to make a long obvious empty stretch of floor from the foreground camera to the far wall. The room has depth: later Carys will be close in the front left and Einion far away only a little in front of the wall. Keep angles almost straight-on but make this depth visually clear. Do not add people or props or barriers, do not paint arrows or round targets on the blanket. The finished design must contain zero characters, no writing, no aim marker, no overlays, no UI and no borders.",
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/carys-schiesshalle-v1.png"
+      ],
+      "original": {
+        "size": [
+          1672,
+          941
+        ],
+        "bytes": 2317417,
+        "sha256": "25d5e2aa84c20d7c6bb13e16d2835bdeb946cf5148349d8f6c9261ccfcc499d1"
+      }
+    },
+    {
+      "source": "source/carys-schiessuebung-v2.png",
+      "active": true,
+      "role": "loading-screen panorama with greater separation",
+      "prompt": "Use case: compositing and precise-object-edit, a single finished 16:9 chibi adventure game panorama. Input 1 is the EXACT approved empty room plate: preserve its camera, the deep room, the wall/floor horizon, the long stretch of floor, the leaden window, red banner, and especially the SMALL blue-and-gold plaid cream-edged blanket at the same size and position. It measures only about 22% of the whole frame width. Never enlarge or move the comfort blanket and do not put any projectile into it. Input 2 gives ONLY the exact two chibi character identities, rear view of Carys Draig and front view of her brother Einion. Input 3 gives the same crimson-and-gold fletching in the quiver. This revised composition must make the much greater physical DISTANCE between the two siblings obvious.\n\nPut large Carys in the near foreground left, center around 22% of frame width, her head around 28% from the top and her two boots down near 96% of height. She has her back to our camera, slight turn to face upstage, flame-red long hair, red-trim dark Draig armor and red mantle, her lowered recurve bow, and a visible open brown backpack quiver with exactly FIVE red-fletched arrows with the heads safely tucked inside. Put Einion MUCH FARTHER AWAY, just in front of the wall, center about 53% of width. His full figure is only 31% of the picture height, about HALF the visible height of foreground Carys. Both boots touch the floor very far upstage at about 77% of canvas height. His chest faces his sister and the viewer. Familiar russet cowlick, gold Draig chest emblem, two outspread palms and imploring worried big blue eyes. He is to one side of the small blanket so the whole shape of the blanket stays clear. There is obvious empty stone paving between their feet and clear scale difference. Keep same expressive polished Chibi anime style and warm window light. No sentences, typography, banners with lettering, overlays, motion trails, speech bubbles, crosshair, border or camera change.",
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/carys-schiesshalle-v2.png",
+        "AleriaAlmanach/assets/loading-screen/source/carys-schiessuebung-v1.png",
+        "AleriaAlmanach/assets/loading-screen/source/carys-pfeil-seite-v1.png"
+      ],
+      "original": {
+        "size": [
+          1672,
+          941
+        ],
+        "bytes": 2393149,
+        "sha256": "9046a2aa6ef04a9dd396c970ec7d55257a13538f260725cc5f1ca56d63c510ed"
+      }
+    },
+    {
+      "source": "source/carys-pfeil-seite-v1.png",
+      "active": true,
+      "role": "side-view arrow also used for quiver shafts",
+      "prompt": "Use case: stylized-concept. A genuinely transparent isolated sprite of ONE complete simple fantasy projectile for a 2D chibi animated video game. The source image is style reference only, matching its copper-warm outlined chibi drawing. Flat EXACT SIDE VIEW, the arrow is perfectly straight, perfectly HORIZONTAL on the page, with a narrow hammered warm-gray triangular tip pointing to the RIGHT and a short, bold crimson feather cluster with subdued gold rims on the LEFT. Dark honey wooden shaft, long enough to read as one classic arrow, visible crisp dark outline and simple cel highlights. The tip must be together with the shaft as one unified piece, the feathers attach to the shaft. Bold feather color to read as a thumbnail. Use clean studio light, no foreshortening, no curve, no bow, no humans, no background or shadow, no blown-out bloom, no glowing trail, no duplicate arrows, no graphic panel, no callout text or watermark. Center the complete arrow, leaving at least 8% fully transparent margin around both ends. Wide landscape canvas. Preserve full genuine alpha around the arrow.",
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/carys-schiessuebung-v1.png"
+      ],
+      "original": {
+        "size": [
+          2172,
+          724
+        ],
+        "bytes": 308129,
+        "sha256": "af3084b0b527fc8482bc4b994b07dbd584b164e0516809934fa11f23a82c3670"
+      }
+    },
+    {
+      "source": "source/carys-pfeil-einschlag-v1.png",
+      "active": true,
+      "role": "rear fletching at wall and blanket impacts",
+      "prompt": "Use case: stylized-concept for a clean transparent Chibi game sprite. Generate the small foreshortened appearance of the exact same red-and-gold-fletched arrow in image 1 seen STRICTLY END-ON FROM THE TAIL when the arrow points straight away from the camera. The arrow is stuck in a target out of frame, point faces AWAY from us and is completely hidden. We see a tight balanced trifoliate group of its three crimson fletching vanes with muted gold edging around a small central dark wooden nock, tiny dark slot at the centre. The vanes look like three narrow swept feathers visible from their ends going directly away from the viewer, with warm tan reflected light and outlined dark occlusion. Totally front-on to the tail, no long visible shaft, NO ARROWHEAD, NO tip, no side view, no extra arrow, no impact or target, no material under the arrow. Compact player-readable shape, no background, cast shadow, motion marks, text or square border. Isolate one small centred cluster on real transparent alpha, with room on all sides. Match hand-drawn anime/chibi dark contour and matte shading from the reference precisely.",
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/carys-pfeil-seite-v1.png"
+      ],
+      "original": {
+        "size": [
+          1536,
+          1024
+        ],
+        "bytes": 841530,
+        "sha256": "16d7ce21c80bb55384cc88da83b4941b60b24b0aa9ccc7904d75fe6fbb9348e9"
+      }
+    }
+  ]
+}

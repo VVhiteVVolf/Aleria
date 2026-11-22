@@ -1,6 +1,6 @@
 # Almanach-Ladebildschirm
 
-Beim Öffnen des Almanachs wird eine von neun Szenen ausgelost. Im selben Tab
+Beim Öffnen des Almanachs wird eine von elf Szenen ausgelost. Im selben Tab
 wechselt die Szene beim nächsten Laden. Ohne verfügbaren Sitzungsspeicher bleibt
 die normale Zufallsauswahl aktiv.
 
@@ -8,6 +8,8 @@ die normale Zufallsauswahl aktiv.
 - Sir Duncan, Gawain, Ylva und Freki wandern durch Nadelwald und Gebirge am Wasserfall entlang.
 - Idwal schlägt im Gartenbezirk auf die zerbrochene Teekanne. Talon versucht ihn zu beruhigen und Trevor lacht. Über „Spielen“ beginnt die Rosenflucht.
 - Iestyn, Gareth, Trahern, Cadogan, Cadfan, Neala und Branwen reagieren in der Kammer des Herolds auf den Zwischenfall mit Cadogans Hut.
+- Im abgetrennten Anproberaum von Göttliche Eleganz wartet Catrin besorgt vor der Kabine. Refri ringt mit der Rückenschnürung ihres tannengrünen Mondsilbers.
+- Carys stellt sich mit Bogen und Köcher vor Einions Schmusedecke. Einion bittet sie, Lord Schmusedecke zu verschonen. Über „Spielen“ beginnt die Schießübung.
 - Trahern malt ein Dorf im Tal. Das Licht unter dem Baum verändert sich leicht.
 - Zwei Versunkene knien am Strand über einem Kadaver. Die Augen des aufblickenden Versunkenen glimmen kurz auf.
 - Sir Steffan mustert die unbewaffneten Draig-Waffenknechte in Zweierreihen. Ein Lichtstreif wandert über das Banner.
@@ -50,13 +52,22 @@ In der Heroldskammer bleibt die Kamera fest. Beim Sprechen wechselt die aktive
 Figur zwischen drei Mund- und Handgesten. Cadogan hält den Hut in allen vier
 Posen in der Hand.
 
+`loading-screen-fitting-room.js` legt das bewegliche Türblatt und zwei
+Türspalt-Posen passgenau über die feste Anprobeszene. Refris Schuhe bleiben
+unter der Tür sichtbar. Das hölzerne Klappern folgt der Türbewegung und der
+Tonwahl des Ladebildschirms. Sieben wörtliche Ausschnitte aus dem
+Verkaufsraum-Thread bilden einen gekürzten Dialog vom Fluchen über die
+Schnürung bis zur Ausrede mit dem Boden. Die Reihenfolge einiger Zeilen
+und die Türgesten folgen der Inszenierung für das Ladebild. Auf schmalen
+Geräten bleiben Catrin und die ganze Tür im Bild.
+
 `loading-screen-vignettes.js` setzt für jede der fünf ruhigen Szenen ein Bild
 ein. Die Animation liegt in `loading-screen-vignettes.css` und hält an, wenn die
 Leser pausieren, den Tab wechseln oder den Almanach betreten. Die Kreaturen
 folgen den Bildtafeln aus dem Bestiarium. [Versunkener](../../../Bestiarium/wesen/nekrophagen/versunkener/index.html), [Landtroll](../../../Bestiarium/wesen/trolle/landtroll/index.html).
 
 `loading-screen-quotes.js` enthält die Dialoge von Owetas Quartett, der Reise,
-der Rosenflucht und der Heroldskammer. Owetas Quartett
+der Rosenflucht, der Heroldskammer und Refris Anprobe. Owetas Quartett
 verabredet sich am Osttor und bespricht die Rast vor dem Hof, die Unterlagen
 und die Fragen an die Familie Tirfelyn. In der eigens geschriebenen Szene am
 Wolfshorn warnt Sir Duncan vor den nächsten zwei Wochen. Freki dreht sich für
@@ -89,6 +100,11 @@ Fassungen aus `assets/loading-screen/ruhige-szenen-v1-prompts.json` und erstellt
 AVIF- und WebP-Dateien. Der Beleg enthält auch die Prompts und Referenzen der
 früheren Fassungen.
 
+`prepare-assets.py --fitting-room` erzeugt die Bildfassungen, Tür- und
+Posenausschnitte, den Klapperton und `public/assets/loading-screen/refri-anprobe-v2-manifest.json`.
+Die sechs ImageGen-Originale und die Raumkorrektur sind in
+`assets/loading-screen/refri-anprobe-v2-prompts.json` belegt.
+
 ## Rosenflucht
 
 Die Tiefenwyrm-Variante spielt Idwals Speerbewegung auf der Startseite ab.
@@ -102,13 +118,45 @@ Touchgeräten stehen vier Tasten unter der Szene. Trevor übernimmt denselben
 Sprung und dieselbe Sturzbewegung hinter Idwal.
 
 Gwendolyns rote Sprechblase eröffnet jede Runde mit einem Trommelschlag.
-Web Audio erzeugt die Begleitmusik, Sprung-, Glas- und Pickgeräusche.
-Die Ladebildmusik pausiert
-für die Dauer des Spiels. Stöße gegen Hecken kosten jeweils eine Whiskyflasche.
-Beim Fangen pickt Pyderi nach beiden Figuren, bevor „Game over“ erscheint.
-Die schmalen Hecken lassen Raum für einen frühen Sprung. Pyderi bleibt beim
-normalen Laufen auf Abstand und holt bei Stürzen oder längerem Zurücklaufen
-auf. Das Ende des Gartenwegs oder ein Fang beendet die Runde.
+Web Audio erzeugt die Sprung-, Glas- und Pickgeräusche.
+Stöße gegen Hecken kosten jeweils eine Whiskyflasche. Beim Fangen pickt Pyderi
+nach beiden Figuren, bevor „Game over“ erscheint. Die schmalen Hecken lassen
+Raum für einen frühen Sprung. Pyderi bleibt beim normalen Laufen auf Abstand
+und holt bei Stürzen oder längerem Zurücklaufen auf. Das Ende des Gartenwegs
+oder ein Fang beendet die Runde.
+
+## Carys’ Schießübung
+
+In `blanket-archery/` zielt Carys durch das Burgzimmer auf die an der
+Hinterwand hängende, gefütterte Decke. Einion springt weit hinten vor
+der Wand und bittet in wechselnden Sprechblasen um Gnade. Drei Treffer
+mit fünf Pfeilen gewinnen die Runde. Ein Treffer auf Einion beendet sie
+sofort. Die Trefferprüfung liest seine sichtbare Pose am Durchflugpunkt,
+auch während der hohen Sprünge.
+
+Maus oder Pfeiltasten bewegen das Fadenkreuz. Gedrückte Maustaste,
+Leertaste oder gezogener Finger spannen den Bogen. Loslassen schießt.
+Mit steigender Zugkraft wächst das Wackeln. Kräftige Schüsse treffen den
+angezeigten Punkt, schwächere senken sich bis zum Boden. Eingeschlagene
+Pfeile zeigen die gezeichnete Befiederung aus der Rückansicht. Beim
+Loslassen erscheint der fliegende Pfeil.
+
+Gewinnt Carys, weint Einion. Bei einer Niederlage kommt ihre Mutter
+Wynonna Fiachrach von rechts herein und schimpft per Sprechblase.
+Beide Ausgänge haben eigene instrumentale Schlussmelodien. Bei
+reduzierter Bewegung erscheinen die beiden Schlussposen ohne Übergang.
+
+Die Schießübung und die Rosenflucht laden ihre Spielbilder erst über
+„Spielen“. Dazu pausiert die Ladebildmusik. Beide verwenden dieselbe instrumentale Kampfmusik und
+eigene synthetisierte Effekte. `games/loading-combat-music.js` enthält
+die gemeinsame Komposition. Sprechblasen bleiben Text. Beim Ausblenden
+des Tabs pausiert das Spiel. „Aleria betreten“ ist weiterhin erreichbar.
+
+`python AleriaAlmanach/modules/loading-screen/prepare-assets.py --blanket-archery`
+erzeugt die Bühnenbilder, zwei Atlanten mit je sechs Chibi-Posen, die
+beiden Schlussposen, die Pfeile in Seiten- und Rückansicht und das
+Auslieferungsmanifest.
+Die ImageGen-Originale und Prompts liegen unter `assets/loading-screen/`.
 
 ## Musik und Bedienung
 

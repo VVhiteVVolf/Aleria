@@ -1,0 +1,359 @@
+{
+  "schemaVersion": 1,
+  "feature": "federkiel-gwynthor-20261122",
+  "images": [
+    {
+      "key": "gildenzeichen",
+      "version": 2,
+      "kind": "marks",
+      "preset": "federkiel-heraldik",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/gildenzeichen-v2.png",
+      "active": "Fraktionen/assets/emblems/gilden/federkiel-v2.webp",
+      "referenceImages": [
+        "Fraktionen/assets/emblems/gilden/federkiel.webp"
+      ],
+      "transparent_background": true,
+      "prompt": "Use case: logo-brand. Draw one NEW official general guild emblem for the medieval post guild Federkiel in Aleria. The attached guild crest is the exact heraldic reference, identical in motif to the user's screenshot. Redraw it from scratch with finer decisive outlines, rich matte painted gold, bright readable green and a compact silhouette that reads as a 48 px site icon. Preserve the core visual identity: a frontal gold-rimmed pointed shield vertically divided, warm golden yellow on the viewer's left and leaf green on the right; one large ivory quill crossing both fields diagonally, feather tip up-left and nib down-right; a tightly gathered green leafy mantle with small blue accents behind, compact gold finial above, small plain folded gold scroll below. Calm medieval illustrated heraldry with soft controlled cel shading, not shiny modern vector or photorealistic metal. Clean silhouette and the entire crest comfortably within a square. Genuine transparent alpha outside the crest and between its open ornaments. No circular backing or badge, no lettering, no second crest, no drop shadow, no watermark, no painted chessboard."
+    },
+    {
+      "key": "aushangeschild",
+      "version": 1,
+      "kind": "marks",
+      "preset": "fantasy-inventory-item",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/aushangeschild-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/aushangeschild-v1.webp",
+      "referenceImages": [
+        "Fraktionen/assets/emblems/gilden/federkiel.webp",
+        "AleriaAlmanach/assets/rote-klaue/ladenschild.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. One square 1:1 fantasy guild hanging sign for Aleria, an isolated real medieval object that will also be used as a small archive icon. Image 1 is the Federkiel heraldic motif: viewer-left warm gold field and viewer-right green field, one large diagonal ivory quill with tip up-left and nib down-right. Paint this bold symbol across the entire front of a slightly pointed thick oak signboard; iron band on the edge, small brass rivets. Image 2 is a material and mounting reference only. This plaque unmistakably hangs from an iron wall bracket on TWO clearly visible wrought-iron hinged swing joints with pins above the board. Show the whole short bracket, articulated hinges and complete sign in a near-frontal slight three-quarter view, with clear air between bracket and board. Antique dark iron, oak bevel, matte pigment and crisp illustrated contours. Bold simple sign silhouette and quill legible as 48px icon. Entire assembly centered within square with clear margins. TRUE transparent PNG alpha outside the object and through the hinge gaps. No wall, masonry, ground, shadow beyond the object, people, writing, watermark, ornate frame or checkered background."
+    },
+    {
+      "key": "gildenhaus",
+      "version": 1,
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/gildenhaus-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/gildenhaus-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "Fraktionen/assets/emblems/gilden/federkiel.webp"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: illustration-story. One single 2:3 PORTRAIT aspect medieval fantasy environment illustration for an Aleria Almanac page. Reference image 1 Kyrwyn v3 defines depiction STYLE ONLY; transfer its hand-drawn fine modulated dark brown anime line art, matte harmonious palette, controlled soft cel shading and simple material shapes to the room or architecture, in the Aleria anime-scene-portrait style with Tales of Xillia/Frieren as base. Do not copy the portrait, person, outfit or setting from the reference. Keep real spatial depth but use a strong readable focal point at small size. Medieval technology and daylight only. No human characters, faces, hands, silhouettes, crowds, modern devices, legible lettering, watermarks, frames, logos other than the referenced guild mark where described, CGI or photoreal textures. Fill the frame with the natural environment. Scene: Street exterior of the regional headquarters, the large central post establishment of the worldwide Federkiel guild in medieval Gwynthor, Cenyr. A broad practical two-storey limewashed grey-stone & dark-oak building with slate roofs, three public arches, green wooden doors, warm ochre lintels and a sheltered portico, framed by the narrower neighboring town houses. Low eye-level from the cobbled street looking slightly upward, gentle morning sunlight, broad accessible threshold and well-used steps, building fills the vertical view. The primary entrance has a small ochre-and-green hanging shield with one ivory diagonal quill and two visible iron hinges inspired by reference 2."
+    },
+    {
+      "key": "dienstleistungen",
+      "version": 1,
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/dienstleistungen-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/dienstleistungen-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: illustration-story. One single 2:3 PORTRAIT aspect medieval fantasy environment illustration for an Aleria Almanac page. Reference image 1 Kyrwyn v3 defines depiction STYLE ONLY; transfer its hand-drawn fine modulated dark brown anime line art, matte harmonious palette, controlled soft cel shading and simple material shapes to the room or architecture, in the Aleria anime-scene-portrait style with Tales of Xillia/Frieren as base. Do not copy the portrait, person, outfit or setting from the reference. Keep real spatial depth but use a strong readable focal point at small size. Medieval technology and daylight only. No human characters, faces, hands, silhouettes, crowds, modern devices, legible lettering, watermarks, frames, logos other than the referenced guild mark where described, CGI or photoreal textures. Fill the frame with the natural environment. Scene: Public writing counter at a medieval central post office in Gwynthor. Close inviting diagonal view of an oak public table with one large folded cream letter in the foreground, a few stacked clean sheets, upright ivory quill and inkwell, little wax seal and two plain copper pennies, with a soft background suggestion of a low open public service counter, warm daylight through leaded window. Pale cream paper, ochre and dark green cloth trim. An accessible well-used commonplace civic place, bright and deeply welcoming, uncluttered composition."
+    },
+    {
+      "key": "gildenleitung",
+      "version": 1,
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/gildenleitung-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/gildenleitung-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: illustration-story. One single 2:3 PORTRAIT aspect medieval fantasy environment illustration for an Aleria Almanac page. Reference image 1 Kyrwyn v3 defines depiction STYLE ONLY; transfer its hand-drawn fine modulated dark brown anime line art, matte harmonious palette, controlled soft cel shading and simple material shapes to the room or architecture, in the Aleria anime-scene-portrait style with Tales of Xillia/Frieren as base. Do not copy the portrait, person, outfit or setting from the reference. Keep real spatial depth but use a strong readable focal point at small size. Medieval technology and daylight only. No human characters, faces, hands, silhouettes, crowds, modern devices, legible lettering, watermarks, frames, logos other than the referenced guild mark where described, CGI or photoreal textures. Fill the frame with the natural environment. Scene: Second-floor meeting and route room of Gwynthor's Federkiel postal guild. Calm high ceiling, a wide oak table with five modest chairs and a bigger chair at the end, large parchment route map with paths and dots but no text pinned against the stone far wall, bundles of dispatch instructions and weights on a sideboard, dark green window shutters. Quiet afternoon light comes through deep mullioned windows. Mid-wide room composition with the route table and wall map both legible."
+    },
+    {
+      "key": "postzentrale",
+      "version": 1,
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/postzentrale-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/postzentrale-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png",
+        "Fraktionen/assets/emblems/gilden/federkiel.webp"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: illustration-story. One single 2:3 PORTRAIT aspect medieval fantasy environment illustration for an Aleria Almanac page. Reference image 1 Kyrwyn v3 defines depiction STYLE ONLY; transfer its hand-drawn fine modulated dark brown anime line art, matte harmonious palette, controlled soft cel shading and simple material shapes to the room or architecture, in the Aleria anime-scene-portrait style with Tales of Xillia/Frieren as base. Do not copy the portrait, person, outfit or setting from the reference. Keep real spatial depth but use a strong readable focal point at small size. Medieval technology and daylight only. No human characters, faces, hands, silhouettes, crowds, modern devices, legible lettering, watermarks, frames, logos other than the referenced guild mark where described, CGI or photoreal textures. Fill the frame with the natural environment. Scene: Main public counter hall of the busy centralized medieval post office in Gwynthor, viewed from the entrance. A series of FOUR broad adjoining wooden service windows at a shared long counter, a stone and oak arcade and benches on the near side, rows of wooden letter pigeonholes through the central doorway well behind them. Green counter panels edged with ochre wood, an unobtrusive diagonal ivory quill plaque, soft tall-window daylight, strong perspective showing a large practical civic hall."
+    },
+    {
+      "key": "schreibstube",
+      "version": 1,
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/schreibstube-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/schreibstube-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: illustration-story. One single 2:3 PORTRAIT aspect medieval fantasy environment illustration for an Aleria Almanac page. Reference image 1 Kyrwyn v3 defines depiction STYLE ONLY; transfer its hand-drawn fine modulated dark brown anime line art, matte harmonious palette, controlled soft cel shading and simple material shapes to the room or architecture, in the Aleria anime-scene-portrait style with Tales of Xillia/Frieren as base. Do not copy the portrait, person, outfit or setting from the reference. Keep real spatial depth but use a strong readable focal point at small size. Medieval technology and daylight only. No human characters, faces, hands, silhouettes, crowds, modern devices, legible lettering, watermarks, frames, logos other than the referenced guild mark where described, CGI or photoreal textures. Fill the frame with the natural environment. Scene: The public interior of a medieval post guild writing room, Gwynthor, Cenyr. An approachable sunlit room with long writing benches and four simple writing places with quill pots, cream sheets and sand shakers, little dark green privacy screens around the quieter places further back. Small mullioned window catches a slant of light across the floor; wood and lime-plastered grey stone, distinct clean composition with foreground table seen diagonally."
+    },
+    {
+      "key": "druckerei",
+      "version": 1,
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/druckerei-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/druckerei-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: illustration-story. One single 2:3 PORTRAIT aspect medieval fantasy environment illustration for an Aleria Almanac page. Reference image 1 Kyrwyn v3 defines depiction STYLE ONLY; transfer its hand-drawn fine modulated dark brown anime line art, matte harmonious palette, controlled soft cel shading and simple material shapes to the room or architecture, in the Aleria anime-scene-portrait style with Tales of Xillia/Frieren as base. Do not copy the portrait, person, outfit or setting from the reference. Keep real spatial depth but use a strong readable focal point at small size. Medieval technology and daylight only. No human characters, faces, hands, silhouettes, crowds, modern devices, legible lettering, watermarks, frames, logos other than the referenced guild mark where described, CGI or photoreal textures. Fill the frame with the natural environment. Scene: A working medieval guild printing workshop in Gwynthor. One mechanically plausible large WOODEN screw letterpress with an overhead vertical screw, lever and flat horizontal platen, behind it another matching press partly visible, cases of movable lead type, drying racks and tidy bundles of blank or abstractly printed route sheets. Broad vertical architectural view, soft high window light, green cabinet front among aged oak and muted cream paper."
+    },
+    {
+      "key": "kurierstation",
+      "version": 1,
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/kurierstation-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/kurierstation-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: illustration-story. One single 2:3 PORTRAIT aspect medieval fantasy environment illustration for an Aleria Almanac page. Reference image 1 Kyrwyn v3 defines depiction STYLE ONLY; transfer its hand-drawn fine modulated dark brown anime line art, matte harmonious palette, controlled soft cel shading and simple material shapes to the room or architecture, in the Aleria anime-scene-portrait style with Tales of Xillia/Frieren as base. Do not copy the portrait, person, outfit or setting from the reference. Keep real spatial depth but use a strong readable focal point at small size. Medieval technology and daylight only. No human characters, faces, hands, silhouettes, crowds, modern devices, legible lettering, watermarks, frames, logos other than the referenced guild mark where described, CGI or photoreal textures. Fill the frame with the natural environment. Scene: Early morning at the residential-scale but broad courier relay and horse stud of the Gwynthor postal guild, an interior courtyard that opens onto covered stalls. Stone-and-oak stall fronts, double dark-green gates open towards the road, a saddle on a timber stand, watering trough and two closed canvas postbags. A calm saddled bay horse in clear three-quarter profile beside the first stall, plausible horse anatomy, no rider or handler. Main focus is the spacious work courtyard and access to the road, luminous cool air and warm highlights."
+    },
+    {
+      "key": "lager",
+      "version": 1,
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/lager-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/lager-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: illustration-story. One single 2:3 PORTRAIT aspect medieval fantasy environment illustration for an Aleria Almanac page. Reference image 1 Kyrwyn v3 defines depiction STYLE ONLY; transfer its hand-drawn fine modulated dark brown anime line art, matte harmonious palette, controlled soft cel shading and simple material shapes to the room or architecture, in the Aleria anime-scene-portrait style with Tales of Xillia/Frieren as base. Do not copy the portrait, person, outfit or setting from the reference. Keep real spatial depth but use a strong readable focal point at small size. Medieval technology and daylight only. No human characters, faces, hands, silhouettes, crowds, modern devices, legible lettering, watermarks, frames, logos other than the referenced guild mark where described, CGI or photoreal textures. Fill the frame with the natural environment. Scene: Interior of the secure postal transit warehouse in medieval Gwynthor. High wooden roof and broad stone walls, orderly numbered-by-symbol bays with canvas mail sacks on low shelves and restrained crates of ledger supplies. A locked iron-banded cupboard for undeliverable mail visible along a side wall, big cart entrance in the distance. No alphabetic labels. Directional afternoon light falling across an uncluttered central aisle, tobacco oak, cream linen and restrained green route tags."
+    },
+    {
+      "key": "postzentrale-szene",
+      "version": 1,
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/postzentrale-szene-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/postzentrale-szene-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: illustration-story. One single 2:3 PORTRAIT aspect medieval fantasy environment illustration for an Aleria Almanac page. Reference image 1 Kyrwyn v3 defines depiction STYLE ONLY; transfer its hand-drawn fine modulated dark brown anime line art, matte harmonious palette, controlled soft cel shading and simple material shapes to the room or architecture, in the Aleria anime-scene-portrait style with Tales of Xillia/Frieren as base. Do not copy the portrait, person, outfit or setting from the reference. Keep real spatial depth but use a strong readable focal point at small size. Medieval technology and daylight only. No human characters, faces, hands, silhouettes, crowds, modern devices, legible lettering, watermarks, frames, logos other than the referenced guild mark where described, CGI or photoreal textures. Fill the frame with the natural environment. Scene: Interactive scene illustration, close eye-level view from the public side of one counter at the Gwynthor Federkiel central post office. Two folded letters and a single copper coin wait on a polished oak counter, a brass stamp, shallow tray and one visibly empty pigeonhole stand behind, deep views into the sorting grid as background. Cool daylight from above, highlight the unmarked letter awaiting dispatch, actual inviting playable eye-level composition."
+    },
+    {
+      "key": "schreibstube-szene",
+      "version": 1,
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/schreibstube-szene-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/schreibstube-szene-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: illustration-story. One single 2:3 PORTRAIT aspect medieval fantasy environment illustration for an Aleria Almanac page. Reference image 1 Kyrwyn v3 defines depiction STYLE ONLY; transfer its hand-drawn fine modulated dark brown anime line art, matte harmonious palette, controlled soft cel shading and simple material shapes to the room or architecture, in the Aleria anime-scene-portrait style with Tales of Xillia/Frieren as base. Do not copy the portrait, person, outfit or setting from the reference. Keep real spatial depth but use a strong readable focal point at small size. Medieval technology and daylight only. No human characters, faces, hands, silhouettes, crowds, modern devices, legible lettering, watermarks, frames, logos other than the referenced guild mark where described, CGI or photoreal textures. Fill the frame with the natural environment. Scene: Interactive scene illustration, viewpoint seated opposite an empty writing chair in a private alcove of a medieval Gwynthor postal writing room. On a small oak table one unfolded cream letter and one clean blank sheet, an inkpot with long ivory quill, a simple cap on the sand shaker, lit from the side by a high leaded window. A dark green modest folding screen shelters table and chair. Warm discreet silence and a clear foreground focal plane, no illuminated text."
+    },
+    {
+      "key": "druckerei-szene",
+      "version": 1,
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/druckerei-szene-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/druckerei-szene-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: illustration-story. One single 2:3 PORTRAIT aspect medieval fantasy environment illustration for an Aleria Almanac page. Reference image 1 Kyrwyn v3 defines depiction STYLE ONLY; transfer its hand-drawn fine modulated dark brown anime line art, matte harmonious palette, controlled soft cel shading and simple material shapes to the room or architecture, in the Aleria anime-scene-portrait style with Tales of Xillia/Frieren as base. Do not copy the portrait, person, outfit or setting from the reference. Keep real spatial depth but use a strong readable focal point at small size. Medieval technology and daylight only. No human characters, faces, hands, silhouettes, crowds, modern devices, legible lettering, watermarks, frames, logos other than the referenced guild mark where described, CGI or photoreal textures. Fill the frame with the natural environment. Scene: Interactive scene illustration, proofing corner of a medieval Gwynthor printing workshop. Fresh route notice proofs with only tiny abstract non-readable linework lie on a slanting wooden proofing table, removable little letterpress type arranged in its composing stick, one rule and printer's ink balls, tall timber screw press soft but recognizable in rear. A clear unoccupied place at the foreground counter, contrast between warm pale fresh paper and muted dark oak; workroom depth with side window."
+    },
+    {
+      "key": "kurierstation-szene",
+      "version": 1,
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/kurierstation-szene-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/kurierstation-szene-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: illustration-story. One single 2:3 PORTRAIT aspect medieval fantasy environment illustration for an Aleria Almanac page. Reference image 1 Kyrwyn v3 defines depiction STYLE ONLY; transfer its hand-drawn fine modulated dark brown anime line art, matte harmonious palette, controlled soft cel shading and simple material shapes to the room or architecture, in the Aleria anime-scene-portrait style with Tales of Xillia/Frieren as base. Do not copy the portrait, person, outfit or setting from the reference. Keep real spatial depth but use a strong readable focal point at small size. Medieval technology and daylight only. No human characters, faces, hands, silhouettes, crowds, modern devices, legible lettering, watermarks, frames, logos other than the referenced guild mark where described, CGI or photoreal textures. Fill the frame with the natural environment. Scene: Interactive scene illustration, looking from the tack-room doorway toward the ready horse at medieval Gwynthor's postal relay at first light. A healthy grey horse with simple saddle waits by an open post gate, securely fastened green canvas dispatch bag with a small ochre tag beside a worn mounting block in foreground, muddy cobbles glint after rain, a stretch of road recedes beyond the gate, realistic horse proportions in fine hand-drawn anime. No rider or people."
+    },
+    {
+      "key": "lager-szene",
+      "version": 1,
+      "kind": "scene",
+      "preset": "anime-scene-portrait",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/lager-szene-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/lager-szene-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/docs/art/portrait-experiments/2026-11-09/kyrwyn-experimental-v3.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: illustration-story. One single 2:3 PORTRAIT aspect medieval fantasy environment illustration for an Aleria Almanac page. Reference image 1 Kyrwyn v3 defines depiction STYLE ONLY; transfer its hand-drawn fine modulated dark brown anime line art, matte harmonious palette, controlled soft cel shading and simple material shapes to the room or architecture, in the Aleria anime-scene-portrait style with Tales of Xillia/Frieren as base. Do not copy the portrait, person, outfit or setting from the reference. Keep real spatial depth but use a strong readable focal point at small size. Medieval technology and daylight only. No human characters, faces, hands, silhouettes, crowds, modern devices, legible lettering, watermarks, frames, logos other than the referenced guild mark where described, CGI or photoreal textures. Fill the frame with the natural environment. Scene: Interactive scene illustration, at the despatch table inside a medieval postal warehouse in Gwynthor. Close front three-quarter view of a single canvas postal sack on a low oak inspection table with simple thin cord, attached green cloth tag and small broken wax seal, a second closed sack at the open cart door several metres away. Sturdy sorting bays and a glimpse of the courtyard behind, rising light, unmistakably an unoccupied place to set a sack down and check its seal."
+    },
+    {
+      "key": "briefversand",
+      "version": 1,
+      "kind": "service",
+      "preset": "fantasy-inventory-item",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/briefversand-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/services/briefversand-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/assets/loer-hofjuwelier/services/gravur.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Create a single square isolated medieval Aleria guild service icon, fantasy RPG inventory illustration, crisp confident dark outlines and soft matte illustrated shading, as in the attached style-reference image for its illustration technique only. Practical matte oak, parchment, muted greens, ochre, brass and warm highlights as appropriate. Strong unambiguous silhouette at 48–64 px, preserve the whole object with ~10% margin on all sides. True transparent PNG alpha anywhere outside the object and in open gaps. No floor, shadows beyond the object, frame, decorative lettering, words, numerals, hands, persons, watermark, checkered or colored backdrop. Motif: One folded medieval parchment letter, face up at a gentle three-quarter angle, closed with one prominent deep green round wax seal with a simple quill impression; one small warm copper coin slipped under the front corner. The letter is the unmistakable main shape."
+    },
+    {
+      "key": "selbst-schreiben",
+      "version": 1,
+      "kind": "service",
+      "preset": "fantasy-inventory-item",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/selbst-schreiben-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/services/selbst-schreiben-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/assets/loer-hofjuwelier/services/gravur.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Create a single square isolated medieval Aleria guild service icon, fantasy RPG inventory illustration, crisp confident dark outlines and soft matte illustrated shading, as in the attached style-reference image for its illustration technique only. Practical matte oak, parchment, muted greens, ochre, brass and warm highlights as appropriate. Strong unambiguous silhouette at 48–64 px, preserve the whole object with ~10% margin on all sides. True transparent PNG alpha anywhere outside the object and in open gaps. No floor, shadows beyond the object, frame, decorative lettering, words, numerals, hands, persons, watermark, checkered or colored backdrop. Motif: A long cream feather quill resting diagonally over one distinctly blank rectangular sheet of parchment with gently rolled corner, squat dark green glass inkwell beside it. A few clear large shapes. Calm open writing tools only."
+    },
+    {
+      "key": "diktieren",
+      "version": 1,
+      "kind": "service",
+      "preset": "fantasy-inventory-item",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/diktieren-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/services/diktieren-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/assets/loer-hofjuwelier/services/gravur.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Create a single square isolated medieval Aleria guild service icon, fantasy RPG inventory illustration, crisp confident dark outlines and soft matte illustrated shading, as in the attached style-reference image for its illustration technique only. Practical matte oak, parchment, muted greens, ochre, brass and warm highlights as appropriate. Strong unambiguous silhouette at 48–64 px, preserve the whole object with ~10% margin on all sides. True transparent PNG alpha anywhere outside the object and in open gaps. No floor, shadows beyond the object, frame, decorative lettering, words, numerals, hands, persons, watermark, checkered or colored backdrop. Motif: A small sturdy medieval wooden writing tablet, half-filled with three short stylized strokes that are only decorative ink lines, with one golden feather quill upright in a dark inkpot over its right shoulder and one softly curled additional blank note tucked beneath. Visually communicates a scribe taking down spoken words."
+    },
+    {
+      "key": "vorlesen",
+      "version": 1,
+      "kind": "service",
+      "preset": "fantasy-inventory-item",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/vorlesen-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/services/vorlesen-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/assets/loer-hofjuwelier/services/gravur.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Create a single square isolated medieval Aleria guild service icon, fantasy RPG inventory illustration, crisp confident dark outlines and soft matte illustrated shading, as in the attached style-reference image for its illustration technique only. Practical matte oak, parchment, muted greens, ochre, brass and warm highlights as appropriate. Strong unambiguous silhouette at 48–64 px, preserve the whole object with ~10% margin on all sides. True transparent PNG alpha anywhere outside the object and in open gaps. No floor, shadows beyond the object, frame, decorative lettering, words, numerals, hands, persons, watermark, checkered or colored backdrop. Motif: One open unfolded medieval letter shaped like two wide parchment folds, two or three thick abstract ink strokes per fold, backed by a dark green ribbon for a clear silhouette. Its open unfolded posture is paramount and distinguishes it from a sealed letter. One tiny simple brass bell beside the letter is a secondary hint of sound."
+    },
+    {
+      "key": "abholung",
+      "version": 1,
+      "kind": "service",
+      "preset": "fantasy-inventory-item",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/abholung-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/services/abholung-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/assets/loer-hofjuwelier/services/gravur.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Create a single square isolated medieval Aleria guild service icon, fantasy RPG inventory illustration, crisp confident dark outlines and soft matte illustrated shading, as in the attached style-reference image for its illustration technique only. Practical matte oak, parchment, muted greens, ochre, brass and warm highlights as appropriate. Strong unambiguous silhouette at 48–64 px, preserve the whole object with ~10% margin on all sides. True transparent PNG alpha anywhere outside the object and in open gaps. No floor, shadows beyond the object, frame, decorative lettering, words, numerals, hands, persons, watermark, checkered or colored backdrop. Motif: A small dark oak postal pigeonhole cubby in near-frontal three-quarter view, with multiple compartments and a single prominent sealed cream letter sliding halfway out of the larger front slot, distinct silhouette, iron nails and understated green accent."
+    },
+    {
+      "key": "fernpost",
+      "version": 1,
+      "kind": "service",
+      "preset": "fantasy-inventory-item",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/fernpost-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/services/fernpost-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/assets/loer-hofjuwelier/services/gravur.png"
+      ],
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Create a single square isolated medieval Aleria guild service icon, fantasy RPG inventory illustration, crisp confident dark outlines and soft matte illustrated shading, as in the attached style-reference image for its illustration technique only. Practical matte oak, parchment, muted greens, ochre, brass and warm highlights as appropriate. Strong unambiguous silhouette at 48–64 px, preserve the whole object with ~10% margin on all sides. True transparent PNG alpha anywhere outside the object and in open gaps. No floor, shadows beyond the object, frame, decorative lettering, words, numerals, hands, persons, watermark, checkered or colored backdrop. Motif: A recognizable worn walnut brown courier dispatch satchel with strap gathered close, one green flap and a small gold-and-ivory quill badge, rolled parchment travel map tucked under the flap. One coherent compact dominant silhouette. Map has simple abstract routes with no text."
+    },
+    {
+      "key": "silhouette-leitung",
+      "version": 1,
+      "kind": "silhouette",
+      "preset": "hierarchie-rollensilhouette",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/silhouette-leitung-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/assets/schwarzfische/schreiber-v1.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. ONE portrait 2:3 ANONYMOUS role silhouette placeholder for fictional Federkiel guild hierarchy in Aleria. The attached Schwarzfische scribe image defines only the placeholder convention and fine matte hand-drawn anime linework. Replace its clothing, heraldry and background with the description, and keep the person completely anonymous: head, face, hair and neck are a single clean fully featureless very dark opaque silhouette, visibly devoid of eyes, mouth, nose lines or identifiable facial features; hands, if visible, simplified shadow. Neutral bust cropped to waist, large head and shoulders, centrally aligned, use clean simple shape readable at 70 pixels, quiet natural medieval background. No realistic actor, no existing guild insignia from the reference, no letters or decorative border. Role clothing and prop: Simple dark green gilden cloak over practical dark wool, small ochre trim at neck, broad folded route parchment and a book in the lower frame. Shelves and gray stone in soft muted gold daylight."
+    },
+    {
+      "key": "silhouette-schreibdienst",
+      "version": 1,
+      "kind": "silhouette",
+      "preset": "hierarchie-rollensilhouette",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/silhouette-schreibdienst-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/roles/silhouette-schreibdienst-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/assets/schwarzfische/schreiber-v1.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. ONE portrait 2:3 ANONYMOUS role silhouette placeholder for fictional Federkiel guild hierarchy in Aleria. The attached Schwarzfische scribe image defines only the placeholder convention and fine matte hand-drawn anime linework. Replace its clothing, heraldry and background with the description, and keep the person completely anonymous: head, face, hair and neck are a single clean fully featureless very dark opaque silhouette, visibly devoid of eyes, mouth, nose lines or identifiable facial features; hands, if visible, simplified shadow. Neutral bust cropped to waist, large head and shoulders, centrally aligned, use clean simple shape readable at 70 pixels, quiet natural medieval background. No realistic actor, no existing guild insignia from the reference, no letters or decorative border. Role clothing and prop: Simple dark green postal counter tunic with ochre edge and pale linen sleeves, large ivory quill held at the waist and a closed book. Muted parchment-colored shelf recess, no banner or insignia."
+    },
+    {
+      "key": "silhouette-postkurier",
+      "version": 1,
+      "kind": "silhouette",
+      "preset": "hierarchie-rollensilhouette",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/silhouette-postkurier-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/roles/silhouette-postkurier-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/assets/schwarzfische/schreiber-v1.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. ONE portrait 2:3 ANONYMOUS role silhouette placeholder for fictional Federkiel guild hierarchy in Aleria. The attached Schwarzfische scribe image defines only the placeholder convention and fine matte hand-drawn anime linework. Replace its clothing, heraldry and background with the description, and keep the person completely anonymous: head, face, hair and neck are a single clean fully featureless very dark opaque silhouette, visibly devoid of eyes, mouth, nose lines or identifiable facial features; hands, if visible, simplified shadow. Neutral bust cropped to waist, large head and shoulders, centrally aligned, use clean simple shape readable at 70 pixels, quiet natural medieval background. No realistic actor, no existing guild insignia from the reference, no letters or decorative border. Role clothing and prop: Practical short muted green travel mantle with narrow ochre edge, anonymous opaque dark shadow head and neck, big asymmetrical brown leather dispatch satchel crossing the chest, flap marked only with a tiny ivory quill. Plain softly lit grey masonry arch in rear. The courier role must read instantly from mantle and satchel in a small portrait. No horse, sword or armor."
+    },
+    {
+      "key": "silhouette-werkdienst",
+      "version": 1,
+      "kind": "silhouette",
+      "preset": "hierarchie-rollensilhouette",
+      "generator": "built-in image_gen",
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/silhouette-werkdienst-v1.png",
+      "active": "AleriaAlmanach/assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp",
+      "referenceImages": [
+        "AleriaAlmanach/assets/schwarzfische/schreiber-v1.png"
+      ],
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. ONE portrait 2:3 ANONYMOUS role silhouette placeholder for fictional Federkiel guild hierarchy in Aleria. The attached Schwarzfische scribe image defines only the placeholder convention and fine matte hand-drawn anime linework. Replace its clothing, heraldry and background with the description, and keep the person completely anonymous: head, face, hair and neck are a single clean fully featureless very dark opaque silhouette, visibly devoid of eyes, mouth, nose lines or identifiable facial features; hands, if visible, simplified shadow. Neutral bust cropped to waist, large head and shoulders, centrally aligned, use clean simple shape readable at 70 pixels, quiet natural medieval background. No realistic actor, no existing guild insignia from the reference, no letters or decorative border. Role clothing and prop: Dark medieval workshop apron with olive green tie over rough neutral linen, with one small nondescript tied bundle of work material low in the image. Plain warm shadowed timber wall behind. General manual guild worker placeholder, suited to print, stable and warehouse roles; no recognizable badge or military signals."
+    }
+  ]
+}

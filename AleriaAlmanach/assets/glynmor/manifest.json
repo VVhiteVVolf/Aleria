@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "images": [
+    {
+      "key": "gasse",
+      "kind": "scene",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/scenes/gasse-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/scenes/gasse-v1.png",
+      "width": 864,
+      "height": 1296,
+      "transparent": false,
+      "sha256": "03f467a3455151b55d262d843852cc669ac9f12db5efa0c859b46edf97816a19",
+      "originalSha256": "ace75e35f8fb0c37a2c633d257edd55e328eacf83cab8719ac956bdf6931866f",
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "key": "laden",
+      "kind": "scene",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/scenes/laden-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/scenes/laden-v1.png",
+      "width": 864,
+      "height": 1296,
+      "transparent": false,
+      "sha256": "b1fcb4355e2a26580169694f70c28451cfec7cf39f4fc6cb6edeb45e82b0475d",
+      "originalSha256": "947efc98821dee2ba4a440dcf4079ba7524ea59fc53de8a514a2e4fe6d05e171",
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "key": "ziehwerkstatt",
+      "kind": "scene",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/scenes/ziehwerkstatt-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/scenes/ziehwerkstatt-v1.png",
+      "width": 864,
+      "height": 1296,
+      "transparent": false,
+      "sha256": "a5f819fb98bb6397e9410dd02a7931042d0d8e425642bc2b17a04b7caeb74b07",
+      "originalSha256": "d43fd5bffa3af0b6d7bde2ebce81fe019bd268fc95ae066502e22c28636735b0",
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "key": "zierkammer",
+      "kind": "scene",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/scenes/zierkammer-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/scenes/zierkammer-v1.png",
+      "width": 864,
+      "height": 1296,
+      "transparent": false,
+      "sha256": "0706f9d6abdb6028bc8bcd72a3b205c09519529f741e057422b3794189e706db",
+      "originalSha256": "f1fceeb5a4c006f0838e717d5c8631aec580a52b5516d4b04d69ff47acd7dd60",
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "key": "lager",
+      "kind": "scene",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/scenes/lager-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/scenes/lager-v1.png",
+      "width": 864,
+      "height": 1296,
+      "transparent": false,
+      "sha256": "98b1196f81c568a7679f22e62750b44a232bf89b636b64db31239169e5d3bdf8",
+      "originalSha256": "0f7dbe5c34b72144e328c039d91703456c6afc6026cf62060e6045f93314a5f7",
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "key": "ladenschild",
+      "kind": "sign",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/ladenschild-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/ladenschild-v1.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "sha256": "a8c437acc9d475f33a45daeae0f88a76bfe061aea1f384136ddd462be69e0dd0",
+      "originalSha256": "324f7d6adb62fea4f3db96b94c3bfcba14ab3bbffe9d6d0a7ba9255f54f7f824",
+      "originalDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "key": "alltagskerzen",
+      "kind": "service",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/services/alltagskerzen-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/services/alltagskerzen-v1.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "sha256": "39d565ba7c1505c694bc0be9a3e30dddec081e2daeb844e3c6ac373db6f6f3f3",
+      "originalSha256": "92fa349be7fc201f2beca017f87e5c90ab4444549fa04e59d86af590e624781f",
+      "originalDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "key": "festkerzen",
+      "kind": "service",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/services/festkerzen-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/services/festkerzen-v1.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "sha256": "d054783b8e106d6d8bdd8bd71e26b64d73b4c7126fa88adcb55fed8799210ead",
+      "originalSha256": "c4583b0058f5f70d6d6446eecc97b38bfbcc54cf426763e4ad082af645b8e575",
+      "originalDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "key": "arrangements",
+      "kind": "service",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/services/arrangements-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/services/arrangements-v1.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "sha256": "cdeab7e0c0cbb00af8619e5262fe34e581aa12287498ff189e8480c97a1c6587",
+      "originalSha256": "a6e54bd097edd9713c741eda24b88220b6aaa23aa0f00001975603b3495ebf42",
+      "originalDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "key": "wappenkerzen",
+      "kind": "service",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/services/wappenkerzen-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/services/wappenkerzen-v1.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "sha256": "98ac3f309f66300746119abae5c26581fe30c01274ffea4864cc34c481da66ec",
+      "originalSha256": "49cf5cb38616fc141277aa9a5ad86955e1e49ffd070115536eef606a488c92ce",
+      "originalDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "key": "lieferauftraege",
+      "kind": "service",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/services/lieferauftraege-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/services/lieferauftraege-v1.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "sha256": "806ac96317e262bc92ad78eca733ae262ad97c151f4201621533f32376e1303b",
+      "originalSha256": "a1e218023389f2a7b0c5ecfc604bcb94d17a36671f06323578885f97122e9f68",
+      "originalDimensions": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "key": "ziehen",
+      "kind": "silhouette",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/roles/ziehen-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/roles/ziehen-v1.png",
+      "width": 360,
+      "height": 540,
+      "transparent": false,
+      "sha256": "5b461c5c9cc56d862451e74a843e911dfb8e7d8da500d6bf23daedfd5f58fbbc",
+      "originalSha256": "e4d94d259fcb026237408ff762f9dc840c0410b66c9bf6c574624b6551e565d8",
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "key": "dochte",
+      "kind": "silhouette",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/roles/dochte-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/roles/dochte-v1.png",
+      "width": 360,
+      "height": 540,
+      "transparent": false,
+      "sha256": "29e32c541186e29c0a3170525921227089f853a4acf950d921c75e97c510c032",
+      "originalSha256": "e9c0e64567e7b73e06ea7b58de5d414d0001b1cebe734ca96946ce2f86ef7009",
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "key": "theke",
+      "kind": "silhouette",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/roles/theke-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/roles/theke-v1.png",
+      "width": 360,
+      "height": 540,
+      "transparent": false,
+      "sha256": "1132f72257d6f5b5be2dab1ca493208085beaf964da9bef1c3ce15a4dff98472",
+      "originalSha256": "ec065e9a5ecc1b81f627a091a4abc8abb70f1821c102c7f4db2a80748a717bc4",
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "key": "zierarbeit",
+      "kind": "silhouette",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/roles/zierarbeit-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/roles/zierarbeit-v1.png",
+      "width": 360,
+      "height": 540,
+      "transparent": false,
+      "sha256": "2fb540c56d39f6c4f5e99c2f49d52c131eb1a6b547e405a53a7261db2ae39c29",
+      "originalSha256": "e41cbbccdb20c91b261c8f6364409b1ac098ba3b796bc1e44b5f409a729a0762",
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "key": "lager",
+      "kind": "silhouette",
+      "version": 1,
+      "path": "AleriaAlmanach/assets/glynmor/roles/lager-v1.webp",
+      "original": "AleriaAlmanach/docs/art/glynmor-20261122/originals/roles/lager-v1.png",
+      "width": 360,
+      "height": 540,
+      "transparent": false,
+      "sha256": "6bd2524c82f69df5b47845b4a20bdf7f10b3c968f238b427a82846e464093fa2",
+      "originalSha256": "14e45da21f96018f17c09407a6eb1d28fbadb743fe41846cbf659f1944915b6b",
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    }
+  ]
+}

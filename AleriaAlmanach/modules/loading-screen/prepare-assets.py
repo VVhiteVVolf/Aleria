@@ -7,6 +7,10 @@ No polygon masks are cut through characters or equipment.
 import argparse
 import hashlib
 import json
+import math
+import random
+import struct
+import wave
 from collections import deque
 from pathlib import Path
 from PIL import Image, ImageChops, ImageFilter
@@ -425,6 +429,134 @@ def prepare_vignettes():
         json.dumps(dict(version=1, scenes=scenes), indent=2) + '\n', encoding='utf-8', newline='\n')
 
 
+def prepare_fitting_room_rattle():
+    rate = 22050
+    duration = .65
+    samples = [0.0] * round(duration * rate)
+    noise = random.Random(22)
+    # Three resonant wood impacts follow the stronger movements in the CSS loop.
+    for time, gain in ((.045, .56), (.217, .67), (.55, .39)):
+        start = round(time * rate)
+        for index in range(start, min(len(samples), start + round(.10 * rate))):
+            t = (index - start) / rate
+            body = (.62 * math.sin(math.tau * 173 * t) + .28 * math.sin(math.tau * 379 * t)) * math.exp(-57 * t)
+            edge = .54 * noise.uniform(-1, 1) * math.exp(-145 * t)
+            samples[index] += gain * min(1, t / .0014) * (body + edge)
+    path = DESTINATION / 'refri-anprobe-klappern-v2.wav'
+    with wave.open(str(path), 'wb') as sound:
+        sound.setparams((1, 2, rate, 0, 'NONE', 'not compressed'))
+        sound.writeframes(struct.pack(f'<{len(samples)}h', *(round(value * 32767) for value in samples)))
+    return dict(file=path.relative_to(ROOT).as_posix(), duration=duration, bytes=path.stat().st_size,
+                sha256=hashlib.sha256(path.read_bytes()).hexdigest())
+
+
+def prepare_fitting_room():
+    DESTINATION.mkdir(parents=True, exist_ok=True)
+    closed = SOURCE / 'refri-anprobe-geschlossen-v2.png'
+    # Pixel positions in the fixed 1672 × 941 frame, also used by the stage renderer.
+    door_box = (783, 121, 1128, 755)
+    opening_box = (761, 69, 1144, 851)
+    with Image.open(closed) as painting:
+        frame = painting.size
+        background = encode_scene_background(closed.stem, painting.convert('RGB'), (1440, 768, 1280))
+        door = DESTINATION / 'refri-anprobe-tuerblatt-v2.webp'
+        painting.crop(door_box).convert('RGB').save(door, quality=91, method=6)
+
+    peeks = {}
+    for pose, name in [('protest', 'refri-anprobe-tuer-offen-v2'), ('reassure', 'refri-anprobe-beruhigen-v2')]:
+        original = SOURCE / f'{name}.png'
+        destination = DESTINATION / f'{name}.webp'
+        with Image.open(original) as painting:
+            if painting.height != frame[1] or abs(painting.width - frame[0]) > 1:
+                raise ValueError(f'{original.name} does not match the fixed frame')
+            if painting.size != frame:
+                painting = painting.resize(frame, Image.Resampling.LANCZOS)
+            part = painting.crop(opening_box).convert('RGBA')
+            alpha = Image.new('L', part.size)
+            alpha.paste(255, (8, 8, part.width - 8, part.height - 8))
+            part.putalpha(alpha.filter(ImageFilter.GaussianBlur(3)))
+            part.save(destination, quality=89, method=6)
+        peeks[pose] = dict(source=asset_description(original), asset=asset_description(destination), bounds=opening_box)
+
+    manifest = dict(version=2, scene='refri-anprobe', frame=frame,
+                    background=dict(source=asset_description(closed), assets=background),
+                    door=dict(asset=asset_description(door), bounds=door_box), peeks=peeks,
+                    sound=prepare_fitting_room_rattle())
+    (DESTINATION / 'refri-anprobe-v2-manifest.json').write_text(
+        json.dumps(manifest, indent=2) + '\n', encoding='utf-8', newline='\n')
+
+
+def prepare_archery_atlas(name, poses):
+    original = SOURCE / f'{name}.png'
+    destination = DESTINATION / f'{name}.webp'
+    columns, rows, cell = 3, 2, 240
+    atlas = Image.new('RGBA', (columns * cell, rows * cell))
+    with Image.open(original) as drawing:
+        if drawing.mode != 'RGBA' or drawing.size != (1536, 1024):
+            raise ValueError(f'Expected six equal RGBA cells: {original.name}')
+        low, high = drawing.getchannel('A').getextrema()
+        if low != 0 or high < 250:
+            raise ValueError(f'Pose source must have genuine alpha: {original.name}')
+        for index, _pose in enumerate(poses):
+            column, row = index % columns, index // columns
+            left, top = column * 512, row * 512
+            # Preserve the authored pivots and full tile across poses.
+            frame = extract(drawing, (left, top, left + 512, top + 512), crop=False)
+            atlas.alpha_composite(frame.resize((cell, cell), Image.Resampling.LANCZOS), (column * cell, row * cell))
+    atlas.save(destination, quality=88, method=6, exact=True)
+    return dict(source=asset_description(original), asset=asset_description(destination), cell=cell,
+                columns=columns, rows=rows, poses=poses)
+
+
+def prepare_archery_arrow(name, maximum):
+    original = SOURCE / f'{name}.png'
+    destination = DESTINATION / f'{name}.webp'
+    with Image.open(original) as image:
+        if image.mode != 'RGBA' or image.getchannel('A').getextrema()[0] != 0:
+            raise ValueError(f'Arrow source must have genuine alpha: {original.name}')
+        arrow = extract(image, (0, 0, *image.size))
+        arrow.thumbnail((maximum, maximum), Image.Resampling.LANCZOS)
+        arrow.save(destination, quality=91, method=6, exact=True)
+    return dict(source=asset_description(original), asset=asset_description(destination))
+
+
+def prepare_archery_reaction(name):
+    original = SOURCE / f'{name}.png'
+    destination = DESTINATION / f'{name}.webp'
+    with Image.open(original) as image:
+        if image.mode != 'RGBA' or image.getchannel('A').getextrema()[0] != 0:
+            raise ValueError(f'Reaction source must have genuine alpha: {original.name}')
+        bounds = image.getchannel('A').point(lambda value: 255 if value > 16 else 0).getbbox()
+        reaction = image.crop(bounds)
+        reaction.thumbnail((430, 430), Image.Resampling.LANCZOS)
+        reaction.save(destination, quality=88, method=6, exact=True)
+    return dict(source=asset_description(original), asset=asset_description(destination))
+
+
+def prepare_blanket_archery():
+    DESTINATION.mkdir(parents=True, exist_ok=True)
+    teaser = SOURCE / 'carys-schiessuebung-v2.png'
+    room = SOURCE / 'carys-schiesshalle-v2.png'
+    stage = DESTINATION / 'carys-schiesshalle-v2.webp'
+    with Image.open(teaser) as image:
+        preview = encode_scene_background(teaser.stem, image.convert('RGB'), (1440, 768, 1280))
+    with Image.open(room) as image:
+        size = (1280, round(image.height * 1280 / image.width))
+        image.convert('RGB').resize(size, Image.Resampling.LANCZOS).save(stage, quality=87, method=6)
+    carys = prepare_archery_atlas('carys-bogen-posen-v1', ['ready', 'raise', 'draw', 'full', 'release', 'win'])
+    einion = prepare_archery_atlas('einion-block-posen-v1', ['ready', 'side-a', 'side-b', 'hop', 'surprise', 'relief'])
+    arrows = dict(side=prepare_archery_arrow('carys-pfeil-seite-v1', 440),
+                  rear=prepare_archery_arrow('carys-pfeil-einschlag-v1', 112))
+    reactions = dict(crying=prepare_archery_reaction('einion-weinen-v1'),
+                     wynonna=prepare_archery_reaction('wynonna-schimpfen-v1'))
+    manifest = dict(version=2, scene='carys-schiessuebung',
+                    teaser=dict(source=asset_description(teaser), assets=preview),
+                    room=dict(source=asset_description(room), asset=asset_description(stage)),
+                    carys=carys, einion=einion, arrows=arrows, reactions=reactions)
+    (DESTINATION / 'carys-schiessuebung-v2-manifest.json').write_text(
+        json.dumps(manifest, indent=2) + '\n', encoding='utf-8', newline='\n')
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     versions = parser.add_mutually_exclusive_group()
@@ -433,8 +565,14 @@ if __name__ == '__main__':
     versions.add_argument('--oweta-courtyard', action='store_true')
     versions.add_argument('--rose-chase', action='store_true')
     versions.add_argument('--vignettes', action='store_true')
+    versions.add_argument('--fitting-room', action='store_true')
+    versions.add_argument('--blanket-archery', action='store_true')
     args = parser.parse_args()
-    if args.vignettes:
+    if args.blanket_archery:
+        prepare_blanket_archery()
+    elif args.fitting_room:
+        prepare_fitting_room()
+    elif args.vignettes:
         prepare_vignettes()
     elif args.rose_chase:
         prepare_rose_chase()

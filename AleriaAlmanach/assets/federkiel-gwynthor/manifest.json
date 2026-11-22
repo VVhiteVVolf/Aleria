@@ -1,0 +1,405 @@
+{
+  "schemaVersion": 1,
+  "images": [
+    {
+      "key": "gildenzeichen",
+      "version": 2,
+      "kind": "marks",
+      "path": "Fraktionen/assets/emblems/gilden/federkiel-v2.webp",
+      "width": 400,
+      "height": 400,
+      "sha256": "e40e2c469d0fa99456205f6f32b47e706c52c6d4ef758c9d2bb9f4daa2cfe336",
+      "transparent": true,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/gildenzeichen-v2.png",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "originalSha256": "34197f3045d44a612ba34359f60c6f5783cee5433a2dd472964555b922d1b0a2"
+    },
+    {
+      "key": "aushangeschild",
+      "version": 1,
+      "kind": "marks",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/aushangeschild-v1.webp",
+      "width": 512,
+      "height": 512,
+      "sha256": "979c5ebadaf2b7e8ebf8a5c6da02a30b4a30ddbbc567d7ed6b08cfee46d484e1",
+      "transparent": true,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/aushangeschild-v1.png",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "originalSha256": "b8e7c1e31066eeb65c9e6c83072e3ae882600f369a2f913f3f2391c91fbdf212"
+    },
+    {
+      "key": "gildenhaus",
+      "version": 1,
+      "kind": "scene",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/gildenhaus-v1.webp",
+      "width": 864,
+      "height": 1296,
+      "sha256": "933ebd7e14c581800182a23bf9cd4b837f6832c14536596ba9fffc86b100f52b",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/gildenhaus-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "8ad39d4bc10d2119afa3900ae8a29dee3d87acb5a0313019af00289e6d40b0af"
+    },
+    {
+      "key": "dienstleistungen",
+      "version": 1,
+      "kind": "scene",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/dienstleistungen-v1.webp",
+      "width": 864,
+      "height": 1296,
+      "sha256": "1b9920f93552c60f641ccc655307833caa1514a70695247fdee4dbfd3c39be20",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/dienstleistungen-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "a40c3852235b941f98c8677760e09c37339d4e6ece97dbaf8e23301c67b19972"
+    },
+    {
+      "key": "gildenleitung",
+      "version": 1,
+      "kind": "scene",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/gildenleitung-v1.webp",
+      "width": 864,
+      "height": 1296,
+      "sha256": "2daa99a6d43893882f3c7d382b520a6f202c802dc5231ad6a207ec1c51e1a936",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/gildenleitung-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "c372ca115a227b80c73f353e41e3ad25f033f21b262e770e464ee44eb2b8639e"
+    },
+    {
+      "key": "postzentrale",
+      "version": 1,
+      "kind": "scene",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/postzentrale-v1.webp",
+      "width": 864,
+      "height": 1296,
+      "sha256": "a5d1c496b3f9d33c4c5e85253f278a0c28b6193a13e05da8560f6f3347d43636",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/postzentrale-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "b06838af134a8d7af5e11e0f55d2183cb47eb37aee46ae9d6803f0eaff3b3cf3"
+    },
+    {
+      "key": "schreibstube",
+      "version": 1,
+      "kind": "scene",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/schreibstube-v1.webp",
+      "width": 864,
+      "height": 1296,
+      "sha256": "15be9b65fd20e32cc1f02c290e395f0a1c01740545c03e1d0e0e04f7c014b8e0",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/schreibstube-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "b77168dacb6303239896568ea0d07ea8faea82a9c971b2c4c34d8ab0939f7a1f"
+    },
+    {
+      "key": "druckerei",
+      "version": 1,
+      "kind": "scene",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/druckerei-v1.webp",
+      "width": 864,
+      "height": 1296,
+      "sha256": "220de96ef3c3507454b1e99e8e7088d1f3a0c2e6e243d48f233d1527ebb82f40",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/druckerei-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "54fbbfb35b27a54c2d1e674447b3dbc1bd2ecd29b796fd883c0d9a49789d938d"
+    },
+    {
+      "key": "kurierstation",
+      "version": 1,
+      "kind": "scene",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/kurierstation-v1.webp",
+      "width": 864,
+      "height": 1296,
+      "sha256": "f2096f05bdcce863a78d3b1de0ed070f86ffbb46ec062032c7a3bfacb57331dc",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/kurierstation-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "60b51487d6fdc84f70e8a14eed9cd4251e5cc1ce6d597e6cdd0fa761c39692f3"
+    },
+    {
+      "key": "lager",
+      "version": 1,
+      "kind": "scene",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/lager-v1.webp",
+      "width": 864,
+      "height": 1296,
+      "sha256": "02465652c839da719c419701da83cbba122bfc9ee8813fa6389a909a267b00f6",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/lager-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "b1cc308070b9a1c6898343314a46be941ce1877d1d359c41aeccb0b68aee302d"
+    },
+    {
+      "key": "postzentrale-szene",
+      "version": 1,
+      "kind": "scene",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/postzentrale-szene-v1.webp",
+      "width": 864,
+      "height": 1296,
+      "sha256": "7dd40781397d274d74ae0267524cd86703118a4e6d267ae0d08f1f847077e3a5",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/postzentrale-szene-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "76941c8350ff506400ea58691a2dea0acf0f3962afb30c69fec67fadae91139f"
+    },
+    {
+      "key": "schreibstube-szene",
+      "version": 1,
+      "kind": "scene",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/schreibstube-szene-v1.webp",
+      "width": 864,
+      "height": 1296,
+      "sha256": "82aca9729d37826cb3429c4c21a0f06b3226c47754c622708c2a4036d5a91172",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/schreibstube-szene-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "e58b76dda37a9c2bf5ae9d3ebf2f082615de6be897b241a5e3987f4e21d3198e"
+    },
+    {
+      "key": "druckerei-szene",
+      "version": 1,
+      "kind": "scene",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/druckerei-szene-v1.webp",
+      "width": 864,
+      "height": 1296,
+      "sha256": "c2f0903ab7dc84a92e146eb2588a1f807962f1a113fed0149b33fce5fc2cb18e",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/druckerei-szene-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "57f9e6d56e4da416bc529a0a512360c0fff1dd0624795215d383d084fc7a7692"
+    },
+    {
+      "key": "kurierstation-szene",
+      "version": 1,
+      "kind": "scene",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/kurierstation-szene-v1.webp",
+      "width": 864,
+      "height": 1296,
+      "sha256": "b9bbc9433fc0bfefcb2103fb4709344342235df06d3fbcd725c8fa3176e2e5f5",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/kurierstation-szene-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "9ff0f94a16b87d6a38ea71d94547f3f7ef32540a826bb723b63c16fe4a51f482"
+    },
+    {
+      "key": "lager-szene",
+      "version": 1,
+      "kind": "scene",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/scenes/lager-szene-v1.webp",
+      "width": 864,
+      "height": 1296,
+      "sha256": "ada272feb4f3d7943b61dfc8fcf6fac258efde68d53e859000bda04acb82154f",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/lager-szene-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "f9c1a37edb4a5347c303c8576efac828dbd02aebce181b8757ecdc3ce26c94b8"
+    },
+    {
+      "key": "briefversand",
+      "version": 1,
+      "kind": "service",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/services/briefversand-v1.webp",
+      "width": 256,
+      "height": 256,
+      "sha256": "01c0d2f5e8caefe3cdb75d55f55be277ce7796d7e4cd0c70badf710175db0b1d",
+      "transparent": true,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/briefversand-v1.png",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "originalSha256": "9a1baf7e6c34c20a1a595b65cf4a0abba48af8a8f316b3d1e06b7a8d6d7cf6b0"
+    },
+    {
+      "key": "selbst-schreiben",
+      "version": 1,
+      "kind": "service",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/services/selbst-schreiben-v1.webp",
+      "width": 256,
+      "height": 256,
+      "sha256": "4fe16a61730b641a8c4d4b2e6c22c0122a298fc03ea39c4954525c7c8a688943",
+      "transparent": true,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/selbst-schreiben-v1.png",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "originalSha256": "6007c9d40b6577d04114a811e392984686f7daf149cac90a90c79df8c0be7e50"
+    },
+    {
+      "key": "diktieren",
+      "version": 1,
+      "kind": "service",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/services/diktieren-v1.webp",
+      "width": 256,
+      "height": 256,
+      "sha256": "cf5bd902153c1e425feb6021714b3be80c4a55d522022ae451cb09e466cb4e27",
+      "transparent": true,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/diktieren-v1.png",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "originalSha256": "e70f548c306eef33e77734090b2a1eaa6cc154700a626d3f70c4b8030d2a0a3a"
+    },
+    {
+      "key": "vorlesen",
+      "version": 1,
+      "kind": "service",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/services/vorlesen-v1.webp",
+      "width": 256,
+      "height": 256,
+      "sha256": "e8bc0167494463b7cc5f799b2e6367648ebf222e5f80d5ac790b6fdab0a58646",
+      "transparent": true,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/vorlesen-v1.png",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "originalSha256": "e1bed8204ebbb1d3c5c923d36c987c3185b2e30ca89c2ccd518721910161ce6e"
+    },
+    {
+      "key": "abholung",
+      "version": 1,
+      "kind": "service",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/services/abholung-v1.webp",
+      "width": 256,
+      "height": 256,
+      "sha256": "dbcc27ad0c080a6ff29aac5200d5b4d9d54b45b1da9f2084ce9bf19125cf8cdd",
+      "transparent": true,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/abholung-v1.png",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "originalSha256": "0fc2900dc52538cf0882cf0387544be8ea609dc7edddc483f3b0a1dac51a4c28"
+    },
+    {
+      "key": "fernpost",
+      "version": 1,
+      "kind": "service",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/services/fernpost-v1.webp",
+      "width": 256,
+      "height": 256,
+      "sha256": "05d32659cc67d5a56635a2aa45dfe701ff244abf305decf26eb579e2c089f925",
+      "transparent": true,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/fernpost-v1.png",
+      "originalDimensions": [
+        1254,
+        1254
+      ],
+      "originalSha256": "633dac68c4280e7f116c1b626e7ec08a44bb7f4e78d199c258e113a2d154afbd"
+    },
+    {
+      "key": "silhouette-leitung",
+      "version": 1,
+      "kind": "silhouette",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp",
+      "width": 360,
+      "height": 540,
+      "sha256": "dbe491feb548be4ec46b1dc0b082fdd628073e0a1ffac83f5c0458215b123666",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/silhouette-leitung-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "b8b15b2d7ce134ad3820491d3764cd68d1afc9badd441555e90bc7d8f4fff009"
+    },
+    {
+      "key": "silhouette-schreibdienst",
+      "version": 1,
+      "kind": "silhouette",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/roles/silhouette-schreibdienst-v1.webp",
+      "width": 360,
+      "height": 540,
+      "sha256": "8599e871b441d96eda81ae50506f6ccbfdcfdd197baa321b496da18a24b4569f",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/silhouette-schreibdienst-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "91556c45537612985cd759d7853a224642c94637259a8156245f7f3c56b85cbd"
+    },
+    {
+      "key": "silhouette-postkurier",
+      "version": 1,
+      "kind": "silhouette",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/roles/silhouette-postkurier-v1.webp",
+      "width": 360,
+      "height": 540,
+      "sha256": "6136520206760b7e8afe02cf41f3d7b3c5e13968ac2dfeb2a0943a82370ddb3c",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/silhouette-postkurier-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "e3d1e06744100741460ff3913e0e7beb0e807a2862c4df6af9411f79de80bef3"
+    },
+    {
+      "key": "silhouette-werkdienst",
+      "version": 1,
+      "kind": "silhouette",
+      "path": "AleriaAlmanach/assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp",
+      "width": 360,
+      "height": 540,
+      "sha256": "731a07988a55b5dfde17d51bb0690ea4bef5a8224e9ad0a0a9356c8fc2fa292c",
+      "transparent": false,
+      "original": "AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/originals/silhouette-werkdienst-v1.png",
+      "originalDimensions": [
+        1024,
+        1536
+      ],
+      "originalSha256": "277b1c1640d6c9d3ebb75012273c4cc14cb45f4afd0a286df03a9016455f96df"
+    }
+  ]
+}

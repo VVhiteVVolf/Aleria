@@ -27,7 +27,7 @@ export function buildZitteraaleHierarchy() {
       { id: 'gruppen', label: 'Gruppen', parentTreeId: 'fuehrung', levels: [{ label: 'Acht Gruppen · zwei Viererreihen', columns: 4,
         nodes: ZITTERAALE_GROUPS.map(group => ({
           id: group.id, title: group.name, subtitle: `⚑ Gruppe ${group.numeral}.`, portrait: group.banner,
-          text: `<p>${group.detailed ? 'Eine der ältesten Unterbanden der Schwarzen Zitteraale, geführt von Medrawd Angau.' : 'Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.'}</p><p><a href="/AleriaAlmanach/AleriaAlmanach.html?entry=${group.id}">Gruppenakte öffnen</a></p>`
+          text: `<p>${group.summary || (group.detailed ? 'Eine der ältesten Unterbanden der Schwarzen Zitteraale, geführt von Medrawd Angau.' : 'Gruppenname, Wirkungsgebiet und persönliche Besetzung sind noch offen.')}</p><p><a href="/AleriaAlmanach/AleriaAlmanach.html?entry=${group.id}">Gruppenakte öffnen</a></p>`
         })) }] },
       { id: 'verbindungen', label: 'Verbindungen', parentTreeId: 'fuehrung', levels: [{ label: 'Kundschaft und Kontakte', nodes: [office(ZITTERAALE_CONTACT,
         'Pflegt Verbindungen zu Kundschaftern, Boten und Abnehmern. Bündelt eingehende Hinweise und bereitet deren Weitergabe an die Führung vor.')] }] }

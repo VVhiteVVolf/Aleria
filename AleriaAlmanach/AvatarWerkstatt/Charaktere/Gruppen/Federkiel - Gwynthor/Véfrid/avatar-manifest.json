@@ -1,0 +1,204 @@
+{
+  "schema": "aleria.avatar-workshop-export",
+  "schemaVersion": 1,
+  "character": "Véfrid",
+  "characterId": "federkiel-gwynthor-vefrid",
+  "slug": "vefrid",
+  "avatarCount": 9,
+  "catalogId": "avatar-prompts-28-sets-20261121-zoomtoleranz",
+  "catalogSourceSha256": "637cb8b998be851d85b7f65fd9b926168969aa32232b89744e3ae93c5ab0055e",
+  "splitter": "Werkzeuge/Avatar Splitterer/AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "outputFolder": "Output/Véfrid",
+  "sets": [
+    {
+      "id": "standard",
+      "catalogNumber": 1,
+      "workshopSetId": "set-01",
+      "name": "Grundemotionen und Mimik",
+      "sourceSheet": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Véfrid/Sheets/vefrid-set-01-v1.png",
+      "sourceSha256": "3f5f87c62b1149f76db1c282a0029ae0c5d3765ece75643c54be9074b5cc6b2c",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "generatorOriginal": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Véfrid/Originale/vefrid-set-01-v1-generator.png",
+      "generatorVersion": 1,
+      "generatorTool": "image_gen.imagegen",
+      "reference": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Véfrid/Referenzen/vefrid-portrait-v1.png",
+      "referenceSha256": "a69f47986cc9f93a03d80bff8665198113b3fb75210c37f310b96647f70b1fb6",
+      "references": [
+        "AleriaAlmanach/docs/art/federkiel-couriers-20261122/originals/vefrid-portrait-v1.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Rianna Wyrm/Output/rianna-2026-11-02-set-03_Bild6.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Rianna Wyrm/Output/rianna-2026-11-02-set-03_Bild1.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Lefraye Gafyr/Output/lefraye-2026-11-02-set-01_Bild1.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Lefraye Gafyr/Output/lefraye-2026-11-02-set-01_Bild5.png"
+      ],
+      "promptFile": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Véfrid/Prompts/vefrid-set-01-v1.txt",
+      "promptSha256": "59a512df9ddaa0fd56d4d2d0b1f8df68f85afeb3ce89fe767ce2214d03344958",
+      "requestFile": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Véfrid/Prompts/vefrid-set-01-auftrag.json",
+      "rows": 3,
+      "columns": 3,
+      "gapX": 0,
+      "gapY": 0,
+      "autocrop": false,
+      "edgeInsetPixels": 2,
+      "sourceCropPixelsVerified": true,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Neutral / Redend",
+          "gesture": "Offene Handflächen, lockere erklärende Gestik, aufmerksamer Blick.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Véfrid/Output/vefrid-set-01-avatar-01.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Véfrid/vefrid-set-01-avatar-01.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-01.png",
+          "sha256": "02c1ea4a8d62e17df49f5d3ee77c9df4ba3d086633a24592b2ca084be0b4d341",
+          "width": 414,
+          "height": 414,
+          "box": [
+            2,
+            2,
+            416,
+            416
+          ]
+        },
+        {
+          "index": 2,
+          "emotion": "Freundlich / Amüsiert",
+          "gesture": "Ehrliches leichtes Lächeln, eine Hand locker erhoben, entspannte Schultern.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Véfrid/Output/vefrid-set-01-avatar-02.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Véfrid/vefrid-set-01-avatar-02.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-02.png",
+          "sha256": "57fa0135ba96e39208fec92dbe721e57192c671b01353b22b7db5f30964ab38d",
+          "width": 414,
+          "height": 414,
+          "box": [
+            420,
+            2,
+            834,
+            416
+          ]
+        },
+        {
+          "index": 3,
+          "emotion": "Nachdenklich",
+          "gesture": "Hand am Kinn, Blick leicht seitlich oder nach oben, zusammengezogene Brauen.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Véfrid/Output/vefrid-set-01-avatar-03.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Véfrid/vefrid-set-01-avatar-03.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-03.png",
+          "sha256": "4accb2b38ef860f1de46158fd6fbdf751864e1a96366c81e9b4bfc7880c8567f",
+          "width": 414,
+          "height": 414,
+          "box": [
+            838,
+            2,
+            1252,
+            416
+          ]
+        },
+        {
+          "index": 4,
+          "emotion": "Skeptisch / Misstrauisch",
+          "gesture": "Eine Braue hochgezogen, Arme verschränkt oder eine Hand skeptisch angewinkelt.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Véfrid/Output/vefrid-set-01-avatar-04.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Véfrid/vefrid-set-01-avatar-04.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-04.png",
+          "sha256": "218eb04ab0218b6ef9866793c02b4d6fd0251655882260f79d6fa373bafe76ea",
+          "width": 414,
+          "height": 414,
+          "box": [
+            2,
+            420,
+            416,
+            834
+          ]
+        },
+        {
+          "index": 5,
+          "emotion": "Überrascht / Verblüfft",
+          "gesture": "Geweitete Augen, leicht geöffneter Mund, beide Hände spontan angehoben.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Véfrid/Output/vefrid-set-01-avatar-05.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Véfrid/vefrid-set-01-avatar-05.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-05.png",
+          "sha256": "e6caff62204fde9533db80617b7e4eec9560e73cd478c21068eef90110886669",
+          "width": 414,
+          "height": 414,
+          "box": [
+            420,
+            420,
+            834,
+            834
+          ]
+        },
+        {
+          "index": 6,
+          "emotion": "Genervt / Missbilligend",
+          "gesture": "Halb geschlossene Augen, angespannter Mund, eine Hand abwinkend oder demonstrativ an der Hüfte.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Véfrid/Output/vefrid-set-01-avatar-06.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Véfrid/vefrid-set-01-avatar-06.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-06.png",
+          "sha256": "ff362ba5606166bac30baee7793ede75381502826b4e30711b400410ae070c47",
+          "width": 414,
+          "height": 414,
+          "box": [
+            838,
+            420,
+            1252,
+            834
+          ]
+        },
+        {
+          "index": 7,
+          "emotion": "Entschlossen / Ernst",
+          "gesture": "Direkter Blick, aufrechte Haltung, eine Faust vor der Brust oder feste erklärende Handbewegung.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Véfrid/Output/vefrid-set-01-avatar-07.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Véfrid/vefrid-set-01-avatar-07.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-07.png",
+          "sha256": "18b5ac9f6925e0ccc46f532f087c6d25a0f4141e2db8cfd507347b508e6b9b0f",
+          "width": 414,
+          "height": 414,
+          "box": [
+            2,
+            838,
+            416,
+            1252
+          ]
+        },
+        {
+          "index": 8,
+          "emotion": "Verärgert / Konfrontativ",
+          "gesture": "Zusammengezogene Brauen, eine Hand deutlich zeigend, Oberkörper leicht vorgelehnt.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Véfrid/Output/vefrid-set-01-avatar-08.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Véfrid/vefrid-set-01-avatar-08.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-08.png",
+          "sha256": "3486203c1a03dc03833c3296ffe4de3598130521163a272cd5beea4f6b145220",
+          "width": 414,
+          "height": 414,
+          "box": [
+            420,
+            838,
+            834,
+            1252
+          ]
+        },
+        {
+          "index": 9,
+          "emotion": "Unsicher / Keine Ahnung",
+          "gesture": "Leicht schiefer Gesichtsausdruck, beide Hände in einem klaren Schulterzucken geöffnet, Schultern hochgezogen.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Véfrid/Output/vefrid-set-01-avatar-09.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Véfrid/vefrid-set-01-avatar-09.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-09.png",
+          "sha256": "829ed3b32f9ea01fabe87adf7bb83222123d1568128fb5f5ac2c40f30ccf8987",
+          "width": 414,
+          "height": 414,
+          "box": [
+            838,
+            838,
+            1252,
+            1252
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "schema": "aleria.avatar-workshop-export",
+  "schemaVersion": 1,
+  "character": "Gwaedyr",
+  "characterId": "federkiel-gwynthor-gwaedyr",
+  "slug": "gwaedyr",
+  "avatarCount": 9,
+  "catalogId": "avatar-prompts-28-sets-20261121-zoomtoleranz",
+  "catalogSourceSha256": "637cb8b998be851d85b7f65fd9b926168969aa32232b89744e3ae93c5ab0055e",
+  "splitter": "Werkzeuge/Avatar Splitterer/AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "outputFolder": "Output/Gwaedyr",
+  "sets": [
+    {
+      "id": "standard",
+      "catalogNumber": 1,
+      "workshopSetId": "set-01",
+      "name": "Grundemotionen und Mimik",
+      "sourceSheet": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Gwaedyr/Sheets/gwaedyr-set-01-v1.png",
+      "sourceSha256": "140188e59b7a2f8d4073fceb0d9539ebeee910c1233c0116ff13805320c91267",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "generatorOriginal": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Gwaedyr/Originale/gwaedyr-set-01-v1-generator.png",
+      "generatorVersion": 1,
+      "generatorTool": "image_gen.imagegen",
+      "reference": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Gwaedyr/Referenzen/gwaedyr-portrait-v1.png",
+      "referenceSha256": "7cca3392eb6615b9e1b08916ef7c4ab1d109267912b47ab5d8c0b815ac359428",
+      "references": [
+        "AleriaAlmanach/docs/art/federkiel-couriers-20261122/originals/gwaedyr-portrait-v1.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Rianna Wyrm/Output/rianna-2026-11-02-set-03_Bild6.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Rianna Wyrm/Output/rianna-2026-11-02-set-03_Bild1.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Lefraye Gafyr/Output/lefraye-2026-11-02-set-01_Bild1.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Lefraye Gafyr/Output/lefraye-2026-11-02-set-01_Bild5.png"
+      ],
+      "promptFile": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Gwaedyr/Prompts/gwaedyr-set-01-v1.txt",
+      "promptSha256": "e32fcbfdf7a223b4a264f93e20b428b254592a9161449b05b5b85808411471b2",
+      "requestFile": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Gwaedyr/Prompts/gwaedyr-set-01-auftrag.json",
+      "rows": 3,
+      "columns": 3,
+      "gapX": 0,
+      "gapY": 0,
+      "autocrop": false,
+      "edgeInsetPixels": 2,
+      "sourceCropPixelsVerified": true,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Neutral / Redend",
+          "gesture": "Offene Handflächen, lockere erklärende Gestik, aufmerksamer Blick.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Gwaedyr/Output/gwaedyr-set-01-avatar-01.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Gwaedyr/gwaedyr-set-01-avatar-01.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/gwaedyr/avatars/gwaedyr-set-01-avatar-01.png",
+          "sha256": "2951d67b1905f30e291a9ba51a92a23e21c182ffd6c9a17798358378cc180dba",
+          "width": 414,
+          "height": 414,
+          "box": [
+            2,
+            2,
+            416,
+            416
+          ]
+        },
+        {
+          "index": 2,
+          "emotion": "Freundlich / Amüsiert",
+          "gesture": "Ehrliches leichtes Lächeln, eine Hand locker erhoben, entspannte Schultern.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Gwaedyr/Output/gwaedyr-set-01-avatar-02.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Gwaedyr/gwaedyr-set-01-avatar-02.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/gwaedyr/avatars/gwaedyr-set-01-avatar-02.png",
+          "sha256": "d7eb3d87fc8753b0d4eef991ebdd71079c9b84b04c655807885434a51172f5b3",
+          "width": 414,
+          "height": 414,
+          "box": [
+            420,
+            2,
+            834,
+            416
+          ]
+        },
+        {
+          "index": 3,
+          "emotion": "Nachdenklich",
+          "gesture": "Hand am Kinn, Blick leicht seitlich oder nach oben, zusammengezogene Brauen.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Gwaedyr/Output/gwaedyr-set-01-avatar-03.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Gwaedyr/gwaedyr-set-01-avatar-03.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/gwaedyr/avatars/gwaedyr-set-01-avatar-03.png",
+          "sha256": "de50efcafa149e748ad21a0693d65b5babf7df19b088afb68cabcdea51471ca4",
+          "width": 414,
+          "height": 414,
+          "box": [
+            838,
+            2,
+            1252,
+            416
+          ]
+        },
+        {
+          "index": 4,
+          "emotion": "Skeptisch / Misstrauisch",
+          "gesture": "Eine Braue hochgezogen, Arme verschränkt oder eine Hand skeptisch angewinkelt.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Gwaedyr/Output/gwaedyr-set-01-avatar-04.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Gwaedyr/gwaedyr-set-01-avatar-04.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/gwaedyr/avatars/gwaedyr-set-01-avatar-04.png",
+          "sha256": "bcddebeaccbf931a1c3f530a6ccd56106861546355b1f17355ae740b7d6d7428",
+          "width": 414,
+          "height": 414,
+          "box": [
+            2,
+            420,
+            416,
+            834
+          ]
+        },
+        {
+          "index": 5,
+          "emotion": "Überrascht / Verblüfft",
+          "gesture": "Geweitete Augen, leicht geöffneter Mund, beide Hände spontan angehoben.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Gwaedyr/Output/gwaedyr-set-01-avatar-05.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Gwaedyr/gwaedyr-set-01-avatar-05.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/gwaedyr/avatars/gwaedyr-set-01-avatar-05.png",
+          "sha256": "eaed403af283977c3c953d5257a241521b7573483bdecd0ac58988050f63aa0f",
+          "width": 414,
+          "height": 414,
+          "box": [
+            420,
+            420,
+            834,
+            834
+          ]
+        },
+        {
+          "index": 6,
+          "emotion": "Genervt / Missbilligend",
+          "gesture": "Halb geschlossene Augen, angespannter Mund, eine Hand abwinkend oder demonstrativ an der Hüfte.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Gwaedyr/Output/gwaedyr-set-01-avatar-06.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Gwaedyr/gwaedyr-set-01-avatar-06.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/gwaedyr/avatars/gwaedyr-set-01-avatar-06.png",
+          "sha256": "b703d3ac4bc7100c768e69146d4b82fbf48949c3c3170bcf08029efe98732d6b",
+          "width": 414,
+          "height": 414,
+          "box": [
+            838,
+            420,
+            1252,
+            834
+          ]
+        },
+        {
+          "index": 7,
+          "emotion": "Entschlossen / Ernst",
+          "gesture": "Direkter Blick, aufrechte Haltung, eine Faust vor der Brust oder feste erklärende Handbewegung.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Gwaedyr/Output/gwaedyr-set-01-avatar-07.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Gwaedyr/gwaedyr-set-01-avatar-07.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/gwaedyr/avatars/gwaedyr-set-01-avatar-07.png",
+          "sha256": "bee1626382d2e6dff8059e9e685a6540f875f7e30a1a516cf18ade4da18f0771",
+          "width": 414,
+          "height": 414,
+          "box": [
+            2,
+            838,
+            416,
+            1252
+          ]
+        },
+        {
+          "index": 8,
+          "emotion": "Verärgert / Konfrontativ",
+          "gesture": "Zusammengezogene Brauen, eine Hand deutlich zeigend, Oberkörper leicht vorgelehnt.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Gwaedyr/Output/gwaedyr-set-01-avatar-08.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Gwaedyr/gwaedyr-set-01-avatar-08.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/gwaedyr/avatars/gwaedyr-set-01-avatar-08.png",
+          "sha256": "1e8c731e93b548fb2502273f49d9fc6d2d977ac0cb3533e5ec25b889a88c4252",
+          "width": 414,
+          "height": 414,
+          "box": [
+            420,
+            838,
+            834,
+            1252
+          ]
+        },
+        {
+          "index": 9,
+          "emotion": "Unsicher / Keine Ahnung",
+          "gesture": "Leicht schiefer Gesichtsausdruck, beide Hände in einem klaren Schulterzucken geöffnet, Schultern hochgezogen.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Gwaedyr/Output/gwaedyr-set-01-avatar-09.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Gwaedyr/gwaedyr-set-01-avatar-09.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/gwaedyr/avatars/gwaedyr-set-01-avatar-09.png",
+          "sha256": "757f8f3dc729c248a8fba35132bc045de6538d173941a8e0d964518cf9dbc1ab",
+          "width": 414,
+          "height": 414,
+          "box": [
+            838,
+            838,
+            1252,
+            1252
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2,17 +2,17 @@
   "schema": "aleria.character-sync-report",
   "schemaVersion": 1,
   "sourceArchive": "Charakter Archiv Exporte/aleria-charakterarchiv-2026-09-04-01-59-49.json",
-  "sourceExportedAt": "2026-11-21T21:17:55.035Z",
+  "sourceExportedAt": "2026-11-22T15:23:31.739Z",
   "summary": {
-    "sourceDocuments": 681,
-    "total": 424,
+    "sourceDocuments": 724,
+    "total": 467,
     "mergedSameNameGroups": 45,
-    "familyLinked": 298,
+    "familyLinked": 336,
     "familyAmbiguous": 0,
-    "familyPending": 126,
-    "primaryFamily": 296,
-    "primaryGroup": 33,
-    "primaryPlace": 61,
+    "familyPending": 131,
+    "primaryFamily": 334,
+    "primaryGroup": 34,
+    "primaryPlace": 65,
     "primaryUnassigned": 34,
     "duplicateWorldPeople": 0
   },
@@ -1486,6 +1486,66 @@
     {
       "recordId": "character--zitteraale-medrawd-angau",
       "name": "Medrawd Angau",
+      "status": "pending",
+      "primary": {
+        "kind": "group",
+        "id": "schwarze-zitteraale",
+        "label": "Schwarze Zitteraale",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--federkiel-gwynthor-gwaedyr",
+      "name": "Gwaedyr",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--federkiel-gwynthor-oenyr",
+      "name": "Oenyr",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--federkiel-gwynthor-thaleth",
+      "name": "Thaleth",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--federkiel-gwynthor-vefrid",
+      "name": "Véfrid",
+      "status": "pending",
+      "primary": {
+        "kind": "place",
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      },
+      "familyAlternatives": []
+    },
+    {
+      "recordId": "character--zitteraale-gruppe-ii-fuehrer",
+      "name": "Cadwgan Bwach",
       "status": "pending",
       "primary": {
         "kind": "group",

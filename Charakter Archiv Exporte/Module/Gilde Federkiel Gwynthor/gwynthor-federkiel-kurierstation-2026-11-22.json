@@ -1,0 +1,287 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-22T00:00:00+01:00",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gilde Federkiel - Gwynthor",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Gilde Federkiel - Gwynthor"
+      ],
+      "iconUrl": "./assets/federkiel-gwynthor/aushangeschild-v1.webp",
+      "desc": "Gwynthors Zentralpost, Schreibstube, Druckerei, Kuriergestüt und Postlager."
+    },
+    "entry": {
+      "id": "gwynthor-federkiel-kurierstation",
+      "title": "Die Kurierstation (Gestüt)",
+      "subtitle": "Drei Kurierstaffeln und ein gemeinsamer Stallbetrieb",
+      "type": "Betriebsstelle der Gilde Federkiel",
+      "category": "Gilde Federkiel - Gwynthor",
+      "symbol": "./assets/federkiel-gwynthor/aushangeschild-v1.webp",
+      "image": "./assets/federkiel-gwynthor/scenes/kurierstation-v1.webp",
+      "previewImage": "./assets/federkiel-gwynthor/scenes/kurierstation-v1.webp",
+      "stamp": "FEDERKIEL · GWYNTHOR",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Kurierstation (Gestüt) · Aufbau",
+          "commentThreadKey": "federkiel-kurierstation-aufbau",
+          "image": "./assets/federkiel-gwynthor/scenes/kurierstation-v1.webp",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die Kurierstation (Gestüt)",
+            "eyebrow": "Gwynthor · Celtigerns Wacht",
+            "subtitle": "Drei Kurierstaffeln und ein gemeinsamer Stallbetrieb",
+            "centerLabel": "Die Kurierstation (Gestüt)",
+            "emblem": "../Fraktionen/assets/emblems/gilden/federkiel-v2.webp",
+            "sideImage": "./assets/federkiel-gwynthor/scenes/kurierstation-v1.webp",
+            "motto": "Gilde Federkiel · Gwynthor",
+            "description": "<p>Hinter den breiten grünen Toren liegen Stallgasse, Sattelkammer und Übergabehof. Von hier aus übernehmen drei gleichrangige Staffeln die Zustellung in der Stadt, im Bannkreis und auf den Anschlusswegen zur nächsten Fernpoststation. Jede Staffel führt vier Postkuriere. Bei Ausfällen kann die Stationsleitung Personal und Pferde zwischen den Staffeln umteilen. Der gemeinsame Stallbetrieb versorgt die Tiere und hält ausgeruhte Wechselpferde bereit.</p><p><a href=\"./AleriaAlmanach.html?entry=gwynthor-federkiel\">Zum Gildenhaus von Federkiel</a></p>",
+            "detailsTitle": "Auftrag und Verantwortung",
+            "details": [
+              {
+                "label": "Kurierdienst",
+                "value": "Drei Staffeln zu je vier Postkurieren"
+              },
+              {
+                "label": "Staffelaufsicht",
+                "value": "Je eine Staffelführung unter der Stationsleitung"
+              },
+              {
+                "label": "Gestüt",
+                "value": "Pferdepflege, Wechselpferde und Sattelzeug"
+              }
+            ],
+            "chartTitle": "Leitung und Dienststellen",
+            "chartIntro": "Alle drei Staffelführungen und der Stallmeister berichten direkt an die Stationsleitung. Jede Staffelführung führt die vier Postkuriere ihrer eigenen Staffel.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 96,
+            "cardFontScale": 118,
+            "trees": [
+              {
+                "id": "staffeln",
+                "label": "Stationsleitung und Staffeln",
+                "levels": [
+                  {
+                    "label": "Betriebsleitung",
+                    "nodes": [
+                      {
+                        "title": "Leitung der Kurierstation",
+                        "text": "Koordiniert die drei Staffeln, teilt verfügbare Pferde und Ersatz ein und stimmt die Abgänge mit der Postzentrale ab.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Staffel I · Stadtwege und Stadttore",
+                    "nodes": [
+                      {
+                        "title": "Staffelführung",
+                        "text": "Teilt die vier Postkuriere der Staffel ein, bestätigt die Übernahmen und meldet Ausfälle oder Verspätungen der Stationsleitung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ],
+                    "startsGroup": false
+                  },
+                  {
+                    "label": "Postkuriere · Staffel I",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "title": "Postkurier",
+                        "text": "Übernimmt versiegelte Sendungen, stellt sie auf dem zugewiesenen Weg zu oder übergibt sie an die nächste Station. Vermerkt die Übergabe und meldet Hindernisse an die Staffelführung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-postkurier-v1.webp"
+                      },
+                      {
+                        "title": "Postkurier",
+                        "text": "Übernimmt versiegelte Sendungen, stellt sie auf dem zugewiesenen Weg zu oder übergibt sie an die nächste Station. Vermerkt die Übergabe und meldet Hindernisse an die Staffelführung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-postkurier-v1.webp"
+                      },
+                      {
+                        "title": "Postkurier",
+                        "text": "Übernimmt versiegelte Sendungen, stellt sie auf dem zugewiesenen Weg zu oder übergibt sie an die nächste Station. Vermerkt die Übergabe und meldet Hindernisse an die Staffelführung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-postkurier-v1.webp"
+                      },
+                      {
+                        "title": "Postkurier",
+                        "text": "Übernimmt versiegelte Sendungen, stellt sie auf dem zugewiesenen Weg zu oder übergibt sie an die nächste Station. Vermerkt die Übergabe und meldet Hindernisse an die Staffelführung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-postkurier-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Staffel II · Orte im Bannkreis",
+                    "nodes": [
+                      {
+                        "title": "Staffelführung",
+                        "text": "Teilt die vier Postkuriere der Staffel ein, bestätigt die Übernahmen und meldet Ausfälle oder Verspätungen der Stationsleitung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ],
+                    "startsGroup": true
+                  },
+                  {
+                    "label": "Postkuriere · Staffel II",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "title": "Postkurier",
+                        "text": "Übernimmt versiegelte Sendungen, stellt sie auf dem zugewiesenen Weg zu oder übergibt sie an die nächste Station. Vermerkt die Übergabe und meldet Hindernisse an die Staffelführung.",
+                        "portrait": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/portrait-v1.webp",
+                        "subtitle": "Oenyr"
+                      },
+                      {
+                        "title": "Postkurier",
+                        "text": "Übernimmt versiegelte Sendungen, stellt sie auf dem zugewiesenen Weg zu oder übergibt sie an die nächste Station. Vermerkt die Übergabe und meldet Hindernisse an die Staffelführung.",
+                        "portrait": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/portrait-v1.webp",
+                        "subtitle": "Véfrid"
+                      },
+                      {
+                        "title": "Postkurier",
+                        "text": "Übernimmt versiegelte Sendungen, stellt sie auf dem zugewiesenen Weg zu oder übergibt sie an die nächste Station. Vermerkt die Übergabe und meldet Hindernisse an die Staffelführung.",
+                        "portrait": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/gwaedyr/portrait-v1.webp",
+                        "subtitle": "Gwaedyr"
+                      },
+                      {
+                        "title": "Postkurier",
+                        "text": "Übernimmt versiegelte Sendungen, stellt sie auf dem zugewiesenen Weg zu oder übergibt sie an die nächste Station. Vermerkt die Übergabe und meldet Hindernisse an die Staffelführung.",
+                        "portrait": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/thaleth/portrait-v1.webp",
+                        "subtitle": "Thaleth"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Staffel III · Anschluss zur Fernpost",
+                    "nodes": [
+                      {
+                        "title": "Staffelführung",
+                        "text": "Teilt die vier Postkuriere der Staffel ein, bestätigt die Übernahmen und meldet Ausfälle oder Verspätungen der Stationsleitung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ],
+                    "startsGroup": true
+                  },
+                  {
+                    "label": "Postkuriere · Staffel III",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "title": "Postkurier",
+                        "text": "Übernimmt versiegelte Sendungen, stellt sie auf dem zugewiesenen Weg zu oder übergibt sie an die nächste Station. Vermerkt die Übergabe und meldet Hindernisse an die Staffelführung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-postkurier-v1.webp"
+                      },
+                      {
+                        "title": "Postkurier",
+                        "text": "Übernimmt versiegelte Sendungen, stellt sie auf dem zugewiesenen Weg zu oder übergibt sie an die nächste Station. Vermerkt die Übergabe und meldet Hindernisse an die Staffelführung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-postkurier-v1.webp"
+                      },
+                      {
+                        "title": "Postkurier",
+                        "text": "Übernimmt versiegelte Sendungen, stellt sie auf dem zugewiesenen Weg zu oder übergibt sie an die nächste Station. Vermerkt die Übergabe und meldet Hindernisse an die Staffelführung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-postkurier-v1.webp"
+                      },
+                      {
+                        "title": "Postkurier",
+                        "text": "Übernimmt versiegelte Sendungen, stellt sie auf dem zugewiesenen Weg zu oder übergibt sie an die nächste Station. Vermerkt die Übergabe und meldet Hindernisse an die Staffelführung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-postkurier-v1.webp"
+                      }
+                    ]
+                  }
+                ],
+                "parentTreeId": ""
+              },
+              {
+                "id": "gestuet",
+                "label": "Gestüt",
+                "levels": [
+                  {
+                    "label": "Stallaufsicht",
+                    "nodes": [
+                      {
+                        "title": "Stallmeister",
+                        "text": "Bestimmt den Wechsel und die Ruhe der Pferde, prüft die Einsatzfähigkeit und meldet freie Tiere an die Stationsleitung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Stalldienst",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "title": "Stallkraft",
+                        "text": "Füttert, tränkt und striegelt die Pferde, richtet das Sattelzeug und nimmt Rückkehrer am Hof an.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      },
+                      {
+                        "title": "Stallkraft",
+                        "text": "Füttert, tränkt und striegelt die Pferde, richtet das Sattelzeug und nimmt Rückkehrer am Hof an.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      },
+                      {
+                        "title": "Stallkraft",
+                        "text": "Füttert, tränkt und striegelt die Pferde, richtet das Sattelzeug und nimmt Rückkehrer am Hof an.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      },
+                      {
+                        "title": "Stallkraft",
+                        "text": "Füttert, tränkt und striegelt die Pferde, richtet das Sattelzeug und nimmt Rückkehrer am Hof an.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      }
+                    ]
+                  }
+                ],
+                "parentTreeId": "staffeln"
+              }
+            ],
+            "levels": [],
+            "chartScale": 75
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Am Tor der Kurierstation",
+          "commentThreadKey": "federkiel-kurierstation-szene",
+          "image": "./assets/federkiel-gwynthor/scenes/kurierstation-szene-v1.webp",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center 36%",
+          "sessionPage": true,
+          "sessionCast": [
+            "federkiel-gwynthor-oenyr",
+            "federkiel-gwynthor-vefrid",
+            "federkiel-gwynthor-gwaedyr",
+            "federkiel-gwynthor-thaleth"
+          ],
+          "sessionIntro": "<p>Noch glänzt der Hof vom Regen. Am Aufsteigeblock wartet eine verschlossene Posttasche, und vor dem offenen Tor steht ein gesatteltes Pferd bereit. Der nächste Abgang wird im Hofbuch bestätigt.</p>",
+          "sessionHint": "Hier lässt sich Post an eine Staffel übergeben, ein verspäteter Ritt melden oder ein Pferdewechsel vorbereiten.",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Der erste Beitrag eröffnet die Szene.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

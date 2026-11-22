@@ -1,0 +1,201 @@
+{
+  "schema": "aleria.avatar-workshop-export",
+  "schemaVersion": 1,
+  "character": "Oenyr",
+  "characterId": "federkiel-gwynthor-oenyr",
+  "slug": "oenyr",
+  "avatarCount": 9,
+  "catalogId": "avatar-prompts-28-sets-20261121-zoomtoleranz",
+  "catalogSourceSha256": "637cb8b998be851d85b7f65fd9b926168969aa32232b89744e3ae93c5ab0055e",
+  "splitter": "Werkzeuge/Avatar Splitterer/AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "outputFolder": "Output/Oenyr",
+  "sets": [
+    {
+      "id": "standard",
+      "catalogNumber": 1,
+      "workshopSetId": "set-01",
+      "name": "Grundemotionen und Mimik",
+      "sourceSheet": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Oenyr/Sheets/oenyr-set-01-v2.png",
+      "sourceSha256": "812ed610fa8cb782788c75d6ca49b5c6b3d624765e7afc835a9274d51a401ddd",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "generatorOriginal": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Oenyr/Originale/oenyr-set-01-v2-generator.png",
+      "generatorVersion": 2,
+      "generatorTool": "image_gen.imagegen",
+      "reference": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Oenyr/Referenzen/oenyr-portrait-v1.png",
+      "referenceSha256": "ecdc8cbe1eeb2f0d4a793720a4a5618ae0ababd0eb2884e0bf69b96f6b93ff23",
+      "references": [
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Oenyr/Originale/oenyr-set-01-v1-generator.png",
+        "AleriaAlmanach/docs/art/federkiel-couriers-20261122/originals/oenyr-portrait-v1.png"
+      ],
+      "promptFile": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Oenyr/Prompts/oenyr-set-01-v2.txt",
+      "promptSha256": "3b9e14896e039dd80d817a01174cd2ec8870e761a7f497ec0cd0f79a4da7a6d1",
+      "requestFile": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Oenyr/Prompts/oenyr-set-01-auftrag.json",
+      "rows": 3,
+      "columns": 3,
+      "gapX": 0,
+      "gapY": 0,
+      "autocrop": false,
+      "edgeInsetPixels": 2,
+      "sourceCropPixelsVerified": true,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Neutral / Redend",
+          "gesture": "Offene Handflächen, lockere erklärende Gestik, aufmerksamer Blick.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Oenyr/Output/oenyr-set-01-avatar-01.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Oenyr/oenyr-set-01-avatar-01.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-01.png",
+          "sha256": "147d102812222a53e8f0fb93d515558663bd04920c4ce03db26f1a7d6fc83281",
+          "width": 414,
+          "height": 414,
+          "box": [
+            2,
+            2,
+            416,
+            416
+          ]
+        },
+        {
+          "index": 2,
+          "emotion": "Freundlich / Amüsiert",
+          "gesture": "Ehrliches leichtes Lächeln, eine Hand locker erhoben, entspannte Schultern.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Oenyr/Output/oenyr-set-01-avatar-02.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Oenyr/oenyr-set-01-avatar-02.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-02.png",
+          "sha256": "b6729d06a79464240adbde35c2df7164c3eaba302822ab9cf8e8534d00cafa6e",
+          "width": 414,
+          "height": 414,
+          "box": [
+            420,
+            2,
+            834,
+            416
+          ]
+        },
+        {
+          "index": 3,
+          "emotion": "Nachdenklich",
+          "gesture": "Hand am Kinn, Blick leicht seitlich oder nach oben, zusammengezogene Brauen.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Oenyr/Output/oenyr-set-01-avatar-03.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Oenyr/oenyr-set-01-avatar-03.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-03.png",
+          "sha256": "6170d7df5b9a08778d79c28bc408a3cd0ff9f03f2ca13ad4f5e9d61397d97f52",
+          "width": 414,
+          "height": 414,
+          "box": [
+            838,
+            2,
+            1252,
+            416
+          ]
+        },
+        {
+          "index": 4,
+          "emotion": "Skeptisch / Misstrauisch",
+          "gesture": "Eine Braue hochgezogen, Arme verschränkt oder eine Hand skeptisch angewinkelt.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Oenyr/Output/oenyr-set-01-avatar-04.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Oenyr/oenyr-set-01-avatar-04.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-04.png",
+          "sha256": "fbc7c7cb8000541618020197b730106f02a810b3640f40a3ee0b76003cc45109",
+          "width": 414,
+          "height": 414,
+          "box": [
+            2,
+            420,
+            416,
+            834
+          ]
+        },
+        {
+          "index": 5,
+          "emotion": "Überrascht / Verblüfft",
+          "gesture": "Geweitete Augen, leicht geöffneter Mund, beide Hände spontan angehoben.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Oenyr/Output/oenyr-set-01-avatar-05.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Oenyr/oenyr-set-01-avatar-05.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-05.png",
+          "sha256": "17635c9b50e2690cbe2f535b25d3cbe315724cbac85b16d4e1ed4cc798f94b8b",
+          "width": 414,
+          "height": 414,
+          "box": [
+            420,
+            420,
+            834,
+            834
+          ]
+        },
+        {
+          "index": 6,
+          "emotion": "Genervt / Missbilligend",
+          "gesture": "Halb geschlossene Augen, angespannter Mund, eine Hand abwinkend oder demonstrativ an der Hüfte.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Oenyr/Output/oenyr-set-01-avatar-06.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Oenyr/oenyr-set-01-avatar-06.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-06.png",
+          "sha256": "5c152df0adc2b784c9908e4c3eb48e538e97b3eb891076ba319b066de1d8337b",
+          "width": 414,
+          "height": 414,
+          "box": [
+            838,
+            420,
+            1252,
+            834
+          ]
+        },
+        {
+          "index": 7,
+          "emotion": "Entschlossen / Ernst",
+          "gesture": "Direkter Blick, aufrechte Haltung, eine Faust vor der Brust oder feste erklärende Handbewegung.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Oenyr/Output/oenyr-set-01-avatar-07.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Oenyr/oenyr-set-01-avatar-07.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-07.png",
+          "sha256": "d101df1d9490d5e09bb44e3b7824d6fd8f517d0d560e693d9b187484c3050faf",
+          "width": 414,
+          "height": 414,
+          "box": [
+            2,
+            838,
+            416,
+            1252
+          ]
+        },
+        {
+          "index": 8,
+          "emotion": "Verärgert / Konfrontativ",
+          "gesture": "Zusammengezogene Brauen, eine Hand deutlich zeigend, Oberkörper leicht vorgelehnt.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Oenyr/Output/oenyr-set-01-avatar-08.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Oenyr/oenyr-set-01-avatar-08.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-08.png",
+          "sha256": "1cb49cc511de25fd34925b0539d4e095213cac845be97e21300d8088285cd567",
+          "width": 414,
+          "height": 414,
+          "box": [
+            420,
+            838,
+            834,
+            1252
+          ]
+        },
+        {
+          "index": 9,
+          "emotion": "Unsicher / Keine Ahnung",
+          "gesture": "Leicht schiefer Gesichtsausdruck, beide Hände in einem klaren Schulterzucken geöffnet, Schultern hochgezogen.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Oenyr/Output/oenyr-set-01-avatar-09.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Oenyr/oenyr-set-01-avatar-09.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/oenyr/avatars/oenyr-set-01-avatar-09.png",
+          "sha256": "468f6d99722925874606d56ca03cfd5d0c41f07edf39e729f11f6f22db1b98ba",
+          "width": 414,
+          "height": 414,
+          "box": [
+            838,
+            838,
+            1252,
+            1252
+          ]
+        }
+      ]
+    }
+  ]
+}

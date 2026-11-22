@@ -15,113 +15,228 @@
     },
     "entry": {
       "id": "zitteraale-gruppe-ii",
-      "title": "Gruppe II.",
+      "title": "Die Sumpfnattern",
       "subtitle": "Schwarze Zitteraale · Gruppe II.",
       "type": "Unterbande",
       "category": "Kriminalität · Schwarze Zitteraale",
       "icon": "⚑",
-      "symbol": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
-      "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
-      "previewImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
+      "symbol": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/icons/icon-sumpfnattern-v1.png",
+      "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-sumpfnattern-v1.png",
+      "previewImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/icons/icon-sumpfnattern-v1.png",
       "stamp": "SCHWARZE ZITTERAALE · GRUPPE II.",
       "schemaVersion": 1,
       "multipage": true,
       "appendCommentsPage": false,
       "enablePageComments": true,
-      "sessionCast": [],
+      "sessionCast": [
+        "zitteraale-gruppe-ii-fuehrer"
+      ],
       "pages": [
         {
           "schemaVersion": 1,
-          "pageTitle": "Gruppe II.",
+          "pageTitle": "Die Sumpfnattern",
           "commentThreadKey": "zitteraale-gruppe-ii-uebersicht",
-          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
-          "imageWidth": 36,
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/scenes/sumpfnattern-lycath-aussen-v1.png",
+          "imageWidth": 38,
           "imageTall": true,
-          "imageFit": "contain",
+          "imageFit": "cover",
           "imagePosition": "center",
-          "description": "<p><strong>Gruppe II.</strong> ist eine der acht Unterbanden der Schwarzen Zitteraale. Sie besitzt eine eigene Gruppenführung, zwei Leutnantstellen und ein vorbereitetes Aufgebot von sechzehn Räubern.</p><p>Gruppenname, Geschichte, Territorium und persönliche Besetzung sind noch offen. Das blanke schwarze Banner kennzeichnet die noch unbenannte Unterbande. Die Anführerbio und die Hauptquartiersszene sind für ihre spätere Ausarbeitung vorbereitet.</p>",
+          "description": "<p><strong>Die Sumpfnattern</strong> sind die zweite Unterbande der Schwarzen Zitteraale. Ihr Anführer <strong>Cadwgan Bwach</strong>, genannt <strong>die Grüne Natter</strong>, war im Großen Krieg Ritter unter den Gafyr. Seine heutige Schar terrorisiert die Herrschaft und Ländereien seiner früheren Dienstherren.</p><p>Aus einer zunächst eigenständigen Räuberbande wurde durch die Eingliederung in die Schwarzen Zitteraale eine Unterbande mit eigener Führung. Cadwgan dient dem Bandenhaupt, verfolgt mit seinen Leuten jedoch weiterhin eigene Geschäfte. Seine persönliche Vendetta gegen die Gafyr prägt die Wahl seiner Ziele.</p><p>Ihr Stützpunkt liegt in den <strong>Ruinen Lycaths</strong>, einer antiken Crannath-Festung, von der alte Fundamente geblieben sind. Dazwischen haben die Sumpfnattern ein behelfsmäßiges Lager aus Holz und Tuch eingerichtet. Die rechte Hand organisiert Räuber und Wachen; die linke Hand ist ein abtrünniger, exzentrischer Alchemist.</p><p>Das schwarze und dunkelgrüne Banner zeigt eine grüne Natter, die einen sich aufbäumenden Geißbock umschlingt und ihm in den Nacken beißt.</p>",
           "stats": [
             [
               "Zugehörigkeit",
-              "Die Schwarzen Zitteraale"
-            ],
-            [
-              "Gruppenkennung",
-              "Gruppe II."
+              "Die Schwarzen Zitteraale · Gruppe II."
             ],
             [
               "Anführer",
-              "Noch unbenannt"
+              "Cadwgan Bwach · Die Grüne Natter"
+            ],
+            [
+              "Wirkungsgebiet",
+              "Herrschaft und Ländereien des Hauses Gafyr"
+            ],
+            [
+              "Stützpunkt",
+              "Ruinen Lycaths"
+            ],
+            [
+              "Ursprung",
+              "Eigenständige Räuberbande · später eingegliedert"
             ],
             [
               "Führung",
-              "Ein Gruppenführer · zwei Leutnants"
+              "Gruppenführer · rechte und linke Hand"
             ],
             [
               "Aufgebot",
               "Sechzehn Räuberplätze"
             ],
             [
-              "Territorium",
-              "Noch unbestimmt"
-            ],
-            [
-              "Hauptquartier",
-              "Noch unbestimmt"
+              "Farben",
+              "Schwarz · Dunkelgrün · Silber"
             ]
           ]
         },
         {
           "schemaVersion": 1,
-          "pageTitle": "Anführer · unbenannt",
+          "pageTitle": "Cadwgan Bwach · Grüne Natter",
           "commentThreadKey": "zitteraale-gruppe-ii-anfuehrer",
           "biographyPage": true,
-          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-ii-v1.png",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-gruene-natter-v2.png",
           "imageWidth": 38,
           "imageTall": true,
+          "description": "Die Grüne Natter · ehemaliger Ritter unter den Gafyr · Anführer der Sumpfnattern",
           "stats": [
             [
               "Name",
-              "Noch unbenannt"
+              "Cadwgan Bwach"
             ],
             [
-              "Amt",
-              "Gruppenführer"
+              "Beiname",
+              "Die Grüne Natter"
             ],
             [
-              "Unterbande",
-              "Gruppe II."
+              "Volk",
+              "Rheunwaith"
             ],
             [
               "Herkunft",
-              "Noch offen"
+              "Haus Bwach · Gwaulwyn"
             ],
             [
-              "Alter",
-              "Noch offen"
+              "Früherer Stand",
+              "Ritter unter den Gafyr · Ritterstand aberkannt"
+            ],
+            [
+              "Heutige Stellung",
+              "Anführer der Sumpfnattern"
+            ],
+            [
+              "Zugehörigkeit",
+              "Die Schwarzen Zitteraale · Gruppe II."
+            ],
+            [
+              "Stützpunkt",
+              "Ruinen Lycaths"
+            ],
+            [
+              "Feindschaft",
+              "Haus Gafyr · persönliche Vendetta"
             ]
           ],
           "biography": {
-            "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-ii-v1.png",
-            "crestImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
-            "biographyTitle": "Die Führung von Gruppe II.",
-            "biographyText": "<p>Diese Führungsstelle besitzt noch keine namentliche Besetzung.</p>",
-            "historyTitle": "Aufgabe innerhalb der Bande",
-            "historyText": "<p>Die Gruppenführung nimmt Aufträge der übergeordneten Führung entgegen, verteilt sie auf ihre beiden Leutnants und verantwortet das eigene Aufgebot. Sie stimmt Beuteanteile, Versorgung und Verstärkungen mit den Schwarzen Zitteraalen ab.</p>",
-            "worksTitle": "Noch offene Angaben",
-            "works": [
-              "Name und persönliches Porträt",
-              "Herkunft und Vorgeschichte",
-              "Wesen und persönliche Verbindungen"
+            "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-gruene-natter-v2.png",
+            "biographyTitle": "Die Grüne Natter",
+            "biographyText": "<p>Cadwgan Bwach aus dem Haus Bwach in Gwaulwyn, genannt die Grüne Natter, führt die Sumpfnattern als Unterbande der Schwarzen Zitteraale. Im Großen Krieg diente er als Ritter unter den Gafyr. Nach der Plünderung eines albischen Dorfes in Ceitheach verlor er seinen Ritterstand und floh vor dem vorgesehenen Gerichtsverfahren. Seine heutige Bande handelt weitgehend nach eigenen Interessen und richtet sich besonders gegen die Herrschaft und Ländereien des Hauses Gafyr.</p>",
+            "abilitiesTitle": "Wesen und Antrieb",
+            "abilities": [
+              {
+                "title": "Nachtragend",
+                "icon": "/IconOrdner/Traits%20Icon/Proud.png",
+                "detail": "Trägt den Gafyr seinen verlorenen Stand nach und macht ihre Besitzungen zum Ziel seiner Fehde."
+              },
+              {
+                "title": "Ritterliche Kriegserfahrung",
+                "icon": "/IconOrdner/Traits%20Icon/Brave.png",
+                "detail": "Führte bereits im Großen Krieg einen Trupp im Dienst der Gafyr."
+              },
+              {
+                "title": "Eigene Interessen",
+                "icon": "/IconOrdner/Traits%20Icon/Ambitious.png",
+                "detail": "Dient den Schwarzen Zitteraalen, verfolgt mit seiner Unterbande zugleich eigene Geschäfte und Ziele."
+              }
             ],
-            "documentsTitle": "Bandenakten",
+            "historyTitle": "Erscheinung und Zeichen",
+            "historyText": "<p>Dunkelrotes Haar, ein kantiges Gesicht und ein grimmiger Blick kennzeichnen die Grüne Natter. Geschwärzte Platten schützen Schultern und Arme; dunkelgrüne Schuppenpanzerung liegt unter einem halb offenen, zerfledderten und grob geflickten Wappenrock. Sein stählerner Helm ist wie das geöffnete Maul einer Natter geformt. Er trägt ihn unter dem Arm und stützt sich mit der anderen Hand auf den Knauf seines Zweihänders.</p><p>Sein Zeichen zeigt eine grüne Natter, die einen hellen Geißbock umschlingt und ihm in den Nacken beißt. Der Bock bäumt sich gegen sie auf. Das Zeichen verhöhnt seine früheren Dienstherren und kennzeichnet heute seine eigene Schar.</p>",
+            "extraSections": [
+              {
+                "title": "Haus Bwach aus Gwaulwyn",
+                "text": "<p>Cadwgan stammt aus dem Haus Bwach in Gwaulwyn. Dessen Familienwappen zeigt einen hellen Geißbock, der sich aufbäumt und eine sich windende grüne Natter unter seinen Hufen zertritt. Weinrot, Elfenbein und Dunkelgrün bestimmen das Wappen. Cadwgans heutiges Bandzeichen kehrt das Verhältnis der Tiere um: Dort beißt die Natter dem Bock in den Nacken.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Ritter im Großen Krieg",
+                "text": "<p>Vor rund zwanzig Jahren zog Cadwgan als Ritter unter den Gafyr in den Großen Krieg. Er führte einen eigenen Trupp und kannte den Dienst unter ihrem Banner, bevor er selbst zum Verfolgten wurde.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Die Plünderung in Ceitheach",
+                "text": "<p>Während des Krieges plünderten Cadwgan und sein Trupp ein albisches Dorf in Ceitheach. Darüber hinaus standen schwere weitere Übergriffe auf die Dorfbevölkerung im Raum. Diese zusätzlichen Taten ließen sich ihnen jedoch nicht unmittelbar nachweisen. Der Name des Dorfes und die Einzelheiten dieser Vorwürfe sind nicht überliefert.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Verlust der Ritterwürde und Flucht",
+                "text": "<p>Cadwgan wurde seines Ritterstandes enthoben und sollte sich wegen seiner Taten vor Gericht verantworten. Er floh, bevor es zu diesem Verfahren kam. Seine Flucht war keine Freisprechung; ebenso ist kein abgeschlossenes Urteil über die zusätzlichen Vorwürfe belegt.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Von der Räuberbande zu den Sumpfnattern",
+                "text": "<p>Nach seiner Flucht sammelte er eine eigene Räuberbande um sich. Die Schwarzen Zitteraale gliederten diese Schar später in ihre Struktur ein. Seitdem dient Cadwgan ihrem Bandenhaupt und führt seine Leute als die Sumpfnattern, die zweite der acht Unterbanden.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Eine Fehde gegen die Gafyr",
+                "text": "<p>Die Eingliederung hat seine eigenen Absichten nicht verdrängt. Die Sumpfnattern verfolgen ihre Geschäfte innerhalb des größeren Verbandes, kochen aber weitgehend ihr eigenes Süppchen. Cadwgan trägt den Gafyr den Verlust seines früheren Standes nach. Seine persönliche Vendetta richtet sich gegen das Haus und besonders gegen dessen Oberhaupt. Höfe, Wege und Besitzungen der Gafyr bekommen diese Fehde immer wieder zu spüren.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              },
+              {
+                "title": "Zwischen den Fundamenten Lycaths",
+                "text": "<p>Seinen Stützpunkt hat Cadwgan in den Ruinen Lycaths eingerichtet. Von der antiken Crannath-Festung sind alte Fundamente geblieben. Zwischen diesen Resten nutzen die Sumpfnattern behelfsmäßige Unterstände, Zelte und hölzerne Einfassungen als Lager.</p>",
+                "position": "afterWorks",
+                "mode": "text"
+              }
+            ],
+            "connectionsTitle": "Gefolgschaft und Feindschaft",
+            "connections": [
+              {
+                "name": "Haus Bwach · Gwaulwyn",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/icons/familie-bwch-v3.png",
+                "imageFormat": "square",
+                "detail": "Seine Herkunftsfamilie; ihr Bock zertritt die Natter, während sein heutiges Bandzeichen das umgekehrte Motiv zeigt."
+              },
+              {
+                "name": "Erster Leutnant · unbenannt",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-leutnant-1-v2.png",
+                "imageFormat": "portrait",
+                "detail": "Rechte Hand · Wachen und Überfälle. Ehemaliger Wachtmeister mit dunkelrotem Haar, ergrauendem Bart und gebrochener Nase. Schwarze Brigantine, grüne Schuppenpartien und schwere Panzerhandschuhe; auf den senkrechten Waffenschaft gestützt."
+              },
+              {
+                "name": "Zweiter Leutnant · unbenannt",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-alchemist-v1.png",
+                "imageFormat": "portrait",
+                "detail": "Linke Hand · Alchemie und Versorgung. Abtrünniger, exzentrischer Alchemist mit zerzaustem aschblondem Haar, bernsteinfarbenen Augen und runder Brille. Geflickter grüner Mantel, lederne Arbeitskleidung, kleine Fläschchen und ein beunruhigend begeistertes Grinsen."
+              },
+              {
+                "name": "Die Schwarzen Zitteraale",
+                "image": "/AleriaAlmanach/assets/schwarze-zitteraale/emblem.png",
+                "detail": "Übergeordneter Verband, der seine ursprüngliche Räuberbande eingliederte."
+              },
+              {
+                "name": "Haus Gafyr",
+                "image": "/Stammbäume/assets/images/houses/Llamreis Ankunft/haus-gafyr.png",
+                "detail": "Frühere Dienstherren und heutiges Ziel seiner persönlichen Vendetta."
+              }
+            ],
+            "documentsTitle": "Bandenakte und Hausdarstellung",
             "documents": [
               {
-                "title": "Die Schwarzen Zitteraale",
-                "text": "Bandenführung und Gruppenübersicht.",
-                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=schwarze-zitteraale"
+                "title": "Die Sumpfnattern",
+                "text": "Gruppenbio, Anführerbio, Hierarchie und interaktives Lager.",
+                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-ii"
+              },
+              {
+                "title": "Regulärer Ritter des Hauses Bwach",
+                "text": "Plattenrüstung mit Geißbock-Hornhelm, Schild, Schwert und Wappenrock in den Hausfarben.",
+                "link": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/figures/haus-bwach-ritter-v1.png"
               }
-            ]
+            ],
+            "footer": "Cadwgan Bwach · Die Grüne Natter · Lycath"
           }
         },
         {
@@ -130,14 +245,14 @@
           "commentThreadKey": "zitteraale-gruppe-ii-hierarchie",
           "hierarchyPage": true,
           "hierarchy": {
-            "organizationTitle": "Gruppe II.",
+            "organizationTitle": "Die Sumpfnattern",
             "eyebrow": "Schwarze Zitteraale · Gruppe II.",
             "subtitle": "Führung, Räuber und frühere Mitglieder",
-            "centerLabel": "Gruppe II.",
-            "emblem": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
-            "sideImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
-            "motto": "Gruppenname noch offen",
-            "description": "<p>Die Unterbande besitzt eigene Führung und ein vorbereitetes Aufgebot. Persönliche Besetzungen, Zuständigkeiten und Wirkungsgebiet sind noch offen.</p>",
+            "centerLabel": "Die Sumpfnattern",
+            "emblem": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/icons/icon-sumpfnattern-v1.png",
+            "sideImage": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/scenes/sumpfnattern-lycath-aussen-v1.png",
+            "motto": "Eine persönliche Fehde unter fremdem Banner.",
+            "description": "<p>Die Grüne Natter führt eine weitgehend eigenständig handelnde Unterbande der Schwarzen Zitteraale. Die rechte Hand koordiniert Räuber und Wachen; die linke Hand verantwortet Alchemie und Versorgung. Das vorbereitete Aufgebot umfasst sechzehn Räuberplätze.</p>",
             "detailsTitle": "Aufbau",
             "details": [
               {
@@ -177,9 +292,9 @@
                     "nodes": [
                       {
                         "id": "zitteraale-gruppe-ii-fuehrer",
-                        "title": "Gruppenführer · unbenannt",
+                        "title": "Cadwgan Bwach",
                         "subtitle": "⚑ Gruppenführer · Gruppe II.",
-                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/leader-ii-v1.png",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-gruene-natter-v2.png",
                         "text": "Führt die Unterbande, bestimmt ihre Aufträge und verteilt Beute und Verstärkungen. Hält über die beiden Stellvertreter Verbindung zum Bandenhaupt."
                       }
                     ]
@@ -190,17 +305,17 @@
                     "nodes": [
                       {
                         "id": "zitteraale-gruppe-ii-leutnant-1",
-                        "title": "Erster Leutnant",
-                        "subtitle": "⚑ Aktuelle Besetzung offen",
-                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
-                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                        "title": "Erster Leutnant · unbenannt",
+                        "subtitle": "⚑ Rechte Hand · Wachen und Überfälle",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-leutnant-1-v2.png",
+                        "text": "Koordiniert die zugewiesenen Räuber, Wachen und bewaffneten Überfälle. Vertritt die Gruppenführung bei der Durchsetzung ihrer Befehle."
                       },
                       {
                         "id": "zitteraale-gruppe-ii-leutnant-2",
-                        "title": "Zweiter Leutnant",
-                        "subtitle": "⚑ Aktuelle Besetzung offen",
-                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/portraits/rudelfuehrer.png",
-                        "text": "Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag."
+                        "title": "Zweiter Leutnant · unbenannt",
+                        "subtitle": "⚑ Linke Hand · Alchemie und Versorgung",
+                        "portrait": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/portraits/sumpfnattern-alchemist-v1.png",
+                        "text": "Verantwortet alchemistische Arbeiten und die zugehörigen Vorräte der Unterbande. Stimmt ihre Verwendung und die Versorgung mit der Gruppenführung ab."
                       }
                     ]
                   },
@@ -459,19 +574,19 @@
         },
         {
           "schemaVersion": 1,
-          "pageTitle": "Hauptquartier · Ort unbekannt",
+          "pageTitle": "Lager der Sumpfnattern · Lycath",
           "commentThreadKey": "zitteraale-gruppe-ii-hauptquartier",
-          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/banners/banner-blank-v1.png",
-          "imageWidth": 36,
-          "imageTall": true,
-          "imageFit": "contain",
-          "imagePosition": "center",
           "sessionPage": true,
-          "sessionIntro": "<p>Der Hauptquartiersort von Gruppe II. ist noch unbestimmt. Der Schauplatz, sein Zugang und seine Räume stehen für die spätere Ausarbeitung offen.</p>",
-          "sessionLocation": "",
-          "sessionHint": "Hauptquartiersort noch unbestimmt",
-          "sessionEmptyTitle": "Die Szene ist offen",
-          "sessionEmptyText": "Ein Schauplatz im Rückzugsraum dieser Unterbande.",
+          "image": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/scenes/sumpfnattern-lycath-lager-v1.png",
+          "imageWidth": 38,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionIntro": "<p>Zwischen den moosigen Fundamenten der alten Crannath-Festung Lycath stehen geflickte Zelte und roh gezimmerte Unterstände. Holzschirme und Palisadenstücke schließen die offenen Seiten des Lagers. Über dem größeren Zelt hängt das Zeichen der Sumpfnattern: die grüne Natter am Hals des sich aufbäumenden Bocks.</p><p>Am Feuer liegen einfache Bänke, unter einem Schutzdach stapeln sich Vorräte und Waffen. Seitlich steht ein Arbeitstisch mit Mörser und verkorkten Fläschchen. Hier findet die linke Hand der Grünen Natter Platz für ihre alchemistischen Arbeiten. Zwischen den Unterständen führen schmale Wege zurück in das Gehölz.</p><p>Cadwgans Schar dient den Schwarzen Zitteraalen und verfolgt zugleich ihre eigene Fehde gegen die Gafyr. Wer das Lager betritt, steht auf dem Boden dieser Unterbande.</p>",
+          "sessionLocation": "Lycath · Lager der Sumpfnattern",
+          "sessionHint": "Ruinen Lycaths · alte Fundamente, Holzunterstände und Zelte",
+          "sessionEmptyTitle": "Zwischen den alten Fundamenten",
+          "sessionEmptyText": "Die Szene im Lager der Sumpfnattern ist offen.",
           "sessionDateAleria": {
             "year": null,
             "month": null,

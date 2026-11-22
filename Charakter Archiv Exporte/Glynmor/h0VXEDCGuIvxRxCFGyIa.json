@@ -1,0 +1,277 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-11-22T15:23:31.739Z",
+  "assignedTab": "Gwynthor",
+  "source": {
+    "familyId": "glynmor",
+    "personId": "person-d665a54d"
+  },
+  "character": {
+    "id": "h0VXEDCGuIvxRxCFGyIa",
+    "name": "Meera Glynmor",
+    "title": "Zofe von Rianna Wyrm",
+    "fraktion": "Glynmor",
+    "role": "Zofe",
+    "status": "active",
+    "relevance": "minor",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Castell Wyrm",
+    "origin": "",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "identity": {
+      "worldPersonId": "person--glynmor--person-d665a54d"
+    },
+    "genealogy": {
+      "worldPersonId": "person--glynmor--person-d665a54d",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1715",
+      "death": "",
+      "houseId": "house-glynmor",
+      "houseName": "Glynmor",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "glynmor",
+          "personId": "person-d665a54d",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T15:23:31.739Z",
+          "lastSyncedAt": "2026-11-22T15:23:31.739Z",
+          "url": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-d665a54d",
+          "fingerprint": "{\"name\":\"Meera Glynmor\",\"title\":\"Zofe von Rianna Wyrm\",\"birth\":\"1715\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-glynmor\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-glynmor/person-d665a54d.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-2a5e7890\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-2a5e7890\",\"name\":\"Emlyn Glynmor\"},{\"personId\":\"person-64064dfd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-64064dfd\",\"name\":\"Eleri\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-2a5e7890",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-2a5e7890",
+            "name": "Emlyn Glynmor"
+          },
+          {
+            "personId": "person-64064dfd",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-64064dfd",
+            "name": "Eleri"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "imageSetSchemaVersion": 1,
+    "imageSets": [
+      {
+        "id": "standard",
+        "name": "Standard",
+        "portrait": null,
+        "emotes": [],
+        "createdAt": "2026-11-22T15:13:25.047Z",
+        "updatedAt": "2026-11-22T15:13:25.047Z"
+      }
+    ],
+    "activeImageSetId": "standard",
+    "portrait": "../Stammbäume/assets/images/portraits/haus-glynmor/person-d665a54d.jpg",
+    "emotes": [],
+    "emotesOverride": true,
+    "imageSetsOverride": true,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Vollständiger Name",
+          "value": "Meera Glynmor"
+        },
+        {
+          "label": "Haus",
+          "value": "Glynmor"
+        },
+        {
+          "label": "Titel / Anrede",
+          "value": "Zofe von Rianna Wyrm"
+        },
+        {
+          "label": "Geboren",
+          "value": "1715"
+        },
+        {
+          "label": "Geburtsort",
+          "value": "Gwynthor"
+        },
+        {
+          "label": "Gestorben",
+          "value": "Lebend"
+        },
+        {
+          "label": "Geschlecht",
+          "value": "weiblich"
+        },
+        {
+          "label": "Familienstand",
+          "value": "ledig"
+        },
+        {
+          "label": "Rang / Stand",
+          "value": ""
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Zofe"
+        },
+        {
+          "label": "Wohnsitz",
+          "value": ""
+        }
+      ],
+      "quote": "",
+      "quoteBy": "",
+      "biography": {
+        "biographyTitle": "Hintergrund – Wer ist sie?",
+        "biographyText": "<p>Meera Glynmor ist eine 25-jährige Bürgerliche aus Gwynthor und die persönliche Zofe von Lady Rianna Wyrm. Sie entstammt einer angesehenen Bürgerfamilie, die seit Generationen eng mit dem Haus Wyrm verbunden ist. Ihr Vater bekleidet das Amt des Vogtes der Familie, während ihr Großvater eine traditionsreiche Kerzenzieherei in Gwynthor betreibt.</p><br><p>Bereits im Alter von zwölf Jahren wurde Meera von ihrem Vater zur Zofe der damals sechsjährigen Rianna bestimmt. Seither steht sie ununterbrochen in deren Diensten.</p><p><br></p><p>Obwohl Meera eine hervorragend ausgebildete, gewissenhafte und loyale Bedienstete ist, empfindet sie ihre Stellung mittlerweile als persönliche Strafe. Der Grund dafür ist denkbar einfach: <strong>Sie kann Rianna Wyrm nicht ausstehen.</strong></p><br><p>Seit dreizehn Jahren erträgt Meera die Eigenheiten ihrer Herrin und bittet ihren Vater beinahe ebenso lange darum, endlich einer anderen Dame dienen zu dürfen. Bislang vergeblich.</p>",
+        "footer": "Personenakte · Meera Glynmor",
+        "portraitStages": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "portrait": "../Stammbäume/assets/images/portraits/haus-glynmor/person-d665a54d.jpg",
+        "knightMentors": [],
+        "sideWidth": 100,
+        "connectionPortraitHeight": 68,
+        "connectionTextOffset": 0,
+        "abilitiesTitle": "Persönlichkeit",
+        "abilities": [
+          {
+            "title": "Freundlich",
+            "detail": "Abseits ihrer Herrin ist Meera eine angenehme und umgängliche junge Frau.",
+            "icon": ""
+          },
+          {
+            "title": "Gewissenhaft",
+            "detail": "Sie nimmt ihre Aufgaben ernst und erfüllt ihre Pflichten mit großer Sorgfalt.",
+            "icon": ""
+          },
+          {
+            "title": "Loyal",
+            "detail": "Trotz ihrer persönlichen Abneigung gegenüber Rianna steht ihre Treue zum Haus Wyrm außer Frage.",
+            "icon": ""
+          },
+          {
+            "title": "Unterwürfig",
+            "detail": "Meera vermeidet offene Auseinandersetzungen mit Höhergestellten und fügt sich gewöhnlich deren Anweisungen.",
+            "icon": ""
+          },
+          {
+            "title": "Nachtragend",
+            "detail": "Kränkungen und unangenehme Erlebnisse vergisst sie nur schwer.",
+            "icon": ""
+          },
+          {
+            "title": "Geduldig",
+            "detail": "Zumindest äußerlich. Dreizehn Jahre im Dienst Riannas haben ihre Geduld allerdings erheblich strapaziert.",
+            "icon": ""
+          },
+          {
+            "title": "Zurückhaltend",
+            "detail": "Ihre Unzufriedenheit äußert sie meist durch knappe Antworten, leises Murmeln oder ein hörbar genervtes Ausatmen.",
+            "icon": ""
+          },
+          {
+            "title": "Erschöpft",
+            "detail": "Riannas Ansprüche und Eigenheiten halten Meera ständig auf Trab. Entsprechend häufig fühlt sie sich müde und ausgelaugt.",
+            "icon": ""
+          }
+        ],
+        "extraSections": [
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Geschichte & Vergangenheit",
+            "text": "Meera wurde in Gwynthor als Tochter der angesehenen Bürgerfamilie Glynmor geboren. Während ihr Vater im Dienst des Hauses Wyrm zum Vogt aufstieg, führte ihr Großvater die familieneigene Kerzenzieherei.\n\nIhre Kindheit war von einer guten Erziehung und den engen Beziehungen ihrer Familie zum Haus Wyrm geprägt. Schon früh lernte Meera die Grundlagen höfischer Umgangsformen und erhielt eine sorgfältige Ausbildung.\n\nIm Alter von zwölf Jahren bestimmte ihr Vater sie zur persönlichen Zofe der sechsjährigen Rianna Wyrm.\n\nWas zunächst eine ehrenvolle Stellung versprach, entwickelte sich für Meera zunehmend zu einer Belastung. Bereits zu Beginn ihres Dienstes konnte sie mit Riannas Wesen wenig anfangen. Daran änderten auch die folgenden Jahre nichts.\n\nObwohl sie ihre Aufgaben stets hervorragend erfüllte, bat Meera ihren Vater wiederholt um eine Versetzung. Dieser lehnte ihre Gesuche jedoch ab, da seine Tochter ihre Stellung ausgezeichnet ausfüllte und sich kaum jemand anderes für die Betreuung Riannas fand.\n\nSo dient Meera ihrer Herrin bis heute.\n\nEine willkommene Abwechslung bietet ihr die Kerzenzieherei ihres Großvaters. Dort hilft sie gelegentlich bei der Herstellung kunstvoller Arrangements und findet jene Ruhe, die sie in ihrem täglichen Dienst häufig vermisst."
+          },
+          {
+            "position": "afterWorks",
+            "mode": "text",
+            "title": "Geschichte & Wirkung",
+            "text": "Meera Glynmor gehört zu jenen Bediensteten, deren zuverlässige Arbeit den Alltag eines adeligen Haushalts überhaupt erst ermöglicht.\n\nIhre gewissenhafte Pflichterfüllung macht sie zu einer wertvollen Angehörigen des Hofpersonals. Zugleich zeigt ihre Geschichte, dass Loyalität gegenüber einem Adelshaus keineswegs persönliche Zuneigung zu jedem seiner Mitglieder voraussetzt.\n\nWährend Meera das Haus Wyrm aufrichtig schätzt, würde sie ihre Stellung bei Rianna ohne einen Augenblick des Zögerns gegen eine andere eintauschen.\n\nAbseits ihrer Pflichten ist sie eine freundliche junge Frau mit eigenen Interessen, familiären Bindungen und dem Wunsch nach einem ruhigeren Leben.\n\nBesonders die heimliche Zuneigung zu einem neunzehnjährigen Stallburschen könnte ihr künftig etwas Glück und Abwechslung verschaffen.\n\nBis dahin bleibt Meera jedoch, was sie seit dreizehn Jahren ist: eine hervorragende Zofe, die ihre Herrin am liebsten nie wiedersehen würde."
+          }
+        ],
+        "historyTitle": "Charakter",
+        "historyText": "<p>Meera ist grundsätzlich eine freundliche, hilfsbereite und pflichtbewusste junge Frau, die sich mit den meisten Menschen ausgezeichnet versteht. Unter den Bediensteten des Hauses Wyrm ist sie beliebt, nicht zuletzt, weil viele ihre schwierige Stellung kennen und aufrichtiges Mitleid mit ihr empfinden.</p><br><p>Ihre Abneigung gegenüber Rianna besteht bereits seit Beginn ihrer gemeinsamen Zeit. Es gab keinen einzelnen Vorfall, der das Verhältnis zerstörte. Vielmehr konnte Meera ihre Herrin von Anfang an nicht leiden. Riannas Persönlichkeit, ihre Ansprüche und ihre gesamte Art gehen ihr gehörig gegen den Strich.</p><br><p>Dennoch lässt Meera sich bei ihrer Arbeit kaum etwas zuschulden kommen. Sie führt Anweisungen aus, wahrt die höfischen Umgangsformen und begegnet Rianna mit dem gebotenen Respekt. Ihre Missbilligung zeigt sich meist lediglich in knappen Antworten, einem tiefen Seufzer oder gelegentlichem Murmeln.</p><br><p>Besonders unangenehm empfindet sie Situationen, in denen sie mit Rianna allein sein muss. Dann fällt es ihr bisweilen schwer, ihre Beherrschung zu bewahren.</p><br><p>Meera respektiert durchaus Riannas ritterlichen Stand und ihre Fähigkeiten als Ritterin. Dieser Respekt erstreckt sich allerdings ausdrücklich nicht auf Rianna als Person.</p><br><p>Trotz allem würde Meera ihre Herrin niemals bewusst einer ernsthaften Gefahr aussetzen. Ihr Pflichtbewusstsein und ihre Menschlichkeit stehen über ihrer persönlichen Abneigung.</p><br><p>Ihre größte Schwäche ist ihre Nachtragendheit. Meera vergisst kaum eine Unannehmlichkeit, die sie im Dienst Riannas erdulden musste. Dadurch hat sich ihre Unzufriedenheit über die Jahre immer weiter verfestigt.</p>",
+        "worksTitle": "Können & Fähigkeiten",
+        "works": [
+          "Höfischer Dienst - Meera ist eine ausgezeichnete Zofe und beherrscht sämtliche Aufgaben, die mit der persönlichen Betreuung einer adeligen Dame verbunden sind.",
+          "Etikette - Sie kennt die höfischen Umgangsformen und weiß, wie sie sich gegenüber Adeligen und Vorgesetzten zu verhalten hat.",
+          "Lesen und Schreiben - Meera verfügt über eine gute Bildung und hat vermutlich auch Unterricht an einer Schreiberschule erhalten.",
+          "Kleiderpflege und Ankleiden - Sie kümmert sich gewissenhaft um Riannas Garderobe, deren Vorbereitung und die alltägliche Ausstattung ihrer Herrin.",
+          "Kerzenkunst - Durch die Kerzenzieherei ihres Großvaters besitzt Meera ein besonderes Geschick für die Herstellung und Gestaltung kunstvoller Kerzenarrangements.",
+          "Dekoration - Sie versteht es, Kerzen, Bänder und florale Elemente zu ansprechenden Schmuckstücken für Räume und festliche Anlässe zusammenzustellen.",
+          "Organisation - Dreizehn Jahre im persönlichen Dienst einer anspruchsvollen Herrin haben sie gelehrt, auch bei zahlreichen gleichzeitigen Aufgaben den Überblick zu behalten."
+        ],
+        "triviaTitle": "Trivia",
+        "trivia": [
+          "Meera bittet ihren Vater regelmäßig darum, einer anderen Dame dienen zu dürfen. Ihre Gesuche bleiben ebenso regelmäßig erfolglos.",
+          "Unter den übrigen Zofen ist sie beliebt. Viele bemitleiden sie wegen ihrer Stellung.",
+          "Sie liest gerne den Flüsterfächer und ist stets an Neuigkeiten interessiert.",
+          "Meera liebt Kuchen und besucht besonders gerne die Konditorei Zum Honigtörtchen.",
+          "Sie geht gerne spazieren, vor allem wenn sie dabei etwas Abstand von ihren Pflichten gewinnen kann.",
+          "In ihrer Freizeit gestaltet sie kunstvolle Kerzenarrangements in der Werkstatt ihres Großvaters.",
+          "Sie hat ein gutes Verhältnis zu einem neunzehnjährigen Stallburschen. Man flüstert über eine mögliche Affäre.",
+          "Wenn sie nervös oder besonders genervt ist, kaut Meera gelegentlich an ihren Fingernägeln oder murmelt leise vor sich hin.",
+          "Eine aufrichtige Danksagung Riannas würde sie vermutlich nicht rühren, sondern zutiefst misstrauisch machen.",
+          "Ihr größter, wenn auch wenig damenhafter Wunsch ist es, Rianna wenigstens ein einziges Mal eine gehörige Ohrfeige zu verpassen. Tatsächlich würde sie sich eine solche Handlung jedoch kaum erlauben.",
+          "Sollte Meera jemals die Möglichkeit erhalten, einer anderen Dame zu dienen, würde sie diese ohne Zögern ergreifen."
+        ],
+        "quotesTitle": "Zitate",
+        "quotes": [],
+        "connectionsTitle": "Familie und Verwandtschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Emlyn Glynmor",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-2a5e7890.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "Eleri",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-64064dfd.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          }
+        ],
+        "documentsTitle": "Familienakte",
+        "documents": [
+          {
+            "title": "Familie Glynmor",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+            "text": "Personenkarte und Verwandtschaft im Stammbaum.",
+            "link": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-d665a54d"
+          },
+          {
+            "title": "Kerzenmacherei Glynmor",
+            "text": "Laden, Ziehwerkstatt und Zierkammer in Gwynthor-Stadt.",
+            "link": "../AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-kerzenmacherei-glynmor"
+          }
+        ],
+        "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png"
+      },
+      "pageTitle": "Meera Glynmor"
+    },
+    "age": 25
+  }
+}

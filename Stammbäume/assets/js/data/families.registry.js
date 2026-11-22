@@ -52,6 +52,7 @@ import { GWENDOLYNS_UFER_HOUSE_FAMILIES } from './gwendolyns-ufer-house-families
 import { GWYNTHOR_COMMONER_HOUSE_FAMILIES } from './gwynthor-commoner-house-families.js?v=20261106-gwernant-v1';
 import { HOUSE_BRADRHITH_FAMILY } from './house-bradrhith-family.js';
 import { HOUSE_PERLLAN_FAMILY } from './house-perllan-family.js';
+import { HOUSE_GLYNMOR_FAMILY } from './house-glynmor-family.js';
 import { HOUSE_MELOG_FAMILY } from './house-melog-family.js';
 import { HOUSE_PERT_FAMILY } from './house-pert-family.js';
 import { HOUSE_VELTRANE_FAMILY } from './eleganz-family-records.js';
@@ -188,6 +189,7 @@ export const FAMILY_REGISTRY = Object.freeze([
   familyRecord({ id: 'pert', title: 'Familie Pert', family: HOUSE_PERT_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'melog', title: 'Familie Melog', family: HOUSE_MELOG_FAMILY, type: 'commoner' }),
   familyRecord({ id: 'perllan', title: 'Familie Perllan', family: HOUSE_PERLLAN_FAMILY, type: 'commoner' }),
+  familyRecord({ id: 'glynmor', title: 'Familie Glynmor', family: HOUSE_GLYNMOR_FAMILY, type: 'commoner' }),
   familyRecord({id:'haus-hamnett',title:'Haus Hamnett',family:HOUSE_HAMNETT_FAMILY,type:'commoner'}),
   ...CENYR_TERRITORY_COMMONER_FAMILIES.map(family => familyRecord({
     id: family.document.id, title: family.document.title, family, type: 'commoner'

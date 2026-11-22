@@ -1,16 +1,20 @@
 import { LOADING_SCREEN_JOURNEYS, mountLoadingScreenJourney } from './loading-screen-journey.js?v=20261120-rosenflucht-v11';
 import { HEROLDS_COUNCIL, mountLoadingScreenCouncil } from './loading-screen-council.js?v=20261120-chibi-courtyard-v8';
 import { OWETAS_COURTYARD, mountLoadingScreenCourtyard } from './loading-screen-courtyard.js?v=20261120-rosenflucht-v11';
-import { TIEFENWYRM_CHASE, mountLoadingScreenTiefenwyrm } from './loading-screen-tiefenwyrm.js?v=20261120-rosenflucht-v11';
+import { TIEFENWYRM_CHASE, mountLoadingScreenTiefenwyrm } from './loading-screen-tiefenwyrm.js?v=20261122-carys-archery-v1';
 import { LOADING_SCREEN_VIGNETTES, mountLoadingScreenVignette } from './loading-screen-vignettes.js?v=20261120-ruhige-szenen-v1';
+import { REFRI_FITTING_ROOM, mountLoadingScreenFittingRoom } from './loading-screen-fitting-room.js?v=20261122-refri-anprobe-v2';
+import { CARYS_ARCHERY, mountLoadingScreenArchery } from './loading-screen-archery.js?v=20261122-carys-archery-v1';
 
 const assetRoot = new URL('../../public/assets/loading-screen/', import.meta.url);
 const lastSceneKey = 'almanach.loadingScene';
 export const LOADING_SCREEN_SCENES = [
-  OWETAS_COURTYARD, ...LOADING_SCREEN_JOURNEYS, TIEFENWYRM_CHASE, HEROLDS_COUNCIL, ...LOADING_SCREEN_VIGNETTES
+  OWETAS_COURTYARD, ...LOADING_SCREEN_JOURNEYS, TIEFENWYRM_CHASE, HEROLDS_COUNCIL,
+  REFRI_FITTING_ROOM, CARYS_ARCHERY, ...LOADING_SCREEN_VIGNETTES
 ];
 const sceneMounts = { journey: mountLoadingScreenJourney, council: mountLoadingScreenCouncil,
   courtyard: mountLoadingScreenCourtyard, 'rose-chase': mountLoadingScreenTiefenwyrm,
+  'fitting-room': mountLoadingScreenFittingRoom, 'blanket-archery': mountLoadingScreenArchery,
   vignette: mountLoadingScreenVignette };
 
 export function chooseLoadingScreenScene({ random = Math.random, storage } = {}) {
@@ -72,13 +76,13 @@ export function mountLoadingScreenScene(scene, { signal, onGameActivity, isMusic
       onGameActivity?.(active);
     }
   });
-  if (!showSpeaker) return null;
+  if (!variant.cast) return null;
 
   function updateBanter() {
     const active = playing && !gameActive && !signal?.aborted;
     if (banter) { banter.setActive(active); return; }
     if (!active || banterRequest) return;
-    banterRequest = import('./loading-screen-banter.js?v=20261120-rosenflucht-v11')
+    banterRequest = import('./loading-screen-banter.js?v=20261122-carys-archery-v1')
       .then(({ mountLoadingScreenBanter }) => {
         if (signal?.aborted) return;
         banter = mountLoadingScreenBanter(scene, { variant, signal, showSpeaker });

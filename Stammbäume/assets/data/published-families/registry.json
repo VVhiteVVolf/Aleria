@@ -677,30 +677,34 @@
     {
       "id": "glynmor",
       "familyId": "glynmor",
-      "title": "Glynmor",
+      "title": "Familie Glynmor",
       "motto": "",
-      "emblem": "https://i.imgur.com/NrT4I6V.jpeg",
-      "folderPath": [],
+      "emblem": "assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+      "folderPath": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Gwynthor"
+      ],
       "houseProfile": {
         "rankId": "commoner",
-        "seat": "",
-        "barony": "",
-        "county": "",
-        "kingdom": "",
+        "seat": "Gwynthor",
+        "barony": "Llamreis Ankunft",
+        "county": "Celtigerns Wacht",
+        "kingdom": "Cenyr",
         "secondarySeats": [],
-        "liegeHouseId": "",
-        "liegeHouseName": "",
+        "liegeHouseId": "house-draig",
+        "liegeHouseName": "Haus Draig",
         "regionEmblems": {
-          "seat": "",
-          "barony": "",
-          "county": "",
-          "kingdom": ""
+          "seat": "assets/images/regions/gwynthor.png",
+          "barony": "assets/images/regions/llamreis-ankunft.png",
+          "county": "assets/images/regions/celtigerns-wacht.png",
+          "kingdom": "assets/images/regions/koenigreich-cenyr.png"
         }
       },
       "personCount": 34,
-      "sourceRevision": 0,
-      "revision": 1,
-      "updatedAt": "2026-11-22T15:10:56.994Z",
+      "revision": 2,
+      "updatedAt": "2026-11-22T18:03:17.496Z",
       "link": "Stammbaum.html?family=glynmor&mode=view",
       "source": "github"
     },

@@ -1,0 +1,228 @@
+{
+  "version": 2,
+  "scene": "carys-schiessuebung",
+  "teaser": {
+    "source": {
+      "file": "assets/loading-screen/source/carys-schiessuebung-v2.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frames": 1,
+      "bytes": 2393149,
+      "sha256": "9046a2aa6ef04a9dd396c970ec7d55257a13538f260725cc5f1ca56d63c510ed"
+    },
+    "assets": [
+      {
+        "file": "public/assets/loading-screen/carys-schiessuebung-v2-desktop.avif",
+        "size": [
+          1440,
+          810
+        ],
+        "frames": 1,
+        "bytes": 102430,
+        "sha256": "d49cbc6f1953bed99992c5a03675b467f9abbd905ee842449dda6075e4acc792"
+      },
+      {
+        "file": "public/assets/loading-screen/carys-schiessuebung-v2-mobile.avif",
+        "size": [
+          768,
+          432
+        ],
+        "frames": 1,
+        "bytes": 41201,
+        "sha256": "f77360d5855b9ff117457ea1c90cb05ff5668cfab745c55dd35ac032c8dc6af9"
+      },
+      {
+        "file": "public/assets/loading-screen/carys-schiessuebung-v2-fallback.webp",
+        "size": [
+          1280,
+          720
+        ],
+        "frames": 1,
+        "bytes": 138284,
+        "sha256": "918aff13de1416f5a16651db474ddb15ed943db40fcfb2740086e044c893a1b1"
+      }
+    ]
+  },
+  "room": {
+    "source": {
+      "file": "assets/loading-screen/source/carys-schiesshalle-v2.png",
+      "size": [
+        1672,
+        941
+      ],
+      "frames": 1,
+      "bytes": 2317417,
+      "sha256": "25d5e2aa84c20d7c6bb13e16d2835bdeb946cf5148349d8f6c9261ccfcc499d1"
+    },
+    "asset": {
+      "file": "public/assets/loading-screen/carys-schiesshalle-v2.webp",
+      "size": [
+        1280,
+        720
+      ],
+      "frames": 1,
+      "bytes": 176954,
+      "sha256": "fa251489cca688bd79b8a706b40805c80380a723d6c075eed768cf78110cdc7e"
+    }
+  },
+  "carys": {
+    "source": {
+      "file": "assets/loading-screen/source/carys-bogen-posen-v1.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "frames": 1,
+      "bytes": 2190380,
+      "sha256": "11a40dcb123c3eb5a44a73c59a6b51d27ebd40febf4bed66d48850b739e3b45c"
+    },
+    "asset": {
+      "file": "public/assets/loading-screen/carys-bogen-posen-v1.webp",
+      "size": [
+        720,
+        480
+      ],
+      "frames": 1,
+      "bytes": 98046,
+      "sha256": "e2fa168da54a9f8913a8362aa40e5cb88e79c5ced112e8caa9806d27ce405ba0"
+    },
+    "cell": 240,
+    "columns": 3,
+    "rows": 2,
+    "poses": [
+      "ready",
+      "raise",
+      "draw",
+      "full",
+      "release",
+      "win"
+    ]
+  },
+  "einion": {
+    "source": {
+      "file": "assets/loading-screen/source/einion-block-posen-v1.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "frames": 1,
+      "bytes": 2286354,
+      "sha256": "16a602396c4bb5eb8d2b55162930a6fa9520b168886df5aea8b1010d9c53bbcf"
+    },
+    "asset": {
+      "file": "public/assets/loading-screen/einion-block-posen-v1.webp",
+      "size": [
+        720,
+        480
+      ],
+      "frames": 1,
+      "bytes": 89108,
+      "sha256": "e4a48e004d6c480532725b66767deeb0de0b434fbe167bb02e80a3e7db0ea2d4"
+    },
+    "cell": 240,
+    "columns": 3,
+    "rows": 2,
+    "poses": [
+      "ready",
+      "side-a",
+      "side-b",
+      "hop",
+      "surprise",
+      "relief"
+    ]
+  },
+  "arrows": {
+    "side": {
+      "source": {
+        "file": "assets/loading-screen/source/carys-pfeil-seite-v1.png",
+        "size": [
+          2172,
+          724
+        ],
+        "frames": 1,
+        "bytes": 308129,
+        "sha256": "af3084b0b527fc8482bc4b994b07dbd584b164e0516809934fa11f23a82c3670"
+      },
+      "asset": {
+        "file": "public/assets/loading-screen/carys-pfeil-seite-v1.webp",
+        "size": [
+          440,
+          53
+        ],
+        "frames": 1,
+        "bytes": 6658,
+        "sha256": "aee6cf1606827cd4c4591a8e7cb23b30933a71642b5a7d2721868c9897659dec"
+      }
+    },
+    "rear": {
+      "source": {
+        "file": "assets/loading-screen/source/carys-pfeil-einschlag-v1.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "frames": 1,
+        "bytes": 841530,
+        "sha256": "16d7ce21c80bb55384cc88da83b4941b60b24b0aa9ccc7904d75fe6fbb9348e9"
+      },
+      "asset": {
+        "file": "public/assets/loading-screen/carys-pfeil-einschlag-v1.webp",
+        "size": [
+          108,
+          112
+        ],
+        "frames": 1,
+        "bytes": 4986,
+        "sha256": "1a61403a11da50b65a80bdd8be87706053008a590da5ea9babe3fe015da683d0"
+      }
+    }
+  },
+  "reactions": {
+    "crying": {
+      "source": {
+        "file": "assets/loading-screen/source/einion-weinen-v1.png",
+        "size": [
+          1182,
+          1330
+        ],
+        "frames": 1,
+        "bytes": 1354767,
+        "sha256": "7d70f2f5456467cf1b816f5fe6dbcb05861248849762aeab6813ad54f632d0fc"
+      },
+      "asset": {
+        "file": "public/assets/loading-screen/einion-weinen-v1.webp",
+        "size": [
+          231,
+          430
+        ],
+        "frames": 1,
+        "bytes": 36048,
+        "sha256": "54183975a484ba59351a6e5df2aa622c01ccb53269eda945367800b1d52f4117"
+      }
+    },
+    "wynonna": {
+      "source": {
+        "file": "assets/loading-screen/source/wynonna-schimpfen-v1.png",
+        "size": [
+          1199,
+          1312
+        ],
+        "frames": 1,
+        "bytes": 1418110,
+        "sha256": "903f367a50fbe5ff7ce19eb0c92d3cab5d188673dc89a8fb0dc3116e563bd7d1"
+      },
+      "asset": {
+        "file": "public/assets/loading-screen/wynonna-schimpfen-v1.webp",
+        "size": [
+          269,
+          430
+        ],
+        "frames": 1,
+        "bytes": 40018,
+        "sha256": "e03a616b16089e1cab663bc9aef1558cd9d71e22cf3d83933082ab92f02755d0"
+      }
+    }
+  }
+}

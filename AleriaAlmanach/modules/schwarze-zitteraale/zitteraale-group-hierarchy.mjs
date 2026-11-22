@@ -39,11 +39,11 @@ function formerMembers(group, deceased) {
 export function buildZitteraaleGroupHierarchy(group) {
   return {
     organizationTitle: group.name, eyebrow: `Schwarze Zitteraale · Gruppe ${group.numeral}.`,
-    subtitle: 'Führung, Räuber und frühere Mitglieder', centerLabel: group.name, emblem: group.banner,
-    sideImage: group.banner, motto: group.detailed ? 'Ein Zeichen für den Verfall.' : 'Gruppenname noch offen',
-    description: group.detailed
+    subtitle: 'Führung, Räuber und frühere Mitglieder', centerLabel: group.name, emblem: group.emblem || group.banner,
+    sideImage: group.emblem ? group.overviewImage : group.banner, motto: group.motto || (group.detailed ? 'Ein Zeichen für den Verfall.' : 'Gruppenname noch offen'),
+    description: group.hierarchyDescription || (group.detailed
       ? '<p>Ein Gruppenführer und zwei Leutnants führen das aktive Aufgebot. Nach den schweren Verlusten gegen Sir Rhys Draig wurden die Reihen mit Rekruten und Mitgliedern aus dem Bandenhauptquartier aufgefüllt.</p>'
-      : '<p>Die Unterbande besitzt eigene Führung und ein vorbereitetes Aufgebot. Persönliche Besetzungen, Zuständigkeiten und Wirkungsgebiet sind noch offen.</p>',
+      : '<p>Die Unterbande besitzt eigene Führung und ein vorbereitetes Aufgebot. Persönliche Besetzungen, Zuständigkeiten und Wirkungsgebiet sind noch offen.</p>'),
     detailsTitle: 'Aufbau', details: [
       { icon: '⚑', label: 'Führung', value: 'Ein Gruppenführer und zwei Leutnants' },
       { icon: '⚔', label: 'Räuber', value: 'Sechzehn Plätze in vier Viererreihen' },
@@ -55,13 +55,15 @@ export function buildZitteraaleGroupHierarchy(group) {
     trees: [
       { id: 'fuehrung', label: 'Führung und Räuber', parentTreeId: '', levels: [
         { label: 'Gruppenführung', nodes: [buildZitteraaleGroupLeader(group)] },
-        { label: 'Leutnants', columns: 2, nodes: [1, 2].map(rank => ({
+        { label: 'Leutnants', columns: 2, nodes: [1, 2].map(rank => {
+          const lieutenant = group.lieutenants?.[rank - 1] || (group.detailed ? UNTOTE_AELE_LIEUTENANTS[rank - 1] : null);
+          return {
           id: `${group.id}-leutnant-${rank}`,
-          title: group.detailed ? UNTOTE_AELE_LIEUTENANTS[rank - 1].title : `${rank === 1 ? 'Erster' : 'Zweiter'} Leutnant`,
-          subtitle: group.detailed ? `⚑ ${UNTOTE_AELE_LIEUTENANTS[rank - 1].role}` : '⚑ Aktuelle Besetzung offen',
-          portrait: group.detailed ? UNTOTE_AELE_LIEUTENANTS[rank - 1].portrait : anonymousLeader,
-          text: 'Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag.'
-        })) },
+          title: lieutenant?.title || `${rank === 1 ? 'Erster' : 'Zweiter'} Leutnant`,
+          subtitle: lieutenant ? `⚑ ${lieutenant.role}` : '⚑ Aktuelle Besetzung offen',
+          portrait: lieutenant?.portrait || anonymousLeader,
+          text: lieutenant?.text || 'Unterstützt die Gruppenführung und koordiniert die zugewiesenen Räuber. Übernimmt Einsatzführung, Wachen und Rückzug auf deren Auftrag.'
+        }; }) },
         ...Array.from({ length: 4 }, (_, row) => ({ label: `Räuber · Reihe ${row + 1}`, columns: 4,
           nodes: Array.from({ length: 4 }, (_, column) => ({
             id: `${group.id}-raeuber-${row * 4 + column + 1}`, title: 'Schwarzer Zitteraal · Räuber', subtitle: '⚔ Unbenannt',

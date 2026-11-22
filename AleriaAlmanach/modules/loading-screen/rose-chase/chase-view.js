@@ -1,5 +1,5 @@
 import { TRACK } from './chase-state.js?v=20261120-rosenflucht-v11';
-import { createChaseStage } from './chase-stage.js?v=20261120-rosenflucht-v11';
+import { createChaseStage } from './chase-stage.js?v=20261122-carys-archery-v1';
 
 const openingLine = { speaker: 'Gwendolyn', text: 'WER WAR DAS?! Meine Rosenhecke!', fromGarden: true };
 const lines = [

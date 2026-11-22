@@ -1,0 +1,359 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--glynmor--person-c149f692",
+  "slug": "nefyn-glynmor",
+  "identity": {
+    "name": "Nefyn Glynmor",
+    "aliases": [],
+    "worldPersonId": "person--glynmor--person-c149f692"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "glynmor",
+      "label": "Familie Glynmor"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "glynmor",
+        "familyTitle": "Familie Glynmor",
+        "personId": "person-c149f692",
+        "worldPersonId": "person--glynmor--person-c149f692",
+        "houseId": "house-glynmor",
+        "houseName": "Glynmor",
+        "familyRole": "core",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Nefyn Glynmor\",\"title\":\"\",\"birth\":\"1734\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-glynmor\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-glynmor/person-c149f692.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-f1b4fd4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-f1b4fd4f\",\"name\":\"Ilar Glynmor\"},{\"personId\":\"person-f8371211\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-f8371211\",\"name\":\"Lleucu\"}],\"partners\":[],\"children\":[]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--glynmor--person-c149f692",
+      "documentIds": [
+        "person--glynmor--person-c149f692"
+      ],
+      "documents": [
+        {
+          "documentId": "person--glynmor--person-c149f692",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "glynmor",
+        "personId": "person-c149f692",
+        "worldPersonId": "person--glynmor--person-c149f692",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Glynmor/person--glynmor--person-c149f692.json",
+    "sourceExportedAt": "2026-11-22T15:23:31.739Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--glynmor--person-c149f692"
+    ],
+    "contentHash": "8a6d305f96820492521bf652a53644c6a1062559f5c5dfdb700e839c469546a8"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "glynmor"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Nefyn Glynmor",
+        "title": "",
+        "fraktion": "Glynmor",
+        "role": "",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "",
+        "origin": "",
+        "bio": "",
+        "aliases": [],
+        "archived": false,
+        "portrait": "../Stammbäume/assets/images/portraits/haus-glynmor/person-c149f692.jpg",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Nefyn Glynmor",
+          "stats": [
+            {
+              "label": "Haus",
+              "value": "Glynmor"
+            },
+            {
+              "label": "Stand",
+              "value": "Bürgerlich"
+            },
+            {
+              "label": "Geboren",
+              "value": "1734"
+            },
+            {
+              "label": "Lebensstatus",
+              "value": "Lebend"
+            }
+          ],
+          "biography": {
+            "biographyTitle": "Nefyn Glynmor",
+            "biographyText": "<p>Nefyn Glynmor gehört zur Gwynthorer Bürgerfamilie Glynmor.</p>",
+            "footer": "Personenakte · Nefyn Glynmor",
+            "portrait": "../Stammbäume/assets/images/portraits/haus-glynmor/person-c149f692.jpg",
+            "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+            "connectionsTitle": "Familie und Verwandtschaft",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Ilar Glynmor",
+                "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-f1b4fd4f.jpg",
+                "imageFormat": "portrait",
+                "detail": "Elternteil"
+              },
+              {
+                "type": "connection",
+                "name": "Lleucu",
+                "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-f8371211.jpg",
+                "imageFormat": "portrait",
+                "detail": "Elternteil"
+              }
+            ],
+            "documentsTitle": "Familienakte",
+            "documents": [
+              {
+                "title": "Familie Glynmor",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+                "text": "Personenkarte und Verwandtschaft im Stammbaum.",
+                "link": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-c149f692"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--glynmor--person-c149f692"
+        },
+        "genealogy": {
+          "worldPersonId": "person--glynmor--person-c149f692",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1734",
+          "death": "",
+          "houseId": "house-glynmor",
+          "houseName": "Glynmor",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "glynmor",
+              "personId": "person-c149f692",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-22T15:23:31.739Z",
+              "lastSyncedAt": "2026-11-22T15:23:31.739Z",
+              "url": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-c149f692",
+              "fingerprint": "{\"name\":\"Nefyn Glynmor\",\"title\":\"\",\"birth\":\"1734\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-glynmor\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-glynmor/person-c149f692.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-f1b4fd4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-f1b4fd4f\",\"name\":\"Ilar Glynmor\"},{\"personId\":\"person-f8371211\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-f8371211\",\"name\":\"Lleucu\"}],\"partners\":[],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "person-f1b4fd4f",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--glynmor--person-f1b4fd4f",
+                "name": "Ilar Glynmor"
+              },
+              {
+                "personId": "person-f8371211",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--glynmor--person-f8371211",
+                "name": "Lleucu"
+              }
+            ],
+            "partners": [],
+            "children": []
+          }
+        },
+        "id": "person--glynmor--person-c149f692",
+        "age": 6
+      }
+    ]
+  },
+  "character": {
+    "name": "Nefyn Glynmor",
+    "title": "",
+    "fraktion": "Glynmor",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "portrait": "../Stammbäume/assets/images/portraits/haus-glynmor/person-c149f692.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Nefyn Glynmor",
+      "stats": [
+        {
+          "label": "Haus",
+          "value": "Glynmor"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Geboren",
+          "value": "1734"
+        },
+        {
+          "label": "Lebensstatus",
+          "value": "Lebend"
+        }
+      ],
+      "biography": {
+        "biographyTitle": "Nefyn Glynmor",
+        "biographyText": "<p>Nefyn Glynmor gehört zur Gwynthorer Bürgerfamilie Glynmor.</p>",
+        "footer": "Personenakte · Nefyn Glynmor",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-glynmor/person-c149f692.jpg",
+        "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+        "connectionsTitle": "Familie und Verwandtschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Ilar Glynmor",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-f1b4fd4f.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "Lleucu",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-f8371211.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          }
+        ],
+        "documentsTitle": "Familienakte",
+        "documents": [
+          {
+            "title": "Familie Glynmor",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+            "text": "Personenkarte und Verwandtschaft im Stammbaum.",
+            "link": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-c149f692"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--glynmor--person-c149f692"
+    },
+    "genealogy": {
+      "worldPersonId": "person--glynmor--person-c149f692",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1734",
+      "death": "",
+      "houseId": "house-glynmor",
+      "houseName": "Glynmor",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "glynmor",
+          "personId": "person-c149f692",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T15:23:31.739Z",
+          "lastSyncedAt": "2026-11-22T15:23:31.739Z",
+          "url": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-c149f692",
+          "fingerprint": "{\"name\":\"Nefyn Glynmor\",\"title\":\"\",\"birth\":\"1734\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-glynmor\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-glynmor/person-c149f692.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-f1b4fd4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-f1b4fd4f\",\"name\":\"Ilar Glynmor\"},{\"personId\":\"person-f8371211\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-f8371211\",\"name\":\"Lleucu\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-f1b4fd4f",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-f1b4fd4f",
+            "name": "Ilar Glynmor"
+          },
+          {
+            "personId": "person-f8371211",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-f8371211",
+            "name": "Lleucu"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--glynmor--person-c149f692",
+    "age": 6
+  }
+}

@@ -5,6 +5,11 @@ import { confirmCharacterRecordProjection, hasNewerCharacterRecordProjection } f
 import { mergeCharacterRecordProjections } from '../../../CharakterDatenbank/lib/character-record-projections.mjs';
 import { buildPertCharacterExports, pertCandidates, PERT_CHARACTER_FEATURE, PERT_KEVAN_ID, PERT_EXISTING_CHARACTER_FIELDS } from './character-content.mjs';
 
+// Gwerfyl (1668, married to Iorwerth) and Gwerfyl (1666, married to Tudur)
+// have their own identities in the Pert and Glynmor family trees.
+const PERT_GWERFYL = 'person--pert--person-e6511832';
+const GLYNMOR_GWERFYL = 'person--glynmor--person-d5104764';
+
 // Apply this content to the caller's own database basis. In particular, a public
 // release must retain its public inventory/history rather than copy Main's.
 export function projectPertCharacterDatabase({ registry, snapshot, report, existingRecords }, familyRecord) {
@@ -22,9 +27,13 @@ export function projectPertCharacterDatabase({ registry, snapshot, report, exist
   assert.ok(!existingKevan.identity.worldPersonId || existingKevan.identity.worldPersonId === 'person--pert--person-52becf61');
   const identityAudit = candidates.map(candidate => {
     const expectedId = candidate.personId === 'person-52becf61' ? PERT_KEVAN_ID : candidate.worldPersonId;
-    const matches = snapshot.characters.filter(person => person.id === expectedId
-      || [person.identity?.worldPersonId, person.genealogy?.worldPersonId].includes(candidate.worldPersonId)
-      || normalizeCharacterDatabaseKey(person.name) === normalizeCharacterDatabaseKey(candidate.displayName));
+    const matches = snapshot.characters.filter(person => {
+      const worldIds = [person.identity?.worldPersonId, person.genealogy?.worldPersonId];
+      if (person.id === expectedId || worldIds.includes(candidate.worldPersonId)) return true;
+      const separateGwerfyl = candidate.worldPersonId === PERT_GWERFYL
+        && person.id === GLYNMOR_GWERFYL && worldIds.every(id => id === GLYNMOR_GWERFYL);
+      return !separateGwerfyl && normalizeCharacterDatabaseKey(person.name) === normalizeCharacterDatabaseKey(candidate.displayName);
+    });
     assert.ok(matches.every(person => person.id === expectedId), `Fremde Namens-/Weltidentität für ${candidate.displayName}; fachlichen Abgleich zuerst durchführen.`);
     return { personId: candidate.personId, worldPersonId: candidate.worldPersonId, runtimeId: expectedId,
       name: candidate.displayName, matchedRuntimeIds: matches.map(person => person.id) };

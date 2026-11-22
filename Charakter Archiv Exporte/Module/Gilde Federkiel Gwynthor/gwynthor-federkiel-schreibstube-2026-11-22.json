@@ -1,0 +1,159 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-22T00:00:00+01:00",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gilde Federkiel - Gwynthor",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Gilde Federkiel - Gwynthor"
+      ],
+      "iconUrl": "./assets/federkiel-gwynthor/aushangeschild-v1.webp",
+      "desc": "Gwynthors Zentralpost, Schreibstube, Druckerei, Kuriergestüt und Postlager."
+    },
+    "entry": {
+      "id": "gwynthor-federkiel-schreibstube",
+      "title": "Die Schreibstube",
+      "subtitle": "Schreibplätze, Diktat und Vorlesen",
+      "type": "Betriebsstelle der Gilde Federkiel",
+      "category": "Gilde Federkiel - Gwynthor",
+      "symbol": "./assets/federkiel-gwynthor/aushangeschild-v1.webp",
+      "image": "./assets/federkiel-gwynthor/scenes/schreibstube-v1.webp",
+      "previewImage": "./assets/federkiel-gwynthor/scenes/schreibstube-v1.webp",
+      "stamp": "FEDERKIEL · GWYNTHOR",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Schreibstube · Aufbau",
+          "commentThreadKey": "federkiel-schreibstube-aufbau",
+          "image": "./assets/federkiel-gwynthor/scenes/schreibstube-v1.webp",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die Schreibstube",
+            "eyebrow": "Gwynthor · Celtigerns Wacht",
+            "subtitle": "Schreibplätze, Diktat und Vorlesen",
+            "centerLabel": "Die Schreibstube",
+            "emblem": "../Fraktionen/assets/emblems/gilden/federkiel-v2.webp",
+            "sideImage": "./assets/federkiel-gwynthor/scenes/schreibstube-v1.webp",
+            "motto": "Gilde Federkiel · Gwynthor",
+            "description": "<p>An der langen Bank stehen Papier, Federn und Tinte für eigene Briefe bereit. Wer beim Schreiben Hilfe braucht, setzt sich zu einer Schreibkraft oder diktiert den ganzen Brief. Hinter den niedrigen Wandschirmen kann man eine Nachricht vorlesen lassen. Auf Wunsch liest die Schreibkraft auch einen diktierten Brief vor der Freigabe zurück. Fertige Briefe gehen mit Zustimmung an den Schalter der Postzentrale.</p><p><a href=\"./AleriaAlmanach.html?entry=gwynthor-federkiel\">Zum Gildenhaus von Federkiel</a></p>",
+            "detailsTitle": "Auftrag und Verantwortung",
+            "details": [
+              {
+                "label": "Öffentliche Bank",
+                "value": "Selbst schreiben oder Hilfe am Schreibplatz"
+              },
+              {
+                "label": "Ruhige Nischen",
+                "value": "Diktat und vertrauliches Vorlesen"
+              },
+              {
+                "label": "Versand",
+                "value": "Abgabe an der Postzentrale"
+              }
+            ],
+            "chartTitle": "Leitung und Dienststellen",
+            "chartIntro": "Die Leitung verantwortet die Stube. Der Schreibdienstvorsteher koordiniert vier gleichrangige Schreibkräfte.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 96,
+            "cardFontScale": 118,
+            "trees": [
+              {
+                "id": "schreibdienst",
+                "label": "Leitung und Schreibdienst",
+                "levels": [
+                  {
+                    "label": "Betriebsleitung",
+                    "nodes": [
+                      {
+                        "title": "Leitung der Schreibstube",
+                        "text": "Organisiert die öffentlichen Schreibplätze, teilt Schreib- und Vorlesedienste ein und wahrt die Vertraulichkeit des Dienstes.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Dienstaufsicht",
+                    "nodes": [
+                      {
+                        "title": "Schreibdienstvorsteher",
+                        "text": "Teilt die Schreibplätze und stillen Nischen ein. Hilft bei schwierigen Anschriften und sorgt dafür, dass Schreibmaterial bereitliegt.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Schreiben und Vorlesen",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "title": "Schreibkraft",
+                        "text": "Hilft am Schreibplatz, setzt diktierte Briefe auf und liest Nachrichten vertraulich vor. Liest einen Entwurf auf Wunsch zur Freigabe zurück.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-schreibdienst-v1.webp"
+                      },
+                      {
+                        "title": "Schreibkraft",
+                        "text": "Hilft am Schreibplatz, setzt diktierte Briefe auf und liest Nachrichten vertraulich vor. Liest einen Entwurf auf Wunsch zur Freigabe zurück.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-schreibdienst-v1.webp"
+                      },
+                      {
+                        "title": "Schreibkraft",
+                        "text": "Hilft am Schreibplatz, setzt diktierte Briefe auf und liest Nachrichten vertraulich vor. Liest einen Entwurf auf Wunsch zur Freigabe zurück.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-schreibdienst-v1.webp"
+                      },
+                      {
+                        "title": "Schreibkraft",
+                        "text": "Hilft am Schreibplatz, setzt diktierte Briefe auf und liest Nachrichten vertraulich vor. Liest einen Entwurf auf Wunsch zur Freigabe zurück.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-schreibdienst-v1.webp"
+                      }
+                    ]
+                  }
+                ],
+                "parentTreeId": ""
+              }
+            ],
+            "levels": [],
+            "chartScale": 75
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Hinter dem Schreibschirm",
+          "commentThreadKey": "federkiel-schreibstube-szene",
+          "image": "./assets/federkiel-gwynthor/scenes/schreibstube-szene-v1.webp",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Ein grüner Wandschirm dämpft die Geräusche der Schreibbank. Neben einem freien Bogen liegt ein bereits geöffneter Brief. Die Tinte steht bereit, und durch das hohe Fenster fällt genug Licht auf beide Blätter.</p>",
+          "sessionHint": "Hier kann eine Nachricht diktiert, vorgelesen oder gemeinsam beantwortet werden.",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Der erste Beitrag eröffnet die Szene.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

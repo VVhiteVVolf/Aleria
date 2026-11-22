@@ -1,0 +1,193 @@
+{
+  "type": "aleria-character",
+  "version": 1,
+  "exportedAt": "2026-11-22T15:23:31.739Z",
+  "assignedTab": "Gwynthor",
+  "source": {
+    "familyId": "glynmor",
+    "personId": "person-f1b4fd4f"
+  },
+  "character": {
+    "name": "Ilar Glynmor",
+    "title": "Stadtwache",
+    "fraktion": "Glynmor",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Gwynthor",
+    "origin": "",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "portrait": "../Stammbäume/assets/images/portraits/haus-glynmor/person-f1b4fd4f.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Ilar Glynmor",
+      "stats": [
+        {
+          "label": "Haus",
+          "value": "Glynmor"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Stadtwache"
+        },
+        {
+          "label": "Geboren",
+          "value": "1709"
+        },
+        {
+          "label": "Ort",
+          "value": "Gwynthor"
+        },
+        {
+          "label": "Lebensstatus",
+          "value": "Lebend"
+        }
+      ],
+      "biography": {
+        "biographyTitle": "Ilar Glynmor",
+        "biographyText": "<p>Ilar dient in der Stadtwache.</p>",
+        "footer": "Personenakte · Ilar Glynmor",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-glynmor/person-f1b4fd4f.jpg",
+        "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+        "connectionsTitle": "Familie und Verwandtschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Emlyn Glynmor",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-2a5e7890.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "Eleri",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-64064dfd.jpg",
+            "imageFormat": "portrait",
+            "detail": "Elternteil"
+          },
+          {
+            "type": "connection",
+            "name": "Lleucu",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-f8371211.jpg",
+            "imageFormat": "portrait",
+            "detail": "Ehe"
+          },
+          {
+            "type": "connection",
+            "name": "Bleddyn Glynmor",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-c33023ce.jpg",
+            "imageFormat": "portrait",
+            "detail": "Kind"
+          },
+          {
+            "type": "connection",
+            "name": "Nefyn Glynmor",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-c149f692.jpg",
+            "imageFormat": "portrait",
+            "detail": "Kind"
+          }
+        ],
+        "documentsTitle": "Familienakte",
+        "documents": [
+          {
+            "title": "Familie Glynmor",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+            "text": "Personenkarte und Verwandtschaft im Stammbaum.",
+            "link": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-f1b4fd4f"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--glynmor--person-f1b4fd4f"
+    },
+    "genealogy": {
+      "worldPersonId": "person--glynmor--person-f1b4fd4f",
+      "sex": "male",
+      "status": "alive",
+      "birth": "1709",
+      "death": "",
+      "houseId": "house-glynmor",
+      "houseName": "Glynmor",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "glynmor",
+          "personId": "person-f1b4fd4f",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T15:23:31.739Z",
+          "lastSyncedAt": "2026-11-22T15:23:31.739Z",
+          "url": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-f1b4fd4f",
+          "fingerprint": "{\"name\":\"Ilar Glynmor\",\"title\":\"Stadtwache\",\"birth\":\"1709\",\"death\":\"\",\"sex\":\"male\",\"status\":\"alive\",\"houseId\":\"house-glynmor\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-glynmor/person-f1b4fd4f.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"person-2a5e7890\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-2a5e7890\",\"name\":\"Emlyn Glynmor\"},{\"personId\":\"person-64064dfd\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-64064dfd\",\"name\":\"Eleri\"}],\"partners\":[{\"personId\":\"person-f8371211\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-f8371211\",\"name\":\"Lleucu\"}],\"children\":[{\"personId\":\"person-c33023ce\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-c33023ce\",\"name\":\"Bleddyn Glynmor\"},{\"personId\":\"person-c149f692\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-c149f692\",\"name\":\"Nefyn Glynmor\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "person-2a5e7890",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-2a5e7890",
+            "name": "Emlyn Glynmor"
+          },
+          {
+            "personId": "person-64064dfd",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-64064dfd",
+            "name": "Eleri"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "person-f8371211",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-f8371211",
+            "name": "Lleucu"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-c33023ce",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-c33023ce",
+            "name": "Bleddyn Glynmor"
+          },
+          {
+            "personId": "person-c149f692",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-c149f692",
+            "name": "Nefyn Glynmor"
+          }
+        ]
+      }
+    },
+    "id": "person--glynmor--person-f1b4fd4f",
+    "age": 31
+  }
+}

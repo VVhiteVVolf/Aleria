@@ -1,0 +1,89 @@
+.almanach-loading__scene[data-scene-kind="fitting-room"] {
+  --fitting-stage-width: 100cqw;
+  aspect-ratio: 16 / 9;
+  background: #3d2b24;
+}
+
+.almanach-loading__fitting-stage {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: var(--fitting-stage-width);
+  aspect-ratio: 1672 / 941;
+  translate: -50% 0;
+}
+
+.almanach-loading__fitting-backdrop,
+.almanach-loading__fitting-backdrop img,
+.almanach-loading__fitting-door img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.almanach-loading__fitting-layer { position: absolute; }
+.almanach-loading__fitting-layer[hidden] { display: none; }
+.almanach-loading__fitting-stage:not([data-fitting-backdrop]) .almanach-loading__fitting-layer { visibility: hidden; }
+
+.almanach-loading__fitting-door {
+  background: #1c1511;
+}
+
+.almanach-loading__fitting-door img {
+  transform-origin: right center;
+  animation: fitting-door-rattle 1.55s linear infinite;
+  animation-play-state: var(--journey-play-state, running);
+}
+
+.almanach-loading[data-state="leaving"] .almanach-loading__fitting-door img,
+.almanach-loading__fitting-stage:not([data-fitting-backdrop]) .almanach-loading__fitting-door img,
+.almanach-loading__fitting-stage[data-fitting-pose] .almanach-loading__fitting-door img {
+  animation-play-state: paused;
+}
+
+.almanach-loading__fitting-peek {
+  opacity: 0;
+  transition: opacity .11s ease-out;
+}
+
+[data-fitting-pose="protest"] [data-fitting-peek="protest"],
+[data-fitting-pose="reassure"] [data-fitting-peek="reassure"] { opacity: 1; }
+
+@keyframes fitting-door-rattle {
+  0%, 24%, 47%, 69%, 100% { transform: none; }
+  4%, 15% { transform: scaleX(.956) skewY(.9deg); }
+  8%, 20% { transform: scaleX(.992) skewY(-.55deg); }
+  37% { transform: scaleX(.976) skewY(.55deg); }
+  59% { transform: scaleX(.989) skewY(-.28deg); }
+}
+
+.almanach-loading__scene[data-scene-kind="fitting-room"] .almanach-loading__banter {
+  --bubble-anchor: calc(50cqw + var(--fitting-stage-width) * var(--fitting-speaker-offset, 0));
+  --bubble-width: min(410px, calc(100cqw - 20px));
+  top: 8px;
+  bottom: auto;
+  padding: 6px 10px 7px;
+}
+
+@media (max-width: 860px) {
+  .almanach-loading__scene[data-scene-kind="fitting-room"] { aspect-ratio: 5 / 3; }
+  .almanach-loading__fitting-stage::after {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    height: 8%;
+    background: linear-gradient(#3d2b24, transparent);
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .almanach-loading__scene[data-scene-kind="fitting-room"] {
+    --fitting-stage-width: 135cqw;
+    aspect-ratio: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .almanach-loading__fitting-peek { transition: none; }
+}

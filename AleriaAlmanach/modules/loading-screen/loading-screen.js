@@ -57,7 +57,7 @@
     view.enter.disabled = !ready;
     view.enter.textContent = ready ? 'Aleria betreten' : 'Die Welt wird geladen …';
     view.hint.textContent = !ready ? '' : view.root.dataset.playingMinigame !== undefined
-      ? '„Aleria betreten“ beendet die Jagd.' : 'Klicke in die Szene oder drücke Enter.';
+      ? '„Aleria betreten“ beendet das Minispiel.' : 'Klicke in die Szene oder drücke Enter.';
     view.recovery.hidden = !(slow || failed) || ready;
     view.continue.hidden = failed || !milestones.get('shell').done;
     view.pause.textContent = animationPaused ? '▷ Animation abspielen' : 'Ⅱ Animation pausieren';
@@ -155,7 +155,7 @@
   function loadScene(root) {
     const target = root.querySelector('[data-loading-scene]');
     if (!target) return;
-    import('./loading-screen-scenes.js?v=20261120-ruhige-szenen-v1').then(({ mountLoadingScreenScene }) => {
+    import('./loading-screen-scenes.js?v=20261122-carys-archery-v1').then(({ mountLoadingScreenScene }) => {
       if (lifetime.signal.aborted) return;
       scene = mountLoadingScreenScene(target, {
         signal: lifetime.signal,

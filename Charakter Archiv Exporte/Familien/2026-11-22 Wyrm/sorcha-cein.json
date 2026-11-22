@@ -1,0 +1,144 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-11-22T11:39:42.648Z",
+  "assignedTab": "Gwynthor",
+  "character": {
+    "name": "Sorcha Céin",
+    "title": "",
+    "fraktion": "Clan Mac’Céin",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Dunfal > Tir na Rithe > Tir na dTeorainneacha > Caerthalas",
+    "currentLocation": "",
+    "origin": "",
+    "bio": "Sorcha Céin stammt aus Clan Mac’Céin. Jahrgang 1701. Die Eltern sind Vannoch Cein und Teleri. Die Ehe mit Padrig Wyrm ist im Stammbaum verzeichnet. Die Familienakten führen Gais Wyrm, Eilir Wyrm und Tudor Wyrm als Kinder.",
+    "aliases": [],
+    "archived": false,
+    "portrait": "../Stammbäume/assets/images/portraits/haus-wyrm/sorcha-cein.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Sorcha Céin"
+        },
+        {
+          "label": "Haus",
+          "value": "Clan Mac’Céin"
+        },
+        {
+          "label": "Geboren",
+          "value": "1701"
+        }
+      ],
+      "biography": {
+        "biographyTitle": "Biografie",
+        "biographyText": "<p>Sorcha Céin stammt aus Clan Mac’Céin. Jahrgang 1701. Die Eltern sind Vannoch Cein und Teleri. Die Ehe mit Padrig Wyrm ist im Stammbaum verzeichnet. Die Familienakten führen Gais Wyrm, Eilir Wyrm und Tudor Wyrm als Kinder.</p>"
+      },
+      "revision": 1795347582648
+    },
+    "identity": {
+      "worldPersonId": "person--haus-cein--sorcha-cein"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-cein--sorcha-cein",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1701",
+      "death": "",
+      "houseId": "house-cein",
+      "houseName": "Clan Mac’Céin",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-wyrm",
+          "personId": "sorcha-cein",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T11:39:42.648Z",
+          "lastSyncedAt": "2026-11-22T11:39:42.648Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view&person=sorcha-cein",
+          "fingerprint": "{\"name\":\"Sorcha Céin\",\"title\":\"\",\"birth\":\"1701\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-cein\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/sorcha-cein.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"padrig-wyrm\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--padrig-wyrm\",\"name\":\"Padrig Wyrm\"}],\"children\":[{\"personId\":\"gais-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--gais-wyrm\",\"name\":\"Gais Wyrm\"},{\"personId\":\"eilir-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--eilir-wyrm\",\"name\":\"Eilir Wyrm\"},{\"personId\":\"tudor-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--tudor-wyrm\",\"name\":\"Tudor Wyrm\"}]}}"
+        },
+        {
+          "familyId": "haus-cein",
+          "personId": "sorcha-cein",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T11:39:42.648Z",
+          "lastSyncedAt": "2026-11-22T11:39:42.648Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-cein&mode=view&person=sorcha-cein",
+          "fingerprint": "{\"name\":\"Sorcha Céin\",\"title\":\"\",\"birth\":\"1701\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-cein\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/sorcha-cein.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"vannoch-1676-cein\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-cein--vannoch-1676-cein\",\"name\":\"Vannoch Cein\"},{\"personId\":\"teleri-unknown-cein-159-2\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-unbekannt--teleri-unknown-cein-159-2\",\"name\":\"Teleri Unbekanntes Haus\"}],\"partners\":[{\"personId\":\"padrig-wyrm\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--padrig-wyrm\",\"name\":\"Padrig Wyrm\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "vannoch-1676-cein",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-cein--vannoch-1676-cein",
+            "name": "Vannoch Cein"
+          },
+          {
+            "personId": "teleri-unknown-cein-159-2",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-unbekannt--teleri-unknown-cein-159-2",
+            "name": "Teleri Unbekanntes Haus"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "padrig-wyrm",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-wyrm--padrig-wyrm",
+            "name": "Padrig Wyrm"
+          }
+        ],
+        "children": [
+          {
+            "personId": "gais-wyrm",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-wyrm--gais-wyrm",
+            "name": "Gais Wyrm"
+          },
+          {
+            "personId": "eilir-wyrm",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-wyrm--eilir-wyrm",
+            "name": "Eilir Wyrm"
+          },
+          {
+            "personId": "tudor-wyrm",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-wyrm--tudor-wyrm",
+            "name": "Tudor Wyrm"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-cein--sorcha-cein"
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "version": 7,
+  "characterName": "Véfrid",
+  "characterFolder": "Charaktere/Gruppen/Federkiel - Gwynthor/Véfrid",
+  "setId": "set-01",
+  "promptSetCatalog": "Anleitungen/avatar-prompt-sets-28-20261121.json",
+  "promptSetCatalogId": "avatar-prompts-28-sets-20261121-zoomtoleranz",
+  "promptSetSourceDocument": "Anleitungen/Avatar_Prompts_28_Sets_20261121.docx",
+  "promptSetNumber": 1,
+  "promptSetSourceSha256": "637cb8b998be851d85b7f65fd9b926168969aa32232b89744e3ae93c5ab0055e",
+  "allowsProps": false,
+  "allowedProps": [],
+  "propPolicy": {
+    "default": "Sets 1 bis 18 sowie 26 bis 28 verwenden freie Hände ohne Requisiten.",
+    "allowedSetNumbers": [
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "metadataRule": "Für Sets 19 bis 25 allowsProps, allowedProps, scope und instructions ausdrücklich aus dem gewählten Eintrag des aktiven Katalogs übernehmen. Für Sets 24/25 auch die jeweilige panel.allowedProps-Liste übernehmen. Erlaubt sind ausschließlich die im jeweiligen Panel genannten Gegenstände oder Umgebungselemente; keine Requisiten der übrigen Panels hinzufügen. Widersprechende ältere Freihand- und Gegenstandsverbote ersetzen.",
+    "textRule": "Keine lesbaren Wörter, Buchstabenfolgen, Ziffern, Bildbeschriftungen oder Nummerierungen. Papier in Set 19 darf wenige abstrakte unlesbare Striche tragen; Würfelaugen in Set 20 sind Punkte, keine Ziffern.",
+    "referenceRule": "Die Laterne in Set 20 bleibt unbeleuchtet. Keine moderne Technik, zusätzlichen Personen oder zusätzlichen Hände. Tisch und Stuhl nur für die sitzenden Sets 24/25 gemäß Seteintrag. Referenzkleidung, Handschuhe und Rüstung erhalten. Hintergrund und Beleuchtung erhalten, soweit der konkrete Seteintrag keine eng begrenzte ausdrückliche Ausnahme enthält; 24/25 verwenden das gemütliche Zimmer mit angepasstem Innenraumlicht. Identität, Alter, Frisur und Zeichenstil bleiben erhalten. Die Kleidungsausnahme gilt ausschließlich für Set 23 im dort begrenzten Ausschnitt.",
+    "canonRule": "Die Requisiten sind reine Bildmittel; keine Inventarvergabe oder neue Berufs- und Biografiefestlegung."
+  },
+  "setOverridePolicy": {
+    "setNumbers": [
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "metadataFields": [
+      "posePolicy",
+      "framingPolicy",
+      "clothingPolicy",
+      "settingPolicy",
+      "requiredInputs"
+    ],
+    "rule": "Für Sets 21 bis 25 die vorhandenen genannten Metadaten und sämtliche Zusatzvorgaben aus dem aktiven Seteintrag übernehmen. Nur die ausdrücklich pro Panel erlaubte Abweichung ersetzt die entsprechende ältere Masterregel; alle übrigen Regeln behalten ihre Gültigkeit.",
+    "set21": "Genau drei Schlaf-, drei Ohnmachts- und drei wache Unpässlichkeitsansichten, liegender Oberkörper. Kleidung, Rüstung und Handschuhe bleiben angelegt; nur genannte Bett-, Kissen- oder Bodenfläche, keine erfundene Verletzung, Diagnose oder Todesdarstellung.",
+    "set22": "Genau drei defensive, drei offensive und drei ausweichende Einzelposen mit einer vereinbarten Waffe und bestehender Griffvereinbarung. Kampfsets zeigen den Kopf und Oberkörper bis ungefähr zur Taille. Die Kamera bleibt auf Gesichtshöhe und darf bei Bedarf gegenüber dem bisherigen Kampfausschnitt 10–15 % weiter herauszoomen. Gesicht, Schultern, Arme, greifende Hände und Waffengriff bleiben gut erkennbar. Der Oberkörper füllt jede Kachel; Beine, Knie und Ganzkörperansichten bleiben außerhalb des Bildes. Für alle neun Panels denselben festen Oberkörperausschnitt verwenden. Lange Klingen oder andere über den Ausschnitt hinausragende Waffenteile dürfen natürlich am Bildrand angeschnitten sein. Die Waffe wird dafür weder verkürzt noch verbogen; über die Zoom-Toleranz hinaus wird die Kamera nicht für ihre vollständige Darstellung weiter herausgezoomt. Der Fokus auf Gesicht und Oberkörper hat Vorrang.",
+    "set23": "Nur ausdrücklich erwachsene Referenzfiguren, keine bloße Altersschätzung. Alle neun wach, aktiv und selbstbestimmt: drei Bettliegeansichten, drei sitzende und drei leichte Vorneigungen mit gespitzten Lippen. Nur hier Kleidung im engen sichtbaren Ausschnitt weglassen; Gesicht, Hals, Schultern und höchstens oberer Brustansatz, Schnitt oberhalb jeder Brustwarze. Keine vollständigen Brüste, Brustunterseite, Intimbereiche, Unterkörper, expliziten Handlungen oder zweite Person. Keine Schlaf- oder Ohnmachtszustände übernehmen.",
+    "set24": "Neun sitzende Essensreaktionen am Tisch im gemütlichen Zimmer: voller Mund, Kauen und nachdenkliche oder erklärende Besteckgesten. Enge Augenhöhenkamera mit schmaler Tischkante, Gesicht und Hände gut sichtbar. Vollständig bekleidet; Speisen und Bestecke nur gemäß jeweiligem Panel. Alle Setregeln und panel.allowedProps übernehmen.",
+    "set25": "Neun sitzende Ess-, Trink- und Gesprächsmomente mit Hähnchenschenkel, Bierhumpen oder Becher am Tisch im gemütlichen Zimmer. Enge Augenhöhenkamera mit schmaler Tischkante. Vollständig bekleidet; nicht alle Requisiten gleichzeitig. Alle Setregeln und panel.allowedProps übernehmen; widersprechende Steh-, Freihand-, Tisch- und Referenzhintergrundvorgaben ausschließlich hier ersetzen."
+  },
+  "outputFolder": "Output",
+  "referenceImage": "Referenzen/vefrid-portrait-v1.png",
+  "characterDescription": "Athletische Statur, langer blonder Pferdeschwanz, blaugraue Augen und leichte Sommersprossen. Unter dem grünen Gildenmantel trägt sie ein verstärktes Lederwams, Schulterschutz und Armschienen.",
+  "theme": "Grundemotionen und Mimik",
+  "promptTemplate": "Anleitungen/Lesefassungen/Charakter-Emotionssheet Master Prompt.txt",
+  "sheet": {
+    "aspectRatio": "1:1",
+    "columns": 3,
+    "rows": 3
+  },
+  "panels": [
+    {
+      "index": 1,
+      "position": "Oben links",
+      "emotion": "Neutral / Redend",
+      "gesture": "Offene Handflächen, lockere erklärende Gestik, aufmerksamer Blick.",
+      "sourceText": "1. Neutral / Redend: Offene Handflächen, lockere erklärende Gestik, aufmerksamer Blick.",
+      "sourceParagraph": 6
+    },
+    {
+      "index": 2,
+      "position": "Oben Mitte",
+      "emotion": "Freundlich / Amüsiert",
+      "gesture": "Ehrliches leichtes Lächeln, eine Hand locker erhoben, entspannte Schultern.",
+      "sourceText": "2. Freundlich / Amüsiert: Ehrliches leichtes Lächeln, eine Hand locker erhoben, entspannte Schultern.",
+      "sourceParagraph": 7
+    },
+    {
+      "index": 3,
+      "position": "Oben rechts",
+      "emotion": "Nachdenklich",
+      "gesture": "Hand am Kinn, Blick leicht seitlich oder nach oben, zusammengezogene Brauen.",
+      "sourceText": "3. Nachdenklich: Hand am Kinn, Blick leicht seitlich oder nach oben, zusammengezogene Brauen.",
+      "sourceParagraph": 8
+    },
+    {
+      "index": 4,
+      "position": "Mitte links",
+      "emotion": "Skeptisch / Misstrauisch",
+      "gesture": "Eine Braue hochgezogen, Arme verschränkt oder eine Hand skeptisch angewinkelt.",
+      "sourceText": "4. Skeptisch / Misstrauisch: Eine Braue hochgezogen, Arme verschränkt oder eine Hand skeptisch angewinkelt.",
+      "sourceParagraph": 9
+    },
+    {
+      "index": 5,
+      "position": "Mitte Mitte",
+      "emotion": "Überrascht / Verblüfft",
+      "gesture": "Geweitete Augen, leicht geöffneter Mund, beide Hände spontan angehoben.",
+      "sourceText": "5. Überrascht / Verblüfft: Geweitete Augen, leicht geöffneter Mund, beide Hände spontan angehoben.",
+      "sourceParagraph": 10
+    },
+    {
+      "index": 6,
+      "position": "Mitte rechts",
+      "emotion": "Genervt / Missbilligend",
+      "gesture": "Halb geschlossene Augen, angespannter Mund, eine Hand abwinkend oder demonstrativ an der Hüfte.",
+      "sourceText": "6. Genervt / Missbilligend: Halb geschlossene Augen, angespannter Mund, eine Hand abwinkend oder demonstrativ an der Hüfte.",
+      "sourceParagraph": 11
+    },
+    {
+      "index": 7,
+      "position": "Unten links",
+      "emotion": "Entschlossen / Ernst",
+      "gesture": "Direkter Blick, aufrechte Haltung, eine Faust vor der Brust oder feste erklärende Handbewegung.",
+      "sourceText": "7. Entschlossen / Ernst: Direkter Blick, aufrechte Haltung, eine Faust vor der Brust oder feste erklärende Handbewegung.",
+      "sourceParagraph": 12
+    },
+    {
+      "index": 8,
+      "position": "Unten Mitte",
+      "emotion": "Verärgert / Konfrontativ",
+      "gesture": "Zusammengezogene Brauen, eine Hand deutlich zeigend, Oberkörper leicht vorgelehnt.",
+      "sourceText": "8. Verärgert / Konfrontativ: Zusammengezogene Brauen, eine Hand deutlich zeigend, Oberkörper leicht vorgelehnt.",
+      "sourceParagraph": 13
+    },
+    {
+      "index": 9,
+      "position": "Unten rechts",
+      "emotion": "Unsicher / Keine Ahnung",
+      "gesture": "Leicht schiefer Gesichtsausdruck, beide Hände in einem klaren Schulterzucken geöffnet, Schultern hochgezogen.",
+      "sourceText": "9. Unsicher / Keine Ahnung: Leicht schiefer Gesichtsausdruck, beide Hände in einem klaren Schulterzucken geöffnet, Schultern hochgezogen.",
+      "sourceParagraph": 14
+    }
+  ],
+  "splitter": {
+    "cols": 3,
+    "rows": 3,
+    "gap_x": 0,
+    "gap_y": 0,
+    "autocrop": false
+  },
+  "outputNaming": "vefrid-set-01-avatar-01.png bis -09.png",
+  "status": "exportiert",
+  "framingPolicy": "Quadratisches Brustbild wie in den freigegebenen Rianna- und Lefraye-Beispielen. Die Kamera bleibt auf Gesichtshöhe. Bei Bedarf darf sie 10–15 % weiter herauszoomen; die untere Bildkante darf entsprechend etwas tiefer liegen. Kopf, Gesicht, Schultern und Brust bleiben Schwerpunkt. Hände und Gesten bleiben kompakt in Brustnähe; Ellbogen und tiefere Unterarme dürfen am Bildrand angeschnitten sein. Keine Beine oder Ganzkörperansicht. In allen neun Panels denselben gewählten Ausschnitt verwenden.",
+  "expressionPolicy": "Set 4 verwendet ruhige Mimik und kleine natürliche Handgesten. Sets 26 bis 28 verwenden ebenfalls subtile Mimik und kleine natürliche Gesten in Brustnähe.",
+  "combatFramingPolicy": "Kampfsets zeigen den Kopf und Oberkörper bis ungefähr zur Taille. Die Kamera bleibt auf Gesichtshöhe und darf bei Bedarf gegenüber dem bisherigen Kampfausschnitt 10–15 % weiter herauszoomen. Gesicht, Schultern, Arme, greifende Hände und Waffengriff bleiben gut erkennbar. Der Oberkörper füllt jede Kachel; Beine, Knie und Ganzkörperansichten bleiben außerhalb des Bildes. Für alle neun Panels denselben festen Oberkörperausschnitt verwenden. Lange Klingen oder andere über den Ausschnitt hinausragende Waffenteile dürfen natürlich am Bildrand angeschnitten sein. Die Waffe wird dafür weder verkürzt noch verbogen; über die Zoom-Toleranz hinaus wird die Kamera nicht für ihre vollständige Darstellung weiter herausgezoomt. Der Fokus auf Gesicht und Oberkörper hat Vorrang.",
+  "subtleStandingPolicy": {
+    "setNumbers": [
+      26,
+      27,
+      28
+    ],
+    "metadataFields": [
+      "posePolicy",
+      "framingPolicy",
+      "clothingPolicy",
+      "settingPolicy",
+      "expressionPolicy"
+    ],
+    "rule": "Sets 26 bis 28 zeigen die Figur stehend, entspannt und fast aufrecht im bisherigen engen Brustbild auf Gesichtshöhe. Kleine natürliche Handgesten bleiben in Brustnähe; Brauen, Augenlider, Blick, Mundwinkel und Kopfneigung verändern sich nur leicht. Jedes Panel zeigt einen eigenen stillen Moment. Hände frei von Requisiten; Referenzhintergrund, Beleuchtung, Kleidung, Rüstung, Handschuhe, Identität und Zeichenstil bleiben erhalten. Die vollständigen Regeln einschließlich posePolicy, framingPolicy, clothingPolicy, settingPolicy und expressionPolicy übernehmen. Die Sitz- und Tischausnahmen 24/25 gelten für diese neuen Sets nicht."
+  },
+  "zoomOutPolicy": "Bei Bedarf darf die Kamera gegenüber dem bisherigen setbezogenen Referenzausschnitt 10–15 % weiter herauszoomen, damit Hände, Unterarme und Gesten mehr Platz haben. Gesicht und Oberkörper bleiben groß und klar erkennbar. Der gewählte Abstand bleibt in allen neun Panels gleich; Perspektive, Identität und die besonderen Ausschnittgrenzen des jeweiligen Sets bleiben erhalten.",
+  "characterId": "federkiel-gwynthor-vefrid",
+  "scope": "Keine zusätzlichen Requisiten; die bestehende Freihandregel gilt unverändert.",
+  "instructions": [
+    "Orientiere dich bei der gesamten künstlerischen Umsetzung strikt am bereitgestellten Originalbild. Übernimm dessen Zeichenstil, Linienführung, Schattierung, Farbgebung, Proportionen, Gesicht, Frisur und Kleidung ohne stilistische Abweichungen. Keine eigenständige Neuinterpretation des Designs.",
+    "Alle neun Felder verwenden dieselbe Figur, denselben Hintergrund, dieselbe Beleuchtung und denselben festen Brustbildausschnitt. Quadratisches Brustbild wie in den freigegebenen Rianna- und Lefraye-Beispielen. Die Kamera bleibt auf Gesichtshöhe. Bei Bedarf darf sie 10–15 % weiter herauszoomen; die untere Bildkante darf entsprechend etwas tiefer liegen. Kopf, Gesicht, Schultern und Brust bleiben Schwerpunkt. Hände und Gesten bleiben kompakt in Brustnähe; Ellbogen und tiefere Unterarme dürfen am Bildrand angeschnitten sein. Keine Beine oder Ganzkörperansicht. In allen neun Panels denselben gewählten Ausschnitt verwenden. Hände bleiben frei von Requisiten. Anatomisch korrekte Finger, jede Geste und Mimik unterscheiden sich nachvollziehbar."
+  ]
+}

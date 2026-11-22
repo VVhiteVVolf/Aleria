@@ -2,6 +2,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { buildZitteraaleModule } from '../modules/schwarze-zitteraale/zitteraale-module.mjs';
 import { buildZitteraaleGroupModules, ZITTERAALE_SECTION_PATH, ZITTERAALE_GROUP_SECTION_PATH } from '../modules/schwarze-zitteraale/zitteraale-group-modules.mjs';
 import { buildMedrawdCharacterExport } from '../modules/schwarze-zitteraale/medrawd-angau.mjs';
+import { buildCadwganCharacterExport } from '../modules/schwarze-zitteraale/sumpfnattern-biography.mjs';
 import { projectZitteraaleCharacterUpdates, ZITTERAALE_AUTHORED_AT } from '../modules/schwarze-zitteraale/zitteraale-character-updates.mjs';
 import { ZITTERAALE_LEADERS } from '../modules/schwarze-zitteraale/zitteraale-people.mjs';
 import { upgradeZitteraaleEntry } from '../modules/schwarze-zitteraale/zitteraale-migration.mjs';
@@ -58,6 +59,8 @@ for (const exported of updated.exports) outputs.set(exported.sourcePath, JSON.st
 const medrawd = buildMedrawdCharacterExport();
 const medrawdPath = 'Charakter Archiv Exporte/Schwarze Zitteraale/medrawd-angau-2026-11-16.json';
 outputs.set(medrawdPath, JSON.stringify(medrawd, null, 2) + '\n');
+const cadwganPath = 'Charakter Archiv Exporte/Schwarze Zitteraale/cadwgan-bwch-2026-11-22.json';
+outputs.set(cadwganPath, JSON.stringify(buildCadwganCharacterExport(), null, 2) + '\n');
 
 if (!check) for (const [file, before] of inputs) {
   if (await readFile(new URL(file, root), 'utf8') !== before) throw Error(`Geänderte Quelle während des Builds: ${file}`);
@@ -71,6 +74,6 @@ for (const [file, text] of outputs) {
     await writeFile(target, text);
   }
 }
-const imported = await importAuthoredCharacters({ feature: 'schwarze-zitteraale', check, sources: [medrawdPath] });
+const imported = await importAuthoredCharacters({ feature: 'schwarze-zitteraale', check, sources: [medrawdPath, cadwganPath] });
 console.log(JSON.stringify({ module: entry.id, pages: entry.pages.length, groupModules: groups.length,
   groupPages: groups.reduce((sum, group) => sum + group.pages.length, 0), renamedPeople: selected.size, imported }));

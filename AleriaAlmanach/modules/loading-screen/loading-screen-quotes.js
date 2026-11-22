@@ -1,5 +1,26 @@
-// Scripted dialogue and verbatim excerpts in scene order. Segment indexes are zero-based.
+// Scripted dialogue and verbatim excerpts. Source segment indexes are zero-based.
+import { EINION_PLEAS } from './blanket-archery/archery-pleas.js?v=20261122-carys-archery-v1';
+
+const fittingRoomThread = 'goettliche-eleganz::session:eleganz-page-6';
+
 export const LOADING_SCREEN_QUOTES = {
+  'carys-schiessuebung': EINION_PLEAS.map(text => ({ speaker: 'einion', text })),
+  'refri-anprobe': [
+    { speaker: 'refri', text: 'Wer baut dann so e Kleid? Des is doch gemacht, damit mer sich die Arme ausrenkt!',
+      source: { comment: 'zvO2GoopWvDNrdMlnuqa', thread: fittingRoomThread, segment: 3 } },
+    { speaker: 'refri', text: 'EI! JETZT HAB ICH MICH AUCH NOCH SELBER VERKNOTET!',
+      source: { comment: 'udMOvPykAJEPmCgWaJVu', thread: fittingRoomThread, segment: 1 } },
+    { speaker: 'refri', peek: 'protest', text: 'Könntet Ihr mer vielleicht noch mal erkläre, welche Schnur wohin gehört?',
+      source: { comment: 'udMOvPykAJEPmCgWaJVu', thread: fittingRoomThread, segment: 5 } },
+    { speaker: 'catrin', text: 'Die rückwärtige Schnürung muss schließlich von einer zweiten Person festgezogen werden.',
+      source: { comment: 'vWFPxr5WdS9XQhrHq8bR', thread: fittingRoomThread, segment: 1 } },
+    { speaker: 'refri', text: 'Ich krieg das schon selber hin!',
+      source: { comment: 'udMOvPykAJEPmCgWaJVu', thread: fittingRoomThread, segment: 7 } },
+    { speaker: 'catrin', text: 'Sagt einmal ... habe ich vorhin eigentlich ein Knacken gehört? Oder war das gar ein Reißen?',
+      source: { comment: 'vWFPxr5WdS9XQhrHq8bR', thread: fittingRoomThread, segment: 5 } },
+    { speaker: 'refri', peek: 'reassure', text: 'Des war der Boden!',
+      source: { comment: 'Dk8iDIbyANvEqHpNAgvW', thread: fittingRoomThread, segment: 0 } },
+  ],
   'owetas-quartett': [
     { speaker: 'rianna', text: "Also... treffen wir uns einfach beim östlichen Haupttor?",
       source: { comment: "TmN362zVHC6BsbFLC3HD", thread: "modul-1781469771512::session:p-mqe95n3k-8nv71", segment: 3 } },

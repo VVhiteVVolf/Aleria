@@ -478,8 +478,39 @@ export const SITE_BUILD_TASKS = [
         ...['arcane-alphabet', 'rheunwaith-script', 'karnrith-script', 'laerelis-module'].map(almanach))]
   },
   {
+    id: 'glynmor', label: 'Glynmor family, figures and candle workshop', parallelValidation: true,
+    inputs: ['AleriaAlmanach/modules/glynmor/', 'AleriaAlmanach/assets/glynmor/', 'AleriaAlmanach/docs/art/glynmor-20261122/',
+      almanach('glynmor'), 'AleriaAlmanach/AleriaAlmanach.html', 'shared/glynmor/', 'Stammbäume/assets/js/data/',
+      'Stammbäume/assets/data/published-families/glynmor.json', 'Stammbäume/assets/data/source-inventories/glynmor-20261122/',
+      'Stammbäume/assets/images/portraits/haus-glynmor/', 'CharakterDatenbank/',
+      'Charakter Archiv Exporte/Module/Kerzenmacherei Glynmor/', 'Familien Häuser und Clans/'],
+    commands: [['Familien Häuser und Clans/scripts/build-house-content.mjs', '--houses=glynmor', '--check'],
+      testCommand(almanach('glynmor'))]
+  },
+  {
+    id: 'federkiel-gwynthor', label: 'Gwynthor postal guild, service pages, hierarchy and scene art',
+    inputs: ['AleriaAlmanach/modules/federkiel-gwynthor/', 'AleriaAlmanach/modules/guild-trading-post/',
+      'AleriaAlmanach/modules/archive/archive-section-registration.mjs', 'AleriaAlmanach/modules/gwynthor-geography/gwynthor-section-layout.mjs',
+      'AleriaAlmanach/assets/federkiel-gwynthor/', 'AleriaAlmanach/docs/art/federkiel-gwynthor-20261122/',
+      'AleriaAlmanach/scripts/build-federkiel-gwynthor.mjs', 'Charakter Archiv Exporte/Module/Gilde Federkiel Gwynthor/',
+      'AleriaAlmanach/docs/art/federkiel-couriers-20261122/', 'AleriaAlmanach/scripts/build-federkiel-couriers.mjs',
+      'AleriaAlmanach/modules/characters/character-save-guard.js', 'Charakter Archiv Exporte/Federkiel Gwynthor/',
+      'AleriaAlmanach/AvatarWerkstatt/Anleitungen/avatar-prompt-sets-28-20261121.json',
+      'AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/',
+      ...['Oenyr', 'Véfrid', 'Gwaedyr', 'Thaleth'].map(name => `AleriaAlmanach/AvatarWerkstatt/Output/${name}/`),
+      'CharakterDatenbank/lib/', 'CharakterDatenbank/scripts/import-authored-characters.mjs',
+      ...['oenyr', 'vefrid', 'gwaedyr', 'thaleth'].map(slug => `CharakterDatenbank/records/orte/gwynthor/${slug}--federkiel-gwynthor-${slug}/character.json`),
+      'CharakterDatenbank/registry.json', 'CharakterDatenbank/generated/',
+      'AleriaAlmanach/AleriaAlmanach.html', 'AleriaAlmanach/modules/quests/quest-catalog.json',
+      'Fraktionen/data/gilden.json', 'Fraktionen/assets/emblems/gilden/federkiel-v2.webp',
+      'netlify/build/site-publish.mjs', 'netlify/build/publication-policy.mjs', almanach('federkiel-gwynthor'), almanach('federkiel-couriers')],
+    commands: [['AleriaAlmanach/scripts/build-federkiel-gwynthor.mjs', '--check'], ['AleriaAlmanach/scripts/build-federkiel-couriers.mjs', '--check'],
+      testCommand(almanach('federkiel-gwynthor'), almanach('federkiel-couriers'))]
+  },
+  {
     id: 'schwarze-zitteraale', label: 'Bandit hierarchy, five dossiers, bounded character import and wanted notice',
     inputs: ['AleriaAlmanach/modules/schwarze-zitteraale/', 'AleriaAlmanach/assets/schwarze-zitteraale/',
+      'AleriaAlmanach/tests/sumpfnattern.test.mjs', 'AleriaAlmanach/docs/art/sumpfnattern-20261122/',
       'AleriaAlmanach/scripts/build-schwarze-zitteraale.mjs', 'CharakterDatenbank/lib/authored-character-import.mjs',
       'CharakterDatenbank/lib/character-export-assignments.mjs', 'CharakterDatenbank/scripts/import-authored-characters.mjs',
       'AleriaAlmanach/modules/creatures/catalog/zitteraal-zunder.js', 'AleriaAlmanach/tests/schwarze-zitteraale.test.mjs',
@@ -488,7 +519,7 @@ export const SITE_BUILD_TASKS = [
       'Stammbäume/assets/js/data/rhonwens-traenen-house-families.js',
       'AleriaAlmanach/tests/authored-character-import.test.mjs'],
     commands: [['AleriaAlmanach/scripts/build-schwarze-zitteraale.mjs', '--check'],
-      testCommand(almanach('schwarze-zitteraale'), almanach('arvel-skellor'), almanach('authored-character-import'), 'Anzeigetafeln/tests/zitteraale-wanted.test.mjs')]
+      testCommand(almanach('schwarze-zitteraale'), almanach('sumpfnattern'), almanach('arvel-skellor'), almanach('authored-character-import'), 'Anzeigetafeln/tests/zitteraale-wanted.test.mjs')]
   },
   {
     id: 'gwynthor-lotsensuche', label: 'Two guide notices, handwritten replies and public character records',
@@ -567,7 +598,7 @@ export const SITE_BUILD_TASKS = [
       'comment-foreign-voice',
       'scene-regeneration', 'scene-regeneration-service', 'scene-regeneration-visibility', 'scene-regeneration-rule-usage',
       'archive-image-urls', 'archive-preview-navigation', 'gwynthor-geography', 'dashboard-rendering', 'rotes-tor-menu',
-      'firebase-module-storage', 'module-store-revision', 'loading-screen', 'loading-screen-rose-chase',
+      'firebase-module-storage', 'module-store-revision', 'loading-screen', 'loading-screen-rose-chase', 'loading-screen-blanket-archery',
       'character-performance', 'character-directory', 'character-categories', 'character-section-integration', 'character-save-guard',
       'character-register-views', 'character-equipment-sync', 'modal-navigation'
     ].map(almanach), 'firebase/tests/publisher-access.test.mjs')]

@@ -1,0 +1,202 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-22T00:00:00+01:00",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gilde Federkiel - Gwynthor",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Gilde Federkiel - Gwynthor"
+      ],
+      "iconUrl": "./assets/federkiel-gwynthor/aushangeschild-v1.webp",
+      "desc": "Gwynthors Zentralpost, Schreibstube, Druckerei, Kuriergestüt und Postlager."
+    },
+    "entry": {
+      "id": "gwynthor-federkiel-postzentrale",
+      "title": "Die Postzentrale",
+      "subtitle": "Annahme, Ausgabe und Sortierung",
+      "type": "Betriebsstelle der Gilde Federkiel",
+      "category": "Gilde Federkiel - Gwynthor",
+      "symbol": "./assets/federkiel-gwynthor/aushangeschild-v1.webp",
+      "image": "./assets/federkiel-gwynthor/scenes/postzentrale-v1.webp",
+      "previewImage": "./assets/federkiel-gwynthor/scenes/postzentrale-v1.webp",
+      "stamp": "FEDERKIEL · GWYNTHOR",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Postzentrale · Aufbau",
+          "commentThreadKey": "federkiel-postzentrale-aufbau",
+          "image": "./assets/federkiel-gwynthor/scenes/postzentrale-v1.webp",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die Postzentrale",
+            "eyebrow": "Gwynthor · Celtigerns Wacht",
+            "subtitle": "Annahme, Ausgabe und Sortierung",
+            "centerLabel": "Die Postzentrale",
+            "emblem": "../Fraktionen/assets/emblems/gilden/federkiel-v2.webp",
+            "sideImage": "./assets/federkiel-gwynthor/scenes/postzentrale-v1.webp",
+            "motto": "Gilde Federkiel · Gwynthor",
+            "description": "<p>Unter den Arkaden der Zentralpost führen mehrere gleichwertige Schalter in die große Halle. Hier gibt man Briefe ab, erfragt den nächsten Abgang oder holt hinterlegte Post. Hinter der Halle ordnen hölzerne Fächer die Sendungen nach Stadtwegen und Fernrouten. Die Sortierung übergibt verschlossene Postsäcke mit Begleitlisten an das Lager und meldet der Kurierstation, welche Sendungen bereitstehen.</p><p><a href=\"./AleriaAlmanach.html?entry=gwynthor-federkiel\">Zum Gildenhaus von Federkiel</a></p>",
+            "detailsTitle": "Auftrag und Verantwortung",
+            "details": [
+              {
+                "label": "Publikumsdienst",
+                "value": "Annahme, Versandberatung und Abholung"
+              },
+              {
+                "label": "Innenbetrieb",
+                "value": "Sortierfächer und Begleitlisten"
+              },
+              {
+                "label": "Bei Rückfragen",
+                "value": "Adressklärung oder Rücksendung durch die Postleitung"
+              }
+            ],
+            "chartTitle": "Leitung und Dienststellen",
+            "chartIntro": "Schaltervorsteher und Sortiervorsteher berichten an die Postleitung. Jede Aufsicht führt vier gleichrangige Dienstplätze.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 96,
+            "cardFontScale": 118,
+            "trees": [
+              {
+                "id": "schalterdienst",
+                "label": "Postleitung und Schalter",
+                "levels": [
+                  {
+                    "label": "Betriebsleitung",
+                    "nodes": [
+                      {
+                        "title": "Postleitung",
+                        "text": "Führt den Schalter- und Sortierdienst. Entscheidet über Rückfragen, erneute Zustellung und Rücksendung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Schalteraufsicht",
+                    "nodes": [
+                      {
+                        "title": "Schaltervorsteher",
+                        "text": "Teilt die Schalter ein, prüft die Portobelege und übernimmt Rückfragen, die am Schalter offenbleiben.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Vier gleichwertige Schalter",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "title": "Schalterkraft",
+                        "text": "Nimmt Briefe an, ermittelt Porto und nächsten Abgang und gibt hinterlegte Post an die berechtigte Person aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-schreibdienst-v1.webp"
+                      },
+                      {
+                        "title": "Schalterkraft",
+                        "text": "Nimmt Briefe an, ermittelt Porto und nächsten Abgang und gibt hinterlegte Post an die berechtigte Person aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-schreibdienst-v1.webp"
+                      },
+                      {
+                        "title": "Schalterkraft",
+                        "text": "Nimmt Briefe an, ermittelt Porto und nächsten Abgang und gibt hinterlegte Post an die berechtigte Person aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-schreibdienst-v1.webp"
+                      },
+                      {
+                        "title": "Schalterkraft",
+                        "text": "Nimmt Briefe an, ermittelt Porto und nächsten Abgang und gibt hinterlegte Post an die berechtigte Person aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-schreibdienst-v1.webp"
+                      }
+                    ]
+                  }
+                ],
+                "parentTreeId": ""
+              },
+              {
+                "id": "sortierdienst",
+                "label": "Sortierung",
+                "levels": [
+                  {
+                    "label": "Aufsicht der Sortierung",
+                    "nodes": [
+                      {
+                        "title": "Sortiervorsteher",
+                        "text": "Ordnet die Abgangsfächer, prüft Begleitlisten und legt ungeklärte Adressen der Postleitung vor.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Sortierdienst",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "title": "Sortierkraft",
+                        "text": "Verteilt Briefe auf die richtigen Abgänge, gleicht die Anzahl ab und versiegelt die gefüllten Postsäcke zur Übergabe.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-schreibdienst-v1.webp"
+                      },
+                      {
+                        "title": "Sortierkraft",
+                        "text": "Verteilt Briefe auf die richtigen Abgänge, gleicht die Anzahl ab und versiegelt die gefüllten Postsäcke zur Übergabe.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-schreibdienst-v1.webp"
+                      },
+                      {
+                        "title": "Sortierkraft",
+                        "text": "Verteilt Briefe auf die richtigen Abgänge, gleicht die Anzahl ab und versiegelt die gefüllten Postsäcke zur Übergabe.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-schreibdienst-v1.webp"
+                      },
+                      {
+                        "title": "Sortierkraft",
+                        "text": "Verteilt Briefe auf die richtigen Abgänge, gleicht die Anzahl ab und versiegelt die gefüllten Postsäcke zur Übergabe.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-schreibdienst-v1.webp"
+                      }
+                    ]
+                  }
+                ],
+                "parentTreeId": "schalterdienst"
+              }
+            ],
+            "levels": [],
+            "chartScale": 75
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Am Schalter der Zentralpost",
+          "commentThreadKey": "federkiel-postzentrale-szene",
+          "image": "./assets/federkiel-gwynthor/scenes/postzentrale-szene-v1.webp",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Unter dem hohen Fenster liegen ein Siegelstempel und die Schale für das Porto. Hinter dem Schalter bleibt ein Fach für den nächsten Abgang frei. Auf dem Tresen ist Platz für einen Brief, dessen Ziel erst noch geklärt werden muss.</p>",
+          "sessionHint": "Hier lässt sich ein Brief aufgeben, erwartete Post abholen oder nach einer Zustellung fragen.",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Der erste Beitrag eröffnet die Szene.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

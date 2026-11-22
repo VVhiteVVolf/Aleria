@@ -1,0 +1,383 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--haus-sgwarnog--mabli-swgarnog",
+  "slug": "mabil-sgwarnog",
+  "identity": {
+    "name": "Mabil Sgwarnog",
+    "aliases": [],
+    "worldPersonId": "person--haus-sgwarnog--mabli-swgarnog"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "haus-wyrm",
+      "label": "Haus Wyrm"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "haus-wyrm",
+        "familyTitle": "Haus Wyrm",
+        "personId": "mabli-swgarnog",
+        "worldPersonId": "person--haus-sgwarnog--mabli-swgarnog",
+        "houseId": "house-sgwarnog",
+        "houseName": "Haus Sgwarnog",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Mabil Sgwarnog\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-sgwarnog\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/mabli-swgarnog.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"rhydian-wyrm\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--rhydian-wyrm\",\"name\":\"Rhydian Wyrm\"}],\"children\":[{\"personId\":\"enan-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--enan-wyrm\",\"name\":\"Enan Wyrm\"},{\"personId\":\"rianna-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--rianna-wyrm\",\"name\":\"Rianna Wyrm\"},{\"personId\":\"fotor-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--fotor-wyrm\",\"name\":\"Fotor Wyrm\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--haus-sgwarnog--mabli-swgarnog",
+      "documentIds": [
+        "person--haus-sgwarnog--mabli-swgarnog"
+      ],
+      "documents": [
+        {
+          "documentId": "person--haus-sgwarnog--mabli-swgarnog",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "haus-wyrm",
+        "personId": "mabli-swgarnog",
+        "worldPersonId": "person--haus-sgwarnog--mabli-swgarnog",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Familien/2026-11-22 Wyrm/mabli-swgarnog.json",
+    "sourceExportedAt": "2026-11-22T11:39:42.648Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--haus-sgwarnog--mabli-swgarnog"
+    ],
+    "contentHash": "362271c0feb542f38c2b4ef5c03fd3d7a08a552f4f124b76bf4c26d14b1b70e4"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "wyrm-familienakten-20261122"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Mabil Sgwarnog",
+        "title": "Wegverheiratet an Haus Wyrm",
+        "fraktion": "Haus Sgwarnog O'Aldwynd",
+        "role": "",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Ährental > Flusstal > Aldwynd",
+        "currentLocation": "",
+        "origin": "",
+        "bio": "Mabil Sgwarnog stammt aus Haus Sgwarnog O'Aldwynd. Jahrgang 1694. Die Eltern sind Gwendolyn Grawn O'Glyndraith und Morcant Sgwarnog. Die Ehe mit Rhydian Wyrm O'Gwynthor ist im Stammbaum verzeichnet. Die Familienakten führen Enan Wyrm, Rianna Wyrm und Fotor Wyrm als Kinder.",
+        "aliases": [],
+        "archived": false,
+        "portrait": "../Stammbäume/assets/images/portraits/haus-wyrm/mabli-swgarnog.jpg",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "stats": [
+            {
+              "label": "Name",
+              "value": "Mabil Sgwarnog"
+            },
+            {
+              "label": "Haus",
+              "value": "Haus Sgwarnog O'Aldwynd"
+            },
+            {
+              "label": "Geboren",
+              "value": "1694"
+            }
+          ],
+          "biography": {
+            "biographyTitle": "Biografie",
+            "biographyText": "<p>Mabil Sgwarnog stammt aus Haus Sgwarnog O'Aldwynd. Jahrgang 1694. Die Eltern sind Gwendolyn Grawn O'Glyndraith und Morcant Sgwarnog. Die Ehe mit Rhydian Wyrm O'Gwynthor ist im Stammbaum verzeichnet. Die Familienakten führen Enan Wyrm, Rianna Wyrm und Fotor Wyrm als Kinder.</p>"
+          },
+          "revision": 1795347582648
+        },
+        "identity": {
+          "worldPersonId": "person--haus-sgwarnog--mabli-swgarnog"
+        },
+        "genealogy": {
+          "worldPersonId": "person--haus-sgwarnog--mabli-swgarnog",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1694",
+          "death": "",
+          "houseId": "house-sgwarnog",
+          "houseName": "Haus Sgwarnog O'Aldwynd",
+          "familyRole": "core",
+          "portraitPlaceholder": "auto",
+          "tags": [
+            "Wegverheiratet"
+          ],
+          "sources": [
+            {
+              "familyId": "haus-wyrm",
+              "personId": "mabli-swgarnog",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-22T11:39:42.648Z",
+              "lastSyncedAt": "2026-11-22T11:39:42.648Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view&person=mabli-swgarnog",
+              "fingerprint": "{\"name\":\"Mabil Sgwarnog\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-sgwarnog\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/mabli-swgarnog.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"rhydian-wyrm\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--rhydian-wyrm\",\"name\":\"Rhydian Wyrm\"}],\"children\":[{\"personId\":\"enan-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--enan-wyrm\",\"name\":\"Enan Wyrm\"},{\"personId\":\"rianna-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--rianna-wyrm\",\"name\":\"Rianna Wyrm\"},{\"personId\":\"fotor-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--fotor-wyrm\",\"name\":\"Fotor Wyrm\"}]}}"
+            },
+            {
+              "familyId": "haus-sgwarnog",
+              "personId": "mabli-swgarnog",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-22T11:39:42.648Z",
+              "lastSyncedAt": "2026-11-22T11:39:42.648Z",
+              "url": "../Stammbäume/Stammbaum.html?family=haus-sgwarnog&mode=view&person=mabli-swgarnog",
+              "fingerprint": "{\"name\":\"Mabil Sgwarnog\",\"title\":\"Wegverheiratet an Haus Wyrm\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-sgwarnog\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/mabli-swgarnog.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"gwendolyn-grawn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grawn--gwendolyn-grawn\",\"name\":\"Gwendolyn Grawn O'Glyndraith\"},{\"personId\":\"morcant-sgwarnog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgwarnog--morcant-sgwarnog\",\"name\":\"Morcant Sgwarnog\"}],\"partners\":[{\"personId\":\"rhydian-wyrm\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--rhydian-wyrm\",\"name\":\"Rhydian Wyrm O'Gwynthor\"}],\"children\":[]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [
+              {
+                "personId": "gwendolyn-grawn",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-grawn--gwendolyn-grawn",
+                "name": "Gwendolyn Grawn O'Glyndraith"
+              },
+              {
+                "personId": "morcant-sgwarnog",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-sgwarnog--morcant-sgwarnog",
+                "name": "Morcant Sgwarnog"
+              }
+            ],
+            "partners": [
+              {
+                "personId": "rhydian-wyrm",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-wyrm--rhydian-wyrm",
+                "name": "Rhydian Wyrm O'Gwynthor"
+              }
+            ],
+            "children": [
+              {
+                "personId": "enan-wyrm",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-wyrm--enan-wyrm",
+                "name": "Enan Wyrm"
+              },
+              {
+                "personId": "rianna-wyrm",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-wyrm--rianna-wyrm",
+                "name": "Rianna Wyrm"
+              },
+              {
+                "personId": "fotor-wyrm",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--haus-wyrm--fotor-wyrm",
+                "name": "Fotor Wyrm"
+              }
+            ]
+          }
+        },
+        "id": "person--haus-sgwarnog--mabli-swgarnog"
+      }
+    ]
+  },
+  "character": {
+    "name": "Mabil Sgwarnog",
+    "title": "Wegverheiratet an Haus Wyrm",
+    "fraktion": "Haus Sgwarnog O'Aldwynd",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Ährental > Flusstal > Aldwynd",
+    "currentLocation": "",
+    "origin": "",
+    "bio": "Mabil Sgwarnog stammt aus Haus Sgwarnog O'Aldwynd. Jahrgang 1694. Die Eltern sind Gwendolyn Grawn O'Glyndraith und Morcant Sgwarnog. Die Ehe mit Rhydian Wyrm O'Gwynthor ist im Stammbaum verzeichnet. Die Familienakten führen Enan Wyrm, Rianna Wyrm und Fotor Wyrm als Kinder.",
+    "aliases": [],
+    "archived": false,
+    "portrait": "../Stammbäume/assets/images/portraits/haus-wyrm/mabli-swgarnog.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Mabil Sgwarnog"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Sgwarnog O'Aldwynd"
+        },
+        {
+          "label": "Geboren",
+          "value": "1694"
+        }
+      ],
+      "biography": {
+        "biographyTitle": "Biografie",
+        "biographyText": "<p>Mabil Sgwarnog stammt aus Haus Sgwarnog O'Aldwynd. Jahrgang 1694. Die Eltern sind Gwendolyn Grawn O'Glyndraith und Morcant Sgwarnog. Die Ehe mit Rhydian Wyrm O'Gwynthor ist im Stammbaum verzeichnet. Die Familienakten führen Enan Wyrm, Rianna Wyrm und Fotor Wyrm als Kinder.</p>"
+      },
+      "revision": 1795347582648
+    },
+    "identity": {
+      "worldPersonId": "person--haus-sgwarnog--mabli-swgarnog"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-sgwarnog--mabli-swgarnog",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1694",
+      "death": "",
+      "houseId": "house-sgwarnog",
+      "houseName": "Haus Sgwarnog O'Aldwynd",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [
+        "Wegverheiratet"
+      ],
+      "sources": [
+        {
+          "familyId": "haus-wyrm",
+          "personId": "mabli-swgarnog",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T11:39:42.648Z",
+          "lastSyncedAt": "2026-11-22T11:39:42.648Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view&person=mabli-swgarnog",
+          "fingerprint": "{\"name\":\"Mabil Sgwarnog\",\"title\":\"\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-sgwarnog\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/mabli-swgarnog.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"rhydian-wyrm\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--rhydian-wyrm\",\"name\":\"Rhydian Wyrm\"}],\"children\":[{\"personId\":\"enan-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--enan-wyrm\",\"name\":\"Enan Wyrm\"},{\"personId\":\"rianna-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--rianna-wyrm\",\"name\":\"Rianna Wyrm\"},{\"personId\":\"fotor-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--fotor-wyrm\",\"name\":\"Fotor Wyrm\"}]}}"
+        },
+        {
+          "familyId": "haus-sgwarnog",
+          "personId": "mabli-swgarnog",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T11:39:42.648Z",
+          "lastSyncedAt": "2026-11-22T11:39:42.648Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-sgwarnog&mode=view&person=mabli-swgarnog",
+          "fingerprint": "{\"name\":\"Mabil Sgwarnog\",\"title\":\"Wegverheiratet an Haus Wyrm\",\"birth\":\"1694\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-sgwarnog\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/mabli-swgarnog.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[\"Wegverheiratet\"],\"relationships\":{\"parents\":[{\"personId\":\"gwendolyn-grawn\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-grawn--gwendolyn-grawn\",\"name\":\"Gwendolyn Grawn O'Glyndraith\"},{\"personId\":\"morcant-sgwarnog\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-sgwarnog--morcant-sgwarnog\",\"name\":\"Morcant Sgwarnog\"}],\"partners\":[{\"personId\":\"rhydian-wyrm\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--rhydian-wyrm\",\"name\":\"Rhydian Wyrm O'Gwynthor\"}],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "gwendolyn-grawn",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-grawn--gwendolyn-grawn",
+            "name": "Gwendolyn Grawn O'Glyndraith"
+          },
+          {
+            "personId": "morcant-sgwarnog",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-sgwarnog--morcant-sgwarnog",
+            "name": "Morcant Sgwarnog"
+          }
+        ],
+        "partners": [
+          {
+            "personId": "rhydian-wyrm",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-wyrm--rhydian-wyrm",
+            "name": "Rhydian Wyrm O'Gwynthor"
+          }
+        ],
+        "children": [
+          {
+            "personId": "enan-wyrm",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-wyrm--enan-wyrm",
+            "name": "Enan Wyrm"
+          },
+          {
+            "personId": "rianna-wyrm",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-wyrm--rianna-wyrm",
+            "name": "Rianna Wyrm"
+          },
+          {
+            "personId": "fotor-wyrm",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-wyrm--fotor-wyrm",
+            "name": "Fotor Wyrm"
+          }
+        ]
+      }
+    },
+    "id": "person--haus-sgwarnog--mabli-swgarnog"
+  }
+}

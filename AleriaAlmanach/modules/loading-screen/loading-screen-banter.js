@@ -1,4 +1,4 @@
-import { LOADING_SCREEN_QUOTES } from './loading-screen-quotes.js?v=20261120-rosenflucht-v11';
+import { LOADING_SCREEN_QUOTES } from './loading-screen-quotes.js?v=20261122-carys-archery-v1';
 
 export function mountLoadingScreenBanter(root, { variant, signal, showSpeaker, environment = window }) {
   const bubble = root.querySelector('[data-loading-banter]');

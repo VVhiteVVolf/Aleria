@@ -1,0 +1,225 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-22T00:00:00+01:00",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gilde Federkiel - Gwynthor",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Gilde Federkiel - Gwynthor"
+      ],
+      "iconUrl": "./assets/federkiel-gwynthor/aushangeschild-v1.webp",
+      "desc": "Gwynthors Zentralpost, Schreibstube, Druckerei, Kuriergestüt und Postlager."
+    },
+    "entry": {
+      "id": "gwynthor-federkiel",
+      "title": "Gilde Federkiel - Gwynthor",
+      "subtitle": "Gwynthors Zentrale im weltweiten Postnetz",
+      "type": "Post- und Kuriergilde",
+      "category": "Gilde Federkiel - Gwynthor",
+      "symbol": "../Fraktionen/assets/emblems/gilden/federkiel-v2.webp",
+      "image": "./assets/federkiel-gwynthor/scenes/gildenhaus-v1.webp",
+      "previewImage": "./assets/federkiel-gwynthor/scenes/gildenhaus-v1.webp",
+      "stamp": "FEDERKIEL · GWYNTHOR",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Das Gildenhaus von Federkiel",
+          "commentThreadKey": "federkiel-gildenhaus",
+          "image": "./assets/federkiel-gwynthor/scenes/gildenhaus-v1.webp",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "description": "<p>Über dem Eingang der Zentralpost hängt an zwei eisernen Scharnieren ein goldgrünes Holzschild mit einer hellen Feder. An diesem Zeichen erkennt man die Poststellen der <strong>Gilde Federkiel</strong>. Das Netz reicht um die ganze Welt. Selbst der kleinste Ort hat mindestens eine Kurierstation oder eine Schreibstube, an der sich eine Nachricht aufgeben lässt.</p><p>Gwynthors große Zentralpost führt hinter ihren Arkaden mehrere gleichwertige Schalter. Die Schreibstube hilft beim Verfassen und Lesen, die Druckerei versorgt das Netz mit Aushängen und Vordrucken, das Postlager hält die gebündelten Sendungen für die Abgänge bereit. Von der Kurierstation aus bringen Staffeln die Briefe durch Stadt und Bannkreis und zu den nächsten Stationen.</p><p>Wer sich einen herkömmlichen Einzelboten kaum leisten kann, gibt den Brief mit der Sammelpost auf. Aufeinander abgestimmte Abgänge und Wechselplätze tragen die Nachrichten durch ganz Cenyr und über seine Grenzen hinaus.</p><h3>Die Betriebsstellen in Gwynthor</h3><ul><li><a href=\"./AleriaAlmanach.html?entry=gwynthor-federkiel-postzentrale\">Die Postzentrale</a> · Annahme, Ausgabe und Sortierung</li><li><a href=\"./AleriaAlmanach.html?entry=gwynthor-federkiel-schreibstube\">Die Schreibstube</a> · Schreibplätze, Diktat und Vorlesen</li><li><a href=\"./AleriaAlmanach.html?entry=gwynthor-federkiel-druckerei\">Die Druckerei</a> · Satz, Pressen und Druckbögen</li><li><a href=\"./AleriaAlmanach.html?entry=gwynthor-federkiel-kurierstation\">Die Kurierstation (Gestüt)</a> · Drei Kurierstaffeln und ein gemeinsamer Stallbetrieb</li><li><a href=\"./AleriaAlmanach.html?entry=gwynthor-federkiel-lager\">Das Postlager</a> · Umschlag, Verwahrung und Vorräte</li></ul>",
+          "stats": [
+            [
+              "Standort",
+              "Gwynthor-Stadt"
+            ],
+            [
+              "Reichweite",
+              "Cenyr und das weltweite Stationsnetz"
+            ]
+          ]
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Dienstleistungen",
+          "commentThreadKey": "federkiel-dienstleistungen",
+          "image": "./assets/federkiel-gwynthor/scenes/dienstleistungen-v1.webp",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "guildServicesPage": true,
+          "guildServices": {
+            "title": "Briefe schreiben, lesen und verschicken",
+            "introduction": "<p>Einfache Briefe reisen günstig mit der Sammelpost. In der Schreibstube können Menschen ohne Lese- oder Schreibkenntnisse Briefe diktieren und vorlesen lassen.</p>",
+            "services": [
+              {
+                "title": "Einen Brief verschicken",
+                "description": "Briefe und kurze Botschaften günstig in der Stadt und im Umland zustellen lassen. Die Post sammelt Sendungen für denselben Weg und gibt sie gemeinsam auf.",
+                "scope": "Gewöhnliche Briefe und gefaltete Nachrichtenzettel",
+                "terms": "Das einfache Porto und der nächste passende Abgang werden am Schalter genannt.",
+                "icon": "./assets/federkiel-gwynthor/services/briefversand-v1.webp"
+              },
+              {
+                "title": "Am Schreibplatz selbst schreiben",
+                "description": "An der Schreibbank stehen Papier, Tinte und Feder bereit. Eine Schreibkraft hilft auf Wunsch beim Formulieren, bei der Anschrift oder beim Falten des Briefs.",
+                "scope": "Schreibplatz und Hilfe bei Bedarf",
+                "terms": "Material und gewünschte Schreibhilfe werden vorher besprochen.",
+                "icon": "./assets/federkiel-gwynthor/services/selbst-schreiben-v1.webp"
+              },
+              {
+                "title": "Einen Brief diktieren",
+                "description": "Wer selbst keinen Brief schreiben kann, erzählt der Schreibkraft in eigenen Worten, was ankommen soll. Die Schreibkraft setzt den Brief auf und liest ihn auf Wunsch zur Freigabe zurück.",
+                "scope": "Eine Botschaft nach Diktat",
+                "terms": "Die Schreibstube bietet für persönliche Nachrichten einen ruhigen Platz an.",
+                "icon": "./assets/federkiel-gwynthor/services/diktieren-v1.webp"
+              },
+              {
+                "title": "Post vorlesen lassen",
+                "description": "Eine Schreibkraft liest einen erhaltenen Brief auf Wunsch in der ruhigen Nische vor und hilft dabei, eine Antwort vorzubereiten.",
+                "scope": "Eingegangene Briefe und Botschaften",
+                "terms": "Ein verschlossener Brief wird nur mit Zustimmung geöffnet.",
+                "icon": "./assets/federkiel-gwynthor/services/vorlesen-v1.webp"
+              },
+              {
+                "title": "Briefe an einer Station abholen",
+                "description": "Briefe können an eine Federkiel-Stelle adressiert und dort hinterlegt werden. Das hilft Menschen, die unterwegs sind oder keine feste Zustelladresse haben.",
+                "scope": "Aufbewahrung an der vereinbarten Zielstation",
+                "terms": "Die Zielstation und der Name für die Ausgabe werden bei der Aufgabe festgehalten.",
+                "icon": "./assets/federkiel-gwynthor/services/abholung-v1.webp"
+              },
+              {
+                "title": "Nachrichten über Land schicken",
+                "description": "Die Fernpost befördert Briefe durch ganz Cenyr und über das weltweite Stationsnetz ins Ausland. Jede Station übernimmt die versiegelten Sendungen für den nächsten Abschnitt.",
+                "scope": "Briefe auf längeren Wegen und über die Grenze",
+                "terms": "Der Schalter klärt den erreichbaren Zielort, die nächste Verbindung und das Porto vor der Aufgabe.",
+                "icon": "./assets/federkiel-gwynthor/services/fernpost-v1.webp"
+              }
+            ],
+            "process": "<ol><li>Brief mitbringen, am Schreibplatz verfassen oder diktieren.</li><li>Am Schalter Zielort und Zustellweg klären und das Porto zahlen.</li><li>Die Post versiegelt und bündelt die Briefe nach Abgang. Kuriere reichen die Sendungen von Station zu Station weiter.</li><li>Am Ziel wird der Brief zugestellt oder zur Abholung hinterlegt.</li></ol>",
+            "conditions": "<p>Regelmäßige Sammelabgänge halten das Porto niedrig. Längere Wege richten sich nach den Anschlüssen zwischen den Poststationen. Persönliche Schreiben werden in der Schreibstube vertraulich behandelt.</p>"
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Gwynthorer Gildenleitung",
+          "commentThreadKey": "federkiel-gildenleitung-aufbau",
+          "image": "./assets/federkiel-gwynthor/scenes/gildenleitung-v1.webp",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die Gwynthorer Gildenleitung",
+            "eyebrow": "Gwynthor · Celtigerns Wacht",
+            "subtitle": "Verantwortung für die Poststellen der Stadt",
+            "centerLabel": "Die Gwynthorer Gildenleitung",
+            "emblem": "../Fraktionen/assets/emblems/gilden/federkiel-v2.webp",
+            "sideImage": "./assets/federkiel-gwynthor/scenes/gildenleitung-v1.webp",
+            "motto": "Gilde Federkiel · Gwynthor",
+            "description": "<p>Die Gwynthorer Gildenleitung legt fest, wann die Zentralpost annimmt, welche Abgänge Vorrang haben und wie die fünf Betriebsstellen zusammenarbeiten. Sie vereinbart mit Nachbarstationen die Übergaben der Fernpost und setzt den günstigen Grundtarif für gewöhnliche Briefe vor Ort um.</p>",
+            "detailsTitle": "Auftrag und Verantwortung",
+            "details": [
+              {
+                "label": "Geltungsbereich",
+                "value": "Gwynthors Federkiel-Betrieb"
+              },
+              {
+                "label": "Anschlüsse",
+                "value": "Poststationen in Cenyr und jenseits des Königreichs"
+              },
+              {
+                "label": "Grundauftrag",
+                "value": "Bezahlbare Briefe und Zugang zu Schreib- und Lesediensten"
+              }
+            ],
+            "chartTitle": "Leitung und Dienststellen",
+            "chartIntro": "Die Gildenleitung verantwortet den Standort. Die Stellvertretung koordiniert in ihrem Auftrag die fünf gleichrangigen Betriebsleitungen. Diese führen ihre eigenen Arbeitsbereiche.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 72,
+            "cardFontScale": 90,
+            "trees": [
+              {
+                "id": "gildenleitung",
+                "label": "Gwynthorer Leitung",
+                "levels": [
+                  {
+                    "label": "Gildenleitung",
+                    "nodes": [
+                      {
+                        "title": "Gildenmeisteramt",
+                        "text": "Verantwortet den Standort, setzt die örtliche Dienstordnung fest und schließt Übergabevereinbarungen mit anderen Poststellen.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Stellvertretung",
+                    "nodes": [
+                      {
+                        "title": "Stellvertretende Gildenleitung",
+                        "text": "Koordiniert die Leitungen im Tagesgeschäft, klärt Engpässe zwischen den Betriebsstellen und vertritt das Gildenmeisteramt.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Fünf gleichrangige Betriebsleitungen",
+                    "columns": 3,
+                    "nodes": [
+                      {
+                        "title": "Postleitung",
+                        "text": "Führt den Schalter- und Sortierdienst. Entscheidet über Rückfragen, erneute Zustellung und Rücksendung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      },
+                      {
+                        "title": "Leitung der Schreibstube",
+                        "text": "Organisiert die öffentlichen Schreibplätze, teilt Schreib- und Vorlesedienste ein und wahrt die Vertraulichkeit des Dienstes.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      },
+                      {
+                        "title": "Leitung der Druckerei",
+                        "text": "Plant die Auflagen, stimmt Gildenaushänge mit der Postleitung ab und gibt geprüfte Druckbögen frei.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      },
+                      {
+                        "title": "Leitung der Kurierstation",
+                        "text": "Koordiniert die drei Staffeln, teilt verfügbare Pferde und Ersatz ein und stimmt die Abgänge mit der Postzentrale ab.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      },
+                      {
+                        "title": "Lagerleitung",
+                        "text": "Verantwortet den Überblick über übernommene Postsäcke und Vorräte. Prüft Abweichungen und meldet sie der Postleitung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  }
+                ],
+                "parentTreeId": ""
+              }
+            ],
+            "levels": []
+          }
+        }
+      ]
+    }
+  }
+}

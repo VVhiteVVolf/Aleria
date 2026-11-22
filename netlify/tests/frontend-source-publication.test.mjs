@@ -162,3 +162,44 @@ test('the rose chase packages the opt-in game, its compact assets and no authori
     assert.equal(shouldPublish(path), true, path);
   }
 });
+
+test('the fitting room publishes its stage and keeps the ImageGen masters in the source tree', async () => {
+  const root = 'AleriaAlmanach/';
+  const manifestPath = root + 'public/assets/loading-screen/refri-anprobe-v2-manifest.json';
+  const promptPath = root + 'assets/loading-screen/refri-anprobe-v2-prompts.json';
+  const manifest = JSON.parse(await readFile(new URL(`../../${manifestPath}`, import.meta.url), 'utf8'));
+  const prompts = JSON.parse(await readFile(new URL(`../../${promptPath}`, import.meta.url), 'utf8'));
+  const paths = [
+    promptPath, ...prompts.images.map(({ source }) => root + 'assets/loading-screen/' + source),
+    manifestPath, ...['js', 'css'].map(extension => root + 'modules/loading-screen/loading-screen-fitting-room.' + extension),
+    ...[...manifest.background.assets, manifest.door.asset, manifest.sound, ...Object.values(manifest.peeks).map(({ asset }) => asset)]
+      .map(({ file }) => root + file)
+  ];
+  for (const path of paths) {
+    await access(new URL(`../../${path}`, import.meta.url));
+    assert.equal(shouldPublish(path), !path.startsWith(root + 'assets/'), path);
+  }
+});
+
+test('blanket archery ships the stage, pose atlases and shared battle theme', async () => {
+  const root = 'AleriaAlmanach/';
+  const base = 'public/assets/loading-screen/';
+  const assets = JSON.parse(await readFile(new URL('../../' + root + base + 'carys-schiessuebung-v2-manifest.json',
+    import.meta.url), 'utf8'));
+  const module = root + 'modules/loading-screen/';
+  const paths = [
+    root + base + 'carys-schiessuebung-v2-manifest.json',
+    root + 'assets/loading-screen/carys-schiessuebung-v2-prompts.json',
+    root + 'assets/loading-screen/carys-schiessuebung-v2-ausgaenge-prompts.json',
+    ...[assets.teaser.source, ...assets.teaser.assets, assets.room.source, assets.room.asset,
+      assets.carys.source, assets.carys.asset, assets.einion.source, assets.einion.asset,
+      ...Object.values(assets.arrows).flatMap(({ source, asset }) => [source, asset]),
+      ...Object.values(assets.reactions).flatMap(({ source, asset }) => [source, asset])].map(({ file }) => root + file),
+    module + 'blanket-archery/archery-game.js', module + 'blanket-archery/archery-game.css',
+    module + 'games/loading-combat-music.js', module + 'games/loading-game-audio.js'
+  ];
+  for (const path of paths) {
+    await access(new URL('../../' + path, import.meta.url));
+    assert.equal(shouldPublish(path), !path.startsWith(root + 'assets/'), path);
+  }
+});

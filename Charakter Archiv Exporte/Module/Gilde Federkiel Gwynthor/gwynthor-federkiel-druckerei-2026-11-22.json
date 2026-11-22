@@ -1,0 +1,202 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-22T00:00:00+01:00",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gilde Federkiel - Gwynthor",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Gilde Federkiel - Gwynthor"
+      ],
+      "iconUrl": "./assets/federkiel-gwynthor/aushangeschild-v1.webp",
+      "desc": "Gwynthors Zentralpost, Schreibstube, Druckerei, Kuriergestüt und Postlager."
+    },
+    "entry": {
+      "id": "gwynthor-federkiel-druckerei",
+      "title": "Die Druckerei",
+      "subtitle": "Satz, Pressen und Druckbögen",
+      "type": "Betriebsstelle der Gilde Federkiel",
+      "category": "Gilde Federkiel - Gwynthor",
+      "symbol": "./assets/federkiel-gwynthor/aushangeschild-v1.webp",
+      "image": "./assets/federkiel-gwynthor/scenes/druckerei-v1.webp",
+      "previewImage": "./assets/federkiel-gwynthor/scenes/druckerei-v1.webp",
+      "stamp": "FEDERKIEL · GWYNTHOR",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Die Druckerei · Aufbau",
+          "commentThreadKey": "federkiel-druckerei-aufbau",
+          "image": "./assets/federkiel-gwynthor/scenes/druckerei-v1.webp",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Die Druckerei",
+            "eyebrow": "Gwynthor · Celtigerns Wacht",
+            "subtitle": "Satz, Pressen und Druckbögen",
+            "centerLabel": "Die Druckerei",
+            "emblem": "../Fraktionen/assets/emblems/gilden/federkiel-v2.webp",
+            "sideImage": "./assets/federkiel-gwynthor/scenes/druckerei-v1.webp",
+            "motto": "Gilde Federkiel · Gwynthor",
+            "description": "<p>Mit hölzernen Spindelpressen fertigt die Werkstatt die Aushänge für Poststellen, die Vordrucke für Begleitlisten und die Wegzettel der Staffeln. Der Satzdienst setzt und prüft jede Vorlage. An den Pressen entstehen daraus Bögen, die vor der Verteilung trocknen. Ändert sich ein Abgang, erhält die betroffene Station einen neuen Aushang mit der nächsten geeigneten Post.</p><p><a href=\"./AleriaAlmanach.html?entry=gwynthor-federkiel\">Zum Gildenhaus von Federkiel</a></p>",
+            "detailsTitle": "Auftrag und Verantwortung",
+            "details": [
+              {
+                "label": "Drucksachen",
+                "value": "Aushänge, Begleitlisten und Wegzettel"
+              },
+              {
+                "label": "Freigabe",
+                "value": "Korrekturabzug vor dem Auflagendruck"
+              },
+              {
+                "label": "Verteilung",
+                "value": "Über die eigenen Poststationen"
+              }
+            ],
+            "chartTitle": "Leitung und Dienststellen",
+            "chartIntro": "Satzmeister und Druckmeister leiten ihre Arbeitsbereiche unter der gemeinsamen Druckereileitung.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 96,
+            "cardFontScale": 118,
+            "trees": [
+              {
+                "id": "satz",
+                "label": "Druckereileitung und Satz",
+                "levels": [
+                  {
+                    "label": "Betriebsleitung",
+                    "nodes": [
+                      {
+                        "title": "Leitung der Druckerei",
+                        "text": "Plant die Auflagen, stimmt Gildenaushänge mit der Postleitung ab und gibt geprüfte Druckbögen frei.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Aufsicht im Satz",
+                    "nodes": [
+                      {
+                        "title": "Satzmeister",
+                        "text": "Verteilt die Vorlagen, prüft den Korrekturabzug und übergibt den freigegebenen Satz für die Presse.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Satzdienst",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "title": "Setzer",
+                        "text": "Setzt die Lettern nach Vorlage, zieht einen Abzug und bessert beanstandete Stellen aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      },
+                      {
+                        "title": "Setzer",
+                        "text": "Setzt die Lettern nach Vorlage, zieht einen Abzug und bessert beanstandete Stellen aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      },
+                      {
+                        "title": "Setzer",
+                        "text": "Setzt die Lettern nach Vorlage, zieht einen Abzug und bessert beanstandete Stellen aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      },
+                      {
+                        "title": "Setzer",
+                        "text": "Setzt die Lettern nach Vorlage, zieht einen Abzug und bessert beanstandete Stellen aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      }
+                    ]
+                  }
+                ],
+                "parentTreeId": ""
+              },
+              {
+                "id": "pressen",
+                "label": "Pressen und Druckbögen",
+                "levels": [
+                  {
+                    "label": "Aufsicht an den Pressen",
+                    "nodes": [
+                      {
+                        "title": "Druckmeister",
+                        "text": "Teilt die Pressen ein, prüft die Druckqualität und zählt die fertigen Auflagen für die Verteilung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Pressendienst",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "title": "Druckkraft",
+                        "text": "Färbt den Satz ein, führt Papier und Presse und legt fertige Bögen zum Trocknen aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      },
+                      {
+                        "title": "Druckkraft",
+                        "text": "Färbt den Satz ein, führt Papier und Presse und legt fertige Bögen zum Trocknen aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      },
+                      {
+                        "title": "Druckkraft",
+                        "text": "Färbt den Satz ein, führt Papier und Presse und legt fertige Bögen zum Trocknen aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      },
+                      {
+                        "title": "Druckkraft",
+                        "text": "Färbt den Satz ein, führt Papier und Presse und legt fertige Bögen zum Trocknen aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      }
+                    ]
+                  }
+                ],
+                "parentTreeId": "satz"
+              }
+            ],
+            "levels": [],
+            "chartScale": 75
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Der erste Korrekturabzug",
+          "commentThreadKey": "federkiel-druckerei-szene",
+          "image": "./assets/federkiel-gwynthor/scenes/druckerei-szene-v1.webp",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Ein frischer Abzug liegt schräg auf dem Pult. Die Lettern der Vorlage warten im Winkelhaken, und im Hintergrund steht die Presse offen. Der Bogen kann noch geprüft werden, bevor der Satz für die Auflage geschlossen wird.</p>",
+          "sessionHint": "Hier lässt sich ein neuer Aushang abgleichen oder eine Änderung an den Abgängen zur Druckfreigabe bringen.",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Der erste Beitrag eröffnet die Szene.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

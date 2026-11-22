@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "path": "Stammbäume/assets/data/source-inventories/glynmor-20261122/originals/published-glynmor-rev1.json",
+      "sha256": "b345ce4010fb4cffa5bef2e6da7506ce7d5e021d6d4c2ed9a6a014345dd5b696"
+    },
+    {
+      "path": "Stammbäume/assets/data/source-inventories/glynmor-20261122/originals/images/NrT4I6V.jpeg",
+      "sha256": "49a127b36300b12d03fc93d3cf95e0e02c6add3f07457b481fa0489200f59fed"
+    }
+  ],
+  "publishedFamily": {
+    "revision": 1,
+    "gitBlob": "4a408b8ea9a667599ec5e6afda0da76f7292a066"
+  },
+  "counts": {
+    "persons": 34,
+    "partnerships": 12,
+    "parentages": 21,
+    "houses": 1,
+    "timeJumps": 1
+  },
+  "namedPersons": 21,
+  "chartOnly": 13
+}

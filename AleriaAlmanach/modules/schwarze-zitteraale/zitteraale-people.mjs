@@ -1,3 +1,5 @@
+import { SUMPFNATTERN_GROUP } from './sumpfnattern-people.mjs';
+
 export const ZITTERAALE_ART = '/AleriaAlmanach/assets/schwarze-zitteraale';
 export const ZITTERAALE_ID = 'schwarze-zitteraale';
 export const ZITTERAALE_REVISION = '20261116-unterbanden-v4';
@@ -55,8 +57,10 @@ export const ZITTERAALE_GROUPS = Object.freeze(['I', 'II', 'III', 'IV', 'V', 'VI
   id: `zitteraale-gruppe-${numeral.toLowerCase()}`, numeral, name: index === 0 ? 'Die Untoten Aale' : `Gruppe ${numeral}.`,
   banner: `${ZITTERAALE_ART}/groups/banners/${index === 0 ? 'banner-untote-aele-v1' : 'banner-blank-v1'}.png`,
   overviewImage: index === 0 ? `${ZITTERAALE_ART}/groups/scenes/untote-aale-lager-v1.png` : '',
+  headquartersImage: index === 0 ? `${ZITTERAALE_ART}/groups/scenes/untote-aale-lager-v1.png` : '',
   leaderId: index === 0 ? 'zitteraale-medrawd-angau' : `zitteraale-gruppe-${numeral.toLowerCase()}-fuehrer`,
   leaderName: index === 0 ? 'Medrawd Angau' : 'Gruppenführer · unbenannt',
   leaderPortrait: `${ZITTERAALE_ART}/groups/portraits/${index === 0 ? 'medrawd-angau-v3' : `leader-${numeral.toLowerCase()}-v1`}.png`,
-  detailed: index === 0
+  detailed: index === 0,
+  ...(index === 1 ? SUMPFNATTERN_GROUP : {})
 })));

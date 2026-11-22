@@ -1,0 +1,467 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--person--glynmor--person-64064dfd",
+  "slug": "eleri",
+  "identity": {
+    "name": "Eleri",
+    "aliases": [],
+    "worldPersonId": "person--glynmor--person-64064dfd"
+  },
+  "classification": {
+    "primary": {
+      "kind": "family",
+      "id": "glynmor",
+      "label": "Familie Glynmor"
+    },
+    "familyStatus": "linked",
+    "families": [
+      {
+        "familyId": "glynmor",
+        "familyTitle": "Familie Glynmor",
+        "personId": "person-64064dfd",
+        "worldPersonId": "person--glynmor--person-64064dfd",
+        "houseId": "",
+        "houseName": "",
+        "familyRole": "married",
+        "source": "project",
+        "folderPath": [
+          "Cenyr",
+          "Celtigerns Wacht",
+          "Llamreis Ankunft",
+          "Gwynthor"
+        ],
+        "url": "",
+        "fingerprint": "{\"name\":\"Eleri\",\"title\":\"Küchenmeisterin Haus Wyrm\",\"birth\":\"1687\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-glynmor/person-64064dfd.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-2a5e7890\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-2a5e7890\",\"name\":\"Emlyn Glynmor\"}],\"children\":[{\"personId\":\"person-f1b4fd4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-f1b4fd4f\",\"name\":\"Ilar Glynmor\"},{\"personId\":\"person-8615e1f2\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-8615e1f2\",\"name\":\"Ffraid Glynmor\"},{\"personId\":\"person-d665a54d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-d665a54d\",\"name\":\"Meera Glynmor\"},{\"personId\":\"person-a6d5aa55\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-a6d5aa55\",\"name\":\"Steffan Glynmor\"}]}}",
+        "score": 1000
+      }
+    ],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "person--glynmor--person-64064dfd",
+      "documentIds": [
+        "person--glynmor--person-64064dfd"
+      ],
+      "documents": [
+        {
+          "documentId": "person--glynmor--person-64064dfd",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [
+      {
+        "familyId": "glynmor",
+        "personId": "person-64064dfd",
+        "worldPersonId": "person--glynmor--person-64064dfd",
+        "url": ""
+      }
+    ],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Glynmor/person--glynmor--person-64064dfd.json",
+    "sourceExportedAt": "2026-11-22T15:23:31.739Z",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "person--glynmor--person-64064dfd"
+    ],
+    "contentHash": "7da5f5754d5c083bdc4c7f9f1a4860e15b6bd57d775ca020a93e0f3a0dcbeb08"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "glynmor"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "name": "Eleri",
+        "title": "Küchenmeisterin Haus Wyrm",
+        "fraktion": "",
+        "role": "",
+        "status": "active",
+        "relevance": "",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+        "currentLocation": "Castell Wyrm",
+        "origin": "",
+        "bio": "",
+        "aliases": [],
+        "archived": false,
+        "portrait": "../Stammbäume/assets/images/portraits/haus-glynmor/person-64064dfd.jpg",
+        "emotes": [],
+        "emotesOverride": false,
+        "imageSetSchemaVersion": 0,
+        "imageSets": [],
+        "activeImageSetId": "",
+        "imageSetsOverride": false,
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Eleri",
+          "stats": [
+            {
+              "label": "Haus",
+              "value": "Glynmor"
+            },
+            {
+              "label": "Stand",
+              "value": "Bürgerlich"
+            },
+            {
+              "label": "Tätigkeit",
+              "value": "Küchenmeisterin Haus Wyrm"
+            },
+            {
+              "label": "Geboren",
+              "value": "1687"
+            },
+            {
+              "label": "Ort",
+              "value": "Castell Wyrm"
+            },
+            {
+              "label": "Lebensstatus",
+              "value": "Lebend"
+            }
+          ],
+          "biography": {
+            "biographyTitle": "Eleri",
+            "biographyText": "<p>Eleri ist Küchenmeisterin im Haushalt des Hauses Wyrm.</p>",
+            "footer": "Personenakte · Eleri",
+            "portrait": "../Stammbäume/assets/images/portraits/haus-glynmor/person-64064dfd.jpg",
+            "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+            "connectionsTitle": "Familie und Verwandtschaft",
+            "connections": [
+              {
+                "type": "connection",
+                "name": "Emlyn Glynmor",
+                "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-2a5e7890.jpg",
+                "imageFormat": "portrait",
+                "detail": "Ehe"
+              },
+              {
+                "type": "connection",
+                "name": "Ilar Glynmor",
+                "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-f1b4fd4f.jpg",
+                "imageFormat": "portrait",
+                "detail": "Kind"
+              },
+              {
+                "type": "connection",
+                "name": "Ffraid Glynmor",
+                "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-8615e1f2.jpg",
+                "imageFormat": "portrait",
+                "detail": "Kind"
+              },
+              {
+                "type": "connection",
+                "name": "Meera Glynmor",
+                "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-d665a54d.jpg",
+                "imageFormat": "portrait",
+                "detail": "Kind"
+              },
+              {
+                "type": "connection",
+                "name": "Steffan Glynmor",
+                "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-a6d5aa55.jpg",
+                "imageFormat": "portrait",
+                "detail": "Kind"
+              }
+            ],
+            "documentsTitle": "Familienakte",
+            "documents": [
+              {
+                "title": "Familie Glynmor",
+                "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+                "text": "Personenkarte und Verwandtschaft im Stammbaum.",
+                "link": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-64064dfd"
+              }
+            ]
+          }
+        },
+        "identity": {
+          "worldPersonId": "person--glynmor--person-64064dfd"
+        },
+        "genealogy": {
+          "worldPersonId": "person--glynmor--person-64064dfd",
+          "sex": "female",
+          "status": "alive",
+          "birth": "1687",
+          "death": "",
+          "houseId": "",
+          "houseName": "",
+          "familyRole": "married",
+          "portraitPlaceholder": "auto",
+          "tags": [],
+          "sources": [
+            {
+              "familyId": "glynmor",
+              "personId": "person-64064dfd",
+              "releaseId": "",
+              "publishedAt": "",
+              "importedAt": "2026-11-22T15:23:31.739Z",
+              "lastSyncedAt": "2026-11-22T15:23:31.739Z",
+              "url": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-64064dfd",
+              "fingerprint": "{\"name\":\"Eleri\",\"title\":\"Küchenmeisterin Haus Wyrm\",\"birth\":\"1687\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-glynmor/person-64064dfd.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-2a5e7890\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-2a5e7890\",\"name\":\"Emlyn Glynmor\"}],\"children\":[{\"personId\":\"person-f1b4fd4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-f1b4fd4f\",\"name\":\"Ilar Glynmor\"},{\"personId\":\"person-8615e1f2\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-8615e1f2\",\"name\":\"Ffraid Glynmor\"},{\"personId\":\"person-d665a54d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-d665a54d\",\"name\":\"Meera Glynmor\"},{\"personId\":\"person-a6d5aa55\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-a6d5aa55\",\"name\":\"Steffan Glynmor\"}]}}"
+            }
+          ],
+          "relationships": {
+            "parents": [],
+            "partners": [
+              {
+                "personId": "person-2a5e7890",
+                "type": "marriage",
+                "status": "active",
+                "certainty": "confirmed",
+                "worldPersonId": "person--glynmor--person-2a5e7890",
+                "name": "Emlyn Glynmor"
+              }
+            ],
+            "children": [
+              {
+                "personId": "person-f1b4fd4f",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--glynmor--person-f1b4fd4f",
+                "name": "Ilar Glynmor"
+              },
+              {
+                "personId": "person-8615e1f2",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--glynmor--person-8615e1f2",
+                "name": "Ffraid Glynmor"
+              },
+              {
+                "personId": "person-d665a54d",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--glynmor--person-d665a54d",
+                "name": "Meera Glynmor"
+              },
+              {
+                "personId": "person-a6d5aa55",
+                "type": "biological",
+                "legitimacy": "legitimate",
+                "certainty": "confirmed",
+                "worldPersonId": "person--glynmor--person-a6d5aa55",
+                "name": "Steffan Glynmor"
+              }
+            ]
+          }
+        },
+        "id": "person--glynmor--person-64064dfd",
+        "age": 53
+      }
+    ]
+  },
+  "character": {
+    "name": "Eleri",
+    "title": "Küchenmeisterin Haus Wyrm",
+    "fraktion": "",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "Castell Wyrm",
+    "origin": "",
+    "bio": "",
+    "aliases": [],
+    "archived": false,
+    "portrait": "../Stammbäume/assets/images/portraits/haus-glynmor/person-64064dfd.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Eleri",
+      "stats": [
+        {
+          "label": "Haus",
+          "value": "Glynmor"
+        },
+        {
+          "label": "Stand",
+          "value": "Bürgerlich"
+        },
+        {
+          "label": "Tätigkeit",
+          "value": "Küchenmeisterin Haus Wyrm"
+        },
+        {
+          "label": "Geboren",
+          "value": "1687"
+        },
+        {
+          "label": "Ort",
+          "value": "Castell Wyrm"
+        },
+        {
+          "label": "Lebensstatus",
+          "value": "Lebend"
+        }
+      ],
+      "biography": {
+        "biographyTitle": "Eleri",
+        "biographyText": "<p>Eleri ist Küchenmeisterin im Haushalt des Hauses Wyrm.</p>",
+        "footer": "Personenakte · Eleri",
+        "portrait": "../Stammbäume/assets/images/portraits/haus-glynmor/person-64064dfd.jpg",
+        "crestImage": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+        "connectionsTitle": "Familie und Verwandtschaft",
+        "connections": [
+          {
+            "type": "connection",
+            "name": "Emlyn Glynmor",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-2a5e7890.jpg",
+            "imageFormat": "portrait",
+            "detail": "Ehe"
+          },
+          {
+            "type": "connection",
+            "name": "Ilar Glynmor",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-f1b4fd4f.jpg",
+            "imageFormat": "portrait",
+            "detail": "Kind"
+          },
+          {
+            "type": "connection",
+            "name": "Ffraid Glynmor",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-8615e1f2.jpg",
+            "imageFormat": "portrait",
+            "detail": "Kind"
+          },
+          {
+            "type": "connection",
+            "name": "Meera Glynmor",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-d665a54d.jpg",
+            "imageFormat": "portrait",
+            "detail": "Kind"
+          },
+          {
+            "type": "connection",
+            "name": "Steffan Glynmor",
+            "image": "../Stammbäume/assets/images/portraits/haus-glynmor/person-a6d5aa55.jpg",
+            "imageFormat": "portrait",
+            "detail": "Kind"
+          }
+        ],
+        "documentsTitle": "Familienakte",
+        "documents": [
+          {
+            "title": "Familie Glynmor",
+            "icon": "../Stammbäume/assets/images/houses/Llamreis Ankunft/Bürgerliche/Gwynthor/Glynmor/glynmor-wappen-v1.png",
+            "text": "Personenkarte und Verwandtschaft im Stammbaum.",
+            "link": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-64064dfd"
+          }
+        ]
+      }
+    },
+    "identity": {
+      "worldPersonId": "person--glynmor--person-64064dfd"
+    },
+    "genealogy": {
+      "worldPersonId": "person--glynmor--person-64064dfd",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1687",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "married",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "glynmor",
+          "personId": "person-64064dfd",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T15:23:31.739Z",
+          "lastSyncedAt": "2026-11-22T15:23:31.739Z",
+          "url": "../Stammbäume/Stammbaum.html?family=glynmor&mode=view&person=person-64064dfd",
+          "fingerprint": "{\"name\":\"Eleri\",\"title\":\"Küchenmeisterin Haus Wyrm\",\"birth\":\"1687\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-glynmor/person-64064dfd.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[],\"partners\":[{\"personId\":\"person-2a5e7890\",\"type\":\"marriage\",\"status\":\"active\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-2a5e7890\",\"name\":\"Emlyn Glynmor\"}],\"children\":[{\"personId\":\"person-f1b4fd4f\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-f1b4fd4f\",\"name\":\"Ilar Glynmor\"},{\"personId\":\"person-8615e1f2\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-8615e1f2\",\"name\":\"Ffraid Glynmor\"},{\"personId\":\"person-d665a54d\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-d665a54d\",\"name\":\"Meera Glynmor\"},{\"personId\":\"person-a6d5aa55\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--glynmor--person-a6d5aa55\",\"name\":\"Steffan Glynmor\"}]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [],
+        "partners": [
+          {
+            "personId": "person-2a5e7890",
+            "type": "marriage",
+            "status": "active",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-2a5e7890",
+            "name": "Emlyn Glynmor"
+          }
+        ],
+        "children": [
+          {
+            "personId": "person-f1b4fd4f",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-f1b4fd4f",
+            "name": "Ilar Glynmor"
+          },
+          {
+            "personId": "person-8615e1f2",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-8615e1f2",
+            "name": "Ffraid Glynmor"
+          },
+          {
+            "personId": "person-d665a54d",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-d665a54d",
+            "name": "Meera Glynmor"
+          },
+          {
+            "personId": "person-a6d5aa55",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--glynmor--person-a6d5aa55",
+            "name": "Steffan Glynmor"
+          }
+        ]
+      }
+    },
+    "id": "person--glynmor--person-64064dfd",
+    "age": 53
+  }
+}

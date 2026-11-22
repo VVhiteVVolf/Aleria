@@ -58,16 +58,17 @@ test('every subgroup has its own four-page module and independent headquarters t
   assert.equal(groups[0].pages[0].image, '/AleriaAlmanach/assets/schwarze-zitteraale/groups/scenes/untote-aale-lager-v1.png');
   assert.equal(groups[0].pages[0].imageFit, 'cover');
   assert.equal(groups[0].symbol, ZITTERAALE_GROUPS[0].banner);
-  assert.equal(groups[0].pages[3].image, ZITTERAALE_GROUPS[0].banner);
-  groups.slice(1).forEach((group, index) => assert.equal(group.pages[0].image, ZITTERAALE_GROUPS[index + 1].banner));
-  assert.deepEqual(groups.slice(1).map(group => group.title), ['Gruppe II.', 'Gruppe III.', 'Gruppe IV.', 'Gruppe V.', 'Gruppe VI.', 'Gruppe VII.', 'Gruppe VIII.']);
+  assert.equal(groups[0].pages[3].image, ZITTERAALE_GROUPS[0].headquartersImage);
+  assert.equal(groups[1].title, 'Die Sumpfnattern');
+  groups.slice(2).forEach((group, index) => assert.equal(group.pages[0].image, ZITTERAALE_GROUPS[index + 2].banner));
+  assert.deepEqual(groups.slice(2).map(group => group.title), ['Gruppe III.', 'Gruppe IV.', 'Gruppe V.', 'Gruppe VI.', 'Gruppe VII.', 'Gruppe VIII.']);
   const threads = [];
   for (const module of groups) {
     assert.equal(module.pages.length, 4);
     assert(module.pages[1].biographyPage);
     assert(module.pages[2].hierarchyPage);
     assert(module.pages[3].sessionPage);
-    assert.equal(module.pages[3].sessionLocation, '');
+    assert.equal(module.pages[3].sessionLocation, module.id === 'zitteraale-gruppe-ii' ? 'Lycath · Lager der Sumpfnattern' : '');
     assert.deepEqual(module.pages[3].sessionDateAleria, { year: null, month: null, day: null });
     threads.push(module.pages[3].commentThreadKey);
   }

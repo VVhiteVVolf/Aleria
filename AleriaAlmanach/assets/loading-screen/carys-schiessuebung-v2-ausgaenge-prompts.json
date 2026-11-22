@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "version": 1,
+  "scene": "carys-schiessuebung",
+  "tool": "ImageGen (built-in)",
+  "date": "2026-11-22",
+  "partOf": "carys-schiessuebung-v2-prompts.json",
+  "images": [
+    {
+      "source": "source/einion-weinen-v1.png",
+      "role": "Einion sobbing on a win",
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/einion-block-posen-v1.png",
+        "Stammbäume/assets/images/portraits/haus-draig/einion-draig.jpg"
+      ],
+      "prompt": "Use case: stylized-concept. Make a single isolated, full-body TRANSPARENT Chibi sprite of Einion Draig for the harmless comic victory reaction in this archery minigame. Image 1 is the SAME Einion exactly as already drawn in the current game. Use its body proportions, height, warm window-side light, armor, gloves, boots, red short cape and chest crest. Image 2 is his close character reference for short tousled copper-red hair, distinctive raised cowlick and bright blue eyes. This scene is Einion wailing over his beloved blanket. Show him from the same frontal camera, both feet planted, hunched shoulders, hands held up by his eyes or the sides of his face, strongly raised inner brows, eyes squeezed almost shut and two LARGE clear cold-blue CARTOON STREAMS OF TEARS running continuously down from the eyes onto the cheeks, with two or three little readable tear drops adjacent to the cheeks. His mouth opens in a funny miserable wobble and he has absolutely no injuries. The tears need to read when the image is small. Preserve the recognizable navy/charcoal Draig armor with crimson rim and his copper hair. Single whole body from top of cowlick to boots with broad true alpha margin, no shadows, background, extra landmarks, no writing, no border. One standalone pose, not a sprite grid.",
+      "original": {
+        "size": [
+          1182,
+          1330
+        ],
+        "bytes": 1354767,
+        "sha256": "7d70f2f5456467cf1b816f5fe6dbcb05861248849762aeab6813ad54f632d0fc"
+      }
+    },
+    {
+      "source": "source/wynonna-schimpfen-v1.png",
+      "role": "Wynonna enters from the right on a loss",
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-draig/wynonna-fiachrach.jpg",
+        "AleriaAlmanach/assets/loading-screen/source/einion-block-posen-v1.png"
+      ],
+      "prompt": "Use case: stylized-concept. Make a single full-body transparent Chibi game character sprite of Wynonna Fiachrach, Carys Draig's mother, facing three-quarters LEFT, as if she just strode in from screen-right. Image 1 is Wynonna's exact canon portrait: her deep chestnut swept-back long hair, dark brown eyes, gold drop earrings and bracelets, elegant forest-green dress with distinctive gold Celtic embroidery and muted green-gold plaid sash. Continue that same dress to practical floor-length hem, small refined shoes just visible, no armor. She is a recognizable mature adult mother, chibi proportioned. Image 2 is strict style reference only: reproduce the detailed outline work, crisp matte cel shading, compact chibi shape language and color treatment of this fantasy game's Einion sheet, without copying his hair, eyes or costume. Warm directional window light from screen-left.\n\nOne lively storytelling pose, visible head to feet: Wynonna visibly stern with pinched eyebrows and mouth open in a scolding expression. One hand firmly on hip, other firmly gesturing to screen-LEFT towards Carys with a raised warning forefinger, balanced one step into the room. Her dark hair and green skirt show a tiny natural sweep following her entry. Emphasize her recognizable face and elegant dark green and gold silhouette, restrained humor and no threat. No dialogue, props, runes, decorative panels, watermark, setting, ground shadow or effects. Genuine isolated transparency around the entire figure with generous margins and no clipped hand, hair or hem. Single standalone sprite, not a grid.",
+      "original": {
+        "size": [
+          1199,
+          1312
+        ],
+        "bytes": 1418110,
+        "sha256": "903f367a50fbe5ff7ce19eb0c92d3cab5d188673dc89a8fb0dc3116e563bd7d1"
+      }
+    }
+  ]
+}

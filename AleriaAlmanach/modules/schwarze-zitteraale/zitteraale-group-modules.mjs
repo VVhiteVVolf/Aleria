@@ -1,6 +1,8 @@
 import { ZITTERAALE_GROUPS } from './zitteraale-people.mjs';
 import { buildZitteraaleGroupHierarchy } from './zitteraale-group-hierarchy.mjs';
 import { buildMedrawdBiography, MEDRAWD_ID } from './medrawd-angau.mjs';
+import { SUMPFNATTERN_ID, CADWGAN_ID } from './sumpfnattern-people.mjs';
+import { buildSumpfnatternPages } from './sumpfnattern-pages.mjs';
 
 export const ZITTERAALE_SECTION_PATH = Object.freeze(['Schwarze Zitteraale']);
 export const ZITTERAALE_GROUP_SECTION_PATH = Object.freeze([...ZITTERAALE_SECTION_PATH, 'Schwarze Zitteraale - Gruppen']);
@@ -50,7 +52,8 @@ function groupLeaderPage(group) {
 
 function groupHeadquarters(group) {
   return {
-    schemaVersion: 1, pageTitle: 'Hauptquartier · Ort unbekannt', commentThreadKey: `${group.id}-hauptquartier`, ...groupImage(group), sessionPage: true,
+    schemaVersion: 1, pageTitle: 'Hauptquartier · Ort unbekannt', commentThreadKey: `${group.id}-hauptquartier`, ...groupImage(group, group.headquartersImage || group.banner), sessionPage: true,
+    imageFit: group.headquartersImage ? 'cover' : 'contain',
     sessionIntro: group.detailed
       ? '<p>Der Rückzugsort der Untoten Aale ist bislang unbekannt. Gerüchte weisen in die Berge von Tŵr Rhewgorn. Weder ein bestimmter Turm noch ein Zugang oder eine Raumfolge sind bestätigt.</p><p>Die Gruppe hat schwere Verluste erlitten und Verstärkung aus dem Hauptquartier der Schwarzen Zitteraale erhalten. Was Reisende über einen möglichen Unterschlupf erfahren, entscheidet sich auf ihren Wegen durch das Gebiet.</p>'
       : `<p>Der Hauptquartiersort von ${group.name} ist noch unbestimmt. Der Schauplatz, sein Zugang und seine Räume stehen für die spätere Ausarbeitung offen.</p>`,
@@ -61,16 +64,19 @@ function groupHeadquarters(group) {
 }
 
 export function buildZitteraaleGroupModules() {
-  return ZITTERAALE_GROUPS.map(group => ({
-    id: group.id, title: group.name, subtitle: `Schwarze Zitteraale · Gruppe ${group.numeral}.`,
-    type: 'Unterbande', category: 'Kriminalität · Schwarze Zitteraale', icon: '⚑',
-    symbol: group.banner, image: group.banner, previewImage: group.banner, stamp: `SCHWARZE ZITTERAALE · GRUPPE ${group.numeral}.`,
-    schemaVersion: 1, multipage: true, appendCommentsPage: false, enablePageComments: true,
-    sessionCast: group.detailed ? [MEDRAWD_ID] : [],
-    pages: [
-      groupOverview(group), groupLeaderPage(group),
-      { schemaVersion: 1, pageTitle: 'Hierarchie', commentThreadKey: `${group.id}-hierarchie`, hierarchyPage: true, hierarchy: buildZitteraaleGroupHierarchy(group) },
-      groupHeadquarters(group)
-    ]
-  }));
+  return ZITTERAALE_GROUPS.map(group => {
+    const authored = group.id === SUMPFNATTERN_ID ? buildSumpfnatternPages(group) : {};
+    return {
+      id: group.id, title: group.name, subtitle: `Schwarze Zitteraale · Gruppe ${group.numeral}.`,
+      type: 'Unterbande', category: 'Kriminalität · Schwarze Zitteraale', icon: '⚑',
+      symbol: group.emblem || group.banner, image: group.banner, previewImage: group.emblem || group.banner, stamp: `SCHWARZE ZITTERAALE · GRUPPE ${group.numeral}.`,
+      schemaVersion: 1, multipage: true, appendCommentsPage: false, enablePageComments: true,
+      sessionCast: group.detailed ? [MEDRAWD_ID] : group.id === SUMPFNATTERN_ID ? [CADWGAN_ID] : [],
+      pages: [
+        authored.overview || groupOverview(group), authored.leader || groupLeaderPage(group),
+        { schemaVersion: 1, pageTitle: 'Hierarchie', commentThreadKey: `${group.id}-hierarchie`, hierarchyPage: true, hierarchy: buildZitteraaleGroupHierarchy(group) },
+        authored.headquarters || groupHeadquarters(group)
+      ]
+    };
+  });
 }

@@ -1,0 +1,202 @@
+{
+  "type": "aleria-module-package",
+  "version": 1,
+  "exportedAt": "2026-11-22T00:00:00+01:00",
+  "module": {
+    "type": "aleria-module",
+    "version": 1,
+    "section": {
+      "key": "Gilde Federkiel - Gwynthor",
+      "tab": "Völker & Kulturen",
+      "path": [
+        "Cenyr",
+        "Celtigerns Wacht",
+        "Llamreis Ankunft",
+        "Bannkreis Gwynthor",
+        "Gwynthor-Stadt",
+        "Gilde Federkiel - Gwynthor"
+      ],
+      "iconUrl": "./assets/federkiel-gwynthor/aushangeschild-v1.webp",
+      "desc": "Gwynthors Zentralpost, Schreibstube, Druckerei, Kuriergestüt und Postlager."
+    },
+    "entry": {
+      "id": "gwynthor-federkiel-lager",
+      "title": "Das Postlager",
+      "subtitle": "Umschlag, Verwahrung und Vorräte",
+      "type": "Betriebsstelle der Gilde Federkiel",
+      "category": "Gilde Federkiel - Gwynthor",
+      "symbol": "./assets/federkiel-gwynthor/aushangeschild-v1.webp",
+      "image": "./assets/federkiel-gwynthor/scenes/lager-v1.webp",
+      "previewImage": "./assets/federkiel-gwynthor/scenes/lager-v1.webp",
+      "stamp": "FEDERKIEL · GWYNTHOR",
+      "schemaVersion": 1,
+      "multipage": true,
+      "appendCommentsPage": false,
+      "enablePageComments": true,
+      "sessionCast": [],
+      "pages": [
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Das Postlager · Aufbau",
+          "commentThreadKey": "federkiel-lager-aufbau",
+          "image": "./assets/federkiel-gwynthor/scenes/lager-v1.webp",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "hierarchyPage": true,
+          "hierarchy": {
+            "organizationTitle": "Das Postlager",
+            "eyebrow": "Gwynthor · Celtigerns Wacht",
+            "subtitle": "Umschlag, Verwahrung und Vorräte",
+            "centerLabel": "Das Postlager",
+            "emblem": "../Fraktionen/assets/emblems/gilden/federkiel-v2.webp",
+            "sideImage": "./assets/federkiel-gwynthor/scenes/lager-v1.webp",
+            "motto": "Gilde Federkiel · Gwynthor",
+            "description": "<p>Am Wagenportal werden eintreffende Postsäcke gegen die Begleitliste übernommen. Die Fächer entlang der Mittelgasse trennen wartende Sendungen nach Abgang. Rückläufer liegen unter Verschluss, bis die Postleitung über einen neuen Zustellversuch oder die Rücksendung entscheidet. Im trockenen hinteren Lager stehen Papier, leere Postsäcke, Schnüre und Siegelwachs für die Betriebsstellen bereit.</p><p><a href=\"./AleriaAlmanach.html?entry=gwynthor-federkiel\">Zum Gildenhaus von Federkiel</a></p>",
+            "detailsTitle": "Auftrag und Verantwortung",
+            "details": [
+              {
+                "label": "Umschlag",
+                "value": "Begleitlisten, Siegel und Abgangsfächer"
+              },
+              {
+                "label": "Verwahrung",
+                "value": "Rückläufer unter Verschluss"
+              },
+              {
+                "label": "Vorräte",
+                "value": "Papier, Postsäcke und Siegelmaterial"
+              }
+            ],
+            "chartTitle": "Leitung und Dienststellen",
+            "chartIntro": "Umschlag und Innenlager haben je eine Aufsicht mit vier Lagerkräften. Beide Aufsichten melden an die Lagerleitung.",
+            "treeDisplayMode": "tabs",
+            "portraitScale": 96,
+            "cardFontScale": 118,
+            "trees": [
+              {
+                "id": "umschlag",
+                "label": "Lagerleitung und Umschlag",
+                "levels": [
+                  {
+                    "label": "Betriebsleitung",
+                    "nodes": [
+                      {
+                        "title": "Lagerleitung",
+                        "text": "Verantwortet den Überblick über übernommene Postsäcke und Vorräte. Prüft Abweichungen und meldet sie der Postleitung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Aufsicht am Wagenportal",
+                    "nodes": [
+                      {
+                        "title": "Umschlagvorsteher",
+                        "text": "Überwacht Annahme und Ausgabe am Tor, prüft Übergabebelege und meldet beschädigte Siegel der Lagerleitung.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Postsäcke und Abgänge",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "title": "Lagerkraft",
+                        "text": "Übernimmt Postsäcke nach Liste, stellt sie in die Abgangsfächer und reicht sie gegen Eintrag an die zuständige Staffel weiter.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      },
+                      {
+                        "title": "Lagerkraft",
+                        "text": "Übernimmt Postsäcke nach Liste, stellt sie in die Abgangsfächer und reicht sie gegen Eintrag an die zuständige Staffel weiter.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      },
+                      {
+                        "title": "Lagerkraft",
+                        "text": "Übernimmt Postsäcke nach Liste, stellt sie in die Abgangsfächer und reicht sie gegen Eintrag an die zuständige Staffel weiter.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      },
+                      {
+                        "title": "Lagerkraft",
+                        "text": "Übernimmt Postsäcke nach Liste, stellt sie in die Abgangsfächer und reicht sie gegen Eintrag an die zuständige Staffel weiter.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      }
+                    ]
+                  }
+                ],
+                "parentTreeId": ""
+              },
+              {
+                "id": "verwahrung",
+                "label": "Verwahrung und Vorräte",
+                "levels": [
+                  {
+                    "label": "Aufsicht im Innenlager",
+                    "nodes": [
+                      {
+                        "title": "Bestandsvorsteher",
+                        "text": "Verwaltet Vorratsbuch und Schließfächer. Gibt Rückläufer nach Entscheidung der Postleitung für den nächsten Weg frei.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-leitung-v1.webp"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Innenlager",
+                    "columns": 4,
+                    "nodes": [
+                      {
+                        "title": "Lagerkraft",
+                        "text": "Lagert Rückläufer in zugewiesenen Fächern, zählt Vorräte und gibt Papier, Postsäcke und Siegelmaterial an die Betriebsstellen aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      },
+                      {
+                        "title": "Lagerkraft",
+                        "text": "Lagert Rückläufer in zugewiesenen Fächern, zählt Vorräte und gibt Papier, Postsäcke und Siegelmaterial an die Betriebsstellen aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      },
+                      {
+                        "title": "Lagerkraft",
+                        "text": "Lagert Rückläufer in zugewiesenen Fächern, zählt Vorräte und gibt Papier, Postsäcke und Siegelmaterial an die Betriebsstellen aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      },
+                      {
+                        "title": "Lagerkraft",
+                        "text": "Lagert Rückläufer in zugewiesenen Fächern, zählt Vorräte und gibt Papier, Postsäcke und Siegelmaterial an die Betriebsstellen aus.",
+                        "portrait": "./assets/federkiel-gwynthor/roles/silhouette-werkdienst-v1.webp"
+                      }
+                    ]
+                  }
+                ],
+                "parentTreeId": "umschlag"
+              }
+            ],
+            "levels": [],
+            "chartScale": 75
+          }
+        },
+        {
+          "schemaVersion": 1,
+          "pageTitle": "Übergabe am Lagertor",
+          "commentThreadKey": "federkiel-lager-szene",
+          "image": "./assets/federkiel-gwynthor/scenes/lager-szene-v1.webp",
+          "imageWidth": 36,
+          "imageTall": true,
+          "imageFit": "cover",
+          "imagePosition": "center",
+          "sessionPage": true,
+          "sessionIntro": "<p>Auf dem niedrigen Prüftisch liegt ein Postsack. Neben dem Anhänger am Hals ist das Wachssiegel gebrochen. Am Tor steht der nächste Sack bereit. Der Eintrag im Übergabebuch ist noch offen.</p>",
+          "sessionHint": "Hier lassen sich Lieferung, Siegel und Begleitliste vor der Übernahme abgleichen.",
+          "sessionEmptyTitle": "Die Szene ist offen",
+          "sessionEmptyText": "Der erste Beitrag eröffnet die Szene.",
+          "sessionDateAleria": {
+            "year": null,
+            "month": null,
+            "day": null
+          }
+        }
+      ]
+    }
+  }
+}

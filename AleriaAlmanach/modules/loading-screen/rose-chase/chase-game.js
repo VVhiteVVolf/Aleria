@@ -1,20 +1,9 @@
+import { loadGameStylesheet } from '../games/loading-game-assets.js?v=20261122-carys-archery-v1';
 import { advanceChase, createChaseState } from './chase-state.js?v=20261120-rosenflucht-v11';
-import { loadChaseArt } from './chase-stage.js?v=20261120-rosenflucht-v11';
-import { createChaseView } from './chase-view.js?v=20261120-rosenflucht-v11';
+import { loadChaseArt } from './chase-stage.js?v=20261122-carys-archery-v1';
+import { createChaseView } from './chase-view.js?v=20261122-carys-archery-v1';
 import { bindChaseInput } from './chase-input.js?v=20261120-rosenflucht-v11';
-import { createChaseAudio } from './chase-audio.js?v=20261120-rosenflucht-v11';
-
-function loadStylesheet(document, signal) {
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = new URL('./chase-game.css?v=20261120-rosenflucht-v11', import.meta.url).href;
-  return new Promise((resolve, reject) => {
-    link.addEventListener('load', resolve, { once: true, signal });
-    link.addEventListener('error', () => reject(new Error('Rosenflucht stylesheet is unavailable')), { once: true, signal });
-    signal.addEventListener('abort', () => { link.remove(); reject(signal.reason); }, { once: true });
-    document.head.append(link);
-  });
-}
+import { createChaseAudio } from './chase-audio.js?v=20261122-carys-archery-v1';
 
 const isFinished = state => state.phase === 'caught' || state.phase === 'escaped';
 
@@ -27,7 +16,11 @@ export async function mountRoseChase(dock, { assetUrl, muted, signal, onClose })
   const localSignal = lifetime.signal;
   signal?.addEventListener('abort', stop, { once: true, signal: localSignal });
   try {
-    const [art] = await Promise.all([loadChaseArt(environment, assetUrl, localSignal), loadStylesheet(document, localSignal)]);
+    const stylesheet = new URL('./chase-game.css?v=20261120-rosenflucht-v11', import.meta.url).href;
+    const [art] = await Promise.all([
+      loadChaseArt(environment, assetUrl, localSignal),
+      loadGameStylesheet(document, stylesheet, localSignal)
+    ]);
     if (localSignal.aborted) return null;
     const view = createChaseView(document, art);
     const sound = createChaseAudio(environment, muted);

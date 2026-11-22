@@ -1,0 +1,206 @@
+.blanket-archery {
+  --archery-paper: #f9ebcf;
+  --archery-gold: #e9c186;
+  --archery-outline: #ac8055;
+  display: grid;
+  flex: none;
+  width: 100%;
+  width: min(100%, max(500px, calc((100svh - 370px) * 16 / 9)));
+  margin-inline: auto;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid #aa805a81;
+  border-radius: 12px;
+  background: linear-gradient(112deg, #3f2b25, #241c20);
+  color: var(--archery-paper);
+}
+
+.blanket-archery__header,
+.blanket-archery__actions,
+.blanket-archery__hud {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
+.blanket-archery__header { justify-content: space-between; }
+.blanket-archery__header h2 {
+  margin: 0;
+  color: var(--archery-paper);
+  font: 600 clamp(20px, 3vw, 32px)/1.15 Georgia, serif;
+}
+
+.blanket-archery button {
+  min-height: 40px;
+  padding: 4px 10px;
+  border: 1px solid var(--archery-outline);
+  border-radius: 6px;
+  background: #533629;
+  color: var(--archery-paper);
+  font: 600 12px/1.2 system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.blanket-archery button:disabled { cursor: default; opacity: .55; }
+.blanket-archery__hud { font: 12px/1.3 system-ui, sans-serif; }
+.blanket-archery__stat {
+  padding: 5px 9px;
+  border: 1px solid #9f774b65;
+  border-radius: 6px;
+  background: #241b1c;
+}
+.blanket-archery__stat strong { color: var(--archery-gold); font-variant-numeric: tabular-nums; }
+.blanket-archery__power {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 120px;
+  min-width: 0;
+}
+
+.blanket-archery__power progress {
+  width: min(100%, 235px);
+  min-width: 24px;
+  height: 7px;
+  border: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #573e37;
+  accent-color: var(--archery-gold);
+}
+.blanket-archery__power progress::-webkit-progress-bar { background: #573e37; }
+.blanket-archery__power progress::-webkit-progress-value { background: var(--archery-gold); }
+.blanket-archery__power progress[data-high-tension] { accent-color: #ff986c; }
+.blanket-archery__power progress[data-high-tension]::-webkit-progress-value { background: #ff986c; }
+
+.blanket-archery__field {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--archery-outline);
+  border-radius: 8px;
+  background: #694341;
+  touch-action: none;
+  user-select: none;
+}
+.blanket-archery[data-phase="playing"][data-paused="false"] .blanket-archery__field { cursor: none; }
+.blanket-archery__field:focus { outline: none; }
+.blanket-archery__field:focus-visible { outline: 2px solid #fbe2a5; outline-offset: 2px; }
+.blanket-archery__field canvas { display: block; width: 100%; height: auto; }
+.blanket-archery__speech {
+  --speech-width: min(240px, 72%);
+  position: absolute;
+  z-index: 2;
+  top: clamp(5px, 1vw, 11px);
+  left: clamp(calc(var(--speech-width) / 2 + 6px), var(--einion-caption-x), calc(100% - var(--speech-width) / 2 - 6px));
+  width: var(--speech-width);
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 4px 6px 5px;
+  border: 1px solid #87624a;
+  border-radius: 7px;
+  background: #fff0d4;
+  color: #352322;
+  text-align: center;
+  font: clamp(12px, 1.35vw, 17px)/1.18 Georgia, serif;
+  pointer-events: none;
+}
+.blanket-archery__speech q { quotes: '„' '“' '‚' '‘'; }
+.blanket-archery__speech::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  border: solid #87624a;
+  border-width: 0 1px 1px 0;
+  background: #fff0d4;
+}
+.blanket-archery__admonition {
+  top: auto;
+  bottom: 55%;
+  left: auto;
+  right: 4%;
+  width: max-content;
+  max-width: 60%;
+  transform: none;
+}
+.blanket-archery__admonition::after { left: 72%; }
+.blanket-archery__crying,
+.blanket-archery__wynonna {
+  position: absolute;
+  z-index: 1;
+  width: auto;
+  pointer-events: none;
+}
+.blanket-archery__crying {
+  height: 31%;
+  translate: -50% 0;
+}
+.blanket-archery__wynonna {
+  height: 47%;
+  right: 5%;
+  bottom: 5.5%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .blanket-archery__wynonna:not([hidden]) { animation: archery-wynonna-enters .56s ease-out both; }
+  .blanket-archery__admonition:not([hidden]) { animation: archery-admonition-in .20s .39s ease-out both; }
+  .blanket-archery__crying:not([hidden]) { animation: archery-einion-sobs .32s ease-in-out 4; }
+}
+@keyframes archery-wynonna-enters {
+  from { transform: translateX(145%); }
+  to { transform: translateX(0); }
+}
+@keyframes archery-admonition-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes archery-einion-sobs {
+  0%, 100% { transform: translateY(0); }
+  48% { transform: translateY(-4%); }
+}
+.blanket-archery__result {
+  position: absolute;
+  z-index: 3;
+  inset: 8px 8px auto;
+  width: fit-content;
+  max-width: calc(100% - 16px);
+  margin: 0 auto;
+  padding: 6px 11px;
+  border: 1px solid #b77d53;
+  border-radius: 7px;
+  background: #291b1aeb;
+  color: var(--archery-paper);
+  text-align: center;
+  font: 600 clamp(12px, 1.5vw, 17px)/1.2 system-ui, sans-serif;
+  pointer-events: none;
+}
+
+.blanket-archery__instructions { display: grid; gap: 3px; font: 12px/1.4 system-ui, sans-serif; }
+.blanket-archery__instructions p { margin: 0; }
+.blanket-archery__feedback { min-height: 1.4em; color: var(--archery-gold); }
+.blanket-archery:not([data-phase="playing"]) :is(.blanket-archery__mouse-help, .blanket-archery__key-help, .blanket-archery__touch-help) {
+  display: none;
+}
+.blanket-archery:not([data-phase="playing"]) .blanket-archery__feedback {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.blanket-archery__touch-help { display: none; }
+.blanket-archery__instructions button { justify-self: start; margin-top: 2px; }
+
+@media (pointer: coarse) {
+  .blanket-archery__touch-help { display: block; }
+  .blanket-archery__mouse-help, .blanket-archery__key-help { display: none; }
+}
+@media (max-width: 600px) {
+  .blanket-archery { padding: 7px; }
+  .blanket-archery__actions { gap: 6px; }
+  .blanket-archery__actions button { min-height: 44px; }
+  .blanket-archery__hud { gap: 7px; }
+}

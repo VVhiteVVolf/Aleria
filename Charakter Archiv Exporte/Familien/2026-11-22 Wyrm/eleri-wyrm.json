@@ -1,0 +1,100 @@
+{
+  "type": "aleria-character",
+  "version": 3,
+  "exportedAt": "2026-11-22T11:39:42.648Z",
+  "assignedTab": "Gwynthor",
+  "character": {
+    "name": "Eleri Wyrm",
+    "title": "",
+    "fraktion": "Haus Wyrm",
+    "role": "",
+    "status": "active",
+    "relevance": "",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Gwynthor",
+    "currentLocation": "",
+    "origin": "",
+    "bio": "Eleri Wyrm stammt aus Haus Wyrm. Jahrgang 1724. Die Eltern sind Shan Wyrm und Neala Wylan.",
+    "aliases": [],
+    "archived": false,
+    "portrait": "../Stammbäume/assets/images/portraits/haus-wyrm/eleri-wyrm.jpg",
+    "emotes": [],
+    "emotesOverride": false,
+    "imageSetSchemaVersion": 0,
+    "imageSets": [],
+    "activeImageSetId": "",
+    "imageSetsOverride": false,
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "stats": [
+        {
+          "label": "Name",
+          "value": "Eleri Wyrm"
+        },
+        {
+          "label": "Haus",
+          "value": "Haus Wyrm"
+        },
+        {
+          "label": "Geboren",
+          "value": "1724"
+        }
+      ],
+      "biography": {
+        "biographyTitle": "Biografie",
+        "biographyText": "<p>Eleri Wyrm stammt aus Haus Wyrm. Jahrgang 1724. Die Eltern sind Shan Wyrm und Neala Wylan.</p>"
+      },
+      "revision": 1795347582648
+    },
+    "identity": {
+      "worldPersonId": "person--haus-wyrm--eleri-wyrm"
+    },
+    "genealogy": {
+      "worldPersonId": "person--haus-wyrm--eleri-wyrm",
+      "sex": "female",
+      "status": "alive",
+      "birth": "1724",
+      "death": "",
+      "houseId": "house-wyrm",
+      "houseName": "Haus Wyrm",
+      "familyRole": "core",
+      "portraitPlaceholder": "auto",
+      "tags": [],
+      "sources": [
+        {
+          "familyId": "haus-wyrm",
+          "personId": "eleri-wyrm",
+          "releaseId": "",
+          "publishedAt": "",
+          "importedAt": "2026-11-22T11:39:42.648Z",
+          "lastSyncedAt": "2026-11-22T11:39:42.648Z",
+          "url": "../Stammbäume/Stammbaum.html?family=haus-wyrm&mode=view&person=eleri-wyrm",
+          "fingerprint": "{\"name\":\"Eleri Wyrm\",\"title\":\"\",\"birth\":\"1724\",\"death\":\"\",\"sex\":\"female\",\"status\":\"alive\",\"houseId\":\"house-wyrm\",\"portrait\":\"../Stammbäume/assets/images/portraits/haus-wyrm/eleri-wyrm.jpg\",\"portraitPlaceholder\":\"auto\",\"tags\":[],\"relationships\":{\"parents\":[{\"personId\":\"shan-wyrm\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wyrm--shan-wyrm\",\"name\":\"Shan Wyrm\"},{\"personId\":\"neala-wylan\",\"type\":\"biological\",\"legitimacy\":\"legitimate\",\"certainty\":\"confirmed\",\"worldPersonId\":\"person--haus-wylan--neala-wylan\",\"name\":\"Neala Wylan\"}],\"partners\":[],\"children\":[]}}"
+        }
+      ],
+      "relationships": {
+        "parents": [
+          {
+            "personId": "shan-wyrm",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-wyrm--shan-wyrm",
+            "name": "Shan Wyrm"
+          },
+          {
+            "personId": "neala-wylan",
+            "type": "biological",
+            "legitimacy": "legitimate",
+            "certainty": "confirmed",
+            "worldPersonId": "person--haus-wylan--neala-wylan",
+            "name": "Neala Wylan"
+          }
+        ],
+        "partners": [],
+        "children": []
+      }
+    },
+    "id": "person--haus-wyrm--eleri-wyrm"
+  }
+}

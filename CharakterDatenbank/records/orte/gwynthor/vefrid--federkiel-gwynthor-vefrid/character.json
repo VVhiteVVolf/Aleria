@@ -1,0 +1,277 @@
+{
+  "schema": "aleria.character-record",
+  "schemaVersion": 1,
+  "recordId": "character--federkiel-gwynthor-vefrid",
+  "slug": "vefrid",
+  "identity": {
+    "name": "Véfrid",
+    "aliases": [],
+    "worldPersonId": ""
+  },
+  "classification": {
+    "primary": {
+      "kind": "place",
+      "id": "gwynthor",
+      "label": "Gwynthor",
+      "source": "archive-tab"
+    },
+    "familyStatus": "pending",
+    "families": [],
+    "familyAlternatives": [],
+    "groups": [],
+    "places": [
+      {
+        "id": "gwynthor",
+        "label": "Gwynthor",
+        "source": "archive-tab"
+      }
+    ],
+    "legacy": {
+      "tabs": [
+        "Gwynthor"
+      ],
+      "subtabs": []
+    }
+  },
+  "links": {
+    "firestore": {
+      "projectId": "aleriaprojekt",
+      "databaseId": "(default)",
+      "collection": "characters",
+      "documentId": "federkiel-gwynthor-vefrid",
+      "documentIds": [
+        "federkiel-gwynthor-vefrid"
+      ],
+      "documents": [
+        {
+          "documentId": "federkiel-gwynthor-vefrid",
+          "createdAt": "",
+          "updatedAt": ""
+        }
+      ]
+    },
+    "familyTree": [],
+    "profile": ""
+  },
+  "sync": {
+    "strategy": "online-wins-runtime-local-wins-identity",
+    "sourceArchive": "Charakter Archiv Exporte/Federkiel Gwynthor/federkiel-gwynthor-vefrid.json",
+    "sourceExportedAt": "2026-11-22T00:00:00+01:00",
+    "sourceUpdatedAt": "",
+    "sourceDocumentIds": [
+      "federkiel-gwynthor-vefrid"
+    ],
+    "contentHash": "1920e72bbd50e07192b72c5342ec1b8e277f4f9ba595c225fae8648dbefc0701"
+  },
+  "local": {
+    "notes": "",
+    "tags": [],
+    "references": [],
+    "classificationOverride": null,
+    "authoredFeature": "federkiel-couriers-20261122"
+  },
+  "sources": {
+    "firestoreExports": [
+      {
+        "id": "federkiel-gwynthor-vefrid",
+        "name": "Véfrid",
+        "age": 38,
+        "gender": "female",
+        "title": "Postkurierin",
+        "role": "Postkurierin · Bannkreisstaffel",
+        "fraktion": "Gilde Federkiel",
+        "race": "Mensch",
+        "currentLocation": "Bannkreis Gwynthor",
+        "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor > Gwynthor-Stadt > Gilde Federkiel - Gwynthor",
+        "status": "active",
+        "portrait": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/portrait-v1.webp",
+        "emotes": [
+          {
+            "label": "Neutral",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-01.png"
+          },
+          {
+            "label": "Freundlich",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-02.png"
+          },
+          {
+            "label": "Nachdenklich",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-03.png"
+          },
+          {
+            "label": "Skeptisch",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-04.png"
+          },
+          {
+            "label": "Überrascht",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-05.png"
+          },
+          {
+            "label": "Genervt",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-06.png"
+          },
+          {
+            "label": "Entschlossen",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-07.png"
+          },
+          {
+            "label": "Verärgert",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-08.png"
+          },
+          {
+            "label": "Unsicher",
+            "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-09.png"
+          }
+        ],
+        "bio": "Véfrid lernte den Kurierdienst im Norden und reitet seit Jahren für Federkiel im Gwynthorer Bannkreis. Nach langem Regen prüft sie zuerst die Furten und weiß, an welchen Poststellen ein Wechselpferd bereitsteht.",
+        "biography": {
+          "schema": "aleria.biography-module",
+          "schemaVersion": 1,
+          "pageTitle": "Véfrid",
+          "stats": [
+            {
+              "label": "Alter",
+              "value": "38 Jahre"
+            },
+            {
+              "label": "Dienst",
+              "value": "Postkurierin · Staffel II"
+            },
+            {
+              "label": "Einsatzgebiet",
+              "value": "Bannkreis Gwynthor"
+            }
+          ],
+          "biography": {
+            "portrait": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/portrait-v1.webp",
+            "crestImage": "../Fraktionen/assets/emblems/gilden/federkiel-v2.webp",
+            "biographyTitle": "Véfrid · Postkurierin der Gilde Federkiel",
+            "biographyText": "<p>Véfrid lernte den Kurierdienst im Norden und reitet seit Jahren für Federkiel im Gwynthorer Bannkreis. Nach langem Regen prüft sie zuerst die Furten und weiß, an welchen Poststellen ein Wechselpferd bereitsteht.</p>",
+            "historyTitle": "Erscheinung",
+            "historyText": "<p>Athletische Statur, langer blonder Pferdeschwanz, blaugraue Augen und leichte Sommersprossen. Unter dem grünen Gildenmantel trägt sie ein verstärktes Lederwams, Schulterschutz und Armschienen.</p>",
+            "documentsTitle": "Dienststelle",
+            "documents": [
+              {
+                "title": "Die Kurierstation (Gestüt)",
+                "text": "Staffel II · Orte im Bannkreis",
+                "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-federkiel-kurierstation"
+              }
+            ]
+          }
+        },
+        "archived": false
+      }
+    ]
+  },
+  "character": {
+    "id": "federkiel-gwynthor-vefrid",
+    "name": "Véfrid",
+    "age": 38,
+    "gender": "female",
+    "title": "Postkurierin",
+    "role": "Postkurierin · Bannkreisstaffel",
+    "fraktion": "Gilde Federkiel",
+    "race": "Mensch",
+    "currentLocation": "Bannkreis Gwynthor",
+    "taxonomyPath": "Cenyr > Celtigerns Wacht > Llamreis Ankunft > Bannkreis Gwynthor > Gwynthor-Stadt > Gilde Federkiel - Gwynthor",
+    "status": "active",
+    "portrait": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/portrait-v1.webp",
+    "emotes": [
+      {
+        "label": "Neutral",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-01.png"
+      },
+      {
+        "label": "Freundlich",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-02.png"
+      },
+      {
+        "label": "Nachdenklich",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-03.png"
+      },
+      {
+        "label": "Skeptisch",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-04.png"
+      },
+      {
+        "label": "Überrascht",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-05.png"
+      },
+      {
+        "label": "Genervt",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-06.png"
+      },
+      {
+        "label": "Entschlossen",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-07.png"
+      },
+      {
+        "label": "Verärgert",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-08.png"
+      },
+      {
+        "label": "Unsicher",
+        "img": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/avatars/vefrid-set-01-avatar-09.png"
+      }
+    ],
+    "bio": "Véfrid lernte den Kurierdienst im Norden und reitet seit Jahren für Federkiel im Gwynthorer Bannkreis. Nach langem Regen prüft sie zuerst die Furten und weiß, an welchen Poststellen ein Wechselpferd bereitsteht.",
+    "biography": {
+      "schema": "aleria.biography-module",
+      "schemaVersion": 1,
+      "pageTitle": "Véfrid",
+      "stats": [
+        {
+          "label": "Alter",
+          "value": "38 Jahre"
+        },
+        {
+          "label": "Dienst",
+          "value": "Postkurierin · Staffel II"
+        },
+        {
+          "label": "Einsatzgebiet",
+          "value": "Bannkreis Gwynthor"
+        }
+      ],
+      "biography": {
+        "portrait": "/AleriaAlmanach/assets/federkiel-gwynthor/couriers/vefrid/portrait-v1.webp",
+        "crestImage": "../Fraktionen/assets/emblems/gilden/federkiel-v2.webp",
+        "biographyTitle": "Véfrid · Postkurierin der Gilde Federkiel",
+        "biographyText": "<p>Véfrid lernte den Kurierdienst im Norden und reitet seit Jahren für Federkiel im Gwynthorer Bannkreis. Nach langem Regen prüft sie zuerst die Furten und weiß, an welchen Poststellen ein Wechselpferd bereitsteht.</p>",
+        "historyTitle": "Erscheinung",
+        "historyText": "<p>Athletische Statur, langer blonder Pferdeschwanz, blaugraue Augen und leichte Sommersprossen. Unter dem grünen Gildenmantel trägt sie ein verstärktes Lederwams, Schulterschutz und Armschienen.</p>",
+        "documentsTitle": "Dienststelle",
+        "documents": [
+          {
+            "title": "Die Kurierstation (Gestüt)",
+            "text": "Staffel II · Orte im Bannkreis",
+            "link": "/AleriaAlmanach/AleriaAlmanach.html?entry=gwynthor-federkiel-kurierstation"
+          }
+        ]
+      }
+    },
+    "archived": false,
+    "aliases": [],
+    "identity": {
+      "worldPersonId": ""
+    },
+    "genealogy": {
+      "worldPersonId": "",
+      "sex": "",
+      "status": "",
+      "birth": "",
+      "death": "",
+      "houseId": "",
+      "houseName": "",
+      "familyRole": "",
+      "portraitPlaceholder": "",
+      "tags": [],
+      "sources": [],
+      "relationships": {
+        "parents": [],
+        "partners": [],
+        "children": []
+      }
+    }
+  }
+}

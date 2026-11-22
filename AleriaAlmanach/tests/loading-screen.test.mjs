@@ -220,10 +220,14 @@ test('each dialogue scene uses its own cast, with quiet gaps and cancellable ges
       if (variant.id === 'wolfshorn') {
         assert.deepEqual(quotes.map(quote => quote.speaker), ['duncan', 'gawain', 'freki', 'ylva']);
         assert.equal(quotes[2].lookAt, 'ylva');
-      } else {
+      } else if (variant.id === 'tiefenwyrm') {
         assert.equal(variant.id, 'tiefenwyrm');
         assert.deepEqual(quotes.map(quote => quote.speaker), ['idwal', 'talon', 'trevor']);
         assert.match(quotes[0].text, /verbrüht/);
+      } else {
+        assert.equal(variant.id, 'carys-schiessuebung');
+        assert(quotes.every(({ speaker }) => speaker === 'einion'));
+        assert(quotes.some(({ text }) => text.includes('Töte Lord Schmusedecke nicht')));
       }
     } else {
       assert.equal(new Set(quotes.map(quote => quote.source.thread)).size, 1);
@@ -269,8 +273,9 @@ test('each dialogue scene uses its own cast, with quiet gaps and cancellable ges
   }
 });
 
-test('all nine scenes can be chosen, and a reload in the same tab avoids an immediate repeat', () => {
+test('all eleven scenes can be chosen, and a reload in the same tab avoids an immediate repeat', () => {
   const ids = ['owetas-quartett', 'wolfshorn', 'tiefenwyrm', 'heroldsrat',
+    'refri-anprobe', 'carys-schiessuebung',
     'trahern-tal', 'versunkene-strand', 'steffan-musterung', 'fenrir-freya-weglager', 'landtroll-bruecke'];
   const draws = ids.map((_, index) => (index + .5) / ids.length);
   assert.deepEqual(draws.map(value => chooseLoadingScreenScene({ random: () => value }).id), ids);
@@ -281,6 +286,29 @@ test('all nine scenes can be chosen, and a reload in the same tab avoids an imme
     ['owetas-quartett', 'wolfshorn', 'landtroll-bruecke', 'fenrir-freya-weglager']);
   const unavailable = { getItem() { throw Error('blocked'); }, setItem() { throw Error('blocked'); } };
   assert.equal(chooseLoadingScreenScene({ storage: unavailable, random: () => 0 }).id, ids[0]);
+});
+
+test('the private fitting room keeps the door layers and source dialogue in sync', () => {
+  const manifest = JSON.parse(readFileSync(new URL('../public/assets/loading-screen/refri-anprobe-v2-manifest.json', import.meta.url), 'utf8'));
+  const variant = LOADING_SCREEN_SCENES.find(({ id }) => id === manifest.scene);
+  const quotes = LOADING_SCREEN_QUOTES[variant.id];
+  assert.equal(variant.kind, 'fitting-room');
+  assert.match(variant.description, /separaten Anproberaum/);
+  assert.deepEqual(quotes.map(({ speaker }) => speaker), ['refri', 'refri', 'refri', 'catrin', 'refri', 'catrin', 'refri']);
+  assert.deepEqual(quotes.filter(({ peek }) => peek).map(({ peek }) => peek), Object.keys(manifest.peeks));
+  assert(quotes.every(({ source: { thread } }) => thread === 'goettliche-eleganz::session:eleganz-page-6'));
+  assert.deepEqual(manifest.frame, manifest.background.source.size);
+  for (const { size: [width, height] } of manifest.background.assets) {
+    assert.ok(Math.abs(height - width * 9 / 16) <= 1);
+  }
+  for (const { bounds: [left, top, right, bottom], asset } of [manifest.door, ...Object.values(manifest.peeks)]) {
+    assert.deepEqual(asset.size, [right - left, bottom - top]);
+    assert.ok(left >= 0 && right <= manifest.frame[0] && top >= 0 && bottom <= manifest.frame[1]);
+  }
+  verifyAssets([
+    manifest.background.source, ...manifest.background.assets, manifest.door.asset, manifest.sound,
+    ...Object.values(manifest.peeks).flatMap(({ source, asset }) => [source, asset])
+  ]);
 });
 
 test('each vignette uses a single illustration with matching renditions and no dialogue', () => {

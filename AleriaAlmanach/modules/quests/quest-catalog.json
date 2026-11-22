@@ -2766,7 +2766,7 @@
     },
     {
       "id": "zitteraale-gruppe-ii",
-      "title": "Gruppe II."
+      "title": "Die Sumpfnattern"
     },
     {
       "id": "zitteraale-gruppe-iii",
@@ -2827,6 +2827,34 @@
     {
       "id": "tirfelyn-hof-wirtschaftshof",
       "title": "Wirtschaftsgebäude und Vorräte"
+    },
+    {
+      "id": "gwynthor-federkiel",
+      "title": "Gilde Federkiel - Gwynthor"
+    },
+    {
+      "id": "gwynthor-federkiel-postzentrale",
+      "title": "Die Postzentrale"
+    },
+    {
+      "id": "gwynthor-federkiel-schreibstube",
+      "title": "Die Schreibstube"
+    },
+    {
+      "id": "gwynthor-federkiel-druckerei",
+      "title": "Die Druckerei"
+    },
+    {
+      "id": "gwynthor-federkiel-kurierstation",
+      "title": "Die Kurierstation (Gestüt)"
+    },
+    {
+      "id": "gwynthor-federkiel-lager",
+      "title": "Das Postlager"
+    },
+    {
+      "id": "gwynthor-kerzenmacherei-glynmor",
+      "title": "Kerzenmacherei Glynmor"
     },
     {
       "id": "drakenschluck-soeldner",
@@ -5221,22 +5249,22 @@
     },
     {
       "id": "zitteraale-gruppe-ii",
-      "title": "Gruppe II.",
+      "title": "Die Sumpfnattern",
       "moduleId": "zitteraale-gruppe-ii"
     },
     {
       "id": "zitteraale-gruppe-ii::page:zitteraale-gruppe-ii-uebersicht",
-      "title": "Gruppe II. · Gruppe II.",
+      "title": "Die Sumpfnattern · Die Sumpfnattern",
       "moduleId": "zitteraale-gruppe-ii"
     },
     {
       "id": "zitteraale-gruppe-ii::page:zitteraale-gruppe-ii-hierarchie",
-      "title": "Gruppe II. · Hierarchie",
+      "title": "Die Sumpfnattern · Hierarchie",
       "moduleId": "zitteraale-gruppe-ii"
     },
     {
       "id": "zitteraale-gruppe-ii::session:zitteraale-gruppe-ii-hauptquartier",
-      "title": "Gruppe II. · Hauptquartier · Ort unbekannt",
+      "title": "Die Sumpfnattern · Lager der Sumpfnattern · Lycath",
       "moduleId": "zitteraale-gruppe-ii"
     },
     {
@@ -5693,6 +5721,146 @@
       "id": "tirfelyn-hof-wirtschaftshof::session:tirfelyn-hof-poi-wirtschaftsbrunnen",
       "title": "Wirtschaftsgebäude und Vorräte · Brunnen bei den Wirtschaftsgebäuden",
       "moduleId": "tirfelyn-hof-wirtschaftshof"
+    },
+    {
+      "id": "gwynthor-federkiel",
+      "title": "Gilde Federkiel - Gwynthor",
+      "moduleId": "gwynthor-federkiel"
+    },
+    {
+      "id": "gwynthor-federkiel::page:federkiel-gildenhaus",
+      "title": "Gilde Federkiel - Gwynthor · Das Gildenhaus von Federkiel",
+      "moduleId": "gwynthor-federkiel"
+    },
+    {
+      "id": "gwynthor-federkiel::page:federkiel-dienstleistungen",
+      "title": "Gilde Federkiel - Gwynthor · Dienstleistungen",
+      "moduleId": "gwynthor-federkiel"
+    },
+    {
+      "id": "gwynthor-federkiel::page:federkiel-gildenleitung-aufbau",
+      "title": "Gilde Federkiel - Gwynthor · Gwynthorer Gildenleitung",
+      "moduleId": "gwynthor-federkiel"
+    },
+    {
+      "id": "gwynthor-federkiel-postzentrale",
+      "title": "Die Postzentrale",
+      "moduleId": "gwynthor-federkiel-postzentrale"
+    },
+    {
+      "id": "gwynthor-federkiel-postzentrale::page:federkiel-postzentrale-aufbau",
+      "title": "Die Postzentrale · Die Postzentrale · Aufbau",
+      "moduleId": "gwynthor-federkiel-postzentrale"
+    },
+    {
+      "id": "gwynthor-federkiel-postzentrale::session:federkiel-postzentrale-szene",
+      "title": "Die Postzentrale · Am Schalter der Zentralpost",
+      "moduleId": "gwynthor-federkiel-postzentrale"
+    },
+    {
+      "id": "gwynthor-federkiel-schreibstube",
+      "title": "Die Schreibstube",
+      "moduleId": "gwynthor-federkiel-schreibstube"
+    },
+    {
+      "id": "gwynthor-federkiel-schreibstube::page:federkiel-schreibstube-aufbau",
+      "title": "Die Schreibstube · Die Schreibstube · Aufbau",
+      "moduleId": "gwynthor-federkiel-schreibstube"
+    },
+    {
+      "id": "gwynthor-federkiel-schreibstube::session:federkiel-schreibstube-szene",
+      "title": "Die Schreibstube · Hinter dem Schreibschirm",
+      "moduleId": "gwynthor-federkiel-schreibstube"
+    },
+    {
+      "id": "gwynthor-federkiel-druckerei",
+      "title": "Die Druckerei",
+      "moduleId": "gwynthor-federkiel-druckerei"
+    },
+    {
+      "id": "gwynthor-federkiel-druckerei::page:federkiel-druckerei-aufbau",
+      "title": "Die Druckerei · Die Druckerei · Aufbau",
+      "moduleId": "gwynthor-federkiel-druckerei"
+    },
+    {
+      "id": "gwynthor-federkiel-druckerei::session:federkiel-druckerei-szene",
+      "title": "Die Druckerei · Der erste Korrekturabzug",
+      "moduleId": "gwynthor-federkiel-druckerei"
+    },
+    {
+      "id": "gwynthor-federkiel-kurierstation",
+      "title": "Die Kurierstation (Gestüt)",
+      "moduleId": "gwynthor-federkiel-kurierstation"
+    },
+    {
+      "id": "gwynthor-federkiel-kurierstation::page:federkiel-kurierstation-aufbau",
+      "title": "Die Kurierstation (Gestüt) · Die Kurierstation (Gestüt) · Aufbau",
+      "moduleId": "gwynthor-federkiel-kurierstation"
+    },
+    {
+      "id": "gwynthor-federkiel-kurierstation::session:federkiel-kurierstation-szene",
+      "title": "Die Kurierstation (Gestüt) · Am Tor der Kurierstation",
+      "moduleId": "gwynthor-federkiel-kurierstation"
+    },
+    {
+      "id": "gwynthor-federkiel-lager",
+      "title": "Das Postlager",
+      "moduleId": "gwynthor-federkiel-lager"
+    },
+    {
+      "id": "gwynthor-federkiel-lager::page:federkiel-lager-aufbau",
+      "title": "Das Postlager · Das Postlager · Aufbau",
+      "moduleId": "gwynthor-federkiel-lager"
+    },
+    {
+      "id": "gwynthor-federkiel-lager::session:federkiel-lager-szene",
+      "title": "Das Postlager · Übergabe am Lagertor",
+      "moduleId": "gwynthor-federkiel-lager"
+    },
+    {
+      "id": "gwynthor-kerzenmacherei-glynmor",
+      "title": "Kerzenmacherei Glynmor",
+      "moduleId": "gwynthor-kerzenmacherei-glynmor"
+    },
+    {
+      "id": "gwynthor-kerzenmacherei-glynmor::page:glynmor-ueberblick",
+      "title": "Kerzenmacherei Glynmor · Die Kerzenmacherei Glynmor",
+      "moduleId": "gwynthor-kerzenmacherei-glynmor"
+    },
+    {
+      "id": "gwynthor-kerzenmacherei-glynmor::page:glynmor-dienstleistungen",
+      "title": "Kerzenmacherei Glynmor · Kerzen und Aufträge",
+      "moduleId": "gwynthor-kerzenmacherei-glynmor"
+    },
+    {
+      "id": "gwynthor-kerzenmacherei-glynmor::page:glynmor-betriebsordnung",
+      "title": "Kerzenmacherei Glynmor · Betriebsordnung",
+      "moduleId": "gwynthor-kerzenmacherei-glynmor"
+    },
+    {
+      "id": "gwynthor-kerzenmacherei-glynmor::session:glynmor-gasse",
+      "title": "Kerzenmacherei Glynmor · Vor dem Ladenschild",
+      "moduleId": "gwynthor-kerzenmacherei-glynmor"
+    },
+    {
+      "id": "gwynthor-kerzenmacherei-glynmor::session:glynmor-laden",
+      "title": "Kerzenmacherei Glynmor · An der Ladentheke",
+      "moduleId": "gwynthor-kerzenmacherei-glynmor"
+    },
+    {
+      "id": "gwynthor-kerzenmacherei-glynmor::session:glynmor-ziehwerkstatt",
+      "title": "Kerzenmacherei Glynmor · In der Ziehwerkstatt",
+      "moduleId": "gwynthor-kerzenmacherei-glynmor"
+    },
+    {
+      "id": "gwynthor-kerzenmacherei-glynmor::session:glynmor-zierkammer",
+      "title": "Kerzenmacherei Glynmor · In der Zierkammer",
+      "moduleId": "gwynthor-kerzenmacherei-glynmor"
+    },
+    {
+      "id": "gwynthor-kerzenmacherei-glynmor::session:glynmor-lager",
+      "title": "Kerzenmacherei Glynmor · Im Wachs- und Auftragslager",
+      "moduleId": "gwynthor-kerzenmacherei-glynmor"
     },
     {
       "id": "drakenschluck-soeldner",
@@ -7635,7 +7803,9 @@
     "AleriaAlmanach/modules/drachentanz-volkstanz/drachentanz-volkstanz-data.js",
     "AleriaAlmanach/modules/draig-leibgarde/draig-leibgarde-data.js",
     "AleriaAlmanach/modules/family-tree-embed/family-tree-embed-data.js",
+    "AleriaAlmanach/modules/federkiel-gwynthor/federkiel-data.js",
     "AleriaAlmanach/modules/gestiefelte-muschi/muschi-data.js",
+    "AleriaAlmanach/modules/glynmor/glynmor-data.js",
     "AleriaAlmanach/modules/goettliche-eleganz/eleganz-data.js",
     "AleriaAlmanach/modules/gofrann-schmiede/gofrann-data.js",
     "AleriaAlmanach/modules/goldene-fassung/ffals-data.js",

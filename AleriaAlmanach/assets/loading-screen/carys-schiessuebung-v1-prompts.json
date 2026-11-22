@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "version": 1,
+  "scene": "carys-schiessuebung",
+  "tool": "ImageGen (built-in)",
+  "date": "2026-11-22",
+  "images": [
+    {
+      "source": "source/carys-schiesshalle-v1.png",
+      "role": "game backdrop",
+      "references": [
+        "User-supplied scene illustration in the request"
+      ],
+      "prompt": "Use case: illustration-story, 2D chibi anime game background. One wide 16:9 horizontal illustration, a fixed camera looking from the near end of a private medieval stone chamber in Castell Draig towards its back wall. Use the attached image as direct visual reference for Lord Schmusedecke (Einion's distinctive navy blue comfort blanket with thin warm-gold windowpane plaid, generous soft cream fleece edging, draped off two pegs at the upper corners) and for the Draig stronghold materials. All people, arrows, candles in the foreground and any furniture from the reference are excluded from this background. This is a CLEAN environment plate for later separately animated Carys and Einion. Match elegant hand-drawn anime/chibi video game scenery, clear shape outlines, calm warm lighting, richer dark-violet stone shadows, simplified painterly details, restrained highlights and saturated Draig reds balanced against the navy target. \n\nFRAMING IS IMPORTANT FOR PLAY: hanging from two pegs on the stone wall at the far end, the ENTIRE clean blue-and-gold comfort blanket is displayed broad and almost flat with a few vertical folds, a visually distinct cream fleece perimeter, near rectangular slight trapezoid outline, no narrow hanging tails. Target centered at roughly 62 percent horizontally and 35 percent down the image. Its total width is roughly 26 percent of the frame and its height roughly 34 percent. It is the most distinctive brightly lit object, with no arrow, holes, no bullseye or mark painted on it. A wide open walkable stone floor meets the back wall at roughly 65–68 percent down the image and fills the entire lower third, empty and clean, suitable for two sprites at different depths. Nothing in the foreground blocks the center or left of the floor. Straight-on wall and few perspective floor joints; don't angle or distort the blanket. A tall leaded window and warm daylight are safely left of the target, a small crimson Draig banner or architectural recess safely to the far right, with brushed stone framing. Maintain scene readability on a small phone. NO people, animals, human shadows, arrows, archery marks, captions, text, UI, watermarks, columns in front of the action, or outer borders.",
+      "original": {
+        "size": [
+          1672,
+          941
+        ],
+        "bytes": 2283630,
+        "sha256": "a10d474ac24eb7fc51ff3b84292830f9b4a56bf1e17deb37e814ea0ed40e56ef"
+      }
+    },
+    {
+      "source": "source/carys-bogen-posen-v1.png",
+      "role": "Carys rear-view animation sheet",
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-draig/carys-draig.jpg",
+        "AleriaAlmanach/assets/loading-screen/source/rosenflucht-idwal-posen-v11.png"
+      ],
+      "prompt": "Use case: stylized-concept. A clean TRANSPARENT PNG video-game animation sprite sheet. Six full-body poses of the SAME Carys Draig in an exactly equal 3-column × 2-row grid, no visible grid lines. Image 1 is Carys's identity, exact vivid long copper-red hair and dark armor with sharp crimson piping, warm brown straps, tall dark boots, short crimson mantle. Image 2 specifies the polished Aleria CHIBI anime linework, rich copper hair strands, matte shaded dark metals, big head and compact limbs. Match the chibi shading idiom, NOT this reference man's hair, outfit, face or gait. Here the player character is the young adult red-haired female archer from image 1, recognizable costume and hair in all six sprites.\n\nALL SIX FRAMES KEEP HER CAMERA ORIENTATION with back to the viewer, rear-three-quarter view with a slight turn toward screen-right (the target is right and far upstage). Her face is mostly hidden from our camera, her shoulder armor, back and authentic hairstyle are emphasized. Her hair falls down the left half of the back so a simple tall OPEN brown leather quiver rides on the right half of her back. Its open mouth at the same point above her right shoulder remains visible in all frames. The quiver is EMPTY in the drawings because the game animates the count; NO painted arrows/shafts/fletching in any frame. Show the same short warm wooden recurve bow in every pose, compact enough to fit within the cell with limb tips visible. In aiming frames her bow is held to screen-right in silhouette, above the shoulder, with the string and hand drawn close to her cheek. Keep the SAME body scale, planted boots, pelvis location, off-center quiver and head coordinates in the six cells so that the apparent transition is smooth. Straight, even framing, no changes in camera height, no zoom, no stance flips. \n\nPrecisely six animation states, row-major: upper left comfortable rest with bow lowered at side and empty quiver visible; upper center starting to raise bow to screen-right; upper right aiming with the bow largely raised and string partway pulled; lower left fully raised and drawn with a compact steady stance and clearly visible bow silhouette; lower center immediately after release, drawing hand relaxed back near shoulder and bow visibly upright in the same hand; lower right quiet triumphant little fist gesture with bow lowered and the same rear view. Genuine straight alpha transparency on all empty areas, no white fill, no painted ground/feet shadows, no words, borders, numbering, arrow effects, cut-off limbs, extra fingers, or scenery. Each separate complete image fits within its equal cell with 7–10% clear margin on ALL edges and no overlap. Use wide 3:2 canvas suitable for six evenly spaced square sprites.",
+      "original": {
+        "size": [
+          1536,
+          1024
+        ],
+        "bytes": 2190380,
+        "sha256": "11a40dcb123c3eb5a44a73c59a6b51d27ebd40febf4bed66d48850b739e3b45c"
+      }
+    },
+    {
+      "source": "source/einion-block-posen-v1.png",
+      "role": "Einion blocking animation sheet",
+      "references": [
+        "Stammbäume/assets/images/portraits/haus-draig/einion-draig.jpg",
+        "AleriaAlmanach/assets/loading-screen/source/rosenflucht-idwal-posen-v11.png"
+      ],
+      "prompt": "Use case: stylized-concept. Make ONE genuinely transparent, precisely 3 columns × 2 rows Chibi animation sprite sheet for Einion Draig in an Aleria fantasy mini-game. Image 1 is the exact character design of Einion: a young adult man, naturally short tousled copper-red hair with the little high cowlick, warm blue eyes, charcoal Draig plate with muted crimson edging, brown gloves and boots, red cape, gold embossed dragon on his chest. Keep his normal cheerful features readable on a charming big chibi head. Image 2 is style reference ONLY for detailed outlines, matte shaded armor and the existing loading-screen chibi proportions. Do not copy the second man's longer hair, fur collar, skull brooch, goatee, or outfit.\n\nHe is playfully defending his comfort blanket and anxiously shuffling side to side. In every frame he faces directly TOWARD the viewer/player, with both eyes visible apart from momentary squinting; knee and hip bends are compact. Use a consistent HEAD SIZE, cape length, armor design and same camera. Show the full entire head, BOTH boots and fingers from front without perspective tricks. Keep his centered body line and relative foot baseline almost unchanged in each square, enough room for raised hands. No separate props or weapons. Row-major six distinct frames: top left alarmed ready stance, knees bent, both arms held out to block around waist height; top center side-shuffle weight on one boot and hands spread wider at shoulders; top right other side-shuffle, big comic effort face and opposite leg weight, arms at shoulder height; bottom left nimble blocking hop, both hands HIGH above head, flexible knees and feet under body; bottom center harmless cartoony surprise, raised shoulders with palms up, eyes wide, small O mouth, NO damage or impact marks; bottom right sheepish relief, lowering arms and cradling elbows, boots firmly grounded. Fully polished reusable clean sprites with the shading of the supplied game sprites. Frame each pose with substantial transparent margins, in exactly equal cells no painted lines, no text, no captions, no ground/shadow, no effects, no backdrop. Wide landscape 3:2 for these six square cells.",
+      "original": {
+        "size": [
+          1536,
+          1024
+        ],
+        "bytes": 2286354,
+        "sha256": "16a602396c4bb5eb8d2b55162930a6fa9520b168886df5aea8b1010d9c53bbcf"
+      }
+    },
+    {
+      "source": "source/carys-schiessuebung-v1.png",
+      "role": "loading-screen panorama",
+      "references": [
+        "AleriaAlmanach/assets/loading-screen/source/carys-schiesshalle-v1.png",
+        "AleriaAlmanach/assets/loading-screen/source/carys-bogen-posen-v1.png",
+        "AleriaAlmanach/assets/loading-screen/source/einion-block-posen-v1.png"
+      ],
+      "prompt": "Use case: illustration-story, single wide 16:9 Intro illustration for an original Chibi archery mini-game. Use image 1 as exact locked Castell Draig chamber layout, warm stone, window left, open floor, and the blue-and-gold cream-fleece comfort blanket on the far wall. Use image 2 for Carys's precise chibi identity and rear view, and image 3 for Einion's chibi identity and expressive blocking stance. The scene is humorous sibling rivalry.\n\nKeep the stage visible as an over-the-shoulder wide shot. At the front left Carys Draig stands with her back to us, copper-red hair, black Draig armor with red trim and short red cloak. Her head appears around the middle horizontal line of the image; both boots stay in the picture. She holds the distinctive wooden recurve bow lowered, and up from the quiver mouth on her back we can clearly count exactly FIVE similarly sized dark shafts with red-gold fletching. The arrows all go into that one quiver. No flying arrows. Further back, between her and the blanket, her smaller brother Einion faces Carys and the viewer in a wide comic side-step with palms out, exaggerated worried eyebrows, his short auburn cowlick and Draig armor from his reference. His feet are higher up the floor in perspective. Keep both characters visually distinct, away from frame edges, and leave much of the blanket visible unobstructed on the right, all as a single scene. Show no arrow in the blanket yet. Polished clean hand-drawn colored Chibi 2D game art, same staging and light as input 1, warm rim light from the window, big expressive heads, rich copper reds and deep blue. No text, no speech bubble, no numbers, no UI, no title, no visible grid, no borders or watermark.",
+      "original": {
+        "size": [
+          1672,
+          941
+        ],
+        "bytes": 2442437,
+        "sha256": "99aacc3b83e11347b823daf37a27906fb860f7c113067a10f81832e50813d060"
+      }
+    }
+  ]
+}

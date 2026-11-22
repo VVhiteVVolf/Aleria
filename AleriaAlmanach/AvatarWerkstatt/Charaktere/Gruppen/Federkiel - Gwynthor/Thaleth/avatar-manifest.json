@@ -1,0 +1,204 @@
+{
+  "schema": "aleria.avatar-workshop-export",
+  "schemaVersion": 1,
+  "character": "Thaleth",
+  "characterId": "federkiel-gwynthor-thaleth",
+  "slug": "thaleth",
+  "avatarCount": 9,
+  "catalogId": "avatar-prompts-28-sets-20261121-zoomtoleranz",
+  "catalogSourceSha256": "637cb8b998be851d85b7f65fd9b926168969aa32232b89744e3ae93c5ab0055e",
+  "splitter": "Werkzeuge/Avatar Splitterer/AvatarSplitterPro_V3.py",
+  "splitterSha256": "d6523dcd145af51ccbcc04d3e51a8a5d6a643531e6beb7bc194bece4a5562ac8",
+  "outputFolder": "Output/Thaleth",
+  "sets": [
+    {
+      "id": "standard",
+      "catalogNumber": 1,
+      "workshopSetId": "set-01",
+      "name": "Grundemotionen und Mimik",
+      "sourceSheet": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Thaleth/Sheets/thaleth-set-01-v1.png",
+      "sourceSha256": "2b43b07676fd3d77dfabd73deb161903ac656b8ac72c8c0db21ffa1972287365",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "generatorOriginal": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Thaleth/Originale/thaleth-set-01-v1-generator.png",
+      "generatorVersion": 1,
+      "generatorTool": "image_gen.imagegen",
+      "reference": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Thaleth/Referenzen/thaleth-portrait-v1.png",
+      "referenceSha256": "2db06733e173877d0a2e80c41152f46f583d51b923223c08f196c76ae6d8aa7a",
+      "references": [
+        "AleriaAlmanach/docs/art/federkiel-couriers-20261122/originals/thaleth-portrait-v1.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Rianna Wyrm/Output/rianna-2026-11-02-set-03_Bild6.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Rianna Wyrm/Output/rianna-2026-11-02-set-03_Bild1.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Lefraye Gafyr/Output/lefraye-2026-11-02-set-01_Bild1.png",
+        "AleriaAlmanach/AvatarWerkstatt/Charaktere/Einzelcharaktere/Lefraye Gafyr/Output/lefraye-2026-11-02-set-01_Bild5.png"
+      ],
+      "promptFile": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Thaleth/Prompts/thaleth-set-01-v1.txt",
+      "promptSha256": "e333adca27e6b52ebde342245f78ff080e60741add437053635037df8d8a185f",
+      "requestFile": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Thaleth/Prompts/thaleth-set-01-auftrag.json",
+      "rows": 3,
+      "columns": 3,
+      "gapX": 0,
+      "gapY": 0,
+      "autocrop": false,
+      "edgeInsetPixels": 2,
+      "sourceCropPixelsVerified": true,
+      "outputs": [
+        {
+          "index": 1,
+          "emotion": "Neutral / Redend",
+          "gesture": "Offene Handflächen, lockere erklärende Gestik, aufmerksamer Blick.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Thaleth/Output/thaleth-set-01-avatar-01.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Thaleth/thaleth-set-01-avatar-01.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/thaleth/avatars/thaleth-set-01-avatar-01.png",
+          "sha256": "a99f7fd5d7ed6c23b5b800e7a2309bd3e3361a983823fb9a1b6021c49689cdb9",
+          "width": 414,
+          "height": 414,
+          "box": [
+            2,
+            2,
+            416,
+            416
+          ]
+        },
+        {
+          "index": 2,
+          "emotion": "Freundlich / Amüsiert",
+          "gesture": "Ehrliches leichtes Lächeln, eine Hand locker erhoben, entspannte Schultern.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Thaleth/Output/thaleth-set-01-avatar-02.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Thaleth/thaleth-set-01-avatar-02.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/thaleth/avatars/thaleth-set-01-avatar-02.png",
+          "sha256": "71c25af2b8f7c923da39902b1cfbf032bf8b0de0503c881a5e0ffaad97cd6e32",
+          "width": 414,
+          "height": 414,
+          "box": [
+            420,
+            2,
+            834,
+            416
+          ]
+        },
+        {
+          "index": 3,
+          "emotion": "Nachdenklich",
+          "gesture": "Hand am Kinn, Blick leicht seitlich oder nach oben, zusammengezogene Brauen.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Thaleth/Output/thaleth-set-01-avatar-03.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Thaleth/thaleth-set-01-avatar-03.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/thaleth/avatars/thaleth-set-01-avatar-03.png",
+          "sha256": "69be0f4241c22f20b2d908a58f2daae95818059897b0a31555b7bb2ef71914d0",
+          "width": 414,
+          "height": 414,
+          "box": [
+            838,
+            2,
+            1252,
+            416
+          ]
+        },
+        {
+          "index": 4,
+          "emotion": "Skeptisch / Misstrauisch",
+          "gesture": "Eine Braue hochgezogen, Arme verschränkt oder eine Hand skeptisch angewinkelt.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Thaleth/Output/thaleth-set-01-avatar-04.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Thaleth/thaleth-set-01-avatar-04.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/thaleth/avatars/thaleth-set-01-avatar-04.png",
+          "sha256": "ecdc3be419d0a47ce80a740dbcc8163604f7496e0e5bb7610e0604d2f06f8a67",
+          "width": 414,
+          "height": 414,
+          "box": [
+            2,
+            420,
+            416,
+            834
+          ]
+        },
+        {
+          "index": 5,
+          "emotion": "Überrascht / Verblüfft",
+          "gesture": "Geweitete Augen, leicht geöffneter Mund, beide Hände spontan angehoben.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Thaleth/Output/thaleth-set-01-avatar-05.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Thaleth/thaleth-set-01-avatar-05.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/thaleth/avatars/thaleth-set-01-avatar-05.png",
+          "sha256": "f9687542a6b83a01cf2c5c8e092d1bce32d9f2ebbb68840fd59ee8b70e761da2",
+          "width": 414,
+          "height": 414,
+          "box": [
+            420,
+            420,
+            834,
+            834
+          ]
+        },
+        {
+          "index": 6,
+          "emotion": "Genervt / Missbilligend",
+          "gesture": "Halb geschlossene Augen, angespannter Mund, eine Hand abwinkend oder demonstrativ an der Hüfte.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Thaleth/Output/thaleth-set-01-avatar-06.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Thaleth/thaleth-set-01-avatar-06.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/thaleth/avatars/thaleth-set-01-avatar-06.png",
+          "sha256": "b742291e4b75f7af9672ea75ce144ace3fe499a9d1712b167688f9be28e05162",
+          "width": 414,
+          "height": 414,
+          "box": [
+            838,
+            420,
+            1252,
+            834
+          ]
+        },
+        {
+          "index": 7,
+          "emotion": "Entschlossen / Ernst",
+          "gesture": "Direkter Blick, aufrechte Haltung, eine Faust vor der Brust oder feste erklärende Handbewegung.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Thaleth/Output/thaleth-set-01-avatar-07.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Thaleth/thaleth-set-01-avatar-07.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/thaleth/avatars/thaleth-set-01-avatar-07.png",
+          "sha256": "95e1d29ef51b163742ef301b9447f8e3d845adf3ca57566552078bafcb1277cf",
+          "width": 414,
+          "height": 414,
+          "box": [
+            2,
+            838,
+            416,
+            1252
+          ]
+        },
+        {
+          "index": 8,
+          "emotion": "Verärgert / Konfrontativ",
+          "gesture": "Zusammengezogene Brauen, eine Hand deutlich zeigend, Oberkörper leicht vorgelehnt.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Thaleth/Output/thaleth-set-01-avatar-08.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Thaleth/thaleth-set-01-avatar-08.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/thaleth/avatars/thaleth-set-01-avatar-08.png",
+          "sha256": "b89264bdb379ed6c748ceffa0bdc68f76e79c9a69da1029ab5d6ec1878e0b9f6",
+          "width": 414,
+          "height": 414,
+          "box": [
+            420,
+            838,
+            834,
+            1252
+          ]
+        },
+        {
+          "index": 9,
+          "emotion": "Unsicher / Keine Ahnung",
+          "gesture": "Leicht schiefer Gesichtsausdruck, beide Hände in einem klaren Schulterzucken geöffnet, Schultern hochgezogen.",
+          "localPath": "AleriaAlmanach/AvatarWerkstatt/Charaktere/Gruppen/Federkiel - Gwynthor/Thaleth/Output/thaleth-set-01-avatar-09.png",
+          "deliveryFile": "AleriaAlmanach/AvatarWerkstatt/Output/Thaleth/thaleth-set-01-avatar-09.png",
+          "webFile": "AleriaAlmanach/assets/federkiel-gwynthor/couriers/thaleth/avatars/thaleth-set-01-avatar-09.png",
+          "sha256": "9bfa4e0a144a2619534bb6ee8ec031e5dbeb32056b607bb04f0aa1f3a4204256",
+          "width": 414,
+          "height": 414,
+          "box": [
+            838,
+            838,
+            1252,
+            1252
+          ]
+        }
+      ]
+    }
+  ]
+}
