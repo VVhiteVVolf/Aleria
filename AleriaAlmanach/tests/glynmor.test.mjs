@@ -34,7 +34,12 @@ test('Glynmor keeps the original family graph and upgrades the existing publishe
   localPortrait.portrait = 'assets/images/custom-meera.png';
   const upgraded = reconcileFamilyWithProjectOrigin({ family: before, projectOriginFamily: current });
   assert.equal(upgraded.upgraded, true);
-  assert.equal(upgraded.family.extensions.sourceRevision, 2);
+  assert.equal(upgraded.family.extensions.sourceRevision, 3);
+  const { bloodNames, unknownPartnerName } = await json(`${sources}/chart-names.json`);
+  for (const [id, name] of Object.entries(bloodNames)) {
+    assert.equal(upgraded.family.persons.find(person => person.id === id).name, name);
+  }
+  assert.equal(upgraded.family.persons.filter(person => person.name === unknownPartnerName).length, 9);
   assert.equal(upgraded.family.document.emblem, GLYNMOR_EMBLEM);
   assert.equal(upgraded.family.houses[0].emblem, GLYNMOR_EMBLEM);
   assert.equal(upgraded.family.persons.find(person => person.id === GLYNMOR_TUDUR.personId).notes, 'Private Familiennotiz');
@@ -66,8 +71,8 @@ test('the chandlery is a native Gwynthor-Stadt module with unique sessions and a
   const { entry, path, icon } = glynmorChandleryRegistration(record.family);
   const packagePath = 'Charakter Archiv Exporte/Module/Kerzenmacherei Glynmor/gwynthor-kerzenmacherei-glynmor-2026-11-22.json';
   const published = await json('Stammbäume/assets/data/published-families/glynmor.json');
-  assert.equal(published.revision, 2);
-  assert.equal(published.family.extensions.sourceRevision, 2);
+  assert.equal(published.revision, 3);
+  assert.equal(published.family.extensions.sourceRevision, 3);
   const modulePackage = await json(packagePath);
   assert.deepEqual(modulePackage.module.entry, JSON.parse(JSON.stringify(entry)));
   assert.equal(modulePackage.module.section.key, entry.title);
