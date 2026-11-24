@@ -87,10 +87,11 @@ window.HAEUSER_DATA = {
       "format": "square"
     },
     "haus-hauptbild": {
-      "alt": "Ritter von Familie Cyffiniau",
+      "src": "../Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreis.jpg",
+      "alt": "Bannkreis von Gwynthor",
       "format": "portrait",
       "maxHeight": 580,
-      "emptyLabel": "Illustration folgt …"
+      "href": "/Karten/karte.html?map=cenyr-celtigerns-wacht-llamrais-ankunft-gwynthor-bannkreis&pin=gwynthor-marking-169"
     },
     "haus-banner": {
       "src": "../Stammbäume/assets/images/regions/gwynthor.png",

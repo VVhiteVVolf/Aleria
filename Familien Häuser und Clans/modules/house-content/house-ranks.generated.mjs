@@ -180,6 +180,7 @@ export const HOUSE_RANKS = Object.freeze({
   "haus-bradrhith": "Bürgerlich",
   "haus-braglas": "Bürgerlich",
   "haus-brandyddyn": "Bürgerlich",
+  "haus-bwach": "Ausgestoßen",
   "haus-caeffyn": "Bürgerlich",
   "haus-caelrith": "Bürgerlich",
   "haus-celynfor": "Bürgerlich",

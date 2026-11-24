@@ -178,6 +178,7 @@ import { HOUSE_BIOGRAPHY as haus_balchder } from "../../../../Familien Häuser u
 import { HOUSE_BIOGRAPHY as haus_bleiddorn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Bleiddorn/haus.biography.mjs?v=20261024-housebio-v1";
 import { HOUSE_BIOGRAPHY as haus_braglas } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Braglas/haus.biography.mjs?v=20261024-housebio-v1";
 import { HOUSE_BIOGRAPHY as haus_brandyddyn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Brandyddyn/haus.biography.mjs?v=20261121-ysabel-bronnor-v1";
+import { HOUSE_BIOGRAPHY as haus_bwach } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Bwach/haus.biography.mjs?v=20261124-bwach-v1";
 import { HOUSE_BIOGRAPHY as haus_caeffyn } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Caeffyn/haus.biography.mjs?v=20261113-horse-studs-v1";
 import { HOUSE_BIOGRAPHY as haus_caelrith } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Caelrith/haus.biography.mjs?v=20261124-gwynthor-kriegerfamilien";
 import { HOUSE_BIOGRAPHY as haus_celynfor } from "../../../../Familien Häuser und Clans/Estryll/Cenyr/Celtigerns_Wacht/Llamreis_Ankunft/Haus_Celynfor/haus.biography.mjs?v=20261024-housebio-v1";
@@ -848,6 +849,7 @@ export const HOUSE_BIOGRAPHY_DEFAULTS = Object.freeze({
   "haus-bleiddorn": Object.freeze({ sourceRevision: 5, biography: haus_bleiddorn, replacedDefaultFingerprints: Object.freeze(["1987:455db8e3:c2c467b9","2097:14b624b0:dc5864b6","2119:b034c91c:73d1660a"]) }),
   "haus-braglas": Object.freeze({ sourceRevision: 3, biography: haus_braglas, replacedDefaultFingerprints: Object.freeze(["1733:b2a9f4d3:52dee3e5"]) }),
   "haus-brandyddyn": Object.freeze({ sourceRevision: 3, biography: haus_brandyddyn, replacedDefaultFingerprints: Object.freeze(["3396:bc6d84f5:38ca1fa3"]) }),
+  "haus-bwach": Object.freeze({ sourceRevision: 1, biography: haus_bwach, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-caeffyn": Object.freeze({ sourceRevision: 1, biography: haus_caeffyn, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-caelrith": Object.freeze({ sourceRevision: 2, biography: haus_caelrith, replacedDefaultFingerprints: Object.freeze([]) }),
   "haus-celynfor": Object.freeze({ sourceRevision: 3, biography: haus_celynfor, replacedDefaultFingerprints: Object.freeze([]) }),

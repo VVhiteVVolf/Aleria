@@ -1,5 +1,7 @@
 import { NORTHERN_FARMS } from './northern-farms.mjs';
 
+const bannkreisMap = '../Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreis.jpg';
+
 export function buildNorthernFarmHouseContent(slug) {
   const farm = NORTHERN_FARMS.find(candidate => candidate.slug === slug);
   const crest = `../Stammbäume/${farm.emblem}`;
@@ -30,7 +32,9 @@ export function buildNorthernFarmHouseContent(slug) {
       familyTree: 'Die Namen des Gründerpaars und die späteren Generationen sind noch offen.'
     },
     sectionTitles: { holdings: farm.seat, traditions: 'Wappen' },
-    images: { crest, banner: '../Stammbäume/assets/images/regions/gwynthor.png' },
+    illustrationCategory: 'Bannkreiskarte',
+    images: { crest, scene: bannkreisMap, sceneAlt: 'Bannkreis von Gwynthor', sceneHref: farm.mapHref,
+      banner: '../Stammbäume/assets/images/regions/gwynthor.png' },
     relatedRecords: [{ title: farm.seat, text: 'Im nördlichen Bannkreis von Gwynthor', icon: crest, link: farm.mapHref }],
     founder: null, heads: [], heirs: [], figures: [], offices: [], cadets: [], allies: []
   };

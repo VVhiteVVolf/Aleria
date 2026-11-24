@@ -1,6 +1,6 @@
 import { createFounderTimeJumpPlaceholderHouseFamily } from './blank-house-family-factory.js';
 import { createFamilyPerson, createParentages } from './family-record-builders.js';
-import { CADWGAN_FAMILY_EMBLEM, CADWGAN_ID, CADWGAN_NAME, CADWGAN_PORTRAIT, CADWGAN_WORLD_PERSON_ID } from '../../../../AleriaAlmanach/modules/schwarze-zitteraale/sumpfnattern-people.mjs';
+import { BWACH_WARRIOR, CADWGAN_FAMILY_EMBLEM, CADWGAN_ID, CADWGAN_NAME, CADWGAN_PORTRAIT, CADWGAN_WORLD_PERSON_ID } from '../../../../AleriaAlmanach/modules/schwarze-zitteraale/sumpfnattern-people.mjs';
 import { buildCadwganBiography } from '../../../../AleriaAlmanach/modules/schwarze-zitteraale/sumpfnattern-biography.mjs';
 
 const id = 'haus-bwach';
@@ -45,13 +45,17 @@ export const HOUSE_BWACH_FAMILY = Object.freeze({
     historicalStatus: 'outcast',
     houseBiographyModule: {
       schema: 'aleria.house-module', schemaVersion: 1, pageTitle: 'Haus Bwach', housePage: true, description,
+      image: BWACH_WARRIOR, imageWidth: 38, imageTall: true,
       stats: [['Voller Name', 'Haus Bwach'], ['Status', 'Ausgestoßen'], ['Ehemalige Herrschaft', 'Gwaulwyn']],
       house: {
         crestImage: CADWGAN_FAMILY_EMBLEM,
         biographyTitle: 'Haus Bwach aus Gwaulwyn', biographyText: description,
         historyTitle: 'Wappen und Überlieferung',
         historyText: 'Im Wappen zertritt ein heller Geißbock eine grüne Natter. Weinrot, Elfenbein und Dunkelgrün sind die überlieferten Hausfarben. Cadwgan Bwach ist als lebender Angehöriger bekannt.',
-        documentsTitle: 'Überlieferte Angehörige', documents: [{
+        documentsTitle: 'Hausakte und Angehörige', documents: [{
+          title: 'Haus Bwach', text: 'Ehemalige Herrschaft über Gwaulwyn.',
+          link: '../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bwach'
+        }, {
           title: 'Cadwgan Bwach', text: 'Die Grüne Natter · Die Sumpfnattern',
           link: '/AleriaAlmanach/AleriaAlmanach.html?entry=zitteraale-gruppe-ii'
         }]

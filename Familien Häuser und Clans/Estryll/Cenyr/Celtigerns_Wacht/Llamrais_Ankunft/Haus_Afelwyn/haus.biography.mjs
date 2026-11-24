@@ -4,7 +4,7 @@ export const HOUSE_BIOGRAPHY = {
   "schemaVersion": 1,
   "pageTitle": "Familie Afelwyn",
   "housePage": true,
-  "image": "",
+  "image": "../Karten/Cenyr/celtigerns-wacht/llamrais-ankunft/gwynthor-bannkreis/Kartenbilder/GwynthorBannkreis.jpg",
   "imageWidth": 38,
   "imageSquare": false,
   "imageTall": true,
