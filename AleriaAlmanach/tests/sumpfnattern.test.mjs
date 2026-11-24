@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 import { buildZitteraaleGroupModules } from '../modules/schwarze-zitteraale/zitteraale-group-modules.mjs';
 import { buildZitteraaleModule } from '../modules/schwarze-zitteraale/zitteraale-module.mjs';
 import { buildCadwganBiography, buildCadwganCharacterExport } from '../modules/schwarze-zitteraale/sumpfnattern-biography.mjs';
-import { CADWGAN_ID, CADWGAN_FAMILY_EMBLEM, SUMPFNATTERN_GROUP } from '../modules/schwarze-zitteraale/sumpfnattern-people.mjs';
+import { CADWGAN_ID, CADWGAN_FAMILY_EMBLEM, CADWGAN_WORLD_PERSON_ID, SUMPFNATTERN_GROUP } from '../modules/schwarze-zitteraale/sumpfnattern-people.mjs';
 import existingThreads from './fixtures/sumpfnattern-existing-threads.json' with { type: 'json' };
 
 const { before, aaleBefore } = existingThreads;
@@ -50,7 +50,13 @@ test('the biography carries the latest Bwach/Gwaulwyn decision and distinguishes
   assert.match(profile.bio, /eingegliedert|gliederten/);
   assert.match(profile.bio, /Vendetta/);
   assert.doesNotMatch(JSON.stringify(profile), /Bronfelen|Cadwgan Bwch/);
-  for (const key of ['inventory', 'combatProfile', 'worldPersonId', 'familyId', 'age', 'birthYear']) assert(!(key in profile), key);
+  assert.equal(profile.worldPersonId, CADWGAN_WORLD_PERSON_ID);
+  assert.equal(profile.genealogy.worldPersonId, CADWGAN_WORLD_PERSON_ID);
+  assert.equal(profile.genealogy.familyId, 'haus-bwach');
+  const treeLink = new URL(profile.genealogy.sources[0].url, 'https://example.test');
+  assert.equal(treeLink.searchParams.get('family'), 'haus-bwach');
+  assert.equal(treeLink.searchParams.get('person'), 'cadwgan-bwach');
+  for (const key of ['inventory', 'combatProfile', 'familyId', 'age', 'birthYear']) assert(!(key in profile), key);
   assert(buildCadwganBiography().biography.extraSections.every(s => s.position === 'afterWorks'));
 });
 
