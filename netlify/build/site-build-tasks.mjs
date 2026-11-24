@@ -815,9 +815,11 @@ export const SITE_BUILD_TASKS = [
       'AleriaAlmanach/modules/character-archive/character-archive-ability-icons.js',
       'Kontinente/modules/goldmund/goldmund-context.mjs',
       'AleriaAlmanach/package.json', 'Stammbäume/assets/js/', 'Stammbäume/assets/data/family-sources/',
+      'AleriaAlmanach/modules/schwarze-zitteraale/sumpfnattern-people.mjs',
+      'AleriaAlmanach/modules/schwarze-zitteraale/sumpfnattern-biography.mjs',
       'Familien Häuser und Clans/', 'Bestiarium/modules/', ...gwynthorFamilyInputs, ...skellorFamilyInputs,
       ...['gwynthor-seven', 'character-development', 'character-health', 'character-trait-review', 'scene-time', 'biography', 'character-equipment', 'characters', 'classes', 'combat', 'combat-critical',
-        'combat-status', 'combat-styles', 'creatures', 'herausforderung', 'image-library',
+        'combat-status', 'combat-styles', 'combat-phase-counter', 'house-armor', 'creatures', 'herausforderung', 'image-library',
         'krumme-kanne', 'goettliche-eleganz', 'lachende-nixe', 'gofrann-schmiede', 'letzte-rast', 'scene-items', 'scene-rest', 'scene-regeneration', 'spell-catalog',
         'item-definitions', 'inventory-use', 'skill-checks']
         .map(feature => `AleriaAlmanach/modules/${feature}/`)],
