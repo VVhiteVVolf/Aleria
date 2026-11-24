@@ -33,9 +33,10 @@ direkt zur bearbeitbaren Stelle. Die Vikariate sind vom Patriarchat aus erreichb
   zugehörigen und später hinzugefügten Stellen. Ein eigener Postentitel
   hat Vorrang. „Standardtitel verwenden“ setzt die jeweilige Änderung zurück.
 - Die Kandidatenliste zeigt den direkten Dienstkreis. Freie Bürgerliche sind
-  optional. Unter „+ Aus Stammbäumen“ kann jede erfasste lebende Figur anhand
-  von Name, Familie und Region gesucht und der gerade gewählten Herrschaft
-  hinzugefügt werden. Suchbegriffe, Geschlecht, Familienstand, Alter und
+  optional. „+ Aus Stammbäumen“ startet mit lebenden Figuren aus Celtigerns
+  Wacht. Über „Weitere Regionen einblenden“ werden die übrigen Stammbäume
+  einbezogen. Die Bewerberliste bestätigt, welche Figur hinzugefügt oder
+  ausgewählt wurde. Suchbegriffe, Geschlecht, Familienstand, Alter und
   Besetzungsstatus lassen sich in der Bewerberliste kombinieren.
   „Freie Posten finden“ durchsucht alle Herrschaften nach Stelle, Haus und
   Standort und verlinkt jeden Treffer direkt. Stellen mit ausstehender

@@ -97,16 +97,18 @@
               <button type="button" data-tree-action="open">+ Aus Stammbäumen</button>
             </div>
           </form>
+          <p class="tree-selection-status" data-role="tree-selection-status" role="status" aria-atomic="true"></p>
         </div>
         <div class="candidate-header tree-candidate-header" data-role="tree-candidate-header" hidden>
           <div class="candidate-heading">
-            <h3 id="tree-candidates-title">Stammbäume</h3>
+            <h3 id="tree-candidates-title">Celtigerns Wacht</h3>
             <button type="button" data-tree-action="close">← Bewerberliste</button>
           </div>
           <label class="search-label">
-            <span class="visually-hidden">In allen Stammbäumen suchen</span>
-            <input type="search" placeholder="Name, Familie oder Region" autocomplete="off">
+            <span class="visually-hidden">Stammbäume durchsuchen</span>
+            <input type="search" placeholder="Name oder Familie" autocomplete="off">
           </label>
+          <label class="checkbox-label tree-other-regions"><input type="checkbox" data-role="tree-other-regions"> Weitere Regionen einblenden</label>
           <span class="tree-candidate-status" data-role="tree-candidate-status" role="status"></span>
         </div>
         <ul class="candidate-list" data-role="candidate-list" aria-label="Passende Figuren"></ul>

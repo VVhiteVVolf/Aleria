@@ -176,6 +176,7 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
     try {
       const previous = state.assign(house.id, key, id);
       if (!previous) return;
+      treePicker.clearReceipt();
       select(null);
       const previousPerson = postOccupant(previous, people);
       const person = people.get(id);
@@ -209,23 +210,21 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
     drawCandidates(true);
   }
 
+  const listed = id => house.candidates.some(candidate => candidate.id === id) || state.applicants(house.id).some(candidate => candidate.id === id);
   const treePicker = bindTreeCandidatePicker(role('candidate-panel'), {
-    candidates: treeCandidates, people,
-    listed: id => house.candidates.some(candidate => candidate.id === id) || state.applicants(house.id).some(candidate => candidate.id === id),
-    onAdd(id) {
-      try {
-        if (!state.addApplicant(house.id, id)) return false;
-        const includeFree = fields.free.checked;
-        filters.reset();
-        fields.free.checked = includeFree;
-        role('options').open = false;
-        fields.query.value = people.get(id).name;
-        select(id);
-        update(`${people.get(id).name} wurde zur Bewerberliste hinzugefügt und ist ausgewählt.`);
-        treePicker.close();
-        list.querySelector(`[data-drag-person="${CSS.escape(id)}"]`)?.focus();
-        return true;
-      } catch (error) { writeStatus(error.message); return false; }
+    candidates: treeCandidates, people, listed,
+    onChoose(id) {
+      const added = !listed(id) && state.addApplicant(house.id, id);
+      const includeFree = fields.free.checked;
+      const name = people.get(id).name;
+      filters.reset();
+      fields.free.checked = includeFree;
+      role('options').open = false;
+      fields.query.value = name;
+      select(id);
+      update('');
+      return added ? `${name} wurde hinzugefügt und ist ausgewählt. Wähle einen Posten.`
+        : `${name} ist bereits in der Bewerberliste und jetzt ausgewählt. Wähle einen Posten.`;
     },
   });
 
@@ -290,6 +289,7 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
   function activate(category) {
     area = category;
     plan = house.plans[area.id];
+    treePicker.clearReceipt();
     treePicker.close();
     role('area-icon').src = area.imageSrc;
     backButton.hidden = !parentViews.length;
@@ -368,16 +368,21 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
       }
       case 'undo':
         if (state.undo()) {
+          treePicker.clearReceipt();
           select(null);
           drawRoleOptions();
           update('Letzte Änderung zurückgenommen.');
           if (button.disabled) title.focus();
         }
         break;
-      case 'select-person': select(selectedId === dragPerson ? null : dragPerson); break;
+      case 'select-person':
+        treePicker.clearReceipt();
+        select(selectedId === dragPerson ? null : dragPerson);
+        break;
       case 'remove-applicant':
         try {
           if (state.removeApplicant(house.id, button.dataset.person)) {
+            treePicker.clearReceipt();
             if (selectedId === button.dataset.person) select(null);
             update('Die Stammbaumfigur wurde aus der Bewerberliste entfernt.');
             fields.query.focus();
@@ -390,6 +395,7 @@ export function bindOfficeDialog(dialog, { state, people, treeCandidates, titleE
         else writeStatus('Wähle zuerst eine Figur aus der Kandidatenliste.');
         break;
       case 'clear-selection':
+        treePicker.clearReceipt();
         select(null);
         fields.query.focus();
         break;

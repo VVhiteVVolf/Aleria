@@ -278,16 +278,33 @@ async function addExistingRole(page, label, count, site = '') {
 
 async function addForeignApplicant(page, width) {
   const name = 'Aegir Frostauge';
+  const openPicker = page.getByRole('button', { name: '+ Aus Stammbäumen' });
+  const treeSearch = page.getByRole('searchbox', { name: 'Stammbäume durchsuchen' });
+  const includeOther = page.getByRole('checkbox', { name: 'Weitere Regionen einblenden' });
+  const receipt = page.locator('[data-role="tree-selection-status"]');
   await search(page).fill(name);
   assert.equal(await candidate(page, name).count(), 0);
-  await page.getByRole('button', { name: '+ Aus Stammbäumen' }).click();
-  await page.getByRole('searchbox', { name: 'In allen Stammbäumen suchen' }).fill('Aegir Frostauge Aldrimar');
+  await openPicker.click();
+  assert.equal(await includeOther.isChecked(), false);
+  await treeSearch.fill('Imogen Saethwyr');
+  await page.getByRole('button', { name: 'Imogen Saethwyr in der Bewerberliste auswählen' }).click();
+  assert.match(await receipt.innerText(), /Imogen Saethwyr ist bereits in der Bewerberliste und jetzt ausgewählt/);
+  assert(await candidate(page, 'Imogen Saethwyr').evaluate(node => document.activeElement === node && node.ariaPressed === 'true'));
+  await openPicker.click();
+  await treeSearch.fill('Aegir Frostauge Aldrimar');
   const result = page.getByRole('button', { name: /Aegir Frostauge aus Clan Frostauge hinzufügen/ });
+  assert.equal(await result.count(), 0);
+  await page.getByText('Keine passende Figur aus Celtigerns Wacht gefunden.').waitFor();
+  await screenshot(page, `stammbaumsuche-celtigerns-wacht-${width}`);
+  await includeOther.check();
   await result.waitFor();
   await screenshot(page, `stammbaumsuche-${width}`);
   await result.click();
   await candidate(page, name).and(page.locator('[aria-pressed="true"]')).waitFor();
   assert.match(await candidate(page, name).innerText(), /Aus einem Stammbaum ergänzt/);
+  assert.match(await receipt.innerText(), /Aegir Frostauge wurde hinzugefügt und ist ausgewählt/);
+  assert(await candidate(page, name).evaluate(node => document.activeElement === node));
+  await screenshot(page, `stammbaumsuche-bestaetigt-${width}`);
   return candidate(page, name);
 }
 
@@ -882,6 +899,7 @@ try {
   await desktop();
   await mobile(390, 844);
   await mobile(320, 700);
+  report.checks.push('Stammbäume prüfen den regionalen Einstieg, explizites Einblenden und sichtbare Auswahlbestätigung.');
   await aldingen();
   assert.deepEqual(report.errors, []);
   assert.deepEqual(report.httpErrors, []);

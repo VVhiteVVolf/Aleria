@@ -90,8 +90,13 @@
 .tree-candidate-header input { margin-top: 6px; }
 .tree-candidate-status { display: block; font-size: .75rem; color: var(--muted); }
 .tree-candidate-status:empty { display: none; }
-.candidate.tree-result { cursor: pointer; }
-.tree-result-action { font-size: 1.15rem; color: var(--accent-dark); padding-inline: 5px; }
+.candidate.tree-result { grid-template-columns: auto minmax(0, 1fr); cursor: pointer; }
+.tree-result .tree-result-action { color: var(--accent-dark); font-weight: 650; }
+.tree-other-regions { margin-top: 5px; }
+.tree-selection-status:not(:empty) {
+  margin-top: 6px; padding: 5px 7px; border-radius: 5px;
+  background: var(--accent-soft); color: var(--accent-dark); font-size: .78rem;
+}
 .remove-applicant { min-height: 28px; font-size: .71rem; margin: 1px 0 1px auto; display: block; }
 
 .office-posts, .candidate-list { overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; scrollbar-gutter: stable; }

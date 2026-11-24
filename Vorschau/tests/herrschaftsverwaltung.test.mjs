@@ -763,7 +763,10 @@ test('a version 3 assignment beats a new source appointment and the new scopes o
 test('a figure from a remote family enters only the explicitly chosen applicant list and can be exported', () => {
   const findTree = createTreeCandidateSearch(treeCandidates, people);
   assert(treeCandidates.size >= 5000);
-  const matches = findTree('Aegir Frostauge Aldrimar').matches;
+  assert.equal(findTree('Aegir Frostauge Aldrimar').total, 0);
+  const countyMatches = findTree('Cadfan Trydar').matches;
+  assert(countyMatches.some(entry => entry.person.id === idFor('Cadfan Trydar') && entry.regions[0] === 'Celtigerns Wacht'));
+  const matches = findTree('Aegir Frostauge Aldrimar', { includeOtherRegions: true }).matches;
   const id = matches[0].person.id;
   assert.equal(id, 'person--haus-frostauge--aegir-frostauge');
   const draft = createAssemblyState(houses, roster.free, { treeCandidates });
