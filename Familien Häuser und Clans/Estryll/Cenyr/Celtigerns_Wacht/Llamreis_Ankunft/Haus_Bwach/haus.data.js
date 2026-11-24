@@ -75,12 +75,12 @@ window.HAEUSER_DATA = {
   },
   "images": {
     "haus-wappen": {
-      "src": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/icons/familie-bwch-v3.png",
+      "src": "../AleriaAlmanach/assets/schwarze-zitteraale/groups/icons/familie-bwch-v3.png",
       "alt": "Wappen von Haus Bwach",
       "format": "square"
     },
     "haus-hauptbild": {
-      "src": "/AleriaAlmanach/assets/schwarze-zitteraale/groups/figures/haus-bwach-ritter-v1.png",
+      "src": "../AleriaAlmanach/assets/schwarze-zitteraale/groups/figures/haus-bwach-ritter-v1.png",
       "alt": "Historische Rüstung des Hauses Bwach",
       "format": "portrait",
       "maxHeight": 580

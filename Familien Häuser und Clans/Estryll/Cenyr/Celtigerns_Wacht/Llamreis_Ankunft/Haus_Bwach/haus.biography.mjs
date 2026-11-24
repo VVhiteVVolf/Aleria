@@ -4,7 +4,7 @@ export const HOUSE_BIOGRAPHY = {
   "schemaVersion": 1,
   "pageTitle": "Haus Bwach",
   "housePage": true,
-  "image": "../Familien Häuser und Clans//AleriaAlmanach/assets/schwarze-zitteraale/groups/figures/haus-bwach-ritter-v1.png",
+  "image": "../AleriaAlmanach/assets/schwarze-zitteraale/groups/figures/haus-bwach-ritter-v1.png",
   "imageWidth": 38,
   "imageSquare": false,
   "imageTall": true,
@@ -27,7 +27,7 @@ export const HOUSE_BIOGRAPHY = {
     ]
   ],
   "house": {
-    "crestImage": "../Familien Häuser und Clans//AleriaAlmanach/assets/schwarze-zitteraale/groups/icons/familie-bwch-v3.png",
+    "crestImage": "../AleriaAlmanach/assets/schwarze-zitteraale/groups/icons/familie-bwch-v3.png",
     "sideWidth": 100,
     "connectionPortraitHeight": 80,
     "connectionTextOffset": 0,
@@ -53,7 +53,7 @@ export const HOUSE_BIOGRAPHY = {
     "documentsTitle": "Mehr über das Haus",
     "documents": [
       {
-        "icon": "../Familien Häuser und Clans//AleriaAlmanach/assets/schwarze-zitteraale/groups/icons/familie-bwch-v3.png",
+        "icon": "../AleriaAlmanach/assets/schwarze-zitteraale/groups/icons/familie-bwch-v3.png",
         "title": "Haus Bwach · vollständige Hausseite",
         "text": "Chronik, Besitz, Wappen und Hof mit verlinkten Portraits.",
         "link": "../Familien%20H%C3%A4user%20und%20Clans/kleinehaeuser.html?haus=haus-bwach"

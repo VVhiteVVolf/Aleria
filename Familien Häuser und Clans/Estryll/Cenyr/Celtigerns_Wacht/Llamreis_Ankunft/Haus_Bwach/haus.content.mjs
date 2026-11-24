@@ -17,7 +17,7 @@ export const HOUSE_CONTENT = {
     ['Ehemalige Herrschaft', 'Gwaulwyn', 'gwaulwyn'], ['Haus', 'Haus Bwach', 'haus-bwach']
   ].map(([type, name, slug]) => ({ type, name, slug })),
   profile: { rank: 'Ausgestoßen', houseType: 'Ehemaliges Herrscherhaus von Gwaulwyn', origin: 'Gwaulwyn' },
-  images: { crest: CADWGAN_FAMILY_EMBLEM, scene: BWACH_WARRIOR, sceneAlt: 'Historische Rüstung des Hauses Bwach' },
+  images: { crest: `..${CADWGAN_FAMILY_EMBLEM}`, scene: `..${BWACH_WARRIOR}`, sceneAlt: 'Historische Rüstung des Hauses Bwach' },
   illustrationCategory: 'Überlieferte Hausrüstung',
   sections: { overview, history, familyTree },
   biographySummary: { overview, history },
