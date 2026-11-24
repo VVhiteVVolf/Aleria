@@ -6,6 +6,7 @@ import { createHash } from 'node:crypto';
 import { loadPublicCenyrCoverageInputs, auditCenyrHouseCoverage } from '../modules/house-coverage/cenyr-house-coverage-node.mjs';
 import { createRuralFamilyCoverageProfile } from '../modules/house-coverage/rural-family-profile.mjs';
 import { FLEISCHSAMMLER_FAMILIES_INDEX } from '../../Stammbäume/assets/js/data/gwynthor-fleischsammler/localities.mjs';
+import warriorSources from '../../Stammbäume/assets/data/source-inventories/gwynthor-warrior-families-20261124.json' with { type: 'json' };
 import countyBaseline from './fixtures/celtigerns-family-cards-baseline-20261104.json' with { type: 'json' };
 import { normalizeFamily } from '../../Stammbäume/assets/js/domain/family-schema.js';
 import { resolveRegisteredFamilyUpgrade } from '../../Stammbäume/assets/js/services/family-registry-upgrade.js';
@@ -228,13 +229,21 @@ test('Originalquellen bleiben archiviert; Vorbereitungen enthalten keine erfunde
       assert.equal(content.sections.history, family.document.description.replace('Ritterherrenhaus', 'Ministerialenhaus'));
       for (const head of content.heads) assert.ok(family.persons.some(person => person.id === head.id));
     } else if (newGuardHouseIds.has(content.id)) {
-      assert.equal(content.prepared, true);
-      assert.match(content.sections.history, /nicht überliefert/);
-      assert.match(content.sections.history, /keine unbekannten Verwandtschaftsgrade oder Lebensdaten/);
-      assert.equal(content.profile.founding, 'Nicht bekannt');
-      assert.equal(content.founder, null);
-      assert.deepEqual(content.heads, []);
       const family = families.find(record => record.id === content.id).family;
+      const source = warriorSources.families.find(source => source.id === content.id);
+      assert.ok(source, content.id);
+      const origin = family.persons.find(person => person.id === source.ancestor);
+      assert.ok(origin, content.id);
+      assert.equal(content.prepared, false);
+      assert.equal(family.extensions.sourceRevision, source.sourceRevision);
+      assert.ok(content.sections.history.includes('unbekannte Gründerpaar'));
+      assert.ok(content.sections.history.includes(origin.name));
+      assert.ok(content.sections.history.includes(origin.birth) && content.sections.history.includes(origin.death));
+      assert.equal(content.profile.founding, 'Nicht bekannt');
+      assert.equal(content.profile.rank, 'Bürgerlich');
+      assert.equal(content.founder, null);
+      assert.equal(content.heads.length, 1);
+      assert.ok(family.persons.some(person => person.id === content.heads[0].id && person.lineageRole === 'head'));
       assert.ok(content.figures.every(person => family.persons.some(member => member.id === person.id)));
     } else if (content.prepared) {
       assert.ok(neutralPreparedHistories.has(content.sections.history), content.id);
