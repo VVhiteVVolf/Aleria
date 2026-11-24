@@ -1,4 +1,6 @@
 // Redaktionelle Quelle der Ämterseite. Absätze sind Klartext, kein HTML.
+import { CENYR_HOUSE_COMMAND, CENYR_MARSHAL_DUTY } from '../../../shared/cenyr-administration/military-organization.mjs';
+
 export const OFFICE_GROUPS = [
   {
     id: 'ratsaemter', number: '01', title: 'Die Ratsämter', subtitle: 'Im Dienst des Reiches',
@@ -8,8 +10,8 @@ export const OFFICE_GROUPS = [
     ],
     offices: [
       { id: 'marschall', title: 'Marschall', category: 'Traditionelles Ratsamt', description: [
-        'Der Marschall ist der oberste Krieger des Landes oder einer Region und verantwortet dessen innere und äußere Sicherheit. Im Krieg wird er auch „Kriegsherr“ genannt: In militärischen Fragen kann dann nur das Oberhaupt seine Entscheidungen überstimmen.',
-        'Ihm stehen drei besondere Amtsträger zur Seite: Der Feldmarschall betreut das Heer, der Seemarschall die Marine. Der Wachtmarschall sammelt Informationen über die von den einzelnen Orten organisierten Stadtwachen, damit der Marschall die Lage der inneren Sicherheit beurteilen kann. Seine Aufgabe ist vor allem unterrichtender Natur.'
+        CENYR_MARSHAL_DUTY,
+        'Im Krieg wird der Marschall auch „Kriegsherr“ genannt. Sein Oberhaupt kann ihn in militärischen Fragen überstimmen. Wo diese Ämter bestehen, unterstützt der Feldmarschall die Landführung und der Seemarschall führt die Flotte.'
       ] },
       { id: 'kaemmerer', title: 'Kämmerer', category: 'Traditionelles Ratsamt', description: [
         'Der Kämmerer koordiniert die wirtschaftlichen und finanziellen Belange des Reiches. Er verwaltet die Schatzkammer und ihre Ausgaben, achtet auf gefüllte Vorratskammern und beugt Warenengpässen vor. Auch der Handel mit benachbarten Regionen und Ländern gehört zu seinem Aufgabenbereich.',
@@ -61,8 +63,9 @@ export const OFFICE_GROUPS = [
       { id: 'schatzmeister', title: 'Schatzmeister', description: [
         'Der Schatzmeister verwaltet die Kasse des Hauses oder der Burg. Anders als ein Kämmerer entscheidet er nicht eigenständig über Ausgaben. Sind die Mittel erschöpft, kann er jedoch ein Veto einlegen.'
       ] },
-      { id: 'gardekommandant', title: 'Kommandant der Garde', description: [
-        'Der Kommandant der Garde verantwortet die Bewachung der Burg und den Schutz des Oberhauptes sowie seiner Familie. Diese unmittelbare Verantwortung macht das Amt besonders ehrenvoll.'
+      { id: 'kommandant-der-hausmacht', title: 'Kommandant der Hausmacht', description: [CENYR_HOUSE_COMMAND] },
+      { id: 'gardekommandant', title: 'Hauptmann der Leibgarde', description: [
+        'Der Hauptmann führt die ausgewählte Leibgarde zum persönlichen Schutz der Angehörigen des Hauses. Er untersteht dem Kommandanten der Hausmacht.'
       ] },
       { id: 'zeremonienmeister', title: 'Zeremonienmeister', description: [
         'Der Zeremonienmeister richtet Bankette, Namenstagsfeiern und andere höfische Festlichkeiten aus. Außerdem sorgt er dafür, dass Insignien, Ornamente, Kronen und Wappen gepflegt und jederzeit vorzeigbar sind.'

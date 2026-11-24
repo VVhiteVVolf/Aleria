@@ -4,24 +4,39 @@ Gemeinsame Ansicht für bestehende und künftige Herrschaften. Gestaltung und Zu
 
 - `administration-content.js` besitzt die acht Bereiche, lokalen Organisationsicons und territoriale Zuordnung der Altquellen. Unbekannte Herrschaften erhalten keine fremden Inhalte.
 - `administration-dialog.js` besitzt Hauptfenster, Maximierung, Bereichsnavigation, Ladezustand und Fokusrückkehr. Späte Ladeergebnisse überschreiben keinen anderen Bereich. Die Bereichsnavigation verändert nicht den ursprünglichen Auslöser auf der Seite.
-- `administration-structured.mjs` lädt die getrennten redaktionellen Bereichsmodule für Celtigerns Wacht und setzt die Ansicht zusammen.
+- `administration-structured.mjs` verbindet die redaktionellen Bereichsmodule mit den gemeinsamen Cenyr-Amtsplänen. Die sieben Herrschaften verwenden dieselben Stellen wie die Werkstatt. Das Fenster von Gwendolyns Ufer enthält außerdem seine überlieferten Ämtertafeln mit den vorhandenen Dialogfunktionen.
 - `administration-role-examples.mjs` ergänzt am Inhaltsende jedes Bereichs eine Tabelle aus `data/role-examples.mjs`: reguläre Rollen, Nebenrollen und Sonderrollen mit Kurzbeschreibungen und den gemeinsamen Bronze-Abzeichen. Die Beispiele gelten als Anregung für alle Herrschaften, unabhängig von deren konkreten Amtsbesetzungen und vom strukturierten oder älteren Quellenformat. Die Darstellung besitzt eigene Styles in `administration-role-examples.css`.
 - `administration-model.mjs` enthält das kleine Amtsmodell und die Einordnung der Vasallenämter. Die Ergänzung verändert ihre Datenquellen nicht.
 - `administration-cards.mjs` rendert Amtskarten, 2:3-Portraits, Rangabzeichen und Mannschaftslinks. Ein lokales WeakMap ordnet den Buttons ihre Amtsdaten zu; es gibt keinen globalen Personenstate.
 - `administration-portrait-sources.mjs` löst exakt belegte externe Original-URLs auf lokale Archivkopien auf. Renderer und Vasallengenerator verwenden dieselbe Zuordnung.
-- `administration-office-dialog.mjs` besitzt das Amtsfenster mit Portrait, Vorgänger, Fakten, Aufgaben und Schnittstellen. Ein unbekannter Vorgänger erscheint nur als ausgegraute Silhouette mit „Vorgänger“.
+- `administration-office-dialog.mjs` besitzt das Amtsfenster mit Portrait, Vorgänger, Fakten, Aufgaben, Mannschaften und Schnittstellen. Die Hofämter zeigen dort auch die unterstellten Dienste mit Quellenlinks. Aus den offiziellen Fenstern führt ein Link direkt zum zugehörigen Besetzungsentwurf.
 - `administration-renderer.mjs` und `administration-hierarchy.mjs` erhalten die älteren HTML-Quellen anderer Herrschaften einschließlich Aufgaben-Tabellen. Erkannte Hierarchien verwenden dieselben Amtskarten; unbekannte Tabellenformen bleiben erhalten.
 - `administration.css` besitzt ausschließlich die einzeilige äußere Kachelauswahl. Hauptfenster, Amtskarten und Amtsdetails besitzen eigene CSS-Dateien. Keine Überschreibungen in `herrschaft.css`.
 
 ## Redaktionelle Daten und Dienstwege
 
-`data/celtigerns-{bereich}.mjs` sind die aktuellen Verwaltungsinhalte der Grafschaft. Die bisherigen HTML-Dateien bleiben als verlinkte historische Grundlagen erhalten. Neue Aufträge und Amtsbesetzungen verändern weder Familienakten noch Firebase-Daten automatisch.
+`data/celtigerns-{bereich}.mjs` liefern die ausführlichen Amtsprofile der Grafschaft. `shared/cenyr-administration/` besitzt die gemeinsame Hierarchie und übernimmt die belegten Besetzungen aus den territorialen Räten, Hausakten und dem Almanach. Die Werkstatt speichert Umbesetzungen browserlokal.
 
 Jeder Bereich enthält Gruppen mit ausdrücklichem `kind` und Amtskarten mit `id`, `title`, `name`, `portrait`, `description` und gegebenenfalls `reportsTo`, `authority`, `connections`, `links`, `predecessor` oder `crew`. Bildpfade begründen keine Personenzuordnung. Vorhandene Quellen und bereits festgelegte Personen haben Vorrang.
 
-Reihenfolge: Leitung → Adjutantur → Ämter der Vasallen → fünf gleichrangige Kernämter → Sonderrollen und nachgeordnete Dienste. Militärische Kommandanten besitzen ihre eigene operative Kette. Marschälle tragen Gold, Adjutanten und Kriegswarte Silber, darunter Bronze. Andere Bereiche verwenden entsprechende Rangrahmen und eigene Symbole.
+Leitung, Adjutantur, Ämter der Vasallen und Fachämter gehen den örtlichen
+Stellen und wiederholbaren Diensten voraus. Die militärische Ordnung aus
+`shared/cenyr-administration/military-organization.mjs` gilt für Werkstatt,
+Amtsfenster und Cenyr-Ämterverzeichnis. Der Marschall führt die Ortswachen
+seiner Herrschaft und das Heer mit den zuständigen Hausmachtkommandanten
+nach Lehnsrang. Hauptleute der Hausmacht führen Abteilungen ihres Hauses.
+Ein Standort bezeichnet ihre Stationierung. Das kirchliche Aufgebot und
+vertraglich geführte Söldner besitzen jeweils einen eigenen Dienstweg.
+Marschälle tragen Gold, Adjutanten und
+Kriegswarte Silber, darunter Bronze. Andere Bereiche verwenden
+entsprechende Rangrahmen und Symbole.
 
-Kirchliche Ausnahme: neun gleichrangige hohe Prälaten nach dem Patriarchen, danach örtliche Vikare. Die persönliche Kanzlei bildet keinen geistlichen Zwischenrang. Priesterordnung und sechs Kasten folgen den Religionsquellen; die Kasten sind keine Rangfolge. Magie erhält Myrddins bestehende persönliche Ordnung, Rhiannons Nachfolge und den untereinander gleichrangigen Dienststab.
+Im Patriarchat folgen auf die geistliche Leitung neun gleichrangige Prälaten
+vor den Vikaren. Vikariate haben einen Dechanten, einen Diakon je Siedlung,
+einen persönlichen Stab und einen kleinen Schutzdienst. Die übrigen kirchlichen
+Dienste sind als wiederholbare Rollen vorbereitet. Myrddins persönliche
+Ordnung mit Rhiannons Nachfolge und Dienststab ist das Vorbild der
+grafschaftlichen Ratsmagie.
 
 ## Vasallen aus ihren eigenen Quellen
 

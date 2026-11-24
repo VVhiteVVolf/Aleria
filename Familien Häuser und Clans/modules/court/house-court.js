@@ -1,7 +1,9 @@
 import { element as officeElement, renderRoleGroup, roleFor } from '../../../Kontinente/modules/administration/administration-cards.mjs';
 import { createOfficeDialog } from '../../../Kontinente/modules/administration/administration-office-dialog.mjs?v=20261028-office-body-v2';
-import { completeHouseOffices, hasNobleCourt, houseOfficeRole, partitionHouseCourtEntries } from './house-court-model.mjs?v=kingdoms-20261101';
+import { hasNobleCourt, houseOfficeRole, partitionHouseCourtEntries } from './house-court-model.mjs?v=kingdoms-20261101';
 import { legacyCourtOffices } from './house-court-legacy.mjs?v=20261028-office-body-v2';
+import { indexCourtEntries } from '../../../shared/cenyr-administration/court-plan.mjs';
+import { officialCourt, officialGroups, officialRole, preparationHref } from '../../../shared/cenyr-administration/official-office-model.mjs';
 
 const controllers = new WeakMap();
 const legacyTemplates = new WeakMap();
@@ -48,13 +50,38 @@ function renderGroup(documentRef, group, crest = false) {
 }
 
 function renderOffices(group, data) {
-  const roles = completeHouseOffices(group.entries, hasNobleCourt(data)).map((entry, index) => houseOfficeRole(entry, index, data));
-  const section = renderRoleGroup({ id: 'offices', title: group.title || 'Hofämter', kind: 'court', roles },
-    { id: 'unterhaltung', title: 'Hofämter', jurisdiction: data.name });
+  const { scope, house, plans } = officialCourt(data.meta?.id, group.entries);
+  const sources = new Map(indexCourtEntries(group.entries).map(({ id, entry }) => [id, entry]));
+  const roleForSlot = slot => {
+    const base = sources.get(slot.id) || { role: slot.title };
+    const source = houseOfficeRole(base, plans.hof.slots.indexOf(slot), data);
+    if (scope && slot.id === 'hausmacht') {
+      source.description = [slot.description, base.detail].filter(Boolean);
+      source.reportsTo = house.offices.militaer.title;
+    }
+    const role = officialRole(slot, source, Boolean(house && slot.holder));
+    const department = plans[slot.department];
+    role.hierarchy = department && officialGroups(department);
+    if (scope && department) role.planningHref = preparationHref(scope.id, 'hof', slot.department);
+    if (scope?.id === 'draig' && slot.id === 'hausmacht') role.links.push({
+      label: 'Draig-Leibgarde im Almanach öffnen ↗',
+      href: '/AleriaAlmanach/AleriaAlmanach.html?entry=draig-leibgarde',
+    });
+    return role;
+  };
+  const area = { id: 'unterhaltung', title: 'Hofämter', jurisdiction: data.name };
+  const section = officeElement('section', 'house-court-offices');
   section.dataset.courtGroup = 'offices';
-  section.classList.add('house-court-offices');
-  const note = officeElement('p', 'house-court-note', group.note || 'Unbenannte Ämter bleiben sichtbar. Aufgaben können in kleinen Haushalten von derselben Person wahrgenommen werden.');
-  section.querySelector('.administration-group-heading').after(note);
+  section.append(officeElement('h3', 'house-court-heading', group.title || 'Hofämter'));
+  if (group.note) section.append(officeElement('p', 'house-court-note', group.note));
+  if (scope) {
+    const link = officeElement('a', 'administration-module-link', 'Hofbesetzung in der Werkstatt bearbeiten ↗');
+    link.href = preparationHref(scope.id, 'hof');
+    section.append(link);
+  }
+  const top = plans.hof.leadership;
+  section.append(renderRoleGroup({ ...top, id: 'court-leadership', kind: 'court', roles: top.slots.map(roleForSlot) }, area));
+  officialGroups(plans.hof, [], roleForSlot).forEach(branch => section.append(renderRoleGroup({ ...branch, kind: 'court' }, area)));
   return section;
 }
 

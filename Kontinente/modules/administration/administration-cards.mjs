@@ -43,7 +43,17 @@ export function renderRoleGroup(group, area) {
   section.dataset.groupId = group.id;
   section.dataset.groupKind = group.kind;
   const header = element('header', 'administration-group-heading');
-  const heading = element('h3', '', group.title);
+  const heading = element('h3');
+  if (group.icon) {
+    const icon = element('img', 'administration-group-icon');
+    icon.src = group.icon;
+    icon.alt = '';
+    icon.width = 24;
+    icon.height = 24;
+    icon.loading = 'lazy';
+    heading.append(icon);
+  }
+  heading.append(group.title);
   header.append(heading);
   if (group.kind === 'core') header.append(element('span', 'administration-group-count', `${group.roles.length} gleichrangige Ämter`));
   section.append(header);

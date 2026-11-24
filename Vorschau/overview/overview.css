@@ -20,6 +20,9 @@
 .preparation-card{min-width:0;background:#fffdf6;border:1px solid #cdcbbd}
 .preparation-card-link{display:flex;align-items:center;gap:22px;height:100%;padding:25px;text-decoration:none;transition:background .15s,border-color .15s}
 .preparation-card-link:hover{background:#edf0e5}
+.preparation-card:has(.preparation-scope-links) .preparation-card-link{height:auto}
+.preparation-scope-links{display:flex;flex-wrap:wrap;gap:8px 15px;list-style:none;margin:0;padding:14px 25px;border-top:1px solid #ddd9c9;font-size:13px}
+.preparation-scope-links a{text-underline-offset:3px}
 .preparation-card figure{width:126px;flex:0 0 126px;margin:0}
 .preparation-card img{display:block;width:100%;height:126px;object-fit:contain}
 .preparation-card-copy{min-width:0}

@@ -4,7 +4,7 @@ import { HOUSE_OFFICES, houseOfficeFor } from './house-office-catalog.mjs?v=2026
 // Aldrimar's kingdom source explicitly includes landless Huskarle/Walküren.
 const nobleRank = /ritter|freiherr|junker|ministerial|baron|gr[aä]f|fürst|herzog|könig|kaiser|tiarna|laird|jarl|thane|thengr|hesir|hersir|huskarl|walküre|earl|duke|king|lord|adlig|adelig|adelshaus/i;
 const unnamed = /^(?:nicht benannt|noch nicht benannt|unbekannt|unbesetzt|amtsinhaber nicht überliefert|offen|folgt\s*…?|\?+|rolle)$/i;
-const areaTitles = { militaer: 'Militär', klerus: 'Klerus', gerichtsbarkeit: 'Gerichtsbarkeit', finanzen: 'Finanzen', diplomatie: 'Diplomatie', unterhaltung: 'Unterhaltung' };
+const areaTitles = { militaer: 'Militär', klerus: 'Klerus', gerichtsbarkeit: 'Gerichtsbarkeit', finanzen: 'Finanzen', diplomatie: 'Diplomatie', magie: 'Magie', unterhaltung: 'Unterhaltung' };
 export const namedOfficeHolder = name => Boolean(/\p{L}/u.test(String(name || '')) && !unnamed.test(String(name).trim()));
 
 // A few older house sources store family relationships in the "offices" list.

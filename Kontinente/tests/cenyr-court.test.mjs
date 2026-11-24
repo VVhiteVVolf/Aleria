@@ -36,9 +36,9 @@ test('Die historische Liste bewahrt Lücken und bekannte Regierungszeiten', () =
 
 test('Alle Rollen der Vorlage besitzen eindeutige, dauerhaft verlinkbare Einträge', () => {
   const offices = OFFICE_GROUPS.flatMap(group => group.offices);
-  assert.deepEqual(OFFICE_GROUPS.map(group => group.offices.length), [10, 23, 7, 10]);
+  assert.deepEqual(OFFICE_GROUPS.map(group => group.offices.length), [10, 24, 7, 10]);
   const ids = offices.map(office => office.id);
-  assert.equal(new Set(ids).size, 50);
+  assert.equal(new Set(ids).size, 51);
   for (const office of offices) assert.ok(office.description.length && office.description.every(Boolean), office.title);
 });
 
@@ -48,6 +48,12 @@ test('Neue Seiten haben gültige lokale Links, Anker und Bilddateien', async () 
     const ids = [...document.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
     assert.equal(ids.length, new Set(ids).size, `Doppelte IDs in ${filename}`);
     assert.doesNotMatch(document, /\bon(?:click|input|change)=|animexx\.de|\?\?\?\?|\uFFFD/);
+    if (filename === 'aemter.html') {
+      assert.doesNotMatch(document, /Wachtmarschall/);
+      assert.match(document, /id="streitkraefte"[\s\S]+Vasallentruppen[\s\S]+Condottieri/);
+      assert.match(document, /id="kommandant-der-hausmacht"/);
+      assert.match(document, /id="gardekommandant"[\s\S]+Hauptmann der Leibgarde/);
+    }
     for (const [, raw] of document.matchAll(/\b(?:src|href)="([^"]+)"/g)) {
       if (/^https?:/.test(raw)) continue;
       const href = raw.replaceAll('&amp;', '&');

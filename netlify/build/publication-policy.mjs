@@ -95,6 +95,7 @@ const SOURCE_ARCHIVE_ROOTS = [
   'Vorschau/Adharath/scripts/',
   'Vorschau/Adharath/tests/',
   'Vorschau/Adharath/assets/originals/',
+  'Vorschau/Herrschaftsverwaltung/scripts/',
   'Vorschau/shared/heraldic-artifacts/',
   'AleriaAlmanach/assets/gwynthor-marktplatz/',
   'AleriaAlmanach/assets/gwynthor-stadtorte/',

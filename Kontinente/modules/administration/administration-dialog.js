@@ -122,10 +122,10 @@
     await officeDialogReady;
     const { renderStructuredAdministration } = await import(structuredUrl.href);
     const structured = await renderStructuredAdministration(scopeId, area.id);
-    if (structured) return structured;
+    if (structured && structured.dataset.legacyCouncil !== 'true') return structured;
     const { renderLegacyContent, renderEmptyArea } = await import(rendererUrl.href);
     const source = content.sourceFor?.(scopeId, area.id) || "";
-    if (!source) return renderEmptyArea();
+    if (!source) return structured || renderEmptyArea();
     if (!sourceCache.has(source)) {
       const requestUrl = new URL(source, location.origin);
       requestUrl.searchParams.set('v', '20261028');
@@ -137,7 +137,25 @@
         throw error;
       }));
     }
-    return renderLegacyContent(await sourceCache.get(source), area);
+    try {
+      const legacy = renderLegacyContent(await sourceCache.get(source), area);
+      if (!structured) return legacy;
+      const details = document.createElement('details');
+      details.className = 'administration-dialog-details';
+      details.dataset.role = 'legacy-administration';
+      const heading = document.createElement('summary');
+      heading.textContent = 'Überlieferte Ämtertafeln und Aufgaben';
+      details.append(heading, legacy);
+      structured.append(details);
+      return structured;
+    } catch (error) {
+      if (!structured) throw error;
+      const link = document.createElement('a');
+      link.href = source;
+      link.textContent = 'Überlieferte Ämtertafel öffnen ↗';
+      structured.append(link);
+      return structured;
+    }
   }
 
   function createAreaNavigation(area, scopeId) {

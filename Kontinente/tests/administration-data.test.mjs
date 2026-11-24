@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import vm from 'node:vm';
 import { PORTRAIT_PLACEHOLDER, tierFor, withVassals } from '../modules/administration/administration-model.mjs';
 import { renderStructuredAdministration } from '../modules/administration/administration-structured.mjs';
+import { officialCouncil } from '../../shared/cenyr-administration/official-office-model.mjs';
 import vassals, { territorialContacts } from '../modules/administration/data/celtigerns-vassals.generated.mjs';
 import { HOUSE_GWYLLACH_FAMILY } from '../../Stammbäume/assets/js/data/house-gwyllach-family.js';
 import { HOUSE_SWYLL_PORTRAITS } from '../../Stammbäume/assets/js/data/house-swyll-portraits.js';
@@ -247,9 +248,16 @@ test('Alle lokalen Portraits, Mannschaftsbilder und verlinkten Dateien existiere
   }
 });
 
-test('Grafschaftsinhalte werden nicht an andere Verwaltungsbereiche oder Herrschaften vererbt', async () => {
-  for (const scope of ['baronie-gwendolyns-ufer', 'herrschaft-gafyr', 'herrschaft-wyrm', 'herrschaft-saethwyr', 'insel-camruisge', 'unbekannt']) {
+test('Jede ausgearbeitete Herrschaft behält ihren eigenen Rat, unbekannte Bereiche bleiben leer', async () => {
+  for (const scope of ['insel-camruisge', 'unbekannt']) {
     for (const id of areaIds) assert.equal(await renderStructuredAdministration(scope, id), null, `${scope}/${id}`);
+  }
+  for (const vassal of vassals) for (const id of areaIds) {
+    const { groups } = officialCouncil(vassal.scopeId, id);
+    const head = groups.find(group => group.kind === 'leadership').roles[0];
+    assert.equal(head.title, vassal.offices[id].title);
+    assert.equal(head.name, vassal.offices[id].name);
+    assert(!groups.some(group => group.id === 'vassals'));
   }
   assert.equal(await renderStructuredAdministration('grafschaft-celtigerns-wacht', 'unbekannt'), null);
   const context = { window: {} };

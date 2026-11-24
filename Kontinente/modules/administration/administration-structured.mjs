@@ -1,5 +1,8 @@
 import { element, renderRoleGroup } from './administration-cards.mjs';
 import { withVassals } from './administration-model.mjs';
+import { scopeForTerritory } from '../../../shared/cenyr-administration/scopes.mjs';
+import { officialCouncil, preparationHref } from '../../../shared/cenyr-administration/official-office-model.mjs';
+import { CENYR_FORCES } from '../../../shared/cenyr-administration/military-organization.mjs';
 
 const loaders = {
   militaer: () => import('./data/celtigerns-militaer.mjs?v=20261028'),
@@ -12,16 +15,43 @@ const loaders = {
   unterhaltung: () => import('./data/celtigerns-unterhaltung.mjs?v=20261028'),
 };
 
+function militaryForces(scopeId) {
+  const details = element('details', 'administration-dialog-details');
+  details.dataset.role = 'military-forces';
+  const list = element('dl', 'administration-force-list');
+  for (const force of CENYR_FORCES) {
+    const description = element('dd', '', force.text);
+    if (force.id === 'hausmacht' || force.id === 'kirche') {
+      const path = force.id === 'hausmacht' ? ['hof', 'hof-hausmacht'] : ['klerus'];
+      const link = element('a', 'administration-module-link', force.id === 'hausmacht' ? 'Hausmacht in der Werkstatt öffnen ↗' : 'Kirchliche Ämter in der Werkstatt öffnen ↗');
+      link.href = preparationHref(scopeId, ...path);
+      description.append(' ', link);
+    }
+    list.append(element('dt', '', force.title), description);
+  }
+  details.append(element('summary', '', 'Die fünf Arten von Streitkräften'), list);
+  return details;
+}
+
 export async function renderStructuredAdministration(scopeId, areaId) {
-  if (scopeId !== 'grafschaft-celtigerns-wacht' || !loaders[areaId]) return null;
-  const [{ default: source }, { default: vassals, territorialContacts }] = await Promise.all([
+  const scope = scopeForTerritory(scopeId);
+  if (!scope || !loaders[areaId]) return null;
+  const county = scope.rank === 'county';
+  const [{ default: source }, { default: vassals, territorialContacts }] = county ? await Promise.all([
     loaders[areaId](), import('./data/celtigerns-vassals.generated.mjs?v=20261028'),
-  ]);
-  const area = { ...withVassals(source, vassals), jurisdiction: 'Celtigerns Wacht' };
+  ]) : [{}, {}];
+  const official = officialCouncil(scopeId, areaId, source);
+  if (!official) return null;
+  const area = {
+    id: areaId, title: source?.title || window.ALERIA_ADMINISTRATION_CONTENT.areas.find(entry => entry.id === areaId)?.name,
+    ...source, groups: official.groups, jurisdiction: county ? 'Celtigerns Wacht' : official.house.title,
+  };
+  if (county) area.groups = withVassals(area, vassals).groups;
   const view = element('div', 'administration-structured');
   view.dataset.areaId = area.id;
+  if (scope.legacyCouncil) view.dataset.legacyCouncil = 'true';
   const intro = element('div', 'administration-area-intro');
-  intro.append(element('span', 'administration-eyebrow', 'Ämter · Menschen · Verantwortung'), element('p', '', area.intro));
+  intro.append(element('p', '', area.intro || official.house.title));
   const legend = element('div', 'administration-rank-legend');
   legend.setAttribute('aria-label', 'Rangabzeichen');
   [['gold', area.id === 'militaer' ? 'Leitung · Marschälle' : 'Leitung'], ['silver', area.id === 'militaer' ? 'Adjutantur · Kriegswarte' : 'Adjutantur · Vasallen · Kernämter'], ['bronze', 'Sonderrollen · Dienste']].forEach(([tier, label]) => {
@@ -29,8 +59,22 @@ export async function renderStructuredAdministration(scopeId, areaId) {
     legend.append(item);
   });
   intro.append(legend);
+  const planning = element('a', 'administration-module-link', 'Besetzung in der Werkstatt bearbeiten ↗');
+  planning.href = preparationHref(scope.id, areaId);
+  intro.append(planning);
   view.append(intro);
-  area.groups.forEach(group => view.append(renderRoleGroup(group, area)));
+  if (areaId === 'militaer') view.append(militaryForces(scope.id));
+  const recurring = area.groups.filter(group => group.collapsible);
+  area.groups.filter(group => !group.collapsible).forEach(group => view.append(renderRoleGroup(group, area)));
+  if (recurring.length) {
+    const heading = element('h3', 'administration-recurring-heading', 'Niedere, Sonder- und übrige Rollen');
+    view.append(heading);
+    for (const group of recurring) {
+      const details = element('details', 'administration-dialog-details');
+      details.append(element('summary', '', `${group.title} · ${group.roles.length} Posten`), renderRoleGroup(group, area));
+      view.append(details);
+    }
+  }
   if (territorialContacts?.length) {
     view.append(renderRoleGroup({ id: 'territorial-contacts', title: 'Territoriale Verbindungen', kind: 'service',
       description: 'Ansprechstellen ohne ausgearbeiteten eigenen Fachrat. Eine territoriale Verbindung begründet kein zusätzliches Fachamt.',

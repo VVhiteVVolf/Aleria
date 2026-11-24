@@ -1,13 +1,15 @@
 import { OFFICE_GROUPS, HOUSEHOLD_SERVICE } from './offices-data.mjs';
 import { courtPage, escapeHtml, paragraphs } from './court-template.mjs';
 import { officeCard } from '../kingdom-court/office-directory.mjs';
+import { CENYR_FORCES } from '../../../shared/cenyr-administration/military-organization.mjs';
 
 export function renderOfficesPage() {
   const count = OFFICE_GROUPS.reduce((total, group) => total + group.offices.length, 0);
   return courtPage({
     title: 'Ämter & Rollen in Cenyr', subtitle: 'Rat, Hof & Ritterstand', page: 'offices', icon: 'aemter', script: 'offices-filter.js',
     description: 'Wer das Reich lenkt, den Hof bewahrt und den Eid der Ritter trägt. Ein Verzeichnis der Ämter, Titel und Dienste Cenyrs.',
-    navigation: [['uebersicht', 'Übersicht'], ...OFFICE_GROUPS.map(group => [group.id, group.title]), ['hofdienst', 'Knechte, Dienstmädchen & Zofen']],
+    navigation: [['uebersicht', 'Übersicht'], ...OFFICE_GROUPS.map(group => [group.id, group.title]),
+      ['streitkraefte', 'Streitkräfte'], ['hofdienst', 'Knechte, Dienstmädchen & Zofen']],
     body: `
       <section id="uebersicht" class="court-intro">
         <blockquote>„Ein König ist nur so gut wie sein Rat und sein Hof. Du bist der lebende Beweis, mein Freund.“<cite>Tristan zu Mordred</cite></blockquote>
@@ -33,6 +35,10 @@ export function renderOfficesPage() {
       </section>`).join('\n')}
       </div>
       <p class="court-empty" data-role="search-empty" hidden>Keine passenden Einträge gefunden. Versuche einen anderen Begriff oder setze die Suche zurück.</p>
+      <section class="court-section court-service" id="streitkraefte">
+        <h2>Die fünf Arten von Streitkräften</h2>
+        <dl>${CENYR_FORCES.map(force => `<dt><strong>${escapeHtml(force.title)}</strong></dt><dd>${escapeHtml(force.text)}</dd>`).join('')}</dl>
+      </section>
       <section class="court-section court-service" id="hofdienst" data-court-service>
         <header class="court-section-heading"><span class="court-section-number" aria-hidden="true">05</span><div><p class="court-eyebrow">Ehrbarer Dienst</p><h2>Knechte, Dienstmädchen & Zofen</h2></div></header>
         ${paragraphs(HOUSEHOLD_SERVICE)}

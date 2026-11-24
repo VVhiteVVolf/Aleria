@@ -92,7 +92,7 @@ export const WORLD_CONTENT_TASKS = [
   },
   {
     id: 'territory-pages', label: 'Realm hierarchies, territory pages and heraldry',
-    inputs: ['Kontinente/', 'Orte/', 'shared/world-directory/', 'Stammbäume/assets/js/domain/house-profile.js', 'Karten/karten.registry.js', 'Karten/modules/regions/', 'Karten/Uathneach/',
+    inputs: ['Kontinente/', 'Orte/', 'shared/world-directory/', 'shared/cenyr-administration/', 'Stammbäume/assets/js/domain/house-profile.js', 'Karten/karten.registry.js', 'Karten/modules/regions/', 'Karten/Uathneach/',
       'Stammbäume/assets/js/data/', 'Stammbäume/assets/js/services/family-registry-upgrade.js', 'Familien Häuser und Clans/', ...albicTerritoryInputs],
     commands: [['shared/world-directory/build-house-directories.mjs', '--check'],
       tests('shared/world-directory/tests'),
@@ -185,7 +185,8 @@ export const WORLD_CONTENT_TASKS = [
   },
   {
     id: 'uathneach-preview', label: 'Isolated regional proposals and complete preview assets',
-    inputs: ['Vorschau/'],
+    inputs: ['Vorschau/', 'shared/cenyr-administration/', 'shared/world-directory/geographic-key.mjs',
+      'Kontinente/modules/administration/', 'Familien Häuser und Clans/modules/court/', 'AleriaAlmanach/modules/gwynthor-cathedral/'],
     commands: [tests('Vorschau/tests'),tests('Vorschau/Solestia/tests'),tests('Vorschau/Phalantia/tests'),
       tests('Vorschau/Mathringen/tests'),
       tests('Vorschau/Calidaria/tests'),tests('Vorschau/Sylvarant/tests'),

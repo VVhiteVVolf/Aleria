@@ -1,6 +1,8 @@
+import { geographicKey } from './geographic-key.mjs';
+
+export { geographicKey } from './geographic-key.mjs';
+
 // Geographic matching only: service and liege relationships never assign a residence.
-export const geographicKey = value => String(value || '').normalize('NFD').replace(/\p{Diacritic}/gu, '')
-  .replace(/Æ/g, 'Ae').replace(/æ/g, 'ae').replace(/ß/g, 'ss').toLowerCase().replace(/[^a-z0-9]/g, '');
 const namedKey = value => geographicKey(String(value || '').replace(/^(?:Haus|Familie|Clan|Sept)\s+/i, ''));
 const same = (a, b) => geographicKey(a) === geographicKey(b);
 

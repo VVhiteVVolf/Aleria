@@ -1,11 +1,13 @@
-# Gemeinsame Länderwerkstatt
+# Gemeinsame Vorbereitungsübersicht
 
-`Vorschau/index.html` zeigt ausschließlich Länder- und Provinzvorbereitungen,
-deren Inhalte noch nicht als reguläre Landes- und Herrschaftsseiten übernommen
-wurden. Der gepflegte Katalog enthält elf Werkstätten; die drei Argentum-Provinzen
-besitzen eine eigene Gruppe und werden nicht zu unabhängigen Ländern erklärt.
+`Vorschau/index.html` zeigt offene Länder- und Provinzvorbereitungen sowie die
+[Verwaltung von Celtigerns Wacht](../Herrschaftsverwaltung/). Die drei
+Argentum-Provinzen besitzen eine eigene Gruppe. Die Besetzungsentwürfe für
+Saethwyr, Gafyr, Wyrm und Haus Draig stehen unter „Verwaltung und Ratsämter“.
 Die sichtbare Bezeichnung Vardentia verwendet weiterhin den bestehenden Pfad
 `Sylvarant/` und die stabile Entwurfskennung.
+Die Adharath werden als nomadisches Volk mit dem Erbe Dúinreachs vorbereitet,
+ohne daraus einen heutigen Territorialstaat abzuleiten.
 
 `preparation-catalog.mjs` besitzt die Übersichtsdaten, `overview-render.mjs` die
 escaped Darstellung und `overview-app.mjs` ausschließlich Suche und lokale DOM-

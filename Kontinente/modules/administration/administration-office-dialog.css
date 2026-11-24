@@ -37,6 +37,18 @@
 .administration-office-duties ul { display: grid; gap: .6rem; list-style: none; padding: 0; margin: .8rem 0 .3rem; }
 .administration-office-duties li { display: grid; grid-template-columns: 42px minmax(0, 1fr); align-items: center; gap: .8rem; padding: .6rem .8rem; border: 1px solid #e4d8c4; border-radius: 5px; background: #f6efe2; }
 .administration-office-duties img { display: block; width: 40px; height: 40px; object-fit: contain; }
+.administration-office-roster { margin: .5rem 0; border: 1px solid #dfd1b8; border-radius: 4px; background: #fbf5e9; }
+.administration-office-roster summary { display: flex; align-items: center; gap: .5rem; padding: .45rem .6rem; cursor: pointer; }
+.administration-office-roster summary::before { content: '›'; flex: none; }
+.administration-office-roster[open] summary::before { transform: rotate(90deg); }
+.administration-office-roster summary img { flex: none; object-fit: contain; }
+.administration-office-roster summary small { margin-left: auto; flex: none; color: #78694f; }
+.administration-office-roster > p { margin: 0; padding: .5rem .65rem; font-size: .76rem; }
+.administration-office-roster-list { list-style: none; padding: 0; margin: 0; }
+.administration-office-roster-list li { display: flex; align-items: center; min-width: 0; gap: .6rem; padding: .45rem .7rem; border-top: 1px solid #e4d8c4; }
+.administration-office-roster-list img { width: 34px; height: 34px; flex: 0 0 34px; border-radius: 50%; object-fit: cover; background: #eadfc8; }
+.administration-office-roster-list li > div { display: grid; line-height: 1.4; }
+.administration-office-roster-list li span, .administration-office-roster-list li small { color: #78694f; font-size: .74rem; }
 .administration-office-dialog .administration-dialog-close { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 1px solid #cdb897; border-radius: 50%; color: #6d5035; background: #fffcf5; font: 1.4rem/1 Georgia, serif; cursor: pointer; }
 .administration-office-dialog :is(button, a, [tabindex]):focus-visible { outline: 2px solid #804737; outline-offset: 3px; }
 @media (max-width: 650px) {

@@ -82,6 +82,27 @@ test('world directory ships its runtime projection and keeps readers, builders a
   assert.doesNotMatch(runtime,/source-reader|house-placement|build-house-directories|node:/);
 });
 
+test('Cenyr office dialogs and the workbench ship with their shared plans and published projections', async () => {
+  const workbench = 'Vorschau/Herrschaftsverwaltung/';
+  for (const file of [
+    'Kontinente/modules/administration/administration-structured.mjs',
+    'Familien Häuser und Clans/modules/court/house-court.js',
+    'shared/cenyr-administration/official-office-model.mjs',
+    'shared/cenyr-administration/office-plans.mjs',
+    'shared/cenyr-administration/military-organization.mjs',
+    'shared/cenyr-administration/office-cast.generated.mjs',
+    'shared/world-directory/geographic-key.mjs',
+    workbench + 'index.html', workbench + 'app.mjs', workbench + 'roster.generated.json', workbench + 'draft-post-migration.mjs',
+  ]) {
+    await access(new URL('../../' + file, import.meta.url));
+    assert.equal(shouldPublish(file), true, file);
+  }
+  for (const file of ['scripts/build-roster.mjs', 'scripts/almanac-appointments.mjs', 'scripts/roster-sources.mjs']) {
+    await access(new URL('../../' + workbench + file, import.meta.url));
+    assert.equal(shouldPublish(workbench + file), false, file);
+  }
+});
+
 test('raw public review snapshots, scene backups and currency prompts stay repository sources',async()=>{
   for(const path of [
     'AleriaAlmanach/modules/gawain-duncan/source/gawain-public-profile-2026-11-01.json',

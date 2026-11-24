@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Rats- und Hofämter von Celtigerns Wacht und seiner sechs Herrschaften.">
+  <title>Verwaltung von Celtigerns Wacht · Aleria</title>
+  <link rel="stylesheet" href="administration.css">
+  <link rel="stylesheet" href="office-dialog.css">
+  <script defer src="../../Kontinente/modules/administration/administration-content.js"></script>
+  <script type="module" src="app.mjs"></script>
+</head>
+<body data-administration-workbench>
+  <a class="skip-link" href="#herrschaften">Zu den Herrschaften</a>
+  <header class="masthead">
+    <div class="page-width masthead-inner">
+      <a class="wordmark" href="../index.html">Aleria <span>Werkstatt</span></a>
+      <a class="back-link" href="../index.html">← Vorbereitungen</a>
+    </div>
+  </header>
+  <main>
+    <section class="page-intro">
+      <div class="page-width intro-inner">
+        <div>
+          <p class="territory-label">Celtigerns Wacht</p>
+          <h1>Rats- und Hofämter</h1>
+          <p class="intro-text">Besetzungsentwürfe für die Grafschaft, ihre Baronien und Ritterfürstentümer.</p>
+        </div>
+        <div class="draft-tools">
+          <div class="button-row">
+            <button type="button" data-action="import" disabled>Entwurf importieren</button>
+            <button type="button" class="button-primary" data-action="export" disabled>Entwurf exportieren</button>
+          </div>
+          <input type="file" accept="application/json,.json" data-role="import-file" hidden>
+          <p data-role="persistence">Entwürfe werden in diesem Browser gespeichert.</p>
+        </div>
+      </div>
+    </section>
+    <div class="page-width workspace" id="herrschaften">
+      <section aria-labelledby="house-select-title">
+        <h2 id="house-select-title">Herrschaft auswählen</h2>
+        <div class="house-switch" data-role="houses"></div>
+      </section>
+      <p class="page-notice" data-role="status" role="status" hidden></p>
+      <section class="council" aria-labelledby="council-title" data-role="council"></section>
+    </div>
+  </main>
+  <dialog class="office-dialog" data-role="office-dialog" aria-labelledby="office-title">
+    <header class="office-header">
+      <div class="office-title-block">
+        <button class="office-back" type="button" data-action="back-office" aria-label="Zurück zur übergeordneten Struktur" title="Zurück" hidden>←</button>
+        <img data-role="area-icon" alt="" width="48" height="48">
+        <div>
+          <p class="territory-label" data-role="scope-label"></p>
+          <h2 id="office-title" tabindex="-1"></h2>
+        </div>
+      </div>
+      <div class="button-row">
+        <button type="button" data-action="undo" disabled>Rückgängig</button>
+        <button type="button" class="close-button" data-action="close" aria-label="Ratsamt schließen" title="Schließen">×</button>
+      </div>
+    </header>
+    <div class="office-board">
+      <aside class="candidate-panel" data-role="candidate-panel" aria-labelledby="candidates-title">
+        <div class="candidate-header" data-role="current-candidate-header">
+          <div class="candidate-heading">
+            <h3 id="candidates-title">Kandidaten</h3>
+            <span data-role="candidate-count" role="status"></span>
+          </div>
+          <p class="candidate-help" id="candidate-help">Am Griff ziehen oder Figur und Posten anklicken.</p>
+          <form class="candidate-filters" data-role="filters">
+            <label class="search-label">
+              <span class="visually-hidden">Kandidaten suchen</span>
+              <input type="search" name="query" placeholder="Name oder Familie suchen" autocomplete="off" aria-describedby="candidate-help">
+            </label>
+            <details class="filter-options" data-role="options">
+              <summary>Weitere Filter <span data-role="filter-count"></span></summary>
+              <div class="filter-grid" data-role="filter-fields"></div>
+            </details>
+            <div class="candidate-sources">
+              <label class="checkbox-label free-option"><input name="free" type="checkbox"> Freie Bürgerliche einbeziehen</label>
+              <button type="button" data-tree-action="open">+ Aus Stammbäumen</button>
+            </div>
+          </form>
+        </div>
+        <div class="candidate-header tree-candidate-header" data-role="tree-candidate-header" hidden>
+          <div class="candidate-heading">
+            <h3 id="tree-candidates-title">Stammbäume</h3>
+            <button type="button" data-tree-action="close">← Bewerberliste</button>
+          </div>
+          <label class="search-label">
+            <span class="visually-hidden">In allen Stammbäumen suchen</span>
+            <input type="search" placeholder="Name, Familie oder Region" autocomplete="off">
+          </label>
+          <span class="tree-candidate-status" data-role="tree-candidate-status" role="status"></span>
+        </div>
+        <ul class="candidate-list" data-role="candidate-list" aria-label="Passende Figuren"></ul>
+        <ul class="candidate-list" data-role="tree-candidate-list" aria-label="Gefundene Stammbaumfiguren" hidden></ul>
+      </aside>
+      <section class="office-structure" aria-labelledby="structure-title">
+        <div class="structure-header">
+          <div>
+            <h3 id="structure-title">Amtsstruktur</h3>
+            <span class="muted" data-role="office-count"></span>
+          </div>
+          <div class="structure-tools">
+            <label class="checkbox-label"><input type="checkbox" data-role="vacancies-only"> Nur freie Unterposten</label>
+            <button type="button" data-action="manage-roles">Rollen verwalten</button>
+          </div>
+        </div>
+        <div class="office-posts" data-role="post-scroll">
+          <div data-role="leading-posts" hidden></div>
+          <div data-role="head-post"></div>
+          <div class="office-connections" data-role="office-connections" hidden></div>
+          <div data-role="posts"></div>
+          <section class="repeatable-posts" data-role="repeatable-posts" aria-labelledby="repeatable-title">
+            <h4 id="repeatable-title">Niedere, Sonder- und übrige Rollen</h4>
+            <details class="new-post" data-role="new-post">
+              <summary>Posten hinzufügen</summary>
+              <form data-role="post-form">
+                <label>Rolle <select name="template"></select></label>
+                <label>Anzahl <input name="count" type="number" min="1" value="1" inputmode="numeric" required></label>
+                <label data-role="site-field"><span id="office-post-site-label" data-role="site-label">Dienstort</span>
+                  <select name="site" aria-labelledby="office-post-site-label"></select></label>
+                <fieldset data-role="custom-fields">
+                  <legend class="visually-hidden">Eigene Rolle</legend>
+                  <label>Art des Postens <select name="kind"></select></label>
+                  <label>Titel <input name="title" maxlength="90" required></label>
+                  <label class="post-description">Aufgaben <textarea name="description" rows="2" maxlength="360" placeholder="Optional"></textarea></label>
+                </fieldset>
+                <button type="submit" class="button-primary">Posten anlegen</button>
+              </form>
+            </details>
+            <div data-role="role-groups"></div>
+          </section>
+        </div>
+      </section>
+    </div>
+    <footer class="office-footer">
+      <p data-role="office-status" role="status">Figur wählen, um einen Posten zu besetzen.</p>
+      <button type="button" data-action="clear-selection" hidden>Auswahl lösen</button>
+    </footer>
+  </dialog>
+  <noscript><p class="page-width">Die Vorbereitungsseite benötigt JavaScript.</p></noscript>
+</body>
+</html>

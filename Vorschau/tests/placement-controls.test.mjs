@@ -5,7 +5,7 @@ import {createPlacementControls} from '../shared/placement-controls.mjs';
 // Minimal DOM boundary for delegated event tests; visual map QA runs in-browser.
 function fixture(selected='lanette') {
  const listeners=new Map(),classes=new Set(),moves=[];
- const document={createElement:()=>({style:{},replaceChildren(){}}),elementFromPoint:()=>document.hit};
+ const document={createElement:()=>({style:{},setAttribute(){},replaceChildren(){},remove(){}}),elementFromPoint:()=>document.hit};
  const root={
   ownerDocument:document,
   append(){},
@@ -21,13 +21,13 @@ function fixture(selected='lanette') {
  };
  const controls=createPlacementControls({root,getSelected:()=>selected,onMove:(...args)=>moves.push(args),escape:String,canMove:id=>id!=='roden'});
  function emit(type,target,values={}) {
-  const event={target,pointerId:1,pointerType:'mouse',button:0,clientX:10,clientY:10,
+  const event={target,pointerId:1,pointerType:'mouse',button:0,clientX:10,clientY:10,detail:1,
    preventDefault(){this.prevented=true;},stopImmediatePropagation(){this.stopped=true;},...values};
   for(const {handler} of listeners.get(type)??[]){handler(event);if(event.stopped)break;}
   return event;
  }
  function house(id) {
-  const element={dataset:{dragHouse:id},querySelector:()=>null,
+  const element={dataset:{dragHouse:id},isConnected:true,querySelector:()=>null,
    closest:selector=>selector==='[data-drag-house]'?element:null,
    setPointerCapture(){element.captured=true;},hasPointerCapture:()=>Boolean(element.captured),
    releasePointerCapture(){element.captured=false;}};

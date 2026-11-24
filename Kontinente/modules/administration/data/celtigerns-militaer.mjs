@@ -66,7 +66,7 @@ export default {
       description: 'Eine oberste militärische Instanz für Heer, Wacht und Flotte.',
       roles: [officer(
         'egon-gafyr', 'Marschall der Grafschaft', 'Egon Gafyr', 'gafyr',
-        'Egon verantwortet die militärische Gesamtordnung Celtigerns Wacht. Er setzt die Vorgaben des Grafen um, bestimmt übergeordnete Einsatzschwerpunkte und führt Feld- und Seemarschall zusammen. Die eigenen Truppen und Befehlshaber der Vasallen bleiben örtlich organisiert und müssen ihm im Rahmen der Grafschaftsordnung Rechenschaft ablegen.',
+        'Egon befehligt als Grafschaftsmarschall die Wachen und führt das Heer mit dem Kommandanten der Draigs und den ihm nach Lehnsrang und Aufgebot unterstellten Kommandanten. Er setzt die Vorgaben des Grafen um und führt Feld- und Seemarschall zusammen. Ruft der Graf die Banner, stellen die Vasallen ihre eigenen Hausmächte.',
         'Graf von Celtigerns Wacht',
         {
           tier: 'gold',
@@ -81,7 +81,7 @@ export default {
     },
     {
       id: 'militaer-marschaelle', title: 'Feldmarschall und Seemarschall', kind: 'leadership',
-      description: 'Zwei getrennte Befehlsbereiche unter dem Grafschaftsmarschall: Land und See.',
+      description: 'Der Feldmarschall führt den Landdienst, der Seemarschall die Flotte. Beide handeln im Auftrag des Grafschaftsmarschalls.',
       roles: [
         officer('maredudd-draig', 'Feldmarschall', 'Maredudd Draig', 'draig',
           'Führt die Landstreitkräfte, bereitet Aufstellungen und Feldzüge vor und verantwortet die Einsatzbereitschaft der Garnisonen. Die fünf Kriegswarte betreuen unter ihm Sicherheit, Logistik, Ausbildung, Aufklärung und Disziplin.', marschall,
@@ -130,9 +130,9 @@ export default {
     },
     {
       id: 'militaer-kommandanten', title: 'Kommandanten', kind: 'service',
-      description: 'Das unmittelbare Kommando über benannte Verbände und Standorte.',
+      description: 'Gwynthors Wache und die Kommandantur der Cochllamwyr werden gemeinsam geführt.',
       roles: [officer('ferydnand-gafyr', 'Kommandant der Cochllamwyr und von Gwynthor', 'Ferydnand Gafyr', 'gafyr',
-        'Ferydnand führt die Cochllamwyr und das Kommando von Gwynthor. Er setzt Einsatz- und Wachvorgaben praktisch um, verteilt Kräfte und verantwortet die Bereitschaft seines Verbands. Unmittelbar unter ihm stehen zwei Stellvertreter und danach die vier Hauptmänner der Cochllamwyr.', feldmarschall,
+        'Ferydnand führt die Cochllamwyr und die Wache von Gwynthor innerhalb der Marschallstruktur der Grafschaft. Für die Cochllamwyr stehen ihm zwei Stellvertreter und vier Hauptmänner zur Seite.', feldmarschall,
         { authority: 'Operatives Kommando im zugewiesenen Verband und Standort; fachliche Vorgaben der Kriegswarte bleiben verbindlich.' })],
     },
     {
@@ -149,9 +149,9 @@ export default {
     },
     {
       id: 'militaer-hauptleute', title: 'Allgemeine Hauptleute', kind: 'service',
-      description: 'Erst nach der eigenen Kommandokette der Cochllamwyr folgen die allgemeinen örtlichen Hauptmannsämter.',
+      description: 'Die Hauptleute der Ortswachen führen den Dienst am jeweiligen Ort.',
       roles: [office('militaer-allgemeine-hauptleute', 'Hauptleute der Orte und Garnisonen',
-        'Führen die ihnen zugeteilten Kräfte einer Siedlung, Burg oder Garnison, setzen Wachpläne um und melden Ausfälle, Bedarf und besondere Vorfälle. Sie sind keine zusätzlichen Hauptmänner der Cochllamwyr. Einzelne Stellen und Personen werden nach ihren tatsächlichen örtlichen Zuständigkeiten ergänzt.', 'Jeweiliger örtlicher Kommandant · übergeordnet dem Feldmarschall')],
+        'Führen die Wachen ihrer Orte, setzen Wachpläne um und melden Ausfälle, Bedarf und besondere Vorfälle an die Marschallstruktur.', 'dem Marschall der Grafschaft')],
     },
     {
       id: 'militaer-banner-und-offiziere', title: 'Bannerführer, Offiziere und Unteroffiziere', kind: 'service',

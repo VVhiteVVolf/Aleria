@@ -1,7 +1,8 @@
-/** Only workshops without an admitted land/territory page; adoption evidence is tested separately. */
+/** Open country workshops and stand-alone planning tools. */
 export const PREPARATION_GROUPS = Object.freeze([
   Object.freeze({id:'realms',title:'Länder, Völker und Stadtrepubliken',eyebrow:'Eigenständige Werkstätten',description:'Geschichte, Gesellschaft, Wappen und die politische Ordnung stehen hier zur gemeinsamen Ausarbeitung.'}),
   Object.freeze({id:'argentum',title:'Kaiserreich Argentum',eyebrow:'Drei Provinzen · ein Kaiserreich',description:'Leukonia, Vardentia und Calidaria werden als Provinzen desselben Reiches vorbereitet.'}),
+  Object.freeze({id:'administration',title:'Verwaltung und Ratsämter',eyebrow:'Celtigerns Wacht',description:'Besetzungsentwürfe für die Grafschaft, ihre Baronien und Ritterfürstentümer.'}),
 ]);
 
 export const PREPARATIONS = Object.freeze([
@@ -17,10 +18,15 @@ export const PREPARATIONS = Object.freeze([
   {id:'leukonia',name:'Leukonia',folder:'Leukonia',group:'argentum',kind:'Provinz Argentums',crest:'assets/emblems/previews/leukonia-v2.webp',summary:'Städte, Archonate und ihre Häuser unter imperialer Verwaltung.'},
   {id:'sylvarant',name:'Vardentia',folder:'Sylvarant',group:'argentum',kind:'Provinz Argentums',crest:'assets/emblems/previews/province-sylvarant-v2.webp',summary:'Die östliche Kernprovinz Argentums und ihre alten, einflussreichen Familien.'},
   {id:'calidaria',name:'Calidaria',folder:'Calidaria',group:'argentum',kind:'Provinz Argentums',crest:'assets/emblems/previews/province-calidaria-v2.webp',summary:'Die Inselwelt der Tlapanui und argentischen Siedler zwischen eigener Überlieferung und imperialem Einfluss.'},
-].map(entry=>Object.freeze({...entry,href:`./${entry.folder}/`,image:`./${entry.folder}/${entry.crest}`})));
+  {id:'herrschaftsverwaltung',name:'Rats- und Hofämter von Celtigerns Wacht',folder:'Herrschaftsverwaltung',group:'administration',kind:'Herrschaftsverwaltung',image:'../Stammbäume/assets/images/houses/Llamreis%20Ankunft/haus-draig.png',summary:'Amtsstrukturen, freie Posten und Kandidaten für Haus Draig, Saethwyr, Gafyr und Wyrm sowie Arthus Streben, Gwendolyns Ufer und Rhonwens Tränen.',scopeLinks:[
+    {id:'arthus-streben',name:'Baronie Arthus Streben'},
+    {id:'gwendolyns-ufer',name:'Baronie Gwendolyns Ufer'},
+    {id:'rhonwens-traenen',name:'Ritterfürstentum Rhonwens Tränen'},
+  ]},
+].map(entry=>Object.freeze({...entry,href:`./${entry.folder}/`,image:entry.image||`./${entry.folder}/${entry.crest}`})));
 
 const searchable=value=>String(value??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('de');
 export function filterPreparations(entries,query=''){
   const terms=searchable(query).trim().split(/\s+/).filter(Boolean);
-  return entries.filter(entry=>terms.every(term=>searchable(`${entry.name} ${entry.kind} ${entry.summary} ${entry.group==='argentum'?'Kaiserreich Argentum':''}`).includes(term)));
+  return entries.filter(entry=>terms.every(term=>searchable(`${entry.name} ${entry.kind} ${entry.summary} ${entry.scopeLinks?.map(link=>link.name).join(' ')||''} ${entry.group==='argentum'?'Kaiserreich Argentum':''}`).includes(term)));
 }

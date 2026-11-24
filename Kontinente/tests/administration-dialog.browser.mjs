@@ -4,6 +4,8 @@ import { resolve } from 'node:path';
 import { withVassals } from '../modules/administration/administration-model.mjs';
 import vassals, { territorialContacts } from '../modules/administration/data/celtigerns-vassals.generated.mjs';
 import { ROLE_EXAMPLES, ROLE_EXAMPLE_GROUPS } from '../modules/administration/data/role-examples.mjs';
+import { officialCouncil } from '../../shared/cenyr-administration/official-office-model.mjs';
+import { CENYR_ADMINISTRATION_SCOPES } from '../../shared/cenyr-administration/scopes.mjs';
 
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const browser = await chromium.launch({
@@ -30,7 +32,8 @@ async function waitForArea(page, area) {
 
 async function expectedCounty(areaId) {
   const { default: source } = await import(`../modules/administration/data/celtigerns-${areaId}.mjs`);
-  const prepared = withVassals(source, vassals);
+  const { groups } = officialCouncil('grafschaft-celtigerns-wacht', areaId, source);
+  const prepared = withVassals({ ...source, groups }, vassals);
   const roles = prepared.groups.flatMap(group => group.roles);
   // Contacts are presented separately from the six eight-office councils.
   // If the shared model already includes them, count each contact only once.
@@ -123,7 +126,13 @@ try {
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
-  await page.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
+  page.on('console', message => {
+    if (message.type() === 'error' && !message.text().includes('ERR_BLOCKED_BY_CLIENT')) console.log('Browser:', message.text());
+  });
+  await page.route('**/*', route => {
+    const request = route.request();
+    return new URL(request.url()).origin === origin && request.method() === 'GET' ? route.continue() : route.abort('blockedbyclient');
+  });
   for (const [scope, path] of [
     ['county', 'Grafschaft Celtigerns Wacht.html'],
     ['gwendolyn', 'Baronie Gwendolyns Ufer/Baronie Gwendolyns Ufer.html'],
@@ -144,7 +153,11 @@ try {
       assert.equal(cards[0].name, 'Vakant');
       assert.equal(cards.find(card => card.name === 'Maelgwin Wyrm').seat, 'Sitz: Gwynthor');
       assert.equal(cards.find(card => card.name === 'Idris Arwydd').seat, 'Sitz: Castellbryn');
-      if (screenshotDir) await princes.screenshot({ path: resolve(screenshotDir, 'celtigerns-wacht-ritterfuersten.png') });
+      if (screenshotDir) {
+        await page.waitForLoadState('networkidle');
+        await decodeImages(princes.locator('img'));
+        await princes.screenshot({ path: resolve(screenshotDir, 'celtigerns-wacht-ritterfuersten.png') });
+      }
     }
 
     for (const area of areas) {
@@ -153,9 +166,29 @@ try {
       await trigger.click();
       const dialog = await waitForArea(page, area);
       const expected = scope === 'county' ? await expectedCounty(area) : await expectedLegacy(page, area);
-      const displayed = await dialog.locator('.administration-role-card .administration-role-name').allTextContents();
+      const renderedRange = scope === 'county' ? dialog : dialog.locator('[data-role="legacy-administration"]');
+      if (area === 'militaer') {
+        const types = dialog.locator('[data-role="military-forces"]');
+        await types.locator('summary').click();
+        assert.deepEqual(await types.locator('dt').allTextContents(),
+          ['Hausmacht', 'Wache', 'Vasallentruppen', 'Kirchliches Aufgebot', 'Externes Aufgebot']);
+        assert.match(await types.getByRole('link', { name: /Hausmacht/ }).getAttribute('href'),
+          /amt=hof&abteilung=hof-hausmacht/);
+        assert.doesNotMatch(await dialog.textContent(), /Wachtmarschall/);
+        assert.equal(await dialog.locator('[data-group-id="militaer-ortswachen"]').count(), 1);
+        await types.locator('summary').click();
+      }
+      const displayed = await renderedRange.locator('.administration-role-card .administration-role-name').allTextContents();
       assert.equal(displayed.length, expected.count, `${scope}/${area}: all office cards retained`);
       assert.deepEqual(expected.names.filter(name => !displayed.includes(name)), [], `${scope}/${area}: all named holders retained`);
+      if (scope === 'gwendolyn') {
+        const forecast = dialog.locator('.administration-structured > [data-group-kind="leadership"]');
+        assert.match(await forecast.locator('.administration-role-title').innerText(), /des Barons/);
+      }
+      if (scope === 'county' && area === 'klerus') {
+        assert.equal(await dialog.locator('[data-group-id="klerus-praelaten"] .administration-role-card').count(), 9);
+        assert(await dialog.locator('.administration-role-name').filter({ hasText: "Glendower O'Cenyr" }).count());
+      }
 
       const examples = dialog.locator(`[data-role-examples="${area}"]`);
       assert.equal(await dialog.locator('[data-role-examples]').count(), 1, `${scope}/${area}: one examples table`);
@@ -182,7 +215,7 @@ try {
 
       if (scope === 'county' && area === 'militaer') {
         const adjutants = dialog.locator('[data-group-kind="adjutant"]');
-        assert.deepEqual(await adjutants.locator('.administration-role-name').allTextContents(), ['Rhys Draig', 'Anaraut Draig', 'Niniane Chwedlonol']);
+        assert.deepEqual(await adjutants.locator('.administration-role-name').allTextContents(), ['Rhys Draig', 'Anaraut Draig', 'Niniane Chwedonol']);
         const commanders = dialog.locator('[data-group-id="militaer-kommandanten"]');
         assert.deepEqual(await commanders.locator('.administration-role-name').allTextContents(), ['Ferydnand Gafyr']);
         assert.equal(await commanders.locator('.administration-role-title').innerText(), 'Kommandant der Cochllamwyr und von Gwynthor');
@@ -233,6 +266,107 @@ try {
     await page.keyboard.press('Escape');
     await dialog.waitFor({ state: 'hidden' });
     assert.ok(await originalTrigger.evaluate(button => document.activeElement === button), `${scope}: tab navigation preserves original page trigger`);
+  }
+
+  for (const vassal of vassals.filter(entry => entry.id !== 'gwendolyns-ufer')) {
+    await page.goto(origin + vassal.href, { waitUntil: 'domcontentloaded' });
+    for (const area of ['militaer', 'klerus']) {
+      const trigger = page.locator(`button[data-action="open-administration"][data-administration-key="${area}"]`);
+      await trigger.click();
+      const dialog = await waitForArea(page, area);
+      const lead = dialog.locator('[data-group-kind="leadership"]').first();
+      assert.equal(await lead.locator('.administration-role-title').innerText(), vassal.offices[area].title);
+      if (vassal.offices[area].name) assert.equal(await lead.locator('.administration-role-name').innerText(), vassal.offices[area].name);
+      assert.match(await dialog.locator('.administration-area-intro a').getAttribute('href'), new RegExp(`haus=${vassal.id}&amt=${area}`));
+      await page.keyboard.press('Escape');
+      await dialog.waitFor({ state: 'hidden' });
+    }
+    console.log('Eigene Amtsseiten', vassal.id);
+  }
+
+  const housePage = '/Familien%20H%C3%A4user%20und%20Clans/haus.html?haus=';
+  const court = page.locator('.house-court-offices');
+  const top = court.locator('[data-group-id="court-leadership"] .administration-role-title');
+  const topTitles = ['Vogt', 'Schatzmeister', 'Kommandant der Hausmacht'];
+
+  for (const scope of CENYR_ADMINISTRATION_SCOPES.filter(entry => entry.id !== 'draig')) {
+    await page.goto(origin + housePage + scope.houseId, { waitUntil: 'domcontentloaded' });
+    await top.first().waitFor();
+    assert.deepEqual(await top.allTextContents(), topTitles, `${scope.id}: leading court offices`);
+    await court.getByRole('button', { name: /^Hofmeister(?:in)? ·/ }).first().click();
+    const detail = page.locator('.administration-office-dialog[open]');
+    assert.equal(await detail.locator('[data-office-branch="hoflehre"]').count(), 1, `${scope.id}: Hofmeister mentors`);
+    assert.equal(await detail.locator('[data-office-branch="zofen"]').count(), 0, `${scope.id}: maids report to the Vogt`);
+    assert.match(await detail.getByRole('link', { name: /Besetzung in der Werkstatt bearbeiten/ }).getAttribute('href'),
+      new RegExp(`haus=${scope.id}&amt=hof&abteilung=hof-hofmeister`));
+    await page.keyboard.press('Escape');
+    await detail.waitFor({ state: 'hidden' });
+    await court.getByRole('button', { name: /^Schatzmeister(?:in)? ·/ }).first().click();
+    assert.equal(await detail.locator('[data-office-branch="schatzkammer"]').count(), 1, `${scope.id}: Schatzmeister runs the treasury`);
+    await page.keyboard.press('Escape');
+    await detail.waitFor({ state: 'hidden' });
+    if (scope.id === 'gafyr') {
+      await court.getByRole('button', { name: /^Vogt ·/ }).first().click();
+      assert.equal(await detail.locator('[data-office-branch="zofen"] li').count(), 8);
+    }
+    console.log('Hofämter', scope.id);
+  }
+
+  await page.goto(origin + housePage + 'haus-draig', { waitUntil: 'domcontentloaded' });
+  await top.first().waitFor();
+  assert.deepEqual(await top.allTextContents(), topTitles);
+  for (const width of [1440, 390, 320]) {
+    await page.setViewportSize({ width, height: 950 });
+    const vogt = court.getByRole('button', { name: /Vogt · Dalvin Balchder/ });
+    await vogt.click();
+    const detail = page.locator('.administration-office-dialog[open]');
+    const zofen = detail.locator('[data-office-branch="zofen"]');
+    const chamber = detail.locator('[data-office-branch="kammerdiener"]');
+    await zofen.locator('summary').click();
+    assert.match(await zofen.innerText(), /Myfanwy Draenmelyn/);
+    assert.match(await chamber.innerText({ timeout: 5000 }), /Kammerdiener/);
+    assert.match(await zofen.getByRole('link', { name: 'Myfanwy Draenmelyn' }).getAttribute('href'), /AleriaAlmanach.html\?character=/);
+    await checkDialogBounds(detail, '.administration-office-body', `Draig/Vogt/${width}`, width);
+    if (screenshotDir) {
+      await decodeImages(detail.locator('img:visible'));
+      await detail.screenshot({ path: resolve(screenshotDir, `draig-vogt-${width}.png`) });
+    }
+    await page.keyboard.press('Escape');
+    await detail.waitFor({ state: 'hidden' });
+    assert(await vogt.evaluate(button => document.activeElement === button));
+    const command = court.getByRole('button', { name: /Kommandant der Hausmacht · Steffan Draig/ });
+    await command.click();
+    const guard = detail.locator('[data-office-branch="leibgarde"]');
+    await guard.locator('summary').click();
+    assert.match(await guard.innerText(), /Marared Curiad/);
+    assert.match(await guard.innerText(), /Ysabel Bronnor/);
+    assert.equal(await detail.locator('[data-office-branch="hausmacht-adjutantur"]').count(), 1);
+    assert.equal(await detail.locator('[data-office-branch="hausaufgebot"]').count(), 1);
+    assert.match(await detail.locator('.administration-office-facts').innerText(), /Marschall der Grafschaft/);
+    assert.equal(await detail.locator('[data-office-branch="hausaufgebot"] li').count(), 4);
+    assert.match(await detail.getByRole('link', { name: /Draig-Leibgarde im Almanach/ }).getAttribute('href'), /entry=draig-leibgarde/);
+    if (screenshotDir) {
+      await decodeImages(detail.locator('img:visible'));
+      await detail.screenshot({ path: resolve(screenshotDir, `draig-hausmacht-${width}.png`) });
+    }
+    await page.keyboard.press('Escape');
+    await detail.waitFor({ state: 'hidden' });
+  }
+  await court.getByRole('button', { name: /Kommandant der Hausmacht · Steffan Draig/ }).click();
+  await page.locator('.administration-office-dialog[open]').getByRole('link', { name: /Besetzung in der Werkstatt bearbeiten/ }).click();
+  const landed = page.locator('dialog[open] #office-title');
+  await landed.waitFor();
+  assert.equal(await landed.innerText(), 'Kommandant der Hausmacht');
+  assert.match(page.url(), /haus=draig&amt=hof&abteilung=hof-hausmacht/);
+  assert.match(await page.locator('[data-drop-post="hof/garde"]').innerText(), /Marared Curiad/);
+
+  await page.goto(origin + '/Kontinente/Estryll/Königreich Cenyr/aemter.html', { waitUntil: 'domcontentloaded' });
+  await page.getByRole('link', { name: 'Streitkräfte', exact: true }).first().click();
+  const forces = page.locator('#streitkraefte');
+  assert.equal(await forces.locator('dt').count(), 5);
+  assert.match(await forces.innerText(), /Klingende Münze.*Condottieri/);
+  if (screenshotDir) {
+    await forces.screenshot({ path: resolve(screenshotDir, 'cenyr-streitkraefte-320.png') });
   }
 
   // An unrecognised future source layout must preserve its table and content.

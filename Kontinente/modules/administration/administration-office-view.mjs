@@ -1,6 +1,45 @@
 import { element, pin, portraitImage } from './administration-cards.mjs';
 import { dutyIcon } from './office-duty-icons.mjs';
 
+function renderHierarchy(groups) {
+  const section = element('section', 'administration-office-hierarchy');
+  section.append(element('h3', '', 'Unterstellte Ämter und Dienste'));
+  for (const group of groups) {
+    const details = element('details', 'administration-office-roster');
+    details.dataset.officeBranch = group.id;
+    const heading = element('summary');
+    if (group.icon) {
+      const icon = element('img');
+      icon.src = group.icon; icon.alt = ''; icon.width = 23; icon.height = 23;
+      heading.append(icon);
+    }
+    heading.append(element('strong', '', group.title), element('small', '', `${group.roles.filter(role => role.name).length} / ${group.roles.length}`));
+    details.append(heading);
+    if (group.description) details.append(element('p', '', group.description));
+    const list = element('ul', 'administration-office-roster-list');
+    for (const role of group.roles) {
+      const item = element('li');
+      item.dataset.officeSlot = role.id;
+      item.append(portraitImage(role.portrait, role.name));
+      const details = element('div');
+      const link = role.links?.find(entry => entry.href.includes('AleriaAlmanach.html?character='))
+        || role.links?.find(entry => entry.href.includes('Stammbaum.html'))
+        || role.links?.find(entry => entry.href.includes('AleriaAlmanach.html?entry='));
+      const name = element(link ? 'a' : 'strong', '', role.name || 'Unbesetzt');
+      if (link) name.href = link.href;
+      details.append(element('span', '', role.title), name);
+      if (role.reportsTo) details.append(element('small', '', `Unterstellt ${role.reportsTo}`));
+      if (role.station) details.append(element('small', '', `Stationiert in ${role.station}`));
+      if (role.note) details.append(element('small', '', role.note));
+      item.append(details);
+      list.append(item);
+    }
+    details.append(list);
+    section.append(details);
+  }
+  return section;
+}
+
 function factsFor(role, group, area) {
   const facts = element('dl', 'administration-office-facts');
   const rows = [
@@ -55,6 +94,12 @@ export function renderOfficeView(body, { role, group, area, tier }, onNavigate) 
   text.setAttribute('aria-label', `Aufgaben und Zuständigkeiten · ${role.title}`);
   text.append(element('span', 'administration-eyebrow', area.title), element('h3', '', 'Aufgabe und Verantwortung'));
   for (const paragraph of [role.description, role.practice].flat().filter(Boolean)) text.append(element('p', '', paragraph));
+  if (role.planningHref) {
+    const link = element('a', 'administration-module-link', 'Besetzung in der Werkstatt bearbeiten ↗');
+    link.href = role.planningHref;
+    text.append(link);
+  }
+  if (role.hierarchy?.length) text.append(renderHierarchy(role.hierarchy));
   if (role.authority) text.append(element('h3', '', 'Vollmacht und Grenzen'), element('p', '', role.authority));
   if (role.crew) text.append(crewFor(role.crew));
   if (role.connections?.length) {
